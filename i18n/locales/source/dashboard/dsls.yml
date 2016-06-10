@@ -77,6 +77,19 @@ en:
         : A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.
         Contract for rocket-height: Contract for rocket-height
         rocket-height|Number|Number: rocket-height|Number|Number
+    evaluation_multi:
+      CSP PD Example Question 1:
+        The encoding numbers unit: The encoding numbers unit
+        The sending binary messages unit: The sending binary messages unit
+        Which unit will you teach first: Which unit will you teach first
+      CSP PD Example Question 2:
+        How will you teach students?: How will you teach students?
+        I will make them learn from peers: I will make them learn from peers
+        I will make them write: I will make them write
+      CSP PD Q2:
+        How will you teach students?: How will you teach students?
+        I will make them learn from peers: I will make them learn from peers
+        I will make them write: I will make them write
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
@@ -668,6 +681,7 @@ en:
       Equity Stage3Go: {}
       Equity Strategies: {}
       Equity Welcome: {}
+      Exploring Practices and Strategies during TeacherCon: {}
       External level test (will):
         first computer program: first computer program
       Forum-ECSPD-Unit 2-Teaching Practice: {}
@@ -694,6 +708,7 @@ en:
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
+      Lesson 1.4 Overview: {}
       Lesson Prep Final: {}
       OPD-K5 About: {}
       OPD-K5 Assessment: {}
@@ -747,6 +762,10 @@ en:
       OPD-K5 Your Plan: {}
       OPD-Stage3Start: {}
       OnlinePDK5 Intro: {}
+      'Overview: Balancing Teachers and Tools': {}
+      'Overview: Capturing Student Learning': {}
+      'Overview: Discovery Learning': {}
+      'Overview: Group Work and Peer Learning': {}
       PD check your progress: {}
       PDAlg 1-3 Circles: {}
       PDAlg 1-3 Circles Practice: {}
@@ -952,6 +971,7 @@ en:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
         TLO in Practice: TLO in Practice
+      TeacherCon Agenda: {}
       Test External Markdown:
         Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
@@ -960,9 +980,11 @@ en:
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
+      U1L10 Lesson Plan: {}
       U1L10 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L11 Lesson Plan: {}
       U1L11 Student Lesson Introduction:
         description here: description here
         title: title
@@ -990,6 +1012,8 @@ en:
       U1L3 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L4 Lesson Overview: {}
+      U1L4 Lesson Plan: {}
       U1L4 Student Lesson Introduction:
         description here: description here
         title: title
@@ -999,6 +1023,7 @@ en:
       U1L5 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L6 Lesson Plan: {}
       U1L6 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1008,12 +1033,14 @@ en:
       U1L8 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L9 Lesson Plan: {}
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
+      U2L10 Lesson Plan: {}
       U2L10 Student Lesson Introduction:
         'DNS in the Real World ': 'DNS in the Real World '
       U2L11 Student Lesson Introduction:
@@ -1036,10 +1063,12 @@ en:
         One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
       U2L19 Student Lesson Introduction:
         Public Key Encryption: Public Key Encryption
+      U2L2 Lesson Plan: {}
       U2L2 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
       U2L20 Student Lesson Introduction:
         Security and Hacking in the Real World: Security and Hacking in the Real World
+      U2L3 Lesson Plan: {}
       U2L3 Student Lesson Introduction:
         Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
       U2L4 Student Lesson Introduction:
@@ -1390,6 +1419,7 @@ en:
         description here: description here
         title: title
       Unit 3 Survey 2: {}
+      Welcome to TeacherCon!: {}
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -1795,6 +1825,7 @@ en:
         PS U3 Assessment1 new: {}
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
+        Sample CSP Assessment: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
     match:

@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"usuń spacje z lewej strony tekstu",
   "TEXT_TRIM_OPERATOR_RIGHT":"usuń spacje z prawej strony tekstu",
   "TEXT_TRIM_TOOLTIP":"Zwróć kopię tekstu z usuniętymi spacjami z jednego lub z obu końców tekstu.",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"element (rzecz)",
   "VARIABLES_GET_CREATE_SET":"Utwórz blok 'ustaw %1'",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

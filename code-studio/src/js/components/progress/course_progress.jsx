@@ -3,7 +3,17 @@ import { connect } from 'react-redux';
 import { stageShape } from './types';
 import _ from 'lodash';
 import CourseProgressRow from './course_progress_row.jsx';
-import StageDetails from './stage_details.jsx';
+import color from '../../color';
+
+const styles = {
+  flexHeader: {
+    padding: '5px 10px',
+    margin: '20px 0 0 0',
+    borderRadius: 5,
+    background: color.cyan,
+    color: color.white
+  }
+};
 
 /**
  * Stage progress component used in level header and course overview.
@@ -11,27 +21,19 @@ import StageDetails from './stage_details.jsx';
 const CourseProgress = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
-    display: React.PropTypes.oneOf(['dots', 'list']).isRequired,
+    professionalLearningCourse: React.PropTypes.bool,
+    focusAreaPositions: React.PropTypes.arrayOf(React.PropTypes.number),
     stages: React.PropTypes.arrayOf(stageShape)
-  },
-
-  getRow(stage) {
-    if (this.props.display === 'dots') {
-      return <CourseProgressRow stage={stage} key={stage.name} currentLevelId={this.props.currentLevelId} />;
-    } else {
-      return <StageDetails stage={stage} key={stage.name} />;
-    }
   },
 
   render() {
     const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Content'));
 
+    let count = 1;
     const rows = _.map(groups, (stages, group) =>
-      <div className="flex-wrapper" key={group}>
-        <div className="flex-category">
-          <h4>{group}</h4>
-          {stages.map(this.getRow)}
-        </div>
+      <div key={group}>
+        <h4 style={this.props.professionalLearningCourse ? styles.flexHeader : {display: 'none'}}>{group}</h4>
+        {stages.map(stage => <CourseProgressRow stage={stage} key={stage.name} currentLevelId={this.props.currentLevelId} isFocusArea={this.props.focusAreaPositions.indexOf(count++) > -1} professionalLearningCourse={this.props.professionalLearningCourse} />)}
       </div>
     );
 
@@ -45,6 +47,7 @@ const CourseProgress = React.createClass({
 
 export default connect(state => ({
   currentLevelId: state.currentLevelId,
-  display: state.display,
+  professionalLearningCourse: state.professionalLearningCourse,
+  focusAreaPositions: state.focusAreaPositions,
   stages: state.stages
 }))(CourseProgress);

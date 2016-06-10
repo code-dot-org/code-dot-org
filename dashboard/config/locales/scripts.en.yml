@@ -1799,6 +1799,8 @@ en:
           Sprites and Images: Sprites and Images
           CSD U3 Variables and Animation: CSD U3 Variables and Animation
           " Booleans and Conditionals": " Booleans and Conditionals"
+          SFLP: SFLP
+          Animations: Animations
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2015,9 +2017,6 @@ en:
           Discovery Learning: Discovery Learning
           Capturing Student Learning: Capturing Student Learning
           Lesson 14 number systems - circle triangle square: Lesson 14 number systems - circle triangle square
-          "Lesson 1.4 &#58;\t number systems - circle triangle square": "Lesson 1.4 &#58;\t number systems - circle triangle square"
-          'Lesson 1&#46;4: number systems - circle triangle square': 'Lesson 1&#46;4: number systems - circle triangle square'
-          'Lesson 1\.4: number systems - circle triangle square': 'Lesson 1\.4: number systems - circle triangle square'
           'Lesson 1,4: number systems - circle triangle square': 'Lesson 1,4: number systems - circle triangle square'
           'Lesson 1,6: sending numbers': 'Lesson 1,6: sending numbers'
           'Lesson 1,9: internet addressing (battleship)': 'Lesson 1,9: internet addressing (battleship)'

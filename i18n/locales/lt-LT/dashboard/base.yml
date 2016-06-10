@@ -484,12 +484,14 @@ lt:
     picture_count: 'Šiomis <b>%{days}</b> dienomis, mokiniai nupiešė <b>%{count}</b> piešinių parašydami savo kompiuterines programas. Nuspausk ant šių piešinių, kad pamatytum parašytas programas.'
     activity_count: 'Per pastarąsias <b>%{days}</b> dienas, mokiniai programuodami sukūrė <b>%{count}</b> programėlių ir piešinių.'
     want_to_make_your_own: Norėtum sukurti savo?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Daugiau &rarr;'
     caption_by_name_age: 'sukūrė %{name}  (%{age} m.)'
     caption_time_ago: 'prieš %{time_ago} '
     header: Galerija
     header_playlab: Istorijos ir žaidimai
     header_artist: Menininkas
+    report_abuse: Praneškite apie piktnaudžiavimą
   landing:
     prerelease: "Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas."
     prerelease_hoc2014: "Šios pamokėlės yra <span class='betatext'>beta versijoje</span>. Į pasiūlymus ir klaidų pranešimus bus atsižvelgta."

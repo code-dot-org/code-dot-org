@@ -76,6 +76,10 @@
         у "намалювати шестикутник", але вона все ще малює квадрати! Можеш змінити
         функцію "намалюйте шестикутник" і намалювати шестикутник зі сторонами по 50
         пікселів за допомогою функції?
+      2-3 Artist Functions 12 Mike_instruction: 'Функції дійсно чудово підходять для
+        багаторазового малювання складних речей. Можеш використати функцію "намалювати
+        квітку" для заповнення решти газону? (Підказка: між рослинами відстань у 100
+        пікселів)  '
       2-3 Artist Functions 12_instruction: 'Функції дійсно чудово підходять для багаторазового
         малювання складних речей. Можеш використати функцію "намалювати квітку" для
         заповнення решти газону? (Підказка: між рослинами відстань у 100 пікселів)  '
@@ -654,6 +658,12 @@
       4-5 Maze Assessment 1_instruction: "Оцінювання: Дістанься соняшника."
       4-5 Maze Conditionals 1_instruction: "Використовуй блок повторення, щоб провести
         зомбі до соняшника."
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: "Використовуй блок повторення, щоб провести
         зомбі до соняшника."
       4-5 Maze Conditionals 3_instruction: 'Блок "якщо" дає змогу самостійно вирішувати,
@@ -2758,6 +2768,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

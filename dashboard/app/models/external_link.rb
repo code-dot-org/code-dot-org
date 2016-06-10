@@ -32,7 +32,7 @@ class ExternalLink < Level
   validates_presence_of :link_title
 
   def icon
-    'fa-link'
+    'fa-bookmark'
   end
 
   before_validation do

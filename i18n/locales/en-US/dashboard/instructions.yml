@@ -34,6 +34,7 @@ en:
       2-3 Artist Functions 10_instruction: crwdns33949:0crwdne33949:0
       2-3 Artist Functions 11.5_instruction: crwdns33950:0crwdne33950:0
       2-3 Artist Functions 11_instruction: crwdns33951:0crwdne33951:0
+      2-3 Artist Functions 12 Mike_instruction: crwdns56883:0crwdne56883:0
       2-3 Artist Functions 12_instruction: crwdns33952:0crwdne33952:0
       2-3 Artist Functions 13_instruction: crwdns33953:0crwdne33953:0
       2-3 Artist Functions 2_instruction: crwdns33954:0crwdne33954:0
@@ -305,6 +306,7 @@ en:
       4-5 Maze 9_instruction: crwdns31265:0crwdne31265:0
       4-5 Maze Assessment 1_instruction: crwdns30538:0crwdne30538:0
       4-5 Maze Conditionals 1_instruction: crwdns34160:0crwdne34160:0
+      4-5 Maze Conditionals 10_instruction: crwdns56884:0crwdne56884:0
       4-5 Maze Conditionals 2_instruction: crwdns34162:0crwdne34162:0
       4-5 Maze Conditionals 3_instruction: crwdns34163:0crwdne34163:0
       4-5 Maze Conditionals 4_instruction: crwdns34164:0crwdne34164:0
@@ -1022,6 +1024,10 @@ en:
       Luigi's Pizza 4_instruction: crwdns36011:0crwdne36011:0
       Middle School Hackathon Pt 1_instruction: crwdns56231:0crwdne56231:0
       Middle School Hackathon Pt 2_instruction: crwdns56232:0crwdne56232:0
+      MikeAssessment1_instruction: crwdns56885:0crwdne56885:0
+      MikeTest1_instruction: crwdns56886:0crwdne56886:0
+      MikeTest2_instruction: crwdns56887:0crwdne56887:0
+      MikeTest3_instruction: crwdns56888:0crwdne56888:0
       MSM Big Game Empty_instruction: crwdns35004:0crwdne35004:0
       MSM Big Game Vars 1 (copy 1)_instruction: crwdns35005:0crwdne35005:0
       MSM Big Game Vars 1_instruction: crwdns34577:0crwdne34577:0

@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"左側からスペースをトリミングします。",
   "TEXT_TRIM_OPERATOR_RIGHT":"右側からスペースをトリミングします。",
   "TEXT_TRIM_TOOLTIP":"スペースを 1 つまたは両方の端から削除したのち、テキストのコピーを返します。",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"項目",
   "VARIABLES_GET_CREATE_SET":"「%1に代入」を作成",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

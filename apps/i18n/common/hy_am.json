@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "Փորձեք օգտագործելով մեկը բլոկների ստորեւ:",
   "tryHOC": "Փորձեք ժամը օրենսգրքի",
   "unnamedFunction": "Դուք ունեք մի փոփոխական կամ գործառույթը, որ չունի անուն: Մի մոռացեք տալ ամեն ինչ, նկարագրական անվանում:",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Ցանկանում եք իմանալ, թե պետք է օրենսգրքի:",
   "watchVideo": "Դիտեք տեսանյութը",
   "when": "երբ",
   "whenRun": "երբ վազում",
-  "workspaceHeaderShort": "Workspace: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Workspace: "
 }

@@ -616,12 +616,15 @@
       các ứng dụng và hình ảnh bằng cách tự viết các chương trình máy tính. Nhấp vào
       hình ảnh và ảnh chụp màn hình để xem mỗi chương trình trong hành động.
     want_to_make_your_own: Bạn muốn tự tạo chương trình này?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Nhiều &rarr;
     caption_by_name_age: bởi  %{name}, %{age} tuổi
     caption_time_ago: "%{time_ago} trước"
     header: Bộ sưu tập
     header_playlab: Phòng trò chơi
     header_artist: Nghệ sĩ
+    report_abuse: Báo cáo lạm dụng
   landing:
     prerelease: Khóa học này là <span class='betatext'> phiên bản beta</span>.  Điều
       này có nghĩa là nó không phải là phiên bản cuối cùng của khóa học, và có thể

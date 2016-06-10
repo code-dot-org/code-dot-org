@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Spróbuj użyć jednego z bloków poniżej:",
   "tryHOC":"Weź udział w Godzinie Kodowania (the Hour of Code)",
   "unnamedFunction":"Masz zmienną lub funkcję, która nie ma nazwy. Nie zapomnij nazwać wszystkiego.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Czy chcesz nauczyć się kodowania (programowania)?",
   "watchVideo":"Obejrzyj wideo",
   "when":"kiedy",

@@ -76,6 +76,10 @@
       2-3 Artist Functions 11_instruction: |
         Promijenili smo ime "nacrtaj kvadrat" funkcije i sada se zove "nacrtaj šestougaonik", ali još uvijek crta kvadrate. Možeš li promijeniti funkciju
         "nacrtaj šestougaonik" da bi se nacrtao šestougaonik sa stranicama od 50 piksela?
+      2-3 Artist Functions 12 Mike_instruction: 'Funkcije su stvarno super ako želiš
+        nacrtati komplikovane stvari više puta. Možeš li iskorisititi "nacrtaj cvijet"
+        funkciju da bi napunio ostatak kutije plantažera?(Savjet: Sve su biljke odvojene
+        za 100 piksela dužine)  '
       2-3 Artist Functions 12_instruction: 'Funkcije su stvarno super ako želiš nacrtati
         komplikovane stvari više puta. Možeš li iskorisititi "nacrtaj cvijet" funkciju
         da bi napunio ostatak kutije plantažera?(Savjet: Sve su biljke odvojene za
@@ -656,6 +660,12 @@
       4-5 Maze Assessment 1_instruction: 'Procjena: Dođi do suncokreta.'
       4-5 Maze Conditionals 1_instruction: Upotrijebi "ponavljaj dok" blok da bi doveo/la
         zombija do suncokreta.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Upotrijebi "ponavljaj dok" blok da bi doveo/la
         zombija do suncokreta.
       4-5 Maze Conditionals 3_instruction: 'Upotrijebi "ako" blok da bi odredio kada
@@ -1715,8 +1725,8 @@
       Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
         most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe
         function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe
-        variable `player_score` should increase each time Dog tags Cat\nwith hearts,
-        and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen
+        variable `player_score` should increase each time Dog tags Cat\nwith pie,
+        and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen
         you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
         on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: Ne moraš pisati nikakav kod, samo pritisni
@@ -2756,6 +2766,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: Sve varijable i funkcije su trenutno prazne.
         Svaki nivo predstavlja napredak i definisanje funkcija, što će povećati funkcionalnost.
       MSM Big Game Vars 1 (copy 1)_instruction: U alatnoj traci za Varijable ćeš vidjeti
