@@ -1,6 +1,7 @@
 /* global dashboard */
 
 import api from '../applab/api';
+import _ from '../lodash';
 
 const COLOR_LIGHT_GREEN = '#D3E965';
 const COLOR_CYAN = '#4DD0E1';
@@ -19,7 +20,7 @@ const playSongConfig = {
 };
 
 const pixelType = '[ColorLed].';
-const colorPixelVariables = Array.from({length: 10}, (_, index) => `colorLeds[${index}]`);
+const colorPixelVariables = _.range(10).map(index => `colorLeds[${index}]`);
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 
 module.exports.blocks = [
