@@ -24,7 +24,7 @@ const styles = {
   }
 };
 
-export class PlayZone extends React.Component {
+export default class PlayZone extends React.Component {
   constructor(props) {
     super(props);
 
