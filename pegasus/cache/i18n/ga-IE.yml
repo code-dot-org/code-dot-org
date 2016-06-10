@@ -401,7 +401,7 @@
   homepage_slot_text_link_stats: Féach na staitisticí
   homepage_slot_text_link_buy: Glac páirt
   homepage_slot_text_link_donate: Tabhair bronntanas
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: T-léinte, hataí agus tuilleadh
   homepage_header_codestudio: Tionscadail a rinne daltaí sa Stiúideo Códála
   homepage_header_donors: Tá Code.org fíorbhuíoch dá thacadóirí
   homepage_donors_seall: Féach uile
@@ -599,7 +599,7 @@
   dashboard_landing_new_k5courses: "Úrnua! Bain triail as na cúrsaí dírithe ar dhaltaí
     bunscoile."
   dashboard_landing_useful_links: Nascanna úsáideacha eile
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: Acmhainní do do sheomra ranga
   dashboard_landing_office_hours: Cuir ceist go pearsanta! Tabhair cuairt ar na huaireanta
     oifige go míosúil.
   dashboard_landing_print_certificates: Priontáil teastais do na daltaí a chríochnaigh
@@ -681,8 +681,13 @@
   dashboard_action_required: riachtanach
   dashboard_assessments_view: 'Féach measúnuithe i:'
   dashboard_assessments_none: Gan measúnuithe
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Achoimrí
+  dashboard_assessments_answers: Na freagraí go léir
   dashboard_filter_by_stage: 'Scagadh de réir na céime:'
   dashboard_filter_all: Uile
   dashboard_download_csv: "Íoslódáil CSV"
@@ -713,6 +718,7 @@
   dashboard_progress_view: 'Féach dul chun cinn i:'
   dashboard_progress_student_in_script: Dul chun cinn déanta ag %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'Féach na freagraí téacs i:'
   dashboard_responses_none: Gan freagraí téacs
   dashboard_sections_new_section: Rannán nua
@@ -818,13 +824,13 @@
   dashboard_curriculum_middle_title: Acmhainní do mhúinteoirí meánscoile
   dashboard_curriculum_high_title: Acmhainní do mhúinteoirí dara leibhéil
   dashboard_lesson_plans: Pleananna Ceachta
-  dashboard_view_all_lesson_plans: "Íoslódáil curaclam iomlán do Chúrsaí 1-3"
+  dashboard_view_all_lesson_plans: "Íoslódáil curaclam iomlán do Chúrsaí 1-4"
   dashboard_course1: 'Cúrsa 1:'
   dashboard_course2: 'Cúrsa 2:'
   dashboard_course3: 'Cúrsa 3:'
-  dashboard_course4: 'Cúrsa 4 (béite): '
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  dashboard_course4: 'Cúrsa 4: '
+  dashboard_unplugged: Mura bhfuil ríomhairí agat, bain triail as <a href='%{unplugged_url}'>na
+    ceachtanna "díphlugáilte" seo</a> i do sheomra ranga.
   dashboard_curriculum: Curaclam
   dashboard_curriculum_overview: Foramharc ar an gCuraclam Bunscoile
   dashboard_overview: Foramharc
@@ -873,7 +879,8 @@
   dashboard_sections_account_creation_question: Cé a chruthaíonn cuntas an dalta?
   dashboard_sections_password_question: Cén sórt "focal faire" a úsáidfidh na daltaí?
   dashboard_sections_picture_account_creation: Pictiúr a thugann Code.org dóibh
-  dashboard_sections_word_account_creation: Focal simplí a thugann Code.org dóibh
+  dashboard_sections_word_account_creation: Dhá fhocal shimplí a thugann Code.org
+    dóibh
   dashboard_sections_sign_in_question: Cá logálfaidh na daltaí isteach?
   dashboard_sections_sign_in_unique: Leathanach Gréasáin uathúil ar an gcluaisín "Bainistigh
     Daltaí"
@@ -1021,17 +1028,17 @@
   course3_name: Cúrsa 3
   course4_name: Cúrsa 4
   accelerated_name: Cúrsa Luathaithe
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: 'Foras Feasa ar an Ríomheolaíocht: Aonad 3'
-  cspunit4_name: CS Principles Unit 4
+  cspunit1_name: 'Aonad 1: Faisnéis dhigiteach'
+  cspunit2_name: 'Aonad 2: An tIdirlíon'
+  cspunit3_name: 'Aonad 3: Ríomhchlárú'
+  cspunit4_name: 'Aonad 4: Sonraí'
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
-  cspassessment_name: Full Test - 50 questions
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
+  csp1_name: 'Aonad 1: An tIdirlíon'
+  csp2_name: 'Aonad 2: Faisnéis dhigiteach'
+  cspassessment_name: An Scrúdú Iomlán - 50 ceist
+  cspexam1-mWU7ilDYM9_name: Cuid 1 den Scrúdú - 25 ceist
+  cspexam2-AKwgAh1ac5_name: Cuid 2 den Scrúdú - 25 ceist
   cspunit3_gradelevel: Blianta 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1800,8 +1807,6 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  'yes': 'Yes'
+  'no': 'No'
+  dashboard_sections_table_stage_extras: Stage Extras

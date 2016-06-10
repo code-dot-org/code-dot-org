@@ -592,7 +592,7 @@ en:
         cspunit3:
           title: CSP Unit 3 - Programming
           title_short: CSP Unit 3
-          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
+          description_short: This unit introduces the foundational concepts of computer programming.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: Functions
@@ -937,6 +937,7 @@ en:
           Free Response: Free Response
           Game Lab: Game Lab
           Sample PLC Assessment: Sample PLC Assessment
+          Swapped Levels: Swapped Levels
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1796,6 +1797,10 @@ en:
           Expressions: Expressions
           Conditionals and Keyboard Input: Conditionals and Keyboard Input
           Sprites and Images: Sprites and Images
+          CSD U3 Variables and Animation: CSD U3 Variables and Animation
+          " Booleans and Conditionals": " Booleans and Conditionals"
+          SFLP: SFLP
+          Animations: Animations
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2012,9 +2017,6 @@ en:
           Discovery Learning: Discovery Learning
           Capturing Student Learning: Capturing Student Learning
           Lesson 14 number systems - circle triangle square: Lesson 14 number systems - circle triangle square
-          "Lesson 1.4 &#58;\t number systems - circle triangle square": "Lesson 1.4 &#58;\t number systems - circle triangle square"
-          'Lesson 1&#46;4: number systems - circle triangle square': 'Lesson 1&#46;4: number systems - circle triangle square'
-          'Lesson 1\.4: number systems - circle triangle square': 'Lesson 1\.4: number systems - circle triangle square'
           'Lesson 1,4: number systems - circle triangle square': 'Lesson 1,4: number systems - circle triangle square'
           'Lesson 1,6: sending numbers': 'Lesson 1,6: sending numbers'
           'Lesson 1,9: internet addressing (battleship)': 'Lesson 1,9: internet addressing (battleship)'
@@ -2029,6 +2031,8 @@ en:
           'Lesson 2,2: Text Compression': 'Lesson 2,2: Text Compression'
           'Lesson 2,3: Black and White Pixelation': 'Lesson 2,3: Black and White Pixelation'
           'Lesson 2,10: Good and Bad Data Visualizations': 'Lesson 2,10: Good and Bad Data Visualizations'
+          Measuring Student Learning: Measuring Student Learning
+          description_short: We will use this during TeacherCon to deliver supports and materials for sessions
         MikeTest:
           title: MikeTest
           description_short: Just a script for playing around
@@ -2036,3 +2040,9 @@ en:
           description_audience: Ages 8-98
           Sample Stage: Sample Stage
           Artist Functions: Artist Functions
+        artistExemplar:
+          title: Artist Exemplar
+          description_short: How can we make the artist levels really hum?
+          description: These artist levels will knock the socks off of third graders
+          description_audience: Ages 8-18
+          Artist Exemplar: Artist Exemplar

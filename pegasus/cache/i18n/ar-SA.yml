@@ -637,6 +637,11 @@
   dashboard_action_required: "متطلب"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
@@ -670,6 +675,7 @@
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: "القسم جديد"
@@ -1649,8 +1655,6 @@
   infinity_shortcode: inf
   playlab_shortcode: "إلعب"
   artist_shortcode: art
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  'yes': 'Yes'
+  'no': 'No'
+  dashboard_sections_table_stage_extras: Stage Extras

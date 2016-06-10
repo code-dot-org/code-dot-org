@@ -662,6 +662,11 @@
   dashboard_action_required: gerekli
   dashboard_assessments_view: 'Değerlendirmeleri gör:'
   dashboard_assessments_none: Değerlendirme yok
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Aşamaya göre filtrele:'
@@ -694,6 +699,7 @@
   dashboard_progress_view: "İlerlemeyi Görüntüle"
   dashboard_progress_student_in_script: "İlerleme bilgilerini %{script_name} %{student_name}
     için"
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: Yanıtları Görüntüle
   dashboard_responses_none: Cevap yok
   dashboard_sections_new_section: Yeni bölüm
@@ -1701,8 +1707,6 @@
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  'yes': 'Yes'
+  'no': 'No'
+  dashboard_sections_table_stage_extras: Stage Extras

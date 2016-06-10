@@ -29,22 +29,18 @@ ENV['BUILD'] = `git rev-parse --short HEAD`
 
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = GitUtils.current_branch
-log_uploader = AWS::S3::PublicVersionedLogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX)
+LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 
-#
-# Upload the given filename (of a cucumber log) to the logs s3 bucket.
-# Returns a public URL to the uploaded log.
-#
-def upload_log_and_get_public_url(log_uploader, filename)
-  return nil unless $options.html
-  log_uploader.upload_log(filename)
+# Upload the given log to the cucumber-logs s3 bucket.
+# @param [String] filename of log file to be uploaded.
+# @return [String] a public hyperlink to the uploaded log, or empty string.
+def upload_log_and_get_public_link(filename)
+  return '' unless $options.html
+  log_url = LOG_UPLOADER.upload_file(filename)
+  " <a href='#{log_url}'>☁ Log on S3</a>"
 rescue Exception => msg
   HipChat.log "Uploading log to S3 failed: #{msg}"
-  return nil
-end
-
-def log_link_from_url(url)
-  url ? " <a href='#{url}'>☁ Log on S3</a>" : ''
+  return ''
 end
 
 $options = OpenStruct.new
@@ -58,6 +54,7 @@ $options.dashboard_domain = 'test-studio.code.org'
 $options.hourofcode_domain = 'test.hourofcode.com'
 $options.local = nil
 $options.html = nil
+$options.out = nil
 $options.maximize = nil
 $options.auto_retry = false
 $options.magic_retry = false
@@ -117,6 +114,9 @@ opt_parser = OptionParser.new do |opts|
   end
   opts.on("--html", "Use html reporter") do
     $options.html = true
+  end
+  opts.on("--out filename", String, "Output filename") do |f|
+    $options.out = f
   end
   opts.on("-e", "--eyes", "Run only Applitools eyes tests") do
     $options.run_eyes_tests = true
@@ -284,7 +284,11 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
-    html_output_filename = test_run_string + "_output.html"
+    if $options.out
+      html_output_filename = $options.out
+    else
+      html_output_filename = test_run_string + "_output.html"
+    end
   end
 
   arguments = ''
@@ -386,11 +390,11 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     reruns += 1
 
     # Upload the failure log to S3, so we can examine it at our leisure.
-    log_url = upload_log_and_get_public_url(log_uploader, html_output_filename)
+    log_link = upload_log_and_get_public_link(html_output_filename)
 
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
-    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link_from_url log_url}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
@@ -430,11 +434,11 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
     # Upload the failure log to S3, so we can examine it at our leisure.
-    log_url = upload_log_and_get_public_url(log_uploader, html_output_filename)
+    log_link = upload_log_and_get_public_link(html_output_filename)
 
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
-    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link_from_url log_url}"
+    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
     short_message = message
 
     message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"

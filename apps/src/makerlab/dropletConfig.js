@@ -1,6 +1,7 @@
 /* global dashboard */
 
 import api from '../applab/api';
+import _ from '../lodash';
 
 const COLOR_LIGHT_GREEN = '#D3E965';
 const COLOR_CYAN = '#4DD0E1';
@@ -18,30 +19,35 @@ const playSongConfig = {
   tempo: 100000
 };
 
-const pixelType = '[Pixel]';
-const colorPixelVariables = ['pixels', 'pixel0', 'pixel1', 'pixel2', 'pixel3', 'pixel4', 'pixel5', 'pixel6', 'pixel7', 'pixel8', 'pixel9'];
-const simpleLedVariables = ['led', ...colorPixelVariables];
+const pixelType = '[ColorLed].';
+const colorPixelVariables = _.range(10).map(index => `colorLeds[${index}]`);
+const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 
 module.exports.blocks = [
-  {func: 'pinMode', parent: api, category: 'Maker Lab', params: ['13', '"input"']},
-  {func: 'digitalWrite', parent: api, category: 'Maker Lab', params: ['13', '1']},
-  {func: 'digitalRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, params: ['"D4"']},
-  {func: 'analogWrite', parent: api, category: 'Maker Lab', params: ['5', '150']},
-  {func: 'analogRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, params: ['5']},
+  {func: 'pinMode', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'mode'], params: ['13', '"output"'], dropdown: { 1: ['"output"', '"input"', '"analog"'] }},
+  {func: 'digitalWrite', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'value'], params: ['13', '1'], dropdown: { 1: ['1', '0'] }},
+  {func: 'digitalRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
+  {func: 'analogWrite', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'value'], params: ['5', '150']},
+  {func: 'analogRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
 
-  {func: 'on', blockPrefix: 'led.', category: 'Circuit', tipPrefix: pixelType, modeOptionName: "*.on", objectDropdown: { options: simpleLedVariables, dropdownOnly: true } },
-  {func: 'off', blockPrefix: 'led.', category: 'Circuit', tipPrefix: pixelType, modeOptionName: "*.off", objectDropdown: { options: simpleLedVariables, dropdownOnly: true }  },
-  {func: 'toggle', blockPrefix: 'led.', category: 'Circuit', tipPrefix: pixelType, modeOptionName: "*.toggle", objectDropdown: { options: simpleLedVariables, dropdownOnly: true }  },
-  {func: 'blink', blockPrefix: 'led.', category: 'Circuit', paletteParams: ['period'], params: ['50'], tipPrefix: pixelType, modeOptionName: "*.blink", objectDropdown: { options: simpleLedVariables, dropdownOnly: true }  },
-  {func: 'stop', blockPrefix: 'led.', category: 'Circuit', tipPrefix: pixelType, modeOptionName: "*.stop", objectDropdown: { options: simpleLedVariables, dropdownOnly: true }  },
-  {func: 'intensity', blockPrefix: 'pixel0.', category: 'Circuit', params: ['25'], tipPrefix: pixelType, modeOptionName: "*.intensity", objectDropdown: { options: colorPixelVariables, dropdownOnly: true }  },
-  {func: 'color', blockPrefix: 'pixel0.', category: 'Circuit', paletteParams: ['color'], params: ['"#FF00FF"'], tipPrefix: pixelType, modeOptionName: "*.color", objectDropdown: { options: colorPixelVariables, dropdownOnly: true }  },
+  {func: 'led', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'led.on', category: 'Circuit'},
+  {func: 'led.off', category: 'Circuit'},
 
-  {func: 'piezo', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
-  {func: 'piezo.frequency', category: 'Circuit', params: ['500', '100']},
-  {func: 'piezo.note', category: 'Circuit', params: ['"A4"', '100']},
-  {func: 'piezo.stop', category: 'Circuit'},
-  {func: 'piezo.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
+  {func: 'on', blockPrefix: colorLedBlockPrefix, category: 'Circuit', tipPrefix: pixelType, modeOptionName: '*.on', objectDropdown: {options: colorPixelVariables}},
+  {func: 'off', blockPrefix: colorLedBlockPrefix, category: 'Circuit', tipPrefix: pixelType, modeOptionName: '*.off', objectDropdown: {options: colorPixelVariables}},
+
+  {func: 'toggle', blockPrefix: colorLedBlockPrefix, category: 'Circuit', tipPrefix: pixelType, modeOptionName: "*.toggle", objectDropdown: { options: colorPixelVariables }  },
+  {func: 'blink', blockPrefix: colorLedBlockPrefix, category: 'Circuit', paletteParams: ['interval'], params: ['100'], tipPrefix: pixelType, modeOptionName: "*.blink", objectDropdown: { options: colorPixelVariables }  },
+  {func: 'stop', blockPrefix: colorLedBlockPrefix, category: 'Circuit', tipPrefix: pixelType, modeOptionName: "*.stop", objectDropdown: { options: colorPixelVariables }  },
+  {func: 'intensity', blockPrefix: colorLedBlockPrefix, category: 'Circuit', params: ['25'], tipPrefix: pixelType, modeOptionName: "*.intensity", objectDropdown: { options: colorPixelVariables }  },
+  {func: 'color', blockPrefix: colorLedBlockPrefix, category: 'Circuit', paletteParams: ['color'], params: ['"#FF00FF"'], tipPrefix: pixelType, modeOptionName: "*.color", objectDropdown: { options: colorPixelVariables }  },
+
+  {func: 'buzzer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'buzzer.frequency', category: 'Circuit', paletteParams: ['frequency', 'duration'], params: ['500', '100']},
+  {func: 'buzzer.note', category: 'Circuit', paletteParams: ['note', 'duration'], params: ['"A4"', '100']},
+  {func: 'buzzer.stop', category: 'Circuit'},
+  {func: 'buzzer.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
 
   {func: 'isPressed', objectDropdown: { options: ['buttonL', 'buttonR'], dropdownOnly: true }, modeOptionName: "*.isPressed", blockPrefix: 'buttonL.', category: 'Circuit', type: 'readonlyproperty', tipPrefix: '[Button].'},
   {func: 'holdtime', blockPrefix: 'buttonL.', category: 'Circuit', type: 'property', tipPrefix: 'button[L/R]' },

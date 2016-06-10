@@ -35,7 +35,7 @@ var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
-import { setInstructionsConstants } from './redux/instructions';
+import { determineInstructionsConstants, setInstructionsConstants } from './redux/instructions';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
@@ -49,8 +49,6 @@ var MIN_WIDTH = 900;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
-
-var ENGLISH_LOCALE = 'en_us';
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
@@ -643,6 +641,14 @@ StudioApp.prototype.configureHints_ = function (config) {
   var bubble = document.getElementById('bubble');
   if (bubble) {
     dom.addClickTouchEvent(bubble, function () {
+      const reduxState = this.reduxStore.getState();
+      const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
+      const hasAuthoredHints = reduxState.instructions.hasAuthoredHints;
+
+      // Don't show dialog on click in top pane unless we have hints
+      if (instructionsInTopPane && !hasAuthoredHints) {
+        return;
+      }
       this.showInstructionsDialog_(config.level, false, true);
     }.bind(this));
   }
@@ -1161,7 +1167,9 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} showHints
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
-  var isMarkdownMode = !!this.reduxStore.getState().instructions.longInstructions;
+  const reduxState = this.reduxStore.getState();
+  const isMarkdownMode = !!reduxState.instructions.longInstructions;
+  const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -1212,7 +1220,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
 
   var hideFn = _.bind(function () {
     // Momentarily flash the instruction block white then back to regular.
-    if ($(endTargetSelector).length) {
+    if (!instructionsInTopPane) {
       $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
         .delay(500)
         .animate({"background-color":"rgba(0,0,0,0)"},1000);
@@ -1960,6 +1968,24 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   }
 };
 
+/**
+ * Move the droplet cursor to the first token at a specific line number.
+ * @param {Number} line zero-based line index
+ */
+StudioApp.prototype.setDropletCursorToLine_ = function (line) {
+  var dropletDocument = this.editor.getCursor().getDocument();
+  var docToken = dropletDocument.start;
+  var curLine = 0;
+  while (docToken && curLine < line) {
+    docToken = docToken.next;
+    if (docToken.type === 'newline') {
+      curLine++;
+    }
+  }
+  if (docToken) {
+    this.editor.setCursor(docToken);
+  }
+};
 
 StudioApp.prototype.handleEditCode_ = function (config) {
   if (this.hideSource) {
@@ -2116,9 +2142,55 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
   this.editor.on('palettetoggledone', function (e) {
-    // Reposition callouts after block/text toggle (in case they need to move)
-    $('.cdo-qtips').qtip('reposition', null, false);
+    $(window).trigger('droplet_change', ['togglepalette']);
   });
+
+  this.editor.on('selectpalette', function (e) {
+    $(window).trigger('droplet_change', ['selectpalette']);
+  });
+
+  $('.droplet-palette-scroller').on('scroll', function (e) {
+    $(window).trigger('droplet_change', ['scrollpalette']);
+  });
+
+  $.expr[':'].textEquals = function (el, i, m) {
+      var searchText = m[3];
+      var match = $(el).text().trim().match("^" + searchText + "$");
+      return match && match.length > 0;
+  };
+
+  $(window).on('prepareforcallout', function (e, options) {
+    // qtip_config's codeStudio options block is available in options
+    if (options.dropletPaletteCategory) {
+      this.editor.changePaletteGroup(options.dropletPaletteCategory);
+      var scrollContainer = $('.droplet-palette-scroller');
+      var scrollTo = $(options.selector);
+      if (scrollTo.length > 0) {
+        scrollContainer.scrollTop(scrollTo.offset().top - scrollContainer.offset().top +
+            scrollContainer.scrollTop());
+      }
+    } else if (options.codeString) {
+      var range = this.editor.aceEditor.find(options.codeString, {
+        caseSensitive: true,
+        range: null,
+        preventScroll: true
+      });
+      if (range) {
+        var lineIndex = range.start.row;
+        var line = lineIndex + 1; // 1-based line number
+        if (this.editor.currentlyUsingBlocks) {
+          options.selector = '.droplet-gutter-line:textEquals("' + line + '")';
+          this.setDropletCursorToLine_(lineIndex);
+          this.editor.scrollCursorIntoPosition();
+          this.editor.redrawGutter();
+        } else {
+          options.selector = '.ace_gutter-cell:textEquals("' + line + '")';
+          this.editor.aceEditor.scrollToLine(lineIndex);
+          this.editor.aceEditor.renderer.updateFull(true);
+        }
+      }
+    }
+  }.bind(this));
 
   // Prevent the backspace key from navigating back. Make sure it's still
   // allowed on other elements.
@@ -2746,32 +2818,12 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   this.reduxStore.dispatch(setPageConstants(combined));
 
-  // also set some instructions specific constants
-  // If non-English, dont use level.markdownInstructions since they haven't been
-  // translated
-  const locale = config.locale || ENGLISH_LOCALE;
-  let longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
-  let shortInstructions = level.instructions;
-
-  const noInstructionsWhenCollapsed = !!config.noInstructionsWhenCollapsed;
-  // Our TopInstructions operate in two modes.
-  // In CSF we show short instructions when collapsed. In this mode, we assume
-  // that we have at least shortInstructions.
-  // In CSP we show no instructions  when collapsed. In this mode, we assume
-  // that we have at least longInstructions. In the case that we arent
-  // provided (markdown) longInstructions, treat our shortInstructiosn as our
-  // longInstructions
-  if (noInstructionsWhenCollapsed) {
-    if (shortInstructions && !longInstructions) {
-      longInstructions = shortInstructions;
-    }
-    // Never use short instructions in CSP
-    shortInstructions = undefined;
-  }
-
-  this.reduxStore.dispatch(setInstructionsConstants({
-    noInstructionsWhenCollapsed,
-    shortInstructions,
-    longInstructions,
-  }));
+  const instructionsConstants = determineInstructionsConstants(
+    config.level.instructions,
+    config.level.markdownInstructions,
+    config.locale,
+    !!config.noInstructionsWhenCollapsed,
+    !!config.showInstructionsInTopPane
+  );
+  this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
 };

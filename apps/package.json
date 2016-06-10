@@ -160,6 +160,7 @@
   },
   "dependencies": {
     "filesaver.js": "0.2.0",
+    "firebase": "^2.4.1",
     "jszip": "3.0.0",
     "query-string": "4.1.0",
     "react-color": "code-dot-org/react-color#65a688f0ed61da00acea95cb1c8aa0c691b3839e"

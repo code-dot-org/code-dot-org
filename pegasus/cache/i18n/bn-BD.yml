@@ -660,6 +660,11 @@
   dashboard_action_required: "প্রয়োজনীয়"
   dashboard_assessments_view: "মূল্যায়ন দেখুন:"
   dashboard_assessments_none: "মূল্যায়ন নাই"
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: "স্তর দ্বারা ফিল্টার করুন:"
@@ -692,6 +697,7 @@
   dashboard_progress_view: "আগ্রগতি দেখুন:"
   dashboard_progress_student_in_script: "%{student_name} এর %{script_name} তে অগ্রগতি
     তথ্য"
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: "লিখিত জবাব দেখুন:"
   dashboard_responses_none: "কোন টেক্সট প্রতিক্রিয়া নাই"
   dashboard_sections_new_section: "নতুন বিভাগ"
@@ -1720,8 +1726,6 @@
   infinity_shortcode: inf
   playlab_shortcode: "খেলুন"
   artist_shortcode: art
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  'yes': 'Yes'
+  'no': 'No'
+  dashboard_sections_table_stage_extras: Stage Extras

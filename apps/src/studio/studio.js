@@ -43,6 +43,7 @@ var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('../MusicController');
 var paramLists = require('./paramLists.js');
+var experiments = require('../experiments');
 
 var studioCell = require('./cell');
 
@@ -1980,6 +1981,7 @@ Studio.init = function (config) {
   }
 
   config.appMsg = studioMsg;
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   Studio.initSprites();
 

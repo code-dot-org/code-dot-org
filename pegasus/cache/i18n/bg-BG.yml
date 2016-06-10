@@ -363,9 +363,9 @@
   homepage_banner_20k_teachers: 20 000 учители са обучени, а сега ще преподават компютърни
     науки в класните стаи.
   homepage_banner_20k_teachers_link: "Научете повече"
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress: "Американските лидери искат от Конгреса финансиране за
+    K-12 компютърни науки."
+  homepage_banner_congress_link: "Дайте своята подкрепа"
   homepage_slot_text_title_hoc: "Час на Кодирането"
   homepage_slot_text_blurb_hoc: "Всеки може да се научи. Започнете днес"
   homepage_slot_text_link_hoc: "Опитайте Hour of Code"
@@ -391,7 +391,7 @@
   homepage_slot_text_link_stats: "Виждате статистиката"
   homepage_slot_text_link_buy: "Включете се"
   homepage_slot_text_link_donate: "Направете дарение"
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: "Тениски, шапки & повече"
   homepage_header_codestudio: "Проекти  на ученици в Студиото по програмиране"
   homepage_header_donors: Code.org благодари на своите привърженици
   homepage_donors_seall: "Вижте всички"
@@ -586,7 +586,7 @@
   dashboard_landing_new_k5courses: "Ново! Опитайте нашите курсове за ученици в предучилищна
     и училищна възраст до 5 клас"
   dashboard_landing_useful_links: "Други полезни връзки (само на английски език)"
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: "Ресурси за вашата класна стая"
   dashboard_landing_office_hours: "Задайте въпрос лично! Посетете ни в работно време."
   dashboard_landing_print_certificates: "Печат на сертификати за ученици, които завършват
     този курс"
@@ -607,11 +607,11 @@
     предлагани от нашите партньори.</a> Научете се да програмирате с роботи, да правите
     уеб страници, да направете свое собствено  приложение или разгледайте уроци с
     други езици като C++, Ruby или Python!
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_inspire: "Вдъхнови учениците си с плакати, видео и др."
+  dashboard_landing_video_library: "Използвайте видео от видео библиотеката на компютърни
+    понятия."
+  dashboard_landing_report_bug: "Заявка за функция или докладване на проблем."
+  dashboard_landing_teacher_forum: "Присъединете се към Общността."
   dashboard_hoc_courses: "Часът на кода за всички възрасти"
   dashboard_hoc_courses_desc: "Опитайте някои от тези кратки едночасови уроци с учениците
     си!"
@@ -668,8 +668,13 @@
   dashboard_action_required: "изисквания"
   dashboard_assessments_view: "Виж оценките в:"
   dashboard_assessments_none: "Няма оценки"
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: "Резюмета"
+  dashboard_assessments_answers: "Всички отговори"
   dashboard_filter_by_stage: "Филтрирай по етикети:"
   dashboard_filter_all: "Всичи"
   dashboard_download_csv: "Сваляне на CSV"
@@ -700,6 +705,7 @@
   dashboard_progress_view: "Преглед на напредъка:"
   dashboard_progress_student_in_script: "Информация за напредъка за %{student_name}
     в %{script_name}"
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: "Изглед на текстовите отговори:"
   dashboard_responses_none: "Няма текстови отговори"
   dashboard_sections_new_section: "Нов раздел"
@@ -808,8 +814,8 @@
   dashboard_course2: "Курс 2:"
   dashboard_course3: "Курс 3:"
   dashboard_course4: "Курс 4 (бета): "
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  dashboard_unplugged: "Ако не разполагате с компютри, <a href='%{unplugged_url}'>
+    Опитайте тези уроци без компютър</a> в класната стая."
   dashboard_curriculum: "Учебна програма"
   dashboard_curriculum_overview: K-5 преглед на програмата
   dashboard_overview: "Общ преглед"
@@ -878,11 +884,12 @@
     всички ресурси без компютър на една целева страница. Свържете уроците с всеки
     Кн клас, или използвайте самостоятелно като независим курс."
   dashboard_announce_button_text: "Научете повече"
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition: "Като учител, Вие трябва да намерите подход, така че
+    да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки.
+    Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица,
+    образователни лидери, 28 управители и директори на компании в Америка се обединяват
+    зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно
+    образование."
   dashboard_announce_petition_button: "Добавете името си"
   code_hoc_coming: "Часът на кода е тук - декември 8-14!"
   code_sign_up: "Регистрирайте се за участие по време на CS седмицата на образованието"
@@ -1007,13 +1014,13 @@
   course3_name: "Курс 3"
   course4_name: "Курс 4"
   accelerated_name: "Ускорен курс"
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: 'CS принципи: част 3'
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
-  csp1_name: 'Unit 1: The Internet'
+  cspunit1_name: "Урок 1: Цифрова информация"
+  cspunit2_name: "Раздел 2: Интернет"
+  cspunit3_name: "Раздел 3: програмиране"
+  cspunit4_name: "Раздел 4: данни"
+  cspunit5_name: "Раздел 5: Изследване и създаване на PT"
+  cspunit6_name: "Пост AP: Бази данни в приложения"
+  csp1_name: "Раздел 1: Интернет"
   csp2_name: 'Unit 2: Digital Information'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
@@ -1744,8 +1751,6 @@
   infinity_shortcode: inf
   playlab_shortcode: "играй"
   artist_shortcode: art
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  'yes': 'Yes'
+  'no': 'No'
+  dashboard_sections_table_stage_extras: Stage Extras

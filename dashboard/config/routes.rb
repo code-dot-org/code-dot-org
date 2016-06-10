@@ -146,7 +146,7 @@ Dashboard::Application.routes.draw do
     post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
   end
 
-  get '/pl/:course', to: 'plc/user_course_enrollments#index'
+  get '/course/:course', to: 'plc/user_course_enrollments#index', as: 'course'
 
   get '/beta', to: redirect('/')
 
