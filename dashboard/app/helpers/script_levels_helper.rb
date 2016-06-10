@@ -1,8 +1,8 @@
 module ScriptLevelsHelper
   def script_level_solved_response(response, script_level)
-    next_user_redirect = next_progression_level_or_redirect_path(script_level)
+    next_user_redirect = script_level.next_level_or_redirect_path_for_user current_user
 
-    if has_another_level_to_go_to?(script_level)
+    if script_level.has_another_level_to_go_to?
       if script_level.end_of_stage?
         response[:stage_changing] = {previous: {name: script_level.name}}
       end
@@ -17,48 +17,6 @@ module ScriptLevelsHelper
     end
 
     response[:redirect] = next_user_redirect
-  end
-
-  def has_another_level_to_go_to?(script_level)
-    if script_level.script.professional_learning_course?
-      !script_level.end_of_stage?
-    else
-      script_level.next_progression_level
-    end
-  end
-
-  def next_progression_level_or_redirect_path(script_level)
-    next_level =
-      if script_level.level.unplugged? ||
-          (script_level.stage && script_level.stage.unplugged?)
-        # if we're coming from an unplugged level, it's ok to continue
-        # to unplugged level (example: if you start a sequence of
-        # assessments associated with an unplugged level you should
-        # continue on that sequence instead of skipping to next stage)
-        script_level.next_level
-      else
-        script_level.next_progression_level
-      end
-
-    if script_level.script.professional_learning_course?
-      if script_level.level.try(:plc_evaluation?)
-        if Plc::EnrollmentUnitAssignment.exists?(user: current_user, plc_course_unit: script_level.script.plc_course_unit)
-          script_preview_assignments_path(script_level.script)
-        else
-          build_script_level_path(next_level)
-        end
-      else
-        if has_another_level_to_go_to?(script_level)
-          build_script_level_path(next_level)
-        else
-          script_path(script_level.script)
-        end
-      end
-    else
-      next_level ?
-          build_script_level_path(next_level) :
-          script_completion_redirect(script_level.script)
-    end
   end
 
   def wrapup_video_then_redirect_response(wrapup_video, redirect)
