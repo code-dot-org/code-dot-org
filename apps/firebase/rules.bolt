@@ -1,11 +1,81 @@
+// A primary goal of the firebase rules is to make sure there are no unsecured
+// nodes for which arbitrary data can be written to one of its children.
+// Generally, this can be prevented for a given node in one of two ways:
+// A. do not specify a write() rule on the node or its ancestors (a write() rule
+//    which returns true grants write access to all descendants)
+// B. specify a type on the node, which forbids any descendants which
+//    are not explicitly declared in the type definition.
+//
+// The strategy for ensuring that all nodes are secured via A or B is as follows:
+// 1. a node with a write() rule must not have an ancestor with a write() rule.
+// 2. a node with a write() rule must also have a type definition.
+// 3. avoid the Any or Object types in type definitions, since these allow
+//    arbitrary children. If these are used, the shape of the data must be
+//    enforced via a validate() rule.
+
 ///////////////////////////////////////////////////////////////////////////
 // PATH RULES
 ///////////////////////////////////////////////////////////////////////////
 
+path /v3/constants {
+  read() { true }
+}
+
 path /v3/channels {
   read() { true }
+}
+
+path /v3/channels/{channelId}/serverTime/{user_id} is Number {
+  write() { auth.uid === user_id }
+}
+
+path /v3/channels/{channelId}/counters is Counters {
   write() { isLoggedIn() }
 }
+
+path /v3/channels/{channelId}/storage is Storage {
+  write() { isLoggedIn() }
+}
+
+///////////////////////////////////////////////////////////////////////////
+// TYPES
+///////////////////////////////////////////////////////////////////////////
+
+// counters
+
+type Counters {
+  limits: RateLimitCounters
+  tables: TableCounter[]
+}
+
+type TableCounter {
+  lastId: Number | Null
+  rowCount: Number | Null
+}
+
+type RateLimitCounters {
+  '15': RateLimitCounter | Null
+  '60': RateLimitCounter | Null
+}
+
+type RateLimitCounter {
+  lastResetTime: Number | Null
+  writeCount: Number | Null
+}
+
+// storage
+
+type Storage {
+  tables: TableStorage[]
+  // TODO(dave): make this String[] once values are stringified
+  keys: Value[]
+}
+
+type TableStorage {
+  records: String[]
+}
+
+type Value extends String | Number | Boolean | Null;
 
 ///////////////////////////////////////////////////////////////////////////
 // HELPER FUNCTIONS

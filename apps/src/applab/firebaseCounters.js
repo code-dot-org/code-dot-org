@@ -75,7 +75,7 @@ export function incrementRateLimitCounters() {
   return getCurrentTime().then(currentTimeMs => {
     let promises = [];
     Object.keys(RATE_LIMITS).forEach(interval => {
-      const limitRef = getDatabase(Applab.channelId).child(`limits/${interval}`);
+      const limitRef = getDatabase(Applab.channelId).child(`counters/limits/${interval}`);
       promises.push(limitRef.transaction(limitData => {
         limitData = limitData || {};
         limitData.lastResetTime = limitData.lastResetTime || 0;
@@ -116,7 +116,7 @@ export function incrementRateLimitCounters() {
  */
 function getCurrentTime() {
   const serverTimeRef = getDatabase(Applab.channelId)
-    .child(`server_time/${Applab.firebaseUserId}`);
+    .child(`serverTime/${Applab.firebaseUserId}`);
   return serverTimeRef.set(Firebase.ServerValue.TIMESTAMP).then(() => {
     serverTimeRef.onDisconnect().remove();
     return serverTimeRef.once('value').then(snapshot => snapshot.val());
