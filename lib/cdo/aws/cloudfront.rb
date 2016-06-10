@@ -315,7 +315,7 @@ module AWS
             OriginPath: '',
           },
           {
-            id: 'cdo-assets',
+            Id: 'cdo-assets',
             DomainName: "#{CDO.assets_bucket}.s3.amazonaws.com",
             OriginPath: "/#{rack_env}",
             S3OriginConfig: {
