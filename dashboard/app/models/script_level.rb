@@ -75,11 +75,15 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
-  def next_level_or_redirect_path_for_user user
-    level_to_follow = (level.unplugged? || stage.try(:unplugged?)) ? next_level : next_progression_level
+  def next_level_or_redirect_path_for_user(user)
+    # if we're coming from an unplugged level, it's ok to continue
+    # to unplugged level (example: if you start a sequence of
+    # assessments associated with an unplugged level you should
+    # continue on that sequence instead of skipping to next stage)
+    level_to_follow = (level.unplugged? || stage.unplugged?) ? next_level : next_progression_level
 
     if script.professional_learning_course?
-      if levels[0].try(:plc_evaluation?)
+      if level.try(:plc_evaluation?)
         if Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
           script_preview_assignments_path(script)
         else
