@@ -12,6 +12,7 @@ var reporting = require('../reporting');
 var Dialog = require('../dialog');
 var showVideoDialog = require('../videos').showVideoDialog;
 var PlayZone = require('../components/playzone').PlayZone;
+var ReactDOM = require('react-dom');
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
@@ -99,6 +100,7 @@ window.apps = {
           var props = {
             stageName: `Stage ${lastServerResponse.previousStageInfo.position}: ${lastServerResponse.previousStageInfo.name}`,
             onContinue: () => { dialog.hide(); },
+            i18n: window.dashboard.i18n
           };
           ReactDOM.render(<PlayZone {...props} />, body);
           var dialog = new Dialog({

@@ -8,29 +8,24 @@ export class PlayZone extends React.Component {
   constructor(props) {
     super(props);
 
-    // requiring here because locale references window.blockly, which is
-    // defined during the pageload process but not necessarily before
-    // code-studio is.
-    this.locale = require('@cdo/apps/locale');
-
     this.links = [{
       href: "/projects/artist/new",
       img: "/shared/images/courses/logo_tall_artist.jpg",
-      title: this.locale.playzoneArtistTitle(),
+      title: this.props.i18n.t('components.playzone.artist_title'),
       className: "artist",
-      description: this.locale.playzoneArtistDescription(),
+      description: this.props.i18n.t('components.playzone.artist_description'),
     }, {
       href: "/projects/playlab/new",
       img: "/shared/images/courses/logo_tall_playlab.jpg",
-      title: this.locale.playzonePlaylabTitle(),
+      title: this.props.i18n.t('components.playzone.playlab_title'),
       className: "playlab",
-      description: this.locale.playzonePlaylabDescription(),
+      description: this.props.i18n.t('components.playzone.playlab_description'),
     }, {
       href: "/projects",
       img: "/shared/images/courses/logo_tall_applab.jpg",
-      title: this.locale.playzoneProjectsTitle(),
+      title: this.props.i18n.t('components.playzone.projects_title'),
       className: "projects",
-      description: this.locale.playzoneProjectsDescription(),
+      description: this.props.i18n.t('components.playzone.projects_description'),
     }];
 
     this.styles = {
@@ -45,8 +40,8 @@ export class PlayZone extends React.Component {
   render() {
     return (
       <div style={this.styles.container}>
-        <h1 style={this.styles.primaryHeader}>{this.locale.playzonePrimaryHeader({stageName: this.props.stageName})}</h1>
-        <h4 style={this.styles.secondaryHeader}>{this.locale.playzoneSecondaryHeader()}</h4>
+        <h1 style={this.styles.primaryHeader}>{this.props.i18n.t('components.playzone.primary_header', {stageName: this.props.stageName})}</h1>
+        <h4 style={this.styles.secondaryHeader}>{this.props.i18n.t('components.playzone.secondary_header')}</h4>
         <div className="center" style={this.styles.courseblockContainer}>{this.links.map(link =>
           <div key={link.className} className="courseblock-noaction courseblock-span3 courseblock-tall">
             <a href={link.href}>
@@ -62,7 +57,7 @@ export class PlayZone extends React.Component {
         )}</div>
         <div className="farSide">
           <button id="ok-button" onClick={this.props.onContinue} style={this.styles.continueButton}>
-            {this.locale.playzoneContinueButton()}
+            {this.props.i18n.t('components.playzone.continue_button')}
           </button>
         </div>
       </div>
@@ -73,4 +68,5 @@ export class PlayZone extends React.Component {
 PlayZone.propTypes = {
   stageName: React.PropTypes.string.isRequired,
   onContinue: React.PropTypes.func.isRequired,
+  i18n: React.PropTypes.object.isRequired
 };
