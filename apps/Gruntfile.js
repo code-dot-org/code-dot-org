@@ -411,6 +411,8 @@ module.exports = function (grunt) {
   });
   config.webpack.watch = _.extend({}, config.webpack.build, {
     keepalive: true,
+    // don't stop watching when we hit compile errors
+    failOnError: false,
     plugins: config.webpack.build.plugins.concat([
       new LiveReloadPlugin({
         appendScriptTag: envOptions.autoReload
