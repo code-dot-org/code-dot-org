@@ -27,6 +27,7 @@ require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
+COMMIT_HASH = RakeUtils.git_revision
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = GitUtils.current_branch
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
@@ -34,9 +35,9 @@ LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 # Upload the given log to the cucumber-logs s3 bucket.
 # @param [String] filename of log file to be uploaded.
 # @return [String] a public hyperlink to the uploaded log, or empty string.
-def upload_log_and_get_public_link(filename)
+def upload_log_and_get_public_link(filename, metadata)
   return '' unless $options.html
-  log_url = LOG_UPLOADER.upload_file(filename)
+  log_url = LOG_UPLOADER.upload_file(filename, {metadata: metadata})
   " <a href='#{log_url}'>☁ Log on S3</a>"
 rescue Exception => msg
   HipChat.log "Uploading log to S3 failed: #{msg}"
@@ -383,10 +384,15 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
   FileUtils.rm rerun_filename, force: true
 
-  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments)
-  log_link = upload_log_and_get_public_link(html_output_filename)
-
   reruns = 0
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments)
+  log_link = upload_log_and_get_public_link(html_output_filename, {
+      commit: COMMIT_HASH,
+      success: succeeded.to_s,
+      attempt: reruns.to_s,
+      duration: test_duration.to_s
+  })
+
   while !succeeded && (reruns < max_reruns)
     reruns += 1
 
@@ -397,7 +403,12 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
     succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + rerun_arguments)
-    log_link = upload_log_and_get_public_link(html_output_filename)
+    log_link = upload_log_and_get_public_link(html_output_filename, {
+        commit: COMMIT_HASH,
+        duration: test_duration.to_s,
+        attempt: reruns.to_s,
+        success: succeeded.to_s
+    })
   end
 
   $lock.synchronize do
