@@ -142,7 +142,7 @@ def insert_form(kind, data, options={})
     updated_at: timestamp,
     updated_ip: request.ip,
   }
-  row[:user_id] = dashboard_user[:id] if dashboard_user
+  row[:user_id] = dashboard_user ? dashboard_user[:id] : data[:user_id_i]
 
   form_class = Object.const_get(kind)
   row[:source_id] = form_class.get_source_id(data) if form_class.respond_to? :get_source_id
