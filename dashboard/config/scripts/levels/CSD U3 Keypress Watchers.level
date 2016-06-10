@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Modify the code so that all of the console.log commands print true",
-    "start_blocks": "// Set watchers on the four variables (up, down, left, and right)\r\n// Run the programs and use the arrow keys\r\n// Observe the watchers to figure out what's happening\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  textAlign(CENTER, CENTER);\r\n  textSize(40);\r\n  \r\n  // Observe how each of these keys works differently\r\n  // Up Arrow\r\n  text(keyDown(UP_ARROW), 0, 0, 400, 100);\r\n  // Down Arrow\r\n  text(!keyDown(DOWN_ARROW), 0, 300, 400, 100);\r\n  // Left Arrow\r\n  text(keyWentDown(LEFT_ARROW), 0, 0, 100, 400);\r\n  // Right Arrow\r\n  text(keyWentUp(RIGHT_ARROW), 300, 0, 100, 400);\r\n}",
+    "start_blocks": "// Set watchers on the four variables (up, down, left, and right)\r\n// Run the programs and use the arrow keys\r\n// Observe the watchers to figure out what's happening\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  textAlign(\"center\", \"center\");\r\n  textSize(40);\r\n  \r\n  // Observe how each of these keys works differently\r\n  // Up Arrow\r\n  text(keyDown(\"up\"), 0, 0, 400, 100);\r\n  // Down Arrow\r\n  text(!keyDown(\"down\"), 0, 300, 400, 100);\r\n  // Left Arrow\r\n  text(keyWentDown(\"left\"), 0, 0, 100, 400);\r\n  // Right Arrow\r\n  text(keyWentUp(\"right\"), 300, 0, 100, 400);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

@@ -53,7 +53,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Upload your own image\r\n\r\nYou've probably been waiting for this as well. You can now upload your own image!\r\n\r\n# Do This\r\n\r\n* Create a sprite\r\n* Open the animations tab\r\n* Click add new sequence\r\n* Click Upload Image\r\n* Select a file from your computer (what type does this need to be?)",
+    "markdown_instructions": "# Upload your own image\r\n\r\nYou've probably been waiting for this as well. You can now upload your own image!\r\n\r\n# Do This\r\nYou are going to make a kite flying. The first step is to pick out a kite you like.\r\n\r\n* Find an image of a kite you want to use.  It works best if it has a clear background.\r\n* Open the animations tab\r\n* Click add new sequence\r\n* Click Upload Image\r\n* Select a file from your computer\r\n* Make sure your image has an easy to use name like kiteImage.png\r\n* Set the kite sprite to display your image",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -75,7 +75,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "project_template_level_name": "CSD U3 - kite template"
   },
   "published": true,
   "notes": "",
