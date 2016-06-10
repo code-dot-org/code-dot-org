@@ -1,0 +1,42 @@
+#warning-banner{style: 'display: none;'}
+  #message
+    %i.fa.fa-warning.warning-sign
+    &nbsp;
+    - if request.site == 'csedweek.org'
+      = I18n.t('compatibility.upgrade.ie_message_csedweek')
+    - else
+      = I18n.t('compatibility.upgrade.ie_message')
+    &nbsp;
+    %a{href: 'https://support.code.org/hc/en-us/articles/219557867', target: '_blank'}
+      = I18n.t('compatibility.upgrade.link')
+  #hide-warning
+    %i.fa.fa-times.close
+
+:javascript
+  function setCookie(key, value, days) {
+    baseDomain = '.code.org';
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString() + ';domain=' + baseDomain + "; path=/";
+  }
+
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+
+  $(document).ready(function () {
+    var ie_cookie = getCookie('_hide_ie_banner');
+    var ie_8 = navigator.userAgent.match('MSIE 8.0;')
+    var ie_9 = navigator.userAgent.match('MSIE 9.0;')
+    var ie_10 = navigator.userAgent.match('MSIE 10.0;')
+
+    if (ie_cookie != 1 && (ie_8 || ie_9 || ie_10)) {
+      $("#warning-banner").show();
+    }
+
+    $("#warning-banner #hide-warning").click(function () {
+      setCookie('_hide_ie_banner', '1', 365)
+      $("#warning-banner").slideUp('fast');
+    });
+  });
