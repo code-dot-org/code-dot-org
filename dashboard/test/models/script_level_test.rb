@@ -162,14 +162,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'has another level answers appropriately for professional learning courses' do
-    create_fake_plc_stuff
+    create_fake_plc_data
 
     assert @script_level1.has_another_level_to_go_to?
     assert_not @script_level2.has_another_level_to_go_to?
   end
 
   test 'redirects appropriately for professional learning courses' do
-    create_fake_plc_stuff
+    create_fake_plc_data
 
     assert_equal script_preview_assignments_path(@plc_script), @evaluation_script_level.next_level_or_redirect_path_for_user(@user)
     @unit_assignment.destroy
@@ -180,7 +180,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   private
-  def create_fake_plc_stuff
+  def create_fake_plc_data
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script
     @plc_script.update(professional_learning_course: true)
