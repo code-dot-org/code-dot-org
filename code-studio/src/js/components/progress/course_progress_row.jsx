@@ -1,5 +1,6 @@
 /* global dashboard */
 import React from 'react';
+import { connect } from 'react-redux';
 import { stageShape } from './types';
 import StageProgress from './stage_progress.jsx';
 import color from '../../color';
@@ -83,7 +84,7 @@ const CourseProgressRow = React.createClass({
       Object.assign(rowStyle, styles.focusAreaRow);
       ribbon = <div style={styles.ribbonWrapper}><div style={styles.ribbon}>Focus Area</div></div>;
       changeFocusArea = (
-        <a href={`${location.href}/preview_assignments`} style={styles.changeFocusArea}>
+        <a href={this.props.changeFocusAreaPath} style={styles.changeFocusArea}>
           <i className='fa fa-pencil' /> Change your focus area
         </a>
       );
@@ -106,4 +107,7 @@ const CourseProgressRow = React.createClass({
     );
   }
 });
-module.exports = CourseProgressRow;
+
+export default connect(state => ({
+  changeFocusAreaPath: state.changeFocusAreaPath
+}))(CourseProgressRow);
