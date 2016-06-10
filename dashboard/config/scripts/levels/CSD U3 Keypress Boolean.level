@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Modify the code so that all of the console.log commands print true",
-    "start_blocks": "// Run this code and observe what happens\r\n// When you press the up arrow\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  textAlign(CENTER, CENTER);\r\n  textSize(100);\r\n  text(keyDown(UP_ARROW), 0, 0, 400, 400);\r\n}",
+    "start_blocks": "// Run this code and observe what happens\r\n// When you press the up arrow\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  textAlign(\"center\", \"center\");\r\n  textSize(100);\r\n  text(keyDown(\"up\"), 0, 0, 400, 400);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
