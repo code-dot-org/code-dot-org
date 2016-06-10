@@ -9,6 +9,7 @@
     "code_functions": {
       "draw": null,
       "Game.frameRate": null,
+      "frameRate": null,
       "background": null,
       "fill": null,
       "noFill": null,
