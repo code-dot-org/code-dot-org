@@ -1,6 +1,8 @@
 "en-US":
   hour_of_code: "Hour of Code"
   hello: "Hello world"
+  'yes': 'Yes'
+  'no': 'No'
   select_language: "Please select your language"
   en: "Computer Science"
   computer_science_edweek: "Computer Science Education Week"
