@@ -35,7 +35,7 @@ var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
-import { setInstructionsConstants } from './redux/instructions';
+import { determineInstructionsConstants, setInstructionsConstants } from './redux/instructions';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
@@ -49,8 +49,6 @@ var MIN_WIDTH = 900;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
-
-var ENGLISH_LOCALE = 'en_us';
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
@@ -2756,37 +2754,12 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   this.reduxStore.dispatch(setPageConstants(combined));
 
-  // also set some instructions specific constants
-  const noInstructionsWhenCollapsed = !!config.noInstructionsWhenCollapsed;
-  const locale = config.locale || ENGLISH_LOCALE;
-  let longInstructions, shortInstructions;
-  if (noInstructionsWhenCollapsed) {
-    // CSP mode - We dont care about locale, and always want to show English
-    longInstructions = level.markdownInstructions;
-    shortInstructions = level.instructions;
-
-    // Never use short instructions in CSP. If that's all we have, make them
-    // our longInstructions instead
-    if (shortInstructions && !longInstructions) {
-      longInstructions = shortInstructions;
-    }
-    shortInstructions = undefined;
-  } else {
-    // CSF mode - For non-English folks, only use the non-markdown instructions
-    longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
-    shortInstructions = level.instructions;
-
-    // In the case that we're in the top pane, if the two sets of instructions
-    // are identical, only use the short version (such that we dont end up
-    // minimizing/expanding between two identical sets).
-    if (config.showInstructionsInTopPane && shortInstructions === longInstructions) {
-      longInstructions = null;
-    }
-  }
-
-  this.reduxStore.dispatch(setInstructionsConstants({
-    noInstructionsWhenCollapsed,
-    shortInstructions,
-    longInstructions,
-  }));
+  const instructionsConstants = determineInstructionsConstants(
+    config.level.instructions,
+    config.level.markdownInstructions,
+    config.locale,
+    !!config.noInstructionsWhenCollapsed,
+    !!config.showInstructionsInTopPane
+  );
+  this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
 };
