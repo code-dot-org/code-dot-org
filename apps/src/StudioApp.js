@@ -35,7 +35,7 @@ var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
-import { setInstructionsConstants } from './redux/instructions';
+import { determineInstructionsConstants, setInstructionsConstants } from './redux/instructions';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
@@ -49,8 +49,6 @@ var MIN_WIDTH = 900;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
-
-var ENGLISH_LOCALE = 'en_us';
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
@@ -2756,36 +2754,12 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   this.reduxStore.dispatch(setPageConstants(combined));
 
-  // also set some instructions specific constants
-  // If non-English, dont use level.markdownInstructions since they haven't been
-  // translated
-  const locale = config.locale || ENGLISH_LOCALE;
-  let longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
-  let shortInstructions = level.instructions;
-
-  const noInstructionsWhenCollapsed = !!config.noInstructionsWhenCollapsed;
-  // Our TopInstructions operate in two modes.
-  // In CSF we show short instructions when collapsed. In this mode, we assume
-  // that we have at least shortInstructions.
-  // In CSP we show no instructions  when collapsed. In this mode, we assume
-  // that we have at least longInstructions. In the case that we arent
-  // provided (markdown) longInstructions, treat our shortInstructiosn as our
-  // longInstructions
-  if (noInstructionsWhenCollapsed) {
-    if (shortInstructions && !longInstructions) {
-      longInstructions = shortInstructions;
-    }
-    // Never use short instructions in CSP
-    shortInstructions = undefined;
-  } else {
-    if (config.showInstructionsInTopPane && shortInstructions === longInstructions) {
-      longInstructions = null;
-    }
-  }
-
-  this.reduxStore.dispatch(setInstructionsConstants({
-    noInstructionsWhenCollapsed,
-    shortInstructions,
-    longInstructions,
-  }));
+  const instructionsConstants = determineInstructionsConstants(
+    config.level.instructions,
+    config.level.markdownInstructions,
+    config.locale,
+    !!config.noInstructionsWhenCollapsed,
+    !!config.showInstructionsInTopPane
+  );
+  this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
 };
