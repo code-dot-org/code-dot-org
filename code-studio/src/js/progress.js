@@ -217,7 +217,7 @@ function loadProgress(scriptData, currentLevelId) {
       });
     } else if (action.type === 'SHOW_LESSON_PLAN_LINKS') {
       return Object.assign(state, {
-        focusAreaPositions: action.focusAreaPositions
+        showLessonPlanLinks: action.showLessonPlanLinks
       });
     }
     return state;
