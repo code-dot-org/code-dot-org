@@ -108,11 +108,11 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     teacherless_student = create(:student)
     self.stubs(:current_user).returns(teacherless_student)
     script_level_solved_response(response, script_level)
-    assert_equal false, response[:end_of_stage_experience]
+    assert_nil response[:end_of_stage_experience]
 
     self.stubs(:current_user).returns(@teacher)
     script_level_solved_response(response, script_level)
-    assert_equal false, response[:end_of_stage_experience]
+    assert_nil response[:end_of_stage_experience]
 
     self.stubs(:current_user).returns(nil)
     script_level_solved_response(response, script_level)
