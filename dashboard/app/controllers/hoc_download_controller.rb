@@ -1,7 +1,5 @@
 class HocDownloadController < ApplicationController
 
-  DOWNLOAD_URL_BASE = '//downloads.code.org/hourofcode/'
-
   def index
     @product_name = params[:product]
 
@@ -26,17 +24,21 @@ class HocDownloadController < ApplicationController
 
     @hoc_url = CDO.code_org_url("/#{@product_name}")
 
-    @english_windows_url = DOWNLOAD_URL_BASE + @product_name + '/' + @file_prefix + "EnglishSetup.exe"
-    @english_mac_url = DOWNLOAD_URL_BASE + @product_name + '/' + @file_prefix + "English.dmg"
-    @spanish_windows_url = DOWNLOAD_URL_BASE + @product_name + '/' + @file_prefix + "SpanishSetup.exe"
-    @spanish_mac_url = DOWNLOAD_URL_BASE + @product_name + '/' + @file_prefix + "Spanish.dmg"
+    @english_windows_url = download_url(@product_name,@file_prefix,"EnglishSetup.exe")
+    @english_mac_url = download_url(@product_name,@file_prefix,"English.dmg")
+    @spanish_windows_url = download_url(@product_name,@file_prefix,"SpanishSetup.exe")
+    @spanish_mac_url = download_url(@product_name,@file_prefix,"Spanish.dmg")
 
     if @show_js_links
-      @english_windows_url_js = DOWNLOAD_URL_BASE + @product_name + '/' + @file_prefix_js + "EnglishSetup.exe"
-      @english_mac_url_js = DOWNLOAD_URL_BASE + @product_name + '/' + @file_prefix_js + "English.dmg"
-      @spanish_windows_url_js = DOWNLOAD_URL_BASE + @product_name + '/' + @file_prefix_js + "SpanishSetup.exe"
-      @spanish_mac_url_js = DOWNLOAD_URL_BASE + @product_name + '/' + @file_prefix_js + "Spanish.dmg"
+      @english_windows_url_js = download_url(@product_name,@file_prefix_js,"EnglishSetup.exe")
+      @english_mac_url_js = download_url(@product_name,@file_prefix_js,"English.dmg")
+      @spanish_windows_url_js = download_url(@product_name,@file_prefix_js,"SpanishSetup.exe")
+      @spanish_mac_url_js = download_url(@product_name,@file_prefix_js,"Spanish.dmg")
     end
+  end
 
+  DOWNLOAD_URL_BASE = '//downloads.code.org/hourofcode/'
+  def download_url(product_name, file_prefix, file_name)
+    "#{DOWNLOAD_URL_BASE}#{product_name}/#{file_prefix}#{file_name}"
   end
 end
