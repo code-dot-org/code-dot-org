@@ -2,7 +2,10 @@
   #message
     %i.fa.fa-warning.warning-sign
     &nbsp;
-    = I18n.t('compatibility.upgrade.ie_message')
+    - if request.site == 'csedweek.org'
+      = I18n.t('compatibility.upgrade.ie_message_csedweek')
+    - else
+      = I18n.t('compatibility.upgrade.ie_message')
     &nbsp;
     %a{href: 'https://support.code.org/hc/en-us/articles/219557867', target: '_blank'}
       = I18n.t('compatibility.upgrade.link')
