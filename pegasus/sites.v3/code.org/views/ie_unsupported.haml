@@ -14,9 +14,10 @@
 
 :javascript
   function setCookie(key, value, days) {
+    baseDomain = '.code.org';
     var expires = new Date();
     expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString() + ';domain=' + baseDomain + "; path=/";
   }
 
   function getCookie(key) {
