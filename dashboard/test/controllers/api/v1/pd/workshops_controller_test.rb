@@ -260,6 +260,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Actions: Start, End
 
   test 'admins can start and end workshops' do
+    Pd::AsyncWorkshopHandler.expects(:process_closed_workshop).with(@workshop.id)
+
     sign_in @admin
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state

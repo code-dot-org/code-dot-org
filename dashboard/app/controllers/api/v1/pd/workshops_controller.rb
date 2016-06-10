@@ -60,6 +60,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # POST /api/v1/pd/workshops/1/end
   def end
     @workshop.end!
+    Pd::AsyncWorkshopHandler.process_closed_workshop @workshop.id
     head :no_content
   end
 
