@@ -384,13 +384,11 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   FileUtils.rm rerun_filename, force: true
 
   succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments)
+  log_link = upload_log_and_get_public_link(html_output_filename)
 
   reruns = 0
   while !succeeded && (reruns < max_reruns)
     reruns += 1
-
-    # Upload the failure log to S3, so we can examine it at our leisure.
-    log_link = upload_log_and_get_public_link(html_output_filename)
 
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
@@ -399,6 +397,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
     succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + rerun_arguments)
+    log_link = upload_log_and_get_public_link(html_output_filename)
   end
 
   $lock.synchronize do
@@ -433,9 +432,6 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     # Don't log individual successes because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
-    # Upload the failure log to S3, so we can examine it at our leisure.
-    log_link = upload_log_and_get_public_link(html_output_filename)
-
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
     message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
