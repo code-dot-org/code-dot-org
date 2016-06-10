@@ -108,6 +108,14 @@ class HttpCache
       dashboard: {
         behaviors: [
           {
+            # Serve Sprockets-bundled assets directly from the S3 bucket synced via `assets:precompile`.
+            #
+            path: '/assets/*',
+            proxy: 'cdo-assets',
+            headers: [],
+            cookies: 'none'
+          },
+          {
             path: %w(
               /v3/assets/*
               /v3/animations/*
@@ -139,7 +147,7 @@ class HttpCache
           },
           {
             # For static-asset paths, don't forward any cookies or additional headers.
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/assets/* /blockly/media/*),
+            path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/media/*),
             headers: [],
             cookies: 'none'
           },
