@@ -82,6 +82,13 @@ module UsersHelper
       user_data[:trophies] = summarize_trophies(script, user)
     end
 
+    if script.professional_learning_course
+      unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
+      if unit_assignment
+        user_data[:focusAreaPositions] = unit_assignment.focus_area_positions
+      end
+    end
+
     unless exclude_level_progress
       uls = user.user_levels_by_level(script)
       script_levels = script.script_levels
