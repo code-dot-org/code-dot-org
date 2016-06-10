@@ -9,6 +9,6 @@
   "scripts": {
   },
   "devDependencies": {
-    "phantomjs": "wjordan/phantomjs#v2.0.0"
+    "phantomjs-prebuilt": "^2.1.3"
   }
 }
