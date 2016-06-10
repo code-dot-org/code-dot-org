@@ -8,8 +8,9 @@ class PeerReviewsController < ApplicationController
 
   def show
     @level = @peer_review.level
+    @user = @peer_review.submitter
     @last_attempt = @peer_review.level_source.data
-    view_options readonly_workspace: true, full_width: true
+    view_options full_width: true
   end
 
   def update
