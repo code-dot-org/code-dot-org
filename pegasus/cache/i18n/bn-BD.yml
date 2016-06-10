@@ -1726,4 +1726,6 @@
   infinity_shortcode: inf
   playlab_shortcode: "খেলুন"
   artist_shortcode: art
+  'yes': 'Yes'
+  'no': 'No'
   dashboard_sections_table_stage_extras: Stage Extras
