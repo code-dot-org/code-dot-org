@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'cgi'
-# Conflicting spurious change to test robo's content-push failure detection.
 
 # Utility to strip consistent leading whitespace from heredoc strings, allowing
 # you to format your code more readably.
