@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-05-11T00:04:15.000Z",
+  "created_at": "2016-06-09T20:32:05.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -39,13 +39,16 @@
       },
       "console.log": {
         "category": ""
+      },
+      "setAnimation": {
+        "category": ""
       }
     },
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Moving Sprites\r\n_If_ you know when a key is down, you might want to make a decision to change a sprite's property, such as changing it's x or y position.\r\n\r\nWhen asking an _if_ question, there's a tool we can use called a **conditional statement** - A conditional statement allows us to choose whether or not to run a block of code depending on the result of a boolean question. You might notice that the conditional is shaped like a _C_ - anything inside the conditional (between the two curly braces) is run _only if the boolean evaluates true_.\r\n\r\n# Do This\r\nWe've provided you a conditional that uses the `keyDown()` block to check if the up arrow is being pressed.\r\nUse the conditional to move the sprite up if the up arrow is down.\r\n\r\n_Do you need to change sprite's x or y property to move it up?_",
-    "start_blocks": "var sprite = createSprite(200, 200);\r\nfunction draw() {\r\n  background(\"white\");\r\n  // If the up arrow is pressed, move the sprite up on the screen\r\n  if (keyDown(\"up\")) {\r\n    \r\n  }\r\n  drawSprites();\r\n}",
+    "markdown_instructions": "# Changing Images as you Move\r\nRight now your conditionals only do one thing (change your sprite's x or y), but you can actually put as much code as you want inside a conditional. A common thing to do in games is to change your character's image depending on which direction they're walking.\r\n\r\nWe've pre-loaded the Animations tab with these four images for you to use.\r\n\r\n# Do This\r\nUsing the provided program and images, change to the correct image when the corresponding key is pressed.\r\n\r\n- The up arrow should switch to \"player_up.png\"\r\n- The down arrow should switch to \"player_down.png\"\r\n- The left arrow should switch to \"player_left.png\"\r\n- The right arrow should switch to \"player_right.png\"\r\n\r\n**Challenge** Can you make your program default to \"player_down.png\" if none of the arrow keys are pressed?",
+    "start_blocks": "var sprite = createSprite(200, 200, 30, 30);\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  \r\n  // Change the sprite's image to match the direction it's moving\r\n  if (keyDown(\"up\")) {\r\n    sprite.y = sprite.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    sprite.y = sprite.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    sprite.x = sprite.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    sprite.x = sprite.x + 1;\r\n  }\r\n  \r\n  drawSprites();\r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -68,7 +71,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Place your movement code inside this conditional\",\r\n  \"element_id\": \".droplet-gutter-line:nth-child(5)\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[]"
   },
   "published": true,
   "notes": "",

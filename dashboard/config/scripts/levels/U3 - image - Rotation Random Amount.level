@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-05-27T18:09:30.000Z",
+  "created_at": "2016-06-10T14:55:11.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -50,10 +50,8 @@
       "comment": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Images\r\n\r\nUp until now all of your sprites have been rectangles. No longer! Now you can use pictures for your sprites instead.\r\n\r\nCheck out the animations tab by clicking the <img src=\"https://images.code.org/9471c62f11f3c6065c0d2da523f2ac89-image-1465515854142.43.49 PM.png\" style=\"width:100px\"> button above the display area.\r\n\r\nThere is an image there that have been loaded for you!\r\n\r\nIn order to use that image you will need to use the `setAnimation` command. You have to create the sprite before you can set its animation.\r\n\r\n# Do This\r\n\r\nThere is a rectangle sprite already created for you. All you need to do is change it to an image.\r\n\r\n* Add a call to `setAnimation` to set the animation to the image provided\r\n* Run it to see that your rectangle is now an image!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -76,7 +74,9 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_blocks": "var sprite = createSprite(200, 200);\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}"
+    "show_d_pad": "false",
+    "markdown_instructions": "<img src=\"https://images.code.org/a7697b89e2c6ea67ae453410a1da6d47-image-1465572156435.gif\" alt=\"wheel spinning\" style=\"width:200px;float:right\" >\r\n\r\n# Random Rotation\r\n\r\nUsing random numbers with rotation can add interesting animation effects. One effect you can use rotation for is shaking. An object can look like its shaking a little when you set its rotation to a small random number repeatedly.\r\n\r\n# Do This\r\nYou are going to start creating a spinner wheel similar to one you might find at a carnival.\r\n\r\n* Create a clicker sprite\r\n* Set the sprite to the clicker image in the animation tab\r\n* Set the rotation to a random number between -5 and 5\r\n* Test it out",
+    "project_template_level_name": "CSD U3 - wheel template"
   },
   "published": true,
   "notes": "",
