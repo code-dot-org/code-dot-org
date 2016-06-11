@@ -1,7 +1,9 @@
 /* global dashboard */
+
 import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
+
 import { stageShape } from './types';
 import StageProgress from './stage_progress.jsx';
 import color from '../../color';
@@ -72,7 +74,6 @@ const styles = {
  */
 const CourseProgressRow = React.createClass({
   propTypes: {
-    currentLevelId: React.PropTypes.string,
     showLessonPlanLinks: React.PropTypes.bool,
     professionalLearningCourse: React.PropTypes.bool,
     isFocusArea: React.PropTypes.bool,
@@ -114,9 +115,7 @@ const CourseProgressRow = React.createClass({
         </div>
         <StageProgress
           levels={stage.levels}
-          currentLevelId={this.props.currentLevelId}
           largeDots={true}
-          saveAnswersFirst={false}
         />
       </div>
     );
