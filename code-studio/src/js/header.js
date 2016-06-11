@@ -19,6 +19,11 @@ var Dialog = require('./dialog');
 var header = module.exports = {};
 
 /**
+ * See ApplicationHelper::PUZZLE_PAGE_NONE.
+ */
+const PUZZLE_PAGE_NONE = -1;
+
+/**
  * @param stageData{{
  *   script_id: number,
  *   script_name: number,
@@ -39,8 +44,6 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   stageData = stageData || {};
   progressData = progressData || {};
 
-  var clientProgress = clientState.allLevelsProgress()[scriptName] || {};
-
   $('.header_text').first().text(stageData.title);
   if (stageData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', stageData.finishLink).text(stageData.finishText));
@@ -60,7 +63,8 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
     $('.header_popup .header_text').text(progressData.linesOfCodeText);
   }
 
-  progress.renderStageProgress(stageData, progressData, clientProgress, currentLevelId, puzzlePage);
+  let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
+  progress.renderStageProgress(stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation);
 
   $('.level_free_play').qtip({
     content: {

@@ -1,5 +1,7 @@
-import Radium from 'radium';
 import React from 'react';
+import Radium from 'radium';
+import { connect } from 'react-redux';
+
 import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../color';
@@ -127,10 +129,10 @@ const styles = {
  */
 const ProgressDot = React.createClass({
   propTypes: {
-    levels: levelProgressShape,
+    level: levelProgressShape.isRequired,
     currentLevelId: React.PropTypes.string,
     largeDots: React.PropTypes.bool,
-    saveAnswersFirst: React.PropTypes.bool.isRequired
+    saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
   },
 
   dotClicked(url) {
@@ -194,4 +196,7 @@ const ProgressDot = React.createClass({
     );
   }
 });
-module.exports = Radium(ProgressDot);
+export default connect(state => ({
+  currentLevelId: state.currentLevelId,
+  saveAnswersBeforeNavigation: state.saveAnswersBeforeNavigation
+}))(Radium(ProgressDot));
