@@ -20,8 +20,12 @@ const playSongConfig = {
 };
 
 const pixelType = '[ColorLed].';
+const touchSensorType = '[TouchSensor].';
 const colorPixelVariables = _.range(10).map(index => `colorLeds[${index}]`);
+const touchSensorVariables = _.map([0, 1, 2, 3, 6, 9, 10, 12], index => `touchSensor${index}`);
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
+const sensorVariables = ['soundSensor', 'lightSensor', 'tempSensor'];
+const buttonVariables = ['buttonL', 'buttonR'];
 
 module.exports.blocks = [
   {func: 'pinMode', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'mode'], params: ['13', '"output"'], dropdown: { 1: ['"output"', '"input"', '"analog"'] }},
@@ -44,14 +48,25 @@ module.exports.blocks = [
   {func: 'color', blockPrefix: colorLedBlockPrefix, category: 'Circuit', paletteParams: ['color'], params: ['"#FF00FF"'], tipPrefix: pixelType, modeOptionName: "*.color", objectDropdown: { options: colorPixelVariables }  },
 
   {func: 'buzzer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
-  {func: 'buzzer.frequency', category: 'Circuit', paletteParams: ['frequency', 'duration'], params: ['500', '100']},
-  {func: 'buzzer.note', category: 'Circuit', paletteParams: ['note', 'duration'], params: ['"A4"', '100']},
+  {func: 'buzzer.frequency', category: 'Circuit', paletteParams: ['frequency', 'duration'], params: ['500', '100'], paramButtons: { minArgs: 1, maxArgs: 2}},
+  {func: 'buzzer.note', category: 'Circuit', paletteParams: ['note', 'duration'], params: ['"A4"', '100'], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'buzzer.off', category: 'Circuit'},
   {func: 'buzzer.stop', category: 'Circuit'},
   {func: 'buzzer.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
 
-  {func: 'isPressed', objectDropdown: { options: ['buttonL', 'buttonR'], dropdownOnly: true }, modeOptionName: "*.isPressed", blockPrefix: 'buttonL.', category: 'Circuit', type: 'readonlyproperty', tipPrefix: '[Button].'},
-  {func: 'holdtime', blockPrefix: 'buttonL.', category: 'Circuit', type: 'property', tipPrefix: 'button[L/R]' },
+  {func: 'accelerometer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'accelerometer.getOrientation', category: 'Circuit', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
+  {func: 'accelerometer.getAcceleration', category: 'Circuit', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
+  {func: 'accelerometer.sensitivity', category: 'Circuit', type: 'property' },
+
+  {func: 'value', blockPrefix: `${touchSensorVariables[0]}.`, category: 'Circuit', tipPrefix: touchSensorType, modeOptionName: '*.value', objectDropdown: {options: touchSensorVariables}, type: 'readonlyproperty'},
+  {func: 'sensitivity', blockPrefix: `${touchSensorVariables[0]}.`, category: 'Circuit', tipPrefix: touchSensorType, modeOptionName: '*.sensitivity', objectDropdown: {options: touchSensorVariables}, type: 'property'},
+
+  {func: 'isPressed', objectDropdown: {options: buttonVariables, dropdownOnly: true}, category: 'Circuit', blockPrefix: `${buttonVariables[0]}.`, modeOptionName: "*.isPressed", type: 'readonlyproperty', tipPrefix: '[Button].'},
+  {func: 'holdtime', objectDropdown: {options: buttonVariables, dropdownOnly: true}, category: 'Circuit', blockPrefix: `${buttonVariables[0]}.`, modeOptionName: "*.holdtime", type: 'readonlyproperty', tipPrefix: '[Button].'},
+
+  {func: 'value', objectDropdown: { options: sensorVariables }, modeOptionName: "*.value", blockPrefix: `${sensorVariables[0]}.`, category: 'Circuit', type: 'readonlyproperty', tipPrefix: '[Sensor].'},
+  {func: 'threshold', objectDropdown: { options: sensorVariables }, modeOptionName: "*.threshold", blockPrefix: `${sensorVariables[0]}.`, category: 'Circuit', type: 'property', tipPrefix: '[Sensor].' },
 
   {func: 'toggleSwitch', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'toggleSwitch.isOpen', category: 'Circuit', type: 'readonlyproperty' },
