@@ -33,6 +33,18 @@ path /v3/channels/{channelId}/counters is Counters {
   write() { isLoggedIn() }
 }
 
+path /v3/channels/{channelId}/counters/limits/15 {
+  validate() {
+    isValidRateLimitCounter(this.parent().parent().parent(), 15, root.v3.constants.channels.limits['15'])
+  }
+}
+
+path /v3/channels/{channelId}/counters/limits/60 {
+  validate() {
+    isValidRateLimitCounter(this.parent().parent().parent(), 60, root.v3.constants.channels.limits['60'])
+  }
+}
+
 path /v3/channels/{channelId}/storage is Storage {
   write() { isLoggedIn() }
 }
@@ -84,3 +96,32 @@ type Value extends String | Number | Boolean | Null;
 // auth helpers
 
 isLoggedIn() { auth.uid !== null }
+
+// rate limit helpers
+
+isValidRateLimitCounter(channel, interval, maxCount) {
+  isValidIncrement(channel.counters.limits[interval + ''], maxCount) ||
+  isValidReset(channel.counters.limits[interval + ''], interval)
+}
+
+isValidIncrement(limitCounter, maxCount) {
+  isUnchanged(limitCounter.lastResetTime) &&
+  isIncreased(limitCounter.writeCount) &&
+  limitCounter.writeCount <= maxCount
+}
+
+// limitCounter: Firebase node representing the counters for this interval
+// interval: number representing the length of the interval in seconds
+isValidReset(limitCounter, interval) {
+  limitCounter.lastResetTime == now &&
+  isIncreasedBy(limitCounter.lastResetTime, interval * 1000) &&
+  limitCounter.writeCount == 1
+}
+
+// general helpers
+
+orZero(value) { valueOr(value, 0) }
+valueOr(value, defaultValue) { value == null ? defaultValue : value }
+isUnchanged(value) { orZero(value) == orZero(prior(value)) }
+isIncreased(value) { orZero(value) > orZero(prior(value)) }
+isIncreasedBy(value, increment) { orZero(value) >= orZero(prior(value)) + increment}
