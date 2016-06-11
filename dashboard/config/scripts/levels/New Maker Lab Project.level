@@ -183,8 +183,11 @@
       "buzzer.frequency": null,
       "buzzer.note": null,
       "buzzer.off": null,
+      "accelerometer.getOrientation": null,
+      "accelerometer.getAcceleration": null,
       "isPressed": null,
-      "holdTime": null,
+      "holdtime": null,
+      "value": null,
       "toggleSwitch.isOpen": null
     }
   }

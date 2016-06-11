@@ -18,6 +18,14 @@ try {
 /** @const {string} */
 var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
 
+class TouchSensor {
+  constructor() {}
+  get value() {
+    // TODO: remove test value.
+    return 5;
+  }
+}
+
 var BoardController = module.exports = function () {
   ChromeSerialPort.extensionId = CHROME_APP_ID;
 
@@ -78,7 +86,8 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
     Pin: five.Pin,
     CapTouch: PlaygroundIO.CapTouch,
     Tap: PlaygroundIO.Tap,
-    Accelerometer: five.Accelerometer
+    Accelerometer: five.Accelerometer,
+    TouchSensor: TouchSensor
   };
 
   Object.keys(componentConstructors).forEach(function (key) {
@@ -220,12 +229,23 @@ function initializeCircuitPlaygroundComponents(io, board) {
   const buttonL = new five.Button('4');
   const buttonR = new five.Button('19');
   [buttonL, buttonR].forEach((button) => {
-    Object.defineProperty(button, "isPressed", {
+    Object.defineProperty(button, 'isPressed', {
       get: () => this.value === 1
     });
   });
 
-  return {
+  const accelerometer = new five.Accelerometer({
+    controller: PlaygroundIO.Accelerometer
+  });
+  Object.defineProperty(accelerometer, 'getAveragedValue', {get: accelerometer.value});
+
+  const touchSensors = {};
+  _.each([0, 1, 2, 3, 6, 9, 10, 12], index => {
+    const touchSensor = new TouchSensor();
+    touchSensors[`touchSensor${index}`] = touchSensor;
+  });
+
+  return _.merge(touchSensors, {
     colorLeds: colorLeds,
 
     led: new five.Led(13),
@@ -243,20 +263,18 @@ function initializeCircuitPlaygroundComponents(io, board) {
       freq: 100
     }),
 
-    light: new five.Sensor({
+    lightSensor: new five.Sensor({
       pin: "A5",
       freq: 100
     }),
 
-    accelerometer: new five.Accelerometer({
-      controller: PlaygroundIO.Accelerometer
-    }),
+    accelerometer: accelerometer,
 
     tap: new PlaygroundIO.Tap(io),
 
     touch: new PlaygroundIO.CapTouch(io),
 
-    sound: sound,
+    soundSensor: sound,
 
     buttonL: buttonL,
 
@@ -272,7 +290,7 @@ function initializeCircuitPlaygroundComponents(io, board) {
     ANALOG: 2,
     PWM: 3,
     SERVO: 4
-  };
+  });
 }
 
 BoardController.__testonly__ = {
