@@ -195,6 +195,7 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {string} config.locale
  * @param {boolean} config.noInstructionsWhenCollapsed
  * @param {boolean} config.showInstructionsInTopPane
+ * @param {Object} config.skin.instructions2ImageSubstitutions
  * @returns {Object}
  */
 export const determineInstructionsConstants = config => {
@@ -216,7 +217,8 @@ export const determineInstructionsConstants = config => {
   } else {
     // CSF mode - For non-English folks, only use the non-markdown instructions
     longInstructions = (!locale || locale === ENGLISH_LOCALE) ? markdownInstructions : undefined;
-    shortInstructions = instructions;
+    shortInstructions = substituteInstructionImages(instructions,
+      config.skin.instructions2ImageSubstitutions);
 
     // In the case that we're in the top pane, if the two sets of instructions
     // are identical, only use the short version (such that we dont end up

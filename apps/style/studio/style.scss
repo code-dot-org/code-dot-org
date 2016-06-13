@@ -112,8 +112,31 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
   cursor: default;
 }
 
-.instructions-markdown {
+.instructionsImage {
+  vertical-align: text-bottom;
+  height: 25px;
+}
 
+.modal-content {
+  .instructionsImage {
+    height: 35px;
+  }
+  .instructions2 {
+    .instructionsImage {
+      height: 24px;
+    }
+  }
+}
+
+#prompt-table {
+  #prompt2 {
+    .instructionsImage {
+      height: 20px;
+    }
+  }
+}
+
+.instructions-markdown {
   // Imitates the text style of the first line of instructions text in our
   // classic dialogues, useful for creating that effect in markdown.
   .character-text {
@@ -134,17 +157,6 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
     & > p {
       color: $charcoal;
       margin-left: 1em;
-    }
-  }
-
-  .instructionsImageContainer {
-    width: 67px;
-    text-align: center;
-    display: inline-block;
-
-    .instructionsImage {
-      height: 35px;
-      vertical-align: text-bottom;
     }
   }
 }
