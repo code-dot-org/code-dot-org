@@ -1,6 +1,8 @@
 // TODO (brent) - way too many globals
 /* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga*/
 import $ from 'jquery';
+import PlayZone from '../components/playzone';
+import ReactDOM from 'react-dom';
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
 var loadApp = require('./loadApp');
@@ -93,6 +95,23 @@ window.apps = {
         var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.videoInfo) {
           showVideoDialog(lastServerResponse.videoInfo);
+        } else if (lastServerResponse.endOfStageExperience) {
+          const body = document.createElement('div');
+          const stageInfo = lastServerResponse.previousStageInfo;
+          const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
+          ReactDOM.render(
+            <PlayZone
+              stageName={stageName}
+              onContinue={() => { dialog.hide(); }}
+              i18n={window.dashboard.i18n}/>,
+            body
+          );
+          const dialog = new Dialog({
+            body: body,
+            width: 800,
+            redirect: lastServerResponse.nextRedirect
+          });
+          dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           window.location.href = lastServerResponse.nextRedirect;
         }
