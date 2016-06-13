@@ -134,12 +134,15 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
     // Show lesson plan links if teacher
     if (data.isTeacher) {
-      $('.stage-lesson-plan-link').show();
+      store.dispatch({
+        type: 'SHOW_LESSON_PLAN_LINKS'
+      });
     }
 
     if (data.focusAreaPositions) {
       store.dispatch({
         type: 'UPDATE_FOCUS_AREAS',
+        changeFocusAreaPath: data.changeFocusAreaPath,
         focusAreaPositions: data.focusAreaPositions
       });
     }
@@ -197,7 +200,9 @@ function loadProgress(scriptData, currentLevelId) {
         currentLevelId: state.currentLevelId,
         professionalLearningCourse: state.professionalLearningCourse,
         progress: newProgress,
+        changeFocusAreaPath: state.changeFocusAreaPath,
         focusAreaPositions: state.focusAreaPositions,
+        showLessonPlanLinks: state.showLessonPlanLinks,
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || progress.bestResultLevelId(level.ids, state.progress, action.progress);
           newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
@@ -206,14 +211,23 @@ function loadProgress(scriptData, currentLevelId) {
         })}))
       };
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {
-      return Object.assign(state, {focusAreaPositions: action.focusAreaPositions});
+      return Object.assign(state, {
+        changeFocusAreaPath: action.changeFocusAreaPath,
+        focusAreaPositions: action.focusAreaPositions
+      });
+    } else if (action.type === 'SHOW_LESSON_PLAN_LINKS') {
+      return Object.assign(state, {
+        showLessonPlanLinks: action.showLessonPlanLinks
+      });
     }
     return state;
   }, {
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
     progress: {},
+    changeFocusAreaPath: null,
     focusAreaPositions: [],
+    showLessonPlanLinks: false,
     stages: scriptData.stages
   });
 

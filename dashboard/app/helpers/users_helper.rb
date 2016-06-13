@@ -86,6 +86,7 @@ module UsersHelper
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
       if unit_assignment
         user_data[:focusAreaPositions] = unit_assignment.focus_area_positions
+        user_data[:changeFocusAreaPath] = script_preview_assignments_path script
       end
     end
 

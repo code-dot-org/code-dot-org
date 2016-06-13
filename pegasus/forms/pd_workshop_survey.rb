@@ -3,6 +3,10 @@ class PdWorkshopSurvey
   def self.normalize(data)
     result = {}
 
+    result[:user_id_i] = integer data[:user_id_i]
+    result[:email_s] = required data[:email_s]
+    result[:name_s] = required data[:name_s]
+
     result[:enrollment_id_i] = required integer data[:enrollment_id_i]
     result[:workshop_id_i] = required integer data[:workshop_id_i]
     result[:plp_b] = required data[:plp_b]
@@ -26,8 +30,8 @@ class PdWorkshopSurvey
       end
 
       result[:received_clear_communication_s] = required enum data[:received_clear_communication_s], AGREE_SCALE_OPTIONS
-      result[:school_has_tech_b] = required_enum data, :school_has_tech_b
-      result[:venue_feedback_s] = required stripped data[:venue_feedback_s]
+      result[:school_has_tech_b] = required data[:school_has_tech_b]
+      result[:venue_feedback_s] = stripped data[:venue_feedback_s]
       result[:how_much_learned_s] = required_enum data, :how_much_learned_s
       result[:how_motivating_s] = required_enum data, :how_motivating_s
       result[:how_clearly_presented_s] = required_enum data, :how_clearly_presented_s

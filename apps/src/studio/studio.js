@@ -2007,9 +2007,11 @@ Studio.init = function (config) {
 
   studioApp.setPageConstants(config);
 
-  var visualizationColumn = <StudioVisualizationColumn
-    finishButton={!level.isProjectLevel}
-    inputOutputTable={level.inputOutputTable}/>;
+  var visualizationColumn = (
+    <StudioVisualizationColumn
+      finishButton={!level.isProjectLevel}
+    />
+  );
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
