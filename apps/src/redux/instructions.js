@@ -156,6 +156,36 @@ export const setHasAuthoredHints = hasAuthoredHints => ({
 // HELPERS
 
 /**
+ * Given instructions that look something like
+ *   '[pufferpig] <b>Puffer Pigs</b> roam around slowly<br/>'
+ * Replaces [pufferpig] with the appropriate image html.
+ * In most cases, no substitutions will be necessary and this method will just
+ * return the passed in htmlText. Substitutions currently only exist for star wars.
+ * @param {string} htmlText
+ * @param {Object.<string, string>} [substitutions] Dictionary strings (keys) to
+ *   replacement values.
+ */
+export const substituteInstructionImages = (htmlText, substitutions) => {
+  if (!htmlText) {
+    return htmlText;
+  }
+
+  for (let prop in substitutions) {
+    const value = substitutions[prop];
+    const substitutionHtml = (
+      '<span class="instructionsImageContainer">' +
+        '<img src="' + value + '" class="instructionsImage"/>' +
+      '</span>'
+    );
+    const re = new RegExp('\\[' + prop + '\\]', 'g');
+    htmlText = htmlText.replace(re, substitutionHtml);
+  }
+
+  return htmlText;
+};
+
+
+/**
  * Given a particular set of config options, determines what our instructions
  * constants should be
  * @param {string} instructions
