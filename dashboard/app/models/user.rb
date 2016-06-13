@@ -684,8 +684,8 @@ SQL
       Script.starwars_blocks_script, Script.minecraft_script]
   end
 
-  def unadvertised_user_scripts
-    [working_on_user_scripts, completed_user_scripts].compact.flatten.delete_if { |user_script| user_script.script.in?(advertised_scripts)}
+  def in_progress_and_completed_scripts
+    [working_on_user_scripts, completed_user_scripts].compact.flatten
   end
 
   def all_advertised_scripts_completed?
