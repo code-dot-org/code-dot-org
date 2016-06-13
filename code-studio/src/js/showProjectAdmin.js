@@ -1,4 +1,4 @@
-/* global dashboard */
+/* global dashboard ReactDOM */
 
 import $ from 'jquery';
 
@@ -32,5 +32,12 @@ module.exports = function showProjectAdmin() {
     $('.admin-abuse-reset').click(function () {
       dashboard.project.adminResetAbuseScore();
     });
+  }
+
+  var StyleGuide = window.StyleGuide;
+  if (StyleGuide) {
+    $('.project_admin').append('<div class="style-guide"/></div>');
+    var styleGuideRoot = $('.project_admin .style-guide')[0];
+    ReactDOM.render(<StyleGuide />, styleGuideRoot);
   }
 };

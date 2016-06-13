@@ -12,3 +12,6 @@ window.applabMain = function (options) {
   options.blocksModule = blocks;
   appMain(window.Applab, levels, options);
 };
+
+// TODO: don't do this global nonsense, at least not here.
+require('../templates/StyleGuide');
