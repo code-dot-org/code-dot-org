@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 var commonStyles = require('../commonStyles');
 var color = require('../color');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
-var InputOutputTable = require('./InputOutputTable');
+import InputOutputTable from './instructions/InputOutputTable';
 import PromptIcon from './instructions/PromptIcon';
 
 /**
@@ -69,5 +69,6 @@ export default connect(state => ({
   instructionsInTopPane: state.pageConstants.instructionsInTopPane,
   aniGifURL: state.pageConstants.aniGifURL,
   shortInstructions: state.instructions.shortInstructions,
-  smallStaticAvatar: state.pageConstants.smallStaticAvatar
+  smallStaticAvatar: state.pageConstants.smallStaticAvatar,
+  inputOutputTable: state.pageConstants.inputOutputTable
 }))(BelowVisualization);
