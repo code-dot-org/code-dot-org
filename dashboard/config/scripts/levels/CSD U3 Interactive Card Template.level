@@ -16,8 +16,10 @@
       "keyDown": null,
       "keyWentUp": null,
       "keyWentDown": null,
+      "mouseDown": null,
       "mouseWentDown": null,
       "mouseWentUp": null,
+      "mouseDidMove": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
       "sprite.height": null,
@@ -99,7 +101,8 @@
     "free_play": "true",
     "text_mode_at_start": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "start_blocks": "function draw() {\r\n  \r\n}"
   },
   "published": true,
   "notes": "",
