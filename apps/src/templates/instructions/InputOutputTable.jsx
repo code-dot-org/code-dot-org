@@ -1,5 +1,4 @@
 var React = require('react');
-var ProtectedStatefulDiv = require('../ProtectedStatefulDiv');
 
 /**
  * A table of inputs and expected outputs that is only used by Calc and Studio.
