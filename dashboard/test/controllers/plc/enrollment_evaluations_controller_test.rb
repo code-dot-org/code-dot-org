@@ -26,6 +26,14 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     @unit_assignment = @enrollment.plc_unit_assignments.first
   end
 
+  test "previewing evaluation already triggers enrollments" do
+    # Argh, come on stubbing
+    Plc::CourseUnit.any_instance.stubs(:determine_preferred_learning_modules).returns([@module_content_1, @module_practice_1])
+
+    get :preview_assignments, script_id: @course_unit.script.name
+    assert_equal [@module_content_1, @module_practice_1].sort, @unit_assignment.plc_module_assignments.map(&:plc_learning_module).sort
+  end
+
   test "submit evaluation enrolls user in appropriate modules" do
     post :confirm_assignments, script_id: @course_unit.script.name, content_module: @module_content_1, practice_module: @module_practice_1
     assert_redirected_to script_path(@course_unit.script)

@@ -163,10 +163,11 @@ export const setHasAuthoredHints = hasAuthoredHints => ({
  * @param {string} locale
  * @param {boolean} noInstructionsWhenCollapsed
  * @param {boolean} showInstructionsInTopPane
+ * @param {boolean} hasInputOutputTable
  * @returns {Object}
  */
 export const determineInstructionsConstants = (instructions, markdownInstructions,
-    locale, noInstructionsWhenCollapsed, showInstructionsInTopPane) => {
+    locale, noInstructionsWhenCollapsed, showInstructionsInTopPane, hasInputOutputTable) => {
   let longInstructions, shortInstructions;
   if (noInstructionsWhenCollapsed) {
     // CSP mode - We dont care about locale, and always want to show English
@@ -189,7 +190,14 @@ export const determineInstructionsConstants = (instructions, markdownInstruction
     // are identical, only use the short version (such that we dont end up
     // minimizing/expanding between two identical sets).
     if (showInstructionsInTopPane && shortInstructions === longInstructions) {
-      longInstructions = null;
+      longInstructions = undefined;
+    }
+
+    // In the case where we have an input output table, we want to ensure we
+    // have long instructions (even if identical to short instructions) since
+    // we only show the inputOutputTable in non-collapsed mode.
+    if (hasInputOutputTable) {
+      longInstructions = longInstructions || shortInstructions;
     }
   }
 

@@ -59,22 +59,24 @@
         %table
           %tr
             %td.required Element ID
-            %td.required Localization Key
-            %td.required Callout text
+            %td.required{colspan: 2} Localization Key
+            %td.required{colspan: 5} Callout text
           %tr
             %td
               %input.element_id{type: 'text', placeholder: '#runButton'}
-            %td
-              %input.localization_key{type: 'text', placeholder: 'level_name_callout1'}
-            %td{colspan: 4}
-              %input.callout_text{type: 'text', placeholder: 'Text of callout', style: 'width: 100%'}
+            %td{colspan: 2}
+              %input.localization_key{type: 'text', placeholder: 'level_name_callout1', style: 'width: 96%'}
+            %td{colspan: 5}
+              %input.callout_text{type: 'text', placeholder: 'Text of callout', style: 'width: 97%'}
           %tr
             %td Qtip on callout
-            %td Qtip points to Element
+            %td Qtip points to
             %td Show when
-            %td X distance
-            %td Y distance
+            %td X dist
+            %td Y dist
             %td Classes
+            %td Reappear
+            %td Palette Category
           %tr
             %td
               %select.my
@@ -91,7 +93,7 @@
                 %option{value: 'left center'} Left center
                 %option{value: 'left top'} Left top
             %td
-              %select.at
+              %select.at{style: 'width: 140px;'}
                 %option{value: 'top left'} Top left
                 %option{value: 'top center'} Top center
                 %option{value: 'top right'} Top right
@@ -105,13 +107,18 @@
                 %option{value: 'left center'} Left center
                 %option{value: 'left top'} Left top
             %td
-              %input.on{type: 'text', placeholder: 'function_editor_opened'}
+              %input.on{type: 'text', style: 'width: 160px;', placeholder: 'function_editor_opened'}
             %td
-              %input.x{type: 'number', style: 'width: 80px;'}
+              %input.x{type: 'number', style: 'width: 40px;'}
             %td
-              %input.y{type: 'number', style: 'width: 80px;'}
+              %input.y{type: 'number', style: 'width: 40px;'}
             %td
-              %input.classes{type: 'text', placeholder: 'no-tip', style: 'width: 60px;'}
+              %input.classes{type: 'text', placeholder: 'no-tip', style: 'width: 80px;'}
+            %td
+              %input.canReappear{type: 'checkbox', placeholder: 'false', style: 'width: 50px;'}
+            %td
+              %input.dropletPaletteCategory{type: 'text', placeholder: 'math', style: 'width: 100px;'}
+          %tr
         %button.remove_callout{type: 'button'}
           %i.icon-trash
         %hr
@@ -140,6 +147,10 @@
           element_id: "",
           on: "",
           qtip_config: {
+            codeStudio: {
+              canReappear: false,
+              dropletPaletteCategory: ""
+            },
             style: {classes: ""},
             position: {
               my: "",
