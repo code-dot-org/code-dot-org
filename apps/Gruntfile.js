@@ -21,7 +21,7 @@ module.exports = function (grunt) {
     // get compiled.
     fs.writeFileSync(
       'test/entry-tests.js',
-      "require('"+path.resolve(process.env.mocha_entry)+"')"
+      "require('"+path.resolve(process.env.mocha_entry)+"');\n"
     );
   }
 
@@ -411,6 +411,8 @@ module.exports = function (grunt) {
   });
   config.webpack.watch = _.extend({}, config.webpack.build, {
     keepalive: true,
+    // don't stop watching when we hit compile errors
+    failOnError: false,
     plugins: config.webpack.build.plugins.concat([
       new LiveReloadPlugin({
         appendScriptTag: envOptions.autoReload

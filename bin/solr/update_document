@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+
+# This script adds, updates, or deletes the SOLR document specified by command
+# line parameters, using our DB as a source of truth. It is primarily a wrapper
+# around the Solr module.
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/solr'
+
+raise "No SOLR server configured." unless CDO.solr_server
+SOLR = Solr::Server.new(host: CDO.solr_server)
+
+# For each supported ACTION, there should be a corresponding method
+# ACTION_document.
+# TODO(asher): Implement the `add` and `update` actions.
+SUPPORTED_ACTIONS = %w(delete)
+SUPPORTED_TYPES = %w(form user)
+
+def delete_document(type, db_id)
+  solr_id = nil
+  case type
+  when 'form'
+    solr_id = db_id
+  when 'user'
+    solr_id = "user-#{db_id}"
+  end
+
+  unless solr_id.nil?
+    puts "DELETING: #{solr_id}..."
+    SOLR.delete_by_id(solr_id)
+  end
+end
+
+def main
+  unless (SUPPORTED_ACTIONS.include? ARGV[0]) && (SUPPORTED_TYPES.include? ARGV[1]) && ARGV[2]
+    puts 'Usage: ./bin/solr/update_document <action> <type> <db_id>'
+    exit 1
+  end
+
+  send("#{ARGV[0]}_document", ARGV[1], ARGV[2])
+end
+
+main

@@ -180,9 +180,10 @@ def process_response(behavior, _)
 end
 
 # Returns the backend-redirect string for a given proxy.
-# 'pegasus' or 'dashboard' are the only supported values.
+# 'pegasus', 'dashboard' or 'cdo-assets' are the only supported values.
 def process_proxy(behavior, app)
   proxy = (behavior[:proxy] || app).to_s
+  proxy = 'dashboard' if proxy == 'cdo-assets'
   unless %w(pegasus dashboard).include? proxy
     raise ArgumentError.new("Invalid proxy: #{proxy}")
   end

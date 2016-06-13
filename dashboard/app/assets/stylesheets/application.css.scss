@@ -27,6 +27,7 @@
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
+ *= require warning-banner
  *
  *= require selectize
  *= require selectize.default
@@ -177,6 +178,7 @@ img.video_thumbnail {
 .header-wrapper {
   padding-top: 15px;
   min-height: 70px;
+  position: relative;
 
   #progresswarning {
     position: absolute;
@@ -1140,42 +1142,6 @@ a.download-video {
   }
 }
 
-@mixin warning-banner {
-  padding: 5px 20px;
-  font-size: 28px;
-  line-height: 32px;
-  background-color: $orange;
-  text-align: center;
-  color: white;
-  a, a:visited {
-    color: $cyan;
-  }
-  a:hover {
-    background: transparent;
-  }
-  p {
-    padding: 7px 0;
-    margin-bottom: 0;
-  }
-}
-
-#warning-banner {
-  @include warning-banner;
-}
-
-#warning-banner-https {
-  @include warning-banner;
-}
-
-#warning-banner-chrome {
-  @include warning-banner;
-  color: white;
-  font-size: 22px;
-  line-height: 22px;
-  margin-bottom: 5px;
-  padding: 5px;
-}
-
 .quiet_links {
   a:link { font-family: $gotham-regular; font-weight: normal; }
 }
@@ -1512,6 +1478,21 @@ a.download-video {
     font-size:16px;
     color:$charcoal;
     margin-top:15px;
+  }
+}
+
+#hoc_download {
+  color: $charcoal;
+  .capsule {
+    background-color: $lightest_gray;
+    border-radius: 10px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-top: 20px;
+    padding-bottom: 28px;
+  }
+  .indent {
+    margin-left: 20px;
   }
 }
 

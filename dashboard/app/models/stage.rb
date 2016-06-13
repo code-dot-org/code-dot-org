@@ -95,7 +95,7 @@ class Stage < ActiveRecord::Base
         extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
         unless extra_levels.empty?
           stage_data[:levels] += extra_levels
-          last_level_summary[:uid] = "#{last_level_summary[:id]}_0"
+          last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
           last_level_summary[:url] << "/page/1"
         end
       end

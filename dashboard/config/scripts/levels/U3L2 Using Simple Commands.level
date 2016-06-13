@@ -65,7 +65,17 @@
     "video_key": "csp_applab_turtle",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "true",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "turnLeft"
+        ],
+        "matchType": "exact",
+        "minTimes": 4,
+        "message": "It seems like you’re not turning the turtle left enough times.  Remember that the turtle should be facing the same direction in which it started by the end."
+      }
+    ]
   },
   "published": true,
   "notes": "",

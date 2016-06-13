@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require File.expand_path('../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/hip_chat'
 require 'cdo/solr'
 require 'cdo/poste'
