@@ -15,15 +15,17 @@
         = sanitize(t('signup_form.no_signup_message').html_safe, tags: %w(a), attributes: %w(href target))
 
   .row
-    .span8.signupblock
+    .span8.signupblock{style: "background-color:white"}
 
       = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'signupform', onsubmit: "return submitForm();" }) do |f|
-        = signup_error_messages!
 
         #usertype-block.itemblock
           .labelblock
-            = "User Type"
-          = f.select :user_type, User::USER_TYPE_OPTIONS, {}, { class: "fieldblock", onchange: "changeRole($(this).val());", style: "width: 234px" }
+            = t('signup_form.user_type_label')
+          - type_options = [[t('signup_form.user_type_student'), User::TYPE_STUDENT], [t('signup_form.user_type_teacher'), User::TYPE_TEACHER]]
+          = f.select :user_type, type_options, {}, { class: "fieldblock", onchange: "changeRole($(this).val());", style: "width: 234px" }
+
+        = signup_error_messages!
 
         = f.hidden_field :locale, value: locale
         = f.hidden_field :hashed_email
@@ -33,14 +35,12 @@
             = t('activerecord.attributes.user.name')
           = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
           .error_in_field
-            = "Name is required"
 
         #email-block.itemblock
           .labelblock
             = t('activerecord.attributes.user.email')
           = f.email_field :email, class: 'input-xlarge fieldblock', maxlength: 255
           .error_in_field
-            = "Email is required"
 
         - if f.object.password_required?
           #password-block.itemblock
@@ -64,7 +64,7 @@
         #age-block.itemblock
           .labelblock
             = t('signup_form.age')
-          %select{name: "user[age]", type: "select"}
+          %select.fieldblock{name: "user[age]", type: "select", style: "width: 234px"}
             %option{value: "", selected: true, disabled: true}
             - User::AGE_DROPDOWN_OPTIONS.each do |age_option|
               %option{value: age_option}= age_option
@@ -73,14 +73,14 @@
         #gender-block.itemblock
           .labelblock
             = t('signup_form.gender')
-          = f.select :gender, gender_options, { disabled: '', selected: '' }
+          = f.select :gender, gender_options, { disabled: '', selected: '' }, { class: 'fieldblock', style: "width: 234px" }
           .error_in_field
 
         -# Not yet ready to turn this on.
         -# schoolcountry-block.itemblock{style: "display: none"}
           .labelblock
             = "Country"
-          %select#schoolcountry.form-control{name: "user[school_country]", type: "select"}
+          %select#schoolcountry.form-control.fieldblock{name: "user[school_country]", type: "select"}
             %option{value: "", selected: true, disabled: true}
             - get_all_countries.each do |country_abbr, country_name|
               %option{value: country_abbr}= country_name
