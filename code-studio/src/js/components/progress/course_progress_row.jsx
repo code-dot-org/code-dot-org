@@ -115,7 +115,7 @@ const CourseProgressRow = React.createClass({
         </div>
         <StageProgress
           levels={stage.levels}
-          largeDots={true}
+          courseOverviewPage={true}
         />
       </div>
     );

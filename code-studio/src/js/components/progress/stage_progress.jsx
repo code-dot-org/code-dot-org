@@ -25,7 +25,7 @@ const styles = {
 const StageProgress = React.createClass({
   propTypes: {
     levels: stageProgressShape,
-    largeDots: React.PropTypes.bool
+    courseOverviewPage: React.PropTypes.bool
   },
 
   render() {
@@ -33,12 +33,12 @@ const StageProgress = React.createClass({
       <ProgressDot
         key={index}
         level={level}
-        largeDots={this.props.largeDots}
+        courseOverviewPage={this.props.courseOverviewPage}
       />
     );
 
     return (
-      <div className='react_stage' style={this.props.largeDots ? styles.courseOverviewContainer : styles.headerContainer}>
+      <div className='react_stage' style={this.props.courseOverviewPage ? styles.courseOverviewContainer : styles.headerContainer}>
         {progressDots}
       </div>
     );

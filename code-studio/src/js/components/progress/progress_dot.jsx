@@ -124,6 +124,11 @@ const styles = {
   }
 };
 
+function dotClicked(url, e) {
+  e.preventDefault();
+  saveAnswersAndNavigate(url);
+}
+
 /**
  * Stage progress component used in level header and course overview.
  */
@@ -131,67 +136,46 @@ const ProgressDot = React.createClass({
   propTypes: {
     level: levelProgressShape.isRequired,
     currentLevelId: React.PropTypes.string,
-    largeDots: React.PropTypes.bool,
+    courseOverviewPage: React.PropTypes.bool,
     saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
-  },
-
-  dotClicked(url) {
-    if (saveAnswersAndNavigate) {
-      saveAnswersAndNavigate(url);
-    }
   },
 
   render() {
     const level = this.props.level;
     const uid = level.uid || level.id.toString();
 
-    let dotStyle = Object.assign({}, styles.dot.puzzle);
-    if (level.kind === 'assessment') {
-      Object.assign(dotStyle, styles.dot.assessment);
-    }
-
-    if (this.props.largeDots) {
-      Object.assign(dotStyle, styles.dot.overview);
-      if (uid === this.props.currentLevelId) {
-        Object.assign(dotStyle, {borderColor: color.level_current});
-      }
-    } else if (uid !== this.props.currentLevelId) {
-      Object.assign(dotStyle, styles.dot.small);
-    }
-
     const isUnplugged = isNaN(level.title);
-    if (isUnplugged && (this.props.largeDots || uid === this.props.currentLevelId)) {
-      Object.assign(dotStyle, styles.dot.unplugged);
-    }
-
-    let onClick = null;
-    if (this.props.saveAnswersFirst) {
-      dotStyle.cursor = 'pointer';
-      onClick = (e) => {this.dotClicked(level.url); e.preventDefault();};
-    }
-
-    let dot, name, outerStyle;
-    if (!level.icon) {
-      Object.assign(dotStyle, styles.status[level.status || 'not_tried']);
-      // '\u00a0' is &nbsp;
-      dot = <div style={dotStyle} className={`level-${level.id}`}>{level.kind === 'named_level' ? '\u00a0' : level.title}</div>;
-    } else {
-      Object.assign(dotStyle, styles.dot.icon);
-      if (!this.props.largeDots && uid !== this.props.currentLevelId) {
-        Object.assign(dotStyle, styles.dot.icon_small);
-      }
-      Object.assign(dotStyle, (!level.status || level.status === 'not_tried') ? {} : styles.dot.icon_complete);
-      dot = <i className={`fa ${level.icon}`} style={dotStyle} />;
-    }
-
-    if (level.kind === 'named_level' && this.props.largeDots) {
-      outerStyle = {display: 'block'};
-      name = <span style={{marginLeft: 5, color: color.purple}}>{level.name}</span>;
-    }
+    const showUnplugged = isUnplugged && (this.props.courseOverviewPage || uid === this.props.currentLevelId);
+    const smallDot = !this.props.courseOverviewPage && uid !== this.props.currentLevelId;
+    const showLevelName = level.kind === 'named_level' && this.props.courseOverviewPage;
 
     return (
-      <a href={level.url} onClick={onClick} style={outerStyle}>
-        {dot}{name}
+      <a
+        href={level.url}
+        onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
+        style={[showLevelName && {display: 'block'}]
+      }>
+        {level.icon ?
+          <i className={`fa ${level.icon}`} style={[
+            styles.dot.puzzle,
+            this.props.courseOverviewPage && styles.dot.overview,
+            styles.dot.icon,
+            smallDot && styles.dot.icon_small,
+            level.status && level.status !== 'not_tried' && styles.dot.icon_complete
+          ]} /> :
+          <div style={[
+            styles.dot.puzzle,
+            this.props.courseOverviewPage && styles.dot.overview,
+            smallDot && styles.dot.small,
+            level.kind === 'assessment' && styles.dot.assessment,
+            uid === this.props.currentLevelId && {borderColor: color.level_current},
+            showUnplugged && styles.dot.unplugged,
+            styles.status[level.status || 'not_tried']
+          ]} className={`level-${level.id}`}>{level.kind === 'named_level' ? '\u00a0' : level.title}</div>
+        }
+        {showLevelName &&
+          <span style={{marginLeft: 5, color: color.purple}}>{level.name}</span>
+        }
       </a>
     );
   }
