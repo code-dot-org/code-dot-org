@@ -45,10 +45,12 @@
   - redirect "/educate/professional-learning/cs-fundamentals-onepager.pdf"
 - elsif requested_path.eql? "/educate/k5/resources"
   - redirect "/educate/professional-learning/cs-fundamentals-resources"
+- elsif requested_path.eql? "/educate/district"
+  - redirect "/educate/partner"
 - elsif requested_path.eql? "/educate/districts"
-  - redirect "/educate/district"
-- elsif %w(/educate/district-partners /educate/partner-districts).include? requested_path
-  - redirect "/educate/district/partners"
+  - redirect "/educate/partner"
+- elsif %w(/educate/district-partners /educate/partner-districts /educate/district/partners).include? requested_path
+  - redirect "/educate/partner/district-partners"
 - elsif requested_path.eql? "/educate/districtterms"
   - redirect "/educate/district/terms"
 - elsif requested_path.eql? "/educate/template-district-agreement"

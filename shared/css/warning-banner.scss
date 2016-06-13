@@ -1,0 +1,59 @@
+@import 'color';
+@import 'font';
+
+#warning-banner {
+  padding: 10px 20px 5px 20px;
+  font-size: 13px;
+  line-height: 16px;
+  background-color: $purple;
+  text-align: center;
+  color: white;
+  height: 40px;
+  a, a:visited {
+    font-family: $gotham-extra-bold;
+    color: white;
+    text-decoration: underline;
+  }
+  a:hover {
+    background: transparent;
+  }
+
+  #message {
+    float: left;
+    width: 90%;
+  }
+
+  #hide-warning {
+    position: relative;
+  }
+
+  #hide-warning .close {
+    float: right;
+    font-size: 20px;
+  }
+}
+
+.warning-sign {
+  font-size: 16px;
+  color: $mustardyellow;
+}
+
+@media screen and (min-width: 500px) and (max-width: 940px) {
+  #warning-banner {
+    min-height: 60px;
+
+    #hide-warning {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 499px) {
+  #warning-banner {
+    min-height: 75px;
+
+    #hide-warning {
+      margin-top: 15px;
+    }
+  }
+}

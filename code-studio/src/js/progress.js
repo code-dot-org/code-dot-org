@@ -63,20 +63,21 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
   var lastLevelId = null;
   var levelRepeat = 0;
 
-  var combinedProgress = stageData.levels.map(function (level) {
+  var combinedProgress = stageData.levels.map(function (scriptlevel, index) {
+    var levelId = progress.bestResultLevelId(scriptlevel.ids, serverProgress, clientProgress);
 
     // If we have a multi-page level, then we will encounter the same level ID
     // multiple times in a row.  Keep track of how many times we've seen it
     // repeat, so that we know what page we're up to.
-    if (level.id === lastLevelId) {
+    if (levelId === lastLevelId) {
       levelRepeat++;
     } else {
-      lastLevelId = level.id;
+      lastLevelId = levelId;
       levelRepeat = 0;
     }
 
     var status;
-    var result = (serverProgress[level.id] || {}).result;
+    var result = (serverProgress[levelId] || {}).result;
     if (serverProgress && result > clientState.MAXIMUM_CACHABLE_RESULT) {
       if (result === REVIEW_REJECTED_RESULT) {
         status = 'review_rejected';
@@ -84,30 +85,30 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
       if (result === REVIEW_ACCEPTED_RESULT) {
         status = 'review_accepted';
       }
-    } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
+    } else if (serverProgress && serverProgress[levelId] && serverProgress[levelId].submitted) {
       status = "submitted";
-    } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].pages_completed) {
+    } else if (serverProgress && serverProgress[levelId] && serverProgress[levelId].pages_completed) {
       // The dot is considered perfect if the page is considered complete.
-      var pageCompleted = serverProgress[level.id].pages_completed[levelRepeat];
+      var pageCompleted = serverProgress[levelId].pages_completed[levelRepeat];
       status = progress.activityCssClass(pageCompleted);
     } else if (clientState.queryParams('user_id')) {
       // Show server progress only (the student's progress)
       status = progress.activityCssClass(result);
     } else {
       // Merge server progress with local progress
-      status = progress.mergedActivityCssClass(result, clientProgress[level.id]);
+      status = progress.mergedActivityCssClass(result, clientProgress[levelId]);
     }
 
-    var href = level.url + location.search;
+    var href = scriptlevel.url + location.search;
 
     return {
-      title: level.title,
+      title: scriptlevel.title,
       status: status,
-      kind: level.kind,
+      kind: scriptlevel.kind,
       url: href,
-      icon: level.icon,
-      uid: level.uid,
-      id: level.id
+      icon: scriptlevel.icon,
+      uid: scriptlevel.uid,
+      id: levelId
     };
   });
 
@@ -133,12 +134,15 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
     // Show lesson plan links if teacher
     if (data.isTeacher) {
-      $('.stage-lesson-plan-link').show();
+      store.dispatch({
+        type: 'SHOW_LESSON_PLAN_LINKS'
+      });
     }
 
     if (data.focusAreaPositions) {
       store.dispatch({
         type: 'UPDATE_FOCUS_AREAS',
+        changeFocusAreaPath: data.changeFocusAreaPath,
         focusAreaPositions: data.focusAreaPositions
       });
     }
@@ -161,6 +165,32 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   );
 };
 
+// Return the level with the highest progress, or the first level if none have
+// been attempted
+progress.bestResultLevelId = function (levelIds, serverProgress, clientProgress) {
+  // The usual case
+  if (levelIds.length === 1) {
+    return levelIds[0];
+  }
+
+  // Return the level with the highest result
+  var attemptedIds = levelIds.filter(id => serverProgress[id] || clientProgress[id]);
+  if (attemptedIds.length === 0) {
+    // None of them have been attempted, just return the first
+    return levelIds[0];
+  }
+  var bestId = attemptedIds[0];
+  var bestResult = clientState.mergeActivityResult(serverProgress[bestId], clientProgress[bestId]);
+  attemptedIds.forEach(function (id) {
+    var result = clientState.mergeActivityResult(serverProgress[id], clientProgress[id]);
+    if (result > bestResult) {
+      bestId = id;
+      bestResult = result;
+    }
+  });
+  return bestId;
+};
+
 function loadProgress(scriptData, currentLevelId) {
 
   let store = createStore((state = [], action) => {
@@ -170,23 +200,34 @@ function loadProgress(scriptData, currentLevelId) {
         currentLevelId: state.currentLevelId,
         professionalLearningCourse: state.professionalLearningCourse,
         progress: newProgress,
+        changeFocusAreaPath: state.changeFocusAreaPath,
         focusAreaPositions: state.focusAreaPositions,
+        showLessonPlanLinks: state.showLessonPlanLinks,
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
-          let id = level.uid || level.id;
+          let id = level.uid || progress.bestResultLevelId(level.ids, state.progress, action.progress);
           newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
 
-          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
+          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id]), id: id});
         })}))
       };
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {
-      return Object.assign(state, {focusAreaPositions: action.focusAreaPositions});
+      return Object.assign(state, {
+        changeFocusAreaPath: action.changeFocusAreaPath,
+        focusAreaPositions: action.focusAreaPositions
+      });
+    } else if (action.type === 'SHOW_LESSON_PLAN_LINKS') {
+      return Object.assign(state, {
+        showLessonPlanLinks: action.showLessonPlanLinks
+      });
     }
     return state;
   }, {
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
     progress: {},
+    changeFocusAreaPath: null,
     focusAreaPositions: [],
+    showLessonPlanLinks: false,
     stages: scriptData.stages
   });
 
