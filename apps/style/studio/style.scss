@@ -161,6 +161,13 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
   }
 }
 
+// We have one particular star wars level that needs some special styling
+.js_hoc2015_event_free_markdown .instructionsImageContainer {
+  width: 67px;
+  text-align: center;
+  display: inline-block;
+}
+
 /* fix transform-origin for IE / RTL in playlab levels */
 html[dir="RTL"] div#visualization.responsive > svg {
   -ms-transform-origin: 0 0;

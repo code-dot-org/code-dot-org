@@ -29,6 +29,7 @@ const ENGLISH_LOCALE = 'en_us';
 const instructionsInitialState = {
   noInstructionsWhenCollapsed: false,
   shortInstructions: undefined,
+  shortInstructions2: undefined,
   longInstructions: undefined,
   collapsed: false,
   // The amount of vertical space consumed by the TopInstructions component
@@ -50,7 +51,12 @@ export default function reducer(state = instructionsInitialState, action) {
     if (state.shortInstructions || state.longInstructions) {
       throw new Error('instructions constants already set');
     }
-    const { noInstructionsWhenCollapsed, shortInstructions, longInstructions } = action;
+    const {
+      noInstructionsWhenCollapsed,
+      shortInstructions,
+      shortInstructions2,
+      longInstructions
+    } = action;
     let collapsed = state.collapsed;
     if (!longInstructions) {
       // If we only have short instructions, we want to be in collapsed mode
@@ -59,6 +65,7 @@ export default function reducer(state = instructionsInitialState, action) {
     return _.assign({}, state, {
       noInstructionsWhenCollapsed,
       shortInstructions,
+      shortInstructions2,
       longInstructions,
       collapsed
     });
@@ -109,10 +116,11 @@ export default function reducer(state = instructionsInitialState, action) {
 }
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
-    shortInstructions, longInstructions}) => ({
+    shortInstructions, shortInstructions2, longInstructions}) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   shortInstructions,
+  shortInstructions2,
   longInstructions
 });
 
@@ -190,6 +198,7 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * constants should be
  * @param {AppOptionsConfig} config
  * @param {string} config.level.instructions
+ * @param {string} config.level.instructions2
  * @param {string} config.level.markdownInstructions
  * @param {array} config.level.inputOutputTable
  * @param {string} config.locale
@@ -200,9 +209,9 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  */
 export const determineInstructionsConstants = config => {
   const { level, locale, noInstructionsWhenCollapsed, showInstructionsInTopPane } = config;
-  const { instructions, markdownInstructions, inputOutputTable } = level;
+  const { instructions, instructions2, markdownInstructions, inputOutputTable } = level;
 
-  let longInstructions, shortInstructions;
+  let longInstructions, shortInstructions, shortInstructions2;
   if (noInstructionsWhenCollapsed) {
     // CSP mode - We dont care about locale, and always want to show English
     longInstructions = markdownInstructions;
@@ -217,8 +226,8 @@ export const determineInstructionsConstants = config => {
   } else {
     // CSF mode - For non-English folks, only use the non-markdown instructions
     longInstructions = (!locale || locale === ENGLISH_LOCALE) ? markdownInstructions : undefined;
-    shortInstructions = substituteInstructionImages(instructions,
-      config.skin.instructions2ImageSubstitutions);
+    shortInstructions = instructions;
+    shortInstructions2 = instructions2;
 
     // In the case that we're in the top pane, if the two sets of instructions
     // are identical, only use the short version (such that we dont end up
@@ -233,11 +242,21 @@ export const determineInstructionsConstants = config => {
     if (inputOutputTable) {
       longInstructions = longInstructions || shortInstructions;
     }
+
+    if (config.skin.instructions2ImageSubstitutions) {
+      longInstructions = substituteInstructionImages(longInstructions,
+        config.skin.instructions2ImageSubstitutions);
+      shortInstructions = substituteInstructionImages(shortInstructions,
+        config.skin.instructions2ImageSubstitutions);
+      shortInstructions2 = substituteInstructionImages(shortInstructions2,
+        config.skin.instructions2ImageSubstitutions);
+    }
   }
 
   return {
     noInstructionsWhenCollapsed: !!noInstructionsWhenCollapsed,
     shortInstructions,
+    shortInstructions2,
     longInstructions
   };
 };
