@@ -3,6 +3,7 @@ import $ from 'jquery';
 import PlayZone from '../components/playzone';
 import ReactDOM from 'react-dom';
 
+
 /*
  * This file contains general logic for displaying modal dialogs and handling
  * submit button interactions.
@@ -135,10 +136,11 @@ window.dashboard.dialog = (function () {
       return;
     }
 
-    var showConfirmationDialog = getResult().showConfirmationDialog || false;
+    var result = getResult();
+    var showConfirmationDialog = result.showConfirmationDialog || false;
     if (showConfirmationDialog) {
       showDialog(showConfirmationDialog, function () {
-        processResults(onComplete);
+        processResults(onComplete, result.beforeProcessResultsHook);
       });
     } else {
       // Avoid multiple simultaneous submissions.
@@ -150,7 +152,7 @@ window.dashboard.dialog = (function () {
         }
       };
 
-      processResults(onComplete);
+      processResults(onComplete, result.beforeProcessResultsHook);
     }
   });
 
@@ -159,75 +161,84 @@ window.dashboard.dialog = (function () {
    * @param {function(boolean)} onComplete Optional callback function to call when
    *     the server call completes, which receives a boolean indicating whether
    *     the browser will redirect to a new location after it is called.
+   * @param {function(function)} beforeHook Optional callback function to call
+   *     before processResults gets underway. This function must call the completion
+   *     function passed as the parameter to complete the processResults call.
    */
   // TODO(dave): move this logic into appOptions.onAttempt for levels of type
   // external (including pixelation), multi, match, free_response, level_group,
   // and any others which render 'levels/dialog'.
-  var processResults = function (onComplete) {
-    var results = getResult();
-    var response = results.response;
-    var result = results.result;
-    var errorType = results.errorType;
-    var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
-    var submitted = results.submitted || false;
-
-
-    if (!result) {
-      showDialog(errorType || "error");
-      if (!appOptions.dialog.skipSound) {
-        CDOSounds.play('failure');
-      }
+  var processResults = function (onComplete, beforeHook) {
+    if (beforeHook) {
+      beforeHook(sendResultsCompletion);
     } else {
-      if (!appOptions.dialog.skipSound) {
-        CDOSounds.play('success');
-      }
+      sendResultsCompletion();
     }
+    function sendResultsCompletion() {
+      var results = getResult();
+      var response = results.response;
+      var result = results.result;
+      var errorType = results.errorType;
+      var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
+      var submitted = results.submitted || false;
 
-    window.dashboard.reporting.sendReport({
-      program: response,
-      fallbackResponse: appOptions.dialog.fallbackResponse,
-      callback: appOptions.dialog.callback,
-      app: appOptions.dialog.app,
-      level: appOptions.dialog.level,
-      result: result,
-      pass: result,
-      testResult: testResult,
-      submitted: submitted,
-      onComplete: function () {
-        var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
-        var willRedirect = !!lastServerResponse.nextRedirect;
-        if (onComplete) {
-          onComplete(willRedirect);
+      if (!result) {
+        showDialog(errorType || "error");
+        if (!appOptions.dialog.skipSound) {
+          CDOSounds.play('failure');
         }
+      } else {
+        if (!appOptions.dialog.skipSound) {
+          CDOSounds.play('success');
+        }
+      }
 
-        if (lastServerResponse.videoInfo) {
-          window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
-        } else if (lastServerResponse.endOfStageExperience) {
-          const body = document.createElement('div');
-          const stageInfo = lastServerResponse.previousStageInfo;
-          const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
-          ReactDOM.render(
-            <PlayZone
-              stageName={stageName}
-              onContinue={() => { dialog.hide(); }}
-              i18n={window.dashboard.i18n}/>,
-            body
-          );
-          const dialog = new Dialog({
-            body: body,
-            width: 800,
-            redirect: lastServerResponse.nextRedirect
-          });
-          dialog.show();
-        } else if (lastServerResponse.nextRedirect) {
-          if (appOptions.dialog.shouldShowDialog) {
-            showDialog("success");
-          } else {
-            window.location.href = lastServerResponse.nextRedirect;
+      window.dashboard.reporting.sendReport({
+        program: response,
+        fallbackResponse: appOptions.dialog.fallbackResponse,
+        callback: appOptions.dialog.callback,
+        app: appOptions.dialog.app,
+        level: appOptions.dialog.level,
+        result: result,
+        pass: result,
+        testResult: testResult,
+        submitted: submitted,
+        onComplete: function () {
+          var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
+          var willRedirect = !!lastServerResponse.nextRedirect;
+          if (onComplete) {
+            onComplete(willRedirect);
+          }
+
+          if (lastServerResponse.videoInfo) {
+            window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
+          } else if (lastServerResponse.endOfStageExperience) {
+            const body = document.createElement('div');
+            const stageInfo = lastServerResponse.previousStageInfo;
+            const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
+            ReactDOM.render(
+              <PlayZone
+                stageName={stageName}
+                onContinue={() => { dialog.hide(); }}
+                i18n={window.dashboard.i18n}/>,
+              body
+            );
+            const dialog = new Dialog({
+              body: body,
+              width: 800,
+              redirect: lastServerResponse.nextRedirect
+            });
+            dialog.show();
+          } else if (lastServerResponse.nextRedirect) {
+            if (appOptions.dialog.shouldShowDialog) {
+              showDialog("success");
+            } else {
+              window.location.href = lastServerResponse.nextRedirect;
+            }
           }
         }
-      }
-    });
+      });
+    }
   };
 
   return {

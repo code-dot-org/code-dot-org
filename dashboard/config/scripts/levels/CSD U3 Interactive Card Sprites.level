@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-06-10T18:02:17.530Z",
+  "created_at": "2016-06-10T18:02:17.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -175,7 +175,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Laying Out Your Background\r\nBefore beginning this project, you should have already completed the Interactive Card Planning activity, and you'll want to have that paper with you as you develop your program. Preparation is one of the **most important** elements of successfully creating a program!\r\n\r\n# Do This\r\nRefer to your planning activity sheet to help you lay out the shapes that will become the background to your card.\r\n\r\n* First, figure out what the lowest layer in your image is (this should use the `background()` block) and add it to the very top of the `draw()` loop\r\n* Next, layer each additional drawing block in the order you want them to appear in the stack\r\n* Finally, add a comment to the top of this section of code to describe what it does, and if you have any particularly complicated chunks of code within (such as code to draw a tree or a house), add a descriptive comment to that as well\r\n\r\n**Challenge:** Can you use variables or `randomNumber()` to add some subtle animation to your background layer?",
+    "markdown_instructions": "# Adding Sprites\r\nNow that you have the more static elements of your card layed out, it's time to add the Sprites. Your Sprites should provide the primary animations and interactions for your card - so feel free to get creative here and have fun\r\n\r\n# Do This\r\nCheck out the Sprites table on the back of your planning sheet. For each Sprite in your table:\r\n\r\n* Initialize the Sprite at the top of your program with `createSprite()`\r\n* Find or created the image(s) for the Sprite and set it with `setAnimation()`\r\n* Inside the `draw()` loop update any Sprite properties that will be constantly animating (we'll deal with conditionals in a minute)",
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -197,11 +197,13 @@
     "lock_zero_param_functions": "false",
     "free_play": "false",
     "text_mode_at_start": "false",
-    "hide_view_data_button": "false",
+    "hide_view_data_button": "true",
     "debugger_disabled": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

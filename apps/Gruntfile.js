@@ -21,7 +21,7 @@ module.exports = function (grunt) {
     // get compiled.
     fs.writeFileSync(
       'test/entry-tests.js',
-      "require('"+path.resolve(process.env.mocha_entry)+"')"
+      "require('"+path.resolve(process.env.mocha_entry)+"');\n"
     );
   }
 
