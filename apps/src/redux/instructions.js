@@ -30,6 +30,7 @@ const instructionsInitialState = {
   noInstructionsWhenCollapsed: false,
   shortInstructions: undefined,
   longInstructions: undefined,
+  hasContainedLevels: false,
   collapsed: false,
   // The amount of vertical space consumed by the TopInstructions component
   renderedHeight: 0,
@@ -50,9 +51,10 @@ export default function reducer(state = instructionsInitialState, action) {
     if (state.shortInstructions || state.longInstructions) {
       throw new Error('instructions constants already set');
     }
-    const { noInstructionsWhenCollapsed, shortInstructions, longInstructions } = action;
+    const { noInstructionsWhenCollapsed, shortInstructions,
+      longInstructions, hasContainedLevels } = action;
     let collapsed = state.collapsed;
-    if (!longInstructions) {
+    if (!longInstructions && !hasContainedLevels) {
       // If we only have short instructions, we want to be in collapsed mode
       collapsed = true;
     }
@@ -60,15 +62,17 @@ export default function reducer(state = instructionsInitialState, action) {
       noInstructionsWhenCollapsed,
       shortInstructions,
       longInstructions,
+      hasContainedLevels,
       collapsed
     });
   }
 
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
     const longInstructions = state.longInstructions;
-    if (!longInstructions) {
-      // No longInstructions implies either (a) no instructions or (b) we only
-      // have short instructions. In both cases, we should be collapsed.
+    if (!longInstructions && !state.hasContainedLevels) {
+      // No longInstructions or contained levels implies either
+      // (a) no instructions or (b) we only have short instructions.
+      // In both cases, we should be collapsed.
       throw new Error('Can not toggle instructions collapsed without longInstructions');
     }
     return _.assign({}, state, {
@@ -109,11 +113,12 @@ export default function reducer(state = instructionsInitialState, action) {
 }
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
-    shortInstructions, longInstructions}) => ({
+    shortInstructions, longInstructions, hasContainedLevels}) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   shortInstructions,
-  longInstructions
+  longInstructions,
+  hasContainedLevels
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -164,10 +169,12 @@ export const setHasAuthoredHints = hasAuthoredHints => ({
  * @param {boolean} noInstructionsWhenCollapsed
  * @param {boolean} showInstructionsInTopPane
  * @param {boolean} hasInputOutputTable
+ * @param {boolean} hasContainedLevels
  * @returns {Object}
  */
 export const determineInstructionsConstants = (instructions, markdownInstructions,
-    locale, noInstructionsWhenCollapsed, showInstructionsInTopPane, hasInputOutputTable) => {
+    locale, noInstructionsWhenCollapsed, showInstructionsInTopPane,
+    hasInputOutputTable, hasContainedLevels) => {
   let longInstructions, shortInstructions;
   if (noInstructionsWhenCollapsed) {
     // CSP mode - We dont care about locale, and always want to show English
@@ -204,6 +211,7 @@ export const determineInstructionsConstants = (instructions, markdownInstruction
   return {
     noInstructionsWhenCollapsed,
     shortInstructions,
-    longInstructions
+    longInstructions,
+    hasContainedLevels
   };
 };

@@ -68,7 +68,7 @@ var TopInstructions = React.createClass({
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
-    markdown: React.PropTypes.string.isRequired,
+    markdown: React.PropTypes.string,
     collapsed: React.PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -127,12 +127,21 @@ var TopInstructions = React.createClass({
    * @returns {number}
    */
   adjustMaxNeededHeight() {
-    const instructionsContent = this.refs.instructions;
-    const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
-      HEADER_HEIGHT + RESIZER_HEIGHT;
+    if (this.props.hasContainedLevels) {
+      const maxNeededContainedLevelHeight =
+        $(ReactDOM.findDOMNode(this)).find('#containedLevelContainer').outerHeight(true) +
+        HEADER_HEIGHT + RESIZER_HEIGHT;
 
-    this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
-    return maxNeededHeight;
+      this.props.setInstructionsMaxHeightNeeded(maxNeededContainedLevelHeight);
+      return maxNeededContainedLevelHeight;
+    } else {
+      const instructionsContent = this.refs.instructions;
+      const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
+        HEADER_HEIGHT + RESIZER_HEIGHT;
+
+      this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+      return maxNeededHeight;
+    }
   },
 
   /**
