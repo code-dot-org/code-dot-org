@@ -11,7 +11,7 @@ import color from '../../src/js/color';
  * Combine the given styles array like Radium.
  */
 function radiumHelper(styles) {
-  return Object.assign({}, ...styles.filter(s => s));
+  return Object.assign({}, ...styles);
 }
 
 describe('ProgressDot component tests', () => {
