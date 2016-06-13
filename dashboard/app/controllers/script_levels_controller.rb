@@ -203,9 +203,12 @@ class ScriptLevelsController < ApplicationController
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels if @script_level.levels.length == 1
 
+    # For teachers, get activity from the student's account
+    user = @user || current_user
+
     # If their most recent attempt was on a now-inactive level, show that.
-    if current_user && !params[:force_reload]
-      last_attempt = current_user.last_attempt_for_any(@script_level.levels)
+    if user && !params[:force_reload]
+      last_attempt = user.last_attempt_for_any(@script_level.levels)
       properties_hash = JSON.parse(@script_level.properties)
       if last_attempt && properties_hash[last_attempt.level.name]['active'] == false
         return [last_attempt.level]
