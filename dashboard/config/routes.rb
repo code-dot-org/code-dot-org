@@ -338,6 +338,9 @@ Dashboard::Application.routes.draw do
   get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   get '/api/:action', controller: 'api'
 
+  get '/test_status/:branch', to: 'test_status#test_run_status'
+  get '/test_status/:branch/:name', to: 'test_status#test_status'
+
   namespace :api do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
