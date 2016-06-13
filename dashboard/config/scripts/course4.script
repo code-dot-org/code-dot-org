@@ -1,7 +1,7 @@
 title 'Course 4'
 description "Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8."
 description_short "Students taking Course 4 should have already taken Courses 2 and 3."
-description_audience "Ages 10-18"
+description_audience "Ages 9-18"
 hidden 'false'
 
 stage 'Unplugged: Tangrams'

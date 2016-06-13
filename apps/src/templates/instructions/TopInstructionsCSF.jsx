@@ -85,7 +85,10 @@ var TopInstructions = React.createClass({
     longInstructions: React.PropTypes.string,
     hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
-    smallStaticAvatar: React.PropTypes.string.isRequired,
+    smallStaticAvatar: React.PropTypes.string,
+    inputOutputTable: React.PropTypes.arrayOf(
+      React.PropTypes.arrayOf(React.PropTypes.number)
+    ),
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -143,10 +146,15 @@ var TopInstructions = React.createClass({
    * @returns {number} The minimum height of the top instructions (which is just
    * the height of the little icon and the height of the resizer if we're not
    * collapsed
-
    */
   getMinHeight() {
-    return $(ReactDOM.findDOMNode(this.refs.icon)).outerHeight(true) +
+    const buttonHeight = $(ReactDOM.findDOMNode(this.refs.collapser)).outerHeight(true);
+    const minIconHeight = this.refs.icon ?
+      $(ReactDOM.findDOMNode(this.refs.icon)).outerHeight(true) : 0;
+    const minInstructionsHeight = this.props.collapsed ?
+      $(ReactDOM.findDOMNode(this.refs.instructions)).outerHeight(true) : 0;
+
+    return Math.max(buttonHeight, minIconHeight, minInstructionsHeight) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
   },
 
@@ -213,7 +221,7 @@ var TopInstructions = React.createClass({
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
       this.props.shortInstructions : this.props.longInstructions);
 
-    const leftColWidth = PROMPT_ICON_WIDTH +
+    const leftColWidth = (this.props.smallStaticAvatar ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
 
     return (
@@ -231,13 +239,16 @@ var TopInstructions = React.createClass({
               ]}
           >
             <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
-              <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
+              {this.props.smallStaticAvatar &&
+                <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
+              }
             </ProtectedStatefulDiv>
           </div>
           <Instructions
               ref="instructions"
               renderedMarkdown={renderedMarkdown}
               onResize={this.adjustMaxNeededHeight}
+              inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
               inTopPane
           />
           <CollapserButton
@@ -267,7 +278,8 @@ module.exports = connect(function propsFromStore(state) {
     longInstructions: state.instructions.longInstructions,
     hasAuthoredHints: state.instructions.hasAuthoredHints,
     isRtl: state.pageConstants.localeDirection === 'rtl',
-    smallStaticAvatar: state.pageConstants.smallStaticAvatar
+    smallStaticAvatar: state.pageConstants.smallStaticAvatar,
+    inputOutputTable: state.pageConstants.inputOutputTable
   };
 }, function propsFromDispatch(dispatch) {
   return {

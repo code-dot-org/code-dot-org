@@ -2813,7 +2813,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     stageTotal: level.stage_total,
     noVisualization: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
-    aniGifURL: config.level.aniGifURL
+    aniGifURL: config.level.aniGifURL,
+    inputOutputTable: config.level.inputOutputTable
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
@@ -2823,7 +2824,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     config.level.markdownInstructions,
     config.locale,
     !!config.noInstructionsWhenCollapsed,
-    !!config.showInstructionsInTopPane
+    !!config.showInstructionsInTopPane,
+    !!config.level.inputOutputTable
   );
   this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
 };

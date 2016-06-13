@@ -36,7 +36,7 @@ ________________
 <br/>
 <br/>
 
-### **Computer Science Fundamentals**
+## **Computer Science Fundamentals**
 
 Refer to the [CSF Facilitator Handbook](https://docs.google.com/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit) for more details about planning a CS Fundamentals workshop.
 
@@ -47,7 +47,7 @@ ________________
 <br/>
 <br/>
 
-### **Computer Science in Algebra**
+## **Computer Science in Algebra**
 
 **Securing a Venue**<br/>
 These guidelines explain the type of space your facilitators need to run a successful workshop and provide important tips to consider for logistics and teacher experience.  <br/>
@@ -84,7 +84,7 @@ ________________
 <br/>
 <br/>
 
-### **Computer Science in Science**
+## **Computer Science in Science**
 
 **Securing a Venue**<br/>
 These guidelines explain the type of space your facilitators need to run a successful workshop and provide important tips to consider for logistics and teacher experience.  <br/>
@@ -125,7 +125,21 @@ ________________
 <br/>
 <br/>
 
-### **Exploring Computer Science**
+## **Exploring Computer Science**
+
+**ECS Workshop Preparation Process**<br/>
+
+1. Setup your ECS workshops in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard).<br/>
+2. Make sure ALL facilitators (veteran + facilitators in training) are added to the workshop)<br/>
+3. If you haven’t already, reach out to your facilitators and introduce yourself and tell them a bit about your organization.<br/>
+4. *For Summer Workshops*: if you are CodeVA, DePaul, Nextech or Utah send all teachers [an email](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.qz8c6xpaktl) asking them to register for your workshop using the dashboard registration link. Code.org will send this email on behalf of everyone else.<br/>
+	*For Academic Year Workshops*: all organizations should send [an email](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.qz8c6xpaktl) asking teachers to register for your workshop using the dashboard registration link.
+6. Four weeks prior - order catering<br/>
+7. Three to four weeks prior (no later than 14 days) - [order your supplies from Mimeo](/educate/professional-learning-partner/playbook/ordering-supplies).<br/>
+8. One and a half weeks prior - [create a facilitator 1-pager](/educate/professional-learning-partner/playbook/facilitator-support) and email it to your facilitators<br/>
+9. Two days prior - make sure all your supplies have arrived<br/>
+10. Day of the workshop - help your facilitator take attendance, send [an email](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.qz8c6xpaktl) with your Phase 3 workshop registration links (see this template)<br/>
+
 
 **Securing a Venue**<br/>
 These guidelines explain the type of space your facilitators need to run a successful workshop and provide important tips to consider for logistics and teacher experience.  <br/>
@@ -164,7 +178,7 @@ ________________
 <br/>
 <br/>
 
-### **Computer Science Principles**
+## **Computer Science Principles**
 
 **Securing a Venue**<br/>
 These guidelines explain the type of space your facilitators need to run a successful workshop and provide important tips to consider for logistics and teacher experience.  <br/>
