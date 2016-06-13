@@ -146,6 +146,7 @@ export const ProgressDot = React.createClass({
 
     const isUnplugged = isNaN(level.title);
     const showUnplugged = isUnplugged && (this.props.courseOverviewPage || uid === this.props.currentLevelId);
+    const outlineCurrent = this.props.courseOverviewPage && uid === this.props.currentLevelId;
     const smallDot = !this.props.courseOverviewPage && uid !== this.props.currentLevelId;
     const showLevelName = level.kind === 'named_level' && this.props.courseOverviewPage;
 
@@ -168,7 +169,7 @@ export const ProgressDot = React.createClass({
             this.props.courseOverviewPage && styles.dot.overview,
             smallDot && styles.dot.small,
             level.kind === 'assessment' && styles.dot.assessment,
-            uid === this.props.currentLevelId && {borderColor: color.level_current},
+            outlineCurrent && {borderColor: color.level_current},
             showUnplugged && styles.dot.unplugged,
             styles.status[level.status || 'not_tried']
           ]} className={`level-${level.id}`}>{level.kind === 'named_level' ? '\u00a0' : level.title}</div>
