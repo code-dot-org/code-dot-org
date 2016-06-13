@@ -136,13 +136,15 @@ describe('determineInstructionsConstants', () => {
 
     it('sets longInstructions to markdownInstructions regardless of locale', () => {
       const locales = ['fr-fr', ENGLISH_LOCALE, undefined];
-      const results = locales.map(locale => determineInstructionsConstants(
-        'non-markdown',
-        'markdown',
+      const results = locales.map(locale => determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+        },
         locale,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
-      ));
+      }));
 
       results.forEach(result => {
         assert.equal(result.longInstructions, 'markdown');
@@ -150,48 +152,56 @@ describe('determineInstructionsConstants', () => {
     });
 
     it('sets longInstructions to be non-markdown instructions if no markdownInstructions given', () => {
-      const result = determineInstructionsConstants(
-        'non-markdown',
-        undefined,
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: undefined,
+        },
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
-      );
+      });
 
       assert.equal(result.longInstructions, 'non-markdown');
     });
 
     it('never sets shortInstructions', () => {
       // only given non-markdown
-      const result = determineInstructionsConstants(
-        'non-markdown',
-        undefined,
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: undefined,
+        },
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
-      );
+      });
 
       assert.equal(result.shortInstructions, undefined);
 
       // only given markdown
-      const result2 = determineInstructionsConstants(
-        undefined,
-        'markdown',
+      const result2 = determineInstructionsConstants({
+        level: {
+          instructions: undefined,
+          markdownInstructions: 'markdown',
+        },
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
-      );
+      });
 
       assert.equal(result2.shortInstructions, undefined);
 
       // given both
-      const result3 = determineInstructionsConstants(
-        'non-markdown',
-        'markdown',
+      const result3 = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+        },
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
-      );
+      });
 
       assert.equal(result3.shortInstructions, undefined);
     });
@@ -199,17 +209,20 @@ describe('determineInstructionsConstants', () => {
 
   describe('CSF mode', () => {
     const noInstructionsWhenCollapsed = false;
+    const showInstructionsInTopPane = true;
 
     it('sets long and short instructions for english locale', () => {
       // en_us and undefined should both be treated as english
       ['en_us', undefined].forEach(locale => {
-        const result = determineInstructionsConstants(
-          'non-markdown',
-          'markdown',
+        const result = determineInstructionsConstants({
+          level: {
+            instructions: 'non-markdown',
+            markdownInstructions: 'markdown',
+          },
           locale,
           noInstructionsWhenCollapsed,
-          true
-        );
+          showInstructionsInTopPane
+        });
         assert.deepEqual(result, {
           noInstructionsWhenCollapsed,
           shortInstructions: 'non-markdown',
@@ -219,13 +232,15 @@ describe('determineInstructionsConstants', () => {
     });
 
     it('does not set long instructions if non-english locale', () => {
-      const result = determineInstructionsConstants(
-        'non-markdown',
-        'markdown',
-        'fr-fr',
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+        },
+        locale: 'fr-fr',
         noInstructionsWhenCollapsed,
-        true
-      );
+        showInstructionsInTopPane
+      });
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
         shortInstructions: 'non-markdown',
@@ -235,13 +250,15 @@ describe('determineInstructionsConstants', () => {
 
     it('does not set long instructions if identical to short-instructions, and ' +
         'showInstructionsInTopPane is true', () => {
-      const result = determineInstructionsConstants(
-        'non-markdown',
-        'non-markdown',
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'non-markdown',
+        },
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        true
-      );
+        showInstructionsInTopPane
+      });
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
         shortInstructions: 'non-markdown',
@@ -250,24 +267,29 @@ describe('determineInstructionsConstants', () => {
     });
 
     it('sets long instructions if we have an inputOutputTable', () => {
-      const result = determineInstructionsConstants(
-        'non-markdown',
-        undefined,
+      const inputOutputTable =  [[15, 5], [20, 10]];
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: undefined,
+          inputOutputTable
+        },
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        true,
-        true
-      );
+        showInstructionsInTopPane
+      });
       assert.equal(result.longInstructions, 'non-markdown');
 
-      const result2 = determineInstructionsConstants(
-        'non-markdown',
-        'markdown',
+      const result2 = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+          inputOutputTable
+        },
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        true,
-        true
-      );
+        showInstructionsInTopPane
+      });
       assert.equal(result2.longInstructions, 'markdown');
     });
   });
