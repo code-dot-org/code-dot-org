@@ -20,15 +20,58 @@ window.initLevelGroup = function (
 
   window.getResult = getResult;
 
+  function submitSublevelResults(completion, subLevelIdChanged) {
+    var levels = window.levelGroup.levels;
+    var sendReportCompleteCount = 0;
+    var subLevelCount = Object.keys(levels).length;
+    if (subLevelCount === 0) {
+      return completion();
+    }
+    function handleSublevelComplete() {
+      sendReportCompleteCount++;
+      if (sendReportCompleteCount === subLevelCount) {
+        completion();
+      }
+    }
+    for (var subLevelId in levels) {
+      if (typeof subLevelIdChanged !== 'undefined' && subLevelIdChanged !== parseInt(subLevelId)) {
+        // Only one sublevel changed and this is not the one, so skip the post and
+        // call the completion function immediately
+        handleSublevelComplete();
+        continue;
+      }
+      var subLevelResult = levels[subLevelId].getResult(true);
+      var response = subLevelResult.response;
+      var result = subLevelResult.result;
+      var errorType = subLevelResult.errorType;
+      var testResult = subLevelResult.testResult ? subLevelResult.testResult : (result ? 100 : 0);
+      var submitted = subLevelResult.submitted || false;
+
+      window.dashboard.reporting.sendReport({
+        program: response,
+        fallbackResponse: appOptions.dialog.fallbackResponse,
+        callback: appOptions.dialog.sublevelCallback + subLevelId,
+        app: appOptions.dialog.app,
+        allowMultipleSends: true,
+        level: subLevelId,
+        result: subLevelResult,
+        pass: subLevelResult,
+        testResult: testResult,
+        submitted: submitted,
+        onComplete: handleSublevelComplete
+      });
+    }
+  }
+
   var throttledSaveAnswers =
-    window.dashboard.utils.throttle(saveAnswers, 20 * 1000, {'leading': true, 'trailing': true});
+    window.dashboard.utils.throttle(saveAnswers.bind(this, null, submitSublevelResults), 20 * 1000, {'leading': true, 'trailing': true});
 
   var lastResponse = window.getResult().response;
 
-  window.levelGroup.answerChangedFn = function () {
+  window.levelGroup.answerChangedFn = function (levelId) {
     var currentResponse = window.getResult().response;
     if (lastResponse !== currentResponse) {
-      throttledSaveAnswers();
+      throttledSaveAnswers(levelId);
     }
     lastResponse = currentResponse;
   };
@@ -45,7 +88,7 @@ window.initLevelGroup = function (
     // Add any new results to the existing lastAttempt results.
     var levels = window.levelGroup.levels;
     Object.keys(levels).forEach(function (levelId) {
-      var currentAnswer = levels[levelId].getCurrentAnswer();
+      var currentAnswer = levels[levelId].getResult(true);
       var levelResult = currentAnswer.response.toString();
       var valid = currentAnswer.valid;
       lastAttempt[levelId] = {result: levelResult, valid: valid};
@@ -68,7 +111,8 @@ window.initLevelGroup = function (
       "result": true,
       "errorType": null,
       "submitted": window.appOptions.level.submittable || forceSubmittable,
-      "showConfirmationDialog": showConfirmationDialog
+      "showConfirmationDialog": showConfirmationDialog,
+      "beforeProcessResultsHook": submitSublevelResults
     };
   }
 
@@ -90,8 +134,9 @@ window.initLevelGroup = function (
       // long assessment.  Cancel any pending throttled attempts at saving state.
       throttledSaveAnswers.cancel();
       saveAnswers(function () {
-        changePage(targetPage);
-      });
+            changePage(targetPage);
+          },
+          submitSublevelResults);
     }
   }
 
