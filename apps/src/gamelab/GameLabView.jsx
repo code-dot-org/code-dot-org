@@ -4,6 +4,7 @@
 
 import classNames from 'classnames';
 import {connect} from 'react-redux';
+import React from 'react';
 var _ = require('../lodash');
 var AnimationTab = require('./AnimationTab/AnimationTab');
 var StudioAppWrapper = require('../templates/StudioAppWrapper');

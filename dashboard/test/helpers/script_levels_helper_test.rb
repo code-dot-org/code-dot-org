@@ -45,5 +45,4 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     script_level = Script.twenty_hour_script.script_levels.fifth
     assert_equal 'Stage 2: The Maze', script_level.stage.summarize[:title]
   end
-
 end

@@ -3,6 +3,7 @@
  */
 /* global inlineAttach */
 'use strict';
+import $ from 'jquery';
 var CodeMirror = require('codemirror');
 require("codemirror/mode/markdown/markdown");
 require("codemirror/addon/edit/closetag");

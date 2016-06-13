@@ -11,7 +11,9 @@
     ]
   },
   "browserify-shim": {
-    "marked": "global:marked",
-    "radium": "global:Radium"
+    "marked": "global:marked"
+  },
+  "dependencies": {
+    "firebase": "^2.4.1"
   }
 }

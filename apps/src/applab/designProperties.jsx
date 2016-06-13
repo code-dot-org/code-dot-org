@@ -1,5 +1,5 @@
-/* global $*/
-
+import $ from 'jquery';
+import React from 'react';
 var applabMsg = require('./locale');
 var color = require('../color');
 var elementLibrary = require('./designElements/library');
@@ -92,7 +92,7 @@ var DesignProperties = React.createClass({
 
     /** @constant {Object} */
     var styles = {
-      activeTab: $.extend({}, baseTabStyle, {
+      activeTab: Object.assign({}, baseTabStyle, {
         backgroundColor: bgColor,
         borderTopWidth: 1,
         borderRightWidth: 1,
@@ -100,7 +100,7 @@ var DesignProperties = React.createClass({
         borderLeftWidth: 0,
         float: 'left'
       }),
-      inactiveTab: $.extend({}, baseTabStyle, {
+      inactiveTab: Object.assign({}, baseTabStyle, {
         borderTopWidth: 1,
         borderRightWidth: 1,
         borderBottomWidth: 1,
@@ -108,7 +108,7 @@ var DesignProperties = React.createClass({
         float: 'left'
       }),
       // This tab should fill the remaining horizontal space.
-      emptyTab: $.extend({}, baseTabStyle, {
+      emptyTab: Object.assign({}, baseTabStyle, {
         borderTopWidth: 0,
         borderRightWidth: 0,
         borderBottomWidth: 1,

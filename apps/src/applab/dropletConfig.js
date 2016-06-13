@@ -1,5 +1,5 @@
 /* global dashboard */
-
+import $ from 'jquery';
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('../consoleApi');
@@ -28,19 +28,6 @@ var stringMethodPrefix = '[string].';
 var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
-
-const playSongConfig = {
-  song: [
-    ["A", 500], [null, 50], ["A", 500], [null, 50], ["A", 500], [null, 50],
-    ["F", 350], [null, 50], ["C5", 150], [null, 50], ["A", 500], [null, 50],
-    ["F", 350], [null, 50], ["C5", 150], [null, 50], ["A", 650], [null, 50],
-    [null, 500], ["E5", 500], [null, 50], ["E5", 500], [null, 50], ["E5", 500],
-    [null, 50], ["F5", 350], [null, 50], ["C5", 150], [null, 50], ["G4", 500],
-    [null, 50], ["F", 350], [null, 50], ["C5", 150], [null, 50], ["A", 650],
-    [null, 50], [null, 500],
-  ],
-  tempo: 100000
-};
 
 /**
  * Generate a list of screen ids for our setScreen dropdown
@@ -187,48 +174,6 @@ module.exports.blocks = [
   {func: 'setStyle', parent: api, category: 'Advanced', params: ['"id"', '"color:red;"'] },
   {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value' },
   {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"]},
-
-  {func: 'pinMode', parent: api, category: 'Maker Lab', params: ['13', '"input"']},
-  {func: 'digitalWrite', parent: api, category: 'Maker Lab', params: ['13', '1']},
-  {func: 'digitalRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, params: ['"D4"']},
-  {func: 'analogWrite', parent: api, category: 'Maker Lab', params: ['5', '150']},
-  {func: 'analogRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, params: ['5']},
-
-  {func: 'led', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
-  {func: 'led.on', category: 'Circuit'},
-  {func: 'led.off', category: 'Circuit'},
-  {func: 'led.toggle', category: 'Circuit'},
-  {func: 'led.blink', category: 'Circuit', params: ['50']},
-  {func: 'led.stop', category: 'Circuit'},
-
-  {func: 'on', blockPrefix: 'pixel0.', category: 'Circuit', tipPrefix: '[pixelN]' },
-  {func: 'off', blockPrefix: 'pixel0.', category: 'Circuit', tipPrefix: '[pixelN]' },
-  {func: 'toggle', blockPrefix: 'pixel0.', category: 'Circuit', tipPrefix: '[pixelN]' },
-  {func: 'blink', blockPrefix: 'pixel0.', category: 'Circuit', paletteParams: ['period'], params: ['50'], tipPrefix: '[pixelN]' },
-  {func: 'stop', blockPrefix: 'pixel0.', category: 'Circuit', tipPrefix: '[pixelN]' },
-  {func: 'intensity', blockPrefix: 'pixel0.', category: 'Circuit', params: ['25'], tipPrefix: '[pixelN]' },
-  {func: 'color', blockPrefix: 'pixel0.', category: 'Circuit', paletteParams: ['color'], params: ['"#FF00FF"'], tipPrefix: '[pixelN]' },
-
-  {func: 'pixels', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
-  {func: 'pixels.on', category: 'Circuit'},
-  {func: 'pixels.off', category: 'Circuit'},
-  {func: 'pixels.toggle', category: 'Circuit'},
-  {func: 'pixels.blink', category: 'Circuit', params: ['50']},
-  {func: 'pixels.stop', category: 'Circuit'},
-  {func: 'pixels.intensity', category: 'Circuit', params: ['50']},
-  {func: 'pixels.color', category: 'Circuit'},
-
-  {func: 'piezo', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
-  {func: 'piezo.frequency', category: 'Circuit', params: ['500', '100']},
-  {func: 'piezo.note', category: 'Circuit', params: ['"A4"', '100']},
-  {func: 'piezo.stop', category: 'Circuit'},
-  {func: 'piezo.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
-
-  {func: 'isPressed', blockPrefix: 'buttonL.', category: 'Circuit', type: 'readonlyproperty', tipPrefix: 'button[L/R]' },
-  {func: 'holdtime', blockPrefix: 'buttonL.', category: 'Circuit', type: 'property', tipPrefix: 'button[L/R]' },
-
-  {func: 'toggleSwitch', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
-  {func: 'toggleSwitch.isOpen', category: 'Circuit', type: 'readonlyproperty' },
 ];
 
 module.exports.categories = {
@@ -255,16 +200,6 @@ module.exports.categories = {
   Advanced: {
     color: 'blue',
     rgb: COLOR_BLUE,
-    blocks: []
-  },
-  'Maker Lab': {
-    color: 'cyan',
-    rgb: COLOR_CYAN,
-    blocks: []
-  },
-  'Circuit': {
-    color: 'lightgreen',
-    rgb: COLOR_LIGHT_GREEN,
     blocks: []
   },
 };

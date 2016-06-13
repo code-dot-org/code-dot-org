@@ -1,4 +1,6 @@
-/* global React */
+import $ from 'jquery';
+var React = require('react');
+var ReactDOM = require('react-dom');
 
 $(window).load(function () {
   $.widget("custom.coloriconselectmenu", $.ui.selectmenu, {

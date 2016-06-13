@@ -33,6 +33,6 @@ class External < DSLDefined
   end
 
   def icon
-    'fa-file-text-o'
+    'fa-file-text'
   end
 end

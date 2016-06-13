@@ -1,3 +1,5 @@
+var React = require('react');
+
 var styles = {
   main: {
     marginBottom: 35,

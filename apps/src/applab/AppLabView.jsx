@@ -1,6 +1,7 @@
 /** @file Top-level view for App Lab */
 'use strict';
 
+var React = require('react');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var StudioAppWrapper = require('../templates/StudioAppWrapper');

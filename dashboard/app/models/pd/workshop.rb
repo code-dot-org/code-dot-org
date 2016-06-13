@@ -10,7 +10,7 @@
 #  course           :string(255)      not null
 #  subject          :string(255)
 #  capacity         :integer          not null
-#  notes            :string(255)
+#  notes            :text(65535)
 #  section_id       :integer
 #  started_at       :datetime
 #  ended_at         :datetime
@@ -48,7 +48,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   SUBJECTS = {
     COURSE_ECS => [
-      SUBJECT_ECS_PHASE_2 = 'Phase 2: in-person',
+      SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person',
       SUBJECT_ECS_UNIT_3 = 'Unit 3 - HTML',
       SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch',
       SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data',
@@ -56,7 +56,7 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'
     ],
     COURSE_CS_IN_A => [
-      SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2: in-person',
+      SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person',
       SUBJECT_CS_IN_A_PHASE_3 = 'Phase 3: Academic Year Development'
     ],
     COURSE_CS_IN_S => [
@@ -69,6 +69,8 @@ class Pd::Workshop < ActiveRecord::Base
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
+  validates_length_of :notes, maximum: 65535
+  validates_length_of :location_name, :location_address, maximum: 255
   validate :sessions_must_start_on_separate_days
   validate :subject_must_be_valid_for_course
 

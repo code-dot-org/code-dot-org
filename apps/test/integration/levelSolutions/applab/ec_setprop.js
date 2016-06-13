@@ -1,12 +1,13 @@
+import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('@cdo/apps/lodash');
 
 // take advantage of the fact that we expose the filesystem via
-// localhost:8001
-var flappyImage = '//localhost:8001/apps/static/flappy_promo.png';
-var facebookImage = '//localhost:8001/apps/static/facebook_purple.png';
+// localhost
+var flappyImage = '/base/static/flappy_promo.png';
+var facebookImage = '/base/static/facebook_purple.png';
 
 module.exports = {
   app: "applab",
@@ -350,7 +351,8 @@ module.exports = {
 
           // we set the width/height attributes instead of style.width/height
           console.log(screen.style.backgroundImage);
-          assert(/url\(.*flappy_promo.png\)$/.test(screen.style.backgroundImage));
+          assert(/url\(.*flappy_promo.png['"]?\)$/.test(screen.style.backgroundImage),
+                 'screen background image should be flappy_promo.png. Instead: '+screen.style.backgroundImage);
           Applab.onPuzzleComplete();
         });
       },

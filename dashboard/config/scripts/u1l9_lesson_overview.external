@@ -1,0 +1,35 @@
+name 'U1L9 Lesson Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+## Lesson 1.9: The Need for Addressing (battleship)				
+
+
+### Overview
+<img src = "https://images.code.org/248dfbfeae5f694888c57b9036227e4c-image-1465246797663.png" style="float:right; margin-left:30px">
+
+**Pacing: Unit 1, Week 4**
+<br>
+**Lesson Type: Group Problem Solving , Internet Simulator , Unplugged**
+
+In this lesson, students explore more deeply how communication between multiple computers can work over the Internet. They do this by playing a simplified game of Battleship, in which the first game is played unplugged, in their table groups, and the second game is played using the Internet Simulator, so that multiple students can connect to each other and see each other’s messages. Students must devise a messaging protocol that makes it clear who is sending the message and who the intended recipient is.
+
+<br>
+
+### Things to keep in mind while planning this lesson at TeacherCon
+
+- This lesson has two sizeable activities - **For TeacherCon you will only do the first of the two activities.**
+- Figure out how best to ensure that everyone understands how to play the 3-person all-at-once-version of Battleship.  You want them to get into playing with their group of 3 as quickly as possible.
+- There is potentially a big transition to using the Internet Simulator here and joining up with people in the simulator is different from what they’ve seen before.  
+- With some good planning you should strive to get learners into playing “silent battleship” as quickly as possible - an extended demo of the new version of the simulator might not be necessary, it can be interesting to have people figure it out silently, and it’s not *that* complicated to figure out what’s going on once you join a “room”.
+- You don’t have to get to the IP/DNS video - we’ll show it outside of the lesson.
+- You should, as part of wrapping up, try to foreshadow the next activity in the lesson which is about formalizing the structure of an “internet packet” which forces you to make decisions about how many bits to use for addresses, and other data that needs to be included.
+
+
+### U1L9 Lesson Plan
+
+<br>
+Head over to curriculum.code.org to see this lesson and all associated resources (like videos and worksheets). 
+<br><br>
+<a href="https://curriculum.code.org/csp/unit1/9/" target="blank"><button class="plc">U1L9 Lesson Plan >></button></a><br>
+
+MARKDOWN

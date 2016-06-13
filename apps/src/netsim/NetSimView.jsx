@@ -1,5 +1,6 @@
 'use strict';
 
+var React = require('react');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var StudioAppWrapper = require('../templates/StudioAppWrapper');
 

@@ -246,7 +246,7 @@ exports.fakeShard = function () {
         new NetSimTable(fakeChannel, 'fakeShard', 'message', defaultTestTableConfig)),
     logTable: exports.overrideNetSimTableApi(
         new NetSimTable(fakeChannel, 'fakeShard', 'log',
-            $.extend({}, defaultTestTableConfig, {
+            Object.assign({}, defaultTestTableConfig, {
               useIncrementalRefresh: true
             })))
   };

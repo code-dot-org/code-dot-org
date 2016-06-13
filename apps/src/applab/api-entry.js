@@ -2,10 +2,7 @@
 
 // third party dependencies that are provided as globals in code-studio but
 // which need to be explicitly required here.
-window.React = require('react');
-window.ReactDOM = require('react-dom');
 window.$ = require('jquery');
-window.Radium = require('radium');
 
 window.Applab = require('./applab');
 var applabCommands = require('./commands');

@@ -179,7 +179,11 @@ describe('generateDropletModeOptions', function () {
           }
         }
       },
-      level: {}
+      level: {
+        codeFunctions: {
+          MyTestBlock: null
+        }
+      }
     };
     const result = dropletUtils.generateDropletModeOptions(appOptionsConfig);
 
@@ -211,7 +215,13 @@ describe('generateDropletModeOptions', function () {
 
     const appOptionsConfig = {
       dropletConfig: mazeDropletConfig,
-      level: {}
+      level: {
+        codeFunctions: {
+          moveForward: null,
+          turnLeft: null,
+          turnRight: null
+        }
+      }
     };
     const result = dropletUtils.generateDropletModeOptions(appOptionsConfig);
 

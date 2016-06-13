@@ -1,3 +1,4 @@
+var React = require('react');
 var AssetManager = require('./AssetManager');
 var color = require('../color.js');
 var IconLibrary = require('./IconLibrary');
@@ -6,7 +7,7 @@ var ICON_PREFIX = require('@cdo/apps/applab/constants').ICON_PREFIX;
 var extensionFilter = {
   image: '.jpg, .jpeg, .gif, .png',
   audio: '.mp3',
-  document: '.jpg, .jpeg, .gif, .png, .pdf'
+  document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx'
 };
 
 /**
@@ -51,7 +52,7 @@ var ImagePicker = React.createClass({
         cursor: 'pointer'
       },
       iconModeToggle: {
-        margin: '0',
+        margin: 0,
         fontSize: '16px',
         fontFamily: isFileMode ? null : '"Gotham 5r"',
         color: isFileMode ? '#999' : null,

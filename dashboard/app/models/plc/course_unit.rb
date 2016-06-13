@@ -34,20 +34,42 @@ class Plc::CourseUnit < ActiveRecord::Base
     plc_learning_modules.required.pluck(:id)
   end
 
-  def get_top_modules_of_each_type_from_user_selections(learning_module_ids_and_weights)
-    # Preload all of the learning modules, that way we don't have to hit the DB multiple times
-    return [] if learning_module_ids_and_weights.blank?
-    learning_module_map = {}
-    learning_module_ids_and_weights.each {|k, v| learning_module_map[Plc::LearningModule.find(k)] = v}
+  def determine_preferred_learning_modules(user)
+    evaluation_level = script.levels.reverse.find {|level| level.class == LevelGroup}
 
-    selected_learning_modules = []
+    level_source = user.last_attempt(evaluation_level).try(:level_source)
+    return [] if level_source.nil?
 
-    (Plc::LearningModule::MODULE_TYPES - [Plc::LearningModule::REQUIRED_MODULE]).each do |module_type|
-      #Find the first element in the ordered map that is of this type
-      learning_module, _ = learning_module_map.select {|learning_module, _| learning_module.module_type == module_type}.max_by {|_, v| v}
-      selected_learning_modules << learning_module unless learning_module.nil?
+    responses = JSON.parse(level_source.data)
+    learning_module_weights = Hash.new(0)
+
+    responses.each do |level_id, response|
+      next if response.nil? || response['result'].nil?
+
+      level = EvaluationMulti.cache_find(level_id)
+      selected_answer = level.answers[response['result'].to_i]
+
+      next if selected_answer['stage'].nil?
+
+      stage = Stage.find_by(name: selected_answer['stage'], script: script)
+      learning_module = stage.try(:plc_learning_module)
+
+      next if learning_module.nil?
+
+      learning_module_weights[learning_module] += selected_answer['weight']
     end
 
-    selected_learning_modules
+    learning_module_weights = learning_module_weights.sort_by{|_, weight| weight}
+    sorted_learning_modules = learning_module_weights.map(&:first)
+
+    default_module_assignments = []
+
+    Plc::LearningModule::NONREQUIRED_MODULE_TYPES.each do |module_type|
+      module_to_assign = sorted_learning_modules.find{|learning_module| learning_module.module_type == module_type}
+      next if module_to_assign.nil?
+      default_module_assignments << module_to_assign.id
+    end
+
+    default_module_assignments
   end
 end

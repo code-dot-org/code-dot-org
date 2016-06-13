@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 #
-# Script for deploying an new Amazon EC2 frontend instance.
+# Script for deploying a new production Amazon EC2 frontend instance.
 # For details usage instructions, please see:
 # http://wiki.code.org/display/PROD/How+to+add+a+new+Frontend+server
+# This script no longer supports creation of adhoc instances. To do that,
+# use "rake adhoc:start".
 
 require 'aws-sdk'
 require_relative '../deployment'
@@ -20,7 +22,7 @@ CHEF_VERSION='12.7.2'
 # that environment.
 ROLE_MAP = {
   'production' => 'front-end',
-  'adhoc' => 'unmonitored-standalone',
+  # No other environments are currently supported.
 }
 
 # Wait no longer than 10 minutes for instance creation. Typically this takes a
@@ -76,12 +78,10 @@ end
 # Return the AWS instance type to use for the given role.
 def aws_instance_type(environment)
   case environment
-  when 'adhoc'
-    'c3.xlarge'  # Default to a somewhat smaller instance type for adhco
   when 'production'
     'c3.8xlarge'
   else
-    raise "Unknown environment #{environment} - currently adhoc and production are supported"
+    raise "Unknown environment #{environment} - currently production is supported"
   end
 end
 
@@ -216,8 +216,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
                                                       monitoring: {
                                                           enabled: true
                                                       },
-                                                      # Prevent api termination, except for adhoc instances.
-                                                      disable_api_termination: (environment != 'adhoc'),
+                                                      disable_api_termination: true,
                                                       placement: {
                                                           availability_zone: instance_provisioning_info.zone
                                                       },
@@ -321,6 +320,9 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
 end
 
 @options = {}
+
+# Default to the production environment, which is currently the only one we support.
+@options['environment'] = 'production'
 
 OptionParser.new do |opts|
   opts.on('-e', '--environment ENVIRONMENT', 'Environment to add frontend to') do |env|

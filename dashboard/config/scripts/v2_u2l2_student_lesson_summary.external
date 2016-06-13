@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 ## Unit 2: Lesson 2 - Text Compression
 # Background
 
-Compression is a method or protocol for using fewer bits to represent the original information. Compression can be achieved in a variety of methods including looking for patterns and substituting symbols for the larger patterns of data. Compression is one of the "hard problems" for computers because it is difficult to verify a good solution in a reasonable amount of time.
+Compression is a method or protocol for using fewer bits to represent the original information. Compression can be achieved in a variety of methods including looking for patterns and substituting symbols for the larger patterns of data. Compression can be a "hard problem" for computers because it is difficult to know whether or not the compression you've found is optimal - if you keep trying would it get better?  It's hard to know when to stop, and hard to verify that you've compressed it "enough".  When it's impossible, or would take an unreasonable amount of time, to know an exact solution you can come with a strategy called a "heuristic" to define some rules about when the solution is good enough.  See vocab below.
 
 # Vocabulary
 * **Heuristic** - a problem solving approach (algorithm) to find a satisfactory solution where finding an optimal or exact solution is impractical or impossible.

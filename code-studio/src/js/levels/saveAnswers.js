@@ -13,6 +13,8 @@ function saveAnswersAndNavigate(url) {
   }
 }
 
+const UNSUBMITTED_ATTEMPT = -50;
+
 // Currently just used by LevelGroup.js.
 // Called by gotoPage and checkForChanges to save current answers.
 // Calls the completeFn function when transmission is complete.
@@ -31,7 +33,7 @@ function saveAnswers(completeFn) {
     level: appOptions.levelPosition,
     result: result,
     pass: result,
-    testResult: result ? 100 : 0,
+    testResult: result ? UNSUBMITTED_ATTEMPT : 0,
     submitted: submitted,
     onComplete: completeFn
   });

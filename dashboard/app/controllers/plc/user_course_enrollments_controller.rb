@@ -3,7 +3,13 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   authorize_resource only: :create
 
   def index
-    @user_course_enrollments = @user_course_enrollments.where(user: current_user) if @user_course_enrollments
+    if user_course_enrollment_params[:course]
+      course_name = user_course_enrollment_params[:course].sub('-', '_').titleize
+      @user_course_enrollments = [@user_course_enrollments.find_by(user: current_user, plc_course: Plc::Course.find_by(name: course_name))]
+    else
+      @user_course_enrollments = @user_course_enrollments.where(user: current_user) if @user_course_enrollments
+    end
+
   end
 
   def group_view
@@ -50,6 +56,6 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_course_enrollment_params
-    params.permit(:user_emails, :plc_course_id)
+    params.permit(:user_emails, :plc_course_id, :course)
   end
 end

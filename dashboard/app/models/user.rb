@@ -38,7 +38,6 @@
 #  confirmation_sent_at       :datetime
 #  unconfirmed_email          :string(255)
 #  prize_teacher_id           :integer
-#  hint_access                :boolean
 #  secret_picture_id          :integer
 #  active                     :boolean          default(TRUE), not null
 #  hashed_email               :string(255)
@@ -202,7 +201,6 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
-  has_many :plc_task_assignments, class_name: '::Plc::EnrollmentTaskAssignment', through: :plc_enrollments
 
   has_many :user_levels, -> {order 'id desc'}
   has_many :activities
@@ -256,7 +254,6 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
-  before_save :dont_reconfirm_emails_that_match_hashed_email
   def dont_reconfirm_emails_that_match_hashed_email
     # we make users "reconfirm" when they change their email
     # addresses. Skip reconfirmation when the user is using the same
@@ -267,10 +264,14 @@ class User < ActiveRecord::Base
     end
   end
 
-  before_save :make_teachers_21, :dont_reconfirm_emails_that_match_hashed_email, :hash_email, :hide_email_for_younger_users # order is important here ;)
+  # NOTE: Order is important here.
+  before_save :make_teachers_21,
+    :dont_reconfirm_emails_that_match_hashed_email,
+    :hash_email,
+    :hide_email_and_full_address_for_students
 
   def make_teachers_21
-    return unless user_type == TYPE_TEACHER
+    return unless teacher?
     self.age = 21
   end
 
@@ -283,9 +284,10 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  def hide_email_for_younger_users
-    if age && under_13?
+  def hide_email_and_full_address_for_students
+    if student?
       self.email = ''
+      self.full_address = nil
     end
   end
 
@@ -302,10 +304,17 @@ class User < ActiveRecord::Base
     User.find(user_id)
   end
 
+  validate :presence_of_email, if: :teacher?
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
   validates_format_of :email, with: Devise.email_regexp, allow_blank: true, if: :email_changed?
   validates :email, no_utf8mb4: true
   validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
+
+  def presence_of_email
+    if email.blank?
+      errors.add :email, I18n.t('activerecord.errors.messages.blank')
+    end
+  end
 
   def presence_of_email_or_hashed_email
     if email.blank? && hashed_email.blank?
@@ -418,7 +427,8 @@ class User < ActiveRecord::Base
   def self.find_for_authentication(tainted_conditions)
     conditions = devise_parameter_filter.filter(tainted_conditions.dup)
     # we get either a login (username) or hashed_email
-    if login = conditions.delete(:login)
+    login = conditions.delete(:login)
+    if login.present?
       return nil if login.utf8mb4?
       where(['username = :value OR email = :value OR hashed_email = :hashed_value',
              { value: login.downcase, hashed_value: hash_email(login.downcase) }]).first
@@ -437,7 +447,7 @@ class User < ActiveRecord::Base
   end
 
   def user_progress_by_stage(stage)
-    levels = stage.script_levels.map(&:level_id)
+    levels = stage.script_levels.map(&:level_ids).flatten
     user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
   end
 
@@ -733,9 +743,16 @@ SQL
   end
 
   def needs_to_backfill_user_scripts?
-    user_scripts.empty? && !user_levels.empty?
+    # Backfill only applies to users created before UserScript model was introduced.
+    created_at < Date.new(2014, 9, 15) &&
+      user_scripts.empty? &&
+      !user_levels.empty?
   end
 
+  # Creates UserScript information based on data contained in UserLevels.
+  # Provides backwards compatibility with users created before the UserScript model
+  # was introduced (cf. code-dot-org/website-ci#194).
+  # TODO apply this migration to all users in database, then remove.
   def backfill_user_scripts
     # backfill assigned scripts
     followeds.each do |follower|
@@ -825,8 +842,8 @@ SQL
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level:, new_result:, submitted:, level_source_id:)
-    level_id = script_level.level_id
+  def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:)
+    level_id = level.id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(user_id: self.id,
                                  level_id: level_id,

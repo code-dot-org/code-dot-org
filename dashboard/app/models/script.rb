@@ -314,7 +314,7 @@ class Script < ActiveRecord::Base
 
   def banner_image
     if has_banner?
-      "banner_#{name}.png"
+      "banner_#{name}.jpg"
     end
   end
 
@@ -330,6 +330,10 @@ class Script < ActiveRecord::Base
     k5_course? || twenty_hour?
   end
 
+  def cs_in_a?
+    name.match(Regexp.union('algebra', 'Algebra'))
+  end
+
   def show_report_bug_link?
     beta? || k5_course?
   end
@@ -343,7 +347,7 @@ class Script < ActiveRecord::Base
   end
 
   def freeplay_links
-    if name.include?('algebra')
+    if cs_in_a?
       ['calc', 'eval']
     elsif name.start_with?('csp')
       ['applab']
@@ -351,6 +355,10 @@ class Script < ActiveRecord::Base
       ['playlab', 'artist']
     end
 
+  end
+
+  def professional_course?
+    pd? || professional_learning_course?
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
@@ -405,6 +413,7 @@ class Script < ActiveRecord::Base
       raw_script_level.symbolize_keys!
 
       assessment = nil
+      named_level = nil
       stage_flex_category = nil
 
       levels = raw_script_level[:levels].map do |raw_level|
@@ -417,6 +426,7 @@ class Script < ActiveRecord::Base
 
         raw_level_data = raw_level.dup
         assessment = raw_level.delete(:assessment)
+        named_level = raw_level.delete(:named_level)
         stage_flex_category = raw_level.delete(:stage_flex_category)
 
         key = raw_level.delete(:name)
@@ -469,6 +479,7 @@ class Script < ActiveRecord::Base
       script_level_attributes = {
         script_id: script.id,
         chapter: (chapter += 1),
+        named_level: named_level,
         assessment: assessment
       }
       script_level_attributes[:properties] = properties.to_json if properties
@@ -609,6 +620,7 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
+      plc: professional_learning_course,
       stages: stages.map(&:summarize),
     }
 

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
@@ -197,7 +198,7 @@ module.exports = {
       xml: 'turnRight()',
       delayLoadLevelDefinition: function () {
         // override executePaletteApisOnly
-        return $.extend({}, levelDefinition, {
+        return Object.assign({}, levelDefinition, {
           executePaletteApisOnly: false
         });
       },
@@ -226,7 +227,7 @@ module.exports = {
         'setText("id", "end");\n',
       delayLoadLevelDefinition: function () {
         // override executePaletteApisOnly
-        return $.extend({}, levelDefinition, {
+        return Object.assign({}, levelDefinition, {
           executePaletteApisOnly: false
         });
       },

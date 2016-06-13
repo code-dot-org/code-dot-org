@@ -1,5 +1,8 @@
-/* globals dashboard, trackEvent, Dialog, React, appOptions */
+/* globals dashboard, trackEvent, Dialog, appOptions */
 
+import $ from 'jquery';
+var React = require('react');
+var ReactDOM = require('react-dom');
 var _ = require('lodash');
 
 var clientState = require('./clientState');
@@ -82,7 +85,7 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
     $('.header_popup_link_glyph').html('&#x25B2;');
     $('.header_popup_link_text').text(dashboard.i18n.t('less'));
     $(document).on('click', hideHeaderPopup);
-    lazyLoadPopup($(target).closest('.header_trophy_link').length > 0);
+    lazyLoadPopup();
     isHeaderPopupVisible = true;
   }
   function hideHeaderPopup() {
@@ -93,13 +96,13 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
     isHeaderPopupVisible = false;
   }
 
-  $('.header_popup_link, .header_trophy_link').click(function (e) {
+  $('.header_popup_link').click(function (e) {
     e.stopPropagation();
-    if ($('.header_popup').is(':visible')) {
-      hideHeaderPopup();
-    } else {
-      showHeaderPopup(e.target);
-    }
+    $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup();
+  });
+  $('.header_trophy_link').click(function () {
+    // Only the 20-hour course has trophies.
+    location.href = '/s/20-hour#trophies';
   });
   $('.header_popup').click(function (e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it
@@ -129,30 +132,11 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   }
 
   var popupLoaded = false;
-  function lazyLoadPopup(trophiesClicked) {
+  function lazyLoadPopup() {
     if (!popupLoaded) {
       popupLoaded = true;
-      $.ajax({
-        url: "/popup/stats",
-        data: {
-          script_id: stageData.script_id,
-          current_level_id: currentLevelId,
-          user_id: clientState.queryParams('user_id'),
-          section_id: clientState.queryParams('section_id'),
-          puzzle_page: puzzlePage
-        }, success: function (result) {
-          $('.header_popup_body').html(result);
-          if (trophiesClicked) {
-            jumpToTrophies();
-          }
-        }
-      });
-    } else if (trophiesClicked) {
-      jumpToTrophies();
+      $.getJSON(`/api/script_structure/${scriptName}`, data => progress.renderCourseProgress(data, currentLevelId));
     }
-  }
-  function jumpToTrophies() {
-    window.scrollTo(0, +$('#trophies').offset().top);
   }
 };
 

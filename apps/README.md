@@ -64,7 +64,7 @@ See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
 npm start
 ```
 
-This will perform an initial build, then serve and open a playground with a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to apps.  If you followed the steps above for seeing your development version in Dashboard, the rebuilt apps code will be immediately available to Dashboard too. 
+This will perform an initial build, then serve and open a playground with a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to apps.  If you followed the steps above for seeing your development version in Dashboard, the rebuilt apps code will be immediately available to Dashboard too.
 
 Caveats:
 * The live-reload server does not pick up changes to blockly-core.  For that, see [Full build with blockly-core](#full-build-with-blockly-core-changes).
@@ -105,34 +105,88 @@ npm test
 ```
 * If you see an error like `ReferenceError: Blockly is not defined` or notes about missing npm packages, double check that you've run `grunt build` before `grunt test`
 * Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.
-* These tests will also be run via Travis CI when you create a pull request
+* These tests will also be run via Circle CI when you create a pull request
 
-To run an individual test, use the `--grep` option to target a file or Mocha `describe` identifier:
-
-```
-npm test -- --grep myTestName # e.g., 2_11, or requiredBlockUtils
-```
-
-To debug tests using the webkit inspector, just add a `--debug` flag. This will launch a new browser window with a debugger attached.
-Unfortunately, this is also before bundle.js has been loaded, making it difficult to set breakpoints. The best solutions I've found
-thus far are to add debugger; statements in your code, or to have your debugger break on caught exceptions, which will generally result
-it breaking in some jquery code before running tests (at which point you can go set your breakpoints).
+To run an individual test, use the `--entry` option with `npm run test:entry` to target a file:
 
 ```
-npm test -- --grep='testname' --debug
+npm run test:entry -- --entry ./test/unit/gridUtilsTest.js
 ```
 
-We also have the ability to run a faster subset of tests without using grep. In particular, this will run without maze and turtle level tests.
+##### Rerun Tests Automatically #####
+
+To rerun tests automatically on every file change, set the environment variable
+`MOOC_WATCH=1`:
+
 ```
-npm test -- --fast
+MOOC_WATCH=1 npm run test:unit
 ```
 
-- You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as an example of adding a mock Blockly instance
+This will work on any of the test commands.
 
-If you are iterating on a particular test file that doesn't require phantomjs, install global mocha and run your individual test.  It will go way faster since it doesn't need to bundle everything before each run.
+##### Debugging Tests #####
+
+To debug tests, your best bet is to run them in Chrome. Keep in mind that there
+can be subtle differences between Chrome and PhantomJS, so after fixing your
+test in Chrome, make sure it still works in PhantomJS. To run the tests in
+Chrome, use the `MOOC_BROWSER` environment variable in conjunction with `MOOC_WATCH`:
+
 ```
-npm install -g mocha
-mocha test/ObserverTest.js
+MOOC_BROWSER=Chrome MOOC_WATCH=1 npm run test:unit
+```
+
+A new chrome browser window will open where the tests will be running. You can
+click on the Debug button to open a new tab where you can then open the
+developer console to see everything that is happening. If you don't see the new
+chrome browser window, it may have opened *behind* your other windows.
+
+##### Coverage Reports #####
+
+Coverage reports can be generated for any collection of tests by specifying the
+`COVERAGE=1` environment variable. Results will be placed in the `coverage`
+folder. For example, to see what code gets executed by unit tests, run:
+
+```
+COVERAGE=1 npm run test:unit
+```
+
+Then you can open up the html report with (note that the exact file path may be
+different):
+
+```
+open coverage/PhantomJS\ 2.1.1\ \(Mac\ OS\ X\ 0.0.0\)/index.html
+```
+
+##### Writing Tests #####
+
+You can add new test files as /test/unit/*Tests.js; see
+`/test/unit/feedbackTests.js` as an example of adding a mock Blockly
+instance. Note that each test file in `/test/unit/**` should include tests for
+exactly one file in `src/**` and the test file should have the same file name as
+the file it tests (with `Tests` appended to it): i.e. don't create new unit test
+files that test lots and lots of different stuff.
+
+In the event you need certain code to only be available when tests are running,
+you can use the `IN_UNIT_TEST` global, which will be set to `true` only when
+tests are running. For example:
+
+```
+if (IN_UNIT_TEST) {
+  console.log("this log line will only show up when tests are run");
+}
+```
+
+These if statements will be removed from production source files at build time.
+
+The test runner starts a server which can serve files in the apps directory to
+your test code. Only whitelisted files and directories are available. See the
+`config.karma.options.files` array in `Gruntfile.js` for the whitelist. When
+fetching files served by the test runner, prefix the file path with
+`/base/`. For example, to load the `test/audio/assets/win.mp3` file in an
+`<audio>` tag inside your test, you could write:
+
+```
+document.write('<audio src="/base/test/audio/assets/win.mp3"/>');
 ```
 
 #### Full build with blockly-core changes

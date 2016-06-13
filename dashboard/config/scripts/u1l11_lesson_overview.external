@@ -1,0 +1,37 @@
+name 'U1L11 Lesson Overview'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Lesson 1.11: Packets and Making a Reliable Internet
+
+
+### Overview
+<img src = "https://images.code.org/adaa21d0982b948080574472d84210c0-image-1465251593160.png" style="float:right; margin-left:30px">
+
+**Pacing: Unit 1, Week 4**
+<br>
+**Lesson Type:Internet Simulator , Group Problem Solving**
+
+In this lesson student develop a protocol for reliably sending a message over an unreliable internet. The Internet Simulator has been setup for this lesson to restrict messages to no more than 6 characters each, and messages get dropped messages with some probability on every hop.
+
+<br>
+
+### Things to keep in mind while planning this lesson at TeacherCon
+
+- The version of the Internet Simulator used in this lesson very advanced, but note that in the previous lesson participants will learn about routers and how to use the router log browser to investigate traffic traveling around the network.  So you can assume that you shouldn’t have to have participants discover that again.
+- Your planning should focus on engaging ways to motivate the problem groups will be solving (invent a way to send larger messages, reliably, when the internet simulator is setup to ONLY allow very small messages (6 chars) and drops 10-20% of all traffic).
+- Like any problem solving activity, the key is in the setup.  Once learners are going with the Internet Simulator it can be hard to reign them back in.  So take the proper time to setup, clarify, and motivate the problem, then set learners off on solving the problem.
+- Make sure to demonstrate or have a group exploration of how to create multiple packets in the new version of the Internet Simulator
+- There is room for creativity in deciding exactly what kinds of messages learners should exchange.  It should probably be something non-english so that you really need to receive every piece of the message to know what’s there.
+
+
+
+### U1L11 Lesson Plan
+
+<br>
+Head over to curriculum.code.org to see this lesson and all associated resources (like videos and worksheets). 
+<br><br>
+<a href="https://curriculum.code.org/csp/unit1/11/" target="blank"><button class="plc">U1L11 Lesson Plan >></button></a><br>
+
+
+MARKDOWN

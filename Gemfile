@@ -75,12 +75,18 @@ group :development, :test do
   gem 'minitest-reporters'
   gem 'minitest-around'
   gem 'eyes_selenium', '~> 2.28.0'
+
+  # for pegasus PDF generation / merging testing
+  gem 'pdf-reader', require: false
 end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+# for pegasus PDF generation
+gem 'open_uri_redirections', require: false, group: [:development, :staging, :test]
 
 gem 'unicorn', '~> 4.8.2'
 
@@ -192,5 +198,6 @@ gem 'rack-attack', '~> 4.4'
 # Generate SSL certificates
 gem 'acmesmith'
 
+gem 'firebase_token_generator'
 gem "selectize-rails"
 gem 'mail_view'

@@ -16,7 +16,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Then I wait to see a dialog titled "Puzzle 2 of 15"
     And I close the dialog
     When element "#runButton" is visible
-    Then element ".header_middle a:eq(0)" has class "level_link perfect"
+    And I verify progress in the header of the current page is "perfect" for level 1
 
   Scenario: Solving puzzle 1 in text mode
     Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
@@ -32,7 +32,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Then I wait to see a dialog titled "Puzzle 2 of 15"
     And I close the dialog
     When element "#runButton" is visible
-    Then element ".header_middle a:eq(0)" has class "level_link perfect"
+    And I verify progress in the header of the current page is "perfect" for level 1
 
   Scenario: Solving puzzle 2 in text mode
     Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/2?noautoplay=true"

@@ -90,19 +90,20 @@
     час или попробуйте <a href="%{current_path}/next">урок партнера</a>.
   get_a_certificate_of_achievement: "Получить сертификат о результате"
   view_course: "Посмотреть курс"
-  view_unit: View unit
+  view_unit: "Посмотреть подраздел"
   make_app: "Создать приложение"
   congrats_guest_speaker_title: "Найти приглашенного оратора для аудитории"
-  congrats_guest_speaker_desc: "Теперь, когда ваши ученики прошли курс компьютерной
-    науки, подумайте над тем, чтобы отметить это событие и ознакомить их с тем, как
-    применить все изученное в реальном мире, пригласив в класс гостя-докладчика. Вы
-    можете воспользоваться нашим списком волонтеров, готовых прийти к вам на занятие
-    или найти студентов или технических специалистов, работающих в этой сфере, из
-    любого города, которые готовы вдохновить учеников удаленно при помощи видеочата."
+  congrats_guest_speaker_desc: "Теперь, когда ваши ученики прошли курс информатики,
+    подумайте над тем, чтобы отметить это событие и ознакомить их с тем, как применить
+    всё изученное в реальном мире, пригласив в класс гостя-докладчика. Вы можете воспользоваться
+    нашим списком волонтеров, готовых прийти к вам на занятие или найти студентов
+    или технических специалистов, работающих в этой сфере, из любого города, которые
+    готовы вдохновить учеников удаленно при помощи видеочата."
   congrats_guest_speaker_cta: "Найти приглашенного оратора"
-  congrats_third_party_title: "Используйте свои новые навыки с этих приложений и веб-сайтов"
-  third_party_gradelevel_kto8: "Ученики 1-8 классов"
-  third_party_gradelevel_kto2: Grades K-2
+  congrats_third_party_title: "Используйте свои новые навыки с этими приложениями
+    и веб-сайтами"
+  third_party_gradelevel_kto8: "Детский сад - 8 класс"
+  third_party_gradelevel_kto2: "Школа K-2"
   third_party_gradelevel_2to8: 2-8 классы
   third_party_gradelevel_4to12: 4-12 классы
   third_party_gradelevel_5to12: 5-12 классы
@@ -114,87 +115,90 @@
   third_party_price_varies: "Цена: Планы варьируются"
   third_party_price_free: "Цена: Бесплатно"
   third_party_price_299: "Цена: $2.99"
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_individual: "Индивидуальный Цена: Бесплатно пробный период и $25/в
+    месяц"
   third_party_price_school: "Тариф для школ: Бесплатные планы и планы Pro за $2500+"
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: "Попробовать Tynker, учебную программу для начинающих
+  third_party_tynker_desc: "Творческая вычислительная платформа Tynker помогает детям
+    развивать вычислительные мышление и навыки программирования в удовольствие, интуитивно
+    понятно и творчески. Наш инновационный визуальный язык программирования, интерактивные
+    курсы для самостоятельного обучения, и игра на основе программных мероприятий
+    обеспечивают простое введение в программирование, и расширяют возможности детей
+    к инновациям и созданию."
+  third_party_tynker_btn_curriculum: "Попробовать Tynker - учебную программу для начинающих
     читателей"
   third_party_tynker_btn_site: "Посетить Tynker"
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
+  third_party_scratchjr_desc: "Скретч-младший является вводным языком программирования,
+    который позволяет маленьким детям (в возрасте 5-7), создавать свои собственные
+    интерактивные истории и игры. Дети состыковывают вместе графические программные
+    блоки, чтобы заставить персонажей двигаться, прыгать, танцевать, и петь. Дети
+    могут изменить персонажей в редакторе краски, добавить свои собственные голоса
+    и звуки, даже вставлять фотографии самих себя - а затем использовать блоки программирования,
+    чтобы их персонажи оживали."
   third_party_scratchjr_btn_curriculum: "Скачать Scratch Учебный план"
   third_party_scratchjr_btn_site: "Посетить Scratch."
   third_party_scratch_desc: "С использованием Scratch вы сможете программировать собственные
-    интерактивные истории, игры и анимации, а также делиться своим творчеством с другими
-    людьми в Интернете. Scratch помогает молодежи учиться мыслить креативно, систематически
-    размышлять и работать в команде, что является основными навыки жизни в Xxi веке."
-  third_party_scratch_btn_curriculum: "Скачать Scratch Учебный План"
-  third_party_scratch_btn_forum: Scratch Педагогический Форум
+    интерактивные истории, игры, анимации, а также делиться своим творчеством с другими
+    людьми в Интернете. Scratch помогает молодежи мыслить креативно и работать в команде,
+    что является необходимыми навыками жизни в 21-м веке."
+  third_party_scratch_btn_curriculum: "Скачать Учебный План Scratch"
+  third_party_scratch_btn_forum: "Педагогический Форум Scratch"
   third_party_scratch_btn_site: "Посетить Scratch"
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_desc: В игре "Умный бот", студенты должны запрограммировать
+    робота командами для решения задачи. Студенты могут играть в эту игру в браузере
+    (требуется Флэш плейер), или на Андроид или  АЙОУЭС устройстве. Студенты играют
+    в начальный набор уровней "Начало" в "Умный бот". Они узнают, как сказать компьютеру,
+    что сделать с серией основных команд и получить общее представление, о написании
+    компьютерных программ.
+  third_party_lightbot_btn_curriculum: Скачать учебный план "Умного бота"
   third_party_lightbot_btn_site: "Посетить Lightbot"
   third_party_khan_desc: "Узнайте, как программировать рисунки, анимацию и игры с
-    сипользованием JavaScript и ProcessingJS, или научитесь создавать веб-страницы
+    использованием JavaScript и ProcessingJS, или научитесь создавать веб-страницы
     с помощью HTML и CSS. Вы также сможете поделиться своим творчеством, увидеть работы
     других и учиться друг у друга!"
-  third_party_khan_btn_learn: "Учите компьютерную науку вместе с Khan Academy"
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: "Посетите Codecademy"
+  third_party_khan_btn_learn: "Изучайте информатику вместе с Khan Academy"
+  third_party_khan_btn_forum: Khan Academy CS Форум
+  third_party_appinv_desc: MIT App Inventor представляет собой блок-инструментов программирования,
+    который позволяет всем, даже новичкам, начать программировать и создавать полностью
+    функциональные приложения для Android устройств. Попавшие в App Inventor могут
+    получить их первое приложение и работать с ним уже в течение часа или менее, или
+    могут программировать более сложные приложения тратя в значительно меньше времени,
+    чем с более традиционными, текстовыми языками.
+  third_party_appinv_btn_curriculum: "Скачать App Inventor 2 Учебный план"
+  third_party_appinv_btn_forum: App Inventor 2 Форум
+  third_party_appinv_btn_site: "Посетить App Inventor 2"
+  third_party_codehs_desc: CodeHS вводит в строительные блоки программирования с короткими
+    видео, примерами кода, и много упражнений по программированию, которые делают
+    кодинг веселым и доступным для начинающих. Для школ и учителей CodeHS обеспечивает
+    учебный план, инструменты для учителей и профессиональной разработки. Для отдельных
+    учащихся, вы сможете получить необходимую вам помощь по сети наставников.
+  third_party_codehs_btn_try: "Введение в CS узнать больше для школ"
+  third_party_codecademy_desc: "Мы пересматриваем образование сверху внизу. Технология
+    веб переосмыслила почти все - коммерция, социальные сети, здравоохранение и многое
+    другое. Мы строим образование в котором нуждается мир - первое по-настоящему чистое
+    и естественное образование."
+  third_party_codecademy_btn_curriculum: "Скачать Codecademy учебный план"
+  third_party_codecademy_btn_site: "Посетить Codecademy"
   third_party_organization: "Организация"
   third_party_curriculum: "Учебная программа"
-  third_party_pricing: "Цена"
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
+  third_party_pricing: "Цены"
+  third_party_cost_free: "Бесплатно для студентов и преподавателей"
+  third_party_cost_5permonth: "$ 5/в месяц за класс"
   third_party_cost_299: "скачать за 2,99$"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_cost_free_399: "Бесплатно попробовать, $399/класс"
+  third_party_cost_free_2: "Бесплатно попробовать, $2/студент"
+  third_party_cost_free_10: "Бесплатно попробовать, $9.99/в месяц"
   third_party_desc_5_4to8: "Около 5 уроков для 4-8 классов"
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
-  enter_valid_age: "Пожалуйста укажите правильный возраст"
+  third_party_desc_10to12_kto3: "Примерно 10-12 уроков, ориентированы на классы K-3"
+  third_party_desc_11_kto5: "Около 11 уроков, ориентированы на классы K-5"
+  third_party_desc_10to12_kto5: "Примерно 10-12 уроков, ориентированы на классы K-5"
+  third_party_desc_40_4to8: "Более 40 уроков, приспособленные к 4-8 классам"
+  third_party_desc_dozens_kto8: "Десятки уроков для всех классов K-8"
+  third_party_desc_10to15_3to12: "Между 10 и 15 уроками, приспособленные к 3-12 классов"
+  third_party_desc_25to40_3to12: "От 25 - 40 уроков, предназначенных для 3-12 классов"
+  third_party_desc_20_2to8: "Около 20 уроков, ориентированых на 2-8 классы"
+  third_party_desc_7to22_5to12: "От 7 до 22 уроков, предназначенные для 5-12 классов"
+  third_party_desc_20_4to12: "Более 20 уроков, ориентированных на 4-12 классы"
+  enter_valid_age: "Пожалуйста, укажите правильный возраст"
   enter_valid_email: "Пожалуйста, введите действительный адрес электронной почты"
   get_a_certificate_message: "Мы вышлем вам сертификат и информацию о том, как<a href='/learn/beyond'>
     продолжить обучение после часа кода</a>"
@@ -250,15 +254,12 @@
   learn_classes: "Найти занятия в своем городе"
   hoc_is_here: "#HourOfCode уже здесь - посмотрите! @codeorg"
   just_did_hoc: "Я только что закончил(а) #HourOfCode, посмотрите! @codeorg"
-  just_did_course1: "Я только что закончил проходить Курс 1 - смотри результаты на
+  just_did_course1: "Я только что закончил(а) курс 1 - посмотрите на @codeorg"
+  just_did_course2: "Я только что закончил(а) курс 2 - посмотрите на @codeorg"
+  just_did_course3: "Я только что закончил курс 3 - проверить это! @codeorg"
+  just_did_course4: "Я только что закончил(а) курс 4 - посмотрите на @codeorg"
+  just_did_accelerated: "Я только что закончил(а) ускоренный курс - посмотрите на
     @codeorg"
-  just_did_course2: "Я только что закончил проходить Курс 2 - смотри результаты на
-    codeorg"
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: "Я только что закончил проходить Курс 4 - смотри результаты на
-    @codeorg"
-  just_did_accelerated: "Я только что закончил ускоренный курс - смотри результаты
-    на @codeorg"
   twitter_teach_cs: "Почему не во всех школах изучают информатику? Мы можем исправить
     это. http://youtu.be/2DxWIxec6yo. Чтобы узнать больше, посетите наш сайт: http://code.org/."
   learn_hoc: "Учитесь программировать с часом кода"
@@ -338,13 +339,13 @@
   homepage_slot_text_course4: "Курс 4"
   homepage_slot_text_shop: "Магазин"
   homepage_slot_text_flappy: "Порхающий код"
-  homepage_action_text_hoc: "Час кода для каждого студента."
+  homepage_action_text_hoc: "Час кода для каждого ученика."
   homepage_action_text_num_served: "Уже попробовали"
   homepage_action_text_join_us: "Присоединяйтесь к нам"
   homepage_action_text_sign_up: "Зарегистрироваться"
   homepage_action_text_try_it: "Попробуйте его"
   homepage_action_text_volunteers: "Требуются технические волонтеры"
-  homepage_action_text_codevideo: "Посмотрите видео"
+  homepage_action_text_codevideo: "Посмотреть видео"
   homepage_action_text_teachervideo: "Посмотрите видео"
   homepage_action_text_girlvideo: "Вдохновите девочку"
   homepage_action_text_learn: "Начать обучение"
@@ -363,9 +364,9 @@
   homepage_banner_20k_teachers: 20 000 учителей были обучены и теперь преподают информатику
     в классах.
   homepage_banner_20k_teachers_link: "Узнать больше"
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress: "Лидеры Америки призывают Конгресс к финансированию K-12
+    курса информатики."
+  homepage_banner_congress_link: "Помогите"
   homepage_slot_text_title_hoc: "Час кода"
   homepage_slot_text_blurb_hoc: "Каждый может учиться. Начните сегодня"
   homepage_slot_text_link_hoc: "Попробуйте Час кода"
@@ -391,7 +392,7 @@
   homepage_slot_text_link_stats: "Посмотреть статистику"
   homepage_slot_text_link_buy: "Принять участие"
   homepage_slot_text_link_donate: "Сделать пожертвование"
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: "Футболки, головные уборы, и многое другое"
   homepage_header_codestudio: "Творения учеников студии кода"
   homepage_header_donors: Code.org благодарит своих помощников
   homepage_donors_seall: "Просмотреть всё"
@@ -589,6 +590,7 @@
   dashboard_landing_new_k5courses: "Новинка! Новинка! Попробуйте наши курсы для дошкольников
     и учеников начальной школы."
   dashboard_landing_useful_links: "Другие полезные ссылки"
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: "Задайте вопрос лично! Обращайтесь к нам в часы
     ежемесячных видеоконсультаций."
   dashboard_landing_print_certificates: "Распечатать сертификаты учеников, которые
@@ -610,6 +612,11 @@
     наших партнеров.</a> Изучайте, как программировать роботов, создавать веб-страницы,
     разрабатывать собственные приложения или использовать другие языки программирования,
     такие как C++, Ruby или Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: "Час кода для всех возрастов"
   dashboard_hoc_courses_desc: "Попробуйте любые из этих коротких часовых уроков со
     своими студентами!"
@@ -638,7 +645,7 @@
     в программе профессиональной подготовки подайте заявку <a href="/educate/districts">на
     сотрудничество в своем регионе</a> с Code.org.
   dashboard_course_csina: "Информатика в алгебре"
-  dashboard_course_csina_desc: Code.org в партнерстве с Bootstrap разработал программу
+  dashboard_course_csina_desc: Code.org в партнерстве с Bootstrap разработал программу,
     которая обучает основным понятиям алгебры и геометрии с помощью программирования.
   dashboard_course_csins: "Информатика в науке"
   dashboard_course_csins_desc: Code.org совместно с Project GUTS создали введение
@@ -648,8 +655,8 @@
     6 блоков: взаимодействие человека и машины, решение задач, веб-дизайн, программирование,
     вычисление и анализ данных, а также робототехника."
   dashboard_course_csp: AP® Принципы информатики
-  dashboard_course_csp_desc: Code.org разработал строгий, интересный и доступный курс,
-    который исследует основополагающие идеи вычислений.
+  dashboard_course_csp_desc: Code.org разработал детальный, интересный и доступный
+    курс, который исследует основы вычислений.
   dashboard_landing_loading: "ЗАГРУЗКА..."
   dashboard_action_edit: "Редактировать"
   dashboard_action_save: "Сохранить"
@@ -663,11 +670,18 @@
   dashboard_action_remove_confirm: "Удалить?"
   dashboard_action_done: "Готово"
   dashboard_action_required: "необходимо"
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_assessments_view: "Просмотреть оценки в:"
+  dashboard_assessments_none: "Нет отценок"
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: "Фильтр по ступеням:"
+  dashboard_filter_all: "Все"
+  dashboard_download_csv: "Загрузить CSV"
   dashboard_navigation_home_page: "Домашняя страница преподавателя"
   dashboard_navigation_section_student_progress: "Учетные записи и прогресс студента"
   dashboard_navigation_section_teacher_progress: "Твой прогресс в обучении"
@@ -678,7 +692,7 @@
   dashboard_navigation_all_sections: "Учетные записи и успехи ученика"
   dashboard_navigation_view_progress: "Просмотр хода выполнения"
   dashboard_navigation_view_text_responses: "Просмотр текстовых ответов"
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: "оценки"
   dashboard_navigation_add_students: "Добавить учеников"
   dashboard_navigation_manage_students: "Управление учениками"
   dashboard_navigation_lesson_plans_resources: "Планы уроков и ресурсы"
@@ -692,11 +706,12 @@
   dashboard_progress_completed_perfect: "Завершено, отлично"
   dashboard_progress_furthest_level_attempted: "запрошен слишком высокий уровень"
   dashboard_progress_submitted: "Представленный"
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_progress_view: "Просмотр прогресса в:"
+  dashboard_progress_student_in_script: "Информация о прогрессе для %{student_name}
+    в %{script_name}"
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: "Просмотр текстовых ответов в:"
+  dashboard_responses_none: "Нет текстовых ответов"
   dashboard_sections_new_section: "Новый раздел"
   dashboard_sections_jumbotron_instruction: "Создавайте новые разделы и добавляйте
     в них учеников. Разделы помогают вам организовать учеников в маленькие группы,
@@ -723,29 +738,30 @@
     данные учетной записи и раздать ученикам индивидуально."
   dashboard_sections_switch_section: "Переключить раздел:"
   dashboard_sections_close: "Закрыть"
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
-  dashboard_sections_move_students: Move Students
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  dashboard_sections_move_students_desc: "Выберите студентов, чтобы перейти к новому
+    разделу. Перемещение студентов не изменит их прогресс."
+  dashboard_sections_one_per_teacher: "Студенты могут быть только в одном разделе
+    для каждого учителя. Ваши студенты будут добавлены в этот новый раздел и оставят
+    свой старый раздел."
+  dashboard_sections_move_to_section: "Переместить в раздел:"
+  dashboard_sections_enter_code: "Введите код раздела:"
+  dashboard_sections_code_placeholder: 6-значный код (ABCDEF)
+  dashboard_sections_other_section: "Другой раздел"
+  dashboard_sections_both_sections: "Вы хотите чтобы студент(ы), были в обоих разделах?"
+  dashboard_sections_yes_both: "Да, я хочу, скопировать студента(ов) в текущий раздел
+    и новый раздел"
+  dashboard_sections_no_move: "Нет, я хочу, переместить студента(ов), чтобы они были
+    только в новом разделе."
+  dashboard_sections_move_students: "Переместить студента"
+  dashboard_error_none_selected: "Вы не выбрали ни одного студент для перемещения.
+    Пожалуйста, выберите хотя бы одного студента."
+  dashboard_error_other_section: "Если вы двигаете студентов между своими разделами,
+    выберите раздел из выпадающего списка. Только выберите 'Другой Раздел' для перемещения
+    ваших студентов в раздел к другим учителям."
   dashboard_students_add_student: "Добавить ученика"
   dashboard_students_add_students: "Добавить несколько учеников"
   dashboard_students_add_multiple: "Введите или вставьте имена ваших учеников по одному
-    на строку:"
+    в каждую строку:"
   dashboard_students_new_section: "Вы создали новый раздел! Теперь добавьте своих
     учеников, используя кнопки <b>«Добавить ученика»</b> и <b>«Добавить несколько
     учеников»</b>, расположенные выше."
@@ -766,8 +782,8 @@
   dashboard_students_auto_generated: "Автоматически сгенерированные"
   dashboard_students_reset_secret: "Переустановить секрет"
   dashboard_students_reset_password: "Сменить пароль"
-  dashboard_students_share_section: "Поделитесь страницей со своими студентами для
-    входа в этот раздел:"
+  dashboard_students_share_section: "Поделитесь страницей для входа в этот раздел
+    со своими студентами:"
   dashboard_students_print_info: "Распечатать карточки с данными доступа учеников."
   dashboard_students_secret_picture_title: "Секретное изображение"
   dashboard_students_secret_picture: "В данном разделе в качестве секретного параметра
@@ -799,14 +815,16 @@
     с учениками.
   dashboard_curriculum_k5_title: "Ресурсы для педагогов дошкольного образования и
     начальной школы"
-  dashboard_curriculum_middle_title: "Ресурсы для педагогов средней школы"
-  dashboard_curriculum_high_title: "Ресурсы для педагогов старших классов"
+  dashboard_curriculum_middle_title: "Ресурсы для преподавателей средней школы"
+  dashboard_curriculum_high_title: "Ресурсы для преподавателей старших классов"
   dashboard_lesson_plans: "Планы уроков"
-  dashboard_view_all_lesson_plans: "Загрузить полную учебную программу 1-3 курсов"
+  dashboard_view_all_lesson_plans: "Посмотреть все планы уроков"
   dashboard_course1: "Курс 1:"
   dashboard_course2: "Курс 2:"
   dashboard_course3: "Курс 3:"
   dashboard_course4: "Курс 4 (бета-версия): "
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: "Учебная программа"
   dashboard_curriculum_overview: "Обзор программы для дошкольников и учеников начальной
     школы"
@@ -814,7 +832,7 @@
   dashboard_sequence: "Последовательность"
   dashboard_framework: "Структура"
   dashboard_standards: "Стандарты"
-  dashboard_implementation_guide: "Руководство по внедрению"
+  dashboard_implementation_guide: "Руководство по применению"
   dashboard_glossary: "Словарь терминов"
   dashboard_classroom_strategies: "Стратегии учителей в классе"
   dashboard_debugging: "Отладка:"
@@ -823,9 +841,9 @@
   dashboard_teacher_worksheet: "Рабочий лист преподавателя"
   dashboard_curriculum_csina: "Информатика и алгебра:"
   dashboard_curriculum_csins: "Информатика в науке:"
-  dashboard_curriculum_csp: 'AP® Принципы информатики:'
+  dashboard_curriculum_csp: "Принципы информатики AP®:"
   dashboard_curriculum_ecs: "Изучение информатики:"
-  dashboard_grade_k: "Подготовительный класс (0-ой класс)"
+  dashboard_grade_k: "Детский сад"
   dashboard_grade_other: "Другое"
   dashboard_login_word: "Слово"
   dashboard_login_picture: "Изображение"
@@ -835,18 +853,18 @@
   dashboard_puzzle: "Головоломка"
   dashboard_question: "Вопрос"
   dashboard_response: "Ответ"
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: "точность"
+  dashboard_correctness_free_response: "Свободный ответ"
+  dashboard_correctness_unsubmitted: "Неотправленные"
   dashboard_correctness_correct: "Верно"
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
-  dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_correctness_incorrect: "Неправильно"
+  dashboard_submission_submitted: "Отправлено"
+  dashboard_submission_in_progress: "В процессе"
+  dashboard_status: "Состояние"
+  dashboard_multi_correct: "# множественный правильный выбор"
+  dashboard_multi_count: "# множественный выбор"
+  dashboard_multi_correct_percent: "% множественный правильный выбор"
+  dashboard_submission_timestamp: "Отметка времени"
   stats_hoc_2013_heading: "Невероятная статистика прошлогоднего часа кода. Всего за
     одну неделю:"
   stats_hoc_2013_image_alt: "Статистика часа кода 2013 года"
@@ -870,18 +888,20 @@
   dashboard_faq_k5: 'K-5: часто задаваемые вопросы'
   dashboard_announcements: "Объявления"
   dashboard_announce_view_all: "Посмотреть все"
-  dashboard_announce_message: "<b>16 декабря 2015 г.</b> — Спасибо за участие в часе
-    кода 2015! Теперь во всех уроках и курсах студии кода снова появилась возможность
-    отслеживания и сохранения результатов. Примечание: Офисы Code.org будут закрыты
-    с 19 декабря по 3 января. Просим вас учесть, что ответы на вопросы, направленные
-    вами до 4 января, будут предоставлены с задержкой."
+  dashboard_announce_message: "Мы начали измерять уровень обучения студентов на курсах
+    1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит
+    в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a href='%{tagging_url}'>
+    отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'>
+    изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты
+    могут сделать? </i>"
   dashboard_announce_button_text: "Узнать больше"
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition: "Как учитель вы лидер движения, чтобы дать каждому
+    студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло
+    время, чтобы ваши представители услышали вас. На этой неделе лидеры образования,
+    28 губернаторов и а также руководители крупнейших компаний Америки объединились
+    в открытом письме к Конгрессу США финансировать K-12 образовательную программу
+    компьютерной науки."
+  dashboard_announce_petition_button: "Добавьте ваше имя"
   code_hoc_coming: '"Час кода" наступает  8-14 декабря!'
   code_sign_up: "Зарегистрируйтесь для участия в неделе информатики"
   learn_more: "Подробнее"
@@ -892,7 +912,7 @@
   learn_videos_show: "Покажите это вдохновляющий видеоролик вашему классу"
   learn_videos_before_hoc: "Посмотрите это вдохновляющее видео перед часом кода"
   learn_educator_resources_description: "Узнайте, как учить во время часа кода"
-  learn_educator_resources_button: "Педагогические ресурсы"
+  learn_educator_resources_button: "Ресурсы для преподавателей"
   learn_are_you_educator: Вы педагог? Узнайте, <a href="http://hourofcode.com/resources/how-to">как
     вести занятия в рамках часа кода</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Найдите в своем
@@ -1006,12 +1026,17 @@
   course3_name: "Курс 3"
   course4_name: "Курс 4"
   accelerated_name: "Ускоренный курс"
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
+  cspunit1_name: CS принципы блок 1
+  cspunit2_name: CS принципы блок 2
   cspunit3_name: "Принципы компьютерной науки. Глава 3"
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit4_name: CS принципы блок 4
+  cspunit5_name: CS принципы блок 5
+  cspunit6_name: CS принципы блок 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: 9-12 классы
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1019,18 +1044,20 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: "Ускоренный курс"
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
-  gumball_name: Gumball
+  algebra_name: CS в алгебре
+  AlgebraA_name: CS в курсе алгебры A
+  AlgebraB_name: CS в курсе алгебры Б
+  gumball_name: "Гамбола"
   classicmaze_name: "Классический лабиринт"
   iceage_name: "Ледниковый период"
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: "Звездные войны (блоки)"
   math_category_name: "Математика"
   hoc_category_name: Hour of Code
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csf_category_name: CS Основы
+  csp_category_name: CS Принципы
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: "Лаборатория приложений"
   applab_gradelevel: "Для возрастов 13+"
   applab_shortdescription_congrats: App Lab является средой программирования, в которой
@@ -1178,7 +1205,7 @@
   codespark_shortdescription: The Foos - это веселая игра, подходящая для детей, чтобы
     помочь им узнать о программировании.
   kodable_shortdescription: "Весёлые игры для iPad, обучающие основам программирования"
-  tynkerapp_shortdescription: "Научись программировать, разгадывая веселые головоломки. "
+  tynkerapp_shortdescription: "Учитесь программировать, разгадывая веселые головоломки. "
   robomindnl_shortdescription: "Напишите код для виртуального робота"
   flappy_shortdescription: "Создайте свою игру: птица, которая машет крыльями, акула,
     или подводная лодка"
@@ -1227,10 +1254,10 @@
     осваивая решение более сложных задач. К концу курса ученики смогут создавать интерактивные
     истории и игры, которыми они смогут поделиться с другими. Рекомендовано для учеников
     4-5 классов."
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
-    into programming topics introduced in previous courses to find flexible solutions
-    to more complex problems. By the end of this course, students create interactive
-    stories and games they can share with anyone. Recommended for grades 4-8.
+  course4_shortdescription_congrats: "Готов идти дальше? Студенты будут углубляться
+    в темы программирования, реализованные в предыдущих курсах, чтобы найти более
+    гибкие решения сложных задач. К концу этого курса студенты создадут интерактивные
+    истории и игры, они смогут поделиться с кем-либо. Рекомендуется для 4-8 классов."
   codeorg_longdescription: "Изучите основные понятия информатики, написав программу
     путем перетаскивания блоков. Это уроки для самостоятельного изучения в игровой
     форме, состоящие из видеолекций с участием Билла Гейтса, Марка Цукерберга, персонажей
@@ -1437,14 +1464,14 @@
   codehs_beyond_name: "Учитесь писать код с Псом Карел"
   udemy_beyond_name: "Онлайн-курсы программирования"
   lynda_beyond_name: "Онлайн-курсы программирования"
-  edx_beyond_name: "Курс CS50 Гарвардского университета"
-  coursera_beyond_name: "Курс CS 101 Стэнфордского университета"
+  edx_beyond_name: "Курс информатики CS50 Гарвардского университета"
+  coursera_beyond_name: "Курс информатики CS 101 Стэнфордского университета"
   udacity_beyond_name: CS 101
   teachingtree_beyond_name: "Университетские курсы онлайн"
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: "Изучите HTML"
+  w3schools_beyond_name: "Изучить HTML"
   codeavengers_beyond_name: "Научитесь писать код для веб-сайтов"
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
@@ -1496,7 +1523,7 @@
   khan_beyond_platformtext: "Современные веб-браузеры"
   tynker_beyond_platformtext: "Современные веб-браузеры (требуется $$)"
   scratch_beyond_platformtext: "Любой браузер"
-  lightbot_beyond_platformtext: "Операционные системы iOS и Android (или веб-браузер)"
+  lightbot_beyond_platformtext: iOS, Android (или веб-браузер)
   codecademy_beyond_platformtext: "Современные веб-браузеры. Приложения для операционных
     систем iOS и Android"
   kodable_beyond_platformtext: iPad
@@ -1770,11 +1797,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "играть"
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  'yes': 'Yes'
+  'no': 'No'
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
+  dashboard_sections_table_stage_extras: Stage Extras

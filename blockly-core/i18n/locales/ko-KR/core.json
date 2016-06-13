@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "다음 문장에서 왼쪽 공백문자(space) 제거 :",
   "TEXT_TRIM_OPERATOR_RIGHT": "다음 문장에서 오른쪽 공백문자(space) 제거 :",
   "TEXT_TRIM_TOOLTIP": "문장의 왼쪽/오른쪽/양쪽에서 스페이스 문자를 제거해 돌려줍니다.",
+  "UNUSED_CODE": "Unused code",
   "VARIABLES_DEFAULT_NAME": "문장조각",
   "VARIABLES_GET_CREATE_SET": "'%1 값 변경' 블럭 생성",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

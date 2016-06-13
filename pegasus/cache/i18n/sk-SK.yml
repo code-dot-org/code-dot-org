@@ -80,7 +80,7 @@
   congratulations_on_completing_course4: Congratulations on completing Course 4
   congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
     Course
-  congrats_next_tutorials_title: Skúste nasledujúce návody
+  congrats_next_tutorials_title: Pokračovať na ďalšiu úroveň
   congrats_next_tutorials_desc: Vyskúšajte tieto kratšie, jednohodinové výuky alebo
     zkúste <a href="%{current_path}/next"> partnerská výuka</a>.
   get_a_certificate_of_achievement: Získaj osvedčenie o dokončení
@@ -583,6 +583,7 @@
   dashboard_landing_new_k5courses: Novinka! Vyskúšajte naše kurzy pre žiakov 1. stupňa
     ZŠ.
   dashboard_landing_useful_links: "Ďalšie užitočné odkazy (iba v angličtine)"
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Spýtaj sa osobne! Zúčastni sa našich pravidelných
     mesačných video rozhovorov v úradných hodinách.
   dashboard_landing_print_certificates: Tlač certifikátov pre študentov, ktorí dokončiť
@@ -602,6 +603,11 @@
   dashboard_landing_more_tutorials_desc: <a href="/learn/beyond">Naši partneri vám
     ponúkajú</a> ďalšie návody. Naučte sa programovať s robotmi, vyrábajte webstránky,
     urobte si vlastnú appku či objavujte ďalšie jazyky – C++, Ruby alebo Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Hodina kódu pre všetky vekové kategórie
   dashboard_hoc_courses_desc: Skúste s vašimi študentmi niektorý z týchto hodinových
     návodov!
@@ -655,6 +661,13 @@
   dashboard_action_required: požadované
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -681,10 +694,11 @@
   dashboard_progress_completed_too_many_blocks: dokončené, príliš veľa blokov
   dashboard_progress_completed_perfect: dokončené, super
   dashboard_progress_furthest_level_attempted: najvyššia dosiahnutá úroveň
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: predložené
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nová sekcia
@@ -786,6 +800,8 @@
   dashboard_course2: 'Kurz 2:'
   dashboard_course3: 'Kurz 3:'
   dashboard_course4: 'Course 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Osnovy
   dashboard_curriculum_overview: Prehľad učiva 1. stupňa ZŠ
   dashboard_overview: Prehľad
@@ -809,7 +825,7 @@
   dashboard_login_picture: Obrázok
   dashboard_login_none: E-mail
   dashboard_new_password: nové heslo
-  dashboard_stage: Etapa
+  dashboard_stage: "Úroveň"
   dashboard_puzzle: "Úloha"
   dashboard_question: Otázka
   dashboard_response: Response
@@ -857,7 +873,7 @@
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Pridaj svoje meno
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
   learn_more: "Ďalšie informácie"
@@ -988,6 +1004,11 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1007,8 +1028,10 @@
   hoc_category_name: Hodina kódovania
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Laboratórium aplikácií
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Vek 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
@@ -1706,11 +1729,11 @@
   infinity_shortcode: inf
   playlab_shortcode: hrať
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  'yes': 'Yes'
+  'no': 'No'
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
+  dashboard_sections_table_stage_extras: Stage Extras

@@ -576,6 +576,7 @@
   dashboard_landing_new_k5courses: "Жаңа! 5-сынып оқушыларына арналған курсымызды
     көріңіз."
   dashboard_landing_useful_links: "Басқа да пайдалы сілтемелер (тек ағылшын тілінде)"
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: "Жеке сұрағыңды қой ! Біздің ай сайынғы видео-қабылдауымызды
     көріңіз."
   dashboard_landing_print_certificates: "Осы курсты бітірген оқушылардың сертификаттарын
@@ -597,6 +598,11 @@
   dashboard_landing_more_tutorials_desc: <a href="/learn/beyond"> Біздің әріптестеріміздің
     </a> сабақтары. Роботтарды бағдарламалауды, веб-парақтар жасау, қосымшалар жасау
     және C++, Ruby немесе Python сияқты бағдарламалау тілдерін үйреніңіз!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: "Бағдарламалау Сағаты барлығы үшін"
   dashboard_hoc_courses_desc: "Студенттеріңізбен кез келген қысқа сабақтарды орындап
     көріңіз!"
@@ -650,6 +656,13 @@
   dashboard_action_required: "қажет"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: "Бағалаулар жоқ"
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: "Барлығы"
   dashboard_download_csv: CSV жүктеп алу
@@ -681,6 +694,7 @@
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: "Жаңа бөлім"
@@ -782,6 +796,8 @@
   dashboard_course2: '2 Курс:'
   dashboard_course3: '3 Курс:'
   dashboard_course4: '4 Курс (бета-нұсқа): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: "Оқу бағдарламасы"
   dashboard_curriculum_overview: "Мектепке дейінгі және бастауыш мектеп оқушылары
     үшін бағдарламаны шолу"
@@ -989,6 +1005,11 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: 9-12 сыныптар
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1008,6 +1029,8 @@
   hoc_category_name: "Код Жазу Сағаты"
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: "Қосымшалар Лабораториясы"
   applab_gradelevel: 13+ жастағылар үшін
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1719,11 +1742,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "ойнау"
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  'yes': 'Yes'
+  'no': 'No'
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
+  dashboard_sections_table_stage_extras: Stage Extras

@@ -5,12 +5,18 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "The Need For Addressing: Assessment 3",
+    "title": "The Need For Addressing",
     "markdown_instructions": "Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?",
-    "encrypted_solution": "TIzENjJr0V8LR0DGAcu+xld1yh08pINT9G3gEFoHhA9eJXLMjH3uIvihjRa+\nJKSDg7rEe/tpgolgfEo3y4CWq2OutdoPdrO2jGpSHvTy1DWvUJ5NgvjLmFq7\nvX37pF0uf9PivCnofsvE+n84cfGnBSxsOztD9HGu4nrqyeRFlEYtZY3je5SO\nKDWpBGhWQcTI8qt8RwNYIVF/PtGbsBosqvXQ1Vl8GXkdVx/rzu1MMzx038tW\n4kXHYRH24/xCgnrSaPMh/tI4Hfhi5/jcCjnTeE/xy+E2qBwQ22TmCWzTM1cS\nHBCEIBFv47sYq4LkZrT5nnR9UNbTLobUQ/5967f3ew==\n",
+    "encrypted_solution": "JxjBmqtSEDWl7UJ2fp4f7ArNqeqUwMJ+fKn2cxzTOgFmPF1owmXVm6tAjz34\nFEKBU5/lLEGg3vpHlq8dCbPK2EV5WX5lccGQx4NfBxkGOUxviWsY6ZkuVGCG\nZqkGXMlkm9jsC02lmgxCUQs7atOGJnqMvg72oz2CMNnZkESx2l18luLvQTXU\nvgUFZ8uw5BGUkszOMTANmQgM3VHjABTFI+s44LorYIHn7Dj1mzV4KNZrSNao\n2YIhMJbEenyhFltA47l+jPG7Xj13aUDOJHsqIn+VZSja1VZYcsUczA5EMVMa\nt3dAywWyDmSVE0Z5inyaL9UeAt7BzOyq8CY92KK90g==\n",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

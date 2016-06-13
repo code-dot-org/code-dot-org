@@ -44,7 +44,7 @@ exports.extendOptionsObject = function (optionsObject) {
     throw new Error('Cannot extend options; property "get" would be overwritten.');
   }
 
-  return $.extend({}, optionsObject, {
+  return Object.assign({}, optionsObject, {
     /**
      * Retrieve an optional value from the options object, passing it through the
      * provided validation function, and returning the given default value if

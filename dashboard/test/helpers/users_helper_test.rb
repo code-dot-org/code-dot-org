@@ -124,7 +124,13 @@ class UsersHelperTest < ActionView::TestCase
       linesOfCode: 42,
       linesOfCodeText: 'Total lines of code: 42',
       levels: {
-        ul.level_id => {status: 'perfect', result: 100, submitted: false, pages_completed: [true, false]}
+        ul.level_id => {
+          status: 'perfect',
+          result: 100,
+          submitted: false,
+          pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]},
+        "#{ul.level_id}_0" => {result: ActivityConstants::FREE_PLAY_RESULT, submitted: false},
+        "#{ul.level_id}_1" => {result: nil, submitted: false}
       }
     }, summarize_user_progress(script, user))
   end

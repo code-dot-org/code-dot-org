@@ -48,11 +48,11 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 **Location**
 
 [Phoenix Coding Academy<br/>
-Room TBD
+Room: 130<br/>
 4445 N. Central Ave.<br/> 
 Phoenix, AZ 85012](https://www.google.com/maps/place/4445+N+Central+Ave,+Phoenix,+AZ+85012/@33.5009346,-112.0754594,17z/data=!3m1!4b1!4m2!3m1!1s0x872b12ecebe8962f:0x9461b519992a8271)
 
-*More information coming soon*<br/>
+Parking is free and available.<br/>
 
  
 
@@ -105,9 +105,10 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-TBD
-
-*More information coming soon*<br/>
+[Roybal High School<br/>
+Room 113<br/>
+1200 W. Colton St. <br/>
+Los Angeles, CA 90026<br/>](https://goo.gl/maps/XCLeUNYWvcr)
  
 
 **What do I bring to my workshop?**
@@ -170,7 +171,7 @@ Laptop and charger (optional)
 
 
 <a id="east"></a>
-### East Bay Area ECS
+### NorCal ECS
 
 
 #### Phase 1: Online Introduction (~2 hours)

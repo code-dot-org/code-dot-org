@@ -13,7 +13,7 @@ import std;
 
 <% backends.each_pair do |id, ip| %>
 probe backend_healthcheck {
-  .url = "/";
+  .url = "/health_check";
   .window = 4;
   .threshold = 2;
   .initial = 2;
