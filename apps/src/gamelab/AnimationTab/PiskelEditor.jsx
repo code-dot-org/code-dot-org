@@ -48,7 +48,10 @@ const PiskelEditor = React.createClass({
    * @param {object} message
    */
   postMessage(message) {
-    const targetOrigin = '*';
+    // Piskel should be hosted on the same origin (domain) as gamelab; we don't
+    // want to send messages to other domains.
+    // TODO (bbuchanan): Inject window origin to remove global dependency?
+    const targetOrigin = location.origin;
     this.iframe.contentWindow.postMessage(message, targetOrigin);
   },
 
