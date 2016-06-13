@@ -55,15 +55,13 @@ progress.mergedActivityCssClass = function (a, b) {
 
 progress.renderStageProgress = function (stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation) {
   var store = loadProgress({name: scriptName, stages: [stageData]}, currentLevelId, saveAnswersBeforeNavigation);
-  var mountPoint = document.createElement('div');
-  mountPoint.style.display = 'inline-block';
+  var mountPoint = document.querySelector('.progress_container');
 
   store.dispatch({
     type: 'MERGE_PROGRESS',
     progress: _.mapValues(progressData.levels, level => level.submitted ? SUBMITTED_RESULT : level.result)
   });
 
-  $('.progress_container').replaceWith(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
       <StageProgress />
@@ -143,15 +141,13 @@ progress.bestResultLevelId = function (levelIds, progressData) {
 
 function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = false) {
 
-  let store = createStore((state = [], action) => {
+  let store = createStore((state = {}, action) => {
     if (action.type === 'MERGE_PROGRESS') {
       // TODO: _.mergeWith after upgrading to Lodash 4+
       let newProgress = {};
-      let progressKeys = Object.keys(Object.assign({}, state.progress, action.progress));
-      for (let i = 0; i < progressKeys.length; i++) {
-        let key = progressKeys[i];
+      Object.keys(Object.assign({}, state.progress, action.progress)).forEach(key => {
         newProgress[key] = clientState.mergeActivityResult(state.progress[key], action.progress[key]);
-      }
+      });
 
       return Object.assign({}, state, {
         progress: newProgress,
