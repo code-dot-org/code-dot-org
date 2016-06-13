@@ -12,7 +12,7 @@
 #   PEGASUS_DB[:properties].where(key: 'solr-user-last-id').delete
 # via pegasus-console.
 
-require File.expand_path('../../deployment', __FILE__)
+require File.expand_path('../../../deployment', __FILE__)
 require 'json'
 require 'cdo/only_one'
 require 'cdo/db'
