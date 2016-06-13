@@ -154,25 +154,32 @@ export const ProgressDot = React.createClass({
       <a
         href={level.url}
         onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
-        style={[showLevelName && {display: 'block'}]
-      }>
+        style={[showLevelName && {display: 'block'}]}
+      >
         {level.icon ?
-          <i className={`fa ${level.icon}`} style={[
-            styles.dot.puzzle,
-            this.props.courseOverviewPage && styles.dot.overview,
-            styles.dot.icon,
-            smallDot && styles.dot.icon_small,
-            level.status && level.status !== 'not_tried' && styles.dot.icon_complete
-          ]} /> :
-          <div style={[
-            styles.dot.puzzle,
-            this.props.courseOverviewPage && styles.dot.overview,
-            smallDot && styles.dot.small,
-            level.kind === 'assessment' && styles.dot.assessment,
-            outlineCurrent && {borderColor: color.level_current},
-            showUnplugged && styles.dot.unplugged,
-            styles.status[level.status || 'not_tried']
-          ]} className={`level-${level.id}`}>{level.kind === 'named_level' ? '\u00a0' : level.title}</div>
+          <i
+            className={`fa ${level.icon}`}
+            style={[
+              styles.dot.puzzle,
+              this.props.courseOverviewPage && styles.dot.overview,
+              styles.dot.icon,
+              smallDot && styles.dot.icon_small,
+              level.status && level.status !== 'not_tried' && styles.dot.icon_complete
+            ]}
+          /> :
+          <div
+            style={[
+              styles.dot.puzzle,
+              this.props.courseOverviewPage && styles.dot.overview,
+              smallDot && styles.dot.small,
+              level.kind === 'assessment' && styles.dot.assessment,
+              outlineCurrent && {borderColor: color.level_current},
+              showUnplugged && styles.dot.unplugged,
+              styles.status[level.status || 'not_tried']
+            ]}
+          >
+            {level.kind === 'named_level' ? '\u00a0' : level.title}
+          </div>
         }
         {showLevelName &&
           <span style={{marginLeft: 5, color: color.purple}}>{level.name}</span>
