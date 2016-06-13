@@ -31,7 +31,8 @@ var ALLOWED_KEYS = utils.makeEnum(
   'noVisualization',
   'pinWorkspaceToBottom',
   'smallStaticAvatar',
-  'aniGifURL'
+  'aniGifURL',
+  'inputOutputTable'
 );
 
 const initialState = {

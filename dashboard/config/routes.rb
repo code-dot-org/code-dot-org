@@ -10,6 +10,8 @@ Dashboard::Application.routes.draw do
 
   resources :user_levels, only: [:update]
 
+  get '/download/:product', to: 'hoc_download#index'
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
@@ -142,11 +144,11 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get 'preview_assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
+    get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
     post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
   end
 
-  get '/pl/:course', to: 'plc/user_course_enrollments#index', as: 'professional_learning'
+  get '/course/:course', to: 'plc/user_course_enrollments#index', as: 'course'
 
   get '/beta', to: redirect('/')
 

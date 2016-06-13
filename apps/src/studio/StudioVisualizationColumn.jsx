@@ -22,16 +22,13 @@ var StudioVisualizationColumn = function (props) {
           </button>
         </div>}
       </GameButtons>
-      <BelowVisualization inputOutputTable={props.inputOutputTable}/>
+      <BelowVisualization/>
     </span>
   );
 };
 
 StudioVisualizationColumn.propTypes = {
-  finishButton: React.PropTypes.bool.isRequired,
-  inputOutputTable: React.PropTypes.arrayOf(
-    React.PropTypes.arrayOf(React.PropTypes.number)
-  )
+  finishButton: React.PropTypes.bool.isRequired
 };
 
 module.exports = StudioVisualizationColumn;
