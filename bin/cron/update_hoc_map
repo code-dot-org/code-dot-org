@@ -13,7 +13,7 @@
 #   CDO.hoc_map_api_secret: notasecret
 #   CDO.hoc_map_table_id: ABCDEF123456 (the id of the fusion table)
 
-require File.expand_path('../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/hip_chat'
 require src_dir 'database'
 require 'cdo/properties'
