@@ -62,12 +62,15 @@ const styles = {
     marginTop: 5,
     marginRight: 5
   },
+  // bubble has pointer cursor by default. override that if no hints
+  noAuthoredHints: {
+    cursor: 'default'
+  },
   authoredHints: {
     // raise by 20 so that the lightbulb "floats" without causing the original
     // icon to move. This strangeness happens in part because prompt-icon-cell
     // is managed outside of React
-    marginTop: -20,
-    cursor: 'pointer'
+    marginTop: -20
   }
 };
 
@@ -221,7 +224,12 @@ var TopInstructions = React.createClass({
             rightColWidth={this.state.rightColWidth}
             height={this.props.height - resizerHeight}
         >
-          <div style={[styles.bubble, this.props.hasAuthoredHints && styles.authoredHints]}>
+          <div
+              style={[
+                commonStyles.bubble,
+                this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
+              ]}
+          >
             <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
               <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
             </ProtectedStatefulDiv>
