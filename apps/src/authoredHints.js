@@ -14,6 +14,29 @@ var authoredHintUtils = require('./authoredHintUtils');
 var Lightbulb = require('./templates/Lightbulb');
 import { setHasAuthoredHints } from './redux/instructions';
 
+/**
+ * For some of our skins, our partners don't want the characters appearing to
+ * say anything they haven't approved. For these, we will make it so that our
+ * hint callout doesnt have a tip
+ * @param {string} skin - Name of the skin
+ * @returns {boolean}
+ */
+function shouldDisplayTips(skin) {
+  /*eslint-disable no-fallthrough*/
+  switch (skin) {
+    case 'infinity':
+    case 'anna':
+    case 'elsa':
+    case 'craft':
+    // star wars
+    case 'hoc2015':
+    case 'hoc2015x':
+      return false;
+  }
+  /*eslint-enable no-fallthrough*/
+  return true;
+}
+
 var AuthoredHints = function (studioApp) {
   this.studioApp_ = studioApp;
 
@@ -255,10 +278,10 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
     },
     style: {
       classes: "cdo-qtips qtip-authored-hint",
-      tip: {
+      tip: shouldDisplayTips(this.studioApp_.skin.id) ? {
         width: 20,
         height: 20
-      }
+      } : false
     },
     position: position,
     hide: {
