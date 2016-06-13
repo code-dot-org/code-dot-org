@@ -45,5 +45,6 @@ const StageProgress = React.createClass({
   }
 });
 export default connect((state, ownProps) => ({
+  // When rendering StageProgress directly (in the header) only show one stage.
   levels: ownProps.levels || state.stages[0].levels
 }))(StageProgress);
