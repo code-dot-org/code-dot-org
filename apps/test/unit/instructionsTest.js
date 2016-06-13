@@ -11,6 +11,8 @@ import instructions, {
   determineInstructionsConstants
 } from '@cdo/apps/redux/instructions';
 
+const ENGLISH_LOCALE = 'en_us';
+
 describe('instructions reducer', () => {
   var reducer = instructions;
 
@@ -133,7 +135,7 @@ describe('determineInstructionsConstants', () => {
     const showInstructionsInTopPane = true;
 
     it('sets longInstructions to markdownInstructions regardless of locale', () => {
-      const locales = ['fr-fr', 'en-us', undefined];
+      const locales = ['fr-fr', ENGLISH_LOCALE, undefined];
       const results = locales.map(locale => determineInstructionsConstants(
         'non-markdown',
         'markdown',
@@ -151,7 +153,7 @@ describe('determineInstructionsConstants', () => {
       const result = determineInstructionsConstants(
         'non-markdown',
         undefined,
-        'en-us',
+        ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
       );
@@ -164,7 +166,7 @@ describe('determineInstructionsConstants', () => {
       const result = determineInstructionsConstants(
         'non-markdown',
         undefined,
-        'en-us',
+        ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
       );
@@ -175,7 +177,7 @@ describe('determineInstructionsConstants', () => {
       const result2 = determineInstructionsConstants(
         undefined,
         'markdown',
-        'en-us',
+        ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
       );
@@ -186,7 +188,7 @@ describe('determineInstructionsConstants', () => {
       const result3 = determineInstructionsConstants(
         'non-markdown',
         'markdown',
-        'en-us',
+        ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
       );
@@ -236,7 +238,7 @@ describe('determineInstructionsConstants', () => {
       const result = determineInstructionsConstants(
         'non-markdown',
         'non-markdown',
-        'en-us',
+        ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         true
       );
@@ -245,6 +247,28 @@ describe('determineInstructionsConstants', () => {
         shortInstructions: 'non-markdown',
         longInstructions: undefined
       });
+    });
+
+    it('sets long instructions if we have an inputOutputTable', () => {
+      const result = determineInstructionsConstants(
+        'non-markdown',
+        undefined,
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        true,
+        true
+      );
+      assert.equal(result.longInstructions, 'non-markdown');
+
+      const result2 = determineInstructionsConstants(
+        'non-markdown',
+        'markdown',
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        true,
+        true
+      );
+      assert.equal(result2.longInstructions, 'markdown');
     });
   });
 });
