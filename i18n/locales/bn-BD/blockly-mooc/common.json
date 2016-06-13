@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"নীচের ব্লকগুলির কোন একটি ব্যবহার করার চেষ্টা করুন:",
   "tryHOC":"এক ঘন্টা কোড চেষ্টা করুন",
   "unnamedFunction":"আপনি একটি একটি পরিবর্তনশীল ফাংশন যার নাম নেই। সবকিছু একটি বর্ণনামূলক নাম দিতে ভুলবেন না।",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"কোড শিখতে চান?",
   "watchVideo":"ভিডিও দেখুন",
   "when":"যখন",

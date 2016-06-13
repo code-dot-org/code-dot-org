@@ -1,5 +1,5 @@
 "hy-AM":
-  hour_of_code: Hour of Code
+  hour_of_code: "Ժամ օրենսգրքի"
   hello: "Բարև աշխարհ"
   select_language: Please select your language
   en: "Համակարգչային գիտություն"
@@ -42,11 +42,11 @@
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
-  csedweek_map_search_reset: Reset
+  csedweek_map_search_reset: "տեղավորել"
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  cded_sign_up: Sign up
+  cded_sign_up: "Գրանցվել"
   cded_try_it: Try it
   twentyhours_trynow: "Փորձել հիմա"
   california_heading: Ask your school to teach computer science
@@ -281,14 +281,16 @@
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
-  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_title: "Ժամ օրենսգրքի"
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo;
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
     &ldquo;If you can change technology,
     you can change the world.&rdquo;
@@ -321,12 +323,18 @@
     &ldquo;Computer science is a field you can't
     know if you like or not before you try it.&rdquo;
     Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo;
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo;
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash;
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
   homepage_hero_text_teacher2: |
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
@@ -344,7 +352,7 @@
   homepage_action_text_hoc: An Hour of Code for every student.
   homepage_action_text_num_served: "# served"
   homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
+  homepage_action_text_sign_up: "Գրանցվել"
   homepage_action_text_try_it: Try it
   homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: Watch the video
@@ -368,9 +376,9 @@
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
-  homepage_slot_text_title_hoc: Hour of Code
+  homepage_slot_text_title_hoc: "Ժամ օրենսգրքի"
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
-  homepage_slot_text_link_hoc: Try the Hour of Code
+  homepage_slot_text_link_hoc: "Փորձեք ժամը օրենսգրքի"
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
@@ -520,10 +528,10 @@
     and/or participation
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
-  volunteer_engineer_submission_field_email: Email address
+  volunteer_engineer_submission_field_email: "Էլեկտրոնային հասցե"
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
-  volunteer_engineer_submission_field_email_placeholder: Email address
+  volunteer_engineer_submission_field_email_placeholder: "Էլեկտրոնային հասցե"
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
@@ -567,7 +575,7 @@
     to say a few words of inspiration to the kids
   volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
     prepare me for coding with my students
-  petition_age: Age
+  petition_age: "Տարիք"
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -579,14 +587,16 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links (in English only)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
     office hours.
-  dashboard_landing_print_certificates: Print certificates for students who finish
-    this course
-  dashboard_landing_educator_blog: Read about news and updates to our materials at
-    our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
-  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_print_certificates: "Տպագիր վկայականներ ուսանողների համար, ովքեր
+    ավարտել այս դասընթացը"
+  dashboard_landing_educator_blog: "Կարդալ մասին նորություններից եւ թարմացումներից
+    մեր նյութերի մեր մանկավարժ Օրագիր"
+  dashboard_landing_smart_hints: "Խնդրում ենք օգնել մեզ է ավելացնել խելացի ակնարկներ
+    Code.org ճանապարհները"
+  dashboard_landing_video_player: Test մեր նոր տեսամագնիտոֆոն ձեր դպրոցում
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: View Progress for %{biggest_section}
@@ -598,6 +608,11 @@
   dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
     by our partners.</a> Learn to program with robots, make web pages, make your own
     app, or explore other languages like C++, Ruby, or Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
@@ -637,13 +652,13 @@
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Loading...
-  dashboard_action_edit: Edit
+  dashboard_action_edit: "խմբագրել"
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
-  dashboard_action_cancel: Cancel
+  dashboard_action_cancel: "վերացնել"
   dashboard_action_delete: Delete
-  dashboard_action_delete_yes: 'Yes'
-  dashboard_action_delete_no: 'No'
+  dashboard_action_delete_yes: "այո"
+  dashboard_action_delete_no: "ոչ"
   dashboard_action_confirm: Delete?
   dashboard_action_remove: Remove
   dashboard_action_remove_confirm: Remove?
@@ -651,6 +666,13 @@
   dashboard_action_required: required
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -671,16 +693,17 @@
   dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: "չի սկսվել"
+  dashboard_progress_in_progress: "ընթացքի մեջ է"
   dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_progress_submitted: submitted
+  dashboard_progress_completed_too_many_blocks: "լրացված, շատ արգելափակում"
+  dashboard_progress_completed_perfect: "ավարտվել, կատարյալ"
+  dashboard_progress_furthest_level_attempted: furthest մակարդակը փորձել
+  dashboard_progress_submitted: "ներկայացվել"
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: New section
@@ -706,7 +729,7 @@
   dashboard_sections_print_secrets: You may then print a sheet of cards containing
     account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
-  dashboard_sections_close: Close
+  dashboard_sections_close: "փակել"
   dashboard_sections_move_students_desc: Select students to move to a new section.
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
@@ -735,12 +758,12 @@
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: "Անուն"
   dashboard_students_progress: Progress
-  dashboard_students_age: Age
+  dashboard_students_age: "Տարիք"
   dashboard_students_gender: "Սեռ"
-  dashboard_students_male: Male
-  dashboard_students_female: Female
+  dashboard_students_male: "արական"
+  dashboard_students_female: "իգական"
   dashboard_students_secret: Secret
-  dashboard_students_password: Password
+  dashboard_students_password: "գաղտնաբառ"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -780,10 +803,12 @@
   dashboard_course2: 'Course 2:'
   dashboard_course3: 'Course 3:'
   dashboard_course4: 'Course 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Overview
-  dashboard_sequence: Sequence
+  dashboard_sequence: "հերթականություն"
   dashboard_framework: Framework
   dashboard_standards: Standards
   dashboard_implementation_guide: Implementation Guide
@@ -803,14 +828,14 @@
   dashboard_login_picture: Picture
   dashboard_login_none: "Էլ. փոստ"
   dashboard_new_password: new password
-  dashboard_stage: Stage
-  dashboard_puzzle: Puzzle
+  dashboard_stage: "փուլ"
+  dashboard_puzzle: "վարանում"
   dashboard_question: Question
   dashboard_response: Response
   dashboard_correctness: Correctness
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
-  dashboard_correctness_correct: Correct
+  dashboard_correctness_correct: "ճիշտ"
   dashboard_correctness_incorrect: Incorrect
   dashboard_submission_submitted: Submitted
   dashboard_submission_in_progress: In progress
@@ -839,23 +864,25 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
-    problem in computer science. Code Studio teachers are leading the way in educating
-    underrepresented minorities. Our annual survey shows record diversity in your
-    classrooms! Check out the numbers."
+  dashboard_announce_message: 'We''ve started to measure student learning in Courses
+    1-4 and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+    so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+    concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+    the user experience</a> to answer the big question: <i>What can students do?</i>'
   dashboard_announce_button_text: "Սովորել ավելին"
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition: "Որպես ուսուցիչ, դու առաջատար ճանապարհ է շարժման տալ
+    յուրաքանչյուր ուսանող յուրաքանչյուր դպրոց հնարավորություն է տալիս սովորել համակարգչային
+    գիտությունը: Հիմա, որ ժամանակն է, թող ձեր ներկայացուցիչները լսել ձեզ. Այս շաբաթ,
+    կրթության առաջնորդները, 28 նահանգապետեր, եւ ղեկավարները Ամերիկաների խոշորագույն
+    ընկերությունները միացել միասին բաց նամակ, խնդրելով ԱՄՆ Կոնգրեսին է ֆինանսավորել
+    K-12 համակարգչային գիտության կրթություն:"
+  dashboard_announce_petition_button: "Հավելեք ձեր անունը"
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: "Սովորել ավելին"
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
-  learn_sign_up_button: Sign up
+  learn_sign_up_button: "Գրանցվել"
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
@@ -874,9 +901,9 @@
   learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
     videos</a>
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
-  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_new_tutorial: "Փորձեք մեր նոր ժամին օրենսգրքի ձեռնարկը բետա"
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: "Արվեստագետ Աննայի հետ եւ Էլզա, սառեցրած"
   carousel_heading_codeorg: Tutorials by Code.org
   carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
@@ -958,7 +985,7 @@
   projguts_name: Rock, Paper, Scissors
   hourofcode_name: Placeholder for new code.org/hoc
   playlab_name: Play Lab
-  infinity_name: Infinity Play Lab
+  infinity_name: Infinity Խաղալ Lab
   artist_name: Artist
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
@@ -971,20 +998,25 @@
   course2_name: Course 2
   course3_name: Course 3
   course4_name: Course 4
-  accelerated_name: Accelerated Course
+  accelerated_name: "Արագացված Դասընթացի"
   cspunit1_name: CS Principles Unit 1
   cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
-  20-hour_name: Accelerated Course
+  20-hour_name: "Արագացված Դասընթացի"
   algebra_name: CS in Algebra
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
@@ -993,12 +1025,14 @@
   iceage_name: Ice Age
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
-  math_category_name: Math
-  hoc_category_name: Hour of Code
+  math_category_name: "Մաթեմատիկա"
+  hoc_category_name: "Ժամ օրենսգրքի"
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: "տարեկան 13-ից ավելի"
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
@@ -1672,20 +1706,20 @@
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_hide_this_warning: "Թաքցնել այս նախազգուշացումը"
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: "տատանվել"
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  'yes': 'Yes'
+  'no': 'No'
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
+  dashboard_sections_table_stage_extras: Stage Extras

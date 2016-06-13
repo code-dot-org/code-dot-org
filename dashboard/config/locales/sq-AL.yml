@@ -590,12 +590,15 @@
       apliakcione dhe piktura duke shkruar programet e tyre kompjuterike. Kliko në
       pikturat dhe screenshotet për të parë çdo program që funksionon.
     want_to_make_your_own: Dëshiron të bësh tëndin?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Më shumë &rarr;
     caption_by_name_age: nga %{name}, mosha %{age}
     caption_time_ago: "%{time_ago} më përpara"
     header: Galeria
     header_playlab: Play Lab
     header_artist: Artisti
+    report_abuse: Report Abuse
   landing:
     prerelease: Ky kurs është në<span class='betatext'>beta</span>. Kjo nënkupton
       që nuk është versioni final i këtij kursi dhe referohet të përsëritet sapo feedbacku
@@ -809,6 +812,9 @@
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Kerko nje ikone...
@@ -817,3 +823,11 @@
     required: Përmbledhja
     content: Content
     practice: Teacher Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
+      a site that is not operated by Code.org.</strong> This site may have privacy
+      policies that differ from Code.org's.<br/><br/>We have selected these third
+      party resources because we think they will be useful to you. While we are not
+      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
+      support</a> if you find the content objectionable, or if the linked site is
+      no longer available."

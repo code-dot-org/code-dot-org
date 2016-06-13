@@ -434,6 +434,7 @@ es-ES:
   dashboard_landing_new_beta: ¡Nuevo! Prueba nuestros cursos beta para los alumnos de K-5.
   dashboard_landing_new_k5courses: ¡Nuevo! Prueba nuestros cursos para los alumnos de K-5.
   dashboard_landing_useful_links: Otros enlaces útiles (sólo en Inglés)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: ¡Pregunta en persona! Utiliza nuestras horas mensuales para consultas por vídeo.
   dashboard_landing_print_certificates: Imprimir certificados para los alumnos que terminan este curso
   dashboard_landing_educator_blog: Lee noticias y actualizaciones de nuestro material en nuestro Blog del Educador
@@ -447,6 +448,10 @@ es-ES:
   dashboard_landing_available_courses: Aquí los cursos están disponibles para ti y tus alumnos.
   dashboard_landing_more_tutorials: ¿Quiéres ver aún más tutoriales?
   dashboard_landing_more_tutorials_desc: 'Hay más tutoriales <a href="/learn/beyond"> ofrecidos por nuestros socios.</a> Aprende a programar con robots, a hacer páginas web, a hacer tu propia aplicación o explorar otros lenguajes como C++, Ruby o Python.'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: La Hora de Code es para todas las edades
   dashboard_hoc_courses_desc: ¡Prueba alguno de estos tutoriales de menos de 1 hora con tus alumnos!
   dashboard_hoc_courses_desc_and_cta: 'Prueba estos tutoriales cortos de una hora con tus alumnos. <a href="https://hourofcode.com">Únete al movimiento de la Hora de Code</a> durante la Semana de Educación en Ciencias de la Computación.'
@@ -479,6 +484,9 @@ es-ES:
   dashboard_action_required: obligatorio
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: Sin evaluaciones
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filtrado por etapa:'
   dashboard_filter_all: Todos
   dashboard_download_csv: Descargar CSV
@@ -508,6 +516,7 @@ es-ES:
   dashboard_progress_submitted: enviado
   dashboard_progress_view: 'Ver progreso en:'
   dashboard_progress_student_in_script: 'Información de progreso para %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'Ver respuestas de texto:'
   dashboard_responses_none: Sin respuestas de texto
   dashboard_sections_new_section: Nueva sección
@@ -581,6 +590,7 @@ es-ES:
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4 (beta): '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: Currículum
   dashboard_curriculum_overview: Resumen de currículo K-5
   dashboard_overview: Resumen
@@ -641,7 +651,7 @@ es-ES:
   dashboard_announce_message: '<b>6 de enero, 2015</b> - Aprender más allá de una Hora de Code en tu clase. Comienza un nuevo curso de introducción y realiza un seguimiento del progreso del alumno.'
   dashboard_announce_button_text: Aprende más
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Agrega tu nombre
   code_hoc_coming: '¡La Hora de Code está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
   learn_more: Aprenda más
@@ -751,12 +761,17 @@ es-ES:
   course3_name: Curso 3
   course4_name: Curso 4
   accelerated_name: Curso acelerado
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
   cspunit3_name: Principios de CS Unidad 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: Grados 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: Curso acelerado
@@ -771,7 +786,9 @@ es-ES:
   math_category_name: Matemáticas
   hoc_category_name: Hora de Code
   csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Laboratorio de Aplicaciones
   applab_gradelevel: Edad 13+
   applab_shortdescription_congrats: App Lab es un entorno de programación en el que puedes hacer aplicaciones simples. Diseña una aplicación, codifícala con bloques o JavaScript para hacerla funcionar y luego compartela en segundos

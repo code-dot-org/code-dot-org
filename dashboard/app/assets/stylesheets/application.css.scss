@@ -27,6 +27,7 @@
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
+ *= require warning-banner
  *
  *= require selectize
  *= require selectize.default
@@ -44,6 +45,7 @@ $btnPrimaryBackground: $orange;
 $btnPrimaryBackgroundHighlight: $orange;
 
 @import "bootstrap";
+// Font-awesome 4.6.3
 @import "font-awesome";
 
 p,pre,span {
@@ -176,6 +178,7 @@ img.video_thumbnail {
 .header-wrapper {
   padding-top: 15px;
   min-height: 70px;
+  position: relative;
 
   #progresswarning {
     position: absolute;
@@ -803,7 +806,7 @@ input.header_input {
   // margin-bottom is reused in JavaScript to determine how close to get to the bottom of the viewport.
   margin-bottom: 20px;
   width: 635px;
-  border: 20px solid $bkgnd_color;
+  border: 8px solid $bkgnd_color;
   border-top: 5px;
   border-bottom: 5px;
   border-radius: 0 0 6px 6px;
@@ -835,6 +838,7 @@ input.header_input {
 
 .header_popup_body {
   position: relative;
+  padding: 0 2px;
   display: block;
   color: $charcoal;
 
@@ -847,7 +851,7 @@ input.header_input {
 
 .header_popup_footer {
   height: 20px;
-  padding: 10px 15px;
+  padding: 7px 3px;
   margin-bottom: 0;
   text-align: right;
   color: $header_text;
@@ -1138,42 +1142,6 @@ a.download-video {
   }
 }
 
-@mixin warning-banner {
-  padding: 5px 20px;
-  font-size: 28px;
-  line-height: 32px;
-  background-color: $orange;
-  text-align: center;
-  color: white;
-  a, a:visited {
-    color: $cyan;
-  }
-  a:hover {
-    background: transparent;
-  }
-  p {
-    padding: 7px 0;
-    margin-bottom: 0;
-  }
-}
-
-#warning-banner {
-  @include warning-banner;
-}
-
-#warning-banner-https {
-  @include warning-banner;
-}
-
-#warning-banner-chrome {
-  @include warning-banner;
-  color: white;
-  font-size: 22px;
-  line-height: 22px;
-  margin-bottom: 5px;
-  padding: 5px;
-}
-
 .quiet_links {
   a:link { font-family: $gotham-regular; font-weight: normal; }
 }
@@ -1382,40 +1350,28 @@ a.download-video {
   }
 
   #lesson {
-    background-color: $charcoal;
     #heading {
-      -moz-box-sizing:border-box; box-sizing:border-box; padding: 10px 20px 10px 0px;
-      .whitetext {
-        color:white;
+      width: 700px;
+      h2 {
+        margin-top: 0;
       }
     }
     #trynow {
-      text-align:right; -moz-box-sizing:border-box; box-sizing:border-box; padding-top:20px; padding-right:40px;
+      float: right;
+      text-align: right;
       .biggerbutton {
-        font-size:20px; height:40px;
+        font-size: 20px;
+        height: 40px;
       }
       .button_to {
-        margin-bottom:5px;
-      }
-      a {
-        color: $lightest_gray;
-        font-family: $gotham-regular; font-weight: normal;
-      }
-      .white {
-        color:white;
+        margin-bottom: 5px;
       }
     }
-    .smallwhitetext {
-      color:white; font-size:15px;
-    }
-    .lightgreytext {
-      color: $lightest_gray;
-    }
-  }
-  #stats {
-    background-color:$lightest_gray;
-    #rightside {
-      -moz-box-sizing:border-box; box-sizing:border-box; padding:10px;
+    .betatext {
+      background: $white;
+      color: $cyan;
+      padding: 2px 4px;
+      border: 1px solid $cyan;
     }
   }
 
@@ -1522,6 +1478,21 @@ a.download-video {
     font-size:16px;
     color:$charcoal;
     margin-top:15px;
+  }
+}
+
+#hoc_download {
+  color: $charcoal;
+  .capsule {
+    background-color: $lightest_gray;
+    border-radius: 10px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-top: 20px;
+    padding-bottom: 28px;
+  }
+  .indent {
+    margin-left: 20px;
   }
 }
 

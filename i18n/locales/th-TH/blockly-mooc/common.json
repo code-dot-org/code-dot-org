@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"ลองใช้บล็อคด้านล่างสักอันสิ",
   "tryHOC":"ลองใช้ Hour of Code สิ",
   "unnamedFunction":"คุณมีตัวแปรหรือฟังก์ชันที่ไม่มีชื่อ อย่าลืมให้ชื่อฟังชั่นหรือตัวแปร",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"ต้องการศึกษาการเขียนโปรแกรมหรือ",
   "watchVideo":"ดูวีดีโอ",
   "when":"เมื่อ",

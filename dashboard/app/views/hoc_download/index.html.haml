@@ -1,0 +1,70 @@
+- @page_title = t('hoc_download.title')
+- content_for :og do
+  = tag 'meta', property: 'og:title', content: t('share.title')
+  = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
+  = tag 'meta', property: 'og:description', content: t('share.description')
+
+#hoc_download
+  .row
+    .span12
+      %h1
+        = t('hoc_download.title')
+  .row
+    .span12
+      .capsule
+        .indent
+          %h3
+            != t('hoc_download.capsule_title')
+          %h4
+            != t('hoc_download.capsule_desc', url: @hoc_url, app_name: @app_name)
+  .indent
+    .row
+      .span12
+        %h3
+          = t('hoc_download.instructions_headline')
+    .row
+      .span12
+        .smalltext
+          != t('hoc_download.instructions', url: CDO.code_org_url('/certificates'))
+        %br/
+    .row
+      .span12
+        %strong
+          = t('hoc_download.download_message', app_name: @app_name)
+        %ul
+          %li
+            = t('hoc_download.download_in_english')
+            =link_to t('hoc_download.windows'), @english_windows_url, :class => 'hoc-download-link'
+            |
+            =link_to t('hoc_download.mac'), @english_mac_url, :class => 'hoc-download-link'
+          %li
+            = t('hoc_download.download_in_spanish')
+            =link_to t('hoc_download.windows'), @spanish_windows_url, :class => 'hoc-download-link'
+            |
+            =link_to t('hoc_download.mac'), @spanish_mac_url, :class => 'hoc-download-link'
+        -if @show_js_links
+          %strong
+            = t('hoc_download.download_message', app_name: @app_name_js)
+          %ul
+            %li
+              = t('hoc_download.download_in_english')
+              =link_to t('hoc_download.windows'), @english_windows_url_js, :class => 'hoc-download-link'
+              |
+              =link_to t('hoc_download.mac'), @english_mac_url_js, :class => 'hoc-download-link'
+            %li
+              = t('hoc_download.download_in_spanish')
+              =link_to t('hoc_download.windows'), @spanish_windows_url_js, :class => 'hoc-download-link'
+              |
+              =link_to t('hoc_download.mac'), @spanish_mac_url_js, :class => 'hoc-download-link'
+%br/
+%br/
+
+:javascript
+  $(document).ready(function() {
+     // Track Google Analytics events for HOC download clicks
+     $('.hoc-download-link').on('click', function() {
+        var url = $(this).attr('href');
+        trackEvent('DownloadHOC','startdownload', url);
+        return true;
+    });
+  });

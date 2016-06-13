@@ -1,7 +1,8 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/plc', media: 'all'
 
-- course_unit = @enrollment_unit_assignment.plc_course_unit
+-# Probably won't need the script when this is no longer under the enrollment unit assignment path
+- preselected_module_ids = @enrollment_unit_assignment.plc_course_unit.determine_preferred_learning_modules current_user
 
 = form_tag(action: 'confirm_assignments') do
   .preview_evaluation
@@ -13,7 +14,7 @@
 
       - @content_learning_modules.each do |content_module|
         %p
-          %input.radio{type: 'radio', name: 'content_module', value: content_module.id, checked: @enrolled_module_ids.include?(content_module.id.to_s)}
+          %input.radio{type: 'radio', name: 'content_module', value: content_module.id, checked: preselected_module_ids.include?(content_module.id)}
             = content_module.name
 
     .module_type_section
@@ -27,7 +28,8 @@
 
       - @practice_learning_modules.each do |practice_module|
         %p
-          %input.radio{type: 'radio', name: 'practice_module', value: practice_module.id, checked: @enrolled_module_ids.include?(practice_module.id.to_s)}
+          %input.radio{type: 'radio', name: 'practice_module', value: practice_module.id, checked: preselected_module_ids.include?(practice_module.id)}
             = practice_module.name
 
-      = submit_tag('Confirm Module Selections', id: 'confirm_assignments')
+  #submit_tag_container
+    = submit_tag('Confirm Module Selections', id: 'confirm-assignments')

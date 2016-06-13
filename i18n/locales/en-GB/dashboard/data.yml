@@ -3,7 +3,7 @@ en-GB:
     script:
       name:
         20-hour:
-          desc: K-8 Intro to Computer Science Course
+          desc: K-8 Intro to computer science course
           Unplug1: Stage 1
           Maze: Stage 2
           Unplug2: Stage 3

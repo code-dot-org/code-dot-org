@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Pamėgink panaudoti vieną iš žemiau esančių blokelių:",
   "tryHOC":"Išmėgink „Programavimo valandą“",
   "unnamedFunction":"Tu turi kintamąjį arba funkciją, kuri neturi pavadinimo. Nepamiršk kiekvienam elementui suteikti pavadinimą.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Nori išmokti programuoti?",
   "watchVideo":"Peržiūrėk šį vaizdo įrašą",
   "when":"kada",

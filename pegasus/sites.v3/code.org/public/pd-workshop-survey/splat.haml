@@ -10,11 +10,16 @@ title: "Professional Development Workshop Survey"
   workshop = DASHBOARD_DB[:pd_workshops].where(id: enrollment[:pd_workshop_id]).first
   pass unless workshop
 
+  teacher_id = enrollment[:user_id]
+  teacher = DASHBOARD_DB[:users].where(id: teacher_id).first
+  name = teacher.nil? ? enrollment[:name] : teacher[:name]
+  email = teacher.nil? ? enrollment[:email] : teacher[:email]
+
   plp = DASHBOARD_DB[:professional_learning_partners].where(contact_id: workshop[:organizer_id]).first
   # Have they ever taken any pd-workshop-survey?
-  is_first_survey = DB[:forms].where(kind: 'PdWorkshopSurvey').count == 0
+  is_first_survey = teacher_id.nil? || DB[:forms].where(kind: 'PdWorkshopSurvey', user_id: teacher_id).count == 0
 
-  # Have they take this particular survey?
+  # Have they taken this particular survey?
   previous_response = DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment[:id]).first
 
   course = workshop[:course]
@@ -24,10 +29,17 @@ title: "Professional Development Workshop Survey"
     view "pd_workshop_survey/#{name.to_s}", *params
   end
 
+:javascript
+  window.pdWorkshopSurvey = {
+    enrollmentCode: "#{enrollment_code}",
+    course: "#{course}"
+  };
+
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "/js/pd-workshop-survey.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
 - if previous_response
@@ -37,6 +49,10 @@ title: "Professional Development Workshop Survey"
 - else
 
   %form#pd-workshop-survey-form{role: 'form'}
+    %input{name: 'user_id_i', type: 'hidden', value: teacher_id}
+    %input{name: 'email_s', type: 'hidden', value: email}
+    %input{name: 'name_s', type: 'hidden', value: name}
+
     %input{name: 'enrollment_id_i', type:'hidden', value: enrollment[:id]}
     %input{name: 'workshop_id_i', type: 'hidden', value: workshop[:id]}
     %input{name: 'plp_b', type: 'hidden', value: plp.nil? ? '0' : '1'}
@@ -62,7 +78,7 @@ title: "Professional Development Workshop Survey"
           name: 'will_teach_b',
           label: "Will you be teaching/are you teaching #{course} #{subject} in the 2016-17 school year?"
         %div{id: 'will-teach-no-explain-wrapper', style: 'display: none;'}
-          %label.control-label{for: 'will_not_teach_explanation_s'}<
+          %label.control-label{for: 'will_not_teach_explanation_s'}
             %em{style: 'font-weight: normal;'} Please explain why not.
           %div
             %input.form-control{name: 'will_not_teach_explanation_s', placeholder: 'Why not?', type: 'text'}
@@ -72,7 +88,7 @@ title: "Professional Development Workshop Survey"
           name: 'reason_for_attending_ss[]',
           label: 'Reason for attending? (select all that apply)'
         %div{id: 'reason-for-attending-other-wrapper', style: 'display: none;'}
-          %label.control-label{for: 'reason_for_attending_other_s'}<
+          %label.control-label{for: 'reason_for_attending_other_s'}
             %em{style: 'font-weight: normal;'} Other reason?
           %div
             %input.form-control{name: 'reason_for_attending_other_s', placeholder: 'Other', type: 'text'}
@@ -88,26 +104,25 @@ title: "Professional Development Workshop Survey"
             %input.form-control{name: 'how_heard_other_s', placeholder: 'Other', type: 'text'}
 
       .form-group
-        = local_view :agree_scale_select,
+        = local_view :single_select,
           name: 'received_clear_communication_s',
           label: 'I received clear communication about when and where the workshop would take place.'
 
-      - unless plp.nil?
-        .form-group
-          :ruby
-            school_has_tech_label = %q(
-              Do you believe your school has the technology requirements modern web browsers/sufficient
-              internet access/1:1 computing environment necessary to effectively teach the course?'
-            )
-          = local_view :yes_no_select,
-            name: 'school_has_tech_b',
-            label: school_has_tech_label
+      .form-group
+        :ruby
+          school_has_tech_label = %q(
+            Do you believe your school has the technology requirements modern web browsers/sufficient
+            internet access/1:1 computing environment necessary to effectively teach the course?'
+          )
+        = local_view :yes_no_select,
+          name: 'school_has_tech_b',
+          label: school_has_tech_label
 
-        .form-group
-          %label.control-label{for: 'venue_feedback_s'}
-            Do you have feedback about the venue and the way logistics were run for this workshop?
-            Please be specific and provide suggestions for improvement.
-          %textarea.form-control{name: 'venue_feedback_s', rows: 4, type: 'text'}
+      .form-group
+        %label.control-label{for: 'venue_feedback_s'}
+          Do you have feedback about the venue and the way logistics were run for this workshop?
+          Please be specific and provide suggestions for improvement.
+        %textarea.form-control{name: 'venue_feedback_s', rows: 4, type: 'text'}
 
       .form-group
         = local_view :single_select,
@@ -207,7 +222,7 @@ title: "Professional Development Workshop Survey"
           label: 'I feel like I am a part of a community of teachers.'
         }]
 
-      = local_view :agree_scale_select_multi_row, items: agree_scale_questions
+      = local_view :agree_scale_select_table, items: agree_scale_questions
 
       .form-group
         %label.control-label{for: 'things_you_liked_s'}
@@ -272,103 +287,5 @@ title: "Professional Development Workshop Survey"
         %button#btn-submit.btn.btn-primary{type: "submit"} Submit
 
   #thanks{style: 'display: none;'}
-    %h1 Thank you
-    %h3 Your submission was received.
+    %h1 Thank you for your submission
 
-:javascript
-  $(document).ready(function () {
-    $('#pd-workshop-survey-form').find("select").selectize({
-      plugins: ['fast_click']
-    });
-
-    $('#pd-workshop-survey-form').submit(function (event) {
-      PdWorkshopSurveyFormSubmit(event);
-    });
-
-    $("input[name=consent_b]:radio").change(function () {
-      if ($("input[name=consent_b][value=1]").is(":checked")) {
-        $(".consent-only").show();
-      } else {
-        $(".consent-only").hide();
-      }
-    });
-
-    $("input[name=will_teach_b]:radio").change(function () {
-      if ($("input[name=will_teach_b][value=0]").is(":checked")) {
-        $("#will-teach-no-explain-wrapper").show();
-      } else {
-        $("#will-teach-no-explain-wrapper").hide();
-      }
-    });
-
-    $("select[name='reason_for_attending_ss[]']").change(function() {
-      if ($.inArray('Other', $(this).val()) > -1) {
-        $('#reason-for-attending-other-wrapper').show();
-      } else {
-        $('#reason-for-attending-other-wrapper').hide();
-      }
-    });
-
-    $("select[name='how_heard_ss[]']").change(function() {
-      if ($.inArray('Other', $(this).val()) > -1) {
-        $('#how-heard-other-wrapper').show();
-      } else {
-        $('#how-heard-other-wrapper').hide();
-      }
-    });
-
-    $("select[name='subjects_taught_ss[]']").change(function() {
-      if ($.inArray('Computer Science', $(this).val()) > -1) {
-        $('#years-taught-cs-wrapper').show();
-      } else {
-        $('#years-taught-cs-wrapper').hide();
-      }
-    });
-
-    $(".agree-scale").tooltip();
-
-
-  });
-
-  function processResponse(data)
-  {
-    $("#btn-submit").removeAttr('disabled');
-    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
-    $('#pd-workshop-survey-form').hide();
-    $('#thanks').show();
-  }
-
-  function processError(data)
-  {
-    $('.has-error').removeClass('has-error');
-
-    var error_field_names = Object.keys(data.responseJSON);
-    var errors_count = error_field_names.length;
-
-    for (i = 0; i < errors_count; ++i) {
-      var error_field_name = error_field_names[i].replace(/_ss$/,'_ss[]');
-      var query = ".control-label[for='" + error_field_name + "']"
-      $(query).parents('.form-group').addClass('has-error');
-    }
-
-    $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
-
-    $('body').scrollTop(0);
-    $("#btn-submit").removeAttr('disabled');
-    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
-  }
-
-  function PdWorkshopSurveyFormSubmit(event)
-  {
-    $("#btn-submit").attr('disabled','disabled');
-    $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
-
-    $.ajax({
-      url: "/forms/PdWorkshopSurvey",
-      type: "post",
-      dataType: "json",
-      data: $('#pd-workshop-survey-form').serialize()
-    }).done(processResponse).fail(processError);
-
-    event.preventDefault();
-  }

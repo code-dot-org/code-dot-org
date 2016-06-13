@@ -1,0 +1,13 @@
+- if current_user && current_user.permissions.where(permission: 'levelbuilder').any?
+  = render layout: 'shared/admin' do
+    %li= link_to 'Videos', videos_path
+    %li
+      = link_to('Scripts', scripts_path)
+      = link_to('(Update all)', scripts_path(rake: '1'))
+      %ul
+        - Script.all.each do |script|
+          %li
+            = link_to("(#{t 'crud.edit'})", edit_script_path(script))
+            = link_to(data_t_suffix('script.name', script.name, 'title'), script_level_path(script, ScriptLevel::NEXT))
+    %li= link_to t('builder.manage'), new_level_path
+    %li= link_to 'Gallery', gallery_activities_path

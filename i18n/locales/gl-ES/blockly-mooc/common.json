@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Intenta empregar un dos seguintes bloques:",
   "tryHOC":"Proba a Hora do Código",
   "unnamedFunction":"Tes unha variable ou función sen nome. Non te esquezas de darlle a todo un nome descriptivo.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Queres aprender a programar?",
   "watchVideo":"Mira o vídeo",
   "when":"cando",

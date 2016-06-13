@@ -234,14 +234,14 @@
           <block type="studio_playSound">
             <title name="SOUND">hit</title>
           </block>
-          <block type="studio_makeProjectile">
-            <title name="VALUE">"blue_fireball"</title>
-            <title name="ACTION">"bounce"</title>
-          </block>
           <block type="studio_throw">
             <title name="SPRITE">0</title>
-            <title name="VALUE">"blue_fireball"</title>
+            <title name="VALUE">"basketball"</title>
             <title name="DIR">1</title>
+          </block>
+          <block type="studio_makeProjectile">
+            <title name="VALUE">"basketball"</title>
+            <title name="ACTION">"bounce"</title>
           </block>
           <block type="studio_setSpriteSizeParams" inline="true">
             <value name="SPRITE">

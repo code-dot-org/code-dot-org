@@ -440,6 +440,7 @@ bn-BD:
   dashboard_landing_new_beta: 'নতুন! প্রাথমিক শ্রেণীর  শিক্ষার্থীদের জন্য পরীক্ষামূলক কোর্স ব্যাবহার করে দেখুন।'
   dashboard_landing_new_k5courses: 'নতুন! প্রাথমিক শ্রেণীর  শিক্ষার্থীদের জন্য আমাদের কোর্স ব্যাবহার করে দেখুন।'
   dashboard_landing_useful_links: অন্যান্য প্রয়োজনীয় লিংক (শুধুমাত্র ইংরেজিতে)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: স্বতন্ত্রভাবে প্রশ্ন করন! আমাদের মাসিক ভিডিও অফিস সময়ে ভিজিট করুন।
   dashboard_landing_print_certificates: Print certificates for students who finish this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
@@ -453,6 +454,10 @@ bn-BD:
   dashboard_landing_available_courses: 'এখানে  আপনার এবং আপনার ছাত্রদের জন্য বিদ্যমান কোর্সগুলো রয়েছে।'
   dashboard_landing_more_tutorials: আরও টিউটোরিয়াল দেখতে চান?
   dashboard_landing_more_tutorials_desc: 'আমাদের সহযোগী করা আরো অনেক টিউটোরিয়াল এখানে <a href="/learn/beyond">আছে ।</a> রোবট নিয়ে প্রোগ্রাম, ওয়েব পৃষ্ঠা তৈরি, নিজের অ্যাপ তৈরি বা অন্য ভাষা যেমন সি + +, রুবি, বা পাইথন নিয়ে কাজ করতে শিখুন!'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: সব বয়সের জন্য এক ঘন্টার কোডিং
   dashboard_hoc_courses_desc: আপনার ছাত্রদের সাথে এই ছোট ১ ঘন্টা টিউটোরিয়াল চেষ্টা করুন!
   dashboard_hoc_courses_desc_and_cta: 'ছোট ছোট, এক ঘণ্টার এই টিউটোরিয়াল আপনার ছাত্রের সাথে চেষ্টা করুন। <a href="https://hourofcode.com">কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ সময় এক ঘন্টার কোড আন্দোলনে যোগ দিন।</a>'
@@ -487,6 +492,9 @@ bn-BD:
   dashboard_action_required: প্রয়োজনীয়
   dashboard_assessments_view: 'মূল্যায়ন দেখুন:'
   dashboard_assessments_none: মূল্যায়ন নাই
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'স্তর দ্বারা ফিল্টার করুন:'
   dashboard_filter_all: সব
   dashboard_download_csv: CSV ডাউনলোড করুন
@@ -516,6 +524,7 @@ bn-BD:
   dashboard_progress_submitted: দাখিল
   dashboard_progress_view: 'আগ্রগতি দেখুন:'
   dashboard_progress_student_in_script: '%{student_name} এর %{script_name} তে অগ্রগতি তথ্য'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'লিখিত জবাব দেখুন:'
   dashboard_responses_none: কোন টেক্সট প্রতিক্রিয়া নাই
   dashboard_sections_new_section: নতুন বিভাগ
@@ -589,6 +598,7 @@ bn-BD:
   dashboard_course2: 'কোর্স 2:'
   dashboard_course3: 'কোর্স 3:'
   dashboard_course4: 'কোর্স ৪ (পরীক্ষামুলক):'
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: পাঠ্যক্রম
   dashboard_curriculum_overview: K-5 কারিকুলাম তথ্যাবলী
   dashboard_overview: সংক্ষিপ্ত বিবরণ
@@ -760,12 +770,17 @@ bn-BD:
   course3_name: কোর্স ২
   course4_name: কোর্স ৪
   accelerated_name: Accelerated Course
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
   cspunit3_name: সিএস এর মূলনীতি ইউনিট ৩
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: ৯-১২ গ্রেড
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: Accelerated Course
@@ -780,7 +795,9 @@ bn-BD:
   math_category_name: গণিত
   hoc_category_name: এক ঘন্টার কোড
   csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: অ্যাপ ল্যাব
   applab_gradelevel: বয়সের ১৩+
   applab_shortdescription_congrats: অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি সহজ অ্যাপ বানানো হয়। একটি অ্যাপ্লিকেশন নকশা (ডিজাইন) করুন ,তাকে কাজ করানোর জন্য ব্লক বা জাভাস্ক্রিপ্ট দিয়ে কোড করুন, তারপর এক সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন শেয়ার করুন।

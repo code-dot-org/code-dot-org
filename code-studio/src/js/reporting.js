@@ -1,5 +1,6 @@
 /* global appOptions */
 
+import $ from 'jquery';
 var clientState = require('./clientState');
 
 var lastAjaxRequest;
@@ -54,7 +55,7 @@ reporting.sendReport = function (report) {
   //Post milestone iff the server tells us, or if we are on the last level and have passed
   if (appOptions.postMilestone || (appOptions.level.puzzle_number && appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass)) {
 
-    var thisAjax = jQuery.ajax({
+    var thisAjax = $.ajax({
       type: 'POST',
       url: report.callback,
       contentType: 'application/x-www-form-urlencoded',

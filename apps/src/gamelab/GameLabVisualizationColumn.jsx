@@ -1,3 +1,4 @@
+var React = require('react');
 var msg = require('../locale');
 var connect = require('react-redux').connect;
 

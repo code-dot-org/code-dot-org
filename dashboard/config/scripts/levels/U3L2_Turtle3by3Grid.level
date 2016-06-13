@@ -16,6 +16,7 @@
         ]
       },
       "turnLeft": {
+        "paramButtons": null,
         "params": [
           ""
         ],
@@ -60,7 +61,12 @@
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "true",
-    "execute_palette_apis_only": "true"
+    "execute_palette_apis_only": "true",
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

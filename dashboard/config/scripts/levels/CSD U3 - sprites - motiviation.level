@@ -40,8 +40,8 @@
     },
     "show_d_pad": "true",
     "edit_code": true,
-    "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/61d8f4e6c4d1473d51962ff66dab6bc8-image-1463164674431.gif\" style=\"width:200px; float:right\">\r\n# Managing Lots of Variables\r\n\r\nThis level should be nothing new. Its a practice of things you have learned in the past.\r\n\r\nYou will create an animation that looks like this.\r\n\r\n# Do this\r\n\r\n* Create two rectangles. The rectangles should:\r\n\t* Grow in size (Hint: Think width and height getting bigger) \r\n    * Move down the screen (Hint: Think y getting bigger)\r\n    * Keep the same x position as they grow (Hint: This is a tricky one. Think about doing something with half the change in width)\r\n    * Change to a new random color each time they move but both squares should be the same color (Hint: One variable)]\r\n    \r\n* This program requires creating lots of variables to manage the different parts of the rectangle.",
+    "embed": "true",
+    "markdown_instructions": "# Lots of Variables\r\n\r\nHow many variables do you think it makes to the program on the right?\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -63,7 +63,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "start_blocks": "var rectColor = color(0,0,0);\r\n\r\nvar xRect1 = 100;\r\nvar yRect1 = 100;\r\nvar width1 = 0;\r\nvar height1 = 0;\r\n\r\nvar xRect2 = 300;\r\nvar yRect2 = 100;\r\nvar width2 = 0;\r\nvar height2 = 0;\r\n\r\nframeRate(30);\r\nfunction draw() {\r\n  background(\"white\");\r\n  xRect1 = xRect1 - 0.5;\r\n  yRect1 = yRect1 + 2;\r\n  width1 = width1 + 1;\r\n  height1 = height1 + 1;\r\n  \r\n  xRect2 = xRect2 - 0.5;\r\n  yRect2 = yRect2 + 2;\r\n  width2 = width2 + 1;\r\n  height2 = height2 + 1;\r\n  \r\n  rectColor = color(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255));\r\n  fill(rectColor);\r\n  rect(xRect1, yRect1, width1, height1);\r\n  rect(xRect2, yRect2, width2, height2);\r\n}\r\n"
   },
   "published": true,
   "notes": "",

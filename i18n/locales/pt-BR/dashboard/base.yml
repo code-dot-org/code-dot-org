@@ -23,8 +23,8 @@ pt-BR:
           future: não pode estar no futuro
   hello: Olá, mundo
   welcome_back: 'Bem-vindo de volta, %{name}'
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Seu plano de aprendizagem profissional
+  see_your_learning_plan: Ver o seu plano de aprendizagem
   submit: Enviar
   unsubmit: Cancelar envio
   previous_page: Página anterior
@@ -336,19 +336,19 @@ pt-BR:
     announcement_view_all: Ver todos
     announcement_message: '<b>22 de abril de 2016</b> - Atividades offline são partes vitais do processo de aprendizagem, mas os professores nos disseram que encontrar todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você pode encontrar todos os recursos offline numa página só. Associar as lições com qualquer aula de ciência da computação, ou usar a vídeo-aula como um curso independente.'
     announcement_button: Saiba mais
-    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: Add your name
+    announcement_petition: Como professor, você está liderando o caminho em um movimento para dar a cada aluno em todas as escolas a oportunidade de aprender informática. Agora, é hora de deixar seus representantes notícias suas. Esta semana, líderes de educação, 28 governadores e maiores empresas de CEOs da América se uniram em uma carta aberta pedindo o Congresso dos EUA para financiar a educação de ciência de computador K-12.
+    announcement_petition_button: Adicione o seu nome
   move_students:
-    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as the new section.
-    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
-    students_not_yours: You cannot move students from a section that does not belong to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
+    new_section_dne: 'Desculpe, mas não existe secção %{new_section_code}. Por favor insira um código de seção diferente.'
+    section_code_not_entered: Forneça por favor current_section_code.
+    section_code_cant_be_current_section: A seção atual não pode ser o mesmo que a nova seção.
+    current_section_dne: 'Desculpe, mas a seção %{current_section_code} não existe. Por favor insira um código de seção diferente.'
+    students_not_yours: Você não pode mover os alunos de uma seção que não pertence a você.
+    stay_enrolled_not_entered: Por favor, forneça stay_enrolled_in_current_section.
+    student_ids_not_entered: Por favor, forneça students_ids.
+    student_not_found: Um ou mais alunos não podem ser encontrados.
+    all_students_must_be_in_current_section: Todos os alunos, atualmente, devem estar inscrito em sua seção.
+    already_enrolled_in_new_section: Você não pode mover estes estudantes porque este professor já os tem em outra seção.
   share:
     title: Aprenda no Code Studio
     description: Qualquer pessoa pode aprender ciência da computação. Crie jogos, aplicativos e arte com a programação.
@@ -482,12 +482,14 @@ pt-BR:
     picture_count: 'Nos <b>%{days}</b> dias anteriores, alunos criaram <b>%{count}</b> imagens desenvolvendo seus próprios programas de computador. Clique nas imagens para ver cada programa em execução.'
     activity_count: 'Nos últimos <b>%{days}</b> dias, os alunos criaram <b>%{count}</b> aplicativos e figuras escrevendo seus próprios programas de computador. Clique nas figuras e capturas de tela para ver cada programa em funcionamento.'
     want_to_make_your_own: Quer criar seu próprio programa?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Mais &rarr;'
     caption_by_name_age: 'feito por %{name}, %{age} anos'
     caption_time_ago: 'há %{time_ago}'
     header: Galeria
     header_playlab: Laboratório
     header_artist: Artista
+    report_abuse: Reportar abuso
   landing:
     prerelease: "Este curso está em sua versão <span class='betatext'>beta</span>. Isso significa que esta não é a versão final do curso, e ele está sujeito a revisões conforme os feedbacks são recebidos e as melhorias são feitas."
     prerelease_hoc2014: "Este tutorial está na versão <span class='betatext'>beta</span>. Ele está sujeito a revisões, conforme são recebidos feedbacks e melhorias são feitas."
@@ -615,9 +617,9 @@ pt-BR:
     share: Compartilhar
     share_title: Compartilhar seu projeto
     share_copy_link: 'Copie o link:'
-    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
-    embed: Embed
-    advanced_share: Show advanced options
+    share_embed_description: Você pode colar o código embed em uma página HTML para exibir o projeto em uma página da Web.
+    embed: Incorporar
+    advanced_share: Mostrar opções avançadas
     close: Fechar
     more: Mais
     name: Nome
@@ -659,19 +661,24 @@ pt-BR:
         acknowledge: 'Ao enviar essas informações você reconhece que elas serão tratadas de acordo com a %{link_start_privacy}Política de Privacidade%{link_end} e os %{link_start_tos}Termos de Serviço%{link_end}'
   peer_review:
     accepted:
-      name: Accepted
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+      name: Aceito
+      description: '<strong>Sim</strong>, essa submissão<strong>cumpre</strong>os requisitos'
     rejected:
-      name: Rejected
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+      name: Rejeitado
+      description: '<strong>Não</strong>, essa submissão <strong>não satisfaz</strong> os requisitos'
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
+      name: Escalonado
+      description: Eu gostaria de um instrutor para rever esta apresentação
+    instructor_feedback: Feedback do instrutor
+    peer_feedback: Feedback de mesmo nível
+    outdated: Este feedback foi adicionado para uma versão anterior apresentada
   components:
     icon_library:
       search_placeholder_text: Procure por um ícone...
       no_icons_found: Nenhum ícone foi encontrado
   flex_category:
     required: Visão geral
-    content: Content
-    practice: Teacher Practices
+    content: Conteúdo
+    practice: Professor de práticas
+  external_links:
+    disclaimer_md: "<strong>Aviso: Você está agora deixando o domínio Code.org, para um site que não é operado por Code.org.</strong> Este site pode ter políticas de privacidade que diferem do Code.org. <br/> <br/> Nós selecionamos estes recursos de terceiros, porque achamos que eles serão úteis para você. Enquanto nós não somos diretamente responsáveis pelo conteúdo deste site, por favor <a href='mailto:support@code.org'> entre em contato com o suporte</a> se você encontrar o conteúdo censurável, ou se o site vinculado não está mais disponível."

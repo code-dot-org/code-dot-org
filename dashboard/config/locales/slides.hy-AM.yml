@@ -272,11 +272,11 @@
           until we drag out our "fill 5" function block from functions category.
       5:
         image: notes/stage13_5.jpg
-        text: 'Let''s put the "fun" back in "FUNction!" '
+        text: Let's put the "fun" back in "FUNction!"
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'Hi, I''m Makinde! Let''s learn about the "while block." '
+        text: Hi, I'm Makinde! Let's learn about the "while block."
       2:
         image: notes/stage9_6.jpg
         text: The "while block" will do whatever you put inside it AS LONG AS the

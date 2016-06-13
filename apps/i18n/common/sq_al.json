@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback": "Provo të përdorësh një nga blloqet më poshtë:",
   "tryHOC": "Provo Orën e Kodimit",
   "unnamedFunction": "Ti ke një variabël ose funksion që nuk ka emër. Mos harro t'i japësh gjithçkaje një emër përshkrues.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Dëshiron të mësosh se si të kodosh?",
   "watchVideo": "Shiko Videon",
   "when": "kur",

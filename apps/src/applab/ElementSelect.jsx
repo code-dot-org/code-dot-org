@@ -1,3 +1,4 @@
+var React = require('react');
 var elementUtils = require('./designElements/elementUtils.js');
 
 module.exports = React.createClass({

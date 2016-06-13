@@ -459,6 +459,7 @@ tr-TR:
   dashboard_landing_new_beta: Yeni! K-5 öğrencileri için beta kurslarımızı deneyin.
   dashboard_landing_new_k5courses: Yeni! K-5 öğrenciler için kurslarımızı deneyin.
   dashboard_landing_useful_links: Diğer faydalı linkler (yalnızca İngilizce)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Şahsen bir soru sor! aylık video saatlerimizi ziyaret edin.
   dashboard_landing_print_certificates: Bu dersi bitiren öğrenciler için sertifika bastır
   dashboard_landing_educator_blog: Ders malzemeleri hakkında haberler ve güncellemeleri eğitimci bloğumuzda okuyun
@@ -472,6 +473,10 @@ tr-TR:
   dashboard_landing_available_courses: Siz ve öğrencileriniz için mevcut dersler.
   dashboard_landing_more_tutorials: Daha fazla öğretici görmek ister misiniz?
   dashboard_landing_more_tutorials_desc: 'Burada <a href="/learn/beyond">ortaklarımız tarafından sunulan</a> daha fazla öğretici bulunmakta. Robotlar ile programlamayı, web sayfaları yapmayı, kendinize ait uygulamalar yapmayı öğrenin veya C++, Ruby veya Python gibi diğer kodlama dillerini keşfedin!'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Her yaş için Kod Saati
   dashboard_hoc_courses_desc: Öğrencileriniz ile birlikte 1 saatlik eğitimlerden birisini uygulayın!
   dashboard_hoc_courses_desc_and_cta: 'Bu bir saatlik kısa eğitimleri öğrencilerinizle deneyin ve Bilgisayar Bilimi Eğitimi Haftasında <a href="https://hourofcode.com">Kod Saati hareketine katılın.</a> '
@@ -504,6 +509,9 @@ tr-TR:
   dashboard_action_required: gerekli
   dashboard_assessments_view: 'Değerlendirmeleri gör:'
   dashboard_assessments_none: Değerlendirme yok
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Aşamaya göre filtrele:'
   dashboard_filter_all: Tamamı
   dashboard_download_csv: CSV indir
@@ -533,6 +541,7 @@ tr-TR:
   dashboard_progress_submitted: gönderildi
   dashboard_progress_view: İlerlemeyi Görüntüle
   dashboard_progress_student_in_script: 'İlerleme bilgilerini %{script_name} %{student_name} için'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: Yanıtları Görüntüle
   dashboard_responses_none: Cevap yok
   dashboard_sections_new_section: Yeni bölüm
@@ -608,6 +617,7 @@ tr-TR:
   dashboard_course2: 'Ders 2:'
   dashboard_course3: 'Ders 3:'
   dashboard_course4: 'Ders 4 (beta): '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: Ders Programı
   dashboard_curriculum_overview: K-5 Eğitim Programına genel bakış
   dashboard_overview: Genel Bakış
@@ -780,12 +790,17 @@ tr-TR:
   course3_name: Kurs 3
   course4_name: Ders 4
   accelerated_name: Hızlandırılmış Kurs
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
   cspunit3_name: Bilgisayar Bilimleri İlkeleri Ünite 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: 9-12. Sınıflar
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: Hızlandırılmış Kurs
@@ -800,7 +815,9 @@ tr-TR:
   math_category_name: Matematik
   hoc_category_name: Saat Kodu
   csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Uygulama Laboratuvarı
   applab_gradelevel: 13 + Yaş grubu
   applab_shortdescription_congrats: App Lab basit uygulamalar yapabileceğiniz bir uygulama geliştirme ortamıdır. Kod blokları ya da JavaScript ile bir uygulama yapın ve saniyeler içinde paylaşın

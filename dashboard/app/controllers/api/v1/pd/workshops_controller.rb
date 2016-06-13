@@ -1,5 +1,5 @@
 class Api::V1::Pd::WorkshopsController < ::ApplicationController
-  load_and_authorize_resource class: 'Pd::Workshop'
+  load_and_authorize_resource class: 'Pd::Workshop', except: :k5_public_map_index
 
   # GET /api/v1/pd/workshops
   def index
@@ -11,7 +11,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   end
 
   def k5_public_map_index
-    @workshops = @workshops.where(
+    @workshops = Pd::Workshop.where(
       course: Pd::Workshop::COURSE_CSF,
       workshop_type: Pd::Workshop::TYPE_PUBLIC
     )

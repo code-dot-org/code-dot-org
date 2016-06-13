@@ -93,7 +93,7 @@ html[dir='rtl'] #visualizationColumn {
   position: relative;
   top: 0px;
   left: 0px;
-  overflow-x: hidden;
+  overflow: visible;
 }
 
 #visualizationColumn.centered_embed {
@@ -103,7 +103,6 @@ html[dir='rtl'] #visualizationColumn {
 #visualizationColumn.pin_bottom {
   position: absolute;
   bottom: 0px;
-  overflow-y: hidden;
 
   #belowVisualization {
     position: absolute;
@@ -853,8 +852,8 @@ input[type="radio"] {
 
 }
 
-/* Instructions. */
-#bubble {
+/* Instructions. Not netsim-bubbles are styled in JSX */
+#bubble.netsim-bubble {
   color: $black;
   margin-bottom: 10px;
   position: relative;
@@ -866,7 +865,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 
-#prompt-icon-cell {
+.prompt-icon-cell {
   vertical-align: top;
   width: 50px;
   padding-right: 10px;

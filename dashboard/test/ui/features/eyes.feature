@@ -6,7 +6,7 @@ Background:
 
 Scenario:
   When I open my eyes to test "bounce game"
-  And I am on "http://learn.code.org/2014/1?noautoplay=true"
+  And I am on "http://learn.code.org/s/events/stage/1/puzzle/1?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
   And I wait to see "#x-close"

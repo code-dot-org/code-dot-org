@@ -84,14 +84,14 @@
   congratulations_on_completing_course3: Parabéns por ter completado o Curso 3
   congratulations_on_completing_course4: Parabéns por ter completado o Curso 4
   congratulations_on_completing_accelerated: Parabéns por ter completado o Curso Acelerado
-  congrats_next_tutorials_title: A seguir, experimente esses tutoriais
+  congrats_next_tutorials_title: Graduação para o próximo nível
   congrats_next_tutorials_desc: Experimente esses tutoriais menores, de 1 hora, ou
     experimente um <a href="%{current_path}/next">tutorial dos parceiros</a>.
   get_a_certificate_of_achievement: Obter um certificado de conclusão
   view_course: Ver curso
   view_unit: Ver unidade
   make_app: Crie um aplicativo
-  congrats_guest_speaker_title: Convide um orador para a sua sala de aula
+  congrats_guest_speaker_title: Encontre um orador convidado para sua sala de aula
   congrats_guest_speaker_desc: Agora que os seus alunos acabaram um curso de programação,
     considere celebrar e relacionar o curso com coisas que eles podem construir no
     mundo real através de um palestrante convidado à sua turma. Você pode usar o nosso
@@ -99,7 +99,7 @@
     procurar estudantes de informática ou profissionais técnicos, de qualquer outra
     cidade, e que estejam prontos para inspirar os seus alunos remotamente via vídeo
     chat.
-  congrats_guest_speaker_cta: Encontre um palestrante convidado
+  congrats_guest_speaker_cta: Encontre um orador convidado
   congrats_third_party_title: Usar suas novas habilidades com estes aplicativos e
     sites
   third_party_gradelevel_kto8: Alunos do Ensino Fundamental
@@ -157,22 +157,23 @@
   third_party_khan_btn_learn: Aprenda CC com a Khan Academy
   third_party_khan_btn_forum: Forum de Ciência da Computação de Khan Academy
   third_party_appinv_desc: MIT App Inventor é uma ferramenta de programação baseada
-    em blocos que permite que todos, mesmo os novatos, comecem a programar e criem
+    em blocos que permite que todos, mesmo os novatos, comecem a programar e criar
     aplicativos totalmente funcionais para dispositivos Android. Os recém-chegados
-    ao App Inventor podem ter sua primeira app acabada e funcionando numa hora ou
-    menos e podem programar aplicativos mais complexos em significativamente menos
+    ao App Inventor podem ter seu primeiro app terminado e funcionando numa hora ou
+    menos e pode ser programado aplicativos mais complexos em significativamente menos
     tempo do que com linguagens mais tradicionais, baseadas em texto.
   third_party_appinv_btn_curriculum: Baixar o currículo do aplicativo Inventor 2
   third_party_appinv_btn_forum: Fórum do aplicativo Inventor 2
   third_party_appinv_btn_site: Visite o aplicativo Inventor 2
   third_party_codehs_desc: CodeHS apresenta os blocos de construção da programação
-    com vídeos curtos, código de exemplo e um monte de exercícios de programação que
-    fazem a codificação divertida e acessível a iniciantes. Para as escolas e professores
-    CodeHS fornece o currículo, ferramentas para professores e PD. Os aprendizes individuais,
-    põem obter a ajuda que precisam, ao longo do caminho, de uma rede de tutores.
-  third_party_codehs_btn_try: Intro CS saiba Mais para as escolas
-  third_party_codecademy_desc: Nós estão repensando a educação do fundo para acima.
-    A web tem repensado quase tudo - comércio, redes sociais, saúde e muito mais.
+    com vídeos curtos, exemplos de código e um monte de exercícios de programação
+    que fazem a codificação divertida e acessível à iniciantes. Para as escolas e
+    professores, o CodeHS fornece o currículo, ferramentas para professores e PD.
+    Para os aprendizes individuais, você pode obter a ajuda que precisa, ao longo
+    do caminho, de uma rede de tutores.
+  third_party_codehs_btn_try: Intro CS Saiba Mais para as Escolas
+  third_party_codecademy_desc: Nós estamos repensando a educação de baixo para acima.
+    A web tem repensado em quase tudo - comércio, redes sociais, saúde e muito mais.
     Estamos construindo a educação que o mundo precisa - a primeira verdadeira rede
     de educação nativa.
   third_party_codecademy_btn_curriculum: Baixar currículo Codecademy
@@ -375,9 +376,9 @@
   homepage_banner_20k_teachers: 20.000 professores treinados e agora ensinando ciência
     da computação em salas de aulas.
   homepage_banner_20k_teachers_link: Saiba mais
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress: Líderes da América estão chamando o Congresso para financiar
+    a ciência da computação K-12.
+  homepage_banner_congress_link: Adicionar suporte
   homepage_slot_text_title_hoc: Hora do Código
   homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
   homepage_slot_text_link_hoc: Faça uma Hora do Código
@@ -403,7 +404,7 @@
   homepage_slot_text_link_stats: Veja as estatísticas
   homepage_slot_text_link_buy: Participe
   homepage_slot_text_link_donate: Fazer uma doação
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: Camisetas, chapéus e muito mais
   homepage_header_codestudio: Criações de alunos no Code Studio
   homepage_header_donors: A Code.org agradece a seus colaboradores
   homepage_donors_seall: Ver todos
@@ -604,6 +605,7 @@
   dashboard_landing_new_k5courses: Novo! Conheça nossos cursos para alunos do pré
     ao 5º ano.
   dashboard_landing_useful_links: Outros links úteis (disponível apenas em inglês)
+  dashboard_landing_classroom_resources: Recursos para sua sala de aula
   dashboard_landing_office_hours: Faça sua pergunta pessoalmente! Marque uma conferência
     com vídeo em nosso horário comercial (somente em inglês).
   dashboard_landing_print_certificates: Imprima certificados para os alunos que terminarem
@@ -624,6 +626,11 @@
   dashboard_landing_more_tutorials_desc: Existem mais tutoriais <a href="/learn/beyond">oferecidos
     por nossos parceiros.</a> Aprenda a programar com robôs, criar páginas web, criar
     seu próprio aplicativo, ou explorar linguagens como C++, Ruby, ou Python!
+  dashboard_landing_inspire: Inspire os seus alunos com cartazes, vídeos e muito mais.
+  dashboard_landing_video_library: Use um vídeo da Biblioteca de Vídeo sobre conceitos
+    da ciência de computador.
+  dashboard_landing_report_bug: Solicitar um recurso ou reportar um bug.
+  dashboard_landing_teacher_forum: Participe da comunidade de aprendizagem profissional.
   dashboard_hoc_courses: A Hora do Código para todas as idades
   dashboard_hoc_courses_desc: Experimente assistir um destes vídeos de menos de 1
     hora com seus alunos!
@@ -679,6 +686,13 @@
   dashboard_action_required: obrigatório
   dashboard_assessments_view: 'Ver avaliações em:'
   dashboard_assessments_none: Não há avaliações
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Sumários
+  dashboard_assessments_answers: Todas as respostas
   dashboard_filter_by_stage: 'Filtrar por estágio:'
   dashboard_filter_all: Todos
   dashboard_download_csv: Baixar o CSV
@@ -710,6 +724,7 @@
   dashboard_progress_view: 'Ver o andamento em:'
   dashboard_progress_student_in_script: Informações do progresso para %{student_name}
     em %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'Exibir respostas de texto em:'
   dashboard_responses_none: Não há respostas de texto
   dashboard_sections_new_section: Nova turma
@@ -736,25 +751,26 @@
     as informações da conta para distribuir individualmente para seus alunos.
   dashboard_sections_switch_section: 'Trocar de turma:'
   dashboard_sections_close: Fechar
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_students_desc: Selecione os alunos para mover para uma nova
+    seção. Os alunos movidos não limpará o progresso deles.
+  dashboard_sections_one_per_teacher: Os alunos só podem estar uma seção para cada
+    professor. Seus alunos serão adicionados a esta nova seção e deixar a seção de
+    antiga.
   dashboard_sections_move_to_section: 'Mover para a seção:'
   dashboard_sections_enter_code: 'Digite o código da seção:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_code_placeholder: 6-código de caractere (ABCDEF)
   dashboard_sections_other_section: Outra seção
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
+  dashboard_sections_both_sections: Gostaria que o aluno(s) estejam em ambas seções?
+  dashboard_sections_yes_both: Sim, eu quero copiar o aluno(s) para estar nesta seção
+    atual E na nova seção
+  dashboard_sections_no_move: Não, eu quero mover o aluno(s) para estar só na nova
+    seção.
   dashboard_sections_move_students: Mover alunos
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  dashboard_error_none_selected: Você não selecionou nenhum aluno para mover. Por
+    favor, selecione pelo menos um aluno.
+  dashboard_error_other_section: Se você estiver movendo os alunos entre suas próprias
+    seções, selecione sua seção na lista suspensa. Apenas selecione a 'seção outros'
+    para mover os seus alunos para a seção de um professor diferente.
   dashboard_students_add_student: Adicionar aluno
   dashboard_students_add_students: Adicionar vários alunos
   dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por
@@ -819,6 +835,8 @@
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4 (beta): '
+  dashboard_unplugged: Se você não tem computadores, <a href='%{unplugged_url}'> tente
+    estas lições desligadas</a> em sua sala de aula.
   dashboard_curriculum: Currículo
   dashboard_curriculum_overview: Visão geral do currículo do pré ao 5º ano
   dashboard_overview: Visão geral
@@ -885,12 +903,13 @@
     pode encontrar todos os recursos offline numa página só. Associar as lições com
     qualquer aula de ciência da computação, ou usar a vídeo-aula como um curso independente."
   dashboard_announce_button_text: Saiba mais
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition: Como professor, você está liderando o caminho em um
+    movimento para dar a cada aluno em todas as escolas a oportunidade de aprender
+    informática. Agora, é hora de deixar seus representantes notícias suas. Esta semana,
+    líderes de educação, 28 governadores e maiores empresas de CEOs da América se
+    uniram em uma carta aberta pedindo o Congresso dos EUA para financiar a educação
+    de ciência de computador K-12.
+  dashboard_announce_petition_button: Adicione o seu nome
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -1017,12 +1036,17 @@
   course3_name: Curso 3
   course4_name: Curso 4
   accelerated_name: Curso acelerado
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
+  cspunit1_name: 'Unidade 1: Informação Digital'
+  cspunit2_name: 'Unidade 2: A Internet'
   cspunit3_name: Princípios de Informática - Unidade 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit4_name: 'Unidade 4: Dados'
+  cspunit5_name: 'Unidade 5: Explorar e Criar PT'
+  cspunit6_name: 'Post-AP: Bancos de dados em aplicativos'
+  csp1_name: 'Unidade 1: A Internet'
+  csp2_name: 'Unidade 2: Informação Digital'
+  cspassessment_name: Teste completo - 50 questões
+  cspexam1-mWU7ilDYM9_name: Teste parte 1 - 25 perguntas
+  cspexam2-AKwgAh1ac5_name: Teste parte 2 - 25 perguntas
   cspunit3_gradelevel: Alunos do 9° ano ao Ensino Médio
   cspunit3_shortdescription_congrats: Esta unidade introduz os conceitos fundamentais
     de programação de computadores, que ajudam na habilidade de criar ricos aplicativos
@@ -1031,18 +1055,20 @@
     mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens
     de programação.
   20-hour_name: Curso acelerado
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
+  algebra_name: CS em Álgebra
+  AlgebraA_name: CS em Álgebra Curso A
+  AlgebraB_name: CS em Álgebra Curso B
   gumball_name: Gumball
   classicmaze_name: Labirinto clássico
   iceage_name: Era do Gelo
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Star Wars (Blocos)
   math_category_name: Matemática
   hoc_category_name: Hora do Código
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csf_category_name: Fundamentos de CS
+  csp_category_name: "'15-'16 Princípios do CS"
+  csp17_category_name: "'16-'17 Princípios do CS"
+  cspexams_category_name: CS Princípios Teste de prática
   applab_name: Laboratório de Aplicativo
   applab_gradelevel: A partir de 13 anos
   applab_shortdescription_congrats: App Lab é um ambiente de programação onde você
@@ -1782,11 +1808,11 @@
   infinity_shortcode: inf
   playlab_shortcode: jogue
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  'yes': 'Yes'
+  'no': 'No'
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
+  dashboard_sections_table_stage_extras: Stage Extras

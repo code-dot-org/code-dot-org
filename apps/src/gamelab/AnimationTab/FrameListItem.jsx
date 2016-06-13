@@ -1,6 +1,7 @@
 /** @file Single list item representing an animation frame. */
 'use strict';
 
+var React = require('react');
 var _ = require('../../lodash');
 var color = require('../../color');
 var connect = require('react-redux').connect;

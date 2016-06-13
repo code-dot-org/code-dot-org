@@ -1,36 +1,6 @@
 require 'test_helper'
 
 class RedirectsTest < ActionDispatch::IntegrationTest
-  test 'redirect k-1' do
-    get '/s/k-1'
-    assert_redirected_to '/s/course1'
-  end
-
-  test 'redirect 2-3' do
-    get '/s/2-3'
-    assert_redirected_to '/s/course2'
-  end
-
-  test 'redirect 4-5' do
-    get '/s/4-5'
-    assert_redirected_to '/s/course3'
-  end
-
-  test 'redirect k-1 puzzle' do
-    get '/s/k-1/puzzle/99'
-    assert_redirected_to '/s/course1'
-  end
-
-  test 'redirect 2-3 puzzle' do
-    get '/s/2-3/puzzle/99'
-    assert_redirected_to '/s/course2'
-  end
-
-  test 'redirect 4-5 puzzle' do
-    get '/s/4-5/puzzle/99'
-    assert_redirected_to '/s/course3'
-  end
-
   test 'redirect beta' do
     get '/beta'
     assert_redirected_to '/'
@@ -86,18 +56,8 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/course1/stage/1/puzzle/1'
   end
 
-  test "old teacher dashboard redirects to new teacher dashboard" do
-    urls = %w{/followers /followers/manage /followers/sections /stats/students /sections/new /sections/1/edit}
-
-    urls.each do |url|
-      get url
-      assert_response :redirect#, "for url #{url}"
-      assert_redirected_to 'https://test.code.org/teacher-dashboard', "for url #{url}"
-    end
-  end
-
   test 'old script id paths redirect to named paths' do
-    %w(2:Hour%20of%20Code 3:edit-code 4:events 7:jigsaw).map{ |s| s.split ':' }.each do |before, after|
+    %w(2:Hour%20of%20Code 4:events 7:jigsaw).map{ |s| s.split ':' }.each do |before, after|
       get "/s/#{before}"
       assert_redirected_to "/s/#{after}"
     end

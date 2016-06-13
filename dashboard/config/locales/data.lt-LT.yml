@@ -809,9 +809,9 @@
         starwars_blocks_intro: "Žvaigždžių Karai: programuojame galaktiką - įžanga"
         starwars_blocks_events: "Žvaigždžių Karai: programuojame galaktiką - Įvykiai"
         starwars_blocks_congrats: "Žvaigždžių Karai: programuojame galaktiką - sveikinimai"
-        mc_intro: Minecraft - Pristatymas
-        mc_repeat: Minecraft - Kartoti
-        mc_if_statements: Minecraft - "Jei" sakiniai
+        mc_intro: Minecraft - Įvadas
+        mc_repeat: Minecraft - Kartojimas
+        mc_if_statements: Minecraft - Sąlygos sakiniai
         mc_congrats_share: Minecraft - Sveikiname
         mc_congrats_no_share: Minecraft - Sveikiname
         gumball_intro: Gumball Hour of Code - Introduction
@@ -838,8 +838,8 @@
         studio_say_text: "Įvesk, ką tavo veikėjas turės pasakyti"
         jigsaw_click: Nuspausk ant šio blokelio!
         move_elsa_forward: Prijunk blokelį „eik į priekį“  prie blokelio  „paleidus“
-        turn_elsa: Panaudok blokelį „pasisuk“, kad Elsa galėtų pasisukti. Skaičių,
-          esantį šalia laipsnių, galima pakeisti
+        turn_elsa: Panaudok blokelį „pasisuk“, kad Elsa galėtų pasisukti. Skaičius,
+          esantis šiame blokelyje, parodo Elsos pasisukimo kampą
         replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
         replace_questions_degree: Nuspausk rodyklę, kad pakeistum „???“ tinkamu laipsnių
           skaičiumi
@@ -916,17 +916,17 @@
         Infinity_move_right_runbutton: Pridėti judėjimo blokelį čia
         Infinity_move_directions_callout: Kuris blokelis privers Baymax judėti aukštyn,
           kai yra nuspausta rodyklė aukštyn?
-        Infinity_move_directions_callout_arrow: Naudokis rodyklėmis, kad vairuotum
+        Infinity_move_directions_callout_arrow: Naudokis šiomis rodyklėmis, kad vairuotum
         Infinity_move_collide_callout: Groti garsą, kai įvyks šis įvykis.
         Infinity_repeat_callout: Padėkite judėjimo blokelius viduje
         craft_run_button_callout: Paspausk „Paleisti" ir išmėgink savo programą
-        craft_drag_block_callout: Nutempk "eikPirmyn();" blokelį ir prikabink jį po
+        craft_drag_block_callout: Blokelį "eikPirmyn();" nutempk ir prikabink jį po
           kitais blokeliais
         craft_callout_preplaced: Mes padėjome kelis blokelius, kad tau būtų nuo ko
           pradėti
-        craft_inside_repeat: Kartok veiksmus įdėdamas čia blokielius
+        craft_inside_repeat: Kartok veiksmus, įdėdamas čia blokelius
         craft_callout_preplaced_house: "Šis kodas pradės statyti tavo namą. Ar tu
           gali jį pabaigti?"
         craft_what_is_iron: Iškask šią geležį!
         craft_callout_moveforward: "Šis kodas tikrins ar yra lava, ar gali pridėti
-          komandą eik pirmyn?"
+          komandą, kad pajudėtum pirmyn?"

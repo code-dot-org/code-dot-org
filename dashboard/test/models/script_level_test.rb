@@ -161,4 +161,41 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal(script_level3, ScriptLevel.cache_find(script_level3.id))
   end
 
+  test 'has another level answers appropriately for professional learning courses' do
+    create_fake_plc_data
+
+    assert @script_level1.has_another_level_to_go_to?
+    assert_not @script_level2.has_another_level_to_go_to?
+  end
+
+  test 'redirects appropriately for professional learning courses' do
+    create_fake_plc_data
+
+    assert_equal script_preview_assignments_path(@plc_script), @evaluation_script_level.next_level_or_redirect_path_for_user(@user)
+    @unit_assignment.destroy
+    assert_equal script_stage_script_level_path(@plc_script, @stage, @script_level2.position), @evaluation_script_level.next_level_or_redirect_path_for_user(@user)
+
+    assert_equal script_stage_script_level_path(@plc_script, @stage, @evaluation_script_level.position), @script_level1.next_level_or_redirect_path_for_user(@user)
+    assert_equal script_path(@plc_script), @script_level2.next_level_or_redirect_path_for_user(@user)
+  end
+
+  private
+  def create_fake_plc_data
+    @plc_course_unit = create(:plc_course_unit)
+    @plc_script = @plc_course_unit.script
+    @plc_script.update(professional_learning_course: true)
+    @stage = create(:stage)
+    @level1 = create(:maze)
+    evaluation_multi = create(:evaluation_multi, name: 'Evaluation Multi')
+    @evaluation_level = create(:level_group, name: 'Evaluation Quiz')
+    @evaluation_level.properties['title'] = @evaluation_level.name
+    @evaluation_level.properties['pages'] = [{'levels' => [evaluation_multi.name]}]
+    @level2 = create(:maze)
+    @script_level1 = create(:script_level, script: @plc_script, stage: @stage, position: 1, levels: [@level1])
+    @evaluation_script_level = create(:script_level, script: @plc_script, stage: @stage, position: 2, levels: [@evaluation_level])
+    @script_level2 = create(:script_level, script: @plc_script, stage: @stage, position: 3, levels: [@level2])
+    @user = create :teacher
+    user_course_enrollment = create(:plc_user_course_enrollment, plc_course: @plc_course_unit.plc_course, user: @user)
+    @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: user_course_enrollment, plc_course_unit: @plc_course_unit, user: @user)
+  end
 end

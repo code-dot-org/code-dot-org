@@ -1,4 +1,4 @@
-/* global $ */
+var React = require('react');
 var color = require('../color');
 
 /**
@@ -62,7 +62,7 @@ var Alert = React.createClass({
       }
     };
 
-    var childStyle = $.extend({}, styles.child, styles.typeSpecific[this.props.type]);
+    var childStyle = Object.assign({}, styles.child, styles.typeSpecific[this.props.type]);
 
     return (
       <div style={styles.main}>

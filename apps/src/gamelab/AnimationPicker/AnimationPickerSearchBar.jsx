@@ -1,6 +1,7 @@
 /** Animation picker dialog search bar */
 'use strict';
 
+import React from 'react';
 var color = require('../../color');
 
 var BORDER_WIDTH = 1;

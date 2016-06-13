@@ -2,16 +2,17 @@
 #
 # Table name: script_levels
 #
-#  id         :integer          not null, primary key
-#  script_id  :integer          not null
-#  chapter    :integer
-#  created_at :datetime
-#  updated_at :datetime
-#  stage_id   :integer
-#  position   :integer
-#  assessment :boolean
-#  level_id   :integer
-#  properties :text(65535)
+#  id          :integer          not null, primary key
+#  level_id    :integer
+#  script_id   :integer          not null
+#  chapter     :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#  stage_id    :integer
+#  position    :integer
+#  assessment  :boolean
+#  properties  :text(65535)
+#  named_level :boolean
 #
 # Indexes
 #
@@ -63,6 +64,40 @@ class ScriptLevel < ActiveRecord::Base
     properties_hash = JSON.parse(properties)
     levels.sort_by(&:created_at).find do |level|
       !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+    end
+  end
+
+  def has_another_level_to_go_to?
+    if script.professional_learning_course?
+      !end_of_stage?
+    else
+      next_progression_level
+    end
+  end
+
+  def next_level_or_redirect_path_for_user(user)
+    # if we're coming from an unplugged level, it's ok to continue
+    # to unplugged level (example: if you start a sequence of
+    # assessments associated with an unplugged level you should
+    # continue on that sequence instead of skipping to next stage)
+    level_to_follow = (level.unplugged? || stage.unplugged?) ? next_level : next_progression_level
+
+    if script.professional_learning_course?
+      if level.try(:plc_evaluation?)
+        if Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
+          script_preview_assignments_path(script)
+        else
+          build_script_level_path(level_to_follow)
+        end
+      else
+        if has_another_level_to_go_to?
+          build_script_level_path(level_to_follow)
+        else
+          script_path(script)
+        end
+      end
+    else
+      level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
     end
   end
 
@@ -131,6 +166,8 @@ class ScriptLevel < ActiveRecord::Base
   def summarize
     if level.unplugged?
       kind = 'unplugged'
+    elsif named_level
+      kind = 'named_level'
     elsif assessment
       kind = 'assessment'
     else
@@ -138,7 +175,7 @@ class ScriptLevel < ActiveRecord::Base
     end
 
     summary = {
-        id: level.id,
+        ids: level_ids,
         position: position,
         kind: kind,
         icon: level.icon,
@@ -179,10 +216,12 @@ class ScriptLevel < ActiveRecord::Base
   # level summaries.
   def self.summarize_extra_puzzle_pages(last_level_summary)
     extra_levels = []
-    level = Script.cache_find_level(last_level_summary[:id])
+    level_id = last_level_summary[:ids].first
+    level = Script.cache_find_level(level_id)
     extra_level_count = level.properties["pages"].length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
+      new_level[:uid] = "#{level_id}_#{page_index}"
       new_level[:url] << "/page/#{page_index + 1}"
       new_level[:position] = last_level_summary[:position] + page_index
       new_level[:title] = last_level_summary[:position] + page_index

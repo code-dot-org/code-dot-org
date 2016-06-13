@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback": "נסה להשתמש באחת מהבלוקים שלהלן:",
   "tryHOC": "נסה את \"שעת הקוד\" (Hour of Code)",
   "unnamedFunction": "יש לך משתנה או פונקציה ללא שם. אל תשכח לתת שם תיאורי לכל דבר.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "רוצה ללמוד לתכנת?",
   "watchVideo": "צפה בסרטון",
   "when": "מתי",

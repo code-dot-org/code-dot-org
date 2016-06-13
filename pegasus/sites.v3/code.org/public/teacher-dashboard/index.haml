@@ -414,7 +414,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     var self = this;
 
     // 'Other Section' selected
-    $scope.otherSection = 'Other Section';
+    $scope.otherTeacher = 'Other Teacher';
     $scope.stayEnrolledInCurrentSection = 'true';
 
     // Query
@@ -482,7 +482,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     };
 
     $scope.getNewSectionCode = function() {
-      if ($scope.selectedSectionCode !== $scope.otherSection) {
+      if ($scope.selectedSectionCode !== $scope.otherTeacher) {
         return $scope.selectedSectionCode;
       } else {
         return $scope.manuallySelectedSectionCode;

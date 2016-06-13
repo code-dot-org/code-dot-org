@@ -56,7 +56,8 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_equal Date.today - 13.years, assigns(:user).birthday
       assert_equal nil, assigns(:user).provider
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
-      assert_equal 'an@email.address', assigns(:user).email
+      assert_equal '', assigns(:user).email
+      assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
     end
   end
 
@@ -277,7 +278,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     assert_redirected_to '/'
 
-    assert_equal 'hashed@email.com', assigns(:user).email
+    assert_equal '', assigns(:user).email
     assert_equal Digest::MD5.hexdigest('hashed@email.com'), assigns(:user).hashed_email
   end
 

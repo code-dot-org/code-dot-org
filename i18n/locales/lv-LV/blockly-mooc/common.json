@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Mēģini izmantot kādu no zemāk dotajiem blokiem:",
   "tryHOC":"Izmēģini Programmēšanas stundu",
   "unnamedFunction":"Programmā ir mainīgais vai funkcija, kuram nav piešķirts nosaukumus. Neaizmirstiet visiem elementiem dot aprakstošus nosaukumus.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Vai vēlies iemācīties programmēt?",
   "watchVideo":"Noskaties video",
   "when":"kad",

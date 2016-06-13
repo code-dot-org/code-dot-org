@@ -360,23 +360,11 @@ DSL
             questions: [{text: 'Question text'}],
             answers: [
                 {text: 'answer 1', weight: 1, stage: nil},
-                {text: 'answer 2', weight: 2, stage: stage1},
-                {text: 'answer 3', weight: 1, stage: stage2},
+                {text: 'answer 2', weight: 2, stage: stage1.name},
+                {text: 'answer 3', weight: 1, stage: stage2.name},
             ]
         }
       }
     assert_equal expected, output
-  end
-
-  test 'test evaluation question unknown module' do
-    input_dsl = <<DSL
-name 'Test question'
-question 'Question text'
-answer 'answer 1'
-answer 'answer 2', weight: 1, stage_name: 'bogus stage'
-DSL
-    assert_raises 'Unknown learning module bogus module' do
-      EvaluationMulti.parse(input_dsl, 'test')
-    end
   end
 end

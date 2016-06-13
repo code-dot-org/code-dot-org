@@ -16,6 +16,9 @@
         ]
       },
       "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 0
+        },
         "params": [
           ""
         ],
@@ -61,7 +64,12 @@
     "debugger_disabled": "true",
     "video_key": "csp_applab_turtle",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "true"
+    "execute_palette_apis_only": "true",
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

@@ -42,8 +42,12 @@
     width: 400px;
 
     .course_unit_title {
+      a {
+        color: $dark_charcoal !important;
+        font-family: 'Gotham 4r'
+      }
+
       font-size: 18px;
-      color: $dark_charcoal;
       margin-bottom: 20px;
     }
 

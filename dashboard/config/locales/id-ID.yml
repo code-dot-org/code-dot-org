@@ -609,12 +609,15 @@
       app dan gambar dengan menulis sendiri program komputer mereka. Klik pada gambar
       dan tangkapan layar untuk melihat jalannya tiap program.
     want_to_make_your_own: Mau membuat sendiri ?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: lebih &rarr;
     caption_by_name_age: oleh %{name}, usia %{age}
     caption_time_ago: "%{time_ago} yang lalu"
     header: Galeri
     header_playlab: Play Lab/Lab Permainan
     header_artist: Artis
+    report_abuse: Laporkan penyalahgunaan
   landing:
     prerelease: Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti
       sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan
@@ -831,6 +834,9 @@
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Cari sebuah ikon...
@@ -839,3 +845,11 @@
     required: Tinjauan
     content: Content
     practice: Teacher Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
+      a site that is not operated by Code.org.</strong> This site may have privacy
+      policies that differ from Code.org's.<br/><br/>We have selected these third
+      party resources because we think they will be useful to you. While we are not
+      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
+      support</a> if you find the content objectionable, or if the linked site is
+      no longer available."

@@ -71,6 +71,7 @@ class ProjectsController < ApplicationController
     return if redirect_applab_under_13(@level)
     redirect_to action: 'edit', channel_id: create_channel({
       name: 'Untitled Project',
+      useFirebase: use_firebase_for_new_project?,
       level: polymorphic_url([params[:key], 'project_projects'])
     })
   end
@@ -80,7 +81,10 @@ class ProjectsController < ApplicationController
     sharing = iframe_embed || params[:share] == true
     readonly = params[:readonly] == true
     if iframe_embed
+      # explicitly set security related headers so that this page can actually
+      # be embedded.
       response.headers['X-Frame-Options'] = 'ALLOWALL'
+      response.headers['Content-Security-Policy'] = ''
     else
       # the age restriction is handled in the front-end for iframe embeds.
       return if redirect_applab_under_13(@level)

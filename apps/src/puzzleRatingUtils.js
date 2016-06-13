@@ -2,11 +2,11 @@
  * @overview A helper class for all actions associated with Puzzle
  * Ratings, aka the Fun-O-Meter.
  */
-
 var puzzleRatingUtils = {};
 
 module.exports = puzzleRatingUtils;
 
+import $ from 'jquery';
 var dom = require('./dom');
 
 /**
@@ -91,7 +91,7 @@ puzzleRatingUtils.removePuzzleRating_ = function (rating) {
 puzzleRatingUtils.cachePuzzleRating = function (container, options) {
   var selectedButton = container.querySelector('.puzzle-rating-btn.enabled');
   if (selectedButton) {
-    var rating = $.extend({}, options, { rating: selectedButton.getAttribute('data-value') });
+    var rating = Object.assign({}, options, { rating: selectedButton.getAttribute('data-value') });
     var ratings = puzzleRatingUtils.getPuzzleRatings_();
     ratings.push(rating);
     puzzleRatingUtils.setPuzzleRatings_(ratings);

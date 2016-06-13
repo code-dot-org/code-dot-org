@@ -327,7 +327,7 @@ en:
     print_certificate: crwdns41905:0crwdne41905:0
     announcement_title: crwdns56513:0crwdne56513:0
     announcement_view_all: crwdns56514:0crwdne56514:0
-    announcement_message: 'crwdns56515:0%{tagging_url}crwdnd56515:0%{ux_url}crwdne56515:0'
+    announcement_message: crwdns56515:0crwdne56515:0
     announcement_button: crwdns56516:0crwdne56516:0
     announcement_petition: crwdns56517:0crwdne56517:0
     announcement_petition_button: crwdns56518:0crwdne56518:0
@@ -475,12 +475,14 @@ en:
     picture_count: 'crwdns5092:0%{days}crwdnd5092:0%{count}crwdne5092:0'
     activity_count: 'crwdns20427:0%{days}crwdnd20427:0%{count}crwdne20427:0'
     want_to_make_your_own: crwdns5093:0crwdne5093:0
+    how_to_save: crwdns56881:0crwdne56881:0
     more: crwdns5094:0crwdne5094:0
     caption_by_name_age: 'crwdns20428:0%{name}crwdnd20428:0%{age}crwdne20428:0'
     caption_time_ago: 'crwdns20429:0%{time_ago}crwdne20429:0'
     header: crwdns23628:0crwdne23628:0
     header_playlab: crwdns23629:0crwdne23629:0
     header_artist: crwdns23630:0crwdne23630:0
+    report_abuse: crwdns56882:0crwdne56882:0
   landing:
     prerelease: crwdns6265:0crwdne6265:0
     prerelease_hoc2014: crwdns23502:0crwdne23502:0
@@ -660,6 +662,9 @@ en:
     escalated:
       name: crwdns56536:0crwdne56536:0
       description: crwdns56537:0crwdne56537:0
+    instructor_feedback: crwdns56731:0crwdne56731:0
+    peer_feedback: crwdns56732:0crwdne56732:0
+    outdated: crwdns56733:0crwdne56733:0
   components:
     icon_library:
       search_placeholder_text: crwdns56250:0crwdne56250:0
@@ -668,3 +673,5 @@ en:
     required: crwdns56538:0crwdne56538:0
     content: crwdns56539:0crwdne56539:0
     practice: crwdns56540:0crwdne56540:0
+  external_links:
+    disclaimer_md: crwdns56734:0crwdne56734:0

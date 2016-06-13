@@ -91,6 +91,14 @@ def validate_form(kind, data)
     value
   end
 
+  def us_phone_number(value)
+    return value if value.class == FieldError
+    value = stripped value
+    return nil if value.nil_or_empty?
+    return FieldError.new(value, :invalid) unless RegexpUtils.us_phone_number?(value)
+    RegexpUtils.extract_us_phone_number_digits(value)
+  end
+
   data = Object.const_get(kind).normalize(data)
 
   errors = {}
@@ -134,7 +142,7 @@ def insert_form(kind, data, options={})
     updated_at: timestamp,
     updated_ip: request.ip,
   }
-  row[:user_id] = dashboard_user[:id] if dashboard_user
+  row[:user_id] = dashboard_user ? dashboard_user[:id] : data[:user_id_i]
 
   form_class = Object.const_get(kind)
   row[:source_id] = form_class.get_source_id(data) if form_class.respond_to? :get_source_id

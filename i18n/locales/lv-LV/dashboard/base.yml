@@ -334,7 +334,7 @@ lv:
     print_certificate: Izdrukāt sertifikātu
     announcement_title: Announcements
     announcement_view_all: View all
-    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
     announcement_button: Uzzini vairāk
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
@@ -482,12 +482,14 @@ lv:
     picture_count: 'Agrākās <b>%{days}</b> dienās, skolnieki zīmēja <b>%{count}</b> attēlus taisot paši savas datorprogrammas. Noklikšķini uz attēla, lai apskatītu katru programmu darbībā.'
     activity_count: 'Agrākās <b>%{days}</b> dienās, veidoja <b>%{count}</b> attēlus un lietojamprogrammas  taisot paši savas datorprogrammas. Noklikšķini uz attēliem un ekrānšāviņiem, lai apskatītu katru programmu darbībā.'
     want_to_make_your_own: Vēlies uzveidot pats savu?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Vēl &rarr;'
     caption_by_name_age: '%{name}, vecums %{age}'
     caption_time_ago: '%{time_ago} pirms'
     header: Galerija
     header_playlab: Spēles laboratorija
     header_artist: Mākslinieks
+    report_abuse: Report Abuse
   landing:
     prerelease: "Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē, ka tā nav kursa pēdējā versija un var tikt pakļauta pārskatam pēc atsauksmju saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti."
     prerelease_hoc2014: "Šī pamācība ir <span class='betatext'>beta</span >stadijā. Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes."
@@ -667,6 +669,9 @@ lv:
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
@@ -675,3 +680,5 @@ lv:
     required: Pārskats
     content: Content
     practice: Teacher Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."

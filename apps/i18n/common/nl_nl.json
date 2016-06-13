@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback": "Probeer het met een van de blokken hieronder:",
   "tryHOC": "Probeer \"Hour of Code\"",
   "unnamedFunction": "Je hebt een variabele of functie die geen naam heeft. Vergeet niet alles een beschrijvende naam te geven.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Wil je leren programmeren?",
   "watchVideo": "Bekijk de video",
   "when": "wanneer",

@@ -7,6 +7,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var buildMarkup = require('./NetSimTabsComponent.html.ejs');
 var NetSimRouterTab = require('./NetSimRouterTab');
 var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "bee",
     "serialized_maze": "[[{\"tileType\":4},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":4},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":4},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":4},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "instructions": "Use what you've learned to help bee gather all of this honey using only 4 blocks.",
+    "instructions": "Use what you've learned to help bee gather all of this honey using only the blocks that you have here.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -29,7 +29,8 @@
     "fast_get_nectar_animation": "false",
     "ideal": "4",
     "video_key": "C2_bee_loops",
-    "nectar_goal": "3"
+    "nectar_goal": "3",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"sample2_1\",\r\n  \"callout_text\": \"Notice that there is only one 'move forward' block available in this toolbox.\",\r\n  \"element_id\": \"#callThis\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
   "published": true,
   "notes": "#2\r\n\r\nTakes the experience that students just had and gives a name to the new tool.  This also lets students who didn't discover loops learn about the concept they were missing at a time when they're interested in it so that they can go back and do better.",
@@ -39,17 +40,8 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_move">
+        <block type="maze_move" id="callThis">
           <title name="DIR">moveForward</title>
-        </block>
-        <block type="maze_move">
-          <title name="DIR">moveBackward</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
         </block>
         <block type="maze_nectar"/>
         <block type="controls_repeat_dropdown">

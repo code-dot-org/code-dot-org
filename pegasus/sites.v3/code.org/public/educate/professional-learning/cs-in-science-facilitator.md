@@ -3,7 +3,7 @@ title: CS in Science Facilitator Program
 nav: educate_nav
 ---
 # Become a Computer Science in Science Facilitator
-**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 29th. We will update everyone of their acceptance status by April 29th.**
+**For updates on the 2017 application period please complete this [interest form](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform). This program is currently only operated in the US.**
 
 Code.org is looking to partner with experienced middle school computer science educators to deliver multiple in-person workshops to local middle school teachers teaching our [CS in Science curriculum](https://code.org/curriculum/science) (in partnership with Project GUTS). Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.
 
@@ -27,7 +27,7 @@ For each workshop you host, CS in Science Facilitators will receive betwee $450-
 
 
 ## How to become a CS in Science Facilitator?
-Become a CS in Science Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (New Orleans, LA). At the Summit, Code.org will prepare facilitators to deliver 3 in-person workshops to local middle school teachers enrolled in Code.org’s CS in Science Professional Learning Program throughout the 2016-2017 school year. 
+Become a CS in Science Facilitator by attending Code.org's all expense paid Facilitator Summit. Date and location for 2017 to be determined. At the Summit, Code.org will prepare facilitators to deliver 3 in-person workshops to local middle school teachers enrolled in Code.org’s CS in Science Professional Learning Program throughout the 2016-2017 school year. 
 
 Before applying please carefully review the the [requirements and commitments](https://docs.google.com/document/d/1W7MvJYUlSHwJWoAZa2d5dcS5znbLd1U67icIIfOKAlo/pub) for the CS in Science Facilitator program.
 <br/>
@@ -37,6 +37,6 @@ Before applying please carefully review the the [requirements and commitments](h
 <br/>
 <br/>
 
-We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.**
+**For updates on the 2017 application period please complete this [interest form](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform). This program is currently only operated in the US.**
 
 If you have additional questions regarding the Facilitator program or application contact [facilitators@code.org](facilitators@code.org).

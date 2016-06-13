@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback": "試著從下列程式積木中挑選一個用看看：",
   "tryHOC": "試試一小時的程式設計課程",
   "unnamedFunction": "你有一個沒有名稱的變數或函式。別忘了給一個具描述性的名稱。",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "想要學習寫程式嗎?",
   "watchVideo": "觀看影片",
   "when": "當",

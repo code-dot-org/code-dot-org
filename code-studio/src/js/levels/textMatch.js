@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 window.levelGroup = window.levelGroup || {levels: {}};
 
 var TextMatch = window.TextMatch = function (id, standalone, answers, lastAttempt) {

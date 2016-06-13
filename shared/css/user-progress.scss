@@ -89,10 +89,9 @@ a.level_link.submitted:hover
 {
   display:inline-block;
   position:relative;
-  overflow:hidden;
   float:left;
   width:100%;
-  background-color: $lightest_gray;
+  background-color: $white;
 }
 
 .stage-lesson-plan-link a,
@@ -137,11 +136,6 @@ a.level_link.submitted:hover
   }
 }
 
-.teacher-stage {
-  margin: 0.5em 0;
-  font-size: 1.2em;
-}
-
 .puzzle-named {
   font-size: 13px;
   padding-left: 6px;
@@ -166,75 +160,5 @@ a.level_link.submitted:hover
     line-height: 36px;
     margin-left: 0;
     margin-right: 25px;
-  }
-}
-
-.flex-wrapper {
-  border-bottom: 2px solid #c6cacd;
-}
-
-.flex-category {
-  border-left: 8px solid $cyan;
-  padding-left: 15px;
-  margin: 10px 0 10px 10px;
-  h4 {
-    margin: 0.25em 0;
-  }
-  .game-group:last-child {
-    border-bottom: 0;
-  }
-  .stage {
-    width: 167px;
-  }
-}
-
-#landingpage.teacher-course {
-  #lesson {
-    background: none;
-    border-radius: 3px;
-    .whitetext, .smallwhitetext {
-      margin-left: 10px;
-      color: $dark_charcoal !important;
-    }
-    .lightgreytext > a {
-      color: $charcoal !important;
-    }
-  }
-  #stats {
-    background: none;
-  }
-  .user-stats-block {
-    width: 900px;
-    background: none;
-  }
-  .flex-wrapper {
-    border: 0;
-    margin-right: 10px;
-  }
-  .flex-category {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    h4 {
-      padding: 5px 10px;
-      background: $cyan;
-      color: #fff;
-      border-radius: 2px;
-    }
-    & > div {
-      padding: 5px 10px;
-      margin: 3px 0;
-      border: 1px solid $lightest_gray;
-      border-radius: 2px;
-    }
-    .game-group {
-      border: 0;
-    }
-    .stage {
-      width: 167px;
-    }
-    .level_link {
-      margin: 2px;
-    }
   }
 }

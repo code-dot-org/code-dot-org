@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"استفاده از یکی از بلوکهای زیر را امتحان کن:",
   "tryHOC":"ساعتِ کد نویسی را امتحان کنید",
   "unnamedFunction":"شما یک متغیر یا تابع بدون نام دارید. فراموش نکنید که به هر چیز یک نام توصیفی بدهید.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"آیا می‌خواهید کد نویسی را یاد بگیرید؟",
   "watchVideo":"ویدیو را ببینید",
   "when":"وقتی",

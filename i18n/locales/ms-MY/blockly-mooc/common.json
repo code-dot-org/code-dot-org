@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Try using one of the blocks below:",
   "tryHOC":"Cuba Hour of Code",
   "unnamedFunction":"You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Ingin belajar untuk mengekod?",
   "watchVideo":"Tonton Video",
   "when":"apabila",

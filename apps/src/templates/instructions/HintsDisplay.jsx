@@ -1,3 +1,4 @@
+var React = require('react');
 var msg = require('../../locale');
 var Hint = require('./Hint');
 var Lightbulb = require('../Lightbulb');

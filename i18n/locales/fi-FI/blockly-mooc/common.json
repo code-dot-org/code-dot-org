@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Kokeile käyttää jotain allaolevista palikoista:",
   "tryHOC":"Kokeile koodaustuntia",
   "unnamedFunction":"Sinulla on muuttuja tai funktio, jolla ei ole nimeä. Muista nimetä ne kuvaavalla nimellä.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Haluatko oppia koodaamaan?",
   "watchVideo":"Katso video",
   "when":"kun",

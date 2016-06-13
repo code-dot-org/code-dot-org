@@ -440,6 +440,7 @@ he-IL:
   dashboard_landing_new_beta: "חדש! נסה את קורסי הבטה שלנו לגילאי גן חובה-כיתה ה'."
   dashboard_landing_new_k5courses: "חדש! נסה את הקורסים שלנו לגילאי גן חובה-כיתה ה'."
   dashboard_landing_useful_links: קישורים שימושיים נוספים (באנגלית בלבד)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: שאל שאלות באופן אישי! בקר בשעות הקבלה בוידאו החודשיות שלנו.
   dashboard_landing_print_certificates: הדפס תעודות לתלמידים שגמרו את הקורס הזה
   dashboard_landing_educator_blog: 'קרא על חדשות ועדכונים לחומרים שלנו ב"בלוג מחנכים"'
@@ -453,6 +454,10 @@ he-IL:
   dashboard_landing_available_courses: להלן הקורסים הזמינים כעת עבור התלמידים שלך ולך.
   dashboard_landing_more_tutorials: רוצה לראות עוד הדרכות?
   dashboard_landing_more_tutorials_desc: 'הדרכות נוספות מוצעות על ידי <a href="/learn/beyond">שותפים שלנו.</a>. למד תכנות עם רובוטים, צור דפי אינטרנט, צור אפליקציות משלך או חקור שפות שנות כגון C++, Ruby או Python!'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: שעה של קוד לכל הגילאים
   dashboard_hoc_courses_desc: נסה את אחת מההדרכות הקצרות הללו (באורך שעה) עם התלמידים שלך!
   dashboard_hoc_courses_desc_and_cta: נסה את מערכי ההדרכה הקצרים (שעה) עם הסטודנטים.
@@ -484,7 +489,11 @@ he-IL:
   dashboard_action_done: מוכן
   dashboard_action_required: דרוש
   dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
+  dashboard_assessments_none: |-
+    Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -514,8 +523,9 @@ he-IL:
   dashboard_progress_submitted: submitted
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
   dashboard_sections_new_section: חלק חדש
   dashboard_sections_jumbotron_instruction: צור חלקים חדשים והוסף תלמידים אליהם. חלקים עוזרים לך לארגן תלמידים לקבוצות קטנות כדי שתוכל לעקוב אחרי התהליך למידה שלהם ולנהל את המשתמשים שלהם.
   dashboard_sections_table_section: סעיף
@@ -587,6 +597,7 @@ he-IL:
   dashboard_course2: 'חוג 2:'
   dashboard_course3: 'חוג 3:'
   dashboard_course4: 'קורס 4 (בטא): '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: תוכנית לימוד
   dashboard_curriculum_overview: "סקירה על תוכנית הלימודים מגן חובה עד כיתה ה'"
   dashboard_overview: סקירה
@@ -644,7 +655,7 @@ he-IL:
   dashboard_faq_k5: שאלות נפוצות למורי יסודי
   dashboard_announcements: הודעות
   dashboard_announce_view_all: הצג הכל
-  dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
   dashboard_announce_button_text: למד עוד
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
@@ -757,12 +768,17 @@ he-IL:
   course3_name: קורס 3
   course4_name: קורס 4
   accelerated_name: קורס מואץ
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: קורס מואץ
@@ -777,7 +793,9 @@ he-IL:
   math_category_name: מתמטיקה
   hoc_category_name: שעה של קוד
   csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: מעבדת היישומים
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds

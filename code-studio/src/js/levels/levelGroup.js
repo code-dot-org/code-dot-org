@@ -1,5 +1,6 @@
 /* global appOptions, Dialog */
 
+import $ from 'jquery';
 require('./multi.js');
 require('./textMatch.js');
 var saveAnswers = require('./saveAnswers.js').saveAnswers;

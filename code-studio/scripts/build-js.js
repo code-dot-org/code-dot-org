@@ -49,6 +49,9 @@ Promise.all([
       'initApp/initApp.js'
     ],
     commonFile: 'code-studio-common',
+    browserifyGlobalShim: {
+      "jquery": "$"
+    },
     shouldFactor: true
   })),
 
@@ -78,10 +81,14 @@ Promise.all([
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
       'plc/evaluation_creation.js',
+      'plc/header.jsx',
       'plc/perform_evaluation.js',
       'plc/task_creation.js'
     ],
-    commonFile: 'plc'
+    commonFile: 'plc',
+    browserifyGlobalShim: {
+      "jquery": "$"
+    }
   })),
 
   // makerlab-only dependencies for app lab
@@ -89,7 +96,10 @@ Promise.all([
     filenames: [
       'makerlab/makerlabDependencies.js'
     ],
-    commonFile: 'makerlab'
+    commonFile: 'makerlab',
+    browserifyGlobalShim: {
+      "jquery": "$"
+    }
   })),
 
   build_commands.bundle(_.extend({}, defaultOptions, {
@@ -98,6 +108,7 @@ Promise.all([
     ],
     commonFile: 'pd',
     browserifyGlobalShim: {
+      "jquery": "$",
       "react": "React",
       "react-dom": "ReactDOM"
     }

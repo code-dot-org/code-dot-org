@@ -1,5 +1,8 @@
 'use strict';
 
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var commonMsg = require('../locale');
 var msg = require('./locale');
 var levels = require('./levels');
@@ -167,6 +170,7 @@ GameLab.prototype.init = function (config) {
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
   config.showInstructionsInTopPane = true;
+  config.noInstructionsWhenCollapsed = true;
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
 

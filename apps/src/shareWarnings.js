@@ -1,3 +1,5 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
 var utils = require('./utils');
 var ShareWarningsDialog = require('./templates/ShareWarningsDialog');
 
@@ -50,7 +52,7 @@ function handleShareWarningsTooYoung(onTooYoung) {
   utils.trySetLocalStorage('is13Plus', 'false');
   if (onTooYoung) {
     onTooYoung();
-  } else {
+  } else if (!IN_UNIT_TEST) {
     window.location.href = '/too_young';
   }
 }

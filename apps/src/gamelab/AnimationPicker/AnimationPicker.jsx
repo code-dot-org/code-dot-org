@@ -1,3 +1,4 @@
+import React from 'react';
 import utils from '../../utils';
 import { connect } from 'react-redux';
 import Dialog from '../../templates/DialogComponent.jsx';

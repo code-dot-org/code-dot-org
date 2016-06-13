@@ -82,16 +82,12 @@
     Heure de Code, <a href="https://code.org/volunteer">inscrivez-vous pour faire
     du bénévolat dans une salle de classe</a> et aidez les élèves à apprendre une
     Heure de Code !'
-  congratulations_on_completing_course1: Félicitations, tu as complété le cours N°1
+  congratulations_on_completing_course1: Félicitations, tu as fini le cours N°1 !
+  congratulations_on_completing_course2: Félicitations, tu as fini le cours N°2 !
+  congratulations_on_completing_course3: Félicitations, tu as fini le cours N°3 !
+  congratulations_on_completing_course4: Félicitations, tu as fini le cours N°4 !
+  congratulations_on_completing_accelerated: Félicitations, tu as fini le cours accéléré
     !
-  congratulations_on_completing_course2: Félicitations, tu as complété le cours N°2
-    !
-  congratulations_on_completing_course3: Félicitations, tu as complété le cours N°3
-    !
-  congratulations_on_completing_course4: Félicitations, tu as complété le cours N°4
-    !
-  congratulations_on_completing_accelerated: Félicitations, tu as complété le cours
-    accéléré !
   congrats_next_tutorials_title: Essaie ensuite ces tutoriels
   congrats_next_tutorials_desc: Essaie ces plus courts tutoriels d’une heure seulement
     ou essaie un <a href="%{current_path}/next">tutoriel partenaire</a>.
@@ -99,15 +95,15 @@
   view_course: Voir le cours
   view_unit: Voir l'unité
   make_app: Faire une application
-  congrats_guest_speaker_title: Trouver un conférencier invité pour votre classe
+  congrats_guest_speaker_title: Trouver un conférencier à inviter pour votre classe
   congrats_guest_speaker_desc: Maintenant que vos élèves ont terminé un cours d'informatique,
-    pensez à célébrer et de le connecter à des choses qu'ils peuvent construire dans
-    le monde réel en invitant un conférencier invité dans votre classe. Vous pouvez
-    utiliser notre carte de bénévoles pour contacter des bénévoles locaux à visiter
+    pensez à le célébrer et de le connecter à des choses qu'ils peuvent construire
+    dans le monde réel en invitant un conférencier dans votre classe. Vous pouvez
+    utiliser notre liste de bénévoles pour inviter des bénévoles locaux à venir dans
     votre salle de classe, ou rechercher dans une ville pour trouver des étudiants
-    en sciences informatiques ou professionnels techniques qui sont prêts à inspirer
-    vos élèves à distance, via le chat vidéo.
-  congrats_guest_speaker_cta: Trouver un conférencier invité
+    en informatique ou des professionnels qui sont prêts à parler à vos élèves à distance,
+    par vidéo.
+  congrats_guest_speaker_cta: Trouver un conférencier à inviter
   congrats_third_party_title: Utilise ce que tu viens d'apprendre avec ces apps et
     sites web
   third_party_gradelevel_kto8: "École primaire et collège"
@@ -379,9 +375,9 @@
   homepage_banner_20k_teachers: 20 000 enseignants formés enseignant maintenant l'informatique
     dans les classes.
   homepage_banner_20k_teachers_link: Pour en savoir plus
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress: Les leaders de l’Amérique font appel au Congrès pour financer
+    le programme d'informatique K-12.
+  homepage_banner_congress_link: Ajouter votre support
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
   homepage_slot_text_link_hoc: Essayer l'Heure de Code
@@ -407,7 +403,7 @@
   homepage_slot_text_link_stats: Afficher les statistiques
   homepage_slot_text_link_buy: S'impliquer
   homepage_slot_text_link_donate: Faire un don
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: T-shirts, chapeaux, & plus
   homepage_header_codestudio: Créations des élèves de Code Studio
   homepage_header_donors: Code.org remercie tout ceux qui l'ont soutenu
   homepage_donors_seall: Tout afficher
@@ -611,6 +607,7 @@
   dashboard_landing_new_k5courses: Nouveau ! Essayez nos cours pour les élèves de
     primaire.
   dashboard_landing_useful_links: Autres liens utiles
+  dashboard_landing_classroom_resources: Ressources pour votre classe
   dashboard_landing_office_hours: Posez une question en personne ! Regardez notre
     vidéo mensuelle durant les heures de bureau.
   dashboard_landing_print_certificates: Imprimer les certificats pour les élèves ayant
@@ -633,6 +630,11 @@
     par nos partenaires.</a> Apprendre à programmer avec des robots, créer des pages
     web ou une application personnalisée, ou explorer d'autres langages tels que C++,
     Ruby ou Python !
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: L'Heure de Code pour tous les âges
   dashboard_hoc_courses_desc: Essayez l'un de ces tutoriels plus courts (1 heure)
     avec vos élèves !
@@ -692,6 +694,13 @@
   dashboard_action_required: obligatoire
   dashboard_assessments_view: 'Afficher les évaluations dans :'
   dashboard_assessments_none: Pas d'évaluation
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Résumés
+  dashboard_assessments_answers: Toutes les réponses
   dashboard_filter_by_stage: 'Filtrer par étape :'
   dashboard_filter_all: Tout
   dashboard_download_csv: Télécharger en CSV
@@ -723,6 +732,7 @@
   dashboard_progress_view: 'Afficher la progression dans :'
   dashboard_progress_student_in_script: Informations de progression pour %{student_name}
     dans %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'Afficher les réponses écrites dans :'
   dashboard_responses_none: Pas de réponses écrites
   dashboard_sections_new_section: Nouvelle section
@@ -837,6 +847,8 @@
   dashboard_course2: 'Cours 2&#160;:'
   dashboard_course3: 'Cours 3&#160;:'
   dashboard_course4: 'Cours 4 (bêta) : '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Programme
   dashboard_curriculum_overview: Aperçu du programme pour les élèves de primaire
   dashboard_overview: Aperçu
@@ -907,12 +919,13 @@
     Veuillez prévoir un retard des réponses aux questions que vous poserez jusqu'au
     4 janvier."
   dashboard_announce_button_text: Pour en savoir plus
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition: Comme enseignant, vous ouvrez la voie à un mouvement
+    visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique.
+    Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine,
+    les responsables de l’éducation, 28 gouverneurs et les PDG des plus grandes entreprises
+    d'Amérique se sont réunis pour rédiger une lettre ouverte demandant au Congrès
+    américain de financer l’enseignement de l'informatiques du K-12.
+  dashboard_announce_petition_button: Ajoutez votre nom
   code_hoc_coming: L'Heure de Code est là — du 8 au 14 décembre&#160;!
   code_sign_up: Enregistrez-vous pour participer à la Semaine de l'enseignement de
     l'informatique.
@@ -1043,12 +1056,17 @@
   course3_name: Cours 3
   course4_name: Cours 4
   accelerated_name: Cours accéléré
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
+  cspunit1_name: Principes de l'informatique, unité 1
+  cspunit2_name: Principes de l'informatique, unité 2
   cspunit3_name: Principes de l'informatique, unité 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit4_name: Principes de l'informatique, unité 4
+  cspunit5_name: Principes de l'informatique, unité 5
+  cspunit6_name: Principes de l'informatique, unité 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Niveaux de lycée
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1056,18 +1074,20 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Cours accéléré
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
+  algebra_name: Informatique en algèbre
+  AlgebraA_name: Informatique en algèbre cours A
+  AlgebraB_name: Informatique en algèbre cours B
   gumball_name: Gumball
   classicmaze_name: Labyrinthe classique
   iceage_name: L’âge de Glace
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Star Wars (blocs)
   math_category_name: Calculs
   hoc_category_name: Heure de Code
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csf_category_name: Fondamentaux d'informatique
+  csp_category_name: Principes de l'informatique
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Labo des applis
   applab_gradelevel: "Âge recommandé : 13+"
   applab_shortdescription_congrats: App Lab est un environnement de programmation
@@ -1837,11 +1857,11 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  'yes': 'Yes'
+  'no': 'No'
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
+  dashboard_sections_table_stage_extras: Stage Extras
