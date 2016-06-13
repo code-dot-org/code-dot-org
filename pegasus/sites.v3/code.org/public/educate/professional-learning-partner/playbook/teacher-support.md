@@ -22,7 +22,7 @@ ________________
 <br/>
 
 
-### **Professional Learning at Code.org - About the Programs**
+## **Professional Learning at Code.org - About the Programs**
 
 **Curriculum Overviews** provide additional information about the course to teachers who might be interested in enrolling in the program.
 
@@ -54,7 +54,7 @@ ________________
 <br/>
 
 
-### **Examples for Online Support**
+## **Examples for Online Support**
 
 [Code.org Forums](http://forum.code.org/)<br/>
 These forums are program specific and are a great way for teachers to help each other with questions about their online coursework and workshops. We recommend giving your teachers a space to help each other answer questions, and collaborate.<br/>
@@ -70,7 +70,7 @@ ________________
 <br/>
 
 
-### **Classroom Materials**
+## **Classroom Materials**
 
 Click on the links below to see a list of classroom supplies your teacher will need to teach the course.
 
@@ -87,7 +87,7 @@ ________________
 <a id="technology"></a>
 <br/>
 
-### **Technology in Classroom**
+## **Technology in Classroom**
 
 As part of the application and selection process, it's important to ensure that schools, districts, and teachers selected to participate in our programs can meet Code.org’s technology requirements before they are selected to participate in the program. 
 
@@ -114,7 +114,7 @@ ________________
 <a id="privacy"></a>
 <br/>
 
-### **Privacy Policy**
+## **Privacy Policy**
 
 Carefully review our Code.org Privacy Policy [here](/privacy), as well as the Privacy Policy in your Agreement.
 
