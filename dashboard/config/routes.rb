@@ -10,6 +10,8 @@ Dashboard::Application.routes.draw do
 
   resources :user_levels, only: [:update]
 
+  get '/download/:product', to: 'hoc_download#index'
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
