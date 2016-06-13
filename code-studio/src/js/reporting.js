@@ -69,13 +69,13 @@ reporting.sendReport = function (report) {
         xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
       },
       success: function (response) {
-        if (thisAjax !== lastAjaxRequest) {
+        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
         }
         reportComplete(report, response);
       },
       error: function (xhr, textStatus, thrownError) {
-        if (thisAjax !== lastAjaxRequest) {
+        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
         }
         report.error = xhr.responseText;

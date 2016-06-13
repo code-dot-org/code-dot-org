@@ -20,20 +20,20 @@
         - last_level_id = nil
         - level_repeat = 0
         - stage[:levels].each do |level|
-          - if last_level_id != level[:id]
+          - if last_level_id != level[:ids][0]
             - level_repeat = 0
           - else
             - level_repeat += 1
-          - last_level_id = level[:id]
+          - last_level_id = level[:ids][0]
           .level
-            - p = level_progress[level[:id]]
+            - p = level_progress[level[:ids][0]]
             - if p.try(:[], :pages_completed)
               - pages_completed = p[:pages_completed]
               - status = activity_css_class(pages_completed[level_repeat])
             - else
               - status = p.try(:[], :status) || 'not_tried'
               - result = p.try(:[], :result) || 0
-            - if current_level_id == "#{level[:id]}"
+            - if current_level_id == "#{level[:ids][0]}"
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif level[:kind] == 'assessment'
               - puzzle_outer_class = 'puzzle_outer_assessment'
@@ -45,7 +45,7 @@
                 - link += "?user_id=#{user.id}"
               - if @section
                 - link += "&section_id=#{@section.id}"
-              %a.level_link{href: link, class: [status, "level-#{level[:id]}"], data: {result: result}}
+              %a.level_link{href: link, class: [status, "level-#{level[:ids][0]}"], data: {result: result}}
                 - if level[:kind] == 'unplugged'
                   %span.puzzle-named
                     = level[:title]

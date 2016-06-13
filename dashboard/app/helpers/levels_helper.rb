@@ -199,6 +199,7 @@ module LevelsHelper
       preTitle: @level.properties['pre_title'],
       fallbackResponse: @fallback_response.to_json,
       callback: @callback,
+      sublevelCallback: @sublevel_callback,
       app: @level.type.underscore,
       level: @level.level_num,
       shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
