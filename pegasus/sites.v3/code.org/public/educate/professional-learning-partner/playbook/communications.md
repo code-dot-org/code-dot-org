@@ -60,7 +60,8 @@ ________________
 ## Email Templates
 Below are some templates we encourage you to use when sending emails to teachers.
 
-- [Middle School Teacher Email Templates](https://docs.google.com/document/d/1yC9BI2atOzosuFouuG70hRr6AmGfgT4EmjHByYSoamM/edit#) - this includes accept and not accept emails for middle school teachers and includes instructions on how they access the online pre-work.
+- [Middle school teacher application response emails](https://docs.google.com/document/d/1yC9BI2atOzosuFouuG70hRr6AmGfgT4EmjHByYSoamM/edit#) - this includes accept and reject emails for middle school teachers and instructions on how they access the online pre-work.
+- [Providing teachers workshop registration links and Phase 3 workshop dates](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.udcag7rgm3fg) - this includes how to ask teachers to register for your workshop and how to inform them of the academic year workshop dates during the summer.
 
 
 <br/>
