@@ -14,6 +14,8 @@ const SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED = 'instructions/SET_INSTRUCTIONS_MAX_HE
 const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE';
 const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
 
+const ENGLISH_LOCALE = 'en_us';
+
 /**
  * Some scenarios:
  * (1) Projects level w/o instructions: shortInstructions and longInstructions
@@ -150,3 +152,58 @@ export const setHasAuthoredHints = hasAuthoredHints => ({
   type: SET_HAS_AUTHORED_HINTS,
   hasAuthoredHints
 });
+
+// HELPERS
+
+/**
+ * Given a particular set of config options, determines what our instructions
+ * constants should be
+ * @param {string} instructions
+ * @param {string} markdownInstructions
+ * @param {string} locale
+ * @param {boolean} noInstructionsWhenCollapsed
+ * @param {boolean} showInstructionsInTopPane
+ * @param {boolean} hasInputOutputTable
+ * @returns {Object}
+ */
+export const determineInstructionsConstants = (instructions, markdownInstructions,
+    locale, noInstructionsWhenCollapsed, showInstructionsInTopPane, hasInputOutputTable) => {
+  let longInstructions, shortInstructions;
+  if (noInstructionsWhenCollapsed) {
+    // CSP mode - We dont care about locale, and always want to show English
+    longInstructions = markdownInstructions;
+    shortInstructions = instructions;
+
+    // Never use short instructions in CSP. If that's all we have, make them
+    // our longInstructions instead
+    if (shortInstructions && !longInstructions) {
+      longInstructions = shortInstructions;
+    }
+    shortInstructions = undefined;
+  } else {
+    // CSF mode - For non-English folks, only use the non-markdown instructions
+    locale = locale || ENGLISH_LOCALE;
+    longInstructions = locale === ENGLISH_LOCALE ? markdownInstructions : undefined;
+    shortInstructions = instructions;
+
+    // In the case that we're in the top pane, if the two sets of instructions
+    // are identical, only use the short version (such that we dont end up
+    // minimizing/expanding between two identical sets).
+    if (showInstructionsInTopPane && shortInstructions === longInstructions) {
+      longInstructions = undefined;
+    }
+
+    // In the case where we have an input output table, we want to ensure we
+    // have long instructions (even if identical to short instructions) since
+    // we only show the inputOutputTable in non-collapsed mode.
+    if (hasInputOutputTable) {
+      longInstructions = longInstructions || shortInstructions;
+    }
+  }
+
+  return {
+    noInstructionsWhenCollapsed,
+    shortInstructions,
+    longInstructions
+  };
+};

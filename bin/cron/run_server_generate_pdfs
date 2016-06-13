@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../deployment'
+require_relative '../../deployment'
 require 'cdo/rack/rackup'
 require 'cdo/only_one'
 require 'cdo/rake_utils'

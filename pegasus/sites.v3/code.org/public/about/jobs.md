@@ -43,13 +43,15 @@ High ­level responsibilities include:
 - Supporting VP level staff
 - Event planning, coordinating, and logistics  
 
-**Skills and Qualifications:**
+**Duties and Responsibilities:**
 
-- Manage select Leadership Team individual calendars
-- Handle administrative tasks such as scheduling, travel, inventory   
+- Handle routine administrative tasks and oversee office administration; primary point of contact for meeting staff needs 
+- Coordinate travel and manage select Leadership Team individual calendars
+- Support discrete strategic and tactical projects with data entry, analysis, drafting communications, or logistics.
 - Troubleshoot basic technology issues (printers, videoconferencing system)
-- Coordinate events (office, social, and corporate) and visitor logistics
+Coordinate events (office, social, and corporate) and visitor logistics
 - Other duties, as assigned 
+
 
 **Skills and Qualifications:**
 
@@ -229,16 +231,16 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 
 **Job Summary:**
 
-Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at studio.code.org. With tens of millions of students using our tutorials in over 45 languages and in 180+ countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
 
-Code.org is recruiting for an experienced Backend Engineer to own site stability and performance, and to contribute code, infrastructure, and knowledge to increase team-wide effectiveness. Someone successful in this role will be able to collaborate, but also work independently and drive infrastructure and scale work to completion.
+As Senior Backend Engineer / Infrastructure Lead, you’ll be responsible for building Code.org to scale for our tens millions of users in over 180 countries. You’ll ensure that our amazing annual Hour of Code event scales to nearly 100 million users worldwide. You’ll own infrastructure and related tools, write product code, and work to increase team-wide effectiveness. Someone successful in this role will be able to collaborate, but also work independently and drive infrastructure and scale work to completion.
 
 **Skills and Qualifications:**
 
 The ideal candidate has the following qualifications:
 
 - Bachelor’s degree with a major in Computer Science
-- 5-7 years as a software engineer 
+- 5-10 years as a software engineer 
 - Experience in a fast growth start-up environment desired
 - Experience scaling web services 
 - Experience building developer infrastructure

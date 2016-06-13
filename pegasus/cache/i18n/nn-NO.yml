@@ -1707,3 +1707,11 @@
   infinity_shortcode: inf
   playlab_shortcode: spel av
   artist_shortcode: art
+  'yes': 'Yes'
+  'no': 'No'
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
+  dashboard_sections_table_stage_extras: Stage Extras
