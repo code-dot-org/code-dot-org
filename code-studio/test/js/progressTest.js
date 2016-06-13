@@ -1,5 +1,4 @@
-/** @file Test of consoleShim.js which makes console functions safer to use
- *  on older browsers by filling in no-op functions. */
+/** @file Test of progress.js. */
 'use strict';
 
 var assert = require('assert');

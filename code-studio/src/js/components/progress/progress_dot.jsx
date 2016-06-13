@@ -132,7 +132,7 @@ function dotClicked(url, e) {
 /**
  * Stage progress component used in level header and course overview.
  */
-const ProgressDot = React.createClass({
+export const ProgressDot = React.createClass({
   propTypes: {
     level: levelProgressShape.isRequired,
     currentLevelId: React.PropTypes.string,
