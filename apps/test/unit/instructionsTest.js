@@ -141,7 +141,8 @@ describe('determineInstructionsConstants', () => {
         'markdown',
         locale,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        false
       ));
 
       results.forEach(result => {
@@ -155,7 +156,8 @@ describe('determineInstructionsConstants', () => {
         undefined,
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        false
       );
 
       assert.equal(result.longInstructions, 'non-markdown');
@@ -168,7 +170,8 @@ describe('determineInstructionsConstants', () => {
         undefined,
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        false
       );
 
       assert.equal(result.shortInstructions, undefined);
@@ -179,7 +182,8 @@ describe('determineInstructionsConstants', () => {
         'markdown',
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        false
       );
 
       assert.equal(result2.shortInstructions, undefined);
@@ -190,7 +194,8 @@ describe('determineInstructionsConstants', () => {
         'markdown',
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        false
       );
 
       assert.equal(result3.shortInstructions, undefined);
@@ -208,12 +213,14 @@ describe('determineInstructionsConstants', () => {
           'markdown',
           locale,
           noInstructionsWhenCollapsed,
-          true
+          true,
+          false
         );
         assert.deepEqual(result, {
           noInstructionsWhenCollapsed,
           shortInstructions: 'non-markdown',
-          longInstructions: 'markdown'
+          longInstructions: 'markdown',
+          hasContainedLevels: false
         });
       });
     });
@@ -224,12 +231,14 @@ describe('determineInstructionsConstants', () => {
         'markdown',
         'fr-fr',
         noInstructionsWhenCollapsed,
-        true
+        true,
+        false
       );
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
         shortInstructions: 'non-markdown',
-        longInstructions: undefined
+        longInstructions: undefined,
+        hasContainedLevels: false
       });
     });
 
@@ -240,12 +249,14 @@ describe('determineInstructionsConstants', () => {
         'non-markdown',
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        true
+        true,
+        false
       );
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
         shortInstructions: 'non-markdown',
-        longInstructions: undefined
+        longInstructions: undefined,
+        hasContainedLevels: false
       });
     });
 
@@ -256,7 +267,8 @@ describe('determineInstructionsConstants', () => {
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         true,
-        true
+        true,
+        false
       );
       assert.equal(result.longInstructions, 'non-markdown');
 
@@ -266,7 +278,8 @@ describe('determineInstructionsConstants', () => {
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         true,
-        true
+        true,
+        false
       );
       assert.equal(result2.longInstructions, 'markdown');
     });

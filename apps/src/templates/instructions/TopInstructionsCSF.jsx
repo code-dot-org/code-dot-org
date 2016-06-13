@@ -184,12 +184,21 @@ var TopInstructions = React.createClass({
   adjustMaxNeededHeight() {
     const minHeight = this.getMinHeight();
 
-    const instructionsContent = this.refs.instructions;
-    const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
-      RESIZER_HEIGHT;
+    if (this.props.hasContainedLevels) {
+      const maxNeededContainedLevelHeight =
+        $(ReactDOM.findDOMNode(this)).find('#containedLevelContainer').outerHeight(true) +
+        RESIZER_HEIGHT;
 
-    this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
-    return maxNeededHeight;
+      this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededContainedLevelHeight));
+      return maxNeededContainedLevelHeight;
+    } else {
+      const instructionsContent = this.refs.instructions;
+      const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
+        RESIZER_HEIGHT;
+
+      this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
+      return maxNeededHeight;
+    }
   },
 
   /**

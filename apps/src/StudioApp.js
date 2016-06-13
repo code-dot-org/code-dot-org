@@ -2826,7 +2826,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     config.locale,
     !!config.noInstructionsWhenCollapsed,
     !!config.showInstructionsInTopPane,
-    !!config.level.inputOutputTable
+    !!config.level.inputOutputTable,
+    !!config.hasContainedLevels
   );
   this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
 };
