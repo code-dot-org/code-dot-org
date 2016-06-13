@@ -188,16 +188,19 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
 /**
  * Given a particular set of config options, determines what our instructions
  * constants should be
- * @param {string} instructions
- * @param {string} markdownInstructions
- * @param {string} locale
- * @param {boolean} noInstructionsWhenCollapsed
- * @param {boolean} showInstructionsInTopPane
- * @param {boolean} hasInputOutputTable
+ * @param {AppOptionsConfig} config
+ * @param {string} config.level.instructions
+ * @param {string} config.level.markdownInstructions
+ * @param {array} config.level.inputOutputTable
+ * @param {string} config.locale
+ * @param {boolean} config.noInstructionsWhenCollapsed
+ * @param {boolean} config.showInstructionsInTopPane
  * @returns {Object}
  */
-export const determineInstructionsConstants = (instructions, markdownInstructions,
-    locale, noInstructionsWhenCollapsed, showInstructionsInTopPane, hasInputOutputTable) => {
+export const determineInstructionsConstants = config => {
+  const { level, locale, noInstructionsWhenCollapsed, showInstructionsInTopPane } = config;
+  const { instructions, markdownInstructions, inputOutputTable } = level;
+
   let longInstructions, shortInstructions;
   if (noInstructionsWhenCollapsed) {
     // CSP mode - We dont care about locale, and always want to show English
@@ -212,8 +215,7 @@ export const determineInstructionsConstants = (instructions, markdownInstruction
     shortInstructions = undefined;
   } else {
     // CSF mode - For non-English folks, only use the non-markdown instructions
-    locale = locale || ENGLISH_LOCALE;
-    longInstructions = locale === ENGLISH_LOCALE ? markdownInstructions : undefined;
+    longInstructions = (!locale || locale === ENGLISH_LOCALE) ? markdownInstructions : undefined;
     shortInstructions = instructions;
 
     // In the case that we're in the top pane, if the two sets of instructions
@@ -226,13 +228,13 @@ export const determineInstructionsConstants = (instructions, markdownInstruction
     // In the case where we have an input output table, we want to ensure we
     // have long instructions (even if identical to short instructions) since
     // we only show the inputOutputTable in non-collapsed mode.
-    if (hasInputOutputTable) {
+    if (inputOutputTable) {
       longInstructions = longInstructions || shortInstructions;
     }
   }
 
   return {
-    noInstructionsWhenCollapsed,
+    noInstructionsWhenCollapsed: !!noInstructionsWhenCollapsed,
     shortInstructions,
     longInstructions
   };
