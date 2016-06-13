@@ -27,7 +27,11 @@ def delete_document(type, db_id)
 
   unless solr_id.nil?
     puts "DELETING: #{solr_id}..."
-    SOLR.delete_by_id(solr_id)
+    begin
+      SOLR.delete_by_id(solr_id)
+    rescue Exception => e
+      puts "EXCEPTION OCCURRED: #{e.message}"
+    end
   end
 end
 
