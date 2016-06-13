@@ -4,6 +4,9 @@
   'yes': 'Yes'
   'no': 'No'
   select_language: "Please select your language"
+  upgrade_ie_message: "Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
+  upgrade_ie_message_csedweek: "CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
+  upgrade_ie_link: "Learn more"
   en: "Computer Science"
   computer_science_edweek: "Computer Science Education Week"
   csedweek_dates: "December 8-14, 2014"
