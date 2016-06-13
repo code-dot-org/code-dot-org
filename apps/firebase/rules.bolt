@@ -63,6 +63,11 @@ type Counters {
 type TableCounter {
   lastId: Number | Null
   rowCount: Number | Null
+
+  validate() {
+    this.lastId >= orZero(prior(this).lastId) &&
+    this.rowCount >= 0 && this.rowCount <= root.v3.constants.channels.maxTableRows
+  }
 }
 
 type RateLimitCounters {

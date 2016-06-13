@@ -95,6 +95,7 @@ def load_configuration()
     'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
     'firebase_max_channel_writes_per_15_sec' => 300,
     'firebase_max_channel_writes_per_60_sec' => 600,
+    'firebase_max_table_rows'     => 1000,
     # dynamodb-specific rate limits
     'max_table_reads_per_sec'     => 20,
     'max_table_writes_per_sec'    => 40,
