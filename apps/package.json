@@ -8,7 +8,7 @@
     "npm": "^2.9.1"
   },
   "scripts": {
-    "lint": "eslint . --ext .js,.jsx",
+    "lint": "eslint --ext .js,.jsx src test",
     "test": "npm run lint && grunt test",
     "test-low-memory": "./test-low-memory.sh",
     "test:unit": "grunt unitTest",
