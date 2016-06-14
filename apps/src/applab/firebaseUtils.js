@@ -1,11 +1,19 @@
 /* global Applab */
 
 import Firebase from 'firebase';
-let databaseCache = {};
+let firebaseCache;
+
+export function getConstants() {
+  return getFirebase().child('v3/constants');
+}
 
 export function getDatabase(channelId) {
-  let db = databaseCache[channelId];
-  if (!db) {
+  return getFirebase().child(`v3/channels/${channelId}`);
+}
+
+function getFirebase() {
+  let fb = firebaseCache;
+  if (!fb) {
     if (!Applab.firebaseName) {
       throw new Error("Error connecting to Firebase: Firebase name not specified");
     }
@@ -13,9 +21,9 @@ export function getDatabase(channelId) {
       throw new Error("Error connecting to Firebase: Firebase auth token not specified");
     }
     let base_url = `https://${Applab.firebaseName}.firebaseio.com`;
-    db = new Firebase(`${base_url}/v3/channels/${channelId}`);
+    fb = new Firebase(base_url);
     if (Applab.firebaseAuthToken) {
-      db.authWithCustomToken(Applab.firebaseAuthToken, (err, user) => {
+      fb.authWithCustomToken(Applab.firebaseAuthToken, (err, user) => {
         if (err) {
           throw new Error(`error authenticating to Firebase: ${err}`);
         } else {
@@ -23,7 +31,7 @@ export function getDatabase(channelId) {
         }
       });
     }
-    databaseCache[channelId] = db;
+    firebaseCache = fb;
   }
-  return db;
+  return fb;
 }
