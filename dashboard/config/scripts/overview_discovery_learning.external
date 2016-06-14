@@ -1,7 +1,28 @@
 name 'Overview: Discovery Learning'
-
+css 'unplugged'
 markdown <<MARKDOWN
 ## Discovery Learning
+### What do we mean? 
 
-### What are we looking for at teachercon? 
+Discovery Learning is an active form of inquiry learning, rooted in students’ prior knowledge, experiences, and explorations rather than more traditional knowledge transfer. 
+
+It’s important to note that there are pitfalls associated with unassisted discovery learning, which can  result in students being unprepared and ill-equipped to wrestle with topics. There are a few important considerations for discovery-based activities: 
+
+- Students must have an entry point for engaging with the problem. This means they should have some amount of prior knowledge or experience with the topic. All of our discovery activities are preceded with warm up activities that prime students. 
+- Since “pure” discovery learning is left entirely to students, it’s possible that they will walk away with misconceptions. Because of this, we build sense making discussion prompts into wrap up activities. 
+
+For these reasons, our approach to discovery learning deviates from textbook discovery learning. Our discovery learning activities have the following characteristics: 
+
+- Students are presented with a problem that is central to computer science. These problems are put in the context of what students are already familiar with.
+- Students solve the problem by experimenting or tinkering with different strategies. 
+- Through this experimentation, students literally discover that core concept of computing for themselves.
+- The whole class comes together to discuss their findings and the implications of those findings as a sense making activity where misconceptions can be corrected. 
+
+### Why are we emphasizing discovery learning?
+Many lessons in the CS Principles curriculum look to this form of inquiry because it situates the problem solving process in the context of what students already know, while giving them an opportunity to actively explore and experiment with concepts and ideas. 
+
+At the core of this process is **giving the learner space to construct their own idea of how problems are solved**
+
+### What are we looking for at TeacherCon? 
+At TeacherCon you’ll be looking for places where learners are given space to build their own definitions and processes for solving problems. This is particularly interesting to look at with lessons and activities where there is a “real” way that a problem is solved in the real world. 
 MARKDOWN
