@@ -179,10 +179,10 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
   }
 
   for (let prop in substitutions) {
-    const value = substitutions[prop];
+    const imageUrl = substitutions[prop];
     const substitutionHtml = (
       '<span class="instructionsImageContainer">' +
-        '<img src="' + value + '" class="instructionsImage"/>' +
+        `<img src="${imageUrl}" class="instructionsImage"/>` +
       '</span>'
     );
     const re = new RegExp('\\[' + prop + '\\]', 'g');
