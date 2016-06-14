@@ -18,3 +18,7 @@
     #markdown
       / Render markdown text through the ActionView template engine.
       = ActionView::Base.new.render(inline: data['markdown'], type: :md)
+
+  - if @script.try(:professional_learning_course?) && @script_level && [External, ExternalLink].include?(@level.class)
+    = link_to @script_level.end_of_stage? ? t('done_with_module') : t('next_resource'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn btn-primary next-resource'
+

@@ -35,7 +35,11 @@ var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
-import { determineInstructionsConstants, setInstructionsConstants } from './redux/instructions';
+import {
+  substituteInstructionImages,
+  determineInstructionsConstants,
+  setInstructionsConstants
+} from './redux/instructions';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
@@ -607,12 +611,12 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
   var promptDiv = document.getElementById('prompt');
   var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
-    var instructionsHtml = this.substituteInstructionImages(
+    var instructionsHtml = substituteInstructionImages(
       config.level.instructions, this.skin.instructions2ImageSubstitutions);
     $(promptDiv).html(instructionsHtml);
   }
   if (config.level.instructions2) {
-    var instructions2Html = this.substituteInstructionImages(
+    var instructions2Html = substituteInstructionImages(
       config.level.instructions2, this.skin.instructions2ImageSubstitutions);
     $(prompt2Div).html(instructions2Html);
     $(prompt2Div).show();
@@ -704,24 +708,6 @@ StudioApp.prototype.scaleLegacyShare = function () {
     applyTransformOrigin(vizContainer, 'left top');
     applyTransformScale(vizContainer, 'scale(' + scale + ')');
   }
-};
-
-/**
- * @param {string} htmlText
- * @param {Object.<string, string>} [substitutions] Dictionary strings (keys) to
- *   replacement values.
- */
-StudioApp.prototype.substituteInstructionImages = function (htmlText, substitutions) {
-  if (htmlText) {
-    for (var prop in substitutions) {
-      var value = substitutions[prop];
-      var substitutionHtml = '<span class="instructionsImageContainer"><img src="' + value + '" class="instructionsImage"/></span>';
-      var re = new RegExp('\\[' + prop + '\\]', 'g');
-      htmlText = htmlText.replace(re, substitutionHtml);
-    }
-  }
-
-  return htmlText;
 };
 
 StudioApp.prototype.getCode = function () {
@@ -1137,7 +1123,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
 
   // longInstructions will be undefined if non-english
   if (longInstructions) {
-    var markdownWithImages = this.substituteInstructionImages(longInstructions,
+    var markdownWithImages = substituteInstructionImages(longInstructions,
       this.skin.instructions2ImageSubstitutions);
     renderedMarkdown = processMarkdown(markdownWithImages);
   }
@@ -1150,9 +1136,9 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
   return (
     <Instructions
       puzzleTitle={puzzleTitle}
-      instructions={this.substituteInstructionImages(level.instructions,
+      instructions={substituteInstructionImages(level.instructions,
         this.skin.instructions2ImageSubstitutions)}
-      instructions2={this.substituteInstructionImages(level.instructions2,
+      instructions2={substituteInstructionImages(level.instructions2,
         this.skin.instructions2ImageSubstitutions)}
       renderedMarkdown={renderedMarkdown}
       markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
@@ -2749,17 +2735,12 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     stageTotal: level.stage_total,
     noVisualization: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
-    aniGifURL: config.level.aniGifURL
+    aniGifURL: config.level.aniGifURL,
+    inputOutputTable: config.level.inputOutputTable
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
 
-  const instructionsConstants = determineInstructionsConstants(
-    config.level.instructions,
-    config.level.markdownInstructions,
-    config.locale,
-    !!config.noInstructionsWhenCollapsed,
-    !!config.showInstructionsInTopPane
-  );
+  const instructionsConstants = determineInstructionsConstants(config);
   this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
 };

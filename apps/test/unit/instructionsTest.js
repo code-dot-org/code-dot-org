@@ -11,6 +11,8 @@ import instructions, {
   determineInstructionsConstants
 } from '@cdo/apps/redux/instructions';
 
+const ENGLISH_LOCALE = 'en_us';
+
 describe('instructions reducer', () => {
   var reducer = instructions;
 
@@ -133,14 +135,17 @@ describe('determineInstructionsConstants', () => {
     const showInstructionsInTopPane = true;
 
     it('sets longInstructions to markdownInstructions regardless of locale', () => {
-      const locales = ['fr-fr', 'en-us', undefined];
-      const results = locales.map(locale => determineInstructionsConstants(
-        'non-markdown',
-        'markdown',
+      const locales = ['fr-fr', ENGLISH_LOCALE, undefined];
+      const results = locales.map(locale => determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+        },
+        skin: {},
         locale,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
-      ));
+      }));
 
       results.forEach(result => {
         assert.equal(result.longInstructions, 'markdown');
@@ -148,48 +153,60 @@ describe('determineInstructionsConstants', () => {
     });
 
     it('sets longInstructions to be non-markdown instructions if no markdownInstructions given', () => {
-      const result = determineInstructionsConstants(
-        'non-markdown',
-        undefined,
-        'en-us',
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: undefined,
+        },
+        skin: {},
+        ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
-      );
+      });
 
       assert.equal(result.longInstructions, 'non-markdown');
     });
 
     it('never sets shortInstructions', () => {
       // only given non-markdown
-      const result = determineInstructionsConstants(
-        'non-markdown',
-        undefined,
-        'en-us',
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: undefined,
+        },
+        skin: {},
+        ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
-      );
+      });
 
       assert.equal(result.shortInstructions, undefined);
 
       // only given markdown
-      const result2 = determineInstructionsConstants(
-        undefined,
-        'markdown',
-        'en-us',
+      const result2 = determineInstructionsConstants({
+        level: {
+          instructions: undefined,
+          markdownInstructions: 'markdown',
+        },
+        skin: {},
+        ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
-      );
+      });
 
       assert.equal(result2.shortInstructions, undefined);
 
       // given both
-      const result3 = determineInstructionsConstants(
-        'non-markdown',
-        'markdown',
-        'en-us',
+      const result3 = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+        },
+        skin: {},
+        ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
-      );
+      });
 
       assert.equal(result3.shortInstructions, undefined);
     });
@@ -197,54 +214,118 @@ describe('determineInstructionsConstants', () => {
 
   describe('CSF mode', () => {
     const noInstructionsWhenCollapsed = false;
+    const showInstructionsInTopPane = true;
 
     it('sets long and short instructions for english locale', () => {
       // en_us and undefined should both be treated as english
       ['en_us', undefined].forEach(locale => {
-        const result = determineInstructionsConstants(
-          'non-markdown',
-          'markdown',
+        const result = determineInstructionsConstants({
+          level: {
+            instructions: 'non-markdown',
+            markdownInstructions: 'markdown',
+          },
+          skin: {},
           locale,
           noInstructionsWhenCollapsed,
-          true
-        );
+          showInstructionsInTopPane
+        });
         assert.deepEqual(result, {
           noInstructionsWhenCollapsed,
           shortInstructions: 'non-markdown',
+          shortInstructions2: undefined,
           longInstructions: 'markdown'
         });
       });
     });
 
     it('does not set long instructions if non-english locale', () => {
-      const result = determineInstructionsConstants(
-        'non-markdown',
-        'markdown',
-        'fr-fr',
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+        },
+        skin: {},
+        locale: 'fr-fr',
         noInstructionsWhenCollapsed,
-        true
-      );
+        showInstructionsInTopPane
+      });
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
         shortInstructions: 'non-markdown',
+        shortInstructions2: undefined,
         longInstructions: undefined
       });
     });
 
     it('does not set long instructions if identical to short-instructions, and ' +
         'showInstructionsInTopPane is true', () => {
-      const result = determineInstructionsConstants(
-        'non-markdown',
-        'non-markdown',
-        'en-us',
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'non-markdown',
+        },
+        skin: {},
+        ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        true
-      );
+        showInstructionsInTopPane
+      });
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
         shortInstructions: 'non-markdown',
+        shortInstructions2: undefined,
         longInstructions: undefined
       });
+    });
+
+    it('sets long instructions if we have an inputOutputTable', () => {
+      const inputOutputTable =  [[15, 5], [20, 10]];
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: undefined,
+          inputOutputTable
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane
+      });
+      assert.equal(result.longInstructions, 'non-markdown');
+
+      const result2 = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+          inputOutputTable
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane
+      });
+      assert.equal(result2.longInstructions, 'markdown');
+    });
+
+    it('substitutes images in instructions', () => {
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'Instructions with [image1]',
+          instructions2: 'Instructions with [image2]',
+          markdownInstructions: undefined
+        },
+        skin: {
+          instructions2ImageSubstitutions: {
+            image1: '/image1.png',
+            image2: '/image2.png'
+          }
+        },
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane
+      });
+
+      assert(/image1\.png/.test(result.shortInstructions), 'image 1 is replaced');
+      assert(/image2\.png/.test(result.shortInstructions2), 'image 2 is replaced');
     });
   });
 });

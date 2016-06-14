@@ -62,12 +62,19 @@ const styles = {
     marginTop: 5,
     marginRight: 5
   },
+  // bubble has pointer cursor by default. override that if no hints
+  noAuthoredHints: {
+    cursor: 'default'
+  },
   authoredHints: {
     // raise by 20 so that the lightbulb "floats" without causing the original
     // icon to move. This strangeness happens in part because prompt-icon-cell
     // is managed outside of React
-    marginTop: -20,
-    cursor: 'pointer'
+    marginTop: -20
+  },
+  secondaryInstructions: {
+    fontSize: 12,
+    color: '#5b6770'
   }
 };
 
@@ -79,10 +86,14 @@ var TopInstructions = React.createClass({
     maxHeight: React.PropTypes.number.isRequired,
     collapsed: React.PropTypes.bool.isRequired,
     shortInstructions: React.PropTypes.string.isRequired,
+    shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
     hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
-    smallStaticAvatar: React.PropTypes.string.isRequired,
+    smallStaticAvatar: React.PropTypes.string,
+    inputOutputTable: React.PropTypes.arrayOf(
+      React.PropTypes.arrayOf(React.PropTypes.number)
+    ),
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -140,10 +151,15 @@ var TopInstructions = React.createClass({
    * @returns {number} The minimum height of the top instructions (which is just
    * the height of the little icon and the height of the resizer if we're not
    * collapsed
-
    */
   getMinHeight() {
-    return $(ReactDOM.findDOMNode(this.refs.icon)).outerHeight(true) +
+    const buttonHeight = $(ReactDOM.findDOMNode(this.refs.collapser)).outerHeight(true);
+    const minIconHeight = this.refs.icon ?
+      $(ReactDOM.findDOMNode(this.refs.icon)).outerHeight(true) : 0;
+    const minInstructionsHeight = this.props.collapsed ?
+      $(ReactDOM.findDOMNode(this.refs.instructions)).outerHeight(true) : 0;
+
+    return Math.max(buttonHeight, minIconHeight, minInstructionsHeight) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
   },
 
@@ -210,7 +226,11 @@ var TopInstructions = React.createClass({
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
       this.props.shortInstructions : this.props.longInstructions);
 
-    const leftColWidth = PROMPT_ICON_WIDTH +
+    // Only used by star wars levels
+    const instructions2 = this.props.shortInstructions2 ? processMarkdown(
+      this.props.shortInstructions2) : undefined;
+
+    const leftColWidth = (this.props.smallStaticAvatar ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
 
     return (
@@ -221,17 +241,34 @@ var TopInstructions = React.createClass({
             rightColWidth={this.state.rightColWidth}
             height={this.props.height - resizerHeight}
         >
-          <div style={[styles.bubble, this.props.hasAuthoredHints && styles.authoredHints]}>
+          <div
+              style={[
+                commonStyles.bubble,
+                this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
+              ]}
+          >
             <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
-              <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
+              {this.props.smallStaticAvatar &&
+                <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
+              }
             </ProtectedStatefulDiv>
           </div>
-          <Instructions
-              ref="instructions"
-              renderedMarkdown={renderedMarkdown}
-              onResize={this.adjustMaxNeededHeight}
-              inTopPane
-          />
+          <div ref="instructions">
+            <Instructions
+                renderedMarkdown={renderedMarkdown}
+                onResize={this.adjustMaxNeededHeight}
+                inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                inTopPane
+            />
+            {this.props.collapsed && instructions2 &&
+              <div
+                style={[
+                  styles.secondaryInstructions
+                ]}
+                dangerouslySetInnerHTML={{ __html: instructions2 }}
+              />
+            }
+          </div>
           <CollapserButton
               ref='collapser'
               style={[styles.collapserButton, !this.props.longInstructions && commonStyles.hidden]}
@@ -256,10 +293,12 @@ module.exports = connect(function propsFromStore(state) {
       state.instructions.maxNeededHeight),
     collapsed: state.instructions.collapsed,
     shortInstructions: state.instructions.shortInstructions,
+    shortInstructions2: state.instructions.shortInstructions2,
     longInstructions: state.instructions.longInstructions,
     hasAuthoredHints: state.instructions.hasAuthoredHints,
     isRtl: state.pageConstants.localeDirection === 'rtl',
-    smallStaticAvatar: state.pageConstants.smallStaticAvatar
+    smallStaticAvatar: state.pageConstants.smallStaticAvatar,
+    inputOutputTable: state.pageConstants.inputOutputTable
   };
 }, function propsFromDispatch(dispatch) {
   return {

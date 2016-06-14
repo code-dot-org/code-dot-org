@@ -89,10 +89,14 @@ level 'U3 - Sprites and Mod - Rand Around Mouse'
 level 'CSD U3 - images - setAnimation'
 level 'CSD U3 - images - scale'
 level 'CSD U3 - images - kiteFlying'
+level 'CSD U3 - images - pick your final work'
+level 'U3 - image - wheel free play'
+level 'CSD U3 - images - fish free play'
+level 'U3 - images - gears free play'
+level 'U3 - images - bee free play'
+level 'CSD U3 - images - kite free play'
 
-
-
-stage ' Booleans and Conditionals'
+stage 'Booleans and Conditionals'
 level 'CSD U3 - Booleans - 1'
 
 stage 'Conditionals and Keyboard Input'
@@ -117,6 +121,14 @@ level 'CSD U3 Conditional Project'
 stage 'Animations'
 level 'CSD U3 - images - animations'
 level 'CSD U3 - images - nextFrame'
+
+stage 'Project: Interactive Card'
+level 'CSD U3 Interactive Card Exemplar'
+level 'CSD U3 Interactive Card Background'
+level 'CSD U3 Interactive Card Sprites'
+level 'CSD U3 Interactive Card User Input'
+level 'CSD U3 Interactive Card Other Conditionals'
+level 'CSD U3 Interactive Card Final'
 
 stage 'SFLP'
 level 'CSD-U3-SFLP Simple Drawing'
