@@ -1,32 +1,47 @@
 import React from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 
 const styles = {
   wrapper: {
-    display: 'inline-block'
+    display: 'inline-block',
+    position: 'absolute'
   },
   wrapperTopPane: {
-    position: 'relative' // override className styling
+    position: 'relative'
   },
   aniGifPreview: url => ({
+    cursor: 'pointer',
     backgroundImage: `url('${url}')`
   })
 };
 
-const AniGifPreview = props => (
-  <div
-      id="ani-gif-preview-wrapper"
-      style={[styles.wrapper, props.inTopPane && styles.wrapperTopPane]}
-  >
-    <div
-        id="ani-gif-preview"
-        style={styles.aniGifPreview(props.url)}
-    />
-  </div>
-);
+const AniGifPreview = React.createClass({
+
+  render() {
+    return (
+      <div
+          id="ani-gif-preview-wrapper"
+          style={[styles.wrapper, this.props.instructionsInTopPane && styles.wrapperTopPane]}
+      >
+        <div
+            id="ani-gif-preview"
+            style={styles.aniGifPreview(this.props.url)}
+            onClick={this.props.instructionsInTopPane ? this.props.showInstructionsDialog : undefined}
+        />
+      </div>
+    );
+  }
+});
 
 AniGifPreview.propTypes = {
-  url: React.PropTypes.string.isRequired
+  url: React.PropTypes.string.isRequired,
+  instructionsInTopPane: React.PropTypes.bool.isRequired,
+  showInstructionsDialog: React.PropTypes.func.isRequired
 };
 
-export default Radium(AniGifPreview);
+export default connect(state => ({
+  url: state.pageConstants.aniGifURL,
+  instructionsInTopPane: state.pageConstants.instructionsInTopPane,
+  showInstructionsDialog: state.pageConstants.showInstructionsDialog
+}))(Radium(AniGifPreview));

@@ -66,7 +66,7 @@ var Instructions = React.createClass({
           <img className="aniGif example-image" src={this.props.aniGifURL}/>
         }
         {this.props.aniGifURL && this.props.inTopPane &&
-          <AniGifPreview url={this.props.aniGifURL} inTopPane/>
+          <AniGifPreview/>
         }
         {this.props.authoredHints}
       </div>
