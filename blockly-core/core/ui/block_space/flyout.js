@@ -758,7 +758,6 @@ Blockly.Flyout.prototype.filterForCapacity_ = function() {
 };
 
 Blockly.Flyout.prototype.updateBlockLimitTotals_ = function() {
-  console.log("updating block totlas from flyout");
   var blocks = this.blockSpaceEditor_.blockSpace.getAllVisibleBlocks();
   var blockTypes = blocks.map(function (block) {
     return block.type;

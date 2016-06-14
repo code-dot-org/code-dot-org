@@ -82,10 +82,6 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.collapsed_ = false;
   this.dragging_ = false;
 
-  // Used for toolbox blocks to allow only a limited number of blocks to
-  // be used in the workspace.
-  this.limit_ = undefined;
-
   // Used to hide function blocks when not in modal workspace. This property
   // is not serialized/deserialized.
   this.currentlyHidden_ = false;
@@ -143,6 +139,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
     this.setCurrentlyHidden(true);
   }
 
+  // Update limit UI on block count changes.
   if (this.blockSpace && this.blockSpace.blockSpaceEditor) {
     var inFlyoutOrMainEditBlocks = this.isInFlyout !== Blockly.editBlocks;
     if (inFlyoutOrMainEditBlocks) {
@@ -947,12 +944,15 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
     options.push(editableOption);
 
     // limit
+    var getCurrentLimit = function() {
+      return block.blockSpace.blockSpaceEditor.blockLimits.getLimit(block.type);
+    }.bind(this);
     var limitOption = {
-      text: "Set limit (current: " + (this.limit_ === undefined ? 'none' : this.limit_) + ")",
+      text: "Set limit (current: " + (getCurrentLimit() || 'none') + ")",
       enabled: true,
       callback: function () {
         block.blockSpace.blockSpaceEditor.blockLimits.setLimit(
-            block.type, prompt("New Limit", 999));
+            block.type, prompt("New Limit", getCurrentLimit()));
       }
     };
     options.push(limitOption);
@@ -1482,52 +1482,6 @@ Blockly.Block.prototype.isMovable = function() {
 Blockly.Block.prototype.setMovable = function(movable) {
   this.movable_ = movable;
   this.svg_ && this.svg_.updateMovable();
-};
-
-/**
- * only allow limits for toolbox blocks or when editing blocks (so
- * that we can edit toolbox blocks)
- * @return {boolean}
- */
-Blockly.Block.prototype.canHaveLimit = function() {
-  return this.isInFlyout || Blockly.editBlocks;
-};
-
-/**
- * Get whether this block represents a toolbox block that can only be
- * used a limited number of times
- * @return {boolean}
- */
-Blockly.Block.prototype.hasLimit = function() {
-  return this.canHaveLimit() && this.limit_ !== undefined;
-};
-
-/**
- * If this block is a toolbox block, mark it as being able to "produce"
- * a limited number of workspace blocks
- * @param {number} limit
- */
-Blockly.Block.prototype.setLimit = function(limit) {
-  limit = parseInt(limit);
-  if (isNaN(limit)) {
-    limit = undefined;
-  }
-  if (this.canHaveLimit()) {
-    this.limit_ = limit;
-    this.svg_ && this.svg_.updateLimit(limit);
-  }
-};
-
-/**
- * @return {number}
- */
-Blockly.Block.prototype.getLimit = function() {
-  return this.limit_;
-};
-
-Blockly.Block.prototype.displayCount = function(count) {
-// TODO can remove?
-  this.svg_ && this.svg_.updateLimit(count);
 };
 
 /**

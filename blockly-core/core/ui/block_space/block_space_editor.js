@@ -66,10 +66,9 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
   );
 
   /**
-   * Set of blocks with limits, keyed by block type. Used to enfoce
+   * Set of blocks with limits, keyed by block type. Used to enforce
    * limited quantities of blocks in workspace.
    * @type {Blockly.BlockLimits}
-   * @public
    */
   this.blockLimits = new Blockly.BlockLimits();
 
