@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { stageShape } from './types';
 import _ from 'lodash';
+
+import { stageShape } from './types';
 import CourseProgressRow from './course_progress_row.jsx';
 import color from '../../color';
 
@@ -20,7 +21,6 @@ const styles = {
  */
 const CourseProgress = React.createClass({
   propTypes: {
-    currentLevelId: React.PropTypes.string,
     professionalLearningCourse: React.PropTypes.bool,
     focusAreaPositions: React.PropTypes.arrayOf(React.PropTypes.number),
     stages: React.PropTypes.arrayOf(stageShape)
@@ -29,24 +29,33 @@ const CourseProgress = React.createClass({
   render() {
     const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Content'));
     let count = 1;
-    const rows = _.map(groups, (stages, group) =>
-      <div key={group}>
-        <a name={group.toLowerCase().replace(' ', '-')}/>
-        <h4 style={this.props.professionalLearningCourse ? styles.flexHeader : {display: 'none'}}>{group}</h4>
-        {stages.map(stage => <CourseProgressRow stage={stage} key={stage.name} currentLevelId={this.props.currentLevelId} isFocusArea={this.props.focusAreaPositions.indexOf(count++) > -1} professionalLearningCourse={this.props.professionalLearningCourse} />)}
-      </div>
-    );
 
     return (
       <div className='user-stats-block'>
-        {rows}
+        {_.map(groups, (stages, group) =>
+          <div key={group}>
+            <h4
+              id={group.toLowerCase().replace(' ', '-')}
+              style={this.props.professionalLearningCourse ? styles.flexHeader : {display: 'none'}}
+            >
+              {group}
+            </h4>
+            {stages.map(stage =>
+              <CourseProgressRow
+                stage={stage}
+                key={stage.name}
+                isFocusArea={this.props.focusAreaPositions.indexOf(count++) > -1}
+                professionalLearningCourse={this.props.professionalLearningCourse}
+              />
+            )}
+          </div>
+        )}
       </div>
     );
   }
 });
 
 export default connect(state => ({
-  currentLevelId: state.currentLevelId,
   professionalLearningCourse: state.professionalLearningCourse,
   focusAreaPositions: state.focusAreaPositions,
   stages: state.stages
