@@ -14,6 +14,13 @@ class ImportableScreen {
   get willReplace() {
     return designMode.getAllScreenIds().includes(this.id);
   }
+
+  get assetsToReplace() {
+    // TODO: filter out assets that will just be imported without replacing anything.
+    var nodesWithAssets = $('[data-canonical-image-url]', this.dom).toArray();
+    var assets = nodesWithAssets.map(n => $(n).attr('data-canonical-image-url'));
+    return assets;
+  }
 }
 
 class ImportableProject {
@@ -44,11 +51,12 @@ export const ScreenListItem = React.createClass({
   },
 
   render() {
+    var {screen, selected, onSelect} = this.props;
     return (
       <li style={{position: 'relative', paddingLeft: 70, height: 100}}>
-        <input type="checkbox" checked={this.props.selected}
-               onChange={() => this.props.onSelect(!this.props.selected)} />
-        <div dangerouslySetInnerHTML={{__html: this.props.screen.dom.outerHTML}}
+        <input type="checkbox" checked={selected}
+               onChange={() => onSelect(!selected)} />
+        <div dangerouslySetInnerHTML={{__html: screen.dom.outerHTML}}
              style={{
                  display: 'inline-block',
                  position: 'absolute',
@@ -57,9 +65,14 @@ export const ScreenListItem = React.createClass({
                  transformOrigin: 'top left',
                }}
         />
-        {this.props.screen.id}
-        {this.props.screen.willReplace &&
-         <p>Importing this will replace your existing screen: "{this.props.screen.id}".</p>}
+        {screen.id}
+        {screen.willReplace &&
+         <p>Importing this will replace your existing screen: "{screen.id}".</p>}
+        {screen.assetsToReplace.length > 0 &&
+         <p>Importing this will replace your existing assets:{' '}
+           {screen.assetsToReplace.map(a => `"${a}"`).join(', ')}.
+         </p>
+        }
       </li>
     );
   }

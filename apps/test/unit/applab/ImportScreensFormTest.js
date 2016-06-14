@@ -9,18 +9,23 @@ setupLocales();
 
 var ImportScreensForm = require('@cdo/apps/applab/ImportScreensForm').default;
 var ScreenListItem = require('@cdo/apps/applab/ImportScreensForm').ScreenListItem;
-var designMode = require('@cdo/apps/applab/designMode');
-
-describe("Applab ScreenListItem component", function () {
-
-});
 
 describe("Applab ImportScreensForm component", function () {
 
-  var form, onImport, project, importButton, getAllScreenIds;
+  var form, onImport, project, importButton, designModeViz;
 
   beforeEach(() => {
-    getAllScreenIds = sinon.stub(designMode, "getAllScreenIds").returns(['first_screen']);
+    designModeViz = document.createElement('div');
+    designModeViz.id = "designModeViz";
+    document.body.appendChild(designModeViz);
+    designModeViz.innerHTML = `
+<div class="screen" id="design_first_screen">
+  <img src="/v3/assets/some-project/asset1.png"
+       data-canonical-image-url="asset1.png"
+       id="img1">
+</div>
+`;
+
     onImport = sinon.spy();
     project = {
       channel: {
@@ -29,8 +34,13 @@ describe("Applab ImportScreensForm component", function () {
       sources: {
         html: `
 <div>
-  <div class="screen" id="first_screen"></div>
-  <div class="screen" id="second_screen"></div>
+  <div class="screen" id="first_screen">
+  </div>
+  <div class="screen" id="second_screen">
+    <img src="/v3/assets/some-project/asset1.png"
+         data-canonical-image-url="asset1.png"
+         id="img1">
+  </div>
   <div class="screen" id="third_screen"></div>
 </div>
 `,
@@ -41,7 +51,7 @@ describe("Applab ImportScreensForm component", function () {
   });
 
   afterEach(() => {
-    designMode.getAllScreenIds.restore();
+    designModeViz.parentNode.removeChild(designModeViz);
   });
 
   function update() {
@@ -70,6 +80,12 @@ describe("Applab ImportScreensForm component", function () {
       );
       expect(screenItems[1].text()).not.to.include(
         'Importing this will replace your existing screen'
+      );
+    });
+
+    it("should render a warning message if importing will replace an existing asset", () => {
+      expect(screenItems[1].text()).to.include(
+        'Importing this will replace your existing assets: "asset1.png".'
       );
     });
 
