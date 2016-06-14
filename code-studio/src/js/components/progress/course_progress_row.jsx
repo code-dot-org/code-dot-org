@@ -32,7 +32,7 @@ const styles = {
     borderWidth: 3,
     background: color.almost_white_cyan,
     borderColor: color.cyan,
-    padding: 8
+    padding: '8px 8px 20px 8px'
   },
   stageName: {
     display: 'table-cell',
