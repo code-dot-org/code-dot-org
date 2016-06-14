@@ -11,10 +11,21 @@ goog.provide('Blockly.BlockLimits');
 goog.require('Blockly.Block');
 
 /**
- * Class for managing block limits within a flyout
+ * @typedef {Object} BlockLimit
+ * @property {number} count
+ * @property {number} limit
+ */
+
+/**
+ * Class for managing block limits
  * @constructor
  */
 Blockly.BlockLimits = function () {
+  /**
+   * Store of block types to block limit tracking objects.
+   * {Object.<string, BlockLimit>}
+   * @private
+   */
   this.limits_ = {};
 
   /**
@@ -61,7 +72,7 @@ Blockly.BlockLimits.prototype.updateCount = function (type, newCount) {
 };
 
 Blockly.BlockLimits.prototype.getLimit = function (type) {
-  return this.limits_[type].limit;
+  return this.limits_.hasOwnProperty(type) ? this.limits_[type].limit : undefined;
 };
 
 /**

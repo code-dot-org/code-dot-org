@@ -157,7 +157,9 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
 
   if (Blockly.editBlocks) {
     var limit = block.blockSpace.blockSpaceEditor.blockLimits.getLimit(block.type);
-    limit && element.setAttribute('limit', limit);
+    if (limit) {
+      element.setAttribute('limit', limit);
+    }
   }
   if (block.htmlId) {
     element.setAttribute('id', block.htmlId);
