@@ -18,11 +18,12 @@
 ///////////////////////////////////////////////////////////////////////////
 
 path /v3/constants {
-  read() { true }
+  read() { isLoggedIn() }
 }
 
-path /v3/channels {
-  read() { true }
+// Don't allow reading /v3/channels, since that would expose the list of channels.
+path /v3/channels/{channelId} {
+  read() { isLoggedIn() }
 }
 
 path /v3/channels/{channelId}/serverTime/{user_id} is Number {
