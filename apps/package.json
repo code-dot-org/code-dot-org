@@ -146,6 +146,7 @@
     "require-globify": "1.2.1",
     "rgbcolor": "0.0.4",
     "sanitize-html": "^1.11.3",
+    "script-loader": "^0.7.0",
     "seedrandom": "2.4.2",
     "sinon": "^2.0.0-pre",
     "sprintf-js": "^1.0.3",
