@@ -96,7 +96,7 @@ level 'U3 - images - gears free play'
 level 'U3 - images - bee free play'
 level 'CSD U3 - images - kite free play'
 
-stage ' Booleans and Conditionals'
+stage 'Booleans and Conditionals'
 level 'CSD U3 - Booleans - 1'
 
 stage 'Conditionals and Keyboard Input'

@@ -1,0 +1,20 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-06-14T04:40:01.596Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "So far we've seen four lessons from unit 1 -- two model lessons delivered by facilitators and two lessons by participants. With your partner, consider:\r\n\r\n- How have people wearing teacher hats been balancing their time leading or guiding with the student-hat’s time to get into activities and tools? \r\n- What strategies are effective in getting peoples’ attention once they’re lost in a tool?\r\n- What are your  current thoughts about the appropriate balance of teacher-guided time VS time in the tools or with the activities? \r\n\r\nUse the space below to record any thoughts, recommendations, or commentary",
+    "title": "Tuesday Report: balancing teachers and tools in unit 1",
+    "height": "100",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>
