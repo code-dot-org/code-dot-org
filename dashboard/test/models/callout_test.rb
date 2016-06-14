@@ -18,7 +18,7 @@ class CalloutTest < ActiveSupport::TestCase
     assert_equal('#runButton', @csv_callouts.first.element_id)
     assert_equal('run', @csv_callouts.first.localization_key)
     assert_nil(@csv_callouts.first.qtip_config)
-    assert_equal(@csv_callouts.last.qtip_config, '{position: {my: "bottom left", at: "top right", adjust: {x: 297, y:70}}}')
+    assert_equal(@csv_callouts.last.qtip_config, '{"position": {"my": "bottom left", "at": "top right", "adjust": {"x": 297, "y":70}}}')
   end
 
   test "callouts should first_or_create when imported from tsv" do
