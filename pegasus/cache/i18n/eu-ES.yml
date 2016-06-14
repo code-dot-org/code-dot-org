@@ -1,7 +1,14 @@
 "eu-ES":
   hour_of_code: Kode Ordua
   hello: Kaixo, mundua
+  'yes': Bai
+  'no': Ez
   select_language: Aukera ezazu zure hizkuntza, mesedez
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Ikasi gehiago
   en: Informatika
   computer_science_edweek: Informatikaren Ikaskuntzaren astea
   csedweek_dates: 2014-ko abenduaren 8-tik 14-ra
@@ -708,6 +715,7 @@
   dashboard_sections_table_secret: Login mota
   dashboard_sections_table_grade: Kalifikazioa
   dashboard_sections_table_course: Ikastaroa
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Ikasleak
   dashboard_sections_table_code: Sekzio Kodea
   dashboard_sections_name: Atal izena
@@ -1735,11 +1743,3 @@
   infinity_shortcode: inf
   playlab_shortcode: hasi
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

@@ -1,7 +1,14 @@
 "he-IL":
   hour_of_code: "שעת תיכנות"
   hello: "הי עולם"
+  'yes': "כן"
+  'no': "לא"
   select_language: "אנא בחר את שפתך"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "למד עוד"
   en: "מדעי המחשב"
   computer_science_edweek: "שבוע החינוך למדעי המחשב"
   csedweek_dates: 8-14 בדצמבר, 2014
@@ -26,7 +33,8 @@
   twentyhours_text: "גמרת את שעת הקוד הראשונה שלך? למד עוד מבסיס מדעי המחשב ומושגים
     בתכנות בקורס הבא הזה."
   og_title: "לכל ילד מגיע הזדמנות"
-  og_description: "לכל תלמיד בכל מוסד לימודי מגיע הזדמנות ללמוד מדעי המחשב."
+  og_description: "כל תלמיד בכל בית ספר deserves the opportunity ללמוד computer science.
+    It's changing everything."
   hoc2014_heading: הצטרפו ל <a href="http://hourofcode.com">שעה של קוד </a><br/>דצמבר
     8-14, 2014<br/>
   hoc2014_students: "סטודנטים"
@@ -680,6 +688,7 @@
   dashboard_sections_table_secret: "סוג התחברות"
   dashboard_sections_table_grade: "כיתה"
   dashboard_sections_table_course: "קורס"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "סטודנטים"
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: "שם החלק"
@@ -1651,11 +1660,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "הפעל"
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

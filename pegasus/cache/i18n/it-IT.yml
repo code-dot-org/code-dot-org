@@ -1,7 +1,14 @@
 "it-IT":
   hour_of_code: Ora del codice
   hello: Ciao a tutti
+  'yes': Sì
+  'no': 'No'
   select_language: Seleziona per favore la tua lingua
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Ulteriori informazioni
   en: Informatica
   computer_science_edweek: Settimana di Educazione all'Informatica
   csedweek_dates: 8-14 dicembre 2014
@@ -700,11 +707,11 @@
   dashboard_action_required: obbligatorio
   dashboard_assessments_view: 'Mostra valutazioni in:'
   dashboard_assessments_none: Nessuna valutazione
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  dashboard_assessments_none_part2: Se state insegnando in un corso al liceo o alle
+    scuole medie, abbiamo domande di valutazione disponibili come parte del Code Studio
+    per aiutare gli studenti a prepararsi per il test di AP. Per utilizzare queste
+    valutazioni, in primo luogo assegnare il corso per la classe e poi scegliere il
+    corso dal menu a tendina qui sopra per vedere le risposte degli studenti.
   dashboard_assessments_summaries: Riassunti
   dashboard_assessments_answers: Tutte le risposte
   dashboard_filter_by_stage: 'Filtra per fase:'
@@ -738,7 +745,7 @@
   dashboard_progress_view: 'Mostra i progressi in:'
   dashboard_progress_student_in_script: Informazioni sui progressi di %{student_name}
     in %{script_name}
-  dashboard_progress_pair_programming: pair programming
+  dashboard_progress_pair_programming: programmazione in Coppia
   dashboard_responses_view: 'Visualizza il testo delle risposte in:'
   dashboard_responses_none: Nessuna risposta
   dashboard_sections_new_section: Nuova classe
@@ -749,6 +756,7 @@
   dashboard_sections_table_secret: Tipo di accesso
   dashboard_sections_table_grade: Livello
   dashboard_sections_table_course: Corso
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Studenti
   dashboard_sections_table_code: Codice-Classe
   dashboard_sections_name: Nome della classe
@@ -1833,11 +1841,3 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

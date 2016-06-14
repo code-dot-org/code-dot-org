@@ -1,7 +1,14 @@
 "uz-UZ":
   hour_of_code: Dasturlash soati
   hello: Salom Dunyo
+  'yes': 'Yes'
+  'no': 'No'
   select_language: Iltimos, tilni tanlang
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Ko‘proq bilish
   en: Informatika
   computer_science_edweek: Informatika ta’limi haftaligi
   csedweek_dates: 8-14 dekabr, 2014
@@ -728,6 +735,7 @@
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Bo‘lim nomi
@@ -1733,11 +1741,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras
