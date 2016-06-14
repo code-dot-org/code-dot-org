@@ -4,6 +4,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { METADATA_SHAPE } from '../animationMetadata';
+import {MessageType} from '@code-dot-org/piskel';
 
 /**
  * @const {string} domain-relative URL to Piskel index.html
@@ -31,7 +32,7 @@ const PiskelEditor = React.createClass({
     const {animations, selectedAnimation} = newProps;
     if (newProps.selectedAnimation !== this.props.selectedAnimation) {
       this.postMessage({
-        type: 'LOAD_IMAGE', // TODO (bbuchanan): Use a (shared?) constant for this.
+        type: MessageType.LOAD_ANIMATION,
         animation: animations.find(animation => animation.key === selectedAnimation)
       });
     }
