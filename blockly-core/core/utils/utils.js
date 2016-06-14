@@ -849,6 +849,12 @@ Blockly.findEmptyInput = function (block, inputType) {
   });
 };
 
+/**
+ * Aggregates counts for the number of occurrences of unique keys in the given
+ * list.
+ * @param {string[]} list
+ * @returns {Object.<string, number>}
+ */
 Blockly.aggregateCounts = function (list) {
   return list.reduce(function (prev, curr) {
     var count = prev[curr] || 0;
