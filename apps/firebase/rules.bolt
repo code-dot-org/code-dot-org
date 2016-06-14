@@ -84,15 +84,12 @@ type RateLimitCounter {
 
 type Storage {
   tables: TableStorage[]
-  // TODO(dave): make this String[] once values are stringified
-  keys: Value[]
+  keys: String[]
 }
 
 type TableStorage {
   records: String[]
 }
-
-type Value extends String | Number | Boolean | Null;
 
 ///////////////////////////////////////////////////////////////////////////
 // HELPER FUNCTIONS
