@@ -66,13 +66,14 @@ Blockly.BlockLimits.prototype.updateCount = function (type, newCount) {
   if (countChanged) {
     this.events.fireListeners('change', false, {
       type: type,
+      limit: limit.limit,
       remaining: limit.limit - limit.count
     });
   }
 };
 
 Blockly.BlockLimits.prototype.getLimit = function (type) {
-  return this.limits_.hasOwnProperty(type) ? this.limits_[type].limit : undefined;
+  return this.limits_[type] ? this.limits_[type].limit : undefined;
 };
 
 /**
