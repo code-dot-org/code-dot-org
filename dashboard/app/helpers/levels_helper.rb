@@ -109,14 +109,21 @@ module LevelsHelper
   end
 
   def select_and_remember_callouts(always_show = false)
-    # Filter if already seen (unless always_show)
-    callouts_to_show = @level.available_callouts(@script_level).
-      reject { |c| !always_show && client_state.callout_seen?(c.localization_key) }.
+    # Keep track of which callouts had been seen prior to calling add_callout_seen
+    all_callouts = @level.available_callouts(@script_level)
+    callouts_seen = {}
+    all_callouts.each do |c|
+      callouts_seen[c.localization_key] = client_state.callout_seen?(c.localization_key)
+    end
+    # Filter if already seen (unless always_show or canReappear in codeStudio part of qtip_config)
+    callouts_to_show = all_callouts.
+      reject { |c| !always_show && callouts_seen[c.localization_key] && !JSON.parse(c.qtip_config || '{}').try(:[], 'codeStudio').try(:[], 'canReappear') }.
       each { |c| client_state.add_callout_seen(c.localization_key) }
-    # Localize
+    # Localize and propagate the seen property
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
+      callout_hash['seen'] = always_show ? nil : callouts_seen[callout.localization_key]
       callout_text = data_t('callout.text', callout.localization_key)
       if callout_text.nil?
         callout_hash['localized_text'] = callout.callout_text
