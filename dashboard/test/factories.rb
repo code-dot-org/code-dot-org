@@ -157,6 +157,10 @@ FactoryGirl.define do
     properties{{makerlab_enabled: true}}
   end
 
+  factory :gamelab, :parent => Level, :class => Gamelab do
+    game {Game.gamelab}
+  end
+
   factory :multi, :parent => Level, :class => Applab do
     game {create(:game, app: "multi")}
     properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
