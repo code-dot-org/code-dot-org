@@ -104,7 +104,8 @@ class V2SectionRoutesTest < Minitest::Test
             "name"=>"Fake Section A",
             "login_type"=>"email",
             "grade"=>nil,
-            "code"=>nil
+            "code"=>nil,
+            "stage_extras"=>false
           }],
           JSON.parse(@pegasus.last_response.body)
       end

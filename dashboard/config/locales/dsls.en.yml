@@ -146,6 +146,7 @@ en:
       CSD - Headers and Lists - Recipe Project: {}
       CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
+      CSD U3 - images - pick your final work: {}
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Draw Loop Stop: {}
@@ -1466,6 +1467,9 @@ en:
         title: title
       Unit 3 Survey 2: {}
       Welcome to TeacherCon!: {}
+      aEstory1:
+        Artist Exemplar First Story: Artist Exemplar First Story
+        Why are they doing this stage?: Why are they doing this stage?
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try

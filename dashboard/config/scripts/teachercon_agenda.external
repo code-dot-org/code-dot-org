@@ -1,6 +1,14 @@
 name 'TeacherCon Agenda'
+css 'unplugged'
+
 markdown <<MARKDOWN
 ## TeacherCon Agenda
+<br>
+Here's an overview of TeacherCon sessions:  
+<br>
+![](https://images.code.org/86f1420a9bfcf0c9243b8de3d33f450c-image-1465869723491.png)
+<br><br>
+![](https://images.code.org/86a45270ea4ba943b4d6fb4050458ad0-image-1465869794152.png)
 
-### Where will we use this tool? 
+
 MARKDOWN

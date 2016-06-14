@@ -1,0 +1,92 @@
+#!/usr/bin/env ruby
+
+# This script adds, updates, or deletes the SOLR document specified by command
+# line parameters, using our DB as a source of truth. It is primarily a wrapper
+# around the Solr module.
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/geocoder'
+require 'cdo/solr'
+
+raise "No SOLR server configured." unless CDO.solr_server
+SOLR = Solr::Server.new(host: CDO.solr_server)
+
+# For each supported ACTION, there should be a corresponding method
+# ACTION_document.
+# TODO(asher): Implement the `add` action.
+SUPPORTED_ACTIONS = %w(update delete)
+SUPPORTED_TYPES = %w(form user)
+
+def get_solr_id_from_db_id(db_id)
+  case type
+  when 'form'
+    return db_id
+  when 'user'
+    return "user-#{db_id}"
+  end
+  return nil
+end
+
+def update_document_type_user(db_id, solr_id)
+  db_user = DASHBOARD_DB[:users].find_by_id(db_id)
+
+  # TODO(asher): Refactor this and the code in bin/index-users-in-solr to a
+  # shared method.
+  solr_user_doc = {
+    id: solr_id,
+    name_s: db_user[:name],
+    email_s: db_user[:email],
+    kind_s: 'user',
+    role_s: db_user[:user_type]
+  }
+  location = Geocoder.search(db_user[:current_sign_in_ip]).first
+  if location
+    solr_user_doc['create_ip_city_s'] = location.city
+    solr_user_doc['create_ip_state_s'] = location.state
+    solr_user_doc['create_ip_country_s'] = location.country
+    solr_user_doc['create_ip_postal_code_s'] = location.postal_code
+    solr_user_doc['create_ip_location_p'] = "#{location.latitude},#{location.longitude}" if location.latitude && location.longitude
+  end
+
+  begin
+    SOLR.update([solr_user_doc])
+  rescue Exception => e
+    puts "EXCEPTION OCCURRED: #{e.message}"
+  end
+end
+
+def delete_document(type, db_id)
+  solr_id = get_solr_id_from_db_id(db_id)
+  unless solr_id.nil?
+    puts "DELETING SOLR DOCUMENT: #{solr_id}..."
+    begin
+      SOLR.delete_by_id(solr_id)
+    rescue Exception => e
+      puts "EXCEPTION OCCURRED: #{e.message}"
+    end
+  end
+end
+
+def update_document(type, db_id)
+  solr_id = get_solr_id_from_db_id(db_id)
+  unless solr_id.nil?
+    puts "UPDATING SOLR DOCUMENT: #{solr_id}..."
+    case type
+    when 'form'
+      puts 'TODO(asher): Implement.'
+    when 'user'
+      update_document_type_user(db_id, solr_id)
+    end
+  end
+end
+
+def main
+  unless (SUPPORTED_ACTIONS.include? ARGV[0]) && (SUPPORTED_TYPES.include? ARGV[1]) && ARGV[2]
+    puts 'Usage: ./bin/solr/update_document <action> <type> <db_id>'
+    exit 1
+  end
+
+  send("#{ARGV[0]}_document", ARGV[1], ARGV[2])
+end
+
+main

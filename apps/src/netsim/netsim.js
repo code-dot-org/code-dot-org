@@ -225,11 +225,9 @@ NetSim.prototype.init = function (config) {
   var generateCodeAppHtmlFromEjs = function () {
     return page({
       data: {
-        visualization: '',
         localeDirection: this.studioApp_.localeDirection(),
-        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl})
-      },
-      hideRunButton: true
+        instructions: this.level.instructions
+      }
     });
   }.bind(this);
 

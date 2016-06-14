@@ -34,7 +34,12 @@ const CourseProgress = React.createClass({
       <div className='user-stats-block'>
         {_.map(groups, (stages, group) =>
           <div key={group}>
-            <h4 style={this.props.professionalLearningCourse ? styles.flexHeader : {display: 'none'}}>{group}</h4>
+            <h4
+              id={group.toLowerCase().replace(' ', '-')}
+              style={this.props.professionalLearningCourse ? styles.flexHeader : {display: 'none'}}
+            >
+              {group}
+            </h4>
             {stages.map(stage =>
               <CourseProgressRow
                 stage={stage}
