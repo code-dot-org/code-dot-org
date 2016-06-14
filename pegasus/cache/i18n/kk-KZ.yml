@@ -1,7 +1,14 @@
 "kk-KZ":
   hour_of_code: "Код жазу Сағаты"
   hello: "Сәлем, әлем"
+  'yes': "Иә"
+  'no': "Жоқ"
   select_language: "Тілді таңдаңыз"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "толығырақ білу"
   en: "Информатика"
   computer_science_edweek: "Компьютерлік технологияның білім беру апталығы"
   csedweek_dates: "Желтоқсан 8-14, 2014"
@@ -705,6 +712,7 @@
   dashboard_sections_table_secret: "Кіру түрі"
   dashboard_sections_table_grade: "Сынып"
   dashboard_sections_table_course: "Курс"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Оқушылар"
   dashboard_sections_table_code: "Секция Коды"
   dashboard_sections_name: "Бөлім атауы"
@@ -1742,11 +1750,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "ойнау"
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

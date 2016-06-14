@@ -476,22 +476,17 @@
     notes_coming_soon: "ملاحظات على هذا الفيديو. قريبا."
     autoplay_option: "تشغيل تلقائي لاشرطة الفيديو"
     download: "تحميل الفيديو"
-  compatability:
-    working:
-      header: "نحن نعمل على دعم متصفح الأنترنت الخاص بك."
-      message: "يستخدم Code.org تكنولوجيا الإنترنت الحديثة. هذا يجعل الموقع أسرع للاستخدام.
-        لا يدعم متصفحك كافة الميزات المطلوبة، و قد تواجه مشكلات أثناء استخدام هذا
-        الجزء من الموقع. يرجى مساعدتنا <a href='%{report_issue_url}'>بالإبلاغ عن أي
-        مشاكل تجدها</a>. تستطيع أيضاً <a href='%{supported_browsers_url}'>تحديث متصفحك
-        إلى نسخة مدعومة</a>."
-      hide_this_warning: "إخفاء هذا التحذير"
+  compatibility:
     upgrade:
-      header: "من فضلك قم بتحديث متصفح الأنترنت الخاص بك."
-      message: "يستخدم Code.org تكنولوجيا الإنترنت الحديثة . هذا يجعل الموقع أسرع
-        للاستخدام . للأسف متصفحك لا يدعم جميع الميزات المطلوبة لتشغيل هذا الجزء من
-        الموقع .<br/><br/>قم بتثبيت متصفح من قائمة المتصفحات المدعومة للاستمرار .
-        تستطيع <a href='#'>محاولة عرض الصفحة </a>, و لكن نتوقع وظائف قد تتعطل."
-      button: "خذني إلى قائمة المتصفحات المدعومة"
+      unsupported_message: Your browser is not supported. Please upgrade your browser
+        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
+        browsers</a>. You can try viewing the page, but expect functionality to be
+        broken.
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
+        10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
+        8, 9, and 10. Please upgrade to a modern browser.
+      link: "اعرف المزيد"
   slow_loading: "هذا يأخذ وقتاً اطول من المعتاد..."
   try_reloading: "حاول اعادة تحميل الصفحة"
   next_stage: "انتهى! استمر في المرحلة القادمة"
@@ -565,7 +560,7 @@
       body: "استكشف عالم Minecraft عن طريق الكود."
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: "العمر 4+"
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
@@ -738,7 +733,7 @@
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
     embed: Embed
-    advanced_share: Show advanced options
+    advanced_share: "إظهار الخيارات المتقدمة"
     close: "إغلاق"
     more: "المزيد"
     name: "الاسم"
@@ -808,9 +803,19 @@
     icon_library:
       search_placeholder_text: "ابحث عن أيقونة..."
       no_icons_found: "لم توجد أيقونات"
+    playzone:
+      artist_description: "ارسم صور رائعة و صمم مع الرسام !"
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
+      playlab_title: New App
+      primary_header: Congratulations! You finished %{stageName}!
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: "لمحة عامة"
-    content: Content
+    content: "محتوى"
     practice: Teacher Practices
   external_links:
     disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
@@ -820,3 +825,23 @@
       directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
       support</a> if you find the content objectionable, or if the linked site is
       no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: Download %{app_name} for offline use (136MB)
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X

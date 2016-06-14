@@ -1,7 +1,12 @@
 de-DE:
   hour_of_code: Hour of Code
   hello: Hallo Welt
+  "yes": Ja
+  "no": Nein
   select_language: Bitte wähle deine Sprache
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Mehr erfahren
   en: Informatik
   computer_science_edweek: Informatik-Bildungswoche
   csedweek_dates: '8. - 14. Dezember, 2014'
@@ -527,6 +532,7 @@ de-DE:
   dashboard_sections_table_secret: Login-Typ
   dashboard_sections_table_grade: Note
   dashboard_sections_table_course: Kurs
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Schüler
   dashboard_sections_table_code: Lerngruppen-Code
   dashboard_sections_name: Lerngruppen-Name

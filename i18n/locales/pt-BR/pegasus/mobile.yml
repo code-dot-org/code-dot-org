@@ -1,7 +1,12 @@
 pt-BR:
   hour_of_code: Hora do Código
   hello: Olá, mundo
+  "yes": Sim
+  "no": Não
   select_language: Selecione seu idioma
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Saiba mais
   en: Ciência da Computação
   computer_science_edweek: Semana de Educação em Ciência da Computação
   csedweek_dates: De 8 a 14 de dezembro de 2014
@@ -522,7 +527,7 @@ pt-BR:
   dashboard_action_required: obrigatório
   dashboard_assessments_view: 'Ver avaliações em:'
   dashboard_assessments_none: Não há avaliações
-  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_none_part2: Se você está lecionando no ensino fundamental ou médio, nós temos perguntas de avaliação disponíveis como parte do Code Studio para ajudá-lo a preparar os seus alunos para a prova de avaliação parcial (AP). Para usar essas avaliações, primeiro atribua o curso para a sua turma e em seguida selecione o curso no menu acima e você verá as respostas dos seus alunos aqui.
   dashboard_assessments_summaries: Sumários
   dashboard_assessments_answers: Todas as respostas
   dashboard_filter_by_stage: 'Filtrar por estágio:'
@@ -554,7 +559,7 @@ pt-BR:
   dashboard_progress_submitted: enviado
   dashboard_progress_view: 'Ver o andamento em:'
   dashboard_progress_student_in_script: 'Informações do progresso para %{student_name} em %{script_name}'
-  dashboard_progress_pair_programming: pair programming
+  dashboard_progress_pair_programming: programação em par
   dashboard_responses_view: 'Exibir respostas de texto em:'
   dashboard_responses_none: Não há respostas de texto
   dashboard_sections_new_section: Nova turma
@@ -563,6 +568,7 @@ pt-BR:
   dashboard_sections_table_secret: Tipo de login
   dashboard_sections_table_grade: Grau
   dashboard_sections_table_course: Curso
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Alunos
   dashboard_sections_table_code: Código da seção
   dashboard_sections_name: Nome da seção

@@ -545,56 +545,48 @@
         Let's loop this code to draw two rows
         of hexagons. Notice how our second row is shifted to the right.
       4-5 Artist Patterns 9_instruction: |-
-        Now repeat this code 3 times and draw the
-        whole row. \r
+        الآت أعد هذا الكود ثلاث مرات و أرسم الصف بأكمله\r
         \r
-        Each hexagon is 80 pixels wide from the furthest points
-        left to right.
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
-      4-5 Bee Conditionals - FC Test_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+        كل سداسي يتسع ل80 بكسل من أبعد النقط من اليسار إلى اليمين.
+      4-5 Artist Patterns Free Play_instruction: "لعب حر - جرب يدك في إنشاء نمطك الخاص!"
+      4-5 Bee Conditionals - FC Test_instruction: "النحلة تريد فقط الرحيق على اليمين\nالآن.
+        ليست كل الأشياء أزهارا، إذن تحقق من أسفل كل سحابة لترى إذا ما \nكانت تخبئ
+        زهرة. إذا كانت كذلك، إذن يمكنك جمع الرحيق.\n"
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        This cloud is blocking my view! Check
-        to see if there's a flower under the cloud, and only get nectar if there's
-        a flower. Be careful, it can change!
+      4-5 Bee Conditionals 1_instruction: "هذه السحابة تعيق نظري! تحقق\nلترى إذا ما
+        كانت هناك زهرة تحتها، و احصل فقط على الرحيق إذا كانت هناك \nزهرة. كن حذرا،
+        يمكن أن تتغير!\n"
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
       4-5 Bee Conditionals 2_instruction: |-
-        More clouds! \r
+        المزيد من السحب! \r
         \r
-        Check underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \r
+        تحقق من أسفل
+        كل سحابة لترى إذا كانت تخبئ زهرة قبل أن تأخذ الرحيق.  \r
         \r
-        Remember:
-        Not all clouds hide the same thing!
-      4-5 Bee Conditionals 3_instruction: |
-        Now I just want to make honey. Some of
-        these clouds might have honeycombs under them. Be sure to check each cloud!
+        تذكر:
+        ليست كل السحب تخفي نفس الشيئ!
+      4-5 Bee Conditionals 3_instruction: "الآن أنا أريد فقط صنع العسل. بعض \nهذه
+        السحب يمكن أن تخفي أقراص عسل تحتها. كن متأكدا من فحص كل سحابة!\n"
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |
-        Sometimes this cloud covers a flower,
-        and sometimes it covers a honeycomb! Use the if/else block to collect nectar
-        if it is a flower, else to make honey (because it is a honeycomb).
+      4-5 Bee Conditionals 4_instruction: "في بعض الأحيان تغطي هذه السحابة زهرة،\nو
+        في بعض الأحيان تغطي قرص عسل! استخدم if/else block لجمع الرحيق \nإذا ما كانت
+        هناك زهرة، و إلا لصنع العسل (لأنه قرص عسل).\n"
       4-5 Bee Conditionals 5_instruction: |-
-        There will be either a flower or a honeycomb
-        under each of those clouds!\r
+        يوجد هناك إما زهرة أو فرص عسل
+        تحت كل واحدة من هذه السحب!\r
         \r
-        Use the `if/else` block to collect nectar
-        if there is a flower.\r
-        Otherwise, make honey (because there is a honeycomb).
+        استعمل القطعة البرمجية `if/else` لجمع الرحيق
+        إذا كانت هناك زهرة.\r
+        و إلا، اصنع العسل (لأن هناك قرص عسل).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
@@ -837,6 +829,20 @@
       4-5 While Loops Assessment 1_instruction: |
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
+      aE1_instruction: |-
+        Draw this square using a loop.\r
+        \r
+        Each side is 20 pixels
+        long.
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 15 squares line up next to each other?
+      aE3_instruction: |
+        Now let's go one level deeper! We've nested that whole
+        block of code into another loop, but you need to get the artist back in place
+        to draw the next line. Which of these code blocks can you place at the end
+        of the outermost loop to draw the whole grid?
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -2408,6 +2414,9 @@
       CSD U3 Variables Intro_instruction: |
         Create your own variable, give it a value,
         and display that value in the console.
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -3003,7 +3012,7 @@
       K-1 Bee 13_instruction: Get three nectar and then make one honey!
       K-1 Bee 14_instruction: |
         Get me to the nectar, pick it up, get me to the honey,
-        and make honey
+        and make honey!
       K-1 Bee 15_instruction: Get two nectar to make two honey!
       K-1 Bee 2_instruction: |
         Move me to the flower, get the nectar, then move me
@@ -3347,9 +3356,8 @@
       NetSim_Variant3_instruction: |
         NetSim: Variant 3: Connects groups of 2-6 students
         with a router, and explores issues in routing and DNS
-      New Artist Project_instruction: |
-        Draw something awesome! Your code is saved
-        as a project that you can return to at any time.
+      New Artist Project_instruction: "أرسم شيء رائع! يتم حفظ التعليمات البرمجية كمشروع
+        يمكنك العودة إليه في أي وقت."
       NEW Course 4 Artist Functions 1_instruction: |
         Can you draw a square that is
         100 pixels in length, using a repeat loop?
@@ -3862,10 +3870,9 @@
       Rocket Height Course A_instruction: |
         Follow the Design Recipe to create a function
         rocket-height.
-      Ryan - 4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: "النحلة تريد فقط الرحيق على اليمين\nالآن.
+        ليست كل الأشياء أزهارا، إذن تحقق من أسفل كل سحابة لترى إذا ما \nكانت تخبئ
+        زهرة. إذا كانت كذلك، إذن يمكنك جمع الرحيق.\n"
       Ryan - Bee Conditionals_instruction: |
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
@@ -4372,6 +4379,7 @@
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -5913,4 +5921,7 @@
         الظلام. ولذلك، يجب وضع مصباحين والحفر لاستخراج كتلتين من الفحم على الأقل."
       Underground Test Level_instruction: "إجمع كل  المعادن!"
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

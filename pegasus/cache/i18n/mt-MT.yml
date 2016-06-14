@@ -1,7 +1,14 @@
 "mt-MT":
   hour_of_code: Hour of Code
   hello: Haw Lilly
+  'yes': 'Yes'
+  'no': 'No'
   select_language: Please select your language
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
   en: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 8-14, 2014
@@ -707,6 +714,7 @@
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grad
   dashboard_sections_table_course: Kors
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Studenti
   dashboard_sections_table_code: Kodici tas-Sezzjoni
   dashboard_sections_name: Section Name
@@ -1706,11 +1714,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

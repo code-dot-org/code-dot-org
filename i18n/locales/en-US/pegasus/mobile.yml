@@ -1,7 +1,12 @@
 en-US:
   hour_of_code: crwdns54655:0crwdne54655:0
   hello: crwdns3593:0crwdne3593:0
+  "yes": crwdns56982:0crwdne56982:0
+  "no": crwdns56983:0crwdne56983:0
   select_language: crwdns21806:0crwdne21806:0
+  upgrade_ie_message: crwdns56984:0crwdne56984:0
+  upgrade_ie_message_csedweek: crwdns56985:0crwdne56985:0
+  upgrade_ie_link: crwdns56986:0crwdne56986:0
   en: crwdns43305:0crwdne43305:0
   computer_science_edweek: crwdns3595:0crwdne3595:0
   csedweek_dates: crwdns27832:0crwdne27832:0
@@ -524,6 +529,7 @@ en-US:
   dashboard_sections_table_secret: crwdns20750:0crwdne20750:0
   dashboard_sections_table_grade: crwdns7806:0crwdne7806:0
   dashboard_sections_table_course: crwdns7807:0crwdne7807:0
+  dashboard_sections_table_stage_extras: crwdns56987:0crwdne56987:0
   dashboard_sections_table_students: crwdns7808:0crwdne7808:0
   dashboard_sections_table_code: crwdns7809:0crwdne7809:0
   dashboard_sections_name: crwdns18173:0crwdne18173:0

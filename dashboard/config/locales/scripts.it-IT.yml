@@ -1036,6 +1036,7 @@
           Free Response: Free Response
           Game Lab: Game Lab
           Sample PLC Assessment: Sample PLC Assessment
+          Swapped Levels: Swapped Levels
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -2036,6 +2037,11 @@
           Expressions: Expressions
           Conditionals and Keyboard Input: Conditionals and Keyboard Input
           Sprites and Images: Sprites and Images
+          CSD U3 Variables and Animation: CSD U3 Variables and Animation
+          Booleans and Conditionals: Booleans and Conditionals
+          SFLP: SFLP
+          Animations: Animations
+          'Project: Interactive Card': 'Project: Interactive Card'
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2236,6 +2242,8 @@
           title: " TEMP CSD Unit 2"
           description_short: Web Development
           description: Temp place to work on U2 of Disco
+          Headers and Lists: Headers and Lists
+          Introduction to HTML: Introduction to HTML
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description_short: Data
@@ -2285,6 +2293,17 @@
           'Lesson 2,3: black and white pixelation': 'Lesson 2,3: black and white pixelation'
           'Lesson 2,10: good and bad data visualizations': 'Lesson 2,10: good and
             bad data visualizations'
+          'Lesson 1,4: Number Systems - circle triangle square': 'Lesson 1,4: Number
+            Systems - circle triangle square'
+          'Lesson 1,6: Sending Numbers': 'Lesson 1,6: Sending Numbers'
+          'Lesson 1,10: Routers and Redundancy': 'Lesson 1,10: Routers and Redundancy'
+          'Lesson 2,2: Text Compression': 'Lesson 2,2: Text Compression'
+          'Lesson 2,3: Black and White Pixelation': 'Lesson 2,3: Black and White Pixelation'
+          'Lesson 2,10: Good and Bad Data Visualizations': 'Lesson 2,10: Good and
+            Bad Data Visualizations'
+          Measuring Student Learning: Measuring Student Learning
+          description_short: We will use this during TeacherCon to deliver supports
+            and materials for sessions
         MikeTest:
           title: MikeTest
           description_short: Just a script for playing around
@@ -2292,3 +2311,9 @@
           description_audience: Ages 8-98
           Sample Stage: Sample Stage
           Artist Functions: 'Artista: Funzioni'
+        artistExemplar:
+          title: Artist Exemplar
+          description_short: How can we make the artist levels really hum?
+          description: These artist levels will knock the socks off of third graders
+          description_audience: Da 8 anni in su (dopo il Corso 2)
+          Artist Exemplar: Artist Exemplar

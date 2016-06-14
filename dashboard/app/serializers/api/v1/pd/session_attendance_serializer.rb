@@ -11,7 +11,7 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
     {}.tap do |participants|
       # Start with enrollments.
       object.workshop.enrollments.each do |enrollee|
-        user = enrollee.user
+        user = enrollee.resolve_user
         participants[enrollee.email] = {
           name: enrollee.name,
           email: enrollee.email,

@@ -331,7 +331,7 @@ fr:
       4-5 Maze 9_instruction: Crée une boucle avec le bloc « Répéter jusqu’à ».
       4-5 Maze Assessment 1_instruction: "Évaluation : Va jusqu'au tournesol !"
       4-5 Maze Conditionals 1_instruction: "Utilise le bloc « Répéter jusqu'à » pour amener le zombie au tournesol."
-      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
+      4-5 Maze Conditionals 10_instruction: "Peux tu rajouter juste 3 blocs pour aider le zombie à résoudre un labyrinthe plus complexe ? \\r \\r Si tu le fais bien, il peut parcourir n'importe quel chemin sinueux peu importe la longueur!"
       4-5 Maze Conditionals 2_instruction: "Utilise le bloc « Répéter jusqu'à » pour amener le zombie au tournesol."
       4-5 Maze Conditionals 3_instruction: "Utilise le bloc « Si » pour me laisser décider quand tourner. Indice\\_: tu n’as besoin que d'un bloc supplémentaire, mais regarde bien comment nous avons fait ici afin de pouvoir le faire toi-même la prochaine fois."
       4-5 Maze Conditionals 4_instruction: "OK, c'est la même chose que le puzzle précédent, mais tu dois te rappeler comment tu as utilisé le bloc «\\_Si\\_» et le bloc « Répéter » ensemble."
@@ -362,6 +362,16 @@ fr:
       4-5 While Loops 7_instruction: Wow, maintenant il y a trois tas de terre ! Peux-tu écrire un programme qui enlèvera chacun d’entre eux jusqu’à ce que le sol soit nivelé ?
       4-5 While Loops 8_instruction: " Il y a un trou vraiment profond et un tas de terre vraiment important.  Combien de pelletées de terre faut-il déplacer pour niveler le sol ?  Indice : Utilise la boucle «\\_Tant que\\_» pour les deux."
       4-5 While Loops Assessment 1_instruction: 'Il y a beaucoup de trous et de tas.  Aide-moi à les remplir et à les enlever pour niveler le sol.'
+      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 15 squares line up next to each other?
+      aE3_instruction: |
+        Now let's go one level deeper! We've nested that whole
+        block of code into another loop, but you need to get the artist back in place
+        to draw the next line. Which of these code blocks can you place at the end
+        of the outermost loop to draw the whole grid?
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -1078,7 +1088,7 @@ fr:
       Course 4 Maze 4_instruction: Essaie le bloc « Répéter » pour utiliser moins de blocs au moment de résoudre ce puzzle...
       Course 4 Maze 5_instruction: "Peux-tu résoudre ce puzzle en utilisant le moins de blocs possible\\_?"
       Course 4 Maze 6_instruction: "Peux-tu résoudre ce puzzle en utilisant le moins de blocs possible\\_?"
-      Course 4 Play Lab For Loops 2_instruction: Cette fois-ci, essayons de compter les nombres impairs de 1 à 100.
+      Course 4 Play Lab For Loops 2_instruction: Cette fois-ci, essayons de compter les nombres impairs de 1 à 101.
       Course 4 Play Lab Params 1_instruction: Voilà une fonction appelée « Sauter » qui fera sauter ton personnage principal de 100 pixels. Utilise la fonction « Sauter » pour récupérer tous les drapeaux.
       Course 4 Play Lab Params 10_instruction: |
         Nous avons ajouté une dernière fonction pour toi.
@@ -1132,7 +1142,7 @@ fr:
         Indice : fais défiler le menu pour voir toutes les commandes dans l'espace de travail.
       Course 4 Play Lab Vars_instruction: "Bon, une dernière chose pour ce jeu\\_; nous allons le configurer de sorte que le joueur peut gagner (ou perdre). Utilise une boucle « à l’infini » pour vérifier la valeur du score - si le score est toujours supérieur à 20, fais disparaître l’ennemi. Si le score est toujours inférieur à 0, fais disparaître le joueur."
       Course 4 Play Labs For Loops 1_instruction: Nous allons faire dire chaque nombre de 1 à 100 au chien. Utilise une « Boucle pour » et le bloc « Compteur » pour faire parler la variable chaque fois que la boucle est exécutée.
-      Course 4 Play Labs For Loops 2_instruction: Cette fois-ci, essayons de compter les nombres impairs de 1 à 100.
+      Course 4 Play Labs For Loops 2_instruction: Cette fois-ci, essayons de compter uniquement les nombres impairs de 1 à 101.
       Course 4 Play Labs For Loops 3_instruction: Si on compte avec de plus grands nombres, on arrive à un chiffre plus grand dans le même laps de temps. Essaie de faire compter le chien de 10 à 1000, de 10 en 10.
       Course 4 Play Labs For Loops 4_instruction: "Changer l'augmentation peut être utile, mais nous comptons toujours linéairement (chaque nombre est à la même distance du précédent). Que se passerait-il si je comptais de façon exponentielle ? Sans modifier les paramètres dans cette « Boucle pour », peux-tu compter 1, 4, 9, 16, 25... (compteur au carré) ?"
       Course 4 Play Labs For Loops 4a_instruction: |
@@ -1305,6 +1315,9 @@ fr:
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -1792,7 +1805,7 @@ fr:
       K-1 Bee 11_instruction: Recueille trois nectars et fabrique ensuite un miel.
       K-1 Bee 12_instruction: Recueille trois nectars et fabrique ensuite deux miels !
       K-1 Bee 13_instruction: Recueille trois nectars et fabrique ensuite un miel !
-      K-1 Bee 14_instruction: "Emmène-moi au nectar, récolte-le, emmène-moi à l'alvéole et fabrique du miel."
+      K-1 Bee 14_instruction: "Emmène-moi au nectar, récolte-le, emmène-moi à l'alvéole et fais du miel"
       K-1 Bee 15_instruction: Recueille deux nectars pour fabriquer deux miels !
       K-1 Bee 2_instruction: "Déplace moi jusqu'à la fleur, prends le nectar, puis déplace moi jusqu'au gâteau de miel et fabrique du miel."
       K-1 Bee 3_instruction: "Déplace moi jusqu'à la fleur, prends le nectar, puis déplace moi jusqu'au gâteau de miel et fabrique du miel."
@@ -2801,6 +2814,7 @@ fr:
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -4239,4 +4253,7 @@ fr:
       Underground Mining Coal_instruction: Les ressources les plus précieuses sont en sous-sol, mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins 2 blocs de charbon.
       Underground Test Level_instruction: Recueille tous les minéraux !
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

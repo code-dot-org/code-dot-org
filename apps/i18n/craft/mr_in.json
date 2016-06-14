@@ -1,6 +1,6 @@
 {
   "blockDestroyBlock": "destroy block",
-  "blockIf": "if",
+  "blockIf": "जर",
   "blockIfLavaAhead": "if lava ahead",
   "blockMoveForward": "move forward",
   "blockPlaceTorch": "place torch",
