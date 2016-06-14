@@ -82,6 +82,7 @@
     "ejs-compiled-loader": "2.1.1",
     "ejs-loader": "0.2.1",
     "ejsify": "1.0.0",
+    "enzyme": "^2.3.0",
     "es6-promise": "3.0.2",
     "eslint": "^2.8.0",
     "exports-loader": "^0.6.3",
