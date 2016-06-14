@@ -27,12 +27,26 @@ const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 const sensorVariables = ['soundSensor', 'lightSensor', 'tempSensor'];
 const buttonVariables = ['buttonL', 'buttonR'];
 
+let iter = 0;
+
 module.exports.blocks = [
   {func: 'pinMode', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'mode'], params: ['13', '"output"'], dropdown: { 1: ['"output"', '"input"', '"analog"'] }},
   {func: 'digitalWrite', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'value'], params: ['13', '1'], dropdown: { 1: ['1', '0'] }},
   {func: 'digitalRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
   {func: 'analogWrite', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'value'], params: ['5', '150']},
   {func: 'analogRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
+
+  {
+    func: 'onBoardEvent',
+    parent: api,
+    category: 'Maker Lab',
+    paletteParams: ['component', 'event', 'callback'],
+    params: ['"id"', '"click"', "function(event) {\n  \n}"],
+    dropdown: {
+      0: function() { return [`${++iter}hey`]; },
+      1: ['"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"']
+    }
+  },
 
   {func: 'led', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'led.on', category: 'Circuit'},
@@ -84,3 +98,8 @@ module.exports.categories = {
     blocks: []
   },
 };
+
+
+
+setTimeout(() => $('.lightgreen').last().click(), 3500); // TODO remove
+//setTimeout(() => $('.cyan').last().click(), 3500); // TODO remove

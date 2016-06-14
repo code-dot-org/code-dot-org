@@ -1839,6 +1839,12 @@ applabCommands.analogRead = function (opts) {
   return Applab.makerlabController.analogRead(opts.pin, opts.callback);
 };
 
+applabCommands.onBoardEvent = function (opts) {
+  //apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
+
+  return Applab.makerlabController.onBoardEvent(opts.component, opts.event, opts.callback);
+};
+
 /**
  * If the element is found, add the 'loading' class to it so that it
  * displays the loading spinner.

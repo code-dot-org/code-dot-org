@@ -153,6 +153,11 @@ BoardController.prototype.analogRead = function (pin, callback) {
   return this.board_.analogRead(pin, callback);
 };
 
+BoardController.prototype.onBoardEvent = function (component, event, callback) {
+  console.log('ayy board evented.');
+  //return this.board_.analogRead(pin, callback);
+};
+
 function connect() {
   return getDevicePort().then(connectToBoard);
 }
