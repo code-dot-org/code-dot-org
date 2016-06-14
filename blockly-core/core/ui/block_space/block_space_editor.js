@@ -64,6 +64,15 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
     goog.bind(this.setBlockSpaceMetrics_, this),
     container
   );
+
+  /**
+   * Set of blocks with limits, keyed by block type. Used to enfoce
+   * limited quantities of blocks in workspace.
+   * @type {Blockly.BlockLimits}
+   * @public
+   */
+  this.blockLimits = new Blockly.BlockLimits();
+
   this.createDom_(container);
   this.init_();
 };

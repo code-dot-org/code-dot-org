@@ -658,14 +658,13 @@ Blockly.BlockSpace.prototype.paste = function(clipboard) {
       this.remainingCapacity()) {
     return;
   }
-  if (this.blockSpaceEditor.flyout_ &&
-      this.blockSpaceEditor.flyout_.blockLimits.hasBlockLimits()) {
+  if (this.blockSpaceEditor.blockLimits.hasBlockLimits()) {
     var types = goog.array.map(xmlBlock.getElementsByTagName('block'), function(block) {
       return block.getAttribute('type');
     });
     types.push(xmlBlock.getAttribute('type'));
 
-    if (!this.blockSpaceEditor.flyout_.blockLimits.canAddBlocks(types)) {
+    if (!this.blockSpaceEditor.blockLimits.canAddBlocks(types)) {
       return;
     }
   }
