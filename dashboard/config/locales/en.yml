@@ -51,6 +51,8 @@ en:
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "Cancel"
   okay: "Okay"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
