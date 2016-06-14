@@ -22,8 +22,7 @@
     "start:gamelab": "MOOC_DEV=1 grunt dev --app=gamelab; grunt logBuildTimes",
     "test-audio": "echo \"Open your browser to http://127.0.0.1:8080/test/audio/audio_test.html\" && http-server .",
     "build:log": "grunt logBuildTimes",
-    "build:stats": "node ./script/build-stats.js",
-    "compile-firebase-rules": "firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json"
+    "build:stats": "node ./script/build-stats.js"
   },
   "browser": {
     "blockly": "./build/package/js/blockly.js"
