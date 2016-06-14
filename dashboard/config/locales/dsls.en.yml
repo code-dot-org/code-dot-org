@@ -118,12 +118,12 @@ en:
         'Having students work in small groups ': 'Having students work in small groups '
         What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
       TeacherCon Eval Q7:
-        How comfortable would you say you are with gauging when to reteach material with your students?: How comfortable would you say you are with gauging when to reteach material with your students?
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
         Not comfortable: Not comfortable
         Very comfortable: Very comfortable
       TeacherCon Evaluation Q4:
         Answer it yourself: Answer it yourself
-        PUt the question to the other students in the classroom: PUt the question to the other students in the classroom
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
       AlgPD Break:
@@ -1892,6 +1892,7 @@ en:
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
         Sample CSP Assessment: {}
+        TeacherCon Self-Assessment: {}
         TeacherCon Unit 1 Assessment: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
