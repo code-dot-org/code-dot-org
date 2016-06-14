@@ -36,7 +36,7 @@ class ImportableProject {
 
 }
 
-const ScreenListItem = React.createClass({
+export const ScreenListItem = React.createClass({
   propTypes: {
     screen: React.PropTypes.instanceOf(ImportableScreen).isRequired,
     selected: React.PropTypes.bool.isRequired,
