@@ -1,0 +1,19 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-06-14T04:52:13.309Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "At this point you've seen 7 of the 14 lessons from unit 1. Thinking about those lessons, and looking across the other lessons in <a href=\"curriculum.code.org/csp/unit1/\" target=_blank>unit 1</a>. Again, consider the following questions with your partner:\r\n\r\n- What opportunities have you seen for learners to discover concepts for themselves? \r\n- How did the process of engaging in discovery activities change the pacing, flow, or outcome of the lesson? \r\n- What benefits and pitfalls did you see in discovery activities? \r\n\r\n<br>\r\n\r\n> Once you've had a chance to think about what you've seen today,  work with your partner to develop a set of recommendations about balancing the teacher and the tools in Unit 1. Your recommendations should include:\r\n\r\n>- Which lessons or activities provide opportunities for discovery learning? \r\n- What recommendations do you have for using discovery learning in Unit 1?  \r\n\r\n<br><br>\r\nUse the space below to record your recommendations (you'll share them tomorrow). ",
+    "title": "Wednesday Report: discovery learning",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

@@ -73,7 +73,61 @@
         ],
         "matchType": "exact",
         "minTimes": 4,
-        "message": "It seems like you’re not turning the turtle left enough times.  Remember that the turtle should be facing the same direction in which it started by the end."
+        "message": "It seems like you’re not turning the turtle left enough times.  Remember that at the end the turtle should be facing the same direction in which it started."
+      },
+      {
+        "entries": [
+          "moveForward"
+        ],
+        "matchType": "exact",
+        "minTimes": 4,
+        "message": "It seems like you’re not moving the turtle enough times to draw a complete square."
+      },
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft() without any loops."
+      },
+      {
+        "entries": [
+          "moveForward",
+          "turnLeft"
+        ],
+        "matchType": "exact",
+        "minTimes": 4,
+        "maxTimes": 4,
+        "message": "Are you calling your blocks in the right order?  Remember that you need to move forward before you turn left.  Also remember that at the end the turtle should be facing the same direction in which it started."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the turnLeft() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() - which moves 25 pixels forward - and turnLeft() - which turns left 90 degrees every time."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the moveForward() function can accept the number of pixels to move forward!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() - which moves 25 pixels forward - and turnLeft() - which turns left 90 degrees every time."
+      },
+      {
+        "entries": [
+          "turnRight"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft()."
       }
     ]
   },
