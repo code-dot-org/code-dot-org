@@ -59,6 +59,12 @@ class Pd::Enrollment < ActiveRecord::Base
     [].tap do |new_enrollments|
       Pd::Attendance.for_workshop(workshop).distinct_teachers.each do |attendee|
         next if enrolled_user_ids.include? attendee.id
+
+        if attendee.email.blank?
+          CDO.log.warning "Unable to create an enrollment for workshop attendee with no email. User Id: #{attendee.id}"
+          next
+        end
+
         new_enrollments << Pd::Enrollment.create!(
           workshop: workshop,
           name: attendee.name,

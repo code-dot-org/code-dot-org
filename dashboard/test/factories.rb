@@ -478,7 +478,7 @@ FactoryGirl.define do
     capacity 10
   end
 
-  factory :pd_closed_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
+  factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
     sessions {[create(:pd_session)]}
     started_at {Time.zone.now}
     ended_at {Time.zone.now}

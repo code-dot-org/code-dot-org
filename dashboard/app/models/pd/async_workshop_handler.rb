@@ -2,7 +2,7 @@
 # notably wrapping up a workshop when it ends (sending emails, generating reports, etc.)
 class Pd::AsyncWorkshopHandler
   ACTIONS = [
-    ACTION_CLOSE = 'close'
+    ACTION_END = 'end'
   ]
 
   def self.process_workshop(workshop_id, action)
@@ -15,7 +15,8 @@ class Pd::AsyncWorkshopHandler
 
     # Test and Production should always have a pd_workshop_queue_url,
     # and enqueue the job in SQS
-    if CDO.pd_workshop_queue_url
+    if Rails.env.prod? || Rails.env.test?
+      raise "CDO.pd_workshop_queue_url is required on #{Rails.env}" unless CDO.pd_workshop_queue_url
       self.workshop_queue.enqueue(op.to_json)
     else
       # Otherwise perform the job immediately (e.g. on development)
@@ -23,8 +24,8 @@ class Pd::AsyncWorkshopHandler
     end
   end
 
-  def self.process_closed_workshop(workshop_id)
-    self.process_workshop(workshop_id, ACTION_CLOSE)
+  def self.process_ended_workshop(workshop_id)
+    self.process_workshop(workshop_id, ACTION_END)
   end
 
   # Returns a thread-local SQS queue for handling asynchronous workshop operations
@@ -36,8 +37,8 @@ class Pd::AsyncWorkshopHandler
 
   def self.handle_operation(op)
     case op[:action]
-      when ACTION_CLOSE
-        Pd::Workshop.process_closed_workshop_async(op[:workshop_id])
+      when ACTION_END
+        Pd::Workshop.process_ended_workshop_async(op[:workshop_id])
       else
         raise "Unexpected action #{op[:action]} in #{op}"
     end

@@ -171,19 +171,19 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal end_expected, Pd::Workshop.end_in_days(10).all.map(&:id)
   end
 
-  test 'process_closed_workshop_async' do
-    workshop = create :pd_closed_workshop
+  test 'process_ended_workshop_async' do
+    workshop = create :pd_ended_workshop
     Pd::Workshop.expects(:find).with(workshop.id).returns(workshop)
     workshop.expects(:send_exit_surveys)
 
-    Pd::Workshop.process_closed_workshop_async workshop.id
+    Pd::Workshop.process_ended_workshop_async workshop.id
   end
 
-  test 'process_closed_workshop_async for non-closed workshop raises error' do
+  test 'process_ended_workshop_async for non-closed workshop raises error' do
     workshop = create :pd_workshop
 
     e = assert_raises RuntimeError do
-      Pd::Workshop.process_closed_workshop_async workshop.id
+      Pd::Workshop.process_ended_workshop_async workshop.id
     end
     assert e.message.include? 'Unexpected workshop state'
   end
@@ -195,7 +195,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   #   Note - an accidental student without an associated enrollment entry will not get an email,
   #          because the email address is hashed and non-discoverable.
   test 'send_exit_surveys' do
-    workshop = create :pd_closed_workshop
+    workshop = create :pd_ended_workshop
     enrolled_not_attended = create :teacher
     create :pd_enrollment, workshop: workshop, name: enrolled_not_attended.name, email: enrolled_not_attended.email
 

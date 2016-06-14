@@ -85,4 +85,20 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal unenrolled_attendee, new_enrollments.first.user
     assert_equal [enrollment.id, new_enrollments.first.id], workshop.enrollments.all.map(&:id)
   end
+
+  test 'create_for_unenrolled_attendees with no email logs warning' do
+    workshop = create :pd_workshop
+    workshop.sessions << create(:pd_session)
+
+    unenrolled_attendee_no_email = create :student
+    create :pd_attendance, session: workshop.sessions.first, teacher: unenrolled_attendee_no_email
+
+    mock_logger = mock
+    mock_logger.expects(:warning).with(
+      "Unable to create an enrollment for workshop attendee with no email. User Id: #{unenrolled_attendee_no_email.id}"
+    )
+    CDO.expects(:log).returns(mock_logger)
+
+    Pd::Enrollment.create_for_unenrolled_attendees(workshop)
+  end
 end

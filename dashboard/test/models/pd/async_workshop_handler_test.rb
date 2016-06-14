@@ -1,45 +1,39 @@
 require 'test_helper'
 require 'fake_sqs/test_integration'
 
-# Launch a fake SQS service running on Localhost unless an environment variable is set to use the
-# actual SQS service.
-unless ENV['USE_REAL_SQS']
-  Aws.config.update(region: 'us-east-1', access_key_id: 'fake id', secret_access_key: 'fake secret')
-  $fake_sqs_service = FakeSQS::TestIntegration.new(database: ':memory:',
-    sqs_endpoint: 'localhost', sqs_port: 4568)
-  sleep(2) # add a sleep to fix test failures with 'RuntimeError: FakeSQS didn't start in time'
-end
+# Launch a fake SQS service running on Localhost
+Aws.config.update(region: 'us-east-1', access_key_id: 'fake id', secret_access_key: 'fake secret')
+$fake_sqs_service = FakeSQS::TestIntegration.new(database: ':memory:',
+  sqs_endpoint: 'localhost', sqs_port: 4568)
+sleep(2) # add a sleep to fix test failures with 'RuntimeError: FakeSQS didn't start in time'
 
 class Pd::AsyncWorkshopHandlerTest < ActiveSupport::TestCase
 
   setup do
     @sqs = Aws::SQS::Client.new
 
-    # Start the fake SQS service unless the user has request to use real SQS.
-    @use_fake_queue = !ENV['USE_REAL_SQS']
-    if @use_fake_queue
-      $fake_sqs_service.start
-      @sqs.config.endpoint = $fake_sqs_service.uri
-    end
+    # Start the fake SQS service for testing.
+    $fake_sqs_service.start
+    @sqs.config.endpoint = $fake_sqs_service.uri
 
     # Create the test queue.
     queue_name = "test-pd-workshop-#{SecureRandom.hex}"
     response = @sqs.create_queue(queue_name: queue_name, attributes: {"VisibilityTimeout" => "1"})
     @queue_url = response.queue_url
 
-    @workshop = create :pd_closed_workshop
+    @workshop = create :pd_ended_workshop
   end
 
   teardown do
     @sqs.delete_queue(queue_url: @queue_url)
-    $fake_sqs_service.stop if @use_fake_queue
+    $fake_sqs_service.stop
   end
 
   test 'queue' do
     CDO.expects(:pd_workshop_queue_url).returns(@queue_url).at_least_once
-    Pd::AsyncWorkshopHandler.process_closed_workshop @workshop.id
+    Pd::AsyncWorkshopHandler.process_ended_workshop @workshop.id
 
-    Pd::Workshop.expects(:process_closed_workshop_async).with(@workshop.id)
+    Pd::Workshop.expects(:process_ended_workshop_async).with(@workshop.id)
     process_pending_queue_messages
   end
 
