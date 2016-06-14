@@ -13,4 +13,24 @@ namespace :firebase do
       }
     end
   end
+
+  desc 'Sets global constants in the firebase database from CDO config params.'
+  task :set_constants do
+    if CDO.firebase_name
+      HipChat.log 'Setting firebase constants...'
+      Dir.chdir(apps_dir) {
+        url = "https://#{CDO.firebase_name}.firebaseio.com/v3/constants.json?auth=#{CDO.firebase_secret}"
+        constants = {
+            channels: {
+                limits: {
+                    '15': CDO.firebase_max_channel_writes_per_15_sec,
+                    '60': CDO.firebase_max_channel_writes_per_60_sec
+                },
+                maxTableRows: CDO.firebase_max_table_rows
+            }
+        }
+        RakeUtils.system("curl -X PUT -d '#{constants.to_json}' '#{url}'")
+      }
+    end
+  end
 end

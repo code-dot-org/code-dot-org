@@ -140,6 +140,7 @@ end
 
 task :firebase_task do
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:upload_rules'
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:set_constants'
 end
 
 #
