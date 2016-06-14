@@ -18,9 +18,9 @@ describe('progress', function () {
   });
 });
 
-describe('bestResultLevelId', function() {
+describe('bestResultLevelId', function () {
   var serverProgress, clientProgress;
-  before(function() {
+  before(function () {
     serverProgress = {
       1: 0,
       2: 0,

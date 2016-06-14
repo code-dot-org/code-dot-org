@@ -2,6 +2,9 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
   before_action :load_and_authorize_for_this_unit
 
   def preview_assignments
+    modules_to_enroll_in = Plc::LearningModule.find(@enrollment_unit_assignment.plc_course_unit.determine_preferred_learning_modules(current_user))
+    @enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
+
     @content_learning_modules = @enrollment_unit_assignment.plc_course_unit.plc_learning_modules.content
     @practice_learning_modules = @enrollment_unit_assignment.plc_course_unit.plc_learning_modules.practice
   end

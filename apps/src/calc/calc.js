@@ -43,6 +43,7 @@ var EquationSet = require('./equationSet');
 var Equation = require('./equation');
 var Token = require('./token');
 var InputIterator = require('./inputIterator');
+var experiments = require('../experiments');
 
 var TestResults = studioApp.TestResults;
 var ResultType = studioApp.ResultType;
@@ -151,6 +152,8 @@ Calc.init = function (config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+
   config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
@@ -203,12 +206,10 @@ Calc.init = function (config) {
 
   studioApp.setPageConstants(config);
 
-  var visualizationColumn = <CalcVisualizationColumn inputOutputTable={level.inputOutputTable}/>;
-
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
+          visualizationColumn={<CalcVisualizationColumn/>}
           onMount={studioApp.init.bind(studioApp, config)}
       />
     </Provider>,
