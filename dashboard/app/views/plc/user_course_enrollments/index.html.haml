@@ -21,19 +21,19 @@
               - practice_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::PRACTICE_MODULE
               - evaluation_pending = required_module_assignment && content_module_assignment.nil? && practice_module_assignment.nil?
               - unit_overview_status = evaluation_pending ? 'in_progress' : required_module_assignment.try(:status) || 'completed'
-              = link_to script_path(unit_enrollment.plc_course_unit.script) + '#overview' do
+              = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'overview') do
                 .module_assignment
                   Overview
                   .ribbon-wrapper
                     .ribbon{class: unit_overview_status}
-              = link_to script_path(unit_enrollment.plc_course_unit.script) + '#content' do
+              = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'content') do
                 .module_assignment
                   Content
                   .ribbon-wrapper
                     .ribbon{class: content_module_assignment.try(:status) || 'not_started'}
-              = link_to script_path(unit_enrollment.plc_course_unit.script) + '#teacher-practices' do
+              = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'teacher-practices') do
                 .module_assignment
-                  Teaching Practices
+                  Teacher Practices
                   .ribbon-wrapper
                     .ribbon{class: practice_module_assignment.try(:status) || 'not_started'}
 - else
