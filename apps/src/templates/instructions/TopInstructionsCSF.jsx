@@ -14,7 +14,6 @@ var commonStyles = require('../../commonStyles');
 var processMarkdown = require('marked');
 
 var Instructions = require('./Instructions');
-import MarkdownInstructions from './MarkdownInstructions';
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
