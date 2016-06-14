@@ -562,10 +562,15 @@ module.exports = function (grunt) {
     'ejs'
   ]);
 
+  grunt.registerTask('compile-firebase-rules', function () {
+    child_process.execSync('npm run compile-firebase-rules');
+  });
+
   grunt.registerTask('postbuild', [
     'newer:copy:static',
     'newer:concat',
-    'newer:sass'
+    'newer:sass',
+    'compile-firebase-rules'
   ]);
 
   grunt.registerTask('build', [
