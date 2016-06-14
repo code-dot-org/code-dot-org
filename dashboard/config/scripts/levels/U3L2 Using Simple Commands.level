@@ -69,22 +69,6 @@
     "log_conditions": [
       {
         "entries": [
-          "turnLeft"
-        ],
-        "matchType": "exact",
-        "minTimes": 4,
-        "message": "It seems like you’re not turning the turtle left enough times.  Remember that at the end the turtle should be facing the same direction in which it started."
-      },
-      {
-        "entries": [
-          "moveForward"
-        ],
-        "matchType": "exact",
-        "minTimes": 4,
-        "message": "It seems like you’re not moving the turtle enough times to draw a complete square."
-      },
-      {
-        "entries": [
           "[forTest]"
         ],
         "matchType": "exact",
@@ -100,7 +84,7 @@
         "matchType": "exact",
         "minTimes": 4,
         "maxTimes": 4,
-        "message": "Are you calling your blocks in the right order?  Remember that you need to move forward before you turn left.  Also remember that at the end the turtle should be facing the same direction in which it started."
+        "message": "Hmmm. There are two possible issues here. Are you giving commands in the right order? Is the ending state correct?  Remember that you need to move forward before you turn left, and at the end, the turtle needs to face the same direction it started."
       },
       {
         "entries": [
@@ -128,6 +112,22 @@
         "minTimes": 0,
         "maxTimes": 0,
         "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft()."
+      },
+      {
+        "entries": [
+          "turnLeft"
+        ],
+        "matchType": "exact",
+        "minTimes": 4,
+        "message": "It seems like you’re not turning the turtle left enough times.  Remember that at the end the turtle should be facing the same direction in which it started."
+      },
+      {
+        "entries": [
+          "moveForward"
+        ],
+        "matchType": "exact",
+        "minTimes": 4,
+        "message": "It seems like you’re not moving the turtle enough times to draw a complete square."
       }
     ]
   },
