@@ -3,6 +3,13 @@
   #contained_levels
     - @level.contained_levels.each_with_index do |cl, index|
       %div{id: "containedLevel#{index}"}
+        - if @user && current_user && @user != current_user
+          -# load other user's solution for teachers viewing their students' solution
+          - sublevel_last_attempt = @user.last_attempt(level).try(:level_source).try(:data)
+        - elsif current_user
+          -# load user's previous attempt at this puzzle.
+          - sublevel_last_attempt = current_user.last_attempt(level).try(:level_source).try(:data)
+
         - level_class = cl.class.to_s.underscore
         - if level_class == "multi"
           - unless multi_script_added
@@ -12,7 +19,7 @@
           -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
           - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
             - cl.properties['answers'].each { |answer| answer['correct'] = false }
-          = render partial: 'levels/single_multi', locals: {standalone: false, contained_mode: true, last_attempt: nil, level: cl, tight_layout: false}
+          = render partial: 'levels/single_multi', locals: {standalone: false, contained_mode: true, last_attempt: sublevel_last_attempt, level: cl, tight_layout: false}
         - elsif level_class == "text_match"
           -# For students (or teachers doing PD), clear out all answers.
           - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
@@ -21,3 +28,88 @@
         - elsif level_class == "free_response"
           = render partial: 'levels/free_response', locals: {in_level_group: true, level: cl }
 %div{style: 'clear: both;'}
+
+:javascript
+  // TEMP (move JS into code-studio)
+  $(document).on('click', '.submitButton', function () {
+    var submitButton = $('.submitButton');
+    if (submitButton.attr('disabled')) {
+      return;
+    }
+
+    // Avoid multiple simultaneous submissions.
+    submitButton.attr('disabled', true);
+
+    var onSendReportComplete = function (willRedirect) {
+      if (!willRedirect) {
+        $('.submitButton').attr('disabled', false);
+      }
+      console.log("onComplete is done!");
+    };
+
+    var results = getResult();
+    var response = results.response;
+    var result = results.result;
+    var errorType = results.errorType;
+    var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
+    var submitted = results.submitted || false;
+
+    /*
+    if (!result) {
+      showDialog(errorType || "error");
+      if (!appOptions.dialog.skipSound) {
+        CDOSounds.play('failure');
+      }
+    } else {
+      if (!appOptions.dialog.skipSound) {
+        CDOSounds.play('success');
+      }
+    }
+    */
+
+    window.dashboard.reporting.sendReport({
+      program: response,
+      fallbackResponse: appOptions.dialog.fallbackResponse,
+      callback: appOptions.dialog.callback,
+      app: appOptions.dialog.app,
+      level: appOptions.dialog.level,
+      result: result,
+      pass: result,
+      testResult: testResult,
+      submitted: submitted,
+      onComplete: function () {
+        var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
+        var willRedirect = !!lastServerResponse.nextRedirect;
+        onSendReportComplete(willRedirect);
+
+        /*
+        if (lastServerResponse.videoInfo) {
+          window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
+        } else if (lastServerResponse.endOfStageExperience) {
+          const body = document.createElement('div');
+          const stageInfo = lastServerResponse.previousStageInfo;
+          const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
+          ReactDOM.render(
+            <PlayZone
+              stageName={stageName}
+              onContinue={() => { dialog.hide(); }}
+              i18n={window.dashboard.i18n}/>,
+            body
+          );
+          const dialog = new Dialog({
+            body: body,
+            width: 800,
+            redirect: lastServerResponse.nextRedirect
+          });
+          dialog.show();
+        } else if (lastServerResponse.nextRedirect) {
+          if (appOptions.dialog.shouldShowDialog) {
+            showDialog("success");
+          } else {
+            window.location.href = lastServerResponse.nextRedirect;
+          }
+        }
+        */
+      }
+    });
+  });

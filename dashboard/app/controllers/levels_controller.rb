@@ -31,7 +31,6 @@ class LevelsController < ApplicationController
     view_options(
         full_width: true,
         small_footer: @game.uses_small_footer? || enable_scrolling?,
-        has_contained_levels: @level.try(:contained_levels).present?,
         has_i18n: @game.has_i18n?
     )
   end
