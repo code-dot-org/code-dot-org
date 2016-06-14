@@ -529,13 +529,13 @@
   dashboard_navigation_section_pd: "Professional Development"
   dashboard_navigation_section_speakers: "Computer Science <br/> Guest Speakers"
   dashboard_navigation_all_sections: "Student Accounts and Progress"
-  dashboard_navigation_view_progress: "View Progress"
-  dashboard_navigation_view_text_responses: "View Text Responses"
+  dashboard_navigation_view_progress: "Progress"
+  dashboard_navigation_view_text_responses: "Text Responses"
   dashboard_navigation_view_assessments: "Assessments"
   dashboard_navigation_add_students: "Add Students"
   dashboard_navigation_manage_students: "Manage Students"
   dashboard_navigation_lesson_plans_resources: "Lesson Plans and Resources"
-  dashboard_navigation_view_stats: "View Stats"
+  dashboard_navigation_view_stats: "Stats"
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_progress_not_started: "not started"
