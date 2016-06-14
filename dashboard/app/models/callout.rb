@@ -65,6 +65,13 @@ class Callout < ActiveRecord::Base
       return nil
     end
 
+    begin
+      JSON.parse(row_data[CSV_HEADERS[:qtip_config]] || '{}')
+    rescue JSON::ParserError
+      puts "Error parsing qtip_config JSON: #{script_level_search_conditions}"
+      return nil
+    end
+
     params = {element_id: row_data[CSV_HEADERS[:element_id]],
             localization_key: row_data[CSV_HEADERS[:localization_key]],
             qtip_config: row_data[CSV_HEADERS[:qtip_config]],
