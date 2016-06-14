@@ -21,17 +21,17 @@
               - practice_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::PRACTICE_MODULE
               = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'overview') do
                 .module_assignment
-                  Overview
+                  = t('flex_category.overview')
                   .ribbon-wrapper
                     .ribbon{class: required_module_assignment.try(:status) || 'not_started'}
               = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'content') do
                 .module_assignment
-                  Content
+                  = t('flex_category.content')
                   .ribbon-wrapper
                     .ribbon{class: content_module_assignment.try(:status) || 'not_started'}
-              = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'teacher-practices') do
+              = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'teaching-practices') do
                 .module_assignment
-                  Teacher Practices
+                  = t('flex_category.practice')
                   .ribbon-wrapper
                     .ribbon{class: practice_module_assignment.try(:status) || 'not_started'}
 - else
