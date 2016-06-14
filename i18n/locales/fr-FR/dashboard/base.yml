@@ -23,7 +23,7 @@ fr:
           future: ne peut pas être dans le futur
   hello: Bonjour tout le monde
   welcome_back: 'Bienvenue %{name}'
-  your_professional_learning_plan: Votre Plan d’apprentissage professionnel
+  your_professional_learning_plan: Votre plan d’apprentissage professionnel
   see_your_learning_plan: Consultez votre plan d’apprentissage
   submit: Envoyer
   unsubmit: Ne pas envoyer
@@ -368,7 +368,7 @@ fr:
       Nous remercions nos <a href="https://code.org/about/donors"> donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, notre <a href="https://code.org/about/team"> équipe étendue</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors"> conseillers d'éducation</a> pour leur soutien à la création de Code Studio.
     help_from_html: "Nous tenons particulièrement à remercier les ingénieurs de Google, Microsoft, Facebook, Twitter et beaucoup d'autres organismes qui ont contribué à créer ce matériel."
     help_from_html_old: Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer ce matériel.
-    art_from_html: "Minecraft&#8482 ; &copie ; %{current_year} Microsoft. Tous droits réservés. <br />Star Wars&#8482 ; &copie ; % {current_year} Disney et Lucasfilm. Tous droits réservés.<br />La reine des neiges&#8482; &copie\\_; %{current_year} Disney. Tous droits réservés. <br /> L’âge de glace&#8482 ; &copie ; % {current_year} 20th Century Fox. Tous droits réservés. <br /> Angry Bird&#8482 ; &copie ; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. <br /> Plants vs. Zombies&#8482 ; &copie ; %{current_year} Electronic Arts Inc. Tous droits réservés. <br /> Le monde incroyable de Gumball est une marque commerciale et &copie ; 2015 Cartoon Network."
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. <br /> L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. <br /> Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. <br /> Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. <br /> Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482 ; &copie ; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482 ; &copie ; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482 ; &copie ; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482 ; &copie ; %{current_year} 20th Century Fox. Tous droits réservés. Angry Bird&#8482 ; &copie ; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes vs. Zombies&#8482 ; &copie ; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copie ; 2015 Cartoon Network.'
     code_from_html: 'Code.org utilise p5.play, qui est distribué sous la licence <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: Fourni par Amazon Web Services
@@ -401,16 +401,12 @@ fr:
     notes_coming_soon: Il y aura bientôt des notes pour cette vidéo.
     autoplay_option: Lire les vidéos automatiquement
     download: Télécharger la vidéo
-  compatability:
-    working:
-      header: Les travaux de prise en charge de ton navigateur sont en cours.
-      message: |-
-        Code.org utilise une technologie web moderne. Cela rend le site Web plus rapide à utiliser. Ton navigateur ne supporte pas toutes les caractéristiques requises, et tu peux rencontrer des problèmes lors de l'utilisation de cette partie du site Web. Aide-nous en < a href = "% {report_issue_url}" > signalant tout problème < /a >. Tu peux également < a href = "% {supported_browsers_url}" > mettre à niveau ton navigateur vers une version prise en charge < /a >.
-      hide_this_warning: Masquer cet avertissement
+  compatibility:
     upgrade:
-      header: Mettre à jour ton navigateur.
-      message: "Code.org utilise une technologie web moderne. Cela rend le site Web plus rapide à utiliser. Malheureusement ton navigateur ne supporte pas toutes les fonctionnalités nécessaires à l'exécution de cette partie du site Web. < br / >< br / > Installe un navigateur sur notre liste de navigateurs pris en charge pour continuer. Tu peux <a href=« # »>essayer d'afficher la page</a>, mais t’attendre à ce que la fonctionnalité soit endommagée."
-      button: Me montrer la liste des navigateurs pris en charge
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      link: Pour en savoir plus
   slow_loading: "Cela prend plus de temps que d'habitude..."
   try_reloading: Essaie de recharger la page
   next_stage: "Terminé\\_! Continue vers l'étape suivante"
@@ -489,7 +485,7 @@ fr:
     picture_count: 'Ces <b>%{days}</b> derniers jours, les élèves ont dessiné <b>%{count}</b> des images en écrivant leurs propres programmes informatiques. Clique sur les images pour voir chaque programme en action.'
     activity_count: "Ces <b>%{days}</b> derniers jours, les élèves ont développer <b>%{count}</b> des applications et des images en écrivant leurs propres programmes informatiques. Clique sur les images et les captures d'écran pour voir chaque programme en action."
     want_to_make_your_own: "Tu veux faire le tien\\_?"
-    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
+    how_to_save: Dans le dernier niveau de ces tutoriels, cliquez sur « Terminer » et « Enregistrer » pour enregistrer votre travail dans la Galerie.
     more: "Plus &rarr\\_;"
     caption_by_name_age: 'par %{name}, %{age} ans'
     caption_time_ago: 'il y a %{time_ago} heures/jours'
@@ -683,9 +679,33 @@ fr:
     icon_library:
       search_placeholder_text: Chercher pour une icône...
       no_icons_found: Aucune icône trouvée
+    playzone:
+      artist_description: "Dessine des super images et dessins avec l'Artiste\\_!"
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Programme une histoire ou un jeu dans le Labo de jeux !
+      playlab_title: New App
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: Aperçu
     content: Contenu
     practice: Pratiques de l’enseignant
   external_links:
     disclaimer_md: "<strong>Avertissement: Vous quittez le site Code.org vers un site qui n'est pas géré par Code.org.</strong> Ce site peut avoir une politique de confidentialité différente de celle de Code.org.<br/><br/>Nous avons sélectionné ces ressources de tiers car nous pensons qu'elles vous seront utiles. Même si nous ne sommes pas directement responsables du contenu de ce site, veuillez <a href='mailto:support@code.org'>contacter le support</a> si vous trouvez le contenu répréhensible, ou si le site n'est plus disponible."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X

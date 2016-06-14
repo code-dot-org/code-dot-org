@@ -71,7 +71,7 @@ it:
         
       2-3 Artist Loops New 13_instruction: Disegna il rombo per 3 volte usando un ciclo.
       2-3 Artist Loops New 14_instruction: "Ora disegna il rombo per 10 volte ma, tra un rombo e l'altro, effettua una rotazione di 90 gradi."
-      2-3 Artist Loops New 15_instruction: Disegna qualcosa di divertente.
+      2-3 Artist Loops New 15_instruction: Adesso disegna ciò che vuoi!
       2-3 Artist Loops New 2_instruction: 'Ecco una parte del codice che hai usato per disegnare il quadrato. Cosa succede se usi il blocco "ripeti 4 volte" per eseguire questo codice 4 volte?'
       2-3 Artist Loops New 9_instruction: Per completare la freccia disegna semplicemente una V i cui lati siano entrambi di 50 pixel.
       2-3 Artist Match Hex Pic_instruction: "Sfida: Aiuta a finire l'esagono."
@@ -381,7 +381,7 @@ it:
         Esso mi farà "ripetere" le azioni "fino a che" raggiungo il girasole.
       4-5 Maze Assessment 1_instruction: 'Questo è un esercizio di riepilogo -- Fammi arrivare al girasole.'
       4-5 Maze Conditionals 1_instruction: 'Usa il blocco "ripeti fino a che" per far arrivare lo zombie fino al girasole.'
-      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
+      4-5 Maze Conditionals 10_instruction: "Puoi aggiungere solo 3 blocchi per aiutare gli zombie a risolvere un labirinto più complesso? \\r \\r se lo fai bene, puo ' camminare su qualsiasi percorso curvo, non importa quanto sia lungo!"
       4-5 Maze Conditionals 2_instruction: 'Usa il blocco "ripeti fino a che" per far arrivare lo zombie fino al girasole.'
       4-5 Maze Conditionals 3_instruction: |-
         Usa il blocco "se c'è strada" per decidere quando farmi svoltare. Attenzione: in questo caso devi aggiungere solo un blocco! Osserva, però, il modo in cui abbiamo impostato questo programma in modo tale che, la prossima volta, tu riesca a farlo tutto da solo.
@@ -422,6 +422,16 @@ it:
       4-5 While Loops 7_instruction: Wow, ora ci sono 3 grandi mucchi di terra! Riesci a scrivere un programma che li rimuove completamente fino a quando il terreno è livellato?
       4-5 While Loops 8_instruction: 'Ci sono una buca davvero profonda e un grande mucchio di terra. Quante palate di terra sono necessarie per livellare il terreno? Suggerimento: Usa il blocco "mentre" per entrambi.'
       4-5 While Loops Assessment 1_instruction: 'Questo è un esercizio di riepilogo -- Ci sono molte buche e mucchi di terra. Aiutami a riempire le buche e a rimuovere i mucchi di terra per rendere livellato il terreno.'
+      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 15 squares line up next to each other?
+      aE3_instruction: |
+        Now let's go one level deeper! We've nested that whole
+        block of code into another loop, but you need to get the artist back in place
+        to draw the next line. Which of these code blocks can you place at the end
+        of the outermost loop to draw the whole grid?
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -1448,6 +1458,9 @@ it:
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -2983,6 +2996,7 @@ it:
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -4421,4 +4435,7 @@ it:
       Underground Mining Coal_instruction: Nel sottosuolo trovi le risorse più preziose, ma è buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
       Underground Test Level_instruction: Raccogli tutti i minerali!
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests
