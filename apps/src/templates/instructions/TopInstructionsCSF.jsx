@@ -103,6 +103,7 @@ var TopInstructions = React.createClass({
     inputOutputTable: React.PropTypes.arrayOf(
       React.PropTypes.arrayOf(React.PropTypes.number)
     ),
+    showInstructionsDialog: React.PropTypes.func.isRequired,
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -221,6 +222,13 @@ var TopInstructions = React.createClass({
     }
   },
 
+  handleClickBubble() {
+    // If we don't have authored hints, clicking bubble shouldnt do anything
+    if (this.props.hasAuthoredHints) {
+      this.props.showInstructionsDialog();
+    }
+  },
+
   render: function () {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
@@ -256,7 +264,11 @@ var TopInstructions = React.createClass({
                 this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
               ]}
           >
-            <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
+            <ProtectedStatefulDiv
+                id="bubble"
+                className="prompt-icon-cell"
+                onClick={this.handleClickBubble}
+            >
               {this.props.smallStaticAvatar &&
                 <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
               }
@@ -310,7 +322,8 @@ module.exports = connect(function propsFromStore(state) {
     hasAuthoredHints: state.instructions.hasAuthoredHints,
     isRtl: state.pageConstants.localeDirection === 'rtl',
     smallStaticAvatar: state.pageConstants.smallStaticAvatar,
-    inputOutputTable: state.pageConstants.inputOutputTable
+    inputOutputTable: state.pageConstants.inputOutputTable,
+    showInstructionsDialog: state.pageConstants.showInstructionsDialog
   };
 }, function propsFromDispatch(dispatch) {
   return {

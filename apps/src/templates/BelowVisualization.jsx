@@ -5,10 +5,7 @@ var color = require('../color');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 import InputOutputTable from './instructions/InputOutputTable';
 import PromptIcon from './instructions/PromptIcon';
-<<<<<<< HEAD
-=======
 import AniGifPreview from './instructions/AniGifPreview';
->>>>>>> ani gif preview in top pane (not yet clickable)
 
 const styles = {
   aniGifPreviewWrapper: {
@@ -28,7 +25,8 @@ const BelowVisualization = React.createClass({
     shortInstructions2: React.PropTypes.string,
     aniGifURL: React.PropTypes.string,
     instructionsInTopPane: React.PropTypes.bool.isRequired,
-    smallStaticAvatar: React.PropTypes.string
+    smallStaticAvatar: React.PropTypes.string,
+    showInstructionsDialog: React.PropTypes.func.isRequired
   },
 
   render() {
@@ -47,6 +45,7 @@ const BelowVisualization = React.createClass({
               id="bubble"
               className="clearfix"
               style={commonStyles.bubble}
+              onClick={this.props.showInstructionsDialog}
           >
             <table
                 id="prompt-table"
@@ -76,7 +75,7 @@ const BelowVisualization = React.createClass({
             </table>
 
             {inputOutputTable && <InputOutputTable data={inputOutputTable}/>}
-            {aniGifURL && <AniGifPreview url={aniGifURL}/>}
+            {aniGifURL && <AniGifPreview/>}
           </div>
         }
       </ProtectedStatefulDiv>
@@ -90,5 +89,6 @@ export default connect(state => ({
   shortInstructions: state.instructions.shortInstructions,
   shortInstructions2: state.instructions.shortInstructions2,
   smallStaticAvatar: state.pageConstants.smallStaticAvatar,
-  inputOutputTable: state.pageConstants.inputOutputTable
+  inputOutputTable: state.pageConstants.inputOutputTable,
+  showInstructionsDialog: state.pageConstants.showInstructionsDialog
 }))(BelowVisualization);
