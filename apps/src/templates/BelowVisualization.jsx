@@ -5,6 +5,10 @@ var color = require('../color');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 import InputOutputTable from './instructions/InputOutputTable';
 import PromptIcon from './instructions/PromptIcon';
+<<<<<<< HEAD
+=======
+import AniGifPreview from './instructions/AniGifPreview';
+>>>>>>> ani gif preview in top pane (not yet clickable)
 
 const styles = {
   aniGifPreviewWrapper: {
@@ -36,9 +40,6 @@ const BelowVisualization = React.createClass({
       aniGifURL
     } = this.props;
 
-    const aniGifPreviewStyle = {
-      backgroundImage: "url('" + this.props.aniGifURL + "')"
-    };
     return (
       <ProtectedStatefulDiv id="belowVisualization">
         {!instructionsInTopPane &&
@@ -75,13 +76,7 @@ const BelowVisualization = React.createClass({
             </table>
 
             {inputOutputTable && <InputOutputTable data={inputOutputTable}/>}
-
-            {this.props.aniGifURL &&
-              <div id="ani-gif-preview-wrapper" style={styles.aniGifPreviewWrapper}>
-                <div id="ani-gif-preview" style={aniGifPreviewStyle}>
-                </div>
-              </div>
-            }
+            {aniGifURL && <AniGifPreview url={aniGifURL}/>}
           </div>
         }
       </ProtectedStatefulDiv>
