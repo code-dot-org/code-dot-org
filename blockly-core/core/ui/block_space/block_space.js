@@ -658,27 +658,14 @@ Blockly.BlockSpace.prototype.paste = function(clipboard) {
       this.remainingCapacity()) {
     return;
   }
-  if (this.blockSpaceEditor.flyout_ && this.blockSpaceEditor.flyout_.hasBlockLimits()) {
-    // collect the types of this block and all children
+  if (this.blockSpaceEditor.flyout_ &&
+      this.blockSpaceEditor.flyout_.blockLimits.hasBlockLimits()) {
     var types = goog.array.map(xmlBlock.getElementsByTagName('block'), function(block) {
       return block.getAttribute('type');
     });
     types.push(xmlBlock.getAttribute('type'));
 
-    // groups types by count
-    var counts = types.reduce(function (prev, curr) {
-      var count = prev[curr] || 0;
-      prev[curr] = count + 1;
-      return prev;
-    }, {});
-
-    // verify that all blocks can be safely added to the blockspace
-    // without exceeding any block limits
-    var allBlocksWithinLimits = Object.keys(counts).every(function (type) {
-      return this.blockSpaceEditor.flyout_.blockTypeWithinLimits(type, counts[type]);
-    }, this);
-
-    if (!allBlocksWithinLimits) {
+    if (!this.blockSpaceEditor.flyout_.blockLimits.canAddBlocks(types)) {
       return;
     }
   }

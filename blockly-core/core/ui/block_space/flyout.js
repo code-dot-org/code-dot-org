@@ -28,6 +28,7 @@
 goog.provide('Blockly.Flyout');
 
 goog.require('Blockly.Block');
+goog.require('Blockly.BlockLimits');
 goog.require('Blockly.Comment');
 goog.require('goog.math.Rect');
 
@@ -96,7 +97,7 @@ Blockly.Flyout = function(blockSpaceEditor, opt_static) {
    * @type {Object}
    * @private
    */
-  this.blockLimits_ = {};
+  this.blockLimits = new Blockly.BlockLimits();
 
   /**
    * List of event listeners.
@@ -479,9 +480,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
       child.setCommentText(null);
     }
 
-    if (block.hasLimit()) {
-      this.blockLimits_[block.type] = block;
-    }
+    this.blockLimits.addBlock(block);
 
     block.render();
     this.layoutBlock_(block, cursor, gaps[i], initialX);
@@ -516,7 +515,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.reflow();
 
   this.filterForCapacity_();
-  this.updateBlockLimits_();
+  this.updateBlockLimitTotals_();
 
   // Fire a resize event to update the flyout's scrollbar.
   Blockly.fireUiEvent(window, 'resize');
@@ -697,7 +696,7 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
       // Right-click.  Don't create a block, let the context menu show.
       return;
     }
-    if (originBlock.hasLimit() && originBlock.totalRemaining() === 0) {
+    if (!flyout.blockLimits.blockTypeWithinLimits(originBlock.type)) {
       // at capacity.
       return;
     }
@@ -750,7 +749,7 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
  */
 Blockly.Flyout.prototype.onBlockSpaceChange_ = function() {
   this.filterForCapacity_();
-  this.updateBlockLimits_();
+  this.updateBlockLimitTotals_();
 };
 
 /**
@@ -768,46 +767,12 @@ Blockly.Flyout.prototype.filterForCapacity_ = function() {
   }
 };
 
-/**
- * Update the block counts for limited-quantity workspace blocks
- * @private
- */
-Blockly.Flyout.prototype.updateBlockLimits_ = function() {
-  Object.keys(this.blockLimits_)
-      .forEach(function (type) {
-        this.blockLimits_[type].resetTotal();
-      }, this);
-
-  this.blockSpaceEditor_.blockSpace.getAllVisibleBlocks()
-      .forEach(function (block) {
-        var limit = this.blockLimits_[block.type];
-        limit && limit.addTotal(1);
-      }, this);
-};
-
-/**
- * Returns true iff any of the blocks in this flyout are limited in quantity
- * @return {boolean}
- */
-Blockly.Flyout.prototype.hasBlockLimits = function() {
-  return Object.keys(this.blockLimits_).length > 0;
-};
-
-/**
- * Returns true if the specified count of the specified block type can
- * be added to this space without exceeding any block limits
- * @param {string} type
- * @param {number} count
- * @return {boolean}
- */
-Blockly.Flyout.prototype.blockTypeWithinLimits = function(type, count) {
-  if (count === undefined) {
-    count = 1;
-  }
-  if (this.blockLimits_[type]) {
-    return this.blockLimits_[type].totalRemaining() >= count;
-  }
-  return true;
+Blockly.Flyout.prototype.updateBlockLimitTotals_ = function() {
+  var blocks = this.blockSpaceEditor_.blockSpace.getAllVisibleBlocks();
+  var blockTypes = blocks.map(function (block) {
+    return block.type;
+  });
+  this.blockLimits.updateBlockTotals(blockTypes);
 };
 
 /**
