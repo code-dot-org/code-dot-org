@@ -565,6 +565,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('compile-firebase-rules', function () {
+    child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync('`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json');
   });
 
