@@ -227,8 +227,6 @@ var TopInstructions = React.createClass({
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
       this.props.shortInstructions : this.props.longInstructions);
 
-    // TODO - think about what long/short means here
-    // TODO - sizing issues
     // Only used by star wars levels
     const instructions2 = this.props.shortInstructions2 ? processMarkdown(
       this.props.shortInstructions2) : undefined;

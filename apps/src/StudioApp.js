@@ -608,7 +608,6 @@ StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.configureAndShowInstructions_ = function (config) {
-  // TODO - consider netsim
   var promptDiv = document.getElementById('prompt');
   var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
