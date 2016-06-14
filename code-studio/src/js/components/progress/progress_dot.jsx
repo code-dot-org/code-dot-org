@@ -6,6 +6,18 @@ import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../color';
 
+function createOutline(color) {
+  return `
+    ${color} 0 1px,
+    ${color} 1px 1px,
+    ${color} 1px 0px,
+    ${color} 1px -1px,
+    ${color} 0 -1px,
+    ${color} -1px -1px,
+    ${color} -1px 0,
+    ${color} -1px 1px`;
+}
+
 const dotSize = 24;
 const styles = {
   dot: {
@@ -56,15 +68,7 @@ const styles = {
       fontSize: 24,
       verticalAlign: -4,
       color: color.white,
-      textShadow: `
-        ${color.lighter_gray} 0 1px,
-        ${color.lighter_gray} 1px 1px,
-        ${color.lighter_gray} 1px 0px,
-        ${color.lighter_gray} 1px -1px,
-        ${color.lighter_gray} 0 -1px,
-        ${color.lighter_gray} -1px -1px,
-        ${color.lighter_gray} -1px 0,
-        ${color.lighter_gray} -1px 1px`,
+      textShadow: createOutline(color.lighter_gray),
       ':hover': {
         color: color.white,
         backgroundColor: 'transparent'
@@ -79,15 +83,7 @@ const styles = {
     },
     icon_complete: {
       color: color.light_gray,
-      textShadow: `
-        ${color.white} 0 1px,
-        ${color.white} 1px 1px,
-        ${color.white} 1px 0px,
-        ${color.white} 1px -1px,
-        ${color.white} 0 -1px,
-        ${color.white} -1px -1px,
-        ${color.white} -1px 0,
-        ${color.white} -1px 1px`,
+      textShadow: createOutline(color.white),
       ':hover': {
         color: color.light_gray
       }
@@ -165,6 +161,7 @@ export const ProgressDot = React.createClass({
               this.props.courseOverviewPage && styles.dot.overview,
               styles.dot.icon,
               smallDot && styles.dot.icon_small,
+              outlineCurrent && {textShadow: createOutline(color.level_current)},
               level.status && level.status !== 'not_tried' && styles.dot.icon_complete
             ]}
           /> :
