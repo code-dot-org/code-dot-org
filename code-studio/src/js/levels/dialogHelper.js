@@ -1,5 +1,7 @@
 /* globals appOptions, Dialog, getResult, CDOSounds, showVideoDialog, dashboard */
 import $ from 'jquery';
+import PlayZone from '../components/playzone';
+import ReactDOM from 'react-dom';
 
 
 /*
@@ -210,6 +212,23 @@ window.dashboard.dialog = (function () {
 
           if (lastServerResponse.videoInfo) {
             window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
+          } else if (lastServerResponse.endOfStageExperience) {
+            const body = document.createElement('div');
+            const stageInfo = lastServerResponse.previousStageInfo;
+            const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
+            ReactDOM.render(
+              <PlayZone
+                stageName={stageName}
+                onContinue={() => { dialog.hide(); }}
+                i18n={window.dashboard.i18n}/>,
+              body
+            );
+            const dialog = new Dialog({
+              body: body,
+              width: 800,
+              redirect: lastServerResponse.nextRedirect
+            });
+            dialog.show();
           } else if (lastServerResponse.nextRedirect) {
             if (appOptions.dialog.shouldShowDialog) {
               showDialog("success");

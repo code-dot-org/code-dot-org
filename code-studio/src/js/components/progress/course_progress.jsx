@@ -28,10 +28,10 @@ const CourseProgress = React.createClass({
 
   render() {
     const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Content'));
-
     let count = 1;
     const rows = _.map(groups, (stages, group) =>
       <div key={group}>
+        <a name={group.toLowerCase().replace(' ', '-')}/>
         <h4 style={this.props.professionalLearningCourse ? styles.flexHeader : {display: 'none'}}>{group}</h4>
         {stages.map(stage => <CourseProgressRow stage={stage} key={stage.name} currentLevelId={this.props.currentLevelId} isFocusArea={this.props.focusAreaPositions.indexOf(count++) > -1} professionalLearningCourse={this.props.professionalLearningCourse} />)}
       </div>
