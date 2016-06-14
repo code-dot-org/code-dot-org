@@ -1,7 +1,14 @@
 "ka-GE":
   hour_of_code: "კოდის ერთი საათი"
   hello: "ჰეი, სამყარო"
+  'yes': "დიახ"
+  'no': "არა"
   select_language: "შეარჩიეთ თქვენი ენა"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "გაიგეთ მეტი"
   en: "ინფორმატიკა"
   computer_science_edweek: "კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული"
   csedweek_dates: "დეკემბრის 8-14, 2014"
@@ -700,6 +707,7 @@
   dashboard_sections_table_secret: "შესვლის ტიპი"
   dashboard_sections_table_grade: "შეფასება"
   dashboard_sections_table_course: "კურსი"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "მოსწავლეები"
   dashboard_sections_table_code: "სექციის კოდი"
   dashboard_sections_name: "განყოფილების სახელი"
@@ -1716,11 +1724,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "თამაში"
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

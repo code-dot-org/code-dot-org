@@ -342,6 +342,16 @@ is:
       4-5 While Loops 7_instruction: Nú eru þrír haugar af mold! Getur þú skrifað forrit til að fjarlægja þá alveg?
       4-5 While Loops 8_instruction: 'Hér er mjög djúp hola og mjög stór moldarhaugur. Hve mörg skóflufylli þarf að flytja til að slétta yfirborðið? Vísbending: Notaðu "meðan" lykkju fyrir bæði.'
       4-5 While Loops Assessment 1_instruction: Nú eru margar holur og margir haugar. Hjálpaðu mér að fylla og fjarlægja svo yfirborðið verði slétt.
+      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 15 squares line up next to each other?
+      aE3_instruction: |
+        Now let's go one level deeper! We've nested that whole
+        block of code into another loop, but you need to get the artist back in place
+        to draw the next line. Which of these code blocks can you place at the end
+        of the outermost loop to draw the whole grid?
       AlgPD DR Free Play_instruction: Búðu til fall út frá þínu eigin orðadæmi.
       AllTheThings Applab - Turtle move with button_instruction: Bættu við hnappi sem hreyfir skjaldbökuna við smell. (Smelltu til að sjá ítarlegar leiðbeiningar)
       allthethings data blocks test_instruction: |
@@ -884,6 +894,9 @@ is:
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -2030,6 +2043,7 @@ is:
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -3392,4 +3406,7 @@ is:
       Underground Mining Coal_instruction: Þú finnur dýrmætasta hráefnið neðanjarðar, en það getur orðið dimmt. Settu upp minnst 2 kyndla og grafðu út minnst 2 af kolum.
       Underground Test Level_instruction: Safnaðu öllum steindunum!
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Nota þennan prófáfanga til að ná í xml fyrir áfangapróf

@@ -1,7 +1,14 @@
 "mk-MK":
   hour_of_code: Hour of Code
   hello: Hello world
+  'yes': 'Yes'
+  'no': 'No'
   select_language: "Ве молиме изберете го својот јазик"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
   en: "Компјутерски науки"
   computer_science_edweek: "Недела за образување на компјутерски науки"
   csedweek_dates: 8-14 Декември, 2014
@@ -708,6 +715,7 @@
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Section Name
@@ -1707,11 +1715,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "Пушти"
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

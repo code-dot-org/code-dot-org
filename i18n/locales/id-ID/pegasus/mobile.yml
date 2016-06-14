@@ -1,7 +1,12 @@
 id-ID:
   hour_of_code: Jam kode
   hello: Halo dunia
+  "yes": Ya
+  "no": Tidak
   select_language: Silahkan pilih bahasa Anda
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Pelajari lebih banyak
   en: Ilmu komputer
   computer_science_edweek: Minggu pendidikan ilmu komputer
   csedweek_dates: 8-14 Desember 2014
@@ -555,6 +560,7 @@ id-ID:
   dashboard_sections_table_secret: Jenis login
   dashboard_sections_table_grade: Kelas
   dashboard_sections_table_course: Kursus
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Siswa
   dashboard_sections_table_code: Kode Sesi
   dashboard_sections_name: Nama kelompok
@@ -570,7 +576,7 @@ id-ID:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.

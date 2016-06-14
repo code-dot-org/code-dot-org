@@ -1,7 +1,14 @@
 "hr-HR":
   hour_of_code: Hour of Code
   hello: Pozdrav svima
+  'yes': Da
+  'no': Ne
   select_language: Odaberite svoj jezik
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Doznaj više
   en: Računalna znanost
   computer_science_edweek: Tjedan podučavanja Računalstva
   csedweek_dates: 8. - 14. prosinca 2014.
@@ -706,6 +713,7 @@
   dashboard_sections_table_secret: Način prijave
   dashboard_sections_table_grade: Razred
   dashboard_sections_table_course: Tečaj
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Učenici
   dashboard_sections_table_code: "Šifra odjeljenja"
   dashboard_sections_name: Ime odjeljenja
@@ -1719,11 +1727,3 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

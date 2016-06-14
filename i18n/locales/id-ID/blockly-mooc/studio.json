@@ -76,7 +76,7 @@
   "dropletBlock_moveRight_description":"Gerakkan droid ke kanan.",
   "dropletBlock_moveUp_description":"Gerakkan droid ke atas.",
   "dropletBlock_moveDown_description":"Gerakan droid ke bawah.",
-  "dropletBlock_moveLeft_description":"Gerakan dorid ke kiri.",
+  "dropletBlock_moveLeft_description":"Gerakan droid ke kiri.",
   "dropletBlock_moveSlow_description":"Ubah karakter-karakter untuk bergerak lebih lambat.",
   "dropletBlock_moveSlow_param0":"tipe",
   "dropletBlock_moveSlow_param0_description":"Tipe karakter yang harus diubah ('acak', 'Stormtrooper', 'RebelPilot', 'PufferPig', 'Mynock', 'MouseDroid', 'Tauntaun', atau 'Probot').",

@@ -397,15 +397,12 @@
     notes_coming_soon: Tekst til denne videoen kommer snart.
     autoplay_option: Autovisning av videoer
     download: Last ned video
-  compatability:
-    working:
-      header: Vi arbeider med å lage støtte for din nettleser.
-      message: "Code.org bruker moderne web-teknologi. Dette gjør nettstedet raskere å bruke. Nettleseren støtter ikke alle funksjonene som er nødvendige, og det kan oppstå problemer mens du bruker denne delen av nettstedet. Vennligst hjelp oss ved å <a href='%{report_issue_url}'> rapportere eventuelle problemer du finner</a>. Du kan også <a href='%{supported_browsers_url}'> oppgradere nettleseren til en versjon som støttes</a>."
-      hide_this_warning: Skjul denne advarselen
+  compatibility:
     upgrade:
-      header: Vennligst oppgrader din nettleser.
-      message: "Code.org bruker moderne web-teknologi. Dette gjør nettstedet raskere å bruke. Nettleseren din støtter dessverre ikke alle funksjonene som kreves for å kjøre denne delen av nettstedet. <br/> <br/>Installer en av nettleserne fra listen av støttede nettlesere for å fortsette. Du kan <a href='#'> forsøke å vise siden</a>, men du må forvente at noe funksjonalitet mangler/ikke virker."
-      button: Gå til listen over støttede nettlesere
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      link: Lær mer
   slow_loading: Dette tar lengre tid enn vanlig...
   try_reloading: Last siden på nytt
   next_stage: Ferdig! Fortsett til neste nivå
@@ -676,9 +673,33 @@
     icon_library:
       search_placeholder_text: Søk etter et ikon...
       no_icons_found: Ingen ikon funnet
+    playzone:
+      artist_description: Tegn kule bilder og tegninger med Kunstneren!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Lag en historie eller spill med Spill-labben!
+      playlab_title: New App
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: Oversikt
     content: Content
     practice: Teacher Practices
   external_links:
     disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
