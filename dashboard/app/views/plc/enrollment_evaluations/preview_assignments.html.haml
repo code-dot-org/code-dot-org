@@ -31,4 +31,5 @@
           %input.radio{type: 'radio', name: 'practice_module', value: practice_module.id, checked: preselected_module_ids.include?(practice_module.id)}
             = practice_module.name
 
-      = submit_tag('Confirm Module Selections', id: 'confirm_assignments')
+  #submit_tag_container
+    = submit_tag('Confirm Module Selections', id: 'confirm-assignments')

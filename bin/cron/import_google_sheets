@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require File.expand_path('../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 
 def main()
   Dir.chdir(pegasus_dir) do

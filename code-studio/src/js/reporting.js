@@ -69,13 +69,13 @@ reporting.sendReport = function (report) {
         xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
       },
       success: function (response) {
-        if (thisAjax !== lastAjaxRequest) {
+        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
         }
         reportComplete(report, response);
       },
       error: function (xhr, textStatus, thrownError) {
-        if (thisAjax !== lastAjaxRequest) {
+        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
         }
         report.error = xhr.responseText;
@@ -127,6 +127,8 @@ function reportComplete(report, response) {
     lastServerResponse.nextRedirect = response.redirect;
     lastServerResponse.previousLevelRedirect = response.previous_level;
     lastServerResponse.videoInfo = response.video_info;
+    lastServerResponse.endOfStageExperience = response.end_of_stage_experience;
+    lastServerResponse.previousStageInfo = response.stage_changing && response.stage_changing.previous;
   }
   if (report.onComplete) {
     report.onComplete(response);

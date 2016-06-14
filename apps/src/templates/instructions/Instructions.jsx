@@ -1,6 +1,7 @@
 var React = require('react');
 var MarkdownInstructions = require('./MarkdownInstructions');
 var NonMarkdownInstructions = require('./NonMarkdownInstructions');
+import InputOutputTable from './InputOutputTable';
 
 const styles = {
   main: {
@@ -18,6 +19,9 @@ var Instructions = React.createClass({
     markdownClassicMargins: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
     authoredHints: React.PropTypes.element,
+    inputOutputTable: React.PropTypes.arrayOf(
+      React.PropTypes.arrayOf(React.PropTypes.number)
+    ),
     onResize: React.PropTypes.func
   },
 
@@ -55,6 +59,7 @@ var Instructions = React.createClass({
     return (
       <div style={styles.main}>
         {instructions}
+        {this.props.inputOutputTable && <InputOutputTable data={this.props.inputOutputTable}/>}
         {this.props.aniGifURL &&
           <img className="aniGif example-image" src={ this.props.aniGifURL }/>
         }

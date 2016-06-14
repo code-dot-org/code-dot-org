@@ -14,15 +14,9 @@ var CalcVisualizationColumn = function (props) {
         </svg>
       </ProtectedVisualizationDiv>
       <GameButtons/>
-      <BelowVisualization inputOutputTable={props.inputOutputTable}/>
+      <BelowVisualization/>
     </span>
   );
-};
-
-CalcVisualizationColumn.propTypes = {
-  inputOutputTable: React.PropTypes.arrayOf(
-    React.PropTypes.arrayOf(React.PropTypes.number)
-  )
 };
 
 module.exports = CalcVisualizationColumn;
