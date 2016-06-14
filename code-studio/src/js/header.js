@@ -44,7 +44,6 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   stageData = stageData || {};
   progressData = progressData || {};
 
-  $('.header_text').first().text(stageData.title);
   if (stageData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', stageData.finishLink).text(stageData.finishText));
   }
