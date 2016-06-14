@@ -46,7 +46,7 @@
   # instances are all their own daemon)
   if node['cdo-apps']['daemon']
     unless node.chef_environment == 'production' # non-production daemons
-      cronjob at:'@reboot', do:"#{deploy_dir('bin','solr-server')} > #{pegasus_dir('log','solr.log')} 2>&1"
+      cronjob at:'@reboot', do:"#{deploy_dir('bin', 'solr', 'solr_server')} > #{pegasus_dir('log','solr.log')} 2>&1"
     end
 
     if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
