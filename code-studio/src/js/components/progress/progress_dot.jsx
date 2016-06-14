@@ -21,14 +21,12 @@ function createOutline(color) {
 const dotSize = 24;
 const styles = {
   outer: {
-    ':hover': {
-      textDecoration: 'none'
-    }
+    color: color.purple
   },
   levelName: {
     display: 'table-cell',
     paddingLeft: 5,
-    color: color.purple
+    fontFamily: '"Gotham 4r", sans-serif'
   },
   dot: {
     puzzle: {
