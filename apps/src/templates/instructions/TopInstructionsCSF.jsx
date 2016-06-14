@@ -71,6 +71,10 @@ const styles = {
     // icon to move. This strangeness happens in part because prompt-icon-cell
     // is managed outside of React
     marginTop: -20
+  },
+  secondaryInstructions: {
+    fontSize: 12,
+    color: '#5b6770'
   }
 };
 
@@ -82,6 +86,7 @@ var TopInstructions = React.createClass({
     maxHeight: React.PropTypes.number.isRequired,
     collapsed: React.PropTypes.bool.isRequired,
     shortInstructions: React.PropTypes.string.isRequired,
+    shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
     hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
@@ -221,6 +226,10 @@ var TopInstructions = React.createClass({
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
       this.props.shortInstructions : this.props.longInstructions);
 
+    // Only used by star wars levels
+    const instructions2 = this.props.shortInstructions2 ? processMarkdown(
+      this.props.shortInstructions2) : undefined;
+
     const leftColWidth = (this.props.smallStaticAvatar ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
 
@@ -244,13 +253,22 @@ var TopInstructions = React.createClass({
               }
             </ProtectedStatefulDiv>
           </div>
-          <Instructions
-              ref="instructions"
-              renderedMarkdown={renderedMarkdown}
-              onResize={this.adjustMaxNeededHeight}
-              inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
-              inTopPane
-          />
+          <div ref="instructions">
+            <Instructions
+                renderedMarkdown={renderedMarkdown}
+                onResize={this.adjustMaxNeededHeight}
+                inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                inTopPane
+            />
+            {this.props.collapsed && instructions2 &&
+              <div
+                style={[
+                  styles.secondaryInstructions
+                ]}
+                dangerouslySetInnerHTML={{ __html: instructions2 }}
+              />
+            }
+          </div>
           <CollapserButton
               ref='collapser'
               style={[styles.collapserButton, !this.props.longInstructions && commonStyles.hidden]}
@@ -275,6 +293,7 @@ module.exports = connect(function propsFromStore(state) {
       state.instructions.maxNeededHeight),
     collapsed: state.instructions.collapsed,
     shortInstructions: state.instructions.shortInstructions,
+    shortInstructions2: state.instructions.shortInstructions2,
     longInstructions: state.instructions.longInstructions,
     hasAuthoredHints: state.instructions.hasAuthoredHints,
     isRtl: state.pageConstants.localeDirection === 'rtl',
