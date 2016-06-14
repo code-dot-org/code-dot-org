@@ -190,7 +190,7 @@ class Pd::Workshop < ActiveRecord::Base
     send_reminder_for_upcoming_in_days(10)
   end
 
-  def self.process_closed_workshop_async(id)
+  def self.process_ended_workshop_async(id)
     workshop = Pd::Workshop.find(id)
     raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
 
