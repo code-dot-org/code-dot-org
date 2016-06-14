@@ -696,6 +696,16 @@ en:
     icon_library:
       search_placeholder_text: 'Search for an icon...'
       no_icons_found: 'No icons found'
+    playzone:
+      artist_description: 'Draw cool pictures and designs with the Artist!'
+      artist_title: 'New Drawing'
+      continue_button: 'Go on to the next Stage'
+      playlab_description: 'Create a story or make a game with Play Lab!'
+      playlab_title: 'New App'
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: 'Revisit one of your existing projects.'
+      projects_title: 'Open a project'
+      secondary_header: 'Ask your teacher what to do next'
   flex_category:
     required: 'Overview'
     content: 'Content'
