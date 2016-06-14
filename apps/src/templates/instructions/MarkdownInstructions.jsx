@@ -25,7 +25,6 @@ var styles = {
 
 const MarkdownInstructions = React.createClass({
   propTypes: {
-    style: React.PropTypes.object,
     renderedMarkdown: React.PropTypes.string.isRequired,
     markdownClassicMargins: React.PropTypes.bool,
     onResize: React.PropTypes.func,
@@ -81,8 +80,7 @@ const MarkdownInstructions = React.createClass({
         style={[
           styles.standard,
           inTopPane && styles.inTopPane,
-          markdownClassicMargins && styles.classic,
-          this.props.style
+          markdownClassicMargins && styles.classic
         ]}
         dangerouslySetInnerHTML={{ __html: renderedMarkdown }}/>
     );
