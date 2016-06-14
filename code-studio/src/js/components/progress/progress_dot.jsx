@@ -20,6 +20,16 @@ function createOutline(color) {
 
 const dotSize = 24;
 const styles = {
+  outer: {
+    ':hover': {
+      textDecoration: 'none'
+    }
+  },
+  levelName: {
+    display: 'table-cell',
+    paddingLeft: 5,
+    color: color.purple
+  },
   dot: {
     puzzle: {
       display: 'inline-block',
@@ -149,9 +159,10 @@ export const ProgressDot = React.createClass({
 
     return (
       <a
+        key='link'
         href={level.url}
         onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
-        style={[showLevelName && {display: 'block'}]}
+        style={[styles.outer, showLevelName && {display: 'table-row'}]}
       >
         {level.icon ?
           <i
@@ -180,7 +191,7 @@ export const ProgressDot = React.createClass({
           </div>
         }
         {showLevelName &&
-          <span style={{marginLeft: 5, color: color.purple}}>{level.name}</span>
+          <span key='named_level' style={styles.levelName}>{level.name}</span>
         }
       </a>
     );
