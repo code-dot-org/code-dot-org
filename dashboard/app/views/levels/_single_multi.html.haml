@@ -97,6 +97,7 @@
 - if standalone || @script_level
   :javascript
     window.levelGroup.levels[#{level.id}] = new Multi(
+      #{level.id},
       "level_#{level.id}",
       #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,

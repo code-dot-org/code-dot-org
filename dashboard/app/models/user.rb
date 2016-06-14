@@ -996,4 +996,8 @@ SQL
     return !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
   end
 
+  def section_for_script(script)
+    followeds.collect(&:section).find { |section| section.script_id == script.id }
+  end
+
 end
