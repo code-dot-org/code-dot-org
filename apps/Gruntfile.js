@@ -323,10 +323,6 @@ module.exports = function (grunt) {
     compileFirebaseRules: {
       cwd: './firebase',
       cmd: './compile_rules.rb'
-    },
-    uploadFirebaseRules: {
-      cwd: './firebase',
-      cmd: './upload_rules.rb'
     }
   };
 
