@@ -117,7 +117,7 @@ var ApplabVisualizationColumn = React.createClass({
             onScreenCreate={this.props.onScreenCreate} />
         }
         {visualization}
-        {this.props.isIframeEmbed && this.props.isRunning &&
+        {this.props.isIframeEmbed &&
          <div style={styles.resetButtonWrapper}>
            <ResetButton hideText={true}
                         style={styles.resetButton}
