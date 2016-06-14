@@ -85,7 +85,6 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   // Used for toolbox blocks to allow only a limited number of blocks to
   // be used in the workspace.
   this.limit_ = undefined;
-  this.total_ = undefined;
 
   // Used to hide function blocks when not in modal workspace. This property
   // is not serialized/deserialized.
@@ -1472,12 +1471,21 @@ Blockly.Block.prototype.setMovable = function(movable) {
 };
 
 /**
+ * only allow limits for toolbox blocks or when editing blocks (so
+ * that we can edit toolbox blocks)
+ * @return {boolean}
+ */
+Blockly.Block.prototype.canHaveLimit = function() {
+  return this.isInFlyout || Blockly.editBlocks;
+};
+
+/**
  * Get whether this block represents a toolbox block that can only be
  * used a limited number of times
  * @return {boolean}
  */
 Blockly.Block.prototype.hasLimit = function() {
-  return (this.isInFlyout || Blockly.editBlocks) && this.limit_ !== undefined;
+  return this.canHaveLimit() && this.limit_ !== undefined;
 };
 
 /**
@@ -1490,48 +1498,21 @@ Blockly.Block.prototype.setLimit = function(limit) {
   if (isNaN(limit)) {
     limit = undefined;
   }
-  // only allow limits for toolbox blocks or when editing blocks (so
-  // that we can edit toolbox blocks)
-  if (this.isInFlyout || Blockly.editBlocks) {
+  if (this.canHaveLimit()) {
     this.limit_ = limit;
-    this.total_ = 0;
     this.svg_ && this.svg_.updateLimit(limit);
   }
 };
 
 /**
- * How many more blocks this block is allowed to create
  * @return {number}
  */
-Blockly.Block.prototype.totalRemaining = function() {
-  if (this.hasLimit()) {
-    return this.limit_ - this.total_;
-  }
+Blockly.Block.prototype.getLimit = function() {
+  return this.limit_;
 };
 
-/**
- * Resets the count of blocks "produced" by this block to zero
- */
-Blockly.Block.prototype.resetTotal = function() {
-  this.addTotal(-this.total_);
-};
-
-/**
- * Adjust the number of blocks that have been "produced" by this block
- * @param {number} inc - the amount to increment (or decrement) by
- */
-Blockly.Block.prototype.addTotal = function(inc) {
-  if (!this.isInFlyout) {
-    goog.asserts.fail('only toolbox blocks may have a total');
-  }
-  if (this.total_ + inc > this.limit_) {
-    goog.asserts.fail('this toolbox block cannot create more than %s workspace blocks', this.limit_);
-  }
-  if (this.total_ + inc < 0) {
-    goog.asserts.fail('cannot have a total of fewer than zero blocks');
-  }
-  this.total_ += inc;
-  this.svg_ && this.svg_.updateLimit(this.limit_ - this.total_);
+Blockly.Block.prototype.displayCount = function(count) {
+  this.svg_ && this.svg_.updateLimit(count);
 };
 
 /**
