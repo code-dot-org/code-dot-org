@@ -116,9 +116,16 @@ module LevelsHelper
       callouts_seen[c.localization_key] = client_state.callout_seen?(c.localization_key)
     end
     # Filter if already seen (unless always_show or canReappear in codeStudio part of qtip_config)
-    callouts_to_show = all_callouts.
-      reject { |c| !always_show && callouts_seen[c.localization_key] && !JSON.parse(c.qtip_config || '{}').try(:[], 'codeStudio').try(:[], 'canReappear') }.
-      each { |c| client_state.add_callout_seen(c.localization_key) }
+    callouts_to_show = all_callouts.reject do |c|
+      begin
+        can_reappear = JSON.parse(c.qtip_config || '{}').try(:[], 'codeStudio').try(:[], 'canReappear')
+      rescue JSON::ParserError
+        can_reappear = false
+      end
+      !always_show && callouts_seen[c.localization_key] && !can_reappear
+    end
+    # Mark the callouts as seen
+    callouts_to_show.each { |c| client_state.add_callout_seen(c.localization_key) }
     # Localize and propagate the seen property
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
