@@ -41,6 +41,7 @@ const styles = {
       height: 7,
       borderRadius: 7,
       lineHeight: 'inherit',
+      verticalAlign: 'middle',
       fontSize: 0
     },
     overview: {
