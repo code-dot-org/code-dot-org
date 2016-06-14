@@ -1,21 +1,27 @@
-/* global Blockly, goog */
-
+/**
+ * @fileoverview Block Limits helper class for managing limited
+ * quantities of blocks within a flyout
+ */
 'use strict';
+
+/* global Blockly, goog */
 
 goog.provide('Blockly.BlockLimits');
 
 goog.require('Blockly.Block');
 
 /**
- * Class for a flyout.
- * @param {!Blockly.BlockSpaceEditor} blockSpaceEditor Parent editor.
- * @param {boolean} opt_static Is the flyout a static (always open) toolbox?
+ * Class for managing block limits within a flyout
  * @constructor
  */
 Blockly.BlockLimits = function () {
   this.limits_ = {};
 };
 
+/**
+ * If the given block has a limit, saves it for future reference
+ * @param {Blockly.Block}
+ */
 Blockly.BlockLimits.prototype.addBlock = function (block) {
   if (block.hasLimit()) {
     this.limits_[block.type] = {
@@ -28,6 +34,7 @@ Blockly.BlockLimits.prototype.addBlock = function (block) {
 
 /**
  * Update the block counts for limited-quantity workspace blocks
+ * @param {string[]} blockTypes
  */
 Blockly.BlockLimits.prototype.updateBlockTotals = function (blockTypes) {
   var counts = Blockly.count(blockTypes);
@@ -37,8 +44,10 @@ Blockly.BlockLimits.prototype.updateBlockTotals = function (blockTypes) {
     if (count > limit.limit) {
       goog.asserts.fail('this toolbox block cannot create more than %s workspace blocks', limit.limit);
     }
-    limit.total = count;
-    limit.block.displayCount(limit.limit - limit.total);
+    if (count !== limit.total) {
+      limit.total = count;
+      limit.block.displayCount(limit.limit - limit.total);
+    }
   });
 };
 
@@ -50,6 +59,12 @@ Blockly.BlockLimits.prototype.hasBlockLimits = function () {
   return Object.keys(this.limits_).length > 0;
 };
 
+/**
+ * Returns true iff all given blocks can be added to this space without
+ * exceeding any block limits
+ * @param {string[]} blockTypes
+ * @return {boolean}
+ */
 Blockly.BlockLimits.prototype.canAddBlocks = function (blockTypes) {
   var counts = Blockly.count(blockTypes);
 
