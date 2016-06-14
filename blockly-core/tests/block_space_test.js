@@ -209,10 +209,13 @@ function test_blockSpaceWithLimitedQuantitiesOfBlocks() {
   );
   flyout.show(toolboxXML.childNodes);
 
+  assertEquals(true, flyout.blockLimits.hasBlockLimits());
+  assertEquals(1, flyout.blockLimits.limits_.math_number.limit);
+  assertEquals(0, flyout.blockLimits.limits_.math_number.total);
+
   // can initially accomodate one more, but not two
-  assertEquals(true, flyout.hasBlockLimits());
-  assertEquals(true, flyout.blockTypeWithinLimits('math_number', 1));
-  assertEquals(false, flyout.blockTypeWithinLimits('math_number', 2));
+  assertEquals(true, flyout.blockLimits.blockTypeWithinLimits('math_number', 1));
+  assertEquals(false, flyout.blockLimits.blockTypeWithinLimits('math_number', 2));
 
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, Blockly.Xml.textToDom(
     '<xml>' +
@@ -224,7 +227,7 @@ function test_blockSpaceWithLimitedQuantitiesOfBlocks() {
   flyout.onBlockSpaceChange_();
 
   // can no longer even accomodate one
-  assertEquals(false, flyout.blockTypeWithinLimits('math_number', 1));
+  assertEquals(false, flyout.blockLimits.blockTypeWithinLimits('math_number', 1));
 
   goog.dom.removeNode(container);
 }
