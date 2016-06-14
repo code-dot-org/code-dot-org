@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../deployment'
+require_relative '../../deployment'
 require 'cdo/only_one'
 
 def solr_dir()
