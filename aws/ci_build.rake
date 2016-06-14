@@ -139,9 +139,7 @@ task :apps_task do
 end
 
 task :firebase_task do
-  if CDO.firebase_name
-    Dir.chdir(apps_dir) { RakeUtils.system 'grunt exec:uploadFirebaseRules' }
-  end
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:upload_rules'
 end
 
 #
