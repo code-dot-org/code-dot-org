@@ -166,6 +166,17 @@ class Ability
       end
     end
 
+    if user.permission?(UserPermission::LEVELBUILDER)
+      can :manage, [
+        FrequentUnsuccessfulLevelSource,
+        Level,
+        LevelSourceHint,
+        Script,
+        ScriptLevel,
+        Stage,
+      ]
+    end
+
     if user.admin?
       can :manage, :all
 
