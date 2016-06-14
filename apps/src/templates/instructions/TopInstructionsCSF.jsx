@@ -85,7 +85,11 @@ const styles = {
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
+<<<<<<< HEAD
     isMinecraft: React.PropTypes.bool.isRequired,
+=======
+    aniGifURL: React.PropTypes.string,
+>>>>>>> ani gif preview in top pane (not yet clickable)
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
@@ -263,6 +267,7 @@ var TopInstructions = React.createClass({
                 renderedMarkdown={renderedMarkdown}
                 onResize={this.adjustMaxNeededHeight}
                 inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                aniGifURL={this.props.aniGifURL}
                 inTopPane
             />
             {this.props.collapsed && instructions2 &&
@@ -293,6 +298,7 @@ module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
     isMinecraft: state.pageConstants.isMinecraft,
+    aniGifURL: state.pageConstants.aniGifURL,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
     maxHeight: Math.min(state.instructions.maxAvailableHeight,
