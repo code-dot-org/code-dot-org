@@ -141,6 +141,7 @@ describe('determineInstructionsConstants', () => {
           instructions: 'non-markdown',
           markdownInstructions: 'markdown',
         },
+        skin: {},
         locale,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
@@ -157,6 +158,7 @@ describe('determineInstructionsConstants', () => {
           instructions: 'non-markdown',
           markdownInstructions: undefined,
         },
+        skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
@@ -172,6 +174,7 @@ describe('determineInstructionsConstants', () => {
           instructions: 'non-markdown',
           markdownInstructions: undefined,
         },
+        skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
@@ -185,6 +188,7 @@ describe('determineInstructionsConstants', () => {
           instructions: undefined,
           markdownInstructions: 'markdown',
         },
+        skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
@@ -198,6 +202,7 @@ describe('determineInstructionsConstants', () => {
           instructions: 'non-markdown',
           markdownInstructions: 'markdown',
         },
+        skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
@@ -219,6 +224,7 @@ describe('determineInstructionsConstants', () => {
             instructions: 'non-markdown',
             markdownInstructions: 'markdown',
           },
+          skin: {},
           locale,
           noInstructionsWhenCollapsed,
           showInstructionsInTopPane
@@ -226,6 +232,7 @@ describe('determineInstructionsConstants', () => {
         assert.deepEqual(result, {
           noInstructionsWhenCollapsed,
           shortInstructions: 'non-markdown',
+          shortInstructions2: undefined,
           longInstructions: 'markdown'
         });
       });
@@ -237,6 +244,7 @@ describe('determineInstructionsConstants', () => {
           instructions: 'non-markdown',
           markdownInstructions: 'markdown',
         },
+        skin: {},
         locale: 'fr-fr',
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
@@ -244,6 +252,7 @@ describe('determineInstructionsConstants', () => {
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
         shortInstructions: 'non-markdown',
+        shortInstructions2: undefined,
         longInstructions: undefined
       });
     });
@@ -255,6 +264,7 @@ describe('determineInstructionsConstants', () => {
           instructions: 'non-markdown',
           markdownInstructions: 'non-markdown',
         },
+        skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
@@ -262,6 +272,7 @@ describe('determineInstructionsConstants', () => {
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
         shortInstructions: 'non-markdown',
+        shortInstructions2: undefined,
         longInstructions: undefined
       });
     });
@@ -274,6 +285,7 @@ describe('determineInstructionsConstants', () => {
           markdownInstructions: undefined,
           inputOutputTable
         },
+        skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
@@ -286,11 +298,34 @@ describe('determineInstructionsConstants', () => {
           markdownInstructions: 'markdown',
           inputOutputTable
         },
+        skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
         showInstructionsInTopPane
       });
       assert.equal(result2.longInstructions, 'markdown');
+    });
+
+    it('substitutes images in instructions', () => {
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'Instructions with [image1]',
+          instructions2: 'Instructions with [image2]',
+          markdownInstructions: undefined
+        },
+        skin: {
+          instructions2ImageSubstitutions: {
+            image1: '/image1.png',
+            image2: '/image2.png'
+          }
+        },
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane
+      });
+
+      assert(/image1\.png/.test(result.shortInstructions), 'image 1 is replaced');
+      assert(/image2\.png/.test(result.shortInstructions2), 'image 2 is replaced');
     });
   });
 });
