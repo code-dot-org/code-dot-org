@@ -609,21 +609,6 @@ StudioApp.prototype.configureHints_ = function (config) {
     return;
   }
 
-  var bubble = document.getElementById('bubble');
-  if (bubble) {
-    dom.addClickTouchEvent(bubble, function () {
-      const reduxState = this.reduxStore.getState();
-      const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
-      const hasAuthoredHints = reduxState.instructions.hasAuthoredHints;
-
-      // Don't show dialog on click in top pane unless we have hints
-      if (instructionsInTopPane && !hasAuthoredHints) {
-        return;
-      }
-      this.showInstructionsDialog_(config.level, false, true);
-    }.bind(this));
-  }
-
   var promptIcon = document.getElementById('prompt-icon');
   this.authoredHintsController_.display(promptIcon);
 };
@@ -2767,7 +2752,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     noVisualization: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
     aniGifURL: config.level.aniGifURL,
-    inputOutputTable: config.level.inputOutputTable
+    inputOutputTable: config.level.inputOutputTable,
+    showInstructionsDialog: () => this.showInstructionsDialog_(config.level, false, true)
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
