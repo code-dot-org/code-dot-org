@@ -92,14 +92,6 @@ Blockly.Flyout = function(blockSpaceEditor, opt_static) {
   this.buttons_ = [];
 
   /**
-   * Set of blocks with limits, keyed by block type. Used to enfoce
-   * limited quantities of blocks in workspace.
-   * @type {Object}
-   * @private
-   */
-  this.blockLimits = new Blockly.BlockLimits();
-
-  /**
    * List of event listeners.
    * @type {BindData}
    * @private
@@ -480,8 +472,6 @@ Blockly.Flyout.prototype.show = function(xmlList) {
       child.setCommentText(null);
     }
 
-    this.blockLimits.addBlock(block);
-
     block.render();
     this.layoutBlock_(block, cursor, gaps[i], initialX);
     // Create an invisible rectangle under the block to act as a button.  Just
@@ -696,7 +686,7 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
       // Right-click.  Don't create a block, let the context menu show.
       return;
     }
-    if (!flyout.blockLimits.blockTypeWithinLimits(originBlock.type)) {
+    if (!flyout.blockSpaceEditor_.blockLimits.blockTypeWithinLimits(originBlock.type)) {
       // at capacity.
       return;
     }
@@ -772,7 +762,7 @@ Blockly.Flyout.prototype.updateBlockLimitTotals_ = function() {
   var blockTypes = blocks.map(function (block) {
     return block.type;
   });
-  this.blockLimits.updateBlockTotals(blockTypes);
+  this.blockSpaceEditor_.blockLimits.updateBlockTotals(blockTypes);
 };
 
 /**

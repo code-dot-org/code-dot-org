@@ -11,25 +11,36 @@ goog.provide('Blockly.BlockLimits');
 goog.require('Blockly.Block');
 
 /**
- * Class for managing block limits within a flyout
+ * @typedef {Object} BlockLimit
+ * @property {number} count
+ * @property {number} limit
+ */
+
+/**
+ * Class for managing block limits
  * @constructor
  */
 Blockly.BlockLimits = function () {
+  /**
+   * Store of block types to block limit tracking objects.
+   * {Object.<string, BlockLimit>}
+   * @private
+   */
   this.limits_ = {};
+
+  /**
+   * Fires event 'change' on remaining block count change.
+   * @type {goog.events.EventTarget}
+   */
+  this.events = new goog.events.EventTarget();
 };
 
-/**
- * If the given block has a limit, saves it for future reference
- * @param {Blockly.Block}
- */
-Blockly.BlockLimits.prototype.addBlock = function (block) {
-  if (block.hasLimit()) {
-    this.limits_[block.type] = {
-      total: 0,
-      limit: block.getLimit(),
-      block: block
-    };
-  }
+Blockly.BlockLimits.prototype.setLimit = function (type, limit) {
+  this.limits_[type] = {
+    count: undefined,
+    limit: limit
+  };
+  this.updateCount(type, 0);
 };
 
 /**
@@ -37,18 +48,32 @@ Blockly.BlockLimits.prototype.addBlock = function (block) {
  * @param {string[]} blockTypes
  */
 Blockly.BlockLimits.prototype.updateBlockTotals = function (blockTypes) {
-  var counts = Blockly.count(blockTypes);
+  var countsByType = Blockly.aggregateCounts(blockTypes);
 
   goog.object.forEach(this.limits_, function (limit, type) {
-    var count = counts[type] || 0;
-    if (count > limit.limit) {
+    var blockCount = countsByType[type] || 0;
+    if (blockCount > limit.limit) {
       goog.asserts.fail('this toolbox block cannot create more than %s workspace blocks', limit.limit);
     }
-    if (count !== limit.total) {
-      limit.total = count;
-      limit.block.displayCount(limit.limit - limit.total);
-    }
-  });
+    this.updateCount(type, blockCount);
+  }.bind(this));
+};
+
+Blockly.BlockLimits.prototype.updateCount = function (type, newCount) {
+  var limit = this.limits_[type];
+  var countChanged = newCount !== limit.count;
+  limit.count = newCount;
+  if (countChanged) {
+    this.events.fireListeners('change', false, {
+      type: type,
+      limit: limit.limit,
+      remaining: limit.limit - limit.count
+    });
+  }
+};
+
+Blockly.BlockLimits.prototype.getLimit = function (type) {
+  return this.limits_[type] ? this.limits_[type].limit : undefined;
 };
 
 /**
@@ -66,9 +91,9 @@ Blockly.BlockLimits.prototype.hasBlockLimits = function () {
  * @return {boolean}
  */
 Blockly.BlockLimits.prototype.canAddBlocks = function (blockTypes) {
-  var counts = Blockly.count(blockTypes);
+  var countsByType = Blockly.aggregateCounts(blockTypes);
 
-  var allWithinLimits = goog.object.every(counts, function (count, type) {
+  var allWithinLimits = goog.object.every(countsByType, function (count, type) {
     return this.blockTypeWithinLimits(type, count);
   }, this);
 
@@ -88,7 +113,7 @@ Blockly.BlockLimits.prototype.blockTypeWithinLimits = function (type, count) {
   }
   var limit = this.limits_[type];
   if (limit) {
-    var remaining = limit.limit - limit.total;
+    var remaining = limit.limit - limit.count;
     return remaining >= count;
   }
   return true;

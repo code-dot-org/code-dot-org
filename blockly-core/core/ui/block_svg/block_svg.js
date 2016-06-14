@@ -519,12 +519,10 @@ Blockly.BlockSvg.prototype.updateDisabled = function() {
 };
 
 /**
+ * Update block limit UI
+ * @param {number} limit count to display
  */
 Blockly.BlockSvg.prototype.updateLimit = function (limit) {
-  if (!this.block_.hasLimit()) {
-    return;
-  }
-
   var BUBBLE_SIZE = 18;
   var HALF_BUBBLE_SIZE = BUBBLE_SIZE / 2;
 
