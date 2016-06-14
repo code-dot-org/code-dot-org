@@ -4,7 +4,15 @@ module ScriptLevelsHelper
 
     if script_level.has_another_level_to_go_to?
       if script_level.end_of_stage?
-        response[:stage_changing] = {previous: {name: script_level.name}}
+        response[:stage_changing] = {previous: {name: script_level.name, position: script_level.stage.position}}
+
+        # End-of-Stage Experience is only enabled for:
+        # stages except for the last stage of a script
+        # users in sections with an enabled "stage extras" flag
+        enabled_for_stage = !script_level.end_of_script?
+        enabled_for_user = current_user && current_user.section_for_script(script_level.script) &&
+            current_user.section_for_script(script_level.script).stage_extras
+        response[:end_of_stage_experience] = enabled_for_stage && enabled_for_user
       end
     else
       response[:message] = 'no more levels' # used by blockly to show a different feedback message on the last level
