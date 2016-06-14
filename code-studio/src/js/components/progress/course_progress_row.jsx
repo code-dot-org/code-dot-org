@@ -28,7 +28,7 @@ const styles = {
     width: '100%'
   },
   focusAreaRow: {
-    minHeight: 105,
+    height: 105,
     borderWidth: 3,
     background: color.almost_white_cyan,
     borderColor: color.cyan,
