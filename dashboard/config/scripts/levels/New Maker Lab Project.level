@@ -188,8 +188,22 @@
       "isPressed": null,
       "holdtime": null,
       "value": null,
-      "toggleSwitch.isOpen": null
-    }
+      "toggleSwitch.isOpen": null,
+      "onBoardEvent": null
+    },
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>
