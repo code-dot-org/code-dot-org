@@ -10,7 +10,21 @@ var chai = require('chai');
 
 chai.should();
 
-describe("clientState#sourceForLevel", function() {
+describe("mergeActivityResult", function () {
+  it('returns the result with highest priority', function () {
+    assert.strictEqual(state.mergeActivityResult(100, 200), 200);
+    assert.strictEqual(state.mergeActivityResult(20, -50), 20);
+    assert.strictEqual(state.mergeActivityResult(-3, -4), -3);
+  });
+  it('returns the other result when one result is zero', function () {
+    assert.strictEqual(state.mergeActivityResult(0, -2), -2);
+    assert.strictEqual(state.mergeActivityResult(-50, 0), -50);
+    assert.strictEqual(state.mergeActivityResult(30, 0), 30);
+    assert.strictEqual(state.mergeActivityResult(0, 0), 0);
+  });
+});
+
+describe("clientState#sourceForLevel", function () {
 
   beforeEach(function () {
     state.reset();
@@ -39,13 +53,13 @@ describe("clientState#sourceForLevel", function() {
   });
 });
 
-describe("clientState#trackProgress", function() {
+describe("clientState#trackProgress", function () {
 
-  beforeEach(function() {
+  beforeEach(function () {
     state.reset();
   });
 
-  it("records level progress and line counts when level is completed", function() {
+  it("records level progress and line counts when level is completed", function () {
     state.levelProgress('sample', 1).should.equal(0);
     state.levelProgress('sample', 2).should.equal(0);
     state.lines().should.equal(0);
@@ -69,7 +83,7 @@ describe("clientState#trackProgress", function() {
     state.lines().should.equal(20);
   });
 
-  it("records level progress but not line counts when level is failed", function() {
+  it("records level progress but not line counts when level is failed", function () {
     state.levelProgress('sample', 1).should.equal(0);
     state.levelProgress('sample', 2).should.equal(0);
     state.lines().should.equal(0);
@@ -123,7 +137,7 @@ describe("clientState#trackProgress", function() {
   });
 });
 
-describe("clientState#queryParams", function() {
+describe("clientState#queryParams", function () {
   it("parses query params", function () {
     window.history.replaceState("", "", "?foo=1&bar=2");
 
@@ -136,9 +150,9 @@ describe("clientState#queryParams", function() {
   });
 });
 
-describe("clientState#hasSeenVideo/hasSeenCallout", function() {
+describe("clientState#hasSeenVideo/hasSeenCallout", function () {
 
-  beforeEach(function() {
+  beforeEach(function () {
     state.reset();
   });
 
@@ -236,9 +250,9 @@ describe("clientState#hasSeenVideo/hasSeenCallout", function() {
   });
 });
 
-describe("clientState#reset", function() {
+describe("clientState#reset", function () {
 
-  beforeEach(function() {
+  beforeEach(function () {
     state.reset();
   });
 

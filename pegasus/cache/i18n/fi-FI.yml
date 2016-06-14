@@ -1,7 +1,14 @@
 "fi-FI":
   hour_of_code: Koodaustunti
   hello: Hei maailma
+  'yes': Kyllä
+  'no': Ei
   select_language: Valitse kieli
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Lue lisää
   en: Tietojenkäsittelytiede
   computer_science_edweek: Tietotekniikan koulutusviikko
   csedweek_dates: 8. -14. Joulukuuta 2014
@@ -702,6 +709,7 @@
   dashboard_sections_table_secret: Kirjautumisen tyyppi
   dashboard_sections_table_grade: Taso
   dashboard_sections_table_course: Kurssi
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Oppilaat
   dashboard_sections_table_code: Ryhmän tunnus
   dashboard_sections_name: Ryhmän nimi
@@ -1713,11 +1721,3 @@
   infinity_shortcode: inf
   playlab_shortcode: pelaa
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

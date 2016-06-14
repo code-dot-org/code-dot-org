@@ -1,7 +1,14 @@
 "vi-VN":
   hour_of_code: Giờ của mã
   hello: Xin chào thế giới
+  'yes': "Đồng ý"
+  'no': Không
   select_language: Vui lòng chọn ngôn ngữ của bạn
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Tìm hiểu thêm
   en: Khoa học máy tính
   computer_science_edweek: Tuần giáo dục khoa học máy tính
   csedweek_dates: Từ ngày 8-14 tháng  12 năm 2014
@@ -729,6 +736,7 @@
   dashboard_sections_table_secret: Loại đăng nhập
   dashboard_sections_table_grade: "Điểm số"
   dashboard_sections_table_course: Khóa học
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: học viên
   dashboard_sections_table_code: Mã của học phần
   dashboard_sections_name: Tên phần
@@ -888,11 +896,12 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: Tìm hiểu thêm
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition: Là một giáo viên, bạn đang dẫn đầu trong phong trào
+    để trao cho mỗi học sinh ở mỗi trường học cơ hội học về khoa học máy tính. Bây
+    giờ, đã đến lúc để cho đại diện của bạn nghe từ bạn. Tuần này, các nhà lãnh đạo
+    giáo dục, 28 thống đốc, và CEO của các công ty lớn nhất của Mỹ tham gia cùng nhau
+    trong một bức thư ngỏ yêu cầu Quốc hội Hoa Kỳ tài trợ K-12 giáo dục khoa học máy
+    tính.
   dashboard_announce_petition_button: Add your name
   code_hoc_coming: Giờ lập trình là ở đây - ngày 8-14 tháng 12!
   code_sign_up: "Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính"
@@ -1741,11 +1750,3 @@
   infinity_shortcode: inf
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

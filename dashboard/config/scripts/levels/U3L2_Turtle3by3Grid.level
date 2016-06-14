@@ -62,7 +62,61 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft() without any loops."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the turnLeft() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() - which moves 25 pixels forward - and turnLeft() - which turns left 90 degrees every time."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the moveForward() function can accept the number of pixels to move forward!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() - which moves 25 pixels forward - and turnLeft() - which turns left 90 degrees every time."
+      },
+      {
+        "entries": [
+          "turnRight"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft()."
+      },
+      {
+        "entries": [
+          "turnLeft"
+        ],
+        "matchType": "exact",
+        "minTimes": 15,
+        "message": "It seems like you're not turning enough to to complete the 3x3 grid."
+      },
+      {
+        "entries": [
+          "moveForward"
+        ],
+        "matchType": "exact",
+        "minTimes": 24,
+        "message": "It seems like you’re not moving the turtle enough times to draw the full 3x3 grid."
+      }
+    ]
   },
   "published": true,
   "notes": "",
