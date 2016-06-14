@@ -143,6 +143,19 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
     this.setCurrentlyHidden(true);
   }
 
+  if (this.blockSpace && this.blockSpace.blockSpaceEditor) {
+    var inFlyoutOrMainEditBlocks = this.isInFlyout !== Blockly.editBlocks;
+    if (inFlyoutOrMainEditBlocks) {
+      this.blockSpace.blockSpaceEditor.blockLimits.events.listen('change',
+        function(eventObject) {
+          if (eventObject.type !== this.type) {
+            return;
+          }
+          this.svg_ && this.svg_.updateLimit(eventObject.remaining);
+        }.bind(this));
+    }
+  }
+
   /** @type {goog.events.EventTarget} */
   this.blockEvents = new goog.events.EventTarget();
 };
@@ -938,7 +951,8 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
       text: "Set limit (current: " + (this.limit_ === undefined ? 'none' : this.limit_) + ")",
       enabled: true,
       callback: function () {
-        block.setLimit(prompt("New Limit", block.limit_));
+        block.blockSpace.blockSpaceEditor.blockLimits.setLimit(
+            block.type, prompt("New Limit", 999));
       }
     };
     options.push(limitOption);
@@ -1512,6 +1526,7 @@ Blockly.Block.prototype.getLimit = function() {
 };
 
 Blockly.Block.prototype.displayCount = function(count) {
+// TODO can remove?
   this.svg_ && this.svg_.updateLimit(count);
 };
 

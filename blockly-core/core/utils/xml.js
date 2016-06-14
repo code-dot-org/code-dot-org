@@ -154,8 +154,10 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   if (block.isFunctionDefinition() && block.userCreated) {
     element.setAttribute('usercreated', true);
   }
-  if (block.hasLimit()) {
-    element.setAttribute('limit', block.getLimit());
+
+  if (Blockly.editBlocks) {
+    var limit = block.blockSpace.blockSpaceEditor.blockLimits.getLimit(block.type);
+    limit && element.setAttribute('limit', limit);
   }
   if (block.htmlId) {
     element.setAttribute('id', block.htmlId);
@@ -366,8 +368,9 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
     block.userCreated = (userCreated === 'true');
   }
   var limit = xmlBlock.getAttribute('limit');
-  if (limit) {
-    block.setLimit(parseInt(limit));
+  var shouldShowLimits = blockSpace.isFlyout || Blockly.editBlocks;
+  if (limit && shouldShowLimits) {
+    blockSpace.blockSpaceEditor.blockLimits.setLimit(block.type, parseInt(limit));
   }
 
   var blockChild = null;
