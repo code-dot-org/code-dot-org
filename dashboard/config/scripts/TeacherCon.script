@@ -7,7 +7,7 @@ login_required 'true'
 stage 'Introduction to Teachercon', 'required'
  named_level 'Welcome to TeacherCon!'
  named_level 'TeacherCon Agenda'
- named_level 'TeacherCon Unit 1 Assessment' 
+ named_level 'TeacherCon Self-Assessment'
 
 stage 'Lesson 1,4: Number Systems - circle triangle square', 'content' 				
  named_level 'U1L4 Lesson Overview'

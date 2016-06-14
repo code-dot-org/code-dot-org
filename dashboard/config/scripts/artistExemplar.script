@@ -5,7 +5,15 @@ description_audience "Ages 8-18"
 hidden 'true'
 
 stage 'Artist Exemplar'
+level 'aEstory1'
 level 'aE1'
 level 'aE2'
-level 'aE2'
-
+level 'aE3'
+level 'aE3alternate'
+level 'aE3alternateB'
+level 'aE4'
+level 'aE5'
+level 'aE6'
+level 'aE7'
+level 'aE8'
+level 'aEfreeplay'
