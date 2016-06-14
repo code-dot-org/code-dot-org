@@ -133,6 +133,10 @@ class Game < ActiveRecord::Base
     app == MATCH
   end
 
+  def level_group?
+    app == LEVEL_GROUP
+  end
+
   def supports_sharing?
     app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT || app == GAMELAB
   end

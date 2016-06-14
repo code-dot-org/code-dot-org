@@ -420,6 +420,7 @@ class DashboardSection
         login_type: @row[:login_type],
         grade: @row[:grade],
         code: @row[:code],
+        stage_extras: @row[:stage_extras],
     }
   end
 
@@ -432,6 +433,7 @@ class DashboardSection
     fields[:name] = params[:name] unless params[:name].nil_or_empty?
     fields[:login_type] = params[:login_type] if valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if valid_grade?(params[:grade])
+    fields[:stage_extras] = params[:stage_extras]
 
     if params[:course] && valid_course_id?(params[:course][:id])
       fields[:script_id] = params[:course][:id].to_i
@@ -451,6 +453,7 @@ class DashboardSection
       :sections__id___id,
       :sections__name___name,
       :sections__code___code,
+      :sections__stage_extras___stage_extras,
       :sections__login_type___login_type,
       :sections__grade___grade,
       :sections__script_id___script_id,
