@@ -377,7 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "ořež mezery z levé strany",
   "TEXT_TRIM_OPERATOR_RIGHT": "ořež mezery z pravé strany",
   "TEXT_TRIM_TOOLTIP": "Vrací kopii textu s odstraněnými mezerami z jednoho nebo obou konců.",
-  "UNUSED_CODE": "Unused code",
+  "UNUSED_CODE": "Nepoužitý kód",
   "VARIABLES_DEFAULT_NAME": "položka",
   "VARIABLES_GET_CREATE_SET": "Vytvoř \"nastav %1\"",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

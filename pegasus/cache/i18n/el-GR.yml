@@ -1,7 +1,14 @@
 "el-GR":
   hour_of_code: "Η Ώρα του Κώδικα"
   hello: "Γεια σου κόσμε"
+  'yes': "Ναι"
+  'no': "Όχι"
   select_language: "Παρακαλώ επιλέξτε τη γλώσσα σας"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "Μάθετε περισσότερα"
   en: "Επιστήμη των Υπολογιστών"
   computer_science_edweek: "Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών"
   csedweek_dates: 8-14 Δεκεμβρίου 2014
@@ -760,6 +767,7 @@
   dashboard_sections_table_secret: "Τύπος σύνδεσης"
   dashboard_sections_table_grade: "Βαθμος"
   dashboard_sections_table_course: "Μάθημα"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Μαθητές"
   dashboard_sections_table_code: "Κωδικός ενότητας"
   dashboard_sections_name: "Όνομα ενότητας"
@@ -1886,11 +1894,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "παίξε"
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

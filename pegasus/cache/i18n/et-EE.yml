@@ -1,7 +1,14 @@
 "et-EE":
   hour_of_code: KoodiTund
   hello: Tere maailm
+  'yes': Jah
+  'no': Ei
   select_language: Palun vali oma keel
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Lisateave
   en: Arvutiteadus
   computer_science_edweek: Arvutiteaduse hariduse nädal
   csedweek_dates: 08-14. detsember, 2014
@@ -693,6 +700,7 @@
   dashboard_sections_table_secret: Sisselogimise tüüp
   dashboard_sections_table_grade: Klass
   dashboard_sections_table_course: Kursus
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Õpilased"
   dashboard_sections_table_code: Jaotise kood
   dashboard_sections_name: Osa nimi
@@ -1689,11 +1697,3 @@
   infinity_shortcode: inf
   playlab_shortcode: mängi
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

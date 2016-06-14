@@ -1,7 +1,14 @@
 "id-ID":
   hour_of_code: Jam kode
   hello: Halo dunia
+  'yes': Ya
+  'no': Tidak
   select_language: Silahkan pilih bahasa Anda
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Pelajari lebih banyak
   en: Ilmu komputer
   computer_science_edweek: Minggu pendidikan ilmu komputer
   csedweek_dates: 8-14 Desember 2014
@@ -727,6 +734,7 @@
   dashboard_sections_table_secret: Jenis login
   dashboard_sections_table_grade: Kelas
   dashboard_sections_table_course: Kursus
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Siswa
   dashboard_sections_table_code: Kode Sesi
   dashboard_sections_name: Nama kelompok
@@ -1795,11 +1803,3 @@
   infinity_shortcode: inf
   playlab_shortcode: mainkan
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras
