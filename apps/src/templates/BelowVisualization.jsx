@@ -6,12 +6,6 @@ var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 import InputOutputTable from './instructions/InputOutputTable';
 import PromptIcon from './instructions/PromptIcon';
 
-const styles = {
-  aniGifPreviewWrapper: {
-    display: 'inline-block'
-  }
-};
-
 /**
  * The area below our visualization that is share dby all apps.
  */
@@ -21,7 +15,6 @@ const BelowVisualization = React.createClass({
       React.PropTypes.arrayOf(React.PropTypes.number)
     ),
     shortInstructions: React.PropTypes.string,
-    shortInstructions2: React.PropTypes.string,
     aniGifURL: React.PropTypes.string,
     instructionsInTopPane: React.PropTypes.bool.isRequired,
     smallStaticAvatar: React.PropTypes.string
@@ -35,10 +28,6 @@ const BelowVisualization = React.createClass({
       shortInstructions,
       aniGifURL
     } = this.props;
-
-    const aniGifPreviewStyle = {
-      backgroundImage: "url('" + this.props.aniGifURL + "')"
-    };
     return (
       <ProtectedStatefulDiv id="belowVisualization">
         {!instructionsInTopPane &&
@@ -47,10 +36,7 @@ const BelowVisualization = React.createClass({
               className="clearfix"
               style={commonStyles.bubble}
           >
-            <table
-                id="prompt-table"
-                className={this.props.aniGifURL ? 'with-ani-gif' : undefined}
-            >
+            <table id="prompt-table">
               <tbody>
                 <tr>
                   {smallStaticAvatar && (shortInstructions || aniGifURL) &&
@@ -59,10 +45,8 @@ const BelowVisualization = React.createClass({
                     </td>
                   }
                   <td id="prompt-cell">
-                    <p id="prompt">{this.props.shortInstructions}</p>
-                    {this.props.shortInstructions2 &&
-                      <p id="prompt2">{this.props.shortInstructions2}</p>
-                    }
+                    <p id="prompt"/>
+                    <p id="prompt2" style={commonStyles.hidden}/>
                   </td>
                 </tr>
               </tbody>
@@ -70,12 +54,10 @@ const BelowVisualization = React.createClass({
 
             {inputOutputTable && <InputOutputTable data={inputOutputTable}/>}
 
-            {this.props.aniGifURL &&
-              <div id="ani-gif-preview-wrapper" style={styles.aniGifPreviewWrapper}>
-                <div id="ani-gif-preview" style={aniGifPreviewStyle}>
-                </div>
+            <div id="ani-gif-preview-wrapper" style={commonStyles.hidden}>
+              <div id="ani-gif-preview">
               </div>
-            }
+            </div>
           </div>
         }
       </ProtectedStatefulDiv>
@@ -87,7 +69,6 @@ export default connect(state => ({
   instructionsInTopPane: state.pageConstants.instructionsInTopPane,
   aniGifURL: state.pageConstants.aniGifURL,
   shortInstructions: state.instructions.shortInstructions,
-  shortInstructions2: state.instructions.shortInstructions2,
   smallStaticAvatar: state.pageConstants.smallStaticAvatar,
   inputOutputTable: state.pageConstants.inputOutputTable
 }))(BelowVisualization);
