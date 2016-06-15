@@ -59,9 +59,15 @@ const BelowVisualization = React.createClass({
                     </td>
                   }
                   <td id="prompt-cell">
-                    <p id="prompt">{this.props.shortInstructions}</p>
+                    <p
+                        id="prompt"
+                        dangerouslySetInnerHTML={{ __html: this.props.shortInstructions}}
+                    />
                     {this.props.shortInstructions2 &&
-                      <p id="prompt2">{this.props.shortInstructions2}</p>
+                      <p
+                          id="prompt2"
+                          dangerouslySetInnerHTML={{ __html: this.props.shortInstructions2}}
+                      />
                     }
                   </td>
                 </tr>
