@@ -11,6 +11,10 @@ class ImportableScreen {
     this.id = dom.id;
   }
 
+  get screenToReplace() {
+    return elementUtils.getPrefixedElementById(this.id);
+  }
+
   get willReplace() {
     return designMode.getAllScreenIds().includes(this.id);
   }
@@ -133,21 +137,28 @@ export default React.createClass({
   },
 
   importScreens() {
-    this.state.selected.forEach(id => {
-      var newScreen = this.state.project.screens.find(screen => screen.id === id).dom;
-      var oldScreen = elementUtils.getScreens().toArray()
-                                  .find(s => elementUtils.getId(s) === screen.id);
-      if (oldScreen) {
-        designMode.onDeletePropertiesButton(oldScreen);
-      }
-      designMode.attachElement(
-        designMode.parseScreenFromLevelHtml(
-          newScreen,
-          true,
-          applabConstants.DESIGN_ELEMENT_ID_PREFIX
-        )
-      );
-    });
+    this.state.selected
+        .map(id => this.state.project.screens.find(screen => screen.id === id))
+        .forEach(importableScreen => {
+          var newScreen = importableScreen.dom;
+
+          // ugh, we have to pull this out before we attach the new one
+          // in case it exists and needs to be deleted.
+          // If we delete it first, then design mode will try to load the
+          // "default" screen. If this screen we are deleting is the only screen
+          // then loading the "default" screen will create a new one!
+          var deleteAfterAdd = importableScreen.screenToReplace;
+          designMode.attachElement(
+            designMode.parseScreenFromLevelHtml(
+              newScreen,
+              true,
+              applabConstants.DESIGN_ELEMENT_ID_PREFIX
+            )
+          );
+          if (deleteAfterAdd) {
+            designMode.onDeletePropertiesButton(deleteAfterAdd);
+          }
+        });
     this.props.onImport();
   },
 

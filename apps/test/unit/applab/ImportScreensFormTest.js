@@ -7,6 +7,7 @@ import {expect} from '../../util/configuredChai';
 import {setupLocales} from '../../util/testUtils';
 setupLocales();
 
+var designMode = require('@cdo/apps/applab/designMode');
 var ImportScreensForm = require('@cdo/apps/applab/ImportScreensForm').default;
 var ScreenListItem = require('@cdo/apps/applab/ImportScreensForm').ScreenListItem;
 
@@ -48,9 +49,11 @@ describe("Applab ImportScreensForm component", function () {
     designModeViz = document.createElement('div');
     designModeViz.id = "designModeViz";
     document.body.appendChild(designModeViz);
+    sinon.stub(designMode, 'changeScreen');
   });
   afterEach(() => {
     designModeViz.parentNode.removeChild(designModeViz);
+    designMode.changeScreen.restore();
   });
 
   describe('When doing an import into an empty project', () => {
@@ -86,6 +89,25 @@ describe("Applab ImportScreensForm component", function () {
         expect(screenItems[0].find('input').prop('checked')).to.be.true;
         expect(screenItems[1].find('input').prop('checked')).to.be.true;
       });
+      it('checkboxes can be checked or unchecked', () => {
+        expect(screenItems[0].find('input').prop('checked')).to.be.true;
+        screenItems[0].find('input').simulate('change');
+        update();
+        expect(screenItems[0].find('input').prop('checked')).not.to.be.true;
+        screenItems[0].find('input').simulate('change');
+        update();
+        expect(screenItems[0].find('input').prop('checked')).to.be.true;
+      });
+    });
+
+    describe("the import screens button", () => {
+      it('adds the imported screens to the project', () => {
+        expect(designMode.getAllScreenIds()).to.have.length(0);
+        importButton.simulate('click');
+        expect(designMode.getAllScreenIds()).to.have.length(2);
+        expect(designMode.getAllScreenIds()).to.include('screen1');
+        expect(designMode.getAllScreenIds()).to.include('screen2');
+      });
     });
   });
 
@@ -116,6 +138,17 @@ describe("Applab ImportScreensForm component", function () {
         expect(screenItems[1].find('input').prop('checked')).to.be.true;
       });
     });
+
+    describe("the import screens button", () => {
+      it('adds the imported screens to the project, replacing the ones with the same name', () => {
+        expect(designMode.getAllScreenIds()).to.have.length(1);
+        importButton.simulate('click');
+        expect(designMode.getAllScreenIds()).to.have.length(2);
+        expect(designMode.getAllScreenIds()).to.include('screen1');
+        expect(designMode.getAllScreenIds()).to.include('screen2');
+      });
+    });
+
   });
 
   describe('When doing an import into a project with conflicting assets', () => {
@@ -165,6 +198,9 @@ describe("Applab ImportScreensForm component", function () {
           </div>
         `,
         toImport:`
+          <div class="screen" id="screen1">
+            <input id="input1">
+          </div>
           <div class="screen" id="screen2">
             <input id="input2">
           </div>
@@ -180,16 +216,18 @@ describe("Applab ImportScreensForm component", function () {
         expect(form.text()).to.include('Cannot Import');
       });
       it("should set the screen list items to be disabled if they cannot be imported", () => {
-        expect(screenItems[0].text()).to.include('screen3');
+        expect(screenItems[0].text()).to.include('screen1');
         expect(form.find(ScreenListItem).at(0).prop('disabled')).not.to.be.true;
-        expect(screenItems[1].text()).to.include('screen2');
-        expect(form.find(ScreenListItem).at(1).prop('disabled')).to.be.true;
+        expect(screenItems[1].text()).to.include('screen3');
+        expect(form.find(ScreenListItem).at(1).prop('disabled')).not.to.be.true;
+        expect(screenItems[2].text()).to.include('screen2');
+        expect(form.find(ScreenListItem).at(2).prop('disabled')).to.be.true;
       });
     });
 
     describe('the screen list items', () => {
       it("should display a warning when they are disabled", () => {
-        expect(screenItems[1].text()).to.include('Uses existing element IDs: "input2".');
+        expect(screenItems[2].text()).to.include('Uses existing element IDs: "input2".');
       });
     });
   });
