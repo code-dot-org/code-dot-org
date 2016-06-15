@@ -2030,14 +2030,14 @@ en:
           description_short: We will use this during TeacherCon to deliver supports and materials for sessions
           description: We will use this during TeacherCon to deliver supports and materials for sessions
           Introduction to Teachercon: Introduction to Teachercon
-          'Lesson 1,4: Number Systems - circle triangle square': 'Lesson 1.4: Number Systems - Circle Triangle Square'
-          'Lesson 1,6: Sending Numbers': 'Lesson 1.6: Sending Numbers'
-          'Lesson 1,9: internet addressing (battleship)': 'Lesson 1.9: Internet Addressing (Battleship)'
-          'Lesson 1,10: Routers and Redundancy': 'Lesson 1.10: Routers and Redundancy'
-          'Lesson 1,11: Packets and Making a Reliable Internet': 'Lesson 1.11: Packets and Making a Reliable Internet'
-          'Lesson 2,2: Text Compression': 'Lesson 2.2: Text Compression'
-          'Lesson 2,3: Black and White Pixelation': 'Lesson 2.3: Black and White Pixelation'
-          'Lesson 2,10: Good and Bad Data Visualizations': 'Lesson 2.10: Good and Bad Data Visualizations'
+          Lesson 1,4: 'Lesson 1.4: Number Systems - Circle Triangle Square'
+          Lesson 1,6: 'Lesson 1.6: Sending Numbers'
+          Lesson 1,9: 'Lesson 1.9: Internet Addressing (Battleship)'
+          Lesson 1,10: 'Lesson 1.10: Routers and Redundancy'
+          Lesson 1,11: 'Lesson 1.11: Packets and Making a Reliable Internet'
+          Lesson 2,2: 'Lesson 2.2: Text Compression'
+          Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
+          Lesson 2,10: 'Lesson 2.10: Good and Bad Data Visualizations'
           Group Work and Peer Learning: Group Work and Peer Learning
           Balancing Teachers and Tools: Balancing Teachers and Tools
           Discovery Learning: Discovery Learning
