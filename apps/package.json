@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/piskel": "0.1.1",
+    "@code-dot-org/piskel": "0.2.0",
     "Base64": "0.3.0",
     "babel-core": "6.9.0",
     "babel-istanbul-loader": "^0.1.0",
