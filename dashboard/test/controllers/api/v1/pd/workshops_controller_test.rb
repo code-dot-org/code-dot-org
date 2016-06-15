@@ -10,6 +10,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     @workshop = create(:pd_workshop, organizer: @organizer, facilitators: [@facilitator])
     @standalone_workshop = create(:pd_workshop)
+
+    # Don't actually call the geocoder.
+    Pd::Workshop.stubs(:process_location)
   end
 
   # Action: Index
