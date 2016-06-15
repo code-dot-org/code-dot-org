@@ -28,31 +28,33 @@ let rateLimitMap;
  *   will contain the next record id to assign.
  */
 export function updateTableCounters(tableName, rowCountChange, updateNextId) {
-  const tableRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
-  return tableRef.transaction(tableData => {
-    tableData = tableData || {};
-    if (updateNextId) {
-      if (rowCountChange !== 1) {
-        throw new Error('expected rowCountChange to equal 1 when updateNextId is true');
+  return loadConstants().then(() => {
+    const tableRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+    return tableRef.transaction(tableData => {
+      tableData = tableData || {};
+      if (updateNextId) {
+        if (rowCountChange !== 1) {
+          throw new Error('expected rowCountChange to equal 1 when updateNextId is true');
+        }
+        tableData.lastId = (tableData.lastId || 0) + 1;
       }
-      tableData.lastId = (tableData.lastId || 0) + 1;
-    }
-    if (tableData.rowCount + rowCountChange > tableRowCountLimit)  {
-      // Abort the transaction.
-      return;
-    }
-    tableData.rowCount = (tableData.rowCount || 0) + rowCountChange;
-    return tableData;
-  }).then(transactionData => {
-    if (!transactionData.committed) {
-      const rowCount = transactionData.snapshot.child('rowCount').val();
-      if (rowCount + rowCountChange > tableRowCountLimit) {
-        return Promise.reject(`The record could not be created. ` +
-          `A table may only contain ${tableRowCountLimit} rows.`);
+      if (tableData.rowCount + rowCountChange > tableRowCountLimit)  {
+        // Abort the transaction.
+        return;
       }
-      throw new Error('An unexpected error occurred while updating table counters.');
-    }
-    return updateNextId ? transactionData.snapshot.child('lastId').val() : null;
+      tableData.rowCount = (tableData.rowCount || 0) + rowCountChange;
+      return tableData;
+    }).then(transactionData => {
+      if (!transactionData.committed) {
+        const rowCount = transactionData.snapshot.child('rowCount').val();
+        if (rowCount + rowCountChange > tableRowCountLimit) {
+          return Promise.reject(`The record could not be created. ` +
+            `A table may only contain ${tableRowCountLimit} rows.`);
+        }
+        throw new Error('An unexpected error occurred while updating table counters.');
+      }
+      return updateNextId ? transactionData.snapshot.child('lastId').val() : null;
+    });
   });
 }
 
@@ -132,9 +134,6 @@ function loadConstants() {
 
     // Update globals to reflect firebase constants any time they change in the future.
     constantsRef.on('value', snapshot => handleLoadConstants(snapshot.val()));
-  }).catch((error) => {
-    // Failed to load constants. Clear the promise so they can be fetched again.
-    return Promise.reject(error);
   });
 }
 
@@ -144,7 +143,7 @@ function handleLoadConstants(constantsData) {
     throw new Error('invalid firebase constants: ' + JSON.stringify(constantsData));
   }
   tableRowCountLimit = constantsData.channels.maxTableRows;
-  rateLimitMap = $.extend({}, constantsData.channels.limits);
+  rateLimitMap = Object.assign({}, constantsData.channels.limits);
 }
 
 /**
