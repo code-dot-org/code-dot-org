@@ -6,6 +6,7 @@ var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 import InputOutputTable from './instructions/InputOutputTable';
 import PromptIcon from './instructions/PromptIcon';
 import AniGifPreview from './instructions/AniGifPreview';
+import { openDialog } from '../redux/instructionsDialog';
 
 const styles = {
   aniGifPreviewWrapper: {
@@ -89,6 +90,9 @@ export default connect(state => ({
   shortInstructions: state.instructions.shortInstructions,
   shortInstructions2: state.instructions.shortInstructions2,
   smallStaticAvatar: state.pageConstants.smallStaticAvatar,
-  inputOutputTable: state.pageConstants.inputOutputTable,
-  showInstructionsDialog: state.pageConstants.showInstructionsDialog
+  inputOutputTable: state.pageConstants.inputOutputTable
+}), dispatch => ({
+  showInstructionsDialog() {
+    dispatch(openDialog(false, true));
+  }
 }))(BelowVisualization);

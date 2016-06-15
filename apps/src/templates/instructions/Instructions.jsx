@@ -39,8 +39,6 @@ var Instructions = React.createClass({
     // These instructions may contain spans and images as determined by
     // substituteInstructionImages
 
-    // TODO - make anigif clickable
-
     return (
       <div style={styles.main}>
         {this.props.renderedMarkdown &&

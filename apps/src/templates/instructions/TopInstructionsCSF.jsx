@@ -7,6 +7,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
+import { openDialog } from '../../redux/instructionsDialog';
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
@@ -85,11 +86,8 @@ const styles = {
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
-<<<<<<< HEAD
     isMinecraft: React.PropTypes.bool.isRequired,
-=======
     aniGifURL: React.PropTypes.string,
->>>>>>> ani gif preview in top pane (not yet clickable)
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
@@ -103,7 +101,6 @@ var TopInstructions = React.createClass({
     inputOutputTable: React.PropTypes.arrayOf(
       React.PropTypes.arrayOf(React.PropTypes.number)
     ),
-    showInstructionsDialog: React.PropTypes.func.isRequired,
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -323,7 +320,6 @@ module.exports = connect(function propsFromStore(state) {
     isRtl: state.pageConstants.localeDirection === 'rtl',
     smallStaticAvatar: state.pageConstants.smallStaticAvatar,
     inputOutputTable: state.pageConstants.inputOutputTable,
-    showInstructionsDialog: state.pageConstants.showInstructionsDialog
   };
 }, function propsFromDispatch(dispatch) {
   return {
@@ -338,6 +334,9 @@ module.exports = connect(function propsFromStore(state) {
     },
     setInstructionsMaxHeightNeeded(height) {
       dispatch(instructions.setInstructionsMaxHeightNeeded(height));
+    },
+    showInstructionsDialog(height) {
+      dispatch(openDialog(false, true));
     }
   };
 }, null, { withRef: true }
