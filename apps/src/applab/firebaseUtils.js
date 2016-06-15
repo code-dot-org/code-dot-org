@@ -3,8 +3,8 @@
 import Firebase from 'firebase';
 let firebaseCache;
 
-export function getConstants() {
-  return getFirebase().child('v3/constants');
+export function getConfig() {
+  return getFirebase().child('v3/config');
 }
 
 export function getDatabase(channelId) {
