@@ -1,6 +1,6 @@
 class AddProcessedLocationToPdWorkshops < ActiveRecord::Migration
   def up
-    add_column :pd_workshops, :processed_location, :text
+    add_column :pd_workshops, :processed_location, :text, after: :location_address
 
     Pd::Workshop.reset_column_information
     Pd::Workshop.find_each do |workshop|

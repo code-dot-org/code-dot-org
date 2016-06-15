@@ -373,6 +373,7 @@ ActiveRecord::Schema.define(version: 20160614000000) do
     t.integer  "organizer_id",       limit: 4,     null: false
     t.string   "location_name",      limit: 255
     t.string   "location_address",   limit: 255
+    t.text     "processed_location", limit: 65535
     t.string   "course",             limit: 255,   null: false
     t.string   "subject",            limit: 255
     t.integer  "capacity",           limit: 4,     null: false
@@ -382,7 +383,6 @@ ActiveRecord::Schema.define(version: 20160614000000) do
     t.datetime "ended_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "processed_location", limit: 65535
   end
 
   add_index "pd_workshops", ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
