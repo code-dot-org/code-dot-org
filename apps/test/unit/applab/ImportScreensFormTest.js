@@ -12,83 +12,186 @@ var ScreenListItem = require('@cdo/apps/applab/ImportScreensForm').ScreenListIte
 
 describe("Applab ImportScreensForm component", function () {
 
-  var form, onImport, project, importButton, designModeViz;
+  var form, onImport, project, importButton, screenItems, designModeViz;
+
+  function setExistingHTML(existingHTML) {
+    designModeViz.innerHTML = existingHTML;
+  }
+
+  function setHTMLToImport(toImport) {
+    project = {
+      channel: {
+        name: 'some-other-project',
+      },
+      sources: {
+        html: `<div>${toImport}</div>`,
+      },
+    };
+  }
+
+  function update() {
+    form.update();
+    importButton = form.find('button');
+    screenItems = form.find(ScreenListItem).map(s => s.shallow());
+  }
+
+  function renderForm({existingHTML, toImport}) {
+    setExistingHTML(existingHTML);
+    setHTMLToImport(toImport);
+    onImport = sinon.spy();
+    form = shallow(<ImportScreensForm onImport={onImport} project={project} />);
+    update();
+  }
+
 
   beforeEach(() => {
     designModeViz = document.createElement('div');
     designModeViz.id = "designModeViz";
     document.body.appendChild(designModeViz);
-    designModeViz.innerHTML = `
-<div class="screen" id="design_first_screen">
-  <img src="/v3/assets/some-project/asset1.png"
-       data-canonical-image-url="asset1.png"
-       id="img1">
-</div>
-`;
-
-    onImport = sinon.spy();
-    project = {
-      channel: {
-        name: 'some-project',
-      },
-      sources: {
-        html: `
-<div>
-  <div class="screen" id="first_screen">
-  </div>
-  <div class="screen" id="second_screen">
-    <img src="/v3/assets/some-project/asset1.png"
-         data-canonical-image-url="asset1.png"
-         id="img1">
-  </div>
-  <div class="screen" id="third_screen"></div>
-</div>
-`,
-      },
-    };
-    form = shallow(<ImportScreensForm onImport={onImport} project={project} />);
-    update();
   });
-
   afterEach(() => {
     designModeViz.parentNode.removeChild(designModeViz);
   });
 
-  function update() {
-    form.update();
-    importButton = form.find('button');
-  }
+  describe('When doing an import into an empty project', () => {
+    describe("the form", () => {
+      beforeEach(() => {
+        renderForm({
+          existingHTML:``,
+          toImport:`
+            <div class="screen" id="screen1"></div>
+            <div class="screen" id="screen2"></div>
+          `
+        });
+      });
 
-  it("renders a list of screens", () => {
-    expect(form.find(ScreenListItem)).to.have.length(3);
+      it('includes a screen list item for each screen to be imported', () => {
+        expect(form.find(ScreenListItem)).to.have.length(2);
+      });
+
+      it('automatically selects each screen to be imported', () => {
+        expect(form.find(ScreenListItem).filterWhere(c => c.prop('selected'))).to.have.length(2);
+      });
+
+      it("displays an import button", () => {
+        expect(importButton).to.have.length(1);
+      });
+    });
+    describe("the screen list items", () => {
+      it('show the id of the screen', () => {
+        expect(screenItems[0].text()).to.equal('screen1');
+        expect(screenItems[1].text()).to.equal('screen2');
+      });
+      it('show a checkbox that is checked', () => {
+        expect(screenItems[0].find('input').prop('checked')).to.be.true;
+        expect(screenItems[1].find('input').prop('checked')).to.be.true;
+      });
+    });
   });
 
-  it("renders an import button", () => {
-    expect(importButton).to.have.length(1);
-  });
-
-  describe("ScreenListItem component", function () {
-    var screenItems;
-
+  describe('When doing an import into a project with conflicting screens', () => {
     beforeEach(() => {
-      screenItems = form.find(ScreenListItem).map(s => s.shallow());
+      renderForm({
+        existingHTML:`
+          <div class="screen" id="design_screen1"></div>
+        `,
+        toImport:`
+          <div class="screen" id="screen1"></div>
+          <div class="screen" id="screen2"></div>
+        `
+      });
     });
 
-    it("should render a warning message if importing will replace an existing screen", () => {
-      expect(screenItems[0].text()).to.include(
-        'Importing this will replace your existing screen: "first_screen".'
-      );
-      expect(screenItems[1].text()).not.to.include(
-        'Importing this will replace your existing screen'
-      );
+    describe('the screen list items', () => {
+      it('should render a warning message if importing will replace an existing screen', () => {
+        expect(screenItems[0].text()).to.include(
+          'Importing this will replace your existing screen: "screen1".'
+        );
+        expect(screenItems[1].text()).not.to.include(
+          'Importing this will replace your existing screen'
+        );
+      });
+      it('should still automatically select the screen items', () => {
+        expect(screenItems[0].find('input').prop('checked')).to.be.true;
+        expect(screenItems[1].find('input').prop('checked')).to.be.true;
+      });
+    });
+  });
+
+  describe('When doing an import into a project with conflicting assets', () => {
+    beforeEach(() => {
+      renderForm({
+        existingHTML:`
+          <div class="screen" id="design_screen1">
+            <img src="/v3/assets/some-project/asset1.png"
+                 data-canonical-image-url="asset1.png"
+                 id="design_img1">
+          </div>
+        `,
+        toImport:`
+          <div class="screen" id="screen1">
+            <img src="/v3/assets/some-other-project/asset1.png"
+                 data-canonical-image-url="asset1.png"
+                 id="img2">
+          </div>
+          <div class="screen" id="screen2"></div>
+        `
+      });
     });
 
-    it("should render a warning message if importing will replace an existing asset", () => {
-      expect(screenItems[1].text()).to.include(
-        'Importing this will replace your existing assets: "asset1.png".'
-      );
+    describe('the screen list items', () => {
+      it('should render a warning message if importing will replace an existing asset', () => {
+        expect(screenItems[0].text()).to.include(
+          'Importing this will replace your existing assets: "asset1.png".'
+        );
+        expect(screenItems[1].text()).not.to.include(
+          'Importing this will replace your existing assets'
+        );
+      });
+      it('should still automatically select the screen items', () => {
+        expect(screenItems[0].find('input').prop('checked')).to.be.true;
+        expect(screenItems[1].find('input').prop('checked')).to.be.true;
+      });
+    });
+  });
+
+  describe('When doing an import into a project that uses the same element IDs', () => {
+    beforeEach(() => {
+      renderForm({
+        existingHTML:`
+          <div class="screen" id="design_screen1">
+            <input id="design_input1">
+            <input id="design_input2">
+          </div>
+        `,
+        toImport:`
+          <div class="screen" id="screen2">
+            <input id="input2">
+          </div>
+          <div class="screen" id="screen3">
+            <input id="input3">
+          </div>
+        `
+      });
     });
 
+    describe('the form', () => {
+      it("should render a Cannot Import section", () => {
+        expect(form.text()).to.include('Cannot Import');
+      });
+      it("should set the screen list items to be disabled if they cannot be imported", () => {
+        expect(screenItems[0].text()).to.include('screen3');
+        expect(form.find(ScreenListItem).at(0).prop('disabled')).not.to.be.true;
+        expect(screenItems[1].text()).to.include('screen2');
+        expect(form.find(ScreenListItem).at(1).prop('disabled')).to.be.true;
+      });
+    });
+
+    describe('the screen list items', () => {
+      it("should display a warning when they are disabled", () => {
+        expect(screenItems[1].text()).to.include('Uses existing element IDs: "input2".');
+      });
+    });
   });
 
 });

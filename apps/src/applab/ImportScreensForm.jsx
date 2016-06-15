@@ -21,6 +21,23 @@ class ImportableScreen {
     var assets = nodesWithAssets.map(n => $(n).attr('data-canonical-image-url'));
     return assets;
   }
+
+  get conflictingIds(){
+    var conflictingIds = [];
+    Array.from(this.dom.children).forEach(child => {
+      if (!elementUtils.isIdAvailable(child.id)) {
+        var existingElement = elementUtils.getPrefixedElementById(child.id);
+        if (elementUtils.getId(existingElement.parentNode) !== this.id) {
+          conflictingIds.push(child.id);
+        }
+      }
+    });
+    return conflictingIds;
+  }
+
+  get canBeImported() {
+    return this.conflictingIds.length === 0;
+  }
 }
 
 class ImportableProject {
@@ -46,8 +63,9 @@ class ImportableProject {
 export const ScreenListItem = React.createClass({
   propTypes: {
     screen: React.PropTypes.instanceOf(ImportableScreen).isRequired,
-    selected: React.PropTypes.bool.isRequired,
-    onSelect: React.PropTypes.func.isRequired,
+    selected: React.PropTypes.bool,
+    disabled: React.PropTypes.bool,
+    onSelect: React.PropTypes.func,
   },
 
   render() {
@@ -73,6 +91,9 @@ export const ScreenListItem = React.createClass({
            {screen.assetsToReplace.map(a => `"${a}"`).join(', ')}.
          </p>
         }
+        {screen.conflictingIds.length > 0 &&
+          <p>Uses existing element IDs: {screen.conflictingIds.map(id => `"${id}"`).join(',')}.</p>}
+
       </li>
     );
   }
@@ -93,9 +114,13 @@ export default React.createClass({
   },
 
   getInitialState() {
+    var project = new ImportableProject(this.props.project);
+    var selected = Immutable.Set(
+      project.screens.filter(s => s.canBeImported).map(s => s.id)
+    );
     return {
-      project: new ImportableProject(this.props.project),
-      selected: Immutable.Set(),
+      project,
+      selected,
     };
   },
 
@@ -132,7 +157,7 @@ export default React.createClass({
         <h1>Import from Project: {this.state.project.name}</h1>
         <h2>Screens</h2>
         <ul>
-          {this.state.project.screens.map(
+          {this.state.project.screens.filter(s => s.canBeImported).map(
              screen => (
                <ScreenListItem
                    key={screen.id}
@@ -142,6 +167,24 @@ export default React.createClass({
                />
              )
            )}
+        </ul>
+        <h2>Cannot Import</h2>
+        <p>
+          Cannot import the following screens because they contain design elements
+          with IDs already used in your existing project. Fix the IDs in either
+          project so they aren't duplicated across different screens before trying
+          to import the following.
+        </p>
+        <ul>
+          {this.state.project.screens.filter(s => !s.canBeImported).map(
+             screen => (
+               <ScreenListItem
+                   key={screen.id}
+                   screen={screen}
+                   disabled={true}
+               />
+             )
+          )}
         </ul>
         <button onClick={this.importScreens}>Import</button>
       </div>
