@@ -466,10 +466,6 @@ StudioApp.prototype.init = function (config) {
     config.loadAudio();
   }
 
-  if (!config.showInstructionsInTopPane) {
-    this.configureAndShowInstructions_(config);
-  }
-
   this.configureHints_(config);
 
   if (this.editCode) {
@@ -600,35 +596,6 @@ StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
     showWarnings(config);
   } else {
     this.runButtonClick();
-  }
-};
-
-/**
- * Sets html for prompts below playspace, anigif, and shows instructions dialog
- * @param {AppOptionsConfig}
- */
-StudioApp.prototype.configureAndShowInstructions_ = function (config) {
-  var promptDiv = document.getElementById('prompt');
-  var prompt2Div = document.getElementById('prompt2');
-  if (config.level.instructions) {
-    var instructionsHtml = substituteInstructionImages(
-      config.level.instructions, this.skin.instructions2ImageSubstitutions);
-    $(promptDiv).html(instructionsHtml);
-  }
-  if (config.level.instructions2) {
-    var instructions2Html = substituteInstructionImages(
-      config.level.instructions2, this.skin.instructions2ImageSubstitutions);
-    $(prompt2Div).html(instructions2Html);
-    $(prompt2Div).show();
-  }
-
-  var aniGifPreview = document.getElementById('ani-gif-preview');
-  if (config.level.aniGifURL) {
-    aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    var promptTable = document.getElementById('prompt-table');
-    promptTable.className += " with-ani-gif";
-    var wrapper = document.getElementById('ani-gif-preview-wrapper');
-    wrapper.style.display = 'inline-block';
   }
 };
 
