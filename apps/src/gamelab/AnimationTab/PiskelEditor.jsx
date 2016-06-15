@@ -3,7 +3,7 @@
 /* global PISKEL_DEVELOPMENT_MODE */
 import React from 'react';
 import {connect} from 'react-redux';
-import { METADATA_SHAPE } from '../animationMetadata';
+import {METADATA_SHAPE} from '../animationMetadata';
 import {MessageType} from '@code-dot-org/piskel';
 
 /**
@@ -58,7 +58,7 @@ const PiskelEditor = React.createClass({
 
   render() {
     return <iframe
-        ref={c => this.iframe = c}
+        ref={iframe => this.iframe = iframe}
         style={this.props.style}
         src={PISKEL_PATH}
     />;
