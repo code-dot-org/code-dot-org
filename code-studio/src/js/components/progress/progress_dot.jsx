@@ -147,13 +147,14 @@ export const ProgressDot = React.createClass({
 
   render() {
     const level = this.props.level;
-    const currentId = Number(this.props.currentLevelId);
-    const isCurrent = level.ids.indexOf(currentId) !== -1;
+    const onCurrent = this.props.currentLevelId &&
+        ((level.ids && level.ids.map(id => id.toString()).indexOf(this.props.currentLevelId) !== -1) ||
+        level.uid === this.props.currentLevelId);
 
     const isUnplugged = isNaN(level.title);
-    const showUnplugged = isUnplugged && (this.props.courseOverviewPage || isCurrent);
-    const outlineCurrent = this.props.courseOverviewPage && isCurrent;
-    const smallDot = !this.props.courseOverviewPage && !isCurrent;
+    const showUnplugged = isUnplugged && (this.props.courseOverviewPage || onCurrent);
+    const outlineCurrent = this.props.courseOverviewPage && onCurrent;
+    const smallDot = !this.props.courseOverviewPage && !onCurrent;
     const showLevelName = level.kind === 'named_level' && this.props.courseOverviewPage;
 
     return (
