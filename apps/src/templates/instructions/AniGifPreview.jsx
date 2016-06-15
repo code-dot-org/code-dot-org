@@ -1,6 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
+import { openDialog } from '../../redux/instructionsDialog';
 
 const styles = {
   wrapper: {
@@ -42,6 +43,9 @@ AniGifPreview.propTypes = {
 
 export default connect(state => ({
   url: state.pageConstants.aniGifURL,
-  instructionsInTopPane: state.pageConstants.instructionsInTopPane,
-  showInstructionsDialog: state.pageConstants.showInstructionsDialog
+  instructionsInTopPane: state.pageConstants.instructionsInTopPane
+}), dispatch => ({
+  showInstructionsDialog() {
+    dispatch(openDialog(false, true));
+  }
 }))(Radium(AniGifPreview));

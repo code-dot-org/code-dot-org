@@ -27,6 +27,7 @@ var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/instructions/Instructions');
 var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
+import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
@@ -35,11 +36,16 @@ var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
+import { Provider } from 'react-redux';
 import {
   substituteInstructionImages,
   determineInstructionsConstants,
   setInstructionsConstants
 } from './redux/instructions';
+import {
+  openDialog as openInstructionsDialog,
+  closeDialog as closeInstructionsDialog
+} from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
@@ -325,6 +331,17 @@ StudioApp.prototype.init = function (config) {
 
   this.configureDom(config);
 
+  ReactDOM.render(
+    <Provider store={this.reduxStore}>
+      <InstructionsDialogWrapper
+          showInstructionsDialog={(autoClose, showHints) => {
+            this.showInstructionsDialog_(config.level, autoClose, showHints);
+          }}
+      />
+    </Provider>,
+    document.body.appendChild(document.createElement('div'))
+  );
+
   if (config.usesAssets) {
     assetPrefix.init(config);
 
@@ -424,7 +441,7 @@ StudioApp.prototype.init = function (config) {
         return;
       }
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.showInstructionsDialog_(config.level, shouldAutoClose, false);
+      this.reduxStore.dispatch(openInstructionsDialog(shouldAutoClose, false));
     }.bind(this));
   }
 
@@ -1100,6 +1117,8 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
 };
 
 /**
+ * Show our instructions dialog. This should never be called directly, and will
+ * instead be called when the state of our redux store changes.
  * @param {object} level
  * @param {boolean} autoClose - closes instructions after 32s if true
  * @param {boolean} showHints
@@ -1173,6 +1192,9 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
     var event = document.createEvent('Event');
     event.initEvent('instructionsHidden', true, true);
     document.dispatchEvent(event);
+
+    // update redux
+    this.reduxStore.dispatch(closeInstructionsDialog());
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
@@ -2752,8 +2774,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     noVisualization: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
     aniGifURL: config.level.aniGifURL,
-    inputOutputTable: config.level.inputOutputTable,
-    showInstructionsDialog: () => this.showInstructionsDialog_(config.level, false, true)
+    inputOutputTable: config.level.inputOutputTable
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
