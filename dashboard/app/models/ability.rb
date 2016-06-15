@@ -168,13 +168,16 @@ class Ability
 
     if user.permission?(UserPermission::LEVELBUILDER)
       can :manage, [
-        FrequentUnsuccessfulLevelSource,
         Level,
-        LevelSourceHint,
         Script,
         ScriptLevel,
-        Stage,
+        Stage
       ]
+
+      # Only custom levels are editable.
+      cannot [:update, :destroy], Level do |level|
+        !level.custom?
+      end
     end
 
     if user.admin?

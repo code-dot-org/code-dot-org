@@ -183,9 +183,7 @@ class AbilityTest < ActiveSupport::TestCase
       user_id: user.id, permission: UserPermission::LEVELBUILDER)
     ability = Ability.new user
 
-    assert ability.can?(:manage, FrequentUnsuccessfulLevelSource)
     assert ability.can?(:manage, Level)
-    assert ability.can?(:manage, LevelSourceHint)
     assert ability.can?(:manage, Script)
     assert ability.can?(:manage, ScriptLevel)
     assert ability.can?(:manage, Stage)
