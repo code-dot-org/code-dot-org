@@ -67,4 +67,17 @@ class SectionTest < ActiveSupport::TestCase
     assert !Section.exists?(section.id)
   end
 
+  test "cannot join plc section without a valid enrollment" do
+    user = create(:user)
+
+    @section = create(:section)
+    Plc::UserCourseEnrollment.send(:remove_const, :PLC_SECTION)
+    Plc::UserCourseEnrollment::PLC_SECTION = @section
+
+    error = assert_raise RuntimeError do
+      Plc::UserCourseEnrollment::PLC_SECTION.add_student(user)
+    end
+
+    assert_equal 'PLC section cannot be joined by users with no PLC enrollment', error.message
+  end
 end
