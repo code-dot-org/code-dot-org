@@ -79,5 +79,7 @@ class SectionTest < ActiveSupport::TestCase
     end
 
     assert_equal 'PLC section cannot be joined by users with no PLC enrollment', error.message
+
+    Plc::UserCourseEnrollment::PLC_SECTION = nil
   end
 end
