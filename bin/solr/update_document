@@ -7,6 +7,7 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/geocoder'
 require 'cdo/solr'
+require src_dir 'forms'
 
 raise "No SOLR server configured." unless CDO.solr_server
 SOLR = Solr::Server.new(host: CDO.solr_server)
@@ -17,7 +18,7 @@ SOLR = Solr::Server.new(host: CDO.solr_server)
 SUPPORTED_ACTIONS = %w(update delete)
 SUPPORTED_TYPES = %w(form user)
 
-def get_solr_id_from_db_id(db_id)
+def get_solr_id_from_db_id(type, db_id)
   case type
   when 'form'
     return db_id
@@ -106,7 +107,7 @@ def delete_document(type, db_id)
 end
 
 def update_document(type, db_id)
-  solr_id = get_solr_id_from_db_id(db_id)
+  solr_id = get_solr_id_from_db_id(type, db_id)
   unless solr_id.nil?
     puts "UPDATING SOLR DOCUMENT: #{solr_id}..."
     case type
