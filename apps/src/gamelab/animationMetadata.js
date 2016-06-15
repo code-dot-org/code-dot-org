@@ -18,9 +18,14 @@ const VECTOR2_SHAPE = {
 };
 
 /**
+ * @typedef {string} AnimationKey
+ * A string that uniquely identifies an animation within the project, usually
+ * a UUID.
+ */
+
+/**
  * @typedef {Object} AnimationMetadata
- * @property {!string} key - Uniquely identifies animation within project,
- *           usually a UUID.
+ * @property {!AnimationKey} key - Uniquely identifies animation within project
  * @property {string} name
  * @property {string} sourceUrl
  * @property {Vector2} sourceSize

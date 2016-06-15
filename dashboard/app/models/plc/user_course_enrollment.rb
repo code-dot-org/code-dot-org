@@ -41,6 +41,6 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
   end
 
   def set_plc_section
-    PLC_SECTION.add_student(user) if PLC_SECTION
+    PLC_SECTION.add_student(user) if PLC_SECTION && user
   end
 end
