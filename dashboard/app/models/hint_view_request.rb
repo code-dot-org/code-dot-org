@@ -28,7 +28,7 @@ class HintViewRequest < ActiveRecord::Base
   validates :level, :presence => true
 
   def HintViewRequest.enabled?
-    Gatekeeper.allows('hint_view_request', default: true)
+    Gatekeeper.allows?('hint_view_request', default: true)
   end
 
   # Returns an array of serializable hashes representing all of a given

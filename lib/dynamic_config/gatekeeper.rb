@@ -2,7 +2,7 @@
 # features without requiring a code push.
 #
 # Basic usage:
-# if Gatekeeper.allows("new-tutorial", default: false)
+# if Gatekeeper.allows?("new-tutorial", default: false)
 #   # shows the new tutorial
 # else
 #   # raise a 403
@@ -12,7 +12,7 @@
 # You can also pass conditions that allow for more complex
 # configuration of access.  For example:
 #
-# if Gatekeeper.allows("feature-sharing", where: { script_id: @script.id }, default: false)
+# if Gatekeeper.allows?("feature-sharing", where: { script_id: @script.id }, default: false)
 #
 # This allows you to turn on feature-sharing for specific scripts
 
