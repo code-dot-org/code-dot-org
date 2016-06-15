@@ -186,6 +186,5 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:manage, Level)
     assert ability.can?(:manage, Script)
     assert ability.can?(:manage, ScriptLevel)
-    assert ability.can?(:manage, Stage)
   end
 end
