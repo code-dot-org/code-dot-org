@@ -10,10 +10,10 @@ assessment 'U3L01 Assessment1'
 assessment 'U3L01 Assessment3'
 
 stage 'The Need for Algorithms'
-level 'U3L01 Student Lesson Introduction'
+level 'v2 U3L02 Student Lesson Introduction'
 
 stage 'Creativity in Algorithms'
-level 'U3L01 Student Lesson Introduction'
+level 'v2 U3L03 Student Lesson Introduction'
 
 stage 'Using Simple Commands'
 level 'v2 U3L04 Student Lesson Introduction'

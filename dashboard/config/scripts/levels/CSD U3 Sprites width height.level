@@ -1,0 +1,54 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-15T15:55:46.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": null,
+      "x": null,
+      "y": null,
+      "width": null,
+      "height": null,
+      "shapeColor": null,
+      "background": null,
+      "comment": null
+    },
+    "show_d_pad": "false",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Width and Height\r\n\r\nWhen you create a sprite it is automatically given **many properties that all have default values**. If you know the names of these properties you can use dot notation to change these properties. This will change the way your sprite looks when you draw it.\r\n\r\nHere's two new properties:\r\n\r\n![](https://images.code.org/158421dbb4f9640ee852d994d2b4a7d6-image-1466006293357.40.26 AM.png)\r\n\r\n# Do This\r\n\r\nThis program creates a sprite and sets its `x`, `y`, and `shapeColor` properties\r\n\r\n* Use the new `width` and `height` properties to make the sprite larger.\r\n* Make sure you're using dot notation correctly.\r\n* When your program works correctly it should draw the image to the right\r\n* **Note:** If you drag the property block onto a new line it will change to include the `=` command automatically\r\n\r\n![](https://images.code.org/77d0a16f19a2a7b2c2f1f6b88cda17b3-image-1466006474149.41.53 AM.png)",
+    "start_blocks": "var mySprite = createSprite();\r\n\r\nmysprite.x = 200;\r\nmySprite.Y = 200;\r\nmySprite.color = \"red\";\r\n// Change the sprite's width and height as well to make it larger\r\n\r\ndrawSprites();",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>
