@@ -28,11 +28,11 @@ const styles = {
     width: '100%'
   },
   focusAreaRow: {
-    minHeight: 105,
+    height: 110,
     borderWidth: 3,
     background: color.almost_white_cyan,
     borderColor: color.cyan,
-    padding: 8
+    padding: '8px 8px 20px 8px'
   },
   stageName: {
     display: 'table-cell',
@@ -52,7 +52,7 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     position: 'absolute',
     top: 16,
-    right: -32,
+    right: -31,
     fontSize: 12,
     whiteSpace: 'nowrap',
     background: color.cyan,
@@ -66,6 +66,10 @@ const styles = {
     position: 'absolute',
     right: 5,
     bottom: 5
+  },
+  changeFocusAreaIcon: {
+    fontSize: '1.2em',
+    marginRight: 6
   }
 };
 
@@ -98,7 +102,8 @@ const CourseProgressRow = React.createClass({
             style={styles.changeFocusArea}
             key='changeFocusArea'
           >
-            <i className='fa fa-pencil' /> Change your focus area
+            <i className='fa fa-pencil' style={styles.changeFocusAreaIcon} />
+            <span>Change your focus area</span>
           </a>
         ]}
         <div style={styles.stageName}>
