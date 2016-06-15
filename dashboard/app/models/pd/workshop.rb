@@ -7,6 +7,7 @@
 #  organizer_id       :integer          not null
 #  location_name      :string(255)
 #  location_address   :string(255)
+#  processed_location :text(65535)
 #  course             :string(255)      not null
 #  subject            :string(255)
 #  capacity           :integer          not null
@@ -16,7 +17,6 @@
 #  ended_at           :datetime
 #  created_at         :datetime
 #  updated_at         :datetime
-#  processed_location :text(65535)
 #
 # Indexes
 #
