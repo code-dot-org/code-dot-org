@@ -37,9 +37,9 @@
 
     - if (standalone || contained_mode) && !data['options'].try(:[], 'hide_submit')
       .buttons
-        %a.btn.btn-large.btn-primary.next-stage.submitButton
+        %a.btn.btn-large.btn-primary.next-stage.submitButton{id: "submit_level_#{level.id}"}
           =t('submit')
-        %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
+        %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none", id: "unsubmit_level_#{level.id}"}
           =t('unsubmit')
 
     - if data['height'] == 'auto' || data['height'].blank?
@@ -100,7 +100,7 @@
     window.levelGroup.levels[#{level.id}] = new Multi(
       #{level.id},
       "level_#{level.id}",
-      #{standalone || contained_mode},
+      #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,
       #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map {|answer| answer['correct'] || false}},
       #{last_attempt.to_json}
