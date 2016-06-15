@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
@@ -8,7 +9,7 @@ import color from '../../color';
 
 const styles = {
   flexHeader: {
-    padding: '5px 10px',
+    padding: '8px 11px',
     margin: '20px 0 0 0',
     borderRadius: 5,
     background: color.cyan,
@@ -36,7 +37,10 @@ const CourseProgress = React.createClass({
           <div key={group}>
             <h4
               id={group.toLowerCase().replace(' ', '-')}
-              style={this.props.professionalLearningCourse ? styles.flexHeader : {display: 'none'}}
+              style={[
+                this.props.professionalLearningCourse ? styles.flexHeader : {display: 'none'},
+                count === 1 && {margin: '2px 0 0 0'}
+              ]}
             >
               {group}
             </h4>
@@ -59,4 +63,4 @@ export default connect(state => ({
   professionalLearningCourse: state.professionalLearningCourse,
   focusAreaPositions: state.focusAreaPositions,
   stages: state.stages
-}))(CourseProgress);
+}))(Radium(CourseProgress));
