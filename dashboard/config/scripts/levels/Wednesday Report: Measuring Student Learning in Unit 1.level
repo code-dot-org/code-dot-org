@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-06-14T04:57:21.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "At this point you've seen 7 of the 14 lessons from unit 1. Thinking about those lessons, and looking across the other lessons in <a href=\"curriculum.code.org/csp/unit1/\" target=_blank>unit 1</a>. Again, consider the following questions with your partner:\r\n\r\n- What opportunities have you seen for assessing learners’ knowledge (prior knowledge, knowledge gained during the lesson, etc)? \r\n- What assessments are available in the curriculum? \r\n- What strategies would be effective for checking in on what students know? \r\n\r\n<br>\r\n\r\n> Once you've had a chance to think about what you've seen today,  work with your partner to develop a set of recommendations about balancing the teacher and the tools in Unit 1. Your recommendations should include:\r\n\r\n>- Which lessons or activities present the biggest challenge with assessing student learning?\r\n- What recommendations do you have for assessing student learning in Unit 1?  \r\n\r\n<br><br>\r\nUse the space below to record your recommendations (you'll share them tomorrow). ",
+    "title": "Wednesday Report: Measuring Student Learning in Unit 1",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "height": "300"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
