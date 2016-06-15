@@ -105,6 +105,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'admins can create workshops' do
     sign_in @admin
+
+    Pd::Workshop.expects(:process_location)
     assert_creates(Pd::Workshop) do
       post :create, pd_workshop: workshop_params
       assert_response :success
@@ -117,6 +119,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'workshop organizers can create workshops' do
     sign_in @organizer
+
+    Pd::Workshop.expects(:process_location)
     assert_creates(Pd::Workshop) do
       post :create, pd_workshop: workshop_params
       assert_response :success
@@ -163,12 +167,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'admins can update any workshop' do
     sign_in @admin
+    Pd::Workshop.expects(:process_location)
     put :update, id: @workshop.id, pd_workshop: workshop_params
     assert_response :success
   end
 
   test 'organizers can update their workshops' do
     sign_in @organizer
+    Pd::Workshop.expects(:process_location)
     put :update, id: @workshop.id, pd_workshop: workshop_params
     assert_response :success
   end
@@ -183,6 +189,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     sign_in @facilitator
     put :update, id: @workshop.id, pd_workshop: workshop_params
     assert_response :forbidden
+  end
+
+  test 'updating with the same location_address does not re-process location' do
+    sign_in @organizer
+    params = workshop_params
+    params[:location_address] = @workshop.location_address
+    Pd::Workshop.expects(:process_location).never
+    put :update, id: @workshop.id, pd_workshop: params
   end
 
   # Update sessions via embedded attributes
@@ -344,6 +358,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session_start = tomorrow_at 9
     session_end = session_start + 8.hours
     {
+      location_address: 'Seattle, WA',
       workshop_type: Pd::Workshop::TYPE_PUBLIC,
       course: Pd::Workshop::COURSE_CSP,
       capacity: 10,
