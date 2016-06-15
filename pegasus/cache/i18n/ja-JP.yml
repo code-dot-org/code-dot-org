@@ -1,7 +1,14 @@
 "ja-JP":
   hour_of_code: Hour of Code（コーディングを学ぶ時間）
   hello: Hello world
+  'yes': "はい"
+  'no': "ちがいます"
   select_language: "言語を選択してください"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "もっと詳しく知る"
   en: "コンピュータサイエンス"
   computer_science_edweek: "コンピュータサイエンス教育週間"
   csedweek_dates: 2014年12月8～14日
@@ -641,6 +648,7 @@
   dashboard_sections_table_secret: "ログインタイプ"
   dashboard_sections_table_grade: "学年"
   dashboard_sections_table_course: "コース"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "生徒の皆さん"
   dashboard_sections_table_code: "セクション・コード"
   dashboard_sections_name: "セクション名"
@@ -1421,11 +1429,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "再生する"
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

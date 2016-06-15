@@ -64,19 +64,12 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     end
   end
 
-  def check_for_unit_completion
-    if !plc_task_assignments.joins(:plc_task).
-        where.not('plc_tasks.type': Plc::LearningResourceTask.name).
-        exists?(['status != ?', 'completed'])
-      update!(status: COMPLETED)
-    end
-  end
-
   def focus_area_positions
     plc_module_assignments.map{ |a| a.plc_learning_module.stage.position unless a.plc_learning_module.is_required? }.compact
   end
 
   private
+
   def enroll_in_module(learning_module)
     return unless learning_module.plc_course_unit == plc_course_unit
 
