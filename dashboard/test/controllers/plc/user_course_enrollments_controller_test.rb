@@ -16,6 +16,10 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     @district_contact = create :district_contact
   end
 
+  teardown do
+    Plc::UserCourseEnrollment::PLC_SECTION = nil
+  end
+
   test "should get new" do
     get :new
     assert_response :success
