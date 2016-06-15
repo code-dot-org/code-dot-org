@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 <br>
 **Lesson Type: Analyzing Artifacts , Group Discovery , Class Discussion**
 
-This is a pretty fun lesson that has two main parts. First students review and read the first few pages of Data Visualization 101: How to design charts and graphs to see some basic principles of good data visualizations.
+This is a pretty fun lesson that has two main parts. First students review and read the first few pages of **Data Visualization 101: How to design charts and graphs** to see some basic principles of good data visualizations. Then, students look at a curated set of visualizations pulled from the wild and make calls about which are good and which are bad. Finally, we bring it all together and students distill down the characteristics of what they idenfied as good and bad, and look at how those characteristics can add up to more than just aesthetic preferences, but can impact what story is being told. 
 
 
 <br>
@@ -28,7 +28,8 @@ This is a pretty fun lesson that has two main parts. First students review and r
 <br>
 Head over to curriculum.code.org to see this lesson and all associated resources (like videos and worksheets). 
 <br><br>
-<a href="https://curriculum.code.org/csp/unit2/10/" target="blank"><button class="plc">U2L10 Lesson Plan >></button></a><br>
+<h4>
+<a href="https://curriculum.code.org/csp/unit2/10/" target="blank"> U2L10 Lesson Plan >></a><br>
 
-
+</h4>
 MARKDOWN
