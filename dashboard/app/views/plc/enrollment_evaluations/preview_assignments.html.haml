@@ -2,7 +2,7 @@
   = stylesheet_link_tag 'css/plc', media: 'all'
 
 -# Probably won't need the script when this is no longer under the enrollment unit assignment path
-- preselected_module_ids = @enrollment_unit_assignment.plc_course_unit.determine_preferred_learning_modules current_user
+- preselected_module_ids = @enrollment_unit_assignment.plc_module_assignments.pluck(:plc_learning_module_id)
 
 = form_tag(action: 'confirm_assignments') do
   .preview_evaluation
