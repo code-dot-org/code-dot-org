@@ -34,7 +34,7 @@
 
     #user_hero
       = render template: 'api/user_hero'
-    - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
+    - if Gatekeeper.allows?('logged_in_studio_homepage', default: true)
       - current_user.in_progress_and_completed_scripts.each_slice(2) do |course_pair|
         .row
           - course_pair.each do |user_script|
@@ -42,7 +42,7 @@
 
   = render partial: 'home/all_courses'
 
-  - if current_user && !current_user.teacher? && Gatekeeper.allows('logged_in_studio_homepage', default: true)
+  - if current_user && !current_user.teacher? && Gatekeeper.allows?('logged_in_studio_homepage', default: true)
     .row#edit_teachers
       .span12
         .padtopbottom
@@ -62,7 +62,7 @@
             -else
               = raw current_user.teachers.map{|t| t[:name]}.join(",")
 
-  - if current_user && Gatekeeper.allows('logged_in_studio_homepage', default: true)
+  - if current_user && Gatekeeper.allows?('logged_in_studio_homepage', default: true)
     %br/
     %br/
     %br/
