@@ -2,7 +2,7 @@
 
 var studioApp = require('../StudioApp').singleton;
 var utils = require('../utils');
-var _ = require('../lodash');
+var _ = require('lodash');
 var skin, level;
 
 exports.initWithSkinAndLevel = function (skinData, levelData) {

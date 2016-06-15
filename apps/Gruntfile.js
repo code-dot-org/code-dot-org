@@ -248,20 +248,6 @@ module.exports = function (grunt) {
     }
   };
 
-  config.lodash = {
-    'build': {
-      'dest': 'src/lodash.js',
-      'options': {
-        'include': [
-          'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
-          'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
-          'last', 'clone', 'cloneDeep', 'isEqual', 'find', 'sortBy', 'throttle',
-          'uniq', 'assign', 'merge'
-        ]
-      }
-    }
-  };
-
   config.sass = {
     all: {
       options: {
