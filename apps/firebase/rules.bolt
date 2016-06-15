@@ -17,7 +17,7 @@
 // PATH RULES
 ///////////////////////////////////////////////////////////////////////////
 
-path /v3/constants {
+path /v3/config {
   read() { isLoggedIn() }
 }
 
@@ -36,13 +36,13 @@ path /v3/channels/{channelId}/counters is Counters {
 
 path /v3/channels/{channelId}/counters/limits/15 {
   validate() {
-    isValidRateLimitCounter(this.parent().parent().parent(), 15, root.v3.constants.channels.limits['15'])
+    isValidRateLimitCounter(this.parent().parent().parent(), 15, root.v3.config.channels.limits['15'])
   }
 }
 
 path /v3/channels/{channelId}/counters/limits/60 {
   validate() {
-    isValidRateLimitCounter(this.parent().parent().parent(), 60, root.v3.constants.channels.limits['60'])
+    isValidRateLimitCounter(this.parent().parent().parent(), 60, root.v3.config.channels.limits['60'])
   }
 }
 
@@ -67,7 +67,7 @@ type TableCounter {
 
   validate() {
     this.lastId >= orZero(prior(this).lastId) &&
-    this.rowCount >= 0 && this.rowCount <= root.v3.constants.channels.maxTableRows
+    this.rowCount >= 0 && this.rowCount <= root.v3.config.channels.maxTableRows
   }
 }
 

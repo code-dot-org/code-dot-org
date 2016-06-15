@@ -1,7 +1,7 @@
 /* global Applab $ */
 
 import Firebase from 'firebase';
-import { getConstants, getDatabase } from './firebaseUtils';
+import { getConfig, getDatabase } from './firebaseUtils';
 
 /**
  * Maximum number of records allowed per table. Populated from firebase.
@@ -28,7 +28,7 @@ let rateLimitMap;
  *   will contain the next record id to assign.
  */
 export function updateTableCounters(tableName, rowCountChange, updateNextId) {
-  return loadConstants().then(() => {
+  return loadConfig().then(() => {
     const tableRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
     return tableRef.transaction(tableData => {
       tableData = tableData || {};
@@ -76,7 +76,7 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
  *   limits is exceeded.
  */
 export function incrementRateLimitCounters() {
-  return loadConstants().then(() => getCurrentTime())
+  return loadConfig().then(() => getCurrentTime())
   .then(currentTimeMs => {
     let promises = [];
     Object.keys(rateLimitMap).forEach(interval => {
@@ -115,35 +115,35 @@ export function incrementRateLimitCounters() {
 }
 
 /**
- * Returns a promise which resolves once Firebase constants have been fetched from
- * the server and cached locally. Also starts listening for future changes to constants.
+ * Returns a promise which resolves once Firebase config has been fetched from
+ * the server and cached locally. Also starts listening for future changes to config.
  * @returns {Promise<>}
  */
-function loadConstants() {
+function loadConfig() {
   if (tableRowCountLimit && rateLimitMap) {
-    // The firebase constants have already been loaded.
+    // The firebase config has already been loaded.
     return Promise.resolve();
   }
 
-  const constantsRef = getConstants();
-  return constantsRef.once('value', snapshot => {
-    handleLoadConstants(snapshot.val());
+  const configRef = getConfig();
+  return configRef.once('value', snapshot => {
+    handleLoadConfig(snapshot.val());
 
     // Make sure we don't listen multiple times.
-    constantsRef.off();
+    configRef.off();
 
-    // Update globals to reflect firebase constants any time they change in the future.
-    constantsRef.on('value', snapshot => handleLoadConstants(snapshot.val()));
+    // Update globals to reflect firebase config any time it changes in the future.
+    configRef.on('value', snapshot => handleLoadConfig(snapshot.val()));
   });
 }
 
-function handleLoadConstants(constantsData) {
-  if (!constantsData.channels.maxTableRows ||
-      !constantsData.channels.limits) {
-    throw new Error('invalid firebase constants: ' + JSON.stringify(constantsData));
+function handleLoadConfig(configData) {
+  if (!configData.channels.maxTableRows ||
+      !configData.channels.limits) {
+    throw new Error('invalid firebase config: ' + JSON.stringify(configData));
   }
-  tableRowCountLimit = constantsData.channels.maxTableRows;
-  rateLimitMap = Object.assign({}, constantsData.channels.limits);
+  tableRowCountLimit = configData.channels.maxTableRows;
+  rateLimitMap = Object.assign({}, configData.channels.limits);
 }
 
 /**
