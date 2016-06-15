@@ -30,7 +30,7 @@ class GatekeeperBase
   # @param where [Hash] a hash of conditions
   # @param default [Bool] the default value to return
   # @returns [Bool]
-  def allows(feature, where: {}, default: false)
+  def allows?(feature, where: {}, default: false)
     rule_map = get_rule_map(feature)
     conditions = []
     conditions << where_key(where)
@@ -41,6 +41,11 @@ class GatekeeperBase
     end
 
     default
+  end
+
+  # DEPRECATED
+  def allows(feature, where: {}, default: false)
+    allows?(feature, where, default)
   end
 
   # Sets the value for a given feature/where combo
