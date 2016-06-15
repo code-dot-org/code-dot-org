@@ -19,7 +19,10 @@ def main()
         # As it is an error to delete a message being processed, we pass them
         # by, allowing them to be deleted after being processed, as part of
         # another execution of this script.
-        if ['sending', 'receiving'].include? message.status
+        # Though seemingly not documented, it is an error to delete a message
+        # with state sent, so we skip them as well.
+        # (https://www.twilio.com/help/faq/sms/why-are-my-messages-status-sent)
+        if %w(accepted queued sending sent receiving).include? message.status
           next
         end
 

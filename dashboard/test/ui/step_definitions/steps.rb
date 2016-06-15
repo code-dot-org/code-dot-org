@@ -332,7 +332,7 @@ Then /^I verify progress in the header of the current page is "([^"]*)" for leve
   steps %{
     And I wait to see ".header_level_container"
     And I wait for 10 seconds
-    And element ".header_level_container a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And element ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -622,7 +622,7 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
-    And I type "16" into "#user_age"
+    And I select the "16" option in dropdown "user_user_age"
     And I click selector "input[type=submit][value='Sign up']"
     And I wait until I am on "http://studio.code.org/"
   }
@@ -634,6 +634,8 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher"
     And I wait to see "#user_name"
+    And I select the "Teacher" option in dropdown "user_user_type"
+    And I wait to see "#schoolname-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"

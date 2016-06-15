@@ -9,7 +9,7 @@
 var msg = require('./locale');
 var commonMsg = require('../locale');
 var codegen = require('../codegen');
-var _ = require('../lodash');
+var _ = require('lodash');
 
 var RANDOM_VALUE = 'random';
 var HIDDEN_VALUE = '"hidden"';

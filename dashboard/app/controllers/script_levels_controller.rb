@@ -85,7 +85,7 @@ class ScriptLevelsController < ApplicationController
     return if performed?
     load_section
 
-    return if redirect_applab_under_13(@script_level.level)
+    return if redirect_under_13(@script_level.level)
 
     present_level
   end

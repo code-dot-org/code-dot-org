@@ -19,7 +19,7 @@ var Packet = require('./Packet');
 var DataConverters = require('./DataConverters');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 
-var _ = require('../lodash');
+var _ = require('lodash');
 
 var serializeNumber = NetSimUtils.serializeNumber;
 var deserializeNumber = NetSimUtils.deserializeNumber;

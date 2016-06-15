@@ -109,14 +109,28 @@ module LevelsHelper
   end
 
   def select_and_remember_callouts(always_show = false)
-    # Filter if already seen (unless always_show)
-    callouts_to_show = @level.available_callouts(@script_level).
-      reject { |c| !always_show && client_state.callout_seen?(c.localization_key) }.
-      each { |c| client_state.add_callout_seen(c.localization_key) }
-    # Localize
+    # Keep track of which callouts had been seen prior to calling add_callout_seen
+    all_callouts = @level.available_callouts(@script_level)
+    callouts_seen = {}
+    all_callouts.each do |c|
+      callouts_seen[c.localization_key] = client_state.callout_seen?(c.localization_key)
+    end
+    # Filter if already seen (unless always_show or canReappear in codeStudio part of qtip_config)
+    callouts_to_show = all_callouts.reject do |c|
+      begin
+        can_reappear = JSON.parse(c.qtip_config || '{}').try(:[], 'codeStudio').try(:[], 'canReappear')
+      rescue JSON::ParserError
+        can_reappear = false
+      end
+      !always_show && callouts_seen[c.localization_key] && !can_reappear
+    end
+    # Mark the callouts as seen
+    callouts_to_show.each { |c| client_state.add_callout_seen(c.localization_key) }
+    # Localize and propagate the seen property
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
+      callout_hash['seen'] = always_show ? nil : callouts_seen[callout.localization_key]
       callout_text = data_t('callout.text', callout.localization_key)
       if callout_text.nil?
         callout_hash['localized_text'] = callout.callout_text
@@ -601,9 +615,11 @@ module LevelsHelper
     @level.is_a?(Blockly)
   end
 
-  # If this is a restricted level (i.e. applab) and user is under 13, redirect with a flash alert
-  def redirect_applab_under_13(level)
-    return unless level.game == Game.applab
+  # If this is a restricted level (i.e., applab) and user is under 13, redirect
+  # with a flash alert.
+  def redirect_under_13(level)
+    # Note that Game.applab includes both App Lab and Maker Lab.
+    return unless level.game == Game.applab || level.game == Game.gamelab
 
     if current_user && current_user.under_13?
       redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }

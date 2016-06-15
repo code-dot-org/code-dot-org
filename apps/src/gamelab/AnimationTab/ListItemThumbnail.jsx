@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import _ from '../../lodash';
+import _ from 'lodash';
 import color from '../../color';
 import { getSourceUrl, METADATA_SHAPE } from '../animationMetadata';
 import AnimationPreview from '../AnimationPicker/AnimationPreview';

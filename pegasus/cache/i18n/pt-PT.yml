@@ -1,7 +1,14 @@
 "pt-PT":
   hour_of_code: Hora de Código
   hello: Olá mundo
+  'yes': Sim
+  'no': Não
   select_language: Por favor, escolhe o teu idioma
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Saber mais
   en: Ciência da computação
   computer_science_edweek: Semana da Educação da Ciência da Computação
   csedweek_dates: De 8 a 14 de dezembro de 2014
@@ -753,6 +760,7 @@
   dashboard_sections_table_secret: Tipo de início de sessão
   dashboard_sections_table_grade: Ano
   dashboard_sections_table_course: Curso
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Alunos
   dashboard_sections_table_code: Código
   dashboard_sections_name: Nome da turma
@@ -1819,11 +1827,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jogar
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

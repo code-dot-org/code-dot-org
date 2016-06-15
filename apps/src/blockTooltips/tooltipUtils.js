@@ -1,7 +1,7 @@
 /* global ace */
 'use strict';
 
-var _ = require('../lodash');
+var _ = require('lodash');
 
 /**
  * @typedef {Object} parameterSlotInfo

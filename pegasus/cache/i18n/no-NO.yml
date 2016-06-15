@@ -1,7 +1,14 @@
 "nn-NO":
   hour_of_code: Kodetimen
   hello: Hallo, verda
+  'yes': Ja
+  'no': Nei
   select_language: Vel språk
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Lær meir
   en: Informatikk
   computer_science_edweek: Computer Science Education Week (CSEdWeek)
   csedweek_dates: Desember 8-14, 2014
@@ -705,6 +712,7 @@
   dashboard_sections_table_secret: Logg inn
   dashboard_sections_table_grade: Trinn
   dashboard_sections_table_course: Leksjon
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Elevar
   dashboard_sections_table_code: Seksjonskode
   dashboard_sections_name: Seksjonsnavn
@@ -1725,11 +1733,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spill
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras
