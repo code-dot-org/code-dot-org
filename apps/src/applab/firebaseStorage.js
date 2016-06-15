@@ -27,8 +27,12 @@ function getRecordsRef(channelId, tableName) {
  * @param {function (string, number)} onError Function to call on error with error msg and http status.
  */
 FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
-  let keyRef = getKeysRef(Applab.channelId).child(key);
-  keyRef.once("value", object => onSuccess(object.val()), onError);
+  const keyRef = getKeysRef(Applab.channelId).child(key);
+  keyRef.once("value", snapshot => {
+    // Return undefined if the key was not found, otherwise return the decoded value.
+    const value = snapshot.val() === null ? undefined : JSON.parse(snapshot.val());
+    onSuccess(value);
+  }, onError);
 };
 
 /**
@@ -40,9 +44,13 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
  *    http status.
  */
 FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
-  let keyRef = getKeysRef(Applab.channelId).child(key);
+  const keyRef = getKeysRef(Applab.channelId).child(key);
+  // Store the value as a string representing a JSON value. For compatibility with parsers
+  // which require JSON texts (such as Ruby's), this can be converted to a JSON text via:
+  // `{v: ${jsonValue}}`. For terminology see: https://tools.ietf.org/html/rfc7159
+  const jsonValue = JSON.stringify(value);
   incrementRateLimitCounters()
-    .then(() => keyRef.set(value))
+    .then(() => keyRef.set(jsonValue))
     .then(onSuccess, onError);
 };
 
