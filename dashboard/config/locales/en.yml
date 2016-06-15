@@ -123,7 +123,7 @@ en:
     valid_password: "Valid password!"
     invalid_password: "Password must be at least 6 characters"
     mismatch_password: "The two passwords you entered do not match"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
     additional_information: "We need some additional information to continue signing you up."
     user_type_label: "Account Type"
