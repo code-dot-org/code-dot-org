@@ -53,4 +53,14 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
       assert_empty @unit_assignment.plc_module_assignments
     end
   end
+
+  test "Preserve existing enrollments when going to adjust focus area (but not actually adjusting)" do
+    Plc::CourseUnit.any_instance.stubs(:determine_preferred_learning_modules).returns([@module_content_2, @module_practice_2])
+
+    @unit_assignment.enroll_user_in_unit_with_learning_modules([@module_content_1, @module_practice_1])
+    get :preview_assignments, script_id: @course_unit.script.name
+
+    #In spite of the fact that the user answered stuff for content1 and practice1, their enrollment should still be 1, 1
+    assert_equal (Set.new([@module_content_1, @module_practice_1])), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
+  end
 end
