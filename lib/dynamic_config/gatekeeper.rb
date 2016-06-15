@@ -43,11 +43,6 @@ class GatekeeperBase
     default
   end
 
-  # DEPRECATED
-  def allows(feature, where: {}, default: false)
-    allows?(feature, where, default)
-  end
-
   # Sets the value for a given feature/where combo
   # @param feature [String]
   # @param where [Hash]
