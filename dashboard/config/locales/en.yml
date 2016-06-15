@@ -709,7 +709,7 @@ en:
       projects_title: 'Open a project'
       secondary_header: 'Ask your teacher what to do next'
   flex_category:
-    overview: 'Overview'
+    required: 'Overview'
     content: 'Content'
     practice: 'Teaching Practices'
   external_links:

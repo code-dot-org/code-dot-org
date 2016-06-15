@@ -21,7 +21,7 @@
               - practice_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::PRACTICE_MODULE
               = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'overview') do
                 .module_assignment
-                  = t('flex_category.overview')
+                  = t('flex_category.required')
                   .ribbon-wrapper
                     .ribbon{class: required_module_assignment.try(:status) || 'not_started'}
               = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'content') do
