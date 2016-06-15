@@ -1,6 +1,16 @@
 - require 'country_codes'
 - resource.user_type ||= params[:user].try(:fetch, :user_type) || User::TYPE_STUDENT
 
+-#
+  Retrieve the return_to value from the session, which will also delete it.
+  It means that a failed attempted to sign up here will no longer take the
+  user to the recorded return_to URL upon a future attempt at sign-in/up, but
+  that should be alright because it's really only a best-attempt, and not
+  crucial, and should probably only be done immediately after the user attempted
+  to go that that URL anyway, not a long time afterwards which is confusing.
+
+- return_to_url = get_and_clear_session_return_to
+
 :css
   .form-group {
     margin-top: 0px !important
@@ -10,21 +20,19 @@
   .row
     .span9
       %h1= t('signup_form.signup_title')
-      %p
-        = t('signup_form.overview_student').html_safe
-      %p
-        = sanitize(t('signup_form.no_signup_message').html_safe, tags: %w(a), attributes: %w(href target))
+      %p= t('signup_form.overview_student').html_safe
+      %p= sanitize(t('signup_form.no_signup_message').html_safe, tags: %w(a), attributes: %w(href target))
 
   .row
     .span8.signupblock{style: "background-color:white"}
 
-      = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'signupform', onsubmit: "return submitForm();" }) do |f|
+      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'signupform', onsubmit: "return submitForm();"}) do |f|
 
         #usertype-block.itemblock
           .labelblock
             = t('signup_form.user_type_label')
           - type_options = [[t('signup_form.user_type_student'), User::TYPE_STUDENT], [t('signup_form.user_type_teacher'), User::TYPE_TEACHER]]
-          = f.select :user_type, type_options, {}, { class: "fieldblock", onchange: "changeRole($(this).val());", style: "width: 234px" }
+          = f.select :user_type, type_options, {}, {class: "fieldblock", onchange: "changeRole($(this).val());", style: "width: 234px"}
 
         = signup_error_messages!
 
@@ -32,55 +40,47 @@
         = f.hidden_field :hashed_email
 
         #name-block.itemblock
-          .labelblock
-            = t('activerecord.attributes.user.name')
+          .labelblock= t('activerecord.attributes.user.name')
           = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
           .error_in_field
 
         #email-block.itemblock
-          .labelblock
-            = t('activerecord.attributes.user.email')
+          .labelblock= t('activerecord.attributes.user.email')
           = f.email_field :email, class: 'input-xlarge fieldblock', maxlength: 255
           .error_in_field
 
         - if f.object.password_required?
           #password-block.itemblock
-            .labelblock
-              = t('activerecord.attributes.user.password')
+            .labelblock= t('activerecord.attributes.user.password')
             = f.password_field :password, class: 'input-xlarge fieldblock', maxlength: 255
             .error_in_field
 
           #password_confirmation-block.itemblock
-            .labelblock
-              = t('activerecord.attributes.user.password_confirmation')
+            .labelblock= t('activerecord.attributes.user.password_confirmation')
             = f.password_field :password_confirmation, class: 'input-xlarge fieldblock', maxlength: 255
             .error_in_field
 
         #schoolname-block.itemblock{style: "display: none"}
-          .labelblock
-            = t('signup_form.school_name')
+          .labelblock= t('signup_form.school_name')
           = f.text_field :school, class: 'input-xlarge fieldblock', maxlength: 255
           .error_in_field
 
         #age-block.itemblock
-          .labelblock
-            = t('signup_form.age')
-          %select.fieldblock{name: "user[age]", type: "select", style: "width: 234px"}
+          .labelblock= t('signup_form.age')
+          %select#user_user_age.fieldblock{name: "user[age]", type: "select", style: "width: 234px"}
             %option{value: "", selected: true, disabled: true}
             - User::AGE_DROPDOWN_OPTIONS.each do |age_option|
               %option{value: age_option}= age_option
           .error_in_field
 
         #gender-block.itemblock
-          .labelblock
-            = t('signup_form.gender')
-          = f.select :gender, gender_options, { disabled: '', selected: '' }, { class: 'fieldblock', style: "width: 234px" }
+          .labelblock= t('signup_form.gender')
+          = f.select :gender, gender_options, {disabled: '', selected: '' }, { class: 'fieldblock', style: "width: 234px"}
           .error_in_field
 
-        -# Not yet ready to turn this on.
+        -# TODO (brendan): implement additional school info fields
         -# schoolcountry-block.itemblock{style: "display: none"}
-          .labelblock
-            = "Country"
+          .labelblock= "Country"
           %select#schoolcountry.form-control.fieldblock{name: "user[school_country]", type: "select"}
             %option{value: "", selected: true, disabled: true}
             - get_all_countries.each do |country_abbr, country_name|
@@ -89,12 +89,10 @@
           .error_in_field
 
         #district-block.itemblock{style: "display: none"}
-          .labelblock{style: "vertical-align: top"}
-            = "District"
+          .labelblock{style: "vertical-align: top"}= "District"
           .district-dropdown{style: "display: inline-block; background-color: rgba(0,0,0,0.1); padding: 10px; border-radius: 5px; width: 400px"}
             = render partial: 'shared/district_dropdown', locals: {form_name: "user"}
           .error_in_field
-            = "Enter something here"
 
         %br/
         = f.submit t('signup_form.submit'), class: "btn btn-primary btn-large"
@@ -105,7 +103,7 @@
         #teacher-terms{style: "display: none"}!= t('signup_form.teacher_terms')
 
     .span4
-      %div{ style: 'padding-left: 20px;  border-left: 1px solid black;' }
+      %div{ style: 'padding-left: 20px; margin-top: 20px; border-left: 1px solid black;' }
         = render "devise/shared/links"
 
     %div{style: "clear:both"}
@@ -122,14 +120,19 @@
     }
   });
 
-  function formSuccess() {
-    console.log('form success');
-    window.location.href = '/';
+  function formSuccess(success) {
+    var url;
+    if ("#{return_to_url}" !== "") {
+      url = "#{return_to_url}";
+    } else if (isTeacherSelected()) {
+      url = "#{teacher_dashboard_url}";
+    } else {
+      url = "/";
+    }
+    window.location.href = url;
   }
 
   function formError(err) {
-    //console.log('form error', err);
-
     // Define the fields that can have specific errors attached to them.
     var fields = ["name", "email", "password", "password_confirmation", "schoolname", "age", "gender"];
 
@@ -152,56 +155,47 @@
   }
 
   function showStudent() {
-    // show age (and reset to blank)
+    // Show correct form elements.
     $("#age-block").fadeIn();
-
-    // show gender-optional
     $("#gender-block").fadeIn();
-
-    // hide school-name-optional
     $("#schoolname-block").hide();
-
-    // hide school-country
     $("#schoolcountry-block").hide();
-
-    // hide district
     $("#district-block").hide();
 
     // Clear country.  It can be reentered again to make district dropdown appear.
     $("#schoolcountry").val("");
 
-    // hide teacher terms
+    // Show correct terms below form.
     $("#teacher-terms").hide();
     $("#student-terms").fadeIn();
   }
 
   function showTeacher() {
-    // hide age (and set to 21)
+    // Show correct form elements.
     $("#age-block").hide();
-
-    // hide gender-optional
     $("#gender-block").hide();
-
-    // show school-name-optional
     $("#schoolname-block").fadeIn();
-
-    // show school-country
     $("#schoolcountry-block").fadeIn();
 
-    // show teacher terms
+    // Show correct terms below form.
     $("#student-terms").hide();
     $("#teacher-terms").fadeIn();
   }
 
+  function isTeacherSelected() {
+    var formData = $('#new_user').serializeArray();
+    var userType = $.grep(formData, function(e) { return e.name == "user[user_type]"; });
+    if (userType.length == 1 && userType[0].value == "teacher") {
+      return true;
+    }
+    return false;
+  }
 
   function submitForm() {
-
     var formData = $('#new_user').serializeArray();
 
     // Teachers get age 21.
-    var userType = $.grep(formData, function(e) { return e.name == "user[user_type]"; });
-    if (userType.length == 1 && userType[0].value == "teacher")
-    {
+    if (isTeacherSelected()) {
       formData.push({name: 'user[age]', value: 21});
     }
 
