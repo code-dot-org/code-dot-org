@@ -693,65 +693,7 @@ $default-modal-width: 640px;
   white-space: nowrap;
 
   .progress_container {
-    background-color: $lightest_gray;
-    border: 1px solid $lighter_gray;
     display: inline-block;
-    padding: 4px 8px;
-    border-radius: 5px;
-
-    .puzzle_outer_level,
-    .puzzle_outer_assessment,
-    .puzzle_outer_current {
-      vertical-align: middle;
-      margin: 0 -2px;
-    }
-  }
-
-
-  /* current puzzle is a large dot */
-  .puzzle_outer_current {
-    .level_link {
-      box-sizing: border-box;
-      border-radius: 28px;
-      height: 28px;
-      min-width: 28px;
-      width: 28px;
-      font-size: 14px;
-      line-height: 24px;
-      padding: 0px;
-      text-align: center;
-      display: inline-block;
-    }
-
-    .level_link.unplugged_level {
-      font-size: 12px;
-      padding-left: 10px;
-      padding-right: 10px;
-      width: auto;
-    }
-  }
-
-  /* other puzzles are small dot */
-  .puzzle_outer_level,
-  .puzzle_outer_assessment {
-    line-height: 1px;
-    .level_link {
-      box-sizing: border-box;
-      min-width: 11px;
-      width: 11px;
-      height: 11px;
-      border-radius: 11px;
-      padding: 3px;
-      margin: 0px;
-      /* hack to hide the number: */
-      font-size: 0px;
-      color: transparent;
-    }
-  }
-
-  .level_link:hover {
-    text-decoration: none;
-    background-color: $level_current;
   }
 }
 
@@ -952,7 +894,7 @@ input.header_input {
   margin-top: 20px;
 
   .help_title {
-    color: $cyan;
+    color: $dark_charcoal;
     font-family: $gotham-extra-bold;
     font-weight: normal;
     font-size: 17.5px;

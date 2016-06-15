@@ -377,7 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"تراشیدن فاصله‌ها از طرف چپ",
   "TEXT_TRIM_OPERATOR_RIGHT":"حذف فاصله‌های طرف چپ",
   "TEXT_TRIM_TOOLTIP":"یک کپی از متن که فاصله های هر دو طرف آن حذف شده را برمیگرداند.",
-  "UNUSED_CODE":"Unused code",
+  "UNUSED_CODE":"کد استفاده نشده",
   "VARIABLES_DEFAULT_NAME":"مورد",
   "VARIABLES_GET_CREATE_SET":"ایجاد 'set %1'",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

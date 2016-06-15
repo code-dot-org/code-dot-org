@@ -367,6 +367,16 @@ sv:
       4-5 While Loops 7_instruction: Wow, nu finns det tre högar av jord! Kan du skriva ett program som tar bort dem tills marken är jämn?
       4-5 While Loops 8_instruction: ' Det finns ett riktigt djupt hål och en riktigt stor hög med jord. Hur många skyfflar med jord behöver flyttas för att göra marken jämn? Tips: använd en "medan"-slinga för båda.'
       4-5 While Loops Assessment 1_instruction: Det finns många hål och högar. Hjälp mig att fylla och ta bort dem för att göra marken slät.
+      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 15 squares line up next to each other?
+      aE3_instruction: |
+        Now let's go one level deeper! We've nested that whole
+        block of code into another loop, but you need to get the artist back in place
+        to draw the next line. Which of these code blocks can you place at the end
+        of the outermost loop to draw the whole grid?
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -1235,6 +1245,9 @@ sv:
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -2719,6 +2732,7 @@ sv:
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -4157,4 +4171,7 @@ sv:
       Underground Mining Coal_instruction: Du hittar mer värdefulla resurser under marken, men det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
       Underground Test Level_instruction: Samla alla mineraler!
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

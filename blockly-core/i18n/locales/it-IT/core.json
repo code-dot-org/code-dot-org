@@ -377,7 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "rimuovi gli spazi dall'estremità sinistra",
   "TEXT_TRIM_OPERATOR_RIGHT": "rimuovi gli spazi dall'estremità destra",
   "TEXT_TRIM_TOOLTIP": "Restituisce una copia del testo con gli spazi rimossi da una o da entrambe le estremità.",
-  "UNUSED_CODE": "Unused code",
+  "UNUSED_CODE": "Codice inutilizzato",
   "VARIABLES_DEFAULT_NAME": "elemento",
   "VARIABLES_GET_CREATE_SET": "Crea 'imposta %1'",
   "VARIABLES_GET_HELPURL": "http://it.wikipedia.org/wiki/Variabile_%28informatica%29",

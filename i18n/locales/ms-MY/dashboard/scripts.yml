@@ -590,7 +590,7 @@ ms:
         cspunit3:
           title: 'CSP Unit 3 - Programming'
           title_short: CSP Unit 3
-          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
+          description_short: This unit introduces the foundational concepts of computer programming.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: Fungsi
@@ -935,6 +935,7 @@ ms:
           Free Response: Free Response
           Game Lab: Game Lab
           Sample PLC Assessment: Sample PLC Assessment
+          Swapped Levels: Swapped Levels
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1794,6 +1795,11 @@ ms:
           Expressions: Expressions
           Conditionals and Keyboard Input: Conditionals and Keyboard Input
           Sprites and Images: Sprites and Images
+          CSD U3 Variables and Animation: CSD U3 Variables and Animation
+          Booleans and Conditionals: 'Booleans and Conditionals'
+          SFLP: SFLP
+          Animations: Animations
+          "Project: Interactive Card": 'Project: Interactive Card'
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1977,6 +1983,8 @@ ms:
           title: ' TEMP CSD Unit 2'
           description_short: Web Development
           description: Temp place to work on U2 of Disco
+          Headers and Lists: Headers and Lists
+          Introduction to HTML: Introduction to HTML
         CSDU5-Draft:
           title: ' TEMP CSD Unit 5'
           description_short: Data
@@ -2016,6 +2024,14 @@ ms:
           "Lesson 2,2: text compression": 'Lesson 2,2: text compression'
           "Lesson 2,3: black and white pixelation": 'Lesson 2,3: black and white pixelation'
           "Lesson 2,10: good and bad data visualizations": 'Lesson 2,10: good and bad data visualizations'
+          "Lesson 1,4: Number Systems - circle triangle square": 'Lesson 1,4: Number Systems - circle triangle square'
+          "Lesson 1,6: Sending Numbers": 'Lesson 1,6: Sending Numbers'
+          "Lesson 1,10: Routers and Redundancy": 'Lesson 1,10: Routers and Redundancy'
+          "Lesson 2,2: Text Compression": 'Lesson 2,2: Text Compression'
+          "Lesson 2,3: Black and White Pixelation": 'Lesson 2,3: Black and White Pixelation'
+          "Lesson 2,10: Good and Bad Data Visualizations": 'Lesson 2,10: Good and Bad Data Visualizations'
+          Measuring Student Learning: Measuring Student Learning
+          description_short: We will use this during TeacherCon to deliver supports and materials for sessions
         MikeTest:
           title: MikeTest
           description_short: Just a script for playing around
@@ -2023,3 +2039,9 @@ ms:
           description_audience: Ages 8-98
           Sample Stage: Sample Stage
           Artist Functions: Fungsi-fungsi Artis
+        artistExemplar:
+          title: Artist Exemplar
+          description_short: How can we make the artist levels really hum?
+          description: These artist levels will knock the socks off of third graders
+          description_audience: Ages 8-18
+          Artist Exemplar: Artist Exemplar

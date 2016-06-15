@@ -1,7 +1,12 @@
 lv-LV:
   hour_of_code: Programmēšanas stunda
   hello: Sveika, pasaule
+  "yes": Jā
+  "no": Nē
   select_language: Lūdzu izvēlieties savu valodu
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Uzzini vairāk
   en: Datorzinātne
   computer_science_edweek: Datorzinātnes Izglītības nedēļa
   csedweek_dates: '2014. gada 8. - 14. decembris'
@@ -567,6 +572,7 @@ lv-LV:
   dashboard_sections_table_secret: Autorizēšanās veids
   dashboard_sections_table_grade: Vērtējums
   dashboard_sections_table_course: Kurss
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Skolēni
   dashboard_sections_table_code: Sadaļas kods
   dashboard_sections_name: Sadaļas nosaukums
@@ -582,7 +588,7 @@ lv-LV:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.

@@ -1,7 +1,12 @@
 si-LK:
   hour_of_code: පැයේ කේතය
   hello: හේලෝ ලෝකය
+  "yes": ඔව්
+  "no": නැහැ
   select_language: කරුණාකර ඔබේ භාෂාව තෝරා ගන්න
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
   en: පරිගණක විද්‍යාව
   computer_science_edweek: පරිඝණක විද්‍යා අධ්‍යාපන සතිය
   csedweek_dates: දෙසැම්බර් 8-14, 2014
@@ -565,6 +570,7 @@ si-LK:
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: ශේණිය
   dashboard_sections_table_course: පාඨමාලාව
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: සිසුන්
   dashboard_sections_table_code: අංශ කේතය
   dashboard_sections_name: Section Name
@@ -580,7 +586,7 @@ si-LK:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.

@@ -1,7 +1,14 @@
 "ur-PK":
   hour_of_code: "آور-آف-کوڈ"
   hello: hello dunia
+  'yes': "جی"
+  'no': "نہيں"
   select_language: "براہ مہربانی اپنی زبان منتخب کریں"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "مزید سیکھے"
   en: "کمپیوٹر سائنس"
   computer_science_edweek: "کمپیوٹر سائنس کا تعلیمی ہفتہ"
   csedweek_dates: "۸-۱۴ دسمبر، ۲۰۱۵"
@@ -518,10 +525,10 @@
     and/or participation
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
-  volunteer_engineer_submission_field_email: Email address
+  volunteer_engineer_submission_field_email: "ای میل ایڈریس"
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
-  volunteer_engineer_submission_field_email_placeholder: Email address
+  volunteer_engineer_submission_field_email_placeholder: "ای میل ایڈریس"
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
@@ -704,6 +711,7 @@
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Section Name
@@ -1706,11 +1714,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras
