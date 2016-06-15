@@ -61,6 +61,11 @@ class Section < ActiveRecord::Base
   end
 
   def add_student(student)
+    # TODO: generalize to future PLC sections
+    if code && code == Plc::UserCourseEnrollment::PLC_SECTION.try(:code) && !Plc::UserCourseEnrollment.exists?(user: student)
+      raise 'PLC section cannot be joined by users with no PLC enrollment'
+    end
+
     if follower = student.followeds.where(user_id: self.user_id).first
       # if this student is already in another section owned by the
       # same teacher, move them to this section instead of creating a
