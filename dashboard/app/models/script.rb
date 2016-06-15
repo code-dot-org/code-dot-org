@@ -43,7 +43,7 @@ class Script < ActiveRecord::Base
 
   def generate_plc_objects
     if professional_learning_course
-      course = Plc::Course.find_or_create_by! name: 'Default'
+      course = Plc::Course.find_or_create_by! name: 'csp-support'
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
       unit.update!(
         plc_course_id: course.id,
