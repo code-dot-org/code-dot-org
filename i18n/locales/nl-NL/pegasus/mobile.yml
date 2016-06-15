@@ -1,7 +1,12 @@
 nl-NL:
   hour_of_code: Uur Code
   hello: Hallo wereld
+  "yes": Ja
+  "no": Nee
   select_language: Kies de gewenste taal
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Leer meer
   en: informatica
   computer_science_edweek: Week van het Informaticaonderwijs
   csedweek_dates: 8-14 December 2014
@@ -552,6 +557,7 @@ nl-NL:
   dashboard_sections_table_secret: Login-Type
   dashboard_sections_table_grade: Cijfer
   dashboard_sections_table_course: Cursus
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Leerlingen
   dashboard_sections_table_code: Groepscode
   dashboard_sections_name: Groepsnaam
@@ -567,7 +573,7 @@ nl-NL:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.

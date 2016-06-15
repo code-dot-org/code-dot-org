@@ -1,4 +1,4 @@
-var _ = require('../lodash');
+var _ = require('lodash');
 var utils = require('../utils');
 
 var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';

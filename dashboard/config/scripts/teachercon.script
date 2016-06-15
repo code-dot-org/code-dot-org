@@ -9,28 +9,28 @@ stage 'Introduction to Teachercon', 'required'
  named_level 'TeacherCon Agenda'
  named_level 'TeacherCon Self-Assessment'
 
-stage 'Lesson 1,4: Number Systems - circle triangle square', 'content' 				
+stage 'Lesson 1,4', 'content'
  named_level 'U1L4 Lesson Overview'
 
-stage 'Lesson 1,6: Sending Numbers', 'content'
+stage 'Lesson 1,6', 'content'
  named_level 'U1L6 Lesson Overview'
 
-stage 'Lesson 1,9: internet addressing (battleship)', 'content'
+stage 'Lesson 1,9', 'content'
  named_level 'U1L9 Lesson Overview'
 
-stage 'Lesson 1,10: Routers and Redundancy', 'content'
+stage 'Lesson 1,10', 'content'
  named_level 'U1L10 Lesson Overview' 
 
-stage 'Lesson 1,11: Packets and Making a Reliable Internet', 'content'
+stage 'Lesson 1,11', 'content'
  named_level 'U1L11 Lesson Overview' 
 
-stage 'Lesson 2,2: Text Compression', 'content'
+stage 'Lesson 2,2', 'content'
  named_level 'U2L2 Lesson Overview' 
 
-stage 'Lesson 2,3: Black and White Pixelation', 'content'
+stage 'Lesson 2,3', 'content'
  named_level 'U2L3 Lesson Overview' 
 
-stage 'Lesson 2,10: Good and Bad Data Visualizations', 'content'
+stage 'Lesson 2,10', 'content'
  named_level 'U2L10 Lesson Overview' 
 
 stage 'Group Work and Peer Learning', 'practice'
@@ -61,5 +61,5 @@ stage 'Measuring Student Learning', 'practice'
  named_level  'Overview: Capturing Student Learning'
  named_level 'What is the difference between formative and summative assessment?'
  named_level 'Classroom Assessment Techniques'
- named_level 'Tuesday Report: measuring students learning in unit 1'
- named_level 'Wednesday Report: measuring students learning in unit 1'
+ named_level 'Tuesday Report: measuring student learning in unit 1'
+ named_level 'Wednesday Report: measuring student learning in unit 1'

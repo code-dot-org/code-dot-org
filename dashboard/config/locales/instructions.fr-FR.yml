@@ -728,12 +728,9 @@
       4-5 Maze Assessment 1_instruction: "Évaluation : Va jusqu'au tournesol !"
       4-5 Maze Conditionals 1_instruction: Utilise le bloc « Répéter jusqu'à » pour
         amener le zombie au tournesol.
-      4-5 Maze Conditionals 10_instruction: |-
-        Can you add just 3 blocks to help the
-        zombie solve a more complex maze? \r
-        \r
-        If you do it right, he can walk
-        any curvy path no matter the length!
+      4-5 Maze Conditionals 10_instruction: Peux tu rajouter juste 3 blocs pour aider
+        le zombie à résoudre un labyrinthe plus complexe ? \r \r Si tu le fais bien,
+        il peut parcourir n'importe quel chemin sinueux peu importe la longueur!
       4-5 Maze Conditionals 2_instruction: Utilise le bloc « Répéter jusqu'à » pour
         amener le zombie au tournesol.
       4-5 Maze Conditionals 3_instruction: 'Utilise le bloc « Si » pour me laisser
@@ -815,6 +812,20 @@
         deux."
       4-5 While Loops Assessment 1_instruction: Il y a beaucoup de trous et de tas.  Aide-moi
         à les remplir et à les enlever pour niveler le sol.
+      aE1_instruction: |-
+        Draw this square using a loop.\r
+        \r
+        Each side is 20 pixels
+        long.
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 15 squares line up next to each other?
+      aE3_instruction: |
+        Now let's go one level deeper! We've nested that whole
+        block of code into another loop, but you need to get the artist back in place
+        to draw the next line. Which of these code blocks can you place at the end
+        of the outermost loop to draw the whole grid?
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -1838,7 +1849,7 @@
       Course 4 Maze 6_instruction: Peux-tu résoudre ce puzzle en utilisant le moins
         de blocs possible\_?
       Course 4 Play Lab For Loops 2_instruction: Cette fois-ci, essayons de compter
-        les nombres impairs de 1 à 100.
+        les nombres impairs de 1 à 101.
       Course 4 Play Lab Params 1_instruction: Voilà une fonction appelée « Sauter »
         qui fera sauter ton personnage principal de 100 pixels. Utilise la fonction
         « Sauter » pour récupérer tous les drapeaux.
@@ -1949,7 +1960,7 @@
         de 1 à 100 au chien. Utilise une « Boucle pour » et le bloc « Compteur » pour
         faire parler la variable chaque fois que la boucle est exécutée.
       Course 4 Play Labs For Loops 2_instruction: Cette fois-ci, essayons de compter
-        les nombres impairs de 1 à 100.
+        uniquement les nombres impairs de 1 à 101.
       Course 4 Play Labs For Loops 3_instruction: Si on compte avec de plus grands
         nombres, on arrive à un chiffre plus grand dans le même laps de temps. Essaie
         de faire compter le chien de 10 à 1000, de 10 en 10.
@@ -2176,6 +2187,9 @@
       CSD U3 Variables Intro_instruction: |
         Create your own variable, give it a value,
         and display that value in the console.
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -2779,7 +2793,7 @@
       K-1 Bee 13_instruction: Recueille trois nectars et fabrique ensuite un miel
         !
       K-1 Bee 14_instruction: Emmène-moi au nectar, récolte-le, emmène-moi à l'alvéole
-        et fabrique du miel.
+        et fais du miel
       K-1 Bee 15_instruction: Recueille deux nectars pour fabriquer deux miels !
       K-1 Bee 2_instruction: Déplace moi jusqu'à la fleur, prends le nectar, puis
         déplace moi jusqu'au gâteau de miel et fabrique du miel.
@@ -4101,6 +4115,7 @@
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -5644,4 +5659,7 @@
         minez au moins 2 blocs de charbon.
       Underground Test Level_instruction: Recueille tous les minéraux !
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

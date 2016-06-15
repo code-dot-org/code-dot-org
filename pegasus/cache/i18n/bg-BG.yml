@@ -1,7 +1,14 @@
 "bg-BG":
   hour_of_code: "Час на Кодирането"
   hello: "Здравей, свят"
+  'yes': "Да"
+  'no': "Не"
   select_language: "Моля, изберете вашия език"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "Научете повече"
   en: "Компютърни науки"
   computer_science_edweek: "Седмица на Компютърните Науки"
   csedweek_dates: 8-14 Декември 2014 г.
@@ -668,11 +675,11 @@
   dashboard_action_required: "изисквания"
   dashboard_assessments_view: "Виж оценките в:"
   dashboard_assessments_none: "Няма оценки"
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  dashboard_assessments_none_part2: "Ако вие преподавате в курс, имаме нужда от оценъчни
+    въпроси, налични като част от Code Studio, за да помогнете на учениците си да
+    се подготвят за AP теста. За да използвате тези оценки, първо трябва да добавите
+    класа си в системата и след това да изберете курса от падащото меню по-горе. Така
+    и вие ще можете да видите отговорите на вашите ученици тук."
   dashboard_assessments_summaries: "Резюмета"
   dashboard_assessments_answers: "Всички отговори"
   dashboard_filter_by_stage: "Филтрирай по етикети:"
@@ -705,7 +712,7 @@
   dashboard_progress_view: "Преглед на напредъка:"
   dashboard_progress_student_in_script: "Информация за напредъка за %{student_name}
     в %{script_name}"
-  dashboard_progress_pair_programming: pair programming
+  dashboard_progress_pair_programming: "Програмиране по двойки"
   dashboard_responses_view: "Изглед на текстовите отговори:"
   dashboard_responses_none: "Няма текстови отговори"
   dashboard_sections_new_section: "Нов раздел"
@@ -716,6 +723,7 @@
   dashboard_sections_table_secret: "Тип парола за влизане"
   dashboard_sections_table_grade: "Клас"
   dashboard_sections_table_course: "Курс"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Ученици"
   dashboard_sections_table_code: "Код за раздел"
   dashboard_sections_name: "Име на раздел"
@@ -1021,10 +1029,10 @@
   cspunit5_name: "Раздел 5: Изследване и създаване на PT"
   cspunit6_name: "Пост AP: Бази данни в приложения"
   csp1_name: "Раздел 1: Интернет"
-  csp2_name: 'Unit 2: Digital Information'
-  cspassessment_name: Full Test - 50 questions
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
+  csp2_name: "Част 1 - Дигитална информация"
+  cspassessment_name: "Пълен тест - 50 въпроса"
+  cspexam1-mWU7ilDYM9_name: "Тест част 1-25 въпроси"
+  cspexam2-AKwgAh1ac5_name: "Тест част 2 - 25 въпроси"
   cspunit3_gradelevel: "Класове 9-12"
   cspunit3_shortdescription_congrats: "Тази част въвежда фундаменталните концепции
     за компютърно програмиране, което отключва възможността да се правят богати, интерактивни
@@ -1032,20 +1040,20 @@
     лабораторията като програмната среда за изграждане на приложения, но концепцията,
     която ще научите в тези уроци обхваща всички езици за програмиране и инструменти."
   20-hour_name: "Ускорен курс"
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
-  gumball_name: Gumball
+  algebra_name: CS в алгебрата
+  AlgebraA_name: CS в алгебрата курс А
+  AlgebraB_name: CS в алгебрата курс B
+  gumball_name: "Гъмбол"
   classicmaze_name: "Класически лабиринт"
   iceage_name: "Ледена епоха"
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: "Междузвездни войни (блокове)"
   math_category_name: "Математика"
   hoc_category_name: "Час на Кодирането"
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: CS Principles Practice Test
+  csf_category_name: CS основи
+  csp_category_name: '"15-" 16 CS принципи'
+  csp17_category_name: '"15-" 16 CS принципи'
+  cspexams_category_name: CS принципи практически тест
   applab_name: "Лаборатория за приложения"
   applab_gradelevel: "Възраст 13 +"
   applab_shortdescription_congrats: App Lab е програмна среда, в която създавате прости
@@ -1751,11 +1759,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "играй"
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

@@ -1,7 +1,14 @@
 "hi-IN":
   hour_of_code: Hour of Code
   hello: "हैलो वर्ल्ड"
+  'yes': 'Yes'
+  'no': 'No'
   select_language: "कृपया अपनी भाषा चुनें"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "अधिक जानें"
   en: "कंप्यूटर विज्ञान"
   computer_science_edweek: "कंप्यूटर विज्ञान शिक्षा सप्ताह"
   csedweek_dates: "दिसंबर 8-14, 2014"
@@ -36,8 +43,8 @@
   og_title: |
     हर बच्चे का अवसर मिलना चाहिए
     har baache avaskar dhe hakadhaar ne
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_description: "हर स्कूल में हर छात्र को कंप्यूटर विज्ञान का अध्ययन करने का अवसर
+    मिलना चाहिए। यह सब कुछ बदल रहा है।"
   hoc2014_heading: <a href="http://hourofcode.com"> ऑवर ऑफ़ कोड</a> में शामिल <br/>
     8-14 दिसंबर, 2014 <br/>
   hoc2014_students: Students
@@ -58,10 +65,10 @@
   csedweek_map_search_placeholder: |
     कोड के घंटे की घटनाओं के लिए खोज
     Code dha ghanta dha ghatana ko dundo
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: "खोजें:"
   csedweek_map_search_reset: Reset
   csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_event: "कोड घंटे की कड़ियाँ"
   csedweek_map_legend_cs_tech_jam: "विशेष घटना"
   cded_sign_up: Sign up
   cded_try_it: "कर के देखे"
@@ -79,27 +86,26 @@
   view_english_site: "देखें हिंदी साइट"
   non_english_tutorials: "ट्यूटोरियल एकाधिक भाषाओं में अनुवाद:"
   write_your_first_program: "अपना पहला कंप्यूटर प्रोग्राम लिखे"
-  learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop
-    programming. This is a game-like tutorial starring video lectures by Bill Gates,
-    Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then
-    statements, and basic algorithms.
+  learn_cs_concepts: "कंप्यूटर विज्ञान की मूलभूत अवधारणाओं की सीखे - ड्रैग और ड्राप
+    तकनीक से । यह एक खेल की तरह का पाठ है जिसकी शुरुआत में बिल गेट्स, मार्क जुकरबर्ग
+    के साथ एंग्री बर्ड और प्लान्ट्स के साथ जॉम्बीज है । सीखें रिपीट होने वाले लूप,
+    यदि- तो ( if -then) आदेश एवं शुरुआती गणित । "
   all_ages: "सभी आयु"
   beginner: "शुरआती"
   n_participants: "# प्रतिभागियों"
   go: "जाएं"
   thank_you_: "धन्यवाद!"
   congratulations: "बधाइयाँ!"
-  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
-  congrats_next_tutorials_title: Try these courses next
+  congratulations_on_completing_hoc: "एक ऑवर ऑफ़ कोड को पूरा करने पर बधाई।"
+  congratulations_volunteer: 'बधाई: अब जबकि आपने आवर ऑफ़ कोड को इस्तेमाल किया है, <a
+    href="https://code.org/volunteer"> एक कक्षा में स्वयंसेवक बनने के लिए साइन अप
+    करें</a> और छात्रों की मदद करें आवर ऑफ़ कोड सिखने में ।'
+  congratulations_on_completing_course1: "पाठ्यक्रम एक को पूरा करने पर बधाई"
+  congratulations_on_completing_course2: "पाठ्यक्रम दो को पूरा करने पर बधाई"
+  congratulations_on_completing_course3: "पाठ्यक्रम तीन को पूरा करने पर बधाई"
+  congratulations_on_completing_course4: "पाठ्यक्रम चार को पूरा करने पर बधाई"
+  congratulations_on_completing_accelerated: "त्वरित पाठ्यक्रम को पूरा करने पर बधाई"
+  congrats_next_tutorials_title: "अगले स्तर करने के लिए बढ़े"
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: "उपलब्धि का एक प्रमाण पत्र प्राप्त करे"
@@ -723,6 +729,7 @@
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Section Name
@@ -1722,11 +1729,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

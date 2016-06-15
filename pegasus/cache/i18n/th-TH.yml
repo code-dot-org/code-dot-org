@@ -1,7 +1,14 @@
 "th-TH":
   hour_of_code: "ช่วงเวลาของ Code"
   hello: "สวัสดีชาวโลก"
+  'yes': "ใช่"
+  'no': "ไม่ใช่"
   select_language: "กรุณาเลือกภาษาของคุณ"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "สิ่งที่น่าเรียนรู้ยังมีอีก"
   en: "วิทยาการคอมพิวเตอร์"
   computer_science_edweek: "สัปดาห์การศึกษาวิทยาการคอมพิวเตอร์"
   csedweek_dates: 8-14 ธันวาคม 2014
@@ -691,6 +698,7 @@
   dashboard_sections_table_secret: "ประเภทการล็อกอิน"
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: "หลักสูตร"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "นักเรียน"
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: "ชื่อกลุ่ม"
@@ -1636,11 +1644,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "เล่น"
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

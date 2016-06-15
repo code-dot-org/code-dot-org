@@ -1,7 +1,12 @@
 ro-RO:
   hour_of_code: Hour of Code
   hello: Salutare lume
+  "yes": Da
+  "no": Nu
   select_language: Te rugăm selectează limba ta
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Află mai mult
   en: Tehnologia computerului si programare
   computer_science_edweek: Săptămâna Educatiei in Tehnologia computerului si programare
   csedweek_dates: 8-14 Decembrie 2014
@@ -550,6 +555,7 @@ ro-RO:
   dashboard_sections_table_secret: Tip de conectare
   dashboard_sections_table_grade: Notă
   dashboard_sections_table_course: Curs
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Elevi
   dashboard_sections_table_code: Cod de Secţiune
   dashboard_sections_name: Numele secţiunii
@@ -565,7 +571,7 @@ ro-RO:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.

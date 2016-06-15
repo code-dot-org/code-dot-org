@@ -259,6 +259,10 @@ class DashboardSection
       raise
     end
 
+    if params[:course] && valid_course_id?(params[:course][:id])
+      DashboardUserScript.assign_script_to_user(params[:course][:id].to_i, params[:user][:id])
+    end
+
     row
   end
 
@@ -438,6 +442,7 @@ class DashboardSection
     if params[:course] && valid_course_id?(params[:course][:id])
       fields[:script_id] = params[:course][:id].to_i
       DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
+      DashboardUserScript.assign_script_to_user(fields[:script_id], user_id)
     end
 
     rows_updated = Dashboard.db[:sections].
@@ -468,10 +473,24 @@ class DashboardUserScript
     # create userscripts for users that don't have one yet
     Dashboard.db[:user_scripts].
       insert_ignore.
-      import([:user_id, :script_id],
-             Dashboard.db[:followers].
-               select(:student_user_id, script_id.to_s).
-               where(section_id: section_id, deleted_at: nil))
+      import(
+        [:user_id, :script_id],
+        Dashboard.db[:followers].
+          select(:student_user_id, script_id.to_s).
+          where(section_id: section_id, deleted_at: nil)
+      )
+  end
+
+  def self.assign_script_to_user(script_id, user_id)
+    # creates a userscript for a user if they don't have it yet
+    Dashboard.db[:user_scripts].
+      insert_ignore.
+      import(
+        [:user_id, :script_id],
+        Dashboard.db[:users].
+          select(user_id, script_id.to_s).
+          where(id: user_id, deleted_at: nil)
+      )
   end
 
   def self.assign_script_to_users(script_id, user_ids)
@@ -479,6 +498,9 @@ class DashboardUserScript
     # create userscripts for users that don't have one yet
     Dashboard.db[:user_scripts].
       insert_ignore.
-      import([:user_id, :script_id], user_ids.zip([script_id] * user_ids.count))
+      import(
+        [:user_id, :script_id],
+        user_ids.zip([script_id] * user_ids.count)
+      )
   end
 end

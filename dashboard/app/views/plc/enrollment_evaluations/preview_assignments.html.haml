@@ -2,15 +2,16 @@
   = stylesheet_link_tag 'css/plc', media: 'all'
 
 -# Probably won't need the script when this is no longer under the enrollment unit assignment path
-- preselected_module_ids = @enrollment_unit_assignment.plc_course_unit.determine_preferred_learning_modules current_user
+- preselected_module_ids = @enrollment_unit_assignment.plc_module_assignments.pluck(:plc_learning_module_id)
 
 = form_tag(action: 'confirm_assignments') do
   .preview_evaluation
     .module_type_section
-      %h3 Required Content Module
+      %h3= t('plc.preview_assignments.content_focus_header')
       %p
-        %strong Based on your self-assessment answers, we chose one content module for you as required.
-        You can choose a different required module if you think that it would help you better prepare to teach.
+        %strong= t('plc.preview_assignments.content_focus_strong')
+        = t('plc.preview_assignments.choose_different_focus_area')
+      %p= t('plc.preview_assignments.other_focus_areas_available')
 
       - @content_learning_modules.each do |content_module|
         %p
@@ -18,13 +19,11 @@
             = content_module.name
 
     .module_type_section
-      %h3 Required Practice Module
+      %h3= t('plc.preview_assignments.practice_focus_header')
       %p
-        %strong Based on your self-assessment answers, we chose one practice module for you as required.
-        You can choose a different required module if you think that it would help you better prepare to teach.
-
-      %p
-        All other modules will be available for reference.
+        %strong= t('plc.preview_assignments.practice_focus_strong')
+        = t('plc.preview_assignments.choose_different_focus_area')
+      %p= t('plc.preview_assignments.other_focus_areas_available')
 
       - @practice_learning_modules.each do |practice_module|
         %p
@@ -32,4 +31,4 @@
             = practice_module.name
 
   #submit_tag_container
-    = submit_tag('Confirm Module Selections', id: 'confirm-assignments')
+    = submit_tag(t('plc.preview_assignments.confirm_focus_areas'), id: 'confirm-assignments')

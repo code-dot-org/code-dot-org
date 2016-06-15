@@ -1,7 +1,14 @@
 "ga-IE":
   hour_of_code: An Uair Chódála
   hello: Dia dhuit a dhomhain
+  'yes': Tá
+  'no': Níl
   select_language: Roghnaigh do theanga le do thoil
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Tuilleadh eolais
   en: Ríomheolaíocht
   computer_science_edweek: Seachtain an Oideachais Ríomheolaíochta
   csedweek_dates: 8-14 Nollaig 2014
@@ -730,6 +737,7 @@
   dashboard_sections_table_secret: Cineál Seisiúin
   dashboard_sections_table_grade: Bliain
   dashboard_sections_table_course: Cúrsa
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Daltaí
   dashboard_sections_table_code: Cód an Rannáin
   dashboard_sections_name: Ainm an Rannáin
@@ -1807,11 +1815,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras
