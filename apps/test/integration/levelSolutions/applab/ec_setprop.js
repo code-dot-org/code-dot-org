@@ -2,7 +2,7 @@ import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 
 // take advantage of the fact that we expose the filesystem via
 // localhost
