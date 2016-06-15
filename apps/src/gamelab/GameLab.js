@@ -238,13 +238,12 @@ GameLab.prototype.init = function (config) {
  */
 GameLab.prototype.setupReduxSubscribers = function (store) {
   var state = {};
-  var boundOnIsRunningChange = this.onIsRunningChange.bind(this);
-  store.subscribe(function () {
+  store.subscribe(() => {
     var lastState = state;
     state = store.getState();
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
-      boundOnIsRunningChange(state.runState.isRunning);
+      this.onIsRunningChange(state.runState.isRunning);
     }
   });
 };
@@ -969,6 +968,7 @@ GameLab.prototype.displayFeedback_ = function () {
 /**
  * Get the project's animation metadata for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ * @return {AnimationMetadata[]}
  */
 GameLab.prototype.getAnimationMetadata = function () {
   return this.studioApp_.reduxStore.getState().animations;
