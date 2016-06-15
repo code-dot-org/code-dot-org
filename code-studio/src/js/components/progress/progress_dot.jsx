@@ -6,8 +6,28 @@ import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../color';
 
+function createOutline(color) {
+  return `
+    ${color} 0 1px,
+    ${color} 1px 1px,
+    ${color} 1px 0px,
+    ${color} 1px -1px,
+    ${color} 0 -1px,
+    ${color} -1px -1px,
+    ${color} -1px 0,
+    ${color} -1px 1px`;
+}
+
 const dotSize = 24;
 const styles = {
+  outer: {
+    color: color.purple
+  },
+  levelName: {
+    display: 'table-cell',
+    paddingLeft: 5,
+    fontFamily: '"Gotham 4r", sans-serif'
+  },
   dot: {
     puzzle: {
       display: 'inline-block',
@@ -41,6 +61,7 @@ const styles = {
       height: 7,
       borderRadius: 7,
       lineHeight: 'inherit',
+      verticalAlign: 'middle',
       fontSize: 0
     },
     overview: {
@@ -55,15 +76,7 @@ const styles = {
       fontSize: 24,
       verticalAlign: -4,
       color: color.white,
-      textShadow: `
-        ${color.lighter_gray} 0 1px,
-        ${color.lighter_gray} 1px 1px,
-        ${color.lighter_gray} 1px 0px,
-        ${color.lighter_gray} 1px -1px,
-        ${color.lighter_gray} 0 -1px,
-        ${color.lighter_gray} -1px -1px,
-        ${color.lighter_gray} -1px 0,
-        ${color.lighter_gray} -1px 1px`,
+      textShadow: createOutline(color.lighter_gray),
       ':hover': {
         color: color.white,
         backgroundColor: 'transparent'
@@ -78,15 +91,7 @@ const styles = {
     },
     icon_complete: {
       color: color.light_gray,
-      textShadow: `
-        ${color.white} 0 1px,
-        ${color.white} 1px 1px,
-        ${color.white} 1px 0px,
-        ${color.white} 1px -1px,
-        ${color.white} 0 -1px,
-        ${color.white} -1px -1px,
-        ${color.white} -1px 0,
-        ${color.white} -1px 1px`,
+      textShadow: createOutline(color.white),
       ':hover': {
         color: color.light_gray
       }
@@ -152,9 +157,10 @@ export const ProgressDot = React.createClass({
 
     return (
       <a
+        key='link'
         href={level.url}
         onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
-        style={[showLevelName && {display: 'block'}]}
+        style={[styles.outer, showLevelName && {display: 'table-row'}]}
       >
         {level.icon ?
           <i
@@ -164,10 +170,12 @@ export const ProgressDot = React.createClass({
               this.props.courseOverviewPage && styles.dot.overview,
               styles.dot.icon,
               smallDot && styles.dot.icon_small,
+              outlineCurrent && {textShadow: createOutline(color.level_current)},
               level.status && level.status !== 'not_tried' && styles.dot.icon_complete
             ]}
           /> :
           <div
+            className={`level-${level.id}`}
             style={[
               styles.dot.puzzle,
               this.props.courseOverviewPage && styles.dot.overview,
@@ -182,7 +190,7 @@ export const ProgressDot = React.createClass({
           </div>
         }
         {showLevelName &&
-          <span style={{marginLeft: 5, color: color.purple}}>{level.name}</span>
+          <span key='named_level' style={styles.levelName}>{level.name}</span>
         }
       </a>
     );
