@@ -370,7 +370,7 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
     block.userCreated = (userCreated === 'true');
   }
   var limit = xmlBlock.getAttribute('limit');
-  var shouldShowLimits = blockSpace.isFlyout || Blockly.editBlocks;
+  var shouldShowLimits = Blockly.editBlocks ? !blockSpace.isFlyout : blockSpace.isFlyout;
   if (limit && shouldShowLimits) {
     blockSpace.blockSpaceEditor.blockLimits.setLimit(block.type, parseInt(limit));
   }
