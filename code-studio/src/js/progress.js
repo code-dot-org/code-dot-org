@@ -164,7 +164,7 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
       });
     } else if (action.type === 'SHOW_LESSON_PLAN_LINKS') {
       return Object.assign({}, state, {
-        showLessonPlanLinks: action.showLessonPlanLinks
+        showLessonPlanLinks: true
       });
     }
     return state;
