@@ -35,7 +35,7 @@
       %br/
 
     - if standalone && !data['options'].try(:[], 'hide_submit')
-      .buttons
+      .buttons{class: data['submittable'] == 'true' ? 'submittable' : nil}
         %a.btn.btn-large.btn-primary.next-stage.submitButton
           =t('submit')
         %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
