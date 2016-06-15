@@ -658,6 +658,16 @@ Blockly.BlockSpace.prototype.paste = function(clipboard) {
       this.remainingCapacity()) {
     return;
   }
+  if (this.blockSpaceEditor.blockLimits.hasBlockLimits()) {
+    var types = goog.array.map(xmlBlock.getElementsByTagName('block'), function(block) {
+      return block.getAttribute('type');
+    });
+    types.push(xmlBlock.getAttribute('type'));
+
+    if (!this.blockSpaceEditor.blockLimits.canAddBlocks(types)) {
+      return;
+    }
+  }
   var block = Blockly.Xml.domToBlock(this, xmlBlock);
   // Move the duplicate to original position.
   var blockX = parseInt(xmlBlock.getAttribute('x'), 10);

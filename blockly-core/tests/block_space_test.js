@@ -193,3 +193,43 @@ function test_blockSpacesUseSameWidgetDiv() {
   assertNotNull(second);
   assertEquals(first, second);
 }
+
+function test_blockSpaceWithLimitedQuantitiesOfBlocks() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+
+  var flyout = Blockly.mainBlockSpace.blockSpaceEditor.flyout_;
+  flyout.init(Blockly.mainBlockSpace, true);
+
+  var toolboxXML = Blockly.Xml.textToDom(
+    '<xml>' +
+      '<block type="math_number" limit="1">' +
+        '<title name="NUM">0</title>' +
+      '</block>' +
+    '</xml>'
+  );
+  flyout.show(toolboxXML.childNodes);
+
+  var blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
+
+  assertEquals(true, blockLimits.hasBlockLimits());
+  assertEquals(1, blockLimits.limits_.math_number.limit);
+  assertEquals(0, blockLimits.limits_.math_number.count);
+
+  // can initially accomodate one more, but not two
+  assertEquals(true, blockLimits.blockTypeWithinLimits('math_number', 1));
+  assertEquals(false, blockLimits.blockTypeWithinLimits('math_number', 2));
+
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, Blockly.Xml.textToDom(
+    '<xml>' +
+      '<block type="math_number">' +
+        '<title name="NUM">0</title>' +
+      '</block>' +
+    '</xml>'
+  ));
+  flyout.onBlockSpaceChange_();
+
+  // can no longer even accomodate one
+  assertEquals(false, blockLimits.blockTypeWithinLimits('math_number', 1));
+
+  goog.dom.removeNode(container);
+}
