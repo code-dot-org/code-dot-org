@@ -168,6 +168,7 @@ export const ProgressDot = React.createClass({
             ]}
           /> :
           <div
+            className={`level-${level.id}`}
             style={[
               styles.dot.puzzle,
               this.props.courseOverviewPage && styles.dot.overview,
