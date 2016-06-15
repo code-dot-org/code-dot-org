@@ -110,6 +110,11 @@ module ApplicationHelper
     CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}/student/#{user.id}"
   end
 
+  # used by sign-up to retrieve the return_to URL from the session and delete it.
+  def get_and_clear_session_return_to
+    return session.delete(:return_to) if session[:return_to]
+  end
+
   # used by devise to redirect user after signing in
   def signed_in_root_path(resource_or_scope)
     if session[:return_to]
