@@ -1,0 +1,58 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-15T16:46:49.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": null,
+      "x": null,
+      "y": null,
+      "width": null,
+      "height": null,
+      "shapeColor": null,
+      "background": null,
+      "comment": null,
+      "rect": null,
+      "fill": null,
+      "draw": null,
+      "color": null
+    },
+    "show_d_pad": "false",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Animating with Sprites\r\n\r\n**Sprite properties can be used in the counter pattern too**.\r\n\r\n\t// Counter Pattern with variables\r\n    x = x + 1;\r\n    \r\n    // Counter Pattern with sprite properties\r\n    mySprite.x = mySprite.x + 1\r\n\r\nIf you call ![](https://images.code.org/16810be94cc61ea828e0acce5b642468-image-1466009389700.19.16 AM.png) inside the draw loop then you can use this counter pattern to animate sprites as well.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/2f9214a801a60af226fa604a9b6533f5-image-1466008001402.26.15 AM.png\" style=\"float:right; width:200px\">\r\n\r\nThis program creates 2 sprites and then animates one of them to move across the screen using the counter pattern.\r\n\r\n* Inside the draw loop **add code that uses the counter pattern to make the orange sprite move down the screen**\r\n* Hint: How can you use the counter pattern here? Look at the code for the redSprite if you need help.\r\n* Your animation should look like the example at the right.\r\n\r\n",
+    "start_blocks": "var redSprite = createSprite(50, 50, 50, 50);\r\nredSprite.shapeColor = \"red\";\r\n\r\nvar orangeSprite = createSprite(200, 50, 50, 50);\r\norangeSprite.shapeColor = \"orange\";\r\n\r\nfunction draw(){\r\n\t// Update Values\r\n\tredSprite.x = redSprite.x + 1;\r\n\t \r\n\t// Drawing\r\n\tbackground(\"white\");\r\n\tdrawSprites();\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

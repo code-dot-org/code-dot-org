@@ -107,7 +107,7 @@
         ],
         "matchType": "exact",
         "minTimes": 8,
-        "message": "It seems like you’re not turning the turtle enough times.  Remember that at the end the turtle should be facing the same direction in which it started."
+        "message": "It seems like you’re not turning the turtle enough times to make a square up and to the right and, at the end, to be facing the same direction in which it started."
       },
       {
         "entries": [
