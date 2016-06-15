@@ -1,14 +1,15 @@
 - unless @level.contained_levels.empty?
   - multi_script_added = false
   #contained_levels
+    - first_contained_level = @level.contained_levels.first
     - @level.contained_levels.each_with_index do |cl, index|
       %div{id: "containedLevel#{index}"}
         - if @user && current_user && @user != current_user
           -# load other user's solution for teachers viewing their students' solution
-          - sublevel_last_attempt = @user.last_attempt(level).try(:level_source).try(:data)
+          - sublevel_last_attempt = @user.last_attempt(cl).try(:level_source).try(:data)
         - elsif current_user
           -# load user's previous attempt at this puzzle.
-          - sublevel_last_attempt = current_user.last_attempt(level).try(:level_source).try(:data)
+          - sublevel_last_attempt = current_user.last_attempt(cl).try(:level_source).try(:data)
 
         - level_class = cl.class.to_s.underscore
         - if level_class == "multi"
@@ -31,8 +32,9 @@
 
 :javascript
   // TEMP (move JS into code-studio)
-  $(document).on('click', '.submitButton', function () {
-    var submitButton = $('.submitButton');
+  var submitSelector = "#submit_level_#{first_contained_level.id}";
+  $(document).on('click', submitSelector, function () {
+    var submitButton = $(submitSelector);
     if (submitButton.attr('disabled')) {
       return;
     }
@@ -42,12 +44,13 @@
 
     var onSendReportComplete = function (willRedirect) {
       if (!willRedirect) {
-        $('.submitButton').attr('disabled', false);
+        submitButton.attr('disabled', false);
       }
       console.log("onComplete is done!");
     };
 
-    var results = getResult();
+    var results = window.levelGroup.levels[#{first_contained_level.id}].getResult();
+    // var results = getResult();
     var response = results.response;
     var result = results.result;
     var errorType = results.errorType;
@@ -69,10 +72,10 @@
 
     window.dashboard.reporting.sendReport({
       program: response,
-      fallbackResponse: appOptions.dialog.fallbackResponse,
-      callback: appOptions.dialog.callback,
-      app: appOptions.dialog.app,
-      level: appOptions.dialog.level,
+      fallbackResponse: appOptions.report.fallbackResponse,
+      callback: appOptions.report.sublevelCallback + "#{first_contained_level.id}",
+      app: "#{first_contained_level.game.name}",
+      level: "#{first_contained_level.level_num}",
       result: result,
       pass: result,
       testResult: testResult,
@@ -81,6 +84,10 @@
         var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
         var willRedirect = !!lastServerResponse.nextRedirect;
         onSendReportComplete(willRedirect);
+
+        if (lastServerResponse.nextRedirect) {
+          window.location.href = lastServerResponse.nextRedirect;
+        }
 
         /*
         if (lastServerResponse.videoInfo) {
