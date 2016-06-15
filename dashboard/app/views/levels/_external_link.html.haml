@@ -5,3 +5,16 @@
   %h4= link_to @level.link_title, @level.url, target: '_blank'
 
   %div{style: 'padding-top: 100px'}!= t('external_links.disclaimer_md')
+
+  - if @script.try(:professional_learning_course?) && @script_level && @level.class == ExternalLink
+    -# Temporary hack - explicitly include the dialog helper so this submit button will post milestone
+    -# Long term plan is to have a footer section that will include these buttons
+    = javascript_include_tag 'js/levels/dialogHelper'
+    :javascript
+      function getResult() {
+        return {
+          response: 'ok',
+          result: true
+        };
+      }
+    = link_to @script_level.end_of_stage? ? t('done_with_module') : t('next_resource'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn pull-right btn-primary submitButton'
