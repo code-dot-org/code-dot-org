@@ -1,7 +1,7 @@
 /** @file Redux reducer and actions for the Animation Picker */
 'use strict';
 
-import _ from '../../lodash';
+import _ from 'lodash';
 import {addAnimation} from '../animationModule';
 import { makeEnum, createUuid } from '../../utils';
 import { sourceUrlFromKey } from '../animationMetadata';
