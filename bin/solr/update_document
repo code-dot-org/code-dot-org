@@ -27,6 +27,44 @@ def get_solr_id_from_db_id(db_id)
   return nil
 end
 
+def update_document_type_form(db_id, solr_id)
+  # TODO(asher): Refactor this and the code in bin/cron/process_forms to a
+  # shared method.
+  db_form = DB[:forms].where(id: db_id).first
+
+  kind = Object.const_get(db_form[:kind])
+  begin
+    solr_doc = JSON.load(db_form[:data]).
+      merge(JSON.load(db_form[:processed_data])).
+      merge({
+        id: db_form[:id],
+        kind_s: db_form[:kind],
+        review_s: db_form[:review],
+        user_i: db_form[:user_id],
+        parent_db_form_i: db_form[:parent_id]
+      })
+    solr_doc = kind.index(solr_doc) if kind.respond_to?(:index)
+
+    address_to_search = solr_doc['school_address_s'].to_s.strip
+    address_to_search = solr_doc['zip_code_s'].to_s.strip if address_to_search.empty?
+    address_to_search = db_form[:created_ip].to_s.strip if address_to_search.empty?
+    location = Geocoder.search(address_to_search).first
+    if location
+      solr_doc['create_ip_city_s'] = location.city
+      solr_doc['create_ip_state_s'] = location.state
+      solr_doc['create_ip_country_s'] = location.country
+      solr_doc['create_ip_postal_code_s'] = location.postal_code
+      solr_doc['create_ip_location_p'] = "#{location.latitude},#{location.longitude}" if location.latitude && location.longitude
+    end
+  rescue
+    puts "Form #{db_form[:id]} couldn't be indexed."
+    return
+  end
+
+  SOLR.update([solr_doc])
+  DB[:forms].where(id: db_id).update(indexed_at: DateTime.now)
+end
+
 def update_document_type_user(db_id, solr_id)
   db_user = DASHBOARD_DB[:users].find_by_id(db_id)
 
@@ -73,7 +111,7 @@ def update_document(type, db_id)
     puts "UPDATING SOLR DOCUMENT: #{solr_id}..."
     case type
     when 'form'
-      puts 'TODO(asher): Implement.'
+      update_document_type_form(db_id, solr_id)
     when 'user'
       update_document_type_user(db_id, solr_id)
     end
