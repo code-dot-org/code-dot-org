@@ -152,18 +152,14 @@ en:
       CSD U3 Draw Loop Stop: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Keypress Stop: {}
-      CSD U3 SFLP Card Project:
-        description here: description here
-        title: title
+      CSD U3 SFLP Card Project: {}
       CSD U3 SFLP Conditionals:
         description here: description here
         title: title
       CSD U3 SFLP Sprites and Images:
         description here: description here
         title: title
-      CSD U3 Sprites STOP sprites and variables:
-        description here: description here
-        title: title
+      CSD U3 Sprites STOP sprites and variables: {}
       CSD U3 Variables Reassign Predict No Response: {}
       CSD U3 Variables STOP misconceptions: {}
       CSD U3 Variables STOP misconceptions prediction: {}
