@@ -4,20 +4,11 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   setup do
     @user = create :admin_teacher
     sign_in(@user)
-
-    @section = create(:section)
-    Plc::UserCourseEnrollment.send(:remove_const, :PLC_SECTION)
-    Plc::UserCourseEnrollment::PLC_SECTION = @section
-
     @plc_course = create(:plc_course, name: 'Test Course')
     @user_course_enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
     @course_unit = create(:plc_course_unit, plc_course: @plc_course)
     @enrollment_unit_assignment = create(:plc_enrollment_unit_assignment, plc_course_unit: @course_unit, plc_user_course_enrollment: @user_course_enrollment, user: @user)
     @district_contact = create :district_contact
-  end
-
-  teardown do
-    Plc::UserCourseEnrollment::PLC_SECTION = nil
   end
 
   test "should get new" do
@@ -55,11 +46,6 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     assert_redirected_to action: :new, notice: "Enrollments created for #{user2.email}, #{user3.email}"
     assert_equal 1, Plc::UserCourseEnrollment.where(user: user2, plc_course: @plc_course).count
     assert_equal 1, Plc::UserCourseEnrollment.where(user: user3, plc_course: @plc_course).count
-
-    assert user2.teachers.include? @section.teacher
-    assert user3.teachers.include? @section.teacher
-    assert @section.students.include? user2
-    assert @section.students.include? user3
 
     assert_no_difference('Plc::UserCourseEnrollment.count') do
       post :create, user_emails: @user.email, plc_course_id: @plc_course.id
