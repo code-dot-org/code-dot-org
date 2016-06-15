@@ -1,7 +1,7 @@
 /* global dashboard */
 
 import api from '../applab/api';
-import _ from '../lodash';
+import _ from 'lodash';
 
 const COLOR_LIGHT_GREEN = '#D3E965';
 const COLOR_CYAN = '#4DD0E1';

@@ -1,7 +1,7 @@
 /**
  * A set of functional blocks
  */
-var _ = require('./lodash');
+var _ = require('lodash');
 var msg = require('./locale');
 
 var ARITHMETIC_TITLE_FONT_SIZE = 25;
