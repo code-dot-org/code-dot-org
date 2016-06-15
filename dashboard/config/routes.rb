@@ -271,25 +271,13 @@ Dashboard::Application.routes.draw do
     concerns :ops_routes
   end
 
-  get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
-  %w(courses learning_modules tasks course_units evaluation_questions).each do |object|
-    get '/plc/' + object, to: redirect('plc/content_creator/show_courses_and_modules')
-  end
-
   get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
   get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
 
   namespace :plc do
     root to: 'plc#index'
-    resources :courses
-    resources :learning_modules
     resources :user_course_enrollments
-    resources :course_units
-    resources :enrollment_unit_assignments
-    resources :evaluation_questions
   end
-
-  post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
 
   concern :api_v1_pd_routes do
     namespace :pd do
