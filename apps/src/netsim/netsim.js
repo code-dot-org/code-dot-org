@@ -11,7 +11,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var utils = require('../utils');
-var _ = require('../lodash');
+var _ = require('lodash');
 var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');

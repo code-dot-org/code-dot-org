@@ -1,4 +1,4 @@
-import _ from '../lodash';
+import _ from 'lodash';
 
 /**
  * A duck module for instructions, particularly instructions that we show in

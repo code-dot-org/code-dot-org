@@ -1,4 +1,4 @@
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 
 module.exports = {
   // Get all json files under directory path

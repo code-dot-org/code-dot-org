@@ -1,4 +1,4 @@
-const _ = require('@cdo/apps/lodash');
+const _ = require('lodash');
 import {assert} from '../util/configuredChai';
 var sinon = require('sinon');
 
