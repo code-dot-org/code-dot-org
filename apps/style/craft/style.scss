@@ -927,3 +927,8 @@ $height-to-width: 434 / 477;
   bottom: -66px !important;
   margin-left: -33px !important;
 }
+
+// Overrides style in application.css.scss from dashboard
+.instructions-markdown p {
+  color: $white;
+}

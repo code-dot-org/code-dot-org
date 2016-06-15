@@ -41,7 +41,7 @@ const ThreeColumns = (props) => {
   };
 
   return (
-    <div style={Object.assign({}, styles.container, style)}>
+    <div style={[styles.container].concat(style)}>
       <div style={styles.middle}>{children[1]}</div>
       <div style={styles.left}>{children[0]}</div>
       <div style={styles.right}>{children[2]}</div>
