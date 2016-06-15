@@ -332,7 +332,7 @@ Then /^I verify progress in the header of the current page is "([^"]*)" for leve
   steps %{
     And I wait to see ".header_level_container"
     And I wait for 10 seconds
-    And element ".header_level_container a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And element ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
