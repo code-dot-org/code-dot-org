@@ -18,7 +18,7 @@ Major additions and changes in this fork:
   * Image Dropdown ([field_image_dropdown.js](./core/ui/fields/field_image_dropdown.js))
 * Refactoring:
   * move many static properties and methods from `blockly.js` into a prototype class `BlockSpaceEditor` which can be instantiated multiple times on the same page
-  * rename "Workspace" to "BlockSpace" 
+  * rename `Workspace` to `BlockSpace` to disambiguate from higher-level `BlockSpaceEditor`
 * Playground: add dependency cache and generation script ([tests/update_test_dependencies.sh](./tests/update_test_dependencies.sh)), to allow for testing changes without re-building
   * support for [goog.ui.tweak](https://google.github.io/closure-library/source/closure/goog/demos/tweakui.html)s to configure playground page behavior
   * debug drawing helpers for block bumping 
