@@ -27,9 +27,6 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
   validates :user_id, uniqueness: {scope: :plc_course_id}, on: :create
 
   after_create :create_enrollment_unit_assignments
-  after_create :set_plc_section
-
-  PLC_SECTION = Section.find_by_code('PRJWJN')
 
   def create_enrollment_unit_assignments
     plc_course.plc_course_units.each do |course_unit|
@@ -38,9 +35,5 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
                                            status: Plc::EnrollmentUnitAssignment::START_BLOCKED,
                                            user: user)
     end
-  end
-
-  def set_plc_section
-    PLC_SECTION.add_student(user) if PLC_SECTION
   end
 end
