@@ -85,11 +85,19 @@ type RateLimitCounter {
 
 type Storage {
   tables: TableStorage[]
-  keys: String[]
+  keys: KeyValue[]
+}
+
+type KeyValue extends String {
+  validate() { this.length <= root.v3.config.channels.maxPropertySize}
 }
 
 type TableStorage {
-  records: String[]
+  records: Record[]
+}
+
+type Record extends String {
+  validate() { this.length <= root.v3.config.channels.maxRecordSize}
 }
 
 ///////////////////////////////////////////////////////////////////////////
