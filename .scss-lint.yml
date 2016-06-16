@@ -31,8 +31,6 @@ linters:
     enabled: false
   PropertySortOrder:
     enabled: false
-  PseudoElement:
-    enabled: false
   QualifyingElement:
     enabled: false
   SelectorDepth:
