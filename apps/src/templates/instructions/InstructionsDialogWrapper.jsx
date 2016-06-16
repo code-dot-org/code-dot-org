@@ -12,6 +12,13 @@ import { closeDialog } from '../../redux/instructions';
  * anyways.
  */
 const InstructionsDialogWrapper = React.createClass({
+  propTypes: {
+    isOpen: React.PropTypes.bool.isRequired,
+    autoClose: React.PropTypes.bool,
+    showHints: React.PropTypes.bool,
+    showInstructionsDialog: React.PropTypes.func.isRequired
+  },
+
   componentWillReceiveProps(nextProps) {
     if (!this.props.isOpen && nextProps.isOpen) {
       this.props.showInstructionsDialog(nextProps.autoClose, nextProps.showHints);
@@ -23,19 +30,8 @@ const InstructionsDialogWrapper = React.createClass({
   }
 });
 
-InstructionsDialogWrapper.props = {
-  isOpen: React.PropTypes.bool.isRequired,
-  autoClose: React.PropTypes.bool,
-  showHints: React.PropTypes.bool,
-  showInstructionsDialog: React.PropTypes.func.isRequired
-};
-
 export default connect(state => ({
   isOpen: state.instructionsDialog.open,
   autoClose: state.instructionsDialog.autoClose,
   showHints: state.instructionsDialog.showHints,
-}), dispatch => ({
-  closeDialog() {
-    dispatch(closeDialog());
-  }
 }))(InstructionsDialogWrapper);
