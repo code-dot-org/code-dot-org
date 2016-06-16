@@ -4,7 +4,7 @@
 'use strict';
 
 import $ from 'jquery';
-var _ = require('../lodash');
+var _ = require('lodash');
 var ObservableEvent = require('../ObservableEvent');
 var NetSimApi = require('./NetSimApi');
 var NetSimGlobals = require('./NetSimGlobals');

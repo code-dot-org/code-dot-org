@@ -1,5 +1,5 @@
 var CustomEvalError = require('./evalError');
-var _ = require('../lodash');
+var _ = require('lodash');
 
 /**
  * Throws an expection if val is not of the expected type. Type is either a

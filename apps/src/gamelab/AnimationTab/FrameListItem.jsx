@@ -2,7 +2,7 @@
 'use strict';
 
 var React = require('react');
-var _ = require('../../lodash');
+var _ = require('lodash');
 var color = require('../../color');
 var connect = require('react-redux').connect;
 var ListItemButtons = require('./ListItemButtons');

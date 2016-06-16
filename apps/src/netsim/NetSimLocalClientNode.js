@@ -7,7 +7,7 @@
 'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
-var _ = require('../lodash');
+var _ = require('lodash');
 var i18n = require('./locale');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimEntity = require('./NetSimEntity');

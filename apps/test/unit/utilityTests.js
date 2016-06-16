@@ -5,7 +5,7 @@ var xml = require('@cdo/apps/xml');
 testUtils.setupLocales();
 
 var utils = require('@cdo/apps/utils');
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
 describe("String.prototype.repeat", function () {
