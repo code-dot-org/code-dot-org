@@ -54,7 +54,7 @@ p,pre,span {
 
 body {
   @include unselectable;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   padding: 0px;
   font-style: normal;
 }
@@ -2374,5 +2374,5 @@ $width: 400px;
   padding: 3px;
   z-index: 100;
   cursor: pointer;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }

@@ -44,8 +44,6 @@ linters:
     enabled: false
   SingleLinePerSelector:
     enabled: false
-  SpaceAfterComma:
-    enabled: false
   SpaceAfterPropertyColon:
     enabled: false
   SpaceBeforeBrace:
