@@ -213,6 +213,8 @@ Dashboard::Application.routes.draw do
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
 
+  get '/admin/styleguide', :to => 'admin_styleguide#show', as: 'styleguide'
+
   get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
