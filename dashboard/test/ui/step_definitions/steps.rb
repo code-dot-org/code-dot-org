@@ -364,6 +364,10 @@ Then /^element "([^"]*)" has css property "([^"]*)" equal to "([^"]*)"$/ do |sel
   element_has_css(selector, property, expected_value)
 end
 
+Then /^elements "([^"]*)" have css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_values|
+  elements_have_css(selector, property, expected_values)
+end
+
 Then /^I set selector "([^"]*)" text to "([^"]*)"$/ do |selector, text|
   @browser.execute_script("$(\"#{selector}\").text(\"#{text}\");")
 end
@@ -599,6 +603,23 @@ Given(/^I am a (student|teacher)$/) do |user_type|
   steps %Q{
     And I create a #{user_type} named "#{random_name}"
   }
+end
+
+Given(/^I am enrolled in a plc course$/) do
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users.first[1][:email])
+  course = Plc::Course.find_by(name: 'CSP Support')
+  enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
+  enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
+end
+
+Then(/^I fake completion of the assessment$/) do
+  user = User.find_by_email_or_hashed_email(@users.first[1][:email])
+  unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user)
+  unit_assignment.enroll_user_in_unit_with_learning_modules([
+    unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::CONTENT_MODULE),
+    unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::PRACTICE_MODULE)
+  ])
 end
 
 def generate_user(name)
