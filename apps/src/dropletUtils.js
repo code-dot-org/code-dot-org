@@ -614,7 +614,45 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, p
     .concat(configuredBlocks);
 };
 
+/**
+ * @param {string} methodName name of method to get first param of
+ * @param {DropletBlock} block Droplet block, or undefined if in text mode
+ * @param {AceEditor} editor
+ */
+exports.getFirstParam = function (methodName, block, editor) {
+  if (!block) {
+    // If we're not given a block, assume that we're in text mode
+    var cursor = editor.session.selection.getCursor();
+    var contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
+
+    return getFirstParamFromCode(methodName, contents);
+  }
+  // We have a block. Parse it to find our first socket.
+  var token = block.start;
+  do {
+    if (token.type === 'socketStart') {
+      var textToken = token.next;
+      if (textToken.type !== 'text') {
+        throw new Error('unexpected');
+      }
+      return textToken.value;
+    }
+    token = token.next;
+  } while (token);
+  return null;
+};
+
+function getFirstParamFromCode(methodName, code) {
+  var prefix = `${methodName}(`;
+  code = code.slice(code.lastIndexOf(prefix));
+  const escapedRegex = `^${methodName}\\((['"])(.*)\\1,\\s*$`;
+  // quote, followed by param, followed by end quote, comma, and optional whitespace
+  var match = (new RegExp((escapedRegex))).exec(code);
+  return match ? match[2] : null;
+}
+
 exports.__TestInterface = {
   mergeCategoriesWithConfig: mergeCategoriesWithConfig,
-  filteredBlocksFromConfig: filteredBlocksFromConfig
+  filteredBlocksFromConfig: filteredBlocksFromConfig,
+  getFirstParamFromCode: getFirstParamFromCode
 };
