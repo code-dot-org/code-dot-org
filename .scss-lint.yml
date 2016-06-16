@@ -17,8 +17,6 @@ linters:
     enabled: false
   EmptyLineBetweenBlocks:
     enabled: false
-  FinalNewline:
-    enabled: false
   IdSelector:
     enabled: false
   ImportantRule:
