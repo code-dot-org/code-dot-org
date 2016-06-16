@@ -1,6 +1,6 @@
 /* global Applab */
 
-import { getDatabase } from './firebaseUtils';
+import { loadConfig, getDatabase } from './firebaseUtils';
 import { updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
@@ -49,9 +49,13 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
   // which require JSON texts (such as Ruby's), this can be converted to a JSON text via:
   // `{v: ${jsonValue}}`. For terminology see: https://tools.ietf.org/html/rfc7159
   const jsonValue = JSON.stringify(value);
-  incrementRateLimitCounters()
-    .then(() => keyRef.set(jsonValue))
-    .then(onSuccess, onError);
+
+  loadConfig().then(config => {
+    if (jsonValue.length > config.maxPropertySize) {
+      return Promise.reject(`The value is too large. The maximum allowable size is ${config.maxPropertySize} bytes.`);
+    }
+    return incrementRateLimitCounters();
+  }).then(() => keyRef.set(jsonValue)).then(onSuccess, onError);
 };
 
 /**
