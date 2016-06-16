@@ -645,9 +645,9 @@ exports.getFirstParam = function (methodName, block, editor) {
 function getFirstParamFromCode(methodName, code) {
   var prefix = `${methodName}(`;
   code = code.slice(code.lastIndexOf(prefix));
-  const escapedRegex = `^${methodName}\\((['"])(.*)\\1,\\s*$`;
   // quote, followed by param, followed by end quote, comma, and optional whitespace
-  var match = (new RegExp((escapedRegex))).exec(code);
+  const backslashEscapedRegex = `^${methodName}\\((['"])(.*)\\1,\\s*$`;
+  var match = new RegExp(backslashEscapedRegex).exec(code);
   return match ? match[2] : null;
 }
 
