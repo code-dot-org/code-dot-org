@@ -48,8 +48,6 @@ linters:
     enabled: false
   StringQuotes:
     enabled: false
-  TrailingSemicolon:
-    enabled: false
   UnnecessaryParentReference:
     enabled: false
   VendorPrefix:

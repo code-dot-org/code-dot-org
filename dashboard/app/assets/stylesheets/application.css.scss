@@ -286,7 +286,7 @@ html, body {
     width: auto;
     font-size:11px;
     height: 18px;
-    margin-bottom: 4px
+    margin-bottom: 4px;
     }
   .fineprint {
     a:link {font-family: $gotham-bold; font-weight: normal;}
@@ -337,7 +337,7 @@ $small-footer-standard-width: 400px;
     background-color: $dark-charcoal;
     a {
       &:hover {
-        color: $lightest_gray
+        color: $lightest_gray;
       }
     }
   }
@@ -1341,11 +1341,11 @@ a.download-video {
   }
   .itemblock {
     display:inline-block;
-    width:600px
+    width:600px;
   }
   .labelblock {
     display:inline-block;
-    width:140px
+    width:140px;
   }
 }
 
@@ -1379,14 +1379,14 @@ a.download-video {
   }
   .signupform {
     padding:20px;
-    margin-bottom:0px
+    margin-bottom:0px;
   }
   .itemblock {
     display:table;
   }
   .labelblock {
     display:table-cell;
-    width:140px
+    width:140px;
   }
   .fieldblock {
     width:220px;
@@ -1400,15 +1400,15 @@ a.download-video {
   }
   #labelusername {
     vertical-align:top;
-    padding-top:7px
+    padding-top:7px;
   }
   #usernamefield {
-    vertical-align:top
+    vertical-align:top;
   }
   #usernamemessage, #password_message, #password_message_confirmation {
     display:inline-block;
     max-width:180px;
-    vertical-align:top
+    vertical-align:top;
   }
   .error_in_field {
     color: red;
@@ -1418,10 +1418,10 @@ a.download-video {
     vertical-align: middle;
   }
   select {
-    width:234px
+    width:234px;
   }
   .field_with_errors {
-    display:inline-block
+    display:inline-block;
   }
   button {
     font-size:16px;
@@ -2003,7 +2003,7 @@ $modal-no-icon-gap: 22px;
     margin: 0 15px 0 0;
     float: left;
     border: lightgrey;
-    border-style: solid
+    border-style: solid;
   }
 
   .feedback-links {
