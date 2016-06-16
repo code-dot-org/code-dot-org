@@ -193,22 +193,13 @@ var TopInstructions = React.createClass({
    */
   adjustMaxNeededHeight() {
     const minHeight = this.getMinHeight();
+    const contentContainer = this.props.hasContainedLevels ?
+        this.refs.containedLevelContainer : this.refs.instructions;
+    const maxNeededHeight = $(ReactDOM.findDOMNode(contentContainer)).outerHeight(true) +
+      RESIZER_HEIGHT;
 
-    if (this.props.hasContainedLevels) {
-      const maxNeededContainedLevelHeight =
-        $(ReactDOM.findDOMNode(this)).find('#containedLevelContainer').outerHeight(true) +
-        RESIZER_HEIGHT;
-
-      this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededContainedLevelHeight));
-      return maxNeededContainedLevelHeight;
-    } else {
-      const instructionsContent = this.refs.instructions;
-      const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
-        RESIZER_HEIGHT;
-
-      this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
-      return maxNeededHeight;
-    }
+    this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
+    return maxNeededHeight;
   },
 
   /**
@@ -271,6 +262,7 @@ var TopInstructions = React.createClass({
           <div ref="instructions">
             {this.props.hasContainedLevels && <ProtectedStatefulDiv
               id="containedLevelContainer"
+              ref="containedLevelContainer"
               className='contained-level-container'/>
             }
             {!this.props.hasContainedLevels && <Instructions
