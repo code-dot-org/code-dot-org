@@ -50,6 +50,10 @@ const styles = {
     borderRadius: 10,
     width: '100%',
   },
+  bodyCraft: {
+    // $below-header-background from craft/style.scss
+    backgroundColor: '#646464'
+  },
   embedView: {
     height: undefined,
     bottom: 0,
@@ -81,6 +85,7 @@ const styles = {
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
+    isMinecraft: React.PropTypes.bool.isRequired,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
@@ -236,7 +241,7 @@ var TopInstructions = React.createClass({
     return (
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
-            style={styles.body}
+            style={[styles.body, this.props.isMinecraft && styles.bodyCraft]}
             leftColWidth={leftColWidth}
             rightColWidth={this.state.rightColWidth}
             height={this.props.height - resizerHeight}
@@ -287,6 +292,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
+    isMinecraft: state.pageConstants.isMinecraft,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
     maxHeight: Math.min(state.instructions.maxAvailableHeight,

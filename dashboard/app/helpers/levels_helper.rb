@@ -615,9 +615,11 @@ module LevelsHelper
     @level.is_a?(Blockly)
   end
 
-  # If this is a restricted level (i.e. applab) and user is under 13, redirect with a flash alert
-  def redirect_applab_under_13(level)
-    return unless level.game == Game.applab
+  # If this is a restricted level (i.e., applab) and user is under 13, redirect
+  # with a flash alert.
+  def redirect_under_13(level)
+    # Note that Game.applab includes both App Lab and Maker Lab.
+    return unless level.game == Game.applab || level.game == Game.gamelab
 
     if current_user && current_user.under_13?
       redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }

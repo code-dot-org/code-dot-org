@@ -1,6 +1,6 @@
 var SquareType = require('./tiles').SquareType;
 var Direction = require('./tiles').Direction;
-var _ = require('../lodash');
+var _ = require('lodash');
 var studioApp = require('../StudioApp').singleton;
 
 var TILE_SHAPES = {
