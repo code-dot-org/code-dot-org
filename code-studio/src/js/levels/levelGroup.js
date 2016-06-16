@@ -51,7 +51,7 @@ window.initLevelGroup = function (
         program: response,
         fallbackResponse: appOptions.dialog.fallbackResponse,
         callback: appOptions.dialog.sublevelCallback + subLevelId,
-        app: appOptions.dialog.app,
+        app: levels[subLevelId].getAppName(),
         allowMultipleSends: true,
         level: subLevelId,
         result: subLevelResult,
