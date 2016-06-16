@@ -15,7 +15,7 @@
   - else
     - question_content_class = "question"
 
-  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone || contained_mode}
+  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone }
 
   - if data['questions']
     - question_text = multi_t(level, data['questions'][0]['text'])
@@ -35,7 +35,7 @@
     - unless use_tight_layout
       %br/
 
-    - if (standalone || contained_mode) && !data['options'].try(:[], 'hide_submit')
+    - if (standalone) && !data['options'].try(:[], 'hide_submit')
       .buttons
         %a.btn.btn-large.btn-primary.next-stage.submitButton{id: "submit_level_#{level.id}"}
           =t('submit')
@@ -100,6 +100,7 @@
     window.levelGroup.levels[#{level.id}] = new Multi(
       #{level.id},
       "level_#{level.id}",
+      "#{app}",
       #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,
       #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map {|answer| answer['correct'] || false}},
