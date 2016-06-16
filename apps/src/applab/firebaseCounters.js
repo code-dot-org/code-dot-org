@@ -61,17 +61,14 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
  *   limits is exceeded.
  */
 export function incrementRateLimitCounters() {
-  let promises = [];
-  promises.push(loadConfig());
-  promises.push(getCurrentTime());
-  return Promise.all(promises).then(results => {
-    const config = results[0];
-    const currentTimeMs = results[1];
+  return Promise.all([loadConfig(), getCurrentTime()]).then(results => {
+    const [config, currentTimeMs] = results;
 
-    let intervalPromises = [];
-    Object.keys(config.limits).forEach(interval => {
+    // Issue one transaction per interval in parallel to increment or reset the
+    // rate-limiting counters associated with that interval.
+    return Promise.all(Object.keys(config.limits).map(interval => {
       const limitRef = getDatabase(Applab.channelId).child(`counters/limits/${interval}`);
-      intervalPromises.push(limitRef.transaction(limitData => {
+      return limitRef.transaction(limitData => {
         limitData = limitData || {};
         limitData.lastResetTime = limitData.lastResetTime || 0;
         limitData.writeCount = (limitData.writeCount || 0) + 1;
@@ -98,9 +95,8 @@ export function incrementRateLimitCounters() {
         } else {
           return Promise.resolve();
         }
-      }));
-    });
-    return Promise.all(intervalPromises);
+      });
+    }));
   });
 }
 
