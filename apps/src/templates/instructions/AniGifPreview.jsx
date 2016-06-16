@@ -14,11 +14,16 @@ const styles = {
   aniGifPreview: url => ({
     cursor: 'pointer',
     backgroundImage: `url('${url}')`
-  })
+  }),
+  // In Jigsaw levels, we want anigif preview to be larger (normally it's 80x60)
+  bigPreview: {
+    width: 240,
+    height: 180,
+    backgroundSize: '240px 180px'
+  }
 };
 
 const AniGifPreview = React.createClass({
-
   render() {
     return (
       <div
@@ -27,7 +32,10 @@ const AniGifPreview = React.createClass({
       >
         <div
             id="ani-gif-preview"
-            style={styles.aniGifPreview(this.props.url)}
+            style={[
+              styles.aniGifPreview(this.props.url),
+              this.props.noVisualization && styles.bigPreview
+            ]}
             onClick={this.props.instructionsInTopPane ? this.props.showInstructionsDialog : undefined}
         />
       </div>
@@ -43,6 +51,7 @@ AniGifPreview.propTypes = {
 
 export default connect(state => ({
   url: state.pageConstants.aniGifURL,
+  noVisualization: state.pageConstants.noVisualization,
   instructionsInTopPane: state.pageConstants.instructionsInTopPane
 }), dispatch => ({
   showInstructionsDialog() {
