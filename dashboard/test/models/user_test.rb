@@ -61,12 +61,6 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors[:email].length == 1
   end
 
-  test "cannot create young user with invalid email" do
-    user = User.create(@good_data_young.merge({email: 'foo@bar'}))
-    assert !user.valid?
-    assert user.errors[:email].length == 1
-  end
-
   test "cannot create user with no type" do
     user = User.create(@good_data.merge(user_type: nil))
     assert !user.valid?
@@ -351,28 +345,16 @@ class UserTest < ActiveSupport::TestCase
     assert user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
   end
 
-  # TODO(asher): After the dust settles from PR#8582, consolidate the over and
-  # under 13 tests.
-  test 'students under 13 have hashed email not plaintext email' do
-    student = create :student, birthday: Date.new(2010, 10, 4), email: 'will_be_hashed@email.xx'
+  test 'students have hashed email not plaintext email' do
+    student = create :student, email: 'will_be_hashed@email.xx'
 
-    assert student.age < 13
-    assert student.email.blank?
-    assert student.hashed_email.present?
-  end
-
-  test 'students over 13 have hashed email not plaintext email' do
-    student = create :student, birthday: Date.new(1990, 10, 4), email: 'will_be_hashed@email.xx'
-
-    assert student.age.to_i > 13
     assert student.email.blank?
     assert student.hashed_email.present?
   end
 
   test 'teachers have hashed email and plaintext email' do
-    teacher = create :teacher, birthday: Date.new(1990, 10, 4), email: 'email@email.xx'
+    teacher = create :teacher, email: 'email@email.xx'
 
-    assert teacher.age.to_i > 13
     assert teacher.email.present?
     assert teacher.hashed_email.present?
   end
@@ -491,9 +473,9 @@ class UserTest < ActiveSupport::TestCase
     assert ActionMailer::Base.deliveries.empty?
   end
 
-  test "send reset password for older student" do
+  test 'send reset password for student' do
     email = 'email@email.xx'
-    student = create :student, age: 20, password: 'oldone', email: email
+    student = create :student, password: 'oldone', email: email
 
     assert User.send_reset_password_instructions(email: email)
 
@@ -514,19 +496,6 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     # password was changed
     assert old_password != student.encrypted_password
-  end
-
-  test 'send reset password for under 13 student' do
-    email = 'email@email.xx'
-    student = create :student, age: 10, email: email
-
-    User.send_reset_password_instructions(email: email)
-
-    mail = ActionMailer::Base.deliveries.first
-    assert_equal [email], mail.to
-    assert_equal 'Code.org reset password instructions', mail.subject
-    student = student.reload
-    assert student.reset_password_token
   end
 
   test 'send reset password for student without age' do
