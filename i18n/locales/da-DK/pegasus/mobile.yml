@@ -1,7 +1,12 @@
 da-DK:
   hour_of_code: Hour of Code
   hello: Hej verden
+  "yes": Ja
+  "no": Nej
   select_language: Vælg dit sprog
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Lær mere
   en: Datalogi
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: 8.-14. december 2014
@@ -552,6 +557,7 @@ da-DK:
   dashboard_sections_table_secret: Login type
   dashboard_sections_table_grade: Graduering
   dashboard_sections_table_course: Kursus
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Elever
   dashboard_sections_table_code: Holdkode
   dashboard_sections_name: Sektionsnavnet
@@ -567,7 +573,7 @@ da-DK:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.

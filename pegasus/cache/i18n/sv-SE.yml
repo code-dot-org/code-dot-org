@@ -1,7 +1,14 @@
 "sv-SE":
   hour_of_code: Timmen med Kod
   hello: Hej världen
+  'yes': Ja
+  'no': Nej
   select_language: Välj ditt språk
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Lär dig mer
   en: Datavetenskap
   computer_science_edweek: Utbildningsvecka för dataveteskap
   csedweek_dates: 8-14 december 2014
@@ -702,6 +709,7 @@
   dashboard_sections_table_secret: Inloggningstyp
   dashboard_sections_table_grade: "Årskurs"
   dashboard_sections_table_course: Kurs
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Elever
   dashboard_sections_table_code: Avsnitt kod
   dashboard_sections_name: Sektionsnamn
@@ -1712,11 +1720,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spela
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

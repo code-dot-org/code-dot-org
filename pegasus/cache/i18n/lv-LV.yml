@@ -1,7 +1,14 @@
 "lv-LV":
   hour_of_code: Programmēšanas stunda
   hello: Sveika, pasaule
+  'yes': Jā
+  'no': Nē
   select_language: Lūdzu izvēlieties savu valodu
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Uzzini vairāk
   en: Datorzinātne
   computer_science_edweek: Datorzinātnes Izglītības nedēļa
   csedweek_dates: 2014. gada 8. - 14. decembris
@@ -726,6 +733,7 @@
   dashboard_sections_table_secret: Autorizēšanās veids
   dashboard_sections_table_grade: Vērtējums
   dashboard_sections_table_course: Kurss
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Skolēni
   dashboard_sections_table_code: Sadaļas kods
   dashboard_sections_name: Sadaļas nosaukums
@@ -1723,11 +1731,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spēlēt
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

@@ -1,6 +1,6 @@
 /** @file redux actions and reducers for project animation metadata. */
 
-import _ from '../lodash';
+import _ from 'lodash';
 import utils from '../utils';
 import {animations as animationsApi} from '../clientApi';
 import {reportError} from './errorDialogStackModule';

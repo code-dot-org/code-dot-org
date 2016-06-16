@@ -39,7 +39,7 @@ var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var mazeUtils = require('./mazeUtils');
-var _ = require('../lodash');
+var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var experiments = require('../experiments');
 

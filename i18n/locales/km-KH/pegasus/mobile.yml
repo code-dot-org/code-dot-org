@@ -1,7 +1,12 @@
 km-KH:
   hour_of_code: ពេលវេលា​នៃ​កូដ
   hello: សួស្ដី​ពិភពលោក
+  "yes": យល់ព្រម
+  "no": ទេ
   select_language: សូម​ជ្រើសយក​ភាសា​របស់​អ្នក
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: រៀនបន្ថែមទៀត
   en: វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
   computer_science_edweek: សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
   csedweek_dates: ខែ​ធ្នូ ទី​៨ ឆ្នាំ​២០១៤
@@ -565,6 +570,7 @@ km-KH:
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Section Name
@@ -580,7 +586,7 @@ km-KH:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.

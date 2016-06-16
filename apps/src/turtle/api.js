@@ -1,4 +1,4 @@
-var _ = require('../lodash');
+var _ = require('lodash');
 
 /**
  * An instantiable Artist API logic. The methods on this object are called by

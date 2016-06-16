@@ -1,7 +1,12 @@
 fr-FR:
   hour_of_code: Heure de Code
   hello: Bonjour tout le monde
+  "yes": Oui
+  "no": Non
   select_language: Veuillez sélectionner votre langue
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Pour en savoir plus
   en: Informatique/Sciences informatiques
   computer_science_edweek: "Semaine de l'enseignement de l’informatique"
   csedweek_dates: Du 8 au 14 décembre 2014
@@ -451,10 +456,10 @@ fr-FR:
   dashboard_landing_more_tutorials: Vous désirez voir encore plus de tutoriels ?
   dashboard_landing_more_tutorials_desc: |-
     Il y a plus de tutoriels <a href="/learn/beyond">offerts par nos partenaires.</a> Apprendre à programmer avec des robots, créer des pages web ou une application personnalisée, ou explorer d'autres langages tels que C++, Ruby ou Python !
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_inspire: Inspirer vos élèves avec des affiches, des vidéos et plus encore.
+  dashboard_landing_video_library: Utilisez une vidéo de la bibliothèque vidéo des concepts de science informatique.
+  dashboard_landing_report_bug: Demander une fonctionnalité ou signaler un bug.
+  dashboard_landing_teacher_forum: "Rejoignez la communauté d'apprentissage professionnel."
   dashboard_hoc_courses: "L'Heure de Code pour tous les âges"
   dashboard_hoc_courses_desc: "Essayez l'un de ces tutoriels plus courts (1 heure) avec vos élèves !"
   dashboard_hoc_courses_desc_and_cta: |-
@@ -490,7 +495,7 @@ fr-FR:
   dashboard_action_required: obligatoire
   dashboard_assessments_view: 'Afficher les évaluations dans :'
   dashboard_assessments_none: "Pas d'évaluation"
-  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_none_part2: "Si vous enseignez au collège ou au lycée, nous avons des questions d'évaluation disponibles dans le cadre du Code Studio pour aider vos élèves à se préparer pour le test d'AP. Pour utiliser ces évaluations, assignez d'abord le cours à la classe puis sélectionnez le cours depuis menu déroulant au dessus et vous y verrez les réponses de vos élèves."
   dashboard_assessments_summaries: Résumés
   dashboard_assessments_answers: Toutes les réponses
   dashboard_filter_by_stage: 'Filtrer par étape :'
@@ -522,7 +527,7 @@ fr-FR:
   dashboard_progress_submitted: envoyé
   dashboard_progress_view: 'Afficher la progression dans :'
   dashboard_progress_student_in_script: 'Informations de progression pour %{student_name} dans %{script_name}'
-  dashboard_progress_pair_programming: pair programming
+  dashboard_progress_pair_programming: programmation en binôme
   dashboard_responses_view: 'Afficher les réponses écrites dans :'
   dashboard_responses_none: Pas de réponses écrites
   dashboard_sections_new_section: Nouvelle section
@@ -531,6 +536,7 @@ fr-FR:
   dashboard_sections_table_secret: Type de connexion
   dashboard_sections_table_grade: Classe
   dashboard_sections_table_course: Cours
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Élèves
   dashboard_sections_table_code: Code de la section
   dashboard_sections_name: Nom de la section
@@ -596,7 +602,7 @@ fr-FR:
   dashboard_course2: 'Cours 2&#160;:'
   dashboard_course3: 'Cours 3&#160;:'
   dashboard_course4: 'Cours 4 (bêta) : '
-  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_unplugged: "Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez ces leçons sans électronique</a> dans votre salle de classe."
   dashboard_curriculum: Programme
   dashboard_curriculum_overview: Aperçu du programme pour les élèves de primaire
   dashboard_overview: Aperçu
@@ -775,11 +781,11 @@ fr-FR:
   cspunit4_name: "Principes de l'informatique, unité 4"
   cspunit5_name: "Principes de l'informatique, unité 5"
   cspunit6_name: "Principes de l'informatique, unité 6"
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
-  cspassessment_name: 'Full Test - 50 questions'
-  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
-  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
+  csp1_name: 'Unité 1: Internet'
+  csp2_name: 'Unité 2: L’Information numérique'
+  cspassessment_name: 'Test complet - 50 questions'
+  cspexam1-mWU7ilDYM9_name: Test, partie 1, 25 questions
+  cspexam2-AKwgAh1ac5_name: Test, partie 2, 25 questions
   cspunit3_gradelevel: Niveaux de lycée
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: Cours accéléré
@@ -795,8 +801,8 @@ fr-FR:
   hoc_category_name: Heure de Code
   csf_category_name: "Fondamentaux d'informatique"
   csp_category_name: "Principes de l'informatique"
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: CS Principles Practice Test
+  csp17_category_name: Principes de CS 16-17
+  cspexams_category_name: "Test d'entrainement aux principes du CS"
   applab_name: Labo des applis
   applab_gradelevel: 'Âge recommandé : 13+'
   applab_shortdescription_congrats: App Lab est un environnement de programmation avec lequel vous pouvez créer des applications simples. Concevez une application, codez-la avec des blocs ou du JavaScript, puis partagez-la en quelques secondes

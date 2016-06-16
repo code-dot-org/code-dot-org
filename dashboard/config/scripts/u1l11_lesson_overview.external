@@ -18,7 +18,7 @@ In this lesson student develop a protocol for reliably sending a message over an
 
 ### Things to keep in mind while planning this lesson at TeacherCon
 
-- The version of the Internet Simulator used in this lesson very advanced, but note that in the previous lesson participants will learn about routers and how to use the router log browser to investigate traffic traveling around the network.  So you can assume that you shouldn’t have to have participants discover that again.
+- The version of the Internet Simulator used in this lesson is very advanced, but note that in the previous lesson participants will learn about routers and how to use the router log browser to investigate traffic traveling around the network.  So you can assume that you shouldn’t have to have participants discover that again.
 - Your planning should focus on engaging ways to motivate the problem groups will be solving (invent a way to send larger messages, reliably, when the internet simulator is setup to ONLY allow very small messages (6 chars) and drops 10-20% of all traffic).
 - Like any problem solving activity, the key is in the setup.  Once learners are going with the Internet Simulator it can be hard to reign them back in.  So take the proper time to setup, clarify, and motivate the problem, then set learners off on solving the problem.
 - Make sure to demonstrate or have a group exploration of how to create multiple packets in the new version of the Internet Simulator
@@ -31,7 +31,8 @@ In this lesson student develop a protocol for reliably sending a message over an
 <br>
 Head over to curriculum.code.org to see this lesson and all associated resources (like videos and worksheets). 
 <br><br>
-<a href="https://curriculum.code.org/csp/unit1/11/" target="blank"><button class="plc">U1L11 Lesson Plan >></button></a><br>
-
+<h4>
+<a href="https://curriculum.code.org/csp/unit1/11/" target="blank"> U1L11 Lesson Plan >></a><br>
+</h4>
 
 MARKDOWN

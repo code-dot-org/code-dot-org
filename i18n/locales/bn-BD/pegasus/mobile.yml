@@ -1,7 +1,12 @@
 bn-BD:
   hour_of_code: এক ঘন্টার কোড
   hello: হ্যালো ওয়ার্ল্ড
+  "yes": '"হ্যাঁ"'
+  "no": না
   select_language: অনুগ্রহ করে আপনার ভাষা নির্বাচন করুন
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: আরও জানুন
   en: কম্পিউটার বিজ্ঞান
   computer_science_edweek: কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ
   csedweek_dates: ডিসেম্বর 8-14, ২০১৪
@@ -533,6 +538,7 @@ bn-BD:
   dashboard_sections_table_secret: লগ-ইনের ধরণ
   dashboard_sections_table_grade: গ্রেড
   dashboard_sections_table_course: কোর্স
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: ছাত্র
   dashboard_sections_table_code: শাখা কোড
   dashboard_sections_name: শাখার নাম

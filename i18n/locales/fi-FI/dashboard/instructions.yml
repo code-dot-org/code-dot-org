@@ -394,6 +394,16 @@ fi:
       4-5 While Loops 7_instruction: Vau, nyt multakasoja on kolme! Osaatko kirjoittaa ohjelman, joka poistaa niistä jokaisen, kunnes maa on tasainen?
       4-5 While Loops 8_instruction: " Nyt edessäsi on todella syvä kuoppa ja tosi suuri multakasa. Kuinka monta lapiollista multaa pitää siirtää, jotta maa olisi tasainen? Vinkki: Käytä molempiin 'niin kauan kuin' -silmukkaa."
       4-5 While Loops Assessment 1_instruction: Kuoppia ja kasoja on paljon. Auta minua täyttämään ja poistamaan ne niin, että maasta tulee tasainen.
+      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 15 squares line up next to each other?
+      aE3_instruction: |
+        Now let's go one level deeper! We've nested that whole
+        block of code into another loop, but you need to get the artist back in place
+        to draw the next line. Which of these code blocks can you place at the end
+        of the outermost loop to draw the whole grid?
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -1670,6 +1680,9 @@ fi:
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -2179,7 +2192,7 @@ fi:
       K-1 Bee 13_instruction: Get three nectar and then make one honey!
       K-1 Bee 14_instruction: |
         Get me to the nectar, pick it up, get me to the honey,
-        and make honey
+        and make honey!
       K-1 Bee 15_instruction: Get two nectar to make two honey!
       K-1 Bee 2_instruction: |
         Move me to the flower, get the nectar, then move me
@@ -3400,6 +3413,7 @@ fi:
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -4838,4 +4852,7 @@ fi:
       Underground Mining Coal_instruction: Kaikkein arvokkaimmat resurssit löytyvät maan alta, mutta siellä on pimeää. Aseta vähintään 2 soihtua ja louhi vähintään 2 hiiltä.
       Underground Test Level_instruction: Kerää kaikki mineraalit!
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Käytetään tätä testitasoa napataksemme xml yksikkötesteihin

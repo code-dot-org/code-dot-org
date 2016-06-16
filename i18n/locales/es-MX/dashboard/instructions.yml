@@ -326,7 +326,7 @@ es-MX:
       4-5 Maze 9_instruction: 'Crear un lazo en el bloque "repetir hasta".'
       4-5 Maze Assessment 1_instruction: 'Evaluación: Llega hasta el girasol.'
       4-5 Maze Conditionals 1_instruction: Utiliza el bloque repetir hasta para llevar al zombie hasta el girasol.
-      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
+      4-5 Maze Conditionals 10_instruction: "¿Puede añadir solo 3 bloques para ayudar al zombie a resolver un laberinto más complejo? \\r \\r si lo haces bien, él puede caminar cualquier camino con curvas sin importar la longitud!"
       4-5 Maze Conditionals 2_instruction: Utiliza el bloque repetir hasta para llevar al zombie hasta el girasol.
       4-5 Maze Conditionals 3_instruction: 'Utiliza el bloque "if" para dejarme decidir cuando voltear. Sugerencia: Sólo necesitas un bloque más, pero aprende cómo se configura, con eso lo puedes hacer por ti mismo la próxima vez.'
       4-5 Maze Conditionals 4_instruction: 'Ok, esto es como con el rompecabezas pasado, pero recuerda como utilizaste el bloque "if" y el bloque "repeat" juntos.'
@@ -357,6 +357,16 @@ es-MX:
       4-5 While Loops 7_instruction: ¡Wow, ahora hay tres montones de tierra! ¿Puedes escribir un programa que elimine cada uno de ellos hasta que la tierra quede plana?
       4-5 While Loops 8_instruction: ' Hay un hueco muy profundo y mucha tierra amontonada. ¿Cúantas paladas son necesarias para aplanar la tierra? Sugerencia: Utiliza el circuito de bloque "while" para ambas.'
       4-5 While Loops Assessment 1_instruction: Existen un montón de huecos y pilotes. Ayúdame a llenarlos y removerlos para aplanar la tierra.
+      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 15 squares line up next to each other?
+      aE3_instruction: |
+        Now let's go one level deeper! We've nested that whole
+        block of code into another loop, but you need to get the artist back in place
+        to draw the next line. Which of these code blocks can you place at the end
+        of the outermost loop to draw the whole grid?
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -1064,7 +1074,7 @@ es-MX:
       Course 4 Playlab For Loop Freeplay_instruction: "Utiliza todo lo que has aprendido hasta ahora para hacer un juego que incluya un bucle 'for'."
       Course 4 Playlab For Loops 4b_instruction: "Now, these two characters are going\nto race!  \\r\n\\r\nEach of them will move `counter` steps at a time, but their\ncounters will have different values because of the `for` loops.  \\r\n\\r\nCan\nyou change the increment in one of the loops so that the race is a tie?"
       Course 4 Playlab For Loops 5b_instruction: "Ajusta el intervalo de los bucles 'for' para que ambos personajes terminen exactamente en el mismo lugar."
-      Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na game that's fun for you to play!\\r\n\\r\nPress \"Run\" and click Madame\nUnicorn four times to win. "
+      Course 4 Playlab For Loops 6b_instruction: "Editar este bucle 'for' para crear un juego que es divertido para jugar! \\r \\r Presione \"Run\" y haga clic en Madame unicornio cuatro veces para ganar. "
       Course 4 SCF 1_instruction: Utiliza las funciones sugeridas para dibujar cuatro filas de hexágonos. ¿Te das cuenta de cómo nuestras filas pares se desplazan hacia la derecha?
       Course 4 SCF 1a_instruction: ¿Puedes averiguar cómo recolectar todo este néctar con la menor cantidad de bloques posibles?
       Course 4 SCF 1b_instruction: ¿Puedes averiguar cómo recolectar todo este néctar con la menor cantidad de bloques posibles?
@@ -1199,6 +1209,9 @@ es-MX:
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -2668,6 +2681,7 @@ es-MX:
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -4106,4 +4120,7 @@ es-MX:
       Underground Mining Coal_instruction: Encontrarás los recursos más valiosos bajo tierra, pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos de carbón.
       Underground Test Level_instruction: ¡Recolecta todos los minerales!
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

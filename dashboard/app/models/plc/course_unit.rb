@@ -26,14 +26,6 @@ class Plc::CourseUnit < ActiveRecord::Base
 
   validates :plc_course, presence: true
 
-  def get_all_possible_learning_resources
-    plc_learning_modules.map(&:plc_tasks).flatten.select{ |task| task.class == Plc::LearningResourceTask }
-  end
-
-  def get_required_learning_module_ids
-    plc_learning_modules.required.pluck(:id)
-  end
-
   def determine_preferred_learning_modules(user)
     evaluation_level = script.levels.reverse.find {|level| level.class == LevelGroup}
 

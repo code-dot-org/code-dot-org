@@ -12,12 +12,11 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "If you place your square loop inside another loop, we call that a nested loop. What do you need to add as an outer loop to make sure all 15 squares line up next to each other?",
+    "instructions": "If you place your square loop inside another loop, we call that a nested loop. What do you need to add as an outer loop to make sure all 14 napkins line up next to each other?",
     "slider_speed": ".8",
-    "ideal": "6",
     "disable_param_editing": "true",
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/2a67ea28a0fb9f674fd764b350b297da-image-1465514320176.gif\" style=\"width:400px; margin: 0 20px 20px 100px;\"/>\r\n\r\n<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\n\r\nIf you place your square loop inside another loop, we call that a nested loop. \r\n\r\nWhat do you need to add as an outer loop to make sure all 15 squares line up next to each other?</div>\r\n",
+    "markdown_instructions": "<img src=\"https://images.code.org/2a67ea28a0fb9f674fd764b350b297da-image-1465514320176.gif\" style=\"width:400px; margin: 0 20px 20px 10px;\"/>\r\n\r\n<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >Now we need enough for everyone!\r\n<br/><br/>\r\n\r\nLet's take the shape we just made and line up a row of 14 napkins.  \r\n<br/>\r\nIf you place one loop inside another loop, we call that a nested loop. \r\n\r\nHow can you loop all of the code from your last stage to make sure all 14 napkins line up next to each other?</div>\r\n",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -29,11 +28,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "impressive": "false",
+    "impressive": "true",
     "disable_sharing": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice that since the squares are 20 pixels long, you'll need to jump 20 pixels before you start your next square.\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice that since the napkins are 20 pixels long, you'll need to jump 20 pixels before you start your next loop.\",\r\n  \"hint_id\": \"aE2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
-    "discard_background": "false"
+    "discard_background": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"aE2_1\",\r\n  \"callout_text\": \"Still only two of these and two turns\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
   "published": true,
   "notes": "",
@@ -66,8 +66,12 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
+        <block type="draw_move_by_constant" id="callMe">
           <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
         </block>
         <block type="draw_turn_by_constant">
@@ -81,6 +85,24 @@
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
@@ -90,7 +112,7 @@
           <title name="VALUE">20</title>
         </block>
         <block type="controls_repeat">
-          <title name="TIMES">15</title>
+          <title name="TIMES">14</title>
         </block>
       </xml>
     </recommended_blocks>
@@ -99,7 +121,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">15</title>
+              <title name="TIMES">14</title>
               <statement name="DO">
                 <block type="controls_repeat">
                   <title name="TIMES">4</title>

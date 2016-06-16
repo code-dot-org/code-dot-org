@@ -35,7 +35,7 @@ var Instructions = React.createClass({
     //
     // Otherwise, render the title and up to two sets of instructions.
     // These instructions may contain spans and images as determined by
-    // StudioApp.substituteInstructionImages
+    // substituteInstructionImages
     var instructions;
     if (this.props.renderedMarkdown) {
       instructions = (
