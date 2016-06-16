@@ -1,7 +1,14 @@
 "fa-AF":
   hour_of_code: "ساعتی با کد"
   hello: "سلام دنیا"
+  'yes': 'Yes'
+  'no': 'No'
   select_language: "لطفا زبان خود را انتخاب کنید"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
   en: "علوم کامپیوتر"
   computer_science_edweek: "هفته‌ی آموزش علوم رایانه"
   csedweek_dates: 8-14 دسامبر، 2014
@@ -726,6 +733,7 @@
   dashboard_sections_table_secret: "نوع ورود"
   dashboard_sections_table_grade: "درجه"
   dashboard_sections_table_course: "دوره"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "دانش آموزان"
   dashboard_sections_table_code: "بخش کد"
   dashboard_sections_name: "نام بخش"
@@ -1774,11 +1782,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "بازی کن"
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

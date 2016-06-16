@@ -6,7 +6,7 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Branding and Teacher Communications', description_t: "Find examples of emails your teachers will receive, and tips on how to write an email of your own.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/communications"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Community Building', description_t: "Coming Soon!"} %>
+<%= view :educate_box, item: {title_s: 'Community Building', description_t: "Use these resources to build a strong CS community in your region", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/community"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Counselor and Administrator Professional Development', description_t: "Coming soon!"} %>
 
@@ -24,7 +24,7 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Recruiting Teachers', description_t: "Coming soon!"} %>
 
-<%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "Your guide to analyzing data and feedback from workshops and completeing your Annual Report", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/reporting-and-evaluations"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Teacher Support', description_t: "These resources will help you provide support to the teachers enrolled in the Professional Learning Program", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/teacher-support"), button_s: "Learn more"} %>
 

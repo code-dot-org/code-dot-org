@@ -4,7 +4,7 @@ import blockUtils from '@cdo/apps/block_utils';
 testUtils.setupLocale('craft');
 import craftMsg from '@cdo/apps/craft/locale';
 
-let _ = require('@cdo/apps/lodash');
+let _ = require('lodash');
 
 let blankPlane = _.range(100).map(function () {
   return "";

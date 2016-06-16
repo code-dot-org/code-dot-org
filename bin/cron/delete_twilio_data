@@ -22,7 +22,7 @@ def main()
         # Though seemingly not documented, it is an error to delete a message
         # with state sent, so we skip them as well.
         # (https://www.twilio.com/help/faq/sms/why-are-my-messages-status-sent)
-        if ['sent', 'sending', 'receiving'].include? message.status
+        if %w(accepted queued sending sent receiving).include? message.status
           next
         end
 

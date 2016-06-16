@@ -1,7 +1,14 @@
 "zh-TW":
   hour_of_code: "一小時的程式設計課程"
   hello: "世界您好"
+  'yes': "是"
+  'no': "否"
   select_language: "請選擇您的語言"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "瞭解更多資訊"
   en: "資訊科學"
   computer_science_edweek: "電腦科學教育周"
   csedweek_dates: 2014 年 12 月 8-14 日
@@ -581,6 +588,7 @@
   dashboard_sections_table_secret: "登入方式"
   dashboard_sections_table_grade: "年級"
   dashboard_sections_table_course: "課程"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "學生"
   dashboard_sections_table_code: "班級代碼"
   dashboard_sections_name: "班別名稱"
@@ -1371,11 +1379,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras
