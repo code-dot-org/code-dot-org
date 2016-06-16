@@ -139,7 +139,7 @@
       var field = fields[i];
       if (err.responseJSON.errors[field]) {
         var errorField = $("#" + field + "-block .error_in_field");
-        errorField.text(err.responseJSON.errors[field]);
+        errorField.text(err.responseJSON.errors[field][0]);
         errorField.fadeTo("normal", 1);
       }
     }
