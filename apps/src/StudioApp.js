@@ -28,6 +28,7 @@ var Instructions = require('./templates/instructions/Instructions');
 var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
+import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
@@ -1086,33 +1087,15 @@ StudioApp.prototype.onReportComplete = function (response) {
  * @returns {React.element}
  */
 StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
-  var renderedMarkdown;
-
-  var longInstructions = this.reduxStore.getState().instructions.longInstructions;
-
-  // longInstructions will be undefined if non-english
-  if (longInstructions) {
-    var markdownWithImages = substituteInstructionImages(longInstructions,
-      this.skin.instructions2ImageSubstitutions);
-    renderedMarkdown = processMarkdown(markdownWithImages);
-  }
-
-  var authoredHints;
-  if (showHints) {
-    authoredHints = this.authoredHintsController_.getHintsDisplay();
-  }
-
+  const authoredHints = showHints ?
+    this.authoredHintsController_.getHintsDisplay() : undefined;
   return (
-    <Instructions
-      puzzleTitle={puzzleTitle}
-      instructions={substituteInstructionImages(level.instructions,
-        this.skin.instructions2ImageSubstitutions)}
-      instructions2={substituteInstructionImages(level.instructions2,
-        this.skin.instructions2ImageSubstitutions)}
-      renderedMarkdown={renderedMarkdown}
-      markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
-      aniGifURL={level.aniGifURL}
-      authoredHints={authoredHints}/>
+    <Provider store={this.reduxStore}>
+      <DialogInstructions
+          authoredHints={authoredHints}
+          markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
+      />
+    </Provider>
   );
 };
 
