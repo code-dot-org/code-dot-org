@@ -632,10 +632,13 @@ exports.getFirstParam = function (methodName, block, editor) {
   do {
     if (token.type === 'socketStart') {
       var textToken = token.next;
-      if (textToken.type !== 'text') {
+      if (textToken.type === 'text') {
+        return textToken.value;
+      } else if (textToken.type === 'blockStart') {
+        return textToken.next.value;
+      } else {
         throw new Error('unexpected');
       }
-      return textToken.value;
     }
     token = token.next;
   } while (token);
@@ -647,8 +650,15 @@ function getFirstParamFromCode(methodName, code) {
   code = code.slice(code.lastIndexOf(prefix));
   // quote, followed by param, followed by end quote, comma, and optional whitespace
   const backslashEscapedRegex = `^${methodName}\\((['"])(.*)\\1,\\s*$`;
-  var match = new RegExp(backslashEscapedRegex).exec(code);
-  return match ? match[2] : null;
+  const backslashNoQuoteRegex = `^${methodName}\\(([^"']*),\\s*$`;
+  var matchQuote = new RegExp(backslashEscapedRegex).exec(code);
+  var marchNoQuote = new RegExp(backslashNoQuoteRegex).exec(code);
+  if (matchQuote) {
+    return matchQuote[2];
+  } else if (marchNoQuote) {
+    return marchNoQuote[1];
+  }
+  return null;
 }
 
 exports.__TestInterface = {
