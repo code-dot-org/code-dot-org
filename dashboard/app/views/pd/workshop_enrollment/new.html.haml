@@ -37,10 +37,7 @@
             %h2= "#{pluralize(@enrollment.errors.count, 'error')}:"
             %ul
               - @enrollment.errors.each do |name, message|
-                - if name == :school_district
-                  %li= "School district or school ZIP is required"
-                - else
-                  %li= @enrollment.errors.full_message(name, message)
+                %li= @enrollment.errors.full_message(name, message)
 
         =form_for @enrollment, url: {action: 'create'} do |form|
           %h2

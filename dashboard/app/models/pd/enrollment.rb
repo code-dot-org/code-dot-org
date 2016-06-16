@@ -2,19 +2,20 @@
 #
 # Table name: pd_enrollments
 #
-#  id                 :integer          not null, primary key
-#  pd_workshop_id     :integer          not null
-#  name               :string(255)      not null
-#  email              :string(255)      not null
-#  created_at         :datetime
-#  updated_at         :datetime
-#  code               :string(255)
-#  school             :string(255)
-#  school_district_id :integer
-#  school_zip         :integer
-#  school_type        :string(255)
-#  school_state       :string(255)
-#  user_id            :integer
+#  id                    :integer          not null, primary key
+#  pd_workshop_id        :integer          not null
+#  name                  :string(255)      not null
+#  email                 :string(255)      not null
+#  created_at            :datetime
+#  updated_at            :datetime
+#  code                  :string(255)
+#  school                :string(255)
+#  school_district_id    :integer
+#  school_zip            :integer
+#  school_type           :string(255)
+#  school_state          :string(255)
+#  user_id               :integer
+#  school_district_other :boolean
 #
 # Indexes
 #
@@ -33,11 +34,40 @@ class Pd::Enrollment < ActiveRecord::Base
   # The enrollment is from one of 2 sources:
   #   1. Web form filled out by user - all school fields required.
   #   2. Automatic association for a user who attends the workshop unenrolled.
-  validate :user_or_school_info_required
-  def user_or_school_info_required
-    return if self.user_id
-    errors.add(:school, 'is required') unless self.school
-    errors.add(:school_type, 'is required') unless self.school_type
+  validate :validate_school_district, unless: :has_user?
+  validates :school, presence: true, unless: :has_user?
+
+  def has_user?
+    self.user_id
+  end
+
+  # Validates the district dropdown.  This list is more verbose than it
+  # needs to be, but correlates to the list of valid configurations given
+  # in https://github.com/code-dot-org/code-dot-org/pull/8624.
+  def validate_school_district
+    if school_type == "charter" && !school_zip.blank?
+      return
+    elsif school_type == "private" && !school_zip.blank?
+      return
+    elsif school_type == "public"
+      if school_state == "other"
+        return
+      elsif !school_state.blank? && !school_district_id.blank?
+        return
+      elsif !school_state.blank? && school_district_id.blank? && !school_district_other.blank?
+        return
+      end
+    elsif school_type == "other"
+      if school_state == "other"
+        return
+      elsif !school_state.blank? && !school_district_id.blank?
+        return
+      elsif !school_state.blank? && school_district_id.blank? && !school_district_other.blank?
+        return
+      end
+    end
+
+    errors.add(:school_district, "is required")
   end
 
   before_create :assign_code

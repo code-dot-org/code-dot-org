@@ -102,6 +102,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       :school_state,
       :school_district_id,
       :school_zip,
+      :school_district_other,
       :school
     )
   end

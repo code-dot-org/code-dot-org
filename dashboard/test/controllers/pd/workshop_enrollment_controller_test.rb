@@ -198,7 +198,8 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       school: 'test enrollment school',
       school_type: 'public',
       school_state: 'WA',
-      school_district_id: create(:school_district).id
+      school_district_id: create(:school_district).id,
+      school_district_other: false
     }
   end
 
