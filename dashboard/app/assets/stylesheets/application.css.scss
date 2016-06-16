@@ -2172,7 +2172,7 @@ $modal-no-icon-gap: 22px;
   border: none;
 }
 
-#feedbackButtons:after {
+#feedbackButtons::after {
   content: '';
   display: inline-block;
   width: 100%;

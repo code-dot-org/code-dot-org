@@ -33,7 +33,7 @@ li.level_name {
   position: relative;
   min-width: 280px;
 }
-.aspect-ratio:after {
+.aspect-ratio::after {
   padding-top: 120.25%;
   display: block;
   content: '';
