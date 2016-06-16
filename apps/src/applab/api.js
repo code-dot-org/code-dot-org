@@ -658,11 +658,10 @@ exports.analogRead = function (pin, callback) {
        'callback': callback });
 };
 
-exports.onEvent = function (elementId, eventName, callback) {
+exports.onBoardEvent = function (component, event, callback) {
   var extraArgs = Array.prototype.slice.call(arguments).slice(3);
   return Applab.executeCmd(null,
-      'onEvent',
-
+      'onBoardEvent',
       {'component': component,
         'event': event,
         'callback': callback,

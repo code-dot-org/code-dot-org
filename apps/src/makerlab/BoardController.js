@@ -15,6 +15,8 @@ try {
    */
 }
 
+import _ from '../lodash';
+
 /** @const {string} */
 var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
 
@@ -155,6 +157,8 @@ BoardController.prototype.analogRead = function (pin, callback) {
 
 BoardController.prototype.onBoardEvent = function (component, event, callback) {
   console.log('ayy board evented.');
+  console.log(arguments);
+  component.on(event, callback);
   //return this.board_.analogRead(pin, callback);
 };
 

@@ -2,6 +2,7 @@
 
 import api from '../applab/api';
 import _ from '../lodash';
+import {getFirstParam} from '../dropletUtils';
 
 const COLOR_LIGHT_GREEN = '#D3E965';
 const COLOR_CYAN = '#4DD0E1';
@@ -27,7 +28,26 @@ const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 const sensorVariables = ['soundSensor', 'lightSensor', 'tempSensor'];
 const buttonVariables = ['buttonL', 'buttonR'];
 
-let iter = 0;
+const buttonEvents = [
+  'press','down', 'up'
+];
+const eventDropdowns = {
+  buttonL: buttonEvents,
+  buttonR: buttonEvents,
+  toggleSwitch: ['open', 'close']
+};
+
+/**
+ * Relies on `this` being the dorplet socket when in droplet mode, and, in
+ * text mode, this.parent being undefined.
+ * @param editor
+ * @returns {Array.<string>}
+ */
+const boardEventDropdownGenerator = function (editor) {
+  const firstParam = getFirstParam('onBoardEvent', this.parent, editor);
+  const wrapInQuotes = e => `"${e}"`;
+  return eventDropdowns[firstParam].map(wrapInQuotes);
+};
 
 module.exports.blocks = [
   {func: 'pinMode', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'mode'], params: ['13', '"output"'], dropdown: { 1: ['"output"', '"input"', '"analog"'] }},
@@ -39,12 +59,12 @@ module.exports.blocks = [
   {
     func: 'onBoardEvent',
     parent: api,
-    category: 'Maker Lab',
+    category: 'Circuit',
     paletteParams: ['component', 'event', 'callback'],
-    params: ['"id"', '"click"', "function(event) {\n  \n}"],
+    params: ['buttonL', '"press"', "function(event) {\n  \n}"],
     dropdown: {
-      0: function() { return [`${++iter}hey`]; },
-      1: ['"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"']
+      0: Object.keys(eventDropdowns),
+      1: boardEventDropdownGenerator
     }
   },
 
@@ -76,6 +96,8 @@ module.exports.blocks = [
   {func: 'value', blockPrefix: `${touchSensorVariables[0]}.`, category: 'Circuit', tipPrefix: touchSensorType, modeOptionName: '*.value', objectDropdown: {options: touchSensorVariables}, type: 'readonlyproperty'},
   {func: 'sensitivity', blockPrefix: `${touchSensorVariables[0]}.`, category: 'Circuit', tipPrefix: touchSensorType, modeOptionName: '*.sensitivity', objectDropdown: {options: touchSensorVariables}, type: 'property'},
 
+  {func: 'buttonL', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'buttonR', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'isPressed', objectDropdown: {options: buttonVariables, dropdownOnly: true}, category: 'Circuit', blockPrefix: `${buttonVariables[0]}.`, modeOptionName: "*.isPressed", type: 'readonlyproperty', tipPrefix: '[Button].'},
   {func: 'holdtime', objectDropdown: {options: buttonVariables, dropdownOnly: true}, category: 'Circuit', blockPrefix: `${buttonVariables[0]}.`, modeOptionName: "*.holdtime", type: 'readonlyproperty', tipPrefix: '[Button].'},
 
