@@ -7,6 +7,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
+import { openDialog } from '../../redux/instructionsDialog';
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
@@ -86,6 +87,7 @@ var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
+    aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
@@ -217,6 +219,13 @@ var TopInstructions = React.createClass({
     }
   },
 
+  handleClickBubble() {
+    // If we don't have authored hints, clicking bubble shouldnt do anything
+    if (this.props.hasAuthoredHints) {
+      this.props.showInstructionsDialog();
+    }
+  },
+
   render: function () {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
@@ -252,7 +261,11 @@ var TopInstructions = React.createClass({
                 this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
               ]}
           >
-            <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
+            <ProtectedStatefulDiv
+                id="bubble"
+                className="prompt-icon-cell"
+                onClick={this.handleClickBubble}
+            >
               {this.props.smallStaticAvatar &&
                 <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
               }
@@ -263,6 +276,7 @@ var TopInstructions = React.createClass({
                 renderedMarkdown={renderedMarkdown}
                 onResize={this.adjustMaxNeededHeight}
                 inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                aniGifURL={this.props.aniGifURL}
                 inTopPane
             />
             {this.props.collapsed && instructions2 &&
@@ -293,6 +307,7 @@ module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
     isMinecraft: state.pageConstants.isMinecraft,
+    aniGifURL: state.pageConstants.aniGifURL,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
     maxHeight: Math.min(state.instructions.maxAvailableHeight,
@@ -304,7 +319,7 @@ module.exports = connect(function propsFromStore(state) {
     hasAuthoredHints: state.instructions.hasAuthoredHints,
     isRtl: state.pageConstants.localeDirection === 'rtl',
     smallStaticAvatar: state.pageConstants.smallStaticAvatar,
-    inputOutputTable: state.pageConstants.inputOutputTable
+    inputOutputTable: state.pageConstants.inputOutputTable,
   };
 }, function propsFromDispatch(dispatch) {
   return {
@@ -319,6 +334,9 @@ module.exports = connect(function propsFromStore(state) {
     },
     setInstructionsMaxHeightNeeded(height) {
       dispatch(instructions.setInstructionsMaxHeightNeeded(height));
+    },
+    showInstructionsDialog(height) {
+      dispatch(openDialog(false, true));
     }
   };
 }, null, { withRef: true }
