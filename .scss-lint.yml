@@ -1,11 +1,23 @@
 scss_files: 'dashboard/app/**/*.css.scss'
 
 linters:
+  LeadingZero:
+    style: include_zero
   QualifyingElement:
     allow_element_with_attribute: true
     allow_element_with_class: true
   Shorthand:
     allowed_shorthands: [1, 2, 4]
+
+  # Ignored rules: we don't plan to enable these in the foreseeable future.
+  IdSelector:
+    enabled: false
+  NestingDepth:
+    enabled: false
+  PropertySortOrder:
+    enabled: false
+  SelectorDepth:
+    enabled: false
 
   # Rules we should either ignore or fix (but are currently failing).
   BorderZero:
@@ -20,23 +32,11 @@ linters:
     enabled: false
   EmptyLineBetweenBlocks:
     enabled: false
-  IdSelector:
-    enabled: false
   ImportantRule:
-    enabled: false
-  LeadingZero:
     enabled: false
   MergeableSelector:
     enabled: false
   NameFormat:
-    enabled: false
-  NestingDepth:
-    enabled: false
-  PropertySortOrder:
-    enabled: false
-  QualifyingElement:
-    enabled: false
-  SelectorDepth:
     enabled: false
   SelectorFormat:
     enabled: false
