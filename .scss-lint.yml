@@ -1,6 +1,10 @@
 scss_files: 'dashboard/app/**/*.css.scss'
 
 linters:
+  Shorthand:
+    allowed_shorthands: [1, 2, 4]
+
+  # Rules we should either ignore or fix (but are currently failing).
   BorderZero:
     enabled: false
   ColorKeyword:
@@ -36,8 +40,6 @@ linters:
   SelectorDepth:
     enabled: false
   SelectorFormat:
-    enabled: false
-  Shorthand:
     enabled: false
   SingleLinePerProperty:
     enabled: false
