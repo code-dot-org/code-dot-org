@@ -374,6 +374,7 @@ module.exports = function (grunt) {
   if (entries.applab) {
     entries['applab-api'] = './src/applab/api-entry.js';
   }
+  entries['styleguide'] = './src/styleguide-entry.js';
   config.webpack = {
     build: _.extend({}, webpackConfig, {
       output: {
