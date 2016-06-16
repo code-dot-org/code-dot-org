@@ -1,9 +1,9 @@
 import React from 'react';
 
+import color from '../color';
+
 var examples = [];
 
-// TODO: Ugh, code studio can't import this file because it doesn't use
-// webpack to build. Find some better way to do this nonsense.
 var context = require.context("../", true, /\.jsx$/);
 context.keys().forEach(key => {
   var component = context(key);
@@ -50,53 +50,84 @@ function renderExampleJSX(displayName, props) {
   return s;
 }
 
-// TODO: Since code studio can't import this file, we have to make it available
-// as a global. Which is also dumb. Don't do this!
-window.StyleGuide = React.createClass({
-  getInitialState() {
-    return {
-      show: false,
-    };
-  },
+function Colors() {
+  return (
+    <div>
+      <h2>Colors</h2>
+      <p>
+        These are the standard colors available in SCSS and javascript.
+      </p>
+      <p>
+        JavaScript usage is as follows:
+        <pre>
+          {`import colors from '@cdo/apps/colors';
+console.log("the hex value for purple is:", colors.purple);`}
+        </pre>
+      </p>
+      {Object.keys(color).map(colorKey => (
+         <div key={colorKey} style={{display: 'inline-block',
+                                     whiteSpace: 'nowrap',
+                                     width: '33%',}}>
+           <div style={{display: 'inline-block',
+                        border: '1px solid black',
+                        width: 50,
+                        height: 50,
+                        backgroundColor: color[colorKey]}}/>
+           <div style={{display: 'inline-block',
+                        position: 'relative',
+                        bottom: 12.5,
+                        paddingLeft: 10,}}>
+             <div>{colorKey}</div>
+             <div>{color[colorKey]}</div>
+           </div>
+         </div>
+       ))}
+    </div>
+  );
+}
 
+function Components() {
+  return (
+    <div>
+      <h2>React Components</h2>
+      {examples.map((exampleConfig, index) => (
+         <div key={index}>
+           <h3>{exampleConfig.component.displayName} - {exampleConfig.path}</h3>
+           <p>{exampleConfig.example && exampleConfig.example.description}</p>
+           {
+             exampleConfig.example ?
+             exampleConfig.example.examples.map((example, index) => (
+               <div key={index}>
+                 <p><strong>Example #{index+1}: {example.description}</strong></p>
+                 <div style={{padding: 10}}>
+                   <pre>{renderExampleJSX(exampleConfig.component.displayName, example.props)}</pre>
+                   {React.createElement(exampleConfig.component, example.props)}
+                 </div>
+               </div>
+             ))
+             :
+             <p>No Examples Provided</p>
+           }
+         </div>
+       ))}
+    </div>
+  );
+}
+
+const StyleGuide = React.createClass({
   render() {
-    if (this.state.show) {
-      var style = {
-        backgroundColor: 'white',
-        padding: 10,
-      };
-      return (
-        <div style={style}>
-          <h1>Style Guide</h1>
-          {examples.map((exampleConfig, index) => (
-             <div key={index}>
-               <h1>{exampleConfig.component.displayName} - {exampleConfig.path}</h1>
-               <p>{exampleConfig.example && exampleConfig.example.description}</p>
-               {
-                 exampleConfig.example ?
-                 exampleConfig.example.examples.map((example, index) => (
-                   <div key={index}>
-                     <p><strong>Example #{index+1}: {example.description}</strong></p>
-                     <div style={{padding: 10}}>
-                       <pre>{renderExampleJSX(exampleConfig.component.displayName, example.props)}</pre>
-                       {React.createElement(exampleConfig.component, example.props)}
-                     </div>
-                   </div>
-                 ))
-                 :
-                 <p>No Examples Provided</p>
-               }
-             </div>
-           ))}
-          <button onClick={() => this.setState({show: false})}>Close Style Guide</button>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <button onClick={() => this.setState({show: true})}>Open Style Guide</button>
-        </div>
-      );
-    }
+    var style = {
+      backgroundColor: 'white',
+      padding: 10,
+    };
+    return (
+      <div style={style}>
+        <h1>Style Guide</h1>
+        <Colors/>
+        <Components/>
+      </div>
+    );
   }
 });
+
+export default StyleGuide;
