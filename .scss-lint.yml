@@ -19,8 +19,6 @@ linters:
     enabled: false
   ImportantRule:
     enabled: false
-  Indentation:
-    enabled: false
   LeadingZero:
     enabled: false
   MergeableSelector:
