@@ -29,7 +29,6 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-import {setInitialAnimationMetadata} from './animationModule'; //old
 import {setInitialAnimationList, getSerializedAnimationList} from './animationListModule'; //new
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');

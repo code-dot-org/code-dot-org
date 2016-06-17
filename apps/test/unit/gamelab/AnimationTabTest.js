@@ -1,6 +1,6 @@
 var animationTabModule = require('@cdo/apps/gamelab/AnimationTab/animationTabModule');
 import {expect} from '../../util/configuredChai';
-import {ADD_ANIMATION_AT} from '@cdo/apps/gamelab/animationModule';
+import {ADD_ANIMATION_AT} from '@cdo/apps/gamelab/animationListModule';
 
 describe('AnimationTab', function () {
   describe('reducer', function () {
