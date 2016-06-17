@@ -7,56 +7,8 @@ import {reportError} from './errorDialogStackModule';
 import {validateAndShapeMetadata} from './animationMetadata';
 
 export const ADD_ANIMATION_AT = 'ADD_ANIMATION_AT';
-const DELETE_ANIMATION = 'DELETE_ANIMATION';
 const SET_ANIMATION_NAME = 'SET_ANIMATION_NAME';
 const SET_INITIAL_ANIMATION_METADATA = 'SET_INITIAL_ANIMATION_METADATA';
-
-
-export default function animations(state, action) {
-  state = state || [];
-
-  switch (action.type) {
-
-    case ADD_ANIMATION_AT:
-      return [].concat(
-          state.slice(0, action.index),
-          action.animationProps,
-          state.slice(action.index));
-
-    case DELETE_ANIMATION:
-      return state.filter(function (animation) {
-        return animation.key !== action.animationKey;
-      });
-
-    case SET_INITIAL_ANIMATION_METADATA:
-      return action.metadata;
-
-    case SET_ANIMATION_NAME:
-      return state.map(function (animState) {
-        return animation(animState, action);
-      });
-
-    default:
-      return state;
-  }
-}
-
-function animation(state, action) {
-  state = state || { key: utils.createUuid() };
-
-  switch (action.type) {
-    case SET_ANIMATION_NAME:
-      if (state.key === action.animationKey) {
-        return _.assign({}, state, {
-          name: action.name
-        });
-      }
-      return state;
-
-    default:
-      return state;
-  }
-}
 
 /**
  * Push full animation metadata into the store, usually on first load
@@ -136,31 +88,6 @@ export function cloneAnimation(animationKey) {
             onCloneError(xhr.status + ' ' + xhr.statusText);
           });
     }
-  };
-}
-
-/**
- * Delete the specified animation from the project.
- * @param {string} animationKey
- * @returns {function}
- */
-export function deleteAnimation(animationKey) {
-  return function (dispatch) {
-    animationsApi.ajax(
-        'DELETE',
-        animationKey + '.png',
-        function success() {
-          dispatch({
-            type: DELETE_ANIMATION,
-            animationKey: animationKey
-          });
-          // TODO: Save project after deleting an animation?
-        },
-        function error(xhr) {
-          dispatch(reportError(
-              'Error deleting object ' + animationKey + ': ' +
-              xhr.status + ' ' + xhr.statusText));
-        });
   };
 }
 

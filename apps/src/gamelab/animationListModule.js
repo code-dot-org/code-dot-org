@@ -28,13 +28,17 @@
  */
 import _ from 'lodash';
 import {combineReducers} from 'redux';
+import {animations as animationsApi} from '../clientApi';
+import {reportError} from './errorDialogStackModule';
 
 // Args: {SerializedAnimationList} animationList
 const SET_INITIAL_ANIMATION_LIST = 'SET_INITIAL_ANIMATION_LIST';
 // Args: {AnimationKey} key, {SerializedAnimation} data
 const ADD_ANIMATION = 'ADD_ANIMATION';
 
-// const DELETE_ANIMATION = 'DELETE_ANIMATION';
+// Args: {AnimationKey} key
+const DELETE_ANIMATION = 'DELETE_ANIMATION';
+
 // const SET_ANIMATION_NAME = 'SET_ANIMATION_NAME';
 
 // Args: {AnimationKey} key
@@ -58,6 +62,9 @@ function list(state, action) {
       return [].concat(
           state.slice(0),
           action.key);
+
+    case DELETE_ANIMATION:
+      return state.filter(key => key !== action.key);
 
     default:
       return state;
@@ -94,6 +101,11 @@ function data(state, action) {
       newState[action.key] = action.data;
       return newState;
 
+    case DELETE_ANIMATION:
+      newState = Object.assign({}, state);
+      newState[action.key] = undefined;
+      return newState;
+
     default:
       return state;
   }
@@ -119,7 +131,7 @@ export function setInitialAnimationList(serializedAnimationList) {
 }
 
 /**
- *
+ * Add an animation to the project (at the end of the list).
  * @param {!AnimationKey} key
  * @param {!SerializedAnimation} data
  */
@@ -133,6 +145,29 @@ export function addAnimation(key, data) {
       data
     });
     dispatch(loadAnimationFromSource(key));
+  };
+}
+
+/**
+ * Delete the specified animation from the project.
+ * @param {!AnimationKey} key
+ * @returns {function}
+ */
+export function deleteAnimation(key) {
+  return dispatch => {
+    animationsApi.ajax(
+        'DELETE',
+        key + '.png',
+        function success() {
+          dispatch({
+            type: DELETE_ANIMATION,
+            key
+          });
+        },
+        function error(xhr) {
+          dispatch(reportError(`Error deleting object ${key}: ${xhr.status} ${xhr.statusText}`));
+        }
+    );
   };
 }
 
@@ -258,9 +293,7 @@ export function getSerializedAnimationList(animationList) {
   };
 }
 
-// TODO: Fix file uploads
 // TODO: Fix gallery display
-// TODO: Fix adding from gallery
 // TODO: Enable starting new blank animation
 // TODO: Don't upload to S3 on selection if an animation is never modified
 // TODO: Save uploaded animation version ID to metadata
@@ -268,3 +301,5 @@ export function getSerializedAnimationList(animationList) {
 // TODO: Save project source on animation update.
 // TODO: Handle slow Piskel initialization gracefully.
 // TODO: Hook up frame rate control
+// TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
+//       is deleted, so nothing is selected.
