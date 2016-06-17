@@ -29,7 +29,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-import {setInitialAnimationList, getSerializedAnimationList} from './animationListModule'; //new
+import {setInitialAnimationList, getSerializedAnimationList, autosaveAnimations} from './animationListModule';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
@@ -236,6 +236,9 @@ GameLab.prototype.init = function (config) {
 
     // Load initial animation information
     this.studioApp_.reduxStore.dispatch(setInitialAnimationList(animations));
+    window.setInterval(() => {
+      this.studioApp_.reduxStore.dispatch(autosaveAnimations());
+    }, 30000);
   }
 
   ReactDOM.render((
