@@ -117,11 +117,9 @@ module AWS
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
               client = Aws::S3::Client.new(region: CDO.aws_region,
                                            credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key))
-              key = "chef/#{BRANCH}.tar.gz"
-              puts "Uploading cookbooks to #{key}"
               client.put_object(
                 bucket: S3_BUCKET,
-                key: key,
+                key: "chef/#{BRANCH}.tar.gz",
                 body: tmp.read
               )
             end
