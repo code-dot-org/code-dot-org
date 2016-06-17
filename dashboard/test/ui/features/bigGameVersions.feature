@@ -11,6 +11,7 @@ Feature: Big Game Versions
     And element "#runButton" is visible
 
   @no_mobile
+  @no_safari
   Scenario: Big Game Versions
 
     # Create the initial version with title "VERSION_TEST"
