@@ -32,7 +32,8 @@ module AWS
       find { |cert| cert.domain_name == "*.#{DOMAIN}" }.
       certificate_arn
 
-    BRANCH = ENV['branch'] || rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env
+    BRANCH = ENV['branch'] || (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
+
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
@@ -116,9 +117,11 @@ module AWS
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
               client = Aws::S3::Client.new(region: CDO.aws_region,
                                            credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key))
+              key = "chef/#{BRANCH}.tar.gz"
+              puts "Uploading cookbooks to #{key}"
               client.put_object(
                 bucket: S3_BUCKET,
-                key: "chef/#{BRANCH}.tar.gz",
+                key: key,
                 body: tmp.read
               )
             end
