@@ -44,38 +44,16 @@ Resources:
   WebServer:
     Type: AWS::AutoScaling::AutoScalingGroup
     UpdatePolicy:
-      AutoScalingRollingUpdate:
-<%
-      # For zero-downtime immutable updates with AutoScalingRollingUpdate,
-      # we need to set MinInstancesInService equal to the current number of instances
-      # in the Auto Scaling Group.
-      starting_instances = 4
-      autoscaling = Aws::AutoScaling::Client.new
-      asg = autoscaling.describe_auto_scaling_groups.auto_scaling_groups.find do |group|
-        tags = group.tags.map{|tag| [tag.key, tag.value]}.to_h
-        tags['aws:cloudformation:stack-name'] == stack_name &&
-          tags['aws:cloudformation:logical-id'] == 'WebServer'
-      end
-      min_in_service = asg ? asg.desired_capacity : starting_instances
-      max_size = 12
--%>
-        MaxBatchSize: <%=max_size%>
-        MinInstancesInService: <%=min_in_service%>
-        PauseTime: PT25M
-        WaitOnResourceSignals: true
-        SuspendProcesses:
-          - AlarmNotification
-          - ScheduledActions
-          - AZRebalance
-          - HealthCheck
-          - ReplaceUnhealthy
-      AutoScalingScheduledAction:
-        IgnoreUnmodifiedGroupSizeProperties: true
+      AutoScalingReplacingUpdate:
+        WillReplace: true
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT25M
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
       MinSize: 2
-      MaxSize: <%=max_size%>
+      MaxSize: 12
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
