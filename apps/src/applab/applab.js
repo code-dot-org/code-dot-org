@@ -557,6 +557,10 @@ Applab.init = function (config) {
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
+  if (!config.channel) {
+    throw new Error('Cannot initialize App Lab without a channel id. ' +
+      'You may need to sign in to your code studio account first.');
+  }
   Applab.channelId = config.channel;
   Applab.firebaseName = config.firebaseName;
   Applab.firebaseAuthToken = config.firebaseAuthToken;
