@@ -37,7 +37,7 @@ var ALLOWED_KEYS = utils.makeEnum(
 );
 
 const initialState = {
-  assertUrl() {
+  assetUrl() {
   }
 };
 

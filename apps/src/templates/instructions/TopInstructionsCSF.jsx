@@ -46,6 +46,12 @@ const styles = {
     left: 0,
     // right handled by media queries for .editor-column
   },
+  noViz: {
+    left: 0,
+    right: 0,
+    marginRight: 0,
+    marginLeft: 0
+  },
   body: {
     backgroundColor: 'white',
     borderRadius: 10,
@@ -105,6 +111,7 @@ var TopInstructions = React.createClass({
     inputOutputTable: React.PropTypes.arrayOf(
       React.PropTypes.arrayOf(React.PropTypes.number)
     ),
+    noVisualization: React.PropTypes.bool.isRequired,
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -238,7 +245,8 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - resizerHeight
       },
-      this.props.isEmbedView && styles.embedView
+      this.props.isEmbedView && styles.embedView,
+      this.props.noVisualization && styles.noViz
     ];
 
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
@@ -332,6 +340,7 @@ module.exports = connect(function propsFromStore(state) {
     isRtl: state.pageConstants.localeDirection === 'rtl',
     smallStaticAvatar: state.pageConstants.smallStaticAvatar,
     inputOutputTable: state.pageConstants.inputOutputTable,
+    noVisualization: state.pageConstants.noVisualization
   };
 }, function propsFromDispatch(dispatch) {
   return {
