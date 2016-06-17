@@ -77,10 +77,9 @@
           = f.select :gender, gender_options, {disabled: '', selected: '' }, { class: 'fieldblock', style: "width: 234px"}
           .error_in_field
 
-        -# TODO (brendan): implement additional school info fields
-        -# schoolcountry-block.itemblock{style: "display: none"}
+        #schoolcountry-block.itemblock{style: "display: none"}
           .labelblock= "Country"
-          %select#schoolcountry.form-control.fieldblock{name: "user[school_country]", type: "select"}
+          %select#schoolcountry.form-control.fieldblock{name: "user[country]", type: "select", style: "width: 234px"}
             %option{value: "", selected: true, disabled: true}
             - get_all_countries.each do |country_abbr, country_name|
               %option{value: country_abbr}= country_name
@@ -221,6 +220,7 @@
     var password_message_confirmation = $("#password_confirmation-block .error_in_field")
     if (!password || password.length < 6) {
       password_message.text("#{t('signup_form.invalid_password')}");
+      password_message.fadeTo("normal", 1);
     } else {
       password_message.text("");
     }
@@ -234,6 +234,7 @@
     var password_message_confirmation = $("#password_confirmation-block .error_in_field")
     if (conf_password !== origin_password) {
       password_message_confirmation.text("#{t('signup_form.mismatch_password')}");
+      password_message_confirmation.fadeTo("normal", 1);
     } else {
       password_message_confirmation.text("");
     }

@@ -52,6 +52,12 @@
 #  invited_by_id              :integer
 #  invited_by_type            :string(255)
 #  invitations_count          :integer          default(0)
+#  country                    :string(255)
+#  school_type                :string(255)
+#  school_state               :string(255)
+#  school_zip                 :integer
+#  school_district_id         :integer
+#  school_district_other      :boolean
 #
 # Indexes
 #
