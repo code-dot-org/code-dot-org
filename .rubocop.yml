@@ -63,3 +63,6 @@ Style/Semicolon:
 
 Style/NumericLiterals:
   MinDigits: 7
+
+Style/AsciiComments:
+  Enabled: false
