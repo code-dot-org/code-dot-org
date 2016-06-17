@@ -43,7 +43,7 @@ Resources:
           complete_id: "AMIComplete#{ami}",
           node_name: 'ami-${INSTANCE_ID}',
           run_list: [
-            'role[unmonitored-frontend]',
+            local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]',
             'recipe[cdo-apps::stop]',
           ]) %>
   AMI<%=ami%>: <%= lambda.call 'AMIManager',
