@@ -3,8 +3,8 @@
 /* global PISKEL_DEVELOPMENT_MODE */
 import React from 'react';
 import {connect} from 'react-redux';
-import {METADATA_SHAPE} from '../animationMetadata';
 import PiskelApi from '@code-dot-org/piskel';
+import {editAnimation} from '../animationListModule';
 
 /**
  * @const {string} domain-relative URL to Piskel index.html
@@ -26,7 +26,8 @@ const PiskelEditor = React.createClass({
     // Provided by Redux
     animationList: React.PropTypes.object.isRequired, // TODO: Shape?
     selectedAnimation: React.PropTypes.string,
-    channelId: React.PropTypes.string.isRequired
+    channelId: React.PropTypes.string.isRequired,
+    editAnimation: React.PropTypes.func.isRequired
   },
 
   componentDidMount() {
@@ -60,6 +61,13 @@ const PiskelEditor = React.createClass({
 
   onAnimationSaved(message) {
     console.log('onAnimationSaved', message);
+    this.props.editAnimation(this.loadedAnimation_, {
+      blob: message.blob,
+      dataURI: message.dataURI,
+      sourceSize: {x: message.sourceSizeX, y: message.sourceSizeY},
+      frameSize: {x: message.frameSizeX, y: message.frameSizeY},
+      frameCount: message.frameCount
+    });
   },
 
   render() {
@@ -76,4 +84,6 @@ export default connect(state => ({
   selectedAnimation: state.animationTab.selectedAnimation,
   animationList: state.animationList,
   channelId: state.pageConstants.channelId
+}), dispatch => ({
+  editAnimation: (key, data) => dispatch(editAnimation(key, data))
 }))(PiskelEditor);

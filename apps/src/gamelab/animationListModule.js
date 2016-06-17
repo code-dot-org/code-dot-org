@@ -38,6 +38,8 @@ const SET_INITIAL_ANIMATION_LIST = 'SET_INITIAL_ANIMATION_LIST';
 export const ADD_ANIMATION = 'ADD_ANIMATION';
 // Args: {number} index, {AnimationKey} key, {SerializedAnimation} data
 export const ADD_ANIMATION_AT = 'ADD_ANIMATION_AT';
+// Args: {AnimationKey} key, {SerializedAnimation} data
+export const EDIT_ANIMATION = 'EDIT_ANIMATION';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'SET_ANIMATION_NAME';
 // Args: {AnimationKey} key
@@ -91,6 +93,7 @@ function data(state, action) {
 
     case ADD_ANIMATION:
     case ADD_ANIMATION_AT:
+    case EDIT_ANIMATION:
     case SET_ANIMATION_NAME:
     case DELETE_ANIMATION:
     case START_LOADING_FROM_SOURCE:
@@ -114,6 +117,11 @@ function datum(state, action) {
     case ADD_ANIMATION:
     case ADD_ANIMATION_AT:
       return action.data;
+
+    case EDIT_ANIMATION:
+      return Object.assign({}, state, action.data, {
+        saved: false // Dirty, so it'll get saved soon.
+      });
 
     case SET_ANIMATION_NAME:
       return Object.assign({}, state, {
@@ -250,6 +258,19 @@ export function setAnimationName(key, name) {
     type: SET_ANIMATION_NAME,
     key,
     name
+  };
+}
+
+/**
+ * Modifies the animation data, capturing changes to its spritesheet.
+ * @param {!AnimationKey} key
+ * @param {object} data - needs a more detailed shape
+ */
+export function editAnimation(key, data) {
+  return {
+    type: EDIT_ANIMATION,
+    key,
+    data
   };
 }
 
@@ -413,3 +434,5 @@ export function getSerializedAnimationList(animationList) {
 // TODO: Hook up frame rate control
 // TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
 //       is deleted, so nothing is selected.
+// TODO: Piskel load breaks when adding from galler due to delay getting full image data
+// TODO: Warn about duplicate-named animations.
