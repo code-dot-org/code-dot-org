@@ -7,7 +7,6 @@ import {reportError} from './errorDialogStackModule';
 import {validateAndShapeMetadata} from './animationMetadata';
 
 export const ADD_ANIMATION_AT = 'ADD_ANIMATION_AT';
-const SET_ANIMATION_NAME = 'SET_ANIMATION_NAME';
 const SET_INITIAL_ANIMATION_METADATA = 'SET_INITIAL_ANIMATION_METADATA';
 
 /**
@@ -88,19 +87,5 @@ export function cloneAnimation(animationKey) {
             onCloneError(xhr.status + ' ' + xhr.statusText);
           });
     }
-  };
-}
-
-/**
- * Set the display name of the specified animation.
- * @param {string} animationKey
- * @param {string} name
- * @returns {{type: ActionType, animationKey: string, name: string}}
- */
-export function setAnimationName(animationKey, name) {
-  return {
-    type: SET_ANIMATION_NAME,
-    animationKey: animationKey,
-    name: name
   };
 }
