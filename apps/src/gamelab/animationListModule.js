@@ -31,6 +31,7 @@ import {combineReducers} from 'redux';
 import utils from '../utils';
 import {animations as animationsApi} from '../clientApi';
 import {reportError} from './errorDialogStackModule';
+/* global dashboard */
 
 // Args: {SerializedAnimationList} animationList
 const SET_INITIAL_ANIMATION_LIST = 'SET_INITIAL_ANIMATION_LIST';
@@ -50,7 +51,9 @@ const DELETE_ANIMATION = 'DELETE_ANIMATION';
 // Args: {AnimationKey} key
 const START_LOADING_FROM_SOURCE = 'START_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {Blob} blob, {String} dataURI. Version?
-const DONE_LOADING_FROM_SOURCE = 'DONE_LOADING_FROM_SOURCE';
+const DONE_LOADING_FROM_SOURCE = 'DONE_LOADING_FROM_SgOURCE';
+// Args: {AnimationKey} key, {string} version
+const ON_ANIMATION_SAVED = 'ON_ANIMATION_SAVED';
 
 export default combineReducers({
   list,
@@ -98,6 +101,7 @@ function data(state, action) {
     case DELETE_ANIMATION:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
+    case ON_ANIMATION_SAVED:
       newState = Object.assign({}, state);
       newState[action.key] = datum(newState[action.key], action);
       return newState;
@@ -142,6 +146,12 @@ function datum(state, action) {
         saved: true,
         blob: action.blob,
         dataURI: action.dataURI
+      });
+
+    case ON_ANIMATION_SAVED:
+      return Object.assign({}, state, {
+        saved: true,
+        version: action.version
       });
 
     default:
@@ -349,6 +359,51 @@ function blobToDataURI(blob, onComplete) {
 }
 
 /**
+ * Dispatch on an interval to autosave animations to S3.
+ * @returns {function()}
+ */
+export function autosaveAnimations() {
+  return (dispatch, getState) => {
+    console.log('Autosaving animations');
+    const state = getState().animationList;
+    const changedAnimationKeys = state.list.filter(key => !state.data[key].saved);
+    // If nothing changed, no action necessary.
+    if (0 === changedAnimationKeys.length) {
+      console.log("No animations to save right now.");
+      return;
+    }
+
+    const onError = message => {
+      console.log('Error saving animation: ', message);
+    };
+
+    changedAnimationKeys.forEach(key => {
+      animationsApi.ajax(
+          'PUT',
+          key + '.png',
+          function success(xhr) {
+            try {
+              var response = JSON.parse(xhr.responseText);
+              console.log('Saved animation: ', response);
+              dispatch({
+                type: ON_ANIMATION_SAVED,
+                key: key,
+                version: response.versionId
+              });
+              dashboard.project.projectChanged();
+            } catch (e) {
+              onError(e.message);
+            }
+          },
+          function error(xhr) {
+            onError(xhr.status + ' ' + xhr.statusText);
+          },
+          state.data[key].blob);
+    });
+  };
+}
+
+/**
  * @typedef {Object} Animation
  * @property {string} name
  * @property {string} sourceUrl - Remote location where the animation spritesheet
@@ -430,7 +485,6 @@ export function getSerializedAnimationList(animationList) {
   };
 }
 
-// TODO: Fix gallery display
 // TODO: Enable starting new blank animation
 // TODO: Don't upload to S3 on selection if an animation is never modified
 // TODO: Save uploaded animation version ID to metadata
@@ -440,5 +494,5 @@ export function getSerializedAnimationList(animationList) {
 // TODO: Hook up frame rate control
 // TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
 //       is deleted, so nothing is selected.
-// TODO: Piskel load breaks when adding from galler due to delay getting full image data
+// TODO: Piskel load breaks when adding from gallery due to delay getting full image data
 // TODO: Warn about duplicate-named animations.
