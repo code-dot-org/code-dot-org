@@ -46,6 +46,10 @@ const styles = {
     left: 0,
     // right handled by media queries for .editor-column
   },
+  mainCraft: {
+    marginTop: 20,
+    marginBottom: 10
+  },
   noViz: {
     left: 0,
     right: 0,
@@ -177,8 +181,11 @@ var TopInstructions = React.createClass({
     const minInstructionsHeight = this.props.collapsed ?
       $(ReactDOM.findDOMNode(this.refs.instructions)).outerHeight(true) : 0;
 
+    const domNode = $(ReactDOM.findDOMNode(this));
+    const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
+
     return Math.max(buttonHeight, minIconHeight, minInstructionsHeight) +
-      (this.props.collapsed ? 0 : RESIZER_HEIGHT);
+      (this.props.collapsed ? 0 : RESIZER_HEIGHT) + margins;
   },
 
   /**
@@ -207,8 +214,9 @@ var TopInstructions = React.createClass({
     const minHeight = this.getMinHeight();
     const contentContainer = this.props.hasContainedLevels ?
         this.refs.containedLevelContainer : this.refs.instructions;
-    const maxNeededHeight = $(ReactDOM.findDOMNode(contentContainer)).outerHeight(true) +
-      RESIZER_HEIGHT;
+    const instructionsContent = this.refs.instructions;
+    const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
+      (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
     this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
     return maxNeededHeight;
@@ -246,7 +254,8 @@ var TopInstructions = React.createClass({
         height: this.props.height - resizerHeight
       },
       this.props.isEmbedView && styles.embedView,
-      this.props.noVisualization && styles.noViz
+      this.props.noVisualization && styles.noViz,
+      this.props.isMinecraft && styles.mainCraft
     ];
 
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
