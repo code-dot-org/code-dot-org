@@ -13,20 +13,6 @@ import PiskelApi from '@code-dot-org/piskel';
 const PISKEL_PATH = '/blockly/js/piskel/index.html' +
     (PISKEL_DEVELOPMENT_MODE ? '?debug' : '');
 
-function convertFileToDataURLviaFileReader(url, callback){
-  var xhr = new XMLHttpRequest();
-  xhr.responseType = 'blob';
-  xhr.onload = function () {
-    var reader  = new FileReader();
-    reader.onloadend = function () {
-      callback(reader.result);
-    };
-    reader.readAsDataURL(xhr.response);
-  };
-  xhr.open('GET', url);
-  xhr.send();
-}
-
 /**
  * The PiskelEditor component is a wrapper for the iframe that contains the
  * embedded Piskel image editor, within the animation tab.  It handles rendering
@@ -44,6 +30,10 @@ const PiskelEditor = React.createClass({
   },
 
   componentDidMount() {
+    /** @private {AnimationKey} reference to animation that is currenly loaded
+     *          in the editor. */
+    this.loadedAnimation_ = null;
+
     this.piskel = new PiskelApi(this.iframe);
     this.piskel.onStateSaved(this.onAnimationSaved);
   },
@@ -56,36 +46,19 @@ const PiskelEditor = React.createClass({
     const {animations, selectedAnimation} = newProps;
     if (selectedAnimation !== this.props.selectedAnimation) {
       var animation = animations.find(animation => animation.key === selectedAnimation);
-      convertFileToDataURLviaFileReader(animation.sourceUrl, dataUrl => {
-        this.piskel.loadSpritesheet(dataUrl, animation.frameSize.x, animation.frameSize.y);
-      });
+      this.piskel.loadSpritesheet(animation.sourceUrl, animation.frameSize.x, animation.frameSize.y);
+      this.loadedAnimation_ = selectedAnimation;
     }
   },
 
-  componentShouldUpdate() {
+  // We are hosting an embedded application in an iframe; we should never try
+  // to re-render it.
+  shouldComponentUpdate() {
     return false;
   },
 
   onAnimationSaved(message) {
     console.log('onAnimationSaved', message);
-      // Update animation preview
-      // (Maybe) autosave animation to S3 and save new animation metadata
-
-      //// Instead of download, let's upload to S3.
-      //var xhr = pskl.utils.Xhr.xhr_(
-      //    '/v3/animations/' + this.channelId_ + '/' + this.loadedAnimation_.key + '.png',
-      //    'PUT',
-      //    function onSuccess(xhr) {
-      //      // TODO: Report success?
-      //      onComplete(xhr);
-      //    }, function onError(error) {
-      //      onComplete(error);
-      //    });
-      //xhr.setRequestHeader("Content-type", "image/png");
-      ////xhr.send(outputCanvas.toDataURL('image/png'));
-      //pskl.utils.BlobUtils.canvasToBlob(outputCanvas, function(blob) {
-      //  xhr.send(blob);
-      //}.bind(this));
   },
 
   render() {
