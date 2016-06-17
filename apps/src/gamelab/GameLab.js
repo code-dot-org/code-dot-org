@@ -212,6 +212,7 @@ GameLab.prototype.init = function (config) {
   }
 
   this.studioApp_.setPageConstants(config, {
+    channelId: config.channel,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true
