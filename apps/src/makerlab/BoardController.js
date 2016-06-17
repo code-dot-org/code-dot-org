@@ -156,10 +156,8 @@ BoardController.prototype.analogRead = function (pin, callback) {
 };
 
 BoardController.prototype.onBoardEvent = function (component, event, callback) {
-  console.log('ayy board evented.');
-  console.log(arguments);
   component.on(event, callback);
-  //return this.board_.analogRead(pin, callback);
+  component.start && component.start(); // TODO(bjordan): remove when auto-start
 };
 
 function connect() {

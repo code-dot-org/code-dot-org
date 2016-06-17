@@ -28,14 +28,17 @@ const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 const sensorVariables = ['soundSensor', 'lightSensor', 'tempSensor'];
 const buttonVariables = ['buttonL', 'buttonR'];
 
-const buttonEvents = [
-  'press','down', 'up'
-];
+const buttonEvents = ['press', 'down', 'up'];
+const sensorEvents = ['change', 'data'];
+
 const eventDropdowns = {
   buttonL: buttonEvents,
   buttonR: buttonEvents,
-  toggleSwitch: ['open', 'close']
+  toggleSwitch: ['open', 'close'],
+  accelerometer: ['change', 'data']
 };
+
+sensorVariables.forEach(s => eventDropdowns[s] = sensorEvents);
 
 /**
  * Relies on `this` being the dorplet socket when in droplet mode, and, in
@@ -68,7 +71,7 @@ module.exports.blocks = [
     }
   },
 
-  {func: 'led', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  //{func: 'led', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'led.on', category: 'Circuit'},
   {func: 'led.off', category: 'Circuit'},
 
@@ -81,14 +84,14 @@ module.exports.blocks = [
   {func: 'intensity', blockPrefix: colorLedBlockPrefix, category: 'Circuit', params: ['25'], tipPrefix: pixelType, modeOptionName: "*.intensity", objectDropdown: { options: colorPixelVariables }  },
   {func: 'color', blockPrefix: colorLedBlockPrefix, category: 'Circuit', paletteParams: ['color'], params: ['"#FF00FF"'], tipPrefix: pixelType, modeOptionName: "*.color", objectDropdown: { options: colorPixelVariables }  },
 
-  {func: 'buzzer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  //{func: 'buzzer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'buzzer.frequency', category: 'Circuit', paletteParams: ['frequency', 'duration'], params: ['500', '100'], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'buzzer.note', category: 'Circuit', paletteParams: ['note', 'duration'], params: ['"A4"', '100'], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'buzzer.off', category: 'Circuit'},
   {func: 'buzzer.stop', category: 'Circuit'},
   {func: 'buzzer.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
 
-  {func: 'accelerometer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  //{func: 'accelerometer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'accelerometer.getOrientation', category: 'Circuit', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
   {func: 'accelerometer.getAcceleration', category: 'Circuit', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
   {func: 'accelerometer.sensitivity', category: 'Circuit', type: 'property' },
@@ -96,15 +99,15 @@ module.exports.blocks = [
   {func: 'value', blockPrefix: `${touchSensorVariables[0]}.`, category: 'Circuit', tipPrefix: touchSensorType, modeOptionName: '*.value', objectDropdown: {options: touchSensorVariables}, type: 'readonlyproperty'},
   {func: 'sensitivity', blockPrefix: `${touchSensorVariables[0]}.`, category: 'Circuit', tipPrefix: touchSensorType, modeOptionName: '*.sensitivity', objectDropdown: {options: touchSensorVariables}, type: 'property'},
 
-  {func: 'buttonL', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
-  {func: 'buttonR', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  //{func: 'buttonL', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  //{func: 'buttonR', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'isPressed', objectDropdown: {options: buttonVariables, dropdownOnly: true}, category: 'Circuit', blockPrefix: `${buttonVariables[0]}.`, modeOptionName: "*.isPressed", type: 'readonlyproperty', tipPrefix: '[Button].'},
   {func: 'holdtime', objectDropdown: {options: buttonVariables, dropdownOnly: true}, category: 'Circuit', blockPrefix: `${buttonVariables[0]}.`, modeOptionName: "*.holdtime", type: 'readonlyproperty', tipPrefix: '[Button].'},
 
   {func: 'value', objectDropdown: { options: sensorVariables }, modeOptionName: "*.value", blockPrefix: `${sensorVariables[0]}.`, category: 'Circuit', type: 'readonlyproperty', tipPrefix: '[Sensor].'},
   {func: 'threshold', objectDropdown: { options: sensorVariables }, modeOptionName: "*.threshold", blockPrefix: `${sensorVariables[0]}.`, category: 'Circuit', type: 'property', tipPrefix: '[Sensor].' },
 
-  {func: 'toggleSwitch', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  //{func: 'toggleSwitch', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'toggleSwitch.isOpen', category: 'Circuit', type: 'readonlyproperty' },
 ];
 
