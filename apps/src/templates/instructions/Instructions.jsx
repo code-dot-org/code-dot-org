@@ -2,6 +2,7 @@ var React = require('react');
 var MarkdownInstructions = require('./MarkdownInstructions');
 var NonMarkdownInstructions = require('./NonMarkdownInstructions');
 import InputOutputTable from './InputOutputTable';
+import AniGifPreview from './AniGifPreview';
 
 const styles = {
   main: {
@@ -22,6 +23,7 @@ var Instructions = React.createClass({
     inputOutputTable: React.PropTypes.arrayOf(
       React.PropTypes.arrayOf(React.PropTypes.number)
     ),
+    inTopPane: React.PropTypes.bool,
     onResize: React.PropTypes.func
   },
 
@@ -36,32 +38,33 @@ var Instructions = React.createClass({
     // Otherwise, render the title and up to two sets of instructions.
     // These instructions may contain spans and images as determined by
     // substituteInstructionImages
-    var instructions;
-    if (this.props.renderedMarkdown) {
-      instructions = (
-        <MarkdownInstructions
-          ref="instructionsMarkdown"
-          renderedMarkdown={this.props.renderedMarkdown}
-          markdownClassicMargins={this.props.markdownClassicMargins}
-          onResize={this.props.onResize}
-          inTopPane={this.props.inTopPane}
-        />
-      );
-    } else {
-      instructions = (
-        <NonMarkdownInstructions
-          puzzleTitle={this.props.puzzleTitle}
-          instructions={this.props.instructions}
-          instructions2={this.props.instructions2}
-        />
-      );
-    }
+
     return (
       <div style={styles.main}>
-        {instructions}
-        {this.props.inputOutputTable && <InputOutputTable data={this.props.inputOutputTable}/>}
-        {this.props.aniGifURL &&
-          <img className="aniGif example-image" src={ this.props.aniGifURL }/>
+        {this.props.renderedMarkdown &&
+          <MarkdownInstructions
+              ref="instructionsMarkdown"
+              renderedMarkdown={this.props.renderedMarkdown}
+              markdownClassicMargins={this.props.markdownClassicMargins}
+              onResize={this.props.onResize}
+              inTopPane={this.props.inTopPane}
+          />
+        }
+        {!this.props.renderedMarkdown &&
+          <NonMarkdownInstructions
+              puzzleTitle={this.props.puzzleTitle}
+              instructions={this.props.instructions}
+              instructions2={this.props.instructions2}
+          />
+        }
+        {this.props.inputOutputTable &&
+          <InputOutputTable data={this.props.inputOutputTable}/>
+        }
+        {this.props.aniGifURL && !this.props.inTopPane &&
+          <img className="aniGif example-image" src={this.props.aniGifURL}/>
+        }
+        {this.props.aniGifURL && this.props.inTopPane &&
+          <AniGifPreview/>
         }
         {this.props.authoredHints}
       </div>

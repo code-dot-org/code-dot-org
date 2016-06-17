@@ -21,13 +21,15 @@ namespace :firebase do
       Dir.chdir(apps_dir) {
         url = "https://#{CDO.firebase_name}.firebaseio.com/v3/config.json?auth=#{CDO.firebase_secret}"
         config = {
-            channels: {
-                limits: {
-                    '15': CDO.firebase_max_channel_writes_per_15_sec,
-                    '60': CDO.firebase_max_channel_writes_per_60_sec
-                },
-                maxTableRows: CDO.firebase_max_table_rows
-            }
+          channels: {
+            limits: {
+              '15': CDO.firebase_max_channel_writes_per_15_sec,
+              '60': CDO.firebase_max_channel_writes_per_60_sec
+            },
+            maxRecordSize: CDO.firebase_max_record_size,
+            maxPropertySize: CDO.firebase_max_property_size,
+            maxTableRows: CDO.firebase_max_table_rows
+          }
         }
         RakeUtils.system("curl -X PUT -d '#{config.to_json}' '#{url}'")
       }

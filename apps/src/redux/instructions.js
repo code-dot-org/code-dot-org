@@ -44,7 +44,7 @@ const instructionsInitialState = {
   // part off of the size of the code workspace.
   maxAvailableHeight: Infinity,
 
-  hasAuthoredHints: false,
+  hasAuthoredHints: false
 };
 
 export default function reducer(state = instructionsInitialState, action) {

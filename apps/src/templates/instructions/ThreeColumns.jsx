@@ -22,7 +22,7 @@ const ThreeColumns = (props) => {
       width: '100%',
       position: 'relative',
       float: 'left',
-      overflowY: 'scroll',
+      overflowY: 'auto',
       height
     },
     left: {
