@@ -12,7 +12,6 @@
 # /tmp/teacher_emails.csv. Since this file contains PII, it will live only
 # temporarily (also not within source control) at that location.
 
-require 'csv'
 require_relative '../../dashboard/config/environment'
 
 File.open('/tmp/teacher_emails') do |line|
