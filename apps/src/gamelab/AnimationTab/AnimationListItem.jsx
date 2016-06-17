@@ -5,8 +5,7 @@ import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
-import * as actions from '../animationModule';
-import {setAnimationName, deleteAnimation} from '../animationListModule';
+import {setAnimationName, cloneAnimation, deleteAnimation} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
@@ -141,7 +140,7 @@ export default connect(state => ({
   columnWidth: state.animationTab.columnSizes[0]
 }), dispatch => ({
   cloneAnimation(animationKey) {
-    dispatch(actions.cloneAnimation(animationKey));
+    dispatch(cloneAnimation(animationKey));
   },
   deleteAnimation(animationKey) {
     dispatch(deleteAnimation(animationKey));
