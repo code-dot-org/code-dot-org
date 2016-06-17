@@ -4,7 +4,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import color from '../../color';
-import { METADATA_SHAPE } from '../animationMetadata';
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
 import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';

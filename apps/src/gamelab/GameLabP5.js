@@ -4,7 +4,6 @@ var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var GameLabGame = require('./GameLabGame');
-import { getSourceUrl } from './animationMetadata';
 
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
