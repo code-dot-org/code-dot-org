@@ -3,11 +3,11 @@
 
 import React from 'react';
 import Radium from 'radium';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import color from '../../color';
 import * as actions from '../animationModule';
-import { METADATA_SHAPE } from '../animationMetadata';
-import { selectAnimation } from './animationTabModule';
+import {deleteAnimation} from '../animationListModule';
+import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
 
@@ -100,7 +100,7 @@ const AnimationListItem = React.createClass({
   },
 
   render() {
-    const name = this.props.animationData[this.props.animationKey].name;
+    const name = this.props.animationData.name;
     var animationName;
     if (this.props.isSelected) {
       animationName = (
@@ -126,7 +126,7 @@ const AnimationListItem = React.createClass({
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
             ref="thumbnail"
-            animationData={this.props.animationData[this.props.animationKey]}
+            animationData={this.props.animationData}
             isSelected={this.props.isSelected}
         />
         {animationName}
@@ -138,14 +138,13 @@ const AnimationListItem = React.createClass({
   }
 });
 export default connect(state => ({
-  animationData: state.animationList.data,
   columnWidth: state.animationTab.columnSizes[0]
 }), dispatch => ({
   cloneAnimation(animationKey) {
     dispatch(actions.cloneAnimation(animationKey));
   },
   deleteAnimation(animationKey) {
-    dispatch(actions.deleteAnimation(animationKey));
+    dispatch(deleteAnimation(animationKey));
   },
   selectAnimation(animationKey) {
     dispatch(selectAnimation(animationKey));
