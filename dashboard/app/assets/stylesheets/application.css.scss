@@ -215,6 +215,16 @@ img.video_thumbnail {
   }
 }
 
+.sign_in.show_only_on_mobile {
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
+    display: inline;
+  }
+}
+
 .header_status_bar {
   background-color: $dark_color;
   border-radius: 5px;
