@@ -1,13 +1,13 @@
 /**
  * @file Redux module for new format for tracking project animations.
- * 
+ *
  * MIGRATION NOTES
  *  The old shape of animations is an array of animation metadata.
  *    [
  *      {animation},
  *      {animation}
  *    ]
- * 
+ *
  *  The new shape is an object with animation and cache components
  *    {
  *     list: [ AnimationKey, AnimationKey ],
@@ -16,16 +16,17 @@
  *       AnimationKey: {AnimationData}
  *     }
  *   }
- * 
+ *
  *  AnimationData should include the actual spritesheet (as blob and dataURI),
  *  dimensions and frame dimensions, framerate, name, last save time, version IDs,
  *  URL to fetch the animation from the API, etc.
- * 
+ *
  *  We serialize a smaller set of information.
- * 
+ *
  *  We need to do a migration if the old style gets loaded.
  *  See setInitialAnimationMetadata for how this works.
  */
+import _ from 'lodash';
 import {combineReducers} from 'redux';
 
 // Args: {SerializedAnimationList} animationList
@@ -112,8 +113,8 @@ export function setInitialAnimationList(serializedAnimationList) {
       animationList: serializedAnimationList
     });
     serializedAnimationList.list.forEach(key => {
-      dispatch(loadAnimationFromSource(key))
-    })
+      dispatch(loadAnimationFromSource(key));
+    });
   };
 }
 
@@ -165,7 +166,7 @@ function fetchUrlAsBlob(url, onComplete) {
   xhr.open('GET', url, true);
   xhr.responseType = 'blob';
   xhr.onload = e => {
-    if (e.target.status == 200) {
+    if (e.target.status === 200) {
       onComplete(null, e.target.response);
     } else {
       onComplete(new Error(`URL ${url} responded with code ${e.target.status}`));

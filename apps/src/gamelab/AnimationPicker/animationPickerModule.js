@@ -2,7 +2,7 @@
 'use strict';
 
 import _ from 'lodash';
-import {addAnimation} from '../animationModule';
+import {addAnimation} from '../animationListModule';
 import { makeEnum, createUuid } from '../../utils';
 import { sourceUrlFromKey } from '../animationMetadata';
 
@@ -111,7 +111,6 @@ export function handleUploadComplete(result) {
     // jQuery uploader.
     loadImageMetadata(sourceUrl, metadata => {
       const animation = _.assign({}, metadata, {
-        key: key,
         name: uploadFilename,
         sourceUrl: sourceUrl,
         size: result.size,
@@ -119,7 +118,7 @@ export function handleUploadComplete(result) {
       });
 
       if (goal === Goal.NEW_ANIMATION) {
-        dispatch(addAnimation(animation));
+        dispatch(addAnimation(key, animation));
       } else if (goal === Goal.NEW_FRAME) {
         // TODO (bbuchanan): Implement after integrating Piskel
       }
@@ -170,9 +169,7 @@ export function pickLibraryAnimation(animation) {
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      dispatch(addAnimation(Object.assign({}, animation, {
-        key: createUuid()
-      })));
+      dispatch(addAnimation(createUuid(), animation));
     } else if (goal === Goal.NEW_FRAME) {
       // TODO (bbuchanan): Implement after integrating Piskel
     }

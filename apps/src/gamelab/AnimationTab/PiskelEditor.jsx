@@ -24,7 +24,7 @@ const PiskelEditor = React.createClass({
     // Provided manually
     style: React.PropTypes.object,
     // Provided by Redux
-    animations: React.PropTypes.arrayOf(React.PropTypes.shape(METADATA_SHAPE)).isRequired,
+    animationList: React.PropTypes.object.isRequired, // TODO: Shape?
     selectedAnimation: React.PropTypes.string,
     channelId: React.PropTypes.string.isRequired
   },
@@ -43,10 +43,11 @@ const PiskelEditor = React.createClass({
   },
 
   componentWillReceiveProps(newProps) {
-    const {animations, selectedAnimation} = newProps;
+    const {animationList, selectedAnimation} = newProps;
     if (selectedAnimation !== this.props.selectedAnimation) {
-      var animation = animations.find(animation => animation.key === selectedAnimation);
-      this.piskel.loadSpritesheet(animation.sourceUrl, animation.frameSize.x, animation.frameSize.y);
+      var animation = animationList.data[selectedAnimation];
+      // TODO: Handle selecting animation where dataURI not loaded yet?
+      this.piskel.loadSpritesheet(animation.dataURI, animation.frameSize.x, animation.frameSize.y);
       this.loadedAnimation_ = selectedAnimation;
     }
   },
@@ -73,6 +74,6 @@ const PiskelEditor = React.createClass({
 });
 export default connect(state => ({
   selectedAnimation: state.animationTab.selectedAnimation,
-  animations: state.animations,
+  animationList: state.animationList,
   channelId: state.pageConstants.channelId
 }))(PiskelEditor);

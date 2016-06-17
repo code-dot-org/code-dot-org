@@ -26,7 +26,7 @@ const styles = {
  */
 const AnimationList = React.createClass({
   propTypes: {
-    animations: React.PropTypes.arrayOf(React.PropTypes.shape(METADATA_SHAPE)).isRequired,
+    animationKeys: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     selectedAnimation: React.PropTypes.string,
     onNewItemClick: React.PropTypes.func.isRequired
   },
@@ -34,11 +34,11 @@ const AnimationList = React.createClass({
   render() {
     return (
         <ScrollableList style={styles.root} className="animationList">
-          {this.props.animations.map(animation =>
+          {this.props.animationKeys.map(key =>
             <AnimationListItem
-                key={animation.key}
-                animation={animation}
-                isSelected={animation.key === this.props.selectedAnimation}
+                key={key}
+                animationKey={key}
+                isSelected={key === this.props.selectedAnimation}
             />
           )}
           <NewListItem
@@ -51,7 +51,7 @@ const AnimationList = React.createClass({
   }
 });
 export default connect(state => ({
-  animations: state.animations,
+  animationKeys: state.animationList.list,
   selectedAnimation: state.animationTab.selectedAnimation
 }), dispatch => ({
   onNewItemClick() {
