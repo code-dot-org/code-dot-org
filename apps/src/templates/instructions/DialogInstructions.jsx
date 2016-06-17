@@ -32,7 +32,7 @@ const DialogInstructions = React.createClass({
           instructions={this.props.shortInstructions}
           instructions2={this.props.shortInstructions2}
           renderedMarkdown={renderedMarkdown}
-          aniGifUrl={this.props.aniGifUrl}
+          aniGifURL={this.props.aniGifURL}
           authoredHints={this.props.authoredHints}
       />
     );
