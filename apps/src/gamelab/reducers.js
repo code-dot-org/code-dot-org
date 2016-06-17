@@ -4,6 +4,7 @@
 
 import {CHANGE_INTERFACE_MODE} from './actions';
 import animations from './animationModule';
+import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
 var errorDialogStack = require('./errorDialogStackModule').default;
@@ -24,7 +25,8 @@ function interfaceMode(state, action) {
 module.exports = {
   animationPicker,
   animationTab,
-  animations,
+  animations, // Old format for storing animations
+  animationList, // New format for storing animations
   errorDialogStack,
   interfaceMode
 };
