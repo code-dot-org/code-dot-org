@@ -1,4 +1,4 @@
-- if current_user && current_user.admin?
+- if current_user && (current_user.admin? || current_user.permission?(UserPermission::LEVELBUILDER))
   = render layout: 'shared/admin' do
     - if @level_source.hidden?
       %h4 This level is hidden but you can see it because you are an admin. Everyone else gets a 404 page.
