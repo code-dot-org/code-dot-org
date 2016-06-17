@@ -1,5 +1,6 @@
 #!/bin/bash -x
 # UserData bootstrap script for CloudFormation stack instances.
+# This script overrides variables useful for setting up an standalone adhoc instance.
 
 # Modify cloud-init to re-run bootstrap script every time instance restarts.
 # Ref: http://stackoverflow.com/a/10455027
@@ -64,6 +65,10 @@ jq "." <<JSON > ${FIRST_BOOT}
   "run_list": ${RUN_LIST}
 }
 JSON
+
+# Bootstrap the first cdo-apps Rakefile build on a new instance.
+# TODO move this run-once notification somewhere more appropriate
+rm -f /etc/init.d/{dashboard,pegasus}
 
 OPTIONS="<%=local_mode ? '-z' : ''%> -b ${BRANCH} -n ${NODE_NAME}"
 sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- ${OPTIONS}"

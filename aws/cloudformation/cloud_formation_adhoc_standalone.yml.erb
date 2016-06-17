@@ -16,6 +16,7 @@ Description: Standalone Code.org application on a single EC2 instance<%=cdn_enab
 Resources:
   VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC' %>
   IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM' %>
+  AMI: <%= lambda.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
   WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -40,7 +41,7 @@ Resources:
       ResourceSignal:
         Timeout: PT60M
     Properties:
-      ImageId: <%=image_id%>
+      ImageId: {'Fn::GetAtt': [AMI, ImageId]}
       InstanceType: <%=instance_type%>
       IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
       KeyName: <%=ssh_key_name%>
@@ -51,7 +52,7 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap.sh.erb')%>
+        Fn::Base64: <%=file.call('bootstrap_standalone.sh.erb')%>
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0

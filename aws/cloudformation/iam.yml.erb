@@ -22,6 +22,8 @@ Resources:
               - Effect: Allow
                 Action:
                   - 'cloudformation:SignalResource'
+                  - 'cloudformation:DescribeStackResources'
+                  - 'autoscaling:CompleteLifecycleAction'
                   - 'ec2:DescribeImages'
                 Resource: '*'
   FrontendInstanceProfile:
@@ -29,7 +31,27 @@ Resources:
     Properties:
       Path: '/'
       Roles: [Ref: FrontendRole]
+  LifecycleHookRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: [autoscaling.amazonaws.com]
+            Action: ['sts:AssumeRole']
+      Path: '/'
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: ['sns:Publish']
+                Resource: '*'
 Outputs:
   FrontendInstanceProfile:
     Description: Frontend Instance Profile
     Value: {Ref: FrontendInstanceProfile}
+  LifecycleHookRoleARN:
+    Description: Auto Scaling Lifecycle Hook Role
+    Value: {'Fn::GetAtt': [LifecycleHookRole, Arn]}
