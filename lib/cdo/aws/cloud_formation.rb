@@ -32,7 +32,8 @@ module AWS
       find { |cert| cert.domain_name == "*.#{DOMAIN}" }.
       certificate_arn
 
-    BRANCH = ENV['branch'] || rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env
+    BRANCH = ENV['branch'] || (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
+
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
