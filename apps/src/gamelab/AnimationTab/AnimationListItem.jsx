@@ -68,7 +68,8 @@ const styles = {
 const AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
-    animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
+    animationKey: React.PropTypes.string.isRequired,
+    animationData: React.PropTypes.object.isRequired, // TODO: Shape?
     columnWidth: React.PropTypes.number.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
@@ -83,22 +84,23 @@ const AnimationListItem = React.createClass({
   },
 
   onSelect() {
-    this.props.selectAnimation(this.props.animation.key);
+    this.props.selectAnimation(this.props.animationKey);
   },
 
   cloneAnimation() {
-    this.props.cloneAnimation(this.props.animation.key);
+    this.props.cloneAnimation(this.props.animationKey);
   },
 
   deleteAnimation() {
-    this.props.deleteAnimation(this.props.animation.key);
+    this.props.deleteAnimation(this.props.animationKey);
   },
 
   onNameChange(event) {
-    this.props.setAnimationName(this.props.animation.key, event.target.value);
+    this.props.setAnimationName(this.props.animationKey, event.target.value);
   },
 
   render() {
+    const name = this.props.animationData[this.props.animationKey].name;
     var animationName;
     if (this.props.isSelected) {
       animationName = (
@@ -106,12 +108,12 @@ const AnimationListItem = React.createClass({
           <input
               type="text"
               style={styles.nameInput}
-              value={this.props.animation.name}
+              value={name}
               onChange={this.onNameChange} />
         </div>
       );
     } else {
-      animationName = <div style={styles.nameLabel}>{this.props.animation.name}</div>;
+      animationName = <div style={styles.nameLabel}>{name}</div>;
     }
 
     var tileStyle = [
@@ -124,7 +126,7 @@ const AnimationListItem = React.createClass({
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
             ref="thumbnail"
-            animation={this.props.animation}
+            animationData={this.props.animationData[this.props.animationKey]}
             isSelected={this.props.isSelected}
         />
         {animationName}
@@ -136,6 +138,7 @@ const AnimationListItem = React.createClass({
   }
 });
 export default connect(state => ({
+  animationData: state.animationList.data,
   columnWidth: state.animationTab.columnSizes[0]
 }), dispatch => ({
   cloneAnimation(animationKey) {

@@ -9,7 +9,7 @@ const MARGIN_PX = 2;
  */
 const AnimationPreview = React.createClass({
   propTypes: {
-    animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
+    animationData: React.PropTypes.object.isRequired, // TODO: Shape?
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
     alwaysPlay: React.PropTypes.bool
@@ -55,10 +55,10 @@ const AnimationPreview = React.createClass({
 
   advanceFrame: function () {
     this.setState({
-      currentFrame: (this.state.currentFrame + 1) % this.props.animation.frameCount
+      currentFrame: (this.state.currentFrame + 1) % this.props.animationData.frameCount
     });
     clearTimeout(this.timeout_);
-    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animation.frameRate);
+    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animationData.frameRate);
   },
 
   stopAndResetAnimation: function () {
@@ -70,7 +70,7 @@ const AnimationPreview = React.createClass({
   },
 
   precalculateRenderProps: function (nextProps) {
-    const nextAnimation = nextProps.animation;
+    const nextAnimation = nextProps.animationData;
     const innerWidth = nextProps.width - 2 * MARGIN_PX;
     const innerHeight = nextProps.height - 2 * MARGIN_PX;
     const xScale = innerWidth / nextAnimation.frameSize.x;
