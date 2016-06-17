@@ -29,7 +29,8 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-import {setInitialAnimationMetadata} from './animationModule';
+import {setInitialAnimationMetadata} from './animationModule'; //old
+import {setInitialAnimationList, getSerializedAnimationList} from './animationListModule'; //new
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
@@ -220,7 +221,25 @@ GameLab.prototype.init = function (config) {
 
   // Push project-sourced animation metadata into store
   if (typeof config.initialAnimationMetadata !== 'undefined') {
-    this.studioApp_.reduxStore.dispatch(setInitialAnimationMetadata(config.initialAnimationMetadata));
+    if (Array.isArray(config.initialAnimationMetadata)) {
+      // Load old metadata that needs migration
+      this.studioApp_.reduxStore.dispatch(setInitialAnimationMetadata(config.initialAnimationMetadata)); //old
+      this.studioApp_.reduxStore.dispatch(setInitialAnimationList({
+        list: config.initialAnimationMetadata.map(a => a.key),
+        data: config.initialAnimationMetadata.reduce((memo, next) => {
+          memo[next.key] = next;
+          return memo;
+        }, {})
+      })); //new
+    } else {
+      // Load new metadata (temporarily reverse-migrate)
+      this.studioApp_.reduxStore.dispatch(setInitialAnimationMetadata(config.initialAnimationMetadata.list.map(key => {
+        let data = config.initialAnimationMetadata.data[key];
+        data.key = key;
+        return data;
+      }))); //old
+      this.studioApp_.reduxStore.dispatch(setInitialAnimationList(config.initialAnimationMetadata)); //new
+    }
   }
 
   ReactDOM.render((
@@ -973,6 +992,15 @@ GameLab.prototype.displayFeedback_ = function () {
  */
 GameLab.prototype.getAnimationMetadata = function () {
   return this.studioApp_.reduxStore.getState().animations;
+};
+
+/**
+ * Get the project's animation metadata for upload to the sources API.
+ * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ * @return {AnimationMetadata[]}
+ */
+GameLab.prototype.getSerializedAnimationList = function () {
+  return getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList);
 };
 
 GameLab.prototype.getAnimationDropdown = function () {
