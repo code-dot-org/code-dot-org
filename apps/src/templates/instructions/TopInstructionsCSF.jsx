@@ -79,6 +79,9 @@ const styles = {
     // icon to move. This strangeness happens in part because prompt-icon-cell
     // is managed outside of React
     marginTop: -20
+  },
+  containedLevelContainer: {
+    minHeight: 200,
   }
 };
 
@@ -263,7 +266,7 @@ var TopInstructions = React.createClass({
             {this.props.hasContainedLevels && <ProtectedStatefulDiv
               id="containedLevelContainer"
               ref="containedLevelContainer"
-              className='contained-level-container'/>
+              style={styles.containedLevelContainer}/>
             }
             {!this.props.hasContainedLevels && <Instructions
                 ref="instructions"

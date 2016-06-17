@@ -56,6 +56,9 @@ var styles = {
     bottom: 0,
     // Visualization is hard-coded on embed levels. Do the same for instructions position
     left: 340
+  },
+  containedLevelContainer: {
+    minHeight: 200,
   }
 };
 
@@ -174,7 +177,7 @@ var TopInstructions = React.createClass({
             {this.props.hasContainedLevels && <ProtectedStatefulDiv
               id="containedLevelContainer"
               ref="containedLevelContainer"
-              className='contained-level-container'/>
+              style={styles.containedLevelContainer}/>
             }
             {!this.props.hasContainedLevels && <Instructions
               ref="instructions"
