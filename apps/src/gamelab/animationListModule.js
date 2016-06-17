@@ -402,6 +402,12 @@ function getSerializedAnimation(animation) {
 }
 
 /**
+ * @typedef {string} AnimationKey
+ * A string that uniquely identifies an animation within the project, usually
+ * a UUID.
+ */
+
+/**
  * @typedef {Object} SerializedAnimationList
  * @property {AnimationKey[]} list - Animations in project order
  * @property {Object.<AnimationKey, SerializedAnimation>} data

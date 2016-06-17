@@ -1,6 +1,5 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
 import React from 'react';
-import { METADATA_SHAPE } from '../animationMetadata';
 const MARGIN_PX = 2;
 
 /**
