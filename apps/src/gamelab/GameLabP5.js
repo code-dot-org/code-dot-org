@@ -721,21 +721,21 @@ GameLabP5.prototype.afterSetupComplete = function () {
  * Given a collection of animation metadata for the project, preload each
  * animation, loading it onto the p5 object for use by the setAnimation method
  * later.
- * @param {AnimationMetadata[]} animationMetadata
+ * @param {AnimationList} animationList
  */
-GameLabP5.prototype.preloadAnimations = function (animationMetadata) {
+GameLabP5.prototype.preloadAnimations = function (animationList) {
   // Preload project animations:
   this.p5.projectAnimations = {};
-  animationMetadata.forEach(function (animation) {
-    // Note: loadImage is automatically wrapped during preload so that it
-    //       causes a preload-count increment/decrement pair.  No manual
-    //       tracking is required.
-    var image = this.p5.loadImage(
-        getSourceUrl(animation),
-        function onSuccess() {
-          var spriteSheet = this.p5.loadSpriteSheet(image, animation.frameSize.x,
-              animation.frameSize.y, animation.frameCount);
-          this.p5.projectAnimations[animation.name] = this.p5.loadAnimation(spriteSheet);
-        }.bind(this));
-  }, this);
+  animationList.list.forEach(key => {
+    const data = animationList.data[key];
+    var image = this.p5.loadImage(data.dataURI, () => {
+      var spriteSheet = this.p5.loadSpriteSheet(
+          image,
+          data.frameSize.x,
+          data.frameSize.y,
+          data.frameCount
+      );
+      this.p5.projectAnimations[data.name] = this.p5.loadAnimation(spriteSheet);
+    });
+  });
 };
