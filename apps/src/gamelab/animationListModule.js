@@ -28,13 +28,16 @@
  */
 import _ from 'lodash';
 import {combineReducers} from 'redux';
+import utils from '../utils';
 import {animations as animationsApi} from '../clientApi';
 import {reportError} from './errorDialogStackModule';
 
 // Args: {SerializedAnimationList} animationList
 const SET_INITIAL_ANIMATION_LIST = 'SET_INITIAL_ANIMATION_LIST';
 // Args: {AnimationKey} key, {SerializedAnimation} data
-const ADD_ANIMATION = 'ADD_ANIMATION';
+export const ADD_ANIMATION = 'ADD_ANIMATION';
+// Args: {number} index, {AnimationKey} key, {SerializedAnimation} data
+export const ADD_ANIMATION_AT = 'ADD_ANIMATION_AT';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'SET_ANIMATION_NAME';
 // Args: {AnimationKey} key
@@ -64,6 +67,12 @@ function list(state, action) {
           state.slice(0),
           action.key);
 
+    case ADD_ANIMATION_AT:
+      return [].concat(
+          state.slice(0, action.index),
+          action.key,
+          state.slice(action.index));
+
     case DELETE_ANIMATION:
       return state.filter(key => key !== action.key);
 
@@ -81,6 +90,7 @@ function data(state, action) {
       return action.animationList.data;
 
     case ADD_ANIMATION:
+    case ADD_ANIMATION_AT:
     case SET_ANIMATION_NAME:
     case DELETE_ANIMATION:
     case START_LOADING_FROM_SOURCE:
@@ -102,6 +112,7 @@ function datum(state, action) {
   switch (action.type) {
 
     case ADD_ANIMATION:
+    case ADD_ANIMATION_AT:
       return action.data;
 
     case SET_ANIMATION_NAME:
@@ -168,6 +179,67 @@ export function addAnimation(key, data) {
 }
 
 /**
+ * Clone the requested animation, putting the new one directly after the original
+ * in the project animation list.
+ * @param {!AnimationKey} key
+ * @returns {Function}
+ */
+export function cloneAnimation(key) {
+  return (dispatch, getState) => {
+    const state = getState().animationList;
+
+    var onCloneError = function (errorMessage) {
+      dispatch(reportError(`Error copying object ${key}: ${errorMessage}`));
+    };
+
+    // Track down the source animation and its index in the collection
+    var sourceIndex = state.list.indexOf(key);
+    if (sourceIndex < 0) {
+      onCloneError('Animation not found');
+      return;
+    }
+    var sourceAnimation = state.data[key];
+    var newAnimationKey = utils.createUuid();
+
+    /**
+     * Once the cloned asset is ready, call this to add the appropriate metadata.
+     * @param {string} [versionId]
+     */
+    var addClonedAnimation = function (versionId) {
+      dispatch({
+        type: ADD_ANIMATION_AT,
+        index: sourceIndex + 1,
+        key: newAnimationKey,
+        data: Object.assign({}, sourceAnimation, {
+          name: sourceAnimation.name + '_copy', // TODO: better generated names
+          version: versionId
+        })
+      });
+    };
+
+    // If cloning a library animation, no need to perform a copy request
+    if (/^\/blockly\//.test(sourceAnimation.sourceUrl)) {
+      addClonedAnimation();
+    } else {
+      animationsApi.ajax(
+          'PUT',
+          newAnimationKey + '.png?src=' + key + '.png',
+          function success(xhr) {
+            try {
+              var response = JSON.parse(xhr.responseText);
+              addClonedAnimation(response.versionId);
+            } catch (e) {
+              onCloneError(e.message);
+            }
+          },
+          function error(xhr) {
+            onCloneError(xhr.status + ' ' + xhr.statusText);
+          });
+    }
+  };
+}
+
+/**
  * Set the display name of the specified animation.
  * @param {string} key
  * @param {string} name
@@ -217,6 +289,10 @@ function loadAnimationFromSource(key) {
       key: key
     });
     fetchUrlAsBlob(getState().animationList.data[key].sourceUrl, (err, blob) => {
+      if (err) {
+        return;
+      }
+
       // TODO: Handle error gracefully
       blobToDataURI(blob, dataURI => {
         dispatch({

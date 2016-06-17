@@ -2,7 +2,7 @@
 'use strict';
 
 import { combineReducers } from 'redux';
-import {ADD_ANIMATION_AT} from '../animationModule';
+import {ADD_ANIMATION, ADD_ANIMATION_AT} from '../animationListModule';
 
 const SELECT_ANIMATION = 'AnimationTab/SELECT_ANIMATION';
 const SET_COLUMN_SIZES = 'AnimationTab/SET_COLUMN_SIZES';
@@ -15,8 +15,9 @@ export default combineReducers({
 function selectedAnimation(state, action) {
   state = state || '';
   switch (action.type) {
+    case ADD_ANIMATION:
     case ADD_ANIMATION_AT:
-      return action.animationProps.key;
+      return action.key;
     case SELECT_ANIMATION:
       return action.animationKey;
     default:
