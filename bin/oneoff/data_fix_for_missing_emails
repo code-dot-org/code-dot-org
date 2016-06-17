@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 #
-# This script reads a CSV of teacher email addresses. For each, it  checks to
-# see if there is a user account without a plaintext email matching the email
-# address (comparing the hashes). If there is, it upgrades the (student) account
-# to a teacher account, populating the plaintext email field with the email
-# address.
+# This script reads a file of teacher email addresses (one per line). For each,
+# it  checks to see if there is a user account without a plaintext email
+# matching the email address (comparing the hashes). If there is, it upgrades
+# the (student) account to a teacher account, populating the plaintext email
+# field with the email address.
 #
 # This is being done to alleviate account issues impacting the PLC team.
 #
@@ -15,8 +15,8 @@
 require 'csv'
 require_relative '../../dashboard/config/environment'
 
-CSV.foreach('/tmp/teacher_emails.csv') do |row|
-  email = row[0]
+File.open('/tmp/teacher_emails') do |line|
+  email = line.strip
   next if email.nil?
 
   # As we don't want to hammer production (too badly) with queries, we sleep for
@@ -31,7 +31,7 @@ CSV.foreach('/tmp/teacher_emails.csv') do |row|
     # As we know the email address to be associated with a teacher, we upgrade
     # the account to a teacher account, populating the plaintext email address.
     puts "UPDATING: #{user.id}..."
-    user.update(user_type: 'teacher', email: email)
+    user.update(user_type: User::TYPE_TEACHER, email: email)
   rescue Exception => e
     # Since exceptions may happen naturally, we simply log the relevant
     # information to the console and give the executing user a chance to abort
