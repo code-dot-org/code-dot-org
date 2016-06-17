@@ -1091,10 +1091,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
     this.authoredHintsController_.getHintsDisplay() : undefined;
   return (
     <Provider store={this.reduxStore}>
-      <DialogInstructions
-          authoredHints={authoredHints}
-          markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
-      />
+      <DialogInstructions authoredHints={authoredHints}/>
     </Provider>
   );
 };
