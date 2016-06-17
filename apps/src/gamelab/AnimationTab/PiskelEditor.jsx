@@ -4,7 +4,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {METADATA_SHAPE} from '../animationMetadata';
-import {MessageType} from '@code-dot-org/piskel';
+import PiskelApi from '@code-dot-org/piskel';
 
 /**
  * @const {string} domain-relative URL to Piskel index.html
@@ -12,6 +12,20 @@ import {MessageType} from '@code-dot-org/piskel';
  */
 const PISKEL_PATH = '/blockly/js/piskel/index.html' +
     (PISKEL_DEVELOPMENT_MODE ? '?debug' : '');
+
+function convertFileToDataURLviaFileReader(url, callback){
+  var xhr = new XMLHttpRequest();
+  xhr.responseType = 'blob';
+  xhr.onload = function () {
+    var reader  = new FileReader();
+    reader.onloadend = function () {
+      callback(reader.result);
+    };
+    reader.readAsDataURL(xhr.response);
+  };
+  xhr.open('GET', url);
+  xhr.send();
+}
 
 /**
  * The PiskelEditor component is a wrapper for the iframe that contains the
@@ -25,15 +39,25 @@ const PiskelEditor = React.createClass({
     style: React.PropTypes.object,
     // Provided by Redux
     animations: React.PropTypes.arrayOf(React.PropTypes.shape(METADATA_SHAPE)).isRequired,
-    selectedAnimation: React.PropTypes.string
+    selectedAnimation: React.PropTypes.string,
+    channelId: React.PropTypes.string.isRequired
+  },
+
+  componentDidMount() {
+    this.piskel = new PiskelApi(this.iframe);
+    this.piskel.onStateSaved(this.onAnimationSaved);
+  },
+
+  componentWillUnmount() {
+    // TODO: Tear down PiskelApi?
   },
 
   componentWillReceiveProps(newProps) {
     const {animations, selectedAnimation} = newProps;
-    if (newProps.selectedAnimation !== this.props.selectedAnimation) {
-      this.postMessage({
-        type: MessageType.LOAD_ANIMATION,
-        animation: animations.find(animation => animation.key === selectedAnimation)
+    if (selectedAnimation !== this.props.selectedAnimation) {
+      var animation = animations.find(animation => animation.key === selectedAnimation);
+      convertFileToDataURLviaFileReader(animation.sourceUrl, dataUrl => {
+        this.piskel.loadSpritesheet(dataUrl, animation.frameSize.x, animation.frameSize.y);
       });
     }
   },
@@ -42,29 +66,40 @@ const PiskelEditor = React.createClass({
     return false;
   },
 
-  /**
-   * Send a message to Piskel.
-   * The message should be an object (much like a Redux action) that the Piskel
-   * API can handle.
-   * @param {object} message
-   */
-  postMessage(message) {
-    // Piskel should be hosted on the same origin (domain) as gamelab; we don't
-    // want to send messages to other domains.
-    // TODO (bbuchanan): Inject window origin to remove global dependency?
-    const targetOrigin = location.origin;
-    this.iframe.contentWindow.postMessage(message, targetOrigin);
+  onAnimationSaved(message) {
+    console.log('onAnimationSaved', message);
+      // Update animation preview
+      // (Maybe) autosave animation to S3 and save new animation metadata
+
+      //// Instead of download, let's upload to S3.
+      //var xhr = pskl.utils.Xhr.xhr_(
+      //    '/v3/animations/' + this.channelId_ + '/' + this.loadedAnimation_.key + '.png',
+      //    'PUT',
+      //    function onSuccess(xhr) {
+      //      // TODO: Report success?
+      //      onComplete(xhr);
+      //    }, function onError(error) {
+      //      onComplete(error);
+      //    });
+      //xhr.setRequestHeader("Content-type", "image/png");
+      ////xhr.send(outputCanvas.toDataURL('image/png'));
+      //pskl.utils.BlobUtils.canvasToBlob(outputCanvas, function(blob) {
+      //  xhr.send(blob);
+      //}.bind(this));
   },
 
   render() {
-    return <iframe
+    return (
+      <iframe
         ref={iframe => this.iframe = iframe}
         style={this.props.style}
         src={PISKEL_PATH}
-    />;
+      />
+    );
   }
 });
 export default connect(state => ({
   selectedAnimation: state.animationTab.selectedAnimation,
-  animations: state.animations
+  animations: state.animations,
+  channelId: state.pageConstants.channelId
 }))(PiskelEditor);
