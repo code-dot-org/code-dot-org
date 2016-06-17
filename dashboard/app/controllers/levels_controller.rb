@@ -258,6 +258,7 @@ class LevelsController < ApplicationController
       {concept_ids: []},
       {level_concept_difficulty_attributes: [:id] + LevelConceptDifficulty::CONCEPTS},
       {soft_buttons: []},
+      {contained_level_names: []},
       {examples: []}
     ]
 

@@ -382,6 +382,8 @@ module LevelsHelper
       view_options(no_header: true, no_footer: true, white_background: true)
     end
 
+    view_options(has_contained_levels: @level.try(:contained_levels).present?)
+
     # Add all level view options to the level_options hash
     level_options.merge! level_overrides.camelize_keys
     app_options.merge! view_options.camelize_keys
@@ -409,6 +411,7 @@ module LevelsHelper
     app_options[:report] = {
         fallback_response: @fallback_response,
         callback: @callback,
+        sublevelCallback: @sublevel_callback,
     }
 
     unless params[:no_last_attempt]

@@ -61,6 +61,10 @@ const styles = {
     // Visualization is hard-coded on embed levels. Do the same for instructions position
     left: 340
   },
+  secondaryInstructions: {
+    fontSize: 12,
+    color: '#5b6770'
+  },
   collapserButton: {
     position: 'absolute',
     right: 0,
@@ -77,9 +81,8 @@ const styles = {
     // is managed outside of React
     marginTop: -20
   },
-  secondaryInstructions: {
-    fontSize: 12,
-    color: '#5b6770'
+  containedLevelContainer: {
+    minHeight: 200,
   }
 };
 
@@ -87,6 +90,7 @@ var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
+    hasContainedLevels: React.PropTypes.bool.isRequired,
     aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
@@ -194,9 +198,9 @@ var TopInstructions = React.createClass({
    */
   adjustMaxNeededHeight() {
     const minHeight = this.getMinHeight();
-
-    const instructionsContent = this.refs.instructions;
-    const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
+    const contentContainer = this.props.hasContainedLevels ?
+        this.refs.containedLevelContainer : this.refs.instructions;
+    const maxNeededHeight = $(ReactDOM.findDOMNode(contentContainer)).outerHeight(true) +
       RESIZER_HEIGHT;
 
     this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
@@ -272,14 +276,21 @@ var TopInstructions = React.createClass({
             </ProtectedStatefulDiv>
           </div>
           <div ref="instructions">
-            <Instructions
+            {this.props.hasContainedLevels && <ProtectedStatefulDiv
+              id="containedLevelContainer"
+              ref="containedLevelContainer"
+              style={styles.containedLevelContainer}/>
+            }
+            {!this.props.hasContainedLevels && <Instructions
+                ref="instructions"
                 renderedMarkdown={renderedMarkdown}
                 onResize={this.adjustMaxNeededHeight}
                 inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
                 aniGifURL={this.props.aniGifURL}
                 inTopPane
-            />
-            {this.props.collapsed && instructions2 &&
+              />
+            }
+            {!this.props.hasContainedLevels && this.props.collapsed && instructions2 &&
               <div
                 style={[
                   styles.secondaryInstructions
@@ -307,6 +318,7 @@ module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
     isMinecraft: state.pageConstants.isMinecraft,
+    hasContainedLevels: state.pageConstants.hasContainedLevels,
     aniGifURL: state.pageConstants.aniGifURL,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,

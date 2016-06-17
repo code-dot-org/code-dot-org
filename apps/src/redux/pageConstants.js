@@ -22,6 +22,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'showDebugConsole',
   'showDebugWatch',
   'localeDirection',
+  'hasContainedLevels',
   'isDroplet',
   'isMinecraft',
   'visualizationHasPadding',
