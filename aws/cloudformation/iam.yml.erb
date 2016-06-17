@@ -31,6 +31,45 @@ Resources:
     Properties:
       Path: '/'
       Roles: [Ref: FrontendRole]
+  StandaloneFrontendRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: [ec2.amazonaws.com]
+            Action: ['sts:AssumeRole']
+      Path: '/'
+      Policies:
+        - PolicyName: instance
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: ['s3:GetObject']
+                Resource: 'arn:aws:s3:::*'
+              - Effect: Allow
+                Action:
+                  - 'cloudformation:SignalResource'
+                  - 'cloudformation:DescribeStackResources'
+                  - 'autoscaling:CompleteLifecycleAction'
+                  - 'ec2:DescribeImages'
+                Resource: '*'
+              - Effect: Allow
+                Action:
+                  - 'dynamodb:*'
+                Resource:
+                  - {'Fn::Join': [':',['arn:aws:dynamodb',{Ref: 'AWS::Region'},{Ref: 'AWS::AccountId'},
+                    table/*_tables
+                  ]]}
+                  - {'Fn::Join': [':',['arn:aws:dynamodb',{Ref: 'AWS::Region'},{Ref: 'AWS::AccountId'},
+                    table/*_properties
+                  ]]}
+  StandaloneFrontendInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: '/'
+      Roles: [Ref: FrontendRole]
   LifecycleHookRole:
     Type: AWS::IAM::Role
     Properties:
@@ -52,6 +91,9 @@ Outputs:
   FrontendInstanceProfile:
     Description: Frontend Instance Profile
     Value: {Ref: FrontendInstanceProfile}
+  StandaloneFrontendInstanceProfile:
+    Description: Standalone Frontend Instance Profile
+    Value: {Ref: StandaloneFrontendInstanceProfile}
   LifecycleHookRoleARN:
     Description: Auto Scaling Lifecycle Hook Role
     Value: {'Fn::GetAtt': [LifecycleHookRole, Arn]}
