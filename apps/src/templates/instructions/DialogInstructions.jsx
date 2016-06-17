@@ -18,8 +18,7 @@ const DialogInstructions = React.createClass({
     aniGifURL: React.PropTypes.string,
 
     // not redux
-    authoredHints: React.PropTypes.element,
-    markdownClassicMargins: React.PropTypes.bool,
+    authoredHints: React.PropTypes.element
   },
   render() {
     const renderedMarkdown = this.props.longInstructions ?
@@ -33,7 +32,6 @@ const DialogInstructions = React.createClass({
           instructions={this.props.shortInstructions}
           instructions2={this.props.shortInstructions2}
           renderedMarkdown={renderedMarkdown}
-          markdownClassicMargins={this.props.markdownClassicMargins}
           aniGifUrl={this.props.aniGifUrl}
           authoredHints={this.props.authoredHints}
       />
