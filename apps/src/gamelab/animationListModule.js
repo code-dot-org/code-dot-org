@@ -35,7 +35,8 @@ import {reportError} from './errorDialogStackModule';
 const SET_INITIAL_ANIMATION_LIST = 'SET_INITIAL_ANIMATION_LIST';
 // Args: {AnimationKey} key, {SerializedAnimation} data
 const ADD_ANIMATION = 'ADD_ANIMATION';
-
+// Args: {AnimationKey} key, {string} name
+const SET_ANIMATION_NAME = 'SET_ANIMATION_NAME';
 // Args: {AnimationKey} key
 const DELETE_ANIMATION = 'DELETE_ANIMATION';
 
@@ -79,32 +80,50 @@ function data(state, action) {
     case SET_INITIAL_ANIMATION_LIST:
       return action.animationList.data;
 
+    case ADD_ANIMATION:
+    case SET_ANIMATION_NAME:
+    case DELETE_ANIMATION:
     case START_LOADING_FROM_SOURCE:
-      newState = Object.assign({}, state);
-      newState[action.key] = Object.assign({}, newState[action.key], {
-        loadedFromSource: false
-      });
-      return newState;
-
     case DONE_LOADING_FROM_SOURCE:
       newState = Object.assign({}, state);
-      newState[action.key] = Object.assign({}, newState[action.key], {
+      newState[action.key] = datum(newState[action.key], action);
+      return newState;
+
+    default:
+      return state;
+  }
+}
+
+/**
+ * Reducer for a single animation data item.
+ */
+function datum(state, action) {
+  state = state || {};
+  switch (action.type) {
+
+    case ADD_ANIMATION:
+      return action.data;
+
+    case SET_ANIMATION_NAME:
+      return Object.assign({}, state, {
+        name: action.name
+      });
+
+    case DELETE_ANIMATION:
+      return undefined;
+
+    case START_LOADING_FROM_SOURCE:
+      return Object.assign({}, state, {
+        loadedFromSource: false
+      });
+
+    case DONE_LOADING_FROM_SOURCE:
+      return Object.assign({}, state, {
         loadedFromSource: true,
         saved: true,
         blob: action.blob,
         dataURI: action.dataURI
       });
-      return newState;
-
-    case ADD_ANIMATION:
-      newState = Object.assign({}, state);
-      newState[action.key] = action.data;
-      return newState;
-
-    case DELETE_ANIMATION:
-      newState = Object.assign({}, state);
-      newState[action.key] = undefined;
-      return newState;
 
     default:
       return state;
@@ -147,6 +166,21 @@ export function addAnimation(key, data) {
     dispatch(loadAnimationFromSource(key));
   };
 }
+
+/**
+ * Set the display name of the specified animation.
+ * @param {string} key
+ * @param {string} name
+ * @returns {{type: ActionType, key: string, name: string}}
+ */
+export function setAnimationName(key, name) {
+  return {
+    type: SET_ANIMATION_NAME,
+    key,
+    name
+  };
+}
+
 
 /**
  * Delete the specified animation from the project.

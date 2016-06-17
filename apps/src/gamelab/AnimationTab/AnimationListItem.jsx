@@ -6,7 +6,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
 import * as actions from '../animationModule';
-import {deleteAnimation} from '../animationListModule';
+import {setAnimationName, deleteAnimation} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
@@ -150,6 +150,6 @@ export default connect(state => ({
     dispatch(selectAnimation(animationKey));
   },
   setAnimationName(animationKey, newName) {
-    dispatch(actions.setAnimationName(animationKey, newName));
+    dispatch(setAnimationName(animationKey, newName));
   }
 }))(Radium(AnimationListItem));
