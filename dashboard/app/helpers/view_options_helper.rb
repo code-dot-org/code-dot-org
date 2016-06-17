@@ -35,4 +35,9 @@ module ViewOptionsHelper
       opts.each{|k, v| @view_options[k] = v}
     end
   end
+
+  # Reset view options (for test code)
+  def reset_view_options
+    @view_options = nil
+  end
 end
