@@ -3974,6 +3974,14 @@ en:
         red: red
         teal: teal
         yellow: yellow
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+        Contained Multi: Contained Multi
+        Here is some information.: Here is some information.
+        What is 1 + 1?: What is 1 + 1?
       U1L07 Assessment 1:
         A: A
         B: B

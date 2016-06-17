@@ -1804,6 +1804,13 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
   $multi-left-margin: 50px;
 
+  .answerbutton {
+    &.lock-answers {
+      pointer-events: none;
+      color: grey;
+    }
+  }
+
   // The tight layout is designed for a full-width layout that tends to
   // vertically stack every element, rather than going for side-by-side elements.
   &.tight {

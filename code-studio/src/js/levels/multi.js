@@ -3,13 +3,16 @@ import $ from 'jquery';
 
 window.levelGroup = window.levelGroup || {levels: {}};
 
-var Multi = window.Multi = function (levelId, id, standalone, numAnswers, answers, lastAttemptString) {
+var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, answers, lastAttemptString) {
 
   // The dashboard levelId.
   this.levelId = levelId;
 
   // The DOM id.
   this.id = id;
+
+  // The dashboard app name.
+  this.app = app;
 
   // Whether this multi is the only puzzle on a page, or part of a group of them.
   this.standalone = standalone;
@@ -168,6 +171,14 @@ Multi.prototype.ready = function () {
     $('.submitButton').click($.proxy(this.submitButtonClick, this));
     $('.unsubmitButton').click($.proxy(this.unsubmitButtonClick, this));
   }
+};
+
+Multi.prototype.lockAnswers = function () {
+  $("#" + this.id + " .answerbutton").addClass('lock-answers');
+};
+
+Multi.prototype.getAppName = function () {
+  return this.app;
 };
 
 // called by external result-posting code
