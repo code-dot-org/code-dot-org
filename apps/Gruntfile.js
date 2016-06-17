@@ -360,6 +360,7 @@ module.exports = function (grunt) {
   if (entries.applab) {
     entries['applab-api'] = './src/applab/api-entry.js';
   }
+  entries['styleguide'] = './src/styleguide-entry.js';
   config.webpack = {
     build: _.extend({}, webpackConfig, {
       output: {
@@ -371,7 +372,7 @@ module.exports = function (grunt) {
       plugins: [
         new webpack.DefinePlugin({
           IN_UNIT_TEST: JSON.stringify(false),
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
           PISKEL_DEVELOPMENT_MODE: PISKEL_DEVELOPMENT_MODE
         }),
         new webpack.optimize.CommonsChunkPlugin({
