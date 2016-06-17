@@ -97,6 +97,7 @@ const ListItemThumbnail = React.createClass({
               animation={this.props.animation}
               width={this.state.previewSize}
               height={this.state.previewSize}
+              alwaysPlay={this.props.isSelected}
           />
           {this.getIndexBubble()}
         </div>

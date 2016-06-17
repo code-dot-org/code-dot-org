@@ -11,7 +11,8 @@ const AnimationPreview = React.createClass({
   propTypes: {
     animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
     width: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired
+    height: React.PropTypes.number.isRequired,
+    alwaysPlay: React.PropTypes.bool
   },
 
   getInitialState: function () {
@@ -31,6 +32,11 @@ const AnimationPreview = React.createClass({
 
   componentWillReceiveProps: function (nextProps) {
     this.precalculateRenderProps(nextProps);
+    if (nextProps.alwaysPlay && !this.timeout_) {
+      this.advanceFrame();
+    } else if (!nextProps.alwaysPlay && this.timeout_) {
+      this.stopAndResetAnimation();
+    }
   },
 
   componentWillUnmount: function () {
