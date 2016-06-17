@@ -84,10 +84,6 @@ Style/AlignHash:
 Style/AlignParameters:
   Enabled: false
 
-# Offense count: 8
-Style/AsciiComments:
-  Enabled: false
-
 # Offense count: 47
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, ProceduralMethods, FunctionalMethods, IgnoredMethods.
