@@ -3,10 +3,10 @@ require 'test_helper'
 class LevelSourceTest < ActiveSupport::TestCase
   def setup_helper(level_source_id, source, selected_message, experiment_messages)
     LevelSourceHint.create!(
-        level_source_id: level_source_id,
-        hint: selected_message,
-        status: LevelSourceHint::STATUS_SELECTED,
-        source: source)
+      level_source_id: level_source_id,
+      hint: selected_message,
+      status: LevelSourceHint::STATUS_SELECTED,
+      source: source)
     experiment_messages.each do |message|
       LevelSourceHint.create!(level_source_id: level_source_id,
                               hint: message,

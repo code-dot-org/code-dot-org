@@ -410,9 +410,9 @@ class DashboardSection
 
   def to_owner_hash()
     to_member_hash.merge(
-        course: course,
-        teachers: teachers,
-        students: students
+      course: course,
+      teachers: teachers,
+      students: students
     )
   end
 

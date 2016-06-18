@@ -199,7 +199,7 @@ class V2UserRoutesTest < Minitest::Test
             'CONTENT_TYPE' => 'application/json;charset=utf-8'
           assert_equal 200, @pegasus.last_response.status
           assert_equal expected_v2_students_id_hash_for(
-                         FakeDashboard::STUDENT.merge({name: NEW_NAME})),
+            FakeDashboard::STUDENT.merge({name: NEW_NAME})),
             JSON.parse(@pegasus.last_response.body)
         end
       end

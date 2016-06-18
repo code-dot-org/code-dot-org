@@ -134,11 +134,11 @@ class Level < ActiveRecord::Base
       unless self.callout_json.blank?
         return JSON.parse(self.callout_json).map do |callout_definition|
           Callout.new(
-              element_id: callout_definition['element_id'],
-              localization_key: callout_definition['localization_key'],
-              callout_text: callout_definition['callout_text'],
-              qtip_config: callout_definition['qtip_config'].try(:to_json),
-              on: callout_definition['on']
+            element_id: callout_definition['element_id'],
+            localization_key: callout_definition['localization_key'],
+            callout_text: callout_definition['callout_text'],
+            qtip_config: callout_definition['qtip_config'].try(:to_json),
+            on: callout_definition['on']
           )
         end
       end
