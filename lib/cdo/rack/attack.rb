@@ -47,7 +47,7 @@ class RackAttackConfigUpdater
   def update_config
     limits(max_table_reads_per_sec).each do |limit, period|
       Rack::Attack.throttle("shared-tables/reads/#{period}",
-                            :limit => limit, :period => period.seconds) do |req|
+        :limit => limit, :period => period.seconds) do |req|
         # extract the channel id for get requests to shared tables. Only match full
         # table reads, because createRecord commands get redirected to individual row
         # reads and we don't want those reads to count toward these limits.
@@ -57,7 +57,7 @@ class RackAttackConfigUpdater
 
     limits(max_table_writes_per_sec).each do |limit, period|
       Rack::Attack.throttle("shared-tables/writes/#{period}",
-                            :limit => limit, :period => period.seconds) do |req|
+        :limit => limit, :period => period.seconds) do |req|
         # extract the channel id for create, update and delete requests to shared tables.
         # TODO(dave): Make imports and other table/column operations not fall into this bucket
         # once we are accounting for them separately.
@@ -67,7 +67,7 @@ class RackAttackConfigUpdater
 
     limits(max_property_reads_per_sec).each do |limit, period|
       Rack::Attack.throttle("shared-properties/reads/#{period}",
-                            :limit => limit, :period => period.seconds) do |req|
+        :limit => limit, :period => period.seconds) do |req|
         # extract the channel id for reads of shared properties.
         req.get? && %r{^/v3/shared-properties/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
       end
@@ -75,7 +75,7 @@ class RackAttackConfigUpdater
 
     limits(max_property_writes_per_sec).each do |limit, period|
       Rack::Attack.throttle("shared-properties/writes/#{period}",
-                            :limit => limit, :period => period.seconds) do |req|
+        :limit => limit, :period => period.seconds) do |req|
         # extract the channel id for writes to shared properties.
         req.write? && %r{^/v3/shared-properties/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
       end

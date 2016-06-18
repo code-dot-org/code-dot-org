@@ -139,9 +139,9 @@ class ExperimentActivity < ActiveRecord::Base
 
     # Extract hash keys from parameters for manually testing experiments.
     stanford_experiment_hash = self.try_get_int_parameter(
-        options[:uri], FEEDBACK_EXPERIMENT_PARAMETER)
+      options[:uri], FEEDBACK_EXPERIMENT_PARAMETER)
     hint_visibility_experiment_hash = self.try_get_int_parameter(
-        options[:uri], VISIBILITY_EXPERIMENT_PARAMETER)
+      options[:uri], VISIBILITY_EXPERIMENT_PARAMETER)
 
     # If we are doing the Stanford hint experiment, choose the hint from the appropriate source.
     if (stanford_experiment_hash ||

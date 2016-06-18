@@ -39,7 +39,7 @@ class ExperimentActivityTest < ActiveSupport::TestCase
   def feedback_experiment_uri(value)
     "http://learn.code.org?#{ExperimentActivity::FEEDBACK_EXPERIMENT_PARAMETER}=" +
         "#{inverse_pick_mod_length(\
-            ExperimentActivity::FEEDBACK_EXPERIMENT_SOURCES, value)}"
+          ExperimentActivity::FEEDBACK_EXPERIMENT_SOURCES, value)}"
   end
 
   test "try to run Stanford feedback experiment with no level_source" do
@@ -126,7 +126,7 @@ class ExperimentActivityTest < ActiveSupport::TestCase
     bad_values = [nil, 'grumble', 'foo.bar', 'foo.bar.baz.zoo', '1.2.3.4.5', '1.2..']
     bad_values.each { |ip|
       assert_equal nil, ExperimentActivity.ip_to_hash_value(ip),
-                   "Did not get expected value of 0 for argument \"#{ip}\"."
+        "Did not get expected value of 0 for argument \"#{ip}\"."
     }
   end
 

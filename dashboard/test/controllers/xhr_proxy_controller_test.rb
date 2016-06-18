@@ -63,12 +63,12 @@ class XhrProxyControllerTest < ActionController::TestCase
   test "should fail if too many redirects" do
     response = {body: 'Redirect', status: 302, headers: {location: XHR_URI}}
     stub_request(:get, XHR_URI).to_return(
-        response,
-        response,
-        response,
-        response,
-        response,
-        response)
+      response,
+      response,
+      response,
+      response,
+      response,
+      response)
     get :get, u: XHR_URI, c: CHANNEL_ID
     assert_response 500
   end

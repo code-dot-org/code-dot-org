@@ -64,9 +64,9 @@ class AdminFunometerController < ApplicationController
       @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
       @ratings_by_level = ratings_by_level.
                           select('level_id',
-                                 'name',
-                                 '100.0 * SUM(rating) / COUNT(rating) AS percentage',
-                                 'COUNT(rating) AS cnt')
+                            'name',
+                            '100.0 * SUM(rating) / COUNT(rating) AS percentage',
+                            'COUNT(rating) AS cnt')
     end
   end
 
