@@ -145,7 +145,7 @@ class ActivitiesControllerTest < ActionController::TestCase
                       user_agent: 'Rails Testing',
                       locale: :'en-us'
                   }],
-                 slogger.records)
+      slogger.records)
   end
 
   test "successful milestone does not require script_level_id" do

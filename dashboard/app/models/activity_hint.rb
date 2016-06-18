@@ -34,7 +34,7 @@ class ActivityHint < ActiveRecord::Base
     value = self.hint_visibility
     if value && value < HINT_MADE_VISIBLE_ADJUSTMENT
       self.update_attribute(:hint_visibility,
-                            value + HINT_MADE_VISIBLE_ADJUSTMENT)
+        value + HINT_MADE_VISIBLE_ADJUSTMENT)
     end
   end
 

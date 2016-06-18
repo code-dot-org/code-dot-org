@@ -52,12 +52,12 @@ class MediaProxyControllerTest < ActionController::TestCase
   test "should fail if too many redirects" do
     response = {body: 'Redirect', status: 302, headers: {location: IMAGE_URI}}
     stub_request(:get, IMAGE_URI).to_return(
-                           response,
-                           response,
-                           response,
-                           response,
-                           response,
-                           response)
+      response,
+      response,
+      response,
+      response,
+      response,
+      response)
     get :get, u: IMAGE_URI
     assert_response 500
   end

@@ -266,7 +266,7 @@ class ApiControllerTest < ActionController::TestCase
                       user_agent: 'Rails Testing',
                       locale: :'en-us'
                   }],
-                 slogger.records)
+      slogger.records)
   end
 
   test "should get user progress for stage for signed-out user" do
@@ -291,7 +291,7 @@ class ApiControllerTest < ActionController::TestCase
                       user_agent: 'Rails Testing',
                       locale: :'en-us'
                   }],
-                 slogger.records)
+      slogger.records)
   end
 
   test "should get user progress for stage with young student" do
@@ -488,29 +488,29 @@ class ApiControllerTest < ActionController::TestCase
   test 'api routing' do
     # /dashboardapi urls
     assert_routing({method: "get", path: "/dashboardapi/user_menu"},
-                   {controller: "api", action: "user_menu"})
+      {controller: "api", action: "user_menu"})
 
     assert_routing({method: "get", path: "/dashboardapi/section_progress/2"},
-                   {controller: "api", action: "section_progress", section_id: '2'})
+      {controller: "api", action: "section_progress", section_id: '2'})
 
     assert_routing({method: "get", path: "/dashboardapi/student_progress/2/15"},
-                   {controller: "api", action: "student_progress", section_id: '2', student_id: '15'})
+      {controller: "api", action: "student_progress", section_id: '2', student_id: '15'})
 
     assert_routing({method: "get", path: "/dashboardapi/whatevvv"},
-                   {controller: "api", action: "whatevvv"})
+      {controller: "api", action: "whatevvv"})
 
     # /api urls
     assert_recognizes({controller: "api", action: "user_menu"},
-                      {method: "get", path: "/api/user_menu"})
+      {method: "get", path: "/api/user_menu"})
 
     assert_recognizes({controller: "api", action: "section_progress", section_id: '2'},
-                      {method: "get", path: "/api/section_progress/2"})
+      {method: "get", path: "/api/section_progress/2"})
 
     assert_recognizes({controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
-                      {method: "get", path: "/api/student_progress/2/15"})
+      {method: "get", path: "/api/student_progress/2/15"})
 
     assert_recognizes({controller: "api", action: "whatevvv"},
-                      {method: "get", path: "/api/whatevvv"})
+      {method: "get", path: "/api/whatevvv"})
 
   end
 end

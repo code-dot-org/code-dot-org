@@ -25,26 +25,26 @@ class LevelSourceTest < ActiveSupport::TestCase
     @experimental_crowdsourced_messages = ['experiment crowdsourced 1',
                                            'experiment crowdsourced 2']
     setup_helper(@level_source.id,
-                 LevelSourceHint::CROWDSOURCED,
-                 @selected_crowdsourced_message,
-                 @experimental_crowdsourced_messages)
+      LevelSourceHint::CROWDSOURCED,
+      @selected_crowdsourced_message,
+      @experimental_crowdsourced_messages)
 
     # Set up external (Stanford) hints.
     @selected_stanford_message = 'selected stanford hint'
     @experimental_stanford_messages = ['stanford exp1', 'stanford exp2']
     setup_helper(@level_source.id,
-                 LevelSourceHint::STANFORD,
-                 @selected_stanford_message,
-                 @experimental_stanford_messages)
+      LevelSourceHint::STANFORD,
+      @selected_stanford_message,
+      @experimental_stanford_messages)
 
     # Set up standardized and variant level_sources.
     @standard_data = 'dummy data'
     @variant_data =
       LevelSource::XMLNS_STRING + @standard_data + LevelSource::XMLNS_STRING
     @ls1_standard = create(:level_source,
-        level_id: @level.id, data: @standard_data)
+      level_id: @level.id, data: @standard_data)
     @ls1_variant = create(:level_source,
-        level_id: @level.id, data: @variant_data)
+      level_id: @level.id, data: @variant_data)
     assert_equal @ls1_standard.level_id, @ls1_variant.level_id
 
     level2_id = create(:level).id
@@ -72,7 +72,7 @@ class LevelSourceTest < ActiveSupport::TestCase
 
   test "should get selected crowdsourced hint" do
     assert_equal @selected_crowdsourced_message,
-                 @level_source.get_crowdsourced_hint.hint
+      @level_source.get_crowdsourced_hint.hint
   end
 
   test "should not get crowdsourced hint if locale is not en" do
@@ -83,26 +83,26 @@ class LevelSourceTest < ActiveSupport::TestCase
 
   test "should get selected Stanford hint" do
     assert_equal @selected_stanford_message,
-                 @level_source.get_hint_from_source(LevelSourceHint::STANFORD).hint
+      @level_source.get_hint_from_source(LevelSourceHint::STANFORD).hint
   end
 
   test "should not get external hint if locale is not en" do
     with_locale(:'fr-FR') do
       assert_equal nil,
-                   @level_source.get_external_hint
+        @level_source.get_external_hint
     end
   end
 
   test "should get selected external hint" do
     assert_equal @selected_stanford_message,
-                 @level_source.get_external_hint.hint
+      @level_source.get_external_hint.hint
   end
 
   def inactivate_selected_hint(source)
     hints = @level_source.level_source_hints.
       where(source: source, status: LevelSourceHint::STATUS_SELECTED)
     assert_equal 1, hints.to_a.size,
-                 "Wrong number of selected hints with source #{source}"
+      "Wrong number of selected hints with source #{source}"
     hints.first.update(status: LevelSourceHint::STATUS_INACTIVE)
   end
 
@@ -117,7 +117,7 @@ class LevelSourceTest < ActiveSupport::TestCase
       hint = @level_source.get_crowdsourced_hint
       assert_not_nil hint
       assert @experimental_crowdsourced_messages.include?(hint.hint),
-             "Did not expect hint #{hint.hint}"
+        "Did not expect hint #{hint.hint}"
       index = @experimental_crowdsourced_messages.index(hint.hint)
       counts[index] += 1
     end

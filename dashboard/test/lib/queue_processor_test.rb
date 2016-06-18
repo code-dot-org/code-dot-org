@@ -217,11 +217,11 @@ class QueueProcessorTest < ActiveSupport::TestCase
 
     DCDO.set('test_rate', nil)
     assert_equal config.initial_max_rate, config.max_rate_proc.call,
-                 'Max rate proc should return initial_max_rate if DCDO value is not set'
+      'Max rate proc should return initial_max_rate if DCDO value is not set'
 
     DCDO.set('test_rate', 234)
     assert_equal 234, config.max_rate_proc.call,
-                 'Max rate proc should return DCDO value if set'
+      'Max rate proc should return DCDO value if set'
 
     config2 = configs[1]
     assert_equal 'https://sqs.us-east-1.amazonaws.com/1234/example2', config2.queue_url

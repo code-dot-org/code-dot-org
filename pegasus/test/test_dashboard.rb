@@ -35,7 +35,7 @@ class DashboardTest < Minitest::Test
                           name: FakeDashboard::STUDENT[:name],
                           admin: FakeDashboard::STUDENT[:admin]
                      },
-                     @student.select(:name, :admin))
+          @student.select(:name, :admin))
       end
 
       it 'can add getter methods to requested hash' do
@@ -43,7 +43,7 @@ class DashboardTest < Minitest::Test
                           name: FakeDashboard::STUDENT[:name],
                           owned_sections: []
                      },
-                     @student.select(:name, :owned_sections))
+          @student.select(:name, :owned_sections))
 
         assert_equal({
                          name: FakeDashboard::TEACHER[:name],
@@ -52,7 +52,7 @@ class DashboardTest < Minitest::Test
                              {id: FakeDashboard::TEACHER_SECTIONS[1][:id]}
                          ]
                      },
-                     @teacher.select(:name, :owned_sections))
+          @teacher.select(:name, :owned_sections))
       end
     end
 
