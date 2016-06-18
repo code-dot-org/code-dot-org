@@ -40,7 +40,7 @@ class RackAttackConfigUpdater
   # Returns a default rack attack store backed by Redis.
   def default_redis_cache_store
     Rack::Attack::StoreProxy::RedisStoreProxy.new(
-        Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379'))
+      Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379'))
   end
 
   # Updates the RackAttack limits based on CDO defaults and DCDO overrides.

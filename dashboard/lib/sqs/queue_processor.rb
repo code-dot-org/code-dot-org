@@ -92,7 +92,7 @@ module SQS
                 # pause even if the handler failed because we don't want to exceed the configured rate
                 # even when failures are occuring.
                 delay = rate_limiter.inter_batch_delay(
-                    batch_size: batch_size, elapsed_time_sec: Time.now.to_f - start_time_sec)
+                  batch_size: batch_size, elapsed_time_sec: Time.now.to_f - start_time_sec)
                 sleep(delay) if delay > 0
 
                 # Tell SQS to resend the batch if it failed.

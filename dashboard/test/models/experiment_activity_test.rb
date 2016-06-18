@@ -44,8 +44,8 @@ class ExperimentActivityTest < ActiveSupport::TestCase
 
   test "try to run Stanford feedback experiment with no level_source" do
     response = ExperimentActivity.determine_hint(
-        enable_external_hints: true,
-        uri: feedback_experiment_uri(LevelSourceHint::STANFORD))
+      enable_external_hints: true,
+      uri: feedback_experiment_uri(LevelSourceHint::STANFORD))
     assert_nil response[:hint]
     assert_nil response[:hint_request_placement]
     assert_equal 0, ActivityHint.count
@@ -80,9 +80,9 @@ class ExperimentActivityTest < ActiveSupport::TestCase
   test "try to get Stanford hint by url" do
     setup_hints
     response = ExperimentActivity.determine_hint(
-        level_source: @level_source,
-        activity: @activity,
-        uri: feedback_experiment_uri(LevelSourceHint::STANFORD))
+      level_source: @level_source,
+      activity: @activity,
+      uri: feedback_experiment_uri(LevelSourceHint::STANFORD))
     assert_equal @stanford_hint, response[:hint]
     activity_hint = response[:activity_hint]
     assert_not_nil activity_hint
@@ -95,9 +95,9 @@ class ExperimentActivityTest < ActiveSupport::TestCase
   test "try to get crowdsourced hint by url" do
     setup_hints
     response = ExperimentActivity.determine_hint(
-        level_source: @level_source,
-        activity: @activity,
-        uri: feedback_experiment_uri(LevelSourceHint::CROWDSOURCED))
+      level_source: @level_source,
+      activity: @activity,
+      uri: feedback_experiment_uri(LevelSourceHint::CROWDSOURCED))
     assert_equal @crowdsourced_hint, response[:hint]
     activity_hint = response[:activity_hint]
     assert_not_nil activity_hint
@@ -110,9 +110,9 @@ class ExperimentActivityTest < ActiveSupport::TestCase
   test "try to get nil hint" do
     setup_hints
     response = ExperimentActivity.determine_hint(
-        level_source: @level_source,
-        activity: @activity,
-        uri: feedback_experiment_uri(nil))
+      level_source: @level_source,
+      activity: @activity,
+      uri: feedback_experiment_uri(nil))
     assert_nil response[:hint]
     activity_hint = response[:activity_hint]
     assert_not_nil activity_hint

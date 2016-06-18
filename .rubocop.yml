@@ -22,6 +22,9 @@ Style/DotPosition:
 Style/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
 
+Style/FirstParameterIndentation:
+  EnforcedStyle: consistent
+
 Style/NumericLiterals:
   MinDigits: 7
 
