@@ -32,7 +32,11 @@ var PROP_INFO = {
   placeholder: { friendlyName: 'placeholder', internalName: 'placeholder', type: 'string' },
   image: { friendlyName: 'image', internalName: 'image', type: 'string' },
   screenImage: { friendlyName: 'image', internalName: 'screen-image', type: 'string' },
-  picture: { friendlyName: 'picture', internalName: 'picture', type: 'string' },
+  // pictureImage and picture both map to 'picture' internally, but allow us to accept
+  // either 'image' or 'picture' as the property name. picture is marked as an alias so
+  // it won't show up in the dropdown.
+  pictureImage: { friendlyName: 'image', internalName: 'picture', type: 'string' },
+  picture: { friendlyName: 'picture', internalName: 'picture', type: 'string', alias: true },
   groupId: { friendlyName: 'group-id', internalName: 'groupId', type: 'string' },
   checked: { friendlyName: 'checked', internalName: 'checked', type: 'boolean' },
   readonly: { friendlyName: 'readonly', internalName: 'readonly', type: 'boolean' },
@@ -121,7 +125,8 @@ PROP_NAMES[ElementType.IMAGE] = [
   'height',
   'x',
   'y',
-  'picture',
+  'pictureImage',
+  'picture', // Since this is an alias, it is not shown in the dropdown but is allowed as a value
   'hidden'
 ];
 PROP_NAMES[ElementType.CANVAS] = [
@@ -167,9 +172,12 @@ PROP_NAMES[ElementType.SLIDER] = [
 ];
 
 // Create a mapping of PROPS_PER_TYPE[elementType][friendlyName] => prop info
+// and a mapping of PROP_NAMES_PER_TYPE[elementType] => array of properties
 var PROPS_PER_TYPE = {};
+var PROP_NAMES_PER_TYPE = {};
 Object.keys(PROP_NAMES).map(function (elementType) {
   PROPS_PER_TYPE[elementType] = {};
+  PROP_NAMES_PER_TYPE[elementType] = [];
   PROP_NAMES[elementType].forEach(function (propName) {
     var friendlyName = PROP_INFO[propName].friendlyName;
     if (PROPS_PER_TYPE[elementType][friendlyName]) {
@@ -177,6 +185,9 @@ Object.keys(PROP_NAMES).map(function (elementType) {
         ' in elementType: ' + elementType);
     }
     PROPS_PER_TYPE[elementType][friendlyName] = PROP_INFO[propName];
+    if (!PROP_INFO[propName].alias) {
+      PROP_NAMES_PER_TYPE[elementType].push('"' + friendlyName + '"');
+    }
   });
 });
 
@@ -228,6 +239,23 @@ function stripQuotes(str) {
 }
 
 /**
+ * Gets the properties that should be shown in the dropdown list for elements of the given type.
+ * @param {string} elementType
+ * @returns {!Array<string>} list of quoted property names
+ */
+function getDropdownProperties(elementType) {
+  if (!elementType) {
+    return fullDropdownOptions;
+  }
+
+  if (!(elementType in PROP_NAMES_PER_TYPE)) {
+    return fullDropdownOptions;
+  }
+
+  return PROP_NAMES_PER_TYPE[elementType];
+}
+
+/**
  * Given an element and a friendly name for that element, returns an object
  * containing the internal equivalent for that friendly name, or undefined
  * if we don't have info for this element/property.
@@ -263,21 +291,12 @@ module.exports.setPropertyDropdown = function () {
       return fullDropdownOptions;
     }
 
-    var elementType = library.getElementType(element);
-    if (!elementType) {
-      return fullDropdownOptions;
-    }
-
-    var keys = Object.keys(PROPS_PER_TYPE[elementType]);
-    if (!keys) {
-      return fullDropdownOptions;
-    }
-
-    return keys.map(function (key) { return '"' + key + '"'; });
+    return getDropdownProperties(library.getElementType(element));
   };
 };
 
 module.exports.__TestInterface = {
   getFirstSetPropertyParamFromCode: getFirstSetPropertyParamFromCode,
-  stripQuotes: stripQuotes
+  stripQuotes: stripQuotes,
+  getDropdownProperties: getDropdownProperties
 };
