@@ -94,6 +94,7 @@ const ListItemThumbnail = React.createClass({
         <div ref="wrapper" style={styles.wrapper}>
           <AnimationPreview
               animationData={this.props.animationData}
+              sourceUrl={this.props.animationData.dataURI}
               width={this.state.previewSize}
               height={this.state.previewSize}
               alwaysPlay={this.props.isSelected}

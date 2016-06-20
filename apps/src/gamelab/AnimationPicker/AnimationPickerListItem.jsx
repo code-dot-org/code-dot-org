@@ -75,6 +75,7 @@ const AnimationPickerListItem = React.createClass({
           {this.props.animation &&
               <AnimationPreview
                   animationData={this.props.animation}
+                  sourceUrl={this.props.animation.sourceUrl}
                   width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
                   height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
               />
