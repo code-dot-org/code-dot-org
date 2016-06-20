@@ -1,4 +1,4 @@
-
+import $ from 'jquery';
 
 window.SignupManager = function (options) {
   this.options = options;
