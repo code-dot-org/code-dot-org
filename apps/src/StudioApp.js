@@ -2389,6 +2389,14 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
 };
 
 /**
+ * Do we have any floating blocks that are not going to be handled
+ * gracefully?
+ */
+StudioApp.prototype.hasUnwantedExtraTopBlocks = function () {
+  return this.hasExtraTopBlocks() && !Blockly.showUnusedBlocks;
+};
+
+/**
  *
  */
 StudioApp.prototype.hasQuestionMarksInNumberField = function () {
