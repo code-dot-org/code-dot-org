@@ -2,6 +2,7 @@ require_relative '../src/env'
 require 'rack/test'
 require 'minitest/autorun'
 require 'webmock/minitest'
+require 'mocha/mini_test'
 
 # General purpose Pegasus site tester for incremental test coverage of the Router logic.
 class SiteTest < Minitest::Test
@@ -24,5 +25,26 @@ class SiteTest < Minitest::Test
 
     # Ensure POST requests to whitelisted paths are allowed.
     assert_equal 200, post('/custom-certificates').status
+  end
+
+  module ::NewRelic
+    class Agent
+      def self.set_transaction_name(name)
+      end
+    end
+  end
+
+  def test_new_relic_transactions
+    header 'host', 'code.org'
+    ::NewRelic::Agent.expects(:set_transaction_name).with('/')
+    assert_equal 200, get('/').status
+
+    ::NewRelic::Agent.expects(:set_transaction_name).with('/learn')
+    assert_equal 200, get('/learn').status
+
+    # Ensure dynamic splat info is removed from the transaction name.
+    # Splat paths can include session IDs, usernames, etc that don't collapse into a single transaction.
+    ::NewRelic::Agent.expects(:set_transaction_name).with('/donate')
+    assert_equal 302, get('/donate/hello-world').status
   end
 end

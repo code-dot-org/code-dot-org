@@ -1,55 +1,49 @@
 class Ability
   include CanCan::Ability
 
+  # Define abilities for the passed in user here. For more information, see the
+  # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
   def initialize(user)
-    # Define abilities for the passed in user here. For example:
-    #
-    user ||= User.new # guest user (not logged in)
-    if user.admin?
-      can :manage, :all
+    user ||= User.new
 
-      # Only custom levels are editable
-      cannot [:update, :destroy], Level do |level|
-        !level.custom?
-      end
-    else
-      can :read, :all
-      cannot :read, [
-        Script, # see override below
-        ScriptLevel, # see override below
-        PrizeProvider,
-        Prize,
-        TeacherPrize,
-        TeacherBonusPrize,
-        LevelSourceHint,
-        FrequentUnsuccessfulLevelSource,
-        :reports,
-        User,
-        Follower,
-        PeerReview,
-        # Ops models
-        District,
-        Workshop,
-        Cohort,
-        WorkshopAttendance,
-        # PLC Stuff
-        Plc::Course,
-        Plc::LearningModule,
-        Plc::Task,
-        Plc::UserCourseEnrollment,
-        Plc::CourseUnit,
-        # PD models
-        Pd::Workshop,
-        Pd::Attendance,
-        Pd::DistrictPaymentTerm,
-        Pd::DistrictReport,
-        Pd::WorkshopOrganizerReport,
-        Pd::TeacherProgressReport,
-        Pd::CourseFacilitator
-      ]
-    end
+    # Abilities for all users, signed in or not signed in.
+    can :read, :all
+    cannot :read, [
+      Script, # see override below
+      ScriptLevel, # see override below
+      PrizeProvider,
+      Prize,
+      TeacherPrize,
+      TeacherBonusPrize,
+      LevelSourceHint,
+      FrequentUnsuccessfulLevelSource,
+      :reports,
+      User,
+      UserPermission,
+      Follower,
+      PeerReview,
+      # Ops models
+      District,
+      Workshop,
+      Cohort,
+      WorkshopAttendance,
+      # PLC Stuff
+      Plc::Course,
+      Plc::LearningModule,
+      Plc::Task,
+      Plc::UserCourseEnrollment,
+      Plc::CourseUnit,
+      # PD models
+      Pd::Workshop,
+      Pd::Attendance,
+      Pd::DistrictPaymentTerm,
+      Pd::DistrictReport,
+      Pd::WorkshopOrganizerReport,
+      Pd::TeacherProgressReport,
+      Pd::CourseFacilitator
+    ]
 
-    if user.id
+    if user.persisted?
       can :manage, user
 
       can :create, Activity, user_id: user.id
@@ -60,8 +54,9 @@ class Ability
       can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower, student_user_id: user.id
+      can :read, UserPermission, user_id: user.id
 
-      if user.hint_access? || user.teacher?
+      if user.teacher? || (user.persisted? && user.permission?(UserPermission::HINT_ACCESS))
         can :manage, [LevelSourceHint, FrequentUnsuccessfulLevelSource]
       end
 
@@ -76,6 +71,9 @@ class Ability
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :manage, Pd::Enrollment, teacher_id: user.id
+        can :view_level_solutions, Script do |script|
+          !script.professional_learning_course?
+        end
       end
 
       if user.facilitator?
@@ -119,17 +117,18 @@ class Ability
       end
     end
 
-    if user.id && user.admin?
+    # Override Script and ScriptLevel.
+    if user.persisted? && user.admin?
       can :read, Script
       can :read, ScriptLevel
-    elsif user.id && user.student_of_admin? # logged in, not admin but student of admin
+    elsif user.persisted? && user.student_of_admin? # logged in, not admin, is student of admin
       can :read, Script do |script|
         !script.admin_required?
       end
       can :read, ScriptLevel do |script_level|
         !script_level.script.admin_required?
       end
-    elsif user.id # logged in, not admin or student of admin
+    elsif user.persisted? # logged in, not admin, not student of admin
       can :read, Script do |script|
         !script.admin_required? &&
             !script.student_of_admin_required?
@@ -167,23 +166,29 @@ class Ability
       end
     end
 
-    #
-    # The first argument to `can` is the action you are giving the user
-    # permission to do.
-    # If you pass :manage it will apply to every action. Other common actions
-    # here are :read, :create, :update and :destroy.
-    #
-    # The second argument is the resource the user can perform the action on.
-    # If you pass :all it will apply to every resource. Otherwise pass a Ruby
-    # class of the resource.
-    #
-    # The third argument is an optional hash of conditions to further filter the
-    # objects.
-    # For example, here the user can only update published articles.
-    #
-    #   can :update, Article, :published => true
-    #
-    # See the wiki for details:
-    # https://github.com/ryanb/cancan/wiki/Defining-Abilities
+    # In order to accommodate the possibility of there being no database, we
+    # need to check that the user is persisted before checking the user
+    # permissions.
+    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+      can :manage, [
+        Level,
+        Script,
+        ScriptLevel
+      ]
+
+      # Only custom levels are editable.
+      cannot [:update, :destroy], Level do |level|
+        !level.custom?
+      end
+    end
+
+    if user.admin?
+      can :manage, :all
+
+      # Only custom levels are editable
+      cannot [:update, :destroy], Level do |level|
+        !level.custom?
+      end
+    end
   end
 end

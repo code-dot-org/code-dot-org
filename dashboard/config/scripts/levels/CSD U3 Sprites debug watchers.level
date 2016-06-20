@@ -1,0 +1,58 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-15T19:08:02.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": null,
+      "x": null,
+      "y": null,
+      "sprite.width": null,
+      "sprite.height": null,
+      "shapeColor": null,
+      "background": null,
+      "comment": null,
+      "rect": null,
+      "fill": null,
+      "draw": null,
+      "color": null
+    },
+    "show_d_pad": "false",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Debug: Watchers\r\n\r\nYou can place watchers on a sprite property just like you would a regular variable.\r\n\r\n![](https://images.code.org/291b83de4b7d540017df382944474c16-image-1466017776084.09.27 PM.png)\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/1a1a724338e983c2124b0e97d43469a2-image-1466024475859.gif\" style=\"float:right; width:200px\">\r\n\r\nThis program is supposed to animate a sprite moving across the screen but **there's a problem that's preventing it from running properly**\r\n\r\n* **Run the program** to see how it works.\r\n* **Add a watcher** if you like to help you check individual properties\r\n* **Debug the program** to find the error that prevents it from working properly\r\n* Your animation should look like the example at the right.\r\n* Hint: Read the code carefully. Is there a logical error?",
+    "start_blocks": "// Creating Sprites and Setting Starting Properties\r\nvar mySprite = createSprite(50, 50, 50, 50);\r\nmySprite.shapeColor = \"red\";\r\n\r\nfunction draw(){\r\n\t// Update Properties\r\n\tmySprite.x = mySprite.y + 1;\r\n\t \r\n\t// Drawing\r\n\tbackground(\"white\");\r\n\tdrawSprites();\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

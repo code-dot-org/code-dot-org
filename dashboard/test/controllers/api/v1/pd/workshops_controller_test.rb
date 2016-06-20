@@ -10,6 +10,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     @workshop = create(:pd_workshop, organizer: @organizer, facilitators: [@facilitator])
     @standalone_workshop = create(:pd_workshop)
+
+    # Don't actually call the geocoder.
+    Pd::Workshop.stubs(:process_location)
   end
 
   # Action: Index
@@ -105,6 +108,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'admins can create workshops' do
     sign_in @admin
+
+    Pd::Workshop.expects(:process_location)
     assert_creates(Pd::Workshop) do
       post :create, pd_workshop: workshop_params
       assert_response :success
@@ -117,6 +122,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'workshop organizers can create workshops' do
     sign_in @organizer
+
+    Pd::Workshop.expects(:process_location)
     assert_creates(Pd::Workshop) do
       post :create, pd_workshop: workshop_params
       assert_response :success
@@ -163,12 +170,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'admins can update any workshop' do
     sign_in @admin
+    Pd::Workshop.expects(:process_location)
     put :update, id: @workshop.id, pd_workshop: workshop_params
     assert_response :success
   end
 
   test 'organizers can update their workshops' do
     sign_in @organizer
+    Pd::Workshop.expects(:process_location)
     put :update, id: @workshop.id, pd_workshop: workshop_params
     assert_response :success
   end
@@ -183,6 +192,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     sign_in @facilitator
     put :update, id: @workshop.id, pd_workshop: workshop_params
     assert_response :forbidden
+  end
+
+  test 'updating with the same location_address does not re-process location' do
+    sign_in @organizer
+    params = workshop_params
+    params[:location_address] = @workshop.location_address
+    Pd::Workshop.expects(:process_location).never
+    put :update, id: @workshop.id, pd_workshop: params
   end
 
   # Update sessions via embedded attributes
@@ -260,6 +277,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Actions: Start, End
 
   test 'admins can start and end workshops' do
+    Pd::AsyncWorkshopHandler.expects(:process_ended_workshop).with(@workshop.id)
+
     sign_in @admin
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state
@@ -276,6 +295,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'organizers can start and stop their workshops' do
+    Pd::AsyncWorkshopHandler.expects(:process_ended_workshop).with(@workshop.id)
+
     sign_in @organizer
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state
@@ -317,6 +338,11 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     all_forbidden
   end
 
+  test 'anyone can see the K5 public map index' do
+    get :k5_public_map_index
+    assert_response :success
+  end
+
   private
 
   def all_forbidden
@@ -335,6 +361,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session_start = tomorrow_at 9
     session_end = session_start + 8.hours
     {
+      location_address: 'Seattle, WA',
       workshop_type: Pd::Workshop::TYPE_PUBLIC,
       course: Pd::Workshop::COURSE_CSP,
       capacity: 10,

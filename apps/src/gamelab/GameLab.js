@@ -1,5 +1,8 @@
 'use strict';
 
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var commonMsg = require('../locale');
 var msg = require('./locale');
 var levels = require('./levels');
@@ -10,7 +13,7 @@ var consoleApi = require('../consoleApi');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
-var _ = require('../lodash');
+var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
@@ -167,6 +170,7 @@ GameLab.prototype.init = function (config) {
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
   config.showInstructionsInTopPane = true;
+  config.noInstructionsWhenCollapsed = true;
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
 
@@ -234,13 +238,12 @@ GameLab.prototype.init = function (config) {
  */
 GameLab.prototype.setupReduxSubscribers = function (store) {
   var state = {};
-  var boundOnIsRunningChange = this.onIsRunningChange.bind(this);
-  store.subscribe(function () {
+  store.subscribe(() => {
     var lastState = state;
     state = store.getState();
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
-      boundOnIsRunningChange(state.runState.isRunning);
+      this.onIsRunningChange(state.runState.isRunning);
     }
   });
 };
@@ -965,6 +968,7 @@ GameLab.prototype.displayFeedback_ = function () {
 /**
  * Get the project's animation metadata for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ * @return {AnimationMetadata[]}
  */
 GameLab.prototype.getAnimationMetadata = function () {
   return this.studioApp_.reduxStore.getState().animations;

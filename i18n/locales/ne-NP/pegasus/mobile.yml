@@ -1,7 +1,12 @@
 ne-NP:
   hour_of_code: Hour of Code
   hello: Hello world
+  "yes": 'Yes'
+  "no": 'No'
   select_language: Nepali
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Learn more
   en: 'कम्पुटर विज्ञान '
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 8-14, 2014
@@ -473,6 +478,7 @@ ne-NP:
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video office hours.
   dashboard_landing_print_certificates: Print certificates for students who finish this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
@@ -486,6 +492,10 @@ ne-NP:
   dashboard_landing_available_courses: Here are the courses currently available for you and your students.
   dashboard_landing_more_tutorials: Want to see even more tutorials?
   dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
   dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
@@ -517,7 +527,11 @@ ne-NP:
   dashboard_action_done: Done
   dashboard_action_required: required
   dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
+  dashboard_assessments_none: |-
+    Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -525,7 +539,7 @@ ne-NP:
   dashboard_navigation_section_student_progress: Student Accounts and Progress
   dashboard_navigation_section_teacher_progress: Your Course Progress
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
-  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_community: Support
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: 'Computer Science <br/> Guest Speakers'
   dashboard_navigation_all_sections: Student Accounts and Progress
@@ -547,14 +561,16 @@ ne-NP:
   dashboard_progress_submitted: submitted
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: Section
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Section Name
@@ -570,7 +586,7 @@ ne-NP:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
@@ -615,11 +631,12 @@ ne-NP:
   dashboard_curriculum_middle_title: Middle School Educator Resources
   dashboard_curriculum_high_title: High School Educator Resources
   dashboard_lesson_plans: Lesson Plans
-  dashboard_view_all_lesson_plans: Download complete curriculum for Courses 1-3
+  dashboard_view_all_lesson_plans: Download complete curriculum for Courses 1-4
   dashboard_course1: 'Course 1:'
   dashboard_course2: 'Course 2:'
   dashboard_course3: 'Course 3:'
-  dashboard_course4: 'Course 4 (beta): '
+  dashboard_course4: 'Course 4: '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Overview
@@ -667,7 +684,7 @@ ne-NP:
   dashboard_sections_account_creation_question: "Who creates the student's account?"
   dashboard_sections_password_question: 'What do students use as a "password"?'
   dashboard_sections_picture_account_creation: A picture assigned by Code.org
-  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_word_account_creation: A pair of simple words assigned by Code.org
   dashboard_sections_sign_in_question: Where do students sign-in?
   dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
   dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
@@ -677,7 +694,7 @@ ne-NP:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
   dashboard_announce_button_text: Learn more
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
@@ -790,12 +807,17 @@ ne-NP:
   course3_name: Course 3
   course4_name: Course 4
   accelerated_name: Accelerated Course
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: Accelerated Course
@@ -810,7 +832,9 @@ ne-NP:
   math_category_name: Math
   hoc_category_name: Hour of Code
   csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds

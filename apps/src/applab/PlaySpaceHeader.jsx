@@ -1,5 +1,6 @@
 /** @file Row of controls above the visualization. */
 
+var React = require('react');
 var constants = require('./constants');
 var msg = require('../locale');
 var utils = require('../utils');

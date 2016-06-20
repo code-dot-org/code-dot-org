@@ -1,7 +1,14 @@
 "es-ES":
   hour_of_code: Hora del código
   hello: Hola mundo
+  'yes': Sí
+  'no': 'No'
   select_language: Selecciona tu idioma
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Aprende más
   en: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
   csedweek_dates: Del 8 al 14 de diciembre de 2014
@@ -46,7 +53,7 @@
   csedweek_map_search_reset: Reiniciar
   csedweek_map_legend_title: Leyenda
   csedweek_map_legend_event: Evento de la Hora de Code
-  csedweek_map_legend_cs_tech_jam: Eventos Especiales de Ciencias de la Computación
+  csedweek_map_legend_cs_tech_jam: Evento especial
   cded_sign_up: Registrarse
   cded_try_it: Pruébalo
   twentyhours_trynow: Probar ahora
@@ -77,10 +84,10 @@
   congratulations_volunteer: Felicitaciones, ahora que has probado la Hora de Code,
     <a href="https://code.org/volunteer"> inscríbete como voluntario en el aula</a>
     y ayuda a estudiantes a aprender una Hora de Code.
-  congratulations_on_completing_course1: Enhorabuena por completar el curso 1
-  congratulations_on_completing_course2: Enhorabuena por completar el curso 2
-  congratulations_on_completing_course3: Enhorabuena por completar el curso 3
-  congratulations_on_completing_course4: Enhorabuena por completar el curso 4
+  congratulations_on_completing_course1: Felicidades por completar Curso 1
+  congratulations_on_completing_course2: Felicidades por completar Curso 2
+  congratulations_on_completing_course3: Felicidades por completar Curso 3
+  congratulations_on_completing_course4: Felicidades por completar Curso 4
   congratulations_on_completing_accelerated: Enhorabuena por completar el curso acelerado
   congrats_next_tutorials_title: Prueba estos tutoriales a continuación
   congrats_next_tutorials_desc: Prueba estos tutoriales de duración inferior a una
@@ -98,11 +105,11 @@
     profesionales técnicos que estén listos para inspirar a sus estudiantes vía video
     chat.
   congrats_guest_speaker_cta: Encontrar un orador invitado
-  congrats_third_party_title: Utilizar sus nuevas habilidades con estes aplicativos
+  congrats_third_party_title: Utiliza sus nuevas habilidades con estas aplicaciones
     y sitios web
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
+  third_party_gradelevel_kto8: Grados K-8
+  third_party_gradelevel_kto2: Grados K-2
+  third_party_gradelevel_2to8: Grados 2-8
   third_party_gradelevel_4to12: Grados 4-12
   third_party_gradelevel_5to12: Grados 5-12
   third_party_gradelevel_6plus: Grados 6 +
@@ -362,9 +369,9 @@
   homepage_banner_20k_teachers: Se formaron 20.000 profesores que ahora enseñan Ciencias
     de la Informática en clase.
   homepage_banner_20k_teachers_link: Aprende más
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress: Líderes de Estados Unidos están pidiendo al Congreso financiar
+    la informática K-12.
+  homepage_banner_congress_link: Añadir su apoyo
   homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comienza hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -390,7 +397,7 @@
   homepage_slot_text_link_stats: Ver las estadísticas
   homepage_slot_text_link_buy: Involucrarse
   homepage_slot_text_link_donate: Hacer una donación
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: Camisetas, sombreros y más
   homepage_header_codestudio: Creaciones de los estudiante de Code Studio
   homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
@@ -589,6 +596,7 @@
   dashboard_landing_new_k5courses: "¡Nuevo! Prueba nuestros cursos para los alumnos
     de K-5."
   dashboard_landing_useful_links: Otros enlaces útiles (sólo en Inglés)
+  dashboard_landing_classroom_resources: Recursos para el aula
   dashboard_landing_office_hours: "¡Pregunta en persona! Utiliza nuestras horas mensuales
     para consultas por vídeo."
   dashboard_landing_print_certificates: Imprimir certificados para los alumnos que
@@ -611,6 +619,11 @@
     ofrecidos por nuestros socios.</a> Aprende a programar con robots, a hacer páginas
     web, a hacer tu propia aplicación o explorar otros lenguajes como C++, Ruby o
     Python.
+  dashboard_landing_inspire: Inspira a tus estudiantes con carteles, videos y más.
+  dashboard_landing_video_library: Usa un vídeo de la biblioteca de vídeos de los
+    conceptos de informática.
+  dashboard_landing_report_bug: Solicita una característica o informa sobre un error.
+  dashboard_landing_teacher_forum: "Únete a la comunidad de aprendizaje profesional."
   dashboard_hoc_courses: La Hora de Code es para todas las edades
   dashboard_hoc_courses_desc: "¡Prueba alguno de estos tutoriales de menos de 1 hora
     con tus alumnos!"
@@ -667,6 +680,13 @@
   dashboard_action_required: obligatorio
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: Sin evaluaciones
+  dashboard_assessments_none_part2: Si usted le está enseñando un medio o un curso
+    de la secundaria, tenemos preguntas de evaluación disponibles como parte del Code
+    Studio para ayudar a sus estudiantes a prepararse para el examen de AP. Para utilizar
+    estas evaluaciones, primero asigne el curso a su clase y luego escoge el curso
+    desde el desplegable de arriba y aquí verás las respuestas de sus estudiantes.
+  dashboard_assessments_summaries: Sumarios
+  dashboard_assessments_answers: Todas las respuestas
   dashboard_filter_by_stage: 'Filtrado por etapa:'
   dashboard_filter_all: Todos
   dashboard_download_csv: Descargar CSV
@@ -698,6 +718,7 @@
   dashboard_progress_view: 'Ver progreso en:'
   dashboard_progress_student_in_script: Información de progreso para %{student_name}
     in %{script_name}
+  dashboard_progress_pair_programming: programación de par
   dashboard_responses_view: 'Ver respuestas de texto:'
   dashboard_responses_none: Sin respuestas de texto
   dashboard_sections_new_section: Nueva sección
@@ -708,6 +729,7 @@
   dashboard_sections_table_secret: Tipo de inicio de sesión
   dashboard_sections_table_grade: Grado
   dashboard_sections_table_course: Curso
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Alumnos
   dashboard_sections_table_code: Código de sección
   dashboard_sections_name: Nombre de la sección
@@ -806,6 +828,8 @@
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4 (beta): '
+  dashboard_unplugged: Si no tiene computadoras, <a href='%{unplugged_url}'> intente
+    estas lecciones desenchufados</a> en su salón del clase.
   dashboard_curriculum: Currículum
   dashboard_curriculum_overview: Resumen de currículo K-5
   dashboard_overview: Resumen
@@ -878,7 +902,7 @@
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Agrega tu nombre
   code_hoc_coming: "¡La Hora de Code está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
   learn_more: Aprenda más
@@ -1003,12 +1027,17 @@
   course3_name: Curso 3
   course4_name: Curso 4
   accelerated_name: Curso acelerado
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
+  cspunit1_name: 'Tema 1: Información digital'
+  cspunit2_name: 'Tema 2: El Internet'
   cspunit3_name: Principios de CS Unidad 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit4_name: 'Tema 4: Datos'
+  cspunit5_name: 'Unidad 5: Explorar y Crear PT'
+  cspunit6_name: 'Post-AP: Bases de Datos en Aplicaciones'
+  csp1_name: 'Tema 1: El Internet'
+  csp2_name: 'Unidad 2: Información Digital'
+  cspassessment_name: Prueba completa - 50 preguntas
+  cspexam1-mWU7ilDYM9_name: Parte del test 1 - 25 preguntas
+  cspexam2-AKwgAh1ac5_name: Parte del test 2 - 25 preguntas
   cspunit3_gradelevel: Grados 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1016,18 +1045,20 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Curso acelerado
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
+  algebra_name: CS en Álgebra
+  AlgebraA_name: CS en Álgebra Curso A
+  AlgebraB_name: CS en Álgebra Curso B
   gumball_name: Gumball
   classicmaze_name: Laberinto clásico
   iceage_name: La Era de Hielo
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Bloques de La Guerra de Las Galaxias
   math_category_name: Matemáticas
   hoc_category_name: Hora de Code
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csf_category_name: Fundamentos de CS
+  csp_category_name: "'15-'16 Principios de CS"
+  csp17_category_name: "'16-'17 Principios de CS"
+  cspexams_category_name: Prueba de práctica de principios de CS
   applab_name: Laboratorio de Aplicaciones
   applab_gradelevel: Edad 13+
   applab_shortdescription_congrats: App Lab es un entorno de programación en el que
@@ -1762,11 +1793,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jugar
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

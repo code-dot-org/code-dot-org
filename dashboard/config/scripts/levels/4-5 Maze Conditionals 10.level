@@ -26,7 +26,8 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "instructions": "Can you add just 3 blocks to help the zombie solve a more complex maze? \r\n\r\nIf you do it right, he can walk any curvy path no matter the length!"
   },
   "published": true,
   "notes": "",

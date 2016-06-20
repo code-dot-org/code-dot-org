@@ -1,5 +1,6 @@
 /* global dashboard */
 
+var React = require('react');
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var assetListStore = require('../assets/assetListStore');
 

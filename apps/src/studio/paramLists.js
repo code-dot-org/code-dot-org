@@ -2,7 +2,7 @@
 
 var studioApp = require('../StudioApp').singleton;
 var utils = require('../utils');
-var _ = require('../lodash');
+var _ = require('lodash');
 var skin, level;
 
 exports.initWithSkinAndLevel = function (skinData, levelData) {
@@ -46,7 +46,7 @@ exports.playSoundDropdown = function () {
   return exports.getPlaySoundValues(true).map(function (sound) {
     var lowercaseSound = sound.toLowerCase().trim();
     var handleChooseClick = function (callback) {
-      var playbackOptions = $.extend({
+      var playbackOptions = Object.assign({
         volume: 1.0
       }, _.find(skinSoundMetadata, function (metadata) {
         return metadata.name.toLowerCase().trim() === lowercaseSound;

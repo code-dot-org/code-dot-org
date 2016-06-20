@@ -43,8 +43,9 @@
           o jedno políčko.
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace
-          and attach them together. The bird will do the commands from top to bottom.
+        text: Aby si spravill viac ako jeden pokyn, môžeš do svojho pracovného priestoru
+          vložiť viac blokov a spojiť ich. Vták bude vykonávať príkazy smerom zhora
+          nadol.
       12:
         image: notes/hoc1_12.jpg
         text: 'Ak spustíš program a chceš ho upraviť a spustiť znovu, klikni na tlačítko

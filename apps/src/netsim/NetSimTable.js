@@ -3,7 +3,8 @@
  */
 'use strict';
 
-var _ = require('../lodash');
+import $ from 'jquery';
+var _ = require('lodash');
 var ObservableEvent = require('../ObservableEvent');
 var NetSimApi = require('./NetSimApi');
 var NetSimGlobals = require('./NetSimGlobals');

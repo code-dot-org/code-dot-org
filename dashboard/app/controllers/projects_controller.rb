@@ -22,11 +22,9 @@ class ProjectsController < ApplicationController
     gamelab: {
       name: 'New Game Lab Project',
       login_required: true,
-      student_of_admin_required: true
     },
     makerlab: {
       name: 'New Maker Lab Project',
-      admin_required: true,
       login_required: true
     },
     algebra_game: {
@@ -55,7 +53,7 @@ class ProjectsController < ApplicationController
   end
 
   def load
-    return if redirect_applab_under_13(@level)
+    return if redirect_under_13(@level)
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
       if channel
@@ -68,9 +66,10 @@ class ProjectsController < ApplicationController
   end
 
   def create_new
-    return if redirect_applab_under_13(@level)
+    return if redirect_under_13(@level)
     redirect_to action: 'edit', channel_id: create_channel({
       name: 'Untitled Project',
+      useFirebase: use_firebase_for_new_project?,
       level: polymorphic_url([params[:key], 'project_projects'])
     })
   end
@@ -80,10 +79,13 @@ class ProjectsController < ApplicationController
     sharing = iframe_embed || params[:share] == true
     readonly = params[:readonly] == true
     if iframe_embed
+      # explicitly set security related headers so that this page can actually
+      # be embedded.
       response.headers['X-Frame-Options'] = 'ALLOWALL'
+      response.headers['Content-Security-Policy'] = ''
     else
       # the age restriction is handled in the front-end for iframe embeds.
-      return if redirect_applab_under_13(@level)
+      return if redirect_under_13(@level)
     end
     level_view_options(
         hide_source: sharing,

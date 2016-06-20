@@ -259,6 +259,10 @@ class DashboardSection
       raise
     end
 
+    if params[:course] && valid_course_id?(params[:course][:id])
+      DashboardUserScript.assign_script_to_user(params[:course][:id].to_i, params[:user][:id])
+    end
+
     row
   end
 
@@ -420,6 +424,7 @@ class DashboardSection
         login_type: @row[:login_type],
         grade: @row[:grade],
         code: @row[:code],
+        stage_extras: @row[:stage_extras],
     }
   end
 
@@ -432,10 +437,12 @@ class DashboardSection
     fields[:name] = params[:name] unless params[:name].nil_or_empty?
     fields[:login_type] = params[:login_type] if valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if valid_grade?(params[:grade])
+    fields[:stage_extras] = params[:stage_extras]
 
     if params[:course] && valid_course_id?(params[:course][:id])
       fields[:script_id] = params[:course][:id].to_i
       DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
+      DashboardUserScript.assign_script_to_user(fields[:script_id], user_id)
     end
 
     rows_updated = Dashboard.db[:sections].
@@ -451,6 +458,7 @@ class DashboardSection
       :sections__id___id,
       :sections__name___name,
       :sections__code___code,
+      :sections__stage_extras___stage_extras,
       :sections__login_type___login_type,
       :sections__grade___grade,
       :sections__script_id___script_id,
@@ -465,10 +473,24 @@ class DashboardUserScript
     # create userscripts for users that don't have one yet
     Dashboard.db[:user_scripts].
       insert_ignore.
-      import([:user_id, :script_id],
-             Dashboard.db[:followers].
-               select(:student_user_id, script_id.to_s).
-               where(section_id: section_id, deleted_at: nil))
+      import(
+        [:user_id, :script_id],
+        Dashboard.db[:followers].
+          select(:student_user_id, script_id.to_s).
+          where(section_id: section_id, deleted_at: nil)
+      )
+  end
+
+  def self.assign_script_to_user(script_id, user_id)
+    # creates a userscript for a user if they don't have it yet
+    Dashboard.db[:user_scripts].
+      insert_ignore.
+      import(
+        [:user_id, :script_id],
+        Dashboard.db[:users].
+          select(user_id, script_id.to_s).
+          where(id: user_id, deleted_at: nil)
+      )
   end
 
   def self.assign_script_to_users(script_id, user_ids)
@@ -476,6 +498,9 @@ class DashboardUserScript
     # create userscripts for users that don't have one yet
     Dashboard.db[:user_scripts].
       insert_ignore.
-      import([:user_id, :script_id], user_ids.zip([script_id] * user_ids.count))
+      import(
+        [:user_id, :script_id],
+        user_ids.zip([script_id] * user_ids.count)
+      )
   end
 end

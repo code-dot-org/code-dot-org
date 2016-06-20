@@ -15,6 +15,20 @@ class LevelGroupTest < ActiveSupport::TestCase
     "
   end
 
+  def get_evaluation_multi_dsl(id)
+    stage1 = create :stage
+    stage2 = create :stage
+
+    "
+    name 'evaluation_multi_#{id}'
+    title 'evaluation multi #{id}'
+    question 'Some Question'
+    answer 'Answer 1', weight: #{rand(5)}, stage_name: '#{stage1.name}'
+    answer 'Answer 2', weight: #{rand(5)}, stage_name: '#{stage2.name}'
+    answer 'Answer 3'
+    "
+  end
+
   # Create an external with name "externalX" where X is passed in
   def get_external_dsl(id)
     "
@@ -152,6 +166,39 @@ MARKDOWN
     assert_raises RuntimeError do
       LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
     end
+  end
+
+  test 'is_plc_evaluation?' do
+    evaluation_multi_1 = EvaluationMulti.create_from_level_builder({}, {dsl_text: get_evaluation_multi_dsl(1)})
+    evaluation_multi_2 = EvaluationMulti.create_from_level_builder({}, {dsl_text: get_evaluation_multi_dsl(2)})
+    non_evaluation_multi = Multi.create_from_level_builder({}, {dsl_text: get_multi_dsl(3)})
+
+    evaluation_level_group_dsl = "
+    name 'plc assessment'
+    title 'plc assessment'
+    submittable 'true'
+
+    page
+    level '#{evaluation_multi_1.name}'
+    level '#{evaluation_multi_2.name}'
+    "
+
+    plc_evaluation = LevelGroup.create_from_level_builder({}, {name: 'evaluation_multi', dsl_text: evaluation_level_group_dsl})
+
+    non_evaluation_level_group_dsl = "
+    name 'non plc assessment'
+    title 'non plc assessment'
+    submittable 'true'
+
+    page
+    level '#{evaluation_multi_1.name}'
+    level '#{non_evaluation_multi.name}'
+    "
+
+    non_plc_evaluation = LevelGroup.create_from_level_builder({}, {name: 'non_evaluation_multi', dsl_text: non_evaluation_level_group_dsl})
+
+    assert plc_evaluation.plc_evaluation?
+    assert_not non_plc_evaluation.plc_evaluation?
   end
 
 end

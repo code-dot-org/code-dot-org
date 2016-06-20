@@ -1,4 +1,4 @@
-var _ = require('../lodash');
+var _ = require('lodash');
 var utils = require('../utils');
 
 var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
@@ -15,8 +15,6 @@ var ALLOWED_KEYS = utils.makeEnum(
   'isSubmittable',
   'isSubmitted',
   'isViewDataButtonHidden',
-  'shortInstructions',
-  'instructionsMarkdown',
   'instructionsInTopPane',
   'puzzleNumber',
   'stageTotal',
@@ -31,7 +29,10 @@ var ALLOWED_KEYS = utils.makeEnum(
   'hideRunButton',
   'playspacePhoneFrame',
   'noVisualization',
-  'pinWorkspaceToBottom'
+  'pinWorkspaceToBottom',
+  'smallStaticAvatar',
+  'aniGifURL',
+  'inputOutputTable'
 );
 
 const initialState = {

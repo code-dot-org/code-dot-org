@@ -1,7 +1,14 @@
 "sr-SP":
   hour_of_code: "Час кода"
   hello: "Здраво свете"
+  'yes': "Да"
+  'no': "не"
   select_language: "Молимо изаберите језик"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "Сазнајте више"
   en: "Информатика"
   computer_science_edweek: "Недеља информатике"
   csedweek_dates: 8-14 Децембар, 2014
@@ -588,6 +595,7 @@
   dashboard_landing_new_beta: "Ново! Пробајте наше пробне курсеве за вртић."
   dashboard_landing_new_k5courses: "Ново! Пробајте наше курсеве за вртић."
   dashboard_landing_useful_links: "Други корисни линкови (само на Енглеском)"
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: "Питајте питање уживо! Посетите нашу месечну понуду
     видео разговарања."
   dashboard_landing_print_certificates: "Штампај потврде ученицима који су завршили
@@ -608,6 +616,11 @@
   dashboard_landing_more_tutorials_desc: Ту је још предлога <a href="/learn/beyond">предложених
     од наших партнера.</a> Научи програмиранје са роботима, прави интернет странице,
     направи своју апликацију, или истражи друге језике као C++, Ruby, or Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: "Сат програмирања за све узрасте"
   dashboard_hoc_courses_desc: "Пробај један од ових примера 1. сат са својим студентима!"
   dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
@@ -660,6 +673,13 @@
   dashboard_action_required: "потребно"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -690,6 +710,7 @@
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: "Нова секција"
@@ -700,6 +721,7 @@
   dashboard_sections_table_secret: "Врста пријаве"
   dashboard_sections_table_grade: "Степен"
   dashboard_sections_table_course: "Курс"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Студенти"
   dashboard_sections_table_code: "Секција програмирања"
   dashboard_sections_name: "Име секције"
@@ -789,6 +811,8 @@
   dashboard_course2: "Курс 2:"
   dashboard_course3: "Курс 3:"
   dashboard_course4: "Курс 4 (почетнички): "
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: "Наставни план"
   dashboard_curriculum_overview: "Преглед наставног плана за вртић"
   dashboard_overview: "Преглед"
@@ -990,6 +1014,11 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1009,6 +1038,8 @@
   hoc_category_name: "Час кода"
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1693,11 +1724,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "играј"
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

@@ -1,10 +1,8 @@
-/* global React */
-
 /*
   Display and edit attendance for a single teacher in a session,
   for use in SessionAttendance.
  */
-
+import React from 'react';
 var OverlayTrigger = require('react-bootstrap').OverlayTrigger;
 var Tooltip = require('react-bootstrap').Tooltip;
 

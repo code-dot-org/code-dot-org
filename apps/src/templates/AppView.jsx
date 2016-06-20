@@ -1,9 +1,10 @@
 'use strict';
 
+import React from 'react';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-import _ from '../lodash';
+import _ from 'lodash';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import StudioAppWrapper from './StudioAppWrapper';
 import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
@@ -38,7 +39,7 @@ const AppView = React.createClass({
           {this.props.visualizationColumn}
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <InstructionsWithWorkspace shortInstructionsWhenCollapsed={true}/>
+        <InstructionsWithWorkspace/>
       </StudioAppWrapper>
     );
   }

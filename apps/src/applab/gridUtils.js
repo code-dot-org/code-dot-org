@@ -2,6 +2,8 @@
  * A couple of utility functions for dealing with our design mode grid.
  */
 
+import $ from 'jquery';
+
 const GRID_SIZE = 5;
 
 /**
@@ -25,8 +27,8 @@ export function scaledDropPoint(draggedElement) {
   const xScale = boundingRect.width / div.offsetWidth;
   const yScale = boundingRect.height / div.offsetHeight;
 
-  let left = (draggedOffset.left - boundingRect.left) / xScale;
-  let top = (draggedOffset.top - boundingRect.top) / yScale;
+  let left = (draggedOffset.left - $(div).offset().left) / xScale;
+  let top = (draggedOffset.top - $(div).offset().top) / yScale;
 
   // snap top-left corner to nearest location in the grid
   left = snapToGridSize(left);
@@ -69,4 +71,18 @@ export function draggedElementDropPoint() {
 export function snapToGridSize(coordinate) {
   const halfGrid = GRID_SIZE / 2;
   return coordinate - ((coordinate + halfGrid) % GRID_SIZE - halfGrid);
+}
+
+/**
+ * Given a mouse position (in the same coordinate space as container), returns
+ * whether or not the position is within the bounds of container
+ * @param {number} mouseX
+ * @param {number} mouseY
+ * @param {number} containerWidth
+ * @param {number} containerHeight
+ * @returns {boolean} True if the position is within bounds of container. False otherwise.
+ */
+export function isMouseInBounds(mouseX, mouseY, containerWidth, containerHeight) {
+  return (mouseX >= 0) && (mouseX <= containerWidth) &&
+        (mouseY >= 0) && (mouseY <= containerHeight);
 }

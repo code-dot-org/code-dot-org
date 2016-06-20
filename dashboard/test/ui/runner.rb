@@ -9,6 +9,8 @@ ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
 require 'bundler'
 require 'bundler/setup'
 
+require 'cdo/aws/s3'
+require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
 require 'cdo/hip_chat'
@@ -25,6 +27,22 @@ require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
+S3_LOGS_BUCKET = 'cucumber-logs'
+S3_LOGS_PREFIX = GitUtils.current_branch
+LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
+
+# Upload the given log to the cucumber-logs s3 bucket.
+# @param [String] filename of log file to be uploaded.
+# @return [String] a public hyperlink to the uploaded log, or empty string.
+def upload_log_and_get_public_link(filename)
+  return '' unless $options.html
+  log_url = LOG_UPLOADER.upload_file(filename)
+  " <a href='#{log_url}'>☁ Log on S3</a>"
+rescue Exception => msg
+  HipChat.log "Uploading log to S3 failed: #{msg}"
+  return ''
+end
+
 $options = OpenStruct.new
 $options.config = nil
 $options.browser = nil
@@ -36,6 +54,7 @@ $options.dashboard_domain = 'test-studio.code.org'
 $options.hourofcode_domain = 'test.hourofcode.com'
 $options.local = nil
 $options.html = nil
+$options.out = nil
 $options.maximize = nil
 $options.auto_retry = false
 $options.magic_retry = false
@@ -96,6 +115,9 @@ opt_parser = OptionParser.new do |opts|
   opts.on("--html", "Use html reporter") do
     $options.html = true
   end
+  opts.on("--out filename", String, "Output filename") do |f|
+    $options.out = f
+  end
   opts.on("-e", "--eyes", "Run only Applitools eyes tests") do
     $options.run_eyes_tests = true
   end
@@ -139,6 +161,8 @@ $lock = Mutex.new
 $suite_start_time = Time.now
 $suite_success_count = 0
 $suite_fail_count = 0
+# How many flaky test reruns occurred across all tests (ignoring the initial attempt).
+$total_flaky_reruns = 0
 $failures = []
 
 if $options.local
@@ -260,7 +284,11 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
-    html_output_filename = test_run_string + "_output.html"
+    if $options.out
+      html_output_filename = $options.out
+    else
+      html_output_filename = test_run_string + "_output.html"
+    end
   end
 
   arguments = ''
@@ -360,9 +388,13 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   reruns = 0
   while !succeeded && (reruns < max_reruns)
     reruns += 1
+
+    # Upload the failure log to S3, so we can examine it at our leisure.
+    log_link = upload_log_and_get_public_link(html_output_filename)
+
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
-    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}), retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
@@ -401,14 +433,12 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     # Don't log individual successes because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
+    # Upload the failure log to S3, so we can examine it at our leisure.
+    log_link = upload_log_and_get_public_link(html_output_filename)
+
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
-    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})"
-
-    if $options.html
-      link = "https://#{CDO.dashboard_hostname}/ui_test/" + html_output_filename
-      message += " <a href='#{link}'>☁ html output</a>"
-    end
+    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
     short_message = message
 
     message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"
@@ -440,8 +470,9 @@ EOS
     print skip_warning
   end
 
-  [succeeded, message]
-end.each do |succeeded, message|
+  [succeeded, message, reruns]
+end.each do |succeeded, message, reruns|
+  $total_flaky_reruns += reruns
   if succeeded
     $suite_success_count += 1
   else
@@ -449,7 +480,6 @@ end.each do |succeeded, message|
     $failures << message
   end
 end
-
 $logfile.close
 $errfile.close
 $errbrowserfile.close
@@ -458,7 +488,8 @@ $suite_duration = Time.now - $suite_start_time
 
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
   "Test count: #{($suite_success_count + $suite_fail_count)}. " +
-  "Total duration: #{RakeUtils.format_duration($suite_duration)}."
+  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " +
+  "Total reruns of flaky tests: #{$total_flaky_reruns}."
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"

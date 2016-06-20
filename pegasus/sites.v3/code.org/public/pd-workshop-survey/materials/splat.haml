@@ -1,0 +1,105 @@
+---
+title: "Professional Development Workshop Survey"
+---
+:ruby
+  require 'state_abbr'
+
+  dont_cache
+  enrollment_code = request.splat_path_info[1..-1]
+  enrollment = DASHBOARD_DB[:pd_enrollments].where(code: enrollment_code).first
+  pass unless enrollment
+
+  # Make sure it's a CSF workshop
+  workshop = DASHBOARD_DB[:pd_workshops].where(id: enrollment[:pd_workshop_id]).first
+  pass unless workshop && workshop[:course] == 'CS Fundamentals'
+
+  # Make sure they completed the survey first
+  survey_response = DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment[:id]).first
+  pass unless survey_response
+
+  # Have they already filled out this form?
+  previous_response = DB[:forms].where(kind: 'PdWorkshopMaterials', source_id: enrollment[:id]).first
+
+%script{type: "text/javascript", src: "/js/pd-workshop-materials.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+- if previous_response
+
+  %h1 Thank you
+  %h3 Your request has been received. Please allow between 4-5 weeks for your materials to arrive.
+
+- else
+
+  %form#pd-workshop-materials-form{role: 'form'}
+    %input{name: 'enrollment_id_i', type:'hidden', value: enrollment[:id]}
+    %input{name: 'workshop_id_i', type: 'hidden', value: workshop[:id]}
+
+    %h1 Thank you for your survey submission
+
+    %h2
+      Complete the following form if you'd like to receive materials to teach the
+      unplugged lessons in Courses 1-4 (US attendees only).
+
+    .form-group
+      %label.control-label{for: 'name_s'}
+        Your Name
+        %span.form-required-field *
+      %input.form-control{name: 'name_s', type: 'text'}
+
+    .form-group
+      %label.control-label{for: 'school_s'}
+        School/Company Name (optional)
+      %input.form-control{name: 'school_s', type: 'text'}
+
+    .form-group
+      %label.control-label{for: 'address_1_s'}
+        Street Address 1
+        %span.form-required-field *
+      %input.form-control{name: 'address_1_s', type: 'text'}
+
+    .form-group
+      %label.control-label{for: 'address_2_s'}
+        Street Address 2 (optional)
+      %input.form-control{name: 'address_2_s', type: 'text'}
+
+    .form-group
+      %label.control-label{for: 'city_s'}
+        City
+        %span.form-required-field *
+      %input.form-control{name: 'city_s', type: 'text'}
+
+    .form-group
+      %label.control-label{for: "state_s"}<
+        State
+        %span.form-required-field *
+      %div
+        %select#k5-send-materials-state.form-control{name: "state_s"}
+          %option{selected: true, value: ""}
+          -STATE_ABBR_WITH_DC_HASH.each_pair do |abbr, state|
+            %option{value: abbr}= state
+
+    .form-group
+      %label.control-label{for: 'zip_code_s'}
+        Zip Code
+        %span.form-required-field *
+      %input.form-control{name: 'zip_code_s', type: 'text'}
+
+    .form-group
+      %label.control-label{for: 'email_s'}
+        Email
+        %span.form-required-field *
+      %input.form-control{name: 'email_s', type: 'text'}
+
+    .form-group
+      %label.control-label{for: 'phone_number_s'}
+        Phone Number
+        %span.form-required-field *
+      %input.form-control{name: 'phone_number_s', type: 'text', placeholder: 'XXX-XXX-XXXX'}
+
+    .main-section
+      .form-group.submit-btn
+        %button#btn-submit.btn.btn-primary{type: "submit"} Submit
+
+  #thanks{style: 'display: none;'}
+    %h1 Thank you
+    %h3 Your request has been received. Please allow between 4-5 weeks for your materials to arrive.

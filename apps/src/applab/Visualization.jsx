@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import {connect} from 'react-redux';
+import React from 'react';
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
 import color from '../color';

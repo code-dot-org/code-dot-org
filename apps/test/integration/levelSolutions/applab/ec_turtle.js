@@ -7,7 +7,7 @@ var $ = require('jquery');
 module.exports = {
   app: "applab",
   skinId: "applab",
-  levelDefinition: $.extend({}, levels.ec_simple, {
+  levelDefinition: Object.assign({}, levels.ec_simple, {
     showTurtleBeforeRun: true
   }),
   tests: [

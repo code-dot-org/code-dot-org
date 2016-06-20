@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"poistaa välilyönnit vasemmalta puolelta",
   "TEXT_TRIM_OPERATOR_RIGHT":"poistaa välilyönnit oikealta puolelta",
   "TEXT_TRIM_TOOLTIP":"Palauttaa kopion tekstistä siten, että välilyönnit on poistettu merkkijonon toisesta tai molemmista päistä.",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"kohde",
   "VARIABLES_GET_CREATE_SET":"Luo 'aseta %1'",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

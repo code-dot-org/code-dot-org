@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 module.exports = function ajaxSubmit(form_selector) {
   $(document).ready(function () {
     $(form_selector).on('ajax:beforeSend', function (e, xhr) {

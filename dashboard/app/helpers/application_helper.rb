@@ -51,7 +51,15 @@ module ApplicationHelper
   end
 
   def activity_css_class(user_level)
+    best_activity_css_class([user_level])
+  end
+
+  def best_activity_css_class(user_levels)
     # For definitions of the result values, see /app/src/constants.js.
+    user_level = user_levels.
+        select {|ul| ul.try(:best_result) && ul.best_result != 0}.
+        max_by &:best_result ||
+        user_levels.first
     result = user_level.try(:best_result)
 
     if result == Activity::REVIEW_REJECTED_RESULT
@@ -100,6 +108,11 @@ module ApplicationHelper
 
   def teacher_dashboard_student_progress_url(section, user)
     CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}/student/#{user.id}"
+  end
+
+  # used by sign-up to retrieve the return_to URL from the session and delete it.
+  def get_and_clear_session_return_to
+    return session.delete(:return_to) if session[:return_to]
   end
 
   # used by devise to redirect user after signing in

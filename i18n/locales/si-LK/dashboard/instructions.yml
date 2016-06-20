@@ -37,8 +37,8 @@ si:
         Assessment: Finish drawing the last tooth.
         It is 25 pixels wide and 25 pixels tall.
       2-3 Artist Debugging 1_instruction: |
-        The width of the top of this hat should
-        be 50 pixels wide.  Can you fix it?
+        This hat should only be 50 pixels wide.  Can
+        you fix it?
       2-3 Artist Debugging 10_instruction: "The direction pad on my game controller\nis too narrow. \\r\n\\r\nCan you make it wider by 10 pixels?"
       2-3 Artist Debugging 11_instruction: "My snowflake is falling apart!\\r\n\\r\nCan\nyou figure out what's going wrong?"
       2-3 Artist Debugging 12_instruction: |
@@ -63,6 +63,7 @@ si:
         of a machine!
       2-3 Artist Functions 11.5_instruction: "Here's that same `draw a hexagon`\nfunction. \\r\n\\r\nWhat happens if you turn 60 degrees in your main program\neach time you loop?"
       2-3 Artist Functions 11_instruction: "We've renamed the `draw a square` function\nto `draw a hexagon`, but it's still giving us squares! Can you modify the\n`draw a hexagon` function to draw a hexagon with 50 pixel sides? \\r\n\\r\nDraw\nthe image using the new function!"
+      2-3 Artist Functions 12 Mike_instruction: "Functions are really great for drawing\ncomplex things multiple times. \\r\n\\r\nCan you use the `draw a flower` function\nto fill the rest of the planter box?\\r\nThe plants are all 100 pixels apart."
       2-3 Artist Functions 12_instruction: "Functions are really great for drawing\ncomplex things multiple times. \\r\n\\r\nCan you use the `draw a flower` function\nto fill the rest of the planter box?\\r\nThe plants are all 100 pixels apart."
       2-3 Artist Functions 13_instruction: |
         We've provided you with four functions.
@@ -709,6 +710,7 @@ si:
       4-5 Maze Conditionals 1_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
@@ -779,6 +781,16 @@ si:
       4-5 While Loops Assessment 1_instruction: |
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
+      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 15 squares line up next to each other?
+      aE3_instruction: |
+        Now let's go one level deeper! We've nested that whole
+        block of code into another loop, but you need to get the artist back in place
+        to draw the next line. Which of these code blocks can you place at the end
+        of the outermost loop to draw the whole grid?
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -1846,7 +1858,7 @@ si:
       Course 4 Play Lab Params 8_instruction: |
         Use the `when actor touches` block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith pie, and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
         This time you don't have to write any
         code, just hit "Run" to play the game! In this game, you're the dog who
@@ -1874,12 +1886,12 @@ si:
         actor 2 touches anything" event to trigger an update to your score when your
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
+      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to throw pie.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a piece of pie. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
-        from Cat (actor 2), you should lose a point. Start with 10 points so it's
-        not too hard. Let your score drop down from 10 to 0 to pass the level.
+        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
+        Cat (actor 2), you should lose a point. Start with 10 points so it's not
+        too hard. Let your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |
         Alright, one last thing for
         this game - let's set it up so the player can win (or lose). Use a forever
@@ -2031,6 +2043,9 @@ si:
         functions you've learned in the draw loop. What happens when you use randomNumber()
         to generate some of the inputs?You'll want to stop and discuss with the class
         before moving on.
+      CSD U3 Expressions calculator_instruction: |
+        Add the numbers 1 through 10. Multiply
+        the numbers 1 through 10. Check your answers with a neighbor.
       CSD U3 Frame Rate_instruction: "Slow down Gamelab Gary's animation with frameRate()"
       CSD U3 Keypress Boolean_instruction: |
         Modify the code so that all of the console.log
@@ -2106,6 +2121,9 @@ si:
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -2160,6 +2178,104 @@ si:
       CSD U3 Variables2 expressions_instruction: |
         Use console.log to display the
         results of each expression. Then create your own.
+      CSDU4 - AppLab - 1_instruction: |
+        Read the documentation for penColor() and
+        penWidth() before using them to draw the blue square.
+      CSDU4 - AppLab - 2_instruction: |
+        Write a program that acts as a simple calculator.
+        (click to see full instructions)
+      CSDU4 - AppLab - 3_instruction: |
+        Use console to check the ending value of num.
+        (Click to see full instructions)
+      CSDU4 - AppLab - 4_instruction: |2
+         Use the Debug Commands to make a list of
+        all the values rolled before a 6. (Click to see full instructions)
+      CSDU4 - Design Mode - 1_instruction: |
+        Add a button that moves the turtle when
+        clicked.  (Click to see full instructions)
+      CSDU4 - Design Mode - 10_instruction: |
+        Introducing the setPosition command!
+        Replace the moveTo in the button-click event handler to use setPosition to
+        move the button itself to a random location when it's clicked.
+      CSDU4 - Design Mode - 11_instruction: |
+        Experiment with different event types
+        and select the one that you think is best. (Click to see full instructions)
+      CSDU4 - Design Mode - 12_instruction: |
+        Use the textLabel command to replace
+        the button in your program with a text label. (Click to see full instructions)
+      CSDU4 - Design Mode - 16_instruction: |
+        Add an event handler for the button
+        using the "Insert and show" link in the Design Mode Events tab. (Click to
+        see full instructions).
+      CSDU4 - Design Mode - 17_instruction: |
+        Update the ID names and `console.log`
+        messages to match the correct button. (Click to see full instructions.)
+      CSDU4 - Design Mode - 18_instruction: |
+        Fix the layout of the bullseye game.
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 19_instruction: |
+        Make a 2 screen app with a black screen
+        and a white screen. (Click to see detailed instructions)
+      CSDU4 - Design Mode - 2_instruction: |
+        Run a program with two buttons that have
+        the same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
+      CSDU4 - Design Mode - 20_instruction: |
+        Make a 2 screen app which can switch
+        back and forth between a black screen and a white screen using buttons. (Click
+        to see detailed instructions.)
+      CSDU4 - Design Mode - 24_instruction: |
+        Add an Text Input box for the name and
+        age. (Click to see full instructions)
+      CSDU4 - Design Mode - 25_instruction: |
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 26_instruction: |
+        Save the age and name of the user in
+        variables (Click to see full instructions)
+      CSDU4 - Design Mode - 27_instruction: |
+        Output a message to the 'textArea'
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 28_instruction: |
+        Write a greeting to the user when they
+        hit 'enter' in the text input, using the 'change' event. (Click to see
+        full instructions)
+      CSDU4 - Design Mode - 29_instruction: |
+        Add a dropdown for their guess instead
+        of promptNum (Click to see full instructions)
+      CSDU4 - Design Mode - 3_instruction: |
+        Add an event handler to the button to
+        move the turtle forward. (Click to see full instructions)
+      CSDU4 - Design Mode - 30_instruction: |
+        Show different die images for the random
+        number generated. (Click to see full instructions)
+      CSDU4 - Design Mode - 31_instruction: |
+        Set up an event handler to respond to
+        keypress events, and display event.key in the console. Hit keys on the keyboard
+        to see what happens. (Click to see full instructions)
+      CSDU4 - Design Mode - 32_instruction: |
+        Try out the keyup and keydown events
+        to see how they are different from keypress. (Click to see full instructions)
+      CSDU4 - Design Mode - 33_instruction: |
+        Change the code so the sound will only
+        play when the up arrow is pressed. (Click to see full instructions)
+      CSDU4 - Design Mode - 4_instruction: |
+        Improve the button by choosing a descriptive
+        and meaningful ID. (Click to see full instructions)
+      CSDU4 - Design Mode - 5_instruction: |
+        Debug the program by verifying your IDs
+        are being referenced properly. (Click to see full instructions)
+      CSDU4 - Design Mode - 6_instruction: |
+        Debug the program by properly ordering
+        your button commands and event handlers. (Click to see full instructions)
+      CSDU4 - Design Mode - 7_instruction: |
+        Debug the program by fixing the logical
+        error within the program. (Click to see full instructions)
+      CSDU4 - Design Mode - 8_instruction: |
+        Move the button to the middle of the
+        screen. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -2587,7 +2703,7 @@ si:
       K-1 Bee 13_instruction: Get three nectar and then make one honey!
       K-1 Bee 14_instruction: |
         Get me to the nectar, pick it up, get me to the honey,
-        and make honey
+        and make honey!
       K-1 Bee 15_instruction: Get two nectar to make two honey!
       K-1 Bee 2_instruction: |
         Move me to the flower, get the nectar, then move me
@@ -2751,6 +2867,10 @@ si:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3370,6 +3490,9 @@ si:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva copy U3L2 Using Simple Commands_instruction: |
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
@@ -3456,14 +3579,36 @@ si:
         Only one last direction to worry about!
         Create a "safe-down?" function and update the "on-screen?" function so
         that it checks up, down, left, and right.
-      sample1_instruction: "Our adventurer wants to collect gems.  But she can only\nuse 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she can\nusing just 4 blocks?"
+      sample1_instruction: "Our adventurer wants to collect coins.  But she can only\nuse 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she can\nusing just 4 blocks?"
+      sample10_instruction: Now you can use loops to draw whatever you like!
+      sample10a_instruction: "You have helped the adventurer and her bee!  As a reward,\nplease stay and play around in my magical village. \\r\n\\r\nYou should have\neverything you need to create a game of your own."
       sample2_instruction: |
         Use what you've learned to help bee gather all of this
+        honey using only the blocks that you have here.
+      sample2a_instruction: |
+        Use what you've learned to help bee gather all of this
         honey using only 4 blocks.
-      sample3_instruction: Now you can help bee make all of the honey.
+      sample3_instruction: |
+        Now you can help bee make all of the honey using just
+        the blocks in the toolbox.
+      sample3assessment_instruction: |
+        Can you figure out how to gather all of this
+        nectar in just one try?
       sample4_instruction: "Our adventurer has found a stash of coins in this cave.\\r\n\\r\nCan\nyou help her grab as many as she can using just 7 blocks?"
       sample5_instruction: Help bee make all of the honey.
-      sample6_instruction: 'Challenge: Help bee make all of the honey.'
+      sample6_instruction: 'Challenge: Help bee get all of the nectar.'
+      sample7assessment_instruction: |
+        Can you help bee make all of the honey in just
+        one try?
+      sample8_instruction: |
+        Look at this trove of coins! How many can you get the
+        adventurer to grab?
+      sample9_instruction: |
+        Use loops to help the artist connect all of the dots.
+        
+      sample9a_instruction: |
+        The wizard has found his potions!  Use everything you
+        have learned to help him collect them.
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
@@ -3843,6 +3988,7 @@ si:
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -5293,4 +5439,7 @@ si:
         2 coal.
       Underground Test Level_instruction: Collect all of the minerals!
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

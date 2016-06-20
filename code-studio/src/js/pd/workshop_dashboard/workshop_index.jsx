@@ -1,10 +1,8 @@
-/* global React */
-
 /*
   Workshop Index. Displays workshop summaries and controls for CRUD actions.
   Route: /workshops
  */
-
+import React from 'react';
 var WorkshopTable = require('./components/workshop_table');
 var Button = require('react-bootstrap').Button;
 

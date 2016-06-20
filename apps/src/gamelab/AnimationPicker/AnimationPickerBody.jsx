@@ -1,6 +1,7 @@
 /** Body of the animation picker dialog */
 'use strict';
 
+import React from 'react';
 import Radium from 'radium';
 import gamelabMsg from '../locale';
 import animationLibrary from '../animationLibrary';

@@ -1,6 +1,7 @@
-/* globals dashboard, appOptions  */
-
+/* globals appOptions  */
+import $ from 'jquery';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import _ from 'lodash';
@@ -41,11 +42,6 @@ progress.activityCssClass = function (result) {
 };
 
 /**
- * See ApplicationHelper::PUZZLE_PAGE_NONE.
- */
-progress.PUZZLE_PAGE_NONE = -1;
-
-/**
  * Returns the "best" of the two results, as defined in apps/src/constants.js.
  * Note that there are negative results that count as an attempt, so we can't
  * just take the maximum.
@@ -57,158 +53,46 @@ progress.mergedActivityCssClass = function (a, b) {
   return progress.activityCssClass(clientState.mergeActivityResult(a, b));
 };
 
-progress.populateProgress = function (scriptName, puzzlePage) {
-  var status;
+progress.renderStageProgress = function (stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation) {
+  var store = loadProgress({name: scriptName, stages: [stageData]}, currentLevelId, saveAnswersBeforeNavigation);
+  var mountPoint = document.querySelector('.progress_container');
 
-  // Render the progress the client knows about (from sessionStorage)
-  var clientProgress = clientState.allLevelsProgress()[scriptName] || {};
-  Object.keys(clientProgress).forEach(function (levelId) {
-    $('.user-stats-block .level-' + levelId).addClass(progress.activityCssClass(clientProgress[levelId]));
+  store.dispatch({
+    type: 'MERGE_PROGRESS',
+    progress: _.mapValues(progressData.levels, level => level.submitted ? SUBMITTED_RESULT : level.result)
   });
 
-  $.ajax('/api/user_progress/' + scriptName).done(function (data) {
+  ReactDOM.render(
+    <Provider store={store}>
+      <StageProgress />
+    </Provider>,
+    mountPoint
+  );
+};
+
+progress.renderCourseProgress = function (scriptData, currentLevelId) {
+  var store = loadProgress(scriptData, currentLevelId);
+  var mountPoint = document.createElement('div');
+
+  $.ajax(
+    '/api/user_progress/' + scriptData.name,
+    { data: { user_id: clientState.queryParams('user_id') } }
+  ).done(data => {
     data = data || {};
 
     // Show lesson plan links if teacher
     if (data.isTeacher) {
-      $('.stage-lesson-plan-link').show();
+      store.dispatch({
+        type: 'SHOW_LESSON_PLAN_LINKS'
+      });
     }
 
-    // Merge progress from server (loaded via AJAX)
-    var serverProgress = data.levels || {};
-    Object.keys(serverProgress).forEach(function (levelId) {
-      // Only the server can speak to whether a level is submitted/accepted/rejected.  If it is,
-      // apply this styling but don't cache locally.
-      if (serverProgress[levelId].result > clientState.MAXIMUM_CACHABLE_RESULT) {
-        var status;
-        if (serverProgress[levelId].result === REVIEW_REJECTED_RESULT) {
-          status = 'review_rejected';
-        }
-        if (serverProgress[levelId].result === REVIEW_ACCEPTED_RESULT) {
-          status = 'review_accepted';
-        }
-        // Clear the existing class and replace
-        $('.level-' + levelId).attr('class', `level_link ${status}`);
-      } else if (serverProgress[levelId].submitted) {
-        // Clear the existing class and replace
-        $('.level-' + levelId).attr('class', 'level_link submitted');
-      } else if (serverProgress[levelId].pages_completed) {
-        // This is a multi-page level.  There will be multiple dots for the same level ID,
-        // so we need to decorate each of them individually.
-        var pagesCompleted = serverProgress[levelId].pages_completed;
-        for (var page = 0; page < pagesCompleted.length; page++) {
-          // The dot is considered perfect if the page is considered complete.
-          var pageCompleted = pagesCompleted[page];
-          status = pageCompleted ? "perfect" : "attempted";
-
-          // Clear the existing class and replace.
-          $($('.user-stats-block .level-' + levelId)[page]).attr('class', 'level-' + levelId + ' level_link ' + status);
-
-          // If this is the current level, highlight it.
-          if (window.appOptions && appOptions.serverLevelId && levelId === appOptions.serverLevelId && puzzlePage-1 === page) {
-            $($('.user-stats-block .level-' + appOptions.serverLevelId)[puzzlePage-1]).parent().addClass('puzzle_outer_current');
-          }
-        }
-      } else if (serverProgress[levelId].result !== clientProgress[levelId]) {
-        status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
-
-        // Clear the existing class and replace
-        $('.level-' + levelId).attr('class', 'level_link ' + status);
-
-        // Write down new progress in sessionStorage
-        clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
-      }
-    });
-  });
-
-  // Unless we already highlighted a specific page, highlight the current level.
-  if (puzzlePage === progress.PUZZLE_PAGE_NONE && window.appOptions && appOptions.serverLevelId) {
-    $('.level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
-  }
-};
-
-progress.renderStageProgress = function (stageData, progressData, clientProgress, currentLevelId, puzzlePage) {
-  var serverProgress = progressData.levels || {};
-  var currentLevelIndex = null;
-  var lastLevelId = null;
-  var levelRepeat = 0;
-
-  var combinedProgress = stageData.levels.map(function (level, index) {
-    // Determine the current level index.
-    // However, because long assessments can have the same level appearing
-    // multiple times, just set this the first time it's determined.
-    if (level.id === currentLevelId && currentLevelIndex === null) {
-      currentLevelIndex = index;
-    }
-
-    // If we have a multi-page level, then we will encounter the same level ID
-    // multiple times in a row.  Keep track of how many times we've seen it
-    // repeat, so that we know what page we're up to.
-    if (level.id === lastLevelId) {
-      levelRepeat++;
-    } else {
-      lastLevelId = level.id;
-      levelRepeat = 0;
-    }
-
-    var status;
-    var result = (serverProgress[level.id] || {}).result;
-    if (serverProgress && result > clientState.MAXIMUM_CACHABLE_RESULT) {
-      if (result === REVIEW_REJECTED_RESULT) {
-        status = 'review_rejected';
-      }
-      if (result === REVIEW_ACCEPTED_RESULT) {
-        status = 'review_accepted';
-      }
-    } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
-      status = "submitted";
-    } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].pages_completed) {
-      // The dot is considered perfect if the page is considered complete.
-      var pageCompleted = serverProgress[level.id].pages_completed[levelRepeat];
-      status = pageCompleted ? "perfect" : "attempted";
-    } else if (clientState.queryParams('user_id')) {
-      // Show server progress only (the student's progress)
-      status = progress.activityCssClass(result);
-    } else {
-      // Merge server progress with local progress
-      status = progress.mergedActivityCssClass(result, clientProgress[level.id]);
-    }
-
-    var href = level.url + location.search;
-
-    return {
-      title: level.title,
-      status: status,
-      kind: level.kind,
-      url: href,
-      id: level.id
-    };
-  });
-
-  if (currentLevelIndex !== null && puzzlePage !== progress.PUZZLE_PAGE_NONE) {
-    currentLevelIndex += puzzlePage - 1;
-  }
-
-  var mountPoint = document.createElement('div');
-  mountPoint.style.display = 'inline-block';
-  $('.progress_container').replaceWith(mountPoint);
-  ReactDOM.render(React.createElement(StageProgress, {
-    levels: combinedProgress,
-    currentLevelIndex: currentLevelIndex,
-    saveAnswersFirst: puzzlePage !== progress.PUZZLE_PAGE_NONE
-  }), mountPoint);
-};
-
-progress.renderCourseProgress = function (scriptData) {
-  var store = loadProgress(scriptData);
-  var mountPoint = document.createElement('div');
-
-  $.ajax('/api/user_progress/' + scriptData.name).done(data => {
-    data = data || {};
-
-    // Show lesson plan links if teacher
-    if (data.isTeacher) {
-      $('.stage-lesson-plan-link').show();
+    if (data.focusAreaPositions) {
+      store.dispatch({
+        type: 'UPDATE_FOCUS_AREAS',
+        changeFocusAreaPath: data.changeFocusAreaPath,
+        focusAreaPositions: data.focusAreaPositions
+      });
     }
 
     // Merge progress from server (loaded via AJAX)
@@ -229,27 +113,67 @@ progress.renderCourseProgress = function (scriptData) {
   );
 };
 
-function loadProgress(scriptData) {
-  var teacherCourse = $('#landingpage').hasClass('teacher-course');
+// Return the level with the highest progress, or the first level if none have
+// been attempted
+progress.bestResultLevelId = function (levelIds, progressData) {
+  // The usual case
+  if (levelIds.length === 1) {
+    return levelIds[0];
+  }
 
-  let store = createStore((state = [], action) => {
+  // Return the level with the highest result
+  var attemptedIds = levelIds.filter(id => progressData[id]);
+  if (attemptedIds.length === 0) {
+    // None of them have been attempted, just return the first
+    return levelIds[0];
+  }
+  var bestId = attemptedIds[0];
+  var bestResult = progressData[bestId];
+  attemptedIds.forEach(function (id) {
+    var result = progressData[id];
+    if (result > bestResult) {
+      bestId = id;
+      bestResult = result;
+    }
+  });
+  return bestId;
+};
+
+function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = false) {
+
+  let store = createStore((state = {}, action) => {
     if (action.type === 'MERGE_PROGRESS') {
+      // TODO: _.mergeWith after upgrading to Lodash 4+
       let newProgress = {};
-      return {
-        display: state.display,
+      Object.keys(Object.assign({}, state.progress, action.progress)).forEach(key => {
+        newProgress[key] = clientState.mergeActivityResult(state.progress[key], action.progress[key]);
+      });
+
+      return Object.assign({}, state, {
         progress: newProgress,
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
-          let id = level.uid || level.id;
-          newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
+          let id = level.uid || progress.bestResultLevelId(level.ids, newProgress);
 
-          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
+          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id]), id: id});
         })}))
-      };
+      });
+    } else if (action.type === 'UPDATE_FOCUS_AREAS') {
+      return Object.assign({}, state, {
+        changeFocusAreaPath: action.changeFocusAreaPath,
+        focusAreaPositions: action.focusAreaPositions
+      });
+    } else if (action.type === 'SHOW_LESSON_PLAN_LINKS') {
+      return Object.assign({}, state, {
+        showLessonPlanLinks: true
+      });
     }
     return state;
   }, {
-    display: teacherCourse ? 'list' : 'dots',
+    currentLevelId: currentLevelId,
+    professionalLearningCourse: scriptData.plc,
     progress: {},
+    focusAreaPositions: [],
+    saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
     stages: scriptData.stages
   });
 

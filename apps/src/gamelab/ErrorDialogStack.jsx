@@ -1,6 +1,7 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
 'use strict';
 
+var React = require('react');
 var actions = require('./errorDialogStackModule');
 var connect = require('react-redux').connect;
 var Dialog = require('../templates/DialogComponent.jsx');

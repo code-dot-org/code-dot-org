@@ -85,7 +85,7 @@ class ScriptLevelsController < ApplicationController
     return if performed?
     load_section
 
-    return if redirect_applab_under_13(@script_level.level)
+    return if redirect_under_13(@script_level.level)
 
     present_level
   end
@@ -145,7 +145,7 @@ class ScriptLevelsController < ApplicationController
   def load_level_source
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
       # load the solution for teachers clicking "See the Solution"
-      authorize! :manage, :teacher
+      authorize! :view_level_solutions, @script
       level_source = @ideal_level_source
       readonly_view_options
     elsif @user && current_user && @user != current_user
@@ -245,6 +245,11 @@ class ScriptLevelsController < ApplicationController
       user_id: current_user.try(:id) || 0,
       script_level_id: @script_level.id,
       level_id: @level.id)
+
+    @sublevel_callback = milestone_script_level_url(
+      user_id: current_user.try(:id) || 0,
+      script_level_id: @script_level.id,
+      level_id: '') if @level.game.level_group?
 
     view_options(
       full_width: true,

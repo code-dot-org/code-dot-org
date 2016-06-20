@@ -476,24 +476,17 @@
     notes_coming_soon: "یادداشت ها برای این ویدیو به زودی."
     autoplay_option: "پخش خودکار فیلم ها"
     download: "دانلود ویدیو"
-  compatability:
-    working:
-      header: "ما در حال کار بر روی پشتیبانی از مرورگر شما هستیم."
-      message: Code.org از فناوری های نوین وب برای سریعتر ساختن سایت را برای استفاده  بکار
-        می گیرد . مرورگر شما تمام ویژگی های مورد نیاز را پشتیبانی نمی کند، و شما ممکن
-        است به مسایلی در موقع استفاده از این بخش از سایت برخورد کنید . لطفا ما را
-        با <a href='%{report_issue_url}'> گزارش هر گونه مسائل پیش آمده </a> یاری دهید.
-        شما همچنین می توانید <a href='%{supported_browsers_url}'> مرورگر خود را به
-        آخرین نسخه ( که از این قابلیتها پشتیبانی کند ) ارتقا دهید</a>.
-      hide_this_warning: "مخفی کردن هشدار"
+  compatibility:
     upgrade:
-      header: "لطفا مرورگر خود را ارتقا دهید."
-      message: Code.org از فناوری های نوین وب برای سریعتر ساختن سایت را برای استفاده  بکار
-        می گیرد .متاسفانه مرورگر شما تمام ویژگی های لازم برای اجرای این بخش از سایت
-        را پشتیبانی نمی کند. <br/> <br/>یکی از مرورگرهای پشتیبانی شده برای ادامه نصب
-        نمایید . شما می توانید <a href='#'> صحفه را مشاهده نمایید</a>، اما انتظار
-        درست تمام قابلیتها را نداشته باشید .
-      button: "مرا به لیست مرورگرهای پشتیبانی شده ببر"
+      unsupported_message: Your browser is not supported. Please upgrade your browser
+        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
+        browsers</a>. You can try viewing the page, but expect functionality to be
+        broken.
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
+        10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
+        8, 9, and 10. Please upgrade to a modern browser.
+      link: Learn more
   slow_loading: "این طولانی تر از معمول طول میکشد..."
   try_reloading: "درخواست مجدد نمایش صفحه"
   next_stage: "پایان! به مرحله بعد بروید"
@@ -591,12 +584,15 @@
       ها و تصاویر را با نوشتن برنامه های کامپیوتری خود را ساخته اند. برای دیدن هر
       برنامه در عمل بر روی عکس و یا نمای هربرنامه کلیک کنید."
     want_to_make_your_own: "می‌خواهی مال خودت را بسازی؟"
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: "بیشتر &rarr;"
     caption_by_name_age: "توسط %{name} سن %{age}"
     caption_time_ago: "%{time_ago} پیش"
     header: "گالری"
     header_playlab: "آزمایشگاه بازی"
     header_artist: "هنرمند"
+    report_abuse: Report Abuse
   landing:
     prerelease: "این دوره <span class='betatext'> بتا</span> است.  یعنی نسخه نهایی
       نبوده بر مبنای بازخورد دریافت شده مورد تجدید نظر واقع شده و بهتر می گردد."
@@ -811,11 +807,52 @@
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
       no_icons_found: No icons found
+    playzone:
+      artist_description: Draw cool pictures and designs with the Artist!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Create a story or make a game with Play Lab!
+      playlab_title: New App
+      primary_header: Congratulations! You finished %{stageName}!
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: Overview
     content: Content
     practice: Teacher Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
+      a site that is not operated by Code.org.</strong> This site may have privacy
+      policies that differ from Code.org's.<br/><br/>We have selected these third
+      party resources because we think they will be useful to you. While we are not
+      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
+      support</a> if you find the content objectionable, or if the linked site is
+      no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: Download %{app_name} for offline use (136MB)
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X

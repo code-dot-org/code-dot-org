@@ -43,6 +43,8 @@
       2-3 Artist Functions 10_instruction: "这里有两个函数，一个是绘制一个大齿轮，另一个是画一个小齿轮。使用它们来绘制一个机器的内部结构！"
       2-3 Artist Functions 11.5_instruction: 这里同样是"画一个六边形"的功能。如果在循环中每次只转 60 度会发生什么呢？
       2-3 Artist Functions 11_instruction: "我们将“画一个正方形”的函数改成了“画一个六边形”，但它实际上还是只能画正方形！能把“画一个六边形”的函数改成能画边长50像素的六边形，然后用它画一个六边形吗？"
+      2-3 Artist Functions 12 Mike_instruction: "函数对于多次画一个复杂的事物非常有帮助。能用“画一朵花”的函数来填满整个花盆吗？（提示：植物应该相隔100像素。）
+        \ "
       2-3 Artist Functions 12_instruction: "函数对于多次画一个复杂的事物非常有帮助。能用“画一朵花”的函数来填满整个花盆吗？（提示：植物应该相隔100像素。）
         \ "
       2-3 Artist Functions 13_instruction: "我们提供了4个函数。你可以随意把它们放在一个或者多个循环中来画图，然后分享给你的朋友们。点击“运行”来看示例。"
@@ -338,6 +340,12 @@
       4-5 Maze 9_instruction: "用“重复直到”模块创建一个循环。"
       4-5 Maze Assessment 1_instruction: "评估：到达太阳花。"
       4-5 Maze Conditionals 1_instruction: "用“重复直到”模块让僵尸到达太阳花。"
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: "用“重复直到”模块让僵尸到达太阳花。"
       4-5 Maze Conditionals 3_instruction: 用新的"如果"模块让我来决定什么时候转弯。提示： 你只需要加一个模块，但记住其它模块是怎么排列的，这样下次你就会自己写了。
       4-5 Maze Conditionals 4_instruction: 好啦，这是最后一个谜题了，但你需要记住如何一起使用"如果"模块和"重复"模块。
@@ -370,6 +378,20 @@
       4-5 While Loops 7_instruction: "哇，这里有三堆土！你能写一个程序，将它们一铲铲移除，直到地面平整吗？"
       4-5 While Loops 8_instruction: " 这里有一个很深的坑，和一个很大的土堆？需要移动多少土才能将地面弄平整呢？提示：两个都要用“当”循环。"
       4-5 While Loops Assessment 1_instruction: "这里有好多坑和土堆。帮我填满或移除它们来让地面平整。"
+      aE1_instruction: |-
+        Draw this square using a loop.\r
+        \r
+        Each side is 20 pixels
+        long.
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 15 squares line up next to each other?
+      aE3_instruction: |
+        Now let's go one level deeper! We've nested that whole
+        block of code into another loop, but you need to get the artist back in place
+        to draw the next line. Which of these code blocks can you place at the end
+        of the outermost loop to draw the whole grid?
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -1191,9 +1213,7 @@
         1) 记录巫师被点击的次数。\r
         2) 如果巫师在小狗数到30前，巫师被点击了至少10次，就将“increment”（增量）增加1，并重新开始。\r
         3) 如果巫师没有被点击10次，游戏就结束。
-      Course 4 Playlab For Loop Freeplay_instruction: |
-        Freeplay: Use everything you've
-        learned so far to make a game that includes a `for` loop!
+      Course 4 Playlab For Loop Freeplay_instruction: "自由的游戏：使用到目前为止你已经学会的一切制作一个游戏，包括for循环。"
       Course 4 Playlab For Loops 4b_instruction: |-
         Now, these two characters are going
         to race!  \r
@@ -1203,9 +1223,7 @@
         \r
         Can
         you change the increment in one of the loops so that the race is a tie?
-      Course 4 Playlab For Loops 5b_instruction: |
-        Adjust the interval on these `for`
-        loops so that the two characters end in the exact same place.
+      Course 4 Playlab For Loops 5b_instruction: "调整上这些 for 循环的间隔，以便这两个字符在完全相同的位置结束。"
       Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na
         game that's fun for you to play!\\r\n\\r\nPress \"Run\" and click Madame\nUnicorn
         four times to win. "
@@ -1275,6 +1293,9 @@
         functions you've learned in the draw loop. What happens when you use randomNumber()
         to generate some of the inputs?You'll want to stop and discuss with the class
         before moving on.
+      CSD U3 Expressions calculator_instruction: |
+        Add the numbers 1 through 10. Multiply
+        the numbers 1 through 10. Check your answers with a neighbor.
       CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
       CSD U3 Keypress Boolean_instruction: |
         Modify the code so that all of the console.log
@@ -1352,6 +1373,9 @@
       CSD U3 Variables Intro_instruction: |
         Create your own variable, give it a value,
         and display that value in the console.
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -1406,6 +1430,104 @@
       CSD U3 Variables2 expressions_instruction: |
         Use console.log to display the
         results of each expression. Then create your own.
+      CSDU4 - AppLab - 1_instruction: |
+        Read the documentation for penColor() and
+        penWidth() before using them to draw the blue square.
+      CSDU4 - AppLab - 2_instruction: |
+        Write a program that acts as a simple calculator.
+        (click to see full instructions)
+      CSDU4 - AppLab - 3_instruction: |
+        Use console to check the ending value of num.
+        (Click to see full instructions)
+      CSDU4 - AppLab - 4_instruction: |2
+         Use the Debug Commands to make a list of
+        all the values rolled before a 6. (Click to see full instructions)
+      CSDU4 - Design Mode - 1_instruction: |
+        Add a button that moves the turtle when
+        clicked.  (Click to see full instructions)
+      CSDU4 - Design Mode - 10_instruction: |
+        Introducing the setPosition command!
+        Replace the moveTo in the button-click event handler to use setPosition to
+        move the button itself to a random location when it's clicked.
+      CSDU4 - Design Mode - 11_instruction: |
+        Experiment with different event types
+        and select the one that you think is best. (Click to see full instructions)
+      CSDU4 - Design Mode - 12_instruction: |
+        Use the textLabel command to replace
+        the button in your program with a text label. (Click to see full instructions)
+      CSDU4 - Design Mode - 16_instruction: |
+        Add an event handler for the button
+        using the "Insert and show" link in the Design Mode Events tab. (Click to
+        see full instructions).
+      CSDU4 - Design Mode - 17_instruction: |
+        Update the ID names and `console.log`
+        messages to match the correct button. (Click to see full instructions.)
+      CSDU4 - Design Mode - 18_instruction: |
+        Fix the layout of the bullseye game.
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 19_instruction: |
+        Make a 2 screen app with a black screen
+        and a white screen. (Click to see detailed instructions)
+      CSDU4 - Design Mode - 2_instruction: |
+        Run a program with two buttons that have
+        the same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
+      CSDU4 - Design Mode - 20_instruction: |
+        Make a 2 screen app which can switch
+        back and forth between a black screen and a white screen using buttons. (Click
+        to see detailed instructions.)
+      CSDU4 - Design Mode - 24_instruction: |
+        Add an Text Input box for the name and
+        age. (Click to see full instructions)
+      CSDU4 - Design Mode - 25_instruction: |
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 26_instruction: |
+        Save the age and name of the user in
+        variables (Click to see full instructions)
+      CSDU4 - Design Mode - 27_instruction: |
+        Output a message to the 'textArea'
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 28_instruction: |
+        Write a greeting to the user when they
+        hit 'enter' in the text input, using the 'change' event. (Click to see
+        full instructions)
+      CSDU4 - Design Mode - 29_instruction: |
+        Add a dropdown for their guess instead
+        of promptNum (Click to see full instructions)
+      CSDU4 - Design Mode - 3_instruction: |
+        Add an event handler to the button to
+        move the turtle forward. (Click to see full instructions)
+      CSDU4 - Design Mode - 30_instruction: |
+        Show different die images for the random
+        number generated. (Click to see full instructions)
+      CSDU4 - Design Mode - 31_instruction: |
+        Set up an event handler to respond to
+        keypress events, and display event.key in the console. Hit keys on the keyboard
+        to see what happens. (Click to see full instructions)
+      CSDU4 - Design Mode - 32_instruction: |
+        Try out the keyup and keydown events
+        to see how they are different from keypress. (Click to see full instructions)
+      CSDU4 - Design Mode - 33_instruction: |
+        Change the code so the sound will only
+        play when the up arrow is pressed. (Click to see full instructions)
+      CSDU4 - Design Mode - 4_instruction: |
+        Improve the button by choosing a descriptive
+        and meaningful ID. (Click to see full instructions)
+      CSDU4 - Design Mode - 5_instruction: |
+        Debug the program by verifying your IDs
+        are being referenced properly. (Click to see full instructions)
+      CSDU4 - Design Mode - 6_instruction: |
+        Debug the program by properly ordering
+        your button commands and event handlers. (Click to see full instructions)
+      CSDU4 - Design Mode - 7_instruction: |
+        Debug the program by fixing the logical
+        error within the program. (Click to see full instructions)
+      CSDU4 - Design Mode - 8_instruction: |
+        Move the button to the middle of the
+        screen. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -1914,6 +2036,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2385,6 +2511,9 @@
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva copy U3L2 Using Simple Commands_instruction: |
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
@@ -2461,15 +2590,30 @@
         Create a "safe-down?" function and update the "on-screen?" function so
         that it checks up, down, left, and right.
       sample1_instruction: |-
-        Our adventurer wants to collect gems.  But she can only
+        Our adventurer wants to collect coins.  But she can only
         use 4 blocks to get them.\r
         \r
         Can you help her grab as many as she can
         using just 4 blocks?
+      sample10_instruction: Now you can use loops to draw whatever you like!
+      sample10a_instruction: |-
+        You have helped the adventurer and her bee!  As a reward,
+        please stay and play around in my magical village. \r
+        \r
+        You should have
+        everything you need to create a game of your own.
       sample2_instruction: |
         Use what you've learned to help bee gather all of this
+        honey using only the blocks that you have here.
+      sample2a_instruction: |
+        Use what you've learned to help bee gather all of this
         honey using only 4 blocks.
-      sample3_instruction: Now you can help bee make all of the honey.
+      sample3_instruction: |
+        Now you can help bee make all of the honey using just
+        the blocks in the toolbox.
+      sample3assessment_instruction: |
+        Can you figure out how to gather all of this
+        nectar in just one try?
       sample4_instruction: |-
         Our adventurer has found a stash of coins in this cave.\r
         \r
@@ -2477,6 +2621,17 @@
         you help her grab as many as she can using just 7 blocks?
       sample5_instruction: Help bee make all of the honey.
       sample6_instruction: 'Challenge: Help bee make all of the honey.'
+      sample7assessment_instruction: |
+        Can you help bee make all of the honey in just
+        one try?
+      sample8_instruction: |
+        Look at this trove of coins! How many can you get the
+        adventurer to grab?
+      sample9_instruction: |
+        Use loops to help the artist connect all of the dots.
+      sample9a_instruction: |
+        The wizard has found his potions!  Use everything you
+        have learned to help him collect them.
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
@@ -2841,6 +2996,7 @@
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -4376,4 +4532,7 @@
         2 块煤炭。"
       Underground Test Level_instruction: "收集所有矿石!"
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

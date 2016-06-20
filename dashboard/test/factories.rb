@@ -157,9 +157,21 @@ FactoryGirl.define do
     properties{{makerlab_enabled: true}}
   end
 
+  factory :gamelab, :parent => Level, :class => Gamelab do
+    game {Game.gamelab}
+  end
+
   factory :multi, :parent => Level, :class => Applab do
     game {create(:game, app: "multi")}
     properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
+  end
+
+  factory :evaluation_multi, :parent => Level, :class => EvaluationMulti do
+    game {create(:game, app: 'evaluation_multi')}
+  end
+
+  factory :external, parent: Level, class: External do
+
   end
 
   factory :external_link, parent: Level, class: ExternalLink do
@@ -349,44 +361,21 @@ FactoryGirl.define do
     plc_user_course_enrollment nil
     plc_course_unit nil
     status Plc::EnrollmentUnitAssignment::START_BLOCKED
+    user nil
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
     plc_course {create(:plc_course)}
+    script {create(:script)}
     unit_name "MyString"
     unit_description "MyString"
     unit_order 1
   end
 
-  factory :plc_written_submission_task, parent: :plc_task, class: 'Plc::WrittenAssignmentTask' do
-    level_id nil
-  end
-
-  factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
-    resource_url nil
-    icon nil
-  end
-
-  factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
-    answer "MyString"
-    plc_evaluation_question nil
-    plc_learning_module nil
-  end
-
-  factory :plc_evaluation_question, :class => 'Plc::EvaluationQuestion' do
-    question "MyString"
-    plc_course_unit nil
-  end
-
-  factory :plc_enrollment_task_assignment, :class => 'Plc::EnrollmentTaskAssignment' do
-    status "MyString"
-    plc_enrollment_module_assignment nil
-    plc_task nil
-  end
-
   factory :plc_enrollment_module_assignment, :class => 'Plc::EnrollmentModuleAssignment' do
     plc_enrollment_unit_assignment nil
     plc_learning_module nil
+    user nil
   end
 
   factory :plc_user_course_enrollment, :class => 'Plc::UserCourseEnrollment' do
@@ -398,35 +387,21 @@ FactoryGirl.define do
   factory :plc_task, :class => 'Plc::Task' do
     name "MyString"
     plc_learning_modules []
+    after(:create) do |plc_task|
+      plc_task.plc_learning_modules.each do |learning_module|
+        plc_task.script_level = create(:script_level, stage: learning_module.stage, script: learning_module.plc_course_unit.script, level: create(:level))
+      end
+    end
   end
 
   factory :plc_learning_module, :class => 'Plc::LearningModule' do
     name "MyString"
     plc_course_unit {create(:plc_course_unit)}
+    stage {create(:stage)}
     module_type Plc::LearningModule::CONTENT_MODULE
   end
   factory :plc_course, :class => 'Plc::Course' do
     name "MyString"
-  end
-
-  factory :user_professional_learning_course_enrollment do
-    user nil
-    professional_learning_course nil
-  end
-
-  factory :professional_learning_course do
-    name "Some course"
-  end
-
-  factory :professional_learning_module do
-    name "Some module"
-    learning_module_type "Some learning module type"
-    required false
-  end
-
-  factory :professional_learning_task do
-    name "Some task"
-    professional_learning_module nil
   end
 
   factory :level_group do
@@ -465,7 +440,12 @@ FactoryGirl.define do
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
     capacity 10
+  end
 
+  factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
+    sessions {[create(:pd_session)]}
+    started_at {Time.zone.now}
+    ended_at {Time.zone.now}
   end
 
   factory :pd_session, class: 'Pd::Session' do

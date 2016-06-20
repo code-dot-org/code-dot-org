@@ -1,4 +1,4 @@
-import _ from '../../lodash';
+import _ from 'lodash';
 
 const CHANGE_SCREEN = 'screens/CHANGE_SCREEN';
 

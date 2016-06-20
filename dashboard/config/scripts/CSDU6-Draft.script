@@ -1,0 +1,6 @@
+title ' TEMP CSD Unit 6 '
+description 'Temp place to work on U6 of Disco'
+description_short 'Makerlab'
+login_required 'true'
+student_of_admin_required 'true'
+hidden 'true'

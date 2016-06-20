@@ -1,7 +1,14 @@
 "cs-CZ":
   hour_of_code: Hodina kódu
   hello: Ahoj světe
+  'yes': Ano
+  'no': Ne
   select_language: Prosím, zvolte jazyk
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Zjisti více
   en: Informatika
   computer_science_edweek: Týden vzdělávání Informatiky
   csedweek_dates: 8.–14. prosince 2014
@@ -87,52 +94,52 @@
   view_course: Zobrazit kurz
   view_unit: Zobrazit lekci
   make_app: Vytvoř aplikaci
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  congrats_guest_speaker_title: Najdi hostujícího mluvčího pro svojí učebnu
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
     of volunteers to contact local volunteers to visit your classroom, or search in
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
+  congrats_guest_speaker_cta: Najdi hostujícího mluvčího
+  congrats_third_party_title: Použít své nové dovednosti s těmito aplikace a weby
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
+  third_party_gradelevel_2to8: Známky 2-8
+  third_party_gradelevel_4to12: Známky 4-12
+  third_party_gradelevel_5to12: Známky 5-12
+  third_party_gradelevel_6plus: Známky 6+
+  third_party_gradelevel_8plus: Známky 8+
   third_party_platform_all: 'Platforma: Web, iPad & Android'
   third_party_platform_mobile: 'Platforma: iPad & Android'
   third_party_platform_web: 'Platforma: Web'
   third_party_price_varies: 'Cena: Plány se liší'
   third_party_price_free: 'Cena: Zdarma'
   third_party_price_299: 'Cena: $2.99/stažení'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_price_individual: 'Individuální cena: Zkušební verze zdarma & 25 dolarů/měsíc'
+  third_party_price_school: "Školní cena: Zdarma & Pro na $2500 +"
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
     and game-based programming activities provide an easy introduction to programming,
     and empower children to innovate and create.
   third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_site: Navštivte Tynkera
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
     move, jump, dance, and sing. Children can modify characters in the paint editor,
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratchjr_btn_curriculum: Stáhnout Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Navštiv Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_forum: Scratch učitelské Fórum
+  third_party_scratch_btn_site: Navštiv Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
@@ -578,6 +585,7 @@
   dashboard_landing_new_k5courses: Novinka! Vyzkoušejte naše kurzy pro žáky 1. stupně
     ZŠ.
   dashboard_landing_useful_links: Další užitečné odkazy (pouze v angličtině)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Zeptej se osobně! Navštivte naše měsíční video úřední
     hodiny.
   dashboard_landing_print_certificates: Vytisknout certifikáty pro studenty, kteří
@@ -599,6 +607,11 @@
     nabízené našimi partnery.</a> Naučte se programovat roboty a  webové stránky,
     vytvořit si vlastní aplikaci nebo prozkoumat jiné jazyky jako C++, Ruby, nebo
     Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Hodina kódu pro všechny věkové kategorie
   dashboard_hoc_courses_desc: Vyzkoušejte některý z těchto kratších 1 hodinových cvičeních
     se svými studenty!
@@ -650,6 +663,13 @@
   dashboard_action_required: požadováno
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -680,6 +700,7 @@
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nová sekce
@@ -690,6 +711,7 @@
   dashboard_sections_table_secret: Způsob přihlášení
   dashboard_sections_table_grade: Stupeň
   dashboard_sections_table_course: Kurz
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Studenti
   dashboard_sections_table_code: Kód sekce
   dashboard_sections_name: Jméno sekce
@@ -782,6 +804,8 @@
   dashboard_course2: 'Kurz 2:'
   dashboard_course3: 'Kurz 3:'
   dashboard_course4: 'Kurz 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Kurikulum
   dashboard_curriculum_overview: Přehled učiva 1. stupně ZŠ
   dashboard_overview: Přehled
@@ -853,7 +877,7 @@
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Přidej své jméno
   code_hoc_coming: Hodina kód je zde - prosinec 8-14!
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   learn_more: Další informace
@@ -981,6 +1005,11 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1000,8 +1029,10 @@
   hoc_category_name: Hodina kódu
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Věk 13 +
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
@@ -1681,11 +1712,3 @@
   infinity_shortcode: inf
   playlab_shortcode: hrát
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

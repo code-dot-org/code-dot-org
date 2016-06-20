@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
@@ -83,7 +84,7 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
     var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
     var tooltipOffsetX = desiredXPosition - hoverDivWidth;
 
-    var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+    var configuration = Object.assign({}, DEFAULT_TOOLTIP_CONFIG, {
       content: this.getTooltipHTML(funcName),
       offsetX: tooltipOffsetX,
       functionReady: function (_, contents) {

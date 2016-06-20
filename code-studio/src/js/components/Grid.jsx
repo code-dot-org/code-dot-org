@@ -1,5 +1,4 @@
-/* global React */
-
+import React from 'react';
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 var studioConstants = require('@cdo/apps/studio/constants');
 

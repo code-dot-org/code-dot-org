@@ -28,25 +28,25 @@ th:
           desc: ช่วงเวลาของ Code
           Maze: ขั้นตอนที่ 1
         Edit Code:
-          desc: Edit Code (beta)
+          desc: แก้ไขรหัส (เบต้า)
           MazeEC: ขั้นตอนที่ 1
         2014 Levels:
           desc: Bounce (beta)
           Bounce: ขั้นตอนที่ 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
+          desc: ปริศนาที่ผู้ใช้สร้างขึ้น (เบต้า)
           Custom: ขั้นตอนที่ 1
         Flappy Levels:
-          desc: Flappy Bird
+          desc: แฟลบปีเบิร์ด
           Flappy: ขั้นตอนที่ 1
         Jigsaw Levels:
-          desc: Jigsaw (beta)
+          desc: จิ๊กซอว์ (เบต้า)
           Jigsaw: ขั้นตอนที่ 1
         Step Levels:
-          desc: Maze (beta)
+          desc: เขาวงกต (เบต้า)
           MazeStep: Stage Step
         edit-code:
-          desc: Edit Code (beta)
+          desc: แก้ไขรหัส (เบต้า)
           MazeEC: ขั้นตอนที่ 1
           Applab: ขั้นตอนที่ 2
           ArtistEC: ขั้นตอนที่ 3
@@ -56,16 +56,16 @@ th:
           Bounce: ขั้นตอนที่ 1
           Studio: ขั้นตอนที่ 2
         builder:
-          desc: User-Created Puzzles (beta)
+          desc: ปริศนาที่ผู้ใช้สร้างขึ้น (เบต้า)
           Custom: ขั้นตอนที่ 1
         flappy:
-          desc: Flappy Bird
+          desc: แฟลบปีเบิร์ด
           Flappy: ขั้นตอนที่ 1
         jigsaw:
-          desc: Jigsaw (beta)
+          desc: จิ๊กซอว์ (เบต้า)
           Jigsaw: ขั้นตอนที่ 1
         step:
-          desc: Maze (beta)
+          desc: เขาวงกต (เบต้า)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
@@ -95,7 +95,7 @@ th:
         Unplug11: Wrap-up
         MazeEC: เขาวงกต
         Bounce: Bounce
-        Flappy: Flappy Bird
+        Flappy: แฟลบปีเบิร์ด
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch

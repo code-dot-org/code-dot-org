@@ -35,7 +35,13 @@ all_outfiles = [].tap do |all_outfiles|
     file fetchfile_for_pdf => pdf_conversion_info.src_files do
       url = "#{base_url}#{pdf_conversion_info.url_path}"
 
-      PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
+      begin
+        PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
+      rescue Exception => e
+        HipChat.log "PDF generation failure for #{url}"
+        HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+        raise
+      end
 
       fetchable_url = RakeUtils.replace_file_with_s3_backed_fetch_file(pdf_conversion_info.output_pdf_path, fetchfile_for_pdf, bucket: 'cdo-fetch')
 

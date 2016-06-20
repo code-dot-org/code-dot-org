@@ -1,5 +1,7 @@
 /* global dashboard */
 
+import $ from 'jquery';
+
 /**
  * Dynamic generation and event bindings for project admin section of the admin box
  */

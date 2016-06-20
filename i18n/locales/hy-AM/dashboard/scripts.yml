@@ -49,7 +49,7 @@ hy:
           Suzi: Suzi
           The Artist: The Artist
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: Ցատկում
           "Studio: Create a Story": 'Play Lab: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -61,11 +61,11 @@ hy:
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: Գրաֆիկի Թուղթ Ծրագրավորում
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: Conditionals
+          Conditionals: conditionals
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -97,10 +97,10 @@ hy:
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: Ցատկում
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: Computational Thinking
+          Computational Thinking: հաշվողական Մտածմունք
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -131,7 +131,7 @@ hy:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
-          Songwriting: Songwriting
+          Songwriting: songwriting
           description_audience: Ages 8-18
           description_short: Course 3 is a follow-up to Course 2.
         playlab:
@@ -161,7 +161,7 @@ hy:
           "Bee: For Loops": 'Bee: For Loops'
           title: Course 4
           "Algorithms: Tangrams": 'Algorithms: Tangrams'
-          Variables: Variables
+          Variables: փոփոխականների
           "Play Lab: Variables": 'Play Lab: Variables'
           "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
@@ -207,9 +207,9 @@ hy:
           title: Usability Testing
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
-          Variables: Variables
+          Variables: փոփոխականների
           For Loops: For Loops
-          Binary: Binary
+          Binary: երկուական
         potus:
           title: special
           description_short: special
@@ -220,7 +220,7 @@ hy:
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: երկուական
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -242,7 +242,7 @@ hy:
           "Play Lab: Booleans": Sam the Bat
           "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
           "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": Conditionals
+          "Eval: Conditionals": conditionals
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
@@ -250,7 +250,7 @@ hy:
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: Play Lab
-          Infinity: Infinity
+          Infinity: անվերջություն
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
@@ -285,10 +285,10 @@ hy:
           "Programming Concept: Functions": 'Programming Concept: Functions'
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: Ինտերնետ Simulator
           description_short: Learn about how the Internet works
           description: Learn about how the Internet works
-          Internet Simulator: Internet Simulator
+          Internet Simulator: Ինտերնետ Simulator
           Unit 1: Unit 1
           Unit 2: Unit 2
           Sending Bits: Sending Bits
@@ -326,30 +326,30 @@ hy:
           description_audience: Ages 10-18
           description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
           description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
-          Introduction to Computer Science: Introduction to Computer Science
+          Introduction to Computer Science: Ներածություն համակարգչային գիտության
           The Maze: The Maze
-          Computational Thinking: Computational Thinking
-          Graph Paper Programming: Graph Paper Programming
+          Computational Thinking: հաշվողական Մտածմունք
+          Graph Paper Programming: Գրաֆիկի Թուղթ Ծրագրավորում
           The Artist: The Artist
-          Algorithms: Algorithms
+          Algorithms: ալգորիթմները
           The Artist 2: The Artist 2
-          Functions: Functions
+          Functions: գործառույթները
           The Farmer: The Farmer
-          Conditionals: Conditionals
+          Conditionals: conditionals
           The Artist 3: The Artist 3
           Song Writing: Song Writing
-          The Farmer 2: The Farmer 2
-          Abstraction: Abstraction
-          The Artist 4: The Artist 4
-          Relay Programming: Relay Programming
-          The Farmer 3: The Farmer 3
-          The Internet: The Internet
+          The Farmer 2: Ագարակատեր 2
+          Abstraction: աբստրակցիա
+          The Artist 4: Նկարիչը 4
+          Relay Programming: Relay Ծրագրավորում
+          The Farmer 3: Ագարակատեր 3
+          The Internet: Համացանց
           The Artist 5: The Artist 5
-          Wrap-up: Wrap-up
+          Wrap-up: Փաթեթավորեք-up
         edit-code:
-          title: Edit Code
-          description: Edit Code
-          description_short: Edit Code
+          title: Խմբագրել Code
+          description: Խմբագրել Code
+          description_short: Խմբագրել Code
           The Maze: The Maze
           Applab: Applab
           The Artist: The Artist
@@ -357,33 +357,33 @@ hy:
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: Events
-          description: Events
-          description_short: Events
-          Bounce: Bounce
+          title: Իրադարձություններ
+          description: Իրադարձություններ
+          description_short: Իրադարձություններ
+          Bounce: Ցատկում
           Studio: Studio
           Calc: Calc
           Eval: Eval
         flappy:
           title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք մեր Flappy Code խնամակալական!'
           description_short: Write your own Flappy game in less than 10 minutes!
           Flappy Code: Flappy Code
         jigsaw:
-          title: Jigsaw
+          title: ոլորահատ սղոց
           description: Try our Jigsaw tutorial
           description_short: Try our Jigsaw tutorial
-          Jigsaw: Jigsaw
+          Jigsaw: ոլորահատ սղոց
         step:
-          title: Step
+          title: քայլ
           description: Step tutorial
           description_short: Step tutorial
-          Step: Step
+          Step: քայլ
         Hour of Code:
-          title: Hour of Code 2013
+          title: Ժամ օրենսգրքի 2013-
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
-          Hour of Code 2013: Hour of Code 2013
+          Hour of Code 2013: Ժամ օրենսգրքի 2013-
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -590,10 +590,10 @@ hy:
         cspunit3:
           title: 'CSP Unit 3 - Programming'
           title_short: CSP Unit 3
-          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
+          description_short: This unit introduces the foundational concepts of computer programming.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
-          Functions: Functions
+          Functions: գործառույթները
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: 'Creating Procedures - Part 1'
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
@@ -641,14 +641,14 @@ hy:
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
-          Creating Functions: Creating Functions
+          Creating Functions: Ստեղծվում գործառույթները
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
           Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: Variables
+          Variables: փոփոխականների
           Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
           Multi-screen App: Multi-screen App
           Variables Conceptorial Fodder: Variables Conceptorial Fodder
@@ -673,7 +673,7 @@ hy:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: While Loops
+          While Loops: Մինչ Loops
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -833,7 +833,7 @@ hy:
           description_short: Testing
         cspunit2:
           title: 'CSP Unit 2 - The Internet'
-          description_short: The Internet
+          description_short: Համացանց
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -900,14 +900,14 @@ hy:
           Big Game - Collision Detection: 'Big Game - Collision Detection'
           Free Play: Free Play
         allthethings:
-          Jigsaw: Jigsaw
+          Jigsaw: ոլորահատ սղոց
           Maze: Maze
           Artist: Artist
           Bee: Bee
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy
-          Bounce: Bounce
+          Bounce: Ցատկում
           Multi: Multi
           Match: Match
           TextMatch: TextMatch
@@ -934,6 +934,8 @@ hy:
           Rich long assessment: Rich long assessment
           Free Response: Free Response
           Game Lab: Game Lab
+          Sample PLC Assessment: Sample PLC Assessment
+          Swapped Levels: Swapped Levels
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -957,7 +959,7 @@ hy:
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
+          Internet Simulator: Ինտերնետ Simulator
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
@@ -969,7 +971,7 @@ hy:
           Welcome!: Welcome!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
+          Internet Simulator: Ինտերնետ Simulator
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
@@ -1001,7 +1003,7 @@ hy:
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: Wrap-up
+          Wrap-up: Փաթեթավորեք-up
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and Web 2.0
@@ -1038,7 +1040,7 @@ hy:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
-          Hour of Code: Hour of Code
+          Hour of Code: Ժամ օրենսգրքի
           Hour of Code 2015: Hour of Code 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
@@ -1127,7 +1129,7 @@ hy:
           Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Wrap-up
+          Wrap-up: Փաթեթավորեք-up
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -1146,7 +1148,7 @@ hy:
           Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Wrap-up
+          Wrap-up: Փաթեթավորեք-up
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1176,12 +1178,12 @@ hy:
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: Գրաֆիկի Թուղթ Ծրագրավորում
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
           Binary Bracelets: Binary Bracelets
-          Songwriting: Songwriting
+          Songwriting: songwriting
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1351,7 +1353,7 @@ hy:
           "Data App Part 3: Code": 'Data App Part 3: Code'
           Identifying People with Data: Identifying People with Data
           Collecting Personal Information: Collecting Personal Information
-          Privacy Policy: Privacy Policy
+          Privacy Policy: Գաղտնիության քաղաքականություն
           "Debate: Privacy vs. Utility": 'Debate: Privacy vs. Utility'
           "Data App Part 4: App Permissions": 'Data App Part 4: App Permissions'
           "Data App Part 5: Clean Data": 'Data App Part 5: Clean Data'
@@ -1480,7 +1482,7 @@ hy:
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: While Loops
+          While Loops: Մինչ Loops
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1671,7 +1673,7 @@ hy:
           Planning For the Future: Planning For the Future
         csp1:
           title: 'CS Principles Unit 1 - The Internet'
-          description_short: The Internet
+          description_short: Համացանց
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
           Personal Innovations: Personal Innovations
           Sending Binary Messages: Sending Binary Messages
@@ -1684,7 +1686,7 @@ hy:
           Encoding Numbers in the Real World: Encoding Numbers in the Real World
           Encoding and Sending Text: Encoding and Sending Text
           Sending Formatted Text: Sending Formatted Text
-          The Internet: The Internet
+          The Internet: Համացանց
           The Need for Addressing: The Need for Addressing
           Invent an Addressing Protocol: Invent an Addressing Protocol
           Routers and Redundancy: Routers and Redundancy
@@ -1724,7 +1726,7 @@ hy:
           The Need for Algorithms: The Need for Algorithms
           Creativity in Algorithms: Creativity in Algorithms
           Using Simple Commands: Using Simple Commands
-          Creating Functions: Creating Functions
+          Creating Functions: Ստեղծվում գործառույթները
           Functions and Top-Down Design: Functions and Top-Down Design
           APIs and Function Parameters: APIs and Function Parameters
           Creating functions with Parameters: Creating functions with Parameters
@@ -1762,7 +1764,7 @@ hy:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: While Loops
+          While Loops: Մինչ Loops
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1783,13 +1785,21 @@ hy:
           description_short: Programming
           description: Temp place to work on U3 of Disco
           Drawing in Game Lab: Drawing in Game Lab
-          Animation: Animation
+          Animation: Շարժապատկերներ
           Draw Loop and Random: Draw Loop and Random
-          Variables: Variables
-          Sprite Properties and Mod: 'Sprite Properties and Mod'
+          Variables: փոփոխականների
+          Sprite Properties and Mod: Sprite Properties and Mod
           Expressions and Reassignment: Expressions and Reassignment
           Sprites and Properties: Sprites and Properties
           Counting with Variables: Counting with Variables
+          Expressions: Expressions
+          Conditionals and Keyboard Input: Conditionals and Keyboard Input
+          Sprites and Images: Sprites and Images
+          CSD U3 Variables and Animation: CSD U3 Variables and Animation
+          Booleans and Conditionals: 'Booleans and Conditionals'
+          SFLP: SFLP
+          Animations: Animations
+          "Project: Interactive Card": 'Project: Interactive Card'
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1816,7 +1826,7 @@ hy:
           description_short: This is a secret...shhhhh
           description: Test of new educational philosophy
           description_audience: Ages 8-18
-          Computational Thinking: Computational Thinking
+          Computational Thinking: հաշվողական Մտածմունք
           Sample Stage: Sample Stage
         ECSPD1:
           title: ECS Part 1
@@ -1924,3 +1934,114 @@ hy:
           description_short: Culminating
           description: 'This 55-question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact. '
           CS Principles Culminating Assessment: CS Principles Culminating Assessment
+        cspexam1-mWU7ilDYM9:
+          title: 'CS Principles Culminating Assessment - Part 1'
+          description_short: Culminating
+          description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.'
+          CS Principles Culminating Assessment Part 1: CS Principles Culminating Assessment Part 1
+        cspexam2-AKwgAh1ac5:
+          title: 'CS Principles Culminating Assessment - Part 2'
+          description_short: Culminating
+          description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.  It is part 2 of a two-part 50 question exam'
+          CS Principles Culminating Assessment Part 2: CS Principles Culminating Assessment Part 2
+        CSDU4-Draft:
+          title: ' TEMP CSD Unit 4 - The Design Process'
+          description_short: Design Process and App Lab
+          description: Temp place to work on U4 of Disco
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Introducing Design Mode: Introducing Design Mode
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistants: Introduction to Digital Assistants
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Մինչ Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          The Need For Programming Languages: The Need For Programming Languages
+          Using Simple Commands: Using Simple Commands
+          Creating Functions: Ստեղծվում գործառույթները
+          Functions and Top-Down Design: Functions and Top-Down Design
+          APIs and Function Parameters: APIs and Function Parameters
+          Creating functions with Parameters: Creating functions with Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          App Lab: App Lab
+          Design Mode: Design Mode
+        CSDU1-Draft:
+          title: ' TEMP CSD Unit 1'
+          description_short: Problem Solving
+          description: Temp place to work on U1 of Disco
+        CSDU2-Draft:
+          title: ' TEMP CSD Unit 2'
+          description_short: Web Development
+          description: Temp place to work on U2 of Disco
+          Headers and Lists: Headers and Lists
+          Introduction to HTML: Introduction to HTML
+        CSDU5-Draft:
+          title: ' TEMP CSD Unit 5'
+          description_short: Data
+          description: Temp place to work on U5 of Disco
+        CSDU6-Draft:
+          title: ' TEMP CSD Unit 6 '
+          description_short: Makerlab
+          description: Temp place to work on U6 of Disco
+        CSF_Secret_Sample_Story:
+          title: Secret Sample with Story
+          description_short: This is a secret...shhhh
+          description: Test of new educational philosophy with guiding storyline
+          description_audience: Ages 8-18+
+          Sample Stage: Sample Stage
+        TeacherCon:
+          title: TeacherCon Supports
+          description: We will use this during TeacherCon to deliver supports and materials for sessions
+          Introduction to Teachercon: Introduction to Teachercon
+          "Lesson 1.4: number systems - circle triangle square": 'Lesson 1.4: number systems - circle triangle square'
+          "Lesson 1.6: sending numbers": 'Lesson 1.6: sending numbers'
+          "Lesson 1.9: internet addressing (battleship)": 'Lesson 1.9: internet addressing (battleship)'
+          "Lesson 1.10: routers and redundancy": 'Lesson 1.10: routers and redundancy'
+          "Lesson 1.11: Packets and Making a Reliable Internet": 'Lesson 1.11: Packets and Making a Reliable Internet'
+          "Lesson 2.2: text compression": 'Lesson 2.2: text compression'
+          "Lesson 2.3: black and white pixelation": 'Lesson 2.3: black and white pixelation'
+          "Lesson 2.10: good and bad data visualizations": 'Lesson 2.10: good and bad data visualizations'
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+          Discovery Learning: Discovery Learning
+          Capturing Student Learning: Capturing Student Learning
+          Lesson 14 number systems - circle triangle square: 'Lesson 14 number systems - circle triangle square'
+          "Lesson 1,4: number systems - circle triangle square": 'Lesson 1,4: number systems - circle triangle square'
+          "Lesson 1,6: sending numbers": 'Lesson 1,6: sending numbers'
+          "Lesson 1,9: internet addressing (battleship)": 'Lesson 1,9: internet addressing (battleship)'
+          "Lesson 1,10: routers and redundancy": 'Lesson 1,10: routers and redundancy'
+          "Lesson 1,11: Packets and Making a Reliable Internet": 'Lesson 1,11: Packets and Making a Reliable Internet'
+          "Lesson 2,2: text compression": 'Lesson 2,2: text compression'
+          "Lesson 2,3: black and white pixelation": 'Lesson 2,3: black and white pixelation'
+          "Lesson 2,10: good and bad data visualizations": 'Lesson 2,10: good and bad data visualizations'
+          "Lesson 1,4: Number Systems - circle triangle square": 'Lesson 1,4: Number Systems - circle triangle square'
+          "Lesson 1,6: Sending Numbers": 'Lesson 1,6: Sending Numbers'
+          "Lesson 1,10: Routers and Redundancy": 'Lesson 1,10: Routers and Redundancy'
+          "Lesson 2,2: Text Compression": 'Lesson 2,2: Text Compression'
+          "Lesson 2,3: Black and White Pixelation": 'Lesson 2,3: Black and White Pixelation'
+          "Lesson 2,10: Good and Bad Data Visualizations": 'Lesson 2,10: Good and Bad Data Visualizations'
+          Measuring Student Learning: Measuring Student Learning
+          description_short: We will use this during TeacherCon to deliver supports and materials for sessions
+        MikeTest:
+          title: MikeTest
+          description_short: Just a script for playing around
+          description: Trying not to break anything
+          description_audience: Ages 8-98
+          Sample Stage: Sample Stage
+          Artist Functions: Artist Functions
+        artistExemplar:
+          title: Artist Exemplar
+          description_short: How can we make the artist levels really hum?
+          description: These artist levels will knock the socks off of third graders
+          description_audience: Ages 8-18
+          Artist Exemplar: Artist Exemplar

@@ -1,7 +1,12 @@
 kk-KZ:
   hour_of_code: Код жазу Сағаты
   hello: Сәлем, әлем
+  "yes": Иә
+  "no": Жоқ
   select_language: Тілді таңдаңыз
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: толығырақ білу
   en: Информатика
   computer_science_edweek: Компьютерлік технологияның білім беру апталығы
   csedweek_dates: Желтоқсан 8-14, 2014
@@ -437,6 +442,7 @@ kk-KZ:
   dashboard_landing_new_beta: Жаңа! 5-сынып оқушыларына арналған бета-курсымызды көріңіз.
   dashboard_landing_new_k5courses: Жаңа! 5-сынып оқушыларына арналған курсымызды көріңіз.
   dashboard_landing_useful_links: Басқа да пайдалы сілтемелер (тек ағылшын тілінде)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Жеке сұрағыңды қой ! Біздің ай сайынғы видео-қабылдауымызды көріңіз.
   dashboard_landing_print_certificates: Осы курсты бітірген оқушылардың сертификаттарын басып шығару
   dashboard_landing_educator_blog: Біздің Оқытушы Блогымыздан жаңалықтар мен жаңартулар жайында оқыңыз
@@ -450,6 +456,10 @@ kk-KZ:
   dashboard_landing_available_courses: Сізге және сіздің оқушыларыңызға қолжетімді курстар.
   dashboard_landing_more_tutorials: Бұдан да көбірек сабақ көргіңіз келе ме?
   dashboard_landing_more_tutorials_desc: '<a href="/learn/beyond"> Біздің әріптестеріміздің </a> сабақтары. Роботтарды бағдарламалауды, веб-парақтар жасау, қосымшалар жасау және C++, Ruby немесе Python сияқты бағдарламалау тілдерін үйреніңіз!'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Бағдарламалау Сағаты барлығы үшін
   dashboard_hoc_courses_desc: Студенттеріңізбен кез келген қысқа сабақтарды орындап көріңіз!
   dashboard_hoc_courses_desc_and_cta: 'Студенттеріңізбен кез келген қысқа сабақтарды орындап көріңіз. Информатика Білім Апталығында <a href="https://hourofcode.com">Код Жазу Сағаты қозғалысына қосылыңыз</a>.'
@@ -482,6 +492,9 @@ kk-KZ:
   dashboard_action_required: қажет
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Бағалаулар жоқ
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: Барлығы
   dashboard_download_csv: CSV жүктеп алу
@@ -511,14 +524,16 @@ kk-KZ:
   dashboard_progress_submitted: жіберілді
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
   dashboard_sections_new_section: Жаңа бөлім
   dashboard_sections_jumbotron_instruction: 'Жаңа бөлім құрыңыз және оған оқушыларды қосыңыз. Бөлімдер - оқушылардың оқу барысын және тіркеу жазбасын қадағалау үшін кішкене топтарға бөлуге көмектеседі.'
   dashboard_sections_table_section: Секция
   dashboard_sections_table_secret: Кіру түрі
   dashboard_sections_table_grade: Сынып
   dashboard_sections_table_course: Курс
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Оқушылар
   dashboard_sections_table_code: Секция Коды
   dashboard_sections_name: Бөлім атауы
@@ -534,7 +549,7 @@ kk-KZ:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
@@ -584,6 +599,7 @@ kk-KZ:
   dashboard_course2: '2 Курс:'
   dashboard_course3: '3 Курс:'
   dashboard_course4: '4 Курс (бета-нұсқа): '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: Оқу бағдарламасы
   dashboard_curriculum_overview: Мектепке дейінгі және бастауыш мектеп оқушылары үшін бағдарламаны шолу
   dashboard_overview: Қысқаша шолу
@@ -641,7 +657,7 @@ kk-KZ:
   dashboard_faq_k5: 5-сынып оқушыларының жиі қоятын сұрақтары
   dashboard_announcements: Хабарландыру
   dashboard_announce_view_all: Барлығын көру
-  dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
   dashboard_announce_button_text: толығырақ білу
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
@@ -754,12 +770,17 @@ kk-KZ:
   course3_name: Курс 3
   course4_name: Курс 4
   accelerated_name: Жеделдетілген курс
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: 9-12 сыныптар
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: Жеделдетілген курс
@@ -774,7 +795,9 @@ kk-KZ:
   math_category_name: Математика
   hoc_category_name: Код Жазу Сағаты
   csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Қосымшалар Лабораториясы
   applab_gradelevel: 13+ жастағылар үшін
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds

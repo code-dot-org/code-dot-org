@@ -168,6 +168,34 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "milestone creates userlevel with specified level when scriptlevel has multiple levels" do
+    params = @milestone_params
+    level1 = create :maze, name: 'level 1'
+    level2 = create :maze, name: 'level 2'
+    script_level = create :script_level, levels: [level1, level2]
+    params[:script_level_id] = script_level.id
+    params[:level_id] = level1.id
+    params[:result] = 'true'
+
+    post :milestone, params
+
+    assert_equal level1, UserLevel.last.level
+  end
+
+  test "milestone creates userlevel with specified level when scriptlevel has multiple levels for second level" do
+    params = @milestone_params
+    level1 = create :maze, name: 'level 1'
+    level2 = create :maze, name: 'level 2'
+    script_level = create :script_level, levels: [level1, level2]
+    params[:script_level_id] = script_level.id
+    params[:level_id] = level2.id
+    params[:result] = 'true'
+
+    post :milestone, params
+
+    assert_equal level2, UserLevel.last.level
+  end
+
   test "logged in milestone with existing userlevel with script" do
     # do all the logging
     @controller.expects :log_milestone
@@ -313,7 +341,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     test_logged_in_milestone
   end
 
-  test "logged in milestone should backfill userscript" do
+  test "logged in milestone should backfill userscript for old users" do
+    @user.update(created_at: Date.new(2014, 9, 10))
+
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
@@ -1023,7 +1053,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, @milestone_params.merge(script_level_id: last_level_in_stage.id)
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal({'previous'=>{'name'=>'The Artist'}}, response['stage_changing'])
+    assert_equal({'previous'=>{'name'=>'The Artist', 'position'=>5}}, response['stage_changing'])
   end
 
   test 'milestone changes to next stage in custom script' do
@@ -1083,5 +1113,24 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:trophy_check).with(@user)
     post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies.id)
     assert_response :success
+  end
+
+  test 'does not backfill new users who submit unsuccessful first attempt' do
+    assert !@user.needs_to_backfill_user_scripts?
+
+    # do all the logging
+    @controller.expects :log_milestone
+
+    assert_creates(LevelSource, Activity, UserLevel) do
+      assert_does_not_create(GalleryActivity) do
+        assert_no_difference('@user.reload.total_lines') do # don't update total lines
+          post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
+        end
+      end
+    end
+
+    assert_response :success
+    assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
+    assert !@user.needs_to_backfill_user_scripts?
   end
 end

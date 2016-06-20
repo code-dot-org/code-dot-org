@@ -7,6 +7,9 @@
 /* global dashboard */
 
 'use strict';
+import $ from 'jquery';
+var React = require('react');
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');
@@ -24,10 +27,12 @@ var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var dropletConfig = require('./dropletConfig');
+var makerDropletConfig = require('../makerlab/dropletConfig');
 var AppStorage = require('./appStorage');
+var FirebaseStorage = require('./firebaseStorage');
 var constants = require('../constants');
 var experiments = require('../experiments');
-var _ = require('../lodash');
+var _ = require('lodash');
 var apiTimeoutList = require('../timeoutList');
 var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
@@ -553,6 +558,9 @@ Applab.init = function (config) {
   config.runButtonClickWrapper = runButtonClickWrapper;
 
   Applab.channelId = config.channel;
+  Applab.firebaseName = config.firebaseName;
+  Applab.firebaseAuthToken = config.firebaseAuthToken;
+  Applab.storage = window.dashboard.project.useFirebase() ? FirebaseStorage : AppStorage;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
@@ -659,8 +667,8 @@ Applab.init = function (config) {
   config.afterClearPuzzle = function () {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    AppStorage.populateTable(level.dataTables, true); // overwrite = true
-    AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
+    Applab.storage.populateTable(level.dataTables, true); // overwrite = true
+    Applab.storage.populateKeyValue(level.dataProperties, true); // overwrite = true
     studioApp.resetButtonClick();
   };
 
@@ -673,7 +681,15 @@ Applab.init = function (config) {
 
   config.varsInGlobals = true;
 
-  config.dropletConfig = dropletConfig;
+  if (config.level.makerlabEnabled) {
+    config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerDropletConfig);
+  } else {
+    config.dropletConfig = dropletConfig;
+  }
+
+  // Set the custom set of blocks (may have had makerlab blocks merged in) so
+  // we can later pass the custom set to the interpreter.
+  config.level.levelBlocks = config.dropletConfig.blocks;
 
   config.pinWorkspaceToBottom = true;
 
@@ -694,9 +710,10 @@ Applab.init = function (config) {
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
   config.showInstructionsInTopPane = true;
+  config.noInstructionsWhenCollapsed = true;
 
-  AppStorage.populateTable(level.dataTables, false); // overwrite = false
-  AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
+  Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+  Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
   var onMount = function () {
     studioApp.init(config);
@@ -823,7 +840,7 @@ Applab.reactMountPoint_ = null;
  * Trigger a top-level React render
  */
 Applab.render = function () {
-  var nextProps = $.extend({}, Applab.reactInitialProps_, {
+  var nextProps = Object.assign({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen
@@ -955,7 +972,7 @@ Applab.reset = function (first) {
     jsInterpreterLogger.detach();
   }
 
-  AppStorage.resetRecordListener();
+  Applab.storage.resetRecordListener();
 
   // Reset the Globals object used to contain program variables:
   Applab.Globals = {};
@@ -1144,7 +1161,7 @@ Applab.execute = function () {
       // Initialize the interpreter and parse the student code
       Applab.JSInterpreter.parse({
         code: codeWhenRun,
-        blocks: dropletConfig.blocks,
+        blocks: level.levelBlocks,
         blockFilter: level.executePaletteApisOnly && level.codeFunctions,
         enableEvents: true
       });

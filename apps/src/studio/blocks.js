@@ -14,7 +14,7 @@ var commonMsg = require('../locale');
 var codegen = require('../codegen');
 var constants = require('./constants');
 var utils = require('../utils');
-var _ = require('../lodash');
+var _ = require('lodash');
 var paramLists = require('./paramLists');
 
 var Direction = constants.Direction;
@@ -1202,7 +1202,7 @@ exports.install = function (blockly, blockInstallOptions) {
       return;
     }
     var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
-    var playbackOptions = $.extend({
+    var playbackOptions = Object.assign({
       volume: 1.0
     }, _.find(skinSoundMetadata, function (metadata) {
       return metadata.name.toLowerCase().trim() === lowercaseSound;

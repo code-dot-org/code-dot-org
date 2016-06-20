@@ -40,7 +40,7 @@ goog.require('goog.math.Rect');
  */
 Blockly.addClass_ = function(element, className) {
   var classes = element.getAttribute('class') || '';
-  if (Blockly.stringContainsClass_(classes, className)) {
+  if (!Blockly.stringContainsClass_(classes, className)) {
     if (classes) {
       classes += ' ';
     }
@@ -53,7 +53,7 @@ Blockly.elementHasClass_ = function (element, className) {
 };
 
 Blockly.stringContainsClass_ = function (classes, className) {
-  return (' ' + classes + ' ').indexOf(' ' + className + ' ') == -1;
+  return (' ' + classes + ' ').indexOf(' ' + className + ' ') !== -1;
 };
 
 /**
@@ -847,4 +847,18 @@ Blockly.findEmptyInput = function (block, inputType) {
   return goog.array.find(block.inputList, function(input) {
     return input.type === inputType && !input.connection.targetConnection;
   });
+};
+
+/**
+ * Aggregates counts for the number of occurrences of unique keys in the given
+ * list.
+ * @param {string[]} list
+ * @returns {Object.<string, number>}
+ */
+Blockly.aggregateCounts = function (list) {
+  return list.reduce(function (prev, curr) {
+    var count = prev[curr] || 0;
+    prev[curr] = count + 1;
+    return prev;
+  }, {});
 };

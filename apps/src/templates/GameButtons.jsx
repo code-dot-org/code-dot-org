@@ -1,3 +1,4 @@
+import React from 'react';
 import msg from '../locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';

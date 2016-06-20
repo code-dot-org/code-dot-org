@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"taie spațiile din partea stângă",
   "TEXT_TRIM_OPERATOR_RIGHT":"taie spațiile din partea dreaptă",
   "TEXT_TRIM_TOOLTIP":"Returnează o copie a textului fără spațiile din unul sau ambele capete.",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"element",
   "VARIABLES_GET_CREATE_SET":"Creează 'set %1'",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

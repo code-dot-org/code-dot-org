@@ -1,7 +1,14 @@
 "es-MX":
   hour_of_code: La Hora del Código
   hello: Hola mundo
+  'yes': Sí
+  'no': 'No'
   select_language: Seleccione su idioma
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Aprende más
   en: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
   csedweek_dates: 8-14 de diciembre de 2014
@@ -115,7 +122,7 @@
   third_party_price_varies: 'Precio: Los planes varían'
   third_party_price_free: 'Precio: Gratis'
   third_party_price_299: 'Precio: $ 2.99/por descarga'
-  third_party_price_individual: 'Precio Individual: Prueba gratis y $25/mes'
+  third_party_price_individual: 'Precio Individual: Plazo Gratis y $25USD al mes'
   third_party_price_school: 'Precio para Escuelas: Planes gratuitos y Profesionales
     en $2500 +'
   third_party_tynker_desc: Plataforma informática creativa de Tynker ayuda a los niños
@@ -124,9 +131,8 @@
     visual e innovador, cursos interactivos autodidactas y actividades de programación
     basadas en juegos, se proporciona una introducción fácil a la programación y se
     estimula a los niños a innovar y crear.
-  third_party_tynker_btn_curriculum: Pruebe el Curriculum de Tynker para primeros
-    lectores
-  third_party_tynker_btn_site: Visite Tynker
+  third_party_tynker_btn_curriculum: Prueba el Currículo Tynker para Lectores Principiantes
+  third_party_tynker_btn_site: Visita Tynker
   third_party_scratchjr_desc: Scratch Jr. es un lenguaje de programación introductorio
     que permite a los pequeños (de 5 a 7 años) crear sus propias historias interactivas
     y juegos. Los niños empatan bloques gráficos de programación para hacer que los
@@ -134,14 +140,14 @@
     los personajes en el editor de dibujo, agregar sus propias voces y sonidos, incluso
     insertar fotos de ellos, luego usar los bloques de programación para hacer que
     sus personajes tomen vida.
-  third_party_scratchjr_btn_curriculum: Descargar currículum de Scratch Jr.
+  third_party_scratchjr_btn_curriculum: Descarga el Currículo de Scratch Jr.
   third_party_scratchjr_btn_site: Visita Scratch Jr.
   third_party_scratch_desc: Con Scratch, puedes programar tus propias historias interactivas,
     juegos y animaciones y compartir tus creaciones con otros en la comunidad en línea.
     Scratch ayuda a los jóvenes a aprender a pensar creativamente, razonar sistemáticamente
     y trabajar colaborativamente – habilidades esenciales para la vida en el s. XXI.
-  third_party_scratch_btn_curriculum: Descargar Curriculum Scratch
-  third_party_scratch_btn_forum: Foro de educador Scratch
+  third_party_scratch_btn_curriculum: Descarga el Currículo de Scratch
+  third_party_scratch_btn_forum: Foro de Scratch Educator
   third_party_scratch_btn_site: Visita Scratch
   third_party_lightbot_desc: En Lightbot, los estudiantes deben programar un robot
     con comandos para resolver rompecabezas. Los estudiantes pueden jugar en el Navegador
@@ -149,7 +155,7 @@
     el conjunto inicial de niveles Básicos en Lightbot. Ellos aprenderán cómo decirle
     a la computadora qué hacer con una serie de comandos básicos y reforzarán el proceso
     general por el cual, los programas de computadora son escritos.
-  third_party_lightbot_btn_curriculum: Descargar Lightbot Curriculum
+  third_party_lightbot_btn_curriculum: Descarga el Currículo de Lightbot
   third_party_lightbot_btn_site: Visita Lightbot
   third_party_khan_desc: Aprende cómo programar dibujos, animaciones y juegos utilizando
     JavaScript y ProcessingJS o aprende cómo crear páginas de internet con HTML y
@@ -164,43 +170,43 @@
     funcionando en 1 hora o menos y puedes programar aplicaciones más complejas en
     considerablemente menos tiempo que con los lenguajes más tradicionales basados
     en texto.
-  third_party_appinv_btn_curriculum: Descargue App Inventor 2 Curriculum
+  third_party_appinv_btn_curriculum: Descarga el Currículo de App Inventor 2
   third_party_appinv_btn_forum: Foro de App Inventor 2
   third_party_appinv_btn_site: Visita App Inventor 2
-  third_party_codehs_desc: CodeHS presenta los bloques de programación con videos
-    cortos, códigos de ejemplo y un montón de ejercicios de programación que harán
-    la codificación divertida y accesible para los principiantes. Para las escuelas
-    y los maestros, CodeHS ofrece plan de estudios, profesor herramientas y PD. Para
-    los estudiantes individuales, puedes obtener la ayuda que necesita en el camino
-    desde una red de tutores.
-  third_party_codehs_btn_try: Introducción CS - Aprenda Más para escuelas
-  third_party_codecademy_desc: Estamos repensando la educación desde abajo hacia arriba.
-    La web ha reconsiderado casi todo - comercio, redes sociales, salud y más. Estamos
-    construyendo la educación que el mundo necesita - la primera red verdaderamente
-    nativa.
-  third_party_codecademy_btn_curriculum: Descargar Codecademy Curriculum
+  third_party_codehs_desc: CodeHS introduce las bases de programación con videos cortos,
+    ejemplos de código, y muchos ejercicios de programación que hacen escribir código
+    una actividad divertida y accesible para principiantes. CodeHS brinda curriculums,
+    herramientas para maestros y PD. Los estudiantes pueden obtener la ayuda que necesitan
+    a travez de una red de tutores.
+  third_party_codehs_btn_try: Introducción a CS Aprende Más para Escuelas
+  third_party_codecademy_desc: Estamos reconstruyendo el sistema educativo. La web
+    ha cambiado casi todo - el comercio, el 'network' social, el sistema de salud,
+    y más. Estamos construyendo la educación que el mundo necesita - el primer sistema
+    completamente basado en el Internet.
+  third_party_codecademy_btn_curriculum: Descargar el Currículo de Codecademy
   third_party_codecademy_btn_site: Visite Codecademy
   third_party_organization: Organización
   third_party_curriculum: Currículum
   third_party_pricing: Precios
   third_party_cost_free: Gratis para los estudiantes y profesores
-  third_party_cost_5permonth: "$5/mes por clase"
-  third_party_cost_299: "$ 2,99/descargar"
-  third_party_cost_free_399: Gratis para probar, $399/aula
-  third_party_cost_free_2: Gratis para probar, $2/estudiante
-  third_party_cost_free_10: Gratis para probar, $ 9,99/mes
-  third_party_desc_5_4to8: Aproximadamente 5 clases, dirigidos a los grados 4-8
-  third_party_desc_10to12_kto3: Aproximadamente 10-12 lecciones, dirigidas a grado
-    K-3
-  third_party_desc_11_kto5: Aproximadamente 11 lecciones, dirigidas a grados K-5
-  third_party_desc_10to12_kto5: Aproximadamente 10-12 lecciones, dirigidas a grados
-    K-5
-  third_party_desc_40_4to8: Más de 40 lecciones, dirigido a los grados 4-8
-  third_party_desc_dozens_kto8: Decenas de lecciones para todos los grados K-8
-  third_party_desc_10to15_3to12: Entre 10 y 15 clases, dirigido a los grados 3-12
-  third_party_desc_25to40_3to12: Desde 25-40 lecciones, diseñado para los grados 3-12
-  third_party_desc_20_2to8: Cerca de 20 lecciones, dirigidos a los grados 2-8
-  third_party_desc_7to22_5to12: Entre 7 y 22 clases, dirigido a los grados 5-12
+  third_party_cost_5permonth: "$5USD al mes por cada clase"
+  third_party_cost_299: "$2.99USD por descarga"
+  third_party_cost_free_399: Plazo Gratis, $399USD por salón
+  third_party_cost_free_2: Plazo Gratis, $2USD por estudiante
+  third_party_cost_free_10: Plazo gratis, $9.99USD al mes
+  third_party_desc_5_4to8: Aprox. 5 lecciones, dirigido a estudiantes del 4to al 8vo
+    grado
+  third_party_desc_10to12_kto3: Aprox. 10 a 12 lecciones, dirigido a grados K-3*
+  third_party_desc_11_kto5: Aprox. 11 lecciones, dirigido a grados K-5*
+  third_party_desc_10to12_kto5: Aprox. 10 a 12 lecciones, dirigido a grados K-5*
+  third_party_desc_40_4to8: Más de 40 lecciones, dirigido a grados 4to al 8vo
+  third_party_desc_dozens_kto8: Docenas de lecciones para todos los grados K-8*
+  third_party_desc_10to15_3to12: Entre 10 y 15 lecciones, dirigido a grados 3ro a
+    12vo
+  third_party_desc_25to40_3to12: Desde 25 hasta 40 lecciones, para grados del 3ro
+    al 12vo
+  third_party_desc_20_2to8: Alrededor de 20 lecciones, para grados del 2do al 8vo
+  third_party_desc_7to22_5to12: Entre 7 y 22 lecciones, para grados del 5to al 12vo
   third_party_desc_20_4to12: Más de 20 lecciones, dirigido a los grados 4-12
   enter_valid_age: Selecciona una edad válida
   enter_valid_email: Ingresa un correo electrónico válido
@@ -367,9 +373,9 @@
   homepage_banner_20k_teachers: 20,000 maestros entrenados, y ahora enseñando Ciencias
     de la Computación en classes.
   homepage_banner_20k_teachers_link: Aprende más
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress: Líderes de Estados Unidos están pidiendo al Congreso financiar
+    la informática K-12.
+  homepage_banner_congress_link: Añadir su apoyo
   homepage_slot_text_title_hoc: Hora del Código
   homepage_slot_text_blurb_hoc: Todos podemos aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -395,7 +401,7 @@
   homepage_slot_text_link_stats: Ver las estadísticas
   homepage_slot_text_link_buy: Involucrarse
   homepage_slot_text_link_donate: Haga una donación
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: Camisetas, sombreros y más
   homepage_header_codestudio: Creaciones de los estudiante de Code Studio
   homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
@@ -595,6 +601,7 @@
   dashboard_landing_new_k5courses: "¡Nuevo! Pruebe nuestros cursos para los alumnos
     de K-5."
   dashboard_landing_useful_links: Otros links útiles (sólo en Inglés)
+  dashboard_landing_classroom_resources: Recursos para el aula
   dashboard_landing_office_hours: "¡Pregunta en persona! Utiliza nuestras horas mensuales
     para consultas por video."
   dashboard_landing_print_certificates: Imprimir certificados para los alumnos que
@@ -616,6 +623,11 @@
   dashboard_landing_more_tutorials_desc: Hay más tutoriales <a href="/learn/beyond">
     ofrecidos por nuestros socios.</a> Aprende a programar con robots, a hacer páginas
     web, a hacer tu propia app o explorar otros lenguajes como C++, Ruby o Python!
+  dashboard_landing_inspire: Inspira a tus estudiantes con carteles, videos y más.
+  dashboard_landing_video_library: Usa un vídeo de la biblioteca de vídeos de los
+    conceptos de informática.
+  dashboard_landing_report_bug: Solicita una característica o informa sobre un error.
+  dashboard_landing_teacher_forum: "Únete a la comunidad de aprendizaje profesional."
   dashboard_hoc_courses: La Hora de Código para todas las edades
   dashboard_hoc_courses_desc: "¡Prueba alguno de estos tutoriales de menos de 1 hora
     con tus alumnos!"
@@ -673,6 +685,13 @@
   dashboard_action_required: obligatorio
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: Sin evaluaciones
+  dashboard_assessments_none_part2: Si usted le está enseñando un medio o un curso
+    de la secundaria, tenemos preguntas de evaluación disponibles como parte del Code
+    Studio para ayudar a sus estudiantes a prepararse para el examen de AP. Para utilizar
+    estas evaluaciones, primero asigne el curso a su clase y luego escoge el curso
+    desde el desplegable de arriba y aquí verás las respuestas de sus estudiantes.
+  dashboard_assessments_summaries: Sumarios
+  dashboard_assessments_answers: Todas las respuestas
   dashboard_filter_by_stage: 'Filtrado por etapa:'
   dashboard_filter_all: Todos
   dashboard_download_csv: Descargar CSV
@@ -704,6 +723,7 @@
   dashboard_progress_view: 'Ver progreso en:'
   dashboard_progress_student_in_script: Información de progreso para %{student_name}
     in %{script_name}
+  dashboard_progress_pair_programming: programación de par
   dashboard_responses_view: 'Ver respuestas de texto:'
   dashboard_responses_none: Sin respuestas de texto
   dashboard_sections_new_section: Nueva sección
@@ -714,6 +734,7 @@
   dashboard_sections_table_secret: Tipo de inicio de sesión
   dashboard_sections_table_grade: Grado
   dashboard_sections_table_course: Curso
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Alumnos
   dashboard_sections_table_code: Código de sección
   dashboard_sections_name: Nombre de la sección
@@ -812,6 +833,8 @@
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4 (beta): '
+  dashboard_unplugged: Si no tiene computadoras, <a href='%{unplugged_url}'> intente
+    estas lecciones desenchufados</a> en su salón del clase.
   dashboard_curriculum: Currículum
   dashboard_curriculum_overview: Resumen de currículo K-5
   dashboard_overview: Resumen
@@ -883,7 +906,7 @@
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Agrega tu nombre
   code_hoc_coming: "¡La Hora del Código está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   learn_more: Aprenda más
@@ -1009,12 +1032,17 @@
   course3_name: Curso 3
   course4_name: Curso 4
   accelerated_name: Curso acelerado
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
+  cspunit1_name: 'Tema 1: Información digital'
+  cspunit2_name: 'Tema 2: El Internet'
   cspunit3_name: Principios de CS Unidad 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit4_name: 'Tema 4: Datos'
+  cspunit5_name: 'Unidad 5: Explorar y Crear PT'
+  cspunit6_name: 'Post-AP: Bases de Datos en Aplicaciones'
+  csp1_name: 'Tema 1: El Internet'
+  csp2_name: 'Unidad 2: Información Digital'
+  cspassessment_name: Prueba completa - 50 preguntas
+  cspexam1-mWU7ilDYM9_name: Parte del test 1 - 25 preguntas
+  cspexam2-AKwgAh1ac5_name: Parte del test 2 - 25 preguntas
   cspunit3_gradelevel: Grados 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1022,18 +1050,20 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Curso acelerado
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
+  algebra_name: CS en Álgebra
+  AlgebraA_name: CS en Álgebra Curso A
+  AlgebraB_name: CS en Álgebra Curso B
   gumball_name: Gumball
   classicmaze_name: Laberinto clásico
   iceage_name: La Era de Hielo
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Bloques de La Guerra de Las Galaxias
   math_category_name: Matemáticas
   hoc_category_name: Hora del código
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csf_category_name: Fundamentos de CS
+  csp_category_name: "'15-'16 Principios de CS"
+  csp17_category_name: "'16-'17 Principios de CS"
+  cspexams_category_name: Prueba de práctica de principios de CS
   applab_name: Laboratorio de App
   applab_gradelevel: Mayores de 13 años
   applab_shortdescription_congrats: App Lab es un entorno de programación donde hacer
@@ -1166,7 +1196,7 @@
   codecademy_shortdescription: Aprende programación en JavaScript en un navegador
   codecombat_shortdescription: "¡Derrota a los ogros para aprender Python o JavaScript
     en este épico juego de programación!"
-  codemonkey_shortdescription: Los estudiantes programan un mono para atrapar plátanos.
+  codemonkey_shortdescription: Los estudiantes programan un mono que atrapa los plátanos.
   codeavengers_shortdescription: Aprende programación en JavaScript en un navegador
   processing_shortdescription: Un tutorial de una hora en el lenguaje de programación
     Processing
@@ -1765,11 +1795,3 @@
   infinity_shortcode: inf
   playlab_shortcode: ejecutar
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

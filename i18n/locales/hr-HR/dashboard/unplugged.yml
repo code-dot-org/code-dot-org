@@ -15,7 +15,7 @@ hr:
         video: Unplug2
       Unplug3:
         title: Grafičko programiranje
-        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
+        desc: Programiranjem jedan drugoga za crtanje slika, studenti će početi razumjeti o čemu se u programiranju zapravo radi. Sat će početi tako što će učenici uputiti jedan drugog da oboje kvadrate na grafikon papiru trudeći se da prikažu postojeću sliku. Ako bude vremena, lekcija će se zaključiti slikama koje su učenici sami stvorili.
         pdfs:
           - unplug3
         video: Unplug3
@@ -70,11 +70,11 @@ hr:
         video: Unplug11
       UnplugHappyMaps:
         title: Vesele karte
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje lika kroz labirint koristeći jednu naredbu.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Pomakni, pomakni
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje lika kroz labirint koristeći jednu naredbu.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algoritmi u stvarnom životu: Posadi sjeme'

@@ -1,7 +1,12 @@
 de-DE:
   hour_of_code: Hour of Code
   hello: Hallo Welt
+  "yes": Ja
+  "no": Nein
   select_language: Bitte wähle deine Sprache
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Mehr erfahren
   en: Informatik
   computer_science_edweek: Informatik-Bildungswoche
   csedweek_dates: '8. - 14. Dezember, 2014'
@@ -70,37 +75,37 @@ de-DE:
   view_unit: \n
   make_app: \n
   congrats_guest_speaker_title: Einen Gastredner für Ihren Unterricht finden
-  congrats_guest_speaker_desc: Jetzt, da ihre SchülerInnen den Informatik-Kurs abgeschlossen haben, sollten Sie dies feiern und mit Dingen in Verbindung bringen, die es in der realen Welt gibt und einen Gast-Redner in ihren Unterricht einladen. Dazu können Sie unsere Freiwilligen-Karte verwenden, um regionale Freiwillige zu finden, die Sie gerne im Unterricht besuchen. Sie können aber auch nach Städten suchen, in den es Informatikstudenten oder technische Experten gibt, die gerne aus der Ferne über Video-Chat ihre Schüler weiter inspirieren.
+  congrats_guest_speaker_desc: Jetzt, da ihre SchülerInnen den Informatik-Kurs abgeschlossen haben, sollten Sie dies feiern und sie mit Dingen in Verbindung bringen, die es in der realen Welt gibt und einen Gast-Redner in ihren Unterricht einladen. Dazu können Sie unsere Freiwilligen-Karte verwenden, um regionale Freiwillige zu finden, die Sie gerne im Unterricht besuchen. Sie können aber auch nach Städten suchen, in den es Informatikstudenten oder technische Experten gibt, die gerne aus der Ferne über Video-Chat ihre Schüler weiter inspirieren.
   congrats_guest_speaker_cta: Finde einen Gastsprecher
-  congrats_third_party_title: Use your new skills with these apps and websites
+  congrats_third_party_title: Wende deine neuen Fähigkeiten mit diesen Apps und Webseiten an
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
+  third_party_gradelevel_2to8: 2. bis 8. Klasse
+  third_party_gradelevel_4to12: 4. bis 12. Klasse
+  third_party_gradelevel_5to12: 5. bis 12. Klasse
+  third_party_gradelevel_6plus: Ab der 6. Klasse
+  third_party_gradelevel_8plus: Ab 8. Klasse
   third_party_platform_all: 'Plattform: Web, iPad & Android'
   third_party_platform_mobile: 'Plattform: iPad & Android'
   third_party_platform_web: 'Plattform: Web'
-  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_varies: 'Preis: Pläne variieren'
   third_party_price_free: 'Preis: kostenlos'
   third_party_price_299: 'Preis: $2,99/Download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_price_individual: 'Individueller Preis: Kostenlose Testversion & $25 pro Monat'
+  third_party_price_school: 'Schulpreis: Kostenlose Pläne & Profi bei $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
   third_party_tynker_btn_site: Visit Tynker
   third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
   third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratchjr_btn_site: Besuche Scratch J.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
   third_party_scratch_btn_site: Besuche Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Besuche Lightbot
+  third_party_lightbot_btn_site: Besuche Lichtroboter
   third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
   third_party_khan_btn_learn: Lerne Informatik mit Khan Acadamy
   third_party_khan_btn_forum: Khan Academy Informatik-Forum
@@ -110,18 +115,18 @@ de-DE:
   third_party_appinv_btn_site: Besuche App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
   third_party_codehs_btn_try: Intro CS Learn More for Schools
-  third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
+  third_party_codecademy_desc: 'Wir überdenken Bildung von Grund auf. Im Internet wurde fast alles - Handel, soziale Netzwerke, Gesundheitswesen und vieles mehr neu überdacht. Wir machen die Bildung, die die Welt benötigt - Die erste echte heimische Programmierausbildung.'
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
   third_party_organization: Organization
   third_party_curriculum: Lehrplan
-  third_party_pricing: Pricing
-  third_party_cost_free: Free for students and teachers
-  third_party_cost_5permonth: $5/month per class
-  third_party_cost_299: $2.99/download
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_pricing: Preise
+  third_party_cost_free: Kostenlos für Schüler und Lehrer
+  third_party_cost_5permonth: $5 im Monat pro Klasse
+  third_party_cost_299: $2.99 download
+  third_party_cost_free_399: Kostenlos zum Ausprobieren, $399 pro Unterrichtsraum
+  third_party_cost_free_2: Kostenlos zum Auszuprobieren, $2 pro Schüler
+  third_party_cost_free_10: Kostenlos zum Auszuprobieren, $9.99 pro Monat
   third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -267,7 +272,7 @@ de-DE:
   homepage_banner_20k_teachers: 20.000 Lehrer wurden ausgebildet und lehren nun Informatik in Klassenzimmern.
   homepage_banner_20k_teachers_link: Mehr erfahren
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress_link: Unterstützen sie uns
   homepage_slot_text_title_hoc: Stunde der Code
   homepage_slot_text_blurb_hoc: Jeder kann es lernen. Jetzt beginnen
   homepage_slot_text_link_hoc: 'Probiere "The Hour of Code" aus'
@@ -282,7 +287,7 @@ de-DE:
   homepage_slot_text_link_othercourses: Andere Onlinekurse
   homepage_slot_text_title_educators: Pädagogen
   homepage_slot_text_blurb_educators: Unterrichte deine Schüler
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: Grundschule
   homepage_slot_text_link_middle: Mittelstufe
   homepage_slot_text_link_high: Oberstufe
   homepage_slot_text_link_k5: 'Kurse für die Vor- und Grundschule'
@@ -293,7 +298,7 @@ de-DE:
   homepage_slot_text_link_stats: Statistik ansehen
   homepage_slot_text_link_buy: Mitmachen
   homepage_slot_text_link_donate: Spenden
-  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
+  homepage_slot_text_link_shop: 'T-shirts, Hüte & mehr'
   homepage_header_codestudio: Code Studio Schülerprojekte
   homepage_header_donors: Code.org dankt seinen Unterstützern
   homepage_donors_seall: Alle anzeigen
@@ -359,7 +364,7 @@ de-DE:
   mc_shortdescription: Benutze Codeblöcke, um Steve oder Alex auf ein Abenteuer durch diese Minecraft-Welt zu schicken.
   mc_gradelevel: Ab 6 Jahren
   mc_platformtext: Moderne Browser, Smartphones, Tablets
-  mc_specs: 'Viele Sprachen | Moderne Browser, Smartphones, Tablets | Alter: 6-106'
+  mc_specs: 'Viele Sprachen | Moderne Browser, Tablets | Alter: 6-106'
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspiriere die Schüler und mache mit
   volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer machen dieses Jahr vom 7. bis 13. Dezember 2015 eine Hour of Code mit ihren Klassen. Sie brauchen Ihre Hilfe! '
@@ -381,7 +386,7 @@ de-DE:
   volunteer_engineer_submission_field_location_placeholder: Postleitzahl, Stadt und Bundesland oder vollständige Adresse
   volunteer_engineer_submission_field_location_flexibility: 'Ich kann während der Hour of Code folgenderweise helfen: (Zutreffendes auswählen)'
   volunteer_engineer_submission_checkbox_after_hoc: Ich möchte nach der Hour of Code helfen
-  volunteer_engineer_submission_field_time_commitment: Zeiteinsatz nach der Hour of Code
+  volunteer_engineer_submission_field_time_commitment: Zeiteinsatz nach der Stunde der Code
   volunteer_engineer_submission_field_linkedin: LinkedIn-Profil
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/Dein_Name
   volunteer_engineer_submission_field_facebook: Facebook-Profil
@@ -436,6 +441,7 @@ de-DE:
   dashboard_landing_new_beta: 'Neu! Probieren Sie unsere Beta-Kurse für Vor- und Grundschüler.'
   dashboard_landing_new_k5courses: 'Neu! Probieren Sie unsere Kurse für Vor- und Grundschüler.'
   dashboard_landing_useful_links: Weitere nützliche Links (nur auf Englisch)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Stellen Sie uns persönlich eine Frage! Besuchen Sie unsere monatliche Video-Sprechstunde.
   dashboard_landing_print_certificates: Drucken sie Zertifikate für Schüler die diesen Kurs bestanden haben
   dashboard_landing_educator_blog: Lese Nachrichten und Neuigkeiten zu unseren Materialien in unserem Lehrer-Blog
@@ -449,6 +455,10 @@ de-DE:
   dashboard_landing_available_courses: Hier sind die momentan verfügbaren Kurse für Sie und Ihre Schüler.
   dashboard_landing_more_tutorials: Möchten Sie noch weitere Anleitungen ansehen?
   dashboard_landing_more_tutorials_desc: 'Weitere Anleitungen <a href="/learn/beyond">werden von unseren Partnern angeboten.</a> Lernen Sie Programmieren mit Robotern, schreiben Sie Webseiten, gestalten Sie eigene Apps oder lernen Sie andere Programmiersprachen kennen, wie C++, Ruby oder Python!'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Die Hour of Code für alle Altersstufen
   dashboard_hoc_courses_desc: Probieren Sie eine dieser kürzeren, einstündigen Anleitungen mit Ihren Schülern!
   dashboard_hoc_courses_desc_and_cta: 'Probieren Sie eine dieser kürzeren, einstündigen Anleitungen mit Ihren Schülern! <a href="https://hourofcode.com">Beteiligen Sie sich an der Hour of Code</a> während der Informatikwoche.'
@@ -479,10 +489,13 @@ de-DE:
   dashboard_action_remove_confirm: Entfernen?
   dashboard_action_done: Fertig
   dashboard_action_required: erforderlich
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
+  dashboard_assessments_view: 'Zeige Bewertungen in:'
+  dashboard_assessments_none: Keine Bewertungen
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Nach Schwierigkeitsstufen sortieren:'
+  dashboard_filter_all: Alle
   dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Lehrer-Hauptseite
   dashboard_navigation_section_student_progress: Schülerkonten und Fortschritt
@@ -508,16 +521,18 @@ de-DE:
   dashboard_progress_completed_perfect: abgeschlossen, perfekt
   dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
   dashboard_progress_submitted: eingereicht
-  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_view: 'Fortschritt ansehen:'
   dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Keine Antworten
   dashboard_sections_new_section: Neue Lerngruppe
   dashboard_sections_jumbotron_instruction: Erstellen Sie neue Lerngruppen und fügen Sie Schüler hinzu. In Lerngruppen können Schüler in kleinere Gruppen organisiert werden, um deren Fortschritte anzuzeigen und ihre Konten zu verwalten.
   dashboard_sections_table_section: Lerngruppe
   dashboard_sections_table_secret: Login-Typ
   dashboard_sections_table_grade: Note
   dashboard_sections_table_course: Kurs
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Schüler
   dashboard_sections_table_code: Lerngruppen-Code
   dashboard_sections_name: Lerngruppen-Name
@@ -528,16 +543,16 @@ de-DE:
   dashboard_sections_print_secrets: Sie können dann die Kontoinformationen für jeden einzelnen Schüler ausdrucken und weitergeben.
   dashboard_sections_switch_section: 'Lerngruppe wechseln:'
   dashboard_sections_close: Schließen
-  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_move_students_desc: Wähle Schüler aus, die zu einer neuen Abteilung zugeordnet werden. Schüler zu verschieben bricht den Fortschritt nicht ab.
+  dashboard_sections_one_per_teacher: Schüler können nur in einer Abteilung sein für jeden Lehrer. Ihre Schüler werden einer neuen Abteilung hinzugefügt und verlassen ihre alte.
+  dashboard_sections_move_to_section: 'In Abteilung verschieben:'
   dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_code_placeholder: 6-Buchstaben-Passwort (ABCDEF)
+  dashboard_sections_other_section: Andere Abteilung
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
-  dashboard_sections_move_students: Move students
+  dashboard_sections_yes_both: 'Ja, Ich möchte Schüler in die gegenwärtige- und in die neue Abteilung kopieren'
+  dashboard_sections_no_move: Nein, ich möchte Schüler nur in die neue Abteilung verschieben.
+  dashboard_sections_move_students: Verschiebe Schüler
   dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Schüler hinzufügen
@@ -583,6 +598,7 @@ de-DE:
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: Lehrplan
   dashboard_curriculum_overview: 'Vor- und Grundschullehrplan Übersicht'
   dashboard_overview: Übersicht
@@ -615,12 +631,12 @@ de-DE:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Richtig
   dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
+  dashboard_submission_submitted: Eingereicht
+  dashboard_submission_in_progress: In Bearbeitung
   dashboard_status: Status
-  dashboard_multi_correct: '# multiple choice correct'
-  dashboard_multi_count: '# multiple choice'
-  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_multi_correct: '# mehrfache Wahlkorrektur'
+  dashboard_multi_count: '# mehrfache Wahl'
+  dashboard_multi_correct_percent: '% mehrfache Wahlkorrektur'
   dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Fantastische Ergebnisse der Hour of Code aus dem Vorjahr. Allein in einer Woche:'
   stats_hoc_2013_image_alt: Statistiken zur Hour of Code 2013
@@ -642,8 +658,8 @@ de-DE:
   dashboard_announce_view_all: Alle anzeigen
   dashboard_announce_message: '<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme an der Hour of Code 2015! In allen Code-Studio-Anleitungen und Kursen werden Fortschritte nun wieder aufgezeichnet und gespeichert. Hinweis: Die Code.org-Büros sind vom 19. Dezember bis zum 3. Januar geschlossen. Fragen, die bis zum 4. Januar eingesendet werden, werden voraussichtlich verspätet beantwortet.'
   dashboard_announce_button_text: Mehr erfahren
-  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition: 'Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten führende Köpfe der Bildung, 28 Gouverneure und CEOs von Amerikas größten Firmen ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung von "K-12 computer science education" zu erbitten.'
+  dashboard_announce_petition_button: Fügen Sie Ihren Namen ein
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melden Sie sich an, um an der Informatikwoche teilzunehmen
   learn_more: Erfahre mehr
@@ -753,12 +769,17 @@ de-DE:
   course3_name: Kurs 3
   course4_name: Kurs 4
   accelerated_name: Beschleunigter Kurs
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: Beschleunigter Kurs
@@ -769,11 +790,13 @@ de-DE:
   classicmaze_name: Klassisches Labyrinth
   iceage_name: Ice Age
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Star Wars (Bausteine)
   math_category_name: Mathematik
   hoc_category_name: Programmierstunde
   csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App-Labor
   applab_gradelevel: Ab 13 Jahren
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds

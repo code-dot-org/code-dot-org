@@ -26,7 +26,7 @@ he,he,he,he-IL,עברית,Hebrew,TRUE,FALSE,he,Hebrew,שעה של קוד,TRUE,TR
 hi,hi,hi,hi-IN,हिन्दी,Hindi,FALSE,TRUE,hi,Hindi,एक घंटा कोड का,FALSE,FALSE,FALSE
 hr,hr,hr,hr-HR,Hrvatski,Croatian,TRUE,TRUE,hr,Croatian,Sat Kodiranja,TRUE,FALSE,TRUE
 hu,hu,hu,hu-HU,Magyar,Hungarian,TRUE,TRUE,hu,Hungarian,Kódolás Órája,TRUE,TRUE,TRUE
-hy,hy,hy,hy-AM,հայերեն,Armenian,TRUE,FALSE,hy-AM,Armenian,Ժամ օրենսգրքի,TRUE,TRUE,TRUE
+hy,hy,hy,hy-AM,Հայերեն,Armenian,TRUE,FALSE,hy-AM,Armenian,Ժամ օրենսգրքի,TRUE,TRUE,TRUE
 id,id,id,id-ID,Bahasa Indonesia,Indonesian,TRUE,TRUE,id,Indonesian,Jam kode,TRUE,FALSE,TRUE
 is,is,is,is-IS,Íslenska,Icelandic,TRUE,FALSE,is,Icelandic,Klukkustund kóðunar,TRUE,TRUE,TRUE
 it,it,it,it-IT,Italiano,Italian,TRUE,TRUE,it,Italian,L'Ora del Codice,TRUE,TRUE,TRUE

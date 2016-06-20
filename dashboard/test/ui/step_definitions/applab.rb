@@ -297,3 +297,32 @@ And /^I save the project$/ do
 
   @browser.execute_script(script)
 end
+
+And /^I drag element "([^"]*)" ([\d]+) horizontally and ([\d]+) vertically$/ do |element_id, delta_x, delta_y|
+  script = get_mouse_event_creator_script
+  script += get_scale_script
+
+  script += %Q{
+    var element = $("#{element_id}");
+    var scale = getScale(element[0]);
+
+    var start = {
+      x: element.offset().left,
+      y: element.offset().top
+    };
+
+    var end = {
+      x: start.x + (#{delta_x} * scale),
+      y: start.y + (#{delta_y} * scale)
+    }
+    var mousedown = createMouseEvent('mousedown', start.x, start.y);
+    var drag = createMouseEvent('mousemove', end.x, end.y);
+    var mouseup = createMouseEvent('mouseup', end.x, end.y);
+
+    element[0].dispatchEvent(mousedown);
+    element[0].dispatchEvent(drag);
+    element[0].dispatchEvent(mouseup);
+  }
+
+  @browser.execute_script(script)
+end

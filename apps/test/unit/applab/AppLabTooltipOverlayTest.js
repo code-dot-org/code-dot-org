@@ -1,5 +1,6 @@
 import {expect} from '../../util/configuredChai';
 import sinon from 'sinon';
+import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 import { AppLabTooltipOverlay } from '@cdo/apps/applab/AppLabTooltipOverlay';
 import TooltipOverlay from '@cdo/apps/templates/TooltipOverlay';

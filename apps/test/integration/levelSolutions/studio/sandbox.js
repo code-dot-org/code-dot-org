@@ -1,7 +1,7 @@
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 var Direction = require('@cdo/apps/studio/constants.js').Direction;
 var blockUtils = require('@cdo/apps/block_utils');
 

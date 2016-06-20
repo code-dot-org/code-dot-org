@@ -35,7 +35,7 @@
     #user_hero
       = render template: 'api/user_hero'
     - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
-      - current_user.unadvertised_user_scripts.each_slice(2) do |course_pair|
+      - current_user.in_progress_and_completed_scripts.each_slice(2) do |course_pair|
         .row
           - course_pair.each do |user_script|
             = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
@@ -75,6 +75,7 @@
 %br/
 
 = render partial: 'home/admin'
+= render partial: 'home/levelbuilder'
 
 :javascript
   $("#section_code").placeholder();

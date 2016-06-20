@@ -45,8 +45,13 @@
 .row
   %h2.lesson{style: 'text-align:center'}
     = t('gallery.want_to_make_your_own')
+  %h4{style: 'text-align:center'}= t('gallery.how_to_save')
 .row
   .span3
   = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
   = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
   .span3
+.row
+  %a{href: CDO.code_org_url('/report-abuse')}
+    %h5{style: 'text-align:center'}
+      = t('gallery.report_abuse')

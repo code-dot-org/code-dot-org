@@ -1,8 +1,10 @@
 import {expect} from '../../util/configuredChai';
+import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 import TooltipOverlay, {
     textProvider,
     coordinatesProvider,
+    styles,
     TEXT_RECT_WIDTH,
     TEXT_RECT_HEIGHT,
     TEXT_RECT_RADIUS,
@@ -47,8 +49,9 @@ describe('TooltipOverlay', () => {
                     height={TEXT_RECT_HEIGHT}
                     rx={TEXT_RECT_RADIUS}
                     ry={TEXT_RECT_RADIUS}
+                    style={styles.rect}
                 />
-                <text x={61} y={20}>one</text>
+                <text x={61} y={20} style={styles.text}>one</text>
               </g>
               <g key={1}>
                 <rect
@@ -58,8 +61,9 @@ describe('TooltipOverlay', () => {
                     height={TEXT_RECT_HEIGHT}
                     rx={TEXT_RECT_RADIUS}
                     ry={TEXT_RECT_RADIUS}
+                    style={styles.rect}
                 />
-                <text x={61} y={45}>two</text>
+                <text x={61} y={45} style={styles.text}>two</text>
               </g>
             </g>
         );
@@ -79,8 +83,9 @@ describe('TooltipOverlay', () => {
                     height={TEXT_RECT_HEIGHT}
                     rx={TEXT_RECT_RADIUS}
                     ry={TEXT_RECT_RADIUS}
+                    style={styles.rect}
                 />
-                <text x={EXPECTED_TEXT_X} y={162}>one</text>
+                <text x={EXPECTED_TEXT_X} y={162} style={styles.text}>one</text>
               </g>
               <g key={1}>
                 <rect
@@ -90,8 +95,9 @@ describe('TooltipOverlay', () => {
                     height={TEXT_RECT_HEIGHT}
                     rx={TEXT_RECT_RADIUS}
                     ry={TEXT_RECT_RADIUS}
+                    style={styles.rect}
                 />
-                <text x={EXPECTED_TEXT_X} y={187}>two</text>
+                <text x={EXPECTED_TEXT_X} y={187} style={styles.text}>two</text>
               </g>
             </g>
         );

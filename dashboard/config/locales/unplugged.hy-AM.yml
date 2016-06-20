@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Introduction to Computer Science
+        title: "Ներածություն համակարգչային գիտության"
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -15,7 +15,7 @@
         - unplug1
         video: Unplug1
       Unplug2:
-        title: Computational Thinking
+        title: "հաշվողական Մտածմունք"
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: Graph Paper Programming
+        title: "Գրաֆիկի Թուղթ Ծրագրավորում"
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -40,7 +40,7 @@
         - unplug3
         video: Unplug3
       Unplug4:
-        title: Algorithms
+        title: "ալգորիթմները"
         desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
           the first exercise will show how important it is to make each instruction
           as clear and unambiguous as possible.  Afterward, the class will explore
@@ -50,7 +50,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: Functions
+        title: "գործառույթները"
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -83,7 +83,7 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: Abstraction
+        title: "աբստրակցիա"
         desc: This activity combines your students' everyday routine and a Mad-Lib
           style thinking game to help your class learn about the effectiveness of
           abstraction.
@@ -91,7 +91,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: Relay Programming
+        title: Relay Ծրագրավորում
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -99,7 +99,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: The Internet
+        title: "Համացանց"
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
@@ -150,7 +150,7 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: Conditionals
+        title: conditionals
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
@@ -168,7 +168,7 @@
           introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: Graph Paper Programming
+        title: "Գրաֆիկի Թուղթ Ծրագրավորում"
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
@@ -190,7 +190,7 @@
           themselves online creates a digital footprint or "trail" that has consequences.
         video: C2_digital_footprint
       ComputationalThinking:
-        title: Computational Thinking
+        title: "հաշվողական Մտածմունք"
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
@@ -255,7 +255,7 @@
           we’re going to learn how to use loops with extra structure built right in.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: Songwriting պարամետրերով
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson
