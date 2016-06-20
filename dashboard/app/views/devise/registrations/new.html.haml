@@ -113,7 +113,7 @@
 
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
-    window.SignupManager = new SignupManagerClass({
+    window.signupManager = new SignupManager({
       isTeacher: "#{resource.teacher?}",
       returnToUrl: "#{return_to_url}",
       teacherDashboardUrl: "#{teacher_dashboard_url}",

@@ -1,6 +1,6 @@
 
 
-var SignupManager = window.SignupManagerClass = function (options) {
+window.SignupManager = function (options) {
   this.options = options;
   var self = this;
 
