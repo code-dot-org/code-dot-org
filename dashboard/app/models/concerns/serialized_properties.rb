@@ -26,6 +26,13 @@ module SerializedProperties
     super
   end
 
+  def property_changed?(key)
+    changes = self.changed_attributes['properties']
+    return false if changes.nil?
+
+    changes[key] != self.properties[key]
+  end
+
   module ClassMethods
     def sti_hierarchy
       classes = []
