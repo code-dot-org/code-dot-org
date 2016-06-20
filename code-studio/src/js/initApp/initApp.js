@@ -208,8 +208,8 @@ window.apps = {
       }
       return source;
     },
-    setInitialAnimationMetadata: function (animationMetadata) {
-      appOptions.initialAnimationMetadata = animationMetadata;
+    setInitialAnimationMetadata: function (animations) {
+      appOptions.initialAnimationMetadata = animations;
     },
     getAnimationMetadata: function () {
       return appOptions.getAnimationMetadata &&

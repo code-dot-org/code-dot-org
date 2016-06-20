@@ -5,7 +5,6 @@ import React from 'react';
 import Radium from 'radium';
 import gamelabMsg from '../locale';
 import animationLibrary from '../animationLibrary';
-import { getLabel } from '../animationMetadata';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
@@ -37,7 +36,7 @@ const AnimationPickerBody = React.createClass({
           {animationLibrary.map(animation =>
             <AnimationPickerListItem
                 key={animation.sourceUrl}
-                label={getLabel(animation)}
+                label={`${animation.name} (${animation.frameCount})`}
                 animation={animation}
                 onClick={this.props.onPickLibraryAnimation.bind(this, animation)}
             />

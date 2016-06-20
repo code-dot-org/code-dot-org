@@ -987,7 +987,7 @@ GameLab.prototype.displayFeedback_ = function () {
 /**
  * Get the project's animation metadata for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
- * @return {AnimationMetadata[]}
+ * @return {AnimationList}
  */
 GameLab.prototype.getSerializedAnimationList = function () {
   return getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList);
