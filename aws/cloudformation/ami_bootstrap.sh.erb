@@ -49,6 +49,9 @@ OPTIONS="<%=local_mode ? '-z' : ''%> -n ${NODE_NAME} -r '${RUN_LIST}' -e ${ENVIR
 sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- ${OPTIONS}"
 [ $? -eq 0 ] && STATUS=SUCCESS || STATUS=FAILURE
 
+# Workaround for version-controlled files modified by seed
+sudo -u ubuntu bash -c "cd /home/ubuntu/${ENVIRONMENT} && git reset --hard"
+
 aws cloudformation signal-resource \
   --stack-name ${STACK} \
   --logical-resource-id <%=create_id%> \
