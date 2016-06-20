@@ -83,6 +83,8 @@ class Artist < Blockly
           </block>
         </value>
       </block>
+      <block type="jump_to" />
+      <block type="jump_to_xy" />
       <block type="jump_by_constant">
         <title name="VALUE">100</title>
       </block>

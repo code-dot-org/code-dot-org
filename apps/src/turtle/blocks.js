@@ -30,6 +30,23 @@ var commonMsg = require('../locale');
 var customLevelBlocks = require('./customLevelBlocks');
 var Turtle = require('./turtle');
 
+var utils = require('../utils');
+var constants = require('../constants');
+
+const Position = constants.Position;
+const RANDOM_VALUE = 'RAND';
+
+const POSITION_VALUES = [[commonMsg.positionRandom(), RANDOM_VALUE],
+    [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
+    [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
+    [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
+    [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
+    [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
+    [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
+    [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
+    [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
+    [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]];
+
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
@@ -689,6 +706,64 @@ exports.install = function (blockly, blockInstallOptions) {
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
   generator.jump_by_constant_dropdown = generator.jump_by_constant;
+
+  blockly.Blocks.jump_to = {
+    // Block for jumping to a specified position
+    helpUrl: '',
+    init: function () {
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[1][1]); // default to top-left
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.jump());
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.jumpTooltip());
+    }
+  };
+
+  blockly.Blocks.jump_to.VALUES = POSITION_VALUES;
+
+  generator.jump_to = function () {
+    var value = this.getTitleValue('VALUE');
+    if (value === RANDOM_VALUE) {
+      var possibleValues =this.VALUES.map(item => item[1])
+          .filter(item => item !== RANDOM_VALUE);
+      value = utils.randomValue(possibleValues);
+    }
+    return 'Turtle.jumpTo(' + value + ', \'block_id_' + this.id + '\');\n';
+  };
+
+  blockly.Blocks.jump_to_xy = {
+    // Block for jumping to specified XY location.
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.jumpTo());
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldTextInput('0',
+            blockly.FieldTextInput.numberValidator), 'XPOS')
+          .appendTitle("over");
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldTextInput('0',
+            blockly.FieldTextInput.numberValidator), 'YPOS')
+          .appendTitle("down");
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.jumpTooltip());
+    }
+  };
+
+  generator.jump_to_xy = function () {
+    var xParam = window.parseFloat(this.getTitleValue('XPOS')) || 0;
+    var yParam = window.parseFloat(this.getTitleValue('YPOS')) || 0;
+    return 'Turtle.jumpToXY(' + xParam + ', ' + yParam + ', \'block_id_' + this.id + '\');\n';
+  };
 
   blockly.Blocks.draw_turn = {
     // Block for turning left or right.

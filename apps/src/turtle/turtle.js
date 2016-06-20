@@ -47,6 +47,7 @@ var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var experiments = require('../experiments');
+var constants = require('../constants');
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -986,6 +987,9 @@ Artist.prototype.step = function (command, values, options) {
       this.setHeading_(heading);
       this.moveForward_(result.distance);
       break;
+    case 'JT':  // Jump To Location
+      this.jumpTo_(values[0]);
+      break;
     case 'JD':  // Jump (direction)
       distance = values[0];
       heading = values[1];
@@ -1103,6 +1107,88 @@ Artist.prototype.setPattern = function (pattern) {
     this.currentPathPattern = new Image();
     this.isDrawingWithPattern = false;
   }
+};
+
+var xFromPosition = function (position) {
+  switch (position) {
+    case constants.Position.OUTTOPOUTLEFT:
+    case constants.Position.TOPOUTLEFT:
+    case constants.Position.MIDDLEOUTLEFT:
+    case constants.Position.BOTTOMOUTLEFT:
+    case constants.Position.OUTBOTTOMOUTLEFT:
+    case constants.Position.OUTTOPLEFT:
+    case constants.Position.TOPLEFT:
+    case constants.Position.MIDDLELEFT:
+    case constants.Position.BOTTOMLEFT:
+    case constants.Position.OUTBOTTOMLEFT:
+      return 0;
+    case constants.Position.OUTTOPCENTER:
+    case constants.Position.TOPCENTER:
+    case constants.Position.MIDDLECENTER:
+    case constants.Position.BOTTOMCENTER:
+    case constants.Position.OUTBOTTOMCENTER:
+      return CANVAS_WIDTH / 2;
+    case constants.Position.OUTTOPRIGHT:
+    case constants.Position.TOPRIGHT:
+    case constants.Position.MIDDLERIGHT:
+    case constants.Position.BOTTOMRIGHT:
+    case constants.Position.OUTBOTTOMRIGHT:
+    case constants.Position.OUTTOPOUTRIGHT:
+    case constants.Position.TOPOUTRIGHT:
+    case constants.Position.MIDDLEOUTRIGHT:
+    case constants.Position.BOTTOMOUTRIGHT:
+    case constants.Position.OUTBOTTOMOUTRIGHT:
+      return CANVAS_WIDTH;
+  }
+};
+
+//
+// yFromPosition: return top-most point of sprite given position constant
+//
+
+var yFromPosition = function (position) {
+  switch (position) {
+    case constants.Position.OUTTOPOUTLEFT:
+    case constants.Position.OUTTOPLEFT:
+    case constants.Position.OUTTOPCENTER:
+    case constants.Position.OUTTOPRIGHT:
+    case constants.Position.OUTTOPOUTRIGHT:
+    case constants.Position.TOPOUTLEFT:
+    case constants.Position.TOPLEFT:
+    case constants.Position.TOPCENTER:
+    case constants.Position.TOPRIGHT:
+    case constants.Position.TOPOUTRIGHT:
+      return 0;
+    case constants.Position.MIDDLEOUTLEFT:
+    case constants.Position.MIDDLELEFT:
+    case constants.Position.MIDDLECENTER:
+    case constants.Position.MIDDLERIGHT:
+    case constants.Position.MIDDLEOUTRIGHT:
+      return CANVAS_HEIGHT / 2;
+    case constants.Position.BOTTOMOUTLEFT:
+    case constants.Position.BOTTOMLEFT:
+    case constants.Position.BOTTOMCENTER:
+    case constants.Position.BOTTOMRIGHT:
+    case constants.Position.BOTTOMOUTRIGHT:
+    case constants.Position.OUTBOTTOMOUTLEFT:
+    case constants.Position.OUTBOTTOMLEFT:
+    case constants.Position.OUTBOTTOMCENTER:
+    case constants.Position.OUTBOTTOMRIGHT:
+    case constants.Position.OUTBOTTOMOUTRIGHT:
+      return CANVAS_HEIGHT;
+  }
+};
+
+Artist.prototype.jumpTo_ = function (pos) {
+  var x, y;
+  if (Array.isArray(pos)) {
+    [x, y] = pos;
+  } else {
+    x = xFromPosition(pos);
+    y = yFromPosition(pos);
+  }
+  this.x = Number(x);
+  this.y = Number(y);
 };
 
 Artist.prototype.jumpForward_ = function (distance) {

@@ -126,6 +126,14 @@ ArtistAPI.prototype.moveRight = function (distance, id) {
   this.log.push(['MV', distance, 90, id]);
 };
 
+ArtistAPI.prototype.jumpTo = function (position, id) {
+  this.log.push(['JT', position, id]);
+};
+
+ArtistAPI.prototype.jumpToXY = function (x, y, id) {
+  this.log.push(['JT', [x, y], id]);
+};
+
 ArtistAPI.prototype.jumpUp = function (distance, id) {
   this.log.push(['JD', distance, 0, id]);
 };
