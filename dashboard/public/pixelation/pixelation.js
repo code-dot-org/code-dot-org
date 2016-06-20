@@ -78,7 +78,7 @@ function initProjects() {
       },
       setInitialAnimationMetadata: function () {},
       getAnimationMetadata: function () {
-        return [];
+        return {};
       },
       setInitialLevelSource: function (levelSource) {
         options.projectData = levelSource;
