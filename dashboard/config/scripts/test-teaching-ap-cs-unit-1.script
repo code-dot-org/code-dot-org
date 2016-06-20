@@ -1,5 +1,4 @@
 name 'Test CPS PD'
-professional_learning_course 'true'
 
 stage 'test Unit 1 required reading', 'required'
 level 'CSPPD Welcome Video'

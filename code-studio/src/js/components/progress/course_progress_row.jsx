@@ -62,7 +62,7 @@ const styles = {
   },
   changeFocusArea: {
     fontFamily: '"Gotham 5r", sans-serif',
-    color: color.black,
+    color: color.dark_charcoal,
     position: 'absolute',
     right: 5,
     bottom: 5
