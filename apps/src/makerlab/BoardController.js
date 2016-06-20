@@ -125,6 +125,10 @@ BoardController.prototype.reset = function () {
       if (component.off) {
         component.off();
       }
+      if (component.threshold) {
+        // Reset sensor thresholds to 1.0 in case changed.
+        component.threshold = 1;
+      }
       if (component.removeAllListeners) {
         component.removeAllListeners();
       }
