@@ -10,6 +10,7 @@ setupLocales();
 var designMode = require('@cdo/apps/applab/designMode');
 var ImportScreensForm = require('@cdo/apps/applab/ImportScreensForm').default;
 var ScreenListItem = require('@cdo/apps/applab/ImportScreensForm').ScreenListItem;
+var assetsApi = require('@cdo/apps/clientApi').assets;
 
 describe("Applab ImportScreensForm component", function () {
 
@@ -22,7 +23,8 @@ describe("Applab ImportScreensForm component", function () {
   function setHTMLToImport(toImport) {
     project = {
       channel: {
-        name: 'some-other-project',
+        name: 'Some Other Project!',
+        id: 'some-other-project',
       },
       sources: {
         html: `<div>${toImport}</div>`,
@@ -44,16 +46,17 @@ describe("Applab ImportScreensForm component", function () {
     update();
   }
 
-
   beforeEach(() => {
     designModeViz = document.createElement('div');
     designModeViz.id = "designModeViz";
     document.body.appendChild(designModeViz);
     sinon.stub(designMode, 'changeScreen');
+    sinon.stub(assetsApi, 'copyAssets');
   });
   afterEach(() => {
     designModeViz.parentNode.removeChild(designModeViz);
     designMode.changeScreen.restore();
+    assetsApi.copyAssets.restore();
   });
 
   describe('When doing an import into an empty project', () => {
@@ -108,6 +111,11 @@ describe("Applab ImportScreensForm component", function () {
         expect(designMode.getAllScreenIds()).to.include('screen1');
         expect(designMode.getAllScreenIds()).to.include('screen2');
       });
+
+      it('calls the onImport prop callback when finished', () => {
+        importButton.simulate('click');
+        expect(onImport).to.have.been.called;
+      });
     });
   });
 
@@ -152,6 +160,21 @@ describe("Applab ImportScreensForm component", function () {
   });
 
   describe('When doing an import into a project with conflicting assets', () => {
+    var server;
+    beforeEach(() => {
+      server = sinon.fakeServerWithClock.create();
+      server.respondWith(
+        '/v3/assets/some-project/asset1.png',
+        'some project asset 1'
+      );
+      server.respondWith(
+        '/v3/assets/some-other-project/asset1.png',
+        'some other project asset 1'
+      );
+    });
+    afterEach(() => {
+      server.restore();
+    });
     beforeEach(() => {
       renderForm({
         existingHTML:`
@@ -196,7 +219,22 @@ describe("Applab ImportScreensForm component", function () {
         expect(designMode.getAllScreenIds()).to.include('screen2');
       });
 
-      it('but it should also replace the assets', () => {
+      it('should also replace the assets', () => {
+        importButton.simulate('click');
+        expect(assetsApi.copyAssets).to.have.been.calledWith(
+          'some-other-project',
+          ['asset1.png'],
+          sinon.match.func,
+          sinon.match.func
+        );
+      });
+
+      it('should not call the onImport callback until the assets have been replaced', () => {
+        importButton.simulate('click');
+        expect(onImport).not.to.have.been.called;
+        var [,, success] = assetsApi.copyAssets.lastCall.args;
+        success();
+        expect(onImport).to.have.been.called;
       });
     });
 

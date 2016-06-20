@@ -1,5 +1,6 @@
 /* global Applab, dashboard */
 import $ from 'jquery';
+import 'jquery-ui'; // for $.fn.resizable();
 import React from 'react';
 import ReactDOM from 'react-dom';
 var DesignWorkspace = require('./DesignWorkspace');

@@ -4,6 +4,7 @@ import Immutable from 'immutable';
 import designMode from './designMode';
 import * as elementUtils from './designElements/elementUtils';
 import applabConstants from './constants';
+import {assets as assetsApi} from '../clientApi';
 
 class ImportableScreen {
   constructor(dom) {
@@ -108,11 +109,12 @@ export default React.createClass({
   propTypes: {
     project: React.PropTypes.shape({
       channel: React.PropTypes.shape({
-        name: React.PropTypes.string
-      }),
+        id: React.PropTypes.string.isRequired,
+        name: React.PropTypes.string.isRequired,
+      }).isRequired,
       sources: React.PropTypes.shape({
-        html: React.PropTypes.string,
-      }),
+        html: React.PropTypes.string.isRequired,
+      }).isRequired,
     }),
     onImport: React.PropTypes.func.isRequired,
   },
@@ -137,6 +139,7 @@ export default React.createClass({
   },
 
   importScreens() {
+    var allAssetsToReplace = [];
     this.state.selected
         .map(id => this.state.project.screens.find(screen => screen.id === id))
         .forEach(importableScreen => {
@@ -158,8 +161,22 @@ export default React.createClass({
           if (deleteAfterAdd) {
             designMode.onDeletePropertiesButton(deleteAfterAdd);
           }
+          allAssetsToReplace = allAssetsToReplace.concat(importableScreen.assetsToReplace);
         });
-    this.props.onImport();
+    if (allAssetsToReplace.length > 0) {
+      assetsApi.copyAssets(
+        this.props.project.channel.id,
+        allAssetsToReplace,
+        xhr => {
+          this.props.onImport();
+        },
+        xhr => {
+          console.error("fail", xhr);
+        }
+      );
+    } else {
+      this.props.onImport();
+    }
   },
 
   render() {
