@@ -1,5 +1,6 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
 import React from 'react';
+import {EMPTY_IMAGE} from '../constants';
 const MARGIN_PX = 2;
 
 /**
@@ -76,7 +77,7 @@ const AnimationPreview = React.createClass({
     const yScale = innerHeight / nextAnimation.frameSize.y;
     const scale = Math.min(1, Math.min(xScale, yScale));
     const scaledFrameSize = scaleVector2(nextAnimation.frameSize, scale);
-    const sourceUrl = nextAnimation.dataURI ? nextAnimation.dataURI : nextAnimation.sourceUrl;
+    const sourceUrl = nextAnimation.dataURI ? nextAnimation.dataURI : EMPTY_IMAGE;
     this.setState({
       framesPerRow: Math.floor(nextAnimation.sourceSize.x / nextAnimation.frameSize.x),
       scaledSourceSize: scaleVector2(nextAnimation.sourceSize, scale),
@@ -119,7 +120,7 @@ const AnimationPreview = React.createClass({
           style={containerStyle}
           onMouseOver={this.onMouseOver}
           onMouseOut={this.onMouseOut}>
-        <img src="/blockly/media/1x1.gif" style={imageStyle} />
+        <img src={EMPTY_IMAGE} style={imageStyle} />
       </div>
     );
   }
