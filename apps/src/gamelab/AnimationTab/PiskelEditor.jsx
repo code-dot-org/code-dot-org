@@ -31,6 +31,10 @@ const PiskelEditor = React.createClass({
   },
 
   componentDidMount() {
+    /** @private {boolean} Track whether we're mid-load so we don't fire save
+     *          events during load. */
+    this.isLoadingAnimation_ = false;
+
     /** @private {AnimationKey} reference to animation that is currenly loaded
      *          in the editor. */
     this.loadedAnimation_ = null;
@@ -46,10 +50,14 @@ const PiskelEditor = React.createClass({
   componentWillReceiveProps(newProps) {
     const {animationList, selectedAnimation} = newProps;
     if (selectedAnimation !== this.props.selectedAnimation) {
+      this.isLoadingAnimation_ = true;
       var animation = animationList.data[selectedAnimation];
       // TODO: Handle selecting animation where dataURI not loaded yet?
-      this.piskel.loadSpritesheet(animation.dataURI, animation.frameSize.x, animation.frameSize.y);
-      this.loadedAnimation_ = selectedAnimation;
+      this.piskel.loadSpritesheet(animation.dataURI, animation.frameSize.x,
+          animation.frameSize.y, animation.frameRate, () => {
+            this.loadedAnimation_ = selectedAnimation;
+            this.isLoadingAnimation_ = false;
+          });
     }
   },
 
@@ -60,13 +68,17 @@ const PiskelEditor = React.createClass({
   },
 
   onAnimationSaved(message) {
+    if (this.isLoadingAnimation_) {
+      return;
+    }
     console.log('onAnimationSaved', message);
     this.props.editAnimation(this.loadedAnimation_, {
       blob: message.blob,
       dataURI: message.dataURI,
       sourceSize: {x: message.sourceSizeX, y: message.sourceSizeY},
       frameSize: {x: message.frameSizeX, y: message.frameSizeY},
-      frameCount: message.frameCount
+      frameCount: message.frameCount,
+      frameRate: message.frameRate
     });
   },
 
