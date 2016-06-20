@@ -186,6 +186,20 @@ describe("Applab ImportScreensForm component", function () {
         expect(screenItems[1].find('input').prop('checked')).to.be.true;
       });
     });
+
+    describe("the import screens button", () => {
+      it('should still import screens to the project, replacing the ones with the same name', () => {
+        expect(designMode.getAllScreenIds()).to.have.length(1);
+        importButton.simulate('click');
+        expect(designMode.getAllScreenIds()).to.have.length(2);
+        expect(designMode.getAllScreenIds()).to.include('screen1');
+        expect(designMode.getAllScreenIds()).to.include('screen2');
+      });
+
+      it('but it should also replace the assets', () => {
+      });
+    });
+
   });
 
   describe('When doing an import into a project that uses the same element IDs', () => {
