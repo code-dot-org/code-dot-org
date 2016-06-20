@@ -39,14 +39,14 @@ class ProfessionalDevelopmentWorkshop
         :users__id___id,
         :users__name___name,
         :users__email___email,
-            ).
+      ).
       where(section_id: section_id).
       all.map do |result|
-      levels = DashboardStudent.completed_levels(result[:id])
-      result[:levels] = levels.all
-      result[:levels_count] = levels.count
-      result
-    end
+        levels = DashboardStudent.completed_levels(result[:id])
+        result[:levels] = levels.all
+        result[:levels_count] = levels.count
+        result
+      end
   end
 
   # TODO: Move this to a helper.
