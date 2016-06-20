@@ -170,8 +170,8 @@ export const ProgressDot = React.createClass({
               this.props.courseOverviewPage && styles.dot.overview,
               styles.dot.icon,
               smallDot && styles.dot.icon_small,
-              outlineCurrent && {textShadow: createOutline(color.level_current)},
-              level.status && level.status !== 'not_tried' && styles.dot.icon_complete
+              level.status && level.status !== 'not_tried' && styles.dot.icon_complete,
+              outlineCurrent && {textShadow: createOutline(color.level_current)}
             ]}
           /> :
           <div
