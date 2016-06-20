@@ -116,6 +116,8 @@ en:
     gender: 'Gender (optional)'
     birthday: 'Birthday (optional)'
     age: 'Age'
+    country: 'Country'
+    district: 'District'
     user_type: 'Are you a student or teacher?'
     submit: 'Sign up'
     teacher: 'Are you a teacher?'
@@ -189,6 +191,16 @@ en:
   reports:
     error:
       access_denied: "You don't have access to this person's stats"
+  district_dropdown:
+    school_type: "Select school type"
+    charter: "Charter"
+    private: "Private"
+    public: "Public"
+    other: "Other"
+    zip: "Enter school district's ZIP code"
+    state: "Select state"
+    search_district: "Search for district"
+    other_district: "Other district not listed above"
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
     provider: 'Provider:'

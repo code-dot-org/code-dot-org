@@ -112,7 +112,7 @@ var SignupManager = window.SignupManagerClass = function (options) {
   $("#user_password").on('input', function (e) {
     var password = $(this).val();
     var password_message = $("#password-block .error_in_field");
-    var password_message_confirmation = $("#password_confirmation-block .error_in_field")
+    var password_message_confirmation = $("#password_confirmation-block .error_in_field");
     if (!password || password.length < 6) {
       password_message.text(self.options.invalidPasswordString);
       password_message.fadeTo("normal", 1);
@@ -125,8 +125,8 @@ var SignupManager = window.SignupManagerClass = function (options) {
   $("#user_password_confirmation").on('input', function (e){
     var conf_password = $(this).val();
     var origin_password = $('#user_password').val();
-    var password_message = $("#password-block .error_in_field")
-    var password_message_confirmation = $("#password_confirmation-block .error_in_field")
+    var password_message = $("#password-block .error_in_field");
+    var password_message_confirmation = $("#password_confirmation-block .error_in_field");
     if (conf_password !== origin_password) {
       password_message_confirmation.text(self.options.passwordMismatchString);
       password_message_confirmation.fadeTo("normal", 1);

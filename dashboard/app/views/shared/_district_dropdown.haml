@@ -7,28 +7,28 @@
   #pl-application-facets.form-section
 
     .form-group
-      .question Select school type
+      .question= t('district_dropdown.school_type')
       %select#school-type.form-control{name: "#{form_name}[school_type]", type: "select", required: false}
         %option{value: "", selected: true, disabled: true}
-        %option{value: "charter"} Charter
-        %option{value: "private"} Private
-        %option{value: "public"} Public
-        %option{value: "other"} Other
+        %option{value: "charter"}= t('district_dropdown.charter')
+        %option{value: "private"}= t('district_dropdown.private')
+        %option{value: "public"}= t('district_dropdown.public')
+        %option{value: "other"}= t('district_dropdown.other')
 
-    .form-group{style: "display: none; margin-top: 20px;"}
-      .question Enter school district's ZIP code
+    .form-group{style: "display: none"}
+      .question= t('district_dropdown.zip')
       %input#school-zipcode.form-control{name: "#{form_name}[school_zip]", type: "text", required: false}
 
-    .form-group{style: "display: none; margin-top: 20px;"}
-      .question Select state
+    .form-group{style: "display: none"}
+      .question= t('district_dropdown.state')
       %select#school-state.form-control{name: "#{form_name}[school_state]", type: "select", required: false}
         %option{value: "", selected: true, disabled: true}
         - get_all_states_with_dc.each do |state_abbr, state_name|
           %option{value: state_abbr}= state_name
-        %option{value: "other"} Other
+        %option{value: "other"}= t('district_dropdown.other')
 
-    .form-group{style: "display: none; margin-top: 20px;"}
-      .question Search for district
+    .form-group{style: "display: none"}
+      .question= t('district_dropdown.search_district')
       #school-district
 
         -# We'll apply the Selectize UI control to this input.
@@ -43,4 +43,4 @@
       %label
         %input#school-district-other{name: "school_district_other", type: "checkbox", style: "margin-top: 0px"}
         %span{style: "font-size: 12px"}
-          Other district not listed above
+          = t('district_dropdown.other_district')

@@ -11,11 +11,6 @@
 
 - return_to_url = get_and_clear_session_return_to
 
-:css
-  .form-group {
-    margin-top: 0px !important
-  }
-
 #signup
   .row
     .span9
@@ -24,13 +19,13 @@
       %p= sanitize(t('signup_form.no_signup_message').html_safe, tags: %w(a), attributes: %w(href target))
 
   .row
-    .span8.signupblock{style: "background-color:white"}
+    .span8.signupblock
 
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'signupform'}) do |f|
 
-        #user_type-block.itemblock{style: "margin-bottom: 20px"}
+        #user_type-block.itemblock
           .labelblock= t('signup_form.user_type_label')
-          %select#user_user_age.fieldblock{name: "user[user_type]", type: "select", style: "width: 234px"}
+          %select#user_user_age.fieldblock{name: "user[user_type]", type: "select"}
             %option{value: "", selected: true, disabled: true}
             %option{value: User::TYPE_STUDENT}= t('signup_form.user_type_student')
             %option{value: User::TYPE_TEACHER}= t('signup_form.user_type_teacher')
@@ -52,7 +47,7 @@
             = f.password_field :password, class: 'input-xlarge fieldblock', maxlength: 255
             .error_in_field
 
-          #password_confirmation-block.itemblock{style: "margin-bottom: 20px"}
+          #password_confirmation-block.itemblock
             .labelblock= t('activerecord.attributes.user.password_confirmation')
             = f.password_field :password_confirmation, class: 'input-xlarge fieldblock', maxlength: 255
             .error_in_field
@@ -69,7 +64,7 @@
 
         #age-block.itemblock
           .labelblock= t('signup_form.age')
-          %select#user_user_age.fieldblock{name: "user[age]", type: "select", style: "width: 234px"}
+          %select#user_user_age.fieldblock{name: "user[age]", type: "select"}
             %option{value: "", selected: true, disabled: true}
             - User::AGE_DROPDOWN_OPTIONS.each do |age_option|
               %option{value: age_option}= age_option
@@ -77,12 +72,12 @@
 
         #gender-block.itemblock
           .labelblock= t('signup_form.gender')
-          = f.select :gender, gender_options, {disabled: '', selected: '' }, { class: 'fieldblock', style: "width: 234px"}
+          = f.select :gender, gender_options, {disabled: '', selected: '' }, { class: 'fieldblock'}
           .error_in_field
 
         #schoolcountry-block.itemblock{style: "display: none"}
-          .labelblock= "Country"
-          %select#schoolcountry.form-control.fieldblock{name: "user[country]", type: "select", style: "width: 234px"}
+          .labelblock= t('signup_form.country')
+          %select#schoolcountry.form-control.fieldblock{name: "user[country]", type: "select"}
             %option{value: "", selected: true, disabled: true}
             - get_all_countries.each do |country_abbr, country_name|
               %option{value: country_abbr}= country_name
@@ -90,8 +85,8 @@
           .error_in_field
 
         #district-block.itemblock{style: "display: none"}
-          .labelblock{style: "vertical-align: top"}= "District"
-          .district-dropdown{style: "display: inline-block; background-color: rgba(0,0,0,0.1); padding: 10px; border-radius: 5px; width: 400px"}
+          .labelblock= t('signup_form.district')
+          .district-dropdown
             = render partial: 'shared/district_dropdown', locals: {form_name: "user"}
           .error_in_field
 
@@ -104,7 +99,7 @@
         #teacher-terms{style: "display: none"}!= t('signup_form.teacher_terms')
 
     .span4
-      %div{ style: 'padding-left: 20px; margin-top: 20px; border-left: 1px solid black;' }
+      .devise_links
         = render "devise/shared/links"
 
     %div{style: "clear:both"}
