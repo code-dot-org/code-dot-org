@@ -232,6 +232,21 @@ class FilesApi < Sinatra::Base
     put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
   end
 
+  # POST /v3/assets/<channel-id>/copy?src_channel=<src-channel-id>&src_files=<src-filenames-json>
+  #
+  # Copy assets from another channel. Note that when specifying the src files, you must
+  # json encode it
+  #
+  post %r{/v3/assets/([^/]+)/copy$} do |encrypted_channel_id|
+    dont_cache
+
+    AssetBucket.new.copy_files(
+      request.GET['src_channel'],
+      encrypted_channel_id,
+      JSON.parse(request.GET(['src_filenames']))
+    )
+  end
+
   # POST /v3/animations/<channel-id>/<filename>?version=<version-id>
   #
   # Create or replace an animation. We use this method so that IE9 can still
