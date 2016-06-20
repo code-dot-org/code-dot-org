@@ -513,7 +513,6 @@ export function getSerializedAnimationList(animationList) {
 // TODO: Overwrite version ID within session
 // TODO: Save project source on animation update.
 // TODO: Handle slow Piskel initialization gracefully.
-// TODO: Hook up frame rate control
 // TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
 //       is deleted, so nothing is selected.
 // TODO: Piskel load breaks when adding from gallery due to delay getting full image data
