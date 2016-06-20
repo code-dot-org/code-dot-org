@@ -73,7 +73,7 @@ module AWS
           template_body: template,
           capabilities: ['CAPABILITY_IAM']
         }
-        stack_options.merge(on_failure: 'DO_NOTHING') if action == :create
+        stack_options.merge!(on_failure: 'DO_NOTHING') if action == :create
         updated_stack_id = cfn.method("#{action}_stack").call(stack_options).stack_id
         wait_for_stack(action, start_time)
         CDO.log.info 'Outputs:'
