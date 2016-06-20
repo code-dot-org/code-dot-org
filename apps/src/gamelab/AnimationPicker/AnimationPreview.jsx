@@ -10,6 +10,7 @@ const MARGIN_PX = 2;
 const AnimationPreview = React.createClass({
   propTypes: {
     animationData: React.PropTypes.object.isRequired, // TODO: Shape?
+    sourceUrl: React.PropTypes.string, // of spritesheet
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
     alwaysPlay: React.PropTypes.bool
@@ -77,7 +78,7 @@ const AnimationPreview = React.createClass({
     const yScale = innerHeight / nextAnimation.frameSize.y;
     const scale = Math.min(1, Math.min(xScale, yScale));
     const scaledFrameSize = scaleVector2(nextAnimation.frameSize, scale);
-    const sourceUrl = nextAnimation.dataURI ? nextAnimation.dataURI : EMPTY_IMAGE;
+    const sourceUrl = nextAnimation.sourceUrl ? nextAnimation.sourceUrl : EMPTY_IMAGE;
     this.setState({
       framesPerRow: Math.floor(nextAnimation.sourceSize.x / nextAnimation.frameSize.x),
       scaledSourceSize: scaleVector2(nextAnimation.sourceSize, scale),
