@@ -60,10 +60,10 @@ Resources:
                   - 'dynamodb:*'
                 Resource:
                   - {'Fn::Join': [':',['arn:aws:dynamodb',{Ref: 'AWS::Region'},{Ref: 'AWS::AccountId'},
-                    table/*_tables
+                    table/adhoc_tables
                   ]]}
                   - {'Fn::Join': [':',['arn:aws:dynamodb',{Ref: 'AWS::Region'},{Ref: 'AWS::AccountId'},
-                    table/*_properties
+                    table/adhoc_properties
                   ]]}
   StandaloneFrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
