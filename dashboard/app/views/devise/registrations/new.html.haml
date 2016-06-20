@@ -11,11 +11,6 @@
 
 - return_to_url = get_and_clear_session_return_to
 
-:css
-  .form-group {
-    margin-top: 0px !important
-  }
-
 #signup
   .row
     .span9
@@ -24,24 +19,22 @@
       %p= sanitize(t('signup_form.no_signup_message').html_safe, tags: %w(a), attributes: %w(href target))
 
   .row
-    .span8.signupblock{style: "background-color:white"}
+    .span8.signupblock
 
-      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'signupform', onsubmit: "return submitForm();"}) do |f|
+      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'signupform'}) do |f|
 
-        #usertype-block.itemblock
+        #user_type-block.itemblock
           .labelblock= t('signup_form.user_type_label')
-          - type_options = [[t('signup_form.user_type_student'), User::TYPE_STUDENT], [t('signup_form.user_type_teacher'), User::TYPE_TEACHER]]
-          = f.select :user_type, type_options, {}, {class: "fieldblock", onchange: "changeRole($(this).val());", style: "width: 234px"}
+          %select#user_user_age.fieldblock{name: "user[user_type]", type: "select"}
+            %option{value: "", selected: true, disabled: true}
+            %option{value: User::TYPE_STUDENT}= t('signup_form.user_type_student')
+            %option{value: User::TYPE_TEACHER}= t('signup_form.user_type_teacher')
+          .error_in_field= t('signup_form.field_is_required')
 
         = signup_error_messages!
 
         = f.hidden_field :locale, value: locale
         = f.hidden_field :hashed_email
-
-        #name-block.itemblock
-          .labelblock= t('activerecord.attributes.user.name')
-          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
-          .error_in_field
 
         #email-block.itemblock
           .labelblock= t('activerecord.attributes.user.email')
@@ -59,6 +52,11 @@
             = f.password_field :password_confirmation, class: 'input-xlarge fieldblock', maxlength: 255
             .error_in_field
 
+        #name-block.itemblock
+          .labelblock= t('activerecord.attributes.user.name')
+          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
+          .error_in_field
+
         #schoolname-block.itemblock{style: "display: none"}
           .labelblock= t('signup_form.school_name')
           = f.text_field :school, class: 'input-xlarge fieldblock', maxlength: 255
@@ -66,7 +64,7 @@
 
         #age-block.itemblock
           .labelblock= t('signup_form.age')
-          %select#user_user_age.fieldblock{name: "user[age]", type: "select", style: "width: 234px"}
+          %select#user_user_age.fieldblock{name: "user[age]", type: "select"}
             %option{value: "", selected: true, disabled: true}
             - User::AGE_DROPDOWN_OPTIONS.each do |age_option|
               %option{value: age_option}= age_option
@@ -74,13 +72,12 @@
 
         #gender-block.itemblock
           .labelblock= t('signup_form.gender')
-          = f.select :gender, gender_options, {disabled: '', selected: '' }, { class: 'fieldblock', style: "width: 234px"}
+          = f.select :gender, gender_options, {disabled: '', selected: '' }, { class: 'fieldblock'}
           .error_in_field
 
-        -# TODO (brendan): implement additional school info fields
-        -# schoolcountry-block.itemblock{style: "display: none"}
-          .labelblock= "Country"
-          %select#schoolcountry.form-control.fieldblock{name: "user[school_country]", type: "select"}
+        #schoolcountry-block.itemblock{style: "display: none"}
+          .labelblock= t('signup_form.country')
+          %select#schoolcountry.form-control.fieldblock{name: "user[country]", type: "select"}
             %option{value: "", selected: true, disabled: true}
             - get_all_countries.each do |country_abbr, country_name|
               %option{value: country_abbr}= country_name
@@ -88,8 +85,8 @@
           .error_in_field
 
         #district-block.itemblock{style: "display: none"}
-          .labelblock{style: "vertical-align: top"}= "District"
-          .district-dropdown{style: "display: inline-block; background-color: rgba(0,0,0,0.1); padding: 10px; border-radius: 5px; width: 400px"}
+          .labelblock= t('signup_form.district')
+          .district-dropdown
             = render partial: 'shared/district_dropdown', locals: {form_name: "user"}
           .error_in_field
 
@@ -102,7 +99,7 @@
         #teacher-terms{style: "display: none"}!= t('signup_form.teacher_terms')
 
     .span4
-      %div{ style: 'padding-left: 20px; margin-top: 20px; border-left: 1px solid black;' }
+      .devise_links
         = render "devise/shared/links"
 
     %div{style: "clear:both"}
@@ -110,150 +107,17 @@
     %br/
     %br/
 
+=javascript_include_tag 'js/signup'
+
 :javascript
 
   $(document).ready(function() {
-    // Check for URL having: /users/sign_up?user%5Buser_type%5D=teacher
-    if ("#{resource.teacher?}" == "true") {
-      showTeacher();
-    }
-  });
-
-  function formSuccess(success) {
-    var url;
-    if ("#{return_to_url}" !== "") {
-      url = "#{return_to_url}";
-    } else if (isTeacherSelected()) {
-      url = "#{teacher_dashboard_url}";
-    } else {
-      url = "/";
-    }
-    window.location.href = url;
-  }
-
-  function formError(err) {
-    // Define the fields that can have specific errors attached to them.
-    var fields = ["name", "email", "password", "password_confirmation", "schoolname", "age", "gender"];
-
-    for (var i = 0; i < fields.length; i++) {
-      var field = fields[i];
-      if (err.responseJSON.errors[field]) {
-        var errorField = $("#" + field + "-block .error_in_field");
-        errorField.text(err.responseJSON.errors[field]);
-        errorField.fadeTo("normal", 1);
-      }
-    }
-  }
-
-  function changeRole(value) {
-    if (value == "student") {
-      showStudent();
-    } else if (value == "teacher") {
-      showTeacher();
-    }
-  }
-
-  function showStudent() {
-    // Show correct form elements.
-    $("#age-block").fadeIn();
-    $("#gender-block").fadeIn();
-    $("#schoolname-block").hide();
-    $("#schoolcountry-block").hide();
-    $("#district-block").hide();
-
-    // Clear country.  It can be reentered again to make district dropdown appear.
-    $("#schoolcountry").val("");
-
-    // Show correct terms below form.
-    $("#teacher-terms").hide();
-    $("#student-terms").fadeIn();
-  }
-
-  function showTeacher() {
-    // Show correct form elements.
-    $("#age-block").hide();
-    $("#gender-block").hide();
-    $("#schoolname-block").fadeIn();
-    $("#schoolcountry-block").fadeIn();
-
-    // Show correct terms below form.
-    $("#student-terms").hide();
-    $("#teacher-terms").fadeIn();
-  }
-
-  function isTeacherSelected() {
-    var formData = $('#new_user').serializeArray();
-    var userType = $.grep(formData, function(e) { return e.name == "user[user_type]"; });
-    if (userType.length == 1 && userType[0].value == "teacher") {
-      return true;
-    }
-    return false;
-  }
-
-  function submitForm() {
-    var formData = $('#new_user').serializeArray();
-
-    // Teachers get age 21.
-    if (isTeacherSelected()) {
-      formData.push({name: 'user[age]', value: 21});
-    }
-
-    // Hide all errors that might be showing from a previous attempt.
-    $(".error_in_field").css("opacity", 0);
-
-    // Hide any other hint messages that might be showing based on input.
-    $('#password_message').text("");
-    $('#password_message_confirmation').text("");
-
-    $.ajax({
-      url: "/users.json",
-      type: "post",
-      dataType: "json",
-      data: formData
-    }).done(formSuccess).fail(formError);
-
-    return false;
-  }
-
-  $( "#user_password" ).on('input',function(e){
-    var password = $(this).val();
-    var password_message = $("#password-block .error_in_field");
-    var password_message_confirmation = $("#password_confirmation-block .error_in_field")
-    if (!password || password.length < 6) {
-      password_message.text("#{t('signup_form.invalid_password')}");
-    } else {
-      password_message.text("");
-    }
-    password_message_confirmation.text("");
-  });
-
-  $( "#user_password_confirmation" ).on('input',function(e){
-    var conf_password = $(this).val();
-    var origin_password = $('#user_password').val();
-    var password_message = $("#password-block .error_in_field")
-    var password_message_confirmation = $("#password_confirmation-block .error_in_field")
-    if (conf_password !== origin_password) {
-      password_message_confirmation.text("#{t('signup_form.mismatch_password')}");
-    } else {
-      password_message_confirmation.text("");
-    }
-    password_message.text("");
-  });
-
-  $('#schoolcountry').change(function () {
-    if ($(this).val() == 'US') {
-      $("#district-block").fadeIn();
-    } else {
-      $("#district-block").fadeOut();
-    }
-  });
-
-  $( "#user_name" ).placeholder();
-  $( "#user_email" ).placeholder();
-  $( "#user_school" ).placeholder();
-
-  $( ".signupform" ).on("submit", function(e){
-    window.dashboard.hashEmail({ email_selector: '#user_email',
-      hashed_email_selector: '#user_hashed_email',
-      age_selector: '#user_age'});
+    // Send through some values that the JavaScript will need.
+    window.signupManager = new SignupManager({
+      isTeacher: "#{resource.teacher?}",
+      returnToUrl: "#{return_to_url}",
+      teacherDashboardUrl: "#{teacher_dashboard_url}",
+      invalidPasswordString: "#{t('signup_form.invalid_password')}",
+      passwordMismatchString: "#{t('signup_form.mismatch_password')}"
+    });
   });

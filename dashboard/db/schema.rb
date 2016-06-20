@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160614000000) do
+ActiveRecord::Schema.define(version: 20160616223938) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -874,6 +874,12 @@ ActiveRecord::Schema.define(version: 20160614000000) do
     t.integer  "invited_by_id",              limit: 4
     t.string   "invited_by_type",            limit: 255
     t.integer  "invitations_count",          limit: 4,     default: 0
+    t.string   "country",                    limit: 255
+    t.string   "school_type",                limit: 255
+    t.string   "school_state",               limit: 255
+    t.integer  "school_zip",                 limit: 4
+    t.integer  "school_district_id",         limit: 4
+    t.boolean  "school_district_other"
   end
 
   add_index "users", ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
