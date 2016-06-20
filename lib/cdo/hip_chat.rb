@@ -115,11 +115,12 @@ class HipChat
     Net::HTTP.post_form(
       uri,
       {color: 'gray'}.merge(options).merge({
-                                               from: @@name,
-                                               auth_token: @@auth_token,
-                                               room_id: room.to_s,
-                                               message: body
-                                           }))
+        from: @@name,
+        auth_token: @@auth_token,
+        room_id: room.to_s,
+        message: body
+      })
+    )
   end
 
   # Wait the current HipChat request to succeeed (possibly including retries).

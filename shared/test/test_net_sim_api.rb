@@ -473,32 +473,47 @@ class NetSimApiTest < Minitest::Test
     assert_equal(3, test_spy.publish_history.length)
 
     # In fact, the invalidations produce a very complete account of what was done.
-    assert_equal(test_spy.publish_history[0],
-      {channel: @shard_id,
-       event: TABLE_NAMES[:wire],
-       data: {action: 'delete',
-              ids: [wire_ab['id'],
-                    wire_ac['id'],
-                    wire_ba['id'],
-                    wire_bc['id'],
-                    wire_ca['id'],
-                    wire_cb['id']]}})
+    assert_equal(test_spy.publish_history[0], {
+      channel: @shard_id,
+      event: TABLE_NAMES[:wire],
+      data: {
+        action: 'delete',
+        ids: [
+          wire_ab['id'],
+          wire_ac['id'],
+          wire_ba['id'],
+          wire_bc['id'],
+          wire_ca['id'],
+          wire_cb['id']
+        ]
+      }
+    })
 
-    assert_equal(test_spy.publish_history[1],
-      {channel: @shard_id,
-       event: TABLE_NAMES[:message],
-       data: {action: 'delete',
-              ids: [message_a_to_b['id'],
-                    message2_a_to_b['id'],
-                    message_b_to_a['id'],
-                    message2_b_to_a['id']]}})
+    assert_equal(test_spy.publish_history[1], {
+      channel: @shard_id,
+      event: TABLE_NAMES[:message],
+      data: {
+        action: 'delete',
+        ids: [
+          message_a_to_b['id'],
+          message2_a_to_b['id'],
+          message_b_to_a['id'],
+          message2_b_to_a['id']
+        ]
+      }
+    })
 
-    assert_equal(test_spy.publish_history[2],
-      {channel: @shard_id,
-       event: TABLE_NAMES[:node],
-       data: {action: 'delete',
-              ids: [node_a['id'],
-                    node_b['id']]}})
+    assert_equal(test_spy.publish_history[2], {
+      channel: @shard_id,
+      event: TABLE_NAMES[:node],
+      data: {
+        action: 'delete',
+        ids: [
+          node_a['id'],
+          node_b['id']
+        ]
+      }
+    })
 
   ensure
     delete_node(node_a['id'])

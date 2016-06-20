@@ -14,14 +14,16 @@ module SQS
     # @param [Logger] logger
     # @param [Integer] num_processors The number of processor instances.
     # @param [Integer] num_workers_per_processor How many worker threads for each processor.
-    def initialize(queue_url:,
+    def initialize(
+      queue_url:,
       handler:,
       initial_max_rate:,
       num_processors:,
       num_workers_per_processor:,
       name: nil,
       max_rate_proc: nil,
-      logger: Logger.new(STDOUT))
+      logger: Logger.new(STDOUT)
+    )
       raise ArgumentError, 'num_workers_per_processor must be positive' unless num_workers_per_processor > 0
       raise ArgumentError, 'initial_max_rate must be non-negative' unless initial_max_rate >= 0
 

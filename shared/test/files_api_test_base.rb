@@ -45,8 +45,8 @@ class FilesApiTestBase < Minitest::Test
     s3.delete_objects(
       bucket: bucket,
       delete: {
-          objects: objects,
-          quiet: true
+        objects: objects,
+        quiet: true
       }
     ) if objects.any?
   end
@@ -64,8 +64,8 @@ class FilesApiTestBase < Minitest::Test
     s3.delete_objects(
       bucket: bucket,
       delete: {
-          objects: objects,
-          quiet: true
+        objects: objects,
+        quiet: true
       }
     ) if objects.any?
   end

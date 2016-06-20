@@ -25,42 +25,48 @@ class V2UserRoutesTest < Minitest::Test
         with_role FakeDashboard::STUDENT
         @pegasus.get '/v2/user'
         assert_equal 200, @pegasus.last_response.status
-        assert_equal({
-                         'id' => FakeDashboard::STUDENT[:id],
-                         'admin' => FakeDashboard::STUDENT[:admin],
-                         'name' => FakeDashboard::STUDENT[:name],
-                         'owned_sections' => []
-                     },
-          JSON.parse(@pegasus.last_response.body))
+        assert_equal(
+          {
+            'id' => FakeDashboard::STUDENT[:id],
+            'admin' => FakeDashboard::STUDENT[:admin],
+            'name' => FakeDashboard::STUDENT[:name],
+            'owned_sections' => []
+          },
+          JSON.parse(@pegasus.last_response.body)
+        )
       end
 
       it 'returns JSON when signed in as teacher' do
         with_role FakeDashboard::TEACHER
         @pegasus.get '/v2/user'
         assert_equal 200, @pegasus.last_response.status
-        assert_equal({
-                         'id' => FakeDashboard::TEACHER[:id],
-                         'admin' => FakeDashboard::TEACHER[:admin],
-                         'name' => FakeDashboard::TEACHER[:name],
-                         'owned_sections' => [
-                             {'id' => FakeDashboard::TEACHER_SECTIONS[0][:id]},
-                             {'id' => FakeDashboard::TEACHER_SECTIONS[1][:id]}
-                         ]
-                     },
-          JSON.parse(@pegasus.last_response.body))
+        assert_equal(
+          {
+            'id' => FakeDashboard::TEACHER[:id],
+            'admin' => FakeDashboard::TEACHER[:admin],
+            'name' => FakeDashboard::TEACHER[:name],
+            'owned_sections' => [
+              {'id' => FakeDashboard::TEACHER_SECTIONS[0][:id]},
+              {'id' => FakeDashboard::TEACHER_SECTIONS[1][:id]}
+            ]
+          },
+          JSON.parse(@pegasus.last_response.body)
+        )
       end
 
       it 'returns JSON when signed in as admin' do
         with_role FakeDashboard::ADMIN
         @pegasus.get '/v2/user'
         assert_equal 200, @pegasus.last_response.status
-        assert_equal({
-                         'id' => FakeDashboard::ADMIN[:id],
-                         'admin' => FakeDashboard::ADMIN[:admin],
-                         'name' => FakeDashboard::ADMIN[:name],
-                         'owned_sections' => []
-                     },
-          JSON.parse(@pegasus.last_response.body))
+        assert_equal(
+          {
+            'id' => FakeDashboard::ADMIN[:id],
+            'admin' => FakeDashboard::ADMIN[:admin],
+            'name' => FakeDashboard::ADMIN[:name],
+            'owned_sections' => []
+          },
+          JSON.parse(@pegasus.last_response.body)
+        )
       end
 
     end

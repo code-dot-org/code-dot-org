@@ -137,15 +137,17 @@ class ActivitiesControllerTest < ActionController::TestCase
     # created activity and userlevel with the correct script
     assert_equal @script_level.script, UserLevel.last.script
 
-    assert_equal([{
-                      application: :dashboard,
-                      tag: 'activity_finish',
-                      script_level_id: @script_level.id,
-                      level_id: @script_level.level.id,
-                      user_agent: 'Rails Testing',
-                      locale: :'en-us'
-                  }],
-      slogger.records)
+    assert_equal(
+      [{
+        application: :dashboard,
+        tag: 'activity_finish',
+        script_level_id: @script_level.id,
+        level_id: @script_level.level.id,
+        user_agent: 'Rails Testing',
+        locale: :'en-us'
+      }],
+      slogger.records
+    )
   end
 
   test "successful milestone does not require script_level_id" do

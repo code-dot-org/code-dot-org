@@ -60,7 +60,7 @@ class DashboardStudent
       select(*fields,
         :secret_pictures__name___secret_picture_name,
         :secret_pictures__path___secret_picture_path,
-            ).
+      ).
       server(:default).
       first
 
