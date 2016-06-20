@@ -24,6 +24,7 @@
 #
 
 class Pd::Enrollment < ActiveRecord::Base
+  include DistrictDropdownConstants
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
   belongs_to :school_district
   belongs_to :user
@@ -45,20 +46,20 @@ class Pd::Enrollment < ActiveRecord::Base
   # needs to be, but correlates to the list of valid configurations given
   # in https://github.com/code-dot-org/code-dot-org/pull/8624.
   def validate_school_district
-    if school_type == "charter" && !school_zip.blank?
+    if school_type == SCHOOL_TYPE_CHARTER && !school_zip.blank?
       return
-    elsif school_type == "private" && !school_zip.blank?
+    elsif school_type == SCHOOL_TYPE_PRIVATE && !school_zip.blank?
       return
-    elsif school_type == "public"
-      if school_state == "other"
+    elsif school_type == SCHOOL_TYPE_PUBLIC
+      if school_state == SCHOOL_STATE_OTHER
         return
       elsif !school_state.blank? && !school_district_id.blank?
         return
       elsif !school_state.blank? && school_district_id.blank? && !school_district_other.blank?
         return
       end
-    elsif school_type == "other"
-      if school_state == "other"
+    elsif school_type == SCHOOL_TYPE_OTHER
+      if school_state == SCHOOL_STATE_OTHER
         return
       elsif !school_state.blank? && !school_district_id.blank?
         return
