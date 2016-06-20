@@ -98,12 +98,16 @@ function data(state, action) {
     case ADD_ANIMATION_AT:
     case EDIT_ANIMATION:
     case SET_ANIMATION_NAME:
-    case DELETE_ANIMATION:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
       newState = Object.assign({}, state);
       newState[action.key] = datum(newState[action.key], action);
+      return newState;
+
+    case DELETE_ANIMATION:
+      newState = Object.assign({}, state);
+      delete newState[action.key];
       return newState;
 
     default:
@@ -131,9 +135,6 @@ function datum(state, action) {
       return Object.assign({}, state, {
         name: action.name
       });
-
-    case DELETE_ANIMATION:
-      return undefined;
 
     case START_LOADING_FROM_SOURCE:
       return Object.assign({}, state, {
@@ -193,6 +194,7 @@ export function addAnimation(key, data) {
       data
     });
     dispatch(loadAnimationFromSource(key));
+    dashboard.project.projectChanged();
   };
 }
 
@@ -233,6 +235,7 @@ export function cloneAnimation(key) {
           version: versionId
         })
       });
+      dashboard.project.projectChanged();
     };
 
     // If cloning a library animation, no need to perform a copy request
@@ -264,10 +267,13 @@ export function cloneAnimation(key) {
  * @returns {{type: ActionType, key: string, name: string}}
  */
 export function setAnimationName(key, name) {
-  return {
-    type: SET_ANIMATION_NAME,
-    key,
-    name
+  return dispatch => {
+    dispatch({
+      type: SET_ANIMATION_NAME,
+      key,
+      name
+    });
+    dashboard.project.projectChanged();
   };
 }
 
@@ -277,13 +283,15 @@ export function setAnimationName(key, name) {
  * @param {object} data - needs a more detailed shape
  */
 export function editAnimation(key, data) {
-  return {
-    type: EDIT_ANIMATION,
-    key,
-    data
+  return dispatch => {
+    dispatch({
+      type: EDIT_ANIMATION,
+      key,
+      data
+    });
+    dashboard.project.projectChanged();
   };
 }
-
 
 /**
  * Delete the specified animation from the project.
@@ -300,6 +308,7 @@ export function deleteAnimation(key) {
             type: DELETE_ANIMATION,
             key
           });
+          dashboard.project.projectChanged();
         },
         function error(xhr) {
           dispatch(reportError(`Error deleting object ${key}: ${xhr.status} ${xhr.statusText}`));
