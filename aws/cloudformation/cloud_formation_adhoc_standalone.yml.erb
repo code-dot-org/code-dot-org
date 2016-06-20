@@ -43,7 +43,7 @@ Resources:
     Properties:
       ImageId: {'Fn::GetAtt': [AMI, ImageId]}
       InstanceType: <%=instance_type%>
-      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
+      IamInstanceProfile: {'Fn::GetAtt': [IAM, StandaloneFrontendInstanceProfile]}
       KeyName: <%=ssh_key_name%>
       Tags: [{Key: Name, Value: <%=stack_name%>}]
       BlockDeviceMappings:
