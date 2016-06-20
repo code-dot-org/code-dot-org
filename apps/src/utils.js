@@ -134,6 +134,10 @@ exports.randomKey = function (obj) {
   return keys[keys.length * Math.random() << 0];
 };
 
+exports.randomValue = function (arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+};
+
 /**
  * Generate a random identifier in a format matching the RFC-4122 specification.
  *
