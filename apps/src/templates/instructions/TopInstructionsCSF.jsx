@@ -325,7 +325,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
-    isMinecraft: state.pageConstants.isMinecraft,
+    isMinecraft: !!state.pageConstants.isMinecraft,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     aniGifURL: state.pageConstants.aniGifURL,
     height: state.instructions.renderedHeight,

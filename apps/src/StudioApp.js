@@ -28,6 +28,7 @@ var Instructions = require('./templates/instructions/Instructions');
 var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
+import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
@@ -1079,44 +1080,6 @@ StudioApp.prototype.onReportComplete = function (response) {
 };
 
 /**
- * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
- *   have markdown instructions
- * @param {object} level
- * @param {boolean} showHints
- * @returns {React.element}
- */
-StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
-  var renderedMarkdown;
-
-  var longInstructions = this.reduxStore.getState().instructions.longInstructions;
-
-  // longInstructions will be undefined if non-english
-  if (longInstructions) {
-    var markdownWithImages = substituteInstructionImages(longInstructions,
-      this.skin.instructions2ImageSubstitutions);
-    renderedMarkdown = processMarkdown(markdownWithImages);
-  }
-
-  var authoredHints;
-  if (showHints) {
-    authoredHints = this.authoredHintsController_.getHintsDisplay();
-  }
-
-  return (
-    <Instructions
-      puzzleTitle={puzzleTitle}
-      instructions={substituteInstructionImages(level.instructions,
-        this.skin.instructions2ImageSubstitutions)}
-      instructions2={substituteInstructionImages(level.instructions2,
-        this.skin.instructions2ImageSubstitutions)}
-      renderedMarkdown={renderedMarkdown}
-      markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
-      aniGifURL={level.aniGifURL}
-      authoredHints={authoredHints}/>
-  );
-};
-
-/**
  * Show our instructions dialog. This should never be called directly, and will
  * instead be called when the state of our redux store changes.
  * @param {object} level
@@ -1148,9 +1111,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
       headerElement.className += ' no-modal-icon';
     }
   }
-
-  var instructionsContent = this.getInstructionsContent_(puzzleTitle, level,
-    showHints);
 
   // Create a div to eventually hold this content, and add it to the
   // overall container. We don't want to render directly into the
@@ -1208,10 +1168,17 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
     header: headerElement
   });
 
+  const authoredHints = showHints ?
+    this.authoredHintsController_.getHintsDisplay() : undefined;
+
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
-  $(this.instructionsDialog.div).on('show.bs.modal', function () {
-    ReactDOM.render(instructionsContent, instructionsReactContainer);
+  $(this.instructionsDialog.div).on('show.bs.modal', () => {
+    ReactDOM.render(
+      <Provider store={this.reduxStore}>
+        <DialogInstructions authoredHints={authoredHints}/>
+      </Provider>,
+      instructionsReactContainer);
   });
 
   if (autoClose) {
