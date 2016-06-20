@@ -39,12 +39,14 @@ const PiskelEditor = React.createClass({
      *          in the editor. */
     this.loadedAnimation_ = null;
 
-    this.piskel = new PiskelApi(this.iframe);
+    this.piskel = new PiskelApi();
+    this.piskel.attachToPiskel(this.iframe);
     this.piskel.onStateSaved(this.onAnimationSaved);
   },
 
   componentWillUnmount() {
-    // TODO: Tear down PiskelApi?
+    this.piskel.detachFromPiskel();
+    this.piskel = undefined;
   },
 
   componentWillReceiveProps(newProps) {
