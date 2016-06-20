@@ -674,7 +674,7 @@ GameLab.prototype.execute = function () {
   this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (this.studioApp_.isUsingBlockly() &&
-      (this.studioApp_.hasExtraTopBlocks() ||
+      (this.studioApp_.hasUnwantedExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())) {
     // immediately check answer, which will fail and report top level blocks
     this.onPuzzleComplete();
