@@ -377,6 +377,10 @@ export function autosaveAnimations() {
       console.log('Error saving animation: ', message);
     };
 
+    // Blockly.fireUiEvent(window, 'workspaceChange');
+    // $(window).trigger('appModeChanged');
+    // Could we hook into the normal autosave loop instead?
+
     changedAnimationKeys.forEach(key => {
       animationsApi.ajax(
           'PUT',
@@ -445,6 +449,8 @@ export function autosaveAnimations() {
  * @return {SerializedAnimation}
  */
 function getSerializedAnimation(animation) {
+  // Only serialize out properties we need to reconstruct the animation when
+  // we load back in - dropping the cached spritesheet, invalidation flags, etc.
   return _.pick(animation, [
     'name',
     'sourceUrl',
@@ -479,9 +485,16 @@ function getSerializedAnimation(animation) {
  * @return {SerializedAnimationList}
  */
 export function getSerializedAnimationList(animationList) {
+  // Two transformations happen when we serialize animations out.
+  // 1. We only save a subset of animation attributes - see getSerializedAnimation
+  // 2. We stop saving animation data for any animations not in the project
+  //    animation list - we should clean this up on delete, but in case things
+  //    get in an inconsistent state we clean it up here.
   return {
     list: animationList.list,
-    data: _.mapValues(animationList.data, getSerializedAnimation)
+    data: _.pick(
+        _.mapValues(animationList.data, getSerializedAnimation),
+        animationList.list)
   };
 }
 

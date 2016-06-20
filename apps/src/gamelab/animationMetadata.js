@@ -1,6 +1,5 @@
 /** @file Helper methods for working with animation metadata */
 import React from 'react';
-import _ from 'lodash';
 import { animations as animationsApi } from '../clientApi';
 
 /**
