@@ -112,7 +112,7 @@ AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
   this.contextualHints_ = newContextualHints;
   this.updateLightbulbDisplay_(animateLightbulb);
 
-  if (newContextualHints.length > 0) {
+  if (newContextualHints.length > 0 && this.getUnseenHints().length > 0) {
     this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
   }
 };
