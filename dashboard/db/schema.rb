@@ -709,16 +709,17 @@ ActiveRecord::Schema.define(version: 20160617163547) do
   add_index "unexpected_teachers_workshops", ["workshop_id"], name: "index_unexpected_teachers_workshops_on_workshop_id", using: :btree
 
   create_table "user_geos", force: :cascade do |t|
-    t.integer  "user_id",            limit: 4
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.datetime "indexed_at",                     null: false
-    t.string   "ip_address",         limit: 255
-    t.string   "city",               limit: 255
-    t.string   "state",              limit: 255
-    t.string   "country",            limit: 255
-    t.string   "postal_code",        limit: 255
-    t.string   "latitude_longitude", limit: 255
+    t.integer  "user_id",     limit: 4,                           null: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+    t.datetime "indexed_at",                                      null: false
+    t.string   "ip_address",  limit: 255
+    t.string   "city",        limit: 255
+    t.string   "state",       limit: 255
+    t.string   "country",     limit: 255
+    t.string   "postal_code", limit: 255
+    t.decimal  "latitude",                precision: 8, scale: 6
+    t.decimal  "longitude",               precision: 9, scale: 6
   end
 
   add_index "user_geos", ["user_id"], name: "index_user_geos_on_user_id", using: :btree
