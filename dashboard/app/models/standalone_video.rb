@@ -16,6 +16,7 @@
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
 #  notes                    :text(65535)
+#  tts_updated_at           :datetime
 #
 # Indexes
 #
