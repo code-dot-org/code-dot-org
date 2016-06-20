@@ -118,7 +118,7 @@ Sprite.prototype.setImage = function (image, frameCounts) {
     return;
   }
 
-  this.animation_ = new StudioAnimation($.extend({}, options, {
+  this.animation_ = new StudioAnimation(Object.assign({}, options, {
     spriteSheet: new StudioSpriteSheet(options),
     animationFrameDuration: this.getAnimationFrameDuration()
   }));
@@ -185,7 +185,7 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
     return;
   }
 
-  this.legacyAnimation_ = new StudioAnimation($.extend({}, options, {
+  this.legacyAnimation_ = new StudioAnimation(Object.assign({}, options, {
     spriteSheet: new StudioSpriteSheet(options),
     animationFrameDuration: this.getAnimationFrameDuration()
   }));

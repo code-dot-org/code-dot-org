@@ -16,10 +16,6 @@
 
     #clear{:style=>'clear:both'}
 
-  #loc.desktop-feature
-    -if request.path_info == "/"
-      =partial('index_loc')
-
 :javascript
   $ = jQuery;
   $(document).ready(function() {

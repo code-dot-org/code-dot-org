@@ -1,7 +1,14 @@
 "hi-IN":
   hour_of_code: Hour of Code
   hello: "हैलो वर्ल्ड"
+  'yes': 'Yes'
+  'no': 'No'
   select_language: "कृपया अपनी भाषा चुनें"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "अधिक जानें"
   en: "कंप्यूटर विज्ञान"
   computer_science_edweek: "कंप्यूटर विज्ञान शिक्षा सप्ताह"
   csedweek_dates: "दिसंबर 8-14, 2014"
@@ -36,8 +43,8 @@
   og_title: |
     हर बच्चे का अवसर मिलना चाहिए
     har baache avaskar dhe hakadhaar ne
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_description: "हर स्कूल में हर छात्र को कंप्यूटर विज्ञान का अध्ययन करने का अवसर
+    मिलना चाहिए। यह सब कुछ बदल रहा है।"
   hoc2014_heading: <a href="http://hourofcode.com"> ऑवर ऑफ़ कोड</a> में शामिल <br/>
     8-14 दिसंबर, 2014 <br/>
   hoc2014_students: Students
@@ -58,10 +65,10 @@
   csedweek_map_search_placeholder: |
     कोड के घंटे की घटनाओं के लिए खोज
     Code dha ghanta dha ghatana ko dundo
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: "खोजें:"
   csedweek_map_search_reset: Reset
   csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_event: "कोड घंटे की कड़ियाँ"
   csedweek_map_legend_cs_tech_jam: "विशेष घटना"
   cded_sign_up: Sign up
   cded_try_it: "कर के देखे"
@@ -79,27 +86,26 @@
   view_english_site: "देखें हिंदी साइट"
   non_english_tutorials: "ट्यूटोरियल एकाधिक भाषाओं में अनुवाद:"
   write_your_first_program: "अपना पहला कंप्यूटर प्रोग्राम लिखे"
-  learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop
-    programming. This is a game-like tutorial starring video lectures by Bill Gates,
-    Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then
-    statements, and basic algorithms.
+  learn_cs_concepts: "कंप्यूटर विज्ञान की मूलभूत अवधारणाओं की सीखे - ड्रैग और ड्राप
+    तकनीक से । यह एक खेल की तरह का पाठ है जिसकी शुरुआत में बिल गेट्स, मार्क जुकरबर्ग
+    के साथ एंग्री बर्ड और प्लान्ट्स के साथ जॉम्बीज है । सीखें रिपीट होने वाले लूप,
+    यदि- तो ( if -then) आदेश एवं शुरुआती गणित । "
   all_ages: "सभी आयु"
   beginner: "शुरआती"
   n_participants: "# प्रतिभागियों"
   go: "जाएं"
   thank_you_: "धन्यवाद!"
   congratulations: "बधाइयाँ!"
-  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
-  congrats_next_tutorials_title: Try these courses next
+  congratulations_on_completing_hoc: "एक ऑवर ऑफ़ कोड को पूरा करने पर बधाई।"
+  congratulations_volunteer: 'बधाई: अब जबकि आपने आवर ऑफ़ कोड को इस्तेमाल किया है, <a
+    href="https://code.org/volunteer"> एक कक्षा में स्वयंसेवक बनने के लिए साइन अप
+    करें</a> और छात्रों की मदद करें आवर ऑफ़ कोड सिखने में ।'
+  congratulations_on_completing_course1: "पाठ्यक्रम एक को पूरा करने पर बधाई"
+  congratulations_on_completing_course2: "पाठ्यक्रम दो को पूरा करने पर बधाई"
+  congratulations_on_completing_course3: "पाठ्यक्रम तीन को पूरा करने पर बधाई"
+  congratulations_on_completing_course4: "पाठ्यक्रम चार को पूरा करने पर बधाई"
+  congratulations_on_completing_accelerated: "त्वरित पाठ्यक्रम को पूरा करने पर बधाई"
+  congrats_next_tutorials_title: "अगले स्तर करने के लिए बढ़े"
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: "उपलब्धि का एक प्रमाण पत्र प्राप्त करे"
@@ -538,10 +544,10 @@
     and/or participation
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
-  volunteer_engineer_submission_field_email: Email address
+  volunteer_engineer_submission_field_email: "ईमेल पता"
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
-  volunteer_engineer_submission_field_email_placeholder: Email address
+  volunteer_engineer_submission_field_email_placeholder: "ईमेल पता"
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
@@ -597,6 +603,7 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links (in English only)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
     office hours.
   dashboard_landing_print_certificates: Print certificates for students who finish
@@ -616,6 +623,11 @@
   dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
     by our partners.</a> Learn to program with robots, make web pages, make your own
     app, or explore other languages like C++, Ruby, or Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
@@ -669,6 +681,13 @@
   dashboard_action_required: "आवश्यक है"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -699,6 +718,7 @@
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: New section
@@ -709,6 +729,7 @@
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Section Name
@@ -798,6 +819,8 @@
   dashboard_course2: 'Course 2:'
   dashboard_course3: 'Course 3:'
   dashboard_course4: 'Course 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Overview
@@ -996,6 +1019,11 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1015,6 +1043,8 @@
   hoc_category_name: Hour of Code
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1699,11 +1729,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

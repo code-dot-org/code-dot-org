@@ -2,12 +2,12 @@ require 'test_helper'
 
 class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   setup do
-    @user = create :admin
+    @user = create :admin_teacher
     sign_in(@user)
-    @plc_course = create :plc_course
+    @plc_course = create(:plc_course, name: 'Test Course')
     @user_course_enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
     @course_unit = create(:plc_course_unit, plc_course: @plc_course)
-    @enrollment_unit_assignment = create(:plc_enrollment_unit_assignment, plc_course_unit: @course_unit, plc_user_course_enrollment: @user_course_enrollment)
+    @enrollment_unit_assignment = create(:plc_enrollment_unit_assignment, plc_course_unit: @course_unit, plc_user_course_enrollment: @user_course_enrollment, user: @user)
     @district_contact = create :district_contact
   end
 
@@ -134,5 +134,21 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
 
     get :index
     assert_redirected_to_sign_in
+  end
+
+  test 'Can navigate to specific course with underscored url' do
+    other_course = create(:plc_course, name: 'Other Course')
+    create(:plc_user_course_enrollment, user: @user, plc_course: other_course)
+
+    get :index, course: 'test-course'
+    assert_select '.course_title', 'Test Course'
+
+    @controller = Plc::UserCourseEnrollmentsController.new
+    get :index, course: 'other-course'
+    assert_select '.course_title', 'Other Course'
+
+    @controller = Plc::UserCourseEnrollmentsController.new
+    get :index
+    assert_select '.course_title', 2
   end
 end

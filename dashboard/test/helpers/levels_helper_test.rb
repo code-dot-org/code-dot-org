@@ -294,4 +294,54 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal false, app_options[:level]['submittable']
   end
 
+  test 'show solution link shows link for appropriate courses' do
+    user = create :teacher
+    sign_in user
+
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script.update(professional_learning_course: true)
+    @script_level = create(:script_level, level: @level, script: @script)
+    assert_not can_view_solution?
+
+    sign_out user
+    user = create :admin
+    sign_in user
+    assert can_view_solution?
+
+    @script.update(name: 'algebra')
+    assert_not can_view_solution?
+
+    @script.update(name: 'some pd script')
+    @script_level = nil
+    assert_not can_view_solution?
+
+    @script_level = create(:script_level, level: @level, script: @script)
+    @level.update(ideal_level_source_id: nil)
+    assert_not can_view_solution?
+
+  end
+
+  test 'show solution link shows link for appropriate users' do
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script_level = create(:script_level, level: @level, script: @script)
+
+    user = create :admin
+    sign_in user
+    assert can_view_solution?
+
+    sign_out user
+    user = create :teacher
+    sign_in user
+    assert can_view_solution?
+
+    sign_out user
+    user = create :student
+    sign_in user
+    assert_not can_view_solution?
+
+    sign_out user
+    assert_not can_view_solution?
+  end
 end

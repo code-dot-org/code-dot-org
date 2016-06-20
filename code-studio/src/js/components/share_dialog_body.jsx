@@ -1,8 +1,7 @@
+import React from 'react';
 var AbuseError = require('./abuse_error');
 var SendToPhone = require('./send_to_phone');
 var AdvancedShareOptions = require('./AdvancedShareOptions');
-
-/* global React */
 
 var select = function (event) {
   event.target.select();

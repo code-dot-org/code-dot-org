@@ -28,6 +28,19 @@ def replace_hostname(url)
   url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
 end
 
+# Get the SCSS color constant for a given status.
+def color_for_status(status)
+  {
+    submitted: 'rgb(118, 101, 160)',    # $level_submitted
+    perfect: 'rgb(14, 190, 14)',        # $level_perfect
+    passed: 'rgb(159, 212, 159)',       # $level_passed
+    attempted: 'rgb(255, 255, 0)',      # $level_attempted
+    not_tried: 'rgb(254, 254, 254)',    # $level_not_tried
+    review_rejected: 'rgb(204, 0, 0)',  # $level_review_rejected
+    review_accepted: 'rgb(11, 142, 11)' # level_review_accepted
+  }[status.to_sym]
+end
+
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.navigate.to "#{url}"
@@ -317,9 +330,18 @@ end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
   steps %{
-    And I wait to see ".progress_container"
+    And I wait to see ".header_level_container"
     And I wait for 10 seconds
-    And element ".progress_container a.level_link:nth(#{level.to_i - 1})" has class "#{test_result}"
+    And element ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+  }
+end
+
+Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
+  steps %{
+    Then I click selector ".header_popup_link"
+    And I wait to see ".user-stats-block"
+    And I wait for 10 seconds
+    And element ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -328,7 +350,7 @@ Then /^I navigate to the course page and verify progress for course "([^"]*)" st
     Then I am on "http://studio.code.org/s/#{course}"
     And I wait to see ".user-stats-block"
     And I wait for 10 seconds
-    And element ".user-stats-block .games:nth(#{stage.to_i - 1}) a.level_link:nth(#{level.to_i - 1})" has class "#{test_result}"
+    And element ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -336,6 +358,10 @@ end
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   element_has_text(selector, expected_text)
+end
+
+Then /^element "([^"]*)" has css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_value|
+  element_has_css(selector, property, expected_value)
 end
 
 Then /^I set selector "([^"]*)" text to "([^"]*)"$/ do |selector, text|
@@ -596,7 +622,7 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
-    And I type "16" into "#user_age"
+    And I select the "16" option in dropdown "user_user_age"
     And I click selector "input[type=submit][value='Sign up']"
     And I wait until I am on "http://studio.code.org/"
   }
@@ -608,6 +634,8 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher"
     And I wait to see "#user_name"
+    And I select the "Teacher" option in dropdown "user_user_type"
+    And I wait to see "#schoolname-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"

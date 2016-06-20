@@ -1,44 +1,53 @@
+- content_for(:head) do
+  =javascript_include_tag 'js/plc'
+
 = render partial: 'shared/check_admin'
-#landingpage{class: @script.professional_learning_course ? 'teacher-course' : nil}
-  .row#lesson
-    .span9#heading
-      %h3.whitetext
+#landingpage
+  #lesson
+    - if @script.professional_learning_course?
+      #breadcrumb
+      - react_props = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.name.downcase.sub(' ', '-'))}
+      :javascript
+        ReactDOM.render(
+          React.createElement(window.dashboard.plcHeader, #{react_props.to_json}),
+          document.getElementById('breadcrumb')
+        );
+    - else
+      #trynow
+        = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
+        %p
+          = link_to t('landing.support'), t('landing.support_url')
+          %br/
+
+    #heading
+      %h2
         = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
         = data_t_suffix('script.name', @script.name, 'title')
         - if @script.beta?
           %span.betatext
-            &nbsp;
             = t('beta')
 
-      %p.smallwhitetext
+      %p
         = data_t_suffix('script.name', @script.name, 'description')
 
-
-    .span3#trynow
-      = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
-      %p.lightgreytext
-        = link_to t('landing.support'), t('landing.support_url')
-        %br/
-
     - if @script.banner_image
-      .span12
-        %p
-          = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
+      %p
+        = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
 
     - if @script.beta?
-      .span10
-        %p.lightgreytext
-          != t('landing.prerelease_hoc2014')
+      %p.lightgreytext
+        != t('landing.prerelease_hoc2014')
 
-  .row#stats
-    .span12#rightside
+  #stats
+    .user-stats-block
+      :javascript
+        dashboard.progress.renderCourseProgress(#{@script.summarize.to_json});
+      = render partial: 'shared/user_stats_key'
+
       - if @script.trophies
-        = render partial: 'shared/user_stats', locals: { user: current_user, width: '100%', async: true }
-      - else
-        .user-stats-block
-          :javascript
-            dashboard.progress.renderCourseProgress(#{@script.summarize.to_json});
-          = render partial: 'shared/user_stats_key'
+        %div{style: 'clear: both;'}
+        #trophies
+          = render partial: 'shared/concept_trophy_block', locals: {concept_progress: summarize_trophies(@script), added_style: 'padding: 10px;'}
 
   %div{style: 'clear: both;'}
   %br/

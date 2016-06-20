@@ -131,3 +131,32 @@ assessment 'PS U3 Assessment1 new'
 
 stage 'Free Response'
 level 'Sample Free Response'
+
+stage 'Sample PLC Assessment'
+assessment 'Sample CSP Assessment'
+
+stage 'Swapped Levels'
+variants
+  level '2-3 Maze 1',  active: false
+  level '2-3 Maze 4'
+endvariants
+variants
+  level '2-3 Maze 2', active: false
+  level '2-3 Maze 5'
+endvariants
+variants
+  level '2-3 Maze 3', active: false
+  level '2-3 Maze 6'
+endvariants
+variants
+  level '2-3 Artist 1 new', active: false
+  level '2-3 Artist Loops 1'
+endvariants
+variants
+  level '2-3 Artist Loops 2', active: true
+  level '2-3 Artist 2', active: false
+endvariants
+variants
+  level '2-3 Artist Loops 4'
+  level '2-3 Artist 3', active: false
+endvariants

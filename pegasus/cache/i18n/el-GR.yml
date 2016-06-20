@@ -1,7 +1,14 @@
 "el-GR":
   hour_of_code: "Η Ώρα του Κώδικα"
   hello: "Γεια σου κόσμε"
+  'yes': "Ναι"
+  'no': "Όχι"
   select_language: "Παρακαλώ επιλέξτε τη γλώσσα σας"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "Μάθετε περισσότερα"
   en: "Επιστήμη των Υπολογιστών"
   computer_science_edweek: "Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών"
   csedweek_dates: 8-14 Δεκεμβρίου 2014
@@ -622,6 +629,7 @@
   dashboard_landing_new_beta: "Νέο! Δοκιμάστε τα beta-μαθήματά μας για μαθητές K-5."
   dashboard_landing_new_k5courses: "Νέο! Δοκιμάστε τα μαθήματά μας για μαθητές K-5."
   dashboard_landing_useful_links: "Μερικοί άλλοι Χρήσιμοι Σύνδεσμοι (στα Αγγλικά μόνο)"
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: "Θέστε ένα ερώτημα εσείς οι ίδιοι! Επισκεφθείτε
     τις μηνιαίες βίντεο ώρες γραφείου."
   dashboard_landing_print_certificates: "Εκτύπωση πιστοποιητικών για τους μαθητές
@@ -645,6 +653,11 @@
     που προσφέρονται από τους συνεργάτες μας.</a> Μάθετε να προγραμματίζετε με ρομπότ,
     να φτιάχνετε ιστοσελίδες, να φτιάχνετε τη δική σας εφαρμογή (app) ή να εξερευνήσετε
     άλλες γλώσσες όπως C++, Ruby, ή Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: "Η Ώρα του Κώδικα για Όλες τις Ηλικίες"
   dashboard_hoc_courses_desc: "Δοκιμάστε κάποιο από αυτά τα μικρότερα σεμινάρια 1
     ώρας με τους μαθητές σας!"
@@ -705,6 +718,13 @@
   dashboard_action_required: "απαιτείται"
   dashboard_assessments_view: "Δείτε τις αξιολογήσεις σε:"
   dashboard_assessments_none: "Δεν υπάρχουν αξιολογήσεις"
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: "Φίλτρο κατά στάδιο:"
   dashboard_filter_all: "Ολα"
   dashboard_download_csv: "Κατεβάστε το CSV"
@@ -735,6 +755,7 @@
   dashboard_progress_view: "Προβολή προόδου σε:"
   dashboard_progress_student_in_script: "Πληροφορίες προόδου για τον/την %{student_name}
     στο %{script_name}"
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: "Δείτε τις απαντήσεις κειμένου σε:"
   dashboard_responses_none: "Δεν υπάρχουν απαντήσεις κειμένου"
   dashboard_sections_new_section: "Νέα ενότητα"
@@ -746,6 +767,7 @@
   dashboard_sections_table_secret: "Τύπος σύνδεσης"
   dashboard_sections_table_grade: "Βαθμος"
   dashboard_sections_table_course: "Μάθημα"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Μαθητές"
   dashboard_sections_table_code: "Κωδικός ενότητας"
   dashboard_sections_name: "Όνομα ενότητας"
@@ -849,6 +871,8 @@
   dashboard_course2: "Μάθημα 2:"
   dashboard_course3: "Μάθημα 3:"
   dashboard_course4: "Μάθημα 4 (beta): "
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: "Πρόγραμμα σπουδών"
   dashboard_curriculum_overview: "Επισκόπηση Πρόγραμμα Εκπαίδευσης Νηπιαγωγείο έως
     Ε΄ Δημοτικού"
@@ -1058,6 +1082,11 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: "Τάξεις Γ΄ Γυμνασίου - Γ΄ Λυκείου"
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1077,6 +1106,8 @@
   hoc_category_name: "Η Ώρα του Κώδικα"
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: "Εργαστήριο εφαρμογών"
   applab_gradelevel: "Ηλικίες 13+"
   applab_shortdescription_congrats: "Το App Lab (Εργαστήριο εφαρμογών) είναι ένα περιβάλλον
@@ -1863,11 +1894,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "παίξε"
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

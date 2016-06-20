@@ -20,7 +20,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       missingBlocks: [],
-      xml: '<xml><block type="maze_forever"><statement name="DO"><block type="maze_moveForward"><next><block type="maze_moveForward"><next><block type="maze_turn"><title name="DIR">turnLeft</title></block></next></block></next></block></statement></block></xml>',
+      xml: '<xml><block type="when_run"><next><block type="maze_forever"><statement name="DO"><block type="maze_moveForward"><next><block type="maze_moveForward"><next><block type="maze_turn"><title name="DIR">turnLeft</title></block></next></block></next></block></statement></block></next></block></xml>',
       customValidator: function () {
         return studioApp.enableShowCode === true && studioApp.enableShowBlockCount === true;
       }
@@ -32,7 +32,7 @@ module.exports = {
         testResult: TestResults.MISSING_BLOCK_UNFINISHED
       },
       missingBlocks: [reqBlocks().WHILE_LOOP],
-      xml: '<xml><block type="maze_moveForward"><next><block type="maze_turn"><title name="DIR">turnLeft</title></block></next></block></xml>'
+      xml: '<xml><block type="when_run"><next><block type="maze_moveForward"><next><block type="maze_turn"><title name="DIR">turnLeft</title></block></next></block></next></block></xml>'
     }
   ]
 };

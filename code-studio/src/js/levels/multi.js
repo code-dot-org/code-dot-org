@@ -1,9 +1,14 @@
-/* global $, Dialog, appOptions, CDOSounds */
+/* global Dialog, appOptions, CDOSounds */
+import $ from 'jquery';
 
 window.levelGroup = window.levelGroup || {levels: {}};
 
-var Multi = window.Multi = function (id, standalone, numAnswers, answers, lastAttemptString) {
+var Multi = window.Multi = function (levelId, id, standalone, numAnswers, answers, lastAttemptString) {
 
+  // The dashboard levelId.
+  this.levelId = levelId;
+
+  // The DOM id.
   this.id = id;
 
   // Whether this multi is the only puzzle on a page, or part of a group of them.
@@ -53,7 +58,7 @@ Multi.prototype.choiceClicked = function (button) {
   this.clickItem(index);
 
   if (window.levelGroup && window.levelGroup.answerChangedFn) {
-    window.levelGroup.answerChangedFn();
+    window.levelGroup.answerChangedFn(this.levelId);
   }
 };
 
@@ -165,22 +170,11 @@ Multi.prototype.ready = function () {
   }
 };
 
-Multi.prototype.getCurrentAnswer = function () {
-  var answer;
-
-  if (this.numAnswers === 1) {
-    answer = this.lastSelectionIndex;
-  } else {
-    answer = this.selectedAnswers;
-  }
-
-  return { response: answer, valid: answer !== -1 };
-};
-
 // called by external result-posting code
-Multi.prototype.getResult = function () {
+Multi.prototype.getResult = function (dontAllowSubmit) {
   var answer;
   var errorType = null;
+  var valid;
 
   if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
     errorType = "toofew";
@@ -188,15 +182,17 @@ Multi.prototype.getResult = function () {
 
   if (this.numAnswers === 1) {
     answer = this.lastSelectionIndex;
+    valid = answer !== -1;
   } else {
     answer = this.selectedAnswers;
+    valid = this.selectedAnswers.length === this.numAnswers;
   }
 
 
   var result;
   var submitted;
 
-  if (window.appOptions.level.submittable || this.forceSubmittable) {
+  if (!dontAllowSubmit && (window.appOptions.level.submittable || this.forceSubmittable)) {
     result = true;
     submitted = true;
   } else {
@@ -208,7 +204,8 @@ Multi.prototype.getResult = function () {
     "response": answer,
     "result": result,
     "errorType": errorType,
-    "submitted": submitted
+    "submitted": submitted,
+    "valid": valid
   };
 };
 

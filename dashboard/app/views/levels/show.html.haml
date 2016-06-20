@@ -51,5 +51,5 @@
 -#
   HACK: The respond_to? test below is to workaround a bug where a server
   instance will sometimes fail to define that method.
-- if @script && current_user.try(:teacher?) && (!@script.respond_to?('pd?') || !@script.pd?)
+- if @script && current_user.try(:teacher?) && (!@script.respond_to?('professional_course?') || !@script.professional_course?)
   = render partial: 'levels/teacher'

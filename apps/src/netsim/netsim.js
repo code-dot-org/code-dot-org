@@ -7,8 +7,11 @@
 /* global confirm */
 'use strict';
 
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var utils = require('../utils');
-var _ = require('../lodash');
+var _ = require('lodash');
 var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
@@ -222,11 +225,9 @@ NetSim.prototype.init = function (config) {
   var generateCodeAppHtmlFromEjs = function () {
     return page({
       data: {
-        visualization: '',
         localeDirection: this.studioApp_.localeDirection(),
-        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl})
-      },
-      hideRunButton: true
+        instructions: this.level.instructions
+      }
     });
   }.bind(this);
 

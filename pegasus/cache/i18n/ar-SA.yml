@@ -1,7 +1,14 @@
 "ar-SA":
   hour_of_code: "ساعة البرمجة"
   hello: "مرحباً بالعالم"
+  'yes': "نعم"
+  'no': "لا"
   select_language: "من فضلك اختر لغتك"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "اعرف المزيد"
   en: "علوم الكمبيوتر"
   computer_science_edweek: "الاسبوع التعليمي لعلوم الكمبيوتر"
   csedweek_dates: 8-14 كانون الأول/ديسمبر، 2014
@@ -123,21 +130,21 @@
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
   third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratchjr_btn_site: "زر Scratch Jr."
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_site: "زر Scratch"
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_lightbot_btn_site: "زر Lightbot"
   third_party_khan_desc: Learn how to program drawings, animations, and games using
     JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
     can share whatever you create, explore what others have created and learn from
@@ -365,7 +372,7 @@
   homepage_slot_text_link_othercourses: "دورات أخرى على الإنترنت"
   homepage_slot_text_title_educators: "المتعلمون"
   homepage_slot_text_blurb_educators: "علم طلّابك"
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: "المدرسة الابتدائية"
   homepage_slot_text_link_middle: "المدرسة الإعدادية"
   homepage_slot_text_link_high: "المدرسة الثانوية"
   homepage_slot_text_link_k5: "دورات للروضة حتى الصف الخامس"
@@ -376,7 +383,7 @@
   homepage_slot_text_link_stats: "انظر إلى الإحصائيات"
   homepage_slot_text_link_buy: "إنضم"
   homepage_slot_text_link_donate: "تبرع"
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: "القمصان, القبعات, و المزيد"
   homepage_header_codestudio: "انجازات الطالب بستوديو البرمجة"
   homepage_header_donors: "موقع code.org  يشكر الداعمين له"
   homepage_donors_seall: "عرض الكل"
@@ -563,6 +570,7 @@
     لطلاب K-5 ."
   dashboard_landing_new_k5courses: "جديد ! جرب دوراتنا للطلاب K-5."
   dashboard_landing_useful_links: "روابط أخرى مفيدة"
+  dashboard_landing_classroom_resources: "موارد لفصلك"
   dashboard_landing_office_hours: "اسأل سؤالاً شخصيا! قم بزيارة مكاتبنا خلال ساعات
     العمل شهريا ."
   dashboard_landing_print_certificates: "طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة
@@ -581,6 +589,10 @@
   dashboard_landing_more_tutorials_desc: هناك المزيد من الدروس <a href="/learn/beyond">المقدمة
     من قبل شركائنا.</a> لتعلم برمجة الروبوتات أو صفحات الويب أو إنشاء تطبيقك الخاص
     أو استكشاف لغات برمجة أخرى مثل سي ++ أو روبي أو بايثون.
+  dashboard_landing_inspire: "إلهام طلابك مع ملصقات، وأشرطة الفيديو، والمزيد."
+  dashboard_landing_video_library: "استخدم فيديو من مكتبة الفيديو لمفاهيم علوم الكمبيوتر."
+  dashboard_landing_report_bug: "طلب ميزة أو الإبلاغ عن خلل."
+  dashboard_landing_teacher_forum: "انضم إلى مجتمع التعلم المهني."
   dashboard_hoc_courses: "ساعة البرمجة لجميع الأعمار"
   dashboard_hoc_courses_desc: "قم بتجريب واحد من الدروس القصيرة لساعة واحدة مع طلابك!"
   dashboard_hoc_courses_desc_and_cta: جرب هذه الدروس القصيرة ، ساعة واحدة مع طلابك.
@@ -629,8 +641,15 @@
   dashboard_action_remove_confirm: "حذف؟"
   dashboard_action_done: "‏‏تم"
   dashboard_action_required: "متطلب"
-  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_view: "عرض التقييمات في:"
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -662,6 +681,7 @@
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: "القسم جديد"
@@ -672,6 +692,7 @@
   dashboard_sections_table_secret: "نوع تسجيل الدخول"
   dashboard_sections_table_grade: "الصف الدراسي"
   dashboard_sections_table_course: "الدرس"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "الطلاب"
   dashboard_sections_table_code: "قسم البرمجة"
   dashboard_sections_name: "إسم القسم"
@@ -759,6 +780,8 @@
   dashboard_course2: "الدرسة الثاني:"
   dashboard_course3: "الدرس الثالت:"
   dashboard_course4: "الدّرس 4 (تجريبي):"
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: "المناهج"
   dashboard_curriculum_overview: "نظرة عامة على منهاج الروضة - صف 5"
   dashboard_overview: "لمحة عامة"
@@ -825,12 +848,14 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: "اعرف المزيد"
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition: |
+    كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح ممثليكم يسمع منك. هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 التعليم علوم الكمبيوتر.
+  dashboard_announce_petition_button: |
+    Translate
+
+    add your name
+
+    إضافة اسمك
   code_hoc_coming: "إرسال رسالة إلكترونية"
   code_sign_up: "قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب"
   learn_more: "جرب الآن"
@@ -961,6 +986,11 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -980,6 +1010,8 @@
   hoc_category_name: "ساعة من البرمجة"
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: "مختبر التطبيق"
   applab_gradelevel: "أعمارهم 13 +"
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1038,8 +1070,8 @@
   course1_gradelevel: "الأعمار 4-6"
   course2_gradelevel: "الأعمار 6-18"
   course3_gradelevel: "الأعمار 8-18"
-  course4_gradelevel: Ages 10-18
-  accelerated_gradelevel: Ages 10-18
+  course4_gradelevel: "الذين تتراوح أعمارهم بين 10-13"
+  accelerated_gradelevel: "الذين تتراوح أعمارهم بين 10-13"
   codeorg_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
   codeintl_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
   thinkersmithspanish_platformtext: "غير مربوطة"
@@ -1630,11 +1662,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "إلعب"
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

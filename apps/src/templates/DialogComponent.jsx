@@ -1,3 +1,6 @@
+// TODO: Temporary measure to make sure code-studio doesn't end up with two Reacts
+var React = window.React;
+
 /**
  * Dialog
  * A generic modal dialog that has an x-close in the upper right, and a

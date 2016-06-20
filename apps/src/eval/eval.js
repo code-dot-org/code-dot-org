@@ -21,6 +21,8 @@ var Eval = module.exports;
 /**
  * Create a namespace for the application.
  */
+var React = require('react');
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var evalMsg = require('./locale');
@@ -36,6 +38,7 @@ var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
 var EvalText = require('./evalText');
 var utils = require('../utils');
+var experiments = require('../experiments');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -82,6 +85,8 @@ Eval.init = function (config) {
   config.skin.smallStaticAvatar = null;
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
+
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');

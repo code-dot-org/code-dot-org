@@ -1,4 +1,4 @@
-/* global React */
+import React from 'react';
 
 /**
  * A component containing some text/links for projects that have had abuse

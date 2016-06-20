@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "nogriezt atstarpes no kreisās puses",
   "TEXT_TRIM_OPERATOR_RIGHT": "nogriezt atstarpes no labās puses",
   "TEXT_TRIM_TOOLTIP": "Atgriež tekstu ar nogrieztām atstarpēm no viena vai abiem galiem.",
+  "UNUSED_CODE": "Unused code",
   "VARIABLES_DEFAULT_NAME": "elements",
   "VARIABLES_GET_CREATE_SET": "Izveido 'saraksts %1'",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

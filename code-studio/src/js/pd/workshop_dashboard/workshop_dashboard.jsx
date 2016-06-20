@@ -1,5 +1,3 @@
-/* global React */
-
 /*
   Main landing page and router for the workshop dashboard.
  */

@@ -164,7 +164,7 @@ Level 10 [free play]
         </value>
       </block>
     </category>
-    <% // Functions differ depending on page and level. -%>
+    <% // Functions differ depending on page and locals.level. -%>
     <% if (page === 2 && level >= 2) { -%>
       <category name="<%= msg.catProcedures() %>">
         <block type="draw_a_square" inline="true">
@@ -224,7 +224,7 @@ Level 10 [free play]
         <title name="TIMES">4</title>
       </block>
     </category>
-    <% // Math: Just number blocks until final level. -%>
+    <% // Math: Just number blocks until final locals.level. -%>
     <category name="<%= msg.catMath() %>">
       <block type="math_number"></block>
       <% if (level === 10) { -%>
@@ -414,7 +414,7 @@ Level 10 [free play]
       <block type="logic_null"></block>
       <block type="logic_ternary"></block>
     </category>
-    <% // Math: Just number blocks until final level. -%>
+    <% // Math: Just number blocks until final locals.level. -%>
     <category name="<%= msg.catMath() %>">
       <block type="math_number"></block>
       <block type="math_arithmetic" inline="true"></block>

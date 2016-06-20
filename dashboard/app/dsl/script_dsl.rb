@@ -84,6 +84,10 @@ class ScriptDSL < BaseDSL
     level(name, {assessment: true})
   end
 
+  def named_level(name)
+    level(name, {named_level: true})
+  end
+
   def level(name, properties = {})
     active = properties.delete(:active)
     buttontext = properties.delete(:buttontext)

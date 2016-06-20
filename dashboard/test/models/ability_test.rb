@@ -126,4 +126,65 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @admin_script_level)
   end
 
+  test 'with hint_access manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
+    time_now = DateTime.now
+    hint_access_student = create :student
+    UserPermission.create!(
+      user_id: hint_access_student.id,
+      permission: UserPermission::HINT_ACCESS,
+      created_at: time_now,
+      updated_at: time_now
+    )
+    ability = Ability.new(hint_access_student)
+
+    assert ability.can?(:manage, LevelSourceHint)
+    assert ability.can?(:manage, FrequentUnsuccessfulLevelSource)
+  end
+
+  test 'teachers manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
+    ability = Ability.new(create(:teacher))
+
+    assert ability.can?(:manage, LevelSourceHint)
+    assert ability.can?(:manage, FrequentUnsuccessfulLevelSource)
+  end
+
+  test 'students do not manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
+    ability = Ability.new(create(:student))
+
+    assert ability.cannot?(:manage, LevelSourceHint)
+    assert ability.cannot?(:manage, FrequentUnsuccessfulLevelSource)
+  end
+
+  test 'non-admins can read only own UserPermission' do
+    user = create :user
+    user_permission = UserPermission.create(
+      user_id: user.id, permission: UserPermission::DISTRICT_CONTACT)
+    ability = Ability.new user
+
+    ability.cannot?(:create, UserPermission)
+    ability.cannot?(:read, UserPermission)
+    ability.cannot?(:update, UserPermission)
+    ability.cannot?(:delete, UserPermission)
+
+    ability.can?(:read, user_permission)
+    ability.cannot?(:create, user_permission)
+    ability.cannot?(:update, user_permission)
+    ability.cannot?(:delete, user_permission)
+  end
+
+  test 'admins can manage UserPermission' do
+    admin_ability = Ability.new(create(:admin))
+    assert admin_ability.can?(:manage, UserPermission)
+  end
+
+  test 'levelbuilders can manage appropriate objects' do
+    user = create :user
+    UserPermission.create(
+      user_id: user.id, permission: UserPermission::LEVELBUILDER)
+    ability = Ability.new user
+
+    assert ability.can?(:manage, Level)
+    assert ability.can?(:manage, Script)
+    assert ability.can?(:manage, ScriptLevel)
+  end
 end

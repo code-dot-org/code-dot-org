@@ -77,6 +77,62 @@ en:
         : A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.
         Contract for rocket-height: Contract for rocket-height
         rocket-height|Number|Number: rocket-height|Number|Number
+    evaluation_multi:
+      CSP PD Example Question 1:
+        The encoding numbers unit: The encoding numbers unit
+        The sending binary messages unit: The sending binary messages unit
+        Which unit will you teach first: Which unit will you teach first
+      CSP PD Example Question 2:
+        How will you teach students?: How will you teach students?
+        I will make them learn from peers: I will make them learn from peers
+        I will make them write: I will make them write
+      CSP PD Q2:
+        How will you teach students?: How will you teach students?
+        I will make them learn from peers: I will make them learn from peers
+        I will make them write: I will make them write
+      TeacherCon Eval Q1:
+        '1.10: Routing and Redundancy': '1.10: Routing and Redundancy'
+        '1.11: Packets and Making a Reliable Internet': '1.11: Packets and Making a Reliable Internet'
+        '1.4: Number Systems - Circle Triangle Square': '1.4: Number Systems - Circle Triangle Square'
+        '1.6: Sending Numbers': '1.6: Sending Numbers'
+        '1.9: Internet Addressing (Battleship)': '1.9: Internet Addressing (Battleship)'
+        '2.10: Good and Bad Data Visualization': '2.10: Good and Bad Data Visualization'
+        '2.2: Text Compression': '2.2: Text Compression'
+        '2.3: Black and White Pixelation': '2.3: Black and White Pixelation'
+        'U1L10: Routing and Redundancy': 'U1L10: Routing and Redundancy'
+        'U1L11: Packets and Making a Reliable Internet': 'U1L11: Packets and Making a Reliable Internet'
+        'U1L4: Number Systems - Circle Triangle Square': 'U1L4: Number Systems - Circle Triangle Square'
+        'U1L6: Sending Numbers': 'U1L6: Sending Numbers'
+        'U1L9: Internet Addressing (Battleship)': 'U1L9: Internet Addressing (Battleship)'
+        'U2L10: Good and Bad Data Visualization': 'U2L10: Good and Bad Data Visualization'
+        'U2L2: Text Compression': 'U2L2: Text Compression'
+        'U2L3: Black and White Pixelation': 'U2L3: Black and White Pixelation'
+        What lesson are you planning and teaching at TeacherCon?: What lesson are you planning and teaching at TeacherCon?
+      TeacherCon Eval Q2:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      TeacherCon Eval Q3:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      TeacherCon Eval Q5:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      TeacherCon Eval Q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      TeacherCon Eval Q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      TeacherCon Evaluation Q4:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
@@ -94,10 +150,24 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      CSD - Headers and Lists - Hobbies Project: {}
+      CSD - Headers and Lists - Recipe Project: {}
+      CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
+      CSD U3 - images - pick your final work: {}
+      CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
+      CSD U3 Draw Loop Stop: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Keypress Stop: {}
+      CSD U3 SFLP Card Project: {}
+      CSD U3 SFLP Conditionals:
+        description here: description here
+        title: title
+      CSD U3 SFLP Sprites and Images:
+        description here: description here
+        title: title
+      CSD U3 Sprites STOP sprites and variables: {}
       CSD U3 Variables Reassign Predict No Response: {}
       CSD U3 Variables STOP misconceptions: {}
       CSD U3 Variables STOP misconceptions prediction: {}
@@ -667,6 +737,7 @@ en:
       Equity Stage3Go: {}
       Equity Strategies: {}
       Equity Welcome: {}
+      Exploring Practices and Strategies during TeacherCon: {}
       External level test (will):
         first computer program: first computer program
       Forum-ECSPD-Unit 2-Teaching Practice: {}
@@ -693,6 +764,7 @@ en:
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
+      Lesson 1.4 Overview: {}
       Lesson Prep Final: {}
       OPD-K5 About: {}
       OPD-K5 Assessment: {}
@@ -746,6 +818,10 @@ en:
       OPD-K5 Your Plan: {}
       OPD-Stage3Start: {}
       OnlinePDK5 Intro: {}
+      'Overview: Balancing Teachers and Tools': {}
+      'Overview: Capturing Student Learning': {}
+      'Overview: Discovery Learning': {}
+      'Overview: Group Work and Peer Learning': {}
       PD check your progress: {}
       PDAlg 1-3 Circles: {}
       PDAlg 1-3 Circles Practice: {}
@@ -951,6 +1027,7 @@ en:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
         TLO in Practice: TLO in Practice
+      TeacherCon Agenda: {}
       Test External Markdown:
         Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
@@ -959,9 +1036,13 @@ en:
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
+      U1L10 Lesson Overview: {}
+      U1L10 Lesson Plan: {}
       U1L10 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L11 Lesson Overview: {}
+      U1L11 Lesson Plan: {}
       U1L11 Student Lesson Introduction:
         description here: description here
         title: title
@@ -989,6 +1070,8 @@ en:
       U1L3 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L4 Lesson Overview: {}
+      U1L4 Lesson Plan: {}
       U1L4 Student Lesson Introduction:
         description here: description here
         title: title
@@ -998,6 +1081,8 @@ en:
       U1L5 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L6 Lesson Overview: {}
+      U1L6 Lesson Plan: {}
       U1L6 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1007,12 +1092,16 @@ en:
       U1L8 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L9 Lesson Overview: {}
+      U1L9 Lesson Plan: {}
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
+      U2L10 Lesson Overview: {}
+      U2L10 Lesson Plan: {}
       U2L10 Student Lesson Introduction:
         'DNS in the Real World ': 'DNS in the Real World '
       U2L11 Student Lesson Introduction:
@@ -1035,10 +1124,14 @@ en:
         One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
       U2L19 Student Lesson Introduction:
         Public Key Encryption: Public Key Encryption
+      U2L2 Lesson Overview: {}
+      U2L2 Lesson Plan: {}
       U2L2 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
       U2L20 Student Lesson Introduction:
         Security and Hacking in the Real World: Security and Hacking in the Real World
+      U2L3 Lesson Overview: {}
+      U2L3 Lesson Plan: {}
       U2L3 Student Lesson Introduction:
         Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
       U2L4 Student Lesson Introduction:
@@ -1389,6 +1482,10 @@ en:
         description here: description here
         title: title
       Unit 3 Survey 2: {}
+      Welcome to TeacherCon!: {}
+      aEstory1:
+        Artist Exemplar First Story: Artist Exemplar First Story
+        Why are they doing this stage?: Why are they doing this stage?
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -1451,6 +1548,9 @@ en:
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
+      newCSFsample:
+        Intro: Intro
+        description here: description here
       plc csp1 chapter overviews: {}
       plc csp1 intro to tools: {}
       plc csp1 introduction to unit: {}
@@ -1675,6 +1775,17 @@ en:
         Thanks for your time: Thanks for your time
       sciencePD2b remixing:
         Remixing in StarLogo Nova: Remixing in StarLogo Nova
+      storyline1:
+        The Adventurer Meets the Wizard: The Adventurer Meets the Wizard
+        The Wizards Potions: The Wizards Potions
+      storyline2:
+        Second Page: Second Page
+      storyline3:
+        page 3: page 3
+      storyline4:
+        bee leaves: bee leaves
+      storyline5:
+        wrapup: wrapup
       test demo level:
         demo description: demo description
         demo title: demo title
@@ -1772,6 +1883,26 @@ en:
       v2 U2L9 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U3L01 Student Lesson Introduction:
+        Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      v2 U3L02 Student Lesson Introduction:
+        The Need for Algorithms: The Need for Algorithms
+      v2 U3L03 Student Lesson Introduction:
+        Creativity in Algorithms: Creativity in Algorithms
+      v2 U3L04 Student Lesson Introduction:
+        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Creating Functions
+      v2 U3L07 Student Lesson Introduction:
+        APIs and Function Parameters: APIs and Function Parameters
+      v2 U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Creating Functions with Parameters
+      v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: Looping and Random Numbers
+      v2 U3L10 Student Lesson Introduction:
+        Design a Digital Scene: Design a Digital Scene
+      v2 U3L6 Student Lesson Introduction:
+        Functions and Top-Down Design: Functions and Top-Down Design
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
@@ -1780,6 +1911,9 @@ en:
         PS U3 Assessment1 new: {}
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
+        Sample CSP Assessment: {}
+        TeacherCon Self-Assessment: {}
+        TeacherCon Unit 1 Assessment: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
     match:
@@ -2335,6 +2469,17 @@ en:
         Answer 1: Answer 1
         Question: Question
         What is an unplugged activity?: What is an unplugged activity?
+      Poorva match PL:
+        'Given the following program, match the user input with the expected output:': 'Given the following program, match the user input with the expected output:'
+        Make a prediction and hit run: Make a prediction and hit run
+        Press the j and k keys: Press the j and k keys
+        Press the j key: Press the j key
+        Press the space bar: Press the space bar
+        Press the w key: Press the w key
+        blue_sprite rotates clockwise: blue_sprite rotates clockwise
+        red_sprite gets bigger and blue_sprite gets smaller: red_sprite gets bigger and blue_sprite gets smaller
+        red_sprite moves up and blue_sprite moves down: red_sprite moves up and blue_sprite moves down
+        red_sprite rotates counter clockwise: red_sprite rotates counter clockwise
       U1L16 - Matching File Compression Types:
         BMP: BMP
         Compressed Files - Lossless: Compressed Files - Lossless
@@ -5021,11 +5166,10 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
+        Answer 1: Answer 1
+        'Given the following program, match the user input with the expected output:': 'Given the following program, match the user input with the expected output:'
+        Make a prediction and hit run: Make a prediction and hit run
         Question: Question
-        description here: description here
-        right answer: right answer
-        title: title
-        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

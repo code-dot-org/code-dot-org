@@ -8,11 +8,9 @@ end
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: { format: 'json' }
 
-  def redirect_to_teacher_dashboard
-    redirect CDO.code_org_url('/teacher-dashboard')
-  end
-
   resources :user_levels, only: [:update]
+
+  get '/download/:product', to: 'hoc_download#index'
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -40,9 +38,6 @@ Dashboard::Application.routes.draw do
   # XHR proxying
   get 'xhr', to: 'xhr_proxy#get', format: false
 
-  get 'sections/new', to: redirect_to_teacher_dashboard
-  get 'sections/:id/edit', to: redirect_to_teacher_dashboard
-
   resources :sections, only: [:show] do
     member do
       post 'log_in'
@@ -65,10 +60,6 @@ Dashboard::Application.routes.draw do
     end
   end
   get '/share/:id', to: redirect('/c/%{id}')
-
-  get '/s/k-1(/*all)', to: redirect('/s/course1')
-  get '/s/2-3(/*all)', to: redirect('/s/course2')
-  get '/s/4-5(/*all)', to: redirect('/s/course3')
 
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
@@ -152,7 +143,12 @@ Dashboard::Application.routes.draw do
         end
       end
     end
+
+    get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
+    post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
   end
+
+  get '/course/:course', to: 'plc/user_course_enrollments#index', as: 'course'
 
   get '/beta', to: redirect('/')
 
@@ -161,18 +157,11 @@ Dashboard::Application.routes.draw do
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
 
-  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_NAME, as: 'k8intro_chapter', format: false
-  get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_NAME, as: 'editcode_chapter', format: false
-  get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_NAME, as: 'twenty_fourteen_chapter', format: false
   get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_NAME, as: 'flappy_chapter', format: false
   get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
   resources :followers, only: [:create]
   post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
-
-  # old teacher dashboard should redirect to new teacher dashboard
-  get '/followers', to: redirect_to_teacher_dashboard
-  get '/followers/:action', to: redirect_to_teacher_dashboard
 
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
@@ -222,16 +211,13 @@ Dashboard::Application.routes.draw do
   post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
   get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
+  post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
 
   get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
   get '/admin/:action', controller: 'reports', as: 'reports'
 
-  get '/stats/usage/:user_id', to: redirect_to_teacher_dashboard
-  get '/stats/students', to: redirect_to_teacher_dashboard
-  get '/stats/:user_id', to: redirect_to_teacher_dashboard
-  get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
   get '/notes/:key', to: 'notes#index'
@@ -285,30 +271,13 @@ Dashboard::Application.routes.draw do
     concerns :ops_routes
   end
 
-  get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
-  %w(courses learning_modules tasks course_units evaluation_questions).each do |object|
-    get '/plc/' + object, to: redirect('plc/content_creator/show_courses_and_modules')
-  end
-
   get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
   get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
 
   namespace :plc do
     root to: 'plc#index'
-    resources :courses
-    resources :learning_modules
     resources :user_course_enrollments
-    resources :course_units
-    resources :enrollment_unit_assignments
-    resources :evaluation_questions
   end
-
-  get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
-  post '/plc/enrollment_evaluations/:unit_assignment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
-  get '/plc/enrollment_evaluations/:unit_assignment_id/preview_assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
-  post '/plc/enrollment_evaluations/:unit_assignment_id/confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments'
-
-  post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
 
   concern :api_v1_pd_routes do
     namespace :pd do
@@ -358,6 +327,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/:action', controller: 'api'
   get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
 
+  get '/api/script_structure/:script_name', to: 'api#script_structure'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/user_progress/:script_name', to: 'api#user_progress', as: 'user_progress'

@@ -22,13 +22,15 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "false",
+    "free_play": "true",
     "impressive": "false",
     "discard_background": "false",
     "disable_sharing": "false",
-    "x": "75",
-    "y": "75",
-    "start_direction": "90"
+    "x": "100",
+    "y": "100",
+    "start_direction": "90",
+    "instructions": "Use loops to help the artist connect all of the dots. ",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"sample9_1\",\r\n  \"callout_text\": \"This should be something other than artist, but it's here to connect the previous levels to freeplay\",\r\n  \"element_id\": \"#tileElement22\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
   "published": true,
   "notes": "Linking the previous levels to freeplay",
@@ -36,6 +38,108 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">turn left</title>
+          <statement name="STACK">
+            <block type="draw_turn_by_constant" uservisible="false">
+              <title name="DIR">turnLeft</title>
+              <title name="VALUE">90</title>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">move forward</title>
+          <statement name="STACK">
+            <block type="draw_move_by_constant" uservisible="false">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">turn right</title>
+          <statement name="STACK">
+            <block type="draw_turn_by_constant" uservisible="false">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">90</title>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="move forward"/>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="turn right"/>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="turn left"/>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+        </block>
+        <block type="sticker">
+          <title name="VALUE">Alien</title>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">move forward</title>
+          <statement name="STACK">
+            <block type="draw_move_by_constant" uservisible="false">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">turn left</title>
+          <statement name="STACK">
+            <block type="draw_turn_by_constant" uservisible="false">
+              <title name="DIR">turnLeft</title>
+              <title name="VALUE">90</title>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">turn right</title>
+          <statement name="STACK">
+            <block type="draw_turn_by_constant" uservisible="false">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">90</title>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -43,19 +147,87 @@
             <block type="controls_repeat">
               <title name="TIMES">4</title>
               <statement name="DO">
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">245</title>
+                <block type="procedures_callnoreturn">
+                  <mutation name="move forward"/>
+                </block>
+              </statement>
+              <next>
+                <block type="procedures_callnoreturn">
+                  <mutation name="turn right"/>
                   <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">90</title>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="procedures_callnoreturn">
+                          <mutation name="move forward"/>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="procedures_callnoreturn">
+                          <mutation name="turn right"/>
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">4</title>
+                              <statement name="DO">
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="move forward"/>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="turn right"/>
+                                  <next>
+                                    <block type="controls_repeat">
+                                      <title name="TIMES">4</title>
+                                      <statement name="DO">
+                                        <block type="procedures_callnoreturn">
+                                          <mutation name="move forward"/>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
-              </statement>
+              </next>
             </block>
           </next>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">turn left</title>
+          <statement name="STACK">
+            <block type="draw_turn_by_constant" uservisible="false">
+              <title name="DIR">turnLeft</title>
+              <title name="VALUE">90</title>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">move forward</title>
+          <statement name="STACK">
+            <block type="draw_move_by_constant" uservisible="false">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">turn right</title>
+          <statement name="STACK">
+            <block type="draw_turn_by_constant" uservisible="false">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">90</title>
+            </block>
+          </statement>
         </block>
       </xml>
     </solution_blocks>
@@ -74,7 +246,7 @@
                       <next>
                         <block type="jump_by_constant">
                           <title name="DIR">jumpForward</title>
-                          <title name="VALUE">60</title>
+                          <title name="VALUE">49</title>
                         </block>
                       </next>
                     </block>
@@ -101,7 +273,7 @@
             <block type="draw_width" inline="false">
               <value name="WIDTH">
                 <block type="math_number">
-                  <title name="NUM">30</title>
+                  <title name="NUM">25</title>
                 </block>
               </value>
               <next>

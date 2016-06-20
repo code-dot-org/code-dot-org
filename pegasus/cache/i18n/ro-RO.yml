@@ -1,7 +1,14 @@
 "ro-RO":
   hour_of_code: Hour of Code
   hello: Salutare lume
+  'yes': Da
+  'no': Nu
   select_language: Te rugăm selectează limba ta
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Află mai mult
   en: Tehnologia computerului si programare
   computer_science_edweek: Săptămâna Educatiei in Tehnologia computerului si programare
   csedweek_dates: 8-14 Decembrie 2014
@@ -596,6 +603,7 @@
   dashboard_landing_new_k5courses: Nou! Încercaţi cursurile noastre pentru elevi din
     clasele 1-5.
   dashboard_landing_useful_links: Alte link-uri utile
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Pune personal o întrebare! Vizitează orele noastre
     video de birou lunare.
   dashboard_landing_print_certificates: Tipărește certificate pentru studenţii care
@@ -618,6 +626,11 @@
     oferite de partenerii noștri.</a> Învaţă să programezi cu roboți, construiește
     pagini de web, creează propria aplicație sau explorează alte limbaje ca C++, Ruby
     sau Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Ora De Cod pentru toate vârstele
   dashboard_hoc_courses_desc: "Încearcă oricare din aceste tutoriale, mai scurte de-o
     oră, cu elevii tăi!"
@@ -674,6 +687,13 @@
   dashboard_action_required: necesar
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -704,6 +724,7 @@
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Secţiune nouă
@@ -714,6 +735,7 @@
   dashboard_sections_table_secret: Tip de conectare
   dashboard_sections_table_grade: Notă
   dashboard_sections_table_course: Curs
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Elevi
   dashboard_sections_table_code: Cod de Secţiune
   dashboard_sections_name: Numele secţiunii
@@ -811,6 +833,8 @@
   dashboard_course2: 'Curs 2:'
   dashboard_course3: 'Curs 3:'
   dashboard_course4: 'Curs 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: Prezentare generală Curriculum pentru clasele 1-5
   dashboard_overview: Prezentare generală
@@ -1015,6 +1039,11 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1034,6 +1063,8 @@
   hoc_category_name: Ora de Programare
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Laboratului Aplicației
   applab_gradelevel: Vârste 13 +
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1772,11 +1803,3 @@
   infinity_shortcode: inf
   playlab_shortcode: joacă
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

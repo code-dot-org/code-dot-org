@@ -9,6 +9,7 @@ This page contains numerous resources to assist in advocacy. You can find links 
 ## Code.org blog posts
 ### Miscellaneous
 
+* [More high school students](http://blog.code.org/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
 * Computing occupations are the [#1 source of new wages](http://blog.code.org/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://blog.code.org/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
 * Americans' perceptions of computer science are [changing](http://blog.code.org/post/139445414968).
 * Computer science jobs account for the majority of "skilled worker" [immigration](http://blog.code.org/post/116568172243/with-all-the-national-debate-on-immigration-i) (H1B Visas).

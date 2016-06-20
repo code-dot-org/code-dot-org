@@ -1,10 +1,8 @@
 'use strict';
-/* global describe, beforeEach, it */
-
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
 var NetSimTestUtils = require('../../util/netsimTestUtils');
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 var utils = require('@cdo/apps/utils'); // Provides String.prototype.repeat
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');

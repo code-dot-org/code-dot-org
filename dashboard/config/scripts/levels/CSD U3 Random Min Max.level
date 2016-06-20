@@ -7,9 +7,12 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "randomNumber_max": null,
-      "randomNumber_min_max": null,
-      "console.log": null
+      "randomNumber_min_max": {
+        "category": ""
+      },
+      "console.log": {
+        "category": ""
+      }
     },
     "edit_code": true,
     "embed": "false",

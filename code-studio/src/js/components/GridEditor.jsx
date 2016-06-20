@@ -3,8 +3,8 @@
  * Used in LevelBuilder, and relies on some apps code for validation.
  * Supports both Bee and Farmer skins.
  */
-/* global React, dashboard */
-
+/* global dashboard */
+import React from 'react';
 var BeeCell = require('@cdo/apps/maze/beeCell');
 var Cell = require('@cdo/apps/maze/cell');
 var StudioCell = require('@cdo/apps/studio/cell');

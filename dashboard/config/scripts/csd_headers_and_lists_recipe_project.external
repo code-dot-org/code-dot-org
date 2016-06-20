@@ -1,0 +1,13 @@
+name 'CSD - Headers and Lists - Recipe Project'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Recipe Project
+
+Remix the Recipe Project below and read the tutorial to learn about lists.
+
+<a href="https://thimbleprojects.org/danimcavoy/77170" target="_blank"> Recipe Project</a>
+
+Once you have completed the recipe project return here and click continue.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

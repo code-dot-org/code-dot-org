@@ -1,7 +1,14 @@
 "nn-NO":
   hour_of_code: Kodetimen
   hello: Hallo, verda
+  'yes': Ja
+  'no': Nei
   select_language: Vel språk
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Lær meir
   en: Informatikk
   computer_science_edweek: Computer Science Education Week (CSEdWeek)
   csedweek_dates: Desember 8-14, 2014
@@ -27,8 +34,8 @@
   twentyhours_text: Fullført din første kodetime? Lær meir grunnleggjande koding og
     programmering i dette oppfølgingskurset.
   og_title: Hvert eneste barn fortjener en mulighet
-  og_description: Hver eneste student i hver skole fortjener muligheten til å studere
-    Informatikk.
+  og_description: Alle elever i alle skoler fortjener mulighet til å lære seg å programmere.
+    Det forandrer alt.
   hoc2014_heading: Bli med på <a href="http://hourofcode.com">Kodetimen</a><br/> 8.
     – 14. desember 2014<br/>
   hoc2014_students: Elevar
@@ -240,15 +247,15 @@
   learn_next_level: Fortsett til neste nivå
   learn_online: Prøv andre kurs på nettet
   learn_classes: Finn lokale kodeklubbar
-  hoc_is_here: "#Kodetimen er her - sjekk den ut! @kidsakoder"
+  hoc_is_here: Lær å programmere. Det forandrer alt. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: 'Eg har gjennomført #kodetimen - prøv du også! @kidsakoder'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
   just_did_course3: I just finished Course 3 - check it out! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
-  twitter_teach_cs: Hvorfor tilbyr ikke flere skoler undervisning i informatikk? Vi
-    kan fikse dette. http://youtu.be/nKIu9yen5nc. Les mer på http://code.org/.
+  twitter_teach_cs: 9 av 10 personer enig, skoler bør lære informatikk. http://youtu.be/nKIu9yen5nc.
+    Besøk https://code.org/.
   learn_hoc: Prøv Kodetimen
   beyond_hoc: Etter Kodetimen
   what_gender: Er du jente eller gut?
@@ -575,6 +582,7 @@
     barnetrinnet.
   dashboard_landing_new_k5courses: Nytt! Prøv våre kurs for elevar på barnetrinnet.
   dashboard_landing_useful_links: Andre nyttige lenkjer (kun engelsk)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Still eit spørsmål direkte til oss! Besøk vår månadlege
     video-kontortid.
   dashboard_landing_print_certificates: Skriv ut diplomar til elevar som fullfører
@@ -597,6 +605,11 @@
     <a href="/learn/beyond">tilbydd av partnarane våre.</a> Lær å programmera med
     robotar, laga nettsider, laga din eigen applikasjon eller utforska andre språk
     som C++, Ruby eller Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Kodetimen for alle aldersgrupper
   dashboard_hoc_courses_desc: Prøv kva som helst av desse korte, éin time lange opplæringskursa
     med elevane dine!
@@ -651,6 +664,13 @@
   dashboard_action_required: obligatorisk
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -658,7 +678,7 @@
   dashboard_navigation_section_student_progress: Elevkontoar og framgang
   dashboard_navigation_section_teacher_progress: Fremdriften din
   dashboard_navigation_section_lesson_plans: Leksjonsplanar og ressursar
-  dashboard_navigation_section_community: Hjelp og brukergruppe
+  dashboard_navigation_section_community: Brukarstøtte
   dashboard_navigation_section_pd: Profesjonell utvikling
   dashboard_navigation_section_speakers: Informatikk <br/> Gjesteforelesere
   dashboard_navigation_all_sections: Elevkontoar og framgang
@@ -681,6 +701,7 @@
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Ny seksjon
@@ -691,6 +712,7 @@
   dashboard_sections_table_secret: Logg inn
   dashboard_sections_table_grade: Trinn
   dashboard_sections_table_course: Leksjon
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Elevar
   dashboard_sections_table_code: Seksjonskode
   dashboard_sections_name: Seksjonsnavn
@@ -779,6 +801,8 @@
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Læreplan
   dashboard_curriculum_overview: Oversikt for barnetrinnet
   dashboard_overview: Oversyn
@@ -849,7 +873,7 @@
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Legg til navnet ditt
   code_hoc_coming: Kodetimen er her - 8.- 14. desember!
   code_sign_up: Registrer deg for å delta i Kodeveka (CS Education Week)
   learn_more: Lær meir
@@ -978,6 +1002,11 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -997,6 +1026,8 @@
   hoc_category_name: Kodetimen
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
   applab_gradelevel: Minstealder 13 år
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1702,11 +1733,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spill
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

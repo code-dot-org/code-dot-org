@@ -5,12 +5,12 @@
 <div class="send-panel-packets"></div>
 <div class="panel-footer">
   <div class="right-side-controls">
-    <% if (level.showAddPacketButton) { %>
+    <% if (locals.level.showAddPacketButton) { %>
       <span class="netsim-button secondary large-button" id="add-packet-button"><%= i18n.addPacket() %></span>
     <% } %>
-    <% if (level.messageGranularity === MessageGranularity.PACKETS) { %>
+    <% if (locals.level.messageGranularity === MessageGranularity.PACKETS) { %>
       <span class="netsim-button large-button" id="send-button"><%= i18n.send() %></span>
-    <% } else if (level.messageGranularity === MessageGranularity.BITS) { %>
+    <% } else if (locals.level.messageGranularity === MessageGranularity.BITS) { %>
       <span class="netsim-button large-button" id="set-wire-button"><%= i18n.setWire() %></span>
     <% } %>
   </div>

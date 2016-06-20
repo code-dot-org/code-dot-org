@@ -1,8 +1,11 @@
+---
+allow_post: true
+---
+
 :ruby
   authentication_required!
   forbidden! unless dashboard_user[:admin]
 
-  DASHBOARD_DB = Sequel.connect(CDO.dashboard_db_writer.sub('mysql:', 'mysql2:'))
   USERS = DASHBOARD_DB[:users]
   PERMISSIONS = DASHBOARD_DB[:user_permissions]
 
@@ -14,50 +17,39 @@
   messages = []
 
   def grant_permission_to_email(email, permission_name)
-    exit = false
-
-    if user = USERS.where(email:email).first
-      #user = USERS.where(email:email).first
-
-      if PERMISSIONS.where(user_id:user[:id], permission:permission_name).count > 0
-        return "#{email} already has '#{permission_name}'"
-      else
-        if permission_name == 'teacher'
-          if user[:user_type] == permission_name
-            message = "#{email} already has 'teacher'"
-          else
-            USERS.where(email: email).update(user_type: permission_name)
-            message = "#{email} granted 'teacher'"
-          end
-          exit = true
-        elsif permission_name == 'admin'
-          if user[:admin]
-            message = "#{email} already has 'admin'"
-          else
-            USERS.where(email: email).update(admin: 1)
-            message = "#{email} granted 'admin'"
-          end
-          exit = true
-        end
-
-        if permission_name == 'affiliate' && user[:user_type] != 'teacher'
-          message = "Cannot grant #{email} 'affiliate' because #{email} is not a teacher"
-          exit = true
-        end
-
-        if !exit
-          created_at = DateTime.now
-          PERMISSIONS.insert(user_id:user[:id], permission:permission_name, created_at:created_at, updated_at:created_at)
-          message = "#{email} granted '#{permission_name}'"
-        end
-        return message
-      end
-    else
+    user = USERS.where(email: email).first
+    if !user
       return "#{email} is not a user"
     end
+
+    if permission_name == 'teacher'
+      if user[:user_type] == permission_name
+        return "#{email} already has 'teacher'"
+      end
+      USERS.where(email: email).update(user_type: permission_name)
+      return "#{email} granted 'teacher'"
+    elsif permission_name == 'admin'
+      if user[:admin]
+        return "#{email} already has 'admin'"
+      end
+      USERS.where(email: email).update(admin: true)
+      return "#{email} granted 'admin'"
+    end
+
+    if permission_name == 'affiliate' && user[:user_type] != 'teacher'
+      return "Cannot grant #{email} 'affiliate' because #{email} is not a teacher"
+    end
+
+    if PERMISSIONS.where(user_id: user[:id], permission: permission_name).any?
+      return "#{email} already has '#{permission_name}'"
+    end
+
+    time_now = DateTime.now
+    PERMISSIONS.insert(user_id: user[:id], permission: permission_name, created_at: time_now, updated_at: time_now)
+    return "#{email} granted '#{permission_name}'"
   end
 
-  if emails && permission_name != ""
+  if emails && permission_name.present?
     emails.each do |email|
       messages << grant_permission_to_email(email, permission_name)
     end
@@ -82,6 +74,8 @@
       %option
       %option
         create_professional_development_workshop
+      %option
+        levelbuilder
       %option
         teacher
       %option

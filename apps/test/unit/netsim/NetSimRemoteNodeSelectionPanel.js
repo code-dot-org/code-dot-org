@@ -1,7 +1,6 @@
 /** @file Tests for NetSimRemoteNodeSelectionPanel */
 'use strict';
-/* global describe, beforeEach, it */
-
+import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimRemoteNodeSelectionPanel = require('@cdo/apps/netsim/NetSimRemoteNodeSelectionPanel');

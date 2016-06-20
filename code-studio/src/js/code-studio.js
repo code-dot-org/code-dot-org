@@ -7,10 +7,12 @@
  * so when moving things preserve the include order as much as possible.
  */
 'use strict';
-var _ = require('lodash');
 
-// Fix Object.assign
-require('babel-polyfill');
+// Require this first at each bundle entry point for full ES6 support.
+require("babel-polyfill");
+
+import $ from 'jquery';
+var _ = require('lodash');
 
 // Shim window.console to be safe in IE
 require('./consoleShim')(window);

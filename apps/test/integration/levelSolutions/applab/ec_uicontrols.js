@@ -1,14 +1,14 @@
 /**
  * A set of tests for blocks in the UI controls section of the toolbox
  */
-
+import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 
 // take advantage of the fact that we expose the filesystem via
-// localhost:8001
-var imageUrl = '//localhost:8001/apps/static/flappy_promo.png';
+// localhost
+var imageUrl = '/base/static/flappy_promo.png';
 
 module.exports = {
   app: "applab",
@@ -325,13 +325,13 @@ module.exports = {
           'original html:\n' +
           '<div id="container">' +
           '<img id="image3" src="">' +
-          '<img id="image4" src="//localhost:8001/apps/static/flappy_promo.png" />' +
+          '<img id="image4" src="/base/static/flappy_promo.png" />' +
           '<img id="image5" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />' +
           '<img id="image6" src="javascript:alert()" /><script>alert()</script></div>\n' +
           'modified html:\n' +
           '<div id="container">' +
           '<img id="image3" src />' +
-          '<img id="image4" src="//localhost:8001/apps/static/flappy_promo.png" />' +
+          '<img id="image4" src="/base/static/flappy_promo.png" />' +
           '<img id="image5" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />' +
           '<img id="image6" /></div>';
         var debugOutput = document.getElementById('debug-output');

@@ -58,7 +58,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "Put all of your code into a draw() loop and then add set the background to blue with the background() block.",
-    "markdown_instructions": "# Draw()ing your street image\r\n\r\nHere's the street image you started working on in the last lesson, and we're going to get it ready to add some animation.\r\n\r\nFor the animation to work you'll need to wrap all of your current code in the `draw()` loop, adding a call to `background()` at the top of the loop.\r\n\r\n# Do This\r\n\r\n* Add all of your current code to the `draw()` loop\r\n* Set the background to blue using the `background()` block",
+    "markdown_instructions": "# Draw()ing your street image\r\n\r\nHere's the street image you started working on in the last lesson, and we're going to get it ready to add some animation.\r\n\r\nFor the animation to work you'll need to wrap all of your current code in the `draw()` loop, adding a call to `background()` at the top of the loop.\r\n\r\n# Do This\r\n\r\n* Add a `draw()` block and move all of your current code inside it\r\n* Replace the rectangle that draws your background with a call to the `background()` block",
     "start_blocks": "// Background\r\n\r\n// Grass\r\n\r\n// Road\r\n\r\n",
     "show_d_pad": "false"
   },

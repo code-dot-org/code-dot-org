@@ -41,7 +41,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/61d8f4e6c4d1473d51962ff66dab6bc8-image-1463164674431.gif\" style=\"width:200px; float:right\">\r\n# Managing Lots of Variables\r\n\r\nThis level should be nothing new. Its a practice of things you have learned in the past.\r\n\r\nYou will create an animation that looks like this.\r\n\r\n# Do this\r\n\r\n* Create two rectangles. The rectangles should:\r\n\t* Grow in size (Hint: Think width and height getting bigger) \r\n    * Move down the screen (Hint: Think y getting bigger)\r\n    * Keep the same x position as they grow (Hint: This is a tricky one. Think about doing something with half the change in width)\r\n    * Change to a new random color each time they move but both squares should be the same color (Hint: One variable)]\r\n    \r\n* This program requires creating lots of variables to manage the different parts of the rectangle.",
+    "markdown_instructions": "# How Many Variables?\r\n\r\nIn the last lesson you learned how to use the **counter pattern** (`x = x + 1`, `x = x - 0.5`, `x = x - 1`, etc.) to create smooth animations. Using this pattern in many different ways allows you to create interesting and complex animations.\r\n\r\nWatch the animation here. With a partner discuss: \r\n\r\n* How many counter variables would you need to create to make this animation? What are they used to animate?\r\n* What would you name your variables?\r\n* What are the challenges of using counter variables in a scene like this?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -63,7 +63,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "start_blocks": "var sprite1 = createSprite(400,400,10,10);\r\nsprite1.shapeColor = \"red\";\r\nvar sprite2 = createSprite(0,0,10,10);\r\nsprite2.shapeColor = \"green\";\r\nvar sprite3= createSprite(400,0,10,10);\r\nsprite3.shapeColor = \"blue\";\r\nvar sprite4 = createSprite(0,400,10,10);\r\nsprite4.shapeColor = \"yellow\";\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  sprite1.x -= 1;\r\n  sprite2.x += 1;\r\n  sprite3.x -= 0.5;\r\n  sprite4.x += 0.5;\r\n  sprite1.y -= 0.5;\r\n  sprite2.y += 0.5;\r\n  sprite3.y += 1;\r\n  sprite4.y -= 1;\r\n  \r\n  sprite1.width += 0.1;\r\n  sprite2.width += 0.2;\r\n  sprite3.width += 0.3;\r\n  sprite4.width += 0.4;\r\n  sprite1.height += 0.1;\r\n  sprite2.height += 0.2;\r\n  sprite3.height += 0.3;\r\n  sprite4.height += 0.4;\r\n  \r\n  drawSprites();\r\n}"
   },
   "published": true,
   "notes": "",

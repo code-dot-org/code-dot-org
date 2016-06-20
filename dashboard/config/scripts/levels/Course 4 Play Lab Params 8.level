@@ -8,7 +8,7 @@
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
-    "maze": "[[16,0,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,16,0,0,0],[0,0,0,0,0,0,0,0],[0,0,16,0,0,0,0,0]]",
+    "maze": "[[{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"emotion\":2},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"emotion\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"emotion\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"emotion\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -43,7 +43,9 @@
     "markdown_instructions": "Use the `when actor touches` block to send Dog back to the top-left ONLY if Dog touches any of the other actors.",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "min_workspace_height": "1200"
+    "min_workspace_height": "1200",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false"
   },
   "published": true,
   "notes": "",
@@ -172,42 +174,6 @@
               </value>
             </block>
           </statement>
-        </block>
-        <block type="when_run" uservisible="false">
-          <next>
-            <block type="controls_for" inline="true" uservisible="false">
-              <title name="VAR">i</title>
-              <value name="FROM">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">1</title>
-                </block>
-              </value>
-              <value name="TO">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">5</title>
-                </block>
-              </value>
-              <value name="BY">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">1</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="studio_setSpriteSizeParams" inline="true" uservisible="false">
-                  <value name="SPRITE">
-                    <block type="variables_get" uservisible="false">
-                      <title name="VAR">i</title>
-                    </block>
-                  </value>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">0.5</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-            </block>
-          </next>
         </block>
         <block type="procedures_defnoreturn">
           <mutation>

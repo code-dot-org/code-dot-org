@@ -1,4 +1,4 @@
-
+var React = require('react');
 var PropertyRow = require('./PropertyRow');
 var ZOrderRow = require('./ZOrderRow');
 var EventHeaderRow = require('./EventHeaderRow');

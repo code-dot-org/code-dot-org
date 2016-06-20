@@ -4,7 +4,8 @@
 
 import classNames from 'classnames';
 import {connect} from 'react-redux';
-var _ = require('../lodash');
+import React from 'react';
+var _ = require('lodash');
 var AnimationTab = require('./AnimationTab/AnimationTab');
 var StudioAppWrapper = require('../templates/StudioAppWrapper');
 var ErrorDialogStack = require('./ErrorDialogStack');

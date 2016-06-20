@@ -31,16 +31,20 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_template :new
   end
 
-  test 'new action for organizer renders own view' do
+  test 'workshop organizers can see enrollment form' do
+    # Note - organizers can see the form, but cannot enroll in their own workshops.
+    # This is tested in 'creating an enrollment with email match from organizer renders own view'
     sign_in @organizer
     get :new, workshop_id: @workshop.id
-    assert_template :own
+    assert_template :new
   end
 
-  test 'new action for facilitator renders own view' do
+  test 'facilitators can see enrollment form' do
+    # Note - facilitators can see the form, but cannot enroll in their own workshops.
+    # This is tested in 'creating an enrollment with email match from facilitator renders own view'
     sign_in @facilitator
     get :new, workshop_id: @workshop.id
-    assert_template :own
+    assert_template :new
   end
 
   test 'unrelated organizers and facilitators can enroll' do

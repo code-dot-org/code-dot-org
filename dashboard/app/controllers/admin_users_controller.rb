@@ -36,4 +36,15 @@ class AdminUsersController < ApplicationController
     end
   end
 
+  def undelete_user
+    user = User.only_deleted.find_by_id(params[:user_id])
+    if user
+      user.deleted_at = nil
+      user.save!
+      flash[:alert] = "User (ID: #{params[:user_id]}) Undeleted!"
+    else
+      flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"
+    end
+    redirect_to :find_students
+  end
 end

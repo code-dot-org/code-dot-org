@@ -22,6 +22,8 @@ Scenario: View Authored Hints
 
   # View the first hint
   When I press "hint-button"
+  And I wait to see ".qtip"
+  And I wait for 1 seconds
 
   Then element ".qtip" contains text "This is the first hint."
   And element ".qtip" contains text "It has some basic markup"

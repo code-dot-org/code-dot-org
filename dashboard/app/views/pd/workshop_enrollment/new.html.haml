@@ -108,5 +108,5 @@
               - if File.exists? bio_file
                 = render file: bio_file
               - else
-                %h3= facilitator.name
+                %h2= facilitator.name
                 %p= mail_to facilitator.email

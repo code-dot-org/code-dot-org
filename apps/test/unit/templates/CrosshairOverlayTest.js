@@ -1,6 +1,7 @@
 import {expect} from '../../util/configuredChai';
+import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
-import CrosshairOverlay, { CROSSHAIR_MARGIN } from '@cdo/apps/templates/CrosshairOverlay';
+import CrosshairOverlay, { CROSSHAIR_MARGIN, styles } from '@cdo/apps/templates/CrosshairOverlay';
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint
 var gridUtils = require('@cdo/apps/applab/gridUtils');
 
@@ -28,12 +29,14 @@ describe('CrosshairOverlay', () => {
               y1={y - CROSSHAIR_MARGIN}
               x2={x}
               y2={0}
+              style={styles.line}
           />
           <line
               x1={x - CROSSHAIR_MARGIN}
               y1={y}
               x2={0}
               y2={y}
+              style={styles.line}
           />
         </g>
     );

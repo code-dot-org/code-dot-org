@@ -20,7 +20,6 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
   belongs_to :user, class_name: 'User'
   has_many :plc_unit_assignments, class_name: '::Plc::EnrollmentUnitAssignment', foreign_key: 'plc_user_course_enrollment_id', dependent: :destroy
   has_many :plc_module_assignments, through: :plc_unit_assignments, class_name: '::Plc::EnrollmentModuleAssignment', dependent: :destroy
-  has_many :plc_task_assignments, through: :plc_unit_assignments, class_name: '::Plc::EnrollmentTaskAssignment', dependent: :destroy
 
   validates :user, presence: true
   validates :plc_course, presence: true
@@ -33,7 +32,8 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
     plc_course.plc_course_units.each do |course_unit|
       Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: self,
                                            plc_course_unit: course_unit,
-                                           status: Plc::EnrollmentUnitAssignment::START_BLOCKED)
+                                           status: Plc::EnrollmentUnitAssignment::START_BLOCKED,
+                                           user: user)
     end
   end
 end

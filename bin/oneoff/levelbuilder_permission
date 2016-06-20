@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+#
+# This script adds a row to the user_permissions table with permission type
+# 'levelbuilder' for all admin users. The intent is for this script to be run
+# in the levelbuilder environment so that we can break the connection between
+# levelbuilder access and admin privileges.
+#
+# This is being done as a script rather than a migration as it only needs to
+# (should) happen in the levelbuilder environment.
+
+require_relative '../../dashboard/config/environment'
+
+time_now = DateTime.now
+User.where(admin: true).find_each do |user|
+  UserPermission.create!(
+    user_id: user.id,
+    permission: UserPermission.LEVELBUILDER,
+    created_at: time_now,
+    updated_at: time_now)
+end
