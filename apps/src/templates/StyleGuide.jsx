@@ -59,11 +59,11 @@ function Colors() {
       </p>
       <p>
         JavaScript usage is as follows:
-        <pre>
-          {`import colors from '@cdo/apps/colors';
-console.log("the hex value for purple is:", colors.purple);`}
-        </pre>
       </p>
+      <pre>
+        {`import colors from '@cdo/apps/colors';
+console.log("the hex value for purple is:", colors.purple);`}
+      </pre>
       {Object.keys(color).map(colorKey => (
          <div key={colorKey} style={{display: 'inline-block',
                                      whiteSpace: 'nowrap',
@@ -100,8 +100,11 @@ function Components() {
                <div key={index}>
                  <p><strong>Example #{index+1}: {example.description}</strong></p>
                  <div style={{padding: 10}}>
-                   <pre>{renderExampleJSX(exampleConfig.component.displayName, example.props)}</pre>
-                   {React.createElement(exampleConfig.component, example.props)}
+                   {!example.render &&
+                    <pre>{renderExampleJSX(exampleConfig.component.displayName, example.props)}</pre>
+                   }
+                   {!example.render && React.createElement(exampleConfig.component, example.props)}
+                   {example.render && example.render()}
                  </div>
                </div>
              ))
