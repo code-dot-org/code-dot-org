@@ -1,4 +1,4 @@
-- if current_user && current_user.permissions.where(permission: 'levelbuilder').any?
+- if current_user && current_user.permission?(UserPermission::LEVELBUILDER)
   = render layout: 'shared/admin' do
     %li= link_to 'Videos', videos_path
     %li
