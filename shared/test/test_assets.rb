@@ -1,3 +1,4 @@
+# coding: utf-8
 require_relative 'files_api_test_base' # Must be required first to establish load paths
 require_relative 'files_api_test_helper'
 require 'helpers/asset_bucket'
@@ -182,6 +183,40 @@ class AssetsTest < FilesApiTestBase
     @api.delete_object(asset_name)
   end
 
+  def test_assets_copy_some
+    delete_all_assets('assets_test/1/2')
+    dest_channel_id = create_channel
+    src_api = FilesApiTestHelper.new(current_session, 'assets', @channel_id)
+    dest_api = FilesApiTestHelper.new(current_session, 'assets', dest_channel_id)
+
+    image_filename = 'çat.jpg'
+    image_body = 'stub-image-contents'
+
+    sound_filename = 'woof.mp3'
+    sound_body = 'stub-sound-contents'
+
+    _, image_filename = post_asset_file(src_api, image_filename, image_body, 'image/jpeg')
+    _, sound_filename = post_asset_file(src_api, sound_filename, sound_body, 'audio/mpeg')
+    src_api.patch_abuse(10)
+
+    expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+
+    copy_file_infos = JSON.parse(
+      copy_some(@channel_id, dest_channel_id, {filenames: [sound_filename]})
+    )
+    dest_file_infos = dest_api.list_objects
+    assert_equal(nil, copy_file_infos[1])
+    assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
+    assert_equal(nil, dest_file_infos[1])
+    assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
+
+    src_api.delete_object(URI.encode(image_filename))
+    src_api.delete_object(sound_filename)
+    dest_api.delete_object(URI.encode(image_filename))
+    dest_api.delete_object(sound_filename)
+    delete_channel(dest_channel_id)
+  end
+
   def test_assets_copy_all
     # This test creates 2 channels
     delete_all_assets('assets_test/1/2')
@@ -352,6 +387,10 @@ class AssetsTest < FilesApiTestBase
 
   def copy_all(src_channel_id, dest_channel_id)
     AssetBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
+  end
+
+  def copy_some(src_channel_id, dest_channel_id, options)
+    AssetBucket.new.copy_files(src_channel_id, dest_channel_id, options).to_json
   end
 
   def assert_assets_custom_metric(index, metric_type, length_msg = nil, expected_value = 1)
