@@ -10,6 +10,19 @@
   = f.text_area :markdown_instructions, placeholder: 'Markdown Instructions', rows: 4
   #markdown-instructions-preview
 
+.field
+  = f.label :text_to_speech
+  %p When specified, this will generate audio that the students can use to have the instructions read aloud to them.
+  #tts-error.alert.alert-error{style: "display: none"}
+    #alert-content
+  = f.text_area :custom_tts, placeholder: '', rows: 4
+  - if CDO.use_acapela
+    = f.label :voice
+    %select#level_tts_voice
+    %button#tts{type: 'button'} Hear TTS
+    %div
+      %audio#tts-audio
+
 :javascript
   var mdEditor = levelbuilder.initializeCodeMirror('level_markdown_instructions', 'markdown', function (editor, change) {
     localStorage.setItem('markdown_' + '#{@level.id || params[:type]}', editor.getValue());
@@ -27,3 +40,62 @@
   $('#markdown-instructions-preview')
       .html(marked(mdEditor.getValue()))
       .children('details').details();
+
+  if (#{!!CDO.use_acapela}) {
+    $('#tts').click(function () {
+      $.getJSON("http://vaas.acapela-group.com/Services/UrlMaker?jsoncallback=?", {
+        cl_login: "#{CDO.acapela_login}",
+        cl_app: "#{CDO.acapela_app}",
+        cl_pwd: "#{CDO.acapela_password}",
+        req_voice: $("#level_tts_voice").val(),
+        req_text: $("#level_custom_tts").val()
+      }, function (data) {
+        $('#tts-error').hide();
+        if (data.err_msg) {
+          $('#alert-content').text(unescape(data.err_msg));
+          $('#tts-error').show();
+        }
+        if (data.snd_url) {
+          $("#tts-audio").attr({
+            src: data.snd_url,
+            controls: 'controls'
+          });
+        }
+      });
+    });
+
+    $(document).ready(function () {
+      $.getJSON("http://vaas.acapela-group.com/Services/Voices.json?jsoncallback=?", {
+          cl_login: "#{CDO.acapela_login}",
+          cl_app: "#{CDO.acapela_app}",
+          fields_selection: "language_desc;speaker",
+          frequency: "22050",
+          technology: "HQ",
+        }, function (data) {
+
+          var voices = Object.keys(data.voices).reduce(function (prev, curr) {
+            var voice = {
+              speaker: data.voices[curr].speaker,
+              id: curr
+            }
+            if (prev[data.voices[curr].language_desc]) {
+              prev[data.voices[curr].language_desc].push(voice);
+            } else {
+              prev[data.voices[curr].language_desc] = [voice];
+            }
+            return prev;
+          }, {});
+
+          var optgroups = Object.keys(voices).map(function (language) {
+            var options = voices[language].map(function (voice) {
+              return "<option value='" + voice.id + "'>" + voice.speaker + "</option>";
+            });
+
+            return "<optgroup label='" + language + "'>" + options.join('') + "</optgroup>";
+          });
+
+          $("#level_tts_voice").html(optgroups.join(''));
+          $('#level_tts_voice option[value="karen22k"]').attr("selected",true);
+        });
+    });
+  }
