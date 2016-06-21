@@ -85,9 +85,9 @@ class HocRoutesTest < Minitest::Test
         assert_nil before_start_row
 
         assert_redirects_from_to '/api/hour/begin_company/testcompany',
-                                 '/learn?company=testcompany'
+          '/learn?company=testcompany'
         assert_redirects_from_to '/api/hour/begin/mc?company=testcompany',
-                                 '/mc'
+          '/mc'
 
         after_start_row = get_session_hoc_activity_entry
         assert_equal 'testcompany', after_start_row[:company]
@@ -141,9 +141,9 @@ class HocRoutesTest < Minitest::Test
         assert_nil before_start_row
 
         assert_redirects_from_to '/api/hour/begin_company/testcompany',
-                                 '/learn?company=testcompany'
+          '/learn?company=testcompany'
         assert_redirects_from_to '/api/hour/begin/mc?company=testcompany',
-                                 '/mc'
+          '/mc'
 
         after_start_row = get_session_hoc_activity_entry
         assert_equal 'testcompany', after_start_row[:company]

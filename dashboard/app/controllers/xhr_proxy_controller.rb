@@ -62,10 +62,10 @@ class XhrProxyController < ApplicationController
     Rails.logger.info "XhrProxyControllerRequest #{event_details}"
 
     render_proxied_url(
-        url,
-        allowed_content_types: ALLOWED_CONTENT_TYPES,
-        allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
-        expiry_time: EXPIRY_TIME,
-        infer_content_type: false)
+      url,
+      allowed_content_types: ALLOWED_CONTENT_TYPES,
+      allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
+      expiry_time: EXPIRY_TIME,
+      infer_content_type: false)
   end
 end

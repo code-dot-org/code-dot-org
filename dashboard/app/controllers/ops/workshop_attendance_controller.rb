@@ -167,10 +167,10 @@ module Ops
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
     def workshop_attendance_params
       params.require(:workshop_attendance).permit(
-          :teacher_id,
-          :segment_id,
-          :status,
-          :notes
+        :teacher_id,
+        :segment_id,
+        :status,
+        :notes
       )
     end
   end
