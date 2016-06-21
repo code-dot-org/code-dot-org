@@ -23,8 +23,6 @@
 #  index_levels_on_game_id  (game_id)
 #
 
-require 'acapela'
-
 class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
@@ -42,7 +40,6 @@ class Level < ActiveRecord::Base
   validates_length_of :name, within: 1..70
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
 
-  before_save :update_tts
   after_save :write_custom_level_file
   after_destroy :delete_custom_level_file
 
@@ -50,6 +47,7 @@ class Level < ActiveRecord::Base
 
   include StiFactory
   include SerializedProperties
+  include TextToSpeech
 
   serialized_attrs %w(
     video_key
@@ -57,7 +55,6 @@ class Level < ActiveRecord::Base
     callout_json
     instructions
     markdown_instructions
-    custom_tts
     authored_hints
   )
 
@@ -176,27 +173,6 @@ class Level < ActiveRecord::Base
       file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
-    end
-  end
-
-  def tts_text
-    self.custom_tts || self.instructions
-  end
-
-  def should_update_audio?
-    changed = self.property_changed?(self.custom_tts ? 'custom_tts' : 'instructions')
-    changed && write_to_file? && self.published
-  end
-
-  def tts_audio_file(env=Rails.env)
-    md5 = Digest::MD5.hexdigest(self.name)
-    "#{env}/#{md5}/#{self.name}.mp3"
-  end
-
-  def update_tts
-    if self.should_update_audio?
-      upload_audio_to_s3(self.tts_text, self.tts_audio_file)
-      self.tts_updated_at = DateTime.now
     end
   end
 
