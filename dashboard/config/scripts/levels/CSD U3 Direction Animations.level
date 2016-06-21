@@ -7,48 +7,23 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "drawSprites": {
-        "category": ""
-      },
-      "keyDown": {
-        "category": ""
-      },
-      "var sprite = createSprite": {
-        "category": ""
-      },
-      "x": {
-        "category": ""
-      },
-      "y": {
-        "category": ""
-      },
-      "background": {
-        "category": ""
-      },
-      "addOperator": {
-        "category": ""
-      },
-      "subtractOperator": {
-        "category": ""
-      },
-      "ifBlock": {
-        "category": ""
-      },
-      "comment": {
-        "category": ""
-      },
-      "console.log": {
-        "category": ""
-      },
-      "setAnimation": {
-        "category": ""
-      }
+      "drawSprites": null,
+      "keyDown": null,
+      "var sprite = createSprite": null,
+      "x": null,
+      "y": null,
+      "background": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "ifBlock": null,
+      "comment": null,
+      "console.log": null,
+      "setAnimation": null
     },
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Changing Images as you Move\r\nRight now your conditionals only do one thing (change your sprite's x or y), but you can actually put as much code as you want inside a conditional. A common thing to do in games is to change your character's image depending on which direction they're walking.\r\n\r\nWe've pre-loaded the Animations tab with these four images for you to use.\r\n\r\n# Do This\r\nUsing the provided program and images, change to the correct image when the corresponding key is pressed.\r\n\r\n- The up arrow should switch to \"player_up.png\"\r\n- The down arrow should switch to \"player_down.png\"\r\n- The left arrow should switch to \"player_left.png\"\r\n- The right arrow should switch to \"player_right.png\"\r\n\r\n**Challenge** Can you make your program default to \"player_down.png\" if none of the arrow keys are pressed?",
-    "start_blocks": "var sprite = createSprite(200, 200, 30, 30);\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  \r\n  // Change the sprite's image to match the direction it's moving\r\n  if (keyDown(\"up\")) {\r\n    sprite.y = sprite.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    sprite.y = sprite.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    sprite.x = sprite.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    sprite.x = sprite.x + 1;\r\n  }\r\n  \r\n  drawSprites();\r\n}\r\n",
+    "markdown_instructions": "# Changing Images as you Move\r\nRight now your conditionals only do one thing (change your sprite's x or y), but you can actually put as much code as you want inside a conditional. A common thing to do in games is to change your character's image depending on which direction they're walking.\r\n\r\nWe've pre-loaded the Animations tab with these four images for each bug. Find the appropriate set for your bug.\r\n# Do This\r\nUsing the provided program and images, change to the correct image when the corresponding key is pressed.\r\n\r\n- The up arrow should switch to up facing bug\r\n- The down arrow should switch to down facing bug\r\n- The left arrow should switch to left facing bug\r\n- The right arrow should switch to right facing bug\r\n\r\n# Till The Animation Tab Works\r\n\r\n* <a href=\"https://images.code.org/19a7db32d19c730a7c91a14723eda647-image-1466127102036.png\"> Spider Up </a>\r\n* <a href=\"https://images.code.org/9e34f090d787f01fc3d2524858466b64-image-1466127834480.png\"> Spider Down </a>\r\n* <a href=\"hhttps://images.code.org/8cc1d51a7d1ae10b819ecb831af41280-image-1466127834480.png\"> Spider Left </a>\r\n* <a href=\"https://images.code.org/09630b01d1013762396dc28f63cd5e35-image-1466127834481.png\"> Spider Right </a>\r\n\r\n* <a href=\"https://images.code.org/bc152ec988e1682bd1e6864da6ec4d28-image-1466127057045.jpg\"> Ladybug Up </a>\r\n* <a href=\"https://images.code.org/d1f70e4d4d836abdea8f0fbcad0a7a5e-image-1466127778610.jpg\"> Ladybug Down</a>\r\n* <a href=\"https://images.code.org/7597014b0c89c57111d4e13f813d78cd-image-1466127778611.jpg\"> Ladybug Left </a>\r\n* <a href=\"https://images.code.org/f675f06d3f2056aaa1a138c2e74b6af6-image-1466127778611.jpg\"> Ladybug Right</a>\r\n\r\n* <a href=\"https://images.code.org/cfc074a91fc2962bc452dda95bb82cf1-image-1466127065627.jpg\"> Beatle Up</a>\r\n* <a href=\"https://images.code.org/82c486e127e85599eb7d02a6049e4738-image-1466127642622.jpg\"> Beatle Down</a>\r\n* <a href=\"https://images.code.org/462a1736f236ccbf99f4a0ded933da5b-image-1466127432301.jpg\"> Beatle Left</a>\r\n* <a href=\"https://images.code.org/195222740e838390704dd3335df0f043-image-1466127432302.jpg\"> Beatle Right </a>\r\n\r\n* <a href=\"https://images.code.org/4ecea2e39414e115f6862493a79c2133-image-1466127062769.jpg\"> Dragonfly Up </a>\r\n* <a href=\"https://images.code.org/4ecea2e39414e115f6862493a79c2133-image-1466127062769.jpg\"> Dragonfly Down</a>\r\n* <a href=\"https://images.code.org/f51c617596835a34313ff0d2f68cc0a3-image-1466127642623.jpg\"> Dragonfly Left </a>\r\n* <a href=\"https://images.code.org/2c86472fc2b8c64244cdd3130dfe28ad-image-1466127642623.jpg\"> Dragonfly Right</a>",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -71,7 +46,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "callout_json": "[]"
+    "callout_json": "[]",
+    "project_template_level_name": "CSD U3- arrows template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

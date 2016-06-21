@@ -17,9 +17,7 @@ Blah Blah
 # Vocab
 
 * Sprite
-* Object
 * Property
-* Rotate
 
 # Commands 
 
@@ -32,17 +30,10 @@ Blah Blah
 |sprite.y| Property for y position of sprite| `sprite.y = 200;` | link |
 |sprite.width| Property for width of sprite| `sprite.width = randomNumber(0,100);` | link |
 |sprite.height|Property for height of sprite| `sprite.height = 30;`  | link |
-|sprite.rotation|Property for angle of rotation of sprite in degrees| `sprite.roation = randomNumber(0,360);` | link |
 
-### Input : 
-|Command| Meaning| Example | Documentation |
-|---|---| --- | --- |
-|mouseX|Gives the x position of the mouse|`sprite.x = mouseX;`  | link |
-|mouseY|Gives the y position of the mouse|`sprite.y = mouseY;` | link |
 
 # Resources
-* Activity Guide: <a href="https://drive.google.com/open?id=1_Dkh33G7NTrnlAR0kD8UJZ9A2xFO_ICIJeDrxm-S6e4">Simple Drawings in Game Lab</a>
-* Activity Guide: <a href="https://drive.google.com/open?id=17-rj7SWbn1Nb0IQl-o-4h3VlS1kjId8T0o6HUGojglA">Plan Your Drawing</a>
+
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
