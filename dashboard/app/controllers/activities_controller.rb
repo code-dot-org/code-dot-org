@@ -87,7 +87,6 @@ class ActivitiesController < ApplicationController
     render json: milestone_response(script_level: @script_level,
                                     level: @level,
                                     total_lines: total_lines,
-                                    trophy_updates: @trophy_updates,
                                     solved?: solved,
                                     level_source: @level_source.try(:hidden) ? nil : @level_source,
                                     level_source_image: @level_source_image,
@@ -184,12 +183,6 @@ class ActivitiesController < ApplicationController
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
-
-    begin
-      trophy_check(current_user) if passed && @script_level && @script_level.script.trophies
-    rescue StandardError => e
-      Rails.logger.error "Error updating trophy exception: #{e.inspect}"
-    end
   end
 
   def track_progress_in_session
@@ -201,41 +194,6 @@ class ActivitiesController < ApplicationController
       @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
 
       client_state.add_script(@script_level.script_id)
-    end
-  end
-
-  def trophy_check(user)
-    @trophy_updates ||= []
-    # called after a new activity is logged to assign any appropriate trophies
-    current_trophies = user.user_trophies.includes([:trophy, :concept]).index_by(&:concept)
-    progress = user.concept_progress
-
-    progress.each_pair do |concept, counts|
-      current = current_trophies[concept]
-      pct = counts[:current].to_f/counts[:max]
-
-      new_trophy = Trophy.find_by_id(
-        case
-        when pct == Trophy::GOLD_THRESHOLD
-          Trophy::GOLD
-        when pct >= Trophy::SILVER_THRESHOLD
-          Trophy::SILVER
-        when pct >= Trophy::BRONZE_THRESHOLD
-          Trophy::BRONZE
-        end
-      )
-
-      if new_trophy
-        if new_trophy.id == current.try(:trophy_id)
-          # they already have the right trophy
-        elsif current
-          current.update_attributes!(trophy_id: new_trophy.id)
-          @trophy_updates << [data_t('concept.description', concept.name), new_trophy.name, view_context.image_path(new_trophy.image_name)]
-        else
-          UserTrophy.create!(user: user, trophy_id: new_trophy.id, concept: concept)
-          @trophy_updates << [data_t('concept.description', concept.name), new_trophy.name, view_context.image_path(new_trophy.image_name)]
-        end
-      end
     end
   end
 

@@ -50,16 +50,4 @@ class Concept < ActiveRecord::Base
       end
     end
   end
-
-  def self.summarize_all
-    cached.map do |concept|
-      {
-          id: concept.name,
-          name: I18n.t("data.concept.description.#{concept.name}"),
-          bronze: Trophy::BRONZE_THRESHOLD,
-          silver: Trophy::SILVER_THRESHOLD,
-          gold: Trophy::GOLD_THRESHOLD,
-      }
-    end
-  end
 end

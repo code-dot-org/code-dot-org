@@ -4,7 +4,6 @@ Hour of Code:
   created_at: 2015-10-16 22:36:38.000000000 Z
   updated_at: 2015-10-16 22:36:38.000000000 Z
   wrapup_video_id: 13
-  trophies: false
   hidden: true
   user_id:
   login_required: false
@@ -15,7 +14,6 @@ edit-code:
   created_at: 2015-10-16 22:36:40.000000000 Z
   updated_at: 2015-10-16 22:36:40.000000000 Z
   wrapup_video_id: 13
-  trophies: false
   hidden: true
   user_id:
   login_required: false
@@ -26,7 +24,6 @@ events:
   created_at: 2015-10-16 22:36:41.000000000 Z
   updated_at: 2015-10-16 22:36:41.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: true
   user_id:
   login_required: false
@@ -37,7 +34,6 @@ jigsaw:
   created_at: 2015-10-16 22:36:43.000000000 Z
   updated_at: 2015-10-16 22:36:43.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: true
   user_id:
   login_required: false
@@ -48,7 +44,6 @@ hourofcode:
   created_at: 2015-10-16 22:39:26.000000000 Z
   updated_at: 2015-10-16 22:39:26.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: false
@@ -59,7 +54,6 @@ starwars:
   created_at: 2015-10-16 22:39:24.000000000 Z
   updated_at: 2015-10-16 22:39:24.000000000 Z
   wrapup_video_id: 137
-  trophies: false
   hidden: true
   user_id:
   login_required: true
@@ -70,7 +64,6 @@ starwarsblocks:
   created_at: 2015-10-16 22:39:24.000000000 Z
   updated_at: 2015-10-16 22:39:24.000000000 Z
   wrapup_video_id: 137
-  trophies: false
   hidden: false
   user_id:
   login_required: false
@@ -81,7 +74,6 @@ mc:
   created_at: 2015-10-16 22:39:24.000000000 Z
   updated_at: 2015-10-16 22:39:24.000000000 Z
   wrapup_video_id: 137
-  trophies: false
   hidden: true
   user_id:
   login_required: false
@@ -92,7 +84,6 @@ frozen:
   created_at: 2015-10-16 22:39:23.000000000 Z
   updated_at: 2015-10-16 22:39:24.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: false
@@ -103,7 +94,6 @@ playlab:
   created_at: 2015-10-16 22:39:29.000000000 Z
   updated_at: 2015-10-16 22:39:29.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: false
@@ -114,7 +104,6 @@ infinity:
   created_at: 2015-10-16 22:39:27.000000000 Z
   updated_at: 2015-10-16 22:39:27.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: false
@@ -125,7 +114,6 @@ artist:
   created_at: 2015-10-16 22:38:11.000000000 Z
   updated_at: 2015-10-16 22:38:11.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: false
@@ -136,7 +124,6 @@ algebra:
   created_at: 2015-10-16 22:37:33.000000000 Z
   updated_at: 2015-10-16 22:37:33.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: true
@@ -147,7 +134,6 @@ algebraPD:
   created_at: 2015-10-16 22:37:44.000000000 Z
   updated_at: 2015-10-16 22:37:44.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: true
   user_id:
   login_required: true
@@ -158,7 +144,6 @@ flappy:
   created_at: 2015-10-16 22:36:43.000000000 Z
   updated_at: 2015-10-16 22:36:43.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: false
@@ -169,7 +154,6 @@ flappy:
   created_at: 2015-10-16 22:36:26.000000000 Z
   updated_at: 2015-10-16 22:36:26.000000000 Z
   wrapup_video_id:
-  trophies: true
   hidden: false
   user_id:
   login_required: false
@@ -180,7 +164,6 @@ course1:
   created_at: 2015-10-16 22:38:12.000000000 Z
   updated_at: 2015-10-16 22:38:13.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: false
@@ -191,7 +174,6 @@ course2:
   created_at: 2015-10-16 22:38:21.000000000 Z
   updated_at: 2015-10-16 22:38:21.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: false
@@ -202,7 +184,6 @@ course3:
   created_at: 2015-10-16 22:38:31.000000000 Z
   updated_at: 2015-10-16 22:38:31.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: false
@@ -213,7 +194,6 @@ course4:
   created_at: 2015-10-16 22:38:41.000000000 Z
   updated_at: 2015-10-16 22:38:41.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: false
@@ -224,7 +204,6 @@ cspunit1:
   created_at: 2015-10-16 22:38:51.000000000 Z
   updated_at: 2015-10-16 22:38:51.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: true
@@ -235,7 +214,6 @@ cspunit2:
   created_at: 2015-10-16 22:38:55.000000000 Z
   updated_at: 2015-10-16 22:38:55.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: true
@@ -246,7 +224,6 @@ cspunit3:
   created_at: 2015-10-16 22:39:01.000000000 Z
   updated_at: 2015-10-16 22:39:01.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: false
   user_id:
   login_required: true
@@ -257,7 +234,6 @@ cspunit4:
   created_at: 2016-01-28 19:12:01.000000000 Z
   updated_at: 2016-05-12 19:37:08.000000000 Z
   wrapup_video_id: 
-  trophies: false
   hidden: false
   user_id:
   login_required: true
@@ -268,7 +244,6 @@ cspunit5:
   created_at: 2016-01-28 19:12:03.000000000 Z
   updated_at: 2016-05-12 19:37:09.000000000 Z
   wrapup_video_id: 
-  trophies: false
   hidden: false
   user_id:
   login_required: true
@@ -279,7 +254,6 @@ cspunit6:
   created_at: 2016-02-26 20:56:25.000000000 Z
   updated_at: 2016-05-12 19:37:09.000000000 Z
   wrapup_video_id: 
-  trophies: false
   hidden: false
   user_id:
   login_required: true
@@ -290,7 +264,6 @@ ECSPD:
   created_at: 2015-10-16 22:37:01.000000000 Z
   updated_at: 2015-10-16 22:37:01.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: true
   user_id:
   login_required: true
@@ -301,7 +274,6 @@ ECSPD-NexTech:
   created_at: 2015-10-16 22:36:58.000000000 Z
   updated_at: 2015-10-16 22:36:58.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: true
   user_id:
   login_required: true
@@ -312,7 +284,6 @@ allthethings:
   created_at: 2015-10-16 22:38:08.000000000 Z
   updated_at: 2015-10-16 22:38:08.000000000 Z
   wrapup_video_id:
-  trophies: false
   hidden: true
   user_id:
   login_required: false

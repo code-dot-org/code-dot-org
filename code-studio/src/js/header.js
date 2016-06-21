@@ -31,7 +31,6 @@ const PUZZLE_PAGE_NONE = -1;
  *   title: string,
  *   finishLink: string,
  *   finishText: string,
- *   trophies: Object,
  *   levels: Array.<{
  *     id: number,
  *     position: number,
@@ -52,11 +51,6 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
     stageData.freeplay_links.forEach(function (item) {
       $('.' + item + '_free_play').show();
     });
-  }
-  if (progressData.trophies) {
-    $('.header_trophy_link').show();
-    $('.header_trophy_link .current_trophies').text(progressData.trophies.current);
-    $('.header_trophy_link .max_trophies').text(progressData.trophies.of + ' ' + progressData.trophies.max);
   }
   if (progressData.linesOfCodeText) {
     $('.header_popup .header_text').text(progressData.linesOfCodeText);
@@ -102,10 +96,6 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   $('.header_popup_link').click(function (e) {
     e.stopPropagation();
     $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup();
-  });
-  $('.header_trophy_link').click(function () {
-    // Only the 20-hour course has trophies.
-    location.href = '/s/20-hour#trophies';
   });
   $('.header_popup').click(function (e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it

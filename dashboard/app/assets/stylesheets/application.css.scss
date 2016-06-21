@@ -131,18 +131,6 @@ img.video_thumbnail {
   margin-bottom: 30px;
 }
 
-.trophy_gold {
-  background-color: gold;
-}
-
-.trophy_silver {
-  background-color: silver;
-}
-
-.trophy_bronze {
-  background-color: darkgoldenrod;
-}
-
 .report_cell {
   text-align: center;
   color: white;
@@ -812,10 +800,6 @@ input.header_input {
   cursor: pointer;
 }
 
-.header_trophy_link {
-  cursor: pointer;
-}
-
 .header_finished_link {
   display: inline-block;
   font-size: 16px;
@@ -842,11 +826,6 @@ input.header_input {
   color: $header_text;
   display: inline-block;
   line-height: 20px;
-}
-
-.trophy_image {
-  width: 45px;
-  height: 45px;
 }
 
 #alert {
