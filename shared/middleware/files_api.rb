@@ -232,19 +232,18 @@ class FilesApi < Sinatra::Base
     put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
   end
 
-  # POST /v3/assets/<channel-id>/copy?src_channel=<src-channel-id>&src_files=<src-filenames-json>
+  # POST /v3/copy-assets/<channel-id>?src_channel=<src-channel-id>&src_files=<src-filenames-json>
   #
   # Copy assets from another channel. Note that when specifying the src files, you must
   # json encode it
   #
-  post %r{/v3/assets/([^/]+)/copy$} do |encrypted_channel_id|
+  post %r{/v3/copy-assets/([^/]+)$} do |encrypted_channel_id|
     dont_cache
-
     AssetBucket.new.copy_files(
-      request.GET['src_channel'],
+      request['src_channel'],
       encrypted_channel_id,
-      JSON.parse(request.GET(['src_filenames']))
-    )
+      {filenames: JSON.parse(request['src_files'])}
+    ).to_json
   end
 
   # POST /v3/animations/<channel-id>/<filename>?version=<version-id>
