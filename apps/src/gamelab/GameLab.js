@@ -435,17 +435,19 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
     if (results.length !== 1) {
       throw "Exactly one contained level result is currently required.";
     }
-    var containedResult = results[0].result;
-    this.testResults = results[0].testResult ? results[0].testResult :
+    var firstResult = results[0];
+    var containedResult = firstResult.result;
+    this.testResults = utils.valueOr(firstResult.testResult,
         containedResult.result ? this.studioApp_.TestResults.ALL_PASS :
-          this.studioApp_.TestResults.GENERIC_FAIL;
+          this.studioApp_.TestResults.GENERIC_FAIL);
     containedLevelInfo = {
-      app: results[0].app,
-      level: results[0].id,
-      callback: results[0].callback,
+      app: firstResult.app,
+      level: firstResult.id,
+      callback: firstResult.callback,
       result: containedResult.result,
       program: containedResult.response,
     };
+    this.message = firstResult.feedback;
   } else {
     if (this.level.editCode) {
       // If we want to "normalize" the JavaScript to avoid proliferation of nearly
@@ -459,6 +461,8 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
       var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
       program = encodeURIComponent(Blockly.Xml.domToText(xml));
     }
+    // Explicitly set this to null so the default message will be used
+    this.message = null;
   }
 
   if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {

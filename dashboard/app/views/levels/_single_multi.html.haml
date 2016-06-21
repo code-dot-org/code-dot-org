@@ -104,5 +104,6 @@
       #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,
       #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map {|answer| answer['correct'] || false}},
+      #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map{|answer| answer['feedback']}.to_json},
       #{last_attempt.to_json}
     );

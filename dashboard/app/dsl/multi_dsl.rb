@@ -1,5 +1,5 @@
 class MultiDSL < MatchDSL
-  def right(text) answer(text, true) end
+  def right(text, feedback: feedback = nil) answer(text, true, feedback) end
 
-  def wrong(text) answer(text, false) end
+  def wrong(text, feedback: feedback = nil) answer(text, false, feedback) end
 end
