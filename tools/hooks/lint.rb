@@ -1,8 +1,10 @@
 require 'open3'
+require 'yaml'
 require_relative 'hooks_utils.rb'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 APPS_DIR = "#{REPO_DIR}/apps"
+SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'}"
 
 def filter_grunt_jshint(modified_files)
   modified_files.select do |f|
@@ -28,7 +30,7 @@ def filter_haml(modified_files)
 end
 
 def filter_scss(modified_files)
-  modified_files.select { |f| f.end_with?(".scss") }
+  modified_files.select { |f| File.fnmatch(SCSS_GLOB, f) }
 end
 
 def run(cmd, working_dir)
