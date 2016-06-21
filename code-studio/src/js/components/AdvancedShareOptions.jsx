@@ -40,6 +40,7 @@ const style = {
     cursor: 'copy',
     width: 465,
     height: 80,
+    margin: 0,
   },
 };
 
