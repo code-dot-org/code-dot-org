@@ -95,7 +95,7 @@ Since the longer the polling is, the longer the delay before builds can be, we'l
 To have grunt rebuild on changes but not run an express server, you can use the constituent commands:
 
 ```
-MOOC_DEV=1 grunt build watch
+DEV=1 grunt build watch
 ```
 
 #### Running tests
@@ -116,10 +116,10 @@ npm run test:entry -- --entry ./test/unit/gridUtilsTest.js
 ##### Rerun Tests Automatically #####
 
 To rerun tests automatically on every file change, set the environment variable
-`MOOC_WATCH=1`:
+`WATCH=1`:
 
 ```
-MOOC_WATCH=1 npm run test:unit
+WATCH=1 npm run test:unit
 ```
 
 This will work on any of the test commands.
@@ -129,10 +129,10 @@ This will work on any of the test commands.
 To debug tests, your best bet is to run them in Chrome. Keep in mind that there
 can be subtle differences between Chrome and PhantomJS, so after fixing your
 test in Chrome, make sure it still works in PhantomJS. To run the tests in
-Chrome, use the `MOOC_BROWSER` environment variable in conjunction with `MOOC_WATCH`:
+Chrome, use the `BROWSER` environment variable in conjunction with `WATCH`:
 
 ```
-MOOC_BROWSER=Chrome MOOC_WATCH=1 npm run test:unit
+BROWSER=Chrome WATCH=1 npm run test:unit
 ```
 
 A new chrome browser window will open where the tests will be running. You can
