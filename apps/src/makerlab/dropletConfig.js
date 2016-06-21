@@ -30,6 +30,7 @@ const buttonVariables = ['buttonL', 'buttonR'];
 
 const buttonEvents = ['press', 'down', 'up'];
 const sensorEvents = ['change', 'data'];
+const touchEvents = ['touch'];
 
 const eventDropdowns = {
   buttonL: buttonEvents,
@@ -39,6 +40,7 @@ const eventDropdowns = {
 };
 
 sensorVariables.forEach(s => eventDropdowns[s] = sensorEvents);
+touchSensorVariables.forEach(s => eventDropdowns[s] = touchEvents);
 
 /**
  * Relies on `this` being the dorplet socket when in droplet mode, and, in
@@ -92,8 +94,8 @@ module.exports.blocks = [
   {func: 'buzzer.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
 
   //{func: 'accelerometer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
-  {func: 'accelerometer.getOrientation', category: 'Circuit', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
-  {func: 'accelerometer.getAcceleration', category: 'Circuit', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
+  {func: 'accelerometer.getOrientation', category: 'Circuit', type: 'value', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
+  {func: 'accelerometer.getAcceleration', category: 'Circuit', type: 'value', paletteParams: ['orientationType'], params: ['"x"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
   {func: 'accelerometer.sensitivity', category: 'Circuit', type: 'property' },
 
   {func: 'value', blockPrefix: `${touchSensorVariables[0]}.`, category: 'Circuit', tipPrefix: touchSensorType, modeOptionName: '*.value', objectDropdown: {options: touchSensorVariables}, type: 'readonlyproperty'},
