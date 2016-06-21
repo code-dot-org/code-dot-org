@@ -35,26 +35,11 @@ describe('MarkdownInstructions', function () {
       <div>
         <MarkdownInstructions
           renderedMarkdown="md"
-          markdownClassicMargins={false}
           inTopPane={true}/>
       </div>
     );
     var element = dom.children[0];
     assert.equal(element.style.paddingTop, '0px');
-  });
-
-  it('markdownClassicMargins has no top padding and big left margin', function () {
-    var dom = ReactTestUtils.renderIntoDocument(
-      <div>
-        <MarkdownInstructions
-          renderedMarkdown="md"
-          markdownClassicMargins={true}
-          inTopPane={false}/>
-      </div>
-    );
-    var element = dom.children[0];
-    assert.equal(element.style.paddingTop, '0px');
-    assert.equal(element.style.marginLeft, '90px');
   });
 });
 

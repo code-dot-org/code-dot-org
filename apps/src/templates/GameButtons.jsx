@@ -49,6 +49,20 @@ RunButton.propTypes = {
   // minecraft depends on styles sheets in some cases, instead of inlined
   isMinecraft: React.PropTypes.bool
 };
+if (process.env.NODE_ENV === 'development') {
+  RunButton.displayName = 'RunButton';
+  RunButton.styleGuideExamples = {
+    description: 'The run button',
+    examples: [
+      {
+        description: 'You have to explicitly set display: block to make this show up.',
+        props: null,
+      },
+    ],
+  };
+}
+
+
 
 export const ResetButton = Radium(props => (
   <button
@@ -71,6 +85,19 @@ ResetButton.propTypes = {
   // minecraft depends on styles sheets in some cases, instead of inlined
   isMinecraft: React.PropTypes.bool
 };
+
+if (process.env.NODE_ENV === 'development') {
+  ResetButton.displayName = 'ResetButton';
+  ResetButton.styleGuideExamples = {
+    description: 'The reset button',
+    examples: [
+      {
+        description: 'You have to explicitly set display: block to make this show up.',
+        props: {style: {display: 'block'}},
+      },
+    ],
+  };
+}
 
 /**
  * A set of game buttons that consist of a run/reset button, and potentially a
