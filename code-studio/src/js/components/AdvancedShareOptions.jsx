@@ -40,27 +40,25 @@ const style = {
     cursor: 'copy',
     width: 465,
     height: 80,
+    margin: 0,
   },
 };
 
 var AdvancedShareOptions = Radium(React.createClass({
   propTypes: {
     onClickExport: React.PropTypes.func,
+    onExpand: React.PropTypes.func.isRequired,
+    expanded: React.PropTypes.bool.isRequired,
     i18n: React.PropTypes.object.isRequired,
   },
 
   getInitialState() {
     return {
-      expanded: false,
       selectedOption: (this.props.onClickExport && 'export') ||
         (experiments.isEnabled('applab-embed') && 'embed'),
       exporting: false,
       exportError: null,
     };
-  },
-
-  expand() {
-    this.setState({expanded: true});
   },
 
   downloadExport() {
@@ -132,7 +130,7 @@ var AdvancedShareOptions = Radium(React.createClass({
     }
     var optionsNav;
     var selectedOption;
-    if (this.state.expanded) {
+    if (this.props.expanded) {
       var exportTab = null;
       if (this.props.onClickExport) {
         exportTab = (
@@ -167,9 +165,9 @@ var AdvancedShareOptions = Radium(React.createClass({
         selectedOption = this.renderEmbedTab();
       }
     }
-    var expand = this.state.expanded && this.state.selectedOption ? null :
+    var expand = this.props.expanded && this.state.selectedOption ? null :
           (
-            <a onClick={this.expand} style={style.expand}>
+            <a onClick={this.props.onExpand} style={style.expand}>
               {this.props.i18n.t('project.advanced_share')}
             </a>
           );
