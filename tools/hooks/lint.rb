@@ -27,6 +27,10 @@ def filter_haml(modified_files)
   modified_files.select { |f| f.end_with?(".haml") }
 end
 
+def filter_scss(modified_files)
+  modified_files.select { |f| f.end_with?(".scss") }
+end
+
 def run(cmd, working_dir)
   Dir.chdir working_dir
   stdout, stderr, status = Open3.capture3(cmd)
@@ -45,6 +49,10 @@ def run_haml(files)
   run("bundle exec haml-lint #{files.join(" ")}", REPO_DIR)
 end
 
+def run_scss(files)
+  run("bundle exec scss-lint #{files.join(" ")}", REPO_DIR)
+end
+
 def lint_failure(output)
   puts output
   `terminal-notifier -message "Lint failed"` if system('which terminal-notifier')
@@ -55,6 +63,7 @@ def do_linting()
   modified_files = HooksUtils.get_staged_files
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
+    Object.method(:run_scss) => filter_scss(modified_files),
     Object.method(:run_eslint) => filter_grunt_jshint(modified_files),
     Object.method(:run_rubocop) => filter_rubocop(modified_files)
   }
