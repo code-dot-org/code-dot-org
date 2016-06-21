@@ -36,14 +36,25 @@ var ShareDialogBody = React.createClass({
   getInitialState: function () {
     return {
       showSendToPhone: false,
+      showAdvancedOptions: false,
       exporting: false,
       exportError: null,
     };
   },
 
   showSendToPhone: function (event) {
-    this.setState({showSendToPhone: true });
+    this.setState({
+      showSendToPhone: true,
+      showAdvancedOptions: false,
+    });
     event.preventDefault();
+  },
+
+  showAdvancedOptions() {
+    this.setState({
+      showSendToPhone: false,
+      showAdvancedOptions: true,
+    });
   },
 
   clickExport: function () {
@@ -109,8 +120,11 @@ var ShareDialogBody = React.createClass({
     if (this.props.appType === 'applab') {
       advancedOptions = (
         <AdvancedShareOptions
-           i18n={this.props.i18n}
-           onClickExport={this.props.onClickExport} />
+            i18n={this.props.i18n}
+            onClickExport={this.props.onClickExport}
+            expanded={this.state.showAdvancedOptions}
+            onExpand={this.showAdvancedOptions}
+        />
       );
     }
 
