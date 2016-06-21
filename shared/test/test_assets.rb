@@ -201,9 +201,7 @@ class AssetsTest < FilesApiTestBase
 
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
-    copy_file_infos = JSON.parse(
-      copy_some(@channel_id, dest_channel_id, {filenames: [sound_filename]})
-    )
+    copy_file_infos = JSON.parse(dest_api.copy_assets(@channel_id, [sound_filename]))
     dest_file_infos = dest_api.list_objects
     assert_equal(nil, copy_file_infos[1])
     assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
@@ -387,10 +385,6 @@ class AssetsTest < FilesApiTestBase
 
   def copy_all(src_channel_id, dest_channel_id)
     AssetBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
-  end
-
-  def copy_some(src_channel_id, dest_channel_id, options)
-    AssetBucket.new.copy_files(src_channel_id, dest_channel_id, options).to_json
   end
 
   def assert_assets_custom_metric(index, metric_type, length_msg = nil, expected_value = 1)
