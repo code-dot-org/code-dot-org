@@ -646,6 +646,11 @@ $default-modal-width: 640px;
     &:hover, & {
       text-decoration: none;
     }
+
+    &:hover {
+      box-shadow: 2px 2px 5px $light_gray;
+    }
+
     i {
       border-radius: 5px;
       width: 45px;
@@ -654,9 +659,6 @@ $default-modal-width: 640px;
       text-align: center;
       vertical-align: middle;
       font-size: 24pt;
-      &:hover {
-        box-shadow: 2px 2px 5px $light_gray;
-      }
 
       &.fa-facebook {
         background-color: #3b5998;
