@@ -28,7 +28,7 @@ window.Radium = require('radium');
 //                   require them specifically where needed.
 require('./components/abuse_error');
 require('./components/report_abuse_form');
-require('./components/send_to_phone');
+require('./components/SendToPhone');
 require('./components/small_footer');
 require('./components/GridEditor');
 require('./components/Attachments');

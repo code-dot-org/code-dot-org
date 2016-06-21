@@ -12,21 +12,12 @@ var styles = {
     marginTop: 10,
     marginBottom: 10,
     paddingTop: 0
-  },
-  // Optionally give markdown dialog wide left margin so it looks more like a
-  // non-markdown instructions dialog (useful if mixing markdown instructions
-  // with non-markdown instructions in one tutorial).
-  classic: {
-    marginBottom: 35,
-    paddingTop: 0,
-    marginLeft: 90
   }
 };
 
 const MarkdownInstructions = React.createClass({
   propTypes: {
     renderedMarkdown: React.PropTypes.string.isRequired,
-    markdownClassicMargins: React.PropTypes.bool,
     onResize: React.PropTypes.func,
     inTopPane: React.PropTypes.bool
   },
@@ -73,14 +64,13 @@ const MarkdownInstructions = React.createClass({
   },
 
   render() {
-    const { inTopPane, renderedMarkdown, markdownClassicMargins } = this.props;
+    const { inTopPane, renderedMarkdown } = this.props;
     return (
       <div
         className='instructions-markdown'
         style={[
           styles.standard,
-          inTopPane && styles.inTopPane,
-          markdownClassicMargins && styles.classic
+          inTopPane && styles.inTopPane
         ]}
         dangerouslySetInnerHTML={{ __html: renderedMarkdown }}/>
     );

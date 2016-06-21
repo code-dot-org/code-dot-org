@@ -61,7 +61,7 @@ class Pd::Enrollment < ActiveRecord::Base
         next if enrolled_user_ids.include? attendee.id
 
         if attendee.email.blank?
-          CDO.log.warning "Unable to create an enrollment for workshop attendee with no email. User Id: #{attendee.id}"
+          CDO.log.warn "Unable to create an enrollment for workshop attendee with no email. User Id: #{attendee.id}"
           next
         end
 

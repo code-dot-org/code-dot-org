@@ -8,6 +8,9 @@
       getResult: function () {
         var response = $('#level_#{level.id}').val();
         return { response: response, valid: response.length > 0 };
+      },
+      getAppName: function () {
+        return "free_response";
       }
     };
 
