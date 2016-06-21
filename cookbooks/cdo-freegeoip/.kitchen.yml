@@ -1,3 +1,8 @@
+# Note that due to a limitation in the Docker AUFS driver,
+# this cookbook's integration test will not run correctly within a Docker container.
+#
+# To run tests using EC2 configuration instead of Docker, run:
+# KITCHEN_LOCAL_YAML=../.kitchen.ec2.yml bundle exec kitchen verify
 ---
 transport:
   name: sftp
