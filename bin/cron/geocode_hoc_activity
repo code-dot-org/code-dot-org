@@ -6,7 +6,7 @@ require 'cdo/properties'
 BATCH_SIZE = 4000
 THREAD_COUNT = 2
 
-def main()
+def main
   threads = [].tap do |threads|
     THREAD_COUNT.times do |segment|
       threads << Thread.new do

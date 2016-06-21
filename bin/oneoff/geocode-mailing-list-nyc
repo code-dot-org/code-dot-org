@@ -6,7 +6,7 @@ require 'cdo/geocoder'
 
 FORMS = PEGASUS_DB[:forms]
 
-def main()
+def main
   #['nyc-admins', 'nyc-parents', 'nyc-teachers'].each do |group|
   ['nyc-teachers'].each do |group|
     CSV.foreach("#{group}.csv", headers: true) do |row|

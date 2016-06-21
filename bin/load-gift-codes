@@ -2,7 +2,7 @@
 require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 
-def main()
+def main
   type = ARGV[0].downcase
   path = ARGV[1]
 

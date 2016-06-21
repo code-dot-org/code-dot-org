@@ -9,7 +9,7 @@ require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'twilio-ruby'
 
-def main()
+def main
   @client = Twilio::REST::Client.new CDO.twilio_sid, CDO.twilio_auth
 
   begin
