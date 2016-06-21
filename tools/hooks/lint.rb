@@ -4,7 +4,7 @@ require_relative 'hooks_utils.rb'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 APPS_DIR = "#{REPO_DIR}/apps"
-SCSS_GLOB = YAML.load_file('.scss-lint.yml')['scss_files'] || '*'
+SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'}"
 
 def filter_grunt_jshint(modified_files)
   modified_files.select do |f|
