@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require File.expand_path('../../deployment', __FILE__)
+require File.expand_path('../../../deployment', __FILE__)
 require 'csv'
 require 'cdo/db'
 require 'cdo/geocoder'

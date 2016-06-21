@@ -2,13 +2,16 @@ import $ from 'jquery';
 
 window.levelGroup = window.levelGroup || {levels: {}};
 
-var TextMatch = window.TextMatch = function (levelId, id, standalone, answers, lastAttempt) {
+var TextMatch = window.TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
 
   // The dashboard levelId.
   this.levelId = levelId;
 
   // The DOM id.
   this.id = id;
+
+  // The dashboard app name.
+  this.app = app;
 
   this.standalone = standalone;
 
@@ -38,6 +41,10 @@ TextMatch.prototype.ready = function () {
       window.levelGroup.answerChangedFn(this.levelId);
     }
   });
+};
+
+TextMatch.prototype.getAppName = function () {
+  return this.app;
 };
 
 TextMatch.prototype.getResult = function () {

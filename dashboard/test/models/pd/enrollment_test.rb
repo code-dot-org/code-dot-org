@@ -94,7 +94,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     create :pd_attendance, session: workshop.sessions.first, teacher: unenrolled_attendee_no_email
 
     mock_logger = mock
-    mock_logger.expects(:warning).with(
+    mock_logger.expects(:warn).with(
       "Unable to create an enrollment for workshop attendee with no email. User Id: #{unenrolled_attendee_no_email.id}"
     )
     CDO.expects(:log).returns(mock_logger)

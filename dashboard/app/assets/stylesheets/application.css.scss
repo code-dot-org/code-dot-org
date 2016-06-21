@@ -646,6 +646,11 @@ $default-modal-width: 640px;
     &:hover, & {
       text-decoration: none;
     }
+
+    &:hover {
+      box-shadow: 2px 2px 5px $light_gray;
+    }
+
     i {
       border-radius: 5px;
       width: 45px;
@@ -654,9 +659,6 @@ $default-modal-width: 640px;
       text-align: center;
       vertical-align: middle;
       font-size: 24pt;
-      &:hover {
-        box-shadow: 2px 2px 5px $light_gray;
-      }
 
       &.fa-facebook {
         background-color: #3b5998;
@@ -1803,6 +1805,13 @@ $information-desktop: "only screen and (min-width: 1024px)";
     line-height: 24px;
   }
   $multi-left-margin: 50px;
+
+  .answerbutton {
+    &.lock-answers {
+      pointer-events: none;
+      color: grey;
+    }
+  }
 
   // The tight layout is designed for a full-width layout that tends to
   // vertically stack every element, rather than going for side-by-side elements.
