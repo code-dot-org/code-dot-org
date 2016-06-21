@@ -78,7 +78,7 @@ const AnimationPreview = React.createClass({
     const yScale = innerHeight / nextAnimation.frameSize.y;
     const scale = Math.min(1, Math.min(xScale, yScale));
     const scaledFrameSize = scaleVector2(nextAnimation.frameSize, scale);
-    const sourceUrl = nextAnimation.sourceUrl ? nextAnimation.sourceUrl : EMPTY_IMAGE;
+    const sourceUrl = nextProps.sourceUrl ? nextProps.sourceUrl : EMPTY_IMAGE;
     this.setState({
       framesPerRow: Math.floor(nextAnimation.sourceSize.x / nextAnimation.frameSize.x),
       scaledSourceSize: scaleVector2(nextAnimation.sourceSize, scale),

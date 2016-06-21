@@ -2,8 +2,8 @@
 'use strict';
 
 import _ from 'lodash';
-import {addAnimation} from '../animationListModule';
-import { makeEnum, createUuid } from '../../utils';
+import {addAnimation, addLibraryAnimation} from '../animationListModule';
+import { makeEnum } from '../../utils';
 import { animations as animationsApi } from '../../clientApi';
 
 /**
@@ -169,7 +169,7 @@ export function pickLibraryAnimation(animation) {
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      dispatch(addAnimation(createUuid(), animation));
+      dispatch(addLibraryAnimation(animation));
     } else if (goal === Goal.NEW_FRAME) {
       // TODO (bbuchanan): Implement after integrating Piskel
     }
