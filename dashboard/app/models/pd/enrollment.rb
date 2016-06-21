@@ -46,26 +46,16 @@ class Pd::Enrollment < ActiveRecord::Base
   # needs to be, but correlates to the list of valid configurations given
   # in https://github.com/code-dot-org/code-dot-org/pull/8624.
   def validate_school_district
-    if school_type == SCHOOL_TYPE_CHARTER && !school_zip.blank?
-      return
-    elsif school_type == SCHOOL_TYPE_PRIVATE && !school_zip.blank?
-      return
-    elsif school_type == SCHOOL_TYPE_PUBLIC
-      if school_state == SCHOOL_STATE_OTHER
-        return
-      elsif !school_state.blank? && !school_district_id.blank?
-        return
-      elsif !school_state.blank? && school_district_id.blank? && !school_district_other.blank?
-        return
-      end
+    return if school_type == SCHOOL_TYPE_CHARTER && !school_zip.blank?
+    return if school_type == SCHOOL_TYPE_PRIVATE && !school_zip.blank?
+    if school_type == SCHOOL_TYPE_PUBLIC
+      return if school_state == SCHOOL_STATE_OTHER
+      return if !school_state.blank? && !school_district_id.blank?
+      return if !school_state.blank? && school_district_id.blank? && !school_district_other.blank?
     elsif school_type == SCHOOL_TYPE_OTHER
-      if school_state == SCHOOL_STATE_OTHER
-        return
-      elsif !school_state.blank? && !school_district_id.blank?
-        return
-      elsif !school_state.blank? && school_district_id.blank? && !school_district_other.blank?
-        return
-      end
+      return if school_state == SCHOOL_STATE_OTHER
+      return if !school_state.blank? && !school_district_id.blank?
+      return if !school_state.blank? && school_district_id.blank? && !school_district_other.blank?
     end
 
     errors.add(:school_district, "is required")
