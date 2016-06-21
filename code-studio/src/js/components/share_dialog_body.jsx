@@ -115,11 +115,13 @@ var ShareDialogBody = React.createClass({
     return (
       <div>
         {image}
-        <div id="project-share" className={modalClass}>
+        <div id="project-share" className={modalClass} style={{position: 'relative'}}>
           <p className="dialog-title">{this.props.title}</p>
           {abuseContents}
-          <p>{this.props.shareCopyLink}</p>
-          <div>
+          <p style={{fontSize: 20}}>
+            {this.props.shareCopyLink}
+          </p>
+          <div style={{marginBottom: 10}}>
             <input
               type="text"
               id="sharing-input"
@@ -147,7 +149,7 @@ var ShareDialogBody = React.createClass({
               close, but id is (unfortunately) used for styling */}
           <button
               id="continue-button"
-              style={{position: 'absolute', right: 0, bottom: 10}}
+              style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
               onClick={this.props.onClickClose}>
             {this.props.closeText}
           </button>
