@@ -21,7 +21,19 @@ import _ from '../lodash';
 var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
 
 class TouchSensor {
-  constructor() {}
+  constructor(index, capTouch) {
+    this.index = index;
+    this.capTouch = capTouch;
+  }
+
+  on(eventName, callback) {
+    if(eventName === 'touch') {
+      this.capTouch.onTouch(this.index, function(isTouched) {
+        isTouched && callback();
+      });
+    }
+  }
+
   get value() {
     // TODO: remove test value.
     return 5;
@@ -100,6 +112,8 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
   Object.keys(this.prewiredComponents).forEach(function (key) {
     jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
   }.bind(this));
+
+  this.prewiredComponents.accelerometer.start();
 };
 
 BoardController.prototype.reset = function () {
@@ -248,12 +262,20 @@ function initializeCircuitPlaygroundComponents(io, board) {
   const accelerometer = new five.Accelerometer({
     controller: PlaygroundIO.Accelerometer
   });
-  Object.defineProperty(accelerometer, 'getAveragedValue', {get: accelerometer.value});
+  accelerometer.getOrientation = function(orientationType){
+    return accelerometer[orientationType];
+  };
+  accelerometer.getAcceleration = function(accelerationDirection){
+    if (accelerationDirection === 'total') {
+      return accelerometer.acceleration;
+    }
+    return accelerometer[accelerationDirection];
+  };
 
+  const capTouch = new PlaygroundIO.CapTouch(io);
   const touchSensors = {};
   _.each([0, 1, 2, 3, 6, 9, 10, 12], index => {
-    const touchSensor = new TouchSensor();
-    touchSensors[`touchSensor${index}`] = touchSensor;
+    touchSensors[`touchSensor${index}`] = new TouchSensor(index, capTouch);
   });
 
   return _.merge(touchSensors, {
@@ -283,7 +305,7 @@ function initializeCircuitPlaygroundComponents(io, board) {
 
     tap: new PlaygroundIO.Tap(io),
 
-    touch: new PlaygroundIO.CapTouch(io),
+    touch: capTouch,
 
     soundSensor: sound,
 
