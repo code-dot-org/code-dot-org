@@ -1,6 +1,6 @@
 import React from 'react';
 var AbuseError = require('./abuse_error');
-var SendToPhone = require('./send_to_phone');
+var SendToPhone = require('./SendToPhone');
 var AdvancedShareOptions = require('./AdvancedShareOptions');
 
 var select = function (event) {
