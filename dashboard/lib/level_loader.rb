@@ -35,9 +35,8 @@ class LevelLoader
     # Fixes issue #75863324 (delete removed level properties on import)
     level.send(:write_attribute, 'properties', {})
     level.assign_attributes(level.load_level_xml(xml_node))
-    if level.changed.include?('tts_updated_at')
-      AWS::S3.copy_within_bucket('cdo-tts', level.tts_audio_file('levelbuilder'), level.tts_audio_file)
-    end
+
+    level.tts_copy
 
     level.save! if level.changed?
     level
