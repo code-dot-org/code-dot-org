@@ -55,7 +55,7 @@ module Dashboard
     end
 
     # @returns [Hash] dashboard DB row for this user as a hash
-    def to_hash()
+    def to_hash
       @row.to_hash
     end
 

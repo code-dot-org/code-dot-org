@@ -240,7 +240,7 @@ class Deliverer
     end
   end
 
-  def smtp_connect()
+  def smtp_connect
     Net::SMTP.new(@params[:address], @params[:port]).tap do |smtp|
       smtp.enable_starttls if @params[:enable_starttls_auto]
       smtp.start(@params[:domain], @params[:user_name], @params[:password], @params[:authentication])
@@ -259,7 +259,7 @@ def create_threads(count)
   end
 end
 
-def main()
+def main
   started_at = Time.now
 
   queue = Queue.new.tap do |results|

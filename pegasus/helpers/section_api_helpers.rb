@@ -101,7 +101,7 @@ class DashboardStudent
     age
   end
 
-  def self.fields()
+  def self.fields
     [
       :users__id___id,
       :users__name___name,
@@ -370,7 +370,7 @@ class DashboardSection
     !!students.index{|i| i[:id] == user_id}
   end
 
-  def students()
+  def students
     @students ||= Dashboard.db[:followers].
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
@@ -394,7 +394,7 @@ class DashboardSection
     !!teachers.index{|i| i[:id] == user_id}
   end
 
-  def teachers()
+  def teachers
     @teachers ||= [{
       id: @row[:teacher_id],
       location: "/v2/users/#{@row[:teacher_id]}",
@@ -408,7 +408,7 @@ class DashboardSection
       first
   end
 
-  def to_owner_hash()
+  def to_owner_hash
     to_member_hash.merge(
         course: course,
         teachers: teachers,
@@ -416,7 +416,7 @@ class DashboardSection
     )
   end
 
-  def to_member_hash()
+  def to_member_hash
     {
         id: @row[:id],
         location: "/v2/sections/#{@row[:id]}",
@@ -453,7 +453,7 @@ class DashboardSection
     fetch_if_allowed(section_id, user_id)
   end
 
-  def self.fields()
+  def self.fields
     [
       :sections__id___id,
       :sections__name___name,

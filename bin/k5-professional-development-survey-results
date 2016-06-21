@@ -26,7 +26,7 @@ def satisfaction_s_to_i(value)
   end
 end
 
-def main()
+def main
   keys = nil
 
   DB[:forms].where(kind: 'K5ProfessionalDevelopmentSurvey').each do |row|
