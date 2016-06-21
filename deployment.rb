@@ -96,6 +96,8 @@ def load_configuration()
     'firebase_max_channel_writes_per_15_sec' => 300,
     'firebase_max_channel_writes_per_60_sec' => 600,
     'firebase_max_table_rows'     => 1000,
+    'firebase_max_record_size'    => 4096,
+    'firebase_max_property_size'  => 4096,
     # dynamodb-specific rate limits
     'max_table_reads_per_sec'     => 20,
     'max_table_writes_per_sec'    => 40,

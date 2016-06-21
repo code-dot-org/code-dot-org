@@ -305,8 +305,6 @@ def main()
     message = "#{queue_count} email(s) sent in #{elapsed_seconds} seconds using #{worker_count} threads, #{remaining_count} still queued."
     if rack_env?(:development)
       puts message
-    else
-#      HipChat.log message
     end
   end
 end

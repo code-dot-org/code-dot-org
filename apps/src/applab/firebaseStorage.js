@@ -1,6 +1,6 @@
 /* global Applab */
 
-import { getDatabase } from './firebaseUtils';
+import { loadConfig, getDatabase } from './firebaseUtils';
 import { updateTableCounters, incrementRateLimitCounters } from './firebaseCounters';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
@@ -9,6 +9,10 @@ import { updateTableCounters, incrementRateLimitCounters } from './firebaseCount
  * Namespace for Firebase storage.
  */
 let FirebaseStorage = {};
+
+// Upper bound on the number of additional characters needed in the JSON representation
+// of a record when an 'id' field (up to 10 digits) is added to it, e.g. ' "id":1234567890'.
+const RECORD_ID_PADDING = 16;
 
 function getKeysRef(channelId) {
   let kv = getDatabase(channelId).child('storage/keys');
@@ -49,9 +53,13 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
   // which require JSON texts (such as Ruby's), this can be converted to a JSON text via:
   // `{v: ${jsonValue}}`. For terminology see: https://tools.ietf.org/html/rfc7159
   const jsonValue = JSON.stringify(value);
-  incrementRateLimitCounters()
-    .then(() => keyRef.set(jsonValue))
-    .then(onSuccess, onError);
+
+  loadConfig().then(config => {
+    if (jsonValue.length > config.maxPropertySize) {
+      return Promise.reject(`The value is too large. The maximum allowable size is ${config.maxPropertySize} bytes.`);
+    }
+    return incrementRateLimitCounters();
+  }).then(() => keyRef.set(jsonValue)).then(onSuccess, onError);
 };
 
 /**
@@ -77,8 +85,13 @@ function getRecordExistsPromise(tableName, recordId) {
  */
 FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) {
   // Assign a unique id for the new record.
-  incrementRateLimitCounters()
-    .then(() => updateTableCounters(tableName, 1, true))
+  const updateNextId = true;
+
+  // Validate the length of the record before updating table counters, so that the
+  // row count does not become inaccurate if the record is too large.
+  validateRecord(record)
+    .then(() => incrementRateLimitCounters())
+    .then(() => updateTableCounters(tableName, 1, updateNextId))
     .then(nextId => {
       record.id = nextId;
       const recordRef = getDatabase(Applab.channelId)
@@ -97,6 +110,26 @@ function matchesSearch(record, searchParams) {
     matches = matches && (record[key] === searchParams[key]);
   });
   return matches;
+}
+
+function validateRecord(record, hasId) {
+  if (!record) {
+    return Promise.reject(`Invalid record: ${record}`);
+  }
+  if (hasId && !record.id) {
+    return Promise.reject(`Missing record id: ${record.id}`);
+  }
+  if (!hasId && record.id) {
+    return Promise.reject(`Unexpected record id: ${record.id}`);
+  }
+  return loadConfig().then(config => {
+    // Allow some padding for the id field, so that we can validate the record before
+    // the id field is added.
+    if (JSON.stringify(record).length > config.maxRecordSize - RECORD_ID_PADDING) {
+      return Promise.reject(`The record is too large. The maximum allowable size is ${config.maxRecordSize} bytes.`);
+    }
+    return Promise.resolve();
+  });
 }
 
 /**
@@ -141,22 +174,26 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError) {
+  const recordJson = JSON.stringify(record);
+  const recordRef = getDatabase(Applab.channelId)
+    .child(`storage/tables/${tableName}/records/${record.id}`);
+  const hasId = true;
+
   // There is a race condition in which we might inaccurately report whether the operation
   // was successful or not. The alternative is a transaction, however this is not reliable
   // since transactions sometimes return null on their first attempt to read the data.
-  getRecordExistsPromise(tableName, record.id).then(recordExists => {
-    if (!recordExists) {
-      onComplete(null, false);
-    } else {
-      incrementRateLimitCounters()
-        .then(() => updateTableCounters(tableName, 0))
-        .then(() => {
-          const recordRef = getDatabase(Applab.channelId)
-            .child(`storage/tables/${tableName}/records/${record.id}`);
-          return recordRef.set(JSON.stringify(record));
-        }).then(() => onComplete(record, true), onError);
-    }
-  });
+  validateRecord(record, hasId)
+    .then(() => getRecordExistsPromise(tableName, record.id))
+    .then(recordExists => {
+      if (!recordExists) {
+        onComplete(null, false);
+      } else {
+        incrementRateLimitCounters()
+          .then(() => updateTableCounters(tableName, 0))
+          .then(() => recordRef.set(recordJson))
+          .then(() => onComplete(record, true), onError);
+      }
+    });
 };
 
 /**
@@ -170,6 +207,9 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
+  const recordRef = getDatabase(Applab.channelId)
+    .child(`storage/tables/${tableName}/records/${record.id}`);
+
   // There is a race condition in which we might inaccurately report whether the operation
   // was successful or not. The alternative is a transaction, however this is not reliable
   // since transactions sometimes return null on their first attempt to read the data.
@@ -179,11 +219,8 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
     } else {
       incrementRateLimitCounters()
         .then(() => updateTableCounters(tableName, -1))
-        .then(() => {
-          const recordRef = getDatabase(Applab.channelId)
-            .child(`storage/tables/${tableName}/records/${record.id}`);
-          return recordRef.set(null);
-        }).then(() => onComplete(true), onError);
+        .then(() => recordRef.set(null))
+        .then(() => onComplete(true), onError);
     }
   });
 };
