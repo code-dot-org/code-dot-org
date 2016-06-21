@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Modify the code so that all of the console.log commands print true",
-    "start_blocks": "// Modify these sprites so that all of the\r\n// console.log() commands print true\r\nvar sprite1 = createSprite(100, 200, 80, 80);\r\nvar sprite2 = createSprite(300, 200, 70, 100);\r\nsprite1.shapeColor = \"green\";\r\nsprite2.shapeColor = \"blue\";\r\n\r\n// Don't edit the following (I'm serious!!!)\r\nconsole.log(sprite2.width == sprite2.height);\r\nconsole.log(sprite1.shapeColor == sprite2.shapeColor);\r\nconsole.log(sprite1.x > 150);\r\nconsole.log(sprite2.y < 200);\r\n\r\ndrawSprites();",
+    "start_blocks": "// Modify these sprites so that all of the\r\n// console.log() commands print true\r\nvar sprite1 = createSprite(100, 200, 80, 80);\r\nsprite1.shapeColor = \"green\";\r\nsprite1.rotation = 30;\r\n\r\nvar sprite2 = createSprite(300, 200, 70, 100);\r\nsprite2.shapeColor = \"blue\";\r\nsprite2.rotation = 60;\r\n\r\n// Don't edit the following (I'm serious!!!)\r\nconsole.log(sprite2.width == sprite2.height);\r\nconsole.log(sprite1.shapeColor == sprite2.shapeColor);\r\nconsole.log(sprite2.rotation < 40);\r\nconsole.log(sprite1.width == sprite2.width)\r\nconsole.log(sprite1.x > 150);\r\nconsole.log(sprite2.y < 200);\r\n\r\ndrawSprites();",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -32,9 +32,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Comparing with Booleans\r\n\r\nYou've seen already how booleans can be used to compare two values, let's see if you can modify those values to change the result of a boolean question.\r\n\r\n# Do This\r\n\r\n- Read through the entire program to see how `sprite1` and `sprite2` will be created, and what boolean comparisons will be made.\r\n- For each of the boolean comparisons, identify the sprite properties being evaluated.\r\n- Modify the code _in the first six lines only_ so that each of the `console.log()` statements print `true`.",
+    "markdown_instructions": "# Comparing with Booleans\r\n\r\nThe simplest boolean expressions are questions that the computer can answer with true or false. These expressions are made using **comparison operators**, as shown below.\r\n\r\n|Boolean Comparison | Example |  Meaning |\r\n|:---:|:---:|:---:|\r\n| <img src=\"https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png\" style=\"width: 100px\"> | `1 < 9` | Is 1 less than 9? | \r\n| <img src=\"https://images.code.org/5ff460ac121f0ac51b569e96a4404c57-image-1447271431310.png\" style=\"width: 100px\"> | `1 > 9` | Is 1 greater than 9 ? |  \r\n| <img src=\"https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png\" style=\"width: 100px\">| `1 == 9` | Is 1 equal to 9?| \r\n<br>\r\n**Note:** If you saw the statement 3 < 2 in math class, you'd think something was terribly wrong, **BUT THIS IS NOT MATH CLASS!**  In computer science, the **comparison operators ask a question that the computer will evaluate to true or false.** So you can read 3 < 2 as **\"Is 3 less than 2?\"** The answer in this case is no, or __FALSE__.\r\n\r\n# Do This\r\nCan you modify the values of the sprite properties to change the result of a boolean question to all be true?\r\n\r\n- Read through the entire program to see how `sprite1` and `sprite2` will be created, and what boolean comparisons will be made.\r\n- For each of the boolean comparisons, identify the sprite properties being evaluated.\r\n- Modify the code _in the first **9** lines only_ so that each of the `console.log()` statements print `true`.",
     "callout_json": "[]",
-    "show_d_pad": "false"
+    "show_d_pad": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
