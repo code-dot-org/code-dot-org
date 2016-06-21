@@ -2,9 +2,6 @@ import {assert} from '../util/configuredChai';
 
 function setGlobals() {
   document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
-  global.Blockly = {
-    SVG_NS: "http://www.w3.org/2000/svg"
-  };
 }
 
 var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
