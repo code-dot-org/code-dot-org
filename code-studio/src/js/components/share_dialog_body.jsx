@@ -99,8 +99,10 @@ var ShareDialogBody = React.createClass({
     var sendToPhone;
     if (this.state.showSendToPhone) {
       sendToPhone = <SendToPhone
-        channelId={this.props.channelId}
-        appType={this.props.appType}/>;
+                        channelId={this.props.channelId}
+                        appType={this.props.appType}
+                        styles={{label:{marginTop: 15, marginBottom: 0}}}
+                    />;
     }
 
     var advancedOptions;
@@ -144,6 +146,7 @@ var ShareDialogBody = React.createClass({
               <i className="fa fa-twitter"></i>
             </a>
           </div>
+          {sendToPhone}
           {advancedOptions}
           {/* Awkward that this is called continue-button, when text is
               close, but id is (unfortunately) used for styling */}
@@ -153,8 +156,6 @@ var ShareDialogBody = React.createClass({
               onClick={this.props.onClickClose}>
             {this.props.closeText}
           </button>
-
-          {sendToPhone}
         </div>
       </div>
     );
