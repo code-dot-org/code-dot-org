@@ -1,4 +1,4 @@
--require 'state_abbr'
+- require 'state_abbr'
 
 - content_for(:head) do
   =javascript_include_tag 'js/districtDropdown'
@@ -10,10 +10,10 @@
       .question Select school type
       %select#school-type.form-control{name: "#{form_name}[school_type]", type: "select", required: false}
         %option{value: "", selected: true, disabled: true}
-        %option{value: "charter"} Charter
-        %option{value: "private"} Private
-        %option{value: "public"} Public
-        %option{value: "other"} Other
+        %option{value: DistrictDropdownConstants::SCHOOL_TYPE_CHARTER} Charter
+        %option{value: DistrictDropdownConstants::SCHOOL_TYPE_PRIVATE} Private
+        %option{value: DistrictDropdownConstants::SCHOOL_TYPE_PUBLIC} Public
+        %option{value: DistrictDropdownConstants::SCHOOL_TYPE_OTHER} Other
 
     .form-group{style: "display: none; margin-top: 20px;"}
       .question Enter school district's ZIP code
@@ -25,7 +25,7 @@
         %option{value: "", selected: true, disabled: true}
         - get_all_states_with_dc.each do |state_abbr, state_name|
           %option{value: state_abbr}= state_name
-        %option{value: "other"} Other
+        %option{value: DistrictDropdownConstants::SCHOOL_STATE_OTHER} Other
 
     .form-group{style: "display: none; margin-top: 20px;"}
       .question Search for district
