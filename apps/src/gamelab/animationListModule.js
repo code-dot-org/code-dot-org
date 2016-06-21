@@ -30,6 +30,7 @@ import _ from 'lodash';
 import {combineReducers} from 'redux';
 import utils from '../utils';
 import {animations as animationsApi} from '../clientApi';
+import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 /* global dashboard */
 
@@ -193,7 +194,9 @@ export function addAnimation(key, data) {
       key,
       data
     });
-    dispatch(loadAnimationFromSource(key));
+    dispatch(loadAnimationFromSource(key, undefined, () => {
+      dispatch(selectAnimation(key));
+    }));
     dashboard.project.projectChanged();
   };
 }
@@ -210,7 +213,9 @@ export function addLibraryAnimation(data) {
       key,
       data
     });
-    dispatch(loadAnimationFromSource(key, data.sourceUrl));
+    dispatch(loadAnimationFromSource(key, data.sourceUrl, () => {
+      dispatch(selectAnimation(key));
+    }));
     dashboard.project.projectChanged();
   };
 }
@@ -252,6 +257,7 @@ export function cloneAnimation(key) {
           version: versionId
         })
       });
+      dispatch(selectAnimation(newAnimationKey));
       dashboard.project.projectChanged();
     };
 
@@ -339,9 +345,11 @@ export function deleteAnimation(key) {
  * animation list) from its source, whether that is S3 or the animation library.
  * @param {!AnimationKey} key
  * @param {string} [sourceUrl]
+ * @param {function} [callback]
  */
-function loadAnimationFromSource(key, sourceUrl) {
+function loadAnimationFromSource(key, sourceUrl, callback) {
   sourceUrl = sourceUrl || animationsApi.basePath(key) + '.png';
+  callback = callback || function () {};
   return (dispatch, getState) => {
     dispatch({
       type: START_LOADING_FROM_SOURCE,
@@ -362,6 +370,7 @@ function loadAnimationFromSource(key, sourceUrl) {
           blob,
           dataURI
         });
+        callback();
       });
     });
   };
