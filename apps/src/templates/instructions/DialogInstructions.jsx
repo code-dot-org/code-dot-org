@@ -16,6 +16,8 @@ const DialogInstructions = React.createClass({
     shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
     aniGifURL: React.PropTypes.string,
+    aniGifOnly: React.PropTypes.bool,
+    hintsOnly: React.PropTypes.bool,
 
     // not redux
     authoredHints: React.PropTypes.element
@@ -23,17 +25,21 @@ const DialogInstructions = React.createClass({
   render() {
     const renderedMarkdown = this.props.longInstructions ?
       processMarkdown(this.props.longInstructions) : undefined;
+
+    const showInstructions = !(this.props.aniGifOnly || this.props.hintsOnly);
+    const showAniGif = !this.props.hintsOnly;
+    const showHints = !this.props.aniGifOnly;
     return (
       <Instructions
           puzzleTitle={msg.puzzleTitle({
             stage_total: this.props.stageTotal,
             puzzle_number: this.props.puzzleNumber
           })}
-          instructions={this.props.shortInstructions}
-          instructions2={this.props.shortInstructions2}
-          renderedMarkdown={renderedMarkdown}
-          aniGifURL={this.props.aniGifURL}
-          authoredHints={this.props.authoredHints}
+          instructions={showInstructions ?  this.props.shortInstructions : undefined}
+          instructions2={showInstructions ?  this.props.shortInstructions2 : undefined}
+          renderedMarkdown={showInstructions ?  renderedMarkdown : undefined}
+          aniGifURL={showAniGif ? this.props.aniGifURL : undefined}
+          authoredHints={showHints ? this.props.authoredHints : undefined}
       />
     );
   }
@@ -46,4 +52,6 @@ export default connect(state => ({
   shortInstructions2: state.instructions.shortInstructions2,
   longInstructions: state.instructions.longInstructions,
   aniGifURL: state.pageConstants.aniGifURL,
+  aniGifOnly: state.instructionsDialog.aniGifOnly,
+  hintsOnly: state.instructionsDialog.hintsOnly
 }))(DialogInstructions);
