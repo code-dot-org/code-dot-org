@@ -199,6 +199,23 @@ export function addAnimation(key, data) {
 }
 
 /**
+ * Add a library animation to the project.
+ * @param {!SerializedAnimation} data
+ */
+export function addLibraryAnimation(data) {
+  return dispatch => {
+    const key = utils.createUuid();
+    dispatch({
+      type: ADD_ANIMATION,
+      key,
+      data
+    });
+    dispatch(loadAnimationFromSource(key, data.sourceUrl));
+    dashboard.project.projectChanged();
+  };
+}
+
+/**
  * Clone the requested animation, putting the new one directly after the original
  * in the project animation list.
  * @param {!AnimationKey} key
@@ -321,14 +338,18 @@ export function deleteAnimation(key) {
  * Load the indicated animation (which must already have an entry in the project
  * animation list) from its source, whether that is S3 or the animation library.
  * @param {!AnimationKey} key
+ * @param {string} [sourceUrl]
  */
-function loadAnimationFromSource(key) {
+function loadAnimationFromSource(key, sourceUrl) {
+  sourceUrl = sourceUrl || animationsApi.basePath(key) + '.png';
   return (dispatch, getState) => {
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
     });
-    fetchUrlAsBlob(getState().animationList.data[key].sourceUrl, (err, blob) => {
+    // Figure out URL from animation key
+    // TODO: Take version ID into account here...
+    fetchUrlAsBlob(sourceUrl, (err, blob) => {
       if (err) {
         return;
       }
@@ -415,6 +436,12 @@ export function autosaveAnimations() {
     });
   };
 }
+
+/**
+ * @typedef {Object} Vector2
+ * @property {number} x
+ * @property {number} y
+ */
 
 /**
  * @typedef {Object} Animation
