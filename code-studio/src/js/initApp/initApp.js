@@ -55,7 +55,8 @@ window.apps = {
               id: level.levelId,
               app: level.getAppName(),
               callback: appOptions.report.sublevelCallback + level.levelId,
-              result: level.getResult()
+              result: level.getResult(),
+              feedback: level.getCurrentAnswerFeedback()
             });
           }
           return results;
