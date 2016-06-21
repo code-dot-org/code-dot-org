@@ -19,10 +19,14 @@ module ImageLib
   # @throws MiniMagic::Error if a MiniMagic error occurs.
 
   def self.overlay_image(params)
-    background, bg_temp = get_image_and_file(params[:background_url],
-                                             params[:background_blob])
-    foreground, fg_temp = get_image_and_file(params[:foreground_url],
-                                             params[:foreground_blob])
+    background, bg_temp = get_image_and_file(
+      params[:background_url],
+      params[:background_blob]
+    )
+    foreground, fg_temp = get_image_and_file(
+      params[:foreground_url],
+      params[:foreground_blob]
+    )
     background.geometry('154x154+0+0')
     background.composite(foreground) do |c|
       c.gravity('Center')
