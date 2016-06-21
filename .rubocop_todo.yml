@@ -151,13 +151,6 @@ Style/DefWithParentheses:
 Style/DeprecatedHashMethods:
   Enabled: false
 
-# Offense count: 8
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: empty, nil, both
-Style/EmptyElse:
-  Enabled: false
-
 # Offense count: 27
 # Cop supports --auto-correct.
 Style/EmptyLinesAroundAccessModifier:

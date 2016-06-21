@@ -79,7 +79,7 @@ include_recipe 'cdo-varnish'
 include_recipe 'cdo-apps::bundle_bootstrap'
 
 # Install optional package build targets if specified in attributes.
-%w(code_studio apps blockly_core).each do |package|
+%w(blockly_core apps code_studio).each do |package|
   include_recipe "cdo-apps::#{package}" if node['cdo-secrets'] && node['cdo-secrets']["build_#{package}"]
 end
 

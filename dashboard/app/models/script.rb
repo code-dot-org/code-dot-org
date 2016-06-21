@@ -453,19 +453,10 @@ class Script < ActiveRecord::Base
           raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
         end
 
-        if Game.gamelab == level.game
-          unless script.student_of_admin_required || script.admin_required
-            raise <<-ERROR.gsub(/^\s+/, '')
-              Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required
-              (while adding level "#{level.name}" to script "#{script.name}")
-            ERROR
-          end
-        end
-
-        if Game.applab == level.game
+        if [Game.applab, Game.gamelab].include? level.game
           unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
             raise <<-ERROR.gsub(/^\s+/, '')
-              Applab levels can only be added to scripts that are hidden or require login
+              Applab and Gamelab levels can only be added to scripts that are hidden or require login
               (while adding level "#{level.name}" to script "#{script.name}")
             ERROR
           end
