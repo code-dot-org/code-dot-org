@@ -442,7 +442,12 @@ StudioApp.prototype.init = function (config) {
         return;
       }
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.reduxStore.dispatch(openInstructionsDialog(shouldAutoClose, false));
+      this.reduxStore.dispatch(openInstructionsDialog({
+        autoClose: shouldAutoClose,
+        showHints: false,
+        aniGifOnly: false,
+        hintsOnly: false
+      }));
     }.bind(this));
   }
 
