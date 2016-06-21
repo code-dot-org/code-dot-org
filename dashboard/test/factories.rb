@@ -459,7 +459,7 @@ FactoryGirl.define do
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
     school {'Example School'}
-    school_type {'public'}
+    school_type {DistrictDropdownConstants::SCHOOL_TYPE_PUBLIC}
     school_state {'WA'}
     school_district_id {create(:school_district).id}
   end

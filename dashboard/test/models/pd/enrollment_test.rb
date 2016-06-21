@@ -138,7 +138,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.name = 'name'
     enrollment.email = 'teacher@example.net'
     enrollment.school = 'school'
-    enrollment.school_type = "charter"
+    enrollment.school_type = DistrictDropdownConstants::SCHOOL_TYPE_CHARTER
     enrollment.school_zip = 98144
     assert enrollment.valid?
   end
