@@ -32,7 +32,8 @@ module AWS
       find { |cert| cert.domain_name == "*.#{DOMAIN}" }.
       certificate_arn
 
-    BRANCH = ENV['branch'] || rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env
+    BRANCH = ENV['branch'] || (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
+
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
@@ -67,11 +68,13 @@ module AWS
         action = stack_exists? ? :update : :create
         CDO.log.info "#{action} stack: #{STACK_NAME}..."
         start_time = Time.now
-        updated_stack_id = cfn.method("#{action}_stack").call(
+        stack_options = {
           stack_name: STACK_NAME,
           template_body: template,
           capabilities: ['CAPABILITY_IAM']
-        ).stack_id
+        }
+        stack_options[:on_failure] = 'DO_NOTHING' if action == :create
+        updated_stack_id = cfn.method("#{action}_stack").call(stack_options).stack_id
         wait_for_stack(action, start_time)
         CDO.log.info 'Outputs:'
         cfn.describe_stacks(stack_name: updated_stack_id).stacks.first.outputs.each do |output|
@@ -154,15 +157,14 @@ module AWS
             if (match = event.resource_status_reason.match /with UniqueId (?<instance>i-\w+)/)
               instance = match[:instance]
               CDO.log.info "Printing the last #{STACK_ERROR_LINES} lines to help debug the instance failure.."
-              CDO.log.info "To get full console output, run `aws ec2 get-console-output --instance-id #{instance} | jq -r .Output`."
               ec2 = Aws::EC2::Client.new
               lines = Base64.decode64(ec2.get_console_output(instance_id: instance).output).lines
               CDO.log.info lines[-[lines.length,STACK_ERROR_LINES].min..-1].join
+              CDO.log.info "To get full console output, run `aws ec2 get-console-output --instance-id #{instance} | jq -r .Output`."
             end
           end
           if action == :create
-            CDO.log.info 'Cleaning up failed stack creation...'
-            self.delete
+            CDO.log.info 'Stack will remain in its half-created state for debugging. To delete, run `rake adhoc:stop`.'
           end
           return
         end

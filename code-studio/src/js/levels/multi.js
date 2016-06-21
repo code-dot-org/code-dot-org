@@ -3,13 +3,16 @@ import $ from 'jquery';
 
 window.levelGroup = window.levelGroup || {levels: {}};
 
-var Multi = window.Multi = function (levelId, id, standalone, numAnswers, answers, lastAttemptString) {
+var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString) {
 
   // The dashboard levelId.
   this.levelId = levelId;
 
   // The DOM id.
   this.id = id;
+
+  // The dashboard app name.
+  this.app = app;
 
   // Whether this multi is the only puzzle on a page, or part of a group of them.
   this.standalone = standalone;
@@ -22,6 +25,9 @@ var Multi = window.Multi = function (levelId, id, standalone, numAnswers, answer
 
   // A boolean array of the answers.  true is correct.
   this.answers = answers;
+
+  // An array of the feedback strings for each of the answers (correct or incorrect).
+  this.answersFeedback = answersFeedback;
 
   // A string of the last result.  Looks like "1" or "2,3".
   this.lastAttemptString = lastAttemptString;
@@ -170,6 +176,14 @@ Multi.prototype.ready = function () {
   }
 };
 
+Multi.prototype.lockAnswers = function () {
+  $("#" + this.id + " .answerbutton").addClass('lock-answers');
+};
+
+Multi.prototype.getAppName = function () {
+  return this.app;
+};
+
 // called by external result-posting code
 Multi.prototype.getResult = function (dontAllowSubmit) {
   var answer;
@@ -207,6 +221,21 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
     "submitted": submitted,
     "valid": valid
   };
+};
+
+// called by external code that will display answer feedback
+Multi.prototype.getCurrentAnswerFeedback = function () {
+  if (!this.answersFeedback) {
+    return;
+  }
+  if (this.selectedAnswers.length === 0) {
+    return;
+  }
+  var feedbackStrings = [];
+  for (var i = 0; i < this.selectedAnswers.length; i++) {
+    feedbackStrings.push(this.answersFeedback[this.selectedAnswers[i]]);
+  }
+  return feedbackStrings.join('\n');
 };
 
 // This behavior should only be available when this is a standalone Multi.
