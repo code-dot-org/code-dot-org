@@ -370,9 +370,7 @@ module LevelsHelper
 
     if CDO.use_acapela
       app_options['acapelaEnabled'] = CDO.use_acapela
-      app_options['acapelaLogin'] = CDO.acapela_login
-      app_options['acapelaApp'] = CDO.acapela_app
-      app_options['acapelaPassword'] = CDO.acapela_password
+      app_options['acapelaSrc'] = "https://s3.amazonaws.com/cdo-tts/#{@level.tts_audio_file}"
     end
 
     if @level.is_a? NetSim

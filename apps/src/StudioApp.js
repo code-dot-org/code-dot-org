@@ -362,9 +362,7 @@ StudioApp.prototype.init = function (config) {
 
   if (config.acapelaEnabled) {
     this.acapelaEnabled = config.acapelaEnabled;
-    this.acapelaLogin = config.acapelaLogin;
-    this.acapelaApp = config.acapelaApp;
-    this.acapelaPassword = config.acapelaPassword;
+    this.acapelaSrc = config.acapelaSrc;
   }
 
   this.authoredHintsController_.init(config.level.authoredHints, config.scriptId, config.serverLevelId);
@@ -1107,14 +1105,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
     authoredHints = this.authoredHintsController_.getHintsDisplay();
   }
 
-  var acapelaSettings;
-  if (this.acapelaEnabled) {
-    acapelaSettings = {
-      login: this.acapelaLogin,
-      app: this.acapelaApp,
-      password: this.acapelaPassword,
-    };
-  }
+  var acapelaSrc = this.acapelaEnabled ? this.acapelaSrc : false;
 
   return (
     <Instructions
@@ -1126,7 +1117,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
       renderedMarkdown={renderedMarkdown}
       markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
       aniGifURL={level.aniGifURL}
-      acapelaSettings={acapelaSettings}
+      acapelaSrc={acapelaSrc}
       authoredHints={authoredHints}/>
   );
 };
