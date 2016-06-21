@@ -110,8 +110,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    @controller.expects(:trophy_check).with(@user)
-
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
@@ -203,8 +201,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
@@ -225,8 +221,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity, LevelSource) do
@@ -259,8 +253,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     assert_creates(Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity, LevelSource) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
@@ -286,8 +278,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     expect_controller_logs_milestone_regexp(/-20/)
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_no_difference('@user.reload.total_lines') do # update total lines
@@ -312,8 +302,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     expect_controller_logs_milestone_regexp(/9999999/)
 
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
@@ -349,8 +337,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     # existing level
     script_start_date = Time.now - 5.days
@@ -401,8 +387,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     expect_s3_upload
 
     assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
@@ -427,8 +411,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     expect_s3_upload
 
@@ -456,8 +438,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).with(@user)
-
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
@@ -480,8 +460,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
@@ -571,8 +549,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check)
-
     expect_s3_upload
 
     original_activity_count = Activity.count
@@ -615,8 +591,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check)
 
     program = "<whatever>"
 
@@ -746,7 +720,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-    @controller.expects(:trophy_check).with(@user)
 
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing userlevel
@@ -804,8 +777,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).never # no trophy if not logged in
-
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
         post :milestone, @milestone_params.merge(user_id: 0)
@@ -830,8 +801,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).never # no trophy if not logged in
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -882,8 +851,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    @controller.expects(:trophy_check).never # no trophy if not logged in
-
     expect_s3_upload
 
     assert_creates(LevelSource, LevelSourceImage) do
@@ -910,8 +877,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-
-    @controller.expects(:trophy_check).never # no trophy if not logged in
 
     expect_s3_upload_failure
 
@@ -1102,19 +1067,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     sign_out @user
     assert_equal true, new_level
-  end
-
-  test 'trophy_check only on script with trophies' do
-    script_level_no_trophies = Script.where(trophies: false).first.script_levels.first
-    script_level_with_trophies = Script.where(trophies: true).first.script_levels.first
-
-    @controller.expects(:trophy_check).never
-    post :milestone, @milestone_params.merge(script_level_id: script_level_no_trophies.id)
-    assert_response :success
-
-    @controller.expects(:trophy_check).with(@user)
-    post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies.id)
-    assert_response :success
   end
 
   test 'does not backfill new users who submit unsuccessful first attempt' do

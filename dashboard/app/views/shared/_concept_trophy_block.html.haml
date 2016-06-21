@@ -1,7 +1,0 @@
-%div{style: 'display: inline-block; width: 290px; position: relative; overflow: hidden;' + added_style}
-  %h4 #{t('nav.popup.mastery')}
-
-  %table{style: 'max-width: 290px;'}
-    - Concept.cached.each do |concept|
-      - completion = concept_progress.try(:[], concept.name) || 0
-      = render partial: 'shared/concept_trophy_row', locals: {concept: concept, completion: completion}

@@ -209,9 +209,6 @@ class User < ActiveRecord::Base
 
   has_many :sections
 
-  has_many :user_trophies
-  has_many :trophies, through: :user_trophies, source: :trophy
-
   has_many :followers
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
 
@@ -470,63 +467,12 @@ class User < ActiveRecord::Base
     script_level.valid_progression_level? && !is_passed
   end
 
-  def progress(script)
-    #trophy_id summing is a little hacky, but efficient. It takes advantage of the fact that:
-    #broze id: 1, silver id: 2 and gold id: 3
-    User.connection.select_one(<<SQL)
-select
-  (select coalesce(sum(trophy_id), 0) from user_trophies where user_id = #{self.id}) as current_trophies,
-  (select count(*) * 3 from concepts) as max_trophies
-from script_levels sl
-left outer join levels_script_levels lsl on lsl.script_level_id = sl.id
-left outer join user_levels ul on ul.level_id = lsl.level_id and ul.user_id = #{self.id}
-where sl.script_id = #{script.id}
-SQL
-  end
-
-  def concept_progress(script = Script.twenty_hour_script)
-    # TODO: Cache everything but the user's progress.
-    user_levels_map = self.user_levels.includes([{level: :concepts}]).index_by(&:level_id)
-    user_trophy_map = self.user_trophies.includes(:trophy).index_by(&:concept_id)
-    result = Hash.new{|h,k| h[k] = {obj: k, current: 0, max: 0}}
-
-    script.levels.includes(:concepts).each do |level|
-      level.concepts.each do |concept|
-        result[concept][:current] += 1 if user_levels_map[level.id].try(:best_result).to_i >= Activity::MINIMUM_PASS_RESULT
-        result[concept][:max] += 1
-        result[concept][:trophy] ||= user_trophy_map[concept.id]
-      end
-    end
-    result
-  end
-
   def last_attempt(level)
     Activity.where(user_id: self.id, level_id: level.id).order('id desc').first
   end
 
   def last_attempt_for_any(levels)
     Activity.where(user_id: self.id, level_id: levels.map(&:id)).order('id desc').first
-  end
-
-  def average_student_trophies
-    User.connection.select_value(<<SQL)
-select coalesce(avg(num), 0)
-from (
-    select coalesce(sum(trophy_id), 0) as num
-    from followers f
-    left outer join user_trophies ut on f.student_user_id = ut.user_id
-    where f.user_id = #{self.id}
-    group by f.student_user_id
-    ) trophy_counts
-SQL
-  end
-
-  def trophy_count
-    User.connection.select_value(<<SQL)
-select coalesce(sum(trophy_id), 0) as num
-from user_trophies
-where user_id = #{self.id}
-SQL
   end
 
   def student?
