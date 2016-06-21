@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# 2050607 total recipients
+
+../send-to-mailing-list --limit 2060000 6-17-2016-teacher-email ./contacts.csv

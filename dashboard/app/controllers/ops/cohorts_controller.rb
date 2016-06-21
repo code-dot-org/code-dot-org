@@ -135,9 +135,6 @@ module Ops
           @cohort.teachers = @cohort.teachers - teachers_in_district + teachers
 
           # cannoy modify districts
-        else
-          # weird.
-          # don't do anything
         end
       end
     end

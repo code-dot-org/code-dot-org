@@ -99,14 +99,6 @@ en:
         '2.10: Good and Bad Data Visualization': '2.10: Good and Bad Data Visualization'
         '2.2: Text Compression': '2.2: Text Compression'
         '2.3: Black and White Pixelation': '2.3: Black and White Pixelation'
-        'U1L10: Routing and Redundancy': 'U1L10: Routing and Redundancy'
-        'U1L11: Packets and Making a Reliable Internet': 'U1L11: Packets and Making a Reliable Internet'
-        'U1L4: Number Systems - Circle Triangle Square': 'U1L4: Number Systems - Circle Triangle Square'
-        'U1L6: Sending Numbers': 'U1L6: Sending Numbers'
-        'U1L9: Internet Addressing (Battleship)': 'U1L9: Internet Addressing (Battleship)'
-        'U2L10: Good and Bad Data Visualization': 'U2L10: Good and Bad Data Visualization'
-        'U2L2: Text Compression': 'U2L2: Text Compression'
-        'U2L3: Black and White Pixelation': 'U2L3: Black and White Pixelation'
         What lesson are you planning and teaching at TeacherCon?: What lesson are you planning and teaching at TeacherCon?
       TeacherCon Eval Q2:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
@@ -3978,6 +3970,18 @@ en:
         red: red
         teal: teal
         yellow: yellow
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+        Contained Multi: Contained Multi
+        Here is some information.: Here is some information.
+        No, that is 1 * 1.: No, that is 1 * 1.
+        No, that is 1 - 1.: No, that is 1 - 1.
+        No, that is not even close.: No, that is not even close.
+        What is 1 + 1?: What is 1 + 1?
+        Yes, you are a genius!: Yes, you are a genius!
       U1L07 Assessment 1:
         A: A
         B: B

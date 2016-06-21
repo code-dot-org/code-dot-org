@@ -4,7 +4,7 @@ nav: educate_nav
 ---
 
 # High School 
-For high schools, we offer two years of Computer Science courses for beginners: Exploring Computer Science and AP Computer Science Principles. If you want to go even further with your students, the third party resources below provide additional courses in programming, AP Computer Science A,  algebra, and more.
+For high schools, we offer two years of Computer Science courses for beginners: Exploring Computer Science and AP Computer Science Principles. If you want to go even further with your students, the third party resources below provide additional courses in programming, AP Computer Science A, algebra, and more. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
 
 # Exploring Computer Science
 
