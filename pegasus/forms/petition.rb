@@ -41,7 +41,7 @@ class Petition
     result
   end
 
-  def self.receipt()
+  def self.receipt
     'petition_receipt'
   end
 

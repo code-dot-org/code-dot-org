@@ -8,7 +8,14 @@
     "skin": "gamelab",
     "code_functions": {
       "drawSprites": null,
-      "var sprite = createSprite": null,
+      "var sprite = createSprite": {
+        "params": [
+
+        ],
+        "paletteParams": [
+
+        ]
+      },
       "x": null,
       "y": null,
       "shapeColor": null,
@@ -18,8 +25,8 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Debugging: Dot Notation\r\n\r\nThe properties of a sprite are changed using **dot notation**. Dot notation uses **the label of your sprite and the label of the property, connected by a dot**.  For example: ![](https://images.code.org/66e28965e40370f2c08fcc2ed9840d19-image-1466005741303.48.54 AM.png)\r\n\r\nWhen using dot notation it's important that **you spell the label of your sprite and your property correctly.** Just like with variables keep an eye out for:\r\n\r\nRule | Example\r\n---|---\r\nCorrect capitalization|`sprite.x` is not `sprite.X`\r\nCorrect spelling|`sprite.shapeColor` is not `sprite.shpeColor`\r\nWhether the label you're trying to use actually exists|`sprite.color` does not exist\r\nThe sprite's label comes before the property's label|`x.sprite` will not work\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/db100fc6faa436b6765b09faf7733dee-image-1466005926883.51.51 AM.png\" style=\"float:right; width:200px\">\r\n\r\nThis program tries to use dot notation to change the properties of a sprite. Unfortunately, errors are preventing the program from running correctly.\r\n\r\n* **Use dot notation correctly** to fix the errors in this program\r\n* When your program works correctly it should draw the image to the right",
-    "start_blocks": "var mySprite = createSprite();\r\n\r\n// Correct the dot notation errors below so the program runs correctly\r\nmysprite.x = 200;\r\nmySprite.Y = 200;\r\nmySprite.color = \"red\";\r\n\r\ndrawSprites();",
+    "markdown_instructions": "# Debugging: Dot Notation\r\n\r\n**Dot Notation:** Sprites all have the same properties, which is really useful. It means that once you know the label of a sprite, you know the label of its properties. All you need to do is combine the name of your sprite with the name of your property with a period or \"dot\". This is also referred to as **dot notation**. For example, a sprite called `bob` will have the properties `bob.x`, `bob.y`, and so on.\r\n\r\nWhen using dot notation it's important that **you spell the label of your sprite and your property correctly.** Just like with variables keep an eye out for:\r\n\r\nRule | Example\r\n---|---\r\nCorrect capitalization|`sprite.x` is not `sprite.X`\r\nCorrect spelling|`sprite.y` is not `sprte.y`\r\nWhether the label you're trying to use actually exists|`sprite.xlocation` does not exist\r\nThe sprite's label comes before the property's label|`x.sprite` will not work\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/5c6019e343bc58650c45f66c3e3c9bc5-image-1466089712070.08.20 AM.png\" style=\"float:right; width:200px\">\r\n\r\nThis program tries to use dot notation to change the properties of two sprites. Unfortunately, errors are preventing the program from running correctly.\r\n\r\n* **Use dot notation correctly** to fix the errors in this program\r\n* When your program works correctly it should draw the image to the right",
+    "start_blocks": "// Creating Sprites\r\nvar firstSprite = createSprite();\r\nvar secondSprite = createSprite();\r\n\r\n// Setting Properties\r\nfirstsprite.x = 100;\r\nfirstSprite.Y = 100;\r\nsecndSprite.x = 300;\r\ny.secondSprite = 300;\r\n\r\n// Drawing\r\ndrawSprites();",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -41,7 +48,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

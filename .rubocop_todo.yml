@@ -141,19 +141,9 @@ Style/ConditionalAssignment:
 Style/ConstantName:
   Enabled: false
 
-# Offense count: 214
-# Cop supports --auto-correct.
-Style/DefWithParentheses:
-  Enabled: false
-
 # Offense count: 41
 # Cop supports --auto-correct.
 Style/DeprecatedHashMethods:
-  Enabled: false
-
-# Offense count: 27
-# Cop supports --auto-correct.
-Style/EmptyLinesAroundAccessModifier:
   Enabled: false
 
 # Offense count: 50
