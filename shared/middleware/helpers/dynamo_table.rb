@@ -26,9 +26,9 @@ class DynamoTable
 
   def metadata
     @metadata_item ||= db.get_item(
-        table_name: CDO.dynamo_table_metadata_table,
-        consistent_read: true,
-        key: {'hash'=>@metadata_hash}
+      table_name: CDO.dynamo_table_metadata_table,
+      consistent_read: true,
+      key: {'hash'=>@metadata_hash}
     ).item
 
     # only return the parts we care about

@@ -52,7 +52,7 @@ class NetSimApi < Sinatra::Base
   # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
     RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name,
-                   CDO.netsim_shard_expiry_seconds)
+      CDO.netsim_shard_expiry_seconds)
   end
 
   #
