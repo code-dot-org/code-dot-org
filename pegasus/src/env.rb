@@ -27,8 +27,6 @@ def src_dir(*paths)
   pegasus_dir('src', *paths)
 end
 
-module Pegasus
-
   def self.logger
     @@logger ||= create_logger
   end

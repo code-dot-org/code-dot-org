@@ -206,7 +206,6 @@ class HttpDocument
 end
 
 module Pegasus
-
   class Base < Sinatra::Base
 
     configure do
@@ -353,7 +352,6 @@ module Pegasus
     end
 
   end
-
 end
 
 require src_dir 'course'

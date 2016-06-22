@@ -1,7 +1,6 @@
 require 'dynamic_config/dcdo'
 
 module SQS
-
   # Immutable configuration for a queue processor.
   class QueueProcessorConfig
     attr_reader :queue_url, :handler, :num_workers_per_processor, :num_processors, :logger
