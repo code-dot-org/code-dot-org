@@ -1,6 +1,6 @@
 /* global dashboard */
 
-import api from '../applab/api';
+import api from './api';
 import _ from '../lodash';
 import {getFirstParam} from '../dropletUtils';
 
