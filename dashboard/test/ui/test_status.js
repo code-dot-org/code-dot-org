@@ -1,3 +1,13 @@
+// Scripts that operate the test status page.  We expect the page to be
+// prepopulated with tables listing all of the tests we are going to run
+// (see runner.rb and test_status.haml for how this happens) but the actual
+// status of those tests we retrieve asynchronously from a server API
+// (see test_status_controller.rb) which in turn gets its information from the
+// uploaded S3 logs and their metadata.
+
+// Lodash gets provided on test_status.html
+/* global _ */
+
 // Grab DOM references
 var lastRefreshTimeLabel = document.querySelector('#last-refresh-time');
 var refreshButton = document.querySelector('#refresh-button');
@@ -118,6 +128,9 @@ Test.prototype.updateView = function () {
   if (this.isUpdating_) {
     statusCell.innerHTML += " (Updating)";
   }
+
+  // Call debounced global progress update
+  updateProgress && updateProgress();
 };
 
 Test.prototype.s3Key = function () {
@@ -151,22 +164,39 @@ function testFromS3Key(key) {
   return null;
 }
 
-function updateTotalProgress() {
-  // Count up tests by status
+function calculateBrowserProgress(browser) {
   let successCount = 0, failureCount = 0, pendingCount = 0;
-  for (let browser in tests) {
-    for (let feature in tests[browser]) {
-      let status = tests[browser][feature].status_;
-      if (status === STATUS_PENDING) {
-        pendingCount++;
-      } else if (status === STATUS_FAILED) {
-        failureCount++;
-      } else if (status === STATUS_SUCCEEDED) {
-        successCount++;
-      }
+  for (let feature in tests[browser]) {
+    let status = tests[browser][feature].status_;
+    if (status === STATUS_PENDING) {
+      pendingCount++;
+    } else if (status === STATUS_FAILED) {
+      failureCount++;
+    } else if (status === STATUS_SUCCEEDED) {
+      successCount++;
     }
   }
+  return {
+    successCount,
+    failureCount,
+    pendingCount
+  };
+}
+
+function renderBrowserProgress(browser, progress) {
+  let {successCount, failureCount, pendingCount} = progress;
   let totalCount = successCount + failureCount + pendingCount;
+
+  // DOM references
+  let progressDiv = document.querySelector(`#${browser}-progress`);
+  let progressText = progressDiv.querySelector('.progress-text');
+  let progressBar = progressDiv.querySelector('.progress-bar');
+  let successBar = progressBar.querySelector('.success');
+  let failureBar = progressBar.querySelector('.failure');
+  let pendingBar = progressBar.querySelector('.pending');
+
+  // We manipulate the percentages to make them round numbers, adding up to 100,
+  // and each category gets at least 1% if its count is greater than zero.
   let successPercent = Math.max(Math.floor(successCount * 100 / totalCount), successCount > 0 ? 1 : 0);
   let failurePercent = Math.max(Math.floor(failureCount * 100 / totalCount), failureCount > 0 ? 1 : 0);
   let pendingPercent = Math.max(Math.floor(pendingCount * 100 / totalCount), pendingCount > 0 ? 1 : 0);
@@ -176,15 +206,15 @@ function updateTotalProgress() {
   } else {
     successCount += leftover;
   }
+
+  // Set progress text
   let runPercent = successPercent + failurePercent;
-  totalProgressText.textContent = `Progress: ${runPercent}% of ${totalCount} `
-      + `tests have run. ${successCount} passed, ${failureCount} failed, `
-      + `${pendingCount} are pending.`;
+  progressText.textContent = `${runPercent}% of ${totalCount} tests have run.`
+      + ` ${successCount} passed,`
+      + ` ${failureCount} failed,`
+      + ` ${pendingCount} are pending.`;
 
   // Update the progress bar
-  let successBar = totalProgressBar.querySelector('.success');
-  let failureBar = totalProgressBar.querySelector('.failure');
-  let pendingBar = totalProgressBar.querySelector('.pending');
   successBar.style.backgroundColor = GREEN;
   successBar.style.width = `${successPercent}%`;
   failureBar.style.backgroundColor = RED;
@@ -193,6 +223,23 @@ function updateTotalProgress() {
   pendingBar.style.width = `${pendingPercent}%`;
 }
 
+var updateProgress = _.debounce(function updateProgress__() {
+  // Count up tests by status
+  let successCount = 0, failureCount = 0, pendingCount = 0;
+  for (let browser in tests) {
+    let browserProgress = calculateBrowserProgress(browser);
+    renderBrowserProgress(browser, browserProgress);
+    successCount += browserProgress.successCount;
+    failureCount += browserProgress.failureCount;
+    pendingCount += browserProgress.pendingCount;
+  }
+  renderBrowserProgress('total', {
+    successCount,
+    failureCount,
+    pendingCount
+  });
+}, 300);
+
 function refresh() {
   // Fetches all logs for this branch and maps them to the tests in this run.
   // Passes last modification times to the test objects so they can decide
@@ -200,7 +247,6 @@ function refresh() {
   refreshButton.disabled = true;
   const ensure = () => {
     refreshButton.disabled = false;
-    updateTotalProgress();
   };
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime()/1000);
   let newTime = new Date();
