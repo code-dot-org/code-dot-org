@@ -19,6 +19,16 @@ theme: pdf
 - state_param = state.upcase
 - state_info = DB[:cdo_state_promote].where(state_code_s: state_param).first
 
+:css
+  .together {
+    display: inline-block;
+  }
+  .together:after {
+    display: block;
+    height: 0px;
+    visibility: hidden;
+  }
+
 .state-fact-sheet
   %h1
     Support K-12 Computer Science Education in
@@ -39,7 +49,7 @@ theme: pdf
       %img{src: "/images/charts/facts-sheet-top-stats.png", width: "100%"}
 
   %div
-    %h2
+    %h2.together
       Computer science in
       = state_info[:state_name_s]
     %ul
@@ -141,7 +151,7 @@ theme: pdf
     %img.chart{src: "/images/charts/learn_teach.png"}
 
     .improve-edu
-      %h2.improve-edu-h2 What can you do to improve K-12 CS education?
+      %h2.improve-edu-h2.together What can you do to improve K-12 CS education?
       %ol
         %li Call on your school to expand computer science offerings at every grade level.
         %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
@@ -159,7 +169,7 @@ theme: pdf
           to join 100,000 Americans asking Congress to support computer science.
 
   %div.clear-both
-    %h2.no-margin-bottom
+    %h2.no-margin-bottom.together
       Code.org's Impact in
       = state_info[:state_name_s]
     %p.larger
@@ -233,14 +243,14 @@ theme: pdf
     %p — Steve Jobs
 
   %div
-    %h2 What can the federal government do to support computer science in grades K-12?
+    %h2.together What can the federal government do to support computer science in grades K-12?
     Access to computer science courses is a bipartisan issue that can be addressed without adding to the Federal budget. Tell your representatives in Washington, D.C. that you support funding to expand access to this foundational 21st-century subject in your community that will America remain secure and globally competitive. Over 100,000 Americans, CEOs of the largest companies in every major industry, 29 governors, and major K-12 education leaders have all joined forces to call on Congress to support this idea. You can see their open letter (and add your name in support) at 
     = succeed "." do
       %a{href: "www.change.org/computerscience"} www.change.org/computerscience
 
   %div
     %p
-      %h2 What can your state do to improve computer science education?
+      %h2.together What can your state do to improve computer science education?
       States and local school districts need to adopt a broad policy framework to provide all students with access to computer science. The following eight recommendations are a menu of best practices that states can choose from to support and expand computer science. Not all states will be in a position to adopt all of the policies, and no state has accomplished all 8 yet. Read more about these 8 policy ideas at
       = succeed "." do
         %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} https://code.org/files/Making_CS_Fundamental.pdf

@@ -11,7 +11,33 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.2
 
-# Listed are rules we don't plan to enable in the foreseeable future.
+# Code.org style overrides.
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/DotPosition:
+  EnforcedStyle: trailing
+
+Style/EmptyElse:
+  EnforcedStyle: empty
+
+Style/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true
+
+Style/FirstParameterIndentation:
+  EnforcedStyle: consistent
+
+Style/NumericLiterals:
+  MinDigits: 7
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
+
+Style/WordArray:
+  MinSize: 5
+
+# Listed below are rules we don't plan to enable in the foreseeable future.
 # Add rules we plan to fix (but are currently failing) to .rubocop_todo.yml.
 
 Style/BarePercentLiterals:
@@ -19,17 +45,6 @@ Style/BarePercentLiterals:
 
 Style/ClosingParenthesisIndentation:
   Enabled: false
-
-# Require trailing dots for method chaining in ruby
-# example:
-# MyObject.
-#   myMethod().
-#   mySecondMethod()
-Style/DotPosition:
-  EnforcedStyle: trailing
-
-Style/EmptyLineBetweenDefs:
-  AllowAdjacentOneLineDefs: true
 
 Style/ExtraSpacing:
   Enabled: false
@@ -43,9 +58,6 @@ Style/IfInsideElse:
 Style/RedundantReturn:
   Enabled: false
 
-Style/WordArray:
-  MinSize: 5
-
 Metrics/AbcSize:
   Enabled: false
 
@@ -58,8 +70,5 @@ Metrics/ModuleLength:
 Metrics/BlockNesting:
   Enabled: false
 
-Style/Semicolon:
-  AllowAsExpressionSeparator: true
-
-Style/NumericLiterals:
-  MinDigits: 7
+Style/AsciiComments:
+  Enabled: false

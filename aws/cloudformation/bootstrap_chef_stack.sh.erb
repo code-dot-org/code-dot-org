@@ -10,6 +10,16 @@ test "$(pip3 show awscli)" || pip3 install awscli
 
 STACK=<%=stack_name%>
 REGION=<%=region%>
+
+function ref() {
+  aws cloudformation describe-stack-resources \
+    --stack-name=${STACK} \
+    --logical-resource-id=$1 \
+    --output=text \
+    --region ${REGION} \
+    | cut -f3
+}
+
 S3_BUCKET=<%=s3_bucket%>
 ENVIRONMENT=<%=environment%>
 RUN_LIST='<%=run_list.to_json%>'
@@ -21,34 +31,38 @@ FIRST_BOOT=/etc/chef/first-boot.json
 mkdir -p $(dirname ${FIRST_BOOT})
 cat <<JSON > ${FIRST_BOOT}
 {
-  "cdo-secrets": {
-    "hip_chat_log_room": "test-logs"
-  },
   "cdo-repository": {
     "revision": "<%=commit%>",
     "sync": true
-  },
-  "cdo-newrelic": {
-    "enabled_alert_policy_id": 374172,
-    "disabled_alert_policy_id": 374173
   },
   "run_list": ${RUN_LIST}
 }
 JSON
 
-
-# Block port 80 until chef-client run is complete.
-# This prevents partially-updated content from being served from this instance.
-iptables -I INPUT -p tcp --destination-port 80 -j DROP
+# Bootstrap the first cdo-apps Rakefile build on a new instance.
+# TODO move this run-once notification somewhere more appropriate
+rm -f /etc/init.d/{dashboard,pegasus}
 
 OPTIONS="<%=local_mode ? '-z' : ''%> -n ${NODE_NAME} -r '${RUN_LIST}' -e ${ENVIRONMENT}"
 sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- ${OPTIONS}"
 
 [ $? -eq 0 ] && STATUS=SUCCESS || STATUS=FAILURE
+[ ${STATUS} = 'SUCCESS' ] && LIFECYCLE_RESULT=CONTINUE || LIFECYCLE=ABANDON
 
-# Unblock port 80 by removing the previously-added rule.
-iptables -D INPUT 1
+# Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
+LIFECYCLE_HOOK=$(ref WebServerHook)
+AUTO_SCALING_GROUP=$(ref WebServer)
+if [ -n "${LIFECYCLE_HOOK}" ] && [ -n "${AUTO_SCALING_GROUP}" ]; then
+  aws autoscaling complete-lifecycle-action \
+    --lifecycle-action-result ${LIFECYCLE_RESULT} \
+    --instance-id ${INSTANCE_ID} \
+    --lifecycle-hook-name ${LIFECYCLE_HOOK} \
+    --auto-scaling-group-name ${AUTO_SCALING_GROUP} \
+    --region ${REGION} \
+    || true
+fi
 
+# Signal CloudFormation, in case this instance was launched from a CloudFormation stack update.
 aws cloudformation signal-resource \
   --unique-id ${INSTANCE_ID} \
   --stack-name ${STACK} \

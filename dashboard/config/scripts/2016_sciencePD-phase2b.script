@@ -1,0 +1,43 @@
+title 'Computer Science in Science PD Phase 2b 2016 2017'
+description "Phase 2 Online Blended Summer Study"
+description_short "Phase 2 Online Blended Summer Study"
+login_required 'true'
+pd 'true'
+
+stage 'Welcome!'
+level 'sciPD2b intro'
+level 'PDECS tour'
+level 'PD check your progress'
+level 'sciPD2 timeline'
+
+
+stage 'Review StarLogo Nova'
+level 'sciPD2 StarLogoNova'
+level 'sciPD StarLogo intro 1'
+
+
+stage 'Reviewing the Modules'
+level 'sciPD2 breed2a'
+level 'sciPD2 breed2b'
+
+
+stage 'Advanced StarLogo Nova'
+level 'sciPD2 breed3a'
+level 'sciPD2 breed3b'
+
+
+stage 'Remixing Phases 1 and 2'
+level 'sciPD2 breed4a'
+level 'sciPD2 breed4b'
+level 'sciPD2 breed4c'
+level 'sciPD2 breed4d'
+
+stage 'Thinking Ahead to Implementation'
+level 'sciPD2 implement1'
+level 'sciPD2 implement2'
+
+stage 'Wrap-Up'
+level 'sciPD2 thanks'
+level 'sciPD2b reflection'
+level 'sciPD2b end'
+

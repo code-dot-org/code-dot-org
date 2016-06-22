@@ -99,14 +99,6 @@ en:
         '2.10: Good and Bad Data Visualization': '2.10: Good and Bad Data Visualization'
         '2.2: Text Compression': '2.2: Text Compression'
         '2.3: Black and White Pixelation': '2.3: Black and White Pixelation'
-        'U1L10: Routing and Redundancy': 'U1L10: Routing and Redundancy'
-        'U1L11: Packets and Making a Reliable Internet': 'U1L11: Packets and Making a Reliable Internet'
-        'U1L4: Number Systems - Circle Triangle Square': 'U1L4: Number Systems - Circle Triangle Square'
-        'U1L6: Sending Numbers': 'U1L6: Sending Numbers'
-        'U1L9: Internet Addressing (Battleship)': 'U1L9: Internet Addressing (Battleship)'
-        'U2L10: Good and Bad Data Visualization': 'U2L10: Good and Bad Data Visualization'
-        'U2L2: Text Compression': 'U2L2: Text Compression'
-        'U2L3: Black and White Pixelation': 'U2L3: Black and White Pixelation'
         What lesson are you planning and teaching at TeacherCon?: What lesson are you planning and teaching at TeacherCon?
       TeacherCon Eval Q2:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
@@ -154,7 +146,9 @@ en:
       CSD - Headers and Lists - Recipe Project: {}
       CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
+      CSD U3 - complex conditionals - SFLP: {}
       CSD U3 - images - pick your final work: {}
+      CSD U3 -conditionals - stop booleans: {}
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Draw Loop Stop: {}
@@ -1654,6 +1648,22 @@ en:
         Exploring StarLogo Nova Advanced Features: Exploring StarLogo Nova Advanced Features
       sciPD2 StarLogoNova:
         Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed2a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed2b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed3a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed3b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed4a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed4b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed4c:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed4d:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
       sciPD2 camera:
         Changing Camera View: Changing Camera View
       sciPD2 challenge:
@@ -1786,6 +1796,9 @@ en:
         bee leaves: bee leaves
       storyline5:
         wrapup: wrapup
+      test cb level:
+        description here: description here
+        test cb level: test cb level
       test demo level:
         demo description: demo description
         demo title: demo title
@@ -2072,6 +2085,19 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U3 - conditionals - Matching:
+        Is the width of dog sprite greater than the width of cat sprite?: Is the width of dog sprite greater than the width of cat sprite?
+        Is the width of dog sprite less than the width of cat sprite?: Is the width of dog sprite less than the width of cat sprite?
+        Is the x of the dog sprite equal to the x of the cat sprite?: Is the x of the dog sprite equal to the x of the cat sprite?
+        Is the x of the dog sprite greater than the x of the cat sprite?: Is the x of the dog sprite greater than the x of the cat sprite?
+        Is the x of the dog sprite less than the x of the cat sprite?: Is the x of the dog sprite less than the x of the cat sprite?
+        Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
+        'Matching: Comparison Operators': 'Matching: Comparison Operators'
+        dog.width &gt; cat.width: dog.width &gt; cat.width
+        dog.width &lt; cat.width: dog.width &lt; cat.width
+        dog.x &gt; cat.x: dog.x &gt; cat.x
+        dog.x &lt; cat.x: dog.x &lt; cat.x
+        dog.x == cat.x: dog.x == cat.x
       CSD U3 Counters match trial:
         ? "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
@@ -3978,6 +4004,18 @@ en:
         red: red
         teal: teal
         yellow: yellow
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+        Contained Multi: Contained Multi
+        Here is some information.: Here is some information.
+        No, that is 1 * 1.: No, that is 1 * 1.
+        No, that is 1 - 1.: No, that is 1 - 1.
+        No, that is not even close.: No, that is not even close.
+        What is 1 + 1?: What is 1 + 1?
+        Yes, you are a genius!: Yes, you are a genius!
       U1L07 Assessment 1:
         A: A
         B: B

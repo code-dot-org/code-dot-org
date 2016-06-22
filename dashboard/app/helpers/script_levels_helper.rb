@@ -19,7 +19,7 @@ module ScriptLevelsHelper
 
       if script_level.script.wrapup_video
         response[:video_info] = wrapup_video_then_redirect_response(
-            script_level.script.wrapup_video, next_user_redirect)
+          script_level.script.wrapup_video, next_user_redirect)
         return
       end
     end

@@ -1,3 +1,11 @@
+- page_mode = PageMode.get(request)
+- if page_mode == "feature-mc"
+  - first_tutorial = Script::MINECRAFT_NAME
+  - second_tutorial = Script::STARWARS_NAME
+- else
+  - first_tutorial = Script::STARWARS_NAME
+  - second_tutorial = Script::MINECRAFT_NAME
+
 %h1= t('signin_form.title')
 %p{style: "margin-bottom:0px"}
   &nbsp;
@@ -29,13 +37,12 @@
     %br/
 
     %h3= t('signin.try_heading')
-    .tryfirst
-      = render partial: 'shared/course_wide_block', locals: { id: Script::HOC_NAME, showState: false }
-    %div{style: "clear:both"}
-    %br/
-
-    .tryfirst
-      = render partial: 'shared/course_wide_block', locals: { id: Script::TWENTY_HOUR_NAME, showState: false, view: "small" }
+    .row{style: 'margin: 0px;'}
+      = render partial: 'shared/course_tall_block', locals: { id: first_tutorial, showState: false }
+      = render partial: 'shared/course_tall_block', locals: { id: second_tutorial, showState: false }
+    .row{style: 'margin: 20px 0px 0px 0px;'}
+      = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: false }
+      = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: false }
 
   .span4
     %div{ style: 'padding-left: 20px;  border-left: 1px solid black;' }= render "devise/shared/links"

@@ -25,7 +25,7 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
 
   end
 
-  desc 'Launch an adhoc server.
+  desc 'Launch/update an adhoc server.
 Note: Consumes AWS resources until `adhoc:stop` is called.'
   task start: ['start:default']
 

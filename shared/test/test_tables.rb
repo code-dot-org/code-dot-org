@@ -411,7 +411,7 @@ class TablesTest < Minitest::Test
     post "/v3/import-shared-tables/#{@channel_id}/#{@table_name}", "import_file" => import_file
   end
 
-  def export()
+  def export
     get "/v3/export-shared-tables/#{@channel_id}/#{@table_name}"
   end
 
