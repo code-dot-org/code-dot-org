@@ -96,7 +96,6 @@ class RedisPropertyBagTest < Minitest::Test
     # Clean up
     bag1.delete_all
     bag2.delete_all
-
   end
 
   def test_expire
