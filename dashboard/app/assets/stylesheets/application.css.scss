@@ -210,7 +210,16 @@ img.video_thumbnail {
 
 .header.hide_on_mobile,
 .header-wrapper.hide_on_mobile {
-  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
+  @media screen and (max-device-width: 500px) {
+    display: none;
+  }
+}
+
+.sign_in.show_only_on_mobile {
+  float: right;
+  margin-bottom: 10px;
+
+  @media screen and (min-device-width: 501px) {
     display: none;
   }
 }
