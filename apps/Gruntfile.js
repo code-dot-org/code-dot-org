@@ -561,6 +561,17 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('compile-firebase-rules', function () {
+    try {
+      child_process.execSync('ls `npm bin`/firebase-bolt');
+    } catch (e) {
+      console.log(chalk.yellow("'firebase-bolt' not found. running 'npm install'..."));
+      try {
+        child_process.execSync('which npm');
+      } catch (e) {
+        throw new Error("'firebase-bolt' not found and 'npm' not installed.");
+      }
+      child_process.execSync('npm install');
+    }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync('`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json');
   });
