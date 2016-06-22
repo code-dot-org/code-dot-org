@@ -58,9 +58,9 @@ class DashboardStudent
       where(users__id: id, users__deleted_at: nil).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
       select(*fields,
-             :secret_pictures__name___secret_picture_name,
-             :secret_pictures__path___secret_picture_path,
-            ).
+        :secret_pictures__name___secret_picture_name,
+        :secret_pictures__path___secret_picture_path,
+      ).
       server(:default).
       first
 
@@ -375,9 +375,9 @@ class DashboardSection
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
       select(Sequel.as(:student_user_id, :id),
-             *DashboardStudent.fields,
-             :secret_pictures__name___secret_picture_name,
-             :secret_pictures__path___secret_picture_path).
+        *DashboardStudent.fields,
+        :secret_pictures__name___secret_picture_name,
+        :secret_pictures__path___secret_picture_path).
       distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
@@ -410,9 +410,9 @@ class DashboardSection
 
   def to_owner_hash()
     to_member_hash.merge(
-        course: course,
-        teachers: teachers,
-        students: students
+      course: course,
+      teachers: teachers,
+      students: students
     )
   end
 

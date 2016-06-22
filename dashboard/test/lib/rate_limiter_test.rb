@@ -69,13 +69,13 @@ class RateLimiterTest < ActiveSupport::TestCase
 
     # Proc for determining the max rate based on DCDO.
     SQS::QueueProcessorConfig.new(
-        queue_url: 'http://example.com',
-        handler: NoOpHandler.new,
-        initial_max_rate: max_rate,
-        max_rate_proc: max_rate_proc,
-        num_processors: num_processors,
-        num_workers_per_processor: num_workers_per_processor,
-        logger: @logger)
+      queue_url: 'http://example.com',
+      handler: NoOpHandler.new,
+      initial_max_rate: max_rate,
+      max_rate_proc: max_rate_proc,
+      num_processors: num_processors,
+      num_workers_per_processor: num_workers_per_processor,
+      logger: @logger)
   end
 
   # A fake handler that does nothing.

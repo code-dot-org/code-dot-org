@@ -77,17 +77,6 @@ Style/AlignArray:
 Style/AlignHash:
   Enabled: false
 
-# Offense count: 42
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: with_first_parameter, with_fixed_indentation
-Style/AlignParameters:
-  Enabled: false
-
-# Offense count: 8
-Style/AsciiComments:
-  Enabled: false
-
 # Offense count: 47
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, ProceduralMethods, FunctionalMethods, IgnoredMethods.
@@ -399,11 +388,6 @@ Style/StringLiterals:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiteralsInInterpolation:
-  Enabled: false
-
-# Offense count: 12
-# Cop supports --auto-correct.
-Style/SymbolLiteral:
   Enabled: false
 
 # Offense count: 30
