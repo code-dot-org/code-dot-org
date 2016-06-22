@@ -1,7 +1,6 @@
 require 'json'
 
 module Solr
-
   class Server
 
     def initialize(params={})
