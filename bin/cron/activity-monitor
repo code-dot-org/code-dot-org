@@ -81,11 +81,11 @@ end
 
 class Collater
 
-  def initialize()
+  def initialize
     @results = {browsers: {}, locales: {}}
   end
 
-  def each_by_browser()
+  def each_by_browser
     browsers = @results[:browsers]
     browsers.keys.sort.each do |browser|
       browsers[browser].keys.sort.each do |level|
@@ -126,7 +126,7 @@ class Monitor
     collater
   end
 
-  def each_row()
+  def each_row
     dataset.each do |i|
       yield i['level_id'].to_i,
             i['tag'].to_sym,
@@ -135,7 +135,7 @@ class Monitor
     end
   end
 
-  def dataset()
+  def dataset
     @dataset ||= reload(@filename) || cache(@filename, fetch)
   end
 
@@ -153,7 +153,7 @@ class Monitor
     dataset
   end
 
-  def fetch()
+  def fetch
     puts "Fetching..." if rack_env?(:development)
     reader = Slog::Reader.new(secret: CDO.logentries_secret, hosts: @hosts)
     reader.get(filter: 'tag=activity_start OR tag=activity_finish', start: @start, end: @finish)
@@ -191,7 +191,7 @@ def excluded_browser?(ua_string)
   end
 end
 
-def main()
+def main
   now = DateTime.now.new_offset(0)
 
   hours = HoursToTest

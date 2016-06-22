@@ -1,7 +1,8 @@
 - content_for(:head) do
   = javascript_include_tag 'js/levelbuilder'
 
-- if current_user && current_user.admin?
+-# TODO(asher): Remove the current_user.admin? when removing level access from admins.
+- if current_user && (current_user.admin? || current_user.permission?(UserPermission::LEVELBUILDER))
   = render layout: 'shared/admin' do
     %strong= @level.name
     %ul

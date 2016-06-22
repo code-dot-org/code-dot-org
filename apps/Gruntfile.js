@@ -40,7 +40,10 @@ module.exports = function (grunt) {
   var PLAYGROUND_PORT = grunt.option('playground-port') || 8000;
 
   /** @const {string} */
-  var APP_TO_BUILD = grunt.option('app') || process.env.MOOC_APP;
+  var APP_TO_BUILD = grunt.option('app') || process.env.APP || process.env.MOOC_APP;
+  if (process.env.MOOC_APP) {
+    console.warn('The MOOC_APP environment variable is deprecated. Use APP instead');
+  }
 
   /** @const {string[]} */
   var APPS = [
@@ -67,9 +70,12 @@ module.exports = function (grunt) {
 
   // Parse options from environment.
   var envOptions = {
-    dev: (process.env.MOOC_DEV === '1'),
+    dev: (process.env.MOOC_DEV === '1' || process.env.DEV === '1'),
     autoReload: ['true', '1'].indexOf(process.env.AUTO_RELOAD) !== -1
   };
+  if (process.env.MOOC_DEV) {
+    console.warn('The MOOC_DEV environment variable is deprecated. Use DEV instead');
+  }
 
   config.clean = {
     all: ['build']
@@ -308,10 +314,13 @@ module.exports = function (grunt) {
     convertScssVars: './script/convert-scss-variables.js',
   };
 
+  if (process.env.MOOC_WATCH) {
+    console.warn('The MOOC_WATCH environment variable is deprecated. Use WATCH instead');
+  }
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
-      singleRun: process.env.MOOC_WATCH !== '1',
+      singleRun: process.env.WATCH !== '1',
       files: [
         {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
@@ -360,6 +369,7 @@ module.exports = function (grunt) {
   if (entries.applab) {
     entries['applab-api'] = './src/applab/api-entry.js';
   }
+  entries['styleguide'] = './src/styleguide-entry.js';
   config.webpack = {
     build: _.extend({}, webpackConfig, {
       output: {
@@ -371,7 +381,7 @@ module.exports = function (grunt) {
       plugins: [
         new webpack.DefinePlugin({
           IN_UNIT_TEST: JSON.stringify(false),
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
           PISKEL_DEVELOPMENT_MODE: PISKEL_DEVELOPMENT_MODE
         }),
         new webpack.optimize.CommonsChunkPlugin({
@@ -551,6 +561,17 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('compile-firebase-rules', function () {
+    try {
+      child_process.execSync('ls `npm bin`/firebase-bolt');
+    } catch (e) {
+      console.log(chalk.yellow("'firebase-bolt' not found. running 'npm install'..."));
+      try {
+        child_process.execSync('which npm');
+      } catch (e) {
+        throw new Error("'firebase-bolt' not found and 'npm' not installed.");
+      }
+      child_process.execSync('npm install');
+    }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync('`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json');
   });

@@ -54,6 +54,7 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   end
 
   private
+
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_course_enrollment_params
     params.permit(:user_emails, :plc_course_id, :course)

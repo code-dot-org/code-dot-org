@@ -6,19 +6,22 @@ skip_dialog true
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
 
-### Introduction to StarLogo Nova
+### More with StarLogo Nova: Modifying Your Epidemic Model
 
 <br/>
 
 Now, for a quick refresher of StarLogo Nova.  Hopefully you already feel more comfortable with it than you did at the beginning of the summer. This PD will encourage you to play with StarLogo Nova on your own, and give you practice troubleshooting without extra facilitators around.
 
-<br/>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QrXe-nCV1xM" frameborder="0" allowfullscreen></iframe>
-
 <br>
 
-**[Can't see the video? Click here.](https://www.dropbox.com/s/h6634d3ukpups3y/MS-SCI-PD-Intro-to-Starlogo-Nova-9-2015.mp4)**
+In Phase 2 Part A you created a basic epidemic model with recovery and transmission sliders, as well as some additional instrumentation.  Think about your epidemic model--if you could add another kind of agent to be involved in the infection or recovery process, what would you pick?  No need to write anything down--just create a mental picture of the extension you would add and what it would look like.
+<br>
+<br>
+
+<img src="https://i.imgsafe.org/4520a7367f.png" style="border-radius:10px"/>
+<br>
+
+
 
 <br>
 

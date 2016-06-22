@@ -1,7 +1,6 @@
 require 'json'
 
 module Solr
-
   class Server
 
     def initialize(params={})
@@ -39,7 +38,7 @@ module Solr
         @start, @count, @docs = fetch(params[:start]||0)
       end
 
-      def count()
+      def count
         @count
       end
 

@@ -5,7 +5,6 @@ require 'redcarpet'
 require 'yaml'
 
 module TextRender
-
   class Locals
     def initialize(locals={})
       @locals = locals

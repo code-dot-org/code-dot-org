@@ -15,8 +15,8 @@ namespace :seed do
       LevelSourceHint.delete_all(['source=?', source_name])
       CSV.read(STANFORD_HINTS_FILE, { col_sep: "\t" }).each do |row|
         LevelSourceHint.create!(
-            level_source_id: row[0], hint: row[1],
-            status: 'experiment', source: source_name)
+          level_source_id: row[0], hint: row[1],
+          status: 'experiment', source: source_name)
       end
     end
     touch STANFORD_HINTS_IMPORTED
@@ -188,12 +188,12 @@ namespace :seed do
   task :import_users, [:file] => :environment do |_t, args|
     CSV.read(args[:file], { col_sep: "\t", headers: true }).each do |row|
       User.create!(
-          provider: User::PROVIDER_MANUAL,
-          name: row['Name'],
-          username: row['Username'],
-          password: row['Password'],
-          password_confirmation: row['Password'],
-          birthday: row['Birthday'].blank? ? nil : Date.parse(row['Birthday']))
+        provider: User::PROVIDER_MANUAL,
+        name: row['Name'],
+        username: row['Username'],
+        password: row['Password'],
+        password_confirmation: row['Password'],
+        birthday: row['Birthday'].blank? ? nil : Date.parse(row['Birthday']))
     end
   end
 

@@ -24,7 +24,7 @@ def load_languages(path)
   end
 end
 
-def load_configuration()
+def load_configuration
   root_dir = File.expand_path('..', __FILE__)
   root_dir = '/home/ubuntu/website-ci' if root_dir == '/home/ubuntu/Dropbox (Code.org)'
 
@@ -96,6 +96,8 @@ def load_configuration()
     'firebase_max_channel_writes_per_15_sec' => 300,
     'firebase_max_channel_writes_per_60_sec' => 600,
     'firebase_max_table_rows'     => 1000,
+    'firebase_max_record_size'    => 4096,
+    'firebase_max_property_size'  => 4096,
     # dynamodb-specific rate limits
     'max_table_reads_per_sec'     => 20,
     'max_table_writes_per_sec'    => 40,
@@ -152,7 +154,7 @@ class CDOImpl < OpenStruct
 
   @slog = nil
 
-  def initialize()
+  def initialize
     super load_configuration
   end
 
@@ -314,7 +316,7 @@ CDO ||= CDOImpl.new
 ##
 ##########
 
-def rack_env()
+def rack_env
   CDO.rack_env
 end
 
