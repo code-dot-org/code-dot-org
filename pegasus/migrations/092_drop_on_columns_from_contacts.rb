@@ -14,7 +14,7 @@ Sequel.migration do
       from(:contacts).where(id: row[:id]).update(
         created_on: row[:created_at],
         updated_on: row[:updated_at],
-        unsubscribed_on: row[:unsubscribed_on]
+        unsubscribed_on: row[:unsubscribed_at]
       )
     end
   end
