@@ -4,7 +4,8 @@ require 'date'
 # API that serves UI test status based on uploaded test run S3 logs and their
 # metadata.  See runner.rb, test_status.haml and test_status.js for more
 # information.
-class TestStatusController < ApplicationController
+class Api::V1::TestStatusController < ApplicationController
+  # GET /api/v1/test_logs/<branch>/since/<timestamp>
   def test_run_status_since
     boundary_time = Time.at(params[:time].to_i)
     bucket = Aws::S3::Bucket.new('cucumber-logs')
@@ -19,6 +20,7 @@ class TestStatusController < ApplicationController
     }
   end
 
+  # GET /api/v1/test_logs/<branch>/<log-name>
   def test_status
     bucket = Aws::S3::Bucket.new('cucumber-logs')
     object = bucket.object("#{params[:branch]}/#{params[:name]}.#{params[:format]}")
