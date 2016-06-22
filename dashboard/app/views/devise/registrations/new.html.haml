@@ -25,7 +25,7 @@
 
         #user_type-block.itemblock
           .labelblock= t('signup_form.user_type_label')
-          %select#user_user_age.fieldblock{name: "user[user_type]", type: "select"}
+          %select#user_user_type.fieldblock{name: "user[user_type]", type: "select"}
             %option{value: "", selected: true, disabled: true}
             %option{value: User::TYPE_STUDENT}= t('signup_form.user_type_student')
             %option{value: User::TYPE_TEACHER}= t('signup_form.user_type_teacher')

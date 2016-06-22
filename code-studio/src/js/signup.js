@@ -5,7 +5,11 @@ window.SignupManager = function (options) {
   var self = this;
 
   // Check for URL having: /users/sign_up?user%5Buser_type%5D=teacher
-  if (this.isTeacher === "true") {
+  if (self.options.isTeacher === "true") {
+    // Select teacher in dropdown.
+    $("#user_user_type").val("teacher");
+
+    // Show teacher fields.
     showTeacher();
   }
 
@@ -38,7 +42,7 @@ window.SignupManager = function (options) {
     }
   }
 
-  $("#user_user_age").change(function () {
+  $("#user_user_type").change(function () {
     var value = $(this).val();
     if (value === "student") {
       showStudent();
