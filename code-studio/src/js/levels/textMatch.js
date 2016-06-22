@@ -35,8 +35,13 @@ TextMatch.prototype.ready = function () {
     window.getResult = $.proxy(this.getResult, this);
   }
 
-
-  $("#" + this.id + " textarea.response").blur(function () {
+  var textarea = $("#" + this.id + " textarea.response");
+  textarea.blur(function () {
+    if (window.levelGroup && window.levelGroup.answerChangedFn) {
+      window.levelGroup.answerChangedFn(this.levelId, true);
+    }
+  });
+  textarea.on("input", null, null, function () {
     if (window.levelGroup && window.levelGroup.answerChangedFn) {
       window.levelGroup.answerChangedFn(this.levelId);
     }
@@ -68,4 +73,13 @@ TextMatch.prototype.getResult = function () {
       valid: response.length > 0
     };
   }
+};
+
+TextMatch.prototype.lockAnswers = function () {
+  // Not implemented
+};
+
+// called by external code that will display answer feedback
+TextMatch.prototype.getCurrentAnswerFeedback = function () {
+  // Not implemented
 };
