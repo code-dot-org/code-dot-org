@@ -156,10 +156,25 @@ function testFromS3Key(key) {
   var result = re.exec(key);
   var browser = result[1]; // TODO: Handle slashes
   var feature = "features/" + result[2] + ".feature";
-  if (tests[browser] && tests[browser][feature]) {
-    return tests[browser][feature];
+  // If we don't have the browser, we definitely don't have the test.
+  if (!tests[browser]) {
+    return undefined;
   }
-  return null;
+
+  // Incrementally replace underscores with slashes and try again, in case
+  // this was a test from a subdirectory.
+  // Example:
+  //   Feature: features/applab/tooltips.feature
+  //   Key    : {browser}_applab_tooltips_output.html
+  // If we ever have an ambiguous case (someone creates
+  // features/applab_tooltips.feature) then this will be a problem - but it is
+  // unlikely.
+  var test = tests[browser][feature];
+  while (!test && feature.indexOf('_') >= 0) {
+    feature = feature.replace('_', '/'); // Replaces first underscore only.
+    test = tests[browser][feature];
+  }
+  return test;
 }
 
 function calculateBrowserProgress(browser) {
@@ -236,6 +251,10 @@ var updateProgress = _.debounce(function updateProgress__() {
     failureCount,
     pendingCount
   });
+  // Disable auto-refresh if the test run is done and green.
+  if (pendingCount + failureCount === 0) {
+    disableAutoRefresh();
+  }
 }, 300);
 
 function refresh() {
