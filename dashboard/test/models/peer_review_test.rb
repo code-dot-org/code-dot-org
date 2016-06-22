@@ -87,4 +87,27 @@ class PeerReviewTest < ActiveSupport::TestCase
     user_level.reload
     assert_equal Activity::REVIEW_REJECTED_RESULT, user_level.best_result
   end
+
+  test 'pull review from pool' do
+    user1, user2, user3, user4 = [].tap do |teachers|
+      4.times { teachers << create(:teacher) }
+    end
+
+    level_source = create(:level_source, data: 'Some answer')
+
+    Activity.create!(user: user1, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source)
+    track_progress(level_source.id)
+
+    assert_equal [nil, nil], PeerReview.all.map(&:reviewer)
+
+    [user2, user3, user4].each do |user|
+      assert_equal user, PeerReview.pull_review_from_pool(@script_level.script, user).reviewer
+
+      3.times do
+        assert_nil PeerReview.pull_review_from_pool(@script_level.script, user)
+      end
+    end
+
+    assert_equal Set.new([user2, user3, user4]), Set.new(PeerReview.all.map(&:reviewer))
+  end
 end
