@@ -1,5 +1,4 @@
 module SQS
-
   # A rate limiter for computing the delay between processing message batches,
   # such that the average rate of message processing remains below the current
   # rate limit configured in the config
