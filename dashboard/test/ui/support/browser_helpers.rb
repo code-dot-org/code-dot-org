@@ -51,11 +51,6 @@ module BrowserHelpers
     value.should eq expected_value
   end
 
-  def elements_have_css(selector, property, expected_values)
-    values = @browser.execute_script("return $(\"#{selector}\").map( function () { return $(this).css(\"#{property}\")});")
-    values.join(', ').should eq expected_values
-  end
-
   def generate_generic_drag_code(from_selector, to_selector, target_dx, target_dy)
     "var drag_dx = $(\"#{to_selector}\").position().left - $(\"#{from_selector}\").position().left;" +
         "var drag_dy = $(\"#{to_selector}\").position().top  - $(\"#{from_selector}\").position().top;" +
