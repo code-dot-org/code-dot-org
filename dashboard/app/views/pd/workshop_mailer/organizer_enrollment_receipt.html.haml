@@ -12,11 +12,7 @@
   signed up for your
   = @workshop.course
   = @workshop.subject
-  = link_to 'workshop', "/pd/workshop_dashboard/workshops/#{@workshop.id}"
-  on
-  = @workshop.sessions.first.formatted_date
-  at
-  = @workshop.location_name + '.'
+  workshop.
 
 = render partial: 'teacher_info'
 
