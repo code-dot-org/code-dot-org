@@ -77,9 +77,9 @@ Test.prototype.fetchStatus = function () {
     this.updateView();
   };
 
-  fetch("/test_status/" + this.s3Key(), {mode: 'no-cors'}).
-    then(response => response.json()).
-    then(json => {
+  fetch("/test_status/" + this.s3Key(), {mode: 'no-cors'})
+    .then(response => response.json())
+    .then(json => {
       if (json.commit === commitHash) {
         this.versionId = json.version_id;
         this.attempt = parseInt(json.attempt, 10);
@@ -87,28 +87,34 @@ Test.prototype.fetchStatus = function () {
         this.duration = parseInt(json.duration, 10);
         this.status_ = this.success ? STATUS_SUCCEEDED : STATUS_FAILED;
       }
-    }).
-    then(ensure, ensure);
+    })
+    .then(ensure, ensure);
 };
 
 Test.prototype.updateView = function () {
+  const succeeded = this.status_ === STATUS_SUCCEEDED;
+  const failed = this.status_ === STATUS_FAILED;
+
+  // Get references to row elements
   let row = this.row;
-  let status = row.querySelector('.status');
-  let duration = `${Math.round(this.duration)} seconds`;
-  let logLink = `<a href="${this.publicLogUrl()}">(view log)</a>`;
-  if (this.status_ === STATUS_FAILED) {
-    row.style.backgroundColor = RED;
-    status.innerHTML = `Failed in ${duration} ${logLink}`;
-  } else if (this.status_ === STATUS_SUCCEEDED) {
-    row.style.backgroundColor = GREEN;
-    status.innerHTML = `Succeeded in ${duration} ${logLink}`;
+  let statusCell = row.querySelector('.status');
+  let logLinkCell = row.querySelector('.log-link');
+
+  // Update row appearance
+  if (succeeded || failed) {
+    row.style.backgroundColor = succeeded ? GREEN : RED;
+    statusCell.innerHTML = (succeeded ? 'Succeeded' : 'Failed') +
+        ` in ${Math.round(this.duration)} seconds` +
+        (this.attempt > 0 ? ` on retry #${this.attempt}` : '');
+    logLinkCell.innerHTML = `<a href="${this.publicLogUrl()}">Log on S3</a>`;
   } else {
     row.style.backgroundColor = GRAY;
-    status.innerHTML = '';
+    statusCell.innerHTML = '';
+    logLinkCell.innerHTML = '';
   }
 
   if (this.isUpdating_) {
-    status.innerHTML += " (Updating)";
+    statusCell.innerHTML += " (Updating)";
   }
 };
 
@@ -120,12 +126,12 @@ Test.prototype.s3Key = function () {
 };
 
 Test.prototype.publicLogUrl = function () {
-  return `https://cucumber-logs.s3.amazonaws.com/${this.s3Key()}?versionId=${this.versionId}`
+  return `https://cucumber-logs.s3.amazonaws.com/${this.s3Key()}?versionId=${this.versionId}`;
 };
 
 // Build a cache of tests for this run.
 var tests = {};
-var rows = document.querySelectorAll('tr');
+var rows = document.querySelectorAll('tbody tr');
 rows.forEach(row => {
   let test = new Test(row);
   tests[test.browser] = tests[test.browser] || {};
@@ -154,9 +160,9 @@ function refresh() {
   };
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime()/1000);
   let newTime = new Date();
-  fetch(`/test_status/${gitBranch}/since/${lastRefreshEpochSeconds}`, { mode: 'no-cors' }).
-    then(response => response.json()).
-    then(json => {
+  fetch(`/test_status/${gitBranch}/since/${lastRefreshEpochSeconds}`, { mode: 'no-cors' })
+    .then(response => response.json())
+    .then(json => {
       json.forEach(object => {
         let test = testFromS3Key(object.key);
         if (test) {
@@ -165,8 +171,8 @@ function refresh() {
       });
       lastRefreshTime = newTime;
       lastRefreshTimeLabel.textContent = 'Updated ' + lastRefreshTime.toTimeString();
-    }).
-    then(ensure, ensure);
+    })
+    .then(ensure, ensure);
 }
 
 var refreshInterval = null;
