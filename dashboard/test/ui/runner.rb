@@ -150,6 +150,7 @@ opt_parser = OptionParser.new do |opts|
   end
   opts.on('--with-status-page', 'Generate a test status summary page for this test run') do
     $options.with_status_page = true
+    $options.html = true # Implied by wanting a status page
   end
   opts.on_tail("-h", "--help", "Show this message") do
     puts opts
