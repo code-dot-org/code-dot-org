@@ -39,7 +39,7 @@ module Solr
         @start, @count, @docs = fetch(params[:start]||0)
       end
 
-      def count()
+      def count
         @count
       end
 

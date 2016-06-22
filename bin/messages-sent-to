@@ -24,7 +24,7 @@ def poste_url(id)
   url
 end
 
-def main()
+def main
   email = ARGV[0].to_s.strip.downcase
 
   contact = POSTE_DB[:contacts].where(email: email).first
