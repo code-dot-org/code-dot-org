@@ -16,7 +16,7 @@
   on
   = @workshop.sessions.first.formatted_date
   at
-  = @workshop.location_name + '.'
+  = "#{@workshop.location_name}."
 
 = render partial: 'teacher_info'
 
