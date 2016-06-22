@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
 
-def main()
+def main
   rerun = "rerun -p '**/*.{rb,ru,yml}' -d'#{deploy_dir('lib')},#{deploy_dir('shared/middleware')},#{pegasus_dir}' --" if CDO.dashboard_enable_pegasus
   pids = []
 

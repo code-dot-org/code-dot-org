@@ -2,7 +2,7 @@
 require_relative '../deployment.rb'
 require 'cdo/graphics/certificate_image.rb'
 
-def main()
+def main
   name = ARGV.join(' ')
 
   image_path = pegasus_dir 'sites.v3', 'code.org', 'public', 'images', 'k5-professional-development-certificate-2014.png'

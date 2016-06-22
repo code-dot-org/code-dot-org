@@ -24,7 +24,7 @@ class Properties
     value
   end
 
-  def self.get_user_metrics()
+  def self.get_user_metrics
     self.get(:about_stats) || {
       # The percentage of users with user_type = 'student' and last_sign_in_at != null and
       # gender != null that have gender = 'f' (circa Oct 2015).
@@ -39,7 +39,7 @@ class Properties
 
 end
 
-def fetch_metrics()
+def fetch_metrics
   # Include stale default values as of 2016-01-04 so we never show 0. These
   # would be used, for example, if the DB is unavailable.
   Properties.get(:metrics) || {
@@ -55,7 +55,7 @@ def fetch_metrics()
   }
 end
 
-def fetch_hoc_metrics()
+def fetch_hoc_metrics
   # Include stale default values as of 2015-11-04 so we never show 0. These
   # would be used, for example, if the DB is unavailable.
   metrics = Properties.get(:hoc_metrics) || {
@@ -108,6 +108,6 @@ def fetch_hoc_metrics()
   metrics
 end
 
-def fetch_user_metrics()
+def fetch_user_metrics
   Properties.get_user_metrics()
 end

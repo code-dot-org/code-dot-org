@@ -2,11 +2,11 @@
 require_relative '../../deployment'
 require 'cdo/only_one'
 
-def solr_dir()
+def solr_dir
   deploy_dir '..', 'solr-4.8.1', 'example'
 end
 
-def main()
+def main
   Dir.chdir(solr_dir) do
     system 'java', '-jar', 'start.jar'
   end
