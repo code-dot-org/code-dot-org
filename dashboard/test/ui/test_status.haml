@@ -5,6 +5,8 @@
     table { width: 100% }
     td { padding-left: 0.3em }
     \#refresh-controls { float: right; }
+    .progress-bar .bar { float: left; height: 10px }
+    .progress-bar .clear-both { clear: both }
 %body
   %div#refresh-controls
     %span#last-refresh-time
@@ -17,20 +19,27 @@
     %a#commit-hash{href: "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}", data: {hash: commit_hash}}= commit_hash[0..7]
     |
     %span#start-time= start_time
-    - browsers.sort.map do |browser|
-      %h3= browser
-      %table
-        %thead
-          %tr
-            %td Browser
-            %td Feature
-            %td Status
-            %td Log
-        %tbody
-          - features.sort.map do |feature|
-            %tr{data:{browser: browser, feature: feature}}
-              %td= browser
-              %td= feature
-              %td.status
-              %td.log-link
+  %div#total-progress
+    %div.progress-text
+    %div.progress-bar
+      %div.success.bar
+      %div.failure.bar
+      %div.pending.bar
+      %div.clear-both
+  - browsers.sort.map do |browser|
+    %h3= browser
+    %table
+      %thead
+        %tr
+          %td Browser
+          %td Feature
+          %td Status
+          %td Log
+      %tbody
+        - features.sort.map do |feature|
+          %tr{data:{browser: browser, feature: feature}}
+            %td= browser
+            %td= feature
+            %td.status
+            %td.log-link
   %script{src: 'test_status.js'}
