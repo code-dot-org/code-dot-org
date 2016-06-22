@@ -14,12 +14,12 @@ You are going to get to turn their rectangular sprites into images for the first
 * Levels: Sprites and Images
 * Wrap Up
 
-# Vocab
+# Vocabulary
 
-* Sprite
-* Object
-* Property
-* Rotate
+* **Property** - Attributes that describe an object&#39;s characteristics
+* **Rotate** - To turn a shape around a center point.
+* **Scale** - To increase the dimensions of a shape by the same factor in all directions.
+* **Sprite** - A graphic character on the screen with properties that describe its location, movement, and look.
 
 # Commands 
 
