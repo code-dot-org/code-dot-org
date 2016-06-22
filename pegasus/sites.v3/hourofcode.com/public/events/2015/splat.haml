@@ -12,7 +12,6 @@
 %>
 title: <%= hoc_s(:events_all_title) %> - <%= state ? state : country %>
 layout: wide
-nav: events_nav
 ---
 -require 'country_codes'
 -require 'state_abbr'
@@ -25,9 +24,9 @@ nav: events_nav
 -state_code = splat.last unless country_code == splat.last
 -if country_code == 'us' && state_code
   -state = get_us_state_from_abbr(state_code) unless state_code.nil_or_empty?
-  -results = SOLR.query(q:"*:*", fl:['organization_name_s', 'location_city_s'], fq:["kind_s:HocSignup2016", "location_country_code_s:\"#{country_code.upcase}\"", "location_state_code_s:\"#{state_code.upcase}\"", "organization_name_s:[* TO *]"], sort:'organization_name_s asc', rows:1000)
+  -results = SOLR.query(q:"*:*", fl:['organization_name_s', 'location_city_s'], fq:["kind_s:HocSignup2015", "location_country_code_s:\"#{country_code.upcase}\"", "location_state_code_s:\"#{state_code.upcase}\"", "organization_name_s:[* TO *]"], sort:'organization_name_s asc', rows:1000)
 -else
-  -results = SOLR.query(q:"*:*", fl:['organization_name_s', 'location_city_s'], fq:["kind_s:HocSignup2016", "location_country_code_s:#{country_code.upcase}", "organization_name_s:[* TO *]"], sort:'organization_name_s asc', rows:1000)
+  -results = SOLR.query(q:"*:*", fl:['organization_name_s', 'location_city_s'], fq:["kind_s:HocSignup2015", "location_country_code_s:#{country_code.upcase}", "organization_name_s:[* TO *]"], sort:'organization_name_s asc', rows:1000)
 
 -pass unless results.count > 0
 -require 'active_support/core_ext/hash/slice'
