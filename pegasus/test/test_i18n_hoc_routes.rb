@@ -27,7 +27,7 @@ class I18nHocRoutesTest < Minitest::Test
     assert_equal 200, resp.status, path
   end
 
-  def load_hoc_subpages()
+  def load_hoc_subpages
     Dir.glob(pegasus_dir('sites.v3/hourofcode.com/public/', '**/*.md')).map do |path|
       path[/public(.*)\.md/, 1]
     end

@@ -16,21 +16,21 @@ module Rack
 
     prepend CdoExtension
 
-    def json_body()
+    def json_body
       return nil unless content_type.split(';').first == 'application/json'
       return nil unless content_charset.downcase == 'utf-8'
       JSON.parse(body.read, symbolize_names: true)
     end
 
-    def language()
+    def language
       locale.split('-').first
     end
 
-    def locale()
+    def locale
       env['cdo.locale'] || 'en-US'
     end
 
-    def referer_site_with_port()
+    def referer_site_with_port
       url = URI.parse(self.referer.to_s)
       host = http_host_and_port(url.host, url.port)
       return host if host.include?('csedweek.org')
@@ -40,11 +40,11 @@ module Rack
       return 'code.org'
     end
 
-    def site()
+    def site
       @site ||= site_from_host
     end
 
-    def site_from_host()
+    def site_from_host
       host_parts = host
       # staging-studio.code.org -> ['staging', 'studio', 'code', 'org']
       host_parts.sub!('-', '.') unless rack_env?(:production)
@@ -62,11 +62,11 @@ module Rack
       'code.org'
     end
 
-    def shared_cookie_domain()
+    def shared_cookie_domain
       @shared_cookie_domain ||= shared_cookie_domain_from_host
     end
 
-    def shared_cookie_domain_from_host()
+    def shared_cookie_domain_from_host
       parts = host.split('.')
       if parts.count >= 2
         domain_suffix = parts.last(2).join('.')
@@ -75,15 +75,15 @@ module Rack
       host
     end
 
-    def splat_path_info()
+    def splat_path_info
       self.env[:splat_path_info]
     end
 
-    def user_id()
+    def user_id
       @user_id ||= user_id_from_session_cookie
     end
 
-    def user_id_from_session_cookie()
+    def user_id_from_session_cookie
       session_cookie_key = "_learn_session"
       session_cookie_key += "_#{rack_env}" unless rack_env?(:production)
 

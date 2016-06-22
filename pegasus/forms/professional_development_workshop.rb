@@ -28,7 +28,7 @@ class ProfessionalDevelopmentWorkshop
     result
   end
 
-  def self.receipt()
+  def self.receipt
     'workshop_receipt'
   end
 

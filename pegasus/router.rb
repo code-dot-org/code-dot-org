@@ -449,7 +449,7 @@ class Documents < Sinatra::Base
       end
     end
 
-    def social_metadata()
+    def social_metadata
       if request.site == 'csedweek.org'
         metadata = {
           'og:site_name'      => 'CSEd Week',

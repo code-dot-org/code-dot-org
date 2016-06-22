@@ -1,0 +1,61 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-16T02:22:43.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": {
+        "category": ""
+      },
+      "var sprite = createSprite": {
+        "params": [
+
+        ],
+        "paletteParams": [
+
+        ],
+        "category": ""
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "instructions": "Do This",
+    "markdown_instructions": "# Sprites\r\n\r\n**Sprites** make it easier to keep track of all of those values that we've been using separate variables for. You are going to start creating animations with **sprites**. A sprite is like a character in your animations, and each sprite keeps track of its own x and y coordinate (and lots of other values too). Your program will control how your sprites move and appear on the screen.\r\n\r\n**Creating Sprites:** The <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\"> block creates a new sprite and gives it any label you like. This label is how you'll refer to your sprite in your code.\r\n\r\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Whenever you call the ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) command all the sprites you've created will be drawn on the screen.\r\n\r\n# Do This\r\n\r\nThis program includes comments that let you know where to place code but otherwise is blank\r\n\r\n* Beneath the \"Creating Sprites\" comment drag in a <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\"> block and give your new sprite any label you like.\r\n* Beneath the \"Drawing\" comment drag in a ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) command\r\n* **Run the code** to draw your first sprite on the screen.",
+    "show_d_pad": "false",
+    "callout_json": "[\r\n  {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \"#droplet_palette_block_createSprite\",\r\n  \"callout_text\": \"Use this block to create a sprite\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"top right\",\r\n      \"at\": \"bottom left\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "start_blocks": "// Creating Sprites\r\n\r\n// Drawing",
+    "palette_category_at_start": "sprites",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

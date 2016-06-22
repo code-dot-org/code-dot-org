@@ -14,7 +14,7 @@ require_relative '../../lib/retention_stats_helper'
 ONE_WEEK = 7 * 24 * 60 * 60
 
 # TODO(asher): Refactor this so that it can be unit tested.
-def main()
+def main
   return unless only_one_running?(__FILE__)
 
   # Initialize the hashes of arrays that will contain the final data.

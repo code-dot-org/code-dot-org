@@ -103,6 +103,7 @@ class LevelSourceHintsController < ApplicationController
   end
 
   private
+
   def setup_display_of_pop_hints(unsuccessful_level_sources, path_maker)
     unsuccessful_level_sources = unsuccessful_level_sources.order('num_of_attempts desc')
     # Only consider levels having the restriction, if one is provided.
@@ -135,6 +136,7 @@ class LevelSourceHintsController < ApplicationController
   end
 
   public
+
   # This shows not just the hint whose popularity index is specified but also
   # all the other hints having the same level source id.
   def show_pop_hints
@@ -200,6 +202,7 @@ class LevelSourceHintsController < ApplicationController
   end
 
   protected
+
   def common(level_source_id)
     @level_source = LevelSource.find(level_source_id)
     @level = @level_source.level
@@ -216,6 +219,7 @@ class LevelSourceHintsController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_level_source_hint
     @level_source_hint = LevelSourceHint.where(id: params[:id], source: LevelSourceHint::CROWDSOURCED).try(:first)

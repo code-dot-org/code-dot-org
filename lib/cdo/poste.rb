@@ -6,7 +6,7 @@ require 'base64'
 
 module Poste
 
-  def self.logger()
+  def self.logger
     @@logger ||= $log
   end
 
@@ -56,7 +56,7 @@ module Poste
     nil
   end
 
-  def self.template_extnames()
+  def self.template_extnames
     ['.md','.haml','.html']
   end
 
