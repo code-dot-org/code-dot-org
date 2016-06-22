@@ -2,6 +2,8 @@
 var lastRefreshTimeLabel = document.querySelector('#last-refresh-time');
 var refreshButton = document.querySelector('#refresh-button');
 var autoRefreshButton = document.querySelector('#auto-refresh-button');
+var totalProgressBar = document.querySelector('#total-progress .progress-bar');
+var totalProgressText = document.querySelector('#total-progress .progress-text');
 
 // Gather metadata for the run
 var gitBranch = document.querySelector('#git-branch').dataset.branch;
@@ -149,6 +151,47 @@ function testFromS3Key(key) {
   return null;
 }
 
+function updateTotalProgress() {
+  // Count up tests by status
+  let successCount = 0, failureCount = 0, pendingCount = 0;
+  for (let browser in tests) {
+    for (let feature in tests[browser]) {
+      let status = tests[browser][feature].status_;
+      if (status === STATUS_PENDING) {
+        pendingCount++;
+      } else if (status === STATUS_FAILED) {
+        failureCount++;
+      } else if (status === STATUS_SUCCEEDED) {
+        successCount++;
+      }
+    }
+  }
+  let totalCount = successCount + failureCount + pendingCount;
+  let successPercent = Math.max(Math.floor(successCount * 100 / totalCount), successCount > 0 ? 1 : 0);
+  let failurePercent = Math.max(Math.floor(failureCount * 100 / totalCount), failureCount > 0 ? 1 : 0);
+  let pendingPercent = Math.max(Math.floor(pendingCount * 100 / totalCount), pendingCount > 0 ? 1 : 0);
+  let leftover = 100 - (successPercent + failurePercent + pendingPercent);
+  if (pendingCount > 0) {
+    pendingPercent += leftover;
+  } else {
+    successCount += leftover;
+  }
+  let runPercent = successPercent + failurePercent;
+  totalProgressText.textContent = `Progress: ${runPercent}% of ${totalCount} `
+      + `tests have run. ${successCount} passed, ${failureCount} failed, `
+      + `${pendingCount} are pending.`;
+
+  // Update the progress bar
+  let successBar = totalProgressBar.querySelector('.success');
+  let failureBar = totalProgressBar.querySelector('.failure');
+  let pendingBar = totalProgressBar.querySelector('.pending');
+  successBar.style.backgroundColor = GREEN;
+  successBar.style.width = `${successPercent}%`;
+  failureBar.style.backgroundColor = RED;
+  failureBar.style.width = `${failurePercent}%`;
+  pendingBar.style.backgroundColor = GRAY;
+  pendingBar.style.width = `${pendingPercent}%`;
+}
 
 function refresh() {
   // Fetches all logs for this branch and maps them to the tests in this run.
@@ -157,6 +200,7 @@ function refresh() {
   refreshButton.disabled = true;
   const ensure = () => {
     refreshButton.disabled = false;
+    updateTotalProgress();
   };
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime()/1000);
   let newTime = new Date();
