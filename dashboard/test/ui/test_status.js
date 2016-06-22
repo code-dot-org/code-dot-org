@@ -12,8 +12,6 @@
 var lastRefreshTimeLabel = document.querySelector('#last-refresh-time');
 var refreshButton = document.querySelector('#refresh-button');
 var autoRefreshButton = document.querySelector('#auto-refresh-button');
-var totalProgressBar = document.querySelector('#total-progress .progress-bar');
-var totalProgressText = document.querySelector('#total-progress .progress-text');
 
 // Gather metadata for the run
 var gitBranch = document.querySelector('#git-branch').dataset.branch;
