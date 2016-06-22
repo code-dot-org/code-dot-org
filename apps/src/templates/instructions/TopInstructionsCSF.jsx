@@ -357,7 +357,12 @@ module.exports = connect(function propsFromStore(state) {
       dispatch(instructions.setInstructionsMaxHeightNeeded(height));
     },
     showInstructionsDialog(height) {
-      dispatch(openDialog(false, true));
+      dispatch(openDialog({
+        autoClose: false,
+        showHints: true,
+        aniGifOnly: false,
+        hintsOnly: true
+      }));
     }
   };
 }, null, { withRef: true }
