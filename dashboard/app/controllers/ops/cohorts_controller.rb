@@ -68,6 +68,7 @@ module Ops
     end
 
     private
+
     # Required for CanCanCan to work with strong parameters
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
     def cohort_params
