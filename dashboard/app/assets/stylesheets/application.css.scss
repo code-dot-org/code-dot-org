@@ -219,8 +219,8 @@ img.video_thumbnail {
   float: right;
   margin-bottom: 10px;
 
-  @media screen and (max-device-width: 500px) {
-    display: inline;
+  @media screen and (min-device-width: 501px) {
+    display: none;
   }
 }
 

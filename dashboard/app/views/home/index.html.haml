@@ -11,7 +11,7 @@
     .span12
       - unless current_user
         .row
-          .sign_in.show_only_on_mobile{style: 'display: none;'}
+          .sign_in.show_only_on_mobile
             %a{href: CDO.studio_url('/users/sign_in')}
               %button.primary= t('nav.user.signin')
         #welcome_hero.welcome
