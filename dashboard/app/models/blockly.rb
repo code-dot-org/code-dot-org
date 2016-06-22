@@ -62,6 +62,7 @@ class Blockly < Level
     is_project_level
     edit_code
     code_functions
+    palette_category_at_start
     failure_message_override
     droplet_tooltips_disabled
     lock_zero_param_functions
