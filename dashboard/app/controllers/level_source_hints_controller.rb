@@ -141,10 +141,10 @@ class LevelSourceHintsController < ApplicationController
     authorize! :manage, :all
 
     unless setup_display_of_pop_hints(
-        FrequentUnsuccessfulLevelSource,
-        lambda {|idx, restriction| show_pop_hints_path idx, restriction})
+      FrequentUnsuccessfulLevelSource,
+      lambda {|idx, restriction| show_pop_hints_path idx, restriction})
       redirect_to frequent_unsuccessful_level_sources_path,
-                  notice: "No more #{@restriction && LevelSourceHint::USER_VISIBLE_NAMES[@restriction]} hints to review."
+        notice: "No more #{@restriction && LevelSourceHint::USER_VISIBLE_NAMES[@restriction]} hints to review."
     end
   end
 
@@ -163,7 +163,7 @@ class LevelSourceHintsController < ApplicationController
       render 'add_pop_hint'
     else
       redirect_to frequent_unsuccessful_level_sources_path,
-                  notice: 'No more hints are needed for the level you chose.  Please select another.'
+        notice: 'No more hints are needed for the level you chose.  Please select another.'
     end
   end
 
@@ -171,12 +171,12 @@ class LevelSourceHintsController < ApplicationController
     authorize! :manage, :all
 
     if setup_display_of_pop_hints(
-        FrequentUnsuccessfulLevelSource.where(level_id: params[:level_id].to_i),
-        lambda {|idx, restriction| show_pop_hints_per_level_path(params[:level_id].to_i, idx, restriction)})
+      FrequentUnsuccessfulLevelSource.where(level_id: params[:level_id].to_i),
+      lambda {|idx, restriction| show_pop_hints_per_level_path(params[:level_id].to_i, idx, restriction)})
       render 'show_pop_hints'
     else
       redirect_to frequent_unsuccessful_level_sources_path,
-                  notice: "No more #{@restriction && LevelSourceHint::USER_VISIBLE_NAMES[@restriction]} hints to review for the chosen level."
+        notice: "No more #{@restriction && LevelSourceHint::USER_VISIBLE_NAMES[@restriction]} hints to review for the chosen level."
     end
   end
 

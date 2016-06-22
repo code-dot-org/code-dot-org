@@ -15,8 +15,11 @@ class Pd::AsyncWorkshopHandler
 
     # Test and Production should always have a pd_workshop_queue_url,
     # and enqueue the job in SQS
-    if Rails.env.prod? || Rails.env.test?
+    if Rails.env.production? || Rails.env.test?
       raise "CDO.pd_workshop_queue_url is required on #{Rails.env}" unless CDO.pd_workshop_queue_url
+      self.workshop_queue.enqueue(op.to_json)
+    elsif CDO.pd_workshop_queue_url
+      # Other environments may have it specified (e.g. adhoc), but it's not required.
       self.workshop_queue.enqueue(op.to_json)
     else
       # Otherwise perform the job immediately (e.g. on development)

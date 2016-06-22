@@ -129,7 +129,7 @@ task :apps_task do
   HipChat.log 'apps built'
 
   HipChat.log 'testing apps..'
-  Dir.chdir(apps_dir) { RakeUtils.system 'grunt test' }
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'test:apps'
   HipChat.log 'apps test finished'
 
   # upload to s3

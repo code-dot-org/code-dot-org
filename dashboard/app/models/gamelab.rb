@@ -49,14 +49,14 @@ class Gamelab < Blockly
 
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
-        user: params[:user],
-        game: Game.gamelab,
-        level_num: 'custom',
-        properties: {
-          code_functions: JSON.parse(palette),
-          show_d_pad: true,
-          edit_code: true
-        }
+      user: params[:user],
+      game: Game.gamelab,
+      level_num: 'custom',
+      properties: {
+        code_functions: JSON.parse(palette),
+        show_d_pad: true,
+        edit_code: true
+      }
     ))
   end
 
