@@ -63,7 +63,7 @@ module Dashboard
     def select(*keys)
       {}.tap do |result|
         keys.each do |key|
-          result[key] = if @row.has_key? key
+          result[key] = if @row.key? key
                           @row[key]
                         elsif respond_to? key
                           send(key)
