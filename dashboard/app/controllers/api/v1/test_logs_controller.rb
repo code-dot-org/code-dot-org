@@ -6,7 +6,7 @@ require 'date'
 # information.
 class Api::V1::TestLogsController < ApplicationController
   # GET /api/v1/test_logs/<branch>/since/<timestamp>
-  def test_run_status_since
+  def get_logs_since
     boundary_time = Time.at(params[:time].to_i)
     bucket = Aws::S3::Bucket.new('cucumber-logs')
     objects = bucket.objects({prefix: "#{params[:branch]}/"})
@@ -21,7 +21,7 @@ class Api::V1::TestLogsController < ApplicationController
   end
 
   # GET /api/v1/test_logs/<branch>/<log-name>
-  def test_status
+  def get_log_details
     bucket = Aws::S3::Bucket.new('cucumber-logs')
     object = bucket.object("#{params[:branch]}/#{params[:name]}.#{params[:format]}")
     render json: {
