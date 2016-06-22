@@ -25,9 +25,10 @@ class UserGeo < ActiveRecord::Base
   # geolocation. The method noops if the given IP address is the same as the
   # existing IP address.
   def populate(user_id, ip_to_geolocate)
-    return if self.ip_address == ip_to_geolocate
     raise ArgumentError, "#{self.user_id}, #{user_id}" unless
       self.user_id.nil? || self.user_id == user_id
+
+    return if self.ip_address == ip_to_geolocate
 
     geocoder_result = Geocoder.search(ip_to_geolocate).first
     unless geocoder_result.nil?
