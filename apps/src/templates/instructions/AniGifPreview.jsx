@@ -55,6 +55,11 @@ export default connect(state => ({
   instructionsInTopPane: state.pageConstants.instructionsInTopPane
 }), dispatch => ({
   showInstructionsDialog() {
-    dispatch(openDialog(false, true));
+    dispatch(openDialog({
+      autoClose: false,
+      showHints: true,
+      aniGifOnly: true,
+      hintsOnly: false
+    }));
   }
 }))(Radium(AniGifPreview));
