@@ -87,6 +87,7 @@ class PDFMergerTest < Minitest::Test
   end
 
   private
+
   def merge_all_file_pdfs(glob)
     Dir.glob(glob).each do |file|
       merge_file_pdfs(file, file.sub('.collate', '.pdf'))
