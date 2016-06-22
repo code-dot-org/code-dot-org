@@ -188,6 +188,7 @@
       "isPressed": null,
       "holdtime": null,
       "value": null,
+      "getAveragedValue": null,
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
     },
