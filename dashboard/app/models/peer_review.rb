@@ -41,6 +41,40 @@ class PeerReview < ActiveRecord::Base
     escalated: 2
   }
 
+  def self.pull_review_from_pool(script, user)
+    # Find the first review such that meets these criteria
+    # Review is for this script
+    # I am not the submitter X
+    # Review status is nil
+    # Reviewer is nil or it has been assigned for more than a day
+    # Reviewer is not currently reviewing this level source
+    level_sources_reviewing = PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
+
+    peer_review = where(script: script).
+        where.not(submitter: user).
+        where(status: nil).
+        where('reviewer_id is null or created_at < NOW() - 1').
+        where.not(level_source_id: level_sources_reviewing).take
+
+    if peer_review
+      peer_review.update!(reviewer: user)
+      peer_review
+    else
+      # If nothing meets the first criteria, pick a random review that has been reviewed already
+      peer_review = where(script: script).
+          where.not(submitter: user).
+          where.not(reviewer: user).
+          where.not(level_source_id: level_sources_reviewing).
+          order('rand()').take
+
+      if peer_review
+        peer_review.dup.tap {|r| r.update!(reviewer: user)}
+      else
+        nil
+      end
+    end
+  end
+
   def mark_user_level
     user_level = UserLevel.find_by!(user: submitter, level: level)
 
