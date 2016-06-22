@@ -2,11 +2,14 @@
   %style
     body { font-family: sans-serif }
     h2 { font-family: monospace; font-size: 1.1em }
+    h3 { margin-bottom: 0.1em }
     table { width: 100% }
     td { padding-left: 0.3em }
     \#refresh-controls { float: right; }
-    .progress-bar .bar { float: left; height: 10px }
-    .progress-bar .clear-both { clear: both }
+    \.progress-bar { margin-bottom: 0.5em }
+    \.progress-bar .bar { float: left; height: 10px }
+    \.progress-bar .clear-both { clear: both }
+  %script{src: 'https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js'}
 %body
   %div#refresh-controls
     %span#last-refresh-time
@@ -28,6 +31,13 @@
       %div.clear-both
   - browsers.sort.map do |browser|
     %h3= browser
+    %div{id: "#{browser}-progress"}
+      %div.progress-text
+      %div.progress-bar
+        %div.success.bar
+        %div.failure.bar
+        %div.pending.bar
+        %div.clear-both
     %table
       %thead
         %tr
