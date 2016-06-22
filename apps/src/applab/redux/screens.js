@@ -31,6 +31,13 @@ export default function (state = initialState, action) {
       return state.set('currentScreenId', action.screenId);
     case TOGGLE_IMPORT_SCREEN:
       return state.set('isImportingScreen', action.importing);
+    case 'LOAD_PROJECT_FAILURE':
+      return state.mergeDeep({
+        importProject: {
+          isFetchingProject: false,
+          errorFetchingProject: true,
+        }
+      });
     case IMPORT.IMPORT_PROJECT.START_FETCHING:
       return state.setIn(['importProject', 'isFetchingProject'], true);
     default:
