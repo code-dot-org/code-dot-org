@@ -198,7 +198,12 @@ module Poste2
 
   class DeliveryMethod
 
-    ALLOWED_SENDERS = Set.new ['pd@code.org', 'noreply@code.org', 'teacher@code.org']
+    ALLOWED_SENDERS = Set.new %w[
+      pd@code.org
+      noreply@code.org
+      teacher@code.org
+      hadi_partovi@code.org
+    ]
     def initialize(settings = nil)
     end
 
