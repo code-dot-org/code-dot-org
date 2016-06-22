@@ -32,7 +32,6 @@ module LevelsHelper
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
   def create_channel(data = {}, src = nil)
-
     storage_app = StorageApps.new(storage_id('user'))
     if src
       data = storage_app.get(src)
