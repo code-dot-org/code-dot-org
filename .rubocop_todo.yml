@@ -146,11 +146,6 @@ Style/ConstantName:
 Style/DeprecatedHashMethods:
   Enabled: false
 
-# Offense count: 27
-# Cop supports --auto-correct.
-Style/EmptyLinesAroundAccessModifier:
-  Enabled: false
-
 # Offense count: 50
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
