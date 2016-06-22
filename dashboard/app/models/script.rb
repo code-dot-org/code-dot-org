@@ -194,7 +194,7 @@ class Script < ActiveRecord::Base
       script_level_cache.values.each do |script_level|
         level = script_level.level
         next unless level
-        cache[level.id] = level unless cache.has_key? level.id
+        cache[level.id] = level unless cache.key? level.id
       end
     end
   end
@@ -533,7 +533,7 @@ class Script < ActiveRecord::Base
   # script is found/created by 'id' (if provided) otherwise by 'name'
   def self.fetch_script(options)
     options.symbolize_keys!
-    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.has_key? v
+    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.key? v
     name = {name: options.delete(:name)}
     script_key = ((id = options.delete(:id)) && {id: id}) || name
     script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)
