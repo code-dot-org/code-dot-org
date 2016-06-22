@@ -88,9 +88,9 @@ class ProjectsController < ApplicationController
       return if redirect_under_13(@level)
     end
     level_view_options(
-        hide_source: sharing,
-        share: sharing,
-        iframe_embed: iframe_embed,
+      hide_source: sharing,
+      share: sharing,
+      iframe_embed: iframe_embed,
     )
     # for sharing pages, the app will display the footer inside the playspace instead
     no_footer = sharing
