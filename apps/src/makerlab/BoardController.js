@@ -173,8 +173,31 @@ BoardController.prototype.analogRead = function (pin, callback) {
   return this.board_.analogRead(pin, callback);
 };
 
+class LookbackLogger {
+  constructor() {
+    this.items = [];
+  }
+
+  addData(dataPoint) {
+    this.items.push(dataPoint);
+  }
+
+  getLast(n) {
+    return this.items.slice(this.items.length - n, this.items.length).reduce(function (sum, a, i, ar) {
+      sum += a;
+      return i == ar.length - 1 ? (ar.length == 0 ? 0 : sum / ar.length) : sum
+    }, 0);
+  }
+}
+
+window.lookbackLoggers = {};
+
 BoardController.prototype.onBoardEvent = function (component, event, callback) {
-  component.on(event, callback);
+  component.on(event, (e) => {
+    lookbackLoggers[component] = lookbackLoggers[component] || new LookbackLogger();
+    lookbackLoggers[component].addData(component.value);
+    callback(e);
+  });
   component.start && component.start(); // TODO(bjordan): remove when auto-start
 };
 
