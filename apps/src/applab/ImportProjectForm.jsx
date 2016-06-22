@@ -1,64 +1,28 @@
 import React from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
-import {
-  sources as sourcesApi,
-  channels as channelsApi,
-} from '../clientApi';
+import {fetchProject} from './redux/screens';
 
-export default React.createClass({
+const ImportProjectForm = React.createClass({
 
   propTypes: {
-    onProjectFetched: React.PropTypes.func.isRequired,
+    onImport: React.PropTypes.func.isRequired,
+    isFetching: React.PropTypes.bool,
+    error: React.PropTypes.bool,
+  },
+
+  getDefaultProps() {
+    return {
+      isFetching: false,
+      error: false,
+    };
   },
 
   getInitialState() {
     return {
       url: '',
-      error: null,
-      fetching: false,
     };
-  },
-
-  validateLink() {
-    var sources;
-    var channel;
-    var errorText = "We can't seem to find this project. " +
-                    "Please make sure you've entered a valid App Lab project URL.";
-    var match = this.state.url.match(/projects\/applab\/([^\/]+)/);
-    var onError = () => this.setState({error: errorText, fetching: false});
-    var onSuccess = () => {
-      if (sources && channel) {
-        this.setState({fetching: false});
-        this.props.onProjectFetched({channel, sources});
-      }
-    };
-
-    if (match) {
-      var projectId = match[1];
-      this.setState({fetching: true});
-      // TODO: this is not safe at all because sourcesApi is a global
-      // and other callers might rely on project id not being set.
-      channelsApi.setProjectId(projectId).ajax(
-        'GET',
-        '',
-        xhr => {
-          channel = JSON.parse(xhr.response);
-          onSuccess();
-        },
-        onError
-      );
-      sourcesApi.setProjectId(projectId).ajax(
-        'GET',
-        'main.json',
-        xhr => {
-          sources = JSON.parse(xhr.response);
-          onSuccess();
-        },
-        onError
-      );
-    } else {
-      onError();
-    }
   },
 
   render() {
@@ -72,13 +36,63 @@ export default React.createClass({
         </p>
         <input type="text"
                value={this.state.url}
-               onChange={event => this.setState({error: null, url: event.target.value})}/>
-        <button onClick={this.validateLink} disabled={this.state.fetching}>
-          {this.state.fetching && <span className="fa fa-spin fa-spinner" />}
+               onChange={event => this.setState({url: event.target.value})}/>
+        <button onClick={() => this.props.onImport(this.state.url)}
+                disabled={this.props.isFetching}>
+          {this.props.isFetching && <span className="fa fa-spin fa-spinner" />}
           Next
         </button>
-        {this.state.error && <p>{this.state.error}</p>}
+        {this.props.error &&
+         <p>
+           We can't seem to find this project. Please make sure you've
+           entered a valid App Lab project URL.
+         </p>
+        }
       </div>
     );
   }
 });
+
+export default ImportProjectForm;
+
+
+if (BUILD_STYLEGUIDE) {
+  window.React = React;
+  var Dialog = require('../templates/DialogComponent');
+  ImportProjectForm.styleGuideExamples = storybook => {
+    storybook
+      .storiesOf('ImportProjectForm', module)
+      .addDecorator(story => (
+        <Dialog hideBackdrop={true} isOpen={true} handleClose={() => null}>
+          {story()}
+        </Dialog>
+      ))
+      .addWithInfo(
+        'On open',
+        '',
+        () => (
+            <ImportProjectForm
+                onImport={storybook.action("onImport")}
+                isFetching={false} />
+        )
+      )
+      .addWithInfo(
+        'While fetching',
+        '',
+        () => (
+          <ImportProjectForm
+              onImport={storybook.action("onImport")}
+              isFetching={true} />
+        )
+      )
+      .addWithInfo(
+        'Error Fetching',
+        '',
+        () => (
+          <ImportProjectForm
+              onImport={storybook.action("onImport")}
+              error={true} />
+        )
+      );
+  };
+}

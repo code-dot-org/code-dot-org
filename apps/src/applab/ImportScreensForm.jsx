@@ -32,7 +32,7 @@ class ImportableScreen {
     Array.from(this.dom.children).forEach(child => {
       if (!elementUtils.isIdAvailable(child.id)) {
         var existingElement = elementUtils.getPrefixedElementById(child.id);
-        if (elementUtils.getId(existingElement.parentNode) !== this.id) {
+        if (existingElement && elementUtils.getId(existingElement.parentNode) !== this.id) {
           conflictingIds.push(child.id);
         }
       }
