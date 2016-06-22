@@ -255,10 +255,11 @@ File.open("test_status_#{$options.run_eyes_tests ? 'eyes' : 'ui'}.html", 'w') do
     git_branch: git_branch,
     commit_hash: COMMIT_HASH,
     start_time: $suite_start_time,
-    browser_features: browser_features
+    browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},
+    features: features_to_run
   })
 end
-exit 0 if ($options.status_page_only)
+exit 0 if $options.status_page_only
 
 Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')

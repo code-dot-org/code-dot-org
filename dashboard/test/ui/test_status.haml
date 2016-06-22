@@ -3,7 +3,7 @@
     body { font-family: sans-serif }
     h2 { font-family: monospace; font-size: 1.1em }
     table { width: 100% }
-    tr { background-color: #dddddd; }
+    td { padding-left: 0.3em }
     \#refresh-controls { float: right; }
 %body
   %div#refresh-controls
@@ -17,12 +17,20 @@
     %a#commit-hash{href: "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}", data: {hash: commit_hash}}= commit_hash[0..7]
     |
     %span#start-time= start_time
-  %table
-    - browser_features.map do |browser, feature|
-      - browser['name'] = 'UnknownBrowser' if browser['name'].nil?
-      %tr{"data-browser" => browser['name'],
-          "data-feature" => feature}
-        %td= browser['name']
-        %td= feature
-        %td.status
+    - browsers.sort.map do |browser|
+      %h3= browser
+      %table
+        %thead
+          %tr
+            %td Browser
+            %td Feature
+            %td Status
+            %td Log
+        %tbody
+          - features.sort.map do |feature|
+            %tr{data:{browser: browser, feature: feature}}
+              %td= browser
+              %td= feature
+              %td.status
+              %td.log-link
   %script{src: 'test_status.js'}
