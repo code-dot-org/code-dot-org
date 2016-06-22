@@ -30,11 +30,11 @@ class ClassSubmission
     result
   end
 
-  def self.receipt()
+  def self.receipt
     'class_submission_receipt'
   end
 
-  def self.formats()
+  def self.formats
     (@formats ||= {})[I18n.locale] ||= formats_with_i18n_labels({
       'in_school' => %w(
         daily_programming_course
@@ -74,7 +74,7 @@ class ClassSubmission
     results
   end
 
-  def self.languages()
+  def self.languages
     [
       'Code.org Code Studio',
       'Alice',
@@ -102,7 +102,7 @@ class ClassSubmission
     ]
   end
 
-  def self.levels()
+  def self.levels
     (@levels ||= {})[I18n.locale] ||= levels_with_i18n_labels(
       'preschool',
       'elementary',
@@ -121,7 +121,7 @@ class ClassSubmission
     results
   end
 
-  def self.published_states()
+  def self.published_states
     %w(
       approved
       rejected

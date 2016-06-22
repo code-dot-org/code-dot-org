@@ -61,7 +61,7 @@ def lint_failure(output)
   raise "Lint failed"
 end
 
-def do_linting()
+def do_linting
   modified_files = HooksUtils.get_staged_files
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),

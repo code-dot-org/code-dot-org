@@ -24,7 +24,7 @@ require_relative '../../lib/analyze_hoc_activity_helper'
 # This default number of lines of code is from 2016-01-04.
 DEFAULT_LINES_OF_CODE = 11_151_730_618
 
-def main()
+def main
   return unless only_one_running?(__FILE__)
 
   to_date = JSON.load(IO.read(pegasus_dir("cache/HourOfActivity_Totals_2014-12-05.json")))

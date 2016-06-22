@@ -19,7 +19,7 @@ class BaseDSL
   end
 
   # returns 'xyz' from 'XyzDSL' subclasses
-  def prefix()
+  def prefix
     self.class.to_s.tap{|s| s.slice!('DSL')}.underscore
   end
 
