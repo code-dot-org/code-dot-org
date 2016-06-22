@@ -16,6 +16,26 @@ function addStyleguideExamples(subcomponent) {
   }
 }
 
+const styles = {
+  colorWrapper: {
+    display: 'inline-block',
+    whiteSpace: 'nowrap',
+    width: '33%',
+  },
+  colorBox: {
+    display: 'inline-block',
+    border: '1px solid black',
+    width: 50,
+    height: 50,
+  },
+  colorDoc: {
+    display: 'inline-block',
+    position: 'relative',
+    bottom: 12.5,
+    paddingLeft: 10
+  }
+};
+
 function loadStories() {
   storybook
     .storiesOf('Colors', module)
@@ -33,18 +53,9 @@ function loadStories() {
 console.log("the hex value for purple is:", colors.purple);`}
         </pre>
         {Object.keys(color).map(colorKey => (
-           <div key={colorKey} style={{display: 'inline-block',
-                                       whiteSpace: 'nowrap',
-                                       width: '33%',}}>
-             <div style={{display: 'inline-block',
-                          border: '1px solid black',
-                          width: 50,
-                          height: 50,
-                          backgroundColor: color[colorKey]}}/>
-             <div style={{display: 'inline-block',
-                          position: 'relative',
-                          bottom: 12.5,
-                          paddingLeft: 10,}}>
+           <div key={colorKey} style={styles.colorWrapper}>
+             <div style={Object.assign({}, styles.colorBox, {backgroundColor: color[colorKey]})}/>
+             <div style={styles.colorDoc}>
                <div>{colorKey}</div>
                <div>{color[colorKey]}</div>
              </div>
