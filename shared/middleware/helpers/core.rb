@@ -11,7 +11,7 @@ def cache_one_hour
   cache_for 3600
 end
 
-def no_content()
+def no_content
   halt(204, "No content\n")
 end
 
@@ -19,7 +19,7 @@ def not_modified
   halt(304, "Not Modified\n")
 end
 
-def bad_request()
+def bad_request
   halt(400, "Bad Request\n")
 end
 
@@ -33,15 +33,15 @@ def json_bad_request(details = nil)
   halt(400, body.to_json)
 end
 
-def not_authorized()
+def not_authorized
   halt(401, "Not authorized\n")
 end
 
-def forbidden()
+def forbidden
   halt(403, "Forbidden\n")
 end
 
-def not_found()
+def not_found
   halt(404, "Not found\n")
 end
 
@@ -49,6 +49,6 @@ def too_large(msg = "Payload too large\n")
   halt(413, msg)
 end
 
-def unsupported_media_type()
+def unsupported_media_type
   halt(415, "Unsupported Media Type\n")
 end
