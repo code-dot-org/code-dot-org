@@ -339,6 +339,7 @@ Dashboard::Application.routes.draw do
   get '/api/:action', controller: 'api'
 
   get '/test_status/:branch', to: 'test_status#test_run_status'
+  get '/test_status/:branch/since/:time', to: 'test_status#test_run_status_since'
   get '/test_status/:branch/:name', to: 'test_status#test_status'
 
   namespace :api do

@@ -15,6 +15,7 @@ require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
 require 'cdo/hip_chat'
 
+require 'haml'
 require 'json'
 require 'yaml'
 require 'optparse'
@@ -147,6 +148,9 @@ opt_parser = OptionParser.new do |opts|
     f = `egrep -r "Given I am on .*#{scriptname.delete(' ').downcase}" . | cut -f1 -d ':' | sort | uniq | tr '\n' ,`
     $options.feature = f.split ','
   end
+  opts.on('--status-page-only', "Generate the test status page for the given options and then quit") do
+    $options.status_page_only = true
+  end
   opts.on_tail("-h", "--help", "Show this message") do
     puts opts
     exit
@@ -243,72 +247,18 @@ if test_type == 'eyes tests'
   print "Batching eyes tests as #{ENV['BATCH_NAME']}"
 end
 
+test_status_template = File.read('test_status.haml')
+haml_engine = Haml::Engine.new(test_status_template)
 File.open("test_status_#{$options.run_eyes_tests ? 'eyes' : 'ui'}.html", 'w') do |file|
-  file.write <<-FILE
-  <head>
-    <style>
-      table {
-        width: 100%;
-      }
-      tr {
-        background-color: #dddddd;
-      }
-    </style>
-  </head>
-  <body>
-    <h1><span id=git-branch>#{git_branch}</span></h1>
-    <h2><span id=commit-hash>#{COMMIT_HASH}</span> | <span id=\"start-time\">#{$suite_start_time}</span></h2>
-    <table>
-    #{browser_features.map {|browser, feature|
-      "<tr " +
-          "data-browser=#{browser['name']} " +
-          "data-feature=#{feature}>" +
-          "<td>#{browser['name']}</td>" +
-          "<td>#{feature}</td>" +
-          "<td class=status>Status loading</td>" +
-          "</tr>"
-    }.join('\n')}
-    </table>
-    <script language="javascript">
-    var startTime = Date.parse(document.querySelector('#start-time').textContent);
-    var tests = {};
-    var rows = document.querySelectorAll('tr');
-    rows.forEach(row => {
-      tests[row.dataset.browser] = tests[row.dataset.browser] || {};
-      tests[row.dataset.browser][row.dataset.feature] = tests[row.dataset.browser][row.dataset.feature] || {};
-      tests[row.dataset.browser][row.dataset.feature].row = row;
-    });
-    fetch("/test_status/#{git_branch}", { mode: 'no-cors' }).
-        then(response => response.json()).
-        then(json => {
-          json.forEach(object => {
-            var lastModified = Date.parse(object.last_modified);
-            if (lastModified <= startTime) { return; }
-
-            var re = /[^/]+\\/([^_]+)_(.*)_output\.html/i;
-            var result = re.exec(object.key);
-            var browser = result[1];
-            var feature = "features/" + result[2] + ".feature";
-            if (tests[browser] && tests[browser][feature]) {
-              fetch("/test_status/" + object.key, { mode: 'no-cors' }).
-                  then(response => response.json()).
-                  then(json => {
-                    tests[browser][feature].versionId = json.version_id;
-                    tests[browser][feature].commit = json.commit;
-                    tests[browser][feature].attempt = json.attempt;
-                    tests[browser][feature].success = json.success;
-                    tests[browser][feature].duration = json.duration;
-                    tests[browser][feature].row.style.backgroundColor = json.success ? "green" : "red";
-                    tests[browser][feature].row.querySelector('.status').textContent = JSON.stringify(json);
-                  });
-            }
-          });
-        });
-    </script>
-    <script src="test_status.js"></script>
-  </body>
-  FILE
+  file.write haml_engine.render(Object.new, {
+    type: $options.run_eyes_tests ? 'Eyes' : 'UI',
+    git_branch: git_branch,
+    commit_hash: COMMIT_HASH,
+    start_time: $suite_start_time,
+    browser_features: browser_features
+  })
 end
+exit 0 if ($options.status_page_only)
 
 Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
