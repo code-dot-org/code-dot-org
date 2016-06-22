@@ -16,6 +16,7 @@ try {
 }
 
 import _ from '../lodash';
+import DataCollection from 'data-collection';
 
 /** @const {string} */
 var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
@@ -185,20 +186,22 @@ BoardController.prototype.analogRead = function (pin, callback) {
 
 class LookbackLogger {
   constructor() {
-    this.items = [];
+    this.dataCollection = new DataCollection();
   }
 
   addData(dataPoint) {
-    this.items.push(dataPoint);
+    this.dataCollection.insert({
+      value: dataPoint,
+      date: new Date()
+    });
   }
 
-  getLast(n) {
-    const reduceAverage = function (sum, a, i, ar) {
-      sum += a;
-      return i == ar.length - 1 ? (ar.length == 0 ? 0 : sum / ar.length) : sum
-    };
-    const dataSet = this.items.slice(this.items.length - n, this.items.length);
-    return dataSet.reduce(reduceAverage, 0);
+  getLast(ms) {
+    var now = new Date();
+    return this.dataCollection.query().filter({
+      date__lte: now,
+      date__gte: new Date(now.getTime() - ms)
+    }).avg('value');
   }
 }
 
