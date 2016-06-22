@@ -8,6 +8,16 @@ class SessionsController < Devise::SessionsController
     super
   end
 
+  # POST /resource/sign_in
+  def create
+    super
+    return unless signed_in?
+    return unless current_user.current_sign_in_ip
+    return if UserGeo.find_by_user_id(current_user.id)
+
+    UserGeo.new.populate(current_user.id, current_user.current_sign_in_ip)
+  end
+
   # DELETE /resource/sign_out
   def destroy
     redirect_path = after_sign_out_path_for(:user)
