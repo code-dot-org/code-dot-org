@@ -2,7 +2,7 @@
 // prepopulated with tables listing all of the tests we are going to run
 // (see runner.rb and test_status.haml for how this happens) but the actual
 // status of those tests we retrieve asynchronously from a server API
-// (see test_status_controller.rb) which in turn gets its information from the
+// (see test_logs_controller.rb) which in turn gets its information from the
 // uploaded S3 logs and their metadata.
 
 // Lodash gets provided on test_status.html
