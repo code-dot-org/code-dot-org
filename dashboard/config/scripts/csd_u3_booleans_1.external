@@ -1,5 +1,21 @@
 name 'CSD U3 - Booleans - 1'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-Place holder for Booleans Lesson
+## Unit 3: Lesson 07 - Booleans and Conditionals
+
+# Background
+
+In this lesson, students are introduced to boolean values and logic, as well as conditional statements. We start by playing a simple game of Stand Up, Sit Down where the boolean (true/false) statements are in regard to personal properties (hair or eye color, clothing type, age, etc). This gets students thinking about how they can frame a property with multiple potential values (such as age) with a binary question.
+
+From there students are provided a group of objects with similar, yet varying, physical properties. With a partner they group those objects based on increasingly complex boolean statements, including compound booleans with AND and OR.
+
+# Vocabulary
+* **Boolean** - A value of either TRUE or FALSE
+* **Conditionals** - Statements that only run under certain conditions.
+* **Expression** - Any valid unit of code that resolves to a value.
+
+# Resources
+* <a href='https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/' target='_blank' class='print_link'>Boolean Properties</a> - Activity Guide (<a href='https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=pdf' class='print_link'>PDF</a> | <a href='https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=doc' class='print_link'>DOCX</a>)
+
+
 MARKDOWN
