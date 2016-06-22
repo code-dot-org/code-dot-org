@@ -107,6 +107,7 @@ module.exports.blocks = [
   {func: 'holdtime', objectDropdown: {options: buttonVariables, dropdownOnly: true}, category: 'Circuit', blockPrefix: `${buttonVariables[0]}.`, modeOptionName: "*.holdtime", type: 'readonlyproperty', tipPrefix: '[Button].'},
 
   {func: 'value', objectDropdown: { options: sensorVariables }, modeOptionName: "*.value", blockPrefix: `${sensorVariables[0]}.`, category: 'Circuit', type: 'readonlyproperty', tipPrefix: '[Sensor].'},
+  {func: 'getAveragedValue', objectDropdown: { options: sensorVariables }, modeOptionName: "*.getAveragedValue", blockPrefix: `${sensorVariables[0]}.`, category: 'Circuit', tipPrefix: '[Sensor].', params: ['500'], paletteParams: ['ms'], type: 'value'},
   {func: 'threshold', objectDropdown: { options: sensorVariables }, modeOptionName: "*.threshold", blockPrefix: `${sensorVariables[0]}.`, category: 'Circuit', type: 'property', tipPrefix: '[Sensor].' },
 
   //{func: 'toggleSwitch', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},

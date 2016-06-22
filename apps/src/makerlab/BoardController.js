@@ -114,6 +114,16 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
   }.bind(this));
 
   this.prewiredComponents.accelerometer.start();
+
+  [
+      this.prewiredComponents.soundSensor,
+      this.prewiredComponents.lightSensor,
+      this.prewiredComponents.tempSensor
+  ].forEach((s) => {
+    s.lookbackLogger = new LookbackLogger();
+    s.on('data', () => { s.lookbackLogger.addData(s.value); });
+    s.getAveragedValue = n => s.lookbackLogger.getLast(n);
+  })
 };
 
 BoardController.prototype.reset = function () {
@@ -183,22 +193,19 @@ class LookbackLogger {
   }
 
   getLast(n) {
-    return this.items.slice(this.items.length - n, this.items.length).reduce(function (sum, a, i, ar) {
+    const reduceAverage = function (sum, a, i, ar) {
       sum += a;
       return i == ar.length - 1 ? (ar.length == 0 ? 0 : sum / ar.length) : sum
-    }, 0);
+    };
+    const dataSet = this.items.slice(this.items.length - n, this.items.length);
+    return dataSet.reduce(reduceAverage, 0);
   }
 }
 
 window.lookbackLoggers = {};
 
 BoardController.prototype.onBoardEvent = function (component, event, callback) {
-  component.on(event, (e) => {
-    lookbackLoggers[component] = lookbackLoggers[component] || new LookbackLogger();
-    lookbackLoggers[component].addData(component.value);
-    callback(e);
-  });
-  component.start && component.start(); // TODO(bjordan): remove when auto-start
+  component.on(event, callback);
 };
 
 function connect() {
@@ -313,7 +320,7 @@ function initializeCircuitPlaygroundComponents(io, board) {
       controller: PlaygroundIO.Piezo
     }),
 
-    thermometer: new five.Thermometer({
+    tempSensor: new five.Thermometer({
       controller: "TINKERKIT",
       pin: "A0",
       freq: 100
