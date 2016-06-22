@@ -148,8 +148,8 @@ opt_parser = OptionParser.new do |opts|
     f = `egrep -r "Given I am on .*#{scriptname.delete(' ').downcase}" . | cut -f1 -d ':' | sort | uniq | tr '\n' ,`
     $options.feature = f.split ','
   end
-  opts.on('--status-page-only', "Generate the test status page for the given options and then quit") do
-    $options.status_page_only = true
+  opts.on('--with-status-page', 'Generate a test status summary page for this test run') do
+    $options.with_status_page = true
   end
   opts.on_tail("-h", "--help", "Show this message") do
     puts opts
@@ -240,26 +240,32 @@ browser_features = $browsers.product features_to_run
 git_branch = `git rev-parse --abbrev-ref HEAD`.strip
 ENV['BATCH_NAME'] =  "#{git_branch} | #{Time.now}"
 
-test_type = $options.run_eyes_tests ? 'eyes tests' : 'UI tests'
-HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} in #{$options.parallel_limit} threads..."
-if test_type == 'eyes tests'
+test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
+HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
+if test_type == 'Eyes'
   HipChat.log "Batching eyes tests as #{ENV['BATCH_NAME']}"
   print "Batching eyes tests as #{ENV['BATCH_NAME']}"
 end
 
-test_status_template = File.read('test_status.haml')
-haml_engine = Haml::Engine.new(test_status_template)
-File.open("test_status_#{$options.run_eyes_tests ? 'eyes' : 'ui'}.html", 'w') do |file|
-  file.write haml_engine.render(Object.new, {
-    type: $options.run_eyes_tests ? 'Eyes' : 'UI',
-    git_branch: git_branch,
-    commit_hash: COMMIT_HASH,
-    start_time: $suite_start_time,
-    browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},
-    features: features_to_run
-  })
+if $options.with_status_page
+  test_status_template = File.read('test_status.haml')
+  haml_engine = Haml::Engine.new(test_status_template)
+  status_page_filename = "test_status_#{test_type}.html"
+  File.open(status_page_filename, 'w') do |file|
+    file.write haml_engine.render(Object.new, {
+      type: test_type,
+      git_branch: git_branch,
+      commit_hash: COMMIT_HASH,
+      start_time: $suite_start_time,
+      browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},
+      features: features_to_run
+    })
+  end
+  scheme = 'https:'
+  scheme = 'http:' if rack_env?(:development) && !CDO.https_development
+  status_page_url = CDO.studio_url('/ui_test/' + status_page_filename, scheme)
+  HipChat.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
-exit 0 if $options.status_page_only
 
 Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
