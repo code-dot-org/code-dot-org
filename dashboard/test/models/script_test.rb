@@ -198,10 +198,10 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'blockly level in custom script' do
     script_data, _ = ScriptDSL.parse(
-                     "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
+      "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
 
     script = Script.add_script({name: 'test script'},
-                               script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
     assert_equal '100', script.script_levels[1].level.level_num
@@ -210,60 +210,60 @@ class ScriptTest < ActiveSupport::TestCase
   test 'forbid applab and gamelab levels in public scripts' do
     assert_raises_matching /Applab and Gamelab levels can only be added to scripts that are hidden or require login/ do
       Script.add_script(
-          {name: 'test script', hidden: false},
-          [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+        {name: 'test script', hidden: false},
+        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
       )
     end
 
     assert_raises_matching /Applab and Gamelab levels can only be added to scripts that are hidden or require login/ do
       Script.add_script(
-          {name: 'test script', hidden: false},
-          [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+        {name: 'test script', hidden: false},
+        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
       )
     end
   end
 
   test 'allow applab and gamelab levels in hidden scripts' do
     Script.add_script(
-        {name: 'test script', hidden: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+      {name: 'test script', hidden: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
     )
     Script.add_script(
-        {name: 'test script', hidden: true},
-        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+      {name: 'test script', hidden: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 
   test 'allow applab and gamelab levels in login_required scripts' do
     Script.add_script(
-        {name: 'test script', hidden: false, login_required: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+      {name: 'test script', hidden: false, login_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
     )
     Script.add_script(
-        {name: 'test script', hidden: false, login_required: true},
-        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+      {name: 'test script', hidden: false, login_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 
   test 'allow applab and gamelab levels in student_of_admin_required scripts' do
     Script.add_script(
-        {name: 'test script', hidden: false, student_of_admin_required: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+      {name: 'test script', hidden: false, student_of_admin_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
     )
     Script.add_script(
-        {name: 'test script', hidden: false, student_of_admin_required: true},
-        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+      {name: 'test script', hidden: false, student_of_admin_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 
   test 'allow applab and gamelab levels in admin_required scripts' do
     Script.add_script(
-        {name: 'test script', hidden: false, admin_required: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+      {name: 'test script', hidden: false, admin_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
     )
     Script.add_script(
-        {name: 'test script', hidden: false, admin_required: true},
-        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+      {name: 'test script', hidden: false, admin_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 
