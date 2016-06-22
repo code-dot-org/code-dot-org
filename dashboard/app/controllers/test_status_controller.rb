@@ -1,6 +1,9 @@
 require 'aws-sdk'
 require 'date'
 
+# API that serves UI test status based on uploaded test run S3 logs and their
+# metadata.  See runner.rb, test_status.haml and test_status.js for more
+# information.
 class TestStatusController < ApplicationController
   def test_run_status_since
     boundary_time = Time.at(params[:time].to_i)
