@@ -176,7 +176,7 @@
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Finishing Touches\r\nNow's your chance to put some finishing touches on your card. We've included some new blocks that you haven't seen before, so take some time to look around and try out some new blocks.\r\n\r\n# Do This\r\nConsider adding any of the following to finish up your card:\r\n\r\n* Text (add it after the `drawSprites()` block if you want it on top of everything)\r\n* Additional frames or animations for your Sprites\r\n* Subtle animation in the background\r\n* Sound effects (can you figure out how to do this?)\r\n* More ways for a user to interact with your card",
-    "submittable": "false",
+    "submittable": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -198,7 +198,8 @@
     "free_play": "false",
     "text_mode_at_start": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
