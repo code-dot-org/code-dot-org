@@ -652,11 +652,11 @@ function getFirstParamFromCode(methodName, code) {
   const backslashEscapedRegex = `^${methodName}\\((['"])(.*)\\1,\\s*$`;
   const backslashNoQuoteRegex = `^${methodName}\\(([^"']*),\\s*$`;
   var matchQuote = new RegExp(backslashEscapedRegex).exec(code);
-  var marchNoQuote = new RegExp(backslashNoQuoteRegex).exec(code);
+  var matchNoQuote = new RegExp(backslashNoQuoteRegex).exec(code);
   if (matchQuote) {
     return matchQuote[2];
-  } else if (marchNoQuote) {
-    return marchNoQuote[1];
+  } else if (matchNoQuote) {
+    return matchNoQuote[1];
   }
   return null;
 }
