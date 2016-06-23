@@ -15,8 +15,9 @@ try {
    */
 }
 
-import _ from '../lodash';
+import _ from 'lodash';
 import DataCollection from 'data-collection';
+import {N_COLOR_LEDS, TOUCH_PINS} from './constants';
 
 /** @const {string} */
 var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
@@ -280,7 +281,7 @@ function deviceOnPortAppearsUsable(port) {
  * @returns {Object.<String, Object>} board components
  */
 function initializeCircuitPlaygroundComponents(io, board) {
-  const colorLeds = Array.from({length: 10}, (_, index) => new five.Led.RGB({
+  const colorLeds = Array.from({length: N_COLOR_LEDS}, (_, index) => new five.Led.RGB({
     controller: PlaygroundIO.Pixel,
     pin: index
   }));
@@ -316,7 +317,7 @@ function initializeCircuitPlaygroundComponents(io, board) {
 
   const capTouch = new PlaygroundIO.CapTouch(io);
   const touchSensors = {};
-  _.each([0, 1, 2, 3, 6, 9, 10, 12], index => {
+  _.each(TOUCH_PINS, index => {
     touchSensors[`touchSensor${index}`] = new TouchSensor(index, capTouch);
   });
 

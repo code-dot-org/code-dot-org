@@ -3,6 +3,7 @@
 import api from './api';
 import _ from 'lodash';
 import {getFirstParam} from '../dropletUtils';
+import {N_COLOR_LEDS, TOUCH_PINS} from './constants';
 
 const COLOR_LIGHT_GREEN = '#D3E965';
 const COLOR_CYAN = '#4DD0E1';
@@ -22,8 +23,8 @@ const playSongConfig = {
 
 const pixelType = '[ColorLed].';
 const touchSensorType = '[TouchSensor].';
-const colorPixelVariables = _.range(10).map(index => `colorLeds[${index}]`);
-const touchSensorVariables = _.map([0, 1, 2, 3, 6, 9, 10, 12], index => `touchSensor${index}`);
+const colorPixelVariables = _.range(N_COLOR_LEDS).map(index => `colorLeds[${index}]`);
+const touchSensorVariables = _.map(TOUCH_PINS, pin => `touchSensor${pin}`);
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 const sensorVariables = ['soundSensor', 'lightSensor', 'tempSensor'];
 const buttonVariables = ['buttonL', 'buttonR'];
@@ -43,7 +44,7 @@ sensorVariables.forEach(s => eventDropdowns[s] = sensorEvents);
 touchSensorVariables.forEach(s => eventDropdowns[s] = touchEvents);
 
 /**
- * Relies on `this` being the dorplet socket when in droplet mode, and, in
+ * Relies on `this` being the Droplet socket when in droplet mode, and, in
  * text mode, this.parent being undefined.
  * @param editor
  * @returns {Array.<string>}
@@ -63,7 +64,7 @@ module.exports.blocks = [
 
   {func: 'onBoardEvent', parent: api, category: 'Circuit', paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"press"', "function(event) {\n  \n}"], dropdown: { 0: Object.keys(eventDropdowns), 1: boardEventDropdownGenerator }},
 
-  //{func: 'led', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'led', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'led.on', category: 'Circuit'},
   {func: 'led.off', category: 'Circuit'},
 
@@ -76,14 +77,14 @@ module.exports.blocks = [
   {func: 'intensity', blockPrefix: colorLedBlockPrefix, category: 'Circuit', params: ['25'], tipPrefix: pixelType, modeOptionName: "*.intensity", objectDropdown: { options: colorPixelVariables }  },
   {func: 'color', blockPrefix: colorLedBlockPrefix, category: 'Circuit', paletteParams: ['color'], params: ['"#FF00FF"'], tipPrefix: pixelType, modeOptionName: "*.color", objectDropdown: { options: colorPixelVariables }  },
 
-  //{func: 'buzzer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'buzzer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'buzzer.frequency', category: 'Circuit', paletteParams: ['frequency', 'duration'], params: ['500', '100'], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'buzzer.note', category: 'Circuit', paletteParams: ['note', 'duration'], params: ['"A4"', '100'], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'buzzer.off', category: 'Circuit'},
   {func: 'buzzer.stop', category: 'Circuit'},
   {func: 'buzzer.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
 
-  //{func: 'accelerometer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'accelerometer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'accelerometer.getOrientation', category: 'Circuit', type: 'value', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
   {func: 'accelerometer.getAcceleration', category: 'Circuit', type: 'value', paletteParams: ['orientationType'], params: ['"x"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
   {func: 'accelerometer.sensitivity', category: 'Circuit', type: 'property' },
@@ -91,6 +92,7 @@ module.exports.blocks = [
   {func: 'value', blockPrefix: `${touchSensorVariables[0]}.`, category: 'Circuit', tipPrefix: touchSensorType, modeOptionName: '*.value', objectDropdown: {options: touchSensorVariables}, type: 'readonlyproperty'},
   {func: 'sensitivity', blockPrefix: `${touchSensorVariables[0]}.`, category: 'Circuit', tipPrefix: touchSensorType, modeOptionName: '*.sensitivity', objectDropdown: {options: touchSensorVariables}, type: 'property'},
 
+  // TODO(bjordan): re-add these definitions when dropdowns work with object refs
   //{func: 'buttonL', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   //{func: 'buttonR', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'isPressed', objectDropdown: {options: buttonVariables, dropdownOnly: true}, category: 'Circuit', blockPrefix: `${buttonVariables[0]}.`, modeOptionName: "*.isPressed", type: 'readonlyproperty', tipPrefix: '[Button].'},
@@ -101,7 +103,7 @@ module.exports.blocks = [
   {func: 'setScale', objectDropdown: { options: sensorVariables }, modeOptionName: "*.setScale", blockPrefix: `${sensorVariables[0]}.`, category: 'Circuit', tipPrefix: '[Sensor].', params: ['0', '100'], paletteParams: ['low', 'high']},
   {func: 'threshold', objectDropdown: { options: sensorVariables }, modeOptionName: "*.threshold", blockPrefix: `${sensorVariables[0]}.`, category: 'Circuit', type: 'property', tipPrefix: '[Sensor].' },
 
-  //{func: 'toggleSwitch', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'toggleSwitch', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'toggleSwitch.isOpen', category: 'Circuit', type: 'readonlyproperty' },
 ];
 
@@ -117,8 +119,3 @@ module.exports.categories = {
     blocks: []
   },
 };
-
-
-
-setTimeout(() => $('.lightgreen').last().click(), 3500); // TODO remove
-//setTimeout(() => $('.cyan').last().click(), 3500); // TODO remove
