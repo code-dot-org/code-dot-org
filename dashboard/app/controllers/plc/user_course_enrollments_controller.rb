@@ -9,7 +9,6 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     else
       @user_course_enrollments = @user_course_enrollments.where(user: current_user) if @user_course_enrollments
     end
-
   end
 
   def group_view

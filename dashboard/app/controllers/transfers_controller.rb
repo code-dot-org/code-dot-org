@@ -16,7 +16,7 @@ class TransfersController < ApplicationController
     end
 
     # This is needed when we eventually allow students to be in multiple sections
-    if params.has_key?(:current_section_code)
+    if params.key?(:current_section_code)
       current_section_code = params[:current_section_code]
     else
       render json: {
@@ -53,7 +53,7 @@ class TransfersController < ApplicationController
     # for transfers between the current logged-in teacher
     if new_section.user == current_user
       stay_enrolled_in_current_section = false
-    elsif params.has_key?(:stay_enrolled_in_current_section)
+    elsif params.key?(:stay_enrolled_in_current_section)
       stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section]
     else
       render json: {
@@ -62,7 +62,7 @@ class TransfersController < ApplicationController
       return
     end
 
-    if params.has_key?(:student_ids)
+    if params.key?(:student_ids)
       student_ids = params[:student_ids].split(',').map(&:to_i)
     else
       render json: {
