@@ -254,8 +254,11 @@ if $options.with_status_page
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
   status_page_filename = "test_status_#{test_type}.html"
+  scheme = (rack_env?(:development) && !CDO.https_development) ? 'http:' : 'https:'
+  status_page_url = CDO.studio_url('/ui_test/' + status_page_filename, scheme)
   File.open(status_page_filename, 'w') do |file|
     file.write haml_engine.render(Object.new, {
+      api_origin: CDO.studio_url('', scheme),
       type: test_type,
       git_branch: git_branch,
       commit_hash: COMMIT_HASH,
@@ -264,9 +267,6 @@ if $options.with_status_page
       features: features_to_run
     })
   end
-  scheme = 'https:'
-  scheme = 'http:' if rack_env?(:development) && !CDO.https_development
-  status_page_url = CDO.studio_url('/ui_test/' + status_page_filename, scheme)
   HipChat.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
 
