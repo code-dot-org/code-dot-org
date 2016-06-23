@@ -150,6 +150,9 @@
       levelbuilder.initializeCodeMirror('level_solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 -if @level.game.uses_droplet?
   .field
+    = f.label :palette_category_at_start
+    = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
+  .field
     = f.label :droplet_tooltips_disabled, "Hide droplet documentation tooltips"
     = boolean_check_box f, :droplet_tooltips_disabled
   .field

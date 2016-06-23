@@ -2,7 +2,6 @@ require_relative 'test_helper'
 
 class CdoTest < Minitest::Test
   def test_with_default
-
     # default for non-defined property
     assert_equal false, CDO.with_default(false).asdasdsd
     assert_equal true, CDO.with_default(true).asdasdsd

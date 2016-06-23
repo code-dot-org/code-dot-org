@@ -25,7 +25,6 @@ class HoneybadgerTest < Minitest::Test
   ]
 
   def test_parse_exception_dump
-
     error_message, backtrace = Honeybadger.parse_exception_dump ERROR
 
     assert_equal EXPECTED_MESSAGE, error_message
@@ -33,7 +32,6 @@ class HoneybadgerTest < Minitest::Test
   end
 
   def test_notify_command_error
-
     expected_opts = {
         error_class: "/home/ubuntu/staging/bin/deliver_poste_messages returned 1",
         error_message: EXPECTED_MESSAGE,

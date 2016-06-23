@@ -19,5 +19,4 @@ module EnvUtils
   def ENV.with_sensitive_values_redacted
     EnvUtils.redact_sensitive_values(ENV.to_h)
   end
-
 end

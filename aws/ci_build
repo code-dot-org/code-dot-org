@@ -57,7 +57,7 @@ ensure
   $stdout = old_stdout
 end
 
-def build()
+def build
   Dir.chdir(deploy_dir) do
     return 0 unless RakeUtils.git_updates_available? || File.file?(STARTED) || !CDO.daemon
     FileUtils.touch STARTED
@@ -90,7 +90,7 @@ def build()
   end
 end
 
-def main()
+def main
   start_time = Time.now
   # Run the build command and exit if it didn't do anything.
   status = 0

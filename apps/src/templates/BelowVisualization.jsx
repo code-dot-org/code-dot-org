@@ -93,6 +93,11 @@ export default connect(state => ({
   inputOutputTable: state.pageConstants.inputOutputTable
 }), dispatch => ({
   showInstructionsDialog() {
-    dispatch(openDialog(false, true));
+    dispatch(openDialog({
+      autoClose: false,
+      showHints: true,
+      aniGifOnly: false,
+      hintsOnly: false
+    }));
   }
 }))(BelowVisualization);

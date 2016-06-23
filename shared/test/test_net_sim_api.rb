@@ -322,7 +322,6 @@ class NetSimApiTest < Minitest::Test
   end
 
   def node_delete_cascades_to_node_wires
-
     node_a = create_client_node(name: 'nodeA')
     node_b = create_client_node(name: 'nodeB')
     node_c = create_client_node(name: 'nodeC')
@@ -385,7 +384,6 @@ class NetSimApiTest < Minitest::Test
   end
 
   def node_delete_cascades_to_messages
-
     node_a = create_client_node(name: 'nodeA')
     node_b = create_client_node(name: 'nodeB')
 

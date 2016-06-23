@@ -24,7 +24,7 @@ def load_languages(path)
   end
 end
 
-def load_configuration()
+def load_configuration
   root_dir = File.expand_path('..', __FILE__)
   root_dir = '/home/ubuntu/website-ci' if root_dir == '/home/ubuntu/Dropbox (Code.org)'
 
@@ -154,7 +154,7 @@ class CDOImpl < OpenStruct
 
   @slog = nil
 
-  def initialize()
+  def initialize
     super load_configuration
   end
 
@@ -316,7 +316,7 @@ CDO ||= CDOImpl.new
 ##
 ##########
 
-def rack_env()
+def rack_env
   CDO.rack_env
 end
 

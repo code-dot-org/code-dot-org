@@ -6,7 +6,7 @@ require 'cdo/poste'
 
 SOLR = Solr::Server.new(host: CDO.solr_server) if CDO.solr_server
 
-def main()
+def main
   workshops = SOLR.query(q: "*:*", fq: ["kind_s:ProfessionalDevelopmentWorkshop", "first_date_dt:[NOW/DAY+12DAY TO NOW/DAY+13DAY]"], sort: "id asc", rows: 1000)
   workshops.each do |workshop|
     signups = SOLR.query(q: "*:*", fq: ["kind_s:ProfessionalDevelopmentWorkshopSignup", "workshop_id_i:#{workshop['id']}", "-status_s:cancelled"], sort: "id asc", rows: 1000)

@@ -369,7 +369,6 @@ module.exports = function (grunt) {
   if (entries.applab) {
     entries['applab-api'] = './src/applab/api-entry.js';
   }
-  entries['styleguide'] = './src/styleguide-entry.js';
   config.webpack = {
     build: _.extend({}, webpackConfig, {
       output: {
@@ -382,6 +381,7 @@ module.exports = function (grunt) {
         new webpack.DefinePlugin({
           IN_UNIT_TEST: JSON.stringify(false),
           'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+          BUILD_STYLEGUIDE: JSON.stringify(false),
           PISKEL_DEVELOPMENT_MODE: PISKEL_DEVELOPMENT_MODE
         }),
         new webpack.optimize.CommonsChunkPlugin({
@@ -561,6 +561,17 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('compile-firebase-rules', function () {
+    try {
+      child_process.execSync('ls `npm bin`/firebase-bolt');
+    } catch (e) {
+      console.log(chalk.yellow("'firebase-bolt' not found. running 'npm install'..."));
+      try {
+        child_process.execSync('which npm');
+      } catch (e) {
+        throw new Error("'firebase-bolt' not found and 'npm' not installed.");
+      }
+      child_process.execSync('npm install');
+    }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync('`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json');
   });
