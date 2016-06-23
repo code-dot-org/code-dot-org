@@ -6,21 +6,20 @@ class K5ProfessionalDevelopmentSurvey
     yes
     no
   )
-  DEGREE_TYPE = (
-    ['art',
-     'business',
-     'computer science',
-     'education',
-     'engineering',
-     'english/literature/humanities',
-     'foreign language',
-     'mathematics',
-     'music',
-     'science',
-     'social science',
-     'other',
-    ]
-  )
+  DEGREE_TYPE = [
+    'art',
+    'business',
+    'computer science',
+    'education',
+    'engineering',
+    'english/literature/humanities',
+    'foreign language',
+    'mathematics',
+    'music',
+    'science',
+    'social science',
+    'other',
+  ]
 
   def self.normalize(data)
     result = {}
