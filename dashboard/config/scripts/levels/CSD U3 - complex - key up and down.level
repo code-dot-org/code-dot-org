@@ -66,7 +66,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Went Up and Went Down\r\n\r\nSo far we have only used keyDown() and mouseDown() to get. Sometimes you want to know exactly when a key (or the mouse) was pressed or when it was released. They new commands `keyWentUp` and `keyWentDown` allow you to do that for keys! and `mouseWentUp` and `mouseWentDown` allow you to do that for the mouse!\r\n\r\n# Do This\r\n\r\n* Something",
+    "markdown_instructions": "# Checking for Individual Mouse Clicks\r\n\r\nSo far we have only used keyDown() and mouseDown() to get. Sometimes you want to know exactly when a key (or the mouse) was pressed or when it was released. They new commands `keyWentUp` and `keyWentDown` allow you to do that for keys! and `mouseWentUp` and `mouseWentDown` allow you to do that for the mouse!\r\n\r\n# Do This\r\n\r\nLet's make a simple game that counts how many times you've clicked. We've already provided a variable `clicks` that you can use to track how many times the user has clicked\r\n\r\n* Add a conditional that checks if the mouse went down\r\n* Inside your conditional, add to the `clicks` variable",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -90,6 +90,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "callout_json": "[]",
+    "start_blocks": "var clicks = 0\r\n\r\nfunction draw() {\r\n  // If mouseWentDown, add one to the clicks variable\r\n  \r\n  background(\"white\");\r\n  textSize(50);\r\n  textAlign(CENTER, CENTER);\r\n  text(clicks, 0, 0, 400, 400);\r\n}",
     "contained_level_names": null
   },
   "published": true,
