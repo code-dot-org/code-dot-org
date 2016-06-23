@@ -117,13 +117,24 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
   this.prewiredComponents.accelerometer.start();
 
   [
-      this.prewiredComponents.soundSensor,
-      this.prewiredComponents.lightSensor,
-      this.prewiredComponents.tempSensor
+    this.prewiredComponents.soundSensor,
+    this.prewiredComponents.lightSensor,
+    this.prewiredComponents.tempSensor
   ].forEach((s) => {
     s.lookbackLogger = new LookbackLogger();
-    s.on('data', () => { s.lookbackLogger.addData(s.value); });
-    s.getAveragedValue = n => s.lookbackLogger.getLast(n);
+    s.on('data', () => {
+      // Add the raw (un-scaled) value to the logger.
+      s.lookbackLogger.addData(s.raw);
+    });
+    s.getAveragedValue = n => {
+      const [low, high] = s.makerlabScale || [0, 1023];
+      return five.Board.fmap(s.lookbackLogger.getLast(n), 0, 1023, low, high);
+    };
+    s.setScale = (low, high) => {
+      s.scale(low, high);
+      // store scale in public state for scaling recorded data
+      s.makerlabScale = [low, high];
+    };
   })
 };
 
@@ -189,9 +200,9 @@ class LookbackLogger {
     this.dataCollection = new DataCollection();
   }
 
-  addData(dataPoint) {
+  addData(value) {
     this.dataCollection.insert({
-      value: dataPoint,
+      value: value,
       date: new Date()
     });
   }
@@ -204,8 +215,6 @@ class LookbackLogger {
     }).avg('value');
   }
 }
-
-window.lookbackLoggers = {};
 
 BoardController.prototype.onBoardEvent = function (component, event, callback) {
   component.on(event, callback);
