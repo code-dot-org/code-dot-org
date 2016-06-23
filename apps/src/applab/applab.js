@@ -752,7 +752,8 @@ Applab.init = function (config) {
 
       designMode.loadDefaultScreen();
 
-      designMode.toggleDesignMode(Applab.startInDesignMode());
+      studioApp.reduxStore.dispatch(changeInterfaceMode(
+        Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
       designMode.configureDragAndDrop();
 
