@@ -84,7 +84,8 @@ module.exports.blocks = [
   {func: 'buzzer.stop', category: 'Circuit'},
   {func: 'buzzer.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
 
-  {func: 'accelerometer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  // TODO(bjordan): re-add when dropdowns work with object refs
+  //{func: 'accelerometer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'accelerometer.getOrientation', category: 'Circuit', type: 'value', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
   {func: 'accelerometer.getAcceleration', category: 'Circuit', type: 'value', paletteParams: ['orientationType'], params: ['"x"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
   {func: 'accelerometer.sensitivity', category: 'Circuit', type: 'property' },
@@ -92,7 +93,7 @@ module.exports.blocks = [
   {func: 'value', blockPrefix: `${touchSensorVariables[0]}.`, category: 'Circuit', tipPrefix: touchSensorType, modeOptionName: '*.value', objectDropdown: {options: touchSensorVariables}, type: 'readonlyproperty'},
   {func: 'sensitivity', blockPrefix: `${touchSensorVariables[0]}.`, category: 'Circuit', tipPrefix: touchSensorType, modeOptionName: '*.sensitivity', objectDropdown: {options: touchSensorVariables}, type: 'property'},
 
-  // TODO(bjordan): re-add these definitions when dropdowns work with object refs
+  // TODO(bjordan): re-add when dropdowns work with object refs
   //{func: 'buttonL', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   //{func: 'buttonR', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'isPressed', objectDropdown: {options: buttonVariables, dropdownOnly: true}, category: 'Circuit', blockPrefix: `${buttonVariables[0]}.`, modeOptionName: "*.isPressed", type: 'readonlyproperty', tipPrefix: '[Button].'},
@@ -103,7 +104,8 @@ module.exports.blocks = [
   {func: 'setScale', objectDropdown: { options: sensorVariables }, modeOptionName: "*.setScale", blockPrefix: `${sensorVariables[0]}.`, category: 'Circuit', tipPrefix: '[Sensor].', params: ['0', '100'], paletteParams: ['low', 'high']},
   {func: 'threshold', objectDropdown: { options: sensorVariables }, modeOptionName: "*.threshold", blockPrefix: `${sensorVariables[0]}.`, category: 'Circuit', type: 'property', tipPrefix: '[Sensor].' },
 
-  {func: 'toggleSwitch', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  // TODO(bjordan): re-add when dropdowns work with object refs
+  //{func: 'toggleSwitch', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'toggleSwitch.isOpen', category: 'Circuit', type: 'readonlyproperty' },
 ];
 
