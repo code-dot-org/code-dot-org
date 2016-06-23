@@ -13,6 +13,7 @@ const GIT_BRANCH = document.querySelector('#git-branch').dataset.branch;
 const COMMIT_HASH = document.querySelector('#commit-hash').dataset.hash;
 const RUN_START_TIME = new Date(document.querySelector('#start-time').textContent);
 const API_ORIGIN = document.querySelector('#api-origin').value;
+const API_BASEPATH = `${API_ORIGIN}/api/v1/test_logs`;
 
 const GRAY = '#dddddd';
 const RED = '#ff8888';
@@ -88,7 +89,7 @@ Test.prototype.fetchStatus = function () {
     this.updateView();
   };
 
-  fetch(`${API_ORIGIN}/api/v1/test_logs/${this.s3Key()}`, {mode: 'no-cors'})
+  fetch(`${API_BASEPATH}/${this.s3Key()}`, {mode: 'no-cors'})
     .then(response => response.json())
     .then(json => {
       if (json.commit === COMMIT_HASH) {
@@ -281,7 +282,7 @@ function refresh() {
   };
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime()/1000);
   let newTime = new Date();
-  fetch(`${API_ORIGIN}/api/v1/test_logs/${GIT_BRANCH}/since/${lastRefreshEpochSeconds}`, { mode: 'no-cors' })
+  fetch(`${API_BASEPATH}/${GIT_BRANCH}/since/${lastRefreshEpochSeconds}`, { mode: 'no-cors' })
     .then(response => response.json())
     .then(json => {
       json.forEach(object => {
