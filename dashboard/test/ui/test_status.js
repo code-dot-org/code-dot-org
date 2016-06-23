@@ -17,6 +17,7 @@ var autoRefreshButton = document.querySelector('#auto-refresh-button');
 var gitBranch = document.querySelector('#git-branch').dataset.branch;
 var commitHash = document.querySelector('#commit-hash').dataset.hash;
 var startTime = new Date(document.querySelector('#start-time').textContent);
+const API_ORIGIN = document.querySelector('#api-origin').value;
 
 var lastRefreshTime = startTime;
 
@@ -87,7 +88,7 @@ Test.prototype.fetchStatus = function () {
     this.updateView();
   };
 
-  fetch("/api/v1/test_logs/" + this.s3Key(), {mode: 'no-cors'})
+  fetch(`${API_ORIGIN}/api/v1/test_logs/${this.s3Key()}`, {mode: 'no-cors'})
     .then(response => response.json())
     .then(json => {
       if (json.commit === commitHash) {
@@ -267,7 +268,7 @@ function refresh() {
   };
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime()/1000);
   let newTime = new Date();
-  fetch(`/api/v1/test_logs/${gitBranch}/since/${lastRefreshEpochSeconds}`, { mode: 'no-cors' })
+  fetch(`${API_ORIGIN}/api/v1/test_logs/${gitBranch}/since/${lastRefreshEpochSeconds}`, { mode: 'no-cors' })
     .then(response => response.json())
     .then(json => {
       json.forEach(object => {
