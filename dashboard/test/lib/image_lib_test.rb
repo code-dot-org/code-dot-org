@@ -22,8 +22,8 @@ class ImageLibTest < ActiveSupport::TestCase
       framed_image.write(tmp_path)
 
       message = ["Overlaid image did not match expected value",
-                  "Actual image: #{tmp_path}",
-                  "Expected image: #{test_image_path(expected_image_name)}."].join("\n")
+                 "Actual image: #{tmp_path}",
+                 "Expected image: #{test_image_path(expected_image_name)}."].join("\n")
       assert false, message
     end
   end
