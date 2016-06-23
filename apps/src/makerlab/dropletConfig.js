@@ -61,17 +61,7 @@ module.exports.blocks = [
   {func: 'analogWrite', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'value'], params: ['5', '150']},
   {func: 'analogRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
 
-  {
-    func: 'onBoardEvent',
-    parent: api,
-    category: 'Circuit',
-    paletteParams: ['component', 'event', 'callback'],
-    params: ['buttonL', '"press"', "function(event) {\n  \n}"],
-    dropdown: {
-      0: Object.keys(eventDropdowns),
-      1: boardEventDropdownGenerator
-    }
-  },
+  {func: 'onBoardEvent', parent: api, category: 'Circuit', paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"press"', "function(event) {\n  \n}"], dropdown: { 0: Object.keys(eventDropdowns), 1: boardEventDropdownGenerator }},
 
   //{func: 'led', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'led.on', category: 'Circuit'},

@@ -28,8 +28,8 @@ class TouchSensor {
   }
 
   on(eventName, callback) {
-    if(eventName === 'touch') {
-      this.capTouch.onTouch(this.index, function(isTouched) {
+    if (eventName === 'touch') {
+      this.capTouch.onTouch(this.index, function (isTouched) {
         isTouched && callback();
       });
     }
@@ -135,7 +135,7 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
       // store scale in public state for scaling recorded data
       s.makerlabScale = [low, high];
     };
-  })
+  });
 };
 
 BoardController.prototype.reset = function () {
@@ -304,10 +304,10 @@ function initializeCircuitPlaygroundComponents(io, board) {
   const accelerometer = new five.Accelerometer({
     controller: PlaygroundIO.Accelerometer
   });
-  accelerometer.getOrientation = function(orientationType){
+  accelerometer.getOrientation = function (orientationType) {
     return accelerometer[orientationType];
   };
-  accelerometer.getAcceleration = function(accelerationDirection){
+  accelerometer.getAcceleration = function (accelerationDirection) {
     if (accelerationDirection === 'total') {
       return accelerometer.acceleration;
     }
