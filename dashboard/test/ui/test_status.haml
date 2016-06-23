@@ -1,0 +1,55 @@
+%head
+  %style
+    body { font-family: sans-serif }
+    h2 { font-family: monospace; font-size: 1.1em }
+    h3 { margin-bottom: 0.1em }
+    table { width: 100% }
+    td { padding-left: 0.3em }
+    \#refresh-controls { float: right; }
+    \.progress-bar { margin-bottom: 0.5em }
+    \.progress-bar .bar { float: left; height: 10px }
+    \.progress-bar .clear-both { clear: both }
+  %script{src: 'https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js'}
+%body
+  %div#refresh-controls
+    %span#last-refresh-time
+    %button#refresh-button Refresh
+    %button#auto-refresh-button Pause Auto-Refresh
+  %h1= "#{type} Test Status"
+  %h2
+    %a#git-branch{href: "https://github.com/code-dot-org/code-dot-org/tree/#{git_branch}", data: {branch: git_branch}}= git_branch
+    |
+    %a#commit-hash{href: "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}", data: {hash: commit_hash}}= commit_hash[0..7]
+    |
+    %span#start-time= start_time
+  %div#total-progress
+    %div.progress-text
+    %div.progress-bar
+      %div.success.bar
+      %div.failure.bar
+      %div.pending.bar
+      %div.clear-both
+  - browsers.sort.map do |browser|
+    %h3= browser
+    %div{id: "#{browser}-progress"}
+      %div.progress-text
+      %div.progress-bar
+        %div.success.bar
+        %div.failure.bar
+        %div.pending.bar
+        %div.clear-both
+    %table
+      %thead
+        %tr
+          %td Browser
+          %td Feature
+          %td Status
+          %td Log
+      %tbody
+        - features.sort.map do |feature|
+          %tr{data:{browser: browser, feature: feature}}
+            %td= browser
+            %td= feature
+            %td.status
+            %td.log-link
+  %script{src: 'test_status.js'}

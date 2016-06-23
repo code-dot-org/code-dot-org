@@ -1,4 +1,4 @@
-var _ = require('../lodash');
+var _ = require('lodash');
 var utils = require('../utils');
 
 var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
@@ -22,6 +22,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'showDebugConsole',
   'showDebugWatch',
   'localeDirection',
+  'hasContainedLevels',
   'isDroplet',
   'isMinecraft',
   'visualizationHasPadding',
@@ -36,7 +37,7 @@ var ALLOWED_KEYS = utils.makeEnum(
 );
 
 const initialState = {
-  assertUrl() {
+  assetUrl() {
   }
 };
 

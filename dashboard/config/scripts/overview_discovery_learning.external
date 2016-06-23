@@ -1,7 +1,41 @@
 name 'Overview: Discovery Learning'
-
+css 'unplugged'
 markdown <<MARKDOWN
 ## Discovery Learning
+### What do we mean? 
 
-### What are we looking for at teachercon? 
+Discovery Learning is an active form of inquiry learning, rooted in students’ prior knowledge, experiences, and explorations as opposed to something like a direct instruction approach to knowledge transfer.  There are appropriate times for both as well as benefits and drawbacks.
+
+It’s important to note that there are pitfalls associated with unassisted discovery learning, which can result in students being unprepared and ill-equipped to wrestle with topics. There are a few important considerations for discovery-based activities: 
+
+- Students must have an entry point for engaging with the problem. This means they should have, or be provided with, some amount of prior knowledge or experience with the topic. All of our discovery activities are preceded with warm up activities that prime students. 
+
+- If discovery learning is left *entirely* to students, it’s possible that they will walk away with misconceptions. Because of this, we build sense-making discussion prompts into wrap up activities. 
+
+For these reasons, our approach to discovery learning deviates from textbook discovery learning. Our discovery learning activities have the following characteristics: 
+
+- Students are presented with a problem that is central to computer science. These problems are put in the context of what students are already familiar with.
+
+- Students solve the problem by experimenting and inventing solutions by tinkering with different ideas, concepts, tools and strategies. 
+
+- Through this experimentation, students come discover the core concept of computing for themselves.
+
+- The whole class comes together to discuss their findings and the implications of those findings as a sense-making activity where misconceptions can be corrected, and "real world" terms applied.
+
+### Why are we emphasizing discovery learning?
+
+Many lessons in the CS Principles curriculum employ this form of inquiry because it situates the problem solving process in the context of what students already know, while giving them an opportunity to actively explore and experiment with concepts and ideas. It also unburdens the teacher from giving direct instruction at the outset, allowing the teacher to make connections and conclusions with students after all have had a common experience.
+
+At the core of this process is **giving the learner space to construct their own idea of how problems are solved**. 
+
+In general, it this type of discovery seems to be best achieved in our lessons when teachers follow these basic rules of thumb: <br><br>
+
+- provide a (quick) warm up to set the stage, activate relevant prior knowledge, or give context 
+
+- get into the core activity *without* giving away what students will explore or discover
+
+- at the end, bring everything back together for a whole-group wrap up where students can share what they learned, dispel misconceptions, and tie their own discoveries back to underlying computer science concepts 
+
+### What to look for at TeacherCon? 
+At TeacherCon you’ll be looking for places where learners are given space to build their own definitions, understandings, and processes for solving problems. This is particularly interesting to look at with lessons and activities where the students' inventions and choices might differ from conventional or commonly accepted approaches. 
 MARKDOWN

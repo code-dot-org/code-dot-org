@@ -48,6 +48,22 @@ ________________
 <br/>
 
 ## **Computer Science in Algebra**
+**Middle School Workshop Preparation Process**<br/>
+
+1. Setup your CS in Science workshop in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard). **This should be done as soon as you know the workshop dates - please let us know if you are having any difficulties.*<br/>
+2. Make sure ALL facilitators (veteran + facilitators in training) are added to the workshop **If you forget to add them, they will not get paid!*<br/>
+3. Send teachers their [accept email and information on how to setup a Code Studio account and access the Phase 1 online module](https://docs.google.com/document/d/1yC9BI2atOzosuFouuG70hRr6AmGfgT4EmjHByYSoamM/edit?usp=sharing).<br/>
+4. If you haven’t already, reach out to your facilitators and introduce yourself and tell them a bit about your organization.<br/>
+5. Send all teachers the [PHASE 2 email](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit?usp=sharing) for their program asking them to register for your workshop using the dashboard registration link.<br/> 
+6. Four weeks prior - order catering
+7. Three to Four weeks prior (no later than 15 days) - [order your supplies](/educate/professional-learning-partner/playbook/ordering-supplies) from Mimeo.
+8. One and a half weeks prior - create a [facilitator 1-pager](/educate/professional-learning-partner/playbook/facilitator-support) and email it to your facilitators
+9. Two days prior - make sure all your supplies have arrived
+10. Day of the workshop 
+	 - Login to the workshop organizer dashboard to [“Start Workshop”](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.wmocqedffowl) and have teachers join it.
+	- Help your facilitators take attendance. 
+	- Make sure all teachers are registered with a Teacher Account! If they have a Student Account, [follow these steps](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.chfy8viz3je8) to help them switch it.
+	- Send an email with your Phase 3 workshop registration links ([see this template](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.udcag7rgm3fg))
 
 **Securing a Venue**<br/>
 These guidelines explain the type of space your facilitators need to run a successful workshop and provide important tips to consider for logistics and teacher experience.  <br/>
@@ -85,6 +101,23 @@ ________________
 <br/>
 
 ## **Computer Science in Science**
+**Middle School Workshop Preparation Process**<br/>
+
+1. Setup your CS in Science workshop in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard). **This should be done as soon as you know the workshop dates - please let us know if you are having any difficulties.*<br/>
+2. Make sure ALL facilitators (veteran + facilitators in training) are added to the workshop **If you forget to add them, they will not get paid!*<br/>
+3. Send teachers their [accept email and information on how to setup a Code Studio account and access the Phase 1 online module](https://docs.google.com/document/d/1yC9BI2atOzosuFouuG70hRr6AmGfgT4EmjHByYSoamM/edit?usp=sharing).<br/>
+4. If you haven’t already, reach out to your facilitators and introduce yourself and tell them a bit about your organization.<br/>
+5. Send all teachers the [PHASE 2 email](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit?usp=sharing) for their program asking them to register for your workshop using the dashboard registration link.<br/> 
+6. Four weeks prior - order catering
+7. Three to Four weeks prior (no later than 15 days) - [order your supplies](/educate/professional-learning-partner/playbook/ordering-supplies) from Mimeo.
+8. One and a half weeks prior - create a [facilitator 1-pager](/educate/professional-learning-partner/playbook/facilitator-support) and email it to your facilitators
+9. Two days prior - make sure all your supplies have arrived10. Day of the workshop 
+	 - Login to the workshop organizer dashboard to [“Start Workshop”](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.wmocqedffowl) and have teachers join it.
+	- Help your facilitators take attendance. 
+	- Make sure all teachers are registered with a Teacher Account! If they have a Student Account, [follow these steps](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.chfy8viz3je8) to help them switch it.
+	- Send an email with your Phase 3 workshop registration links ([see this template](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.udcag7rgm3fg))
+
+
 
 **Securing a Venue**<br/>
 These guidelines explain the type of space your facilitators need to run a successful workshop and provide important tips to consider for logistics and teacher experience.  <br/>
@@ -129,9 +162,9 @@ ________________
 
 **ECS Workshop Preparation Process**<br/>
 
-1. Setup your ECS workshops in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard).<br/>
-2. Make sure ALL facilitators (veteran + facilitators in training) are added to the workshop)<br/>
-3. If you haven’t already, reach out to your facilitators and introduce yourself and tell them a bit about your organization.<br/>
+1. Setup your ECS workshops in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard). **This should be done as soon as you know the workshop dates - please let us know if you are having any difficulties.*<br/>
+2. Make sure ALL facilitators (veteran + facilitators in training) are added to the workshop. **If you forget to add them, they will not get paid!*<br/>
+3. If you haven’t already, reach out to your facilitators and introduce yourself and tell them a bit about your organization. <br/>
 4. *For Summer Workshops*: if you are CodeVA, DePaul, Nextech or Utah send all teachers [an email](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.qz8c6xpaktl) asking them to register for your workshop using the dashboard registration link. Code.org will send this email on behalf of everyone else.<br/>
 	*For Academic Year Workshops*: all organizations should send [an email](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.qz8c6xpaktl) asking teachers to register for your workshop using the dashboard registration link.
 6. Four weeks prior - order catering<br/>

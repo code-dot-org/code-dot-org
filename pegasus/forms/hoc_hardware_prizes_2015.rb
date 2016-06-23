@@ -20,7 +20,7 @@ class HocHardwarePrizes2015 < HocHardwarePrizes2014
     result
   end
 
-  def self.receipt()
+  def self.receipt
     'hoc_hardware_prizes_2015_receipt'
   end
 end

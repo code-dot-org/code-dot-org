@@ -6,12 +6,12 @@ def trans_dir(*dirs)
   pegasus_dir('sites.v3','translate.hourofcode.com', *dirs)
 end
 
-def hoc_load_countries()
+def hoc_load_countries
   JSON.parse(IO.read(hoc_dir('i18n/countries.json')))
 end
 HOC_COUNTRIES = hoc_load_countries()
 
-def hoc_load_i18n()
+def hoc_load_i18n
   i18n = {}
   Dir.glob(hoc_dir('i18n/*.yml')).each do |string_file|
     i18n.merge!(YAML.load_file(string_file))
@@ -20,7 +20,7 @@ def hoc_load_i18n()
 end
 HOC_I18N = hoc_load_i18n()
 
-def trans_load_i18n()
+def trans_load_i18n
   i18n = {}
   Dir.glob(trans_dir('i18n/*.yml')).each do |string_file|
     i18n.merge!(YAML.load_file(string_file))
@@ -74,7 +74,7 @@ def hoc_canonicalized_i18n_path(uri)
   return "/#{path}"
 end
 
-def hoc_detect_country()
+def hoc_detect_country
   location = Geocoder.search(request.ip).first
   return 'us' unless location
 
@@ -85,7 +85,7 @@ def hoc_detect_country()
   country_code
 end
 
-def hoc_detect_language()
+def hoc_detect_language
   language = request.env['rack.locale']
   return language if HOC_I18N.keys.include?(language)
   language = language[0..1]
@@ -97,7 +97,7 @@ def hoc_uri(uri)
   File.join(['/', (@company || @country), @user_language, uri].select{|i| !i.nil_or_empty?})
 end
 
-def codeorg_url()
+def codeorg_url
   if @country == 'ar'
     return 'ar.code.org'
   elsif @country == 'br'

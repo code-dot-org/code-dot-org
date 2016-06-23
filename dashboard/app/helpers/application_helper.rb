@@ -5,7 +5,6 @@ require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
 
 module ApplicationHelper
-
   include LocaleHelper
   include ScriptLevelsHelper
   include ViewOptionsHelper
@@ -110,6 +109,11 @@ module ApplicationHelper
     CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}/student/#{user.id}"
   end
 
+  # used by sign-up to retrieve the return_to URL from the session and delete it.
+  def get_and_clear_session_return_to
+    return session.delete(:return_to) if session[:return_to]
+  end
+
   # used by devise to redirect user after signing in
   def signed_in_root_path(resource_or_scope)
     if session[:return_to]
@@ -168,8 +172,8 @@ module ApplicationHelper
     sentence = resource.oauth? ?
       I18n.t("signup_form.additional_information") :
       I18n.t("errors.messages.not_saved",
-                      count: resource.errors.count,
-                      resource: resource.class.model_name.human.downcase)
+        count: resource.errors.count,
+        resource: resource.class.model_name.human.downcase)
 
     html = <<-HTML
     <div id="error_explanation">
@@ -189,9 +193,9 @@ module ApplicationHelper
 
   def script_certificate_image_url(user, script)
     certificate_image_url(
-        name: user.name,
-        course: script.name,
-        course_title: data_t_suffix('script.name', script.name, 'title'))
+      name: user.name,
+      course: script.name,
+      course_title: data_t_suffix('script.name', script.name, 'title'))
   end
 
   def minifiable_asset_path(path)

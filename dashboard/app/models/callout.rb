@@ -40,7 +40,6 @@ class Callout < ActiveRecord::Base
   end
 
   def self.first_or_create_from_tsv_row!(row_data)
-
     id_or_name = row_data[CSV_HEADERS[:script_id]]
 
     unless id_or_name.to_i != 0
@@ -62,6 +61,13 @@ class Callout < ActiveRecord::Base
 
     unless script_level && script_level.count > 0
       puts "Error finding script level with search conditions: #{script_level_search_conditions}"
+      return nil
+    end
+
+    begin
+      JSON.parse(row_data[CSV_HEADERS[:qtip_config]] || '{}')
+    rescue JSON::ParserError
+      puts "Error parsing qtip_config JSON: #{script_level_search_conditions}"
       return nil
     end
 

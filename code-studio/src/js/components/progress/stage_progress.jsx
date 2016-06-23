@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import { stageProgressShape } from './types';
 import ProgressDot from './progress_dot.jsx';
 import color from '../../color';
@@ -23,9 +25,7 @@ const styles = {
 const StageProgress = React.createClass({
   propTypes: {
     levels: stageProgressShape,
-    currentLevelId: React.PropTypes.string,
-    largeDots: React.PropTypes.bool,
-    saveAnswersFirst: React.PropTypes.bool.isRequired
+    courseOverviewPage: React.PropTypes.bool
   },
 
   render() {
@@ -33,17 +33,18 @@ const StageProgress = React.createClass({
       <ProgressDot
         key={index}
         level={level}
-        currentLevelId={this.props.currentLevelId}
-        largeDots={this.props.largeDots}
-        saveAnswersFirst={this.props.saveAnswersFirst}
+        courseOverviewPage={this.props.courseOverviewPage}
       />
     );
 
     return (
-      <div className='react_stage' style={this.props.largeDots ? styles.courseOverviewContainer : styles.headerContainer}>
+      <div className='react_stage' style={this.props.courseOverviewPage ? styles.courseOverviewContainer : styles.headerContainer}>
         {progressDots}
       </div>
     );
   }
 });
-module.exports = StageProgress;
+export default connect((state, ownProps) => ({
+  // When rendering StageProgress directly (in the header) only show one stage.
+  levels: ownProps.levels || state.stages[0].levels
+}))(StageProgress);

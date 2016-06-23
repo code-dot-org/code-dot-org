@@ -7,6 +7,8 @@ DEPENDENCIES
     path: cdo-authorized-keys
   cdo-awscli
     path: cdo-awscli
+  cdo-freegeoip
+    path: cdo-freegeoip
   cdo-github-access
     path: cdo-github-access
   cdo-home-ubuntu
@@ -57,7 +59,7 @@ GRAPH
     seven_zip (>= 0.0.0)
     windows (>= 0.0.0)
   build-essential (2.1.3)
-  cdo-apps (0.2.131)
+  cdo-apps (0.2.134)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-java-7 (>= 0.0.0)
@@ -75,6 +77,9 @@ GRAPH
     sudo-user (>= 0.0.0)
   cdo-authorized-keys (0.1.2)
   cdo-awscli (0.1.1)
+  cdo-freegeoip (0.1.1)
+    ark (>= 0.0.0)
+    poise-service (>= 0.0.0)
   cdo-github-access (0.1.4)
   cdo-home-ubuntu (0.1.2)
   cdo-java-7 (0.1.1)
@@ -125,6 +130,9 @@ GRAPH
   ntp (1.8.6)
   ohai (2.1.0)
   omnibus_updater (2.0.0)
+  poise (2.7.1)
+  poise-service (1.3.1)
+    poise (~> 2.0)
   postfix (3.7.0)
   seven_zip (1.0.4)
     windows (>= 1.2.2)

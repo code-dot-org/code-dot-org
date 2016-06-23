@@ -32,7 +32,6 @@ module LevelsHelper
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
   def create_channel(data = {}, src = nil)
-
     storage_app = StorageApps.new(storage_id('user'))
     if src
       data = storage_app.get(src)
@@ -116,9 +115,16 @@ module LevelsHelper
       callouts_seen[c.localization_key] = client_state.callout_seen?(c.localization_key)
     end
     # Filter if already seen (unless always_show or canReappear in codeStudio part of qtip_config)
-    callouts_to_show = all_callouts.
-      reject { |c| !always_show && callouts_seen[c.localization_key] && !JSON.parse(c.qtip_config || '{}').try(:[], 'codeStudio').try(:[], 'canReappear') }.
-      each { |c| client_state.add_callout_seen(c.localization_key) }
+    callouts_to_show = all_callouts.reject do |c|
+      begin
+        can_reappear = JSON.parse(c.qtip_config || '{}').try(:[], 'codeStudio').try(:[], 'canReappear')
+      rescue JSON::ParserError
+        can_reappear = false
+      end
+      !always_show && callouts_seen[c.localization_key] && !can_reappear
+    end
+    # Mark the callouts as seen
+    callouts_to_show.each { |c| client_state.add_callout_seen(c.localization_key) }
     # Localize and propagate the seen property
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
@@ -199,6 +205,7 @@ module LevelsHelper
       preTitle: @level.properties['pre_title'],
       fallbackResponse: @fallback_response.to_json,
       callback: @callback,
+      sublevelCallback: @sublevel_callback,
       app: @level.type.underscore,
       level: @level.level_num,
       shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
@@ -374,6 +381,8 @@ module LevelsHelper
       view_options(no_header: true, no_footer: true, white_background: true)
     end
 
+    view_options(has_contained_levels: @level.try(:contained_levels).present?)
+
     # Add all level view options to the level_options hash
     level_options.merge! level_overrides.camelize_keys
     app_options.merge! view_options.camelize_keys
@@ -401,6 +410,7 @@ module LevelsHelper
     app_options[:report] = {
         fallback_response: @fallback_response,
         callback: @callback,
+        sublevelCallback: @sublevel_callback,
     }
 
     unless params[:no_last_attempt]
@@ -607,9 +617,11 @@ module LevelsHelper
     @level.is_a?(Blockly)
   end
 
-  # If this is a restricted level (i.e. applab) and user is under 13, redirect with a flash alert
-  def redirect_applab_under_13(level)
-    return unless level.game == Game.applab
+  # If this is a restricted level (i.e., applab) and user is under 13, redirect
+  # with a flash alert.
+  def redirect_under_13(level)
+    # Note that Game.applab includes both App Lab and Maker Lab.
+    return unless level.game == Game.applab || level.game == Game.gamelab
 
     if current_user && current_user.under_13?
       redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }

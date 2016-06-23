@@ -32,7 +32,7 @@ var AppStorage = require('./appStorage');
 var FirebaseStorage = require('./firebaseStorage');
 var constants = require('../constants');
 var experiments = require('../experiments');
-var _ = require('../lodash');
+var _ = require('lodash');
 var apiTimeoutList = require('../timeoutList');
 var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
@@ -557,6 +557,10 @@ Applab.init = function (config) {
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
+  if (!config.channel) {
+    throw new Error('Cannot initialize App Lab without a channel id. ' +
+      'You may need to sign in to your code studio account first.');
+  }
   Applab.channelId = config.channel;
   Applab.firebaseName = config.firebaseName;
   Applab.firebaseAuthToken = config.firebaseAuthToken;

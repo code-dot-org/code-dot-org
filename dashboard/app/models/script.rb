@@ -43,7 +43,7 @@ class Script < ActiveRecord::Base
 
   def generate_plc_objects
     if professional_learning_course
-      course = Plc::Course.find_or_create_by! name: 'Default'
+      course = Plc::Course.find_or_create_by! name: 'CSP Support'
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
       unit.update!(
         plc_course_id: course.id,
@@ -194,7 +194,7 @@ class Script < ActiveRecord::Base
       script_level_cache.values.each do |script_level|
         level = script_level.level
         next unless level
-        cache[level.id] = level unless cache.has_key? level.id
+        cache[level.id] = level unless cache.key? level.id
       end
     end
   end
@@ -339,7 +339,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 cspoptional text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
   end
 
   def has_banner?
@@ -354,7 +354,6 @@ class Script < ActiveRecord::Base
     else
       ['playlab', 'artist']
     end
-
   end
 
   def professional_course?
@@ -453,19 +452,10 @@ class Script < ActiveRecord::Base
           raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
         end
 
-        if Game.gamelab == level.game
-          unless script.student_of_admin_required || script.admin_required
-            raise <<-ERROR.gsub(/^\s+/, '')
-              Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required
-              (while adding level "#{level.name}" to script "#{script.name}")
-            ERROR
-          end
-        end
-
-        if Game.applab == level.game
+        if [Game.applab, Game.gamelab].include? level.game
           unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
             raise <<-ERROR.gsub(/^\s+/, '')
-              Applab levels can only be added to scripts that are hidden or require login
+              Applab and Gamelab levels can only be added to scripts that are hidden or require login
               (while adding level "#{level.name}" to script "#{script.name}")
             ERROR
           end
@@ -542,7 +532,7 @@ class Script < ActiveRecord::Base
   # script is found/created by 'id' (if provided) otherwise by 'name'
   def self.fetch_script(options)
     options.symbolize_keys!
-    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.has_key? v
+    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.key? v
     name = {name: options.delete(:name)}
     script_key = ((id = options.delete(:id)) && {id: id}) || name
     script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)

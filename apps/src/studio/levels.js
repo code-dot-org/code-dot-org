@@ -3040,9 +3040,10 @@ levels.js_hoc2015_change_setting = {
 };
 
 var js_hoc2015_event_free_markdown = [
-  '<span class="character-text">' + msg.hoc2015_event_free_instructions() + '</span>',
+  '<div class="js_hoc2015_event_free_markdown">',
+  '<p><span class="character-text">' + msg.hoc2015_event_free_instructions() + '</span></p>',
   '',
-  '<span class="instructions2">' + msg.hoc2015_event_free_instructions2() + '</span>',
+  '<p><span class="instructions2">' + msg.hoc2015_event_free_instructions2() + '</span></p>',
   '',
   '<details class="hoc2015">',
   '<summary>Example project ideas</summary>',
@@ -3088,7 +3089,8 @@ var js_hoc2015_event_free_markdown = [
   'You can change the speed of any character with the moveFast, moveNormal, and moveSlow commands.',
   '</p>',
   '',
-  '</details>'
+  '</details>',
+  '</div>',
 ].join('\r\n');
 
 levels.js_hoc2015_event_free = {

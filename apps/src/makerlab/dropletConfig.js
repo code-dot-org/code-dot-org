@@ -1,7 +1,7 @@
 /* global dashboard */
 
 import api from './api';
-import _ from '../lodash';
+import _ from 'lodash';
 import {getFirstParam} from '../dropletUtils';
 
 const COLOR_LIGHT_GREEN = '#D3E965';

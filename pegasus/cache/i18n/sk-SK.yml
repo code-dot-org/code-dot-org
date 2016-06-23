@@ -1,7 +1,14 @@
 "sk-SK":
   hour_of_code: Hodina kódovania
   hello: Ahoj svet
+  'yes': "Áno"
+  'no': Nie
   select_language: Prosím, zvoľte si jazyk
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Dozvedieť sa viac
   en: Počítačová veda
   computer_science_edweek: Vzdelávací týždeň počítačovej vedy
   csedweek_dates: 8. až 14. Decembra 2014
@@ -709,6 +716,7 @@
   dashboard_sections_table_secret: Spôsob prihlásenia
   dashboard_sections_table_grade: Stupeň
   dashboard_sections_table_course: Kurz
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Študenti"
   dashboard_sections_table_code: Kód sekcie
   dashboard_sections_name: Meno sekcie
@@ -1729,11 +1737,3 @@
   infinity_shortcode: inf
   playlab_shortcode: hrať
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

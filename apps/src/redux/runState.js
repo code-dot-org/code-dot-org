@@ -1,7 +1,7 @@
 /**
  * This duck module tracks whether the current app's run state.
  */
-import _ from '../lodash';
+import _ from 'lodash';
 
 const SET_IS_RUNNING = 'runState/SET_IS_RUNNING';
 const SET_IS_DEBUGGER_PAUSED = 'runState/SET_IS_DEBUGGER_PAUSED';

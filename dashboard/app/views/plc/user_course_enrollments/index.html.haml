@@ -19,21 +19,19 @@
               - required_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::REQUIRED_MODULE
               - content_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::CONTENT_MODULE
               - practice_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::PRACTICE_MODULE
-              - evaluation_pending = required_module_assignment && content_module_assignment.nil? && practice_module_assignment.nil?
-              - unit_overview_status = evaluation_pending ? 'in_progress' : required_module_assignment.try(:status) || 'completed'
-              = link_to unit_enrollment.plc_course_unit.script do
+              = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'overview') do
                 .module_assignment
-                  Overview
+                  = t('flex_category.required')
                   .ribbon-wrapper
-                    .ribbon{class: unit_overview_status}
-              = link_to unit_enrollment.plc_course_unit.script do
+                    .ribbon{class: required_module_assignment.try(:status) || 'not_started'}
+              = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'content') do
                 .module_assignment
-                  Content
+                  = t('flex_category.content')
                   .ribbon-wrapper
                     .ribbon{class: content_module_assignment.try(:status) || 'not_started'}
-              = link_to unit_enrollment.plc_course_unit.script do
+              = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'teaching-practices') do
                 .module_assignment
-                  Teaching Practice
+                  = t('flex_category.practice')
                   .ribbon-wrapper
                     .ribbon{class: practice_module_assignment.try(:status) || 'not_started'}
 - else

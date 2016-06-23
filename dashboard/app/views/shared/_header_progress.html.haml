@@ -1,7 +1,8 @@
 - small_text = @script && (@script.name == "starwars" || @script.name == "starwarsblocks")
 .header_level
   %div.header_level_container
-    .header_text{class: ('small_font_on_tablet' if small_text)}
+    - text = @script.professional_learning_course? ? @script_level.stage.localized_name : @script_level.stage.localized_title
+    = link_to text, @script, class: ["header_text", ('small_font_on_tablet' if small_text)]
     .progress_container
     .header_finished_link{style: 'display: none;', class: ('small_font_on_tablet' if small_text)}
     %span.header_trophy_link{style: 'display: none;'}

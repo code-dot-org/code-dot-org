@@ -5,9 +5,12 @@
 - if in_level_group # The LevelGroup will collect results for each level.
   :javascript
     window.levelGroup.levels[#{level.id}] = {
-      getCurrentAnswer: function () {
+      getResult: function () {
         var response = $('#level_#{level.id}').val();
-        return { response: response, valid: response.length > 1 };
+        return { response: response, valid: response.length > 0 };
+      },
+      getAppName: function () {
+        return "free_response";
       }
     };
 

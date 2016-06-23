@@ -7,6 +7,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
+import { openDialog } from '../../redux/instructionsDialog';
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
@@ -45,16 +46,34 @@ const styles = {
     left: 0,
     // right handled by media queries for .editor-column
   },
+  mainMinecraft: {
+    marginTop: 20,
+    marginBottom: 10
+  },
+  noViz: {
+    left: 0,
+    right: 0,
+    marginRight: 0,
+    marginLeft: 0
+  },
   body: {
     backgroundColor: 'white',
     borderRadius: 10,
     width: '100%',
+  },
+  bodyCraft: {
+    // $below-header-background from craft/style.scss
+    backgroundColor: '#646464'
   },
   embedView: {
     height: undefined,
     bottom: 0,
     // Visualization is hard-coded on embed levels. Do the same for instructions position
     left: 340
+  },
+  secondaryInstructions: {
+    fontSize: 12,
+    color: '#5b6770'
   },
   collapserButton: {
     position: 'absolute',
@@ -71,17 +90,24 @@ const styles = {
     // icon to move. This strangeness happens in part because prompt-icon-cell
     // is managed outside of React
     marginTop: -20
+  },
+  containedLevelContainer: {
+    minHeight: 200,
   }
 };
 
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
+    isMinecraft: React.PropTypes.bool.isRequired,
+    hasContainedLevels: React.PropTypes.bool.isRequired,
+    aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
     collapsed: React.PropTypes.bool.isRequired,
     shortInstructions: React.PropTypes.string.isRequired,
+    shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
     hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
@@ -89,6 +115,7 @@ var TopInstructions = React.createClass({
     inputOutputTable: React.PropTypes.arrayOf(
       React.PropTypes.arrayOf(React.PropTypes.number)
     ),
+    noVisualization: React.PropTypes.bool.isRequired,
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -154,8 +181,11 @@ var TopInstructions = React.createClass({
     const minInstructionsHeight = this.props.collapsed ?
       $(ReactDOM.findDOMNode(this.refs.instructions)).outerHeight(true) : 0;
 
+    const domNode = $(ReactDOM.findDOMNode(this));
+    const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
+
     return Math.max(buttonHeight, minIconHeight, minInstructionsHeight) +
-      (this.props.collapsed ? 0 : RESIZER_HEIGHT);
+      RESIZER_HEIGHT + margins;
   },
 
   /**
@@ -182,10 +212,11 @@ var TopInstructions = React.createClass({
    */
   adjustMaxNeededHeight() {
     const minHeight = this.getMinHeight();
-
+    const contentContainer = this.props.hasContainedLevels ?
+        this.refs.containedLevelContainer : this.refs.instructions;
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
-      RESIZER_HEIGHT;
+      (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
     this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
     return maxNeededHeight;
@@ -207,6 +238,13 @@ var TopInstructions = React.createClass({
     }
   },
 
+  handleClickBubble() {
+    // If we don't have authored hints, clicking bubble shouldnt do anything
+    if (this.props.hasAuthoredHints) {
+      this.props.showInstructionsDialog();
+    }
+  },
+
   render: function () {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
@@ -215,11 +253,17 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - resizerHeight
       },
-      this.props.isEmbedView && styles.embedView
+      this.props.isEmbedView && styles.embedView,
+      this.props.noVisualization && styles.noViz,
+      this.props.isMinecraft && styles.mainMinecraft
     ];
 
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
       this.props.shortInstructions : this.props.longInstructions);
+
+    // Only used by star wars levels
+    const instructions2 = this.props.shortInstructions2 ? processMarkdown(
+      this.props.shortInstructions2) : undefined;
 
     const leftColWidth = (this.props.smallStaticAvatar ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
@@ -227,7 +271,7 @@ var TopInstructions = React.createClass({
     return (
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
-            style={styles.body}
+            style={[styles.body, this.props.isMinecraft && styles.bodyCraft]}
             leftColWidth={leftColWidth}
             rightColWidth={this.state.rightColWidth}
             height={this.props.height - resizerHeight}
@@ -238,19 +282,40 @@ var TopInstructions = React.createClass({
                 this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
               ]}
           >
-            <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
+            <ProtectedStatefulDiv
+                id="bubble"
+                className="prompt-icon-cell"
+                onClick={this.handleClickBubble}
+            >
               {this.props.smallStaticAvatar &&
                 <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
               }
             </ProtectedStatefulDiv>
           </div>
-          <Instructions
-              ref="instructions"
-              renderedMarkdown={renderedMarkdown}
-              onResize={this.adjustMaxNeededHeight}
-              inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
-              inTopPane
-          />
+          <div ref="instructions">
+            {this.props.hasContainedLevels && <ProtectedStatefulDiv
+              id="containedLevelContainer"
+              ref="containedLevelContainer"
+              style={styles.containedLevelContainer}/>
+            }
+            {!this.props.hasContainedLevels && <Instructions
+                ref="instructions"
+                renderedMarkdown={renderedMarkdown}
+                onResize={this.adjustMaxNeededHeight}
+                inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                aniGifURL={this.props.aniGifURL}
+                inTopPane
+              />
+            }
+            {!this.props.hasContainedLevels && this.props.collapsed && instructions2 &&
+              <div
+                style={[
+                  styles.secondaryInstructions
+                ]}
+                dangerouslySetInnerHTML={{ __html: instructions2 }}
+              />
+            }
+          </div>
           <CollapserButton
               ref='collapser'
               style={[styles.collapserButton, !this.props.longInstructions && commonStyles.hidden]}
@@ -269,17 +334,22 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
+    isMinecraft: !!state.pageConstants.isMinecraft,
+    hasContainedLevels: state.pageConstants.hasContainedLevels,
+    aniGifURL: state.pageConstants.aniGifURL,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
     maxHeight: Math.min(state.instructions.maxAvailableHeight,
       state.instructions.maxNeededHeight),
     collapsed: state.instructions.collapsed,
     shortInstructions: state.instructions.shortInstructions,
+    shortInstructions2: state.instructions.shortInstructions2,
     longInstructions: state.instructions.longInstructions,
     hasAuthoredHints: state.instructions.hasAuthoredHints,
     isRtl: state.pageConstants.localeDirection === 'rtl',
     smallStaticAvatar: state.pageConstants.smallStaticAvatar,
-    inputOutputTable: state.pageConstants.inputOutputTable
+    inputOutputTable: state.pageConstants.inputOutputTable,
+    noVisualization: state.pageConstants.noVisualization
   };
 }, function propsFromDispatch(dispatch) {
   return {
@@ -294,6 +364,14 @@ module.exports = connect(function propsFromStore(state) {
     },
     setInstructionsMaxHeightNeeded(height) {
       dispatch(instructions.setInstructionsMaxHeightNeeded(height));
+    },
+    showInstructionsDialog(height) {
+      dispatch(openDialog({
+        autoClose: false,
+        showHints: true,
+        aniGifOnly: false,
+        hintsOnly: true
+      }));
     }
   };
 }, null, { withRef: true }

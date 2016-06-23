@@ -1,7 +1,14 @@
 "da-DK":
   hour_of_code: Hour of Code
   hello: Hej verden
+  'yes': Ja
+  'no': Nej
   select_language: Vælg dit sprog
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Lær mere
   en: Datalogi
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
   csedweek_dates: 8.-14. december 2014
@@ -709,6 +716,7 @@
   dashboard_sections_table_secret: Login type
   dashboard_sections_table_grade: Graduering
   dashboard_sections_table_course: Kursus
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Elever
   dashboard_sections_table_code: Holdkode
   dashboard_sections_name: Sektionsnavnet
@@ -1718,11 +1726,3 @@
   infinity_shortcode: inf
   playlab_shortcode: afspil
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

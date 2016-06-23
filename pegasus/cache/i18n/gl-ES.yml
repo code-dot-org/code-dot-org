@@ -1,7 +1,14 @@
 "gl-ES":
   hour_of_code: Hora de Código
   hello: Olá mundo
+  'yes': Si
+  'no': Non
   select_language: Por favor escolle a túa linguaxe
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Aprende máis
   en: Informática
   computer_science_edweek: Semana da Educación en Informática
   csedweek_dates: 8-14 de decembro de 2014
@@ -732,6 +739,7 @@
   dashboard_sections_table_secret: Tipo de login
   dashboard_sections_table_grade: Grao
   dashboard_sections_table_course: Curso
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Alumnas/os
   dashboard_sections_table_code: Código da sección
   dashboard_sections_name: Nome da sección
@@ -1795,11 +1803,3 @@
   infinity_shortcode: inf
   playlab_shortcode: xogar
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

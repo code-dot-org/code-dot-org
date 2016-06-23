@@ -19,6 +19,7 @@
       "setAnimation": null,
       "sprite.height": null,
       "sprite.width": null,
+      "visible": null,
       "x": null,
       "y": null,
       "rotation": null,
@@ -66,8 +67,8 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# When to Provide a Fallback\r\n\r\nThe else clause is really useful as a fallback to the main condition that you're checking - that is, if you _care_ what happens when your primary condition is `false`, you should provide an else clause to take care of it.\r\n\r\n# Do This\r\n\r\nThis program should allow the sprite to move around the screen and turn it blue if it's in the bottom half, but turn back to red if it's in the top half. Add an `else` clause to the conditional so that the sprite turns back to red when it returns to the top of the screen.\r\n\r\n**Challenge** - Can you figure out how to add more checks to a conditional, so that it turns the sprite green if `sprite.y > 300`, blue if `sprite.y > 200`, yellow if `sprite.y > 100`, otherwise turn it red?",
-    "start_blocks": "// Create a sprite\r\nvar sprite = createSprite(200, 100, 50, 50);\r\nsprite.shapeColor = \"red\";\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  \r\n  // Move the sprite in the direction of the arrow keys\r\n  if (keyDown(\"up\")) {\r\n      sprite.y = sprite.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n      sprite.y = sprite.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n      sprite.x = sprite.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n      sprite.x = sprite.x + 1;\r\n  }\r\n  \r\n  // If the sprite goes into the bottom half of the screen, turn it blue\r\n  // Otherwise, turn it red\r\n  if (sprite.y > 200) {\r\n    sprite.shapeColor = \"blue\"\r\n  }\r\n  \r\n  drawSprites();\r\n}",
+    "markdown_instructions": "# When to Provide a Fallback\r\n\r\nThe else clause is really useful as a fallback to the main condition that you're checking - that is, if you _care_ what happens when your primary condition is `false`, you should provide an else clause to take care of it.\r\n\r\n# Do This\r\nThere is a swarm of bees created for you and a flower on the right side of the screen. **Make the swarm of bees appear when the mouse is near the flower (on the left side of the screen) and disappear when the mouse is away from the flower (on the right side of the screen).** \r\n\r\n* Add an `if else` statement that checks the x position of the mouse\r\n* Set the `visible` property of the bees inside the `if` and `else` statements appropraitely\r\n\r\n# Till Animations Tab Works\r\n\r\n* <a href=\"https://images.code.org/d91cefbb2e45f0338ea49783c8c01283-image-1465514170553.png\" > Bee</a>\r\n* <a href=\"https://images.code.org/40d064829d0d2ec31ba1e10689952bd0-image-1466131774152.png\" > Flower </a>",
+    "start_blocks": "var flower = createSprite(100, 200);\r\nflower.setAnimation(\"flower.png\");\r\n\r\nvar bee1 = createSprite(randomNumber(0, 400), randomNumber(0, 400));\r\nbee1.setAnimation(\"bee.png\");\r\nvar bee2 = createSprite(randomNumber(0, 400), randomNumber(0, 400));\r\nbee2.setAnimation(\"bee.png\");\r\nvar bee3 = createSprite(randomNumber(0, 400), randomNumber(0, 400));\r\nbee3.setAnimation(\"bee.png\");\r\n\r\nframeRate(20);\r\n\r\nfunction draw() {\r\n  bee1.x = mouseX + randomNumber(-100, 100);\r\n  bee1.y = mouseY + randomNumber(-100, 100);\r\n  \r\n  bee2.x = mouseX + randomNumber(-100, 100);\r\n  bee2.y = mouseY + randomNumber(-100, 100);\r\n  \r\n  bee3.x = mouseX + randomNumber(-100, 100);\r\n  bee3.y = mouseY + randomNumber(-100, 100);\r\n  \r\n  background('white');\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -90,7 +91,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "callout_json": "[]"
+    "callout_json": "[]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

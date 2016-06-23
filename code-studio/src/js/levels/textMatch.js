@@ -2,8 +2,16 @@ import $ from 'jquery';
 
 window.levelGroup = window.levelGroup || {levels: {}};
 
-var TextMatch = window.TextMatch = function (id, standalone, answers, lastAttempt) {
+var TextMatch = window.TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
+
+  // The dashboard levelId.
+  this.levelId = levelId;
+
+  // The DOM id.
   this.id = id;
+
+  // The dashboard app name.
+  this.app = app;
 
   this.standalone = standalone;
 
@@ -30,17 +38,13 @@ TextMatch.prototype.ready = function () {
 
   $("#" + this.id + " textarea.response").blur(function () {
     if (window.levelGroup && window.levelGroup.answerChangedFn) {
-      window.levelGroup.answerChangedFn();
+      window.levelGroup.answerChangedFn(this.levelId);
     }
   });
 };
 
-
-TextMatch.prototype.getCurrentAnswer = function () {
-  var response = $("#" + this.id + " textarea.response").val();
-  var valid = response.length > 1;
-
-  return { response: response, valid: valid };
+TextMatch.prototype.getAppName = function () {
+  return this.app;
 };
 
 TextMatch.prototype.getResult = function () {
@@ -53,13 +57,15 @@ TextMatch.prototype.getResult = function () {
     });
     return {
       response: encodeURIComponent(response),
-      result: result
+      result: result,
+      valid: response.length > 0
     };
   } else {
     // Always succeed for any non-empty response to open-ended question without answer(s)
     return {
       response: encodeURIComponent(response),
-      result: response.length > 0
+      result: response.length > 0,
+      valid: response.length > 0
     };
   }
 };

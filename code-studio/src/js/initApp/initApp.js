@@ -1,6 +1,8 @@
 // TODO (brent) - way too many globals
 /* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga*/
 import $ from 'jquery';
+import PlayZone from '../components/playzone';
+import ReactDOM from 'react-dom';
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
 var loadApp = require('./loadApp');
@@ -31,11 +33,43 @@ window.apps = {
 
     var lastSavedProgram;
 
+    var containedLevelOps;
+    if (appOptions.hasContainedLevels) {
+      containedLevelOps = {
+        registerAnswerChangedFn: function (answerChangedFn) {
+          if (window.levelGroup) {
+            window.levelGroup.answerChangedFn = answerChangedFn;
+          }
+        },
+        lockAnswers: function () {
+          for (var levelKey in window.levelGroup.levels) {
+            var level = window.levelGroup.levels[levelKey];
+            level.lockAnswers();
+          }
+        },
+        getResults: function () {
+          var results = [];
+          for (var levelKey in window.levelGroup.levels) {
+            var level = window.levelGroup.levels[levelKey];
+            results.push({
+              id: level.levelId,
+              app: level.getAppName(),
+              callback: appOptions.report.sublevelCallback + level.levelId,
+              result: level.getResult(),
+              feedback: level.getCurrentAnswerFeedback()
+            });
+          }
+          return results;
+        }
+      };
+    }
+
     // Sets up default options and initializes blockly
     var baseOptions = {
       containerId: 'codeApp',
       Dialog: Dialog,
       cdoSounds: CDOSounds,
+      containedLevelOps: containedLevelOps,
       position: {blockYCoordinateInterval: 25},
       onInitialize: function () {
         createCallouts(this.level.callouts || this.callouts);
@@ -55,33 +89,36 @@ window.apps = {
         if (appOptions.level.isProjectLevel) {
           return;
         }
-        if (appOptions.channel && !appOptions.level.edit_blocks) {
-          // Don't send the levelSource or image to Dashboard for channel-backed levels,
-          // unless we are actually editing blocks and not really completing a level
-          // (The levelSource is already stored in the channels API.)
-          delete report.program;
-          delete report.image;
-        } else {
-          // Only locally cache non-channel-backed levels. Use a client-generated
-          // timestamp initially (it will be updated with a timestamp from the server
-          // if we get a response.
-          lastSavedProgram = decodeURIComponent(report.program);
-          clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
+        // or unless the program is actually the result for a contained level
+        if (!appOptions.hasContainedLevels) {
+          if (appOptions.channel && !appOptions.level.edit_blocks) {
+            // Don't send the levelSource or image to Dashboard for channel-backed levels,
+            // unless we are actually editing blocks and not really completing a level
+            // (The levelSource is already stored in the channels API.)
+            delete report.program;
+            delete report.image;
+          } else {
+            // Only locally cache non-channel-backed levels. Use a client-generated
+            // timestamp initially (it will be updated with a timestamp from the server
+            // if we get a response.
+            lastSavedProgram = decodeURIComponent(report.program);
+            clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
+          }
+          report.callback = appOptions.report.callback;
+          trackEvent('Activity', 'Lines of Code', script_path, report.lines);
         }
         report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
-        report.callback = appOptions.report.callback;
         // Track puzzle attempt event
         trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
         if (report.pass) {
           trackEvent('Puzzle', 'Success', script_path, report.attempt);
           timing.stopTiming('Puzzle', script_path, '');
         }
-        trackEvent('Activity', 'Lines of Code', script_path, report.lines);
         reporting.sendReport(report);
       },
       onComplete: function (response) {
-        if (!appOptions.channel) {
+        if (!appOptions.channel && !appOptions.hasContainedLevels) {
           // Update the cache timestamp with the (more accurate) value from the server.
           clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
         }
@@ -93,6 +130,23 @@ window.apps = {
         var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.videoInfo) {
           showVideoDialog(lastServerResponse.videoInfo);
+        } else if (lastServerResponse.endOfStageExperience) {
+          const body = document.createElement('div');
+          const stageInfo = lastServerResponse.previousStageInfo;
+          const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
+          ReactDOM.render(
+            <PlayZone
+              stageName={stageName}
+              onContinue={() => { dialog.hide(); }}
+              i18n={window.dashboard.i18n}/>,
+            body
+          );
+          const dialog = new Dialog({
+            body: body,
+            width: 800,
+            redirect: lastServerResponse.nextRedirect
+          });
+          dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           window.location.href = lastServerResponse.nextRedirect;
         }

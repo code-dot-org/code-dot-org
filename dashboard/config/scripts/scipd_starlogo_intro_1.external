@@ -5,24 +5,38 @@ skip_dialog true
 
 
 markdown <<MARKDOWN
-### Introduction to StarLogo Nova
+### A Simple Extension in StarLogo Nova
 
-**Who is this for?**
+You probably came up with a really cool extension idea for your epidemic model! You may have the time and skills later to do add that extension to your model, but for now you’ll get a walk-through of how to add a doctor to your model by creating a new breed.  Follow these instructions to make the doctor breed.  We’ll show you how to give the doctors behaviors and traits later.
 
-This is a Guided introduction to StarLogo Nova that was designed for teachers and students. Teachers participating in the Code.org Project GUTS Middle School Computer Science in Science Program have been asked to complete the tutorial as part of Phase 1. Students of participating teachers are being asked to complete the tutorial during Module 1 Lesson 2 (day 2 of module 1).
 
-**What is StarLogo Nova?**
 
-StarLogo Nova is an agent-based modeling (ABM) environment that was created by the Scheller Teacher Education Program at Massachusetts Institute of Technology. StarLogo Nova is the newest version in a long line of Logo based educational environments. StarLogo Nova is special because it is entirely web-based. Since it is web-based, you do not need to download or install any software on your computer or school’s server.
+**Step 1**
 
-**Where can I find it?**
+Open your epidemic model and remix it.  If you can't find your epidemic model or just want to start fresh, you can remix the model from <a href="http://www.slnova.org/GUTS/projects/306951/">here</a>.
 
-To get started in StarLogo Nova, all you need to do is go to [slnova.org] (http://www.slnova.org/) and request an account (unless you already have one).
+<br>
 
-**When will I use it?**
+**Step 2**
 
-In Code.org’s Computer Science in Science modules, we will use StarLogo Nova to build and experiment with models of complex adaptive systems within regular school day classes. Why is this important? StarLogo Nova gives students and teachers access to tools, similar to those used by scientists and researchers, with which to study systems in the world around them.
+Once you've remixed your project in StarLogo Nova, follow the steps in the video to make your doctor breed. <br>
+**Note:  You may want to challenge yourself by attempting to do each task before watching the videos, then looking at the videos to check your code or correct mistakes.  We recommend this approach for anyone feeling confident enough to try it out.**
 
+
+<br>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/mB7oBWfBgW0" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](https://docs.google.com/document/d/13Hy2cTst-ZMtwZ_YxY-_ww68IdcHyRA9HqByLPBmKmM/edit?usp=sharing)**
+
+<br>
+
+**Step 3**
+
+Once you've made the changes from the video, scroll down to the code area.  You should have another tab next to "Turtle" that says "Doctor."  If you've got this tab, congratulations--you successfully added a doctor breed!
+<br>
+<br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

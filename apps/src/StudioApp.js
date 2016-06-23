@@ -8,7 +8,7 @@ var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
-var _ = require('./lodash');
+var _ = require('lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
 var experiments = require('./experiments');
@@ -27,6 +27,8 @@ var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/instructions/Instructions');
 var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
+import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
+import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
@@ -35,7 +37,16 @@ var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
-import { determineInstructionsConstants, setInstructionsConstants } from './redux/instructions';
+import { Provider } from 'react-redux';
+import {
+  substituteInstructionImages,
+  determineInstructionsConstants,
+  setInstructionsConstants
+} from './redux/instructions';
+import {
+  openDialog as openInstructionsDialog,
+  closeDialog as closeInstructionsDialog
+} from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
@@ -321,6 +332,17 @@ StudioApp.prototype.init = function (config) {
 
   this.configureDom(config);
 
+  ReactDOM.render(
+    <Provider store={this.reduxStore}>
+      <InstructionsDialogWrapper
+          showInstructionsDialog={(autoClose, showHints) => {
+            this.showInstructionsDialog_(config.level, autoClose, showHints);
+          }}
+      />
+    </Provider>,
+    document.body.appendChild(document.createElement('div'))
+  );
+
   if (config.usesAssets) {
     assetPrefix.init(config);
 
@@ -420,7 +442,12 @@ StudioApp.prototype.init = function (config) {
         return;
       }
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.showInstructionsDialog_(config.level, shouldAutoClose, false);
+      this.reduxStore.dispatch(openInstructionsDialog({
+        autoClose: shouldAutoClose,
+        showHints: false,
+        aniGifOnly: false,
+        hintsOnly: false
+      }));
     }.bind(this));
   }
 
@@ -460,10 +487,6 @@ StudioApp.prototype.init = function (config) {
 
   if (config.loadAudio) {
     config.loadAudio();
-  }
-
-  if (!config.showInstructionsInTopPane) {
-    this.configureAndShowInstructions_(config);
   }
 
   this.configureHints_(config);
@@ -600,35 +623,6 @@ StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
 };
 
 /**
- * Sets html for prompts below playspace, anigif, and shows instructions dialog
- * @param {AppOptionsConfig}
- */
-StudioApp.prototype.configureAndShowInstructions_ = function (config) {
-  var promptDiv = document.getElementById('prompt');
-  var prompt2Div = document.getElementById('prompt2');
-  if (config.level.instructions) {
-    var instructionsHtml = this.substituteInstructionImages(
-      config.level.instructions, this.skin.instructions2ImageSubstitutions);
-    $(promptDiv).html(instructionsHtml);
-  }
-  if (config.level.instructions2) {
-    var instructions2Html = this.substituteInstructionImages(
-      config.level.instructions2, this.skin.instructions2ImageSubstitutions);
-    $(prompt2Div).html(instructions2Html);
-    $(prompt2Div).show();
-  }
-
-  var aniGifPreview = document.getElementById('ani-gif-preview');
-  if (config.level.aniGifURL) {
-    aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    var promptTable = document.getElementById('prompt-table');
-    promptTable.className += " with-ani-gif";
-    var wrapper = document.getElementById('ani-gif-preview-wrapper');
-    wrapper.style.display = 'inline-block';
-  }
-};
-
-/**
  * If we have hints, add a click handler to them and add the lightbulb above the
  * icon. Depends on the existence of DOM elements with particular ids, which
  * might be located below the playspace or in the top pane.
@@ -636,21 +630,6 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
 StudioApp.prototype.configureHints_ = function (config) {
   if (!this.hasInstructionsToShow(config)) {
     return;
-  }
-
-  var bubble = document.getElementById('bubble');
-  if (bubble) {
-    dom.addClickTouchEvent(bubble, function () {
-      const reduxState = this.reduxStore.getState();
-      const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
-      const hasAuthoredHints = reduxState.instructions.hasAuthoredHints;
-
-      // Don't show dialog on click in top pane unless we have hints
-      if (instructionsInTopPane && !hasAuthoredHints) {
-        return;
-      }
-      this.showInstructionsDialog_(config.level, false, true);
-    }.bind(this));
   }
 
   var promptIcon = document.getElementById('prompt-icon');
@@ -704,24 +683,6 @@ StudioApp.prototype.scaleLegacyShare = function () {
     applyTransformOrigin(vizContainer, 'left top');
     applyTransformScale(vizContainer, 'scale(' + scale + ')');
   }
-};
-
-/**
- * @param {string} htmlText
- * @param {Object.<string, string>} [substitutions] Dictionary strings (keys) to
- *   replacement values.
- */
-StudioApp.prototype.substituteInstructionImages = function (htmlText, substitutions) {
-  if (htmlText) {
-    for (var prop in substitutions) {
-      var value = substitutions[prop];
-      var substitutionHtml = '<span class="instructionsImageContainer"><img src="' + value + '" class="instructionsImage"/></span>';
-      var re = new RegExp('\\[' + prop + '\\]', 'g');
-      htmlText = htmlText.replace(re, substitutionHtml);
-    }
-  }
-
-  return htmlText;
 };
 
 StudioApp.prototype.getCode = function () {
@@ -1124,44 +1085,8 @@ StudioApp.prototype.onReportComplete = function (response) {
 };
 
 /**
- * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
- *   have markdown instructions
- * @param {object} level
- * @param {boolean} showHints
- * @returns {React.element}
- */
-StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
-  var renderedMarkdown;
-
-  var longInstructions = this.reduxStore.getState().instructions.longInstructions;
-
-  // longInstructions will be undefined if non-english
-  if (longInstructions) {
-    var markdownWithImages = this.substituteInstructionImages(longInstructions,
-      this.skin.instructions2ImageSubstitutions);
-    renderedMarkdown = processMarkdown(markdownWithImages);
-  }
-
-  var authoredHints;
-  if (showHints) {
-    authoredHints = this.authoredHintsController_.getHintsDisplay();
-  }
-
-  return (
-    <Instructions
-      puzzleTitle={puzzleTitle}
-      instructions={this.substituteInstructionImages(level.instructions,
-        this.skin.instructions2ImageSubstitutions)}
-      instructions2={this.substituteInstructionImages(level.instructions2,
-        this.skin.instructions2ImageSubstitutions)}
-      renderedMarkdown={renderedMarkdown}
-      markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
-      aniGifURL={level.aniGifURL}
-      authoredHints={authoredHints}/>
-  );
-};
-
-/**
+ * Show our instructions dialog. This should never be called directly, and will
+ * instead be called when the state of our redux store changes.
  * @param {object} level
  * @param {boolean} autoClose - closes instructions after 32s if true
  * @param {boolean} showHints
@@ -1191,9 +1116,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
       headerElement.className += ' no-modal-icon';
     }
   }
-
-  var instructionsContent = this.getInstructionsContent_(puzzleTitle, level,
-    showHints);
 
   // Create a div to eventually hold this content, and add it to the
   // overall container. We don't want to render directly into the
@@ -1235,6 +1157,9 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
     var event = document.createEvent('Event');
     event.initEvent('instructionsHidden', true, true);
     document.dispatchEvent(event);
+
+    // update redux
+    this.reduxStore.dispatch(closeInstructionsDialog());
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
@@ -1248,10 +1173,17 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
     header: headerElement
   });
 
+  const authoredHints = showHints ?
+    this.authoredHintsController_.getHintsDisplay() : undefined;
+
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
-  $(this.instructionsDialog.div).on('show.bs.modal', function () {
-    ReactDOM.render(instructionsContent, instructionsReactContainer);
+  $(this.instructionsDialog.div).on('show.bs.modal', () => {
+    ReactDOM.render(
+      <Provider store={this.reduxStore}>
+        <DialogInstructions authoredHints={authoredHints}/>
+      </Provider>,
+      instructionsReactContainer);
   });
 
   if (autoClose) {
@@ -2436,6 +2368,14 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
 };
 
 /**
+ * Do we have any floating blocks that are not going to be handled
+ * gracefully?
+ */
+StudioApp.prototype.hasUnwantedExtraTopBlocks = function () {
+  return this.hasExtraTopBlocks() && !Blockly.showUnusedBlocks;
+};
+
+/**
  *
  */
 StudioApp.prototype.hasQuestionMarksInNumberField = function () {
@@ -2809,6 +2749,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
     instructionsInTopPane: !!config.showInstructionsInTopPane,
+    hasContainedLevels: config.hasContainedLevels,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,
@@ -2819,13 +2760,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   this.reduxStore.dispatch(setPageConstants(combined));
 
-  const instructionsConstants = determineInstructionsConstants(
-    config.level.instructions,
-    config.level.markdownInstructions,
-    config.locale,
-    !!config.noInstructionsWhenCollapsed,
-    !!config.showInstructionsInTopPane,
-    !!config.level.inputOutputTable
-  );
+  const instructionsConstants = determineInstructionsConstants(config);
   this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
 };

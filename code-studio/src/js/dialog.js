@@ -42,6 +42,7 @@ function sizeDialogToViewport(scrollableElementSelector) {
  * 'redirect': redirect page after the dialog is dismissed (default: no redirect)
  * 'id': id of the dialog (default: none)
  * 'close': whether to show a close 'x' button (default: true)
+ * 'width': custom width, to override CSS-specified default
  * 'autoResizeScrollableElement': if selected, makes the specified selector's
  *           element scrollable and auto-resizes dialog to window's dimensions
  */
@@ -58,6 +59,13 @@ var Dialog = module.exports = function (options) {
       .addClass('x-close')
       .attr('data-dismiss', 'modal');
   this.div = $('<div tabindex="-1"/>').addClass('modal');
+
+  if (options.width) {
+    this.div.css({
+      width: `${options.width}px`,
+      marginLeft: `-${options.width / 2}px`
+    });
+  }
 
   this.div.addClass('dash_modal');
   if (options.id) {
