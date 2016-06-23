@@ -10,7 +10,7 @@ nav: events_nav
 -country_names = {}
 -state_names = {}
 
--events = SOLR.query(q:"*:*", fq:["kind_s:HocSignup2016", "location_country_s:[* TO *]", "location_country_code_s:[* TO *]", "organization_name_s:[* TO *]"], sort:'location_country_s asc, location_state_code_s asc', rows:1000)
+-events = SOLR.query(q:"*:*", fq:["kind_s:HocSignup2015", "location_country_s:[* TO *]", "location_country_code_s:[* TO *]", "organization_name_s:[* TO *]"], sort:'location_country_s asc, location_state_code_s asc', rows:1000)
 -events.each do |event|
   -country_code = event['location_country_code_s'].to_s
   -by_country[country_code] = [] unless by_country.has_key?(country_code)
@@ -23,7 +23,7 @@ nav: events_nav
     -by_state[state_code] << nil
     -state_names[state_code] = event['location_state_s'].to_s unless state_names.has_key?(state_code)
 
-%h1= hoc_s(:events_all_title)
+%h1= hoc_s(:events_all_old_title).gsub(/\@year/, "2015")
 
 %ul
   %li{class: "hoc-event-country"}
@@ -32,9 +32,9 @@ nav: events_nav
       -by_state.each_pair do |state_code, events|
         -unless state_code.nil_or_empty? || state_code.length > 2
           %li{class: "hoc-event-state"}
-            %a{href: "/events/all/us/#{state_code.downcase}"}= events.count > 1 ? "#{state_code} (#{events.count} #{hoc_s(:events)})" : "#{state_code} (#{events.count} #{hoc_s(:event)})"
+            %a{href: "/events/2015/us/#{state_code.downcase}"}= events.count > 1 ? "#{state_code} (#{events.count} #{hoc_s(:events)})" : "#{state_code} (#{events.count} #{hoc_s(:event)})"
 %ul
   -by_country.each_pair do |country_code, events|
     -if country_code != 'US'
       %li{class: "hoc-event-country"}
-        %a{href: "/events/all/#{country_code.downcase}"}= events.count > 1 ? "#{country_names[country_code]} (#{events.count} #{hoc_s(:events)})" : "#{country_names[country_code]} (#{events.count} #{hoc_s(:event)})"
+        %a{href: "/events/2015/#{country_code.downcase}"}= events.count > 1 ? "#{country_names[country_code]} (#{events.count} #{hoc_s(:events)})" : "#{country_names[country_code]} (#{events.count} #{hoc_s(:event)})"
