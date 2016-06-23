@@ -2,7 +2,6 @@ require 'google_drive'
 require 'cdo/hip_chat'
 
 module Google
-
   class Drive
 
     class File
@@ -93,5 +92,4 @@ module Google
     end
 
   end
-
 end

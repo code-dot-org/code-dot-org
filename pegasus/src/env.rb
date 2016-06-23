@@ -28,7 +28,6 @@ def src_dir(*paths)
 end
 
 module Pegasus
-
   def self.logger
     @@logger ||= create_logger
   end
