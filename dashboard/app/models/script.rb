@@ -354,7 +354,6 @@ class Script < ActiveRecord::Base
     else
       ['playlab', 'artist']
     end
-
   end
 
   def professional_course?
