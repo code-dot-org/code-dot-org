@@ -3,7 +3,6 @@
 # authentication state, and other DASHBOARD_DB access.
 #
 module Dashboard
-
   # Get the dashboard database
   # The static constant is wrapped here so it's easy to stub for tests.
   # @returns [Database]
@@ -89,5 +88,4 @@ module Dashboard
     end
 
   end
-
 end

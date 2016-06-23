@@ -178,26 +178,31 @@ module.exports.blocks = [
 
 module.exports.categories = {
   'UI controls': {
+    id: 'uicontrols',
     color: 'yellow',
     rgb: COLOR_YELLOW,
     blocks: []
   },
   Canvas: {
+    id: 'canvas',
     color: 'red',
     rgb: COLOR_RED,
     blocks: []
   },
   Data: {
+    id: 'data',
     color: 'lightgreen',
     rgb: COLOR_LIGHT_GREEN,
     blocks: []
   },
   Turtle: {
+    id: 'turtle',
     color: 'cyan',
     rgb: COLOR_CYAN,
     blocks: []
   },
   Advanced: {
+    id: 'advanced',
     color: 'blue',
     rgb: COLOR_BLUE,
     blocks: []
