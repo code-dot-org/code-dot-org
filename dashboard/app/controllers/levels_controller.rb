@@ -154,7 +154,7 @@ class LevelsController < ApplicationController
 
   def new
     authorize! :create, :level
-    if params.has_key? :type
+    if params.key? :type
       @type_class = params[:type].constantize
       if @type_class == Artist
         @game = Game.custom_artist
