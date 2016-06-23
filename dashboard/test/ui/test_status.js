@@ -249,7 +249,7 @@ function renderBrowserProgress(browser, progress) {
   pendingBar.style.width = `${pendingPercent}%`;
 }
 
-var updateProgress = _.debounce(function updateProgress__() {
+function updateProgressNow() {
   // Count up tests by status
   let successCount = 0, failureCount = 0, pendingCount = 0;
   for (let browser in tests) {
@@ -268,7 +268,8 @@ var updateProgress = _.debounce(function updateProgress__() {
   if (pendingCount + failureCount === 0) {
     disableAutoRefresh();
   }
-}, 300);
+}
+var updateProgress = _.debounce(updateProgressNow, 300, { maxWait: 3000 });
 
 function refresh() {
   // Fetches all logs for this branch and maps them to the tests in this run.
@@ -318,6 +319,6 @@ function toggleAutoRefresh() {
 }
 refreshButton.onclick = refresh;
 autoRefreshButton.onclick = toggleAutoRefresh;
+updateProgressNow();
 enableAutoRefresh();
-updateProgress();
 refresh();
