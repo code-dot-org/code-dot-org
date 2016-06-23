@@ -1,5 +1,4 @@
 def validate_form(kind, data)
-
   def csv_multivalue(value)
     return value if value.class == FieldError
     begin
