@@ -154,5 +154,4 @@ def generate_professional_development_workshops_report(from=nil, to=nil)
     }
 
   end.compact.flatten
-
 end

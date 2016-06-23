@@ -5,8 +5,7 @@ require 'openssl'
 require 'base64'
 
 module Poste
-
-  def self.logger()
+  def self.logger
     @@logger ||= $log
   end
 
@@ -56,7 +55,7 @@ module Poste
     nil
   end
 
-  def self.template_extnames()
+  def self.template_extnames
     ['.md','.haml','.html']
   end
 
@@ -87,11 +86,9 @@ module Poste
       )
     end
   end
-
 end
 
 module Poste2
-
   @@url_cache = {}
   @@message_id_cache = {}
 

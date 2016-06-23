@@ -2,7 +2,6 @@ require 'mini_magick'
 require 'mini_magick/image'
 
 module ImageLib
-
   # Overlay a foreground and background image as described by params, where
   # the background image is resized to 154x154 pixels and centered.
   #

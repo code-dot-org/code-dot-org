@@ -46,8 +46,8 @@ SOLR.query(q: volunteer_query).reverse_each do |result|
   next unless result
 
   state = nil
-  state = result['location_state_s'] if NUM_VOLUNTEERS_BY_STATE.has_key? result['location_state_s']
-  state ||= result['create_ip_state_s'] if NUM_VOLUNTEERS_BY_STATE.has_key? result['create_ip_state_s']
+  state = result['location_state_s'] if NUM_VOLUNTEERS_BY_STATE.key? result['location_state_s']
+  state ||= result['create_ip_state_s'] if NUM_VOLUNTEERS_BY_STATE.key? result['create_ip_state_s']
   num_volunteers = state ? NUM_VOLUNTEERS_BY_STATE[state] : nil
   email = result['email_s'].downcase.strip
   name = result['name_s']

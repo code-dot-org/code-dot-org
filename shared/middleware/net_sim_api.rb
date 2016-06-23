@@ -276,7 +276,7 @@ class NetSimApi < Sinatra::Base
   # @param [Hash] router - The new router we are validating
   # @return [String] a validation error, or nil if no problems were found
   def validate_router(shard_id, router)
-    return VALIDATION_ERRORS[:malformed] unless router.has_key?('routerNumber')
+    return VALIDATION_ERRORS[:malformed] unless router.key?('routerNumber')
     existing_routers = get_table(shard_id, TABLE_NAMES[:node]).
         to_a.select {|x| x['type'] == NODE_TYPES[:router]}
 

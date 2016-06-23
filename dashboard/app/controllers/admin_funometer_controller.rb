@@ -93,6 +93,7 @@ class AdminFunometerController < ApplicationController
   end
 
   private
+
   def get_ratings_by_day(ratings_to_process)
     return ratings_to_process.
            group('DATE(created_at)').
