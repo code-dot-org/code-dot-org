@@ -90,7 +90,7 @@ ko:
       2-3 Artist Loops New 10_instruction: "이제 여러 개의 'V'자를 연결해서, 반복 실행 구조 안에 넣어보세요."
       2-3 Artist Loops New 11_instruction: |
         이번에는 멋진 것을 만들어 볼 시간입니다!
-        왼쪽으로 30도 회전하기를 추가한 후, 24번 반복 시켜보세요.
+        왼쪽으로 30도 회전하기를 추가한 후, 7번 대신에 24번을 반복 시켜보세요.
       2-3 Artist Loops New 12_instruction: |
         한 변의 길이가 100 픽셀인 다이아몬드를 그려보세요.
         
@@ -228,6 +228,10 @@ ko:
         이전 퍼즐에서의 답을 단 2개의 블록으로 바꿔보세요!
         (힌트: "반복 횟수" 블록을 사용하는 반복 구조를 만들어보세요.)
       2-3 Maze 12 (old)_instruction: 반복 횟수 블록을 이용해서, 돼지에게로 이동시켜 주세요.
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: "1개의 '반복' 블록 안에 1개의 '앞으로 이동' 블록이 들어있는 반복 실행 구조를 이용해서 돼지에게로 이동시켜주세요."
       2-3 Maze 13 (old)_instruction: 저를 돼지에게 보내주세요. 이번에는 반복(~할 때까지) 블록을 사용하세요.
       2-3 Maze 13_instruction: "2개의 블록만 더 추가해서 돼지에게로 보내주세요.\\r\n(참고: 이 레벨을 깨기 위해서는 마법의 \"반복(횟수)\" 블록을 사용해야 합니다.)"
@@ -462,11 +466,11 @@ ko:
       4-5 Maze 7_instruction: 여보세요.. 저.. 좀비.. 해바라기.. 가야함..
       4-5 Maze 8_instruction: "가능한 적은 블록을 사용해서 좀비가 해바라기로 가도록 해주세요. \\r\n(식충식물들은 피해야 합니다!)"
       4-5 Maze 9_instruction: "\"~할 때까지 반복\" 이라고 부르는 새로운 블럭이 있습니다. \\r\n이 블록은 좀비가 해바라기에게 갈 때까지 명령을 반복하도록 해줍니다. \\r\n\\r\n\"~할 때까지 반복\" 블록을 사용하고 가능한 적은 블록으로 퍼즐을 해결해 보세요."
-      4-5 Maze Assessment 1_instruction: '형성평가: 가능한 적은 블록을 사용하여 해바라기로 가기'
+      4-5 Maze Assessment 1_instruction: '형성평가: 최대한 적은 블록을 사용하여 해바라기로 가기'
       4-5 Maze Conditionals 1_instruction: |
         "~할 때까지 반복" 블록을 이용해서,
         좀비를 해바라기로 이동시켜주세요.
-      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
+      4-5 Maze Conditionals 10_instruction: "블럭을 3개 더 붙여서, 좀비가 좀 더 복잡한 미로를 빠져나갈 수 있도록 도와주세요.\\r \n\\r \n성공한다면 아무리 크고 복잡한 미로라고 하더라도 거뜬히 통과할 수 있을거예요."
       4-5 Maze Conditionals 2_instruction: |
         "~할 때까지 반복" 블록을 이용해서,
         좀비를 해바라기로 이동시켜주세요.
@@ -501,16 +505,22 @@ ko:
       4-5 While Loops 7_instruction: 와우, 이제는 3개의 흙더미가 있습니다! 3개의 흙더미를 모두 치워주세요.
       4-5 While Loops 8_instruction: ' 진짜 깊은 구덩이와 진짜 큰 흙더미가 있습니다. 구덩이를 메우려면 흙더미를 몇 번 옮겨야 할까요?'
       4-5 While Loops Assessment 1_instruction: 구덩이와 흙더미가 많이 있습니다. 모든 구덩이와 흙더미를 없애주세요.
-      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na square with 20 pixel sides. "
       aE2_instruction: |
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
-        all 15 squares line up next to each other?
-      aE3_instruction: |
-        Now let's go one level deeper! We've nested that whole
-        block of code into another loop, but you need to get the artist back in place
-        to draw the next line. Which of these code blocks can you place at the end
-        of the outermost loop to draw the whole grid?
+        all 14 napkins line up next to each other?
+      aE3_instruction: "We've got to have a tablecloth!  \\r\n\\r\nTake your row of\n14 napkins and sew 14 of those together with another **outer loop** to make\na cover for our table."
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: |
+        How many times do you need to loop this to draw half  of
+        a circle? 
+      aE7_instruction: "If you create another loop like this one, but turn left instead\nof right, what happens? \\r\n\\r\nCan you repeat all of that to draw this wave?"
+      aE8_instruction: "Now let's loop that whole thing four times to create this\npicture frame. Watch out for the corners - you can't just turn 90 degrees!\n\\r\n\\r\nIf looping a 3 degree turn 60 times makes a half circle, which of\nthese blocks of code will make an additional quarter circle for the corners?"
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -586,6 +596,10 @@ ko:
         "모양" 함수를 기본으로 활용해서, 50 픽셀 크기로 시작한 후, 20 픽셀 만큼 씩 커지는
         3개의 집 모양을 만들어 보세요. 반복 카운터 구조를 사용하면 꽤 도움이 될 것입니다. 
       Bee Recommended Blocks test_instruction: 자주색 꽃들은 1 또는 0 의 꽃꿀이 있지만, 정확히 알 수 없습니다. 꽃꿀이 없는 자주색 꽃에서 꿀을 모으지 마세요. if 블록을 사용해서 꽃꿀이 1 만큼 있는지 확인해 주세요.
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
+        
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1492,6 +1506,7 @@ ko:
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -2120,7 +2135,15 @@ ko:
       K-1 Maze Multi 15_instruction: 형성평가 레벨
       K-1 Maze Sequence Assessment 1_instruction: "배운 것을 살펴봅시다!\\r\n한 방향으로 움직이다가 다른 방향으로 움직여서 돼지에게 갈 수 있도록 해주세요."
       K-1 Maze Sequence Assessment 2_instruction: 돼지를 잡을 수 있도록, 한 쪽으로 가다가 다시 다른 쪽으로 움직여주세요!
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -2162,7 +2185,11 @@ ko:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      Mike Pair Programming_instruction: Here are the instructions
       MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
@@ -2455,9 +2482,6 @@ ko:
       NEW Course 4 Play Labs For Loops 8a_instruction: |
         도전과제: "반복" 구조를 사용해서 모든 캐릭터들이 돌아다니면서 자신의 번호를 말하고 난 후,
         화면에서 사라지게 해보세요. 
-      New Play Lab Project_instruction: |
-        이야기나 게임을 만들어보세요!
-        여러분의 코드는 프로젝트로 저장되어있기 때문에, 아무때나 실행시켜 볼 수 있습니다.
       Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,

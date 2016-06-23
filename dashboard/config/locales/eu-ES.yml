@@ -30,6 +30,8 @@
   unsubmit: Bidalketa ezeztatu
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Ezeztatu
   okay: Ongi da
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -94,6 +96,7 @@
     teacher_title: Irakasle bezala sartu
     student_pitch: Ikasle bezala sartu Code.org-n
     student_title: Ikasle bezala sartu
+    signup_title: Sign up for Code.org
     school_name: Ikastetxearen izena (aukerakoa)
     school_address: Ikastetxearen helbidea (aukerakoa)
     address_placeholder: Helbidea, hiria, herrialdea, posta kodea
@@ -117,6 +120,9 @@
     teacher_terms: Ados nago eta onartzen ditut Code.org <a href='http://code.org/tos'>
       erabiltzeko baldintzak </a>.
     additional_information: Informazio gehiago behar dugu izen-ematearekin jarraitzeko.
+    user_type_label: Account Type
+    user_type_teacher: Irakaslea
+    user_type_student: Ikaslea
   signin_form:
     title: Kontua daukazu? Hasi saioa
     login: Emaila edo erabiltzailea
@@ -865,3 +871,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

@@ -203,7 +203,7 @@
   "MATH_ADDITION_SYMBOL":"+",
   "MATH_ARITHMETIC_HELPURL":"http:\/\/ru.wikipedia.org\/wiki\/թվաբանություն",
   "MATH_ARITHMETIC_TOOLTIP_ADD":"Վերադարձնել գումարը երկու թվերի:",
-  "MATH_ARITHMETIC_TOOLTIP_DIVIDE":"Վերադարձնել քանորդ երկու թվերի:",
+  "MATH_ARITHMETIC_TOOLTIP_DIVIDE":"Return the quotient of the two numbers.",
   "MATH_ARITHMETIC_TOOLTIP_MINUS":"Վերադարձնել տարբերությունը երկու թվերի:",
   "MATH_ARITHMETIC_TOOLTIP_MULTIPLY":"Վերադարձնել ապրանքը երկու թվերի:",
   "MATH_ARITHMETIC_TOOLTIP_POWER":"Վերադարձնել առաջին համարը բարձրացված է իշխանության երկրորդ համարը:",

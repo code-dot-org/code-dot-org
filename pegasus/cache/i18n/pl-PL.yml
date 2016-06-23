@@ -686,7 +686,7 @@
   dashboard_navigation_section_pd: Rozwój zawodowy
   dashboard_navigation_section_speakers: Informatyka <br/> Gościnni mówcy
   dashboard_navigation_all_sections: Konta i postępy ucznia
-  dashboard_navigation_view_progress: Przejrzy postępy
+  dashboard_navigation_view_progress: Postęp
   dashboard_navigation_view_text_responses: Wyświetl tekstowe odpowiedzi
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Dodaj uczniów
@@ -1029,6 +1029,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

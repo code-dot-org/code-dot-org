@@ -29,6 +29,8 @@ en:
   unsubmit: crwdns56122:0crwdne56122:0
   previous_page: crwdns56442:0crwdne56442:0
   next_page: crwdns56247:0crwdne56247:0
+  next_resource: crwdns56990:0crwdne56990:0
+  done_with_module: crwdns56991:0crwdne56991:0
   cancel: crwdns56443:0crwdne56443:0
   okay: crwdns56444:0crwdne56444:0
   heading_x_of_y: 'crwdns56275:0%{heading}crwdnd56275:0%{x}crwdnd56275:0%{y}crwdne56275:0'
@@ -85,6 +87,7 @@ en:
     teacher_title: crwdns3898:0crwdne3898:0
     student_pitch: crwdns4887:0crwdne4887:0
     student_title: crwdns4632:0crwdne4632:0
+    signup_title: crwdns56992:0crwdne56992:0
     school_name: crwdns2940:0crwdne2940:0
     school_address: crwdns3037:0crwdne3037:0
     address_placeholder: crwdns2942:0crwdne2942:0
@@ -103,6 +106,9 @@ en:
     student_terms: crwdns9002:0crwdne9002:0
     teacher_terms: crwdns7339:0crwdne7339:0
     additional_information: crwdns7492:0crwdne7492:0
+    user_type_label: crwdns56993:0crwdne56993:0
+    user_type_teacher: crwdns56994:0crwdne56994:0
+    user_type_student: crwdns56995:0crwdne56995:0
   signin_form:
     title: crwdns4520:0crwdne4520:0
     login: crwdns2948:0crwdne2948:0
@@ -681,7 +687,7 @@ en:
     content: crwdns56539:0crwdne56539:0
     practice: crwdns56540:0crwdne56540:0
   external_links:
-    disclaimer_md: crwdns56734:0crwdne56734:0
+    disclaimer_md: 'crwdns57067:0%{support_url}crwdne57067:0'
   hoc_download:
     title: crwdns56942:0crwdne56942:0
     capsule_title: crwdns56943:0crwdne56943:0
@@ -696,3 +702,12 @@ en:
     download_in_spanish: crwdns56952:0crwdne56952:0
     windows: crwdns56953:0crwdne56953:0
     mac: crwdns56954:0crwdne56954:0
+  plc:
+    preview_assignments:
+      content_focus_header: crwdns56996:0crwdne56996:0
+      practice_focus_header: crwdns56997:0crwdne56997:0
+      content_focus_strong: crwdns56998:0crwdne56998:0
+      practice_focus_strong: crwdns56999:0crwdne56999:0
+      choose_different_focus_area: crwdns57000:0crwdne57000:0
+      other_focus_areas_available: crwdns57001:0crwdne57001:0
+      confirm_focus_areas: crwdns57002:0crwdne57002:0

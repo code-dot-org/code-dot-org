@@ -155,6 +155,10 @@ eu:
       2-3 Maze 12 (copy 1)_instruction: 'Aurreko erantzuna ordezkatu dezakezu bi bloke bakarrik erabiliz? (Aholkua: Sortu begizta bat "errepikatu aldiz" blokea.)'
       2-3 Maze 12 (copy 2)_instruction: 'Aurreko erantzuna ordezkatu dezakezu bi bloke bakarrik erabiliz? (Aholkua: Sortu begizta bat "errepikatu aldiz" blokea.)'
       2-3 Maze 12 (old)_instruction: 'Eraman nazazu zerriraino, oraingoan "Errepikatu Aldiz" blokearekin!'
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: 'Ordeztu al ditzakezu bost bloke hauek bi blokerekin soilik? (Pista: Sortu begizta bat "Errepika Aldiz" blokearekin.)'
       2-3 Maze 13 (old)_instruction: 'Eraman nazazu zerriarenganaino, oraingoan "Errepikatu harik eta" blokearekin!'
       2-3 Maze 13_instruction: Eraman nazazu zerriraino soilik bi bloke erabiliz.
@@ -374,16 +378,22 @@ eu:
       4-5 While Loops 7_instruction: Hara, oran hiru lur-meta daude! Idatz dezakezu programa bat lur-metak ezabatuko dituena lurzorua laua izan arte?
       4-5 While Loops 8_instruction: ' Zulo benetan sakona dago eta lur-meta asko. Zenbat palakada lur mugitu behar dira inguruan lurzorua laua bihurtzeko? Pista: Erabili "bitartean" begizta bietarako.'
       4-5 While Loops Assessment 1_instruction: Zulo eta lur-meta piloa dago. Lagun iezadazu zuloak betetzen eta lur-metak kentzen lurzorua laua egiteko.
-      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na square with 20 pixel sides. "
       aE2_instruction: |
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
-        all 15 squares line up next to each other?
-      aE3_instruction: |
-        Now let's go one level deeper! We've nested that whole
-        block of code into another loop, but you need to get the artist back in place
-        to draw the next line. Which of these code blocks can you place at the end
-        of the outermost loop to draw the whole grid?
+        all 14 napkins line up next to each other?
+      aE3_instruction: "We've got to have a tablecloth!  \\r\n\\r\nTake your row of\n14 napkins and sew 14 of those together with another **outer loop** to make\na cover for our table."
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: |
+        How many times do you need to loop this to draw half  of
+        a circle? 
+      aE7_instruction: "If you create another loop like this one, but turn left instead\nof right, what happens? \\r\n\\r\nCan you repeat all of that to draw this wave?"
+      aE8_instruction: "Now let's loop that whole thing four times to create this\npicture frame. Watch out for the corners - you can't just turn 90 degrees!\n\\r\n\\r\nIf looping a 3 degree turn 60 times makes a half circle, which of\nthese blocks of code will make an additional quarter circle for the corners?"
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -456,6 +466,10 @@ eu:
       Artist - Nested Loops Assessment 1_instruction: Erabili kabiatutako begizta bat diseinua osatzeko.
       Auto Open Function Editor_instruction: 'Funtzioen barrenetik beste funtzio batzuk deitu ditzakezu! Zure "forma" funtzioa oinarri moduan erabiliz, 3 etxe irudi edo forma sortu, bakoitza aurrekoa baino 20 pixel luzeagoa eta 50 pixeleko luzerarekin hasiz. Kontagailu begizta bat erabiltzea lagungarria izan liteke. '
       Bee Recommended Blocks test_instruction: 'Lore moreek 1 edo 0 nektar izan dezakete, baina ez dakizu zenbat duen lore bakoitzak! Kontuz ibili ez saiatzeko nektarra hartzen nektarrik ez duen lore more batetik. Begiratu ea nektar 1 den "baldin" blokea erabiliz.'
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
+        
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1209,6 +1223,7 @@ eu:
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -1808,7 +1823,15 @@ eu:
       K-1 Maze Multi 15_instruction: Ebaluazio maila
       K-1 Maze Sequence Assessment 1_instruction: "Hau proba da!\\r\nMugitu norabide batean, eta gero bestean, txerriraino iritsi nadin"
       K-1 Maze Sequence Assessment 2_instruction: "Hau proba da!\\r\nMugitu norabide batean, eta gero bestean, txerriraino iritsi nadin."
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -1850,7 +1873,11 @@ eu:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      Mike Pair Programming_instruction: Here are the instructions
       MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
@@ -2064,7 +2091,6 @@ eu:
       NEW Course 4 Play Labs For Loops 7a_instruction: Orain arte ikasi duzuna erabiltzen ari zara. Pinguinoak zenbaki kontaketan zenbaki bat esan ahala Dinosaurioak urrats bat aurrera eman dezan lor dezakezu?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Nahi bezala jolasteko garaia da! Zure tresna kutxatxoan dituzun blokeekin diberti zaitez. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Erronka: zelan erabiliko zenuke "for loop" aktore bakoitza mugitu eta euren aktore zenbakia esateko eta gero pantailatik desagertzeko?'
-      New Play Lab Project_instruction: Sortu zure istorio edota jokoa! Zure kodea proiektu eran gordeko da eta bertara bueltatu ahalko duzu nahi duzunean.
       Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,

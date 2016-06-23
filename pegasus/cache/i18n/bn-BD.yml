@@ -685,7 +685,7 @@
   dashboard_navigation_section_pd: "পেশাগত উন্নয়ন"
   dashboard_navigation_section_speakers: "কম্পিউটার বিজ্ঞানের <br/> অতিথী বক্তারা"
   dashboard_navigation_all_sections: "শিক্ষার্থীদের অ্যাকাউন্ট এবং আগ্রগতি"
-  dashboard_navigation_view_progress: "আগ্রগতি দেখুন"
+  dashboard_navigation_view_progress: "অগ্রগতি"
   dashboard_navigation_view_text_responses: "লিখিত জবাব দেখুন"
   dashboard_navigation_view_assessments: "মূল্যায়ন"
   dashboard_navigation_add_students: " শিক্ষার্থীদের যুক্ত করন"
@@ -1011,6 +1011,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

@@ -4,8 +4,8 @@
   'yes': Ja
   'no': Nee
   select_language: Kies de gewenste taal
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org beëindigt de ondersteuning voor Internet Explorer 8,
+    9 en 10. Probeer te upgraden naar een moderne browser.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
     Explorer 8, 9, and 10. Please upgrade to a modern browser.
   upgrade_ie_link: Leer meer
@@ -699,7 +699,7 @@
   dashboard_navigation_section_pd: Professionele ontwikkeling
   dashboard_navigation_section_speakers: Informatica <br/> gastsprekers
   dashboard_navigation_all_sections: Leerlingaccounts en vooruitgang
-  dashboard_navigation_view_progress: bekijk de vooruitgang
+  dashboard_navigation_view_progress: Voortgang
   dashboard_navigation_view_text_responses: Bekijk de tekstuele reacties
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Leerlingen Toevoegen
@@ -1028,6 +1028,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
