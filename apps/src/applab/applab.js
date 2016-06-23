@@ -1252,10 +1252,13 @@ Applab.setWorkspaceMode = function (mode) {
     // not an admin)
     return;
   }
-  designWorkspace.style.display = enable ? 'block' : 'none';
+  designWorkspace.style.display = (ApplabInterfaceMode.DESIGN === mode) ? 'block' : 'none';
 
   var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
-  codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
+  codeWorkspaceWrapper.style.display = (ApplabInterfaceMode.CODE === mode) ? 'block' : 'none';
+
+  var dataWorkspaceWrapper = document.getElementById('dataWorkspaceWrapper');
+  dataWorkspaceWrapper.style.display = (ApplabInterfaceMode.DATA === mode) ? 'block' : 'none';
 };
 
 /**

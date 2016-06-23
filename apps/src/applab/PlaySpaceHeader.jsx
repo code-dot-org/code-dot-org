@@ -35,12 +35,22 @@ var PlaySpaceHeader = React.createClass({
 
   render: function () {
     var leftSide, rightSide;
+    var showDataModeButton = Applab.useFirebase;
+    var toggleGroupWidth = showDataModeButton ? '160px' : '120px';
 
     if (!this.shouldHideToggle()) {
+      var toggleButtons = [
+        <button id='codeModeButton' value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>,
+        <button id='designModeButton' value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
+      ];
+      if (showDataModeButton) {
+        toggleButtons.push(
+          <button id='dataModeButton' value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
+        );
+      }
       leftSide = (
         <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
-          <button id='codeModeButton' value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>
-          <button id='designModeButton' value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
+          {toggleButtons}
         </ToggleGroup>
       );
     }
@@ -59,7 +69,7 @@ var PlaySpaceHeader = React.createClass({
         <table style={{width: '100%'}}>
           <tbody>
             <tr>
-              <td style={{width: '120px'}}>{leftSide}</td>
+              <td style={{width: toggleGroupWidth}}>{leftSide}</td>
               <td style={{maxWidth: 0}}>{rightSide}</td>
             </tr>
           </tbody>
@@ -76,7 +86,8 @@ var PlaySpaceHeader = React.createClass({
     return this.props.isViewDataButtonHidden ||
         this.props.isDesignModeHidden ||
         this.props.isShareView ||
-        !this.props.isEditingProject;
+        !this.props.isEditingProject ||
+        Applab.useFirebase;
   }
 });
 module.exports = connect(function propsFromStore(state) {
