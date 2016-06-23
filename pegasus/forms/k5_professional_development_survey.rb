@@ -8,17 +8,17 @@ class K5ProfessionalDevelopmentSurvey
   )
   DEGREE_TYPE = (
     ['art',
-    'business',
-    'computer science',
-    'education',
-    'engineering',
-    'english/literature/humanities',
-    'foreign language',
-    'mathematics',
-    'music',
-    'science',
-    'social science',
-    'other',
+     'business',
+     'computer science',
+     'education',
+     'engineering',
+     'english/literature/humanities',
+     'foreign language',
+     'mathematics',
+     'music',
+     'science',
+     'social science',
+     'other',
     ]
   )
 
