@@ -81,6 +81,11 @@ namespace :build do
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   task dashboard: :package do
     Dir.chdir(dashboard_dir) do
+      # Unless on production, serve UI test directory
+      unless rack_env?(:production)
+        RakeUtils.ln_s('../test/ui', dashboard_dir('public', 'ui_test'))
+      end
+
       HipChat.log 'Stopping <b>dashboard</b>...'
       RakeUtils.stop_service CDO.dashboard_unicorn_name unless rack_env?(:development)
 
