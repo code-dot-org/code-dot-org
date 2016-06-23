@@ -636,10 +636,6 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   });
 };
 
-designMode.toggleDesignMode = function (enable) {
-  studioApp.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
-};
-
 function onInterfaceModeChange(mode) {
   var enable = (ApplabInterfaceMode.DESIGN === mode);
   var designWorkspace = document.getElementById('designWorkspace');
