@@ -211,14 +211,26 @@ function renderBrowserProgress(browser, progress) {
 
   // We manipulate the percentages to make them round numbers, adding up to 100,
   // and each category gets at least 1% if its count is greater than zero.
-  let successPercent = Math.max(Math.floor(successCount * 100 / totalCount), successCount > 0 ? 1 : 0);
-  let failurePercent = Math.max(Math.floor(failureCount * 100 / totalCount), failureCount > 0 ? 1 : 0);
-  let pendingPercent = Math.max(Math.floor(pendingCount * 100 / totalCount), pendingCount > 0 ? 1 : 0);
+  let successPercent = Math.max(Math.floor(successCount * 1000 / totalCount)/10, successCount > 0 ? 0.1 : 0);
+  let failurePercent = Math.max(Math.floor(failureCount * 1000 / totalCount)/10, failureCount > 0 ? 0.1 : 0);
+  let pendingPercent = Math.max(Math.floor(pendingCount * 1000 / totalCount)/10, pendingCount > 0 ? 0.1 : 0);
   let leftover = 100 - (successPercent + failurePercent + pendingPercent);
-  if (pendingCount > 0) {
-    pendingPercent += leftover;
-  } else {
-    successCount += leftover;
+  if (leftover > 0) {
+    if (pendingCount > 0) {
+      pendingPercent += leftover;
+    } else if (failureCount > 0) {
+      failurePercent += leftover;
+    } else {
+      successPercent += leftover;
+    }
+  } else if (leftover < 0) {
+    if (successCount + leftover > 0) {
+      successPercent += leftover;
+    } else if (failureCount + leftover > 0) {
+      failurePercent += leftover;
+    } else {
+      pendingPercent += leftover;
+    }
   }
 
   // Set progress text
