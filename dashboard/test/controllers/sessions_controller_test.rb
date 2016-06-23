@@ -79,7 +79,9 @@ class SessionsControllerTest < ActionController::TestCase
 
     assert UserGeo.find_by_user_id(user.id).nil?
 
-    post :create, user: {login: '', hashed_email: user.hashed_email, password: user.password}
+    post :create, user: {
+      login: '', hashed_email: user.hashed_email, password: user.password
+    }
 
     assert UserGeo.find_by_user_id(user.id)
   end
@@ -92,9 +94,21 @@ class SessionsControllerTest < ActionController::TestCase
       indexed_at: '2000-01-02 12:34:56'
     )
 
-    post :create, user: {login: '', hashed_email: user.hashed_email, password: user.password}
+    post :create, user: {
+      login: '', hashed_email: user.hashed_email, password: user.password
+    }
 
     assert_equal '9.8.7.6', UserGeo.find_by_user_id(user.id)[:ip_address]
+  end
+
+  test 'failed signin does not create UserGeo' do
+    user = create(:user)
+
+    assert_no_change('UserGeo.count') do
+      post :create, user: {
+        login: '', hashed_email: user.hashed_email, password: 'wrong password'
+      }
+    end
   end
 
   test "users go to code.org after logging out" do

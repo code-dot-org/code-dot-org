@@ -10,12 +10,13 @@ class SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    super
-    return unless signed_in?
-    return unless current_user.current_sign_in_ip
-    return if UserGeo.find_by_user_id(current_user.id)
+    super do |user|
+      return unless user.persisted?
+      return unless user.current_sign_in_ip
+      return if UserGeo.find_by_user_id(user.id)
 
-    UserGeo.new.populate(current_user.id, current_user.current_sign_in_ip)
+      UserGeo.new.populate(user.id, user.current_sign_in_ip)
+    end
   end
 
   # DELETE /resource/sign_out
