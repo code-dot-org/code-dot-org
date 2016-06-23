@@ -1219,6 +1219,11 @@ Applab.encodedFeedbackImage = '';
  * @param {ApplabInterfaceMode} mode
  */
 function onInterfaceModeChange(mode) {
+  Applab.setWorkspaceMode(mode);
+
+  var showDivApplab = (mode !== ApplabInterfaceMode.DESIGN);
+  Applab.toggleDivApplab(showDivApplab);
+
   if (mode === ApplabInterfaceMode.DESIGN) {
     studioApp.resetButtonClick();
   } else if (mode === ApplabInterfaceMode.CODE) {
@@ -1233,6 +1238,25 @@ function onInterfaceModeChange(mode) {
     }
   }
 }
+
+/**
+ * Display the workspace corresponding to the specified mode.
+ * @param {ApplabInterfaceMode} mode
+ */
+Applab.setWorkspaceMode = function (mode) {
+  var enable = (ApplabInterfaceMode.DESIGN === mode);
+  var designWorkspace = document.getElementById('designWorkspace');
+  // TODO(dave): remove unneeded designWorkspace existence check
+  if (!designWorkspace) {
+    // Currently we don't run design mode in some circumstances (i.e. user is
+    // not an admin)
+    return;
+  }
+  designWorkspace.style.display = enable ? 'block' : 'none';
+
+  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
+  codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
+};
 
 /**
  * Show a modal dialog with a title, text, and OK and Cancel buttons

@@ -41,11 +41,6 @@ designMode.setupReduxSubscribers = function (store) {
         state.screens.currentScreenId !== lastState.screens.currentScreenId) {
       renderScreens(state.screens.currentScreenId);
     }
-
-    if (!lastState ||
-        state.interfaceMode !== lastState.interfaceMode) {
-      onInterfaceModeChange(state.interfaceMode);
-    }
   });
 };
 
@@ -635,22 +630,6 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
     elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
   });
 };
-
-function onInterfaceModeChange(mode) {
-  var enable = (ApplabInterfaceMode.DESIGN === mode);
-  var designWorkspace = document.getElementById('designWorkspace');
-  if (!designWorkspace) {
-    // Currently we don't run design mode in some circumstances (i.e. user is
-    // not an admin)
-    return;
-  }
-  designWorkspace.style.display = enable ? 'block' : 'none';
-
-  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
-  codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
-
-  Applab.toggleDivApplab(!enable);
-}
 
 /**
  * When we make elements resizable, we wrap them in an outer div. Given an outer
