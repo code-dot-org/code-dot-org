@@ -671,10 +671,13 @@ SQL
   end
 
   def advertised_scripts
-    [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script, Script.flappy_script,
-     Script.playlab_script, Script.artist_script, Script.course1_script, Script.course2_script,
-     Script.course3_script, Script.course4_script, Script.twenty_hour_script, Script.starwars_script,
-     Script.starwars_blocks_script, Script.minecraft_script]
+    [
+      Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
+      Script.flappy_script, Script.playlab_script, Script.artist_script,
+      Script.course1_script, Script.course2_script, Script.course3_script,
+      Script.course4_script, Script.twenty_hour_script, Script.starwars_script,
+      Script.starwars_blocks_script, Script.minecraft_script
+    ]
   end
 
   def in_progress_and_completed_scripts
