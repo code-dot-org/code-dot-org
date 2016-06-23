@@ -185,7 +185,7 @@ var TopInstructions = React.createClass({
     const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
 
     return Math.max(buttonHeight, minIconHeight, minInstructionsHeight) +
-      (this.props.collapsed ? 0 : RESIZER_HEIGHT) + margins;
+      RESIZER_HEIGHT + margins;
   },
 
   /**
