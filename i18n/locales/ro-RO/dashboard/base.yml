@@ -29,6 +29,8 @@ ro:
   unsubmit: Retrage
   previous_page: Previous page
   next_page: Pagina următoare
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Anulează
   okay: Bine
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
@@ -85,6 +87,7 @@ ro:
     teacher_title: Înregistrare Profesor
     student_pitch: Înscriere student la Code.org
     student_title: Înscriere student
+    signup_title: Sign up for Code.org
     school_name: Numele şcolii (opţional)
     school_address: Adresa şcolii (opţional)
     address_placeholder: adresă, oraş, județ, cod poștal
@@ -103,6 +106,9 @@ ro:
     student_terms: "Sunt de acord să respect <a href='http://code.org/tos'>termenii și condițiile</a> ale Code.org. Dacă am vârsta sub 13 ani, confirm prin trimiterea acestui formular că am permisiunea părintelui sau tutorelui legal de a utiliza serviciile Code.org.<br/>Pentru utilizatorii sub 13 ani, adresele de e-mail nu sunt stocate într-un formular care să ne permită să-i contactăm."
     teacher_terms: "Sunt de acord cu <a href='http://code.org/tos'>termenii și condițiile de utilizare</a> de la Code.org."
     additional_information: Mai avem nevoie de câteva informaţii adiționale pentru a te putea înscrie.
+    user_type_label: Account Type
+    user_type_teacher: Profesor
+    user_type_student: elev
   signin_form:
     title: Ai deja un cont? Conectează-te
     login: Email sau nume de utilizator
@@ -334,8 +340,9 @@ ro:
     print_certificate: Tipărește certificatul
     announcement_title: Anunțuri
     announcement_view_all: Vizualizare toate
-    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-    announcement_button: Află mai mult
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
   move_students:
@@ -686,9 +693,9 @@ ro:
   flex_category:
     required: Prezentare generală
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -703,3 +710,12 @@ ro:
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

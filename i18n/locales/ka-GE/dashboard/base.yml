@@ -29,6 +29,8 @@ ka:
   unsubmit: ჩაბარების გაუქმება
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: გაუქმება
   okay: კარგი
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
@@ -85,6 +87,7 @@ ka:
     teacher_title: მასწავლებლის რეგისტრაცია
     student_pitch: მოსწავლის რეგისტრაცია Code.org-ზე
     student_title: მოსწავლის რეგისტრაცია
+    signup_title: Sign up for Code.org
     school_name: სკოლის სახელი (არასავალდებულო)
     school_address: სკოლის მისამართი (არასავალდებულო)
     address_placeholder: მისამართი, ქალაქი, ინდექსი
@@ -103,6 +106,9 @@ ka:
     student_terms: "მე ვეთანხმები code.org-ის <a href='http://code.org/tos'>მომსახურების პირობებს</a>. თუ მე 13 წელზე უმცროსი ვარ, ვადასტურებ, რომ მაქვს ჩემი მშობლისა ან ლეგალური მეურვის ნებართვა code.org-ის გამოყენებაზე. <br/> 13 წელზე უმცროსი მომხმარებლების ელ.ფოსტის მისამართები არ ინახება ისეთი ფორმით, რომელიც მათთან დაკავშირების საშუალებას იძლევა."
     teacher_terms: "მე ვეთანხმები code.org-ის <a href='http://code.org/tos'>მომსახურების პირობებს</a>."
     additional_information: რეგისტრაციის გასაგრძელებლად გვჭირდება დამატებითი ინფორმაცია.
+    user_type_label: Account Type
+    user_type_teacher: მასწავლებელი
+    user_type_student: მოსწავლე
   signin_form:
     title: უკვე გაქვთ ანგარიში? შემოდით
     login: ელ.ფოსტა ან მომხმარებლის სახელი
@@ -335,7 +341,7 @@ ka:
     announcement_title: განცხადებები
     announcement_view_all: ყველას ნახვა
     announcement_message: '<b>2016 წლის 29 თებერვალი</b> - ვორქშოპის მონაწილეთა 90% ჩვენს პროგრამას აფასებს, როგორც საუკეთესოს პროფესიონალური ზრდისთვის. მოთხოვნის გამო, კომპიუტერული მეცნიერების პროფესიული შესწავლის პროგრამას რამდენიმე ადგილი დავამატეთ. დარეგისტრირდით <u>31 მარტამდე</u> და დაიკავეთ თქვენი ადგილი.'
-    announcement_button: გაიგეთ მეტი
+    announcement_button: Test the feature
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
   move_students:
@@ -686,9 +692,9 @@ ka:
   flex_category:
     required: მიმოხილვა
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -703,3 +709,12 @@ ka:
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

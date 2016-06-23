@@ -28,8 +28,10 @@
   see_your_learning_plan: See your learning plan
   submit: Elküldés
   unsubmit: Visszavon
-  previous_page: Previous page
+  previous_page: Előző oldal
   next_page: Következő oldal
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Mégsem
   okay: Oké
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -95,6 +97,7 @@
     teacher_title: Tanár regisztrálás
     student_pitch: Diák fiók létrehozása a Code.org-on
     student_title: Diák regisztráció
+    signup_title: Sign up for Code.org
     school_name: Iskola neve (nem kötelező)
     school_address: Iskola címe (nem kötelező)
     address_placeholder: cím, város, állam(megye), irányítószám
@@ -118,6 +121,9 @@
     teacher_terms: Beleegyezem a Code.org <a href='http://code.org/tos'>Felhasználói
       szabályaiba</a>.
     additional_information: Még szükségünk van néhány adatra  a regisztráció folytatásához.
+    user_type_label: Account Type
+    user_type_teacher: Tanár
+    user_type_student: Diák
   signin_form:
     title: Már van felhasználói fiókod? Bejelentkezés
     login: E-mail cím vagy felhasználónév
@@ -397,7 +403,7 @@
       it's time to let your representatives hear from you. This week, education leaders,
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
+    announcement_petition_button: Add meg a nevedet
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -575,7 +581,7 @@
       body: Fedezd fel a Minecraft világát kódokkal.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: 4 éven fellülieknek
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
@@ -750,7 +756,7 @@
     share_copy_link: 'A hivatkozás másolása:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
-    embed: Embed
+    embed: Beágyaz
     advanced_share: Show advanced options
     close: Bezár
     more: Mégtöbb
@@ -807,11 +813,11 @@
           szabályoknak%{link_end} megfelelően kezeljük
   peer_review:
     accepted:
-      name: Accepted
+      name: Elfogad
       description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
         requirements"
     rejected:
-      name: Rejected
+      name: Elutasított
       description: "<strong>No</strong>, this submission <strong>does not meet</strong>
         the requirements"
     escalated:
@@ -826,14 +832,14 @@
       no_icons_found: Nem találhatók ikonok
     playzone:
       artist_description: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
-      artist_title: New Drawing
+      artist_title: "Új rajz"
       continue_button: Go on to the next Stage
       playlab_description: Hozz létre egy történetet vagy készíts egy játékot a Játéklaborral!
-      playlab_title: New App
+      playlab_title: "Új aplikáció"
       primary_header: Congratulations! You finished %{stageName}!
       projects_description: Revisit one of your existing projects.
       projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      secondary_header: Kérdezd meg a tanárod, hogy mit csinálj legközelebb
   flex_category:
     required: "Összefoglaló"
     content: Content
@@ -866,3 +872,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

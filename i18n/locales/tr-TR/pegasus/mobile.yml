@@ -528,13 +528,13 @@ tr-TR:
   dashboard_navigation_section_pd: Mesleki Gelişim
   dashboard_navigation_section_speakers: 'Bilgisayar Bilimi<br/>Davetli Konuşmacılar'
   dashboard_navigation_all_sections: Öğrenci hesapları ve ilerleme
-  dashboard_navigation_view_progress: İlerlemeyi Görüntüle
-  dashboard_navigation_view_text_responses: Yanıtları Görüntüle
+  dashboard_navigation_view_progress: İlerleme Durumu
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Değerlendirmeler
   dashboard_navigation_add_students: Öğrenci EKle
   dashboard_navigation_manage_students: Öğrencileri Yönet
   dashboard_navigation_lesson_plans_resources: Ders planları ve kaynaklar
-  dashboard_navigation_view_stats: İstatistikleri görüntüle
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Bölüm: %{section_name}'
   dashboard_navigation_student: 'Öğrenci: %{student_name}'
   dashboard_progress_not_started: Başlatılmadı
@@ -682,7 +682,7 @@ tr-TR:
   dashboard_announcements: Bildirimler
   dashboard_announce_view_all: Tümünü Gör
   dashboard_announce_message: '<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde bir çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir.'
-  dashboard_announce_button_text: Daha fazlasını öğren
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Adınızı Ekleyin
   code_hoc_coming: 'Kod Saati burada - Aralık 8-14!'
@@ -804,6 +804,7 @@ tr-TR:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

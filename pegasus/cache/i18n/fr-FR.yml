@@ -721,7 +721,7 @@
   dashboard_navigation_section_speakers: Informatique/Sciences informatiques <br/>
     Conférenciers invités
   dashboard_navigation_all_sections: Comptes et progression de l'élève
-  dashboard_navigation_view_progress: Voir la progression
+  dashboard_navigation_view_progress: Progression
   dashboard_navigation_view_text_responses: Afficher les réponses écrites
   dashboard_navigation_view_assessments: "Évaluations"
   dashboard_navigation_add_students: Ajouter des élèves
@@ -1073,6 +1073,7 @@
   cspunit6_name: Principes de l'informatique, unité 6
   csp1_name: 'Unité 1: Internet'
   csp2_name: 'Unité 2: L’Information numérique'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Test complet - 50 questions
   cspexam1-mWU7ilDYM9_name: Test, partie 1, 25 questions
   cspexam2-AKwgAh1ac5_name: Test, partie 2, 25 questions

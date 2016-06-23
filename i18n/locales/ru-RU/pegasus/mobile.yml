@@ -4,8 +4,8 @@ ru-RU:
   "yes": Да
   "no": Нет
   select_language: Выберите язык
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org скоро удалит поддержку для Internet Explorer 8, 9 и 10. Выполните обновление до любого современного браузера.
+  upgrade_ie_message_csedweek: CSEdWeek.org скоро удалит поддержку для Internet Explorer 8, 9 и 10. Выполните обновление до любого современного браузера.
   upgrade_ie_link: Узнать больше
   en: Информатика
   computer_science_edweek: Неделя информатики
@@ -503,13 +503,13 @@ ru-RU:
   dashboard_navigation_section_pd: Профессиональная разработка
   dashboard_navigation_section_speakers: 'Информатика <br/> Приглашенные лекторы'
   dashboard_navigation_all_sections: Учетные записи и успехи ученика
-  dashboard_navigation_view_progress: Просмотр хода выполнения
-  dashboard_navigation_view_text_responses: Просмотр текстовых ответов
+  dashboard_navigation_view_progress: Прогресс
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: оценки
   dashboard_navigation_add_students: Добавить учеников
   dashboard_navigation_manage_students: Управление учениками
   dashboard_navigation_lesson_plans_resources: Планы уроков и ресурсы
-  dashboard_navigation_view_stats: Статистика
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Раздел: %{section_name}'
   dashboard_navigation_student: 'Ученик: %{student_name}'
   dashboard_progress_not_started: не начато
@@ -655,7 +655,7 @@ ru-RU:
   dashboard_announcements: Объявления
   dashboard_announce_view_all: Посмотреть все
   dashboard_announce_message: "Мы начали измерять уровень обучения студентов на курсах 1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a href='%{tagging_url}'> отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'> изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты могут сделать? </i>"
-  dashboard_announce_button_text: Узнать больше
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: Как учитель вы лидер движения, чтобы дать каждому студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло время, чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28 губернаторов и а также руководители крупнейших компаний Америки объединились в открытом письме к Конгрессу США финансировать K-12 образовательную программу компьютерной науки.
   dashboard_announce_petition_button: Добавьте ваше имя
   code_hoc_coming: '"Час кода" наступает  8-14 декабря!'
@@ -775,6 +775,7 @@ ru-RU:
   cspunit6_name: CS принципы блок 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
@@ -940,7 +941,7 @@ ru-RU:
   projguts_shortdescription: 'Попробуйте моделирование с помощью игры "Камень - ножницы - бумага"'
   hourofcode_shortdescription: Учитесь программировать с Марком Цукербергом и Angry Birds!
   frozen_shortdescription: Давайте использовать код, чтобы присоединиться к Анне и Эльзе, открывающим магию и красоту льда.
-  starwars_shortdescription: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
+  starwars_shortdescription: Научись программировать роботов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
   playlab_shortdescription: Создай историю или игру с Лабораторией игр!
   infinity_shortdescription: Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.
   artist_shortdescription: Рисуйте картины и узоры вместе с Художником!

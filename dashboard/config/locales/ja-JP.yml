@@ -29,6 +29,8 @@
   unsubmit: "取り消す"
   previous_page: "前のページ"
   next_page: "次のページ"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "キャンセル"
   okay: "オッケー"
   heading_x_of_y: "%{heading} (%{y} ページ中 %{x} ページ目)"
@@ -86,6 +88,7 @@
     teacher_title: "先生としてサインアップする"
     student_pitch: "生徒としてCode.orgにサインアップする"
     student_title: "生徒のサインアップ"
+    signup_title: Sign up for Code.org
     school_name: "学校名 （オプション）"
     school_address: "学校の住所（オプション）"
     address_placeholder: "住所、市、県、郵便番号"
@@ -105,6 +108,9 @@
       の方に確認をもらって Code.org のサービスを使用します。あなたが13歳より年下なら、あなたのメールアドレスはこちらからの連絡に使われることはありません。
     teacher_terms: Code.org <a href='http://code.org/tos'> サービス利用規約</a> を守ることに同意します。
     additional_information: "サインアップを続けるために、私たちはさらにいくつかの情報が必要です。"
+    user_type_label: Account Type
+    user_type_teacher: "先生"
+    user_type_student: "生徒"
   signin_form:
     title: "すでにアカウントをお持ちですか？サインイン"
     login: "メールまたはユーザー名"
@@ -784,3 +790,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

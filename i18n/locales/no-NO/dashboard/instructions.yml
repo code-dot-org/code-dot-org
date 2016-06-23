@@ -144,6 +144,10 @@ nn:
       2-3 Maze 12 (copy 1)_instruction: 'Kan du erstatte førre svar med berre to blokkar? (Hint: Lag ei løkke ved å bruke "gjenta gongar" blokken.)'
       2-3 Maze 12 (copy 2)_instruction: 'Kan du erstatte førre svar med berre to blokkar? (Hint: Lag ei løkke ved å bruke "gjenta gongar" blokken.)'
       2-3 Maze 12 (old)_instruction: 'Få meg til grisen ved å bruke "Gjenta gongar" blokken!'
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: 'Kan du erstatte desse fem blokkane med berre to blokkar? (Hint: Lag ei løkke ved å bruke ein "gjenta gongar" blokk.)'
       2-3 Maze 13 (old)_instruction: 'Få meg til grisen ved å bruke "Gjenta til" blokken!'
       2-3 Maze 13_instruction: Få meg til grisen ved å berre bruke to blokkar.
@@ -366,16 +370,22 @@ nn:
       4-5 While Loops 7_instruction: Wow, nå er det tre haugar med jord. Klarar du til å skrive eit program som fjernar alle saman slik at bakken blir heilt jamn?
       4-5 While Loops 8_instruction: ' Det er eit verkeleg djupt hol og ein verkeleg stor haug med jord. Kor mange spadetak må tas for å gjere bakken heilt flat. Tips: bruk ei medan-løkke for begge to.'
       4-5 While Loops Assessment 1_instruction: Det er mange hol og haugar. Hjelp meg å fylle og fjerne dei slik at bakken blir heilt jamn.
-      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na square with 20 pixel sides. "
       aE2_instruction: |
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
-        all 15 squares line up next to each other?
-      aE3_instruction: |
-        Now let's go one level deeper! We've nested that whole
-        block of code into another loop, but you need to get the artist back in place
-        to draw the next line. Which of these code blocks can you place at the end
-        of the outermost loop to draw the whole grid?
+        all 14 napkins line up next to each other?
+      aE3_instruction: "We've got to have a tablecloth!  \\r\n\\r\nTake your row of\n14 napkins and sew 14 of those together with another **outer loop** to make\na cover for our table."
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: |
+        How many times do you need to loop this to draw half  of
+        a circle? 
+      aE7_instruction: "If you create another loop like this one, but turn left instead\nof right, what happens? \\r\n\\r\nCan you repeat all of that to draw this wave?"
+      aE8_instruction: "Now let's loop that whole thing four times to create this\npicture frame. Watch out for the corners - you can't just turn 90 degrees!\n\\r\n\\r\nIf looping a 3 degree turn 60 times makes a half circle, which of\nthese blocks of code will make an additional quarter circle for the corners?"
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -448,6 +458,10 @@ nn:
       Artist - Nested Loops Assessment 1_instruction: Bruk ei løkke i løkke for å fullføre designet.
       Auto Open Function Editor_instruction: 'Du kan kalle funksjonar frå innsida av andre funksjonar. Bruk "Form"-funksjonen din som utgangspunkt, og lag tre husformer. Det første kan vere 50 pikslar langt, medan dei andre aukar med 20 pikslar for kvar gong. Å nytte ei teljeløkke kan vere ein god idé.'
       Bee Recommended Blocks test_instruction: 'Lilla blomar har anten 1 eller 0 nektar, men du veit ikkje kva blome? Pass på at du ikkje prøver å samle inn nektar frå blomar som ikkje har nektar. Sjekk om nektar er lik 1 ved å bruke ein "viss" blokk.'
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
+        
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1187,6 +1201,7 @@ nn:
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -1786,7 +1801,15 @@ nn:
       K-1 Maze Multi 15_instruction: Oppgåvenivå
       K-1 Maze Sequence Assessment 1_instruction: "Dette er en test!\\r\nFlytt ein veig og så ein annan veg for å få meg bort til grisen"
       K-1 Maze Sequence Assessment 2_instruction: "Dette er en test!\\r\nFlytt ein veg, og så ein annan veg for å få meg bort til grisen."
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -1828,7 +1851,11 @@ nn:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      Mike Pair Programming_instruction: Here are the instructions
       MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
@@ -2036,7 +2063,6 @@ nn:
       NEW Course 4 Play Labs For Loops 7a_instruction: Bruk det du har lært så langt. Kan du få Dinosaur til å ta eit skritt fram kvar gong Penguin tel?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Det er fri speletid! Ha det gøy med alle blokkane i verktøykassen din. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Utfordring: Korleis vil du bruke "for" blokken til å få alle figurane til å gå rundt og seie figurnummeret sitt, for deretter å forsvinne frå skjermen?'
-      New Play Lab Project_instruction: Lag din eige historie eller spel. Koden din blir lagra som eit prosjekt som du kan komme tilbake til når som helst.
       Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,

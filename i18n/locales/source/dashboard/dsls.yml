@@ -91,14 +91,14 @@ en:
         I will make them learn from peers: I will make them learn from peers
         I will make them write: I will make them write
       TeacherCon Eval Q1:
-        'U1L10: Routing and Redundancy': 'U1L10: Routing and Redundancy'
-        'U1L11: Packets and Making a Reliable Internet': 'U1L11: Packets and Making a Reliable Internet'
-        'U1L4: Number Systems - Circle Triangle Square': 'U1L4: Number Systems - Circle Triangle Square'
-        'U1L6: Sending Numbers': 'U1L6: Sending Numbers'
-        'U1L9: Internet Addressing (Battleship)': 'U1L9: Internet Addressing (Battleship)'
-        'U2L10: Good and Bad Data Visualization': 'U2L10: Good and Bad Data Visualization'
-        'U2L2: Text Compression': 'U2L2: Text Compression'
-        'U2L3: Black and White Pixelation': 'U2L3: Black and White Pixelation'
+        '1.10: Routing and Redundancy': '1.10: Routing and Redundancy'
+        '1.11: Packets and Making a Reliable Internet': '1.11: Packets and Making a Reliable Internet'
+        '1.4: Number Systems - Circle Triangle Square': '1.4: Number Systems - Circle Triangle Square'
+        '1.6: Sending Numbers': '1.6: Sending Numbers'
+        '1.9: Internet Addressing (Battleship)': '1.9: Internet Addressing (Battleship)'
+        '2.10: Good and Bad Data Visualization': '2.10: Good and Bad Data Visualization'
+        '2.2: Text Compression': '2.2: Text Compression'
+        '2.3: Black and White Pixelation': '2.3: Black and White Pixelation'
         What lesson are you planning and teaching at TeacherCon?: What lesson are you planning and teaching at TeacherCon?
       TeacherCon Eval Q2:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
@@ -118,12 +118,12 @@ en:
         'Having students work in small groups ': 'Having students work in small groups '
         What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
       TeacherCon Eval Q7:
-        How comfortable would you say you are with gauging when to reteach material with your students?: How comfortable would you say you are with gauging when to reteach material with your students?
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
         Not comfortable: Not comfortable
         Very comfortable: Very comfortable
       TeacherCon Evaluation Q4:
         Answer it yourself: Answer it yourself
-        PUt the question to the other students in the classroom: PUt the question to the other students in the classroom
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
       AlgPD Break:
@@ -146,12 +146,22 @@ en:
       CSD - Headers and Lists - Recipe Project: {}
       CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
+      CSD U3 - complex conditionals - SFLP: {}
       CSD U3 - images - pick your final work: {}
+      CSD U3 -conditionals - stop booleans: {}
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Keypress Stop: {}
+      CSD U3 SFLP Card Project: {}
+      CSD U3 SFLP Conditionals:
+        description here: description here
+        title: title
+      CSD U3 SFLP Sprites and Images:
+        description here: description here
+        title: title
+      CSD U3 Sprites STOP sprites and variables: {}
       CSD U3 Variables Reassign Predict No Response: {}
       CSD U3 Variables STOP misconceptions: {}
       CSD U3 Variables STOP misconceptions prediction: {}
@@ -1638,6 +1648,22 @@ en:
         Exploring StarLogo Nova Advanced Features: Exploring StarLogo Nova Advanced Features
       sciPD2 StarLogoNova:
         Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed2a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed2b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed3a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed3b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed4a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed4b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed4c:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed4d:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
       sciPD2 camera:
         Changing Camera View: Changing Camera View
       sciPD2 challenge:
@@ -1770,6 +1796,9 @@ en:
         bee leaves: bee leaves
       storyline5:
         wrapup: wrapup
+      test cb level:
+        description here: description here
+        test cb level: test cb level
       test demo level:
         demo description: demo description
         demo title: demo title
@@ -1869,6 +1898,10 @@ en:
         title: title
       v2 U3L01 Student Lesson Introduction:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      v2 U3L02 Student Lesson Introduction:
+        The Need for Algorithms: The Need for Algorithms
+      v2 U3L03 Student Lesson Introduction:
+        Creativity in Algorithms: Creativity in Algorithms
       v2 U3L04 Student Lesson Introduction:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       v2 U3L05 Student Lesson Introduction:
@@ -1892,6 +1925,7 @@ en:
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
         Sample CSP Assessment: {}
+        TeacherCon Self-Assessment: {}
         TeacherCon Unit 1 Assessment: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
@@ -2051,6 +2085,19 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U3 - conditionals - Matching:
+        Is the width of dog sprite greater than the width of cat sprite?: Is the width of dog sprite greater than the width of cat sprite?
+        Is the width of dog sprite less than the width of cat sprite?: Is the width of dog sprite less than the width of cat sprite?
+        Is the x of the dog sprite equal to the x of the cat sprite?: Is the x of the dog sprite equal to the x of the cat sprite?
+        Is the x of the dog sprite greater than the x of the cat sprite?: Is the x of the dog sprite greater than the x of the cat sprite?
+        Is the x of the dog sprite less than the x of the cat sprite?: Is the x of the dog sprite less than the x of the cat sprite?
+        Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
+        'Matching: Comparison Operators': 'Matching: Comparison Operators'
+        dog.width &gt; cat.width: dog.width &gt; cat.width
+        dog.width &lt; cat.width: dog.width &lt; cat.width
+        dog.x &gt; cat.x: dog.x &gt; cat.x
+        dog.x &lt; cat.x: dog.x &lt; cat.x
+        dog.x == cat.x: dog.x == cat.x
       CSD U3 Counters match trial:
         ? "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
@@ -3957,6 +4004,18 @@ en:
         red: red
         teal: teal
         yellow: yellow
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+        Contained Multi: Contained Multi
+        Here is some information.: Here is some information.
+        No, that is 1 * 1.: No, that is 1 * 1.
+        No, that is 1 - 1.: No, that is 1 - 1.
+        No, that is not even close.: No, that is not even close.
+        What is 1 + 1?: What is 1 + 1?
+        Yes, you are a genius!: Yes, you are a genius!
       U1L07 Assessment 1:
         A: A
         B: B

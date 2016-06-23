@@ -30,6 +30,8 @@
   unsubmit: Unsubmit
   previous_page: "Նախորդ էջ"
   next_page: "Հաջորդ էջ"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "վերացնել"
   okay: "Լավ"
   heading_x_of_y: "% {Վերնագիր} (էջ% {x} անձնագիրը% {y})"
@@ -95,6 +97,7 @@
     teacher_title: "Ուսուցիչը ստորագրել է"
     student_pitch: "Ուսանողական գրանցվել է Code.org"
     student_title: "Ուսանողական ստորագրել է"
+    signup_title: Sign up for Code.org
     school_name: School Անուն (ըստ ցանկության)
     school_address: "Դպրոցը հասցեն (ըստ ցանկության)"
     address_placeholder: "հասցեն, քաղաք, պետություն, փոստային"
@@ -120,6 +123,9 @@
       Ծառայությունների մատուցման պայմանները </a>:"
     additional_information: "Մենք պետք է որոշ լրացուցիչ տեղեկություններ է շարունակել
       ստորագրման ձեզ."
+    user_type_label: Account Type
+    user_type_teacher: Teacher
+    user_type_student: "Աշակերտ"
   signin_form:
     title: "Ունենա հաշիվ արդեն. Մուտք գործել"
     login: "Էլեկտրոնային փոստով կամ մասնակցի անուն"
@@ -283,7 +289,7 @@
       district_dashboard: District Dashboard
       label: Hi% {Մականուն}
       stats: My progress
-      settings: "Իմ հաշիվը"
+      settings: "Իմ էջը"
       prizes: "մրցանակներ"
       logout: "Դուրս գալ"
       signin: "Մուտք գործել"
@@ -292,7 +298,7 @@
     popup:
       progress_for_user: "% {Name} - ի առաջընթացը"
       progress: "Ձեր առաջընթացը"
-      lines: "Ընդամենը տողերը օրենսգրքի '% {գծեր}"
+      lines: "Ընդհանուր կոդի տողերի քանակի: %{lines}"
       close: "ՓԱԿԵԼ"
       mastery: Concepts
       puzzle_map: "փուլերը"
@@ -370,7 +376,7 @@
     local_school: "տեղական դպրոց"
     online: "առցանց"
     see_details: "Տես մանրամասները"
-    view_course: "Դիտել Դասընթացի"
+    view_course: "Դիտել դասընթացը"
     prize_info: "Մրցանակներ մասնակցության (ԱՄՆ հանրակրթական դպրոցների ուսուցիչների
       միայն) 'մինչեւ $ 1,000 դասարանում պարգեւներով."
     tryfirst: "Կամ, Դուք կարող եք փորձել այն առաջին, եւ ստորագրել մինչեւ ուշ:"
@@ -515,7 +521,7 @@
   next_stage: "Ավարտել է! Շարունակել է հաջորդ փուլ"
   download_pdf: "Բաց դաս Plan"
   lesson_plan: "Դաս Plan"
-  view_lesson_plan: "Դիտել Դաս Plan"
+  view_lesson_plan: "Դիտել դասի պլանը"
   pdf_download: "Բեռնել PDF"
   download_coming_soon: "Բեռնվող գործունեության շուտով:"
   video_coming_soon: "Վիդեո Շուտով!"
@@ -878,3 +884,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

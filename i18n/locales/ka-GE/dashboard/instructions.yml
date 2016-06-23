@@ -146,6 +146,10 @@ ka:
       2-3 Maze 12 (copy 1)_instruction: 'შეგიძლიათ წინა პასუხი მხოლოდ ორი ბლოკით შეცვალოთ? (მინიშნება: შექმენით ციკლი "გამეორება" ბლოკის გამოყენებით.)'
       2-3 Maze 12 (copy 2)_instruction: 'შეგიძლიათ წინა პასუხი მხოლოდ ორი ბლოკით შეცვალოთ? (მინიშნება: შექმენით ციკლი "გამეორება" ბლოკის გამოყენებით.)'
       2-3 Maze 12 (old)_instruction: მიმიყვანეთ გოჭთან, ახლა უკვე გამეორების ბლოკის გამოყენებით!
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: 'შეგიძლიათ მიხვიდეთ გოჭამდე ისეთი ციკლის შექმნით, რომელიც მხოლოდ ერთ "წინ გადაადგილების" ბლოკს იყენებს გამეორებაში?'
       2-3 Maze 13 (old)_instruction: 'მიმიყვანეთ გოჭთან, ახლა "გაიმეორე სანამ" ბლოკით!'
       2-3 Maze 13_instruction: მიმიყვანეთ გოჭთან მხოლოდ ორი ბლოკით.
@@ -360,16 +364,22 @@ ka:
       4-5 While Loops 7_instruction: ოჰო, ახლა აქ მიწის სამი გროვაა! შეგიძლიათ დაწეროთ პროგრამა, რომელიც თითოეულ მათგანს მოაშორებს ისე, რომ მიწა გათანაბრდეს?
       4-5 While Loops 8_instruction: ' მოცემულია ძალიან ღრმა ორმო და მიწის ძალიან დიდი გროვა. რამდენი ნიჩაბი მიწის გადაადგილება იქნება საჭირო მიწის გასათანაბრებლად? მინიშნება: ორივესთვის გამოიყენეთ "სანამ" ციკლი.'
       4-5 While Loops Assessment 1_instruction: 'ახლა აქ ბევრი ორმო და გროვაა.  დამეხამარეთ მათ გავსებასა და მოშორებაში, რომ მიწა ბრტყელი გახდეს.'
-      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na square with 20 pixel sides. "
       aE2_instruction: |
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
-        all 15 squares line up next to each other?
-      aE3_instruction: |
-        Now let's go one level deeper! We've nested that whole
-        block of code into another loop, but you need to get the artist back in place
-        to draw the next line. Which of these code blocks can you place at the end
-        of the outermost loop to draw the whole grid?
+        all 14 napkins line up next to each other?
+      aE3_instruction: "We've got to have a tablecloth!  \\r\n\\r\nTake your row of\n14 napkins and sew 14 of those together with another **outer loop** to make\na cover for our table."
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: |
+        How many times do you need to loop this to draw half  of
+        a circle? 
+      aE7_instruction: "If you create another loop like this one, but turn left instead\nof right, what happens? \\r\n\\r\nCan you repeat all of that to draw this wave?"
+      aE8_instruction: "Now let's loop that whole thing four times to create this\npicture frame. Watch out for the corners - you can't just turn 90 degrees!\n\\r\n\\r\nIf looping a 3 degree turn 60 times makes a half circle, which of\nthese blocks of code will make an additional quarter circle for the corners?"
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -442,6 +452,10 @@ ka:
       Artist - Nested Loops Assessment 1_instruction: დიზაინის დასამთავრებლად გამოიყენეთ ჩასმული ციკლი.
       Auto Open Function Editor_instruction: 'შეგიძლიათ ფუნქციები სხვა ფუნქციებიდან გამოიძახოთ! გამოიყენეთ ფუნქცია "ფიგურა" საფუძვლად, შექმენით 3 სახლის ფიგურა, თითოეული წინაზე 20 პიქსელით დიდი, დაწყებული 50 პიქსელი სიგრძით. შეიძლება მთვლელის ციკლის გამოყენება გამოგადგეთ. '
       Bee Recommended Blocks test_instruction: 'იისფერ ყვავილებს აქვთ 1 ან 0 ნექტარი, მაგრამ თქვენ არ იცით, რომელს რამდენი აქვს. ფრთხილად - არ მოკრიბოთ ნექტარი ისეთი ყვავილისგან, რომელიც მას არ შეიცავს. "თუ" ბლოკით შეამოწმეთ, შეიცავს თუ არა ყვავილი ნექტარს.'
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
+        
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1189,6 +1203,7 @@ ka:
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -1788,7 +1803,15 @@ ka:
       K-1 Maze Multi 15_instruction: შეფასების დონე
       K-1 Maze Sequence Assessment 1_instruction: "აბა, ვნახოთ, რა ისწავლეთ!\\r\nგადაადგილდით ერთი მიმართულებით, შემდეგ კი მეორე მიმართულებით და მიმიყვანეთ გოჭთან."
       K-1 Maze Sequence Assessment 2_instruction: გადაადგილდით ერთი მიმართულებით, შემდეგ კი მეორე მიმართულებით და მიმიყვანეთ გოჭთან.
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -1830,7 +1853,11 @@ ka:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      Mike Pair Programming_instruction: Here are the instructions
       MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
@@ -2040,7 +2067,6 @@ ka:
       NEW Course 4 Play Labs For Loops 7a_instruction: უკვე მიღებული ცოდნოს გამოყენებით, გადაადგმევინეთ დინოზავრს ნაბიჯი ყოველ ჯერზე, როცა პინგვინი დაითვლის?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'თავისუფალი თამაშის დროა, გამოიყენეთ ყველა ბლოკი თქვენი ინსტრუმენტების ყუთიდან და გაერთეთ. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'გამოწვევა: როგორ გამოიყენებდით "მიზნისთვის" ციკლს, რომ ყველა მსახიობი აამოძრავოთ, საკუთარი ნომერი ათქმევინოთ და შემდეგ გააქროთ ეკრანიდან? '
-      New Play Lab Project_instruction: შექმენით თქვენი ისტორია ან თამაში! თქვენი კოდი ინახება როგორც პროექტი, რომელსაც ნებისმიერ დროს შეგიძლიათ დაუბრუნდეთ.
       Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
