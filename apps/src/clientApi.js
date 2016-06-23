@@ -1,8 +1,6 @@
 // TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 import queryString from 'query-string';
 
-const COLLECTION_TYPE = Symbol('collectionType');
-
 function apiPath(endpoint, channelId, path) {
   var base = `/v3/${endpoint}/${channelId}`;
   if (path) {
@@ -31,11 +29,11 @@ function ajaxInternal(method, path, success, error, data) {
 
 class CollectionsApi {
   constructor(collectionType) {
-    this[COLLECTION_TYPE] = collectionType;
+    this.collectionType = collectionType;
   }
 
   basePath(path) {
-    return apiPath(this[COLLECTION_TYPE], window.dashboard.project.getCurrentId(), path);
+    return apiPath(this.collectionType, window.dashboard.project.getCurrentId(), path);
   }
 
   ajax(method, file, success, error, data) {
