@@ -174,7 +174,7 @@ module LevelsHelper
 
     view_options(is_channel_backed: true) if @level.channel_backed?
 
-    post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
+    post_milestone = @script ? Gatekeeper.allows?('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
 
     @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
@@ -327,25 +327,25 @@ module LevelsHelper
     if script && script_level && app_options[:showUnusedBlocks] != false
 
       # puzzle-specific
-      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+      enabled = Gatekeeper.allows?('showUnusedBlocks', where: {
         script_name: script.name,
         stage: script_level.stage.position,
         puzzle: script_level.position
       }, default: nil)
 
       # stage-specific
-      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+      enabled = Gatekeeper.allows?('showUnusedBlocks', where: {
         script_name: script.name,
         stage: script_level.stage.position,
       }, default: nil) if enabled.nil?
 
       # script-specific
-      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+      enabled = Gatekeeper.allows?('showUnusedBlocks', where: {
         script_name: script.name,
       }, default: nil) if enabled.nil?
 
       # global
-      enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
+      enabled = Gatekeeper.allows?('showUnusedBlocks', default: true) if enabled.nil?
 
       app_options[:showUnusedBlocks] = enabled
     end

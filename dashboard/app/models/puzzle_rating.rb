@@ -30,9 +30,9 @@ class PuzzleRating < ActiveRecord::Base
 
   def PuzzleRating.enabled?(script = nil)
     if script
-      Gatekeeper.allows('puzzle_rating', where: { script_name: script.name }, default: true)
+      Gatekeeper.allows?('puzzle_rating', where: { script_name: script.name }, default: true)
     else
-      Gatekeeper.allows('puzzle_rating', default: true)
+      Gatekeeper.allows?('puzzle_rating', default: true)
     end
   end
 

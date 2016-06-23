@@ -1,4 +1,4 @@
-- if @script && Gatekeeper.allows('requires_hoc_secret', where: {script_name: @script.name})
+- if @script && Gatekeeper.allows?('requires_hoc_secret', where: {script_name: @script.name})
   :javascript
     //<![CDATA[
     if (CryptoJS.MD5(localStorage.getItem('hoc_secret')).toString() !=

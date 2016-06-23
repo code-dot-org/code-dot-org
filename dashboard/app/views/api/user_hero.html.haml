@@ -21,7 +21,7 @@
             .flex_item{style: 'width: 50%'}
               = link_to course_path(course_enrollment.plc_course.name.downcase.sub(' ', '-')) do
                 %button.primary{class: 'teacherdashboard', style: "margin-left: 20px;"}= t('see_your_learning_plan')
-    - if Gatekeeper.allows('logged_in_studio_hero', default: true)
+    - if Gatekeeper.allows?('logged_in_studio_hero', default: true)
       #body{class: role_class}
         - script = current_user.primary_script
         - if script

@@ -210,13 +210,13 @@ module ApplicationHelper
 
   # Check to see if we disabled signin from Gatekeeper
   def signin_button_enabled
-    Gatekeeper.allows('show_signin_button', where: { script_name: @script.try(:name) }, default: true)
+    Gatekeeper.allows?('show_signin_button', where: { script_name: @script.try(:name) }, default: true)
   end
 
   # Check to see if the tracking pixel is enabled for this script
   def tracking_pixel_enabled
     return true if @script.nil?
-    Gatekeeper.allows('tracking_pixel_enabled', where: { script_name: @script.name }, default: true)
+    Gatekeeper.allows?('tracking_pixel_enabled', where: { script_name: @script.name }, default: true)
   end
 
   def page_mode
