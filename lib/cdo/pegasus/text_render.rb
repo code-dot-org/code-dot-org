@@ -19,7 +19,7 @@ module TextRender
       basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
 
       search_bases = []
-      search_bases << sites_dir(@locals[:request].site, 'images', 'avatars', basename) if @locals.has_key?(:request)
+      search_bases << sites_dir(@locals[:request].site, 'images', 'avatars', basename) if @locals.key?(:request)
       search_bases << sites_dir('all', 'images', 'avatars', basename)
 
       search_extnames = ['.png','.jpeg','.jpg','.gif']
@@ -34,8 +34,8 @@ module TextRender
       locals = @locals.merge(locals)
 
       search_bases = []
-      search_bases << File.join(locals[:partials_dir], uri) if locals.has_key?(:partials_dir)
-      search_bases << sites_dir(locals[:request].site, 'views', uri) if locals.has_key?(:request)
+      search_bases << File.join(locals[:partials_dir], uri) if locals.key?(:partials_dir)
+      search_bases << sites_dir(locals[:request].site, 'views', uri) if locals.key?(:request)
       search_bases << sites_dir('all', 'views', uri)
 
       search_extnames = ['.haml', '.html', '.md', '.txt']

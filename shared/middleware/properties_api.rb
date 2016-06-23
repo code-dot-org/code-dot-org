@@ -125,7 +125,7 @@ class PropertiesApi < Sinatra::Base
     json_data.each do |k, v|
       if !overwrite
         bag_hash ||= bag.to_hash
-        next if bag_hash.has_key? k
+        next if bag_hash.key? k
       end
       bag.set(k, v, request.ip)
     end

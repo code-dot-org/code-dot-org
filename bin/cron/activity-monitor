@@ -96,13 +96,13 @@ class Collater
   end
 
   def insert(level, tag, browser, locale)
-    @results[:browsers][browser] = {} unless @results[:browsers].has_key?(browser)
-    @results[:browsers][browser][level] = {starts: 0, finishes: 0} unless @results[:browsers][browser].has_key?(level)
+    @results[:browsers][browser] = {} unless @results[:browsers].key?(browser)
+    @results[:browsers][browser][level] = {starts: 0, finishes: 0} unless @results[:browsers][browser].key?(level)
     @results[:browsers][browser][level][:starts] += 1 if tag == :activity_start
     @results[:browsers][browser][level][:finishes] += 1 if tag == :activity_finish
 
-    @results[:locales][locale] = {} unless @results[:locales].has_key?(locale)
-    @results[:locales][locale][level] = {starts: 0, finishes: 0} unless @results[:locales][locale].has_key?(level)
+    @results[:locales][locale] = {} unless @results[:locales].key?(locale)
+    @results[:locales][locale][level] = {starts: 0, finishes: 0} unless @results[:locales][locale].key?(level)
     @results[:locales][locale][level][:starts] += 1 if tag == :activity_start
     @results[:locales][locale][level][:finishes] += 1 if tag == :activity_finish
   end
