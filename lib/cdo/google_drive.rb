@@ -2,7 +2,6 @@ require 'google_drive'
 require 'cdo/hip_chat'
 
 module Google
-
   class Drive
 
     class File
@@ -13,19 +12,19 @@ module Google
         $log.debug "Google Drive file opened (key: #{@file.key})"
       end
 
-      def raw_file()
+      def raw_file
         @file
       end
 
-      def key()
+      def key
         @file.key
       end
 
-      def mtime()
+      def mtime
         @file.api_file.modifiedDate
       end
 
-      def spreadsheet()
+      def spreadsheet
         @session.spreadsheet_by_key(@file.key)
       end
 
@@ -37,7 +36,7 @@ module Google
       end
     end
 
-    def raw_session()
+    def raw_session
       @session
     end
 
@@ -93,5 +92,4 @@ module Google
     end
 
   end
-
 end

@@ -58,9 +58,9 @@ class DashboardStudent
       where(users__id: id, users__deleted_at: nil).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
       select(*fields,
-             :secret_pictures__name___secret_picture_name,
-             :secret_pictures__path___secret_picture_path,
-            ).
+        :secret_pictures__name___secret_picture_name,
+        :secret_pictures__path___secret_picture_path,
+      ).
       server(:default).
       first
 
@@ -101,7 +101,7 @@ class DashboardStudent
     age
   end
 
-  def self.fields()
+  def self.fields
     [
       :users__id___id,
       :users__name___name,
@@ -259,6 +259,10 @@ class DashboardSection
       raise
     end
 
+    if params[:course] && valid_course_id?(params[:course][:id])
+      DashboardUserScript.assign_script_to_user(params[:course][:id].to_i, params[:user][:id])
+    end
+
     row
   end
 
@@ -366,14 +370,14 @@ class DashboardSection
     !!students.index{|i| i[:id] == user_id}
   end
 
-  def students()
+  def students
     @students ||= Dashboard.db[:followers].
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
       select(Sequel.as(:student_user_id, :id),
-             *DashboardStudent.fields,
-             :secret_pictures__name___secret_picture_name,
-             :secret_pictures__path___secret_picture_path).
+        *DashboardStudent.fields,
+        :secret_pictures__name___secret_picture_name,
+        :secret_pictures__path___secret_picture_path).
       distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
@@ -390,7 +394,7 @@ class DashboardSection
     !!teachers.index{|i| i[:id] == user_id}
   end
 
-  def teachers()
+  def teachers
     @teachers ||= [{
       id: @row[:teacher_id],
       location: "/v2/users/#{@row[:teacher_id]}",
@@ -404,15 +408,15 @@ class DashboardSection
       first
   end
 
-  def to_owner_hash()
+  def to_owner_hash
     to_member_hash.merge(
-        course: course,
-        teachers: teachers,
-        students: students
+      course: course,
+      teachers: teachers,
+      students: students
     )
   end
 
-  def to_member_hash()
+  def to_member_hash
     {
         id: @row[:id],
         location: "/v2/sections/#{@row[:id]}",
@@ -420,6 +424,7 @@ class DashboardSection
         login_type: @row[:login_type],
         grade: @row[:grade],
         code: @row[:code],
+        stage_extras: @row[:stage_extras],
     }
   end
 
@@ -432,10 +437,12 @@ class DashboardSection
     fields[:name] = params[:name] unless params[:name].nil_or_empty?
     fields[:login_type] = params[:login_type] if valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if valid_grade?(params[:grade])
+    fields[:stage_extras] = params[:stage_extras]
 
     if params[:course] && valid_course_id?(params[:course][:id])
       fields[:script_id] = params[:course][:id].to_i
       DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
+      DashboardUserScript.assign_script_to_user(fields[:script_id], user_id)
     end
 
     rows_updated = Dashboard.db[:sections].
@@ -446,11 +453,12 @@ class DashboardSection
     fetch_if_allowed(section_id, user_id)
   end
 
-  def self.fields()
+  def self.fields
     [
       :sections__id___id,
       :sections__name___name,
       :sections__code___code,
+      :sections__stage_extras___stage_extras,
       :sections__login_type___login_type,
       :sections__grade___grade,
       :sections__script_id___script_id,
@@ -465,10 +473,24 @@ class DashboardUserScript
     # create userscripts for users that don't have one yet
     Dashboard.db[:user_scripts].
       insert_ignore.
-      import([:user_id, :script_id],
-             Dashboard.db[:followers].
-               select(:student_user_id, script_id.to_s).
-               where(section_id: section_id, deleted_at: nil))
+      import(
+        [:user_id, :script_id],
+        Dashboard.db[:followers].
+          select(:student_user_id, script_id.to_s).
+          where(section_id: section_id, deleted_at: nil)
+      )
+  end
+
+  def self.assign_script_to_user(script_id, user_id)
+    # creates a userscript for a user if they don't have it yet
+    Dashboard.db[:user_scripts].
+      insert_ignore.
+      import(
+        [:user_id, :script_id],
+        Dashboard.db[:users].
+          select(user_id, script_id.to_s).
+          where(id: user_id, deleted_at: nil)
+      )
   end
 
   def self.assign_script_to_users(script_id, user_ids)
@@ -476,6 +498,9 @@ class DashboardUserScript
     # create userscripts for users that don't have one yet
     Dashboard.db[:user_scripts].
       insert_ignore.
-      import([:user_id, :script_id], user_ids.zip([script_id] * user_ids.count))
+      import(
+        [:user_id, :script_id],
+        user_ids.zip([script_id] * user_ids.count)
+      )
   end
 end

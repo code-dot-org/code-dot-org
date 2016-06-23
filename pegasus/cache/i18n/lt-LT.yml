@@ -1,7 +1,14 @@
 "lt-LT":
   hour_of_code: "„Programavimo valanda“"
   hello: Sveikas, pasauli
+  'yes': Taip
+  'no': Ne
   select_language: Pasirinkite kalbą
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Sužinok daugiau
   en: Informatika
   computer_science_edweek: Programavimo švietimo savaitė
   csedweek_dates: 2014 m. gruodžio 8-14
@@ -696,6 +703,7 @@
   dashboard_sections_table_secret: Prisijungimo tipas
   dashboard_sections_table_grade: Klasė
   dashboard_sections_table_course: Kursas
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Mokiniai
   dashboard_sections_table_code: Grupės kodas
   dashboard_sections_name: Grupės pavadinimas
@@ -1702,11 +1710,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "žaisti"
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

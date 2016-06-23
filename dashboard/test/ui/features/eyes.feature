@@ -202,6 +202,7 @@ Examples:
   | http://learn.code.org/s/allthethings/stage/23/puzzle/1?noautoplay=true | star wars |
   | http://learn.code.org/s/allthethings/stage/23/puzzle/2?noautoplay=true | star wars blocks |
   | http://learn.code.org/s/allthethings/stage/24/puzzle/1?noautoplay=true | minecraft |
+  | http://learn.code.org/s/course1/stage/11/puzzle/1?noautoplay=true      | wordsearch level |
 
 @dashboard_db_access
 Scenario Outline: Logged in simple page view without instructions dialog

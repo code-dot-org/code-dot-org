@@ -119,7 +119,7 @@ def index_batch_of_forms(batch_size)
   documents.count
 end
 
-def main()
+def main
   limit = 1000
 
   process_batch_of_forms(limit)

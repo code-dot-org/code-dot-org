@@ -1,7 +1,14 @@
 "pl-PL":
   hour_of_code: Godzina kodowania (Hour of Code)
   hello: Witaj świecie
+  'yes': Tak
+  'no': Nie
   select_language: Wybierz język
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Ucz się więcej
   en: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
   csedweek_dates: 8-14 grudnia 2014
@@ -709,6 +716,7 @@
   dashboard_sections_table_secret: Typ logowania
   dashboard_sections_table_grade: Poziom/Ocena
   dashboard_sections_table_course: Kurs (lekcja)
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Uczniowie
   dashboard_sections_table_code: Kod Sekcji
   dashboard_sections_name: Nazwa Sekcji
@@ -1778,11 +1786,3 @@
   infinity_shortcode: inf
   playlab_shortcode: zagraj
   artist_shortcode: art
-  'yes': 'Yes'
-  'no': 'No'
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: Learn more
-  dashboard_sections_table_stage_extras: Stage Extras

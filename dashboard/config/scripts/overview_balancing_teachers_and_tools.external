@@ -1,7 +1,26 @@
 name 'Overview: Balancing Teachers and Tools'
-
+css 'unplugged'
 markdown <<MARKDOWN
 ## Balancing Teachers and Tools
+### What do we mean? 
 
-### What are we looking for at teachercon? 
+The CS Principles curriculum leverages a LOT of different learning tools. In our curriculum we use tools that:
+
+* Help students discover and engage with important concepts
+* Help you collect and manage students’ written work
+* Deliver the curriculum itself to students 
+
+All of these touchpoints with tools present a choice for you to make as the teacher about when to guide students and when to let students get into activities (which often means getting into tools) a bit more independently and figure stuff out along the way. 
+
+### Why are we emphasizing the balance?
+
+This CS Principles course **is not** designed to run without a teacher. While the activities are designed to be very student-centric, we do not intend for students to jump into units and progress at their own pace without any intervention from the teacher.
+
+As a result there is a delicate balance that we need to strike between guidance and freedom. On the extreme end of guidance we are doing too much “telling” as teachers, and not letting students uncover things and make discoveries on their own. On the extreme end of freedom is a world where students efforts are directionless or lack purpose, and we are not there to help differentiate good discovery from bad and pull it all together to make sense of the discovery after it has happened. 
+
+One of the most challenging things that comes with striking this balance is managing the transition from discussion into the tool. Once students are off and running in the tool, it can be very hard to get them back together and paying attention to the teacher, which means transitions from one mode to the other need to be deliberate and well paced. It's typically not feasible to start-and-stop activities several times for clarification, so it's important to make sure students are clear on expectations and instructions before they start. 
+
+### What to look for at TeacherCon? 
+
+At TeacherCon you will be on the look out for opportunities where people are trying to strike this balance between guidance and freedom, while working to make sure learners have the information needed to do activities *before* getting into tools. Watching for the transition from learners are paying attention to the teacher to the tool can be an interesting way to notice this balance. 
 MARKDOWN

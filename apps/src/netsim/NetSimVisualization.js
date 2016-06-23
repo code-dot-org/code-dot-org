@@ -4,7 +4,7 @@
 'use strict';
 
 import $ from 'jquery';
-var _ = require('../lodash');
+var _ = require('lodash');
 var visualizationMarkup = require('./NetSimVisualization.html.ejs');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimWire = require('./NetSimWire');

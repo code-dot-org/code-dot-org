@@ -36,7 +36,7 @@ class HocSurvey2015
     {}
   end
 
-  def self.experience_ratings()
+  def self.experience_ratings
     %w[
       Great
       Good
@@ -46,7 +46,7 @@ class HocSurvey2015
     ]
   end
 
-  def self.event_location_types()
+  def self.event_location_types
     [
       'Public school',
       'Public charter school',
@@ -60,7 +60,7 @@ class HocSurvey2015
     ]
   end
 
-  def self.beyond_hoc_answers()
+  def self.beyond_hoc_answers
     [
       'Yes, I already taught computer science before Hour of Code',
       'Yes, I started teach coding after a previous Hour of Code campaign',
@@ -69,7 +69,7 @@ class HocSurvey2015
     ]
   end
 
-  def self.age_ranges()
+  def self.age_ranges
     [
       '3-5 years',
       '6-8 years',
@@ -80,7 +80,7 @@ class HocSurvey2015
     ]
   end
 
-  def self.volunteer_participation_values()
+  def self.volunteer_participation_values
     [
       'Yes, someone visited my classroom in person',
       'Yes, someone did a video conference with my classroom',
@@ -89,7 +89,7 @@ class HocSurvey2015
     ]
   end
 
-  def self.teacher_how_heards()
+  def self.teacher_how_heards
     [
       'I read about it in the news or on TV',
       'Email from Code.org',
@@ -103,7 +103,7 @@ class HocSurvey2015
     ]
   end
 
-  def self.hoc_centerpiece_values()
+  def self.hoc_centerpiece_values
     [
       'Yes - stay the course, as long as there are new tutorials and community activities under the Hour of Code umbrella each year.',
       'No - I’d prefer something completely different as the centerpiece activity for CS Education Week.'

@@ -483,23 +483,17 @@
     notes_coming_soon: Notes for this video coming soon.
     autoplay_option: Videoların avtoifası
     download: Videonu endir
-  compatability:
-    working:
-      header: Veb səyyahınızın dəstəklənməsi üzərində işləyirik.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Bu xəbərdarlığı gizlət
+  compatibility:
     upgrade:
-      header: Zəhmət olmasa, naviqatorunuzu yeniləyin.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
-      button: Take me to the list of supported browsers
+      unsupported_message: Your browser is not supported. Please upgrade your browser
+        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
+        browsers</a>. You can try viewing the page, but expect functionality to be
+        broken.
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
+        10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
+        8, 9, and 10. Please upgrade to a modern browser.
+      link: Daha ətraflı
   slow_loading: Bu, adi halda olduğundan daha çox vaxt aparır...
   try_reloading: Səhifəni yenidən yükləməyə cəhd edin
   next_stage: Qurtardı! Növbəti mərhələyə keçin
@@ -827,6 +821,16 @@
     icon_library:
       search_placeholder_text: Search for an icon...
       no_icons_found: No icons found
+    playzone:
+      artist_description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
+      playlab_title: New App
+      primary_header: Congratulations! You finished %{stageName}!
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: Overview
     content: Content
@@ -839,3 +843,23 @@
       directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
       support</a> if you find the content objectionable, or if the linked site is
       no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: Download %{app_name} for offline use (136MB)
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X

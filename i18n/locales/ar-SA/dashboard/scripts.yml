@@ -101,7 +101,7 @@ ar:
           Maze Conditionals: متاهة الشرطية
           Artist Functions with Parameters: مهام الرسام مع المعلمات
           Computational Thinking: التفكير الحاسوبي
-          Functional Suncatchers: سونكاتشيرس الوظيفية
+          Functional Suncatchers: وظيفية Suncatchers
           Songwriting Parameters: معلمات تأليف الأغاني
           Dice Race: سباق الزهر
           Internet: الإنترنت
@@ -181,7 +181,7 @@ ar:
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
-          description_audience: Ages 10-18
+          description_audience: الذين تتراوح أعمارهم بين 10-13
           Super Challenge - Variables: 'Super Challenge - Variables'
           Super Challenge - For Loops: 'Super Challenge - For Loops'
           Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
@@ -323,7 +323,7 @@ ar:
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Accelerated Intro to CS Course
-          description_audience: Ages 10-18
+          description_audience: الذين تتراوح أعمارهم بين 10-13
           description: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة، ولكن أنها متعة للتعلم لكل الإعمار.
           description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
           Introduction to Computer Science: مقدمة في علوم الكمبيوتر
@@ -590,7 +590,7 @@ ar:
         cspunit3:
           title: 'CSP Unit 3 - Programming'
           title_short: CSP Unit 3
-          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
+          description_short: This unit introduces the foundational concepts of computer programming.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: الدوال
@@ -935,6 +935,7 @@ ar:
           Free Response: Free Response
           Game Lab: Game Lab
           Sample PLC Assessment: Sample PLC Assessment
+          Swapped Levels: Swapped Levels
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1436,12 +1437,12 @@ ar:
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: الذين تتراوح أعمارهم بين 10-13
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: الذين تتراوح أعمارهم بين 10-13
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
@@ -1468,7 +1469,7 @@ ar:
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
-          description_short: Programming
+          description_short: البرمجة
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           While Loop Basics: While Loop Basics
           While Loops_ Counting Flips: While Loops_ Counting Flips
@@ -1719,7 +1720,7 @@ ar:
           Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
         csp3:
           title: 'CSP Unit 3 - Programming'
-          description_short: Programming
+          description_short: البرمجة
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           The Need For Programming Languages: The Need For Programming Languages
           The Need for Algorithms: The Need for Algorithms
@@ -1781,7 +1782,7 @@ ar:
           Explore PT: Explore PT
         CSDU3-Draft:
           title: ' TEMP CSD Unit 3 - Interactive Games and Animations'
-          description_short: Programming
+          description_short: البرمجة
           description: Temp place to work on U3 of Disco
           Drawing in Game Lab: Drawing in Game Lab
           Animation: الرسوم المتحركة
@@ -1794,6 +1795,11 @@ ar:
           Expressions: Expressions
           Conditionals and Keyboard Input: Conditionals and Keyboard Input
           Sprites and Images: Sprites and Images
+          CSD U3 Variables and Animation: CSD U3 Variables and Animation
+          Booleans and Conditionals: 'Booleans and Conditionals'
+          SFLP: SFLP
+          Animations: Animations
+          "Project: Interactive Card": 'Project: Interactive Card'
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1812,7 +1818,7 @@ ar:
           Post-Survey: Post-Survey
         TEMP CSD Unit 3:
           title: ' TEMP CSD Unit 3 - Interactive Games and Animations'
-          description_short: Programming
+          description_short: البرمجة
           description: ""
           Drawing in Game Lab: Drawing in Game Lab
         CSF_Secret_Sample:
@@ -1977,6 +1983,8 @@ ar:
           title: ' TEMP CSD Unit 2'
           description_short: Web Development
           description: Temp place to work on U2 of Disco
+          Headers and Lists: Headers and Lists
+          Introduction to HTML: Introduction to HTML
         CSDU5-Draft:
           title: ' TEMP CSD Unit 5'
           description_short: Data
@@ -2016,6 +2024,14 @@ ar:
           "Lesson 2,2: text compression": 'Lesson 2,2: text compression'
           "Lesson 2,3: black and white pixelation": 'Lesson 2,3: black and white pixelation'
           "Lesson 2,10: good and bad data visualizations": 'Lesson 2,10: good and bad data visualizations'
+          "Lesson 1,4: Number Systems - circle triangle square": 'Lesson 1,4: Number Systems - circle triangle square'
+          "Lesson 1,6: Sending Numbers": 'Lesson 1,6: Sending Numbers'
+          "Lesson 1,10: Routers and Redundancy": 'Lesson 1,10: Routers and Redundancy'
+          "Lesson 2,2: Text Compression": 'Lesson 2,2: Text Compression'
+          "Lesson 2,3: Black and White Pixelation": 'Lesson 2,3: Black and White Pixelation'
+          "Lesson 2,10: Good and Bad Data Visualizations": 'Lesson 2,10: Good and Bad Data Visualizations'
+          Measuring Student Learning: Measuring Student Learning
+          description_short: We will use this during TeacherCon to deliver supports and materials for sessions
         MikeTest:
           title: MikeTest
           description_short: Just a script for playing around
@@ -2023,3 +2039,9 @@ ar:
           description_audience: Ages 8-98
           Sample Stage: Sample Stage
           Artist Functions: وظائف الرسام
+        artistExemplar:
+          title: Artist Exemplar
+          description_short: How can we make the artist levels really hum?
+          description: These artist levels will knock the socks off of third graders
+          description_audience: الأعمار 8-18
+          Artist Exemplar: Artist Exemplar

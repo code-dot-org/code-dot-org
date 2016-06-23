@@ -1,7 +1,12 @@
 ar-SA:
   hour_of_code: ساعة البرمجة
   hello: مرحباً بالعالم
+  "yes": نعم
+  "no": لا
   select_language: من فضلك اختر لغتك
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: اعرف المزيد
   en: علوم الكمبيوتر
   computer_science_edweek: الاسبوع التعليمي لعلوم الكمبيوتر
   csedweek_dates: 8-14 كانون الأول/ديسمبر، 2014
@@ -93,14 +98,14 @@ ar-SA:
   third_party_tynker_btn_site: زر تينكر
   third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
   third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratchjr_btn_site: زر Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_site: زر Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_lightbot_btn_site: زر Lightbot
   third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
   third_party_khan_btn_learn: Learn CS with Khan Academy
   third_party_khan_btn_forum: Khan Academy CS Forum
@@ -282,7 +287,7 @@ ar-SA:
   homepage_slot_text_link_othercourses: دورات أخرى على الإنترنت
   homepage_slot_text_title_educators: المتعلمون
   homepage_slot_text_blurb_educators: علم طلّابك
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: المدرسة الابتدائية
   homepage_slot_text_link_middle: المدرسة الإعدادية
   homepage_slot_text_link_high: المدرسة الثانوية
   homepage_slot_text_link_k5: دورات للروضة حتى الصف الخامس
@@ -293,7 +298,7 @@ ar-SA:
   homepage_slot_text_link_stats: انظر إلى الإحصائيات
   homepage_slot_text_link_buy: إنضم
   homepage_slot_text_link_donate: تبرع
-  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
+  homepage_slot_text_link_shop: القمصان, القبعات, و المزيد
   homepage_header_codestudio: انجازات الطالب بستوديو البرمجة
   homepage_header_donors: 'موقع code.org  يشكر الداعمين له'
   homepage_donors_seall: عرض الكل
@@ -436,7 +441,7 @@ ar-SA:
   dashboard_landing_new_beta: جديدنا ! جرب اللآن النسخة التجريبية من دورتنا التدريبية لطلاب K-5 .
   dashboard_landing_new_k5courses: جديد ! جرب دوراتنا للطلاب K-5.
   dashboard_landing_useful_links: روابط أخرى مفيدة
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: موارد لفصلك
   dashboard_landing_office_hours: اسأل سؤالاً شخصيا! قم بزيارة مكاتبنا خلال ساعات العمل شهريا .
   dashboard_landing_print_certificates: طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة التدريبية
   dashboard_landing_educator_blog: أقرأ عن أخبار ومستجدات موادنا على مدونة معلمنا
@@ -450,10 +455,10 @@ ar-SA:
   dashboard_landing_available_courses: هذة هي الدورات المتاحة حاليا لكم ولطلابكم.
   dashboard_landing_more_tutorials: هل تريد رؤية المزيد من الشروحات؟
   dashboard_landing_more_tutorials_desc: 'هناك المزيد من الدروس <a href="/learn/beyond">المقدمة من قبل شركائنا.</a> لتعلم برمجة الروبوتات أو صفحات الويب أو إنشاء تطبيقك الخاص أو استكشاف لغات برمجة أخرى مثل سي ++ أو روبي أو بايثون.'
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_inspire: إلهام طلابك مع ملصقات، وأشرطة الفيديو، والمزيد.
+  dashboard_landing_video_library: استخدم فيديو من مكتبة الفيديو لمفاهيم علوم الكمبيوتر.
+  dashboard_landing_report_bug: طلب ميزة أو الإبلاغ عن خلل.
+  dashboard_landing_teacher_forum: انضم إلى مجتمع التعلم المهني.
   dashboard_hoc_courses: ساعة البرمجة لجميع الأعمار
   dashboard_hoc_courses_desc: قم بتجريب واحد من الدروس القصيرة لساعة واحدة مع طلابك!
   dashboard_hoc_courses_desc_and_cta: 'جرب هذه الدروس القصيرة ، ساعة واحدة مع طلابك. <a href="https://hourofcode.com"> انظم إلى ثورة "ساعة من التعليمات البرمجية" من خلال "اسبوع تعليم علوم الكمبيوتر".'
@@ -484,7 +489,7 @@ ar-SA:
   dashboard_action_remove_confirm: حذف؟
   dashboard_action_done: ‏‏تم
   dashboard_action_required: متطلب
-  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_view: 'عرض التقييمات في:'
   dashboard_assessments_none: |-
     Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
@@ -528,6 +533,7 @@ ar-SA:
   dashboard_sections_table_secret: نوع تسجيل الدخول
   dashboard_sections_table_grade: الصف الدراسي
   dashboard_sections_table_course: الدرس
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: الطلاب
   dashboard_sections_table_code: قسم البرمجة
   dashboard_sections_name: إسم القسم
@@ -543,7 +549,7 @@ ar-SA:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
@@ -857,8 +863,8 @@ ar-SA:
   course1_gradelevel: الأعمار 4-6
   course2_gradelevel: الأعمار 6-18
   course3_gradelevel: الأعمار 8-18
-  course4_gradelevel: Ages 10-18
-  accelerated_gradelevel: Ages 10-18
+  course4_gradelevel: الذين تتراوح أعمارهم بين 10-13
+  accelerated_gradelevel: الذين تتراوح أعمارهم بين 10-13
   codeorg_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   codeintl_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   thinkersmithspanish_platformtext: غير مربوطة

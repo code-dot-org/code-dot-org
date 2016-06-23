@@ -180,6 +180,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   private
+
   def create_fake_plc_data
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script

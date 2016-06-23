@@ -1,11 +1,33 @@
-import Radium from 'radium';
 import React from 'react';
+import Radium from 'radium';
+import { connect } from 'react-redux';
+
 import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../color';
 
+function createOutline(color) {
+  return `
+    ${color} 0 1px,
+    ${color} 1px 1px,
+    ${color} 1px 0px,
+    ${color} 1px -1px,
+    ${color} 0 -1px,
+    ${color} -1px -1px,
+    ${color} -1px 0,
+    ${color} -1px 1px`;
+}
+
 const dotSize = 24;
 const styles = {
+  outer: {
+    color: color.purple
+  },
+  levelName: {
+    display: 'table-cell',
+    paddingLeft: 5,
+    fontFamily: '"Gotham 4r", sans-serif'
+  },
   dot: {
     puzzle: {
       display: 'inline-block',
@@ -39,6 +61,7 @@ const styles = {
       height: 7,
       borderRadius: 7,
       lineHeight: 'inherit',
+      verticalAlign: 'middle',
       fontSize: 0
     },
     overview: {
@@ -53,15 +76,7 @@ const styles = {
       fontSize: 24,
       verticalAlign: -4,
       color: color.white,
-      textShadow: `
-        ${color.lighter_gray} 0 1px,
-        ${color.lighter_gray} 1px 1px,
-        ${color.lighter_gray} 1px 0px,
-        ${color.lighter_gray} 1px -1px,
-        ${color.lighter_gray} 0 -1px,
-        ${color.lighter_gray} -1px -1px,
-        ${color.lighter_gray} -1px 0,
-        ${color.lighter_gray} -1px 1px`,
+      textShadow: createOutline(color.lighter_gray),
       ':hover': {
         color: color.white,
         backgroundColor: 'transparent'
@@ -76,15 +91,7 @@ const styles = {
     },
     icon_complete: {
       color: color.light_gray,
-      textShadow: `
-        ${color.white} 0 1px,
-        ${color.white} 1px 1px,
-        ${color.white} 1px 0px,
-        ${color.white} 1px -1px,
-        ${color.white} 0 -1px,
-        ${color.white} -1px -1px,
-        ${color.white} -1px 0,
-        ${color.white} -1px 1px`,
+      textShadow: createOutline(color.white),
       ':hover': {
         color: color.light_gray
       }
@@ -122,76 +129,74 @@ const styles = {
   }
 };
 
+function dotClicked(url, e) {
+  e.preventDefault();
+  saveAnswersAndNavigate(url);
+}
+
 /**
  * Stage progress component used in level header and course overview.
  */
-const ProgressDot = React.createClass({
+export const ProgressDot = React.createClass({
   propTypes: {
-    levels: levelProgressShape,
+    level: levelProgressShape.isRequired,
     currentLevelId: React.PropTypes.string,
-    largeDots: React.PropTypes.bool,
-    saveAnswersFirst: React.PropTypes.bool.isRequired
-  },
-
-  dotClicked(url) {
-    if (saveAnswersAndNavigate) {
-      saveAnswersAndNavigate(url);
-    }
+    courseOverviewPage: React.PropTypes.bool,
+    saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
   },
 
   render() {
     const level = this.props.level;
     const uid = level.uid || level.id.toString();
 
-    let dotStyle = Object.assign({}, styles.dot.puzzle);
-    if (level.kind === 'assessment') {
-      Object.assign(dotStyle, styles.dot.assessment);
-    }
-
-    if (this.props.largeDots) {
-      Object.assign(dotStyle, styles.dot.overview);
-      if (uid === this.props.currentLevelId) {
-        Object.assign(dotStyle, {borderColor: color.level_current});
-      }
-    } else if (uid !== this.props.currentLevelId) {
-      Object.assign(dotStyle, styles.dot.small);
-    }
-
     const isUnplugged = isNaN(level.title);
-    if (isUnplugged && (this.props.largeDots || uid === this.props.currentLevelId)) {
-      Object.assign(dotStyle, styles.dot.unplugged);
-    }
-
-    let onClick = null;
-    if (this.props.saveAnswersFirst) {
-      dotStyle.cursor = 'pointer';
-      onClick = (e) => {this.dotClicked(level.url); e.preventDefault();};
-    }
-
-    let dot, name, outerStyle;
-    if (!level.icon) {
-      Object.assign(dotStyle, styles.status[level.status || 'not_tried']);
-      // '\u00a0' is &nbsp;
-      dot = <div style={dotStyle} className={`level-${level.id}`}>{level.kind === 'named_level' ? '\u00a0' : level.title}</div>;
-    } else {
-      Object.assign(dotStyle, styles.dot.icon);
-      if (!this.props.largeDots && uid !== this.props.currentLevelId) {
-        Object.assign(dotStyle, styles.dot.icon_small);
-      }
-      Object.assign(dotStyle, (!level.status || level.status === 'not_tried') ? {} : styles.dot.icon_complete);
-      dot = <i className={`fa ${level.icon}`} style={dotStyle} />;
-    }
-
-    if (level.kind === 'named_level' && this.props.largeDots) {
-      outerStyle = {display: 'block'};
-      name = <span style={{marginLeft: 5, color: color.purple}}>{level.name}</span>;
-    }
+    const showUnplugged = isUnplugged && (this.props.courseOverviewPage || uid === this.props.currentLevelId);
+    const outlineCurrent = this.props.courseOverviewPage && uid === this.props.currentLevelId;
+    const smallDot = !this.props.courseOverviewPage && uid !== this.props.currentLevelId;
+    const showLevelName = level.kind === 'named_level' && this.props.courseOverviewPage;
 
     return (
-      <a href={level.url} onClick={onClick} style={outerStyle}>
-        {dot}{name}
+      <a
+        key='link'
+        href={level.url}
+        onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
+        style={[styles.outer, showLevelName && {display: 'table-row'}]}
+      >
+        {level.icon ?
+          <i
+            className={`fa ${level.icon}`}
+            style={[
+              styles.dot.puzzle,
+              this.props.courseOverviewPage && styles.dot.overview,
+              styles.dot.icon,
+              smallDot && styles.dot.icon_small,
+              level.status && level.status !== 'not_tried' && styles.dot.icon_complete,
+              outlineCurrent && {textShadow: createOutline(color.level_current)}
+            ]}
+          /> :
+          <div
+            className={`level-${level.id}`}
+            style={[
+              styles.dot.puzzle,
+              this.props.courseOverviewPage && styles.dot.overview,
+              smallDot && styles.dot.small,
+              level.kind === 'assessment' && styles.dot.assessment,
+              outlineCurrent && {borderColor: color.level_current},
+              showUnplugged && styles.dot.unplugged,
+              styles.status[level.status || 'not_tried']
+            ]}
+          >
+            {level.kind === 'named_level' ? '\u00a0' : level.title}
+          </div>
+        }
+        {showLevelName &&
+          <span key='named_level' style={styles.levelName}>{level.name}</span>
+        }
       </a>
     );
   }
 });
-module.exports = Radium(ProgressDot);
+export default connect(state => ({
+  currentLevelId: state.currentLevelId,
+  saveAnswersBeforeNavigation: state.saveAnswersBeforeNavigation
+}))(Radium(ProgressDot));

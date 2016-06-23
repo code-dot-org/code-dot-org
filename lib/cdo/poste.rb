@@ -5,8 +5,7 @@ require 'openssl'
 require 'base64'
 
 module Poste
-
-  def self.logger()
+  def self.logger
     @@logger ||= $log
   end
 
@@ -56,7 +55,7 @@ module Poste
     nil
   end
 
-  def self.template_extnames()
+  def self.template_extnames
     ['.md','.haml','.html']
   end
 
@@ -73,29 +72,23 @@ module Poste
     if contact
       contacts.where(id: contact[:id]).update(
         unsubscribed_at: now,
-        unsubscribed_on: now.to_date,
         unsubscribed_ip: params[:ip_address],
       )
     else
       contacts.insert(
         email: email,
         created_at: now,
-        created_on: now.to_date,
         created_ip: params[:ip_address],
         unsubscribed_at: now,
-        unsubscribed_on: now.to_date,
         unsubscribed_ip: params[:ip_address],
         updated_at: now,
-        updated_on: now.to_date,
         updated_ip: params[:ip_address],
       )
     end
   end
-
 end
 
 module Poste2
-
   @@url_cache = {}
   @@message_id_cache = {}
 
@@ -135,7 +128,6 @@ module Poste2
         contacts.where(id: contact[:id]).update(
           name: name,
           updated_at: now,
-          updated_on: now,
           updated_ip: ip_address,
         )
       end
@@ -143,9 +135,9 @@ module Poste2
       id = contacts.insert({}.tap do |contact|
         contact[:email] = address
         contact[:name] = name if name
-        contact[:created_at] = contact[:created_on] = now
+        contact[:created_at] = now
         contact[:created_ip] = ip_address
-        contact[:updated_at] = contact[:updated_on] = now
+        contact[:updated_at] = now
         contact[:updated_ip] = ip_address
       end)
       contact = {id: id}
@@ -169,9 +161,9 @@ module Poste2
       id = contacts.insert({}.tap do |contact|
         contact[:email] = address
         contact[:name] = name if name
-        contact[:created_at] = contact[:created_on] = now
+        contact[:created_at] = now
         contact[:created_ip] = ip_address
-        contact[:updated_at] = contact[:updated_on] = now
+        contact[:updated_at] = now
         contact[:updated_ip] = ip_address
       end)
       contact = {id: id}
@@ -203,7 +195,12 @@ module Poste2
 
   class DeliveryMethod
 
-    ALLOWED_SENDERS = Set.new ['pd@code.org', 'noreply@code.org', 'teacher@code.org']
+    ALLOWED_SENDERS = Set.new %w[
+      pd@code.org
+      noreply@code.org
+      teacher@code.org
+      hadi_partovi@code.org
+    ]
     def initialize(settings = nil)
     end
 

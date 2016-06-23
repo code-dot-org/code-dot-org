@@ -13,7 +13,7 @@ var consoleApi = require('../consoleApi');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
-var _ = require('../lodash');
+var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
@@ -230,6 +230,18 @@ GameLab.prototype.init = function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId));
+
+  if (config.hasContainedLevels && config.containedLevelOps) {
+    $('#containedLevel0').appendTo($('#containedLevelContainer'));
+    $('#runButton').prop('disabled', true);
+
+    config.containedLevelOps.registerAnswerChangedFn(function (levelId) {
+      $('#runButton').prop('disabled', false);
+    }.bind(this));
+
+    this.lockContainedLevelAnswers = config.containedLevelOps.lockAnswers;
+    this.getContainedLevelResults = config.containedLevelOps.getResults;
+  }
 };
 
 /**
@@ -238,13 +250,12 @@ GameLab.prototype.init = function (config) {
  */
 GameLab.prototype.setupReduxSubscribers = function (store) {
   var state = {};
-  var boundOnIsRunningChange = this.onIsRunningChange.bind(this);
-  store.subscribe(function () {
+  store.subscribe(() => {
     var lastState = state;
     state = store.getState();
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
-      boundOnIsRunningChange(state.runState.isRunning);
+      this.onIsRunningChange(state.runState.isRunning);
     }
   });
 };
@@ -416,40 +427,77 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
   // Stop everything on screen
   this.reset();
 
+  var program;
+  var containedLevelInfo;
+
+  if (this.getContainedLevelResults) {
+    var results = this.getContainedLevelResults();
+    if (results.length !== 1) {
+      throw "Exactly one contained level result is currently required.";
+    }
+    var firstResult = results[0];
+    var containedResult = firstResult.result;
+    this.testResults = utils.valueOr(firstResult.testResult,
+        containedResult.result ? this.studioApp_.TestResults.ALL_PASS :
+          this.studioApp_.TestResults.GENERIC_FAIL);
+    containedLevelInfo = {
+      app: firstResult.app,
+      level: firstResult.id,
+      callback: firstResult.callback,
+      result: containedResult.result,
+      program: containedResult.response,
+    };
+    this.message = firstResult.feedback;
+  } else {
+    if (this.level.editCode) {
+      // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+      // identical versions of the code on the service, we could do either of these:
+
+      // do an acorn.parse and then use escodegen to generate back a "clean" version
+      // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+      program = encodeURIComponent(this.studioApp_.getCode());
+    } else {
+      var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+      program = encodeURIComponent(Blockly.Xml.domToText(xml));
+    }
+    // Explicitly set this to null so the default message will be used
+    this.message = null;
+  }
+
   if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
     this.studioApp_.playAudio('win');
   } else {
     this.studioApp_.playAudio('failure');
   }
 
-  var program;
-
-  if (this.level.editCode) {
-    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
-    // identical versions of the code on the service, we could do either of these:
-
-    // do an acorn.parse and then use escodegen to generate back a "clean" version
-    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
-
-    program = this.studioApp_.getCode();
-  } else {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = Blockly.Xml.domToText(xml);
-  }
-
   this.waitingForReport = true;
 
   var sendReport = function () {
-    this.studioApp_.report({
-      app: 'gamelab',
-      level: this.level.id,
-      result: levelComplete,
-      testResult: this.testResults,
-      submitted: submit,
-      program: encodeURIComponent(program),
-      image: this.encodedFeedbackImage,
-      onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
-    });
+    if (containedLevelInfo) {
+      this.studioApp_.onAttempt({
+        callback: containedLevelInfo.callback,
+        app: containedLevelInfo.app,
+        level: containedLevelInfo.level,
+        result: containedLevelInfo.result,
+        testResult: this.testResults,
+        submitted: submit,
+        program: containedLevelInfo.program,
+        image: this.encodedFeedbackImage,
+        onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
+      });
+    } else {
+      this.studioApp_.report({
+        app: containedLevelInfo ? containedLevelInfo.app : 'gamelab',
+        level: containedLevelInfo ? containedLevelInfo.level : this.level.id,
+        result: levelComplete,
+        testResult: this.testResults,
+        submitted: submit,
+        program: program,
+        image: this.encodedFeedbackImage,
+        onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
+      });
+    }
 
     if (this.studioApp_.isUsingBlockly()) {
       // reenable toolbox
@@ -492,6 +540,9 @@ GameLab.prototype.onReportComplete = function (response) {
  */
 GameLab.prototype.runButtonClick = function () {
   this.studioApp_.toggleRunReset('reset');
+  if (this.lockContainedLevelAnswers) {
+    this.lockContainedLevelAnswers();
+  }
   // document.getElementById('spinner').style.visibility = 'visible';
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
@@ -675,7 +726,7 @@ GameLab.prototype.execute = function () {
   this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (this.studioApp_.isUsingBlockly() &&
-      (this.studioApp_.hasExtraTopBlocks() ||
+      (this.studioApp_.hasUnwantedExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())) {
     // immediately check answer, which will fail and report top level blocks
     this.onPuzzleComplete();
@@ -969,6 +1020,7 @@ GameLab.prototype.displayFeedback_ = function () {
 /**
  * Get the project's animation metadata for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ * @return {AnimationMetadata[]}
  */
 GameLab.prototype.getAnimationMetadata = function () {
   return this.studioApp_.reduxStore.getState().animations;

@@ -131,6 +131,10 @@ class ScriptLevel < ActiveRecord::Base
     stage.script_levels.to_a.last == self
   end
 
+  def end_of_script?
+    script.script_levels.to_a.last == self
+  end
+
   def long_assessment?
     if assessment
       if level.properties["pages"] && level.properties["pages"].length > 1

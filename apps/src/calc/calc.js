@@ -35,7 +35,7 @@ var CalcVisualizationColumn = require('./CalcVisualizationColumn');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
-var _ = require('../lodash');
+var _ = require('lodash');
 var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
@@ -727,7 +727,7 @@ Calc.generateResults_ = function () {
   appState.message = undefined;
 
   // Check for pre-execution errors
-  if (studioApp.hasExtraTopBlocks() && !Blockly.showUnusedBlocks) {
+  if (studioApp.hasUnwantedExtraTopBlocks()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
     return;

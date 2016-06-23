@@ -176,4 +176,15 @@ class AbilityTest < ActiveSupport::TestCase
     admin_ability = Ability.new(create(:admin))
     assert admin_ability.can?(:manage, UserPermission)
   end
+
+  test 'levelbuilders can manage appropriate objects' do
+    user = create :user
+    UserPermission.create(
+      user_id: user.id, permission: UserPermission::LEVELBUILDER)
+    ability = Ability.new user
+
+    assert ability.can?(:manage, Level)
+    assert ability.can?(:manage, Script)
+    assert ability.can?(:manage, ScriptLevel)
+  end
 end

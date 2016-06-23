@@ -390,15 +390,12 @@ en:
     notes_coming_soon: crwdns7342:0crwdne7342:0
     autoplay_option: crwdns3091:0crwdne3091:0
     download: crwdns4163:0crwdne4163:0
-  compatability:
-    working:
-      header: crwdns18133:0crwdne18133:0
-      message: 'crwdns18134:0%{report_issue_url}crwdnd18134:0%{supported_browsers_url}crwdne18134:0'
-      hide_this_warning: crwdns18135:0crwdne18135:0
+  compatibility:
     upgrade:
-      header: crwdns18136:0crwdne18136:0
-      message: crwdns18137:0crwdne18137:0
-      button: crwdns18138:0crwdne18138:0
+      unsupported_message: 'crwdns56929:0%{supported_browsers_url}crwdne56929:0'
+      ie_message: crwdns56930:0crwdne56930:0
+      ie_message_csedweek: crwdns56931:0crwdne56931:0
+      link: crwdns56932:0crwdne56932:0
   slow_loading: crwdns3859:0crwdne3859:0
   try_reloading: crwdns3860:0crwdne3860:0
   next_stage: crwdns4078:0crwdne4078:0
@@ -669,9 +666,33 @@ en:
     icon_library:
       search_placeholder_text: crwdns56250:0crwdne56250:0
       no_icons_found: crwdns56251:0crwdne56251:0
+    playzone:
+      artist_description: crwdns56933:0crwdne56933:0
+      artist_title: crwdns56934:0crwdne56934:0
+      continue_button: crwdns56935:0crwdne56935:0
+      playlab_description: crwdns56936:0crwdne56936:0
+      playlab_title: crwdns56937:0crwdne56937:0
+      primary_header: 'crwdns56938:0%{stageName}crwdne56938:0'
+      projects_description: crwdns56939:0crwdne56939:0
+      projects_title: crwdns56940:0crwdne56940:0
+      secondary_header: crwdns56941:0crwdne56941:0
   flex_category:
     required: crwdns56538:0crwdne56538:0
     content: crwdns56539:0crwdne56539:0
     practice: crwdns56540:0crwdne56540:0
   external_links:
     disclaimer_md: crwdns56734:0crwdne56734:0
+  hoc_download:
+    title: crwdns56942:0crwdne56942:0
+    capsule_title: crwdns56943:0crwdne56943:0
+    capsule_desc: 'crwdns56944:0%{url}crwdnd56944:0%{app_name}crwdne56944:0'
+    instructions_headline: crwdns56945:0crwdne56945:0
+    instructions: 'crwdns56946:0%{url}crwdne56946:0'
+    minecraft_name: crwdns56947:0crwdne56947:0
+    starwars_blocks_name: crwdns56948:0crwdne56948:0
+    starwars_javascript_name: crwdns56949:0crwdne56949:0
+    download_message: 'crwdns56950:0%{app_name}crwdne56950:0'
+    download_in_english: crwdns56951:0crwdne56951:0
+    download_in_spanish: crwdns56952:0crwdne56952:0
+    windows: crwdns56953:0crwdne56953:0
+    mac: crwdns56954:0crwdne56954:0

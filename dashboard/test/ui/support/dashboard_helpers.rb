@@ -16,7 +16,6 @@ module DashboardHelpers
       user.admin = true
     end
   end
-
 end
 
 World(DashboardHelpers)

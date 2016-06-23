@@ -1,7 +1,12 @@
 ca-ES:
   hour_of_code: Hour of Code
   hello: Hola món
+  "yes": Sí
+  "no": 'No'
   select_language: "Seleccioneu l'idioma"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Aprèn més
   en: Informàtica
   computer_science_edweek: "Setmana de l'Educació en Informàtica"
   csedweek_dates: 8-14 de desembre de 2014
@@ -553,6 +558,7 @@ ca-ES:
   dashboard_sections_table_secret: "Tipus d'inici de sessió"
   dashboard_sections_table_grade: Grau
   dashboard_sections_table_course: Curs
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Alumnes
   dashboard_sections_table_code: Secció Codi
   dashboard_sections_name: Nom de la secció
@@ -568,7 +574,7 @@ ca-ES:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.

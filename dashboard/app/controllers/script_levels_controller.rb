@@ -85,7 +85,7 @@ class ScriptLevelsController < ApplicationController
     return if performed?
     load_section
 
-    return if redirect_applab_under_13(@script_level.level)
+    return if redirect_under_13(@script_level.level)
 
     present_level
   end
@@ -245,6 +245,13 @@ class ScriptLevelsController < ApplicationController
       user_id: current_user.try(:id) || 0,
       script_level_id: @script_level.id,
       level_id: @level.id)
+
+    if @level.game.level_group? || @level.try(:contained_levels).present?
+      @sublevel_callback = milestone_script_level_url(
+        user_id: current_user.try(:id) || 0,
+        script_level_id: @script_level.id,
+        level_id: '')
+    end
 
     view_options(
       full_width: true,

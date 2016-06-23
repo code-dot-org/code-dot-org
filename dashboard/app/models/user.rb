@@ -81,7 +81,7 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable, :confirmable,
-         :recoverable, :rememberable, :trackable
+    :recoverable, :rememberable, :trackable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
@@ -554,13 +554,6 @@ SQL
     read_attribute(:locale).try(:to_sym)
   end
 
-  def writable_by?(other_user)
-    return true if other_user == self
-    return true if other_user.admin?
-    return true if self.email.blank? && self.teachers.include?(other_user)
-    false
-  end
-
   def confirmation_required?
     self.teacher? && !self.confirmed?
   end
@@ -678,14 +671,17 @@ SQL
   end
 
   def advertised_scripts
-    [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script, Script.flappy_script,
-      Script.playlab_script, Script.artist_script, Script.course1_script, Script.course2_script,
-      Script.course3_script, Script.course4_script, Script.twenty_hour_script, Script.starwars_script,
-      Script.starwars_blocks_script, Script.minecraft_script]
+    [
+      Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
+      Script.flappy_script, Script.playlab_script, Script.artist_script,
+      Script.course1_script, Script.course2_script, Script.course3_script,
+      Script.course4_script, Script.twenty_hour_script, Script.starwars_script,
+      Script.starwars_blocks_script, Script.minecraft_script
+    ]
   end
 
-  def unadvertised_user_scripts
-    [working_on_user_scripts, completed_user_scripts].compact.flatten.delete_if { |user_script| user_script.script.in?(advertised_scripts)}
+  def in_progress_and_completed_scripts
+    [working_on_user_scripts, completed_user_scripts].compact.flatten
   end
 
   def all_advertised_scripts_completed?
@@ -994,6 +990,10 @@ SQL
 
     # if you log in only through picture passwords you can't edit your account
     return !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
+  end
+
+  def section_for_script(script)
+    followeds.collect(&:section).find { |section| section.script_id == script.id }
   end
 
 end

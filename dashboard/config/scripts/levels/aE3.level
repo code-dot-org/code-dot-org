@@ -13,8 +13,7 @@
     "skip_instructions_popup": "false",
     "free_play": "false",
     "slider_speed": "1",
-    "instructions": "Now let's go one level deeper! We've nested that whole block of code into another loop, but you need to get the artist back in place to draw the next line. Which of these code blocks can you place at the end of the outermost loop to draw the whole grid?",
-    "ideal": "13",
+    "instructions": "We've got to have a tablecloth!  \r\n\r\nTake your row of 14 napkins and sew 14 of those together with another **outer loop** to make a cover for our table.",
     "disable_param_editing": "true",
     "embed": "false",
     "disable_variable_editing": "false",
@@ -22,7 +21,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/e9fe83556eec68be9ebd7de9a16267b1-image-1465516277348.gif\" style=\"width:400px; margin: 0 20px 20px 100px;\" loop=\"infinite\"/>\r\n\r\n<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\n\r\nNow let's go one level deeper! We've nested that whole block of code into another loop, but you need to get the artist back in place to draw the next line. Which of these code blocks can you place at the end of the outermost loop to draw the whole grid?</div>\r\n\r\n",
+    "markdown_instructions": "<img src=\"https://images.code.org/e9fe83556eec68be9ebd7de9a16267b1-image-1465516277348.gif\" style=\"width:400px; margin: 0 20px 20px 100px;\" loop=\"infinite\"/>\r\n\r\n<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nWe've got to have a tablecloth!  <br/></br>\r\n\r\nTake your row of 14 napkins and sew 14 of those together with another **outer loop** to make a cover for our table.\r\n</div>\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -31,9 +30,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Be careful to pull out the full block of \\\"code from the toolbar each time you try a new one.\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_3_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If your code becomes too confusing, you can always click \\\"Start Over\\\" and try again!\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_3_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"After you run your **nested loop** from the last stage, you need to jump back to the start of the line.\",\r\n  \"hint_id\": \"aE3_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Don't forget to move the artist down before you start a new row of shapes! \\n\\nTo move the artist down and get him facing the right way again, make sure to:\\n- Turn 90 degrees (to face down)\\n- Jump 20 pixels (to get to new row)\\n- Turn back 90 degrees (to face right again)\",\r\n  \"hint_id\": \"aE3_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"When you're all done, your **nested loops** should be three repeats deep.\",\r\n  \"hint_id\": \"aE3_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If your code becomes too confusing, you can always click \\\"Start Over\\\" and try again!\",\r\n  \"hint_id\": \"aE3_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
-    "discard_background": "false"
+    "discard_background": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"aE3_1\",\r\n  \"callout_text\": \"Only a handful of these available\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
   "published": true,
   "notes": "",
@@ -46,38 +46,26 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat" deletable="false" editable="false">
-              <title name="TIMES">15</title>
+              <title name="TIMES">14</title>
               <statement name="DO">
-                <block type="draw_colour" inline="true" deletable="false" editable="false">
-                  <value name="COLOUR">
-                    <block type="colour_random" deletable="false" editable="false"/>
-                  </value>
-                  <next>
-                    <block type="controls_repeat" deletable="false" editable="false">
-                      <title name="TIMES">15</title>
-                      <statement name="DO">
-                        <block type="controls_repeat" deletable="false" editable="false">
-                          <title name="TIMES">4</title>
-                          <statement name="DO">
-                            <block type="draw_move_by_constant" deletable="false" editable="false">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE">20</title>
-                              <next>
-                                <block type="draw_turn_by_constant" deletable="false" editable="false">
-                                  <title name="DIR">turnRight</title>
-                                  <title name="VALUE">90</title>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
-                          <next>
-                            <block type="draw_move_by_constant" deletable="false" editable="false">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE">20</title>
-                            </block>
-                          </next>
+                <block type="controls_repeat" deletable="false" editable="false">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant" deletable="false" editable="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">20</title>
+                      <next>
+                        <block type="draw_turn_by_constant" deletable="false" editable="false">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
                         </block>
-                      </statement>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_move_by_constant" deletable="false" editable="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">20</title>
                     </block>
                   </next>
                 </block>
@@ -89,71 +77,42 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveBackward</title>
-          <title name="VALUE">300</title>
-          <next>
-            <block type="draw_turn_by_constant">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE">90</title>
-              <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">20</title>
-                  <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">90</title>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
+        <block type="draw_move_by_constant" id="callMe">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
         </block>
         <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
           <title name="VALUE">90</title>
-          <next>
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">20</title>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE">90</title>
-                  <next>
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveBackward</title>
-                      <title name="VALUE">300</title>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
         <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
+          <title name="DIR">turnLeft</title>
           <title name="VALUE">90</title>
-          <next>
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">20</title>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE">90</title>
-                  <next>
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">300</title>
-                    </block>
-                  </next>
-                </block>
-              </next>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
             </block>
-          </next>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
         </block>
       </xml>
     </toolbox_blocks>
@@ -165,10 +124,10 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">15</title>
+              <title name="TIMES">14</title>
               <statement name="DO">
                 <block type="controls_repeat">
-                  <title name="TIMES">15</title>
+                  <title name="TIMES">14</title>
                   <statement name="DO">
                     <block type="controls_repeat">
                       <title name="TIMES">4</title>
@@ -195,7 +154,7 @@
                   <next>
                     <block type="draw_move_by_constant">
                       <title name="DIR">moveBackward</title>
-                      <title name="VALUE">300</title>
+                      <title name="VALUE">280</title>
                       <next>
                         <block type="draw_turn_by_constant">
                           <title name="DIR">turnRight</title>

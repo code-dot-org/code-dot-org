@@ -302,6 +302,7 @@ class AdminReportsController < ApplicationController
   end
 
   private
+
   # Manipulates the count_stats hash of arrays to an array of arrays, each inner array representing
   # a slice across the hash arrays.
   # Returns nil if the hash is blank.

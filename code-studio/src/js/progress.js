@@ -42,11 +42,6 @@ progress.activityCssClass = function (result) {
 };
 
 /**
- * See ApplicationHelper::PUZZLE_PAGE_NONE.
- */
-progress.PUZZLE_PAGE_NONE = -1;
-
-/**
  * Returns the "best" of the two results, as defined in apps/src/constants.js.
  * Note that there are negative results that count as an attempt, so we can't
  * just take the maximum.
@@ -58,68 +53,21 @@ progress.mergedActivityCssClass = function (a, b) {
   return progress.activityCssClass(clientState.mergeActivityResult(a, b));
 };
 
-progress.renderStageProgress = function (stageData, progressData, clientProgress, currentLevelId, puzzlePage) {
-  var serverProgress = progressData.levels || {};
-  var lastLevelId = null;
-  var levelRepeat = 0;
+progress.renderStageProgress = function (stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation) {
+  var store = loadProgress({name: scriptName, stages: [stageData]}, currentLevelId, saveAnswersBeforeNavigation);
+  var mountPoint = document.querySelector('.progress_container');
 
-  var combinedProgress = stageData.levels.map(function (scriptlevel, index) {
-    var levelId = progress.bestResultLevelId(scriptlevel.ids, serverProgress, clientProgress);
-
-    // If we have a multi-page level, then we will encounter the same level ID
-    // multiple times in a row.  Keep track of how many times we've seen it
-    // repeat, so that we know what page we're up to.
-    if (levelId === lastLevelId) {
-      levelRepeat++;
-    } else {
-      lastLevelId = levelId;
-      levelRepeat = 0;
-    }
-
-    var status;
-    var result = (serverProgress[levelId] || {}).result;
-    if (serverProgress && result > clientState.MAXIMUM_CACHABLE_RESULT) {
-      if (result === REVIEW_REJECTED_RESULT) {
-        status = 'review_rejected';
-      }
-      if (result === REVIEW_ACCEPTED_RESULT) {
-        status = 'review_accepted';
-      }
-    } else if (serverProgress && serverProgress[levelId] && serverProgress[levelId].submitted) {
-      status = "submitted";
-    } else if (serverProgress && serverProgress[levelId] && serverProgress[levelId].pages_completed) {
-      // The dot is considered perfect if the page is considered complete.
-      var pageCompleted = serverProgress[levelId].pages_completed[levelRepeat];
-      status = progress.activityCssClass(pageCompleted);
-    } else if (clientState.queryParams('user_id')) {
-      // Show server progress only (the student's progress)
-      status = progress.activityCssClass(result);
-    } else {
-      // Merge server progress with local progress
-      status = progress.mergedActivityCssClass(result, clientProgress[levelId]);
-    }
-
-    var href = scriptlevel.url + location.search;
-
-    return {
-      title: scriptlevel.title,
-      status: status,
-      kind: scriptlevel.kind,
-      url: href,
-      icon: scriptlevel.icon,
-      uid: scriptlevel.uid,
-      id: levelId
-    };
+  store.dispatch({
+    type: 'MERGE_PROGRESS',
+    progress: _.mapValues(progressData.levels, level => level.submitted ? SUBMITTED_RESULT : level.result)
   });
 
-  var mountPoint = document.createElement('div');
-  mountPoint.style.display = 'inline-block';
-  $('.progress_container').replaceWith(mountPoint);
-  ReactDOM.render(React.createElement(StageProgress, {
-    levels: combinedProgress,
-    currentLevelId: currentLevelId,
-    saveAnswersFirst: puzzlePage !== progress.PUZZLE_PAGE_NONE
-  }), mountPoint);
+  ReactDOM.render(
+    <Provider store={store}>
+      <StageProgress />
+    </Provider>,
+    mountPoint
+  );
 };
 
 progress.renderCourseProgress = function (scriptData, currentLevelId) {
@@ -167,22 +115,22 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
 // Return the level with the highest progress, or the first level if none have
 // been attempted
-progress.bestResultLevelId = function (levelIds, serverProgress, clientProgress) {
+progress.bestResultLevelId = function (levelIds, progressData) {
   // The usual case
   if (levelIds.length === 1) {
     return levelIds[0];
   }
 
   // Return the level with the highest result
-  var attemptedIds = levelIds.filter(id => serverProgress[id] || clientProgress[id]);
+  var attemptedIds = levelIds.filter(id => progressData[id]);
   if (attemptedIds.length === 0) {
     // None of them have been attempted, just return the first
     return levelIds[0];
   }
   var bestId = attemptedIds[0];
-  var bestResult = clientState.mergeActivityResult(serverProgress[bestId], clientProgress[bestId]);
+  var bestResult = progressData[bestId];
   attemptedIds.forEach(function (id) {
-    var result = clientState.mergeActivityResult(serverProgress[id], clientProgress[id]);
+    var result = progressData[id];
     if (result > bestResult) {
       bestId = id;
       bestResult = result;
@@ -191,33 +139,32 @@ progress.bestResultLevelId = function (levelIds, serverProgress, clientProgress)
   return bestId;
 };
 
-function loadProgress(scriptData, currentLevelId) {
+function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = false) {
 
-  let store = createStore((state = [], action) => {
+  let store = createStore((state = {}, action) => {
     if (action.type === 'MERGE_PROGRESS') {
+      // TODO: _.mergeWith after upgrading to Lodash 4+
       let newProgress = {};
-      return {
-        currentLevelId: state.currentLevelId,
-        professionalLearningCourse: state.professionalLearningCourse,
+      Object.keys(Object.assign({}, state.progress, action.progress)).forEach(key => {
+        newProgress[key] = clientState.mergeActivityResult(state.progress[key], action.progress[key]);
+      });
+
+      return Object.assign({}, state, {
         progress: newProgress,
-        changeFocusAreaPath: state.changeFocusAreaPath,
-        focusAreaPositions: state.focusAreaPositions,
-        showLessonPlanLinks: state.showLessonPlanLinks,
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
-          let id = level.uid || progress.bestResultLevelId(level.ids, state.progress, action.progress);
-          newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
+          let id = level.uid || progress.bestResultLevelId(level.ids, newProgress);
 
           return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id]), id: id});
         })}))
-      };
+      });
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {
-      return Object.assign(state, {
+      return Object.assign({}, state, {
         changeFocusAreaPath: action.changeFocusAreaPath,
         focusAreaPositions: action.focusAreaPositions
       });
     } else if (action.type === 'SHOW_LESSON_PLAN_LINKS') {
-      return Object.assign(state, {
-        showLessonPlanLinks: action.showLessonPlanLinks
+      return Object.assign({}, state, {
+        showLessonPlanLinks: true
       });
     }
     return state;
@@ -225,9 +172,8 @@ function loadProgress(scriptData, currentLevelId) {
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
     progress: {},
-    changeFocusAreaPath: null,
     focusAreaPositions: [],
-    showLessonPlanLinks: false,
+    saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
     stages: scriptData.stages
   });
 

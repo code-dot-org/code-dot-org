@@ -2,15 +2,14 @@ name 'U1L10 Lesson Overview'
 css 'unplugged'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Lesson 1.10: Routers and Redundancy				
-
+## Lesson 1.10: Routers and Redundancy
 
 ### Overview
-<img src = "https://images.code.org/f016200a850bbcc35496600a7de48dcb-image-1465251494657.png" style="float:right; margin-left:30px">
+<img src="https://images.code.org/f016200a850bbcc35496600a7de48dcb-image-1465251494657.png" style="float:right; margin-left:30px">
 
 **Pacing: Unit 1, Week 4**
 <br>
-**Lesson Type: Internet Simulator , Whole Class Discovery**
+**Lesson Type: Internet Simulator, Whole Class Discovery**
 
 In this lesson students explore the benefits (and potential security concerns) associated with routing traffic across the Internet. Building on their introduction to IP addresses in the previous lesson, students use a version of the Internet Simulator that allows messages to be sent only to an intended recipient, as indicated by the IP address. The Internet Simulator also allows students to examine the traffic that goes through all of the (simulated) routers on the network. They will discover that messages go through many different routers, may not always take the same path to reach the final destinaton, and that the routers (and their owners) can see all of this traffic!
 
@@ -18,17 +17,18 @@ In this lesson students explore the benefits (and potential security concerns) a
 
 ### Things to keep in mind while planning this lesson at TeacherCon
 
-- This lesson represents a big jump in the features available in the Internet Simulator since we last saw it at Teachercon. 
+- This lesson represents a big jump in the features available in the Internet Simulator since we last saw it at Teachercon.
 - The entire goal of the lesson is generate a bunch of traffic and analyze the data in the router logs to see that: 1) packets don’t always travel the same route to their destination 2) to begin to ask questions about who can see/control internet traffic.
 - One thing to focus on in planning is exactly what kind of “conversation” you want the participants to have with each other when using the simulator. The lesson plan only says “have a conversation with one of your classmates”.  If completely unstructured this can go bad in a classroom where students might send inappropriate text messages, which can then be seen by everyone through the router logs. One way to avoid this is to come up with a fun theme for the conversation that students are supposed to have, or perhaps come up with a set of interview questions.
-- Ultimately the actual conversation is not important - what’s important is generating a lot of traffic that can then be analyzed.  
-
-
+- Ultimately the actual conversation is not important &mdash; what’s important is generating a lot of traffic that can then be analyzed.
 
 ### U1L10 Lesson Plan
 
 <br>
 Head over to curriculum.code.org to see this lesson and all associated resources (like videos and worksheets). 
 <br><br>
-<a href="https://curriculum.code.org/csp/unit1/10/" target="blank"><button class="plc">U1L10 Lesson Plan >></button></a><br>
+<h4>
+<a href="https://curriculum.code.org/csp/unit1/10/" target="blank">U1L10 Lesson Plan <i class="fa fa-external-link-square"/></a><br>
+</h4>
+
 MARKDOWN

@@ -5,48 +5,27 @@ nav: educate_nav
 
 # Computer Science Fundamentals for elementary school
 
-[No-Cost Professional Development](#teach) |  [Curriculum Overview](#overview) | [Other Resources](#other)
+### [No-Cost Teacher Workshops](#teach) |  [Curriculum Overview](#overview) | [Other Resources](#other)
 
-Now even the youngest students can explore the limitless world of computing—at no cost to schools. Code.org’s K-5 courses blend online, self-guided, and self-paced tutorials with “unplugged” activities that require no computer at all! Even kindergarten-aged pre-readers can participate.
+Now even the youngest students can explore the limitless world of computing. Code.org’s K-5 courses blend online, self-guided, and self-paced tutorials with “unplugged” activities that require no computer at all! Even kindergarten-aged pre-readers can participate.
 
 <iframe width="600" height="337" src="//www.youtube.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
 
-## <a name="teach"></a>No-cost professional development and support for K-5 teachers
+## <a name="teach"></a> High quality workshops for teachers, at no cost (US only)
 
-Our curriculum is completely free for anyone, anywhere to teach. Feel free to get started today! If you need help implementing the curriculum, we've got your back. Check out our free resources and workshops below.
+Our curriculum is completely free for anyone, anywhere to teach. To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States. 
 
-### <strong>Professional development workshops near you—at no cost (US only)</strong>
-
-<strong>Code.org offers high-quality, zero-cost, 1-day workshops</strong> for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in over 60 cities across the United States.
-
-Attendees learn how to use Code.org's courses to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). <strong>Attendees also receive all the supplies they need to teach—at no cost.</strong>
-
-<em>Want to partner with us to train K-5 teachers in your school, district, or region? [Go here.] (/educate/professional-learning/cs-fundamentals-facilitator)</em>
+Attendees learn how to use Code.org's courses to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). Attendees also receive all the supplies they need to teach—at no cost.
 
 <br />
-[<button style="font-size: 22px; height: 50px">Find a local workshop</button>](/professional-development-workshops)<br />
+[<button style="font-size: 22px; height: 50px">Learn more & find a local workshop</button>](/professional-development-workshops)<br />
 
-### <strong>More about what you’ll get from this workshop (at no cost to you)</strong>
-
-<ul><li>in-person instruction from an experienced computer science facilitator</li>
-<li>an intro to computer science and pedagogy</li>
-<li>an overview of the online curriculum and teacher dashboard</li>
-<li>a printed curriculum guide containing course lesson plans</li>
-<li>strategies for teaching “unplugged” classroom activities</li>
-<li>classroom supplies for the unplugged activities</li>
-<li>a certificate of completion</li>
-<li>a bag of Code.org swag</li></ul>
+<em>Want to partner with us to train K-5 teachers in your school, district, or region? [Go here.] (/educate/professional-learning/cs-fundamentals-facilitator)</em>
 
 <img src="/images/k5teacherquotes.png" width="800"/> 
 
 ### <strong>No workshop in your area?</strong>
 [Find](/educate/k5-affiliates-directory) a K-5 Affiliate near you or consider completing one of our [online self-paced courses](/educate/professional-development-online) on your own.
-
-### <strong>Don't have computers?</strong>
-No problem. You can still teach the fundamentals of computer science without any computers or devices. Try using these [unplugged lessons](/curriculum/unplugged) in your classroom as a stand-alone course or as complementary lessons for any computer science course.
-
-### <strong>Tech support & teacher forums</strong>
-Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here] (/educate/support).
 
 
 ## <a name="overview"></a>Computer Science Fundamentals: Curriculum Overview
@@ -150,7 +129,7 @@ By the end of each course, students create interactive games or stories that the
 
 The courses are flexible, too, so educators can adjust them based on their students’ developmental level and prior experience. 
 
-All lessons align to <a href="http://csta.acm.org/Curriculum/sub/K12Standards.html" target="_blank">CSTA Computer Science Standards</a> and <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. 
+All lessons align to <a href="http://csta.acm.org/Curriculum/sub/K12Standards.html" target="_blank">CSTA Computer Science Standards</a> and <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
 
 ### <strong>Examples of student creations</strong>
 
@@ -196,6 +175,12 @@ The Code Studio teacher dashboard makes it easy for teachers to view lesson plan
 [/col-50]
 
 <p style="clear:both">&nbsp;</p>
+
+### <strong>Don't have computers?</strong>
+No problem. You can still teach the fundamentals of computer science without any computers or devices. Try using these [unplugged lessons](/curriculum/unplugged) in your classroom as a stand-alone course or as complementary lessons for any computer science course.
+
+### <strong>Tech support & teacher forums</strong>
+Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here] (/educate/support).
 
 
 ## <a name="other"></a>Other resources

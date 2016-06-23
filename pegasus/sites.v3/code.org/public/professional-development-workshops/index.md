@@ -11,8 +11,15 @@ We welcome elementary school teachers to sign up for a free, high-quality profes
 <%= view :workshop_search %>
 
 <a id="get"></a>
-## What else you’ll get from this workshop (at no cost to you)
-Workshop attendees will also receive a bag of Code.org swag and printed curriculum guide containing course lesson plans. You will also receive a certificate of completion, as well as classroom supplies for the unplugged activities.
+## What you’ll get from this workshop (at no cost to you)
+<ul><li>in-person instruction from an experienced computer science facilitator</li>
+<li>an intro to computer science and pedagogy</li>
+<li>an overview of the online curriculum and teacher dashboard</li>
+<li>a printed curriculum guide containing course lesson plans</li>
+<li>strategies for teaching “unplugged” classroom activities</li>
+<li>classroom supplies for the unplugged activities</li>
+<li>a certificate of completion</li>
+<li>a bag of Code.org swag</li></ul>
 
 <img src="/images/swagbag.png" width="175"/>
 <img src="/images/coursebook.png" width="175"/>
