@@ -564,7 +564,8 @@ Applab.init = function (config) {
   Applab.channelId = config.channel;
   Applab.firebaseName = config.firebaseName;
   Applab.firebaseAuthToken = config.firebaseAuthToken;
-  Applab.storage = window.dashboard.project.useFirebase() ? FirebaseStorage : AppStorage;
+  Applab.useFirebase = window.dashboard.project.useFirebase();
+  Applab.storage = Applab.useFirebase ? FirebaseStorage : AppStorage;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
@@ -762,6 +763,10 @@ Applab.init = function (config) {
     }
   }.bind(this);
 
+  // Force phoneFrame on when viewing or editing firebase projects.
+  var playspacePhoneFrame = !config.share && (experiments.isEnabled('phoneFrame') ||
+    Applab.useFirebase);
+
   // Push initial level properties into the Redux store
   studioApp.setPageConstants(config, {
     channelId: config.channel,
@@ -775,7 +780,7 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: false,
-    playspacePhoneFrame: !config.share && experiments.isEnabled('phoneFrame')
+    playspacePhoneFrame: playspacePhoneFrame
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
