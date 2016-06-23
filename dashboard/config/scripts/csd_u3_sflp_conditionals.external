@@ -7,20 +7,12 @@ markdown <<MARKDOWN
 
 # Background
 
-Blah Blah
+After a brief online refresher with booleans students are introduced to some boolean producing keyboard input functions that they can use in conditionals to move sprites around the screen.
 
-# Lesson
-
-* Blah
-* Blah
-* Blah
-
-# Vocab
-
-* Sprite
-* Object
-* Property
-* Rotate
+# Vocabulary
+* **Boolean** - A value of either TRUE or FALSE
+* **Conditionals** - Statements that only run under certain conditions.
+* **Expression** - Any valid unit of code that resolves to a value.
 
 # Commands 
 
@@ -40,10 +32,6 @@ Blah Blah
 |---|---| --- | --- |
 |mouseX|Gives the x position of the mouse|`sprite.x = mouseX;`  | link |
 |mouseY|Gives the y position of the mouse|`sprite.y = mouseY;` | link |
-
-# Resources
-* Activity Guide: <a href="https://drive.google.com/open?id=1_Dkh33G7NTrnlAR0kD8UJZ9A2xFO_ICIJeDrxm-S6e4">Simple Drawings in Game Lab</a>
-* Activity Guide: <a href="https://drive.google.com/open?id=17-rj7SWbn1Nb0IQl-o-4h3VlS1kjId8T0o6HUGojglA">Plan Your Drawing</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
