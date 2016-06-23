@@ -160,6 +160,8 @@ end
 
 opt_parser.parse!(ARGV)
 passed_features = ARGV + ($options.feature || [])
+# Standardize: Drop leading dot-slash on feature paths
+passed_features.map! {|feature| feature.gsub(/^\.\//, '')}
 
 $browsers = JSON.load(open("browsers.json"))
 
@@ -236,8 +238,6 @@ end
 
 all_features = Dir.glob('features/**/*.feature')
 features_to_run = passed_features.empty? ? all_features : passed_features
-# Standardize: No leading dot-slash on feature paths
-features_to_run.map! {|feature| feature.gsub(/^\.\//, '')}
 browser_features = $browsers.product features_to_run
 
 git_branch = `git rev-parse --abbrev-ref HEAD`.strip
