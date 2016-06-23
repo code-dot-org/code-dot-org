@@ -13,7 +13,7 @@ nav: promote_nav
 
 [DATE]
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them; 
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them; 
 
 Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors; 
 
@@ -23,7 +23,7 @@ Whereas the field of computer science is a foundational science for the digital 
  
 Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations; 
 
-Whereas the outlook for computer science jobs is bright with one in every two STEM jobs in the country in computing occupations;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives; 
 
