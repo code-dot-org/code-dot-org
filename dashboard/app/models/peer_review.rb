@@ -48,28 +48,20 @@ class PeerReview < ActiveRecord::Base
     # Review status is nil
     # Reviewer is nil or it has been assigned for more than a day
     # Reviewer is not currently reviewing this level source
-    level_sources_reviewing = PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
+    transaction do
+      level_sources_reviewing = PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
 
-    peer_review = where(script: script).
-        where.not(submitter: user).
-        where(status: nil).
-        where('reviewer_id is null or created_at < NOW() - 1').
-        where.not(level_source_id: level_sources_reviewing).take
-
-    if peer_review
-      peer_review.update!(reviewer: user)
-      peer_review
-    else
-      # If nothing meets the first criteria, pick a random review that has been reviewed already
       peer_review = where(script: script).
           where.not(submitter: user).
-          where.not(reviewer: user).
-          where.not(level_source_id: level_sources_reviewing).
-          order('rand()').take
+          where(status: nil).
+          where('reviewer_id is null or created_at < now() - interval 1 day').
+          where.not(level_source_id: level_sources_reviewing).take
 
       if peer_review
-        peer_review.dup.tap {|r| r.update!(reviewer: user)}
+        peer_review.update!(reviewer: user)
+        peer_review
       else
+        # Eventually, more complex logic will go here for duplicating existing reviews
         nil
       end
     end
