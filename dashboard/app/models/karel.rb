@@ -47,7 +47,7 @@ class Karel < Maze
     maze = JSON.parse(maze_json)
     maze.each_with_index do |row, x|
       row.each_with_index do |cell, y|
-        unless cell.is_a?(Hash) && cell.has_key?('tileType')
+        unless cell.is_a?(Hash) && cell.key?('tileType')
           raise ArgumentError.new("Cell (#{x},#{y}) has no defined tileType")
         end
       end

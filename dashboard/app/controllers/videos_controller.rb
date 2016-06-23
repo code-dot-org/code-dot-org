@@ -21,9 +21,9 @@ class VideosController < ApplicationController
         render(layout: false, text: "Error processing video: #{e}. Contact an engineer for support.", status: 500) && return
       end
     end
-    video_info = @video.summarize(params.has_key?(:autoplay))
-    video_info[:enable_fallback] = !params.has_key?(:youtube_only)
-    video_info[:force_fallback] = params.has_key?(:fallback_only)
+    video_info = @video.summarize(params.key?(:autoplay))
+    video_info[:enable_fallback] = !params.key?(:youtube_only)
+    video_info[:force_fallback] = params.key?(:fallback_only)
     render layout: false, locals: {video_info: video_info}
   end
 
