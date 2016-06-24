@@ -34,6 +34,7 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
     nonexistant_users = []
     nonteacher_users = []
     other_failure_users = []
+    other_failure_errors = []
 
     user_emails.each do |email|
       user = User.find_by_email_or_hashed_email(email)
@@ -48,11 +49,12 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
           enrolled_users << email
         else
           other_failure_users << email
+          other_failure_errors << enrollment.errors
         end
       end
     end
 
-    return enrolled_users, nonexistant_users, nonteacher_users, other_failure_users
+    return enrolled_users, nonexistant_users, nonteacher_users, other_failure_users, other_failure_errors
   end
 
   def create_enrollment_unit_assignments
