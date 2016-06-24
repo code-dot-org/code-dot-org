@@ -54,6 +54,7 @@ var WorkshopForm = React.createClass({
     let initialState = {
       errors: [],
       shouldValidate: false,
+      useAutocomplete: true,
       facilitators: [],
       location_name: '',
       location_address: '',
@@ -93,6 +94,9 @@ var WorkshopForm = React.createClass({
 
   componentWillUnmount: function () {
     if (this.isGoogleMapsLoaded()) {
+      if (this.gm_authFailure) {
+        window.gm_authFailure = this.old_gm_authFailure;
+      }
       google.maps.event.clearInstanceListeners(this.autocomplete);
     }
     if (this.saveRequest) {
@@ -128,6 +132,24 @@ var WorkshopForm = React.createClass({
   },
 
   enableAutocompleteLocation: function () {
+    if (!this.state.useAutocomplete) {
+      return;
+    }
+
+    // The way to catch google auth errors is in a global function :(
+    // See https://developers.google.com/maps/documentation/javascript/events#auth-errors
+    // If google auth fails, remove the autocomplete and re-draw.
+    if (!this.gm_authFailure) {
+      // Save existing function, if one exists.
+      this.old_gm_authFailure = window.gm_authFailure;
+      window.gm_authFailure = this.gm_authFailure = () => {
+        if (this.old_gm_authFailure) {
+          this.old_gm_authFailure();
+        }
+        this.setState({useAutocomplete: false});
+      };
+    }
+
     if (!this.autocomplete && this.isGoogleMapsLoaded()) {
       this.autocomplete = new google.maps.places.Autocomplete($(ReactDOM.findDOMNode(this)).find('.location-autocomplete')[0]);
       google.maps.event.addListener(this.autocomplete, 'place_changed', function () {
@@ -503,9 +525,11 @@ var WorkshopForm = React.createClass({
             <Col sm={6}>
               <Input
                 type="text"
+                key={this.state.useAutocomplete} // Change key to force re-draw
                 className="location-autocomplete"
                 label="Location Address"
                 value={this.state.location_address || ''}
+                placeholder="Enter a location"
                 onChange={(event) => {this.handleFieldChange('location_address', event.target.value);}}
                 bsStyle={validation.style.location_address}
                 help={validation.help.location_address}
