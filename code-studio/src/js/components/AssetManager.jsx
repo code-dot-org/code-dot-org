@@ -1,5 +1,4 @@
 var React = require('react');
-
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var AssetRow = require('./AssetRow');
 var AssetUploader = require('./AssetUploader');
