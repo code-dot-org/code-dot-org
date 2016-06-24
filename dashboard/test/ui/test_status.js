@@ -160,8 +160,7 @@ rows.forEach(row => {
 
 function testFromS3Key(key) {
   let escapedSuffix = S3_KEY_SUFFIX.replace(/\./g, '\\.');
-  var re = new RegExp(`[^/]+\/([^_]+)_(.*)${escapedSuffix}`, 'i');
-  var result = re.exec(key);
+  var result = new RegExp(`[^/]+\/([^_]+)_(.*)${escapedSuffix}`, 'i').exec(key);
   var browser = result[1];
   var feature = `features/${result[2]}.feature`;
   // If we don't have the browser, we definitely don't have the test.
