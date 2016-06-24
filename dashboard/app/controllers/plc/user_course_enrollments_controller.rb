@@ -35,12 +35,14 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   def create
     user_emails = user_course_enrollment_params[:user_emails].split
 
-    enrolled_users, nonexistant_users, nonteacher_users, other_failure_users = Plc::UserCourseEnrollment.enroll_users(user_emails, user_course_enrollment_params[:plc_course_id])
+    enrolled_users, nonexistant_users, nonteacher_users, other_failure_users, other_failure_reasons =
+      Plc::UserCourseEnrollment.enroll_users(user_emails, user_course_enrollment_params[:plc_course_id])
 
     notice_string = enrolled_users.empty? ? '' : "Enrollments created for #{listify(enrolled_users)}<br/>"
     notice_string += "The following users did not exist #{listify(nonexistant_users)}<br/>" unless nonexistant_users.empty?
     notice_string += "The following users were not teachers #{listify(nonteacher_users)}<br/>" unless nonteacher_users.empty?
     notice_string += "The following users failed for other reasons #{listify(other_failure_users)}<br/>" unless other_failure_users.empty?
+    notice_string += "The failures were because of reasons #{listify(other_failure_reasons)}" unless other_failure_reasons.empty?
 
     redirect_to action: :new, notice: notice_string
   end
