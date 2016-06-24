@@ -21,3 +21,9 @@ const stageShape = React.PropTypes.shape({
   levels: stageProgressShape
 });
 module.exports.stageShape = stageShape;
+
+const peerReviewShape = React.PropTypes.shape({
+  id: React.PropTypes.number,
+  submitted: React.PropTypes.boolean
+});
+module.exports.peerReviewShape = peerReviewShape;

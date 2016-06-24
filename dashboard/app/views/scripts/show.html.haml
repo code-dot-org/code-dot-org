@@ -41,7 +41,7 @@
   #stats
     .user-stats-block
       :javascript
-        dashboard.progress.renderCourseProgress(#{@script.summarize.to_json});
+        dashboard.progress.renderCourseProgress(#{@script.summarize(current_user).to_json});
       = render partial: 'shared/user_stats_key'
 
       - if @script.trophies

@@ -174,7 +174,9 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
     progress: {},
     focusAreaPositions: [],
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
-    stages: scriptData.stages
+    stages: scriptData.stages,
+    peerReviewsRequired: scriptData.peerReviewsRequired,
+    peerReviewsPerformed: scriptData.peerReviewsPerformed
   });
 
   // Merge in progress saved on the client.

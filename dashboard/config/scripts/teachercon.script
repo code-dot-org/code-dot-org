@@ -3,6 +3,7 @@ title 'TeacherCon Supports'
 description 'We will use this during TeacherCon to deliver supports and materials for sessions'
 description_short 'We will use this during TeacherCon to deliver supports and materials for sessions'
 login_required 'true'
+peer_reviews_to_complete 10
 
 stage 'Introduction to Teachercon', 'required'
  named_level 'Welcome to TeacherCon!'

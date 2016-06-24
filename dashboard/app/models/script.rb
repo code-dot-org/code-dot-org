@@ -70,7 +70,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required)
+  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required peer_reviews_to_complete)
 
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -388,6 +388,7 @@ class Script < ActiveRecord::Base
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
                        professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
                        student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
+                       peer_reviews_to_complete: script_data[:peer_reviews_to_complete].nil? ? 0 : script_data[:peer_reviews_to_complete], # default 0
                       },
         }, stages.map{|stage| stage[:scriptlevels]}.flatten]
       end
@@ -556,6 +557,7 @@ class Script < ActiveRecord::Base
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
                        professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
                        student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
+                       peer_reviews_to_complete: script_data[:peer_reviews_to_complete].nil? ? 0 : script_data[:peer_reviews_to_complete], # default 0
           }
         }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
         Script.update_i18n(i18n)
@@ -607,12 +609,14 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def summarize
+  def summarize(user = nil)
     summary = {
       id: id,
       name: name,
-      plc: professional_learning_course,
+      plc: professional_learning_course?,
       stages: stages.map(&:summarize),
+      peerReviewsRequired: peer_reviews_to_complete || 0,
+      peerReviewsPerformed: user ? PeerReview.where(reviewer: user, script: self).map { |review| {id: review.id, submitted: !review.status.nil?}} : [],
     }
 
     summary[:trophies] = Concept.summarize_all if trophies
