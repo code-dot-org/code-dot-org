@@ -29,6 +29,8 @@ pt-BR:
   unsubmit: Cancelar envio
   previous_page: Página anterior
   next_page: Próxima página
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: Ok
   heading_x_of_y: '%{heading} (página %{y} de %{x})'
@@ -85,6 +87,7 @@ pt-BR:
     teacher_title: Cadastro de professores
     student_pitch: Cadastro de aluno na Code.org
     student_title: Cadastro de alunos
+    signup_title: Sign up for Code.org
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
     address_placeholder: endereço, cidade, estado, CEP
@@ -103,6 +106,9 @@ pt-BR:
     student_terms: "Concordo com os <a href='http://code.org/tos'>termos de serviço</a> da Code.org. Se tenho menos de 13 anos de idade, ao enviar este formulário confirmo que tenho autorização de meus pais ou tutor legal para usar os serviços da Code.org.<br/> No caso dos alunos com menos de 13 anos, os endereços de e-mail não são armazenados em um formulário que nos permita entrar em contato com eles."
     teacher_terms: "Concordo com os <a href='http://code.org/tos'>termos de serviço</a> da Code.org."
     additional_information: Precisamos de mais informações para continuar com o processo de inscrição.
+    user_type_label: Account Type
+    user_type_teacher: Professor
+    user_type_student: Estudante
   signin_form:
     title: Já tem uma conta? Entre
     login: Email ou nome de usuário
@@ -335,7 +341,7 @@ pt-BR:
     announcement_title: Anúncios
     announcement_view_all: Ver todos
     announcement_message: '<b>22 de abril de 2016</b> - Atividades offline são partes vitais do processo de aprendizagem, mas os professores nos disseram que encontrar todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você pode encontrar todos os recursos offline numa página só. Associar as lições com qualquer aula de ciência da computação, ou usar a vídeo-aula como um curso independente.'
-    announcement_button: Saiba mais
+    announcement_button: Test the feature
     announcement_petition: Como professor, você está liderando o caminho em um movimento para dar a cada aluno em todas as escolas a oportunidade de aprender informática. Agora, é hora de deixar seus representantes notícias suas. Esta semana, líderes de educação, 28 governadores e maiores empresas de CEOs da América se uniram em uma carta aberta pedindo o Congresso dos EUA para financiar a educação de ciência de computador K-12.
     announcement_petition_button: Adicione o seu nome
   move_students:
@@ -399,9 +405,9 @@ pt-BR:
     download: Baixar Vídeo
   compatibility:
     upgrade:
-      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      unsupported_message: "Seu navegador não é suportado. Por favor atualize seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas algumas funcionalidades podem não funcionar."
+      ie_message: Code.org em breve irá remover o suporte para o Internet Explorer 8, 9 e 10. Por favor, atualize para um navegador moderno.
+      ie_message_csedweek: CSEdWeek.org em breve irá remover o suporte para o Internet Explorer 8, 9 e 10. Por favor, atualize para um navegador moderno.
       link: Saiba mais
   slow_loading: Isso está demorando mais do que o normal...
   try_reloading: Tente recarregar a página
@@ -622,7 +628,7 @@ pt-BR:
     name: Nome
     updated: Atualizado
     project_type: Tipo de projeto
-    help_text: 'Clique em <strong>Crie um aplicativo</strong> ou <strong>Desenhe alguma coisa</strong> abaixo para fazer um novo Laboratório ou Projeto de artista!<br/>Você pode voltar a trabalhar nos seus projetos a qualquer hora.'
+    help_text: 'Clique em <strong>Crie um aplicativo</strong> ou <strong>Desenhe alguma coisa</strong> abaixo para iniciar um novo projeto!<br/>Você pode voltar a trabalhar nos seus projetos a qualquer hora.'
     need_help: Precisa de ajuda para começar?
     really_delete: Excluir?
     delete_yes: Sim
@@ -675,31 +681,40 @@ pt-BR:
       no_icons_found: Nenhum ícone foi encontrado
     playzone:
       artist_description: Faça desenhos e figuras legais com o Artista!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: Novo Desenho
+      continue_button: Vá para a próxima fase
       playlab_description: Crie uma história ou um jogo no Laboratório!
-      playlab_title: New App
-      primary_header: 'Congratulations! You finished %{stageName}!'
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      playlab_title: Novo Aplicativo
+      primary_header: 'Parabéns! Você completou %{stageName}!'
+      projects_description: Revisite um dos seus projetos existentes.
+      projects_title: Abrir um projeto
+      secondary_header: Pergunte a seu professor o que fazer em seguida
   flex_category:
     required: Visão geral
     content: Conteúdo
     practice: Professor de práticas
   external_links:
-    disclaimer_md: "<strong>Aviso: Você está agora deixando o domínio Code.org, para um site que não é operado por Code.org.</strong> Este site pode ter políticas de privacidade que diferem do Code.org. <br/> <br/> Nós selecionamos estes recursos de terceiros, porque achamos que eles serão úteis para você. Enquanto nós não somos diretamente responsáveis pelo conteúdo deste site, por favor <a href='mailto:support@code.org'> entre em contato com o suporte</a> se você encontrar o conteúdo censurável, ou se o site vinculado não está mais disponível."
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
-    title: Hour of Code downloads
-    capsule_title: Do you have Internet?
-    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: No Internet?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    title: Downloads do Hour of Code
+    capsule_title: Você tem Internet?
+    capsule_desc: 'Use o on-line, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: Sem Internet?
+    instructions: 'Instruções para os professores: se você tem um mau serviço de Internet, estes tutoriais do Hour of Code (Hora de Código) estão disponiveis para baixar e instalar para uso offline. Escolha seu idioma e a plataforma, baixe e instale-o em todos os computadores da sua sala de aula. Você pode usar um Pendrive para instalar em todas as maquinas. Nota: os estudantes não serão capaz de fazer entrar no Code Studio (Estúdio de Código) para salvar ou imprimir certificados. Os professores podem imprimimir os certificados <a href="%{url}">aqui</a>.'
     minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: 'Download %{app_name} for offline use (136MB)'
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    starwars_blocks_name: 'Star Wars: Construindo uma galáxia com código (Blocos)'
+    starwars_javascript_name: 'Star Wars: Construindo uma galáxia com código (JavaScript)'
+    download_message: 'Baixar %{app_name} para uso offline (136MB)'
+    download_in_english: 'Download em inglês:'
+    download_in_spanish: 'Download em espanhol:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

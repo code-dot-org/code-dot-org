@@ -509,13 +509,13 @@ fr-FR:
   dashboard_navigation_section_pd: Journée pédagogique
   dashboard_navigation_section_speakers: 'Informatique/Sciences informatiques <br/> Conférenciers invités'
   dashboard_navigation_all_sections: "Comptes et progression de l'élève"
-  dashboard_navigation_view_progress: Voir la progression
-  dashboard_navigation_view_text_responses: Afficher les réponses écrites
+  dashboard_navigation_view_progress: Progression
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Évaluations
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
-  dashboard_navigation_view_stats: Consulter les statistiques
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Section&#160;: %{section_name}'
   dashboard_navigation_student: 'Élève&#160;: %{student_name}'
   dashboard_progress_not_started: pas commencé
@@ -661,7 +661,7 @@ fr-FR:
   dashboard_announcements: Annonces
   dashboard_announce_view_all: Tout voir
   dashboard_announce_message: "<b>Le 16 décembre 2015</b> - Nous vous remercions de votre participation à l'Heure de Code 2015 ! Le suivi et l'enregistrement de la progression ont maintenant repris pour tous les cours et tutoriels de Code Studio. Remarque : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier. Veuillez prévoir un retard des réponses aux questions que vous poserez jusqu'au 4 janvier."
-  dashboard_announce_button_text: Pour en savoir plus
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "Comme enseignant, vous ouvrez la voie à un mouvement visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique. Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine, les responsables de l’éducation, 28 gouverneurs et les PDG des plus grandes entreprises d'Amérique se sont réunis pour rédiger une lettre ouverte demandant au Congrès américain de financer l’enseignement de l'informatiques du K-12."
   dashboard_announce_petition_button: Ajoutez votre nom
   code_hoc_coming: "L'Heure de Code est là — du 8 au 14 décembre&#160;!"
@@ -783,6 +783,7 @@ fr-FR:
   cspunit6_name: "Principes de l'informatique, unité 6"
   csp1_name: 'Unité 1: Internet'
   csp2_name: 'Unité 2: L’Information numérique'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Test complet - 50 questions'
   cspexam1-mWU7ilDYM9_name: Test, partie 1, 25 questions
   cspexam2-AKwgAh1ac5_name: Test, partie 2, 25 questions

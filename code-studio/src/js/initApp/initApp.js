@@ -62,6 +62,12 @@ window.apps = {
           return results;
         }
       };
+      if (appOptions.readonlyWorkspace) {
+        // Lock the contained levels if this is a teacher viewing student work:
+        containedLevelOps.lockAnswers();
+      }
+      // Always mark the workspace as readonly when we have contained levels:
+      appOptions.readonlyWorkspace = true;
     }
 
     // Sets up default options and initializes blockly

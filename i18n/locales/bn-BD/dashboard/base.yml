@@ -29,6 +29,8 @@ bn:
   unsubmit: জমা না দেয়া
   previous_page: পূর্বের পৃষ্ঠা
   next_page: পরের পাতা
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: বাতিল করুন
   okay: ঠিক আছে
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
@@ -86,6 +88,7 @@ bn:
     teacher_title: শিক্ষক সাইন আপ
     student_pitch: ছাত্রছাত্রী সাইন আপ Code.org-এর জন্য
     student_title: ছাত্রছাত্রী সাইন আপ
+    signup_title: Sign up for Code.org
     school_name: স্কুলের নাম (ঐচ্ছিক)
     school_address: স্কুলের ঠিকানা (ঐচ্ছিক)
     address_placeholder: ঠিকানা, শহর, রাজ্য, জিপ
@@ -101,9 +104,12 @@ bn:
     valid_password: সঠিক পাসওয়ার্ড!
     invalid_password: পাসওয়ার্ডের অন্তত 6 অক্ষর হতে হবে
     mismatch_password: আপনার প্রবেশ করানো পাসওয়ার্ড দুটি মিলছে না
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "আমি Code.org <a href='http://code.org/tos'> শর্তাবলী ও সেবা</a> মেনে নিতে রাজি।"
     additional_information: সাইন আপ প্রক্রিয়া চালিয়ে নিতে আমাদের আরো কিছু অতিরিক্ত তথ্যের প্রয়োজন।
+    user_type_label: Account Type
+    user_type_teacher: শিক্ষক
+    user_type_student: ছাত্র
   signin_form:
     title: একাউন্ট ইতিমধ্যেই আছে? সাইন ইন করুন
     login: ব্যবহারকারীর নাম অথবা ই-মেইল
@@ -337,7 +343,7 @@ bn:
     announcement_title: ঘোষণা
     announcement_view_all: সব দেখুন
     announcement_message: '<b>২৯ ফেব্রুয়ারি, ২০১৬</b>- কর্মশালায় অংশগ্রহণকারীদের ৯০% আমাদের প্রোগ্রামকে সবচেয়ে ভাল পেশাদারী উন্নয়ন কর্মশালা বলেছেন। চাহিদার কারণে, আমরা আমাদের হাই স্কুলে কম্পিউটার বিজ্ঞানের জন্য পেশাগত শিখন প্রোগ্রামে একটি একটি সীমিত সংখ্যক স্থান যোগ করছি। আপনার স্থান নিশ্চিত করতে <u>মার্চ ৩১<u> এর মধ্যে আবেদন করুন।'
-    announcement_button: আরও জানুন
+    announcement_button: Test the feature
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
   move_students:
@@ -688,9 +694,9 @@ bn:
   flex_category:
     required: সংক্ষিপ্ত বিবরণ
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -705,3 +711,12 @@ bn:
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

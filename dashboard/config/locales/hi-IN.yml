@@ -30,6 +30,8 @@
   unsubmit: Unsubmit
   previous_page: "पिछला पृष्ठ"
   next_page: "अगले पृष्ठ"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "रद्द करें"
   okay: "ठीक है"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -95,6 +97,7 @@
     teacher_title: "शिक्षक के लिए साइन अप"
     student_pitch: "कोड.ऑर्ग साइन अप छात्र के लिए"
     student_title: "छात्र के लिए साइन अप"
+    signup_title: Sign up for Code.org
     school_name: "स्कूल का नाम (यदि आप चाहते हैं)"
     school_address: "स्कूल का पता (यदि आप चाहते हैं)"
     address_placeholder: "पता, शहर, राज्य, पिन"
@@ -120,6 +123,9 @@
       से बंधे होने के लिए सहमत हूँ"
     additional_information: "हम कुछ अतिरिक्त जानकारी की आवश्यकता आप साइन अप करने के
       लिए जारी रखने के लिए ।"
+    user_type_label: Account Type
+    user_type_teacher: Teacher
+    user_type_student: "छात्र"
   signin_form:
     title: "एक खाता पहले से ही है ? साइन इन करें"
     login: "ईमेल या उपयोगकर्ता का नाम"
@@ -852,3 +858,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

@@ -29,6 +29,8 @@
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Prekliči
   okay: V redu
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -92,6 +94,7 @@
     teacher_title: Učitelji - prijava
     student_pitch: Registracija na Code.org za učence.
     student_title: Prijava za študente
+    signup_title: Sign up for Code.org
     school_name: Ime šole (po izbiri)
     school_address: Naslov šole (po izbiri)
     address_placeholder: naslov, mesto, država, poštna številka
@@ -115,6 +118,9 @@
     teacher_terms: Strinjam se z <a href='http://code.org/tos'> pogoji storitve</a>
       Code.org
     additional_information: Potrebujemo nekaj dodatnih informacij za uspešno prijavo.
+    user_type_label: Account Type
+    user_type_teacher: Učitelj/ica
+    user_type_student: Učenec
   signin_form:
     title: "Že imate račun? Vpišite se"
     login: Elektronska pošta ali uporabniško ime
@@ -841,3 +847,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

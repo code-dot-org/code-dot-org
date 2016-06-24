@@ -677,7 +677,7 @@
   dashboard_navigation_section_pd: "პროფესიული განვითარება"
   dashboard_navigation_section_speakers: "ინფორმატიკა <br/> მოწვეული სპიკერები"
   dashboard_navigation_all_sections: "მოსწავლეების ანგარიშები და პროგრესი"
-  dashboard_navigation_view_progress: "პროგრესის ნახვა"
+  dashboard_navigation_view_progress: "პროგრესი"
   dashboard_navigation_view_text_responses: "ტექსტური პასუხების ნახვა"
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "მოსწავლეებს დამატება"
@@ -1012,6 +1012,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

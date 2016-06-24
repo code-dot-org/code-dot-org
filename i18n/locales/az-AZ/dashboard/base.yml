@@ -27,8 +27,10 @@ az:
   see_your_learning_plan: See your learning plan
   submit: Göndər
   unsubmit: Unsubmit
-  previous_page: Previous page
-  next_page: Next page
+  previous_page: Əvvəlki səhifə
+  next_page: Növbəti səhifə
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: İmtina et
   okay: Oldu
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
@@ -52,7 +54,7 @@ az:
   of: /
   more: DAHA ÇOX
   less: DAHA AZ
-  beta: beta
+  beta: beta versiya
   try_hoc: 'Kod Saatında özünüzü sınayın, buraya klikləyin >> '
   try_k8intro: Bizim K-8 İnformatikaya Giriş kursunu (15-25 saat) sınaqdan keçirin
   k8intro: K-8 yaş qrupu (12-13 yaşlılar) üçün İnformatikaya giriş kursu (15-25 saat)
@@ -86,6 +88,7 @@ az:
     teacher_title: Müəllim kimi qeydiyyatdan keçin
     student_pitch: Code.org üçün tələbə qeydiyyatı
     student_title: Şagird qeydiyyatı
+    signup_title: Sign up for Code.org
     school_name: Məktəbin Adı (vacib deyil)
     school_address: Məktəbin ünvanı (vacib deyil)
     address_placeholder: ünvan, şəhər, vilayət, poçt indeksi
@@ -106,6 +109,9 @@ az:
     teacher_terms: |-
       Mən "Code.org" <a href='http://code.org/tos'>xidmət şərtləri</a>nə tabe olmağımı qəbul edirəm.
     additional_information: Qeydiyyatı davam etdirmək üçün bəzi əlavə məlumatlara ehtiyacımız var.
+    user_type_label: Account Type
+    user_type_teacher: Müəllim
+    user_type_student: şagird
   signin_form:
     title: Artıq hesabınız var? Daxil olun
     login: E-poçt və ya istifadəçi adı
@@ -117,7 +123,7 @@ az:
     try_hoc: Əvvəlcə Hour of Code yoxlayın
     try_20hours: Bizim 20 saatliq İnformatikaya Giriş-i yoxlayın
   signinsection:
-    welcome: 'Welcome to %{section_name}'
+    welcome: '%{section_name} bölməsinə xoş gəldiniz'
     name: Adınızı seçin
     picture: İndi isə gizli şəkilinizi seçin
     words: İndi isə gizli sözünüzü daxil edin
@@ -256,8 +262,8 @@ az:
       prize_us_only: (Yalnız ABŞ-dan olan şagirdlər)
       prizes_link: daha ətraflı
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: Cavab
+    for_teachers_only: Ancaq müəllimlər üçün
     title:
       one: 'Müəlliminiz:'
       other: 'Müəllimləriniz:'
@@ -337,8 +343,9 @@ az:
     print_certificate: Sertifikatı çap edin
     announcement_title: Elanlar
     announcement_view_all: Hamısına baxın
-    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-    announcement_button: Daha ətraflı
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
   move_students:
@@ -689,9 +696,9 @@ az:
   flex_category:
     required: Overview
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -706,3 +713,12 @@ az:
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

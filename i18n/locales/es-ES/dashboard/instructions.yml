@@ -121,7 +121,7 @@ es:
         Colecta néctar y miel. Tenga cuidado 
         de no recogen néctar de una flor morada si no tiene ninguno.
       2-3 Bee Conditionals 15_instruction: Recoge néctar de las cuatro flores.
-      2-3 Bee Conditionals 2_instruction: Hola, soy una abeja! Ayúdame a recoger todo el néctar de las flores. Utiliza un bucle (loop).
+      2-3 Bee Conditionals 2_instruction: "Yo soy una abeja hambrienta! \\r\n Ayudarme a recoger\n todo el néctar de las flores utilizando el menor número de bloques."
       2-3 Bee Conditionals 3_instruction: Ayúdame a recoger todo el néctar de las flores y a hacer miel. Usa un bucle (loop).
       2-3 Bee Conditionals 4_instruction: 'Ayúdame a recoger todo el néctar de las flores y a hacer toda la miel. '
       2-3 Bee Conditionals 5_instruction: |
@@ -254,6 +254,10 @@ es:
         ¿Podrías reemplazar la respuesta anterior con
         solo dos bloques? (Sugerencia: Crea un ciclo utilizando un bloque de "repeticiones".)
       2-3 Maze 12 (old)_instruction: ¡Llévame al cerdo, ahora con el bloque repetir!
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: |
         ¿Podrías reemplazar estos cinco bloques con solo dos?
         (Sugerencia: Crea un ciclo usando un bloque de "repeticiones".)
@@ -548,16 +552,22 @@ es:
       4-5 While Loops 7_instruction: ¡Wow, ahora hay tres montones de tierra! ¿Puedes escribir un programa que elimine cada uno de ellos hasta que la tierre quede plana?
       4-5 While Loops 8_instruction: ' Hay un hueco muy profundo y mucha tierra amontonada. ¿Cúantas paladas son necesarias para aplanar la tierra? Sugerencia: Utiliza el circuito de bloque "while" para ambas.'
       4-5 While Loops Assessment 1_instruction: Existen un montón de huecos y pilotes. Ayúdame a llenarlos y removerlos para aplanar la tierra.
-      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na square with 20 pixel sides. "
       aE2_instruction: |
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
-        all 15 squares line up next to each other?
-      aE3_instruction: |
-        Now let's go one level deeper! We've nested that whole
-        block of code into another loop, but you need to get the artist back in place
-        to draw the next line. Which of these code blocks can you place at the end
-        of the outermost loop to draw the whole grid?
+        all 14 napkins line up next to each other?
+      aE3_instruction: "We've got to have a tablecloth!  \\r\n\\r\nTake your row of\n14 napkins and sew 14 of those together with another **outer loop** to make\na cover for our table."
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: |
+        How many times do you need to loop this to draw half  of
+        a circle? 
+      aE7_instruction: "If you create another loop like this one, but turn left instead\nof right, what happens? \\r\n\\r\nCan you repeat all of that to draw this wave?"
+      aE8_instruction: "Now let's loop that whole thing four times to create this\npicture frame. Watch out for the corners - you can't just turn 90 degrees!\n\\r\n\\r\nIf looping a 3 degree turn 60 times makes a half circle, which of\nthese blocks of code will make an additional quarter circle for the corners?"
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -630,6 +640,10 @@ es:
       Artist - Nested Loops Assessment 1_instruction: Utiliza un circuito anidado para completar el diseño.
       Auto Open Function Editor_instruction: '¡Puedes llamar una función dentro de otra función! Utilizando tu función "shape" como base, crea 3 formas de casa cada una de 20 píxeles mas larga que la anterior, empezando con 50 píxeles de longitud. Usar un circuito de contar puede ser útil.'
       Bee Recommended Blocks test_instruction: Las flores moradas pueden tener 1 o 0 néctar, ¡Pero tu no sabes cual de los dos! Ten cuidado de no recolectar néctar de una flor morada que no tenga. Comprueba que el néctar es igual a 1 utilizando un bloque si-entonces.
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
+        
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1296,7 +1310,7 @@ es:
         19,27,35,43,51?
       Course 4 Play Labs For Loops 8a_instruction: "Para terminar nuestro juego, tenemos que usar de nuevo la variable \"incremento\".    Vamos a vincularlo al nivel del juego. \\r \\r 1) registra la cantidad de veces que se hace clic en el asistente. \\r 2) Si al mago se hace clic en al menos 10 veces antes de que el perro cuente 30, sumar 1 a la variable \"incrementar\"  y comenzar de nuevo. \\r 3) si el mago no hace clic en al menos 10 veces, el juego es terminado."
       Course 4 Playlab For Loop Freeplay_instruction: "Freeplay: Utiliza todo lo que has aprendido hasta ahora para hacer un juego que incluya un bucle 'for'!"
-      Course 4 Playlab For Loops 4b_instruction: "Now, these two characters are going\nto race!  \\r\n\\r\nEach of them will move `counter` steps at a time, but their\ncounters will have different values because of the `for` loops.  \\r\n\\r\nCan\nyou change the increment in one of the loops so that the race is a tie?"
+      Course 4 Playlab For Loops 4b_instruction: "¡Ahora, estos dos personajes van a correr! \\r \\r cada uno de ellos se moverá 'contador' pasos en un momento, pero sus contadores tendrán diferentes valores debido a los bucles 'for'.\\r \\r ¿Puede cambiar el valor del incremento en uno de los bucles para que la carrera sea un empate?"
       Course 4 Playlab For Loops 5b_instruction: "Ajusta el intervalo de estos bucles 'for' para que los dos personajes terminen exactamente en el mismo lugar."
       Course 4 Playlab For Loops 6b_instruction: "Editar este bucle 'for' para crear un juego que es divertido para jugar! \\r \\r Presione \"Run\" y haga clic en Madame unicornio cuatro veces para ganar. "
       Course 4 SCF 1_instruction: Utiliza las funciones sugeridas para dibujar cuatro filas de hexágonos. ¿Te das cuenta cómo nuestras filas pares se desplazan hacia la derecha?
@@ -1397,6 +1411,7 @@ es:
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -2025,7 +2040,15 @@ es:
       K-1 Maze Multi 15_instruction: Nivel de evaluación
       K-1 Maze Sequence Assessment 1_instruction: "Esta es una prueba!\\r\nMuévete en una dirección,\nluego en otra para llevarme al cerdo"
       K-1 Maze Sequence Assessment 2_instruction: "Esta es una prueba!\\r\nMuévete en una dirección,\nluego enotra para llevarme al cerdo."
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -2067,7 +2090,11 @@ es:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      Mike Pair Programming_instruction: Here are the instructions
       MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
@@ -2281,9 +2308,6 @@ es:
         Es hora de Jugar libremente, 
         diviértete con todos los bloques de tu caja de herramientas.
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Desafío: ¿Cómo utilizas el ciclo for para lograr que todos los actores den la vuelta, digan su número de actor y desaparezcan de la pantalla? '
-      New Play Lab Project_instruction: |
-        Crea tu propia historia o juego! Tu código
-        es guardado como un proyecto al cual tu puedes acceder en cualquier momento.
       Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,

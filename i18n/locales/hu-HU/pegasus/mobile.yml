@@ -534,13 +534,13 @@ hu-HU:
   dashboard_navigation_section_pd: Szakmai fejlődés
   dashboard_navigation_section_speakers: 'Számítógép-tudomány <br/> vendég előadók'
   dashboard_navigation_all_sections: Diákok fiókja és haladása
-  dashboard_navigation_view_progress: Fejlődés megtekintése
-  dashboard_navigation_view_text_responses: Szöveges válaszok megtekintése
+  dashboard_navigation_view_progress: Előmenetel
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Diákok hozzáadása
   dashboard_navigation_manage_students: Diákok kezelése
   dashboard_navigation_lesson_plans_resources: Óravázlatok és erőforrások
-  dashboard_navigation_view_stats: Statisztika megtekintése
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Szekció: %{section_name}'
   dashboard_navigation_student: 'Diák: %{student_name}'
   dashboard_progress_not_started: el nem kezdett
@@ -685,10 +685,11 @@ hu-HU:
   dashboard_faq_k5: K-5 Gyakran Ismételt Kérdések
   dashboard_announcements: Közlemények
   dashboard_announce_view_all: Összes megtekintése
-  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-  dashboard_announce_button_text: Tudj meg többet
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Add meg a nevedet
   code_hoc_coming: 'Megkezdődött a Kódolás Órája - December 8-14.'
   code_sign_up: Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás hete keretében
   learn_more: Tudj meg többet
@@ -806,6 +807,7 @@ hu-HU:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
