@@ -311,7 +311,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert_not can_view_solution?
 
     sign_out user
-    user = create :admin
+    user = create :levelbuilder
     sign_in user
     assert can_view_solution?
 
@@ -333,7 +333,7 @@ class LevelsHelperTest < ActionView::TestCase
     @script = create(:script)
     @script_level = create(:script_level, level: @level, script: @script)
 
-    user = create :admin
+    user = create :levelbuilder
     sign_in user
     assert can_view_solution?
 
