@@ -24,7 +24,8 @@ var PlaySpaceHeader = React.createClass({
     playspacePhoneFrame: React.PropTypes.bool,
     screenIds: React.PropTypes.array.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
-    onInterfaceModeChange: React.PropTypes.func.isRequired
+    onInterfaceModeChange: React.PropTypes.func.isRequired,
+    useFirebase: React.PropTypes.bool.isRequired
   },
 
   handleViewData: function () {
@@ -35,7 +36,7 @@ var PlaySpaceHeader = React.createClass({
 
   render: function () {
     var leftSide, rightSide;
-    var showDataModeButton = Applab.useFirebase;
+    var showDataModeButton = this.props.useFirebase;
     var toggleGroupWidth = showDataModeButton ? '160px' : '120px';
 
     if (!this.shouldHideToggle()) {
@@ -82,7 +83,7 @@ var PlaySpaceHeader = React.createClass({
         this.props.isDesignModeHidden ||
         this.props.isShareView ||
         !this.props.isEditingProject ||
-        Applab.useFirebase;
+        this.props.useFirebase;
   }
 });
 module.exports = connect(function propsFromStore(state) {
@@ -92,7 +93,8 @@ module.exports = connect(function propsFromStore(state) {
     isShareView: state.pageConstants.isShareView,
     isViewDataButtonHidden: state.pageConstants.isViewDataButtonHidden,
     interfaceMode: state.interfaceMode,
-    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+    useFirebase: state.pageConstants.useFirebase
   };
 }, function propsFromDispatch(dispatch) {
   return {
