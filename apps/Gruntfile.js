@@ -39,13 +39,13 @@ module.exports = function (grunt) {
   var PLAYGROUND_PORT = grunt.option('playground-port') || 8000;
 
   /** @const {string} */
-  var APP_TO_BUILD = grunt.option('app') || process.env.APP || process.env.MOOC_APP;
+  var SINGLE_APP = grunt.option('app') || process.env.APP || process.env.MOOC_APP;
   if (process.env.MOOC_APP) {
     console.warn('The MOOC_APP environment variable is deprecated. Use APP instead');
   }
 
   /** @const {string[]} */
-  var APPS = [
+  var ALL_APPS = [
     'maze',
     'turtle',
     'bounce',
@@ -60,12 +60,11 @@ module.exports = function (grunt) {
     'gamelab'
   ];
 
-  if (APP_TO_BUILD) {
-    if (APPS.indexOf(APP_TO_BUILD) === -1) {
-      throw new Error('Unknown app: ' + APP_TO_BUILD);
-    }
-    APPS = [APP_TO_BUILD];
+  if (SINGLE_APP && ALL_APPS.indexOf(SINGLE_APP) === -1) {
+    throw new Error('Unknown app: ' + SINGLE_APP);
   }
+
+  var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
   // Parse options from environment.
   var envOptions = {
@@ -74,10 +73,6 @@ module.exports = function (grunt) {
   if (process.env.MOOC_DEV) {
     console.warn('The MOOC_DEV environment variable is deprecated. Use DEV instead');
   }
-
-  config.clean = {
-    all: ['build']
-  };
 
   var ace_suffix = envOptions.dev ? '' : '-min';
   var dotMinIfNotDev = envOptions.dev ? '' : '.min';
@@ -111,6 +106,10 @@ module.exports = function (grunt) {
       return;
     }
   }
+
+  config.clean = {
+    all: ['build']
+  };
 
   config.copy = {
     src: {
@@ -259,19 +258,17 @@ module.exports = function (grunt) {
         outputStyle: 'nested',
         includePaths: ['../shared/css/']
       },
-      files: {
-        'build/package/css/common.css': 'style/common.scss',
-        'build/package/css/readonly.css': 'style/readonly.scss'
-      }
+      files: _.zipObject([
+        ['build/package/css/common.css', 'style/common.scss'],
+        ['build/package/css/readonly.css', 'style/readonly.scss']
+      ].concat(appsToBuild.map(function (app) {
+        return [
+          'build/package/css/' + app + '.css', // dst
+          'style/' + app + '/style.scss' // src
+        ];
+      })))
     }
   };
-  APPS.filter(function (app) {
-    return app !== 'none';
-  }).forEach(function (app) {
-    var src = 'style/' + app + '/style.scss';
-    var dest = 'build/package/css/' + app + '.css';
-    config.sass.all.files[dest] = src;
-  });
 
   config.pseudoloc = {
     all: {
@@ -360,13 +357,15 @@ module.exports = function (grunt) {
     },
   };
 
-  var entries = {};
-  APPS.forEach(function (app) {
-    entries[app] = './src/' + app + '/main.js';
-  });
-  if (entries.applab) {
+  // Create our set of entries (an object mapping target name to entry source
+  // file
+  var entries = _.zipObject(appsToBuild.map(function (app) {
+    return [app, './src/' + app + '/main.js'];
+  }));
+  if (appsToBuild.indexOf('applab') !== -1) {
     entries['applab-api'] = './src/applab/api-entry.js';
   }
+
   config.webpack = {
     build: webpackConfig.create({
       output: path.resolve(__dirname, outputDir),
@@ -415,22 +414,22 @@ module.exports = function (grunt) {
     }
   };
 
-  var uglifiedFiles = {};
+
   config.uglify = {
-    browserified: {
-      files: uglifiedFiles
+    lib: {
+      files: _.zipObject([
+        'jsinterpreter/interpreter.js',
+        'jsinterpreter/acorn.js',
+        'p5play/p5.play.js',
+        'p5play/p5.js'
+      ].map(function (src) {
+        return [
+          outputDir + src.replace(/\.js$/, '.min.js'), // dst
+          outputDir + src // src
+        ];
+      }))
     }
   };
-
-  config.uglify.lib = {files: {}};
-  config.uglify.lib.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
-    outputDir + 'jsinterpreter/interpreter.js';
-  config.uglify.lib.files[outputDir + 'jsinterpreter/acorn.min.js'] =
-    outputDir + 'jsinterpreter/acorn.js';
-  config.uglify.lib.files[outputDir + 'p5play/p5.play.min.js'] =
-    outputDir + 'p5play/p5.play.js';
-  config.uglify.lib.files[outputDir + 'p5play/p5.min.js'] =
-    outputDir + 'p5play/p5.js';
 
   config.watch = {
     js: {
@@ -509,8 +508,10 @@ module.exports = function (grunt) {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
-    APPS.concat('common').map(function (item) {
-      var localeString = '/*' + item + '*/ module.exports = window.blockly.' + (item === 'common' ? 'locale' : 'appLocale') + ';';
+    appsToBuild.concat('common').map(function (item) {
+      var localeType = (item === 'common' ? 'locale' : 'appLocale');
+      var localeString = '/*' + item + '*/ ' +
+        'module.exports = window.blockly.' + localeType + ';';
       fs.writeFileSync(path.join(current, item + '.js'), localeString);
     });
   });
