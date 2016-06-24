@@ -5,7 +5,6 @@ require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
 
 module ApplicationHelper
-
   include LocaleHelper
   include ScriptLevelsHelper
   include ViewOptionsHelper

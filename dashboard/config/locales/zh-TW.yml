@@ -29,6 +29,8 @@
   unsubmit: "不提交"
   previous_page: "上一頁 "
   next_page: "下一頁"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "取消"
   okay: OK！
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -85,6 +87,7 @@
     teacher_title: "教師註冊"
     student_pitch: "學生註冊Code.org"
     student_title: "學生註冊"
+    signup_title: Sign up for Code.org
     school_name: "學校名稱 （選填）"
     school_address: "學校地址 （選填）"
     address_placeholder: "地址、 城市、 州、 郵遞區號"
@@ -104,6 +107,9 @@
       13 歲以下的，我通過提交這份表格確認，我有我的父母或法定監護人的許可，使用 Code.org 服務。 <br/>對於使用者 13歲以下，電子郵件地址將不會被存起來，因此我們將不會與他們聯繫。"
     teacher_terms: "我同意 Code.org <a href='http://code.org/tos'> 的服務條款</a> 的約束。"
     additional_information: "我們還需要一些其他資訊來完成你的註冊"
+    user_type_label: Account Type
+    user_type_teacher: "教師"
+    user_type_student: "學生 "
   signin_form:
     title: "你已經有一個帳號了嗎？請登入"
     login: "電子郵件或使用者名稱"
@@ -769,3 +775,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

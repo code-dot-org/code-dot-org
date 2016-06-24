@@ -22,7 +22,6 @@ require_relative 'queue_processor_config'
 require_relative 'rate_limiter'
 
 module SQS
-
   # A class for processing an SQS queue using a pool of worker threads, each of which
   # does long polling against the queue.
   class QueueProcessor

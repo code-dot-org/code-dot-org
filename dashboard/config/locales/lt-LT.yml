@@ -30,6 +30,8 @@
   unsubmit: Atšaukti
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Atšaukti
   okay: Gerai
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -93,6 +95,7 @@
     teacher_title: Mokytojų registracija
     student_pitch: Mokinių registracija prie Code.org
     student_title: Mokinių registracija
+    signup_title: Sign up for Code.org
     school_name: Mokyklos pavadinimas (nebūtina)
     school_address: Mokyklos adresas (nebūtina)
     address_placeholder: adresas, miestas, rajonas, pašto indeksas
@@ -114,6 +117,9 @@
       el. pašto adresai nėra išsaugomi taip, kad galėtume su jais susisiekti.
     teacher_terms: Sutinku su Code.org<a href='http://code.org/tos'>taisyklėmis</a>.
     additional_information: Mums reikia papildomos informacijos, kad galėtum prisiregistruoti.
+    user_type_label: Account Type
+    user_type_teacher: Mokytojas
+    user_type_student: Mokinys
   signin_form:
     title: Jau registravotės? Prisijunkite
     login: El. pašto adresas arba naudotojo vardas
@@ -841,3 +847,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

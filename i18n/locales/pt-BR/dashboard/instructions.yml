@@ -402,6 +402,10 @@ pt-BR:
       2-3 Maze 12 (old)_instruction: |
         Leve-me até o porco, agora com o bloco repita
         vezes!
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: |
         Você pode substituir esses cinco blocos por apenas dois blocos?
         (Dica: você precisa criar um laço usando um bloco "repita" para passar deste nível.)
@@ -927,16 +931,22 @@ pt-BR:
       4-5 While Loops Assessment 1_instruction: |
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
-      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na square with 20 pixel sides. "
       aE2_instruction: |
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
-        all 15 squares line up next to each other?
-      aE3_instruction: |
-        Now let's go one level deeper! We've nested that whole
-        block of code into another loop, but you need to get the artist back in place
-        to draw the next line. Which of these code blocks can you place at the end
-        of the outermost loop to draw the whole grid?
+        all 14 napkins line up next to each other?
+      aE3_instruction: "We've got to have a tablecloth!  \\r\n\\r\nTake your row of\n14 napkins and sew 14 of those together with another **outer loop** to make\na cover for our table."
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: |
+        How many times do you need to loop this to draw half  of
+        a circle? 
+      aE7_instruction: "If you create another loop like this one, but turn left instead\nof right, what happens? \\r\n\\r\nCan you repeat all of that to draw this wave?"
+      aE8_instruction: "Now let's loop that whole thing four times to create this\npicture frame. Watch out for the corners - you can't just turn 90 degrees!\n\\r\n\\r\nIf looping a 3 degree turn 60 times makes a half circle, which of\nthese blocks of code will make an additional quarter circle for the corners?"
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -1019,6 +1029,10 @@ pt-BR:
         ou 0 néctar, mas você não sabe quais delas têm! Tome cuidado para não coletar néctar
         de uma flor roxa quando ela não tem néctar algum. Verifique se o néctar é igual
         a 1 usando o bloco se.
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
+        
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -2231,6 +2245,7 @@ pt-BR:
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -2977,7 +2992,15 @@ pt-BR:
       K-1 Maze Sequence Assessment 2_instruction: |
         Mova-me por um caminho e então
         por outro para me levar até o porco.
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -3017,7 +3040,11 @@ pt-BR:
       Luigi's Pizza 4_instruction: "Atividade livre: o que você pode fazer para deixar a função de custo do Luigi\nainda melhor? Tente usar uma (ou mais) das seguintes opções:\\r\n- Mostrar uma\nimagem da pizza escolhida\\r\n- Permitir a combinação de vários sabores\\r\n-\nPermitir o pedido de várias pizzas\\r\n- Adicionar um cupom com código para um desconto de 50%"
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      Mike Pair Programming_instruction: Here are the instructions
       MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
@@ -3368,9 +3395,6 @@ pt-BR:
         Desafio: como você
         usaria o "laço para" para fazer cada ator andar e dizer seu número de ator,
         e então sumir da tela? 
-      New Play Lab Project_instruction: |
-        Crie sua própria história ou jogo! Seu código
-        está salvo como um projeto para o qual você pode retornar a qualquer hora.
       Ninjacat Demo B (copy 1)_instruction: "\\r\nVamos começar explorando um video game\nsimples e então descobrir como ele funciona. Você pode usar as setas do teclado\npara mover o ninja para a esquerda, para a direita e para pular - tente pegar o unicórnio e\ndesvie do dragão!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Vamos começar explorando um jogo simples

@@ -38,7 +38,7 @@
     computer science.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
-  hoc2014_students: Students
+  hoc2014_students: "Ուսանողներ"
   hoc2014_try: Try it
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
@@ -279,7 +279,7 @@
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
     - Michael Clark, Teacher'
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_title_nolink: Explore Code Studio
+  studiobar_title_nolink: "Ծանոթանալ Code Studio-ին"
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
   studiobar_hoc_title: The Hour of Code
@@ -389,7 +389,7 @@
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: Students
+  homepage_slot_text_title_students: "Ուսանողներ"
   homepage_slot_text_blurb_students: Explore all of our tutorials
   homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Try Code Studio
@@ -410,7 +410,7 @@
   homepage_slot_text_link_donate: Make a donation
   homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
+  homepage_header_donors: Code.org շնորհակալ է բոլոր աջակիցներից
   homepage_donors_seall: See all
   homepage_donors_donate: Donate
   contact_form_topic_student: "Ես աշակերտ եմ"
@@ -722,7 +722,7 @@
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
   dashboard_sections_table_stage_extras: Stage Extras
-  dashboard_sections_table_students: Students
+  dashboard_sections_table_students: "Ուսանողներ"
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
@@ -1015,6 +1015,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

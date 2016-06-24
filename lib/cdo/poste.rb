@@ -5,7 +5,6 @@ require 'openssl'
 require 'base64'
 
 module Poste
-
   def self.logger
     @@logger ||= $log
   end
@@ -87,11 +86,9 @@ module Poste
       )
     end
   end
-
 end
 
 module Poste2
-
   @@url_cache = {}
   @@message_id_cache = {}
 

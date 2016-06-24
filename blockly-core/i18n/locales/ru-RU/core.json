@@ -377,7 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "убрать пробелы слева",
   "TEXT_TRIM_OPERATOR_RIGHT": "убрать пробелы справа",
   "TEXT_TRIM_TOOLTIP": "Возвращает копию текста с пробелами, удаленными с одного или обоих концов.",
-  "UNUSED_CODE": "Unused code",
+  "UNUSED_CODE": "Неиспользуемый код",
   "VARIABLES_DEFAULT_NAME": "элемент",
   "VARIABLES_GET_CREATE_SET": "Создать 'set %1'",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

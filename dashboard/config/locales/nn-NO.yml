@@ -30,6 +30,8 @@
   unsubmit: Trekk tilbake
   previous_page: Forrige side
   next_page: Neste side
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Avbryt
   okay: OK
   heading_x_of_y: "%{heading} (side %{x} av %{y})"
@@ -95,6 +97,7 @@
     teacher_title: Påmelding for lærere
     student_pitch: Registrering for elever på code.org
     student_title: Registrering for elever
+    signup_title: Sign up for Code.org
     school_name: Skolens navn (valgfritt)
     school_address: Skolens adresse (valgfritt)
     address_placeholder: adresse, by, fylke, postkode
@@ -119,6 +122,9 @@
       for bruk</a>.
     additional_information: Vi trenger noen flere opplysninger for å fortsette registreringen
       din.
+    user_type_label: Account Type
+    user_type_teacher: Lærer
+    user_type_student: elev
   signin_form:
     title: Har du allerede en bruker? Logg på
     login: E-post eller brukernavn
@@ -855,3 +861,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

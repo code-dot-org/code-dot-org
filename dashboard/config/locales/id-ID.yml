@@ -30,6 +30,8 @@
   unsubmit: Unsubmit
   previous_page: Halaman sebelumnya
   next_page: Halamat berikutnya
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Batal
   okay: Oke
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
@@ -95,6 +97,7 @@
     teacher_title: Guru mendaftar
     student_pitch: Siswa daftar untuk Code.org
     student_title: Daftar sebagai siswa
+    signup_title: Sign up for Code.org
     school_name: Nama sekolah (opsional)
     school_address: Alamat sekolah (opsional)
     address_placeholder: Alamat, kota, propinsi, zip
@@ -119,6 +122,9 @@
     teacher_terms: Saya setuju dengan <a href='http://code.org/tos'>Syarat Layanan</a>Code.org.
     additional_information: Kami membutuhkan informasi tambahan untuk melanjutkan
       pendaftaran anda
+    user_type_label: Account Type
+    user_type_teacher: Guru
+    user_type_student: siswa
   signin_form:
     title: Punya akun? Masuk disini
     login: Email atau nama pengguna
@@ -877,3 +883,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

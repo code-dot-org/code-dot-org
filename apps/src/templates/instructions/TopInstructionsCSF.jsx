@@ -185,7 +185,7 @@ var TopInstructions = React.createClass({
     const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
 
     return Math.max(buttonHeight, minIconHeight, minInstructionsHeight) +
-      (this.props.collapsed ? 0 : RESIZER_HEIGHT) + margins;
+      RESIZER_HEIGHT + margins;
   },
 
   /**
@@ -366,7 +366,12 @@ module.exports = connect(function propsFromStore(state) {
       dispatch(instructions.setInstructionsMaxHeightNeeded(height));
     },
     showInstructionsDialog(height) {
-      dispatch(openDialog(false, true));
+      dispatch(openDialog({
+        autoClose: false,
+        showHints: true,
+        aniGifOnly: false,
+        hintsOnly: true
+      }));
     }
   };
 }, null, { withRef: true }

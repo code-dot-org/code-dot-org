@@ -29,6 +29,8 @@ km:
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: បោះបង់
   okay: Okay
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
@@ -86,6 +88,7 @@ km:
     teacher_title: ការ​ចុះឈ្មោះ​ជា​គ្រូ​បង្រៀន
     student_pitch: ការ​ចុះឈ្មោះ​ជា​សិស្ស​សម្រាប់ Code.org
     student_title: ចុះឈ្មោះ​ជា​សិស្ស
+    signup_title: Sign up for Code.org
     school_name: ឈ្មោះ​សាលា (ស្រេច​ចិត្ត)
     school_address: អាសយដ្ឋាន​សាលា (ស្រេច​ចិត្ត)
     address_placeholder: អាសយដ្ឋាន, ក្រុង, រដ្ឋ, លេខ​ប្រៃសណីយ៍
@@ -101,9 +104,12 @@ km:
     valid_password: ពាក្យ​សម្ងាត់​ត្រឹម​ត្រូវ!
     invalid_password: ពាក្យ​សម្ងាត់​ត្រូវមាន​យ៉ាង​តិច 6 តួ​អក្សរ
     mismatch_password: ពាក្យ​សម្ងាត់​ទាំង​ពីរ​ដែល​អ្នក​បាន​បញ្ចូល គឺ​មិន​ត្រូវ​គ្នា​ទេ
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
     additional_information: ពួក​យើង​ត្រូវការ​ព័ត៌មាន​បន្ថែម ដើម្បី​បន្ត​ការ​ចុះឈ្មោះ​របស់​អ្នក។
+    user_type_label: Account Type
+    user_type_teacher: Teacher
+    user_type_student: សិស្ស
   signin_form:
     title: មាន​គណនី​រួច​ហើយ​មែនទេ? ចូលគណនី
     login: អ៊ីមែល ឬ ឈ្មោះ​អ្នក​ប្រើ
@@ -336,8 +342,9 @@ km:
     print_certificate: Print Certificate
     announcement_title: Announcements
     announcement_view_all: View all
-    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-    announcement_button: រៀនបន្ថែមទៀត
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
   move_students:
@@ -688,9 +695,9 @@ km:
   flex_category:
     required: Overview
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -705,3 +712,12 @@ km:
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas
