@@ -9,6 +9,7 @@ level 'MarbleMaze2'
 level 'FrustrationSolutions'
 
 stage 'Sequences & Algorithms'
+level 'seqAlg'
 
 
 stage 'Jigsaw: Learn to drag and drop'
@@ -39,6 +40,8 @@ level_concept_difficulty '{}'
 level 'blockly:Jigsaw:12'
 assessment 'blockly:Jigsaw:13'
 
+stage 'Programming Unplugged'
+level 'comingSoon'
 
 stage 'Programming'
 level 'DebuggingIntro'
@@ -55,10 +58,17 @@ level 'K2.0 sequence 10'
 
 
 stage 'Being Safe Online'
+level 'onlineNeighbors'
+
+
+stage 'Loops Unplugged'
+level 'comingSoon'
+
 
 stage 'Loops'
 level 'ArtistIntro'
 level 'artistLoopsK1'
+level 'ArtistLoopsIntro'
 level 'artistLoopsK2'
 level 'artistLoopsK3'
 level 'artistLoopsK4'
@@ -67,3 +77,14 @@ level 'artistLoopsK6'
 level 'artistLoopsK7'
 level 'artistLoopsK8'
 level 'artistLoopsK9'
+level 'artistLoopsKA'
+level 'artistLoopsKB'
+level 'artistLoopsKFP'
+
+stage 'Events Unplugged'
+level 'comingSoon'
+
+stage 'Events'
+level 'eventsIntro'
+level 'playEventsK1'
+level 'playEventsK2'
