@@ -66,7 +66,6 @@ class RateLimiterTest < ActiveSupport::TestCase
   private
 
   def create_config(max_rate:, max_rate_proc: nil, num_workers_per_processor: 1, num_processors: 1)
-
     # Proc for determining the max rate based on DCDO.
     SQS::QueueProcessorConfig.new(
       queue_url: 'http://example.com',

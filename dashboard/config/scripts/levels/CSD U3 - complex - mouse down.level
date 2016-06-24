@@ -66,7 +66,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# mouseDown\r\n\r\nThe mouse is another way to get input! We can use `mouseDown` like `keyDown` to find out when the left or the right arrow key is being held down on the mouse.  If you are using a computer with a track pad your computer thinks you are clicking with the left side of the mouse. \r\n\r\n# Do This\r\n\r\n* Something",
+    "markdown_instructions": "# mouseDown\r\n\r\nThe mouse is another way to get input! We can use `mouseDown` like `keyDown` to find out when the left or the right arrow key is being held down on the mouse.  If you are using a computer with a track pad your computer thinks you are clicking with the left side of the mouse. \r\n\r\n# Do This\r\n\r\n* Add a conditional that checks for `mouseDown`\r\n* Inside the conditional, move the sprite to the mouse location\r\n\r\n_Hint: You'll want to use `Game.mouseX` and `Game.mouseY`_",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -90,6 +90,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "callout_json": "[]",
+    "start_blocks": "var sprite = createSprite(200, 200);\r\n// set an animation\r\n\r\nfunction draw() {\r\n  // If the mouse is down, move the sprite to the mouse location\r\n  \r\n  background(\"white\");\r\n  drawSprites();\r\n}",
     "contained_level_names": null
   },
   "published": true,

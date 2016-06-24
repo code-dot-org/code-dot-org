@@ -684,7 +684,7 @@
   dashboard_navigation_section_pd: Strokovni razvoj
   dashboard_navigation_section_speakers: Računalništvo <br/> gostujoči predavatelji
   dashboard_navigation_all_sections: "Študentski računi in napredek"
-  dashboard_navigation_view_progress: Prikaz napredka
+  dashboard_navigation_view_progress: Napredek
   dashboard_navigation_view_text_responses: Ogled besedilnih odgovorov
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Dodaj učence
@@ -1008,6 +1008,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

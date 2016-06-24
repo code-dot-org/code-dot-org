@@ -3,7 +3,6 @@
 # authentication state, and other DASHBOARD_DB access.
 #
 module Dashboard
-
   # Get the dashboard database
   # The static constant is wrapped here so it's easy to stub for tests.
   # @returns [Database]
@@ -63,7 +62,7 @@ module Dashboard
     def select(*keys)
       {}.tap do |result|
         keys.each do |key|
-          result[key] = if @row.has_key? key
+          result[key] = if @row.key? key
                           @row[key]
                         elsif respond_to? key
                           send(key)
@@ -89,5 +88,4 @@ module Dashboard
     end
 
   end
-
 end

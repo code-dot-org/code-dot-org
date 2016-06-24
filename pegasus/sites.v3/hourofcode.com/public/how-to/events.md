@@ -7,7 +7,6 @@ nav: how_to_nav
 
 # How to organize an Hour of Code event
 
-Computer Science Education Week is over but you can still do an Hour of Code all year round. Anyone, anywhere can organize an Hour of Code event. 
 
 ## 1) Prepare for your event
 - Determine a venue, date and time
@@ -34,7 +33,7 @@ Computer Science Education Week is over but you can still do an Hour of Code all
 ## Example Event Plan 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
