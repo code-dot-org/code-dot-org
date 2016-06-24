@@ -1,4 +1,4 @@
-var webpackConfig = require('./webpack').karmaConfig;
+var webpackConfig = require('./webpack.config');
 var webpack = require('webpack');
 var _ = require('lodash');
 
@@ -46,7 +46,24 @@ module.exports = function (config) {
       "test/unit-tests.js": ["webpack", "sourcemap"],
     },
 
-    webpack: webpackConfig,
+    webpack: _.extend({}, webpackConfig, {
+      devtool: 'inline-source-map',
+      externals: {
+        "johnny-five": "var JohnnyFive",
+        "playground-io": "var PlaygroundIO",
+        "chrome-serialport": "var ChromeSerialport",
+        "blockly": "this Blockly",
+      },
+      plugins: [
+        new webpack.ProvidePlugin({React: 'react'}),
+        new webpack.DefinePlugin({
+          IN_UNIT_TEST: JSON.stringify(true),
+          'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
+          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+          PISKEL_DEVELOPMENT_MODE: false
+        }),
+      ]
+    }),
     webpackMiddleware: {
       noInfo: true
     },
