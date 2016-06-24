@@ -1037,6 +1037,8 @@ Applab.runButtonClick = function () {
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
+    // adding finish button changes layout. force a resize
+    studioApp.onResize();
   }
 
   if (studioApp.editor) {
