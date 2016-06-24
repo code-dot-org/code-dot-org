@@ -1,10 +1,12 @@
-var React = require('react');
+import React from 'react';
 
-var DataWorkspace = React.createClass({
-  render: function () {
-    return <div id="dataWorkspaceWrapper">
-      Data workspace
-    </div>;
+const DataWorkspace = React.createClass({
+  render() {
+    return (
+      <div id="dataWorkspaceWrapper">
+        Data workspace
+      </div>
+    );
   }
 });
-module.exports = DataWorkspace;
+export default DataWorkspace;
