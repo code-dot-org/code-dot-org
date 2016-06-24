@@ -15,6 +15,8 @@ var ElementType = library.ElementType;
  * friendlyName: Name used in the code editor to refer to this property
  * internalName: Name used in updateProperty to refer to this property
  * type: Type of this property, used for validation at run time.
+ * alias (optional): True if this property should not be displayed to the user
+ *     in the drop down list of properties
  */
 var PROP_INFO = {
   width: { friendlyName: 'width', internalName: 'style-width', type: 'number'},
@@ -52,144 +54,183 @@ var fullDropdownOptions = _.uniq(Object.keys(PROP_INFO).map(function (key) {
   return '"' + PROP_INFO[key].friendlyName + '"';
 }));
 
-// Which of the items from PROP_INFO should each element type use
-var PROP_NAMES = {};
-PROP_NAMES[ElementType.BUTTON] = [
-  'text',
-  'width',
-  'height',
-  'x',
-  'y',
-  'textColor',
-  'backgroundColor',
-  'fontSize',
-  'textAlign',
-  'image',
-  'hidden'
-];
-PROP_NAMES[ElementType.TEXT_INPUT] = [
-  'placeholder',
-  'width',
-  'height',
-  'x',
-  'y',
-  'textColor',
-  'backgroundColor',
-  'fontSize',
-  'textAlign',
-  'hidden'
-];
-PROP_NAMES[ElementType.LABEL] = [
-  'text',
-  'width',
-  'height',
-  'x',
-  'y',
-  'textColor',
-  'backgroundColor',
-  'fontSize',
-  'textAlign',
-  'hidden'
-];
-PROP_NAMES[ElementType.DROPDOWN] = [
-  'options',
-  'width',
-  'height',
-  'x',
-  'y',
-  'textColor',
-  'backgroundColor',
-  'fontSize',
-  'textAlign',
-  'hidden'
-];
-PROP_NAMES[ElementType.RADIO_BUTTON] = [
-  'groupId',
-  'width',
-  'height',
-  'x',
-  'y',
-  'hidden',
-  'checked'
-];
-PROP_NAMES[ElementType.CHECKBOX] = [
-  'width',
-  'height',
-  'x',
-  'y',
-  'hidden',
-  'checked'
-];
-PROP_NAMES[ElementType.IMAGE] = [
-  'width',
-  'height',
-  'x',
-  'y',
-  'pictureImage',
-  'picture', // Since this is an alias, it is not shown in the dropdown but is allowed as a value
-  'hidden'
-];
-PROP_NAMES[ElementType.CANVAS] = [
-  'canvasWidth',
-  'canvasHeight',
-  'x',
-  'y',
-];
-PROP_NAMES[ElementType.SCREEN] = [
-  'backgroundColor',
-  'screenImage'
-];
-PROP_NAMES[ElementType.TEXT_AREA] = [
-  'text',
-  'width',
-  'height',
-  'x',
-  'y',
-  'textColor',
-  'backgroundColor',
-  'fontSize',
-  'textAlign',
-  'readonly',
-  'hidden'
-];
-PROP_NAMES[ElementType.CHART] = [
-  'width',
-  'height',
-  'x',
-  'y',
-  'hidden'
-];
-PROP_NAMES[ElementType.SLIDER] = [
-  'width',
-  'height',
-  'x',
-  'y',
-  'value',
-  'min',
-  'max',
-  'step',
-  'hidden'
-];
+/**
+ * Information about properties pertaining to each element type. Values have the following
+ * fields. The latter two fields (friendlyNames and infoForFriendlyNames) are initialized
+ * through code run at startup time.
+ * propertyNames: a list of names (keys for PROP_INFO) associated with that element
+ * dropdownOptions: an array of property friendly names to be shown to the user for that element
+ * infoForFriendlyName: map from all friendly names for that element to property info
+ */
+var PROPERTIES = {};
+PROPERTIES[ElementType.BUTTON] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'textColor',
+    'backgroundColor',
+    'fontSize',
+    'textAlign',
+    'image',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.TEXT_INPUT] = {
+  propertyNames: [
+    'text',
+    'placeholder',
+    'width',
+    'height',
+    'x',
+    'y',
+    'textColor',
+    'backgroundColor',
+    'fontSize',
+    'textAlign',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.LABEL] = {
+  propertyNames: [
+    'text',
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'textColor',
+    'backgroundColor',
+    'fontSize',
+    'textAlign',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.DROPDOWN] = {
+  propertyNames: [
+    'text',
+    'options',
+    'width',
+    'height',
+    'x',
+    'y',
+    'textColor',
+    'backgroundColor',
+    'fontSize',
+    'textAlign',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.RADIO_BUTTON] = {
+  propertyNames: [
+    'text',
+    'groupId',
+    'width',
+    'height',
+    'x',
+    'y',
+    'hidden',
+    'checked'
+  ]
+};
+PROPERTIES[ElementType.CHECKBOX] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'hidden',
+    'checked'
+  ]
+};
+PROPERTIES[ElementType.IMAGE] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'pictureImage',
+    'picture', // Since this is an alias, it is not shown in the dropdown but is allowed as a value
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.CANVAS] = {
+  propertyNames: [
+    'text',
+    'canvasWidth',
+    'canvasHeight',
+    'x',
+    'y'
+  ]
+};
+PROPERTIES[ElementType.SCREEN] = {
+  propertyNames: [
+    'text',
+    'backgroundColor',
+    'screenImage'
+  ]
+};
+PROPERTIES[ElementType.TEXT_AREA] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'textColor',
+    'backgroundColor',
+    'fontSize',
+    'textAlign',
+    'readonly',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.CHART] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.SLIDER] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'value',
+    'min',
+    'max',
+    'step',
+    'hidden'
+  ]
+};
 
-// Create a mapping of PROPS_PER_TYPE[elementType][friendlyName] => prop info
-// and a mapping of PROP_NAMES_PER_TYPE[elementType] => array of properties
-var PROPS_PER_TYPE = {};
-var PROP_NAMES_PER_TYPE = {};
-Object.keys(PROP_NAMES).map(function (elementType) {
-  PROPS_PER_TYPE[elementType] = {};
-  PROP_NAMES_PER_TYPE[elementType] = [];
-  PROP_NAMES[elementType].forEach(function (propName) {
+// Initialize dropdownOptions and infoForFriendlyNames fields in PROPERTIES map.
+for (var elementType in PROPERTIES) {
+  var elementProperties = PROPERTIES[elementType];
+  elementProperties.dropdownOptions = [];
+  elementProperties.infoForFriendlyName = {};
+  elementProperties.propertyNames.forEach(function (propName) {
     var friendlyName = PROP_INFO[propName].friendlyName;
-    if (PROPS_PER_TYPE[elementType][friendlyName]) {
+    if (elementProperties.infoForFriendlyName[friendlyName]) {
       throw new Error('Multiple props for friendlyName: ' + friendlyName +
         ' in elementType: ' + elementType);
     }
-    PROPS_PER_TYPE[elementType][friendlyName] = PROP_INFO[propName];
+    elementProperties.infoForFriendlyName[friendlyName] = PROP_INFO[propName];
     if (!PROP_INFO[propName].alias) {
-      PROP_NAMES_PER_TYPE[elementType].push('"' + friendlyName + '"');
+      elementProperties.dropdownOptions.push('"' + friendlyName + '"');
     }
   });
-});
+}
 
 function getFirstSetPropertyParamFromCode(code) {
   var prefix = 'setProperty(';
@@ -248,11 +289,11 @@ function getDropdownProperties(elementType) {
     return fullDropdownOptions;
   }
 
-  if (!(elementType in PROP_NAMES_PER_TYPE)) {
+  if (!(elementType in PROPERTIES)) {
     return fullDropdownOptions;
   }
 
-  return PROP_NAMES_PER_TYPE[elementType];
+  return PROPERTIES[elementType].dropdownOptions;
 }
 
 /**
@@ -264,7 +305,7 @@ module.exports.getInternalPropertyInfo = function (element, friendlyPropName) {
   var elementType = library.getElementType(element, true);
   var info;
   if (elementType) {
-    info = PROPS_PER_TYPE[elementType][friendlyPropName];
+    info = PROPERTIES[elementType].infoForFriendlyName[friendlyPropName];
   }
   return info;
 };
