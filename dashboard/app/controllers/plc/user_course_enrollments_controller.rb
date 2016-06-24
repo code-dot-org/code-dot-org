@@ -34,25 +34,24 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   # POST /plc/user_course_enrollments.json
   def create
     user_emails = user_course_enrollment_params[:user_emails].split
-    users = User.where(email: user_emails)
-    if users.size != user_emails.size
-      redirect_to action: :new, notice: "Unknown users #{(user_emails - users.pluck(:email)).join(', ')}"
-      return
-    end
 
-    users.each do |user|
-      user_course_enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: user,
-                                                                     plc_course_id: user_course_enrollment_params[:plc_course_id])
+    enrolled_users, nonexistant_users, nonteacher_users, other_failure_users, other_failure_reasons =
+      Plc::UserCourseEnrollment.enroll_users(user_emails, user_course_enrollment_params[:plc_course_id])
 
-      unless user_course_enrollment.valid?
-        throw "Unable to create enrollment for #{user.email} - validation failed"
-      end
-    end
+    notice_string = enrolled_users.empty? ? '' : "Enrollments created for #{listify(enrolled_users)}<br/>"
+    notice_string += "The following users did not exist #{listify(nonexistant_users)}<br/>" unless nonexistant_users.empty?
+    notice_string += "The following users were not teachers #{listify(nonteacher_users)}<br/>" unless nonteacher_users.empty?
+    notice_string += "The following users failed for other reasons #{listify(other_failure_users)}<br/>" unless other_failure_users.empty?
+    notice_string += "The failures were because of reasons #{listify(other_failure_reasons)}" unless other_failure_reasons.empty?
 
-    redirect_to action: :new, notice: "Enrollments created for #{user_emails.join(', ')}"
+    redirect_to action: :new, notice: notice_string
   end
 
   private
+
+  def listify(user_list)
+    user_list.map {|user| "<li>#{user}</li>"}.join ''
+  end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_course_enrollment_params
