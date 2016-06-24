@@ -7,11 +7,11 @@ TTS_BUCKET = 'cdo-tts'
 module TextToSpeech
   extend ActiveSupport::Concern
 
-  # TODO: this concern actually depends on hte SerializedProperties
+  # TODO: this concern actually depends on the SerializedProperties
   # concern ... I'm not sure how best to deal with that.
 
   included do
-    before_save :tts_update
+    after_save :tts_update
 
     serialized_attrs %w(
       custom_tts
@@ -35,23 +35,14 @@ module TextToSpeech
     changed && write_to_file? && self.published
   end
 
-  def tts_audio_file(env=Rails.env)
-    md5 = Digest::MD5.hexdigest(self.name)
-    "#{env}/#{md5}/#{self.name}.mp3"
+  def tts_audio_file
+    content_hash = Digest::MD5.hexdigest(self.tts_text)
+    "#{content_hash}/#{self.name}.mp3"
   end
 
   def tts_update
     if self.tts_should_update?
       TextToSpeech.tts_upload_to_s3(self.tts_text, self.tts_audio_file)
-      self.tts_updated_at = DateTime.now
-    end
-  end
-
-  def tts_copy
-    #return unless Rails.env.production?
-    if self.changed? && self.changed.include?('tts_updated_at')
-      #AWS::S3.copy_within_bucket(TTS_BUCKET, self.tts_audio_file('levelbuilder'), self.tts_audio_file)
-      AWS::S3.copy_within_bucket(TTS_BUCKET, self.tts_audio_file('development'), self.tts_audio_file('test'))
     end
   end
 end

@@ -47,12 +47,6 @@ module AWS
       filename
     end
 
-    def self.copy_within_bucket(bucket, source_key, target_key, options={})
-      create_client.copy_object(options.merge(bucket: bucket, copy_source: "#{bucket}/#{source_key}", key: target_key))
-    rescue Aws::S3::Errors::NoSuchKey
-      raise NoSuchKey.new("No such key")
-    end
-
     # Allow the RNG to be stubbed in tests
     def self.random
       SecureRandom.hex
