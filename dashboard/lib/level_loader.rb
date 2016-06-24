@@ -36,8 +36,6 @@ class LevelLoader
     level.send(:write_attribute, 'properties', {})
     level.assign_attributes(level.load_level_xml(xml_node))
 
-    level.tts_copy
-
     level.save! if level.changed?
     level
   end
