@@ -39,18 +39,13 @@ var PlaySpaceHeader = React.createClass({
     var toggleGroupWidth = showDataModeButton ? '160px' : '120px';
 
     if (!this.shouldHideToggle()) {
-      var toggleButtons = [
-        <button id='codeModeButton' value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>,
-        <button id='designModeButton' value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
-      ];
-      if (showDataModeButton) {
-        toggleButtons.push(
-          <button id='dataModeButton' value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
-        );
-      }
       leftSide = (
         <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
-          {toggleButtons}
+          <button id='codeModeButton' value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>
+          <button id='designModeButton' value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
+          {showDataModeButton && (
+            <button id='dataModeButton' value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
+          )}
         </ToggleGroup>
       );
     }

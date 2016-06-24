@@ -34,7 +34,7 @@ var ToggleGroup = React.createClass({
   renderChildren: function () {
     var childrenCount = React.Children.count(this.props.children);
     return React.Children.map(this.props.children, function (child, index) {
-      return (
+      return child && (
         <ToggleButton
             id={child.props.id}
             active={child.props.value === this.props.selected}
