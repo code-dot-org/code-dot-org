@@ -7,7 +7,7 @@ litmus_tracking_id: "5g5lyi1a"
 
 # Thanks for signing up to host an Hour of Code!
 
-You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during <%= campaign_date('campaign_date_short') %>.
+You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during December 5-11.
 
 #### We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
@@ -24,7 +24,7 @@ We need your help to reach organizers worldwide. Tell your friends about the #Ho
 [Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
 
 ## 5. Promote the Hour of Code in your community
-Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
+Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/promote/resources#sample-emails).
 
 Thank you for leading the movement to give every student the chance to learn foundational computer science skills. 
 

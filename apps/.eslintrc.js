@@ -15,7 +15,6 @@ module.exports = {
     "Jigsaw": true,
     "$": true,
     "jQuery": true,
-    "IN_UNIT_TEST": true,
-    "BUILD_STYLEGUIDE": true
+    "IN_UNIT_TEST": true
   }
 };

@@ -45,4 +45,3 @@ crowdin.yaml
 /coverage
 /apps/coverage
 /apps/test/entry-tests.js
-/dashboard/public/styleguide
