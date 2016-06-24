@@ -252,7 +252,7 @@
   signup_event_location_label: 'Event location (optional)'
   signup_special_event_flag_label: 'Highlight my special event'
   signup_special_event_details_label: 'Special event details'
-  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only)'
+  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only, while supplies last)'
   signup_send_posters_address_label: 'Address of school or organization'
   signup_whole_school_flag_label: 'This event is for a whole school'
   signup_your_event: 'Sign up your event'
