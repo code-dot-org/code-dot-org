@@ -27,7 +27,9 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "markdown_instructions": "**Challenge:** Debug this level by adding blocks to get me to the pig!",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
