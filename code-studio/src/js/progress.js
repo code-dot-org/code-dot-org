@@ -154,7 +154,7 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || progress.bestResultLevelId(level.ids, newProgress);
 
-          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id]), id: id});
+          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
         })}))
       });
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {
