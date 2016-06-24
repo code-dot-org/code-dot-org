@@ -299,6 +299,14 @@ class Level < ActiveRecord::Base
   def icon
   end
 
+  # Returns an array of all the contained levels
+  # (based on the contained_level_names property)
+  def contained_levels
+    names = properties["contained_level_names"]
+    return [] unless names.present?
+    Level.where(name: properties["contained_level_names"])
+  end
+
   private
 
   def write_to_file?
