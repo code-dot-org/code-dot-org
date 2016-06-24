@@ -1244,14 +1244,7 @@ function onInterfaceModeChange(mode) {
  * @param {ApplabInterfaceMode} mode
  */
 Applab.setWorkspaceMode = function (mode) {
-  var enable = (ApplabInterfaceMode.DESIGN === mode);
   var designWorkspace = document.getElementById('designWorkspace');
-  // TODO(dave): remove unneeded designWorkspace existence check
-  if (!designWorkspace) {
-    // Currently we don't run design mode in some circumstances (i.e. user is
-    // not an admin)
-    return;
-  }
   designWorkspace.style.display = (ApplabInterfaceMode.DESIGN === mode) ? 'block' : 'none';
 
   var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
