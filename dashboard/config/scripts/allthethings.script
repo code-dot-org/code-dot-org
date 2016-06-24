@@ -104,6 +104,7 @@ level 'allthethings_template_backed2'
 level 'allthethings_moviebot'
 level 'Applab allthethings onRecordEvent'
 level 'allthethings_embed_video'
+level 'Test Applab Predictive'
 
 stage 'Online PD'
 level 'PDK5 Intro C'

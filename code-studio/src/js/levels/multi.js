@@ -64,7 +64,7 @@ Multi.prototype.choiceClicked = function (button) {
   this.clickItem(index);
 
   if (window.levelGroup && window.levelGroup.answerChangedFn) {
-    window.levelGroup.answerChangedFn(this.levelId);
+    window.levelGroup.answerChangedFn(this.levelId, true);
   }
 };
 
