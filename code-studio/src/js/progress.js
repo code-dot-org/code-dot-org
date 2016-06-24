@@ -107,7 +107,8 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     if (data.levels) {
       store.dispatch({
         type: 'MERGE_PROGRESS',
-        progress: _.mapValues(data.levels, level => level.submitted ? SUBMITTED_RESULT : level.result)
+        progress: _.mapValues(data.levels, level => level.submitted ? SUBMITTED_RESULT : level.result),
+        peerReviewsPerformed: data.peerReviewsPerformed,
       });
     }
   });
@@ -157,14 +158,33 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
         newProgress[key] = clientState.mergeActivityResult(state.progress[key], action.progress[key]);
       });
 
-      return Object.assign({}, state, {
-        progress: newProgress,
-        stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
-          let id = level.uid || progress.bestResultLevelId(level.ids, newProgress);
+      let stages = state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
+        let id = level.uid || progress.bestResultLevelId(level.ids, newProgress);
 
-          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
-        })}))
+        return Object.assign({}, level, {
+          status: progress.activityCssClass(newProgress[id]),
+          id: id,
+          url: level.url
+        });
+      })}));
+
+      let returnState =  Object.assign({}, state, {
+        progress: newProgress,
+        stages: stages
       });
+
+      let peerReviewStage = _.findLast(returnState.stages, function (stage) {
+        return stage.flex_category === 'Peer Review';
+      });
+
+      if (action.peerReviewsPerformed) {
+        action.peerReviewsPerformed.forEach(function (peerReview, index) {
+            Object.assign(peerReviewStage.levels[index], peerReview);
+          }
+        );
+      }
+
+      return returnState;
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {
       return Object.assign({}, state, {
         changeFocusAreaPath: action.changeFocusAreaPath,
@@ -182,7 +202,9 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
     progress: {},
     focusAreaPositions: [],
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
-    stages: scriptData.stages
+    stages: scriptData.stages,
+    peerReviewsRequired: scriptData.peerReviewsRequired,
+    peerReviewsPerformed: []
   });
 
   // Merge in progress saved on the client.
