@@ -68,8 +68,8 @@ window.initLevelGroup = function (
 
   var lastResponse = window.getResult().response;
 
-  window.levelGroup.answerChangedFn = function (levelId, commit) {
-    if (!commit) {
+  window.levelGroup.answerChangedFn = function (levelId, saveThisAnswer) {
+    if (!saveThisAnswer) {
       // Ignore typing events before focus change (when commit will be true)
       return;
     }

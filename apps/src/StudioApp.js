@@ -608,17 +608,24 @@ StudioApp.prototype.init = function (config) {
   }
 };
 
-StudioApp.prototype.hasValidContainedLevelResult_ = function () {
+StudioApp.prototype.getFirstContainedLevelResult_ = function () {
   var results = this.getContainedLevelResults();
   if (results.length !== 1) {
     throw "Exactly one contained level result is currently required.";
   }
-  var firstResult = results[0];
+  return results[0];
+};
+
+StudioApp.prototype.hasValidContainedLevelResult_ = function () {
+  var firstResult = this.getFirstContainedLevelResult_();
   return typeof firstResult.result.response !== 'undefined' &&
       firstResult.result.response !== '';
 };
 
-StudioApp.prototype.notifyInitialRenderComplete = function (config) {
+/**
+ * @param {!AppOptionsConfig} config
+ */
+ StudioApp.prototype.notifyInitialRenderComplete = function (config) {
   if (config.hasContainedLevels && config.containedLevelOps) {
     this.lockContainedLevelAnswers = config.containedLevelOps.lockAnswers;
     this.getContainedLevelResults = config.containedLevelOps.getResults;
@@ -633,20 +640,16 @@ StudioApp.prototype.notifyInitialRenderComplete = function (config) {
       // No answers yet, disable Run button until there is an answer
       $('#runButton').prop('disabled', true);
 
-      config.containedLevelOps.registerAnswerChangedFn(function (levelId) {
+      config.containedLevelOps.registerAnswerChangedFn(levelId => {
         $('#runButton').prop('disabled', !this.hasValidContainedLevelResult_());
-      }.bind(this));
+      });
     }
   }
 };
 
 StudioApp.prototype.getContainedLevelResultsInfo = function () {
   if (this.getContainedLevelResults) {
-    var results = this.getContainedLevelResults();
-    if (results.length !== 1) {
-      throw "Exactly one contained level result is currently required.";
-    }
-    var firstResult = results[0];
+    var firstResult = this.getFirstContainedLevelResult_();
     var containedResult = firstResult.result;
     var testResults = utils.valueOr(firstResult.testResult,
         containedResult.result ? this.TestResults.ALL_PASS :
