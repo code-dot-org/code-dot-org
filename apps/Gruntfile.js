@@ -6,8 +6,7 @@ var mkdirp = require('mkdirp');
 var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
-var webpackConfig = require('./webpack.config');
-var LiveReloadPlugin = require('webpack-livereload-plugin');
+var webpackConfig = require('./webpack');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -70,8 +69,7 @@ module.exports = function (grunt) {
 
   // Parse options from environment.
   var envOptions = {
-    dev: (process.env.MOOC_DEV === '1' || process.env.DEV === '1'),
-    autoReload: ['true', '1'].indexOf(process.env.AUTO_RELOAD) !== -1
+    dev: (process.env.MOOC_DEV === '1' || process.env.DEV === '1')
   };
   if (process.env.MOOC_DEV) {
     console.warn('The MOOC_DEV environment variable is deprecated. Use DEV instead');
@@ -364,57 +362,34 @@ module.exports = function (grunt) {
 
   var entries = {};
   APPS.forEach(function (app) {
-    entries[app] = './src/'+app+'/main.js';
+    entries[app] = './src/' + app + '/main.js';
   });
   if (entries.applab) {
     entries['applab-api'] = './src/applab/api-entry.js';
   }
   config.webpack = {
-    build: _.extend({}, webpackConfig, {
-      output: {
-        path: path.resolve(__dirname, outputDir),
-        filename: "[name].js",
-      },
-      devtool: 'cheap-module-eval-source-map',
-      entry: entries,
-      plugins: [
-        new webpack.DefinePlugin({
-          IN_UNIT_TEST: JSON.stringify(false),
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-          BUILD_STYLEGUIDE: JSON.stringify(false),
-          PISKEL_DEVELOPMENT_MODE: PISKEL_DEVELOPMENT_MODE
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-          name:'common',
-          minChunks: 2,
-        }),
-      ],
+    build: webpackConfig.create({
+      output: path.resolve(__dirname, outputDir),
+      entries: entries,
+      minify: false,
+      watch: false,
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+    }),
+    uglify: webpackConfig.create({
+      output: path.resolve(__dirname, outputDir),
+      entries: entries,
+      minify: true,
+      watch: false,
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+    }),
+    watch: webpackConfig.create({
+      output: path.resolve(__dirname, outputDir),
+      entries: entries,
+      minify: false,
       watch: true,
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE
     })
   };
-  config.webpack.uglify = _.extend({}, config.webpack.build, {
-    devtool: 'source-map',
-    output: _.extend({}, config.webpack.build.output, {
-      filename: "[name].min.js",
-    }),
-    plugins: config.webpack.build.plugins.concat([
-      new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        }
-      }),
-    ]),
-  });
-  config.webpack.watch = _.extend({}, config.webpack.build, {
-    keepalive: true,
-    // don't stop watching when we hit compile errors
-    failOnError: false,
-    plugins: config.webpack.build.plugins.concat([
-      new LiveReloadPlugin({
-        appendScriptTag: envOptions.autoReload
-      }),
-    ])
-  });
 
   var ext = envOptions.dev ? 'uncompressed' : 'compressed';
   config.concat = {
