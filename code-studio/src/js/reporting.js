@@ -50,7 +50,7 @@ reporting.sendReport = function (report) {
   }
   var queryString = queryItems.join('&');
 
-  clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.level);
+  clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
 
   //Post milestone iff the server tells us, or if we are on the last level and have passed
   if (appOptions.postMilestone || (appOptions.level.puzzle_number && appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass)) {
