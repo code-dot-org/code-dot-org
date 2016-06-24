@@ -2070,6 +2070,10 @@ en:
           Programming: Programming
           Being Safe Online: Being Safe Online
           Loops: Loops
+          Programming Unplugged: Programming Unplugged
+          Loops Unplugged: Loops Unplugged
+          Events Unplugged: Events Unplugged
+          Events: Events
         grade4:
           title: Grade 4
           description_short: Planning Script for CSF 2.0
@@ -2103,3 +2107,22 @@ en:
           description_short: Planning Script for CSF 2.0
           description: Planning Script for CSF 2.0
           description_audience: Ages 10-110
+        ecs-unit1:
+          title: ECS Part 1
+          description_short: 'Unit 1: Human-Computer Interaction'
+          description: 'Unit 1: Human-Computer Interaction'
+          Welcome!: Welcome!
+          ? |-
+            Unit 1, Days 1-2
+            What Is a Computer?
+          : |-
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Wrap-up
