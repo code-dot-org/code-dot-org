@@ -36,12 +36,12 @@ TextMatch.prototype.ready = function () {
   }
 
   var textarea = $("#" + this.id + " textarea.response");
-  textarea.blur(function () {
+  textarea.blur(() => {
     if (window.levelGroup && window.levelGroup.answerChangedFn) {
       window.levelGroup.answerChangedFn(this.levelId, true);
     }
   });
-  textarea.on("input", null, null, function () {
+  textarea.on("input", null, null, () => {
     if (window.levelGroup && window.levelGroup.answerChangedFn) {
       window.levelGroup.answerChangedFn(this.levelId);
     }
