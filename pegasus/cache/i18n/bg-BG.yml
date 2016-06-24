@@ -4,10 +4,10 @@
   'yes': "Да"
   'no': "Не"
   select_language: "Моля, изберете вашия език"
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org скоро ще спре поддръжката за Internet Explorer 8, 9
+    и 10. Надстройте до модерен браузър.
+  upgrade_ie_message_csedweek: CSEdWeek.org скоро ще спре да поддръжа Internet Explorer
+    8, 9 и 10. Надстройте до модерен браузър.
   upgrade_ie_link: "Научете повече"
   en: "Компютърни науки"
   computer_science_edweek: "Седмица на Компютърните Науки"
@@ -693,7 +693,7 @@
   dashboard_navigation_section_pd: "Професионално развитие"
   dashboard_navigation_section_speakers: "Компютърни науки <br/> гости говорители"
   dashboard_navigation_all_sections: "Ученически акаунти и прогрес"
-  dashboard_navigation_view_progress: "Преглед на напредъка"
+  dashboard_navigation_view_progress: "Прогрес"
   dashboard_navigation_view_text_responses: "Изглед на текстовите отговори"
   dashboard_navigation_view_assessments: "Оценки"
   dashboard_navigation_add_students: "Добавяне на ученици"
@@ -723,7 +723,7 @@
   dashboard_sections_table_secret: "Тип парола за влизане"
   dashboard_sections_table_grade: "Клас"
   dashboard_sections_table_course: "Курс"
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: "Еекстри"
   dashboard_sections_table_students: "Ученици"
   dashboard_sections_table_code: "Код за раздел"
   dashboard_sections_name: "Име на раздел"
@@ -1030,6 +1030,7 @@
   cspunit6_name: "Пост AP: Бази данни в приложения"
   csp1_name: "Раздел 1: Интернет"
   csp2_name: "Част 1 - Дигитална информация"
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: "Пълен тест - 50 въпроса"
   cspexam1-mWU7ilDYM9_name: "Тест част 1-25 въпроси"
   cspexam2-AKwgAh1ac5_name: "Тест част 2 - 25 въпроси"

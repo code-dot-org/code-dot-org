@@ -706,7 +706,7 @@
   dashboard_navigation_section_pd: Forbairt Ghairmiúil
   dashboard_navigation_section_speakers: Aoichainteoirí <br/> Ríomheolaíochta
   dashboard_navigation_all_sections: Cuntais agus Dul Chun Cinn na nDaltaí
-  dashboard_navigation_view_progress: Féach Dul Chun Cinn
+  dashboard_navigation_view_progress: Dul chun cinn
   dashboard_navigation_view_text_responses: Féach na Freagraí Téacs
   dashboard_navigation_view_assessments: Measúnuithe
   dashboard_navigation_add_students: Cuir Daltaí Leis
@@ -1044,6 +1044,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Aonad 1: An tIdirlíon'
   csp2_name: 'Aonad 2: Faisnéis dhigiteach'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: An Scrúdú Iomlán - 50 ceist
   cspexam1-mWU7ilDYM9_name: Cuid 1 den Scrúdú - 25 ceist
   cspexam2-AKwgAh1ac5_name: Cuid 2 den Scrúdú - 25 ceist
