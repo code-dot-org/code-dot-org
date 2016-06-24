@@ -81,7 +81,7 @@ var Dialog = React.createClass({
 });
 module.exports = Dialog;
 
-if (BUILD_STYLEGUIDE) {
+if (typeof(BUILD_STYLEGUIDE) !== "undefined" && BUILD_STYLEGUIDE) {
   var ExampleDialogButton = React.createClass({
     render() {
       return (
