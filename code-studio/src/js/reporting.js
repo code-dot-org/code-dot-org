@@ -72,6 +72,14 @@ reporting.sendReport = function (report) {
         if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
         }
+        if (appOptions.hasContainedLevels && !response.redirect) {
+          // for contained levels, we want to allow the user to Continue even
+          // if the answer was incorrect and nextRedirect was not supplied, so
+          // populate nextRedirect from the fallback if necessary
+          report.pass = true;
+          var fallback = getFallbackResponse(report) || {};
+          response.redirect = fallback.redirect;
+        }
         reportComplete(report, response);
       },
       error: function (xhr, textStatus, thrownError) {
