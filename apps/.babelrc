@@ -3,6 +3,6 @@
   "plugins": [
     "add-module-exports",
     // needed for IE 9/10 support
-    ["transform-es2015-classes", {"loose": true}]
+    ['transform-es2015-classes', {loose: true}]
   ]
 }

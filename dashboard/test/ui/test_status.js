@@ -12,9 +12,10 @@
 const GIT_BRANCH = document.querySelector('#git-branch').dataset.branch;
 const COMMIT_HASH = document.querySelector('#commit-hash').dataset.hash;
 const RUN_START_TIME = new Date(document.querySelector('#start-time').textContent);
+const TEST_TYPE = document.querySelector('#test-type').value;
 const API_ORIGIN = document.querySelector('#api-origin').value;
-const API_BASEPATH = `${API_ORIGIN}/api/v1/test_logs`;
 
+// Simple constants
 const GRAY = '#dddddd';
 const RED = '#ff8888';
 const GREEN = '#78ea78';
@@ -22,6 +23,10 @@ const GREEN = '#78ea78';
 const STATUS_PENDING = 'PENDING';
 const STATUS_FAILED = 'FAILED';
 const STATUS_SUCCEEDED = 'SUCCEEDED';
+
+// Derived constants
+const S3_KEY_SUFFIX = `${/eyes/i.test(TEST_TYPE) ? '_eyes' : ''}_output.html`;
+const API_BASEPATH = `${API_ORIGIN}/api/v1/test_logs`;
 
 // Grab DOM references
 let lastRefreshTimeLabel = document.querySelector('#last-refresh-time');
@@ -137,7 +142,7 @@ Test.prototype.s3Key = function () {
   const featureRegex = /features\/(.*)\.feature/i;
   let result = featureRegex.exec(this.feature);
   let featureName = result[1].replace('/', '_');
-  return `${GIT_BRANCH}/${this.browser}_${featureName}_output.html`;
+  return `${GIT_BRANCH}/${this.browser}_${featureName}${S3_KEY_SUFFIX}`;
 };
 
 Test.prototype.publicLogUrl = function () {
@@ -154,8 +159,8 @@ rows.forEach(row => {
 });
 
 function testFromS3Key(key) {
-  var re = /[^/]+\/([^_]+)_(.*)_output\.html/i;
-  var result = re.exec(key);
+  let escapedSuffix = S3_KEY_SUFFIX.replace(/\./g, '\\.');
+  var result = new RegExp(`[^/]+\/([^_]+)_(.*)${escapedSuffix}`, 'i').exec(key);
   var browser = result[1];
   var feature = `features/${result[2]}.feature`;
   // If we don't have the browser, we definitely don't have the test.

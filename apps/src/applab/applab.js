@@ -794,6 +794,8 @@ Applab.init = function (config) {
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
   Applab.render();
+
+  studioApp.notifyInitialRenderComplete(config);
 };
 
 /**
@@ -1044,6 +1046,8 @@ Applab.runButtonClick = function () {
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
+    // adding finish button changes layout. force a resize
+    studioApp.onResize();
   }
 
   if (studioApp.editor) {
@@ -1377,8 +1381,14 @@ Applab.onPuzzleComplete = function (submit) {
   }
 
   var program;
+  var containedLevelResultsInfo = studioApp.getContainedLevelResultsInfo();
 
-  if (level.editCode) {
+  if (containedLevelResultsInfo) {
+    // Keep our this.testResults as always passing so the feedback dialog
+    // shows Continue (the proper results will be reported to the service)
+    Applab.testResults = studioApp.TestResults.ALL_PASS;
+    Applab.message = containedLevelResultsInfo.feedback;
+  } else if (level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -1402,6 +1412,7 @@ Applab.onPuzzleComplete = function (submit) {
       submitted: submit,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
+      containedLevelResultsInfo: containedLevelResultsInfo,
       onComplete: (submit ? Applab.onSubmitComplete : Applab.onReportComplete)
     });
   };
