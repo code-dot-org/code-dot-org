@@ -137,14 +137,18 @@ level 'CSD U3 - complex conditionals - SFLP'
 level 'CSD U3 Else'
 level 'CSD U3 If Else'
 #Key and Mouse Inputs
+level 'CSD U3 Keypress Watchers'
+level 'CSD U3 Keypress Matching'
 level 'CSD U3 - complex - mouse down'
 level 'CSD U3 - complex - key up and down'
 level 'CSD U3 - complex - mouse move'
 
 #Nested
-level 'CSD U3 Conditional Predict'
-level 'CSD U3 - complex - nested conditional'
+level 'CSD U3 Compound Nested Stop'
 level 'CSD U3 Compound Nested Challenge'
+level 'CSD U3 - complex - nested conditional'
+level 'CSD U3 - complex - compound conditionals'
+level 'CSD U3 Conditional Predict'
 level 'CSD U3 Conditional Project'
 
 stage 'Project: Interactive Card'
