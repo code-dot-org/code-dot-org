@@ -44,9 +44,9 @@ var PlaySpaceHeader = React.createClass({
         <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
           <button id='codeModeButton' value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>
           <button id='designModeButton' value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
-          {showDataModeButton && (
+          {showDataModeButton &&
             <button id='dataModeButton' value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
-          )}
+          }
         </ToggleGroup>
       );
     }
