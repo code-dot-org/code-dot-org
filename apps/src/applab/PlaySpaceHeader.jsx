@@ -20,7 +20,11 @@ var PlaySpaceHeader = React.createClass({
     isEditingProject: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isViewDataButtonHidden: React.PropTypes.bool.isRequired,
-    interfaceMode: React.PropTypes.oneOf([ApplabInterfaceMode.CODE, ApplabInterfaceMode.DESIGN]).isRequired,
+    interfaceMode: React.PropTypes.oneOf([
+      ApplabInterfaceMode.CODE,
+      ApplabInterfaceMode.DESIGN,
+      ApplabInterfaceMode.DATA
+    ]).isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
     screenIds: React.PropTypes.array.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
@@ -40,13 +44,18 @@ var PlaySpaceHeader = React.createClass({
     var toggleGroupWidth = showDataModeButton ? '160px' : '120px';
 
     if (!this.shouldHideToggle()) {
+      var toggleButtons = [
+        <button id='codeModeButton' key={ApplabInterfaceMode.CODE} value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>,
+        <button id='designModeButton' key={ApplabInterfaceMode.DESIGN} value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
+      ];
+      if (showDataModeButton) {
+        toggleButtons.push(
+          <button id='dataModeButton'  key={ApplabInterfaceMode.DATA} value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
+        );
+      }
       leftSide = (
         <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
-          <button id='codeModeButton' value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>
-          <button id='designModeButton' value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
-          {showDataModeButton &&
-            <button id='dataModeButton' value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
-          }
+          {toggleButtons}
         </ToggleGroup>
       );
     }
