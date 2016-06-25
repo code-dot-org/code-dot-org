@@ -18,27 +18,66 @@ try {
 import _ from 'lodash';
 import DataCollection from 'data-collection';
 import {N_COLOR_LEDS, TOUCH_PINS} from './constants';
+import {EventEmitter} from 'events';
 
 /** @const {string} */
 var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
 
-class TouchSensor {
+class TouchSensor extends EventEmitter {
   constructor(index, capTouch) {
+    super();
     this.index = index;
     this.capTouch = capTouch;
+    this.value = undefined;
   }
 
-  on(eventName, callback) {
-    if (eventName === 'touch') {
-      this.capTouch.onTouch(this.index, function (isTouched) {
-        isTouched && callback();
-      });
-    }
+  start() {
+    this.removeAllListeners();
+    this.capTouch.onTouch(this.index, (isTouched, value) => {
+      this.value = value;
+      if (isTouched) {
+        this.emit('touch', ...arguments);
+      }
+    });
+    this.value = undefined;
+  }
+}
+
+const addSensorFeatures = (s) => {
+  s.lookbackLogger = new LookbackLogger();
+  s.on('data', () => {
+    // Add the raw (un-scaled) value to the logger.
+    s.lookbackLogger.addData(s.raw);
+  });
+  s.getAveragedValue = (n) => {
+    const [low, high] = s.makerlabScale || [0, 1023];
+    return five.Board.fmap(s.lookbackLogger.getLast(n), 0, 1023, low, high);
+  };
+  s.setScale = (low, high) => {
+    s.scale(low, high);
+    // store scale in public state for scaling recorded data
+    s.makerlabScale = [low, high];
+  };
+};
+
+class LookbackLogger {
+  constructor() {
+    this.dataCollection = new DataCollection();
   }
 
-  get value() {
-    // TODO: remove test value.
-    return 5;
+  addData(value) {
+    this.dataCollection.insert({
+      value: value,
+      date: new Date()
+    });
+  }
+
+  getLast(ms) {
+    var now = new Date();
+    return this.dataCollection.query().filter({
+      date__lte: now,
+      date__gte: new Date(now.getTime() - ms)
+    }).avg('value');
   }
 }
 
@@ -54,6 +93,7 @@ var BoardController = module.exports = function () {
 BoardController.prototype.connectAndInitialize = function (codegen, interpreter) {
   return this.ensureBoardConnected()
       .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter))
+      .then(this.startComponents.bind(this))
       .catch(function (error) {
         console.log("Board initialization failed:");
         console.log(error);
@@ -90,6 +130,10 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
   this.prewiredComponents = this.prewiredComponents ||
       initializeCircuitPlaygroundComponents(this.board_.io, this.board_);
 
+  /**
+   * Set of classes used by interpreter to understand the type of instantiated
+   * objects, allowing it to make methods and properties of instances available.
+   */
   var componentConstructors = {
     Led: five.Led,
     Board: five.Board,
@@ -114,28 +158,11 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
   Object.keys(this.prewiredComponents).forEach(function (key) {
     jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
   }.bind(this));
+};
 
-  this.prewiredComponents.accelerometer.start();
-
-  [
-    this.prewiredComponents.soundSensor,
-    this.prewiredComponents.lightSensor,
-    this.prewiredComponents.tempSensor
-  ].forEach((s) => {
-    s.lookbackLogger = new LookbackLogger();
-    s.on('data', () => {
-      // Add the raw (un-scaled) value to the logger.
-      s.lookbackLogger.addData(s.raw);
-    });
-    s.getAveragedValue = n => {
-      const [low, high] = s.makerlabScale || [0, 1023];
-      return five.Board.fmap(s.lookbackLogger.getLast(n), 0, 1023, low, high);
-    };
-    s.setScale = (low, high) => {
-      s.scale(low, high);
-      // store scale in public state for scaling recorded data
-      s.makerlabScale = [low, high];
-    };
+BoardController.prototype.startComponents = function () {
+  Object.values(this.prewiredComponents).forEach((c) => {
+    c.start && c.start();
   });
 };
 
@@ -144,12 +171,7 @@ BoardController.prototype.reset = function () {
     return;
   }
 
-  var standaloneComponents = [
-    this.prewiredComponents.tap,
-    this.prewiredComponents.touch
-  ];
-
-  this.board_.register.concat(standaloneComponents).forEach(function (component) {
+  const resetComponent = (component) => {
     try {
       if (component.state && component.state.intervalId) {
         clearInterval(component.state.intervalId);
@@ -173,7 +195,15 @@ BoardController.prototype.reset = function () {
       console.log('Error trying to cleanup component', error);
       console.log(component);
     }
-  });
+  };
+
+  // Components which do not get registered with the johnny-five board, but
+  // which can be reset in the same way.
+  var standaloneComponents = [
+    this.prewiredComponents.tap,
+    this.prewiredComponents.touch
+  ];
+  this.board_.register.concat(standaloneComponents).forEach(resetComponent);
 };
 
 BoardController.prototype.pinMode = function (pin, modeConstant) {
@@ -196,27 +226,6 @@ BoardController.prototype.analogRead = function (pin, callback) {
   return this.board_.analogRead(pin, callback);
 };
 
-class LookbackLogger {
-  constructor() {
-    this.dataCollection = new DataCollection();
-  }
-
-  addData(value) {
-    this.dataCollection.insert({
-      value: value,
-      date: new Date()
-    });
-  }
-
-  getLast(ms) {
-    var now = new Date();
-    return this.dataCollection.query().filter({
-      date__lte: now,
-      date__gte: new Date(now.getTime() - ms)
-    }).avg('value');
-  }
-}
-
 BoardController.prototype.onBoardEvent = function (component, event, callback) {
   component.on(event, callback);
 };
@@ -228,7 +237,7 @@ function connect() {
 function connectToBoard(portId) {
   return new Promise(function (resolve, reject) {
     var serialPort = new ChromeSerialPort.SerialPort(portId, {
-      baudrate: 57600
+      bitrate: 57600
     }, true);
     var io = new PlaygroundIO({port: serialPort});
     var board = new five.Board({io: io, repl: false});
@@ -290,7 +299,7 @@ function initializeCircuitPlaygroundComponents(io, board) {
    * Must initialize sound sensor BEFORE left button, otherwise left button
    * will not respond to input.
    */
-  const sound = new five.Sensor({
+  const soundSensor = new five.Sensor({
     pin: "A4",
     freq: 100
   });
@@ -317,9 +326,21 @@ function initializeCircuitPlaygroundComponents(io, board) {
 
   const capTouch = new PlaygroundIO.CapTouch(io);
   const touchSensors = {};
-  _.each(TOUCH_PINS, index => {
+  _.each(TOUCH_PINS, (index) => {
     touchSensors[`touchSensor${index}`] = new TouchSensor(index, capTouch);
   });
+
+  const lightSensor = new five.Sensor({
+    pin: "A5",
+    freq: 100
+  });
+  const tempSensor = new five.Thermometer({
+    controller: "TINKERKIT",
+    pin: "A0",
+    freq: 100
+  });
+
+  [soundSensor, lightSensor, tempSensor].forEach(addSensorFeatures);
 
   return _.merge(touchSensors, {
     colorLeds: colorLeds,
@@ -333,16 +354,9 @@ function initializeCircuitPlaygroundComponents(io, board) {
       controller: PlaygroundIO.Piezo
     }),
 
-    tempSensor: new five.Thermometer({
-      controller: "TINKERKIT",
-      pin: "A0",
-      freq: 100
-    }),
+    tempSensor: tempSensor,
 
-    lightSensor: new five.Sensor({
-      pin: "A5",
-      freq: 100
-    }),
+    lightSensor: lightSensor,
 
     accelerometer: accelerometer,
 
@@ -350,7 +364,7 @@ function initializeCircuitPlaygroundComponents(io, board) {
 
     touch: capTouch,
 
-    soundSensor: sound,
+    soundSensor: soundSensor,
 
     buttonL: buttonL,
 
