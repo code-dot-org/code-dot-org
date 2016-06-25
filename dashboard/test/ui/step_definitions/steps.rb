@@ -305,6 +305,7 @@ end
 When /^I type "([^"]*)" into "([^"]*)"$/ do |input_text, selector|
   @browser.execute_script("$('" + selector + "').val('" + input_text + "')")
   @browser.execute_script("$('" + selector + "').keyup()")
+  @browser.execute_script("$('" + selector + "').trigger('input')")
   @browser.execute_script("$('" + selector + "').change()")
 end
 
