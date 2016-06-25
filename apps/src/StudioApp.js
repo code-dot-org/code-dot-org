@@ -1612,6 +1612,7 @@ StudioApp.prototype.report = function (options) {
       callback: options.containedLevelResultsInfo.callback,
       app: options.containedLevelResultsInfo.app,
       level: options.containedLevelResultsInfo.level,
+      serverLevelId: options.containedLevelResultsInfo.level,
       result: options.containedLevelResultsInfo.result,
       testResult: options.containedLevelResultsInfo.testResults,
       submitted: options.submitted,
