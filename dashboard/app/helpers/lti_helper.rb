@@ -18,6 +18,11 @@ module LtiHelper
     end
   end
 
+  def lti_param_missing_msg(pp)
+    "Sorry, could not sign up--[#{pp}] missing from LTI request. Please contact your LMS admin."
+  end
+
+
   #
   # ===========================================================
   #   LTI Signin
@@ -56,32 +61,43 @@ module LtiHelper
       if user_signed_in?
         redirect_to redirect_url
       else
-        #expected LTI params from tool consumer
-        #see:
+        # expected LTI params from tool consumer
+        # see:
         #https://www.imsglobal.org/learning-tools-interoperability-sso-mechanism
         #
-        email      = params[:lis_person_contact_email_primary]
+        # For code-dot-org make User unique via provider/user_id:
+        #   uid is required for LTI sign-on
+        #   age is required for User::TYPE_STUDENT
+        #
+        pvd_id     = "lti_#{consumer_key}"
+        uid        = params[:user_id] || ""
+        age        = params[:custom_age]
         full_name  = params[:lis_person_name_full]
-        full_name  = email.split('@').first if full_name.blank?
+        full_name  = "Lti #{uid.first}" if full_name.blank?
+        email      = SecureRandom.uuid + "@code.org"
 
-        if email.blank?
+        user_type  = lti_role_to_user_type(params[:roles])
+        age ||= 21 if user_type == User::TYPE_TEACHER
+
+        if uid.blank?
           redirect_to new_user_registration_path,
-            alert: "Sorry, could not sign up--email missing from LTI request. Please contact your LMS admin."
+            alert: lti_param_missing_msg("user_id")
+          return
+        end
+        if age.blank?
+          redirect_to new_user_registration_path,
+            alert: lti_param_missing_msg("custom_age")
           return
         end
 
-        user = User.find_by_email_or_hashed_email(email)
-        if user.nil?
-          user_type = lti_role_to_user_type(params[:roles])
-
-          # Age is not part of the LTI basic launch data.  Use similar
-          # strategy as Clever sign-in. Make sure email gets hidden in the end
-          # for Students...
-          age = ((user_type == User::TYPE_TEACHER) ? 21 : 8)
-
-          user = User.new(email: email,
-                          provider: "lti_#{consumer_key}",
-                          name: full_name, age: age, user_type: user_type)
+        user = User.where(provider: pvd_id, uid: uid).first_or_create
+        if user.new_record?
+          user.provider  = pvd_id
+          user.uid       = uid
+          user.age       = age
+          user.email     = email
+          user.name      = full_name
+          user.user_type = user_type
 
           user.skip_confirmation!
           user.skip_reconfirmation!
@@ -98,7 +114,7 @@ module LtiHelper
           redirect_to redirect_url
         else
           redirect_to new_user_registration_path,
-            alert: "Sorry, could not sign in [#{email}]. Please contact your LMS admin."
+            alert: "Sorry, could not sign in User [#{uid}]. Please contact your LMS admin."
         end
       end
     else
