@@ -3,6 +3,11 @@ require 'test_helper'
 class LtiProviderControllerTest < ActionController::TestCase
   include Mocha::API
 
+  setup do
+    CDO.lti_credentials["f10ee9fc082219227976f2c1603a3d77"] = \
+      "dc3872a4b605f1f36242a837172ce2c0"
+  end
+
   def lti_consumer_params(consumer_key, consumer_secret, test_name, *args)
 
     # match URL used by MiniTest post :sso call
