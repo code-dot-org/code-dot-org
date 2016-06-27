@@ -171,10 +171,20 @@ class Ability
     # permissions.
     if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
       can :manage, [
+        Applab,
+        Artist,
+        Calc,
+        Craft,
+        DSLDefined,
+        Eval,
         Game,
+        Gamelab,
         Level,
+        Maze,
+        NetSim,
         Script,
-        ScriptLevel
+        ScriptLevel,
+        Studio,
       ]
 
       # Only custom levels are editable.

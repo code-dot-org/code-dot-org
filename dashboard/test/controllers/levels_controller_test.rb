@@ -9,11 +9,10 @@ class LevelsControllerTest < ActionController::TestCase
 
     @level = create(:level)
     @admin = create(:admin)
+    @not_admin = create(:user)
     @levelbuilder = create(:levelbuilder)
     sign_in(@levelbuilder)
     @program = '<hey/>'
-
-    @not_admin = create(:user)
   end
 
   test "should get index" do
