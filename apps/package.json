@@ -22,7 +22,9 @@
     "start:gamelab": "DEV=1 grunt dev --app=gamelab; grunt logBuildTimes",
     "test-audio": "echo \"Open your browser to http://127.0.0.1:8080/test/audio/audio_test.html\" && http-server .",
     "build:log": "grunt logBuildTimes",
-    "build:stats": "node ./script/build-stats.js"
+    "build:stats": "node ./script/build-stats.js",
+    "storybook": "start-storybook -p 9001 -s ../dashboard/public/",
+    "build-storybook": "build-storybook -o ../dashboard/public/styleguide storybook-build-dir"
   },
   "browser": {
     "blockly": "./build/package/js/blockly.js"
@@ -51,6 +53,8 @@
   "devDependencies": {
     "@cdo/apps": "file:src",
     "@code-dot-org/piskel": "0.2.0",
+    "@kadira/react-storybook-addon-info": "^3.0.4",
+    "@kadira/storybook": "^1.34.0",
     "Base64": "0.3.0",
     "babel-core": "6.9.0",
     "babel-istanbul-loader": "^0.1.0",
@@ -140,6 +144,7 @@
     "react-addons-test-utils": "15.0.2",
     "react-dom": "15.0.2",
     "react-redux": "^4.4.0",
+    "react-storybook-addon-add-stories-group": "^0.1.0",
     "redux": "^3.3.1",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.0.1",
@@ -156,6 +161,7 @@
     "uglify-js": "2.4.24",
     "webpack": "1.13.0",
     "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.10.0",
     "webpack-livereload-plugin": "^0.8.1",
     "which": "1.1.1"
   },
