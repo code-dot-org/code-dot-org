@@ -1,7 +1,7 @@
 #reference_area.reference_area
   - if can_view_solution?
     .solution_link
-      = link_to t('reference_area.teacher'), build_script_level_path(@script_level, solution: true)
+      = link_to t('reference_area.teacher'), @script_level.path(solution: true)
 
   - related_videos = @level.related_videos
   - unless related_videos.empty?

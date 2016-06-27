@@ -26,7 +26,7 @@ class ApiController < ApplicationController
       student_levels = @script.script_levels.map do |script_level|
         user_levels = script_level.level_ids.map{|id| level_map[id]}
         level_class = best_activity_css_class user_levels
-        {class: level_class, title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
+        {class: level_class, title: script_level.position, url: script_level.url(section_id: @section.id, user_id: student.id)}
       end
       {id: student.id, levels: student_levels}
     end
@@ -149,7 +149,7 @@ class ApiController < ApplicationController
           puzzle: script_level.position,
           question: script_level.level.properties['title'],
           response: response,
-          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+          url: script_level.url(section_id: @section.id, user_id: student.id)
         }
       end.compact
     end.flatten
@@ -238,7 +238,7 @@ class ApiController < ApplicationController
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
           question: script_level.level.properties["title"],
-          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
+          url: script_level.url(section_id: @section.id, user_id: student.id),
           multi_correct: multi_count_correct,
           multi_count: multi_count,
           submitted: submitted,

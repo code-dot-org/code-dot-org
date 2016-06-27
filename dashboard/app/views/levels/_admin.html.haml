@@ -32,7 +32,7 @@
                 = hidden_field_tag :authenticity_token, form_authenticity_token
                 = submit_tag 'Clone'
         - elsif @script_level
-          %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
+          %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", @script_level.path).to_s
       - else
         %li (Cannot edit)
 
@@ -43,7 +43,7 @@
         %li
           = link_to script_level.script.name, script_level.script
           as
-          = link_to build_script_level_path(script_level), build_script_level_path(script_level)
+          = link_to script_level.path, script_level.path
     %br/
     %div.admin-abuse{ :style => "display: none" }
       Abuse score:

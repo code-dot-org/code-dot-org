@@ -87,17 +87,17 @@ class ScriptLevel < ActiveRecord::Base
         if Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
           script_preview_assignments_path(script)
         else
-          build_script_level_path(level_to_follow)
+          level_to_follow.path
         end
       else
         if has_another_level_to_go_to?
-          build_script_level_path(level_to_follow)
+          level_to_follow.path
         else
           script_path(script)
         end
       end
     else
-      level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+      level_to_follow ? level_to_follow.path : script_completion_redirect(script)
     end
   end
 
@@ -148,6 +148,22 @@ class ScriptLevel < ActiveRecord::Base
     I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end
 
+  def path(params = {})
+    if script.name == Script::HOC_NAME
+      hoc_chapter_path(chapter, params)
+    elsif script.name == Script::FLAPPY_NAME
+      flappy_chapter_path(chapter, params)
+    elsif params[:puzzle_page]
+      puzzle_page_script_stage_script_level_path(script, stage, self, params[:puzzle_page])
+    else
+      script_stage_script_level_path(script, stage, self, params)
+    end
+  end
+
+  def url(params = {})
+    "#{root_url.chomp('/')}#{path(params)}"
+  end
+
   def report_bug_url(request)
     message = "Bug in Course #{script.name} Stage #{stage.position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
@@ -190,7 +206,7 @@ class ScriptLevel < ActiveRecord::Base
         kind: kind,
         icon: level.icon,
         title: level_display_text,
-        url: build_script_level_url(self)
+        url: self.url
     }
 
     summary[:name] = level.name if script.professional_learning_course?

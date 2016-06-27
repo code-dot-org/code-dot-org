@@ -8,7 +8,7 @@
       .bottombar.smalltext.printcertificate
         = t('home.print_certificate')
   - elsif current_user.working_on? (script)
-    %a.whitelink{href: build_script_level_url(current_user.next_unpassed_progression_level(script))}
+    %a.whitelink{href: current_user.next_unpassed_progression_level(script).url}
       .bottombar.smalltext.continue
         = t('continue')
   - else

@@ -38,7 +38,7 @@ class ScriptLevelsController < ApplicationController
     # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
     # If the user is signed in, continue normally.
-    redirect_path = build_script_level_path(@script.starting_level)
+    redirect_path = @script.starting_level.path
 
     if current_user
       redirect_to(redirect_path)
@@ -55,7 +55,7 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
     configure_caching(@script)
-    redirect_to(build_script_level_path(next_script_level)) && return
+    redirect_to(next_script_level.path) && return
   end
 
   def show
@@ -75,7 +75,7 @@ class ScriptLevelsController < ApplicationController
       end
     end
 
-    if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
+    if request.path != (canonical_path = @script_level.path(extra_params))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return
