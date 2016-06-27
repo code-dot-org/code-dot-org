@@ -1,0 +1,204 @@
+---
+title: CS Principles Widgets
+theme: responsive
+video_player: true
+---
+
+%link{href: "/css/jumbotron-banner.css", rel: "stylesheet"}
+
+= view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/girl-cropped.jpg"), title: "CSP Widgets", desc: "This is sample text. Here are widgets from the CS Principles course that you can use to supplement any high school computer science course.", specs: "Ages 14+, All modern browsers, English only", nav_bar: [{text: 'Text compression', url: '#text-compression'}, {text: 'Pixelation Widget', url: '#pixelation'}, {text: 'Internet Simulator', url: '#internet-simulator'}, {text: 'Cryptography', url: '#cryptography'}]
+
+#text-compression
+  %h1 Text compression
+  .tool-video{style: 'float: left; width: 40%; margin-right: 20px;'}
+    = view :display_video_thumbnail, id: 'text_compression', video_code: 'LCGkcn1f-ms', play_button: 'center', download_path: 'https://video.code.org/2015/csp/textcompression_blacc.mp4'
+  .tool-desc
+    Here is some sample text about the text compression widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
+    %ul.tool-links{style: 'margin-left: 45%'}
+      %li
+        %i.fa.fa-file-text
+        %a{href: CDO.code_org_url('/curriculum/cspunit1/13/Teacher')}
+          Lesson Plan
+      %li 
+        %i.fa.fa-external-link-square
+        %a{href: CDO.code_org_url('/textcompression')}
+          Standalone tool
+      %li
+        %i.fa.fa-external-link-square
+        %a{href: CDO.studio_url('/s/cspunit1/stage/13/puzzle/1')}
+          Stage in CSP
+  .clear
+
+#pixelation
+  %h1 Pixelation Widget
+  .tool-desc{style: 'float: left; width: 30%; margin-right: 20px;'}
+    Here is some sample text about the pixelation widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
+    %ul
+      %li
+        %i.fa.fa-external-link-square
+        %a{href: CDO.code_org_url('/pixelation')}
+          Standalone tool
+  .pixelation-teacher-video{style: 'float: left; width: 30%; margin-right: 20px;'}
+    = view :display_video_thumbnail, id: 'pixelation', video_code: 'yWrmxQSnmPc', play_button: 'center'
+    Teacher-facing video to support both B&W and Color Pixelation
+  .pixelation-concept-video{style: 'float: left; width: 30%;'}
+    = view :display_video_thumbnail, id: 'images_pixels', video_code: '15aqFQQVBWU', play_button: 'center'
+    Related concept video: Images, Pixels & RGB w/Kevin Systrom
+
+  .clear
+  %h2 Black and White Pixelation  
+  .tool-video{style: 'float: left; width: 40%; margin-right: 20px;'}
+    = view :display_video_thumbnail, id: 'bw_pixelation', video_code: 'rJOa5Q5a1WM', play_button: 'center', download_path: 'https://videos.code.org/2015/csp/pixelation_bw.mp4'
+  .tool-desc
+    Here is some sample text about the black and white pixelation widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
+    %ul.tool-links{style: 'margin-left: 45%'}
+      %li
+        %i.fa.fa-file-text
+        %a{href: CDO.code_org_url('/curriculum/cspunit1/14/Teacher')}
+          Lesson Plan
+      %li
+        %i.fa.fa-external-link-square
+        %a{href: CDO.studio_url('/s/cspunit1/stage/14/puzzle/1')}
+          Stage in CSP
+  .clear
+
+  %h2 Color Pixelation
+  %img{src: '/images/app-lab/color-pixelation.png', style: 'float: left; margin-right: 20px; width: 40%'}
+  .tool-desc
+    Here is some sample text about the color pixelation widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
+  %ul.tool-links{style: 'margin-left: 45%;'}
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.code_org_url('/curriculum/cspunit1/15/Teacher')}
+        Lesson plan
+    %li
+      %i.fa.fa-external-link-square
+      %a{href: CDO.studio_url('/s/cspunit1/stage/15/puzzle/1')}
+        Stage in CSP
+  .clear
+  .tool-videos{style: 'margin-top: 20px;'}
+    .tool-video{style: 'float: left; width: 30%; margin-right: 20px;'}
+      = view :display_video_thumbnail, id: 'color_piexlation_1', video_code: '763E3_Z6Hng', play_button: 'center', download_path: 'https://video.code.org/2015/csp/pixelation_color_1.mp4'
+    .tool-video{style: 'float: left; width: 30%; margin-right: 20px;'}
+      = view :display_video_thumbnail, id: 'color_piexlation_2', video_code: 'xK9z51Tin4E', play_button: 'center', download_path: 'https://video.code.org/2015/csp/pixelation_color_2.mp4'
+    .tool-video{style: 'float: left; width: 30%;'}
+      = view :display_video_thumbnail, id: 'color_piexlation_3', video_code: 'Xhqz3ffGm74', play_button: 'center', download_path: 'https://video.code.org/2015/csp/pixelation_color_3.mp4'
+  .clear
+
+#internet-simulator
+  %h1 Internet Simulator
+  %img{src: '/images/app-lab/internet-protocol.png', style: 'float: left; margin-right: 20px; width: 40%'}
+  .tool-desc
+    Here is some sample text about the internet simulator widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
+  %ul.tool-links{style: 'margin-left: 45%;'}
+    %li
+      %i.fa.fa-external-link-square
+      %a{href: CDO.code_org_url('/internetsimulator')}
+        Standalone tool
+    %li
+      %i.fa.fa-external-link-square
+      %a{href: 'https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7'}
+        Related concept videos playlist
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.code_org_url('/curriculum/cspunit1/4/Teacher')}
+        Lesson Plan for Unit 1, Lesson 4
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.code_org_url('/curriculum/cspunit1/8/Teacher')}
+        Lesson Plan for Unit 1, Lesson 8
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.code_org_url('/curriculum/cspunit1/10/Teacher')}
+        Lesson Plan for Unit 1, Lesson 10
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.code_org_url('/curriculum/cspunit1/11/Teacher')}
+        Lesson Plan for Unit 1, Lesson 11
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.code_org_url('/curriculum/cspunit2/2/Teacher')}
+        Lesson Plan for Unit 1, Lesson 2
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.code_org_url('/curriculum/cspunit2/4/Teacher')}
+        Lesson Plan for Unit 1, Lesson 4
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.code_org_url('/curriculum/cspunit2/5/Teacher')}
+        Lesson Plan for Unit 1, Lesson 5
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.code_org_url('/curriculum/cspunit2/9/Teacher')}
+        Lesson Plan for Unit 1, Lesson 9
+  .clear
+  %h4{style: 'margin-top: 30px;'} Student Facing Videos
+  .tool-videos
+    .tool-video{style: 'float: left; width: 30%; margin-right: 20px;'}
+      = view :display_video_thumbnail, id: 'student_shared_wire', video_code: 'Kn6Fd5uwZno', play_button: 'center', download_path: 'https://videos.code.org/2015/csp/internetsimulator_1.mp4'
+    .tool-video{style: 'float: left; width: 30%; margin-right: 20px;'}
+      = view :display_video_thumbnail, id: 'sending_numbers', video_code: 'cIk2R0QuXkI', play_button: 'center', download_path: 'https://videos.code.org/2015/csp/internetsimulator_2.mp4'
+    .tool-video{style: 'float: left; width: 30%;'}
+      = view :display_video_thumbnail, id: 'broadcast_mode', video_code: 'x_YTEBRnR1U', play_button: 'center', download_path: 'https://videos.code.org/2015/csp/internetsimulator_3.mp4'
+  .clear
+  %h4{style: 'margin-top: 30px;'} Teacher-facing Support Videos
+  .tool-videos
+    .tool-video{style: 'float: left; width: 30%; margin-right: 20px;'}
+      = view :display_video_thumbnail, id: 'teacher_shared_wire', video_code: 'Acp48OaZ7Uc', play_button: 'center', download_path: 'https://videos.code.org/2015/csp/internetsimulator_1.mp4'
+    .tool-video{style: 'float: left; width: 30%; margin-right: 20px;'}
+      = view :display_video_thumbnail, id: 'need_for_packets', video_code: '3hy8WodhtbE', play_button: 'center', download_path: 'https://videos.code.org/2015/csp/internetsimulator_2.mp4'
+    .tool-video{style: 'float: left; width: 30%;'}
+      = view :display_video_thumbnail, id: 'need_for_dns', video_code: 'UC_-CUmsFHU', play_button: 'center', download_path: 'https://videos.code.org/2015/csp/internetsimulator_3.mp4'
+  .clear
+
+#cryptography
+  %h1 Cryptography
+  .tool-video{style: 'float: left; width: 40%; margin-right: 20px;'}
+    = view :display_video_thumbnail, id: 'cryptography', video_code: 'ZghMPWGXexs', play_button: 'center', download_path: 'http://videos.code.org/2015/csp/concept_encryption.mp4'
+  .tool-desc
+    Here is some sample text about the cryptography widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
+  .clear
+
+  %h2 Frequency analysis widget
+  %img{src: '/images/app-lab/frequency-analysis.png', style: 'float: left; margin-right: 20px; width: 40%'}
+  .tool-desc
+    Here is some sample text about the frequency analysis widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
+  %ul.tool-links{style: 'margin-left: 45%;'}
+    %li
+      %i.fa.fa-external-link-square
+      %a{href: CDO.studio_url('/s/frequency_analysis')}
+        Standalone tool
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.code_org_url('/curriculum/cspunit2/13/Teacher')}
+        Caesar Cipher Lesson plan
+    %li        
+      %i.fa.fa-external-link-square
+      %a{href: CDO.studio_url('/s/cspunit2/stage/13/puzzle/1')}
+        Caesar Cipher stage in CSP
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.code_org_url('/curriculum/cspunit2/14/Teacher')}
+        Frequency analysis Lesson plan
+    %li
+      %i.fa.fa-external-link-square
+      %a{href: CDO.studio_url('/s/cspunit2/stage/14/puzzle/1')}
+        Frequency analysis Code Studio stage
+
+  %h2 Vigenere cipher widget
+  %img{src: '/images/app-lab/vigenere-cipher.png', style: 'float: left; margin-right: 20px; width: 40%'}
+  .tool-desc
+    Here is some sample text about the vigenere cipher widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
+  %ul.tool-links{style: 'margin-left: 45%;'}
+    %li
+      %i.fa.fa-external-link-square
+      %a{href: CDO.code_org_url('/curriculum/cspunit2/14/Teacher')}
+        Lesson Plan
+    %li
+      %i.fa.fa-file-text
+      %a{href: CDO.studio_url('/s/vigenere')}
+        Standalone tool
+    %li
+      %i.fa.fa-external-link-square
+      %a{href: CDO.studio_url('/s/cspunit2/stage/14/puzzle/1')}
+        Stage in CSP
