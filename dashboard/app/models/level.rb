@@ -103,6 +103,14 @@ class Level < ActiveRecord::Base
     !unplugged?
   end
 
+  def enable_scrolling?
+    is_a?(Blockly)
+  end
+
+  def enable_examples?
+    is_a?(Blockly)
+  end
+
   # Overriden by different level types.
   def self.start_directions
   end
@@ -312,4 +320,5 @@ class Level < ActiveRecord::Base
   def write_to_file?
     custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
+
 end
