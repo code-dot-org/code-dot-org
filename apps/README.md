@@ -189,52 +189,6 @@ fetching files served by the test runner, prefix the file path with
 document.write('<audio src="/base/test/audio/assets/win.mp3"/>');
 ```
 
-#### UI Component Style Guide ####
-
-We use `react-storybook` to generate a ui component style guide that you can use
-to discover what components are available to reuse as you build new
-features. You can also use the style guide to more easily develop new components
-without having to run all of code.org.
-
-To view the styleguide run
-
-```
-npm run storybook
-```
-
-and browse to http://localhost:9001/.
-
-You can add new sections to the styleguide (perhaps for a new component you are
-building) by adding the following code:
-
-```javascript
-if (BUILD_STYLEGUIDE) {
-  SomeComponent.styleGuideExamples = storybook => {
-    return storybook
-      .storiesOf('SomeComponent', module)
-      .add(
-        'Example #1',
-        () => <Component/>
-      )
-  };
-}
-```
-
-By wrapping your code in a `BUILD_STYLEGUIDE` check, you can guarantee that it
-won't appear in production builds. See the
-[react-storybook documentation](https://github.com/kadirahq/react-storybook) for
-more information on how to use the `storybook` api.
-
-##### Static Styleguide #####
-
-You can also build a completely static version of the styleguide by running
-
-```
-npm run build-storybook
-```
-
-which will then be available at http://localhost-studio.code.org:3000/styleguide/
-
 #### Full build with blockly-core changes
 
 1. Check out [blockly-core](https://github.com/code-dot-org/blockly-core/) as a sibling directory to blockly.

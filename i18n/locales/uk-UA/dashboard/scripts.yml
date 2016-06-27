@@ -146,7 +146,7 @@ uk:
           description_short: Малюйте картини та узори разом з Художником!
         hourofcode:
           Maze: Лабіринт
-          title: Класичний лабіринт
+          title: Лабіринт
           description: 'Спробуйте основи інформатики з персонажами  Angry Birds, Plants vs. Zombies, та Білкою з Льодовикового періоду!'
           description_short: Спробуйте основи інформатики з цікавими персонажами!
         frozen:
@@ -156,7 +156,7 @@ uk:
           description_short: Вивчимо програмування, приєднавшись до Анни та Ельзи у подорожі чарівною зимовою казкою.
         course4:
           description_short: Учні, котрі приступають до Курсу 4, повинні попередньо пройти Курси 2 та 3.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: "Курс 4 призначений для учнів, які пройшли Курси 2 та 3. Учні навчаться розв'язувати завдання підвищеної складності, а також комбінувати поняття при розв'язуванні цих завдань. Завершивши курс, учні зможуть створювати програми, які демонструватимуть опанування численних навичок, в тому числі циклів та функцій з параметрами. Рекомендовано для 4-8 класів."
           "Artist: Variables": 'Художник: змінні'
           "Bee: For Loops": 'Бджілка - цикли з параметром'
           title: Курс 4
@@ -952,7 +952,7 @@ uk:
           Booleans: Логічні вирази
           "Eval: Conditionals": 'Оцінка: умови'
           Next Steps: Next Steps
-          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Best Practices for Teaching Computer Science: Успішні методики викладання інформатики
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -976,9 +976,9 @@ uk:
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
-          title: Teaching Computer Science Fundamentals
-          description: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
-          description_short: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          title: Викладання основ інформатики
+          description: Дізнайтеся, як викладати інформатику за допомогою безкоштовного онлайнового курсу основ інформатики від Code.org, який можна проходити у довільному темпі.
+          description_short: Дізнайтеся, як викладати інформатику за допомогою безкоштовного онлайнового курсу основ інформатики від Code.org, який можна проходити у довільному темпі.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -986,7 +986,7 @@ uk:
           "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
           "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
           "Mastering the Basics: Events": 'Mastering the Basics: Events'
-          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Best Practices for Teaching Computer Science: Успішні методики викладання інформатики
           Planning: Planning
           Next Steps: Next Steps
           Looking Ahead: Looking Ahead
@@ -1058,7 +1058,7 @@ uk:
           Booleans: Логічні вирази
           "Eval: Conditionals": 'Оцінка: умови'
           Next Steps: Next Steps
-          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Best Practices for Teaching Computer Science: Успішні методики викладання інформатики
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
           Welcome!: Ласкаво просимо!
@@ -1655,7 +1655,7 @@ uk:
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
         algebraPD1:
-          title: CS in Algebra Part 1
+          title: 'Інформатика в алгебрі - Частина 1'
           description_short: 'Phase 1: Online Introduction'
           description: Teach Algebra through Functional Programming
           Introduction to PD: Знайомство з профессійним кодуванням
@@ -1796,10 +1796,14 @@ uk:
           Conditionals and Keyboard Input: Conditionals and Keyboard Input
           Sprites and Images: Sprites and Images
           CSD U3 Variables and Animation: CSD U3 Variables and Animation
-          Booleans and Conditionals: 'Booleans and Conditionals'
           SFLP: SFLP
           Animations: Animations
           "Project: Interactive Card": 'Project: Interactive Card'
+          Booleans and Conditionals: Booleans and Conditionals
+          Variables and Animation: Variables and Animation
+          Complex Conditionals: Complex Conditionals
+          Proposed Sprites and Props: Proposed Sprites and Props
+          Conditionals Update: Conditionals Update
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1899,6 +1903,7 @@ uk:
           description_short: Unreleased level types for UI testing as admin
           description: Unreleased level types for UI testing as admin
           Game Lab: Game Lab
+          Contained Levels: Contained Levels
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -1999,39 +2004,6 @@ uk:
           description: Test of new educational philosophy with guiding storyline
           description_audience: Ages 8-18+
           Sample Stage: Sample Stage
-        TeacherCon:
-          title: TeacherCon Supports
-          description: We will use this during TeacherCon to deliver supports and materials for sessions
-          Introduction to Teachercon: Introduction to Teachercon
-          "Lesson 1.4: number systems - circle triangle square": 'Lesson 1.4: number systems - circle triangle square'
-          "Lesson 1.6: sending numbers": 'Lesson 1.6: sending numbers'
-          "Lesson 1.9: internet addressing (battleship)": 'Lesson 1.9: internet addressing (battleship)'
-          "Lesson 1.10: routers and redundancy": 'Lesson 1.10: routers and redundancy'
-          "Lesson 1.11: Packets and Making a Reliable Internet": 'Lesson 1.11: Packets and Making a Reliable Internet'
-          "Lesson 2.2: text compression": 'Lesson 2.2: text compression'
-          "Lesson 2.3: black and white pixelation": 'Lesson 2.3: black and white pixelation'
-          "Lesson 2.10: good and bad data visualizations": 'Lesson 2.10: good and bad data visualizations'
-          Group Work and Peer Learning: Group Work and Peer Learning
-          Balancing Teachers and Tools: Balancing Teachers and Tools
-          Discovery Learning: Discovery Learning
-          Capturing Student Learning: Capturing Student Learning
-          Lesson 14 number systems - circle triangle square: 'Lesson 14 number systems - circle triangle square'
-          "Lesson 1,4: number systems - circle triangle square": 'Lesson 1,4: number systems - circle triangle square'
-          "Lesson 1,6: sending numbers": 'Lesson 1,6: sending numbers'
-          "Lesson 1,9: internet addressing (battleship)": 'Lesson 1,9: internet addressing (battleship)'
-          "Lesson 1,10: routers and redundancy": 'Lesson 1,10: routers and redundancy'
-          "Lesson 1,11: Packets and Making a Reliable Internet": 'Lesson 1,11: Packets and Making a Reliable Internet'
-          "Lesson 2,2: text compression": 'Lesson 2,2: text compression'
-          "Lesson 2,3: black and white pixelation": 'Lesson 2,3: black and white pixelation'
-          "Lesson 2,10: good and bad data visualizations": 'Lesson 2,10: good and bad data visualizations'
-          "Lesson 1,4: Number Systems - circle triangle square": 'Lesson 1,4: Number Systems - circle triangle square'
-          "Lesson 1,6: Sending Numbers": 'Lesson 1,6: Sending Numbers'
-          "Lesson 1,10: Routers and Redundancy": 'Lesson 1,10: Routers and Redundancy'
-          "Lesson 2,2: Text Compression": 'Lesson 2,2: Text Compression'
-          "Lesson 2,3: Black and White Pixelation": 'Lesson 2,3: Black and White Pixelation'
-          "Lesson 2,10: Good and Bad Data Visualizations": 'Lesson 2,10: Good and Bad Data Visualizations'
-          Measuring Student Learning: Measuring Student Learning
-          description_short: We will use this during TeacherCon to deliver supports and materials for sessions
         MikeTest:
           title: MikeTest
           description_short: Just a script for playing around
@@ -2039,9 +2011,52 @@ uk:
           description_audience: Ages 8-98
           Sample Stage: Sample Stage
           Artist Functions: 'Художник - функції'
+          The same thing with named levels: The same thing with named levels
+          You are a coding STAR: You are a coding STAR
         artistExemplar:
           title: Artist Exemplar
           description_short: How can we make the artist levels really hum?
           description: These artist levels will knock the socks off of third graders
           description_audience: Вік 8-18
           Artist Exemplar: Artist Exemplar
+        2016_sciencePD_phase2b:
+          title: Computer Science in Science PD Phase 2b 2016-2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Ласкаво просимо!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Підведення підсумків
+        teachercon:
+          title: TeacherCon Supports
+          description_short: We will use this during TeacherCon to deliver supports and materials for sessions
+          description: We will use this during TeacherCon to deliver supports and materials for sessions
+          Introduction to Teachercon: Introduction to Teachercon
+          Lesson 1,4: 'Lesson 1.4: Number Systems (Circle Triangle Square)'
+          Lesson 1,6: 'Lesson 1.6: Sending Numbers'
+          Lesson 1,9: 'Lesson 1.9: Internet Addressing (Battleship)'
+          Lesson 1,10: 'Lesson 1.10: Routers and Redundancy'
+          Lesson 1,11: 'Lesson 1.11: Packets and Making a Reliable Internet'
+          Lesson 2,2: 'Lesson 2.2: Text Compression'
+          Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
+          Lesson 2,10: 'Lesson 2.10: Good and Bad Data Visualizations'
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+          Discovery Learning: Discovery Learning
+          Measuring Student Learning: Measuring Student Learning
+        2016_sciencePD-phase2b:
+          title: Computer Science in Science PD Phase 2b 2016 2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Ласкаво просимо!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Підведення підсумків
+        kinderTest:
+          Kindergarten Stage 1: Kindergarten Stage 1

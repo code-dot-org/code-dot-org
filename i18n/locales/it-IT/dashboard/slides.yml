@@ -983,7 +983,7 @@ it:
         text: Tutto ciò che facciamo ogni giorno richiede un algoritmo, una lista di passaggi da seguire per portare a termine un lavoro. Pensa a ciò che fai per prepararti per andare a scuola o pianificare una bella giornata con gli amici o preparare uno spuntino. Per completare quasiasi di queste cose, devi dividerle in piccoli passaggi e qualche volta, questi passaggi, devono seguire un ordine specifico.
       4:
         image: notes/C3_dice_race_4.png
-        text: Pensa a come si fa un panino. Non importa quali ingredienti metti prima. Ma non puoi spalmare la marmellata prima di aver aperto il barattolo. I computer hanno bisogno di algoritmi e programmi per fargli capire come fare cose cui noi non dovremmo neanche pensaci.
+        text: Pensa a come si fa un sandwich. Non importa quali ingredienti metti prima. Ma non puoi spalmare la marmellata prima di aver aperto il barattolo. I computer hanno bisogno di algoritmi e programmi per fargli capire come fare cose cui noi non abbiamo bisogno di pensare.
       5:
         image: notes/C3_dice_race_5.png
         text: "Un algoritmo è il pensiero che sta dietro a ciò che succede, mentre il programma è l'effettiva istruzione data al computer per farlo funzionare. Un algoritmo deve essere tradotto in un programma prima che un computer possa eseguirlo. Scomporre una mansione in passaggi, tuttavia, è a volte difficile. Ma come per ogni cosa, con la pratica si può migliorare."
@@ -1135,10 +1135,8 @@ it:
           Ora che hai modificato i blocchi funzione, è arrivato il momento di provare a creare un nuovo blocco funzione partendo da zero. È davvero semplice. Guarda nella cassetta degli attrezzi: c'è una categoria chiamata "Funzioni" (Functions). Cliccandoci sopra visualizzi il blocco "Crea un funzione". Se lo clicchi si apre l'editor che hai già usato per modificare un blocco funzione già esistente.
       2:
         image: notes/C4_function_create_2.png
-        text: |
-          Proprio come prima, inizia dando un nome alla tua funzione e subito dopo scrivi una descrizione di cosa la funzione dovrebbe fare, per esempio, se serve per disegnare un quadrato o un triangolo. Infine trascina i blocchi che ti servono dalla cassetta degli attrezzi all'area di lavoro ("workspace"), ossia lo spazio bianco più in basso. Ricordati di posizionare i blocchi all'interno del blocco verde della funzione.
-          
-          https://studio.code.org/s/course4/stage/14/puzzle/2
+        text: |-
+          Proprio come prima, inizia dando un nome alla tua funzione e subito dopo scrivi una descrizione di cosa la funzione dovrebbe fare, per esempio, se serve per disegnare un quadrato o un triangolo. Infine trascina i blocchi che ti servono dalla cassetta degli attrezzi all'area di lavoro ("workspace"), ossia lo spazio bianco più in basso. Ricordati di inserirli all'interno del blocco verde della funzione.
       3:
         image: notes/C4_function_create_3.png
         text: |-
@@ -1165,11 +1163,11 @@ it:
       2:
         image: notes/C4_function_parameters_2.png
         text: |-
-          I parametri ti permettono di passare ad una funzione dei valori che vengono utilizzati come variabili all'interno della funzione stessa. Aggiungi a questa funzione un parametro chiamato "Lunghezza" ("Length") da utilizzare per creare quadrati di diverse dimensioni. Nell'editor della funzione, come abbiamo già visto, puoi modificare il nome e la descrizione della funzione, ma puoi anche aggiungere un parametro. Scrivi il nome del parametro nello spazio a sinistra del pulsante "Aggiungi un parametro" e poi clicca sul pulsante. In questo modo viene creato un blocco rosso con il nome del parametro che hai appena creato. Ora nel blocco "vai avanti ..." (move forward ...) puoi inserire il blocco "Lunghezza" in modo tale da andare avanti di "Lunghezza” pixel.
+          I parametri ti permettono di passare ad una funzione dei valori che vengono utilizzati come variabili all'interno della funzione stessa. Aggiungi a questa funzione un parametro chiamato "Lunghezza" ("<i>Length</i>") da utilizzare per creare quadrati di diverse dimensioni. Nell'editor della funzione, come abbiamo già visto, puoi modificare il nome e la descrizione della funzione, ma puoi anche aggiungere un parametro. Scrivi il nome del parametro nello spazio a sinistra del pulsante "Aggiungi un parametro" e poi clicca sul pulsante. In questo modo viene creato un blocco rosso con il nome del parametro che hai appena creato. Ora nel blocco "vai avanti ..." (<i>move forward</i> ...) puoi inserire il blocco "Lunghezza" in modo tale da andare avanti di "Lunghezza” pixel.
       3:
         image: notes/C4_function_parameters_3.png
         text: |-
-          Quando hai finito, clicca su "Chiudi" per salvare le modifiche. Puoi trovare il nuovo blocco della funzione all'interno della categoria "Funzioni" (Functions) nella cassetta degli attrezzi. Noterai che c'è uno spazio vuoto vicino al parametro "Lunghezza" perché la funzione vuole sapere che valore dovrebbe avere il parametro. Trascina un blocco numerico dalla categoria "Matematica" (Math) e inseriscilo in questo spazio. Sai che è possibile usare la funzione più e più volte con lunghezze differenti per creare quadrati di diverse dimensioni? Prova per credere!
+          Quando hai finito, clicca su "Chiudi" per salvare le modifiche. Puoi trovare il nuovo blocco della funzione all'interno della categoria "Funzioni" (<i>Functions</i>) nella cassetta degli attrezzi. Noterai che c'è uno spazio vuoto vicino al parametro "Lunghezza" perché la funzione vuole sapere che valore dovrebbe avere il parametro. Trascina un blocco numerico dalla categoria "Matematica" (<i>Math</i>) e inseriscilo in questo spazio. Sai che è possibile usare la funzione più e più volte con lunghezze differenti per creare quadrati di diverse dimensioni? Prova per credere!
     C4_intro:
       1:
         image: notes/C4_intro_1.png

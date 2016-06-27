@@ -27,7 +27,7 @@ TABLE_ID = CDO.hoc_map_table_id
 # TODO: This file is not checked in so this won't work unless you also get the key file.
 PRIVATE_KEY_FILENAME = 'code-dot-org-hoc-map-c3fc0a673b37.p12'
 
-all_forms = DB_READONLY[:forms].where(kind: 'HocSignup2015')
+all_forms = DB_READONLY[:forms].where(kind: 'HocSignup2016')
 
 puts "Processing #{all_forms.count} forms"
 

@@ -30,6 +30,8 @@
   unsubmit: Peruuta lähetys
   previous_page: Previous page
   next_page: Seuraava sivu
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Peru
   okay: Selvä
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -93,6 +95,7 @@
     teacher_title: Opettajien rekisteröityminen
     student_pitch: Code.org:iin liittyminen oppilaana
     student_title: Oppilaan liittyminen
+    signup_title: Sign up for Code.org
     school_name: Koulun nimi (vapaaehtoinen)
     school_address: Koulun osoite (vapaaehtoinen)
     address_placeholder: osoite, postinumero, postitoimipaikka
@@ -115,6 +118,9 @@
       yhteyttä.
     teacher_terms: Sitoudun noudattamaan Code.org <a href='http://code.org/tos'>käyttöehtoja</a>.
     additional_information: Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista.
+    user_type_label: Account Type
+    user_type_teacher: Opettaja
+    user_type_student: Oppilas
   signin_form:
     title: Oletko jo rekisteröitynyt? Kirjaudu sisään
     login: Sähköpostiosoite tai käyttäjätunnus
@@ -838,3 +844,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

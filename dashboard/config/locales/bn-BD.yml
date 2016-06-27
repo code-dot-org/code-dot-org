@@ -30,6 +30,8 @@
   unsubmit: "জমা না দেয়া"
   previous_page: "পূর্বের পৃষ্ঠা"
   next_page: "পরের পাতা"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "বাতিল করুন"
   okay: "ঠিক আছে"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -96,6 +98,7 @@
     teacher_title: "শিক্ষক সাইন আপ"
     student_pitch: "ছাত্রছাত্রী সাইন আপ Code.org-এর জন্য"
     student_title: "ছাত্রছাত্রী সাইন আপ"
+    signup_title: Sign up for Code.org
     school_name: "স্কুলের নাম (ঐচ্ছিক)"
     school_address: "স্কুলের ঠিকানা (ঐচ্ছিক)"
     address_placeholder: "ঠিকানা, শহর, রাজ্য, জিপ"
@@ -120,6 +123,9 @@
       মেনে নিতে রাজি।"
     additional_information: "সাইন আপ প্রক্রিয়া চালিয়ে নিতে আমাদের আরো কিছু অতিরিক্ত
       তথ্যের প্রয়োজন।"
+    user_type_label: Account Type
+    user_type_teacher: "শিক্ষক"
+    user_type_student: "ছাত্র"
   signin_form:
     title: "একাউন্ট ইতিমধ্যেই আছে? সাইন ইন করুন"
     login: "ব্যবহারকারীর নাম অথবা ই-মেইল"
@@ -855,3 +861,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas
