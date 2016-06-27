@@ -109,6 +109,7 @@ var karmaConfig = _.extend({}, baseConfig, {
  * @param {object} options
  * @param {string} options.output
  * @param {string[]} options.entries - list of input source files
+ * @param {object[]} options.chunks - list of chunk info objects
  * @param {bool} options.minify
  * @param {bool} options.watch
  * @param {string} options.piskelDevMode
@@ -116,6 +117,7 @@ var karmaConfig = _.extend({}, baseConfig, {
 function create(options) {
   var outputDir = options.output;
   var entries = options.entries;
+  var chunks = options.chunks;
   var minify = options.minify;
   var watch = options.watch;
   var piskelDevMode = options.piskelDevMode;
@@ -133,12 +135,14 @@ function create(options) {
         'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
         BUILD_STYLEGUIDE: JSON.stringify(false),
         PISKEL_DEVELOPMENT_MODE: piskelDevMode
-      }),
-      new webpack.optimize.CommonsChunkPlugin({
-        name:'common',
-        minChunks: 2,
       })
-    ],
+    ].concat(chunks.map(function (chunkInfo) {
+      return new webpack.optimize.CommonsChunkPlugin({
+        name: chunkInfo.name,
+        chunks: chunkInfo.chunks,
+        minChunks: 2
+      });
+    })),
     watch: watch,
     keepalive: watch,
     failOnError: !watch
