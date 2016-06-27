@@ -3,10 +3,6 @@
   = boolean_check_box f, :text_mode_at_start
 
 .field
-  = f.label :palette_category_at_start
-  = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
-
-.field
   = f.label :show_d_pad
   = boolean_check_box f, :show_d_pad
 

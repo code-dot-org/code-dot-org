@@ -13,7 +13,7 @@ class PropertyBag
     @table = PEGASUS_DB[:app_properties]
   end
 
-  def items()
+  def items
     @items ||= @table.where(app_id: @channel_id, storage_id: @storage_id)
   end
 
@@ -55,7 +55,7 @@ class PropertyBag
     JSON.load(row[:value])
   end
 
-  def to_hash()
+  def to_hash
     {}.tap do |results|
       items.each do |row|
         results[row[:name]] = PropertyBag.parse_value(row[:value])
@@ -131,7 +131,7 @@ class DynamoPropertyBag
     end
   end
 
-  def to_hash()
+  def to_hash
     last_evaluated_key = nil
 
     results = {}

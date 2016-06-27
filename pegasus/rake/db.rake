@@ -1,6 +1,6 @@
 Sequel.extension :migration
 
-def migrations_dir()
+def migrations_dir
   pegasus_dir('migrations')
 end
 

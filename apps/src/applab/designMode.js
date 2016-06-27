@@ -32,18 +32,18 @@ var ANIMATION_LENGTH_MS = applabConstants.ANIMATION_LENGTH_MS;
  * @param {!Store} store
  */
 designMode.setupReduxSubscribers = function (store) {
-  var state = {
-    screens: {}
-  };
+  var state;
   store.subscribe(function () {
     var lastState = state;
     state = store.getState();
 
-    if (state.screens.currentScreenId !== lastState.screens.currentScreenId) {
+    if (!lastState ||
+        state.screens.currentScreenId !== lastState.screens.currentScreenId) {
       renderScreens(state.screens.currentScreenId);
     }
 
-    if (state.interfaceMode !== lastState.interfaceMode) {
+    if (!lastState ||
+        state.interfaceMode !== lastState.interfaceMode) {
       onInterfaceModeChange(state.interfaceMode);
     }
   });

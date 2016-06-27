@@ -15,6 +15,10 @@
       "keyDown": null,
       "keyWentUp": null,
       "keyWentDown": null,
+      "mouseDown": null,
+      "mouseWentUp": null,
+      "mouseWentDown": null,
+      "mouseDidMove": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
       "sprite.height": null,
@@ -93,7 +97,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "callout_json": "[]"
+    "callout_json": "[]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

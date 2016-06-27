@@ -10,7 +10,7 @@ DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_read
 PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
 
 def add_count_to_hash(hash, key, count)
-  hash[key] = hash.has_key?(key) ? hash[key] + count : count
+  hash[key] = hash.key?(key) ? hash[key] + count : count
 end
 
 def analyze_day_fast(date)

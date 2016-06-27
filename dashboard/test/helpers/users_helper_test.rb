@@ -57,8 +57,7 @@ class UsersHelperTest < ActionView::TestCase
        }
     }, summarize_user_progress_for_all_scripts(user))
 
-    assert_equal [0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], percent_complete(script, user)
+    assert_equal [0.0, 0.1] + Array.new(18, 0.0), percent_complete(script, user)
     assert_in_delta 0.0183, percent_complete_total(script, user)
 
     # Verify summarize_user_progress_for_all_scripts for multiple completed levels across multiple scripts.
