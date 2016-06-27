@@ -10,4 +10,5 @@ module.exports = {
   NEW_SCREEN: "New screen...",
   ApplabInterfaceMode: utils.makeEnum('CODE', 'DESIGN', 'DATA'),
   ANIMATION_LENGTH_MS: 200,
+  IMPORT_SCREEN: "Import screen...",
 };
