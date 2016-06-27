@@ -81,7 +81,10 @@ var Dialog = React.createClass({
 });
 module.exports = Dialog;
 
-if (BUILD_STYLEGUIDE) {
+// TODO: remove the undefined check once code-studio is merged with apps
+// Code studio's build system is not configured to replace BUILD_STYLEGUIDE
+// in the same way that webpack's build system is configured.
+if (typeof BUILD_STYLEGUIDE !== 'undefined' && BUILD_STYLEGUIDE) {
   var ExampleDialogButton = React.createClass({
     render() {
       return (
