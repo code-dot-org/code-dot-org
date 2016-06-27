@@ -187,7 +187,8 @@ img.video_thumbnail {
     left: 97px;
 
     .learnmore {
-      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+      font-family: 'Gotham 7r', sans-serif;
+      font-weight: normal;
     }
   }
 }
@@ -1155,7 +1156,8 @@ a.download-video {
     font-size: 24.5px;
     padding: 5px 0;
     #puzzle {
-      font-family: $gotham-extra-bold; font-weight: normal;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
     }
     .btn {
       height: 32px;
@@ -1282,19 +1284,25 @@ a.download-video {
   }
 
   .padtopbottom {
-    padding-top: 10px; padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   #signup {
     padding-top: 10px;
     .medium-size-text {
-      font-size: 18px; line-height: 30px;
+      font-size: 18px;
+      line-height: 30px;
     }
     #maintext {
-      text-align: left; padding-left: 20px; color: $charcoal;
+      text-align: left;
+      padding-left: 20px;
+      color: $charcoal;
     }
     #helptext {
-      text-align: right; padding-right: 20px; color: $light_gray;
+      text-align: right;
+      padding-right: 20px;
+      color: $light_gray;
     }
   }
 
@@ -1518,7 +1526,8 @@ a.download-video {
       .giantmark {
         .text {
           opacity: 0.8;
-          font-family: $gotham-bold; font-weight: normal;
+          font-family: $gotham-bold;
+          font-weight: normal;
         }
       }
     }
@@ -1647,7 +1656,8 @@ a.download-video {
     h3 {
       padding: 5px;
       font-size: 18px;
-      font-family: $gotham-extra-bold; font-weight: normal;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
       color: white;
       background: $cyan;
       margin: 0;

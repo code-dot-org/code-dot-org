@@ -49,14 +49,16 @@
   h3 {
     padding: 5px;
     font-size: 18px;
-    font-family: $gotham-extra-bold; font-weight: normal;
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
     color: white;
     background: $cyan;
     margin: 0;
   }
 
   h4 {
-    font-family: $gotham-extra-bold; font-weight: normal;
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
     text-align: center;
     margin: 5px 0;
   }
@@ -148,12 +150,14 @@
 
       &:hover {
         background-color: $lighter_cyan;
-        font-family: $gotham-extra-bold; font-weight: normal;
+        font-family: $gotham-extra-bold;
+        font-weight: normal;
         a { color: white; }
       }
       &.active {
         background-color: $light_cyan;
-        font-family: $gotham-extra-bold; font-weight: normal;
+        font-family: $gotham-extra-bold;
+        font-weight: normal;
         a { color: white; }
       }
     }

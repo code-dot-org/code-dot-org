@@ -40,8 +40,6 @@ linters:
     enabled: false
   SelectorFormat:
     enabled: false
-  SingleLinePerProperty:
-    enabled: false
   SingleLinePerSelector:
     enabled: false
   StringQuotes:
