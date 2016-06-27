@@ -2124,16 +2124,12 @@ en:
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         Maybe: Maybe
       CSD U3 Keypress Matching:
-        Is true only once when the key is pressed, but false if the key continues to be held down.: Is true only once when the key is pressed, but false if the key continues to be held down.
         Is true only once when the key is pressed.: Is true only once when the key is pressed.
-        Is true only once when the key is released, but false the while the key was pressed and held down.: Is true only once when the key is released, but false the while the key was pressed and held down.
         Is true only once when the key is released.: Is true only once when the key is released.
         Is true the whole time the key is pressed or held down.: Is true the whole time the key is pressed or held down.
         ? Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.
         : Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.
         'Matching: Responding to Keypresses': 'Matching: Responding to Keypresses'
-        Returns true the whole time the key is pressed or held down.: Returns true the whole time the key is pressed or held down.
-        "`keyWentDown()`": "`keyWentDown()`"
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
