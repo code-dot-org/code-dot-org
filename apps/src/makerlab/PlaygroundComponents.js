@@ -72,7 +72,7 @@ export function initializeCircuitPlaygroundComponents(io, board, five, Playgroun
   });
 
   [soundSensor, lightSensor, tempSensor].forEach((s) => {
-    addSensorFeatures(five.Board.fmap, s)
+    addSensorFeatures(five.Board.fmap, s);
   });
 
   return _.merge(touchSensors, {
