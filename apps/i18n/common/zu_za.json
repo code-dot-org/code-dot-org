@@ -241,5 +241,6 @@
   "watchVideo": "Bukela umbukiswano",
   "when": "nini",
   "whenRun": "when run",
-  "workspaceHeaderShort": "indawo yokusebenzela: "
+  "workspaceHeaderShort": "indawo yokusebenzela: ",
+  "dataMode": "Data"
 }

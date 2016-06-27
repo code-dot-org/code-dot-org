@@ -149,7 +149,7 @@
   "generatedCodeInfo": "Incluso las mejores universidades enseñan programación basada en bloques (por ejemplo, {berkeleyLink}, {harvardLink}). Pero, por debajo, los bloques que has programado también se pueden mostrar en JavaScript, el lenguaje de programación más utilizado en el mundo:",
   "hashError": "Lo sentimos, '%1' no se corresponde con ningún programa guardado.",
   "help": "Ayuda",
-  "hide": "Hide",
+  "hide": "Ocultar",
   "hideToolbox": "(Ocultar)",
   "hintHeader": "Aquí hay un consejo:",
   "hintPrompt": "¿Necesitas ayuda?",
@@ -235,11 +235,12 @@
   "tryBlocksBelowFeedback": "Prueba usando uno de los siguientes bloques:",
   "tryHOC": "Prueba la Hora del Código",
   "unnamedFunction": "Tienes una variable o función sin nombre. No olvides dar un nombre descriptivo a todo.",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
+  "unattachedBlockTipTitle": "Bloques independientes",
+  "unattachedBlockTipBody": "Los bloques no unidos no harán nada. Si deseas que estos bloques este en tu programa, trata de conectarlos con otros.",
   "wantToLearn": "¿Quieres aprender a programar?",
   "watchVideo": "Mira el Video",
   "when": "cuando",
   "whenRun": "cuando se ejecuta",
-  "workspaceHeaderShort": "Espacio de trabajo: "
+  "workspaceHeaderShort": "Espacio de trabajo: ",
+  "dataMode": "Data"
 }

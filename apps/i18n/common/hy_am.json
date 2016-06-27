@@ -241,5 +241,6 @@
   "watchVideo": "Դիտեք տեսանյութը",
   "when": "երբ",
   "whenRun": "երբ վազում",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "dataMode": "Data"
 }

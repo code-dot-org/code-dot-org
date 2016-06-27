@@ -149,7 +149,7 @@
   "generatedCodeInfo": "دانشگاههای برتر نیز کدنویسی بر اساس بلوک ها را آموزش می دهند (مثل {berkeleyLink} و {harvardLink}). اما در پشت پرده، بلوک هایی که شما سر هم کرده اید را می توان به زبان جاوا اسکریپت نشان داد، که پر استفاده ترین زبان کدنویسی در دنیاست:",
   "hashError": "با عرض پوزش، '%1' با هیچ کدام از برنامه‌های ذخیره شده مطابقت ندارد.",
   "help": "راهنما",
-  "hide": "Hide",
+  "hide": "مخفی کن",
   "hideToolbox": "(پنهان کردن)",
   "hintHeader": "این هم یک راهنمایی:",
   "hintPrompt": "کمک نیاز دارید؟",
@@ -235,11 +235,12 @@
   "tryBlocksBelowFeedback": "استفاده از یکی از بلوکهای زیر را امتحان کن:",
   "tryHOC": "ساعتِ کد نویسی را امتحان کنید",
   "unnamedFunction": "شما یک متغیر یا تابع بدون نام دارید. فراموش نکنید که به هر چیز یک نام توصیفی بدهید.",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
+  "unattachedBlockTipTitle": "بلوک وصل نشده",
+  "unattachedBlockTipBody": "بلوکی که متصل نشده عملی انجام نخواهد داد. اگر تمایل به انجام کاری توسط این بلوکها در برنامه تان دارید، آنها را به بقیه بلوکها متصل نمایید.",
   "wantToLearn": "آیا می‌خواهید کد نویسی را یاد بگیرید؟",
   "watchVideo": "ویدیو را ببینید",
   "when": "وقتی",
   "whenRun": "زمان اجرا",
-  "workspaceHeaderShort": "محیط کار: "
+  "workspaceHeaderShort": "محیط کار: ",
+  "dataMode": "Data"
 }

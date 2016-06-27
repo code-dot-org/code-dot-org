@@ -29,9 +29,11 @@ zh:
   unsubmit: 未提交
   previous_page: 返回
   next_page: 前进
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: 取消
   okay: 好吧
-  heading_x_of_y: '%{heading} (page %{x} of %{y})'
+  heading_x_of_y: '%{heading} (%{y} 第%{x} 页)'
   add_teacher_form:
     code:
       label: '添加一个老师:'
@@ -85,6 +87,7 @@ zh:
     teacher_title: 老师注册
     student_pitch: Code.org 学生注册
     student_title: 学生注册
+    signup_title: Sign up for Code.org
     school_name: 学校名称 （可选）
     school_address: 学校地址 （可选）
     address_placeholder: 地址、 省市、 邮编
@@ -103,6 +106,9 @@ zh:
     student_terms: "我同意 Code.org 的<a href='http://code.org/tos'> 服务条款</a> 的约束.如果我未满13岁，我确认提交这份表格，有我的父母或法定监护人的许可使用 Code.org 服务。 <br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中."
     teacher_terms: "我同意 Code.org <a href='http://code.org/tos'>服务条款</a> 的约束。"
     additional_information: 我们需要一些额外的信息来继续为你注册.
+    user_type_label: Account Type
+    user_type_teacher: 老师
+    user_type_student: 学生
   signin_form:
     title: 已经有账号了？登录
     login: 电子邮件或用户名
@@ -331,8 +337,9 @@ zh:
     print_certificate: 打印证书
     announcement_title: 公告
     announcement_view_all: 查看全部
-    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-    announcement_button: 了解详情
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
     announcement_petition: 作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、 28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。
     announcement_petition_button: 添加您的姓名
   move_students:
@@ -363,7 +370,7 @@ zh:
     help_from_html_old: 来自谷歌、 微软、 Facebook 和 Twitter 的工程师们帮助创建了本教程。
     art_from_html: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利.<br />星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利.<br />冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利.<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利.<br />愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利.<br />植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利.<br />阿甘妙世界是商标 &copy; 2015 卡通网络.'
     art_from_html_old: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利. 星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利. 冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; 2015 卡通网络.'
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    code_from_html: 'Code.org使用p5.play游戏资源库，根据<a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>之许可。'
     powered_by_aws: 由亚马逊网络服务
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE标识和Hour of Code标识&reg; 是Code.org的注册商标。'
     copyright: 版权
@@ -396,7 +403,7 @@ zh:
     download: 下载视频
   compatibility:
     upgrade:
-      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}', target='_blank'>我们支持的浏览器之一</a>。您可以尝试访问此网页，但无法获得期望的效果。"
       ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
       ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
       link: 了解详情
@@ -687,7 +694,7 @@ zh:
     content: 内容
     practice: 老师的做法
   external_links:
-    disclaimer_md: "<strong>免责声明 ︰ 你现在离开了 Code.org 领域，到一个不由 Code.org.</strong>运转的网站。此网站可能包含和 Code.org 不同的隐私政策。 <br/> <br/>。我们选择了这些第三方资源是因为我们认为他们会对你有帮助。如果有反感的内容，或者如果所链接的网站已不再可用，请 <a href='mailto:support@code.org'> 与支持部门联系</a> ，虽然我们并不直接负责本网站的内容。"
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -702,3 +709,12 @@ zh:
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

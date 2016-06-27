@@ -241,5 +241,6 @@
   "watchVideo": "Féach ar an bhfíseán",
   "when": "nuair",
   "whenRun": "nuair a ritear é",
-  "workspaceHeaderShort": "Spás oibre: "
+  "workspaceHeaderShort": "Spás oibre: ",
+  "dataMode": "Data"
 }

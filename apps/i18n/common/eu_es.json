@@ -241,5 +241,6 @@
   "watchVideo": "Ikusi Bideoa",
   "when": "-enean",
   "whenRun": "martxan dagoenean",
-  "workspaceHeaderShort": "Lan eremua: "
+  "workspaceHeaderShort": "Lan eremua: ",
+  "dataMode": "Data"
 }

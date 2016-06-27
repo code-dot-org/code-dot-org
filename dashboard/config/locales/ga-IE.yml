@@ -29,6 +29,8 @@
   unsubmit: Dísheol
   previous_page: An leathanach roimhe seo
   next_page: An chéad leathanach eile
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Cealaigh
   okay: Ceart go leor
   heading_x_of_y: "%{heading} (leathanach %{x} as %{y})"
@@ -96,6 +98,7 @@
     teacher_title: Clárú mar mhúinteoir
     student_pitch: Cláraigh le Code.org mar dhalta
     student_title: Clárú mar dhalta
+    signup_title: Sign up for Code.org
     school_name: Ainm do Scoile (roghnach)
     school_address: Seoladh do Scoile (roghnach)
     address_placeholder: seoladh, cathair, stát, cód poist
@@ -120,6 +123,9 @@
       Code.org.
     additional_information: Teastaíonn tuilleadh eolais uainn sular féidir linn tú
       a chlárú.
+    user_type_label: Account Type
+    user_type_teacher: Múinteoir
+    user_type_student: Dalta
   signin_form:
     title: An bhfuil cuntas agat cheana? Logáil isteach
     login: Seoladh ríomhphoist nó ainm úsáideora
@@ -877,3 +883,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

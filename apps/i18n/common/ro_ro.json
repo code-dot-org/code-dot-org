@@ -149,7 +149,7 @@
   "generatedCodeInfo": "Chiar și în universităţi de top se predă programarea bazată pe blocuri de coduri (de exemplu, {berkeleyLink}, {harvardLink}). Dar în esență, blocurile de cod pe care le-ai compus pot fi de asemenea afișate în JavaScript, limbajul de programare cel mai utilizat din lume:",
   "hashError": "Ne pare rău, '%1' nu corespunde cu nici un program salvat.",
   "help": "Ajutor",
-  "hide": "Hide",
+  "hide": "Ascunde",
   "hideToolbox": "(Ascunde)",
   "hintHeader": "Iată un indiciu:",
   "hintPrompt": "Ai nevoie de ajutor?",
@@ -235,11 +235,12 @@
   "tryBlocksBelowFeedback": "Încearcă să utilizezi unul din blocurile de mai jos:",
   "tryHOC": "Încearcă Ora de Cod",
   "unnamedFunction": "Ai o variabilă sau o funcţie care nu are nume. Nu uita să dai tuturor elementelor câte un nume descriptiv.",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
+  "unattachedBlockTipTitle": "Blocuri neatașate",
+  "unattachedBlockTipBody": "Blocurile care nu sunt atașate nu vor afecta cu nimic. Dacă ai nevoie de aceste blocuri în program, încearcă să le legi de alte blocuri.",
   "wantToLearn": "Vrei să înveți să codezi?",
   "watchVideo": "Urmărește clipul video",
   "when": "când",
   "whenRun": "când rulezi",
-  "workspaceHeaderShort": "Spaţiu de lucru: "
+  "workspaceHeaderShort": "Spaţiu de lucru: ",
+  "dataMode": "Data"
 }

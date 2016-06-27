@@ -29,6 +29,8 @@
   unsubmit: "ไม่ส่ง"
   previous_page: "หน้าที่แล้ว"
   next_page: "หน้าถัดไป"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "ยกเลิก"
   okay: "ตกลง"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -89,6 +91,7 @@
     teacher_title: "สมัครเป็นครู"
     student_pitch: "สมัครเป็นนักเรียนสำหรับ code.org"
     student_title: "สมัครเป็นนักเรียน"
+    signup_title: Sign up for Code.org
     school_name: "ชื่อโรงเรียน (ถ้ามี)"
     school_address: "ที่อยู่โรงเรียน (ถ้ามี)"
     address_placeholder: "ที่อยู่, อำเภอ, จังหวัด, รหัสไปรษณีย์"
@@ -110,6 +113,9 @@
     teacher_terms: "ฉันยอมรับ<a href='http://code.org/tos'>เงื่อนไขการใช้บริการ</a>ของ
       Code.org"
     additional_information: "เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ"
+    user_type_label: Account Type
+    user_type_teacher: "ครู"
+    user_type_student: "นักเรียน"
   signin_form:
     title: "มีบัญชีผู้ใช้แล้ว? เข้าสู่ระบบ"
     login: "อีเมล หรือ ชื่อผู้ใช้งาน"
@@ -841,3 +847,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

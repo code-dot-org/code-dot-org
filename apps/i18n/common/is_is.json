@@ -241,5 +241,6 @@
   "watchVideo": "Horfa á videóið",
   "when": "þegar",
   "whenRun": "þegar keyrt",
-  "workspaceHeaderShort": "Vinnusvæði: "
+  "workspaceHeaderShort": "Vinnusvæði: ",
+  "dataMode": "Data"
 }

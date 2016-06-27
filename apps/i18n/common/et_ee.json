@@ -241,5 +241,6 @@
   "watchVideo": "Vaata videot",
   "when": "kui",
   "whenRun": "pärast käivitamist",
-  "workspaceHeaderShort": "Tööruum: "
+  "workspaceHeaderShort": "Tööruum: ",
+  "dataMode": "Data"
 }

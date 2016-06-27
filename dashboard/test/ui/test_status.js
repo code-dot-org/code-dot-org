@@ -8,18 +8,14 @@
 // Lodash gets provided on test_status.html
 /* global _ */
 
-// Grab DOM references
-var lastRefreshTimeLabel = document.querySelector('#last-refresh-time');
-var refreshButton = document.querySelector('#refresh-button');
-var autoRefreshButton = document.querySelector('#auto-refresh-button');
-
 // Gather metadata for the run
-var gitBranch = document.querySelector('#git-branch').dataset.branch;
-var commitHash = document.querySelector('#commit-hash').dataset.hash;
-var startTime = new Date(document.querySelector('#start-time').textContent);
+const GIT_BRANCH = document.querySelector('#git-branch').dataset.branch;
+const COMMIT_HASH = document.querySelector('#commit-hash').dataset.hash;
+const RUN_START_TIME = new Date(document.querySelector('#start-time').textContent);
+const TEST_TYPE = document.querySelector('#test-type').value;
+const API_ORIGIN = document.querySelector('#api-origin').value;
 
-var lastRefreshTime = startTime;
-
+// Simple constants
 const GRAY = '#dddddd';
 const RED = '#ff8888';
 const GREEN = '#78ea78';
@@ -27,6 +23,17 @@ const GREEN = '#78ea78';
 const STATUS_PENDING = 'PENDING';
 const STATUS_FAILED = 'FAILED';
 const STATUS_SUCCEEDED = 'SUCCEEDED';
+
+// Derived constants
+const S3_KEY_SUFFIX = `${/eyes/i.test(TEST_TYPE) ? '_eyes' : ''}_output.html`;
+const API_BASEPATH = `${API_ORIGIN}/api/v1/test_logs`;
+
+// Grab DOM references
+let lastRefreshTimeLabel = document.querySelector('#last-refresh-time');
+let refreshButton = document.querySelector('#refresh-button');
+let autoRefreshButton = document.querySelector('#auto-refresh-button');
+
+var lastRefreshTime = RUN_START_TIME;
 
 function Test(fromRow) {
   /** @type {HTMLRowElement} */
@@ -52,8 +59,8 @@ function Test(fromRow) {
   /** @type {number} in seconds */
   this.duration = 0;
 
-  /** @private {string} */
-  this.status_ = STATUS_PENDING;
+  /** @type {string} */
+  this.status = STATUS_PENDING;
 
   /** @private {Date} */
   this.lastModified_ = null;
@@ -72,7 +79,7 @@ Test.prototype.setLastModified = function (lastModified) {
   }
 
   this.lastModified_ = lastModified;
-  if (lastModified > startTime && this.status_ !== STATUS_SUCCEEDED) {
+  if (lastModified > RUN_START_TIME && this.status !== STATUS_SUCCEEDED) {
     this.fetchStatus();
   } else {
     this.updateView();
@@ -87,23 +94,23 @@ Test.prototype.fetchStatus = function () {
     this.updateView();
   };
 
-  fetch("/api/v1/test_logs/" + this.s3Key(), {mode: 'no-cors'})
+  fetch(`${API_BASEPATH}/${this.s3Key()}`, {mode: 'no-cors'})
     .then(response => response.json())
     .then(json => {
-      if (json.commit === commitHash) {
+      if (json.commit === COMMIT_HASH) {
         this.versionId = json.version_id;
         this.attempt = parseInt(json.attempt, 10);
         this.success = json.success === 'true';
         this.duration = parseInt(json.duration, 10);
-        this.status_ = this.success ? STATUS_SUCCEEDED : STATUS_FAILED;
+        this.status = this.success ? STATUS_SUCCEEDED : STATUS_FAILED;
       }
     })
     .then(ensure, ensure);
 };
 
 Test.prototype.updateView = function () {
-  const succeeded = this.status_ === STATUS_SUCCEEDED;
-  const failed = this.status_ === STATUS_FAILED;
+  const succeeded = this.status === STATUS_SUCCEEDED;
+  const failed = this.status === STATUS_FAILED;
 
   // Get references to row elements
   let row = this.row;
@@ -135,7 +142,7 @@ Test.prototype.s3Key = function () {
   const featureRegex = /features\/(.*)\.feature/i;
   let result = featureRegex.exec(this.feature);
   let featureName = result[1].replace('/', '_');
-  return `${gitBranch}/${this.browser}_${featureName}_output.html`;
+  return `${GIT_BRANCH}/${this.browser}_${featureName}${S3_KEY_SUFFIX}`;
 };
 
 Test.prototype.publicLogUrl = function () {
@@ -152,10 +159,10 @@ rows.forEach(row => {
 });
 
 function testFromS3Key(key) {
-  var re = /[^/]+\/([^_]+)_(.*)_output\.html/i;
-  var result = re.exec(key);
-  var browser = result[1]; // TODO: Handle slashes
-  var feature = "features/" + result[2] + ".feature";
+  let escapedSuffix = S3_KEY_SUFFIX.replace(/\./g, '\\.');
+  var result = new RegExp(`[^/]+\/([^_]+)_(.*)${escapedSuffix}`, 'i').exec(key);
+  var browser = result[1];
+  var feature = `features/${result[2]}.feature`;
   // If we don't have the browser, we definitely don't have the test.
   if (!tests[browser]) {
     return undefined;
@@ -171,7 +178,7 @@ function testFromS3Key(key) {
   // unlikely.
   var test = tests[browser][feature];
   while (!test && feature.indexOf('_') >= 0) {
-    feature = feature.replace('_', '/'); // Replaces first underscore only.
+    feature = feature.replace(/_/, '/'); // Replaces first underscore only.
     test = tests[browser][feature];
   }
   return test;
@@ -180,7 +187,7 @@ function testFromS3Key(key) {
 function calculateBrowserProgress(browser) {
   let successCount = 0, failureCount = 0, pendingCount = 0;
   for (let feature in tests[browser]) {
-    let status = tests[browser][feature].status_;
+    let status = tests[browser][feature].status;
     if (status === STATUS_PENDING) {
       pendingCount++;
     } else if (status === STATUS_FAILED) {
@@ -210,14 +217,26 @@ function renderBrowserProgress(browser, progress) {
 
   // We manipulate the percentages to make them round numbers, adding up to 100,
   // and each category gets at least 1% if its count is greater than zero.
-  let successPercent = Math.max(Math.floor(successCount * 100 / totalCount), successCount > 0 ? 1 : 0);
-  let failurePercent = Math.max(Math.floor(failureCount * 100 / totalCount), failureCount > 0 ? 1 : 0);
-  let pendingPercent = Math.max(Math.floor(pendingCount * 100 / totalCount), pendingCount > 0 ? 1 : 0);
+  let successPercent = Math.max(Math.floor(successCount * 1000 / totalCount)/10, successCount > 0 ? 0.1 : 0);
+  let failurePercent = Math.max(Math.floor(failureCount * 1000 / totalCount)/10, failureCount > 0 ? 0.1 : 0);
+  let pendingPercent = Math.max(Math.floor(pendingCount * 1000 / totalCount)/10, pendingCount > 0 ? 0.1 : 0);
   let leftover = 100 - (successPercent + failurePercent + pendingPercent);
-  if (pendingCount > 0) {
-    pendingPercent += leftover;
-  } else {
-    successCount += leftover;
+  if (leftover > 0) {
+    if (pendingCount > 0) {
+      pendingPercent += leftover;
+    } else if (failureCount > 0) {
+      failurePercent += leftover;
+    } else {
+      successPercent += leftover;
+    }
+  } else if (leftover < 0) {
+    if (successCount + leftover > 0) {
+      successPercent += leftover;
+    } else if (failureCount + leftover > 0) {
+      failurePercent += leftover;
+    } else {
+      pendingPercent += leftover;
+    }
   }
 
   // Set progress text
@@ -236,7 +255,7 @@ function renderBrowserProgress(browser, progress) {
   pendingBar.style.width = `${pendingPercent}%`;
 }
 
-var updateProgress = _.debounce(function updateProgress__() {
+function updateProgressNow() {
   // Count up tests by status
   let successCount = 0, failureCount = 0, pendingCount = 0;
   for (let browser in tests) {
@@ -255,7 +274,8 @@ var updateProgress = _.debounce(function updateProgress__() {
   if (pendingCount + failureCount === 0) {
     disableAutoRefresh();
   }
-}, 300);
+}
+var updateProgress = _.debounce(updateProgressNow, 300, { maxWait: 3000 });
 
 function refresh() {
   // Fetches all logs for this branch and maps them to the tests in this run.
@@ -267,7 +287,7 @@ function refresh() {
   };
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime()/1000);
   let newTime = new Date();
-  fetch(`/api/v1/test_logs/${gitBranch}/since/${lastRefreshEpochSeconds}`, { mode: 'no-cors' })
+  fetch(`${API_BASEPATH}/${GIT_BRANCH}/since/${lastRefreshEpochSeconds}`, { mode: 'no-cors' })
     .then(response => response.json())
     .then(json => {
       json.forEach(object => {
@@ -305,5 +325,6 @@ function toggleAutoRefresh() {
 }
 refreshButton.onclick = refresh;
 autoRefreshButton.onclick = toggleAutoRefresh;
+updateProgressNow();
 enableAutoRefresh();
 refresh();

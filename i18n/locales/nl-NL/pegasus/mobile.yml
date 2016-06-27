@@ -4,7 +4,7 @@ nl-NL:
   "yes": Ja
   "no": Nee
   select_language: Kies de gewenste taal
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org beëindigt de ondersteuning voor Internet Explorer 8, 9 en 10. Probeer te upgraden naar een moderne browser.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
   upgrade_ie_link: Leer meer
   en: informatica
@@ -530,13 +530,13 @@ nl-NL:
   dashboard_navigation_section_pd: Professionele ontwikkeling
   dashboard_navigation_section_speakers: 'Informatica <br/> gastsprekers'
   dashboard_navigation_all_sections: Leerlingaccounts en vooruitgang
-  dashboard_navigation_view_progress: bekijk de vooruitgang
-  dashboard_navigation_view_text_responses: Bekijk de tekstuele reacties
+  dashboard_navigation_view_progress: Voortgang
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Leerlingen Toevoegen
   dashboard_navigation_manage_students: Beheer Leerlingen
   dashboard_navigation_lesson_plans_resources: Lesplan en middelen
-  dashboard_navigation_view_stats: Statistieken Bekijken
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'groep: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_progress_not_started: niet gestart
@@ -683,8 +683,9 @@ nl-NL:
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
   dashboard_announce_view_all: Alles weergeven
-  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-  dashboard_announce_button_text: Leer meer
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "Als leerkracht neemt u het voortouw in een beweging die elke leerling op elke school de mogelijkheid geeft om informatica te leren. Nu is het de tijd om uw vertegenwoordigers van u te laten horen. Deze week schrijven onderwijsleiders, 28 gouverneurs en CEO's van Amerika's grootste bedrijven samen een open brief aan het Amerikaanse Congres met de vraag om informatica op de basisschool te financieren."
   dashboard_announce_petition_button: Voeg je naam toe
   code_hoc_coming: 'Het Uur Code is hier - van 8 -14 december!'
@@ -805,6 +806,7 @@ nl-NL:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

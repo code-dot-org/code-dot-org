@@ -705,7 +705,7 @@
   dashboard_navigation_section_pd: Dezvoltare profesională
   dashboard_navigation_section_speakers: Informatică <br/> Invitaţi
   dashboard_navigation_all_sections: Conturile elevilor şi progresul lor
-  dashboard_navigation_view_progress: Vedeți progresele
+  dashboard_navigation_view_progress: Progres
   dashboard_navigation_view_text_responses: Vizualizare text raspunsuri
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Adaugă elevi
@@ -1041,6 +1041,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
