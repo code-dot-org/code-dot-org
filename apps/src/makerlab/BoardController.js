@@ -15,71 +15,10 @@ try {
    */
 }
 
-import _ from 'lodash';
-import DataCollection from 'data-collection';
-import {N_COLOR_LEDS, TOUCH_PINS} from './constants';
-import {EventEmitter} from 'events';
+import {initializeCircuitPlaygroundComponents, TouchSensor} from './PlaygroundComponents';
 
 /** @const {string} */
 var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
-
-class TouchSensor extends EventEmitter {
-  constructor(index, capTouch) {
-    super();
-    this.index = index;
-    this.capTouch = capTouch;
-    this.value = undefined;
-  }
-
-  start() {
-    this.removeAllListeners();
-    this.capTouch.onTouch(this.index, (isTouched, value) => {
-      this.value = value;
-      if (isTouched) {
-        this.emit('touch', ...arguments);
-      }
-    });
-    this.value = undefined;
-  }
-}
-
-const addSensorFeatures = (s) => {
-  s.lookbackLogger = new LookbackLogger();
-  s.on('data', () => {
-    // Add the raw (un-scaled) value to the logger.
-    s.lookbackLogger.addData(s.raw);
-  });
-  s.getAveragedValue = (n) => {
-    const [low, high] = s.makerlabScale || [0, 1023];
-    return five.Board.fmap(s.lookbackLogger.getLast(n), 0, 1023, low, high);
-  };
-  s.setScale = (low, high) => {
-    s.scale(low, high);
-    // store scale in public state for scaling recorded data
-    s.makerlabScale = [low, high];
-  };
-};
-
-class LookbackLogger {
-  constructor() {
-    this.dataCollection = new DataCollection();
-  }
-
-  addData(value) {
-    this.dataCollection.insert({
-      value: value,
-      date: new Date()
-    });
-  }
-
-  getLast(ms) {
-    var now = new Date();
-    return this.dataCollection.query().filter({
-      date__lte: now,
-      date__gte: new Date(now.getTime() - ms)
-    }).avg('value');
-  }
-}
 
 var BoardController = module.exports = function () {
   ChromeSerialPort.extensionId = CHROME_APP_ID;
@@ -128,7 +67,7 @@ BoardController.prototype.ensureBoardConnected = function () {
 
 BoardController.prototype.installComponentsOnInterpreter = function (codegen, jsInterpreter) {
   this.prewiredComponents = this.prewiredComponents ||
-      initializeCircuitPlaygroundComponents(this.board_.io, this.board_);
+      initializeCircuitPlaygroundComponents(this.board_.io, this.board_, five, PlaygroundIO);
 
   /**
    * Set of classes used by interpreter to understand the type of instantiated
@@ -282,105 +221,6 @@ function getDevicePort() {
 function deviceOnPortAppearsUsable(port) {
   var comNameRegex = /usb|acm|^com/i;
   return comNameRegex.test(port.comName);
-}
-
-/**
- * Initializes a set of Johnny-Five components for the currently connected
- * Circuit Playground board.
- * @returns {Object.<String, Object>} board components
- */
-function initializeCircuitPlaygroundComponents(io, board) {
-  const colorLeds = Array.from({length: N_COLOR_LEDS}, (_, index) => new five.Led.RGB({
-    controller: PlaygroundIO.Pixel,
-    pin: index
-  }));
-
-  /**
-   * Must initialize sound sensor BEFORE left button, otherwise left button
-   * will not respond to input.
-   */
-  const soundSensor = new five.Sensor({
-    pin: "A4",
-    freq: 100
-  });
-  const buttonL = new five.Button('4');
-  const buttonR = new five.Button('19');
-  [buttonL, buttonR].forEach((button) => {
-    Object.defineProperty(button, 'isPressed', {
-      get: () => this.value === 1
-    });
-  });
-
-  const accelerometer = new five.Accelerometer({
-    controller: PlaygroundIO.Accelerometer
-  });
-  accelerometer.getOrientation = function (orientationType) {
-    return accelerometer[orientationType];
-  };
-  accelerometer.getAcceleration = function (accelerationDirection) {
-    if (accelerationDirection === 'total') {
-      return accelerometer.acceleration;
-    }
-    return accelerometer[accelerationDirection];
-  };
-
-  const capTouch = new PlaygroundIO.CapTouch(io);
-  const touchSensors = {};
-  _.each(TOUCH_PINS, (index) => {
-    touchSensors[`touchSensor${index}`] = new TouchSensor(index, capTouch);
-  });
-
-  const lightSensor = new five.Sensor({
-    pin: "A5",
-    freq: 100
-  });
-  const tempSensor = new five.Thermometer({
-    controller: "TINKERKIT",
-    pin: "A0",
-    freq: 100
-  });
-
-  [soundSensor, lightSensor, tempSensor].forEach(addSensorFeatures);
-
-  return _.merge(touchSensors, {
-    colorLeds: colorLeds,
-
-    led: new five.Led(13),
-
-    toggleSwitch: new five.Switch('21'),
-
-    buzzer: new five.Piezo({
-      pin: '5',
-      controller: PlaygroundIO.Piezo
-    }),
-
-    tempSensor: tempSensor,
-
-    lightSensor: lightSensor,
-
-    accelerometer: accelerometer,
-
-    tap: new PlaygroundIO.Tap(io),
-
-    touch: capTouch,
-
-    soundSensor: soundSensor,
-
-    buttonL: buttonL,
-
-    buttonR: buttonR,
-
-    board: board,
-
-    /**
-     * Constants helpful for prototyping direct board usage
-     */
-    INPUT: 0,
-    OUTPUT: 1,
-    ANALOG: 2,
-    PWM: 3,
-    SERVO: 4
-  });
 }
 
 BoardController.__testonly__ = {
