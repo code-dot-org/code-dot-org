@@ -47,10 +47,6 @@ class CollectionsApi {
 }
 
 class AssetsApi extends CollectionsApi {
-  constructor() {
-    super('assets');
-  }
-
   copyAssets(sourceProjectId, assetFilenames, success, error) {
     var path = apiPath('copy-assets', window.dashboard.project.getCurrentId());
     path += '?' + queryString.stringify({
@@ -63,6 +59,6 @@ class AssetsApi extends CollectionsApi {
 
 module.exports = {
   animations: new CollectionsApi('animations'),
-  assets: new AssetsApi(),
+  assets: new AssetsApi('assets'),
   sources: new CollectionsApi('sources')
 };
