@@ -14,6 +14,10 @@ var ToggleGroup = React.createClass({
       }
 
       React.Children.forEach(prop, function (child) {
+        if (!child) {
+          // falsy children are ok and will be omitted by react rendering
+          return;
+        }
         if (child.type !== 'button') {
           error = new Error(componentName + ' should only have buttons as ' +
               'child elements.');
