@@ -283,7 +283,7 @@ module.exports = function (grunt) {
             return path.join(dest, outputPath);
           },
           expand: true,
-          src: ['i18n/**/*.json', 'build/i18n/**/*.json'],
+          src: ['i18n/**/*.json'],
           dest: 'build/package/js/'
         }
       ]
