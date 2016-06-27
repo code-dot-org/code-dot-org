@@ -36,7 +36,7 @@ module LtiHelper
     end
 
     consumer_key = params[:oauth_consumer_key]
-    consumer_secret = OauthCredentials.get_secret(consumer_key)
+    consumer_secret = CDO.lti_credentials[consumer_key]
     if consumer_secret.blank?
       redirect_to new_user_registration_path,
         alert: "Sorry, invalid consumer_key [#{consumer_key}]"
