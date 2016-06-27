@@ -326,12 +326,12 @@ module HttpCacheTest
         mock_response url, text_cookie_2, {'Cookie' => "#{cookie}=456;"}
 
         # Cache passes request cookie to origin
-        response = proxy_request url, {}, {cookie.to_s => '123'}
+        response = proxy_request url, {}, {cookie => '123'}
         assert_equal text_cookie, last_line(response)
         assert_miss response
 
         # Cache miss on changed cookies
-        response = proxy_request url, {}, {cookie.to_s => '456'}
+        response = proxy_request url, {}, {cookie => '456'}
         assert_equal text_cookie_2, last_line(response)
         assert_miss response
       end
@@ -350,7 +350,7 @@ module HttpCacheTest
         assert_miss response
 
         # Cache strips non-whitelisted request cookie and hits original cached response
-        response = proxy_request url, {}, {cookie.to_s => '123'}
+        response = proxy_request url, {}, {cookie => '123'}
         assert_equal text, last_line(response)
         assert_hit response
       end
@@ -393,11 +393,11 @@ module HttpCacheTest
         # PUT/POST
         %w(POST PUT).each do |method|
           # PUT/POST response should NOT have cookie stripped
-          response = proxy_request url, {}, {cookie.to_s => '123'}, method
+          response = proxy_request url, {}, {cookie => '123'}, method
           assert_equal text_cookie, last_line(response)
           assert_miss response
           # PUT/POST response should NOT be cached
-          response = proxy_request url, {}, {cookie.to_s => '123'}, method
+          response = proxy_request url, {}, {cookie => '123'}, method
           assert_miss response
         end
       end
@@ -423,7 +423,7 @@ module HttpCacheTest
         mock_response url, text_cookie, {'Cookie' => "#{cookie}=cookie_value;"}, {'Set-Cookie' => "#{cookie}=cookie_value2; path=/"}
 
         # Does not strip request cookie or response cookie
-        response = proxy_request url, {}, {cookie.to_s => 'cookie_value'}
+        response = proxy_request url, {}, {cookie => 'cookie_value'}
         assert_equal text_cookie, last_line(response)
         refute_nil get_header(response, 'Set-Cookie')
       end
@@ -437,12 +437,12 @@ module HttpCacheTest
         mock_response url, text, {}
         mock_response url, text_cookie, {'Cookie' => "#{cookie}=123;"}
 
-        response = proxy_request url, {}, {cookie.to_s => '123'}
+        response = proxy_request url, {}, {cookie => '123'}
         assert_equal text_cookie, last_line(response)
         assert_miss response
 
         # Changed cookie string matching all whitelisted headers will return cached result
-        response = proxy_request url, {}, {cookie.to_s => '123', cookie2.to_s => '456'}
+        response = proxy_request url, {}, {cookie => '123', cookie2 => '456'}
         assert_equal text_cookie, last_line(response)
         assert_hit response
       end
