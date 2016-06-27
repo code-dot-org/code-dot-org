@@ -270,15 +270,6 @@ module.exports = function (grunt) {
     }
   };
 
-  config.pseudoloc = {
-    all: {
-      srcBase: 'i18n',
-      srcLocale: 'en_us',
-      destBase: 'build/i18n',
-      pseudoLocale: 'en_ploc'
-    }
-  };
-
   // Takes a key-value .json file and runs it through MessageFormat to create a localized .js file.
   config.messages = {
     all: {
@@ -468,7 +459,7 @@ module.exports = function (grunt) {
     },
     messages: {
       files: ['i18n/**/*.json'],
-      tasks: ['pseudoloc', 'messages', 'notify:messages'],
+      tasks: ['messages', 'notify:messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -526,7 +517,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
-    'pseudoloc',
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:src',
