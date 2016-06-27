@@ -43,7 +43,7 @@ class Script < ActiveRecord::Base
 
   def generate_plc_objects
     if professional_learning_course
-      course = Plc::Course.find_or_create_by! name: 'CSP Support'
+      course = Plc::Course.find_or_create_by! name: professional_learning_course
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
       unit.update!(
         plc_course_id: course.id,
@@ -372,6 +372,7 @@ class Script < ActiveRecord::Base
       custom_files.map do |script|
         name = File.basename(script, '.script')
         script_data, i18n = ScriptDSL.parse_file(script)
+
         stages = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
