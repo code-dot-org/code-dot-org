@@ -45,7 +45,7 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  @browser.navigate.to url.to_s
+  @browser.navigate.to url
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -819,7 +819,7 @@ end
 
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
-  @browser.navigate.to url.to_s
+  @browser.navigate.to url
 end
 
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
