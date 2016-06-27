@@ -73,7 +73,7 @@ class SingleSignOn
   end
 
   def to_url(base_url=nil)
-    base = "#{base_url || sso_url}"
+    base = (base_url || sso_url).to_s
     "#{base}#{base.include?('?') ? '&' : '?'}#{payload}"
   end
 

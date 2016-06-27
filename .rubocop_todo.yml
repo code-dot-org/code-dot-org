@@ -371,11 +371,6 @@ Style/TrailingUnderscoreVariable:
 Style/TrivialAccessors:
   Enabled: false
 
-# Offense count: 38
-# Cop supports --auto-correct.
-Style/UnneededInterpolation:
-  Enabled: false
-
 # Offense count: 22
 # Cop supports --auto-correct.
 Style/UnneededPercentQ:
