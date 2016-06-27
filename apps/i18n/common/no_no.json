@@ -241,5 +241,6 @@
   "watchVideo": "Sjå videoen",
   "when": "når",
   "whenRun": "når den køyrer",
-  "workspaceHeaderShort": "Arbeidsområde: "
+  "workspaceHeaderShort": "Arbeidsområde: ",
+  "dataMode": "Data"
 }
