@@ -84,6 +84,7 @@
     "express": "4.11.2",
     "factor-bundle": "2.5.0",
     "file-loader": "^0.8.5",
+    "firebase": "^2.4.2",
     "firebase-bolt": "^0.8.0",
     "glob": "5.0.14",
     "grunt": "0.4.5",
@@ -160,7 +161,6 @@
   },
   "dependencies": {
     "filesaver.js": "0.2.0",
-    "firebase": "^2.4.1",
     "jszip": "3.0.0",
     "query-string": "4.1.0",
     "react-color": "code-dot-org/react-color#65a688f0ed61da00acea95cb1c8aa0c691b3839e"
