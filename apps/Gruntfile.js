@@ -344,10 +344,18 @@ module.exports = function (grunt) {
     entries['applab-api'] = './src/applab/api-entry.js';
   }
 
+  var chunks = [
+    {
+      name: 'common',
+      chunks: Object.keys(entries)
+    }
+  ];
+
   config.webpack = {
     build: webpackConfig.create({
       output: path.resolve(__dirname, OUTPUT_DIR),
       entries: entries,
+      chunks: chunks,
       minify: false,
       watch: false,
       piskelDevMode: PISKEL_DEVELOPMENT_MODE
@@ -355,6 +363,7 @@ module.exports = function (grunt) {
     uglify: webpackConfig.create({
       output: path.resolve(__dirname, OUTPUT_DIR),
       entries: entries,
+      chunks: chunks,
       minify: true,
       watch: false,
       piskelDevMode: PISKEL_DEVELOPMENT_MODE
@@ -362,6 +371,7 @@ module.exports = function (grunt) {
     watch: webpackConfig.create({
       output: path.resolve(__dirname, OUTPUT_DIR),
       entries: entries,
+      chunks: chunks,
       minify: false,
       watch: true,
       piskelDevMode: PISKEL_DEVELOPMENT_MODE
