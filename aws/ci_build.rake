@@ -352,18 +352,11 @@ task :ui_test_flakiness do
   end
 end
 
-UI_TEST_SYMLINK = dashboard_dir 'public/ui_test'
-file UI_TEST_SYMLINK do
-  Dir.chdir(dashboard_dir('public')) do
-    RakeUtils.system_ 'ln', '-s', '../test/ui', 'ui_test'
-  end
-end
-
 task :wait_for_test_server do
   RakeUtils.wait_for_url 'https://test-studio.code.org'
 end
 
-task :regular_ui_tests => [UI_TEST_SYMLINK] do
+task :regular_ui_tests do
   Dir.chdir(dashboard_dir('test/ui')) do
     HipChat.log 'Running <b>dashboard</b> UI tests...'
     failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '90', '--magic_retry', '--with-status-page', '--fail_fast'
@@ -379,7 +372,7 @@ task :regular_ui_tests => [UI_TEST_SYMLINK] do
   end
 end
 
-task :eyes_ui_tests => [UI_TEST_SYMLINK] do
+task :eyes_ui_tests do
   Dir.chdir(dashboard_dir('test/ui')) do
     HipChat.log 'Running <b>dashboard</b> UI visual tests...'
     eyes_features = `grep -lr '@eyes' features`.split("\n")

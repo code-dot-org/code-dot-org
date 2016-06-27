@@ -44,13 +44,13 @@
   hoc2014_everyone: "כולם"
   hoc2014_support: "תמוך בו &#x25BE;"
   hoc2014_whatishoc: "מהו Hour of Code?"
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: "# CSEdWeek / אירועי שעה של קוד ברחבי העולם"
   csedweek_map_signup: "העלה את התכנות שלך"
-  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_placeholder: "חפש אירועי שעה של קוד"
   csedweek_map_search_search: "חפש"
   csedweek_map_search_reset: "אפס"
   csedweek_map_legend_title: "מקרא"
-  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_event: "אירוע שעה של קוד"
   csedweek_map_legend_cs_tech_jam: "אירוע מיוחד"
   cded_sign_up: "הירשם"
   cded_try_it: "נסו זאת"
@@ -77,30 +77,28 @@
   thank_you_: "תודה!"
   congratulations: "ברכות!"
   congratulations_on_completing_hoc: "ברכות על השלמת שעה אחת של קוד"
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
-  congrats_next_tutorials_title: Try these courses next
+  congratulations_volunteer: 'ברכות: עכשיו לאחר שניסית את שעה של קוד, <a href="https://code.org/volunteer">
+    הרשם בכדי להתנדב בכיתה </a>, ותעזור לסטודנטים ללמוד שעה של קוד!'
+  congratulations_on_completing_course1: "ברכות על סיום קורס 1"
+  congratulations_on_completing_course2: "ברכות על סיום קורס 2"
+  congratulations_on_completing_course3: "ברכות על סיום קורס 3"
+  congratulations_on_completing_course4: "ברכות על סיום קורס 4"
+  congratulations_on_completing_accelerated: "ברכות על סיום הקורס המואץ"
+  congrats_next_tutorials_title: "הוסמכת לשלב הבא"
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: "קבל תעודה על ההישג"
-  view_course: View course
+  view_course: "צפה בקורס"
   view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  make_app: "צור אפליקציה"
+  congrats_guest_speaker_title: "מצא מרצה אורח לכיתה שלך"
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
     of volunteers to contact local volunteers to visit your classroom, or search in
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_guest_speaker_cta: "מצא מרצה אורח"
   congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
@@ -109,13 +107,13 @@
   third_party_gradelevel_5to12: Grades 5-12
   third_party_gradelevel_6plus: Grades 6+
   third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
+  third_party_platform_all: "פלטפורמה: דפדפן, אייפד ואנדרואיד"
+  third_party_platform_mobile: "פלטפורמה: אייפד ואנדרואיד"
+  third_party_platform_web: "פלטפורמה: דפדפן"
   third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_free: "מחיר: חינם"
+  third_party_price_299: "מחיר: $2.99/הורדה"
+  third_party_price_individual: "מחיר יחיד: ניסיון חינם ו - $25/לחודש"
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
@@ -170,11 +168,11 @@
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
     native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_curriculum: "הורד את תוכנית הלימודים של Codecademy"
+  third_party_codecademy_btn_site: "בקר את Codecademy"
+  third_party_organization: "ארגון"
   third_party_curriculum: "תוכנית לימוד"
-  third_party_pricing: Pricing
+  third_party_pricing: "מחירים"
   third_party_cost_free: Free
   third_party_cost_5permonth: "$5/month per class"
   third_party_cost_299: "$2.99/download"
@@ -658,7 +656,7 @@
   dashboard_navigation_section_pd: "פיתוח מקצועי"
   dashboard_navigation_section_speakers: "מדעי המחשב <br/> מציגים אורחים"
   dashboard_navigation_all_sections: "חשבונות תלמידים וההתקדמות שלהם"
-  dashboard_navigation_view_progress: "צפה בהתקדמות"
+  dashboard_navigation_view_progress: "התקדמות"
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "הוסף תלמידים"
@@ -975,6 +973,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

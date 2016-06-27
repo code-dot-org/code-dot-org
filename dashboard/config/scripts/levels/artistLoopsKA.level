@@ -47,19 +47,10 @@
             <block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="3-10">3</title>
               <statement name="DO">
-                <block type="simple_move_right">
-                  <next>
-                    <block type="simple_move_down"/>
-                  </next>
-                </block>
+                <block type="simple_move_right"/>
               </statement>
               <next>
-                <block type="controls_repeat_simplified_dropdown">
-                  <title name="TIMES" config="3-10">3</title>
-                  <statement name="DO">
-                    <block type="simple_move_right"/>
-                  </statement>
-                </block>
+                <block type="simple_jump_right"/>
               </next>
             </block>
           </next>

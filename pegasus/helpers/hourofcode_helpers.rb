@@ -145,6 +145,10 @@ def campaign_date(format)
     return HOC_COUNTRIES[@country]['campaign_date_short']
   when "full"
     return HOC_COUNTRIES[@country]['campaign_date_full']
+  when "year"
+    return HOC_COUNTRIES[@country]['campaign_date_year']
+  when "full-year"
+    return HOC_COUNTRIES[@country]['campaign_date_full_year']
   else
     return HOC_COUNTRIES[@country]['campaign_date_full']
   end
