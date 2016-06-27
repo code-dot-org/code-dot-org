@@ -8,6 +8,8 @@ var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 
+var AUTO_RELOAD = ['true', '1'].indexOf(process.env.AUTO_RELOAD) !== -1;
+
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
   var buildTimeLogger = logBuildTimes(grunt);
@@ -423,21 +425,13 @@ module.exports = function (grunt) {
   };
 
   config.watch = {
-    js: {
-      files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src'],
-      options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true,
-        interrupt: true
-      }
-    },
+    // JS files watched by webpack
     style: {
       files: ['style/**/*.scss', 'style/**/*.sass'],
       tasks: ['newer:sass', 'notify:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true,
+        livereload: AUTO_RELOAD,
         interrupt: true
       }
     },
@@ -446,7 +440,7 @@ module.exports = function (grunt) {
       tasks: ['newer:copy', 'notify:content'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: AUTO_RELOAD
       }
     },
     vendor_js: {
@@ -454,7 +448,7 @@ module.exports = function (grunt) {
       tasks: ['newer:concat', 'newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: AUTO_RELOAD
       }
     },
     messages: {
@@ -462,10 +456,20 @@ module.exports = function (grunt) {
       tasks: ['messages', 'notify:messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: AUTO_RELOAD
       }
     },
   };
+
+  config.concurrent = {
+    // run our two watch tasks concurrently so that they dont block each other
+    watch: {
+      tasks: ['watch', 'webpack:watch'],
+      options: {
+        logConcurrentOutput: true
+      }
+    }
+  },
 
   config.strip_code = {
     options: {
@@ -565,7 +569,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('dev', [
     'prebuild',
-    'webpack:watch',
+    'concurrent:watch',
     'postbuild',
   ]);
 
