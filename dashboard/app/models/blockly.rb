@@ -305,4 +305,12 @@ class Blockly < Level
     # Wrapped since we store our serialized booleans as strings.
     self.never_autoplay_video == 'true'
   end
+
+  # Returns an array of all the contained levels
+  # (based on the contained_level_names property)
+  def contained_levels
+    names = properties["contained_level_names"]
+    return [] unless names.present?
+    Level.where(name: properties["contained_level_names"])
+  end
 end

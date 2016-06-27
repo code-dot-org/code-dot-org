@@ -20,7 +20,6 @@ describe('ProgressDot component tests', () => {
   beforeEach(() => {
     renderer = ReactTestUtils.createRenderer();
     level = {
-      ids: [123],
       uid: '123',
       title: 1,
       name: 'Test Level',
