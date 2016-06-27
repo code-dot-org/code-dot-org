@@ -11,7 +11,7 @@ LEVEL_TYPES_WITH_ILS = %w(Craft Studio Karel Eval Maze Calc Blockly StudioEC Art
 # Prints the JSON to the command line; redirect output to a file to save
 # it
 
-def main()
+def main
   levels_to_test = Level.
       where('type in (?)', LEVEL_TYPES_WITH_ILS).
       where('ideal_level_source_id is not null').

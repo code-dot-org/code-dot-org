@@ -1,16 +1,16 @@
-import _ from 'lodash';
+import Immutable from 'immutable';
 
 const CHANGE_SCREEN = 'screens/CHANGE_SCREEN';
 
-const initialState = {
-  currentScreenId: null
-};
+const ScreenState = Immutable.Record({
+  currentScreenId: null,
+});
+
+const initialState = new ScreenState();
 
 export default function (state = initialState, action) {
   if (action.type === CHANGE_SCREEN) {
-    return _.assign({}, state, {
-      currentScreenId: action.screenId
-    });
+    return state.set('currentScreenId', action.screenId);
   }
   return state;
 }

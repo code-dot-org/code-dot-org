@@ -29,6 +29,8 @@ it:
   unsubmit: "Annulla l'invio"
   previous_page: Pagina precedente
   next_page: Pagina successiva
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Annulla
   okay: Ok!
   heading_x_of_y: '%{heading} (pagina %{x} su %{y})'
@@ -86,6 +88,7 @@ it:
     teacher_title: "Iscrizione dell'insegnante"
     student_pitch: Iscrizione dello studente a Code.org
     student_title: Iscrizione dello studente
+    signup_title: Sign up for Code.org
     school_name: Nome della scuola (facoltativo)
     school_address: Indirizzo della scuola (facoltativo)
     address_placeholder: Indirizzo, città, stato, CAP
@@ -104,6 +107,9 @@ it:
     student_terms: "Accetto di essere vincolato dai <a href='http://code.org/tos'>termini di servizio</a> di Code.org. Se sono di età inferiore a 14 anni, confermo inviando questo modulo che ho il permesso dei miei genitori o del tutore legale di utilizzare i servizi di Code.org. <br/>Per gli utenti di età inferiore a 14 anni, gli indirizzi di posta elettronica non vengono memorizzati in una forma che ci permette di contattarli."
     teacher_terms: "Accetto di essere vincolato dai <a href='http://code.org/tos'>termini di servizio</a> di Code.org."
     additional_information: Abbiamo bisogno di alcune informazioni aggiuntive per continuare la tua iscrizione.
+    user_type_label: Account Type
+    user_type_teacher: Insegnante
+    user_type_student: Studente
   signin_form:
     title: Sei già iscritto con un account? Accedi
     login: Indirizzo di posta elettronica o nome utente
@@ -256,7 +262,7 @@ it:
       prizes_link: Più informazioni
   teacher:
     answer: Rispondi
-    for_teachers_only: Solo per gli insegnanti
+    for_teachers_only: Per i soli insegnanti
     title:
       one: 'Il tuo insegnante:'
       other: 'I tuoi insegnanti:'
@@ -265,7 +271,7 @@ it:
       remove: Sei sicuro di voler rimuovere questo insegnante?
     students:
       dashboard: "Vai al Cruscotto di controllo dell'insegnante"
-    user_not_found: "L' insegnante non può essere trovato."
+    user_not_found: Insegnante non trovato.
     student_teacher_disassociated: 'Hai rimosso %{teacher_name} come tuo insegnante.'
     panel:
       answer_viewer: Visualizzatore delle risposte
@@ -275,7 +281,7 @@ it:
       section: Classe
       example: Esempio di soluzione
       example_with_number: 'Esempio di soluzione numero %{solution_number}'
-      submitted_on: 'Inserito il:'
+      submitted_on: 'Inserito il %{date}'
       unsubmit: "Annulla l'invio"
   user:
     email_confirm_needed: "L'indirizzo di posta elettronica non è stato confermato:"
@@ -295,7 +301,7 @@ it:
     title: Officina del Codice
     description: Code Studio è la base di partenza per i corsi online creati da Code.org
     lines_of_code: '%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI'
-    lines_of_code_linebreak: '%{lines_count} linee di codice<br/>scritte da %{students_count} milioni di studenti'
+    lines_of_code_linebreak: '%{lines_count} linee di codice <br/> scritte da %{students_count} milioni di studenti'
     all_courses: Panoramica dei corsi 1, 2 e 3
     lesson_plans: Piani di lavoro delle lezioni
     signin_message: 'Già iscritto? %{link}'
@@ -337,24 +343,24 @@ it:
     announcement_title: Annunci
     announcement_view_all: Visualizza tutto
     announcement_message: "<b>22 aprile 2016</b>- Le lezioni senza computer sono una parte fondamentale dell'apprendimento, ma gli insegnanti ci hanno comunicato che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo. Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
-    announcement_button: Ulteriori informazioni
+    announcement_button: Test the feature
     announcement_petition: "Come insegnante, stai aprendo la strada per permettere ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa settimana, personaggi chiave del mondo dell'istruzione, 28 governatori e gli amministratori delegati delle più grandi aziende d'America si sono riuniti firmando una lettera aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di informatica K-12."
     announcement_petition_button: Aggiungi il tuo nome
   move_students:
     new_section_dne: 'Ci dispiace, ma non esiste la sezione %{new_section_code}. Inserisci un codice di sezione diverso.'
     section_code_not_entered: Si prega di fornire il codice di sezione attuale.
-    section_code_cant_be_current_section: La sezione corrente non può avere lo stesso nome della nuova.
+    section_code_cant_be_current_section: La sezione attuale non può avere lo stesso nome di quella nuova.
     current_section_dne: 'Ci dispiace, ma non esiste la sezione %{current_section_code}. Inserisci un codice di sezione diverso.'
     students_not_yours: Non è possibile spostare gli studenti da una sezione che non appartiene a te.
     stay_enrolled_not_entered: 'Si prega di fornire "rimani iscritto nella sezione attuale".'
-    student_ids_not_entered: Si prega di fornire la id dello studente.
+    student_ids_not_entered: "Si prega di fornire l'identiificativo dello studente."
     student_not_found: Non sono stati trovati uno o più studenti.
     all_students_must_be_in_current_section: Attualmente, tutti gli studenti devono essere iscritti nella tua sezione.
     already_enrolled_in_new_section: "Non è possibile spostare questi studenti perché questo insegnante li ha già in un'altra sezione."
   share:
     title: Impara su Code Studio
     description: "Chiunque può imparare l'informatica. Realizza giochi, app e lavori artistici con la programmazione."
-    try_hour_of_code: "Prova un'Ora di Programmazione!"
+    try_hour_of_code: Prova un Ora di Programmazione!
   gender:
     male: Maschile
     female: Femminile
@@ -385,7 +391,7 @@ it:
     built_on_code_studio: Costruito con Code Studio
     make_my_own_app: Crea la tua App
     how_it_works: Come funziona
-    try_hour_of_code: "Prova un'Ora di Programmazione!"
+    try_hour_of_code: Prova un Ora di Programmazione!
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -401,9 +407,9 @@ it:
     download: Scarica il video
   compatibility:
     upgrade:
-      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      unsupported_message: "Il tuo browser non è supportato. Si prega di aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'> uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina, ma aspettati qualche malfunzionamento."
+      ie_message: "Code.org non supporterà più Internet Explorer 8, 9 e 10. Effettua l'aggiornamento ad un browser più moderno."
+      ie_message_csedweek: "CSEdWeek.org non supporterà più Internet Explorer 8, 9 e 10. Effettua l'aggiornamento ad un browser più moderno."
       link: Ulteriori informazioni
   slow_loading: Questa operazione sta prendendo più tempo del solito...
   try_reloading: Prova a ricaricare la pagina
@@ -441,7 +447,7 @@ it:
     applab:
       title: Laboratorio per le App
       body: App Lab è un ambiente di programmazione dove puoi creare semplici applicazioni. Sviluppa un app, programmala con i blocchi o il JavaScript per farla funzionare, e infine condividila in pochi secondi.
-      body_short: Progetta una app, programala con i blocchi o con Javascript per farla funzionare, poi condividi la tua app in pochi istanti.
+      body_short: Progetta una app, programmala con i blocchi o con Javascript per farla funzionare, poi condividi la tua app in pochi istanti.
       audience: "Eta' 13+"
       cta: Scopri come
     hoc:
@@ -472,9 +478,9 @@ it:
       body: Esplora il mondo di Minecraft attraverso il codice.
     unplugged:
       title: Lezioni Tradizionali
-      audience: Età 6+
+      audience: Età 4+
       body: "Abbiamo creato un lista di lezioni che non necessitano di un computer e che potrai usare con la tua classe di studenti. Adesso potrai insegnare i fondamenti dell'informatica, che abbiate un computer oppure no! Prova ad utilizzare queste lezioni come un corso a sé stante o come complemento a qualche altro corso d'informatica."
-      body_short: Se non si dispone di computers, prova queste lezione scollegate nella tua classe.
+      body_short: Se i computers non sono disponibili, prova queste lezioni tradizionali in classe.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: "Gli studenti l'hanno creato scrivendo del codice!"
@@ -513,14 +519,14 @@ it:
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Grazie!
-    wrong_body: Grazie per aver inviato una risposta
+    wrong_body: Grazie per aver inviato delle risposte.
     correct_title: Grazie!
-    correct_body: Grazie per aver inviato una risposta
+    correct_body: Grazie per aver inviato delle risposte.
   level_group-submittable:
     wrong_title: Grazie!
-    wrong_body: Grazie per aver inviato una risposta
+    wrong_body: Grazie per aver inviato delle risposte.
     correct_title: Grazie!
-    correct_body: Grazie per aver inviato una risposta
+    correct_body: Grazie per aver inviato delle risposte.
     unsubmit-title: Ritira la tua valutazione
     unsubmit-body: "Ritirare la tua valutazione cancellerà la data e l'ora che hai dichiarato. Sei sicuro?"
     submit-incomplete-title: Invia la tua valutazione
@@ -679,31 +685,41 @@ it:
       no_icons_found: Non ho trovato alcuna icona
     playzone:
       artist_description: "Disegna fantastiche immagini e decorazioni con l'artista!"
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: Nuovo disegno
+      continue_button: Andiamo alla fase successiva
       playlab_description: Crea una storia o inventa un gioco col Laboratorio!
-      playlab_title: New App
-      primary_header: 'Congratulations! You finished %{stageName}!'
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      playlab_title: Nuova App
+      primary_header: 'Congratulazioni! Hai finito %{stageName}!'
+      projects_description: Rivisita uno dei tuoi progetti esistenti.
+      projects_title: Aprire un progetto
+      secondary_header: Chiedi al tuo insegnante che cosa fare dopo
   flex_category:
     required: Panoramica
     content: Contenuto
     practice: "Pratiche d'insegnante"
   external_links:
-    disclaimer_md: "<strong>Avviso: stai per lasciare il dominio Code.org per collegarti ad un sito non controllato da noi.</strong>Questo sito potrebbe avere una politica della privacy diversa da quella di Code.org<br/><br/>Abbiamo selezionato delle fonti fornite da terzi poiché pensiamo che queste possano tornarti utili. Dal momento che non siamo direttamente responsabili riguardo il contenuto di questo sito, per favore<a href='mailto:support@code.org'> contatta il supporto</a>se trovi qualcosa che ti turba oppure se il sito non è più disponibile."
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
-    title: Hour of Code downloads
-    capsule_title: Do you have Internet?
-    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: No Internet?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: 'Download %{app_name} for offline use (136MB)'
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    title: Downloads dell’Ora di Codice
+    capsule_title: Avete Internet?
+    capsule_desc: 'Utilizzare <a href="%{url}">%{app_name}</a> online, basata sul web.'
+    instructions_headline: Niente internet?
+    instructions: |-
+      Istruzioni per gli insegnanti: se si dispone di servizio Internet scadente, queste esercitazioni per l’Ora di Codice sono disponibili da scaricare e installare per l'utilizzo offline. Scegli la tua lingua e la piattaforma, scaricale e installale su tutti i computer in classe. È possibile utilizzare un'unità USB per scaricarle una sola volta e installarle su tutti i computer. Nota: gli studenti non saranno in grado di accedere al Code Studio, salvare i progressi o stampare i certificati. Gli insegnanti possono stampare certificati prima del tempo <a href="%{url}"> qui</a>.
+    minecraft_name: "L'Ora del Codice con Minecraft"
+    starwars_blocks_name: 'Guerre Stellari: Costruisci una galassia con il codice (Blocchi)'
+    starwars_javascript_name: 'Guerre Stellari: Costruisci una galassia con il codice ( JavaScript)'
+    download_message: "Scarica %{app_name} per l'utilizzo offline (136MB)"
+    download_in_english: 'Scarica in inglese:'
+    download_in_spanish: 'Scarica in spagnolo:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

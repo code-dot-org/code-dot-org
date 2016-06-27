@@ -4,8 +4,8 @@ es-MX:
   "yes": Sí
   "no": 'No'
   select_language: Seleccione su idioma
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org pronto eliminará el soporte para Internet Explorer 8, 9 y 10. Por favor actualice a un navegador moderno.
+  upgrade_ie_message_csedweek: CSEdWeek.org pronto eliminará el soporte para Internet Explorer 8, 9 y 10. Por favor actualice a un navegador moderno.
   upgrade_ie_link: Aprende más
   en: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
@@ -503,13 +503,13 @@ es-MX:
   dashboard_navigation_section_pd: Desarrollo profesional
   dashboard_navigation_section_speakers: 'Informática<br/>Oradores invitados'
   dashboard_navigation_all_sections: Cuentas de estudiantes y sus progresos
-  dashboard_navigation_view_progress: Ver progreso
-  dashboard_navigation_view_text_responses: Ver Respuestas de Texto
+  dashboard_navigation_view_progress: Progreso
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Evaluaciones
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
   dashboard_navigation_lesson_plans_resources: Planificaciones de lecciones y recursos
-  dashboard_navigation_view_stats: Ver estadísticas
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Sección: %{section_name}'
   dashboard_navigation_student: 'Alumno: %{student_name}'
   dashboard_progress_not_started: No iniciado
@@ -530,7 +530,7 @@ es-MX:
   dashboard_sections_table_secret: Tipo de inicio de sesión
   dashboard_sections_table_grade: Grado
   dashboard_sections_table_course: Curso
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Etapa Extra
   dashboard_sections_table_students: Alumnos
   dashboard_sections_table_code: Código de sección
   dashboard_sections_name: Nombre de la sección
@@ -655,8 +655,8 @@ es-MX:
   dashboard_announcements: Anuncios
   dashboard_announce_view_all: Ver todo
   dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
-  dashboard_announce_button_text: Aprende más
-  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_button_text: Test the feature
+  dashboard_announce_petition: Como profesor, usted está liderando un movimiento para dar a cada estudiante en todas las escuelas la oportunidad de aprender computación. Ahora, es tiempo de dejar que sus representantes lo escuchen. Esta semana, líderes de la educación, 28 gobernadores y CEOs de las compañías más grandes de América se unieron en una carta abierta pidiendo el Congreso de Estados Unidos para financiar en la educacion de K-12 informática.
   dashboard_announce_petition_button: Agrega tu nombre
   code_hoc_coming: '¡La Hora del Código está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
@@ -775,6 +775,7 @@ es-MX:
   cspunit6_name: 'Post-AP: Bases de Datos en Aplicaciones'
   csp1_name: 'Tema 1: El Internet'
   csp2_name: 'Unidad 2: Información Digital'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Prueba completa - 50 preguntas'
   cspexam1-mWU7ilDYM9_name: 'Parte del test 1 - 25 preguntas'
   cspexam2-AKwgAh1ac5_name: 'Parte del test 2 - 25 preguntas'

@@ -30,6 +30,8 @@
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "បោះបង់"
   okay: Okay
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -92,6 +94,7 @@
     teacher_title: "ការ​ចុះឈ្មោះ​ជា​គ្រូ​បង្រៀន"
     student_pitch: "ការ​ចុះឈ្មោះ​ជា​សិស្ស​សម្រាប់ Code.org"
     student_title: "ចុះឈ្មោះ​ជា​សិស្ស"
+    signup_title: Sign up for Code.org
     school_name: "ឈ្មោះ​សាលា (ស្រេច​ចិត្ត)"
     school_address: "អាសយដ្ឋាន​សាលា (ស្រេច​ចិត្ត)"
     address_placeholder: "អាសយដ្ឋាន, ក្រុង, រដ្ឋ, លេខ​ប្រៃសណីយ៍"
@@ -115,6 +118,9 @@
     teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>.
     additional_information: "ពួក​យើង​ត្រូវការ​ព័ត៌មាន​បន្ថែម ដើម្បី​បន្ត​ការ​ចុះឈ្មោះ​របស់​អ្នក។"
+    user_type_label: Account Type
+    user_type_teacher: Teacher
+    user_type_student: "សិស្ស"
   signin_form:
     title: "មាន​គណនី​រួច​ហើយ​មែនទេ? ចូលគណនី"
     login: "អ៊ីមែល ឬ ឈ្មោះ​អ្នក​ប្រើ"
@@ -849,3 +855,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

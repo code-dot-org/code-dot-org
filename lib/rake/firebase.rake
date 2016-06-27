@@ -3,6 +3,15 @@ require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
 namespace :firebase do
+  desc 'Compile firebase security rules and store them in the apps package.'
+  task :compile_rules do
+    if rack_env?(:production)
+      raise "Cannot compile firebase security rules on production, because npm is not installed.\n"\
+        "Instead, upload security rules from the apps package which was downloaded from s3."
+    end
+    Dir.chdir(apps_dir) { RakeUtils.system 'grunt compile-firebase-rules' }
+  end
+
   desc 'Uploads compiled security rules to firebase from the apps package.'
   task :upload_rules do
     if CDO.firebase_name
@@ -35,4 +44,9 @@ namespace :firebase do
       }
     end
   end
+
+  task :all => [:compile_rules, :upload_rules, :set_config]
 end
+
+desc 'Compile and upload firebase rules, and set firebase config.'
+task :firebase => ['firebase:all']

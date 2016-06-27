@@ -30,6 +30,8 @@
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Cancel·lar
   okay: D'acord
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -95,6 +97,7 @@
     teacher_title: Entrada com a mestre
     student_pitch: Alta a Code.org per a alumnes
     student_title: Registre com a alumne
+    signup_title: Sign up for Code.org
     school_name: Nom de l'escola (opcional)
     school_address: Adreça de l'escola (opcional)
     address_placeholder: adreça, ciutat, comunitat, codi postal
@@ -120,6 +123,9 @@
       del servei</a> de Code.org.
     additional_information: Necessitem alguna informació addicional per continuar
       amb la vostra inscripció.
+    user_type_label: Account Type
+    user_type_teacher: Mestre
+    user_type_student: estudiant
   signin_form:
     title: Ja teniu un compte? Entreu
     login: Correu o nom d'usuari
@@ -868,3 +874,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

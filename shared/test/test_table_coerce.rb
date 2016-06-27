@@ -138,6 +138,5 @@ class TablesTest < Minitest::Test
     ]
     assert_equal expected, records
     assert_equal false, all_converted
-
   end
 end

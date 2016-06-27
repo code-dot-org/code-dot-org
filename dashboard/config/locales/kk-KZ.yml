@@ -30,6 +30,8 @@
   unsubmit: "Жібермеу"
   previous_page: Previous page
   next_page: "Келесі бет"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "Болдырмау"
   okay: "Жақсы"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -93,6 +95,7 @@
     teacher_title: "Оқытушы болып тіркелу"
     student_pitch: Code.org сайтына оқушы болып тіркелу
     student_title: "Оқушы болып тіркелу"
+    signup_title: Sign up for Code.org
     school_name: "Мектеп Аты (міндетті емес)"
     school_address: "Мектеп Адресі (міндетті емес)"
     address_placeholder: "адрес, қала, штат, индекс"
@@ -115,6 +118,9 @@
     teacher_terms: "Мен Code.org сайтының <a href='http://code.org/tos'>қызмет көрсету
       шарттарына</a> келісемін."
     additional_information: "Сізді тіркеу үшін бізге қосымша ақпарат керек."
+    user_type_label: Account Type
+    user_type_teacher: "Мұғалім"
+    user_type_student: "Оқушы"
   signin_form:
     title: "Жеке парақшаңыз бар ма? Кіру"
     login: "Электронды пошта немесе логин"
@@ -862,3 +868,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

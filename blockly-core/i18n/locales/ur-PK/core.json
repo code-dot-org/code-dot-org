@@ -1,6 +1,6 @@
 {
   "ACTUAL": "بلانا",
-  "ADD": "شامل کرنا",
+  "ADD": "ا ضافہ کرنا",
   "ADD_COMMENT": "تبصرہ شامل کریں",
   "ADD_PARAMETER": "پیرامیٹر کا اضافہ کرنا",
   "CANCEL": "منسوخ کریں",
@@ -49,7 +49,7 @@
   "CONTROLS_IF_HELPURL": "http://code.google.com/p/blockly/wiki/If_Then",
   "CONTROLS_IF_IF_TOOLTIP": "اس if کی رکاوٹ کو دوبارہ تشکِل دینے کے لئے اس کے حصوں میں اضافہ کریں ، ہٹائیں یا دوبارہ ترتیب دیں۔",
   "CONTROLS_IF_MSG_ELSE": "ni to",
-  "CONTROLS_IF_MSG_ELSEIF": "agr ni to",
+  "CONTROLS_IF_MSG_ELSEIF": "ورنہ تو",
   "CONTROLS_IF_MSG_IF": "agr",
   "CONTROLS_IF_TOOLTIP_1": "Agr aik adad sahi hai to kuch aur bayanaat (Statments) dijiye.",
   "CONTROLS_IF_TOOLTIP_2": "Agr aik raqam sahi hai to pehle hisse k bayanaat ko muqammal kijiye. ni to dosre hisse k bayanaat (statments) ko kijiye. ",

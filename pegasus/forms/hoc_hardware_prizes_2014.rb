@@ -17,7 +17,7 @@ class HocHardwarePrizes2014
     result
   end
 
-  def self.receipt()
+  def self.receipt
   end
 
   def self.process(data)

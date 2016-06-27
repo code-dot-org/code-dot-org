@@ -30,6 +30,8 @@
   unsubmit: "Ανακλήθηκε"
   previous_page: "Προηγούμενη σελίδα"
   next_page: "Επόμενη σελίδα"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "Άκυρο"
   okay: "Εντάξει"
   heading_x_of_y: "%{heading} (σελίδα %{x} του %{y})"
@@ -96,6 +98,7 @@
     teacher_title: "Εγγραφή Δασκάλου"
     student_pitch: "Εγγραφή μαθητή στο Code.org"
     student_title: "Εγγραφή μαθητή"
+    signup_title: Sign up for Code.org
     school_name: "Όνομα Σχολείου (προαιρετικά)"
     school_address: "Διεύθυνση Σχολείου (προαιρετικά)"
     address_placeholder: "διεύθυνση, πόλη, περιοχή, ΤΚ"
@@ -122,6 +125,9 @@
       της υπηρεσίας</a> του Code.org."
     additional_information: "Χρειαζόμαστε κάποιες επιπλέον πληροφορίες για να συνεχιστεί
       η εγγραφή σας."
+    user_type_label: Account Type
+    user_type_teacher: "Καθηγητής"
+    user_type_student: "φοιτητής/μαθητής"
   signin_form:
     title: "Έχετε ήδη λογαριασμό; Συνδεθείτε"
     login: Email ή όνομα χρήστη
@@ -902,3 +908,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

@@ -50,9 +50,6 @@ class ApiController < ApplicationController
     load_script
 
     progress_html = render_to_string(partial: 'shared/user_stats', locals: {user: @student})
-    if @script.trophies
-      progress_html += render_to_string(partial: 'shared/concept_trophy_block', locals: {concept_progress: summarize_trophies(@script, @student), added_style: 'overflow: visible'})
-    end
 
     data = {
       student: {

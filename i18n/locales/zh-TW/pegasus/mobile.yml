@@ -504,13 +504,13 @@ zh-TW:
   dashboard_navigation_section_pd: 專業發展
   dashboard_navigation_section_speakers: '電腦科學 <br/> 特邀演講者'
   dashboard_navigation_all_sections: 學生帳戶及學習進度
-  dashboard_navigation_view_progress: 查看進度
-  dashboard_navigation_view_text_responses: 觀看文字回應
+  dashboard_navigation_view_progress: 進展
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: 新增學生
   dashboard_navigation_manage_students: 管理學生們
   dashboard_navigation_lesson_plans_resources: 教案和資源
-  dashboard_navigation_view_stats: 檢視統計資料
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: '分區： %{section_name}'
   dashboard_navigation_student: '學生： %{student_name}'
   dashboard_progress_not_started: 未開始
@@ -655,8 +655,9 @@ zh-TW:
   dashboard_faq_k5: 五年級課程的常見問題
   dashboard_announcements: 公告
   dashboard_announce_view_all: 全部查看
-  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-  dashboard_announce_button_text: 瞭解更多資訊
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: 新增你的名字
   code_hoc_coming: 代碼小時就在這裡 — — 12 月 8-14 ！
@@ -776,6 +777,7 @@ zh-TW:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

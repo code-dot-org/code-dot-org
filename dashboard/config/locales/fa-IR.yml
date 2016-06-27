@@ -29,6 +29,8 @@
   unsubmit: "ثبت نشده"
   previous_page: Previous page
   next_page: "صفحه بعد"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "لغو کن"
   okay: "باشه"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -93,6 +95,7 @@
     teacher_title: "ثبت نام معلم"
     student_pitch: "ثبت نام دانش‌آموز در Code.org"
     student_title: "ثبت نام دانش آموز"
+    signup_title: Sign up for Code.org
     school_name: "نام مدرسه (اختیاری)"
     school_address: "نشانی مدرسه (اختیاری)"
     address_placeholder: "نشانی، شهر، استان، کدپستی"
@@ -115,6 +118,9 @@
     teacher_terms: "من با محدودیت و شرایط استفاده از خدمات Code.org <a href='http://code.org/tos'>
       </a> موافقم."
     additional_information: "ما به اطلاعات بیشتری برای ادامه ثبت نام شما احتیاج داریم."
+    user_type_label: Account Type
+    user_type_teacher: "دبیر"
+    user_type_student: "دانش آموز"
   signin_form:
     title: "دارای حساب کاربری در حال حاضر؟ ورود"
     login: "رایانامه یا نام کاربری"
@@ -856,3 +862,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

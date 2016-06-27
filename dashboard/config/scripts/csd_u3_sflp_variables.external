@@ -8,13 +8,8 @@ markdown <<MARKDOWN
 
 A variable is a way of connecting a label that you use in your program with a value that is stored in memory. Variables make it easy to repeatedly use the same value in a program and quickly change it every place it is used. When combined with the draw loop you can use variables to make smooth animations.
 
-# Lesson
-
-Fill in later
-
-# Vocab
-
-* **Variable:** [[need to develop authoritative definition]]
+# Vocabulary
+* **Variable** - A placeholder for a piece of information that can change.
 
 # Resources
 

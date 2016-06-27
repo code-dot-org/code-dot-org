@@ -313,6 +313,10 @@
         przez tylko dwa bloki? (Wskazówka: utwórz pętlę z użyciem bloku "powtórz razy")'
       2-3 Maze 12 (old)_instruction: Doprowadź mnie do świnki, teraz z użyciem bloku
         "powtórz razy"!
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: 'Czy możesz zastąpić te pięć bloków tylko dwoma blokami?
         (Wskazówka: Utwórz pętlę z użyciem bloku "powtórz", by przejść ten poziom.)'
       2-3 Maze 13 (old)_instruction: Doprowadź mnie do świnki, teraz z użyciem bloku
@@ -751,20 +755,37 @@
         Użyj pętli "dopóki".'
       4-5 While Loops Assessment 1_instruction: Jest tutaj wiele otworów i stert.  Pomóż
         mi wypełnić otwory i usunąć sterty, by wyrównać teren.
-      aE1_instruction: |-
-        Draw this square using a loop.\r
-        \r
-        Each side is 20 pixels
-        long.
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na
+        square with 20 pixel sides. "
       aE2_instruction: |
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
-        all 15 squares line up next to each other?
-      aE3_instruction: |
-        Now let's go one level deeper! We've nested that whole
-        block of code into another loop, but you need to get the artist back in place
-        to draw the next line. Which of these code blocks can you place at the end
-        of the outermost loop to draw the whole grid?
+        all 14 napkins line up next to each other?
+      aE3_instruction: |-
+        We've got to have a tablecloth!  \r
+        \r
+        Take your row of
+        14 napkins and sew 14 of those together with another **outer loop** to make
+        a cover for our table.
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: "How many times do you need to loop this to draw half  of\na
+        circle? \n"
+      aE7_instruction: |-
+        If you create another loop like this one, but turn left instead
+        of right, what happens? \r
+        \r
+        Can you repeat all of that to draw this wave?
+      aE8_instruction: |-
+        Now let's loop that whole thing four times to create this
+        picture frame. Watch out for the corners - you can't just turn 90 degrees!
+        \r
+        \r
+        If looping a 3 degree turn 60 times makes a half circle, which of
+        these blocks of code will make an additional quarter circle for the corners?
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: Dodaj przycisk, który
         przesuwa żółwia po kliknięciu.  (Kliknij, aby zobaczyć pełne instrukcje)
@@ -843,6 +864,9 @@
         nektaru, ale nie wiesz który. Uważaj, by nie zbierać nektaru z fioletowego
         kwiatka, jeśli go nie ma. Sprawdzaj, czy nektar jest równy 1 przy użyciu bloku
         "jeśli".
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -2053,6 +2077,7 @@
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -2798,6 +2823,12 @@
         Idź w jedną stronę, a później w drugą, by doprowadzić mnie do świnki.
       K-1 Maze Sequence Assessment 2_instruction: Idź w jedną stronę, a później w
         drugą, by doprowadzić mnie do świnki.
+      kikiTesta_instruction: |-
+        Our adventurer wants to collect coins.  But she can
+        only use 4 blocks to get them.\r
+        \r
+        Can you help her grab as many as she
+        can using just 4 blocks?
       kikiTesting_instruction: |
         .\r
          .\r
@@ -2808,6 +2839,13 @@
         \r
         .\r
         \r
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -2854,7 +2892,11 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      Mike Pair Programming_instruction: Here are the instructions
       MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
@@ -3180,8 +3222,6 @@
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Wyzwanie: Jak użyjesz pętli
         "licz/dla", aby każda postać pokręciła się i wypowiedziała swój numer, a następnie
         zniknęła z ekranu? '
-      New Play Lab Project_instruction: Utwórz własną historyjkę lub grę! Twój kod
-        jest zapisywany jako projektu i możesz do niego wrócić w dowolnym momencie.
       Ninjacat Demo B (copy 1)_instruction: |
         \r
         Let’s begin by exploring a simple

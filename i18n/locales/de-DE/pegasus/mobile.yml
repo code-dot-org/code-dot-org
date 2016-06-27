@@ -4,8 +4,8 @@ de-DE:
   "yes": Ja
   "no": Nein
   select_language: Bitte wähle deine Sprache
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org wird bald aufhören Internet Explorer 8, 9 und 10 zu unterstützen. Bitte installieren Sie einen modernen Browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org wird bald aufhören Internet Explorer 8, 9 und 10 zu unterstützen. Bitte installieren Sie einen modernen Browser.
   upgrade_ie_link: Mehr erfahren
   en: Informatik
   computer_science_edweek: Informatik-Bildungswoche
@@ -95,30 +95,30 @@ de-DE:
   third_party_price_school: 'Schulpreis: Kostenlose Pläne & Profi bei $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_site: Besuche Tynker
   third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_curriculum: Lade Scratch Jr. Curriculum herunter
   third_party_scratchjr_btn_site: Besuche Scratch J.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_curriculum: Lade Scratch Jr. Curriculum herunter
   third_party_scratch_btn_forum: Scratch Educator Forum
   third_party_scratch_btn_site: Besuche Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_curriculum: Lade Lightbot Curriculum herunter
   third_party_lightbot_btn_site: Besuche Lichtroboter
   third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
   third_party_khan_btn_learn: Lerne Informatik mit Khan Acadamy
   third_party_khan_btn_forum: Khan Academy Informatik-Forum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
+  third_party_appinv_btn_curriculum: Lade App Inventor 2 Curriculum herunter
   third_party_appinv_btn_forum: App Inventor 2 Forum
   third_party_appinv_btn_site: Besuche App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
   third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: 'Wir überdenken Bildung von Grund auf. Im Internet wurde fast alles - Handel, soziale Netzwerke, Gesundheitswesen und vieles mehr neu überdacht. Wir machen die Bildung, die die Welt benötigt - Die erste echte heimische Programmierausbildung.'
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_site: Besuche Codecademy
+  third_party_organization: Organisation
   third_party_curriculum: Lehrplan
   third_party_pricing: Preise
   third_party_cost_free: Kostenlos für Schüler und Lehrer
@@ -492,11 +492,11 @@ de-DE:
   dashboard_assessments_view: 'Zeige Bewertungen in:'
   dashboard_assessments_none: Keine Bewertungen
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_summaries: Zusammenfassungen
+  dashboard_assessments_answers: Alle Antworten
   dashboard_filter_by_stage: 'Nach Schwierigkeitsstufen sortieren:'
   dashboard_filter_all: Alle
-  dashboard_download_csv: Download CSV
+  dashboard_download_csv: Als CSV herunterladen
   dashboard_navigation_home_page: Lehrer-Hauptseite
   dashboard_navigation_section_student_progress: Schülerkonten und Fortschritt
   dashboard_navigation_section_teacher_progress: Ihr Kursfortschritt
@@ -505,13 +505,13 @@ de-DE:
   dashboard_navigation_section_pd: Fortbildung
   dashboard_navigation_section_speakers: 'Informatik <br/> Gastredner'
   dashboard_navigation_all_sections: Schülerkonten und Fortschritt
-  dashboard_navigation_view_progress: Fortschritt ansehen
-  dashboard_navigation_view_text_responses: Textantworten anzeigen
+  dashboard_navigation_view_progress: Fortschritt
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Schüler hinzufügen
   dashboard_navigation_manage_students: Schüler verwalten
   dashboard_navigation_lesson_plans_resources: Unterrichtspläne und Material
-  dashboard_navigation_view_stats: Statistik ansehen
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Lerngruppe: %{section_name}'
   dashboard_navigation_student: 'Schüler: %{student_name}'
   dashboard_progress_not_started: Nicht gestartet
@@ -657,7 +657,7 @@ de-DE:
   dashboard_announcements: Ankündigungen
   dashboard_announce_view_all: Alle anzeigen
   dashboard_announce_message: '<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme an der Hour of Code 2015! In allen Code-Studio-Anleitungen und Kursen werden Fortschritte nun wieder aufgezeichnet und gespeichert. Hinweis: Die Code.org-Büros sind vom 19. Dezember bis zum 3. Januar geschlossen. Fragen, die bis zum 4. Januar eingesendet werden, werden voraussichtlich verspätet beantwortet.'
-  dashboard_announce_button_text: Mehr erfahren
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: 'Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten führende Köpfe der Bildung, 28 Gouverneure und CEOs von Amerikas größten Firmen ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung von "K-12 computer science education" zu erbitten.'
   dashboard_announce_petition_button: Fügen Sie Ihren Namen ein
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
@@ -777,6 +777,7 @@ de-DE:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
