@@ -247,7 +247,7 @@ which will then be available at http://localhost-studio.code.org:3000/styleguide
 It's especially important to test your changes with localization when modifying layouts. We support
 right-to-left languages and have some special layout tweaks embedded in the CSS to support that.
 
-Running a full localization build can take several minutes. Since localization re-builds javascript files for many languages, the default build target locales are `en_us` and `en_ploc` (pseudolocalized).
+Running a full localization build can take several minutes. Since localization re-builds javascript files for many languages, the default build target locale is `en_us`
 
 Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem.  See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
 
