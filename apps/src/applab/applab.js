@@ -564,7 +564,8 @@ Applab.init = function (config) {
   Applab.channelId = config.channel;
   Applab.firebaseName = config.firebaseName;
   Applab.firebaseAuthToken = config.firebaseAuthToken;
-  Applab.storage = window.dashboard.project.useFirebase() ? FirebaseStorage : AppStorage;
+  var useFirebase = window.dashboard.project.useFirebase() || false;
+  Applab.storage = useFirebase ? FirebaseStorage : AppStorage;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
@@ -752,7 +753,8 @@ Applab.init = function (config) {
 
       designMode.loadDefaultScreen();
 
-      designMode.toggleDesignMode(Applab.startInDesignMode());
+      studioApp.reduxStore.dispatch(changeInterfaceMode(
+        Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
       designMode.configureDragAndDrop();
 
@@ -761,8 +763,14 @@ Applab.init = function (config) {
     }
   }.bind(this);
 
+  // Force phoneFrame on when viewing or editing firebase projects.
+  var playspacePhoneFrame = !config.share && (experiments.isEnabled('phoneFrame') ||
+    useFirebase);
+
   // Push initial level properties into the Redux store
   studioApp.setPageConstants(config, {
+    useFirebase,
+    playspacePhoneFrame,
     channelId: config.channel,
     visualizationHasPadding: !config.noPadding,
     isDesignModeHidden: !!config.level.hideDesignMode,
@@ -773,8 +781,7 @@ Applab.init = function (config) {
     isSubmitted: !!config.level.submitted,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
-    showDebugWatch: false,
-    playspacePhoneFrame: !config.share && experiments.isEnabled('phoneFrame')
+    showDebugWatch: false
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
@@ -1217,6 +1224,11 @@ Applab.encodedFeedbackImage = '';
  * @param {ApplabInterfaceMode} mode
  */
 function onInterfaceModeChange(mode) {
+  Applab.setWorkspaceMode(mode);
+
+  var showDivApplab = (mode !== ApplabInterfaceMode.DESIGN);
+  Applab.toggleDivApplab(showDivApplab);
+
   if (mode === ApplabInterfaceMode.DESIGN) {
     studioApp.resetButtonClick();
   } else if (mode === ApplabInterfaceMode.CODE) {
@@ -1231,6 +1243,21 @@ function onInterfaceModeChange(mode) {
     }
   }
 }
+
+/**
+ * Display the workspace corresponding to the specified mode.
+ * @param {ApplabInterfaceMode} mode
+ */
+Applab.setWorkspaceMode = function (mode) {
+  var designWorkspace = document.getElementById('designWorkspace');
+  designWorkspace.style.display = (ApplabInterfaceMode.DESIGN === mode) ? 'block' : 'none';
+
+  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
+  codeWorkspaceWrapper.style.display = (ApplabInterfaceMode.CODE === mode) ? 'block' : 'none';
+
+  var dataWorkspaceWrapper = document.getElementById('dataWorkspaceWrapper');
+  dataWorkspaceWrapper.style.display = (ApplabInterfaceMode.DATA === mode) ? 'block' : 'none';
+};
 
 /**
  * Show a modal dialog with a title, text, and OK and Cancel buttons
