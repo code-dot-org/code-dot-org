@@ -44,8 +44,6 @@ linters:
     enabled: false
   SingleLinePerSelector:
     enabled: false
-  SpaceAfterPropertyColon:
-    enabled: false
   StringQuotes:
     enabled: false
   UnnecessaryParentReference:
