@@ -152,13 +152,17 @@
         background-color: $lighter_cyan;
         font-family: $gotham-extra-bold;
         font-weight: normal;
-        a { color: white; }
+        a {
+          color: white;
+        }
       }
       &.active {
         background-color: $light_cyan;
         font-family: $gotham-extra-bold;
         font-weight: normal;
-        a { color: white; }
+        a {
+          color: white;
+        }
       }
     }
   }

@@ -199,8 +199,12 @@ img.video_thumbnail {
   height: 44px;
   background-color: $bkgnd_color;
   color: $header_text;
-  a:link {color: $header_text;}
-  a:visited {color: $header_text;}
+  a:link {
+    color: $header_text;
+  }
+  a:visited {
+    color: $header_text;
+  }
 
   .small_font_on_tablet {
     @media screen and (max-width: 1024px) {
@@ -252,11 +256,32 @@ a.header_status_bar:hover {
 
 .main {
   padding: 10px;
-  a:link {font-family: $gotham-extra-bold; font-weight: normal; color: $dark_color;}
-  a:visited {font-family: $gotham-extra-bold; font-weight: normal; color: $dark_color;}
-  a:hover {font-family: $gotham-extra-bold; font-weight: normal; color: $dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: $gotham-extra-bold; font-weight: normal; color: $dark_color; background-color: transparent;}  /* selected link */
-  a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {font-family: FontAwesome;}
+  a:link {
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    color: $dark_color;
+  }
+  a:visited {
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    color: $dark_color;
+  }
+  a:hover {
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    color: $dark_color;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    color: $dark_color;
+    background-color: transparent;
+  }
+  a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
+    font-family: FontAwesome;
+  }
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
@@ -288,10 +313,29 @@ html, body {
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
-  a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
-  a:visited {font-family: $gotham-regular; font-weight: normal; color: white;}
-  a:hover {font-family: $gotham-regular; font-weight: normal; color: white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: $gotham-regular; font-weight: normal; color: white; background-color: transparent;}  /* selected link */
+  a:link {
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: white;
+  }
+  a:visited {
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: white;
+  }
+  a:hover {
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: white;
+    background-color: transparent;
+  }
   select {
     width: auto;
     font-size: 11px;
@@ -299,10 +343,22 @@ html, body {
     margin-bottom: 4px;
     }
   .fineprint {
-    a:link {font-family: $gotham-bold; font-weight: normal;}
-    a:visited {font-family: $gotham-bold; font-weight: normal;}
-    a:hover {font-family: $gotham-bold; font-weight: normal;}
-    a:active {font-family: $gotham-bold; font-weight: normal;}
+    a:link {
+      font-family: $gotham-bold;
+      font-weight: normal;
+    }
+    a:visited {
+      font-family: $gotham-bold;
+      font-weight: normal;
+    }
+    a:hover {
+      font-family: $gotham-bold;
+      font-weight: normal;
+    }
+    a:active {
+      font-family: $gotham-bold;
+      font-weight: normal;
+    }
   }
   .dim {
     display: inline-block;
@@ -452,10 +508,21 @@ $small-footer-standard-width: 400px;
 .user_options, .project_more_popup {
   display: none;
   background-color: white;
-  a:link {color: black;}
-  a:visited {color: black;}
-  a:hover { color: white; background-color: $dark_color; text-decoration: none; }
-  a:active { color: white; background-color: $dark_color; }
+  a:link {
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+  a:hover {
+    color: white;
+    background-color: $dark_color;
+    text-decoration: none;
+  }
+  a:active {
+    color: white;
+    background-color: $dark_color;
+  }
   border: 1px solid black;
   z-index: 100001;
   text-align: left;
@@ -486,7 +553,10 @@ body.embedded_iframe {
 $default-modal-width: 640px;
 
 .modal {
-  a:hover {color: $red; background-color: white; }
+  a:hover {
+    color: $red;
+    background-color: white;
+  }
 
   &#block-documentation-lightbox {
     width: 80% !important;
@@ -1093,7 +1163,10 @@ a.download-video {
 }
 
 .quiet_links {
-  a:link { font-family: $gotham-regular; font-weight: normal; }
+  a:link {
+    font-family: $gotham-regular;
+    font-weight: normal;
+  }
 }
 
 .fixed_width_cell {
