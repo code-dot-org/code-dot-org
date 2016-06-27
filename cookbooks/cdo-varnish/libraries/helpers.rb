@@ -143,16 +143,17 @@ REMOVED_HEADERS = %w(
 )
 
 def process_request(behavior, _)
-  out = ''
   cookies = behavior[:cookies]
-  out << case cookies
-         when 'all'
-           '# Allow all request cookies.'
-         when 'none'
-           'cookie.filter_except("NO_CACHE");'
-         else
-           cookies.map{ |c| extract_cookie(c)}.join + "cookie.filter_except(\"#{cookies.join(',')}\");"
-         end
+  out = (
+    case cookies
+    when 'all'
+      '# Allow all request cookies.'
+    when 'none'
+      'cookie.filter_except("NO_CACHE");'
+    else
+      cookies.map{ |c| extract_cookie(c)}.join + "cookie.filter_except(\"#{cookies.join(',')}\");"
+    end
+  )
   REMOVED_HEADERS.each do |remove_header|
     name, value = remove_header.split ':'
     unless behavior[:headers].include? name
