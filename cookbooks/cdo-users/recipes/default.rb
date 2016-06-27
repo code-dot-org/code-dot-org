@@ -42,7 +42,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
     '.inputrc',
     '.profile',
   ].each do |dotfile|
-    template File.join(home_directory, "#{dotfile}") do
+    template File.join(home_directory, dotfile.to_s) do
       action :create_if_missing
       source "#{dotfile[1..-1]}.erb"
       #variables( )

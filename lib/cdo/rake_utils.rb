@@ -73,7 +73,7 @@ module RakeUtils
   def self.exec_in_background(command)
     puts "Running `#{command}` in background"
     fork do
-      exec "#{command}"
+      exec command.to_s
     end
   end
 

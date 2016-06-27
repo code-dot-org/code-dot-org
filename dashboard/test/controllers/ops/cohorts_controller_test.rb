@@ -271,7 +271,7 @@ module Ops
 
     def teacher_params
       (1..5).map do |x|
-        {ops_first_name: 'Teacher', ops_last_name: "#{x}", email: "teacher_#{x}@school.edu", district: @district.name}
+        {ops_first_name: 'Teacher', ops_last_name: x.to_s, email: "teacher_#{x}@school.edu", district: @district.name}
       end
     end
 

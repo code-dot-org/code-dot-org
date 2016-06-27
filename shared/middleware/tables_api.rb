@@ -343,7 +343,7 @@ class TablesApi < Sinatra::Base
     limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
     limits.set_approximate_row_count(records.length)
 
-    redirect "#{table_url}"
+    redirect table_url.to_s
   end
 
   #

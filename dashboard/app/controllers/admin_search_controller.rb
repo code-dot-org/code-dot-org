@@ -32,7 +32,7 @@ class AdminSearchController < ApplicationController
         end
       end
       if params[:sectionFilter].present?
-        array_of_student_ids = Section.where(code: "#{params[:sectionFilter]}").
+        array_of_student_ids = Section.where(code: (params[:sectionFilter]).to_s).
           joins("INNER JOIN followers ON followers.section_id = sections.id").
           pluck('student_user_id').
           to_a
