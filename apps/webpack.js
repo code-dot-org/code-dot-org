@@ -139,7 +139,7 @@ function create(options) {
   });
 
   if (minify) {
-    config.plugins.concat(
+    config.plugins = config.plugins.concat(
       new webpack.optimize.UglifyJsPlugin({
         compressor: {
           warnings: false
@@ -149,7 +149,7 @@ function create(options) {
   }
 
   if (watch) {
-    config.plugins.concat(
+    config.plugins = config.plugins.concat(
       new LiveReloadPlugin({
         appendScriptTag: AUTO_RELOAD
       })

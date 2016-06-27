@@ -482,7 +482,7 @@ module.exports = function (grunt) {
   };
 
   config.notify = {
-    browserify: {options: {message: 'Browserify build completed.'}},
+    'js-build': {options: {message: 'JS build completed.'}},
     sass: {options: {message: 'SASS build completed.'}},
     content: {options: {message: 'Content build completed.'}},
     ejs: {options: {message: 'EJS build completed.'}},
@@ -557,7 +557,7 @@ module.exports = function (grunt) {
     'prebuild',
     'webpack:build'
   ].concat([
-    'notify:browserify',
+    'notify:js-build',
     // Skip minification in development environment.
     envOptions.dev ? 'noop' : 'webpack:uglify',
     // Skip minification in development environment.
