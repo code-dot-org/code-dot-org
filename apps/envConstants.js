@@ -21,10 +21,15 @@ function getMoocEnv(name) {
 
 // Export a set of environment variables used by our build process
 module.exports = {
+  // If set, page will reload itself when webpack bundle changes
   AUTO_RELOAD: getBoolEnv('AUTORELOAD'),
+  // Can be set to build a single app
   APP: getMoocEnv('APP'),
+  // If set, will build uncompressed JS
   DEV: !!getMoocEnv('DEV'),
+  // Used by karma to force singleRun mode
   WATCH: !!getMoocEnv('WATCH'),
+  // If set, will collect code coverage info
   COVERAGE: getBoolEnv('COVERAGE'),
   NODE_ENV: process.env.NODE_ENV,
   CIRCLECI: process.env.CIRCLECI,
