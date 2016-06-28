@@ -962,7 +962,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  # TODO(asher): Consolidate the tests when the user is an admin.
+  # TODO(asher): Consolidate the tests when the user is an admin. In particular,
+  # these scripts should no longer exist, should be accessible to noone, and
+  # will go away.
   test "should not get show of admin script if signed in as admin" do
     admin_script = create_admin_script
 
