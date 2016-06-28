@@ -206,7 +206,7 @@ class ScriptLevel < ActiveRecord::Base
         kind: kind,
         icon: level.icon,
         title: level_display_text,
-        url: self.url
+        url: url
     }
 
     summary[:name] = level.name if script.professional_learning_course?
