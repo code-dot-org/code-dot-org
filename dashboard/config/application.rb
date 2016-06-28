@@ -64,7 +64,8 @@ module Dashboard
 
     config.encoding = 'utf-8'
 
-    Rails.application.routes.default_url_options[:host] = CDO.canonical_hostname('studio.code.org')
+    Rails.application.routes.default_url_options[:host] =
+      Rails.env.test? ? 'test.host' : CDO.canonical_hostname('studio.code.org')
 
     config.generators do |g|
       g.template_engine :haml
