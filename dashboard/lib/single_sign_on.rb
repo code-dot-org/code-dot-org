@@ -10,11 +10,11 @@ class SingleSignOn
   attr_accessor :sso_secret, :sso_url
 
   def self.sso_secret
-    raise RuntimeError, "sso_secret not implemented on class, be sure to set it on instance"
+    raise "sso_secret not implemented on class, be sure to set it on instance"
   end
 
   def self.sso_url
-    raise RuntimeError, "sso_url not implemented on class, be sure to set it on instance"
+    raise "sso_url not implemented on class, be sure to set it on instance"
   end
 
   def self.parse(payload, sso_secret = nil)
@@ -25,9 +25,9 @@ class SingleSignOn
     if sso.sign(parsed["sso"]) != parsed["sig"]
       diags = "\n\nsso: #{parsed["sso"]}\n\nsig: #{parsed["sig"]}\n\nexpected sig: #{sso.sign(parsed["sso"])}"
       if parsed["sso"] =~ /[^a-zA-Z0-9=\r\n\/+]/m
-        raise RuntimeError, "The SSO field should be Base64 encoded, using only A-Z, a-z, 0-9, +, /, and = characters. Your input contains characters we don't understand as Base64, see http://en.wikipedia.org/wiki/Base64 #{diags}"
+        raise "The SSO field should be Base64 encoded, using only A-Z, a-z, 0-9, +, /, and = characters. Your input contains characters we don't understand as Base64, see http://en.wikipedia.org/wiki/Base64 #{diags}"
       else
-        raise RuntimeError, "Bad signature for payload #{diags}"
+        raise "Bad signature for payload #{diags}"
       end
     end
 
