@@ -2165,6 +2165,14 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     $(window).trigger('droplet_change', ['scrollpalette']);
   });
 
+  $('.droplet-main-scroller').on('scroll', function (e) {
+    $(window).trigger('droplet_change', ['scrolleditor']);
+  });
+
+  this.editor.aceEditor.getSession().on("changeScrollTop", function () {
+    $(window).trigger('droplet_change', ['scrollace']);
+  });
+
   $.expr[':'].textEquals = function (el, i, m) {
       var searchText = m[3];
       var match = $(el).text().trim().match("^" + searchText + "$");
