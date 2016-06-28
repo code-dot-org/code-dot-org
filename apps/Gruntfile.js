@@ -285,7 +285,7 @@ module.exports = function (grunt) {
     }
   };
 
-  var outputDir = 'build/package/js/';
+  var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
   };
@@ -346,21 +346,21 @@ module.exports = function (grunt) {
 
   config.webpack = {
     build: webpackConfig.create({
-      output: path.resolve(__dirname, outputDir),
+      output: path.resolve(__dirname, OUTPUT_DIR),
       entries: entries,
       minify: false,
       watch: false,
       piskelDevMode: PISKEL_DEVELOPMENT_MODE
     }),
     uglify: webpackConfig.create({
-      output: path.resolve(__dirname, outputDir),
+      output: path.resolve(__dirname, OUTPUT_DIR),
       entries: entries,
       minify: true,
       watch: false,
       piskelDevMode: PISKEL_DEVELOPMENT_MODE
     }),
     watch: webpackConfig.create({
-      output: path.resolve(__dirname, outputDir),
+      output: path.resolve(__dirname, OUTPUT_DIR),
       entries: entries,
       minify: false,
       watch: true,
@@ -402,8 +402,8 @@ module.exports = function (grunt) {
         'p5play/p5.js'
       ].map(function (src) {
         return [
-          outputDir + src.replace(/\.js$/, '.min.js'), // dst
-          outputDir + src // src
+          OUTPUT_DIR + src.replace(/\.js$/, '.min.js'), // dst
+          OUTPUT_DIR + src // src
         ];
       }))
     }
