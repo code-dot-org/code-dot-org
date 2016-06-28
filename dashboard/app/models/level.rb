@@ -91,6 +91,10 @@ class Level < ActiveRecord::Base
     "<xml id='toolbox' style='display: none;'>#{toolbox(type)}</xml>"
   end
 
+  def host_level
+    project_template_level || self
+  end
+
   # Overriden by different level types.
   def toolbox(type)
   end
