@@ -242,5 +242,8 @@
   "when": "ko",
   "whenRun": "ob zagonu",
   "workspaceHeaderShort": "Delovni prostor: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }
