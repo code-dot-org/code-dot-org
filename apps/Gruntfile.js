@@ -7,8 +7,7 @@ var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
-
-var AUTO_RELOAD = ['true', '1'].indexOf(process.env.AUTO_RELOAD) !== -1;
+var envConstants = require('./envConstants');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -41,10 +40,7 @@ module.exports = function (grunt) {
   var PLAYGROUND_PORT = grunt.option('playground-port') || 8000;
 
   /** @const {string} */
-  var SINGLE_APP = grunt.option('app') || process.env.APP || process.env.MOOC_APP;
-  if (process.env.MOOC_APP) {
-    console.warn('The MOOC_APP environment variable is deprecated. Use APP instead');
-  }
+  var SINGLE_APP = grunt.option('app') || envConstants.APP;
 
   /** @const {string[]} */
   var ALL_APPS = [
@@ -68,16 +64,8 @@ module.exports = function (grunt) {
 
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
-  // Parse options from environment.
-  var envOptions = {
-    dev: (process.env.MOOC_DEV === '1' || process.env.DEV === '1')
-  };
-  if (process.env.MOOC_DEV) {
-    console.warn('The MOOC_DEV environment variable is deprecated. Use DEV instead');
-  }
-
-  var ace_suffix = envOptions.dev ? '' : '-min';
-  var dotMinIfNotDev = envOptions.dev ? '' : '.min';
+  var ace_suffix = envConstants.DEV ? '' : '-min';
+  var dotMinIfNotDev = envConstants.DEV ? '' : '.min';
   var piskelRoot = String(child_process.execSync('`npm bin`/piskel-root')).replace(/\s+$/g,'');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
@@ -302,13 +290,10 @@ module.exports = function (grunt) {
     convertScssVars: './script/convert-scss-variables.js',
   };
 
-  if (process.env.MOOC_WATCH) {
-    console.warn('The MOOC_WATCH environment variable is deprecated. Use WATCH instead');
-  }
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
-      singleRun: process.env.WATCH !== '1',
+      singleRun: envConstants.WATCH,
       files: [
         {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
@@ -383,7 +368,7 @@ module.exports = function (grunt) {
     })
   };
 
-  var ext = envOptions.dev ? 'uncompressed' : 'compressed';
+  var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
   config.concat = {
     vendor: {
       nonull: true,
@@ -431,7 +416,7 @@ module.exports = function (grunt) {
       tasks: ['newer:sass', 'notify:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: AUTO_RELOAD,
+        livereload: envConstants.AUTO_RELOAD,
         interrupt: true
       }
     },
@@ -440,7 +425,7 @@ module.exports = function (grunt) {
       tasks: ['newer:copy', 'notify:content'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: AUTO_RELOAD
+        livereload: envConstants.AUTO_RELOAD
       }
     },
     vendor_js: {
@@ -448,7 +433,7 @@ module.exports = function (grunt) {
       tasks: ['newer:concat', 'newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: AUTO_RELOAD
+        livereload: envConstants.AUTO_RELOAD
       }
     },
     messages: {
@@ -456,7 +441,7 @@ module.exports = function (grunt) {
       tasks: ['messages', 'notify:messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: AUTO_RELOAD
+        livereload: envConstants.AUTO_RELOAD
       }
     },
   };
@@ -559,9 +544,9 @@ module.exports = function (grunt) {
   ].concat([
     'notify:js-build',
     // Skip minification in development environment.
-    envOptions.dev ? 'noop' : 'webpack:uglify',
+    envConstants.DEV ? 'noop' : 'webpack:uglify',
     // Skip minification in development environment.
-    envOptions.dev ? 'noop' : 'uglify:lib',
+    envConstants.DEV ? 'noop' : 'uglify:lib',
     'postbuild'
   ]));
 
