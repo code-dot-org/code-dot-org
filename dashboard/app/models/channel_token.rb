@@ -18,16 +18,12 @@ class ChannelToken < ActiveRecord::Base
   belongs_to :user
   belongs_to :level
 
-  def self.create_channel_token(level, user, ip, data = {})
-    # The channel should be associated with the template level, if present.
-    # Otherwise the current level.
-    host_level = level.project_template_level || level
-
+  def self.find_or_create_channel_token(level, user, ip, data = {})
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       # your own channel
-      ChannelToken.find_or_create_by!(level: host_level, user: user) do |ct|
+      ChannelToken.find_or_create_by!(level: level.host_level, user: user) do |ct|
         # Get a new channel_id.
         ct.channel = create_channel ip, data
       end
@@ -35,11 +31,7 @@ class ChannelToken < ActiveRecord::Base
   end
 
   def self.find_channel_token(level, user)
-    # The channel should be associated with the template level, if present.
-    # Otherwise the current level.
-    host_level = level.project_template_level || level
-
-    ChannelToken.find_by(level: host_level, user: user)
+    ChannelToken.find_by(level: level.host_level, user: user)
   end
 
   # Create a new channel.

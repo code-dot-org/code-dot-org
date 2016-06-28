@@ -69,7 +69,7 @@ class ProjectsController < ApplicationController
     return if redirect_under_13(@level)
     redirect_to action: 'edit', channel_id: ChannelToken.create_channel(request.ip, {
       name: 'Untitled Project',
-      useFirebase: use_firebase_for_new_project?,
+      useFirebase: @level.game.use_firebase_for_new_project?,
       level: polymorphic_url([params[:key], 'project_projects'])
     })
   end
