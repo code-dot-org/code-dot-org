@@ -586,28 +586,36 @@ function getUnsafeHtmlReporter(sanitizationTarget) {
   };
 }
 
+/**
+ * Parses/modifies a single screen's html representation as loaded from levelHTML.
+ *
+ * @param screenEl {Element|string} element encapsulating the dom for a single screen
+ *     within a level's html. Can be a string of html as well. Note: If this is an element,
+ *     then this function will have side effects.
+ * @param allowDragging {boolean} Whether to make elements resizable and draggable.
+ * @param prefix {string} Optional prefix to attach to element ids of children and
+ *     grandchildren after parsing. Defaults to ''.
+ *
+ * @returns returns the modified version of the element passed in for screenEl.
+ */
 designMode.parseScreenFromLevelHtml = function (screenEl, allowDragging, prefix) {
-  var children = $(screenEl);
-  children.each(function () {
-    elementUtils.addIdPrefix(this, prefix);
-  });
-  children.children().each(function () {
+  var screen = $(screenEl);
+  elementUtils.addIdPrefix(screen[0], prefix);
+  screen.children().each(function () {
     elementUtils.addIdPrefix(this, prefix);
   });
 
   if (allowDragging) {
-    // children are screens. make grandchildren draggable
-    makeDraggable(children.children());
+    // screen are screens. make grandchildren draggable
+    makeDraggable(screen.children());
   }
 
-  children.each(function () {
-    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
-  });
-  children.children().each(function () {
+  elementLibrary.onDeserialize(screen[0], designMode.updateProperty.bind(this));
+  screen.children().each(function () {
     var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
     elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
   });
-  return children[0];
+  return screen[0];
 };
 
 /**
