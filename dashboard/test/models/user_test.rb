@@ -768,14 +768,16 @@ class UserTest < ActiveSupport::TestCase
 
     assert student.encrypted_password.blank?
 
-    assert student.update_with_password(name: "JADENDUMPLING",
-                                         email: "jaden.ke1@education.nsw.gov.au",
-                                         password: "[FILTERED]",
-                                         password_confirmation: "[FILTERED]",
-                                         current_password: "",
-                                         locale: "en-us",
-                                         gender: "",
-                                         age: "10")
+    assert student.update_with_password(
+      name: "JADENDUMPLING",
+      email: "jaden.ke1@education.nsw.gov.au",
+      password: "[FILTERED]",
+      password_confirmation: "[FILTERED]",
+      current_password: "",
+      locale: "en-us",
+      gender: "",
+      age: "10"
+    )
 
     assert_equal "JADENDUMPLING", student.name
   end
@@ -900,8 +902,10 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress_sync does not call track_proficiency if hint used' do
     script_level = create :script_level
     student = create :student
-    create :hint_view_request, user_id: student.id,
-      level_id: script_level.level_id, script_id: script_level.script_id
+    create :hint_view_request,
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id
 
     User.expects(:track_proficiency).never
     track_progress(student, script_level, 100)
@@ -910,8 +914,11 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
     script_level = create :script_level
     student = create :student
-    AuthoredHintViewRequest.create(user_id: student.id,
-      level_id: script_level.level_id, script_id: script_level.script_id)
+    AuthoredHintViewRequest.create(
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id
+    )
 
     User.expects(:track_proficiency).never
     track_progress(student, script_level, 100)
