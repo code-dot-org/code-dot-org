@@ -1,6 +1,5 @@
 import React from 'react';
-import PaneHeader from './PaneHeader';
-const PaneSection = PaneHeader.PaneSection;
+import PaneHeader, { PaneSection } from './PaneHeader';
 import { connect } from 'react-redux';
 import msg from '../locale';
 import color from '../color';
@@ -42,7 +41,11 @@ const styles = {
     border: '1px solid gray'
   },
   input: {
-    width: `calc(100% - ${cellPadding}px)`
+    width: 'calc(100% - 14px)',
+    height: 20,
+    border: '1px solid gray',
+    borderRadius: 5,
+    padding: '4px 6px'
   },
   button: {
     margin: 0
@@ -98,7 +101,9 @@ const AddTableRow = React.createClass({
 
 const DataWorkspace = React.createClass({
   propTypes: {
-    style: React.PropTypes.object.isRequired
+    style: React.PropTypes.object.isRequired,
+    localeDirection: React.PropTypes.string.isRequired,
+    isRunning: React.PropTypes.bool.isRequired
   },
   render() {
     return (
@@ -145,7 +150,6 @@ const DataWorkspace = React.createClass({
            </table>
           </div>
         </div>
->>>>>>> add initial content to dataWorksapce
       </div>
     );
   }
