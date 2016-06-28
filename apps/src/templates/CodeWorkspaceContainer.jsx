@@ -102,7 +102,7 @@ var CodeWorkspaceContainer = React.createClass({
           <CodeWorkspace/>
           {this.props.hasDesignMode &&
               <ProtectedStatefulDiv id="designWorkspace" style={commonStyles.hidden}/>}
-          {this.props.hasDataMode && <DataWorkspace style={commonStyles.hidden}/>}
+          {this.props.hasDataMode && <DataWorkspace/>}
         </div>
       </div>
     );

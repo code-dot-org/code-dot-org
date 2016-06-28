@@ -1,3 +1,4 @@
+import { ApplabInterfaceMode } from '../applab/constants';
 import React from 'react';
 import PaneHeader, { PaneSection } from './PaneHeader';
 import { connect } from 'react-redux';
@@ -101,13 +102,16 @@ const AddTableRow = React.createClass({
 
 const DataWorkspace = React.createClass({
   propTypes: {
-    style: React.PropTypes.object.isRequired,
     localeDirection: React.PropTypes.string.isRequired,
-    isRunning: React.PropTypes.bool.isRequired
+    isRunning: React.PropTypes.bool.isRequired,
+    isVisible: React.PropTypes.bool.isRequired
   },
   render() {
+    var style = {
+      display: this.props.isVisible ? 'block' : 'none'
+    };
     return (
-      <div id='dataWorkspaceWrapper' style={this.props.style}>
+      <div id='dataWorkspaceWrapper' style={style}>
         <PaneHeader
             id='headers'
             dir={this.props.localeDirection}
@@ -157,5 +161,6 @@ const DataWorkspace = React.createClass({
 
 export default connect(state => ({
   localeDirection: state.pageConstants.localeDirection,
-  isRunning: !!state.runState.isRunning
+  isRunning: !!state.runState.isRunning,
+  isVisible: ApplabInterfaceMode.DATA === state.interfaceMode
 }))(DataWorkspace);
