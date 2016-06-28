@@ -9,11 +9,8 @@ import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Radium = require('radium');
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
 var commonStyles = require('../commonStyles');
-var CodeWorkspace = require('./CodeWorkspace');
-var DataWorkspace = require('./DataWorkspace');
 import { connect } from 'react-redux';
 
 var styles = {
@@ -59,8 +56,6 @@ var styles = {
 var CodeWorkspaceContainer = React.createClass({
   propTypes: {
     // redux provided
-    hasDesignMode: React.PropTypes.bool,
-    hasDataMode: React.PropTypes.bool,
     hidden: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
@@ -96,21 +91,14 @@ var CodeWorkspaceContainer = React.createClass({
 
     return (
       <div style={mainStyle} className="editor-column">
-        <div
-            id="codeWorkspace"
-            style={styles.codeWorkspace}>
-          <CodeWorkspace/>
-          {this.props.hasDesignMode &&
-              <ProtectedStatefulDiv id="designWorkspace" style={commonStyles.hidden}/>}
-          {this.props.hasDataMode && <DataWorkspace/>}
+        <div id="codeWorkspace" style={styles.codeWorkspace}>
+          {this.props.children}
         </div>
       </div>
     );
   }
 });
 module.exports = connect(state => ({
-  hasDataMode: state.pageConstants.hasDataMode,
-  hasDesignMode: state.pageConstants.hasDesignMode,
   hidden: state.pageConstants.hideSource,
   isRtl: state.pageConstants.localeDirection === 'rtl',
   noVisualization: state.pageConstants.noVisualization,
