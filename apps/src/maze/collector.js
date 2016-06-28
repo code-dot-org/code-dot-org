@@ -9,7 +9,7 @@
  */
 
 var TestResults = require('../constants.js').TestResults;
-var commonMsg = require('../locale');
+var mazeMsg = require('./locale');
 var tiles = require('./tiles');
 
 const TOO_MANY_BLOCKS = 0;
@@ -95,13 +95,13 @@ Collector.prototype.onExecutionFinish = function () {
 Collector.prototype.getMessage = function (terminationValue) {
   switch (terminationValue) {
     case TOO_MANY_BLOCKS:
-      return commonMsg.collectorTooManyBlocks(this.maxBlocks_);
+      return mazeMsg.collectorTooManyBlocks({blockLimit: this.maxBlocks_});
     case COLLECTED_NOTHING:
-      return commonMsg.collectorCollectedNothing();
+      return mazeMsg.collectorCollectedNothing();
     case COLLECTED_SOME:
-      return commonMsg.collectorCollectedSome(this.getTotalCollected());
+      return mazeMsg.collectorCollectedSome({count: this.getTotalCollected()});
     case COLLECTED_EVERYTHING:
-      return commonMsg.collectorCollectedEverything(this.getPotentialMaxCollected());
+      return mazeMsg.collectorCollectedEverything({count: this.getPotentialMaxCollected()});
     default:
       return null;
   }
