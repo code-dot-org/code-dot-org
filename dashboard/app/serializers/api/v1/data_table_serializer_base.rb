@@ -48,13 +48,13 @@ class Api::V1::DataTableSerializerBase < ::ActiveModel::Serializer
   def generate_columns
     column_definitions.map do |column_definition|
       case column_definition
-        when String, Symbol
-          {label: titleize_with_id(column_definition), type: 'string'}
-        when Hash
-          type = column_definition[:type] || 'string'
-          {label: titleize_with_id(column_definition[:key]), type: type}
-        else
-          raise "Unexpected column definition type: #{column_definition.class}"
+      when String, Symbol
+        {label: titleize_with_id(column_definition), type: 'string'}
+      when Hash
+        type = column_definition[:type] || 'string'
+        {label: titleize_with_id(column_definition[:key]), type: type}
+      else
+        raise "Unexpected column definition type: #{column_definition.class}"
       end
     end
   end
@@ -69,18 +69,18 @@ class Api::V1::DataTableSerializerBase < ::ActiveModel::Serializer
     {c:
       column_definitions.map do |column_definition|
         case column_definition
-          when String, Symbol
-            {v: source_row[column_definition]}
-          when Hash
-            value = source_row[column_definition[:key]]
-            {v: value}.tap do |row|
-              if column_definition[:format]
-                row.merge!({f: column_definition[:format].call(value)})
-              end
+        when String, Symbol
+          {v: source_row[column_definition]}
+        when Hash
+          value = source_row[column_definition[:key]]
+          {v: value}.tap do |row|
+            if column_definition[:format]
+              row.merge!({f: column_definition[:format].call(value)})
             end
-          else
-            raise "Unexpected column definition type: #{column_definition.class}"
           end
+        else
+          raise "Unexpected column definition type: #{column_definition.class}"
+        end
       end
     }
   end
