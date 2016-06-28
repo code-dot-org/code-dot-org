@@ -62,6 +62,14 @@ progress.renderStageProgress = function (stageData, progressData, scriptName, cu
     progress: _.mapValues(progressData.levels, level => level.submitted ? SUBMITTED_RESULT : level.result)
   });
 
+  // Provied a function that can be called later to merge in progress now saved on the client.
+  progress.refreshStageProgress = function () {
+    store.dispatch({
+      type: 'MERGE_PROGRESS',
+      progress: clientState.allLevelsProgress()[scriptName] || {}
+    });
+  };
+
   ReactDOM.render(
     <Provider store={store}>
       <StageProgress />
