@@ -4,10 +4,10 @@
   'yes': Sim
   'no': Não
   select_language: Selecione seu idioma
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org em breve irá remover o suporte para o Internet Explorer
+    8, 9 e 10. Por favor, atualize para um navegador moderno.
+  upgrade_ie_message_csedweek: CSEdWeek.org em breve irá remover o suporte para o
+    Internet Explorer 8, 9 e 10. Por favor, atualize para um navegador moderno.
   upgrade_ie_link: Saiba mais
   en: Ciência da Computação
   computer_science_edweek: Semana de Educação em Ciência da Computação
@@ -712,7 +712,7 @@
   dashboard_navigation_section_speakers: Ciência da computação <br/> Palestrantes
     convidados
   dashboard_navigation_all_sections: Contas e progresso do aluno
-  dashboard_navigation_view_progress: Exibir progresso
+  dashboard_navigation_view_progress: Progresso
   dashboard_navigation_view_text_responses: Ver respostas dissertativas
   dashboard_navigation_view_assessments: Avaliações
   dashboard_navigation_add_students: Adicionar alunos
@@ -742,7 +742,7 @@
   dashboard_sections_table_secret: Tipo de login
   dashboard_sections_table_grade: Grau
   dashboard_sections_table_course: Curso
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Fases Extras
   dashboard_sections_table_students: Alunos
   dashboard_sections_table_code: Código da seção
   dashboard_sections_name: Nome da seção
@@ -1052,6 +1052,7 @@
   cspunit6_name: 'Post-AP: Bancos de dados em aplicativos'
   csp1_name: 'Unidade 1: A Internet'
   csp2_name: 'Unidade 2: Informação Digital'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Teste completo - 50 questões
   cspexam1-mWU7ilDYM9_name: Teste parte 1 - 25 perguntas
   cspexam2-AKwgAh1ac5_name: Teste parte 2 - 25 perguntas

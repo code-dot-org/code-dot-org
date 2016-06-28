@@ -32,19 +32,14 @@ var ANIMATION_LENGTH_MS = applabConstants.ANIMATION_LENGTH_MS;
  * @param {!Store} store
  */
 designMode.setupReduxSubscribers = function (store) {
-  var state = {
-    screens: {}
-  };
+  var state;
   store.subscribe(function () {
     var lastState = state;
     state = store.getState();
 
-    if (state.screens.currentScreenId !== lastState.screens.currentScreenId) {
+    if (!lastState ||
+        state.screens.currentScreenId !== lastState.screens.currentScreenId) {
       renderScreens(state.screens.currentScreenId);
-    }
-
-    if (state.interfaceMode !== lastState.interfaceMode) {
-      onInterfaceModeChange(state.interfaceMode);
     }
   });
 };
@@ -635,26 +630,6 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
     elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
   });
 };
-
-designMode.toggleDesignMode = function (enable) {
-  studioApp.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
-};
-
-function onInterfaceModeChange(mode) {
-  var enable = (ApplabInterfaceMode.DESIGN === mode);
-  var designWorkspace = document.getElementById('designWorkspace');
-  if (!designWorkspace) {
-    // Currently we don't run design mode in some circumstances (i.e. user is
-    // not an admin)
-    return;
-  }
-  designWorkspace.style.display = enable ? 'block' : 'none';
-
-  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
-  codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
-
-  Applab.toggleDivApplab(!enable);
-}
 
 /**
  * When we make elements resizable, we wrap them in an outer div. Given an outer

@@ -40,7 +40,6 @@ class Callout < ActiveRecord::Base
   end
 
   def self.first_or_create_from_tsv_row!(row_data)
-
     id_or_name = row_data[CSV_HEADERS[:script_id]]
 
     unless id_or_name.to_i != 0

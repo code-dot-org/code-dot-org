@@ -34,7 +34,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     result
   end
 
-  def self.commitments()
+  def self.commitments
     (@commitments ||= {})[I18n.locale] ||= commitments_with_i18n_labels(
       'annually',
       'monthly',
@@ -43,14 +43,14 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     )
   end
 
-  def self.locations()
+  def self.locations
     (@locations ||= {})[I18n.locale] ||=  locations_with_i18n_labels(
       'onsite',
       'remote',
     )
   end
 
-  def self.experiences()
+  def self.experiences
     (@experiences ||= {})[I18n.locale] ||= experiences_with_i18n_labels(
       'unspecified',
       'tech_company',
@@ -59,7 +59,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     )
   end
 
-  def self.distances()
+  def self.distances
     # distance is in km
     (@distances ||= {})[I18n.locale] ||=  distances_with_i18n_labels(
       '8',
@@ -69,7 +69,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     )
   end
 
-  def self.num_volunteers()
+  def self.num_volunteers
     (@num_volunteers ||= {})[I18n.locale] ||= num_volunteers_with_i18n_labels(
       '5',
       '10',

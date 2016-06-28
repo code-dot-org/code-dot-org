@@ -29,6 +29,8 @@ fr:
   unsubmit: Ne pas envoyer
   previous_page: Page précédente
   next_page: Page suivante
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Annuler
   okay: OK
   heading_x_of_y: '%{heading} (page %{x} sur %{y})'
@@ -86,6 +88,7 @@ fr:
     teacher_title: "S'inscrire comme enseignant"
     student_pitch: Inscription à Code.org pour les élèves
     student_title: "S'inscrire comme élève"
+    signup_title: Sign up for Code.org
     school_name: "Nom de l'école (facultatif)"
     school_address: "Adresse de l'école (facultatif)"
     address_placeholder: adresse, ville, état, code postal
@@ -104,6 +107,9 @@ fr:
     student_terms: "J'accepte les <a href='http://code.org/tos'>Conditions générales d'utilisation</a> de Code.org. Si j'ai moins de 13 ans, je confirme par ce formulaire que j'ai une autorisation provenant d'un de mes parent ou tuteur légal m’autorisant à utiliser les services de Code.org. <br/>Les adresses e-mail des utilisateurs de moins de 13 ans ne sont pas stockées sous une forme qui nous permet de les contacter."
     teacher_terms: "J'accepte les <a href='http://code.org/tos'>Conditions générales d'utilisation</a> de Code.org."
     additional_information: Nous avons besoin de quelques informations supplémentaires pour continuer l’inscription.
+    user_type_label: Account Type
+    user_type_teacher: Enseignant
+    user_type_student: Élève
   signin_form:
     title: Tu as déjà un compte ? Authentification
     login: "Courriel ou nom d'utilisateur"
@@ -338,7 +344,7 @@ fr:
     announcement_title: Annonces
     announcement_view_all: Tout voir
     announcement_message: "<b>Le 16 décembre 2015</b> - Nous vous remercions de votre participation à l'Heure de Code 2015 ! Le suivi et l'enregistrement de la progression ont maintenant repris pour tous les cours et tutoriels de Code Studio. Remarque : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier. Veuillez prévoir un retard des réponses aux questions que vous poserez jusqu'au 4 janvier."
-    announcement_button: Pour en savoir plus
+    announcement_button: Test the feature
     announcement_petition: "Comme enseignant, vous ouvrez la voie à un mouvement visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique. Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine, les responsables de l’éducation, 28 gouverneurs et les PDG des plus grandes entreprises d'Amérique se sont réunis pour rédiger une lettre ouverte demandant au Congrès américain de financer l’enseignement de l'informatiques du K-12."
     announcement_petition_button: Ajoutez votre nom
   move_students:
@@ -681,10 +687,10 @@ fr:
       no_icons_found: Aucune icône trouvée
     playzone:
       artist_description: "Dessine des super images et dessins avec l'Artiste\\_!"
-      artist_title: New Drawing
+      artist_title: Nouveau dessin
       continue_button: Go on to the next Stage
       playlab_description: Programme une histoire ou un jeu dans le Labo de jeux !
-      playlab_title: New App
+      playlab_title: Nouvelle application
       primary_header: 'Congratulations! You finished %{stageName}!'
       projects_description: Revisit one of your existing projects.
       projects_title: Open a project
@@ -694,18 +700,27 @@ fr:
     content: Contenu
     practice: Pratiques de l’enseignant
   external_links:
-    disclaimer_md: "<strong>Avertissement: Vous quittez le site Code.org vers un site qui n'est pas géré par Code.org.</strong> Ce site peut avoir une politique de confidentialité différente de celle de Code.org.<br/><br/>Nous avons sélectionné ces ressources de tiers car nous pensons qu'elles vous seront utiles. Même si nous ne sommes pas directement responsables du contenu de ce site, veuillez <a href='mailto:support@code.org'>contacter le support</a> si vous trouvez le contenu répréhensible, ou si le site n'est plus disponible."
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
   hoc_download:
     title: Hour of Code downloads
-    capsule_title: Do you have Internet?
+    capsule_title: Vous avez Internet ?
     capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: No Internet?
+    instructions_headline: Pas d’Internet ?
     instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
     minecraft_name: Minecraft Hour Of Code
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: 'Download %{app_name} for offline use (136MB)'
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    download_in_english: 'Télécharger en anglais :'
+    download_in_spanish: 'Télécharger en espagnol :'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

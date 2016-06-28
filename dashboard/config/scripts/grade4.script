@@ -1,0 +1,27 @@
+title 'Grade 4'
+description_short "Planning Script for CSF 2.0"
+description "Planning Script for CSF 2.0"
+description_audience "Ages 9-99"
+
+stage 'Mixed Review #1 (Ramp Up)'
+stage 'Conditionals'
+stage 'Bee: Conditionals'
+stage 'PlayLab: Conditionals'
+stage 'Songwriting'
+stage 'Bee: Functions'
+stage 'Decision Trees'
+stage 'Choose Your Own Adventure'
+stage 'Project #1'
+stage 'Nested Loops'
+stage 'Artist: Nested Loops'
+stage 'Mixed Review #2 (Conditionals, Events, Functions)'
+stage 'New Artist: Functions'
+level 'MikeStarNested'
+level 'MikeStarHard'
+level 'MikeStar'
+stage 'Project #2'
+stage 'Mixed Review #3 (Deduce the Concept)'
+stage 'Internet'
+stage 'Crowdsourcing'
+stage 'Digital Citizenship'
+

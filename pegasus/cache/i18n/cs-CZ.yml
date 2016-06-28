@@ -681,7 +681,7 @@
   dashboard_navigation_section_pd: Profesionální vývoj
   dashboard_navigation_section_speakers: Informatika <br/> pozvaní řečníci
   dashboard_navigation_all_sections: Studentské účty a pokrok
-  dashboard_navigation_view_progress: Zobrazit průběh
+  dashboard_navigation_view_progress: pokrok
   dashboard_navigation_view_text_responses: Zobrazit textové odpovědi
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Přidat studenty
@@ -1007,6 +1007,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

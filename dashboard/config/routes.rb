@@ -213,7 +213,7 @@ Dashboard::Application.routes.draw do
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
 
-  get '/admin/styleguide', :to => 'admin_styleguide#show', as: 'styleguide'
+  get '/admin/styleguide', :to => redirect('/styleguide/')
 
   get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
@@ -341,6 +341,10 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
+
+      # Routes used by UI test status pages
+      get 'test_logs/:branch/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
+      get 'test_logs/:branch/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
     end
   end
 

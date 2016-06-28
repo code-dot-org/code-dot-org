@@ -442,7 +442,12 @@ StudioApp.prototype.init = function (config) {
         return;
       }
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.reduxStore.dispatch(openInstructionsDialog(shouldAutoClose, false));
+      this.reduxStore.dispatch(openInstructionsDialog({
+        autoClose: shouldAutoClose,
+        showHints: false,
+        aniGifOnly: false,
+        hintsOnly: false
+      }));
     }.bind(this));
   }
 
@@ -605,6 +610,64 @@ StudioApp.prototype.init = function (config) {
 
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
+  }
+};
+
+StudioApp.prototype.getFirstContainedLevelResult_ = function () {
+  var results = this.getContainedLevelResults();
+  if (results.length !== 1) {
+    throw "Exactly one contained level result is currently required.";
+  }
+  return results[0];
+};
+
+StudioApp.prototype.hasValidContainedLevelResult_ = function () {
+  var firstResult = this.getFirstContainedLevelResult_();
+  return typeof firstResult.result.response !== 'undefined' &&
+      firstResult.result.response !== '';
+};
+
+/**
+ * @param {!AppOptionsConfig} config
+ */
+ StudioApp.prototype.notifyInitialRenderComplete = function (config) {
+  if (config.hasContainedLevels && config.containedLevelOps) {
+    this.lockContainedLevelAnswers = config.containedLevelOps.lockAnswers;
+    this.getContainedLevelResults = config.containedLevelOps.getResults;
+
+    $('#containedLevel0').appendTo($('#containedLevelContainer'));
+
+    if (this.hasValidContainedLevelResult_()) {
+      // We already have an answer, don't allow it to be changed, but allow Run
+      // to be pressed so the code can be run again.
+      this.lockContainedLevelAnswers();
+    } else {
+      // No answers yet, disable Run button until there is an answer
+      $('#runButton').prop('disabled', true);
+
+      config.containedLevelOps.registerAnswerChangedFn(levelId => {
+        $('#runButton').prop('disabled', !this.hasValidContainedLevelResult_());
+      });
+    }
+  }
+};
+
+StudioApp.prototype.getContainedLevelResultsInfo = function () {
+  if (this.getContainedLevelResults) {
+    var firstResult = this.getFirstContainedLevelResult_();
+    var containedResult = firstResult.result;
+    var testResults = utils.valueOr(firstResult.testResult,
+        containedResult.result ? this.TestResults.ALL_PASS :
+          this.TestResults.GENERIC_FAIL);
+    return {
+      app: firstResult.app,
+      level: firstResult.id,
+      callback: firstResult.callback,
+      result: containedResult.result,
+      testResults: testResults,
+      program: containedResult.response,
+      feedback: firstResult.feedback
+    };
   }
 };
 
@@ -875,6 +938,10 @@ StudioApp.prototype.toggleRunReset = function (button) {
   }
 
   this.reduxStore.dispatch(setIsRunning(!showRun));
+
+  if (this.lockContainedLevelAnswers) {
+    this.lockContainedLevelAnswers();
+  }
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
@@ -1534,9 +1601,28 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 * {number} testResult More specific data on success or failure of code.
 * {boolean} submitted Whether the (submittable) level is being submitted.
 * {string} program The user program, which will get URL-encoded.
+* {Object} containedLevelResultsInfo Results from the contained level.
 * {function} onComplete Function to be called upon completion.
 */
 StudioApp.prototype.report = function (options) {
+
+  if (options.containedLevelResultsInfo) {
+    // If we have contained level results, just submit those directly and return
+    this.onAttempt({
+      callback: options.containedLevelResultsInfo.callback,
+      app: options.containedLevelResultsInfo.app,
+      level: options.containedLevelResultsInfo.level,
+      serverLevelId: options.containedLevelResultsInfo.level,
+      result: options.containedLevelResultsInfo.result,
+      testResult: options.containedLevelResultsInfo.testResults,
+      submitted: options.submitted,
+      program: options.containedLevelResultsInfo.program,
+      onComplete: options.onComplete
+    });
+    this.enableShowLinesCount = false;
+    return;
+  }
+
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
@@ -1546,7 +1632,6 @@ StudioApp.prototype.report = function (options) {
   });
 
   this.lastTestResult = options.testResult;
-
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
@@ -2360,6 +2445,14 @@ StudioApp.prototype.onDropletToggle_ = function (autoFocus) {
  */
 StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
+};
+
+/**
+ * Do we have any floating blocks that are not going to be handled
+ * gracefully?
+ */
+StudioApp.prototype.hasUnwantedExtraTopBlocks = function () {
+  return this.hasExtraTopBlocks() && !Blockly.showUnusedBlocks;
 };
 
 /**

@@ -146,6 +146,10 @@ ru:
       2-3 Maze 12 (copy 1)_instruction: 'Можешь заменить предыдущее решение только двумя блоками? (Подсказка: Создай цикл, используя блок «повторить несколько раз».)'
       2-3 Maze 12 (copy 2)_instruction: 'Можешь заменить предыдущее решение только двумя блоками? (Подсказка: Создай цикл, используя блок «повторить несколько раз».)'
       2-3 Maze 12 (old)_instruction: Доведи меня до свиньи, в этот раз используя блок «повторить несколько раз»!
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: 'Можешь заменить эти пять блоков только двумя блоками? (Подсказка: Чтобы пройти этот уровень, тебе нужно создать цикл, используя блок «повторить».)'
       2-3 Maze 13 (old)_instruction: Доведи меня до свиньи, в этот раз используя блоки «повторять, пока не»!
       2-3 Maze 13_instruction: |
@@ -331,7 +335,7 @@ ru:
       4-5 Maze 9_instruction: Создай цикл с помощью блока «повторять, пока не».
       4-5 Maze Assessment 1_instruction: 'Тест: Доведи меня до подсолнуха.'
       4-5 Maze Conditionals 1_instruction: Используй блок «повторять, пока не», чтобы доставить зомби к подсолнуху.
-      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
+      4-5 Maze Conditionals 10_instruction: "Сможете добавить только 3 блока, чтобы помочь решить более сложный лабиринт зомби? \\r \\r Если вы сделаете это правильно, он сможет пройти по любому извилистому пути независимо от длины!"
       4-5 Maze Conditionals 2_instruction: Используй блок «повторять, пока не», чтобы доставить зомби к подсолнуху.
       4-5 Maze Conditionals 3_instruction: 'Используй блок «если», чтобы я мог решать, когда поворачивать. Подсказка: тебе понадобится еще один блок, но запомни, как мы его разместили, чтобы в следующий раз ты мог сделать это сам.'
       4-5 Maze Conditionals 4_instruction: Хорошо, это похоже на предыдущую головоломку, но тебе надо помнить, как ты использовал блоки «если» и «повторить» вместе.
@@ -362,16 +366,22 @@ ru:
       4-5 While Loops 7_instruction: Ух ты, теперь здесь три кучи земли! Ты можешь написать программу, которая будет убирать землю с каждой кучи до тех пор, пока поверхность не станет ровной?
       4-5 While Loops 8_instruction: ' Тут действительно глубокая яма и действительно большая куча земли.  Сколько лопат земли необходимо переместить, чтобы выровнять поверхность?  Подсказка: Используй цикл с предусловием для обоих объектов.'
       4-5 While Loops Assessment 1_instruction: 'Здесь много ям и куч.  Помоги мне заполнить и убрать их, чтобы выровнять поверхность.'
-      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na square with 20 pixel sides. "
       aE2_instruction: |
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
-        all 15 squares line up next to each other?
-      aE3_instruction: |
-        Now let's go one level deeper! We've nested that whole
-        block of code into another loop, but you need to get the artist back in place
-        to draw the next line. Which of these code blocks can you place at the end
-        of the outermost loop to draw the whole grid?
+        all 14 napkins line up next to each other?
+      aE3_instruction: "We've got to have a tablecloth!  \\r\n\\r\nTake your row of\n14 napkins and sew 14 of those together with another **outer loop** to make\na cover for our table."
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: |
+        How many times do you need to loop this to draw half  of
+        a circle? 
+      aE7_instruction: "If you create another loop like this one, but turn left instead\nof right, what happens? \\r\n\\r\nCan you repeat all of that to draw this wave?"
+      aE8_instruction: "Now let's loop that whole thing four times to create this\npicture frame. Watch out for the corners - you can't just turn 90 degrees!\n\\r\n\\r\nIf looping a 3 degree turn 60 times makes a half circle, which of\nthese blocks of code will make an additional quarter circle for the corners?"
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -444,6 +454,10 @@ ru:
       Artist - Nested Loops Assessment 1_instruction: Используй вложенный цикл, чтобы завершить рисунок.
       Auto Open Function Editor_instruction: 'Ты можешь вызывать функции, размещенные внутри других функций! Взяв за основу функцию «фигура», нарисуй 3 фигуры домиков, каждая из которых на 20 пикселей больше, чем предыдущая, начиная с 50 пикселей в длину. Может быть полезно использовать цикл со счетчиком. '
       Bee Recommended Blocks test_instruction: Фиолетовые цветы могут содержать 1 или 0 порций нектара, но ты не знаешь, сколько именно! Будь осторожен, не собирай нектар с фиолетовых цветов, его там нет. Проверь, равно ли значение количества нектара 1, используя блок «если».
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
+        
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1287,6 +1301,7 @@ ru:
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -1892,7 +1907,15 @@ ru:
         Давай посмотрим, чему ты тебе удалось научиться!
         Двигайся сначала в одну, а затем в другую сторону, чтобы помочь мне добраться до свиньи.
       K-1 Maze Sequence Assessment 2_instruction: Двигайся сначала в одну, а затем в другую сторону, чтобы помочь мне добраться до свиньи.
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -1934,7 +1957,11 @@ ru:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      Mike Pair Programming_instruction: Here are the instructions
       MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
@@ -2155,7 +2182,6 @@ ru:
       NEW Course 4 Play Labs For Loops 7a_instruction: Применяя все полученные знания, сможешь сделать так, чтобы динозавр делал шаг вперед каждый раз, когда пингвин считает?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Время свободной игры! Весело проведи время, используя все блоки на своей панели инструментов. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Задача: Как можно использовать цикл со счетчиком, чтобы каждый персонаж делал круг, говорил свой номер, а затем исчезал с экрана? '
-      New Play Lab Project_instruction: Создай собственную историю или игру! Твой код сохранен в виде проекта и к нему можно будет вернуться в любое время.
       Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,

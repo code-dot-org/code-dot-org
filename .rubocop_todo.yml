@@ -14,13 +14,6 @@ Lint/AmbiguousOperator:
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: AlignWith, SupportedStyles, AutoCorrect.
-# SupportedStyles: keyword, variable, start_of_line
-Lint/EndAlignment:
-  Enabled: false
-
 # Offense count: 6
 Lint/IneffectiveAccessModifier:
   Enabled: false
@@ -65,27 +58,11 @@ Performance/StringReplacement:
 Performance/TimesMap:
   Enabled: false
 
-# Offense count: 35
-# Cop supports --auto-correct.
-Style/AlignArray:
-  Enabled: false
-
 # Offense count: 89
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedHashRocketStyle, EnforcedColonStyle, EnforcedLastArgumentHashStyle, SupportedLastArgumentHashStyles.
 # SupportedLastArgumentHashStyles: always_inspect, always_ignore, ignore_implicit, ignore_explicit
 Style/AlignHash:
-  Enabled: false
-
-# Offense count: 42
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: with_first_parameter, with_fixed_indentation
-Style/AlignParameters:
-  Enabled: false
-
-# Offense count: 8
-Style/AsciiComments:
   Enabled: false
 
 # Offense count: 47
@@ -152,21 +129,6 @@ Style/ConditionalAssignment:
 Style/ConstantName:
   Enabled: false
 
-# Offense count: 214
-# Cop supports --auto-correct.
-Style/DefWithParentheses:
-  Enabled: false
-
-# Offense count: 41
-# Cop supports --auto-correct.
-Style/DeprecatedHashMethods:
-  Enabled: false
-
-# Offense count: 27
-# Cop supports --auto-correct.
-Style/EmptyLinesAroundAccessModifier:
-  Enabled: false
-
 # Offense count: 50
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -179,18 +141,6 @@ Style/EmptyLinesAroundBlockBody:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: empty_lines, no_empty_lines
 Style/EmptyLinesAroundClassBody:
-  Enabled: false
-
-# Offense count: 23
-# Cop supports --auto-correct.
-Style/EmptyLinesAroundMethodBody:
-  Enabled: false
-
-# Offense count: 47
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: empty_lines, no_empty_lines
-Style/EmptyLinesAroundModuleBody:
   Enabled: false
 
 # Offense count: 64
@@ -399,11 +349,6 @@ Style/StringLiterals:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiteralsInInterpolation:
-  Enabled: false
-
-# Offense count: 12
-# Cop supports --auto-correct.
-Style/SymbolLiteral:
   Enabled: false
 
 # Offense count: 30

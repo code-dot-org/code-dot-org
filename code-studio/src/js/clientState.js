@@ -31,7 +31,10 @@ var MAX_LINES_TO_SAVE = 1000;
  */
 clientState.MAXIMUM_CACHABLE_RESULT = 999;
 
-var COOKIE_OPTIONS = {expires: clientState.EXPIRY_DAYS, path: '/'};
+var COOKIE_OPTIONS = {
+  expires: clientState.EXPIRY_DAYS,
+  path: '/'
+};
 
 clientState.reset = function () {
   try {

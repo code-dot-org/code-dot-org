@@ -68,7 +68,11 @@ window.initLevelGroup = function (
 
   var lastResponse = window.getResult().response;
 
-  window.levelGroup.answerChangedFn = function (levelId) {
+  window.levelGroup.answerChangedFn = function (levelId, saveThisAnswer) {
+    if (!saveThisAnswer) {
+      // Ignore typing events before focus change (when commit will be true)
+      return;
+    }
     var currentResponse = window.getResult().response;
     if (lastResponse !== currentResponse) {
       throttledSaveAnswers(levelId);

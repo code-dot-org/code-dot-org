@@ -149,7 +149,7 @@
   "generatedCodeInfo": "Selv top-universiteter underviser i blok-baseret programmering (f.eks. {berkeleyLink}, {harvardLink}). Men under kølerhjelmen, kan de blokke du har samlet også vises i JavaScript, verdens mest udbredte programmeringssprog:",
   "hashError": "Beklager, '%1' svarer ikke til noget gemt program.",
   "help": "Hjælp",
-  "hide": "Hide",
+  "hide": "Skjul",
   "hideToolbox": "(Skjul)",
   "hintHeader": "Her er et tip:",
   "hintPrompt": "Brug for hjælp?",
@@ -241,5 +241,6 @@
   "watchVideo": "Se videoen",
   "when": "når",
   "whenRun": "når programmet kører",
-  "workspaceHeaderShort": "Arbejdsområde: "
+  "workspaceHeaderShort": "Arbejdsområde: ",
+  "dataMode": "Data"
 }

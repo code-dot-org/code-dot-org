@@ -30,6 +30,8 @@
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Anulo
   okay: Në rregull
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -95,6 +97,7 @@
     teacher_title: Regjistrimi për mësuesit
     student_pitch: Rregjistrimi i nënësve në Code.org
     student_title: Regjistrimi i nxënësit
+    signup_title: Sign up for Code.org
     school_name: Emri i shkollës (jo i domosdoshëm)
     school_address: Adresa e shkollës (jo e domosdoshme)
     address_placeholder: adresa, qyteti, shteti, kodi postar
@@ -119,6 +122,9 @@
       të Code.org.
     additional_information: Kemi nevojë për disa informacione shtesë për të vazhduar
       me rregjistrimin tuaj.
+    user_type_label: Account Type
+    user_type_teacher: Mësues
+    user_type_student: student
   signin_form:
     title: Ke një llogari ekzistuese? Logohu
     login: Email-i ose emri i përdoruesit
@@ -854,3 +860,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

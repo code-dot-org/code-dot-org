@@ -291,67 +291,64 @@ fa:
         text: 'در اینجا، "حرکت به جلو" یعنی 100 پیکسل به جلو حرکت کن. وقتی دکمه "اجرا" فشار داده میشود، چه اتفاقی رخ خواهد داد؟ السا مقدار مشخصی رو به جلو خواهد رفت که در واقع 100 پیکسل است. پیکسل ها اساسا مربعهای بسیار کوچک در صفحه نمایش کامپیوتر شما هستند.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: 'بلوک دیگر در این پازل می گوید:" 90 درجه به راست گردش کن." و هنگامی که ما از این بلوک "گردش به راست" استفاده می نماییم، السا را وادار به گردش به همان سمت می نماید. می توانید مقادیر مختلف را که السا می تواند چرخش کند را امتحان نمایید. در این حالت 90 درجه چرخش است. و این هم 120 درجه چرخش است.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: به خاطر داشته باشید که می توانید تعداد پیکسل ها و درجات را با کلیک کردن روی پیکان کنار آنها را تغییر دهید.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+        text: سلامو من پائولا هستم. کامپیوترها واقعاً در تکرار کردن کارها خوب هستند. شما می توانید تا 10، 20 و یا 100 بشمارید، اما یک کامپیوتر می تواند تا میلیارد یا هزار میلیارد هم شمارش کند. حوصله اش سر نمی رود و برایش چند ثانیه بیشتر طول نمی کشد. حتی زمانی که می شمارد، نقاشی می کشد یا هرکاری که انجام می دهد، کامپیوتر ها می توانند آن را صدها بار یا حتی میلیاردها بار تکرار نمایند.
       2:
         image: notes/frozen2_2.jpg
         text: 'در برنامه نویسی، ما به این  یک حلقه میگوییم. حلقه این است که چگونه  کد شما رابارها و بارها تکرار کند. در معمای آینده هدف شما این است که به آنا کمک کنید به ایجاد یک مربع با بلوک "تکرار" .'
       3:
         image: notes/frozen2_3.jpg
-        text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
+        text: 'هر بلوکی که شما داخل بلوک "تکرار" قرار دهید، به دفعات تکرار می گردد، به هر تعدادی که بخواهید.'
       4:
         image: notes/frozen2_4.jpg
-        text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
+        text: 'برای رسم یک مربع، می توانید از بلوکهای "حرکت به جلو" و "چرخش به راست" 4 بار استفاده نمایید. اما ساده ترین راه آن است که به یکبار کامپیوتر بگویید "حرکت به جلو" و "90 درجه چرخش به راست" و سپس بگویید که این دو کار را 4 بار تکرار نمید. برای این کار باید بلوکهای "حرکت به جلو" و "چرخش به راست" را داخل یک حلقه "تکرار" قرار دهید.'
       5:
         image: notes/frozen2_5.jpg
-        text: |-
-          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+        text: 'به خاطر داشته باشید می توانید عدد بلوک "تکرار" را به هر چیزی تغییر دهید، و هر چیزی که داخل حلقه تکرار باشد را به همان تعداد تکرار می نماید.'
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
         text: سلام, من کریس بش. من یک بازیکن حرفه ای بسکتبال, و من در کالج کدنویسی میکنم.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+        text: یکی از مهم ترین مفاهیم در علوم رایانه این است که چگونه دستورات جدید را تعریف کنیم. اکثر زبانهای کامپیوتری تنها حدوداً 100 دستور یا کلمه را شامل می شوند. و واقعا، هنر و جادو در این است که شما کلمات جدید خودتان را از میان این بلوکها بسازید.
       3:
         image: notes/frozen3_3.jpg
         text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
       4:
         image: notes/frozen3_4.jpg
-        text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
+        text: 'سلام، من جس هستم. وقتی با بلوکها کار می کنید، باید از "تابع" استفاده کنید تا عملی که بارها در در برنامه تکرار می شود را تعریف نمایید. برای مثال، کدی را برای ساخت یک مربع ایجاد نمودید.'
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'شما می توانید این را "تابعی" تعریف نمایید که نامش "یک مربع بساز" است '
       6:
         image: notes/frozen3_6.jpg
         text: حالا شما یک بلوک جدید دارید که شما می توانید چندین بار برای ایجاد چند مربع از آن استفاده کنید
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: 'بسیاری اشکال ابتدایی هستند که می توانید برای ساخت الگوهای پیچیده تر استفاده نمایید. در مسئله بعدی، کدی که اخیراً برای ساخت یک دایره نوشته اید، به عنوان یک "تابع" جدید در دسترس خواهد بود تا بتوانید دوایری با ابعاد مختلف بسازید. آیا می توانید السا را کمک کنید تا الگوهای زیبایی روی برف خلق کند؟'
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: ما می خواهیم بازی هایی در محیط Play Lab بسازیم. بازی های خوب داستان دارند، و هر داستانی بازیگر دارد. ما خواهیم آموخت چگونه بازیگرانمان را مانند جادوگر، بیگانگان و حیوانات، به صحبت کردن، حرکت و تعامل با همدیگر وادار نماییم. در انتهای این آموزش، شما خواهید توانست یک بازی را از ایده اولیه تا اشتراک آن با دوستانتان بسازید.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: صفحه نمایش شما به سه قسمت اصلی تقسیم شده است. در سمت چپ فضای بازی وجود دارد، جایی که برنامه اجرا می شود. دستورالعمل ها برای هر مرحله در زیر نوشته می شوند.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: منطقه میانی جعبه ابزار است، و هر کدام از این بلوک ها یک قطعه از کد هستند. فضای سفید سمت راست فضای کاری نامیده می شود و این جایی است که کد ها ساخته می شوند.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'برای اجرا برنامه، باید بلوک هایتان را به بلوک نارنجی رنگ "زمان اجرا" متصل نمایید. می توانید چند بلوک را با هم، با کشیدن آنها تا جایی که خط زرد ظاهر شود ادامه دهید. و سپس آنها به هم جذب می شوند.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 'در این مسئله اول، بازیگرما یک پنگوئن است و ما با کشیدن بلوک "بگو" در جای خود، کاری می کنیم که بگوید "سلام!". آن را به بلوک "زمان اجرا" متصل می کنیم و داخل آن می نویسیم "سلام." ما حتی می توانیم کاری کنیم که پنگوئن حرکت نماید، با استفاده از بلوک های "برو به راست" و "برو به چپ". وقتی بلوک هایتان را در جای خود قرار دادید، دکمه زرد رنگ "اجرای برنامه" را فشار دهید تا ببینید چگونه برنامه نوشته اید.'
       6:
         image: notes/playlab_intro_6.png
         text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."

@@ -241,5 +241,6 @@
   "watchVideo": "Бейнематериалды көру",
   "when": "кезде",
   "whenRun": "қосу кезінде",
-  "workspaceHeaderShort": "Жұмыс аумағы: "
+  "workspaceHeaderShort": "Жұмыс аумағы: ",
+  "dataMode": "Data"
 }

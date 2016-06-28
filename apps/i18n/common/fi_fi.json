@@ -241,5 +241,6 @@
   "watchVideo": "Katso video",
   "when": "kun",
   "whenRun": "suoritettaessa",
-  "workspaceHeaderShort": "Työtila: "
+  "workspaceHeaderShort": "Työtila: ",
+  "dataMode": "Data"
 }

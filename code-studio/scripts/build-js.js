@@ -67,14 +67,14 @@ Promise.all([
     commonFile: 'embedVideo'
   })),
 
-  // only-react.js is just React in a bundle. In the future, this might be
-  // expanded to include a small set of libraries that we expect on the global
-  // namespace
+  // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
+  // in a bundle to minimize the amound of stuff we need when loading blocks
+  // in an iframe.
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
-      'react-only.js'
+      'embedBlocks.js'
     ],
-    commonFile: 'react-only'
+    commonFile: 'embedBlocks'
   })),
 
   // Have a bundle for plc stuff - no sense in expanding this to everything yet

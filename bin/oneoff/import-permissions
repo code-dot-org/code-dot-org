@@ -38,7 +38,7 @@ def grant_permission(email, permission_name)
   true
 end
 
-def main()
+def main
   file = Google::Drive.new.file('v3/user-permissions')
   unless file
     puts "Couldn't fetch user-permissions gsheet."

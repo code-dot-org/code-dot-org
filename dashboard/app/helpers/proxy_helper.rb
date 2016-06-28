@@ -40,12 +40,12 @@ module ProxyHelper
     if media.is_a? Net::HTTPRedirection
       # Follow up to five redirects.
       render_proxied_url(
-          media['location'],
-          allowed_content_types: allowed_content_types,
-          allowed_hostname_suffixes: allowed_hostname_suffixes,
-          expiry_time: expiry_time,
-          infer_content_type: infer_content_type,
-          redirect_limit: redirect_limit - 1)
+        media['location'],
+        allowed_content_types: allowed_content_types,
+        allowed_hostname_suffixes: allowed_hostname_suffixes,
+        expiry_time: expiry_time,
+        infer_content_type: infer_content_type,
+        redirect_limit: redirect_limit - 1)
 
     elsif !media.is_a? Net::HTTPSuccess
       # Pass through failure codes.

@@ -137,15 +137,17 @@ class ActivitiesControllerTest < ActionController::TestCase
     # created activity and userlevel with the correct script
     assert_equal @script_level.script, UserLevel.last.script
 
-    assert_equal([{
-                      application: :dashboard,
-                      tag: 'activity_finish',
-                      script_level_id: @script_level.id,
-                      level_id: @script_level.level.id,
-                      user_agent: 'Rails Testing',
-                      locale: :'en-us'
-                  }],
-                 slogger.records)
+    assert_equal(
+      [{
+        application: :dashboard,
+        tag: 'activity_finish',
+        script_level_id: @script_level.id,
+        level_id: @script_level.level.id,
+        user_agent: 'Rails Testing',
+        locale: :'en-us'
+      }],
+      slogger.records
+    )
   end
 
   test "successful milestone does not require script_level_id" do
@@ -298,8 +300,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-        total_lines: 15, # No change
-        level_source: "http://test.host/c/#{assigns(:level_source).id}")
+      total_lines: 15, # No change
+      level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # activity does not have unreasonable lines of code either
@@ -325,8 +327,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-        total_lines: 1015, # Pretend it was 1000
-        level_source: "http://test.host/c/#{assigns(:level_source).id}")
+      total_lines: 1015, # Pretend it was 1000
+      level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # activity does not have unreasonable lines of code either
@@ -383,7 +385,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone should save to gallery when passing an impressive level" do
     _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-        async_activity_writes: false)
+      async_activity_writes: false)
   end
 
   test "logged in milestone should save to gallery when passing an impressive level with aysnc writes" do
@@ -604,8 +606,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-        level_source: "http://test.host/c/#{assigns(:level_source).id}",
-        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -641,8 +643,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-        level_source: "http://test.host/c/#{assigns(:level_source).id}",
-        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -669,8 +671,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-        level_source: "http://test.host/c/#{assigns(:level_source).id}",
-        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -699,8 +701,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-        level_source: "http://test.host/c/#{assigns(:level_source).id}",
-        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -729,8 +731,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-        level_source: "http://test.host/c/#{assigns(:level_source).id}",
-        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -813,8 +815,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-        total_lines: 0,
-        level_source: "http://test.host/c/#{assigns(:level_source).id}")
+      total_lines: 0,
+      level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -840,8 +842,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-        total_lines: 10,
-        level_source: "http://test.host/c/#{assigns(:level_source).id}")
+      total_lines: 10,
+      level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -893,8 +895,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-        total_lines: 10,
-        level_source: "http://test.host/c/#{assigns(:level_source).id}")
+      total_lines: 10,
+      level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -1072,7 +1074,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     # find localized test strings for custom stage names in script
-    assert response.has_key?('stage_changing'), "No key 'stage_changing' in response #{response.inspect}"
+    assert response.key?('stage_changing'), "No key 'stage_changing' in response #{response.inspect}"
     assert_equal('milestone-stage-1', response['stage_changing']['previous']['name'])
   end
 

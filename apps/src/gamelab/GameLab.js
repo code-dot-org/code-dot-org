@@ -231,17 +231,7 @@ GameLab.prototype.init = function (config) {
     </Provider>
   ), document.getElementById(config.containerId));
 
-  if (config.hasContainedLevels && config.containedLevelOps) {
-    $('#containedLevel0').appendTo($('#containedLevelContainer'));
-    $('#runButton').prop('disabled', true);
-
-    config.containedLevelOps.registerAnswerChangedFn(function (levelId) {
-      $('#runButton').prop('disabled', false);
-    }.bind(this));
-
-    this.lockContainedLevelAnswers = config.containedLevelOps.lockAnswers;
-    this.getContainedLevelResults = config.containedLevelOps.getResults;
-  }
+  this.studioApp_.notifyInitialRenderComplete(config);
 };
 
 /**
@@ -428,40 +418,25 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
   this.reset();
 
   var program;
-  var containedLevelInfo;
+  var containedLevelResultsInfo = this.studioApp_.getContainedLevelResultsInfo();
 
-  if (this.getContainedLevelResults) {
-    var results = this.getContainedLevelResults();
-    if (results.length !== 1) {
-      throw "Exactly one contained level result is currently required.";
-    }
-    var firstResult = results[0];
-    var containedResult = firstResult.result;
-    this.testResults = utils.valueOr(firstResult.testResult,
-        containedResult.result ? this.studioApp_.TestResults.ALL_PASS :
-          this.studioApp_.TestResults.GENERIC_FAIL);
-    containedLevelInfo = {
-      app: firstResult.app,
-      level: firstResult.id,
-      callback: firstResult.callback,
-      result: containedResult.result,
-      program: containedResult.response,
-    };
-    this.message = firstResult.feedback;
+  if (containedLevelResultsInfo) {
+    // Keep our this.testResults as always passing so the feedback dialog
+    // shows Continue (the proper results will be reported to the service)
+    this.testResults = this.studioApp_.TestResults.ALL_PASS;
+    this.message = containedLevelResultsInfo.feedback;
+  } else if (this.level.editCode) {
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = encodeURIComponent(this.studioApp_.getCode());
+    this.message = null;
   } else {
-    if (this.level.editCode) {
-      // If we want to "normalize" the JavaScript to avoid proliferation of nearly
-      // identical versions of the code on the service, we could do either of these:
-
-      // do an acorn.parse and then use escodegen to generate back a "clean" version
-      // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
-
-      program = encodeURIComponent(this.studioApp_.getCode());
-    } else {
-      var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-      program = encodeURIComponent(Blockly.Xml.domToText(xml));
-    }
-    // Explicitly set this to null so the default message will be used
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = encodeURIComponent(Blockly.Xml.domToText(xml));
     this.message = null;
   }
 
@@ -474,30 +449,17 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
   this.waitingForReport = true;
 
   var sendReport = function () {
-    if (containedLevelInfo) {
-      this.studioApp_.onAttempt({
-        callback: containedLevelInfo.callback,
-        app: containedLevelInfo.app,
-        level: containedLevelInfo.level,
-        result: containedLevelInfo.result,
-        testResult: this.testResults,
-        submitted: submit,
-        program: containedLevelInfo.program,
-        image: this.encodedFeedbackImage,
-        onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
-      });
-    } else {
-      this.studioApp_.report({
-        app: containedLevelInfo ? containedLevelInfo.app : 'gamelab',
-        level: containedLevelInfo ? containedLevelInfo.level : this.level.id,
-        result: levelComplete,
-        testResult: this.testResults,
-        submitted: submit,
-        program: program,
-        image: this.encodedFeedbackImage,
-        onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
-      });
-    }
+    this.studioApp_.report({
+      app: 'gamelab',
+      level: this.level.id,
+      result: levelComplete,
+      testResult: this.testResults,
+      submitted: submit,
+      program: program,
+      image: this.encodedFeedbackImage,
+      containedLevelResultsInfo: containedLevelResultsInfo,
+      onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
+    });
 
     if (this.studioApp_.isUsingBlockly()) {
       // reenable toolbox
@@ -540,9 +502,6 @@ GameLab.prototype.onReportComplete = function (response) {
  */
 GameLab.prototype.runButtonClick = function () {
   this.studioApp_.toggleRunReset('reset');
-  if (this.lockContainedLevelAnswers) {
-    this.lockContainedLevelAnswers();
-  }
   // document.getElementById('spinner').style.visibility = 'visible';
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
@@ -726,7 +685,7 @@ GameLab.prototype.execute = function () {
   this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (this.studioApp_.isUsingBlockly() &&
-      (this.studioApp_.hasExtraTopBlocks() ||
+      (this.studioApp_.hasUnwantedExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())) {
     // immediately check answer, which will fail and report top level blocks
     this.onPuzzleComplete();

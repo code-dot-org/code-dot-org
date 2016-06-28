@@ -1,0 +1,41 @@
+name 'CSD U3 - complex conditionals - SFLP'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Unit 3: Lesson 09 - Complex Conditionals
+
+# Background
+
+Blah Blah
+
+# Lesson
+
+* Blah
+* Blah
+* Blah
+
+# Vocab
+
+None
+
+# Commands 
+
+### Conditionals: 
+|Command| Meaning| Example | Documentation |
+|---|---| --- | --- |
+|else{}|Executes set of commands if all previous conditions are false|`if(keyDown("up"){} else{}`  | link |
+
+### Input : 
+|Command| Meaning| Example | Documentation |
+|---|---| --- | --- |
+|mouseDidMove()|Returns true if the mouse did move|`if(mouseDidMove()){}`  | link |
+|mouseWentDown(side)|Gives the y position of the mouse|`if(mouseWentDown("left")){}` | link |
+|mouseWentUp(side)|Gives the x position of the mouse|`if(mouseWentUp("left")){}`  | link |
+|keyWentDown(key)|Gives the y position of the mouse|`if(keyWentDown("e")){}`| link |
+|keyWentUp(key)|Gives the y position of the mouse|`if(keyWentDown("m")){}` | link |
+
+# Resources
+
+None
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

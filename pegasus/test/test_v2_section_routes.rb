@@ -239,16 +239,16 @@ class V2SectionRoutesTest < Minitest::Test
       it 'returns 403 "Forbidden" when not signed in' do
         with_role nil
         @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/update",
-           {name: NEW_NAME}.to_json,
-           'CONTENT_TYPE' => 'application/json;charset=utf-8'
+          {name: NEW_NAME}.to_json,
+          'CONTENT_TYPE' => 'application/json;charset=utf-8'
         assert_equal 403, @pegasus.last_response.status
       end
 
       it 'returns 403 "Forbidden" as admin' do
         with_role FakeDashboard::ADMIN
         @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/update",
-           {name: NEW_NAME}.to_json,
-           'CONTENT_TYPE' => 'application/json;charset=utf-8'
+          {name: NEW_NAME}.to_json,
+          'CONTENT_TYPE' => 'application/json;charset=utf-8'
         assert_equal 403, @pegasus.last_response.status
       end
 
@@ -281,8 +281,8 @@ class V2SectionRoutesTest < Minitest::Test
       it 'returns 403 "Forbidden" when updating deleted section' do
         with_role FakeDashboard::TEACHER_WITH_DELETED
         @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED[:id]}/update",
-           {name: NEW_NAME}.to_json,
-           'CONTENT_TYPE' => 'application/json;charset=utf-8'
+          {name: NEW_NAME}.to_json,
+          'CONTENT_TYPE' => 'application/json;charset=utf-8'
         assert_equal 403, @pegasus.last_response.status
       end
     end

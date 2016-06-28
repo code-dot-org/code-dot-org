@@ -149,7 +149,7 @@
   "generatedCodeInfo": "Selbst Top-Universitäten lehren Programmieren anhand von Bausteinen (z. B. {BerkeleyLink}, {HarvardLink}). Allerdings können die von Dir zusammengefügten Bausteine auch in JavaScript, der weltweit meistverbreiteten Programmiersprache, dargestellt werden:",
   "hashError": "Ups, '%1' stimmt mit keinem gespeicherten Programm überein.",
   "help": "Hilfe",
-  "hide": "Hide",
+  "hide": "Ausblenden",
   "hideToolbox": "(Ausblenden)",
   "hintHeader": "Hier ein Tipp:",
   "hintPrompt": "Brauchst du Hilfe?",
@@ -236,10 +236,11 @@
   "tryHOC": "Probiere \"The Hour of Code\" aus",
   "unnamedFunction": "Du hast eine Variable oder Funktion, die keinen Namen hat. Vergiss nicht, allen Elementen einen aussagekräftigen Namen zu geben.",
   "unattachedBlockTipTitle": "Unbenutzte Bausteine",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
+  "unattachedBlockTipBody": "Blöcke, die nicht verbunden sind werden nichts tun. Wenn du diese Blöcke in deinem Programm möchtest, versuche sie mit anderen Blöcken zu verbinden.",
   "wantToLearn": "Möchtest du programmieren lernen?",
   "watchVideo": "Video anschauen",
   "when": "wenn",
   "whenRun": "wenn Ausführen",
-  "workspaceHeaderShort": "Arbeitsbereich: "
+  "workspaceHeaderShort": "Arbeitsbereich: ",
+  "dataMode": "Data"
 }

@@ -29,6 +29,7 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
   end
 
   private
+
   def load_and_authorize_for_this_unit
     script = Script.get_from_cache(params[:script_id])
     if script.plc_course_unit
