@@ -5,7 +5,8 @@ var blockUtils = require('../block_utils');
 exports.install = function (blockly, blockInstallOptions) {
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
-  // Block for putting for removing dirt from a tile.
+
+  // Block for collecting collectables
   blockUtils.generateSimpleBlock(blockly, generator, {
     name: 'collector_collect',
     helpUrl: 'TODO',
@@ -14,8 +15,8 @@ exports.install = function (blockly, blockInstallOptions) {
     functionName: 'Maze.dig'
   });
 
-  blockly.Blocks.collector_if = {
-    // Block for 'if' conditional if there is a path.
+  // Block for 'if' conditional if there is a collectable
+  blockly.Blocks.collector_ifCollectable = {
     helpUrl: '',
     init: function () {
       this.setHSV(196, 1.0, 0.79);
@@ -30,15 +31,15 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  generator.collector_if = function () {
-    // Generate JavaScript for 'if' conditional if there is a path.
+  generator.collector_ifCollectable = function () {
     var argument = 'Maze.pilePresent(\'block_id_' + this.id + '\')';
     var branch = generator.statementToCode(this, 'DO');
     var code = 'if (' + argument + ') {\n' + branch + '}\n';
     return code;
   };
 
-  blockly.Blocks.collector_whileNotClear = {
+  // Block for 'while' conditional if there is a collectable
+  blockly.Blocks.collector_whileCollectable = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function () {
       this.setHSV(322, 0.90, 0.95);
@@ -52,7 +53,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  generator.collector_whileNotClear = function () {
+  generator.collector_whileCollectable = function () {
     var argument = 'Maze.pilePresent(\'block_id_' + this.id + '\')';
     var branch = generator.statementToCode(this, 'DO');
     branch = codegen.loopTrap() + branch;
