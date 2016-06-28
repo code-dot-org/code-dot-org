@@ -74,6 +74,7 @@ GRAPH
     cdo-varnish (>= 0.0.0)
     chef_hostname (>= 0.0.0)
     omnibus_updater (>= 0.0.0)
+    poise-service (>= 0.0.0)
     sudo-user (>= 0.0.0)
   cdo-authorized-keys (0.1.2)
   cdo-awscli (0.1.1)
