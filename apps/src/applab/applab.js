@@ -1256,11 +1256,6 @@ Applab.setWorkspaceMode = function (mode) {
 
   var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
   codeWorkspaceWrapper.style.display = (ApplabInterfaceMode.CODE === mode) ? 'block' : 'none';
-
-  var dataWorkspaceWrapper = document.getElementById('dataWorkspaceWrapper');
-  if (dataWorkspaceWrapper) {
-    dataWorkspaceWrapper.style.display = (ApplabInterfaceMode.DATA === mode) ? 'block' : 'none';
-  }
 };
 
 /**
