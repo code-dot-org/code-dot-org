@@ -2,6 +2,7 @@ title 'MikeTest'
 description_short "Just a script for playing around"
 description "Trying not to break anything"
 description_audience "Ages 8-98"
+professional_learning_course "Other plc course"
 
 stage 'Sample Stage'
 level 'MikeTest1'
