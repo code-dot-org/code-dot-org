@@ -306,7 +306,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     @level = create(:level, :blockly, :with_ideal_level_source)
     @script = create(:script)
-    @script.update(professional_learning_course: true)
+    @script.update(professional_learning_course: 'Professional Learning Course')
     @script_level = create(:script_level, level: @level, script: @script)
     assert_not can_view_solution?
 
