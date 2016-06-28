@@ -6,6 +6,8 @@ var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 var ALLOWED_KEYS = utils.makeEnum(
   'assetUrl',
   'channelId',
+  'hasDataMode',
+  'hasDesignMode',
   'isDesignModeHidden',
   'isEmbedView',
   'isIframeEmbed',
@@ -33,8 +35,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'pinWorkspaceToBottom',
   'smallStaticAvatar',
   'aniGifURL',
-  'inputOutputTable',
-  'useFirebase'
+  'inputOutputTable'
 );
 
 const initialState = {
