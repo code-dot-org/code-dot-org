@@ -8,6 +8,6 @@ module.exports = {
   ICON_PREFIX: 'icon://',
   ICON_PREFIX_REGEX: new RegExp('^icon://'),
   NEW_SCREEN: "New screen...",
-  ApplabInterfaceMode: utils.makeEnum('CODE', 'DESIGN'),
+  ApplabInterfaceMode: utils.makeEnum('CODE', 'DESIGN', 'DATA'),
   ANIMATION_LENGTH_MS: 200,
 };
