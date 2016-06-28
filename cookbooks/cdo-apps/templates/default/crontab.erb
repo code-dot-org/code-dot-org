@@ -80,7 +80,6 @@
     cronjob at:'30 6 * * *', do:deploy_dir('bin', 'cron', 'admin_progress')
     cronjob at:'10 7 * * *', do:deploy_dir('bin', 'cron', 'retention_stats')
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
-    cronjob at:'@reboot', do:dashboard_dir('bin', 'sqs', 'process_queues_daemon restart')
   end
 
   # cronjobs that run on all instances in all environments go here:
