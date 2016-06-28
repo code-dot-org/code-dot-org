@@ -174,7 +174,7 @@ class Ability
         Game,
         Level,
         Script,
-        ScriptLevel,
+        ScriptLevel
       ]
 
       # Only custom levels are editable.
