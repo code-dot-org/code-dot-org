@@ -99,7 +99,7 @@ var CodeWorkspaceContainer = React.createClass({
             style={styles.codeWorkspace}>
           <CodeWorkspace/>
           <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden}/>
-          <DataWorkspace/>
+          <DataWorkspace style={commonStyles.hidden}/>
         </div>
       </div>
     );
