@@ -4,7 +4,7 @@ let SVG_NS = require('../constants').SVG_NS;
 let cellId = require('./mazeUtils').cellId;
 
 /**
- * Extends Drawer to draw collectables for Collector
+ * Extends Drawer to draw collectibles for Collector
  */
 export default class CollectorDrawer extends Drawer {
 

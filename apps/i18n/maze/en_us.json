@@ -2,7 +2,7 @@
   "atFlower": "at flower",
   "atHoneycomb": "at honeycomb",
   "avoidCowAndRemove": "avoid the cow and remove 1",
-  "collectablePresent": "there is some treasure",
+  "collectiblePresent": "there is some treasure",
   "continue": "Continue",
   "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!",
   "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
