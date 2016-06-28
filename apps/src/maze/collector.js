@@ -1,11 +1,11 @@
 /**
  * @fileoverview defines a new Maze Level sub-type: Collector.
  * Collector levels are simple Maze levels that define a set of
- * collectable items on the screen which the user can programmatically
+ * collectible items on the screen which the user can programmatically
  * collect, and which strictly enforce the concept of block limits.
  * Success is primarily determined by remaining within the block limit,
  * and secondarily determined by collecting at least one of the
- * available collectables.
+ * available collectibles.
  */
 
 var TestResults = require('../constants.js').TestResults;
@@ -29,14 +29,14 @@ var Collector = function (maze, studioApp, config) {
 module.exports = Collector;
 
 /**
- * @return {boolean} Has the user collected all available collectables?
+ * @return {boolean} Has the user collected all available collectibles?
  */
 Collector.prototype.collectedAll = function () {
   return this.getTotalCollected() === this.getPotentialMaxCollected();
 };
 
 /**
- * @return {number} The total number of available collectables
+ * @return {number} The total number of available collectibles
  */
 Collector.prototype.getPotentialMaxCollected = function () {
   let count = 0;
@@ -49,7 +49,7 @@ Collector.prototype.getPotentialMaxCollected = function () {
 };
 
 /**
- * @return {number} The number of collectables collected
+ * @return {number} The number of collectibles collected
  */
 Collector.prototype.getTotalCollected = function () {
   let count = 0;

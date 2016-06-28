@@ -89,8 +89,8 @@ class Karel < Maze
     </category>
     <category name="Collector">
       <block type="collector_collect"></block>
-      <block type="collector_ifCollectable"></block>
-      <block type="collector_whileCollectable"></block>
+      <block type="collector_ifCollectible"></block>
+      <block type="collector_whileCollectible"></block>
     </category>
     <category name="Variables" custom="VARIABLE">
     </category>
