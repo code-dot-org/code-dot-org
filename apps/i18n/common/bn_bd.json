@@ -241,5 +241,6 @@
   "watchVideo": "ভিডিও দেখুন",
   "when": "যখন",
   "whenRun": "চালানোর সময়",
-  "workspaceHeaderShort": "কর্মপরিসর:"
+  "workspaceHeaderShort": "কর্মপরিসর:",
+  "dataMode": "Data"
 }

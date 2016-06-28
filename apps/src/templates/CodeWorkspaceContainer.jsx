@@ -13,6 +13,7 @@ var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
 var commonStyles = require('../commonStyles');
 var CodeWorkspace = require('./CodeWorkspace');
+var DataWorkspace = require('./DataWorkspace');
 import { connect } from 'react-redux';
 
 var styles = {
@@ -98,6 +99,7 @@ var CodeWorkspaceContainer = React.createClass({
             style={styles.codeWorkspace}>
           <CodeWorkspace/>
           <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden}/>
+          <DataWorkspace style={commonStyles.hidden}/>
         </div>
       </div>
     );

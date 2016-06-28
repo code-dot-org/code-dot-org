@@ -241,5 +241,6 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "при запуске",
-  "workspaceHeaderShort": "Место сбора блоков: "
+  "workspaceHeaderShort": "Место сбора блоков: ",
+  "dataMode": "Data"
 }
