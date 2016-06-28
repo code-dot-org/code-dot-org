@@ -261,11 +261,6 @@ Style/PredicateName:
 Style/Proc:
   Enabled: false
 
-# Offense count: 9
-# Cop supports --auto-correct.
-Style/RedundantException:
-  Enabled: false
-
 # Offense count: 53
 # Cop supports --auto-correct.
 Style/RedundantParentheses:
