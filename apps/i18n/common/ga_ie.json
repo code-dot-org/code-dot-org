@@ -242,5 +242,8 @@
   "when": "nuair",
   "whenRun": "nuair a ritear é",
   "workspaceHeaderShort": "Spás oibre: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

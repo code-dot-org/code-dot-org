@@ -242,5 +242,8 @@
   "when": "當",
   "whenRun": "當按下\"執行\"時",
   "workspaceHeaderShort": "工作區:",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }
