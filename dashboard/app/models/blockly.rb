@@ -202,6 +202,25 @@ class Blockly < Level
     return block_xml
   end
 
+  def blockly_app_options(game, skin_id)
+    options = Rails.cache.fetch("#{cache_key}/blockly_level_options/v2") do
+
+      app_options = {}
+
+      app_options[:levelGameName] = game.name if game
+      app_options[:skin_id] = skin_id if skin_id
+
+      # Set some values that Blockly expects on the root of its options string
+      app_options.merge!({
+                             baseUrl: Blockly.base_url,
+                             app: game.try(:app),
+                             droplet: game.try(:uses_droplet?),
+                             pretty: Rails.configuration.pretty_apps ? '' : '.min',
+                         })
+    end
+    options.freeze
+  end
+
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents
   def blockly_options
     options = Rails.cache.fetch("#{cache_key}/blockly_level_options/v2") do
