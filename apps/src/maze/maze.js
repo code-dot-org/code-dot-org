@@ -45,6 +45,7 @@ var experiments = require('../experiments');
 
 var MazeMap = require('./mazeMap');
 var Bee = require('./bee');
+var Collector = require('./collector');
 var Cell = require('./cell');
 var BeeCell = require('./beeCell');
 var WordSearch = require('./wordsearch');
@@ -411,6 +412,8 @@ function drawMapTiles(svg) {
           }
 
           tile = _.sample(tileChoices);
+        } else if (mazeUtils.isCollectorSkin(skin.id)) {
+          tile = 'null0';
         } else {
           // Empty square.  Use null0 for large areas, with null1-4 for borders.
           if (!adjacentToPath && Math.random() > 0.3) {
@@ -521,6 +524,8 @@ Maze.init = function (config) {
     Maze.bee = new Bee(Maze, studioApp, config);
     // Override default stepSpeed
     Maze.scale.stepSpeed = 2;
+  } else if (mazeUtils.isCollectorSkin(config.skinId)) {
+    Maze.collector = new Collector(Maze, studioApp, config);
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
   }
@@ -939,14 +944,16 @@ var displayFeedback = function () {
     response: Maze.response,
     level: level
   };
-  // If there was an app-specific error (currently only possible for Bee),
+  // If there was an app-specific error
   // add it to the options passed to studioApp.displayFeedback().
-  if (Maze.testResults === TestResults.APP_SPECIFIC_FAIL &&
-      Maze.bee) {
-    var message = Maze.bee.getMessage(Maze.executionInfo.terminationValue());
-    if (message) {
-      options.message = message;
-    }
+  let message;
+  if (Maze.testResults === TestResults.APP_SPECIFIC_FAIL && Maze.bee) {
+    message = Maze.bee.getMessage(Maze.executionInfo.terminationValue());
+  } else if (Maze.collector) {
+    message = Maze.collector.getMessage(Maze.executionInfo.terminationValue());
+  }
+  if (message) {
+    options.message = message;
   }
   studioApp.displayFeedback(options);
 };
@@ -1098,6 +1105,9 @@ Maze.execute = function (stepMode) {
         Maze.result = ResultType.ERROR;
         if (Maze.bee) {
           Maze.testResults = Maze.bee.getTestResults(
+            Maze.executionInfo.terminationValue());
+        } else if (Maze.collector) {
+          Maze.testResults = Maze.collector.getTestResults(
             Maze.executionInfo.terminationValue());
         }
         break;
@@ -1858,6 +1868,8 @@ Maze.checkSuccess = function () {
     finished = false;
   } else if (Maze.bee) {
     finished = Maze.bee.finished();
+  } else if (Maze.collector) {
+    finished = false;
   } else if (Maze.wordSearch) {
     finished = Maze.wordSearch.finished();
   } else {
@@ -1885,5 +1897,7 @@ Maze.onExecutionFinish = function () {
 
   if (Maze.bee) {
     Maze.bee.onExecutionFinish();
+  } else if (Maze.collector) {
+    Maze.collector.onExecutionFinish();
   }
 };
