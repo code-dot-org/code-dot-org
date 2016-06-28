@@ -648,7 +648,7 @@ Applab.init = function (config) {
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
     // is stored in startHtml, not levelHtml.
-    if (studioApp.reduxStore.getState().pageConstants.isDesignModeHidden) {
+    if (!studioApp.reduxStore.getState().pageConstants.hasDesignMode) {
       config.level.levelHtml = '';
     }
 
@@ -773,8 +773,7 @@ Applab.init = function (config) {
     channelId: config.channel,
     visualizationHasPadding: !config.noPadding,
     hasDataMode: useFirebase,
-    hasDesignMode: true,
-    isDesignModeHidden: !!config.level.hideDesignMode,
+    hasDesignMode: !config.level.hideDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
     isProjectLevel: !!config.level.isProjectLevel,
@@ -1251,7 +1250,9 @@ function onInterfaceModeChange(mode) {
  */
 Applab.setWorkspaceMode = function (mode) {
   var designWorkspace = document.getElementById('designWorkspace');
-  designWorkspace.style.display = (ApplabInterfaceMode.DESIGN === mode) ? 'block' : 'none';
+  if (designWorkspace) {
+    designWorkspace.style.display = (ApplabInterfaceMode.DESIGN === mode) ? 'block' : 'none';
+  }
 
   var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
   codeWorkspaceWrapper.style.display = (ApplabInterfaceMode.CODE === mode) ? 'block' : 'none';

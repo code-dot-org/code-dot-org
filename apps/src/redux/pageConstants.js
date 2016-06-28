@@ -8,7 +8,6 @@ var ALLOWED_KEYS = utils.makeEnum(
   'channelId',
   'hasDataMode',
   'hasDesignMode',
-  'isDesignModeHidden',
   'isEmbedView',
   'isIframeEmbed',
   'isReadOnlyWorkspace',
