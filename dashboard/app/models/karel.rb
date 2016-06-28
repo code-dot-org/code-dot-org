@@ -27,7 +27,7 @@ class Karel < Maze
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    %w(farmer farmer_night bee bee_night)
+    %w(farmer farmer_night bee bee_night collector)
   end
 
   # List of possible flower types
@@ -86,6 +86,11 @@ class Karel < Maze
       <block type="math_number">
         <title name="NUM">1</title>
       </block>
+    </category>
+    <category name="Collector">
+      <block type="collector_collect"></block>
+      <block type="collector_if"></block>
+      <block type="collector_whileNotClear"></block>
     </category>
     <category name="Variables" custom="VARIABLE">
     </category>
