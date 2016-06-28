@@ -1860,6 +1860,18 @@ function isDirtCorrect() {
 }
 
 /**
+ * Certain Maze types - namely, WordSearch, Collector, and any Maze with
+ * Quantum maps, don't want to check for success until the user's conde
+ * has finished running completely.
+ */
+Maze.shouldCheckSuccessOnMove = function () {
+  if (Maze.wordSearch || Maze.collector || Maze.map.hasMultiplePossibleGrids()) {
+    return false;
+  }
+  return true;
+};
+
+/**
  * Check whether all goals have been accomplished
  */
 Maze.checkSuccess = function () {
