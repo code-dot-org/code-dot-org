@@ -15,11 +15,11 @@ def main
 
   # Since this script is cronned to run every five minutes, we offset by ten
   # minutes to assure that we see every message twice.
-  date_to_delete = (DateTime.now - 10.minutes).to_date
+  date_to_delete = Time.now - 10 * 60
 
   begin
     messages_to_delete = @client.account.messages.list(
-      date_sent: date_to_delete.strftime,
+      date_sent: date_to_delete.strftime('%F'),
       page_size: 1000
     )
     until messages_to_delete.empty?
