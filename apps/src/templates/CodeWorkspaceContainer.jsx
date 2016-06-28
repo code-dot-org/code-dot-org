@@ -59,6 +59,8 @@ var styles = {
 var CodeWorkspaceContainer = React.createClass({
   propTypes: {
     // redux provided
+    hasDesignMode: React.PropTypes.bool,
+    hasDataMode: React.PropTypes.bool,
     hidden: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
@@ -98,14 +100,17 @@ var CodeWorkspaceContainer = React.createClass({
             id="codeWorkspace"
             style={styles.codeWorkspace}>
           <CodeWorkspace/>
-          <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden}/>
-          <DataWorkspace style={commonStyles.hidden}/>
+          {this.props.hasDesignMode &&
+              <ProtectedStatefulDiv id="designWorkspace" style={commonStyles.hidden}/>}
+          {this.props.hasDataMode && <DataWorkspace style={commonStyles.hidden}/>}
         </div>
       </div>
     );
   }
 });
 module.exports = connect(state => ({
+  hasDataMode: state.pageConstants.hasDataMode,
+  hasDesignMode: state.pageConstants.hasDesignMode,
   hidden: state.pageConstants.hideSource,
   isRtl: state.pageConstants.localeDirection === 'rtl',
   noVisualization: state.pageConstants.noVisualization,

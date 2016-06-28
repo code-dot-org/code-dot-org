@@ -769,10 +769,11 @@ Applab.init = function (config) {
 
   // Push initial level properties into the Redux store
   studioApp.setPageConstants(config, {
-    useFirebase,
     playspacePhoneFrame,
     channelId: config.channel,
     visualizationHasPadding: !config.noPadding,
+    hasDataMode: useFirebase,
+    hasDesignMode: true,
     isDesignModeHidden: !!config.level.hideDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
@@ -1256,7 +1257,9 @@ Applab.setWorkspaceMode = function (mode) {
   codeWorkspaceWrapper.style.display = (ApplabInterfaceMode.CODE === mode) ? 'block' : 'none';
 
   var dataWorkspaceWrapper = document.getElementById('dataWorkspaceWrapper');
-  dataWorkspaceWrapper.style.display = (ApplabInterfaceMode.DATA === mode) ? 'block' : 'none';
+  if (dataWorkspaceWrapper) {
+    dataWorkspaceWrapper.style.display = (ApplabInterfaceMode.DATA === mode) ? 'block' : 'none';
+  }
 };
 
 /**
