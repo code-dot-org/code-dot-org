@@ -2,8 +2,7 @@ var _ = require('lodash');
 var webpack = require('webpack');
 var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
-
-var AUTO_RELOAD = ['true', '1'].indexOf(process.env.AUTO_RELOAD) !== -1;
+var envConstants = require('./envConstants');
 
 // Our base config, on which other configs are derived
 var baseConfig = {
@@ -50,7 +49,7 @@ var baseConfig = {
 };
 
 // modify baseConfig's preLoaders if looking for code coverage info
-if (process.env.COVERAGE === '1') {
+if (envConstants.COVERAGE) {
   baseConfig.module.preLoaders = [
     {
       test: /\.jsx?$/,
@@ -90,7 +89,7 @@ var karmaConfig = _.extend({}, baseConfig, {
     new webpack.DefinePlugin({
       IN_UNIT_TEST: JSON.stringify(true),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+      'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
       BUILD_STYLEGUIDE: JSON.stringify(true),
       PISKEL_DEVELOPMENT_MODE: false
     }),
@@ -124,7 +123,7 @@ function create(options) {
     plugins: [
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+        'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
         BUILD_STYLEGUIDE: JSON.stringify(false),
         PISKEL_DEVELOPMENT_MODE: piskelDevMode
       }),
@@ -151,7 +150,7 @@ function create(options) {
   if (watch) {
     config.plugins = config.plugins.concat(
       new LiveReloadPlugin({
-        appendScriptTag: AUTO_RELOAD
+        appendScriptTag: envConstants.AUTO_RELOAD
       })
     );
   }
