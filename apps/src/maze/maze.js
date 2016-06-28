@@ -51,6 +51,7 @@ var BeeCell = require('./beeCell');
 var WordSearch = require('./wordsearch');
 var scrat = require('./scrat');
 
+var CollectorDrawer = require('./collectorDrawer');
 var DirtDrawer = require('./dirtDrawer');
 var BeeItemDrawer = require('./beeItemDrawer');
 
@@ -603,6 +604,8 @@ Maze.init = function (config) {
 
     if (mazeUtils.isBeeSkin(config.skinId)) {
       Maze.gridItemDrawer = new BeeItemDrawer(Maze.map, skin, Maze.bee);
+    } else if (mazeUtils.isCollectorSkin(config.skinId)) {
+      Maze.gridItemDrawer = new CollectorDrawer(Maze.map, skin.goal);
     } else {
       Maze.gridItemDrawer = new DirtDrawer(Maze.map, skin.dirt);
     }
