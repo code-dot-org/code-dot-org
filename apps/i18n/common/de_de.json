@@ -241,5 +241,6 @@
   "watchVideo": "Video anschauen",
   "when": "wenn",
   "whenRun": "wenn Ausführen",
-  "workspaceHeaderShort": "Arbeitsbereich: "
+  "workspaceHeaderShort": "Arbeitsbereich: ",
+  "dataMode": "Data"
 }

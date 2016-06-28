@@ -241,5 +241,6 @@
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "vid start",
-  "workspaceHeaderShort": "Arbetsyta: "
+  "workspaceHeaderShort": "Arbetsyta: ",
+  "dataMode": "Data"
 }

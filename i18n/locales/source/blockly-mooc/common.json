@@ -27,6 +27,7 @@
   "copy": "Copy",
   "copyright": "Copyright",
   "currentVersion": "Current Version",
+  "dataMode": "Data",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",

@@ -241,5 +241,6 @@
   "watchVideo": "காணொளியை பார்க்கவும்",
   "when": "எப்போது",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "dataMode": "Data"
 }

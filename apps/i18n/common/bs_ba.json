@@ -241,5 +241,6 @@
   "watchVideo": "Pogledaj Video",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Radni prostor: "
+  "workspaceHeaderShort": "Radni prostor: ",
+  "dataMode": "Data"
 }

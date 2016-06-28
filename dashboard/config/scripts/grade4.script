@@ -4,9 +4,6 @@ description "Planning Script for CSF 2.0"
 description_audience "Ages 9-99"
 
 stage 'Mixed Review #1 (Ramp Up)'
-level 'MikeStarNested'
-level 'MikeStarHard'
-level 'MikeStar'
 stage 'Conditionals'
 stage 'Bee: Conditionals'
 stage 'PlayLab: Conditionals'

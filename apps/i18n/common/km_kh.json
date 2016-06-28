@@ -241,5 +241,6 @@
   "watchVideo": "មើល​វីដេអូ",
   "when": "នៅ​ពេល",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "dataMode": "Data"
 }

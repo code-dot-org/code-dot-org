@@ -241,5 +241,6 @@
   "watchVideo": "Δείτε το βίντεο",
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
-  "workspaceHeaderShort": "Χώρος εργασίας: "
+  "workspaceHeaderShort": "Χώρος εργασίας: ",
+  "dataMode": "Data"
 }
