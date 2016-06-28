@@ -178,8 +178,14 @@ class ScriptLevel < ActiveRecord::Base
       kind = 'puzzle'
     end
 
+    ids = level_ids
+
+    levels.each do |l|
+      ids << l.contained_levels.map(&:id)
+    end
+
     summary = {
-        ids: level_ids,
+        ids: ids,
         position: position,
         kind: kind,
         icon: level.icon,
