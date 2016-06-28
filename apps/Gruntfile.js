@@ -6,8 +6,8 @@ var mkdirp = require('mkdirp');
 var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
-var webpackConfig = require('./webpack.config');
-var LiveReloadPlugin = require('webpack-livereload-plugin');
+var webpackConfig = require('./webpack');
+var envConstants = require('./envConstants');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -40,13 +40,10 @@ module.exports = function (grunt) {
   var PLAYGROUND_PORT = grunt.option('playground-port') || 8000;
 
   /** @const {string} */
-  var APP_TO_BUILD = grunt.option('app') || process.env.APP || process.env.MOOC_APP;
-  if (process.env.MOOC_APP) {
-    console.warn('The MOOC_APP environment variable is deprecated. Use APP instead');
-  }
+  var SINGLE_APP = grunt.option('app') || envConstants.APP;
 
   /** @const {string[]} */
-  var APPS = [
+  var ALL_APPS = [
     'maze',
     'turtle',
     'bounce',
@@ -61,28 +58,14 @@ module.exports = function (grunt) {
     'gamelab'
   ];
 
-  if (APP_TO_BUILD) {
-    if (APPS.indexOf(APP_TO_BUILD) === -1) {
-      throw new Error('Unknown app: ' + APP_TO_BUILD);
-    }
-    APPS = [APP_TO_BUILD];
+  if (SINGLE_APP && ALL_APPS.indexOf(SINGLE_APP) === -1) {
+    throw new Error('Unknown app: ' + SINGLE_APP);
   }
 
-  // Parse options from environment.
-  var envOptions = {
-    dev: (process.env.MOOC_DEV === '1' || process.env.DEV === '1'),
-    autoReload: ['true', '1'].indexOf(process.env.AUTO_RELOAD) !== -1
-  };
-  if (process.env.MOOC_DEV) {
-    console.warn('The MOOC_DEV environment variable is deprecated. Use DEV instead');
-  }
+  var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
-  config.clean = {
-    all: ['build']
-  };
-
-  var ace_suffix = envOptions.dev ? '' : '-min';
-  var dotMinIfNotDev = envOptions.dev ? '' : '.min';
+  var ace_suffix = envConstants.DEV ? '' : '-min';
+  var dotMinIfNotDev = envConstants.DEV ? '' : '.min';
   var piskelRoot = String(child_process.execSync('`npm bin`/piskel-root')).replace(/\s+$/g,'');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
@@ -113,6 +96,10 @@ module.exports = function (grunt) {
       return;
     }
   }
+
+  config.clean = {
+    all: ['build']
+  };
 
   config.copy = {
     src: {
@@ -261,26 +248,15 @@ module.exports = function (grunt) {
         outputStyle: 'nested',
         includePaths: ['../shared/css/']
       },
-      files: {
-        'build/package/css/common.css': 'style/common.scss',
-        'build/package/css/readonly.css': 'style/readonly.scss'
-      }
-    }
-  };
-  APPS.filter(function (app) {
-    return app !== 'none';
-  }).forEach(function (app) {
-    var src = 'style/' + app + '/style.scss';
-    var dest = 'build/package/css/' + app + '.css';
-    config.sass.all.files[dest] = src;
-  });
-
-  config.pseudoloc = {
-    all: {
-      srcBase: 'i18n',
-      srcLocale: 'en_us',
-      destBase: 'build/i18n',
-      pseudoLocale: 'en_ploc'
+      files: _.zipObject([
+        ['build/package/css/common.css', 'style/common.scss'],
+        ['build/package/css/readonly.css', 'style/readonly.scss']
+      ].concat(appsToBuild.map(function (app) {
+        return [
+          'build/package/css/' + app + '.css', // dst
+          'style/' + app + '/style.scss' // src
+        ];
+      })))
     }
   };
 
@@ -295,7 +271,7 @@ module.exports = function (grunt) {
             return path.join(dest, outputPath);
           },
           expand: true,
-          src: ['i18n/**/*.json', 'build/i18n/**/*.json'],
+          src: ['i18n/**/*.json'],
           dest: 'build/package/js/'
         }
       ]
@@ -309,18 +285,15 @@ module.exports = function (grunt) {
     }
   };
 
-  var outputDir = 'build/package/js/';
+  var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
   };
 
-  if (process.env.MOOC_WATCH) {
-    console.warn('The MOOC_WATCH environment variable is deprecated. Use WATCH instead');
-  }
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
-      singleRun: process.env.WATCH !== '1',
+      singleRun: envConstants.WATCH,
       files: [
         {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
@@ -362,61 +335,40 @@ module.exports = function (grunt) {
     },
   };
 
-  var entries = {};
-  APPS.forEach(function (app) {
-    entries[app] = './src/'+app+'/main.js';
-  });
-  if (entries.applab) {
+  // Create our set of entries (an object mapping target name to entry source
+  // file
+  var entries = _.zipObject(appsToBuild.map(function (app) {
+    return [app, './src/' + app + '/main.js'];
+  }));
+  if (appsToBuild.indexOf('applab') !== -1) {
     entries['applab-api'] = './src/applab/api-entry.js';
   }
+
   config.webpack = {
-    build: _.extend({}, webpackConfig, {
-      output: {
-        path: path.resolve(__dirname, outputDir),
-        filename: "[name].js",
-      },
-      devtool: 'cheap-module-eval-source-map',
-      entry: entries,
-      plugins: [
-        new webpack.DefinePlugin({
-          IN_UNIT_TEST: JSON.stringify(false),
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-          BUILD_STYLEGUIDE: JSON.stringify(false),
-          PISKEL_DEVELOPMENT_MODE: PISKEL_DEVELOPMENT_MODE
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-          name:'common',
-          minChunks: 2,
-        }),
-      ],
+    build: webpackConfig.create({
+      output: path.resolve(__dirname, OUTPUT_DIR),
+      entries: entries,
+      minify: false,
+      watch: false,
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+    }),
+    uglify: webpackConfig.create({
+      output: path.resolve(__dirname, OUTPUT_DIR),
+      entries: entries,
+      minify: true,
+      watch: false,
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+    }),
+    watch: webpackConfig.create({
+      output: path.resolve(__dirname, OUTPUT_DIR),
+      entries: entries,
+      minify: false,
       watch: true,
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE
     })
   };
-  config.webpack.uglify = _.extend({}, config.webpack.build, {
-    devtool: 'source-map',
-    output: _.extend({}, config.webpack.build.output, {
-      filename: "[name].min.js",
-    }),
-    plugins: config.webpack.build.plugins.concat([
-      new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        }
-      }),
-    ]),
-  });
-  config.webpack.watch = _.extend({}, config.webpack.build, {
-    keepalive: true,
-    // don't stop watching when we hit compile errors
-    failOnError: false,
-    plugins: config.webpack.build.plugins.concat([
-      new LiveReloadPlugin({
-        appendScriptTag: envOptions.autoReload
-      }),
-    ])
-  });
 
-  var ext = envOptions.dev ? 'uncompressed' : 'compressed';
+  var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
   config.concat = {
     vendor: {
       nonull: true,
@@ -440,39 +392,31 @@ module.exports = function (grunt) {
     }
   };
 
-  var uglifiedFiles = {};
+
   config.uglify = {
-    browserified: {
-      files: uglifiedFiles
+    lib: {
+      files: _.zipObject([
+        'jsinterpreter/interpreter.js',
+        'jsinterpreter/acorn.js',
+        'p5play/p5.play.js',
+        'p5play/p5.js'
+      ].map(function (src) {
+        return [
+          OUTPUT_DIR + src.replace(/\.js$/, '.min.js'), // dst
+          OUTPUT_DIR + src // src
+        ];
+      }))
     }
   };
 
-  config.uglify.lib = {files: {}};
-  config.uglify.lib.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
-    outputDir + 'jsinterpreter/interpreter.js';
-  config.uglify.lib.files[outputDir + 'jsinterpreter/acorn.min.js'] =
-    outputDir + 'jsinterpreter/acorn.js';
-  config.uglify.lib.files[outputDir + 'p5play/p5.play.min.js'] =
-    outputDir + 'p5play/p5.play.js';
-  config.uglify.lib.files[outputDir + 'p5play/p5.min.js'] =
-    outputDir + 'p5play/p5.js';
-
   config.watch = {
-    js: {
-      files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src'],
-      options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true,
-        interrupt: true
-      }
-    },
+    // JS files watched by webpack
     style: {
       files: ['style/**/*.scss', 'style/**/*.sass'],
       tasks: ['newer:sass', 'notify:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true,
+        livereload: envConstants.AUTO_RELOAD,
         interrupt: true
       }
     },
@@ -481,7 +425,7 @@ module.exports = function (grunt) {
       tasks: ['newer:copy', 'notify:content'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: envConstants.AUTO_RELOAD
       }
     },
     vendor_js: {
@@ -489,18 +433,28 @@ module.exports = function (grunt) {
       tasks: ['newer:concat', 'newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: envConstants.AUTO_RELOAD
       }
     },
     messages: {
       files: ['i18n/**/*.json'],
-      tasks: ['pseudoloc', 'messages', 'notify:messages'],
+      tasks: ['messages', 'notify:messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: envConstants.AUTO_RELOAD
       }
     },
   };
+
+  config.concurrent = {
+    // run our two watch tasks concurrently so that they dont block each other
+    watch: {
+      tasks: ['watch', 'webpack:watch'],
+      options: {
+        logConcurrentOutput: true
+      }
+    }
+  },
 
   config.strip_code = {
     options: {
@@ -513,7 +467,7 @@ module.exports = function (grunt) {
   };
 
   config.notify = {
-    browserify: {options: {message: 'Browserify build completed.'}},
+    'js-build': {options: {message: 'JS build completed.'}},
     sass: {options: {message: 'SASS build completed.'}},
     content: {options: {message: 'Content build completed.'}},
     ejs: {options: {message: 'EJS build completed.'}},
@@ -534,8 +488,10 @@ module.exports = function (grunt) {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
-    APPS.concat('common').map(function (item) {
-      var localeString = '/*' + item + '*/ module.exports = window.blockly.' + (item === 'common' ? 'locale' : 'appLocale') + ';';
+    appsToBuild.concat('common').map(function (item) {
+      var localeType = (item === 'common' ? 'locale' : 'appLocale');
+      var localeString = '/*' + item + '*/ ' +
+        'module.exports = window.blockly.' + localeType + ';';
       fs.writeFileSync(path.join(current, item + '.js'), localeString);
     });
   });
@@ -550,7 +506,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
-    'pseudoloc',
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:src',
@@ -587,11 +542,11 @@ module.exports = function (grunt) {
     'prebuild',
     'webpack:build'
   ].concat([
-    'notify:browserify',
+    'notify:js-build',
     // Skip minification in development environment.
-    envOptions.dev ? 'noop' : 'webpack:uglify',
+    envConstants.DEV ? 'noop' : 'webpack:uglify',
     // Skip minification in development environment.
-    envOptions.dev ? 'noop' : 'uglify:lib',
+    envConstants.DEV ? 'noop' : 'uglify:lib',
     'postbuild'
   ]));
 
@@ -599,7 +554,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('dev', [
     'prebuild',
-    'webpack:watch',
+    'concurrent:watch',
     'postbuild',
   ]);
 

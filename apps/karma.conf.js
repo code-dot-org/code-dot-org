@@ -1,14 +1,15 @@
 var webpackConfig = require('./webpack').karmaConfig;
 var webpack = require('webpack');
 var _ = require('lodash');
+var envConstants = require('./envConstants');
 
 var PORT = 9876;
 
 var reporters = ['mocha'];
-if (process.env.CIRCLECI) {
+if (envConstants.CIRCLECI) {
   reporters.push('junit');
 }
-if (process.env.COVERAGE === '1') {
+if (envConstants.COVERAGE) {
   reporters.push('coverage');
 }
 
@@ -64,7 +65,7 @@ module.exports = function (config) {
     reporters: reporters,
 
     junitReporter: {
-      outputDir: process.env.CIRCLECI ? process.env.CIRCLE_TEST_REPORTS : '',
+      outputDir: envConstants.CIRCLECI ? envConstants.CIRCLE_TEST_REPORTS : '',
     },
     coverageReporter: {
       dir: 'coverage',
@@ -95,7 +96,7 @@ module.exports = function (config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [
-      process.env.BROWSER || 'PhantomJS'
+      envConstants.BROWSER || 'PhantomJS'
     ],
 
 
