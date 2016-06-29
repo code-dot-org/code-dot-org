@@ -31,16 +31,20 @@ const PiskelEditor = React.createClass({
   },
 
   componentDidMount() {
+    /** @private {boolean} Tracks whether Piskel can receive API messages yet. */
+    this.isPiskelReady_ = false;
+
     /** @private {boolean} Track whether we're mid-load so we don't fire save
      *          events during load. */
     this.isLoadingAnimation_ = false;
 
-    /** @private {AnimationKey} reference to animation that is currenly loaded
+    /** @private {AnimationKey} reference to animation that is currently loaded
      *          in the editor. */
     this.loadedAnimation_ = null;
 
     this.piskel = new PiskelApi();
     this.piskel.attachToPiskel(this.iframe);
+    this.piskel.onPiskelReady(this.onPiskelReady);
     this.piskel.onStateSaved(this.onAnimationSaved);
   },
 
@@ -50,23 +54,53 @@ const PiskelEditor = React.createClass({
   },
 
   componentWillReceiveProps(newProps) {
-    const {animationList, selectedAnimation} = newProps;
+    const {selectedAnimation, animationList} = newProps;
     if (selectedAnimation !== this.props.selectedAnimation) {
-      this.isLoadingAnimation_ = true;
-      var animation = animationList.data[selectedAnimation];
-      // TODO: Handle selecting animation where dataURI not loaded yet?
-      this.piskel.loadSpritesheet(animation.dataURI, animation.frameSize.x,
-          animation.frameSize.y, animation.frameRate, () => {
-            this.loadedAnimation_ = selectedAnimation;
-            this.isLoadingAnimation_ = false;
-          });
+      this.loadAnimationIntoPiskel(selectedAnimation, animationList.data[selectedAnimation]);
     }
+  },
+
+  loadAnimationIntoPiskel(key, data) {
+    if (!this.isPiskelReady_) {
+      console.log('Attempted to load animation before piskel ready'); // TODO: Remove
+      return;
+    }
+
+    if (key === this.loadedAnimation_) {
+      console.log('Attempted to load previously loaded animation, doing nothing'); // TODO: Remove
+      return;
+    }
+
+    if (this.isLoadingAnimation_) {
+      console.log('Attempted to load animation while previous animation still loading'); // TODO: Remove
+      return;
+    }
+
+    console.log('Loading ' + key + '...');
+    this.isLoadingAnimation_ = true;
+    this.piskel.loadSpritesheet(data.dataURI, data.frameSize.x,
+        data.frameSize.y, data.frameRate, () => {
+          this.loadedAnimation_ = key;
+          this.isLoadingAnimation_ = false;
+          console.log('Loaded ' + key);
+        });
   },
 
   // We are hosting an embedded application in an iframe; we should never try
   // to re-render it.
   shouldComponentUpdate() {
     return false;
+  },
+
+  onPiskelReady() {
+    console.log('Piskel is ready');  // TODO: Remove
+    this.isPiskelReady_ = true;
+    const {selectedAnimation, animationList} = this.props;
+
+    // When Piskel is ready, if there is a selected animation, attempt to load it.
+    if (selectedAnimation) {
+      this.loadAnimationIntoPiskel(selectedAnimation, animationList.data[selectedAnimation]);
+    }
   },
 
   onAnimationSaved(message) {
