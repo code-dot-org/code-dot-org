@@ -817,7 +817,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'track_proficiency does not update basic_proficiency_at if already proficient' do
-    TIME = '2015-01-02 03:45:43 UTC'
+    TIME = '2015-01-02 03:45:43 UTC'.freeze
     level = create :level
     student = create :student
     level_concept_difficulty = LevelConceptDifficulty.

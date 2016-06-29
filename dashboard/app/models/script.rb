@@ -140,7 +140,7 @@ class Script < ActiveRecord::Base
   # variable (ie. in memory in the worker process) and in a
   # distributed cache (Rails.cache)
   @@script_cache = nil
-  SCRIPT_CACHE_KEY = 'script-cache'
+  SCRIPT_CACHE_KEY = 'script-cache'.freeze
 
   # Caching is disabled when editing scripts and levels.
   def self.should_cache?
@@ -360,7 +360,7 @@ class Script < ActiveRecord::Base
     pd? || professional_learning_course?
   end
 
-  SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
+  SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage).freeze
   SCRIPT_MAP = Hash[SCRIPT_CSV_MAPPING.map { |x| x.include?(':') ? x.split(':') : [x, x.downcase] }]
 
   def self.setup(custom_files)

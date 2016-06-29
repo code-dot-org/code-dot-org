@@ -91,7 +91,7 @@ end
 #
 # Define the BLOCKLY[-CORE] BUILD task
 #
-BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
+BLOCKLY_CORE_DEPENDENCIES = [].freeze#[aws_dir('build.rake')]
 BLOCKLY_CORE_PRODUCT_FILES = Dir.glob(blockly_core_dir('build-output', '**/*'))
 BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
 BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do

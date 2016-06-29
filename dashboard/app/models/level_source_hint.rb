@@ -24,25 +24,25 @@ class LevelSourceHint < ActiveRecord::Base
   has_many :activity_hints
   after_initialize :init
 
-  STATUS_SELECTED = 'selected'
-  STATUS_EXPERIMENT = 'experiment'
-  STATUS_INACTIVE = 'inactive'
-  STATUS_NEW = 'new'
+  STATUS_SELECTED = 'selected'.freeze
+  STATUS_EXPERIMENT = 'experiment'.freeze
+  STATUS_INACTIVE = 'inactive'.freeze
+  STATUS_NEW = 'new'.freeze
 
   USER_VISIBLE_NAMES = {
       STATUS_SELECTED => 'approved',
       STATUS_EXPERIMENT => 'experimental',
       STATUS_INACTIVE => 'rejected',
       STATUS_NEW => 'new'
-  }
+  }.freeze
 
   def init
     self.status ||= STATUS_NEW
   end
 
   # Values for self.source.
-  CROWDSOURCED = 'crowdsourced'
-  STANFORD = 'Stanford bestPath1'
+  CROWDSOURCED = 'crowdsourced'.freeze
+  STANFORD = 'Stanford bestPath1'.freeze
 
   def selected?
     self.status == STATUS_SELECTED

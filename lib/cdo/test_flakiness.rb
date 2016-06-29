@@ -12,7 +12,7 @@ class TestFlakiness
   PER_REQUEST = 1500 # maximum returned per API call (undocumented)
   NUM_REQUESTS = 50 # rate limit: 15 request/s with 300 request burst https://wiki.saucelabs.com/display/DOCS/Rate+Limits+for+the+Sauce+Labs+REST+API
   MIN_SAMPLES = 10
-  TEST_ACCOUNT_USERNAME = 'testcodeorg'
+  TEST_ACCOUNT_USERNAME = 'testcodeorg'.freeze
 
   def TestFlakiness.calculate_test_flakiness
     jobs = []

@@ -1,9 +1,9 @@
 # From https://raw.githubusercontent.com/discourse/discourse/master/lib/single_sign_on.rb
 class SingleSignOn
   ACCESSORS = [:nonce, :name, :username, :email, :avatar_url, :avatar_force_update,
-               :about_me, :external_id, :return_sso_url, :admin, :moderator]
-  FIXNUMS = []
-  BOOLS = [:avatar_force_update, :admin, :moderator]
+               :about_me, :external_id, :return_sso_url, :admin, :moderator].freeze
+  FIXNUMS = [].freeze
+  BOOLS = [:avatar_force_update, :admin, :moderator].freeze
   NONCE_EXPIRY_TIME = 10.minutes
 
   attr_accessor(*ACCESSORS)

@@ -5,7 +5,7 @@ require 'aws-sdk'
 #
 class DynamoTable
   MAX_BATCH_SIZE ||= 25
-  CHANNEL_TABLE_NAME_INDEX ||= "channel_id-table_name-index"
+  CHANNEL_TABLE_NAME_INDEX ||= "channel_id-table_name-index".freeze
 
   class NotFound < Sinatra::NotFound
   end

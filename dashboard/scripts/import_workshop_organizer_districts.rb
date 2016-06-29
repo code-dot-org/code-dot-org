@@ -2,8 +2,8 @@
 require_relative '../config/environment'
 require 'csv'
 
-COL_EMAIL = 'Email'
-COL_USER_ID = 'Code Studio ID'
+COL_EMAIL = 'Email'.freeze
+COL_USER_ID = 'Code Studio ID'.freeze
 
 district_csv = ARGV[0]
 unless district_csv

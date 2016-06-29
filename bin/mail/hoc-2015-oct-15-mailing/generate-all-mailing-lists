@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-ALL_FILES = []
+ALL_FILES = [].freeze
 
 # naming convention:
 # script to generate the csv:

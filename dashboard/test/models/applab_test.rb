@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ApplabTest < ActiveSupport::TestCase
-  APPS_PATH = '../apps'
+  APPS_PATH = '../apps'.freeze
 
   test 'palette JSON matches applab/levels.js levels.custom JSON' do
     file_contents = IO.read("#{APPS_PATH}/src/applab/levels.js")

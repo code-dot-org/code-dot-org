@@ -3,7 +3,7 @@ WebMock.disable_net_connect!(:allow_localhost => true)
 require 'test_helper'
 
 class MediaProxyControllerTest < ActionController::TestCase
-  IMAGE_URI = 'http://www.example.com/foo.jpg'
+  IMAGE_URI = 'http://www.example.com/foo.jpg'.freeze
   IMAGE_DATA = 'JPG_\u0000\u00FF'.force_encoding(Encoding::BINARY)
 
   test "should fetch proxied media in all content types" do

@@ -4,12 +4,12 @@ require 'securerandom'
 
 class HocSurveyPrizeTest < SequelTestCase
 
-  TYPE1 = 'apple'
-  TYPE2 = 'orange'
-  USER1 = 'user1@code.org'
-  USER2 = 'user2@code.org'
-  PURPOSE1 = 'test'
-  PURPOSE2 = 'new event'
+  TYPE1 = 'apple'.freeze
+  TYPE2 = 'orange'.freeze
+  USER1 = 'user1@code.org'.freeze
+  USER2 = 'user2@code.org'.freeze
+  PURPOSE1 = 'test'.freeze
+  PURPOSE2 = 'new event'.freeze
 
   def setup
     @codes = {}

@@ -10,19 +10,19 @@ class HoneybadgerTest < Minitest::Test
     ENV.unstub(:with_sensitive_values_redacted)
   end
 
-  COMMAND = '/home/ubuntu/staging/bin/deliver_poste_messages'
+  COMMAND = '/home/ubuntu/staging/bin/deliver_poste_messages'.freeze
 
   ERROR =
     "/home/ubuntu/staging/bin/deliver_poste_messages:126:in `send': undefined method `[]' for nil:NilClass (NoMethodError)\n" +
     "\tfrom /home/ubuntu/staging/bin/deliver_poste_messages:274:in `block in main'\n" +
     "\tfrom /home/ubuntu/staging/bin/deliver_poste_messages:250:in `block (3 levels) in create_threads'"
 
-  EXPECTED_MESSAGE = "undefined method `[]' for nil:NilClass (NoMethodError)"
+  EXPECTED_MESSAGE = "undefined method `[]' for nil:NilClass (NoMethodError)".freeze
   EXPECTED_BACKTRACE = [
       "/home/ubuntu/staging/bin/deliver_poste_messages:126:in `send'",
       "from /home/ubuntu/staging/bin/deliver_poste_messages:274:in `block in main'",
       "from /home/ubuntu/staging/bin/deliver_poste_messages:250:in `block (3 levels) in create_threads'"
-  ]
+  ].freeze
 
   def test_parse_exception_dump
     error_message, backtrace = Honeybadger.parse_exception_dump ERROR

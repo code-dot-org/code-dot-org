@@ -7,14 +7,14 @@ class HttpCache
   STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map{|ext| "/*.#{ext}"}
 
   # Language header and cookie are needed to separately cache language-specific pages.
-  LANGUAGE_HEADER = %w(Accept-Language)
-  LANGUAGE_COOKIES = %w(language_ pm)
+  LANGUAGE_HEADER = %w(Accept-Language).freeze
+  LANGUAGE_COOKIES = %w(language_ pm).freeze
 
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = {
       # We specify the "special case" routes here; standard routes are handled by the loop below.
       'hourofcode' => '/hoc/*'
-  }
+  }.freeze
   %w(starwars starwarsblocks mc frozen gumball).each do |script_name|
     CACHED_SCRIPTS_MAP[script_name] = "/s/#{script_name}/stage/1/puzzle/*"
   end

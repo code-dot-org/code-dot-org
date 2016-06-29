@@ -19,7 +19,7 @@ SMTP_OPTIONS = {
   password: CDO.poste_smtp_password,
   authentication: 'plain',
   enable_starttls_auto: true,
-}
+}.freeze
 #SMTP_OPTIONS = {
 #  address:'localhost',
 #  port:1025,

@@ -3,12 +3,12 @@ require_relative '../mailing-common/mailing-list-utils'
 require 'set'
 
 # Exported from https://docs.google.com/spreadsheets/d/1T_cd7CDlOuuLe_hObSzNX7BbN7PwU_EzEpjuIHuwoNM
-REGION_LIST_FILE = 'Code.org Partners with Regions - Sheet1.csv'
+REGION_LIST_FILE = 'Code.org Partners with Regions - Sheet1.csv'.freeze
 
 # https://www.dropbox.com/s/upxdp1yam0jd9lf/1.2.2016.csv?dl=0
-CURRENT_TEACHERS_FILE = 'current-teachers.csv'
+CURRENT_TEACHERS_FILE = 'current-teachers.csv'.freeze
 EXCLUDED_EMAILS = Set.new
-REGIONS = {}
+REGIONS = {}.freeze
 
 def query_with_location(base_query, city, state)
   query = "(#{base_query}) && ((location_state_s:\"#{state}\" && location_city_s:\"#{city}\") || (create_ip_state_s:\"#{state}\" && create_ip_city_s:\"#{city}\"))"

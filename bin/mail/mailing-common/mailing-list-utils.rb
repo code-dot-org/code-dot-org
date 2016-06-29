@@ -17,7 +17,7 @@ UNSUBSCRIBERS = {}.tap do |results|
 end
 puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
-ALL = {}
+ALL = {}.freeze
 
 def export_contacts_to_csv(contacts, path)
   columns = nil
@@ -40,7 +40,7 @@ COUNTRY_FIELDS_TO_US_VALUES =
     'hoc_country_s' => ['us'],
     'country_s' => ['united states'],
     'create_ip_country_s' => ['united states', 'reserved']
-  }
+  }.freeze
 
 def international?(solr_record)
   COUNTRY_FIELDS_TO_US_VALUES.each do |field, us_values|
@@ -139,7 +139,7 @@ def include_indiegogo_donors(results)
   )
 end
 
-ALL_FILES = []
+ALL_FILES = [].freeze
 
 # naming convention:
 # script to generate the csv:

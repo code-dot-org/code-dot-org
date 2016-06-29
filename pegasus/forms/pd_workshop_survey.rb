@@ -97,14 +97,14 @@ class PdWorkshopSurvey
     OPTIONS[symbolized_field_name]
   end
 
-  OTHER = 'Other'
+  OTHER = 'Other'.freeze
 
   GRADE_OPTIONS = [
     'pre-K',
     'Elementary',
     'Middle School/Junior High',
     'High School'
-  ]
+  ].freeze
 
   AGREE_SCALE_OPTIONS = [
     'Strongly Disagree',
@@ -113,7 +113,7 @@ class PdWorkshopSurvey
     'Slightly Agree',
     'Agree',
     'Strongly Agree'
-  ]
+  ].freeze
 
   OPTIONS = {
     reason_for_attending_ss: [
@@ -284,5 +284,5 @@ class PdWorkshopSurvey
       'Arts/Music',
       'Other'
     ]
-  }
+  }.freeze
 end

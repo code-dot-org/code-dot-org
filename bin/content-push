@@ -2,7 +2,7 @@
 require_relative '../deployment.rb'
 require 'cdo/only_one'
 
-CONTENT_PATHS = 'dashboard pegasus'
+CONTENT_PATHS = 'dashboard pegasus'.freeze
 
 def ask_for_name
   name = ''

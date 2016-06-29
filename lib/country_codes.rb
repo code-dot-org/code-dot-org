@@ -243,7 +243,7 @@ COUNTRY_CODE_TO_COUNTRY_NAME = {
   "ZA" => "South Africa",
   "ZM" => "Zambia",
   "ZW" => "Zimbabwe",
-}
+}.freeze
 
 # Returns the name of the country whose two character country code is code.
 # If code is not a valid two character country code, returns code.

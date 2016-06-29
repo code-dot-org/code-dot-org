@@ -29,7 +29,7 @@ require 'active_support/core_ext/object/blank'
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
 COMMIT_HASH = RakeUtils.git_revision
-S3_LOGS_BUCKET = 'cucumber-logs'
+S3_LOGS_BUCKET = 'cucumber-logs'.freeze
 S3_LOGS_PREFIX = GitUtils.current_branch
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 

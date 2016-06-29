@@ -76,7 +76,7 @@ tutorials = %w(
   finchrobot
 )
 
-LONG_VALUE_SUM = "LongValueSum:"
+LONG_VALUE_SUM = "LongValueSum:".freeze
 
 ARGF.each do |line|
   # The line starts with a timestamp of the form YYYY-MM-DDTHH:MM:SS.XXXXXXZ,

@@ -8,7 +8,7 @@ REPO_DIR = File.expand_path('../../', __FILE__)
 LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/scripts', __FILE__)
 
 #This file contains the time of the last completed test run, successful or unsuccessful
-LEVELBUILDER_CI_LAST_RUN_FILENAME = 'levelbuilder_ci_last_run'
+LEVELBUILDER_CI_LAST_RUN_FILENAME = 'levelbuilder_ci_last_run'.freeze
 
 Dir.chdir(REPO_DIR)
 

@@ -65,7 +65,7 @@ COUNTRIES = ["Guatemala",
              "Uruguay",
              "Chile",
              "Argentina",
-             "Puerto Rico"]
+             "Puerto Rico"].freeze
 
 QUERY = COUNTRIES.
   map {|country| %Q|(kind_s:"HocSignup2015" && location_country_s:"#{country}")| }.

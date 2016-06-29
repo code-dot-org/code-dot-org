@@ -17,7 +17,7 @@ require 'redis'
 class RedisPropertyBag
 
   # A unique prefix for Redis property bag keys.
-  PROPERTY_BAG_KEY_PREFIX = '__pbag__'
+  PROPERTY_BAG_KEY_PREFIX = '__pbag__'.freeze
 
   # Initializes a Redis property bag.
   #

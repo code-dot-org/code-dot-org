@@ -14,7 +14,7 @@ require 'securerandom' unless defined?(SecureRandom)
 class RedisTable
 
   # Suffix appended to special row id columns.
-  ROW_ID_SUFFIX='_row_id'
+  ROW_ID_SUFFIX='_row_id'.freeze
 
   class NotFound < Sinatra::NotFound
   end

@@ -31,8 +31,8 @@ task :pseudolocalize => :environment do
     end
   end
 
-  SOURCE_LOCALE = 'en'
-  PSEUDO_LOCALE = 'en-PLOC'
+  SOURCE_LOCALE = 'en'.freeze
+  PSEUDO_LOCALE = 'en-PLOC'.freeze
 
   srcs = Dir.glob("#{Rails.root}/config/locales/*#{SOURCE_LOCALE}.yml")
   srcs.each do |src|

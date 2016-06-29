@@ -6,7 +6,7 @@ SOLR_PARAMS = {
   q: 'kind_s:ProfessionalDevelopmentWorkshop',
   fl: 'section_id_s',
   rows: 10000
-}
+}.freeze
 SOLR.query(SOLR_PARAMS).each do |record|
   next if record['section_id_s'].to_s == ''
   SECTION_IDS << record['section_id_s']

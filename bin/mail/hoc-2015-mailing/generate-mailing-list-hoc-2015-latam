@@ -65,7 +65,7 @@ HOC_SIGNUP_COUNTRIES = ["Guatemala",
                         "Uruguay",
                         "Chile",
                         "Argentina",
-                        "Puerto Rico"]
+                        "Puerto Rico"].freeze
 
 CSEDWEEK_COUNTRIES = %w(
   gt
@@ -86,7 +86,7 @@ CSEDWEEK_COUNTRIES = %w(
   cl
   ar
   pr
-)
+).freeze
 
 HOC_SIGNUP_QUERY = HOC_SIGNUP_COUNTRIES.
   map {|country| %Q|(kind_s:"HocSignup2014" && location_country_s:"#{country}")| }.

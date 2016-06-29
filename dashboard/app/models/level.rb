@@ -187,7 +187,7 @@ class Level < ActiveRecord::Base
     builder.to_xml(PRETTY_PRINT)
   end
 
-  PRETTY_PRINT = {save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION | Nokogiri::XML::Node::SaveOptions::FORMAT}
+  PRETTY_PRINT = {save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION | Nokogiri::XML::Node::SaveOptions::FORMAT}.freeze
 
   def self.pretty_print_xml(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
@@ -218,7 +218,7 @@ class Level < ActiveRecord::Base
      'Applab', 'Gamelab', # all applab and gamelab are freeplay
      'EvaluationQuestion', # plc evaluation
      'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation',
-    ] # widgets
+    ].freeze # widgets
   # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
 
   def self.where_we_want_to_calculate_ideal_level_source

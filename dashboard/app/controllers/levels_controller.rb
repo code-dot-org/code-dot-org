@@ -1,7 +1,7 @@
 require "csv"
 require "naturally"
 
-EMPTY_XML = '<xml></xml>'
+EMPTY_XML = '<xml></xml>'.freeze
 
 class LevelsController < ApplicationController
   include LevelsHelper

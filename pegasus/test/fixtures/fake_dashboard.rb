@@ -6,38 +6,38 @@ require 'sequel'
 # Provides a fake Dashboard database with some fake data to test against.
 #
 module FakeDashboard
-  DATABASE_FILENAME = './fake_dashboard_for_tests.db'
+  DATABASE_FILENAME = './fake_dashboard_for_tests.db'.freeze
   @@fake_db = nil
 
   #
   # Fake Data: Users
   #
   UNUSED_USER_ID = 12345
-  STUDENT = {id: 1, name: 'Sally Student', user_type: 'student', admin: false}
-  TEACHER = {id: 2, name: 'Terry Teacher', user_type: 'teacher', admin: false}
-  ADMIN = {id: 3, name: 'Alice Admin', user_type: 'teacher', admin: true}
-  FACILITATOR = {id: 4, name: 'Fran Facilitator', user_type: 'teacher', admin: false}
+  STUDENT = {id: 1, name: 'Sally Student', user_type: 'student', admin: false}.freeze
+  TEACHER = {id: 2, name: 'Terry Teacher', user_type: 'teacher', admin: false}.freeze
+  ADMIN = {id: 3, name: 'Alice Admin', user_type: 'teacher', admin: true}.freeze
+  FACILITATOR = {id: 4, name: 'Fran Facilitator', user_type: 'teacher', admin: false}.freeze
   SELF_STUDENT = {
     id: 5, name: 'Self Studying Student', user_type: 'student', admin: false
-  }
+  }.freeze
   DELETED_STUDENT = {
     id: 6, name: 'Stricken Student', user_type: 'student', admin: false,
     deleted_at: '2016-01-01 12:34:56'
-  }
+  }.freeze
   TEACHER_WITH_DELETED = {
     id: 7, name: 'Temporary Teacher', user_type: 'teacher', admin: false
-  }
+  }.freeze
   USERS = [
     STUDENT, TEACHER, ADMIN, FACILITATOR, SELF_STUDENT, DELETED_STUDENT,
     TEACHER_WITH_DELETED
-  ]
+  ].freeze
 
   #
   # Fake Data; User Permissions
   #
   USER_PERMISSIONS = [
       {user_id: FACILITATOR[:id], permission: 'facilitator'}
-  ]
+  ].freeze
   # Possible permissions include
   #   create_professional_development_workshop
   #   district_contact
@@ -46,18 +46,18 @@ module FakeDashboard
   #
   # Fake Data: Sections
   #
-  SECTION_NORMAL = {id: 150001, user_id: TEACHER[:id], name: 'Fake Section A'}
-  SECTION_EMPTY = {id: 150002, user_id: TEACHER[:id], name: 'Fake Section B'}
+  SECTION_NORMAL = {id: 150001, user_id: TEACHER[:id], name: 'Fake Section A'}.freeze
+  SECTION_EMPTY = {id: 150002, user_id: TEACHER[:id], name: 'Fake Section B'}.freeze
   SECTION_DELETED = {
     id: 150003, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section C',
     deleted_at: '2015-01-01 12:34:56'
-  }
+  }.freeze
   SECTION_DELETED_FOLLOWERS = {
     id: 150004, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section D'
-  }
+  }.freeze
   TEACHER_SECTIONS = [
     SECTION_NORMAL, SECTION_EMPTY, SECTION_DELETED, SECTION_DELETED_FOLLOWERS
-  ]
+  ].freeze
 
   #
   # Fake Data: Followers
@@ -79,7 +79,7 @@ module FakeDashboard
         section_id: SECTION_DELETED_FOLLOWERS[:id],
         deleted_at: '2016-01-01 00:01:02'
       }
-  ]
+  ].freeze
 
   # Overrides the current database with a procedure that, given a query,
   # will return results appropriate to our test suite.

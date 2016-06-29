@@ -1,6 +1,6 @@
 module EnvUtils
-  SENSITIVE_KEYWORDS = %w[KEY PASSWORD SECRET]
-  OBFUSCATION = '(HIDDEN)'
+  SENSITIVE_KEYWORDS = %w[KEY PASSWORD SECRET].freeze
+  OBFUSCATION = '(HIDDEN)'.freeze
 
   def EnvUtils.redact_sensitive_values(hash)
     copy = hash.dup

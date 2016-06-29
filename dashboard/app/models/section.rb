@@ -36,8 +36,8 @@ class Section < ActiveRecord::Base
 
   belongs_to :script
 
-  LOGIN_TYPE_PICTURE = 'picture'
-  LOGIN_TYPE_WORD = 'word'
+  LOGIN_TYPE_PICTURE = 'picture'.freeze
+  LOGIN_TYPE_WORD = 'word'.freeze
 
   def user_must_be_teacher
     errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER

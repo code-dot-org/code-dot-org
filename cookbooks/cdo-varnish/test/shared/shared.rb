@@ -18,7 +18,7 @@ module Cdo
     # Chef node attributes as constants
     DASHBOARD_PORT = 8080
     VARNISH_PORT = 80
-    LOCALHOST = 'localhost'
+    LOCALHOST = 'localhost'.freeze
 
     def self.setup(cloudfront=false)
       puts 'setup'

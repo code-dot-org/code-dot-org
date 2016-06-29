@@ -28,7 +28,7 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
       NOT_STARTED = :not_started,
       IN_PROGRESS = :in_progress,
       COMPLETED = :completed
-  ]
+  ].freeze
 
   def status
     levels_tracked = plc_learning_module.stage.script_levels.map(&:levels).flatten

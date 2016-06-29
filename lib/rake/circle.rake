@@ -1,8 +1,8 @@
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
 
-RUN_UI_TESTS_TAG = '[test ui]'
-RUN_ALL_TESTS_TAG = '[test all]'
+RUN_UI_TESTS_TAG = '[test ui]'.freeze
+RUN_ALL_TESTS_TAG = '[test all]'.freeze
 
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'

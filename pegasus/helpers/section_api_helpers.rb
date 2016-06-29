@@ -123,7 +123,7 @@ class DashboardStudent
       and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}")
   end
 
-  VALID_GENDERS = %w(m f)
+  VALID_GENDERS = %w(m f).freeze
   def self.valid_gender?(gender)
     VALID_GENDERS.include?(gender)
   end

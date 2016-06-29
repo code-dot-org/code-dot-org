@@ -25,7 +25,7 @@ DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 TABLE_ID = CDO.hoc_map_table_id
 
 # TODO: This file is not checked in so this won't work unless you also get the key file.
-PRIVATE_KEY_FILENAME = 'code-dot-org-hoc-map-c3fc0a673b37.p12'
+PRIVATE_KEY_FILENAME = 'code-dot-org-hoc-map-c3fc0a673b37.p12'.freeze
 
 all_forms = DB_READONLY[:forms].where(kind: 'HocSignup2016')
 

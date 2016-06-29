@@ -102,7 +102,7 @@ class ApplicationController < ActionController::Base
   PERMITTED_USER_FIELDS = [:name, :username, :email, :password, :password_confirmation,
                            :locale, :gender, :login,
                            :remember_me, :age, :school, :full_address, :user_type,
-                           :hashed_email]
+                           :hashed_email].freeze
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:account_update) do |u| u.permit PERMITTED_USER_FIELDS end

@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
   include LevelsHelper
 
-  TEMPLATES = %w(projects)
+  TEMPLATES = %w(projects).freeze
 
   STANDALONE_PROJECTS = {
     artist: {

@@ -36,7 +36,7 @@ class Concept < ActiveRecord::Base
     @@name_cache = nil
   end
 
-  CONCEPT_NAMES_BY_INDEX = %w(sequence if if_else loop_times loop_until loop_while loop_for function parameters)
+  CONCEPT_NAMES_BY_INDEX = %w(sequence if if_else loop_times loop_until loop_while loop_for function parameters).freeze
 
   def self.setup
     self.setup_with_concepts(CONCEPT_NAMES_BY_INDEX)

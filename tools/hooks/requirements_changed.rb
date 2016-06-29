@@ -8,7 +8,7 @@ REQUIREMENTS = {
   "bower.json" => "bower install",
   "Gemfile" => "bundle install",
   "Berksfile" => "berks install"
-}
+}.freeze
 
 def get_modified_files
   prev_head = ARGV[0]

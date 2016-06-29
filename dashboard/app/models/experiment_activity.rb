@@ -17,9 +17,9 @@ class ExperimentActivity < ActiveRecord::Base
   @@is_experimenting_feedback_design = false
 
   # Experiment types
-  TYPE_FEEDBACK_DESIGN_WHITE = 'white_background'
-  TYPE_FEEDBACK_DESIGN_YELLOW = 'yellow_background'
-  TYPES_FEEDBACK_DESIGN = [TYPE_FEEDBACK_DESIGN_WHITE, TYPE_FEEDBACK_DESIGN_YELLOW]
+  TYPE_FEEDBACK_DESIGN_WHITE = 'white_background'.freeze
+  TYPE_FEEDBACK_DESIGN_YELLOW = 'yellow_background'.freeze
+  TYPES_FEEDBACK_DESIGN = [TYPE_FEEDBACK_DESIGN_WHITE, TYPE_FEEDBACK_DESIGN_YELLOW].freeze
 
   def white_background?
     self.feedback_design == TYPE_FEEDBACK_DESIGN_WHITE
@@ -69,8 +69,8 @@ class ExperimentActivity < ActiveRecord::Base
   end
 
   FEEDBACK_EXPERIMENT_SOURCES = [LevelSourceHint::CROWDSOURCED,
-                                 LevelSourceHint::STANFORD, nil]
-  FEEDBACK_EXPERIMENT_PARAMETER = 'stanford_experiment'
+                                 LevelSourceHint::STANFORD, nil].freeze
+  FEEDBACK_EXPERIMENT_PARAMETER = 'stanford_experiment'.freeze
 
   # Hint visibility experiment is currently taking place at four levels.
   # While not all level_nums are unique, these appear to be.
@@ -81,7 +81,7 @@ class ExperimentActivity < ActiveRecord::Base
       # Two levels with low completion rates.
       '1_7',        # http://learn.code.org/s/1/level/30 (level_id == 25 in prod)
       'karel_1_11'  # http://learn.code.org/s/1/level/57 (level_id == 43 in prod)
-  ]
+  ].freeze
 
   def self.experimenting_hint_visibility?(level_source)
     false
@@ -93,9 +93,9 @@ class ExperimentActivity < ActiveRecord::Base
 
   HINT_VISIBILITY_VALUES = [ActivityHint::VISIBILITY_SHOW_HINT,
                             ActivityHint::VISIBILITY_OFFER_HINT_LEFT,
-                            ActivityHint::VISIBILITY_OFFER_HINT_RIGHT]
+                            ActivityHint::VISIBILITY_OFFER_HINT_RIGHT].freeze
 
-  VISIBILITY_EXPERIMENT_PARAMETER = 'hint_visibility_experiment'
+  VISIBILITY_EXPERIMENT_PARAMETER = 'hint_visibility_experiment'.freeze
 
   # Return the penultimate section of an ip address, as an int, to use as a hash value.
   # This returns nil if the parameter is not in the form 'n.n.n.n', where each n

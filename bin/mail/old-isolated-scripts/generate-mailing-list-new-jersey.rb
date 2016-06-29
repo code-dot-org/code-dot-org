@@ -77,7 +77,7 @@ SETS = {
         pt: '39.98,-82.98',
         d: '40'
     }
-}
+}.freeze
 
 def city_query
   queries = SETS[$key][:cities].map { |city| %(create_ip_city_s:"#{city}")}

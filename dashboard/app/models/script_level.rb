@@ -34,7 +34,7 @@ class ScriptLevel < ActiveRecord::Base
   has_many :callouts, inverse_of: :script_level
   has_one :plc_task, class_name: 'Plc::Task', inverse_of: :script_level, dependent: :destroy
 
-  NEXT = 'next'
+  NEXT = 'next'.freeze
 
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?

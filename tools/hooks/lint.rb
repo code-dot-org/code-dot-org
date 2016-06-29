@@ -3,8 +3,8 @@ require 'yaml'
 require_relative 'hooks_utils.rb'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
-APPS_DIR = "#{REPO_DIR}/apps"
-SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'}"
+APPS_DIR = "#{REPO_DIR}/apps".freeze
+SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'}".freeze
 
 def filter_grunt_jshint(modified_files)
   modified_files.select do |f|
@@ -13,7 +13,7 @@ def filter_grunt_jshint(modified_files)
   end
 end
 
-RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile']
+RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile'].freeze
 def filter_rubocop(modified_files)
   modified_rb_rake_files = modified_files.select do |f|
     RUBY_EXTENSIONS.any? {|ext| f.end_with? ext }

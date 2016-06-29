@@ -6,7 +6,7 @@ class LevelSourceHintsController < ApplicationController
   check_authorization
 
   HINTS_PER_PAGE = 10
-  CODE_DOT_ORG_HINTS_PAGE = 'http://code.org/hints'
+  CODE_DOT_ORG_HINTS_PAGE = 'http://code.org/hints'.freeze
 
   def review_hints
     authorize! :manage, :all

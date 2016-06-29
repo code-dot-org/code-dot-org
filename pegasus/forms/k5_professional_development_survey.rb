@@ -5,7 +5,7 @@ class K5ProfessionalDevelopmentSurvey
   SIMPLE_ANSWERS = %w(
     yes
     no
-  )
+  ).freeze
   DEGREE_TYPE = [
     'art',
     'business',
@@ -19,7 +19,7 @@ class K5ProfessionalDevelopmentSurvey
     'science',
     'social science',
     'other',
-  ]
+  ].freeze
 
   def self.normalize(data)
     result = {}
