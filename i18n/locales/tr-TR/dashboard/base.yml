@@ -29,7 +29,7 @@ tr:
   unsubmit: Gönderme
   previous_page: Önceki Sayfa
   next_page: Sonraki Sayfa
-  next_resource: Next resource
+  next_resource: Sonraki Kaynak
   done_with_module: Done with this Learning Module
   cancel: İptal
   okay: Tamam
@@ -87,7 +87,7 @@ tr:
     teacher_title: Öğretmen Kayıt
     student_pitch: "Code.org'a öğrenci olarak kaydolun"
     student_title: Öğrenci üye ol
-    signup_title: Sign up for Code.org
+    signup_title: "Code.org'a Giriş Yap"
     school_name: Okul Adı (isteğe bağlı)
     school_address: Okul Adresi (isteğe bağlı)
     address_placeholder: adres, şehir, eyalet, posta kodu
@@ -106,7 +106,7 @@ tr:
     student_terms: "Code.org <a href='http://code.org/tos'>hizmet şartlarını</a> kabul ediyorum. Eğer 13 yaşın altında isem, bu formu doldurarak ebeveynimin veya yasal vasimin izni ile Code.org hizmetlerini kullandığımı onaylarım.<br/> 13 yaşın altındaki kullanıcılar için, iletişimde kullanılan e-posta adresleri saklanmıyor."
     teacher_terms: "Code.org <a href='http://code.org/tos'>hizmet koşullarına</a> bağlı olduğumu kabul ediyorum."
     additional_information: Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız.
-    user_type_label: Account Type
+    user_type_label: Hesap Türü
     user_type_teacher: Öğretmen
     user_type_student: öğrenci
   signin_form:
@@ -340,20 +340,20 @@ tr:
     announcement_title: Bildirimler
     announcement_view_all: Tümünü Gör
     announcement_message: '<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde bir çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir.'
-    announcement_button: Test the feature
-    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_button: Özelliği test et
+    announcement_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi için bir açık mektup verdi."
     announcement_petition_button: Adınızı Ekleyin
   move_students:
     new_section_dne: 'Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm kodu girin.'
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as the new section.
-    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
-    students_not_yours: You cannot move students from a section that does not belong to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
+    section_code_not_entered: Lütfen current_section_code giriniz.
+    section_code_cant_be_current_section: Şimdiki bölüm yeni bölümle aynı olamaz.
+    current_section_dne: 'Üzgünüm, ama %{current_section_code} yok. Lütfen başka bir bölüm kodu girin.'
+    students_not_yours: Öğrencileri size ait olmayan bir bölüme taşıyamazsınız.
+    stay_enrolled_not_entered: Lütfen stay_enrolled_in_current_section girin.
+    student_ids_not_entered: Lütfen students_ids girin.
+    student_not_found: Öğrenci ve öğretmen bulunamadı.
+    all_students_must_be_in_current_section: Bütün öğrenciler şu anda sınıfınıza kayıtlı olmalıdır.
+    already_enrolled_in_new_section: Öğrenciler zaten başka bir bölümde bulunduğundan onları başka yere taşıyamazsınız.
   share:
     title: "Code Studio'da Öğrenin"
     description: Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar ve sanat yarat.
@@ -408,8 +408,8 @@ tr:
   compatibility:
     upgrade:
       unsupported_message: "Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir."
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message: Code.org yakında Internet Explorer 8, 9, 10 tarayıcılarından desteğini çekecek. Lütfen modern bir tarayıcıya geçin.
+      ie_message_csedweek: CSEdWeek.org yakında Internet Explorer 8, 9, 10 tarayıcılarından desteğini çekecek. Lütfen modern bir tarayıcıya geçin.
       link: Daha fazlasını öğren
   slow_loading: Bu normalden uzun sürüyor...
   try_reloading: Sayfayı yeniden yüklemeyi deneyin
@@ -487,7 +487,7 @@ tr:
     picture_count: 'Geçtiğimiz <b>%{days}</b> günde, öğrenciler <b>%{count}</b> tane resmi kendi yazdıkları programlarla çizdiler. Her programın çalışırını görmek için resimlerin üzerine tıklayın.'
     activity_count: 'geçmiş <b>%{days}</b> günde, öğrenciler kendi bilgisayar programlarını yazarak <b>%{count}</b> kadar uygulama ve resimler oluşturdu. Ekran görüntülerine tıklayıp her bir programın nasıl çalıştığını görün.'
     want_to_make_your_own: Kendininkini yapmak ister misin?
-    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
+    how_to_save: 'Eğitici bölümlerin son kısmında, çalışmanızı kaydetmek için "Bitir" butonunu ve "Kaydet" butonunu tıklayın.'
     more: 'Daha fazla &rarr;'
     caption_by_name_age: '%{name} tarafından, %{age} yaşında'
     caption_time_ago: '%{time_ago} zaman önce'
@@ -671,10 +671,10 @@ tr:
   peer_review:
     accepted:
       name: Kabul edildi
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+      description: '<strong>Evet</strong>, bu öneri gereksinimleri karşılıyor'
     rejected:
       name: Reddedildi
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+      description: '<strong>Hayır</strong>, bu öneri gereksinimleri karşılamıyor'
     escalated:
       name: Yükseltilmiş
       description: Bu gönderiyi gözden geçirmek için bir eğitmen istiyorum

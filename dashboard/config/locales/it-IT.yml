@@ -30,7 +30,7 @@
   unsubmit: Annulla l'invio
   previous_page: Pagina precedente
   next_page: Pagina successiva
-  next_resource: Next resource
+  next_resource: Risorsa successiva
   done_with_module: Done with this Learning Module
   cancel: Annulla
   okay: Ok!
@@ -102,7 +102,7 @@
     teacher_title: Iscrizione dell'insegnante
     student_pitch: Iscrizione dello studente a Code.org
     student_title: Iscrizione dello studente
-    signup_title: Sign up for Code.org
+    signup_title: Iscriviti a Code.org
     school_name: Nome della scuola (facoltativo)
     school_address: Indirizzo della scuola (facoltativo)
     address_placeholder: Indirizzo, città, stato, CAP
@@ -128,7 +128,7 @@
       di servizio</a> di Code.org.
     additional_information: Abbiamo bisogno di alcune informazioni aggiuntive per
       continuare la tua iscrizione.
-    user_type_label: Account Type
+    user_type_label: Tipo di account
     user_type_teacher: Insegnante
     user_type_student: Studente
   signin_form:
@@ -419,7 +419,7 @@
       tempo. Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno
       della stessa pagina. Utilizzatele con una classe d'informatica oppure come corso
       a sé stante."
-    announcement_button: Ulteriori informazioni
+    announcement_button: Testare la funzionalità
     announcement_petition: Come insegnante, stai aprendo la strada per permettere
       ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso
       è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa
@@ -880,8 +880,8 @@
       della privacy diversa da quella di Code.org<br/><br/>Abbiamo selezionato delle
       fonti fornite da terzi poiché pensiamo che queste possano tornarti utili. Dal
       momento che non siamo direttamente responsabili riguardo il contenuto di questo
-      sito, per favore<a href='mailto:support@code.org'> contatta il supporto</a>se
-      trovi qualcosa che ti turba oppure se il sito non è più disponibile."
+      sito, per favore <a href='%{support_url}'> contatta il supporto</a>se trovi
+      qualcosa che ti turba oppure se il sito non è più disponibile."
   hoc_download:
     title: Downloads dell’Ora di Codice
     capsule_title: Avete Internet?

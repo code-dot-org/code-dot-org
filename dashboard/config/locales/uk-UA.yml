@@ -29,7 +29,7 @@
   unsubmit: "Відкликати"
   previous_page: "Попередня сторінка"
   next_page: "Наступна сторінка"
-  next_resource: Next resource
+  next_resource: "Наступний ресурс"
   done_with_module: Done with this Learning Module
   cancel: "Скасувати"
   okay: "Добре"
@@ -93,7 +93,7 @@
     teacher_title: "Реєстрація вчителя"
     student_pitch: "Реєстрація для учня на Code.org"
     student_title: "Реєстрація учнів"
-    signup_title: Sign up for Code.org
+    signup_title: "Реєстрація на Code.org"
     school_name: "Назва навчального закладу (необов'язково)"
     school_address: "Адреса школи (необов'язково)"
     address_placeholder: "адреса, місто, штат, індекс"
@@ -111,13 +111,13 @@
     mismatch_password: "Введені вами паролі не збігаються"
     student_terms: "Я погоджуюсь із <a href='http://code.org/tos'>умовами надання
       послуг</a> Code.org. Якщо мені менше 13 років, надсилаючи цю форму, я підтверджую
-      наявність дозволу батьків або юридичних опікунів на користування послугами Code.org.<br/>
+      наявність дозволу батьків або юридичних опікунів на користування послугами Code.org.<br/><br/>
       Для користувачів, молодших за 13 років, електронні скриньки зберігаються без
       можливості надсилання їм повідомлень."
     teacher_terms: "Я погоджуюсь з <a href='http://code.org/tos'>умовами надання послуг
       Code.org </a>."
     additional_information: "Нам потрібна додаткова інформація, щоб продовжити реєстрацію."
-    user_type_label: Account Type
+    user_type_label: "Тип облікового запису"
     user_type_teacher: "Вчитель"
     user_type_student: "учень"
   signin_form:
@@ -394,12 +394,12 @@
     print_certificate: "Друкувати сертифікат"
     announcement_title: "Оголошення"
     announcement_view_all: "Переглянути всі"
-    announcement_message: 'We''ve started to measure student learning in Courses 1-4
-      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-      the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: "Дізнайтеся більше"
+    announcement_message: Хочете допомогти нам протестувати нові функції? Ми знаємо,
+      що дуже важливо заохочувати учнів до перебору та експериментів з рішеннями,
+      тож ми додамо функцію "код, який не використовується", щоб дозволити учням запускати
+      свій код, навіть тоді, коли є відокремлені блоки. Ми очікуємо відгуків, перш
+      ніж оприлюднити цю функцію.
+    announcement_button: "Випробувати функцію"
     announcement_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного учня
       у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися із
       своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори
@@ -833,15 +833,15 @@
   flex_category:
     required: "Огляд"
     content: "Зміст"
-    practice: "Методика"
+    practice: "Методики викладання"
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer_md: "<strong>Відмова від відповідальності: Ви покидаєте поточний домен
+      та переходите на сайт, який не підтримується Code.org.</strong> Політики приватності
+      цього сайту можуть відрізнятись від прийнятих на Code.org's.<br/><br/>Ми відібрали
+      ці ресурси, оскільки вважаємо їх корисними. Хоча ми не несемо безпосередньої
+      відповідальності за зміст цього сайту, будь ласка, <a href='%{support_url}'>зв'яжіться
+      із службою підтримки</a> якщо ви вважаєте цей вміст неприйнятним, або якщо посилання
+      не працює."
   hoc_download:
     title: "Завантаження Години коду"
     capsule_title: "Маєте Інтернет?"

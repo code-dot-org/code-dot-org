@@ -88,7 +88,7 @@
     teacher_title: "老师注册"
     student_pitch: Code.org 学生注册
     student_title: "学生注册"
-    signup_title: Sign up for Code.org
+    signup_title: "注册Code.org"
     school_name: "学校名称 （可选）"
     school_address: "学校地址 （可选）"
     address_placeholder: "地址、 省市、 邮编"
@@ -108,7 +108,7 @@
       Code.org 服务。 <br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中."
     teacher_terms: "我同意 Code.org <a href='http://code.org/tos'>服务条款</a> 的约束。"
     additional_information: "我们需要一些额外的信息来继续为你注册."
-    user_type_label: Account Type
+    user_type_label: "账户种类"
     user_type_teacher: "老师"
     user_type_student: "学生"
   signin_form:
@@ -717,7 +717,7 @@
       artist_title: New Drawing
       continue_button: Go on to the next Stage
       playlab_description: "通过游戏实验室创建故事或制作游戏！"
-      playlab_title: New App
+      playlab_title: "新的应用"
       primary_header: Congratulations! You finished %{stageName}!
       projects_description: Revisit one of your existing projects.
       projects_title: Open a project
@@ -732,9 +732,9 @@
       <a href='mailto:support@code.org'> 与支持部门联系</a> ，虽然我们并不直接负责本网站的内容。"
   hoc_download:
     title: Hour of Code downloads
-    capsule_title: Do you have Internet?
+    capsule_title: "你有网络吗？"
     capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: No Internet?
+    instructions_headline: "没有网络？"
     instructions: 'Instructions for teachers: if you have poor Internet service, these
       Hour of Code tutorials are available to download and install for offline use.
       Choose your language and platform, download and install it on all the computers
@@ -746,8 +746,8 @@
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    download_in_english: "下载英语版本："
+    download_in_spanish: "下载西班牙语版本："
     windows: Windows
     mac: Mac OS X
   plc:

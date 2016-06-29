@@ -27,6 +27,9 @@
   "copy": "Kopieren",
   "copyright": "Copyright",
   "currentVersion": "Aktuelle Version",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Unendlichkeit",
   "jump": "springen",
   "keepPlaying": "Spiel weiter",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Du verwendest alle nötigen Bausteine, aber noch nicht auf die richtige Weise.",
   "listVariable": "Liste",
   "makeYourOwnFlappy": "Programmiere dein eigenes \"Flappy\"-Spiel",
@@ -241,9 +245,5 @@
   "watchVideo": "Video anschauen",
   "when": "wenn",
   "whenRun": "wenn Ausführen",
-  "workspaceHeaderShort": "Arbeitsbereich: ",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "Arbeitsbereich: "
 }
