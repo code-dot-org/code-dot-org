@@ -48,7 +48,6 @@ Scenario: Frozen tutorial in Portuguese
   Given I am on "http://learn.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
-@no_ie9
 Scenario: HoC tutorial in Arabic (RTL)
   Given I am on "http://learn.code.org/hoc/15/lang/ar-sa"
   And I rotate to landscape
@@ -60,7 +59,6 @@ Scenario: HoC tutorial in Arabic (RTL)
   Given I am on "http://learn.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
-@no_ie9
 Scenario: Frozen tutorial in Arabic (RTL)
   Given I am on "http://learn.code.org/s/frozen/stage/1/puzzle/2/lang/ar-sa"
   And I rotate to landscape
