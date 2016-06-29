@@ -196,7 +196,6 @@ end
 $gdrive_ = nil
 
 namespace :seed do
-
   def csv_smart_value(value)
     return true if value == 'TRUE'
     return false if value == 'FALSE'

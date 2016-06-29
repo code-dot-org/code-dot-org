@@ -190,7 +190,6 @@ class ApiController < ApplicationController
         level_results = []
 
         script_level.level.levels.each do |level|
-
           if level.is_a? Multi
             multi_count += 1
           end
