@@ -68,7 +68,6 @@ class V2UserRoutesTest < Minitest::Test
           JSON.parse(@pegasus.last_response.body)
         )
       end
-
     end
 
     # Keys included in each student object returned by the /v2/students endpoint
@@ -227,6 +226,5 @@ class V2UserRoutesTest < Minitest::Test
     def with_role(role)
       Documents.any_instance.stubs(:dashboard_user_id).returns(role.nil? ? nil : role[:id])
     end
-
   end
 end
