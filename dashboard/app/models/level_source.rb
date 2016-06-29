@@ -31,7 +31,7 @@ class LevelSource < ActiveRecord::Base
   # This string used to sometimes appear in program XML.
   # We now strip it out, but it remains in some old LevelSource.data.
   # A level_source is considered to be standardized if it does not have this.
-  XMLNS_STRING = ' xmlns="http://www.w3.org/1999/xhtml"'
+  XMLNS_STRING = ' xmlns="http://www.w3.org/1999/xhtml"'.freeze
 
   def LevelSource.cache_key(level_id, md5)
     "#{level_id}-#{md5}"

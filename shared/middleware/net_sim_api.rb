@@ -14,18 +14,18 @@ class NetSimApi < Sinatra::Base
       wire: 'w',
       message: 'm',
       log: 'l'
-  }
+  }.freeze
 
   NODE_TYPES = {
       client: 'client',
       router: 'router'
-  }
+  }.freeze
 
   VALIDATION_ERRORS = {
       malformed: 'malformed',
       conflict: 'conflict',
       limit_reached: 'limit_reached'
-  }
+  }.freeze
 
   helpers do
     %w{

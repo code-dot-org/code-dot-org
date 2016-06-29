@@ -120,7 +120,7 @@ class Pd::WorkshopOrganizerPayment
         end
       }
     }
-  ]
+  ].freeze
 
   attr_reader :qualified, :teachers, :teacher_days, :plp, :parts, :total
 

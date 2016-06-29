@@ -13,7 +13,7 @@ module ConceptDifficulties
     functions
     functions_with_params
     conditionals
-  )
+  ).freeze
 
   # The maximum difficulty ranking for a concept.
   # NOTE: This number is tied to DB columns. DO NOT EDIT without a DB migration.

@@ -31,23 +31,23 @@ class Game < ActiveRecord::Base
     @@game_custom_maze ||= find_by_name("CustomMaze")
   end
 
-  UNPLUG = 'unplug'
-  MULTI = 'multi'
-  MATCH = 'match'
-  ARTIST = TURTLE = 'turtle' # heh
-  FLAPPY = 'flappy'
-  BOUNCE = 'bounce'
-  PLAYLAB = STUDIO = 'studio'
-  STUDIO_EC = 'StudioEC'
-  APPLAB = WEBAPP = 'applab'
-  GAMELAB = 'gamelab'
-  NETSIM = 'netsim'
-  CRAFT = 'craft'
-  MAZE = 'maze'
-  CALC = 'calc'
-  EVAL = 'eval'
-  TEXT_COMPRESSION = 'text_compression'
-  LEVEL_GROUP = 'level_group'
+  UNPLUG = 'unplug'.freeze
+  MULTI = 'multi'.freeze
+  MATCH = 'match'.freeze
+  ARTIST = TURTLE = 'turtle'.freeze # heh
+  FLAPPY = 'flappy'.freeze
+  BOUNCE = 'bounce'.freeze
+  PLAYLAB = STUDIO = 'studio'.freeze
+  STUDIO_EC = 'StudioEC'.freeze
+  APPLAB = WEBAPP = 'applab'.freeze
+  GAMELAB = 'gamelab'.freeze
+  NETSIM = 'netsim'.freeze
+  CRAFT = 'craft'.freeze
+  MAZE = 'maze'.freeze
+  CALC = 'calc'.freeze
+  EVAL = 'eval'.freeze
+  TEXT_COMPRESSION = 'text_compression'.freeze
+  LEVEL_GROUP = 'level_group'.freeze
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")

@@ -68,7 +68,7 @@ def process_command_line(argv=ARGV)
 end
 
 @contacts_lock = Mutex.new
-IP_ADDRESS = '127.0.0.1'
+IP_ADDRESS = '127.0.0.1'.freeze
 def send_message(template, item)
   recipient = @contacts_lock.synchronize do
     Poste2.ensure_recipient(item['email'], name: item['name'].to_s, ip_address: IP_ADDRESS)
@@ -79,7 +79,7 @@ rescue => e
   puts "Couldn't send to '#{item['email']}': #{e.message}"
 end
 
-USAGE = <<EOS
+USAGE = <<EOS.freeze
 Usage: send-to-mailing-list [options] template mailing-list.csv
 Options:
   --threads

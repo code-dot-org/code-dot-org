@@ -4,7 +4,7 @@ class K5OnlineProfessionalDevelopmentPostSurvey
   SIMPLE_ANSWERS = %w(
     yes
     no
-  )
+  ).freeze
 
   def self.normalize(data)
     result = {}

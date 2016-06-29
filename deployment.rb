@@ -257,7 +257,7 @@ class CDOImpl < OpenStruct
   end
 
   # Simple backtrace filter
-  FILTER_GEMS = %w(rake)
+  FILTER_GEMS = %w(rake).freeze
 
   def backtrace(exception)
     filter_backtrace exception.backtrace

@@ -6,9 +6,9 @@ IGNORED_SOLUTION_BLOCK_ATTRS = {
   'editable' => 'false',
   'disabled' => 'true',
   'movable' => 'false'
-}
-NEW_CATEGORY_XML = '<category name="NEW BLOCKS"/>'
-STRIPPED_NODES_XPATH = './next|./value|./statement|./title'
+}.freeze
+NEW_CATEGORY_XML = '<category name="NEW BLOCKS"/>'.freeze
+STRIPPED_NODES_XPATH = './next|./value|./statement|./title'.freeze
 STRIPPED_ATTRS = ['id', 'inline'] + IGNORED_SOLUTION_BLOCK_ATTRS.keys
 
 module SolutionBlocks

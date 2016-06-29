@@ -111,7 +111,7 @@ module Rack
         -Zlib::MAX_WBITS,
         Zlib::DEF_MEM_LEVEL,
         Zlib::DEFAULT_STRATEGY
-      ]
+      ].freeze
 
       def initialize(body)
         @body = body

@@ -5,10 +5,10 @@ class TwilioSmsTest < ActionDispatch::IntegrationTest
 
   # Required magic 'number' for test API.
   # See: https://www.twilio.com/docs/api/rest/test-credentials
-  TEST_PHONE_FROM = '+15005550006'
+  TEST_PHONE_FROM = '+15005550006'.freeze
 
   # This can be any number, but this is the one Twilio uses in its own examples.
-  TEST_PHONE_TO = '+14108675309'
+  TEST_PHONE_TO = '+14108675309'.freeze
 
   test 'Twilio SMS test API' do
     if CDO.twilio_sid_test.blank? || CDO.twilio_auth_test.blank?

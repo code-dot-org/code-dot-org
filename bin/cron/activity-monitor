@@ -40,9 +40,9 @@ ExcludedBrowsers = [
   'Mo%20PTT/50 CFNetwork/672.1.15 Darwin/14.0.0',
   'AppleMail',
   /Edmodo/, # edmodo customer support said we can ignore this
-]
+].freeze
 
-ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415, 3468, 4186, 4188, 4283]
+ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415, 3468, 4186, 4188, 4283].freeze
 
 HardLevelAttemptsPerHour = {
   50 => 10,
@@ -58,7 +58,7 @@ HardLevelAttemptsPerHour = {
   1434 => 10,
   1441 => 10,
   3301 => 20
-}
+}.freeze
 
 MinimumAttemptsPerHour = 10
 
@@ -171,7 +171,7 @@ BrowserToBrowserStack = {
   'Android' => {os: 'android', os_version: '4.4', device: 'Samsung Galaxy S5'},
   'Mobile Safari' => {os: 'ios', os_version: '8.0', device: 'iPad Air'},
   'Opera Mini' => {os: 'opera', device: 'Samsung Galaxy Tab'}
-}
+}.freeze
 
 def browserstack_url(browser, destination_url)
   params = BrowserToBrowserStack[browser]

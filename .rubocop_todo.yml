@@ -231,11 +231,6 @@ Style/MultilineOperationIndentation:
 Style/MultilineTernaryOperator:
   Enabled: false
 
-# Offense count: 287
-# Cop supports --auto-correct.
-Style/MutableConstant:
-  Enabled: false
-
 # Offense count: 30
 # Cop supports --auto-correct.
 Style/NegatedIf:

@@ -2,7 +2,7 @@
 
 require 'json'
 
-DIR = '/mnt/backups/'
+DIR = '/mnt/backups/'.freeze
 FILE = DIR + 'milestone_cache'
 sum_cache = (File.open(FILE, 'r') { |f| Marshal.load(f.read) }) rescue {}
 today_sum = archive_sum = 0

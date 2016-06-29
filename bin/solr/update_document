@@ -15,8 +15,8 @@ SOLR = Solr::Server.new(host: CDO.solr_server)
 # For each supported ACTION, there should be a corresponding method
 # ACTION_document.
 # TODO(asher): Implement the `add` action.
-SUPPORTED_ACTIONS = %w(update delete)
-SUPPORTED_TYPES = %w(form user)
+SUPPORTED_ACTIONS = %w(update delete).freeze
+SUPPORTED_TYPES = %w(form user).freeze
 
 def get_solr_id_from_db_id(type, db_id)
   case type

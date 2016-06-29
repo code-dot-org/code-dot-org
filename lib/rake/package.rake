@@ -13,7 +13,7 @@ namespace :package do
       target: code_studio_dir('build'),
       symlink_name: 'code-studio'
     }
-  }
+  }.freeze
 
   PACKAGES.keys.each do |package|
     namespace package do

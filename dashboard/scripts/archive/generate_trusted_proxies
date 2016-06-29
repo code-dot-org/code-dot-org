@@ -20,7 +20,7 @@ require_relative '../../config/environment'
 # ...
 
 OUTPUT_FILE = deploy_dir('lib/cdo/trusted_proxies.json')
-IP_RANGES_URL = 'https://ip-ranges.amazonaws.com/ip-ranges.json'
+IP_RANGES_URL = 'https://ip-ranges.amazonaws.com/ip-ranges.json'.freeze
 
 response = JSON.parse(Net::HTTP.get(URI(IP_RANGES_URL)))
 

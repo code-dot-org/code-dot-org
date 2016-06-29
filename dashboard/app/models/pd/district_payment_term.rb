@@ -15,9 +15,9 @@
 
 class Pd::DistrictPaymentTerm < ActiveRecord::Base
   RATE_TYPES = [
-    RATE_HOURLY = 'hourly',
-    RATE_DAILY = 'daily'
-  ]
+    RATE_HOURLY = 'hourly'.freeze,
+    RATE_DAILY = 'daily'.freeze
+  ].freeze
   validates_inclusion_of :rate_type, in: RATE_TYPES
   belongs_to :district
 end

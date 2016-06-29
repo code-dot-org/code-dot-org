@@ -28,7 +28,7 @@ NUM_VOLUNTEERS_BY_STATE = {
   'Utah' => 9,
   'Pennsylvania' => 8,
   'District of Columbia' => 5
-}
+}.freeze
 
 # Volunteer engineers in the US
 volunteer_query = %q(

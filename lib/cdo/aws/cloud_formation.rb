@@ -24,7 +24,7 @@ module AWS
     IAM_CERTIFICATE_ID = IAM_METADATA && IAM_METADATA.server_certificate_id
 
     # Lookup ACM certificate for ELB and CloudFront SSL, if IAM-based certificate is not available.
-    ACM_REGION = 'us-east-1'
+    ACM_REGION = 'us-east-1'.freeze
     CERTIFICATE_ARN = IAM_METADATA ? IAM_METADATA.arn :
       Aws::ACM::Client.new(region: ACM_REGION).
       list_certificates(certificate_statuses: ['ISSUED']).
@@ -41,11 +41,11 @@ module AWS
 
     # Fully qualified domain name
     FQDN = "#{STACK_NAME}.#{DOMAIN}".downcase
-    SSH_KEY_NAME = 'server_access_key'
-    IMAGE_ID = 'ami-df0607b5' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
+    SSH_KEY_NAME = 'server_access_key'.freeze
+    IMAGE_ID = 'ami-df0607b5'.freeze # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
-    SSH_IP = '0.0.0.0/0'
-    S3_BUCKET = 'cdo-dist'
+    SSH_IP = '0.0.0.0/0'.freeze
+    S3_BUCKET = 'cdo-dist'.freeze
     CDN_ENABLED = !!ENV['CDN_ENABLED']
 
     STACK_ERROR_LINES = 250

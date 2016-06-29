@@ -37,7 +37,7 @@ class HocDownloadController < ApplicationController
     end
   end
 
-  DOWNLOAD_URL_BASE = '//downloads.code.org/hourofcode/'
+  DOWNLOAD_URL_BASE = '//downloads.code.org/hourofcode/'.freeze
   def download_url(product_name, file_prefix, file_name)
     "#{DOWNLOAD_URL_BASE}#{product_name}/#{file_prefix}#{file_name}"
   end

@@ -11,7 +11,7 @@ SOLR_PARAMS = {
   fq: 'create_ip_country_s:"United States"',
   fl: 'email_s',
   rows: 10000
-}
+}.freeze
 SOLR.query(SOLR_PARAMS).each do |record|
   US_TEACHERS << record['email_s']
 end

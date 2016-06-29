@@ -37,7 +37,7 @@ class XhrProxyController < ApplicationController
     noaa.gov
     rhcloud.com
     wikipedia.org
-  )
+  ).freeze
 
   # How long the content is allowed to be cached
   EXPIRY_TIME = 1.minute

@@ -16,14 +16,14 @@ require 'json'
 require 'set'
 require 'thread'
 
-CHEF_VERSION='12.7.2'
+CHEF_VERSION='12.7.2'.freeze
 
 # A map from a supported environment to the corresponding Chef role to use for
 # that environment.
 ROLE_MAP = {
   'production' => 'front-end',
   # No other environments are currently supported.
-}
+}.freeze
 
 # Wait no longer than 10 minutes for instance creation. Typically this takes a
 # couple minutes.

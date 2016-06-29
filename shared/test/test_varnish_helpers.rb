@@ -92,7 +92,7 @@ STR
       ],
       default: {cookies: 'none', headers: HEADERS}
     }
-  }
+  }.freeze
 
   def test_setup_behavior
     output = setup_behavior(BEHAVIOR, 'req', &method(:process_request))

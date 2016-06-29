@@ -13,7 +13,7 @@ require_relative '../../dashboard/config/environment'
 require 'pp'
 
 # The names of scripts we expect to see
-HIGH_SCALE_SCRIPT_NAMES = %w(frozen gumball hourofcode starwars starwarsblocks mc)
+HIGH_SCALE_SCRIPT_NAMES = %w(frozen gumball hourofcode starwars starwarsblocks mc).freeze
 
 def main(argv)
   if argv.size != 1

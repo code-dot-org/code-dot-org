@@ -18,7 +18,7 @@
 class SurveyResult < ActiveRecord::Base
   include SerializedProperties
 
-  ETHNICITIES = {}
+  ETHNICITIES = {}.freeze
   ETHNICITIES["american_indian"] =  "American Indian or Alaska Native"
   ETHNICITIES["asian"] = "Asian"
   ETHNICITIES["black"] = "Black or African American"
@@ -32,7 +32,7 @@ class SurveyResult < ActiveRecord::Base
   DIVERSITY_ATTRS << "survey2016_foodstamps"
   DIVERSITY_ATTRS.freeze
 
-  NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment)
+  NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment).freeze
   NET_PROMOTER_SCORE_ATTRS.freeze
 
   ALL_ATTRS = (DIVERSITY_ATTRS + NET_PROMOTER_SCORE_ATTRS).freeze

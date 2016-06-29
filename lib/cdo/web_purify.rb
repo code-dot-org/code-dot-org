@@ -6,7 +6,7 @@ module WebPurify
       'es' => 'sp',
       'ko' => 'kr',
       'ja' => 'jp'
-  }
+  }.freeze
 
   def self.find_potential_profanity(text, language_codes = ['en'])
     return nil unless CDO.webpurify_key

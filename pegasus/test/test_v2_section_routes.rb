@@ -234,7 +234,7 @@ class V2SectionRoutesTest < Minitest::Test
     end
 
     describe 'POST /v2/sections/:id/update' do
-      NEW_NAME = 'Updated Section'
+      NEW_NAME = 'Updated Section'.freeze
 
       it 'returns 403 "Forbidden" when not signed in' do
         with_role nil

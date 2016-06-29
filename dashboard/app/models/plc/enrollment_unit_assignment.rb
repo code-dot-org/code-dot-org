@@ -25,10 +25,10 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   belongs_to :user, class_name: 'User'
 
   UNIT_STATUS_STATES = [
-    START_BLOCKED = 'start_blocked',
-    IN_PROGRESS = 'in_progress',
-    COMPLETED = 'completed'
-  ]
+    START_BLOCKED = 'start_blocked'.freeze,
+    IN_PROGRESS = 'in_progress'.freeze,
+    COMPLETED = 'completed'.freeze
+  ].freeze
 
   after_create :enroll_user_in_required_modules
 

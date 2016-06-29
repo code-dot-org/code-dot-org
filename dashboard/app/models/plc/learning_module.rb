@@ -23,10 +23,10 @@ class Plc::LearningModule < ActiveRecord::Base
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_learning_module_id', dependent: :destroy
 
   MODULE_TYPES = [
-      REQUIRED_MODULE = 'required',
-      CONTENT_MODULE = 'content',
-      PRACTICE_MODULE = 'practice'
-  ]
+      REQUIRED_MODULE = 'required'.freeze,
+      CONTENT_MODULE = 'content'.freeze,
+      PRACTICE_MODULE = 'practice'.freeze
+  ].freeze
 
   NONREQUIRED_MODULE_TYPES = MODULE_TYPES - [REQUIRED_MODULE]
 

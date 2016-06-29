@@ -4,12 +4,12 @@ require_relative '../../../shared/test/spy_newrelic_agent'
 require 'test_helper'
 
 class XhrProxyControllerTest < ActionController::TestCase
-  XHR_REDIRECT_URI = 'https://www.wikipedia.org/bar/a1b2'
-  XHR_URI = 'https://www.wikipedia.org/foo?a=1&b=2'
-  XHR_DATA = '{"key1":"value1", "key2":2, "obj":{"x":3, "y":4}}'
-  XHR_CONTENT_TYPE = 'application/json'
+  XHR_REDIRECT_URI = 'https://www.wikipedia.org/bar/a1b2'.freeze
+  XHR_URI = 'https://www.wikipedia.org/foo?a=1&b=2'.freeze
+  XHR_DATA = '{"key1":"value1", "key2":2, "obj":{"x":3, "y":4}}'.freeze
+  XHR_CONTENT_TYPE = 'application/json'.freeze
   CHANNEL_ID = $stub_encrypted_channel_id
-  BAD_CHANNEL_MSG = "XhrProxyController request with invalid channel_id"
+  BAD_CHANNEL_MSG = "XhrProxyController request with invalid channel_id".freeze
 
   test "should fetch proxied media with correct content type" do
     stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})

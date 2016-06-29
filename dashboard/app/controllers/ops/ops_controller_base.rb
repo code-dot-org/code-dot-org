@@ -1,5 +1,5 @@
 module Ops
-  TEACHER_PERMITTED_ATTRIBUTES = [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender]
+  TEACHER_PERMITTED_ATTRIBUTES = [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender].freeze
   class OpsControllerBase < ::ApplicationController
     respond_to :json, :csv
 

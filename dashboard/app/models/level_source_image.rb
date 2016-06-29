@@ -40,7 +40,7 @@ class LevelSourceImage < ActiveRecord::Base
     self.save
   end
 
-  S3_BUCKET = 'cdo-art'
+  S3_BUCKET = 'cdo-art'.freeze
 
   def upload_image(filename, image)
     AWS::S3.upload_to_bucket(S3_BUCKET, filename, image, no_random: true)
@@ -83,7 +83,7 @@ class LevelSourceImage < ActiveRecord::Base
     LevelSourceImage.hashify_filename "#{Rails.env}/#{level_source.id}_framed.png"
   end
 
-  S3_URL = "https://d3p74s6bwmy6t9.cloudfront.net/"
+  S3_URL = "https://d3p74s6bwmy6t9.cloudfront.net/".freeze
 
   def s3_url
     return "http://code.org/images/logo.png" if CDO.disable_s3_image_uploads

@@ -4,7 +4,7 @@ require 'aws-sdk'
 require 'cdo/rake_utils'
 
 require_relative '../../lib/cdo/aws/s3_packaging'
-ORIGINAL_HASH = 'fake-hash'
+ORIGINAL_HASH = 'fake-hash'.freeze
 
 class S3PackagingTest < Minitest::Test
   include SetupTest

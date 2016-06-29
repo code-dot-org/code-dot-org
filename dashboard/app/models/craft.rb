@@ -49,9 +49,9 @@ class Craft < Blockly
       :ground_plane,
       :ground_decoration_plane,
       :action_plane
-  ]
+  ].freeze
 
-  EMPTY_STRING = ''
+  EMPTY_STRING = ''.freeze
   DEFAULT_MAP_VALUE = EMPTY_STRING # no item
 
   ALL_BLOCKS = {
@@ -100,9 +100,9 @@ class Craft < Blockly
       tnt: true,
       water: true,
       wool: true
-  }
+  }.freeze
 
-  ALL_BLOCKS_ARRAY = "[\"#{ALL_BLOCKS.keys[1..-1].join('", "')}\"]"
+  ALL_BLOCKS_ARRAY = "[\"#{ALL_BLOCKS.keys[1..-1].join('", "')}\"]".freeze
 
   KNOWN_TILE_TYPES = {
     ground_plane: ALL_BLOCKS,
@@ -137,7 +137,7 @@ class Craft < Blockly
       # rails_poweredVertical: true,
       # rails_redstoneTorch: true
     })
-  }
+  }.freeze
 
   TILES_TO_PREVIEW_IMAGES = {
       grass: '/blockly/media/skins/craft/images/Block_0000_Grass.png',
@@ -147,7 +147,7 @@ class Craft < Blockly
       tallGrass: '/blockly/media/skins/craft/images/TallGrass.png',
       sheep: '/blockly/media/skins/craft/images/Sheep.png',
       treeOak: '/blockly/media/skins/craft/images/Leaves_Oak_Decay.png',
-  }
+  }.freeze
 
   SAMPLE_VERIFICATION_FUNCTIONS = {
       mapMatches:
@@ -193,7 +193,7 @@ class Craft < Blockly
       return verificationAPI.getInventoryAmount("wool") >= 2;
 }'
 
-  }
+  }.freeze
 
   def self.player_start_directions
     [['Up', 0], ['Right', 1], ['Down', 2], ['Left', 3]]

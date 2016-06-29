@@ -1,19 +1,19 @@
 module WorkshopConstants
-  CS_IN_S = 'CS in Science'
-  CS_IN_A = 'CS in Algebra'
-  ECS = 'ECS'
-  CSP = 'CSP'
-  K5 = 'K5'
-  CA = 'C/A'
+  CS_IN_S = 'CS in Science'.freeze
+  CS_IN_A = 'CS in Algebra'.freeze
+  ECS = 'ECS'.freeze
+  CSP = 'CSP'.freeze
+  K5 = 'K5'.freeze
+  CA = 'C/A'.freeze
 
-  PHASE_1 = 'Phase 1'
-  PHASE_2 = 'Phase 2'
-  PHASE_2_ONLINE = 'Phase 2 Online'
-  PHASE_3A = 'Phase 3A'
-  PHASE_3B = 'Phase 3B'
-  PHASE_3C = 'Phase 3C'
-  PHASE_3D = 'Phase 3D'
-  PHASE_4 = 'Phase 4'
+  PHASE_1 = 'Phase 1'.freeze
+  PHASE_2 = 'Phase 2'.freeze
+  PHASE_2_ONLINE = 'Phase 2 Online'.freeze
+  PHASE_3A = 'Phase 3A'.freeze
+  PHASE_3B = 'Phase 3B'.freeze
+  PHASE_3C = 'Phase 3C'.freeze
+  PHASE_3D = 'Phase 3D'.freeze
+  PHASE_4 = 'Phase 4'.freeze
 
   PROGRAM_TYPES = {
     1 => {id: 1, short_name: CS_IN_S, long_name: 'Computer Science in Science'},
@@ -22,7 +22,7 @@ module WorkshopConstants
     4 => {id: 4, short_name: CSP, long_name: 'Computer Science Principles'},
     5 => {id: 5, short_name: K5, long_name: 'Computer Science in K5'},
     6 => {id: 6, short_name: CA, long_name: 'Counselor/Adm PD'}
-  }
+  }.freeze
   PHASES = {
     1 => {id: 1, short_name: PHASE_1, long_name: 'Phase 1: Online Introduction'},
     2 => {id: 2, short_name: PHASE_2, long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
@@ -32,7 +32,7 @@ module WorkshopConstants
     6 => {id: 6, short_name: PHASE_3C, long_name: 'Phase 3: Part C'},
     7 => {id: 7, short_name: PHASE_3D, long_name: 'Phase 3: Part D'},
     8 => {id: 8, short_name: PHASE_4, long_name: 'Phase 4: Summer Wrap Up'}
-  }
+  }.freeze
 
   # These are ids for google form surveys sent in email at the completion of various workshops.
   # See Workshop.exit_survey_url
@@ -63,5 +63,5 @@ module WorkshopConstants
       PHASE_3D => '1dZdKQTLPsjoXEz5taXU2k9q4pe9XBvQcdGazeuL6QLY',
       PHASE_4 => '1aMKclWosHmvn5GH0KaVxBGvxh7KeLYQTtKiHf-lC0X0'
     }
-  }
+  }.freeze
 end

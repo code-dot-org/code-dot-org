@@ -8,7 +8,7 @@ class NewRelicClient
   attr_reader :api_key
 
   # Base URL for the NewRelic V2 REST API
-  NEWRELIC_URL = 'https://api.newrelic.com/v2'
+  NEWRELIC_URL = 'https://api.newrelic.com/v2'.freeze
 
   # The disabled alert policy id for Code.org servers.
   DISABLED_ALERT_POLICY_ID = 355700

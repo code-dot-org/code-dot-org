@@ -23,7 +23,7 @@ class HipChat
   # Maximum times to retry on test failure
   MAX_RETRIES = 3
 
-  TRUNCATION_PREFIX = '[TRUNCATED]'
+  TRUNCATION_PREFIX = '[TRUNCATED]'.freeze
   MAX_MESSAGE_SIZE = 10000
 
   def self.developers(message, options={})

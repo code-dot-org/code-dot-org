@@ -5,7 +5,7 @@ require 'sqs/rate_limiter'
 require 'sqs/queue_processor_config'
 
 class RateLimiterTest < ActiveSupport::TestCase
-  DCDO_MAX_RATE_KEY = 'test-max-rate'
+  DCDO_MAX_RATE_KEY = 'test-max-rate'.freeze
 
   def setup
     @logger = Logger.new(STDOUT)

@@ -10,7 +10,7 @@ require 'logger'
 # contain the git commit hash of the build source used to create this package.
 #
 class S3Packaging
-  BUCKET_NAME = 'cdo-build-package'
+  BUCKET_NAME = 'cdo-build-package'.freeze
 
   # @param package_name [String] Friendly name of the package, used as part of our S3 key
   # @param source_location [String] Path to the location on the filesystem where the build input lives

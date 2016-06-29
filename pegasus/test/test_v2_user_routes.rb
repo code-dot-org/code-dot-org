@@ -75,7 +75,7 @@ class V2UserRoutesTest < Minitest::Test
     V2_STUDENTS_KEY_LIST = [
       :id, :name, :username, :email, :hashed_email, :user_type, :gender,
       :birthday, :prize_earned, :total_lines, :secret_words
-    ]
+    ].freeze
     def expected_v2_students_hash_for(user)
       {}.tap do |expect|
         V2_STUDENTS_KEY_LIST.each do |key|
@@ -175,7 +175,7 @@ class V2UserRoutesTest < Minitest::Test
     end
 
     describe 'POST /v2/students/:id/update' do
-      NEW_NAME = 'Sherry Student'
+      NEW_NAME = 'Sherry Student'.freeze
 
       it 'returns 403 "Forbidden" when signed in as another student' do
         with_role FakeDashboard::SELF_STUDENT

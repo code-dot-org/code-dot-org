@@ -3,47 +3,47 @@
 # Used for conditional behaviors.
 
 module ScriptConstants
-  HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
-  EDIT_CODE_NAME = 'edit-code'
-  TWENTY_FOURTEEN_NAME = 'events'
-  JIGSAW_NAME = 'jigsaw'
-  HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
-  STARWARS_NAME = 'starwars'
-  MINECRAFT_NAME = 'mc'
-  STARWARS_BLOCKS_NAME = 'starwarsblocks'
-  FROZEN_NAME = 'frozen'
-  PLAYLAB_NAME = 'playlab'
-  GUMBALL_NAME = 'gumball'
-  ICEAGE_NAME = 'iceage'
-  INFINITY_NAME = 'infinity'
-  ARTIST_NAME = 'artist'
-  ALGEBRA_NAME = 'algebra'
-  ALGEBRA_A_NAME = 'AlgebraA'
-  ALGEBRA_B_NAME = 'AlgebraB'
-  FLAPPY_NAME = 'flappy'
-  TWENTY_HOUR_NAME = '20-hour'
-  ACCELERATED_NAME = 'accelerated'
-  COURSE1_NAME = 'course1'
-  COURSE2_NAME = 'course2'
-  COURSE3_NAME = 'course3'
-  COURSE4_NAME = 'course4'
-  CSP_UNIT1_NAME = 'cspunit1'
-  CSP_UNIT2_NAME = 'cspunit2'
-  CSP_UNIT3_NAME = 'cspunit3'
-  CSP_UNIT4_NAME = 'cspunit4'
-  CSP_UNIT5_NAME = 'cspunit5'
-  CSP_UNIT6_NAME = 'cspunit6'
+  HOC_2013_NAME = 'Hour of Code'.freeze # this is the old (2013) hour of code
+  EDIT_CODE_NAME = 'edit-code'.freeze
+  TWENTY_FOURTEEN_NAME = 'events'.freeze
+  JIGSAW_NAME = 'jigsaw'.freeze
+  HOC_NAME = 'hourofcode'.freeze # name of the new (2014) hour of code script
+  STARWARS_NAME = 'starwars'.freeze
+  MINECRAFT_NAME = 'mc'.freeze
+  STARWARS_BLOCKS_NAME = 'starwarsblocks'.freeze
+  FROZEN_NAME = 'frozen'.freeze
+  PLAYLAB_NAME = 'playlab'.freeze
+  GUMBALL_NAME = 'gumball'.freeze
+  ICEAGE_NAME = 'iceage'.freeze
+  INFINITY_NAME = 'infinity'.freeze
+  ARTIST_NAME = 'artist'.freeze
+  ALGEBRA_NAME = 'algebra'.freeze
+  ALGEBRA_A_NAME = 'AlgebraA'.freeze
+  ALGEBRA_B_NAME = 'AlgebraB'.freeze
+  FLAPPY_NAME = 'flappy'.freeze
+  TWENTY_HOUR_NAME = '20-hour'.freeze
+  ACCELERATED_NAME = 'accelerated'.freeze
+  COURSE1_NAME = 'course1'.freeze
+  COURSE2_NAME = 'course2'.freeze
+  COURSE3_NAME = 'course3'.freeze
+  COURSE4_NAME = 'course4'.freeze
+  CSP_UNIT1_NAME = 'cspunit1'.freeze
+  CSP_UNIT2_NAME = 'cspunit2'.freeze
+  CSP_UNIT3_NAME = 'cspunit3'.freeze
+  CSP_UNIT4_NAME = 'cspunit4'.freeze
+  CSP_UNIT5_NAME = 'cspunit5'.freeze
+  CSP_UNIT6_NAME = 'cspunit6'.freeze
 
-  CSP17_UNIT1_NAME = 'csp1'
-  CSP17_UNIT2_NAME = 'csp2'
-  CSP17_UNIT3_NAME = 'csp3'
+  CSP17_UNIT1_NAME = 'csp1'.freeze
+  CSP17_UNIT2_NAME = 'csp2'.freeze
+  CSP17_UNIT3_NAME = 'csp3'.freeze
 
-  CSP_ASSESSMENT_NAME = 'cspassessment'
-  CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'
-  CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'
+  CSP_ASSESSMENT_NAME = 'cspassessment'.freeze
+  CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'.freeze
+  CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'.freeze
 
-  MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'
-  HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'
+  MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'.freeze
+  HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'.freeze
 
   # The order here matters. The first category a script appears under will be
   # the category it belongs to in course dropdowns. The order of scripts within
@@ -101,7 +101,7 @@ module ScriptConstants
     twenty_hour: [TWENTY_HOUR_NAME],
     flappy: [FLAPPY_NAME],
     minecraft: [MINECRAFT_NAME]
-  }
+  }.freeze
 
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script

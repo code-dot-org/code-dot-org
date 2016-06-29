@@ -1,5 +1,5 @@
 class Pd::WorkshopMailer < ActionMailer::Base
-  SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'
+  SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'.freeze
 
   # Name of partial view for workshop details organized by course, then subject.
   # (views/pd/workshop_mailer/workshop_details/_<name>.html.haml)
@@ -21,14 +21,14 @@ class Pd::WorkshopMailer < ActionMailer::Base
       Pd::Workshop::SUBJECT_ECS_UNIT_6 => 'ecs_unit_6',
       Pd::Workshop::SUBJECT_ECS_PHASE_4 => 'ecs_phase_4'
     }
-  }
+  }.freeze
 
   # Online URL used in the details partials, organized by course.
   ONLINE_URL = {
     Pd::Workshop::COURSE_CS_IN_S => 'https://studio.code.org/s/sciencepd1',
     Pd::Workshop::COURSE_CS_IN_A => 'https://studio.code.org/s/algebrapd1',
     Pd::Workshop::COURSE_ECS => 'https://studio.code.org/s/ecspd1'
-  }
+  }.freeze
 
   def teacher_enrollment_receipt(enrollment)
     @enrollment = enrollment

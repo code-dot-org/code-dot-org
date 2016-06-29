@@ -8,7 +8,7 @@ class Slack
     yellow: 'warning',
     red: 'danger',
     purple: '#7665a0'
-  }
+  }.freeze
 
   CHANNEL_MAP = {
     'developers' => 'general',
@@ -16,7 +16,7 @@ class Slack
     'staging' => 'infra-staging',
     'test' => 'infra-test',
     'production' => 'infra-production'
-  }
+  }.freeze
 
   def self.message(text, params={})
     return false unless CDO.slack_endpoint

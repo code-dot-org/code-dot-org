@@ -4,16 +4,16 @@ require 'cdo/poste'
 
 class PosteTest < Minitest::Test
 
-  FROM_NAME = 'Code dot org'
-  FROM_EMAIL = 'noreply@code.org'
-  REPLY_TO_NAME = 'Reply-to Person'
-  REPLY_TO_EMAIL = 'reply.to.person@example.net'
-  TO_NAME = 'Recipient Person'
-  TO_EMAIL = 'recipient.person@example.net'
-  SUBJECT = 'this is a subject'
-  BODY = 'blah blah blah'
-  CONTENT_TYPE = 'text/html; charset=UTF-8'
-  IP = '127.0.0.1'
+  FROM_NAME = 'Code dot org'.freeze
+  FROM_EMAIL = 'noreply@code.org'.freeze
+  REPLY_TO_NAME = 'Reply-to Person'.freeze
+  REPLY_TO_EMAIL = 'reply.to.person@example.net'.freeze
+  TO_NAME = 'Recipient Person'.freeze
+  TO_EMAIL = 'recipient.person@example.net'.freeze
+  SUBJECT = 'this is a subject'.freeze
+  BODY = 'blah blah blah'.freeze
+  CONTENT_TYPE = 'text/html; charset=UTF-8'.freeze
+  IP = '127.0.0.1'.freeze
 
   def setup
     @mail = Mail.new

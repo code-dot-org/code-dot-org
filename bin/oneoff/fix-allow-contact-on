@@ -4,7 +4,7 @@ require 'cdo/db'
 require 'cdo/geocoder'
 require src_dir 'forms'
 
-KIND = 'VolunteerEngineerSubmission2015'
+KIND = 'VolunteerEngineerSubmission2015'.freeze
 
 def dashboard_user
   nil

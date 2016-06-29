@@ -13,7 +13,7 @@ require 'yaml'
 
 class GAClient
 # Modified from https://github.com/google/google-api-ruby-client-samples/blob/master/service_account/analytics.rb
-  API_VERSION = 'v3'
+  API_VERSION = 'v3'.freeze
   CACHED_API_FILE = File.join(__dir__, "analytics-#{API_VERSION}.cache")
 
   ## Query Parameters Summary https://developers.google.com/analytics/devguides/reporting/core/v3/reference#q_summary
