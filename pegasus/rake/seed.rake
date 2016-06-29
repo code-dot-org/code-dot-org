@@ -173,7 +173,7 @@ class GSheetToCsv
         unless columns
           # Determine the set of columns to be output.
           columns = row.headers
-          if !@include_columns.empty?
+          unless @include_columns.empty?
             columns &= @include_columns
           end
           columns -= @exclude_columns
