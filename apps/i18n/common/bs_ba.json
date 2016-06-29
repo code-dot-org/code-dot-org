@@ -242,5 +242,8 @@
   "when": "kada",
   "whenRun": "pri pokretanju",
   "workspaceHeaderShort": "Radni prostor: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

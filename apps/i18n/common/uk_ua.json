@@ -242,5 +242,8 @@
   "when": "коли",
   "whenRun": "коли гра починається",
   "workspaceHeaderShort": "Робоча область: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

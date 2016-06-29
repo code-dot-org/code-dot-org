@@ -293,7 +293,7 @@ module.exports = function (grunt) {
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
-      singleRun: envConstants.WATCH,
+      singleRun: !envConstants.WATCH,
       files: [
         {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},

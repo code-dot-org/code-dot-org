@@ -242,5 +242,8 @@
   "when": "とき",
   "whenRun": "実行した時",
   "workspaceHeaderShort": "ワークスペース：",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

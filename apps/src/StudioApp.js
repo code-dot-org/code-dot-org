@@ -623,8 +623,7 @@ StudioApp.prototype.getFirstContainedLevelResult_ = function () {
 
 StudioApp.prototype.hasValidContainedLevelResult_ = function () {
   var firstResult = this.getFirstContainedLevelResult_();
-  return typeof firstResult.result.response !== 'undefined' &&
-      firstResult.result.response !== '';
+  return firstResult.result.valid;
 };
 
 /**

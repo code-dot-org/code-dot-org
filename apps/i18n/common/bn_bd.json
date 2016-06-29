@@ -242,5 +242,8 @@
   "when": "যখন",
   "whenRun": "চালানোর সময়",
   "workspaceHeaderShort": "কর্মপরিসর:",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }
