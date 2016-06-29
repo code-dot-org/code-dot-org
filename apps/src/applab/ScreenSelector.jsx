@@ -76,7 +76,7 @@ var ScreenSelector = React.createClass({
           id="screenSelector"
           style={[
             styles.dropdown,
-            (!this.props.hasDesignMode|| this.props.isReadOnlyWorkspace) &&
+            (!this.props.hasDesignMode || this.props.isReadOnlyWorkspace) &&
               commonStyles.hidden
           ]}
           value={this.props.currentScreenId || ''}
