@@ -48,14 +48,10 @@ database:
 test:
   override:
     - bundle exec rake lint:javascript
-    # Run tests only for changed sub-projects, unless [test all] in commit
-    - bundle exec rake circle:run_tests:
+    - case $CIRCLE_NODE_INDEX in 0) bundle exec rake circle:run_tests ;; 1) bundle exec rake circle:run_ui_tests ;; esac:
+        parallel: true
         timeout:
             7200
     - ./test.sh:
         pwd:
             cookbooks
-    # Only run UI tests when [test ui] included in commit message
-    - bundle exec rake circle:run_ui_tests:
-        timeout:
-            7200
