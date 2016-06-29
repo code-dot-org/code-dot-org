@@ -52,7 +52,17 @@ class ActivitiesControllerTest < ActionController::TestCase
     @good_image = File.read('test/fixtures/artist_image_1.png', binmode: true)
     @another_good_image = File.read('test/fixtures/artist_image_2.png', binmode: true)
     @jpg_image = File.read('test/fixtures/playlab_image.jpg', binmode: true)
-    @milestone_params = {user_id: @user, script_level_id: @script_level.id, lines: 20, attempt: '1', result: 'true', testResult: '100', time: '1000', app: 'test', program: '<hey>'}
+    @milestone_params = {
+      user_id: @user,
+      script_level_id: @script_level.id,
+      lines: 20,
+      attempt: '1',
+      result: 'true',
+      testResult: '100',
+      time: '1000',
+      app: 'test',
+      program: '<hey>'
+    }
 
     # Stub out the SQS client to invoke the handler on queued messages only when requested.
     @fake_queue = FakeQueue.new(AsyncProgressHandler.new)
@@ -356,8 +366,14 @@ class ActivitiesControllerTest < ActionController::TestCase
     script_start_date = Time.now - 5.days
     existing_sl = @script_level.script.script_levels.last
     UserLevel.record_timestamps = false
-    UserLevel.create!(user_id: @user.id, level_id: existing_sl.level.id, script_id: existing_sl.script_id, best_result: 100,
-                     created_at: script_start_date, updated_at: script_start_date)
+    UserLevel.create!(
+      user_id: @user.id,
+      level_id: existing_sl.level.id,
+      script_id: existing_sl.script_id,
+      best_result: 100,
+      created_at: script_start_date,
+      updated_at: script_start_date
+    )
     UserLevel.record_timestamps = true
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do

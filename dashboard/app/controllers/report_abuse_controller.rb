@@ -20,7 +20,7 @@ class ReportAbuseController < ApplicationController
                 "URL: #{params[:abuse_url]}",
                 "abuse type: #{params[:abuse_type]}",
                 "user detail:",
-                "#{params[:abuse_detail]}"
+                params[:abuse_detail]
               ].join("\n")
             },
             custom_fields: [{ id: AGE_CUSTOM_FIELD_ID, value: params[:age] }],
