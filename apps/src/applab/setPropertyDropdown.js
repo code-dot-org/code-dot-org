@@ -96,7 +96,6 @@ PROPERTIES[ElementType.TEXT_INPUT] = {
 PROPERTIES[ElementType.LABEL] = {
   propertyNames: [
     'text',
-    'text',
     'width',
     'height',
     'x',
