@@ -498,7 +498,6 @@ en:
         'csp_concept_cybercrime' : 'The Internet: Cybersecurity & Crime'
         'csp_concept_encryption' : 'The Internet: Encryption & Public Keys'
         'csp_concept_http_html' : 'The Internet: HTTP & HTML'
-        'csp_concept_what_is_internet' : 'What is the Internet?'
         'csp_concept_internet_ip_dns' : 'The Internet: IP Addresses & DNS'
         'csp_concept_internet_packets_reliability' : 'The Internet: Packets, Routing & Reliability'
         'csp_concept_internet_wires_cables_wifi' : 'The Internet: Wires, Cables & Wifi'
