@@ -42,6 +42,8 @@ export const ADD_ANIMATION = 'ADD_ANIMATION';
 export const ADD_ANIMATION_AT = 'ADD_ANIMATION_AT';
 // Args: {AnimationKey} key, {SerializedAnimation} data
 export const EDIT_ANIMATION = 'EDIT_ANIMATION';
+// Args: {AnimationKey} key
+const INVALIDATE_ANIMATION = 'INVALIDATE_ANIMATION';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'SET_ANIMATION_NAME';
 // Args: {AnimationKey} key
@@ -98,6 +100,7 @@ function data(state, action) {
     case ADD_ANIMATION:
     case ADD_ANIMATION_AT:
     case EDIT_ANIMATION:
+    case INVALIDATE_ANIMATION:
     case SET_ANIMATION_NAME:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
@@ -129,6 +132,11 @@ function datum(state, action) {
 
     case EDIT_ANIMATION:
       return Object.assign({}, state, action.data, {
+        saved: false // Dirty, so it'll get saved soon.
+      });
+
+    case INVALIDATE_ANIMATION:
+      return Object.assign({}, state, {
         saved: false // Dirty, so it'll get saved soon.
       });
 
@@ -214,9 +222,22 @@ export function addLibraryAnimation(data) {
       data
     });
     dispatch(loadAnimationFromSource(key, data.sourceUrl, () => {
+      dispatch(invalidateAnimation(key));
       dispatch(selectAnimation(key));
     }));
     dashboard.project.projectChanged();
+  };
+}
+
+/**
+ * Mark an animation as needing to be saved to S3.
+ * @param {AnimationKey} key
+ * @returns {{type: *, key: *}}
+ */
+function invalidateAnimation(key) {
+  return {
+    type: INVALIDATE_ANIMATION,
+    key
   };
 }
 
