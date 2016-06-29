@@ -40,9 +40,6 @@
     "hide_view_data_button": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "start_blocks": "write('Test Applab Containing Free Response Level');"
   },
   "published": true,
