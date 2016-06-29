@@ -363,8 +363,8 @@ en:
     print_certificate: "Print Certificate"
     announcement_title: "Announcements"
     announcement_view_all: "View all"
-    announcement_message: "Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an \"unused code\" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature."
-    announcement_button: "Test the feature"
+    announcement_message: "You can now add App Lab projects to a website or blog using the new embed code feature. Just click on the \"Share\" button, go to \"Show advanced options,\" and copy the embed code.  You can then paste the embed code into any web page, blog, or site that uses HTML to share your App Lab projects!"
+    announcement_button: "Try it now"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: "Add your name"
   move_students:
