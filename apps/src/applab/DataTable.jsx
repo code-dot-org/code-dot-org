@@ -19,7 +19,7 @@ const DataTable = React.createClass({
   propTypes: {
     // from redux state
     tableName: React.PropTypes.string.isRequired,
-    view: React.PropTypes.oneOf([DataView.OVERVIEW, DataView.PROPERTIES, DataView.TABLE]),
+    view: React.PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
     onViewChange: React.PropTypes.func.isRequired

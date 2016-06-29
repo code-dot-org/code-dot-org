@@ -107,7 +107,7 @@ const AddTableRow = React.createClass({
 const DataOverview = React.createClass({
   propTypes: {
     // from redux state
-    view: React.PropTypes.oneOf([DataView.OVERVIEW, DataView.PROPERTIES, DataView.TABLE]),
+    view: React.PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
     onViewChange: React.PropTypes.func.isRequired
