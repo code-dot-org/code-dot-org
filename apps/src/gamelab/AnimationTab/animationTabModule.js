@@ -23,7 +23,7 @@ function selectedAnimation(state, action) {
 
 /**
  * Select an animation in the animation list.
- * @param {!AnimationKey} animationKey
+ * @param {AnimationKey} animationKey
  * @returns {{type: string, animationKey: AnimationKey}}
  */
 export function selectAnimation(animationKey) {
