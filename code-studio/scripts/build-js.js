@@ -55,18 +55,6 @@ Promise.all([
     shouldFactor: true
   })),
 
-  // Build embedVideo.js in its own step (skipping factor-bundle) so that
-  // we don't have to include the large code-studio-common file in the
-  // embedded video page, keeping it fairly lightweight.
-  // (I wonder how much more we could slim it down by removing jQuery!)
-  // @see embed.html.haml
-  build_commands.bundle(_.extend({}, defaultOptions, {
-    filenames: [
-      'embedVideo.js'
-    ],
-    commonFile: 'embedVideo'
-  })),
-
   // Have a bundle for plc stuff - no sense in expanding this to everything yet
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
