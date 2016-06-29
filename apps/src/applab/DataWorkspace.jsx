@@ -1,6 +1,6 @@
-import { ApplabInterfaceMode } from '../applab/constants';
+import { ApplabInterfaceMode } from './constants';
 import React from 'react';
-import PaneHeader, { PaneSection } from './PaneHeader';
+import PaneHeader, { PaneSection } from '../templates/PaneHeader';
 import { connect } from 'react-redux';
 import msg from '../locale';
 import color from '../color';
