@@ -1,6 +1,7 @@
 import { ApplabInterfaceMode } from './constants';
 import DataOverview from './DataOverview';
 import DataProperties from './DataProperties';
+import DataTable from './DataTable';
 import React from 'react';
 import PaneHeader, { PaneSection } from '../templates/PaneHeader';
 import { connect } from 'react-redux';
@@ -52,6 +53,7 @@ const DataWorkspace = React.createClass({
         <div id='data-mode-container' style={styles.container}>
           <DataOverview/>
           <DataProperties/>
+          <DataTable/>
         </div>
       </div>
     );

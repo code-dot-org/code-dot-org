@@ -54,7 +54,7 @@ const styles = {
 const EditLink = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
-    onClick: React.PropTypes.func
+    onClick: React.PropTypes.func.isRequired
   },
   render() {
     return (
@@ -67,13 +67,19 @@ const EditLink = React.createClass({
 
 const EditTableRow = React.createClass({
   propTypes: {
+    onViewChange: React.PropTypes.func.isRequired,
     tableName: React.PropTypes.string.isRequired
   },
+
+  handleClick() {
+    this.props.onViewChange(DataView.TABLE, this.props.tableName);
+  },
+
   render() {
     return (
       <tr style={styles.editRow}>
         <td style={styles.cell}>
-          <EditLink name={this.props.tableName}/>
+          <EditLink name={this.props.tableName} onClick={this.handleClick}/>
         </td>
         <td style={styles.cell}>
           <button className='btn btn-danger' style={styles.button}>Delete</button>
@@ -101,7 +107,7 @@ const AddTableRow = React.createClass({
 const DataOverview = React.createClass({
   propTypes: {
     // from redux state
-    view: React.PropTypes.oneOf([DataView.OVERVIEW, DataView.PROPERTIES]),
+    view: React.PropTypes.oneOf([DataView.OVERVIEW, DataView.PROPERTIES, DataView.TABLE]),
 
     // from redux dispatch
     onViewChange: React.PropTypes.func.isRequired
@@ -132,8 +138,12 @@ const DataOverview = React.createClass({
           </colgroup>
           <tbody>
           {/* placeholder table names, to be populated from Firebase */}
-          <EditTableRow tableName="Table 1"/>
-          <EditTableRow tableName="Table 2"/>
+          <EditTableRow
+              tableName="Table 1"
+              onViewChange={this.props.onViewChange}/>
+          <EditTableRow
+              tableName="Table 2"
+              onViewChange={this.props.onViewChange}/>
           <AddTableRow/>
           </tbody>
         </table>
@@ -145,7 +155,7 @@ const DataOverview = React.createClass({
 export default connect(state => ({
   view: state.data.view
 }), dispatch => ({
-  onViewChange(view) {
-    dispatch(changeView(view));
+  onViewChange(view, tableName) {
+    dispatch(changeView(view, tableName));
   }
 }))(DataOverview);
