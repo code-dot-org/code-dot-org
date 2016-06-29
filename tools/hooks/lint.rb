@@ -78,4 +78,4 @@ def do_linting
   end
 end
 
-do_linting()
+do_linting

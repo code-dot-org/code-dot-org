@@ -193,4 +193,4 @@ class GatekeeperBase
   end
 end
 
-Gatekeeper = GatekeeperBase.create()
+Gatekeeper = GatekeeperBase.create

@@ -268,7 +268,7 @@ class TablesTest < Minitest::Test
     csv_filename = File.expand_path('../roster.csv', __FILE__)
     import(csv_filename)
 
-    result_body = export().body.split("\n")
+    result_body = export.body.split("\n")
     original_body = File.read(csv_filename).split("\n")
 
     result_columns = result_body[0]
