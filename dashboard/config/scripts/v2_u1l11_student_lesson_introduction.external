@@ -9,13 +9,13 @@ markdown <<MARKDOWN
 
 # Background
 
-You have now learned how to make sure a message gets to the right person over the internet. How can you ensure that the person receives the full message? Let's say you just bought a movie on Amazon. Halfway through downloading it, your internet stops working for five seconds. Do you end up with a movie with a piece missing? Usually, the answer is no. In this lesson, we will investigate how packets help ensure reliability over the internet.
+The internet is inherently unreliable.  Wires can get cut, connections can get flooded with data, routers can crash. How can you ensure that a person receives the message you sent? In this lesson, we will investigate how packets and protocols to structure them can make the unreliable physical network appear to be reliable to people using it.
 
 # Vocabulary
 
-<strong>Packet</strong>: a fixed-size, formatted unit of data sent over the internet.
+**Packets** - Small chunks of information that have been carefully formed from larger chunks of information.
 
-<strong>Transmission Control Protocol (TCP)</strong>: a core protocol that provides reliable, ordered, and error-checked delivery of data over the Internet.
+**TCP** - Transmission Control Protocol - provides reliable, ordered, and error-checked delivery of a stream of packets on the internet. TCP is tightly linked with IP and usually seen as TCP/IP in writing.
 
 # Lesson
 

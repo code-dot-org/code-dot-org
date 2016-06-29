@@ -1,8 +1,9 @@
+import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var dropletUtils = require('@cdo/apps/dropletUtils');
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 var sinon = require('sinon');
 
 module.exports = {

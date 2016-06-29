@@ -3,6 +3,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var markup = require('./NetSimDnsTab.html.ejs');
 var DnsMode = require('./NetSimConstants').DnsMode;
 var NetSimDnsModeControl = require('./NetSimDnsModeControl');

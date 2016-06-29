@@ -1,9 +1,12 @@
-/* global React google */
+/* global google */
 
 /*
  Form for creating / editing workshop details.
  */
 
+import $ from 'jquery';
+var React = require('react');
+var ReactDOM = require('react-dom');
 var _ = require('lodash');
 var moment = require('moment');
 var SessionListFormPart = require('./session_list_form_part');
@@ -51,6 +54,7 @@ var WorkshopForm = React.createClass({
     let initialState = {
       errors: [],
       shouldValidate: false,
+      useAutocomplete: true,
       facilitators: [],
       location_name: '',
       location_address: '',
@@ -90,6 +94,9 @@ var WorkshopForm = React.createClass({
 
   componentWillUnmount: function () {
     if (this.isGoogleMapsLoaded()) {
+      if (this.gm_authFailure) {
+        window.gm_authFailure = this.old_gm_authFailure;
+      }
       google.maps.event.clearInstanceListeners(this.autocomplete);
     }
     if (this.saveRequest) {
@@ -125,6 +132,24 @@ var WorkshopForm = React.createClass({
   },
 
   enableAutocompleteLocation: function () {
+    if (!this.state.useAutocomplete) {
+      return;
+    }
+
+    // The way to catch google auth errors is in a global function :(
+    // See https://developers.google.com/maps/documentation/javascript/events#auth-errors
+    // If google auth fails, remove the autocomplete and re-draw.
+    if (!this.gm_authFailure) {
+      // Save existing function, if one exists.
+      this.old_gm_authFailure = window.gm_authFailure;
+      window.gm_authFailure = this.gm_authFailure = () => {
+        if (this.old_gm_authFailure) {
+          this.old_gm_authFailure();
+        }
+        this.setState({useAutocomplete: false});
+      };
+    }
+
     if (!this.autocomplete && this.isGoogleMapsLoaded()) {
       this.autocomplete = new google.maps.places.Autocomplete($(ReactDOM.findDOMNode(this)).find('.location-autocomplete')[0]);
       google.maps.event.addListener(this.autocomplete, 'place_changed', function () {
@@ -469,7 +494,7 @@ var WorkshopForm = React.createClass({
   renderForm: function () {
     let validation = this.validate(this.state.shouldValidate);
     return (
-      <Grid fluid={true}>
+      <Grid>
         <form>
           <Row>
             <Col sm={4}>
@@ -500,9 +525,11 @@ var WorkshopForm = React.createClass({
             <Col sm={6}>
               <Input
                 type="text"
+                key={this.state.useAutocomplete} // Change key to force re-draw
                 className="location-autocomplete"
                 label="Location Address"
                 value={this.state.location_address || ''}
+                placeholder="Enter a location"
                 onChange={(event) => {this.handleFieldChange('location_address', event.target.value);}}
                 bsStyle={validation.style.location_address}
                 help={validation.help.location_address}
@@ -537,7 +564,7 @@ var WorkshopForm = React.createClass({
             </Col>
           </Row>
           <Row>
-            <Col sm={8}>
+            <Col sm={10}>
               <Input
                 type="textarea"
                 label="Notes (optional)"
@@ -545,7 +572,8 @@ var WorkshopForm = React.createClass({
                 information like building location, lunch options or pre-work."
                 value={this.state.notes || ''}
                 onChange={(event) => {this.handleFieldChange('notes', event.target.value);}}
-                rows="5"
+                maxLength={65535}
+                rows={Math.max(5, this.state.notes.split("\n").length + 1)}
                 style={this.props.readOnly && styles.readOnlyInput}
                 disabled={this.props.readOnly}
               />

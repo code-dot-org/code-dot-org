@@ -1,9 +1,7 @@
-/* global React */
-
 /*
   Workshop summary display for use as a row in WorkshopTable
  */
-
+import React from 'react';
 var SessionTimesList = require('./session_times_list');
 var ConfirmationDialog = require('./confirmation_dialog');
 var FacilitatorsList = require('./facilitators_list');

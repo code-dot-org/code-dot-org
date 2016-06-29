@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "уклони размак са леве стране",
   "TEXT_TRIM_OPERATOR_RIGHT": "уклони размак са десне стране",
   "TEXT_TRIM_TOOLTIP": "Враћа копију текста са уклоњеним размацима са почетка и/или краја текста.",
+  "UNUSED_CODE": "Unused code",
   "VARIABLES_DEFAULT_NAME": "ставка",
   "VARIABLES_GET_CREATE_SET": "Направи 'упиши %1'",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

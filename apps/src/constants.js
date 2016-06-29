@@ -26,6 +26,7 @@ exports.TestResults = {
   NO_TESTS_RUN: -1,
 
   // The level was not solved.
+  GENERIC_FAIL: 0,                    // Used by DSL defined levels.
   EMPTY_BLOCK_FAIL: 1,                // An "if" or "repeat" block was empty.
   TOO_FEW_BLOCKS_FAIL: 2,             // Fewer than the ideal number of blocks used.
   LEVEL_INCOMPLETE_FAIL: 3,           // Default failure to complete a level.
@@ -62,8 +63,9 @@ exports.TestResults = {
   APP_SPECIFIC_ACCEPTABLE_FAIL: 21,       // Application-specific acceptable failure.
   MISSING_RECOMMENDED_BLOCK_FINISHED: 22, // The level was solved without a recommended block
 
-  // Other.
+  // The level was solved in an optimal way.
   FREE_PLAY: 30,   // The user is in free-play mode.
+  PASS_WITH_EXTRA_TOP_BLOCKS: 31, // There was more than one top-level block.
   EDIT_BLOCKS: 70, // The user is creating/editing a new level.
 
   // The level was solved in the ideal manner.

@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+
+# WA state code studio teachers
+query = 'kind_s:user && role_s:teacher && create_ip_state_s:Washington'
+results = query_subscribed_contacts(q: query)
+puts "#{results.count} WA teachers"
+
+export_contacts_to_csv results, 'wa-teachers.csv'

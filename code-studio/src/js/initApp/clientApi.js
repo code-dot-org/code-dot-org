@@ -1,6 +1,8 @@
 /**
  * @file Helper API object that wraps asynchronous calls to our data APIs.
  */
+import $ from 'jquery';
+import _ from 'lodash';
 
 /**
  * Standard callback form for asynchronous operations, popularized by Node.
@@ -189,7 +191,7 @@ module.exports = {
    * @returns {ClientApi}
    */
   create: function (url) {
-    return $.extend({}, base, {
+    return _.assign({}, base, {
       api_base_url: url
     });
   }

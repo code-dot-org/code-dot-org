@@ -1,7 +1,14 @@
 "hr-HR":
   hour_of_code: Hour of Code
   hello: Pozdrav svima
+  'yes': Da
+  'no': Ne
   select_language: Odaberite svoj jezik
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Doznaj više
   en: Računalna znanost
   computer_science_edweek: Tjedan podučavanja Računalstva
   csedweek_dates: 8. - 14. prosinca 2014.
@@ -581,6 +588,7 @@
   dashboard_landing_new_k5courses: Novo! Isprobaj naše tečajeve za učenike razredne
     nastave.
   dashboard_landing_useful_links: Druge korisne poveznice (samo na engleskom)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Postavite pitanje uživo! Posjetite naše mjesečne
     sate video pristupa.
   dashboard_landing_print_certificates: Ispišite potvrde za učenike koji su završili
@@ -599,6 +607,11 @@
   dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
     by our partners.</a> Learn to program with robots, make web pages, make your own
     app, or explore other languages like C++, Ruby, or Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Probajte Hour of Code za sve uzraste
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
@@ -652,6 +665,13 @@
   dashboard_action_required: potrebno
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -663,7 +683,7 @@
   dashboard_navigation_section_pd: Profesionalni razvoj
   dashboard_navigation_section_speakers: Informatički <br/> gosti govornici
   dashboard_navigation_all_sections: Učenički računi i napredak
-  dashboard_navigation_view_progress: Prikaz napretka
+  dashboard_navigation_view_progress: Napredak
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Dodavanje učenika
@@ -682,6 +702,7 @@
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Novo odjeljenje
@@ -692,6 +713,7 @@
   dashboard_sections_table_secret: Način prijave
   dashboard_sections_table_grade: Razred
   dashboard_sections_table_course: Tečaj
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Učenici
   dashboard_sections_table_code: "Šifra odjeljenja"
   dashboard_sections_name: Ime odjeljenja
@@ -781,6 +803,8 @@
   dashboard_course2: 'Tečaj 2:'
   dashboard_course3: 'Tečaj 3:'
   dashboard_course4: 'Lekcija 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Nastavni plan
   dashboard_curriculum_overview: Pregled kurikuluma razredne nastave
   dashboard_overview: Pregled
@@ -851,7 +875,7 @@
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Unesi svoje ime
   code_hoc_coming: Sat Kodiranja je ovdje - 8. - 14. prosinca!
   code_sign_up: Prijavite se za sudjelovanje u Tjednu poučavanja informatike
   learn_more: Nauči više
@@ -981,6 +1005,12 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1000,6 +1030,8 @@
   hoc_category_name: Hour of Code
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Laboratorij aplikacija
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1696,11 +1728,3 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

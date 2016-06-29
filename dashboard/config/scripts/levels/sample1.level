@@ -7,7 +7,7 @@
   "properties": {
     "skin": "farmer",
     "serialized_maze": "[[{\"tileType\":4},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":4},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":4},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "instructions": "Our adventurer wants to collect gems.  But she can only use 4 blocks to get them.\r\n\r\nCan you help her grab as many as she can using just 4 blocks?",
+    "instructions": "Our adventurer wants to collect coins.  But she can only use 4 blocks to get them.\r\n\r\nCan you help her grab as many as she can using just 4 blocks?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -27,9 +27,10 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "markdown_instructions": "Our adventurer wants to collect gems.  But she can only use 4 blocks to get them.  \r\n\r\nCan you help her grab as many as she can using just 4 blocks?",
+    "markdown_instructions": "Our adventurer wants to collect coins.  But she can only use 4 blocks to get them.  \r\n\r\nCan you help her grab as many as she can using just 4 blocks?",
     "failure_message_override": "Congratulations!  You gathered X coins!",
-    "ideal": "4"
+    "ideal": "4",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"sample1_1\",\r\n  \"callout_text\": \"This will be an adventurer collecting coins, not a farmer digging.\",\r\n  \"element_id\": \"#tileElement22\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
   "published": true,
   "notes": "This is a sample of the first introduction to new blocks...exploration style!\r\n\r\nTo be successful, this needs:\r\n- Try vs Finish buttons\r\n- Ability to deny submission when block count is over\r\n- Assign better hover text\r\n- Freeplay-like style",

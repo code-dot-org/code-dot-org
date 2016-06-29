@@ -2,6 +2,7 @@ import GameButtons, {ResetButton} from '../templates/GameButtons';
 import IFrameEmbedOverlay from './IFrameEmbedOverlay';
 import * as color from '../color';
 
+var React = require('react');
 var Radium = require('radium');
 var Visualization = require('./Visualization');
 var CompletionButton = require('./CompletionButton');
@@ -116,7 +117,7 @@ var ApplabVisualizationColumn = React.createClass({
             onScreenCreate={this.props.onScreenCreate} />
         }
         {visualization}
-        {this.props.isIframeEmbed && this.props.isRunning &&
+        {this.props.isIframeEmbed &&
          <div style={styles.resetButtonWrapper}>
            <ResetButton hideText={true}
                         style={styles.resetButton}

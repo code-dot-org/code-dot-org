@@ -9,6 +9,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    Ascii85 (1.0.2)
     acme-client (0.3.0)
       faraday (~> 0.9, >= 0.9.1)
       json-jwt (~> 1.2, >= 1.2.3)
@@ -55,6 +56,7 @@ GEM
     acts_as_list (0.7.2)
       activerecord (>= 3.0)
     addressable (2.4.0)
+    afm (0.2.2)
     annotate (2.6.10)
       activerecord (>= 3.2, <= 4.3)
       rake (~> 10.4)
@@ -172,6 +174,7 @@ GEM
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
+    firebase_token_generator (2.0.0)
     font-awesome-rails (4.6.3.0)
       railties (>= 3.2, < 5.1)
     geocoder (1.2.11)
@@ -209,6 +212,7 @@ GEM
       rubocop (>= 0.36.0)
       sysexits (~> 1.1)
     hashdiff (0.2.3)
+    hashery (2.1.2)
     hashie (3.4.3)
     heroku_rails_deflate (1.0.3)
       actionpack (>= 3.2.13)
@@ -336,6 +340,7 @@ GEM
     omniauth-windowslive (0.0.9)
       multi_json (>= 1.0.3)
       omniauth-oauth2 (~> 1.0)
+    open_uri_redirections (0.2.1)
     orm_adapter (0.5.0)
     os (0.9.6)
     parallel (1.3.3)
@@ -343,6 +348,12 @@ GEM
       activerecord (~> 4.0)
     parser (2.3.0.6)
       ast (~> 2.2)
+    pdf-reader (1.4.0)
+      Ascii85 (~> 1.0.0)
+      afm (~> 0.2.1)
+      hashery (~> 2.0)
+      ruby-rc4
+      ttfunk
     phantomjs (1.9.7.1)
     poltergeist (1.7.0)
       capybara (~> 2.1)
@@ -439,16 +450,21 @@ GEM
       unicode-display_width (~> 0.3)
     ruby-prof (0.14.2)
     ruby-progressbar (1.7.5)
+    ruby-rc4 (0.1.5)
     ruby_parser (3.7.0)
       sexp_processor (~> 4.1)
     rubyzip (1.2.0)
     safe_yaml (1.0.4)
-    sass (3.2.19)
-    sass-rails (4.0.5)
+    sass (3.4.22)
+    sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
-      sass (~> 3.2.2)
-      sprockets (~> 2.8, < 3.0)
-      sprockets-rails (~> 2.0)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+      tilt (>= 1.1, < 3)
+    scss_lint (0.48.0)
+      rake (>= 0.9, < 12)
+      sass (~> 3.4.15)
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
@@ -514,6 +530,7 @@ GEM
     timers (4.0.1)
       hitimes
     tins (1.6.0)
+    ttfunk (1.4.0)
     twilio-ruby (3.12.2)
       builder (>= 2.1.2)
       jwt (~> 1.0.0)
@@ -584,6 +601,7 @@ DEPENDENCIES
   factory_girl_rails
   fake_sqs
   fakeredis
+  firebase_token_generator
   font-awesome-rails (~> 4.6.3)
   geocoder
   google-api-client
@@ -622,9 +640,11 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-windowslive (~> 0.0.9)
+  open_uri_redirections
   os
   parallel
   paranoia (~> 2.0)
+  pdf-reader
   phantomjs (~> 1.9.7.1)
   poltergeist
   pusher (~> 0.14.5)
@@ -646,7 +666,8 @@ DEPENDENCIES
   rspec
   rubocop (= 0.37.2)
   ruby-prof
-  sass-rails (~> 4.0.0)
+  sass-rails
+  scss_lint
   sdoc
   seamless_database_pool
   selectize-rails

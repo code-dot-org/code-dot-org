@@ -24,8 +24,13 @@ class PairingsControllerTest < ActionController::TestCase
     xhr :get, :show
     assert_response :success
 
-    expected_response = {'pairings' => [], 'sections' => [{'id' => section_1.id, 'name' => section_1.name, 'students' => []},
-                                                         {'id' => section_2.id, 'name' => section_2.name, 'students' => []}]}
+    expected_response = {
+      'pairings' => [],
+      'sections' => [
+        {'id' => section_1.id, 'name' => section_1.name, 'students' => []},
+        {'id' => section_2.id, 'name' => section_2.name, 'students' => []}
+      ]
+    }
     assert_equal expected_response, JSON.parse(response.body)
   end
 

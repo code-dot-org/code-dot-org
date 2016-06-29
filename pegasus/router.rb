@@ -171,6 +171,7 @@ class Documents < Sinatra::Base
   get '*' do |uri|
     pass unless path = resolve_static('public', uri)
     cache :static
+    NewRelic::Agent.set_transaction_name(uri) if defined? NewRelic
     send_file(path)
   end
 
@@ -205,6 +206,11 @@ class Documents < Sinatra::Base
   # Documents
   get_head_or_post '*' do |uri|
     pass unless path = resolve_document(uri)
+    if defined? NewRelic
+      transaction_name = uri
+      transaction_name = transaction_name.sub(request.env[:splat_path_info], '') if request.env[:splat_path_info]
+      NewRelic::Agent.set_transaction_name(transaction_name)
+    end
     not_found! if settings.not_found_extnames.include?(File.extname(path))
     document path
   end
@@ -213,7 +219,7 @@ class Documents < Sinatra::Base
     return unless response.headers['X-Pegasus-Version'] == '3'
     return unless ['', 'text/html'].include?(response.content_type.to_s.split(';', 2).first.to_s.downcase)
 
-    if params.has_key?('embedded') && @locals[:header]['embedded_layout']
+    if params.key?('embedded') && @locals[:header]['embedded_layout']
       @locals[:header]['layout'] = @locals[:header]['embedded_layout']
       @locals[:header]['theme'] ||= 'none'
       response.headers['X-Frame-Options'] = 'ALLOWALL'
@@ -443,7 +449,7 @@ class Documents < Sinatra::Base
       end
     end
 
-    def social_metadata()
+    def social_metadata
       if request.site == 'csedweek.org'
         metadata = {
           'og:site_name'      => 'CSEd Week',

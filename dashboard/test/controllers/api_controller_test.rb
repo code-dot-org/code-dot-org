@@ -96,13 +96,13 @@ class ApiControllerTest < ActionController::TestCase
 
     # student_1 has two answers
     create(:activity, user: @student_1, level: level1,
-           level_source: create(:level_source, level: level1, data: 'Here is the answer'))
+      level_source: create(:level_source, level: level1, data: 'Here is the answer'))
     create(:activity, user: @student_1, level: level2,
-           level_source: create(:level_source, level: level2, data: 'another answer'))
+      level_source: create(:level_source, level: level2, data: 'another answer'))
 
     # student_2 has one answer
     create(:activity, user: @student_2, level: level1,
-           level_source: create(:level_source, level: level1, data: 'answer for student 2'))
+      level_source: create(:level_source, level: level1, data: 'answer for student 2'))
 
     get :section_text_responses, section_id: @section.id, script_id: script.id
     assert_response :success
@@ -152,10 +152,16 @@ class ApiControllerTest < ActionController::TestCase
     create :script_level, script: script, levels: [level1], assessment: true
 
     # student_1 has an assessment
-    create(:activity, user: @student_1, level: level1,
-           level_source: create(:level_source, level: level1,
-            data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"}})
-            ))
+    create(
+      :activity,
+      user: @student_1,
+      level: level1,
+      level_source: create(
+        :level_source,
+        level: level1,
+        data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"}})
+      )
+    )
 
     updated_at = Time.now
 
@@ -258,15 +264,17 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 100, body['progress'][level.id.to_s]
     assert_equal 'level source', body['lastAttempt']['source']
 
-    assert_equal([{
-                      application: :dashboard,
-                      tag: 'activity_start',
-                      script_level_id: script_level.id,
-                      level_id: level.id,
-                      user_agent: 'Rails Testing',
-                      locale: :'en-us'
-                  }],
-                 slogger.records)
+    assert_equal(
+      [{
+        application: :dashboard,
+        tag: 'activity_start',
+        script_level_id: script_level.id,
+        level_id: level.id,
+        user_agent: 'Rails Testing',
+        locale: :'en-us'
+      }],
+      slogger.records
+    )
   end
 
   test "should get user progress for stage for signed-out user" do
@@ -283,15 +291,17 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal({}, body)
-    assert_equal([{
-                      application: :dashboard,
-                      tag: 'activity_start',
-                      script_level_id: script_level.id,
-                      level_id: level.id,
-                      user_agent: 'Rails Testing',
-                      locale: :'en-us'
-                  }],
-                 slogger.records)
+    assert_equal(
+      [{
+        application: :dashboard,
+        tag: 'activity_start',
+        script_level_id: script_level.id,
+        level_id: level.id,
+        user_agent: 'Rails Testing',
+        locale: :'en-us'
+      }],
+      slogger.records
+    )
   end
 
   test "should get user progress for stage with young student" do
@@ -326,8 +336,16 @@ class ApiControllerTest < ActionController::TestCase
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
     create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
-    create(:activity, user: @student_1, level: level1a,
-           level_source: create(:level_source, level: level1a, data: 'level source'))
+    create(
+      :activity,
+      user: @student_1,
+      level: level1a,
+      level_source: create(
+        :level_source,
+        level: level1a,
+        data: 'level source'
+      )
+    )
 
     get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1, level: level1a.id
     body = JSON.parse(response.body)
@@ -415,10 +433,13 @@ class ApiControllerTest < ActionController::TestCase
   test "should get user_hero for student who completed all scripts" do
     student = create :student
     sign_in student
-    advertised_scripts = [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
-      Script.flappy_script, Script.playlab_script, Script.artist_script, Script.course1_script,
-      Script.course2_script, Script.course3_script, Script.course4_script, Script.twenty_hour_script,
-      Script.starwars_script, Script.starwars_blocks_script, Script.minecraft_script]
+    advertised_scripts = [
+      Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
+      Script.flappy_script, Script.playlab_script, Script.artist_script,
+      Script.course1_script, Script.course2_script, Script.course3_script,
+      Script.course4_script, Script.twenty_hour_script, Script.starwars_script,
+      Script.starwars_blocks_script, Script.minecraft_script
+    ]
     advertised_scripts.each do |script|
       UserScript.create!(user_id: student.id, script_id: script.id, completed_at: Time.now)
     end
@@ -531,30 +552,45 @@ class ApiControllerTest < ActionController::TestCase
 
   test 'api routing' do
     # /dashboardapi urls
-    assert_routing({method: "get", path: "/dashboardapi/user_menu"},
-                   {controller: "api", action: "user_menu"})
+    assert_routing(
+      {method: "get", path: "/dashboardapi/user_menu"},
+      {controller: "api", action: "user_menu"}
+    )
 
-    assert_routing({method: "get", path: "/dashboardapi/section_progress/2"},
-                   {controller: "api", action: "section_progress", section_id: '2'})
+    assert_routing(
+      {method: "get", path: "/dashboardapi/section_progress/2"},
+      {controller: "api", action: "section_progress", section_id: '2'}
+    )
 
-    assert_routing({method: "get", path: "/dashboardapi/student_progress/2/15"},
-                   {controller: "api", action: "student_progress", section_id: '2', student_id: '15'})
+    assert_routing(
+      {method: "get", path: "/dashboardapi/student_progress/2/15"},
+      {controller: "api", action: "student_progress", section_id: '2', student_id: '15'}
+    )
 
-    assert_routing({method: "get", path: "/dashboardapi/whatevvv"},
-                   {controller: "api", action: "whatevvv"})
+    assert_routing(
+      {method: "get", path: "/dashboardapi/whatevvv"},
+      {controller: "api", action: "whatevvv"}
+    )
 
     # /api urls
-    assert_recognizes({controller: "api", action: "user_menu"},
-                      {method: "get", path: "/api/user_menu"})
+    assert_recognizes(
+      {controller: "api", action: "user_menu"},
+      {method: "get", path: "/api/user_menu"}
+    )
 
-    assert_recognizes({controller: "api", action: "section_progress", section_id: '2'},
-                      {method: "get", path: "/api/section_progress/2"})
+    assert_recognizes(
+      {controller: "api", action: "section_progress", section_id: '2'},
+      {method: "get", path: "/api/section_progress/2"}
+    )
 
-    assert_recognizes({controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
-                      {method: "get", path: "/api/student_progress/2/15"})
+    assert_recognizes(
+      {controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
+      {method: "get", path: "/api/student_progress/2/15"}
+    )
 
-    assert_recognizes({controller: "api", action: "whatevvv"},
-                      {method: "get", path: "/api/whatevvv"})
-
+    assert_recognizes(
+      {controller: "api", action: "whatevvv"},
+      {method: "get", path: "/api/whatevvv"}
+    )
   end
 end

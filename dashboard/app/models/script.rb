@@ -42,8 +42,8 @@ class Script < ActiveRecord::Base
   after_save :generate_plc_objects
 
   def generate_plc_objects
-    if professional_learning_course
-      course = Plc::Course.find_or_create_by! name: 'Default'
+    if professional_learning_course?
+      course = Plc::Course.find_or_create_by! name: professional_learning_course
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
       unit.update!(
         plc_course_id: course.id,
@@ -194,7 +194,7 @@ class Script < ActiveRecord::Base
       script_level_cache.values.each do |script_level|
         level = script_level.level
         next unless level
-        cache[level.id] = level unless cache.has_key? level.id
+        cache[level.id] = level unless cache.key? level.id
       end
     end
   end
@@ -314,7 +314,7 @@ class Script < ActiveRecord::Base
 
   def banner_image
     if has_banner?
-      "banner_#{name}.png"
+      "banner_#{name}.jpg"
     end
   end
 
@@ -330,12 +330,16 @@ class Script < ActiveRecord::Base
     k5_course? || twenty_hour?
   end
 
+  def cs_in_a?
+    name.match(Regexp.union('algebra', 'Algebra'))
+  end
+
   def show_report_bug_link?
     beta? || k5_course?
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 cspoptional text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
   end
 
   def has_banner?
@@ -343,14 +347,17 @@ class Script < ActiveRecord::Base
   end
 
   def freeplay_links
-    if name.include?('algebra')
+    if cs_in_a?
       ['calc', 'eval']
     elsif name.start_with?('csp')
       ['applab']
     else
       ['playlab', 'artist']
     end
+  end
 
+  def professional_course?
+    pd? || professional_learning_course?
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
@@ -365,6 +372,7 @@ class Script < ActiveRecord::Base
       custom_files.map do |script|
         name = File.basename(script, '.script')
         script_data, i18n = ScriptDSL.parse_file(script)
+
         stages = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
@@ -405,6 +413,7 @@ class Script < ActiveRecord::Base
       raw_script_level.symbolize_keys!
 
       assessment = nil
+      named_level = nil
       stage_flex_category = nil
 
       levels = raw_script_level[:levels].map do |raw_level|
@@ -417,6 +426,7 @@ class Script < ActiveRecord::Base
 
         raw_level_data = raw_level.dup
         assessment = raw_level.delete(:assessment)
+        named_level = raw_level.delete(:named_level)
         stage_flex_category = raw_level.delete(:stage_flex_category)
 
         key = raw_level.delete(:name)
@@ -443,19 +453,10 @@ class Script < ActiveRecord::Base
           raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
         end
 
-        if Game.gamelab == level.game
-          unless script.student_of_admin_required || script.admin_required
-            raise <<-ERROR.gsub(/^\s+/, '')
-              Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required
-              (while adding level "#{level.name}" to script "#{script.name}")
-            ERROR
-          end
-        end
-
-        if Game.applab == level.game
+        if [Game.applab, Game.gamelab].include? level.game
           unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
             raise <<-ERROR.gsub(/^\s+/, '')
-              Applab levels can only be added to scripts that are hidden or require login
+              Applab and Gamelab levels can only be added to scripts that are hidden or require login
               (while adding level "#{level.name}" to script "#{script.name}")
             ERROR
           end
@@ -469,6 +470,7 @@ class Script < ActiveRecord::Base
       script_level_attributes = {
         script_id: script.id,
         chapter: (chapter += 1),
+        named_level: named_level,
         assessment: assessment
       }
       script_level_attributes[:properties] = properties.to_json if properties
@@ -531,7 +533,7 @@ class Script < ActiveRecord::Base
   # script is found/created by 'id' (if provided) otherwise by 'name'
   def self.fetch_script(options)
     options.symbolize_keys!
-    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.has_key? v
+    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.key? v
     name = {name: options.delete(:name)}
     script_key = ((id = options.delete(:id)) && {id: id}) || name
     script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)
@@ -609,6 +611,7 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
+      plc: professional_learning_course,
       stages: stages.map(&:summarize),
     }
 

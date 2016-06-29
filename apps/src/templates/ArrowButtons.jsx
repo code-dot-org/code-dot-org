@@ -1,3 +1,4 @@
+import React from 'react';
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 
 /**

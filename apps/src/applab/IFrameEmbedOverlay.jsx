@@ -1,4 +1,5 @@
 import * as color from '../color';
+import React from 'react';
 var Radium = require('radium');
 var studioApp = require('../StudioApp').singleton;
 var applabConstants = require('./constants');

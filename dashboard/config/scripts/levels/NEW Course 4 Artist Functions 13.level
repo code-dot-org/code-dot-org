@@ -17,7 +17,7 @@
     "free_play": "false",
     "impressive": "true",
     "slider_speed": ".8",
-    "ideal": "21",
+    "ideal": "22",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "embed": "false",
@@ -33,7 +33,9 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "permitted_errors": "0",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Edit the `draw a line of squares` function so that you don't have to call it twice.\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_13_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice, you'll have to move forward by 60 pixels and turn 144 degrees.\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_13_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"What code would you need if you were going to try to make a star with regular lines?\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_13_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Edit the `draw a line of squares` function so that you don't have to call it twice.\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_13_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice, you'll have to move forward by 60 pixels and turn 144 degrees.\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_13_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"What code would you need if you were going to try to make a star with regular lines?\",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Functions_13_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null,
+    "discard_background": "false"
   },
   "published": true,
   "notes": "",

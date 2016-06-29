@@ -1,17 +1,50 @@
 #!/usr/bin/env ruby
 
+require 'cgi'
+
+# Utility to strip consistent leading whitespace from heredoc strings, allowing
+# you to format your code more readably.
+#
+# Usage:
+#   <<-DOC.unindent
+#     Some text or other that I want to start in column 1.
+#         An actually indented line.
+#     This line still unindented.
+#   DOC
+#
+# from http://stackoverflow.com/a/5638187/5000129
+class String
+  # Strip leading whitespace from each line that is the same as the
+  # amount of whitespace on the least-indented line of the string.
+  def unindent
+    gsub /^#{scan(/^[ \t]+/).min_by(&:length)}/, ''
+  end
+end
+
+def ask_for_name
+  name = ''
+  until name != ''
+    print "Who are you? "
+    name = gets.chomp
+  end
+  puts "Hi #{name}!"
+  name
+end
+
 def should_i(question)
   loop do
-    print "Should I #{question}? [#{underline('Y')}es]/#{underline('S')}kip/#{underline('Q')}uit: "
+    print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
     response = gets.strip.downcase
-    if "yes".start_with? response # also catches blank/return ;)
+    if 'yes'.start_with?(response) # also catches blank/return ;)
       yield
       return
-    elsif "skip".start_with? response
+    elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
       return
-    elsif "quit".start_with? response
+    elsif 'quit'.start_with?(response)
       puts "Something weird going on? Take a look at: http://wiki.code.org/display/PROD/Daily+Deployment"
       exit(-1)
+    else
+      puts "Sorry, I didn't understand that.\n\n"
     end
   end
 end
@@ -20,17 +53,24 @@ def stylize(text, color_code)
   "\e[#{color_code}m#{text}\e[0m"
 end
 
+def bold(text); stylize(text, 1); end
+def dim(text); stylize(text, 2); end
 def underline(text); stylize(text, 4); end
 
-def wait_for(thing)
-  print "Wait for #{thing} then hit enter to continue..."
+def press_enter_to_continue
+  puts dim 'Press enter to continue...'
   gets
+end
+
+def wait_for(thing)
+  puts "\nWait for #{thing}"
+  press_enter_to_continue
 end
 
 def open_url(url)
   open_in_default_browser(url)
-  puts "Browser didn't open? go to:"
-  puts url
+  puts dim "Browser didn't open? go to:"
+  puts dim url
 end
 
 def open_in_default_browser(url)
@@ -42,76 +82,125 @@ def open_in_default_browser(url)
   end
 end
 
+def content_push(server_name, environment_name, user_name)
+  puts <<-EOS.unindent
+    Follow the prompts given by the content-push script.
+      If you need to do something fancier (or if the changed files do not
+      "look ok" when it asks you), log in to staging and hand-craft the commit.
+  EOS
+  success = system "ssh -t gateway.code.org ssh -t #{server_name} \"#{environment_name}/bin/content-push --name=\\\"#{user_name}\\\"\""
+
+  # Notice if the content push fails, and be helpful about fixing the problem.
+  unless success
+    puts "#{bold 'Uh-oh!'}  It looks like the #{server_name} content push failed!"
+    should_i "ssh to #{server_name} so you can fix the problem manually" do
+      puts <<-EOS.unindent
+
+      #{bold "Connecting to #{server_name}."} Type 'logout' when you're done.
+
+      #{dim "d[ o_0 ]b"}
+
+      EOS
+      system "ssh -t gateway.code.org ssh #{server_name}"
+      puts <<-EOS.unindent
+
+      #{dim "d[ o_0 ]b"}
+
+      #{bold "Welcome back!"}
+
+      EOS
+      press_enter_to_continue
+    end
+  end
+end
+
+def open_pull_request(base, compare, title)
+  open_url "https://github.com/code-dot-org/code-dot-org/compare/#{base}...#{compare}?expand=1&title=#{CGI.escape title}"
+end
+
+puts <<-EOS.unindent
+
+  #{bold 'Welcome to Robo-Dev-of-the-Day!'}
+
+    d[ o_0 ]b
+
+  #{bold 'Documentation'}
+
+    Dev-of-the-Day Checklist
+    #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
+
+    Known Issues
+    #{dim 'http://wiki.code.org/display/PROD/Known+Issues'}
+
+EOS
+
+user_name = ask_for_name
+
 wait_for "between 10AM and 11:30AM (Pacific) to morning DTT"
 
 should_i "morning DTT" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging?expand=1&title=DTT%20%28Staging%20%3E%20Test%29'
+  open_pull_request 'test', 'staging', 'DTT (Staging > Test)'
+  wait_for "morning DTT to complete, re-run/investigate failures, and update test room topic to that commit # green"
 end
 
-wait_for "morning DTT to complete, re-run/investigate failures, and update test room topic to that commit # green"
-
 should_i "commit content changes from staging" do
-  puts <<EOS
-Follow the prompts given by the content-push script. If you need to do something fancier (or if the changed files do not "look ok" when it asks you), log in to staging and hand-craft the commit.
-EOS
-  system "ssh -t gateway.code.org ssh -t staging staging/bin/content-push"
+  content_push 'staging', 'staging', user_name
 end
 
 should_i "commit content changes from levelbuilder" do
-  puts <<EOS
-Follow the prompts given by the content-push script. If you need to do something fancier (or if the changed files do not "look ok" when it asks you), log in to staging and hand-craft the commit.
-EOS
-  system "ssh -t gateway.code.org ssh -t levelbuilder-staging levelbuilder/bin/content-push"
-end
+  content_push 'levelbuilder-staging', 'levelbuilder', user_name
 
-should_i "merge from levelbuilder to staging" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder?expand=1&title=Levelbuilder%20%3E%20Staging'
-end
-
-wait_for "staging to finish building. if a staging build was already running, wait for a second build which will include the levelbuilder content"
-
-should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
-  puts <<EOS
-Follow the prompts given by the content-push script. If you need to do something fancier (or if the changed files do not "look ok" when it asks you), log in to staging and hand-craft the commit.
-EOS
-  system "ssh -t gateway.code.org ssh -t staging staging/bin/content-push"
+  should_i "merge from levelbuilder to staging" do
+    open_pull_request 'staging', 'levelbuilder', 'Levelbuilder > Staging'
+    wait_for "staging to finish building. if a staging build was already running, wait for a second build which will include the levelbuilder content"
+    should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
+      content_push 'staging', 'staging', user_name
+    end
+  end
 end
 
 should_i "DTT" do
-  puts <<EOS
-Update Developer room status with "DTT: NO (@yourname DTP candidate)"
-EOS
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging?expand=1&title=DTT%20%28Staging%20%3E%20Test%29'
+  puts <<-EOS.unindent
+    Update Developer room status with "DTT: NO (@yourname DTP candidate)"
+  EOS
+  open_pull_request 'test', 'staging', 'DTT (Staging > Test)'
+  wait_for "a green test run"
+  puts <<-EOS.unindent
+    Restore Developer room status to "DTT: yes"
+  EOS
 end
-
-wait_for "a green test run"
-
-puts <<EOS
-Restore Developer room status to "DTT: yes"
-EOS
 
 wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
-
 should_i "DTP" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/production...test?expand=1&title=DTP%20%28Test%20%3E%20Production%29'
+  open_pull_request 'production', 'test', 'DTP (Test > Production)'
+
+  should_i "deploy Levelbuilder while the deploy to production is happening" do
+    puts <<-EOS.unindent
+      Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
+    EOS
+    open_pull_request 'levelbuilder', 'test', 'Test > Levelbuilder'
+  end
+
+  wait_for "DTP to finish"
+
+  puts <<-EOS.unindent
+
+    * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
+    * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
+    * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
+    * Ensure that no frontends were skipped in the Production room on Slack.
+    * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
+  EOS
 end
 
-should_i "deploy Levelbuilder while the deploy to production is happening" do
-  puts <<EOS
-Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
+puts <<-EOS.unindent
+  * Send your DOTD Report to dev@code.org
 EOS
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...test?expand=1&title=Test%20%3E%20Levelbuilder'
-end
+press_enter_to_continue
 
-wait_for "DTP to finish"
+puts <<-EOS.unindent
 
-wait_for <<EOS
+#{bold "You're done!"}
 
-* Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
-* Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
-* Ensure that no frontends were skipped in the Production room on Slack.
-* Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
-* Watch HoneyBadger and New Relic for new errors popping up after the deploy.
+    d[ o_0 ]b
 EOS
-
-puts "You're done!"

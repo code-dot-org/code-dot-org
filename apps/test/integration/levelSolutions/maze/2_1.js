@@ -18,7 +18,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       missingBlocks: [],
-      xml: '<xml><block type="maze_moveForward"><next><block type="maze_moveForward"><next><block type="maze_moveForward" /></next></block></next></block></xml>'
+      xml: '<xml><block type="when_run"><next><block type="maze_moveForward"><next><block type="maze_moveForward"><next><block type="maze_moveForward" /></next></block></next></block></next></block></xml>'
     },
     {
       description: "Single move forward block",
@@ -27,7 +27,7 @@ module.exports = {
         testResult: TestResults.TOO_FEW_BLOCKS_FAIL
       },
       missingBlocks: [],
-      xml: '<xml><block type="maze_moveForward"></block></xml>'
+      xml: '<xml><block type="when_run"><next><block type="maze_moveForward"></block></next></block></xml>'
     },
     {
       description: "Single turn right block",
@@ -36,7 +36,7 @@ module.exports = {
         testResult: TestResults.MISSING_BLOCK_UNFINISHED
       },
       missingBlocks: [reqBlocks().MOVE_FORWARD],
-      xml: '<xml><block type="maze_turn"><title name="DIR">turnLeft</title></block></xml>'
+      xml: '<xml><block type="when_run"><next><block type="maze_turn"><title name="DIR">turnLeft</title></block></next></block></xml>'
     }
   ]
 };

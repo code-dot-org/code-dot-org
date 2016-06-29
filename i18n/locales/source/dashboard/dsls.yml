@@ -77,6 +77,54 @@ en:
         : A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.
         Contract for rocket-height: Contract for rocket-height
         rocket-height|Number|Number: rocket-height|Number|Number
+    evaluation_multi:
+      CSP PD Example Question 1:
+        The encoding numbers unit: The encoding numbers unit
+        The sending binary messages unit: The sending binary messages unit
+        Which unit will you teach first: Which unit will you teach first
+      CSP PD Example Question 2:
+        How will you teach students?: How will you teach students?
+        I will make them learn from peers: I will make them learn from peers
+        I will make them write: I will make them write
+      CSP PD Q2:
+        How will you teach students?: How will you teach students?
+        I will make them learn from peers: I will make them learn from peers
+        I will make them write: I will make them write
+      TeacherCon Eval Q1:
+        '1.10: Routing and Redundancy': '1.10: Routing and Redundancy'
+        '1.11: Packets and Making a Reliable Internet': '1.11: Packets and Making a Reliable Internet'
+        '1.4: Number Systems - Circle Triangle Square': '1.4: Number Systems - Circle Triangle Square'
+        '1.6: Sending Numbers': '1.6: Sending Numbers'
+        '1.9: Internet Addressing (Battleship)': '1.9: Internet Addressing (Battleship)'
+        '2.10: Good and Bad Data Visualization': '2.10: Good and Bad Data Visualization'
+        '2.2: Text Compression': '2.2: Text Compression'
+        '2.3: Black and White Pixelation': '2.3: Black and White Pixelation'
+        What lesson are you planning and teaching at TeacherCon?: What lesson are you planning and teaching at TeacherCon?
+      TeacherCon Eval Q2:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      TeacherCon Eval Q3:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      TeacherCon Eval Q5:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      TeacherCon Eval Q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      TeacherCon Eval Q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      TeacherCon Evaluation Q4:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
@@ -94,9 +142,26 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      CSD - Headers and Lists - Hobbies Project: {}
+      CSD - Headers and Lists - Recipe Project: {}
+      CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
+      CSD U3 - complex conditionals - SFLP: {}
+      CSD U3 - images - pick your final work: {}
+      CSD U3 -conditionals - stop booleans: {}
+      CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
+      CSD U3 Draw Loop Stop: {}
+      CSD U3 Expressions STOP writing 10: {}
       CSD U3 Keypress Stop: {}
+      CSD U3 SFLP Card Project: {}
+      CSD U3 SFLP Conditionals:
+        description here: description here
+        title: title
+      CSD U3 SFLP Sprites and Images:
+        description here: description here
+        title: title
+      CSD U3 Sprites STOP sprites and variables: {}
       CSD U3 Variables Reassign Predict No Response: {}
       CSD U3 Variables STOP misconceptions: {}
       CSD U3 Variables STOP misconceptions prediction: {}
@@ -289,6 +354,9 @@ en:
       CSPPD3-u5 what is a challenge: {}
       CSPPD3-u5 what is data: {}
       CSPStudentLessonPlanTemplate:
+        description here: description here
+        title: title
+      CSP_Final_instructions:
         description here: description here
         title: title
       CSP_U4_rawMovieData:
@@ -663,6 +731,7 @@ en:
       Equity Stage3Go: {}
       Equity Strategies: {}
       Equity Welcome: {}
+      Exploring Practices and Strategies during TeacherCon: {}
       External level test (will):
         first computer program: first computer program
       Forum-ECSPD-Unit 2-Teaching Practice: {}
@@ -689,6 +758,7 @@ en:
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
+      Lesson 1.4 Overview: {}
       Lesson Prep Final: {}
       OPD-K5 About: {}
       OPD-K5 Assessment: {}
@@ -742,6 +812,10 @@ en:
       OPD-K5 Your Plan: {}
       OPD-Stage3Start: {}
       OnlinePDK5 Intro: {}
+      'Overview: Balancing Teachers and Tools': {}
+      'Overview: Capturing Student Learning': {}
+      'Overview: Discovery Learning': {}
+      'Overview: Group Work and Peer Learning': {}
       PD check your progress: {}
       PDAlg 1-3 Circles: {}
       PDAlg 1-3 Circles Practice: {}
@@ -947,6 +1021,7 @@ en:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
         TLO in Practice: TLO in Practice
+      TeacherCon Agenda: {}
       Test External Markdown:
         Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
@@ -955,9 +1030,13 @@ en:
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
+      U1L10 Lesson Overview: {}
+      U1L10 Lesson Plan: {}
       U1L10 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L11 Lesson Overview: {}
+      U1L11 Lesson Plan: {}
       U1L11 Student Lesson Introduction:
         description here: description here
         title: title
@@ -985,6 +1064,8 @@ en:
       U1L3 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L4 Lesson Overview: {}
+      U1L4 Lesson Plan: {}
       U1L4 Student Lesson Introduction:
         description here: description here
         title: title
@@ -994,6 +1075,8 @@ en:
       U1L5 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L6 Lesson Overview: {}
+      U1L6 Lesson Plan: {}
       U1L6 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1003,12 +1086,16 @@ en:
       U1L8 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L9 Lesson Overview: {}
+      U1L9 Lesson Plan: {}
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
+      U2L10 Lesson Overview: {}
+      U2L10 Lesson Plan: {}
       U2L10 Student Lesson Introduction:
         'DNS in the Real World ': 'DNS in the Real World '
       U2L11 Student Lesson Introduction:
@@ -1031,10 +1118,14 @@ en:
         One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
       U2L19 Student Lesson Introduction:
         Public Key Encryption: Public Key Encryption
+      U2L2 Lesson Overview: {}
+      U2L2 Lesson Plan: {}
       U2L2 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
       U2L20 Student Lesson Introduction:
         Security and Hacking in the Real World: Security and Hacking in the Real World
+      U2L3 Lesson Overview: {}
+      U2L3 Lesson Plan: {}
       U2L3 Student Lesson Introduction:
         Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
       U2L4 Student Lesson Introduction:
@@ -1385,6 +1476,10 @@ en:
         description here: description here
         title: title
       Unit 3 Survey 2: {}
+      Welcome to TeacherCon!: {}
+      aEstory1:
+        Artist Exemplar First Story: Artist Exemplar First Story
+        Why are they doing this stage?: Why are they doing this stage?
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -1447,6 +1542,9 @@ en:
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
+      newCSFsample:
+        Intro: Intro
+        description here: description here
       plc csp1 chapter overviews: {}
       plc csp1 intro to tools: {}
       plc csp1 introduction to unit: {}
@@ -1549,6 +1647,22 @@ en:
       sciPD2 SLN explore:
         Exploring StarLogo Nova Advanced Features: Exploring StarLogo Nova Advanced Features
       sciPD2 StarLogoNova:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed2a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed2b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed3a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed3b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed4a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed4b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed4c:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed4d:
         Reviewing StarLogo Nova: Reviewing StarLogo Nova
       sciPD2 camera:
         Changing Camera View: Changing Camera View
@@ -1671,6 +1785,20 @@ en:
         Thanks for your time: Thanks for your time
       sciencePD2b remixing:
         Remixing in StarLogo Nova: Remixing in StarLogo Nova
+      storyline1:
+        The Adventurer Meets the Wizard: The Adventurer Meets the Wizard
+        The Wizards Potions: The Wizards Potions
+      storyline2:
+        Second Page: Second Page
+      storyline3:
+        page 3: page 3
+      storyline4:
+        bee leaves: bee leaves
+      storyline5:
+        wrapup: wrapup
+      test cb level:
+        description here: description here
+        test cb level: test cb level
       test demo level:
         demo description: demo description
         demo title: demo title
@@ -1768,12 +1896,37 @@ en:
       v2 U2L9 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U3L01 Student Lesson Introduction:
+        Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      v2 U3L02 Student Lesson Introduction:
+        The Need for Algorithms: The Need for Algorithms
+      v2 U3L03 Student Lesson Introduction:
+        Creativity in Algorithms: Creativity in Algorithms
+      v2 U3L04 Student Lesson Introduction:
+        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Creating Functions
+      v2 U3L07 Student Lesson Introduction:
+        APIs and Function Parameters: APIs and Function Parameters
+      v2 U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Creating Functions with Parameters
+      v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: Looping and Random Numbers
+      v2 U3L10 Student Lesson Introduction:
+        Design a Digital Scene: Design a Digital Scene
+      v2 U3L6 Student Lesson Introduction:
+        Functions and Top-Down Design: Functions and Top-Down Design
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
       name:
         CSP Culminating Assessment: {}
         PS U3 Assessment1 new: {}
+        Part 1 - CSP Culminating Assessment: {}
+        Part 2 - CSP Culminating Assessment: {}
+        Sample CSP Assessment: {}
+        TeacherCon Self-Assessment: {}
+        TeacherCon Unit 1 Assessment: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
     match:
@@ -1932,6 +2085,19 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U3 - conditionals - Matching:
+        Is the width of dog sprite greater than the width of cat sprite?: Is the width of dog sprite greater than the width of cat sprite?
+        Is the width of dog sprite less than the width of cat sprite?: Is the width of dog sprite less than the width of cat sprite?
+        Is the x of the dog sprite equal to the x of the cat sprite?: Is the x of the dog sprite equal to the x of the cat sprite?
+        Is the x of the dog sprite greater than the x of the cat sprite?: Is the x of the dog sprite greater than the x of the cat sprite?
+        Is the x of the dog sprite less than the x of the cat sprite?: Is the x of the dog sprite less than the x of the cat sprite?
+        Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
+        'Matching: Comparison Operators': 'Matching: Comparison Operators'
+        dog.width &gt; cat.width: dog.width &gt; cat.width
+        dog.width &lt; cat.width: dog.width &lt; cat.width
+        dog.x &gt; cat.x: dog.x &gt; cat.x
+        dog.x &lt; cat.x: dog.x &lt; cat.x
+        dog.x == cat.x: dog.x == cat.x
       CSD U3 Counters match trial:
         ? "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
@@ -2329,6 +2495,17 @@ en:
         Answer 1: Answer 1
         Question: Question
         What is an unplugged activity?: What is an unplugged activity?
+      Poorva match PL:
+        'Given the following program, match the user input with the expected output:': 'Given the following program, match the user input with the expected output:'
+        Make a prediction and hit run: Make a prediction and hit run
+        Press the j and k keys: Press the j and k keys
+        Press the j key: Press the j key
+        Press the space bar: Press the space bar
+        Press the w key: Press the w key
+        blue_sprite rotates clockwise: blue_sprite rotates clockwise
+        red_sprite gets bigger and blue_sprite gets smaller: red_sprite gets bigger and blue_sprite gets smaller
+        red_sprite moves up and blue_sprite moves down: red_sprite moves up and blue_sprite moves down
+        red_sprite rotates counter clockwise: red_sprite rotates counter clockwise
       U1L16 - Matching File Compression Types:
         BMP: BMP
         Compressed Files - Lossless: Compressed Files - Lossless
@@ -2421,9 +2598,9 @@ en:
         A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
         A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
         A well-known set of rules and standards used to communicate: A well-known set of rules and standards used to communicate
+        IP addresses, Packets and Protocols: IP addresses, Packets and Protocols
         IPv4 packet: IPv4 packet
-        Internet Protocol: Internet Protocol
-        'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
+        The Internet Protocol (IP): The Internet Protocol (IP)
         The required structure of a packet to be sent on the internet: The required structure of a packet to be sent on the internet
         packet: packet
         protocol: protocol
@@ -2938,8 +3115,8 @@ en:
         Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
         There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
       CB_Question_19:
-        "(OnFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(OnFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
         "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)"
+        "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
         "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
         "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
       CB_Question_2:
@@ -2957,9 +3134,9 @@ en:
         example.com.org: example.com.org
         example.org: example.org
       CB_Question_21:
-        An algorithm that, given of list of integers, displays only the negative integers in the list: An algorithm that, given of list of integers, displays only the negative integers in the list
-        An algorithm that, given of list of integers, displays the number of even integers in the list: An algorithm that, given of list of integers, displays the number of even integers in the list
-        An algorithm that, given of list of integers, displays the sum of the integers in the list: An algorithm that, given of list of integers, displays the sum of the integers in the list
+        An algorithm that, given a list of integers, displays only the negative integers in the list: An algorithm that, given a list of integers, displays only the negative integers in the list
+        An algorithm that, given a list of integers, displays the number of even integers in the list: An algorithm that, given a list of integers, displays the number of even integers in the list
+        An algorithm that, given a list of integers, displays the sum of the integers in the list: An algorithm that, given a list of integers, displays the sum of the integers in the list
         An algorithm that, given two integers, displays the greater of the two integers: An algorithm that, given two integers, displays the greater of the two integers
       CB_Question_22:
         <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=350>: <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=350>
@@ -3001,6 +3178,12 @@ en:
         Deleting entries from data: Deleting entries from data
         Searching through data: Searching through data
         Sorting data: Sorting data
+      CSD U3 - sprites - rect vs sprite diff:
+        The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
+        The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
+        The x and y value are the center of a sprite and in the upper right corner of a rectangle: The x and y value are the center of a sprite and in the upper right corner of a rectangle
+        There is no difference. They have the same x and y values: There is no difference. They have the same x and y values
+        What is the difference for the x and y values of sprites and rectangles?: What is the difference for the x and y values of sprites and rectangles?
       CSD U3 Variables Reassign Predict Multi:
         A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
         A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable
@@ -3013,8 +3196,8 @@ en:
       CSPFinal_Question_1:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
+        Keep using and 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Keep using and 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.
         Remove a bit from <code>studentID</code> to make room for incoming students: Remove a bit from <code>studentID</code> to make room for incoming students
-        Use the same number of bits in <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Use the same number of bits in <code>studentID</code> but reserve the first bit to indicate middle school or high school.
       CSPFinal_Question_10:
         I and II only: I and II only
         I and III only: I and III only
@@ -3046,9 +3229,9 @@ en:
         A non-computationally hard problem to which an approximate result will suffice.: A non-computationally hard problem to which an approximate result will suffice.
         A non-computationally hard problem to which an exact result is necessary.: A non-computationally hard problem to which an exact result is necessary.
       CSPFinal_Question_16:
-        It displays the difference between a and b (a - b): It displays the difference between a and b (a - b)
-        It displays the product of a and b (a * b): It displays the product of a and b (a * b)
-        It displays the sum of a and b (a + b): It displays the sum of a and b (a + b)
+        It displays the difference between a and b: It displays the difference between a and b
+        It displays the product of a and b: It displays the product of a and b
+        'It displays the sum of a and b ': 'It displays the sum of a and b '
         It runs in an infinite loop: It runs in an infinite loop
       CSPFinal_Question_17:
         ? Public key encryption is a highly secure encryption scheme that in which a single shared key is used by both the sender and receiver of the message.
@@ -3064,8 +3247,6 @@ en:
         ? The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
         : The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
       CSPFinal_Question_19:
-        ? 'A certain cartoon image is known to have only 4 colors in it.  Currently the image is stored in full 24-bit RGB color and the total size of the file is quite large. The designer proposes reducing the number of bits the image by: Making a small table of the 4 colors and numbering them 0, 1, 2 and 3, which requires only 2 bits; then representing the image as a list of these smaller, 2-bit numbers.'
-        : 'A certain cartoon image is known to have only 4 colors in it.  Currently the image is stored in full 24-bit RGB color and the total size of the file is quite large. The designer proposes reducing the number of bits the image by: Making a small table of the 4 colors and numbering them 0, 1, 2 and 3, which requires only 2 bits; then representing the image as a list of these smaller, 2-bit numbers.'
         Asymmetric encryption: Asymmetric encryption
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
@@ -3076,8 +3257,6 @@ en:
         Low bandwidth, high latency: Low bandwidth, high latency
         Low bandwidth, low latency: Low bandwidth, low latency
       CSPFinal_Question_20:
-        ? A bakery collects data on sales. Each sales record includes the date of the sale, the type of items sold, the number of each item sold, and the price of each item sold. Which of the following CANNOT be determined from the bakery's data set?
-        : A bakery collects data on sales. Each sales record includes the date of the sale, the type of items sold, the number of each item sold, and the price of each item sold. Which of the following CANNOT be determined from the bakery's data set?
         The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
         The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
         Times of day when certain items sell the most.: Times of day when certain items sell the most.
@@ -3098,7 +3277,6 @@ en:
         : Which of the following methods is not a common technique to translate or transform large data sets to gain insight and knowledge?
       CSPFinal_Question_23:
         Which classes are assigning the most homework using the computers: Which classes are assigning the most homework using the computers
-        Which of the following is MOST likely to be answerable using only the collected data set?: Which of the following is MOST likely to be answerable using only the collected data set?
         Which programs students are running on the lab computers: Which programs students are running on the lab computers
         Which students are visiting social media sites from school: Which students are visiting social media sites from school
         Which websites are most frequently visited before and after school hours from a school computer: Which websites are most frequently visited before and after school hours from a school computer
@@ -3107,8 +3285,6 @@ en:
         Giving traffic from specific companies or users higher priority in the network: Giving traffic from specific companies or users higher priority in the network
         Restricting Facebook at school: Restricting Facebook at school
         Routing large packets through different servers: Routing large packets through different servers
-        ? The internet is comprised of a series of free and open protocols intended to promote wide scale use.  Which of the following is NOT an example of an open internet?
-        : The internet is comprised of a series of free and open protocols intended to promote wide scale use.  Which of the following is NOT an example of an open internet?
       CSPFinal_Question_25:
         ? A newspaper is writing an article on high school principals. Which of the following is the most appropriate online source for the author to gather factual evidence?
         : A newspaper is writing an article on high school principals. Which of the following is the most appropriate online source for the author to gather factual evidence?
@@ -3121,28 +3297,26 @@ en:
         Anonymous access to digital content.: Anonymous access to digital content.
         Authenticating credit card numbers across the web.: Authenticating credit card numbers across the web.
         Commercial and governmental censorship.: Commercial and governmental censorship.
-        ? Computing has global effects that are both beneficial and harmful on people and society.  Which of the following is LEAST likely to raise legal and ethical concerns?
-        : Computing has global effects that are both beneficial and harmful on people and society.  Which of the following is LEAST likely to raise legal and ethical concerns?
       CSPFinal_Question_27:
         0  2  3: 0  2  3
         0  2  4: 0  2  4
         2  2  4: 2  2  4
         2  4  6: 2  4  6
       CSPFinal_Question_28:
-        "<pre>n  &gt;  5</pre>": "<pre>n  &gt;  5</pre>"
-        "<pre>n  =  -1</pre>": "<pre>n  =  -1</pre>"
-        "<pre>n  =  0</pre>": "<pre>n  =  0</pre>"
-        "<pre>n &lt;  -1</pre>": "<pre>n &lt;  -1</pre>"
+        "<pre>n &gt; 5</pre>": "<pre>n &gt; 5</pre>"
+        "<pre>n &lt; -1</pre>": "<pre>n &lt; -1</pre>"
+        "<pre>n = -1</pre>": "<pre>n = -1</pre>"
+        "<pre>n = 0</pre>": "<pre>n = 0</pre>"
       CSPFinal_Question_29:
         The code will display the largest of the three values: The code will display the largest of the three values
         The code will display the middle of all three values: The code will display the middle of all three values
         The code will display the smallest of the three values: The code will display the smallest of the three values
         The code will not display anything due to an error: The code will not display anything due to an error
       CSPFinal_Question_3:
-        Computer <code>A</code>: Computer <code>A</code>
-        Computer <code>B</code>: Computer <code>B</code>
-        Computer <code>D</code>: Computer <code>D</code>
-        Computer <code>F</code>: Computer <code>F</code>
+        "<code>Computer A</code>": "<code>Computer A</code>"
+        "<code>Computer B</code>": "<code>Computer B</code>"
+        "<code>Computer D</code>": "<code>Computer D</code>"
+        "<code>Computer F</code>": "<code>Computer F</code>"
       CSPFinal_Question_30:
         "<pre>0 0</pre>": "<pre>0 0</pre>"
         "<pre>0 10</pre>": "<pre>0 10</pre>"
@@ -3158,7 +3332,6 @@ en:
         1 1: 1 1
         2 4: 2 4
         3 1: 3 1
-        3 3: 3 3
       CSPFinal_Question_33:
         It displays the first number in the list: It displays the first number in the list
         It displays the largest number in the list: It displays the largest number in the list
@@ -3831,6 +4004,18 @@ en:
         red: red
         teal: teal
         yellow: yellow
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+        Contained Multi: Contained Multi
+        Here is some information.: Here is some information.
+        No, that is 1 * 1.: No, that is 1 * 1.
+        No, that is 1 - 1.: No, that is 1 - 1.
+        No, that is not even close.: No, that is not even close.
+        What is 1 + 1?: What is 1 + 1?
+        Yes, you are a genius!: Yes, you are a genius!
       U1L07 Assessment 1:
         A: A
         B: B
@@ -3943,7 +4128,7 @@ en:
         'make informed choices to support or oppose decisions my government makes about access to the internet. ': 'make informed choices to support or oppose decisions my government makes about access to the internet. '
         speed up my downloads of movies I purchase.: speed up my downloads of movies I purchase.
       U2L02 Assessment 3:
-        'The Need For Addressing: Assessment 1': 'The Need For Addressing: Assessment 1'
+        The Need For Addressing: The Need For Addressing
         'To improve communication in playing battleship on the Internet Simulator your group invented a(n):': 'To improve communication in playing battleship on the Internet Simulator your group invented a(n):'
         algorithm: algorithm
         encoding: encoding
@@ -3952,8 +4137,8 @@ en:
       U2L02 Assessment 4:
         From: From
         Grid Coordinates: Grid Coordinates
-        'The Need For Addressing: Assessment 2': 'The Need For Addressing: Assessment 2'
-        Time: Time
+        The Need For Addressing: The Need For Addressing
+        Time of Day: Time of Day
         To: To
         Which of the following information is not necessary in your protocol to play battleship?: Which of the following information is not necessary in your protocol to play battleship?
       U2L04 Assessment1:
@@ -4163,11 +4348,11 @@ en:
         6 users: 6 users
         64 users: 64 users
         How many users would a fixed-length IP address system using 6 bits support?: How many users would a fixed-length IP address system using 6 bits support?
-        'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
+        IP Addresses and Bits: IP Addresses and Bits
       U2L3 Assessment 3:
         ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
         : 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
-        'Invent an Addressing Protocol: Question 2': 'Invent an Addressing Protocol: Question 2'
+        Invent an Addressing Protocol: Invent an Addressing Protocol
         abstraction: abstraction
         hierarchy: hierarchy
         packet: packet
@@ -5019,11 +5204,10 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
+        Answer 1: Answer 1
+        'Given the following program, match the user input with the expected output:': 'Given the following program, match the user input with the expected output:'
+        Make a prediction and hit run: Make a prediction and hit run
         Question: Question
-        description here: description here
-        right answer: right answer
-        title: title
-        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

@@ -1,7 +1,6 @@
 /** @file Tests for NetSimRouterLogModal */
 'use strict';
-/* globaldescribe, beforeEach, it */
-
+import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimRouterLogModal = require('@cdo/apps/netsim/NetSimRouterLogModal');

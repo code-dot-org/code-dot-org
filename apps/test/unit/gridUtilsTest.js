@@ -16,3 +16,30 @@ describe('snapToGridSize', function () {
     assert.equal(gridUtils.snapToGridSize(9), 10);
   });
 });
+
+describe('isMouseInBounds', function () {
+  it('determines if a coordinate is in bounds or not', function () {
+    assert.equal(gridUtils.isMouseInBounds(1, 1, 100, 100), true,
+      "(1, 1) is in bounds of a 100x100 container");
+    assert.equal(gridUtils.isMouseInBounds(0, 0, 100, 100), true,
+      "(0, 0) is in bounds of a 100x100 container");
+    assert.equal(gridUtils.isMouseInBounds(0, 100, 100, 100), true,
+      "(0, 100) is in bounds of a 100x100 container");
+    assert.equal(gridUtils.isMouseInBounds(100, 0, 100, 100), true,
+      "(100, 0) is in bounds of a 100x100 container");
+    assert.equal(gridUtils.isMouseInBounds(100, 100, 100, 100), true,
+      "(100, 100) is in bounds of a 100x100 container");
+    assert.equal(gridUtils.isMouseInBounds(-1, 1, 100, 100), false,
+      "(-1, 1) is not in bounds of a 100x100 container");
+    assert.equal(gridUtils.isMouseInBounds(1, -1, 100, 100), false,
+      "(1, -1) is not in bounds of a 100x100 container");
+    assert.equal(gridUtils.isMouseInBounds(-1, -1, 100, 100), false,
+      "(-1, -1) is not in bounds of a 100x100 container");
+    assert.equal(gridUtils.isMouseInBounds(1, 101, 100, 100), false,
+      "(1, 101) is not in bounds of a 100x100 container");
+    assert.equal(gridUtils.isMouseInBounds(101, 1, 100, 100), false,
+      "(101, 1) is not in bounds of a 100x100 container");
+    assert.equal(gridUtils.isMouseInBounds(101, 101, 100, 100), false,
+      "(101, 101) is not in bounds of a 100x100 container");
+  });
+});

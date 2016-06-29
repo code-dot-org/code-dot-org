@@ -1,0 +1,91 @@
+#!/usr/bin/env ruby
+
+# This script adds or updates documents in SOLR of kind 'user' using the
+# information in the dashboard users table. The pegasus properties table,
+# specifically the key 'solr-user-last-id', is used to track where indexing
+# should resume.
+#
+# To reindex the users table, eliminate the 'solr-user-last-id' key from the
+# properties table by running
+#   DELETE FROM properties WHERE `key` = 'solr-user-last-id';
+# via pegasus-sql-writer OR by running
+#   PEGASUS_DB[:properties].where(key: 'solr-user-last-id').delete
+# via pegasus-console.
+
+require File.expand_path('../../../deployment', __FILE__)
+require 'json'
+require 'cdo/only_one'
+require 'cdo/db'
+require 'cdo/solr'
+require 'cdo/geocoder'
+require 'cdo/hip_chat'
+
+raise "No SOLR server configured." unless CDO.solr_server
+SOLR = Solr::Server.new(host: CDO.solr_server)
+
+USERS = DASHBOARD_DB[:users]
+
+def get_start_id
+  row = PEGASUS_DB[:properties].where(key: 'solr-user-last-id').first
+  unless row
+    row = {key: 'solr-user-last-id', value: 0}
+    row[:id] = PEGASUS_DB[:properties].insert(row)
+  end
+  row[:value].to_i
+end
+
+def save_last_id(id)
+  PEGASUS_DB[:properties].where(key: 'solr-user-last-id').update(value: id.to_i)
+end
+
+def main
+  batch_size = 25000
+
+  last_id = start_id = get_start_id
+
+  documents = []
+
+  USERS.where('id > ?', start_id).limit(batch_size).each do |i|
+    user = {
+      id: "user-#{i[:id]}",
+      name_s: i[:name],
+      email_s: i[:email],
+      kind_s: 'user',
+      role_s: i[:user_type],
+    }
+
+    location = Geocoder.search(i[:current_sign_in_ip]).first
+    if location
+      user['create_ip_city_s'] = location.city
+      user['create_ip_state_s'] = location.state
+      user['create_ip_country_s'] = location.country
+      user['create_ip_postal_code_s'] = location.postal_code
+      user['create_ip_location_p'] = "#{location.latitude},#{location.longitude}" if location.latitude && location.longitude
+    end
+
+    documents << user
+
+    last_id = i[:id]
+  end
+
+  unless documents.empty?
+    begin
+      SOLR.update(documents)
+    rescue
+      documents.each do |document|
+        begin
+          SOLR.update([document])
+        rescue => e
+          HipChat.log "Unable to index form #{document[:id]}: #{e}"
+          raise
+        end
+      end
+    end
+
+#    HipChat.log "#{documents.count} users indexed into SOLR (ids: #{start_id} - #{last_id})"
+  end
+
+  save_last_id(last_id)
+end
+
+main if only_one_running?(__FILE__)

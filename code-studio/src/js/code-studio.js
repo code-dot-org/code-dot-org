@@ -7,6 +7,11 @@
  * so when moving things preserve the include order as much as possible.
  */
 'use strict';
+
+// Require this first at each bundle entry point for full ES6 support.
+require("babel-polyfill");
+
+import $ from 'jquery';
 var _ = require('lodash');
 
 // Shim window.console to be safe in IE
@@ -23,7 +28,7 @@ window.Radium = require('radium');
 //                   require them specifically where needed.
 require('./components/abuse_error');
 require('./components/report_abuse_form');
-require('./components/send_to_phone');
+require('./components/SendToPhone');
 require('./components/small_footer');
 require('./components/GridEditor');
 require('./components/IconLibrary');
@@ -44,7 +49,7 @@ window.dashboard.levelCompletions = require('./levelCompletions');
 window.dashboard.popupWindow = require('./popup-window');
 window.dashboard.progress = require('./progress');
 window.dashboard.reporting = require('./reporting');
-window.dashboard.utils ={
+window.dashboard.utils = {
   debounce: _.debounce,
   throttle: _.throttle
 };

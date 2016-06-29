@@ -57,8 +57,7 @@ class UsersHelperTest < ActionView::TestCase
        }
     }, summarize_user_progress_for_all_scripts(user))
 
-    assert_equal [0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], percent_complete(script, user)
+    assert_equal [0.0, 0.1] + Array.new(18, 0.0), percent_complete(script, user)
     assert_in_delta 0.0183, percent_complete_total(script, user)
 
     # Verify summarize_user_progress_for_all_scripts for multiple completed levels across multiple scripts.
@@ -124,9 +123,13 @@ class UsersHelperTest < ActionView::TestCase
       linesOfCode: 42,
       linesOfCodeText: 'Total lines of code: 42',
       levels: {
-        ul.level_id => {status: 'perfect', result: 100, submitted: false, pages_completed: [true, false]},
-        "#{ul.level_id}_0" => {result: 30, submitted: false},
-        "#{ul.level_id}_1" => {result: 10, submitted: false}
+        ul.level_id => {
+          status: 'perfect',
+          result: 100,
+          submitted: false,
+          pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]},
+        "#{ul.level_id}_0" => {result: ActivityConstants::FREE_PLAY_RESULT, submitted: false},
+        "#{ul.level_id}_1" => {result: nil, submitted: false}
       }
     }, summarize_user_progress(script, user))
   end

@@ -68,15 +68,15 @@ class HttpDocument
     @headers['Content-Type'].to_s.include?("charset=#{charset}")
   end
 
-  def haml?()
+  def haml?
     @headers['Content-Type'].to_s.include?('text/haml')
   end
 
-  def html?()
+  def html?
     @headers['Content-Type'].to_s.include?('text/html')
   end
 
-  def markdown?()
+  def markdown?
     @headers['Content-Type'].to_s.include?('text/markdown')
   end
 
@@ -93,7 +93,7 @@ class HttpDocument
 
   private
 
-  def apply_encoding!()
+  def apply_encoding!
     # Ruby can't always detect utf-8 encoded data so if the content type indicates that this is
     # utf-8, FORCE Ruby to consider it such.
     if charset?('utf-8')
@@ -206,7 +206,6 @@ class HttpDocument
 end
 
 module Pegasus
-
   class Base < Sinatra::Base
 
     configure do
@@ -249,13 +248,13 @@ module Pegasus
       post(url,&block)
     end
 
-    def apply_vary_header()
+    def apply_vary_header
       settings.vary.each_pair do |header,pages|
         headers['Vary'] = http_vary_add_type(headers['Vary'], header) if pages.include?(request.path_info)
       end
     end
 
-    def ensure_no_trailing_slash_in_uri()
+    def ensure_no_trailing_slash_in_uri
       uri = request.path_info.chomp('/')
       redirect uri unless uri.empty? || request.path_info == uri
     end
@@ -353,7 +352,6 @@ module Pegasus
     end
 
   end
-
 end
 
 require src_dir 'course'

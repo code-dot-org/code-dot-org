@@ -4,6 +4,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var NetSimTable = require('./NetSimTable');
 var PubSubService = require('./PubSubService');
 

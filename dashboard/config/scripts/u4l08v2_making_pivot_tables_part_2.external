@@ -3,6 +3,8 @@ title 'title'
 css 'unplugged'
 description 'description here'
 markdown <<MARKDOWN
+## Making Pivot Tables Part 2 - Manipulation and Visualization
+
 # Adding Columns
 
 Let's look at two more features of pivot tables that will allow you to do more complex investigations of your data.

@@ -72,7 +72,8 @@ class ApplicationController < ActionController::Base
 
   # missing templates are usually a result of the user agent
   # requesting a file in the wrong format, send a 404 instead of a 500
-  rescue_from ActionView::MissingTemplate do |_exception|
+  rescue_from ActionView::MissingTemplate do |exception|
+    Rails.logger.warn("Missing template: #{exception}")
     render_404
   end
 

@@ -29,9 +29,9 @@ class LevelsController < ApplicationController
     end
 
     view_options(
-        full_width: true,
-        small_footer: @game.uses_small_footer? || enable_scrolling?,
-        has_i18n: @game.has_i18n?
+      full_width: true,
+      small_footer: @game.uses_small_footer? || enable_scrolling?,
+      has_i18n: @game.has_i18n?
     )
   end
 
@@ -154,7 +154,7 @@ class LevelsController < ApplicationController
 
   def new
     authorize! :create, :level
-    if params.has_key? :type
+    if params.key? :type
       @type_class = params[:type].constantize
       if @type_class == Artist
         @game = Game.custom_artist
@@ -258,6 +258,7 @@ class LevelsController < ApplicationController
       {concept_ids: []},
       {level_concept_difficulty_attributes: [:id] + LevelConceptDifficulty::CONCEPTS},
       {soft_buttons: []},
+      {contained_level_names: []},
       {examples: []}
     ]
 

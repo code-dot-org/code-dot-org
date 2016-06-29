@@ -1,4 +1,4 @@
-var _ = require('../lodash');
+var _ = require('lodash');
 
 /**
  * Stores information about a current Maze execution.  Execution consists of a

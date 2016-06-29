@@ -1,0 +1,25 @@
+name 'v2 U3L03 Student Lesson Introduction'
+title 'Creativity in Algorithms'
+css 'unplugged'
+markdown <<MARKDOWN
+## Unit 3 Lesson 03 - Creativity in Algorithms
+
+# Background
+In this lesson you get more practice designing algorithms using the "Human Machine Language".  In particular you see that new problems are often easily solved by combining other algorithms that you know.  You can also optionally try your hand at actually programming in the human machine language with a widget.
+
+# Lesson
+* Introduce the 'swap' command, new to the Human Machine Language
+* Design an algorithm for the "High-Low" problem
+* Optionally try other algorithms
+
+# Resources
+
+* Activity Guide: <a href="https://docs.google.com/document/d/1l2XoaDmn0vYphlT_KS9_Yl7TVgoy6z310qUuUGGKbGg" target="_blank">Human Machine Language - Part 2: Min To Front</a>
+* (Optional) App Lab Widget: <a href="#" target="_blank">Human Machine App</a>
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[KEY: Human Machine Language Part 2 - Min To Front](https://docs.google.com/document/d/1rprtSHQOBzx5vBIETrZrlJgoov5J_pfnF8Sgbm2i2sc)
+MARKDOWN

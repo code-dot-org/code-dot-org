@@ -1,0 +1,31 @@
+name 'v2 U3L04 Student Lesson Introduction'
+title 'Programming with Simple Commands - Getting Started'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 04 - Programming with Simple Commands
+
+# Background
+
+In previous lessons you wrote instructions for a person to build a LEGO® structure, and used the "Human Machine Language" to implement algorithms that worked on a row of playing cards.
+
+All programming languages have basic “building blocks” which are the most fundamental commands. They can be combined, recombined, and built up to eventually do very sophisticated things. In this lesson we provide you with a very few blocks (only 4) to help you understand the basic principles of building and structuring programs. 
+
+You will use this small set of commands to draw simple shapes on the screen using "turtle graphics."  Turtle graphics go way back in computing history as a way for newcomers to learn how to program.  The system is modeled after an old robot called the "turtle robot" that held a pen and could be controlled to move around and draw things as it moved.  In the computer version we have commands that represent the robot controls and the "turtle" is represented as a triangle on the screen.
+
+# Lesson
+
+* Learn to use the App Lab programming environment
+* Write a program that uses basic “building blocks” to draw an image in App Lab
+* Think about what "efficiency" means when programming
+
+# Resources
+* Tutorial Video: Turtle Programming - explains the history of turtle graphics and introduction to App Lab.<br>
+<iframe width="480" height="270" src="https://www.youtube.com/embed/i2KHYUhtOlM?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+_LEGO® is a trademark of the LEGO Group of companies, which does not sponsor, authorize or endorse this site._
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

@@ -56,7 +56,8 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_equal Date.today - 13.years, assigns(:user).birthday
       assert_equal nil, assigns(:user).provider
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
-      assert_equal 'an@email.address', assigns(:user).email
+      assert_equal '', assigns(:user).email
+      assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
     end
   end
 
@@ -277,7 +278,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     assert_redirected_to '/'
 
-    assert_equal 'hashed@email.com', assigns(:user).email
+    assert_equal '', assigns(:user).email
     assert_equal Digest::MD5.hexdigest('hashed@email.com'), assigns(:user).hashed_email
   end
 
@@ -297,23 +298,6 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     assert_equal ['Display Name is required', "Age is required"],
       assigns(:user).errors.full_messages
-  end
-
-  test 'sign up as teacher' do
-    get :new, user: {user_type: 'teacher'}
-
-    assert_response :success
-
-    # no age dropdown, yes age hidden field
-    assert_select 'select[name*="age"]', 0
-    assert_select 'input[type="hidden"][name*="age"][value="21"]'
-  end
-
-  test 'sign up as student' do
-    get :new, user: {user_type: 'student'}
-
-    assert_response :success
-    assert_select 'select[name*="age"]'
   end
 
   test 'deleting sets deleted at on a user' do

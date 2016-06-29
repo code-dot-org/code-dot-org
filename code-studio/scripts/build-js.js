@@ -49,6 +49,9 @@ Promise.all([
       'initApp/initApp.js'
     ],
     commonFile: 'code-studio-common',
+    browserifyGlobalShim: {
+      "jquery": "$"
+    },
     shouldFactor: true
   })),
 
@@ -64,24 +67,28 @@ Promise.all([
     commonFile: 'embedVideo'
   })),
 
-  // only-react.js is just React in a bundle. In the future, this might be
-  // expanded to include a small set of libraries that we expect on the global
-  // namespace
+  // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
+  // in a bundle to minimize the amound of stuff we need when loading blocks
+  // in an iframe.
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
-      'react-only.js'
+      'embedBlocks.js'
     ],
-    commonFile: 'react-only'
+    commonFile: 'embedBlocks'
   })),
 
   // Have a bundle for plc stuff - no sense in expanding this to everything yet
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
       'plc/evaluation_creation.js',
+      'plc/header.jsx',
       'plc/perform_evaluation.js',
       'plc/task_creation.js'
     ],
-    commonFile: 'plc'
+    commonFile: 'plc',
+    browserifyGlobalShim: {
+      "jquery": "$"
+    }
   })),
 
   // makerlab-only dependencies for app lab
@@ -89,7 +96,10 @@ Promise.all([
     filenames: [
       'makerlab/makerlabDependencies.js'
     ],
-    commonFile: 'makerlab'
+    commonFile: 'makerlab',
+    browserifyGlobalShim: {
+      "jquery": "$"
+    }
   })),
 
   build_commands.bundle(_.extend({}, defaultOptions, {
@@ -98,6 +108,7 @@ Promise.all([
     ],
     commonFile: 'pd',
     browserifyGlobalShim: {
+      "jquery": "$",
       "react": "React",
       "react-dom": "ReactDOM"
     }

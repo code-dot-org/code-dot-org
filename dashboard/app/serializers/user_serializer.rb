@@ -38,7 +38,6 @@
 #  confirmation_sent_at       :datetime
 #  unconfirmed_email          :string(255)
 #  prize_teacher_id           :integer
-#  hint_access                :boolean
 #  secret_picture_id          :integer
 #  active                     :boolean          default(TRUE), not null
 #  hashed_email               :string(255)

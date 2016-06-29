@@ -127,6 +127,12 @@ Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED = 'blocksImported';
 Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
 
 /**
+ * Fired by Code Studio when the run button is clicked.
+ * @type {string}
+ */
+Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED = "runButtonClicked";
+
+/**
  * Angle away from the horizontal to sweep for blocks.  Order of execution is
  * generally top to bottom, but a small angle changes the scan to give a bit of
  * a left to right bias (reversed in RTL).  Units are in degrees.
@@ -393,6 +399,15 @@ Blockly.BlockSpace.prototype.addTopBlock = function(block) {
 };
 
 /**
+ * Checks to see if the given block is in the list of top blocks
+ * @param {!Blockly.Block} block
+ * @return {boolean}
+ */
+Blockly.BlockSpace.prototype.isTopBlock = function (block) {
+  return this.topBlocks_.indexOf(block) > -1;
+};
+
+/**
  * Remove a block from the list of top blocks.
  * @param {!Blockly.Block} block Block to remove.
  */
@@ -459,6 +474,28 @@ Blockly.BlockSpace.prototype.getTopBlocks = function(ordered, shareMainModal) {
 Blockly.BlockSpace.prototype.getAllVisibleBlocks = function() {
   return goog.array.filter(this.getAllBlocks(), function(block) {
     return block.isUserVisible();
+  });
+};
+
+/**
+ * Find all used blocks in this blockSpace.  No particular order.
+ * Filters out "unused" (unattached) blocks
+ * @return {!Array.<!Blockly.Block>} Array of blocks.
+ */
+Blockly.BlockSpace.prototype.getAllUsedBlocks = function() {
+  return goog.array.filter(this.getAllBlocks(), function(block) {
+    return !block.getRootBlock().isUnused();
+  });
+};
+
+/**
+ * Finds the top-level attached blocks
+ * @see BlockSpace.prototype.getTopBlocks
+ * @return {!Array.<!Blockly.Block>} The top-level attached block objects.
+ */
+Blockly.BlockSpace.prototype.getTopUsedBlocks = function() {
+  return goog.array.filter(this.getTopBlocks(), function(block) {
+    return !block.isUnused();
   });
 };
 
@@ -620,6 +657,16 @@ Blockly.BlockSpace.prototype.paste = function(clipboard) {
   if (xmlBlock.getElementsByTagName('block').length >=
       this.remainingCapacity()) {
     return;
+  }
+  if (this.blockSpaceEditor.blockLimits.hasBlockLimits()) {
+    var types = goog.array.map(xmlBlock.getElementsByTagName('block'), function(block) {
+      return block.getAttribute('type');
+    });
+    types.push(xmlBlock.getAttribute('type'));
+
+    if (!this.blockSpaceEditor.blockLimits.canAddBlocks(types)) {
+      return;
+    }
   }
   var block = Blockly.Xml.domToBlock(this, xmlBlock);
   // Move the duplicate to original position.

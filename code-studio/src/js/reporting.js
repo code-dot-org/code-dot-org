@@ -1,5 +1,6 @@
 /* global appOptions */
 
+import $ from 'jquery';
 var clientState = require('./clientState');
 
 var lastAjaxRequest;
@@ -49,12 +50,12 @@ reporting.sendReport = function (report) {
   }
   var queryString = queryItems.join('&');
 
-  clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, appOptions.serverLevelId);
+  clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
 
   //Post milestone iff the server tells us, or if we are on the last level and have passed
   if (appOptions.postMilestone || (appOptions.level.puzzle_number && appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass)) {
 
-    var thisAjax = jQuery.ajax({
+    var thisAjax = $.ajax({
       type: 'POST',
       url: report.callback,
       contentType: 'application/x-www-form-urlencoded',
@@ -68,13 +69,21 @@ reporting.sendReport = function (report) {
         xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
       },
       success: function (response) {
-        if (thisAjax !== lastAjaxRequest) {
+        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
+        }
+        if (appOptions.hasContainedLevels && !response.redirect) {
+          // for contained levels, we want to allow the user to Continue even
+          // if the answer was incorrect and nextRedirect was not supplied, so
+          // populate nextRedirect from the fallback if necessary
+          report.pass = true;
+          var fallback = getFallbackResponse(report) || {};
+          response.redirect = fallback.redirect;
         }
         reportComplete(report, response);
       },
       error: function (xhr, textStatus, thrownError) {
-        if (thisAjax !== lastAjaxRequest) {
+        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
         }
         report.error = xhr.responseText;
@@ -126,6 +135,8 @@ function reportComplete(report, response) {
     lastServerResponse.nextRedirect = response.redirect;
     lastServerResponse.previousLevelRedirect = response.previous_level;
     lastServerResponse.videoInfo = response.video_info;
+    lastServerResponse.endOfStageExperience = response.end_of_stage_experience;
+    lastServerResponse.previousStageInfo = response.stage_changing && response.stage_changing.previous;
   }
   if (report.onComplete) {
     report.onComplete(response);

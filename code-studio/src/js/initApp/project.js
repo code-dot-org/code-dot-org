@@ -1,4 +1,5 @@
 /* global dashboard, appOptions, trackEvent */
+import $ from 'jquery';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -125,6 +126,16 @@ var projects = module.exports = {
    */
   getAbuseScore: function () {
     return currentAbuseScore;
+  },
+
+  /**
+   * Whether this project uses Firebase for data storage.
+   */
+  useFirebase: function () {
+    if (!current) {
+      return;
+    }
+    return current.useFirebase;
   },
 
   /**

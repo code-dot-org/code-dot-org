@@ -1,3 +1,4 @@
+var React = require('react');
 var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
@@ -13,15 +14,9 @@ var CalcVisualizationColumn = function (props) {
         </svg>
       </ProtectedVisualizationDiv>
       <GameButtons/>
-      <BelowVisualization inputOutputTable={props.inputOutputTable}/>
+      <BelowVisualization/>
     </span>
   );
-};
-
-CalcVisualizationColumn.propTypes = {
-  inputOutputTable: React.PropTypes.arrayOf(
-    React.PropTypes.arrayOf(React.PropTypes.number)
-  )
 };
 
 module.exports = CalcVisualizationColumn;

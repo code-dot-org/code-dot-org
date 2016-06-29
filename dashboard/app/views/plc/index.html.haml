@@ -3,14 +3,11 @@
 
 %h2 PLC Admin
 
-= link_to 'View courses', plc_content_creator_show_courses_and_modules_path
-
 %h3 Create professional learning content
 %ul
-  %li= link_to 'Add a Course', new_plc_course_path
   %li
     =link_to 'Build a Professional Learning Script', new_script_path
-    (Add "professional_learning_course 'true'" to the script)
+    (Add "professional_learning_course '<course name>'" to the script)
 
 %h3 Manage enrollment
 %ul

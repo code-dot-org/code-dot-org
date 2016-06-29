@@ -1,24 +1,22 @@
 ---
-title: District partnerships
+title: Partnerships
 nav: educate_nav
 ---
-# Partner with Code.org to bring K-12 computer science to your district
+# Partner with Code.org to bring K-12 computer science to your district or school
 
-Code.org partners with school districts across the country to suppport and expand computer science learning in schools. Partnerships include high quality [computer science curriculum](/educate/curriculum), [professional development](/educate/professional-development), online and in person supports, marketing materials, and more.
+Code.org partners with school districts across the country to suppport and expand computer science learning in schools. Partnerships include high quality [computer science curriculum](/educate/curriculum), [professional learning](/educate/professional-learning), online and in person supports, marketing materials, and more.
 
-**The application window for partnerships in the 2016-17 school year is closed.**  We will begin reaching out to partners in the spring of 2016 about applications for the 2017-18 school year.  Please [fill out our interest form](/educate/interesteddistrict) and we'll be in touch when we open the new application window.
+Code.org has begun moving from partnering directly with districts and schools and instead partners with [professional learning partners](/educate/professional-learning-partner) throughout the country to help bring high quality K-12 computer science education to their communities.  Code.org will work with each region’s professional learning partner and connect them with interested districts and schools.
+
+Please [fill out our interest form](/educate/interesteddistrict) and share your information with the professional learning partner in your area ([please see a list of our current partners]()).  If there is no professional learning partner currently in your area, please reach out to qualified groups and encourage them to [apply here]()!
+
+
+[<button>Fill out our interest form</button>](/educate/interesteddistrict) 
 
 ## Our Goals
 
 - Expanding *access* to high-quality computer science education to all students
 - Establishing a computer science program that will grow and be sustained within the district beyond the term of our partnership
-
-
-
-[<button>Sign up to learn more</button>](/educate/interesteddistrict) 
-
-## The Application Process
-We are currently at capacity for partnerships in the 2016-17 school year, and will release a new application for the 2017-18 school year in the spring.  Please [fill out our interest form](/educate/interesteddistrict) to be notified when the new application is released.
 
 <!--
 2016-17 APPLICATION INFO
@@ -44,9 +42,9 @@ Here are our deadlines for Applications. Applications received earlier will rece
 
 ## Information on Curriculum and PD
 
-- Courses for grades K-5 ([Quick Overview](/files/K5onepager.pdf)/[Curriculum](/educate/k5)/[PD Model](https://docs.google.com/document/d/1qMtoBjiH7WX_dC_xB54D5W5WJ3bJCnRBA8YBYltInLY/edit?usp=sharing))
-- Computer Science Discoveries ([Quick Overview](/educate/csd)/Curriculum and PD Model in development)
-- Computer Science Principles ([Quick Overview](/files/CSP_one_pager.pdf)/[Curriculum](/educate/csp)/[PD Model](https://docs.google.com/document/d/1SSMhd4dvnl1BTlYngl4Pky0JfkFmMmalFkePVpAijgE/edit?usp=sharing))
+- Courses for grades K-5 ([Quick Overview](/files/K5onepager.pdf) / [Curriculum](/educate/k5) / [PD Model](https://docs.google.com/document/d/1qMtoBjiH7WX_dC_xB54D5W5WJ3bJCnRBA8YBYltInLY/edit?usp=sharing))
+- Computer Science Discoveries ([Quick Overview](/educate/csd) / Curriculum and PD Model in development)
+- Computer Science Principles ([Quick Overview](/files/CSP_one_pager.pdf) / [Curriculum](/educate/csp) / [PD Model](https://docs.google.com/document/d/1SSMhd4dvnl1BTlYngl4Pky0JfkFmMmalFkePVpAijgE/edit?usp=sharing))
 
 <!--
 OLD Programs
@@ -56,6 +54,7 @@ OLD Programs
 -->
 
 
+<!--
 ## Existing partners (including all 7 of the largest US school districts)
 
 [col-50]
@@ -87,7 +86,7 @@ OLD Programs
 
 <%= view :pd_quotes %>
 <br />
-
+-->
 
 Please contact <district@code.org> for more information.
 

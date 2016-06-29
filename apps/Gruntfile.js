@@ -1,14 +1,29 @@
 var chalk = require('chalk');
+var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
-var glob = require('glob');
-var readline = require('readline');
+var webpack = require('webpack');
+var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
+var webpackConfig = require('./webpack');
+var envConstants = require('./envConstants');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
-  logBuildTimes(grunt);
+  var buildTimeLogger = logBuildTimes(grunt);
+
+  process.env.mocha_entry = grunt.option('entry') || '';
+  if (process.env.mocha_entry) {
+    // create an entry-tests.js file with the right require statement
+    // so that karma + webpack can do their thing. For some reason, you
+    // can't just point the test runner to the file itself as it won't
+    // get compiled.
+    fs.writeFileSync(
+      'test/entry-tests.js',
+      "require('"+path.resolve(process.env.mocha_entry)+"');\n"
+    );
+  }
 
   var config = {};
 
@@ -25,12 +40,10 @@ module.exports = function (grunt) {
   var PLAYGROUND_PORT = grunt.option('playground-port') || 8000;
 
   /** @const {string} */
-  var APP_TO_BUILD = grunt.option('app') || process.env.MOOC_APP;
-
-  var WATCH_APPLAB_API = grunt.option('watch_applab_api');
+  var SINGLE_APP = grunt.option('app') || envConstants.APP;
 
   /** @const {string[]} */
-  var APPS = [
+  var ALL_APPS = [
     'maze',
     'turtle',
     'bounce',
@@ -45,24 +58,48 @@ module.exports = function (grunt) {
     'gamelab'
   ];
 
-  if (APP_TO_BUILD) {
-    if (APPS.indexOf(APP_TO_BUILD) === -1) {
-      throw new Error('Unknown app: ' + APP_TO_BUILD);
-    }
-    APPS = [APP_TO_BUILD];
+  if (SINGLE_APP && ALL_APPS.indexOf(SINGLE_APP) === -1) {
+    throw new Error('Unknown app: ' + SINGLE_APP);
   }
 
-  // Parse options from environment.
-  var envOptions = {
-    dev: (process.env.MOOC_DEV === '1')
-  };
+  var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
+
+  var ace_suffix = envConstants.DEV ? '' : '-min';
+  var dotMinIfNotDev = envConstants.DEV ? '' : '.min';
+  var piskelRoot = String(child_process.execSync('`npm bin`/piskel-root')).replace(/\s+$/g,'');
+  var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
+  if (PISKEL_DEVELOPMENT_MODE) {
+    var localNodeModulesRoot = String(child_process.execSync('npm prefix')).replace(/\s+$/g,'');
+    if (piskelRoot.indexOf(localNodeModulesRoot) === -1) {
+      // Piskel has been linked to a local development repo, we're good to go.
+      piskelRoot = path.resolve(piskelRoot, '..', 'dev');
+      console.log(chalk.bold.yellow('-- PISKEL DEVELOPMENT MODE --'));
+      console.log(chalk.yellow('Make sure you have a local development build of piskel'));
+      console.log(chalk.yellow('Inlining PISKEL_DEVELOPMENT_MODE=true'));
+      console.log(chalk.yellow('Copying development build of Piskel instead of release build'));
+
+    } else {
+      console.log(chalk.bold.red('Unable to enable Piskel development mode.'));
+      console.log(chalk.red('In order to use Piskel development mode, your apps ' +
+          'package must be linked to a local development copy of the Piskel ' +
+          'repository with a complete dev build.' +
+          '\n' +
+          '\n  1. git clone https://github.com/code-dot-org/piskel.git <new-directory>' +
+          '\n  2. cd <new-directory>' +
+          '\n  3. npm install && grunt build-dev' +
+          '\n  4. npm link' +
+          '\n  5. cd -' +
+          '\n  6. npm link @code-dot-org/piskel' +
+          '\n  7. rerun your previous command' +
+          '\n'));
+      process.exitCode = 1; // Failure!
+      return;
+    }
+  }
 
   config.clean = {
     all: ['build']
   };
-
-  var ace_suffix = envOptions.dev ? '' : '-min';
-  var dotMinIfNotDev = envOptions.dev ? '' : '.min';
 
   config.copy = {
     src: {
@@ -122,6 +159,12 @@ module.exports = function (grunt) {
           cwd: 'lib/p5play',
           src: ['*.js'],
           dest: 'build/package/js/p5play/'
+        },
+        {
+          expand: true,
+          cwd: piskelRoot,
+          src: '**',
+          dest: 'build/package/js/piskel/'
         },
         {
           expand: true,
@@ -198,20 +241,6 @@ module.exports = function (grunt) {
     }
   };
 
-  config.lodash = {
-    'build': {
-      'dest': 'src/lodash.js',
-      'options': {
-        'include': [
-          'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
-          'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
-          'last', 'clone', 'cloneDeep', 'isEqual', 'find', 'sortBy', 'throttle',
-          'uniq', 'assign', 'merge'
-        ]
-      }
-    }
-  };
-
   config.sass = {
     all: {
       options: {
@@ -219,26 +248,15 @@ module.exports = function (grunt) {
         outputStyle: 'nested',
         includePaths: ['../shared/css/']
       },
-      files: {
-        'build/package/css/common.css': 'style/common.scss',
-        'build/package/css/readonly.css': 'style/readonly.scss'
-      }
-    }
-  };
-  APPS.filter(function (app) {
-    return app !== 'none';
-  }).forEach(function (app) {
-    var src = 'style/' + app + '/style.scss';
-    var dest = 'build/package/css/' + app + '.css';
-    config.sass.all.files[dest] = src;
-  });
-
-  config.pseudoloc = {
-    all: {
-      srcBase: 'i18n',
-      srcLocale: 'en_us',
-      destBase: 'build/i18n',
-      pseudoLocale: 'en_ploc'
+      files: _.zipObject([
+        ['build/package/css/common.css', 'style/common.scss'],
+        ['build/package/css/readonly.css', 'style/readonly.scss']
+      ].concat(appsToBuild.map(function (app) {
+        return [
+          'build/package/css/' + app + '.css', // dst
+          'style/' + app + '/style.scss' // src
+        ];
+      })))
     }
   };
 
@@ -253,7 +271,7 @@ module.exports = function (grunt) {
             return path.join(dest, outputPath);
           },
           expand: true,
-          src: ['i18n/**/*.json', 'build/i18n/**/*.json'],
+          src: ['i18n/**/*.json'],
           dest: 'build/package/js/'
         }
       ]
@@ -267,86 +285,98 @@ module.exports = function (grunt) {
     }
   };
 
-  var allFilesSrc = [];
-  var allFilesDest = [];
-  var outputDir = 'build/package/js/';
-  APPS.forEach(function (app) {
-    allFilesSrc.push('build/js/' + app + '/main.js');
-    allFilesDest.push(outputDir + app + '.js');
-  });
-
-  /**
-   * Generates a command line string to execute browserify with the specified options.
-   * Available options are:
-   *
-   * @param {!Object} options
-   * @param {boolean} [options.globalShim] - boolean for whether or not to turn on
-   *        the browserify-global-shim transform
-   * @param {!string} options.cacheFile - file name where the browserify cache should be stored
-   * @param {!string[]} options.srcFiles - list of src files to pass to browserify
-   * @param {!string[]} options.destFiles - list of destination file paths to pass to browserify
-   * @param {boolean} [options.factorBundle] - whether or not to use the factor-bundle plugin to
-   *        extract common code into a separate file.
-   */
-  function getBrowserifyCommand(options) {
-    // Use command-line tools to run browserify (faster/more stable this way)
-    var cmd = 'mkdir -p build/browserified &&' +
-          (envOptions.dev ? '' : ' NODE_ENV=production') + // Necessary for production Redux
-          ' `npm bin`/browserifyinc';
-    if (options.globalShim) {
-      cmd += ' -g [ browserify-global-shim ]';
-    }
-    if (options.cacheFile) {
-      cmd += ' --cachefile ' + outputDir + options.cacheFile;
-    }
-    cmd += ' --extension=.jsx' +
-      ' -t [ babelify --compact=false --sourceMap ]' +
-      (envOptions.dev ? '' : ' -t loose-envify') +
-      ' -d ' + options.srcFiles.join(' ');
-    if (options.factorBundle) {
-      cmd += ' -p [ factor-bundle -o ' +
-        options.destFiles.join(' -o ') +
-        ' ] -o ' + outputDir + 'common.js';
-    } else {
-      cmd += ' -o ' + options.destFiles[0];
-    }
-    return cmd;
-  }
-
-  var browserifyExec = getBrowserifyCommand({
-    globalShim: true,
-    cacheFile: 'browserifyinc.cache.json',
-    srcFiles: allFilesSrc,
-    destFiles: allFilesDest,
-    factorBundle: APPS.length > 1,
-  });
-
-  var applabAPIExec = getBrowserifyCommand({
-    globalShim: false,
-    cacheFile: 'applab-api.cache.json',
-    srcFiles: ['build/js/applab/api-entry.js'],
-    destFiles: [outputDir + 'applab-api.js'],
-    factorBundle: false,
-  });
-
-  var fastMochaTest = process.argv.indexOf('--fast') !== -1;
-
+  var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
-    browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
-    integrationTest: 'node test/runIntegrationTests.js --color' + (fastMochaTest ? ' --fast' : ''),
-    unitTest: 'node test/runUnitTests.js --color',
-    applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
   };
 
-  var ext = envOptions.dev ? 'uncompressed' : 'compressed';
+  config.karma = {
+    options: {
+      configFile: 'karma.conf.js',
+      singleRun: !envConstants.WATCH,
+      files: [
+        {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/unit/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/util/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'build/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'static/**/*', watched: false, included: false, nocache: true},
+      ],
+      client: {
+        mocha: {
+          timeout: 14000,
+          grep: grunt.option('grep'),
+        },
+      },
+    },
+    unit: {
+      files: [
+        {src: ['test/unit-tests.js'], watched: false},
+      ],
+    },
+    integration: {
+      files: [
+        {src: ['test/integration-tests.js'], watched: false},
+      ],
+    },
+    all: {
+      files: [
+        {src: ['test/index.js'], watched: false},
+      ],
+    },
+    entry: {
+      files: [
+        {src: ['test/entry-tests.js'], watched: false},
+      ],
+      preprocessors: {
+        'test/entry-tests.js': ['webpack', 'sourcemap'],
+      },
+    },
+  };
+
+  // Create our set of entries (an object mapping target name to entry source
+  // file
+  var entries = _.zipObject(appsToBuild.map(function (app) {
+    return [app, './src/' + app + '/main.js'];
+  }));
+  if (appsToBuild.indexOf('applab') !== -1) {
+    entries['applab-api'] = './src/applab/api-entry.js';
+  }
+
+  config.webpack = {
+    build: webpackConfig.create({
+      output: path.resolve(__dirname, OUTPUT_DIR),
+      entries: entries,
+      minify: false,
+      watch: false,
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+    }),
+    uglify: webpackConfig.create({
+      output: path.resolve(__dirname, OUTPUT_DIR),
+      entries: entries,
+      minify: true,
+      watch: false,
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+    }),
+    watch: webpackConfig.create({
+      output: path.resolve(__dirname, OUTPUT_DIR),
+      entries: entries,
+      minify: false,
+      watch: true,
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+    })
+  };
+
+  var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
   config.concat = {
     vendor: {
       nonull: true,
       src: [
+        'lib/blockly/preamble_' + ext + '.js',
         'lib/blockly/blockly_' + ext + '.js',
         'lib/blockly/blocks_' + ext + '.js',
-        'lib/blockly/javascript_' + ext + '.js'
+        'lib/blockly/javascript_' + ext + '.js',
       ],
       dest: 'build/package/js/blockly.js'
     }
@@ -362,61 +392,31 @@ module.exports = function (grunt) {
     }
   };
 
-  var uglifiedFiles = {};
+
   config.uglify = {
-    browserified: {
-      files: uglifiedFiles
+    lib: {
+      files: _.zipObject([
+        'jsinterpreter/interpreter.js',
+        'jsinterpreter/acorn.js',
+        'p5play/p5.play.js',
+        'p5play/p5.js'
+      ].map(function (src) {
+        return [
+          OUTPUT_DIR + src.replace(/\.js$/, '.min.js'), // dst
+          OUTPUT_DIR + src // src
+        ];
+      }))
     }
   };
 
-  ['common'].concat(APPS).forEach(function (app) {
-    var src = outputDir + app + '.js';
-    var dest = outputDir + app + '.min.js';
-    uglifiedFiles[dest] = [src];
-    var appUglifiedFiles = {};
-    appUglifiedFiles[dest] = [src];
-    config.uglify[app] = {files: appUglifiedFiles};
-  });
-
-  config.uglify.lib = {files: {}};
-  config.uglify.lib.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
-      outputDir + 'jsinterpreter/interpreter.js';
-  config.uglify.lib.files[outputDir + 'jsinterpreter/acorn.min.js'] =
-      outputDir + 'jsinterpreter/acorn.js';
-  config.uglify.lib.files[outputDir + 'p5play/p5.play.min.js'] =
-      outputDir + 'p5play/p5.play.js';
-  config.uglify.lib.files[outputDir + 'p5play/p5.min.js'] =
-      outputDir + 'p5play/p5.js';
-
-  // Run uglify task across all apps in parallel
-  config.concurrent = {
-    uglify: APPS.concat('common', 'lib').map(function (x) {
-      return 'uglify:' + x;
-    })
-  };
-
   config.watch = {
-    js: {
-      files: ['src/**/*.{js,jsx}'],
-      tasks: [
-        'newer:copy:src',
-        'exec:browserify',
-        // only want to watch for applabapi if explicitly specified
-        WATCH_APPLAB_API ? 'exec:applabapi' : 'noop',
-        'notify:browserify'
-      ],
-      options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true,
-        interrupt: true
-      }
-    },
+    // JS files watched by webpack
     style: {
       files: ['style/**/*.scss', 'style/**/*.sass'],
       tasks: ['newer:sass', 'notify:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true,
+        livereload: envConstants.AUTO_RELOAD,
         interrupt: true
       }
     },
@@ -425,7 +425,7 @@ module.exports = function (grunt) {
       tasks: ['newer:copy', 'notify:content'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: envConstants.AUTO_RELOAD
       }
     },
     vendor_js: {
@@ -433,26 +433,28 @@ module.exports = function (grunt) {
       tasks: ['newer:concat', 'newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
-      }
-    },
-    ejs: {
-      files: ['src/**/*.ejs'],
-      tasks: ['ejs', 'exec:browserify', 'notify:ejs'],
-      options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: envConstants.AUTO_RELOAD
       }
     },
     messages: {
       files: ['i18n/**/*.json'],
-      tasks: ['pseudoloc', 'messages', 'notify:messages'],
+      tasks: ['messages', 'notify:messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: envConstants.AUTO_RELOAD
       }
     },
   };
+
+  config.concurrent = {
+    // run our two watch tasks concurrently so that they dont block each other
+    watch: {
+      tasks: ['watch', 'webpack:watch'],
+      options: {
+        logConcurrentOutput: true
+      }
+    }
+  },
 
   config.strip_code = {
     options: {
@@ -465,7 +467,7 @@ module.exports = function (grunt) {
   };
 
   config.notify = {
-    browserify: {options: {message: 'Browserify build completed.'}},
+    'js-build': {options: {message: 'JS build completed.'}},
     sass: {options: {message: 'SASS build completed.'}},
     content: {options: {message: 'Content build completed.'}},
     ejs: {options: {message: 'EJS build completed.'}},
@@ -486,8 +488,10 @@ module.exports = function (grunt) {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
-    APPS.concat('common').map(function (item) {
-      var localeString = '/*' + item + '*/ module.exports = window.blockly.' + (item === 'common' ? 'locale' : 'appLocale') + ';';
+    appsToBuild.concat('common').map(function (item) {
+      var localeType = (item === 'common' ? 'locale' : 'appLocale');
+      var localeString = '/*' + item + '*/ ' +
+        'module.exports = window.blockly.' + localeType + ';';
       fs.writeFileSync(path.join(current, item + '.js'), localeString);
     });
   });
@@ -502,7 +506,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
-    'pseudoloc',
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:src',
@@ -512,35 +515,54 @@ module.exports = function (grunt) {
     'ejs'
   ]);
 
+  grunt.registerTask('compile-firebase-rules', function () {
+    try {
+      child_process.execSync('ls `npm bin`/firebase-bolt');
+    } catch (e) {
+      console.log(chalk.yellow("'firebase-bolt' not found. running 'npm install'..."));
+      try {
+        child_process.execSync('which npm');
+      } catch (e) {
+        throw new Error("'firebase-bolt' not found and 'npm' not installed.");
+      }
+      child_process.execSync('npm install');
+    }
+    child_process.execSync('mkdir -p ./build/package/firebase');
+    child_process.execSync('`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json');
+  });
+
   grunt.registerTask('postbuild', [
     'newer:copy:static',
     'newer:concat',
-    'newer:sass'
+    'newer:sass',
+    'compile-firebase-rules'
   ]);
 
   grunt.registerTask('build', [
     'prebuild',
-    'exec:browserify',
-    'exec:applabapi',
-    'notify:browserify',
+    'webpack:build'
+  ].concat([
+    'notify:js-build',
     // Skip minification in development environment.
-    envOptions.dev ? 'noop' : ('concurrent:uglify'),
+    envConstants.DEV ? 'noop' : 'webpack:uglify',
+    // Skip minification in development environment.
+    envConstants.DEV ? 'noop' : 'uglify:lib',
     'postbuild'
-  ]);
+  ]));
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
   grunt.registerTask('dev', [
-    'build',
-    'express:playground',
-    'watch'
+    'prebuild',
+    'concurrent:watch',
+    'postbuild',
   ]);
 
   grunt.registerTask('unitTest', [
     'newer:messages',
     'exec:convertScssVars',
     'concat',
-    'exec:unitTest'
+    'karma:unit'
   ]);
 
   grunt.registerTask('integrationTest', [
@@ -548,10 +570,16 @@ module.exports = function (grunt) {
     'exec:convertScssVars',
     'newer:copy:static',
     'concat',
-    'exec:integrationTest'
+    'karma:integration'
   ]);
 
-  grunt.registerTask('test', ['unitTest', 'integrationTest']);
+  grunt.registerTask('test', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'newer:copy:static',
+    'concat',
+    'karma:all'
+  ]);
 
   // We used to use 'mochaTest' as our test command.  Alias to be friendly while
   // we transition away from it.  This can probably be removed in a month or two.
@@ -564,10 +592,10 @@ module.exports = function (grunt) {
   });
   grunt.registerTask('mochaTest', ['showMochaTestWarning', 'test']);
 
-  grunt.registerTask('default', ['rebuild', 'test']);
+  grunt.registerTask('logBuildTimes', function () {
+    var done = this.async();
+    buildTimeLogger.upload(console.log, done);
+  });
 
-  process.env.mocha_grep = grunt.option('grep') || '';
-  process.env.mocha_debug = grunt.option('debug') || '';
-  process.env.mocha_entry = grunt.option('entry') || '';
-  process.env.mocha_invert = grunt.option('invert') || '';
+  grunt.registerTask('default', ['rebuild', 'test']);
 };

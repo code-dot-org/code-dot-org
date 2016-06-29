@@ -1,10 +1,10 @@
-/* global React */
-
 /*
   Table displaying workshop summaries based on a supplied query.
  */
 
+import $ from 'jquery';
 var _ = require('lodash');
+import React from 'react';
 var WorkshopTableRow = require('./workshop_table_row');
 var Table = require('react-bootstrap').Table;
 

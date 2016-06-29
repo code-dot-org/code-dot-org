@@ -1,5 +1,4 @@
 var studioApp = require('../StudioApp').singleton;
-var AppStorage = require('./appStorage');
 var apiTimeoutList = require('../timeoutList');
 var ChartApi = require('./ChartApi');
 var EventSandboxer = require('./EventSandboxer');
@@ -1493,7 +1492,7 @@ applabCommands.createRecord = function (opts) {
   }
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
-  AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
+  Applab.storage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
 applabCommands.handleCreateRecord = function (opts, record) {
@@ -1509,7 +1508,7 @@ applabCommands.getKeyValue = function (opts) {
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = applabCommands.handleReadValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
-  AppStorage.getKeyValue(opts.key, onSuccess, onError);
+  Applab.storage.getKeyValue(opts.key, onSuccess, onError);
 };
 
 applabCommands.handleReadValue = function (opts, value) {
@@ -1522,7 +1521,7 @@ applabCommands.getKeyValueSync = function (opts) {
   apiValidateType(opts, 'getKeyValueSync', 'key', opts.key, 'string');
   var onSuccess = handleGetKeyValueSync.bind(this, opts);
   var onError = handleGetKeyValueSyncError.bind(this, opts);
-  AppStorage.getKeyValue(opts.key, onSuccess, onError);
+  Applab.storage.getKeyValue(opts.key, onSuccess, onError);
 };
 
 var handleGetKeyValueSync = function (opts, value) {
@@ -1543,7 +1542,7 @@ applabCommands.setKeyValue = function (opts) {
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
-  AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
 applabCommands.handleSetKeyValue = function (opts) {
@@ -1557,7 +1556,7 @@ applabCommands.setKeyValueSync = function (opts) {
   apiValidateType(opts, 'setKeyValueSync', 'value', opts.value, 'primitive');
   var onSuccess = handleSetKeyValueSync.bind(this, opts);
   var onError = handleSetKeyValueSyncError.bind(this, opts);
-  AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
 var handleSetKeyValueSync = function (opts) {
@@ -1585,7 +1584,7 @@ applabCommands.readRecords = function (opts) {
   }
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
-  AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
+  Applab.storage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
 applabCommands.handleReadRecords = function (opts, records) {
@@ -1615,7 +1614,7 @@ applabCommands.updateRecord = function (opts) {
   }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
-  AppStorage.updateRecord(opts.table, opts.record, onComplete, onError);
+  Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
 };
 
 applabCommands.handleUpdateRecord = function (opts, record, success) {
@@ -1645,7 +1644,7 @@ applabCommands.deleteRecord = function (opts) {
   }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
-  AppStorage.deleteRecord(opts.table, opts.record, onComplete, onError);
+  Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);
 };
 
 applabCommands.handleDeleteRecord = function (opts, success) {
@@ -1658,7 +1657,7 @@ applabCommands.onRecordEvent = function (opts) {
   apiValidateType(opts, 'onRecordEvent', 'table', opts.table, 'string');
   apiValidateType(opts, 'onRecordEvent', 'callback', opts.onRecord, 'function');
   var onError = errorHandler.handleError.bind(this, opts);
-  AppStorage.onRecordEvent(opts.table, opts.onRecord, onError);
+  Applab.storage.onRecordEvent(opts.table, opts.onRecord, onError);
 };
 
 applabCommands.getUserId = function (opts) {

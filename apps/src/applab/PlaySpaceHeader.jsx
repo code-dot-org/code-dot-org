@@ -1,5 +1,6 @@
 /** @file Row of controls above the visualization. */
 
+var React = require('react');
 var constants = require('./constants');
 var msg = require('../locale');
 var utils = require('../utils');
@@ -19,11 +20,16 @@ var PlaySpaceHeader = React.createClass({
     isEditingProject: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isViewDataButtonHidden: React.PropTypes.bool.isRequired,
-    interfaceMode: React.PropTypes.oneOf([ApplabInterfaceMode.CODE, ApplabInterfaceMode.DESIGN]).isRequired,
+    interfaceMode: React.PropTypes.oneOf([
+      ApplabInterfaceMode.CODE,
+      ApplabInterfaceMode.DESIGN,
+      ApplabInterfaceMode.DATA
+    ]).isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
     screenIds: React.PropTypes.array.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
-    onInterfaceModeChange: React.PropTypes.func.isRequired
+    onInterfaceModeChange: React.PropTypes.func.isRequired,
+    useFirebase: React.PropTypes.bool.isRequired
   },
 
   handleViewData: function () {
@@ -34,12 +40,17 @@ var PlaySpaceHeader = React.createClass({
 
   render: function () {
     var leftSide, rightSide;
+    var showDataModeButton = this.props.useFirebase;
+    var toggleGroupWidth = showDataModeButton ? '160px' : '120px';
 
     if (!this.shouldHideToggle()) {
       leftSide = (
         <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
           <button id='codeModeButton' value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>
           <button id='designModeButton' value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
+          {showDataModeButton &&
+            <button id='dataModeButton' value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
+          }
         </ToggleGroup>
       );
     }
@@ -58,7 +69,7 @@ var PlaySpaceHeader = React.createClass({
         <table style={{width: '100%'}}>
           <tbody>
             <tr>
-              <td style={{width: '120px'}}>{leftSide}</td>
+              <td style={{width: toggleGroupWidth}}>{leftSide}</td>
               <td style={{maxWidth: 0}}>{rightSide}</td>
             </tr>
           </tbody>
@@ -75,7 +86,8 @@ var PlaySpaceHeader = React.createClass({
     return this.props.isViewDataButtonHidden ||
         this.props.isDesignModeHidden ||
         this.props.isShareView ||
-        !this.props.isEditingProject;
+        !this.props.isEditingProject ||
+        this.props.useFirebase;
   }
 });
 module.exports = connect(function propsFromStore(state) {
@@ -85,7 +97,8 @@ module.exports = connect(function propsFromStore(state) {
     isShareView: state.pageConstants.isShareView,
     isViewDataButtonHidden: state.pageConstants.isViewDataButtonHidden,
     interfaceMode: state.interfaceMode,
-    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+    useFirebase: state.pageConstants.useFirebase
   };
 }, function propsFromDispatch(dispatch) {
   return {

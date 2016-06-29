@@ -17,6 +17,8 @@
  * limitations under the License.
  */
 
+/* global Blockly, goog */
+
 /**
  * @fileoverview The class representing one block.
  * @author fraser@google.com (Neil Fraser)
@@ -79,6 +81,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.nextConnectionDisabled_ = false;
   this.collapsed_ = false;
   this.dragging_ = false;
+
   // Used to hide function blocks when not in modal workspace. This property
   // is not serialized/deserialized.
   this.currentlyHidden_ = false;
@@ -136,6 +139,8 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
     this.setCurrentlyHidden(true);
   }
 
+  this.handleBlockLimitChanges();
+
   /** @type {goog.events.EventTarget} */
   this.blockEvents = new goog.events.EventTarget();
 };
@@ -188,6 +193,35 @@ Blockly.Block.prototype.init = null;
 Blockly.Block.prototype.onchange = null;
 
 /**
+ * Update limit UI on block count changes.
+ */
+Blockly.Block.prototype.handleBlockLimitChanges = function() {
+  if (this.blockSpace && this.blockSpace.blockSpaceEditor) {
+    // Normally we want to show block limits in the flyout, but while editing
+    // blocks (e.g. in the Toolbox Blocks Editor), we'd like to show them in
+    // the main block space.
+    var shouldShowBlockLimits = Blockly.editBlocks ? !this.isInFlyout : this.isInFlyout;
+    if (shouldShowBlockLimits) {
+      this.blockSpace.blockSpaceEditor.blockLimits.events.listen('change',
+          this.onBlockLimitChange.bind(this));
+    }
+  }
+};
+
+Blockly.Block.prototype.onBlockLimitChange = function(eventObject) {
+  if (eventObject.type !== this.type) {
+    return;
+  }
+  if (!this.svg_) {
+    return;
+  }
+
+  // When editing blocks, show full count. Otherwise, show remaining #.
+  var displayCount = Blockly.editBlocks ? eventObject.limit : eventObject.remaining;
+  this.svg_.updateLimit(displayCount);
+};
+
+/**
  * @param {Blockly.BlockSpace} blockSpace target blockspace to begin rendering on
  */
 Blockly.Block.prototype.setRenderBlockSpace = function(blockSpace) {
@@ -231,6 +265,7 @@ Blockly.Block.prototype.initSvg = function() {
   }
   this.setCurrentlyHidden(this.currentlyHidden_);
   this.moveToFrontOfMainCanvas_();
+  this.setIsUnused();
 };
 
 /**
@@ -675,6 +710,7 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   } else {
     // Left-click (or middle click)
     Blockly.removeAllRanges();
+    this.setIsUnused(false);
     this.blockSpace.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
     // Look up the current translation and record it.
     var xy = this.getRelativeToSurfaceXY();
@@ -757,6 +793,11 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
     // that the block has been deleted.
     Blockly.fireUiEvent(window, 'resize');
   }
+
+  if (Blockly.selected) {
+    Blockly.selected.setIsUnused();
+  }
+
   if (Blockly.highlightedConnection_) {
     Blockly.highlightedConnection_.unhighlight();
     Blockly.highlightedConnection_ = null;
@@ -918,6 +959,20 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
       }
     };
     options.push(editableOption);
+
+    // limit
+    var getCurrentLimit = function() {
+      return block.blockSpace.blockSpaceEditor.blockLimits.getLimit(block.type);
+    };
+    var limitOption = {
+      text: "Set limit (current: " + (getCurrentLimit() || 'none') + ")",
+      enabled: true,
+      callback: function () {
+        block.blockSpace.blockSpaceEditor.blockLimits.setLimit(
+            block.type, prompt("New Limit", getCurrentLimit()));
+      }
+    };
+    options.push(limitOption);
   }
 
   // Allow the block to add or modify options.
@@ -1350,6 +1405,7 @@ Blockly.Block.prototype.setParent = function(newParent) {
   } else {
     // Remove this block from the blockSpace's list of top-most blocks.
     this.blockSpace.removeTopBlock(this);
+    this.setIsUnused();
   }
 
   this.parentBlock_ = newParent;
@@ -1506,6 +1562,10 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
 
 Blockly.Block.prototype.isNextConnectionDisabled = function() {
   return this.nextConnectionDisabled_;
+};
+
+Blockly.Block.prototype.isFunctionDefinition = function() {
+  return !!this.getProcedureInfo;
 };
 
 /**
@@ -1670,6 +1730,27 @@ Blockly.Block.prototype.setFillPattern = function(pattern) {
  */
 Blockly.Block.prototype.setFramed = function(isFramed) {
   this.blockSvgClass_ = isFramed ? Blockly.BlockSvgFramed : Blockly.BlockSvg;
+};
+
+Blockly.Block.prototype.isUnused = function() {
+  return this.svg_.isUnused();
+};
+
+Blockly.Block.prototype.setIsUnused = function(isUnused) {
+  if (isUnused === undefined) {
+    isUnused = this.previousConnection !== null &&
+        this.isUserVisible() &&
+        this.type !== 'functional_definition' &&
+        Blockly.mainBlockSpace &&
+        Blockly.mainBlockSpace.isReadOnly() === false &&
+        Blockly.mainBlockSpace.isTopBlock(this);
+  }
+  if (Blockly.showUnusedBlocks) {
+    this.svg_.setIsUnused(isUnused);
+  }
+  this.childBlocks_.forEach(function (block) {
+    block.setIsUnused(false);
+  });
 };
 
 /**

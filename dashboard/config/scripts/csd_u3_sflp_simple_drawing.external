@@ -20,9 +20,9 @@ Welcome to Game Lab! Game lab allows you to draw interactive games and animation
 
 # Vocab
 
-* Program - blah blah
-* Bug - blah blah
-* Debugging - blah blah
+* **Bug** - Part of a program that does not work correctly.
+* **Debugging** - Finding and fixing problems in your algorithm or program.
+* **Program** - An algorithm that has been coded into something that can be run by a machine.
 
 # Command Overview
 ### Shapes : 

@@ -1,5 +1,9 @@
 /* global trackEvent, appOptions */
 
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -28,7 +32,7 @@ module.exports = FeedbackUtils;
 
 var trophy = require('./templates/trophy.html.ejs');
 var utils = require('./utils');
-var _ = require('./lodash');
+var _ = require('lodash');
 var codegen = require('./codegen');
 var msg = require('./locale');
 var dom = require('./dom');
@@ -599,6 +603,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function (options) {
       // Success.
       case TestResults.ALL_PASS:
       case TestResults.FREE_PLAY:
+      case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
         var finalLevel = (options.response &&
           (options.response.message === "no more levels"));
         var stageCompleted = null;
@@ -756,7 +761,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
         phone.focus();
         dom.addClickTouchEvent(submitButton, function () {
           var phone = $(sharingDiv.querySelector("#phone"));
-          var params = jQuery.param({
+          var params = $.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
           });
@@ -764,7 +769,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           phone.prop('readonly', true);
           submitButton.disabled = true;
           submitted = true;
-          jQuery.post(options.response.phone_share_url, params)
+          $.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
               trackEvent("SendToPhone", "success");
@@ -850,6 +855,7 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
+    feedbackType === TestResults.PASS_WITH_EXTRA_TOP_BLOCKS ||
     feedbackType === TestResults.TOO_MANY_BLOCKS_FAIL ||
     feedbackType === TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL ||
     feedbackType === TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED ||
@@ -1094,7 +1100,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function (Dialog) {
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
 FeedbackUtils.prototype.getEmptyContainerBlock_ = function () {
-  var blocks = Blockly.mainBlockSpace.getAllBlocks();
+  var blocks = Blockly.mainBlockSpace.getAllUsedBlocks();
   return Blockly.findEmptyContainerBlock(blocks);
 };
 
@@ -1166,7 +1172,7 @@ FeedbackUtils.prototype.hasAllBlocks_ = function (blocks) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getUserBlocks_ = function () {
-  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
+  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
   var blocks = allBlocks.filter(function (block) {
     var blockValid = !block.disabled && block.type !== 'when_run';
     // If Blockly is in readOnly mode, then all blocks are uneditable
@@ -1213,7 +1219,7 @@ FeedbackUtils.blockShouldBeCounted_ = function (block) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getCountableBlocks_ = function () {
-  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
+  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
   var blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
   return blocks;
 };
@@ -1338,7 +1344,7 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
       return emptyBlockFailure;
     }
   }
-  if (!options.allowTopBlocks && this.hasExtraTopBlocks()) {
+  if (!Blockly.showUnusedBlocks && !options.allowTopBlocks && this.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
   if (this.studioApp_.hasDuplicateVariablesInForLoops()) {
@@ -1383,6 +1389,8 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
   if (this.studioApp_.IDEAL_BLOCK_NUM &&
       numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
     return TestResults.TOO_MANY_BLOCKS_FAIL;
+  } else if (this.hasExtraTopBlocks() && Blockly.showUnusedBlocks) {
+    return TestResults.PASS_WITH_EXTRA_TOP_BLOCKS;
   } else {
     return TestResults.ALL_PASS;
   }
@@ -1453,7 +1461,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
  * Check for '???' instead of a value in block fields.
  */
 FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (block) {
     return block.getTitles().some(function (title) {
       return title.value_ === '???' || title.text_ === '???';
     });
@@ -1466,7 +1474,7 @@ FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
  */
 FeedbackUtils.prototype.hasUnusedParam_ = function () {
   var self = this;
-  return Blockly.mainBlockSpace.getAllBlocks().some(function (userBlock) {
+  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (userBlock) {
     var params = userBlock.parameterNames_;
     // Only search procedure definitions
     return params && params.some(function (paramName) {
@@ -1485,7 +1493,7 @@ FeedbackUtils.prototype.hasUnusedParam_ = function () {
  * Ensure that all procedure calls have each parameter input connected.
  */
 FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function (userBlock) {
+  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (userBlock) {
     // Only check procedure_call* blocks
     if (!/^procedures_call/.test(userBlock.type)) {
       return false;
@@ -1505,7 +1513,7 @@ FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
 FeedbackUtils.prototype.hasUnusedFunction_ = function () {
   var userDefs = [];
   var callBlocks = {};
-  Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
+  Blockly.mainBlockSpace.getAllUsedBlocks().forEach(function (block) {
     var name = block.getTitleValue('NAME');
     if (/^procedures_def/.test(block.type) && block.userCreated) {
       userDefs.push(name);
@@ -1524,7 +1532,7 @@ FeedbackUtils.prototype.hasUnusedFunction_ = function () {
  */
 FeedbackUtils.prototype.hasIncompleteBlockInFunction_ = function () {
   var self = this;
-  return Blockly.mainBlockSpace.getAllBlocks().some(function (userBlock) {
+  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (userBlock) {
     // Only search procedure definitions
     if (!userBlock.parameterNames_) {
       return false;

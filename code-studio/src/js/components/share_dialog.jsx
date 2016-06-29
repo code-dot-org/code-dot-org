@@ -1,4 +1,7 @@
+var React = require('react');
 var ShareDialogBody = require('./share_dialog_body');
+// Note: DialogComponent uses window.React directly, otherwise we end up pulling
+// in apps's copy of React into our bundle
 var Dialog = require('@cdo/apps/templates/DialogComponent');
 
 /**

@@ -1,7 +1,14 @@
 "nl-NL":
   hour_of_code: Uur Code
   hello: Hallo wereld
+  'yes': Ja
+  'no': Nee
   select_language: Kies de gewenste taal
+  upgrade_ie_message: Code.org beëindigt de ondersteuning voor Internet Explorer 8,
+    9 en 10. Probeer te upgraden naar een moderne browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Leer meer
   en: informatica
   computer_science_edweek: Week van het Informaticaonderwijs
   csedweek_dates: 8-14 December 2014
@@ -130,12 +137,12 @@
     and empower children to innovate and create.
   third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
   third_party_tynker_btn_site: Bezoek Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
+  third_party_scratchjr_desc: Kras Jr. is een inleidende programmeertaal waarmee jonge
+    kinderen (leeftijd 5-7) hun eigen interactieve verhalen en spelletjes maken. Kinderen
+    kunnen samen grafische programmeren, blokken en tekens verplaatsen, springen,
+    dansen en zingen. Kinderen kunnen tekens in de verf-editor wijzigen, voegen hun
+    eigen stemmen en geluiden toe, zelfs invoegen van eigen foto's - vervolgens met
+    de programmering blokken maken zij hun personage en komt hij tot leven.
   third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
   third_party_scratchjr_btn_site: Bezoek Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
@@ -596,6 +603,7 @@
     voor basisschoolleerlingen.
   dashboard_landing_new_k5courses: Nieuw! Probeer onze cursussen voor basisschoolleerlingen.
   dashboard_landing_useful_links: Andere nuttige links (alleen in het Engels)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Stel ons persoonlijk een vraag! Bezoek onze maandelijkse
     video kantooruren.
   dashboard_landing_print_certificates: Print certificaten voor leerlingen die deze
@@ -616,6 +624,11 @@
   dashboard_landing_more_tutorials_desc: Er zijn meer opdrachten <a href="/learn/beyond">van
     onze partners.</a> Leer programmeren met robots, maak webpagina's, maak je eigen
     app of ontdek andere programmeertalen zoals C++, Ruby en Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Het Uur Code voor alle leeftijden
   dashboard_hoc_courses_desc: Probeer een 1-uurs cursus met je leerlingen!
   dashboard_hoc_courses_desc_and_cta: Probeer deze korte lessen van één uur met uw
@@ -668,6 +681,13 @@
   dashboard_action_required: verplicht
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -679,7 +699,7 @@
   dashboard_navigation_section_pd: Professionele ontwikkeling
   dashboard_navigation_section_speakers: Informatica <br/> gastsprekers
   dashboard_navigation_all_sections: Leerlingaccounts en vooruitgang
-  dashboard_navigation_view_progress: bekijk de vooruitgang
+  dashboard_navigation_view_progress: Voortgang
   dashboard_navigation_view_text_responses: Bekijk de tekstuele reacties
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Leerlingen Toevoegen
@@ -698,6 +718,7 @@
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nieuw onderdeel
@@ -708,6 +729,7 @@
   dashboard_sections_table_secret: Login-Type
   dashboard_sections_table_grade: Cijfer
   dashboard_sections_table_course: Cursus
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Leerlingen
   dashboard_sections_table_code: Groepscode
   dashboard_sections_name: Groepsnaam
@@ -802,6 +824,8 @@
   dashboard_course2: 'Cursus 2:'
   dashboard_course3: 'Cursus 3:'
   dashboard_course4: 'Cursus 4 (bèta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Lesprogramma
   dashboard_curriculum_overview: Basisschool Curriculum overzicht
   dashboard_overview: Overzicht
@@ -867,12 +891,13 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: Leer meer
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition: Als leerkracht neemt u het voortouw in een beweging
+    die elke leerling op elke school de mogelijkheid geeft om informatica te leren.
+    Nu is het de tijd om uw vertegenwoordigers van u te laten horen. Deze week schrijven
+    onderwijsleiders, 28 gouverneurs en CEO's van Amerika's grootste bedrijven samen
+    een open brief aan het Amerikaanse Congres met de vraag om informatica op de basisschool
+    te financieren.
+  dashboard_announce_petition_button: Voeg je naam toe
   code_hoc_coming: Het Uur Code is hier - van 8 -14 december!
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   learn_more: Probeer nu
@@ -1001,6 +1026,12 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1020,6 +1051,8 @@
   hoc_category_name: Een Uur Code
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
   applab_gradelevel: Leeftijd 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1738,11 +1771,3 @@
   infinity_shortcode: inf
   playlab_shortcode: afspelen
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

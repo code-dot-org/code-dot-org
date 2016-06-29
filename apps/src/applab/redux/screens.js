@@ -1,18 +1,23 @@
-import _ from '../../lodash';
+import Immutable from 'immutable';
 
 const CHANGE_SCREEN = 'screens/CHANGE_SCREEN';
+const TOGGLE_IMPORT_SCREEN = 'screens/TOGGLE_IMPORT_SCREEN';
 
-const initialState = {
-  currentScreenId: null
-};
+const ScreenState = Immutable.Record({
+  currentScreenId: null,
+});
+
+const initialState = new ScreenState();
 
 export default function (state = initialState, action) {
-  if (action.type === CHANGE_SCREEN) {
-    return _.assign({}, state, {
-      currentScreenId: action.screenId
-    });
+  switch (action.type) {
+    case CHANGE_SCREEN:
+      return state.set('currentScreenId', action.screenId);
+    case TOGGLE_IMPORT_SCREEN:
+      return state.set('isImportingScreen', action.importing);
+    default:
+      return state;
   }
-  return state;
 }
 
 /**
@@ -25,4 +30,14 @@ export default function (state = initialState, action) {
 export const changeScreen = screenId => ({
   type: CHANGE_SCREEN,
   screenId
+});
+
+/**
+ * Change the state of whether we are importing a screen or not.
+ * @param {!bool} importing
+ * @returns {{type: ActionType, importing: bool}}
+ */
+export const toggleImportScreen = (importing) => ({
+  type: TOGGLE_IMPORT_SCREEN,
+  importing,
 });

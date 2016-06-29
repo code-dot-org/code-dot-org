@@ -3,7 +3,8 @@
  * Cells
  * @see @cdo/apps/maze/cell
  */
-/* global React */
+var React = require('react');
+var ReactDOM = require('react-dom');
 var tiles = require('@cdo/apps/maze/tiles');
 var SquareType = tiles.SquareType;
 
