@@ -2,7 +2,6 @@ title ' TEMP CSD Unit 3 - Interactive Games and Animations'
 description 'Temp place to work on U3 of Disco'
 description_short 'Programming'
 login_required 'true'
-student_of_admin_required 'true'
 hidden 'true'
 
 stage 'Drawing in Game Lab'
