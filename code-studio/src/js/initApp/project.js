@@ -417,12 +417,12 @@ var projects = module.exports = {
       var args = Array.prototype.slice.apply(arguments);
       callback = args[0];
       forceNewVersion = args[1];
-
-      sourceAndHtml = {
-        source: this.sourceHandler.getLevelSource(),
-        html: this.sourceHandler.getLevelHtml(),
-        animations: this.sourceHandler.getAnimationMetadata()
-      };
+      this.sourceHandler.getAnimationMetadata((err, animations) => {
+        const source = this.sourceHandler.getLevelSource();
+        const html = this.sourceHandler.getLevelHtml();
+        this.save({source, html, animations}, callback, forceNewVersion);
+      });
+      return;
     }
 
     if (forceNewVersion) {
@@ -493,19 +493,19 @@ var projects = module.exports = {
       return;
     }
 
-    var source = this.sourceHandler.getLevelSource();
-    var html = this.sourceHandler.getLevelHtml();
-    var animations = this.sourceHandler.getAnimationMetadata();
+    this.sourceHandler.getAnimationMetadata((err, animations) => {
+      const source = this.sourceHandler.getLevelSource();
+      const html = this.sourceHandler.getLevelHtml();
+      if (currentSources.source === source &&
+          currentSources.html === html &&
+          currentSources.animations === animations) {
+        hasProjectChanged = false;
+        return;
+      }
 
-    if (currentSources.source === source &&
-        currentSources.html === html &&
-        currentSources.animations === animations) {
-      hasProjectChanged = false;
-      return;
-    }
-
-    this.save({source: source, html: html, animations: animations}, function () {
-      hasProjectChanged = false;
+      this.save({source, html, animations}, function () {
+        hasProjectChanged = false;
+      });
     });
   },
   /**

@@ -73,7 +73,7 @@ const PiskelEditor = React.createClass({
     if (this.isLoadingAnimation_) {
       return;
     }
-    console.log('onAnimationSaved', message);
+    console.log('onPiskelSaveEvent', message); // TODO: Remove
     this.props.editAnimation(this.loadedAnimation_, {
       blob: message.blob,
       dataURI: message.dataURI,

@@ -398,52 +398,77 @@ function blobToDataURI(blob, onComplete) {
 }
 
 /**
- * Dispatch on an interval to autosave animations to S3.
+ * Dispatch to save animations to S3.
+ * @param {function} onComplete callback - when all animations are saved
  * @returns {function()}
  */
-export function autosaveAnimations() {
+export function saveAnimations(onComplete) {
   return (dispatch, getState) => {
-    console.log('Autosaving animations');
     const state = getState().animationList;
     const changedAnimationKeys = state.list.filter(key => !state.data[key].saved);
     // If nothing changed, no action necessary.
     if (0 === changedAnimationKeys.length) {
-      console.log("No animations to save right now.");
       return;
     }
 
-    const onError = message => {
-      console.log('Error saving animation: ', message);
+    Promise.all(changedAnimationKeys.map(key => {
+          return saveAnimation(key, state.data[key])
+              .then(action => { dispatch(action); });
+        }))
+        .then(() => {
+          console.log(`Saved ${changedAnimationKeys.length} animations to S3`); // TODO: Remove
+          onComplete();
+        })
+        .catch(err => {
+          // TODO: What should we really do in this case?
+          console.log('Failed to save animations', err); // TODO: Remove?
+          onComplete();
+        });
+  };
+}
+
+/**
+ *
+ * @param {AnimationKey} animationKey
+ * @param {Object} animationData // TODO: Better type?
+ * @return {Promise} which resolves to a redux action object
+ */
+function saveAnimation(animationKey, animationData) {
+  return new Promise((resolve, reject) => {
+    if (typeof animationData.blob === 'undefined') {
+      reject(new Error(`Animation ${animationKey} has no loaded content.`));
+      return;
+    }
+
+    let xhr = new XMLHttpRequest();
+
+    const onError = function () {
+      reject(new Error(`${xhr.status} ${xhr.statusText}`));
     };
 
-    // Blockly.fireUiEvent(window, 'workspaceChange');
-    // $(window).trigger('appModeChanged');
-    // Could we hook into the normal autosave loop instead?
+    const onSuccess = function () {
+      if (xhr.status >= 400) {
+        onError();
+        return;
+      }
 
-    changedAnimationKeys.forEach(key => {
-      animationsApi.ajax(
-          'PUT',
-          key + '.png',
-          function success(xhr) {
-            try {
-              var response = JSON.parse(xhr.responseText);
-              console.log('Saved animation: ', response);
-              dispatch({
-                type: ON_ANIMATION_SAVED,
-                key: key,
-                version: response.versionId
-              });
-              dashboard.project.projectChanged();
-            } catch (e) {
-              onError(e.message);
-            }
-          },
-          function error(xhr) {
-            onError(xhr.status + ' ' + xhr.statusText);
-          },
-          state.data[key].blob);
-    });
-  };
+      try {
+        const response = JSON.parse(xhr.responseText);
+        resolve({
+          type: ON_ANIMATION_SAVED,
+          key: animationKey,
+          version: response.versionId
+        });
+      } catch (e) {
+        reject(e);
+      }
+    };
+
+    xhr.addEventListener('load', onSuccess);
+    xhr.addEventListener('error', onError);
+    xhr.open('PUT', animationsApi.basePath(animationKey + '.png'), true);
+    xhr.send(animationData.blob);
+  });
 }
 
 /**
