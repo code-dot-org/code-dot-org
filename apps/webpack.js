@@ -133,7 +133,7 @@ function create(options) {
       path: outputDir,
       filename: "[name]." + (minify ? "min." : "") + "js",
     },
-    devtool: options.minify ? 'source-map' : 'cheap-module-eval-source-map',
+    // devtool: options.minify ? 'source-map' : 'cheap-module-eval-source-map',
     entry: entries,
     plugins: [
       new webpack.DefinePlugin({
@@ -150,6 +150,7 @@ function create(options) {
   });
 
   if (provides) {
+    config.externals = _.clone(baseConfig.externals);
     provides.forEach(function (providedModule) {
       delete config.externals[providedModule];
     });

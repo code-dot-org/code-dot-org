@@ -80,18 +80,6 @@ Promise.all([
       "jquery": "$"
     }
   })),
-
-  build_commands.bundle(_.extend({}, defaultOptions, {
-    filenames: [
-      'pd/workshop_dashboard/workshop_dashboard.jsx'
-    ],
-    commonFile: 'pd',
-    browserifyGlobalShim: {
-      "jquery": "$",
-      "react": "React",
-      "react-dom": "ReactDOM"
-    }
-  }))
 ]).then(function (results) {
   var allStepsSucceeded = !results.some(function (result) {
     return result instanceof Error;

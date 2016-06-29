@@ -377,6 +377,12 @@ module.exports = function (grunt) {
         makerlab: './src/code-studio/makerlab/makerlabDependencies.js'
       },
       provides: ['johnny-five', 'playground-io', 'chrome-serialport']
+    },
+
+    {
+      entries: {
+        pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx'
+      }
     }
   ];
 
