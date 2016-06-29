@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import {assert} from '../util/configuredChai';
 
 var authoredHintUtils = require('@cdo/apps/authoredHintUtils');

@@ -1,0 +1,33 @@
+name  'U1L6 Lesson Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+## Lesson 1.6: Sending Numbers
+
+### Overview
+<img src="https://images.code.org/3f812d1e4d0f15fcd2b3782097e838b0-image-1465246540045.png" style="float:right; margin-left:30px">
+
+**Pacing: Unit 1, Week 2**
+<br>
+**Lesson Type: Internet Simulator, Group Problem Solving**
+
+In this lesson students will return to the Internet Simulator in order to send a simple line drawing to a classmate. Students will be presented a grid on which they will draw an image (connecting 3-7 dots with straight lines). They must develop a protocol which will allow them to send any image they might create on their grids, paying particular attention to how many bits are used to represent each binary number. Students will therefore have additional practice encoding and decoding binary numbers and develop further intuitions about the properties of binary numbers in a hands-on way. The lesson concludes by testing protocols using a teacher-supplied test-image to transmit.
+
+<br>
+
+### Things to keep in mind while planning this lesson at TeacherCon
+
+- For TeacherCon, you can skip the binary numbers review at the beginning of the lesson.
+- This is a new version of the Internet Simulator &mdash; decide whether you want to demonstrate the new version, show the tutorial video to the whole group, or have them watch the video individually.
+- You might want to prepare a few different drawings to give to participants as a “challenge” once they’ve developed a protocol they’re confident with.
+- You can change a setting in the Internet Simulator to work with the decimal numbers so you don’t have to operate in binary.
+- As people work, challenge them as their “adversary” by asking if/how their protocol would handle a much larger image. 
+
+### U1L6 Lesson Plan
+
+<br>
+Head over to curriculum.code.org to see this lesson and all associated resources (like videos and worksheets). 
+<br><br>
+<h4>
+<a href="https://curriculum.code.org/csp/unit1/6/" target="blank">U1L6 Lesson Plan <i class="fa fa-external-link-square"/></a><br>
+</h4>
+MARKDOWN

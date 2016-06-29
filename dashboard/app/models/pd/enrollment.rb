@@ -14,6 +14,7 @@
 #  school_zip         :integer
 #  school_type        :string(255)
 #  school_state       :string(255)
+#  user_id            :integer
 #
 # Indexes
 #
@@ -24,17 +25,19 @@
 class Pd::Enrollment < ActiveRecord::Base
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
   belongs_to :school_district
+  belongs_to :user
 
-  validates :name, :email, :school, :school_type, presence: true
+  validates :name, :email, presence: true
   validates_confirmation_of :email
-  validate :school_district_or_zip
 
-  def school_district_or_zip
-    # We need either a school district & state pair, or a ZIP, but not both.
-    unless (!school_district_id.blank? && !school_state.blank?) ^ !school_zip.blank?
-      # "School district " will appear at the beginning of this error string.
-      errors.add(:school_district, "(and state) or school ZIP is required")
-    end
+  # The enrollment is from one of 2 sources:
+  #   1. Web form filled out by user - all school fields required.
+  #   2. Automatic association for a user who attends the workshop unenrolled.
+  validate :user_or_school_info_required
+  def user_or_school_info_required
+    return if self.user_id
+    errors.add(:school, 'is required') unless self.school
+    errors.add(:school_type, 'is required') unless self.school_type
   end
 
   before_create :assign_code
@@ -42,8 +45,34 @@ class Pd::Enrollment < ActiveRecord::Base
     self.code = unused_random_code
   end
 
-  def user
-    User.find_by_email_or_hashed_email self.email
+  def resolve_user
+    user || User.find_by_email_or_hashed_email(self.email)
+  end
+
+  def self.create_for_unenrolled_attendees(workshop)
+    enrolled_user_ids = Set.new
+    workshop.enrollments.each do |enrollment|
+      user = enrollment.resolve_user
+      enrolled_user_ids.add user.id if user
+    end
+
+    [].tap do |new_enrollments|
+      Pd::Attendance.for_workshop(workshop).distinct_teachers.each do |attendee|
+        next if enrolled_user_ids.include? attendee.id
+
+        if attendee.email.blank?
+          CDO.log.warn "Unable to create an enrollment for workshop attendee with no email. User Id: #{attendee.id}"
+          next
+        end
+
+        new_enrollments << Pd::Enrollment.create!(
+          workshop: workshop,
+          name: attendee.name,
+          email: attendee.email,
+          user: attendee
+        )
+      end
+    end
   end
 
   private

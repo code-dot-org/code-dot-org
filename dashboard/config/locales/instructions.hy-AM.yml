@@ -7,16 +7,17 @@
         in the picture. (Each line is 100 pixels long)
       2-3 Artist 11_instruction: |
         Give the stop sign a border by making an octagon
-        with 100 pixels sides. \r
-        \r
+        with 100 pixels sides. \\r
+        \\r
       2-3 Artist 12_instruction: |-
-        Create a circle to finish the eyeball!\r
-        \r
+        Create a circle to finish the eyeball!\\r
+        \\r
         If
         the artist turns 1 degree with each loop, how many times do you need to repeat
         the code to draw a circle? 180? 360? 500?
-      2-3 Artist 2 new_instruction: "This house has a half-finished wall. Each side\nis
-        100, but the half-finished wall is only 50. Complete the wall. \n"
+      2-3 Artist 2 new_instruction: |
+        This house has a half-finished wall. Each side
+        is 100, but the half-finished wall is only 50. Complete the wall.
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. \n"
       2-3 Artist 3.4_instruction: |
@@ -27,7 +28,7 @@
         70 pixels less.
       2-3 Artist 3new_instruction: |-
         The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. \r
+        a black hat that is 70 pixels shorter. \\r
         (Note: The width of each hat is
         50 pixels.)
       2-3 Artist 4_instruction: Help me complete the house for this cat.
@@ -37,9 +38,10 @@
       2-3 Artist 6_instruction: |
         This house needs a roof! Draw the triangle.  Hint:
         all three sides are the same length.
-      2-3 Artist 7_instruction: "Finish drawing the last set of windows on the school\nso
-        that everyone in class can see outside. The sides of each square window\npane
-        are 25 pixels long. \n"
+      2-3 Artist 7_instruction: |
+        Finish drawing the last set of windows on the school
+        so that everyone in class can see outside. The sides of each square window
+        pane are 25 pixels long.
       2-3 Artist 8_instruction: |
         Complete the rooms for each of the animals by splitting
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
@@ -53,12 +55,12 @@
         be 50 pixels wide.  Can you fix it?
       2-3 Artist Debugging 10_instruction: |-
         The direction pad on my game controller
-        is too narrow. \r
-        \r
+        is too narrow. \\r
+        \\r
         Can you make it wider by 10 pixels?
       2-3 Artist Debugging 11_instruction: |-
-        My snowflake is falling apart!\r
-        \r
+        My snowflake is falling apart!\\r
+        \\r
         Can
         you figure out what's going wrong?
       2-3 Artist Debugging 12_instruction: |
@@ -66,12 +68,12 @@
         this scene.  Can you help me?
       2-3 Artist Debugging 2_instruction: |-
         This code for the cat's whiskers is wrong.
-        \r
-        \r
+        \\r
+        \\r
         Fix this code to draw whiskers that are all the same length.
       2-3 Artist Debugging 3_instruction: |-
-        My boat has a hole! \r
-        \r
+        My boat has a hole! \\r
+        \\r
         What do you
         need to fix to make the ends meet?
       2-3 Artist Debugging 4_instruction: |
@@ -79,43 +81,43 @@
         draw? Finish connecting the dots using the proper lines and angles.
       2-3 Artist Debugging 5_instruction: |-
         The code that we have for the leg and
-        foot is wrong. \r
-        \r
+        foot is wrong. \\r
+        \\r
         Can you fix it?
       2-3 Artist Debugging 6_instruction: |-
         Looks like I'm sitting on a chair that’s
-        missing a leg!\r
-        \r
+        missing a leg!\\r
+        \\r
         Edit the code to draw the last leg.
       2-3 Artist Debugging 7_instruction: |-
-        Looks like the C in code is drawn backwards!\r
-        \r
+        Looks like the C in code is drawn backwards!\\r
+        \\r
         Can
         you make it look like a C again?
       2-3 Artist Debugging 8_instruction: |-
         My teacher says that I should finish what
-        I start!\r
-        \r
+        I start!\\r
+        \\r
         Help me finish my pinwheel. Can you figure out what's wrong?
       2-3 Artist Debugging 9_instruction: |-
-        Something is off!\r
-        \r
+        Something is off!\\r
+        \\r
         The code for
         this stem is wrong. Can you figure out how to get the artist to trace the
         stem the right way?
       2-3 Artist Debugging Assessment 1_instruction: |-
         Assessment: Why does this square
-        end up being 75 pixels too small on each side?  \r
-        \r
+        end up being 75 pixels too small on each side?  \\r
+        \\r
         Where does the code
         go wrong?
       2-3 Artist Free Play_instruction: Free-play! Draw anything you'd like.
       2-3 Artist Functions 1_instruction: |-
-        "Me zombie artist. Me love drawing!"  \r
-        \r
+        "Me zombie artist. Me love drawing!"  \\r
+        \\r
         Help
-        the zombie draw square glasses.  \r
-        \r
+        the zombie draw square glasses.  \\r
+        \\r
         The bridge between the glasses is
         25 pixels shorter than the width of the squares.
       2-3 Artist Functions 10_instruction: |
@@ -124,41 +126,48 @@
         of a machine!
       2-3 Artist Functions 11.5_instruction: |-
         Here's that same `draw a hexagon`
-        function. \r
-        \r
+        function. \\r
+        \\r
         What happens if you turn 60 degrees in your main program
         each time you loop?
       2-3 Artist Functions 11_instruction: |-
         We've renamed the `draw a square` function
         to `draw a hexagon`, but it's still giving us squares! Can you modify the
-        `draw a hexagon` function to draw a hexagon with 50 pixel sides? \r
-        \r
+        `draw a hexagon` function to draw a hexagon with 50 pixel sides? \\r
+        \\r
         Draw
         the image using the new function!
+      2-3 Artist Functions 12 Mike_instruction: |-
+        Functions are really great for drawing
+        complex things multiple times. \\r
+        \\r
+        Can you use the `draw a flower` function
+        to fill the rest of the planter box?\\r
+        The plants are all 100 pixels apart.
       2-3 Artist Functions 12_instruction: |-
         Functions are really great for drawing
-        complex things multiple times. \r
-        \r
+        complex things multiple times. \\r
+        \\r
         Can you use the `draw a flower` function
-        to fill the rest of the planter box?\r
+        to fill the rest of the planter box?\\r
         The plants are all 100 pixels apart.
       2-3 Artist Functions 13_instruction: |
         We've provided you with four functions.
         Use them any way you like inside of one or more loops to make pictures that
         you can share with your friends. Press run to see an example.
       2-3 Artist Functions 2_instruction: |-
-        Functions let you define new blocks! \r
-        \r
+        Functions let you define new blocks! \\r
+        \\r
         We've
         moved the blocks needed for drawing a square into a function called `draw
         a square`. This time, use the `draw a square` function to create the glasses.
-        \r
-        \r
+        \\r
+        \\r
         The squares are 75 pixels apart.
       2-3 Artist Functions 3_instruction: |-
         Edit the function to draw a square with
-        a side length of 115 to draw the bigger glasses. \r
-        \r
+        a side length of 115 to draw the bigger glasses. \\r
+        \\r
         The squares are now
         45 pixels apart.
       2-3 Artist Functions 4_instruction: |
@@ -199,7 +208,7 @@
       2-3 Artist Loops 8_instruction: Let's put both elements inside a loop.
       2-3 Artist Loops 9_instruction: |-
         We're going to loop the same elements, but
-        now we're going to add some distance between them.\r
+        now we're going to add some distance between them.\\r
         Use the same code as
         before, but add a step forward at the end of the outer loop.
       2-3 Artist Loops New 1_instruction: |
@@ -212,12 +221,11 @@
         Rebuild the code from the last puzzle,
         but this time, add a left turn of 30 degrees inside the loop. Now, repeat
         it 24 times instead of 7.
-      2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
+      2-3 Artist Loops New 12_instruction: Draw a diamond with sides of 100 pixels.
       2-3 Artist Loops New 13_instruction: |-
         We are going to start you with some code
-        (in grey) to make one diamond. \r
-        \r
+        (in grey) to make one diamond. \\r
+        \\r
         Loop the grey code to create a fun
         pattern!
       2-3 Artist Loops New 14_instruction: |
@@ -249,52 +257,52 @@
         Loop this code 12 times to complete
         the curls.
       2-3 Artist Nested Loops 2_instruction: |-
-        Now loop the triangle 6 times. \r
-        \r
+        Now loop the triangle 6 times. \\r
+        \\r
         After
         each triangle, you'll need to turn 60 degrees before drawing the next.
       2-3 Artist Nested Loops 3_instruction: |-
         You'll need to loop the triangle 12
-        times to draw this pattern. \r
-        \r
+        times to draw this pattern. \\r
+        \\r
         Divide the number of degrees in a circle
         (360) by the number of shapes you're drawing (12) to figure out how far to
         turn after each shape.
       2-3 Artist Nested Loops 4_instruction: |-
         Loop this diamond 12 times to draw
-        a flower!\r
-        \r
+        a flower!\\r
+        \\r
         Note: We'll use the same angle to loop 12 diamonds as we
-        did for 12 triangles.  \r
+        did for 12 triangles.  \\r
         How much do you need to turn after each shape?
       2-3 Artist Nested Loops 5_instruction: |-
         Fill in this building's windows using
-        a nested loop. \r
-        \r
+        a nested loop. \\r
+        \\r
         The windows are 20 pixels long and 20 pixels apart.
       2-3 Artist Nested Loops 6_instruction: |-
         This dinosaur has 8 spikes running
-        up its tail.\r
+        up its tail.\\r
         Each spike is 30 pixels long. Loop the triangle 8 times, but
         make sure to jump forward after each one!
       2-3 Artist Nested Loops 7_instruction: |-
         Loop this triangle 10 times to draw
-        the sun. \r
-        \r
-        You'll need to move and turn after each triangle. \r
-        \r
+        the sun. \\r
+        \\r
+        You'll need to move and turn after each triangle. \\r
+        \\r
         You
         can figure out how much to turn by dividing the number of degrees in a circle
         by the number of triangles that make it up.
       2-3 Artist Nested Loops 8_instruction: |-
         Now let's add some grass to our picture.
-        \r
-        \r
+        \\r
+        \\r
         Each tuft of grass is 50 pixels apart.
       2-3 Artist Nested Loops 9_instruction: |-
         We'll finish this picture by adding
-        our flower. \r
-        \r
+        our flower. \\r
+        \\r
         Loop the diamond 12 times to draw the flower.
       2-3 Artist Nested Loops Free Play_instruction: |
         Free play, draw something cool
@@ -305,41 +313,41 @@
       2-3 Bee Conditionals 10_instruction: |
         Purple flowers may have either 1 or 0
         nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.\r
-      2-3 Bee Conditionals 11_instruction: "I wonder what's out there!\\r\n\\r\nHelp\nme
+        have any.\\r
+      2-3 Bee Conditionals 11_instruction: "I wonder what's out there!\\\\r\n\\\\r\nHelp\nme
         fly around the yard and collect nectar only from the flowers that have\nsome. "
       2-3 Bee Conditionals 12_instruction: |
         Help me find all of the nectar using
         as few blocks as possible!
       2-3 Bee Conditionals 13_instruction: |-
-        There's a lot happening here!\r
-        \r
+        There's a lot happening here!\\r
+        \\r
         Use
         what you've learned to collect all of the nectar and then make the honey.
       2-3 Bee Conditionals 14_instruction: |-
-        Let's put everything together!\r
-        \r
+        Let's put everything together!\\r
+        \\r
         Use
         what you've learned to help me collect nectar only from flowers that have
         it, using as few blocks as possible.  Don't forget to make honey at the end.
       2-3 Bee Conditionals 15_instruction: |-
-        This stair step pattern should look familiar.  \r
-        \r
+        This stair step pattern should look familiar.  \\r
+        \\r
         Can
         you collect nectar only from the flowers that have some, using as few blocks
         as possible?
       2-3 Bee Conditionals 2_instruction: |-
-        I'm a hungry bee! \r
+        I'm a hungry bee! \\r
         Help me collect
         all of the nectar from the flowers using the fewest number of blocks.
-      2-3 Bee Conditionals 3_instruction: "Look at all of that nectar!\\r\n\\r\nHelp\nme
+      2-3 Bee Conditionals 3_instruction: "Look at all of that nectar!\\\\r\n\\\\r\nHelp\nme
         collect the nectar and make the honey using as few blocks as you can.  "
       2-3 Bee Conditionals 4_instruction: |
         Help me collect all of the nectar from
         the flowers and make all the honey.
       2-3 Bee Conditionals 5_instruction: |-
         Be careful not to collect nectar from
-        a purple flower if it doesn't have any. \r
+        a purple flower if it doesn't have any. \\r
         You must first check if the nectar
         is equal to 1 using the `if nectar` block.
       2-3 Bee Conditionals 6_instruction: |
@@ -361,49 +369,49 @@
         These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar.
       2-3 Bee Debugging 10_instruction: |-
-        This puzzle is making me loopy! \r
+        This puzzle is making me loopy! \\r
         Fix
         the error(s) to collect all of the nectar and make all of the honey.
       2-3 Bee Debugging 2_instruction: |-
-        Can you find the problem here?\r
+        Can you find the problem here?\\r
         Fix the
         error(s) to collect all of the nectar.
       2-3 Bee Debugging 3_instruction: |-
-        Ooh, this one stings!\r
-        \r
+        Ooh, this one stings!\\r
+        \\r
         Fix the error(s)
         to collect all of the nectar.
       2-3 Bee Debugging 4_instruction: |
         These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar and make all of the honey.
       2-3 Bee Debugging 5_instruction: |-
-        That flower looks tasty! \r
-        \r
+        That flower looks tasty! \\r
+        \\r
         Fix the
         error(s) to collect all of the nectar.  You can now use both run and step.
       2-3 Bee Debugging 6_instruction: |-
-        What a sweet challenge!\r
-        \r
+        What a sweet challenge!\\r
+        \\r
         Fix the error(s)
         to collect all of the nectar.
       2-3 Bee Debugging 7_instruction: |
         Fix the error(s) to collect all of the nectar
         and make all of the honey.
       2-3 Bee Debugging 8_instruction: |-
-        So many beautiful flowers!\r
-        \r
+        So many beautiful flowers!\\r
+        \\r
         Fix the
         error(s) to collect all of the nectar.
       2-3 Bee Debugging 9_instruction: |-
-        "Bee" patient with this one!\r
-        \r
+        "Bee" patient with this one!\\r
+        \\r
         You
         will need to fix a couple of things in this program to collect all of the
         nectar and make all of the honey.
       2-3 Bee Debugging Assessment 1_instruction: |-
         Assessment:  Now it's time to
-        show what you know!\r
-        \r
+        show what you know!\\r
+        \\r
         Fix the error(s) to collect all of the nectar and
         make all of the honey.
       2-3 Bee Functions 1_instruction: |
@@ -412,20 +420,20 @@
         flower.
       2-3 Bee Functions 10_instruction: |-
         Purple flowers change between either 1 or
-        0 nectar each time you run the puzzle.   \r
-        \r
+        0 nectar each time you run the puzzle.   \\r
+        \\r
         Create a function that collects
         nectar only from purple flowers that have nectar.
       2-3 Bee Functions 2_instruction: |-
         Functions are blocks of code that perform
-        a task.  \r
-        \r
+        a task.  \\r
+        \\r
         Use the `get 5` function to get 5 nectars at a time.
       2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
       2-3 Bee Functions 4_instruction: |-
         The `move and get nectar` function turns
-        the bee, collects nectar, and then returns the bee to where it started.  \r
-        \r
+        the bee, collects nectar, and then returns the bee to where it started.  \\r
+        \\r
         Use
         the function to collect all of the nectar.
       2-3 Bee Functions 5_instruction: |
@@ -453,8 +461,8 @@
         Assessment: Create a function
         to move forward and make 3 honey, then return the bee to where it started.
       2-3 Bee Loops 1_instruction: |-
-        Those flowers look tasty!\r
-        \r
+        Those flowers look tasty!\\r
+        \\r
         Collect nectar
         from each of the flowers using the fewest blocks possible.
       2-3 Bee Loops 10_instruction: |
@@ -469,8 +477,9 @@
       2-3 Bee Loops 13_instruction: |
         Assessment: Collect all of the nectar using
         the fewest blocks possible.
-      2-3 Bee Loops 1A_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
-        from these flowers? \n"
+      2-3 Bee Loops 1A_instruction: |
+        Hi, I'm a bee. Can you help me collect the
+        nectar from these flowers?
       2-3 Bee Loops 2_instruction: |
         Collect all the nectar and make all of the honey
         using the fewest blocks possible.
@@ -485,20 +494,20 @@
         Now use the `repeat` block to collect all of
         the nectar and make all of the honey.
       2-3 Bee Loops 4_instruction: |-
-        Such a busy bee!\r
-        \r
+        Such a busy bee!\\r
+        \\r
         Help bee collect all
         of the nectar and make all of the honey with the fewest blocks possible.
       2-3 Bee Loops 4A_instruction: |-
-        How many times can loops help you in this puzzle?  \r
-        \r
+        How many times can loops help you in this puzzle?  \\r
+        \\r
         Loops
         are your friend! Use a few of them to complete this puzzle with the fewest
         blocks possible.
       2-3 Bee Loops 5_instruction: |-
         The shape of this path is different than the
-        others. \r
-        \r
+        others. \\r
+        \\r
         Can you collect all of the nectar using as few blocks as possible?
       2-3 Bee Loops 6_instruction: |
         Can you find the quickest way for the bee to
@@ -508,11 +517,11 @@
         bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
       2-3 Bee Loops 8_instruction: |-
         These purple flowers have different amount of
-        nectar each time you run the puzzle. \r
-        \r
+        nectar each time you run the puzzle. \\r
+        \\r
         Use the `while nectar` loop to
-        collect all of the nectar. \r
-        \r
+        collect all of the nectar. \\r
+        \\r
         This loop will run as long as the condition
         is true, in this case `nectar > 0`.
       2-3 Bee Loops 9_instruction: |
@@ -522,9 +531,10 @@
       2-3 Bee Loops Assessment 1_instruction: |
         Assessment: Use a `while` loop to
         collect all of the nectar from these flowers.
-      2-3 Maze 1_instruction: "Can you help me catch the naughty pig? Stack a couple\nof
-        `move forward` blocks below the `when run` block and press \"Run\". \n"
-      2-3 Maze 10_instruction: Guide me to the green evilness! (Watch out for TNT)
+      2-3 Maze 1_instruction: |
+        Can you help me catch the naughty pig? Stack a couple
+        of `move forward` blocks below the `when run` block and press "Run".
+      2-3 Maze 10_instruction: "Ազգգային ինձ կանաչ evilness! (Watch դուրս համար TNT)"
       2-3 Maze 11_instruction: |
         Get me to the flower I'm hungry! How many times
         do you have to repeat a block?
@@ -537,6 +547,10 @@
       2-3 Maze 12 (old)_instruction: |
         Get me to the pig, now with the Repeat times
         block!
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: |
         Can you get to the pig by creating a loop that uses
         only one `move forward` block inside of a `repeat`?
@@ -566,26 +580,26 @@
       2-3 Maze 3_instruction: |
         Trace the path and lead me to the silly pig. Avoid
         TNT or feathers will fly!
-      2-3 Maze 4_instruction: Guide me to the green evilness! (Watch out for TNT)
-      2-3 Maze 5_instruction: Guide me to the green evilness! (Watch out for TNT)
+      2-3 Maze 4_instruction: "Ազգգային ինձ կանաչ evilness! (Watch դուրս համար TNT)"
+      2-3 Maze 5_instruction: "Ազգգային ինձ կանաչ evilness! (Watch դուրս համար TNT)"
       2-3 Maze 6_instruction: |
         Keep calm and help me find the bad pig. Otherwise
         I might get angry!
-      2-3 Maze 7_instruction: Guide me to the green evilness! (Watch out for TNT)
+      2-3 Maze 7_instruction: "Ազգգային ինձ կանաչ evilness! (Watch դուրս համար TNT)"
       2-3 Maze 8_instruction: Get me to the pig!
-      2-3 Maze 9_instruction: Guide me to the green evilness! (Watch out for TNT)
+      2-3 Maze 9_instruction: "Ազգգային ինձ կանաչ evilness! (Watch դուրս համար TNT)"
       2-3 Maze Loops 1_instruction: |
         Can you get me to the pig using 5 of the same
         kind of blocks?
       2-3 Maze Loops 17_instruction: Get me to the sunflower!
       2-3 Maze Loops 18_instruction: |-
         Get me to the sunflower using the fewest blocks
-        possible!  \r
-        \r
+        possible!  \\r
+        \\r
         Try using one `repeat` loop inside of another to cut down
         on the amount of code you need.
       2-3 Maze Loops 19_instruction: |-
-        Let's take this to another level! \r
+        Let's take this to another level! \\r
         Use
         loops to get me to the sunflower with the fewest loops possible.
       2-3 Maze Loops 20_instruction: |
@@ -594,8 +608,9 @@
       2-3 Maze Loops 21_instruction: |
         Get me to the sunflower using the fewest blocks
         possible!
-      2-3 Maze Loops Assessment 1_instruction: "Assessment:  Get me to the sunflower\nusing
-        only 5 blocks! \n"
+      2-3 Maze Loops Assessment 1_instruction: |
+        Assessment:  Get me to the sunflower
+        using only 5 blocks!
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
         him!
@@ -616,7 +631,7 @@
       2-3 Maze sq2_instruction: |
         Trace the path and lead me to the silly pig.  Avoid
         the TNT or the feathers will fly!
-      2-3 Maze sq3_instruction: Guide me to the green evilness! (Watch out for TNT)
+      2-3 Maze sq3_instruction: "Ազգգային ինձ կանաչ evilness! (Watch դուրս համար TNT)"
       2-3 Maze sq4_instruction: |
         Keep calm and help me find the bad pig. Otherwise
         I might get angry!
@@ -635,8 +650,9 @@
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
       2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
-      4-5 Artist 1_instruction: "Help me finish drawing my box. (Each line is 300\npixels
-        long) \n"
+      4-5 Artist 1_instruction: |
+        Help me finish drawing my box. (Each line is 300
+        pixels long)
       4-5 Artist 10_instruction: |
         Press "Run" to try the code. Then, repeat it
         enough times to complete the drawing. The colors will be different every time.
@@ -669,10 +685,10 @@
         Complete the drawing.
       4-5 Artist 8_instruction: |-
         The halfway line on a soccer field is *perpendicular*
-        to the sidelines.   \r
+        to the sidelines.   \\r
         This rectangle has a perimeter of 800 pixels total,
-        and it is 240 pixels wide. How tall is it?   \r
-        \r
+        and it is 240 pixels wide. How tall is it?   \\r
+        \\r
         Draw the bounds and the
         halfway line.
       4-5 Artist 9_instruction: |
@@ -687,9 +703,10 @@
       4-5 Artist For Loops 11_instruction: |
         Complete the "for" block so that it
         counts 0, 20, 40, 60, 80... 200.
-      4-5 Artist For Loops 12_instruction: "What happens if you reverse the \"from\"\nand
-        \"to\" numbers? Complete the \"for\" block so that it counts 200, 180,\n160,
-        140, 120...0. \n"
+      4-5 Artist For Loops 12_instruction: |
+        What happens if you reverse the "from"
+        and "to" numbers? Complete the "for" block so that it counts 200, 180,
+        160, 140, 120...0.
       4-5 Artist For Loops 13_instruction: |
         This design got started without a "for"
         loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
@@ -767,10 +784,11 @@
       4-5 Artist Functions 2b_instruction: |
         Now create a function called "draw a
         small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: "Now create the functions \"draw a medium\ntriangle\"
-        and \"draw a large triangle\". The \"draw a small triangle\" function\nis
-        done for you. The triangles have side lengths of 50 (small), 100 (medium),\nand
-        150 (large). \n"
+      4-5 Artist Functions 3_instruction: |
+        Now create the functions "draw a medium
+        triangle" and "draw a large triangle". The "draw a small triangle" function
+        is done for you. The triangles have side lengths of 50 (small), 100 (medium),
+        and 150 (large).
       4-5 Artist Functions 4_instruction: |
         This new "draw a triangle" function
         has a parameter and can do the work of all three functions before. Draw the
@@ -797,30 +815,31 @@
         height is 100 and the next flower is always 50 pixels more than the height
         of the previous one. The flowers are also 100 pixels apart.
       4-5 Artist Patterns 1_instruction: |-
-        Draw this square using a loop.\r
-        \r
+        Draw this square using a loop.\\r
+        \\r
         Each
         side is 20 pixels long.
       4-5 Artist Patterns 10_instruction: |
         This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. \r
-        \r
+        loop the whole thing 4 times to draw the whole honeycomb. \\r
+        \\r
         You'll
         need to jump back 120 pixels in your outermost loop to make sure the artist
-        doesn't draw off the screen.\r
-      4-5 Artist Patterns 11_instruction: "How many times do you need to loop this\nto
-        draw a half circle? \n"
+        doesn't draw off the screen.\\r
+      4-5 Artist Patterns 11_instruction: |
+        How many times do you need to loop this
+        to draw a half circle?
       4-5 Artist Patterns 12_instruction: |-
         If you create another loop like this one,
-        but turn left instead of right, what happens? \r
-        \r
+        but turn left instead of right, what happens? \\r
+        \\r
         Can you repeat all of
         that to draw this wave?
       4-5 Artist Patterns 13_instruction: |-
         Now let's loop that whole thing four
         times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! \r
-        \r
+        just turn 90 degrees! \\r
+        \\r
         If looping a 3 degree turn 60 times makes a
         half circle, which of these blocks of code will make an additional quarter
         circle for the corners?
@@ -841,10 +860,10 @@
         this block to draw the full grid of diamonds?
       4-5 Artist Patterns 5_instruction: |
         Repeat this code to make a row of 6 diamonds.
-        \r
-        \r
+        \\r
+        \\r
         Notice that we changed our diamond code to repeat 3 times instead
-        of 2 - why do you think that is?\r
+        of 2 - why do you think that is?\\r
       4-5 Artist Patterns 6_instruction: |
         How many times do you need to repeat this
         block to draw the full grid of diamonds?
@@ -861,8 +880,8 @@
         of hexagons. Notice how our second row is shifted to the right.
       4-5 Artist Patterns 9_instruction: |-
         Now repeat this code 3 times and draw the
-        whole row. \r
-        \r
+        whole row. \\r
+        \\r
         Each hexagon is 80 pixels wide from the furthest points
         left to right.
       4-5 Artist Patterns Free Play_instruction: |
@@ -885,11 +904,11 @@
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
       4-5 Bee Conditionals 2_instruction: |-
-        More clouds! \r
-        \r
+        More clouds! \\r
+        \\r
         Check underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \r
-        \r
+        every cloud to see if it is hiding a flower before you get nectar.  \\r
+        \\r
         Remember:
         Not all clouds hide the same thing!
       4-5 Bee Conditionals 3_instruction: |
@@ -905,10 +924,10 @@
         if it is a flower, else to make honey (because it is a honeycomb).
       4-5 Bee Conditionals 5_instruction: |-
         There will be either a flower or a honeycomb
-        under each of those clouds!\r
-        \r
+        under each of those clouds!\\r
+        \\r
         Use the `if/else` block to collect nectar
-        if there is a flower.\r
+        if there is a flower.\\r
         Otherwise, make honey (because there is a honeycomb).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
@@ -917,36 +936,36 @@
         the unknown amount of nectar.
       4-5 Bee Conditionals 6_instruction: |-
         I am not sure how much nectar this flower
-        has, but I know it has either 1, 2, or 3 nectar. \r
-        \r
+        has, but I know it has either 1, 2, or 3 nectar. \\r
+        \\r
         Combine the conditional
         blocks (`if` and/or `if/else`) to only get as much nectar as the flower has.
-        \r
-        \r
+        \\r
+        \\r
         Remember, the amount of nectar can change each time you run the puzzle!
       4-5 Bee Conditionals 7_instruction: |-
         These flowers can have 3, 2, or 1 nectar.
-        \r
-        \r
+        \\r
+        \\r
         Complete the `check purple flower` function and use it to collect
         all of the nectar at the flowers.
       4-5 Bee Conditionals 8_instruction: |-
         Write the function for `check flower make
-        honey`. \r
-        \r
+        honey`. \\r
+        \\r
         Your function should check if the purple flower has 3, 2,
-        or 1 nectar and get all of the nectar. \r
+        or 1 nectar and get all of the nectar. \\r
         Then, move forward and make honey.
       4-5 Bee Conditionals Assessment 1_instruction: |
         **Assessment:** This cloud
-        is either hiding a flower with one nectar or a honeycomb that needs one honey.  \r
-        \r
+        is either hiding a flower with one nectar or a honeycomb that needs one honey.  \\r
+        \\r
         Complete
         the `get nectar or make honey` function, then call it to collect the nectar
-        or honey. \r
+        or honey. \\r
       4-5 Bee Debugging 1_instruction: |-
-        These blocks are really bugging me. \r
-        \r
+        These blocks are really bugging me. \\r
+        \\r
         Can
         you fix them?
       4-5 Bee Debugging 10_instruction: Find the errors and fix them.
@@ -957,8 +976,8 @@
       4-5 Bee Debugging 5_instruction: Something isn't right here...
       4-5 Bee Debugging 6_instruction: |-
         The purple flower has a different amount
-        of nectar each time you run the puzzle. \r
-        \r
+        of nectar each time you run the puzzle. \\r
+        \\r
         Fix the blocks to get all
         of the nectar from the flower each time.
       4-5 Bee Debugging 7_instruction: The function is missing something...
@@ -968,13 +987,14 @@
       4-5 Bee Debugging 9_instruction: Why isn't the bee making enough honey?
       4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
       4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
-      4-5 Bee Nested Loops 2_instruction: "Collect all of the nectar from each flower.\nUse
-        a nested loop. \n"
+      4-5 Bee Nested Loops 2_instruction: |
+        Collect all of the nectar from each flower.
+        Use a nested loop.
       4-5 Bee Nested Loops 3_instruction: |
         Collect all of the nectar by putting the
         starter code inside another loop.
       4-5 Bee Nested Loops 4_instruction: "Collect all of the nectar from each flower\nand
-        make honey at the honeycomb. \\r\n\\r\nUse a nested loop. "
+        make honey at the honeycomb. \\\\r\n\\\\r\nUse a nested loop. "
       4-5 Bee Nested Loops 5_instruction: |
         Collect all of the nectar by creating
         a nested loop.
@@ -982,9 +1002,10 @@
       4-5 Bee Nested Loops 7_instruction: |
         Put this loop inside another loop to create
         a nested loop and collect all of the nectar from the flowers.
-      4-5 Bee Nested Loops 8_instruction: "Collect all of the nectar from these flowers\nby
-        nesting a while loop. Replace the inner repeat times block with a while\nblock.
-        \n"
+      4-5 Bee Nested Loops 8_instruction: |
+        Collect all of the nectar from these flowers
+        by nesting a while loop. Replace the inner repeat times block with a while
+        block.
       4-5 Bee Nested Loops 9_instruction: |
         Collect all of the nectar from these flowers
         by nesting a while loop inside a repeat.
@@ -1030,13 +1051,13 @@
         solve the puzzle in fewer than 11 blocks?
       4-5 Maze 8_instruction: |-
         Get the zombie to the sunflower using as few blocks
-        as you can.  \r
+        as you can.  \\r
         (Avoid the chompers!)
       4-5 Maze 9_instruction: |-
-        Now we have a new block called `repeat until`.  \r
+        Now we have a new block called `repeat until`.  \\r
         This
-        will let us keep looping commands until the zombie gets the sunflower.  \r
-        \r
+        will let us keep looping commands until the zombie gets the sunflower.  \\r
+        \\r
         Use
         the new `repeat until` block to solve this puzzle in as few commands as possible.
       4-5 Maze Assessment 1_instruction: |
@@ -1045,25 +1066,31 @@
       4-5 Maze Conditionals 1_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
       4-5 Maze Conditionals 3_instruction: |
         Use the `if` block to help me decide
-        when to turn. \r
+        when to turn. \\r
       4-5 Maze Conditionals 4_instruction: |
         Ok, solve this one just like the last
         puzzle, but you need to remember how you used the `if` and `repeat until`
         blocks together.
       4-5 Maze Conditionals 5_instruction: |-
-        "Me want sunflower!"  \r
-        \r
+        "Me want sunflower!"  \\r
+        \\r
         Use an
         `if` statement to get the zombie to the sunflower with the fewest number of
         blocks.
       4-5 Maze Conditionals 6_instruction: |-
-        "Eat sunflower!"\r
-        \r
+        "Eat sunflower!"\\r
+        \\r
         Use an `if`
         statement to get the zombie to the sunflower with the fewest number of blocks.
       4-5 Maze Conditionals 7_instruction: |
@@ -1071,14 +1098,14 @@
         different, but watch out for the chompers!
       4-5 Maze Conditionals 8_instruction: |-
         The `if/else` block checks a condition,
-        and then does one thing OR another. \r
-        \r
+        and then does one thing OR another. \\r
+        \\r
         Use this new block to get me to
         the sunflower.
       4-5 Maze Conditionals 9_instruction: |-
         One more practice puzzle with the `if/else`
-        block!\r
-        \r
+        block!\\r
+        \\r
         Trace it with your finger to see if you can figure it out on
         your first try.
       4-5 Maze Conditionals Assessment 1_instruction: |
@@ -1098,12 +1125,13 @@
       4-5 Nested Loops 12_instruction: |
         Can you draw these 36 triangles using a nested
         loop?
-      4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw
-        10 triangles.  This is called a \"nested\" loop.  \n"
+      4-5 Nested Loops 2_instruction: |
+        Now nest this loop inside another loop to
+        draw 10 triangles.  This is called a "nested" loop.
       4-5 Nested Loops 3_instruction: |-
         Create a sun by nesting the starter code in
-        another loop.\r
-        \r
+        another loop.\\r
+        \\r
         To get this cool design with a hollow center, you'll
         need to jump forward by the length of the triangle before turning.
       4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
@@ -1111,12 +1139,12 @@
         Can you draw a hexagon by looping the triangle
         code?
       4-5 Nested Loops 7_instruction: |-
-        Loop this design 10 times. \r
-        \r
+        Loop this design 10 times. \\r
+        \\r
         How much
         do you have to turn each time you loop?
-      4-5 Nested Loops 8_instruction: "Loop this shape 6 times. \\r\n\\r\nHow much\ndo
-        you have to turn each time you loop? "
+      4-5 Nested Loops 8_instruction: "Loop this shape 6 times. \\\\r\n\\\\r\nHow
+        much\ndo you have to turn each time you loop? "
       4-5 Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
       4-5 Nested Loops Assessment 1_instruction: |
         Assessment: Use a nested loop to
@@ -1129,13 +1157,13 @@
         5 shovel scoops, using the `remove 1` block.
       4-5 While Loops 3_instruction: |-
         Use as few blocks as possible to complete this
-        puzzle!  \r
-        \r
+        puzzle!  \\r
+        \\r
         Move me to the pile and remove all the dirt, then move to
         the hole and fill it completely.
-      4-5 While Loops 4_instruction: "Wow, look at that! \\r\n\\r\nI don't know how\nmany
-        shovelfuls of dirt this hole needs.  \\r\nCan you write a program that\nkeeps
-        using the `fill` block until the ground is even?  "
+      4-5 While Loops 4_instruction: "Wow, look at that! \\\\r\n\\\\r\nI don't know
+        how\nmany shovelfuls of dirt this hole needs.  \\\\r\nCan you write a program
+        that\nkeeps using the `fill` block until the ground is even?  "
       4-5 While Loops 5_instruction: |
         Wow, now there are two deep holes! Can you
         write a program that fills them both until the ground is even?
@@ -1152,6 +1180,37 @@
       4-5 While Loops Assessment 1_instruction: |
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na
+        square with 20 pixel sides. "
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 14 napkins line up next to each other?
+      aE3_instruction: |-
+        We've got to have a tablecloth!  \r
+        \r
+        Take your row of
+        14 napkins and sew 14 of those together with another **outer loop** to make
+        a cover for our table.
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: "How many times do you need to loop this to draw half  of\na
+        circle? \n"
+      aE7_instruction: |-
+        If you create another loop like this one, but turn left instead
+        of right, what happens? \r
+        \r
+        Can you repeat all of that to draw this wave?
+      aE8_instruction: |-
+        Now let's loop that whole thing four times to create this
+        picture frame. Watch out for the corners - you can't just turn 90 degrees!
+        \r
+        \r
+        If looping a 3 degree turn 60 times makes a half circle, which of
+        these blocks of code will make an additional quarter circle for the corners?
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -1224,15 +1283,19 @@
       Artist - Nested Loops Assessment 1_instruction: |
         Use a nested loop to complete
         the design.
-      Auto Open Function Editor_instruction: "You can call functions from inside\nother
-        functions! Using your \"shape\" function as a base, create 3 house shapes\neach
-        20 pixels larger than the last starting at 50 pixels in length. Using\na counter
-        loop might be helpful. \n"
+      Auto Open Function Editor_instruction: |
+        You can call functions from inside
+        other functions! Using your "shape" function as a base, create 3 house shapes
+        each 20 pixels larger than the last starting at 50 pixels in length. Using
+        a counter loop might be helpful.
       Bee Recommended Blocks test_instruction: |
         Purple flowers may have either 1
         or 0 nectar, but you don't know which one! Be careful not to collect nectar
         from a purple flower if it doesn't have any. Check if the nectar is equal
         to 1 by using the if block.
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1668,11 +1731,12 @@
       Course 4 2_instruction: |
         The bee only wants nectar right now. Remember, not
         all objects are flowers, so check to gather nectar only at flowers.
-      Course 4 Artist 1_instruction: "Help me draw a box. (Each line is 200 pixels\nlong)
-        \n"
+      Course 4 Artist 1_instruction: |
+        Help me draw a box. (Each line is 200 pixels
+        long)
       Course 4 Artist 10_instruction: |-
-        Click here to see the full instructions again!\r
-        \r
+        Click here to see the full instructions again!\\r
+        \\r
         Here
         is the code for an interesting shape.  What happens when you repeat it multiple
         times, turning between each iteration?   Notice that the turns in this shape
@@ -1685,8 +1749,8 @@
         to see more hints?  Click here!
       Course 4 Artist 12_instruction: |-
         Want a second peek at the inspiration design
-        or the hints?  Click here!\r
-        \r
+        or the hints?  Click here!\\r
+        \\r
         Otherwise, make a design all your own!
       Course 4 Artist 13_instruction: |
         Still playing?  Here is a blank canvas where
@@ -1709,11 +1773,12 @@
         symmetrical. The triangles are equilateral and are 50 pixels long. Hint: You
         may have to run the code several times to figure out all of the blocks that
         need to be added.
-      Course 4 Artist 6_instruction: "Complete the code to draw these triangles.  \\r\n\\r\nEach\nequilateral
+      Course 4 Artist 6_instruction: "Complete the code to draw these triangles.  \\\\r\n\\\\r\nEach\nequilateral
         triangle has sides of 100 pixels. "
-      Course 4 Artist 7_instruction: "Now nest this loop inside another loop to draw\n10
-        triangles. This is called a nested loop. Hint: All 10 triangles complete\na
-        360 degree rotation.  \n"
+      Course 4 Artist 7_instruction: |
+        Now nest this loop inside another loop to draw
+        10 triangles. This is called a nested loop. Hint: All 10 triangles complete
+        a 360 degree rotation.
       Course 4 Artist 8_instruction: |
         Draw this sun by looping this whole block of
         code multiple times.
@@ -1722,21 +1787,21 @@
         let you build it without giving you any blocks to start!
       Course 4 Artist 9_instruction: |
         Loop this design 10 times and make sure to
-        turn between each shape that's drawn. \r
+        turn between each shape that's drawn. \\r
       Course 4 Artist Binary 1_instruction: |-
         Here's a function that takes a binary
         string of 1's and 0's and instructs the artist to follow them from left
         to right, top to bottom.  The artist will fill-in the squares when it sees
-        a 1 and ignore the square when it sees a 0. \r
-        \r
+        a 1 and ignore the square when it sees a 0. \\r
+        \\r
         Run this code to see how
         the artist uses binary to draw this pattern.
       Course 4 Artist Binary 1a_instruction: |-
         Here's a function that takes a binary
         string of 1's and 0's and instructs the artist to follow them from left
         to right, top to bottom.  The artist will fill-in the squares when it sees
-        a 1 and ignore the square when it sees a 0. \r
-        \r
+        a 1 and ignore the square when it sees a 0. \\r
+        \\r
         Run this code to see how
         the artist uses binary to draw this pattern.
       Course 4 Artist Binary 2_instruction: |
@@ -1761,8 +1826,8 @@
         canvas for you to draw on.  Have fun!
       Course 4 Artist Binary Free Play 2a_instruction: |-
         Here's a higher resolution
-        canvas to draw on - 16 pixels by 16 pixels!\r
-        \r
+        canvas to draw on - 16 pixels by 16 pixels!\\r
+        \\r
         See what happens when we
         start to get creative with the bits?
       Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
@@ -1772,8 +1837,8 @@
       Course 4 Artist Binary pre1_instruction: |-
         Binary is a way of representing information
         using only two options.  Here, we're going to use the options "off" (represented
-        by the number 0) and "on" (represented by the number 1).  \r
-        \r
+        by the number 0) and "on" (represented by the number 1).  \\r
+        \\r
         We've
         provided you with a grid of "pixels" that you can walk through and make
         designs by turning on only certain squares.  Can you have the artist draw
@@ -1781,8 +1846,8 @@
       Course 4 Artist Binary ryan_instruction: |-
         Binary is a way of representing information
         using only two options.  Here, we're going to use the options "off" (represented
-        by the number 0) and "on" (represented by the number 1).  \r
-        \r
+        by the number 0) and "on" (represented by the number 1).  \\r
+        \\r
         We've
         provided you with a grid of "pixels" that you can walk through and make
         designs by turning on only certain squares.  Can you have the artist draw
@@ -1801,22 +1866,24 @@
       Course 4 Artist For Loops 10_instruction: |
         Free Play Time! Have fun drawing
         whatever you like with the blocks you have learned how to use
-      Course 4 Artist For Loops 11_instruction: "Remember back in a previous stage\nwhen
-        we used a variable to control the number of sides in a shape? We are\ngoing
-        to do the same thing with the `counter` variable now. This pattern starts\nwith
-        a triangle and adds one side at a time until it draws a decagon (10 sides).\nEach
-        side should be 100 pixels long. \n"
+      Course 4 Artist For Loops 11_instruction: |
+        Remember back in a previous stage
+        when we used a variable to control the number of sides in a shape? We are
+        going to do the same thing with the `counter` variable now. This pattern starts
+        with a triangle and adds one side at a time until it draws a decagon (10 sides).
+        Each side should be 100 pixels long.
       Course 4 Artist For Loops 11a_instruction: |-
         Let's put it all together!  Using
         your knowledge of `for` loops and the `counter` variable, create this drawing
         where each shape has two more sides than the last.  Make sure that each side
-        is 10 times as long as the number of sides in the polygon.\r
-        \r
+        is 10 times as long as the number of sides in the polygon.\\r
+        \\r
         Very little
         of the code has been provided for you.
-      Course 4 Artist For Loops 12_instruction: "That looked pretty cool, but now\nI'd
-        like to draw each shape next to the last one. This time each side is\n20 pixels.
-        Use a jump block to jump forward 40 pixels after each shape. \n"
+      Course 4 Artist For Loops 12_instruction: |
+        That looked pretty cool, but now
+        I'd like to draw each shape next to the last one. This time each side is
+        20 pixels. Use a jump block to jump forward 40 pixels after each shape.
       Course 4 Artist For Loops 13_instruction: |
         Hmmm, those shapes are getting bigger
         every time! Didn't we already solve this problem with variables? How can
@@ -1840,11 +1907,13 @@
         Use the last puzzle as a reference
         to complete this one.  The smallest triangle has 20 pixel sides, the largest
         has 200 pixel sides, and each triangle is 20 pixels larger than the last.
-      Course 4 Artist For Loops 4_instruction: "How would you modify what you've\nlearned
-        to draw these squares? They start at 15 pixels long, the largest is\n300 pixels
-        long, and each square is 15 pixels larger than the last. \n"
-      Course 4 Artist For Loops 5_instruction: "Good job on the last puzzle! Let's\nuse
-        that \"counter\" variable block again to draw this cool picture. \n"
+      Course 4 Artist For Loops 4_instruction: |
+        How would you modify what you've
+        learned to draw these squares? They start at 15 pixels long, the largest is
+        300 pixels long, and each square is 15 pixels larger than the last.
+      Course 4 Artist For Loops 5_instruction: |
+        Good job on the last puzzle! Let's
+        use that "counter" variable block again to draw this cool picture.
       Course 4 Artist For Loops 6_instruction: |
         Free Play! Try using a for loop to
         draw a growing shape pattern of your own design.
@@ -1858,8 +1927,8 @@
       Course 4 Artist For Loops 8_instruction: |-
         Just one little change to the code
         from the last image can create this drawing. Can you figure out what that
-        change is?\r
-        \r
+        change is?\\r
+        \\r
         Hint:  You need to remove something!
       Course 4 Artist For Loops 8a_instruction: |
         Just one little change to the code
@@ -1870,16 +1939,16 @@
         from 1 to 75 pixels, increasing by 1 pixel each time.
       Course 4 Artist For Loops Challenge_instruction: |-
         Can you figure out how to
-        use all of the things you've learned to create this image?\r
-        \r
+        use all of the things you've learned to create this image?\\r
+        \\r
         Need a
         hint? Click here.
       Course 4 Artist For Loops inspire_instruction: |-
         Free-Play Inspiration: You've
         now learned everything you need to know to make a pattern like this! If this
         picture inspires you, try to make something similar. Otherwise, create something
-        all your own.\r
-        \r
+        all your own.\\r
+        \\r
         Need a hint? Click here.
       Course 4 Artist Functions 1_instruction: |
         Can you draw a square that is 100
@@ -1898,8 +1967,8 @@
       Course 4 Artist Functions 13.1_instruction: |-
         Now, let's make a function called
         "jump to upper right" that moves the artist to the upper-right of the octagon
-        that you just drew so we can finish this pattern.\r
-        \r
+        that you just drew so we can finish this pattern.\\r
+        \\r
         Hint:  To get yourself
         to the upper-right corner, try jumping in a pattern that makes just 3/8 of
         the octagon.
@@ -1925,7 +1994,7 @@
         apart from one another? Hint: each square is 100 pixels in size
       Course 4 Artist Functions 3_instruction: |
         Using the "draw a square" function
-        block, can you draw this picture? Hint: each square is 120 pixels apart.\r
+        block, can you draw this picture? Hint: each square is 120 pixels apart.\\r
       Course 4 Artist Functions 4_instruction: |
         Are you ready to create your own
         "Function Block"? Click on the "Functions" block in the tool box, name
@@ -1938,18 +2007,19 @@
         to draw a house - what needs to be fixed in this code to draw the house properly?
       Course 4 Artist Functions 5_instruction: |
         Using the "draw a square" function
-        block, can you draw this picture? Hint: each square is 120 pixels apart.\r
+        block, can you draw this picture? Hint: each square is 120 pixels apart.\\r
       Course 4 Artist Functions 6_instruction: |
         Which block do you need to add to
         get the triangle to sit on top of the square?
       Course 4 Artist Functions 7_instruction: |
         Can you draw a line of squares using
         a Square function? Each square is 40 pixel's in length.
-      Course 4 Artist Functions 8_instruction: "Are you getting the hang of how to\nuse
-        function blocks? Let's modify this square so that it is 200 pixels in\nsize.
-        Hint: click on \"edit\" to change the size of the \"draw a square\"\nfunction
-        editor. Remember to click on \"save and close\" to get out of the\nfunction
-        editor. \n"
+      Course 4 Artist Functions 8_instruction: |
+        Are you getting the hang of how to
+        use function blocks? Let's modify this square so that it is 200 pixels in
+        size. Hint: click on "edit" to change the size of the "draw a square"
+        function editor. Remember to click on "save and close" to get out of the
+        function editor.
       Course 4 Artist Functions 9_instruction: |
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
@@ -1965,17 +2035,18 @@
         picture again.
       Course 4 Artist Inspire_instruction: |-
         Want a second peek at the inspiration
-        design or the hints?  Click here!\r
-        \r
+        design or the hints?  Click here!\\r
+        \\r
         Otherwise, make a design all your
         own!
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
         square with 50 pixel sides
-      Course 4 Artist Params 10_instruction: "You can call functions from inside\nother
-        functions! Using your \"shape\" function as a base, create 3 house shapes\neach
-        20 pixels larger than the last starting at 50 pixels in length. Using\na counter
-        loop might be helpful. \n"
+      Course 4 Artist Params 10_instruction: |
+        You can call functions from inside
+        other functions! Using your "shape" function as a base, create 3 house shapes
+        each 20 pixels larger than the last starting at 50 pixels in length. Using
+        a counter loop might be helpful.
       Course 4 Artist Params 11_instruction: |
         How about a function called "pinwheel"
         that takes three parameters - "sides," "length" and "repeat." You can
@@ -1994,9 +2065,10 @@
         a parameter for line length, but it doesn't do anything yet. Can you update
         the function so it uses the "length" parameter when it draws each side?
         The triangle sizes are 150 pixels, 75 pixels and 25 pixels.
-      Course 4 Artist Params 3_instruction: "Awesome, can you draw each of these\ntriangles
-        with that new function? The first is 25 pixels long, the second\nis 50, and
-        the third is 75. \n"
+      Course 4 Artist Params 3_instruction: |
+        Awesome, can you draw each of these
+        triangles with that new function? The first is 25 pixels long, the second
+        is 50, and the third is 75.
       Course 4 Artist Params 4_instruction: |
         Can you add a new function called square?
         It should also take a length parameter, just like the triangle. This time
@@ -2004,14 +2076,16 @@
       Course 4 Artist Params 5_instruction: |
         Use both of your new functions to draw
         this picture. To make this easier you use a loop with a "counter" parameter.
-      Course 4 Artist Params 6_instruction: "Let's edit this \"draw a shape\" function.\nIt
-        already has a \"length\" parameter. Now, let's edit the function to also\nadd
-        a \"sides\" parameter. Remember the angle to turn for a given shape is\n360
-        divided by the sides it has. Hint: lengths for each shape are the triangle\nis
-        100 pixels, the hexagon is 25 pixels and the square is 50 pixels. \n"
-      Course 4 Artist Params 7_instruction: "Can you draw these shapes by filling\nin
-        the \"???\" The square and triangle are 100 pixels in size while the hexagon\nis
-        75 pixels in size. \n"
+      Course 4 Artist Params 6_instruction: |
+        Let's edit this "draw a shape" function.
+        It already has a "length" parameter. Now, let's edit the function to also
+        add a "sides" parameter. Remember the angle to turn for a given shape is
+        360 divided by the sides it has. Hint: lengths for each shape are the triangle
+        is 100 pixels, the hexagon is 25 pixels and the square is 50 pixels.
+      Course 4 Artist Params 7_instruction: |
+        Can you draw these shapes by filling
+        in the "???" The square and triangle are 100 pixels in size while the hexagon
+        is 75 pixels in size.
       Course 4 Artist Params 8_instruction: |
         Can you figure out how to draw this
         shape? Here's a hint create a new function with 6 sides called a hexagon.
@@ -2026,8 +2100,8 @@
         modify it so it uses the "sides" variable instead. Replace the number 3
         with the "sides" variable. Hint: remember to use the "set sides to" block.
       Course 4 Artist Vars 1_instruction: |-
-        Let's draw an equilateral triangle. \r
-        \r
+        Let's draw an equilateral triangle. \\r
+        \\r
         It
         has to be exactly 100 pixels long on each side.
       Course 4 Artist Vars 10_instruction: |
@@ -2049,26 +2123,27 @@
       Course 4 Artist Vars 13_instruction: |-
         When a shape has lots of sides, each
         side needs to be shorter if you want the whole pattern to fit on the screen.
-        \r
+        \\r
         Let's recreate the algorithm for this amazing pattern, but instead of
         manually setting the `length` variable, let's use a math block with the `sides`
         variable inside to make sure that each shape fits correctly. The perimeter
-        of each polygon is 300 pixels.\r
+        of each polygon is 300 pixels.\\r
         Need some hints?  Click here.
       Course 4 Artist Vars 14_instruction: |-
         Free Play: Check it out! Now your algorithm
         is nested within one more loop. Experiment with changing the values of your
-        two variables to draw cool patterns.\r
-        \r
+        two variables to draw cool patterns.\\r
+        \\r
         For even more effect, try playing
         with color!  Use random colors inside loops to see how it changes your design.
       Course 4 Artist Vars 2_instruction: |
         Instead of using "move forward by 150,"
         the "move" block is now referencing a variable called "length." Can you
         set "length" to 150 to draw this new triangle?
-      Course 4 Artist Vars 3_instruction: "Here's a loop that draws a square, but\nsomething's
-        missing. Can you fix it so that it uses the variable \"length\"\nto figure
-        out how long each side should be? \n"
+      Course 4 Artist Vars 3_instruction: |
+        Here's a loop that draws a square, but
+        something's missing. Can you fix it so that it uses the variable "length"
+        to figure out how long each side should be?
       Course 4 Artist Vars 4_instruction: |
         Now I want to make a rectangle that is
         twice as tall as it is wide. We've got a variable called "width" that needs
@@ -2080,14 +2155,14 @@
         Here’s some code that can draw any regular
         polygon. There’s a new variable called sides that is set to 4. Can you use
         the sides variable (along with the math block) to turn the right amount regardless
-        of how many sides there are in the polygon?\r
-        \r
+        of how many sides there are in the polygon?\\r
+        \\r
         Click here to go back to
         the hint!
       Course 4 Artist Vars 7_instruction: |-
         Use what you learned in the last puzzle
-        to create this hexagon using the "sides" variable.\r
-        \r
+        to create this hexagon using the "sides" variable.\\r
+        \\r
         See how you could
         change just one value to draw a triangle,  square, pentagon, or octagon?
       Course 4 Artist Vars 8_instruction: |
@@ -2101,11 +2176,11 @@
         variable instead of a fixed number to draw a triangle. Don't forget to use
         the "set sides to" block.
       Course 4 Bee 1_instruction: |-
-        The bee can't tell what's under the cloud! \r
-        \r
+        The bee can't tell what's under the cloud! \\r
+        \\r
         Use
-        the `if` block to check whether there is a flower under the cloud. \r
-        \r
+        the `if` block to check whether there is a flower under the cloud. \\r
+        \\r
         Get
         nectar one time, ONLY if there is a flower.
       Course 4 Bee 2_instruction: |
@@ -2152,11 +2227,12 @@
       Course 4 Bee For Loops 4_instruction: |
         Collect all of the nectar from these
         flowers. I wonder if there's an easier way to do this...
-      Course 4 Bee For Loops 5_instruction: "Ah, the for loop makes this much easier!\nUsing
-        the \"counter\" variable from the for loop to loop the \"get nectar\"\nblock
-        the same number of times as the loop. Whew! That's a lot of loops.\nAll the
-        code you need it there, take a look at how it is put together then\nclick
-        on Run and see how it works. \n"
+      Course 4 Bee For Loops 5_instruction: |
+        Ah, the for loop makes this much easier!
+        Using the "counter" variable from the for loop to loop the "get nectar"
+        block the same number of times as the loop. Whew! That's a lot of loops.
+        All the code you need it there, take a look at how it is put together then
+        click on Run and see how it works.
       Course 4 Bee For Loops 6_instruction: |
         You can also use a for loop to count
         down. Try gathering this nectar by counting down from 5 to 1 by 1.
@@ -2192,11 +2268,12 @@
         on either side. I've added a parameter called "direction" to the function.
         If the "direction" parameter equals 0 I should turn left, if it's 1 I should
         turn right.
-      Course 4 Bee Params 3_instruction: "Now there are flowers on both sides! We've\nadded
-        variables called \"left\" and \"right\" for you to use, and added a\nparameter
-        called \"direction\" to \"get 3 nectar\". Edit \"get 3 nectar\"\nso that the
-        bee turns the correct direction when the variables \"left\" or\n\"right\"
-        are passed into the function.  \n"
+      Course 4 Bee Params 3_instruction: |
+        Now there are flowers on both sides! We've
+        added variables called "left" and "right" for you to use, and added a
+        parameter called "direction" to "get 3 nectar". Edit "get 3 nectar"
+        so that the bee turns the correct direction when the variables "left" or
+        "right" are passed into the function.
       Course 4 Bee Params 4 (copy 1)_instruction: |
         Try using your new function to
         collect all of the flowers. Remember, 0 = left and 1 = right.
@@ -2293,9 +2370,10 @@
         **Extreme Challenge:**  No rules. No clues. Just
         the challenge!
       Course 4 EC 2d_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 3_instruction: "Use what you learned in the previous level to draw\nan
-        image like this. Note: The code becomes more simple if you incorporate\nparameters.
-        \n"
+      Course 4 EC 3_instruction: |
+        Use what you learned in the previous level to draw
+        an image like this. Note: The code becomes more simple if you incorporate
+        parameters.
       Course 4 EC 3a_instruction: |
         Extreme Challenge: No rules. No clues. Just the
         challenge!
@@ -2320,26 +2398,27 @@
         the jump function to collect all of the flags by moving the dog with the arrow
         keys.
       Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou.
-        \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction
-        only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
-        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it to level 3\nto move
-        to the next puzzle. "
+        \\\\r\n\\\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction
+        only when \"player_score\" becomes greater than a certain number.\\\\r\n\\\\r\nFor\nexample:
+        \"player_score\" > 6\\\\r\n\\\\r\nPlay the game, and make it to level 3\nto
+        move to the next puzzle. "
       Course 4 Play Lab Params 2_instruction: |
         Now we've got flags that are too
         high for our current jump! Let's use both the "up" and "down" arrows
-        so that we can have multiple jump heights.  \r
-        \r
+        so that we can have multiple jump heights.  \\r
+        \\r
         We need to add a parameter
         to our jump function called "height".  The up arrow should cause the dog
         to jump 200 pixels and the down arrow should make it jump only 100 pixels.
-      Course 4 Play Lab Params 3_instruction: "We have added another parameter to\nthe
-        jump function so that we can use it with other actors. Each actor is represented\nby
-        a number, starting from one. Edit the \"jump\" function so that it uses\nthe
-        \"actor\" parameter to make the correct character jump. \n"
+      Course 4 Play Lab Params 3_instruction: |
+        We have added another parameter to
+        the jump function so that we can use it with other actors. Each actor is represented
+        by a number, starting from one. Edit the "jump" function so that it uses
+        the "actor" parameter to make the correct character jump.
       Course 4 Play Lab Params 4_instruction: |-
         Here's a function called `patrol`.
-        \r
-        \r
+        \\r
+        \\r
         Edit `patrol` to move Cat up 400 pixels and then down 400 pixels.
       Course 4 Play Lab Params 5_instruction: |
         Edit the the "patrol" function to
@@ -2352,19 +2431,19 @@
         one.
       Course 4 Play Lab Params 7_instruction: |-
         Let's have some fun! Look at the
-        code provided to see if you can figure out what each block does.  \r
+        code provided to see if you can figure out what each block does.  \\r
         When
-        you're done, use the arrow keys to control Dog and collect all of the flags.\r
+        you're done, use the arrow keys to control Dog and collect all of the flags.\\r
         NOTE:
         You don't need to make any changes to the program
       Course 4 Play Lab Params 8_instruction: |
         Use the `when actor touches` block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors.
       Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe
-        function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe
+        most of the code is hidden. There’s a new function `score_points.`\\\\r\n\\\\r\nEdit\nthe
+        function so that a new parameter called `points` can be added to `player_score`.\n\\\\r\n\\\\r\nThe
         variable `player_score` should increase each time Dog tags Cat\nwith hearts,
-        and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen
+        and decrease each time that Cat tags Dog with hearts.\\\\r\n\\\\r\nNote:\nWhen
         you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
         on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
@@ -2383,9 +2462,10 @@
         Now we're using a variable called "height"
         to control how high the dog can jump. Update the "height" variable so that
         the dog can jump high enough to reach all the flags.
-      Course 4 Play Lab Vars 5_instruction: "Let's build a game! First we'll need\na
-        score. Rebuild the code that you saw in the last level to set the score\nto
-        10. \n"
+      Course 4 Play Lab Vars 5_instruction: |
+        Let's build a game! First we'll need
+        a score. Rebuild the code that you saw in the last level to set the score
+        to 10.
       Course 4 Play Lab Vars 6 (copy 1)_instruction: |
         Cool, now we've got our score
         variable, but how are we going to make it useful? How about adding to your
@@ -2394,8 +2474,8 @@
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 6_instruction: |-
-        Use the right arrow to shoot hearts.\r
-        \r
+        Use the right arrow to shoot hearts.\\r
+        \\r
         In
         our game, how should we score points? Add 1 to your "points" variable each
         time Dog hits Cat with a heart. Use the "when actor 2 touches anything"
@@ -2422,14 +2502,14 @@
       Course 4 Play Lab Vars 9_instruction: |-
         Free Play time! Here are all of the
         variables we've played with so far in this stage, as well as a few more in
-        case you want them. \r
-        \r
+        case you want them. \\r
+        \\r
         Notice that there are now so many blocks in our
         toolbox that they need to be organized!  Here, we've put each piece into
         an appropriate category.  Take some time to explore everything that is available.
         When you're done browsing, make a game or story using repeats, variables,
-        and events.  \r
-        \r
+        and events.  \\r
+        \\r
         Hint: scroll down to see all the commands in the workspace.
       Course 4 Play Lab Vars_instruction: |
         Alright, one last thing for this game
@@ -2454,8 +2534,8 @@
         settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter squared)?
       Course 4 Play Labs For Loops 4a_instruction: |-
         Now, let's blend the variables
-        from Stage 7 together with your "counter" variable to make some magic happen.   \r
-        \r
+        from Stage 7 together with your "counter" variable to make some magic happen.   \\r
+        \\r
         In
         this puzzle, Dog will count from 0 to 1000 by "increment".  Set the "increment"
         variable to 10 at the beginning of your code to see what happens.
@@ -2484,8 +2564,8 @@
         Dog will still keep time by counting
         with our "for loop" by "increment", but this time, we will add The Wizard
         into the mix.  Can you change the code so that "increment" goes up by two
-        each time The Wizard is clicked?\r
-        \r
+        each time The Wizard is clicked?\\r
+        \\r
         Watch out!  The Wizard moves quickly!
       Course 4 Play Labs For Loops 7_instruction: |
         Could you use a for loop to help
@@ -2493,17 +2573,17 @@
       Course 4 Play Labs For Loops 7a_instruction: |-
         Now we're getting somewhere!  What
         if we start counting how many times we can click The Wizard before Dog gets
-        to 30?  \r
-        \r
+        to 30?  \\r
+        \\r
         Finish adding blocks to The Wizard so that every time he's
         clicked the variable "clicked" increases by one. You can ignore "increment"
-        for now.\r
-        \r
+        for now.\\r
+        \\r
         Dog will start counting when you click "Run".
       Course 4 Play Labs For Loops 8_instruction: |-
         Now, help the actors move as they
-        count.  \r
-        \r
+        count.  \\r
+        \\r
         Dog should move and count by adding 2 (counter + 2) each time.  Cat
         will move and count by multiplying by 2 (counter * 2)  each time. Penguin
         will move and count to the power of 2 (counter ^ 2) each time.  Who will reach
@@ -2511,12 +2591,12 @@
       Course 4 Play Labs For Loops 8a_instruction: |-
         To finish our game, we need to
         bring back the "increment" variable!    Let's tie it to the level of the
-        game.\r
-        \r
-        1) Keep track of the number of times The Wizard is clicked.\r
+        game.\\r
+        \\r
+        1) Keep track of the number of times The Wizard is clicked.\\r
         2)
         If The Wizard is clicked at least 10 times before Dog counts to 30, raise
-        "increment" by 1 and start again.\r
+        "increment" by 1 and start again.\\r
         3) If The Wizard does not get clicked
         at least 10 times, the game is over.
       Course 4 Playlab For Loop Freeplay_instruction: |
@@ -2524,18 +2604,18 @@
         learned so far to make a game that includes a `for` loop!
       Course 4 Playlab For Loops 4b_instruction: |-
         Now, these two characters are going
-        to race!  \r
-        \r
+        to race!  \\r
+        \\r
         Each of them will move `counter` steps at a time, but their
-        counters will have different values because of the `for` loops.  \r
-        \r
+        counters will have different values because of the `for` loops.  \\r
+        \\r
         Can
         you change the increment in one of the loops so that the race is a tie?
       Course 4 Playlab For Loops 5b_instruction: |
         Adjust the interval on these `for`
         loops so that the two characters end in the exact same place.
       Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na
-        game that's fun for you to play!\\r\n\\r\nPress \"Run\" and click Madame\nUnicorn
+        game that's fun for you to play!\\\\r\n\\\\r\nPress \"Run\" and click Madame\nUnicorn
         four times to win. "
       Course 4 SCF 1_instruction: |
         Use the suggested functions to draw four rows
@@ -2546,14 +2626,16 @@
       Course 4 SCF 1b_instruction: |
         Can you figure out how to collect all of this
         honey with the fewest blocks possible?
-      Course 4 SCF 2_instruction: "Use what you learned in the previous level to\ndraw
-        an image like this. Note: The code becomes more simple if you incorporate\nparameters.
-        \n"
+      Course 4 SCF 2_instruction: |
+        Use what you learned in the previous level to
+        draw an image like this. Note: The code becomes more simple if you incorporate
+        parameters.
       Course 4 SCF 3 Fail 1_instruction: Can you figure out how to...
       Course 4 SCF 3 Fail 2_instruction: Can you figure out how to...
-      Course 4 SCF 3_instruction: "Use what you learned in the previous level to\ndraw
-        an image like this. Note: The code becomes more simple if you incorporate\nparameters.
-        \n"
+      Course 4 SCF 3_instruction: |
+        Use what you learned in the previous level to
+        draw an image like this. Note: The code becomes more simple if you incorporate
+        parameters.
       Course 4 SCFL 1_instruction: |
         Solve this puzzle using the fewest number of
         blocks possible.
@@ -2583,10 +2665,10 @@
       Course 4 SCV 2_instruction: Click here to view the instructions again.
       Course 4 SCV 3_instruction: |-
         Now for a game of tag!  Tag Cat to get 2 points.
-        Tag Penguin to get 3 points.  Get exactly 10 points to win!\r
+        Tag Penguin to get 3 points.  Get exactly 10 points to win!\\r
         But be careful,
-        when Cat and Penguin tag each other, they take points away.\r
-        \r
+        when Cat and Penguin tag each other, they take points away.\\r
+        \\r
         Add the
         blocks necessary to make this game work the way it's been explained.  How
         will you get Dog to move in all directions using the arrow keys?  How will
@@ -2643,6 +2725,9 @@
         functions you've learned in the draw loop. What happens when you use randomNumber()
         to generate some of the inputs?You'll want to stop and discuss with the class
         before moving on.
+      CSD U3 Expressions calculator_instruction: |
+        Add the numbers 1 through 10. Multiply
+        the numbers 1 through 10. Check your answers with a neighbor.
       CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
       CSD U3 Keypress Boolean_instruction: |
         Modify the code so that all of the console.log
@@ -2682,6 +2767,7 @@
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -2720,6 +2806,9 @@
       CSD U3 Variables Intro_instruction: |
         Create your own variable, give it a value,
         and display that value in the console.
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -2774,6 +2863,104 @@
       CSD U3 Variables2 expressions_instruction: |
         Use console.log to display the
         results of each expression. Then create your own.
+      CSDU4 - AppLab - 1_instruction: |
+        Read the documentation for penColor() and
+        penWidth() before using them to draw the blue square.
+      CSDU4 - AppLab - 2_instruction: |
+        Write a program that acts as a simple calculator.
+        (click to see full instructions)
+      CSDU4 - AppLab - 3_instruction: |
+        Use console to check the ending value of num.
+        (Click to see full instructions)
+      CSDU4 - AppLab - 4_instruction: |2
+         Use the Debug Commands to make a list of
+        all the values rolled before a 6. (Click to see full instructions)
+      CSDU4 - Design Mode - 1_instruction: |
+        Add a button that moves the turtle when
+        clicked.  (Click to see full instructions)
+      CSDU4 - Design Mode - 10_instruction: |
+        Introducing the setPosition command!
+        Replace the moveTo in the button-click event handler to use setPosition to
+        move the button itself to a random location when it's clicked.
+      CSDU4 - Design Mode - 11_instruction: |
+        Experiment with different event types
+        and select the one that you think is best. (Click to see full instructions)
+      CSDU4 - Design Mode - 12_instruction: |
+        Use the textLabel command to replace
+        the button in your program with a text label. (Click to see full instructions)
+      CSDU4 - Design Mode - 16_instruction: |
+        Add an event handler for the button
+        using the "Insert and show" link in the Design Mode Events tab. (Click to
+        see full instructions).
+      CSDU4 - Design Mode - 17_instruction: |
+        Update the ID names and `console.log`
+        messages to match the correct button. (Click to see full instructions.)
+      CSDU4 - Design Mode - 18_instruction: |
+        Fix the layout of the bullseye game.
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 19_instruction: |
+        Make a 2 screen app with a black screen
+        and a white screen. (Click to see detailed instructions)
+      CSDU4 - Design Mode - 2_instruction: |
+        Run a program with two buttons that have
+        the same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
+      CSDU4 - Design Mode - 20_instruction: |
+        Make a 2 screen app which can switch
+        back and forth between a black screen and a white screen using buttons. (Click
+        to see detailed instructions.)
+      CSDU4 - Design Mode - 24_instruction: |
+        Add an Text Input box for the name and
+        age. (Click to see full instructions)
+      CSDU4 - Design Mode - 25_instruction: |
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 26_instruction: |
+        Save the age and name of the user in
+        variables (Click to see full instructions)
+      CSDU4 - Design Mode - 27_instruction: |
+        Output a message to the 'textArea'
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 28_instruction: |
+        Write a greeting to the user when they
+        hit 'enter' in the text input, using the 'change' event. (Click to see
+        full instructions)
+      CSDU4 - Design Mode - 29_instruction: |
+        Add a dropdown for their guess instead
+        of promptNum (Click to see full instructions)
+      CSDU4 - Design Mode - 3_instruction: |
+        Add an event handler to the button to
+        move the turtle forward. (Click to see full instructions)
+      CSDU4 - Design Mode - 30_instruction: |
+        Show different die images for the random
+        number generated. (Click to see full instructions)
+      CSDU4 - Design Mode - 31_instruction: |
+        Set up an event handler to respond to
+        keypress events, and display event.key in the console. Hit keys on the keyboard
+        to see what happens. (Click to see full instructions)
+      CSDU4 - Design Mode - 32_instruction: |
+        Try out the keyup and keydown events
+        to see how they are different from keypress. (Click to see full instructions)
+      CSDU4 - Design Mode - 33_instruction: |
+        Change the code so the sound will only
+        play when the up arrow is pressed. (Click to see full instructions)
+      CSDU4 - Design Mode - 4_instruction: |
+        Improve the button by choosing a descriptive
+        and meaningful ID. (Click to see full instructions)
+      CSDU4 - Design Mode - 5_instruction: |
+        Debug the program by verifying your IDs
+        are being referenced properly. (Click to see full instructions)
+      CSDU4 - Design Mode - 6_instruction: |
+        Debug the program by properly ordering
+        your button commands and event handlers. (Click to see full instructions)
+      CSDU4 - Design Mode - 7_instruction: |
+        Debug the program by fixing the logical
+        error within the program. (Click to see full instructions)
+      CSDU4 - Design Mode - 8_instruction: |
+        Move the button to the middle of the
+        screen. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -3310,7 +3497,7 @@
         Debug this level by rearranging and changing
         blocks to get me to the pig!
       K-1 maze debug 11_instruction: |-
-        This is a test!\r
+        This is a test!\\r
         Debug this level by rearranging
         and changing blocks to get me to the pig
       K-1 maze debug 2_instruction: |
@@ -3345,7 +3532,7 @@
         Get me to the pig! Using the `repeat` loop
         will make it much easier.
       K-1 Maze Loops 11_instruction: |-
-        Get me to the pig!  \r
+        Get me to the pig!  \\r
         The `repeat` loop will
         make this easier.
       K-1 Maze Loops 12_instruction: |
@@ -3368,12 +3555,18 @@
       K-1 Maze Multi 14_instruction: Assessment Level
       K-1 Maze Multi 15_instruction: Assessment Level
       K-1 Maze Sequence Assessment 1_instruction: |-
-        Let's see what you've learned!\r
+        Let's see what you've learned!\\r
         Move
         one way, then another to get me to the pig.
       K-1 Maze Sequence Assessment 2_instruction: |
         Move one way, then another to
         get me to the pig.
+      kikiTesta_instruction: |-
+        Our adventurer wants to collect coins.  But she can
+        only use 4 blocks to get them.\r
+        \r
+        Can you help her grab as many as she
+        can using just 4 blocks?
       kikiTesting_instruction: |
         .\r
          .\r
@@ -3384,6 +3577,13 @@
         \r
         .\r
         \r
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -3430,6 +3630,14 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      Mike Pair Programming_instruction: Here are the instructions
+      MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3599,8 +3807,9 @@
       NEW Course 4 Artist Functions 12_instruction: |
         Use the `draw a line of squares`
         function from the last puzzle to draw this pattern.
-      NEW Course 4 Artist Functions 13_instruction: "Can you draw a star shape using\nthe
-        `draw a line of squares` function?  \n"
+      NEW Course 4 Artist Functions 13_instruction: |
+        Can you draw a star shape using
+        the `draw a line of squares` function?
       NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
       NEW Course 4 Artist Functions 2_instruction: |
         Can you draw 3 squares 20 pixels
@@ -3608,8 +3817,8 @@
       NEW Course 4 Artist Functions 3_instruction: |-
         Here is a new type of Block.
         It is called a `function` block. Click "edit" then fill it with the code
-        for drawing a square with 100 pixel sides. \r
-        \r
+        for drawing a square with 100 pixel sides. \\r
+        \\r
         When you're done editing
         the function, click "Close" to go back to your program.
       NEW Course 4 Artist Functions 4_instruction: |
@@ -3623,11 +3832,12 @@
         and Close" and then "Run."
       NEW Course 4 Artist Functions 6_instruction: |
         Using the "draw a square" function
-        block, can you draw this picture? Hint: each square is 20 pixels apart.\r
-      NEW Course 4 Artist Functions 7_instruction: "Are you getting the hang of how\nto
-        use function blocks? Let's modify this square so that it is 200 pixels\nin
-        size. Click on \"edit\" to enter the `draw a square` function editor. Remember\nto
-        click on \"Close\" to get out of the function editor. \n"
+        block, can you draw this picture? Hint: each square is 20 pixels apart.\\r
+      NEW Course 4 Artist Functions 7_instruction: |
+        Are you getting the hang of how
+        to use function blocks? Let's modify this square so that it is 200 pixels
+        in size. Click on "edit" to enter the `draw a square` function editor. Remember
+        to click on "Close" to get out of the function editor.
       NEW Course 4 Artist Functions 8_instruction: |
         We have created a new function
         for you called "draw a triangle".  Can you edit the function definition
@@ -3644,9 +3854,10 @@
       NEW Course 4 Artist Params 1_instruction: |
         Let's define this function to draw
         a square with 50 pixel sides. Click "edit" to get started.
-      NEW Course 4 Artist Params 10_instruction: "Create a `draw a hexagon` function\nblock
-        with a length parameter. This hexagon has sides that are 100 pixels\nin length.
-        \n"
+      NEW Course 4 Artist Params 10_instruction: |
+        Create a `draw a hexagon` function
+        block with a length parameter. This hexagon has sides that are 100 pixels
+        in length.
       NEW Course 4 Artist Params 11_instruction: |
         Can you figure out how to draw
         this shape? Edit the function to use the "sides" parameter.
@@ -3659,7 +3870,7 @@
       NEW Course 4 Artist Params 13_instruction: |-
         Let's edit this "draw a polygon"
         function. It already has a "sides" parameter. Now, let's add a "length"
-        parameter. \r
+        parameter. \\r
         The perimeter of each shape is 200 pixels long. Do you remember
         the equation to make shapes the same size when they have a different number
         of sides?
@@ -3675,12 +3886,13 @@
         from scratch that makes a triangle with  50 pixel sides.
       NEW Course 4 Artist Params 3_instruction: |
         Now let's use the function to draw
-        5 triangles in a row. Each triangle is 30 pixels apart.\r
+        5 triangles in a row. Each triangle is 30 pixels apart.\\r
       NEW Course 4 Artist Params 4_instruction: |
         Do you notice anything different
         about these function blocks? Click “Run” to see what happens.
-      NEW Course 4 Artist Params 5_instruction: "Replace the `???` in the `length`\nparameter
-        input block. The pentagon has 100 pixel sides. \n"
+      NEW Course 4 Artist Params 5_instruction: |
+        Replace the `???` in the `length`
+        parameter input block. The pentagon has 100 pixel sides.
       NEW Course 4 Artist Params 6_instruction: |
         Fill in the "length" parameter
         to draw these shapes by replacing the "???" with the right numbers. The
@@ -3702,16 +3914,18 @@
       NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow
         learned everything you need to know to make a pattern like this! If this\npicture
         inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\\r\n \\r\nWant to know how our inspiration pattern was made? "
-      NEW Course 4 Artist Vars 1.5_instruction: "Take a look at the code, can you\nsee
-        how the \"set length\" block and \"length\" block works together? Click\non
-        \"Run\" to see it in action. \n"
+        your own.\\\\r\n \\\\r\nWant to know how our inspiration pattern was made? "
+      NEW Course 4 Artist Vars 1.5_instruction: |
+        Take a look at the code, can you
+        see how the "set length" block and "length" block works together? Click
+        on "Run" to see it in action.
       NEW Course 4 Artist Vars 12_instruction: |
         Now, recreate the algorithm from
         the last level and create a pentagon with sides of length 150.
-      NEW Course 4 Artist Vars 2.5_instruction: "Take a look at the code, can you\nsee
-        how the \"set length\" block and \"length\" block works together? Click\non
-        \"Run\" to see it in action. \n"
+      NEW Course 4 Artist Vars 2.5_instruction: |
+        Take a look at the code, can you
+        see how the "set length" block and "length" block works together? Click
+        on "Run" to see it in action.
       NEW Course 4 Artist Vars 2_instruction: |
         Drag a number block to both the `set
         length` block and the `repeat _ times` block to draw a set of 50 pixel triangles.
@@ -3720,15 +3934,15 @@
         let's try it again this time let's make this cool design with with 60 pixel
         hexagon's.
       NEW Course 4 Artist Vars 4_instruction: |-
-        Let's try it again! \r
-        \r
+        Let's try it again! \\r
+        \\r
         Can you
         set the `length` variable to 60 to make this cool design with hexagons?
       NEW Course 4 Artist Vars 6_instruction: |-
         Draw this pattern of pentagons with
         100 pixel sides by setting the right value for `length` and dropping the `length`
-        variable into all of the the correct places. \r
-        \r
+        variable into all of the the correct places. \\r
+        \\r
         See how you only have
         to set the value for `length` once, and the code uses the right value everywhere?
       NEW Course 4 Bee For Loops 1_instruction: |
@@ -3749,15 +3963,17 @@
         Add the code necessary to make sure
         the bee collects all the nectar. Look at how much code you need for this puzzle!
         (We'll learn a simpler way in the next puzzle.)
-      NEW Course 4 Bee For Loops 3_instruction: "Ah, the \"for loop\" makes this\nmuch
-        easier! All the code you need is here, take a look at how it is put together\nthen
-        click \"Run\" to see how it works. \n"
+      NEW Course 4 Bee For Loops 3_instruction: |
+        Ah, the "for loop" makes this
+        much easier! All the code you need is here, take a look at how it is put together
+        then click "Run" to see how it works.
       NEW Course 4 Bee For Loops 4 4_instruction: |
         Now we need to move forward "counter"
         times, then get nectar "counter" times.  Can you use two "repeat" loops
         to solve this challenge?
-      NEW Course 4 Bee For Loops 4_instruction: "Replace the ??? in the \"for loop\"\nwith
-        the largest amount of nectar the bee has to collect. \n"
+      NEW Course 4 Bee For Loops 4_instruction: |
+        Replace the ??? in the "for loop"
+        with the largest amount of nectar the bee has to collect.
       NEW Course 4 Bee For Loops 5 5_instruction: |
         Are you getting the hang of using
         the "for loop"? Let's help the bee get the rest of the nectar.
@@ -3774,8 +3990,8 @@
         variable with a math block! How can you use the "counter" variable to navigate
         this garden with the fewest number of blocks possible? What do you need to
         do to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the "counter"
-        variable!\r
-        \r
+        variable!\\r
+        \\r
         Remember: If your loop is counting up, the increment is added
         to your "counter" variable each time through.
       NEW Course 4 Bee For Loops 8_instruction: |
@@ -3789,8 +4005,9 @@
         Take a look at each piece of the
         "for loop" that you have just created.  Can you figure out which numbers
         you need to double to solve this puzzle? Why does it work?
-      NEW Course 4 Play Lab Params 11_instruction: "It's free play time! Have fun\nwith
-        all the blocks in your tool box. \n"
+      NEW Course 4 Play Lab Params 11_instruction: |
+        It's free play time! Have fun
+        with all the blocks in your tool box.
       NEW Course 4 Play Lab Params 5 5_instruction: |
         Let's try that again, but with
         less help. What do you need to edit this time to make the actors patrol?
@@ -3800,14 +4017,13 @@
       NEW Course 4 Play Labs For Loops 7a_instruction: |
         Using what you learned so
         far, can you have Dinosaur take a step forward every time Penguin counts?
-      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: "It's Free Play\ntime,
-        have fun with all the blocks in your tool box. \n"
-      NEW Course 4 Play Labs For Loops 8a_instruction: "Challenge: How would you\nuse
-        the \"for loop\" to get every actor to go around and say their actor number,\nthen
-        vanish from the screen? \n"
-      New Play Lab Project_instruction: |
-        Create your own story or game! Your code
-        is saved as a project you can return to at any time.
+      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: |
+        It's Free Play
+        time, have fun with all the blocks in your tool box.
+      NEW Course 4 Play Labs For Loops 8a_instruction: |
+        Challenge: How would you
+        use the "for loop" to get every actor to go around and say their actor number,
+        then vanish from the screen?
       Ninjacat Demo B (copy 1)_instruction: |
         \r
         Let’s begin by exploring a simple
@@ -4098,6 +4314,9 @@
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva copy U3L2 Using Simple Commands_instruction: |
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
@@ -4189,15 +4408,30 @@
         Create a "safe-down?" function and update the "on-screen?" function so
         that it checks up, down, left, and right.
       sample1_instruction: |-
-        Our adventurer wants to collect gems.  But she can only
+        Our adventurer wants to collect coins.  But she can only
         use 4 blocks to get them.\r
         \r
         Can you help her grab as many as she can
         using just 4 blocks?
+      sample10_instruction: Now you can use loops to draw whatever you like!
+      sample10a_instruction: |-
+        You have helped the adventurer and her bee!  As a reward,
+        please stay and play around in my magical village. \r
+        \r
+        You should have
+        everything you need to create a game of your own.
       sample2_instruction: |
         Use what you've learned to help bee gather all of this
+        honey using only the blocks that you have here.
+      sample2a_instruction: |
+        Use what you've learned to help bee gather all of this
         honey using only 4 blocks.
-      sample3_instruction: Now you can help bee make all of the honey.
+      sample3_instruction: |
+        Now you can help bee make all of the honey using just
+        the blocks in the toolbox.
+      sample3assessment_instruction: |
+        Can you figure out how to gather all of this
+        nectar in just one try?
       sample4_instruction: |-
         Our adventurer has found a stash of coins in this cave.\r
         \r
@@ -4205,6 +4439,17 @@
         you help her grab as many as she can using just 7 blocks?
       sample5_instruction: Help bee make all of the honey.
       sample6_instruction: 'Challenge: Help bee make all of the honey.'
+      sample7assessment_instruction: |
+        Can you help bee make all of the honey in just
+        one try?
+      sample8_instruction: |
+        Look at this trove of coins! How many can you get the
+        adventurer to grab?
+      sample9_instruction: |
+        Use loops to help the artist connect all of the dots.
+      sample9a_instruction: |
+        The wizard has found his potions!  Use everything you
+        have learned to help him collect them.
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
@@ -4319,9 +4564,9 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2 frequency caesar_instruction: Instructions
-      U2 frequency random sub_instruction: Instructions
-      U2 vigenere cipher_instruction: Instructions
+      U2 frequency caesar_instruction: "Հրահանգներ"
+      U2 frequency random sub_instruction: "Հրահանգներ"
+      U2 vigenere cipher_instruction: "Հրահանգներ"
       U2 Vigenere_instruction: Test
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
@@ -4613,6 +4858,7 @@
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -6155,11 +6401,14 @@
       Underground Mine in a Circle_instruction: |
         Find a way to get 5 diamond and
         7 redstone! Try using a repeat command inside a repeat command to walk in
-        a square.\r
+        a square.\\r
       Underground Mining Coal_instruction: |
         You’ll find the most valuable resources
         underground, but it can get dark. Place at least 2 torches and mine at least
         2 coal.
       Underground Test Level_instruction: Collect all of the minerals!
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

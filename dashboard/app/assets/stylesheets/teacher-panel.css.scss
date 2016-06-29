@@ -49,14 +49,16 @@
   h3 {
     padding: 5px;
     font-size: 18px;
-    font-family: $gotham-extra-bold; font-weight: normal;
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
     color: white;
     background: $cyan;
     margin: 0;
   }
 
   h4 {
-    font-family: $gotham-extra-bold; font-weight: normal;
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
     text-align: center;
     margin: 5px 0;
   }
@@ -89,20 +91,20 @@
   .user_level {
     padding: 0 5px;
 
-   .level_link {
-     margin: 0 auto;
-     border-radius: 40px;
-     width: 44px;
-     min-width: 44px;
-     line-height: 44px;
-     font-size: 32px;
-     border-width: 4px;
-     display: block;
-     img {
-       width: 32px;
-       height: 32px;
-     }
-   }
+    .level_link {
+      margin: 0 auto;
+      border-radius: 40px;
+      width: 44px;
+      min-width: 44px;
+      line-height: 44px;
+      font-size: 32px;
+      border-width: 4px;
+      display: block;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
   }
 
   .level {
@@ -156,14 +158,22 @@
 
       &:hover {
         background-color: $lighter_cyan;
-        font-family: $gotham-extra-bold; font-weight: normal;
-        a { color: white; }
+        font-family: $gotham-extra-bold;
+        font-weight: normal;
+        a {
+          color: white;
+        }
       }
       &.active {
         background-color: $light_cyan;
-        font-family: $gotham-extra-bold; font-weight: normal;
-        a { color: white; }
-        .navigator a { color: $lightest_gray; }
+        font-family: $gotham-extra-bold;
+        font-weight: normal;
+        a {
+          color: white;
+        }
+        .navigator a {
+          color: $lightest_gray;
+        }
       }
     }
   }

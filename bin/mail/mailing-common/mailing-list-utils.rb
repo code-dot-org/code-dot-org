@@ -89,7 +89,7 @@ end
 def include_csv(results, params)
   CSV.foreach(params[:file], headers: true) do |row|
     email = row[params[:email]]
-    next if params.has_key?(:skip_emails) && params[:skip_emails].include?(email)
+    next if params.key?(:skip_emails) && params[:skip_emails].include?(email)
     international = !(row[params[:country_code]] && row[params[:country_code]] != '' && row[params[:country_code]] == params[:country_code_us])
     processed = {email: row[params[:email]], name: row[params[:name]], international: international.to_s}
 

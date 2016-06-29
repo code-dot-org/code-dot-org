@@ -7,15 +7,6 @@ var constants = require('./constants');
 var ApplabInterfaceMode = constants.ApplabInterfaceMode;
 var screens = require('./redux/screens');
 
-var levelInitialState = {
-  assetUrl: function () {},
-  isDesignModeHidden: undefined,
-  isEmbedView: undefined,
-  isReadOnlyWorkspace: undefined,
-  isShareView: undefined,
-  isViewDataButtonHidden: undefined
-};
-
 function interfaceMode(state, action) {
   state = state || ApplabInterfaceMode.CODE;
 

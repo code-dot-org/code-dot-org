@@ -103,6 +103,7 @@ class LevelSourceHintsController < ApplicationController
   end
 
   private
+
   def setup_display_of_pop_hints(unsuccessful_level_sources, path_maker)
     unsuccessful_level_sources = unsuccessful_level_sources.order('num_of_attempts desc')
     # Only consider levels having the restriction, if one is provided.
@@ -135,16 +136,17 @@ class LevelSourceHintsController < ApplicationController
   end
 
   public
+
   # This shows not just the hint whose popularity index is specified but also
   # all the other hints having the same level source id.
   def show_pop_hints
     authorize! :manage, :all
 
     unless setup_display_of_pop_hints(
-        FrequentUnsuccessfulLevelSource,
-        lambda {|idx, restriction| show_pop_hints_path idx, restriction})
+      FrequentUnsuccessfulLevelSource,
+      lambda {|idx, restriction| show_pop_hints_path idx, restriction})
       redirect_to frequent_unsuccessful_level_sources_path,
-                  notice: "No more #{@restriction && LevelSourceHint::USER_VISIBLE_NAMES[@restriction]} hints to review."
+        notice: "No more #{@restriction && LevelSourceHint::USER_VISIBLE_NAMES[@restriction]} hints to review."
     end
   end
 
@@ -163,7 +165,7 @@ class LevelSourceHintsController < ApplicationController
       render 'add_pop_hint'
     else
       redirect_to frequent_unsuccessful_level_sources_path,
-                  notice: 'No more hints are needed for the level you chose.  Please select another.'
+        notice: 'No more hints are needed for the level you chose.  Please select another.'
     end
   end
 
@@ -171,12 +173,12 @@ class LevelSourceHintsController < ApplicationController
     authorize! :manage, :all
 
     if setup_display_of_pop_hints(
-        FrequentUnsuccessfulLevelSource.where(level_id: params[:level_id].to_i),
-        lambda {|idx, restriction| show_pop_hints_per_level_path(params[:level_id].to_i, idx, restriction)})
+      FrequentUnsuccessfulLevelSource.where(level_id: params[:level_id].to_i),
+      lambda {|idx, restriction| show_pop_hints_per_level_path(params[:level_id].to_i, idx, restriction)})
       render 'show_pop_hints'
     else
       redirect_to frequent_unsuccessful_level_sources_path,
-                  notice: "No more #{@restriction && LevelSourceHint::USER_VISIBLE_NAMES[@restriction]} hints to review for the chosen level."
+        notice: "No more #{@restriction && LevelSourceHint::USER_VISIBLE_NAMES[@restriction]} hints to review for the chosen level."
     end
   end
 
@@ -199,18 +201,8 @@ class LevelSourceHintsController < ApplicationController
     redirect_to redirect_url, notice: I18n.t('add_hint_form.submit')
   end
 
-  def add_hint_access
-    redirect_url = params[:redirect]
-    user = User.find_by_email_or_hashed_email(params[:user_email])
-    if user
-      user.update_attribute(:hint_access, true)
-      redirect_to redirect_url, notice: "User hint access added to #{params[:user_email]}"
-    else
-      redirect_to redirect_url, notice: "Failed: cannot find user with email #{params[:user_email]}."
-    end
-  end
-
   protected
+
   def common(level_source_id)
     @level_source = LevelSource.find(level_source_id)
     @level = @level_source.level
@@ -227,6 +219,7 @@ class LevelSourceHintsController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_level_source_hint
     @level_source_hint = LevelSourceHint.where(id: params[:id], source: LevelSourceHint::CROWDSOURCED).try(:first)

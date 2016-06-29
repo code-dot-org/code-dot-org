@@ -34,6 +34,7 @@
       2-3 Artist Functions 10_instruction: Her er ti funksjoner, en til å tegne en stor del og en til å tegne en liten del. Bruk den til å tegne innsiden av en maskin!
       2-3 Artist Functions 11.5_instruction: 'Her er den samme "Tegn en sekskant" funksjonen. Hva skjer hvis du bare snur 60 grader hver gang du gjentar?'
       2-3 Artist Functions 11_instruction: 'Vi har omdøpt funksjonen "tegn en firkant" til "tegn en sekskant", men den tegner fortsatt bare firkanter! Kan du endre funksjonen "tegn en sekskant" til å tegne en sekskant med sider som er 50 piksler lange, og tegner bildet ved hjelp av funksjonen?'
+      2-3 Artist Functions 12 Mike_instruction: 'Funksjoner er virkelig flott for å tegne komplekse ting flere ganger. Kan du bruke funksjonen "tegne en blomst" til å fylle resten av planteboksen? (Hint: planter er atskilt med 100 pikslers avstand)  '
       2-3 Artist Functions 12_instruction: 'Funksjoner er virkelig flott for å tegne komplekse ting flere ganger. Kan du bruke funksjonen "tegne en blomst" til å fylle resten av planteboksen? (Hint: planter er atskilt med 100 pikslers avstand)  '
       2-3 Artist Functions 13_instruction: Vi har gitt deg fire funksjoner. Bruk dem slik du vil i ett eller flere ledd for å lage bilder som du kan dele med vennene dine. Trykk Kjør for å se et eksempel.
       2-3 Artist Functions 2_instruction: 'Funksjoner lar deg definere nye blokker! Vi har flyttet blokker for å tegne et kvadrat i en funksjon kalt "tegne en firkant". Kan du bruke funksjonen "tegne en firkant" for å opprette vinduer? kvadratene er 75 piksler fra hverandre.'
@@ -150,6 +151,10 @@
       2-3 Maze 12 (copy 1)_instruction: 'Kan du erstatte det forrige svaret med kun to blokker? (Hint: Lag en løkke ved å bruke "repeter ganger" blokk.)'
       2-3 Maze 12 (copy 2)_instruction: 'Kan du erstatte det forrige svaret med kun to blokker? (Hint: Lag en løkke ved å bruke "repeter ganger" blokk.)'
       2-3 Maze 12 (old)_instruction: 'Få meg til grisen ved å bruk "Gjenga ganger" blokken!'
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: |
         Klarer du å bytte ut disse fem blokkene med bare to blokker?
         (Tips: Lag en løkke ved å bruke en "gjenta ganger" blokk)
@@ -344,6 +349,7 @@
       4-5 Maze 9_instruction: 'Lag en løkke med "gjenta til" blokk.'
       4-5 Maze Assessment 1_instruction: 'Lekse: Få meg til solsikken.'
       4-5 Maze Conditionals 1_instruction: 'Bruk "gjenta til" blokk for å få zombien til solsikken.'
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 'Bruk "gjenta til" blokk for å få zombien til solsikken.'
       4-5 Maze Conditionals 3_instruction: 'Bruk "Hvis" blokken for å la meg bestemme jeg skal snu. Tips: du trenger bare en til blokk, men lær hvordan vi sette den opp slik at du kan gjøre det på din egenhånd neste gang.'
       4-5 Maze Conditionals 4_instruction: 'Ok, denne er helt lik den forrige oppgaven men du må huske hvordan du brukte "hvis"-blokken og deretter "Gjenta"-blokken sammen.'
@@ -374,6 +380,22 @@
       4-5 While Loops 7_instruction: Wow, nå er det tre hauger med jord der. Får du til å skrive et program som fjerner alle sammen slik at bakken blir helt jevn?
       4-5 While Loops 8_instruction: 'Det er et virkelig dypt hull og en virkelig stor haug med jord. Hvor mange spadetak må tas for å gjøre bakken helt flat? Tips: bruk en mens løkke for begge to.'
       4-5 While Loops Assessment 1_instruction: Det er mange hull og hauger. Hjelp meg og fylle og fjerne de slik at bakken blir helt jevn.
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na square with 20 pixel sides. "
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 14 napkins line up next to each other?
+      aE3_instruction: "We've got to have a tablecloth!  \\r\n\\r\nTake your row of\n14 napkins and sew 14 of those together with another **outer loop** to make\na cover for our table."
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: |
+        How many times do you need to loop this to draw half  of
+        a circle? 
+      aE7_instruction: "If you create another loop like this one, but turn left instead\nof right, what happens? \\r\n\\r\nCan you repeat all of that to draw this wave?"
+      aE8_instruction: "Now let's loop that whole thing four times to create this\npicture frame. Watch out for the corners - you can't just turn 90 degrees!\n\\r\n\\r\nIf looping a 3 degree turn 60 times makes a half circle, which of\nthese blocks of code will make an additional quarter circle for the corners?"
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -446,6 +468,10 @@
       Artist - Nested Loops Assessment 1_instruction: Bruk en løkke i løkke for å fullføre designet.
       Auto Open Function Editor_instruction: 'Du kan kalle på funksjoner fra innsiden av andre funksjoner! Bruk "figur"-funksjonen som grunnlag, opprett 3 hus-figurer som hver er 20 piksler større enn den forrige. Den første starter på 50 piksler i lengde. Å bruke en teller-løkke kan være nyttig. '
       Bee Recommended Blocks test_instruction: 'Lilla blomster har enten 1 eller 0 nektar, men du vet ikke hvilken! Pass på at du ikke prøver å samle inn nektar fra blomster som ikke har nektar. Sjekk om nektar er lik 1 ved å bruke en "hvis"-blokk.'
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
+        
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1141,6 +1167,9 @@
         functions you've learned in the draw loop. What happens when you use randomNumber()
         to generate some of the inputs?You'll want to stop and discuss with the class
         before moving on.
+      CSD U3 Expressions calculator_instruction: |
+        Add the numbers 1 through 10. Multiply
+        the numbers 1 through 10. Check your answers with a neighbor.
       CSD U3 Frame Rate_instruction: "Slow down Gamelab Gary's animation with frameRate()"
       CSD U3 Keypress Boolean_instruction: |
         Modify the code so that all of the console.log
@@ -1180,6 +1209,7 @@
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -1216,6 +1246,9 @@
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -1270,6 +1303,104 @@
       CSD U3 Variables2 expressions_instruction: |
         Use console.log to display the
         results of each expression. Then create your own.
+      CSDU4 - AppLab - 1_instruction: |
+        Read the documentation for penColor() and
+        penWidth() before using them to draw the blue square.
+      CSDU4 - AppLab - 2_instruction: |
+        Write a program that acts as a simple calculator.
+        (click to see full instructions)
+      CSDU4 - AppLab - 3_instruction: |
+        Use console to check the ending value of num.
+        (Click to see full instructions)
+      CSDU4 - AppLab - 4_instruction: |2
+         Use the Debug Commands to make a list of
+        all the values rolled before a 6. (Click to see full instructions)
+      CSDU4 - Design Mode - 1_instruction: |
+        Add a button that moves the turtle when
+        clicked.  (Click to see full instructions)
+      CSDU4 - Design Mode - 10_instruction: |
+        Introducing the setPosition command!
+        Replace the moveTo in the button-click event handler to use setPosition to
+        move the button itself to a random location when it's clicked.
+      CSDU4 - Design Mode - 11_instruction: |
+        Experiment with different event types
+        and select the one that you think is best. (Click to see full instructions)
+      CSDU4 - Design Mode - 12_instruction: |
+        Use the textLabel command to replace
+        the button in your program with a text label. (Click to see full instructions)
+      CSDU4 - Design Mode - 16_instruction: |
+        Add an event handler for the button
+        using the "Insert and show" link in the Design Mode Events tab. (Click to
+        see full instructions).
+      CSDU4 - Design Mode - 17_instruction: |
+        Update the ID names and `console.log`
+        messages to match the correct button. (Click to see full instructions.)
+      CSDU4 - Design Mode - 18_instruction: |
+        Fix the layout of the bullseye game.
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 19_instruction: |
+        Make a 2 screen app with a black screen
+        and a white screen. (Click to see detailed instructions)
+      CSDU4 - Design Mode - 2_instruction: |
+        Run a program with two buttons that have
+        the same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
+      CSDU4 - Design Mode - 20_instruction: |
+        Make a 2 screen app which can switch
+        back and forth between a black screen and a white screen using buttons. (Click
+        to see detailed instructions.)
+      CSDU4 - Design Mode - 24_instruction: |
+        Add an Text Input box for the name and
+        age. (Click to see full instructions)
+      CSDU4 - Design Mode - 25_instruction: |
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 26_instruction: |
+        Save the age and name of the user in
+        variables (Click to see full instructions)
+      CSDU4 - Design Mode - 27_instruction: |
+        Output a message to the 'textArea'
+        (Click to see full instructions)
+      CSDU4 - Design Mode - 28_instruction: |
+        Write a greeting to the user when they
+        hit 'enter' in the text input, using the 'change' event. (Click to see
+        full instructions)
+      CSDU4 - Design Mode - 29_instruction: |
+        Add a dropdown for their guess instead
+        of promptNum (Click to see full instructions)
+      CSDU4 - Design Mode - 3_instruction: |
+        Add an event handler to the button to
+        move the turtle forward. (Click to see full instructions)
+      CSDU4 - Design Mode - 30_instruction: |
+        Show different die images for the random
+        number generated. (Click to see full instructions)
+      CSDU4 - Design Mode - 31_instruction: |
+        Set up an event handler to respond to
+        keypress events, and display event.key in the console. Hit keys on the keyboard
+        to see what happens. (Click to see full instructions)
+      CSDU4 - Design Mode - 32_instruction: |
+        Try out the keyup and keydown events
+        to see how they are different from keypress. (Click to see full instructions)
+      CSDU4 - Design Mode - 33_instruction: |
+        Change the code so the sound will only
+        play when the up arrow is pressed. (Click to see full instructions)
+      CSDU4 - Design Mode - 4_instruction: |
+        Improve the button by choosing a descriptive
+        and meaningful ID. (Click to see full instructions)
+      CSDU4 - Design Mode - 5_instruction: |
+        Debug the program by verifying your IDs
+        are being referenced properly. (Click to see full instructions)
+      CSDU4 - Design Mode - 6_instruction: |
+        Debug the program by properly ordering
+        your button commands and event handlers. (Click to see full instructions)
+      CSDU4 - Design Mode - 7_instruction: |
+        Debug the program by fixing the logical
+        error within the program. (Click to see full instructions)
+      CSDU4 - Design Mode - 8_instruction: |
+        Move the button to the middle of the
+        screen. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1678,7 +1809,15 @@
       K-1 Maze Multi 15_instruction: Oppgave-nivå
       K-1 Maze Sequence Assessment 1_instruction: "Dette er en test!\\r\nFlytt en vei, og så en annen vei for å få meg bort til grisen"
       K-1 Maze Sequence Assessment 2_instruction: "Dette er en test!\\r\nFlytt en vei, og så en annen vei for å få meg bort til grisen."
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -1720,6 +1859,14 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      Mike Pair Programming_instruction: Here are the instructions
+      MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -1924,7 +2071,6 @@
       NEW Course 4 Play Labs For Loops 7a_instruction: Bruk det du lært så langt. Kan du få Dinosaur til å ta et skritt frem hver gang Penguin teller?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Det er fri spilletid! Ha det gøy med alle blokkene i verktøykassen din. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Utfordring: Hvordan vil du bruke "for"-løkken til å få alle figurene til å gå rundt og si figurnummeret sitt, for deretter å forsvinne fra skjermen? '
-      New Play Lab Project_instruction: Lag din egen historie eller spill! Koden din lagres som et prosjekt du kan returnere til når som helst.
       Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
@@ -2151,6 +2297,9 @@
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva copy U3L2 Using Simple Commands_instruction: |
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
@@ -2225,14 +2374,36 @@
         Only one last direction to worry about!
         Create a "safe-down?" function and update the "on-screen?" function so
         that it checks up, down, left, and right.
-      sample1_instruction: "Our adventurer wants to collect gems.  But she can only\nuse 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she can\nusing just 4 blocks?"
+      sample1_instruction: "Our adventurer wants to collect coins.  But she can only\nuse 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she can\nusing just 4 blocks?"
+      sample10_instruction: Now you can use loops to draw whatever you like!
+      sample10a_instruction: "You have helped the adventurer and her bee!  As a reward,\nplease stay and play around in my magical village. \\r\n\\r\nYou should have\neverything you need to create a game of your own."
       sample2_instruction: |
         Use what you've learned to help bee gather all of this
+        honey using only the blocks that you have here.
+      sample2a_instruction: |
+        Use what you've learned to help bee gather all of this
         honey using only 4 blocks.
-      sample3_instruction: Now you can help bee make all of the honey.
+      sample3_instruction: |
+        Now you can help bee make all of the honey using just
+        the blocks in the toolbox.
+      sample3assessment_instruction: |
+        Can you figure out how to gather all of this
+        nectar in just one try?
       sample4_instruction: "Our adventurer has found a stash of coins in this cave.\\r\n\\r\nCan\nyou help her grab as many as she can using just 7 blocks?"
       sample5_instruction: Help bee make all of the honey.
-      sample6_instruction: 'Challenge: Help bee make all of the honey.'
+      sample6_instruction: 'Challenge: Help bee get all of the nectar.'
+      sample7assessment_instruction: |
+        Can you help bee make all of the honey in just
+        one try?
+      sample8_instruction: |
+        Look at this trove of coins! How many can you get the
+        adventurer to grab?
+      sample9_instruction: |
+        Use loops to help the artist connect all of the dots.
+        
+      sample9a_instruction: |
+        The wizard has found his potions!  Use everything you
+        have learned to help him collect them.
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
@@ -2568,6 +2739,7 @@
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -4006,4 +4178,7 @@
       Underground Mining Coal_instruction: De mest verdifulle ressursene finner du under bakken, men det kan være mørkt der. Plasser minst to fakler og utvinn minst to kull.
       Underground Test Level_instruction: Samle alle mineralene!
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

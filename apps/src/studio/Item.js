@@ -5,7 +5,7 @@ var spriteActions = require('./spriteActions');
 var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
 var utils = require('../utils'); // Provides Function.prototype.inherits
-var _ = require('../lodash');
+var _ = require('lodash');
 var StudioAnimation = require('./StudioAnimation');
 var StudioSpriteSheet = require('./StudioSpriteSheet');
 
@@ -44,7 +44,7 @@ var Item = function (options) {
   this.fadeTime = constants.ITEM_FADE_TIME;
 
   /** @private {StudioAnimation} */
-  this.animation_ = new StudioAnimation($.extend({}, options, {
+  this.animation_ = new StudioAnimation(Object.assign({}, options, {
     spriteSheet: new StudioSpriteSheet({
       assetPath: options.image,
       defaultFramesPerAnimation: options.frames,

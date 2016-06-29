@@ -5,7 +5,7 @@ var xml = require('@cdo/apps/xml');
 testUtils.setupLocales();
 
 var utils = require('@cdo/apps/utils');
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
 describe("String.prototype.repeat", function () {
@@ -544,5 +544,106 @@ describe("ellipsify", function () {
     assert.equal("abcdefghi", ellipsify("abcdefghi", 12));
     assert.equal("abcdefghijkl", ellipsify("abcdefghijkl", 12));
     assert.equal("abcdefghi...", ellipsify("abcdefghijklm", 12));
+  });
+});
+
+describe("deepMergeConcatArrays", () => {
+  it("merges arrays within objects", () => {
+    const base = { items: [1, 2, 3] };
+    const overrides = { items: [4, 5, 6]};
+    const allItems = [1, 2, 3, 4, 5, 6];
+    const expected = { items: allItems };
+
+    const actual = utils.deepMergeConcatArrays(base, overrides);
+
+    assert.deepEqual(allItems, actual.items, 'concats arrays');
+    assert.deepEqual(expected, actual, 'constructs expected object');
+  });
+
+  it("overrides object properties", () => {
+    const base = {
+      untouchedProperty: 'originalA',
+      untouchedNestedProperty: {property: 'value'},
+      overriddenProperty: 'originalC',
+      overriddenNestedProperty: {property: 'originalD'}
+    };
+
+    const overriddenValue = 'newB';
+    const overrides = {
+      overriddenProperty: overriddenValue,
+      newProperty: 'newValue',
+      overriddenNestedProperty: {property: 'newD'}
+    };
+
+    const expected = {
+      untouchedProperty: 'originalA',
+      untouchedNestedProperty: {property: 'value'},
+      overriddenProperty: overriddenValue,
+      overriddenNestedProperty: {property: 'newD'},
+      newProperty: 'newValue'
+    };
+
+    const actual = utils.deepMergeConcatArrays(base, overrides);
+
+    assert.deepEqual(overriddenValue, actual.overriddenProperty,
+        'overrides object values');
+    assert.deepEqual(expected, actual, 'merges all values');
+  });
+
+  it("returns deep clone, does not mutate original object", () => {
+    const base = {
+      untouchedProperty: 'originalA',
+      untouchedNestedProperty: {property: 'value'},
+      overriddenProperty: 'originalC',
+      overriddenNestedProperty: {property: 'originalD'},
+      items: [1, 2, 3]
+    };
+    const baseClone = _.cloneDeep(base);
+
+    const overrides = {
+      overriddenProperty: 'newB',
+      newProperty: 'newValue',
+      overriddenNestedProperty: {property: 'newD'},
+      items: [4, 5, 6]
+    };
+
+    const actual = utils.deepMergeConcatArrays(base, overrides);
+
+    assert.deepEqual(baseClone, base, 'does not mutate base object');
+
+    actual.items.push(7);
+    assert.deepEqual(baseClone, base, 'clones array properties');
+
+    actual.untouchedProperty = 'Some other value';
+    assert.deepEqual(baseClone.untouchedProperty, base.untouchedProperty,
+        'cannot override base properties via returned object');
+
+    actual.untouchedNestedProperty.property = 'Some other value';
+    assert.deepEqual(baseClone.untouchedNestedProperty, base.untouchedNestedProperty,
+        'cannot override base nested properties via returned object');
+  });
+
+  it("retains order of original properties", () => {
+    const base = {
+      first: 1,
+      second: 2,
+      third: 3
+    };
+
+    const overrides = {
+      third: '3',
+      first: '1',
+      second: '2'
+    };
+
+    const expected = {
+      first: '1',
+      second: '2',
+      third: '3'
+    };
+    const actual = utils.deepMergeConcatArrays(base, overrides);
+    assert.deepEqual(expected, actual, 'overrides expected values');
+    assert.deepEqual(Object.keys(expected), Object.keys(actual),
+        'merges in original order');
   });
 });

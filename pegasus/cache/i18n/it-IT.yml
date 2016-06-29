@@ -1,7 +1,14 @@
 "it-IT":
   hour_of_code: Ora del codice
   hello: Ciao a tutti
+  'yes': Sì
+  'no': 'No'
   select_language: Seleziona per favore la tua lingua
+  upgrade_ie_message: Code.org non supporterà più Internet Explorer 8, 9 e 10. Effettua
+    l'aggiornamento ad un browser più moderno.
+  upgrade_ie_message_csedweek: CSEdWeek.org non supporterà più Internet Explorer 8,
+    9 e 10. Effettua l'aggiornamento ad un browser più moderno.
+  upgrade_ie_link: Ulteriori informazioni
   en: Informatica
   computer_science_edweek: Settimana di Educazione all'Informatica
   csedweek_dates: 8-14 dicembre 2014
@@ -79,16 +86,16 @@
   congratulations_volunteer: 'Complimenti: ora che hai provato l''Ora del Codice,
     <a href="https://code.org/volunteer">iscriviti come volontario in una scuola</a>
     e aiuta gli studenti a imparare un''Ora del Codice!'
-  congratulations_on_completing_course1: Congratulazioni per il completamento del
-    corso 1
-  congratulations_on_completing_course2: Congratulazioni per il completamento del
-    corso 2
-  congratulations_on_completing_course3: Congratulazioni per il completamento del
-    corso 3
-  congratulations_on_completing_course4: Congratulazioni per il completamento del
-    corso 4
-  congratulations_on_completing_accelerated: Congratulazioni per il completamento
-    del corso accelerato
+  congratulations_on_completing_course1: Complimenti per aver completato il Corso
+    1
+  congratulations_on_completing_course2: Complimenti per aver completato il Corso
+    2
+  congratulations_on_completing_course3: Complimenti per aver completato il Corso
+    3
+  congratulations_on_completing_course4: Complimenti per aver completato il Corso
+    4
+  congratulations_on_completing_accelerated: Complimenti per aver completato il Corso
+    Rapido
   congrats_next_tutorials_title: Prova ora questi tutorial
   congrats_next_tutorials_desc: Prova questi corsi più brevi, da 1 ora, oppure prova
     un <a href="%{current_path}/next">corso di un partner</a>.
@@ -261,11 +268,12 @@
   hoc_is_here: Impara l'informatica. Essa sta cambiando tutto. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala!
     @codeorg @programmafuturo'
-  just_did_course1: Ho appena finito il corso 1 - verificalo su @codeorg
-  just_did_course2: Ho appena finito il corso 2 - verificalo su @codeorg
-  just_did_course3: Ho appena finito il corso 3 - verificalo su @codeorg
-  just_did_course4: Ho appena finito il corso 4 - verificalo su @codeorg
-  just_did_accelerated: Ho appena finito il corso accelerato - Verificalo su @codeorg
+  just_did_course1: Ho appena completato il Corso 1 - Provalo! Su @codeorg @programmafuturo
+  just_did_course2: Ho appena completato il Corso 2 - Provalo! Su @codeorg @programmafuturo
+  just_did_course3: Ho appena completato il Corso 3 - Provalo! Su @codeorg @programmafuturo
+  just_did_course4: Ho appena completato il Corso 4 - Provalo! Su @codeorg @programmafuturo
+  just_did_accelerated: Ho appena completato il Corso Rapido - Provalo! Su @codeorg
+    @programmafuturo
   twitter_teach_cs: 9 su 10 persone sono d'accordo, le scuole dovrebbero insegnare
     informatica. http://youtu.be/nKIu9yen5nc. Visita https://code.org/.
   learn_hoc: Fai l'Ora del Codice
@@ -387,9 +395,9 @@
   homepage_banner_20k_teachers: 20.000 insegnanti addestrati che ora insegnamento
     informatica nelle loro classi.
   homepage_banner_20k_teachers_link: Ulteriori informazioni
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress: Alcuni personaggi di spicco americani chiedono al Congresso
+    di finanziare il programma d'informatica K-12.
+  homepage_banner_congress_link: Aggiungi il tuo sostegno
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
   homepage_slot_text_link_hoc: Prova l'Ora del Codice
@@ -415,7 +423,7 @@
   homepage_slot_text_link_stats: Guarda le statistiche
   homepage_slot_text_link_buy: Fatti coinvolgere
   homepage_slot_text_link_donate: Fai una donazione
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: T-shirts, cappelli & altro
   homepage_header_codestudio: Creazioni degli studenti di Code Studio
   homepage_header_donors: Code.org ringrazia i suoi sostenitori
   homepage_donors_seall: Mostra tutto
@@ -613,6 +621,7 @@
   dashboard_landing_new_k5courses: Nuovo! Prova i nostri corsi per gli studenti della
     scuola primaria.
   dashboard_landing_useful_links: Altre pagine utili (alcune solo in lingua inglese)
+  dashboard_landing_classroom_resources: Risorse per la tua classe
   dashboard_landing_office_hours: Fai una domanda di persona! Visita il nostro ufficio
     di assistenza. L'assistenza viene fornita in inglese dal personale di code.org.
   dashboard_landing_print_certificates: Stampa il certificato per gli studenti che
@@ -635,6 +644,11 @@
     messi a disposizione dai nostri partner.</a> Impara a programmare con i robot,
     crea pagine web, costruisci una tua app o esplora altri linguaggi di programmazione
     come C++, Ruby o Python!
+  dashboard_landing_inspire: Ispira i tuoi studenti con poster, video e molto altro.
+  dashboard_landing_video_library: Usa un video dalla libreria video dei concetti
+    d'informatica.
+  dashboard_landing_report_bug: Richiedere una funzionalità o segnalare un bug.
+  dashboard_landing_teacher_forum: Unisciti alla comunità di apprendimento professionale.
   dashboard_hoc_courses: L'ora del codice per tutte le età
   dashboard_hoc_courses_desc: Prova con i tuoi studenti una qualsiasi di questi corsi
     da un'ora!
@@ -694,6 +708,13 @@
   dashboard_action_required: obbligatorio
   dashboard_assessments_view: 'Mostra valutazioni in:'
   dashboard_assessments_none: Nessuna valutazione
+  dashboard_assessments_none_part2: Se state insegnando in un corso al liceo o alle
+    scuole medie, abbiamo domande di valutazione disponibili come parte del Code Studio
+    per aiutare gli studenti a prepararsi per il test di AP. Per utilizzare queste
+    valutazioni, in primo luogo assegnare il corso per la classe e poi scegliere il
+    corso dal menu a tendina qui sopra per vedere le risposte degli studenti.
+  dashboard_assessments_summaries: Riassunti
+  dashboard_assessments_answers: Tutte le risposte
   dashboard_filter_by_stage: 'Filtra per fase:'
   dashboard_filter_all: Tutti
   dashboard_download_csv: Scarica CSV
@@ -705,7 +726,7 @@
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
-  dashboard_navigation_view_progress: Controlla i progressi
+  dashboard_navigation_view_progress: Avanzamento
   dashboard_navigation_view_text_responses: Visualizza il testo delle risposte
   dashboard_navigation_view_assessments: Valutazioni
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
@@ -725,6 +746,7 @@
   dashboard_progress_view: 'Mostra i progressi in:'
   dashboard_progress_student_in_script: Informazioni sui progressi di %{student_name}
     in %{script_name}
+  dashboard_progress_pair_programming: Programmazione in Coppia
   dashboard_responses_view: 'Visualizza il testo delle risposte in:'
   dashboard_responses_none: Nessuna risposta
   dashboard_sections_new_section: Nuova classe
@@ -735,6 +757,7 @@
   dashboard_sections_table_secret: Tipo di accesso
   dashboard_sections_table_grade: Livello
   dashboard_sections_table_course: Corso
+  dashboard_sections_table_stage_extras: Fase extra
   dashboard_sections_table_students: Studenti
   dashboard_sections_table_code: Codice-Classe
   dashboard_sections_name: Nome della classe
@@ -770,7 +793,7 @@
   dashboard_error_none_selected: Non hai selezionato nessuno studente. Per favore,
     scegli almeno uno studente.
   dashboard_error_other_section: Se stai spostando degli studenti tra le tue stesse
-    sezioni, selezionane una dal menù a tendina. Scegli 'Altra Sezione' solo se devi
+    sezioni, selezionane una dal menù a tendina. Scegli "Altra Sezione" solo se devi
     spostare degli studenti nella sezione di un altro insegnante.
   dashboard_students_add_student: Aggiungi uno studente
   dashboard_students_add_students: Aggiungi più studenti
@@ -837,7 +860,9 @@
   dashboard_course1: 'Corso 1:'
   dashboard_course2: 'Corso 2:'
   dashboard_course3: 'Corso 3:'
-  dashboard_course4: 'Corso 4 (beta): '
+  dashboard_course4: 'Corso 4: '
+  dashboard_unplugged: Se non hai dei computers, <a href='%{unplugged_url}'>prova
+    queste lezioni</a> nella tua classe.
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Panoramica
@@ -905,12 +930,14 @@
     Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa
     pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
   dashboard_announce_button_text: Ulteriori informazioni
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition: Come insegnante, stai aprendo la strada per permettere
+    ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso
+    è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa
+    settimana, personaggi chiave del mondo dell'istruzione, 28 governatori e gli amministratori
+    delegati delle più grandi aziende d'America si sono riuniti firmando una lettera
+    aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di
+    informatica K-12.
+  dashboard_announce_petition_button: Aggiungi il tuo nome
   code_hoc_coming: 'L''Ora del Codice è qui: 8-14 Dicembre!'
   code_sign_up: Iscriviti per partecipare durante la Settimana di Educazione all'Informatica
   learn_more: Ulteriori informazioni
@@ -1036,12 +1063,18 @@
   course3_name: Corso 3
   course4_name: Corso 4
   accelerated_name: Corso rapido
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
+  cspunit1_name: I principi dell'informatica - Unità 1
+  cspunit2_name: I principi dell'informatica - Unità 2
   cspunit3_name: I principi dell'informatica - Unità 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit4_name: I principi dell'informatica - Unità 4
+  cspunit5_name: I principi dell'informatica - Unità 5
+  cspunit6_name: I principi dell'informatica - Unità 6
+  csp1_name: 'Unità 1: Internet'
+  csp2_name: 'Unità 2: Informazioni digitali'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Test completo - 50 domande
+  cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
+  cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
   cspunit3_gradelevel: Classi 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1049,18 +1082,20 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Corso rapido
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
-  gumball_name: Gumball
+  algebra_name: L'informatica in algebra
+  AlgebraA_name: Informatica nell'algebra Corso A
+  AlgebraB_name: Informatica nell'algebra Corso B
+  gumball_name: Palla di gomma
   classicmaze_name: Labirinto Classico
   iceage_name: L'Era Glaciale
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Guerre Stellari (Blocchi)
   math_category_name: Matematica
   hoc_category_name: L'Ora del Codice
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csf_category_name: Fondamenti d'informatica
+  csp_category_name: I principi dell'informatica
+  csp17_category_name: "'16-'17 principi d'informatica"
+  cspexams_category_name: Prova pratica di principi d'informatica
   applab_name: Laboratorio per le App
   applab_gradelevel: Eta' 13+
   applab_shortdescription_congrats: App Lab è un programma ambientale con cui puoi
@@ -1252,14 +1287,14 @@
     per le classi 2-5.
   course3_shortdescription_congrats: Pronti ad andare oltre? Gli studenti potranno
     approfondire gli argomenti di programmazione introdotti nei corsi precedenti per
-    trovare soluzioni flessibili per risolvere problemi più complessi. Alla fine di
-    questo corso, gli studenti saranno in grado di creare storie interattive e giochi
-    che potranno condividere con chiunque. Consigliato per classi 4-5.
+    trovare soluzioni a problemi più complessi. Alla fine di questo corso, gli studenti
+    saranno in grado di creare storie interattive e giochi che potranno condividere
+    con chiunque.
   course4_shortdescription_congrats: Pronti ad andare oltre? Gli studenti potranno
     approfondire gli argomenti di programmazione introdotti nei corsi precedenti per
     trovare soluzioni a problemi più complessi. Alla fine di questo corso, gli studenti
     saranno in grado di creare storie interattive e giochi che potranno condividere
-    con chiunque. Consigliato per classi 4-8.
+    con chiunque.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
@@ -1808,11 +1843,3 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

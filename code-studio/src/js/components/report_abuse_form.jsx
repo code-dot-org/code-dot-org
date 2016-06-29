@@ -1,4 +1,8 @@
-/* global dashboard, React */
+/* global dashboard */
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+var _ = require('lodash');
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -26,7 +30,7 @@ var AgeDropdown = React.createClass({
   },
 
   render: function () {
-    var style = $.extend({}, {width: DROPDOWN_WIDTH}, this.props.style);
+    var style = _.assign({}, {width: DROPDOWN_WIDTH}, this.props.style);
 
     var age = this.props.age && this.props.age.toString();
     var ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',

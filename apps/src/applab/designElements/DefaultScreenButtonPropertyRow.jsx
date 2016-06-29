@@ -1,3 +1,4 @@
+var React = require('react');
 var color = require('../../color');
 var rowStyle = require('./rowStyle');
 var elementUtils = require('./elementUtils');
@@ -18,7 +19,7 @@ var DefaultScreenButtonPropertyRow = React.createClass({
       fontSize: '14px',
     };
 
-    var defaultButtonStyle = $.extend({}, buttonStyle, {
+    var defaultButtonStyle = Object.assign({}, buttonStyle, {
       backgroundColor: '#0aa',
       color: color.white
     });

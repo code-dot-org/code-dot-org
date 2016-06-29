@@ -1,18 +1,21 @@
-professional_learning_course 'true'
 title 'Online Support for CSP Unit 1'
 description 'This is a test Professional Learning Course'
 login_required 'true'
 
 stage 'Intro to the Unit', 'required'
-  level 'Sample Free Response'
-  level 'U1L5 How the Internet Works - Video'
-  level 'Sample External Resource'
+  named_level 'Sample Free Response'
+  named_level 'U1L5 How the Internet Works - Video'
+  named_level 'Sample External Resource'
 
 stage 'Chapter Overviews', 'required'
-  level 'Empty Markdown Level'
+  named_level 'Empty Markdown Level'
 
 stage 'Tool Talk: Intro to Netsim', 'required'
   level 'Empty Markdown Level'
+  level 'Empty Markdown Level'
+  level 'Empty Markdown Level'
+  level 'Empty Markdown Level'
+  level 'Sample CSP Assessment'
 
 stage 'Sending Binary Messages', 'content'
   level 'Empty Markdown Level'
@@ -21,7 +24,7 @@ stage 'Encoding and Sending Numbers', 'content'
   level 'Empty Markdown Level'
 
 stage 'Supporting Peer Learning', 'practice'
-  level 'U3L2 Free Response Reflection'
+  named_level 'U3L2 Free Response Reflection'
 
 stage 'Running a Constructive Classroom', 'practice'
   level 'U3L2 Free Response Reflection'

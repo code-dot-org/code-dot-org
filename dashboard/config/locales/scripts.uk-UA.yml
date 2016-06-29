@@ -157,7 +157,7 @@
           description_short: "Малюйте картини та узори разом з Художником!"
         hourofcode:
           Maze: "Лабіринт"
-          title: "Класичний лабіринт"
+          title: "Лабіринт"
           description: "Спробуйте основи інформатики з персонажами  Angry Birds, Plants
             vs. Zombies, та Білкою з Льодовикового періоду!"
           description_short: "Спробуйте основи інформатики з цікавими персонажами!"
@@ -173,11 +173,11 @@
         course4:
           description_short: "Учні, котрі приступають до Курсу 4, повинні попередньо
             пройти Курси 2 та 3."
-          description: "Курс 4 розроблено для учнів, котрі опанували Курси 2 та 3.
-            Учні глибше розглянуть деякі розділи програмування, з якими ознайомились
-            раніше, розроблятимуть гнучкіші рішення складніших задач. Протягом навчання
-            учні створюватимуть інтерактивні ігри чи історії, якими зможуть поділитися
-            з іншими. Рекомендується для 4-8 класу."
+          description: "Курс 4 призначений для учнів, які пройшли Курси 2 та 3. Учні
+            навчаться розв'язувати завдання підвищеної складності, а також комбінувати
+            поняття при розв'язуванні цих завдань. Завершивши курс, учні зможуть створювати
+            програми, які демонструватимуть опанування численних навичок, в тому числі
+            циклів та функцій з параметрами. Рекомендовано для 4-8 класів."
           'Artist: Variables': "Художник: змінні"
           'Bee: For Loops': "Бджілка - цикли з параметром"
           title: "Курс 4"
@@ -1020,6 +1020,8 @@
           Rich long assessment: Rich long assessment
           Free Response: Free Response
           Game Lab: Game Lab
+          Sample PLC Assessment: Sample PLC Assessment
+          Swapped Levels: Swapped Levels
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "Етап 2 онлайн: Змішане літнє навчання"
@@ -1036,8 +1038,8 @@
           Booleans: "Логічні вирази"
           'Eval: Conditionals': "Оцінка: умови"
           Next Steps: Next Steps
-          Best Practices for Teaching Computer Science: Best Practices for Teaching
-            Computer Science
+          Best Practices for Teaching Computer Science: "Успішні методики викладання
+            інформатики"
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -1061,11 +1063,13 @@
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
-          title: Teaching Computer Science Fundamentals
-          description: Learn how to teach computer science using Code.org's Computer
-            Science Fundamentals with this free, self-paced online course.
-          description_short: Learn how to teach computer science using Code.org's
-            Computer Science Fundamentals with this free, self-paced online course.
+          title: "Викладання основ інформатики"
+          description: "Дізнайтеся, як викладати інформатику за допомогою безкоштовного
+            онлайнового курсу основ інформатики від Code.org, який можна проходити
+            у довільному темпі."
+          description_short: "Дізнайтеся, як викладати інформатику за допомогою безкоштовного
+            онлайнового курсу основ інформатики від Code.org, який можна проходити
+            у довільному темпі."
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
@@ -1073,8 +1077,8 @@
           'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
           'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
           'Mastering the Basics: Events': 'Mastering the Basics: Events'
-          Best Practices for Teaching Computer Science: Best Practices for Teaching
-            Computer Science
+          Best Practices for Teaching Computer Science: "Успішні методики викладання
+            інформатики"
           Planning: Planning
           Next Steps: Next Steps
           Looking Ahead: Looking Ahead
@@ -1159,8 +1163,8 @@
           Booleans: "Логічні вирази"
           'Eval: Conditionals': "Оцінка: умови"
           Next Steps: Next Steps
-          Best Practices for Teaching Computer Science: Best Practices for Teaching
-            Computer Science
+          Best Practices for Teaching Computer Science: "Успішні методики викладання
+            інформатики"
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
           Welcome!: "Ласкаво просимо!"
@@ -1842,7 +1846,7 @@
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
         algebraPD1:
-          title: Computer Science in Algebra PD
+          title: "Інформатика в алгебрі - Частина 1"
           description_short: Teach Algebra through Functional Programming
           description: Teach Algebra through Functional Programming
           Introduction to PD: "Знайомство з профессійним кодуванням"
@@ -2006,6 +2010,18 @@
           Expressions and Reassignment: Expressions and Reassignment
           Sprites and Properties: Sprites and Properties
           Counting with Variables: Counting with Variables
+          Expressions: Expressions
+          Conditionals and Keyboard Input: Conditionals and Keyboard Input
+          Sprites and Images: Sprites and Images
+          CSD U3 Variables and Animation: CSD U3 Variables and Animation
+          SFLP: SFLP
+          Animations: Animations
+          'Project: Interactive Card': 'Project: Interactive Card'
+          Booleans and Conditionals: Booleans and Conditionals
+          Variables and Animation: Variables and Animation
+          Complex Conditionals: Complex Conditionals
+          Proposed Sprites and Props: Proposed Sprites and Props
+          Conditionals Update: Conditionals Update
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2117,6 +2133,7 @@
           description_short: Unreleased level types for UI testing as admin
           description: Unreleased level types for UI testing as admin
           Game Lab: Game Lab
+          Contained Levels: Contained Levels
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -2150,3 +2167,133 @@
             across 7 big ideas of computer science: Creativity, Abstraction, Data,
             Algorithms, Programming, The Internet, and Global Impact. '
           CS Principles Culminating Assessment: CS Principles Culminating Assessment
+        cspexam1-mWU7ilDYM9:
+          title: CS Principles Culminating Assessment - Part 1
+          description_short: Culminating
+          description: 'This 25 question multiple choice assessment covers questions
+            across 7 big ideas of computer science: Creativity, Abstraction, Data,
+            Algorithms, Programming, The Internet, and Global Impact.'
+          CS Principles Culminating Assessment Part 1: CS Principles Culminating Assessment
+            Part 1
+        cspexam2-AKwgAh1ac5:
+          title: CS Principles Culminating Assessment - Part 2
+          description_short: Culminating
+          description: 'This 25 question multiple choice assessment covers questions
+            across 7 big ideas of computer science: Creativity, Abstraction, Data,
+            Algorithms, Programming, The Internet, and Global Impact.  It is part
+            2 of a two-part 50 question exam'
+          CS Principles Culminating Assessment Part 2: CS Principles Culminating Assessment
+            Part 2
+        CSDU4-Draft:
+          title: " TEMP CSD Unit 4 - The Design Process"
+          description_short: Design Process and App Lab
+          description: Temp place to work on U4 of Disco
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Introducing Design Mode: Introducing Design Mode
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistants: Introduction to Digital Assistants
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Цикли "поки"
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          The Need For Programming Languages: The Need For Programming Languages
+          Using Simple Commands: Using Simple Commands
+          Creating Functions: "Створення функцій"
+          Functions and Top-Down Design: Functions and Top-Down Design
+          APIs and Function Parameters: APIs and Function Parameters
+          Creating functions with Parameters: Creating functions with Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          App Lab: App Lab
+          Design Mode: Design Mode
+        CSDU1-Draft:
+          title: " TEMP CSD Unit 1"
+          description_short: Problem Solving
+          description: Temp place to work on U1 of Disco
+        CSDU2-Draft:
+          title: " TEMP CSD Unit 2"
+          description_short: Web Development
+          description: Temp place to work on U2 of Disco
+          Headers and Lists: Headers and Lists
+          Introduction to HTML: Introduction to HTML
+        CSDU5-Draft:
+          title: " TEMP CSD Unit 5"
+          description_short: Data
+          description: Temp place to work on U5 of Disco
+        CSDU6-Draft:
+          title: " TEMP CSD Unit 6 "
+          description_short: Makerlab
+          description: Temp place to work on U6 of Disco
+        CSF_Secret_Sample_Story:
+          title: Secret Sample with Story
+          description_short: This is a secret...shhhh
+          description: Test of new educational philosophy with guiding storyline
+          description_audience: Ages 8-18+
+          Sample Stage: Sample Stage
+        MikeTest:
+          title: MikeTest
+          description_short: Just a script for playing around
+          description: Trying not to break anything
+          description_audience: Ages 8-98
+          Sample Stage: Sample Stage
+          Artist Functions: "Художник - функції"
+          The same thing with named levels: The same thing with named levels
+          You are a coding STAR: You are a coding STAR
+        artistExemplar:
+          title: Artist Exemplar
+          description_short: How can we make the artist levels really hum?
+          description: These artist levels will knock the socks off of third graders
+          description_audience: "Вік 8-18"
+          Artist Exemplar: Artist Exemplar
+        2016_sciencePD_phase2b:
+          title: Computer Science in Science PD Phase 2b 2016-2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: "Ласкаво просимо!"
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: "Підведення підсумків"
+        teachercon:
+          title: TeacherCon Supports
+          description_short: We will use this during TeacherCon to deliver supports
+            and materials for sessions
+          description: We will use this during TeacherCon to deliver supports and
+            materials for sessions
+          Introduction to Teachercon: Introduction to Teachercon
+          Lesson 1,4: 'Lesson 1.4: Number Systems (Circle Triangle Square)'
+          Lesson 1,6: 'Lesson 1.6: Sending Numbers'
+          Lesson 1,9: 'Lesson 1.9: Internet Addressing (Battleship)'
+          Lesson 1,10: 'Lesson 1.10: Routers and Redundancy'
+          Lesson 1,11: 'Lesson 1.11: Packets and Making a Reliable Internet'
+          Lesson 2,2: 'Lesson 2.2: Text Compression'
+          Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
+          Lesson 2,10: 'Lesson 2.10: Good and Bad Data Visualizations'
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+          Discovery Learning: Discovery Learning
+          Measuring Student Learning: Measuring Student Learning
+        2016_sciencePD-phase2b:
+          title: Computer Science in Science PD Phase 2b 2016 2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: "Ласкаво просимо!"
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: "Підведення підсумків"
+        kinderTest:
+          Kindergarten Stage 1: Kindergarten Stage 1

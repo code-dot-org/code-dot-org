@@ -149,6 +149,7 @@
   "generatedCodeInfo": "אפילו האוניברסטאות הטובות ביותר מלמדות תכנות בשיטת בלוקים (לדוגמה, {berkeleyLink}, {harvardLink}). אבל מתחת למכסה המנוע, המיומנויות שרכשת ניתנות למימוש גם בג'אווה סקריפט, שפת התכנות הפופלרית בעולם:",
   "hashError": "סליחה, אך '%1' אינו תואם לאף תוכנית שנשמרה.",
   "help": "עזרה",
+  "hide": "Hide",
   "hideToolbox": "(הסתר)",
   "hintHeader": "הנה עצה:",
   "hintPrompt": "צריך עזרה?",
@@ -167,6 +168,7 @@
   "makeYourOwnFlappy": "צור משחק flappy bird משלך",
   "missingRecommendedBlocksErrorMsg": ". לא בדיוק- נסה להשתמש בבלוק שאינך משתמש בו עדיין.",
   "missingRequiredBlocksErrorMsg": ". לא בדיוק- אתה צריך להשתמש בלוק שאינך משתמש בו עדיין.",
+  "more": "יותר",
   "nestedForSameVariable": "הנך משתמש באותו משתנה בתוך שתי לולאות מקוננות או יותר. השתמש במשתנים יחודיים בכדי להמנע מלולאה אין סופית.",
   "nextLevel": "מזל טוב! השלמת את פאזל {puzzleNumber}.",
   "nextLevelTrophies": "מזל טוב! השלמת את פאזל {puzzleNumber} וזכית ב{numTrophies, plural, one {פרס} other {# פרסים}}.",
@@ -233,9 +235,15 @@
   "tryBlocksBelowFeedback": "נסה להשתמש באחת מהבלוקים שלהלן:",
   "tryHOC": "נסה את \"שעת הקוד\" (Hour of Code)",
   "unnamedFunction": "יש לך משתנה או פונקציה ללא שם. אל תשכח לתת שם תיאורי לכל דבר.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "רוצה ללמוד לתכנת?",
   "watchVideo": "צפה בסרטון",
   "when": "מתי",
   "whenRun": "התחל ריצה",
-  "workspaceHeaderShort": "סביבת העבודה: "
+  "workspaceHeaderShort": "סביבת העבודה: ",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

@@ -23,15 +23,17 @@
           future: "不能选择将来的时间"
   hello: "你好，世界！"
   welcome_back: "欢迎回来，%{name}"
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: "你的专业学习计划"
+  see_your_learning_plan: "查看你的学习计划。"
   submit: "提交"
   unsubmit: "未提交"
-  previous_page: "上一页"
-  next_page: "下一页"
+  previous_page: "返回"
+  next_page: "前进"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "取消"
   okay: "好吧"
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (%{y} 第%{x} 页)"
   add_teacher_form:
     code:
       label: "添加一个老师:"
@@ -86,6 +88,7 @@
     teacher_title: "老师注册"
     student_pitch: Code.org 学生注册
     student_title: "学生注册"
+    signup_title: Sign up for Code.org
     school_name: "学校名称 （可选）"
     school_address: "学校地址 （可选）"
     address_placeholder: "地址、 省市、 邮编"
@@ -105,6 +108,9 @@
       Code.org 服务。 <br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中."
     teacher_terms: "我同意 Code.org <a href='http://code.org/tos'>服务条款</a> 的约束。"
     additional_information: "我们需要一些额外的信息来继续为你注册."
+    user_type_label: Account Type
+    user_type_teacher: "老师"
+    user_type_student: "学生"
   signin_form:
     title: "已经有账号了？登录"
     login: "电子邮件或用户名"
@@ -349,29 +355,20 @@
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
     announcement_button: "了解详情"
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
+    announcement_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
+      28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。"
+    announcement_petition_button: "添加您的姓名"
   move_students:
-    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
-      enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as
-      the new section.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    new_section_dne: "抱歉，但分段 %{new_section_code} 并不存在。请输入一个不同的分段代码。"
+    section_code_not_entered: "请提供 current_section_code。"
+    section_code_cant_be_current_section: "当前单元无法与新建单元相同。"
+    current_section_dne: "抱歉，单元%{current_section_code}不存在。请输入一个不同的单元代码。"
+    students_not_yours: "您不能移动不属于您这一段的学生。"
+    stay_enrolled_not_entered: "请提供 stay_enrolled_in_current_section。"
+    student_ids_not_entered: "请提供 student_ids。"
+    student_not_found: "无法找到这一个或多个学生"
+    all_students_must_be_in_current_section: "所有的学生都必须修读您的部分。"
+    already_enrolled_in_new_section: "您无法移动这些学生，因为有老师在另外的课程中有了这些学生。"
   share:
     title: "在代码工作室学习"
     description: "任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。"
@@ -399,8 +396,8 @@
       迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482;
       &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year}
       电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; 2015 卡通网络."
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: Code.org使用p5.play游戏资源库，根据<a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a>之许可。
     powered_by_aws: "由亚马逊网络服务"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE标识和Hour of Code标识&reg;
       是Code.org的注册商标。"
@@ -432,18 +429,15 @@
     notes_coming_soon: "此视频的备注即将推出。"
     autoplay_option: "自动播放视频"
     download: "下载视频"
-  compatability:
-    working:
-      header: "我们在努力加入对你的浏览器的支持。"
-      message: Code.org利用现代网络技术. 这使得网站速度更快. 你的浏览器不支持所需的所有功能，使用该网站这一部分时，你可能会遇到问题. 请帮助我们通过<a
-        href=' %{report_issue_url}'> 报告你所发现的任何问题</a>. 你还可以<a href='%{supported_browsers_url}'>
-        升级到浏览器支持的版本</a>.
-      hide_this_warning: "隐藏此警告"
+  compatibility:
     upgrade:
-      header: "请升级你的浏览器。"
-      message: Code.org利用现代网络技术，这使得网站速度更快。很遗憾，您的浏览器不支持网站这部分所需要的所有功能. <br/> <br/>在我们支持的浏览器列表，安装浏览器来继续.
-        你可以 <a href='#'> 尝试查看此页</a>，但有可能网页不能正常使用。
-      button: "跳转至支持的浏览器列表"
+      unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
+        target='_blank'>我们支持的浏览器之一</a>。您可以尝试访问此网页，但无法获得期望的效果。"
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
+        10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
+        8, 9, and 10. Please upgrade to a modern browser.
+      link: "了解详情"
   slow_loading: "请再多等一会儿..."
   try_reloading: "请重新刷新页面"
   next_stage: "完成 ！继续下一个阶段"
@@ -510,26 +504,26 @@
       title: "我的世界"
       body: "用代码来探索《我的世界》。"
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 6+
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      title: "不需要电的课程"
+      audience: "适合年龄 4 岁以上"
+      body: |
+        我们已经编译拔出经验教训，为您在您的课堂中使用的列表。现在你可以教计算机科学基础是否你有电脑在你的教室或不 ！尝试利用这些经验教训，作为一门独立的课程或互补借鉴任何计算机科学课程。
+        我们做了一套离线课程在课堂上使用。现在，你即使没有电脑，也可以教授计算机科学的基础。尝试使用这些教材，作为一门独立课程或借鉴任何计算机科学课程。
+      body_short: "如果你没有电脑，（可以）在你的教室试试这些离线的教程。"
   gallery:
     students_drew_these_with_code: "学生使用代码画了这些图案!"
     students_made_these_with_code: "学生使用代码做了这些内容!"
     picture_count: "在过去的 <b>%{days}</b> 天，学生们用程序画了 <b>%{count}</b> 幅图片。点击图片来查看每个程序如何运行。"
     activity_count: "在过去的 <b>%{days}</b> 天中，学生用程序完成了 <b>%{count}</b> 个应用程序和图片。单击图片和屏幕截图来查看每个程序如何运行。"
     want_to_make_your_own: "想要做你自己的作品？"
+    how_to_save: 在这些教程的最后一个级别，单击"完成"和"保存"以在画廊里保存您的作品。
     more: "更多 &rarr;"
     caption_by_name_age: "%{name}，%{age} 岁"
     caption_time_ago: "%{time_ago}之前"
     header: "作品"
     header_playlab: "游戏实验室"
     header_artist: "艺术家"
+    report_abuse: "报告滥用"
   landing:
     prerelease: "本课程是在 <span class='betatext'> beta 版</span> 中. 这表示它不是最终版本. 它会根据反馈而被修订和改善."
     prerelease_hoc2014: "本教程是在 <span class='betatext'> beta 版</span> 中. 它会根据反馈而被修订和改善."
@@ -561,15 +555,12 @@
     wrong_body: "感谢您提交答案。"
     correct_title: "谢谢你"
     correct_body: "感谢您提交答案。"
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
-      date.  Are you sure?
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
-    submit-complete-title: Submit your assessment
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    unsubmit-title: "撤回您的评估。"
+    unsubmit-body: "撤销您的评估将会重置提交时间和日期，您确定要这样做吗？"
+    submit-incomplete-title: "提交您的评估"
+    submit-incomplete-body: "您有未完成问题，提交评估之后您将无法编辑它，您确定要这么做吗？"
+    submit-complete-title: "提交您的评估"
+    submit-complete-body: "提交后您不能编辑您的评估。 是否确定？"
   match:
     wrong_title: "不正确的解决方案"
     wrong_body: "您输入的解决方案不正确。请再试一次 ！"
@@ -662,10 +653,9 @@
     share: "分享"
     share_title: "分享您的项目"
     share_copy_link: "复制链接："
-    share_embed_description: You can paste the embed code into an HTML page to display
-      the project on a webpage.
-    embed: Embed
-    advanced_share: Show advanced options
+    share_embed_description: "您可以将嵌入的代码粘贴到HTML页，就可以在另一个网页上显示这个项目。"
+    embed: "插入"
+    advanced_share: "显示更高级的选项"
     close: "关闭"
     more: "更多"
     name: "姓名"
@@ -707,21 +697,69 @@
         acknowledge: "提交的信息将会根据%{link_start_privacy}隐藏策略%{link_end} 和 %{link_start_tos}服务条款%{link_end}的职权范围进行处理。"
   peer_review:
     accepted:
-      name: Accepted
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      name: "已接受"
+      description: "<strong>是的</strong> 这个提交 <strong>符合</strong> 的要求"
     rejected:
-      name: Rejected
-      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
-        the requirements"
+      name: "已拒绝"
+      description: "<strong>否决</strong>这个提交<strong>不能满足</strong> 的要求"
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
+      name: "升级"
+      description: "我想老师来审查此提交"
+    instructor_feedback: "教师反馈"
+    peer_feedback: "同伴反馈"
+    outdated: "这个反馈是添加给以前提交的版本"
   components:
     icon_library:
       search_placeholder_text: "查询图标"
-      no_icons_found: "找不到图标"
+      no_icons_found: "找不到该图标"
+    playzone:
+      artist_description: "和小艺术家一起设计出很酷的图形！"
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: "通过游戏实验室创建故事或制作游戏！"
+      playlab_title: New App
+      primary_header: Congratulations! You finished %{stageName}!
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: "概览"
-    content: Content
-    practice: Teacher Practices
+    content: "内容"
+    practice: "老师的做法"
+  external_links:
+    disclaimer_md: "<strong>免责声明 ︰ 你现在离开了 Code.org 领域，到一个不由 Code.org.</strong>运转的网站。此网站可能包含和
+      Code.org 不同的隐私政策。 <br/> <br/>。我们选择了这些第三方资源是因为我们认为他们会对你有帮助。如果有反感的内容，或者如果所链接的网站已不再可用，请
+      <a href='mailto:support@code.org'> 与支持部门联系</a> ，虽然我们并不直接负责本网站的内容。"
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: Download %{app_name} for offline use (136MB)
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

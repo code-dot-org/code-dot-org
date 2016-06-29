@@ -30,6 +30,7 @@ ExcludedBrowsers = [
   'IE 6.0',
   'IE 7.0',
   'IE 8.0',
+  'IE 9.0',
   'IE Mobile',
   'Other',
   'Slurp',
@@ -80,11 +81,11 @@ end
 
 class Collater
 
-  def initialize()
+  def initialize
     @results = {browsers: {}, locales: {}}
   end
 
-  def each_by_browser()
+  def each_by_browser
     browsers = @results[:browsers]
     browsers.keys.sort.each do |browser|
       browsers[browser].keys.sort.each do |level|
@@ -95,13 +96,13 @@ class Collater
   end
 
   def insert(level, tag, browser, locale)
-    @results[:browsers][browser] = {} unless @results[:browsers].has_key?(browser)
-    @results[:browsers][browser][level] = {starts: 0, finishes: 0} unless @results[:browsers][browser].has_key?(level)
+    @results[:browsers][browser] = {} unless @results[:browsers].key?(browser)
+    @results[:browsers][browser][level] = {starts: 0, finishes: 0} unless @results[:browsers][browser].key?(level)
     @results[:browsers][browser][level][:starts] += 1 if tag == :activity_start
     @results[:browsers][browser][level][:finishes] += 1 if tag == :activity_finish
 
-    @results[:locales][locale] = {} unless @results[:locales].has_key?(locale)
-    @results[:locales][locale][level] = {starts: 0, finishes: 0} unless @results[:locales][locale].has_key?(level)
+    @results[:locales][locale] = {} unless @results[:locales].key?(locale)
+    @results[:locales][locale][level] = {starts: 0, finishes: 0} unless @results[:locales][locale].key?(level)
     @results[:locales][locale][level][:starts] += 1 if tag == :activity_start
     @results[:locales][locale][level][:finishes] += 1 if tag == :activity_finish
   end
@@ -125,7 +126,7 @@ class Monitor
     collater
   end
 
-  def each_row()
+  def each_row
     dataset.each do |i|
       yield i['level_id'].to_i,
             i['tag'].to_sym,
@@ -134,7 +135,7 @@ class Monitor
     end
   end
 
-  def dataset()
+  def dataset
     @dataset ||= reload(@filename) || cache(@filename, fetch)
   end
 
@@ -152,7 +153,7 @@ class Monitor
     dataset
   end
 
-  def fetch()
+  def fetch
     puts "Fetching..." if rack_env?(:development)
     reader = Slog::Reader.new(secret: CDO.logentries_secret, hosts: @hosts)
     reader.get(filter: 'tag=activity_start OR tag=activity_finish', start: @start, end: @finish)
@@ -190,7 +191,7 @@ def excluded_browser?(ua_string)
   end
 end
 
-def main()
+def main
   now = DateTime.now.new_offset(0)
 
   hours = HoursToTest

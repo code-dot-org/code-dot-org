@@ -149,6 +149,7 @@
   "generatedCodeInfo": "Celo najboljše univerze učijo programirati s pomočjo blokov (npr. {berkeleyLink}, {harvardLink}). Pod pokrovom pa se skrivajo pravi programi, napisani v JavaScriptu, enem najbolj uporabljanih programskih jezikov:",
   "hashError": "Žal, '%1' ne ustreza nobenemu shranjenemu programu.",
   "help": "Pomoč",
+  "hide": "Hide",
   "hideToolbox": "(Skrij)",
   "hintHeader": "Tukaj je namig:",
   "hintPrompt": "Potrebujete pomoč?",
@@ -167,6 +168,7 @@
   "makeYourOwnFlappy": "Izdelaj svojo lastno igrico o Plahutaču (Flappyju)",
   "missingRecommendedBlocksErrorMsg": "Skoraj končano. Poskusite z bloki, ki jih še ne uporabljaš.",
   "missingRequiredBlocksErrorMsg": "Skoraj končano. Uporabiti moraš blok, ki ga še ne uporabljaš.",
+  "more": "Več",
   "nestedForSameVariable": "Uporabljate enake spremenljivke v dveh ali večih ugnezdenih zankah. Uporabite edinstvena imena spremenljivk, da se izognete neskončnim zankam.",
   "nextLevel": "Čestitke! Rešil/a si uganko {puzzleNumber}.",
   "nextLevelTrophies": "Čestitke! Rešil/a si uganko {puzzleNumber} in osvojil/a {numTrophies, plural, one {lovoriko} other {# lovorik}}.",
@@ -233,9 +235,15 @@
   "tryBlocksBelowFeedback": "Poskusite uporabiti enega od spodnjih blokov:",
   "tryHOC": "Poizkusi Uro za programiranje (Hour to Code)",
   "unnamedFunction": "Imate spremenljivko ali funkcijo, ki nima imena. Ne pozabite vsega opisno poimenovati.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Se želiš naučiti programirati?",
   "watchVideo": "Glej video",
   "when": "ko",
   "whenRun": "ob zagonu",
-  "workspaceHeaderShort": "Delovni prostor: "
+  "workspaceHeaderShort": "Delovni prostor: ",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

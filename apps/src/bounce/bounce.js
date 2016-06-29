@@ -7,6 +7,8 @@
 
 'use strict';
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var bounceMsg = require('./locale');
@@ -23,6 +25,7 @@ var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
+var experiments = require('../experiments');
 
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -770,6 +773,7 @@ Bounce.init = function (config) {
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   var onMount = function () {
     studioApp.init(config);

@@ -2,17 +2,18 @@
 #
 # Table name: sections
 #
-#  id         :integer          not null, primary key
-#  user_id    :integer          not null
-#  name       :string(255)
-#  created_at :datetime
-#  updated_at :datetime
-#  code       :string(255)
-#  script_id  :integer
-#  grade      :string(255)
-#  admin_code :string(255)
-#  login_type :string(255)      default("email"), not null
-#  deleted_at :datetime
+#  id           :integer          not null, primary key
+#  user_id      :integer          not null
+#  name         :string(255)
+#  created_at   :datetime
+#  updated_at   :datetime
+#  code         :string(255)
+#  script_id    :integer
+#  grade        :string(255)
+#  admin_code   :string(255)
+#  login_type   :string(255)      default("email"), not null
+#  deleted_at   :datetime
+#  stage_extras :boolean          default(FALSE), not null
 #
 # Indexes
 #

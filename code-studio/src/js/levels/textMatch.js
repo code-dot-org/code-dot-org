@@ -1,7 +1,17 @@
+import $ from 'jquery';
+
 window.levelGroup = window.levelGroup || {levels: {}};
 
-var TextMatch = window.TextMatch = function (id, standalone, answers, lastAttempt) {
+var TextMatch = window.TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
+
+  // The dashboard levelId.
+  this.levelId = levelId;
+
+  // The DOM id.
   this.id = id;
+
+  // The dashboard app name.
+  this.app = app;
 
   this.standalone = standalone;
 
@@ -25,20 +35,21 @@ TextMatch.prototype.ready = function () {
     window.getResult = $.proxy(this.getResult, this);
   }
 
-
-  $("#" + this.id + " textarea.response").blur(function () {
+  var textarea = $("#" + this.id + " textarea.response");
+  textarea.blur(() => {
     if (window.levelGroup && window.levelGroup.answerChangedFn) {
-      window.levelGroup.answerChangedFn();
+      window.levelGroup.answerChangedFn(this.levelId, true);
+    }
+  });
+  textarea.on("input", null, null, () => {
+    if (window.levelGroup && window.levelGroup.answerChangedFn) {
+      window.levelGroup.answerChangedFn(this.levelId);
     }
   });
 };
 
-
-TextMatch.prototype.getCurrentAnswer = function () {
-  var response = $("#" + this.id + " textarea.response").val();
-  var valid = response.length > 1;
-
-  return { response: response, valid: valid };
+TextMatch.prototype.getAppName = function () {
+  return this.app;
 };
 
 TextMatch.prototype.getResult = function () {
@@ -51,13 +62,24 @@ TextMatch.prototype.getResult = function () {
     });
     return {
       response: encodeURIComponent(response),
-      result: result
+      result: result,
+      valid: response.length > 0
     };
   } else {
     // Always succeed for any non-empty response to open-ended question without answer(s)
     return {
       response: encodeURIComponent(response),
-      result: response.length > 0
+      result: response.length > 0,
+      valid: response.length > 0
     };
   }
+};
+
+TextMatch.prototype.lockAnswers = function () {
+  // Not implemented
+};
+
+// called by external code that will display answer feedback
+TextMatch.prototype.getCurrentAnswerFeedback = function () {
+  // Not implemented
 };

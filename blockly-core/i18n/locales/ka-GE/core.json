@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "ჩამოაშორეთ გამოტოვებული ადგილი მარცხენა მხრიდან",
   "TEXT_TRIM_OPERATOR_RIGHT": "ჩამოაშორეთ გამოტოვებული ადგილები მარჯვენა მხრიდან",
   "TEXT_TRIM_TOOLTIP": "დააბრუნეთ ტექსტის ასლი ერთ ან ორივე მხარეს გამოტოვებული ადგილების ჩამოშორებით.",
+  "UNUSED_CODE": "Unused code",
   "VARIABLES_DEFAULT_NAME": "ელემენტი",
   "VARIABLES_GET_CREATE_SET": "შექმენით 'მიანიჭეთ %1'",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

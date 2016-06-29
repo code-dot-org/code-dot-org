@@ -1,3 +1,4 @@
+var React = require('react');
 var applabMsg = require('./locale');
 var DesignModeBox = require('./DesignModeBox');
 var DesignModeHeaders = require('./DesignModeHeaders');

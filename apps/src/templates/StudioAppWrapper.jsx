@@ -1,5 +1,6 @@
 'use strict';
 
+var React = require('react');
 var RotateContainer = require('../templates/RotateContainer');
 var connect = require('react-redux').connect;
 

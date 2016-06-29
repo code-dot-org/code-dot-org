@@ -1,4 +1,4 @@
-/* global React */
+import React from 'react';
 var AbuseError = require('./abuse_error');
 
 /**

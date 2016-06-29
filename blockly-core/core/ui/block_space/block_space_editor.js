@@ -24,6 +24,7 @@
 
 goog.provide('Blockly.BlockSpaceEditor');
 goog.require('Blockly.BlockSpace');
+goog.require('Blockly.BlockSvgUnused');
 goog.require('goog.array');
 goog.require('goog.style');
 
@@ -63,6 +64,14 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
     goog.bind(this.setBlockSpaceMetrics_, this),
     container
   );
+
+  /**
+   * Set of blocks with limits, keyed by block type. Used to enforce
+   * limited quantities of blocks in workspace.
+   * @type {Blockly.BlockLimits}
+   */
+  this.blockLimits = new Blockly.BlockLimits();
+
   this.createDom_(container);
   this.init_();
 };
@@ -912,6 +921,10 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_ = function() {
 Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
   return Blockly.bindEvent_(this.blockSpace.getCanvas(),
     'blocklyBlockSpaceChange', this, func);
+};
+Blockly.BlockSpaceEditor.prototype.addUnusedBlocksHelpListener = function(func) {
+  return Blockly.bindEvent_(this.blockSpace.getCanvas(),
+    Blockly.BlockSvgUnused.UNUSED_BLOCK_HELP_EVENT, this, func);
 };
 
 /**

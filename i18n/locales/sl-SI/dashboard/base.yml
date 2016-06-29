@@ -29,6 +29,8 @@ sl:
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Prekliči
   okay: V redu
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
@@ -86,6 +88,7 @@ sl:
     teacher_title: 'Učitelji - prijava'
     student_pitch: Registracija na Code.org za učence.
     student_title: Prijava za študente
+    signup_title: Sign up for Code.org
     school_name: Ime šole (po izbiri)
     school_address: Naslov šole (po izbiri)
     address_placeholder: naslov, mesto, država, poštna številka
@@ -104,6 +107,9 @@ sl:
     student_terms: "Strinjam se z <a href='http://code.org/tos'> pogoji storitve</a> Code.org Če sem mlajši od 13 let, potrjujem s predložitvijo tega obrazca, da imam dovoljenje svojih staršev ali zakonitega skrbnika za uporabo storitev Code.org. <br/>Za uporabnike pod 13, e-naslovov ne hranimo v obliki, ki bi omogočala stik z njimi."
     teacher_terms: "Strinjam se z <a href='http://code.org/tos'> pogoji storitve</a> Code.org"
     additional_information: Potrebujemo nekaj dodatnih informacij za uspešno prijavo.
+    user_type_label: Account Type
+    user_type_teacher: Učitelj/ica
+    user_type_student: Učenec
   signin_form:
     title: Že imate račun? Vpišite se
     login: Elektronska pošta ali uporabniško ime
@@ -335,8 +341,9 @@ sl:
     print_certificate: Natisni certifikat
     announcement_title: Obvestila
     announcement_view_all: Poglej vse
-    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
-    announcement_button: Več o tem
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
   move_students:
@@ -398,15 +405,12 @@ sl:
     notes_coming_soon: Opombe za ta video, kmalu.
     autoplay_option: Samodejno predvajanje videoposnetkov
     download: Prenos videa
-  compatability:
-    working:
-      header: Delamo na podpori za vaš brskalnik.
-      message: "Code.org uporablja sodobne spletne tehnologije, ker želimo, da se hitreje izvaja. Vaš brskalnik ne podpira vseh funkcij, ki so za to potrebne, in lahko izkusite težave med uporabo tega dela spletišča. Prosim, <a href='%{report_issue_url}'>sporočite nam morebitne težave</a>. Lahko pa tudi <a href='%{supported_browsers_url}'>nadgradite vaš brskalnik</a>."
-      hide_this_warning: Skrij to opozorilo
+  compatibility:
     upgrade:
-      header: Prosimo, nadgradite vaš brskalnik.
-      message: "Code.org uporablja sodobne spletne tehnologije, ker želimo, da se hitreje izvaja. Vaš brskalnik ne podpira vseh funkcij, ki so za to potrebne, in lahko izkusite težave med uporabo tega dela spletišča.<br/><br/>Namestite katerega izmed brskalnikov iz našega seznama podprtih brskalnikov. Lahko pa <a href='#'>si poskusite ogledati stran</a>, a pričakujte, da ne boste videli vsega pravilno."
-      button: Pokažite mi seznam brskalnikov, ki jih podpirate
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      link: Več o tem
   slow_loading: To traja dlje kot običajno...
   try_reloading: Poskusite znova naložiti stran
   next_stage: Končano! Nadaljujte na naslednjo stopnjo
@@ -483,12 +487,14 @@ sl:
     picture_count: 'V zadnjih <b>%{days}</b> dneh so učenci narisali veliko (<b>%{count}</b>) slik s programe, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja posameznega programa.'
     activity_count: 'V zadnjih <b>%{days}</b> dneh so učenci izdelali veliko (<b>%{count}</b>) aplikacij s programi, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja posameznega programa.'
     want_to_make_your_own: Bi poskusil/a še sam/a?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Več &rarr;'
     caption_by_name_age: 'po %{name}, %{age} starosti'
     caption_time_ago: 'pred %{time_ago}'
     header: Galerija
     header_playlab: Zgodbe in igre
     header_artist: Code art
+    report_abuse: Prijavi zlorabo
   landing:
     prerelease: "Ta tečaj je <span class='betatext'>beta</span>.  To pomeni, da ni končna različica in ga bomo z vašo pomočjo še izboljševali."
     prerelease_hoc2014: "Ta priročnik je <span class='betatext'>beta</span>.  To pomeni, da ni končna različica in ga bomo z vašo pomočjo še izboljševali."
@@ -668,11 +674,49 @@ sl:
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
       no_icons_found: No icons found
+    playzone:
+      artist_description: Draw cool pictures and designs with the Artist!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Create a story or make a game with Play Lab!
+      playlab_title: New App
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: Pregled
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

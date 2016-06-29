@@ -2,164 +2,345 @@ import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
 testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
-var ReactTestUtils = require('react-addons-test-utils');
 
-var MarkdownInstructions = require('@cdo/apps/templates/instructions/MarkdownInstructions');
-var NonMarkdownInstructions = require('@cdo/apps/templates/instructions/NonMarkdownInstructions');
-var instructions = require('@cdo/apps/redux/instructions');
+import instructions, {
+  toggleInstructionsCollapsed,
+  setInstructionsRenderedHeight,
+  setInstructionsMaxHeightAvailable,
+  setInstructionsMaxHeightNeeded,
+  determineInstructionsConstants
+} from '@cdo/apps/redux/instructions';
 
-function shallowRender(element) {
-  var renderer = ReactTestUtils.createRenderer();
-  renderer.render(element);
-  return renderer.getRenderOutput();
-}
+const ENGLISH_LOCALE = 'en_us';
 
-describe('MarkdownInstructions', function () {
-  it('standard case had top padding and no left margin', function () {
-    var dom = ReactTestUtils.renderIntoDocument(
-      <div>
-        <MarkdownInstructions
-          renderedMarkdown="md"
-          markdownClassicMargins={false}
-          inTopPane={false}/>
-      </div>
-    );
-    var element = dom.children[0];
-    assert.equal(element.style.paddingTop, '19px');
-    assert.equal(element.style.marginLeft, '');
-    assert.equal(element.textContent, 'md');
-  });
+describe('instructions reducer', () => {
+  var reducer = instructions;
 
-  it('inTopPane has no top padding', function () {
-    var dom = ReactTestUtils.renderIntoDocument(
-      <div>
-        <MarkdownInstructions
-          renderedMarkdown="md"
-          markdownClassicMargins={false}
-          inTopPane={true}/>
-      </div>
-    );
-    var element = dom.children[0];
-    assert.equal(element.style.paddingTop, '0px');
-  });
-
-  it('markdownClassicMargins has no top padding and big left margin', function () {
-    var dom = ReactTestUtils.renderIntoDocument(
-      <div>
-        <MarkdownInstructions
-          renderedMarkdown="md"
-          markdownClassicMargins={true}
-          inTopPane={false}/>
-      </div>
-    );
-    var element = dom.children[0];
-    assert.equal(element.style.paddingTop, '0px');
-    assert.equal(element.style.marginLeft, '90px');
-  });
-});
-
-describe('NonMarkdownInstructions', function () {
-  it('can have just instructions', function () {
-    var dom = ReactTestUtils.renderIntoDocument(
-      <div>
-        <NonMarkdownInstructions
-          puzzleTitle="title"
-          instructions="instructions"/>
-      </div>
-    );
-    var element = dom.children[0];
-    assert.equal(element.children.length, 2);
-    assert.equal(element.children[0].textContent, "title");
-    assert.equal(element.children[1].textContent, "instructions");
-
-  });
-
-  it('can have both instructions and instructions2', function () {
-    var dom = ReactTestUtils.renderIntoDocument(
-      <div>
-        <NonMarkdownInstructions
-          puzzleTitle="title"
-          instructions="instructions"
-          instructions2="instructions2"/>
-      </div>
-    );
-    var element = dom.children[0];
-    assert.equal(element.children.length, 3);
-    assert.equal(element.children[0].textContent, "title");
-    assert.equal(element.children[1].textContent, "instructions");
-    assert.equal(element.children[2].textContent, "instructions2");
-  });
-});
-
-describe('instructions reducer', function () {
-  var reducer = instructions.default;
-
-  it('starts out uncollapsed', function () {
+  it('starts out uncollapsed', () => {
     var state = reducer(undefined, {});
-    assert.deepEqual(state, {
-      collapsed: false,
-      height: 300,
-      maxHeight: 0
-    });
+    assert.strictEqual(state.collapsed, false);
   });
 
-  it('toggles collapsed', function () {
+  it('toggles collapsed', () => {
     var initialState, newState;
 
     // start collapsed
     initialState = {
       collapsed: false,
-      height: 300,
-      maxHeight: 0
+      longInstructions: 'foo'
     };
-    newState = reducer(initialState, instructions.toggleInstructionsCollapsed());
-    assert.deepEqual(newState, {
-      collapsed: true,
-      height: 300,
-      maxHeight: 0
-    });
+    newState = reducer(initialState, toggleInstructionsCollapsed());
+    assert.strictEqual(newState.collapsed, true);
 
     // start uncollapsed
     initialState = {
       collapsed: true,
-      height: 300,
-      maxHeight: 0
+      longInstructions: 'foo'
     };
-    newState = reducer(initialState, instructions.toggleInstructionsCollapsed());
-    assert.deepEqual(newState, {
+    newState = reducer(initialState, toggleInstructionsCollapsed());
+    assert.strictEqual(newState.collapsed, false);
+  });
+
+  it('fails to collapse if no long instructions', () => {
+    var initialState, newState;
+
+    // start collapsed
+    initialState = {
       collapsed: false,
-      height: 300,
-      maxHeight: 0
+      shortInstructions: 'short',
+      longInstructions: undefined
+    };
+    assert.throws(() => {
+      newState = reducer(initialState, toggleInstructionsCollapsed());
     });
   });
 
-  it('modifies height', function () {
+  it('setInstructionsRenderedHeight updates rendered and expanded height if not collapsed', () => {
     var initialState, newState;
     initialState = {
       collapsed: false,
-      height: 300,
-      maxHeight: 0
+      renderedHeight: 0,
+      expandedHeight: 0
     };
-    newState = reducer(initialState, instructions.setInstructionsHeight(200));
+    newState = reducer(initialState, setInstructionsRenderedHeight(200));
     assert.deepEqual(newState, {
       collapsed: false,
-      height: 200,
-      maxHeight: 0
+      renderedHeight: 200,
+      expandedHeight: 200
     });
   });
 
-  it('modifies maxHeight', function () {
+  it('setInstructionsRenderedHeight updates only rendered height if collapsed', () => {
     var initialState, newState;
     initialState = {
-      collapsed: false,
-      height: 300,
-      maxHeight: 0
+      collapsed: true,
+      renderedHeight: 0,
+      expandedHeight: 0
     };
-    newState = reducer(initialState, instructions.setInstructionsMaxHeight(400));
+    newState = reducer(initialState, setInstructionsRenderedHeight(200));
     assert.deepEqual(newState, {
-      collapsed: false,
-      height: 300,
-      maxHeight: 400
+      collapsed: true,
+      renderedHeight: 200,
+      expandedHeight: 0
+    });
+  });
+
+
+  it('setInstructionsMaxHeightNeeded sets maxNeededHeight', () => {
+    var initialState, newState;
+    initialState = {
+      maxNeededHeight: 0
+    };
+    newState = reducer(initialState, setInstructionsMaxHeightNeeded(200));
+    assert.deepEqual(newState, {
+      maxNeededHeight: 200,
+    });
+  });
+
+  it('setInstructionsMaxHeightAvailable updates maxAvailableHeight', () => {
+    var initialState, newState;
+    initialState = {
+      maxAvailableHeight: Infinity,
+      renderedHeight: 0,
+      expandedHeight: 0
+    };
+    newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
+    assert.deepEqual(newState, {
+      maxAvailableHeight: 300,
+      renderedHeight: 0,
+      expandedHeight: 0
+    });
+  });
+
+  it('setInstructionsMaxHeightAvailable adjusts rendered/expanded height if necessary', () => {
+    var initialState, newState;
+    initialState = {
+      maxAvailableHeight: Infinity,
+      renderedHeight: 400,
+      expandedHeight: 400
+    };
+    newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
+    assert.deepEqual(newState, {
+      maxAvailableHeight: 300,
+      renderedHeight: 300,
+      expandedHeight: 300
+    });
+  });
+});
+
+
+describe('determineInstructionsConstants', () => {
+  describe('CSP mode', () => {
+    const noInstructionsWhenCollapsed = true;
+    const showInstructionsInTopPane = true;
+    const hasContainedLevels = false;
+
+    it('sets longInstructions to markdownInstructions regardless of locale', () => {
+      const locales = ['fr-fr', ENGLISH_LOCALE, undefined];
+      const results = locales.map(locale => determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+        },
+        skin: {},
+        locale,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane,
+        hasContainedLevels
+      }));
+
+      results.forEach(result => {
+        assert.equal(result.longInstructions, 'markdown');
+      });
+    });
+
+    it('sets longInstructions to be non-markdown instructions if no markdownInstructions given', () => {
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: undefined,
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane,
+        hasContainedLevels
+      });
+
+      assert.equal(result.longInstructions, 'non-markdown');
+    });
+
+    it('never sets shortInstructions', () => {
+      // only given non-markdown
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: undefined,
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane,
+        hasContainedLevels
+      });
+
+      assert.equal(result.shortInstructions, undefined);
+
+      // only given markdown
+      const result2 = determineInstructionsConstants({
+        level: {
+          instructions: undefined,
+          markdownInstructions: 'markdown',
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane,
+        hasContainedLevels
+      });
+
+      assert.equal(result2.shortInstructions, undefined);
+
+      // given both
+      const result3 = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane,
+        hasContainedLevels
+      });
+
+      assert.equal(result3.shortInstructions, undefined);
+    });
+  });
+
+  describe('CSF mode', () => {
+    const noInstructionsWhenCollapsed = false;
+    const showInstructionsInTopPane = true;
+    const hasContainedLevels = false;
+
+    it('sets long and short instructions for english locale', () => {
+      // en_us and undefined should both be treated as english
+      ['en_us', undefined].forEach(locale => {
+        const result = determineInstructionsConstants({
+          level: {
+            instructions: 'non-markdown',
+            markdownInstructions: 'markdown',
+          },
+          skin: {},
+          locale,
+          noInstructionsWhenCollapsed,
+          showInstructionsInTopPane,
+          hasContainedLevels
+        });
+        assert.deepEqual(result, {
+          noInstructionsWhenCollapsed,
+          shortInstructions: 'non-markdown',
+          shortInstructions2: undefined,
+          longInstructions: 'markdown',
+          hasContainedLevels
+        });
+      });
+    });
+
+    it('does not set long instructions if non-english locale', () => {
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+        },
+        skin: {},
+        locale: 'fr-fr',
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane,
+        hasContainedLevels
+      });
+      assert.deepEqual(result, {
+        noInstructionsWhenCollapsed,
+        shortInstructions: 'non-markdown',
+        shortInstructions2: undefined,
+        longInstructions: undefined,
+        hasContainedLevels
+      });
+    });
+
+    it('does not set long instructions if identical to short-instructions, and ' +
+        'showInstructionsInTopPane is true', () => {
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'non-markdown',
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane,
+        hasContainedLevels
+      });
+      assert.deepEqual(result, {
+        noInstructionsWhenCollapsed,
+        shortInstructions: 'non-markdown',
+        shortInstructions2: undefined,
+        longInstructions: undefined,
+        hasContainedLevels
+      });
+    });
+
+    it('sets long instructions if we have an inputOutputTable', () => {
+      const inputOutputTable =  [[15, 5], [20, 10]];
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: undefined,
+          inputOutputTable
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane,
+        hasContainedLevels
+      });
+      assert.equal(result.longInstructions, 'non-markdown');
+
+      const result2 = determineInstructionsConstants({
+        level: {
+          instructions: 'non-markdown',
+          markdownInstructions: 'markdown',
+          inputOutputTable
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane,
+        hasContainedLevels
+      });
+      assert.equal(result2.longInstructions, 'markdown');
+    });
+
+    it('substitutes images in instructions', () => {
+      const result = determineInstructionsConstants({
+        level: {
+          instructions: 'Instructions with [image1]',
+          instructions2: 'Instructions with [image2]',
+          markdownInstructions: undefined
+        },
+        skin: {
+          instructions2ImageSubstitutions: {
+            image1: '/image1.png',
+            image2: '/image2.png'
+          }
+        },
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        showInstructionsInTopPane
+      });
+
+      assert(/image1\.png/.test(result.shortInstructions), 'image 1 is replaced');
+      assert(/image2\.png/.test(result.shortInstructions2), 'image 2 is replaced');
     });
   });
 });

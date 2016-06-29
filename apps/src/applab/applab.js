@@ -7,6 +7,9 @@
 /* global dashboard */
 
 'use strict';
+import $ from 'jquery';
+var React = require('react');
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');
@@ -24,10 +27,12 @@ var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var dropletConfig = require('./dropletConfig');
+var makerDropletConfig = require('../makerlab/dropletConfig');
 var AppStorage = require('./appStorage');
+var FirebaseStorage = require('./firebaseStorage');
 var constants = require('../constants');
 var experiments = require('../experiments');
-var _ = require('../lodash');
+var _ = require('lodash');
 var apiTimeoutList = require('../timeoutList');
 var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
@@ -552,7 +557,15 @@ Applab.init = function (config) {
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
+  if (!config.channel) {
+    throw new Error('Cannot initialize App Lab without a channel id. ' +
+      'You may need to sign in to your code studio account first.');
+  }
   Applab.channelId = config.channel;
+  Applab.firebaseName = config.firebaseName;
+  Applab.firebaseAuthToken = config.firebaseAuthToken;
+  var useFirebase = window.dashboard.project.useFirebase() || false;
+  Applab.storage = useFirebase ? FirebaseStorage : AppStorage;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
@@ -659,8 +672,8 @@ Applab.init = function (config) {
   config.afterClearPuzzle = function () {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    AppStorage.populateTable(level.dataTables, true); // overwrite = true
-    AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
+    Applab.storage.populateTable(level.dataTables, true); // overwrite = true
+    Applab.storage.populateKeyValue(level.dataProperties, true); // overwrite = true
     studioApp.resetButtonClick();
   };
 
@@ -673,7 +686,15 @@ Applab.init = function (config) {
 
   config.varsInGlobals = true;
 
-  config.dropletConfig = dropletConfig;
+  if (config.level.makerlabEnabled) {
+    config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerDropletConfig);
+  } else {
+    config.dropletConfig = dropletConfig;
+  }
+
+  // Set the custom set of blocks (may have had makerlab blocks merged in) so
+  // we can later pass the custom set to the interpreter.
+  config.level.levelBlocks = config.dropletConfig.blocks;
 
   config.pinWorkspaceToBottom = true;
 
@@ -694,9 +715,10 @@ Applab.init = function (config) {
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
   config.showInstructionsInTopPane = true;
+  config.noInstructionsWhenCollapsed = true;
 
-  AppStorage.populateTable(level.dataTables, false); // overwrite = false
-  AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
+  Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+  Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
   var onMount = function () {
     studioApp.init(config);
@@ -731,7 +753,8 @@ Applab.init = function (config) {
 
       designMode.loadDefaultScreen();
 
-      designMode.toggleDesignMode(Applab.startInDesignMode());
+      studioApp.reduxStore.dispatch(changeInterfaceMode(
+        Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
       designMode.configureDragAndDrop();
 
@@ -740,8 +763,14 @@ Applab.init = function (config) {
     }
   }.bind(this);
 
+  // Force phoneFrame on when viewing or editing firebase projects.
+  var playspacePhoneFrame = !config.share && (experiments.isEnabled('phoneFrame') ||
+    useFirebase);
+
   // Push initial level properties into the Redux store
   studioApp.setPageConstants(config, {
+    useFirebase,
+    playspacePhoneFrame,
     channelId: config.channel,
     visualizationHasPadding: !config.noPadding,
     isDesignModeHidden: !!config.level.hideDesignMode,
@@ -752,8 +781,7 @@ Applab.init = function (config) {
     isSubmitted: !!config.level.submitted,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
-    showDebugWatch: false,
-    playspacePhoneFrame: !config.share && experiments.isEnabled('phoneFrame')
+    showDebugWatch: false
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
@@ -766,6 +794,8 @@ Applab.init = function (config) {
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
   Applab.render();
+
+  studioApp.notifyInitialRenderComplete(config);
 };
 
 /**
@@ -823,7 +853,7 @@ Applab.reactMountPoint_ = null;
  * Trigger a top-level React render
  */
 Applab.render = function () {
-  var nextProps = $.extend({}, Applab.reactInitialProps_, {
+  var nextProps = Object.assign({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen
@@ -955,7 +985,7 @@ Applab.reset = function (first) {
     jsInterpreterLogger.detach();
   }
 
-  AppStorage.resetRecordListener();
+  Applab.storage.resetRecordListener();
 
   // Reset the Globals object used to contain program variables:
   Applab.Globals = {};
@@ -1016,6 +1046,8 @@ Applab.runButtonClick = function () {
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
+    // adding finish button changes layout. force a resize
+    studioApp.onResize();
   }
 
   if (studioApp.editor) {
@@ -1144,7 +1176,7 @@ Applab.execute = function () {
       // Initialize the interpreter and parse the student code
       Applab.JSInterpreter.parse({
         code: codeWhenRun,
-        blocks: dropletConfig.blocks,
+        blocks: level.levelBlocks,
         blockFilter: level.executePaletteApisOnly && level.codeFunctions,
         enableEvents: true
       });
@@ -1192,6 +1224,11 @@ Applab.encodedFeedbackImage = '';
  * @param {ApplabInterfaceMode} mode
  */
 function onInterfaceModeChange(mode) {
+  Applab.setWorkspaceMode(mode);
+
+  var showDivApplab = (mode !== ApplabInterfaceMode.DESIGN);
+  Applab.toggleDivApplab(showDivApplab);
+
   if (mode === ApplabInterfaceMode.DESIGN) {
     studioApp.resetButtonClick();
   } else if (mode === ApplabInterfaceMode.CODE) {
@@ -1206,6 +1243,21 @@ function onInterfaceModeChange(mode) {
     }
   }
 }
+
+/**
+ * Display the workspace corresponding to the specified mode.
+ * @param {ApplabInterfaceMode} mode
+ */
+Applab.setWorkspaceMode = function (mode) {
+  var designWorkspace = document.getElementById('designWorkspace');
+  designWorkspace.style.display = (ApplabInterfaceMode.DESIGN === mode) ? 'block' : 'none';
+
+  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
+  codeWorkspaceWrapper.style.display = (ApplabInterfaceMode.CODE === mode) ? 'block' : 'none';
+
+  var dataWorkspaceWrapper = document.getElementById('dataWorkspaceWrapper');
+  dataWorkspaceWrapper.style.display = (ApplabInterfaceMode.DATA === mode) ? 'block' : 'none';
+};
 
 /**
  * Show a modal dialog with a title, text, and OK and Cancel buttons
@@ -1329,8 +1381,14 @@ Applab.onPuzzleComplete = function (submit) {
   }
 
   var program;
+  var containedLevelResultsInfo = studioApp.getContainedLevelResultsInfo();
 
-  if (level.editCode) {
+  if (containedLevelResultsInfo) {
+    // Keep our this.testResults as always passing so the feedback dialog
+    // shows Continue (the proper results will be reported to the service)
+    Applab.testResults = studioApp.TestResults.ALL_PASS;
+    Applab.message = containedLevelResultsInfo.feedback;
+  } else if (level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -1354,6 +1412,7 @@ Applab.onPuzzleComplete = function (submit) {
       submitted: submit,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
+      containedLevelResultsInfo: containedLevelResultsInfo,
       onComplete: (submit ? Applab.onSubmitComplete : Applab.onReportComplete)
     });
   };

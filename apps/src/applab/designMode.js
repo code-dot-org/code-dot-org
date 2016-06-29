@@ -1,7 +1,8 @@
 /* global Applab, dashboard */
-
-// TODO (brent) - make it so that we dont need to specify .jsx. This currently
-// works in our grunt build, but not in tests
+import $ from 'jquery';
+import 'jquery-ui'; // for $.fn.resizable();
+import React from 'react';
+import ReactDOM from 'react-dom';
 var DesignWorkspace = require('./DesignWorkspace');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
@@ -25,24 +26,21 @@ var clipboardElement = null;
 
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
+var ANIMATION_LENGTH_MS = applabConstants.ANIMATION_LENGTH_MS;
+
 /**
  * Subscribe to state changes on the store.
  * @param {!Store} store
  */
 designMode.setupReduxSubscribers = function (store) {
-  var state = {
-    screens: {}
-  };
+  var state;
   store.subscribe(function () {
     var lastState = state;
     state = store.getState();
 
-    if (state.screens.currentScreenId !== lastState.screens.currentScreenId) {
+    if (!lastState ||
+        state.screens.currentScreenId !== lastState.screens.currentScreenId) {
       renderScreens(state.screens.currentScreenId);
-    }
-
-    if (state.interfaceMode !== lastState.interfaceMode) {
-      onInterfaceModeChange(state.interfaceMode);
     }
   });
 };
@@ -465,6 +463,10 @@ designMode.onDuplicate = function (element, event) {
 };
 
 designMode.onDeletePropertiesButton = function (element, event) {
+  deleteElement(element);
+};
+
+function deleteElement(element) {
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
     element = element.parentNode;
@@ -478,7 +480,7 @@ designMode.onDeletePropertiesButton = function (element, event) {
         elementUtils.getPrefixedElementById(
             studioApp.reduxStore.getState().screens.currentScreenId));
   }
-};
+}
 
 designMode.onDepthChange = function (element, depthDirection) {
   // move to outer resizable div
@@ -585,6 +587,38 @@ function getUnsafeHtmlReporter(sanitizationTarget) {
 }
 
 /**
+ * Parses/modifies a single screen's html representation as loaded from levelHTML.
+ *
+ * @param screenEl {Element|string} element encapsulating the dom for a single screen
+ *     within a level's html. Can be a string of html as well. Note: If this is an element,
+ *     then this function will have side effects.
+ * @param allowDragging {boolean} Whether to make elements resizable and draggable.
+ * @param prefix {string} Optional prefix to attach to element ids of children and
+ *     grandchildren after parsing. Defaults to ''.
+ *
+ * @returns returns the modified version of the element passed in for screenEl.
+ */
+designMode.parseScreenFromLevelHtml = function (screenEl, allowDragging, prefix) {
+  var screen = $(screenEl);
+  elementUtils.addIdPrefix(screen[0], prefix);
+  screen.children().each(function () {
+    elementUtils.addIdPrefix(this, prefix);
+  });
+
+  if (allowDragging) {
+    // screen are screens. make grandchildren draggable
+    makeDraggable(screen.children());
+  }
+
+  elementLibrary.onDeserialize(screen[0], designMode.updateProperty.bind(this));
+  screen.children().each(function () {
+    var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
+    elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
+  });
+  return screen[0];
+};
+
+/**
  * Replace the contents of rootEl with the children of the DOM node obtained by
  * parsing Applab.levelHtml (the root node in the levelHtml is ignored).
  * @param rootEl {Element} Element whose children should be replaced.
@@ -607,48 +641,9 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   var reportUnsafeHtml = getUnsafeHtmlReporter(rootEl.id);
   var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
   var children = $(levelDom).children();
-
-  children.each(function () {
-    elementUtils.addIdPrefix(this, prefix);
-  });
-  children.children().each(function () {
-    elementUtils.addIdPrefix(this, prefix);
-  });
-
+  children.each(function () { designMode.parseScreenFromLevelHtml(this, allowDragging, prefix); });
   children.appendTo(rootEl);
-  if (allowDragging) {
-    // children are screens. make grandchildren draggable
-    makeDraggable(children.children());
-  }
-
-  children.each(function () {
-    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
-  });
-  children.children().each(function () {
-    var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
-    elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
-  });
 };
-
-designMode.toggleDesignMode = function (enable) {
-  studioApp.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
-};
-
-function onInterfaceModeChange(mode) {
-  var enable = (ApplabInterfaceMode.DESIGN === mode);
-  var designWorkspace = document.getElementById('designWorkspace');
-  if (!designWorkspace) {
-    // Currently we don't run design mode in some circumstances (i.e. user is
-    // not an admin)
-    return;
-  }
-  designWorkspace.style.display = enable ? 'block' : 'none';
-
-  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
-  codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
-
-  Applab.toggleDivApplab(!enable);
-}
 
 /**
  * When we make elements resizable, we wrap them in an outer div. Given an outer
@@ -701,6 +696,9 @@ function makeDraggable(jqueryElements) {
         // resizable sets z-index to 90, which we don't want
         $(this).children().css('z-index', '');
       },
+      start: function () {
+        highlightElement(elm[0]);
+      },
       resize: function (event, ui) {
         // Wishing for a vector maths library...
 
@@ -711,22 +709,21 @@ function makeDraggable(jqueryElements) {
         var newWidth = ui.originalSize.width + (deltaWidth / scale);
         var newHeight = ui.originalSize.height + (deltaHeight / scale);
 
-        // snap width/height to nearest grid increment
+        // Get positions that snap to the grid
         newWidth = gridUtils.snapToGridSize(newWidth);
         newHeight = gridUtils.snapToGridSize(newHeight);
 
-        // Bound at app edges
+        // Get positions that are bounded within app space
         var dimensions = boundedResize(ui.position.left, ui.position.top, newWidth, newHeight, false);
 
-        ui.size.width = newWidth;
-        ui.size.height = newHeight;
-        wrapper.css({
-          width: dimensions.width,
-          height: dimensions.height
-        });
+        // Update the position of wrapper (.ui-resizable) div
+        ui.size.width = dimensions.width;
+        ui.size.height = dimensions.height;
 
-        elm.outerWidth(wrapper.width());
-        elm.outerHeight(wrapper.height());
+        // Set original element properties to update values in Property tab
+        elm.outerWidth(dimensions.width);
+        elm.outerHeight(dimensions.height);
+
         var element = elm[0];
         // canvas uses width/height. other elements use style.width/style.height
         var widthProperty = 'style-width';
@@ -735,41 +732,78 @@ function makeDraggable(jqueryElements) {
           widthProperty = 'width';
           heightProperty = 'height';
         }
-        designMode.onPropertyChange(element, widthProperty, element.style.width);
-        designMode.onPropertyChange(element, heightProperty, element.style.height);
 
-        highlightElement(elm[0]);
+        // Re-render design work space for this element
+        designMode.renderDesignWorkspace(elm[0]);
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
+      start: function () {
+        highlightElement(elm[0]);
+
+        // Turn off clipping in app space so we can drag the element
+        // out of it
+        setAppSpaceClipping(false);
+      },
       drag: function (event, ui) {
         // draggables are not compatible with CSS transform-scale,
         // so adjust the position in various ways here.
 
-        // dragging
+        // Scale position to express it relative to app-space (instead of screen-space)
         var scale = getVisualizationScale();
         var newLeft  = ui.position.left / scale;
         var newTop = ui.position.top / scale;
 
-        // snap top-left corner to nearest location in the grid
+        // Get positions that snap to the grid
         newLeft = gridUtils.snapToGridSize(newLeft);
         newTop = gridUtils.snapToGridSize(newTop);
 
-        // containment
-        var position = enforceContainment(newLeft, newTop, ui.helper.outerWidth(true), ui.helper.outerHeight(true));
+        // Update the position of wrapper (.ui-draggable) div to snap to grid
+        ui.position.left = newLeft;
+        ui.position.top = newTop;
 
-        ui.position.left = position.left;
-        ui.position.top = position.top;
-
+        // Set original element properties to update values in Property tab
         elm.css({
-          top: position.top,
-          left: position.left
+          left: newLeft,
+          top: newTop,
         });
 
+        // Dim the element if it's dragged out of bounds
+        if (!isMouseInBounds(newLeft, newTop)) {
+          elm.addClass("toDelete");
+        } else {
+          elm.removeClass("toDelete");
+        }
+
+        // Re-render design work space for this element
         designMode.renderDesignWorkspace(elm[0]);
       },
-      start: function () {
-        highlightElement(elm[0]);
+      stop: function (event, ui) {
+        // Note: It looks like the ui.position values don't change between
+        // the last drag event and the stop event. Since we already performed
+        // the scale transformation on ui.position values in the drag handler,
+        // there's no need to transform ui.position coordinates again here.
+
+        // Check the drop location to determine whether we delete this element
+        if (!isMouseInBounds(ui.position.left, ui.position.top)) {
+
+          // It's dropped out of bounds, animate and delete
+          ui.helper.hide( "drop", { direction: "down" }, ANIMATION_LENGTH_MS, function () {
+            deleteElement(elm[0]);
+          });
+
+        } else {
+
+          // Otherwise, make sure that the element is contained within the app space
+          moveElementIntoBounds(elm);
+
+          // Render design work space for this element
+          designMode.renderDesignWorkspace(elm[0]);
+        }
+
+        // Turn clipping back on so it's not possible for elements
+        // to bleed out of app space
+        setAppSpaceClipping(true);
       },
     }).css({
       position: 'absolute',
@@ -778,7 +812,7 @@ function makeDraggable(jqueryElements) {
 
     wrapper.css({
       top: elm.css('top'),
-      left: elm.css('left')
+      left: elm.css('left'),
     });
 
     // Chrome/Safari both have issues where they don't properly render the
@@ -813,6 +847,33 @@ function enforceContainment(left, top, width, height) {
   newTop = Math.max(newTop, 0);
 
   return {'left': newLeft, 'top': newTop};
+}
+
+/**
+ * Checks if a position (relative to app space) is within the app space bounds
+ * @param {number} x
+ * @param {number} y
+ * @returns {boolean} True if (x, y) is within the app space. False otherwise.
+ */
+function isMouseInBounds(x, y) {
+  var container = $('#designModeViz');
+
+  return gridUtils.isMouseInBounds(x, y, container.outerWidth(), container.outerHeight());
+}
+
+/**
+ * Sets app space clipping behavior. App space is clipped if clip == true.
+ * @param {boolean} clip
+ */
+function setAppSpaceClipping(clip) {
+  var container = $('#designModeViz');
+
+  if (clip) {
+    // Delay the clipping until we're done the delete/pushback animation
+    container.delay(ANIMATION_LENGTH_MS).addClass('clip-content', ANIMATION_LENGTH_MS);
+  } else {
+    container.removeClass('clip-content');
+  }
 }
 
 /**
@@ -882,6 +943,16 @@ designMode.configureDragAndDrop = function () {
   // element tray to the play space.
   $('#visualization').droppable({
     accept: '.new-design-element',
+    activate: function (event, ui) {
+      // Turn off clipping in app space so we can drag the element
+      // into and out of it
+      setAppSpaceClipping(false);
+    },
+    deactivate: function (event, ui) {
+      // Turn clipping back on so it's not possible for elements
+      // to bleed out of app space
+      setAppSpaceClipping(true);
+    },
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
@@ -891,6 +962,10 @@ designMode.configureDragAndDrop = function () {
       if (elementType === elementLibrary.ElementType.SCREEN) {
         designMode.changeScreen(elementUtils.getId(element));
       }
+
+      // Move the element into the app space bounds
+      moveElementIntoBounds(element);
+
       if (elementType === elementLibrary.ElementType.IMAGE) {
         var parent = $(element).parent();
         // Safari has some weird bug where it doesn't end up rendering our dropped
@@ -907,9 +982,48 @@ designMode.configureDragAndDrop = function () {
           }, 1);
         }
       }
+
+      // Re-render design work space for this element
+      designMode.renderDesignWorkspace(element);
     }
   });
 };
+
+/**
+ * Given a design element, move and animate it into the bounds of app space.
+ * Assumption: The design element is wrapped in a .ui-draggable wrapper already.
+ * @param {HTMLElement} The HTMLElement representing the design element.
+ */
+function moveElementIntoBounds(element) {
+  // Get the element's wrapper.
+  // If it doesn't exist (e.g. for a SCREEN element), return.
+  if ($(element).parent('.ui-draggable').length === 0) {
+    return;
+  }
+
+  // Get the element's dimensions
+  var width = parseFloat($(element).css('width'));
+  var height = parseFloat($(element).css('height'));
+
+  // Get the wrapper's position within the app space
+  var elm = $(element).parent('.ui-draggable');
+  var left = parseFloat(elm.css('left'));
+  var top = parseFloat(elm.css('top'));
+
+  var newContainedPos = enforceContainment(left, top, width, height);
+
+  // Slide animate the wrapper back into the app space
+  elm.animate({
+    left: newContainedPos.left,
+    top: newContainedPos.top,
+  }, ANIMATION_LENGTH_MS);
+
+  // Update position on original element to update values in Property tab
+  $(element).css({
+    left: newContainedPos.left,
+    top: newContainedPos.top,
+  });
+}
 
 /**
  * Create a new screen

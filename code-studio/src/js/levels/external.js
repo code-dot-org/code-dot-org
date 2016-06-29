@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 // Embed a forum thread in an External level by adding <div id='discourse-comments' /> anywhere in the page html
 $(window).load(function () {
   if ($('#discourse-comments')[0]) {

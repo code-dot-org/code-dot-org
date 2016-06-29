@@ -111,7 +111,7 @@ module RakeUtils
     system 'git', 'add', *args
   end
 
-  def self.git_branch()
+  def self.git_branch
     `git branch | grep \\* | cut -f 2 -d \\ `.strip
   end
 
@@ -119,15 +119,15 @@ module RakeUtils
     `git commit -m \"#{message}\"`.strip
   end
 
-  def self.git_fetch()
+  def self.git_fetch
     system 'git', 'fetch'
   end
 
-  def self.git_pull()
+  def self.git_pull
     system 'git', 'pull', '--ff-only', 'origin', git_branch
   end
 
-  def self.git_push()
+  def self.git_push
     system 'git', 'push', 'origin', git_branch
   end
 
@@ -135,13 +135,13 @@ module RakeUtils
     `git rev-parse HEAD`.strip
   end
 
-  def self.git_update_count()
+  def self.git_update_count
     count = `git rev-list ..@{u} | wc -l`.strip.to_i
     return 0 if $?.exitstatus != 0
     count
   end
 
-  def self.git_updates_available?()
+  def self.git_updates_available?
     `git remote show origin 2>&1 | grep \"local out of date\" | grep \"#{git_branch}\" | wc -l`.strip.to_i > 0
   end
 

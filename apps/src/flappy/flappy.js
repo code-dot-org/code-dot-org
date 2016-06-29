@@ -7,6 +7,8 @@
 
 'use strict';
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var flappyMsg = require('./locale');
@@ -20,6 +22,7 @@ var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
+var experiments = require('../experiments');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -494,6 +497,7 @@ Flappy.init = function (config) {
   level = config.level;
 
   config.grayOutUndeletableBlocks = level.grayOutUndeletableBlocks;
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   loadLevel();
 

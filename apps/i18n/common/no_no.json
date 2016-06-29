@@ -149,6 +149,7 @@
   "generatedCodeInfo": "Også leiande universitet underviser programmering med blokker (til dømes {berkeleyLink}, {harvardLink}). Men blokkene du har sett saman kan også visast som JavaScript, verdens mest brukte programmeringsspråk:",
   "hashError": "Beklager, '%1' passar ikkje med noko lagra program.",
   "help": "Hjelp",
+  "hide": "Skjul",
   "hideToolbox": "(Skjul)",
   "hintHeader": "Her er eit tips:",
   "hintPrompt": "Trenger du hjelp?",
@@ -167,6 +168,7 @@
   "makeYourOwnFlappy": "Lag ditt eige Flakse-spel",
   "missingRecommendedBlocksErrorMsg": "Ikkje heilt rett. Prøv å bruke ein blokk du ikkje har brukt enda.",
   "missingRequiredBlocksErrorMsg": "Ikkje heilt rett. Prøv å bruke ei ubrukt blokk.",
+  "more": "Meir",
   "nestedForSameVariable": "Du bruker den same variabelen inne i to eller fleire lekkjer inni einannan. Bruk unike variabelnavn for å unngå uendelege lekkjer.",
   "nextLevel": "Gratulerer! Du fullførte oppgåve {puzzleNumber}.",
   "nextLevelTrophies": "Gratulerer! Du har fullført oppgåve {puzzleNumber} og vunne {numTrophies, plural, one {ein pokal} other {# pokalar}}.",
@@ -233,9 +235,15 @@
   "tryBlocksBelowFeedback": "Prøv å bruke ein av blokkene under:",
   "tryHOC": "Prøv Kodetimen",
   "unnamedFunction": "Du har ein variabel eller funksjon som ikkje har fått navn. Ikkje gløym å gje alt eit beskrivande navn.",
+  "unattachedBlockTipTitle": "Ledige blokker",
+  "unattachedBlockTipBody": "Ledige blokker vil ikke gjøre noe. Hvis du vil ha disse blokkene i programmet ditt, prøv å koble dem til andre blokker.",
   "wantToLearn": "Vil du lære å kode?",
   "watchVideo": "Sjå videoen",
   "when": "når",
   "whenRun": "når den køyrer",
-  "workspaceHeaderShort": "Arbeidsområde: "
+  "workspaceHeaderShort": "Arbeidsområde: ",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

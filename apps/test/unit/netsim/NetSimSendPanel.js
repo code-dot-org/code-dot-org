@@ -1,6 +1,5 @@
 /** @file Tests for NetSimLogPanel */
-/* globaldescribe, beforeEach, it */
-
+import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 

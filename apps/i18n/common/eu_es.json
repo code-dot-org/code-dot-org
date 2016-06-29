@@ -149,6 +149,7 @@
   "generatedCodeInfo": "Goi mailako unibertsitateek (adib., {berkeleyLink}, {harvardLink}) ere blokeetan oinarritutako programazioa irakasten dute. Baina zuk erabilitako blokeen azpian munduan zehar erabilera zabalen duen programazio lengoaia dago, JavaScript:",
   "hashError": "Barkatu. '%1' ez dator bat inongo gordetako programarekin.",
   "help": "Laguntza",
+  "hide": "Hide",
   "hideToolbox": "(Ezkutatu)",
   "hintHeader": "Hemen aholkua:",
   "hintPrompt": "Laguntzarik behar?",
@@ -167,6 +168,7 @@
   "makeYourOwnFlappy": "Egin zure Flappy joko propioa",
   "missingRecommendedBlocksErrorMsg": "Ez guztiz. Saiatu oraindik erabiltzen ari ez zaren blokea erabiltzen.",
   "missingRequiredBlocksErrorMsg": "Ez guztiz. Erabiltzen ari ez zaren bloke bat erabili behar duzu.",
+  "more": "Gehiago",
   "nestedForSameVariable": "Aldagai bera erabiltzen ari zara habiatutako begizta bi edo gehiagotan. Begizta amaigabekoak ekiditeko erabili aldagai izen desberdinak.",
   "nextLevel": "Zorionak! {puzzleNumber}. ariketa osatu duzu.",
   "nextLevelTrophies": "Zorionak! {puzzleNumber}. ariketa osatu duzu eta {numTrophies, plural, one {garaikur bat irabazi duzu} other {# garaikur irabazi dituzu}}.",
@@ -233,9 +235,15 @@
   "tryBlocksBelowFeedback": "Saiatu azpiko blokeetako bat erabiltzen:",
   "tryHOC": "Probatu Kode Ordua",
   "unnamedFunction": "Izenik gabeko aldagai edo funtzio bat daukazu. Ez ahaztu guztiei esanguratsua den izen bat jartzeaz.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Programatzen ikasi nahi?",
   "watchVideo": "Ikusi Bideoa",
   "when": "-enean",
   "whenRun": "martxan dagoenean",
-  "workspaceHeaderShort": "Lan eremua: "
+  "workspaceHeaderShort": "Lan eremua: ",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

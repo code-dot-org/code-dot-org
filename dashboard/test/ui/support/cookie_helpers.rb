@@ -18,14 +18,14 @@ module CookieHelpers
     message = CGI.unescape(session_cookie[:value])
 
     key_generator = ActiveSupport::KeyGenerator.new(
-                                                    CDO.dashboard_secret_key_base,
-                                                    iterations: 1000
-                                                    )
+      CDO.dashboard_secret_key_base,
+      iterations: 1000
+    )
 
     encryptor = ActiveSupport::MessageEncryptor.new(
-                                                    key_generator.generate_key('encrypted cookie'),
-                                                    key_generator.generate_key('signed encrypted cookie')
-                                                    )
+      key_generator.generate_key('encrypted cookie'),
+      key_generator.generate_key('signed encrypted cookie')
+    )
 
     encryptor.decrypt_and_verify(message)
   end

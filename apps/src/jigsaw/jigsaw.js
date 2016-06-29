@@ -7,12 +7,15 @@
 
 'use strict';
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
 var dom = require('../dom');
+var experiments = require('../experiments');
 
 /**
  * Create a namespace for the application.
@@ -148,6 +151,7 @@ Jigsaw.init = function (config) {
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   var onMount = function () {
     studioApp.init(config);

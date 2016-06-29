@@ -25,42 +25,48 @@ class V2UserRoutesTest < Minitest::Test
         with_role FakeDashboard::STUDENT
         @pegasus.get '/v2/user'
         assert_equal 200, @pegasus.last_response.status
-        assert_equal({
-                         'id' => FakeDashboard::STUDENT[:id],
-                         'admin' => FakeDashboard::STUDENT[:admin],
-                         'name' => FakeDashboard::STUDENT[:name],
-                         'owned_sections' => []
-                     },
-                     JSON.parse(@pegasus.last_response.body))
+        assert_equal(
+          {
+            'id' => FakeDashboard::STUDENT[:id],
+            'admin' => FakeDashboard::STUDENT[:admin],
+            'name' => FakeDashboard::STUDENT[:name],
+            'owned_sections' => []
+          },
+          JSON.parse(@pegasus.last_response.body)
+        )
       end
 
       it 'returns JSON when signed in as teacher' do
         with_role FakeDashboard::TEACHER
         @pegasus.get '/v2/user'
         assert_equal 200, @pegasus.last_response.status
-        assert_equal({
-                         'id' => FakeDashboard::TEACHER[:id],
-                         'admin' => FakeDashboard::TEACHER[:admin],
-                         'name' => FakeDashboard::TEACHER[:name],
-                         'owned_sections' => [
-                             {'id' => FakeDashboard::TEACHER_SECTIONS[0][:id]},
-                             {'id' => FakeDashboard::TEACHER_SECTIONS[1][:id]}
-                         ]
-                     },
-                     JSON.parse(@pegasus.last_response.body))
+        assert_equal(
+          {
+            'id' => FakeDashboard::TEACHER[:id],
+            'admin' => FakeDashboard::TEACHER[:admin],
+            'name' => FakeDashboard::TEACHER[:name],
+            'owned_sections' => [
+              {'id' => FakeDashboard::TEACHER_SECTIONS[0][:id]},
+              {'id' => FakeDashboard::TEACHER_SECTIONS[1][:id]}
+            ]
+          },
+          JSON.parse(@pegasus.last_response.body)
+        )
       end
 
       it 'returns JSON when signed in as admin' do
         with_role FakeDashboard::ADMIN
         @pegasus.get '/v2/user'
         assert_equal 200, @pegasus.last_response.status
-        assert_equal({
-                         'id' => FakeDashboard::ADMIN[:id],
-                         'admin' => FakeDashboard::ADMIN[:admin],
-                         'name' => FakeDashboard::ADMIN[:name],
-                         'owned_sections' => []
-                     },
-                     JSON.parse(@pegasus.last_response.body))
+        assert_equal(
+          {
+            'id' => FakeDashboard::ADMIN[:id],
+            'admin' => FakeDashboard::ADMIN[:admin],
+            'name' => FakeDashboard::ADMIN[:name],
+            'owned_sections' => []
+          },
+          JSON.parse(@pegasus.last_response.body)
+        )
       end
 
     end
@@ -73,7 +79,7 @@ class V2UserRoutesTest < Minitest::Test
     def expected_v2_students_hash_for(user)
       {}.tap do |expect|
         V2_STUDENTS_KEY_LIST.each do |key|
-          expect[key.to_s] = user.has_key?(key) ? user[key] : nil
+          expect[key.to_s] = user.key?(key) ? user[key] : nil
         end
       end
     end
@@ -98,7 +104,7 @@ class V2UserRoutesTest < Minitest::Test
         @pegasus.get '/v2/students'
         assert_equal 200, @pegasus.last_response.status
         assert_equal([expected_v2_students_hash_for(FakeDashboard::STUDENT)],
-                     JSON.parse(@pegasus.last_response.body))
+          JSON.parse(@pegasus.last_response.body))
       end
 
       it 'returns no deleted students or deleted followers' do
@@ -115,7 +121,7 @@ class V2UserRoutesTest < Minitest::Test
     def expected_v2_students_id_hash_for(user)
       {}.tap do |expect|
         V2_STUDENTS_ID_KEY_LIST.each do |key|
-          expect[key.to_s] = user.has_key?(key) ? user[key] : nil
+          expect[key.to_s] = user.key?(key) ? user[key] : nil
         end
       end
     end
@@ -138,7 +144,7 @@ class V2UserRoutesTest < Minitest::Test
         @pegasus.get "/v2/students/#{FakeDashboard::STUDENT[:id]}"
         assert_equal 200, @pegasus.last_response.status
         assert_equal(expected_v2_students_id_hash_for(FakeDashboard::STUDENT),
-                     JSON.parse(@pegasus.last_response.body))
+          JSON.parse(@pegasus.last_response.body))
       end
 
       it 'returns student info when signed in as admin' do
@@ -146,7 +152,7 @@ class V2UserRoutesTest < Minitest::Test
         @pegasus.get "/v2/students/#{FakeDashboard::STUDENT[:id]}"
         assert_equal 200, @pegasus.last_response.status
         assert_equal(expected_v2_students_id_hash_for(FakeDashboard::STUDENT),
-                     JSON.parse(@pegasus.last_response.body))
+          JSON.parse(@pegasus.last_response.body))
       end
 
       it 'returns 403 when seeking nonexistent student' do
@@ -199,8 +205,8 @@ class V2UserRoutesTest < Minitest::Test
             'CONTENT_TYPE' => 'application/json;charset=utf-8'
           assert_equal 200, @pegasus.last_response.status
           assert_equal expected_v2_students_id_hash_for(
-                         FakeDashboard::STUDENT.merge({name: NEW_NAME})),
-                       JSON.parse(@pegasus.last_response.body)
+            FakeDashboard::STUDENT.merge({name: NEW_NAME})),
+            JSON.parse(@pegasus.last_response.body)
         end
       end
 

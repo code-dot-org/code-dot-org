@@ -149,6 +149,7 @@
   "generatedCodeInfo": "Чак и најбољи универзитети уче блок-базирано кодирање (нпр. {berkeleyLink}, {harvardLink}). Али блокови су постављени тако да их можете видети у JavaScript, светском најкоришћенијем програмском језику:",
   "hashError": "Жао нам је, '%1' не одговара ни једном сачуваном програму.",
   "help": "Помоћ",
+  "hide": "Hide",
   "hideToolbox": "(Сакриј)",
   "hintHeader": "Ево предлога:",
   "hintPrompt": "Требаш помоћ?",
@@ -167,6 +168,7 @@
   "makeYourOwnFlappy": "Направи своју Flappy игру",
   "missingRecommendedBlocksErrorMsg": "Не баш. Покушајте да употребите блок који још увек не користите.",
   "missingRequiredBlocksErrorMsg": "Не баш. Морате да употребите блок који још увек не користите.",
+  "more": "Више",
   "nestedForSameVariable": "Користите исту променљиву у две или више угнеждене петље. Употребите јединствена имена променљивих да бисте избегли бесконачне петље.",
   "nextLevel": "Честитамо! Решио-ла си мозгалицу {puzzleNumber}.",
   "nextLevelTrophies": "Честитамо! Решили сте Слагалицу {puzzleNumber} и освојили {numTrophies, plural, one {трофеј} other {# трофеја}}.",
@@ -233,9 +235,15 @@
   "tryBlocksBelowFeedback": "Покушајте са једним од блокова испод:",
   "tryHOC": "Испробај \"Hour of Code\"",
   "unnamedFunction": "Имате променљиву или функцију без имена. Не заборавите да све именујете описним именима.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Желиш да научиш да програмираш?",
   "watchVideo": "Погледај видео",
   "when": "када",
   "whenRun": "Када кренеш",
-  "workspaceHeaderShort": "Радни простор: "
+  "workspaceHeaderShort": "Радни простор: ",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

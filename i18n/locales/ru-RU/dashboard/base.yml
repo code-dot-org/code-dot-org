@@ -23,12 +23,14 @@ ru:
           future: не может быть в будущем
   hello: Привет, мир!
   welcome_back: 'С возвращением, %{name}'
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Ваш профессиональный план обучения
+  see_your_learning_plan: Смотреть свой план обучения
   submit: Отправить
   unsubmit: Не отправлять
   previous_page: Предыдущая страница
   next_page: Следующая страница
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Отмена
   okay: Хорошо
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
@@ -85,6 +87,7 @@ ru:
     teacher_title: Регистрация учителя
     student_pitch: Регистрация на code.org для учеников
     student_title: Регистрация ученика
+    signup_title: Sign up for Code.org
     school_name: Название школы (не обязательно)
     school_address: Адрес школы (не обязательно)
     address_placeholder: адрес, город, область, индекс
@@ -103,6 +106,9 @@ ru:
     student_terms: "Я согласен с условиями предоставления услуг <a href='http://code.org/tos'></a> Code.org. Если мне меньше 13 лет, отправляя эту форму, я подтверждаю, что у меня есть разрешение моих родителей или законного опекуна на пользование услугами Code.org. <br/>Для пользователей младше 13 лет адреса электронной почты не хранятся в форме, которая позволяет нам связаться с ними."
     teacher_terms: "Я согласен с условиями предоставления услуг <a href='http://code.org/tos'></a> Code.org."
     additional_information: Чтобы продолжить регистрацию, нам нужна дополнительная информация.
+    user_type_label: Account Type
+    user_type_teacher: Учитель
+    user_type_student: Ученик
   signin_form:
     title: Уже зарегистрированы? Вход
     login: Адрес электронной почты или имя пользователя
@@ -334,21 +340,21 @@ ru:
     print_certificate: Распечатать сертификат
     announcement_title: Объявления
     announcement_view_all: Посмотреть все
-    announcement_message: '<b>16 декабря 2015 г.</b> — Спасибо за участие в часе кода 2015! Теперь во всех уроках и курсах студии кода снова появилась возможность отслеживания и сохранения результатов. Примечание: Офисы Code.org будут закрыты с 19 декабря по 3 января. Просим вас учесть, что ответы на вопросы, направленные вами до 4 января, будут предоставлены с задержкой.'
-    announcement_button: Узнать больше
-    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: Add your name
+    announcement_message: "Мы начали измерять уровень обучения студентов на курсах 1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a href='%{tagging_url}'> отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'> изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты могут сделать? </i>"
+    announcement_button: Test the feature
+    announcement_petition: Как учитель вы лидер движения, чтобы дать каждому студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло время, чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28 губернаторов и а также руководители крупнейших компаний Америки объединились в открытом письме к Конгрессу США финансировать K-12 образовательную программу компьютерной науки.
+    announcement_petition_button: Добавьте ваше имя
   move_students:
-    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as the new section.
-    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
-    students_not_yours: You cannot move students from a section that does not belong to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
+    new_section_dne: 'Извините, но раздел %{new_section_code} не существует. Пожалуйста, введите другой раздел кода.'
+    section_code_not_entered: Просьба представить current_section_code.
+    section_code_cant_be_current_section: Текущий раздел не может быть таким же, как новый раздел.
+    current_section_dne: 'Извините, но раздел %{current_section_code} не существует. Пожалуйста, введите код другого раздела.'
+    students_not_yours: Вы не можете переместить студентов из раздела, который не принадлежит вам.
+    stay_enrolled_not_entered: Пожалуйста оставайтесь stay_enrolled_in_current_section.
+    student_ids_not_entered: Просьба предоставить student_ids.
+    student_not_found: Один или несколько студентов не могут быть найдены.
+    all_students_must_be_in_current_section: Все студенты должны быть зачислены в настоящее время в вашу группу.
+    already_enrolled_in_new_section: Вы не можете переместить этих студентов, потому что этот учитель уже взял их в другую группу.
   share:
     title: Учиться в студии кода
     description: Каждый может изучать информатику. Создавайте игры, приложения и произведения искусства с помощью программирования.
@@ -397,15 +403,12 @@ ru:
     notes_coming_soon: Текст для этого видео находится в разработке.
     autoplay_option: Автоматическое воспроизведение видео
     download: Скачать видео
-  compatability:
-    working:
-      header: Мы работаем над поддержкой вашего браузера.
-      message: "Code.org использует современные веб-технологии. Это ускорит работу сайта. Ваш браузер не поддерживает все необходимые функции, и у вас могут возникнуть трудности при использовании этой части сайта. Помогите нам, <a href='%{report_issue_url}'>сообщая о всех проблемах, с которыми вы сталкиваетесь</a>. Вы также можете <a href='%{supported_browsers_url}'>обновить свой браузер до поддерживаемой версии</a>."
-      hide_this_warning: Скрыть это предупреждение
+  compatibility:
     upgrade:
-      header: Обновите свой браузер.
-      message: "Code.org использует современные веб-технологии. Это ускорит работу сайта. К сожалению, ваш браузер не поддерживает все функции, необходимые для работы этого раздела сайта.<br/><br/> Чтобы продолжить, установите браузер из нашего списка поддерживаемых браузеров. Вы можете <a href='#'>попытаться зайти на страницу </a>, но будьте готовы к неправильной работе."
-      button: Откройте мне список поддерживаемых браузеров
+      unsupported_message: "Ваш браузер не поддерживается. Пожалуйста, обновите свой браузер до <a href='%{supported_browsers_url}', target='_blank'> одного из поддерживаемых браузеров</a>. Вы можете попробовать просмотреть страницы, но ожидаемая функциональность может быть повреждена."
+      ie_message: Code.org скоро удалит поддержку для Internet Explorer 8, 9 и 10. Выполните обновление до любого современного браузера.
+      ie_message_csedweek: CSEdWeek.org скоро удалит поддержку для Internet Explorer 8, 9 и 10. Выполните обновление до любого современного браузера.
+      link: Узнать больше
   slow_loading: Это занимает больше времени, чем обычно...
   try_reloading: Попробуйте перезагрузить страницу
   next_stage: Готово! Перейти к следующему этапу
@@ -482,12 +485,14 @@ ru:
     picture_count: 'За прошедшие <b>%{days}</b> дней(я) ученики нарисовали <b>%{count}</b> рис. путем написания своих собственных компьютерных программ. Нажимайте на рисунки, чтобы увидеть каждую программу в действии.'
     activity_count: 'За прошедшие <b>%{days}</b> дней(я) ученики создали <b>%{count}</b> приложений и рисунков путем написания своих собственных компьютерных программ. Нажимайте на рисунки и скриншоты, чтобы увидеть каждую программу в действии.'
     want_to_make_your_own: Хотите сделать свое?
+    how_to_save: На последнем уровне этого учебника нажмите кнопку «Готово» и «Сохранить», чтобы сохранить работу в галерее.
     more: 'Больше &rarr;'
     caption_by_name_age: 'Создатель: %{name}, возраст: %{age}'
     caption_time_ago: '%{time_ago} назад'
     header: Галерея
     header_playlab: Истории и игры
     header_artist: Искусство программирования
+    report_abuse: Сообщить о нарушении
   landing:
     prerelease: "Это <span class='betatext'> бета-версия</span> курса.  Это означает, что это не окончательный вариант курса, и он будет дорабатываться с учетом полученных отзывов."
     prerelease_hoc2014: "Это <span class='betatext'>бета-версия </span> курса.  Он будет дорабатываться с учетом полученных отзывов."
@@ -615,9 +620,9 @@ ru:
     share: Поделитесь
     share_title: Поделиться своим проектом
     share_copy_link: 'Скопировать ссылку:'
-    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
-    embed: Embed
-    advanced_share: Show advanced options
+    share_embed_description: Вы можете вставить код в HTML-страницы для отображения проекта на веб-странице.
+    embed: Код для вставки
+    advanced_share: Показать дополнительные опции
     close: Закрыть
     more: Ещё
     name: Имя
@@ -659,19 +664,57 @@ ru:
         acknowledge: 'Отправляя эту информацию, вы признаете, что она будет обрабатываться в соответствии с %{link_start_privacy}политикой конфиденциальности%{link_end} и %{link_start_tos}Условиями предоставления услуг%{link_end}'
   peer_review:
     accepted:
-      name: Accepted
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+      name: Принято
+      description: '<strong>Да</strong>, это представление <strong>соответствует</strong> требованиям'
     rejected:
-      name: Rejected
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+      name: Отклонено
+      description: '<strong>Нет</strong>, это представление <strong>не соответствует</strong> требованиям'
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
+      name: Эскалация
+      description: Я хотел бы как инструктор, проверить это упражнение
+    instructor_feedback: Обратная связь с инструктором
+    peer_feedback: Отзывы однокурсников
+    outdated: Этот отзыв был добавлен для версии, загруженной раньше
   components:
     icon_library:
       search_placeholder_text: Искать значок...
       no_icons_found: Значёк не найден
+    playzone:
+      artist_description: Рисуйте картины и узоры вместе с художником!
+      artist_title: Новый рисунок
+      continue_button: Перейти к следующему этапу
+      playlab_description: Создай историю или игру с лабораторией игр!
+      playlab_title: Новое приложение
+      primary_header: 'Поздравляем! Вы закончили %{stageName}!'
+      projects_description: Вернуться к одному из существующих проектов.
+      projects_title: Открыть проект
+      secondary_header: Спросите вашего учителя, что делать дальше
   flex_category:
     required: Краткий обзор
-    content: Content
-    practice: Teacher Practices
+    content: Содержимое
+    practice: Практика учителя
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Загрузить программы Часа кода
+    capsule_title: У Вас есть интернет?
+    capsule_desc: 'Используйте онлайн веб-приложение <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: Нет интернета?
+    instructions: 'Инструкция для преподавателей: Если у вас плохое соединение с интернетом, то эти обучающие руководства для Часа кода доступны для загрузки и установки в режиме оффлайн. Выберите язык и платформу, загрузите и установите на всех компьютерах в классе. Вы можете использовать USB-накопитель для того, чтобы загрузить программу один раз и установить на все компьютеры. Примечание: ученики не смогут войти в Code Studio для того, чтобы сохранить прогресс или распечатать сертификаты. Преподаватели могут распечатать сертификаты заранее <a href="%{url}">здесь</a>.'
+    minecraft_name: Час кода с Minecraft
+    starwars_blocks_name: 'Звездные войны: Создайте галактику с помощью кода (блоки)'
+    starwars_javascript_name: 'Звездные войны: Создайте галактику с помощью кода (JavaScript)'
+    download_message: 'Загрузить %{app_name} для использования оффлайн (136MB)'
+    download_in_english: 'Скачать на английском языке:'
+    download_in_spanish: 'Скачать на испанском языке:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

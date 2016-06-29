@@ -3,8 +3,9 @@
  * BeeCells
  * @see @cdo/apps/maze/beeCell
  */
-/* global React */
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var BeeCell = require('@cdo/apps/maze/beeCell');
 var tiles = require('@cdo/apps/maze/tiles');
 var SquareType = tiles.SquareType;

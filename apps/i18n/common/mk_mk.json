@@ -149,6 +149,7 @@
   "generatedCodeInfo": "Дури и најдобрите универзитети предаваат блок-базирано кодирање (на пример, {berkeleyLink}, {harvardLink}). Но, под хауба, на блоковите ќе можат да бидат прикажани во JavaScript,кој во  светот е  најраспространетиот  јазик за кодирање:",
   "hashError": "Извни ,'%1'не кореспондира со било кој зачуван програм.",
   "help": "Помош",
+  "hide": "Hide",
   "hideToolbox": "(скриј)",
   "hintHeader": "Еве еден совет :",
   "hintPrompt": "Need help?",
@@ -167,6 +168,7 @@
   "makeYourOwnFlappy": "Направете своја Flappy игра",
   "missingRecommendedBlocksErrorMsg": "Not quite. Try using a block you aren’t using yet.",
   "missingRequiredBlocksErrorMsg": "Not quite. You have to use a block you aren’t using yet.",
+  "more": "More",
   "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops.",
   "nextLevel": "Честитки! Ти ја заврши загатка {puzzleNumber}.",
   "nextLevelTrophies": "Честитки! Ти ја  заврши загатка {puzzleNumber} и го освои {numTrophies, plural, one {трофеј} other {# трофеи}}.",
@@ -233,9 +235,15 @@
   "tryBlocksBelowFeedback": "Try using one of the blocks below:",
   "tryHOC": "Пробај еден час кодирање",
   "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Сакаш да научиш да бидеш коде програмер?",
   "watchVideo": "Погледни го видеото",
   "when": "Кога",
   "whenRun": "Кога трча",
-  "workspaceHeaderShort": "Работна површина: "
+  "workspaceHeaderShort": "Работна површина: ",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

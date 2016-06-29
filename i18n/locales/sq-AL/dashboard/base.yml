@@ -29,6 +29,8 @@ sq:
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Anulo
   okay: Në rregull
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
@@ -86,6 +88,7 @@ sq:
     teacher_title: Regjistrimi për mësuesit
     student_pitch: Rregjistrimi i nënësve në Code.org
     student_title: Regjistrimi i nxënësit
+    signup_title: Sign up for Code.org
     school_name: Emri i shkollës (jo i domosdoshëm)
     school_address: Adresa e shkollës (jo e domosdoshme)
     address_placeholder: adresa, qyteti, shteti, kodi postar
@@ -104,6 +107,9 @@ sq:
     student_terms: "Unë pajtohem me <a href='http://code.org/tos'>kushtet e përdorimit</a> të Code.org. Nëse jam më pak se 13 vjeç, duke plotesuar këtë formular unë dëshmoj që kam lejen e prindërve ose mbikqyrësit ligjor për të përdorur shërbimet e Code.org.<br/> Për përdorues nën moshën 13 vjeçare, adresat e emaileve nuk do të ruhen në formularin që na lejon t'i kontaktojmë."
     teacher_terms: "Unë pajtohem me <a href='http://code.org/tos'> kushtet e përdorimit</a> të Code.org."
     additional_information: Kemi nevojë për disa informacione shtesë për të vazhduar me rregjistrimin tuaj.
+    user_type_label: Account Type
+    user_type_teacher: Mësues
+    user_type_student: student
   signin_form:
     title: Ke një llogari ekzistuese? Logohu
     login: Email-i ose emri i përdoruesit
@@ -337,8 +343,9 @@ sq:
     print_certificate: Printo Certifikatën
     announcement_title: Announcements
     announcement_view_all: View all
-    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
-    announcement_button: Mëso më shumë
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
   move_students:
@@ -400,15 +407,12 @@ sq:
     notes_coming_soon: Shënimet për këtë video vijnë së shpejti.
     autoplay_option: Luaj videot automatikisht
     download: Shkarko Videon
-  compatability:
-    working:
-      header: Ne po punojmë në suportimin e shfletuesit tuaj.
-      message: "Code.org përdor teknologji web-i bashkëkohore. Kjo e bën faqen të lehtë në përdorim. Shfletuesi juaj nuk i suporton të gjitha karakteristikat e kërkuara dhe ju mund të keni probleme ndërkohë që jeni duke përdorur këtë pjesë të faqes. Ju lutem na ndihmoni duke<a href='%{report_issue_url}'>raportuar ndonjë problem që gjeni</a>. Ju gjithashtu<a href='%{supported_browsers_url}'>mund të përmirësoni shfletuesin tuaj me një version që e suporton</a>."
-      hide_this_warning: Mbaj të fshehtë këtë paralajmërim
+  compatibility:
     upgrade:
-      header: Ju lutem përmirësoni shfletuesin tuaj.
-      message: "Code.org përdor teknologji web-i bashkëkohore. Kjo e bën faqen të shpejtë në përdorim. Për fat të keq, shfletuesi juaj nuk i suporton të gjitha karakteristikat e kërkuara, për të parë këtë pjesë të faqes.<br/><br/>Instaloni një shfletues nga lista jonë e shfletuesve për të vazhduar. Ju mund ta<a href='#'>shikoni faqen</a>, por mund të mos funksionojë si duhet."
-      button: Më ço tek lista e shfletuesve që suportohen
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      link: Mëso më shumë
   slow_loading: Kjo po zgjat më shumë seç duhet...
   try_reloading: Provo të rifreskosh faqen
   next_stage: Përfundoi! Vazhdo tek hapi tjetër
@@ -485,12 +489,14 @@ sq:
     picture_count: 'Në këto <b>%{days}</b> ditë, studentët kanë vizatuar <b>%{count}</b> piktura duke shkruar programet e tyre kompjuterike. Kliko tek pikturat për të parë çdo program që funksionon.'
     activity_count: 'Në këto <b>%{days}</b> ditë, studentët kanë bërë <b>%{count}</b> apliakcione dhe piktura duke shkruar programet e tyre kompjuterike. Kliko në pikturat dhe screenshotet për të parë çdo program që funksionon.'
     want_to_make_your_own: Dëshiron të bësh tëndin?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Më shumë &rarr;'
     caption_by_name_age: 'nga %{name}, mosha %{age}'
     caption_time_ago: '%{time_ago} më përpara'
     header: Galeria
     header_playlab: Play Lab
     header_artist: Artisti
+    report_abuse: Report Abuse
   landing:
     prerelease: "Ky kurs është në<span class='betatext'>beta</span>. Kjo nënkupton që nuk është versioni final i këtij kursi dhe referohet të përsëritet sapo feedbacku të merret dhe të bëhen përmirësime."
     prerelease_hoc2014: "Ky tutorial është në <span class='betatext'>beta</span>. Referohet të rishikohet sapo feedbacku të merret dhe të bëhen përmirësimet."
@@ -670,11 +676,49 @@ sq:
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Kerko nje ikone...
       no_icons_found: Nuk u gjet ikona
+    playzone:
+      artist_description: Vizato figura të hatashme dhe dizenjo me Artistin!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Krijo një histori ose bëj një lojë me Play Lab!
+      playlab_title: New App
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: Përmbledhja
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

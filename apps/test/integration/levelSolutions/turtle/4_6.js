@@ -14,7 +14,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       missingBlocks: [],
-      xml: '<xml><block type="controls_repeat"><title name="TIMES">4</title><statement name="DO"><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">20</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">90</title></block></next></block></statement></block></xml>'
+      xml: '<xml><block type="when_run"><next><block type="controls_repeat"><title name="TIMES">4</title><statement name="DO"><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">20</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">90</title></block></next></block></statement></block></next></block></xml>'
     }
   ]
 };

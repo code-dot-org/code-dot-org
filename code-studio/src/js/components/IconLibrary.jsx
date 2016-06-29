@@ -1,5 +1,6 @@
 /* global dashboard */
 
+var React = require('react');
 var IconList = require('./IconList');
 
 /**

@@ -1,0 +1,32 @@
+name 'U1L4 Lesson Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+## Lesson 1.4: Number Systems (Circle Triangle Square)
+
+### Overview
+<img src="https://images.code.org/7f783c7b7152b0390d8ed715c076095b-image-1465242222977.png" style="float:right; margin-left:30px">
+
+**Pacing: Unit 1, Week 2**
+<br>
+**Lesson Type: Unplugged, Concept Invention**
+
+Students will explore the properties of number systems by effectively inventing a base-3 number system using circles, triangles and squares as the symbols instead of arabic numerals. Students are asked to create rules that explain how each arrangement of symbols can be generated or predicated as an orderly, logical series. The objective is to understand that you can represent any number with any agreed-upon set of symbols that appear in an agreed-upon order. This is as true for circles, triangles and squares as it is for the digits 0-9, or the number systems we commonly see in computer science (binary and hexadecimal).
+
+<br>
+
+### Things to keep in mind while planning this lesson at TeacherCon
+
+- The getting started activity &mdash; “how many ways can you represent 7” is an important introduction.
+- Keep the focus on the main goal of coming up with a *system for generating the patterns*, rather than simply writing them all out.
+- Do try to get to the point where groups are comparing systems and rules for generating the patterns.
+- It’s okay if you don’t make the full connection to number systems of other bases. Ending with a simple foreshadowing is fine.
+
+### U1L4 Lesson Plan
+
+<br>
+Head over to curriculum.code.org to see this lesson and all associated resources (like videos and worksheets). 
+<br><br>
+<h4>
+<a href="https://curriculum.code.org/csp/unit1/4/" target="blank">U1L4 Lesson Plan <i class="fa fa-external-link-square"/></a>
+</h4><br>
+MARKDOWN

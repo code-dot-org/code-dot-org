@@ -22,6 +22,9 @@ content-type: text/ng-template
 
 %div{style: "padding-left:20px", 'ng-show' => '!assessments.length'}
   = I18n.t('dashboard_assessments_none')
+  %br
+  %br
+  = I18n.t('dashboard_assessments_none_part2')
 %div{style: "padding-left:20px", 'ng-show' => 'assessments.length'}
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'assessments.length', "ng-form" => "allForm"}
     %colgroup

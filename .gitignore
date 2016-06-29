@@ -32,6 +32,7 @@ crowdin.yaml
 /shared/js/node_modules/
 /apps/build
 /apps/build-times.log
+/apps/build-times-to-upload.log
 /apps/newrelic_agent.log
 /apps/node_modules/
 /apps/npm-debug.log
@@ -41,5 +42,7 @@ crowdin.yaml
 *_temp.json
 /.ruby-version
 /levelbuilder_ci_last_run
-/levelbuilder_ci_lock
 /coverage
+/apps/coverage
+/apps/test/entry-tests.js
+/dashboard/public/styleguide

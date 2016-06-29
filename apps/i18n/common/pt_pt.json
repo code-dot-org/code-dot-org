@@ -149,6 +149,7 @@
   "generatedCodeInfo": "Mesmo as melhores universidades ensinam código em blocos (por exemplo, {berkeleyLink}, {harvardLink}). Mas, na verdade, os blocos que juntaste podem ser vistos em JavaScript, que é a linguagem de programação mais utilizada no mundo:",
   "hashError": "Desculpa, '%1' não corresponde a qualquer programa gravado.",
   "help": "Ajuda",
+  "hide": "Hide",
   "hideToolbox": "(Ocultar)",
   "hintHeader": "Aqui vai uma dica:",
   "hintPrompt": "Precisas de ajuda?",
@@ -167,6 +168,7 @@
   "makeYourOwnFlappy": "Cria o teu próprio Flappy Bird",
   "missingRecommendedBlocksErrorMsg": "Tente utilizar um bloco que ainda não tenha usado.",
   "missingRequiredBlocksErrorMsg": "Tem de utilizar um bloco que ainda não usou.",
+  "more": "Mais",
   "nestedForSameVariable": "Está a usar a mesma variável em mais do que um ciclo. Use nomes de variáveis únicos para evitar ciclos infinitos.",
   "nextLevel": "Parabéns! Concluíste o desafio {puzzleNumber}.",
   "nextLevelTrophies": "Parabéns! Concluíste o desafio {puzzleNumber} e ganhaste {numTrophies, plural, one {1 troféu} other {# troféus}}.",
@@ -233,9 +235,15 @@
   "tryBlocksBelowFeedback": "Tente usar um dos blocos abaixo:",
   "tryHOC": "Exprimenta a Hora de Código",
   "unnamedFunction": "Tens uma variável ou uma função sem nome. Não te esqueças de dar um nome descritivo a tudo.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Queres aprender a programar?",
   "watchVideo": "Vê o vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Espaço de trabalho: "
+  "workspaceHeaderShort": "Espaço de trabalho: ",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: K-8 Intro to Computer Science Course
+          desc: 8 - 10 yoshli bolalar uchun Informatika kursiga kirish darslari
           Unplug1: 1-bosqich
           Maze: 2-bosqich
           Unplug2: 3-bosqich
@@ -122,7 +122,7 @@
         loop_while: Toki blogi
         loop_for: Sanovchi blok
         function: Funksiyalar
-        parameters: Functions with parameters
+        parameters: Funksiyalar (parameterlari bilan)
     level:
       instructions:
         maze_2_2: 'Quloqsiz cho‘chqachani tutishda yordam berolmaysizmi? Keraklicha
@@ -167,15 +167,16 @@
         maze_2_19: Faqat 3 ta blokdan foydalanib, qiyinroq masalani yecha olasanmi?
           Agar eplay olsang, undan keyin qancha uzun bo‘lmasin men har qanday egri
           yo‘llardan yura olaman.
-        turtle_1_1: Hi, I'm an artist. You can write code to make me draw almost anything.
-          Use a few blocks to make me draw over the grey lines in the picture.
-        turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "set color" block.'
+        turtle_1_1: Salom, men rassomman. Men barcha narsani chiza olishim uchun sen
+          kod yozishing mumkin. Meni rasmdagi kulrang chiziqlar uztidan chizishim
+          uchun bir nechta bloklarni ishlat.
+        turtle_1_2: 'Endi, kvadrat chizamiz. ESLATMA: "rang tanlash" blokidan o''zing
+          yoqtirgan rangni tanla.'
         turtle_1_3: 3 ta blok ishlatib, to'rtburchak yasang.
-        turtle_1_4: 'Draw a triangle whose sides are all in different colors, using
-          the "random color" option that picks a different color each time. Hint:
-          you''ll have to figure out how far to turn by clicking on the number in
-          the turn block.'
+        turtle_1_4: 'Har bir tomoni har xil rangda bo''lgan uchburchak chizing. Har
+          doim har xil rang ko''rsatish uchun "Tasodifiy rang" tanlovini belgilang.
+          Maslahat: "Burilish" blokidagi raqam ustiga bosib, qanchalik ko''p burilishingiz
+          kerakligini aniqlashingiz mumkin.'
         turtle_1_5: Now, for practice, draw a triangle and then a square to draw an
           envelope.
         turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do

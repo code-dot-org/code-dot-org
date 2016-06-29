@@ -1,5 +1,3 @@
-/* global $ */
-
 var tb = require('../block_utils').createToolbox;
 var utils = require('../utils');
 

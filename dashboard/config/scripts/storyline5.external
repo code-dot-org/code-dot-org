@@ -1,0 +1,12 @@
+name 'storyline5'
+title 'wrapup'
+markdown <<MARKDOWN
+<div style="width: 900px;font-size: 3em; line-height: 1.5; margin: 0 auto 0 auto;">
+<img src="https://images.code.org/753b4a7881136009fc5e5a37a6f2cf34-image-1464316047446.gif" style="border-radius:10px;float:right;margin: 0 0 20px 20px;"/>Finally, Anita had enough coins to help the wizard.
+<br/><br/>
+"Thank you!" said the wizard. Now I can collect the potions that I need."
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+</div>
+MARKDOWN

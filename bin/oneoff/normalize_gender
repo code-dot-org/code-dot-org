@@ -11,7 +11,6 @@
 # task so as to assure good data in all environments.
 
 require_relative '../../dashboard/config/environment'
-require src_dir 'database'
 
 if ARGV.length != 2
   puts 'Usage: ./bin/oneoff/normalize_gender start_index end_index'
@@ -22,7 +21,7 @@ start_index = ARGV[0].to_i
 end_index = ARGV[1].to_i
 
 User.with_deleted.
-  where(id: [start_index, end_index]).
+  where(id: start_index..end_index).
   where('gender IS NOT NULL').
   where('gender != "-" AND gender != "f" AND gender != "m"').
   update_all(gender: nil)

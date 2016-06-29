@@ -1,10 +1,8 @@
-/* global React google */
-
 /*
   Creates a new workshop.
   Route: /workshops/new
  */
-
+import React from 'react';
 var WorkshopForm = require('./components/workshop_form');
 
 var NewWorkshop = React.createClass({

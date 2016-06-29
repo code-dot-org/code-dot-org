@@ -26,15 +26,20 @@ function selectedAnimation(state, action) {
 
 /**
  * Select an animation in the animation list.
- * @param {!string} animationKey
- * @returns {{type: string, animationKey: string}}
+ * @param {!AnimationKey} animationKey
+ * @returns {{type: string, animationKey: AnimationKey}}
  */
 export function selectAnimation(animationKey) {
   return { type: SELECT_ANIMATION, animationKey };
 }
 
+/**
+ * Subreducer to set animation tab column widths.  Expected format for
+ * widths is an array of numbers, with an 'undefined' entry for a column
+ * that grows to fill available space.
+ */
 function columnSizes(state, action) {
-  state = state || [150, 250, undefined];
+  state = state || [150, undefined];
   switch (action.type) {
     case SET_COLUMN_SIZES:
       return action.sizes;

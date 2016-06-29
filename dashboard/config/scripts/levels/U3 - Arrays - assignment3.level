@@ -49,10 +49,15 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Increase the value of each value in the randomly generated array by 1. (Click to see full instructions)",
-    "markdown_instructions": "# Reassigning Array Values\r\n\r\nWe've already seen many examples of how **a location in an array can be treated identically to a variable**. The last exercise we'll perform to prove this point is **reassigning array values**. The syntax for reassigning values stored in an array is identical to that used when reassigning variables. Even the `++` notation to increase a value by one works!\r\n\r\n![](https://images.code.org/dd131448c80783218259f01b18545f1f-image-1447191496123.38.07 PM.png)\r\n\r\nThe program you're about to see **creates an empty array and adds three random values to it**. You will be adding code to the program that **increases each value by one**.\r\n\r\n# Do This:\r\n\r\n* Add code to the program that **increases the value stored at each location in the array by one**.\r\n* Use `console.log` to confirm that you have correctly increased the values. Below is sample output from one run of the program.\r\n\r\n![](https://images.code.org/42ca1f874a8a7b71e29b2ffd80ec31c3-image-1447191826756.43.37 PM.png)",
+    "markdown_instructions": "# Reassigning Array Values\r\n\r\nWe've already seen many examples of how **a location in an array can be treated identically to a variable**. The last exercise we'll perform to prove this point is **reassigning array values**. The syntax for reassigning values stored in an array is identical to that used when reassigning variables. Even the `++` notation to increase a value by one works!\r\n\r\n![](https://images.code.org/3cbd11c69e42daddce28e059388097db-image-1464228660945.png)\r\n\r\nThe program you're about to see **creates an empty array and adds three random values to it**. You will be adding code to the program that **increases each value by one**.\r\n\r\n# Do This:\r\n\r\n* Add code to the program that **increases the value stored at each location in the array by one**.\r\n* Use `console.log` to confirm that you have correctly increased the values. Below is sample output from one run of the program.\r\n\r\n![](https://images.code.org/42ca1f874a8a7b71e29b2ffd80ec31c3-image-1447191826756.43.37 PM.png)\r\n\r\n",
     "start_blocks": "var myNumbers = [];\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\nappendItem(myNumbers,randomNumber(1,10));\r\n\r\nconsole.log(\"Original numbers: \" + myNumbers);\r\n\r\n// Add your code here\r\n\r\nconsole.log(\"Final numbers: \" + myNumbers);",
     "slider_speed": "1",
-    "encrypted_examples": "GkNvjQeaJ8oJPwOJD583hok9v4624cOWjTPRkFH3V4PH4zfI1w+195wa7bT8\npi59\n"
+    "encrypted_examples": "GkNvjQeaJ8oJPwOJD583hok9v4624cOWjTPRkFH3V4PH4zfI1w+195wa7bT8\npi59\n",
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

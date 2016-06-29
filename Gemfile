@@ -75,6 +75,9 @@ group :development, :test do
   gem 'minitest-reporters'
   gem 'minitest-around'
   gem 'eyes_selenium', '~> 2.28.0'
+
+  # for pegasus PDF generation / merging testing
+  gem 'pdf-reader', require: false
 end
 
 group :doc do
@@ -82,12 +85,15 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# for pegasus PDF generation
+gem 'open_uri_redirections', require: false, group: [:development, :staging, :test]
+
 gem 'unicorn', '~> 4.8.2'
 
 gem 'chronic', '~> 0.10.2'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -164,8 +170,12 @@ gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at 
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'
 
-gem 'rubocop', '0.37.2', require: false, group: [:development, :staging]
-gem 'haml_lint', require: false, group: [:development, :staging]
+# Lint tools
+group :development, :staging do
+  gem 'rubocop', '0.37.2', require: false
+  gem 'haml_lint', require: false
+  gem 'scss_lint', require: false
+end
 
 # Reduce volume of production logs
 gem 'lograge'
@@ -192,5 +202,6 @@ gem 'rack-attack', '~> 4.4'
 # Generate SSL certificates
 gem 'acmesmith'
 
+gem 'firebase_token_generator'
 gem "selectize-rails"
 gem 'mail_view'

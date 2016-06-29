@@ -18,32 +18,32 @@ class DslTest < ActiveSupport::TestCase
     DSL
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     expected = {
-        id: nil,
-        stages: [
-          {
-              stage: 'Stage1',
-              scriptlevels: [
-                  {stage: 'Stage1', levels: [{name: 'Level 1'}]},
-                  {stage: 'Stage1', levels: [{name: 'Level 2'}]},
-                  {stage: 'Stage1', levels: [{name: 'Level 3'}]}
-              ]
-          },
-          {
-              stage: 'Stage2',
-              scriptlevels: [
-                  {stage: 'Stage2', levels: [{name: 'Level 4'}]},
-                  {stage: 'Stage2', levels: [{name: 'Level 5'}]}
-              ]
-          }
-        ],
-        hidden: true,
-        trophies: false,
-        wrapup_video: nil,
-        login_required: false,
-        admin_required: false,
-        student_of_admin_required: false,
-        professional_learning_course: nil,
-        pd: false
+      id: nil,
+      stages: [
+        {
+          stage: 'Stage1',
+          scriptlevels: [
+            {stage: 'Stage1', levels: [{name: 'Level 1'}]},
+            {stage: 'Stage1', levels: [{name: 'Level 2'}]},
+            {stage: 'Stage1', levels: [{name: 'Level 3'}]}
+          ]
+        },
+        {
+          stage: 'Stage2',
+          scriptlevels: [
+            {stage: 'Stage2', levels: [{name: 'Level 4'}]},
+            {stage: 'Stage2', levels: [{name: 'Level 5'}]}
+          ]
+        }
+      ],
+      hidden: true,
+      trophies: false,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: false,
+      student_of_admin_required: false,
+      professional_learning_course: nil,
+      pd: false
     }
 
     i18n_expected = {'en'=>{'data'=>{'script'=>{'name'=>{'test'=>{
@@ -61,16 +61,16 @@ class DslTest < ActiveSupport::TestCase
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
 
     expected = {
-        id: nil,
-        stages: [],
-        hidden: true,
-        trophies: false,
-        wrapup_video: nil,
-        login_required: false,
-        admin_required: true,
-        student_of_admin_required: false,
-        professional_learning_course: nil,
-        pd: false
+      id: nil,
+      stages: [],
+      hidden: true,
+      trophies: false,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: true,
+      student_of_admin_required: false,
+      professional_learning_course: nil,
+      pd: false
     }
 
     assert_equal expected, output
@@ -83,16 +83,16 @@ class DslTest < ActiveSupport::TestCase
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
 
     expected = {
-        id: nil,
-        stages: [],
-        hidden: true,
-        trophies: false,
-        wrapup_video: nil,
-        login_required: false,
-        admin_required: true,
-        student_of_admin_required: false,
-        professional_learning_course: nil,
-        pd: false
+      id: nil,
+      stages: [],
+      hidden: true,
+      trophies: false,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: true,
+      student_of_admin_required: false,
+      professional_learning_course: nil,
+      pd: false
     }
 
     assert_equal expected, output
@@ -105,16 +105,16 @@ class DslTest < ActiveSupport::TestCase
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
 
     expected = {
-        id: nil,
-        stages: [],
-        hidden: true,
-        trophies: false,
-        wrapup_video: nil,
-        login_required: false,
-        admin_required: false,
-        student_of_admin_required: true,
-        professional_learning_course: nil,
-        pd: false
+      id: nil,
+      stages: [],
+      hidden: true,
+      trophies: false,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: false,
+      student_of_admin_required: true,
+      professional_learning_course: nil,
+      pd: false
     }
 
     assert_equal expected, output
@@ -127,16 +127,16 @@ class DslTest < ActiveSupport::TestCase
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
 
     expected = {
-        id: nil,
-        stages: [],
-        hidden: true,
-        trophies: false,
-        wrapup_video: nil,
-        login_required: false,
-        admin_required: false,
-        student_of_admin_required: true,
-        professional_learning_course: nil,
-        pd: false
+      id: nil,
+      stages: [],
+      hidden: true,
+      trophies: false,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: false,
+      student_of_admin_required: true,
+      professional_learning_course: nil,
+      pd: false
     }
 
     assert_equal expected, output
@@ -160,7 +160,7 @@ level 'Level 3'
           scriptlevels: [
             {stage: "Stage1", levels: [{name: "Level 1"}]},
             {stage: "Stage1", levels: [{name: "Level 2a"}, {name: "Level 2b"}],
-              properties: {"Level 2b"=>{active: false}}
+             properties: {"Level 2b"=>{active: false}}
             },
             {stage: "Stage1", levels: [{name: "Level 3"}]}
           ]
@@ -354,29 +354,17 @@ DSL
 
     output, _ = EvaluationMulti.parse(input_dsl, 'test')
     expected = {
-        name: 'Test question',
-        properties: {
-            options: {},
-            questions: [{text: 'Question text'}],
-            answers: [
-                {text: 'answer 1', weight: 1, stage: nil},
-                {text: 'answer 2', weight: 2, stage: stage1},
-                {text: 'answer 3', weight: 1, stage: stage2},
-            ]
-        }
+      name: 'Test question',
+      properties: {
+        options: {},
+        questions: [{text: 'Question text'}],
+        answers: [
+          {text: 'answer 1', weight: 1, stage: nil},
+          {text: 'answer 2', weight: 2, stage: stage1.name},
+          {text: 'answer 3', weight: 1, stage: stage2.name},
+        ]
       }
+    }
     assert_equal expected, output
-  end
-
-  test 'test evaluation question unknown module' do
-    input_dsl = <<DSL
-name 'Test question'
-question 'Question text'
-answer 'answer 1'
-answer 'answer 2', weight: 1, stage_name: 'bogus stage'
-DSL
-    assert_raises 'Unknown learning module bogus module' do
-      EvaluationMulti.parse(input_dsl, 'test')
-    end
   end
 end

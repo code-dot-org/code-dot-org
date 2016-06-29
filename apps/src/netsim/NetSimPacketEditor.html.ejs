@@ -17,11 +17,11 @@
   */
 
   function isEncodingEnabled(queryEncoding) {
-    return enabledEncodingsHash[queryEncoding] === true;
+    return locals.enabledEncodingsHash[queryEncoding] === true;
   }
 
   /** @type {Packet.HeaderType[]} */
-  var headerFields = packetSpec;
+  var headerFields = locals.packetSpec;
 
   /** @type {boolean} */
   var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
@@ -34,7 +34,7 @@
       headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
   /** @type {boolean} */
-  var usePacketGranularity = (messageGranularity === MessageGranularity.PACKETS);
+  var usePacketGranularity = (locals.messageGranularity === MessageGranularity.PACKETS);
 
   /**
    * Write the table header to the page, with the appropriate packet-header columns enabled.

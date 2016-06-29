@@ -26,6 +26,7 @@ class UserLevel < ActiveRecord::Base
   belongs_to :user
   belongs_to :level
   belongs_to :script
+  belongs_to :level_source
 
   before_save :handle_unsubmit
 

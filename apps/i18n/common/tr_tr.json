@@ -149,6 +149,7 @@
   "generatedCodeInfo": "Dünyanın en iyi üniversiteleri bile yap-boz oyun tabanlı kodlama öğretiyor (Örn. {berkeleyLink}, {harvardLink}). Ayrıca detaylı incelerseniz, birleştirdiğiniz bloklar dünyanın en yaygın kullanılan kodlama dili olan JavaScript dilinde de görüntüleniyor:",
   "hashError": "Üzgünüz, '%1' kayıtlı herhangi bir programa karşılık gelmez.",
   "help": "Yardım",
+  "hide": "Hide",
   "hideToolbox": "(Gizle)",
   "hintHeader": "İşte bir ipucu:",
   "hintPrompt": "Yardım ister misiniz?",
@@ -167,6 +168,7 @@
   "makeYourOwnFlappy": "Kendi Flappy Oyununu Yap",
   "missingRecommendedBlocksErrorMsg": "Yaklaştın. Farklı blokları da kullanmayı deneyin.",
   "missingRequiredBlocksErrorMsg": "Yaklaştın. Kullanman gereken bloğu henüz kullanmadın.",
+  "more": "Daha Fazla",
   "nestedForSameVariable": "İki veya daha fazla iç içe geçmiş döngülerin içinde aynı değişkeni kullanıyorsun. Benzersiz değişken kullanarak sonsuz döngüyü önleyin.",
   "nextLevel": "Tebrikler! Bulmaca {puzzleNumber} tamamlandı.",
   "nextLevelTrophies": "Tebrikler! Bulmaca {puzzleNumber} tamamlandı ve {numTrophies, plural, one {bir kupa} other {#  kupa}} kazandınız.",
@@ -233,9 +235,15 @@
   "tryBlocksBelowFeedback": "Aşağıdaki bloklardan birini kullanmayı deneyin:",
   "tryHOC": "Kodlama Saati'ni Deneyin",
   "unnamedFunction": "İsmi olmayan bir fonksiyon veya değişkeniniz var. Her şeye tanımlayıcı bir isim vermeyi unutmayın.",
+  "unattachedBlockTipTitle": "Bağlanmamış Bloklar",
+  "unattachedBlockTipBody": "Bloklar bağlanmadığı için bir şey yapamaz eğer bu blokları programınızda istiyorsanız diğer bloklara bağlamayı deneyin.",
   "wantToLearn": "Kod yazmayı öğrenmek ister misiniz?",
   "watchVideo": "Videoyu İzle",
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
-  "workspaceHeaderShort": "Çalışma alanı: "
+  "workspaceHeaderShort": "Çalışma alanı: ",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

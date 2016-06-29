@@ -23,15 +23,17 @@
           future: "لا يمكن أن يكون في المستقبل"
   hello: "مرحباً بالعالم"
   welcome_back: "أهلاً بكم من جديد، %{name}"
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: "خطة التعلم المهنية الخاصة بك"
+  see_your_learning_plan: "انظر خطة التعلم الخاص بك"
   submit: "تسجيل"
   unsubmit: "عدم تقديم"
   previous_page: "الصفحة السابقة"
   next_page: "الصفحة التالية"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "إلغاء"
   okay: "حسناً"
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (صفحة %{x} من %{y})"
   add_teacher_form:
     code:
       label: "إضافة معلِّماً:"
@@ -92,6 +94,7 @@
     teacher_title: "تسجيل حساب المعلم"
     student_pitch: "تسجيل الطلاب في Code.org"
     student_title: "التسجيل كطالب"
+    signup_title: Sign up for Code.org
     school_name: "اسم المدرسة (اختياري)"
     school_address: "عنوان المدرسة (اختياري)"
     address_placeholder: "العنوان، المدينة، الدولة، الرمز البريدي"
@@ -115,6 +118,9 @@
     teacher_terms: "أوافق على الالتزام بـ<a href='http://code.org/tos'>شروط خدمة</a>
       Code.org."
     additional_information: "نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع."
+    user_type_label: Account Type
+    user_type_teacher: "المدرس"
+    user_type_student: "طالب"
   signin_form:
     title: "هل لديك حساب؟ قم بتسجيل الدخول"
     login: "البريد الإلكتروني أو اسم المستخدم"
@@ -366,7 +372,8 @@
       K-5"
     use_as_teacher: "استخدم هذا الموقع كمدرس"
     heading_hoc2014: "<h2>ساعة من البرمجة </h2><h1>لجميع الأعمار</h1>"
-    heading_elementary: "<h2>دورات 20 ساعة</h2> <h1>أساسيات علوم الكمبيوتر (جميع الإعمار)</h1>"
+    heading_elementary: "<h2>دورات لمدة 20 ساعة</h2> <h1>في أساسيات علوم الكمبيوتر
+      (لجميع الأعمار)</h1>"
     heading_apps: "<h2>المتعة</h2><h1>للجميع</h1>"
     heading_tools: "<h2>جاهزة للخطوة التالية؟</h2> <h1>أدوات جافا سكريبت للمدرسة الثانوية</h1>"
     heading_legacy: "<h2>الدورات المعجلةـ</h2><h1>جميع الأعمار</h1>"
@@ -382,16 +389,18 @@
       concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
       the user experience</a> to answer the big question: <i>What can students do?</i>'
     announcement_button: "اعرف المزيد"
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
+    announcement_petition: |
+      كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح ممثليكم يسمع منك. هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 التعليم علوم الكمبيوتر.
+    announcement_petition_button: |
+      Translate
+
+      add your name
+
+      إضافة اسمك
   move_students:
-    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
-      enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
+    new_section_dne: "عذراً، لكن %{new_section_code} المقطع غير موجود. الرجاء إدخال
+      رمز قسم مختلف."
+    section_code_not_entered: "ويرجى تقديم رمز القسم الحالي."
     section_code_cant_be_current_section: The current section cannot be the same as
       the new section.
     current_section_dne: Sorry, but section %{current_section_code} does not exist.
@@ -474,22 +483,17 @@
     notes_coming_soon: "ملاحظات على هذا الفيديو. قريبا."
     autoplay_option: "تشغيل تلقائي لاشرطة الفيديو"
     download: "تحميل الفيديو"
-  compatability:
-    working:
-      header: "نحن نعمل على دعم متصفح الأنترنت الخاص بك."
-      message: "يستخدم Code.org تكنولوجيا الإنترنت الحديثة. هذا يجعل الموقع أسرع للاستخدام.
-        لا يدعم متصفحك كافة الميزات المطلوبة، و قد تواجه مشكلات أثناء استخدام هذا
-        الجزء من الموقع. يرجى مساعدتنا <a href='%{report_issue_url}'>بالإبلاغ عن أي
-        مشاكل تجدها</a>. تستطيع أيضاً <a href='%{supported_browsers_url}'>تحديث متصفحك
-        إلى نسخة مدعومة</a>."
-      hide_this_warning: "إخفاء هذا التحذير"
+  compatibility:
     upgrade:
-      header: "من فضلك قم بتحديث متصفح الأنترنت الخاص بك."
-      message: "يستخدم Code.org تكنولوجيا الإنترنت الحديثة . هذا يجعل الموقع أسرع
-        للاستخدام . للأسف متصفحك لا يدعم جميع الميزات المطلوبة لتشغيل هذا الجزء من
-        الموقع .<br/><br/>قم بتثبيت متصفح من قائمة المتصفحات المدعومة للاستمرار .
-        تستطيع <a href='#'>محاولة عرض الصفحة </a>, و لكن نتوقع وظائف قد تتعطل."
-      button: "خذني إلى قائمة المتصفحات المدعومة"
+      unsupported_message: Your browser is not supported. Please upgrade your browser
+        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
+        browsers</a>. You can try viewing the page, but expect functionality to be
+        broken.
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
+        10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
+        8, 9, and 10. Please upgrade to a modern browser.
+      link: "اعرف المزيد"
   slow_loading: "هذا يأخذ وقتاً اطول من المعتاد..."
   try_reloading: "حاول اعادة تحميل الصفحة"
   next_stage: "انتهى! استمر في المرحلة القادمة"
@@ -563,7 +567,7 @@
       body: "استكشف عالم Minecraft عن طريق الكود."
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: "العمر 4+"
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
@@ -580,12 +584,15 @@
       تطبيقات ولوحات من خلال كتابة برامج الكمبيوتر الخاصة بهم. انقر على الصورة لترى
       البرنامج وهو يعمل."
     want_to_make_your_own: "هل ترغب في إنجاز مشروعك الخاص؟"
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: "المزيد من &rarr;"
     caption_by_name_age: "من قِبل %{name}، العمر %{age}"
     caption_time_ago: "من قبل %{time_ago}"
     header: "معرض"
     header_playlab: "مختبر اللعب"
     header_artist: "الرسام"
+    report_abuse: "الابلاغ عن سوء استخدام"
   landing:
     prerelease: "هذا الدرس لا يزال بنسختة التجريبية <span class='betatext'> Beta </span>.
       مما يعني أن هذة النسخة ليست النسخة النهائية من هذا الدرس وهي عرضة للمراجعة عند
@@ -733,7 +740,7 @@
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
     embed: Embed
-    advanced_share: Show advanced options
+    advanced_share: "إظهار الخيارات المتقدمة"
     close: "إغلاق"
     more: "المزيد"
     name: "الاسم"
@@ -796,11 +803,65 @@
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: "ابحث عن أيقونة..."
       no_icons_found: "لم توجد أيقونات"
+    playzone:
+      artist_description: "ارسم صور رائعة و صمم مع الرسام !"
+      artist_title: New Drawing
+      continue_button: "انتقل إلى المرحلة التالية"
+      playlab_description: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
+      playlab_title: New App
+      primary_header: Congratulations! You finished %{stageName}!
+      projects_description: Revisit one of your existing projects.
+      projects_title: "قم بفتح مشروع"
+      secondary_header: "اسأل المعلم الخاص بك ماذا تفعل المقبل"
   flex_category:
     required: "لمحة عامة"
-    content: Content
-    practice: Teacher Practices
+    content: "محتوى"
+    practice: "تمارين معلم الرياضيات"
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
+      a site that is not operated by Code.org.</strong> This site may have privacy
+      policies that differ from Code.org's.<br/><br/>We have selected these third
+      party resources because we think they will be useful to you. While we are not
+      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
+      support</a> if you find the content objectionable, or if the linked site is
+      no longer available."
+  hoc_download:
+    title: "ساعة تحميل التعليمات البرمجية"
+    capsule_title: "هل لديك إنترنت؟"
+    capsule_desc: استخدام الإنترنت، على شبكة الإنترنت <a href="%{url}">%{app_name}</a>.
+    instructions_headline: "لا يوجد إتصال بالإنترنت؟"
+    instructions: 'إرشادات للمعلمين: إذا كانت لديك خدمة إلانترنت ضعيفه، هذه الدروس
+      "ساعة من التعليمات البرمجية" متوفرة للتحميل والتثبيت واستخدامها دون اتصال. اختر
+      اللغة الخاصة بك ومنصة وتنزيل وتثبيتهاا على كافة أجهزة الكمبيوتر في الفصول الدراسية
+      الخاصة بك. قد ترغب في استخدام محرك أقراص USB لتحميل وتثبيت على كافة أجهزة الكمبيوتر.
+      ملاحظة: سوف لا يكون للطلاب القدره على تسجيل الدخول إلى "استوديو التعليمات البرمجية"
+      أو حفظ التقدم، أو طباعة الشهادات. يمكن للمعلمين طباعة الشهادات قبل الموعد المحدد
+      <a href="%{url}"> هنا</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: Download %{app_name} for offline use (136MB)
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

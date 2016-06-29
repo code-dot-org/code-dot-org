@@ -1,7 +1,14 @@
 "ko-KR":
   hour_of_code: Hour of Code
   hello: Hello world
+  'yes': "예"
+  'no': "아니요"
   select_language: "언어를 선택하세요."
+  upgrade_ie_message: Code.org는 곧 인터넷 익스플로러 8, 9, 10에 대한 지원을 종료할 것입니다. 최신 브라우저로 업그레이드
+    해주세요.
+  upgrade_ie_message_csedweek: CSEdWeek.org는 곧 인터넷 익스플로러 8, 9, 10에 대한 지원을 종료할 것입니다.
+    최신 브라우저로 업그레이드 해주세요.
+  upgrade_ie_link: "더 알아보기"
   en: "컴퓨터과학(Computer Science, 정보과학)"
   computer_science_edweek: "컴퓨터과학(Computer Science, 정보과학) 교육 주간"
   csedweek_dates: 2014년 12월 8일-14일
@@ -315,9 +322,8 @@
   homepage_banner_privacy_link: "더 알아보기"
   homepage_banner_20k_teachers: 20,000명의 교사들이 훈련되었고, 이제 컴퓨터 과학을 교실에서 가르치고 있습니다.
   homepage_banner_20k_teachers_link: "더 알아보기"
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress: "미국 지도자들은 K-12 컴퓨터 과학(정보 과학) 을 위한 기금을 의회에 요청하고 있습니다."
+  homepage_banner_congress_link: "지원하기"
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: "누구든지 배울 수 있습니다. 오늘 시작하세요."
   homepage_slot_text_link_hoc: Hour of Code 해보기
@@ -343,7 +349,7 @@
   homepage_slot_text_link_stats: "통계 보기"
   homepage_slot_text_link_buy: "함께 참여하세요"
   homepage_slot_text_link_donate: "기부하기"
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: T-셔츠, 모자 등
   homepage_header_codestudio: "코드 스튜디오 학생들의 작품"
   homepage_header_donors: Code.org는 후원자 여러분에게 감사의 인사를 드립니다.
   homepage_donors_seall: "모두 보기"
@@ -513,6 +519,7 @@
   dashboard_landing_new_beta: "초등학교 5학년을 위한 코스(beta) 살펴보기!"
   dashboard_landing_new_k5courses: "초등학교 5학년을 위한 코스(beta) 살펴보기!"
   dashboard_landing_useful_links: "유용한 링크(영어)"
+  dashboard_landing_classroom_resources: "교실 수업을 위한 자원"
   dashboard_landing_office_hours: "직접 물어보세요! monthly video office hours 를 방문해 보세요."
   dashboard_landing_print_certificates: "이 코스를 완료한 학생들을 위해 인증서 출력하기"
   dashboard_landing_educator_blog: "교육 블로그를 통해 관련 뉴스와 최신정보 확인하기"
@@ -528,6 +535,10 @@
   dashboard_landing_more_tutorials_desc: 더 많은 튜토리얼은 <a href="/learn/beyond">우리의 파트너에
     의해 제공</a>됩니다. 로봇과 함께 프로그램을 배우고, 웹 페이지를 만들고, 당신만의 어플리케이션을 만들고, C++, 루비 혹은 파이선 같은
     언어를 탐험할 수 있습니다.
+  dashboard_landing_inspire: "포스터, 비디오 등의 자료로 학생들에게 영감을 주세요."
+  dashboard_landing_video_library: "컴퓨터 과학의 개념에 대한 비디오 라이브러리를 이용하세요."
+  dashboard_landing_report_bug: "기능 요청 또는 오류 신고"
+  dashboard_landing_teacher_forum: "전문적 학습 커뮤니티에 가입하세요."
   dashboard_hoc_courses: "모든 연령대를 위한 Hour of Code"
   dashboard_hoc_courses_desc: "당신의 학생과 1시간 이내로 끝낼 수 있는 튜토리얼을 해보세요."
   dashboard_hoc_courses_desc_and_cta: 이 한 시간 짜리 짧은 튜토리얼들을 여러분의 학생들과 함께 해보세요. 컴퓨터과학교육주간동안
@@ -572,6 +583,11 @@
   dashboard_action_required: "필수 항목"
   dashboard_assessments_view: "평가 결과 보기:"
   dashboard_assessments_none: "평가 결과 없음"
+  dashboard_assessments_none_part2: "여러분이 중학교 혹은 고등학교 과정을 가르치고 있다면 학생들의 AP 시험 준비를
+    도울 수 있도록 코드 스튜디오의 한 부분으로서 평가 문항을 사용할 수 있습니다. 이러한 평가를 사용하려면 먼저 여러분의 수업에 과정을 등록하고
+    드롭다운 메뉴에서 과정을 고르면 됩니다. 그러면 여러분 학생들의 답변을 여기서 볼 수 있습니다."
+  dashboard_assessments_summaries: "요약"
+  dashboard_assessments_answers: "모든 답변"
   dashboard_filter_by_stage: "단계에 따라 필터링하기:"
   dashboard_filter_all: "모두"
   dashboard_download_csv: CSV 다운로드
@@ -583,7 +599,7 @@
   dashboard_navigation_section_pd: "고급 교육 및 개발"
   dashboard_navigation_section_speakers: "컴퓨터과학(정보과학) <br/> 특별 초청 연사들"
   dashboard_navigation_all_sections: "학생 계정 및 진도"
-  dashboard_navigation_view_progress: "진도 보기"
+  dashboard_navigation_view_progress: "진행도"
   dashboard_navigation_view_text_responses: "텍스트 응답 보기"
   dashboard_navigation_view_assessments: "평가 점수"
   dashboard_navigation_add_students: "학생 추가"
@@ -602,6 +618,7 @@
   dashboard_progress_view: "진도 보기:"
   dashboard_progress_student_in_script: "%{script_name} 에서 %{student_name} 에 대한 진도
     정보"
+  dashboard_progress_pair_programming: "페어 프로그래밍"
   dashboard_responses_view: "텍스트 응답 보기:"
   dashboard_responses_none: "텍스트 응답 없음"
   dashboard_sections_new_section: "새 섹션"
@@ -611,6 +628,7 @@
   dashboard_sections_table_secret: "로그인 유형"
   dashboard_sections_table_grade: "등급"
   dashboard_sections_table_course: "코스"
+  dashboard_sections_table_stage_extras: "추가 단계"
   dashboard_sections_table_students: "학생들"
   dashboard_sections_table_code: "섹션 코드"
   dashboard_sections_name: "섹션 이름"
@@ -687,6 +705,7 @@
   dashboard_course2: "코스2:"
   dashboard_course3: "코스3:"
   dashboard_course4: "코스 4(베타):"
+  dashboard_unplugged: "컴퓨터가 없다면, 수업에 <a href='%{unplugged_url}'>이러한 언플러그드 활동을 시도해보세요.</a>"
   dashboard_curriculum: "교과 과정"
   dashboard_curriculum_overview: K-5(초등 5학년) 교육과정 살펴보기
   dashboard_overview: "개요"
@@ -749,12 +768,10 @@
     언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서
     모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요."
   dashboard_announce_button_text: "더 알아보기"
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition: "교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에
+    앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의
+    CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
+  dashboard_announce_petition_button: "이름을 입력하세요"
   code_hoc_coming: Hour of Code 가 여기있습니다. - 12월8일-14일!
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: "지금 해보기"
@@ -872,12 +889,18 @@
   course3_name: "과정3"
   course4_name: "과정4"
   accelerated_name: "빠른 과정"
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
+  cspunit1_name: CS 원리 1단원
+  cspunit2_name: CS 원리 2단원
   cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit4_name: CS 원리 4단원
+  cspunit5_name: CS 원리 5단원
+  cspunit6_name: CS 원리 6단원
+  csp1_name: "유닛 1: 인터넷"
+  csp2_name: "유닛 2: 디지털 정보"
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: "전체 테스트 - 50 문항"
+  cspexam1-mWU7ilDYM9_name: "테스트 part 1 - 25문항"
+  cspexam2-AKwgAh1ac5_name: "테스트 part 2 - 25문항"
   cspunit3_gradelevel: 9-12 학년
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -885,18 +908,20 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: "빠른 과정"
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
-  gumball_name: Gumball
+  algebra_name: "대수학에서의 CS"
+  AlgebraA_name: "대수학에서의 CS 코스 A"
+  AlgebraB_name: "대수학에서의 CS 코스 B"
+  gumball_name: "검볼"
   classicmaze_name: "고전 미로게임"
   iceage_name: "아이스 에이지"
   minecraft_name: "마인크래프트"
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: "스타워즈 (블록)"
   math_category_name: "계산"
   hoc_category_name: Hour of Code
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csf_category_name: CS 기초
+  csp_category_name: CS의 원리
+  csp17_category_name: "'16 - '17 CS 원리"
+  cspexams_category_name: CS 원리 연습 테스트
   applab_name: "앱 연구실"
   applab_gradelevel: 13세 이상
   applab_shortdescription_congrats: App Lab 은 간단한 앱들을 만들 수 있는 프로그래밍 환경입니다. 아주 짧은 시간에
@@ -1455,11 +1480,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "실행"
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.

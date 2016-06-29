@@ -1,3 +1,4 @@
+var React = require('react');
 var Visualization = require('./Visualization');
 var StepButton = require('./StepButton');
 var SpellingControls = require('./SpellingControls');

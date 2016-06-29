@@ -169,6 +169,7 @@ class ActivitiesController < ApplicationController
         new_result: test_result,
         submitted: params[:submitted],
         level_source_id: @level_source.try(:id),
+        level: @level,
         pairings: pairings
       )
     end
@@ -214,16 +215,16 @@ class ActivitiesController < ApplicationController
       current = current_trophies[concept]
       pct = counts[:current].to_f/counts[:max]
 
-      new_trophy = Trophy.find_by_id case
+      new_trophy = Trophy.find_by_id(
+        case
         when pct == Trophy::GOLD_THRESHOLD
           Trophy::GOLD
         when pct >= Trophy::SILVER_THRESHOLD
           Trophy::SILVER
         when pct >= Trophy::BRONZE_THRESHOLD
           Trophy::BRONZE
-        else
-          # "no trophy earned"
-      end
+        end
+      )
 
       if new_trophy
         if new_trophy.id == current.try(:trophy_id)

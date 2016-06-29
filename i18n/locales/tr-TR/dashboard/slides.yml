@@ -386,7 +386,7 @@ tr:
         text: 'Eğer karakterimizin bir şey yapmasına gerek kalmadan tekrar eden işleri yapmasını istiyorsak, bloklarımızı "Sonsuz Tekrar" bloğunun içine koyarız.'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
+        text: Sonraki bulmacada, hedefimiz büyücünün krallığın sınırlarında sürekli sol ve sağa giderek devriye gezmesidir. Tekrar komutlarının nasıl çalıştığını öğrenmek, senin kendi oyununu yaparken bir ton zaman kazanmanı sağlayacak.
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
@@ -414,10 +414,10 @@ tr:
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: "This lesson is called the big event. It's all about how we can control our programs and actually change the way a program runs on the fly using events, like the push of a button or the click of a mouse."
+        text: Bu derse büyük olay denir. Bunda programlarımızı nasıl denetleyeceğimizi ve aslında bir programın çalışma şeklini bir düğmeye basarak veya bir fare tıklaması gibi olayları kullanarak anında değiştirebileceğimizi göreceğiz.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: "For this lesson, you'll be controlled with a paper remote control. It's just like a real-live video game."
+        text: Bu ders için bir kağıttan uzaktan kumanda ile kontrol edileceksin. Sanki gerçek zamanlı bir video oyunu gibi.
       3:
         image: notes/C1_bigevent_unplugged_3.png
         text: "An event is an action  that causes something to happen. It's like when you click the button on a mouse and a webpage loads. That's an event. When you touch your screen on a tablet to scroll, that's an event also. Events are a great way of letting the user direct your program whenever they need or want to."

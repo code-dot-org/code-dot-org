@@ -24,12 +24,14 @@
           future: "не може да бъде в бъдещето"
   hello: "Здравей, свят"
   welcome_back: "Добре дошли отново, %{name}"
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: "Вашият план за професионално обучение"
+  see_your_learning_plan: "Вижте Вашия план за обучение"
   submit: "Изпрати"
   unsubmit: "Не е добавено"
   previous_page: "Предишна страница"
   next_page: "Следваща страница"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "Отмени"
   okay: "Добре"
   heading_x_of_y: "%{heading} (page %{x} на %{y})"
@@ -94,6 +96,7 @@
     teacher_title: "Регистрация за Учители/Възпитатели"
     student_pitch: "регистрация като ученик в Code.org"
     student_title: "регистрация"
+    signup_title: Sign up for Code.org
     school_name: "Име на училище (по желание)"
     school_address: "Адрес на училището (по избор)"
     address_placeholder: "адрес, град, държава, пощенски код"
@@ -118,6 +121,9 @@
       условията за ползване</a>."
     additional_information: "Ние изискваме  допълнителна информация за да продължим
       \ вписването ви."
+    user_type_label: Account Type
+    user_type_teacher: "Учител"
+    user_type_student: "Ученик"
   signin_form:
     title: "Вече имате профил? Влизане"
     login: "Имейл или потребителско име"
@@ -393,29 +399,29 @@
       всички ресурси без компютър на една целева страница. Свържете уроците с всеки
       Кн клас, или използвайте самостоятелно като независим курс."
     announcement_button: "Научете повече"
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
+    announcement_petition: "Като учител, Вие трябва да намерите подход, така че да
+      дадете на всеки ученик във всяко училище възможност да изучава компютърни науки.
+      Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица,
+      образователни лидери, 28 управители и директори на компании в Америка се обединяват
+      зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно
+      образование."
+    announcement_petition_button: "Добавете името си"
   move_students:
-    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
-      enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as
-      the new section.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    new_section_dne: "Съжалявам, но %{new_section_code} раздел не съществува. Моля,
+      въведете код за друг раздел."
+    section_code_not_entered: "Моля, представете current_section_code."
+    section_code_cant_be_current_section: "Текущият раздел не може да бъде същият
+      като новия раздел."
+    current_section_dne: "Съжалявам, но %{current_section_code} раздел не съществува.
+      Моля, въведете код за друг раздел."
+    students_not_yours: "Не можете да преместите ученици от раздел, който не е ваш."
+    stay_enrolled_not_entered: "Моля, добавете stay_enrolled_in_current_section."
+    student_ids_not_entered: "Моля, добавете student_ids."
+    student_not_found: "Ученикът/учениците не могат да бъдат намерени."
+    all_students_must_be_in_current_section: "Всички ученици трябва да бъдат включени
+      в раздел."
+    already_enrolled_in_new_section: "Не можете да преместите тези учениции, защото
+      този учител вече ги има в друг раздел."
   share:
     title: "Обучавайте се в Code Studio"
     description: "Всеки може да учи компютърни науки. Програмирай игри, приложения
@@ -444,7 +450,7 @@
       Fox. Всички права запазени. <br />Angry Birds&#8482; &copy; 2009-%{current_year}
       Rovio Ентъртеймънт Оод Всички права запазени. <br /> Plants vs. Zombies&#8482;
       &copy;%{current_year} Electronic Arts Инк. Всички права запазени.<br /> Невероятният
-      свят на Гъмбол е запазена марка и &copy; 2015 Cartoon Network.
+      свят на Гъмбол е запазена марка и &copy; %{current_year} Cartoon Network.
     art_from_html_old: Minecraft &#8482; &copy;%{current_year} Microsoft. Всички права
       запазени. Междузвездни войни &#8482;&copy; %{current_year} Дисни и Lucasfilm.
       Всички права запазени. Frozen&#8482; &copy; %{current_year} Disney. Всички права
@@ -486,24 +492,17 @@
     notes_coming_soon: "Бележки за този клип очаквайте скоро."
     autoplay_option: "Автоматично изпълнение на видеата"
     download: "Изтегляне на видео"
-  compatability:
-    working:
-      header: "Ние работим по поддръжката на вашия браузър."
-      message: Code.org използва модерни уеб технологии. Това прави сайта по-бърз
-        при зареждане. Вашият браузър не поддържа всички предвидени функции и е възможно
-        да възникнат проблеми при използването на тази част на сайта. Помогнете ни
-        <a href='%{report_issue_url}'> като ни уведомите за всички проблеми, които
-        сте открили</a>. Можете също да <a href='%{supported_browsers_url}'> надстроите
-        браузъра си до поддържаната версия</a>.
-      hide_this_warning: "Скрий предупреждението"
+  compatibility:
     upgrade:
-      header: "Моля, надстройте браузъра си."
-      message: Code.org използва модерни уеб технологии. Това прави сайта по-бърз
-        за използване. За съжаление, вашия браузър не поддържа всички функции, необходими
-        за работата на тази част от сайта. <br/> <br/>Инсталирате браузър от нашия
-        списък на поддържаните браузъри, за да продължите. Можете да <a href='#'>
-        разгледате страницата</a>, но се очаква да възникнат функционални проблеми.
-      button: "Премини към списъка на поддържаните браузъри"
+      unsupported_message: "Вашият браузър не се поддържа. Моля, надстройте браузъра
+        си до <a href='%{supported_browsers_url}', target='_blank'> един от нашите
+        поддържани браузъри</a>. Можете да опитате да разгледате страницата, но е
+        възможно да не функционира както трябва."
+      ie_message: Code.org скоро ще спре поддръжката за Internet Explorer 8, 9 и 10.
+        Надстройте до модерен браузър.
+      ie_message_csedweek: CSEdWeek.org скоро ще спре да поддръжа Internet Explorer
+        8, 9 и 10. Надстройте до модерен браузър.
+      link: "Научете повече"
   slow_loading: "Това отнема повече време от обичайното..."
   try_reloading: "Опитайте да презаредите страницата"
   next_stage: "Завършено! Продължете към следващия етап"
@@ -602,12 +601,15 @@
       \ приложения и картини чрез писане на свои собствени компютърни програми. Щракнете
       върху картинките и скрийншотовете, за да видите всяка програма в действие."
     want_to_make_your_own: "Искате ли да направите свои собствени?"
+    how_to_save: На последното ниво в тези уроци щракнете върху "Готово" и "Запази",
+      за да запишете работата си в галерията.
     more: "Повече &rarr;"
     caption_by_name_age: "по %{name}, възраст %{age}"
     caption_time_ago: "%{time_ago} преди"
     header: "Галерия"
     header_playlab: "Театрална лаборатория"
     header_artist: "Художник"
+    report_abuse: "Съобщи за злоупотреба"
   landing:
     prerelease: "Този курс е в <span class='betatext'> бета версия</span>.  Това означава,
       че не е окончателната версия на курса и е предмет на преразглеждане и подобрения."
@@ -754,10 +756,10 @@
     share: "Сподели"
     share_title: "Споделяне на Вашия проект"
     share_copy_link: "Копиране на връзката:"
-    share_embed_description: You can paste the embed code into an HTML page to display
-      the project on a webpage.
-    embed: Embed
-    advanced_share: Show advanced options
+    share_embed_description: "Можете да поставите кода за вграждане в HTML страница
+      за показване на проекта в уеб сайт."
+    embed: "За вграждане"
+    advanced_share: "Показване на разширените опции"
     close: "Затваряне"
     more: "Повече"
     name: "Име"
@@ -817,21 +819,75 @@
           и %{link_start_tos}Terms на Service%{link_end}"
   peer_review:
     accepted:
-      name: Accepted
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      name: "Прието"
+      description: "<strong>Да</strong>, това представяне <strong>отговаря на</strong>
+        изискванията"
     rejected:
-      name: Rejected
-      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
-        the requirements"
+      name: "Отхвърлено"
+      description: "<strong>Не</strong>, това представяне <strong>не отговаря на</strong>
+        изискванията"
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
+      name: "Ескалиране"
+      description: "Бих искал инструкторът да преразгледа това твърдение"
+    instructor_feedback: "Инструктор: обратна връзка"
+    peer_feedback: "Изпрати обратна връзка"
+    outdated: "Тази обратна връзка е добавена в по-ранна версия"
   components:
     icon_library:
       search_placeholder_text: "Търси икона..."
       no_icons_found: "Няма намерени икони"
+    playzone:
+      artist_description: "Начертайте готини картинки и дизайни с художника!"
+      artist_title: "Нов чертеж"
+      continue_button: "Преминете към следващия етап"
+      playlab_description: "Създайте история или направете игра с Театрална лаборатория!"
+      playlab_title: "Ново приложение"
+      primary_header: "Поздравления! Вие завършихте %{stageName}!"
+      projects_description: "Вижте отново един от Вашите проекти."
+      projects_title: "Отваряне на проект"
+      secondary_header: "Попитай учителя си какво да правиш"
   flex_category:
     required: "Общ преглед"
-    content: Content
-    practice: Teacher Practices
+    content: "Съдържание"
+    practice: "Учителски практики"
+  external_links:
+    disclaimer_md: "<strong>Отказ от отговорност: Вие сте на път да напуснете Code.org,
+      към сайт, който не се управлява от Code.org.</strong> Този сайт може да има
+      политика за поверителност, която се различава от тази на Code.org в. <br/> <br/>
+      Ние сме избрали тези партньорски ресурси, защото смятаме, че те ще бъдат полезни
+      за Вас. Но ние не сме пряко отговорни за съдържанието на този сайт, моля, <a
+      href='mailto:support@code.org'> свържете се с поддръжката</a> ако откриете,
+      че съдържанието е нежелателно, или ако свързания сайт вече не е достъпен."
+  hoc_download:
+    title: "Часът на кода за сваляне"
+    capsule_title: "Имате ли интернет?"
+    capsule_desc: Използвайте онлайн, уеб базирани <a href="%{url}">%{app_name}</a>.
+    instructions_headline: "Нямате интернет?"
+    instructions: 'Инструкции за учители: Ако имате лоша връзка с интернет, тези уроци
+      на часът на кода са достъпни за изтегляне и инсталиране и използване офлайн.
+      Изберете вашия език и платформа, изтеглете и го инсталирайте на всички компютри
+      в класната стая. Вие може да използвате USB устройство, за да изтеглите веднъж
+      и инсталирате на всички компютри. Забележка: учениците няма да могат да влезнат
+      в код студио, да запишат прогреса си или да отпечатат сертификати. Учителите
+      могат да отпечатат сертификатите преди дейността <a href="%{url}"> тук</a>.'
+    minecraft_name: Minecraft часът на кода
+    starwars_blocks_name: "Междузвездни войни: Изграждане на галактика с код (блокове)"
+    starwars_javascript_name: "Междузвездни войни: Изграждане на галактика с код (JavaScript)"
+    download_message: "Изтегли %{app_name} за офлайн употреба (136MB)"
+    download_in_english: "Изтегляне на английски език:"
+    download_in_spanish: "Изтегляне на испански език:"
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

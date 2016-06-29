@@ -29,6 +29,8 @@ ja:
   unsubmit: 取り消す
   previous_page: 前のページ
   next_page: 次のページ
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: キャンセル
   okay: オッケー
   heading_x_of_y: '%{heading} (%{y} ページ中 %{x} ページ目)'
@@ -85,6 +87,7 @@ ja:
     teacher_title: 先生としてサインアップする
     student_pitch: 生徒としてCode.orgにサインアップする
     student_title: 生徒のサインアップ
+    signup_title: Sign up for Code.org
     school_name: 学校名 （オプション）
     school_address: 学校の住所（オプション）
     address_placeholder: 住所、市、県、郵便番号
@@ -103,6 +106,9 @@ ja:
     student_terms: "Code.org <a href='http://code.org/tos'> サービス利用規約</a>を守ることに同意します。もしあなたが13歳より年下なら、保護者(ほごしゃ) の方に確認をもらって Code.org のサービスを使用します。あなたが13歳より年下なら、あなたのメールアドレスはこちらからの連絡に使われることはありません。"
     teacher_terms: "Code.org <a href='http://code.org/tos'> サービス利用規約</a> を守ることに同意します。"
     additional_information: サインアップを続けるために、私たちはさらにいくつかの情報が必要です。
+    user_type_label: Account Type
+    user_type_teacher: 先生
+    user_type_student: 生徒
   signin_form:
     title: すでにアカウントをお持ちですか？サインイン
     login: メールまたはユーザー名
@@ -336,8 +342,9 @@ ja:
     print_certificate: 証書を印刷
     announcement_title: Announcements
     announcement_view_all: View all
-    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
-    announcement_button: もっと詳しく知る
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
   move_students:
@@ -399,15 +406,12 @@ ja:
     notes_coming_soon: このビデオのノートがもうすぐ公開されます
     autoplay_option: 動画の自動再生
     download: ビデオのダウンロード
-  compatability:
-    working:
-      header: お使いのブラウザーのサポートに取り組みちゅうです。
-      message: "Code.org は、快適な利用のために最新のウェブ技術を使用します。お使いのブラウザーは、必要なすべての機能をサポートしていないため、問題が発生する可能性があります。<a href='%{report_issue_url}'> 見つかった問題を報告</a> することによって私たちを助けてください。<a href='%{supported_browsers_url}'> サポートされているバージョンにブラウザーをアップグレード</a> することも検討してください。"
-      hide_this_warning: この警告を非表示
+  compatibility:
     upgrade:
-      header: お使いのブラウザーをアップグレードしてください。
-      message: 'Code.org は最新のウェブ技術を使うことで、サイトをより高速化しています。残念ながらあなたのブラウザはこのサイトを実行するのに必要な機能をすべてサポートしていません。<br/><br/>以下のサポートされているブラウザをインストールしてください。<a href="#">ページを閲覧する</a>ことも可能ですが、いくつかの機能が失われていることが予想されます。'
-      button: サポートされているブラウザの一覧を見る
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      link: もっと詳しく知る
   slow_loading: 通常よりも長くかかっている...
   try_reloading: ページを再読み込みする
   next_stage: 完成 ！次のステージへ
@@ -484,12 +488,14 @@ ja:
     picture_count: 'コンピュータ・プログラムを用いて生徒たちが描いた絵は、これまでの <b>%{days}</b> 日間に <b>%{count}</b> 作品です。それぞれの絵をクリックすると、その絵を描くプログラムを見ることができます。'
     activity_count: 'コンピュータ・プログラムを用いて生徒たちが作ったアプリは、これまでの <b>%{days}</b> 日間に <b>%{count}</b> 作品です。それぞれのスクリーンショットをクリックすると、そのアプリのプログラムを見ることができます。'
     want_to_make_your_own: 自分でも創ってみたいですか？
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'つづきを読む &rarr;'
     caption_by_name_age: '作成者： %{name} ( %{age} 歳)'
     caption_time_ago: '%{time_ago} 前'
     header: ギャラリー
     header_playlab: プレイラボ
     header_artist: アーティスト
+    report_abuse: 不正を報告
   landing:
     prerelease: "このコースはまだ<span class='betatext'>ベータ版</span>です。今後改善と変更が行われる可能性があります。"
     prerelease_hoc2014: "このチュートリアルは<span class='betatext'>ベータ版</span>です。フィードバックによって改善と変更が行われることが想定されます。"
@@ -671,11 +677,49 @@ ja:
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: アイコンの検索..
       no_icons_found: アイコンが見つかりませんでした。
+    playzone:
+      artist_description: アーティストでかっこいい絵やデザインを描きましょう！
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: プレイラボでお話やゲームを作りましょう！
+      playlab_title: New App
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: 概要
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

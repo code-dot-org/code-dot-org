@@ -198,99 +198,81 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'blockly level in custom script' do
     script_data, _ = ScriptDSL.parse(
-                     "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
+      "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
 
     script = Script.add_script({name: 'test script'},
-                               script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
     assert_equal '100', script.script_levels[1].level.level_num
   end
 
-  test 'forbid applab levels in public scripts' do
-    assert_raises_matching /Applab levels can only be added to scripts that are hidden or require login/ do
+  test 'forbid applab and gamelab levels in public scripts' do
+    assert_raises_matching /Applab and Gamelab levels can only be added to scripts that are hidden or require login/ do
       Script.add_script(
-          {name: 'test script', hidden: false},
-          [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+        {name: 'test script', hidden: false},
+        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
       )
     end
-  end
 
-  test 'allow applab levels in hidden scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
-  test 'allow applab levels in login_required scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: false, login_required: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
-  test 'allow applab levels in student_of_admin_required scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: false, student_of_admin_required: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
-  test 'allow applab levels in admin_required scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: false, admin_required: true},
-        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
-    )
-  end
-
-  test 'forbid gamelab levels in public scripts' do
-    assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
+    assert_raises_matching /Applab and Gamelab levels can only be added to scripts that are hidden or require login/ do
       Script.add_script(
-          {name: 'test script', hidden: false},
-          [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-      )
-    end
-  end
-
-  test 'forbid gamelab levels in hidden scripts' do
-    assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
-      Script.add_script(
-          {name: 'test script', hidden: true},
-          [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-      )
-    end
-  end
-
-  test 'forbid gamelab levels in login_required scripts' do
-    assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
-      Script.add_script(
-          {name: 'test script', hidden: false, login_required: true},
-          [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-      )
-    end
-  end
-
-  test 'allow gamelab levels in student_of_admin_required scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: false, student_of_admin_required: true},
+        {name: 'test script', hidden: false},
         [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+      )
+    end
+  end
+
+  test 'allow applab and gamelab levels in hidden scripts' do
+    Script.add_script(
+      {name: 'test script', hidden: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 
-  test 'allow gamelab levels in admin_required scripts' do
+  test 'allow applab and gamelab levels in login_required scripts' do
     Script.add_script(
-        {name: 'test script', hidden: false, admin_required: true},
-        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+      {name: 'test script', hidden: false, login_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: false, login_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+    )
+  end
+
+  test 'allow applab and gamelab levels in student_of_admin_required scripts' do
+    Script.add_script(
+      {name: 'test script', hidden: false, student_of_admin_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: false, student_of_admin_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+    )
+  end
+
+  test 'allow applab and gamelab levels in admin_required scripts' do
+    Script.add_script(
+      {name: 'test script', hidden: false, admin_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: false, admin_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 
   test 'scripts are hidden or not' do
-    visible_scripts = %w{20-hour flappy playlab infinity artist
-      course1 course2 course3 course4 frozen hourofcode algebra
-      cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6
-      starwarsblocks}.
-      map{|s| Script.find_by_name(s)}
+    visible_scripts = %w{
+      20-hour flappy playlab infinity artist course1 course2 course3 course4
+      frozen hourofcode algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5
+      cspunit6 starwarsblocks
+    }.map{|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
       assert !s.hidden?, "#{s.name} is hidden when it should not be"
@@ -321,8 +303,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'banner image' do
     assert_equal nil, Script.find_by_name('flappy').banner_image
-    assert_equal 'banner_course1.png', Script.find_by_name('course1').banner_image
-    assert_equal 'banner_course2.png', Script.find_by_name('course2').banner_image
+    assert_equal 'banner_course1.jpg', Script.find_by_name('course1').banner_image
+    assert_equal 'banner_course2.jpg', Script.find_by_name('course2').banner_image
   end
 
   test 'logo image' do
@@ -376,7 +358,8 @@ class ScriptTest < ActiveSupport::TestCase
 
     script = scripts.first
     script.save! # Need to trigger an update because i18n strings weren't loaded
-    assert script.professional_learning_course
+    assert script.professional_learning_course?
+    assert_equal 'Test plc course', script.professional_learning_course
 
     unit = script.plc_course_unit
     assert_equal 'PLC Test', unit.unit_name
