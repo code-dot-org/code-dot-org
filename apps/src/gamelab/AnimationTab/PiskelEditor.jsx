@@ -54,35 +54,50 @@ const PiskelEditor = React.createClass({
   },
 
   componentWillReceiveProps(newProps) {
-    const {selectedAnimation, animationList} = newProps;
-    if (selectedAnimation !== this.props.selectedAnimation) {
-      this.loadAnimationIntoPiskel(selectedAnimation, animationList.data[selectedAnimation]);
+    if (newProps.selectedAnimation !== this.props.selectedAnimation) {
+      this.loadSelectedAnimation_(newProps);
     }
   },
 
-  loadAnimationIntoPiskel(key, data) {
+  loadSelectedAnimation_(props) {
+    const key = props.selectedAnimation;
     if (!this.isPiskelReady_) {
-      console.log('Attempted to load animation before piskel ready'); // TODO: Remove
       return;
     }
 
     if (key === this.loadedAnimation_) {
-      console.log('Attempted to load previously loaded animation, doing nothing'); // TODO: Remove
+      // I wonder if this is ever valid - like we want to load some external edit?
+      return;
+    }
+
+    if (!key) {
+      // TODO: Put Piskel into a 'nothing-selected' state?
       return;
     }
 
     if (this.isLoadingAnimation_) {
-      console.log('Attempted to load animation while previous animation still loading'); // TODO: Remove
       return;
     }
 
-    console.log('Loading ' + key + '...');
+    const data = props.animationList.data[key];
+    if (!data) {
+      throw new Error('No data present for animation with key ' + key);
+    }
+
     this.isLoadingAnimation_ = true;
-    this.piskel.loadSpritesheet(data.dataURI, data.frameSize.x,
-        data.frameSize.y, data.frameRate, () => {
+    this.piskel.loadSpritesheet(
+        data.dataURI,
+        data.frameSize.x,
+        data.frameSize.y,
+        data.frameRate,
+        () => {
           this.loadedAnimation_ = key;
           this.isLoadingAnimation_ = false;
-          console.log('Loaded ' + key);
+
+          // If the selected animation changed out from under us, load again.
+          if (this.props.selectedAnimation !== key) {
+            this.loadSelectedAnimation_(this.props);
+          }
         });
   },
 
@@ -93,14 +108,8 @@ const PiskelEditor = React.createClass({
   },
 
   onPiskelReady() {
-    console.log('Piskel is ready');  // TODO: Remove
     this.isPiskelReady_ = true;
-    const {selectedAnimation, animationList} = this.props;
-
-    // When Piskel is ready, if there is a selected animation, attempt to load it.
-    if (selectedAnimation) {
-      this.loadAnimationIntoPiskel(selectedAnimation, animationList.data[selectedAnimation]);
-    }
+    this.loadSelectedAnimation_(this.props);
   },
 
   onAnimationSaved(message) {
