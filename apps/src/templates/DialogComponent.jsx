@@ -49,7 +49,7 @@ var Dialog = React.createClass({
     var bodyStyle;
     if (this.props.hideBackdrop) {
       bodyStyle = {
-        position: 'inherit',
+        position: 'initial',
         marginLeft: 0,
       };
     }
@@ -81,8 +81,10 @@ var Dialog = React.createClass({
 });
 module.exports = Dialog;
 
-
-if (process.env.NODE_ENV === 'development') {
+// TODO: remove the undefined check once code-studio is merged with apps
+// Code studio's build system is not configured to replace BUILD_STYLEGUIDE
+// in the same way that webpack's build system is configured.
+if (typeof BUILD_STYLEGUIDE !== 'undefined' && BUILD_STYLEGUIDE) {
   var ExampleDialogButton = React.createClass({
     render() {
       return (
@@ -99,55 +101,54 @@ if (process.env.NODE_ENV === 'development') {
     }
   });
 
-  Dialog.styleGuideExamples = {
-    description: 'Render dialogs',
-    examples: [
-      {
-        description: 'basic example with a button to open the dialog',
-        render() {
-          return <ExampleDialogButton />;
-        },
-      }, {
-        description: 'Using hideBackdrop={true}. Useful for testing.',
-        render() {
-          return (
-            <Dialog hideBackdrop={true}
-                    isOpen={true}
-                    handleClose={()=>null}>
-              This is the dialog content!
-            </Dialog>
-          );
-        }
-      }, {
-        description: 'With some more example CSS you can use...',
-        render() {
-          return (
-            <Dialog hideBackdrop={true}
-                    isOpen={true}
-                    handleClose={()=>null}>
-              <div className="modal-content no-modal-icon">
-                <p className="dialog-title">Titles go in p.dialog-title tags?!?!?</p>
-                Wrap dialog content inside a
-                {' '}<code>{'<div class="model-content no-modal-icon"/>'}</code>{' '}
-                because this component won't do that for you...
-              </div>
-            </Dialog>
-          );
-        },
-      }, {
-        description: 'margins... are interesting...',
-        render() {
-          return (
-            <Dialog hideBackdrop={true}
-                    isOpen={true}
-                    handleClose={()=>null}>
-              <div style={{border: '1px solid black'}}>
-                check out these margins!
-              </div>
-            </Dialog>
-          );
-        },
-      },
-    ],
+  Dialog.styleGuideExamples = storybook => {
+    return storybook
+      .storiesOf('Dialog', module)
+      .addWithInfo(
+        'Hiding the backdrop',
+        `This is useful for debugging/developing dialogs without having to constantly
+click to open it.`,
+        () => (
+          <Dialog hideBackdrop={true}
+                  isOpen={true}
+                  handleClose={()=>null}>
+            This is the dialog content!
+          </Dialog>
+        )
+      )
+      .addWithInfo(
+        'Example CSS',
+        'This is not part of the dialog component, but uses global css',
+        () => (
+          <Dialog hideBackdrop={true}
+                  isOpen={true}
+                  handleClose={()=>null}>
+            <div className="modal-content no-modal-icon">
+              <p className="dialog-title">Titles go in p.dialog-title tags?!?!?</p>
+              Wrap dialog content inside a
+              {' '}<code>{'<div class="model-content no-modal-icon"/>'}</code>{' '}
+              because this component won't do that for you...
+            </div>
+          </Dialog>
+        )
+      )
+      .addWithInfo(
+        'interesting margins',
+        'The margins dont make much sense right now',
+        () => (
+          <Dialog hideBackdrop={true}
+                  isOpen={true}
+                  handleClose={()=>null}>
+            <div style={{border: '1px solid black'}}>
+              check out these margins!
+            </div>
+          </Dialog>
+        )
+      )
+      .addWithInfo(
+        'open with button',
+        '',
+        () => <ExampleDialogButton />
+      );
   };
 }

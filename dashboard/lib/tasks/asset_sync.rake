@@ -9,5 +9,5 @@ namespace :assets do
 end
 
 Rake::Task['assets:precompile'].enhance do
-  Rake::Task['assets:sync'].invoke if CDO.daemon && CDO.with_default(true).sync_assets
+  Rake::Task['assets:sync'].invoke if CDO.sync_assets
 end

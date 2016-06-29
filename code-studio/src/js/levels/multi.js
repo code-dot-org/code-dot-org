@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 window.levelGroup = window.levelGroup || {levels: {}};
 
-var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString) {
+var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
 
   // The dashboard levelId.
   this.levelId = levelId;
@@ -31,6 +31,9 @@ var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, a
 
   // A string of the last result.  Looks like "1" or "2,3".
   this.lastAttemptString = lastAttemptString;
+
+  // Whether this multi is running in contained mode.
+  this.containedMode = containedMode;
 
   // Tracking which answers are currently selected.
   this.selectedAnswers = [];
@@ -124,7 +127,7 @@ Multi.prototype.unclickItem = function (index) {
 Multi.prototype.ready = function () {
   // Are we read-only?  This can be because we're a teacher OR because an answer
   // has been previously submitted.
-  if (window.appOptions.readonlyWorkspace) {
+  if (window.appOptions.readonlyWorkspace && !this.containedMode) {
     // hide the Submit buttons.
     $('.submitButton').hide();
 

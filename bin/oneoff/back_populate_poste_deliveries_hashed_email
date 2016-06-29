@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+# This script populates the hashed_email column of the pegasus poste_deliveries table.
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'digest/md5'
+require src_dir 'database'
+
+def main
+  DB[:poste_deliveries].each do |delivery|
+    hashed_email = Digest::MD5.hexdigest(delivery[:contact_email])
+    DB[:poste_deliveries].where(id: delivery[:id]).update(hashed_email: hashed_email)
+  end
+end
+
+main if only_one_running?(__FILE__)
