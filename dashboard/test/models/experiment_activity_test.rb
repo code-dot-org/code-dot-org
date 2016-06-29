@@ -38,8 +38,8 @@ class ExperimentActivityTest < ActiveSupport::TestCase
   # Create a URI that specifies a hash that yields the given value.
   def feedback_experiment_uri(value)
     "http://learn.code.org?#{ExperimentActivity::FEEDBACK_EXPERIMENT_PARAMETER}=" +
-        "#{inverse_pick_mod_length(\
-          ExperimentActivity::FEEDBACK_EXPERIMENT_SOURCES, value)}"
+        (inverse_pick_mod_length(\
+          ExperimentActivity::FEEDBACK_EXPERIMENT_SOURCES, value)).to_s
   end
 
   test "try to run Stanford feedback experiment with no level_source" do
