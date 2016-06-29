@@ -335,46 +335,87 @@ module.exports = function (grunt) {
     },
   };
 
-  // Create our set of entries (an object mapping target name to entry source
-  // file
-  var entries = _.zipObject(appsToBuild.map(function (app) {
-    return [app, './src/' + app + '/main.js'];
-  }));
-  if (appsToBuild.indexOf('applab') !== -1) {
-    entries['applab-api'] = './src/applab/api-entry.js';
-  }
+  var codeStudioEntries = {
+    // codeStudio: './src/code-studio/code-studio.js',
+    // levelbuilder: './src/code-studio/levelbuilder.js',
+    // levelbuilderMarkdown: './src/code-studio/levelbuilder_markdown.js',
+    // levelbuilderStudio: './src/code-studio/levelbuilder_studio.js',
+    // districtDropdown: './src/code-studio/districtDropdown.js',
+    // contractMatch: './src/code-studio/levels/contract_match.jsx',
+    // widget: './src/code-studio/levels/widget.js',
+    // external: './src/code-studio/levels/external.js',
+    // // gets required by levelGroup
+    // // multi: './src/code-studio/levels/multi.js',
+    // // textMatch: './src/code-studio/levels/textMatch.js',
+    // levelGroup: './src/code-studio/levels/levelGroup.js',
+    // dialogHelper: './src/code-studio/levels/dialogHelper.js',
+    // initApp: './src/code-studio/initApp/initApp.js'
+  };
 
-  var chunks = [
+  var bundles = [
     {
-      name: 'common',
-      chunks: Object.keys(entries)
+      entries: _.zipObject(appsToBuild.map(function (app) {
+        return [app, './src/' + app + '/main.js'];
+      }).concat(appsToBuild.indexOf('applab') === -1 ? [] :
+        [['applab-api', './src/applab/api-entry.js']]
+      )),
+      commonFile: 'common'
+    },
+
+    // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
+    // in a bundle to minimize the amound of stuff we need when loading blocks
+    // in an iframe.
+    {
+      entries: {
+        embedBlocks: './src/code-studio/embedBlocks.js'
+      },
+      provides: ['react', 'react-dom', 'radium']
+    },
+
+    {
+      entries: {
+        makerlab: './src/code-studio/makerlab/makerlabDependencies.js'
+      },
+      provides: ['johnny-five', 'playground-io', 'chrome-serialport']
     }
   ];
 
+  // Create a config for each of our bundles
+  function createConfigs(bundles, options) {
+    var minify = options.minify;
+    var watch = options.watch;
+
+    return bundles.map(function (bundle) {
+      var entries = bundle.entries;
+      var commonFile = bundle.commonFile;
+      var provides = bundle.provides;
+
+      return webpackConfig.create({
+        output: path.resolve(__dirname, OUTPUT_DIR),
+        entries: entries,
+        commonFile: commonFile,
+        provides: provides,
+        minify: minify,
+        watch: watch,
+        piskelDevMode: PISKEL_DEVELOPMENT_MODE
+      });
+    });
+  }
+
   config.webpack = {
-    build: webpackConfig.create({
-      output: path.resolve(__dirname, OUTPUT_DIR),
-      entries: entries,
-      chunks: chunks,
+    build: createConfigs(bundles, {
       minify: false,
       watch: false,
-      piskelDevMode: PISKEL_DEVELOPMENT_MODE
     }),
-    uglify: webpackConfig.create({
-      output: path.resolve(__dirname, OUTPUT_DIR),
-      entries: entries,
-      chunks: chunks,
+
+    uglify: createConfigs(bundles, {
       minify: true,
-      watch: false,
-      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+      watch: false
     }),
-    watch: webpackConfig.create({
-      output: path.resolve(__dirname, OUTPUT_DIR),
-      entries: entries,
-      chunks: chunks,
+
+    watch: createConfigs(bundles, {
       minify: false,
-      watch: true,
-      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+      watch: true
     })
   };
 

@@ -10,6 +10,7 @@ var baseConfig = {
     extensions: ["", ".js", ".jsx"],
     alias: {
       '@cdo/apps': path.resolve(__dirname, 'src'),
+      repl: path.resolve(__dirname, 'src/noop'),
     }
   },
   externals: {
@@ -20,7 +21,9 @@ var baseConfig = {
     "blockly": "this Blockly",
     "react": "var React",
     "react-dom": "var ReactDOM",
-    "jquery": "var $"
+    "jquery": "var $",
+    "radium": "var Radium",
+    "bindings": true
   },
   module: {
     loaders: [
@@ -33,7 +36,7 @@ var baseConfig = {
         include: [
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test'),
-          path.resolve(__dirname, 'node_modules', '@cdo'),
+          path.resolve(__dirname, 'node_modules', '@cdo')
         ],
         exclude: [
           path.resolve(__dirname, 'src', 'lodash.js'),
@@ -109,18 +112,21 @@ var karmaConfig = _.extend({}, baseConfig, {
  * @param {object} options
  * @param {string} options.output
  * @param {string[]} options.entries - list of input source files
- * @param {object[]} options.chunks - list of chunk info objects
+ * @param {string} commonFile
  * @param {bool} options.minify
  * @param {bool} options.watch
  * @param {string} options.piskelDevMode
+ * @param {string[]} options.provides - list of "external" modules that this
+ *   bundle actually provides (and thus should not be external here)
  */
 function create(options) {
   var outputDir = options.output;
   var entries = options.entries;
-  var chunks = options.chunks;
+  var commonFile = options.commonFile;
   var minify = options.minify;
   var watch = options.watch;
   var piskelDevMode = options.piskelDevMode;
+  var provides = options.provides;
 
   var config = _.extend({}, baseConfig, {
     output: {
@@ -135,18 +141,28 @@ function create(options) {
         'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
         BUILD_STYLEGUIDE: JSON.stringify(false),
         PISKEL_DEVELOPMENT_MODE: piskelDevMode
-      })
-    ].concat(chunks.map(function (chunkInfo) {
-      return new webpack.optimize.CommonsChunkPlugin({
-        name: chunkInfo.name,
-        chunks: chunkInfo.chunks,
-        minChunks: 2
-      });
-    })),
+      }),
+      new webpack.IgnorePlugin(/^serialport$/),
+    ],
     watch: watch,
     keepalive: watch,
     failOnError: !watch
   });
+
+  if (provides) {
+    provides.forEach(function (providedModule) {
+      delete config.externals[providedModule];
+    });
+  }
+
+  if (commonFile) {
+    config.plugins = config.plugins.concat(
+      new webpack.optimize.CommonsChunkPlugin({
+        name: commonFile,
+        minChunks: 2
+      })
+    );
+  }
 
   if (minify) {
     config.plugins = config.plugins.concat(

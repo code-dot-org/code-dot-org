@@ -67,16 +67,6 @@ Promise.all([
     commonFile: 'embedVideo'
   })),
 
-  // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
-  // in a bundle to minimize the amound of stuff we need when loading blocks
-  // in an iframe.
-  build_commands.bundle(_.extend({}, defaultOptions, {
-    filenames: [
-      'embedBlocks.js'
-    ],
-    commonFile: 'embedBlocks'
-  })),
-
   // Have a bundle for plc stuff - no sense in expanding this to everything yet
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
@@ -86,17 +76,6 @@ Promise.all([
       'plc/task_creation.js'
     ],
     commonFile: 'plc',
-    browserifyGlobalShim: {
-      "jquery": "$"
-    }
-  })),
-
-  // makerlab-only dependencies for app lab
-  build_commands.bundle(_.extend({}, defaultOptions, {
-    filenames: [
-      'makerlab/makerlabDependencies.js'
-    ],
-    commonFile: 'makerlab',
     browserifyGlobalShim: {
       "jquery": "$"
     }
