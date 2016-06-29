@@ -28,7 +28,7 @@ until start_index > end_index
     activity = Activity.
       where(user_id: user_level.user_id, level_id: user_level.level_id).last
 
-    user_level.update(level_source_id: activity[:level_source_id])
+    user_level.update!(level_source_id: activity[:level_source_id])
   end
 
   sleep(delay_sec)
