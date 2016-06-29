@@ -4,9 +4,12 @@
  * a new data table.
  */
 
+import { DataView } from './constants';
 import React from 'react';
 import msg from '../locale';
 import color from '../color';
+import { changeView } from './redux/data';
+import { connect } from 'react-redux';
 
 const tableWidth = 400;
 const buttonColumnWidth = 90;
@@ -50,10 +53,15 @@ const styles = {
 
 const EditLink = React.createClass({
   propTypes: {
-    name: React.PropTypes.string.isRequired
+    name: React.PropTypes.string.isRequired,
+    onClick: React.PropTypes.func
   },
   render() {
-    return <a style={styles.link} href='#'>{this.props.name}</a>;
+    return (
+      <a style={styles.link} href='#' onClick={this.props.onClick}>
+        {this.props.name}
+      </a>
+    );
   }
 });
 
@@ -91,16 +99,27 @@ const AddTableRow = React.createClass({
 });
 
 const DataOverview = React.createClass({
+  propTypes: {
+    // from redux state
+    view: React.PropTypes.oneOf([DataView.OVERVIEW, DataView.PROPERTIES]),
+
+    // from redux dispatch
+    onViewChange: React.PropTypes.func.isRequired
+  },
+
   render() {
+    const visible = (DataView.OVERVIEW === this.props.view);
     return (
-      <div id='dataOverview'>
+      <div id='dataOverview' style={{display: visible ? 'block' : 'none'}}>
         <h4>Data</h4>
 
         <table style={styles.table}>
           <tbody>
           <tr style={styles.editRow}>
             <td style={styles.cell}>
-              <EditLink name={msg.keyValuePairLink()}/>
+              <EditLink
+                  name={msg.keyValuePairLink()}
+                  onClick={() => this.props.onViewChange(DataView.PROPERTIES)}/>
             </td>
           </tr>
           </tbody>
@@ -123,4 +142,10 @@ const DataOverview = React.createClass({
   }
 });
 
-export default DataOverview;
+export default connect(state => ({
+  view: state.data.view
+}), dispatch => ({
+  onViewChange(view) {
+    dispatch(changeView(view));
+  }
+}))(DataOverview);
