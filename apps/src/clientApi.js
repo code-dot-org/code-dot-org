@@ -47,6 +47,14 @@ class CollectionsApi {
 }
 
 class AssetsApi extends CollectionsApi {
+  constructor(collectionType) {
+    super(collectionType);
+    // TODO: hack to deal with the fact that IE10 doesn't seem to handle inheritance
+    // well - i.e. we're just redoing the work of our parent ctor here. remove
+    // AssetsApi ctor once we've cut IE10
+    this.collectionType = collectionType;
+  }
+
   copyAssets(sourceProjectId, assetFilenames, success, error) {
     var path = apiPath('copy-assets', window.dashboard.project.getCurrentId());
     path += '?' + queryString.stringify({
