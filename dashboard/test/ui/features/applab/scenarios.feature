@@ -83,7 +83,6 @@ Feature: App Lab Scenarios
 
   @no_safari
   @no_mobile
-  @no_ie9
   Scenario: Upload Image Asset
     When I press "designModeButton"
     And I press "manage-assets-button"

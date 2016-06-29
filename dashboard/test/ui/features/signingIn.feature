@@ -1,6 +1,5 @@
 @dashboard_db_access
 @no_mobile
-@no_ie9
 
 Feature: Signing in and signing out
 
