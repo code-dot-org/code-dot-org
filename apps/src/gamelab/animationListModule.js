@@ -348,6 +348,7 @@ export function deleteAnimation(key) {
         'DELETE',
         key + '.png',
         function success() {
+          dispatch(selectAnimation(null));
           dispatch({
             type: DELETE_ANIMATION,
             key
@@ -371,7 +372,7 @@ export function deleteAnimation(key) {
 function loadAnimationFromSource(key, sourceUrl, callback) {
   sourceUrl = sourceUrl || animationsApi.basePath(key) + '.png';
   callback = callback || function () {};
-  return (dispatch, getState) => {
+  return dispatch => {
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
@@ -380,10 +381,16 @@ function loadAnimationFromSource(key, sourceUrl, callback) {
     // TODO: Take version ID into account here...
     fetchUrlAsBlob(sourceUrl, (err, blob) => {
       if (err) {
+        console.log('Failed to load animation ' + key, err);
+        // Brute-force recovery step: Remove the animation from our redux state;
+        // it looks like it's already gone from the server.
+        dispatch({
+          type: DELETE_ANIMATION,
+          key
+        });
         return;
       }
 
-      // TODO: Handle error gracefully
       blobToDataURI(blob, dataURI => {
         dispatch({
           type: DONE_LOADING_FROM_SOURCE,
