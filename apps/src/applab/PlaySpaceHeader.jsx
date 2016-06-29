@@ -16,7 +16,8 @@ var ApplabInterfaceMode = constants.ApplabInterfaceMode;
 var PlaySpaceHeader = React.createClass({
   propTypes: {
     channelId: React.PropTypes.string.isRequired,
-    isDesignModeHidden: React.PropTypes.bool.isRequired,
+    hasDataMode: React.PropTypes.bool.isRequired,
+    hasDesignMode: React.PropTypes.bool.isRequired,
     isEditingProject: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isViewDataButtonHidden: React.PropTypes.bool.isRequired,
@@ -28,8 +29,7 @@ var PlaySpaceHeader = React.createClass({
     playspacePhoneFrame: React.PropTypes.bool,
     screenIds: React.PropTypes.array.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
-    onInterfaceModeChange: React.PropTypes.func.isRequired,
-    useFirebase: React.PropTypes.bool.isRequired
+    onInterfaceModeChange: React.PropTypes.func.isRequired
   },
 
   handleViewData: function () {
@@ -40,15 +40,14 @@ var PlaySpaceHeader = React.createClass({
 
   render: function () {
     var leftSide, rightSide;
-    var showDataModeButton = this.props.useFirebase;
-    var toggleGroupWidth = showDataModeButton ? '160px' : '120px';
+    var toggleGroupWidth = this.props.hasDataMode ? '160px' : '120px';
 
     if (!this.shouldHideToggle()) {
       leftSide = (
         <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
           <button id='codeModeButton' value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>
           <button id='designModeButton' value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
-          {showDataModeButton &&
+          {this.props.hasDataMode &&
             <button id='dataModeButton' value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
           }
         </ToggleGroup>
@@ -79,26 +78,26 @@ var PlaySpaceHeader = React.createClass({
   },
 
   shouldHideToggle: function () {
-    return this.props.isShareView || this.props.isDesignModeHidden;
+    return this.props.isShareView || !this.props.hasDesignMode;
   },
 
   shouldHideViewDataButton: function () {
     return this.props.isViewDataButtonHidden ||
-        this.props.isDesignModeHidden ||
+        !this.props.hasDesignMode ||
         this.props.isShareView ||
         !this.props.isEditingProject ||
-        this.props.useFirebase;
+        this.props.hasDataMode;
   }
 });
 module.exports = connect(function propsFromStore(state) {
   return {
     channelId: state.pageConstants.channelId,
-    isDesignModeHidden: state.pageConstants.isDesignModeHidden,
+    hasDataMode: state.pageConstants.hasDataMode,
+    hasDesignMode: state.pageConstants.hasDesignMode,
     isShareView: state.pageConstants.isShareView,
     isViewDataButtonHidden: state.pageConstants.isViewDataButtonHidden,
     interfaceMode: state.interfaceMode,
-    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
-    useFirebase: state.pageConstants.useFirebase
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
 }, function propsFromDispatch(dispatch) {
   return {
