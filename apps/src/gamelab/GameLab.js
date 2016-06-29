@@ -29,7 +29,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-import {setInitialAnimationList, getSerializedAnimationList, autosaveAnimations} from './animationListModule';
+import {setInitialAnimationList, getSerializedAnimationList, saveAnimations} from './animationListModule';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
@@ -236,9 +236,6 @@ GameLab.prototype.init = function (config) {
 
     // Load initial animation information
     this.studioApp_.reduxStore.dispatch(setInitialAnimationList(animations));
-    window.setInterval(() => {
-      this.studioApp_.reduxStore.dispatch(autosaveAnimations());
-    }, 30000);
   }
 
   ReactDOM.render((
@@ -989,8 +986,10 @@ GameLab.prototype.displayFeedback_ = function () {
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
  * @return {AnimationList}
  */
-GameLab.prototype.getSerializedAnimationList = function () {
-  return getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList);
+GameLab.prototype.getSerializedAnimationList = function (callback) {
+  this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
+    callback(null, getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList));
+  }));
 };
 
 GameLab.prototype.getAnimationDropdown = function () {
