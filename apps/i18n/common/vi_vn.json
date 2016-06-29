@@ -27,6 +27,9 @@
   "copy": "Sao chép",
   "copyright": "Bản quyền",
   "currentVersion": "Phiên bản hiện tại",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Vô cùng",
   "jump": "nhảy",
   "keepPlaying": "Tiếp tục chơi",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Bạn đã dùng tất cả các khối cần thiết, nhưng không đúng cách.",
   "listVariable": "danh sách",
   "makeYourOwnFlappy": "Tự tạo game Flappy Bird của riêng bạn",
@@ -241,9 +245,5 @@
   "watchVideo": "Xem Video",
   "when": "Khi nào",
   "whenRun": "Khi chạy",
-  "workspaceHeaderShort": "Không gian làm việc:",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "Không gian làm việc:"
 }

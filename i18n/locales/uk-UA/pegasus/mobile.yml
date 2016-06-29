@@ -546,12 +546,12 @@ uk-UA:
   dashboard_navigation_section_speakers: 'Запрошені гості <br/> з галузі інформатики'
   dashboard_navigation_all_sections: Облікові записи учнів та їх прогрес
   dashboard_navigation_view_progress: Прогрес
-  dashboard_navigation_view_text_responses: Text Responses
+  dashboard_navigation_view_text_responses: Текстові відповіді
   dashboard_navigation_view_assessments: Завдання
   dashboard_navigation_add_students: Додати учнів
   dashboard_navigation_manage_students: Керування учнями
   dashboard_navigation_lesson_plans_resources: Плани уроків та ресурси
-  dashboard_navigation_view_stats: Stats
+  dashboard_navigation_view_stats: Статистика
   dashboard_navigation_section: 'Група: %{section_name}'
   dashboard_navigation_student: 'Учень: %{student_name}'
   dashboard_progress_not_started: не розпочато
@@ -696,9 +696,8 @@ uk-UA:
   dashboard_faq_k5: K-5 запитання й відповіді
   dashboard_announcements: Оголошення
   dashboard_announce_view_all: Переглянути всі
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: 'Хочете допомогти нам протестувати нові функції? Ми знаємо, що дуже важливо заохочувати учнів до перебору та експериментів з рішеннями, тож ми додамо функцію "код, який не використовується", щоб дозволити учням запускати свій код, навіть тоді, коли є відокремлені блоки. Ми очікуємо відгуків, перш ніж оприлюднити цю функцію.'
+  dashboard_announce_button_text: Випробувати функцію
   dashboard_announce_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори великих компаній звертаються до Конгресу США із відкритим листом у підтримку фінансування інформатичної освіти у школі."
   dashboard_announce_petition_button: "Додайте своє ім'я"
   code_hoc_coming: 'Година коду вже тут - 8-14 грудня!'

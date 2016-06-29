@@ -1,7 +1,7 @@
 "fr":
   errors:
     messages:
-      not_saved: 'Veuillez corriger les erreurs suivantes\_:'
+      not_saved: 'Veuillez corriger les erreurs suivantes:'
       too_young: Ce contenu est soumis à des restrictions d'âge et n'est pas accessible
         aux plus jeunes élèves.
   activerecord:
@@ -67,7 +67,7 @@
   more_info: Plus d'informations
   auth:
     sign_in_with: Se connecter avec %{provider}
-    signed_in: Connecté\_!
+    signed_in: Connecté!
     signed_out: Déconnexion de <a href="%{url}">Code.org</a>.
     sign_out_of: Tu as utilisé  %{provider} pour te connecter. <a href="%{url}">Clique
       ici</a> pour te déconnecter de %{provider}.
@@ -77,9 +77,9 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Compte Microsoft
-    forgot_password: Mot de passe oublié\_?
+    forgot_password: Mot de passe oublié?
     need_confirmation: Pas reçu les instructions de confirmation ?
-    need_unlock: Pas reçu les instructions de déverrouillage\_?
+    need_unlock: Pas reçu les instructions de déverrouillage?
   signup_form:
     student_count: "%{count} élèves se sont déjà inscrits."
     teacher_count: "%{count} enseignants se sont déjà inscrits."
@@ -106,7 +106,7 @@
     age: Age
     user_type: "Êtes-vous un élève ou un enseignant ?"
     submit: S’inscrire
-    teacher: "Êtes-vous un enseignant\\_?"
+    teacher: "Êtes-vous un enseignant?"
     valid_username: Disponible !
     invalid_username: Le nom d'utilisateur doit contenir au moins 5 caractères
     taken_username: Nom d'utilisateur déjà utilisé
@@ -133,7 +133,7 @@
     remember: Se souvenir de moi
     submit: Connexion
   signin:
-    try_heading: Tu souhaites essayer de coder sans t’inscrire\_?
+    try_heading: Tu souhaites essayer de coder sans t’inscrire?
     try_hoc: Essaie d'abord une Heure de Code
     try_20hours: Essaie notre Introduction de 20 heures à l'informatique
   signinsection:
@@ -170,25 +170,25 @@
       signed_in: Merci de te déconnecter avant de continuer
       username_not_found: Nom d'utilisateur %{username} introuvable
       username_in_use: "%{username} est déjà utilisé, merci d’en choisir un autre"
-      no_teacher: Impossible de trouver quelqu'un de connecté avec «\_% {teacher_email_or_code}\_».
+      no_teacher: Impossible de trouver quelqu'un de connecté avec «% {teacher_email_or_code}».
         Demande-leur de s’inscrire ici et puis réessaie de les ajouter.
-      section_not_found: Impossible de trouver une section avec le code «\_%{section_code}\_».
+      section_not_found: Impossible de trouver une section avec le code «%{section_code}».
       blank_code: Saisis un code de section.
       cant_join_own_section: Désolé, tu ne peux pas te joindre à ta propre section.
     mail:
       invite_student:
         subject: Rejoins une classe avec %{teacher_name} sur Code.org !
       student_disassociated:
-        subject: 'Notification de Code.org\_: %{student_name} n''est plus considéré
+        subject: 'Notification de Code.org: %{student_name} n''est plus considéré
           comme l''un de vos élèves.'
   reports:
     error:
       access_denied: Accès impossible aux statistiques de cette personne
   redeem_prizes:
-    title: 'Restituer les prix\_: %{name}'
+    title: 'Restituer les prix: %{name}'
     provider: 'Fournisseur :'
     code: 'Code :'
-    redeem_header: 'Pour recevoir\_:'
+    redeem_header: 'Pour recevoir:'
     donorschoose_register: S'inscrire comme enseignant sur DonorsChoose.org
     donorschoose_project: Soumettre un projet
     donorschoose_how_to: Comment utiliser ton code
@@ -200,9 +200,9 @@
     no_prizes_available: Nous sommes désolés, mais nous n'avons actuellement aucun
       prix disponible.
     teacher_info_required: 'Le nom et l’adresse de l’école sont exigés pour les prix
-      destinés aux enseignants\_:'
+      destinés aux enseignants:'
     teacher_email_required: 'Une adresse e-mail confirmée est exigée pour les prix
-      destinés aux enseignants\_:'
+      destinés aux enseignants:'
     confirm:
       title: Merci de confirmer
       'no': Non
@@ -264,7 +264,7 @@
             uniquement)
           not_earned: Si au moins 7 de vos élèves qui remportent les %{num_trophies}
             trophées sont des filles, votre récompense sera une prime supplémentaire
-            de 250\_$ de crédits sur <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
+            de 250$ de crédits sur <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
             Les crédits de <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
             sont utilisables uniquement par les enseignants des écoles publiques aux
             États-Unis.
@@ -308,7 +308,7 @@
       close: FERMER
       mastery: Concepts
       puzzle_map: "Étapes"
-      prizes: Remporte tous les %{total_trophies} trophées et gagne des prix\_!
+      prizes: Remporte tous les %{total_trophies} trophées et gagne des prix!
       prize_earned: Les %{total_trophies} trophées ont été remportés. Prix gagné !
       prize_us_only: "(Uniquement pour les élèves vivant aux États-Unis)"
       prizes_link: Plus d'informations
@@ -316,11 +316,11 @@
     answer: Réponse
     for_teachers_only: Pour les enseignants uniquement
     title:
-      one: 'Ton enseignant\_:'
-      other: 'Tes enseignants\_:'
+      one: 'Ton enseignant:'
+      other: 'Tes enseignants:'
     remove: "(supprimer l'enseignant)"
     confirm:
-      remove: Es-tu sûr de vouloir supprimer cet enseignant\_?
+      remove: Es-tu sûr de vouloir supprimer cet enseignant?
     students:
       dashboard: Aller au Tableau de bord de l'enseignant
     user_not_found: Impossible de trouver l’enseignant.
@@ -337,7 +337,7 @@
       submitted_on: 'Soumis le :'
       unsubmit: Ne pas envoyer
   user:
-    email_confirm_needed: 'L''adresse e-mail n''a pas été confirmée\_:'
+    email_confirm_needed: 'L''adresse e-mail n''a pas été confirmée:'
     email_confirm_needed_required: 'Votre adresse e-mail %{email} n''a pas été confirmée
       :'
     email_confirm_wrong_email: "(Adresse e-mail invalide ?)"
@@ -361,7 +361,7 @@
       \ MILLIONS D’ÉLÈVES"
     all_courses: Présentation des cours 1, 2 et 3
     lesson_plans: Plans des cours
-    signin_message: Déjà enregistré\_? %{link}
+    signin_message: Déjà enregistré? %{link}
     student_reg_link: S'inscrire en tant qu’élève
     teacher_reg_link: S'inscrire en tant qu’enseignant
     signin_directions: Utilisez un compte pour suivre les progrès.<br/> Enseignants,
@@ -370,16 +370,16 @@
     teacher_student_count_one: Vous avez %{count} élève.
     teacher_student_count: Vous avez %{count} élèves.
     teacher_averages: En moyenne, vos élèves ont gagné  %{trophy_average} sur %{trophy_max}
-      trophées «\_Maîtrise du Concept\_».
+      trophées «Maîtrise du Concept».
     teacher_print_certificates: Imprimer les certificats pour les élèves ayant terminé
       ce cours.
     teacher_read_blog: Lisez l'actualité et les mises à jour de nos matériels sur
       notre Blog Enseignant
     classroom: Votre classe
     student_progress: Les progrès d’apprentissage
-    student_stats: Vous avez remporté %{trophy_count} trophées «\_Maîtrise du Concept\_»
+    student_stats: Vous avez remporté %{trophy_count} trophées «Maîtrise du Concept»
       sur %{trophy_max}.
-    student_left_off: 'Vous vous êtes arrêté à cet endroit la dernière fois\_:'
+    student_left_off: 'Vous vous êtes arrêté à cet endroit la dernière fois:'
     student_finished: Vous avez terminé tous les tutoriels de Code.org. Choisir une
       autre classe %{online_link} ou une autre école  %{local_school_link}.
     local_school: "école locale"
@@ -387,7 +387,7 @@
     see_details: Voir les détails
     view_course: Voir le cours
     prize_info: 'Prix de participation (enseignants des écoles publiques des États-Unis
-      uniquement)\_: Jusqu''à 1 000 $ de récompenses pour la classe.'
+      uniquement): Jusqu''à 1 000 $ de récompenses pour la classe.'
     tryfirst: 'Ou, vous pouvez d’abord essayer et vous inscrire plus tard :'
     trynow: Essaie maintenant
     add_hint_help: Aidez-nous à ajouter des astuces pertinentes aux tutoriels de Code.org
@@ -527,7 +527,7 @@
       link: Pour en savoir plus
   slow_loading: Cela prend plus de temps que d'habitude...
   try_reloading: Essaie de recharger la page
-  next_stage: Terminé\_! Continue vers l'étape suivante
+  next_stage: Terminé! Continue vers l'étape suivante
   download_pdf: Ouvrir le plan de cours
   lesson_plan: Plan de cours
   view_lesson_plan: Voir le plan de cours
@@ -615,7 +615,7 @@
       body_short: Si vous n'avez pas d'ordinateur, essayez ces leçons en mode "déconnecté"
         dans votre classe.
   gallery:
-    students_drew_these_with_code: Les élèves les ont dessiné avec du code\_!
+    students_drew_these_with_code: Les élèves les ont dessiné avec du code!
     students_made_these_with_code: Les élèves les ont réalisé avec du code !
     picture_count: Ces <b>%{days}</b> derniers jours, les élèves ont dessiné <b>%{count}</b>
       des images en écrivant leurs propres programmes informatiques. Clique sur les
@@ -624,10 +624,10 @@
       des applications et des images en écrivant leurs propres programmes informatiques.
       Clique sur les images et les captures d'écran pour voir chaque programme en
       action.
-    want_to_make_your_own: Tu veux faire le tien\_?
+    want_to_make_your_own: Tu veux faire le tien?
     how_to_save: Dans le dernier niveau de ces tutoriels, cliquez sur « Terminer »
       et « Enregistrer » pour enregistrer votre travail dans la Galerie.
-    more: Plus &rarr\_;
+    more: Plus &rarr;
     caption_by_name_age: par %{name}, %{age} ans
     caption_time_ago: il y a %{time_ago} heures/jours
     header: Galerie
@@ -807,7 +807,7 @@
       en mesure de visualiser ton projet.
     view_all: Afficher « Mes projets »
     remix: Remix
-    click_to_remix: Clique sur «\_Remix\_» pour créer ta propre version\_!
+    click_to_remix: Clique sur «Remix» pour créer ta propre version!
     edit_project: Modifier le projet
     abuse:
       tos: Ce projet a été signalé comme ne respectant pas les <a href='http://code.org/tos'>Conditions
@@ -863,7 +863,7 @@
       search_placeholder_text: Chercher pour une icône...
       no_icons_found: Aucune icône trouvée
     playzone:
-      artist_description: Dessine des super images et dessins avec l'Artiste\_!
+      artist_description: Dessine des super images et dessins avec l'Artiste!
       artist_title: Nouveau dessin
       continue_button: Go on to the next Stage
       playlab_description: Programme une histoire ou un jeu dans le Labo de jeux !

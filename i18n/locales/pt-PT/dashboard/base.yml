@@ -23,17 +23,17 @@ pt:
           future: não pode estar no futuro
   hello: Olá mundo
   welcome_back: 'Olá mais uma vez, %{name}'
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: O teu plano de aprendizagem profissional
+  see_your_learning_plan: Vê o teu plano de aprendizagem
   submit: OK
   unsubmit: Remover submissão
-  previous_page: Previous page
-  next_page: Next page
-  next_resource: Next resource
+  previous_page: Página anterior
+  next_page: Página seguinte
+  next_resource: Recurso seguinte
   done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: Ok
-  heading_x_of_y: '%{heading} (page %{x} of %{y})'
+  heading_x_of_y: '%{heading} (página %{x} de %{y})'
   add_teacher_form:
     code:
       label: 'Adiciona um professor:'
@@ -66,7 +66,7 @@ pt:
     sign_in_with: 'Iniciar sessão com o %{provider}'
     signed_in: Sessão iniciada!
     signed_out: 'Acabaste de terminar sessão no <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Usaste o %{provider} para iniciar sessão. <a href="%{url}">Clica aqui</a> para terminares sessão no %{provider}.'
+    sign_out_of: 'Usaste o %{provider} para iniciar sessão.<br/><a href="%{url}">Clica aqui</a> para terminares sessão no %{provider}.'
     already_signedup: Já criaste uma conta?
     notyet_signedup: Ainda não criaste uma conta?
     google_oauth2: Google
@@ -87,7 +87,7 @@ pt:
     teacher_title: Criar conta de professor
     student_pitch: Cria uma conta de aluno
     student_title: Criar conta de aluno
-    signup_title: Sign up for Code.org
+    signup_title: Cria uma conta no Code.org
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
     address_placeholder: Morada, cidade e código postal
@@ -106,7 +106,7 @@ pt:
     student_terms: "Concordo com os <a href='http://code.org/tos'>Termos de utilização</a> do Code.org. Se tiver menos de 13 anos, declaro, ao submeter este formulário, que tenho autorização dos meus pais para usar os serviços do Code.org.<br/>No caso dos alunos com menos de 13 anos, os respetivos endereços de e-mail não são registados, o que nos impede de entrar em contacto com eles."
     teacher_terms: "Concordo com os <a href='http://code.org/tos'>Termos de utilização</a> do Code.org."
     additional_information: Precisamos de mais informações para continuarmos o processo de criação da conta.
-    user_type_label: Account Type
+    user_type_label: Tipo de conta
     user_type_teacher: Professor
     user_type_student: Aluno
   signin_form:
@@ -342,9 +342,9 @@ pt:
     announcement_view_all: Ver Todos
     announcement_message: |-
       Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-    announcement_button: Test the feature
+    announcement_button: Testar funcionalidade
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: Add your name
+    announcement_petition_button: Adicionar o teu nome
   move_students:
     new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
     section_code_not_entered: Please provide current_section_code.
@@ -497,13 +497,13 @@ pt:
   landing:
     prerelease: "Este curso está em sua versão <span class='betatext'>beta</span>. Isso significa que esta não é a versão final do curso, e ele está sujeito a revisões conforme os feedbacks são recebidos e as melhorias são feitas."
     prerelease_hoc2014: "Este tutorial está na versão <span class='betatext'>beta</span>. Ele está sujeito a revisões, conforme são recebidos feedbacks e melhorias são feitas."
-    report_bug: Comunicar erro
+    report_bug: Comunicar um problema
     support: Obter ajuda
     support_url: //support.code.org
     help_resources: Ajuda e recursos
   multi:
     wrong_title: Resposta incorreta
-    wrong_body: A resposta que você digitou não está correta. Tente novamente!
+    wrong_body: A tua resposta não está correta. Não desistas! Volta tentar!
     correct_title: Certo
     correct_body: A tua resposta está correta.
     toofew_title: Too few answers.
@@ -533,7 +533,7 @@ pt:
     submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Solução incorreta
-    wrong_body: Sua solução não está correta. Tente novamente!
+    wrong_body: A tua solução não está correta. Não desistas! Volta tentar!
     correct_title: Certo
     correct_body: A tua resposta está correta.
   contract_match:
@@ -622,7 +622,7 @@ pt:
     share_title: Partilha o teu projeto
     share_copy_link: 'Copia a ligação:'
     share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
-    embed: Embed
+    embed: Incorporar
     advanced_share: Show advanced options
     close: Fechar
     more: Mais
@@ -665,13 +665,13 @@ pt:
         acknowledge: 'Ao submeter esta informação, aceita que esta será tratada de acordo com os termos da nossa %{link_start_privacy}Política de Privacidade%{link_end} e dos %{link_start_tos}Termos de Utilização%{link_end}'
   peer_review:
     accepted:
-      name: Accepted
+      name: Aceite
       description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
     rejected:
-      name: Rejected
+      name: Recusado
       description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
     escalated:
-      name: Escalated
+      name: Reencaminhado
       description: I would like an instructor to review this submission
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
@@ -706,10 +706,10 @@ pt:
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: 'Download %{app_name} for offline use (136MB)'
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    download_in_english: 'Descarrega em inglês:'
+    download_in_spanish: 'Descarrega em espanhol:'
     windows: Windows
-    mac: Mac OS X
+    mac: macOS
   plc:
     preview_assignments:
       content_focus_header: Content Focus Area

@@ -983,6 +983,39 @@
       Artist - Nested Loops Assessment 1_instruction: |
         Use a nested loop to complete
         the design.
+      artistLoopsK1_instruction: |
+        This is a new type of puzzle called "Artist".
+        Play with the level and draw something fun.
+      artistLoopsK2_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
+      artistLoopsK3_instruction: |
+        Draw a line eight steps long. This will become
+        the land for our kingdom!
+      artistLoopsK4_instruction: |
+        Now we need a castle with a draw bridge.  Fix the
+        code so that the bridge lays straight instead of falling down.
+      artistLoopsK5_instruction: |
+        Now we need to fix the top of the castle. Can you
+        loop the code three times?
+      artistLoopsK6_instruction: "Someone is stuck in the tower!  Fix the stairs\nto
+        set them free. \n"
+      artistLoopsK7_instruction: "This tower is lovely, what is downstairs? Build\nanother
+        staircase to find out! \n"
+      artistLoopsK8_instruction: |
+        Wow! There's a garden over there!  Help fix these
+        stairs so I can get to it.
+      artistLoopsK9_instruction: |
+        **Challenge:**  Lovely! Let's take a walk around
+        the garden.
+      artistLoopsKA_instruction: |
+        These stones are in the wrong place.  Help me move
+        them so I don't fall in!
+      artistLoopsKB_instruction: "Look!  It's a theater.  Help me set up the chairs\nso
+        we can all see the stage. \n"
+      artistLoopsKFP_instruction: |
+        Picture time!  Use what you have learned to draw
+        a picture of what you think the Artist saw on stage.
       Auto Open Function Editor_instruction: "You can call functions from inside\nother
         functions! Using your \"shape\" function as a base, create 3 house shapes\neach
         20 pixels larger than the last starting at 50 pixels in length. Using\na counter
@@ -2934,6 +2967,7 @@
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      eventsIntro_instruction: Need a better playlab/events combo
       Farmer for Authored Hint testing_instruction: |
         Wow, I found a really deep hole!
         I don't know how many shovelfuls of dirt it needs.  Can you write a program
@@ -3216,6 +3250,26 @@
       K-1 Maze Sequence Assessment 2_instruction: |
         Move one way, then another to
         get me to the pig.
+      K2.0 sequence 1_instruction: Change the code to get me to the pig!
+      K2.0 sequence 10_instruction: Move me around the TNT to get to the pig.
+      K2.0 sequence 2_instruction: Change the code to get me to the pig!
+      K2.0 sequence 3_instruction: |
+        Something is not quite right. REMOVE blocks to
+        get me to the pig!
+      K2.0 sequence 4_instruction: |
+        Try it yourself!  Move one way, then another
+        to get me to the pig.
+      K2.0 sequence 5_instruction: Move one way, then another to get me to the pig!
+      K2.0 sequence 6_instruction: |
+        Figure out what is missing and then add blocks
+        to get me to the pig!
+      K2.0 sequence 7_instruction: |
+        Debug this level by adding and changing blocks
+        to get me to the pig!
+      K2.0 sequence 8_instruction: |
+        Debug this level by adding blocks to get me to
+        the pig!
+      K2.0 sequence 9_instruction: 'Go around the TNT to get me to the pig! '
       kikiTesta_instruction: |-
         Our adventurer wants to collect coins.  But she can
         only use 4 blocks to get them.\r
@@ -3929,6 +3983,14 @@
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      playEventsK1_instruction: |
+        This game is called "Play Lab".  See if you can
+        figure out what each block does.
+      playEventsK2_instruction: |-
+        Jorge wants to say "Hi there."\r
+        \r
+        Can you
+        help?
       Poorva copy U3L2 Using Simple Commands_instruction: |
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -4133,9 +4195,13 @@
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
+      StepIntro_instruction: Here's how to use the "Step" button.
       template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi
+      testArtistForTestK_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
         many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
         keeps using the `fill` block until the ground is even?  "

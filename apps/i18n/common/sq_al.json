@@ -27,6 +27,9 @@
   "copy": "Kopje, kopjo",
   "copyright": "E drejta e autorit",
   "currentVersion": "Current Version",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Pafundësi",
   "jump": "hidhu",
   "keepPlaying": "Vazhdoni luani",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Ti je duke përdorur të gjithë tipet e nevojshëm të blloqeve, por jo në mënyrën e duhur.",
   "listVariable": "listë",
   "makeYourOwnFlappy": "Bëj lojën tënde Flappy",
@@ -241,9 +245,5 @@
   "watchVideo": "Shiko Videon",
   "when": "kur",
   "whenRun": "kur vrapon",
-  "workspaceHeaderShort": "Vendi i punës: ",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "Vendi i punës: "
 }
