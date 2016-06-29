@@ -362,6 +362,18 @@ module.exports = function (grunt) {
       commonFile: 'common'
     },
 
+    // Build embedVideo.js in its own step (skipping factor-bundle) so that
+    // we don't have to include the large code-studio-common file in the
+    // embedded video page, keeping it fairly lightweight.
+    // (I wonder how much more we could slim it down by removing jQuery!)
+    // @see embed.html.haml
+    {
+      entries: {
+        embedVideo: './src/code-studio/embedVideo.js'
+      },
+      provides: ['jquery']
+    },
+
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
     // in a bundle to minimize the amound of stuff we need when loading blocks
     // in an iframe.
