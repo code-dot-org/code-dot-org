@@ -242,5 +242,8 @@
   "when": "când",
   "whenRun": "când rulezi",
   "workspaceHeaderShort": "Spaţiu de lucru: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

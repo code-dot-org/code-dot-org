@@ -2126,3 +2126,22 @@ en:
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
           Wrap-up: Wrap-up
+        ecs-unit2:
+          title: ECS Unit 2
+          description_short: 'Unit 2: Problem Solving'
+          description: 'Unit 2: Problem Solving'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Teaching Strategies: Teaching Strategies
+          Lesson Overviews: Lesson Overviews
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community Problems with Data
+          'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To Problem Solving: Candy Bar Activity'
+          'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6 Strategies in Problem Solving: Handshake Activity'
+          'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14 Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees: Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project

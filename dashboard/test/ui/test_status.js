@@ -16,10 +16,6 @@ const TEST_TYPE = document.querySelector('#test-type').value;
 const API_ORIGIN = document.querySelector('#api-origin').value;
 
 // Simple constants
-const GRAY = '#dddddd';
-const RED = '#ff8888';
-const GREEN = '#78ea78';
-
 const STATUS_PENDING = 'PENDING';
 const STATUS_FAILED = 'FAILED';
 const STATUS_SUCCEEDED = 'SUCCEEDED';
@@ -118,14 +114,13 @@ Test.prototype.updateView = function () {
   let logLinkCell = row.querySelector('.log-link');
 
   // Update row appearance
+  row.className = this.status;
   if (succeeded || failed) {
-    row.style.backgroundColor = succeeded ? GREEN : RED;
     statusCell.innerHTML = (succeeded ? 'Succeeded' : 'Failed') +
         ` in ${Math.round(this.duration)} seconds` +
         (this.attempt > 0 ? ` on retry #${this.attempt}` : '');
     logLinkCell.innerHTML = `<a href="${this.publicLogUrl()}">Log on S3</a>`;
   } else {
-    row.style.backgroundColor = GRAY;
     statusCell.innerHTML = '';
     logLinkCell.innerHTML = '';
   }
@@ -247,11 +242,8 @@ function renderBrowserProgress(browser, progress) {
       + ` ${pendingCount} are pending.`;
 
   // Update the progress bar
-  successBar.style.backgroundColor = GREEN;
   successBar.style.width = `${successPercent}%`;
-  failureBar.style.backgroundColor = RED;
   failureBar.style.width = `${failurePercent}%`;
-  pendingBar.style.backgroundColor = GRAY;
   pendingBar.style.width = `${pendingPercent}%`;
 }
 
@@ -328,3 +320,19 @@ autoRefreshButton.onclick = toggleAutoRefresh;
 updateProgressNow();
 enableAutoRefresh();
 refresh();
+
+let hideSucceeded = false;
+function toggleHideSucceeded() {
+  hideSucceeded = !hideSucceeded;
+  hideSucceededButton.textContent = `${hideSucceeded ? 'Show' : 'Hide'} Succeeded`;
+  let sheet = document.styleSheets[document.styleSheets.length - 1];
+  let display = hideSucceeded ? 'none' : 'inherit';
+  let rule = _.findLast(sheet.rules, rule => rule.selectorText == '.SUCCEEDED');
+  if (rule) {
+    rule.style.display = display;
+  } else {
+    sheet.insertRule(`.SUCCEEDED{display: ${display}}`,sheet.cssRules.length)
+  }
+}
+let hideSucceededButton = document.querySelector('#hide-succeeded-button');
+hideSucceededButton.onclick = toggleHideSucceeded;

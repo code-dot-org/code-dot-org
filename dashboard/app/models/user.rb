@@ -841,18 +841,22 @@ SQL
   def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:)
     level_id = level.id
     script_id = script_level.script_id
-    old_user_level = UserLevel.where(user_id: self.id,
-                                 level_id: level_id,
-                                 script_id: script_id).first
+    old_user_level = UserLevel.where(
+      user_id: self.id,
+      level_id: level_id,
+      script_id: script_id
+    ).first
 
-    async_op = {'model' => 'User',
-                'action' => 'track_level_progress',
-                'user_id' => self.id,
-                'level_id' => level_id,
-                'script_id' => script_id,
-                'new_result' => new_result,
-                'level_source_id' => level_source_id,
-                'submitted' => submitted}
+    async_op = {
+      'model' => 'User',
+      'action' => 'track_level_progress',
+      'user_id' => self.id,
+      'level_id' => level_id,
+      'script_id' => script_id,
+      'new_result' => new_result,
+      'level_source_id' => level_source_id,
+      'submitted' => submitted
+    }
     if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
       User.progress_queue.enqueue(async_op.to_json)
     else

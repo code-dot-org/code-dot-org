@@ -358,7 +358,8 @@ class ScriptTest < ActiveSupport::TestCase
 
     script = scripts.first
     script.save! # Need to trigger an update because i18n strings weren't loaded
-    assert script.professional_learning_course
+    assert script.professional_learning_course?
+    assert_equal 'Test plc course', script.professional_learning_course
 
     unit = script.plc_course_unit
     assert_equal 'PLC Test', unit.unit_name

@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+# This script populates the hashed_email column of the pegasus contacts table.
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'digest/md5'
+require src_dir 'database'
+
+def main
+  DB[:contacts].each do |contact|
+    hashed_email = Digest::MD5.hexdigest(contact[:email])
+    DB[:contacts].where(id: contact[:id]).update(hashed_email: hashed_email)
+  end
+end
+
+main if only_one_running?(__FILE__)
