@@ -623,8 +623,7 @@ StudioApp.prototype.getFirstContainedLevelResult_ = function () {
 
 StudioApp.prototype.hasValidContainedLevelResult_ = function () {
   var firstResult = this.getFirstContainedLevelResult_();
-  return typeof firstResult.result.response !== 'undefined' &&
-      firstResult.result.response !== '';
+  return firstResult.result.valid;
 };
 
 /**
@@ -2163,6 +2162,14 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   $('.droplet-palette-scroller').on('scroll', function (e) {
     $(window).trigger('droplet_change', ['scrollpalette']);
+  });
+
+  $('.droplet-main-scroller').on('scroll', function (e) {
+    $(window).trigger('droplet_change', ['scrolleditor']);
+  });
+
+  this.editor.aceEditor.getSession().on("changeScrollTop", function () {
+    $(window).trigger('droplet_change', ['scrollace']);
   });
 
   $.expr[':'].textEquals = function (el, i, m) {

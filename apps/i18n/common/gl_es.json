@@ -242,5 +242,8 @@
   "when": "cando",
   "whenRun": "cando se executa",
   "workspaceHeaderShort": "Espazo de traballo: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

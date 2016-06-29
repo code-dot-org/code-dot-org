@@ -242,5 +242,8 @@
   "when": "کب",
   "whenRun": "جب رن ہو تو",
   "workspaceHeaderShort": "ورک اسپیس ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

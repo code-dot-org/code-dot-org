@@ -242,5 +242,8 @@
   "when": "kad",
   "whenRun": "kad izpilda",
   "workspaceHeaderShort": "Darba virsma: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

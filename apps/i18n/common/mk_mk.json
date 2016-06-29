@@ -242,5 +242,8 @@
   "when": "Кога",
   "whenRun": "Кога трча",
   "workspaceHeaderShort": "Работна површина: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

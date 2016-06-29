@@ -242,5 +242,8 @@
   "when": "~할 때",
   "whenRun": "실행하면",
   "workspaceHeaderShort": "작업 영역: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

@@ -69,9 +69,12 @@ class UserScriptTest < ActiveSupport::TestCase
     assert !UserScript.new(user_id: @user.id, script_id: 1, last_progress_at: Time.now).empty?
 
     # a more normal case:
-    assert !UserScript.new(user_id: @user.id, script_id: 1,
-                              started_at: Time.now - 5.days,
-                              completed_at: Time.now,
-                              last_progress_at: Time.now).empty?
+    assert !UserScript.new(
+      user_id: @user.id,
+      script_id: 1,
+      started_at: Time.now - 5.days,
+      completed_at: Time.now,
+      last_progress_at: Time.now
+    ).empty?
   end
 end

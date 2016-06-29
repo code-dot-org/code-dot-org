@@ -242,5 +242,8 @@
   "when": "kui",
   "whenRun": "pärast käivitamist",
   "workspaceHeaderShort": "Tööruum: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }
