@@ -242,5 +242,8 @@
   "when": "وقتی",
   "whenRun": "زمان اجرا",
   "workspaceHeaderShort": "محیط کار: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

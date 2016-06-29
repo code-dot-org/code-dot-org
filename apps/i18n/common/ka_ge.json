@@ -242,5 +242,8 @@
   "when": "როდის",
   "whenRun": "გაშვებისას",
   "workspaceHeaderShort": "სამუშაო სივრცე: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }

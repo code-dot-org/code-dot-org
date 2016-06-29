@@ -242,5 +242,8 @@
   "when": "када",
   "whenRun": "Када кренеш",
   "workspaceHeaderShort": "Радни простор: ",
-  "dataMode": "Data"
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
+  "keyValuePairLink": "Key/value pairs"
 }
