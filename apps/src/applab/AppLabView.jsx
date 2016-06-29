@@ -9,6 +9,7 @@ var InstructionsWithWorkspace = require('../templates/instructions/InstructionsW
 import { ApplabInterfaceMode } from './constants';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import DataWorkspace from './DataWorkspace';
+import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
 import { connect } from 'react-redux';
 
 /**
@@ -48,8 +49,7 @@ var AppLabView = React.createClass({
             className="fa fa-ellipsis-v" />
         <InstructionsWithWorkspace>
           <CodeWorkspace style={{display: codeWorkspaceVisible ? 'block' : 'none' }}/>
-          {this.props.hasDesignMode &&
-              <ProtectedStatefulDiv id="designWorkspace" style={{display: 'none'}}/>}
+          {this.props.hasDesignMode && <ProtectedDesignWorkspace/>}
           {this.props.hasDataMode && <DataWorkspace/>}
         </InstructionsWithWorkspace>
       </StudioAppWrapper>

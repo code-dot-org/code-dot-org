@@ -1224,8 +1224,6 @@ Applab.encodedFeedbackImage = '';
  * @param {ApplabInterfaceMode} mode
  */
 function onInterfaceModeChange(mode) {
-  Applab.setWorkspaceMode(mode);
-
   var showDivApplab = (mode !== ApplabInterfaceMode.DESIGN);
   Applab.toggleDivApplab(showDivApplab);
 
@@ -1243,17 +1241,6 @@ function onInterfaceModeChange(mode) {
     }
   }
 }
-
-/**
- * Display the workspace corresponding to the specified mode.
- * @param {ApplabInterfaceMode} mode
- */
-Applab.setWorkspaceMode = function (mode) {
-  var designWorkspace = document.getElementById('designWorkspace');
-  if (designWorkspace) {
-    designWorkspace.style.display = (ApplabInterfaceMode.DESIGN === mode) ? 'block' : 'none';
-  }
-};
 
 /**
  * Show a modal dialog with a title, text, and OK and Cancel buttons
@@ -1516,7 +1503,8 @@ Applab.startInDesignMode = function () {
 };
 
 Applab.isInDesignMode = function () {
-  return $('#designWorkspace').is(':visible');
+  const mode = studioApp.reduxStore.getState().interfaceMode;
+  return ApplabInterfaceMode.DESIGN === mode;
 };
 
 function quote(str) {
