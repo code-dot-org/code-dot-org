@@ -264,6 +264,9 @@ module RakeUtils
   end
 
   def self.update_yml(file)
+    unless File.exist?(file)
+      File.write(file, '')
+    end
     data_hash = YAML.load_file(file)
     data_hash ||= Hash.new
     yield data_hash
