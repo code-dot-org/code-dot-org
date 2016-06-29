@@ -7,7 +7,7 @@ var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var StudioAppWrapper = require('../templates/StudioAppWrapper');
 var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
 import CodeWorkspace from '../templates/CodeWorkspace';
-import DataWorkspace from '../templates/DataWorkspace';
+import DataWorkspace from './DataWorkspace';
 import { connect } from 'react-redux';
 
 /**
