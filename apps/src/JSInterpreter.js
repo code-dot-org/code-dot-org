@@ -697,7 +697,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       return;
     }
   }
-  if (reachedBreak && atMaxSpeed) {
+  if ((reachedBreak || doneUserLine) && atMaxSpeed) {
     // If we were running atMaxSpeed and just reached a breakpoint, the
     // code may not be selected in the editor, so do it now:
     this.selectCurrentCode();
