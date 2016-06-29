@@ -9,7 +9,8 @@ import { DataView } from '../constants';
 const CHANGE_VIEW = `data/CHANGE_VIEW`;
 
 const DataState = Record({
-  view: DataView.OVERVIEW
+  view: DataView.OVERVIEW,
+  tableName: ''
 });
 
 const initialState = new DataState();
@@ -17,13 +18,14 @@ const initialState = new DataState();
 export default function (state = initialState, action) {
   switch (action.type) {
     case CHANGE_VIEW:
-      return state.set('view', action.view);
+      return state.set('view', action.view).set('tableName', action.tableName);
     default:
       return state;
   }
 }
 
-export const changeView = view => ({
+export const changeView = (view, tableName) => ({
   type: CHANGE_VIEW,
-  view
+  view,
+  tableName
 });
