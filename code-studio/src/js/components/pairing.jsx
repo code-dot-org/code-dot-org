@@ -2,7 +2,7 @@
  * A component for managing pair programming
  */
 
-/* global React, dashboard */
+/* global React, dashboard, $ */
 
 var SectionSelector = React.createClass({
   handleChange: function (event) {
@@ -117,7 +117,7 @@ var Pairing = React.createClass({
     this.setState({
       pairings: [],
       sections: this.state.sections,
-      selectedSectionId: event.target.value,
+      selectedSectionId: +event.target.value
     });
   },
 
@@ -192,7 +192,7 @@ var Pairing = React.createClass({
     if (this.selectedSectionId()) {
       // todo use jquery find
       for (var i = 0; i < this.state.sections.length; i++) {
-        if (this.state.sections[i].id == this.selectedSectionId()) {
+        if (this.state.sections[i].id === this.selectedSectionId()) {
           return this.state.sections[i];
         }
       }
