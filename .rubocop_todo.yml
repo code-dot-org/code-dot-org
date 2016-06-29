@@ -190,11 +190,6 @@ Style/LeadingCommentSpace:
 Style/LineEndConcatenation:
   Enabled: false
 
-# Offense count: 59
-# Cop supports --auto-correct.
-Style/MethodCallParentheses:
-  Enabled: false
-
 # Offense count: 5
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.

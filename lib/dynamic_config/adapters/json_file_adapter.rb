@@ -7,7 +7,7 @@ class JSONFileDatastoreAdapter
   def initialize(file_path)
     @file_path = file_path
     @hash = {}
-    load_from_file()
+    load_from_file
   end
 
   # @param key [String]
@@ -15,7 +15,7 @@ class JSONFileDatastoreAdapter
   def set(key, value)
     load_from_file
     @hash[key] = Oj.dump(value, :mode => :strict)
-    write_to_file()
+    write_to_file
   end
 
   # @param key [String]
@@ -49,7 +49,7 @@ class JSONFileDatastoreAdapter
   def load_from_file
     begin
       File.open(@file_path, "r") do |f|
-        contents = f.read()
+        contents = f.read
         @hash = JSON.load(contents)
         @hash = {} if @hash.nil?
       end
