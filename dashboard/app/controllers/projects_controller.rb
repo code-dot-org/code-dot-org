@@ -27,6 +27,10 @@ class ProjectsController < ApplicationController
       name: 'New Maker Lab Project',
       login_required: true
     },
+    weblab: {
+        name: 'New Web Lab Project',
+        login_required: true
+    },
     algebra_game: {
       name: 'New Algebra Project'
     },

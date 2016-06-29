@@ -1,0 +1,19 @@
+-# - content_for(:head) do
+  = javascript_include_tag 'http://localhost:8000/src/thirdparty/require.min.js',
+  'data-main' => "http://localhost:8000/src/hosted.js"
+  = stylesheet_link_tag asset_path('blockly/css/common.css'), media: 'all'
+  = stylesheet_link_tag 'css/leveltype_widget', media: 'all'
+  :javascript
+  dashboard.setupWidgetLevel();
+  %div{ :style =>"height:20px" }
+
+%a{ :id => "undo-link", :href => "#"} Undo
+|
+%a{ :id => "redo-link", :href => "#"} Redo
+|
+%a{ :id => "preview-link", :href => "#"} Preview
+|
+%a{ :id => "tutorial-link", :href => "#"} Tutorial
+%br
+%br
+%iframe{:src => "/bramble/hosted2.html", :frameborder => "0", :width => "100%", :height => "560px", :scrolling => "no" }

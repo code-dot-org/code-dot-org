@@ -41,6 +41,7 @@ class Game < ActiveRecord::Base
   STUDIO_EC = 'StudioEC'
   APPLAB = WEBAPP = 'applab'
   GAMELAB = 'gamelab'
+  WEBLAB = 'weblab'
   NETSIM = 'netsim'
   CRAFT = 'craft'
   MAZE = 'maze'
@@ -154,7 +155,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION || app == GAMELAB
+    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION || app == GAMELAB || app == WEBLAB
   end
 
   # True if the app takes responsibility for showing footer info
