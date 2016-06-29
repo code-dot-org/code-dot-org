@@ -13,15 +13,15 @@
           description_short: Juste un test interne de connaissances.
         course1:
           'Jigsaw: Learn to drag and drop': 'Puzzle : Apprendre à faire un glisser-déposer'
-          'Maze: Sequence': 'Labyrinthe\_: Séquence'
-          'Maze: Debugging': 'Labyrinthe\_: Débogage'
-          'Artist 1: Intro': 'Artiste 1\_: Introduction'
+          'Maze: Sequence': 'Labyrinthe: Séquence'
+          'Maze: Debugging': 'Labyrinthe: Débogage'
+          'Artist 1: Intro': 'Artiste 1: Introduction'
           Artists 2: Artistes 2
           Spelling Bee: Concours d'orthographe
           Spelling Bee not blockly: Concours d’orthographe pas de Blockly
-          'Bee 1: Intro': 'Abeille 1\_: Introduction'
-          'Maze 2: Loops': 'Labyrinthe 2\_: Boucles'
-          'Bee 2: Loops': 'Abeille 2\_: Boucles'
+          'Bee 1: Intro': 'Abeille 1: Introduction'
+          'Maze 2: Loops': 'Labyrinthe 2: Boucles'
+          'Bee 2: Loops': 'Abeille 2: Boucles'
           Multi & Match: Multi & Correspondance
           K-1 Flappy: Flappy - maternelle ou CP
           Flappy non blockly: Flappy sans Blockly
@@ -29,7 +29,7 @@
           Artist 2: L'Artiste 2
           Happy Maps: Cartes Joyeuses
           Move it, Move it: Déplace-le, déplace-le
-          'Real-life Algorithms: Plant a Seed': 'Algorithmes du monde réel\_: Planter
+          'Real-life Algorithms: Plant a Seed': 'Algorithmes du monde réel: Planter
             une graine'
           Building a Foundation: Construire une fondation
           Getting Loopy: Tourner en rond
@@ -41,13 +41,13 @@
             des problèmes, et à persister lors de tâches difficiles. À la fin de ce
             cours, les élèves créent leur propre jeu personnalisé ou une histoire
             qu'ils pourront partager. Recommandé pour les niveaux maternelle et CP.
-          'Bee: Sequence': 'Abeille\_: Séquence'
-          'Artist: Sequence': 'Artiste\_: Séquence'
-          'Artist: Shapes': 'Artiste\_: Formes'
-          'Maze: Loops': 'Labyrinthe\_: Boucles'
-          'Bee: Loops': 'Abeille\_: Boucles'
-          'Studio: Create a Story': 'Labo de jeux\_: Créer une histoire'
-          'Artist: Loops': 'Artiste\_: Boucles'
+          'Bee: Sequence': 'Abeille: Séquence'
+          'Artist: Sequence': 'Artiste: Séquence'
+          'Artist: Shapes': 'Artiste: Formes'
+          'Maze: Loops': 'Labyrinthe: Boucles'
+          'Bee: Loops': 'Abeille: Boucles'
+          'Studio: Create a Story': 'Labo de jeux: Créer une histoire'
+          'Artist: Loops': 'Artiste: Boucles'
           description_audience: De 4 à 6 ans
           description_short: Commencer par le Cours 1 pour les jeunes lecteurs.
         course2:
@@ -68,7 +68,7 @@
           Bee Functions: Fonctions de l'abeille
           Maze Loops: Les boucles du labyrinthe
           Graph Paper Programming: Programmation sur papier quadrillé
-          'Real-life Algorithms: Paper Planes': 'Algorithmes du monde réel\_: Avions
+          'Real-life Algorithms: Paper Planes': 'Algorithmes du monde réel: Avions
             en papier'
           Getting Loopy: Tourner en rond
           Relay programming: Programmation de relais
@@ -81,16 +81,16 @@
             cadre de ce cours, les élèves créeront des programmes pour résoudre des
             problèmes et développeront des jeux interactifs ou des histoires qu'ils
             pourront partager . Recommandé pour les niveaux CE2-CM2.
-          'Maze: Sequence': 'Labyrinthe\_: Séquence'
-          'Artist: Sequence': 'Artiste\_: Séquence'
-          'Maze: Loops': 'Labyrinthe\_: Boucles'
-          'Artist: Loops': 'Artiste\_: Boucles'
-          'Bee: Loops': 'Abeille\_: Boucles'
-          'Bee: Debugging': 'Abeille\_: Débogage'
-          'Artist: Debugging': 'Artiste\_: Débogage'
-          'Bee: Conditionals': 'Abeille\_: Instructions conditionnelles'
-          'Artist: Sequence2': 'Artiste\_: Séquence\_2'
-          'Maze: Sequence2': 'Labyrinthe\_: Séquence\_2'
+          'Maze: Sequence': 'Labyrinthe: Séquence'
+          'Artist: Sequence': 'Artiste: Séquence'
+          'Maze: Loops': 'Labyrinthe: Boucles'
+          'Artist: Loops': 'Artiste: Boucles'
+          'Bee: Loops': 'Abeille: Boucles'
+          'Bee: Debugging': 'Abeille: Débogage'
+          'Artist: Debugging': 'Artiste: Débogage'
+          'Bee: Conditionals': 'Abeille: Instructions conditionnelles'
+          'Artist: Sequence2': 'Artiste: Séquence2'
+          'Maze: Sequence2': 'Labyrinthe: Séquence2'
           'Artist: Nested Loops': 'Artiste : les boucles imbriquées'
           description_audience: De 6 à 18 ans
           description_short: Commencer avec le Cours 2 pour les élèves qui savent
@@ -119,35 +119,35 @@
           Internet: Internet
           Crowdsourcing: Financement participatif
           Digital Citizenship: Citoyenneté numérique
-          Farmer - While Loops: Fermier - Boucles «\_Tant que\_»
+          Farmer - While Loops: Fermier - Boucles «Tant que»
           description: Le Cours 3 s'adresse aux élèves qui ont déjà suivi le Cours
             2. Les élèves approfondiront les sujets de programmation introduits aux
             cours précédents - des solutions souples à des problèmes plus complexes.
             À la fin de ce cours, les élèves créent des histoires et des jeux interactifs
             qu'ils peuvent partager avec n'importe qui. Recommandé pour les niveaux
             CM1-CM2.
-          'Studio: Create a Game': 'Labo de jeux\_: Créer un jeu'
+          'Studio: Create a Game': 'Labo de jeux: Créer un jeu'
           Maze: Labyrinthe
           Artist: Artiste
-          'Artist: Functions': 'Artiste\_: Fonctions'
-          'Bee: Functions': 'Abeille\_: Fonctions'
+          'Artist: Functions': 'Artiste: Fonctions'
+          'Bee: Functions': 'Abeille: Fonctions'
           'Bee: Conditionals': 'Abeille : les instructions conditionnelles'
-          'Maze: Conditionals': 'Labyrinthe\_: Instructions conditionnelles'
-          'Artist: Nested Loops': 'Artiste\_: Boucles imbriquées'
-          'Farmer: While Loops': 'Fermier\_: Boucles «\_Tant que\_»'
-          'Bee: Nested Loops': 'Abeille\_: Boucles «\_Imbriquées\_»'
+          'Maze: Conditionals': 'Labyrinthe: Instructions conditionnelles'
+          'Artist: Nested Loops': 'Artiste: Boucles imbriquées'
+          'Farmer: While Loops': 'Fermier: Boucles «Tant que»'
+          'Bee: Nested Loops': 'Abeille: Boucles «Imbriquées»'
           'Bee: Debugging': 'Abeilles : le debugging'
           Maze2: Labyrinthe 2
           Artist2: Artiste 2
-          'Artist: Functions2': 'Artiste\_: Fonctions 2'
-          'Bee: Functions2': 'Abeille\_: Fonctions 2'
-          'Bee: Conditionals2': 'Abeille\_: Instructions conditionnelles 2'
-          'Maze: Conditionals2': 'Labyrinthe\_: Instructions conditionnelles 2'
-          'Artist: Nested Loops2': 'Artiste\_: Boucles «\_Imbriquées\_» 2'
-          'Farmer: While Loops2': 'Fermier\_: Boucles «\_Tant que\_» 2'
-          'Bee: Nested Loops2': 'Abeille\_: Boucles «\_Imbriquées\_» 2'
-          'Bee: Debugging2': 'Abeille\_: Débogage 2'
-          'Artist: Patterns': 'Artiste\_: Modèles'
+          'Artist: Functions2': 'Artiste: Fonctions 2'
+          'Bee: Functions2': 'Abeille: Fonctions 2'
+          'Bee: Conditionals2': 'Abeille: Instructions conditionnelles 2'
+          'Maze: Conditionals2': 'Labyrinthe: Instructions conditionnelles 2'
+          'Artist: Nested Loops2': 'Artiste: Boucles «Imbriquées» 2'
+          'Farmer: While Loops2': 'Fermier: Boucles «Tant que» 2'
+          'Bee: Nested Loops2': 'Abeille: Boucles «Imbriquées» 2'
+          'Bee: Debugging2': 'Abeille: Débogage 2'
+          'Artist: Patterns': 'Artiste: Modèles'
           Songwriting: "Écriture de chansons"
           description_audience: De 8 à 18 ans
           description_short: Le Cours 3 fait suite au Cours 2.
@@ -158,7 +158,7 @@
           description_short: Programmer une histoire ou un jeu avec le Labo !
         artist:
           title: Artiste
-          description: Dessine des super images et dessins avec l'Artiste\_!
+          description: Dessine des super images et dessins avec l'Artiste!
           Artist: Artiste
           description_short: Dessinez des super images et schémas avec l'Artiste!
         hourofcode:
@@ -186,29 +186,28 @@
             À la fin de ce cours, les élèves créent des histoires et des jeux interactifs
             qu'ils peuvent partager avec n'importe qui. Recommandé pour les niveaux
             CM1-4e.
-          'Artist: Variables': 'Artiste\_: Variables'
-          'Bee: For Loops': 'Abeille\_: Boucles « Pour »'
+          'Artist: Variables': 'Artiste: Variables'
+          'Bee: For Loops': 'Abeille: Boucles « Pour »'
           title: Cours 4
-          'Algorithms: Tangrams': 'Algorithmes\_: Tangrams'
+          'Algorithms: Tangrams': 'Algorithmes: Tangrams'
           Variables: Variables
-          'Play Lab: Variables': 'Labo de jeux\_: Variables'
-          'Play Lab: Functions with Parameters': 'Labo de jeux\_: Fonctions avec des
+          'Play Lab: Variables': 'Labo de jeux: Variables'
+          'Play Lab: Functions with Parameters': 'Labo de jeux: Fonctions avec des
             paramètres'
-          'Bee: Functions with Parameters': 'Abeille\_: Fonctions avec des paramètres'
-          'Artist: For Loops': 'Artiste\_: Boucles « Pour »'
-          'Play Lab: For Loops': 'Labo de jeux\_: Boucles « Pour »'
-          'Artist: Functions': 'Artiste\_: Fonctions'
-          'Unplugged: Tangrams': 'Débranché\_: Tangrams'
+          'Bee: Functions with Parameters': 'Abeille: Fonctions avec des paramètres'
+          'Artist: For Loops': 'Artiste: Boucles « Pour »'
+          'Play Lab: For Loops': 'Labo de jeux: Boucles « Pour »'
+          'Artist: Functions': 'Artiste: Fonctions'
+          'Unplugged: Tangrams': 'Débranché: Tangrams'
           Artist: Artiste
           Bee: Abeille
-          'Unplugged: Envelope Variables': 'Débranché\_: Variables de l''enveloppe'
-          'Unplugged: Madlibs': 'Débranché\_: Mad Libs'
-          'Unplugged: For Loop Fun': 'Débranché\_: Jouons avec les boucles « Pour
-            »'
-          'Unplugged: Songwriting with Parameters': 'Débranché\_: Composition de chansons
+          'Unplugged: Envelope Variables': 'Débranché: Variables de l''enveloppe'
+          'Unplugged: Madlibs': 'Débranché: Mad Libs'
+          'Unplugged: For Loop Fun': 'Débranché: Jouons avec les boucles « Pour »'
+          'Unplugged: Songwriting with Parameters': 'Débranché: Composition de chansons
             avec des paramètres'
-          'Artist: Functions with Parameters': 'Artiste\_: Fonctions avec des paramètres'
-          'Unplugged: Binary': 'Débranché\_: Binaire'
+          'Artist: Functions with Parameters': 'Artiste: Fonctions avec des paramètres'
+          'Unplugged: Binary': 'Débranché: Binaire'
           Bee Binary: Abeille binaire
           Farmer Binary: Fermier binaire
           Maze and Bee: Labyrinthe et abeille
@@ -226,15 +225,15 @@
           description: Un court rattrapage des concepts pour les élèves n'ayant pas
             suivi les Cours 2 et 3.
           Course 4 Prerequisite: Prérequis du Cours 4
-          'Maze: Sequence': 'Labyrinthe\_: Séquence'
-          'Artist: Sequence': 'Artiste\_: Séquence'
-          'Artist: Loops': 'Artiste\_: Boucles'
-          'Bee: Conditionals': 'Abeille\_: Instructions conditionnelles'
-          'Artist: Nested Loops': 'Artiste\_: Boucles imbriquées'
-          'Farmer: While Loops': 'Fermier\_: Boucles «\_Tant que\_»'
-          'Bee: Nested Loops': 'Abeille\_: Boucles «\_Imbriquées\_»'
-          'Artist: Functions': 'Artiste\_: Fonctions'
-          'Bee: Debugging': 'Abeille\_: Débogage'
+          'Maze: Sequence': 'Labyrinthe: Séquence'
+          'Artist: Sequence': 'Artiste: Séquence'
+          'Artist: Loops': 'Artiste: Boucles'
+          'Bee: Conditionals': 'Abeille: Instructions conditionnelles'
+          'Artist: Nested Loops': 'Artiste: Boucles imbriquées'
+          'Farmer: While Loops': 'Fermier: Boucles «Tant que»'
+          'Bee: Nested Loops': 'Abeille: Boucles «Imbriquées»'
+          'Artist: Functions': 'Artiste: Fonctions'
+          'Bee: Debugging': 'Abeille: Débogage'
         usability:
           Intro: Introduction
           Variables and For Loops: Variables et boucles « Pour »
@@ -261,7 +260,7 @@
           title: Informatique en algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
           description_short: Apprendre la programmation fonctionnelle par l'algèbre
-          'Unplugged: Video Games and Coordinate Planes': 'Débranché\_: Jeux vidéos
+          'Unplugged: Video Games and Coordinate Planes': 'Débranché: Jeux vidéos
             et plans de coordonnées'
           'Calc: Evaluation Blocks': Blocs d'évaluation et expressions arithmétiques
           'Eval: Strings and Images': Chaînes et images
@@ -270,7 +269,7 @@
           'Calc: Defining Variables': Définition de Variables et Substitution
           'Play Lab: Defining Variables (Big Game)': Le grand jeu - Variables
           'Eval: Defining Functions': Fonctions composées
-          'Unplugged: The Design Recipe': 'Débranché\_: La Recette de Conception'
+          'Unplugged: The Design Recipe': 'Débranché: La Recette de Conception'
           'Play Lab: Defining Functions': Hauteur de la fusée
           'Eval: Functions': Résoudre des problèmes de mots avec la recette de conception
           'Play Lab: Animation (Big Game)': Le grand jeu - Animation
@@ -278,7 +277,7 @@
           'Eval: Boolean Operators': Opérateurs booléens
           'Play Lab: Booleans': Sam la chauve-souris
           'Play Lab: Boolean (Big Game)': Le grand jeu - valeurs booléennes
-          'Unplugged: Conditionals and Piecewise Functions': 'Débranché\_: Instructions
+          'Unplugged: Conditionals and Piecewise Functions': 'Débranché: Instructions
             conditionnelles et fonctions par morceaux'
           'Eval: Conditionals': Instructions conditionnelles
           'Unplugged: Collision Detection and the Distance Formula': 'Activité débranchée
@@ -482,15 +481,15 @@
           description: Un court rattrapage des concepts pour les élèves n'ayant pas
             suivi les Cours 2 et 3.
           Course 4 Prerequisite: Prérequis du Cours 4
-          'Maze: Sequence': 'Labyrinthe\_: Séquence'
-          'Artist: Sequence': 'Artiste\_: Séquence'
-          'Artist: Loops': 'Artiste\_: Boucles'
-          'Bee: Conditionals': 'Abeille\_: Instructions conditionnelles'
-          'Artist: Nested Loops': 'Artiste\_: Boucles imbriquées'
-          'Farmer: While Loops': 'Fermier\_: Boucles «\_Tant que\_»'
-          'Bee: Nested Loops': 'Abeille\_: Boucles «\_Imbriquées\_»'
-          'Artist: Functions': 'Artiste\_: Fonctions'
-          'Bee: Debugging': 'Abeille\_: Débogage'
+          'Maze: Sequence': 'Labyrinthe: Séquence'
+          'Artist: Sequence': 'Artiste: Séquence'
+          'Artist: Loops': 'Artiste: Boucles'
+          'Bee: Conditionals': 'Abeille: Instructions conditionnelles'
+          'Artist: Nested Loops': 'Artiste: Boucles imbriquées'
+          'Farmer: While Loops': 'Fermier: Boucles «Tant que»'
+          'Bee: Nested Loops': 'Abeille: Boucles «Imbriquées»'
+          'Artist: Functions': 'Artiste: Fonctions'
+          'Bee: Debugging': 'Abeille: Débogage'
         cspunit1:
           title: CSP unité 1
           description_short: Faire des Images noir et blanc avec l'outil de pixellisation
@@ -536,30 +535,30 @@
           title: Informatique en DP d'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
           description_short: Apprendre la programmation fonctionnelle par l'algèbre
-          'Unplugged: Video Games and Coordinate Planes': 'Débranché\_: Jeux vidéos
+          'Unplugged: Video Games and Coordinate Planes': 'Débranché: Jeux vidéos
             et plans de coordonnées'
-          'Calc: Evaluation Blocks': 'Calc\_: Blocs d''évaluation'
-          'Eval: Strings and Images': 'Eval\_: Chaînes et images'
-          'Unplugged: Contracts': 'Débranché\_: Contrats'
-          'Eval: Writing Contracts': 'Eval\_: Rédaction de contrats'
-          'Calc: Defining Variables': 'Calc\_: Définir des variables'
-          'Play Lab: Defining Variables (Big Game)': 'Labo de jeux\_: Définir les
-            variables (Grand Jeu)'
+          'Calc: Evaluation Blocks': 'Calc: Blocs d''évaluation'
+          'Eval: Strings and Images': 'Eval: Chaînes et images'
+          'Unplugged: Contracts': 'Débranché: Contrats'
+          'Eval: Writing Contracts': 'Eval: Rédaction de contrats'
+          'Calc: Defining Variables': 'Calc: Définir des variables'
+          'Play Lab: Defining Variables (Big Game)': 'Labo de jeux: Définir les variables
+            (Grand Jeu)'
           'Eval: Defining Functions': 'Eval : Définition de fonctions'
-          'Unplugged: The Design Recipe': 'Débranché\_: La Recette de Conception'
+          'Unplugged: The Design Recipe': 'Débranché: La Recette de Conception'
           'Play Lab: Defining Functions': 'Labo : Définition de fonctions'
           'Eval: Functions': 'Eval : fonctions'
-          'Play Lab: Animation (Big Game)': 'Labo de jeux\_: Animation (Grand Jeu)'
-          'Unplugged: Booleans': 'Débranché\_: Booléens'
-          'Eval: Boolean Operators': 'Eval\_: Opérateurs booléens'
-          'Play Lab: Booleans': 'Labo de jeux\_: Booléens'
-          'Play Lab: Boolean (Big Game)': 'Labo de jeux\_: Booléens (Grand Jeu)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Débranché\_: Instructions
+          'Play Lab: Animation (Big Game)': 'Labo de jeux: Animation (Grand Jeu)'
+          'Unplugged: Booleans': 'Débranché: Booléens'
+          'Eval: Boolean Operators': 'Eval: Opérateurs booléens'
+          'Play Lab: Booleans': 'Labo de jeux: Booléens'
+          'Play Lab: Boolean (Big Game)': 'Labo de jeux: Booléens (Grand Jeu)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Débranché: Instructions
             conditionnelles et fonctions par morceaux'
-          'Eval: Conditionals': 'Eval\_: Instructions conditionnelles'
-          'Unplugged: Collision Detection and the Distance Formula': 'Débranché\_:
-            La détection de collision et la formule «\_Distance\_»'
-          'Play Lab: Collision Detection (Big Game)': 'Labo de jeux\_: Détection de
+          'Eval: Conditionals': 'Eval: Instructions conditionnelles'
+          'Unplugged: Collision Detection and the Distance Formula': 'Débranché: La
+            détection de collision et la formule «Distance»'
+          'Play Lab: Collision Detection (Big Game)': 'Labo de jeux: Détection de
             Collision (Grand Jeu)'
           Evaluation Blocks: Blocs d'évaluation
           Strings and Images: Chaînes et images
@@ -596,7 +595,7 @@
           Sam the Bat: Sam la chauve-souris
           Your Game - Booleans: Votre jeu - valeurs booléennes
           Luigi's Pizza: Luigi Pizza
-          'Play Lab: Collision Detection (Big Game)': 'Labo de jeux\_: Détection de
+          'Play Lab: Collision Detection (Big Game)': 'Labo de jeux: Détection de
             Collision (Grand Jeu)'
           Your Game - Player Movement: Votre jeu - mouvement des joueurs
           Your Game - Collision Detection: Votre jeu - détection de Collision
@@ -1055,7 +1054,7 @@
           Defining Functions: Définir les fonctions
           Rocket-Height: Hauteur de la fusée
           Booleans: Booléens
-          'Eval: Conditionals': 'Eval\_: Instructions conditionnelles'
+          'Eval: Conditionals': 'Eval: Instructions conditionnelles'
           Next Steps: Prochaines étapes
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
@@ -1177,7 +1176,7 @@
           Defining Functions: Définir les fonctions
           Rocket-Height: Hauteur de la fusée
           Booleans: Booléens
-          'Eval: Conditionals': 'Eval\_: Instructions conditionnelles'
+          'Eval: Conditionals': 'Eval: Instructions conditionnelles'
           Next Steps: Prochaines étapes
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
@@ -1325,7 +1324,7 @@
           description_audience: Ages 6-13
           Happy Maps: Cartes Joyeuses
           Move it, Move it: Déplace-le, déplace-le
-          'Real-life Algorithms: Plant a Seed': 'Algorithmes du monde réel\_: Planter
+          'Real-life Algorithms: Plant a Seed': 'Algorithmes du monde réel: Planter
             une graine'
           Graph Paper Programming: Programmation sur papier quadrillé
           Building a Foundation: Construire une fondation
@@ -1828,13 +1827,13 @@
           title: 'Computer Science in Algebra: Course A'
           description_short: Apprendre la programmation fonctionnelle par l'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
-          'Calc: Evaluation Blocks': 'Calc\_: Blocs d''évaluation'
-          'Eval: Strings and Images': 'Eval\_: Chaînes et images'
-          'Unplugged: Contracts': 'Débranché\_: Contrats'
-          'Eval: Writing Contracts': 'Eval\_: Rédaction de contrats'
-          'Calc: Defining Variables': 'Calc\_: Définir des variables'
+          'Calc: Evaluation Blocks': 'Calc: Blocs d''évaluation'
+          'Eval: Strings and Images': 'Eval: Chaînes et images'
+          'Unplugged: Contracts': 'Débranché: Contrats'
+          'Eval: Writing Contracts': 'Eval: Rédaction de contrats'
+          'Calc: Defining Variables': 'Calc: Définir des variables'
           'Eval: Defining Functions': 'Eval : Définition de fonctions'
-          'Unplugged: The Design Recipe': 'Débranché\_: La Recette de Conception'
+          'Unplugged: The Design Recipe': 'Débranché: La Recette de Conception'
           'Play Lab: Defining Functions': 'Labo : Définition de fonctions'
           'Eval: Functions': 'Eval : fonctions'
           'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
@@ -1842,21 +1841,21 @@
           title: Informatique en algèbre
           description_short: Apprendre la programmation fonctionnelle par l'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
-          'Unplugged: Video Games and Coordinate Planes': 'Débranché\_: Jeux vidéos
+          'Unplugged: Video Games and Coordinate Planes': 'Débranché: Jeux vidéos
             et plans de coordonnées'
-          'Play Lab: Defining Variables (Big Game)': 'Labo de jeux\_: Définir les
-            variables (Grand Jeu)'
-          'Play Lab: Animation (Big Game)': 'Labo de jeux\_: Animation (Grand Jeu)'
-          'Unplugged: Booleans': 'Débranché\_: Booléens'
-          'Eval: Boolean Operators': 'Eval\_: Opérateurs booléens'
-          'Play Lab: Booleans': 'Labo de jeux\_: Booléens'
-          'Play Lab: Boolean (Big Game)': 'Labo de jeux\_: Booléens (Grand Jeu)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Débranché\_: Instructions
+          'Play Lab: Defining Variables (Big Game)': 'Labo de jeux: Définir les variables
+            (Grand Jeu)'
+          'Play Lab: Animation (Big Game)': 'Labo de jeux: Animation (Grand Jeu)'
+          'Unplugged: Booleans': 'Débranché: Booléens'
+          'Eval: Boolean Operators': 'Eval: Opérateurs booléens'
+          'Play Lab: Booleans': 'Labo de jeux: Booléens'
+          'Play Lab: Boolean (Big Game)': 'Labo de jeux: Booléens (Grand Jeu)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Débranché: Instructions
             conditionnelles et fonctions par morceaux'
-          'Eval: Conditionals': 'Eval\_: Instructions conditionnelles'
-          'Unplugged: Collision Detection and the Distance Formula': 'Débranché\_:
-            La détection de collision et la formule «\_Distance\_»'
-          'Play Lab: Collision Detection (Big Game)': 'Labo de jeux\_: Détection de
+          'Eval: Conditionals': 'Eval: Instructions conditionnelles'
+          'Unplugged: Collision Detection and the Distance Formula': 'Débranché: La
+            détection de collision et la formule «Distance»'
+          'Play Lab: Collision Detection (Big Game)': 'Labo de jeux: Détection de
             Collision (Grand Jeu)'
         gamelab-hackathon:
           Middle_School_Hackathon: Middle_School_Hackathon
@@ -2316,3 +2315,98 @@
           Wrap-Up: Conclusions
         kinderTest:
           Kindergarten Stage 1: Kindergarten Stage 1
+        gradeKinder:
+          Debugging: Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': 'Puzzle : Apprendre à faire un glisser-déposer'
+          Programming: Programmation
+          Being Safe Online: Being Safe Online
+          Loops: Boucles
+          Programming Unplugged: Programming Unplugged
+          Loops Unplugged: Loops Unplugged
+          Events Unplugged: Events Unplugged
+          Events: "Événements"
+        grade4:
+          title: Grade 4
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 9-99
+          'Mixed Review #1 (Ramp Up)': 'Mixed Review #1 (Ramp Up)'
+          Conditionals: Instructions conditionnelles
+          'Bee: Conditionals': 'Abeille: Instructions conditionnelles'
+          'PlayLab: Conditionals': 'PlayLab: Conditionals'
+          Songwriting: "Écriture de chansons"
+          'Bee: Functions': 'Abeille: Fonctions'
+          Decision Trees: Decision Trees
+          Choose Your Own Adventure: Choose Your Own Adventure
+          'Project #1': 'Project #1'
+          Nested Loops: Boucles imbriquées
+          'Artist: Nested Loops': 'Artiste: Boucles imbriquées'
+          'Mixed Review #2 (Conditionals, Events, Functions)': 'Mixed Review #2 (Conditionals,
+            Events, Functions)'
+          'New Artist: Functions': 'New Artist: Functions'
+          'Project #2': 'Project #2'
+          'Mixed Review #3 (Deduce the Concept)': 'Mixed Review #3 (Deduce the Concept)'
+          Internet: Internet
+          Crowdsourcing: Financement participatif
+          Digital Citizenship: Citoyenneté numérique
+        grade1:
+          Predicting & Debugging: Predicting & Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': 'Puzzle : Apprendre à faire un glisser-déposer'
+        grade5:
+          title: Grade 5
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 10-110
+        ecs-unit1:
+          title: ECS Part 1
+          description_short: 'Unit 1: Human-Computer Interaction'
+          description: 'Unit 1: Human-Computer Interaction'
+          Welcome!: Bienvenue !
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Conclusions
+        ecs-unit2:
+          title: ECS Unit 2
+          description_short: 'Unit 2: Problem Solving'
+          description: 'Unit 2: Problem Solving'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Teaching Strategies: Teaching Strategies
+          Lesson Overviews: Lesson Overviews
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community
+            Problems with Data
+          'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To Problem
+            Solving: Candy Bar Activity'
+          'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6 Strategies
+            in Problem Solving: Handshake Activity'
+          'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow
+            Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14
+            Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees:
+            Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project

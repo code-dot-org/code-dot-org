@@ -3,16 +3,16 @@
     script:
       name:
         20-hour:
-          desc: K-8 Intro to Computer Science Course
+          desc: 'K-8: कंप्यूटर विज्ञान के परिचय का पाठ्यक्रम'
           Unplug1: Stage 1
           Maze: Star 2
           Unplug2: Star 3
-          Unplug3: Stage 4
-          Artist: Stage 5
-          Unplug4: Stage 6
-          Artist2: Stage 7
-          Unplug5: Stage 8
-          Farmer: Stage 9
+          Unplug3: "स्तर 4"
+          Artist: "स्तर 5"
+          Unplug4: "स्तर 6"
+          Artist2: "स्तर 7"
+          Unplug5: "स्तर 8"
+          Farmer: "स्तर 9"
           Unplug6: Stage 10
           Artist3: Stage 11
           Unplug7: Stage 12
@@ -50,7 +50,7 @@
           MazeEC: Stage 1
           Applab: Star 2
           ArtistEC: Star 3
-          StudioEC: Stage 4
+          StudioEC: "स्तर 4"
         events:
           desc: Bounce (beta)
           Bounce: Stage 1

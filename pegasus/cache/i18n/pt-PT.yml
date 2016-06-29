@@ -269,11 +269,11 @@
   learn_classes: Encontrar aulas perto de ti
   hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
   just_did_hoc: 'Terminar uma Hora de Código no @codeorg! #HourOfCode'
-  just_did_course1: Acabei de terminar o Curso 1 - Confira! @codeorg
-  just_did_course2: Acabei de terminar o Curso 2 - Confira! @codeorg
-  just_did_course3: Acabei de terminar o Curso 3 - Confira! @codeorg
-  just_did_course4: Acabei de terminar o Curso 4 - Confira! @codeorg
-  just_did_accelerated: Acabei de terminar o Curso Acelerado - Confira! @codeorg
+  just_did_course1: Vejam! Acabei de concluir o curso 1! @codeorg
+  just_did_course2: Vejam! Acabei de concluir o curso 2! @codeorg
+  just_did_course3: Vejam! Acabei de concluir o curso 3! @codeorg
+  just_did_course4: Vejam! Acabei de concluir o curso 4! @codeorg
+  just_did_accelerated: Vejam! Acabei de concluir o curso acelerado! @codeorg
   twitter_teach_cs: 9 de 10 pessoas concordam, as escolas devem ensinar ciência da
     computação. http://youtu.be/nKIu9yen5nc. Visite https://code.org/.
   learn_hoc: Aprende a programar numa hora com a Hora de Código
@@ -428,7 +428,7 @@
   homepage_slot_text_link_stats: Vê as estatísticas
   homepage_slot_text_link_buy: Colaborar
   homepage_slot_text_link_donate: Faz uma doação
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: T-shirts, chapéus e muito mais
   homepage_header_codestudio: Criações de alunos no Code Studio
   homepage_header_donors: Agradecemos a quem nos apoia
   homepage_donors_seall: Ver todos
@@ -923,13 +923,13 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
-  dashboard_announce_button_text: Saber mais
+  dashboard_announce_button_text: Testar funcionalidade
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Adicionar o teu nome
   code_hoc_coming: 'A Hora de Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
