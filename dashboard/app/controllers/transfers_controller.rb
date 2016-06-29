@@ -102,11 +102,11 @@ class TransfersController < ApplicationController
         follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)
         follower_same_user_teacher.update_attributes!(section_id: new_section.id)
       else
-        if !student.followeds.exists?(section_id: new_section.id)
+        unless student.followeds.exists?(section_id: new_section.id)
           student.followeds.create!(user_id: new_section.user_id, section: new_section)
         end
 
-        if !stay_enrolled_in_current_section
+        unless stay_enrolled_in_current_section
           student.followeds.find_by_section_id(current_section.id).destroy
         end
       end

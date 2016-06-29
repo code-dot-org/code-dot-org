@@ -71,7 +71,7 @@ def do_linting
   }
 
   todo.each do |func, files|
-    if !files.empty?
+    unless files.empty?
       stdout, stderr, status = func.call(files)
       lint_failure(stdout + stderr) unless status.success?
     end
