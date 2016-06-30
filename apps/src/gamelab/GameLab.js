@@ -220,8 +220,8 @@ GameLab.prototype.init = function (config) {
   });
 
   // Push project-sourced animation metadata into store
-  if (typeof config.initialAnimationMetadata !== 'undefined') {
-    let animationList = config.initialAnimationMetadata;
+  if (typeof config.initialAnimationList !== 'undefined') {
+    let animationList = config.initialAnimationList;
 
     // TODO: Tear out this migration when we don't think we need it anymore.
     if (Array.isArray(animationList)) {
