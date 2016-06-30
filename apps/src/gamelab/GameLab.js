@@ -29,7 +29,8 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-import {setInitialAnimationList, getSerializedAnimationList, saveAnimations} from './animationListModule';
+import {setInitialAnimationList, saveAnimations} from './animationListModule';
+import {getSerializedAnimationList} from './PropTypes';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;

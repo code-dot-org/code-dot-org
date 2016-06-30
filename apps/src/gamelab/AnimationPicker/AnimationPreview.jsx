@@ -1,6 +1,7 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
 import React from 'react';
 import {EMPTY_IMAGE} from '../constants';
+import * as PropTypes from '../PropTypes';
 const MARGIN_PX = 2;
 
 /**
@@ -9,7 +10,7 @@ const MARGIN_PX = 2;
  */
 const AnimationPreview = React.createClass({
   propTypes: {
-    animationProps: React.PropTypes.object.isRequired, // TODO: Shape?
+    animationProps: PropTypes.AnimationProps.isRequired,
     sourceUrl: React.PropTypes.string, // of spritesheet
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,

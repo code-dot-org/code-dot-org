@@ -5,6 +5,7 @@ import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../color';
+import * as PropTypes from '../PropTypes';
 import {setAnimationName, cloneAnimation, deleteAnimation} from '../animationListModule';
 import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
@@ -67,8 +68,8 @@ const styles = {
 const AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
-    animationKey: React.PropTypes.string.isRequired,
-    animationProps: React.PropTypes.object.isRequired, // TODO: Shape?
+    animationKey: PropTypes.AnimationKey.isRequired,
+    animationProps: PropTypes.AnimationProps.isRequired,
     columnWidth: React.PropTypes.number.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
