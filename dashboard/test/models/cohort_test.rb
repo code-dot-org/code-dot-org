@@ -65,6 +65,5 @@ class CohortTest < ActiveSupport::TestCase
       c.teachers << create(:teacher)
       c.save!
     end
-
   end
 end

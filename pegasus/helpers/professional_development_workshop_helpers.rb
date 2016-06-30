@@ -57,7 +57,6 @@ def generate_professional_development_workshop_teachers_report
       where(section_id: section_id).
       join(:users, id: :student_user_id).
       select(:users__id___id, :users__name___name, :users__email___email).map do |teacher|
-
       # get data on students of the teacher
       teacher_user_id = teacher[:id]
       next unless teacher_user_id
@@ -152,6 +151,5 @@ def generate_professional_development_workshops_report(from=nil, to=nil)
       Type: data['type_s'],
       Signups: signup_count.to_s + '/' + data['capacity_s'],
     }
-
   end.compact.flatten
 end
