@@ -279,10 +279,12 @@ var projects = module.exports = {
   /**
    *
    * @param {Object} sourceHandler Object containing callbacks provided by caller.
-   * @param {Function} sourceHandler.setInitialLevelHtml
-   * @param {Function} sourceHandler.getLevelHtml
-   * @param {Function} sourceHandler.setInitialLevelSource
-   * @param {Function} sourceHandler.getLevelSource
+   * @param {function(string)} sourceHandler.setInitialLevelHtml
+   * @param {function(): string} sourceHandler.getLevelHtml
+   * @param {function(string)} sourceHandler.setInitialLevelSource
+   * @param {function(): string} sourceHandler.getLevelSource
+   * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
+   * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
    */
   init: function (sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -296,7 +298,7 @@ var projects = module.exports = {
       }
 
       if (currentSources.animations) {
-        sourceHandler.setInitialAnimationMetadata(currentSources.animations);
+        sourceHandler.setInitialAnimationList(currentSources.animations);
       }
 
       if (isEditing) {
@@ -422,10 +424,10 @@ var projects = module.exports = {
       var args = Array.prototype.slice.apply(arguments);
       callback = args[0];
       forceNewVersion = args[1];
-      this.sourceHandler.getAnimationMetadata((animations) => {
+      this.sourceHandler.getAnimationList(animationList => {
         const source = this.sourceHandler.getLevelSource();
         const html = this.sourceHandler.getLevelHtml();
-        this.save({source, html, animations}, callback, forceNewVersion);
+        this.save({source, html, animationList}, callback, forceNewVersion);
       });
       return;
     }
@@ -497,17 +499,17 @@ var projects = module.exports = {
       return;
     }
 
-    this.sourceHandler.getAnimationMetadata((animations) => {
+    this.sourceHandler.getAnimationList(animationList => {
       const source = this.sourceHandler.getLevelSource();
       const html = this.sourceHandler.getLevelHtml();
       if (currentSources.source === source &&
           currentSources.html === html &&
-          currentSources.animations === animations) {
+          currentSources.animations === animationList) {
         hasProjectChanged = false;
         return;
       }
 
-      this.save({source, html, animations}, function () {
+      this.save({source, html, animationList}, function () {
         hasProjectChanged = false;
       });
     });

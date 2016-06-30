@@ -249,12 +249,12 @@ window.apps = {
       }
       return source;
     },
-    setInitialAnimationMetadata: function (animations) {
-      appOptions.initialAnimationMetadata = animations;
+    setInitialAnimationList: function (animationList) {
+      appOptions.initialAnimationList = animationList;
     },
-    getAnimationMetadata: function (callback) {
-      if (appOptions.getAnimationMetadata) {
-        appOptions.getAnimationMetadata(callback);
+    getAnimationList: function (callback) {
+      if (appOptions.getAnimationList) {
+        appOptions.getAnimationList(callback);
       } else {
         callback({});
       }
