@@ -57,8 +57,12 @@ const DataProperties = React.createClass({
             </tr>
 
             <tr style={dataStyles.addRow}>
-              <td style={dataStyles.cell}></td>
-              <td style={dataStyles.cell}></td>
+              <td style={dataStyles.cell}>
+                <input style={dataStyles.input}></input>
+              </td>
+              <td style={dataStyles.cell}>
+                <input style={dataStyles.input}></input>
+              </td>
               <td style={dataStyles.cell}>
                 <button className="btn btn-primary" style={dataStyles.button}>Add pair</button>
               </td>
