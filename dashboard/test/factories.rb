@@ -443,6 +443,7 @@ FactoryGirl.define do
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
     sessions {[create(:pd_session)]}
+    section {create(:section)}
     started_at {Time.zone.now}
     ended_at {Time.zone.now}
   end

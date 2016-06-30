@@ -189,37 +189,45 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   # Tests the following:
-  #   1. enrolled_not_attended teacher does not get an email
-  #   2. enrolled_attendee and unenrolled_attendee each get an email
+  #   1. enrolled-only teacher does not get an email
+  #   2. All teachers in the section get an email
   #   3. accidental_student_attendee is converted to a teacher account and gets an email
   #   Note - an accidental student without an associated enrollment entry will not get an email,
-  #          because the email address is hashed and non-discoverable.
+  #          because the email address is hashed and non-discoverable. This is not tested.
   test 'send_exit_surveys' do
-    workshop = create :pd_ended_workshop
-    enrolled_not_attended = create :teacher
-    create :pd_enrollment, workshop: workshop, name: enrolled_not_attended.name, email: enrolled_not_attended.email
+    @workshop = create :pd_ended_workshop
 
-    enrolled_attendee = create :teacher
-    create :pd_enrollment, workshop: workshop, name: enrolled_attendee.name, email: enrolled_attendee.email
-    create :pd_attendance, session: workshop.sessions.first, teacher: enrolled_attendee
+    # Enrolled only, not in section.
+    create_teacher enrolled: true
 
-    unenrolled_attendee = create :teacher
-    create :pd_attendance, session: workshop.sessions.first, teacher: unenrolled_attendee
+    enrolled_in_section = create_teacher enrolled: true, in_section: true
+    enrolled_in_section_attended = create_teacher enrolled: true, in_section: true, attended: true
+
+    unenrolled_in_section = create_teacher in_section: true
+    unenrolled_in_section_attended = create_teacher in_section: true, attended: true
 
     accidental_student_email = 'i-should-be-a-teacher@example.net'
     accidental_student_attendee = create :student, email: accidental_student_email
-    create :pd_enrollment, workshop: workshop,
+    create :pd_enrollment, workshop: @workshop,
       name: accidental_student_attendee.name, email: accidental_student_email
-    create :pd_attendance, session: workshop.sessions.first, teacher: accidental_student_attendee
+    @workshop.section.add_student accidental_student_attendee
+    create :pd_attendance, session: @workshop.sessions.first, teacher: accidental_student_attendee
 
     assert_empty accidental_student_attendee.email
     mock_mail = stub(deliver_now: nil)
-    [enrolled_attendee, unenrolled_attendee, accidental_student_attendee].each do |expected_teacher|
+
+    [
+      enrolled_in_section,
+      enrolled_in_section_attended,
+      unenrolled_in_section,
+      unenrolled_in_section_attended,
+      accidental_student_attendee
+    ].each do |expected_teacher|
       Pd::WorkshopMailer.expects(:exit_survey).with(
-        workshop, expected_teacher, instance_of(Pd::Enrollment)
+        @workshop, expected_teacher, instance_of(Pd::Enrollment)
       ).returns(mock_mail)
     end
-    workshop.send_exit_surveys
+    @workshop.send_exit_surveys
 
     accidental_student_attendee.reload
     refute_empty accidental_student_attendee.email
@@ -251,5 +259,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   def today
     Date.today.in_time_zone
+  end
+
+  def create_teacher(enrolled: false, in_section: false, attended: false)
+    create(:teacher).tap do |teacher|
+      create :pd_enrollment, workshop: @workshop, name: teacher.name, email: teacher.email if enrolled
+      @workshop.section.add_student teacher if in_section
+      create :pd_attendance, session: @workshop.sessions.first, teacher: teacher if attended
+    end
   end
 end
