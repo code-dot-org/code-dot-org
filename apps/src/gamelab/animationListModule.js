@@ -396,7 +396,6 @@ export function saveAnimations(onComplete) {
               .then(action => { dispatch(action); });
         }))
         .then(() => {
-          console.log(`Saved ${changedAnimationKeys.length} animations to S3`); // TODO: Remove
           onComplete();
         })
         .catch(err => {
