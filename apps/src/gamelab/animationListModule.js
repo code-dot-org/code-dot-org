@@ -35,28 +35,25 @@ import {reportError} from './errorDialogStackModule';
 /* global dashboard */
 
 // Args: {SerializedAnimationList} animationList
-const SET_INITIAL_ANIMATION_LIST = 'SET_INITIAL_ANIMATION_LIST';
+const SET_INITIAL_ANIMATION_LIST = 'AnimationList/SET_INITIAL_ANIMATION_LIST';
 // Args: {AnimationKey} key, {SerializedAnimation} data
-export const ADD_ANIMATION = 'ADD_ANIMATION';
+export const ADD_ANIMATION = 'AnimationList/ADD_ANIMATION';
 // Args: {number} index, {AnimationKey} key, {SerializedAnimation} data
-export const ADD_ANIMATION_AT = 'ADD_ANIMATION_AT';
+export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
 // Args: {AnimationKey} key, {SerializedAnimation} data
-export const EDIT_ANIMATION = 'EDIT_ANIMATION';
+export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
 // Args: {AnimationKey} key
-const INVALIDATE_ANIMATION = 'INVALIDATE_ANIMATION';
+const INVALIDATE_ANIMATION = 'AnimationList/INVALIDATE_ANIMATION';
 // Args: {AnimationKey} key, {string} name
-const SET_ANIMATION_NAME = 'SET_ANIMATION_NAME';
+const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
 // Args: {AnimationKey} key
-const DELETE_ANIMATION = 'DELETE_ANIMATION';
-
-// const SET_ANIMATION_NAME = 'SET_ANIMATION_NAME';
-
+const DELETE_ANIMATION = 'AnimationList/DELETE_ANIMATION';
 // Args: {AnimationKey} key
-const START_LOADING_FROM_SOURCE = 'START_LOADING_FROM_SOURCE';
+const START_LOADING_FROM_SOURCE = 'AnimationList/START_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {Blob} blob, {String} dataURI. Version?
-const DONE_LOADING_FROM_SOURCE = 'DONE_LOADING_FROM_SgOURCE';
+const DONE_LOADING_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SgOURCE';
 // Args: {AnimationKey} key, {string} version
-const ON_ANIMATION_SAVED = 'ON_ANIMATION_SAVED';
+const ON_ANIMATION_SAVED = 'AnimationList/ON_ANIMATION_SAVED';
 
 export default combineReducers({
   list,
