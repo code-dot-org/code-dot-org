@@ -1,9 +1,19 @@
 import React from 'react';
+import { studentsShape } from './types';
 
 /**
  * Section selector component, for students in multiple sections.
  */
 const SectionSelector = React.createClass({
+  propTypes: {
+    sections: React.PropTypes.arrayOf(React.PropTypes.shape({
+      id: React.PropTypes.number,
+      name: React.PropTypes.string,
+      students: studentsShape
+    })),
+    selectedSectionId: React.PropTypes.number
+  },
+
   handleChange(event) {
     this.props.handleChange(event);
   },
