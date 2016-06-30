@@ -596,13 +596,10 @@ export function getSerializedAnimationList(animationList) {
   };
 }
 
-// TODO: Enable starting new blank animation
-// TODO: Don't upload to S3 on selection if an animation is never modified
-// TODO: Save uploaded animation version ID to metadata
+// TODO: Don't upload to S3 if an animation is never modified
 // TODO: Overwrite version ID within session
-// TODO: Save project source on animation update.
-// TODO: Handle slow Piskel initialization gracefully.
+// TODO: Load exact version ID on project load
 // TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
 //       is deleted, so nothing is selected.
-// TODO: Piskel load breaks when adding from gallery due to delay getting full image data
+// TODO: Enable starting new blank animation
 // TODO: Warn about duplicate-named animations.
