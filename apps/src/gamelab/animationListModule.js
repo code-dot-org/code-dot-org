@@ -310,21 +310,12 @@ export function editAnimation(key, data) {
  */
 export function deleteAnimation(key) {
   return dispatch => {
-    animationsApi.ajax(
-        'DELETE',
-        key + '.png',
-        function success() {
-          dispatch(selectAnimation(null));
-          dispatch({
-            type: DELETE_ANIMATION,
-            key
-          });
-          dashboard.project.projectChanged();
-        },
-        function error(xhr) {
-          dispatch(reportError(`Error deleting object ${key}: ${xhr.status} ${xhr.statusText}`));
-        }
-    );
+    dispatch(selectAnimation(null));
+    dispatch({type: DELETE_ANIMATION, key});
+    dashboard.project.projectChanged();
+    animationsApi.ajax('DELETE', key + '.png', () => {}, function error(xhr) {
+      dispatch(reportError(`Error deleting object ${key}: ${xhr.status} ${xhr.statusText}`));
+    });
   };
 }
 
@@ -400,11 +391,6 @@ export function saveAnimations(onComplete) {
   return (dispatch, getState) => {
     const state = getState().animationList;
     const changedAnimationKeys = state.list.filter(key => !state.data[key].saved);
-    // If nothing changed, no action necessary.
-    if (0 === changedAnimationKeys.length) {
-      return;
-    }
-
     Promise.all(changedAnimationKeys.map(key => {
           return saveAnimation(key, state.data[key])
               .then(action => { dispatch(action); });
