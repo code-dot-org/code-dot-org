@@ -18,6 +18,7 @@ const styles = {
 const DataTable = React.createClass({
   propTypes: {
     // from redux state
+    tableData: React.PropTypes.object.isRequired,
     tableName: React.PropTypes.string.isRequired,
     view: React.PropTypes.oneOf(Object.keys(DataView)),
 
@@ -36,6 +37,8 @@ const DataTable = React.createClass({
           </a>
           &nbsp;&gt; {this.props.tableName}
         </h4>
+        {/* placeholder display of table contents */}
+        {JSON.stringify(this.props.tableData, null, 2)}
       </div>
     );
   }
@@ -43,6 +46,7 @@ const DataTable = React.createClass({
 
 export default connect(state => ({
   view: state.data.view,
+  tableData: state.data.tableData,
   tableName: state.data.tableName || ''
 }), dispatch => ({
   onViewChange(view) {

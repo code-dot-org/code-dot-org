@@ -30,6 +30,7 @@ var dropletConfig = require('./dropletConfig');
 var makerDropletConfig = require('../makerlab/dropletConfig');
 var AppStorage = require('./appStorage');
 var FirebaseStorage = require('./firebaseStorage');
+import { getDatabase } from './firebaseUtils';
 var constants = require('../constants');
 var experiments = require('../experiments');
 var _ = require('lodash');
@@ -59,15 +60,15 @@ var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 
-var applabConstants = require('./constants');
+import applabConstants, { ApplabInterfaceMode, DataView }  from './constants';
 var consoleApi = require('../consoleApi');
 
 var BoardController = require('../makerlab/BoardController');
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
+import { updateTableData, updateKeyValueData } from './redux/data';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
-var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
 /**
  * Create a namespace for the application.
@@ -798,6 +799,11 @@ Applab.init = function (config) {
   studioApp.notifyInitialRenderComplete(config);
 };
 
+function changedToDataMode(state, lastState) {
+  return state.interfaceMode !== lastState.interfaceMode &&
+      state.interfaceMode === ApplabInterfaceMode.DATA;
+}
+
 /**
  * Subscribe to state changes on the store.
  * @param {!Store} store
@@ -812,6 +818,13 @@ function setupReduxSubscribers(store) {
 
     if (state.interfaceMode !== lastState.interfaceMode) {
       onInterfaceModeChange(state.interfaceMode);
+    }
+
+    // Simulate a data view change when switching into data mode.
+    const view = state.data && state.data.view;
+    const lastView = lastState.data && lastState.data.view;
+    if (view !== lastView || changedToDataMode(state, lastState)) {
+      onDataViewChange(state.data.view, state.data.tableName);
     }
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
@@ -1239,6 +1252,36 @@ function onInterfaceModeChange(mode) {
     } else {
       Applab.activeScreen().focus();
     }
+  }
+}
+
+/**
+ * Handle a view change within data mode.
+ * @param {DataView} view
+ */
+function onDataViewChange(view, tableName) {
+  if (!studioApp.reduxStore.getState().pageConstants.hasDataMode) {
+    throw new Error('onDataViewChange triggered without data mode enabled');
+  }
+  const storageRef = getDatabase(Applab.channelId).child('storage');
+  switch (view) {
+    case DataView.OVERVIEW:
+      storageRef.off();
+      return;
+    case DataView.PROPERTIES:
+      storageRef.off();
+      storageRef.child('keys').on('value', snapshot => {
+        studioApp.reduxStore.dispatch(updateKeyValueData(snapshot.val()));
+      });
+      return;
+    case DataView.TABLE:
+      storageRef.off();
+      storageRef.child(`tables/${tableName}`).on('value', snapshot => {
+        studioApp.reduxStore.dispatch(updateTableData(snapshot.val()));
+      });
+      return;
+    default:
+      return;
   }
 }
 
