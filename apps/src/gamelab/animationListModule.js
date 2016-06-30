@@ -167,6 +167,36 @@ export function setInitialAnimationList(serializedAnimationList) {
   };
 }
 
+export function addBlankAnimation() {
+  const key = utils.createUuid();
+  return dispatch => {
+    // Special behavior here:
+    // By pushing an animation that is "loadedFromSource" but has a null
+    // blob and dataURI, Piskel will know to create a new document with
+    // the given dimensions.
+    dispatch({
+      type: ADD_ANIMATION,
+      key,
+      data: {
+        name: 'New animation', // TODO: Better generated name?
+        sourceUrl: null,
+        sourceSize: {x: 100, y: 100},
+        frameSize: {x: 100, y: 100},
+        frameCount: 1,
+        frameRate: 15,
+        version: null,
+        loadedFromSource: true,
+        saved: false,
+        blob: null,
+        dataURI: null,
+        hasNewVersionThisSession: false
+      }
+    });
+    dispatch(selectAnimation(key));
+    dashboard.project.projectChanged();
+  };
+}
+
 /**
  * Add an animation to the project (at the end of the list).
  * @param {!AnimationKey} key
