@@ -6,14 +6,14 @@ video_player: true
 
 %link{href: "/css/jumbotron-banner.css", rel: "stylesheet"}
 
-= view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/csp-widgets.jpg"), title: "CSP Widgets", desc: "Widgets are small digital tools that act as a playground for exploring and experimenting with a single concept. Widgets are like a “plugged in” version of an unplugged activity that lets you experiment with different approaches to problems more quickly and accurately than having to eyeball it on paper.", specs: "Ages 14+, All modern browsers, English only", nav_bar: [{text: 'Text compression', url: '#text-compression'}, {text: 'Pixelation Widget', url: '#pixelation'}, {text: 'Internet Simulator', url: '#internet-simulator'}, {text: 'Cryptography', url: '#cryptography'}]
+= view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/csp-widgets.jpg"), title: "CSP Widgets", desc: "This is sample text. Here are widgets from the CS Principles course that you can use to supplement any high school computer science course.", specs: "Ages 14+, All modern browsers, English only", nav_bar: [{text: 'Text compression', url: '#text-compression'}, {text: 'Pixelation Widget', url: '#pixelation'}, {text: 'Internet Simulator', url: '#internet-simulator'}, {text: 'Cryptography', url: '#cryptography'}]
 
 #text-compression
   %h1{style: 'background-color: #7665a0; color: white; height: 60px; padding-top: 10px; padding-left: 15px;'} Text compression
   .tool-video{style: 'float: left; width: 40%; margin-right: 20px;'}
     = view :display_video_thumbnail, id: 'text_compression', video_code: 'LCGkcn1f-ms', play_button: 'center', download_path: 'https://video.code.org/2015/csp/textcompression_blacc.mp4', letterbox: 'false'
   .tool-desc
-    The text compression widget lets students interactively experiment with compressing a piece of text by identifying patterns in text, storing those patterns in a “dictionary”, and replacing the dictionary pattern with a 1-byte symbol to create a lossless compressed version of the text.  The widget updates with every keystroke and also performs the compression calculations so you can see if you’re increasing or decreasing the total file size in real time. The most intriguing idea to play with is figuring out how to best harness the power of representing patterns of patterns.  Done right, it can dramatically improve compression; done wrong, it can...dramatically go very wrong. 
+    Here is some sample text about the text compression widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
     %ul.tool-links{style: 'margin-left: 45%'}
       %li
         %i.fa.fa-file-text
@@ -32,8 +32,7 @@ video_player: true
 #pixelation
   %h1{style: 'background-color: #7665a0; color: white; height: 60px; padding-top: 10px; padding-left: 15px; margin-top: 100px;'} Pixelation Widget
   .tool-desc{style: 'float: left; width: 30%; margin-right: 20px;'}
-    This widget lets students compose an image “in binary” by filling in binary information and the widget renders the image that the binary represents.  It’s like having an instant binary interpreter that obeys the rules of the agreed upon image format.  The widget has a few variants of increasing sophistication that are used over a few lessons. 
-
+    Here is some sample text about the pixelation widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
     %ul
       %li
         %i.fa.fa-external-link-square
@@ -51,7 +50,7 @@ video_player: true
   .tool-video{style: 'float: left; width: 40%; margin-right: 20px;'}
     = view :display_video_thumbnail, id: 'bw_pixelation', video_code: 'rJOa5Q5a1WM', play_button: 'center', download_path: 'https://videos.code.org/2015/csp/pixelation_bw.mp4', letterbox: 'false'
   .tool-desc
-    The black and white version of the widget simply encodes images with 1 bit per pixel - 0 is black, 1 is white.  There is also some metadata to encode the width and height of the image.  This is a good one to get your feet wet. 
+    Here is some sample text about the black and white pixelation widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
     %ul.tool-links{style: 'margin-left: 45%'}
       %li
         %i.fa.fa-file-text
@@ -66,7 +65,7 @@ video_player: true
   %h2 Color Pixelation
   %img{src: '/images/app-lab/color-pixelation.png', style: 'float: left; margin-right: 20px; width: 40%'}
   .tool-desc
-    The color version of the widget lets you encode each pixel with any number of bits from 1 to 24.  Using the widget, you'll understand much more deeply how RGB colors work, and why hexadecimal representation is so useful for looking at long strings of binary values.  Try your hand at mixing digital colors by writing the binary yourself!
+    Here is some sample text about the color pixelation widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
   %ul.tool-links{style: 'margin-left: 45%;'}
     %li
       %i.fa.fa-file-text
@@ -90,14 +89,7 @@ video_player: true
   %h1{style: 'background-color: #7665a0; color: white; height: 60px; padding-top: 10px; padding-left: 15px; margin-top: 100px;'} Internet Simulator
   %img{src: '/images/app-lab/internet-protocol.png', style: 'float: left; margin-right: 20px; width: 40%'}
   .tool-desc
-    %p
-      Foo. Similar to a widget, but much larger in scope, the Internet Simulator is designed to let students visualize, experiment with, and solve different kinds of problems associated with networked computers in a hands-on way.  Often these problems involve inventing a communication protocol, or inventing ways to encode information that makes transporting it over the Internet feasible. 
-
-    %p
-    It is essential to note that we use the Internet Simulator for much more than teaching Internet Protocols. The Internet Simulator contextualizes exploration of much deeper concepts in computer science like the use of abstraction to solve problems and the binary representation of information. The goal of the Internet Simulator is not merely to present the functionality of the different layers of the Internet, but to provide an opportunity for students to reason about why those structures exist and even develop their own solutions to the problems solved by the systems of the internet.
-
-    %p
-    The Simulator is configured differently in each lesson to enforce different rules or expose different behaviors of the internet that students must creatively problem solve around. Specifically, each version of the Internet Simulator is configured to mirror a high level version of the layered Internet Protocol stack. With each lesson the Internet Simulator changes to incorporate the solution to the previous problem students solved. In this way we work from the bottom up, first solving physical coordination problems with sending bits back and forth, then addressing (IP), then packeting (TCP) then name-to-address mapping (DNS) and finally HTTP.
+    Here is some sample text about the internet simulator widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
   %ul.tool-links{style: 'margin-left: 45%;'}
     %li
       %i.fa.fa-external-link-square
@@ -164,13 +156,13 @@ video_player: true
   .tool-video{style: 'float: left; width: 40%; margin-right: 20px;'}
     = view :display_video_thumbnail, id: 'cryptography', video_code: 'ZghMPWGXexs', play_button: 'center', download_path: 'http://videos.code.org/2015/csp/concept_encryption.mp4', letterbox: 'false'
   .tool-desc
-    This widget lets you play with two classic substitution ciphers, one known as the Caesar Shift (encryption by shifting each letter of alphabet the same amount) and random substitution (encryption via a 1:1 substitution of one letter for another, but randomly assigned as opposed to a uniform shift).
+    Here is some sample text about the cryptography widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
   .clear
 
   %h2 Frequency analysis widget
   %img{src: '/images/app-lab/frequency-analysis.png', style: 'float: left; margin-right: 20px; width: 40%'}
   .tool-desc
-    This widget lets you play with two classic substitution ciphers, one known as the Caesar Shift (encryption by shifting each letter of alphabet the same amount) and random substitution (encryption via a 1:1 substitution of one letter for another, but randomly assigned as opposed to a uniform shift).
+    Here is some sample text about the frequency analysis widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
   %ul.tool-links{style: 'margin-left: 45%;'}
     %li
       %i.fa.fa-external-link-square
@@ -193,11 +185,10 @@ video_player: true
       %a{href: CDO.studio_url('/s/cspunit2/stage/14/puzzle/1')}
         Frequency analysis stage in CSP
 
-  %h2 Vigenère cipher widget
+  %h2 Vigenere cipher widget
   %img{src: '/images/app-lab/vigenere-cipher.png', style: 'float: left; margin-right: 20px; width: 40%'}
   .tool-desc
-    This widget is used in the same lesson as the the random substitution cipher, and allows students to play with a much more sophisticated encryption technique that was considered (basically) unbreakable for a very long time.  The Vigenère cipher is similar to the caesar or random substitution cipher, but the shift changes for each letter based on a secret key.
-
+    Here is some sample text about the vigenere cipher widget. It can do lots of cool things when you try it. You can use it to teach this concept and that concept. Try watching this cool video or review the lesson plan to figure out how to use it in your class.
   %ul.tool-links{style: 'margin-left: 45%;'}
     %li
       %i.fa.fa-external-link-square
