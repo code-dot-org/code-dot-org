@@ -10,14 +10,14 @@ import StudentSelector from './student_selector.jsx';
  */
 const Pairing = React.createClass({
   propTypes: {
-    source: React.PropTypes.string
+    source: React.PropTypes.string,
+    handleClose: React.PropTypes.func
   },
 
   getInitialState() {
     return {
       pairings: [],
-      sections: [],
-      selectedSectionId: ''
+      sections: []
     };
   },
 
@@ -29,8 +29,7 @@ const Pairing = React.createClass({
     }).done(function (result) {
       this.setState({
         pairings: result.pairings,
-        sections: result.sections,
-        selectedSectionId: ''
+        sections: result.sections
       });
     }.bind(this)).fail(function (result) {
       // TODO what to do here?
@@ -82,8 +81,7 @@ const Pairing = React.createClass({
 
   handleStop(event) {
     this.setState({
-      pairings: [],
-      selectedSectionId: ''
+      pairings: []
     });
 
     $.ajax({
@@ -104,7 +102,7 @@ const Pairing = React.createClass({
 
   selectedSectionId() {
     if (this.state.sections.length === 1) {
-      return this.state.sections[0].id;
+      return +this.state.sections[0].id;
     } else {
       return this.state.selectedSectionId;
     }
@@ -136,7 +134,6 @@ const Pairing = React.createClass({
         <h1>Choose partners:</h1>
         <br/>
         <form>
-          <input type="hidden" name="authenticity_token" value={this.props.csrfToken}/>
           <SectionSelector
             sections={this.state.sections}
             selectedSectionId={this.selectedSectionId()}
