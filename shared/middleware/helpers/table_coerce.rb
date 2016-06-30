@@ -84,8 +84,8 @@ module TableCoerce
   def TableCoerce.to_boolean(val)
     return val if val == true || val == false
     raise 'Cannot coerce to boolean' unless val.is_a?(String)
-    return true if !TRUE.match(val).nil?
-    return false if !FALSE.match(val).nil?
+    return true unless TRUE.match(val).nil?
+    return false unless FALSE.match(val).nil?
     raise 'Cannot coerce to boolean'
   end
 

@@ -323,7 +323,7 @@ class TablesApi < Sinatra::Base
 
     # deleting the old records only after all validity checks have passed.
     begin
-      table.delete_all()
+      table.delete_all
     rescue Exception
       halt 500
     end
@@ -402,7 +402,7 @@ class TablesApi < Sinatra::Base
         next
       end
 
-      table.delete_all()
+      table.delete_all
       json_data[table_name].each_with_index do |record, i|
         record_size = get_approximate_record_size(table_name, record.to_json)
         record_too_large(record_size, i) if record_size > max_record_size
@@ -411,9 +411,8 @@ class TablesApi < Sinatra::Base
       limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
       limits.set_approximate_row_count(json_data[table_name].length)
 
-      table.ensure_metadata()
+      table.ensure_metadata
     end
-
   end
 
   private

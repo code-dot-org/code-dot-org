@@ -292,7 +292,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone does not allow negative lines of code" do
-
     expect_controller_logs_milestone_regexp(/-20/)
     @controller.expects :slog
 
@@ -503,7 +502,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, @milestone_params.merge(save_to_gallery: 'false', image: Base64.encode64(@good_image))
-
         end
       end
     end

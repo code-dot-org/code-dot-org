@@ -23,5 +23,4 @@ describe 'cdo-varnish' do
       expect(node['cdo-varnish']['storage']).to eq 'malloc,0.5G'
     end
   end
-
 end

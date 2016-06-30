@@ -283,7 +283,7 @@ class CDOImpl < OpenStruct
     end
 
     def method_missing(*args)
-      return @default_value if !__getobj__.respond_to? args.first
+      return @default_value unless __getobj__.respond_to? args.first
       value = super
       return @default_value if value.nil?
       value
