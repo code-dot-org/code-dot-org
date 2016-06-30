@@ -4,6 +4,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
+import * as PropTypes from '../PropTypes';
 import {editAnimation} from '../animationListModule';
 
 /**
@@ -24,8 +25,8 @@ const PiskelEditor = React.createClass({
     // Provided manually
     style: React.PropTypes.object,
     // Provided by Redux
-    animationList: React.PropTypes.object.isRequired, // TODO: Shape?
-    selectedAnimation: React.PropTypes.string,
+    animationList: PropTypes.AnimationList.isRequired,
+    selectedAnimation: PropTypes.AnimationKey,
     channelId: React.PropTypes.string.isRequired,
     editAnimation: React.PropTypes.func.isRequired
   },

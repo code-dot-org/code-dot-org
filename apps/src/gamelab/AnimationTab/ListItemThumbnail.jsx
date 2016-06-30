@@ -4,6 +4,7 @@
 import React from 'react';
 import _ from 'lodash';
 import color from '../../color';
+import * as PropTypes from '../PropTypes';
 import AnimationPreview from '../AnimationPicker/AnimationPreview';
 
 const staticStyles = {
@@ -44,7 +45,7 @@ const staticStyles = {
  */
 const ListItemThumbnail = React.createClass({
   propTypes: {
-    animationProps: React.PropTypes.object.isRequired, // TODO: Shape?
+    animationProps: PropTypes.AnimationProps.isRequired,
     index: React.PropTypes.number,
     isSelected: React.PropTypes.bool
   },
