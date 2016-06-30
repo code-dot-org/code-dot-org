@@ -52,6 +52,7 @@
 #  invited_by_id              :integer
 #  invited_by_type            :string(255)
 #  invitations_count          :integer          default(0)
+#  terms_of_service_version   :integer
 #
 # Indexes
 #
@@ -811,7 +812,7 @@ SQL
   # completed level.
   def User.track_proficiency(user_id, script_id, level_id)
     level_concept_difficulty = LevelConceptDifficulty.where(level_id: level_id).first
-    if !level_concept_difficulty
+    unless level_concept_difficulty
       return
     end
 
@@ -822,7 +823,7 @@ SQL
 
       ConceptDifficulties::CONCEPTS.each do |concept|
         difficulty_number = level_concept_difficulty.send(concept)
-        if !difficulty_number.nil?
+        unless difficulty_number.nil?
           user_proficiency.increment_level_count(concept, difficulty_number)
         end
       end

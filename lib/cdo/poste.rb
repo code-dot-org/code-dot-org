@@ -4,6 +4,7 @@ require_relative 'email_validator'
 require 'mail'
 require 'openssl'
 require 'base64'
+require 'digest/md5'
 
 module Poste
   def self.logger
@@ -192,6 +193,7 @@ module Poste2
       created_ip: recipient[:ip_address],
       contact_id: recipient[:id],
       contact_email: recipient[:email],
+      hashed_email: Digest::MD5.hexdigest(recipient[:email]),
       message_id: message_id,
       params: (params||{}).to_json,
     })

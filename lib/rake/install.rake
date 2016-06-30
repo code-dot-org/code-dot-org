@@ -2,7 +2,6 @@ require_relative '../../deployment'
 require 'cdo/rake_utils'
 
 namespace :install do
-
   desc 'Install Git hooks.'
   task :hooks do
     files = [
@@ -69,7 +68,6 @@ namespace :install do
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
-
 end
 desc 'Install all OS dependencies.'
 task :install => ['install:all']

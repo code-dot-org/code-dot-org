@@ -74,13 +74,13 @@ class SessionsControllerTest < ActionController::TestCase
 
     delete :destroy
 
-    assert_redirected_to 'https://test.code.org'
+    assert_redirected_to '//test.code.org'
   end
 
   test "if you're not signed in you can still sign out" do
     delete :destroy
 
-    assert_redirected_to 'https://test.code.org'
+    assert_redirected_to '//test.code.org'
   end
 
   test "facebook users go to oauth sign out page after logging out" do
