@@ -294,6 +294,5 @@ class V2SectionRoutesTest < Minitest::Test
       Documents.any_instance.stubs(:dashboard_user_id).
         returns(role.nil? ? nil : role[:id])
     end
-
   end
 end

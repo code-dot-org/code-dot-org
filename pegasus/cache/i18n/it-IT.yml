@@ -727,12 +727,12 @@
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
   dashboard_navigation_view_progress: Avanzamento
-  dashboard_navigation_view_text_responses: Visualizza il testo delle risposte
+  dashboard_navigation_view_text_responses: Risultati del test
   dashboard_navigation_view_assessments: Valutazioni
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: Guarda le statistiche
+  dashboard_navigation_view_stats: Statistiche
   dashboard_navigation_section: 'Classe: %{section_name}'
   dashboard_navigation_student: 'Studente: %{student_name}'
   dashboard_progress_not_started: non avviato
@@ -929,7 +929,7 @@
     che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo.
     Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa
     pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
-  dashboard_announce_button_text: Ulteriori informazioni
+  dashboard_announce_button_text: Testare la funzionalità
   dashboard_announce_petition: Come insegnante, stai aprendo la strada per permettere
     ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso
     è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa

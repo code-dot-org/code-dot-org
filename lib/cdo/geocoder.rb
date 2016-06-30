@@ -39,11 +39,9 @@ end
 module ReplaceFreegeoipHostModule
   def self.included base
     base.class_eval do
-
       def query_url(query)
         "#{protocol}://#{CDO.freegeoip_host}/json/#{query.sanitized_text}"
       end
-
     end
   end
 end

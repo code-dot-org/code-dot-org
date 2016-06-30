@@ -4,7 +4,6 @@ require 'cdo/rake_utils'
 require 'cdo/git_utils'
 
 namespace :build do
-
   desc 'Runs Chef Client to configure the OS environment.'
   task :configure do
     if CDO.chef_managed

@@ -1,4 +1,3 @@
-@no_ie9
 @no_mobile
 @dashboard_db_access
 @as_student
