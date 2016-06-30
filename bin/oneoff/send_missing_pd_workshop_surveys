@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+
+# This script updates the pd_enrollment survey_sent_at and survey_id fields for existing surveys
+# from before those fields existed, and sends missing pd_workshop survey emails that didn't go out.
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require src_dir 'database'
+require_relative '../../../dashboard/config/environment'
+
+def main
+  dashboard_message_id = DB[:poste_messages].where(name: 'dashboard').order(:id).last[:id]
+  workshop_ids_missing_surveys = Set.new
+
+  # First, find existing survey emails and update Pd::Enrollment.survey_sent_at.
+  ended_workshops = Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED)
+  ended_workshops.each do |workshop|
+    puts "Workshop #{workshop.id}"
+    workshop.enrollments.order(id: :desc).each do |enrollment|
+
+      puts "  Enrollment #{enrollment.id}: #{enrollment.email}"
+      found_email = DB[:poste_deliveries].where(message_id: dashboard_message_id, contact_email: enrollment.email).
+        where(Sequel.like(:params, '%Please take a minute to complete this short survey%')).
+        where(Sequel.like(:params, "%pd-workshop-survey/#{enrollment.code}%")).
+        first
+
+      if found_email
+        puts "    Found email (#{found_email[:id]}) for enrollment #{enrollment.id}"
+        workshop_ids_missing_surveys.add(enrollment.workshop.id)
+        enrollment.update!(survey_sent_at: found_email[:created_at])
+      end
+    end
+  end
+
+  # Next, find existing survey responses and updated Pd::Enrollment.survey_id
+  DB[:forms].where(kind: 'PdWorkshopSurvey').each do |survey|
+    data = JSON.parse(survey[:data])
+    enrollment_id = data['enrollment_id_i']
+    puts "Survey response: #{survey[:id]}"
+    Pd::Enrollment.find(enrollment_id).update!(survey_id: survey[:id])
+  end
+
+  # Finally, send missing emails after confirmation.
+  puts "#{workshop_ids_missing_surveys.count} workshops are missing exit surveys. Send? [Y/n]"
+  raise 'cancelled' if STDIN.gets.strip.downcase == 'n'
+
+  workshop_ids_missing_surveys.each do |workshop_id|
+    puts "Sending exit surveys for workshop #{workshop_id}"
+    workshop = Pd::Workshop.find(workshop_id)
+    workshop.send_exit_surveys
+  end
+end
+
+main if only_one_running?(__FILE__)
