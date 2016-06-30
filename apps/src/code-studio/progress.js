@@ -62,14 +62,6 @@ progress.renderStageProgress = function (stageData, progressData, scriptName, cu
     progress: _.mapValues(progressData.levels, level => level.submitted ? SUBMITTED_RESULT : level.result)
   });
 
-  // Provied a function that can be called later to merge in progress now saved on the client.
-  progress.refreshStageProgress = function () {
-    store.dispatch({
-      type: 'MERGE_PROGRESS',
-      progress: clientState.allLevelsProgress()[scriptName] || {}
-    });
-  };
-
   ReactDOM.render(
     <Provider store={store}>
       <StageProgress />
@@ -162,7 +154,7 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || progress.bestResultLevelId(level.ids, newProgress);
 
-          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
+          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id]), id: id});
         })}))
       });
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {

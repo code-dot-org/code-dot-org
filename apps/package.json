@@ -115,7 +115,7 @@
     "http-server": "^0.9.0",
     "immutable": "3.8.1",
     "johnny-five": "bcjordan/johnny-five#with-firmata-fix",
-    "jquery": "2.1.4",
+    "jquery": "2.2.0",
     "jquery-ui": "1.10.5",
     "js-yaml": "^3.6.0",
     "json-loader": "0.5.4",
