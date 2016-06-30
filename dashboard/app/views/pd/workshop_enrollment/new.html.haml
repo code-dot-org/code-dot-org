@@ -75,10 +75,11 @@
               District
               %span.form-required-field
                 *
-            - error_class = (@enrollment.errors.include? :school_district) ? "field_with_errors_div" : ""
+            -# Manually wrap an error highlight around the entire district dropdown.
+            - error_class = (@enrollment.errors.include?(:"school_info.school_district")) ? "field_with_errors_div" : ""
             #school_district.span5{class: error_class, style: "border: solid 1px #bbb; border-radius: 4px; padding: 15px; margin-left: 0px; box-sizing: border-box;"}
               %div.controls
-                = render partial: 'shared/district_dropdown', locals: {form_name: "pd_enrollment"}
+                = render partial: 'shared/district_dropdown', locals: {form_name: "school_info"}
             %div{style: "clear: both"}
           %div.control-group
             %label
@@ -86,7 +87,9 @@
               %span.form-required-field
                 *
             %div.controls
-              =form.text_field :school, class: 'span5'
+              =fields_for :school_info do |school_info|
+                -# todo: get field_with_errors to wrap this when validation error
+                =school_info.text_field :name, class: 'span5'
 
           %div.control-group
             = form.submit 'Register', class: 'btn'

@@ -45,6 +45,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       render :full
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
+      @enrollment.build_school_info school_info_params
+
       if @enrollment.update enrollment_params
         Pd::WorkshopMailer.teacher_enrollment_receipt(@enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(@enrollment).deliver_now
@@ -97,13 +99,18 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     params.require(:pd_enrollment).permit(
       :name,
       :email,
-      :email_confirmation,
+      :email_confirmation
+    )
+  end
+
+  def school_info_params
+    params.require(:school_info).permit(
       :school_type,
       :school_state,
       :school_district_id,
       :school_zip,
       :school_district_other,
-      :school
+      :name
     )
   end
 end
