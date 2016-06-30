@@ -27,6 +27,9 @@
   "copy": "Kopiraj",
   "copyright": "Autorska prava",
   "currentVersion": "Trenutna verzija",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Beskonačnost",
   "jump": "skoči",
   "keepPlaying": "Nastavi igrati",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Koristiš sve potrebne vrste blokova, ali na pogrešan način.",
   "listVariable": "lista",
   "makeYourOwnFlappy": "Napravi vlastitu Flappy igricu",
@@ -241,9 +245,5 @@
   "watchVideo": "Pogledaj filmić",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Radna površina: ",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "Radna površina: "
 }

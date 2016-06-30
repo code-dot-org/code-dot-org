@@ -114,7 +114,7 @@ def create_instance_provisioning_infos
   instance_distribution = determine_frontend_instance_distribution
   instances_to_provision = @options['count']
 
-  instances_to_provision_for_zones = Hash.new()
+  instances_to_provision_for_zones = Hash.new
 
   instance_distribution.keys.each do |zone|
     instances_to_provision_for_zones[zone] = (instances_to_provision / instance_distribution.keys.count)

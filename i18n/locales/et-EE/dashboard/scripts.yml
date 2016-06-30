@@ -2060,3 +2060,86 @@ et:
           Wrap-Up: Kokkuvõte
         kinderTest:
           Kindergarten Stage 1: Kindergarten Stage 1
+        gradeKinder:
+          Debugging: Debugging
+          Persistence & Frustration: 'Persistence & Frustration'
+          Sequences & Algorithms: 'Sequences & Algorithms'
+          "Jigsaw: Learn to drag and drop": 'Pusle: õpi lohistama ja paika seadma'
+          Programming: Programming
+          Being Safe Online: Being Safe Online
+          Loops: Tsüklid
+          Programming Unplugged: Programming Unplugged
+          Loops Unplugged: Loops Unplugged
+          Events Unplugged: Events Unplugged
+          Events: Sündmused
+        grade4:
+          title: Grade 4
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 9-99
+          "Mixed Review #1 (Ramp Up)": 'Mixed Review #1 (Ramp Up)'
+          Conditionals: Tingimuslaused
+          "Bee: Conditionals": 'Mesilane: Tingimuslaused'
+          "PlayLab: Conditionals": 'PlayLab: Conditionals'
+          Songwriting: Laulude kirjutamine
+          "Bee: Functions": 'Mesilane: funktsioonid'
+          Decision Trees: Decision Trees
+          Choose Your Own Adventure: Choose Your Own Adventure
+          "Project #1": 'Project #1'
+          Nested Loops: Korduvad tsüklid
+          "Artist: Nested Loops": 'Kunstnik: korduvad tsüklid'
+          "Mixed Review #2 (Conditionals, Events, Functions)": 'Mixed Review #2 (Conditionals, Events, Functions)'
+          "New Artist: Functions": 'New Artist: Functions'
+          "Project #2": 'Project #2'
+          "Mixed Review #3 (Deduce the Concept)": 'Mixed Review #3 (Deduce the Concept)'
+          Internet: Internet
+          Crowdsourcing: Ühistegevused
+          Digital Citizenship: Digitaalne kodakondsus
+        grade1:
+          Predicting & Debugging: 'Predicting & Debugging'
+          Persistence & Frustration: 'Persistence & Frustration'
+          Sequences & Algorithms: 'Sequences & Algorithms'
+          "Jigsaw: Learn to drag and drop": 'Pusle: õpi lohistama ja paika seadma'
+        grade5:
+          title: Grade 5
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 10-110
+        ecs-unit1:
+          title: ECS Part 1
+          description_short: 'Unit 1: Human-Computer Interaction'
+          description: 'Unit 1: Human-Computer Interaction'
+          Welcome!: Tere tulemast!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Kokkuvõte
+        ecs-unit2:
+          title: ECS Unit 2
+          description_short: 'Unit 2: Problem Solving'
+          description: 'Unit 2: Problem Solving'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Teaching Strategies: Teaching Strategies
+          Lesson Overviews: Lesson Overviews
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community Problems with Data
+          "Day 3 Intro To Problem Solving: Candy Bar Activity": 'Day 3 Intro To Problem Solving: Candy Bar Activity'
+          "Day 4-6 Strategies in Problem Solving: Handshake Activity": 'Day 4-6 Strategies in Problem Solving: Handshake Activity'
+          "Day 7-9 Problem Solving: Cornrow Curves": 'Day 7-9 Problem Solving: Cornrow Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          "Day 13-14 Linear and Binary Search: Tower Building Activity": 'Day 13-14 Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          "Day 17 Minimal Spanning Trees: Muddy City": 'Day 17 Minimal Spanning Trees: Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project

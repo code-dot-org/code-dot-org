@@ -28,7 +28,6 @@ all_outfiles = [].tap do |all_outfiles|
     pdf_conversions_for_files(sites_dir("virtual/curriculum-{#{Course::COURSES_WITH_PDF_GENERATION.join(',')}}/docs/[^_]*.md"), '') +
     pdf_conversions_for_files(sites_dir('virtual/curriculum-docs/**/[^_]*.md'), '')
   ).each do |pdf_conversion_info|
-
     pdf_v3_path = Course.virtual_to_v3_path(pdf_conversion_info.output_pdf_path)
     fetchfile_for_pdf = "#{pdf_v3_path}.fetch"
 

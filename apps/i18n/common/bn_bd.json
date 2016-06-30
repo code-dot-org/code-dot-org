@@ -27,6 +27,9 @@
   "copy": "কপি",
   "copyright": "কপিরাইট",
   "currentVersion": "বর্তমান সংস্করণ",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "অসীম",
   "jump": "লাফান",
   "keepPlaying": "খেলতে থাকুন",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "আপনি প্রয়োজনীয় সব ধরনের ব্লক ব্যবহার করছেন কিন্তু সঠিক ভাবে নয়।",
   "listVariable": "তালিকা",
   "makeYourOwnFlappy": "আপনার নিজের ফ্লাপি গেম তৈরি করুন",
@@ -241,9 +245,5 @@
   "watchVideo": "ভিডিও দেখুন",
   "when": "যখন",
   "whenRun": "চালানোর সময়",
-  "workspaceHeaderShort": "কর্মপরিসর:",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "কর্মপরিসর:"
 }

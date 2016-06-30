@@ -27,6 +27,9 @@
   "copy": "Kopírovať",
   "copyright": "Autorské práva",
   "currentVersion": "Akutálna verzia",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Nekonečno",
   "jump": "skoč",
   "keepPlaying": "Hrať ďalej",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Používate všetky potrebné typy blokov, ale nie tým správnym spôsobom.",
   "listVariable": "zoznam",
   "makeYourOwnFlappy": "Vytvor si svoju vlastnú \"Flappy\" hru",
@@ -241,9 +245,5 @@
   "watchVideo": "Pozrieť video",
   "when": "keď",
   "whenRun": "pri spustení",
-  "workspaceHeaderShort": "Pracovná plocha: ",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "Pracovná plocha: "
 }
