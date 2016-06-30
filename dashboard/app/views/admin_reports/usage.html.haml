@@ -62,7 +62,7 @@
       %td
         - sl = activity.level.script_levels.last
         - if sl
-          = link_to build_script_level_path(sl) do
+          = link_to sl.path do
             = data_t_suffix('script.name', sl.script.name, "title")
             %br
             = sl.stage.localized_title

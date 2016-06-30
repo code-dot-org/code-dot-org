@@ -19,5 +19,5 @@
     - else
       =link_to script_url(script.id) do
         .audiencebar.bottombartext.continuelight= t('home.view_course')
-      %a{href: build_script_level_url(current_user.next_unpassed_progression_level(script))}
+      %a{href: current_user.next_unpassed_progression_level(script).url}
         .bottombar.bottombartext.continue{style: 'bottom: 0; position: absolute'}= t('continue')

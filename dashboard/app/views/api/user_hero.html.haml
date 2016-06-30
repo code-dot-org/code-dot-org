@@ -32,7 +32,7 @@
             %br
             .smalltext= script_level.stage.localized_title
           #coursebuttons
-            = link_to build_script_level_url(script_level) do
+            = link_to script_level.url do
               %button.primary= t('continue')
             = link_to script_url(current_user.primary_script) do
               %button.primary= t('home.view_course')

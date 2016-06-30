@@ -50,7 +50,7 @@
             - if @ideal_level_source
               %h4= t('teacher.panel.viewing_solution')
             - else
-              = link_to build_script_level_path(@script_level, {solution: true}.merge(@section ? {section_id: @section.id} : {})) do
+              = link_to @script_level.path({solution: true}.merge(@section ? {section_id: @section.id} : {})) do
                 %button.btn.btn-info= t('reference_area.teacher')
           - if @level.try(:examples).present? && current_user.try(:authorized_teacher?) # 'solutions' for applab-type levels
             - @level.examples.each_with_index do |example, index|
@@ -60,7 +60,7 @@
                     = t('teacher.panel.example_with_number', solution_number: index + 1)
                   - else
                     = t('teacher.panel.example')
-          = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : {}) do
+          = link_to @script_level.path(@section? {section_id: @section.id} : {}) do
             %button.btn.btn-info= t('teacher.panel.try_it_yourself')
         - if @section
           .section
@@ -91,7 +91,7 @@
                     - else
                       %span.puzzle-number
                         = @script_level.position
-                %td.name= link_to student.name, build_script_level_path(@script_level, user_id: student.id, section_id: @section.id)
+                %td.name= link_to student.name, @script_level.path(user_id: student.id, section_id: @section.id)
   :javascript
     function resizeScrollable() {
       var newHeight = $('.teacher-panel').innerHeight() -

@@ -324,7 +324,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     get :show, script_id: sl.script, chapter: sl.chapter
 
-    assert_redirected_to build_script_level_path(sl)
+    assert_redirected_to sl.path
   end
 
   test "ridiculous chapter number throws NotFound instead of RangeError" do
@@ -335,8 +335,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
-    assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
-    assert_routing({method: "get", path: build_script_level_path(sl)},
+    assert_equal '/s/20-hour/stage/2/puzzle/2', sl.path
+    assert_routing({method: "get", path: sl.path},
       {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.to_param, id: sl.to_param})
   end
 
@@ -347,31 +347,31 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     hoc_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::HOC_NAME).id, chapter: 1)
     assert_routing({method: "get", path: '/hoc/1'},
       {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"})
-    assert_equal '/hoc/1', build_script_level_path(hoc_level)
+    assert_equal '/hoc/1', hoc_level.path
 
     flappy_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5)
     assert_routing({method: "get", path: '/flappy/5'},
       {controller: "script_levels", action: "show", script_id: Script::FLAPPY_NAME, chapter: "5"})
-    assert_equal "/flappy/5", build_script_level_path(flappy_level)
+    assert_equal "/flappy/5", flappy_level.path
 
     jigsaw_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::JIGSAW_NAME).id, chapter: 3)
     assert_routing({method: "get", path: '/jigsaw/3'},
       {controller: "script_levels", action: "show", script_id: Script::JIGSAW_NAME, chapter: "3"})
-    assert_equal "/s/jigsaw/stage/1/puzzle/3", build_script_level_path(jigsaw_level)
+    assert_equal "/s/jigsaw/stage/1/puzzle/3", jigsaw_level.path
   end
 
   test "routing for custom scripts with stage" do
     assert_routing({method: "get", path: "/s/laurel/stage/1/puzzle/1"},
       {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "1", id: "1"})
-    assert_equal "/s/laurel/stage/1/puzzle/1", build_script_level_path(@custom_s1_l1)
+    assert_equal "/s/laurel/stage/1/puzzle/1", @custom_s1_l1.path
 
     assert_routing({method: "get", path: "/s/laurel/stage/2/puzzle/1"},
       {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "2", id: "1"})
-    assert_equal "/s/laurel/stage/2/puzzle/1", build_script_level_path(@custom_s2_l1)
+    assert_equal "/s/laurel/stage/2/puzzle/1", @custom_s2_l1.path
 
     assert_routing({method: "get", path: "/s/laurel/stage/2/puzzle/2"},
       {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "2", id: "2"})
-    assert_equal "/s/laurel/stage/2/puzzle/2", build_script_level_path(@custom_s2_l2)
+    assert_equal "/s/laurel/stage/2/puzzle/2", @custom_s2_l2.path
   end
 
   test "next routing for custom scripts" do
@@ -857,7 +857,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       scripts: {name: 'allthethings'},
       levels:  Level.key_to_params('K-1 Artist1 1'))
 
-    assert_routing({method: "get", path: build_script_level_path(sl)},
+    assert_routing({method: "get", path: sl.path},
       {controller: "script_levels", action: "show", script_id: 'allthethings', stage_id: sl.stage.position.to_s, id: sl.position.to_s, solution: true},
       {},
       {solution: true})

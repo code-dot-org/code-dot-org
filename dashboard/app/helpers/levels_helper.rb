@@ -7,26 +7,6 @@ module LevelsHelper
   include ApplicationHelper
   include UsersHelper
 
-  def build_script_level_path(script_level, params = {})
-    if script_level.script.name == Script::HOC_NAME
-      hoc_chapter_path(script_level.chapter, params)
-    elsif script_level.script.name == Script::FLAPPY_NAME
-      flappy_chapter_path(script_level.chapter, params)
-    elsif params[:puzzle_page]
-      puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
-    else
-      script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
-    end
-  end
-
-  def build_script_level_url(script_level, params = {})
-    url_from_path(build_script_level_path(script_level, params))
-  end
-
-  def url_from_path(path)
-    "#{root_url.chomp('/')}#{path}"
-  end
-
   # Create a new channel.
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
