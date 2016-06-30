@@ -10,7 +10,7 @@
  *
  *  The new shape is an object with animation and cache components
  *    {
- *     list: [ AnimationKey, AnimationKey ],
+ *     orderedKeys: [ AnimationKey, AnimationKey ],
  *     data: {
  *       AnimationKey: {AnimationData},
  *       AnimationKey: {AnimationData}
@@ -56,16 +56,16 @@ const DONE_LOADING_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SgOURCE';
 const ON_ANIMATION_SAVED = 'AnimationList/ON_ANIMATION_SAVED';
 
 export default combineReducers({
-  list,
+  orderedKeys,
   data
 });
 
-function list(state, action) {
+function orderedKeys(state, action) {
   state = state || [];
   switch (action.type) {
 
     case SET_INITIAL_ANIMATION_LIST:
-      return action.animationList.list;
+      return action.animationList.orderedKeys;
 
     case ADD_ANIMATION:
       return [].concat(
@@ -103,7 +103,7 @@ function data(state, action) {
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
       return Object.assign({}, state, {
-        [action.key]: datum(newState[action.key], action)
+        [action.key]: datum(state[action.key], action)
       });
 
     case DELETE_ANIMATION:
@@ -179,7 +179,7 @@ export function setInitialAnimationList(serializedAnimationList) {
       type: SET_INITIAL_ANIMATION_LIST,
       animationList: serializedAnimationList
     });
-    serializedAnimationList.list.forEach(key => {
+    serializedAnimationList.orderedKeys.forEach(key => {
       dispatch(loadAnimationFromSource(key));
     });
   };
@@ -248,7 +248,7 @@ export function cloneAnimation(key) {
   return (dispatch, getState) => {
     const state = getState().animationList;
     // Track down the source animation and its index in the collection
-    const sourceIndex = state.list.indexOf(key);
+    const sourceIndex = state.orderedKeys.indexOf(key);
     if (sourceIndex < 0) {
       throw new Error(`Animation ${key} not found`);
     }
@@ -390,7 +390,7 @@ function blobToDataURI(blob, onComplete) {
 export function saveAnimations(onComplete) {
   return (dispatch, getState) => {
     const state = getState().animationList;
-    const changedAnimationKeys = state.list.filter(key => !state.data[key].saved);
+    const changedAnimationKeys = state.orderedKeys.filter(key => !state.data[key].saved);
     Promise.all(changedAnimationKeys.map(key => {
           return saveAnimation(key, state.data[key])
               .then(action => { dispatch(action); });
@@ -519,13 +519,13 @@ function getSerializedAnimation(animation) {
 
 /**
  * @typedef {Object} SerializedAnimationList
- * @property {AnimationKey[]} list - Animations in project order
+ * @property {AnimationKey[]} orderedKeys - Animations in project order
  * @property {Object.<AnimationKey, SerializedAnimation>} data
  */
 
 /**
  * @typedef {Object} AnimationList
- * @property {AnimationKey[]} list - Animation keys in project order
+ * @property {AnimationKey[]} orderedKeys - Animation keys in project order
  * @property {Object.<AnimationKey, Animation>} data
  */
 
@@ -540,10 +540,10 @@ export function getSerializedAnimationList(animationList) {
   //    animation list - we should clean this up on delete, but in case things
   //    get in an inconsistent state we clean it up here.
   return {
-    list: animationList.list,
+    orderedKeys: animationList.orderedKeys,
     data: _.pick(
         _.mapValues(animationList.data, getSerializedAnimation),
-        animationList.list)
+        animationList.orderedKeys)
   };
 }
 
