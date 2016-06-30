@@ -62,6 +62,7 @@ group :development, :test do
   gem 'timecop'
   gem 'fake_sqs'
   gem 'fakeredis', require: false
+  gem 'parallel_tests', group: [:development, :test]
 
   # for ui testing
   gem 'cucumber'

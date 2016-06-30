@@ -21,7 +21,7 @@ unless ENV['USE_REAL_SQS'] == 'true'
     :secret_access_key => "secret access key"
   )
   $fake_sqs_service = FakeSQS::TestIntegration.new(
-    database: ':memory:',
+    database: ":memory#{ENV['TEST_ENV_NUMBER']}:", # TODO: use parallel env?
     sqs_endpoint: 'localhost',
     sqs_port: 4568,
   )
