@@ -359,7 +359,15 @@ module.exports = function (grunt) {
       }).concat(appsToBuild.indexOf('applab') === -1 ? [] :
         [['applab-api', './src/applab/api-entry.js']]
       )),
-      commonFile: 'common'
+      commonFile: 'common',
+      shouldFactor: true
+    },
+
+    {
+      entries: {
+        plc: './src/code-studio/plc/plc.js'
+      },
+      provides: ['marked']
     },
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that

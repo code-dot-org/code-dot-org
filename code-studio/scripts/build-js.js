@@ -53,21 +53,7 @@ Promise.all([
       "jquery": "$"
     },
     shouldFactor: true
-  })),
-
-  // Have a bundle for plc stuff - no sense in expanding this to everything yet
-  build_commands.bundle(_.extend({}, defaultOptions, {
-    filenames: [
-      'plc/evaluation_creation.js',
-      'plc/header.jsx',
-      'plc/perform_evaluation.js',
-      'plc/task_creation.js'
-    ],
-    commonFile: 'plc',
-    browserifyGlobalShim: {
-      "jquery": "$"
-    }
-  })),
+  }))
 ]).then(function (results) {
   var allStepsSucceeded = !results.some(function (result) {
     return result instanceof Error;
