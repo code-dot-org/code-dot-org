@@ -125,7 +125,7 @@ Several documents describe the overarching themes and direction of the course.
 ### Lessons
 *In response to feedback from our 2015-2016 pilot teachers, we are reordering, condensing, and clarifying lesson content. Units 1 - 3 have already been revised per pilot feedback and Units 4 - 6 will be revised in the fall.*
 
-All lessons are available at [curriculum.code.org/csp](curriculum.code.org/csp)
+All lessons are available at [curriculum.code.org/csp](https://curriculum.code.org/csp)
 
 | Link | Unit Description |
 | :------------------:|-----------|

@@ -293,7 +293,7 @@ task :deploy do
         thread_count = (app_servers.keys.length * 0.20).ceil
         threaded_each app_servers.keys, thread_count do |name|
           succeeded = upgrade_frontend name, app_servers[name]
-          if !succeeded
+          unless succeeded
             num_failures += 1
             raise 'too many frontend upgrade failures, aborting deploy' if num_failures > MAX_FRONTEND_UPGRADE_FAILURES
           end

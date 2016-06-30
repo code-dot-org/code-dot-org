@@ -2298,7 +2298,10 @@ Studio.reset = function (first) {
       visible: !level.spritesHiddenToStart
     });
 
-    var sprite = spriteStart.sprite || (i % Studio.startAvatars.length);
+    var sprite = spriteStart.sprite === undefined
+        ? (i % Studio.startAvatars.length)
+        : spriteStart.sprite;
+
     var opts = {
       spriteIndex: i,
       value: Studio.startAvatars[sprite],

@@ -12,6 +12,6 @@ puts "Found #{mazes_without_step.length} levels to update"
 
 mazes_without_step.each do |m|
   m.step_mode = 1
-  m.save()
+  m.save
 end
 puts "Done"

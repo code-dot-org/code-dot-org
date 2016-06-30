@@ -325,7 +325,6 @@ class LevelsHelperTest < ActionView::TestCase
     @script_level = create(:script_level, level: @level, script: @script)
     @level.update(ideal_level_source_id: nil)
     assert_not can_view_solution?
-
   end
 
   test 'show solution link shows link for appropriate users' do

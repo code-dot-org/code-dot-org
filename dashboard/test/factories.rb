@@ -171,7 +171,6 @@ FactoryGirl.define do
   end
 
   factory :external, parent: Level, class: External do
-
   end
 
   factory :external_link, parent: Level, class: ExternalLink do
@@ -492,5 +491,4 @@ FactoryGirl.define do
     state "WA"
     zip "98101"
   end
-
 end

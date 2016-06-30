@@ -1,7 +1,6 @@
 require 'fileutils'
 
 namespace :blockly do
-
   def dist_project
     'blockly-mooc'
   end
@@ -57,5 +56,4 @@ namespace :blockly do
     clean!
     File.symlink(fullsrc, dest)
   end
-
 end
