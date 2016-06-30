@@ -11,7 +11,7 @@
  *  The new shape is an object with animation and cache components
  *    {
  *     orderedKeys: [ AnimationKey, AnimationKey ],
- *     data: {
+ *     propsByKey: {
  *       AnimationKey: {AnimationData},
  *       AnimationKey: {AnimationData}
  *     }
@@ -24,7 +24,7 @@
  *  We serialize a smaller set of information.
  *
  *  We need to do a migration if the old style gets loaded.
- *  See setInitialAnimationMetadata for how this works.
+ *  See setInitialAnimationList for how this works.
  */
 import _ from 'lodash';
 import {combineReducers} from 'redux';
@@ -36,11 +36,11 @@ import {reportError} from './errorDialogStackModule';
 
 // Args: {SerializedAnimationList} animationList
 const SET_INITIAL_ANIMATION_LIST = 'AnimationList/SET_INITIAL_ANIMATION_LIST';
-// Args: {AnimationKey} key, {SerializedAnimation} data
+// Args: {AnimationKey} key, {SerializedAnimation} props
 export const ADD_ANIMATION = 'AnimationList/ADD_ANIMATION';
-// Args: {number} index, {AnimationKey} key, {SerializedAnimation} data
+// Args: {number} index, {AnimationKey} key, {SerializedAnimation} props
 export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
-// Args: {AnimationKey} key, {SerializedAnimation} data
+// Args: {AnimationKey} key, {SerializedAnimation} props
 export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
 // Args: {AnimationKey} key
 const INVALIDATE_ANIMATION = 'AnimationList/INVALIDATE_ANIMATION';
@@ -57,7 +57,7 @@ const ON_ANIMATION_SAVED = 'AnimationList/ON_ANIMATION_SAVED';
 
 export default combineReducers({
   orderedKeys,
-  data
+  propsByKey
 });
 
 function orderedKeys(state, action) {
@@ -86,13 +86,13 @@ function orderedKeys(state, action) {
   }
 }
 
-function data(state, action) {
+function propsByKey(state, action) {
   state = state || {};
   var newState;
   switch (action.type) {
 
     case SET_INITIAL_ANIMATION_LIST:
-      return action.animationList.data;
+      return action.animationList.propsByKey;
 
     case ADD_ANIMATION:
     case ADD_ANIMATION_AT:
@@ -103,7 +103,7 @@ function data(state, action) {
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
       return Object.assign({}, state, {
-        [action.key]: datum(state[action.key], action)
+        [action.key]: animationPropsReducer(state[action.key], action)
       });
 
     case DELETE_ANIMATION:
@@ -117,18 +117,18 @@ function data(state, action) {
 }
 
 /**
- * Reducer for a single animation data item.
+ * Reducer for a single animation props item.
  */
-function datum(state, action) {
+function animationPropsReducer(state, action) {
   state = state || {};
   switch (action.type) {
 
     case ADD_ANIMATION:
     case ADD_ANIMATION_AT:
-      return action.data;
+      return action.props;
 
     case EDIT_ANIMATION:
-      return Object.assign({}, state, action.data, {
+      return Object.assign({}, state, action.props, {
         saved: false // Dirty, so it'll get saved soon.
       });
 
@@ -188,16 +188,16 @@ export function setInitialAnimationList(serializedAnimationList) {
 /**
  * Add an animation to the project (at the end of the list).
  * @param {!AnimationKey} key
- * @param {!SerializedAnimation} data
+ * @param {!SerializedAnimation} props
  */
-export function addAnimation(key, data) {
+export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
-  // TODO: Validate data format?
+  // TODO: Validate props format?
   return dispatch => {
     dispatch({
       type: ADD_ANIMATION,
       key,
-      data
+      props
     });
     dispatch(loadAnimationFromSource(key, undefined, () => {
       dispatch(selectAnimation(key));
@@ -208,17 +208,17 @@ export function addAnimation(key, data) {
 
 /**
  * Add a library animation to the project.
- * @param {!SerializedAnimation} data
+ * @param {!SerializedAnimation} props
  */
-export function addLibraryAnimation(data) {
+export function addLibraryAnimation(props) {
   return dispatch => {
     const key = utils.createUuid();
     dispatch({
       type: ADD_ANIMATION,
       key,
-      data
+      props
     });
-    dispatch(loadAnimationFromSource(key, data.sourceUrl, () => {
+    dispatch(loadAnimationFromSource(key, props.sourceUrl, () => {
       dispatch(invalidateAnimation(key));
       dispatch(selectAnimation(key));
     }));
@@ -246,20 +246,20 @@ function invalidateAnimation(key) {
  */
 export function cloneAnimation(key) {
   return (dispatch, getState) => {
-    const state = getState().animationList;
+    const animationList = getState().animationList;
     // Track down the source animation and its index in the collection
-    const sourceIndex = state.orderedKeys.indexOf(key);
+    const sourceIndex = animationList.orderedKeys.indexOf(key);
     if (sourceIndex < 0) {
       throw new Error(`Animation ${key} not found`);
     }
 
-    const sourceAnimation = state.data[key];
+    const sourceAnimation = animationList.propsByKey[key];
     const newAnimationKey = utils.createUuid();
     dispatch({
       type: ADD_ANIMATION_AT,
       index: sourceIndex + 1,
       key: newAnimationKey,
-      data: Object.assign({}, sourceAnimation, {
+      props: Object.assign({}, sourceAnimation, {
         name: sourceAnimation.name + '_copy', // TODO: better generated names
         version: null,
         saved: false
@@ -288,16 +288,16 @@ export function setAnimationName(key, name) {
 }
 
 /**
- * Modifies the animation data, capturing changes to its spritesheet.
+ * Modifies the animation props, capturing changes to its spritesheet.
  * @param {!AnimationKey} key
- * @param {object} data - needs a more detailed shape
+ * @param {object} props - needs a more detailed shape
  */
-export function editAnimation(key, data) {
+export function editAnimation(key, props) {
   return dispatch => {
     dispatch({
       type: EDIT_ANIMATION,
       key,
-      data
+      props
     });
     dashboard.project.projectChanged();
   };
@@ -390,9 +390,9 @@ function blobToDataURI(blob, onComplete) {
 export function saveAnimations(onComplete) {
   return (dispatch, getState) => {
     const state = getState().animationList;
-    const changedAnimationKeys = state.orderedKeys.filter(key => !state.data[key].saved);
+    const changedAnimationKeys = state.orderedKeys.filter(key => !state.propsByKey[key].saved);
     Promise.all(changedAnimationKeys.map(key => {
-          return saveAnimation(key, state.data[key])
+          return saveAnimation(key, state.propsByKey[key])
               .then(action => { dispatch(action); });
         }))
         .then(() => {
@@ -520,13 +520,13 @@ function getSerializedAnimation(animation) {
 /**
  * @typedef {Object} SerializedAnimationList
  * @property {AnimationKey[]} orderedKeys - Animations in project order
- * @property {Object.<AnimationKey, SerializedAnimation>} data
+ * @property {Object.<AnimationKey, SerializedAnimation>} propsByKey
  */
 
 /**
  * @typedef {Object} AnimationList
  * @property {AnimationKey[]} orderedKeys - Animation keys in project order
- * @property {Object.<AnimationKey, Animation>} data
+ * @property {Object.<AnimationKey, Animation>} propsByKey
  */
 
 /**
@@ -541,8 +541,8 @@ export function getSerializedAnimationList(animationList) {
   //    get in an inconsistent state we clean it up here.
   return {
     orderedKeys: animationList.orderedKeys,
-    data: _.pick(
-        _.mapValues(animationList.data, getSerializedAnimation),
+    propsByKey: _.pick(
+        _.mapValues(animationList.propsByKey, getSerializedAnimation),
         animationList.orderedKeys)
   };
 }
