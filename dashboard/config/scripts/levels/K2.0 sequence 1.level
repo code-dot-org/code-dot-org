@@ -7,11 +7,11 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,1,1,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Change the code to get me to the pig!",
+    "instructions": "A bug! Fix the code to get me to the pig.",
     "start_direction": "3",
     "step_mode": "0",
     "is_k1": "true",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "ideal": "4",
     "video_key": "C1_maze_debugging",
     "never_autoplay_video": "true",
@@ -27,8 +27,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/06_V2.gif",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
   "notes": "debug: add command to end",
