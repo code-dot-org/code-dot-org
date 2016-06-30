@@ -203,7 +203,7 @@ class Blockly < Level
   end
 
   def blockly_app_options(game, skin_id)
-    options = Rails.cache.fetch("#{cache_key}/blockly_level_options/v2") do
+    options = Rails.cache.fetch("#{cache_key}/blockly_app_options/v2") do
 
       app_options = {}
 
@@ -222,7 +222,7 @@ class Blockly < Level
   end
 
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents
-  def blockly_options
+  def blockly_level_options
     options = Rails.cache.fetch("#{cache_key}/blockly_level_options/v2") do
       level_prop = {}
 
@@ -288,23 +288,9 @@ class Blockly < Level
         level_prop.delete('fn_failureCondition')
       end
 
-      app_options = {}
-
-      app_options[:levelGameName] = game.name if game
-      app_options[:skinId] = skin if is_a?(Blockly)
-
       # Set some values that Blockly expects on the root of its options string
-      non_nil_level_prop = level_prop.reject!{|_, value| value.nil?}
-      app_options.merge!({
-                             baseUrl: Blockly.base_url,
-                             app: game.try(:app),
-                             levelId: level_num,
-                             level: non_nil_level_prop,
-                             droplet: game.try(:uses_droplet?),
-                             pretty: Rails.configuration.pretty_apps ? '' : '.min',
-                         })
+      level_prop.reject!{|_, value| value.nil?}
     end
-    options[:level].freeze
     options.freeze
   end
 

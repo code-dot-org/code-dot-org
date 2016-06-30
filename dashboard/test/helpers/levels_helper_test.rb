@@ -161,14 +161,16 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal nil, view_options[:no_footer]
   end
 
-  test 'Blockly#blockly_options not modified by levels helper' do
+  test 'Blockly#blockly_app_options and Blockly#blockly_level_options not modified by levels helper' do
     level = create(:level, :blockly, :with_autoplay_video)
-    blockly_options = level.blockly_options
+    blockly_app_options = level.blockly_app_options level.game, level.skin
+    blockly_level_options = level.blockly_level_options
 
     @level = level
     app_options
 
-    assert_equal blockly_options, level.blockly_options
+    assert_equal blockly_app_options, level.blockly_app_options(level.game, level.skin)
+    assert_equal blockly_level_options, level.blockly_level_options
   end
 
   test 'app_options sets a channel' do
