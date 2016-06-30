@@ -123,7 +123,7 @@ class PropertiesApi < Sinatra::Base
     bag = PropertyType.new(decrypted_channel_id, storage_id(endpoint))
     bag_hash = nil
     json_data.each do |k, v|
-      if !overwrite
+      unless overwrite
         bag_hash ||= bag.to_hash
         next if bag_hash.key? k
       end

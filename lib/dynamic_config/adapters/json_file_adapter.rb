@@ -56,7 +56,7 @@ class JSONFileDatastoreAdapter
     rescue
       @hash = {}
     end
-    raise StandardError unless !@hash.nil?
+    raise StandardError if @hash.nil?
   end
 
   def write_to_file
