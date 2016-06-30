@@ -4,8 +4,8 @@
  * skin-specific functionality.
  */
 
-let cellId = require('./mazeUtils').cellId;
-let SVG_NS = require('../constants').SVG_NS;
+import { SVG_NS } from '../constants';
+import { cellId } from './mazeUtils';
 
 const SQUARE_SIZE = 50;
 

@@ -1,7 +1,7 @@
 import Drawer from './drawer';
+import { SVG_NS } from '../constants';
+import { cellId } from './mazeUtils';
 const SQUARE_SIZE = 50;
-let SVG_NS = require('../constants').SVG_NS;
-let cellId = require('./mazeUtils').cellId;
 
 /**
  * Extends Drawer to draw flowers/honeycomb for bee.

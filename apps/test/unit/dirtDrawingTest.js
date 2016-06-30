@@ -24,36 +24,33 @@ describe("DirtDrawer", function () {
   var skin = createFakeSkin();
 
   it("spriteIndexForDirt", function () {
-    var spriteIndexForDirt = DirtDrawer.__testonly__.spriteIndexForDirt;
-
-    assert.equal(spriteIndexForDirt(-11), 0);
-    assert.equal(spriteIndexForDirt(-10), 1);
-    assert.equal(spriteIndexForDirt(-9), 2);
-    assert.equal(spriteIndexForDirt(-8), 3);
-    assert.equal(spriteIndexForDirt(-7), 4);
-    assert.equal(spriteIndexForDirt(-6), 5);
-    assert.equal(spriteIndexForDirt(-5), 6);
-    assert.equal(spriteIndexForDirt(-4), 7);
-    assert.equal(spriteIndexForDirt(-3), 8);
-    assert.equal(spriteIndexForDirt(-2), 9);
-    assert.equal(spriteIndexForDirt(-1), 10);
-    assert.equal(spriteIndexForDirt(0), -1);
-    assert.equal(spriteIndexForDirt(1), 11);
-    assert.equal(spriteIndexForDirt(2), 12);
-    assert.equal(spriteIndexForDirt(3), 13);
-    assert.equal(spriteIndexForDirt(4), 14);
-    assert.equal(spriteIndexForDirt(5), 15);
-    assert.equal(spriteIndexForDirt(6), 16);
-    assert.equal(spriteIndexForDirt(7), 17);
-    assert.equal(spriteIndexForDirt(8), 18);
-    assert.equal(spriteIndexForDirt(9), 19);
-    assert.equal(spriteIndexForDirt(10), 20);
-    assert.equal(spriteIndexForDirt(11), 21);
+    assert.equal(DirtDrawer.spriteIndexForDirt(-11), 0);
+    assert.equal(DirtDrawer.spriteIndexForDirt(-10), 1);
+    assert.equal(DirtDrawer.spriteIndexForDirt(-9), 2);
+    assert.equal(DirtDrawer.spriteIndexForDirt(-8), 3);
+    assert.equal(DirtDrawer.spriteIndexForDirt(-7), 4);
+    assert.equal(DirtDrawer.spriteIndexForDirt(-6), 5);
+    assert.equal(DirtDrawer.spriteIndexForDirt(-5), 6);
+    assert.equal(DirtDrawer.spriteIndexForDirt(-4), 7);
+    assert.equal(DirtDrawer.spriteIndexForDirt(-3), 8);
+    assert.equal(DirtDrawer.spriteIndexForDirt(-2), 9);
+    assert.equal(DirtDrawer.spriteIndexForDirt(-1), 10);
+    assert.equal(DirtDrawer.spriteIndexForDirt(0), -1);
+    assert.equal(DirtDrawer.spriteIndexForDirt(1), 11);
+    assert.equal(DirtDrawer.spriteIndexForDirt(2), 12);
+    assert.equal(DirtDrawer.spriteIndexForDirt(3), 13);
+    assert.equal(DirtDrawer.spriteIndexForDirt(4), 14);
+    assert.equal(DirtDrawer.spriteIndexForDirt(5), 15);
+    assert.equal(DirtDrawer.spriteIndexForDirt(6), 16);
+    assert.equal(DirtDrawer.spriteIndexForDirt(7), 17);
+    assert.equal(DirtDrawer.spriteIndexForDirt(8), 18);
+    assert.equal(DirtDrawer.spriteIndexForDirt(9), 19);
+    assert.equal(DirtDrawer.spriteIndexForDirt(10), 20);
+    assert.equal(DirtDrawer.spriteIndexForDirt(11), 21);
   });
 
   it("createImage", function () {
     setGlobals();
-    var createImage = DirtDrawer.__testonly__.createImage;
     var drawer = new DirtDrawer(dirtMap, skin.dirt);
 
     var row = 2;
@@ -65,7 +62,7 @@ describe("DirtDrawer", function () {
     assert.equal(image, undefined, 'image doesnt exist to start');
     assert.equal(clip, undefined, 'clipPath doesnt exist to start');
 
-    createImage('dirt', row, col, drawer.dirtImageInfo_);
+    drawer.createImage_('dirt', row, col);
 
     image = document.getElementById(cellId('dirt', row, col));
     clip = document.getElementById(cellId('dirtClip', row, col));

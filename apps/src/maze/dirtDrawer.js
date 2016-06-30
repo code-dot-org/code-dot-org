@@ -27,7 +27,7 @@ export default class DirtDrawer extends Drawer {
       val = (val < 0) ? -11 : 11;
     }
 
-    this.updateImageWithIndex_('dirt', row, col, this.spriteIndexForDirt_(val));
+    this.updateImageWithIndex_('dirt', row, col, DirtDrawer.spriteIndexForDirt_(val));
   }
 
   /**
@@ -62,7 +62,7 @@ export default class DirtDrawer extends Drawer {
    * @param {number} val
    * @return {number}
    */
-  spriteIndexForDirt_(val) {
+  static spriteIndexForDirt_(val) {
     let spriteIndex;
 
     if (val === 0) {
