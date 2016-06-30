@@ -99,11 +99,6 @@ Style/CaseIndentation:
 Style/ClassAndModuleChildren:
   Enabled: false
 
-# Offense count: 57
-# Cop supports --auto-correct.
-Style/ClassMethods:
-  Enabled: false
-
 # Offense count: 80
 Style/ClassVars:
   Enabled: false
