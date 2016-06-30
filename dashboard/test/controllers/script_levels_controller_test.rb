@@ -737,7 +737,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '#codeApp'
     assert_select '#notStarted', 0
-
   end
 
   test 'does not load applab if you are a teacher viewing your student and they do not have a channel id' do

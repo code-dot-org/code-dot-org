@@ -64,13 +64,13 @@ class FilesApi < Sinatra::Base
   end
 
   def record_metric(quota_event_type, quota_type, value = 1)
-    return if !CDO.newrelic_logging
+    return unless CDO.newrelic_logging
 
     NewRelic::Agent.record_metric("Custom/FilesApi/#{quota_event_type}_#{quota_type}", value)
   end
 
   def record_event(quota_event_type, quota_type, encrypted_channel_id)
-    return if !CDO.newrelic_logging
+    return unless CDO.newrelic_logging
 
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
