@@ -5,49 +5,21 @@
  */
 
 import { DataView } from './constants';
+import Radium from 'radium';
 import React from 'react';
 import msg from '../locale';
-import color from '../color';
 import { changeView } from './redux/data';
 import { connect } from 'react-redux';
+import dataStyles from './dataStyles';
 
 const tableWidth = 400;
 const buttonColumnWidth = 90;
-const rowHeight = 45;
-const cellPadding = 10;
 
 const styles = {
   table: {
     width: tableWidth,
     marginTop: 10,
-    marginBottom: 10,
-    color: color.purple
-  },
-  editRow: {
-    height: rowHeight
-  },
-  addRow: {
-    height: rowHeight,
-    backgroundColor: color.lighter_purple
-  },
-  cell: {
-    padding: cellPadding,
-    border: '1px solid gray'
-  },
-  input: {
-    width: 'calc(100% - 14px)',
-    height: 20,
-    border: '1px solid gray',
-    borderRadius: 5,
-    padding: '4px 6px'
-  },
-  button: {
-    margin: 0
-  },
-  link: {
-    color: color.purple,
-    fontFamily: "'Gotham 7r', sans-serif",
-    fontSize: 14
+    marginBottom: 10
   }
 };
 
@@ -58,7 +30,7 @@ const EditLink = React.createClass({
   },
   render() {
     return (
-      <a style={styles.link} href='#' onClick={this.props.onClick}>
+      <a style={dataStyles.link} href='#' onClick={this.props.onClick}>
         {this.props.name}
       </a>
     );
@@ -77,12 +49,12 @@ const EditTableRow = React.createClass({
 
   render() {
     return (
-      <tr style={styles.editRow}>
-        <td style={styles.cell}>
+      <tr style={dataStyles.editRow}>
+        <td style={dataStyles.cell}>
           <EditLink name={this.props.tableName} onClick={this.handleClick}/>
         </td>
-        <td style={styles.cell}>
-          <button className='btn btn-danger' style={styles.button}>Delete</button>
+        <td style={dataStyles.cell}>
+          <button className='btn btn-danger' style={dataStyles.button}>Delete</button>
         </td>
       </tr>
     );
@@ -92,12 +64,12 @@ const EditTableRow = React.createClass({
 const AddTableRow = React.createClass({
   render() {
     return (
-      <tr style={styles.addRow}>
-        <td style={styles.cell}>
-          <input style={styles.input} placeholder={msg.dataTableNamePlaceholder()}></input>
+      <tr style={dataStyles.addRow}>
+        <td style={dataStyles.cell}>
+          <input style={dataStyles.input} placeholder={msg.dataTableNamePlaceholder()}></input>
         </td>
-        <td style={styles.cell}>
-          <button className='btn btn-primary' style={styles.button}>Add</button>
+        <td style={dataStyles.cell}>
+          <button className='btn btn-primary' style={dataStyles.button}>Add</button>
         </td>
       </tr>
     );
@@ -121,8 +93,8 @@ const DataOverview = React.createClass({
 
         <table style={styles.table}>
           <tbody>
-          <tr style={styles.editRow}>
-            <td style={styles.cell}>
+          <tr style={dataStyles.editRow}>
+            <td style={dataStyles.cell}>
               <EditLink
                   name={msg.keyValuePairLink()}
                   onClick={() => this.props.onViewChange(DataView.PROPERTIES)}/>
@@ -158,4 +130,4 @@ export default connect(state => ({
   onViewChange(view, tableName) {
     dispatch(changeView(view, tableName));
   }
-}))(DataOverview);
+}))(Radium(DataOverview));

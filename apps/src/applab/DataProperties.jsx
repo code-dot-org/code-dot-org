@@ -3,46 +3,11 @@
  */
 
 import { DataView } from './constants';
+import Radium from 'radium';
 import React from 'react';
 import { changeView } from './redux/data';
-import color from '../color';
 import { connect } from 'react-redux';
-
-const rowHeight = 45;
-const cellPadding = 10;
-
-const styles = {
-  addRow: {
-    backgroundColor: color.lighter_purple,
-    height: rowHeight
-  },
-  editRow: {
-    height: rowHeight
-  },
-  link: {
-    color: color.purple,
-    fontFamily: "'Gotham 7r', sans-serif"
-  },
-  cell: {
-    padding: cellPadding,
-    border: '1px solid gray',
-    fontSize: 14
-  },
-  headerCell: {
-    padding: cellPadding,
-    border: '1px solid gray',
-    backgroundColor: color.teal
-  },
-  button: {
-    margin: 0
-  },
-  editButton: {
-    marginTop: 0,
-    marginLeft: 0,
-    marginBottom: 0,
-    marginRight: 10
-  }
-};
+import dataStyles from './dataStyles';
 
 const DataProperties = React.createClass({
   propTypes: {
@@ -70,7 +35,7 @@ const DataProperties = React.createClass({
     return (
       <div id='dataProperties' style={{display: visible ? 'block' : 'none'}}>
         <h4>
-         <a href='#' style={styles.link}
+         <a href='#' style={dataStyles.link}
              onClick={() => this.props.onViewChange(DataView.OVERVIEW)}>
            Data
          </a>
@@ -86,16 +51,16 @@ const DataProperties = React.createClass({
           </colgroup>
           <tbody>
             <tr>
-              <th style={styles.headerCell}>Key</th>
-              <th style={styles.headerCell}>Value</th>
-              <th style={styles.headerCell}></th>
+              <th style={dataStyles.headerCell}>Key</th>
+              <th style={dataStyles.headerCell}>Value</th>
+              <th style={dataStyles.headerCell}></th>
             </tr>
 
-            <tr style={styles.addRow}>
-              <td style={styles.cell}></td>
-              <td style={styles.cell}></td>
-              <td style={styles.cell}>
-                <button className="btn btn-primary" style={styles.button}>Add pair</button>
+            <tr style={dataStyles.addRow}>
+              <td style={dataStyles.cell}></td>
+              <td style={dataStyles.cell}></td>
+              <td style={dataStyles.cell}>
+                <button className="btn btn-primary" style={dataStyles.button}>Add pair</button>
               </td>
             </tr>
 
@@ -103,12 +68,12 @@ const DataProperties = React.createClass({
               this.getKeyValueData().map(row => {
                 const [key, value] = row;
                 return (
-                  <tr key={key} style={styles.editRow}>
-                    <td style={styles.cell}>{key}</td>
-                    <td style={styles.cell}>{value}</td>
-                    <td style={styles.cell}>
-                      <button className="btn" style={styles.editButton}>Edit</button>
-                      <button className="btn btn-danger" style={styles.button}>Delete</button>
+                  <tr key={key} style={dataStyles.editRow}>
+                    <td style={dataStyles.cell}>{key}</td>
+                    <td style={dataStyles.cell}>{value}</td>
+                    <td style={dataStyles.cell}>
+                      <button className="btn" style={dataStyles.editButton}>Edit</button>
+                      <button className="btn btn-danger" style={dataStyles.button}>Delete</button>
                     </td>
                   </tr>
                 );
@@ -128,4 +93,4 @@ export default connect(state => ({
   onViewChange(view) {
     dispatch(changeView(view));
   }
-}))(DataProperties);
+}))(Radium(DataProperties));
