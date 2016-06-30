@@ -102,9 +102,9 @@ function data(state, action) {
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
-      newState = Object.assign({}, state);
-      newState[action.key] = datum(newState[action.key], action);
-      return newState;
+      return Object.assign({}, state, {
+        [action.key]: datum(newState[action.key], action)
+      });
 
     case DELETE_ANIMATION:
       newState = Object.assign({}, state);
