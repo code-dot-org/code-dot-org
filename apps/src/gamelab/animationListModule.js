@@ -396,7 +396,7 @@ export function saveAnimations(onComplete) {
  */
 function saveAnimation(animationKey, animationProps) {
   return new Promise((resolve, reject) => {
-    if (typeof animationProps.blob === 'undefined') {
+    if (animationProps.blob === undefined) {
       reject(new Error(`Animation ${animationKey} has no loaded content.`));
       return;
     }
