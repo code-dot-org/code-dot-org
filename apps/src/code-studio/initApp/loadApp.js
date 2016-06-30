@@ -106,10 +106,6 @@ module.exports = function (callback) {
         }
       }
 
-      if (progress.refreshStageProgress) {
-        progress.refreshStageProgress();
-      }
-
       if (data.disablePostMilestone) {
         $("#progresswarning").show();
       }

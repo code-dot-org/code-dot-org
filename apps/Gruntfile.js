@@ -335,22 +335,6 @@ module.exports = function (grunt) {
     },
   };
 
-  var codeStudioEntries = {
-    // codeStudio: './src/code-studio/code-studio.js',
-    // levelbuilder: './src/code-studio/levelbuilder.js',
-    // levelbuilderMarkdown: './src/code-studio/levelbuilder_markdown.js',
-    // levelbuilderStudio: './src/code-studio/levelbuilder_studio.js',
-    // districtDropdown: './src/code-studio/districtDropdown.js',
-    // contractMatch: './src/code-studio/levels/contract_match.jsx',
-    // widget: './src/code-studio/levels/widget.js',
-    // external: './src/code-studio/levels/external.js',
-    // // gets required by levelGroup
-    // // multi: './src/code-studio/levels/multi.js',
-    // // textMatch: './src/code-studio/levels/textMatch.js',
-    // levelGroup: './src/code-studio/levels/levelGroup.js',
-    // dialogHelper: './src/code-studio/levels/dialogHelper.js',
-    // initApp: './src/code-studio/initApp/initApp.js'
-  };
 
   var bundles = [
     {
@@ -359,8 +343,29 @@ module.exports = function (grunt) {
       }).concat(appsToBuild.indexOf('applab') === -1 ? [] :
         [['applab-api', './src/applab/api-entry.js']]
       )),
-      commonFile: 'common',
-      shouldFactor: true
+      commonFile: 'common'
+    },
+
+    {
+      entries: {
+        'code-studio': './src/code-studio/code-studio.js',
+        levelbuilder: './src/code-studio/levelbuilder.js',
+        levelbuilder_markdown: './src/code-studio/levelbuilder_markdown.js',
+        levelbuilder_studio: './src/code-studio/levelbuilder_studio.js',
+        districtDropdown: './src/code-studio/districtDropdown.js',
+        'levels/contract_match': './src/code-studio/levels/contract_match.jsx',
+        'levels/widget': './src/code-studio/levels/widget.js',
+        'levels/external': './src/code-studio/levels/external.js',
+        // put these entry points in arrays so that they can be required elsewhere
+        // https://github.com/webpack/webpack/issues/300
+        'levels/multi': ['./src/code-studio/levels/multi.js'],
+        'levels/textMatch': ['./src/code-studio/levels/textMatch.js'],
+        'levels/levelGroup': './src/code-studio/levels/levelGroup.js',
+        'levels/dialogHelper': './src/code-studio/levels/dialogHelper.js',
+        'initApp/initApp': './src/code-studio/initApp/initApp.js'
+      },
+      commonFile: 'code-studio-common',
+      provides: ['marked', 'react', 'react-dom', 'radium']
     },
 
     {

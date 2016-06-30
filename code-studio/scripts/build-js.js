@@ -29,31 +29,7 @@ var defaultOptions = {
 };
 
 Promise.all([
-  // Code in code-studio.js and any common code factored out of this bundle
-  // gets included into every page in dashboard.
-  // @see application.html.haml
-  build_commands.bundle(_.extend({}, defaultOptions, {
-    filenames: [
-      'code-studio.js',
-      'levelbuilder.js',
-      'levelbuilder_markdown.js',
-      'levelbuilder_studio.js',
-      'districtDropdown.js',
-      'levels/contract_match.jsx',
-      'levels/widget.js',
-      'levels/external.js',
-      'levels/multi.js',
-      'levels/textMatch.js',
-      'levels/levelGroup.js',
-      'levels/dialogHelper.js',
-      'initApp/initApp.js'
-    ],
-    commonFile: 'code-studio-common',
-    browserifyGlobalShim: {
-      "jquery": "$"
-    },
-    shouldFactor: true
-  }))
+
 ]).then(function (results) {
   var allStepsSucceeded = !results.some(function (result) {
     return result instanceof Error;
