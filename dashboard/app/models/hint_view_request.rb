@@ -27,7 +27,7 @@ class HintViewRequest < ActiveRecord::Base
   validates :script, :presence => true
   validates :level, :presence => true
 
-  def HintViewRequest.enabled?
+  def self.enabled?
     Gatekeeper.allows('hint_view_request', default: true)
   end
 
@@ -36,7 +36,7 @@ class HintViewRequest < ActiveRecord::Base
   # called by ApplicationController.milestone_response
   # used by Studio's feedback modal to decide whether or not to show a
   # user a hint based on the already-viewed hints.
-  def HintViewRequest.milestone_response(script, level, user)
+  def self.milestone_response(script, level, user)
     return [] unless enabled?
     HintViewRequest.
       where(script: script, level: level, user: user).
