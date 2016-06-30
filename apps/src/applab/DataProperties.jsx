@@ -8,10 +8,39 @@ import { changeView } from './redux/data';
 import color from '../color';
 import { connect } from 'react-redux';
 
+const rowHeight = 45;
+const cellPadding = 10;
+
 const styles = {
+  addRow: {
+    backgroundColor: color.lighter_purple,
+    height: rowHeight
+  },
+  editRow: {
+    height: rowHeight
+  },
   link: {
     color: color.purple,
     fontFamily: "'Gotham 7r', sans-serif"
+  },
+  cell: {
+    padding: cellPadding,
+    border: '1px solid gray',
+    fontSize: 14
+  },
+  headerCell: {
+    padding: cellPadding,
+    border: '1px solid gray',
+    backgroundColor: color.teal
+  },
+  button: {
+    margin: 0
+  },
+  editButton: {
+    marginTop: 0,
+    marginLeft: 0,
+    marginBottom: 0,
+    marginRight: 10
   }
 };
 
@@ -50,18 +79,37 @@ const DataProperties = React.createClass({
 
         {/* placeholder display of key-value pairs */}
         <table>
+          <colgroup>
+            <col width='200'/>
+            <col width='200'/>
+            <col width='160'/>
+          </colgroup>
           <tbody>
             <tr>
-              <th>Key</th>
-              <th>Value</th>
+              <th style={styles.headerCell}>Key</th>
+              <th style={styles.headerCell}>Value</th>
+              <th style={styles.headerCell}></th>
             </tr>
+
+            <tr style={styles.addRow}>
+              <td style={styles.cell}></td>
+              <td style={styles.cell}></td>
+              <td style={styles.cell}>
+                <button className="btn btn-primary" style={styles.button}>Add pair</button>
+              </td>
+            </tr>
+
             {
               this.getKeyValueData().map(row => {
                 const [key, value] = row;
                 return (
-                  <tr key={key}>
-                    <td>{key}</td>
-                    <td>{value}</td>
+                  <tr key={key} style={styles.editRow}>
+                    <td style={styles.cell}>{key}</td>
+                    <td style={styles.cell}>{value}</td>
+                    <td style={styles.cell}>
+                      <button className="btn" style={styles.editButton}>Edit</button>
+                      <button className="btn btn-danger" style={styles.button}>Delete</button>
+                    </td>
                   </tr>
                 );
               })
