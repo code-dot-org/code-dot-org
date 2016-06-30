@@ -672,6 +672,25 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   }
 end
 
+# TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
+# thereof, removing it if it remains unused.
+And(/I display toast "([^"]*)"$/) do |message|
+  @browser.execute_script(<<-SCRIPT)
+    var div = document.createElement('div');
+    div.className = 'ui-test-toast';
+    div.textContent = "#{message}";
+    div.style.position = 'absolute';
+    div.style.top = '50px';
+    div.style.right = '50px';
+    div.style.padding = '50px';
+    div.style.backgroundColor = 'lightyellow';
+    div.style.border = 'dashed 3px #eeee00';
+    div.style.fontWeight = 'bold';
+    div.style.fontSize = '14pt';
+    document.body.appendChild(div);
+  SCRIPT
+end
+
 And(/I fill in username and password for "([^"]*)"$/) do |name|
   steps %Q{
     And I type "#{@users[name][:email]}" into "#user_login"
