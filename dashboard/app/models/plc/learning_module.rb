@@ -7,8 +7,8 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  plc_course_unit_id :integer          not null
-#  required           :boolean          default(FALSE), not null
 #  module_type        :string(255)
+#  stage_id           :integer
 #
 # Indexes
 #

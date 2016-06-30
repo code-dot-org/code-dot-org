@@ -31,9 +31,7 @@ require('./components/report_abuse_form');
 require('./components/SendToPhone');
 require('./components/small_footer');
 require('./components/GridEditor');
-require('./components/IconLibrary');
-require('./components/pairing');
-require('./components/pairing_dialog');
+require('./components/pairing/pairing_dialog');
 require('./components/Attachments');
 
 // Prevent callstack exceptions when opening multiple dialogs
