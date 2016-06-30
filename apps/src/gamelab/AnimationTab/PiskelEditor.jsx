@@ -79,17 +79,17 @@ const PiskelEditor = React.createClass({
       return;
     }
 
-    const data = props.animationList.data[key];
-    if (!data) {
-      throw new Error('No data present for animation with key ' + key);
+    const animationProps = props.animationList.propsByKey[key];
+    if (!animationProps) {
+      throw new Error('No props present for animation with key ' + key);
     }
 
     this.isLoadingAnimation_ = true;
     this.piskel.loadSpritesheet(
-        data.dataURI,
-        data.frameSize.x,
-        data.frameSize.y,
-        data.frameRate,
+        animationProps.dataURI,
+        animationProps.frameSize.x,
+        animationProps.frameSize.y,
+        animationProps.frameRate,
         () => {
           this.loadedAnimation_ = key;
           this.isLoadingAnimation_ = false;
@@ -141,5 +141,5 @@ export default connect(state => ({
   animationList: state.animationList,
   channelId: state.pageConstants.channelId
 }), dispatch => ({
-  editAnimation: (key, data) => dispatch(editAnimation(key, data))
+  editAnimation: (key, props) => dispatch(editAnimation(key, props))
 }))(PiskelEditor);

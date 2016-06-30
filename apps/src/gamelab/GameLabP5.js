@@ -726,15 +726,15 @@ GameLabP5.prototype.preloadAnimations = function (animationList) {
   // Preload project animations:
   this.p5.projectAnimations = {};
   animationList.orderedKeys.forEach(key => {
-    const data = animationList.data[key];
-    const image = this.p5.loadImage(data.dataURI, () => {
+    const props = animationList.propsByKey[key];
+    const image = this.p5.loadImage(props.dataURI, () => {
       const spriteSheet = this.p5.loadSpriteSheet(
           image,
-          data.frameSize.x,
-          data.frameSize.y,
-          data.frameCount
+          props.frameSize.x,
+          props.frameSize.y,
+          props.frameCount
       );
-      this.p5.projectAnimations[data.name] = this.p5.loadAnimation(spriteSheet);
+      this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
     });
   });
 };

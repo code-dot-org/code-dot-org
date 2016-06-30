@@ -37,7 +37,7 @@ const AnimationList = React.createClass({
             <AnimationListItem
                 key={key}
                 animationKey={key}
-                animationData={this.props.animationList.data[key]}
+                animationData={this.props.animationList.propsByKey[key]}
                 isSelected={key === this.props.selectedAnimation}
             />
           )}

@@ -227,14 +227,19 @@ GameLab.prototype.init = function (config) {
       // We got old animation data that needs to be migrated.
       animations = {
         orderedKeys: animations.map(a => a.key),
-        data: animations.reduce((memo, next) => {
+        propsByKey: animations.reduce((memo, next) => {
           memo[next.key] = next;
           return memo;
         }, {})
       };
-    } else if (animations.hasOwnProperty('list')) {
+    } else {
       // TODO: Remove before merge - this is a mid-development migration
-      animations.orderedKeys = animations.list;
+      if (animations.hasOwnProperty('list')) {
+        animations.orderedKeys = animations.list;
+      }
+      if (animations.hasOwnProperty('data')) {
+        animations.propsByKey = animations.data;
+      }
     }
 
     // Load initial animation information
@@ -1009,7 +1014,7 @@ GameLab.prototype.getSerializedAnimationList = function (callback) {
 GameLab.prototype.getAnimationDropdown = function () {
   const animationList = this.studioApp_.reduxStore.getState().animationList;
   return animationList.orderedKeys.map(key => {
-    const name = animationList.data[key].name;
+    const name = animationList.propsByKey[key].name;
     return {
       text: utils.quote(name),
       display: utils.quote(name)
