@@ -51,7 +51,7 @@ module TestRunUtils
         # In CircleCI, force 4 parallel instances -- parallel_tests otherwise
         # detects an unreasonable amount of CPU cores, resulting in memory over-use)
         is_circle = ENV['CIRCLECI']
-        circle_parallel_tests = 4
+        circle_parallel_tests = 8
         RakeUtils.rake_stream_output "#{parallel_env} parallel:rake[db:setup_or_migrate#{is_circle ? ",#{circle_parallel_tests}" : ''}]"
         RakeUtils.rake_stream_output "#{parallel_env} parallel:rake[seed:test#{is_circle ? ",#{circle_parallel_tests}" : ''}]"
         RakeUtils.rake_stream_output "#{parallel_env} parallel:test#{is_circle ? "[#{circle_parallel_tests}]" : ''}"
