@@ -56,7 +56,6 @@ module GitUtils
     end
   end
 
-
   def self.files_changed_in_branch(base_branch)
     current_branch = self.current_branch
     # via http://stackoverflow.com/a/25071749
