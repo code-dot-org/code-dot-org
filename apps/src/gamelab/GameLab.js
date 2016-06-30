@@ -999,7 +999,7 @@ GameLab.prototype.displayFeedback_ = function () {
  */
 GameLab.prototype.getSerializedAnimationList = function (callback) {
   this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
-    callback(null, getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList));
+    callback(getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList));
   }));
 };
 
