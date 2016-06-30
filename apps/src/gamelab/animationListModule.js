@@ -8,6 +8,14 @@ import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 /* global dashboard */
 
+// TODO: Don't upload to S3 if an animation is never modified
+// TODO: Overwrite version ID within session
+// TODO: Load exact version ID on project load
+// TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
+//       is deleted, so nothing is selected.
+// TODO: Enable starting new blank animation
+// TODO: Warn about duplicate-named animations.
+
 // Args: {SerializedAnimationList} animationList
 const SET_INITIAL_ANIMATION_LIST = 'AnimationList/SET_INITIAL_ANIMATION_LIST';
 // Args: {AnimationKey} key, {AnimationProps} props
@@ -423,12 +431,3 @@ function saveAnimation(animationKey, animationProps) {
     xhr.send(animationProps.blob);
   });
 }
-
-
-// TODO: Don't upload to S3 if an animation is never modified
-// TODO: Overwrite version ID within session
-// TODO: Load exact version ID on project load
-// TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
-//       is deleted, so nothing is selected.
-// TODO: Enable starting new blank animation
-// TODO: Warn about duplicate-named animations.
