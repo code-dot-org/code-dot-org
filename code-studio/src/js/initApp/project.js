@@ -422,7 +422,7 @@ var projects = module.exports = {
       var args = Array.prototype.slice.apply(arguments);
       callback = args[0];
       forceNewVersion = args[1];
-      this.sourceHandler.getAnimationMetadata((err, animations) => {
+      this.sourceHandler.getAnimationMetadata((animations) => {
         const source = this.sourceHandler.getLevelSource();
         const html = this.sourceHandler.getLevelHtml();
         this.save({source, html, animations}, callback, forceNewVersion);
@@ -497,7 +497,7 @@ var projects = module.exports = {
       return;
     }
 
-    this.sourceHandler.getAnimationMetadata((err, animations) => {
+    this.sourceHandler.getAnimationMetadata((animations) => {
       const source = this.sourceHandler.getLevelSource();
       const html = this.sourceHandler.getLevelHtml();
       if (currentSources.source === source &&

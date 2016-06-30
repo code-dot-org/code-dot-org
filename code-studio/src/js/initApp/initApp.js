@@ -256,7 +256,7 @@ window.apps = {
       if (appOptions.getAnimationMetadata) {
         appOptions.getAnimationMetadata(callback);
       } else {
-        callback(null, {});
+        callback({});
       }
     }
   },
