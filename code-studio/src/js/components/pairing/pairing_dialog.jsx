@@ -10,12 +10,11 @@ import Dialog from '@cdo/apps/templates/DialogComponent';
  */
 var PairingDialog = React.createClass({
   propTypes: {
-    initialIsOpen: React.PropTypes.bool.isRequired,
     source: React.PropTypes.string
   },
 
   getInitialState() {
-    return {isOpen: this.props.initialIsOpen};
+    return {isOpen: false};
   },
 
   close() {

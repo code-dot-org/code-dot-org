@@ -48,22 +48,6 @@
     }
   });
 
-  // Only display pair programming if in dashboard.
   if (typeof dashboard !== 'undefined') {
-    // Pair programming dialog.
-    $(document).ready(function () {
-      var props = {source: '#{pairing_url}', initialIsOpen: #{@show_pairing_dialog}};
-      props.i18n = window.dashboard.i18n;
-      $('body').append('<div id="pairing"></div>');
-      var pairingDialog = ReactDOM.render(
-          React.createElement(window.dashboard.PairingDialog, props),
-          document.getElementById('pairing'));
-
-      $('#pairing_link').click(function () {
-        pairingDialog.open();
-        hideUserOptions();
-        return false;
-      });
-      $('#pairing_link').show();
-    });
+    dashboard.pairing.init('#{pairing_url}', hideUserOptions, #{@show_pairing_dialog});
   }
