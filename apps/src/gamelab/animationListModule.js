@@ -229,7 +229,7 @@ export function addLibraryAnimation(data) {
 /**
  * Mark an animation as needing to be saved to S3.
  * @param {AnimationKey} key
- * @returns {{type: *, key: *}}
+ * @returns {{type: ActionType, key: AnimationKey}}
  */
 function invalidateAnimation(key) {
   return {
@@ -367,6 +367,8 @@ export function deleteAnimation(key) {
  * @param {function} [callback]
  */
 function loadAnimationFromSource(key, sourceUrl, callback) {
+  // Figure out URL from animation key
+  // TODO: Take version ID into account here...
   sourceUrl = sourceUrl || animationsApi.basePath(key) + '.png';
   callback = callback || function () {};
   return dispatch => {
@@ -374,8 +376,6 @@ function loadAnimationFromSource(key, sourceUrl, callback) {
       type: START_LOADING_FROM_SOURCE,
       key: key
     });
-    // Figure out URL from animation key
-    // TODO: Take version ID into account here...
     fetchUrlAsBlob(sourceUrl, (err, blob) => {
       if (err) {
         console.log('Failed to load animation ' + key, err);
