@@ -1,13 +1,13 @@
 <Maze>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2016-06-22T20:13:04.000Z",
+  "created_at": "2016-06-30T17:52:56.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,2,1,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[1,1,1,4,1,1,1,1],[1,3,1,1,1,1,1,4],[1,1,1,1,3,1,1,1],[1,1,1,1,1,1,1,1],[4,1,2,1,1,1,3,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,3,1,1,1,1,1,4]]",
     "skin": "birds",
-    "instructions": "Time for a shorter puzzle!  Move one way, then another to get me to the pig.",
+    "instructions": "It's a pig party!  Get those pigs! ",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",
@@ -30,7 +30,7 @@
     "maze_data": null
   },
   "published": true,
-  "notes": "",
+  "notes": "\"Free Play\"",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -45,22 +45,11 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveNorth"/>
-        <block type="maze_moveEast"/>
-      </xml>
+</xml>
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="maze_moveEast">
-              <next>
-                <block type="maze_moveNorth"/>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
+</xml>
     </solution_blocks>
   </blocks>
 </Maze>
