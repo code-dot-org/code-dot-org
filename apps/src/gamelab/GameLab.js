@@ -233,14 +233,6 @@ GameLab.prototype.init = function (config) {
           return memo;
         }, {})
       };
-    } else {
-      // TODO: Remove before merge - this is a mid-development migration
-      if (animations.hasOwnProperty('list')) {
-        animations.orderedKeys = animations.list;
-      }
-      if (animations.hasOwnProperty('data')) {
-        animations.propsByKey = animations.data;
-      }
     }
 
     // Load initial animation information
