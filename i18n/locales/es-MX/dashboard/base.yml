@@ -29,7 +29,7 @@ es-MX:
   unsubmit: NO enviado
   previous_page: Página anterior
   next_page: Página siguiente
-  next_resource: Next resource
+  next_resource: Siguiente recurso
   done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: De acuerdo
@@ -87,7 +87,7 @@ es-MX:
     teacher_title: Profesor Regístrate
     student_pitch: Registro de alumno para Code.org
     student_title: Unirse como Estudiante
-    signup_title: Sign up for Code.org
+    signup_title: Regístrate en Code.org
     school_name: Nombre de la escuela (opcional)
     school_address: Dirección de la escuela (opcional)
     address_placeholder: Dirección, ciudad, estado/provincia, código postal
@@ -106,7 +106,7 @@ es-MX:
     student_terms: "Estoy de acuerdo en estar obligado por los <a href='http://code.org/tos'>términos de servicio</a> de Code.org. Si soy menor de 13 años de edad, confirmo al enviar este formulario que tengo permiso de mis padres o autorización de un tutor legal para utilizar los servicios de Code.org.<br/>Para los usuarios menores de 13 años, las direcciones de correo se almacenan de tal forma que no nos permita contactarlos."
     teacher_terms: "Acepto estar obligado a cumplir los <a href='http://code.org/tos'>términos de uso del servicio</a>."
     additional_information: Necesitamos alguna información adicional para continuar con su registro.
-    user_type_label: Account Type
+    user_type_label: Tipo de cuenta
     user_type_teacher: Profesor
     user_type_student: estudiante
   signin_form:
@@ -334,7 +334,7 @@ es-MX:
     announcement_title: Anuncios
     announcement_view_all: Ver todo
     announcement_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
-    announcement_button: Test the feature
+    announcement_button: Compruebe la función de
     announcement_petition: Como profesor, usted está liderando un movimiento para dar a cada estudiante en todas las escuelas la oportunidad de aprender computación. Ahora, es tiempo de dejar que sus representantes lo escuchen. Esta semana, líderes de la educación, 28 gobernadores y CEOs de las compañías más grandes de América se unieron en una carta abierta pidiendo el Congreso de Estados Unidos para financiar en la educacion de K-12 informática.
     announcement_petition_button: Agrega tu nombre
   move_students:
@@ -687,19 +687,19 @@ es-MX:
     content: Contenido
     practice: Prácticas de Profesor
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_md: "<strong>Descargo de responsabilidad: ahora está dejando el dominio Code.org, a un sitio que no es operado por Code.org.</strong> Este sitio puede tener políticas de privacidad que difieren de Code.org. <br/><br/> Hemos seleccionado estos recursos de terceros porque pensamos que serán útiles para usted. Aunque no somos directamente responsables por el contenido de este sitio web, por favor <a href='%{support_url}'><a href='mailto:support@code.org'>contacte con soporte</a> si encuentra ofensivo el contenido, o si el sitio vinculado no está disponible."
   hoc_download:
-    title: Descargas de una Hora de Código
-    capsule_title: ¿Tiene Internet?
+    title: Hora de codigo descargas
+    capsule_title: ¿Tienes Internet?
     capsule_desc: 'Utilizar el online, basado en la web <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: ¿Sin Internet?
+    instructions_headline: ¿No hay Internet?
     instructions: 'Instrucciones para maestros: Si tiene un mal servicio de Internet, estos tutoriales Hora de Código están disponibles para descargar e instalar para uso sin conexión. Elija su idioma y plataforma, descargue e instale en todas las computadoras en el aula. Puede que desee utilizar una unidad USB para descargar un vez e instalar en todos los equipos. Nota: los estudiantes no serán capaces de iniciar sesión en Code Studio, guardar progreso o imprimir certificados. Los maestros pueden imprimir certificados antes de tiempo <a href="%{url}">aquí</a>.'
-    minecraft_name: Hora de código de Minecraft
+    minecraft_name: 'Minecraft: Hora de Codigo'
     starwars_blocks_name: 'Guerra de las Galaxias: Construir una Galaxia con código (Bloques)'
     starwars_javascript_name: 'Guerra de las Galaxias: construir una Galaxia con Código (JavaScript)'
     download_message: 'Descargar %{app_name} para uso sin conexión (136MB)'
-    download_in_english: 'Descargar en inglés:'
-    download_in_spanish: 'Descargar en español:'
+    download_in_english: 'Descarga en Inglés:'
+    download_in_spanish: 'Descarga en Español:'
     windows: Windows
     mac: Mac OS X
   plc:

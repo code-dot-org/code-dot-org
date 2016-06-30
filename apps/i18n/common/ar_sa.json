@@ -27,6 +27,9 @@
   "copy": "نسخ",
   "copyright": "حقوق النسخ",
   "currentVersion": "الاصدار الحالي",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "ما لانهاية",
   "jump": "إقفز",
   "keepPlaying": "استمر في اللعب",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "أنت استخدمت كل أنواع المربعات البرمجية الضرورية ولكن ليس في الطريقة الصحيحة.",
   "listVariable": "قائمة",
   "makeYourOwnFlappy": "برمج لعبة فلابي الخاصة بك",
@@ -241,9 +245,5 @@
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
   "whenRun": "عند التشغيل",
-  "workspaceHeaderShort": "مساحة العمل: ",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "مساحة العمل: "
 }

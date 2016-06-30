@@ -173,7 +173,7 @@ class GSheetToCsv
         unless columns
           # Determine the set of columns to be output.
           columns = row.headers
-          if !@include_columns.empty?
+          unless @include_columns.empty?
             columns &= @include_columns
           end
           columns -= @exclude_columns
@@ -196,7 +196,6 @@ end
 $gdrive_ = nil
 
 namespace :seed do
-
   def csv_smart_value(value)
     return true if value == 'TRUE'
     return false if value == 'FALSE'

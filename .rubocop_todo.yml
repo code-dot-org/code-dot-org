@@ -129,13 +129,6 @@ Style/ConditionalAssignment:
 Style/ConstantName:
   Enabled: false
 
-# Offense count: 50
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: empty_lines, no_empty_lines
-Style/EmptyLinesAroundBlockBody:
-  Enabled: false
-
 # Offense count: 274
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -197,11 +190,6 @@ Style/LeadingCommentSpace:
 Style/LineEndConcatenation:
   Enabled: false
 
-# Offense count: 59
-# Cop supports --auto-correct.
-Style/MethodCallParentheses:
-  Enabled: false
-
 # Offense count: 5
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -234,11 +222,6 @@ Style/MultilineTernaryOperator:
 # Offense count: 287
 # Cop supports --auto-correct.
 Style/MutableConstant:
-  Enabled: false
-
-# Offense count: 30
-# Cop supports --auto-correct.
-Style/NegatedIf:
   Enabled: false
 
 # Offense count: 19

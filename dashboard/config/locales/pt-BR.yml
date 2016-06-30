@@ -30,7 +30,7 @@
   unsubmit: Cancelar envio
   previous_page: Página anterior
   next_page: Próxima página
-  next_resource: Next resource
+  next_resource: Próximo recurso
   done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: Ok
@@ -98,7 +98,7 @@
     teacher_title: Cadastro de professores
     student_pitch: Cadastro de aluno na Code.org
     student_title: Cadastro de alunos
-    signup_title: Sign up for Code.org
+    signup_title: Cadastre-se no Code.org
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
     address_placeholder: endereço, cidade, estado, CEP
@@ -123,7 +123,7 @@
       da Code.org.
     additional_information: Precisamos de mais informações para continuar com o processo
       de inscrição.
-    user_type_label: Account Type
+    user_type_label: Tipo de conta
     user_type_teacher: Professor
     user_type_student: Estudante
   signin_form:
@@ -409,7 +409,7 @@
       todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você pode
       encontrar todos os recursos offline numa página só. Associar as lições com qualquer
       aula de ciência da computação, ou usar a vídeo-aula como um curso independente."
-    announcement_button: Saiba mais
+    announcement_button: Teste a funcionalidade
     announcement_petition: Como professor, você está liderando o caminho em um movimento
       para dar a cada aluno em todas as escolas a oportunidade de aprender informática.
       Agora, é hora de deixar seus representantes notícias suas. Esta semana, líderes

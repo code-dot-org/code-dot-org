@@ -183,5 +183,5 @@ def fetch_hoc_metrics
 end
 
 def fetch_user_metrics
-  Properties.get_user_metrics()
+  Properties.get_user_metrics
 end
