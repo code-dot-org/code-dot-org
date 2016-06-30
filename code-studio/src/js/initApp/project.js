@@ -414,6 +414,8 @@ var projects = module.exports = {
       return;
     }
 
+    $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
+
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.
@@ -432,7 +434,6 @@ var projects = module.exports = {
       currentSourceVersionId = null;
     }
 
-    $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
     // TODO(dave): Remove this check and remove clearHtml() once all projects
     // have versioning: https://www.pivotaltracker.com/story/show/103347498
