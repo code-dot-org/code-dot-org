@@ -253,8 +253,11 @@ window.apps = {
       appOptions.initialAnimationMetadata = animations;
     },
     getAnimationMetadata: function (callback) {
-      return appOptions.getAnimationMetadata &&
-          appOptions.getAnimationMetadata(callback);
+      if (appOptions.getAnimationMetadata) {
+        appOptions.getAnimationMetadata(callback);
+      } else {
+        callback(null, {});
+      }
     }
   },
 
