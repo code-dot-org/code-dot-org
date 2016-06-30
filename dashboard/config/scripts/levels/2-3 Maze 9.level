@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,1,1,1,0,0],[0,0,0,1,4,1,0,0],[0,0,3,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,4,1,0,0,0],[0,0,0,1,1,1,0,0],[0,0,4,1,4,1,0,0],[0,0,3,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "instructions": "Guide me to the green evilness! (Watch out for TNT)",
     "start_direction": "2",
@@ -25,9 +25,12 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "contained_level_names": null,
+    "maze_data": null
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 3
   }
