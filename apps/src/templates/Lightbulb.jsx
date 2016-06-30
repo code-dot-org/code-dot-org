@@ -166,3 +166,25 @@ var Lightbulb = React.createClass({
   }
 });
 module.exports = Lightbulb;
+
+if (BUILD_STYLEGUIDE) {
+  Lightbulb.styleGuideExamples = storybook => {
+    return storybook
+      .storiesOf('Lightbulb', module)
+      .addWithInfo(
+        'With default props',
+        '',
+        () => <Lightbulb/>
+      )
+      .addWithInfo(
+        'Unlit',
+        '',
+        () => <Lightbulb lit={false}/>
+      )
+      .addWithInfo(
+        'With a count',
+        '',
+        () => <Lightbulb count={10}/>
+      );
+  };
+}

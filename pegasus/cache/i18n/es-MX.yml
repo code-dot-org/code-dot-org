@@ -4,10 +4,10 @@
   'yes': Sí
   'no': 'No'
   select_language: Seleccione su idioma
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org pronto eliminará el soporte para Internet Explorer
+    8, 9 y 10. Por favor actualice a un navegador moderno.
+  upgrade_ie_message_csedweek: CSEdWeek.org pronto eliminará el soporte para Internet
+    Explorer 8, 9 y 10. Por favor actualice a un navegador moderno.
   upgrade_ie_link: Aprende más
   en: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
@@ -624,9 +624,9 @@
     ofrecidos por nuestros socios.</a> Aprende a programar con robots, a hacer páginas
     web, a hacer tu propia app o explorar otros lenguajes como C++, Ruby o Python!
   dashboard_landing_inspire: Inspira a tus estudiantes con carteles, videos y más.
-  dashboard_landing_video_library: Usa un vídeo de la biblioteca de vídeos de los
-    conceptos de informática.
-  dashboard_landing_report_bug: Solicita una característica o informa sobre un error.
+  dashboard_landing_video_library: Use un video de la videoteca de los conceptos de
+    ciencia de computadoras.
+  dashboard_landing_report_bug: Solicitar una característica o notificar un error.
   dashboard_landing_teacher_forum: "Únete a la comunidad de aprendizaje profesional."
   dashboard_hoc_courses: La Hora de Código para todas las edades
   dashboard_hoc_courses_desc: "¡Prueba alguno de estos tutoriales de menos de 1 hora
@@ -684,7 +684,10 @@
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
   dashboard_assessments_view: 'Ver evaluaciones en:'
-  dashboard_assessments_none: Sin evaluaciones
+  dashboard_assessments_none: Mayoría de los maestros medir el progreso de sus estudiantes
+    usando la pestaña de "Ver avances". Si usted está interesado en dar a sus estudiantes
+    evaluaciones adicionales, usted puede encontrar preguntas recomendadas y áreas
+    en los planes de lección. Estos son realizados fuera de estudio código.
   dashboard_assessments_none_part2: Si usted le está enseñando un medio o un curso
     de la secundaria, tenemos preguntas de evaluación disponibles como parte del Code
     Studio para ayudar a sus estudiantes a prepararse para el examen de AP. Para utilizar
@@ -703,13 +706,13 @@
   dashboard_navigation_section_pd: Desarrollo profesional
   dashboard_navigation_section_speakers: Informática<br/>Oradores invitados
   dashboard_navigation_all_sections: Cuentas de estudiantes y sus progresos
-  dashboard_navigation_view_progress: Ver progreso
-  dashboard_navigation_view_text_responses: Ver Respuestas de Texto
+  dashboard_navigation_view_progress: Progreso
+  dashboard_navigation_view_text_responses: Respuestas de texto
   dashboard_navigation_view_assessments: Evaluaciones
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
   dashboard_navigation_lesson_plans_resources: Planificaciones de lecciones y recursos
-  dashboard_navigation_view_stats: Ver estadísticas
+  dashboard_navigation_view_stats: Estadísticas
   dashboard_navigation_section: 'Sección: %{section_name}'
   dashboard_navigation_student: 'Alumno: %{student_name}'
   dashboard_progress_not_started: No iniciado
@@ -725,7 +728,12 @@
     in %{script_name}
   dashboard_progress_pair_programming: programación de par
   dashboard_responses_view: 'Ver respuestas de texto:'
-  dashboard_responses_none: Sin respuestas de texto
+  dashboard_responses_none: La mayoría de nuestras clases está diseñada para funcionar
+    para las edades más jóvenes y que requieren los estudiantes escribir las respuestas
+    del texto a las preguntas, así que no verá los comentarios de texto aquí. Para
+    estudiantes mayores en cursos de secundaria y media, puedes ver sus presentaciones
+    a las preguntas de respuesta abierta texto eligiendo el curso asignado en el desplegable
+    de arriba.
   dashboard_sections_new_section: Nueva sección
   dashboard_sections_jumbotron_instruction: Crea nuevas secciones y añade alumnos
     a ellas. Las secciones ayudan a organizar a los alumnos en grupos más pequeños
@@ -734,7 +742,7 @@
   dashboard_sections_table_secret: Tipo de inicio de sesión
   dashboard_sections_table_grade: Grado
   dashboard_sections_table_course: Curso
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Etapa Extra
   dashboard_sections_table_students: Alumnos
   dashboard_sections_table_code: Código de sección
   dashboard_sections_name: Nombre de la sección
@@ -756,9 +764,9 @@
     para cada profesor. Sus estudiantes serán agregados a esta nueva sección y dejarán
     la sección anterior.
   dashboard_sections_move_to_section: 'Avanzar a sección:'
-  dashboard_sections_enter_code: 'Ingresar código de sección:'
+  dashboard_sections_enter_code: 'Introduzca el código de sección:'
   dashboard_sections_code_placeholder: código de 6 caracteres (ABCDEF)
-  dashboard_sections_other_section: Otra Sección
+  dashboard_sections_other_section: Otra maestra
   dashboard_sections_both_sections: "¿Desearía que el(los) estudiante(s) permanezcan
     en ambas secciones?"
   dashboard_sections_yes_both: Sí, deseo copiar al (los) estudiante (s) para que permanezcan
@@ -900,12 +908,13 @@
   dashboard_announce_view_all: Ver todo
   dashboard_announce_message: "<b>January 6, 2015</b> - Learn beyond one Hour of Code
     in your classroom. Start a new intro course and track student progress."
-  dashboard_announce_button_text: Aprende más
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_button_text: Compruebe la función de
+  dashboard_announce_petition: Como profesor, usted está liderando un movimiento para
+    dar a cada estudiante en todas las escuelas la oportunidad de aprender computación.
+    Ahora, es tiempo de dejar que sus representantes lo escuchen. Esta semana, líderes
+    de la educación, 28 gobernadores y CEOs de las compañías más grandes de América
+    se unieron en una carta abierta pidiendo el Congreso de Estados Unidos para financiar
+    en la educacion de K-12 informática.
   dashboard_announce_petition_button: Agrega tu nombre
   code_hoc_coming: "¡La Hora del Código está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
@@ -1034,12 +1043,13 @@
   accelerated_name: Curso acelerado
   cspunit1_name: 'Tema 1: Información digital'
   cspunit2_name: 'Tema 2: El Internet'
-  cspunit3_name: Principios de CS Unidad 3
+  cspunit3_name: 'Unidad 3: programación'
   cspunit4_name: 'Tema 4: Datos'
   cspunit5_name: 'Unidad 5: Explorar y Crear PT'
   cspunit6_name: 'Post-AP: Bases de Datos en Aplicaciones'
   csp1_name: 'Tema 1: El Internet'
   csp2_name: 'Unidad 2: Información Digital'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Prueba completa - 50 preguntas
   cspexam1-mWU7ilDYM9_name: Parte del test 1 - 25 preguntas
   cspexam2-AKwgAh1ac5_name: Parte del test 2 - 25 preguntas
@@ -1057,7 +1067,7 @@
   classicmaze_name: Laberinto clásico
   iceage_name: La Era de Hielo
   minecraft_name: Minecraft
-  starwarsblocks_name: Bloques de La Guerra de Las Galaxias
+  starwarsblocks_name: Star Wars (bloques)
   math_category_name: Matemáticas
   hoc_category_name: Hora del código
   csf_category_name: Fundamentos de CS

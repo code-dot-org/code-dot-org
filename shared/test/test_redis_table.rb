@@ -45,20 +45,20 @@ class RedisTableTest < Minitest::Test
     # Make sure the expected pubsub events were published.
     assert_equal [make_pubsub_event('shard1', 'table', {:action => 'insert', :id => 1}),
                   make_pubsub_event('shard1', 'table2', {:action => 'insert', :id => 1})],
-                 @pubsub.publish_history
+      @pubsub.publish_history
 
     value2 = {'foo' => 52}
     row2 = table.insert(value2)
     assert_equal [row1, row2], table.to_a
     assert_equal row2, table.fetch(2)
     assert_equal make_pubsub_event('shard1', 'table', {:action => 'insert', :id => 2}),
-                 @pubsub.publish_history[2]
+      @pubsub.publish_history[2]
 
     value2a = {'foo' => 53}
     updated_row2 = table.update(2, value2a)
     assert_equal updated_row2, table.fetch(2)
     assert_equal make_pubsub_event('shard1', 'table', {:action => 'update', :id => 2}),
-                 @pubsub.publish_history[3]
+      @pubsub.publish_history[3]
 
     # Update returns correct values for row
     assert_equal value2a['foo'], updated_row2['foo']
@@ -68,7 +68,7 @@ class RedisTableTest < Minitest::Test
     assert_equal(row3, table.fetch(3))
     assert_equal([row1, updated_row2, row3], table.to_a)
     assert_equal make_pubsub_event('shard1', 'table', {:action => 'insert', :id => 3}),
-                 @pubsub.publish_history[4]
+      @pubsub.publish_history[4]
 
     # Test to_a_from_min_id
     assert_equal([row1, updated_row2, row3], table.to_a_from_min_id(1))
@@ -82,27 +82,27 @@ class RedisTableTest < Minitest::Test
     assert_equal([table2_row1], table2.to_a)
 
     assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete', :ids => [2]}),
-                 @pubsub.publish_history[5]
+      @pubsub.publish_history[5]
 
     table3_row1 = table3.insert(value)
 
     # Test getting multiple tables
     table_map = RedisTable.get_tables(@redis, 'shard1', {'table' => 1, 'table2' => 1})
     assert_equal(
-       {'table' => {'rows' => [row1, row3]},
-        'table2' => {'rows' => [table2_row1]}},
-       table_map)
+      {'table' => {'rows' => [row1, row3]},
+       'table2' => {'rows' => [table2_row1]}},
+      table_map)
 
     table_map = RedisTable.get_tables(@redis, 'shard1', {'table'  =>  3})
     assert_equal(
-        {'table' =>  {'rows' => [row3]}},
-        table_map)
+      {'table' =>  {'rows' => [row3]}},
+      table_map)
 
     table_map = RedisTable.get_tables(@redis, 'shard1', {'table'  =>  4, 'table2'  =>  1})
     assert_equal(
-        {'table' =>  {'rows' => []},
-         'table2' =>  {'rows' => [table2_row1]}},
-        table_map)
+      {'table' =>  {'rows' => []},
+       'table2' =>  {'rows' => [table2_row1]}},
+      table_map)
 
     assert_equal({}, RedisTable.get_tables(@redis, 'shard1', {}))
 
@@ -145,7 +145,7 @@ class RedisTableTest < Minitest::Test
 
     # Check that multi-delete was published
     assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete', :ids => [1, 3]}),
-                 @pubsub.publish_history[4]
+      @pubsub.publish_history[4]
 
     # Clean up
     RedisTable.reset_shard('shard1', @redis, @pubsub)

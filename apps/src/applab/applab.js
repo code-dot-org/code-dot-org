@@ -557,10 +557,15 @@ Applab.init = function (config) {
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
+  if (!config.channel) {
+    throw new Error('Cannot initialize App Lab without a channel id. ' +
+      'You may need to sign in to your code studio account first.');
+  }
   Applab.channelId = config.channel;
   Applab.firebaseName = config.firebaseName;
   Applab.firebaseAuthToken = config.firebaseAuthToken;
-  Applab.storage = window.dashboard.project.useFirebase() ? FirebaseStorage : AppStorage;
+  var useFirebase = window.dashboard.project.useFirebase() || false;
+  Applab.storage = useFirebase ? FirebaseStorage : AppStorage;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
@@ -643,7 +648,7 @@ Applab.init = function (config) {
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
     // is stored in startHtml, not levelHtml.
-    if (studioApp.reduxStore.getState().pageConstants.isDesignModeHidden) {
+    if (!studioApp.reduxStore.getState().pageConstants.hasDesignMode) {
       config.level.levelHtml = '';
     }
 
@@ -748,7 +753,8 @@ Applab.init = function (config) {
 
       designMode.loadDefaultScreen();
 
-      designMode.toggleDesignMode(Applab.startInDesignMode());
+      studioApp.reduxStore.dispatch(changeInterfaceMode(
+        Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
       designMode.configureDragAndDrop();
 
@@ -757,11 +763,17 @@ Applab.init = function (config) {
     }
   }.bind(this);
 
+  // Force phoneFrame on when viewing or editing firebase projects.
+  var playspacePhoneFrame = !config.share && (experiments.isEnabled('phoneFrame') ||
+    useFirebase);
+
   // Push initial level properties into the Redux store
   studioApp.setPageConstants(config, {
+    playspacePhoneFrame,
     channelId: config.channel,
     visualizationHasPadding: !config.noPadding,
-    isDesignModeHidden: !!config.level.hideDesignMode,
+    hasDataMode: useFirebase,
+    hasDesignMode: !config.level.hideDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
     isProjectLevel: !!config.level.isProjectLevel,
@@ -769,8 +781,7 @@ Applab.init = function (config) {
     isSubmitted: !!config.level.submitted,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
-    showDebugWatch: false,
-    playspacePhoneFrame: !config.share && experiments.isEnabled('phoneFrame')
+    showDebugWatch: false
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
@@ -783,6 +794,8 @@ Applab.init = function (config) {
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
   Applab.render();
+
+  studioApp.notifyInitialRenderComplete(config);
 };
 
 /**
@@ -1033,6 +1046,8 @@ Applab.runButtonClick = function () {
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
+    // adding finish button changes layout. force a resize
+    studioApp.onResize();
   }
 
   if (studioApp.editor) {
@@ -1209,10 +1224,13 @@ Applab.encodedFeedbackImage = '';
  * @param {ApplabInterfaceMode} mode
  */
 function onInterfaceModeChange(mode) {
+  var showDivApplab = (mode !== ApplabInterfaceMode.DESIGN);
+  Applab.toggleDivApplab(showDivApplab);
+
   if (mode === ApplabInterfaceMode.DESIGN) {
     studioApp.resetButtonClick();
   } else if (mode === ApplabInterfaceMode.CODE) {
-    utils.fireResizeEvent();
+    setTimeout(() => utils.fireResizeEvent(), 0);
     if (!Applab.isRunning()) {
       Applab.serializeAndSave();
       var divApplab = document.getElementById('divApplab');
@@ -1346,8 +1364,14 @@ Applab.onPuzzleComplete = function (submit) {
   }
 
   var program;
+  var containedLevelResultsInfo = studioApp.getContainedLevelResultsInfo();
 
-  if (level.editCode) {
+  if (containedLevelResultsInfo) {
+    // Keep our this.testResults as always passing so the feedback dialog
+    // shows Continue (the proper results will be reported to the service)
+    Applab.testResults = studioApp.TestResults.ALL_PASS;
+    Applab.message = containedLevelResultsInfo.feedback;
+  } else if (level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -1371,6 +1395,7 @@ Applab.onPuzzleComplete = function (submit) {
       submitted: submit,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
+      containedLevelResultsInfo: containedLevelResultsInfo,
       onComplete: (submit ? Applab.onSubmitComplete : Applab.onReportComplete)
     });
   };
@@ -1478,7 +1503,8 @@ Applab.startInDesignMode = function () {
 };
 
 Applab.isInDesignMode = function () {
-  return $('#designWorkspace').is(':visible');
+  const mode = studioApp.reduxStore.getState().interfaceMode;
+  return ApplabInterfaceMode.DESIGN === mode;
 };
 
 function quote(str) {

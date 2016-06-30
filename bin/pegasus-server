@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
 
-def main()
+def main
   Dir.chdir(pegasus_dir) do
     system "bundle exec rerun -p '**/*.{rb,ru,yml}' -d'../lib,../shared/middleware,../pegasus' 'thin start -p #{CDO.pegasus_port}'"
   end

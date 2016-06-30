@@ -246,6 +246,8 @@ GameLab.prototype.init = function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId));
+
+  this.studioApp_.notifyInitialRenderComplete(config);
 };
 
 /**
@@ -431,25 +433,33 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
   // Stop everything on screen
   this.reset();
 
-  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
-    this.studioApp_.playAudio('win');
-  } else {
-    this.studioApp_.playAudio('failure');
-  }
-
   var program;
+  var containedLevelResultsInfo = this.studioApp_.getContainedLevelResultsInfo();
 
-  if (this.level.editCode) {
+  if (containedLevelResultsInfo) {
+    // Keep our this.testResults as always passing so the feedback dialog
+    // shows Continue (the proper results will be reported to the service)
+    this.testResults = this.studioApp_.TestResults.ALL_PASS;
+    this.message = containedLevelResultsInfo.feedback;
+  } else if (this.level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = this.studioApp_.getCode();
+    program = encodeURIComponent(this.studioApp_.getCode());
+    this.message = null;
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = Blockly.Xml.domToText(xml);
+    program = encodeURIComponent(Blockly.Xml.domToText(xml));
+    this.message = null;
+  }
+
+  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
+    this.studioApp_.playAudio('win');
+  } else {
+    this.studioApp_.playAudio('failure');
   }
 
   this.waitingForReport = true;
@@ -461,8 +471,9 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
       result: levelComplete,
       testResult: this.testResults,
       submitted: submit,
-      program: encodeURIComponent(program),
+      program: program,
       image: this.encodedFeedbackImage,
+      containedLevelResultsInfo: containedLevelResultsInfo,
       onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
     });
 
@@ -690,7 +701,7 @@ GameLab.prototype.execute = function () {
   this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (this.studioApp_.isUsingBlockly() &&
-      (this.studioApp_.hasExtraTopBlocks() ||
+      (this.studioApp_.hasUnwantedExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())) {
     // immediately check answer, which will fail and report top level blocks
     this.onPuzzleComplete();

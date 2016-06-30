@@ -595,7 +595,7 @@ Craft.executeUserCode = function () {
     return;
   }
 
-  if (studioApp.hasExtraTopBlocks()) {
+  if (studioApp.hasUnwantedExtraTopBlocks()) {
     // immediately check answer instead of executing, which will fail and
     // report top level blocks (rather than executing them)
     this.reportResult(false);

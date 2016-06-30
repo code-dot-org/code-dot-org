@@ -54,8 +54,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # Verify the default max age is used if none is specifically configured.
     get_show_script_level_page(@script_level)
     assert_caching_enabled response.headers['Cache-Control'],
-                           ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
-                           ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
+      ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
+      ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
   end
 
   test 'should allow public caching for script level pages with dynamic lifetime' do
@@ -337,46 +337,46 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
     assert_routing({method: "get", path: build_script_level_path(sl)},
-        {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.to_param, id: sl.to_param})
+      {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.to_param, id: sl.to_param})
   end
 
   test "chapter based routing" do
     assert_routing({method: "get", path: '/hoc/reset'},
-                   {controller: "script_levels", action: "reset", script_id: Script::HOC_NAME})
+      {controller: "script_levels", action: "reset", script_id: Script::HOC_NAME})
 
     hoc_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::HOC_NAME).id, chapter: 1)
     assert_routing({method: "get", path: '/hoc/1'},
-                   {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"})
+      {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"})
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
     flappy_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5)
     assert_routing({method: "get", path: '/flappy/5'},
-                   {controller: "script_levels", action: "show", script_id: Script::FLAPPY_NAME, chapter: "5"})
+      {controller: "script_levels", action: "show", script_id: Script::FLAPPY_NAME, chapter: "5"})
     assert_equal "/flappy/5", build_script_level_path(flappy_level)
 
     jigsaw_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::JIGSAW_NAME).id, chapter: 3)
     assert_routing({method: "get", path: '/jigsaw/3'},
-                   {controller: "script_levels", action: "show", script_id: Script::JIGSAW_NAME, chapter: "3"})
+      {controller: "script_levels", action: "show", script_id: Script::JIGSAW_NAME, chapter: "3"})
     assert_equal "/s/jigsaw/stage/1/puzzle/3", build_script_level_path(jigsaw_level)
   end
 
   test "routing for custom scripts with stage" do
     assert_routing({method: "get", path: "/s/laurel/stage/1/puzzle/1"},
-                   {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "1", id: "1"})
+      {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "1", id: "1"})
     assert_equal "/s/laurel/stage/1/puzzle/1", build_script_level_path(@custom_s1_l1)
 
     assert_routing({method: "get", path: "/s/laurel/stage/2/puzzle/1"},
-                   {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "2", id: "1"})
+      {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "2", id: "1"})
     assert_equal "/s/laurel/stage/2/puzzle/1", build_script_level_path(@custom_s2_l1)
 
     assert_routing({method: "get", path: "/s/laurel/stage/2/puzzle/2"},
-                   {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "2", id: "2"})
+      {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "2", id: "2"})
     assert_equal "/s/laurel/stage/2/puzzle/2", build_script_level_path(@custom_s2_l2)
   end
 
   test "next routing for custom scripts" do
     assert_routing({method: "get", path: "/s/laurel/puzzle/next"},
-                   {controller: "script_levels", action: "show", script_id: 'laurel', chapter: "next"})
+      {controller: "script_levels", action: "show", script_id: 'laurel', chapter: "next"})
     assert_equal "/s/laurel/puzzle/next", script_puzzle_path(@custom_script, 'next')
   end
 
@@ -521,7 +521,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "reset routing for custom scripts" do
     assert_routing({method: "get", path: "/s/laurel/reset"},
-                   {controller: "script_levels", action: "reset", script_id: 'laurel'})
+      {controller: "script_levels", action: "reset", script_id: 'laurel'})
   end
 
   test "reset resets for custom scripts" do
@@ -845,7 +845,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = create(:maze)
     create(:script_level, script: script, stage: stage, level: level)
 
-    script.update(professional_learning_course: true)
+    script.update(professional_learning_course: 'Professional Learning Course')
     assert script.professional_learning_course?
     assert script.professional_course?
 
@@ -859,9 +859,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       levels:  Level.key_to_params('K-1 Artist1 1'))
 
     assert_routing({method: "get", path: build_script_level_path(sl)},
-                   {controller: "script_levels", action: "show", script_id: 'allthethings', stage_id: sl.stage.position.to_s, id: sl.position.to_s, solution: true},
-                   {},
-                   {solution: true})
+      {controller: "script_levels", action: "show", script_id: 'allthethings', stage_id: sl.stage.position.to_s, id: sl.position.to_s, solution: true},
+      {},
+      {solution: true})
 
     sign_in @teacher
 

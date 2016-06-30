@@ -4,10 +4,10 @@
   'yes': Tá
   'no': Níl
   select_language: Roghnaigh do theanga le do thoil
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Stopfaidh Code.org ag tacú le hInternet Explorer 8, 9, agus
+    10 go luath. Ba chóir duit brabhsálaí nua-aimseartha a shuiteáil.
+  upgrade_ie_message_csedweek: Stopfaidh CSEdWeek.org ag tacú le hInternet Explorer
+    8, 9, agus 10 go luath. Ba chóir duit brabhsálaí nua-aimseartha a shuiteáil.
   upgrade_ie_link: Tuilleadh eolais
   en: Ríomheolaíocht
   computer_science_edweek: Seachtain an Oideachais Ríomheolaíochta
@@ -380,9 +380,9 @@
   homepage_banner_20k_teachers: 20,000 múinteoir a rinne traenáil agus atá ag múineadh
     na ríomheolaíochta sa seomra ranga anois.
   homepage_banner_20k_teachers_link: Tuilleadh eolais
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress: Tá ceannairí Mheiriceá ag impí ar Chomhdháil chun ríomheolaíocht
+    K-12 a mhaoiniú.
+  homepage_banner_congress_link: Cuir do chuid tacaíochta leis seo
   homepage_slot_text_title_hoc: An Uair Chódála
   homepage_slot_text_blurb_hoc: Is féidir le héinne foghlaim. Tosaigh inniu
   homepage_slot_text_link_hoc: Bain triail as an Uair Chódála
@@ -628,11 +628,12 @@
     href="/learn/beyond">eagraíochtaí comhpháirtíochta.</a> Foghlaim códáil le róbait,
     déan d'aip féin, nó bain triail as teangacha ríomhaireachta eile, mar shampla
     C++, Ruby, nó Python!
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_inspire: Spreag do chuid scoláirí le postaerí, físeáin agus a
+    thuilleadh.
+  dashboard_landing_video_library: Bain úsáid as físeán ón Leabharlann Físeán na gCoincheap
+    Ríomheolaíochta.
+  dashboard_landing_report_bug: Iarr gné nua nó déan tuairisc ar fhabht.
+  dashboard_landing_teacher_forum: Glac páirt sa bpobal foghlamtha proifisiúnta.
   dashboard_hoc_courses: An Uair Chódála ó liath go leanbh
   dashboard_hoc_courses_desc: Bain triail as na cúrsaí teagaisc ar feadh uair an chloig
     le do chuid daltaí!
@@ -687,12 +688,15 @@
   dashboard_action_done: Déanta
   dashboard_action_required: riachtanach
   dashboard_assessments_view: 'Féach measúnuithe i:'
-  dashboard_assessments_none: Gan measúnuithe
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  dashboard_assessments_none: Baineann go leor múinteoirí úsáid as an gcluaisín "Féach
+    Dul Chun Cinn" le dul chun cinn a gcuid daltaí a leanúint. Má tá tú ag iarraidh
+    measúnuithe sa bhreis a dhéanamh, gheobhaidh tú ceisteanna agus réimsí molta sna
+    pleananna ceachta. Déantar iad seo lasmuigh den Stiúideo Códála.
+  dashboard_assessments_none_part2: Má tá tú ag múineadh cúrsa ag an dara leibhéal,
+    tá ceisteanna measúnaithe againn mar chuid den Stiúideo Códála mar acmhainn do
+    dhaltaí a dhéanfaidh an scrúdú AP. Chun na measúnuithe seo a úsáid, tabhair an
+    cúrsa do do rang, ansin roghnaigh an cúrsa ón roghchlár anuas agus feicfidh tú
+    freagraí do chuid daltaí anseo.
   dashboard_assessments_summaries: Achoimrí
   dashboard_assessments_answers: Na freagraí go léir
   dashboard_filter_by_stage: 'Scagadh de réir na céime:'
@@ -706,8 +710,8 @@
   dashboard_navigation_section_pd: Forbairt Ghairmiúil
   dashboard_navigation_section_speakers: Aoichainteoirí <br/> Ríomheolaíochta
   dashboard_navigation_all_sections: Cuntais agus Dul Chun Cinn na nDaltaí
-  dashboard_navigation_view_progress: Féach Dul Chun Cinn
-  dashboard_navigation_view_text_responses: Féach na Freagraí Téacs
+  dashboard_navigation_view_progress: Dul chun cinn
+  dashboard_navigation_view_text_responses: Freagraí Téacs
   dashboard_navigation_view_assessments: Measúnuithe
   dashboard_navigation_add_students: Cuir Daltaí Leis
   dashboard_navigation_manage_students: Bainistigh Daltaí
@@ -725,9 +729,13 @@
   dashboard_progress_view: 'Féach dul chun cinn i:'
   dashboard_progress_student_in_script: Dul chun cinn déanta ag %{student_name} in
     %{script_name}
-  dashboard_progress_pair_programming: pair programming
+  dashboard_progress_pair_programming: códáil sealaíochta
   dashboard_responses_view: 'Féach na freagraí téacs i:'
-  dashboard_responses_none: Gan freagraí téacs
+  dashboard_responses_none: Tá formhór na ranganna s'againn dírithe ar pháistí níos
+    óige agus ní gá dóibh freagraí téacs a thabhairt ar cheisteanna. Mar sin, ní fheicfidh
+    tú aon fhreagraí téacs anseo. I gcás daltaí níos sine ag an dara leibhéal, is
+    féidir na freagraí téacs a thugann siad ar cheisteanna oscailte a fheiceáil tríd
+    an gcúrsa ceart a roghnú ón roghchlár anuas.
   dashboard_sections_new_section: Rannán nua
   dashboard_sections_jumbotron_instruction: Cruthaigh rannáin nua agus cuir daltaí
     leo. Le rannáin, is féidir do chuid daltaí a eagrú i ngrúpaí níos lú, sa chaoi
@@ -737,7 +745,7 @@
   dashboard_sections_table_secret: Cineál Seisiúin
   dashboard_sections_table_grade: Bliain
   dashboard_sections_table_course: Cúrsa
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Acmhainní Breise don Chéim
   dashboard_sections_table_students: Daltaí
   dashboard_sections_table_code: Cód an Rannáin
   dashboard_sections_name: Ainm an Rannáin
@@ -757,12 +765,13 @@
   dashboard_sections_close: Dún
   dashboard_sections_move_students_desc: Roghnaigh na daltaí le bogadh go dtí rannán
     nua. Ní ghlanfar dul chun cinn na ndaltaí tar éis duit iad a bhogadh.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_one_per_teacher: Níl cead ag daltaí a bheith i níos mó ná rannán
+    amháin de do chuid. Cuirfear na daltaí leis an rannán nua seo agus fágfaidh siad
+    an seanrannán.
   dashboard_sections_move_to_section: 'Bog go rannán:'
   dashboard_sections_enter_code: 'Cuir isteach cód an rannáin:'
   dashboard_sections_code_placeholder: Cód 6-litir (ABCDEF)
-  dashboard_sections_other_section: Rannán Eile
+  dashboard_sections_other_section: Múinteoir Eile
   dashboard_sections_both_sections: An bhfuil fonn ort an dalta nó na daltaí a choinneáil
     sa dá rannán?
   dashboard_sections_yes_both: Tá, ba mhaith liom an dalta nó na daltaí a chóipeáil
@@ -772,9 +781,9 @@
   dashboard_sections_move_students: Bog na daltaí
   dashboard_error_none_selected: Níor roghnaigh tú aon daltaí le bogadh. Roghnaigh
     dalta amháin ar a laghad.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  dashboard_error_other_section: Má tá tú ag iarraidh daltaí a bhogadh idir rannáin
+    de do chuid féin, roghnaigh do rannán ón roghchlár anuas. Ná húsáid 'Rannán Eile'
+    mura bhfuil tú ag iarraidh daltaí a bhogadh go dtí rannán ag múinteoir eile.
   dashboard_students_add_student: Cuir dalta leis
   dashboard_students_add_students: Cuir daltaí leis
   dashboard_students_add_multiple: 'Clóscríobh nó greamaigh ainmneacha na ndaltaí
@@ -900,15 +909,19 @@
   dashboard_faq_k5: 'Bunscoil: Ceisteanna Coitianta'
   dashboard_announcements: Fógraí
   dashboard_announce_view_all: Féach uile
-  dashboard_announce_message: "<b>Gné nua</b> - Anois is féidir leat daltaí a bhogadh
-    idir rannáin de do chuid féin, nó go dtí rannán ag múinteoir eile."
-  dashboard_announce_button_text: Tuilleadh eolais
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_message: Ar mhaith leat cabhrú linn chun gné nua a thástáil?
+    Tuigimid go bhfuil sé tábhachtach daltaí a spreagadh chun triail agus atriail,
+    mar sin beimid ag cur gné "cód neamhúsáidte" leis seo ionas go bhfuil daltaí ábalta
+    a gcuid cóid a rith fiú má tá blocanna neamhcheangailte. Cuirimid fáilte roimh
+    do chuid aiseolais sula gcraolfaimid an gné go poiblí.
+  dashboard_announce_button_text: Tástáil an ghné
+  dashboard_announce_petition: Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht
+    chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim.
+    Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo,
+    tháinig ceannairí oideachais, 28 gobharnóir, agus príomhoifigigh na gcomhlachtaí
+    is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil na
+    Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
+  dashboard_announce_petition_button: Cuir d'ainm leis
   code_hoc_coming: Tá an Uair Chódála anseo - 8-14 Nollaig!
   code_sign_up: Cláraigh chun páirt a ghlacadh le linn Sheachtain an Oideachais Ríomheolaíochta
   learn_more: Bain triail as anois
@@ -1040,10 +1053,11 @@
   cspunit2_name: 'Aonad 2: An tIdirlíon'
   cspunit3_name: 'Aonad 3: Ríomhchlárú'
   cspunit4_name: 'Aonad 4: Sonraí'
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit5_name: 'Aonad 5: Taiscéaladh agus Cruthú (Tasc Feidhmíochta)'
+  cspunit6_name: 'Tar Éis AP: Bunachair Sonraí in Aipeanna'
   csp1_name: 'Aonad 1: An tIdirlíon'
   csp2_name: 'Aonad 2: Faisnéis dhigiteach'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: An Scrúdú Iomlán - 50 ceist
   cspexam1-mWU7ilDYM9_name: Cuid 1 den Scrúdú - 25 ceist
   cspexam2-AKwgAh1ac5_name: Cuid 2 den Scrúdú - 25 ceist
@@ -1054,20 +1068,20 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Cúrsa Luathaithe
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
+  algebra_name: Ríomheolaíocht san Ailgéabar
+  AlgebraA_name: Ríomheolaíocht san Ailgéabar, Cúrsa A
+  AlgebraB_name: Ríomheolaíocht san Ailgéabar, Cúrsa B
   gumball_name: Gumball
   classicmaze_name: Cathair Ghríobháin Chlasaiceach
   iceage_name: Ice Age
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Star Wars (Blocanna)
   math_category_name: Matamaitic
   hoc_category_name: An Uair Chódála
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: CS Principles Practice Test
+  csf_category_name: Buntús na Ríomheolaíochta
+  csp_category_name: "'15-'16 Foras Feasa ar an Ríomheolaíocht"
+  csp17_category_name: "'16-'17 Foras Feasa ar an Ríomheolaíocht"
+  cspexams_category_name: 'Scrúdú Cleachtaidh: Foras Feasa ar an Ríomheolaíocht'
   applab_name: Saotharlann Aipeanna
   applab_gradelevel: Aois 13+
   applab_shortdescription_congrats: Is timpeallacht ríomhchláraithe é App Lab lenar

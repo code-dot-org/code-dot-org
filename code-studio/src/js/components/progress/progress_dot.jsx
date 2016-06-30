@@ -147,12 +147,14 @@ export const ProgressDot = React.createClass({
 
   render() {
     const level = this.props.level;
-    const uid = level.uid || level.id.toString();
+    const onCurrent = this.props.currentLevelId &&
+        ((level.ids && level.ids.map(id => id.toString()).indexOf(this.props.currentLevelId) !== -1) ||
+        level.uid === this.props.currentLevelId);
 
     const isUnplugged = isNaN(level.title);
-    const showUnplugged = isUnplugged && (this.props.courseOverviewPage || uid === this.props.currentLevelId);
-    const outlineCurrent = this.props.courseOverviewPage && uid === this.props.currentLevelId;
-    const smallDot = !this.props.courseOverviewPage && uid !== this.props.currentLevelId;
+    const showUnplugged = isUnplugged && (this.props.courseOverviewPage || onCurrent);
+    const outlineCurrent = this.props.courseOverviewPage && onCurrent;
+    const smallDot = !this.props.courseOverviewPage && !onCurrent;
     const showLevelName = level.kind === 'named_level' && this.props.courseOverviewPage;
 
     return (
@@ -170,8 +172,8 @@ export const ProgressDot = React.createClass({
               this.props.courseOverviewPage && styles.dot.overview,
               styles.dot.icon,
               smallDot && styles.dot.icon_small,
-              outlineCurrent && {textShadow: createOutline(color.level_current)},
-              level.status && level.status !== 'not_tried' && styles.dot.icon_complete
+              level.status && level.status !== 'not_tried' && styles.dot.icon_complete,
+              outlineCurrent && {textShadow: createOutline(color.level_current)}
             ]}
           /> :
           <div

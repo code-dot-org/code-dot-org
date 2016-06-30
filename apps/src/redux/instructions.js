@@ -31,6 +31,7 @@ const instructionsInitialState = {
   shortInstructions: undefined,
   shortInstructions2: undefined,
   longInstructions: undefined,
+  hasContainedLevels: false,
   collapsed: false,
   // The amount of vertical space consumed by the TopInstructions component
   renderedHeight: 0,
@@ -55,10 +56,11 @@ export default function reducer(state = instructionsInitialState, action) {
       noInstructionsWhenCollapsed,
       shortInstructions,
       shortInstructions2,
-      longInstructions
+      longInstructions,
+      hasContainedLevels
     } = action;
     let collapsed = state.collapsed;
-    if (!longInstructions) {
+    if (!longInstructions && !hasContainedLevels) {
       // If we only have short instructions, we want to be in collapsed mode
       collapsed = true;
     }
@@ -67,15 +69,17 @@ export default function reducer(state = instructionsInitialState, action) {
       shortInstructions,
       shortInstructions2,
       longInstructions,
+      hasContainedLevels,
       collapsed
     });
   }
 
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
     const longInstructions = state.longInstructions;
-    if (!longInstructions) {
-      // No longInstructions implies either (a) no instructions or (b) we only
-      // have short instructions. In both cases, we should be collapsed.
+    if (!longInstructions && !state.hasContainedLevels) {
+      // No longInstructions or contained levels implies either
+      // (a) no instructions or (b) we only have short instructions.
+      // In both cases, we should be collapsed.
       throw new Error('Can not toggle instructions collapsed without longInstructions');
     }
     return _.assign({}, state, {
@@ -116,12 +120,14 @@ export default function reducer(state = instructionsInitialState, action) {
 }
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
-    shortInstructions, shortInstructions2, longInstructions}) => ({
+    shortInstructions, shortInstructions2, longInstructions,
+    hasContainedLevels}) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   shortInstructions,
   shortInstructions2,
-  longInstructions
+  longInstructions,
+  hasContainedLevels
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -204,11 +210,13 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {string} config.locale
  * @param {boolean} config.noInstructionsWhenCollapsed
  * @param {boolean} config.showInstructionsInTopPane
+ * @param {boolean} config.hasContainedLevels
  * @param {Object} config.skin.instructions2ImageSubstitutions
  * @returns {Object}
  */
 export const determineInstructionsConstants = config => {
-  const { level, locale, noInstructionsWhenCollapsed, showInstructionsInTopPane } = config;
+  const { level, locale, noInstructionsWhenCollapsed, showInstructionsInTopPane,
+      hasContainedLevels } = config;
   const { instructions, instructions2, markdownInstructions, inputOutputTable } = level;
 
   let longInstructions, shortInstructions, shortInstructions2;
@@ -257,6 +265,7 @@ export const determineInstructionsConstants = config => {
     noInstructionsWhenCollapsed: !!noInstructionsWhenCollapsed,
     shortInstructions,
     shortInstructions2,
-    longInstructions
+    longInstructions,
+    hasContainedLevels
   };
 };

@@ -86,8 +86,8 @@ module SerializedProperties
   end
 
   private
+
   def init_properties
     write_attribute('properties', {}) unless read_attribute('properties')
   end
-
 end

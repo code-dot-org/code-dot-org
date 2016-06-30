@@ -28,6 +28,7 @@ var Instructions = require('./templates/instructions/Instructions');
 var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
+import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
@@ -441,7 +442,12 @@ StudioApp.prototype.init = function (config) {
         return;
       }
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.reduxStore.dispatch(openInstructionsDialog(shouldAutoClose, false));
+      this.reduxStore.dispatch(openInstructionsDialog({
+        autoClose: shouldAutoClose,
+        showHints: false,
+        aniGifOnly: false,
+        hintsOnly: false
+      }));
     }.bind(this));
   }
 
@@ -604,6 +610,63 @@ StudioApp.prototype.init = function (config) {
 
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
+  }
+};
+
+StudioApp.prototype.getFirstContainedLevelResult_ = function () {
+  var results = this.getContainedLevelResults();
+  if (results.length !== 1) {
+    throw "Exactly one contained level result is currently required.";
+  }
+  return results[0];
+};
+
+StudioApp.prototype.hasValidContainedLevelResult_ = function () {
+  var firstResult = this.getFirstContainedLevelResult_();
+  return firstResult.result.valid;
+};
+
+/**
+ * @param {!AppOptionsConfig} config
+ */
+ StudioApp.prototype.notifyInitialRenderComplete = function (config) {
+  if (config.hasContainedLevels && config.containedLevelOps) {
+    this.lockContainedLevelAnswers = config.containedLevelOps.lockAnswers;
+    this.getContainedLevelResults = config.containedLevelOps.getResults;
+
+    $('#containedLevel0').appendTo($('#containedLevelContainer'));
+
+    if (this.hasValidContainedLevelResult_()) {
+      // We already have an answer, don't allow it to be changed, but allow Run
+      // to be pressed so the code can be run again.
+      this.lockContainedLevelAnswers();
+    } else {
+      // No answers yet, disable Run button until there is an answer
+      $('#runButton').prop('disabled', true);
+
+      config.containedLevelOps.registerAnswerChangedFn(levelId => {
+        $('#runButton').prop('disabled', !this.hasValidContainedLevelResult_());
+      });
+    }
+  }
+};
+
+StudioApp.prototype.getContainedLevelResultsInfo = function () {
+  if (this.getContainedLevelResults) {
+    var firstResult = this.getFirstContainedLevelResult_();
+    var containedResult = firstResult.result;
+    var testResults = utils.valueOr(firstResult.testResult,
+        containedResult.result ? this.TestResults.ALL_PASS :
+          this.TestResults.GENERIC_FAIL);
+    return {
+      app: firstResult.app,
+      level: firstResult.id,
+      callback: firstResult.callback,
+      result: containedResult.result,
+      testResults: testResults,
+      program: containedResult.response,
+      feedback: firstResult.feedback
+    };
   }
 };
 
@@ -875,6 +938,10 @@ StudioApp.prototype.toggleRunReset = function (button) {
 
   this.reduxStore.dispatch(setIsRunning(!showRun));
 
+  if (this.lockContainedLevelAnswers) {
+    this.lockContainedLevelAnswers();
+  }
+
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
   run.style.display = showRun ? 'inline-block' : 'none';
@@ -1079,44 +1146,6 @@ StudioApp.prototype.onReportComplete = function (response) {
 };
 
 /**
- * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
- *   have markdown instructions
- * @param {object} level
- * @param {boolean} showHints
- * @returns {React.element}
- */
-StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
-  var renderedMarkdown;
-
-  var longInstructions = this.reduxStore.getState().instructions.longInstructions;
-
-  // longInstructions will be undefined if non-english
-  if (longInstructions) {
-    var markdownWithImages = substituteInstructionImages(longInstructions,
-      this.skin.instructions2ImageSubstitutions);
-    renderedMarkdown = processMarkdown(markdownWithImages);
-  }
-
-  var authoredHints;
-  if (showHints) {
-    authoredHints = this.authoredHintsController_.getHintsDisplay();
-  }
-
-  return (
-    <Instructions
-      puzzleTitle={puzzleTitle}
-      instructions={substituteInstructionImages(level.instructions,
-        this.skin.instructions2ImageSubstitutions)}
-      instructions2={substituteInstructionImages(level.instructions2,
-        this.skin.instructions2ImageSubstitutions)}
-      renderedMarkdown={renderedMarkdown}
-      markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
-      aniGifURL={level.aniGifURL}
-      authoredHints={authoredHints}/>
-  );
-};
-
-/**
  * Show our instructions dialog. This should never be called directly, and will
  * instead be called when the state of our redux store changes.
  * @param {object} level
@@ -1148,9 +1177,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
       headerElement.className += ' no-modal-icon';
     }
   }
-
-  var instructionsContent = this.getInstructionsContent_(puzzleTitle, level,
-    showHints);
 
   // Create a div to eventually hold this content, and add it to the
   // overall container. We don't want to render directly into the
@@ -1208,10 +1234,17 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
     header: headerElement
   });
 
+  const authoredHints = showHints ?
+    this.authoredHintsController_.getHintsDisplay() : undefined;
+
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
-  $(this.instructionsDialog.div).on('show.bs.modal', function () {
-    ReactDOM.render(instructionsContent, instructionsReactContainer);
+  $(this.instructionsDialog.div).on('show.bs.modal', () => {
+    ReactDOM.render(
+      <Provider store={this.reduxStore}>
+        <DialogInstructions authoredHints={authoredHints}/>
+      </Provider>,
+      instructionsReactContainer);
   });
 
   if (autoClose) {
@@ -1567,9 +1600,28 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 * {number} testResult More specific data on success or failure of code.
 * {boolean} submitted Whether the (submittable) level is being submitted.
 * {string} program The user program, which will get URL-encoded.
+* {Object} containedLevelResultsInfo Results from the contained level.
 * {function} onComplete Function to be called upon completion.
 */
 StudioApp.prototype.report = function (options) {
+
+  if (options.containedLevelResultsInfo) {
+    // If we have contained level results, just submit those directly and return
+    this.onAttempt({
+      callback: options.containedLevelResultsInfo.callback,
+      app: options.containedLevelResultsInfo.app,
+      level: options.containedLevelResultsInfo.level,
+      serverLevelId: options.containedLevelResultsInfo.level,
+      result: options.containedLevelResultsInfo.result,
+      testResult: options.containedLevelResultsInfo.testResults,
+      submitted: options.submitted,
+      program: options.containedLevelResultsInfo.program,
+      onComplete: options.onComplete
+    });
+    this.enableShowLinesCount = false;
+    return;
+  }
+
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
@@ -1579,7 +1631,6 @@ StudioApp.prototype.report = function (options) {
   });
 
   this.lastTestResult = options.testResult;
-
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
@@ -2113,6 +2164,14 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     $(window).trigger('droplet_change', ['scrollpalette']);
   });
 
+  $('.droplet-main-scroller').on('scroll', function (e) {
+    $(window).trigger('droplet_change', ['scrolleditor']);
+  });
+
+  this.editor.aceEditor.getSession().on("changeScrollTop", function () {
+    $(window).trigger('droplet_change', ['scrollace']);
+  });
+
   $.expr[':'].textEquals = function (el, i, m) {
       var searchText = m[3];
       var match = $(el).text().trim().match("^" + searchText + "$");
@@ -2393,6 +2452,14 @@ StudioApp.prototype.onDropletToggle_ = function (autoFocus) {
  */
 StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
+};
+
+/**
+ * Do we have any floating blocks that are not going to be handled
+ * gracefully?
+ */
+StudioApp.prototype.hasUnwantedExtraTopBlocks = function () {
+  return this.hasExtraTopBlocks() && !Blockly.showUnusedBlocks;
 };
 
 /**
@@ -2769,6 +2836,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
     instructionsInTopPane: !!config.showInstructionsInTopPane,
+    hasContainedLevels: config.hasContainedLevels,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,

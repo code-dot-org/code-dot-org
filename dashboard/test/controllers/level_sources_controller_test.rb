@@ -84,14 +84,22 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'routing' do
-    assert_routing({ path: '/c/1', method: :get },
-                   { controller: 'level_sources', action: 'show', id: '1' })
-    assert_routing({ path: '/c/1/edit', method: :get },
-                   { controller: 'level_sources', action: 'edit', id: '1' })
-    assert_routing({ path: '/c/1/original_image', method: :get },
-                   {controller: 'level_sources', action: 'original_image', id: '1' })
-    assert_routing({ path: '/c/1/generate_image', method: :get },
-                   { controller: 'level_sources', action: 'generate_image', id: '1' })
+    assert_routing(
+      {path: '/c/1', method: :get},
+      {controller: 'level_sources', action: 'show', id: '1'}
+    )
+    assert_routing(
+      {path: '/c/1/edit', method: :get},
+      {controller: 'level_sources', action: 'edit', id: '1'}
+    )
+    assert_routing(
+      {path: '/c/1/original_image', method: :get},
+      {controller: 'level_sources', action: 'original_image', id: '1'}
+    )
+    assert_routing(
+      {path: '/c/1/generate_image', method: :get},
+      {controller: 'level_sources', action: 'generate_image', id: '1'}
+    )
   end
 
   def expect_s3_upload
@@ -180,10 +188,12 @@ class LevelSourcesControllerTest < ActionController::TestCase
     get :show, id: level_source.id
 
     assert_response :success
-    assert_sharing_meta_tags(url: "http://test.host/c/#{level_source.id}",
-                            image: 'http://test.host/assets/sharing_drawing.png',
-                            image_width: 500,
-                            image_height: 261)
+    assert_sharing_meta_tags(
+      url: "http://test.host/c/#{level_source.id}",
+      image: 'http://test.host/assets/sharing_drawing.png',
+      image_width: 500,
+      image_height: 261
+    )
   end
 
   test 'playlab levelsource has sharing meta tags' do
@@ -192,11 +202,13 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert_sharing_meta_tags(url: "http://test.host/c/#{level_source.id}",
-                            image: 'http://test.host/assets/sharing_drawing.png',
-                            image_width: 400,
-                            image_height: 400,
-                            apple_mobile_web_app: true)
+    assert_sharing_meta_tags(
+      url: "http://test.host/c/#{level_source.id}",
+      image: 'http://test.host/assets/sharing_drawing.png',
+      image_width: 400,
+      image_height: 400,
+      apple_mobile_web_app: true
+    )
   end
 
   test 'migrates old flappy levels' do

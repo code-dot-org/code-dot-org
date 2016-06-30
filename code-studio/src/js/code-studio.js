@@ -28,7 +28,7 @@ window.Radium = require('radium');
 //                   require them specifically where needed.
 require('./components/abuse_error');
 require('./components/report_abuse_form');
-require('./components/send_to_phone');
+require('./components/SendToPhone');
 require('./components/small_footer');
 require('./components/GridEditor');
 require('./components/Attachments');
@@ -46,7 +46,7 @@ window.dashboard.levelCompletions = require('./levelCompletions');
 window.dashboard.popupWindow = require('./popup-window');
 window.dashboard.progress = require('./progress');
 window.dashboard.reporting = require('./reporting');
-window.dashboard.utils ={
+window.dashboard.utils = {
   debounce: _.debounce,
   throttle: _.throttle
 };

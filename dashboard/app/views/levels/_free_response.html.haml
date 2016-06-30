@@ -7,14 +7,35 @@
     window.levelGroup.levels[#{level.id}] = {
       getResult: function () {
         var response = $('#level_#{level.id}').val();
-        return { response: response, valid: response.length > 0 };
-      }
+        return {
+          response: response,
+          valid: response.length > 0,
+          result: true,
+          testResult: #{ActivityConstants::FREE_PLAY_RESULT}
+        };
+      },
+      getAppName: function () {
+        return "free_response";
+      },
+      lockAnswers: function () {
+        $("textarea#level_#{level.id}.response").prop('disabled', true);
+      },
+      getCurrentAnswerFeedback: function () {
+        // Not implemented
+      },
+      levelId: #{level.id}
     };
 
     $(document).ready(function() {
-      $("textarea#level_#{level.id}.response").blur(function () {
+      var textarea = $("textarea#level_#{level.id}.response");
+      textarea.blur(function () {
         if (window.levelGroup && window.levelGroup.answerChangedFn) {
-          window.levelGroup.answerChangedFn();
+          window.levelGroup.answerChangedFn(#{level.id}, true);
+        }
+      });
+      textarea.on("input", null, null, function () {
+        if (window.levelGroup && window.levelGroup.answerChangedFn) {
+          window.levelGroup.answerChangedFn(#{level.id});
         }
       });
     });

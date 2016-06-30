@@ -33,6 +33,6 @@ class SessionsController < Devise::SessionsController
       return oauth_sign_out_path(user.provider)
     end
 
-    'http:' + code_org_root_path
+    'https:' + code_org_root_path
   end
 end

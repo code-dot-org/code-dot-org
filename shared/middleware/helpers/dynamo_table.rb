@@ -26,9 +26,9 @@ class DynamoTable
 
   def metadata
     @metadata_item ||= db.get_item(
-        table_name: CDO.dynamo_table_metadata_table,
-        consistent_read: true,
-        key: {'hash'=>@metadata_hash}
+      table_name: CDO.dynamo_table_metadata_table,
+      consistent_read: true,
+      key: {'hash'=>@metadata_hash}
     ).item
 
     # only return the parts we care about
@@ -71,7 +71,7 @@ class DynamoTable
     true
   end
 
-  def delete_all()
+  def delete_all
     ids = ids_to_a
     unless ids.empty?
       items = ids.map do |id|
@@ -103,7 +103,7 @@ class DynamoTable
     value_from_row(row)
   end
 
-  def ids_to_a()
+  def ids_to_a
     last_evaluated_key = nil
 
     [].tap do |results|
@@ -158,11 +158,11 @@ class DynamoTable
     value.merge('id' => row_id)
   end
 
-  def exists?()
+  def exists?
     return next_id > 1
   end
 
-  def next_id()
+  def next_id
     page = db.query(
       table_name: CDO.dynamo_tables_table,
       key_conditions: {
@@ -257,7 +257,7 @@ class DynamoTable
     value.merge('id' => id)
   end
 
-  def items()
+  def items
     last_evaluated_key = nil
 
     [].tap do |results|
@@ -283,11 +283,11 @@ class DynamoTable
     end
   end
 
-  def to_a()
+  def to_a
     return items.map { |i| value_from_row(i) }
   end
 
-  def to_csv()
+  def to_csv
     return table_to_csv(to_a, column_order: ['id'])
   end
 

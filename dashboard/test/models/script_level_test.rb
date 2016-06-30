@@ -180,10 +180,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   private
+
   def create_fake_plc_data
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script
-    @plc_script.update(professional_learning_course: true)
+    @plc_script.update(professional_learning_course: 'My course name')
     @stage = create(:stage)
     @level1 = create(:maze)
     evaluation_multi = create(:evaluation_multi, name: 'Evaluation Multi')
