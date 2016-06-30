@@ -247,57 +247,26 @@ function invalidateAnimation(key) {
 export function cloneAnimation(key) {
   return (dispatch, getState) => {
     const state = getState().animationList;
-
-    var onCloneError = function (errorMessage) {
-      dispatch(reportError(`Error copying object ${key}: ${errorMessage}`));
-    };
-
     // Track down the source animation and its index in the collection
-    var sourceIndex = state.list.indexOf(key);
+    const sourceIndex = state.list.indexOf(key);
     if (sourceIndex < 0) {
-      onCloneError('Animation not found');
-      return;
+      throw new Error(`Animation ${key} not found`);
     }
-    var sourceAnimation = state.data[key];
-    var newAnimationKey = utils.createUuid();
 
-    /**
-     * Once the cloned asset is ready, call this to add the appropriate metadata.
-     * @param {string} [versionId]
-     */
-    var addClonedAnimation = function (versionId) {
-      dispatch({
-        type: ADD_ANIMATION_AT,
-        index: sourceIndex + 1,
-        key: newAnimationKey,
-        data: Object.assign({}, sourceAnimation, {
-          name: sourceAnimation.name + '_copy', // TODO: better generated names
-          version: versionId
-        })
-      });
-      dispatch(selectAnimation(newAnimationKey));
-      dashboard.project.projectChanged();
-    };
-
-    // If cloning a library animation, no need to perform a copy request
-    if (/^\/blockly\//.test(sourceAnimation.sourceUrl)) {
-      addClonedAnimation();
-    } else {
-      animationsApi.ajax(
-          'PUT',
-          newAnimationKey + '.png?src=' + key + '.png',
-          function success(xhr) {
-            try {
-              var response = JSON.parse(xhr.responseText);
-              addClonedAnimation(response.versionId);
-            } catch (e) {
-              onCloneError(e.message);
-            }
-          },
-          function error(xhr) {
-            onCloneError(xhr.status + ' ' + xhr.statusText);
-          });
-    }
+    const sourceAnimation = state.data[key];
+    const newAnimationKey = utils.createUuid();
+    dispatch({
+      type: ADD_ANIMATION_AT,
+      index: sourceIndex + 1,
+      key: newAnimationKey,
+      data: Object.assign({}, sourceAnimation, {
+        name: sourceAnimation.name + '_copy', // TODO: better generated names
+        version: null,
+        saved: false
+      })
+    });
+    dispatch(selectAnimation(newAnimationKey));
+    dashboard.project.projectChanged();
   };
 }
 
