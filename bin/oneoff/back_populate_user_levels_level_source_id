@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+#
+# This script populates the `level_source_id` column of the `user_levels` table,
+# if not already present, using the most recent activities `level_source_id`.
+#
+# This is being done as a one-off script so as to be able to control the timing
+# of its execution in production. A migration will follow after the column is
+# populated in production so as to assure the column is populated in all
+# environments.
+
+require_relative '../../dashboard/config/environment'
+
+if ARGV.length != 4
+  puts 'Usage: ./bin/oneoff/back_populate_user_levels_level_source_id start_index end_index batch_size delay_sec'
+  exit 1
+end
+
+start_index = ARGV[0].to_i
+end_index = ARGV[1].to_i
+batch_size = ARGV[2].to_i
+delay_sec = ARGV[3].to_f
+
+until start_index > end_index
+  puts "Processing UserLevels with IDs in [#{start_index}, #{start_index+batch_size}]..."
+
+  UserLevel.
+    where(id: start_index..(start_index + batch_size)).
+    where(level_source_id: nil).each do |user_level|
+
+    activity = Activity.
+      where(user_id: user_level.user_id, level_id: user_level.level_id).last
+    level_source_id = activity[:level_source_id]
+
+    raise RangeError.new(
+      "Missing level_source_id in activity (id = #{activity[:id]})."
+    ) unless level_source_id
+
+    user_level.update!(level_source_id: level_source_id)
+  end
+
+  sleep(delay_sec)
+  start_index += batch_size
+end
