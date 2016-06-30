@@ -86,12 +86,14 @@ const AnimationListItem = React.createClass({
     this.props.selectAnimation(this.props.animationKey);
   },
 
-  cloneAnimation() {
+  cloneAnimation(evt) {
     this.props.cloneAnimation(this.props.animationKey);
+    evt.stopPropagation();
   },
 
-  deleteAnimation() {
+  deleteAnimation(evt) {
     this.props.deleteAnimation(this.props.animationKey);
+    evt.stopPropagation();
   },
 
   onNameChange(event) {
