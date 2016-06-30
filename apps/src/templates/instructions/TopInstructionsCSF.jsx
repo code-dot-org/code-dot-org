@@ -20,9 +20,12 @@ var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
 var msg = require('../../locale');
 import CollapserButton from './CollapserButton';
+import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
 import PromptIcon from './PromptIcon';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+
+import { getOuterHeight, scrollBy } from './utils';
 
 const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
@@ -30,6 +33,8 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
+
+const SCROLL_BY_PERCENT = 0.4;
 
 const styles = {
   main: {
@@ -80,6 +85,11 @@ const styles = {
     right: 0,
     marginTop: 5,
     marginRight: 5
+  },
+  scrollButtons: {
+    position: 'relative',
+    top: 50,
+    left: 25
   },
   // bubble has pointer cursor by default. override that if no hints
   noAuthoredHints: {
@@ -175,17 +185,24 @@ var TopInstructions = React.createClass({
    * collapsed
    */
   getMinHeight() {
-    const buttonHeight = $(ReactDOM.findDOMNode(this.refs.collapser)).outerHeight(true);
+    const collapseButtonHeight = getOuterHeight(this.refs.collapser, true);
+    const scrollButtonsHeight = this.refs.scrollButtons ?
+        this.refs.scrollButtons.getMinHeight() : 0;
+
     const minIconHeight = this.refs.icon ?
-      $(ReactDOM.findDOMNode(this.refs.icon)).outerHeight(true) : 0;
+      getOuterHeight(this.refs.icon, true) : 0;
     const minInstructionsHeight = this.props.collapsed ?
-      $(ReactDOM.findDOMNode(this.refs.instructions)).outerHeight(true) : 0;
+      getOuterHeight(this.refs.instructions, true) : 0;
 
     const domNode = $(ReactDOM.findDOMNode(this));
     const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
 
-    return Math.max(buttonHeight, minIconHeight, minInstructionsHeight) +
-      RESIZER_HEIGHT + margins;
+    const leftColHeight = minIconHeight,
+        middleColHeight = minInstructionsHeight,
+        rightColHeight = collapseButtonHeight + scrollButtonsHeight;
+
+    return Math.max(leftColHeight, middleColHeight, rightColHeight)
+        + RESIZER_HEIGHT + margins;
   },
 
   /**
@@ -215,7 +232,7 @@ var TopInstructions = React.createClass({
     const contentContainer = this.props.hasContainedLevels ?
         this.refs.containedLevelContainer : this.refs.instructions;
     const instructionsContent = this.refs.instructions;
-    const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
+    const maxNeededHeight = getOuterHeight(instructionsContent, true) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
     this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
@@ -238,6 +255,34 @@ var TopInstructions = React.createClass({
     }
   },
 
+  /**
+   * Handle an onWheel event inside instructions. Manually scroll it,
+   * since we are overriding default scroll functionality.
+   * @param {WheelEvent} wheelEvent
+   */
+  handleInstructionsWheel(wheelEvent) {
+    const contentContainer = this.refs.instructions.parentElement;
+    scrollBy(contentContainer, wheelEvent.deltaY);
+  },
+
+  /**
+   * Handle a click to our "scroll up" button
+   */
+  handleScrollInstructionsUp() {
+    const contentContainer = this.refs.instructions.parentElement;
+    const contentHeight = contentContainer.scrollHeight;
+    scrollBy(contentContainer, contentHeight * -1 * SCROLL_BY_PERCENT);
+  },
+
+  /**
+   * Handle a click to our "scroll down" button
+   */
+  handleScrollInstructionsDown() {
+    const contentContainer = this.refs.instructions.parentElement;
+    const contentHeight = contentContainer.scrollHeight;
+    scrollBy(contentContainer, contentHeight * SCROLL_BY_PERCENT);
+  },
+
   handleClickBubble() {
     // If we don't have authored hints, clicking bubble shouldnt do anything
     if (this.props.hasAuthoredHints) {
@@ -257,6 +302,8 @@ var TopInstructions = React.createClass({
       this.props.noVisualization && styles.noViz,
       this.props.isMinecraft && styles.mainMinecraft
     ];
+
+    const atMaxHeight = this.props.height === this.props.maxHeight;
 
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
       this.props.shortInstructions : this.props.longInstructions);
@@ -292,7 +339,7 @@ var TopInstructions = React.createClass({
               }
             </ProtectedStatefulDiv>
           </div>
-          <div ref="instructions">
+          <div ref="instructions" onWheel={this.handleInstructionsWheel}>
             {this.props.hasContainedLevels && <ProtectedStatefulDiv
               id="containedLevelContainer"
               ref="containedLevelContainer"
@@ -316,12 +363,22 @@ var TopInstructions = React.createClass({
               />
             }
           </div>
-          <CollapserButton
-              ref='collapser'
-              style={[styles.collapserButton, !this.props.longInstructions && commonStyles.hidden]}
-              collapsed={this.props.collapsed}
-              onClick={this.handleClickCollapser}
-          />
+          <div>
+            <CollapserButton
+                ref='collapser'
+                style={[styles.collapserButton, !this.props.longInstructions && commonStyles.hidden]}
+                collapsed={this.props.collapsed}
+                onClick={this.handleClickCollapser}
+            />
+            {!this.props.collapsed && <ScrollButtons
+              style={styles.scrollButtons}
+              ref='scrollButtons'
+              onScrollUp={this.handleScrollInstructionsUp}
+              onScrollDown={this.handleScrollInstructionsDown}
+              visible={!atMaxHeight}
+              height={this.props.height - styles.scrollButtons.top - resizerHeight}
+            />}
+          </div>
         </ThreeColumns>
         {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer
           position={this.props.height}
