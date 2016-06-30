@@ -70,7 +70,7 @@ class SqlTable
   end
 
   def rename_column(old_name, new_name, ip_address)
-    ensure_metadata()
+    ensure_metadata
     column_list = JSON.parse(metadata['column_list'])
     new_column_list = TableMetadata.rename_column(column_list, old_name, new_name)
     metadata_dataset.update({column_list: new_column_list.to_json})
@@ -92,7 +92,7 @@ class SqlTable
   end
 
   def add_columns(column_names)
-    ensure_metadata()
+    ensure_metadata
     column_list = JSON.parse(metadata['column_list'])
     column_names.each do |col|
       column_list = TableMetadata.add_column(column_list, col)
@@ -101,7 +101,7 @@ class SqlTable
   end
 
   def delete_column(column_name, ip_address)
-    ensure_metadata()
+    ensure_metadata
     column_list = JSON.parse(metadata['column_list'])
     new_column_list = TableMetadata.remove_column(column_list, column_name)
     metadata_dataset.update({column_list: new_column_list.to_json})

@@ -68,7 +68,7 @@ class LevelSource < ActiveRecord::Base
       data = self.data.gsub(XMLNS_STRING, '')
       LevelSource.where(level_id: self.level_id,
                         data: data,
-                        md5: Digest::MD5.hexdigest(data)).first_or_create().id
+                        md5: Digest::MD5.hexdigest(data)).first_or_create.id
     end
   end
 

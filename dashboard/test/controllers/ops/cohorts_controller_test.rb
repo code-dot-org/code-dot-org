@@ -218,7 +218,6 @@ module Ops
 
       # cohort has 3 deleted teachers but we only see 2
       assert_equal 2, cohort_json['deleted_teachers'].count
-
     end
 
     test 'district contact cannot show cohorts without their district' do
