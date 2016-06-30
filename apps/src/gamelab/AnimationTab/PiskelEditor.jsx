@@ -92,20 +92,35 @@ const PiskelEditor = React.createClass({
     }
 
     this.isLoadingAnimation_ = true;
-    this.piskel.loadSpritesheet(
-        animationProps.dataURI,
-        animationProps.frameSize.x,
-        animationProps.frameSize.y,
-        animationProps.frameRate,
-        () => {
-          this.loadedAnimation_ = key;
-          this.isLoadingAnimation_ = false;
+    // Special case: When selecting a new, blank animation (one that is 'loaded'
+    // but has no loaded content) tell Piskel to create a new animation with
+    // its dimensions.
+    if (animationProps.loadedFromSource && animationProps.sourceUrl === null &&
+        animationProps.blob === null && animationProps.dataURI === null) {
+      this.piskel.createNewPiskel(
+          animationProps.frameSize.x,
+          animationProps.frameSize.y,
+          animationProps.frameRate,
+          () => {
+            this.loadedAnimation_ = key;
+            this.isLoadingAnimation_ = false;
+          });
+    } else {
+      this.piskel.loadSpritesheet(
+          animationProps.dataURI,
+          animationProps.frameSize.x,
+          animationProps.frameSize.y,
+          animationProps.frameRate,
+          () => {
+            this.loadedAnimation_ = key;
+            this.isLoadingAnimation_ = false;
 
-          // If the selected animation changed out from under us, load again.
-          if (this.props.selectedAnimation !== key) {
-            this.loadSelectedAnimation_(this.props);
-          }
-        });
+            // If the selected animation changed out from under us, load again.
+            if (this.props.selectedAnimation !== key) {
+              this.loadSelectedAnimation_(this.props);
+            }
+          });
+    }
   },
 
   // We are hosting an embedded application in an iframe; we should never try
