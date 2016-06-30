@@ -32,15 +32,21 @@ const PiskelEditor = React.createClass({
   },
 
   componentDidMount() {
-    /** @private {boolean} Tracks whether Piskel can receive API messages yet. */
+    /**
+     * @private {boolean} Tracks whether Piskel can receive API messages yet.
+     */
     this.isPiskelReady_ = false;
 
-    /** @private {boolean} Track whether we're mid-load so we don't fire save
-     *          events during load. */
+    /**
+     * @private {boolean} Track whether we're mid-load so we don't fire save
+     *          events during load.
+     */
     this.isLoadingAnimation_ = false;
 
-    /** @private {AnimationKey} reference to animation that is currently loaded
-     *          in the editor. */
+    /**
+     * @private {AnimationKey} reference to animation that is currently loaded
+     *          in the editor.
+     */
     this.loadedAnimation_ = null;
 
     this.piskel = new PiskelApi();
