@@ -33,12 +33,12 @@ const AnimationPickerBody = React.createClass({
               icon="upload"
               onClick={this.props.onUploadClick}
           />
-          {animationLibrary.map(animation =>
+          {animationLibrary.map(animationProps =>
             <AnimationPickerListItem
-                key={animation.sourceUrl}
-                label={`${animation.name} (${animation.frameCount})`}
-                animation={animation}
-                onClick={this.props.onPickLibraryAnimation.bind(this, animation)}
+                key={animationProps.sourceUrl}
+                label={`${animationProps.name} (${animationProps.frameCount})`}
+                animationProps={animationProps}
+                onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
             />
           )}
         </ScrollableList>
