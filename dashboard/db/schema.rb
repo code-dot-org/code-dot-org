@@ -341,23 +341,22 @@ ActiveRecord::Schema.define(version: 20160630000000) do
   add_index "pd_district_payment_terms", ["district_id", "course"], name: "index_pd_district_payment_terms_on_district_id_and_course", using: :btree
 
   create_table "pd_enrollments", force: :cascade do |t|
-    t.integer  "pd_workshop_id",     limit: 4,   null: false
-    t.string   "name",               limit: 255, null: false
-    t.string   "email",              limit: 255, null: false
+    t.integer  "pd_workshop_id",      limit: 4,   null: false
+    t.string   "name",                limit: 255, null: false
+    t.string   "email",               limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "school",             limit: 255
-    t.string   "code",               limit: 255
-    t.integer  "school_district_id", limit: 4
-    t.integer  "school_zip",         limit: 4
-    t.string   "school_type",        limit: 255
-    t.string   "school_state",       limit: 255
-    t.integer  "user_id",            limit: 4
+    t.string   "school",              limit: 255
+    t.string   "code",                limit: 255
+    t.integer  "school_district_id",  limit: 4
+    t.integer  "school_zip",          limit: 4
+    t.string   "school_type",         limit: 255
+    t.string   "school_state",        limit: 255
+    t.integer  "user_id",             limit: 4
     t.datetime "survey_sent_at"
-    t.integer  "survey_id",          limit: 4
+    t.integer  "completed_survey_id", limit: 4
   end
 
-  add_index "pd_enrollments", ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
   add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
   add_index "pd_enrollments", ["school_district_id"], name: "index_pd_enrollments_on_school_district_id", using: :btree
 

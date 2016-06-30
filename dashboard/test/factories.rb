@@ -44,6 +44,23 @@ FactoryGirl.define do
           district_contact.save
         end
       end
+      # Creates a teacher optionally enrolled in a workshop,
+      # joined the workshop section,
+      # or marked attended on the first workshop session.
+      factory :pd_workshop_participant do
+        transient do
+          workshop nil
+          enrolled true
+          in_section false
+          attended false
+        end
+        after(:create) do |teacher, evaluator|
+          raise 'workshop required' unless evaluator.workshop
+          create :pd_enrollment, workshop: evaluator.workshop, name: teacher.name, email: teacher.email if evaluator.enrolled
+          evaluator.workshop.section.add_student teacher if evaluator.in_section
+          create :pd_attendance, session: evaluator.workshop.sessions.first, teacher: teacher if evaluator.attended
+        end
+      end
     end
 
     factory :student do
