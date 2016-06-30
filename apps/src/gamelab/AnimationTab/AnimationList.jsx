@@ -33,7 +33,7 @@ const AnimationList = React.createClass({
   render() {
     return (
         <ScrollableList style={styles.root} className="animationList">
-          {this.props.animationList.list.map(key =>
+          {this.props.animationList.orderedKeys.map(key =>
             <AnimationListItem
                 key={key}
                 animationKey={key}

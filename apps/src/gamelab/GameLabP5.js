@@ -725,7 +725,7 @@ GameLabP5.prototype.afterSetupComplete = function () {
 GameLabP5.prototype.preloadAnimations = function (animationList) {
   // Preload project animations:
   this.p5.projectAnimations = {};
-  animationList.list.forEach(key => {
+  animationList.orderedKeys.forEach(key => {
     const data = animationList.data[key];
     const image = this.p5.loadImage(data.dataURI, () => {
       const spriteSheet = this.p5.loadSpriteSheet(
