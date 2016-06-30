@@ -10,10 +10,10 @@
       .question Select school type
       %select#school-type.form-control{name: "#{form_name}[school_type]", type: "select", required: false}
         %option{value: "", selected: true, disabled: true}
-        %option{value: DistrictDropdownConstants::SCHOOL_TYPE_CHARTER} Charter
-        %option{value: DistrictDropdownConstants::SCHOOL_TYPE_PRIVATE} Private
-        %option{value: DistrictDropdownConstants::SCHOOL_TYPE_PUBLIC} Public
-        %option{value: DistrictDropdownConstants::SCHOOL_TYPE_OTHER} Other
+        %option{value: SchoolInfo::SCHOOL_TYPE_CHARTER} Charter
+        %option{value: SchoolInfo::SCHOOL_TYPE_PRIVATE} Private
+        %option{value: SchoolInfo::SCHOOL_TYPE_PUBLIC} Public
+        %option{value: SchoolInfo::SCHOOL_TYPE_OTHER} Other
 
     .form-group{style: "display: none; margin-top: 20px;"}
       .question Enter school district's ZIP code
@@ -25,7 +25,7 @@
         %option{value: "", selected: true, disabled: true}
         - get_all_states_with_dc.each do |state_abbr, state_name|
           %option{value: state_abbr}= state_name
-        %option{value: DistrictDropdownConstants::SCHOOL_STATE_OTHER} Other
+        %option{value: SchoolInfo::SCHOOL_STATE_OTHER} Other
 
     .form-group{style: "display: none; margin-top: 20px;"}
       .question Search for district

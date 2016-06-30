@@ -1,4 +1,5 @@
 FactoryGirl.define do
+
   factory :user do
     birthday Date.new(1991, 03, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }
@@ -454,14 +455,18 @@ FactoryGirl.define do
     self.end {start + 6.hours}
   end
 
+  factory :school_info do
+    name {'Example School'}
+    school_type {DistrictDropdownConstants::SCHOOL_TYPE_PUBLIC}
+    state {'WA'}
+    school_district_id {create(:school_district).id}
+  end
+
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
-    school {'Example School'}
-    school_type {DistrictDropdownConstants::SCHOOL_TYPE_PUBLIC}
-    school_state {'WA'}
-    school_district_id {create(:school_district).id}
+    school_info_id {create(:school_info).id}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do

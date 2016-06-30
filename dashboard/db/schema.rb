@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160616182304) do
+ActiveRecord::Schema.define(version: 20160627212940) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -341,19 +341,19 @@ ActiveRecord::Schema.define(version: 20160616182304) do
   add_index "pd_district_payment_terms", ["district_id", "course"], name: "index_pd_district_payment_terms_on_district_id_and_course", using: :btree
 
   create_table "pd_enrollments", force: :cascade do |t|
-    t.integer  "pd_workshop_id",        limit: 4,   null: false
-    t.string   "name",                  limit: 255, null: false
-    t.string   "email",                 limit: 255, null: false
+    t.integer  "pd_workshop_id",     limit: 4,   null: false
+    t.string   "name",               limit: 255, null: false
+    t.string   "email",              limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "code",                  limit: 255
-    t.string   "school",                limit: 255
-    t.integer  "school_district_id",    limit: 4
-    t.integer  "school_zip",            limit: 4
-    t.string   "school_type",           limit: 255
-    t.string   "school_state",          limit: 255
-    t.integer  "user_id",               limit: 4
-    t.boolean  "school_district_other"
+    t.string   "code",               limit: 255
+    t.string   "school",             limit: 255
+    t.integer  "school_district_id", limit: 4
+    t.integer  "school_zip",         limit: 4
+    t.string   "school_type",        limit: 255
+    t.string   "school_state",       limit: 255
+    t.integer  "user_id",            limit: 4
+    t.integer  "school_info_id",     limit: 4
   end
 
   add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
@@ -570,6 +570,19 @@ ActiveRecord::Schema.define(version: 20160616182304) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "school_infos", force: :cascade do |t|
+    t.string   "name",                  limit: 255
+    t.string   "school_type",           limit: 255
+    t.integer  "zip",                   limit: 4
+    t.string   "state",                 limit: 255
+    t.integer  "school_district_id",    limit: 4
+    t.boolean  "school_district_other",             default: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+  end
+
+  add_index "school_infos", ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
 
   create_table "script_levels", force: :cascade do |t|
     t.integer  "level_id",    limit: 4
@@ -945,6 +958,7 @@ ActiveRecord::Schema.define(version: 20160616182304) do
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "plc_tasks", "script_levels"
+  add_foreign_key "school_infos", "school_districts"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_proficiencies", "users"
 end
