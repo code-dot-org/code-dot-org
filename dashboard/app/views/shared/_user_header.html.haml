@@ -48,10 +48,11 @@
     }
   });
 
-  if (typeof dashboard !== 'undefined') {  // only display pair programming if in dashboard
-    // pair programming dialog
+  // Only display pair programming if in dashboard.
+  if (typeof dashboard !== 'undefined') {
+    // Pair programming dialog.
     $(document).ready(function () {
-      var props = {source: #{pairing_url.inspect}, initialIsOpen: #{@show_pairing_dialog}};
+      var props = {source: '#{pairing_url}', initialIsOpen: #{@show_pairing_dialog}};
       props.i18n = window.dashboard.i18n;
       $('body').append('<div id="pairing"></div>');
       var pairingDialog = ReactDOM.render(

@@ -452,9 +452,11 @@ class User < ActiveRecord::Base
 
     User.
       joins('inner join followers on followers.student_user_id = users.id').
-      find_by(id: params[:user_id],
-              secret_words: params[:secret_words],
-              'followers.section_id' => section.id)
+      find_by(
+        id: params[:user_id],
+        secret_words: params[:secret_words],
+        'followers.section_id' => section.id
+      )
   end
 
   def self.authenticate_with_section_and_secret_picture(section:, params:)
@@ -462,9 +464,11 @@ class User < ActiveRecord::Base
 
     User.
       joins('inner join followers on followers.student_user_id = users.id').
-      find_by(id: params[:user_id],
-              secret_picture_id: params[:secret_picture_id],
-              'followers.section_id' => section.id)
+      find_by(
+        id: params[:user_id],
+        secret_picture_id: params[:secret_picture_id],
+        'followers.section_id' => section.id
+      )
   end
 
   def user_levels_by_level(script)
@@ -929,16 +933,20 @@ SQL
 
     if pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|
-        navigator_user_level = User.track_level_progress_sync(user_id: navigator_user_id,
-                                                              level_id: level_id,
-                                                              script_id: script_id,
-                                                              new_result: new_result,
-                                                              submitted: submitted,
-                                                              level_source_id: level_source_id,
-                                                              pairing_user_ids: nil)
+        navigator_user_level = User.track_level_progress_sync(
+          user_id: navigator_user_id,
+          level_id: level_id,
+          script_id: script_id,
+          new_result: new_result,
+          submitted: submitted,
+          level_source_id: level_source_id,
+          pairing_user_ids: nil
+        )
         retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-          PairedUserLevel.find_or_create_by(navigator_user_level_id: navigator_user_level.id,
-                                            driver_user_level_id: user_level.id)
+          PairedUserLevel.find_or_create_by(
+            navigator_user_level_id: navigator_user_level.id,
+            driver_user_level_id: user_level.id
+          )
         end
       end
     end

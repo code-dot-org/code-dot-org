@@ -1,11 +1,10 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var TestUtils = require('react-addons-test-utils');
-var assert = require('assert');
-var sinon = require('sinon');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TestUtils from 'react-addons-test-utils';
+import assert from 'assert';
+import sinon from 'sinon';
 
-window.React = React; // the below file wants React as a global
-var Pairing = require('../../src/js/components/pairing.jsx');
+import Pairing from '../../src/js/components/pairing/pairing.jsx';
 
 describe('Pairing component', function () {
   var div;
@@ -39,11 +38,9 @@ describe('Pairing component', function () {
   function setupFakeAjax(url, response) {
     server = sinon.fakeServer.create();
 
-    server.respondWith("GET",
-                       url,
-                       [200,
-                        { "Content-Type": "application/json" },
-                        JSON.stringify(response)]);
+    server.respondWith("GET", url, [
+      200, {"Content-Type": "application/json"}, JSON.stringify(response)
+    ]);
   }
 
   function teardownFakeAjax() {
@@ -53,8 +50,12 @@ describe('Pairing component', function () {
   describe('for student in multiple sections', function (){
     var ajaxUrl = '/pairings';
     var ajaxState = {
-      sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]},
-                 {id: 15, name: "Anotther section"}],
+      sections: [{
+        id: 1,
+        name: "A section",
+        students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]
+      },
+      {id: 15, name: "Another section"}],
       pairings: []
     };
 
@@ -202,8 +203,14 @@ describe('Pairing component', function () {
   describe('for student who is currently pairing', function (){
     var ajaxUrl = '/pairings';
     var ajaxState = {
-      sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]},
-                 {id: 56, name: "Another section"}],
+      sections: [{
+        id: 1,
+        name: "A section",
+        students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]
+      }, {
+        id: 56,
+        name: "Another section"
+      }],
       pairings: [{id: 546, name: "Josh"}, {id: 563, name: "Charing"}, {id: 96747, name: "Andrew O."}]
     };
 
