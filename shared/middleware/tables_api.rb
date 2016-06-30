@@ -413,7 +413,6 @@ class TablesApi < Sinatra::Base
 
       table.ensure_metadata()
     end
-
   end
 
   private
