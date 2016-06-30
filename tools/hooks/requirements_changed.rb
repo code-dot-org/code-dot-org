@@ -24,8 +24,8 @@ def file_checkout?
   return ARGV.fetch(2, "1") == "0"
 end
 
-unless file_checkout?()
-  modified_files = get_modified_files()
+unless file_checkout?
+  modified_files = get_modified_files
 
   modified_files.each do |file|
     basename = File.basename(file)
