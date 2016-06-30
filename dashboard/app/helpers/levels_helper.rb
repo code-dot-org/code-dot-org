@@ -45,10 +45,15 @@ module LevelsHelper
       channel_token = ChannelToken.find_channel_token(@level, @user)
       readonly_view_options
     else
-      channel_token = ChannelToken.find_or_create_channel_token(@level, current_user, {
-        hidden: true,
-        useFirebase: @level.game.use_firebase_for_new_project?
-      })
+      channel_token = ChannelToken.find_or_create_channel_token(
+        @level,
+        current_user,
+        request.ip,
+        StorageApps.new(storage_id('user')),
+        {
+          hidden: true,
+          useFirebase: @level.game.use_firebase_for_new_project?
+        })
     end
 
     view_options channel: channel_token.channel if channel_token
