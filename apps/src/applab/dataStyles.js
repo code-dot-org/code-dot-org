@@ -37,9 +37,12 @@ const button = {
   margin: 0
 };
 
-const editButton = [button, {
+const editButton = {
+  marginTop: 0,
+  marginLeft: 0,
+  marginBottom: 0,
   marginRight: 10
-}];
+};
 
 const input = {
   width: 'calc(100% - 14px)',
