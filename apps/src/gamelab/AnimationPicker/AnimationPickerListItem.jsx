@@ -52,7 +52,7 @@ const styles = {
 
 const AnimationPickerListItem = React.createClass({
   propTypes: {
-    animation: React.PropTypes.object, // TODO: Shape?
+    animationProps: React.PropTypes.object, // TODO: Shape?
     icon: React.PropTypes.string,
     label: React.PropTypes.string.isRequired,
     onClick: React.PropTypes.func
@@ -72,10 +72,10 @@ const AnimationPickerListItem = React.createClass({
     return (
       <div style={styles.root} onClick={this.props.onClick}>
         <div style={thumbnailStyle}>
-          {this.props.animation &&
+          {this.props.animationProps &&
               <AnimationPreview
-                  animationData={this.props.animation}
-                  sourceUrl={this.props.animation.sourceUrl}
+                  animationProps={this.props.animationProps}
+                  sourceUrl={this.props.animationProps.sourceUrl}
                   width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
                   height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
               />

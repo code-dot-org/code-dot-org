@@ -44,7 +44,7 @@ const staticStyles = {
  */
 const ListItemThumbnail = React.createClass({
   propTypes: {
-    animationData: React.PropTypes.object.isRequired, // TODO: Shape?
+    animationProps: React.PropTypes.object.isRequired, // TODO: Shape?
     index: React.PropTypes.number,
     isSelected: React.PropTypes.bool
   },
@@ -93,8 +93,8 @@ const ListItemThumbnail = React.createClass({
       <div style={styles.root}>
         <div ref="wrapper" style={styles.wrapper}>
           <AnimationPreview
-              animationData={this.props.animationData}
-              sourceUrl={this.props.animationData.dataURI}
+              animationProps={this.props.animationProps}
+              sourceUrl={this.props.animationProps.dataURI}
               width={this.state.previewSize}
               height={this.state.previewSize}
               alwaysPlay={this.props.isSelected}

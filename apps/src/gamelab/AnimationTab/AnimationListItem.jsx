@@ -68,7 +68,7 @@ const AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
     animationKey: React.PropTypes.string.isRequired,
-    animationData: React.PropTypes.object.isRequired, // TODO: Shape?
+    animationProps: React.PropTypes.object.isRequired, // TODO: Shape?
     columnWidth: React.PropTypes.number.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
@@ -101,7 +101,7 @@ const AnimationListItem = React.createClass({
   },
 
   render() {
-    const name = this.props.animationData.name;
+    const name = this.props.animationProps.name;
     var animationName;
     if (this.props.isSelected) {
       animationName = (
@@ -127,7 +127,7 @@ const AnimationListItem = React.createClass({
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
             ref="thumbnail"
-            animationData={this.props.animationData}
+            animationProps={this.props.animationProps}
             isSelected={this.props.isSelected}
         />
         {animationName}

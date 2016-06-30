@@ -1,30 +1,5 @@
 /**
  * @file Redux module for new format for tracking project animations.
- *
- * MIGRATION NOTES
- *  The old shape of animations is an array of animation metadata.
- *    [
- *      {animation},
- *      {animation}
- *    ]
- *
- *  The new shape is an object with animation and cache components
- *    {
- *     orderedKeys: [ AnimationKey, AnimationKey ],
- *     propsByKey: {
- *       AnimationKey: {AnimationData},
- *       AnimationKey: {AnimationData}
- *     }
- *   }
- *
- *  AnimationData should include the actual spritesheet (as blob and dataURI),
- *  dimensions and frame dimensions, framerate, name, last save time, version IDs,
- *  URL to fetch the animation from the API, etc.
- *
- *  We serialize a smaller set of information.
- *
- *  We need to do a migration if the old style gets loaded.
- *  See setInitialAnimationList for how this works.
  */
 import _ from 'lodash';
 import {combineReducers} from 'redux';
@@ -36,11 +11,11 @@ import {reportError} from './errorDialogStackModule';
 
 // Args: {SerializedAnimationList} animationList
 const SET_INITIAL_ANIMATION_LIST = 'AnimationList/SET_INITIAL_ANIMATION_LIST';
-// Args: {AnimationKey} key, {SerializedAnimation} props
+// Args: {AnimationKey} key, {AnimationProps} props
 export const ADD_ANIMATION = 'AnimationList/ADD_ANIMATION';
-// Args: {number} index, {AnimationKey} key, {SerializedAnimation} props
+// Args: {number} index, {AnimationKey} key, {AnimationProps} props
 export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
-// Args: {AnimationKey} key, {SerializedAnimation} props
+// Args: {AnimationKey} key, {AnimationProps} props
 export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
 // Args: {AnimationKey} key
 const INVALIDATE_ANIMATION = 'AnimationList/INVALIDATE_ANIMATION';
@@ -409,12 +384,12 @@ export function saveAnimations(onComplete) {
 /**
  *
  * @param {AnimationKey} animationKey
- * @param {Object} animationData // TODO: Better type?
+ * @param {AnimationProps} animationProps
  * @return {Promise} which resolves to a redux action object
  */
-function saveAnimation(animationKey, animationData) {
+function saveAnimation(animationKey, animationProps) {
   return new Promise((resolve, reject) => {
-    if (typeof animationData.blob === 'undefined') {
+    if (typeof animationProps.blob === 'undefined') {
       reject(new Error(`Animation ${animationKey} has no loaded content.`));
       return;
     }
@@ -446,7 +421,7 @@ function saveAnimation(animationKey, animationData) {
     xhr.addEventListener('load', onSuccess);
     xhr.addEventListener('error', onError);
     xhr.open('PUT', animationsApi.basePath(animationKey + '.png'), true);
-    xhr.send(animationData.blob);
+    xhr.send(animationProps.blob);
   });
 }
 
@@ -457,7 +432,7 @@ function saveAnimation(animationKey, animationData) {
  */
 
 /**
- * @typedef {Object} Animation
+ * @typedef {Object} AnimationProps
  * @property {string} name
  * @property {string} sourceUrl - Remote location where the animation spritesheet
  *           is stored.  Should be replaced soon with more of a 'gallery' concept.
@@ -483,7 +458,7 @@ function saveAnimation(animationKey, animationData) {
  */
 
 /**
- * @typedef {Object} SerializedAnimation
+ * @typedef {Object} SerializedAnimationProps
  * @property {string} name
  * @property {string} sourceUrl
  * @property {Vector2} sourceSize
@@ -494,10 +469,10 @@ function saveAnimation(animationKey, animationData) {
  */
 
 /**
- * @param {Animation} animation
- * @return {SerializedAnimation}
+ * @param {AnimationProps} animation
+ * @return {SerializedAnimationProps}
  */
-function getSerializedAnimation(animation) {
+function getSerializedAnimationProps(animation) {
   // Only serialize out properties we need to reconstruct the animation when
   // we load back in - dropping the cached spritesheet, invalidation flags, etc.
   return _.pick(animation, [
@@ -520,13 +495,13 @@ function getSerializedAnimation(animation) {
 /**
  * @typedef {Object} SerializedAnimationList
  * @property {AnimationKey[]} orderedKeys - Animations in project order
- * @property {Object.<AnimationKey, SerializedAnimation>} propsByKey
+ * @property {Object.<AnimationKey, SerializedAnimationProps>} propsByKey
  */
 
 /**
  * @typedef {Object} AnimationList
  * @property {AnimationKey[]} orderedKeys - Animation keys in project order
- * @property {Object.<AnimationKey, Animation>} propsByKey
+ * @property {Object.<AnimationKey, AnimationProps>} propsByKey
  */
 
 /**
@@ -542,10 +517,37 @@ export function getSerializedAnimationList(animationList) {
   return {
     orderedKeys: animationList.orderedKeys,
     propsByKey: _.pick(
-        _.mapValues(animationList.propsByKey, getSerializedAnimation),
+        _.mapValues(animationList.propsByKey, getSerializedAnimationProps),
         animationList.orderedKeys)
   };
 }
+
+/*
+ * MIGRATION NOTES - 30 June 2016 bbuchanan
+ *  The old shape of animations is an array of animation metadata.
+ *    [
+ *      {animation},
+ *      {animation}
+ *    ]
+ *
+ *  The new shape is an object with animation and cache components
+ *    {
+ *     orderedKeys: [ AnimationKey, AnimationKey ],
+ *     propsByKey: {
+ *       AnimationKey: {AnimationProps},
+ *       AnimationKey: {AnimationProps}
+ *     }
+ *   }
+ *
+ *  AnimationProps should include the actual spritesheet (as blob and dataURI),
+ *  dimensions and frame dimensions, framerate, name, last save time, version IDs,
+ *  URL to fetch the animation from the API, etc.
+ *
+ *  We serialize a smaller set of information {SerializedAnimationProps}.
+ *
+ *  We need to do a migration if the old style gets loaded.
+ *  See setInitialAnimationList for how this works.
+ */
 
 // TODO: Don't upload to S3 if an animation is never modified
 // TODO: Overwrite version ID within session
