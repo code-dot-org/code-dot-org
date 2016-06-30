@@ -35,7 +35,7 @@ class ActivitiesController < ApplicationController
     # disabled. (A cached view might post to this action even if milestone posts
     # are disabled in the gatekeeper.)
     enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
-    if !enabled
+    unless enabled
       head 503
       return
     end
