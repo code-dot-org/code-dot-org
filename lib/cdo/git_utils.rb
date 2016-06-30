@@ -21,6 +21,42 @@ module GitUtils
     files_changed_locally.concat(files_changed_in_branch(base_branch)).uniq
   end
 
+  # TODO(bcjordan): refactor to de-duplicate with run_tests_if_changed
+  def self.build_my_if_changed(test_name, changed_globs)
+    max_identifier_length = 12
+    justified_test_name = test_name.ljust(max_identifier_length)
+
+    base_branch = current_branch_base
+    relevant_changed_files = files_changed_in_branch_or_local(base_branch, changed_globs)
+    if relevant_changed_files.empty?
+      HipChat.log "Files affecting the #{justified_test_name} build unmodified from #{base_branch}. Using existing build."
+    else
+      HipChat.log "Files affecting the #{justified_test_name} build *modified* from #{base_branch}. Using 'my' build. Changed files:"
+      padding = ' ' * 4
+      separator = "\n"
+      HipChat.log separator + padding + relevant_changed_files.join(separator + padding)
+      yield
+    end
+  end
+
+  def self.run_tests_if_changed(test_name, changed_globs)
+    max_identifier_length = 12
+    justified_test_name = test_name.ljust(max_identifier_length)
+
+    base_branch = current_branch_base
+    relevant_changed_files = files_changed_in_branch_or_local(base_branch, changed_globs)
+    if relevant_changed_files.empty?
+      HipChat.log "Files affecting #{justified_test_name} tests unmodified from #{base_branch}. Skipping tests."
+    else
+      HipChat.log "Files affecting #{justified_test_name} tests *modified* from #{base_branch}. Starting tests. Changed files:"
+      padding = ' ' * 4
+      separator = "\n"
+      HipChat.log separator + padding + relevant_changed_files.join(separator + padding)
+      yield
+    end
+  end
+
+
   def self.files_changed_in_branch(base_branch)
     current_branch = self.current_branch
     # via http://stackoverflow.com/a/25071749
@@ -34,14 +70,14 @@ module GitUtils
   end
 
   def self.circle_commit_contains?(string)
-    circle_commit_message.include?(string)
+    latest_commit_message.include?(string)
   end
 
   def self.current_branch
     `git rev-parse --abbrev-ref HEAD`.strip
   end
 
-  def self.circle_commit_message
+  def self.latest_commit_message
     `git log --format=%B -n 1 -1`.strip
   end
 
