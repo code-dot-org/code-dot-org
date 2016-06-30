@@ -46,9 +46,9 @@ module TestRunUtils
   def self.run_dashboard_tests
     Dir.chdir(dashboard_dir) do
       with_hipchat_logging('dashboard tests') do
-        RakeUtils.rake_stream_output 'RACK_ENV=test RAILS_ENV=test PARALLEL_TEST_FIRST_IS_1=true parallel:rake[dashboard:setup_db,4]'
-        RakeUtils.rake_stream_output 'RACK_ENV=test RAILS_ENV=test PARALLEL_TEST_FIRST_IS_1=true parallel:rake[seed:test,4]'
-        RakeUtils.rake_stream_output 'RACK_ENV=test RAILS_ENV=test PARALLEL_TEST_FIRST_IS_1=true parallel:test[4]'
+        RakeUtils.rake_stream_output 'RACK_ENV=test RAILS_ENV=test PARALLEL_TEST_FIRST_IS_1=true parallel:rake[dashboard:setup_db' + (ENV['CI'] ? ',4' : '')  + ']'
+        RakeUtils.rake_stream_output 'RACK_ENV=test RAILS_ENV=test PARALLEL_TEST_FIRST_IS_1=true parallel:rake[seed:test' + (ENV['CI'] ? ',4' : '')  + ']'
+        RakeUtils.rake_stream_output 'RACK_ENV=test RAILS_ENV=test PARALLEL_TEST_FIRST_IS_1=true parallel:test[4' + (ENV['CI'] ? ',4' : '') + ']'
         RakeUtils.rake_stream_output 'konacha:run'
       end
     end
