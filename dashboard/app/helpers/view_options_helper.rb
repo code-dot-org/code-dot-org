@@ -24,6 +24,7 @@ module ViewOptionsHelper
     level_position
     public_caching
     is_13_plus
+    has_contained_levels
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)
@@ -33,5 +34,10 @@ module ViewOptionsHelper
     else
       opts.each{|k, v| @view_options[k] = v}
     end
+  end
+
+  # Reset view options (for test code)
+  def reset_view_options
+    @view_options = nil
   end
 end

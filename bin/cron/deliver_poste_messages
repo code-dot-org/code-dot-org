@@ -38,7 +38,6 @@ def poste_url(*parts)
 end
 
 module Poste
-
   class Template
 
     def initialize(body, engine=TextRender::MarkdownEngine)
@@ -55,7 +54,7 @@ module Poste
     end
 
     def render(params={})
-      if params.has_key?('form_id')
+      if params.key?('form_id')
         form = Form2.from_row(DB[:forms].where(id: params['form_id']).first)
         params.merge! form.data
         params.merge! form.processed_data
@@ -97,7 +96,6 @@ eos
     end
 
   end
-
 end
 
 class Deliverer
@@ -240,7 +238,7 @@ class Deliverer
     end
   end
 
-  def smtp_connect()
+  def smtp_connect
     Net::SMTP.new(@params[:address], @params[:port]).tap do |smtp|
       smtp.enable_starttls if @params[:enable_starttls_auto]
       smtp.start(@params[:domain], @params[:user_name], @params[:password], @params[:authentication])
@@ -259,7 +257,7 @@ def create_threads(count)
   end
 end
 
-def main()
+def main
   started_at = Time.now
 
   queue = Queue.new.tap do |results|
@@ -305,8 +303,6 @@ def main()
     message = "#{queue_count} email(s) sent in #{elapsed_seconds} seconds using #{worker_count} threads, #{remaining_count} still queued."
     if rack_env?(:development)
       puts message
-    else
-#      HipChat.log message
     end
   end
 end

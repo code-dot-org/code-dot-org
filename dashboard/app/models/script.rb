@@ -42,8 +42,8 @@ class Script < ActiveRecord::Base
   after_save :generate_plc_objects
 
   def generate_plc_objects
-    if professional_learning_course
-      course = Plc::Course.find_or_create_by! name: 'csp-support'
+    if professional_learning_course?
+      course = Plc::Course.find_or_create_by! name: professional_learning_course
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
       unit.update!(
         plc_course_id: course.id,
@@ -194,7 +194,7 @@ class Script < ActiveRecord::Base
       script_level_cache.values.each do |script_level|
         level = script_level.level
         next unless level
-        cache[level.id] = level unless cache.has_key? level.id
+        cache[level.id] = level unless cache.key? level.id
       end
     end
   end
@@ -354,7 +354,6 @@ class Script < ActiveRecord::Base
     else
       ['playlab', 'artist']
     end
-
   end
 
   def professional_course?
@@ -373,6 +372,7 @@ class Script < ActiveRecord::Base
       custom_files.map do |script|
         name = File.basename(script, '.script')
         script_data, i18n = ScriptDSL.parse_file(script)
+
         stages = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
@@ -533,7 +533,7 @@ class Script < ActiveRecord::Base
   # script is found/created by 'id' (if provided) otherwise by 'name'
   def self.fetch_script(options)
     options.symbolize_keys!
-    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.has_key? v
+    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.key? v
     name = {name: options.delete(:name)}
     script_key = ((id = options.delete(:id)) && {id: id}) || name
     script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)

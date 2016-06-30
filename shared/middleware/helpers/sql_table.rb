@@ -16,11 +16,11 @@ class SqlTable
     @metadata_table = PEGASUS_DB[:channel_table_metadata]
   end
 
-  def exists?()
+  def exists?
     !@table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name).limit(1).first.nil?
   end
 
-  def items()
+  def items
     @items ||= @table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name)
   end
 
@@ -64,7 +64,7 @@ class SqlTable
     true
   end
 
-  def delete_all()
+  def delete_all
     items.delete
     @metadata_dataset.delete if metadata_dataset
   end
@@ -143,7 +143,7 @@ class SqlTable
     JSON.load(row[:value]).merge('id' => row[:row_id])
   end
 
-  def next_id()
+  def next_id
     items.max(:row_id).to_i + 1
   end
 
@@ -160,13 +160,13 @@ class SqlTable
     JSON.load(row[:value]).merge('id' => id)
   end
 
-  def to_a()
+  def to_a
     items.map do |row|
       JSON.load(row[:value]).merge('id' => row[:row_id])
     end
   end
 
-  def to_csv()
+  def to_csv
     return table_to_csv(to_a, column_order: ['id'])
   end
 

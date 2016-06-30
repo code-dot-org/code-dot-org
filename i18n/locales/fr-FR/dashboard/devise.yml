@@ -22,7 +22,7 @@ fr:
       unlock_instructions:
         subject: Instructions de déverrouillage
     omniauth_callbacks:
-      failure: "Ton authentification en tant que %{kind} a échoué\\_: «\\_%{reason}\\_»."
+      failure: 'Ton authentification en tant que %{kind} a échoué: «%{reason}».'
       success: 'Authentification réussie du compte %{kind}.'
     passwords:
       no_token: "Tu ne peux pas accéder à cette page sans avoir été transféré d'un e-mail de réinitialisation du mot de passe. Si tu as été transféré d'un e-mail de réinitialisation du mot de passe, assure-toi que tu as utilisé toute l'URL fournie."
@@ -53,8 +53,8 @@ fr:
       not_found: non trouvé
       not_locked: "n'a pas été verrouillé"
       not_saved:
-        one: "Une erreur a empêché ce %{resource} d'être sauvegardé\\_:"
-        other: "%{count} erreurs ont empêché ce %{resource} d'être sauvegardé\\_:"
+        one: "Une erreur a empêché ce %{resource} d'être sauvegardé:"
+        other: "%{count} erreurs ont empêché ce %{resource} d'être sauvegardé:"
     invitations:
       send_instructions: "Un e-mail d'invitation a été envoyé à %{email}."
       invitation_token_invalid: "Le jeton d'invitation fourni n'est pas valide !"

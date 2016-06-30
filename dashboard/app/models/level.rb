@@ -74,7 +74,7 @@ class Level < ActiveRecord::Base
     attributes = new_attributes.stringify_keys
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
     assign_nested_attributes_for_one_to_one_association(:level_concept_difficulty,
-        concept_difficulty_attributes) if concept_difficulty_attributes
+      concept_difficulty_attributes) if concept_difficulty_attributes
     super(attributes)
   end
 
@@ -134,11 +134,11 @@ class Level < ActiveRecord::Base
       unless self.callout_json.blank?
         return JSON.parse(self.callout_json).map do |callout_definition|
           Callout.new(
-              element_id: callout_definition['element_id'],
-              localization_key: callout_definition['localization_key'],
-              callout_text: callout_definition['callout_text'],
-              qtip_config: callout_definition['qtip_config'].try(:to_json),
-              on: callout_definition['on']
+            element_id: callout_definition['element_id'],
+            localization_key: callout_definition['localization_key'],
+            callout_text: callout_definition['callout_text'],
+            qtip_config: callout_definition['qtip_config'].try(:to_json),
+            on: callout_definition['on']
           )
         end
       end
@@ -297,6 +297,14 @@ class Level < ActiveRecord::Base
   end
 
   def icon
+  end
+
+  # Returns an array of all the contained levels
+  # (based on the contained_level_names property)
+  def contained_levels
+    names = properties["contained_level_names"]
+    return [] unless names.present?
+    Level.where(name: properties["contained_level_names"])
   end
 
   private

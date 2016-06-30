@@ -2006,10 +2006,14 @@
           Conditionals and Keyboard Input: Conditionals and Keyboard Input
           Sprites and Images: Sprites and Images
           CSD U3 Variables and Animation: CSD U3 Variables and Animation
-          Booleans and Conditionals: Booleans and Conditionals
           SFLP: SFLP
           Animations: Animations
           'Project: Interactive Card': 'Project: Interactive Card'
+          Booleans and Conditionals: Booleans and Conditionals
+          Variables and Animation: Variables and Animation
+          Complex Conditionals: Complex Conditionals
+          Proposed Sprites and Props: Proposed Sprites and Props
+          Conditionals Update: Conditionals Update
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2121,6 +2125,7 @@
           description_short: Unreleased level types for UI testing as admin
           description: Unreleased level types for UI testing as admin
           Game Lab: Game Lab
+          Contained Levels: Contained Levels
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -2226,52 +2231,6 @@
           description: Test of new educational philosophy with guiding storyline
           description_audience: Ages 8-18+
           Sample Stage: Sample Stage
-        TeacherCon:
-          title: TeacherCon Supports
-          description: We will use this during TeacherCon to deliver supports and
-            materials for sessions
-          Introduction to Teachercon: Introduction to Teachercon
-          'Lesson 1.4: number systems - circle triangle square': 'Lesson 1.4: number
-            systems - circle triangle square'
-          'Lesson 1.6: sending numbers': 'Lesson 1.6: sending numbers'
-          'Lesson 1.9: internet addressing (battleship)': 'Lesson 1.9: internet addressing
-            (battleship)'
-          'Lesson 1.10: routers and redundancy': 'Lesson 1.10: routers and redundancy'
-          'Lesson 1.11: Packets and Making a Reliable Internet': 'Lesson 1.11: Packets
-            and Making a Reliable Internet'
-          'Lesson 2.2: text compression': 'Lesson 2.2: text compression'
-          'Lesson 2.3: black and white pixelation': 'Lesson 2.3: black and white pixelation'
-          'Lesson 2.10: good and bad data visualizations': 'Lesson 2.10: good and
-            bad data visualizations'
-          Group Work and Peer Learning: Group Work and Peer Learning
-          Balancing Teachers and Tools: Balancing Teachers and Tools
-          Discovery Learning: Discovery Learning
-          Capturing Student Learning: Capturing Student Learning
-          Lesson 14 number systems - circle triangle square: Lesson 14 number systems
-            - circle triangle square
-          'Lesson 1,4: number systems - circle triangle square': 'Lesson 1,4: number
-            systems - circle triangle square'
-          'Lesson 1,6: sending numbers': 'Lesson 1,6: sending numbers'
-          'Lesson 1,9: internet addressing (battleship)': 'Lesson 1,9: internet addressing
-            (battleship)'
-          'Lesson 1,10: routers and redundancy': 'Lesson 1,10: routers and redundancy'
-          'Lesson 1,11: Packets and Making a Reliable Internet': 'Lesson 1,11: Packets
-            and Making a Reliable Internet'
-          'Lesson 2,2: text compression': 'Lesson 2,2: text compression'
-          'Lesson 2,3: black and white pixelation': 'Lesson 2,3: black and white pixelation'
-          'Lesson 2,10: good and bad data visualizations': 'Lesson 2,10: good and
-            bad data visualizations'
-          'Lesson 1,4: Number Systems - circle triangle square': 'Lesson 1,4: Number
-            Systems - circle triangle square'
-          'Lesson 1,6: Sending Numbers': 'Lesson 1,6: Sending Numbers'
-          'Lesson 1,10: Routers and Redundancy': 'Lesson 1,10: Routers and Redundancy'
-          'Lesson 2,2: Text Compression': 'Lesson 2,2: Text Compression'
-          'Lesson 2,3: Black and White Pixelation': 'Lesson 2,3: Black and White Pixelation'
-          'Lesson 2,10: Good and Bad Data Visualizations': 'Lesson 2,10: Good and
-            Bad Data Visualizations'
-          Measuring Student Learning: Measuring Student Learning
-          description_short: We will use this during TeacherCon to deliver supports
-            and materials for sessions
         MikeTest:
           title: MikeTest
           description_short: Just a script for playing around
@@ -2279,9 +2238,149 @@
           description_audience: Ages 8-98
           Sample Stage: Sample Stage
           Artist Functions: Föll listamanns
+          The same thing with named levels: The same thing with named levels
+          You are a coding STAR: You are a coding STAR
         artistExemplar:
           title: Artist Exemplar
           description_short: How can we make the artist levels really hum?
           description: These artist levels will knock the socks off of third graders
           description_audience: Fyrir 8-18 ára
           Artist Exemplar: Artist Exemplar
+        2016_sciencePD_phase2b:
+          title: Computer Science in Science PD Phase 2b 2016-2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Velkomin!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Samantekt
+        teachercon:
+          title: TeacherCon Supports
+          description_short: We will use this during TeacherCon to deliver supports
+            and materials for sessions
+          description: We will use this during TeacherCon to deliver supports and
+            materials for sessions
+          Introduction to Teachercon: Introduction to Teachercon
+          Lesson 1,4: 'Lesson 1.4: Number Systems (Circle Triangle Square)'
+          Lesson 1,6: 'Lesson 1.6: Sending Numbers'
+          Lesson 1,9: 'Lesson 1.9: Internet Addressing (Battleship)'
+          Lesson 1,10: 'Lesson 1.10: Routers and Redundancy'
+          Lesson 1,11: 'Lesson 1.11: Packets and Making a Reliable Internet'
+          Lesson 2,2: 'Lesson 2.2: Text Compression'
+          Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
+          Lesson 2,10: 'Lesson 2.10: Good and Bad Data Visualizations'
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+          Discovery Learning: Discovery Learning
+          Measuring Student Learning: Measuring Student Learning
+        2016_sciencePD-phase2b:
+          title: Computer Science in Science PD Phase 2b 2016 2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Velkomin!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Samantekt
+        kinderTest:
+          Kindergarten Stage 1: Kindergarten Stage 1
+        gradeKinder:
+          Debugging: Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': 'Púsl: Læra að draga og sleppa'
+          Programming: Forritun
+          Being Safe Online: Being Safe Online
+          Loops: Lykkjur
+          Programming Unplugged: Programming Unplugged
+          Loops Unplugged: Loops Unplugged
+          Events Unplugged: Events Unplugged
+          Events: Atvik
+        grade4:
+          title: Grade 4
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 9-99
+          'Mixed Review #1 (Ramp Up)': 'Mixed Review #1 (Ramp Up)'
+          Conditionals: Skilyrði
+          'Bee: Conditionals': 'Býfluga: Skilyrði'
+          'PlayLab: Conditionals': 'PlayLab: Conditionals'
+          Songwriting: Lagasmíð
+          'Bee: Functions': 'Býfluga: Föll'
+          Decision Trees: Decision Trees
+          Choose Your Own Adventure: Choose Your Own Adventure
+          'Project #1': 'Project #1'
+          Nested Loops: Innri lykkjur
+          'Artist: Nested Loops': 'Listamaður: Innri lykkjur'
+          'Mixed Review #2 (Conditionals, Events, Functions)': 'Mixed Review #2 (Conditionals,
+            Events, Functions)'
+          'New Artist: Functions': 'New Artist: Functions'
+          'Project #2': 'Project #2'
+          'Mixed Review #3 (Deduce the Concept)': 'Mixed Review #3 (Deduce the Concept)'
+          Internet: Internet
+          Crowdsourcing: Hópvistun
+          Digital Citizenship: Stafrænn borgari
+        grade1:
+          Predicting & Debugging: Predicting & Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': 'Púsl: Læra að draga og sleppa'
+        grade5:
+          title: Grade 5
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 10-110
+        ecs-unit1:
+          title: ECS Part 1
+          description_short: 'Unit 1: Human-Computer Interaction'
+          description: 'Unit 1: Human-Computer Interaction'
+          Welcome!: Velkomin!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Samantekt
+        ecs-unit2:
+          title: ECS Unit 2
+          description_short: 'Unit 2: Problem Solving'
+          description: 'Unit 2: Problem Solving'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Teaching Strategies: Teaching Strategies
+          Lesson Overviews: Lesson Overviews
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community
+            Problems with Data
+          'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To Problem
+            Solving: Candy Bar Activity'
+          'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6 Strategies
+            in Problem Solving: Handshake Activity'
+          'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow
+            Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14
+            Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees:
+            Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project

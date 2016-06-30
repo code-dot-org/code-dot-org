@@ -10,14 +10,19 @@ const styles = {
   }
 };
 
+/**
+ * A component for displaying our level instructions text, and possibly also
+ * authored hints UI and/or an anigif. These instructions can appear in the top
+ * pane or in a modal dialog. In the latter case, we will sometimes show just
+ * the hints or just the anigif (in this case instructions/renderedMarkdown
+ * props will be undefined).
+ */
 var Instructions = React.createClass({
-
   propTypes: {
     puzzleTitle: React.PropTypes.string,
     instructions: React.PropTypes.string,
     instructions2: React.PropTypes.string,
     renderedMarkdown: React.PropTypes.string,
-    markdownClassicMargins: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
     authoredHints: React.PropTypes.element,
     inputOutputTable: React.PropTypes.arrayOf(
@@ -45,12 +50,13 @@ var Instructions = React.createClass({
           <MarkdownInstructions
               ref="instructionsMarkdown"
               renderedMarkdown={this.props.renderedMarkdown}
-              markdownClassicMargins={this.props.markdownClassicMargins}
               onResize={this.props.onResize}
               inTopPane={this.props.inTopPane}
           />
         }
-        {!this.props.renderedMarkdown &&
+        { /* Note: In this case props.instructions might be undefined, but we
+          still want to render NonMarkdownInstructions to get the puzzle title */
+        !this.props.renderedMarkdown &&
           <NonMarkdownInstructions
               puzzleTitle={this.props.puzzleTitle}
               instructions={this.props.instructions}

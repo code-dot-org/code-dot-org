@@ -8,9 +8,10 @@ class MatchDSL < ContentDSL
 
   def question(text) @hash[:questions] << { text: text } end
 
-  def answer(text, correct=nil)
+  def answer(text, correct=nil, feedback=nil)
     answer = {text: text}
     answer[:correct] = correct unless correct.nil?
+    answer[:feedback] = feedback unless feedback.nil?
     @hash[:answers] << answer
   end
 
@@ -25,6 +26,8 @@ class MatchDSL < ContentDSL
     @hash[:answers].each do |answer|
       text = answer[:text]
       strings[text] = text
+      feedback = answer[:feedback]
+      strings[feedback] = feedback if feedback.present?
     end
     {@name => strings}
   end

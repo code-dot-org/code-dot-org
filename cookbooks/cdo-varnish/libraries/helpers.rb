@@ -111,13 +111,13 @@ def process_vary(behavior, _)
     out << set_vary(header, 'beresp')
   end
   case behavior[:cookies]
-    when 'all'
-      out << set_vary('Cookie', 'beresp')
-    when 'none'
-    else
-      behavior[:cookies].each do |cookie|
-        out << set_vary("X-COOKIE-#{cookie}", 'beresp')
-      end
+  when 'all'
+    out << set_vary('Cookie', 'beresp')
+  when 'none'
+  else
+    behavior[:cookies].each do |cookie|
+      out << set_vary("X-COOKIE-#{cookie}", 'beresp')
+    end
   end
   out
 end
@@ -143,16 +143,17 @@ REMOVED_HEADERS = %w(
 )
 
 def process_request(behavior, _)
-  out = ''
   cookies = behavior[:cookies]
-  out << case cookies
+  out = (
+    case cookies
     when 'all'
       '# Allow all request cookies.'
     when 'none'
       'cookie.filter_except("NO_CACHE");'
     else
       cookies.map{ |c| extract_cookie(c)}.join + "cookie.filter_except(\"#{cookies.join(',')}\");"
-  end
+    end
+  )
   REMOVED_HEADERS.each do |remove_header|
     name, value = remove_header.split ':'
     unless behavior[:headers].include? name

@@ -303,6 +303,10 @@
         två block? (Tips: skapa en loop med ett "Upprepa gånger" block.)'
       2-3 Maze 12 (old)_instruction: Hjälp mig till grisen, nu med Upprepa- gånger
         blocket!
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: 'Kan du byta ut dessa fem block med endast två block?
         (Tips: skapa en loop med ett "Upprepa gånger" block.)'
       2-3 Maze 13 (old)_instruction: Hjälp mig till grisen, nu med Upprepa- tills
@@ -714,20 +718,37 @@
         marken jämn? Tips: använd en "medan"-slinga för båda.'
       4-5 While Loops Assessment 1_instruction: Det finns många hål och högar. Hjälp
         mig att fylla och ta bort dem för att göra marken slät.
-      aE1_instruction: |-
-        Draw this square using a loop.\r
-        \r
-        Each side is 20 pixels
-        long.
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na
+        square with 20 pixel sides. "
       aE2_instruction: |
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
-        all 15 squares line up next to each other?
-      aE3_instruction: |
-        Now let's go one level deeper! We've nested that whole
-        block of code into another loop, but you need to get the artist back in place
-        to draw the next line. Which of these code blocks can you place at the end
-        of the outermost loop to draw the whole grid?
+        all 14 napkins line up next to each other?
+      aE3_instruction: |-
+        We've got to have a tablecloth!  \r
+        \r
+        Take your row of
+        14 napkins and sew 14 of those together with another **outer loop** to make
+        a cover for our table.
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: "How many times do you need to loop this to draw half  of\na
+        circle? \n"
+      aE7_instruction: |-
+        If you create another loop like this one, but turn left instead
+        of right, what happens? \r
+        \r
+        Can you repeat all of that to draw this wave?
+      aE8_instruction: |-
+        Now let's loop that whole thing four times to create this
+        picture frame. Watch out for the corners - you can't just turn 90 degrees!
+        \r
+        \r
+        If looping a 3 degree turn 60 times makes a half circle, which of
+        these blocks of code will make an additional quarter circle for the corners?
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -799,6 +820,39 @@
       Artist - Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
       Artist - Nested Loops Assessment 1_instruction: Använd en kapslad loop för att
         slutföra designen.
+      artistLoopsK1_instruction: |
+        This is a new type of puzzle called "Artist".
+        Play with the level and draw something fun.
+      artistLoopsK2_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
+      artistLoopsK3_instruction: |
+        Draw a line eight steps long. This will become
+        the land for our kingdom!
+      artistLoopsK4_instruction: |
+        Now we need a castle with a draw bridge.  Fix the
+        code so that the bridge lays straight instead of falling down.
+      artistLoopsK5_instruction: |
+        Now we need to fix the top of the castle. Can you
+        loop the code three times?
+      artistLoopsK6_instruction: "Someone is stuck in the tower!  Fix the stairs\nto
+        set them free. \n"
+      artistLoopsK7_instruction: "This tower is lovely, what is downstairs? Build\nanother
+        staircase to find out! \n"
+      artistLoopsK8_instruction: |
+        Wow! There's a garden over there!  Help fix these
+        stairs so I can get to it.
+      artistLoopsK9_instruction: |
+        **Challenge:**  Lovely! Let's take a walk around
+        the garden.
+      artistLoopsKA_instruction: |
+        These stones are in the wrong place.  Help me move
+        them so I don't fall in!
+      artistLoopsKB_instruction: "Look!  It's a theater.  Help me set up the chairs\nso
+        we can all see the stage. \n"
+      artistLoopsKFP_instruction: |
+        Picture time!  Use what you have learned to draw
+        a picture of what you think the Artist saw on stage.
       Auto Open Function Editor_instruction: 'Du kan anropa funktioner från inuti
         andra funktioner! Med din "form" funktion som bas, skapa 3 hus former varav
         varje är 20 pixlar större än den förra. Den första ska vara 50 pixlar i längd.
@@ -807,6 +861,9 @@
         0 nektar, men du vet inte vilket det är! Var försiktig med att samla nektar
         från en lila blomma om den inte har några. Kontrollera om nektar är lika med
         1 genom att använda om-blocket.
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -2001,6 +2058,7 @@
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -2488,6 +2546,7 @@
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      eventsIntro_instruction: Need a better playlab/events combo
       Farmer for Authored Hint testing_instruction: |
         Wow, I found a really deep hole!
         I don't know how many shovelfuls of dirt it needs.  Can you write a program
@@ -2730,6 +2789,31 @@
         riktning, sedan en annan att få mig till grisen
       K-1 Maze Sequence Assessment 2_instruction: Detta är ett test! \r flytta i en
         riktning, sedan i en annan att få mig till grisen.
+      K2.0 sequence 1_instruction: "Ändra koden för att få mig till grisen!"
+      K2.0 sequence 10_instruction: Move me around the TNT to get to the pig.
+      K2.0 sequence 2_instruction: "Ändra koden för att få mig till grisen!"
+      K2.0 sequence 3_instruction: |
+        Something is not quite right. REMOVE blocks to
+        get me to the pig!
+      K2.0 sequence 4_instruction: |
+        Try it yourself!  Move one way, then another
+        to get me to the pig.
+      K2.0 sequence 5_instruction: Flytta en väg, sedan en annan att få mig att grisen!
+      K2.0 sequence 6_instruction: Räkna ut vad som saknas och lägg sedan till block
+        för att få mig till grisen!
+      K2.0 sequence 7_instruction: |
+        Debug this level by adding and changing blocks
+        to get me to the pig!
+      K2.0 sequence 8_instruction: |
+        Debug this level by adding blocks to get me to
+        the pig!
+      K2.0 sequence 9_instruction: 'Gå runt TNT att få mig till grisen! '
+      kikiTesta_instruction: |-
+        Our adventurer wants to collect coins.  But she can
+        only use 4 blocks to get them.\r
+        \r
+        Can you help her grab as many as she
+        can using just 4 blocks?
       kikiTesting_instruction: |
         .\r
          .\r
@@ -2740,6 +2824,13 @@
         \r
         .\r
         \r
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -2786,7 +2877,11 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      Mike Pair Programming_instruction: Here are the instructions
       MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
@@ -3103,8 +3198,6 @@
       NEW Course 4 Play Labs For Loops 8a_instruction: "Utmaning: Hur skulle du använda
         \"för loopen\" för att få alla karaktärerna att gå runt och säga sina \n nummer,
         och sedan försvinna från skärmen? \n"
-      New Play Lab Project_instruction: Skapa din egen berättelse eller spel! Din
-        kod sparas som ett projekt du kan återvända till när som helst.
       Ninjacat Demo B (copy 1)_instruction: |
         \r
         Let’s begin by exploring a simple
@@ -3371,6 +3464,14 @@
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      playEventsK1_instruction: |
+        This game is called "Play Lab".  See if you can
+        figure out what each block does.
+      playEventsK2_instruction: |-
+        Jorge wants to say "Hi there."\r
+        \r
+        Can you
+        help?
       Poorva copy U3L2 Using Simple Commands_instruction: |
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -3565,9 +3666,13 @@
       Standalone_Artist_v2_instruction: Välkommen till Artist! Först och främst, låt
         oss försöka göra en enkel kvadrat med 'sväng höger' block och 'gå framåt'
         block. Varje sida ska vara 100 bildpunkter lång.
+      StepIntro_instruction: Here's how to use the "Step" button.
       template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi
+      testArtistForTestK_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
         many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
         keeps using the `fill` block until the ground is even?  "

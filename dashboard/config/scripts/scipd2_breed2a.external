@@ -1,0 +1,29 @@
+name 'sciPD2 breed2a'
+title 'Reviewing StarLogo Nova'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### Creating Agents of Your New Breed
+
+<br/>
+
+Congrats!  By now you made a breed, but you haven’t actually created any doctors yet.  Think about this question before moving on:  “Where in my code should I create doctor agents?”
+
+
+<br>
+<br>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Doctors_stethoscope_2.jpg/888px-Doctors_stethoscope_2.jpg" height="200px" width="200px" style="border-radius:10px"/>
+<br>
+
+
+
+<br>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

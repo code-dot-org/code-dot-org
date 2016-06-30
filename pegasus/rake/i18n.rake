@@ -39,7 +39,7 @@ namespace :i18n do
     path = pegasus_dir('cache/i18n/en-US.yml')
 
     file = gdrive.file(gsheet)
-    raise(RuntimeError, "Google Drive file '#{gsheet}' not found.") unless file
+    raise("Google Drive file '#{gsheet}' not found.") unless file
 
     mtime = file.mtime
     ctime = File.mtime(path).utc if File.file?(path)

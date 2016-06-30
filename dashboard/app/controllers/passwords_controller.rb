@@ -15,6 +15,7 @@ class PasswordsController < Devise::PasswordsController
   end
 
   private
+
   def show_reset_url_if_admin
     return unless current_user.try(:admin?)
     if raw_token = resource.try(:raw_token)

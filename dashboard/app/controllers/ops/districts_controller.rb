@@ -31,6 +31,7 @@ module Ops
     end
 
     private
+
     def contact_params(params)
       {
        # created_by_user_id: current_user.id, # TODO

@@ -105,5 +105,4 @@ module TableCoerce
     new_val = new_val.to_i if new_val.to_i == new_val
     new_val
   end
-
 end

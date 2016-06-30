@@ -13,6 +13,11 @@ namespace :lint do
     RakeUtils.bundle_exec 'haml-lint dashboard pegasus'
   end
 
+  desc 'Lints SCSS code with scss-lint.'
+  task :scss do
+    RakeUtils.bundle_exec 'scss-lint'
+  end
+
   desc 'Lints JavaScript code.'
   task :javascript do
     Dir.chdir(apps_dir) do
@@ -28,7 +33,7 @@ namespace :lint do
     end
   end
 
-  task all: [:ruby, :haml, :javascript]
+  task all: [:ruby, :haml, :scss, :javascript]
 end
 desc 'Lints all code.'
 task lint: ['lint:all']

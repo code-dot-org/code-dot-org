@@ -58,9 +58,9 @@ class DashboardStudent
       where(users__id: id, users__deleted_at: nil).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
       select(*fields,
-             :secret_pictures__name___secret_picture_name,
-             :secret_pictures__path___secret_picture_path,
-            ).
+        :secret_pictures__name___secret_picture_name,
+        :secret_pictures__path___secret_picture_path,
+      ).
       server(:default).
       first
 
@@ -101,7 +101,7 @@ class DashboardStudent
     age
   end
 
-  def self.fields()
+  def self.fields
     [
       :users__id___id,
       :users__name___name,
@@ -370,14 +370,14 @@ class DashboardSection
     !!students.index{|i| i[:id] == user_id}
   end
 
-  def students()
+  def students
     @students ||= Dashboard.db[:followers].
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
       select(Sequel.as(:student_user_id, :id),
-             *DashboardStudent.fields,
-             :secret_pictures__name___secret_picture_name,
-             :secret_pictures__path___secret_picture_path).
+        *DashboardStudent.fields,
+        :secret_pictures__name___secret_picture_name,
+        :secret_pictures__path___secret_picture_path).
       distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
@@ -394,7 +394,7 @@ class DashboardSection
     !!teachers.index{|i| i[:id] == user_id}
   end
 
-  def teachers()
+  def teachers
     @teachers ||= [{
       id: @row[:teacher_id],
       location: "/v2/users/#{@row[:teacher_id]}",
@@ -408,15 +408,15 @@ class DashboardSection
       first
   end
 
-  def to_owner_hash()
+  def to_owner_hash
     to_member_hash.merge(
-        course: course,
-        teachers: teachers,
-        students: students
+      course: course,
+      teachers: teachers,
+      students: students
     )
   end
 
-  def to_member_hash()
+  def to_member_hash
     {
         id: @row[:id],
         location: "/v2/sections/#{@row[:id]}",
@@ -453,7 +453,7 @@ class DashboardSection
     fetch_if_allowed(section_id, user_id)
   end
 
-  def self.fields()
+  def self.fields
     [
       :sections__id___id,
       :sections__name___name,

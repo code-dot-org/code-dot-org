@@ -106,3 +106,25 @@ export default connect(state => ({
   isMinecraft: state.pageConstants.isMinecraft,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
 }))(GameButtons);
+
+
+if (BUILD_STYLEGUIDE) {
+  RunButton.displayName = 'RunButton';
+  ResetButton.displayName = 'ResetButton';
+  module.exports.styleGuideExamples = storybook => {
+    storybook
+      .storiesOf('RunButton', module)
+      .addWithInfo(
+        'The run button',
+        'This button is used for running programs',
+        () => <RunButton/>
+      );
+    storybook
+      .storiesOf('ResetButton', module)
+      .addWithInfo(
+        'The reset button',
+        'You have to explicitly set display: block to make this show up. It is hidden by default?!',
+        () => <ResetButton style={{display: 'block'}}/>
+      );
+  };
+}

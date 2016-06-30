@@ -1,6 +1,6 @@
 import React from 'react';
 var AbuseError = require('./abuse_error');
-var SendToPhone = require('./send_to_phone');
+var SendToPhone = require('./SendToPhone');
 var AdvancedShareOptions = require('./AdvancedShareOptions');
 
 var select = function (event) {
@@ -36,14 +36,25 @@ var ShareDialogBody = React.createClass({
   getInitialState: function () {
     return {
       showSendToPhone: false,
+      showAdvancedOptions: false,
       exporting: false,
       exportError: null,
     };
   },
 
   showSendToPhone: function (event) {
-    this.setState({showSendToPhone: true });
+    this.setState({
+      showSendToPhone: true,
+      showAdvancedOptions: false,
+    });
     event.preventDefault();
+  },
+
+  showAdvancedOptions() {
+    this.setState({
+      showSendToPhone: false,
+      showAdvancedOptions: true,
+    });
   },
 
   clickExport: function () {
@@ -99,27 +110,34 @@ var ShareDialogBody = React.createClass({
     var sendToPhone;
     if (this.state.showSendToPhone) {
       sendToPhone = <SendToPhone
-        channelId={this.props.channelId}
-        appType={this.props.appType}/>;
+                        channelId={this.props.channelId}
+                        appType={this.props.appType}
+                        styles={{label:{marginTop: 15, marginBottom: 0}}}
+                    />;
     }
 
     var advancedOptions;
     if (this.props.appType === 'applab') {
       advancedOptions = (
         <AdvancedShareOptions
-           i18n={this.props.i18n}
-           onClickExport={this.props.onClickExport} />
+            i18n={this.props.i18n}
+            onClickExport={this.props.onClickExport}
+            expanded={this.state.showAdvancedOptions}
+            onExpand={this.showAdvancedOptions}
+        />
       );
     }
 
     return (
       <div>
         {image}
-        <div id="project-share" className={modalClass}>
+        <div id="project-share" className={modalClass} style={{position: 'relative'}}>
           <p className="dialog-title">{this.props.title}</p>
           {abuseContents}
-          <p>{this.props.shareCopyLink}</p>
-          <div>
+          <p style={{fontSize: 20}}>
+            {this.props.shareCopyLink}
+          </p>
+          <div style={{marginBottom: 10}}>
             <input
               type="text"
               id="sharing-input"
@@ -142,17 +160,16 @@ var ShareDialogBody = React.createClass({
               <i className="fa fa-twitter"></i>
             </a>
           </div>
+          {sendToPhone}
           {advancedOptions}
           {/* Awkward that this is called continue-button, when text is
               close, but id is (unfortunately) used for styling */}
           <button
               id="continue-button"
-              style={{position: 'absolute', right: 0, bottom: 10}}
+              style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
               onClick={this.props.onClickClose}>
             {this.props.closeText}
           </button>
-
-          {sendToPhone}
         </div>
       </div>
     );

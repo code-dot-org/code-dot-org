@@ -30,6 +30,8 @@
   unsubmit: Cancelar envío
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: De acordo
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -95,6 +97,7 @@
     teacher_title: Crear conta de profesor
     student_pitch: Crea unha conta de alumno
     student_title: Crear conta de alumno
+    signup_title: Sign up for Code.org
     school_name: Nome da escola (opcional)
     school_address: Enderezo da escola (opcional)
     address_placeholder: Enderezo, cidade e código postal
@@ -119,6 +122,9 @@
       da Code.org.
     additional_information: Necesitamos máis informacións para continuarmos o proceso
       de creacción da conta.
+    user_type_label: Account Type
+    user_type_teacher: Profesor
+    user_type_student: Estudante
   signin_form:
     title: Xa ten conta? Inicie a sesión
     login: E-mail ou usuario
@@ -871,3 +877,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

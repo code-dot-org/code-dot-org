@@ -538,7 +538,7 @@
   dashboard_navigation_section_pd: "职业发展"
   dashboard_navigation_section_speakers: "计算机科学 <br/> 特邀演讲人"
   dashboard_navigation_all_sections: "学生账户和进度"
-  dashboard_navigation_view_progress: "查看进度"
+  dashboard_navigation_view_progress: "进度"
   dashboard_navigation_view_text_responses: "查看文字回应"
   dashboard_navigation_view_assessments: "测验"
   dashboard_navigation_add_students: "添加学生"
@@ -829,12 +829,13 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
-  csp1_name: 'Unit 1: The Internet'
+  csp1_name: "第一单元：互联网"
   csp2_name: 'Unit 2: Digital Information'
-  cspassessment_name: Full Test - 50 questions
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: "完整测试 - 共50题"
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: Grades 9-12
+  cspunit3_gradelevel: 9-12年级
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming

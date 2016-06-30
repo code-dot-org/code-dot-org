@@ -30,6 +30,7 @@ class ScriptDSL < BaseDSL
   string :description_short
   string :description
   string :description_audience
+  string :professional_learning_course
 
   boolean :hidden
   boolean :login_required
@@ -37,7 +38,6 @@ class ScriptDSL < BaseDSL
   boolean :student_of_admin_required
   boolean :trophies
   boolean :pd
-  boolean :professional_learning_course
 
   string :wrapup_video
 

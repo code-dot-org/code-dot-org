@@ -29,9 +29,11 @@
   unsubmit: "未提交"
   previous_page: "返回"
   next_page: "前进"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "取消"
   okay: "好吧"
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (%{y} 第%{x} 页)"
   add_teacher_form:
     code:
       label: "添加一个老师:"
@@ -86,6 +88,7 @@
     teacher_title: "老师注册"
     student_pitch: Code.org 学生注册
     student_title: "学生注册"
+    signup_title: "注册Code.org"
     school_name: "学校名称 （可选）"
     school_address: "学校地址 （可选）"
     address_placeholder: "地址、 省市、 邮编"
@@ -105,6 +108,9 @@
       Code.org 服务。 <br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中."
     teacher_terms: "我同意 Code.org <a href='http://code.org/tos'>服务条款</a> 的约束。"
     additional_information: "我们需要一些额外的信息来继续为你注册."
+    user_type_label: "账户种类"
+    user_type_teacher: "老师"
+    user_type_student: "学生"
   signin_form:
     title: "已经有账号了？登录"
     login: "电子邮件或用户名"
@@ -390,8 +396,8 @@
       迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482;
       &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year}
       电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; 2015 卡通网络."
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: Code.org使用p5.play游戏资源库，根据<a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a>之许可。
     powered_by_aws: "由亚马逊网络服务"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE标识和Hour of Code标识&reg;
       是Code.org的注册商标。"
@@ -425,10 +431,8 @@
     download: "下载视频"
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
+      unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
+        target='_blank'>我们支持的浏览器之一</a>。您可以尝试访问此网页，但无法获得期望的效果。"
       ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
         10. Please upgrade to a modern browser.
       ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
@@ -713,7 +717,7 @@
       artist_title: New Drawing
       continue_button: Go on to the next Stage
       playlab_description: "通过游戏实验室创建故事或制作游戏！"
-      playlab_title: New App
+      playlab_title: "新的应用"
       primary_header: Congratulations! You finished %{stageName}!
       projects_description: Revisit one of your existing projects.
       projects_title: Open a project
@@ -728,9 +732,9 @@
       <a href='mailto:support@code.org'> 与支持部门联系</a> ，虽然我们并不直接负责本网站的内容。"
   hoc_download:
     title: Hour of Code downloads
-    capsule_title: Do you have Internet?
+    capsule_title: "你有网络吗？"
     capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: No Internet?
+    instructions_headline: "没有网络？"
     instructions: 'Instructions for teachers: if you have poor Internet service, these
       Hour of Code tutorials are available to download and install for offline use.
       Choose your language and platform, download and install it on all the computers
@@ -742,7 +746,20 @@
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    download_in_english: "下载英语版本："
+    download_in_spanish: "下载西班牙语版本："
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas
