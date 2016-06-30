@@ -71,16 +71,7 @@ const DataProperties = React.createClass({
             {
               this.getKeyValueData().map(row => {
                 const [key, value] = row;
-                return (
-                  <tr key={key} style={dataStyles.editRow}>
-                    <td style={dataStyles.cell}>{key}</td>
-                    <td style={dataStyles.cell}>{value}</td>
-                    <td style={dataStyles.cell}>
-                      <button className="btn" style={dataStyles.editButton}>Edit</button>
-                      <button className="btn btn-danger" style={dataStyles.button}>Delete</button>
-                    </td>
-                  </tr>
-                );
+                return <EditKeyRow key={key} keyName={key} value={value}/>;
               })
             }
           </tbody>
@@ -89,6 +80,26 @@ const DataProperties = React.createClass({
     );
   }
 });
+
+const EditKeyRow = Radium(React.createClass({
+  propTypes: {
+    keyName: React.PropTypes.string.isRequired,
+    value: React.PropTypes.any.isRequired
+  },
+
+  render() {
+    return (
+      <tr style={dataStyles.editRow}>
+        <td style={dataStyles.cell}>{this.props.keyName}</td>
+        <td style={dataStyles.cell}>{this.props.value}</td>
+        <td style={dataStyles.cell}>
+          <button className="btn" style={dataStyles.editButton}>Edit</button>
+          <button className="btn btn-danger" style={dataStyles.button}>Delete</button>
+        </td>
+      </tr>
+    );
+  }
+}));
 
 export default connect(state => ({
   view: state.data.view,
