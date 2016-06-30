@@ -21,38 +21,33 @@ module GitUtils
     files_changed_locally.concat(files_changed_in_branch(base_branch)).uniq
   end
 
-  # TODO(bcjordan): refactor to de-duplicate with run_tests_if_changed
-  def self.build_my_if_changed(test_name, changed_globs)
-    max_identifier_length = 12
-    justified_test_name = test_name.ljust(max_identifier_length)
+  PROJECT_DEPENDENCY_GLOBS = {
+      apps: ['apps/**/*', 'blockly-core/**/*', 'shared/**/*.js', 'shared/**/*.css'],
+      code_studio: ['code-studio/**/*', 'apps/**/*'],
+      shared: ['shared/**/*', 'lib/**/*'],
+      blockly_core: ['blockly-core/**/*'],
+      dashboard: ['dashboard/**/*', 'lib/**/*', 'shared/**/*'],
+      pegasus: ['pegasus/**/*', 'lib/**/*', 'shared/**/*']
+  }
 
-    base_branch = current_branch_base
-    relevant_changed_files = files_changed_in_branch_or_local(base_branch, changed_globs)
-    if relevant_changed_files.empty?
-      HipChat.log "Files affecting the #{justified_test_name} build unmodified from #{base_branch}. Using existing build."
-    else
-      HipChat.log "Files affecting the #{justified_test_name} build *modified* from #{base_branch}. Using 'my' build. Changed files:"
-      padding = ' ' * 4
-      separator = "\n"
-      HipChat.log separator + padding + relevant_changed_files.join(separator + padding)
-      yield
-    end
+  def self.run_if_project_affected(project, message_run, message_no_run, &block)
+    run_if_files_changed(project.to_s, PROJECT_DEPENDENCY_GLOBS[project], message_run, message_no_run, &block)
   end
 
-  def self.run_tests_if_changed(test_name, changed_globs)
+  def self.run_if_files_changed(identifier, changed_globs, message_modified, message_unmodified, &block)
     max_identifier_length = 12
-    justified_test_name = test_name.ljust(max_identifier_length)
+    justified_identifier = identifier.ljust(max_identifier_length)
 
     base_branch = current_branch_base
     relevant_changed_files = files_changed_in_branch_or_local(base_branch, changed_globs)
     if relevant_changed_files.empty?
-      HipChat.log "Files affecting #{justified_test_name} tests unmodified from #{base_branch}. Skipping tests."
+      HipChat.log "Files affecting #{justified_identifier} unmodified from #{base_branch}. #{message_unmodified}"
     else
-      HipChat.log "Files affecting #{justified_test_name} tests *modified* from #{base_branch}. Starting tests. Changed files:"
+      HipChat.log "Files affecting #{justified_identifier} *modified* from #{base_branch}. #{message_modified} Changed files:"
       padding = ' ' * 4
       separator = "\n"
       HipChat.log separator + padding + relevant_changed_files.join(separator + padding)
-      yield
+      block.call
     end
   end
 

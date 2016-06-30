@@ -40,8 +40,8 @@ database:
     - 'echo "Skipping database phase (already ran)."'
 test:
   override:
-    - bundle exec rake lint:javascript
     # Run tests only for changed sub-projects, unless [test all] in commit
+    - bundle exec rake circle:run_linting
     - bundle exec rake circle:run_tests:
         timeout:
             7200

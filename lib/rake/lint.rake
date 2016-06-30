@@ -19,19 +19,33 @@ namespace :lint do
   end
 
   desc 'Lints JavaScript code.'
-  task :javascript do
-    Dir.chdir(apps_dir) do
-      HipChat.log 'Linting <b>apps</b> JavaScript...'
-      # lint all js/jsx files in dashboard/app/assets/javascript
-      RakeUtils.system './node_modules/.bin/eslint -c .eslintrc.js ../dashboard/app/ --ext .js,.jsx'
-      # also do our standard apps lint
-      RakeUtils.system 'npm run lint'
+  namespace :javascript do
+    task :apps do
+      Dir.chdir(apps_dir) do
+        HipChat.log 'Linting <b>apps</b> JavaScript...'
+        # lint all js/jsx files in dashboard/app/assets/javascript
+        RakeUtils.system './node_modules/.bin/eslint -c .eslintrc.js ../dashboard/app/ --ext .js,.jsx'
+        # also do our standard apps lint
+        RakeUtils.system 'npm run lint'
+      end
     end
-    Dir.chdir(code_studio_dir) do
-      HipChat.log 'Linting <b>code-studio</b> JavaScript...'
-      RakeUtils.system 'npm run lint-js'
+
+    task :code_studio do
+      Dir.chdir(code_studio_dir) do
+        HipChat.log 'Linting <b>code-studio</b> JavaScript...'
+        RakeUtils.system 'npm run lint-js'
+      end
     end
+
+    namespace :changed do
+      task all: [:apps, :code_studio]
+    end
+
+    task changed: ['changed:all']
+    task all: [:apps, :code_studio]
   end
+
+  task javascript: ['javascript:all']
 
   task all: [:ruby, :haml, :scss, :javascript]
 end
