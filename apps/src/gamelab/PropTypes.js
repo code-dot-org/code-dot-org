@@ -36,8 +36,7 @@ const Vector2 = React.PropTypes.shape({
  *
  *  We serialize a smaller set of information {SerializedAnimationProps}.
  *
- *  We need to do a migration if the old style gets loaded.
- *  See setInitialAnimationList for how this works.
+ *  We migrate if the old style gets loaded. See GameLab::init() for how this works.
  */
 
 /**
@@ -66,11 +65,6 @@ export const AnimationKey = React.PropTypes.string;
  *           directly to the animations API via PUT).
  * @property {string} dataURI - The spritesheet as a dataURI (can be set as src
  *           on an image).
- * @property {boolean} hasNewVersionThisSession - Whether a new version of the
- *           animation has been created in the current session. If true, we
- *           should continue replacing this version instead of writing new
- *           versions to S3.  If false, any write should generate a new
- *           version and this flag should become true.
  */
 export const AnimationProps = React.PropTypes.shape({
   name: React.PropTypes.string.isRequired,
@@ -131,15 +125,16 @@ export const AnimationList = React.PropTypes.shape({
  */
 
 /**
+ * Converts the full AnimationList to the serializable subset of itself.
+ * Two transformations happen when we serialize animations out.
+ * 1. We only save a subset of animation attributes - see getSerializedAnimation
+ * 2. We stop saving animation data for any animations not in the project
+ *    animation list - we should clean this up on delete, but in case things
+ *    get in an inconsistent state we clean it up here.
  * @param {AnimationList} animationList
  * @return {SerializedAnimationList}
  */
 export function getSerializedAnimationList(animationList) {
-  // Two transformations happen when we serialize animations out.
-  // 1. We only save a subset of animation attributes - see getSerializedAnimation
-  // 2. We stop saving animation data for any animations not in the project
-  //    animation list - we should clean this up on delete, but in case things
-  //    get in an inconsistent state we clean it up here.
   return {
     orderedKeys: animationList.orderedKeys,
     propsByKey: _.pick(
