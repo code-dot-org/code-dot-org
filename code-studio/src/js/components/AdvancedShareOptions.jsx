@@ -54,8 +54,7 @@ var AdvancedShareOptions = Radium(React.createClass({
 
   getInitialState() {
     return {
-      selectedOption: (this.props.onClickExport && 'export') ||
-        (experiments.isEnabled('applab-embed') && 'embed'),
+      selectedOption: (this.props.onClickExport && 'export') || 'embed',
       exporting: false,
       exportError: null,
     };
@@ -141,16 +140,13 @@ var AdvancedShareOptions = Radium(React.createClass({
           </li>
         );
       }
-      var embedTab;
-      if (experiments.isEnabled('applab-embed')) {
-        embedTab = (
-          <li style={[style.nav.li,
-              this.state.selectedOption === 'embed' && style.nav.selectedLi]}
-              onClick={() => this.setState({selectedOption: 'embed'})}>
-            {this.props.i18n.t('project.embed')}
-          </li>
-        );
-      }
+      var embedTab = (
+        <li style={[style.nav.li,
+                    this.state.selectedOption === 'embed' && style.nav.selectedLi]}
+            onClick={() => this.setState({selectedOption: 'embed'})}>
+          {this.props.i18n.t('project.embed')}
+        </li>
+      );
       optionsNav = (
         <div>
           <ul style={style.nav.ul}>
