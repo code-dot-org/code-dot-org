@@ -181,7 +181,7 @@ class ScriptLevel < ActiveRecord::Base
     ids = level_ids
 
     levels.each do |l|
-      ids += l.contained_levels.map(&:id)
+      ids << l.contained_levels.map(&:id)
     end
 
     summary = {
@@ -193,7 +193,7 @@ class ScriptLevel < ActiveRecord::Base
         url: build_script_level_url(self)
     }
 
-    summary[:name] = level.name if script.professional_learning_course?
+    summary[:name] = level.name if kind == 'named_level'
 
     # Add a previous pointer if it's not the obvious (level-1)
     if previous_level

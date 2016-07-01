@@ -40,6 +40,7 @@ def load_configuration
   {
     'app_servers'                 => {},
     'assets_bucket'               => 'cdo-dist',
+    'sync_assets'                 => rack_env != :adhoc,
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_blockly_core'          => false,
@@ -282,7 +283,7 @@ class CDOImpl < OpenStruct
     end
 
     def method_missing(*args)
-      return @default_value if !__getobj__.respond_to? args.first
+      return @default_value unless __getobj__.respond_to? args.first
       value = super
       return @default_value if value.nil?
       value

@@ -1,4 +1,4 @@
-professional_learning_course 'true'
+professional_learning_course 'Test plc course'
 title 'PLC Test'
 description 'PLC test fixture script'
 

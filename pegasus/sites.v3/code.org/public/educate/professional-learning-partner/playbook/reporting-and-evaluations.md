@@ -36,7 +36,7 @@ ________________
 <br/>
 
 ### **Post Workshop Feedback Form**
-Coming soon!
+[Click here](https://docs.google.com/a/code.org/forms/d/14zbz_PuRxNpJI6HtMBmJkCWCqV9O_ZDCYbXiHAeYs7A/viewform) to navigate to the form.
 
 
 [**Back to the top**](#top)

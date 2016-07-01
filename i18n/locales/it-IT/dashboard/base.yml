@@ -29,7 +29,7 @@ it:
   unsubmit: "Annulla l'invio"
   previous_page: Pagina precedente
   next_page: Pagina successiva
-  next_resource: Next resource
+  next_resource: Risorsa successiva
   done_with_module: Done with this Learning Module
   cancel: Annulla
   okay: Ok!
@@ -88,7 +88,7 @@ it:
     teacher_title: "Iscrizione dell'insegnante"
     student_pitch: Iscrizione dello studente a Code.org
     student_title: Iscrizione dello studente
-    signup_title: Sign up for Code.org
+    signup_title: Iscriviti a Code.org
     school_name: Nome della scuola (facoltativo)
     school_address: Indirizzo della scuola (facoltativo)
     address_placeholder: Indirizzo, città, stato, CAP
@@ -107,7 +107,7 @@ it:
     student_terms: "Accetto di essere vincolato dai <a href='http://code.org/tos'>termini di servizio</a> di Code.org. Se sono di età inferiore a 14 anni, confermo inviando questo modulo che ho il permesso dei miei genitori o del tutore legale di utilizzare i servizi di Code.org. <br/>Per gli utenti di età inferiore a 14 anni, gli indirizzi di posta elettronica non vengono memorizzati in una forma che ci permette di contattarli."
     teacher_terms: "Accetto di essere vincolato dai <a href='http://code.org/tos'>termini di servizio</a> di Code.org."
     additional_information: Abbiamo bisogno di alcune informazioni aggiuntive per continuare la tua iscrizione.
-    user_type_label: Account Type
+    user_type_label: Tipo di account
     user_type_teacher: Insegnante
     user_type_student: Studente
   signin_form:
@@ -343,7 +343,7 @@ it:
     announcement_title: Annunci
     announcement_view_all: Visualizza tutto
     announcement_message: "<b>22 aprile 2016</b>- Le lezioni senza computer sono una parte fondamentale dell'apprendimento, ma gli insegnanti ci hanno comunicato che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo. Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
-    announcement_button: Test the feature
+    announcement_button: Testare la funzionalità
     announcement_petition: "Come insegnante, stai aprendo la strada per permettere ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa settimana, personaggi chiave del mondo dell'istruzione, 28 governatori e gli amministratori delegati delle più grandi aziende d'America si sono riuniti firmando una lettera aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di informatica K-12."
     announcement_petition_button: Aggiungi il tuo nome
   move_students:
@@ -698,7 +698,7 @@ it:
     content: Contenuto
     practice: "Pratiche d'insegnante"
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_md: "<strong>Avviso: stai per lasciare il dominio Code.org per collegarti ad un sito non controllato da noi.</strong>Questo sito potrebbe avere una politica della privacy diversa da quella di Code.org<br/><br/>Abbiamo selezionato delle fonti fornite da terzi poiché pensiamo che queste possano tornarti utili. Dal momento che non siamo direttamente responsabili riguardo il contenuto di questo sito, per favore <a href='%{support_url}'> contatta il supporto</a>se trovi qualcosa che ti turba oppure se il sito non è più disponibile."
   hoc_download:
     title: Downloads dell’Ora di Codice
     capsule_title: Avete Internet?

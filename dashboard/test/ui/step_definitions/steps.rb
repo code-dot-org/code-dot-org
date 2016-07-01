@@ -45,7 +45,7 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  @browser.navigate.to "#{url}"
+  @browser.navigate.to url
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -672,25 +672,8 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   }
 end
 
-And(/^I sign in as an admin named "([^"]*)"$/) do |name|
-  steps %Q{
-    Given I am on "http://studio.code.org/reset_session"
-    And I am on "http://studio.code.org/users/sign_in"
-    And I display toast "Loading Rails, creating admin user... (This may take 30 seconds)"
-  }
-
-  require_rails_env
-  email, password = generate_user(name)
-  create_admin_user(name, email, password)
-
-  steps %Q{
-    When I type "#{email}" into "#user_login"
-    And I type "#{password}" into "#user_password"
-    And I click selector "input[type=submit][value='Sign in']"
-    Then I wait to see ".header_user"
-  }
-end
-
+# TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
+# thereof, removing it if it remains unused.
 And(/I display toast "([^"]*)"$/) do |message|
   @browser.execute_script(<<-SCRIPT)
     var div = document.createElement('div');
@@ -819,7 +802,7 @@ end
 
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
-  @browser.navigate.to "#{url}"
+  @browser.navigate.to url
 end
 
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|

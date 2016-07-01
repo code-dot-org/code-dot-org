@@ -15,6 +15,7 @@ var GameLabVisualizationColumn = require('./GameLabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
+import CodeWorkspace from '../templates/CodeWorkspace';
 
 var GameLabInterfaceMode = gameLabConstants.GameLabInterfaceMode;
 var GAME_WIDTH = gameLabConstants.GAME_WIDTH;
@@ -77,7 +78,9 @@ var GameLabView = React.createClass({
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v"
         />
-        <InstructionsWithWorkspace/>
+        <InstructionsWithWorkspace>
+          <CodeWorkspace/>
+        </InstructionsWithWorkspace>
       </div>
     );
   },

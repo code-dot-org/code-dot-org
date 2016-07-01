@@ -1,8 +1,10 @@
 require 'cdo/db'
+require 'digest/md5'
 require_relative 'email_validator'
 require 'mail'
 require 'openssl'
 require 'base64'
+require 'digest/md5'
 
 module Poste
   def self.logger
@@ -77,6 +79,7 @@ module Poste
     else
       contacts.insert(
         email: email,
+        hashed_email: Digest::MD5.hexdigest(email.downcase),
         created_at: now,
         created_ip: params[:ip_address],
         unsubscribed_at: now,
@@ -134,6 +137,7 @@ module Poste2
     else
       id = contacts.insert({}.tap do |contact|
         contact[:email] = address
+        contact[:hashed_email] = Digest::MD5.hexdigest(address.downcase)
         contact[:name] = name if name
         contact[:created_at] = now
         contact[:created_ip] = ip_address
@@ -160,6 +164,7 @@ module Poste2
     unless contact
       id = contacts.insert({}.tap do |contact|
         contact[:email] = address
+        contact[:hashed_email] = Digest::MD5.hexdigest(address.downcase)
         contact[:name] = name if name
         contact[:created_at] = now
         contact[:created_ip] = ip_address
@@ -188,6 +193,7 @@ module Poste2
       created_ip: recipient[:ip_address],
       contact_id: recipient[:id],
       contact_email: recipient[:email],
+      hashed_email: Digest::MD5.hexdigest(recipient[:email]),
       message_id: message_id,
       params: (params||{}).to_json,
     })

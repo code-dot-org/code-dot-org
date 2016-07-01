@@ -29,7 +29,7 @@
   unsubmit: Neodesláno
   previous_page: Předchozí stránka
   next_page: Další strana
-  next_resource: Next resource
+  next_resource: Další zdroj
   done_with_module: Done with this Learning Module
   cancel: Storno
   okay: Dobře
@@ -94,7 +94,7 @@
     student_pitch: |
       Registrace studentů zde.
     student_title: Přihlášení studenta
-    signup_title: Sign up for Code.org
+    signup_title: Registrace na Code.org
     school_name: Název školy (volitelné)
     school_address: Adresa školy (volitelné)
     address_placeholder: adresa, město, stát, psč
@@ -116,7 +116,7 @@
       adresa.
     teacher_terms: Souhlasím s  <a href='http://code.org/tos'>podmínkami</a> Code.org
     additional_information: Potřebujeme další informace pro pokračování vaši registrace.
-    user_type_label: Account Type
+    user_type_label: Typ účtu
     user_type_teacher: Učitel
     user_type_student: student
   signin_form:
@@ -378,8 +378,8 @@
     heading_elementary: "<h2>20 hodinové kurzy pro</h2> <h1>Základy počítačové vědy
       (všechny věkové kategorie)</h1>"
     heading_apps: "<h2>Zábava pro</h2> <h1>kohokoliv</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Připraven na další krok?</h2><h1>JavaScriptové nástroje pro
+      střední školy</h1>"
     heading_legacy: "<h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>"
     your_gallery: Galerie
     no_primary_course: Zkuste Code Studio kurz
