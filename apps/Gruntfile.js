@@ -249,8 +249,7 @@ module.exports = function (grunt) {
         includePaths: ['../shared/css/']
       },
       files: _.zipObject([
-        ['build/package/css/common.css', 'style/common.scss'],
-        ['build/package/css/readonly.css', 'style/readonly.scss']
+        ['build/package/css/common.css', 'style/common.scss']
       ].concat(appsToBuild.map(function (app) {
         return [
           'build/package/css/' + app + '.css', // dst
