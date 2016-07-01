@@ -424,10 +424,10 @@ var projects = module.exports = {
       var args = Array.prototype.slice.apply(arguments);
       callback = args[0];
       forceNewVersion = args[1];
-      this.sourceHandler.getAnimationList(animationList => {
+      this.sourceHandler.getAnimationList(animations => {
         const source = this.sourceHandler.getLevelSource();
         const html = this.sourceHandler.getLevelHtml();
-        this.save({source, html, animationList}, callback, forceNewVersion);
+        this.save({source, html, animations}, callback, forceNewVersion);
       });
       return;
     }
@@ -499,17 +499,17 @@ var projects = module.exports = {
       return;
     }
 
-    this.sourceHandler.getAnimationList(animationList => {
+    this.sourceHandler.getAnimationList(animations => {
       const source = this.sourceHandler.getLevelSource();
       const html = this.sourceHandler.getLevelHtml();
       if (currentSources.source === source &&
           currentSources.html === html &&
-          currentSources.animations === animationList) {
+          currentSources.animations === animations) {
         hasProjectChanged = false;
         return;
       }
 
-      this.save({source, html, animationList}, function () {
+      this.save({source, html, animations}, function () {
         hasProjectChanged = false;
       });
     });
