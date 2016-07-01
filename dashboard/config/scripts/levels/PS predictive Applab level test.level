@@ -143,9 +143,6 @@
     "contained_level_names": [
       "PS fr prediction q1"
     ],
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Here are some instructions. ",
     "is_k1": "false",
