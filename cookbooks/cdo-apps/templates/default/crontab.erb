@@ -67,6 +67,7 @@
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'index_users_in_solr')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
+      cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
     end
 
     # 'daemons' in all environments

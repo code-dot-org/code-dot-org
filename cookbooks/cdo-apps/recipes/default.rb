@@ -90,3 +90,4 @@ include_recipe node['cdo-apps']['nginx_enabled'] ?
   'cdo-nginx::stop'
 include_recipe 'cdo-apps::chef_credentials'
 include_recipe 'cdo-apps::crontab'
+include_recipe 'cdo-apps::process_queues'

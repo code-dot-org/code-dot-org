@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Complete the rooms for each of the animals by splitting the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide and 100 pixels tall.",
+    "instructions": "Complete the rooms for each of the animals by splitting the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide and 100 pixels tall. There are many different ways to solve this puzzle, so have some fun!",
     "x": "100",
     "y": "250",
     "start_direction": "90",
@@ -22,7 +22,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "markdown_instructions": "Time to build a barn!\r\n\r\nMake the rooms for each animal by splitting the barn into 2 equal-sized squares. \r\n\r\nHint: The rectangle is 200 pixels wide and 100 pixels tall.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Time to build a barn!\r\n\r\nMake the rooms for each animal by splitting the barn into 2 equal-sized squares. \r\n\r\nHint: The rectangle is 200 pixels wide and 100 pixels tall.\r\n\r\nThere are many different ways to solve this puzzle.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,7 +33,9 @@
     "disable_examples": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you cut 200 in half, how many pixels wide does each square need to be?\",\r\n  \"hint_id\": \"2-3_Artist_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you cut 200 in half, how many pixels wide does each square need to be?\",\r\n  \"hint_id\": \"2-3_Artist_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null,
+    "discard_background": "false"
   },
   "published": true,
   "notes": "",
