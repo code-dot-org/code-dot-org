@@ -338,6 +338,7 @@ module.exports = function (grunt) {
 
   var bundles = [
     {
+      uniqueName: 'apps',
       entries: _.zipObject(appsToBuild.map(function (app) {
         return [app, './src/' + app + '/main.js'];
       }).concat(appsToBuild.indexOf('applab') === -1 ? [] :
@@ -347,6 +348,7 @@ module.exports = function (grunt) {
     },
 
     {
+      uniqueName: 'codeStudio',
       entries: {
         'code-studio': './src/code-studio/code-studio.js',
         levelbuilder: './src/code-studio/levelbuilder.js',
@@ -369,6 +371,7 @@ module.exports = function (grunt) {
     },
 
     {
+      uniqueName: 'plc',
       entries: {
         plc: './src/code-studio/plc/plc.js'
       },
@@ -381,6 +384,7 @@ module.exports = function (grunt) {
     // (I wonder how much more we could slim it down by removing jQuery!)
     // @see embed.html.haml
     {
+      uniqueName: 'embedVideo',
       entries: {
         embedVideo: './src/code-studio/embedVideo.js'
       },
@@ -391,6 +395,7 @@ module.exports = function (grunt) {
     // in a bundle to minimize the amound of stuff we need when loading blocks
     // in an iframe.
     {
+      uniqueName: 'embedBlocks',
       entries: {
         embedBlocks: './src/code-studio/embedBlocks.js'
       },
@@ -398,6 +403,7 @@ module.exports = function (grunt) {
     },
 
     {
+      uniqueName: 'makerlabDependencies',
       entries: {
         makerlab: './src/code-studio/makerlab/makerlabDependencies.js'
       },
@@ -405,6 +411,7 @@ module.exports = function (grunt) {
     },
 
     {
+      uniqueName: 'pd',
       entries: {
         pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx'
       }
@@ -417,11 +424,13 @@ module.exports = function (grunt) {
     var watch = options.watch;
 
     return bundles.map(function (bundle) {
+      var uniqueName = bundle.uniqueName;
       var entries = bundle.entries;
       var commonFile = bundle.commonFile;
       var provides = bundle.provides;
 
       return webpackConfig.create({
+        uniqueName: bundle.uniqueName,
         output: path.resolve(__dirname, OUTPUT_DIR),
         entries: entries,
         commonFile: commonFile,
