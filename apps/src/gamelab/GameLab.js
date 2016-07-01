@@ -134,6 +134,13 @@ GameLab.prototype.init = function (config) {
   this.level = config.level;
 
   this.level.softButtons = this.level.softButtons || {};
+  if (this.level.startAnimations && this.level.startAnimations.length > 0) {
+    try {
+      this.startAnimations = JSON.parse(this.level.startAnimations);
+    } catch (err) {
+      console.error("Unable to parse default animation list", err);
+    }
+  }
 
   config.usesAssets = true;
 
@@ -220,7 +227,8 @@ GameLab.prototype.init = function (config) {
   });
 
   // Push project-sourced animation metadata into store
-  this.studioApp_.reduxStore.dispatch(setInitialAnimationList(config.initialAnimationList));
+  const initialAnimationList = config.initialAnimationList || this.startAnimations;
+  this.studioApp_.reduxStore.dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>
