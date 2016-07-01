@@ -220,24 +220,7 @@ GameLab.prototype.init = function (config) {
   });
 
   // Push project-sourced animation metadata into store
-  if (typeof config.initialAnimationList !== 'undefined') {
-    let animationList = config.initialAnimationList;
-
-    // TODO: Tear out this migration when we don't think we need it anymore.
-    if (Array.isArray(animationList)) {
-      // We got old animation data that needs to be migrated.
-      animationList = {
-        orderedKeys: animationList.map(a => a.key),
-        propsByKey: animationList.reduce((memo, next) => {
-          memo[next.key] = next;
-          return memo;
-        }, {})
-      };
-    }
-
-    // Load initial animation information
-    this.studioApp_.reduxStore.dispatch(setInitialAnimationList(animationList));
-  }
+  this.studioApp_.reduxStore.dispatch(setInitialAnimationList(config.initialAnimationList));
 
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>

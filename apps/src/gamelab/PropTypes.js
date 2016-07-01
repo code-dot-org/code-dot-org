@@ -36,7 +36,8 @@ const Vector2 = React.PropTypes.shape({
  *
  *  We serialize a smaller set of information {SerializedAnimationProps}.
  *
- *  We migrate if the old style gets loaded. See GameLab::init() for how this works.
+ *  We migrate if the old style gets loaded. See setInitialAnimationList() in
+ *  animationListModule.js for how this works.
  */
 
 /**
