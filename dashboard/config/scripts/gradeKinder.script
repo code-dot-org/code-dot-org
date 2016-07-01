@@ -97,3 +97,6 @@ level 'playEventsK4'
 level 'playEventsK5'
 level 'playEventsK6'
 level 'playEventsK7'
+
+stage 'Fuzz Fiesta'
+level 'gradek_partner_fuzzConditionals'
