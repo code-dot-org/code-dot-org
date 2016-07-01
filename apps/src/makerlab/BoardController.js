@@ -32,7 +32,6 @@ var BoardController = module.exports = function () {
 BoardController.prototype.connectAndInitialize = function (codegen, interpreter) {
   return this.ensureBoardConnected()
       .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter))
-      .then(this.startComponents.bind(this))
       .catch(function (error) {
         console.log("Board initialization failed:");
         console.log(error);
@@ -97,12 +96,6 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
   Object.keys(this.prewiredComponents).forEach(function (key) {
     jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
   }.bind(this));
-};
-
-BoardController.prototype.startComponents = function () {
-  Object.values(this.prewiredComponents).forEach((c) => {
-    c.start && c.start();
-  });
 };
 
 BoardController.prototype.reset = function () {
