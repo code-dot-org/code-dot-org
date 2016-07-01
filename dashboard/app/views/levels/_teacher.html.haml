@@ -35,11 +35,11 @@
                   - @user_level.driver_user_levels.each do |driver_user_level|
                     %div
                       = link_to driver_user_level.user.name, build_script_level_path(@script_level, user_id: driver_user_level.user_id, section_id: @section.id)
-                      %i= t('teacher.panel.driver')
+                      %i= t('nav.user.driver')
                   - @user_level.navigator_user_levels.each do |navigator_user_level|
                     %div
                       = navigator_user_level.user.name
-                      %i= t('teacher.panel.navigator')
+                      %i= t('nav.user.navigator')
               - if @user_level.submitted?
                 #submitted
                   %div= t('teacher.panel.submitted_on')

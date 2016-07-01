@@ -62,10 +62,7 @@ const Pairing = React.createClass({
       }
     });
 
-    this.setState({
-      pairings: pairings,
-      selectedSectionId: this.selectedSectionId()
-    });
+    this.props.handleClose && this.props.handleClose();
 
     $.ajax({
       url: this.props.source,

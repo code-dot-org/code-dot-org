@@ -195,8 +195,9 @@ describe('Pairing component', function () {
       // click on Add Partner to confirm
       TestUtils.Simulate.click(addPartnersButton());
 
-      // show only selected student
-      assert.equal(1, numberOfStudents());
+      // verify that the right data is sent to the server
+      let data = server.requests[server.requests.length - 1].requestBody;
+      assert.equal('{"pairings":[{"id":11,"name":"First student"}]}', data);
     });
   });
 
