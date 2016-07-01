@@ -16,11 +16,16 @@ var ApplabInterfaceMode = constants.ApplabInterfaceMode;
 var PlaySpaceHeader = React.createClass({
   propTypes: {
     channelId: React.PropTypes.string.isRequired,
-    isDesignModeHidden: React.PropTypes.bool.isRequired,
+    hasDataMode: React.PropTypes.bool.isRequired,
+    hasDesignMode: React.PropTypes.bool.isRequired,
     isEditingProject: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isViewDataButtonHidden: React.PropTypes.bool.isRequired,
-    interfaceMode: React.PropTypes.oneOf([ApplabInterfaceMode.CODE, ApplabInterfaceMode.DESIGN]).isRequired,
+    interfaceMode: React.PropTypes.oneOf([
+      ApplabInterfaceMode.CODE,
+      ApplabInterfaceMode.DESIGN,
+      ApplabInterfaceMode.DATA
+    ]).isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
     screenIds: React.PropTypes.array.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
@@ -35,12 +40,16 @@ var PlaySpaceHeader = React.createClass({
 
   render: function () {
     var leftSide, rightSide;
+    var toggleGroupWidth = this.props.hasDataMode ? '160px' : '120px';
 
     if (!this.shouldHideToggle()) {
       leftSide = (
         <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
           <button id='codeModeButton' value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>
           <button id='designModeButton' value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
+          {this.props.hasDataMode &&
+            <button id='dataModeButton' value={ApplabInterfaceMode.DATA}>{msg.dataMode()}</button>
+          }
         </ToggleGroup>
       );
     }
@@ -59,7 +68,7 @@ var PlaySpaceHeader = React.createClass({
         <table style={{width: '100%'}}>
           <tbody>
             <tr>
-              <td style={{width: '120px'}}>{leftSide}</td>
+              <td style={{width: toggleGroupWidth}}>{leftSide}</td>
               <td style={{maxWidth: 0}}>{rightSide}</td>
             </tr>
           </tbody>
@@ -69,20 +78,22 @@ var PlaySpaceHeader = React.createClass({
   },
 
   shouldHideToggle: function () {
-    return this.props.isShareView || this.props.isDesignModeHidden;
+    return this.props.isShareView || !this.props.hasDesignMode;
   },
 
   shouldHideViewDataButton: function () {
     return this.props.isViewDataButtonHidden ||
-        this.props.isDesignModeHidden ||
+        !this.props.hasDesignMode ||
         this.props.isShareView ||
-        !this.props.isEditingProject;
+        !this.props.isEditingProject ||
+        this.props.hasDataMode;
   }
 });
 module.exports = connect(function propsFromStore(state) {
   return {
     channelId: state.pageConstants.channelId,
-    isDesignModeHidden: state.pageConstants.isDesignModeHidden,
+    hasDataMode: state.pageConstants.hasDataMode,
+    hasDesignMode: state.pageConstants.hasDesignMode,
     isShareView: state.pageConstants.isShareView,
     isViewDataButtonHidden: state.pageConstants.isViewDataButtonHidden,
     interfaceMode: state.interfaceMode,

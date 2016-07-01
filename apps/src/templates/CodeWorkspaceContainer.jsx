@@ -9,10 +9,8 @@ import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Radium = require('radium');
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
 var commonStyles = require('../commonStyles');
-var CodeWorkspace = require('./CodeWorkspace');
 import { connect } from 'react-redux';
 
 var styles = {
@@ -93,11 +91,8 @@ var CodeWorkspaceContainer = React.createClass({
 
     return (
       <div style={mainStyle} className="editor-column">
-        <div
-            id="codeWorkspace"
-            style={styles.codeWorkspace}>
-          <CodeWorkspace/>
-          <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden}/>
+        <div id="codeWorkspace" style={styles.codeWorkspace}>
+          {this.props.children}
         </div>
       </div>
     );

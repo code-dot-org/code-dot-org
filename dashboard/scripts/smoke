@@ -45,7 +45,7 @@ def run_tests(options = {})
     url = test[:url]
     http_status_code = test[:http_status_code] || 200
 
-    if !options[:quiet]
+    unless options[:quiet]
       $stdout.write "#{@host}#{url} ... "
       $stdout.flush
     end
@@ -84,7 +84,7 @@ def run_tests(options = {})
     end
 
     tm = Time.now - tm
-    printf(" %.3f\n", tm) if !options[:quiet]
+    printf(" %.3f\n", tm) unless options[:quiet]
   end
 end
 
@@ -95,4 +95,4 @@ threads = []
 thread_count.times { threads << Thread.new { repeat_count.times { run_tests(options) } } }
 threads.each(&:join)
 
-printf("Total Time: %.3f\n", (Time.now - smoke_start)) if !options[:quiet]
+printf("Total Time: %.3f\n", (Time.now - smoke_start)) unless options[:quiet]

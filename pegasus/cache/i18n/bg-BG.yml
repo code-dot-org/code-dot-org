@@ -694,12 +694,12 @@
   dashboard_navigation_section_speakers: "Компютърни науки <br/> гости говорители"
   dashboard_navigation_all_sections: "Ученически акаунти и прогрес"
   dashboard_navigation_view_progress: "Прогрес"
-  dashboard_navigation_view_text_responses: "Изглед на текстовите отговори"
+  dashboard_navigation_view_text_responses: "Текстови отговори"
   dashboard_navigation_view_assessments: "Оценки"
   dashboard_navigation_add_students: "Добавяне на ученици"
   dashboard_navigation_manage_students: "Управление на ученици"
   dashboard_navigation_lesson_plans_resources: "Учебни планове и ресурси"
-  dashboard_navigation_view_stats: "Преглед на статистиката"
+  dashboard_navigation_view_stats: "Статистика"
   dashboard_navigation_section: "Раздел: %{section_name}"
   dashboard_navigation_student: "Ученик: %{student_name}"
   dashboard_progress_not_started: "не е стартиран"
@@ -891,7 +891,7 @@
     може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите
     всички ресурси без компютър на една целева страница. Свържете уроците с всеки
     Кн клас, или използвайте самостоятелно като независим курс."
-  dashboard_announce_button_text: "Научете повече"
+  dashboard_announce_button_text: "Тестване на функцията"
   dashboard_announce_petition: "Като учител, Вие трябва да намерите подход, така че
     да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки.
     Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица,

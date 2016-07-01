@@ -6,7 +6,8 @@ var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 var ALLOWED_KEYS = utils.makeEnum(
   'assetUrl',
   'channelId',
-  'isDesignModeHidden',
+  'hasDataMode',
+  'hasDesignMode',
   'isEmbedView',
   'isIframeEmbed',
   'isReadOnlyWorkspace',

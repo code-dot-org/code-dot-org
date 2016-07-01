@@ -737,7 +737,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '#codeApp'
     assert_select '#notStarted', 0
-
   end
 
   test 'does not load applab if you are a teacher viewing your student and they do not have a channel id' do
@@ -845,7 +844,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = create(:maze)
     create(:script_level, script: script, stage: stage, level: level)
 
-    script.update(professional_learning_course: true)
+    script.update(professional_learning_course: 'Professional Learning Course')
     assert script.professional_learning_course?
     assert script.professional_course?
 
