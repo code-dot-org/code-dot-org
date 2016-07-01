@@ -26,9 +26,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \\n\\nConnect it all back to the `when run` block and you're good to go!\",\r\n  \"hint_id\": \"2-3_Maze_16_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.\",\r\n  \"hint_id\": \"2-3_Maze_16_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \\n\\nConnect it all back to the `when run` block and you're good to go!\",\r\n  \"hint_id\": \"2-3_Maze_16_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 2,
     "repeat_loops": 1

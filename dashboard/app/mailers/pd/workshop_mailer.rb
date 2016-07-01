@@ -87,21 +87,33 @@ class Pd::WorkshopMailer < ActionMailer::Base
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  # TODO: Make sure every teacher has an enrollment
   def exit_survey(workshop, teacher, enrollment)
     @workshop = workshop
     @teacher = teacher
     @is_first_workshop = Pd::Workshop.attended_by(teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
 
-    @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}"
+    @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
 
     mail content_type: 'text/html',
       from: from_hadi,
       subject: 'How was your Code.org workshop?',
       to: email_address(@teacher.name, @teacher.email)
+
+    attachments['certificate.jpg'] = generate_csf_certificate if @workshop.course == Pd::Workshop::COURSE_CSF
   end
 
   private
+
+  def generate_csf_certificate
+    image = create_certificate_image2(
+      dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
+      @teacher.name || @teacher.email,
+      y: 444,
+      height: 100,
+    )
+    image.format = 'jpg'
+    Base64.encode64(image.to_blob)
+  end
 
   def email_address(display_name, email)
     Mail::Address.new(email).tap do |address|
