@@ -1,3 +1,5 @@
+var React = require('react');
+
 var styles = {
   main: {
     marginBottom: 35,
@@ -5,6 +7,10 @@ var styles = {
   }
 };
 
+/**
+ * Non-markdown version of our instructions, displayed in a dialog when our top
+ * pane instructions are not enabled.
+ */
 var NonMarkdownInstructions = function (props) {
   return (
     <div style={styles.main}>

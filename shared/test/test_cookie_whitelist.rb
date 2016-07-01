@@ -6,7 +6,7 @@ class CookieWhitelistTest < Minitest::Test
 
   ESCAPED_KEY = '1;2&3=4%'
   ESCAPED_VALUE = '3;4&5=6%'
-  HEADERS = REMOVED_HEADERS.map{|x|x.split(':')[0]}
+  HEADERS = REMOVED_HEADERS.map{|x| x.split(':')[0]}
   COOKIE_CONFIG = {
     behaviors: [
       {

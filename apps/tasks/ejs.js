@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   'use strict';
 
   var ejs = require('ejs');
@@ -7,7 +7,7 @@ module.exports = function(grunt) {
   require.extensions['.ejs'] = undefined;
   var path = require('path');
 
-  var compile = function(filename, template) {
+  var compile = function (filename, template) {
     var code = 'module.exports= (function() {\n';
     code += '  var t = ';
     code += ejs.compile(template, {
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     return code;
   };
 
-  grunt.registerMultiTask('ejs', 'compile ejs templates', function() {
+  grunt.registerMultiTask('ejs', 'compile ejs templates', function () {
 
     var srcBase = this.data.srcBase;
     var destBase = this.data.destBase;
@@ -32,13 +32,13 @@ module.exports = function(grunt) {
     var pattern = srcBase + '/**/*.ejs';
     var files = grunt.file.expandMapping(pattern, destBase, {
       expand: true,
-      rename: function(destBase, destPath) {
+      rename: function (destBase, destPath) {
         var filename = destPath.replace('src/', '');
         return path.join(destBase, filename);
       }
     });
 
-    files.forEach(function(file) {
+    files.forEach(function (file) {
       var filename = file.src[0];
       var code = compile(filename, grunt.file.read(filename));
       grunt.file.write(file.dest, code);

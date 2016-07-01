@@ -1,7 +1,0 @@
-name 'U3L22 Assessment'
-title 'Permanent Data Storage Assessment'
-
-
-markdown <<MARKDOWN
-Why is an inline function used in your clicker game to get or set a key/value pair?
-MARKDOWN

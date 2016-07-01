@@ -314,7 +314,7 @@ lt:
         studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Sukurk savo žaidimą. Kai baigsi, nuspausk „Baigti“ ir duok draugams išmėginti žaidimą savo telefonuose.
         studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
+        studio_iceage_hello2: 'Manny (actor 1) found Sid (actor 2) and wants to invite him on the adventure. Help them greet each other by using the the "actor say" block twice.'
         studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
         studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
         studio_iceage_repeat: Blokelis „kartok visada“ leis vykdyti nurodytus veiksmus nesustojant. Ar gali sudėti blokelius taip, kad senutė judėtų kairėn ir dešinėn nesustodama?
@@ -463,6 +463,7 @@ lt:
         infinity_playlab_intro: Žaidimų laboratorija – įvadas
         infinity_playlab_events: Žaidimų laboratorija – įvykiai
         infinity_playlab_repeat_forever: Žaidimų laboratorija – amžinas kartojimas
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
         csp_applab_processing_lists: Processing Lists with Loops
@@ -480,7 +481,15 @@ lt:
         csp_applab_functions_parameters: Komandos su parametrais
         csp_applab_loops: Kartojimas
         csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: 'Data & Medicine'
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Šiek tiek apie pikselius
+        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
         csp_pixelation_color_3: 'Color pixelation widget - Part 3'
@@ -518,9 +527,9 @@ lt:
         starwars_blocks_intro: 'Žvaigždžių Karai: programuojame galaktiką - įžanga'
         starwars_blocks_events: 'Žvaigždžių Karai: programuojame galaktiką - Įvykiai'
         starwars_blocks_congrats: 'Žvaigždžių Karai: programuojame galaktiką - sveikinimai'
-        mc_intro: 'Minecraft - Pristatymas'
-        mc_repeat: 'Minecraft - Kartoti'
-        mc_if_statements: 'Minecraft - "Jei" sakiniai'
+        mc_intro: 'Minecraft - Įvadas'
+        mc_repeat: 'Minecraft - Kartojimas'
+        mc_if_statements: 'Minecraft - Sąlygos sakiniai'
         mc_congrats_share: 'Minecraft - Sveikiname'
         mc_congrats_no_share: 'Minecraft - Sveikiname'
         gumball_intro: 'Gumball Hour of Code - Introduction'
@@ -542,7 +551,7 @@ lt:
         studio_say_text: Įvesk, ką tavo veikėjas turės pasakyti
         jigsaw_click: Nuspausk ant šio blokelio!
         move_elsa_forward: 'Prijunk blokelį „eik į priekį“  prie blokelio  „paleidus“'
-        turn_elsa: Panaudok blokelį „pasisuk“, kad Elsa galėtų pasisukti. Skaičių, esantį šalia laipsnių, galima pakeisti
+        turn_elsa: Panaudok blokelį „pasisuk“, kad Elsa galėtų pasisukti. Skaičius, esantis šiame blokelyje, parodo Elsos pasisukimo kampą
         replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
         replace_questions_degree: Nuspausk rodyklę, kad pakeistum „???“ tinkamu laipsnių skaičiumi
         repeat_blocks: Naudok kartojimo blokelį – į jį reikia įdėti kitus blokelius
@@ -598,13 +607,13 @@ lt:
         name_function: Write the name of your function here
         Infinity_move_right_runbutton: Pridėti judėjimo blokelį čia
         Infinity_move_directions_callout: Kuris blokelis privers Baymax judėti aukštyn, kai yra nuspausta rodyklė aukštyn?
-        Infinity_move_directions_callout_arrow: Naudokis rodyklėmis, kad vairuotum
+        Infinity_move_directions_callout_arrow: Naudokis šiomis rodyklėmis, kad vairuotum
         Infinity_move_collide_callout: Groti garsą, kai įvyks šis įvykis.
         Infinity_repeat_callout: Padėkite judėjimo blokelius viduje
         craft_run_button_callout: 'Paspausk „Paleisti" ir išmėgink savo programą'
-        craft_drag_block_callout: 'Nutempk "eikPirmyn();" blokelį ir prikabink jį po kitais blokeliais'
+        craft_drag_block_callout: 'Blokelį "eikPirmyn();" nutempk ir prikabink jį po kitais blokeliais'
         craft_callout_preplaced: Mes padėjome kelis blokelius, kad tau būtų nuo ko pradėti
-        craft_inside_repeat: Kartok veiksmus įdėdamas čia blokielius
+        craft_inside_repeat: Kartok veiksmus, įdėdamas čia blokelius
         craft_callout_preplaced_house: Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?
         craft_what_is_iron: Iškask šią geležį!
-        craft_callout_moveforward: Šis kodas tikrins ar yra lava, ar gali pridėti komandą eik pirmyn?
+        craft_callout_moveforward: Šis kodas tikrins ar yra lava, ar gali pridėti komandą, kad pajudėtum pirmyn?

@@ -35,7 +35,12 @@
     "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1,
+    "variables": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

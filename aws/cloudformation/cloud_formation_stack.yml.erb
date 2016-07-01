@@ -1,56 +1,24 @@
 <%
 require 'cdo/aws/cloudfront'
-require 'aws-sdk'
-%>
+unless dry_run
+  update_bootstrap_script.call
+  update_certs.call unless cdn_enabled
+end
+-%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Resources:
-  VPC:
-    Type: AWS::EC2::VPC
-    Properties:
-      CidrBlock: 10.0.0.0/24
-      EnableDnsHostnames: true
-  SubnetA:
-    Type: AWS::EC2::Subnet
-    Properties:
-      VpcId: {Ref: VPC}
-      CidrBlock: 10.0.0.0/26
-      AvailabilityZone: '<%=availability_zone%>'
-      MapPublicIpOnLaunch: true
-  InternetGateway:
-    Type: AWS::EC2::InternetGateway
-  Internet:
-    Type: AWS::EC2::VPCGatewayAttachment
-    Properties:
-      VpcId: {Ref: VPC}
-      InternetGatewayId: {Ref: InternetGateway}
-  PublicRouteTable:
-    Type: AWS::EC2::RouteTable
-    Properties:
-      VpcId: {Ref: VPC}
-  PublicRoute:
-    Type: AWS::EC2::Route
-    DependsOn: Internet
-    Properties:
-      RouteTableId: {Ref: PublicRouteTable}
-      DestinationCidrBlock: 0.0.0.0/0
-      GatewayId: {Ref: InternetGateway}
-  SubnetRouteAssociation:
-    Type: AWS::EC2::SubnetRouteTableAssociation
-    Properties:
-      RouteTableId: {Ref: PublicRouteTable}
-      SubnetId: {Ref: SubnetA}
-  ElasticLoadBalancer:
+  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
+  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
+  AMI: <%= lambda.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
+  LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
-    DependsOn: Internet
-    Metadata:
-      Comment1: Configure the Load Balancer with a simple health check and cookie-based stickiness
-      Comment2: Use install path for healthcheck to avoid redirects - ELB healthcheck does not handle 302 return codes
     Properties:
+      LoadBalancerName: <%=stack_name%>
       CrossZone: true
-      SecurityGroups: [Ref: ELBSecurityGroup]
-      Subnets: [Ref: SubnetA]
+      SecurityGroups: ['Fn::GetAtt': [VPC, ELBSecurityGroup]]
+      Subnets: <%=public_subnets%>
       LBCookieStickinessPolicy:
         - PolicyName: CookieBasedPolicy
           CookieExpirationPeriod: 30
@@ -62,79 +30,111 @@ Resources:
         - LoadBalancerPort: 443
           InstancePort: 80
           Protocol: HTTPS
-          SSLCertificateId: <%=elb_cert%>
+          SSLCertificateId: <%=certificate_arn%>
           PolicyNames: [CookieBasedPolicy]
       HealthCheck:
-        Target: HTTP:80/health_check.php
+        Target: HTTP:80/health_check
         HealthyThreshold: 2
         UnhealthyThreshold: 5
         Interval: 10
         Timeout: 5
       ConnectionDrainingPolicy:
         Enabled: true
-        Timeout: 60
-  ELBSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Enable HTTP[S] access from the public Internet, HTTP downstream.
-      VpcId: {Ref: VPC}
-      SecurityGroupIngress:
-        - IpProtocol: tcp
-          FromPort: 80
-          ToPort: 80
-          CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
-          FromPort: 443
-          ToPort: 443
-          CidrIp: 0.0.0.0/0
-      SecurityGroupEgress:
-        - IpProtocol: tcp
-          FromPort: 80
-          ToPort: 80
-          CidrIp: 0.0.0.0/0
-  WebServerSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Enable HTTP access via port 80 locked down to the load balancer + SSH access
-      SecurityGroupIngress:
-        - IpProtocol: tcp
-          FromPort: 80
-          ToPort: 80
-          SourceSecurityGroupId: {Ref: ELBSecurityGroup}
-        - IpProtocol: tcp
-          FromPort: 22
-          ToPort: 22
-          CidrIp: <%=ssh_ip%>
-      VpcId: {Ref: VPC}
+        Timeout: 300
   WebServer:
     Type: AWS::AutoScaling::AutoScalingGroup
-    DependsOn: Internet
+    UpdatePolicy:
+      AutoScalingReplacingUpdate:
+        WillReplace: true
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT60M
-        Count: 2
-    UpdatePolicy:
-      AutoScalingRollingUpdate:
-        MaxBatchSize: 1
-        MinInstancesInService: 1
-        PauseTime: PT60M
-        WaitOnResourceSignals: true
+        Timeout: PT25M
     Properties:
-      VPCZoneIdentifier: [Ref: SubnetA]
+      VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
-      MinSize: 1
-      MaxSize: 5
-      DesiredCapacity: 2
+      MinSize: 2
+      MaxSize: 12
       HealthCheckType: ELB
-      HealthCheckGracePeriod: 4000
-      LoadBalancerNames: [Ref: ElasticLoadBalancer]
+      HealthCheckGracePeriod: 2000
+      LoadBalancerNames: [Ref: LoadBalancer]
+      MetricsCollection:
+        - Granularity: 1Minute
+  ScaleUpPolicy:
+    Type: AWS::AutoScaling::ScalingPolicy
+    Properties:
+      AdjustmentType: PercentChangeInCapacity
+      AutoScalingGroupName: {Ref: WebServer}
+      MetricAggregationType: Average
+      MinAdjustmentMagnitude: 1
+      EstimatedInstanceWarmup: 300
+      PolicyType: StepScaling
+      StepAdjustments:
+        # 60-70% cpu, +20% instances
+        - MetricIntervalLowerBound: 0
+          MetricIntervalUpperBound: 10
+          ScalingAdjustment: 20
+        # 70-80% cpu, +40% instances
+        - MetricIntervalLowerBound: 10
+          MetricIntervalUpperBound: 20
+          ScalingAdjustment: 40
+        # 80-90% cpu, +60% instances
+        - MetricIntervalLowerBound: 20
+          MetricIntervalUpperBound: 30
+          ScalingAdjustment: 60
+        # 90-100% cpu, +80% instances
+        - MetricIntervalLowerBound: 30
+          ScalingAdjustment: 80
+  ScaleDownPolicy:
+    Type: AWS::AutoScaling::ScalingPolicy
+    Properties:
+      AdjustmentType: PercentChangeInCapacity
+      AutoScalingGroupName: {Ref: WebServer}
+      MetricAggregationType: Average
+      EstimatedInstanceWarmup: 300
+      PolicyType: StepScaling
+      StepAdjustments:
+        # 60-40% cpu, no adjustment
+        - MetricIntervalUpperBound: 0
+          MetricIntervalLowerBound: -20
+          ScalingAdjustment: 0
+        # 40-30% cpu, -20% instances
+        - MetricIntervalUpperBound: -20
+          MetricIntervalLowerBound: -30
+          ScalingAdjustment: -20
+        # 30-20% cpu, -30% instances
+        - MetricIntervalUpperBound: -30
+          MetricIntervalLowerBound: -40
+          ScalingAdjustment: -30
+        # 20-10% cpu, -40% instances
+        - MetricIntervalUpperBound: -40
+          MetricIntervalLowerBound: -50
+          ScalingAdjustment: -40
+        # 10-0% cpu, -50% instances
+        - MetricIntervalUpperBound: -50
+          ScalingAdjustment: -50
+  ScaleUpAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Scale-up if average CPU is greater than 60% for 10 minutes
+      AlarmActions: [Ref: ScaleUpPolicy]
+      OKActions: [Ref: ScaleDownPolicy]
+      MetricName: CPUUtilization
+      Namespace: AWS/EC2
+      Statistic: Average
+      Period: 300
+      EvaluationPeriods: 2
+      Threshold: 60
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: AutoScalingGroupName
+          Value: {Ref: WebServer}
   LaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
-      ImageId: <%=image_id%>
+      ImageId: {'Fn::GetAtt': [AMI, ImageId]}
       InstanceType: <%=instance_type%>
-      IamInstanceProfile: {Ref: RootInstanceProfile}
-      SecurityGroups: [Ref: WebServerSecurityGroup]
+      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
+      SecurityGroups: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
       KeyName: <%=ssh_key_name%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -142,61 +142,58 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap.sh.erb')%>
-  RootRole:
-    Type: AWS::IAM::Role
+        Fn::Base64: <%=file.call('bootstrap_chef_stack.sh.erb',
+          resource_id: 'WebServer',
+          node_name: 'fe-${INSTANCE_ID}',
+          run_list: ['role[front-end]'],
+          commit: `git ls-remote origin #{branch} | cut -f1`.strip )%>
+  WebServerHook:
+    Type: AWS::AutoScaling::LifecycleHook
     Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: [ec2.amazonaws.com]
-            Action: ['sts:AssumeRole']
-      Path: '/'
-  RolePolicies:
-    Type: AWS::IAM::Policy
-    Properties:
-      PolicyName: s3
-      PolicyDocument:
-        Statement:
-          Effect: Allow
-          Action: ['s3:GetObject']
-          Resource: 'arn:aws:s3:::<%=s3_bucket%>/*'
-      Roles: [Ref: RootRole]
-  RootInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [Ref: RootRole]
-  PegasusCDN:
-    Type: AWS::CloudFront::Distribution
-    Properties:
-      DistributionConfig: <%=AWS::CloudFront.config_cloudformation(:pegasus, "origin-#{subdomain}", ["pegasus-#{subdomain}"], cloudfront_cert, true)%>
-  DashboardCDN:
-    Type: AWS::CloudFront::Distribution
-    Properties:
-      DistributionConfig: <%=AWS::CloudFront.config_cloudformation(:dashboard, "origin-#{subdomain}", ["dashboard-#{subdomain}"], cloudfront_cert, true)%>
-  PegasusDNS:
+      AutoScalingGroupName: {Ref: WebServer}
+      LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
+      DefaultResult: ABANDON
+      HeartbeatTimeout: 1800 # seconds = 30 minutes
+      NotificationTargetARN: {Ref: WebServerHookTopic}
+      RoleARN: {'Fn::GetAtt': [IAM, LifecycleHookRoleARN]}
+  WebServerHookTopic: {Type: 'AWS::SNS::Topic'}
+<%
+  %w(Dashboard Pegasus).each do |app|
+    app_domain = "#{app == 'Dashboard' ? 'dashboard-' : ''}#{subdomain}"
+-%>
+  <%=app%>DNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:
       HostedZoneName: <%=domain%>.
       RecordSets:
-        - Name: "pegasus-<%=subdomain%>"
+        - Name: <%=app_domain%>
           Type: A
           AliasTarget:
-            DNSName: {'Fn::GetAtt': [PegasusCDN, DomainName]}
+<%   if cdn_enabled -%>
+            DNSName: {'Fn::GetAtt': [<%=app%>CDN, DomainName]}
             HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
-  DashboardDNS:
-    Type: AWS::Route53::RecordSetGroup
+<%   else -%>
+            DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
+            HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
+<%   end -%>
+<%   if cdn_enabled -%>
+  <%=app%>CDN:
+    Type: AWS::CloudFront::Distribution
     Properties:
-      HostedZoneName: <%=domain%>.
-      RecordSets:
-        - Name: "dashboard-<%=subdomain%>"
-          Type: A
-          AliasTarget:
-            DNSName: {'Fn::GetAtt': [DashboardCDN, DomainName]}
-            HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
-  LoadBalancerDNS:
+      DistributionConfig: <%= AWS::CloudFront.config_cloudformation(
+        app.downcase.to_sym,
+        "origin-#{subdomain}",
+        [app_domain],
+        {
+          IamCertificateId: iam_certificate_id,
+          SslSupportMethod: 'sni-only',
+          MinimumProtocolVersion: 'TLSv1'
+        }
+      )%>
+<%   end -%>
+<% end -%>
+<% if cdn_enabled%>
+  OriginDNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:
       HostedZoneName: <%=domain%>.
@@ -204,12 +201,42 @@ Resources:
         - Name: "origin-<%=subdomain%>"
           Type: A
           AliasTarget:
-            HostedZoneId: {'Fn::GetAtt': [ElasticLoadBalancer, CanonicalHostedZoneNameID]}
-            DNSName: {'Fn::GetAtt': [ElasticLoadBalancer, CanonicalHostedZoneName]}
+            HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
+            DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
+<% end -%>
+  GeocoderSubnetGroup:
+    Type: AWS::ElastiCache::SubnetGroup
+    Properties:
+      Description: Geocoder Cache Subnet Group
+      SubnetIds: <%=subnets%>
+  GeocoderGroup:
+    Type: AWS::ElastiCache::ReplicationGroup
+    Properties:
+      ReplicationGroupDescription: Geocoder Replication Group
+      NumCacheClusters: 3
+      Engine: redis
+      CacheNodeType: cache.r3.large
+      SecurityGroupIds: ['Fn::GetAtt': [VPC, RedisSecurityGroup]]
+      CacheSubnetGroupName: {Ref: GeocoderSubnetGroup}
+  ActivitiesQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      ReceiveMessageWaitTimeSeconds: 20
+      VisibilityTimeout: 15
+      QueueName: <%="activities-#{stack_name}"%>
+      RedrivePolicy:
+        maxReceiveCount: 3
+        deadLetterTargetArn: {'Fn::GetAtt': [ActivitiesDeadQueue,Arn]}
+  ActivitiesDeadQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      ReceiveMessageWaitTimeSeconds: 20
+      VisibilityTimeout: 15
+      QueueName: <%="activities_dead-#{stack_name}"%>
 Outputs:
   DashboardURL:
     Value: "https://dashboard-<%=subdomain%>"
     Description: Dashboard URL
   PegasusURL:
-    Value: "https://pegasus-<%=subdomain%>"
+    Value: "https://<%=subdomain%>"
     Description: Pegasus URL

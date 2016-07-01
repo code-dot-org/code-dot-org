@@ -1,0 +1,58 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-13T13:55:59.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "color": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "ellipse": null,
+      "rect": null,
+      "comment": {
+        "category": "Drawing"
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U3 - Simple Drawing - Road Template",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "instructions": "Do This",
+    "markdown_instructions": "# Road Drawing\r\n\r\nLets try out another example! This is going to be another set of project levels. The final product will look like this:\r\n\r\n<img src=\"https://images.code.org/86a9f34aadf57bb8e3b897b8c6ddf52e-image-1460646615062.09.59 AM.png\" width=200>\r\n\r\nThe first step will be to set up the background, grass and road.\r\n\r\n<img src=\"https://images.code.org/fcee25a3bbfea2859e0407b73ef9edd8-image-1460644263112.30.18 AM.png\" width=200>\r\n\r\nWe have done some of the location planning for you but pay attention to it as you go - you will have to do this yourself soon.\r\n\r\n<img src=\"https://images.code.org/11ab0ca17ea5e7666c265184d831251f-image-1461104938367.png\" width=200>\r\n\r\n# Do This\r\n* Add rectangles for the background, grass and road\r\n* Change the colors to appropriate colors for each item I used: \r\n* Remove the black outline\r\n\r\nWe have started you off with some commenting to help you out - dont forget do to this as you go!",
+    "start_blocks": "// Background\r\n\r\n// Grass\r\n\r\n// Road\r\n\r\n",
+    "show_d_pad": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

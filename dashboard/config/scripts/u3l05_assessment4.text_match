@@ -1,7 +1,0 @@
-name 'U3L05 Assessment4'
-title 'Programming Efficiency Question 4'
-
-
-markdown <<MARKDOWN
-How can functions be used to make code more efficient in effort, space, or time?
-MARKDOWN

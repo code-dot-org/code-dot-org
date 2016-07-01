@@ -524,30 +524,29 @@
         text: Olay;  fare tıklama, yön tuşuna basma yada ekrana tıklama gibi aktivitelerdir.
       3:
         image: notes/playlab_events_3.png
-        text: Here, we're going to make the space bot greet the earthlings when a
-          player clicks on him. We'll use the "when clicked" block and attach the
-          "say" block to it. When the player clicks on the space bot, everything attached
-          to this "when clicked" event block will be performed. What does your alien
-          say?
+        text: Burada, oyuncu uzay gemisine tıkladığında "Dünyalı,Seni Selamlıyorum!"
+          diyecek. "Tıklandığında" butonunu kullanacağız ve "De" butonunu ona ekleyeceğiz.
+          Oyuncu uzay robot'una tıkladığında "Tıklandığında" butonuna bağlı olan her
+          şey çalışacak. Peki, senin uzaylın ne diyor?
       4:
         image: notes/playlab_events_4.png
-        text: There are also "when arrow" blocks. If you link the "move" blocks to
-          these, you can start to move your actors up, down, left, or right. Step
-          by step, your game is getting more interactive.
+        text: Ayrıca "zaman okları" parçaları var. Eğer "hareket" parçalarını bunlara
+          bağlarsanız, karakterinizi yukarı, aşağı, sola ve sağa hareket ettirmeye
+          başlayabilirsiniz!. Git gide oyununuz daha çok interaktif oluyor.
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: Bu "sonsuza dek tekrarla" bloğu. Bu bloktaki komutlar oyun sonuna dek
+          tekrar edecek.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: Eğer karakterimizin bir şey yapmasına gerek kalmadan tekrar eden işleri
+          yapmasını istiyorsak, bloklarımızı "Sonsuz Tekrar" bloğunun içine koyarız.
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
-          of the kingdom, left and right continuously. Learning how the repeat commands
-          works, will save you a ton of time later when you build your own game.
+        text: Sonraki bulmacada, hedefimiz büyücünün krallığın sınırlarında sürekli
+          sol ve sağa giderek devriye gezmesidir. Tekrar komutlarının nasıl çalıştığını
+          öğrenmek, senin kendi oyununu yaparken bir ton zaman kazanmanı sağlayacak.
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
@@ -587,32 +586,31 @@
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: This lesson is called the big event. It's all about how we can control
-          our programs and actually change the way a program runs on the fly using
-          events, like the push of a button or the click of a mouse.
+        text: Bu derse büyük olay denir. Bunda programlarımızı nasıl denetleyeceğimizi
+          ve aslında bir programın çalışma şeklini bir düğmeye basarak veya bir fare
+          tıklaması gibi olayları kullanarak anında değiştirebileceğimizi göreceğiz.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: For this lesson, you'll be controlled with a paper remote control. It's
-          just like a real-live video game.
+        text: Bu ders için bir kağıttan uzaktan kumanda ile kontrol edileceksin. Sanki
+          gerçek zamanlı bir video oyunu gibi.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: An event is an action  that causes something to happen. It's like when
-          you click the button on a mouse and a webpage loads. That's an event. When
-          you touch your screen on a tablet to scroll, that's an event also. Events
-          are a great way of letting the user direct your program whenever they need
-          or want to.
+        text: Bir olay bir şeyin olmasını sağlayan eylemdir. Bir butona tıkladığında
+          bir internet sitesinin yüklenmesi gibi. Bu bir olaydır. Kaydırmak için tabletine
+          dokunman da bir olaydır. Olaylar kullanıcı programa istediği zaman veya
+          ihtiyacı olduğunda müdahale etmesini sağlar.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: Things happen that we all respond to. We feel hungry and we go to the
-          fridge. We hear the mailman come and he puts our mail in the mailbox  and
-          then we go get our mail. Those are just like the events of pushing a button
-          or moving a joystick. They are something that happens that triggers us to
-          do something.
+        text: Karşılık vermemiz gereken olaylar vardır. Aç hissettiğimiz zaman buzdolabına
+          gideriz. Bir postacının geldiğini duyduğumuzda ve mektupları posta kutusuna
+          koyduğunda gider ve mektuplarımızı alırız. Bu olaylar aynı bir butona basmak
+          veya bir oyun kolunu hareket ettirmek gibidir. Bu gibi olaylar bizim bir
+          şeyler yapmamızı tetikler.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: In video games, there's an event called "Update" and it happens 30 or
-          60 times a second. For videogame programmers that's almost more important
-          as an event than the buttons or the joystick.
+        text: Video oyunlarında, "Güncelle" adlı bir olay bulunur ve bu olay saniye
+          30 ya da 60 kez gerçekleşir. Video oyun programcıları için bu butonlardan
+          veya oyun kollarından neredeyse daha önemlidir.
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: The main event we're watching for is that "Update" tick happening. And
@@ -653,9 +651,10 @@
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work,
-          there is something we use in both dances and in programming lightsuits.
-          And that is loops! Loops are repeating an action over and over.
+        text: Merhaba, benim ismim Miral Kotb ve ben iluzyonun kurucusuyum. Benim
+          çalıstığım işte, yaptığımız danslarda ve programlarda ışıklı kıyafetler
+          kullanıyoruz. Ve bunlar döngüler! Döngüler üzerinde tekrarlandıkca harekete
+          geçiyor.
       2:
         image: notes/C1_getting_loopy_2.png
         text: Birşeyi birçok kez yapınca "döngü" yapmış oluyoruz. Aynı benim bu çemberi
@@ -700,37 +699,35 @@
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: Debugging is finding and fixing problems. There are lots of ways to
-          debug problems. One of the easiest is to move step by step until where you
-          find where something goes wrong. Here I'm trying to do a back handspring
-          on the beam but I keep falling off.
+        text: Hata ayıklama işlemi sorunları bulma ve giderme işlemidir. Sorunlarda
+          hata ayıklamak için birçok yol vardır. En kolay adım adım ilerlemek ve hatalı
+          yere kadar gelmektir. Burada ters parende yapmaya yapmaya çalışıyorum ama
+          düşüp duruyorum.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: I walked through each part step by step and realized where my mistake
-          was. I wasn't putting my hands on the beam correctly. So I tried another
-          back handspring on the beam with my new hand position and I got it. I was
-          really glad I debugged my back handspring.
+        text: Ben her bölümü adım adım yürüdüm ve nerede hatam olduğunu anladım. Denge
+          aletinin üstüne doğru ellerimi doğru koymamıştım. Bu yüzden yeni el pozisyonu
+          ile kiriş üzerindeki başka bir ters parende denedim ve anladım. Ters parendemdeki
+          hatamı ayıkladığıma (bulup düzelttiğime) gerçekten sevindim.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: To learn about debugging, we start with a set of blocks already on the
-          stage. You'll notice that these blocks won't get you to the goal. We need
-          to debug the solution and fix it. What went wrong? You'll notice that you
-          needed to keep going west one more block.
+        text: Hata ayıklamayı öğrenmek için sahnede hazır bloklarla başlıyoruz. Ama
+          bu blokların bizi hedefe ulaştırmadığını fark edeceksin. Çözüm üzerinde
+          hata ayıklayarak düzelteceksin. Nerede hata yapılmış. Batıya doğru bir blok
+          daha ilerlemen gerektiğini fark edeceksin.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: Let's fix this by adding another west block and hitting run to see if
-          you got it right. Yay, you got it!
+        text: Bir B (batı) bloğu daha ekleyerek hatayı düzelt. Evet öyle!
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle
-          and see what directions it needs to take.
+        text: Bu bulmacada Bu bulmacada kızgın kuşu domuzcuğa götür. Bulmacaya bak
+          ve hangi yöne gideceğine karar ver.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: You need to drag the blocks over from the toolbox to the workspace.
-          Make sure it's under the "when run" block and when you think you've got
-          the right solution, then you can click "Run" and watch the bird go to the
-          pig.
+        text: Bloklar üzerinde araç kutusundan çalışma alanına sürüklemen gerekir.
+          Çalıştığı zaman bloğunun antında olmasına dikkat et. Doğru olduğunu düşünüyorsan
+          "çalıştır" a tıklayın ve kızgın kuşun domuzcuğa gittiğini görün.
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
@@ -744,11 +741,10 @@
           Facebooktaki herkese mesaj atıp iyiki doğdun dileklerimi iletebiliyorum."
       3:
         image: notes/C1_maze_loops_3.png
-        text: To get the bird to the pig in this level... rather than drag three North
-          blocks on to the workspace, you will use the "repeat" block. Drag the "repeat"
-          block on to the workspace and enter the number 3. Then drag the "move North"
-          block into the "repeat" block and hit "Run" to see if you got it right.
-          Congratulations, you got it!
+        text: Kuşu domuzcuğa götürmek için... üç tane kuzeye git bloğunu kullanmak
+          yerine "Tekrarla" bloğunu kullanacaksın. Tekrarla bloğu çalışma alanına
+          sürükle ve 3 yaz. Sonra bloğun içine (K) kuzeye git bloğu ekle. Çalıştır
+          ve doğru yapmışmısın gör. Tebrikler!
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
@@ -779,11 +775,11 @@
           ile konuşabilir ve bir çok şey öğrenebilirsin. '
       3:
         image: notes/C1_going_places_safely_3.png
-        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
-          I took her picture and changed the color of her stripes, then added a hat
-          and added it to my collection of wacky animals. Awesome! Later, I went to
-          a place far far away. I visited Kenya. That's a country in Africa. Lots
-          of zebras live there.
+        text: Dün, hayvanat bahçesini ziyaret ettim. Bebek zebra gördüm. Ben onun
+          resmini çektim. Çizgilerinin rengini değiştirdim ve sonra şapka koydum.
+          Sonrada tuhaf hayvanlar koleksiyonuma ekledim. Harika! Daha sonra çok çok
+          uzak bir yere gittim. Kenyayı ziyaret ettim. Afrika'da bir ülkedir. Orada
+          Zebralar sürü olarak yaşıyor.
       4:
         image: notes/C1_going_places_safely_4.png
         text: Sometimes on the internet I talk to peeople I know, like my grandma
@@ -806,35 +802,30 @@
           that are just right for you.'
       7:
         image: notes/C1_going_places_safely_7.png
-        text: Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to
-          log on again to see where I can visit next.
+        text: Vay canına! Bu çok eğlenceliydi! Şimdi yemek vakti. Oturumu kapatın.
+          Sonraki ziyaretinizi görmek için sabırsızlanıyorum.
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: Today we're going to learn about Pair Programming. In pair programming
-          you work as a team. Why should two people use one computer? Because two
-          heads are better than one. In pair programming you and your partner are
-          going to sit down together at one computer and you are both going to work
-          on the same project.
+        text: Bugün eşli programlamayı öğreneceğiz. Eşli programlamada takım halinde
+          çalışıyorsunuz. Neden bir bilgisayarı iki kişi kullanıyor? Çünkü iki kafa
+          bir kafadan iyidir. Eşli programlamada takım arkadaşınızla oturup aynı proje
+          üzerinde çalışacaksınız.
       2:
         image: notes/C1_pair_programming_2.png
-        text: In pair programming, one person is the driver and the other person is
-          the navigator, just like driving a car. The driver sits at the computer
-          and is the one using the keyboard and mouse or touchscreen and controlling
-          the main actions of the computer. The other person is the navigator. The
-          navigator helps the driver by answering the driver's questions and pointing
-          out potential problems or mistakes.
+        text: Eşli programlamada bir kişi sürücü diğer kişi yön bulucudur. Aynı araba
+          kullanır gibi. Sürücü ekranın karşısına geçer ve kodu yazar diğer kişide
+          ne yazılacağına yardım eder. Yön bulucu sürücünün sorularına cevap verir
+          ve yanlışlık gördüğünde uyarır.
       3:
         image: notes/C1_pair_programming_3.png
-        text: Communication is key to successful pair programming. No insults, be
-          respectful, don't be a bossy navigator, because nobody likes a backseat
-          driver. You and your partner should always be talking. The driver can explain
-          what she or he is doing. And the navigator can help suggest what to do next.
+        text: "İletişim eşli programlamanın temelidir. Aşağılamak yasak, saygılı olunmalı,
+          patronluk taslama. Siz ve takım arkadaşınız devamlı konuşmalı.  Sürücü pozisyonunda
+          olan kişi ne yaptığını açıklamalı. Yön bulucu ise ne yapılacağını önerir."
       4:
         image: notes/C1_pair_programming_4.png
-        text: The navigator should be thinking about the big picture and the driver
-          focuses on the details. Both roles are important. Pair programming is all
-          about working together as a team.
+        text: Yön bulucu büyük resmi düşünürken sürücü detaylara konsantre olmalı.
+          Her iki rolde önemli. Eşli programlama takım olarak iş yapma yöntemidir.
     C1_planting_seed:
       1:
         image: notes/C1_planting_seed_1.png
@@ -879,28 +870,26 @@
           to tell.
       2:
         image: notes/C1_playlab_storytelling_2.png
-        text: The cat's always been afraid of the dog and what if the cat figures
-          out that the dog is trying to be nice? The "when run" block starts everything.
-          The "move" block will move your character and the "say" block will make
-          your character say whatever you type.
+        text: Kediler her zaman köpeklerden korkarlar. Kedi köpeğin iyi olmaya çalıştığını
+          fark ettiğinde ne olacak? Çalıştığı zaman bloğu her şeyi başlatır. Hareket
+          et bloğu karakteri ilerletir. "Söyle" bloğu karakterin sizin yazdığınız
+          şeyi söylemesini sağlar.
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: This is the "when actors collide" block which you can link up to the
-          other blocks.
+        text: '"Ne zaman çarpışırsa" bloğu diğer bloklarla birleşebilir.'
       4:
         image: notes/C1_playlab_storytelling_4.png
-        text: I was making the dog come over and say "Hi" but then the cat got scared
-          so it ran away. "Ahh" If there was more time, it would have been a happy
-          ending. The end!
+        text: Köpeğin gelik "Hi" (merhaba) demesini sağlıyorum. Fakat sonra kedi korkuyor
+          ve kaçıyor. "Ahh". Daha fazla zaman olsaydı mutlu sonla bitebilirdi. Son!
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: This is the spelling bee level. Use the puzzle pieces to move the bee.
-          As it moves, it will collect letters to spell words.
+        text: Bu arının heceleme çalışmasıdır. Bulmaca parçalarını kullanarak arıyı
+          ilerlet. İlerledikçe kelimenin harflerini toplar.
       2:
         image: notes/C1_spelling_bee_intro_2.png
-        text: See if you can spell the word they give you in the box below the stage.
-          But bee careful! Moving the wrong direction will add letters you don't want.
+        text: Kutuda verilen kelimenin harfleri üzerinden gidebilir misin? Dikkatli
+          ol yanlış yöne ilerlemen yanlış harfleri eklemene sebep olacaktır.
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
@@ -914,65 +903,53 @@
           Facebooktaki herkese mesaj atıp iyiki doğdun dileklerimi iletebiliyorum."
       3:
         image: notes/C1_zuck_repeat_loop_3.png
-        text: In this example, your goal is going to be to move the bird to get the
-          pig. Now, we're going to be able to use the repeat block in order to be
-          able to do this very easily. You can either do this by giving the computer
-          a move forward command five times in order to advance the bird one step
-          each time to the pig or you can just tell the computer to move forward once,
-          and then tell it to repeat that five times and it'll do the same thing.
+        text: Bu örnekte amacın kızgın kuşu domuzcuğa götürmektir. Şimdi tekrarla
+          bloğu kullanarak daha kolayca yazacağız. Aynı işi 5 defa ilerle komutuyla
+          da yapabilirsin yada ilerleyip bir defa yazıp 5 defa tekrarlamasını söyleyebilirsin.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: In order to do this, you drag your move forward command and then you
-          put it inside the repeat block. And you can click on it and tell it how
-          many times you  to repeat the block to tell it how many steps you want it
-          to take forward.
+        text: Bunu yapmak için ilerle bloğunu tekrarla bloğu içine sürükle ve kaç
+          kez yapacağını yani ne kadar ilerleyeceğini yaz.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: One more thing is you can put as many commands as you want inside the
-          repeat block. So in this example, you're telling it to move forward and
-          turn left, which it'll do five times. Have fun!
+        text: Tekrarla bloğu içine istediğiniz kadar komut ekleyebilirsiniz. Bu örnekte
+          ilerle ve sola dön komutlarını 5 defa yapmasını sağlar. İyi eğlenceler!
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: 'Ekibinde arabanın bilgilerini toplayan ve yazdığı programlarla aracın
+          performansını nasıl geliştireceğini söyleyen bir bilgisayar mühendisi yoksa,
+          yarışmada  ön elemeden bile geçemezsin. '
       2:
         image: notes/C2_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: Bu bulmacada kalem kullanarak farklı şekiller çizen bir aktör olacaksın.
+          Aktör ne yaparsa arkasında bir çizgi bırakır.
       3:
         image: notes/C2_artist_intro_3.png
-        text: To move around the canvas, you'll use the move forward block. Here the
-          move forward block says move forward by 100 pixels. When we hit run, what
-          happens? The artist moves forward a certain amount and that amount is 100
-          pixels. Pixels are basically very tiny squares on your computer screen.
+        text: Tuvalde ilerlemek için "ileriye" bloğu kullanacaksın. Buradaki blok
+          100 piksel ilerlemeni sağlıyor. Çalıştırdığımız zaman ne oluyor? Aktör 100
+          piksel ilerliyor. Piksel demek ekrandaki minik kare noktalar demektir.
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: Bulmacadaki öteki blok 90 derece sağa dönmeni söylüyor. Artistin ne
+          kadar döneceğine sen karar verebilirsin.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: Bu da 120 derece döner. İlgili kısma tıklayarak piksel uzunluğunu değiştirebilirsin
+          ve ne kadar döneceğini belirleye bilirsin!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: Bu eğer koşul bloğu. Eğer nektar yada bal bir değerden büyükse, eşitse
+          yada küçükse bir şey yap.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: Bu ne kadar nektar yada bal olduğunu bilmiyorsan faydalı olur. soru
+          işareti bilinmediğini gösteriyor.
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: In this example, we're going to say IF the purple flower has nectar
-          greater than 0, get nectar. That will tell our bee to keep getting nectar
-          as long as it's there. Ta-dah!
+        text: Bu örnekte mor çiçekte Eğer (IF) sıfırdan çok nektar varsa nektar al
+          diyeceğiz. Bu arıya nektar olduğu sürece nektar almasını söylüyor. Da daaa!
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
@@ -1033,31 +1010,27 @@
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is
-          something wrong.
+        text: "Çalışma alanında hazır bazı bloklar var. Fakat bir şeyler yanlış."
       2:
         image: notes/C2_artist_debugging_2.png
-        text: Let's debug this code by slowing down the speed and watching it as it
-          goes through each block step by step.
+        text: Yavaşlatıp adım adım ilerleyerek bu kodda hata ayıklayalım.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: Oh, there's the problem! The cat's whiskers are 75 pixels long, not
-          25.
+        text: Aaa hata var! Kedinin bıyıkları 75 piksel olmalı 25 değil.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: Have you ever heard of debugging a program? This is the way you figure
-          out what's not working. When you debug code, you identify and remove errors.
+        text: Programlardan hata ayıklamayı hiç duydunuz mu? Neyin çalışmadığını bulmanıza
+          denir. Hata ayıklarken önce hatayı bulursunuz sonra düzeltirsiniz.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: Here we're given a few blocks already in our workplace. We're going
-          to use the step button to walk through the blocks, step by step, to see
-          if this is the right solution and where we may need to fix it.
+        text: "Çalışma alanında zaten bazı bloklar var. Adım adım ilerleyeceğiz ve
+          blokların üzerinden geçeceğiz. Böylece her bir bloğun yapması gerekeni yapıp
+          yapmadığını göreceğiz ve gerekirse düzelteceğiz."
       3:
         image: notes/C2_bee_debugging_3.png
-        text: Looks like there's our problem! We need one more move forward block.
-          The step button helps us debug our problem by identifying where the error
-          is so we can fix it.
+        text: Görünüşe göre bizim problemimiz burada! İlerle bloğundan bir tane daha
+          lazım. Adım düğmesi hatayı bulmamıza yardım eder böylelikle hatayı düzeltiriz.
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
@@ -1119,14 +1092,14 @@
           to recreate simple black and white images, using only hand drawn arrows.
       2:
         image: notes/C2_graph_paper_2.png
-        text: An algorithm is a list of instructions for completing a task. We'll
-          follow this set of instructions to make the bowl. Algorithms are really
-          helpful when you need someone else to understand how to do something.
+        text: Bu, algoritma oluşturma görevini tamamlamak için talimat listesi. Verilen
+          işlemleri takip edin. Algoritmaların nasıl oluşturulacağını anlamanız için
+          işlemler yardım edecektir.
       3:
         image: notes/C2_graph_paper_3.png
-        text: If you're writing an algorithm for a computer, you have to break it
-          down to little tiny steps. So finish this row and go to the next, then the
-          next one, and you'll be done.
+        text: Bilgisayar için bir algoritma yazıyorsanız ilk basamaktaki talimati
+          yerine getirin ve aşağıdaki talimata geçin, son talimatıda uyguladığınızda
+          bitmiş olacak.
       4:
         image: notes/C2_graph_paper_4.png
         text: I use algorithms in my work. If I write down all of the steps I can
@@ -1136,60 +1109,55 @@
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
-        text: Here we are going to use the repeat block to help us save steps when
-          we are programming our artist. We already have some blocks out on our stage
-          but they are just there to get us started.
+        text: Burada tekrarla bloğu kullanarak programlayacağız böylece daha az blok
+          kullanacağız. Sahnede başlamamız için bazı bloklar bulunmakta.
       2:
         image: notes/C2_artist_loops_2.png
-        text: To loop those blocks four times to draw the whole square, we just drag
-          out the repeat block and put the moveforward and turn right blocks inside
-          the repeat block. When we hit run, the artist will repeat those steps four
-          times to complete the square.
+        text: Bu blokları dört defa kullanarak kareyi çizmek için önce tekrarla bloğunu
+          sürükleyelim. Sonra Mevcut blokları tekrarla bloğu içine koyalım. Sanatçı
+          4 defa aynı adımları tekrarlayarak kareyi çizecek.
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: A loop is a repetition of activity. Going into a hive to inspect, I
-          look at a frame, and then I put it back. I repeat that same activity multiple
-          times. It's looping around, doing the same activity multiple times.
+        text: Döngü tekrarlama işlemidir. Petekleri kontrol etmek için her peteği
+          çıkartıyorum, inceliyorum ve sonrada tekrar yerine koyuyorum. Aynı işlemi
+          tekrar tekrar yapıyorum. Döngü demek aynı işlemi tekrarlayarak birçok kere
+          yapmaktır.
       2:
         image: notes/C2_bee_loops_2.png
-        text: This is the repeat block. Whatever you put inside the repeat block will
-          repeat those actions the number of times that you tell it to. For example,
-          in this level, rather than drag out move forward and get nectar three times,
-          we're going to just drag them out once each and repeat the action three
-          times. That made it easy!
+        text: Bu "tekrarla" bloğu. Bu bloğun içine koyduğunuz işlemleri Tekrarla bloğuna
+          yazdığınız sayı kadar bilgisayar tekrarlar. Örneğin, ilerle ve nektar al
+          bloklarını 3 defa sürükleyip kodu yazacağımıza, sadece birer tanesini sürükleyip
+          aynı işlemi üç kere tekrarlayacağız. İşleri kolaylaştırıyor!
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: Normalde kodlama yazı yazarak yapılıyor fakat biz burada blokları kullanacağız.
+          Görsel olarak blokları sürükleyip birbirine bağlayarak kod yazacaksınız.
+          Alt tarafta kod yazmış oluyoruz. Başlangıç olarak Kızgın kuşun ilerleyip
+          yumurtasını çalan kötü domuzcuğa ulaşmasını sağlayacağız.
       2:
         image: notes/C2_maze_intro_2.png
-        text: Blockly is split into three main parts. On the left is the bird's maze,
-          where your program will run. The instructions for each level are written
-          below the maze. This middle area is the toolbox and each of these blocks
-          is a command that the bird can understand. The white space on the right
-          is called the workspace and this is where we'll build our program.
+        text: "Çalışma alanı üç bölgeye ayrılmıştır. Soldaki kodun çalışacağı labirenttir.
+          Ne istendiğiyle ilgili bilgiler labirentin altındadır. Ortadaki bölge araç
+          kutusudur. Buradaki her komuta kuş anlar ve yapar. Sağdaki boş bölge çalışma
+          alanı olarak söylenir ve buraya programını yazarsın."
       3:
         image: notes/C2_maze_intro_3.png
-        text: If I drag the move block to our work space and press "Run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: "İlerle bloğunu çalışma alanına sürükleyip Çalıştır düğmesine basınca
+          ne olur? Kuş bir adım ilerler. Bir adım daha ilerlemesi için ne yapmalıyız?
+          Bir ilerle bloğu daha ekleyebilirim."
       4:
         image: notes/C2_maze_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "Run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Sağa dön bloğunu çalışma alanına sürükleyip ilerle bloğunu antına kadar
+          getireceğim ve sarı okun gözükene kadar ilerleteceğim. bıraktığımda iki
+          blok birleşmiş olur. Çalıştır tuşuna tekrar basacağım. Kuş programdaki adımları
+          üstten alta doğru sırayla yapacak.
       5:
         image: notes/C2_maze_intro_5.png
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it to the trash can. After you've hit run, you can always hit the reset
-          button to get the bird back to the start. Now let's get those pigs!
+        text: Bir bloğu silmek isterseniz sürükleyin ve çöp kutusuna bırakın. Çalıştır
+          tuşu ile çalıştırdıktan sonra yeniden başla tuşu ile tekrar başlayabilirsin.
+          Şimdi domuzcuğu yakalayalım!
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
@@ -1222,15 +1190,13 @@
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: "Şimdiye kadar animasyon yada hikaye yaptığında her çalıştırdığında
+          aynı şeyi yapıyordu. Şimdi etkileşimli bir oyun yapabilirsiniz."
       2:
         image: notes/C2_playlab_createastory_2.png
-        text: There are some new blocks to try out. There's the "when arrow" block
-          and the "move actor" block. You can put these blocks together to move the
-          actors around with the arrow keys. And there are some blocks that do stuff
-          when actors collide or are clicked. Check them out and have fun!
+        text: Denemek için bazı yeni bloklar var. "Oka basıldığında" ve "hareket et"
+          blokları var. Bu blokları kullanarak ok tuşları ile oyuncuyu hareket ettirebilirsiniz.
+          Ayrıca aktörler çarpıştığında yada tıklandığında blokları var. İyi eğlenceler!
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
@@ -1260,170 +1226,150 @@
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
-        text: One thing that computers are really good at is repeating commands. As
-          a person, you'd get really bored if you had to do the same thing lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times, and not get bored and be able to carry that out really well.
+        text: Bilgisayarın iyi olduğu şeylerden birisi aynı komutları tekrarlamasıdır.
+          İnsan olarak aynı şeyleri yapmaktan sıkılabilirsin. Fakat bilgisayar aynı
+          işlemi milyonlarca defa yapar ve sıkılmaz ve gayet güzel yapar.
       2:
         image: notes/C2_zuck_repeat_loop_2.png
-        text: So for example if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than a century to actually
-          write out all of those emails to everyone. But with just a few lines of
-          code, I can have a system send an email to everyone on Facebook wishing
-          them a happy birthday. So that's what loops are, and why they're valuable,
-          and something that computers can do very well.
+        text: "Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde
+          herkese ayrı mesaj yazsam yıllarca sürer. Fakat sadece birkaç kod satırıyla
+          Facebook taki herkese mesaj atıp iyi ki doğdun dileklerimi iletebiliyorum.
+          Döngüler budur işte. Bilgisayarın iyi yaptığı çok faydalı şeylerdir."
       3:
         image: notes/C2_zuck_repeat_loop_3.png
-        text: In this example your goal is going to be to move the bird to get the
-          pig.  Now we're gonna be able to use the "repeat" block in order to be able
-          to do this very easily. You can either do this by giving the computer a
-          "move forward" command five times in order to advance the bird one step
-          each time to the pig.
+        text: Bu örnekte amacın kızgın kuşu domuzcuğa götürmektir. Şimdi tekrarla
+          bloğu kullanarak daha kolayca yazacağız. Aynı işi 5 defa ilerle komutuyla
+          da yapabilirsin yada bir defa ilerle yazıp 5 defa tekrarlamasını söyleyebilirsin.
       4:
         image: notes/C2_zuck_repeat_loop_4.png
-        text: Or you can just tell the computer to "move forward" once, and then tell
-          it to "repeat" that 5 times, and it will do the same thing. So in order
-          to do this you drag your "move forward" command, and then you put it inside
-          the "repeat" block.And you can click on it and tell it how many times you
-          want to repeat the block to tell it how many steps you want it to take forward.
+        text: Yada bilgisayara ilerlemesini bir kere söyleyip bu işi beş defa tekrarlamasını
+          söylersin. Bunun için ilerle bloğunu sürükleyip Tekrarla bloğu içine koy.
+          Sonra soru işaretine tıkla ve kaç kere yapacağını söyle.
       5:
         image: notes/C2_zuck_repeat_loop_5.png
-        text: Now one more thing is you can put as many commands as you want inside
-          the "repeat" block. So in this example you're telling it to move forward
-          and turn left, which it will do five times. All right good job and have
-          fun!
+        text: Tekrarla bloğu içine istediğiniz kadar komut ekleyebilirsiniz. Bu örnekte
+          ilerle ve sola dön komutlarını 5 defa yapmasını sağlar. İyi iş çıkarttın.
+          İyi eğlenceler!
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Bilgisayar programlamanın harika yönlerinden birisi bilgisayara bir
+          işi yapmayı bir defa öğretirsen bu öğrettiğin şeyi defalarca tekrar kullanabilirsin.
+          Buna fonksiyon denir. Bir isim verirsin ve tekrar tekrar çağırırsın. Böylece
+          yeni bir blok oluşturmuş olursun.
       2:
         image: notes/C3_artist_functions_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square, so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code. It will get done
-          for us. We've added that concept to our programming language.
+        text: Yazdığımız programda dört defa çizgi çizip dönerek kare çizmeyi öğrendik.
+          Biz bu kodu alıp ona isim verebiliriz. draw a square, yani kare çiz. daha
+          sonra ne zaman draw a square bloğunu eklersek ilgili kare çizme fonksiyonunu
+          çağırır. Programlama dilimize yeni bir yetenek eklemiş olduk.
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: 'Ekibinde arabanın bilgilerini toplayan ve yazdığı programlarla aracın
+          performansını nasıl geliştireceğini söyleyen bir bilgisayar mühendisi yoksa,
+          yarışmada  ön elemeden bile geçemezsin. '
       2:
         image: notes/C3_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: Bu bulmacada kalem kullanarak farklı şekiller çizen bir aktör olacaksın.
+          Aktör ne yaparsa arkasında bir çizgi bırakır.
       3:
         image: notes/C3_artist_intro_3.png
-        text: To move around the canvas, you'll use the move forward block. Here the
-          move forward block says move forward by 100 pixels. When we hit run, what
-          happens? The artist moves forward a certain amount and that amount is 100
-          pixels. Pixels are basically very tiny squares on your computer screen.
+        text: Tuvalde ilerlemek için "ileriye" bloğu kullanacaksın. Buradaki blok
+          100 piksel ilerlemeni sağlıyor. Çalıştırdığımız zaman ne oluyor? Aktör 100
+          piksel ilerliyor. Piksel demek ekrandaki minik kare noktalar demektir.
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: Bulmacadaki öteki blok 90 derece sağa dönmeni söylüyor. Artistin ne
+          kadar döneceğine sen karar verebilirsin.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: Bu da 120 derece döner. İlgili kısma tıklayarak piksel uzunluğunu değiştirebilirsin
+          ve ne kadar döneceğini belirleye bilirsin!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: When you put a loop inside of another loop, we call that a nested loop.
-          For example, here we're given the code already to draw one triangle with
-          sides of length 100 pixels using the repeat times block set to three, once
-          for each side of a triangle.
+        text: Bir döngüyü başka bir döngü içine koyduğumuz zaman iç içe döngü oluşturmuş
+          oluruz. Örneğin üçgen çizmek için bir kenarını 100 piksel olarak çizen blokları
+          döngü içine koyarız ve tekrarla içine 3 yazarız. Üçgenin her bir kenarını
+          çizmesi için.
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: But we want to draw six triangles. In order to do that, we're going
-          to take that loop and place it inside of another repeat times block. Pretty
-          cool!
+        text: Fakat 6 üçgen çizmek istiyoruz. bunu yapmak için mevcut tekrarla bloğunu
+          yeni bir tekrarla bloğu içine koyacağız. Çok güzel!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: Bu eğer koşul bloğu. Eğer nektar yada bal bir değerden büyükse, eşitse
+          yada küçükse bir şey yap.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: Bu ne kadar nektar yada bal olduğunu bilmiyorsan faydalı olur. soru
+          işareti bilinmediğini gösteriyor.
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: In this example, we're going to say IF the purple flower has nectar
-          greater than 0, get nectar. That will tell our bee to keep getting nectar
-          as long as it's there. Ta-dah!
+        text: Bu örnekte mor çiçekte Eğer (IF) sıfırdan çok nektar varsa nektar al
+          diyeceğiz. Bu arıya nektar olduğu sürece nektar almasını söylüyor. Da daaa!
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: Have you ever heard of debugging a program? This is the way you figure
-          out what's not working. When you debug code, you identify and remove errors.
+        text: Programlardan hata ayıklamayı hiç duydunuz mu? Neyin çalışmadığını bulmanıza
+          denir. Hata ayıklarken önce hatayı bulursunuz sonra düzeltirsiniz.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: Here we're given a few blocks already in our workplace. We're going
-          to use the step button to walk through the blocks, step by step, to see
-          if this is the right solution and where we may need to fix it.
+        text: "Çalışma alanında zaten bazı bloklar var. Adım adım ilerleyeceğiz ve
+          blokların üzerinden geçeceğiz. Böylece her bir bloğun yapması gerekeni yapıp
+          yapmadığını göreceğiz ve gerekirse düzelteceğiz."
       3:
         image: notes/C3_debugging_bee_3.png
-        text: Looks like there's our problem! We need one more move forward block.
-          The step button helps us debug our problem by identifying where the error
-          is so we can fix it.
+        text: Görünüşe göre bizim problemimiz burada! İlerle bloğundan bir tane daha
+          lazım. Adım düğmesi hatayı bulmamıza yardım eder böylelikle hatayı düzeltiriz.
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: One of the most important concepts in computer science is how to define
-          new commands, how to add your own words to a computer language. Most computer
-          languages have only about one hundred words or commands. The art and magic
-          is in defining your own new words out of these building blocks.
+        text: Bilgisayar Biliminde en önemli kavramlarından biri yeni komut tanımlamadır.
+          Kendi komutunuzu bilgisayar diline ekleyebilirsiniz. Çoğu programlama dillerin
+          yalnızca yaklaşık 100 komutu vardır. Ve gerçekten, işin sırrı bu yapı taşları
+          komutların yanı sıra kendi yeni komutlarını tanımlamadır.
       2:
         image: notes/C3_bee_functions_2.png
-        text: We do this all the time in sports. For example, in basketball, you start
-          by learning how to dribble, how to do a lay-up, how to rebound. Once you've
-          learned these really basic moves, you learn new moves and put together these
-          building blocks, like a pick and roll or give and go. You can then go from
-          there to do more complex plays. Once you learn that play and give it a name,
-          everybody on the team knows how to do it.
+        text: Bunu sporda her zaman yapıyoruz. Örneğin basketbolda nasıl ilerleyeceğimi,
+          nasıl basket atacağımı ve nasıl ribound alacağımı öğreniyorum. Bir defa
+          bu temel hareketleri öğrendikten sonra bu hareketleri birlikte kullanarak
+          yeni hareketler yapıyorum. buradan daha kompleks oyunlara geçebiliyorum.
+          Bir defa hareketi öğrenince ona isim ver ve takımdaki herkes onu yapmayı
+          bilsin.
       3:
         image: notes/C3_bee_functions_3.png
-        text: Similarly once you've taught a computer how to do an action once using
-          these sequences of commands, you can make up your own name for that action
-          so it's easy to repeat it later. When you define your own command and give
-          it a name, that's called a function. Now we're going to use functions to
-          help the bee.
+        text: Benzer şekilde, bilgisayara bir eylemi nasıl yapacağını komutlar kullanarak
+          öğrettin vede bu eyleme kolay hatırlanır bir isim verin. Bu isim daha sonra
+          kolayca aynı eylemi gerçekleştirmek için kullanılabilir. Bu şekilde kendi
+          komutunu tanımlamaya "fonksiyon" denir. Şimdi fonksiyon kullanarak arıya
+          yardım edeceğiz.
       4:
         image: notes/C3_bee_functions_4.png
-        text: In this example, our function is called get 2 nectar, this green block
-          right here. We know what get 2 nectar does by looking at this grey box which
-          is the function definition. If we look inside there, the get 2 nectar is
-          going to get nectar and then get nectar again. Always look at what's inside
-          the grey box so that you know what these green function blocks can do.
+        text: Bu örnekte fonksiyonumuz "get 2 nectar" olarak adlandırılıyor ve iki
+          nektar toplamayı sağlıyor. Ekrandaki yeşil blok. Fonksiyonun içine bakınca
+          "get 2 nectar" fonksiyonunun ne yaptığını görebiliyoruz. Her zaman gri fonksiyon
+          bloğunun içine bakarak yeşil fonksiyon bloğunun ne yaptığını anla.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Now we're going to use nested loops with the bee. We're given some starter
-          code which tells the bee to move forward and get nectar three times and
-          then turn right. Let's take that whole piece of code and nest it inside
-          another repeat block and set to repeat three times. Done!
+        text: "Şimdi biz arı ile iç içe geçmiş döngüleri kullanacağız. İlerleyip üç
+          nektar alan ve sonra sağa dönen kod hazır olarak verilmiş. Bütün o kodu
+          ve diğer tekrarla bloğu içine koyup üç defa tekrarlayalım. Bitti!"
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: You're going to be creating your very own bounce game that you'll be
-          able to share with your friends! How cool!
+        text: "Şimdi kendi bounce oyunun yaratıp arkadaşlarınla paylaşa bileceksin.
+          Harika!"
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow
-          keys on our keyboard.
+        text: Başlamak için kontrolleri klavyedeki ok tuşlarını bağlayacağız.
       3:
         image: notes/C3_bounce_3.png
-        text: We can do this by linking the when left arrow block to the move left
-          block and the when right arrow block to the move right block. Give it a
-          go and you'll be programming your own bounce game in no time!
+        text: Sol ok tuşu ile sola ve sağ ok tuşu ile sağa hareket ettirebilirsin.
+          Haydi yap ve kendi sektirme oyununu programla!
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
@@ -1622,58 +1568,54 @@
           decision gets made.
       2:
         image: notes/C3_maze_conditionals_2.png
-        text: The if block helps the zombie make a decision. It checks something.
-          For example, let's use the block that says if there's a path to the left,
-          and put a turn left command inside it. We're telling the zombie to check
-          its surroundings, see if there's a path on the left and if so, make that
-          turn.
+        text: Eğer bloğu zombinin karar vermesine yardımcı olur. Bir şeyi kontrol
+          eder. Örneğin, eğer bloğunu kullanalım ve eğer sola yol var ise sola dönmesi
+          için sola dön bloğunu eğer bloğu içine yerleştirelim. Zombiye etrafına bakmasını
+          ve eğer sola yol var ise sola dönmesini söylüyoruz.
       3:
         image: notes/C3_maze_conditionals_3.png
-        text: Then we use the move forward block inside this repeat to get it to keep
-          moving forward as long as it just wants to go straight. Then when there's
-          a turn, the if block will tell it to make that turn to the left. You can
-          see that if we do that, if we take the turn to the left and otherwise moving
-          forward, we'll achieve our goal.
+        text: "İlerle bloğunu kadar tekrarla bloğu içine koyduğumuz zaman gitmek istediği
+          sürece ileri gitmesini söylüyoruz. Dönüş olduğunda eğer bloğu kullanarak
+          sola dönüş varsa sola dönmesini sağlıyoruz. Böylece sola yol olduğunda sola
+          dönerek diğer durumlarda ilerleyerek hedefimize ulaşıyoruz."
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: It's an example of using an if statement which is really a fundamental
-          concept in computer programming. One of the first things I learned was how
-          to write a program that played tic-tac-toe. I had if statements to say,
-          ok, if the other person is about to win, go ahead and block that spot. Have
-          fun learning how to use if statements, it's a key concept.
+        text: 'eğer bloğu bilgisayar programlamanın temel konularından biridir. İlk
+          öğrendiğim şeylerden birisi XOX oyununu programlamaktı.  Eğer bloğunu kullanarak
+          eğer bir kişi hamle yaptığında kazanacaksa o hamleyi yapmasını söylemekti.
+          Eğer bloğuyla iyi eğlenceler: çok temel bir kavram.'
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
-        text: In this example, your goal is to get zombie to the sunflower. We could
-          use five move forward blocks or we could tell the computer to move forward
-          and repeat five times using the one repeat block.
+        text: Bu örnekte, hedef zombinin ayçiçeği için elde etmesidir. Beş ilerle
+          bloğu kullanabiliriz ya da bilgisayara tekrarla bloğu içine ilerle koyarak
+          aynı komutu 5 defa tekrarlatabilirsiniz.
       2:
         image: notes/C3_maze_level_4_2.png
-        text: This saves time and makes it way easier. To use it, just put the move
-          forward block inside the repeat block. Hit run and the zombie will move
-          forward five times to the yummy sunflower.
+        text: Bu zamandan tasarruf sağlar ve daha kolay yapar. Kullanmak için sadece
+          ilerle bloğunu tekrarla bloğu içine koy. Çalıştır tuşuna bas ve 5 defa ilerleyerek
+          ayçiçeğine ulaştır.
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: "Şimdiye kadar animasyon yada hikaye yaptığında her çalıştırdığında
+          aynı şeyi yapıyordu. Şimdi etkileşimli bir oyun yapabilirsiniz."
       2:
         image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        text: Denemek için bazı yeni bloklar var. "Oka basıldığında" ve "hareket et"
+          blokları var. Bu blokları kullanarak ok tuşları ile oyuncuyu hareket ettirebilirsiniz.
+          Ayrıca aktörler çarpıştığında yada tıklandığında blokları var. İyi eğlenceler!
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
-        text: This is the song writing lesson. Music is a lot like a computer program.
-          The written notes and words tell the singer exactly what to do. Some parts
-          of music are used over and over again.
+        text: Bu şarkı yazma dersidir. Müzik  bilgisayar programı gibidir. Yazılı
+          notalar ve kelimeler şarkıcıya tam olarak ne yapması gerektiğini söyler.
+          Müzik bazı bölümleri tekrar tekrar kullanılır.
       2:
         image: notes/C3_songwriting_with_parameters_2.png
-        text: We call this the chorus. In a computer program, the parts of the program
-          that are used over and over again are called functions. When you read song
-          lyrics and it says the word chorus, do you sing the word chorus? No, you
-          look at the top of the page to see what words make up the chorus.
+        text: Bu koro diyoruz. Bir bilgisayar programı içinde tekrar tekrar kullanılan
+          programın bazı bölümlere fonksiyon denir. Şarkı sözlerini okurken koro (nakarat)
+          yazıyorsa, koro der misiniz? Hayır, hangi sözler koro (nakarat) olarak tanımlanır.
       3:
         image: notes/C3_songwriting_with_parameters_3.png
         text: In this lesson, you'll learn a silly little song called little bunny
@@ -1685,231 +1627,205 @@
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: This is the conditional block. It says if you're at the flower or the
-          honeycomb, then do something. This is useful when we don't know how much
-          honey or nectar to get as we see here with this question mark.
+        text: Burada eğer bloğu var. Eğer çiçekteysen yada petekteysen birşey yapmasını
+          söylüyor. Ne kadar nektar yada bal olduğunu bilmediğinde kullanışlı bir
+          bloktur. sor işareti ile ne kadar olduğunu bilmediğimizi belirtiyoruz.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: In this example, we're going to say, if it's a flower, get all the nectar
-          and then use another one to say, if it's a honeycomb, make honey. Ta-dah!
+        text: Bu örnekte, eğer çiçekse bal al için eğer bloğunu kullan. Benzer şekilde
+          bir tanesini de eğer petekse bal yapması için kullan. Da daa!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: We have a new block that's called the if/else block. It's a conditional
-          statement just like the if block you've used in the puzzles before. But
-          now there's a new part at the bottom that says else. The if/else block lets
-          the bee make a decision between two sets of actions. If the bee is at a
-          flower, the bee will do the set of actions you put in the first part where
-          it says do. If the bee is not at a flower, the bee will do the set of actions
-          you put in the slot where it says else.
+        text: "Şimdi eğer/değilse isimli yeni bloğumuz var. Bu yeni koşul ifadesi
+          eğer bloğu gibi. Sadece şimdi altta değilse diye yeni bir yol var. eğer/değilse
+          bloğu karar vererek iki işlemden birisini yapmamızı sağlar. Eğer arı çiçekte
+          ise yapacağı işleri \neğer bloğu içine, çiçekte değilse yapacağı işleri
+          değilse içine koyarız.\n"
       2:
         image: notes/C4_conditionals_2.png
-        text: If statements are how computers are able to make decisions. Humans set
-          up conditions for the computer that say if the computer is presented with
-          a certain situation do this. Else, which just means otherwise, do that.
-          The top of our if/else block says if at flower. But the top of our block
-          could say other things, like if nectar equals 2 or if there's a path ahead,
-          our block will behave in the same way. That if the statement at the top
-          is true it will do the first set of actions. But if the statement at the
-          top is false, it will do the second set of actions.
+        text: Eğer blokları bilgisayarın karar vermesini sağlar. İnsanlar bir koşul
+          oluştuğunda ne yapılacağı ile ilgili durumları bilgisayara söyler. Değilse
+          durumu bu koşul oluşmadığında ne yapılacağıdır. Eğer/değilse bloğunun üst
+          kısmı çiçekse diyor. İki nektar varsa yada yol varsa gibi farklı şeylerde
+          diyebilirdi. Eğer bloğundaki ifade doğruysa ilk kısımdaki işleri yap. Eğer
+          yanlışsa değilse kısımındaki işleri yap.
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Tekrarla bloğu kullandığımızda ne kadar yapılacağını bilgisayar nasıl
+          biliyor. Aslında tekrarla bloğu arkada daha karmaşık bir kod saklıyor. Bu
+          kod başlangıç değerinden bitiş değerine kadar belirli bir seri ile sayıyor.
       2:
         image: notes/C4_for_loops_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: "Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her
+          sayışın da içindeki kodu çalıştırıyor.  For (Şununla tekrarla) döngüleri
+          ne kadar çalışacağını içindeki değişkenle biliyor. Önce değişken ilk değere
+          ayarlanıyor ve her seferinde artırılarak döngü çalıştırılıyor. Değişken
+          bitiş değerinden büyük olunca çalıştırma sonlanıyor."
       3:
         image: notes/C4_for_loops_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Gerçek bir For (şununla tekrarla) döngüsü sayaç değişkenini gerçekten
+          göre bilmeni ve kodun içinde kullanmayı sağlar. Örneğin, bir sıra çiçeğin
+          varsa ve ilkinde bir tane ikincisinde 2 tane ve üçüncüsünde 3 tane nektar
+          varsa sayaç değerini kullanabilirsiniz. Sayaç kadar nektar toplayabilirsin.
+          İlkinde bir tane ikincisinde iki ve üçüncüde üç.sayaç
       4:
         image: notes/C4_for_loops_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: Ayrıca şununla say döngüsü içinde birer birer değil farklı da sayabilirsin.
+          İkişer, dörder sayabilirsin. Hatta her seferinde farklı sayıda sayabilirsin.
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Tekrarla bloğu kullandığımızda ne kadar yapılacağını bilgisayar nasıl
+          biliyor. Aslında tekrarla bloğu arkada daha karmaşık bir kod saklıyor. Bu
+          kod başlangıç değerinden bitiş değerine kadar belirli bir seri ile sayıyor.
       2:
         image: notes/C4_for_loops_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: "Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her
+          sayışın da içindeki kodu çalıştırıyor.  For (Şununla tekrarla) döngüleri
+          ne kadar çalışacağını içindeki değişkenle biliyor. Önce değişken ilk değere
+          ayarlanıyor ve her seferinde artırılarak döngü çalıştırılıyor. Değişken
+          bitiş değerinden büyük olunca çalıştırma sonlanıyor."
       3:
         image: notes/C4_for_loops_bee_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Gerçek bir For (şununla tekrarla) döngüsü sayaç değişkenini gerçekten
+          göre bilmeni ve kodun içinde kullanmayı sağlar. Örneğin, bir sıra çiçeğin
+          varsa ve ilkinde bir tane ikincisinde 2 tane ve üçüncüsünde 3 tane nektar
+          varsa sayaç değerini kullanabilirsiniz. Sayaç kadar nektar toplayabilirsin.
+          İlkinde bir tane ikincisinde iki ve üçüncüde üç.sayaç
       4:
         image: notes/C4_for_loops_bee_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: Ayrıca şununla say döngüsü içinde birer birer değil farklı da sayabilirsin.
+          İkişer, dörder sayabilirsin. Hatta her seferinde farklı sayıda sayabilirsin.
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Tekrarla bloğu kullandığımızda ne kadar yapılacağını bilgisayar nasıl
+          biliyor. Aslında tekrarla bloğu arkada daha karmaşık bir kod saklıyor. Bu
+          kod başlangıç değerinden bitiş değerine kadar belirli bir seri ile sayıyor.
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running. The benefit of using a real for loop
-          instead of the repeat block is that you can actually see the counter variable
-          and use it in your loop.
+        text: "Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her
+          sayışın da içindeki kodu çalıştırıyor. For (Şununla tekrarla) döngüleri
+          ne kadar çalışacağını içindeki değişkenle biliyor. Önce değişken ilk değere
+          ayarlanıyor ve her seferinde artırılarak döngü çalıştırılıyor. Değişken
+          bitiş değerinden büyük olunca çalıştırma sonlanıyor. Tekrarla döngüsü yerine
+          şununla say döngüsü kullanmanın faydası döngü değişkenini görmendir."
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
-        text: Now that you've edited function blocks, it's time to create a new function
-          block from scratch. It's really simple. You'll see the toolbox has a category
-          called functions. If you click on this, you'll see an orange button called
-          create a function. Clicking on this brings up the function editor that you've
-          already used to edit existing function blocks.
+        text: Fonksiyon bloklarının içini yazmayı öğrenmiştiniz. Şimdi baştan yeni
+          fonksiyon yazmayı öğreneceğiz. Araç kutumuzda fonksiyon diye bölüm var.
+          buna tıkladığınızda bir fonksiyon oluştur düğmesi göreceksin. Bu düğmeye
+          basmak yeni bir fonksiyon bloğu getirecektir.
       2:
         image: notes/C4_function_create_2.png
-        text: Just like before, you started by naming your function, writing down
-          a description for what the function is supposed to do. For instance, it's
-          supposed to draw a square or draw a triangle and then drag blocks from the
-          toolbox into the white work space below. Remember to drag these blocks inside
-          the green wrapping block for the function.
+        text: Daha önce olduğu gibi fonksiyonuna isim vereceksin, ne yaptığını yazacaksın.
+          Örneğin kare çiz, üçgen çiz gibi. sonra blokları alttaki beyaz bölüme sürükleyeceksin.
+          Bu blokları yeşil çerçeve içine sürükle.
       3:
         image: notes/C4_function_create_3.png
-        text: Once you're done, click on save and exit. This will take you back to
-          the main puzzle work space. The new function you created will show up as
-          a green block in the function category in your toolbox. Drag and drop this
-          into the main work space and use it like any other block to solve the puzzle.
+        text: Bir kez bitirdikten sonra kaydet ve çık. Bu sizi ana çalışma alanına
+          götürecektir. Yeni fonksiyon araç kutunda fonksiyon bölümünde olacaktır.
+          Bunu diğer bloklar gibi sürükleyerek kullanabilir ve bulmacayı çözebilirsin.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Bilgisayar programlamanın harika yönlerinden birisi bilgisayara bir
+          işi yapmayı bir defa öğretirsen bu öğrettiğin şeyi defalarca tekrar kullanabilirsin.
+          Buna fonksiyon denir. Bir isim verirsin ve tekrar tekrar çağırırsın. Böylece
+          yeni bir blok oluşturmuş olursun.
       2:
         image: notes/C4_function_edit_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code and it will get
-          done for us. We've added that concept to our programming language.
+        text: Yazdığımız programda dört defa çizgi çizip dönerek kare çizmeyi öğrendik.
+          Biz bu kodu alıp ona isim verebiliriz. draw a square, yani kare çiz. daha
+          sonra ne zaman draw a square bloğunu eklersek ilgili kare çizme fonksiyonunu
+          çağırır. Programlama dilimize yeni bir yetenek eklemiş olduk.
       3:
         image: notes/C4_function_edit_3.png
-        text: In this puzzle, we have already created a draw a square function for
-          you. You'll see it in the toolbox as a green block. What you'll need to
-          do is write the same code you wrote before to draw a square and put it in
-          this function. To do that, click on the edit option in the green draw a
-          square block. This will open up the function editor. The function editor
-          has three parts. A place where you name your function. This will appear
-          on the green block before that function. Then write out a short description
-          of what your function is supposed to do.
+        text: 'Bu bulmacada biz kare çiz fonksiyonunu (draw a square) sizin için yazdık.
+          Yeşil blok olarak araç kutunda göreceksin. Şimdi daha önce yazdığın kodu
+          bu fonksiyonu kullanarak yazacaksın. Bunun için draw a square fonksiyonu
+          içindeki düzenle düğmesine bas. Bu fonksiyon düzenleyici açar. Fonksiyon
+          düzenleyici üç parçadan oluşur. İsim verdiğin parça. Sonra açıklama yazdığın
+          bölüm ve en altta fonsiyon kodu yazman gereken bölüm. '
       4:
         image: notes/C4_function_edit_4.png
-        text: In this case, it's supposed to draw a square. The white space below
-          this is the work space and works just like the work space you've already
-          been using. Drag and drop blocks from the toolbox into this work space.
-          Remember to put the blocks that create a square inside the green wrapping
-          block for the function. Once you're done, click on save and exit. This will
-          take you back to the main puzzle work space. Now you can use the draw the
-          square function block just like any other block to solve the puzzle.
+        text: Bu durumda, bunun bir kare çizmesi gerekiyor. Bunun altındaki beyaz
+          alan fonksiyon çalışma alanıdır ve zaten kullandığın çalışma alanı gibi
+          kullanabilirsin. Bu çalışma alanı içine ara kutusundan blok sürükle ve bırak.
+          Bir kare fonksiyonu oluşturmak için gerekli blokları yerleştirmeyi unutmayın.
+          Bitirdiğinde sakla düğmesine bas ve çık. Yeni fonksiyon araç kutunda fonksiyon
+          bölümünde olacaktır. Bunu diğer bloklar gibi sürükleyerek kullanabilir ve
+          bulmacayı çözebilirsin.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: Here's a function that draws a square with 50 pixel sides. That's great
-          but what if I wanted to draw a square with sides 50 pixels and another square
-          with sides of 100 pixels? We shouldn't have to make two separate functions
-          that do almost the same thing. Instead, we can use one function with a parameter.
+        text: "İşte 50 piksel kenarlara sahip bir kare çizen bir fonksiyon. Bu harika
+          ama eğer bir kenarı 50 piksel olan bir kare ve 100 piksel olan başka bir
+          kare çizmek istedin? Hemen hemen aynı şeyi yapmak iki ayrı fonksiyon yazmak
+          zorunda olmamalıyız. Bunun yerine, bir parametre kullanan fonksiyon kullanabilirsiniz."
       2:
         image: notes/C4_function_parameters_2.png
-        text: Parameters allow us to pass values into a function that get used as
-          variables inside the function. Let's try adding a parameter called like
-          to this function so we can use it to create squares of different sizes.
-          In the function editor, you can edit the name and description like before
-          but now you can also add a parameter. Write the name of your parameter in
-          the space and click Add Parameter. This will create a red block with the
-          name of the parameter you just created. Now we can replace the move forward
-          by 100 block with the parameter Length so it will move forward by Length.
+        text: "Parametreler fonksiyonu içinde kullanılan değişkenleri fonksiyon içine
+          geçirmek için kullanılır. Farklı boyutlarda kareler oluşturmak için bu fonksiyona
+          bir parametre eklemeyi deneyelim. Fonksiyon Düzenleyicisi'nde adı düzenleyebilirsiniz
+          ve açıklama girebilirsiniz. Ama şimdi bir de parametre ekleyebilirsiniz.
+          Boşluğa, parametrenin adını yazın ve parametre Ekle'yi tıklatın. Bu yeni
+          oluşturduğunuz parametre adı ile kırmızı bir blok oluşturur. \nŞimdi ileriye
+          100 ilerle bloğu içinde boyut parametresini kullanabilirsin.\n"
       3:
         image: notes/C4_function_parameters_3.png
-        text: Click save and close and drag out your new create a square block from
-          the functions category in the toolbox. You'll notice there's an empty space
-          next to length because the function wants to know what value the parameter
-          Length should have. Drag a number block from the Math category and place
-          it in this space. See how you can use the function again and again with
-          different lengths to make squares of different sizes? Try it for yourself!
+        text: Kaydet ve Kapat'ı tıklatın ve araç kutusunun işlevler kategorisinde
+          gelen bir kare blok oluşturmak yeni dışarı sürükleyin. Fonksiyonda kenar
+          uzunluğunu soran bir boşluk var. Matematik kategorisinden bir sayı bloğunu
+          sürükleyin ve bu alana yerleştirin. Tekrar tekrar farklı uzunluktaki farklı
+          boyutlarda kareler yapmak için kullanabileceğiniz fonksiyonu görüyor musun?
+          Haydi deneyin!
     C4_intro:
       1:
         image: notes/C4_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: Normalde kodlama yazı yazarak yapılıyor fakat biz burada blokları kullanacağız.
+          Görsel olarak blokları sürükleyip birbirine bağlayarak kod yazacaksınız.
+          Alt tarafta kod yazmış oluyoruz. Başlangıç olarak Kızgın kuşun ilerleyip
+          yumurtasını çalan kötü domuzcuğa ulaşmasını sağlayacağız.
       2:
         image: notes/C4_intro_2.png
-        text: Blockly is split into three main parts. On the left is the bird's maze,
-          where your program will run. The instructions for each level are written
-          below the maze. This middle area is the toolbox and each of these blocks
-          is a command that the bird can understand. The white space on the right
-          is called the workspace and this is where we'll build our program.
+        text: "Çalışma alanı üç bölgeye ayrılmıştır. Soldaki kodun çalışacağı labirenttir.
+          Ne istendiğiyle ilgili bilgiler labirentin altındadır. Ortadaki bölge araç
+          kutusudur. Buradaki her komuta kuş anlar ve yapar. Sağdaki boş bölge çalışma
+          alanı olarak söylenir ve buraya programını yazarsın."
       3:
         image: notes/C4_intro_3.png
-        text: If I drag the move block to our work space and press "run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: "İlerle bloğunu çalışma alanına sürükleyip Çalıştır düğmesine basınca
+          ne olur? Kuş bir adım ilerler. Bir adım daha ilerlemesi için ne yapmalıyız?
+          Bir ilerle bloğu daha ekleyebilirim."
       4:
         image: notes/C4_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Sağa dön bloğunu çalışma alanına sürükleyip ilerle bloğunu antına kadar
+          getireceğim ve sarı okun gözükene kadar ilerleteceğim. bıraktığımda iki
+          blok birleşmiş olur. Çalıştır tuşuna tekrar basacağım. Kuş programdaki adımları
+          üstten alta doğru sırayla yapacak.
       5:
         image: notes/C4_intro_5.png
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it to the trash can. After you've hit run, you can always hit the reset
-          button to get the bird back to the start. Now let's get those pigs!
+        text: Bir bloğu silmek isterseniz sürükleyin ve çöp kutusuna bırakın. Çalıştır
+          tuşu ile çalıştırdıktan sonra yeniden başla tuşu ile tekrar başlayabilirsin.
+          Şimdi domuzcuğu yakalayalım!
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
-        text: If I want to draw a rectangle 50 pixels tall and that is twice as wide
-          as it is tall, how would I program the computer to do that? Well, I could
-          tell the artist to go up fifty, turn right, and then go over 100 and move
-          the whole thing twice. But then I'm doing the math for the computer.
+        text: 50 piksel yüksekliğinde bir dikdörtken istiyorum. Boyuda yüksekliğin
+          iki katı olsun. Bunu bilgisayara nasıl programlarım? Sanatçı 50 git sağa
+          dön ve, sonra 100 git diyorum. sonra bunu tekrarlıyorum. Ama bilgisayar
+          için matematik yapıyorum.
       2:
         image: notes/C4_math_artist_2.png
-        text: Multiplying fifty by two in your head may not that hard but computers
-          are really good at doing math so we should leave it to them whenever possible.
-          If I just used a variable called height instead, then I could easily change
-          height to fifty and then change my algorithm to tell the artist to go up
-          by height, turn right and then go over by height times 2, which gives us
-          a rectangle that is twice as wide as it is tall.
+        text: Elli çarpı iki sonucunu kafadan bulmak kolay olabilir fakat mümkün olan
+          her durumda bu tür hesapları bilgisayara bırakmanız gerekir çünkü bilgisayarlar
+          matematiği gerçekten çok iyi yapıyor. Eğer sadece yükseklik diye parametre
+          varsa, yukarı 50 piksel gidip yüksekliğiyaıp genişlikte yüksekliğin iki
+          katı kadar gidebilirim.
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
@@ -2076,31 +1992,30 @@
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
-        text: A variable is a container you can store a value in. When you use that
-          variable in an algorithm, it opens up the container and looks at the value
-          inside. This lets you write smarter algorithms that behave differently depending
-          on the value stored in the variable.
+        text: Değişkenler içinde değer sakladığınız bir alandır. Bu değişkeni algoritma
+          içinde kullandığınız zaman değişkenin saklandığı alan açılır ve içindeki
+          değer kullanılır. Bu size değişkenini içindeki değere göre farklı çalışabilen
+          daha akıllı algoritmalar yazma olanağı tanır.
       2:
         image: notes/C4_variables_artist_2.png
-        text: For example, if you wanted to write an algorithm to say Happy birthday,
-          you're turning 10! to my little brother, that's great now but when I run
-          it next year I'd want it to say, Happy birthday, you're turning 11! I could
-          create a variable called age to store my brother's age and write my algorithm
-          to say Happy birthday, you're turning 'age' instead. Because variable can
-          change, every year I can update the variable 'age' to equal 'age' plus 1.
+        text: Örneğin eğer doğum günü kutlamak için bir algoritma yazma isteseniz
+          ve "İyi ki doğdun küçük kardeşim, 10 yaşına girdin" yazdınız harika oldu
+          fakat gelecek yıl 11 olacak yine yeni mesaj yazacaksınız. Bunun yerine kardeşinizin
+          yaşı için bir değişken kullanabilirsiniz ve "İyi ki doğdun küçük kardeşim
+          `yaş`yaşına girdin" diyebilirsiniz Çünkü yaş değişkeni her yıl bir artacak
+          bunu yaş=yaş+1 yapabileceksiniz.
       3:
         image: notes/C4_variables_artist_3.png
-        text: In this puzzle, we're going to be using a variable that will set the
-          length of the line our artist draws. Later on in our code, the move forward
-          block will look at that length variable to see what value you've set it
-          to.
+        text: Bu bulmacada sanatçının çizeceği çizginin boyunu belirlemek için length(uzunluk)
+          değişkenini kullanacağız. Kodumuzda ilerle bloğu length değişkenine bakacak
+          içindeki değeri görecek.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
-        text: A variable is a container that you can store a value in. When you use
-          that variable in an algorithm, it opens up the container and looks at the
-          value inside. This lets you write smarter algorithms that behave differently
-          depending on the value stored in the variable.
+        text: Değişkenler içinde değer sakladığınız bir alandır. Bu değişkeni algoritma
+          içinde kullandığınız zaman değişkenin saklandığı alan açılır ve içindeki
+          değer kullanılır. Bu size değişkenini içindeki değere göre farklı çalışabilen
+          daha akıllı algoritmalar yazma olanağı tanır.
       2:
         image: notes/C4_variables_playlab_2.png
         text: Now you're going to try playlab where you are given different games

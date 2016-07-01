@@ -28,10 +28,10 @@
   };
 
   /** @type {Packet} */
-  var packet = new Packet(packetSpec, packetBinary);
+  var packet = new Packet(locals.packetSpec, locals.packetBinary);
 
   /** @type {Packet.HeaderType[]} */
-  var headerFields = packetSpec;
+  var headerFields = locals.packetSpec;
 
   var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
   var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
@@ -44,7 +44,7 @@
   */
 
   function isEncodingEnabled(queryEncoding) {
-    return enabledEncodingsHash[queryEncoding] === true;
+    return locals.enabledEncodingsHash[queryEncoding] === true;
   }
 
   /**
@@ -53,15 +53,15 @@
   function getOneLinePacketSummary() {
     var messageBinary = packet.getBodyAsBinary();
     if (isEncodingEnabled(EncodingType.ASCII)) {
-      return binaryToAscii(messageBinary, chunkSize);
+      return binaryToAscii(messageBinary, locals.chunkSize);
     } else if (isEncodingEnabled(EncodingType.DECIMAL)) {
-      return alignDecimal(binaryToDecimal(messageBinary, chunkSize));
+      return alignDecimal(binaryToDecimal(messageBinary, locals.chunkSize));
     } else if (isEncodingEnabled(EncodingType.HEXADECIMAL)) {
-      return formatHex(binaryToHex(messageBinary), chunkSize);
+      return formatHex(binaryToHex(messageBinary), locals.chunkSize);
     } else if (isEncodingEnabled(EncodingType.BINARY)) {
-      return formatBinary(messageBinary, chunkSize);
+      return formatBinary(messageBinary, locals.chunkSize);
     } else if (isEncodingEnabled(EncodingType.A_AND_B)) {
-      return formatAB(binaryToAB(messageBinary), chunkSize);
+      return formatAB(binaryToAB(messageBinary), locals.chunkSize);
     }
     return messageBinary;
   }
@@ -100,7 +100,7 @@
     var packetCount = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_COUNT) : '';
     var message = packet.getBodyAsBinary();
   %>
-  <% if (isMinimized) { %>
+  <% if (locals.isMinimized) { %>
       <div class="minimized-packet single-line-with-ellipsis user-data">
         <i class="fa fa-plus-square expander"></i>
         <%= getOneLinePacketSummary() %>
@@ -135,7 +135,7 @@
               x: binaryToInt(packetIndex),
               y: binaryToInt(packetCount)
             }),
-            binaryToAscii(message, chunkSize));
+            binaryToAscii(message, locals.chunkSize));
 
         logRowIfEncodingEnabled(EncodingType.DECIMAL,
             binaryToAddressString(toAddress),
@@ -144,7 +144,7 @@
               x: binaryToInt(packetIndex),
               y: binaryToInt(packetCount)
             }),
-            alignDecimal(binaryToDecimal(message, chunkSize)));
+            alignDecimal(binaryToDecimal(message, locals.chunkSize)));
 
         logRowIfEncodingEnabled(EncodingType.HEXADECIMAL,
             binaryToHex(toAddress),
@@ -153,19 +153,19 @@
               x: binaryToHex(packetIndex),
               y: binaryToHex(packetCount)
             }),
-            formatHex(binaryToHex(message), chunkSize));
+            formatHex(binaryToHex(message), locals.chunkSize));
 
         logRowIfEncodingEnabled(EncodingType.BINARY,
             formatBinaryForAddressHeader(toAddress, 4),
             formatBinaryForAddressHeader(fromAddress, 4),
             formatBinary(packetIndex + packetCount, level.packetCountBitWidth),
-            formatBinary(message, chunkSize));
+            formatBinary(message, locals.chunkSize));
 
         logRowIfEncodingEnabled(EncodingType.A_AND_B,
             binaryToAB(toAddress),
             binaryToAB(fromAddress),
             formatAB(binaryToAB(packetIndex + packetCount), level.packetCountBitWidth),
-            formatAB(binaryToAB(message), chunkSize));
+            formatAB(binaryToAB(message), locals.chunkSize));
        %>
       </tbody>
     </table>

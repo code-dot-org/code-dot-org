@@ -831,7 +831,7 @@ it:
         text: "I programmatori usano moltissimo il debug per trovare e correggere eventuali errori nei loro algoritmi o codici. Esistono diversi metodi per rintracciare gli errori. Uno dei più semplici è quello di controllare l'algoritmo passaggio dopo passaggio fino a trovare il problema, e risolverlo."
       4:
         image: notes/C2_relay_programming_4.png
-        text: "Here, I'm trying to do a back handspring, but I keep falling off. I walk through each part, step by step, and realize where my mistake was. My coach showed me I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position, and I stuck it! I was really glad I debugged my back  handspring. We figured it out! Debugging is finding and fixing problems. Nice, good job!"
+        text: "Qui, sto cercando di fare un salto mortale all'indietro, ma continuo a cadere. Rieprcorro ogni momento, passo dopo passo, e mi rendo conto di quale sia stato il mio errore. Il mio allenatore mi ha mostrato che non stavo mettendo le mani sulla trave in modo corretto. Così ho provato un altro salto mortale all'indietro sulla trave con una nuova posizione della mano, e ce l'ho fatta! Sono stato davvero felice di aver corretto gli errori [debug] del mio salto mortale all'indietro. L'abbiamo capito! Debug è trovare e risolvere i problemi. Bello, buon lavoro!"
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
@@ -854,10 +854,11 @@ it:
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: "Una delle cose più utili della programmazione è che una volta che hai insegnato ad un computer come fare un'azione, puoi richiamare nuovamente quella funzione (FUNCTION). Le dai un nome e dopo puoi richiamarla. È proprio come ampliare il linguaggio."
+        text: |-
+          Una delle cose più utili della programmazione è che una volta che hai insegnato ad un computer come fare un'azione, puoi richiamare nuovamente quella "funzione" (<i>function</i>). Le dai un nome e dopo puoi richiamarla. È proprio come ampliare il linguaggio.
       2:
         image: notes/C3_artist_functions_2.png
-        text: 'Nel programma che hai costruito, hai imparato come disegnare un quadrato avanzando e poi girando per quattro volte. Puoi prendere quella funzione e darle un nome, ad esempio "disegna un quadrato", in modo tale che ogni volta che vorrai farlo, potrai semplicemente dire "disegna un quadrato" e il computer richiamerà la stessa funzione, eseguendo sempre quello stesso codice. Hai aggiunto quel concetto al tuo linguaggio di programmazione.'
+        text: 'Nel programma che hai costruito, hai imparato come disegnare un quadrato avanzando e poi girando per quattro volte. Puoi prendere quella funzione e darle un nome, ad esempio "disegna un quadrato" (<i>draw a square</i>), in modo tale che ogni volta che vorrai farlo, potrai semplicemente dire "disegna un quadrato" e il computer richiamerà la stessa funzione, eseguendo sempre quello stesso codice. Hai aggiunto quel concetto al tuo linguaggio di programmazione.'
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
@@ -969,7 +970,8 @@ it:
         text: "Quando vedi un film, ogni secondo del film sono 24 immagini individuali, le chiamiamo fotogrammi. Ognuna di queste immagini dev'essere creata, raffigurata ed unita insieme alle altre. Io e il mio gruppo, siamo tutti sviluppatori di software. Lavoriamo tutti insieme per creare un pezzo del software che crea realmente un' immagine, crea l'immagine finale che vedi sullo schermo. E' uno strumento che gli artisti ed altri sviluppatori possono usare come parte del loro lavoro di gruppo e del loro processo per essere in grado di creare le immagini che vogliono sullo schermo."
       4:
         image: notes/C3_crowdsourcing_4.png
-        text: "For example, in Finding Nemo, when Crush and Squirt and all their friends are flying through the East Australian Current. You're seeing images of water flowing by, you're seeing the colors on the back of the turtle, you're seeing the sides of the fish. All of those things are generated through math and computer programs that we write, that we then give to the artist and they take that to create that final image and tweak it and make it look beautiful and look fun."
+        text: |-
+          Ad esempio, in "Alla ricerca di Nemo", quando Crush, Squirt e tutti i loro amici stanno volando attraverso la corrente australiana orientale, si vede un flusso d'acqua che scorre, si vedono i colori sulla parte posteriore della tartaruga, si vedono i lati del pesce. Tutte queste cose vengono generate grazie alla matematica e ai programmi informatici che scriviamo, dati al creativo al fine di creare l'immagine finale e modificarla in modo che sembri bella e divertente.
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
@@ -982,7 +984,7 @@ it:
         text: Tutto ciò che facciamo ogni giorno richiede un algoritmo, una lista di passaggi da seguire per portare a termine un lavoro. Pensa a ciò che fai per prepararti per andare a scuola o pianificare una bella giornata con gli amici o preparare uno spuntino. Per completare quasiasi di queste cose, devi dividerle in piccoli passaggi e qualche volta, questi passaggi, devono seguire un ordine specifico.
       4:
         image: notes/C3_dice_race_4.png
-        text: Pensa a come si fa un panino. Non importa quali ingredienti metti prima. Ma non puoi spalmare la marmellata prima di aver aperto il barattolo. I computer hanno bisogno di algoritmi e programmi per fargli capire come fare cose cui noi non dovremmo neanche pensaci.
+        text: Pensa a come si fa un sandwich. Non importa quali ingredienti metti prima. Ma non puoi spalmare la marmellata prima di aver aperto il barattolo. I computer hanno bisogno di algoritmi e programmi per fargli capire come fare cose cui noi non abbiamo bisogno di pensare.
       5:
         image: notes/C3_dice_race_5.png
         text: "Un algoritmo è il pensiero che sta dietro a ciò che succede, mentre il programma è l'effettiva istruzione data al computer per farlo funzionare. Un algoritmo deve essere tradotto in un programma prima che un computer possa eseguirlo. Scomporre una mansione in passaggi, tuttavia, è a volte difficile. Ma come per ogni cosa, con la pratica si può migliorare."
@@ -997,7 +999,7 @@ it:
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: "This lesson is functional suncatchers. You'll be creating these pretty suncatchers using functions. There are several steps in creating one of these suncatchers. Some of the steps you have to repeat many times."
+        text: Questa lezione è funzionale alla creazione di cristalli multicolore. Sono immagini carine che si creano usando funzioni. Ci sono diversi passaggi nella creazione di uno di questi cristalli. Alcuni dei passaggi vanno ripetuti diverse volte.
       2:
         image: notes/C3_functional_suncatchers_2.png
         text: Il primo passo è semplificare il processo per creare un cattura sole è capire cosa dobbiamo far ripetere di continuo. Possiamo raggruppare questi passi in ciò che chiamiamo funzione.
@@ -1006,7 +1008,7 @@ it:
         text: "Ma c'è di più per creare un magnifico cattura sole che seguire dei passi precisi. A volte vogliamo essere creativi e cambiare il colore delle cose che stiamo usando. Possiamo creare ogni cattura sole uno diverso dall'altro se usiamo per ciascuno colori diversi."
       4:
         image: notes/C3_functional_suncatchers_4.png
-        text: Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!
+        text: 'Il tuo suncatcher sarà proprio tuo solo quando imparerai a pensare alle perle come variabili: tale parola indica un segnaposto destinato per informazioni che possono cambiare. Divertiti a creare belle Giveaway utilizzando funzioni e variabili!'
     C3_internet:
       1:
         image: notes/C3_internet_1.png
@@ -1134,10 +1136,8 @@ it:
           Ora che hai modificato i blocchi funzione, è arrivato il momento di provare a creare un nuovo blocco funzione partendo da zero. È davvero semplice. Guarda nella cassetta degli attrezzi: c'è una categoria chiamata "Funzioni" (Functions). Cliccandoci sopra visualizzi il blocco "Crea un funzione". Se lo clicchi si apre l'editor che hai già usato per modificare un blocco funzione già esistente.
       2:
         image: notes/C4_function_create_2.png
-        text: |
-          Proprio come prima, inizia dando un nome alla tua funzione e subito dopo scrivi una descrizione di cosa la funzione dovrebbe fare, per esempio, se serve per disegnare un quadrato o un triangolo. Infine trascina i blocchi che ti servono dalla cassetta degli attrezzi all'area di lavoro ("workspace"), ossia lo spazio bianco più in basso. Ricordati di posizionare i blocchi all'interno del blocco verde della funzione.
-          
-          https://studio.code.org/s/course4/stage/14/puzzle/2
+        text: |-
+          Proprio come prima, inizia dando un nome alla tua funzione e subito dopo scrivi una descrizione di cosa la funzione dovrebbe fare, per esempio, se serve per disegnare un quadrato o un triangolo. Infine trascina i blocchi che ti servono dalla cassetta degli attrezzi all'area di lavoro ("workspace"), ossia lo spazio bianco più in basso. Ricordati di inserirli all'interno del blocco verde della funzione.
       3:
         image: notes/C4_function_create_3.png
         text: |-
@@ -1145,18 +1145,19 @@ it:
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: "Una delle cose più utili della programmazione è che una volta che hai insegnato ad un computer come fare un'azione, puoi richiamare nuovamente quella funzione (FUNCTION). Le dai un nome e dopo puoi richiamarla. È proprio come ampliare il linguaggio."
+        text: |-
+          Una delle cose più utili della programmazione è che una volta che hai insegnato ad un computer come fare un'azione, puoi richiamare nuovamente quella "funzione" (<i>function</i>). Le dai un nome e dopo puoi richiamarla. È proprio come ampliare il linguaggio.
       2:
         image: notes/C4_function_edit_2.png
-        text: 'Nel programma che hai costruito, hai imparato come disegnare un quadrato avanzando e poi girando per quattro volte. Puoi prendere quella funzione e darle un nome, ad esempio "disegna un quadrato" (draw a square), in modo tale che ogni volta che vorrai farlo, potrai semplicemente dire "disegna un quadrato" e il computer richiamerà la stessa funzione, eseguendo sempre quello stesso codice. Hai aggiunto quel concetto al tuo linguaggio di programmazione.'
+        text: 'Nel programma che hai costruito, hai imparato come disegnare un quadrato avanzando e poi girando per quattro volte. Puoi prendere quella funzione e darle un nome, ad esempio "disegna un quadrato" (<i>draw a square</i>), in modo tale che ogni volta che vorrai farlo, potrai semplicemente dire "disegna un quadrato" e il computer richiamerà la stessa funzione, eseguendo sempre quello stesso codice. Hai aggiunto quel concetto al tuo linguaggio di programmazione.'
       3:
         image: notes/C4_function_edit_3.png
         text: |-
-          In questo esercizio, trovi già pronta nella cassetta degli attrezzi il blocco funzione "disegna un quadrato" (draw a square). L'abbiamo creato noi per te, è un blocco verde, ma è vuoto. Ciò che devi fare è scrivere lo stesso codice che hai già scritto per disegnare un quadrato e metterlo in questa funzione. Per farlo, clicca sul pulsante blu "modifica". Questo ti aprirà l'editor della funzione che è suddiviso in tre parti. Una parte in alto in cui puoi dare un nome alla funzione. Poi c'è una parte centrale in cui puoi descrivere brevemente cosa dovrebbe fare la funzione.
+          In questo esercizio, trovi già pronta nella cassetta degli attrezzi il blocco funzione "disegna un quadrato" (<i>draw a square</i>). L'abbiamo creato noi per te, è un blocco verde, ma è vuoto. Ciò che devi fare è scrivere lo stesso codice che hai già scritto per disegnare un quadrato e metterlo in questa funzione. Per farlo, clicca sul pulsante blu "modifica" (<i>edit</i>). Questo ti aprirà l'editor della funzione che è suddiviso in tre parti. Una parte in alto in cui puoi dare un nome alla funzione. Poi c'è una parte centrale in cui puoi descrivere brevemente cosa dovrebbe fare la funzione.
       4:
         image: notes/C4_function_edit_4.png
         text: |-
-          In questo caso, la funzione dovrebbe disegnare un quadrato. La parte bianca al di sotto della descrizione è l'area di lavoro e funziona esattamente come l'area di lavoro che stai già usando. Puoi prendere i blocchi dalla cassetta degli attrezzi e spostarli in quest'area di lavoro. Ricordati di mettere i blocchi che creano un quadrato all'interno del blocco verde della funzione. Quando hai finito clicca su "Chiudi". In questo modo ritorni all'area di lavoro dell'esercizio. Ora, per risolvere l'esercizio, puoi usare il blocco funzione "disegna un quadrato" (draw a square) proprio come qualunque altro blocco.
+          In questo caso, la funzione dovrebbe disegnare un quadrato. La parte bianca al di sotto della descrizione è l'area di lavoro e funziona esattamente come l'area di lavoro che stai già usando. Puoi prendere i blocchi dalla cassetta degli attrezzi e spostarli in quest'area di lavoro. Ricordati di mettere i blocchi che creano un quadrato all'interno del blocco verde della funzione. Quando hai finito clicca su "Chiudi" (<i>Close</i>). In questo modo ritorni all'area di lavoro dell'esercizio. Ora, per risolvere l'esercizio, puoi usare il blocco funzione "disegna un quadrato" (<i>draw a square</i>) proprio come qualunque altro blocco.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
@@ -1164,11 +1165,11 @@ it:
       2:
         image: notes/C4_function_parameters_2.png
         text: |-
-          I parametri ti permettono di passare ad una funzione dei valori che vengono utilizzati come variabili all'interno della funzione stessa. Aggiungi a questa funzione un parametro chiamato "Lunghezza" ("Length") da utilizzare per creare quadrati di diverse dimensioni. Nell'editor della funzione, come abbiamo già visto, puoi modificare il nome e la descrizione della funzione, ma puoi anche aggiungere un parametro. Scrivi il nome del parametro nello spazio a sinistra del pulsante "Aggiungi un parametro" e poi clicca sul pulsante. In questo modo viene creato un blocco rosso con il nome del parametro che hai appena creato. Ora nel blocco "vai avanti ..." (move forward ...) puoi inserire il blocco "Lunghezza" in modo tale da andare avanti di "Lunghezza” pixel.
+          I parametri ti permettono di passare ad una funzione dei valori che vengono utilizzati come variabili all'interno della funzione stessa. Aggiungi a questa funzione un parametro chiamato "Lunghezza" ("<i>Length</i>") da utilizzare per creare quadrati di diverse dimensioni. Nell'editor della funzione, come abbiamo già visto, puoi modificare il nome e la descrizione della funzione, ma puoi anche aggiungere un parametro. Scrivi il nome del parametro nello spazio a sinistra del pulsante "Aggiungi un parametro" e poi clicca sul pulsante. In questo modo viene creato un blocco rosso con il nome del parametro che hai appena creato. Ora nel blocco "vai avanti ..." (<i>move forward</i> ...) puoi inserire il blocco "Lunghezza" in modo tale da andare avanti di "Lunghezza” pixel.
       3:
         image: notes/C4_function_parameters_3.png
         text: |-
-          Quando hai finito, clicca su "Chiudi" per salvare le modifiche. Puoi trovare il nuovo blocco della funzione all'interno della categoria "Funzioni" (Functions) nella cassetta degli attrezzi. Noterai che c'è uno spazio vuoto vicino al parametro "Lunghezza" perché la funzione vuole sapere che valore dovrebbe avere il parametro. Trascina un blocco numerico dalla categoria "Matematica" (Math) e inseriscilo in questo spazio. Sai che è possibile usare la funzione più e più volte con lunghezze differenti per creare quadrati di diverse dimensioni? Prova per credere!
+          Quando hai finito, clicca su "Chiudi" per salvare le modifiche. Puoi trovare il nuovo blocco della funzione all'interno della categoria "Funzioni" (<i>Functions</i>) nella cassetta degli attrezzi. Noterai che c'è uno spazio vuoto vicino al parametro "Lunghezza" perché la funzione vuole sapere che valore dovrebbe avere il parametro. Trascina un blocco numerico dalla categoria "Matematica" (<i>Math</i>) e inseriscilo in questo spazio. Sai che è possibile usare la funzione più e più volte con lunghezze differenti per creare quadrati di diverse dimensioni? Prova per credere!
     C4_intro:
       1:
         image: notes/C4_intro_1.png
@@ -1204,66 +1205,81 @@ it:
         text: Questa lezione è chiamata algoritmo Tangram. Un tangram è un puzzle con sette pezzi che possono essere messi insieme per realizzare altre forme. Si utilizzerà un algoritmo per spiegare al vostro compagno come mettere insieme il puzzle.
       2:
         image: notes/C4_unplugged_algorithms_2.png
-        text: An algorithm is just a of list steps that you can take to complete a task. We use them every day with things like shopping lists and recipes. If you keep an algorithm simple, there are lots of ways to interpret it and whoever performs that algorithm might not get exactly what you wanted. If you want to make sure that everyone ends up with the exact same thing, then your algorithm will need to be detailed and very specific.
+        text: Un algoritmo non è altro che una lista di azioni che puoi compiere per completare un compito. Li usiamo ogni giorno per cose come liste della spesa o ricette. Se il tuo algoritmo è semplice, allora esistono molti modi diversi di interpretarlo e chi lo esegue potrebbe non ottenere esattamente quello che volevi tu. Se vuoi essere sicuro che ognuno ottenga esattamente la stessa cosa, allora il tuo algoritmo deve essere dettagliato e molto specifico.
       3:
         image: notes/C4_unplugged_algorithms_3.png
         text: "Sto usando oggi un algoritmo per la realizzazione di un dipinto. Ho voluto provare a fare un dipinto di alcuni lupi, ma io non sono un pittore esperto. Fortunatamente per le persone come me, c'è da dipingere basandosi su dei numeri. Ci sono quaranta colori e la tavola riporta lettere e numeri che indicano quale colore usare per dipingere ogni sezione. Dipingere usando i numeri mi consenete di usare i colori corretti e mi indica dove."
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: "It's very specific so I'm able to follow directions and the painting will come out looking awesome. It's a great algorithm. If the instructions weren't specific enough, my wolves wouldn't look as good. When you really want something to turn out exactly the way that you planned it, it's best to be extremely precise."
+        text: È molto specifico quindi sono in grado di seguire le indicazioni e il dipinto risulterà meraviglioso. È un ottimo algoritmo. Se le istruzioni non fossero state abbastanza specifiche, i miei lupi non sarebbero venuti così bene. Quando si vuole che qualcosa diventi esattamente come la si è pianificata, è meglio essere estremamente precisi.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: "Each team, the person who's instructing that's the person who's holding the paper, has to figure out what their off symbol is going to be and what their on symbol is going to be. In binary, it's kind of like an alphabet with two letters. Like having A and B be your entire alphabet but you've got a 0 and a 1."
+        text: "In ogni squadra, colui che sta istruendo chi ha in mano la carta, deve capire quale sia il simbolo off e quale sia il proprio simbolo in realtá. In formato binario, è un po' come avere a che fare con un alfabeto con due lettere. Come avere A e B per alfabeto, solo che si chiamano 0 e un 1."
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: "The most common way you use binary is in an if statement. It's a classic thing from programming. The program runs along and it says if something is true, then do this. Or it's not true and you do something else. What if you want to do something maybe a little more complicated. Instead an if statement, you want to work with something like an image or a sound in a computer."
+        text: "Il modo più comune di utilizzare il codice binario è in un'istruzione if ... then ... (se ... allora ...). È un classico della programmazione. Il programma viene eseguito e ci dice se qualcosa è true (vero), allora procedi. O se non lo è, fa' qualcos'altro. Cosa succede se si desidera fare qualcosa di forse un po' più complicato? Al posto di un'istruzione if ... then ... , puoi voler trattare un'immagine o un suono al computer."
       3:
         image: notes/C4_unplugged_binary_3.png
         text: "Un computer conosce solo il codice binario ma un'immagine, non è binaria, non si tratta di zeri e uno. Come fare allora a farlo? Ecco un esempio con questa bella foto. Ora una foto è sostanzialmente un insieme di informazioni. Tutte le informazioni possono essere codificate in binario in un modo o in un altro, devi solo capire come farlo."
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: "You imagine that we're going to put a grid over this panda bear and for each square, we're going to decide whether that square is more black or more white. And then we're going to color it that way. Now each cell on the grid is either black or white and then the black squares we say those are zeros (binary digit) and the white squares are ones, the other binary digit. At the end, you're left with just a bunch of ones and zeros. That's how you represent this image in binary."
+        text: |
+          Immagina di mettere una griglia su un panda. Per ogni quadrato di questa griglia, decideremo se sia più nero o più bianco. Una volta presa la decisione, lo coloreremo di conseguenza.
+          A questo punto, ogni quadrato della griglia sarà per forza tutto nero o tutto bianco.
+          Ai quadrati neri assegneremo lo zero, a quelli bianchi l'altra cifra binaria. Dunque ci ritroveremo davanti nient'altro che un mucchio di "uno" e di "zero".
+          Ecco, questa è la rappresentazione di un'immagine attraverso il sistema binario.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
-        text: "This lesson is called for loop fun. In this lesson, we'll use a number line to play a dice game. Each player will roll three times to assign a starting value, a stopping value, and our interval. During each turn, we circle our starting value, and every value that is the same number of steps forward as our interval value. We stop circling when we get to our stopping value. The person with the highest score wins!"
+        text: |-
+          Questa lezione si chiama "Divertiamoci col ciclo for". In questa lezione useremo una linea numerica per giocare a dadi. Ogni giocatore tira i dadi tre volte per stabilire il valore iniziale, il valore finale e l'intervallo. Ad ogni turno, disegneremo un cerchio intorno al valore iniziale e intorno a tutti i numeri stabiliti dall'intervallo, fino a raggiungere il valore finale. Sommeremo dunque tutti i numeri che abbiamo cerchiato e la persona col totale più alto vince!
       2:
         image: notes/C4_unplugged_forloops_2.png
-        text: "For loops can come in handy a lot of places and if you were to become a meteorologist, you would use for loops all the time. Hi, I'm Becky. I work at EverPower Renewables as a wind meteorologist. I forecast wind speeds for the Columbia River Gorge area where the company owns wind farms."
+        text: "I cicli for possono tornare utili in un sacco di occasioni e, se tu diventassi un metereologo, useresti i cicli for in continuazione. Ciao, sono Becky. Lavoro per la EverPower Renewables come metereologo del vento. Prevedo la velocità dei venti nell'area della Columbia River Gorge, cioè dove la compagnia possiede i suoi impianti eolici."
       3:
         image: notes/C4_unplugged_forloops_3.png
-        text: "We're trying to understand how much wind is going to be there so that we know how much power is going to be outputted. We give that information to real time energy traders. They buy and sell power based on how much power we tell them is going to be there in order to make sure the power grid is balanced, your lights stay on, and that we maximize the amount of energy we get out of our farms."
+        text: "Cerchiamo di capire quanto vento ci sarà, in maniera tale da capire quanta energia saremo in grado di produrre. Quindi passiamo queste informazioni ai commercianti d'energia in tempo reale. Costoro comprano e vendono energia basandosi sulle nostre previsioni, assicurandosi che la rete elettrica sia sempre equilibrata, che le vostre luci siano sempre accese e che noi riusciamo sempre a massimizzare la quantità di energia ottenibile dalle nostre aziende."
       4:
         image: notes/C4_unplugged_forloops_4.png
-        text: "We're at the national control center for EverPower Renewables here in Portland and this is where we have information coming in from all our farms across the country. Even the highest power computers today can't simulate the atmosphere everywhere. In computer forecasting models, we have what we call a grid. Each grid point is a latitude, longitude. We have to calculate the physics and try and figure out the wind speed, temperature,  pressure, that sort of thing."
+        text: |
+          Noi ci troviamo al centro di controllo nazionale per la EverPower Renewables, qui a Portland. E' qui che riceviamo tutte le informazioni provenienti dalle le nostre aziende sparse per il Paese.
+          Anche i computer più potenti in circolazione non sono in grado di simulare ovunque l'atmosfera. 
+          Nei modelli di previsione computerizzati, esiste una cosa che chiamiamo "la griglia". Ogni punto di questa griglia ha una sua latitudine e longitudine. Dobbiamo quindi calcolare la fisica, cercando di scoprire la velocità del vento, la temperatura, la pressione, insomma questo genere di cose.
       5:
         image: notes/C4_unplugged_forloops_5.png
-        text: "Since these are fairly big grids and we're doing this in a lot of points we're looping over these things millions and millions of times. Everything I do I'll use for loops. Here for example is a for loop right there. When you're forecasting wind, there's so many different parameters that go into it it would be impossible for a human to sit down and do all those calculations. There's so many different aspects to what's going to be affecting what's happening to the wind that we need a computer model in order to forecast it."
+        text: Dal momento che queste griglie sono molto grandi e dobbiamo analizzare un sacco di punti, torniamo su queste cose ciclicamente per milioni e milioni di volte. Per tutto ciò che faccio, uso i cicli for. Ecco, ad esempio, un altro ciclo for. Quando si fanno delle previsioni sul vento, ci sono in gioco talmente tanti parametri che sarebbe impossibile per un essere umano sedersi e mettersi a fare calcoli. Ci sono così tanti aspetti che influenzano ciò che succede al vento, da dover utilizzare per forza un modello computerizzato per poter fare delle previsioni.
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
         text: In questa lezione, giocheremo a completare delle parti di una storia. Hai un modello che è possibile compilare per creare storie simili in modo che presentino delle differenze molto divertenti.
       2:
         image: notes/C4_unplugged_madlibs_2.png
-        text: "In this lesson, we also learned how to make an abstracted template from two stories that have already been created. Abstraction is the art of removing differences and details so that you can see how one solution might work for many different problems. It's very helpful in computer science because it allows us to create functions that may be useful in several different situations."
+        text: "In questa lezione abbiamo imparato anche a fare un modello astratto da due storie che sono già state create. Astrazione è l'arte di rimuovere le differenze e i dettagli in modo che si possa vedere come una soluzione potrebbe funzionare per problemi diversi tra di loro. È molto utile in informatica perché permette di creare funzioni che possono servire in molte situazioni."
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: "This lesson is called songwriting with parameters. We're going to be writing some songs here. Sometimes the chorus is just a little bit different each time you sing it. Do you remember Old Macdonald Had a Farm? The chorus is slightly different for each animal. And on that farm, he had a cow, e-i-e-i-o. The small change in each chorus can be shown using something we call parameters."
+        text: |
+          Questa lezione si chiama "Comporre canzoni coi parametri". Adesso ci mettiamo a scrivere qualche canzone. A volte il coro è un pochino diverso ogni volta che lo si canta. Ti ricordi "Nella Vecchia Fattoria"? Il coro è un pochino diverso per ogni animale che lo fa. "C'è la mucca, muu, mucca, muuu, ia-ia-ooooh".
+          Quella piccola differenza in ogni coro può essere spiegata utilizzando qualcosa che chiameremo "parametri".
       2:
         image: notes/C4_unplugged_parameters_2.png
         text: A volte una funzione necessita di un parametro. Un parametro è un ulteriore pezzo di informazione che è possibile passare a una funzione per personalizzarla per una particolare necessità. Quando preparate delle coppe di gelato con i tuoi amici, si utilizza un processo simile alla parametrizzazione in un programma per computer.
       3:
         image: notes/C4_unplugged_parameters_3.png
-        text: "The disk of vanilla ice cream might be the same for every sundae but when you ask your friends which two toppings they'd like, you could get lots of different combinations. Topping is the function name but each type of topping is a parameter. Functions and parameters work together to make great computer programs and great sundaes too."
+        text: |
+          Il disco di gelato alla vaniglia sarà anche lo stesso per ogni Sundae, ma quando chiedi ai tuoi amici quali guarnizioni perferiscono, otterrai sicuramente risposte diverse.
+          Ecco, la guarnizione è come se fosse una funzione, mentre il tipo di guarnizione è il parametro.
+          Funzioni e parametri lavorano insieme per creare grandiosi programmi per computer (e grandiosi Sundae, naturalmente).
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: "This lesson is called variables in envelopes. We're going to learn how we can build sentences when we're still missing pieces of information. Most of us are already familiar with the idea of filling in a blank. We do it when we're putting our name on our homework. Sometimes there's more than one word that needs to be filled out and in that case, we give that blank a label so that we know which piece of information goes where."
+        text: |
+          Questa lezione si chiama "Variabili in busta chiusa". Impareremo come costruire una frase anche se ci mancano alcune informazioni. Molti di noi sanno cosa significa compilare un modulo;facciamo qualcosa di simile,ad esempio,quando scriviamo il nostro nome prima dei compiti.
+          Può capitare che all'interno di un modulo ci siano diversi spazi da riempire. Così,prima di ogni spazio,c'è una dicitura,per aiutarci a capire che in un determinato spazio va inserita una determinata informazione.
       2:
         image: notes/C4_unplugged_variables_2.png
-        text: Variables are placeholders for pieces of information that can change. By using a variable for the missing information, we can continue working on whatever we were doing and let someone else fill in the missing information later. In software, we use variables a lot. We use variables as placeholders for name, email address, and even username. That way we can let the program know where those details will appear after the user fills them in. We use variables all the time in our work.
+        text: "Le variabili sono dei segnaposto per pezzi di informazione che possono cambiare. Utilizzando una variabile per le informazioni mancanti, possiamo continuare a lavorare su qualunque cosa stessimo facendo e lasciare che qualcun altro inserisca le informazioni mancanti più tardi. Nel software, si usano molto le variabili. Le usiamo come segnaposto per il nome, indirizzo e-mail e nome utente. In questo modo possiamo far sapere al programma che quei dettagli appariranno soltanto dopo che l'utente li abbia inseriti. Nel nostro lavoro, le variabili vengono utilizzate di continuo."
       3:
         image: notes/C4_unplugged_variables_3.png
         text: "In qualsiasi momento avete bisogno di memorizzare una informazione per un successivo utilizzo, usate una variabile. Supponiamo che abbiamo bisogno di contare il numero di volte che l'utente ha twittato. Ogni volta che l'utente invia un Tweet, aggiungeremo uno a quel numero e ogni volta che l'utente elimina un tweet lo toglieremo. Ogni volta che abbiamo bisogno di sapere quante volte che l'utente ha twittato ci basterà guardare le variabile."
@@ -1274,11 +1290,11 @@ it:
       2:
         image: notes/C4_variables_artist_2.png
         text: |-
-          Ad esempio, se voglio scrivere un programma per dire al mio fratellino "Buon Compleanno, sei arrivato a 10 anni!", non ho alcun problema per quest'anno. Però vorrei che, mandandolo in esecuzione l'anno prossimo, dicesse "Buon Compleanno, sei arrivato a 11 anni!". Posso creare una variabile 'età' (age) per memorizzare l'età di mio fratello e poi scrivere un programma che dica "Buon Compleanno, sei arrivato a 'età' " (Happy birthday, you're turning 'age'). Dato che una variabile può essere modificata, ogni anno io posso aggiornare la variabile da 'età' ad 'età'+1 e il programma rimane sempre uguale.
+          Ad esempio, se voglio scrivere un programma per dire al mio fratellino "Buon Compleanno, sei arrivato a 10 anni!", non ho alcun problema per quest'anno. Però vorrei che, mandandolo in esecuzione l'anno prossimo, dicesse "Buon Compleanno, sei arrivato a 11 anni!". Posso allora creare una variabile "età" (<i>age</i>) per memorizzare l'età di mio fratello e poi scrivere un programma che dica "Buon Compleanno, sei arrivato a 'età' " (<i>Happy birthday, you're turning "age"</i>). Dato che una variabile può essere modificata, ogni anno io posso aggiornare la variabile da "età" ad "età"+1 e il programma rimane sempre uguale.
       3:
         image: notes/C4_variables_artist_3.png
         text: |-
-          In questo esercizio, utilizziamo una variabile "lunghezza" (length) per impostare (set) la lunghezza della linea che l'artista deve disegnare. Più avanti nel codice, il blocco "vai avanti" (move forward) esamina il contenuto della variabile "lunghezza" per vedere a quale valore è stata impostata e l'artista si sposta di questo valore.
+          In questo esercizio, utilizziamo una variabile "lunghezza" (<i>length<i>) per impostare (<i>set</i>) la lunghezza della linea che l'artista deve disegnare. Più avanti nel codice, il blocco "vai avanti" (<i>move forward</i>) esamina il contenuto della variabile "lunghezza" per vedere a quale valore è stata impostata e l'artista si sposta di questo valore.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
@@ -1333,103 +1349,129 @@ it:
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
-        text: "What do you want to be when you grow up Olivia? An astronaut. Do you happen to know what a computer programmer is? Yeah um no. Ummm wait what? I'm not really sure how to explain it computer programming is pretty simple. It's a set of instructions like a recipe, you have to follow them step-by-step to get the end result you want."
+        text: "Cosa vuoi diventare da grande, Olivia? Un astronauta. Per caso, sai cosa sia un programmatore informatico? Sì.... anzi, no. Cosa? Davvero? Ecco..... non saprei come spiegartelo ma.... programmare al computer è una cosa piuttosto semplice. E'un elenco di istruzioni, come una ricetta. Devi semplicemente seguirle passo per passo per arrivare al risultato desiderato."
       2:
         image: notes/tutorial_puzzle_challenge_2.png
-        text: "I can change the number of pixels, the length of the line, using this dropdown. How long was it again? You can see the instructions again by looking under the run button. Here I used the move forward block and I'm going to select 100 pixels. I can delete a block by dragging it into the toolbox or the trash can. Let's put it back."
+        text: |
+          Posso cambiare il numero dei pixel o la lunghezza della linea usando questo menù a tendina.
+          Quanto era lunga? Non ricordo.....
+          Se hai bisogno di rivedere le istruzioni, le trovi sotto il bottone "Esegui". In questo caso ho utilizzato il blocco "Vai avanti" e sceglierò 100 pixels. Posso cancellare un blocco trascinandolo nella cassetta degli attrezzi oppure nel cestino dei rifiuti. Adesso lo rimetto a posto.
       3:
         image: notes/tutorial_puzzle_challenge_3.png
-        text: "Run the code by pressing run. Well that didn't work! I'll press reset and figure out what's wrong. You can try a puzzle as many times as you'd like and skip puzzles and come back to them. Just make sure to try your best and don't give up. Let's add another move forward. That still didn't work. I can place a block between other blocks."
+        text: |-
+          Esegui il codice premendo "Esegui". Qualcosa non ha funzionato! Premi "Reset" e scopri cosa c'è che non va. Puoi provare a risolvere un puzzle quante volte vuoi, puoi anche saltarli e riprenderli più avanti. Assicurati sempre di fare del tuo meglio e non mollare mai! Ecco, facciamo un'altra mossa in avanti. No, non è servito a nulla. Posso mettere un blocco in mezzo ad altri due.
       4:
         image: notes/tutorial_puzzle_challenge_4.png
-        text: "Let's take a turn block and place it in between the move forwards. Turn left 45 degrees. Let's run it again. Reset, run, awesome! Here's another puzzle. Sometimes you are given starter code to complete. Here I need to add the appropriate lengths and degrees."
+        text: 'Prendi un blocco "Gira a...." e piazzalo in mezzo a due mosse in avanti. Gira a sinistra di 45 gradi. Eseguiamolo di nuovo. Resetta, esegui..... meraviglioso! Ecco un altro puzzle. A volte si tratta di completare la prima parte di un codice che ti viene dato. Qui devo aggiungere la giusta lunghezza e i gradi.'
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: "You may sometimes accidentally trash the starter code. What do you do then? You can press clear puzzle and start all over again. I'm going to drag this number block into the different pixel areas. Select 100 for pixels, 45 for degrees and 100 for pixels again. Awesome! Here is the Code Studio bee. I need to move the bee to each flower and get nectar."
+        text: |
+          Se accidentalmente dovessi cancellare il codice iniziale, puoi premere "Ripristina" ed iniziare da capo. Adesso trascinerò questo blocco numerico all'interno delle diverse aree di pixel.
+          Scegli 100 per i pixel, 45 per i gradi e di nuovo 100 per i pixel. Grandioso! Ecco l'ape del Code Studio.
+          Devo far posare l'ape su ogni fiore per ottenere del nettare.
       6:
         image: notes/tutorial_puzzle_challenge_6.png
-        text: "The first flower is three blocks away so I need three move forwards. 1, 2, 3. Then a get nectar, then another get nectar. Well that didn't work! I'll place another move forward between the get nectars and run it again. Yay, it works! You just learned how to use the Code Studio artist and bee puzzles. Good luck on the Code Studio puzzle challenge."
+        text: |-
+          Il primo fiore è lontano tre blocchi, quindi ho bisogno di tre mosse in avanti. 1, 2, 3. Quindi un "ottieni nettare", poi un altro "ottieni nettare". Ecco, non ha funzionato! Metterò un'altra mossa in avanti tra i due "ottieni nettare" e proverò ad eseguire di nuovo. Sìììì! Stavolta funziona! Hai appena imparato ad usare il corso Artista di Code Studio e a creare i puzzle dell'ape. Buona fortuna con le sfide dei puzzle di Code Studio.
     unplug1:
       1:
         image: notes/unplug1_1.png
-        text: "What do you want to be when you grow up Olivia? Umm, an astronaut! Do you happen to know what a computer programmer is? Yeahh, umm, no. Umm, what what? I'm not really sure how to explain it. Computer programming is pretty simple. It's a set of instructions, like a recipe. You have to follow them step by step to get the end result you want."
+        text: "Cosa vuoi diventare da grande, Olivia? Un astronauta. Per caso, sai cosa sia un programmatore informatico? Sì.... anzi, no. Cosa? Davvero? Ecco..... non saprei come spiegartelo ma.... programmare al computer è una cosa piuttosto semplice. E'un elenco di istruzioni, come una ricetta. Devi semplicemente seguirle passo per passo per arrivare al risultato desiderato."
       2:
         image: notes/unplug1_2.png
-        text: "Computer science is a way to impact the world. It can be music videos, it can be games, detect whether or not someone is related to someone else. Find you know, people's friends. You can do all sorts of other crazy things that actually save lives. You do have to have a drive I think. It is to me like a paintbrush. I think great programming is not all that dissimilar from great art."
+        text: "L'informatica è un modo per avere un impatto sul mondo. Può trattarsi di video musicali, di giochi, di scoprire se qualcuno è imparentato con qualcun altro. E' un modo per trovare degli amici. Puoi fare qualunque cosa ti venga in mente e magari salvare davvero la vita di qualcuno. Penso che nella vita tutti debbano avere una vocazione. E' qualcosa di simile ad un pennello per dipingere. Penso cioè che programmare ad alto livello non sia poi così diverso dal fare arte ad alto livello."
       3:
         image: notes/unplug1_3.png
-        text: When I finally learned a little bit of programming, that blank wall resolved into a bunch of doors and you open them and of course then you find behind them is another hallway filled with a bunch of doors. Programming is fun and easy. You can do anything your mind wants to do. Finally you start to open enough doors the light comes in. To me a finished program is like a structure filled with light. All the corners are illuminated. The number of people that you can touch and interact with is something the world has never seen before.
+        text: "Quando ho imparato a programmare ad un certo livello, il muro che avevo davanti si è trasformato in un mucchio di porte. Le ho aperte tutte e dietro ad ognuna di esse c'erano dei corridoi pieni di altre porte. Programmare è facile e divertente. Puoi fare qualunque cosa ti venga in mente. Quando avrai aperto un numero sufficiente di porte, entrerà la luce. Per me un programma finito è come una struttura interamente illuminata, perfino negli angoli più remoti. Il numero di persone con il quale puoi entrare in contatto ed interagire è qualcosa che non si era mai visto prima."
       4:
         image: notes/unplug1_4.png
-        text: "Our first lesson in this series is all about what computer science is, what a computer scientist does and how you can be more responsible in your use of technology. It's a very important lesson but it is a little text-heavy. At the end, you get to make your very own customized encoding using your initials. It's a fun activity and it's very empowering because binary is one of those things that feels very technical but once you understand it, it's like you speak a secret language."
+        text: |
+          La prima lezione di questa serie riguarda ciò che l'informatica è, cosa un informatico fa e come tu possa essere maggiormente responsabile nell'uso delle tecnologie. E' una lezione molto importante, anche se un po' pesante da leggere. Al termine, dovrai scrivere del codice in maniera personalizzata, utilizzando cioè le tue iniziali. 
+          E' un'attività molto divertente e ti fornisce uno strumento importante, poiché il linguaggio binario è qualcosa che a prima vista può sembrare molto tecnico, ma una volta compreso sarà come parlare una specie di linguaggio segreto.
     unplug2:
       1:
         image: notes/unplug2_1.png
         text: "La lezione sul pensiero computazionale ha come obiettivo quello di insegnarvi ad affrontare un complesso e difficile problema e a scomporlo in diversi problemi più semplici. L'obiettivo di questa lezione è quello di scrivere un insieme di istruzioni che qualcuno possa seguire per disegnare uno dei mostri inclusi nel piano della lezione."
       2:
         image: notes/unplug2_2.png
-        text: "Students will break into groups to write instructions and then they'll switch them with another group that will have to draw the monster. Groups will write instructions using the four steps of computational thinking: decomposition, pattern location, abstraction and algorithms."
+        text: 'Gli studenti dovranno dividersi in gruppi per scrivere le istruzioni. Successivamente, dovranno cambiare gruppo per disegnare il mostro. I gruppi dovranno scrivere le istruzioni utilizzando i quattro passi del pensiero informatico: scomposizione, individuazione di un modello, astrazione ed algoritmi.'
       3:
         image: notes/unplug2_3.png
-        text: "First groups will decompose the task which means make a game plan. Then they'll look for patterns between all the monsters in the catalog. When they come across differences between the monsters, they'll abstract or remove those details. For instance, one monster in the catalog has vegitas eyes and another has spritem eyes. But they both have eyes so we can write a line that says the monster has blank eyes."
+        text: "Per prima cosa i gruppi dovranno scomporre il compito loro affidato, il che significa creare un piano di gioco. Subito dopo dovranno cercare dei modelli tra tutti i mostri presenti nel catalogo. Quando s'imbatteranno in alcune differenze tra un mostro e l'altro, dovranno astrarre ossia rimuovere quelle differenze. Per esempio, un mostro possiede gli occhi da Vegitas mentre un altro possiede gli occhi da Spritem. Dal momento che entrambi hanno gli occhi, possiamo scrivere una riga per dire che il mostro ha degli occhi, senza specificarne il tipo."
       4:
         image: notes/unplug2_4.png
-        text: "So students will be able to write a set of instructions, called an algorithm, that list the monsters' parts with blanks for what the styles should be. This is the set of instructions they'll pass to other students to recreate their very own monster."
+        text: 'Dunque gli studenti saranno in grado di scrivere una serie di istruzioni, chiamata "algoritmo", che elenchi tutte le parti del mostro, lasciando degli spazi in bianco per poter specificare il tipo di quelle parti. Questa serie di istruzioni andrà poi passata ad altri studenti, affinché possano ricreare il loro mostro personalizzato.'
     unplug3:
       1:
         image: notes/unplug3_1.png
-        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+        text: |
+          L'utilizzo della carta millimetrata ci aiuta a spiegare cosa significhi scrivere del codice, chiedendo alla gente di ricreare un determinato disegno utilizzando soltanto frecce e scarabocchi.
+          Ad una persona verrà consegnato un piccolo disegno su carta millimetrata. Attraverso l'uso di particolari frecce, questa persona dovrà cercare di spiegare come ricreare il disegno ricevuto.
       2:
         image: notes/unplug3_2.png
-        text: 'In this activity, the only symbols you can use are these: move one square forward, one square backward, move one square up, move one square down, change to next color, and fill in your square with color. Once we have that coded up, we can hand it off to another person who can read the code and try and recreate the picture.'
+        text: "Per questo compito, gli unici simboli che puoi usare sono questi: muovi un quadrato avanti, muovi un quadrato indietro, muovi un quadrato su, muovi un quadrato giù, passa al colore successivo, riempi il quadrato col colore. Una volta scritto il codice, lo passeremo ad un'altra persona che sia in grado di leggerlo, affinché possa provare a ricreare l'immagine."
     unplug4:
       1:
         image: notes/unplug4_1.png
-        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+        text: |
+          L'utilizzo della carta millimetrata ci aiuta a spiegare cosa significhi scrivere del codice, chiedendo alla gente di ricreare un determinato disegno utilizzando soltanto frecce e scarabocchi.
+          Ad una persona verrà consegnato un piccolo disegno su carta millimetrata. Attraverso l'uso di particolari frecce, questa persona dovrà cercare di spiegare come ricreare il disegno ricevuto.
       2:
         image: notes/unplug4_2.png
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: "In questa seconda parte dell'attività, chiederemo agli studenti in quanti modi diversi siano in grado di piegare un pezzo di carta per ottenere 16 rettangoli identici. Poi discuteremo su come si possano usare più soluzioni per arrivare al medesimo risultato e sul perché, in determinate situazioni, sia preferibile utilizzare una certa soluzione anziché un'altra."
     unplug5:
       1:
         image: notes/unplug5_1.png
-        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+        text: |
+          L'utilizzo della carta millimetrata ci aiuta a spiegare cosa significhi scrivere del codice, chiedendo alla gente di ricreare un determinato disegno utilizzando soltanto frecce e scarabocchi.
+          Ad una persona verrà consegnato un piccolo disegno su carta millimetrata. Attraverso l'uso di particolari frecce, questa persona dovrà cercare di spiegare come ricreare il disegno ricevuto.
       2:
         image: notes/unplug5_2.png
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: "In questa seconda parte dell'attività, chiederemo agli studenti in quanti modi diversi siano in grado di piegare un pezzo di carta per ottenere 16 rettangoli identici. Poi discuteremo su come si possano usare più soluzioni per arrivare al medesimo risultato e sul perché, in determinate situazioni, sia preferibile utilizzare una certa soluzione anziché un'altra."
     unplug6:
       1:
         image: notes/unplug6_1.png
-        text: "This activity is called coding with cards and it's great for any age. Like you learned with the if statements in earlier lessons,  during Blockly, if statements have a piece about them you have to evaluate to find out if it's true or false. That's the conditional and it can be used in lots of different ways."
+        text: 'Questa lezione si chiama "Scriviamo il codice con le carte" ed è utile a tutte le età. Come hai già imparato con le "affermazioni if" nelle precedenti lezioni, durante Blocky, si tratta di scoprire se tali affermazioni siano vere o false. Questo si chiama "condizionale" e si può usare in un sacco di modi.'
       2:
         image: notes/unplug6_2.png
-        text: We take advantage of that by creating programs on paper that you run using a random draw of playing cards. You might have an if statement that says something like if the card you draw is greater than 8, you get a point. Otherwise, your opponent gets a point. You can make it as simple or as complicated as you feel comfortable.
+        text: |-
+          Ne approfitteremo creando dei programmi su carta che tu potrai eseguire pescando casualmente da un mazzo di carte da gioco. Potresti ad esempio avere un' "affermazione if" che dica: se la carta che hai pescato ha un valore superiore a 8, guadagni un punto. Se invece il valore è inferiore a 8, il tuo avversario guadagna un punto. Puoi semplificare o complicare il gioco come vuoi, naturalmente.
     unplug7:
       1:
         image: notes/unplug7_1.png
-        text: "You know how when you look up the lyrics for a song and they define the chorus at the very beginning and then for the rest of the song, they just refer you back to the chorus? That's how you call a function."
+        text: |
+          Hai presente quando leggi il testo di una canzone? Ad un certo punto ci sono le parole che vanno cantate in coro. Quando il coro si ripresenta più avanti nella canzone, le parole non vengono riscritte; viene semplicemente scritto "coro", che rimanda alle parole scritte in precedenza.
+          Questo era solo un esempio per spiegare cosa sia una "funzione".
       2:
         image: notes/unplug7_2.png
-        text: "In this lesson, we define the chorus at the beginning of our song and then we sing through our song and go back and we notice that the class doesn't sing the word chorus, they automatically go up to the top where we define the chorus and sing through that. We use that as a great introduction to how to understand what a program is doing when it defines and calls a function."
+        text: |
+          In questa lezione, definiremo il coro all'inizio della nostra canzone. Andremo quindi avanti a cantare e quando giungeremo alla parola "coro", i nostri occhi torneranno in cima al testo e canteremo rileggendo quelle stesse frasi.
+          Questo esempio è un'ottima introduzione per capire cosa un programma stia facendo quando definisce e richiama una funzione.
       3:
         image: notes/unplug7_3.png
-        text: "We use familiar songs including Old Macdonald to talk about how a chorus is called over and over and how sometimes a chorus can change. When you have a song like Old Macdonald, where certain words change, that's a great place to introduce the idea of parameters. Passing certain words through so that you can send extra information to your function. Once we're sure everybody gets it, you can take your own familiar songs and break them up yourself. See if you can figure it out together."
+        text: |
+          Usiamo canzoni tradizionali come "Nella Vecchia Fattoria", per spiegare come un coro possa ripresentarsi più volte all'interno di una canzone e come, a volte, questo coro possa cambiare.
+          In una canzone come "Nella Vecchia Fattoria", dove alcune parole cambiano, è possibile inserire l'idea di "parametri". Passare attraverso determinate parole al fine di fornire informazioni in più alla tua funzione. Dopo esservi assicurati che tutti abbiano capito, potete prendere una qualunque delle vostre canzoni tradizionali e scomporla allo stesso modo. Cercate di lavorarci sopra insieme.
     unplug8:
       1:
         image: notes/unplug8_1.png
-        text: Our lesson on abstraction uses the familiar concept of madlibs, where you basically insert a blank in a story that can be filled with lots of different words. We take that idea, challenge kids to come up with their own words for their own stories, and really explain the concept of abstraction.
+        text: "La nostra lezione sull'astrazione utilizza un concetto piuttosto familiare: quello dei Mad Libs, dove in pratica un testo contiene un certo numero di spazi bianchi, i quali possono essere riempiti con delle parole a scelta. Sulla base di questa idea, sfidiamo i ragazzi ad inventare termini per le loro storie, spiegando contemporaneamente il concetto di astrazione."
       2:
         image: notes/unplug8_2.png
-        text: "It's all about functions and how you can have a function, like in Old Macdonald, where you have a structure for your chorus but you have something little that changes and you abstract out that little thing that changes and you can fill it in with your own word every time through. But sometimes you have three words that change and so you fill those in with three parameters, that's still pretty helpful."
+        text: |
+          Gira tutto intorno alle funzioni e su come ottenerle. Proprio come "Nella Vecchia Fattoria", dove esiste una struttura fissa che è il coro, ma dove ogni volta questo coro viene cantato in maniera diversa.
+          Si tratta quindi di astrarre, immaginando che il coro sia uno spazio bianco da riempire in maniera diversa di volta in volta. Può capitare che a dover essere cambiate siano soltanto tre parole; in questo caso sarebbe utile impiegare tre parametri.
       3:
         image: notes/unplug8_3.png
-        text: "You can have one function that handles lots of different problems. Lots of times people will write separate functions for all those problems, not realizing there's only one little difference. If they could just find a way to handle that one little difference, they could just reuse one function over and over again, instead of having 14 different functions."
+        text: Una singola funzione può gestire tanti diversi problemi. Tante volte la gente scrive una funzione per ogni problema, senza rendersi conto che tra tutti questi problemi esiste solo qualche piccola differenza. Se si riuscisse a trovare un modo per gestire queste piccole differenze, si potrebbe riutilizzare la stessa funzione in tutti i casi, anziché scrivere 14 funzioni diverse.
     unplug9:
       1:
         image: notes/unplug9_1.png
-        text: Relay programming is an extremely fun lesson that gets across way more than computer science. Sometimes everybody is getting a little bit antsy and you want to get them up on their feet. This is a great way to add some excitement to computer science.
+        text: |-
+          "Programmare a staffetta" è una lezione estremamente divertente che risulterà di gran lunga più comprensibile dell'informatica vera e propria. A volte qualcuno inizia ad essere un po' nervoso e ci vuole qualcosa per tranquillizzarlo un po'. Questa lezione è un ottimo modo per rendere l'informatica più entusiasmante.
       2:
         image: notes/unplug9_2.png
-        text: You break everyone up into two groups where they stand in a line and run relay style. The first person in each group runs to the other side of the room where you have a graph paper drawing and a blank piece of paper waiting for them. They write down the first step to creating that image, run back to their line, tag the next player who goes back up to write the next step.
+        text: "Dividete gli studenti in due gruppi e fateli mettere in fila: dovranno correre come in una staffetta. Il primo della fila di ogni squadra dovrà correre dall'altra parte della stanza, dove ad attenderlo ci saranno un disegno su carta millimetrata ed un foglio bianco. Su quest'ultimo, lo studente dovrà scrivere il primo simbolo utile per ricreare l'immagine. Tornerà quindi verso la sua squadra per dare il cambio al giocatore successivo, il quale dovrà scrivere il secondo simbolo, e così via."
       3:
         image: notes/unplug9_3.png
         text: "Questo è un ottimo modo per far passare l'idea di debug, della necessità di revisionare il proprio lavoro e di controllare il lavoro fatto da altri prima di voi. Capirete subito come sia importante essere attenti e precisi nella realizzazione del codice quando un'intera squadra è dipende da te."
@@ -1439,20 +1481,20 @@ it:
         text: Questa attività spiega in un modo facile da capire come funziona Internet. Spieghiamo tutta la terminologia di cui hai bisogno in termini semplici di modo che gli studenti possano simulare la trasmissione dei messaggi, come per la posta elettronica.
       2:
         image: notes/unplug10_2.png
-        text: "Students will transmit messages while pretending to be one of three transmission methods. Wireless internet, DSL or fiber optic. The students who represent wi-fi will have to wear the message they're transmitting on their head because wifi is the most likely to drop some information."
+        text: 'Gli studenti dovranno trasmettere dei messaggi fingendo di essere uno di questi tre metodi di trasmissione: Wireless, ADSL o fibra ottica. Gli studenti che rappresenteranno la connessione Wireless dovranno portare il loro messaggio sulla testa, poiché le connessioni Wi-Fi sono quelle più inclini alla perdita di alcuni dati.'
       3:
         image: notes/unplug10_3.png
-        text: "The students pretending to be DSL or cable will carry the message on the back of their hand, where they're slightly less likely to drop information. And the students representing fiber optic will get to carry them with both hands. This activity is a great way to understand something that many of us use every day."
+        text: Gli studenti che fingeranno di essere una linea ADSL o la fibra ottica porteranno il messaggio sul dorso della mano, dal momento che questi metodi perdono meno informazioni. Chi ha scelto la fibra ottica porterà il messaggio su entrambe le mani. Questo è un bel modo per far capire qualcosa che utilizziamo tutti i giorni.
     unplug11:
       1:
         image: notes/unplug11_1.png
-        text: "So now it's time to step back and take a birds eye view of everything you've done in these past nineteen lessons. This is a great time to call out to students that what they've just done is a huge achievement. They've learned more over these lessons than most adults know about computer science."
+        text: "Adesso è giunto il momento di fare un passo indietro e dare uno sguardo generale a tutto ciò che hai fatto nelle passate diciannove lezioni. E' il momento di comunicare a tutti gli studenti che ciò che hanno appena raggiunto è un risultato davvero importante. Hanno appreso molte più cose loro attraverso queste lezioni che la maggior parte degli adulti, per quanto riguarda l'informatica."
       2:
         image: notes/unplug11_2.png
-        text: "Discuss as a class or in small groups about their favorite lessons. Once you take a look back at everything you've learned, this is where your students' creativity can shine. Split them into groups and have them create an unplugged lesson of their own. Assign each group a key concept, like functions or algorithms and have lots of craft materials on hand for them to use. Have each group present their new unplugged activity or even set aside another day to do a few of the student created activities."
+        text: "Discutete con l'intera classe o a piccoli gruppi quali siano state le lezioni preferite. Dopo aver ridato uno sguardo a tutto ciò che avete imparato, ecco un'occasione per testare la creatività degli studenti. Divideteli in gruppi e spingeteli a creare loro stessi una lezione senza il computer. Assegnate a ciascun gruppo un concetto chiave, come le funzioni o gli algoritmi, lasciando loro tutto il materiale che possa tornare utile. Permettete dunque a ciascun gruppo di presentare la propria lezione o addirittura organizzate una giornata per utilizzare le lezioni create dagli studenti stessi."
       3:
         image: notes/unplug11_3.png
-        text: "From everyone here at Code.org, we hope you've had a TON of fun during this course. And whether your dream is to create the best new app, use programming to help cure diseases, or you just want to be a stellar problem-solver, this course was the first step in achieving those dreams."
+        text: Tutti qui a Code.org speriamo che tu ti sia divertito un sacco durante questo corso. E se il tuo sogno è quello di creare la nuova app più bella, usare la programmazione per curare malattie, o vuoi solo essere un problem-solver stellare, questo corso è stato il primo passo per realizzare quei sogni.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG

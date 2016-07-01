@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/hip_chat'
+require 'cdo/solr'
+require 'cdo/poste'
+
+SOLR = Solr::Server.new(host: CDO.solr_server) if CDO.solr_server
+
+def main
+  workshops = SOLR.query(q: "*:*", fq: ["kind_s:ProfessionalDevelopmentWorkshop", "first_date_dt:[NOW/DAY+12DAY TO NOW/DAY+13DAY]"], sort: "id asc", rows: 1000)
+  workshops.each do |workshop|
+    signups = SOLR.query(q: "*:*", fq: ["kind_s:ProfessionalDevelopmentWorkshopSignup", "workshop_id_i:#{workshop['id']}", "-status_s:cancelled"], sort: "id asc", rows: 1000)
+    signups.each do |signup|
+      send_reminder_email(signup)
+      break
+    end
+  end
+end
+
+def send_reminder_email(form)
+  recipient = Poste2.ensure_recipient(form['email_s'], ip_address: '127.0.0.1')
+  puts recipient.to_json
+  Poste2.send_message('workshop_signup_reminder', recipient, form_id: form['id'])
+end
+
+main if only_one_running?(__FILE__)

@@ -317,7 +317,7 @@ bg:
         studio_iceage_click_hello: Можете ли да помогнете на Сид да направи покана за приятелите си, когато кликнете върху него? Не забравяйте да кликнете върху него, след като натиснете Старт.
         studio_iceage_move_events: 'Scrat все още се търси жълъди! Помогнете му да бяга наоколо чрез поставяне на "блок за движение за всяко от събитията? Променете посоката, за да работи със стрелките от компютъра. Когато сте готови, щракнете върху Старт и се опитайте да съберете всички жълъди.'
         studio_iceage_sound_and_points: 'Ние сме дали по-голямата част от кода, която помага на Грани да се движи наляво и надясно, както и кода, с който Сид се движи на екрана. Можете ли да довършите кода като добавите блокове към "когато актьор докосва" събитието, за да се чува звуков сигнал и да се дава точка, когато Сид и Грани се сблъскат? Натиснете Старт, за да играете играта.'
-        studio_iceage_warn_ice_age: 'Всички трябва да се движат по-бързо защото идва Ледената епоха! Променете фона на "айсберги" и задайте бърза скорост на Сид. След това натиснете бутона Старт и го преместете до Diego, за да го предупреди.'
+        studio_iceage_warn_ice_age: 'Всички трябва да се движат по-бързо защото идва Ледената епоха! Променете фона на "леден" и задайте бърза скорост на Сид. След това натиснете бутона Старт и го преместете до Диего, за да го предупреди.'
         studio_iceage_throw_hearts: 'Сид иска да каже на Грани, че я обича. Използвайте командата "актьор хвърля", за да може Сид (актьор 1) да хвърли сърца на Грани (актьор 2)! Задайте на Грани щастливо настроение, когато тя получи сърцата.'
         studio_iceage_free_play: Време е да създадете своя собствена игра или история! Когато сте готови, щракнете върху Готово, за да споделите с приятели, за да опитат играта на техните телефони, таблети или компютри!
         studio_gumball_hello1: 'Анаис иска да си намери нови приятели. Можете ли да ѝ помогнете да каже "Здравей"? Плъзнете блок за думи в работната област и напишете думата "Здравей" вътре.'
@@ -459,6 +459,7 @@ bg:
         infinity_playlab_intro: 'Игрална лаборатория - Въведение'
         infinity_playlab_events: 'Игрална лаборатория - Събития'
         infinity_playlab_repeat_forever: 'Игрална Лаборатория - повторение завинаги'
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
         csp_applab_processing_lists: Processing Lists with Loops
@@ -476,7 +477,15 @@ bg:
         csp_applab_functions_parameters: Функции с параметри
         csp_applab_loops: Цикли
         csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: 'Data & Medicine'
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Малко за пикселите
+        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: 'Приспособление за цветова пикселизация - част 1'
         csp_pixelation_color_2: 'Приспособление за цветова пикселизация - част 2'
         csp_pixelation_color_3: 'Приспособление за цветова пикселизация - част 3'

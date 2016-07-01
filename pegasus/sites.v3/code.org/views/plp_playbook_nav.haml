@@ -1,7 +1,19 @@
 #about_nav
   %span.about_list
-    -current_url = "/educate/professional-learning-partner"
-    -{'Workshop planning'=>current_url + '/playbook/workshop-planning','Communications'=>current_url + '/playbook/communications','Community building'=>current_url + '/playbook','Reporting and evaluations'=>current_url + '/playbook/reporting-and-evaluations','Teacher support'=>current_url + '/playbook/teacher-support','Workshop dashboard'=>current_url + '/playbook/dashboard','C/A professional development'=>'/playbook','Facilitator support'=>'/playbook/facilitator-support','FAQ'=>current_url + '/faq'}.each_pair do |label,url|
+    -current_url = request.path_info
+    -{'PLAYBOOK HOME'=>'/educate/professional-learning-partner/playbook',
+      'Communications and Branding'=>'/educate/professional-learning-partner/playbook/communications',
+      'Community Building'=>'/educate/professional-learning-partner/playbook/community',
+      'Curriculum Guides'=>'/educate/professional-learning-partner/playbook/curriculum',
+      'Facilitator Support'=>'/educate/professional-learning-partner/playbook/facilitator-support',
+      'Fundraising Resources'=>'/educate/professional-learning-partner/playbook/funding',
+      'Ordering Supplies'=>'/educate/professional-learning-partner/playbook/ordering-supplies',
+      'Reporting and Evaluations'=>'/educate/professional-learning-partner/playbook/reporting-and-evaluations',
+      'Teacher Support'=>'/educate/professional-learning-partner/playbook/teacher-support',
+       'Training Materials'=>'/educate/professional-learning-partner/playbook/training-materials',
+      'Workshop Dashboard'=>'/educate/professional-learning-partner/playbook/workshop-dashboard',
+      'Workshop Planning'=>'/educate/professional-learning-partner/playbook/workshop-planning',
+      'FAQ'=>'/educate/professional-learning-partner/playbook/faq'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else

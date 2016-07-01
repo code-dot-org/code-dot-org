@@ -29,7 +29,11 @@
     "markdown_instructions": "Now we have a new block called `repeat until`.  \r\nThis will let us keep looping commands until the zombie gets the sunflower.  \r\n\r\nUse the new `repeat until` block to solve this puzzle in as few commands as possible."
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_until_while": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -47,11 +51,11 @@
         <block type="maze_forever"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_forever"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

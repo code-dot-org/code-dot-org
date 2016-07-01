@@ -22,6 +22,6 @@ You can apply to the Professional Learning Program for CS in Science if you are 
 
 ## Don't teach in a partner district?
 
-We will open the CS in Science Professional Learning Program to teachers from non-partner districts if there is space available.  Teachers who are selected from the wait-list will need to demonstrate a commitment to delivering the Code.org CS in Science course in their classroom during the 2016-17 school year.
+We will open the CS in Science Professional Learning Program to teachers from non-partner districts if there is space available.  Teachers who are selected will need to demonstrate a commitment to delivering the Code.org CS in Science course in their classroom during the 2016-17 school year.
 
-[<button>Join the wait list</button>](https://form.jotform.com/60338373405150)
+[<button>Apply as a single school</button>](https://form.jotform.com/61175565477162)

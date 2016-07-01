@@ -1,4 +1,4 @@
-/* global $ */
+var React = require('react');
 var rowStyle = require('./rowStyle');
 
 var OptionsSelectRow = React.createClass({
@@ -19,7 +19,7 @@ var OptionsSelectRow = React.createClass({
     };
   },
 
-  handleChangeInternal: function(event) {
+  handleChangeInternal: function (event) {
     var value = event.target.value;
     // Extract an array of text values, 1 per line
     var optionList = value.split('\n').filter(function (val) {
@@ -29,8 +29,8 @@ var OptionsSelectRow = React.createClass({
     this.setState({value: value});
   },
 
-  render: function() {
-    var textAreaStyle = $.extend({}, rowStyle.input, {
+  render: function () {
+    var textAreaStyle = Object.assign({}, rowStyle.input, {
       height: 40
     });
     return (

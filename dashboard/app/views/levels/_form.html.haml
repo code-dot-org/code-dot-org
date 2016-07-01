@@ -11,7 +11,7 @@
       = f.text_field :name, placeholder: 'Level Name'
   / Only enter name to create new records of certain level types.
   - unless @level.new_record? && @level.is_a?(Blockly)
-    = render partial: 'levels/editors/all', locals: {f: f}
+    = render partial: 'levels/editors/all', locals: {f: f} unless @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/md_instructions', locals: {f: f} unless @level.is_a? DSLDefined
 
     = render partial: 'levels/editors/authored_hints', locals: {f: f} unless @level.is_a? DSLDefined
@@ -25,9 +25,12 @@
     = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
     = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
     = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a? Gamelab
-    = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
+    = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined) && !(@level.is_a?(EvaluationMulti)))
+    = render partial: 'levels/editors/evaluation_multi', locals: {f: f} if @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
-
+    = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
+    = render partial: 'levels/editors/standalone_video', locals: {f: f} if @level.is_a? StandaloneVideo
+    = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
     = render partial: 'levels/editors/pixelation', locals: {f: f} if @level.is_a? Pixelation
     = render partial: 'levels/editors/text_compression', locals: {f: f} if @level.is_a? TextCompression
     = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer

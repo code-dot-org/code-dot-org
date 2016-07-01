@@ -1,16 +1,14 @@
+var React = require('react');
 var msg = require('../../locale');
-var Hint = require('./Hint.jsx');
-var Lightbulb = require('../Lightbulb.jsx');
+var Hint = require('./Hint');
+var Lightbulb = require('../Lightbulb');
 
 /**
  * @overview React Component for displaying Authored Hints in the
  * Instructions dialog. Any hints the user has already requested to see
  * are listed, along with a button to see the next hint.
- * Pressing the button adds the next hint (or the first hint if none
- * have previously been viewed) to the list of hints and removes the
- * button.
- * Closing the instructions and re-opening them will reset this
- * Component, allowing the button to be pressed once more.
+ * Pressing the button closes the Instructions dialog and triggers the
+ * next hint to be displayed in a qtip dialog
  */
 var HintsDisplay = React.createClass({
 
@@ -18,27 +16,11 @@ var HintsDisplay = React.createClass({
     hintReviewTitle: React.PropTypes.string.isRequired,
     seenHints: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     unseenHints: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    onUserViewedHint: React.PropTypes.func.isRequired,
-  },
-
-  getInitialState: function () {
-    return {
-      showNextUnseenHint: false
-    };
-  },
-
-  viewHint: function () {
-    this.props.onUserViewedHint();
-    this.setState({
-      showNextUnseenHint: true
-    });
+    viewHint: React.PropTypes.func.isRequired,
   },
 
   render: function () {
     var hintsToShow = this.props.seenHints;
-    if (this.state.showNextUnseenHint) {
-      hintsToShow = hintsToShow.concat(this.props.unseenHints[0]);
-    }
 
     var seenHints;
     if (hintsToShow && hintsToShow.length) {
@@ -56,9 +38,9 @@ var HintsDisplay = React.createClass({
     }
 
     var viewHintButton;
-    if (!this.state.showNextUnseenHint && this.props.unseenHints && this.props.unseenHints.length) {
+    if (this.props.unseenHints && this.props.unseenHints.length) {
       viewHintButton = (
-        <button id="hint-button" onClick={ this.viewHint } className="lightbulb-button">
+        <button id="hint-button" onClick={this.props.viewHint} className="lightbulb-button">
           <Lightbulb size={32} style={{ margin: "-9px 0px -9px -5px" }}/>
           {msg.hintSelectNewHint()}
         </button>

@@ -26,8 +26,7 @@ export default class LevelBlock {
       this.isPlacable = true;
     }
 
-    if(blockType.substring(0, 5) == "rails")
-    {
+    if (blockType.substring(0, 5) === "rails") {
       this.isEntity = true;
       this.isWalkable = true;
       this.isUsable = true;
@@ -35,36 +34,36 @@ export default class LevelBlock {
       this.isTransparent = true;
     }
 
-    if (blockType == "sheep") {
+    if (blockType === "sheep") {
       this.isEntity = true;
       this.isDestroyable = false;
       this.isUsable = true;
     }
 
-    if (blockType == "creeper"){
+    if (blockType === "creeper"){
       this.isEntity = true;
     }
 
-    if (blockType == "glass"){
+    if (blockType === "glass"){
       this.isDestroyable = false;
     }
 
-    if (blockType == "bedrock"){
+    if (blockType === "bedrock"){
       this.isDestroyable = false;
     }
 
-    if (blockType == "lava") {
+    if (blockType === "lava") {
       this.isEmissive = true;
       this.isWalkable = true;
       this.isDeadly = true;
       this.isPlacable = true;
     }
 
-    if (blockType == "water") {
+    if (blockType === "water") {
       this.isPlacable = true;
     }
 
-    if (blockType == "torch") {
+    if (blockType === "torch") {
       this.isEmissive = true;
       this.isEntity = true;
       this.isWalkable = true;
@@ -73,7 +72,7 @@ export default class LevelBlock {
       this.isTransparent = true;
     }
 
-    if (blockType == "cropWheat") {
+    if (blockType === "cropWheat") {
       this.isEmissive = false;
       this.isEntity = true;
       this.isWalkable = true;
@@ -82,12 +81,12 @@ export default class LevelBlock {
       this.isTransparent = true;
     }
 
-    if (blockType == "tnt") {
+    if (blockType === "tnt") {
       this.isUsable = true;
       this.isDestroyable = true;
     }
 
-    if(blockType == "door") {
+    if (blockType === "door") {
       this.isEntity = true;
       this.isWalkable = true;
       this.isUsable = true;

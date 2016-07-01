@@ -23,9 +23,17 @@ lv:
           future: nevar būt nākotnē
   hello: Sveika, pasaule
   welcome_back: 'Laipni lūdzu atpakaļ, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Iesniegt
   unsubmit: Atcelt iesniegšanu
+  previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
+  cancel: Atcelt
+  okay: Labi
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Pievienot skolotāju:'
@@ -79,6 +87,7 @@ lv:
     teacher_title: Pierakstīšanās kā skolotājam
     student_pitch: Pierakstīšanās kā studentam priekš Code.org
     student_title: Pierakstīšanās kā studentam
+    signup_title: Sign up for Code.org
     school_name: Skolas nosaukums (nav obligāts)
     school_address: Skolas adrese (nav obligāta)
     address_placeholder: Adrese, pilsēta, novads, pasta indekss
@@ -97,6 +106,9 @@ lv:
     student_terms: "Piekrītu Code.org <a href='http://code.org/tos'> lietošanas noteikumiem</a>. Ja es esmu jaunāks par 13 gadiem, iesniedzot šo veidlapu, apstiprinu, ka man ir vecāku vai likumīgā aizbildņa atļauja lietot Code.org pakalpojumus.<br/>Lietotājiem, kas jaunāki par 13 gadiem, e-pasta adreses netiek glabātas veidā, kas mums atļautu ar viņiem sazināties."
     teacher_terms: "Es piekrītu Code.org <a href='http://code.org/tos'>lietošanas noteikumiem</a>."
     additional_information: Mums nepieciešama papildus informācija, lai turpinātu Tavu pieteikumu.
+    user_type_label: Account Type
+    user_type_teacher: Skolotāja
+    user_type_student: Students
   signin_form:
     title: Jau ir konts? Pieraksties
     login: E-pasts vai lietotājvārds
@@ -150,8 +162,6 @@ lv:
         subject: 'Pievienojieties Code.org klasei ar %{teacher_name}!'
       student_disassociated:
         subject: 'Code.org paziņojums: %{student_name} vairs nav jūsu students.'
-      teacher_disassociated:
-        subject: 'Code.org paziņojums: %{teacher_name} vairs nav jūsu skolotājs.'
   reports:
     error:
       access_denied: Jums nav pieejas šīs personas statistikai
@@ -328,6 +338,24 @@ lv:
     no_primary_course: Izmēģināt Code Studio kursu
     choose_next_course: Izmēģini kādu no Code Studio kursiem izvēloties zemāk
     print_certificate: Izdrukāt sertifikātu
+    announcement_title: Announcements
+    announcement_view_all: View all
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Mācies Code Studio
     description: Jebkurš var apgūt datorzinības. Izveido spēles aplikācijas un mākslu ar kodu.
@@ -343,8 +371,9 @@ lv:
     thank_you: 'Mēs pateicamies mūsu <a href="https://code.org/about/donors">ziedotājiem</a>, <a href="https://code.org/about/partners">partneriem</a>, mūsu<a href="https://code.org/about/team">paplašinātajai komandai</a>, mūsu video veidotājiem un mūsu <a href="https://code.org/about/advisors">izglītības konsultantiem</a> par atbalstu veidojot Code Studio.'
     help_from_html: Inžinieri no Google, Microsoft, Facebook un Twitter palīzēja radīt šo pamācību.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Nodrošina Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -375,15 +404,12 @@ lv:
     notes_coming_soon: Piezīmes šim video, drīzumā.
     autoplay_option: Automātiski atskaņot videoklipu
     download: Lejupielādēt videoklipu
-  compatability:
-    working:
-      header: Mēs strādājam pie atbalsta jūsu pārlūkam.
-      message: "Code.org izmanto mūsdienīgas tīmekļa lapu tehnoloģijas. Tas palīdz lapai ātrāk darboties. Tava pārlūkprogramma neatbalsta visas nepieciešamās funkcijas un tev varētu būt nelieli traucējumi, kamēr izmanto šo lapas daļu. Lūdzu, palīdzi mums, <a href='%{report_issue_url}'> ziņojot visus traucējumus, ko atrod</a>. Tu vari arī <a href='%{supported_browsers_url}'> nomainīt savu pārlūkprogrammu uz atbalstītu versiju</a>."
-      hide_this_warning: Nerādīt šo brīdinājumu
+  compatibility:
     upgrade:
-      header: Lūdzu atjaunot savu pārlūkprogrammu.
-      message: "Code.org lieto modernas tīmekļa tehnoloģijas. Tās padara vietni ātrāku. Diemžēl tavs pārlūks neatbalsta visas iezīmes, kas nepieciešamas, lai palaistu šo vietnes daļu.<br/><br/>Instalē pārlūku no atbalstīto pārlūku saraksta, lai turpinātu. Tu vari <a href='#'>mēģināt apskatīt lapu</a>, bet sagaidi, ka tā var darboties nepareizi."
-      button: Parādīt atbalstīto pārlūkprogrammu sarakstu
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      link: Uzzini vairāk
   slow_loading: Tas aizņem vairāk laika nekā parasti...
   try_reloading: Pamēģini pārlādēt pašreizējo lapu
   next_stage: Pabeigts! Turpināt ar nākamo līmeni
@@ -449,18 +475,25 @@ lv:
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Skolnieki uzzīmēja šos ar kodu!
     students_made_these_with_code: Skolēni izveidoja šos ar kodu!
     picture_count: 'Agrākās <b>%{days}</b> dienās, skolnieki zīmēja <b>%{count}</b> attēlus taisot paši savas datorprogrammas. Noklikšķini uz attēla, lai apskatītu katru programmu darbībā.'
     activity_count: 'Agrākās <b>%{days}</b> dienās, veidoja <b>%{count}</b> attēlus un lietojamprogrammas  taisot paši savas datorprogrammas. Noklikšķini uz attēliem un ekrānšāviņiem, lai apskatītu katru programmu darbībā.'
     want_to_make_your_own: Vēlies uzveidot pats savu?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Vēl &rarr;'
     caption_by_name_age: '%{name}, vecums %{age}'
     caption_time_ago: '%{time_ago} pirms'
     header: Galerija
     header_playlab: Spēles laboratorija
     header_artist: Mākslinieks
+    report_abuse: Report Abuse
   landing:
     prerelease: "Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē, ka tā nav kursa pēdējā versija un var tikt pakļauta pārskatam pēc atsauksmju saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti."
     prerelease_hoc2014: "Šī pamācība ir <span class='betatext'>beta</span >stadijā. Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes."
@@ -492,6 +525,12 @@ lv:
     wrong_body: Thank you for submitting answers.
     correct_title: Paldies
     correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Nepareizs risinājums
     wrong_body: Ievadītais risinājums nav pareizs. Lūdzu mēģini vēl!
@@ -582,6 +621,9 @@ lv:
     share: Ieteikt
     share_title: Share your project
     share_copy_link: 'Copy the link:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Close
     more: Vairāk
     name: Vārds
@@ -620,8 +662,60 @@ lv:
           infringement: Copyright Infringement
           other: Citi
         detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}.'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
       no_icons_found: No icons found
+    playzone:
+      artist_description: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Izveidot stāstu vai spēli ar Spēles laboratoriju!
+      playlab_title: New App
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
+  flex_category:
+    required: Pārskats
+    content: Content
+    practice: Teaching Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

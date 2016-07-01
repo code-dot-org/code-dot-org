@@ -119,24 +119,12 @@ def index_batch_of_forms(batch_size)
   documents.count
 end
 
-def main()
+def main
   limit = 1000
 
-  messages = []
-
-  count = process_batch_of_forms(limit)
-  messages << "#{count} form(s) processed" if count > 0
-
+  process_batch_of_forms(limit)
   receipt_count = send_batch_of_receipts(limit)
-  messages << "#{receipt_count} receipt(s) queued" if receipt_count > 0
-
-  count = index_batch_of_forms(limit)
-  messages << "#{count} form(s) indexed" if count > 0
-
-  remaining = DB[:forms].where(processed_at: nil).count
-  messages << "#{remaining} forms(s) remaining." if remaining > 0
-
-#  HipChat.log messages.join('; ') unless messages.empty?
+  index_batch_of_forms(limit)
 
   system "#{deploy_dir('bin', 'deliver_poste_messages').shellescape} 2>&1" unless receipt_count == 0
 end

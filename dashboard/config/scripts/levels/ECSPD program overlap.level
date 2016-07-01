@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:06.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Relationship between Curriculum and PD",
+    "height": "100",
+    "markdown_instructions": "\n#### Now that you've read more about the ECS program, what relationship do you see between the curriculum and Professional Development? What aspects of the two piece of the program seem most important or interesting to you?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

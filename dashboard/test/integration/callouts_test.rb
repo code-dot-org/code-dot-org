@@ -7,13 +7,13 @@ class CalloutsTest < ActionDispatch::IntegrationTest
     @level = Maze.create(@maze_data)
     @level.callout_json = '[{"localization_key": "run", "element_id": "#runButton"}]'
     @level.save!
-    @script_level = create(:script_level, level_id: @level.id)
+    @script_level = create(:script_level, levels: [@level])
     @level_path = "/levels/#{@level.id}"
     @script_level_path = "/s/#{@script_level.script.name}/stage/1/puzzle/1"
     Script.script_cache.delete @script_level.script.name
     Script.script_cache.delete @script_level.script.id.to_s
 
-    @expected_callouts = [{"id"=>nil, "element_id"=>"#runButton", "created_at"=>nil, "updated_at"=>nil, "script_level_id"=>nil, "qtip_config"=>"null", "on"=>nil, "callout_text"=>nil, "localized_text"=>"Hit \"Run\" to try your program"}]
+    @expected_callouts = [{"id"=>nil, "element_id"=>"#runButton", "created_at"=>nil, "updated_at"=>nil, "seen"=>nil, "script_level_id"=>nil, "qtip_config"=>nil, "on"=>nil, "callout_text"=>nil, "localized_text"=>"Hit \"Run\" to try your program"}]
 
     Script.clear_cache
   end

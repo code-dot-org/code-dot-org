@@ -27,7 +27,10 @@
     "never_autoplay_video": "false",
     "examples_required": "false"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <solution_blocks>

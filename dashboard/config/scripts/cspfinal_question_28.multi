@@ -1,0 +1,17 @@
+name 'CSPFinal_Question_28'
+wrong '<pre>n = -1</pre>'
+right '<pre>n &lt; -1</pre>'
+wrong '<pre>n = 0</pre>'
+wrong '<pre>n &gt; 5</pre>'
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+<pre>
+n &larr; 5
+REPEAT UNTIL (&lt;MISSING CONDITION&gt;)
+    n &larr; n * (-1)
+</pre>
+
+Which of the following replacements for <code>&lt;MISSING CONDITION&gt;</code> will NOT result in an infinite loop?
+MARKDOWN

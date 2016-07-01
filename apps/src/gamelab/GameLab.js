@@ -1,5 +1,8 @@
 'use strict';
 
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var commonMsg = require('../locale');
 var msg = require('./locale');
 var levels = require('./levels');
@@ -7,11 +10,10 @@ var codegen = require('../codegen');
 var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
-var _ = utils.getLodash();
+var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
@@ -24,14 +26,28 @@ var gamelabCommands = require('./commands');
 var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
+var dom = require('../dom');
+var experiments = require('../experiments');
 
-var actions = require('./actions');
-var createStore = require('../redux');
-var gamelabReducer = require('./reducers').gamelabReducer;
-var GameLabView = require('./GameLabView.jsx');
+import {setInitialAnimationMetadata} from './animationModule';
+var reducers = require('./reducers');
+var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
+import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
+
+var ButtonState = {
+  UP: 0,
+  DOWN: 1
+};
+
+var ArrowIds = {
+  LEFT: 'leftButton',
+  UP: 'upButton',
+  RIGHT: 'rightButton',
+  DOWN: 'downButton'
+};
 
 /**
  * An instantiable GameLab class
@@ -41,13 +57,6 @@ var GameLab = function () {
   this.level = null;
   this.tickIntervalId = 0;
   this.tickCount = 0;
-
-  /**
-   * Redux Store holding application state, transformable by actions.
-   * @private {Store}
-   * @see http://redux.js.org/docs/basics/Store.html
-   */
-  this.reduxStore_ = createStore(gamelabReducer);
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -59,14 +68,18 @@ var GameLab = function () {
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
   /** @type {JsDebuggerUi} */
-  this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+  this.debugger_ = null;
 
   this.eventHandlers = {};
   this.Globals = {};
+  this.btnState = {};
+  this.dPadState = {};
   this.currentCmdQueue = null;
+  this.interpreterStarted = false;
+  this.globalCodeRunsDuringPreload = false;
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.startedHandlingEvents = false;
+  this.preloadInProgress = false;
   this.gameLabP5 = new GameLabP5();
   this.api = api;
   this.api.injectGameLab(this);
@@ -90,7 +103,9 @@ module.exports = GameLab;
  */
 GameLab.prototype.log = function (object) {
   this.consoleLogger_.log(object);
-  this.debugger_.log(object);
+  if (this.debugger_) {
+    this.debugger_.log(object);
+  }
 };
 
 /**
@@ -117,6 +132,8 @@ GameLab.prototype.init = function (config) {
   this.skin = config.skin;
   this.level = config.level;
 
+  this.level.softButtons = this.level.softButtons || {};
+
   config.usesAssets = true;
 
   this.gameLabP5.init({
@@ -127,59 +144,41 @@ GameLab.prototype.init = function (config) {
     onDraw: this.onP5Draw.bind(this)
   });
 
-  config.afterClearPuzzle = function() {
+  config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
 
-  var showFinishButton = !this.level.isProjectLevel;
-  var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var areBreakpointsEnabled = true;
-  var firstControlsRow = require('./controls.html.ejs')({
-    assetUrl: this.studioApp_.assetUrl,
-    finishButton: finishButtonFirstLine && showFinishButton
-  });
-  var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
-    showButtons: true,
-    showConsole: true,
-    showWatch: true,
-  });
+  // hide makeYourOwn on the share page
+  config.makeYourOwn = false;
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        localeDirection: this.studioApp_.localeDirection(),
-        extraControlRows: extraControlRows,
-        blockUsed : undefined,
-        idealBlockNumber : undefined,
-        editCode: this.level.editCode,
-        blockCounterClass : 'block-counter-default',
-        pinWorkspaceToBottom: true,
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  }.bind(this);
+  config.centerEmbedded = false;
+  config.wireframeShare = true;
+  config.noHowItWorks = true;
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: firstControlsRow,
-        extraControlRows: extraControlRows,
-        pinWorkspaceToBottom: true,
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  }.bind(this);
+  config.shareWarningInfo = {
+    hasDataAPIs: function () {
+      return this.hasDataStoreAPIs(this.studioApp_.getCode());
+    }.bind(this),
+    onWarningsComplete: function () {
+      window.setTimeout(this.studioApp_.runButtonClick, 0);
+    }.bind(this)
+  };
+
+  // Provide a way for us to have top pane instructions disabled by default, but
+  // able to turn them on.
+  config.showInstructionsInTopPane = true;
+  config.noInstructionsWhenCollapsed = true;
+
+  var breakpointsEnabled = !config.level.debuggerDisabled;
 
   var onMount = function () {
+    this.setupReduxSubscribers(this.studioApp_.reduxStore);
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
-    config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
+    config.afterEditorReady = this.afterEditorReady_.bind(this, breakpointsEnabled);
 
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
@@ -187,23 +186,82 @@ GameLab.prototype.init = function (config) {
 
     this.studioApp_.init(config);
 
-    this.debugger_.initializeAfterDomCreated({
-      defaultStepSpeed: 1
-    });
+    var finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
+    }
+
+    if (this.debugger_) {
+      this.debugger_.initializeAfterDomCreated({
+        defaultStepSpeed: 1
+      });
+    }
+
+    this.setCrosshairCursorForPlaySpace();
   }.bind(this);
 
-  this.reduxStore_.dispatch(actions.setInitialLevelProps({
-    assetUrl: this.studioApp_.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share
-  }));
+  var showFinishButton = !this.level.isProjectLevel;
+  var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
+  var showDebugButtons = (!config.hideSource &&
+                          config.level.editCode &&
+                          !config.level.debuggerDisabled);
+  var showDebugConsole = !config.hideSource && config.level.editCode;
 
-  ReactDOM.render(<Provider store={this.reduxStore_}>
-    <GameLabView
-      generateCodeWorkspaceHtml={generateCodeWorkspaceHtmlFromEjs}
-      generateVisualizationColumnHtml={generateVisualizationColumnHtmlFromEjs}
-      onMount={onMount} />
-  </Provider>, document.getElementById(config.containerId));
+  if (showDebugButtons || showDebugConsole) {
+    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+  }
+
+  this.studioApp_.setPageConstants(config, {
+    showDebugButtons: showDebugButtons,
+    showDebugConsole: showDebugConsole,
+    showDebugWatch: true
+  });
+
+  // Push project-sourced animation metadata into store
+  if (typeof config.initialAnimationMetadata !== 'undefined') {
+    this.studioApp_.reduxStore.dispatch(setInitialAnimationMetadata(config.initialAnimationMetadata));
+  }
+
+  ReactDOM.render((
+    <Provider store={this.studioApp_.reduxStore}>
+      <GameLabView
+          showFinishButton={finishButtonFirstLine && showFinishButton}
+          onMount={onMount}
+      />
+    </Provider>
+  ), document.getElementById(config.containerId));
+
+  this.studioApp_.notifyInitialRenderComplete(config);
+};
+
+/**
+ * Subscribe to state changes on the store.
+ * @param {!Store} store
+ */
+GameLab.prototype.setupReduxSubscribers = function (store) {
+  var state = {};
+  store.subscribe(() => {
+    var lastState = state;
+    state = store.getState();
+
+    if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
+      this.onIsRunningChange(state.runState.isRunning);
+    }
+  });
+};
+
+GameLab.prototype.onIsRunningChange = function () {
+  this.setCrosshairCursorForPlaySpace();
+};
+
+/**
+ * Hopefully a temporary measure - we do this ourselves for now because this is
+ * a 'protected' div that React doesn't update, but eventually would rather do
+ * this with React.
+ */
+GameLab.prototype.setCrosshairCursorForPlaySpace = function () {
+  var showOverlays = shouldOverlaysBeVisible(this.studioApp_.reduxStore.getState());
+  $('#divGameLab').toggleClass('withCrosshair', showOverlays);
 };
 
 GameLab.prototype.loadAudio_ = function () {
@@ -212,10 +270,44 @@ GameLab.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
+GameLab.prototype.calculateVisualizationScale_ = function () {
+  var divGameLab = document.getElementById('divGameLab');
+  // Calculate current visualization scale:
+  return divGameLab.getBoundingClientRect().width / divGameLab.offsetWidth;
+};
+
+/**
+ * @param {string} code The code to search for Data Storage APIs
+ * @return {boolean} True if the code uses any data storage APIs
+ */
+GameLab.prototype.hasDataStoreAPIs = function (code) {
+  return /createRecord/.test(code) || /updateRecord/.test(code) ||
+      /setKeyValue/.test(code);
+};
+
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
 GameLab.prototype.afterInject_ = function (config) {
+
+  // Connect up arrow button event handlers
+  for (var btn in ArrowIds) {
+    dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+        this.onArrowButtonUp.bind(this, ArrowIds[btn]));
+    dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
+        this.onArrowButtonDown.bind(this, ArrowIds[btn]));
+  }
+  if (this.level.showDPad) {
+    dom.addMouseDownTouchEvent(document.getElementById('studio-dpad-button'),
+        this.onDPadButtonDown.bind(this));
+  }
+  // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+  // all touchend events on the page, breaking click events...
+  document.addEventListener('mouseup', this.onMouseUp.bind(this), false);
+  var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+  if (mouseUpTouchEventName) {
+    document.body.addEventListener(mouseUpTouchEventName, this.onMouseUp.bind(this));
+  }
 
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
@@ -223,14 +315,12 @@ GameLab.prototype.afterInject_ = function (config) {
     Blockly.JavaScript.addReservedWords('GameLab,code');
   }
 
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = '400px';
+  // Update gameLabP5's scale and keep it updated with future resizes:
+  this.gameLabP5.scale = this.calculateVisualizationScale_();
 
-  var divGameLab = document.getElementById('divGameLab');
-  divGameLab.style.width = '400px';
-  divGameLab.style.height = '400px';
-
+  window.addEventListener('resize', function () {
+    this.gameLabP5.scale = this.calculateVisualizationScale_();
+  }.bind(this));
 };
 
 /**
@@ -273,17 +363,36 @@ GameLab.prototype.reset = function (ignore) {
   // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.startedHandlingEvents = false;
+  this.preloadInProgress = false;
+  this.globalCodeRunsDuringPreload = false;
 
-  this.debugger_.detach();
+  if (this.debugger_) {
+    this.debugger_.detach();
+  }
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
   if (this.JSInterpreter) {
     this.JSInterpreter.deinitialize();
     this.JSInterpreter = null;
+    this.interpreterStarted = false;
   }
   this.executionError = null;
+
+  // Soft buttons
+  var softButtonCount = 0;
+  for (var i = 0; i < this.level.softButtons.length; i++) {
+    document.getElementById(this.level.softButtons[i]).style.display = 'inline';
+    softButtonCount++;
+  }
+  if (softButtonCount) {
+    $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
+  }
+
+  if (this.level.showDPad) {
+    $('#studio-dpad').removeClass('studio-dpad-none');
+    this.resetDPad();
+  }
 };
 
 GameLab.prototype.onPuzzleComplete = function (submit) {
@@ -308,38 +417,47 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
   // Stop everything on screen
   this.reset();
 
-  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
-    this.studioApp_.playAudio('win');
-  } else {
-    this.studioApp_.playAudio('failure');
-  }
-
   var program;
+  var containedLevelResultsInfo = this.studioApp_.getContainedLevelResultsInfo();
 
-  if (this.level.editCode) {
+  if (containedLevelResultsInfo) {
+    // Keep our this.testResults as always passing so the feedback dialog
+    // shows Continue (the proper results will be reported to the service)
+    this.testResults = this.studioApp_.TestResults.ALL_PASS;
+    this.message = containedLevelResultsInfo.feedback;
+  } else if (this.level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = this.studioApp_.getCode();
+    program = encodeURIComponent(this.studioApp_.getCode());
+    this.message = null;
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = Blockly.Xml.domToText(xml);
+    program = encodeURIComponent(Blockly.Xml.domToText(xml));
+    this.message = null;
+  }
+
+  if (this.testResults >= this.studioApp_.TestResults.FREE_PLAY) {
+    this.studioApp_.playAudio('win');
+  } else {
+    this.studioApp_.playAudio('failure');
   }
 
   this.waitingForReport = true;
 
-  var sendReport = function() {
+  var sendReport = function () {
     this.studioApp_.report({
       app: 'gamelab',
       level: this.level.id,
       result: levelComplete,
       testResult: this.testResults,
       submitted: submit,
-      program: encodeURIComponent(program),
+      program: program,
       image: this.encodedFeedbackImage,
+      containedLevelResultsInfo: containedLevelResultsInfo,
       onComplete: (submit ? this.onSubmitComplete.bind(this) : this.onReportComplete.bind(this))
     });
 
@@ -354,7 +472,7 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
     sendReport();
   } else {
     divGameLab.toDataURL("image/png", {
-      callback: function(pngDataUrl) {
+      callback: function (pngDataUrl) {
         this.feedbackImage = pngDataUrl;
         this.encodedFeedbackImage = encodeURIComponent(this.feedbackImage.split(',')[1]);
 
@@ -390,9 +508,149 @@ GameLab.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   this.execute();
+
+  // Enable the Finish button if is present:
+  var shareCell = document.getElementById('share-cell');
+  if (shareCell) {
+    shareCell.className = 'share-cell-enabled';
+  }
 };
 
-GameLab.prototype.evalCode = function(code) {
+function p5KeyCodeFromArrow(idBtn) {
+  switch (idBtn) {
+    case ArrowIds.LEFT:
+      return window.p5.prototype.LEFT_ARROW;
+    case ArrowIds.RIGHT:
+      return window.p5.prototype.RIGHT_ARROW;
+    case ArrowIds.UP:
+      return window.p5.prototype.UP_ARROW;
+    case ArrowIds.DOWN:
+      return window.p5.prototype.DOWN_ARROW;
+  }
+}
+
+GameLab.prototype.onArrowButtonDown = function (buttonId, e) {
+  // Store the most recent event type per-button
+  this.btnState[buttonId] = ButtonState.DOWN;
+  e.preventDefault();  // Stop normal events so we see mouseup later.
+
+  this.gameLabP5.notifyKeyCodeDown(p5KeyCodeFromArrow(buttonId));
+};
+
+GameLab.prototype.onArrowButtonUp = function (buttonId, e) {
+  // Store the most recent event type per-button
+  this.btnState[buttonId] = ButtonState.UP;
+
+  this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
+};
+
+GameLab.prototype.onDPadButtonDown = function (e) {
+  this.dPadState = {};
+  this.dPadState.boundHandler = this.onDPadMouseMove.bind(this);
+  document.body.addEventListener('mousemove', this.dPadState.boundHandler);
+  this.dPadState.touchEventName = dom.getTouchEventName('mousemove');
+  if (this.dPadState.touchEventName) {
+    document.body.addEventListener(this.dPadState.touchEventName,
+        this.dPadState.boundHandler);
+  }
+  if (e.touches) {
+    this.dPadState.startingX = e.touches[0].clientX;
+    this.dPadState.startingY = e.touches[0].clientY;
+    this.dPadState.previousX = e.touches[0].clientX;
+    this.dPadState.previousY = e.touches[0].clientY;
+  } else {
+    this.dPadState.startingX = e.clientX;
+    this.dPadState.startingY = e.clientY;
+    this.dPadState.previousX = e.clientX;
+    this.dPadState.previousY = e.clientY;
+  }
+
+  $('#studio-dpad-button').addClass('active');
+
+  e.preventDefault();  // Stop normal events so we see mouseup later.
+};
+
+var DPAD_DEAD_ZONE = 3;
+
+GameLab.prototype.onDPadMouseMove = function (e) {
+  var dPadButton = $('#studio-dpad-button');
+  var self = this;
+
+  function notifyKeyHelper(keyCode, cssClass, start, prev, cur, invert) {
+    if (invert) {
+      start *= -1;
+      prev *= -1;
+      cur *= -1;
+    }
+    start -= DPAD_DEAD_ZONE;
+
+    if (cur < start) {
+      if (prev >= start) {
+        self.gameLabP5.notifyKeyCodeDown(keyCode);
+        dPadButton.addClass(cssClass);
+      }
+    } else if (prev < start) {
+      self.gameLabP5.notifyKeyCodeUp(keyCode);
+      dPadButton.removeClass(cssClass);
+    }
+  }
+
+  var clientX = e.clientX;
+  var clientY = e.clientY;
+  if (e.touches) {
+    clientX = e.touches[0].clientX;
+    clientY = e.touches[0].clientY;
+  }
+
+  notifyKeyHelper(window.p5.prototype.LEFT_ARROW, 'left',
+      this.dPadState.startingX, this.dPadState.previousX, clientX, false);
+  notifyKeyHelper(window.p5.prototype.RIGHT_ARROW, 'right',
+      this.dPadState.startingX, this.dPadState.previousX, clientX, true);
+  notifyKeyHelper(window.p5.prototype.UP_ARROW, 'up',
+      this.dPadState.startingY, this.dPadState.previousY, clientY, false);
+  notifyKeyHelper(window.p5.prototype.DOWN_ARROW, 'down',
+      this.dPadState.startingY, this.dPadState.previousY, clientY, true);
+
+  this.dPadState.previousX = clientX;
+  this.dPadState.previousY = clientY;
+};
+
+GameLab.prototype.resetDPad = function () {
+  if (this.dPadState.boundHandler) {
+    // Fake a final mousemove back at the original starting position, which
+    // will reset buttons back to "up":
+    this.onDPadMouseMove({
+      clientX: this.dPadState.startingX,
+      clientY: this.dPadState.startingY,
+    });
+
+    document.body.removeEventListener('mousemove', this.dPadState.boundHandler);
+    if (this.dPadState.touchEventName) {
+      document.body.removeEventListener(this.dPadState.touchEventName,
+          this.dPadState.boundHandler);
+    }
+
+    $('#studio-dpad-button').removeClass('active');
+
+    this.dPadState = {};
+  }
+};
+
+GameLab.prototype.onMouseUp = function (e) {
+  // Reset all arrow buttons on "global mouse up" - this handles the case where
+  // the mouse moved off the arrow button and was released somewhere else
+  for (var buttonId in this.btnState) {
+    if (this.btnState[buttonId] === ButtonState.DOWN) {
+
+      this.btnState[buttonId] = ButtonState.UP;
+      this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
+    }
+  }
+
+  this.resetDPad();
+};
+
+GameLab.prototype.evalCode = function (code) {
   try {
     codegen.evalWith(code, {
       GameLab: this.api
@@ -416,7 +674,7 @@ GameLab.prototype.evalCode = function(code) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-GameLab.prototype.execute = function() {
+GameLab.prototype.execute = function () {
   this.result = this.studioApp_.ResultType.UNSET;
   this.testResults = this.studioApp_.TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
@@ -427,7 +685,7 @@ GameLab.prototype.execute = function() {
   this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (this.studioApp_.isUsingBlockly() &&
-      (this.studioApp_.hasExtraTopBlocks() ||
+      (this.studioApp_.hasUnwantedExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())) {
     // immediately check answer, which will fail and report top level blocks
     this.onPuzzleComplete();
@@ -437,7 +695,9 @@ GameLab.prototype.execute = function() {
   this.gameLabP5.startExecution();
 
   if (this.level.editCode) {
-    if (!this.JSInterpreter || !this.JSInterpreter.initialized()) {
+    if (!this.JSInterpreter ||
+        !this.JSInterpreter.initialized() ||
+        this.executionError) {
       return;
     }
   } else {
@@ -461,6 +721,22 @@ GameLab.prototype.initInterpreter = function () {
     return;
   }
 
+  codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
+
+  var self = this;
+  function injectGamelabGlobals() {
+    var propList = self.gameLabP5.getGlobalPropertyList();
+    for (var prop in propList) {
+      // Each entry in the propList is an array with 2 elements:
+      // propListItem[0] - a native property value
+      // propListItem[1] - the property's parent object
+      self.JSInterpreter.createGlobalProperty(
+          prop,
+          propList[prop][0],
+          propList[prop][1]);
+    }
+  }
+
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
@@ -469,12 +745,15 @@ GameLab.prototype.initInterpreter = function () {
   });
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  this.debugger_.attachTo(this.JSInterpreter);
+  if (this.debugger_) {
+    this.debugger_.attachTo(this.JSInterpreter);
+  }
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
-    enableEvents: true
+    enableEvents: true,
+    initGlobals: injectGamelabGlobals
   });
   if (!this.JSInterpreter.initialized()) {
     return;
@@ -491,18 +770,7 @@ GameLab.prototype.initInterpreter = function () {
     }
   }, this);
 
-  codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
-
-  var propList = this.gameLabP5.getGlobalPropertyList();
-  for (var prop in propList) {
-    // Each entry in the propList is an array with 2 elements:
-    // propListItem[0] - a native property value
-    // propListItem[1] - the property's parent object
-    this.JSInterpreter.createGlobalProperty(
-        prop,
-        propList[prop][0],
-        propList[prop][1]);
-  }
+  this.globalCodeRunsDuringPreload = !!this.eventHandlers.setup;
 
   /*
   if (this.checkForEditCodePreExecutionFailure()) {
@@ -515,14 +783,11 @@ GameLab.prototype.onTick = function () {
   this.tickCount++;
 
   if (this.JSInterpreter) {
-    this.JSInterpreter.executeInterpreter();
-
-    if (!this.startedHandlingEvents && this.JSInterpreter.startedHandlingEvents) {
-      // Call this once after we've started handling events
-      this.startedHandlingEvents = true;
-      this.gameLabP5.notifyUserGlobalCodeComplete();
+    if (this.interpreterStarted) {
+      this.JSInterpreter.executeInterpreter();
     }
 
+    this.completePreloadIfPreloadComplete();
     this.completeSetupIfSetupComplete();
     this.completeRedrawIfDrawComplete();
   }
@@ -535,29 +800,47 @@ GameLab.prototype.onTick = function () {
  */
 GameLab.prototype.onP5ExecutionStarting = function () {
   this.gameLabP5.p5eventNames.forEach(function (eventName) {
-    window[eventName] = function () {
+    this.gameLabP5.registerP5EventHandler(eventName, function () {
       if (this.JSInterpreter && this.eventHandlers[eventName]) {
         this.eventHandlers[eventName].apply(null);
       }
-    }.bind(this);
+    }.bind(this));
   }, this);
 };
 
 /**
  * This is called while this.gameLabP5 is in the preload phase. We initialize
  * the interpreter, start its execution, and call the user's preload function.
+ *
+ * @return {Boolean} whether or not the preload has completed
  */
 GameLab.prototype.onP5Preload = function () {
+  this.gameLabP5.preloadAnimations(this.getAnimationMetadata());
+
   this.initInterpreter();
   // And execute the interpreter for the first time:
   if (this.JSInterpreter && this.JSInterpreter.initialized()) {
-    this.JSInterpreter.executeInterpreter(true);
+    // Start executing the interpreter's global code as long as a setup() method
+    // was provided. If not, we will skip running any interpreted code in the
+    // preload phase and wait until the setup phase.
+    this.preloadInProgress = true;
+    if (this.globalCodeRunsDuringPreload) {
+      this.JSInterpreter.executeInterpreter(true);
+      this.interpreterStarted = true;
 
-    // In addition, execute the global function called preload()
-    if (this.eventHandlers.preload) {
-      this.eventHandlers.preload.apply(null);
+      // In addition, execute the global function called preload()
+      if (this.eventHandlers.preload) {
+        this.eventHandlers.preload.apply(null);
+      }
+    } else {
+      if (this.eventHandlers.preload) {
+        this.log("WARNING: preload() was ignored because setup() was not provided");
+        this.eventHandlers.preload = null;
+      }
     }
+    this.completePreloadIfPreloadComplete();
   }
+  return !this.preloadInProgress;
 };
 
 /**
@@ -567,9 +850,7 @@ GameLab.prototype.onP5Preload = function () {
  */
 GameLab.prototype.onP5Setup = function () {
   if (this.JSInterpreter) {
-    // TODO: (cpirich) Remove this code once p5play supports instance mode:
-
-    // Replace restored preload methods for the interpreter:
+    // Re-marshal restored preload methods for the interpreter:
     for (var method in this.gameLabP5.p5._preloadMethods) {
       this.JSInterpreter.createGlobalProperty(
           method,
@@ -577,20 +858,55 @@ GameLab.prototype.onP5Setup = function () {
           this.gameLabP5.p5);
     }
 
-    if (this.eventHandlers.setup) {
-      this.setupInProgress = true;
-      this.eventHandlers.setup.apply(null);
-      this.completeSetupIfSetupComplete();
-    } else {
-      this.gameLabP5.afterSetupComplete();
+    this.setupInProgress = true;
+    if (!this.globalCodeRunsDuringPreload) {
+      // If the setup() method was not provided, we need to run the interpreter
+      // for the first time at this point:
+      this.JSInterpreter.executeInterpreter(true);
+      this.interpreterStarted = true;
     }
+    if (this.eventHandlers.setup) {
+      this.eventHandlers.setup.apply(null);
+    }
+    this.completeSetupIfSetupComplete();
   }
 };
 
 GameLab.prototype.completeSetupIfSetupComplete = function () {
-  if (this.setupInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
+  if (!this.setupInProgress) {
+    return;
+  }
+
+  if (!this.globalCodeRunsDuringPreload &&
+      !this.JSInterpreter.startedHandlingEvents) {
+    // Global code should run during the setup phase, but global code hasn't
+    // completed.
+    return;
+  }
+
+  if (!this.eventHandlers.setup ||
+      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
     this.gameLabP5.afterSetupComplete();
     this.setupInProgress = false;
+  }
+};
+
+GameLab.prototype.completePreloadIfPreloadComplete = function () {
+  if (!this.preloadInProgress) {
+    return;
+  }
+
+  if (this.globalCodeRunsDuringPreload &&
+      !this.JSInterpreter.startedHandlingEvents) {
+    // Global code should run during the preload phase, but global code hasn't
+    // completed.
+    return;
+  }
+
+  if (!this.eventHandlers.preload ||
+      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
+    this.gameLabP5.notifyPreloadPhaseComplete();
+    this.preloadInProgress = false;
   }
 };
 
@@ -636,7 +952,7 @@ GameLab.prototype.executeCmd = function (id, name, opts) {
  * App specific displayFeedback function that calls into
  * this.studioApp_.displayFeedback when appropriate
  */
-GameLab.prototype.displayFeedback_ = function() {
+GameLab.prototype.displayFeedback_ = function () {
   var level = this.level;
 
   this.studioApp_.displayFeedback({
@@ -658,4 +974,26 @@ GameLab.prototype.displayFeedback_ = function() {
       sharingText: msg.shareGame()
     }
   });
+};
+
+/**
+ * Get the project's animation metadata for upload to the sources API.
+ * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ * @return {AnimationMetadata[]}
+ */
+GameLab.prototype.getAnimationMetadata = function () {
+  return this.studioApp_.reduxStore.getState().animations;
+};
+
+GameLab.prototype.getAnimationDropdown = function () {
+  return this.getAnimationMetadata().map(function (animation) {
+    return {
+      text: utils.quote(animation.name),
+      display: utils.quote(animation.name)
+    };
+  });
+};
+
+GameLab.prototype.getAppReducers = function () {
+  return reducers;
 };

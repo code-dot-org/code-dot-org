@@ -1,5 +1,5 @@
-$:.unshift File.expand_path('../lib', __FILE__)
-$:.unshift File.expand_path('../shared/middleware', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../shared/middleware', __FILE__)
 
 # Set up gems listed in the Gemfile.
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
@@ -24,7 +24,7 @@ def load_languages(path)
   end
 end
 
-def load_configuration()
+def load_configuration
   root_dir = File.expand_path('..', __FILE__)
   root_dir = '/home/ubuntu/website-ci' if root_dir == '/home/ubuntu/Dropbox (Code.org)'
 
@@ -39,12 +39,14 @@ def load_configuration()
 
   {
     'app_servers'                 => {},
+    'assets_bucket'               => 'cdo-dist',
+    'sync_assets'                 => rack_env != :adhoc,
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
-    'build_code_studio'           => [:development].include?(rack_env),
+    'build_code_studio'           => false,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
@@ -92,11 +94,19 @@ def load_configuration()
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'dynamo_table_metadata_table'         => "#{rack_env}_table_metadata",
     'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
+    'firebase_max_channel_writes_per_15_sec' => 300,
+    'firebase_max_channel_writes_per_60_sec' => 600,
+    'firebase_max_table_rows'     => 1000,
+    'firebase_max_record_size'    => 4096,
+    'firebase_max_property_size'  => 4096,
+    # dynamodb-specific rate limits
     'max_table_reads_per_sec'     => 20,
     'max_table_writes_per_sec'    => 40,
     'max_property_reads_per_sec'  => 40,
     'max_property_writes_per_sec' => 40,
     'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
+    'animations_s3_bucket'        => 'cdo-v3-animations',
+    'animations_s3_directory'     => rack_env == :production ? 'animations' : "animations_#{rack_env}",
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
     'sources_s3_bucket'           => 'cdo-v3-sources',
@@ -128,9 +138,9 @@ def load_configuration()
     config['pegasus_reporting_db_reader'] ||= config['reporting_db_reader'] + config['pegasus_db_name']
     config['pegasus_reporting_db_writer'] ||= config['reporting_db_writer'] + config['pegasus_db_name']
 
-    # Set AWS SDK environment variables from provided config.
-    ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] || config['s3_access_key_id']
-    ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] || config['s3_secret_access_key']
+    # Set AWS SDK environment variables from provided config and standardize on aws_* attributres
+    ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] ||= config['s3_access_key_id']
+    ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] ||= config['s3_secret_access_key']
     ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
@@ -145,7 +155,7 @@ class CDOImpl < OpenStruct
 
   @slog = nil
 
-  def initialize()
+  def initialize
     super load_configuration
   end
 
@@ -273,7 +283,7 @@ class CDOImpl < OpenStruct
     end
 
     def method_missing(*args)
-      return @default_value if !__getobj__.respond_to? args.first
+      return @default_value unless __getobj__.respond_to? args.first
       value = super
       return @default_value if value.nil?
       value
@@ -282,6 +292,20 @@ class CDOImpl < OpenStruct
 
   def with_default(default_value)
     DelegateWithDefault.new(self, default_value)
+  end
+
+  # When running on Chef Server, use Search via knife CLI to fetch a dynamic list of app-server front-ends,
+  # appending to the static list already provided by configuration files.
+  def app_servers
+    return super unless CDO.chef_managed
+    require 'cdo/rake_utils'
+    servers = RakeUtils.with_bundle_dir(cookbooks_dir) do
+      knife_cmd = "knife search node 'roles:front-end AND chef_environment:#{rack_env}' --format json --attribute cloud_v2"
+      JSON.parse(`#{knife_cmd}`)['rows'].map do |key|
+        [key.keys.first, key.values.first['cloud_v2']['local_hostname']]
+      end.to_h
+    end
+    servers.merge(super)
   end
 end
 
@@ -293,7 +317,7 @@ CDO ||= CDOImpl.new
 ##
 ##########
 
-def rack_env()
+def rack_env
   CDO.rack_env
 end
 

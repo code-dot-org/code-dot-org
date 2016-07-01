@@ -1,5 +1,6 @@
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
+require('../utils'); // Provides Function.prototype.inherits
 
 var EvalStar = function (pointCount, inner, outer, style, color) {
   evalUtils.ensureNumber(pointCount);
@@ -37,7 +38,7 @@ EvalStar.prototype.draw = function (parent) {
   }
 
   this.element_.setAttribute('points', points.join(' '));
-  if (this.pointCount_ % 2 == 1) {
+  if (this.pointCount_ % 2 === 1) {
     this.rotate(-90 / this.pointCount_);
   }
 

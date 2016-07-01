@@ -1,4 +1,4 @@
-partner_sites = CDO.partners.map{|x|x + '.code.org'}
+partner_sites = CDO.partners.map{|x| x + '.code.org'}
 
 get '/:short_code' do |short_code|
   short_code = 'mchoc' if short_code == 'MC'
@@ -118,7 +118,7 @@ end
 
 get '/api/hour/finish' do
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  complete_tutorial()
+  complete_tutorial
 end
 
 get '/api/hour/finish/:code' do |code|

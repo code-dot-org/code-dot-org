@@ -1,7 +1,12 @@
 ka-GE:
   hour_of_code: კოდის ერთი საათი
   hello: ჰეი, სამყარო
+  "yes": დიახ
+  "no": არა
   select_language: შეარჩიეთ თქვენი ენა
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: გაიგეთ მეტი
   en: ინფორმატიკა
   computer_science_edweek: კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული
   csedweek_dates: დეკემბრის 8-14, 2014
@@ -264,6 +269,8 @@ ka-GE:
   homepage_banner_privacy_link: გაიგეთ მეტი
   homepage_banner_20k_teachers: 20,000 მასწავლებელი გადამზადებულია და ასწავლის პროგრამირებას თავიანთ კლასებში.
   homepage_banner_20k_teachers_link: გაიგეთ მეტი
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: კოდის ერთი საათი
   homepage_slot_text_blurb_hoc: სწავლა შეუძლია ყველას. დაიწყეთ დღეს
   homepage_slot_text_link_hoc: სცადეთ კოდის ერთი საათი
@@ -289,6 +296,7 @@ ka-GE:
   homepage_slot_text_link_stats: სტატისტიკის ნახვა
   homepage_slot_text_link_buy: მონაწილეობის მიღება
   homepage_slot_text_link_donate: შემოწირულობის გაღება
+  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
   homepage_header_codestudio: კოდის სტუდიის მოსწავლეების ქმნილებები
   homepage_header_donors: Code.org მადლობას უხდის მხარდამჭერებს
   homepage_donors_seall: ყველას ნახვა
@@ -431,6 +439,7 @@ ka-GE:
   dashboard_landing_new_beta: სიახლე! ნახეთ ჩვენი საცდელი კურსები K-5 ასაკის მოსწავლეებისთვის.
   dashboard_landing_new_k5courses: სიახლე! ნახეთ ჩვენი კურსები K-5 მოსწავლეებისთვის.
   dashboard_landing_useful_links: სხვა სასარგებლო ბმულები
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: დასვით კითხვა პირისპირ! დაესწარით ჩვენს ყოველთვიურ ვიდეო-შეხვედრებს.
   dashboard_landing_print_certificates: ამოუბეჭდეთ სერტიფიკატები იმ მოსწავლეებს, რომლებმაც დაასრულეს ეს კურსი
   dashboard_landing_educator_blog: ჩვენი ახალი ამბებისა და მასალის განახლების შესახებს წაიკითხეთ ბლოგში Educator
@@ -444,6 +453,10 @@ ka-GE:
   dashboard_landing_available_courses: ეს კურსები უკვე მისაწვდომია თქვნთვის და თქვენი მოსწავლეებისთვის.
   dashboard_landing_more_tutorials: კიდევ უფრო მეტი ტუტორიალის ნახვა გინდათ?
   dashboard_landing_more_tutorials_desc: 'მისაწვდომია კიდევ რამდენიმე სხვა კურსი <a href="/learn/beyond">ჩვენი პარტნიორებისგან.</a> ისწავლეთ რობოტების დაპროგრამება, ვებ-გვერდების შექმნა, დაწერეთ საკუთარი აპლიკაცია ან გაეცანით სხვა ენებს, მაგალითად C++, Ruby ან Python-ს!'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: კოდის ერთი საათი ნებისმიერი ასაკისთვის
   dashboard_hoc_courses_desc: სცადეთ ეს მოკლე, ერთსაათიანი გაკვეთილები თქვენს მოსწავლეებთან ერთად!
   dashboard_hoc_courses_desc_and_cta: 'სცადეთ ეს მოკლე, ერთსაათიანი ტუტორიალები თქვენს მოსწავლეებთან ერთად.<a href="https://hourofcode.com">შეუერთდით კოდის ერთი საათის მოძრაობას</a> კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის ფარგლებში.'
@@ -474,6 +487,15 @@ ka-GE:
   dashboard_action_remove_confirm: წავშალოთ?
   dashboard_action_done: მზადაა
   dashboard_action_required: აუცილებელია
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: |-
+    Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: მასწავლებლის მთავარი გვერდი
   dashboard_navigation_section_student_progress: მოსწავლეების ანგარიშები და პროგრესი
   dashboard_navigation_section_teacher_progress: თქვენი კურსის პროგრესი
@@ -482,21 +504,34 @@ ka-GE:
   dashboard_navigation_section_pd: პროფესიული განვითარება
   dashboard_navigation_section_speakers: 'ინფორმატიკა <br/> მოწვეული სპიკერები'
   dashboard_navigation_all_sections: მოსწავლეების ანგარიშები და პროგრესი
-  dashboard_navigation_view_progress: პროგრესის ნახვა
-  dashboard_navigation_view_text_responses: ტექსტური პასუხების ნახვა
+  dashboard_navigation_view_progress: პროგრესი
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: მოსწავლეებს დამატება
   dashboard_navigation_manage_students: სტუდენტების მართვა
   dashboard_navigation_lesson_plans_resources: გაკვეთილების გეგმები და რესურსები
-  dashboard_navigation_view_stats: სტატისტიკის ნახვა
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'განყოფილება: %{section_name}'
   dashboard_navigation_student: 'მოსწავლე: %{student_name}'
+  dashboard_progress_not_started: არ არის დაწყებული
+  dashboard_progress_in_progress: დაწყებულია
+  dashboard_progress_not_completed: არაა დასრულებული
+  dashboard_progress_completed_too_many_blocks: დასრულებულია, ბლოკი ძალიან ბევრია
+  dashboard_progress_completed_perfect: დასრულებულია, იდეალურად
+  dashboard_progress_furthest_level_attempted: ეს დონე ძალიან მაღალია
+  dashboard_progress_submitted: ჩაბარებულია
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
   dashboard_sections_new_section: ახალი განყოფილება
   dashboard_sections_jumbotron_instruction: 'შექმენით ახალი განყოფილება და დაამატეთ მასში სტუდენტები. განყოფილებები გეხმარებათ დაჰყოთ მოსწავლეები უფრო პატარა ჯგუფებად - ასე მათ პროგრესს უკეთ დააკვირდებით.'
   dashboard_sections_table_section: სექცია
   dashboard_sections_table_secret: შესვლის ტიპი
   dashboard_sections_table_grade: შეფასება
   dashboard_sections_table_course: კურსი
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: მოსწავლეები
   dashboard_sections_table_code: სექციის კოდი
   dashboard_sections_name: განყოფილების სახელი
@@ -506,6 +541,19 @@ ka-GE:
   dashboard_sections_secret_none: 'თუ გინდათ, რომ თქვენმა მოსწავლეებმა დამოუკიდებლად მართონ თავიანთი ანგარიშები, მათ შორის, თავად აირჩიონ პაროლი, აირჩიეთ უსაფრთხოების დონე <b>ნულოვანი</b>.'
   dashboard_sections_print_secrets: შემდეგ შეგიძლიათ ამობეჭდოთ ბარათები ანგარიშების ინფორმაციით და დაურიგოთ ისინი თქვენს მოსწავლეებს.
   dashboard_sections_switch_section: 'განყოფილების გადართვა:'
+  dashboard_sections_close: დახურვა
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Teacher
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: მოსწავლის დამატება
   dashboard_students_add_students: რამდენიმე მოსწავლის დამატება
   dashboard_students_add_multiple: 'ჩაწერეთ მოსწავლეების სახელები, თითო ხაზზე თითო:'
@@ -549,6 +597,7 @@ ka-GE:
   dashboard_course2: 'კურსი 2:'
   dashboard_course3: 'კურსი 3:'
   dashboard_course4: 'კურსი 4 (ბეტა): '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: კურიკულუმი
   dashboard_curriculum_overview: K-5 კურიკულუმის მომიხილვა
   dashboard_overview: მიმოხილვა
@@ -572,13 +621,6 @@ ka-GE:
   dashboard_login_picture: სურათი
   dashboard_login_none: ელექტრონული ფოსტა
   dashboard_new_password: ახალი პაროლი
-  dashboard_progress_not_started: არ არის დაწყებული
-  dashboard_progress_in_progress: დაწყებულია
-  dashboard_progress_not_completed: არაა დასრულებული
-  dashboard_progress_completed_too_many_blocks: დასრულებულია, ბლოკი ძალიან ბევრია
-  dashboard_progress_completed_perfect: დასრულებულია, იდეალურად
-  dashboard_progress_furthest_level_attempted: ეს დონე ძალიან მაღალია
-  dashboard_progress_submitted: ჩაბარებულია
   dashboard_stage: ეტაპი
   dashboard_puzzle: თავსატეხი
   dashboard_question: კითხვა
@@ -588,6 +630,8 @@ ka-GE:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: სწორია
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -612,9 +656,9 @@ ka-GE:
   dashboard_announcements: განცხადებები
   dashboard_announce_view_all: ყველას ნახვა
   dashboard_announce_message: '<b>2016 წლის 29 თებერვალი</b> - ვორქშოპის მონაწილეთა 90% ჩვენს პროგრამას აფასებს, როგორც საუკეთესოს პროფესიონალური ზრდისთვის. მოთხოვნის გამო, კომპიუტერული მეცნიერების პროფესიული შესწავლის პროგრამას რამდენიმე ადგილი დავამატეთ. დარეგისტრირდით <u>31 მარტამდე</u> და დაიკავეთ თქვენი ადგილი.'
-  dashboard_announce_button_text: გაიგეთ მეტი
-  dashboard_announce_hoc: '<b>2015, 9 ნოემბერი</b> - აი, კოდის ერთი საათის ახალი ტუტორიალი, რომელიც მომავალ ვარსკვლავურ ომება ეხება. იმუშავეთ რეისთან ერთად და მართეთ ახალი დროიდი BB-8. შემდეგ კი შექმენით შორეულ გალაქტიკაში თქვენი საკუთარი თამაში ლეიასთან ერთად.'
-  dashboard_announce_playlab: '<b>2015 წლის 4 დეკემბერი</b> - კოდის ერთი საათი დაიწყო! გამოსცადეთ 50 ტუტორიალი ნებისმიერი ასაკისა და მოწყობილობისთვის. ამ კვირის სიახლე: დაწერეთ კოდი თქვენი საკუთარი ისტორიებისა და თამაშებისთვის თამაშების ახალ ლაბორატორიებში: გამყინვარების პერიოდი და გამბოლი.'
+  dashboard_announce_button_text: Test the feature
+  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_petition_button: დაამატე შენი სახელი
   code_hoc_coming: 'გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!'
   code_sign_up: დარეგისტრირდით და მიიღეთ მონაწილეობა CS განათლების კვირეულში
   learn_more: სცადეთ ახლა
@@ -724,9 +768,35 @@ ka-GE:
   course3_name: კურსი 3
   course4_name: კურსი 4
   accelerated_name: დაჩქარებული კურსი
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
   cspunit3_name: კომპიუტერული მეცნიერების პრინციპები ერთეული 3
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: კლასები 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: დაჩქარებული კურსი
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: ლაბირინთი
+  iceage_name: გამყინვარების პერიოდი
+  minecraft_name: მაინკრაფტი
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: მათემატიკა
+  hoc_category_name: კოდის ერთი საათი
+  csf_category_name: CS Fundamentals
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
   applab_gradelevel: ასაკი 13+
   applab_shortdescription_congrats: აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით შემდეგ კი გაუზიარეთ იგი სხვებს

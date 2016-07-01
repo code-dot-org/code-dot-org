@@ -8,6 +8,7 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  section_id      :integer
+#  deleted_at      :datetime
 #
 # Indexes
 #

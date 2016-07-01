@@ -1,94 +1,97 @@
 <%
-require 'shellwords'
+  require 'shellwords'
 
-$crontab = []
+  $crontab = []
 
-def home_dir(*paths)
-  File.join '/home', node[:current_user], *paths
-end
-
-def deploy_dir(*paths)
-  home_dir node.chef_environment, *paths
-end
-
-def bin_dir(*paths)
-  deploy_dir 'bin', *paths
-end
-
-def dashboard_dir(*paths)
-  deploy_dir 'dashboard', *paths
-end
-
-def pegasus_dir(*paths)
-  deploy_dir 'pegasus', *paths
-end
-
-def shared_dir(*paths)
-  deploy_dir 'shared', *paths
-end
-
-def cronjob(params)
-  time = params[:at].to_s
-  action = params[:do].to_s
-
-  notify = params[:notify].to_s
-  action = "BUNDLE_GEMFILE=#{deploy_dir('Gemfile')} bundle exec #{bin_dir('cronjob')} #{action.shellescape} #{notify}".strip
-
-  $crontab << "#{time} #{action}"
-end
-
-def crontab()
-  $crontab.join("\n")
-end
-
-# for multi-instance envs (ie production) there should be one daemon,
-# so cronjobs that run once per environment go here (standalone env
-# instances are all their own daemon)
-if node['cdo-apps']['daemon']
-  unless node.chef_environment == 'production' # non-production daemons
-    cronjob at:'@reboot', do:"#{deploy_dir('bin','solr-server')} > #{pegasus_dir('log','solr.log')} 2>&1"
+  def home_dir(*paths)
+    File.join '/home', node[:current_user], *paths
   end
 
-  if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
-    cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
-    cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'import_google_sheets')
-    cronjob at:'*/2 * * * *', do:deploy_dir('bin','run_server_generate_pdfs'), notify:'dev+crontab@code.org'
-    cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs'), notify:'dev+crontab@code.org'
-    cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs'), notify:'dev+crontab@code.org'
-    cronjob at:'*/2 * * * *', do:dashboard_dir('bin','build_scripts'), notify:'dev+crontab@code.org'
-    cronjob at:'*/5 * * * *', do:deploy_dir('bin','fetch-external-resources'), notify:'dev+crontab@code.org'
-    cronjob at:'30 16 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
+  def deploy_dir(*paths)
+    home_dir node.chef_environment, *paths
   end
 
-  if node.chef_environment == 'production' # production daemon
-    cronjob at:'20 */2 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
-    cronjob at:'5 6 * * *', do:deploy_dir('bin', 'send_workshop_reminder_emails')
-    cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
-    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'index-users-in-solr')
-    cronjob at:'25 7 * * *', do:deploy_dir('bin', 'update-hoc-map')
+  def bin_dir(*paths)
+    deploy_dir 'bin', *paths
   end
 
-  # 'daemons' in all environments
-  cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'process_forms')
-  cronjob at:'35 * * * *', do:deploy_dir('bin', 'cron', 'analyze_hoc_activity')
-  cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
-  cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'geocode_hoc_activity')
-  cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
-  cronjob at:'45 5 * * *', do:deploy_dir('bin', 'cron', 'admin_stats')
-  cronjob at:'40 4 * * *', do:deploy_dir('bin', 'cron', 'funometer')
-  cronjob at:'30 6 * * *', do:deploy_dir('bin', 'cron', 'admin_progress')
-  cronjob at:'10 7 * * *', do:deploy_dir('bin', 'cron', 'retention_stats')
-end
+  def dashboard_dir(*paths)
+    deploy_dir 'dashboard', *paths
+  end
 
-# cronjobs that run on all instances in all environments go here:
+  def pegasus_dir(*paths)
+    deploy_dir 'pegasus', *paths
+  end
 
-# Restart Pegasus and dashboard every 8 hours at 0, 8, 16 UTC (12AM, 8AM, 4PM).
-# The restart interval from from every 4 hours on 2016/4/26. After recent memory
-# leak fixes this is probably no longer necessary, but we are keeping it at this
-# level until we have chance to confirm non-leakage over longer intervals.
-cronjob at:"#{rand(20)} */8 * * *", do:'service dashboard upgrade && service pegasus upgrade'
+  def shared_dir(*paths)
+    deploy_dir 'shared', *paths
+  end
 
-cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
+  def cronjob(params)
+    time = params[:at].to_s
+    action = params[:do].to_s
+
+    notify = params[:notify].to_s
+    action = "BUNDLE_GEMFILE=#{deploy_dir('Gemfile')} bundle exec #{bin_dir('cronjob')} #{action.shellescape} #{notify}".strip
+
+    $crontab << "#{time} #{action}"
+  end
+
+  def crontab()
+    $crontab.join("\n")
+  end
+
+  # for multi-instance envs (ie production) there should be one daemon,
+  # so cronjobs that run once per environment go here (standalone env
+  # instances are all their own daemon)
+  if node['cdo-apps']['daemon']
+    unless node.chef_environment == 'production' # non-production daemons
+      cronjob at:'@reboot', do:"#{deploy_dir('bin', 'solr', 'solr_server')} > #{pegasus_dir('log','solr.log')} 2>&1"
+    end
+
+    if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
+      cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
+      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
+      cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'run_server_generate_pdfs')
+      cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
+      cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
+      cronjob at:'*/2 * * * *', do:dashboard_dir('bin','build_scripts'), notify:'dev+crontab@code.org'
+      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'fetch_external_resources'), notify:'dev+crontab@code.org'
+      cronjob at:'30 16 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
+    end
+
+    if node.chef_environment == 'production' # production daemon
+      cronjob at:'20 */2 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
+      cronjob at:'5 6 * * *', do:deploy_dir('bin', 'cron', 'send_workshop_reminder_emails')
+      cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
+      cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
+      cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'index_users_in_solr')
+      cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
+      cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
+    end
+
+    # 'daemons' in all environments
+    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'process_forms')
+    cronjob at:'35 * * * *', do:deploy_dir('bin', 'cron', 'analyze_hoc_activity')
+    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'deliver_poste_messages')
+    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'geocode_hoc_activity')
+    cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
+    cronjob at:'45 5 * * *', do:deploy_dir('bin', 'cron', 'admin_stats')
+    cronjob at:'40 4 * * *', do:deploy_dir('bin', 'cron', 'funometer')
+    cronjob at:'30 6 * * *', do:deploy_dir('bin', 'cron', 'admin_progress')
+    cronjob at:'10 7 * * *', do:deploy_dir('bin', 'cron', 'retention_stats')
+    cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
+  end
+
+  # cronjobs that run on all instances in all environments go here:
+
+  # Restart Pegasus and dashboard every 8 hours at 0, 8, 16 UTC (12AM, 8AM, 4PM).
+  # The restart interval from from every 4 hours on 2016/4/26. After recent memory
+  # leak fixes this is probably no longer necessary, but we are keeping it at this
+  # level until we have chance to confirm non-leakage over longer intervals.
+  cronjob at:"#{rand(20)} */8 * * *", do:'service dashboard upgrade && service pegasus upgrade'
+
+  cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
 %>
 #
 # node: <%= node.name %>

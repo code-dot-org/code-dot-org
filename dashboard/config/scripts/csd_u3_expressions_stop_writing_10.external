@@ -1,0 +1,7 @@
+name 'CSD U3 Expressions STOP writing 10'
+css 'unplugged'
+markdown <<MARKDOWN
+# Making 12
+
+**Using just the symbols `+`, `-`, `*`, and `/` how many different ways can you write 12?**
+MARKDOWN

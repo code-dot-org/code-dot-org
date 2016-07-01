@@ -27,9 +27,13 @@
     "impressive": "false",
     "disable_sharing": "false",
     "instructions": "Draw the equilateral triangle - all the sides are the same!",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Remember: an equilateral triangle has three sides, with a 60 degree turn between each!\",\r\n  \"hint_id\": \"triangle_geometry_hint\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You have to draw a side and turn 3 times...what block can you use to run the same instructions many times?\",\r\n  \"hint_id\": \"repeat_pointer\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"Use a `repeat 3 times` block, ya goofball.\",\r\n  \"hint_id\": \"repeat_bottom_out\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Remember: an equilateral triangle has three sides, with a 60 degree turn between each!\",\r\n  \"hint_id\": \"triangle_geometry_hint\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You have to draw a side and turn 3 times...what block can you use to run the same instructions many times?\",\r\n  \"hint_id\": \"repeat_pointer\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"Use a `repeat 3 times` block!\",\r\n  \"hint_id\": \"repeat_bottom_out\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "discard_background": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

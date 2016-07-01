@@ -31,10 +31,16 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?\",\r\n  \"hint_id\": \"2-3_Artist_2_new_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -69,6 +75,9 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -79,7 +88,7 @@
               <next>
                 <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                  <title name="VALUE">50</title>
                 </block>
               </next>
             </block>

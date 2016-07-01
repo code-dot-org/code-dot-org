@@ -7,12 +7,16 @@
 /* global confirm */
 'use strict';
 
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('lodash');
 var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
-var NetSimView = require('./NetSimView.jsx');
+var Provider = require('react-redux').Provider;
+var NetSimView = require('./NetSimView');
 var page = require('./page.html.ejs');
 var NetSimAlert = require('./NetSimAlert');
 var NetSimConstants = require('./NetSimConstants');
@@ -160,7 +164,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
  */
-NetSim.prototype.init = function(config) {
+NetSim.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("NetSim requires a StudioApp");
   }
@@ -221,11 +225,9 @@ NetSim.prototype.init = function(config) {
   var generateCodeAppHtmlFromEjs = function () {
     return page({
       data: {
-        visualization: '',
         localeDirection: this.studioApp_.localeDirection(),
-        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl})
-      },
-      hideRunButton: true
+        instructions: this.level.instructions
+      }
     });
   }.bind(this);
 
@@ -251,13 +253,17 @@ NetSim.prototype.init = function(config) {
     this.runLoop_.begin();
   }.bind(this);
 
-  ReactDOM.render(React.createElement(NetSimView, {
-    assetUrl: this.studioApp_.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    generateCodeAppHtml: generateCodeAppHtmlFromEjs,
-    onMount: onMount
-  }), document.getElementById(config.containerId));
+  // Push initial level properties into the Redux store
+  this.studioApp_.setPageConstants(config);
+
+  ReactDOM.render(
+    <Provider store={this.studioApp_.reduxStore}>
+      <NetSimView
+          generateCodeAppHtml={generateCodeAppHtmlFromEjs}
+          onMount={onMount}
+      />
+    </Provider>
+  , document.getElementById(config.containerId));
 };
 
 /**
@@ -994,7 +1000,7 @@ var netsimDebouncedResizeFooter = _.debounce(function () {
  * Should be bound against StudioApp instance.
  * @private
  */
-NetSim.onResizeOverride_ = function() {
+NetSim.onResizeOverride_ = function () {
   var div = document.getElementById('appcontainer');
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);

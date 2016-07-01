@@ -32,9 +32,9 @@ end
 by_having_teacher_data = [true, false].map do |with_teacher|
   script_data = Script.where(id: [1,2,6,17,18,19,21,22,23,25,26,30,34]).to_a.map do |script|
     sql = "select q, count(*) from (SELECT count(*) as q from user_levels ul where script_id = #{script.id} #{filter_teacher with_teacher} group by user_id) as subquery group by q"
-    {id: script.id, data: connection.execute(sql)}.tap{|x|puts x.to_json}
+    {id: script.id, data: connection.execute(sql)}.tap{|x| puts x.to_json}
   end
-  {with_teacher: with_teacher, script_data: script_data}.tap{|x|puts x.to_json}
+  {with_teacher: with_teacher, script_data: script_data}.tap{|x| puts x.to_json}
 end
 puts by_having_teacher_data.to_json
 

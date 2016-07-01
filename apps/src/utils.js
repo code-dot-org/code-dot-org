@@ -1,34 +1,9 @@
-/* global define */
+/* global define, $ */
 'use strict';
 
-var savedAmd;
+import Immutable from 'immutable';
 
-// Do some hackery to make it so that lodash doesn't think it's being loaded
-// via require js
-if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
-  savedAmd = define.amd;
-  define.amd = false;
-}
-
-// get lodash
-var _ = require('./lodash');
-var Hammer = require('./hammer');
-
-// undo hackery
-if (typeof define === 'function' && savedAmd) {
-  define.amd = savedAmd;
-  savedAmd = null;
-}
-
-exports.getLodash = function () {
-  return _;
-};
-
-exports.getHammer = function () {
-  return Hammer;
-};
-
-exports.shallowCopy = function(source) {
+exports.shallowCopy = function (source) {
   var result = {};
   for (var prop in source) {
     result[prop] = source[prop];
@@ -40,23 +15,23 @@ exports.shallowCopy = function(source) {
 /**
  * Returns a clone of the object, stripping any functions on it.
  */
-exports.cloneWithoutFunctions = function(object) {
+exports.cloneWithoutFunctions = function (object) {
   return JSON.parse(JSON.stringify(object));
 };
 
 /**
  * Returns a string with a double quote before and after.
  */
-exports.quote = function(str) {
+exports.quote = function (str) {
   return '"' + str + '"';
 };
 
 /**
  * Returns a new object with the properties from defaults overridden by any
  * properties in options. Leaves defaults and options unchanged.
- * NOTE: For new code, use $.extend({}, defaults, options) instead
+ * NOTE: For new code, use Object.assign({}, defaults, options) instead
  */
-exports.extend = function(defaults, options) {
+exports.extend = function (defaults, options) {
   var finalOptions = exports.shallowCopy(defaults);
   for (var prop in options) {
     finalOptions[prop] = options[prop];
@@ -65,7 +40,7 @@ exports.extend = function(defaults, options) {
   return finalOptions;
 };
 
-exports.escapeHtml = function(unsafe) {
+exports.escapeHtml = function (unsafe) {
   return unsafe
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -80,14 +55,14 @@ exports.escapeHtml = function(unsafe) {
  * @param number
  * @param mod
  */
-exports.mod = function(number, mod) {
+exports.mod = function (number, mod) {
   return ((number % mod) + mod) % mod;
 };
 
 /**
  * Generates an array of integers from start to end inclusive
  */
-exports.range = function(start, end) {
+exports.range = function (start, end) {
   var ints = [];
   for (var i = start; i <= end; i++) {
     ints.push(i);
@@ -112,7 +87,7 @@ exports.executeIfConditional = function (conditional, fn) {
  * @param inputString
  * @returns {string} string without quotes
  */
-exports.stripQuotes = function(inputString) {
+exports.stripQuotes = function (inputString) {
   return inputString.replace(/["']/g, "");
 };
 
@@ -170,7 +145,7 @@ exports.randomKey = function (obj) {
  * @returns {string} RFC4122-compliant UUID
  */
 exports.createUuid = function () {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
     return v.toString(16);
   });
@@ -194,7 +169,7 @@ if (!String.prototype.repeat) {
    * @param {number} count
    * @returns {string}
    */
-  String.prototype.repeat = function(count) {
+  String.prototype.repeat = function (count) {
     if (this === null) {
       throw new TypeError('can\'t convert ' + this + ' to object');
     }
@@ -278,14 +253,14 @@ exports.isInfiniteRecursionError = function (err) {
 };
 
 // TODO(dave): move this logic to dashboard.
-exports.getPegasusHost = function() {
+exports.getPegasusHost = function () {
   switch (window.location.hostname) {
     case 'studio.code.org':
     case 'learn.code.org':
       return 'code.org';
     default:
       var name = window.location.hostname.split('.')[0];
-      switch(name) {
+      switch (name) {
         case 'localhost':
           return 'localhost.code.org:3000';
         case 'development':
@@ -329,30 +304,40 @@ exports.browserSupportsCssMedia = function () {
  * @param text
  * @returns String that has no more escape characters and multiple divs converted to newlines
  */
-exports.unescapeText = function(text) {
+exports.unescapeText = function (text) {
   var cleanedText = text;
-  cleanedText = cleanedText.replace(/<div>/gi, '\n'); // Divs generate newlines
-  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
 
-  // This next step requires some explanation
+  // Handling of line breaks:
   // In multiline text it's possible for the first line to render wrapped or unwrapped.
   //     Line 1
   //     Line 2
-  //   Can render as either of:
+  //   Can render as any of:
   //     Line 1<div>Line 2</div>
+  //     Line 1<br><div>Line 2</div>
   //     <div>Line 1</div><div>Line 2</div>
   //
-  // But leading blank lines will always render wrapped and should be preserved
+  // Most blank lines are rendered as <div><br></div>
+  //     Line 1
+  //
+  //     Line 3
+  //   Can render as any of:
+  //     Line 1<div><br></div><div>Line 3</div>
+  //     Line 1<br><div><br></div><div>Line 3</div>
+  //     <div>Line 1</div><div><br></div><div>Line 3</div>
+  //
+  // Leading blank lines render wrapped or as placeholder breaks and should be preserved
   //
   //     Line 2
-  //     Line 3
-  //   Renders as
-  //    <div><br></div><div>Line 2</div><div>Line 3</div>
-  //
-  // To handle this behavior we strip leading newlines UNLESS they are followed
-  // by another newline, using a negative lookahead (?!)
-  cleanedText = cleanedText.replace(/^\n(?!\n)/, ''); // Strip leading nondoubled newline
+  //   Renders as any of:
+  //    <br><div>Line 2</div>
+  //    <div><br></div><div>Line 2</div>
 
+  // First, convert every <div> tag that isn't at the very beginning of the string
+  // to a newline.  This avoids generating an incorrect blank line at the start
+  // if the first line is wrapped in a <div>.
+  cleanedText = cleanedText.replace(/(?!^)<div[^>]*>/gi, '\n');
+
+  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
   cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
   cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
   cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
@@ -375,11 +360,45 @@ exports.escapeText = function (text) {
   // Now wrap each line except the first line in a <div>,
   // replacing blank lines with <div><br><div>
   var lines = escapedText.split('\n');
-  var returnValue = lines[0] + lines.slice(1).map(function (line) {
-      return '<div>' + (line.length ? line : '<br>') + '</div>';
-    }).join('');
+  var first = lines[0];
+  var rest = lines.slice(1);
 
-  return returnValue;
+  // If first line is blank and not the only line, convert it to a <br> tag:
+  if (first.length === 0 && lines.length > 1) {
+    first = '<br>';
+  }
+
+  // Wrap the rest of the lines
+  return first + rest.map(function (line) {
+    return '<div>' + (line.length ? line : '<br>') + '</div>';
+  }).join('');
+};
+
+exports.showUnusedBlockQtip = function (targetElement) {
+  var msg = require('./locale');
+  $(targetElement).qtip({
+    content: {
+      text: '<h4>' + msg.unattachedBlockTipTitle() +'</h4><p>' + msg.unattachedBlockTipBody() + '</p>',
+      title: {
+        button: $('<div class="tooltip-x-close"/>')
+      }
+    },
+    position: {
+      my: "bottom left",
+      at: "top right"
+    },
+    style: {
+      classes: "cdo-qtips",
+      tip: {
+        width: 20,
+        height: 20
+      }
+    },
+    hide: {
+      event: 'unfocus'
+    },
+    show: false // don't show on mouseover
+  }).qtip('show');
 };
 
 /**
@@ -404,4 +423,95 @@ exports.trySetLocalStorage = function (item, value) {
   } catch (e) {
     return false;
   }
+
+};
+
+/**
+ * Generates a simple enum object
+ * @example
+ *   var Seasons = enum('SPRING', 'SUMMER', 'FALL', 'WINTER');
+ *   Seasons.SPRING === 'SPRING';
+ *   Seasons.SUMMER === 'SUMMER';
+ *   // etc...
+ */
+exports.makeEnum = function () {
+  var result = {}, key;
+  for (var i = 0; i < arguments.length; i++) {
+    key = String(arguments[i]);
+    if (result[key]) {
+      throw new Error('Key "' + key + '" occurred twice while constructing enum');
+    }
+    result[key] = key;
+  }
+  if (Object.freeze) {
+    Object.freeze(result);
+  }
+  return result;
+};
+
+/**
+ * If the string is too long, truncate it and append an ellipsis.
+ * @param {string} inputText
+ * @param {number} maxLength
+ * @returns {string}
+ */
+exports.ellipsify = function (inputText, maxLength) {
+  if (inputText && inputText.length > maxLength) {
+    return inputText.substr(0, maxLength - 3) + "...";
+  }
+  return inputText || '';
+};
+
+/**
+ * Returns deep merge of two objects, concatenating rather than overwriting
+ * array properites. Does not mutate either object.
+ *
+ * Note: new properties in overrides are always added to end, not in-order.
+ *
+ * TODO(bjordan): Replace with _.mergeWith when lodash upgraded to 4.x.
+ *
+ * Note: may become default behavior of mergeDeep in future immutable versions.
+ *   @see https://github.com/facebook/immutable-js/issues/406
+ *
+ * @param {Object} baseObject
+ * @param {Object} overrides
+ * @returns {Object} original object (now modified in-place)
+ */
+exports.deepMergeConcatArrays = (baseObject, overrides) => {
+  function deepConcatMerger(a, b) {
+    const isList = Immutable.List.isList;
+    if (isList(a) && isList(b)) {
+      return a.concat(b);
+    }
+    if (a && a.mergeWith) {
+      return a.mergeWith(deepConcatMerger, b);
+    }
+    return b;
+  }
+
+  var baseImmutable = Immutable.fromJS(baseObject);
+  return baseImmutable.mergeWith(deepConcatMerger, overrides).toJS();
+};
+
+/**
+ * Creates a new event in a cross-browswer-compatible way.
+ *
+ * createEvent functionality is officially deprecated in favor of
+ * the Event constructor, but some older browsers do not yet support
+ * event constructors. Attempt to use the new functionality, fall
+ * back to the old if it fails.
+ *
+ * @param {String} type
+ * @param {boolean} [bubbles=false]
+ * @param {boolean} [cancelable=false]
+ */
+exports.createEvent = function (type, bubbles = false, cancelable = false) {
+  var customEvent;
+  try {
+    customEvent = new Event(type, { bubbles, cancelable });
+  } catch (e) {
+    customEvent = document.createEvent('Event');
+    customEvent.initEvent(type, bubbles, cancelable);
+  }
+  return customEvent;
 };

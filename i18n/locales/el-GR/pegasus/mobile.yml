@@ -1,7 +1,12 @@
 el-GR:
   hour_of_code: Η Ώρα του Κώδικα
   hello: Γεια σου κόσμε
+  "yes": Ναι
+  "no": Όχι
   select_language: Παρακαλώ επιλέξτε τη γλώσσα σας
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Μάθετε περισσότερα
   en: Επιστήμη των Υπολογιστών
   computer_science_edweek: Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών
   csedweek_dates: 8-14 Δεκεμβρίου 2014
@@ -21,7 +26,7 @@ el-GR:
   twentyhours_heading: Δοκιμάστε την εισαγωγή μας στη Σειρά Μαθημάτων Επιστήμης των Υπολογιστών
   twentyhours_text: Τελειώσατε την πρώτη σας Ώρα του Κώδικα; Μάθετε περισσότερα για τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο μάθημα.
   og_title: Κάθε παιδί δικαιούται μία ευκαιρία
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: Κάθε μαθητής σε κάθε σχολείο αξίζει μια ευκαιρία να σπυδάσει την επιιστήμη των υπολογιστών. Αλλάζει τα πάντα.
   hoc2014_heading: 'Συμμετάσχετε στην <a href="http://hourofcode.com"> Ώρα του Κώδικα</a><br/>8-14 Δεκεμβρίου 2014<br/>'
   hoc2014_students: Μαθητές
   hoc2014_try: Δοκιμάστε το
@@ -179,7 +184,7 @@ el-GR:
   learn_next_level: Δοκιμάστε ένα άλλο μάθημα στο Code Studio
   learn_online: Δοκιμάστε τα άλλα μαθήματα online
   learn_classes: Βρείτε τάξεις κοντά σας
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: 'Μάθετε την επιστήμη των υπολογιστών. Αυτό αλλάζει τα πάντα.  https://youtu.be/xJqSu1IbcHg.'
   just_did_hoc: 'Μόλις ολοκλήρωσα την Ώρα του Κώδικα (#HourOfCode) - ελέγξτε το! @codeorg'
   just_did_course1: 'Μόλις τελειώσα το Μάθημα 1 - Ελεγξέ το! @codeorg'
   just_did_course2: 'Μόλις τελειώσα το Μάθημα 2 - Ελεγξέ το! @codeorg'
@@ -267,6 +272,8 @@ el-GR:
   homepage_banner_privacy_link: Μάθετε περισσότερα
   homepage_banner_20k_teachers: 20.000 δάσκαλοι εχουν εκπαιδευτεί και τώρα διδάσκουν επιστήμη υπολογιστών σε τάξεις.
   homepage_banner_20k_teachers_link: Μάθετε περισσότερα
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_blurb_hoc: Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα
   homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα
@@ -292,6 +299,7 @@ el-GR:
   homepage_slot_text_link_stats: Δείτε τα στατιστικά
   homepage_slot_text_link_buy: Εμπλακείτε
   homepage_slot_text_link_donate: Κάντε μια δωρεά
+  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
   homepage_header_codestudio: Studio Κώδικα δημιουργίες σπουδαστών
   homepage_header_donors: Το Code.org ευχαριστεί τους υποστηρικτές του
   homepage_donors_seall: Εμφάνιση όλων
@@ -434,6 +442,7 @@ el-GR:
   dashboard_landing_new_beta: Νέο! Δοκιμάστε τα beta-μαθήματά μας για μαθητές K-5.
   dashboard_landing_new_k5courses: Νέο! Δοκιμάστε τα μαθήματά μας για μαθητές K-5.
   dashboard_landing_useful_links: Μερικοί άλλοι Χρήσιμοι Σύνδεσμοι (στα Αγγλικά μόνο)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Θέστε ένα ερώτημα εσείς οι ίδιοι! Επισκεφθείτε τις μηνιαίες βίντεο ώρες γραφείου.
   dashboard_landing_print_certificates: Εκτύπωση πιστοποιητικών για τους μαθητές που ολοκληρώνουν αυτό το μάθημα
   dashboard_landing_educator_blog: Διαβάστε για τα νέα και τις ενημερώσεις για του υλικό μας στο blog του Παιδαγωγού
@@ -447,6 +456,10 @@ el-GR:
   dashboard_landing_available_courses: Εδώ είναι τα μαθήματα που είναι διαθέσιμα σήμερα για εσάς και τους μαθητές σας.
   dashboard_landing_more_tutorials: Θέλετε να δείτε ακόμα περισσότερα σεμινάρια;
   dashboard_landing_more_tutorials_desc: 'Υπάρχουν περισσότερα σεμινάρια <a href="/learn/beyond"> που προσφέρονται από τους συνεργάτες μας.</a> Μάθετε να προγραμματίζετε με ρομπότ, να φτιάχνετε ιστοσελίδες, να φτιάχνετε τη δική σας εφαρμογή (app) ή να εξερευνήσετε άλλες γλώσσες όπως C++, Ruby, ή Python!'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Η Ώρα του Κώδικα για Όλες τις Ηλικίες
   dashboard_hoc_courses_desc: Δοκιμάστε κάποιο από αυτά τα μικρότερα σεμινάρια 1 ώρας με τους μαθητές σας!
   dashboard_hoc_courses_desc_and_cta: 'Δοκιμάστε αυτά τα σύντομα, σεμινάρια μιας ώρας με τους μαθητές σας. <a href="https://hourofcode.com"> Γίνετε μέλος του κινήματος της Ώρας του Κώδικα</a> κατά τη διάρκεια της Εκπαιδευτικής Εβδομάδας Επιστήμης Υπολογιστών.'
@@ -477,6 +490,14 @@ el-GR:
   dashboard_action_remove_confirm: Κατάργηση;
   dashboard_action_done: Ολοκληρώθηκε
   dashboard_action_required: απαιτείται
+  dashboard_assessments_view: 'Δείτε τις αξιολογήσεις σε:'
+  dashboard_assessments_none: Δεν υπάρχουν αξιολογήσεις
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Φίλτρο κατά στάδιο:'
+  dashboard_filter_all: Ολα
+  dashboard_download_csv: Κατεβάστε το CSV
   dashboard_navigation_home_page: Αρχική Σελίδα Εκπαιδευτή
   dashboard_navigation_section_student_progress: Λογαριασμοί μαθητών και Πρόοδος
   dashboard_navigation_section_teacher_progress: Πρόοδος του τμήματός σας
@@ -485,21 +506,34 @@ el-GR:
   dashboard_navigation_section_pd: Επαγγελματική εξέλιξη
   dashboard_navigation_section_speakers: 'Πληροφορική <br/> προσκεκλημένων ομιλητών'
   dashboard_navigation_all_sections: Λογαριασμοί μαθητών και Πρόοδος
-  dashboard_navigation_view_progress: Προβολή προόδου
-  dashboard_navigation_view_text_responses: Προβολή Αποκρίσεων Κειμένου
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_progress: Πρόοδος
+  dashboard_navigation_view_text_responses: Text Responses
+  dashboard_navigation_view_assessments: Αξιολογήσεις
   dashboard_navigation_add_students: Προσθήκη μαθητών
   dashboard_navigation_manage_students: Διαχείριση μαθητών
   dashboard_navigation_lesson_plans_resources: Σχέδια μαθήματος και Πόροι
-  dashboard_navigation_view_stats: Εμφάνιση στατιστικών
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Τμήμα: %{section_name}'
   dashboard_navigation_student: 'Μαθητής: %{student_name}'
+  dashboard_progress_not_started: δεν έχει ξεκινήσει
+  dashboard_progress_in_progress: σε εξέλιξη
+  dashboard_progress_not_completed: δεν έχει ολοκληρωθεί
+  dashboard_progress_completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
+  dashboard_progress_completed_perfect: ολοκληρώθηκε, τέλειο
+  dashboard_progress_furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
+  dashboard_progress_submitted: Υποβλήθηκε
+  dashboard_progress_view: 'Προβολή προόδου σε:'
+  dashboard_progress_student_in_script: 'Πληροφορίες προόδου για τον/την %{student_name} στο %{script_name}'
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'Δείτε τις απαντήσεις κειμένου σε:'
+  dashboard_responses_none: Δεν υπάρχουν απαντήσεις κειμένου
   dashboard_sections_new_section: Νέα ενότητα
   dashboard_sections_jumbotron_instruction: Δημιουργήστε νέες ενότητες και προσθέστε σε αυτές μαθητές. Οι ενότητες σας βοηθήσουν να οργανώσετε τους μαθητές σε μικρότερες ομάδες, ώστε να μπορείτε να παρακολουθείτε την πρόοδό τους και να διαχειρίζεστε τους λογαριασμούς τους.
   dashboard_sections_table_section: Ενότητα
   dashboard_sections_table_secret: Τύπος σύνδεσης
   dashboard_sections_table_grade: Βαθμος
   dashboard_sections_table_course: Μάθημα
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Μαθητές
   dashboard_sections_table_code: Κωδικός ενότητας
   dashboard_sections_name: Όνομα ενότητας
@@ -509,6 +543,19 @@ el-GR:
   dashboard_sections_secret_none: 'Αν θέλετε οι μαθητές σας να διαχειρίζονται τους δικούς τους λογαριασμούς, συμπεριλαμβανομένης και της επιλογής δικών τους κωδικών, επιλέξτε τον μυστικό τύπο <b>κανένας</b>.'
   dashboard_sections_print_secrets: 'Στη συνέχεια μπορείτε  να εκτυπώσετε ένα φύλλο καρτών που περιέχει τα στοιχεία του λογαριασμού που θα διανεμηθεί στους μαθητές σας χωριστά.'
   dashboard_sections_switch_section: 'Αλλαγή ενότητας:'
+  dashboard_sections_close: Κλείσιμο
+  dashboard_sections_move_students_desc: Επιλέξτε τους μαθητές που θα προχωρήσουν σε μια νέα ενότητα. Η μετακίνηση των μαθητών δεν θα διαγράψει την πρόοδό τους.
+  dashboard_sections_one_per_teacher: Οι μαθητές μπορεί να είναι μόνο σε μια ενότητα για κάθε δάσκαλο. Οι μαθητές σας θα προστεθούν σε αυτό το νέο τμήμα και θα αποχωρήσουν από το παλιό τμήμα.
+  dashboard_sections_move_to_section: 'Μετακίνηση στο τμήμα:'
+  dashboard_sections_enter_code: 'Δώστε τον κωδικό του τμήματος:'
+  dashboard_sections_code_placeholder: κωδικός 6 χαρακτήρων (ABCDEF)
+  dashboard_sections_other_section: Αλλο τμήμα
+  dashboard_sections_both_sections: Θέλετε οι μαθητές να υπάρχουν και στα δύο τμήματα;
+  dashboard_sections_yes_both: Ναι, θέλω να αντιγραφούν οι μαθητές σε αυτό το τρέχον τμήμα ΚΑΙ στο νέο τμήμα
+  dashboard_sections_no_move: Όχι, θέλω να μεταφέρω τους μαθητές μόνο στο νέο τμήμα.
+  dashboard_sections_move_students: Μετακίνησε τους μαθητές
+  dashboard_error_none_selected: Δεν επιλέξατε κανένα μαθητή για να μετακινήσετε. Παρακαλώ επιλέξτε τουλάχιστον ενα μαθητή.
+  dashboard_error_other_section: 'Αν μετακινείτε μαθητές μεταξύτων δικών σας τμημάτων, επιλέξτε το τμήμα σας από το αναπτυσσόμενο μενού. Επιλέξτε "Αλλη ενότητα" για να μετακινήσετε τους μαθητές σας σε τμήμα ενός διαφορετικού δασκάλου.'
   dashboard_students_add_student: Προσθήκη μαθητή
   dashboard_students_add_students: Προσθήκη πολλών μαθητών
   dashboard_students_add_multiple: 'Πληκτρολογήστε ή επικολλήστε τα ονόματα των μαθητών σας, ένα ανά γραμμή:'
@@ -552,6 +599,7 @@ el-GR:
   dashboard_course2: 'Μάθημα 2:'
   dashboard_course3: 'Μάθημα 3:'
   dashboard_course4: 'Μάθημα 4 (beta): '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: Πρόγραμμα σπουδών
   dashboard_curriculum_overview: Επισκόπηση Πρόγραμμα Εκπαίδευσης Νηπιαγωγείο έως Ε΄ Δημοτικού
   dashboard_overview: Επισκόπηση
@@ -575,27 +623,22 @@ el-GR:
   dashboard_login_picture: Εικόνα
   dashboard_login_none: Ηλεκτρονικό ταχυδρομείο
   dashboard_new_password: νέος κωδικός
-  dashboard_progress_not_started: δεν έχει ξεκινήσει
-  dashboard_progress_in_progress: σε εξέλιξη
-  dashboard_progress_not_completed: δεν έχει ολοκληρωθεί
-  dashboard_progress_completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
-  dashboard_progress_completed_perfect: ολοκληρώθηκε, τέλειο
-  dashboard_progress_furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
-  dashboard_progress_submitted: submitted
   dashboard_stage: Επίπεδο
   dashboard_puzzle: Παζλ
   dashboard_question: Ερώτηση
   dashboard_response: Απάντηση
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: Ορθότητα
+  dashboard_correctness_free_response: Δωρεάν απάντηση
+  dashboard_correctness_unsubmitted: Ανακλήθηκε
   dashboard_correctness_correct: Σωστό
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_status: Status
-  dashboard_multi_correct: '# multiple choice correct'
-  dashboard_multi_count: '# multiple choice'
-  dashboard_multi_correct_percent: '% multiple choice correct'
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_correctness_incorrect: Εσφαλμένο
+  dashboard_submission_submitted: Υποβλήθηκε
+  dashboard_submission_in_progress: Σε εξέλιξη
+  dashboard_status: Κατάσταση
+  dashboard_multi_correct: '# η πολλαπλή επιλογή είναι σωστή'
+  dashboard_multi_count: '# πολλαπλή επιλογή'
+  dashboard_multi_correct_percent: '% της πολλαπλής επιλογής σωστά'
+  dashboard_submission_timestamp: Ημενρομηνία και ώρα υποβολής
   stats_hoc_2013_heading: 'Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε μία εβδομάδα μόνο:'
   stats_hoc_2013_image_alt: Στατιστικά στοιχεία από την ώρα του κώδικα του 2013
   dashboard_teacher: Καθηγητής
@@ -614,10 +657,11 @@ el-GR:
   dashboard_faq_k5: Συχνές ερωτήσεις για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)
   dashboard_announcements: Ανακοινώσεις
   dashboard_announce_view_all: Προβολή όλων
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
-  dashboard_announce_button_text: Μάθετε περισσότερα
-  dashboard_announce_hoc: "<b>15 Οκτωβρίου 2015</b> - Η Ώρα του Κώδικα πλησιάζει &mdash; κάθε συμμετέχον διοργανωτής θα λάβει μια κάρτα δώρου για το Amazon.com ή το Microsoft's Windows Store ως ευχαριστήριο δώρο. Εγγραφείτε σε τάξεις σε όλο τον κόσμο κατά την περίοδο 7-13 Δεκεμβρίου."
-  dashboard_announce_playlab: '<b> 4 Δεκέμβρη, 2015 </b> - Η Ωρα του Κώδικα έφτασε! Δοκιμάστε τα 50 σεμινάρια για κάθε ηλικία και κάθε συσκευή. Νέα τελευταίας εβδομάδας: Προγραμμάτισε της δικές σου ιστορίες και παιχνίδια στο Play Lab! Δες πως μπορείς να προγραμματίσεις τα παιχίδια Ιce Age και Gumball.'
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
+  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!'
   code_sign_up: Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής εβδομάδας για την Επιστήμη της Πληροφορικής
   learn_more: Δοκιμάστε τώρα
@@ -727,9 +771,35 @@ el-GR:
   course3_name: Μάθημα 3
   course4_name: Μάθημα 4
   accelerated_name: Επιταχυνόμενη πορεία μάθησης
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
   cspunit3_name: 'Αρχές CS - Ενότητα 3'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: 'Τάξεις Γ΄ Γυμνασίου - Γ΄ Λυκείου'
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: Επιταχυνόμενη πορεία μάθησης
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Κλασικός λαβύρινθος
+  iceage_name: Εποχή των Παγετώνων
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Μαθηματικά
+  hoc_category_name: Η Ώρα του Κώδικα
+  csf_category_name: CS Fundamentals
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Εργαστήριο εφαρμογών
   applab_gradelevel: Ηλικίες 13+
   applab_shortdescription_congrats: Το App Lab (Εργαστήριο εφαρμογών) είναι ένα περιβάλλον προγραμματισμού όπου μπορείς να φτιάξεις απλές εφαρμογές (apps). Σχεδίασε μια εφαρμογή (app), γράψε κώδικα ή JavaScript με πακέτα για να την κάνεις να δουλέψει και μετά μοιράσου την εφαρμογή σου σε δευτερόλεπτα

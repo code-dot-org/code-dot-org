@@ -1,6 +1,5 @@
 var color = require('../color');
-var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('lodash');
 var cellId = require('./mazeUtils').cellId;
 
 var SquareType = require('./tiles').SquareType;
@@ -225,7 +224,7 @@ function letterValue(val) {
 /**
  * Return a random uppercase letter that isn't in the list of restrictions
  */
-function randomLetter (restrictions) {
+function randomLetter(restrictions) {
   var letterPool;
   if (restrictions) {
     // args consists of ALL_CHARS followed by the set of restricted letters

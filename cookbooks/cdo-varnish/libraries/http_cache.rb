@@ -41,6 +41,7 @@ class HttpCache
       'videos_seen',
       'callouts_seen',
       'pm',
+      'rack.session',
       session_key,
       storage_id,
     ]
@@ -66,7 +67,7 @@ class HttpCache
               /v3/*
               /private*
             ) +
-            # Todo: Collapse these paths into /private to simplify Pegasus caching config
+            # TODO: Collapse these paths into /private to simplify Pegasus caching config.
             %w(
               /create-company-profile*
               /edit-company-profile*
@@ -107,7 +108,18 @@ class HttpCache
       dashboard: {
         behaviors: [
           {
-            path: '/v3/assets/*',
+            # Serve Sprockets-bundled assets directly from the S3 bucket synced via `assets:precompile`.
+            #
+            path: '/assets/*',
+            proxy: 'cdo-assets',
+            headers: [],
+            cookies: 'none'
+          },
+          {
+            path: %w(
+              /v3/assets/*
+              /v3/animations/*
+            ),
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
@@ -135,7 +147,7 @@ class HttpCache
           },
           {
             # For static-asset paths, don't forward any cookies or additional headers.
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/assets/* /blockly/media/*),
+            path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/media/*),
             headers: [],
             cookies: 'none'
           },

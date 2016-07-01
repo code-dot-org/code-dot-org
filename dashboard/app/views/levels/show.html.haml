@@ -25,7 +25,7 @@
       %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= @level.properties['instructions']
   -# Pass special parameters to Blockly partial for embedded level type.
   = render partial: 'levels/blockly'
-- elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget)
+- elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget) || @level.is_a?(FreeResponse) || @level.is_a?(StandaloneVideo) || @level.is_a?(ExternalLink)
   %script{src: asset_path('js/initApp/initApp.js')}
   :javascript
     var appOptions = #{app_options.to_json};
@@ -34,9 +34,13 @@
     = render partial: 'levels/widget'
   - else
     = render partial: "levels/#{@level.class.to_s.underscore}"
-  = render partial: 'levels/reference_area'
+  - unless @level.is_a?(StandaloneVideo)
+    = render partial: 'levels/reference_area'
 - else
   = render partial: 'levels/blockly'
+
+- if @peer_reviews.present?
+  = render partial: 'peer_reviews/viewer'
 
 - if tracking_pixel_enabled && @script.try(:hoc?) && (@script_level.try(:chapter) == 1 || @script_level.try(:position) == 1)
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
@@ -47,5 +51,5 @@
 -#
   HACK: The respond_to? test below is to workaround a bug where a server
   instance will sometimes fail to define that method.
-- if @script && current_user.try(:teacher?) && (!@script.respond_to?('pd?') || !@script.pd?)
+- if @script && current_user.try(:teacher?) && (!@script.respond_to?('professional_course?') || !@script.professional_course?)
   = render partial: 'levels/teacher'

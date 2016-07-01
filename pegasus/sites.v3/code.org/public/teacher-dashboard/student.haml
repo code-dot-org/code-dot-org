@@ -15,11 +15,11 @@ content-type: text/ng-template
   %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
   %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_student', student_name: '{{progress.student.name}}')
 
-%h1 Progress information for {{progress.student.name}} in {{progress.script.name}}
+%h1= I18n.t('dashboard_progress_student_in_script', student_name: '{{progress.student.name}}', script_name: '{{progress.script.name}}')
 
 %div
-  View progress in:
-  %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeProgress(course_id)'}
+  = I18n.t('dashboard_progress_view')
+  %select{"ng-model" => "course_id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category', 'position', 'name']", 'ng-change' => 'changeProgress(course_id)'}
 %br
 
 %div{'ng-bind-html' => 'progress.progressHtml | htmlSafe'}

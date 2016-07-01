@@ -5,7 +5,8 @@
  */
 'use strict';
 
-var utils = require('../utils');
+import $ from 'jquery';
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var i18n = require('./locale');
 var markup = require('./NetSimSendPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
@@ -290,7 +291,7 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
   // Remove from DOM
   var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   packet.getRoot()
-      .slideUp('fast', function() {
+      .slideUp('fast', function () {
         $(this).remove();
         updateLayout();
       });

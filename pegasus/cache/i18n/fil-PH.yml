@@ -1,7 +1,14 @@
 "fil-PH":
   hour_of_code: Hour of Code
   hello: Mabuhay!
+  'yes': Oo
+  'no': Hindi
   select_language: Piliin ang iyong wika
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Matuto nang higit pa
   en: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 8-14, 2014
@@ -374,6 +381,9 @@
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
   homepage_banner_20k_teachers_link: Matuto nang higit pa
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Subukan ang Hour of Code
@@ -399,6 +409,7 @@
   homepage_slot_text_link_stats: Tingnan ang stats
   homepage_slot_text_link_buy: Sumali
   homepage_slot_text_link_donate: Magbigay ng donasyon
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Pinasasalamatan ng Code.org ang mag tagasuporta nito
   homepage_donors_seall: See all
@@ -449,7 +460,7 @@
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
   playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Building a Galaxy With Code
+  starwars_subtitle: Paglikha ng Galaxy sa pamamagitan ng Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
@@ -461,7 +472,7 @@
   starwars_blocks_start_button: Subukan ngayon
   starwars_watch_videos: Before you get started, watch one of these inspirational
     videos
-  starwars_speak_languages: Speak another language?
+  starwars_speak_languages: Nagsasalita ka ba ng ibang lingwahe?
   starwars_help_translate: Help us translate
   starwars_platform_text: Makabagong mga browser, smartphone, at mga tablet
   mc_name: Minecraft Hour of Code
@@ -587,6 +598,7 @@
   dashboard_landing_new_k5courses: Bago! Subukan ang mga course para sa K-5 na mga
     estudyante.
   dashboard_landing_useful_links: Ibang makakatulong na mga link (sa English lang)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Magtanong ng personal! Bisitahin ang aming monthly
     video office hours.
   dashboard_landing_print_certificates: Print certificates for students who finish
@@ -606,6 +618,11 @@
   dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
     by our partners.</a> Learn to program with robots, make web pages, make your own
     app, or explore other languages like C++, Ruby, or Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
@@ -657,6 +674,18 @@
   dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Tapos na
   dashboard_action_required: kinakailangan
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Home page ng teacher
   dashboard_navigation_section_student_progress: Mga Account at Progress ng mga Estudyante
   dashboard_navigation_section_teacher_progress: Ang Iyong Progreso sa Kurso
@@ -674,6 +703,19 @@
   dashboard_navigation_view_stats: Tingnan ang mga Stat
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_completed: hindi natapos
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Bagong section
   dashboard_sections_jumbotron_instruction: Gumawa ng bagong mga section at magdagdag
     ng mga estudyante dito. Ang mga section ay tumutulong para ma-organize ang mga
@@ -683,6 +725,7 @@
   dashboard_sections_table_secret: Klase ng Login
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Kurso
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Mga mag-aaral
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Pangalan ng Section
@@ -701,6 +744,26 @@
     ng mga baraha na naglalaman ng impormasyon ng account upang ibahagi sa iyong mga
     mag-aaral nang paisa-isa.
   dashboard_sections_switch_section: 'Magpalit ng section:'
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Magdagdag ng estudyante
   dashboard_students_add_students: Magdagdag ng maraming estudyante
   dashboard_students_add_multiple: 'I-type o i-paste ang mga pangalan ng iyong mga
@@ -760,6 +823,8 @@
   dashboard_course2: 'Kurso 2:'
   dashboard_course3: 'Kurso 3:'
   dashboard_course4: 'Course 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Overview
@@ -783,13 +848,6 @@
   dashboard_login_picture: Picture
   dashboard_login_none: Email
   dashboard_new_password: bagong password
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: hindi natapos
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_progress_submitted: submitted
   dashboard_stage: Yugto
   dashboard_puzzle: Palaisipan
   dashboard_question: Question
@@ -799,6 +857,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Tama
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -828,17 +888,17 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Matuto nang higit pa
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: Ang Hour of Code ay andito na - Disyembre 08-14!
   code_sign_up: Mag-sign up upang lumahok sa CS Edukasyon Week
   learn_more: Dagdagan ang Kaalaman
@@ -962,13 +1022,39 @@
   course3_name: Course 3
   course4_name: Course 4
   accelerated_name: Accelerated Course
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Accelerated Course
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Classic Maze
+  iceage_name: Ice Age
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Math
+  hoc_category_name: Hour of Code
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you

@@ -35,7 +35,11 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"**Remember:** This puzzle changes each time it's run.  \\n\\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge.\",\r\n  \"hint_id\": \"remember_quantum\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "conditionals": 4
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

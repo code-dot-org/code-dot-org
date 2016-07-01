@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:20.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment: Question 1",
+    "markdown_instructions": "What is a Caesar cipher?\n",
+    "encrypted_solution": "ZD8piRdjpCDCjzKBEBL6CINGrLOKNyAmAIRvgXg4pXm6mpktBqj/r9LuWzUz\nQAa7eKvkLC4KxEx1UuM8RZ/KJkL27jhrXmHP4XvHc5M3iFRBo44i/GaINaK3\nBI8U3X6vZjN7xgSirdL4DVXdDXxq/gYc5Q7ulzSZ4rOQl5SWJYStjKIYMm9p\n/LkzV8FgDng688+eTe8ZepoUGXltZ8wBPZkV0UDA3EYis+mDWP3Xdbbx9QOI\nQc38MUGFjFGDed+VwewzbUy1/I05TnDS9rtoXLau4h4zh5piQ0X2hBZqdbHN\nMEZToCAhgiqLXLVfqEmx\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

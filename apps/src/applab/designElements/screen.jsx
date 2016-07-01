@@ -1,12 +1,12 @@
-
-var PropertyRow = require('./PropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
-var DefaultScreenButtonPropertyRow = require('./DefaultScreenButtonPropertyRow.jsx');
-var ICON_PREFIX_REGEX = require('../constants').ICON_PREFIX_REGEX;
+var React = require('react');
+var PropertyRow = require('./PropertyRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ImagePickerPropertyRow = require('./ImagePickerPropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
+var DefaultScreenButtonPropertyRow = require('./DefaultScreenButtonPropertyRow');
+var applabConstants = require('../constants');
 
 var elementUtils = require('./elementUtils');
 
@@ -27,7 +27,7 @@ var ScreenProperties = React.createClass({
 
     var iconColorPicker;
     var canonicalImage = element.getAttribute('data-canonical-image-url');
-    if (ICON_PREFIX_REGEX.test(canonicalImage)) {
+    if (applabConstants.ICON_PREFIX_REGEX.test(canonicalImage)) {
       iconColorPicker = (
         <ColorPickerPropertyRow
           desc={'icon color'}
@@ -68,7 +68,7 @@ var ScreenEvents = React.createClass({
   // The screen click event handler code currently receives clicks to any
   // other design element. This could be worked around by checking for
   // event.targetId === "<id>" here, at the expense of added complexity.
-  getClickEventCode: function() {
+  getClickEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
@@ -78,11 +78,11 @@ var ScreenEvents = React.createClass({
     return code;
   },
 
-  insertClick: function() {
+  insertClick: function () {
     this.props.onInsertEvent(this.getClickEventCode());
   },
 
-  getKeyEventCode: function() {
+  getKeyEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "keydown", function(event) {\n' +
@@ -91,7 +91,7 @@ var ScreenEvents = React.createClass({
     return code;
   },
 
-  insertKey: function() {
+  insertKey: function () {
     this.props.onInsertEvent(this.getKeyEventCode());
   },
 
@@ -132,8 +132,8 @@ module.exports = {
     element.setAttribute('class', 'screen');
     element.setAttribute('tabIndex', '1');
     element.style.display = 'block';
-    element.style.height = Applab.footerlessAppHeight + 'px';
-    element.style.width = Applab.appWidth + 'px';
+    element.style.height = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT + 'px';
+    element.style.width = applabConstants.APP_WIDTH + 'px';
     element.style.left = '0px';
     element.style.top = '0px';
     // We want our screen to be behind canvases. By setting any z-index on the

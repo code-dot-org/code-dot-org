@@ -2,9 +2,22 @@
 - app, data = %i(app data).map{ |x| local_assigns[x] }
 
 - unless app == 'external'
-  .buttons
-    %a.btn.btn-large.btn-primary.next-stage.submitButton
-      =t('submit')
+  .buttons{class: @level.properties['submittable'] == 'true' ? 'submittable' : nil}
+    - if local_assigns[:previous_button]
+      %a.btn.btn-large.btn-primary.previousPageButton
+        =t('previous_page')
+    - if local_assigns[:next_button]
+      %a.btn.btn-large.btn-primary.nextPageButton
+        =t('next_page')
+    - elsif local_assigns[:continue_button]
+      %a.btn.btn-large.btn-primary.next-stage.submitButton
+        =t('continue')
+    - else
+      %a.btn.btn-large.btn-primary.next-stage.submitButton
+        =t('submit')
+      - if @level.properties['submittable']
+        %a.btn.btn-large.btn-primary.unsubmitButton{style: 'display: none'}
+          =t('unsubmit')
 .clear
 %div{style: 'display: none;'}
   #error-dialogcontent
@@ -91,18 +104,25 @@
         %button#ok-button{style: 'float: right;'}
           =t('ok')
 
-:ruby
-  dialogOptions = {
-    autoResizeScrollableElement: '.scrollable-element',
-    skipSound: !!(data['options'].try(:[], 'skip_sound')),
-    preTitle: data['pre_title'],
-    fallbackResponse: @fallback_response.to_json,
-    callback: @callback,
-    app: app,
-    level: @level.level_num,
-    shouldShowDialog: data['skip_dialog'].blank? && data['options'].try(:[], 'skip_dialog').blank?
-  }
+  #levelgroup-submit-incomplete-dialogcontent
+    .modal-content.no-modal-icon
+      %p.dialog-title= t('level_group-submittable.submit-incomplete-title')
+      %p.dialog-body=  t('level_group-submittable.submit-incomplete-body')
+      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
+      %button#ok-button{style: "float: right"}= t('okay')
 
-:javascript
-  appOptions.dialog = #{dialogOptions.to_json};
-  #{render partial: 'levels/dialogHelper', formats: [:js]}
+  #levelgroup-submit-complete-dialogcontent
+    .modal-content.no-modal-icon
+      %p.dialog-title= t('level_group-submittable.submit-complete-title')
+      %p.dialog-body=  t('level_group-submittable.submit-complete-body')
+      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
+      %button#ok-button{style: "float: right"}= t('okay')
+
+  #unsubmit-dialogcontent
+    .modal-content.no-modal-icon
+      %p.dialog-title= t('level_group-submittable.unsubmit-title')
+      %p.dialog-body=  t('level_group-submittable.unsubmit-body')
+      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
+      %button#ok-button{style: "float: right"}= t('okay')
+
+=javascript_include_tag 'js/levels/dialogHelper'

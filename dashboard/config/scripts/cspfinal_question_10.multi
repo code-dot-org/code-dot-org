@@ -1,0 +1,15 @@
+name 'CSPFinal_Question_10'
+wrong 'II only'
+right 'I and II only'
+wrong 'I and III only'
+wrong 'II and III only'
+markdown <<MARKDOWN
+Which of the following is true about low level computer languages?
+
+    I. Low level languages give the programmer more control over how system resources are used.
+
+    II. Code in a programming language is often translated into code in another (lower level) language to be executed on a computer.
+
+    III. Low level programming languages are designed to be easier for people to read and write.
+
+MARKDOWN

@@ -1,8 +1,0 @@
-name 'PDK5 Test5'
-title 'Big Test'
-
-markdown <<MARKDOWN
-## What did you think about things?
-
-What are your thoughts?
-MARKDOWN

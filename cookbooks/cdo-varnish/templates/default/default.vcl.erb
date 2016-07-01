@@ -3,6 +3,7 @@ include "/etc/varnish/accept-language.vcl";
 import cookie;
 import header;
 import directors;
+import std;
 
 <%
   config = node['cdo-varnish']['config']
@@ -11,12 +12,22 @@ import directors;
 %>
 
 <% backends.each_pair do |id, ip| %>
+probe backend_healthcheck {
+  .url = "/health_check";
+  .window = 4;
+  .threshold = 2;
+  .initial = 2;
+  .interval = 15s;
+  .timeout = 10s;
+}
+
 backend pegasus_<%= id %> {
   .host = "<%= ip %>";
   .port = "<%= node['cdo-apps']['pegasus']['port'] %>";
   .connect_timeout = 600s;
   .first_byte_timeout = 600s;
   .between_bytes_timeout = 600s;
+  .probe = backend_healthcheck;
 }
 
 backend dashboard_<%= id %> {
@@ -25,6 +36,7 @@ backend dashboard_<%= id %> {
   .connect_timeout = 600s;
   .first_byte_timeout = 600s;
   .between_bytes_timeout = 600s;
+  .probe = backend_healthcheck;
 }
 <% end %>
 
@@ -46,8 +58,28 @@ sub vcl_recv
   }
 
   # Use "/health_check.php" to keep this instance in the load balancer.
-  if (req.method == "GET" && req.url ~ "^/health_check.php$") {
-    return(synth(200, "Varnish is healthy."));
+  if (req.method == "GET" && (req.url ~ "^/health_check.php$" || req.url ~ "^/health_check$")) {
+    if (std.healthy(dashboard_<%=backends.keys.first%>) && std.healthy(pegasus_<%=backends.keys.first%>)) {
+      return(synth(200, "Webapps are healthy."));
+    } else {
+      return(synth(503, "Webapps are not healthy."));
+    }
+  }
+
+  if (req.method == "GET" && req.url ~ "^/health_check.dashboard$") {
+    if (std.healthy(dashboard_<%=backends.keys.first%>)) {
+      return(synth(200, "Dashboard is healthy."));
+    } else {
+      return(synth(503, "Dashboard is not healthy."));
+    }
+  }
+
+  if (req.method == "GET" && req.url ~ "^/health_check.pegasus$") {
+    if (std.healthy(pegasus_<%=backends.keys.first%>)) {
+      return(synth(200, "Pegasus is healthy."));
+    } else {
+      return(synth(503, "Pegasus is not healthy."));
+    }
   }
 
 ### REDIRECTS

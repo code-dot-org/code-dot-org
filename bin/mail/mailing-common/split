@@ -5,13 +5,13 @@ require 'set'
 
 if ARGV.count < 2
   puts <<EOS
-Usage: #{$0} mailing_list.csv sample_size_1 sample_size_2 sample_size_3 ...
-  Split a mailing_list.csv into test samples and a remainder. sample_size_1 is in %
+Usage: #{$0} mailing-list.csv sample_size_1 sample_size_2 sample_size_3 ...
+  Split a mailing-list.csv into experiment samples and a remainder. sample_size_1 is in %
 Example:
-  #{$0} mailing_list.csv 5 5 5
+  #{$0} mailing-list.csv 5 5 5
     Generates:
-    mailing_list_test_1.csv mailing_list_test_2.csv mailing_list_test_3.csv with 5% each
-    mailing_list_remainder.csv with 85%
+    mailing-list-experiment-1.csv mailing-list-experiment-2.csv mailing-list-experiment-3.csv with 5% each
+    mailing-list-remainder.csv with 85%
 EOS
   exit(-1)
 end
@@ -26,7 +26,7 @@ def output_csv(out_path, columns, rows)
 end
 
 csv_path = ARGV[0]
-sample_sizes = ARGV[1..-1].map(&:to_i)
+sample_sizes = ARGV[1..-1].map(&:to_f)
 
 input_rows = CSV.read(csv_path)
 
@@ -46,7 +46,7 @@ end
 basename = File.basename(csv_path, '.csv')
 
 samples.each_with_index do |sample, i|
-  output_csv("#{basename}-test-#{i+1}.csv", input_columns, sample)
+  output_csv("#{basename}-experiment-#{i+1}.csv", input_columns, sample)
 end
 
 output_csv("#{basename}-remainder.csv", input_columns, input_rows)

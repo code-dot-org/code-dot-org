@@ -964,10 +964,10 @@
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: Je zou niet eens kunnen starten in de race als je geen mensen hebt die
+          kunnen programmeren! Je hebt ze nodig omdat de race-auto's zoveel gegevens
+          produceren en die informatie moet verwerkt worden om de prestaties te kunnen
+          verbeteren.
       2:
         image: notes/C2_artist_intro_2.png
         text: In deze puzzels ben je een kunstenaar die een potlood gebruikt om verschillende
@@ -975,16 +975,17 @@
           je tekenen.
       3:
         image: notes/C2_artist_intro_3.png
-        text: To move around the canvas, you'll use the move forward block. Here the
-          move forward block says move forward by 100 pixels. When we hit run, what
-          happens? The artist moves forward a certain amount and that amount is 100
-          pixels. Pixels are basically very tiny squares on your computer screen.
+        text: Om op het werkvlak te kunnen bewegen ga je het "beweeg vooruit" blok
+          gebruiken. Het vooruit blok vertelt de kunstenaar om 100 pixels vooruit
+          te bewegen. Wat gebeurt er als we op 'Afspelen' drukken? De kunstenaar beweegt
+          vooruit met precies 100 pixels. Pixels zijn de kleinste vierkantjes die
+          je kunt zien op je scherm.
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: Het andere blok in deze puzzel zegt "Draai 90 graden rechtsom". Wanneer
+          we deze "Draai Rechts" blok gebruiken, zorgt dit ervoor dat de tekenaar
+          een bepaalde draai maakt. Je kan er dus mee spelen hoe ver je de tekenaar
+          wil laten draaien. Dit is een draai van 90 graden.
       5:
         image: notes/C2_artist_intro_5.png
         text: En dit is een 120 graden draai. En vergeet niet, u kunt deze waarden
@@ -993,22 +994,22 @@
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: Dit is een voorwaardelijk blok. Het zegt ALS de nektar of honing minder
+          dan, gelijk aan of meer dan een bepaald getal is DAN iets doen.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: Dit is handig als we niet weten hoeveel nectar of honing we moeten hebben,
+          zoals we hier zien met dit vraagteken.
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: In this example, we're going to say IF the purple flower has nectar
-          greater than 0, get nectar. That will tell our bee to keep getting nectar
-          as long as it's there. Ta-dah!
+        text: In dit voorbeeld zeggen we ALS de paarse bloem nectar heeft groter dan
+          0, haal nectar op. Dat zal onze bij vertellen dat hij nectar moet halen
+          zolang er voorraad is. Ta-dah!
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: This is the binary bracelets lesson. We are going to code our initials
-          on a bracelet we can wear and show all our friends!
+        text: Dit is de binaire armband les. We gaan onze initialen op een armband
+          coderen die we kunnen dragen en aan onze vrienden kunnen laten zien!
       2:
         image: notes/C2_binary_bracelets_2.png
         text: Binair is een manier om informatie weer te geven met behulp van slechts
@@ -1017,63 +1018,61 @@
           neer en werkelijk elk paar tegengestelden.
       3:
         image: notes/C2_binary_bracelets_3.png
-        text: Hi, I'm Orion and I program robots here at Play-im. All computer and
-          robot brains at their most fundamental level are little electronic gates.
-          When the gate is open, electricity can flow through and when it's closed,
-          electricity can't.
+        text: Hallo, ik ben Orion en ik programmeer hier bij Play-im robots. Alle
+          computer- en robothersenen zijn eigenlijk kleine elektronische poorten.
+          Wanneer de poort open is, kan er elektriciteit doorheen en wanneer de poort
+          gesloten is, kan elektriciteit dat niet.
       4:
         image: notes/C2_binary_bracelets_4.png
-        text: An example of binary on the robot is the robot's eyes. The robot's eyes
-          are LEDs and those are lights that are either on or off. It's a binary system,
-          one or the other. We can use the lights to represent binary numbers. If
-          we have a set of robots, we can say that the first robot is the 1s place
-          and the second robot is the 2s place, the third robot is the 4s place and
-          so on. That's how you represent a binary number. The robots will do it with
-          their binary eyes and count it out for you.
+        text: De robotogen van een robot zijn een binair voorbeeld. De robotogen zijn
+          LED's en die zijn of aan of ze zijn uit. Het is een binair systeem, dus
+          het is of het een of het ander. We kunnen de lampjes gebruiken om binaire
+          getallen weergeven. Als we een aantal robots hebben, kunnen we zeggen dat
+          de eerste robot op de eerste plaats staat en de tweede robot op de tweede
+          plaats, de derde staat op de vierde plek enzovoorts. Op deze manier maak
+          je een binair nummer. De robot gebruikt zijn binaire ogen en rekent het
+          voor je uit.
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
-        text: This lesson is called conditionals with cards. Every day you make decisions
-          based on what you see and hear.
+        text: Deze les heet conditionele kaarten. Elke dag maak je beslissingen op
+          basis van wat je hoort en ziet.
       2:
         image: notes/C2_conditionals_with_cards_2.png
-        text: I want to walk to the park but first I have to decide whether I should
-          bring an umbrella or not. So I look out the window. If it's cloudy, I'm
-          going to take my umbrella. Else, I'll take some sunglasses. I think I'd
-          better take the umbrella. What I see and hear determines what I take to
-          the park.
+        text: Ik wil naar het park lopen, maar eerst moet ik een besluit nemen of
+          ik mijn paraplu mee zal nemen of niet. Daarom kijk ik uit het raam. Als
+          het bewolkt is, neem ik mijn paraplu mee. Anders neem ik mijn zonnebril
+          mee. Ik denk dat ik beter mijn paraplu mee kan nemen. Wat ik zie en hoor
+          bepaalt wat ik mee neem naar het park.
       3:
         image: notes/C2_conditionals_with_cards_3.png
-        text: Conditionals are used in games too. Today we're going to practice using
-          conditionals with a card game. In this game, the card that I draw determines
-          what my friends are going to do. If I draw a seven, everyone claps. Else,
-          everyone says "awww." Let's try it! "Awww" "cheers"
+        text: Voorwaarden worden ook in spellen gebruikt. Vandaag zullen we de voorwaarden
+          oefenen met een kaartspel. In dit spel zullen de door mij getekende kaarten
+          vertellen wat mijn vrienden gaan doen. Als ik een zeven teken, gaat iedereen
+          klappen, anders zegt iedereen "awwww." laten we het proberen!
       4:
         image: notes/C2_conditionals_with_cards_4.png
-        text: I bet you can make up games that are even more fun with conditionals.
-          Give it a try! Conditionals are what make computers seem smart. A computer
-          program that includes conditionals can react to the user and change its
-          course of action.
+        text: Ik denk dat je nog leukere spellen kunt maken met voorwaarden. Probeer
+          het maar eens. Voorwaarden maken de computer er slim uit zien. Een computerprogramma
+          die voorwaarden heeft, kan reageren op de gebruiker en veranderen wat hij
+          gaat doen.
       5:
         image: notes/C2_conditionals_with_cards_5.png
-        text: Think about your favorite video game. Do you earn more points for some
-          actions than you do for others? This occurs because the computer is using
-          conditionals. It's the way a computer makes a decision. How about, if you
-          hit the target, you earn ten points. Else, you lose three. When you know
-          how conditionals work, you can create all kinds of exciting games.
+        text: |
+          Denk aan je leukste videospel. Verdien je voor het een meer punten dan voor iets anders? Dit gebeurt omdat de computer voorwaarden gebruikt. Zo maakt de computer beslissingen. Wat denk je van, als je het doel raakt krijg je tien punten en anders verlies je er drie?
+          Wanneer je weet hoe voorwaarden werken, kun je allemaal leuke spellen maken.
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is
-          something wrong.
+        text: Hier hebben we al een paar blokken, maar er is iets verkeerd.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: Let's debug this code by slowing down the speed and watching it as it
-          goes through each block step by step.
+        text: Laten we de code debuggen door de snelheid te verminderen en goed te
+          kijken wanneer het door elk blok heen gaat.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: Oh, there's the problem! The cat's whiskers are 75 pixels long, not
-          25.
+        text: Oh, er is een probleem! De haarballen van de kat zijn 75 pixels lang
+          en niet 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
@@ -1082,39 +1081,38 @@
           en herstel je de fouten.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: Here we're given a few blocks already in our workplace. We're going
-          to use the step button to walk through the blocks, step by step, to see
-          if this is the right solution and where we may need to fix it.
+        text: Hier hebben we al een paar blokken gekregen. We gebruiken de stap-knop
+          om stap-voor-stap door de blokken heen te gaan om te kijken of dit de goede
+          oplossing is en als dit niet zo is, waar we het dan moeten oplossen.
       3:
         image: notes/C2_bee_debugging_3.png
-        text: Looks like there's our problem! We need one more move forward block.
-          The step button helps us debug our problem by identifying where the error
-          is so we can fix it.
+        text: Het lijkt erop dat er iets fout gaat! We hebben een extra ga-vooruit
+          blok nodig. de stap-knop help ons om ons probleem te debuggebm door te kijken
+          waar de fout is, zodat we die kunnen oplossen.
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
-        text: On your head you hold your hat and your smarts will tell you where you're
-          at and to think about the zoo, and to nod hello to you and you! Use your
-          head when you're online to keep what's yours inside your mind and to know
-          how to be safe, how to give your life some private space! From your head
-          down to your toes, pause, think about it. From your feet up to your nose,
-          pause and think online!
+        text: Op je hoofd hou je je hoed en je verstand vertelt je waar je bent en
+          om te denken aan de dierentuin, knik hallo naar jou en jou! Gebruik je hoofd
+          als je online bent om wat van jou is van jou te houden en om te weten hoe
+          je veilig bent, hoe je leven privé blijft! Van je hoofd tot aan je tenen,
+          wacht, om eraan te denken. Van je voeten tot je neus, wacht en denk online!
       2:
         image: notes/C2_digital_footprint_2.png
-        text: Use your heart to grow and grow, and to give yourself a healthy glow,
-          and to make a valentine, tell someone that you'll be mine! Use your heart
-          when you're online, feel what's right and always kind, and show your friends
-          respect, to be fair and nice on the internet. From your head down to your
-          toes, pause, think about it. From your feet up to your nose, pause and think
-          online!
+        text: Gebruik je hart om te groeien en groeien, en om jezelf een gezonde gloed
+          te geven, en om een valentijn te maken, zeg tegen iemand dat je de mijne
+          zal zijn! Gebruik je hart als je online bent, voel wat goed is en altijd
+          aardig, en respecteer je vrienden, door eerlijk en aardig te zijn op het
+          internet. Van je hoofd tot aan je tenen, wacht, denk na. Van je voeten tot
+          je neus, wacht en denk online!
       3:
         image: notes/C2_digital_footprint_3.png
-        text: Use your arms to hug your pet, to keep your clothes from getting wet,
-          and to wear your favorite sleeves and to help you fly and make believe.
-          Use your arms when you're online, to take break and balance time and leave
-          your tech behind and to find yourself a tree to climb. From your head down
-          to your toes, pause, think about it. From your feet up to your nose, pause
-          and think online!
+        text: Gebruik je armen om je huisdier te knuffelen, om te zorgen dat je kleren
+          niet nat worden, om je favoriete trui te dragen en om je te helpen vliegen
+          en te laten geloven. Gebruik je armen als je online bent, om een pauze te
+          nemen en je technologie achter te laten en om een boom te vinden om in te
+          klimmen. Van je hoofd tot aan je tenen, wacht en denk na. Van je voeten
+          tot je neus, wacht en denk online!
       4:
         image: notes/C2_digital_footprint_4.png
         text: Use your gut to store your food, and to listen to its growling mood,
@@ -1140,94 +1138,98 @@
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
-        text: Everytime you go online, you leave a footprint that can be searched,
-          copied, shared, broadcast and is permanent. What kind of digital footprint
-          are you leaving? What kind of digital footprint do you want to leave?
+        text: Elke keer als je online gaat, laat je een vingerafdruk achter die kan
+          worden opgezocht, gekopieerd, gedeeld, uitgezonden, maar niet kan worden
+          verwijderd. Wat voor vingerafdruk wil jij achterlaten?
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: This lesson is called "Graph Paper Programming" and it's all about algorithms.
-          Today we're going to learn how to write programs that show each other how
-          to recreate simple black and white images, using only hand drawn arrows.
+        text: Deze les heet "Grafiekpapier Programming" en gaat over algoritmen. Vandaag
+          gaan we leren hoe we programma's schrijven, die elkaar laten zien hoe je
+          een simpele zwart-wit-afbeelding opnieuw kunt maken, met behulp van alleen
+          maar handgetrokken pijlen.
       2:
         image: notes/C2_graph_paper_2.png
-        text: An algorithm is a list of instructions for completing a task. We'll
-          follow this set of instructions to make the bowl. Algorithms are really
-          helpful when you need someone else to understand how to do something.
+        text: Een algoritme is een lijst van Instructies, die vertellen hoe je een
+          taak uitvoert. Met deze lijst gaan we een schaal maken. Algoritmes kunnen
+          je goed helpen als iemand anders moet weten hoe je iets moet doen.
       3:
         image: notes/C2_graph_paper_3.png
-        text: If you're writing an algorithm for a computer, you have to break it
-          down to little tiny steps. So finish this row and go to the next, then the
-          next one, and you'll be done.
+        text: Als je voor een computer een algoritme schrijft, moet je het in hele
+          kleine stapje opbreken. Dus, maak eerst deze rij af, daarna de volgende,
+          dan de volgende en dan ben je klaar.
       4:
         image: notes/C2_graph_paper_4.png
-        text: I use algorithms in my work. If I write down all of the steps I can
-          recreate that same piece again, or I can teach someone else to do it. Put
-          the glass in the kiln, fuse it together, follow the rest of the instructions
-          to make the bowl. Algorithms give you a road map for getting something done.
+        text: Ik gebruik algoritmes op mijn werk. Als ik alle stapjes opschrijf, kan
+          ik iets opnieuw maken, of ik kan iemand anders keren hoe je het opnieuw
+          maakt. Doe het glas in de oven. smelt er een bol van. Volg de rest van de
+          Instructies om een schaal te maken. Algoritmes geven je een plattegrond
+          van hoe je iets doet.
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
-        text: Here we are going to use the repeat block to help us save steps when
-          we are programming our artist. We already have some blocks out on our stage
-          but they are just there to get us started.
+        text: Hier gaan we het "herhaal"-blok gebruiken, zodat we een aantal stappen
+          niet hoeven op te schrijven, als we onze tekenaar programmeren. We hebben
+          al wat blokken, maar zij ons alleen om te beginnen.
       2:
         image: notes/C2_artist_loops_2.png
-        text: To loop those blocks four times to draw the whole square, we just drag
-          out the repeat block and put the moveforward and turn right blocks inside
-          the repeat block. When we hit run, the artist will repeat those steps four
-          times to complete the square.
+        text: Om de blokken vier keer te herhalen, zodat we een vierkant hebben, gebruiken
+          we gewoon het herhaal-blok. We zetten er een ga-vooruit en een draai-rechts
+          blok in. Wanneer we op uitvoeren drukken, zal de tekenaar de stappen vier
+          keer doen en dus het vierkant afmaken.
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: A loop is a repetition of activity. Going into a hive to inspect, I
-          look at a frame, and then I put it back. I repeat that same activity multiple
-          times. It's looping around, doing the same activity multiple times.
+        text: "Een lus is een herhaling van werkzaamheden. Dus, wanneer ik een bijenkorf
+          betreed die ik wil inspecteren, bekijk ik een raam en stop deze daarna weer
+          terug. \nIk herhaal dus de zelfde werkzaamheden meerdere keren. Het gaat
+          in een lus: het meerdere keer uitvoeren van dezelfde werkzaamheden.\n"
       2:
         image: notes/C2_bee_loops_2.png
-        text: This is the repeat block. Whatever you put inside the repeat block will
-          repeat those actions the number of times that you tell it to. For example,
-          in this level, rather than drag out move forward and get nectar three times,
-          we're going to just drag them out once each and repeat the action three
-          times. That made it easy!
+        text: Dit is de "herhaal"-blok. Wat je in het herhaal-blok stopt, zal zo vaak
+          worden uitgevoerd, als je tegen het herhaalblok verteld. In dit level kunnen
+          we in plaats van drie keer "doe een stap vooruit en pak nectar" ook een
+          "herhaal"-blok gebruiken en zeggen dat ze de actie drie keer moeten uitvoeren.
+          Makkelijk toch?
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: Meestal programmeer je alleen met tekst, maar wij gebruiken Blockly
+          die gebruik maakt van blokken die je kunt zien, slepen en neerzetten om
+          een programma te schrijven. Stiekem maak je nog steeds code. Om te beginnen
+          gaan we een programma schrijven om deze Angry Bird door het doolhof helpen,
+          om naar het boze varkens te gaan, die de eieren hebben gestolen.
       2:
         image: notes/C2_maze_intro_2.png
-        text: Blockly is split into three main parts. On the left is the bird's maze,
-          where your program will run. The instructions for each level are written
-          below the maze. This middle area is the toolbox and each of these blocks
-          is a command that the bird can understand. The white space on the right
-          is called the workspace and this is where we'll build our program.
+        text: Blockly is verdeeld in drie grote delen. Is aan de linkerkant is de
+          doolhof, waar je programma wordt uitgevoerd. De instructies voor elk niveau
+          worden onder het doolhof geschreven. Het midden is de gereedschapskist en
+          elk blok is een commando die de vogel kan begrijpen. De witruimte aan de
+          rechterkant wordt de werkruimte genoemd en dit is waar we ons programma
+          gaan bouwen.
       3:
         image: notes/C2_maze_intro_3.png
-        text: If I drag the move block to our work space and press "Run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: Wat gebeurt er als ik het blok naar onze werkplek sleep en op "uitvoeren"
+          druk? Dan gaat de vogel een vakje naar voren. Wat moet ik doen als de vogel
+          daarna nog iets moet doen? Dan moet je een nieuw blokje aan het programma
+          vastmaken.
       4:
         image: notes/C2_maze_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "Run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Ik kies de "draai rechts"-blok en ik sleep het onder mijn ga-vooruit
+          blok, tot er een gele pijl verschijnt. Dan laat ik het blok los en de blokken
+          maken zich aan elkaar vast. Als ik opnieuw op "uitvoeren" druk, voert de
+          vogel alle opdrachten uit van onze werkplek.
       5:
         image: notes/C2_maze_intro_5.png
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it to the trash can. After you've hit run, you can always hit the reset
-          button to get the bird back to the start. Now let's get those pigs!
+        text: Als je een blok wilt weghalen, verwijder die dan uit de stapel en sleep
+          het naar de prullenmand. Als je dan op "uitvoeren" drukt, kun je op de herstelknop
+          drukken om de vogel opnieuw te laten beginnen. Kom op, pak de varkens!
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
-        text: This lesson is called Real Life Algorithms. Algorithms describe things
-          that people do everyday. Cookie recipes and directions for building a birdhouse
-          are both everyday algorithms.
+        text: Deze les heet Algoritmen in het echte leven. Algoritmen beschrijven
+          dingen die mensen dagelijks doen. Koekjes recepten en aanwijzingen voor
+          het bouwen van een vogelhuisje zijn beide dagelijkse algoritmen.
       2:
         image: notes/C2_paper_airplanes_2.png
         text: Vandaag maken en testen we een algoritme voor een papieren vliegtuigje.
@@ -1236,12 +1238,12 @@
           zijn en in welke volgorde ze gedaan moeten worden.
       3:
         image: notes/C2_paper_airplanes_3.png
-        text: You'll create your algorithm by first cutting apart the pictures. Next,
-          you'll select the 6 pictures that show the steps needed to make a paper
-          airplane and arrange those pictures in the correct order. After you have
-          everything in order, you will trade algorithms with another student team
-          to test out the algorithm to see if the algorithm works. A well designed
-          algorithm is super important to making the best paper airplane.
+        text: Je gaat je algoritme maken door eerst de afbeeldingen los te snijden.
+          Vervolgens kies je 6 afbeeldingen die de stappen laten zien die nodig zijn
+          om een papieren vliegtuigje te maken, en zet je ze in de juiste volgorde.
+          Nadat je alles op volgorde hebt, zal je je algoritme ruilen met een andere
+          groep leerlingen om te kijken of je algoritme werkt. Een goed ontworpen
+          algoritme is zeer belangrijk voor het maken van het beste papieren vliegtuigje.
       4:
         image: notes/C2_paper_airplanes_4.png
         text: When we want to make chocolate, there are many big steps to that process.
@@ -1326,9 +1328,10 @@
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Een van de fantastische dingen in program,eren is dat als je een computer
+          hebt geleerd om een bepaalde actie uit te voeren, je die functie opnieuw
+          kunt aanroepen. Je kunt deze een naam geven die je vervolgens kunt aanroepen.
+          Het is alsof je de taal uitbreidt.
       2:
         image: notes/C3_artist_functions_2.png
         text: In the program we built, we learned how to draw a square by moving and
@@ -1339,10 +1342,10 @@
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: Je zou niet eens kunnen starten in de race als je geen mensen hebt die
+          kunnen programmeren! Je hebt ze nodig omdat de race-auto's zoveel gegevens
+          produceren en die informatie moet verwerkt worden om de prestaties te kunnen
+          verbeteren.
       2:
         image: notes/C3_artist_intro_2.png
         text: In deze puzzels ben je een kunstenaar die een potlood gebruikt om verschillende
@@ -1350,16 +1353,17 @@
           je tekenen.
       3:
         image: notes/C3_artist_intro_3.png
-        text: To move around the canvas, you'll use the move forward block. Here the
-          move forward block says move forward by 100 pixels. When we hit run, what
-          happens? The artist moves forward a certain amount and that amount is 100
-          pixels. Pixels are basically very tiny squares on your computer screen.
+        text: Om op het werkvlak te kunnen bewegen ga je het "beweeg vooruit" blok
+          gebruiken. Het vooruit blok vertelt de kunstenaar om 100 pixels vooruit
+          te bewegen. Wat gebeurt er als we op 'Afspelen' drukken? De kunstenaar beweegt
+          vooruit met precies 100 pixels. Pixels zijn de kleinste vierkantjes die
+          je kunt zien op je scherm.
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: Het andere blok in deze puzzel zegt "Draai 90 graden rechtsom". Wanneer
+          we deze "Draai Rechts" blok gebruiken, zorgt dit ervoor dat de tekenaar
+          een bepaalde draai maakt. Je kan er dus mee spelen hoe ver je de tekenaar
+          wil laten draaien. Dit is een draai van 90 graden.
       5:
         image: notes/C3_artist_intro_5.png
         text: En dit is een 120 graden draai. En vergeet niet, u kunt deze waarden
@@ -1380,17 +1384,17 @@
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: Dit is een voorwaardelijk blok. Het zegt ALS de nektar of honing minder
+          dan, gelijk aan of meer dan een bepaald getal is DAN iets doen.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: Dit is handig als we niet weten hoeveel nectar of honing we moeten hebben,
+          zoals we hier zien met dit vraagteken.
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: In this example, we're going to say IF the purple flower has nectar
-          greater than 0, get nectar. That will tell our bee to keep getting nectar
-          as long as it's there. Ta-dah!
+        text: In dit voorbeeld zeggen we ALS de paarse bloem nectar heeft groter dan
+          0, haal nectar op. Dat zal onze bij vertellen dat hij nectar moet halen
+          zolang er voorraad is. Ta-dah!
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
@@ -1399,14 +1403,14 @@
           en herstel je de fouten.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: Here we're given a few blocks already in our workplace. We're going
-          to use the step button to walk through the blocks, step by step, to see
-          if this is the right solution and where we may need to fix it.
+        text: Hier hebben we al een paar blokken gekregen. We gebruiken de stap-knop
+          om stap-voor-stap door de blokken heen te gaan om te kijken of dit de goede
+          oplossing is en als dit niet zo is, waar we het dan moeten oplossen.
       3:
         image: notes/C3_debugging_bee_3.png
-        text: Looks like there's our problem! We need one more move forward block.
-          The step button helps us debug our problem by identifying where the error
-          is so we can fix it.
+        text: Het lijkt erop dat er iets fout gaat! We hebben een extra ga-vooruit
+          blok nodig. de stap-knop help ons om ons probleem te debuggebm door te kijken
+          waar de fout is, zodat we die kunnen oplossen.
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
@@ -1446,12 +1450,12 @@
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: You're going to be creating your very own bounce game that you'll be
-          able to share with your friends! How cool!
+        text: Je gaat je eigen bounce-spelletje maken dat je kunt delen met je vrienden!.
+          Hoe cool!
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow
-          keys on our keyboard.
+        text: Om te beginnen moeten we de batjes aasluiten op de pijltjes toetsen
+          van ons toetsenbord.
       3:
         image: notes/C3_bounce_3.png
         text: We can do this by linking the when left arrow block to the move left
@@ -1841,9 +1845,10 @@
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Een van de fantastische dingen in program,eren is dat als je een computer
+          hebt geleerd om een bepaalde actie uit te voeren, je die functie opnieuw
+          kunt aanroepen. Je kunt deze een naam geven die je vervolgens kunt aanroepen.
+          Het is alsof je de taal uitbreidt.
       2:
         image: notes/C4_function_edit_2.png
         text: In the program we built, we learned how to draw a square by moving and
@@ -1898,18 +1903,19 @@
     C4_intro:
       1:
         image: notes/C4_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: Meestal programmeer je alleen met tekst, maar wij gebruiken Blockly
+          die gebruik maakt van blokken die je kunt zien, slepen en neerzetten om
+          een programma te schrijven. Stiekem maak je nog steeds code. Om te beginnen
+          gaan we een programma schrijven om deze Angry Bird door het doolhof helpen,
+          om naar het boze varkens te gaan, die de eieren hebben gestolen.
       2:
         image: notes/C4_intro_2.png
-        text: Blockly is split into three main parts. On the left is the bird's maze,
-          where your program will run. The instructions for each level are written
-          below the maze. This middle area is the toolbox and each of these blocks
-          is a command that the bird can understand. The white space on the right
-          is called the workspace and this is where we'll build our program.
+        text: Blockly is verdeeld in drie grote delen. Is aan de linkerkant is de
+          doolhof, waar je programma wordt uitgevoerd. De instructies voor elk niveau
+          worden onder het doolhof geschreven. Het midden is de gereedschapskist en
+          elk blok is een commando die de vogel kan begrijpen. De witruimte aan de
+          rechterkant wordt de werkruimte genoemd en dit is waar we ons programma
+          gaan bouwen.
       3:
         image: notes/C4_intro_3.png
         text: If I drag the move block to our work space and press "run", what happens?
@@ -1924,9 +1930,9 @@
           the commands that are stacked from top to bottom on our work space.
       5:
         image: notes/C4_intro_5.png
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it to the trash can. After you've hit run, you can always hit the reset
-          button to get the bird back to the start. Now let's get those pigs!
+        text: Als je een blok wilt weghalen, verwijder die dan uit de stapel en sleep
+          het naar de prullenmand. Als je dan op "uitvoeren" drukt, kun je op de herstelknop
+          drukken om de vogel opnieuw te laten beginnen. Kom op, pak de varkens!
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png

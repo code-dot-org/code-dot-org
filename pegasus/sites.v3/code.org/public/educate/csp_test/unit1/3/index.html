@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Students are introduced to the Internet Simulator, a tool they will return to many times in the first two units of the course. Today, the Internet Simulator will be used to simulate a single shared wire, connecting two people. The wire can only be in one of two possible states (state A or state B) and either partner may set or read the state of the wire at any time, but this is the only way in which students may communicate. Students must invent a binary call-response protocol using this system. Coordination, speed and timing are problems that need to be solved. At the conclusion of the lesson, students compete to demonstrate the speed and accuracy of their protocols, and calculate the bit rate of their message exchange.">
+    <title>Sending Binary Messages with the Internet Simulator</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit1/"><span class="h2">Unit</span><span class="h1">1</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch1" data-pdf-link="#unit1chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/1" data-pdf-link="#unit1lesson1">
+                1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/2" data-pdf-link="#unit1lesson2">
+                2
+            </a>
+            </div>
+            
+                
+                    
+                        <div class="lesson current">
+                    
+                
+            <a href="/educate/csp_test/unit1/3" data-pdf-link="#unit1lesson3">
+                3
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/4" data-pdf-link="#unit1lesson4">
+                4
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/5" data-pdf-link="#unit1lesson5">
+                5
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/6" data-pdf-link="#unit1lesson6">
+                6
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/7" data-pdf-link="#unit1lesson7">
+                7
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch2" data-pdf-link="#unit1chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/8" data-pdf-link="#unit1lesson8">
+                8
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/9" data-pdf-link="#unit1lesson9">
+                9
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/10" data-pdf-link="#unit1lesson10">
+                10
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/11" data-pdf-link="#unit1lesson11">
+                11
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/12" data-pdf-link="#unit1lesson12">
+                12
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/13" data-pdf-link="#unit1lesson13">
+                13
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/14" data-pdf-link="#unit1lesson14">
+                14
+            </a>
+            </div>
+            
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit1lesson3">
+        
+            
+                <h1>Lesson 3: Sending Binary Messages with the Internet Simulator</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+                
+                Widget
+            
+                | 
+                Internet Simulator
+            
+                | 
+                Group Problem Solving
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>Students are introduced to the Internet Simulator, a tool they will return to many times in the first two units of the course. Today, the Internet Simulator will be used to simulate a single shared wire, connecting two people.  The wire can only be in one of two possible states (state A or state B) and either partner may set or read the state of the wire at any time, but this is the only way in which students may communicate.  Students must invent a binary call-response <span class="vocab" title="Protocol: A set of rules governing the exchange or transmission of data between devices.">protocol</span> using this system. Coordination, speed and timing are problems that need to be solved. At the conclusion of the lesson, students compete to demonstrate the speed and accuracy of their protocols, and calculate the <span class="vocab" title="Bit rate: (sometimes written bitrate) the number of bits that are conveyed or processed per unit of time. e.g. 8 bits/sec.">bit rate</span> of their message exchange.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>The major purpose of this lesson is to engage students in a rather challenging problem of engineering a physical network for digital communications. if you must communicate in binary by setting the state of some object (such as a wire) to one of its two possible states, merely defining “State A” and “State B” is insufficient because there is no way to distinguish between a single bit “A” and a string of “AAA” for example. Some element of time must be incorporated into a communication <span class="vocab" title="Protocol: A set of rules governing the exchange or transmission of data between devices.">protocol</span> to make it functional for exchanging bits. This time-per-bit leads naturally to calculating a <span>bitrate</span> for a given device, or a measure of how quickly a system transmits digital data.</p>
+<p>This is the first lesson in which we use the Internet Simulator.  The Internet Simulator is a robust learning tool developed by Code.org specifically for Computer Science Principles, that has many different variants that you will see in the first two units of the course. It was designed to give students a hands-on experience experimenting with (and solving) different kinds of problems associated with networked computers and the Internet.  A goal of using the internet simulator was put best by a student near the conclusion of Unit 1 who said “Whoa, I feel like I just invented the Internet!”</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocsending-binary-messages-with-the-internet-simulator">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity (35 mins)</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Explain how synchronization and coordination enable the transmission of binary messages.</li>
+                    
+                        <li>Develop a protocol for exchanging binary messages in two directions.</li>
+                    
+                        <li>Calculate the bit rate for a binary message exchange.</li>
+                    
+                        <li>Provide a definition of &quot;bit&quot; and relate it to the binary messages they have seen so far.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit1/lesson4" target="_blank">Forum</a></li>
+<li>Code Studio section setup (required for using Internet Simulator)</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='http://youtu.be/Acp48OaZ7Uc' target='_blank' class='print_link'>U1L04 - Teaching Tips & Tricks Video</a> - Video (<a href='https://www.dropbox.com/s/yhci96atlcdlxgb/tips%26tricks-net-simulator.mp4?dl=0' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1Oyfk9VC9ymoDTCG-Z5pC95zupRI4FBTttO2rqvCUlcs/edit?usp=sharing' target='_blank' class='print_link'>Coordination and Binary Messages</a> - Activity Guide (<a href='https://docs.google.com/document/d/1Oyfk9VC9ymoDTCG-Z5pC95zupRI4FBTttO2rqvCUlcs/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit1' target='_blank' class='print_link'>CSP Unit 1</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/presentation/d/1kOIhYEoeIg3YvkdYCgM6XElCmQyzegEQulKYMUrzYFU/edit#slide=id.g12976fcfcc_0_45' target='_blank' class='print_link'>Flashlight Binary Signal Test</a> - Presentation (<a href='https://docs.google.com/presentation/d/1kOIhYEoeIg3YvkdYCgM6XElCmQyzegEQulKYMUrzYFU/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://youtu.be/Kn6Fd5uwZno' target='_blank' class='print_link'>Internet Simulator - Part 1</a> - Video (<a href='http://videos.code.org/2015/csp/internetsimulator_1.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Vocabulary</h2>
+                <ul>
+                    
+                        <li><strong>Bit</strong> - A contraction of &quot;Binary Digit&quot;.  A bit is the single unit of information in a computer, typically represented as a 0 or 1.</li>
+                    
+                        <li><strong>Bit rate</strong> - (sometimes written bitrate) the number of bits that are conveyed or processed per unit of time. e.g. 8 bits/sec.</li>
+                    
+                        <li><strong>Protocol</strong> - A set of rules governing the exchange or transmission of data between devices.</li>
+                    
+                </ul>
+            
+
+        </div>
+    </div>
+
+    <div id="sending-binary-messages-with-the-internet-simulatorcontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <div class="admonition content">
+<p class="admonition-title" id="content_None"><i class="glyphicon glyphicon-education"></i>Content Corner</p>
+<div>
+<p>The word “<span class="vocab" title="Protocol: A set of rules governing the exchange or transmission of data between devices.">protocol</span>” has a variety of meanings outside of computing.  It typically refers to a formal procedure or set of rules.  In computing a protocol usually implies a “communication protocol” that governs how devices should transmit and interpret data.  There are many similarities between <span class="vocab" title="Protocol: A set of rules governing the exchange or transmission of data between devices.">protocol</span>s and <span class="vocab" title="Algorithm: A process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.">algorithm</span>s that can be made later in the course.</p>
+</div>
+</div>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<ul>
+<li>Yesterday you all made your own binary message devices.</li>
+<li>We learned that we could compose any number of messages by sending a sequence of states.</li>
+<li>In order to interpret the message we needed to know<ol>
+<li>which signal meant A and which meant B and </li>
+<li>some kind of mapping between sequences of signals and a possible message.</li>
+</ol>
+</li>
+<li>What we were really doing was beginning to develop a <strong>communication <span class="vocab" title="Protocol: A set of rules governing the exchange or transmission of data between devices.">protocol</span></strong> </li>
+<li>Today you’re going to develop a protocol to solve a problem.</li>
+</ul>
+</div>
+</div>
+<h3 id="binary-signal-test">Binary Signal Test</h3>
+<p>The following demonstration can be done in two ways:</p>
+<ol>
+<li>Teacher use a flashlight </li>
+<li>Use this presentation <a class="resource" href="https://docs.google.com/presentation/d/1kOIhYEoeIg3YvkdYCgM6XElCmQyzegEQulKYMUrzYFU/edit#slide=id.g12976fcfcc_0_45" target="_blank">Flashlight Binary Signal Test</a> which has animations that simulate the flashlight.</li>
+</ol>
+<div class="guide">
+<p><strong>Instructions:</strong></p>
+<p><em>“Imagine that you and your friend have made a binary signaling protocol using a flashlight.  The light on is state A, off is state B.”</em></p>
+<p><strong>Test 1</strong></p>
+<p><em>“Your friend sends you this message.  What is being signaled here? Write down what you think the message is.”</em></p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_flashlighttips"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<p>Many students likely decoded the first message as <code>B A B A B</code> initially.  The second message might have more variants, but <code>BB A B A BB AA BB</code> is one possibility.</p>
+</div>
+<div>
+<p>As soon as they received the second message they may have updated their original answer to account for the implied timing they saw in the second message.  Depending on how fast you think you could interpret signal changes the first message could easily be <em>any number</em> of consecutive Bs and As.</p>
+</div>
+</div>
+<ul>
+<li>Pulse the flash light on and off at ~1 second intervals 4 times</li>
+<li>Give students a few seconds write</li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_flashlighttips"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<ul>
+<li>Students can confer with neighbor or as whole class as to what the message was.</li>
+</ul>
+<p><strong>Test 2</strong> </p>
+<p><em>“Uh oh! Your friend realizes she actually made a mistake encoding the message from before and decides to re-send the message. Decode this new version of the message and write it down.”</em></p>
+<ul>
+<li>Pulse the the flashlight on and off quickly, then a few pulses at ~1 second intervals</li>
+<li>Give students a few seconds to write</li>
+<li>Again, discuss with neighbor</li>
+</ul>
+</div>
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_protocols"><i class="glyphicon glyphicon-comment"></i>Discussion Goal</p>
+<div>
+<p>This brief warm-up activity and discussion is meant to draw out two main points:</p>
+</div>
+<div>
+<ol>
+<li>A flashlight turning on and off <em>truly</em> has only two states.  Many of the devices students made, even if they used flashlights, probably had at least a third “do nothing” state that was used to signal a break between As and Bs.  </li>
+<li>When there are truly only two states, <strong>time</strong> and synchronization become huge factors and must be accounted for in a <span class="vocab" title="Protocol: A set of rules governing the exchange or transmission of data between devices.">protocol</span>.  </li>
+</ol>
+</div>
+</div>
+<p><strong>Discussion</strong></p>
+<p>
+</p><div class="tiplink tiplink-discussion"><a href="#discussion_protocols"><i class="glyphicon glyphicon-comment"></i></a></div>
+<p></p>
+<p>Lead a discussion that explores the assumptions made when decoding these messages, and more importantly, explores what information they would need in order to decode it. </p>
+<ul>
+<li>Did this new message make you think about your answer to the first question?  Do you want to change your answer to the first question?</li>
+<li>What assumptions did you make in interpreting these messages?</li>
+<li>Is this protocol specific enough to allow useful communication of a binary message? If not what information would need to be added to it?</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity (35 mins)</h2>
+                    <h3 id="quick-vocabulary">Quick Vocabulary</h3>
+<p>We need to get some terminology down so that we can speak about our problems and solutions more efficiently.</p>
+<ul>
+<li>
+<p><span class="vocab" title="Protocol: A set of rules governing the exchange or transmission of data between devices.">Protocol</span> - For our purposes today a “protocol” is simply a set of rules about sending, receiving and interpreting binary messages. </p>
+</li>
+<li>
+<p><span class="vocab" title='Bit: A contraction of "Binary Digit".  A bit is the single unit of information in a computer, typically represented as a 0 or 1.'>Bit</span> We will call each element of a binary message a <em>bit</em>.  “Bit” is short for <em>binary digit</em>.  So for example if you have a binary message <code>A B B A</code>, we would say that is a 4-<span class="vocab" title='Bit: A contraction of "Binary Digit".  A bit is the single unit of information in a computer, typically represented as a 0 or 1.'>bit</span> message.  </p>
+</li>
+</ul>
+<p>Today you and your partner will be developing a <span class="vocab" title="Protocol: A set of rules governing the exchange or transmission of data between devices.">protocol</span> for exchanging 2-bit messages using an Internet Simulator.</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_firsttime"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p><strong>First time with Internet Simulator?</strong></p>
+</div>
+<div>
+<p>If you are using the Internet Simulator for the first time you should watch the <a class="resource" href="http://youtu.be/Acp48OaZ7Uc" target="_blank">U1L04 - Teaching Tips &amp; Tricks Video</a> that shows what the classroom environment should look like and how students should be interacting.  You should also watch the student video: <a class="resource" href="https://youtu.be/Kn6Fd5uwZno" target="_blank">Internet Simulator - Part 1</a> </p>
+</div>
+</div>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_firsttime"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<h3 id="introduce-the-internet-simulator">Introduce the Internet Simulator.</h3>
+<ul>
+<li>Today we will be using the Internet Simulator to explore some of the challenges of sending bits on the Internet. </li>
+<li>This tool simulates a single wire connecting two people who cannot otherwise see or speak to each other.</li>
+<li>The major challenge is that <strong>the wire is SHARED</strong> between the two people.</li>
+<li>At <em>any time either person</em> can <strong>set</strong> the wire to state A or state B.</li>
+<li>At <em>any time either person</em> can <strong>read</strong> the wire to see which state it’s in</li>
+<li>This means that you and your partner need to coordinate your actions carefully because you can easily squash your communications.</li>
+</ul>
+<p>The <strong>challenge</strong> of today’s activity is to figure out a way to make this tool into a functioning two-way bit-sending device.</p>
+<p><strong>Video Demonstration of the Widget:</strong> </p>
+<p>Watch tutorial video: <a class="resource" href="https://youtu.be/Kn6Fd5uwZno" target="_blank">Internet Simulator - Part 1</a>   which covers how to:
+ * join or connect with another classmate
+ * set the state of the wire
+ * read the wire.</p>
+<p>You can show it to the whole class or students can watch it on the Code Studio stage for this lesson.</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_netsimTips"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p>Students will likely need some time to connect with their partners and experiment with the interface of the Internet Simulator. Once they feel comfortable with the basics of the tool, they should proceed as a class through the challenges found in <a class="resource" href="https://docs.google.com/document/d/1Oyfk9VC9ymoDTCG-Z5pC95zupRI4FBTttO2rqvCUlcs/edit?usp=sharing" target="_blank">Coordination and Binary Messages</a>.</p>
+</div>
+<div>
+<p><strong>Tips for Teaching with the Internet Simulator</strong></p>
+</div>
+<div>
+<ul>
+<li>Understanding the concept of the “shared wire” can be very challenging at first.  The bit-sending devices students created in the previous lessons and the tool they are using today function differently, and students will likely need help developing the appropriate mental model. </li>
+<li>Students are setting the state of a wire but have no guarantee their partners will receive that message. </li>
+<li>In fact it is very likely students will set the state of the wire and then read their own message. </li>
+<li>Only through carefully coordinating when they set and get the state of the wire can students use this tool to communicate. </li>
+<li>Highlight this difference to students and feel free to emphasize that coordination / timing is the goal of the activity.</li>
+<li>A timer has been included in the widget to help coordinate timing. NOTE: the timer doesn’t get or set the wire - it’s just a pulse that students can follow to coordinate getting and setting. </li>
+<li>Groups should be encouraged to reconvene to add to or modify their protocol in order to be able to coordinate this kind of call-and-response message.</li>
+</ul>
+</div>
+</div>
+<div class="admonition guide">
+<p class="admonition-title" id="guide_None"><i class="fa fa-pencil-square-o"></i>Sending Bits with the Internet Simulator</p>
+<div>
+<h3 id="experiment-coordination-and-single-bit-protocols">Experiment: Coordination and Single-Bit Protocols</h3>
+</div>
+<div>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_netsimTips"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+</div>
+<div>
+<p>Students experiment with sending a single bit and develop protocols that allow them to send more complex messages with more bits.</p>
+</div>
+<div>
+<ul>
+<li>Distribute a copy of <a class="resource" href="https://docs.google.com/document/d/1Oyfk9VC9ymoDTCG-Z5pC95zupRI4FBTttO2rqvCUlcs/edit?usp=sharing" target="_blank">Coordination and Binary Messages</a>    </li>
+<li>Place students in pairs and send them to the Internet Simulator. </li>
+<li>It’s recommended that partners who want to send data to each other sit close together so they can talk, even though they need to be on different computers. </li>
+</ul>
+</div>
+<div>
+<h3 id="the-2-bit-message-exchange-challenge">The 2-bit Message Exchange Challenge!</h3>
+</div>
+<div>
+<p>Students will practice relaying a 2-bit sequence with their partners.  The <strong>goal</strong> is to exchange 2-bit messages (partner sends a 2-bit message, other partner sends a 2-bit message back) as quickly and accurately as possible. In other words, students are trying to get the fastest <span class="vocab" title="Bit rate: (sometimes written bitrate) the number of bits that are conveyed or processed per unit of time. e.g. 8 bits/sec.">bit rate</span> possible.</p>
+</div>
+<div>
+<ul>
+<li>Each initial sender should be able to confirm that the message was received correctly and resent because the message that they have received is the same as the original.  </li>
+<li>As students iterate and perfect their protocol, they should try to extend their protocol to send more bits or send them more quickly, while maintaining accuracy. When each group has a working protocol and has time to practice (~10 minutes), have an all-class showdown to see who can do it the fastest.</li>
+</ul>
+</div>
+<div>
+<p><strong>Rules for the Challenge:</strong></p>
+</div>
+<div>
+<ul>
+<li>Student pairs can decide who sends first.</li>
+<li>Teacher reveals sequence of bits to be sent. Partner A of each group may enter this sequence of bits into Internet Simulator but may not begin sending them.</li>
+<li>Teacher will say “GO” and partners will exchange messages.</li>
+<li>During the challenge students may not communicate with one another. (<strong>Note:</strong> feel free to put partners on opposite sides of a room or in separate rooms altogether.)</li>
+<li>Students yell “STOP” once they have completed their exchange.</li>
+<li>Teacher will verify that each partner received what the other sent by checking outgoing and incoming messages.</li>
+</ul>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <div class="admonition content">
+<p class="admonition-title" id="content_modem"><i class="glyphicon glyphicon-education"></i>Content Corner</p>
+<div>
+<p>Students would be hard-pressed to achieve a bit rate much faster than 1 bit/sec in this activity.  You might think that, say, 1,000 bits/sec would be fast for a computer, but even typical household modems in the early 90s had bit rates higher than about 10,000 bits/sec.</p>
+</div>
+<div>
+<p>These days transmission rates are well in excess of millions of bits/sec (or Mbps - Megabits per second).  Typical mobile phone speeds range from 5-10 Megabits per second,</p>
+</div>
+<div>
+<p><a class="right" href="https://en.wikipedia.org/wiki/Modem" target="_blank">wikipedia: modem</a></p>
+</div>
+</div>
+<p><strong>Discussion:</strong> If students have not already done so, they should calculate their fastest bit rate. Lead a quick classroom discussion about the following topics, using these prompts:</p>
+<ul>
+<li>How has today’s activity added to or altered your definition of a <span class="vocab" title='Bit: A contraction of "Binary Digit".  A bit is the single unit of information in a computer, typically represented as a 0 or 1.'>bit</span>?</li>
+<li>A major focus of today’s activity was timing and coordination. What things did you need to coordinate or agree about ahead of time in order for your <span class="vocab" title="Protocol: A set of rules governing the exchange or transmission of data between devices.">protocol</span> to work?</li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-content"><a href="#content_modem"><i class="glyphicon glyphicon-education"></i></a></div>
+<p></p>
+<ul>
+<li>What is the best <span class="vocab" title="Bit rate: (sometimes written bitrate) the number of bits that are conveyed or processed per unit of time. e.g. 8 bits/sec.">bit rate</span> you were able to achieve?  What would it take to go faster?</li>
+<li>How fast do you think computers transmit bits?</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>Don’t allow partners to decide who goes first ahead of time.  Set up the challenge so that one partner could send a message to the other at any time and must verify that the partner is there and listening first.</li>
+<li>Continue to increase the number of bits that students must be able to transmit in the challenge and showdown.</li>
+<li>Require students to relay a message, but the response must be sent backwards.  This ensures partner B must receive the entire message before responding. (e.g. if partner A sends: ABAB partner B should respond: BABA.)</li>
+<li><a href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter1.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Chapter 1</a> - <em>Say:</em> Read about the following koans (or truths) of bits related to the Internet in Chapter 1, pages  4-13.<ul>
+<li>Koan 1: It’s All Just Bits</li>
+<li>Koan 2: Perfection Is Normal</li>
+<li>Koan 6: Nothing Goes Away</li>
+<li>Koan 7: Bits Move Faster Than Thought</li>
+<li>Pick one of the above koans and address the following questions:<ul>
+<li>Argue if you agree that it is a “truth” and if it will always be a “truth.”</li>
+<li>How does this koan intersect with your life as a student?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions:</strong>
+Note: Students can also respond to these questions in Code Studio.</p>
+<ul>
+<li>A binary message consisting of 4 bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at one-half the bit rate you agreed upon. What message did you receive instead?</li>
+<li>A binary message was recorded as a wave, as shown in the image below. Can you decode the message? Explain what information you would need in order to successfully decode the message into A’s and B’s.</li>
+</ul>
+<p><a data-lightbox="all_images" data-title="Message" href="https://code.org/educate/docs/csp/U1L04-assessment.png"><img alt="Message" class="center" src="https://code.org/educate/docs/csp/U1L04-assessment.png"></a></p>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                            <li><strong>CL.L2:4</strong> - Exhibit dispositions necessary for collaboration: providing useful feedback, integrating feedback, understanding and accepting multiple perspectives, socialization.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L2:7</strong> - Represent data in a variety of ways including text, sounds, pictures and numbers.</li>
+                        
+                            <li><strong>CT.L2:8</strong> - Use visual representations of problem states, structures and data (e.g., graphs, charts, network diagrams, flowcharts).</li>
+                        
+                            <li><strong>CT.L2:9</strong> - Interact with content-specific models and simulations (e.g., ecosystems, epidemics, molecular dynamics) to support learning and research.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>2.1</strong> - A variety of abstractions built upon binary sequences can be used to represent all digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.1</strong> - Describe the variety of abstractions used to represent data. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.1A</strong> - Digital data is represented by abstractions at different levels.</li>
+                                
+                                    <li><strong>2.1.1B</strong> - At the lowest level, all digital data are represented by bits.</li>
+                                
+                                    <li><strong>2.1.1C</strong> - At a higher level, bits are grouped to represent abstractions, including but not limited to numbers, characters, and color.</li>
+                                
+                                    <li><strong>2.1.1E</strong> - At one of the lowest levels of abstraction, digital data is represented in binary (base 2) using only combinations of the digits zero and one.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.2</strong> - Explain how binary sequences are used to represent digital data. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.2D</strong> - The interpretation of a binary sequence depends on how it is used.</li>
+                                
+                                    <li><strong>2.1.2E</strong> - A sequence of bits may represent instructions or data.</li>
+                                
+                                    <li><strong>2.1.2F</strong> - A sequence of bits may represent different types of data in different contexts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.3</strong> - Models and simulations use abstraction to generate new understanding and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.3.1</strong> - Use models and simulations to represent phenomena. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.3.1A</strong> - Models and simulations are simplified representations of more complex objects or phenomena.</li>
+                                
+                                    <li><strong>2.3.1B</strong> - Models may use different abstractions or levels of abstraction depending on the objects or phenomena being posed.</li>
+                                
+                                    <li><strong>2.3.1C</strong> - Models often omit unnecessary features of the objects or phenomena that are being modeled.</li>
+                                
+                                    <li><strong>2.3.1D</strong> - Simulations mimic real world events without the cost or danger of building and testing the phenomena in the real world.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.3.2</strong> - Use models and simulations to formulate, refine, and test hypotheses. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.3.2A</strong> - Models and simulations facilitate the formulation and refinement of hypotheses related to the objects or phenomena under consideration.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.1</strong> - People use computer programs to process information to gain insight and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.3</strong> - Explain the insight and knowledge gained from digitally processed data by using appropriate visualizations, notations, and precise language. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.3A</strong> - Visualization tools and software can communicate information about data.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.3</strong> - There are trade offs when representing information as digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.3.1</strong> - Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.3.1A</strong> - Digital data representations involve trade  offs related to storage, security, and privacy concerns.</li>
+                                
+                                    <li><strong>3.3.1B</strong> - Security concerns engender tradeoffs in storing and transmitting information.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.1</strong> - The Internet is a network of autonomous systems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.1.1</strong> - Explain the abstractions in the Internet and how the Internet functions. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.1.1A</strong> - The Internet connects devices and networks all over the world.</li>
+                                
+                                    <li><strong>6.1.1C</strong> - Devices and networks that make up the Internet are connected and communicate using addresses and protocols.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.2</strong> - Characteristics of the Internet influence the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.2</strong> - Explain how the characteristics of the Internet influence the systems built on it. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.2D</strong> - Interfaces and protocols enable widespread use of the Internet.</li>
+                                
+                                    <li><strong>6.2.2J</strong> - The bandwidth of a system is a measure of bit rate â€” the amount of data (measured in bits) that can be sent in a fixed amount of time.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocsending-binary-messages-with-the-internet-simulator').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#sending-binary-messages-with-the-internet-simulatorcontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'sending-binary-messages-with-the-internet-simulator', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

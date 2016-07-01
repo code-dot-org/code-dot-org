@@ -1,7 +1,7 @@
 {
-  "blockDestroyBlock":"Destroy block",
+  "blockDestroyBlock":"destroy block",
   "blockIf":"if",
-  "blockIfLavaAhead":"If lava ahead",
+  "blockIfLavaAhead":"if lava ahead",
   "blockMoveForward":"move forward",
   "blockPlaceTorch":"place torch",
   "blockPlaceXAheadAhead":"ahead",
@@ -30,7 +30,7 @@
   "blockTypeLogJungle":"jungle log",
   "blockTypeLogOak":"oak log",
   "blockTypeLogSpruce":"spruce log",
-  "blockTypeOreCoal":"coal log",
+  "blockTypeOreCoal":"coal ore",
   "blockTypeOreDiamond":"diamond ore",
   "blockTypeOreEmerald":"emerald ore",
   "blockTypeOreGold":"gold ore",

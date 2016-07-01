@@ -28,7 +28,11 @@
     "disable_examples": "false",
     "markdown_instructions": "In this puzzle, two `repeat` loops will help you get to the pig with the fewest number of blocks!"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

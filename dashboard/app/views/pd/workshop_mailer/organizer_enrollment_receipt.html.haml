@@ -1,0 +1,28 @@
+:css
+  body {
+    font-family: Gotham, sans-serif;
+  }
+
+%p
+  Hi
+  = @workshop.organizer.name.split().first.titleize + ','
+
+%p
+  = @enrollment.name
+  signed up for your
+  = @workshop.course
+  = @workshop.subject
+  = link_to 'workshop', "/pd/workshop_dashboard/workshops/#{@workshop.id}"
+  on
+  = @workshop.sessions.first.formatted_date
+  at
+  = "#{@workshop.location_name}."
+
+= render partial: 'teacher_info'
+
+%p
+  To manage enrolled teachers, access your workshop through the
+  =link_to 'teacher dashboard.', @teacher_dashboard_url
+
+%p
+  Thanks!

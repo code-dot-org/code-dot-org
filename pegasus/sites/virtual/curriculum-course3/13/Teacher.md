@@ -24,11 +24,6 @@ Students use the Bee environment to write programs using nested loops.
 
 [Bee: Nested Loops](#Activity)
 
-### **Extended Learning**
-
-[Extension Activities](#Extended)
-
-
 [/summary]
 
 ## Lesson Objectives 
@@ -60,13 +55,6 @@ Students use the Bee environment to write programs using nested loops.
 ![](binaryphoto.png) -->
 
 
-[together]
-
-## Extended Learning 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
-
-
-[/together]
 
 [standards]
 

@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson students explore the benefits (and potential security concerns) associated with routing traffic across the Internet. Building on their introduction to IP addresses in the previous lesson, students use a version of the Internet Simulator that allows messages to be sent only to an intended recipient, as indicated by the IP address. The Internet Simulator also allows students to examine the traffic that goes through all of the (simulated) routers on the network. They will discover that messages go through many different routers, may not always take the same path to reach the final destinaton, and that the routers (and their owners) can see all of this traffic!">
+    <title>Routers and Redundancy</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit1/"><span class="h2">Unit</span><span class="h1">1</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch1" data-pdf-link="#unit1chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/1" data-pdf-link="#unit1lesson1">
+                1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/2" data-pdf-link="#unit1lesson2">
+                2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/3" data-pdf-link="#unit1lesson3">
+                3
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/4" data-pdf-link="#unit1lesson4">
+                4
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/5" data-pdf-link="#unit1lesson5">
+                5
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/6" data-pdf-link="#unit1lesson6">
+                6
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/7" data-pdf-link="#unit1lesson7">
+                7
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch2" data-pdf-link="#unit1chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/8" data-pdf-link="#unit1lesson8">
+                8
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/9" data-pdf-link="#unit1lesson9">
+                9
+            </a>
+            </div>
+            
+                
+                    
+                        <div class="lesson current">
+                    
+                
+            <a href="/educate/csp_test/unit1/10" data-pdf-link="#unit1lesson10">
+                10
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/11" data-pdf-link="#unit1lesson11">
+                11
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/12" data-pdf-link="#unit1lesson12">
+                12
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/13" data-pdf-link="#unit1lesson13">
+                13
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/14" data-pdf-link="#unit1lesson14">
+                14
+            </a>
+            </div>
+            
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit1lesson10">
+        
+            
+                <h1>Lesson 10: Routers and Redundancy</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson students explore the benefits (and potential security concerns) associated with routing traffic across the Internet. Building on their introduction to IP addresses in the previous lesson, students use a version of the Internet Simulator that allows messages to be sent only to an intended recipient, as indicated by the IP address. The Internet Simulator also allows students to examine the traffic that goes through all of the (simulated) routers on the network. They will discover that messages go through many different routers, may not always take the same path to reach the final destinaton, and that the routers (and their owners) can <em>see all of this traffic</em>!</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>The main purpose here is to use the Internet Simulator to dive into examining the network traffic that’s generated by students in the class.  Seeing traffic like this in real life is very hard if not impossible since only engineers of large networks have access to router data on a large scale, and it’s also more complicated to understand. While our network is simulated and provides a simple view, the basics are the same, and quick investigations reveal interesting things. We want students to simply get a taste for both the scale and the implications of what routers do.</p>
+<p>CS Background: A router is a computer designed to receive and redirect packets of information based upon the addressing information (e.g. an IP address) contained in the packet. Routers will either deliver a packet to its final desination or forward it to one of several other routers it is connected to. By monitoring current network conditions, a router can determine which of these will allow the packet to reach its destination fastest. There will often be redundant paths between two locations on the Internet, and so if one path is experiencing traffic or otherwise out of service, additional paths will be available. This redundancy makes the Internet more reliable and also helps the Internet to scale, accommodating new users (and routers!) as they are connected to the system.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocrouters-and-redundancy">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Describe the redundancy of routing between two points on the Internet.</li>
+                    
+                        <li>Evaluate the benefits and security concerns associated with the use of a routed system of sending packets.</li>
+                    
+                        <li>Send messages using a numeric addressing protocol with the Internet Simulator.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit2/lesson4" target="_blank">Forum</a></li>
+<li>Review functionality of Internet Simulator with address fields as well as router / network tables</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2' target='_blank' class='print_link'>CSP Unit 2</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1LXVhisxGinMbQkur59R8AguItQMxB1w8x5CLnQuPAng/edit?usp=sharing' target='_blank' class='print_link'>Routers and Redundancy</a> - Activity Guide (<a href='https://docs.google.com/document/d/1LXVhisxGinMbQkur59R8AguItQMxB1w8x5CLnQuPAng/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="routers-and-redundancycontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <div class="admonition discussion">
+<p class="admonition-title" id="discussion_None"><i class="glyphicon glyphicon-comment"></i>Discussion Goal</p>
+<div>
+<p>Prepare students to think about ways to overcome shortcomings of broadcasting messages (sending them to everyone on a shared line) through the use of routing. The prompt draws parallels between routing in the mail service and routing of traffic on the Internet.</p>
+</div>
+</div>
+<p><strong>Thinking Prompt:</strong> </p>
+<p>Imagine you were going to send a letter to a friend living in another state. List the steps you imagine your letter would have to take through the different parts of the postal system. Don’t worry if you’re not sure about your answers, just make an educated guess.</p>
+<p><strong>Discuss:</strong> </p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>The exact details matter less than identifying multiple points where the letter is sorted and rerouted based on its intended destination. No need to go into great detail here, but the hope is to help students develop a mental model for how a system for routing messages looks and what role a router serves.</p>
+</div>
+</div>
+<p>Students can share their steps with a partner or group. Combine ideas from the class to create a single model of the steps involved, perhaps by writing / drawing it on the board. Draw attention to the number of times a person, post office, etc. must make decisions about where to send the letter next, i.e. “route” the letter.</p>
+<ul>
+<li>Example: Mailbox → Mail Carrier → Local Post Office → Regional Collection Center (of origin) → Regional Collection Center (of destination) → Local Post Office → Mail Carrier → Friend’s House</li>
+</ul>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Transitional Remarks</p>
+<div></div>
+<div>
+<p>When we send messages through a network we don’t actually want everyone on the network to receive them. If we include information about who the message is intended for then we can allow portions of the network to focus on sorting and routing messages, so that they can continue on their way to their intended target. In the mail system, mail facilities, post offices, or a mail carrier fills this role. </p>
+</div>
+<div>
+<p>In a network of computers, certain computers called “routers” do the same thing, directing messages towards the target computer based on the IP addresses included in the message.</p>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <h3 id="introduce-new-version-of-the-internet-simulator-routers">Introduce: New Version of the Internet Simulator - Routers</h3>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<p>Today’s activity introduces the newest incarnation of the Internet Simulator</p>
+</div>
+<div>
+<ul>
+<li>Messages now have “To” and “From” addresses in a format similar to IP addresses (just an 8-bit address instead of a full 32 bits)</li>
+<li>This allows messages to be sent to a single intended recipient. </li>
+<li>The Internet Simulator also simulates the routing of messages across a network, with messages possibly being routed across multiple routers in unpredictable sequences before finally being delivered. </li>
+<li>This is done to simulate the way traffic travelling across the Internet is constantly rebalanced in response to over- or under-usage of some channels. </li>
+<li>A message will usually make it to its destination, but we can’t know for sure how it will get there.</li>
+</ul>
+</div>
+</div>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/code-studio-icon.png"><img alt="" src="https://code.org/educate/docs/csp/code-studio-icon.png"></a> <strong>Go to the Internet Simulator on Code Studio:</strong> </p>
+<p>Log into Code Studio and find today’s lesson.</p>
+<p><strong>Choose a Router:</strong> </p>
+<p>Add a router if you need more space. Then join a router with a few of the people sitting closest to you. Ideally, you’ll have 3-4 classmates with you on your router.</p>
+<p><strong>Send a quick test message:</strong></p>
+<p>Send a simple “hello” to a friend who is connected to the same router.</p>
+<ul>
+<li>Find friend’s (small) IP address</li>
+<li>Send a message to that address</li>
+<li>Friend should send a response</li>
+</ul>
+<h3 id="activity-investigate-routed-traffic">Activity: Investigate Routed Traffic</h3>
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_None"><i class="glyphicon glyphicon-comment"></i>Activity Goal</p>
+<div></div>
+<div>
+<ol>
+<li>have students become familiar with using an addressing protocol similar to IP</li>
+<li>highlight features of routed traffic on the actual Internet in an interactive way.</li>
+</ol>
+</div>
+<div>
+<p>Ideally, students will recognize that:</p>
+</div>
+<div>
+<ul>
+<li>some messages may be dropped</li>
+<li>messages may take different paths to the same location</li>
+<li>routers can theoretically read <em>all</em> traffic moving across them. </li>
+</ul>
+</div>
+<div>
+<p>Ask questions and direct investigations that help students encounter some of these surprising things.</p>
+</div>
+</div>
+<p><strong>Distribute:</strong> <a href="Routers and Redundancy" target="_blank">Activity Guide: Routers and Redundancy</a>. </p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>Big Picture: recognize that this activity is a repeated pattern of steps: </p>
+</div>
+<div>
+<ol>
+<li>Find a friend’s IP address. </li>
+<li>Have a short conversation. </li>
+<li>Analyze the traffic using the “router logs” to learn something about the structure of the Internet and answer questions. </li>
+</ol>
+</div>
+<div>
+<ul>
+<li>First time: this is done with classmates on the same router. </li>
+<li>Second time: students communicate with classmates on a different router. </li>
+</ul>
+</div>
+<div>
+<p>The format of the lesson lends itself to being completed as a class, rather than individually. The activity instructions here aim to help you structure the activity so that the class can move forward as a unit and explore the functionality of the tool together.</p>
+</div>
+</div>
+<ul>
+<li>
+<p>Students do not need to be in groups but it may help, especially early in the activity, if they are physically close to students who are connected to the same router as they are.</p>
+</li>
+<li>
+<p>Lead students through the activity guide</p>
+</li>
+<li>
+<p>Each of the following sections appears in the activity guide</p>
+<ul>
+<li>There are some notes for each of the sections, with suggestions for what you might do or say for each. </li>
+</ul>
+</li>
+<li>
+<p>Lead students through the sections as you see fit.</p>
+</li>
+</ul>
+<div class="guide">
+<p><strong>Find a Classmate on Your Router:</strong> </p>
+<p>Ask students to join a router with some of their classmates, adding more if they need them. There should be at least three students on each router. Point out that messages now include a “To” and “From” IP address in their header. Ask students to use the network visualization to find the IP addresses of some of their classmates.</p>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L04-routers-1.png"><img alt="" src="https://code.org/educate/docs/csp/U2L04-routers-1.png"></a></p>
+<p><strong>Have a Conversation:</strong> </p>
+<p>Ask students to conduct a short conversation (e.g. a simple greeting or a question and answer) with two friends on their router. They should verbally confirm that both sides are receiving their messages. Provide students a few minutes to practice. Help students construct their messages. If their To address is not constructed properly the message will be dropped.</p>
+<p><strong>Read the Traffic:</strong> </p>
+<p>Once students have conducted their conversations, ask them to pause and demonstrate the ability to view router traffic in the Router tab. Students should use the data generated here to answer the first set of questions on the Activity Guide. Have students click the “Log Browser” button to view the table of router data.</p>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L04-routers-2.png"><img alt="" src="https://code.org/educate/docs/csp/U2L04-routers-2.png"></a></p>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L04-routers-3.png"><img alt="" src="https://code.org/educate/docs/csp/U2L04-routers-3.png"></a></p>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Transitional Remarks</p>
+<div></div>
+<div>
+<ul>
+<li>Routing messages functions very differently from broadcasting. </li>
+<li>The messages are only sent to the user they are intended for. </li>
+<li>This is just like when you write a letter to a friend, where an address on the outside of the letter tells the mail service how to properly route your letter.</li>
+</ul>
+</div>
+<div>
+<p><strong>The Router Logs</strong></p>
+</div>
+<div>
+<ul>
+<li>The view we have in this table of traffic wouldn’t be available to a normal user on the network – this is a simulation after all – but it WOULD be visible to the router. </li>
+<li>A router needs to read the header of the message to route it correctly     * But the contents of the message are right there too, and if it wanted, <strong>a router could read all the messages</strong> going across it, just like you did. </li>
+<li>This should raises some questions about privacy and security – we’ll talk more about this later.</li>
+</ul>
+</div>
+</div>
+<p><strong>Find a Classmate on a Different Router:</strong> </p>
+<p>The Internet Simulator can route messages between routers, allowing the entire class to communicate. Ask students to find two classmates on a different router and ask for their IP addresses.  (They’ll need to actually talk to one another; they currently won’t be able to do it on the Internet Simulator.)</p>
+<p><strong>Have a Conversation:</strong> </p>
+<p>Again, students should conduct a short conversation with their two partners, confirming verbally that the messages are being received. Troubleshoot errors students may be encountering as before.</p>
+<p><strong>Reading Network Traffic:</strong> </p>
+<p>Once students have been able to talk with classmates, direct them again towards the “Log Browser” button. It is possible to read traffic across the entire network, not merely your router by clicking the “Show all routers” button. Ask students to open the network traffic and examine the traffic in order to answer the questions listed there.</p>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L04-routers-4.png"><img alt="" src="https://code.org/educate/docs/csp/U2L04-routers-4.png"></a></p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>Some of the behavior for the full-class Internet can be difficult to fully comprehend the first time. It may be a good idea to join a router and send a message to another router yourself, and then as a class, trace the path it takes hopping across multiple routers. If you send multiple messages with different contents, then you can see examples of a message taking different paths to the same location.</p>
+</div>
+</div>
+</div>
+<p><strong>Explaining Redundancy:</strong> </p>
+<p>The simulations students used in today’s lesson model many features of the actual Internet, most notably its redundant nature (there are many paths between locations).  Assist students in identifying these features with the following comments, and note that at the top of the next page you’ll find a routing table that shows the different routes taken by the messages. </p>
+<ul>
+<li><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L04-routers-5.png"><img alt="" class="right" src="https://code.org/educate/docs/csp/U2L04-routers-5.png"></a> </li>
+</ul>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<p>On the Internet Simulator we see messages appearing in the Router Logs multiple times (like in the image to the right). This is done to simulate a message passing through multiple routers on its way to its destination. A row is created each time it shows up at a new router.</p>
+</div>
+</div>
+<ul>
+<li>
+<p><em>Prompt:</em> If you trace carefully you’ll notice that messages between two people don’t always visit the same routers along the way. This is not a mistake; it’s modeled after the way the actual Internet was designed. Why might the Internet have been designed to be flexible about how messages get from one person to another? Why go through the trouble of creating multiple paths between users?</p>
+<ul>
+<li>Efficiency: Communication lines can become backed up with traffic. The ability to choose whichever one currently has the least traffic improves the speed of transmission.</li>
+<li>Reliability: Having many redundant paths means if one goes down, there are many others that a message can take.</li>
+</ul>
+</li>
+</ul>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L04-routers-6.png"><img alt="" src="https://code.org/educate/docs/csp/U2L04-routers-6.png"></a></p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>Here’s a cheat sheet for the features of the Internet students saw today and how the Internet Simulator is simulating an actual feature of the Internet:</p>
+</div>
+<div>
+<ul>
+<li><strong>To / From Address:</strong> Like an IP address, included on every message sent over the Internet.</li>
+<li><strong>Dropped Messages:</strong> Poorly formed messages cannot be delivered and so are dropped, just like a letter with a bad address on it. Tomorrow you’ll discuss more technical reasons messages are dropped.</li>
+<li><strong>Multiple Hops:</strong> A message travelling across the Internet will visit many routers as each tries to forward it along the most efficient path to its destination.</li>
+<li><strong>Different Paths:</strong> Routers respond to traffic on the Internet in real time. The best path at one moment might be backed up a few seconds later. Routers choose the current best path to get the message through.</li>
+</ul>
+</div>
+<div>
+<p><strong>Note:</strong> In the Internet Simulator the “hops” are chosen randomly. This is done to create multiple paths. Actual routers use algorithms to determine the best path to send a message along.</p>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>Reflection:</strong> Ask students to answer the reflection questions at the bottom of <a href="Routers and Redundancy" target="_blank">Activity Guide - Routers and Redundancy</a>.</p>
+<p><strong>Discuss:</strong> Allow students to share their answers, either in groups or with the class. The discussion should touch on:</p>
+<ul>
+<li>Benefits of redundancy in a routed system, to provide many paths between users of the network.</li>
+<li>Routed messages aren’t seen by all users, but they can still be seen by owners of the router.</li>
+<li>If you control all the routers, you entirely control the way messages travel through the network, and additionally can see all the traffic.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>In order to connect to the Internet, your traffic must be travelling through a router. Either investigate your router yourself to learn more about its capabilities, or invite an IT person from the school to talk about the structure of the network within your school building.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions</strong> (also included on Code Studio):</p>
+<ol>
+<li>
+<p>In the Internet Simulator, your router knows to send your message to a different router because</p>
+<p>a) You set the “other router” bit in the message.</p>
+<p>b) Everyone is on the same router.</p>
+<p>c) The first 4 bits of the address specify the router number that your friend is on.</p>
+<p>d) Messages are routed over different paths.</p>
+</li>
+<li>
+<p>Choose two: If the post office delivered mail exactly like routers deliver messages on the Internet, which 2 of the following statements would be true?</p>
+<p>a) One mail carrier would be responsible for delivering a letter from sender to receiver.</p>
+<p>b) The mail carrier would sometimes take different paths to deliver each letter to your home.</p>
+<p>c) Letters would be written on the outside of envelopes for all to read instead of being put inside envelopes.</p>
+<p>d) Your mail could not be delivered if a road your mail carrier was planning to take were under construction.</p>
+</li>
+<li>
+<p>Choose two: Which of the following statements are true about routing on the Internet?</p>
+<p>a) Information travelling between two computers over the Internet will always take the same path.</p>
+<p>b) Your router receives all the traffic currently travelling across the Internet and delivers to your computer only the messages intended for you.</p>
+<p>c) There is one router which receives and redirects all the traffic of the Internet.</p>
+<p>d) A packet travelling between two computers on the Internet may be rerouted many times along the way.</p>
+<p>e) A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.</p>
+</li>
+<li>
+<p>Describe the relative benefits of routing over a broadcast style of communication. Is routing traffic more secure than broadcasting? Justify your answer.</p>
+</li>
+<li>
+<p>Can you know in advance the path a message will take between you and another computer on the Internet? Justify your answer.</p>
+</li>
+</ol>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CD</strong> - Computers &amp; Communication Devices</summary>
+                    <ul>
+                        
+                            <li><strong>CD.L3A:8</strong> - Explain the basic components of computer networks (e.g., servers, file protection, routing, spoolers and queues, shared resources, and fault-tolerance).</li>
+                        
+                            <li><strong>CD.L3A:9</strong> - Describe how the Internet facilitates global communication.</li>
+                        
+                            <li><strong>CD.L3B:4</strong> - Describe the issues that impact network functionality (e.g., latency, bandwidth, firewalls, server capability).</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>3.3</strong> - There are trade offs when representing information as digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.3.1</strong> - Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.3.1A</strong> - Digital data representations involve trade  offs related to storage, security, and privacy concerns.</li>
+                                
+                                    <li><strong>3.3.1F</strong> - Security and privacy concerns arise with data containing personal information.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.1</strong> - The Internet is a network of autonomous systems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.1.1</strong> - Explain the abstractions in the Internet and how the Internet functions. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.1.1B</strong> - An end to end architecture facilitates connecting new devices and networks on the Internet.</li>
+                                
+                                    <li><strong>6.1.1C</strong> - Devices and networks that make up the Internet are connected and communicate using addresses and protocols.</li>
+                                
+                                    <li><strong>6.1.1E</strong> - Connecting new devices to the Internet is enabled by assignment of an Internet protocol (IP) address.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.2</strong> - Characteristics of the Internet influence the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.1</strong> - Explain characteristics of the Internet and the systems built on it. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.1D</strong> - Routing on the Internet is fault tolerant and redundant.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.2</strong> - Explain how the characteristics of the Internet influence the systems built on it. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.2B</strong> - The redundancy of routing (i.e., more than one way to route data) between two points on the Internet increases the reliability of the Internet and helps it scale to more devices and more people.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocrouters-and-redundancy').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#routers-and-redundancycontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'routers-and-redundancy', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

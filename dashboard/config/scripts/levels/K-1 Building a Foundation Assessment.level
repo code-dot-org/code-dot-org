@@ -28,6 +28,9 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>

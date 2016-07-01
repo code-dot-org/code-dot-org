@@ -4,7 +4,7 @@
  */
 'use strict';
 
-var utils = require('../utils');
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var i18n = require('./locale');
 var NetSimConstants = require('./NetSimConstants');
 var NetSimUtils = require('./NetSimUtils');
@@ -19,7 +19,7 @@ var Packet = require('./Packet');
 var DataConverters = require('./DataConverters');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 
-var _ = utils.getLodash();
+var _ = require('lodash');
 
 var serializeNumber = NetSimUtils.serializeNumber;
 var deserializeNumber = NetSimUtils.deserializeNumber;
@@ -1392,7 +1392,7 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function () {
     throw new Error("Non-simulating router got message table change notifiction");
   }
 
-  var messages = this.shard_.messageTable.readAll().map(function(row){
+  var messages = this.shard_.messageTable.readAll().map(function (row){
     return new NetSimMessage(this.shard_, row);
   }.bind(this));
 
@@ -1571,7 +1571,7 @@ NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete)
 NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
     nodeIDs, onComplete) {
 
-  var messages = nodeIDs.map(function(nodeID) {
+  var messages = nodeIDs.map(function (nodeID) {
     return {
         fromNodeID: this.entityID,
         toNodeID: nodeID,

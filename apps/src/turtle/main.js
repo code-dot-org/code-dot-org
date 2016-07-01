@@ -5,7 +5,7 @@ var blocks = require('./blocks');
 var skins = require('./skins');
 var levels = require('./levels');
 
-window.turtleMain = function(options) {
+window.turtleMain = function (options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   var artist = new Artist();

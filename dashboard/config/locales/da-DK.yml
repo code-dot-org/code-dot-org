@@ -24,9 +24,17 @@
           future: kan ikke være i fremtiden
   hello: Hej verden
   welcome_back: Velkommen tilbage %{name}
+  your_professional_learning_plan: Din professionelle læringsplan
+  see_your_learning_plan: Se din læringsplan
   submit: Indsend
   unsubmit: Fortryd indsendelse
-  next_page: Next page
+  previous_page: Forrige side
+  next_page: Næste side
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
+  cancel: Annuller
+  okay: Okay
+  heading_x_of_y: "%{heading} (side %{x} af %{y})"
   add_teacher_form:
     code:
       label: 'Tilføje en lærer:'
@@ -87,6 +95,7 @@
     teacher_title: Lærer-tilmelding
     student_pitch: Elev tilmelding til Code.org
     student_title: Tilmelding for elever
+    signup_title: Sign up for Code.org
     school_name: Skolens navn (valgfrit)
     school_address: Skolens adresse (valgfri)
     address_placeholder: adresse, by, postnummer
@@ -111,6 +120,9 @@
       for code.org.
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte
       med at logge dig.
+    user_type_label: Account Type
+    user_type_teacher: Lærer
+    user_type_student: Elev
   signin_form:
     title: Har du allerede en konto? Log på
     login: Email eller Brugernavn
@@ -167,9 +179,6 @@
       student_disassociated:
         subject: 'Code.org besked: %{student_name} er ikke længere tilknyttet som
           din elev.'
-      teacher_disassociated:
-        subject: 'Code.org anmeldelse: %{teacher_name} er ikke længere tilknyttet
-          som din lærer.'
   reports:
     error:
       access_denied: Du har ikke adgang til denne persons statistikker
@@ -378,13 +387,43 @@
     heading_hoc2014: "<h2>Hour of Code for</h2><h1>Alle - uanset alder</h1>"
     heading_elementary: "<h2>20 timers kurser for</h2><h1>Begyndere (alle aldre)</h1>"
     heading_apps: "<h2>Sjov for</h2><h1>Alle</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Klar til det næste trin?</h2> <h1>JavaScript-værktøj til gymnasiet</h1>"
     heading_legacy: "<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>"
     your_gallery: Galleri
     no_primary_course: Prøv et kursusforløb på Code Studio
     choose_next_course: Prøv en Code Studio kursus ved at vælge en nedenfor
     print_certificate: Udskriv certifikat
+    announcement_title: Meddelelser
+    announcement_view_all: Vis alle
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Lær mere
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Tilføj dit navn
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Lære om Code Studio
     description: Enhver kan lære programmering. Lav spil, apps og kunst med kode.
@@ -413,9 +452,16 @@
       Rovio Entertainment Ltd. Alle rettigheder forbeholdes. < br / > Plants vs. Zombies
       &#8482; © %{current_year} Electronic Arts Inc. Alle rettigheder forbeholdes.
       < br / > The Amazing World of Gumball er varemærke og © 2015 Cartoon Network.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All
+      Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and
+      &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo og Hour
       of Code&reg; er varemærker tilhørende Code.org."
@@ -447,24 +493,17 @@
     notes_coming_soon: Noter til denne video kommer snart.
     autoplay_option: Automatisk afspil videoer
     download: Hent Video
-  compatability:
-    working:
-      header: Vi arbejder på at understøtte din browser.
-      message: Code.org bruger moderne web-teknologi. Dette gør stedet hurtigere at
-        bruge. Din browser understøtter ikke alle de funktioner, der kræves, og du
-        kan opleve problemer med denne del af webstedet. Please hjælp os ved at <a
-        href='%{report_issue_url}'> rapportere eventuelle problemer, du finder</a>.
-        Du kan også <a href='%{supported_browsers_url}'> opgradere din browser til
-        en understøttet version</a>.
-      hide_this_warning: Skjul denne advarsel
+  compatibility:
     upgrade:
-      header: Vær venlig at opgradere din browser.
-      message: Code.org bruger moderne web-teknologi. Dette gør stedet hurtigere at
-        bruge. Desværre din browser ikke understøtter alle de funktioner, der kræves
-        for at køre denne del af webstedet. <br/> <br/>Installere en browser på vores
-        understøttede browsere listen fortsætter. Du kan <a href='#'> prøve at have
-        set siden</a>, men forventer funktionalitet skal brydes.
-      button: Vis mig til listen over understøttede browsere
+      unsupported_message: Your browser is not supported. Please upgrade your browser
+        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
+        browsers</a>. You can try viewing the page, but expect functionality to be
+        broken.
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
+        10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
+        8, 9, and 10. Please upgrade to a modern browser.
+      link: Lær mere
   slow_loading: Dette tager længere tid end normalt...
   try_reloading: Prøv at genindlæse siden
   next_stage: Færdig! Fortsæt til næste fase
@@ -507,7 +546,7 @@
         in seconds.
       body_short: Design an app, code with blocks or JavaScript to make it work, then
         share your app in seconds.
-      audience: Ages 13+
+      audience: Alder 13+
       cta: Learn how
     hoc:
       title: Klassisk labyrint
@@ -539,6 +578,15 @@
     minecraft:
       title: Minecraft
       body: Udforsk en Minecraft-verden gennem kode.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Alder 4+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Elever har tegnet disse med kode!
     students_made_these_with_code: Elever har lavet disse med kode!
@@ -549,12 +597,15 @@
       apps og billeder ved at skrive deres egne computerprogrammer. Klik på billeder
       og skærmklip for at prøve programmerne.
     want_to_make_your_own: Vil du lave dit eget?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Mere &rarr;
     caption_by_name_age: af %{name}, alder %{age}
     caption_time_ago: "%{time_ago} siden"
     header: Galleri
     header_playlab: Play Lab
     header_artist: Kunstner
+    report_abuse: Rapporter misbrug
   landing:
     prerelease: Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder,
       at det ikke er den endelige version af kurset, men at ændringer vil forekomme
@@ -589,6 +640,15 @@
     wrong_body: Thank you for submitting answers.
     correct_title: Tak skal du have
     correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Forkert løsning
     wrong_body: Den løsning, du har angivet er ikke korrekte.  Prøv venligst igen!
@@ -690,6 +750,10 @@
     share: Del
     share_title: Del dit projekt
     share_copy_link: 'Kopiér linket:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Luk
     more: Mere
     name: Navn
@@ -741,7 +805,77 @@
         acknowledge: Ved at indsende disse oplysninger, anerkender du det vil blive
           behandlet i overensstemmelse med de %{link_start_privacy}Privacy Policy%{link_end}
           og %{link_start_tos}Terms af Service%{link_end}
+  peer_review:
+    accepted:
+      name: Accepteret
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Eskalerede
+      description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Søg efter et ikon...
+      no_icons_found: Ingen ikoner fundet
+    playzone:
+      artist_description: Tegn seje billeder og designs!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Opret en historie eller lav et spil med Play Lab!
+      playlab_title: New App
+      primary_header: Congratulations! You finished %{stageName}!
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
+  flex_category:
+    required: Oversigt
+    content: Content
+    practice: Teacher Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
+      a site that is not operated by Code.org.</strong> This site may have privacy
+      policies that differ from Code.org's.<br/><br/>We have selected these third
+      party resources because we think they will be useful to you. While we are not
+      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
+      support</a> if you find the content objectionable, or if the linked site is
+      no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: Download %{app_name} for offline use (136MB)
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

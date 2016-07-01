@@ -1,32 +1,38 @@
 - content_for(:head) do
   = javascript_include_tag 'js/levelbuilder'
 
-- if current_user && current_user.admin?
+-# TODO(asher): Remove the current_user.admin? when removing level access from admins.
+- if current_user && (current_user.admin? || current_user.permission?(UserPermission::LEVELBUILDER))
   = render layout: 'shared/admin' do
     %strong= @level.name
     %ul
       %li= link_to level_path(@level), @level
       %li= link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
       - if can? :edit, @level
-        %li
-          = link_to 'edit', edit_level_path(@level)
-          - if @level.is_a? Blockly
-            %ul
-              %li= link_to 'solution', level_edit_blocks_path(@level, :solution_blocks)
-              %li= link_to 'toolbox', level_edit_blocks_path(@level, :toolbox_blocks)
-              %li= link_to "start (#{Blockly.count_xml_blocks(@level.start_blocks)})", level_edit_blocks_path(@level, :start_blocks)
-              %li= link_to "required (#{Blockly.count_xml_blocks(@level.required_blocks)})", level_edit_blocks_path(@level, :required_blocks)
-              %li= link_to "recommended (#{Blockly.count_xml_blocks(@level.recommended_blocks)})", level_edit_blocks_path(@level, :recommended_blocks)
-              - if @level.is_a? Artist
-                %li= link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
-        %li= link_to 'delete', @level, method: :delete, data: { confirm: t('crud.confirm') }, style: 'color: red'
-        %li
-          = link_to 'clone', '', onclick: "$('#clone_#{@level.id}').toggle(); return false;"
-          %div{class: 'clone_level', id: "clone_#{@level.id}", style: 'display: none;'}
-            = form_tag level_clone_path(@level), method: :post, remote: true do
-              = label_tag 'New name:'
-              = text_field_tag :name, @level.name
-              = submit_tag 'Clone'
+        - if Rails.application.config.levelbuilder_mode
+          %li
+            = link_to 'edit', edit_level_path(@level)
+            - if @level.is_a? Blockly
+              %ul
+                %li= link_to 'solution', level_edit_blocks_path(@level, :solution_blocks)
+                %li= link_to 'toolbox', level_edit_blocks_path(@level, :toolbox_blocks)
+                %li= link_to "start (#{Blockly.count_xml_blocks(@level.start_blocks)})", level_edit_blocks_path(@level, :start_blocks)
+                %li= link_to "required (#{Blockly.count_xml_blocks(@level.required_blocks)})", level_edit_blocks_path(@level, :required_blocks)
+                %li= link_to "recommended (#{Blockly.count_xml_blocks(@level.recommended_blocks)})", level_edit_blocks_path(@level, :recommended_blocks)
+                %li= link_to "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})", level_edit_blocks_path(@level, :initialization_blocks)
+                - if @level.is_a? Artist
+                  %li= link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
+          %li= link_to 'delete', @level, method: :delete, data: { confirm: t('crud.confirm') }, style: 'color: red'
+          %li
+            = link_to 'clone', '', onclick: "$('#clone_#{@level.id}').toggle(); return false;"
+            %div{class: 'clone_level', id: "clone_#{@level.id}", style: 'display: none;'}
+              = form_tag level_clone_path(@level), method: :post, remote: true do
+                = label_tag 'New name:'
+                = text_field_tag :name, @level.name
+                = hidden_field_tag :authenticity_token, form_authenticity_token
+                = submit_tag 'Clone'
+        - elsif @script_level
+          %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
       - else
         %li (Cannot edit)
 

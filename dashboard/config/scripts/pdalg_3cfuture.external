@@ -1,0 +1,19 @@
+name 'PDAlg 3CFuture'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
+
+# Planning For the Future > Where to go from here?
+
+Now that you've implemented your first year of CS in Algebra, it's time to start thinking about where you want to go from here. This stage will introduce you to several options to explore as you consider how you would like to grow as a teacher of CS in Algebra, or even CS on its own. To get you thinking about your options for future growth, we're going to look at:
+
+- Changes to CS in Algebra that might simplify your implementation
+- Curricula that you can introduce to teach more Computer Science in your math classes
+- Curricula and PD for teaching Computer Science as a stand alone elective
+
+Click “Continue” below to learn more about these options.
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

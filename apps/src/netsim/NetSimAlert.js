@@ -4,6 +4,7 @@
 /* global setTimeout */
 'use strict';
 
+import $ from 'jquery';
 var markup = require('./NetSimAlert.html.ejs');
 var ArgumentUtils = require('./ArgumentUtils');
 var NetSimLogger = require('./NetSimLogger');
@@ -26,7 +27,7 @@ NetSimAlert.getOrCreateAlertContainer_ = function () {
     alertContainer = $('<div>').addClass("netsim-alert-container");
     $('#netsim').append(alertContainer);
 
-    alertContainer.on('closed', function() {
+    alertContainer.on('closed', function () {
       if ($(this).children().length === 1) {
         $(this).remove();
       }

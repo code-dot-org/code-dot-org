@@ -1,4 +1,6 @@
-/* globals $, dashboard */
+/* global dashboard */
+
+var React = require('react');
 
 var SendToPhone = window.dashboard ? window.dashboard.SendToPhone : undefined;
 
@@ -59,7 +61,7 @@ module.exports = React.createClass({
     );
   },
 
-  renderSendToPhone: function() {
+  renderSendToPhone: function () {
     if (this.state.clicked) {
       return (
         <SendToPhone

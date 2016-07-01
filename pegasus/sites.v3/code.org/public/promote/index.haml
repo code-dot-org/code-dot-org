@@ -13,16 +13,16 @@ social:
 ---
 :javascript
   var petitionIncluded = false;
-  var promoteIncluded = false;
 
 -state ||= nil
 
 %script{:src=>"/js/jquery.placeholder.js"}
 
 #promote-page
-  %h1 Promote Computer Science
+  %h1{:style=>'margin-bottom:15px;'} Promote Computer Science
 
   %div{:id=>'us_content'}
+
     #petition-section.section.clear
       = view :petition
     :javascript
@@ -56,9 +56,10 @@ social:
 
 :javascript
   var petition;
-  var promote;
 
   $(document).ready()
   {
-    petition = new Petition();
+    if (petitionIncluded) {
+      petition = new Petition();
+    }
   }

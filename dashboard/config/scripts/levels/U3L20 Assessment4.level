@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:33.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Conditional Basics Question 4",
+    "markdown_instructions": "How do you know if a program needs a conditional statement?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

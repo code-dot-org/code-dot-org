@@ -24,9 +24,17 @@
           future: nu poate fi în viitor
   hello: Salutare lume
   welcome_back: Bine ai revenit, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Trimite
   unsubmit: Retrage
-  next_page: Next page
+  previous_page: Previous page
+  next_page: Pagina următoare
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
+  cancel: Anulează
+  okay: Bine
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Adaugă un profesor:'
@@ -88,6 +96,7 @@
     teacher_title: "Înregistrare Profesor"
     student_pitch: "Înscriere student la Code.org"
     student_title: "Înscriere student"
+    signup_title: Sign up for Code.org
     school_name: Numele şcolii (opţional)
     school_address: Adresa şcolii (opţional)
     address_placeholder: adresă, oraş, județ, cod poștal
@@ -112,6 +121,9 @@
       de utilizare</a> de la Code.org.
     additional_information: Mai avem nevoie de câteva informaţii adiționale pentru
       a te putea înscrie.
+    user_type_label: Account Type
+    user_type_teacher: Profesor
+    user_type_student: elev
   signin_form:
     title: Ai deja un cont? Conectează-te
     login: Email sau nume de utilizator
@@ -167,9 +179,6 @@
       student_disassociated:
         subject: 'Notificare Code.org: %{student_name} nu mai este asociat ca student
           al tău.'
-      teacher_disassociated:
-        subject: 'Notificare Code.org: %{teacher_name} nu mai este asociat ca profesorul
-          tău.'
   reports:
     error:
       access_denied: Nu ai acces la statisticile de progress ale acestei persoane
@@ -384,14 +393,45 @@
     heading_hoc2014: "<h2>Ora de Programare pentru</h2><h1>toate vârstele</h1>"
     heading_elementary: "<h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>"
     heading_apps: "<h2>Distracţie pentru</h2><h1>Toată lumea</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Gata pentru următorul pas?</h2> <h1>Instrumente JavaScript
+      pentru liceu</h1>"
     heading_legacy: "<h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>"
     your_gallery: Galerie
     no_primary_course: "Încearcă un curs cu Atelierul de programare"
     choose_next_course: "Încearcă un curs cu Atelierul de programare alegând unul
       de mai jos"
     print_certificate: Tipărește certificatul
+    announcement_title: Anunțuri
+    announcement_view_all: Vizualizare toate
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Află mai mult
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: "Învață in Atelierul de programare"
     description: Oricine poate învăţa programare. Face jocuri, aplicaţii şi artă cu
@@ -413,12 +453,25 @@
       la crearea acestui tutorial.
     help_from_html_old: Inginerii de la Google, Microsoft, Facebook şi Twitter au
       ajutat la crearea acestor materiale.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
-      Arts Inc. Toate Drepturile Rezervate.
-    art_from_html_old: Păsări nervoase &#8482; &amp; © 2009-%{current_year} Rovio
-      Entertainment Ltd. Toate drepturile rezervate. < br / > plante vs Zombies &#8482;
-      &amp; © %{current_year} Electronic Arts Inc Toate drepturile rezervate
+    art_from_html: Minecraft &#8482; &copy;%{current_year} Microsoft. Toate drepturile
+      rezervate.< br / >Star Wars &#8482; &copy;%{current_year} Disney şi Lucasfilm.
+      Toate drepturile rezervate.< br / >Frozen&#8482; &copy; %{current_year} Disney.
+      Toate drepturile rezervate.< br / >Ice Age &#8482; &copy; %{current_year} 20th
+      Century Fox. Toate drepturile rezervate.< br / >Angry Birds &#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Toate drepturile rezervate.< br / >Plants vs. Zombies
+      &#8482; &copy; %{current_year} Electronic Arts Inc Toate drepturile rezervate.
+      < br / >The Amazing World of Gumball este marca înregistrată &copy; 2015 Cartoon
+      Network.
+    art_from_html_old: Minecraft &#8482; &copy; %{current_year} Microsoft. Toate drepturile
+      rezervate. Star Wars &#8482; &copy; %{current_year} Disney şi Lucasfilm. Toate
+      drepturile rezervate. Congelate &#8482; &copy; %{current_year} Disney. Toate
+      drepturile rezervate. Ice Age &#8482; &copy; %{current_year} 20th Century Fox.
+      Toate drepturile rezervate. Supărat de păsări &#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Toate drepturile rezervate. Plante vs zombi &#8482;
+      &copy; %{current_year} Electronic Arts Inc Toate drepturile rezervate. The Amazing
+      World of Gumball este marca înregistrată &copy; 2015 Cartoon Network.
+    code_from_html: Code.org foloseşte p5.play, care este licenţiat sub <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1</a>.
     powered_by_aws: Susținut de Amazon Web Services
     trademark: "&copy;Code.org, %{current_year}. Code.org&reg;, logo-ul CODE şi Hour
       of Code&reg; sunt mărci comerciale ale Code.org."
@@ -450,25 +503,17 @@
     notes_coming_soon: "În curând, notiţe vor fi disponibile pentru acest video."
     autoplay_option: Redare Automată clipuri video
     download: Descarcă Video
-  compatability:
-    working:
-      header: Momentan efectuăm lucrări de susținere a browser-ului tău.
-      message: Code.org folosește tehnologii web moderne. Acest lucru face site-ul
-        mai rapid de utilizat. Browserul pe care îl folosești nu suportă toate caracteristicile
-        necesare şi este posibil să întâmpini probleme în timp ce utilizezi această
-        parte a site-ului. Te rugăm să ne ajuți prin <a href='%{report_issue_url}'>
-        raportarea oricărei probleme întâlnite</a>. Poți, de asemenea, <a href='%{supported_browsers_url}'>
-        să-ți actualizezi browser-ul la o versiune acceptată</a>.
-      hide_this_warning: Ascunde această avertizare
+  compatibility:
     upgrade:
-      header: Te rugăm să-ți actualizezi browser-ul.
-      message: Code.org folosește tehnologii web moderne. Acest lucru face site-ul
-        mai rapid de utilizat. Din păcate, browser-ul tău nu suportă toate caracteristicile
-        necesare pentru a rula această parte a site-ului. <br/> <br/>Instalează un
-        browser de pe lista noastră de browsere acceptate pentru a continua. Poți
-        <a href='#'> încerca să vizualizezi pagina</a>, dar așteaptă-te la întreruperi
-        de funcţionalitate.
-      button: Du-mă la lista browserelor suportate
+      unsupported_message: Your browser is not supported. Please upgrade your browser
+        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
+        browsers</a>. You can try viewing the page, but expect functionality to be
+        broken.
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
+        10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
+        8, 9, and 10. Please upgrade to a modern browser.
+      link: Află mai mult
   slow_loading: Aceasta durează mai mult decât de obicei...
   try_reloading: "Încearcă să reîncarci pagina"
   next_stage: Ai terminat! Continuă cu următoarea etapă
@@ -507,13 +552,13 @@
   upsell:
     applab:
       title: Laboratului Aplicației
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: App Lab este un mediu de programare în care poți creea aplicații simple.
+        Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o
+        face să funcționeze, apoi partajează aplicația în doar câteva secunde.
+      body_short: Proiectează o aplicație, programează cu blocuri sau JavaScript pentru
+        a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.
+      audience: Vârste 13 +
+      cta: Află cum
     hoc:
       title: Labirint Clasic
       body: "Încearcă bazele programarii. Milioane de oameni au încercat."
@@ -547,6 +592,15 @@
     minecraft:
       title: Minecraft
       body: Exploreaza o lume Minecraft prin cod.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
     students_made_these_with_code: Elevii au creat acestea cu secvențe de cod!
@@ -557,12 +611,15 @@
       aplicații şi imagini scriindu-și propriile programe pentru calculator. Fă clic
       pe imagini și capturi de ecran pentru a vedea fiecare program în acţiune."
     want_to_make_your_own: Vrei să realizezi propriul tău program?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Mai mult &rarr;
     caption_by_name_age: de %{name}, vârsta %{age}
     caption_time_ago: cu %{time_ago} în urmă
     header: Galerie
     header_playlab: Laborator de Joacă
     header_artist: Artist
+    report_abuse: Raportează abuz
   landing:
     prerelease: Acest curs este în <span class='betatext'>versiune beta</span>. Asta
       înseamnă că aceasta nu este versiunea finală a cursului şi el poate fi revizuit
@@ -572,7 +629,7 @@
     report_bug: Raporteazã eroare
     support: Obţine ajutor
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: Ajutor şi resurse
   multi:
     wrong_title: Răspuns incorect
     wrong_body: Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!
@@ -582,21 +639,30 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Mulţumesc
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: "Îți mulțumim pentru trimiterea răspunsului tău."
     correct_title: Mulţumesc
-    correct_body: Thank you for submitting an answer.
+    correct_body: "Îți mulțumim pentru trimiterea răspunsului tău."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Mulţumesc
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "Îți mulțumim pentru trimiterea răspunsului tău."
     correct_title: Mulţumesc
-    correct_body: Thank you for submitting an answer
+    correct_body: "Îți mulțumim pentru trimiterea răspunsului tău."
   level_group-submittable:
     wrong_title: Mulţumesc
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "Îți mulțumim pentru trimiterea răspunsului tău."
     correct_title: Mulţumesc
-    correct_body: Thank you for submitting answers.
+    correct_body: "Îți mulțumim pentru trimiterea răspunsului tău."
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Soluţie incorectă
     wrong_body: Soluţia introdusă nu este corectă.  Te rugăm să încerci din nou!
@@ -682,7 +748,7 @@
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
     assessment: evaluare
-    submitted: submitted
+    submitted: transmise
   studio:
     courses_working_on: Cursurile pe care le studiezi
     completed_courses: Cursuri terminate
@@ -700,6 +766,10 @@
     share: Distribuie
     share_title: Ditribuie proiectul tău
     share_copy_link: 'Copiază link-ul:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: "Închide"
     more: Mai mult
     name: Nume
@@ -756,7 +826,77 @@
           vor fi gestionate în conformitate cu termenii %{link_start_privacy}Politicii
           de confidențialitate%{link_end} și %{link_start_tos}Termenii și condițiile
           de utilizare a serviciilor%{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Cauta o icoana...
+      no_icons_found: Nu s-au găsit icoane
+    playzone:
+      artist_description: Desenează poze şi proiecte mişto cu Artistul!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
+      playlab_title: New App
+      primary_header: Congratulations! You finished %{stageName}!
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
+  flex_category:
+    required: Prezentare generală
+    content: Content
+    practice: Teacher Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
+      a site that is not operated by Code.org.</strong> This site may have privacy
+      policies that differ from Code.org's.<br/><br/>We have selected these third
+      party resources because we think they will be useful to you. While we are not
+      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
+      support</a> if you find the content objectionable, or if the linked site is
+      no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: Download %{app_name} for offline use (136MB)
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

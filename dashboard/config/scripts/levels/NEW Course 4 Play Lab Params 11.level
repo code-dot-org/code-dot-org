@@ -42,9 +42,24 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "repeat_until_while": 1,
+    "for_loops": 1,
+    "events": 1,
+    "variables": 1,
+    "functions": 1,
+    "functions_with_params": 1,
+    "conditionals": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -126,49 +141,10 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" editable="false">
-          <mutation>
-            <arg name="actor"/>
-            <arg name="speed"/>
-            <description>a patrol function that has a actor and speed parameter</description>
-          </mutation>
-          <title name="NAME">patrol</title>
-          <statement name="STACK">
-            <block type="studio_moveDistanceParamsSprite" inline="true">
-              <title name="DIR">1</title>
-              <value name="SPRITE">
-                <block type="parameters_get">
-                  <title name="VAR">actor</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="parameters_get">
-                  <title name="VAR">speed</title>
-                </block>
-              </value>
-              <next>
-                <block type="studio_moveDistanceParamsSprite" inline="true">
-                  <title name="DIR">4</title>
-                  <value name="SPRITE">
-                    <block type="parameters_get">
-                      <title name="VAR">actor</title>
-                    </block>
-                  </value>
-                  <value name="DISTANCE">
-                    <block type="parameters_get">
-                      <title name="VAR">speed</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Default"/>
         <category name="Actions">
           <block type="studio_setSpriteParams" inline="true">
             <title name="VALUE">"witch"</title>
@@ -223,14 +199,14 @@
           <block type="studio_playSound">
             <title name="SOUND">hit</title>
           </block>
-          <block type="studio_makeProjectile">
-            <title name="VALUE">"blue_fireball"</title>
-            <title name="ACTION">"bounce"</title>
-          </block>
           <block type="studio_throw">
             <title name="SPRITE">0</title>
-            <title name="VALUE">"blue_fireball"</title>
+            <title name="VALUE">"basketball"</title>
             <title name="DIR">1</title>
+          </block>
+          <block type="studio_makeProjectile">
+            <title name="VALUE">"basketball"</title>
+            <title name="ACTION">"bounce"</title>
           </block>
           <block type="studio_setSpriteSizeParams" inline="true">
             <value name="SPRITE">
@@ -359,126 +335,7 @@
           </block>
         </category>
         <category name="Variables" custom="VARIABLE">
-          <block type="procedures_defnoreturn" editable="false">
-            <mutation>
-              <arg name="actor"/>
-              <arg name="speed"/>
-              <description>a patrol function that has a actor and speed parameter</description>
-            </mutation>
-            <title name="NAME">patrol</title>
-            <statement name="STACK">
-              <block type="studio_moveDistanceParamsSprite" inline="true">
-                <title name="DIR">1</title>
-                <value name="SPRITE">
-                  <block type="parameters_get">
-                    <title name="VAR">actor</title>
-                  </block>
-                </value>
-                <value name="DISTANCE">
-                  <block type="parameters_get">
-                    <title name="VAR">speed</title>
-                  </block>
-                </value>
-                <next>
-                  <block type="studio_moveDistanceParamsSprite" inline="true">
-                    <title name="DIR">4</title>
-                    <value name="SPRITE">
-                      <block type="parameters_get">
-                        <title name="VAR">actor</title>
-                      </block>
-                    </value>
-                    <value name="DISTANCE">
-                      <block type="parameters_get">
-                        <title name="VAR">speed</title>
-                      </block>
-                    </value>
-                  </block>
-                </next>
-              </block>
-            </statement>
-          </block>
-          <block type="procedures_defnoreturn" editable="false" usercreated="true">
-            <mutation>
-              <arg name="actor"/>
-            </mutation>
-            <title name="NAME">wander</title>
-            <statement name="STACK">
-              <block type="studio_moveDistanceParamsSprite" inline="true">
-                <title name="DIR">random</title>
-                <value name="SPRITE">
-                  <block type="parameters_get">
-                    <title name="VAR">actor</title>
-                  </block>
-                </value>
-                <value name="DISTANCE">
-                  <block type="math_number">
-                    <title name="NUM">25</title>
-                  </block>
-                </value>
-                <next>
-                  <block type="studio_moveDistanceParamsSprite" inline="true">
-                    <title name="DIR">random</title>
-                    <value name="SPRITE">
-                      <block type="parameters_get">
-                        <title name="VAR">actor</title>
-                      </block>
-                    </value>
-                    <value name="DISTANCE">
-                      <block type="math_number">
-                        <title name="NUM">25</title>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="studio_moveDistanceParamsSprite" inline="true">
-                        <title name="DIR">random</title>
-                        <value name="SPRITE">
-                          <block type="parameters_get">
-                            <title name="VAR">actor</title>
-                          </block>
-                        </value>
-                        <value name="DISTANCE">
-                          <block type="math_number">
-                            <title name="NUM">25</title>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="studio_moveDistanceParamsSprite" inline="true">
-                            <title name="DIR">random</title>
-                            <value name="SPRITE">
-                              <block type="parameters_get">
-                                <title name="VAR">actor</title>
-                              </block>
-                            </value>
-                            <value name="DISTANCE">
-                              <block type="math_number">
-                                <title name="NUM">25</title>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="studio_moveDistanceParamsSprite" inline="true">
-                                <title name="DIR">random</title>
-                                <value name="SPRITE">
-                                  <block type="parameters_get">
-                                    <title name="VAR">actor</title>
-                                  </block>
-                                </value>
-                                <value name="DISTANCE">
-                                  <block type="math_number">
-                                    <title name="NUM">25</title>
-                                  </block>
-                                </value>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </statement>
-          </block>
-        </category>
+  </category>
       </xml>
     </toolbox_blocks>
   </blocks>

@@ -20,7 +20,7 @@
     "instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  The artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \r\n\r\nRun this code to see how the artist uses binary to draw this pattern.",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  The artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \r\n\r\nRun this code to see how the artist uses binary to draw this pattern.",
+    "markdown_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \r\n\r\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \r\n\r\n**Run this code to see how the artist uses binary to draw this pattern.**",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -28,7 +28,15 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "images": "[{\"filename\":\"binary_grid.svg\",\"position\":[0,0]}]"
+    "images": "[{\"filename\":\"binary_grid.svg\",\"position\":[0,0]}]",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
   }
 }]]></config>
   <blocks>
@@ -236,24 +244,24 @@
           <mutation/>
           <title name="NAME">draw bit</title>
           <statement name="STACK">
-            <block type="draw_colour" inline="true" id="draw-color">
+            <block type="draw_colour" inline="true" uservisible="false" id="draw-color">
               <value name="COLOUR">
-                <block type="colour_picker">
+                <block type="colour_picker" uservisible="false">
                   <title name="COLOUR">#ffffff</title>
                 </block>
               </value>
               <next>
-                <block type="draw_width_inline">
+                <block type="draw_width_inline" uservisible="false">
                   <title name="WIDTH">25</title>
                   <next>
-                    <block type="controls_repeat">
+                    <block type="controls_repeat" uservisible="false">
                       <title name="TIMES">4</title>
                       <statement name="DO">
-                        <block type="draw_move_by_constant">
+                        <block type="draw_move_by_constant" uservisible="false">
                           <title name="DIR">moveForward</title>
                           <title name="VALUE">25</title>
                           <next>
-                            <block type="draw_turn_by_constant">
+                            <block type="draw_turn_by_constant" uservisible="false">
                               <title name="DIR">turnRight</title>
                               <title name="VALUE">90</title>
                             </block>
@@ -327,24 +335,24 @@
           <mutation/>
           <title name="NAME">draw bit</title>
           <statement name="STACK">
-            <block type="draw_colour" inline="true" id="draw-color">
+            <block type="draw_colour" inline="true" uservisible="false" id="draw-color">
               <value name="COLOUR">
-                <block type="colour_picker">
+                <block type="colour_picker" uservisible="false">
                   <title name="COLOUR">#ffffff</title>
                 </block>
               </value>
               <next>
-                <block type="draw_width_inline">
+                <block type="draw_width_inline" uservisible="false">
                   <title name="WIDTH">25</title>
                   <next>
-                    <block type="controls_repeat">
+                    <block type="controls_repeat" uservisible="false">
                       <title name="TIMES">4</title>
                       <statement name="DO">
-                        <block type="draw_move_by_constant">
+                        <block type="draw_move_by_constant" uservisible="false">
                           <title name="DIR">moveForward</title>
                           <title name="VALUE">25</title>
                           <next>
-                            <block type="draw_turn_by_constant">
+                            <block type="draw_turn_by_constant" uservisible="false">
                               <title name="DIR">turnRight</title>
                               <title name="VALUE">90</title>
                             </block>

@@ -1,11 +1,11 @@
-/* global $ */
-
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
+import $ from 'jquery';
+var React = require('react');
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var ImagePickerPropertyRow = require('./ImagePickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
 
 var elementUtils = require('./elementUtils');
 
@@ -67,7 +67,7 @@ var ChartEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getDrawChartCode: function() {
+  getDrawChartCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'drawChart("' + id + '", "bar", ' +
@@ -75,7 +75,7 @@ var ChartEvents = React.createClass({
     return code;
   },
 
-  getDrawChartFromRecordsCode: function() {
+  getDrawChartFromRecordsCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'drawChartFromRecords("' + id + '", "bar", "tableName", ' +
@@ -83,11 +83,11 @@ var ChartEvents = React.createClass({
     return code;
   },
 
-  insertDrawChart: function() {
+  insertDrawChart: function () {
     this.props.onInsertEvent(this.getDrawChartCode());
   },
 
-  insertDrawChartFromRecords: function() {
+  insertDrawChartFromRecords: function () {
     this.props.onInsertEvent(this.getDrawChartFromRecordsCode());
   },
 

@@ -1,5 +1,7 @@
+var React = require('react');
 var color = require('../../color');
 var rowStyle = require('./rowStyle');
+var FontAwesome = require('../../templates/FontAwesome');
 
 var ZOrderRow = React.createClass({
   propTypes: {
@@ -17,7 +19,7 @@ var ZOrderRow = React.createClass({
     this.setState({value: newProps.initialValue});
   },
 
-  render: function() {
+  render: function () {
     var element = this.props.element;
 
     // Element will be wrapped in a resizable div
@@ -52,28 +54,28 @@ var ZOrderRow = React.createClass({
             onClick={this.props.onDepthChange.bind(this, element, 'toBack')}
             disabled={isBackMost}
             title='Send to Back'>
-            <i className="fa fa-angle-double-left"></i>
+            <FontAwesome icon="angle-double-left" />
           </button>
           <button
             style={isBackMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'backward')}
             disabled={isBackMost}
             title='Send Backward'>
-            <i className="fa fa-angle-left"></i>
+            <FontAwesome icon="angle-left" />
           </button>
           <button
             style={isFrontMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'forward')}
             disabled={isFrontMost}
             title='Send Forward'>
-            <i className="fa fa-angle-right"></i>
+            <FontAwesome icon="angle-right" />
           </button>
           <button
             style={isFrontMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toFront')}
             disabled={isFrontMost}
             title='Send to Front'>
-            <i className="fa fa-angle-double-right"></i>
+            <FontAwesome icon="angle-double-right" />
           </button>
         </div>
       </div>

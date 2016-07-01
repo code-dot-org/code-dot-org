@@ -17,7 +17,7 @@
     "step_mode": "1",
     "nectar_goal": "20",
     "flower_type": "redWithNectar",
-    "ideal": "32",
+    "ideal": "27",
     "instructions": "Let's start from scratch - can you create a new function called \"get 5 nectar\" with a direction parameter?",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
@@ -34,25 +34,30 @@
     "fast_get_nectar_animation": "true"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 3,
+    "functions_with_params": 5
+  }
 }]]></config>
   <blocks>
-    <start_blocks>
+    <initialization_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="0">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">left</title>
               <value name="VALUE">
-                <block type="math_number">
+                <block type="math_number" uservisible="false">
                   <title name="NUM">0</title>
                 </block>
               </value>
               <next>
-                <block type="variables_set" inline="false">
+                <block type="variables_set" inline="false" uservisible="false">
                   <title name="VAR">right</title>
                   <value name="VALUE">
-                    <block type="math_number">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">1</title>
                     </block>
                   </value>
@@ -61,6 +66,10 @@
             </block>
           </next>
         </block>
+      </xml>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
         <block type="when_run" deletable="false" movable="false">
   </block>
       </xml>
@@ -112,38 +121,41 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">5</title>
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="get 5 nectar">
+            <arg name="direction"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="variables_get">
+              <title name="VAR">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_if" inline="false">
+          <mutation else="1"/>
+          <value name="IF0">
+            <block type="logic_compare" inline="true">
+              <title name="OP">EQ</title>
+              <value name="A">
+                <block type="parameters_get">
+                  <title name="VAR">direction</title>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get">
+                  <title name="VAR">left</title>
+                </block>
+              </value>
+            </block>
+          </value>
         </block>
         <block type="controls_repeat">
-          <title name="TIMES">2</title>
+          <title name="TIMES">5</title>
         </block>
       </xml>
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
-          <next>
-            <block type="variables_set" inline="false" uservisible="false">
-              <title name="VAR">left</title>
-              <value name="VALUE">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">0</title>
-                </block>
-              </value>
-              <next>
-                <block type="variables_set" inline="false" uservisible="false">
-                  <title name="VAR">right</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">

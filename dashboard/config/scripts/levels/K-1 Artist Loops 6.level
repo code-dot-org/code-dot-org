@@ -15,6 +15,11 @@
     "free_play": "false",
     "ideal": "7",
     "slider_speed": ".2"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
   }
 }]]></config>
   <blocks>

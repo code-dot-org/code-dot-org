@@ -1,9 +1,0 @@
-name 'U3L22 Free Response Getting Started'
-title 'Permanent Data Storage: Getting Started'
-
-
-markdown <<MARKDOWN
-In the previous lesson, you added a “best score” feature to your clicker game. It worked fine for multiple plays in one game-playing session. 
-
-Why doesn’t it save your best score from one session to the next?”
-MARKDOWN

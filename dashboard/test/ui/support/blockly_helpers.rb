@@ -40,7 +40,7 @@ module BlocklyHelpers
   # Get the block ID for a given alias
   # Callers expect the returned block ID value to be a string
   def get_block_id(alias_or_id)
-    if @block_aliases && @block_aliases.has_key?(alias_or_id)
+    if @block_aliases && @block_aliases.key?(alias_or_id)
       return @block_aliases[alias_or_id]
     end
     alias_or_id
@@ -67,7 +67,7 @@ module BlocklyHelpers
   end
 
   def modal_dialog_visible
-    @browser.execute_script("return $('#modalEditorClose :visible').length != 0;")
+    @browser.execute_script("return $('#modalContainer').is(':visible');")
   end
 end
 

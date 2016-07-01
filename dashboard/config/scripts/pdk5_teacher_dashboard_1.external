@@ -1,7 +1,6 @@
 name 'PDK5 Teacher Dashboard 1'
 title 'Dashboard 1'
 css 'unplugged'
-skip_dialogue true
 
 markdown <<MARKDOWN
 ## Tour of Teacher Dashboard

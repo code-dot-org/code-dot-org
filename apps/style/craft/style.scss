@@ -12,8 +12,6 @@ $footer-background: #4E4E4E;
 $footer-text–and-arrow: #969292;
 $grabber-dots: #4F4F4F;
 $main-blockspace-background: rgb(161, 161, 161);// #8B8B8B;
-$start-over-show-code-button-background: #606060;
-$start-over-show-code-text: #BFBFBF;
 $callout-fallback-border-color: $very-dark-gray;
 
 $original-background-color: #F2F2F2;
@@ -72,15 +70,6 @@ body {
 
 #headers {
   background-color: $blockly-header !important;
-}
-
-.workspace-header-button {
-  background-color: $start-over-show-code-button-background !important;
-  color: $start-over-show-code-text;
-  border: none;
-  &:hover {
-    color: white;
-  }
 }
 
 .blocklySvg {
@@ -939,3 +928,7 @@ $height-to-width: 434 / 477;
   margin-left: -33px !important;
 }
 
+// Overrides style in application.css.scss from dashboard
+.instructions-markdown p {
+  color: $white;
+}

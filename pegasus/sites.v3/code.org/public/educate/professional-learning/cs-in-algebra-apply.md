@@ -22,5 +22,7 @@ You can apply to the Professional Learning Program for CS in Algebra if you are 
 [<button>Apply now</button>](/educate/professional-learning/cs-in-algebra-application)
 
 ## Don't teach in a partner district?
-Contact [Bootstrap](http://www.bootstrapworld.org/workshops/), our preferred professional development provider for CS in Algebra. 
+We will open the CS in Algebra Professional Learning Program to teachers from non-partner districts if there is space available.  Teachers who are selected will need to demonstrate a commitment to delivering the Code.org CS in Algebra course in their classroom during the 2016-17 school year.
+
+[<button>Apply as a single school</button>](https://form.jotform.com/61175232916151)
 

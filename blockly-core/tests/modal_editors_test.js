@@ -355,6 +355,26 @@ function test_contractEditor_deleteButton_notVisibleForPrewritten() {
   goog.dom.removeNode(container);
 }
 
+function test_contractEditor_deleteButton_visibleForUserCreated() {
+  var container = initializeWithContractEditor('<xml/>');
+
+  Blockly.contractEditor.openWithNewFunction();
+
+  assert('Delete button is visible for new contract function',
+      goog.style.isElementShown(goog.dom.getElementByClass('svgTextButton')));
+
+  var contractEditor = Blockly.contractEditor;
+  var definitionBlock = contractEditor.functionDefinitionBlock;
+  var functionName = definitionBlock.getProcedureInfo().name;
+  contractEditor.hideIfOpen();
+  openFunctionEditor(functionName);
+
+  assert('Delete button is visible for existing contract function',
+      goog.style.isElementShown(goog.dom.getElementByClass('svgTextButton')));
+  contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
 function test_contractEditor_run_test_with_definition_runs() {
   var container = initializeWithContractEditor(SINGLE_DEFINITION_FILLED);
   var contractEditor = Blockly.contractEditor;

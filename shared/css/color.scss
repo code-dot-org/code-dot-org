@@ -28,11 +28,13 @@ $cyan: #0094ca;
 $light_cyan: #59b9dc;
 $lighter_cyan: #a6daed;
 $lightest_cyan: #d9eff7;
+$almost_white_cyan: #f5fcff;
 
 $orange: #ffa400;
 $light_orange: #ffc459;
 $lighter_orange: #ffe0a6;
 $lightest_orange: #fff2d9;
+$dark_orange: #ff8600;
 
 $green: #b9bf15;
 $light_green: #d1d567;
@@ -44,6 +46,8 @@ $light_yellow: #ffdb74;
 $lighter_yellow: #ffebb5;
 $lightest_yellow: #fff7df;
 
+$goldenrod: #daa520;
+
 $header_text: $white;
 $bkgnd_color: $teal;
 $inset_color: $lighter_gray;
@@ -53,6 +57,7 @@ $hdr_color:   $purple;
 // some extra colors
 $red: #c00;
 $realyellow: yellow;
+$mustardyellow: #efcd1c;
 
 // progress colors
 $level_submitted: $purple;
@@ -61,6 +66,8 @@ $level_passed: rgb(159, 212, 159);
 $level_attempted: $realyellow;
 $level_not_tried: #fefefe;
 $level_current: $orange;
+$level_review_rejected: $red;
+$level_review_accepted: rgb(11, 142, 11); // TODO: $level_passed;
 $assessment: $cyan;
 
 // links

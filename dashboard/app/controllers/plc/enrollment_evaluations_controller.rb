@@ -1,25 +1,46 @@
 class Plc::EnrollmentEvaluationsController < ApplicationController
-  def perform_evaluation
-    authorize! :read, Plc::Course
-    plc_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
+  before_action :load_and_authorize_for_this_unit
 
-    if plc_unit_assignment.status != Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
-      raise "Cannot perform evaluation - unit assignment is in state #{plc_unit_assignment.status}"
+  def preview_assignments
+    if @enrollment_unit_assignment.module_assignment_for_type(Plc::LearningModule::CONTENT_MODULE).nil? && @enrollment_unit_assignment.module_assignment_for_type(Plc::LearningModule::PRACTICE_MODULE).nil?
+      modules_to_enroll_in = Plc::LearningModule.find(@enrollment_unit_assignment.plc_course_unit.determine_preferred_learning_modules(current_user))
+      @enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
     end
 
-    @questions = plc_unit_assignment.plc_course_unit.plc_evaluation_questions
-    @course_unit = plc_unit_assignment.plc_course_unit
+    @content_learning_modules = @enrollment_unit_assignment.plc_course_unit.plc_learning_modules.content
+    @practice_learning_modules = @enrollment_unit_assignment.plc_course_unit.plc_learning_modules.practice
   end
 
-  def submit_evaluation
-    authorize! :read, Plc::Course
-    question_responses = params[:answerModuleList].split(',')
-    enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
+  def confirm_assignments
+    if params[:content_module].nil? || params[:practice_module].nil?
+      redirect_to script_preview_assignments_path
+      return
+    end
 
-    modules_to_enroll_in = Plc::LearningModule.where(id: question_responses)
+    modules_to_enroll_in = Plc::LearningModule.find([params[:content_module], params[:practice_module]])
 
-    enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
-    enrollment_unit_assignment.update(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
-    redirect_to controller: :user_course_enrollments, action: :show, id: enrollment_unit_assignment.plc_user_course_enrollment.id
+    if modules_to_enroll_in.size == 2 && modules_to_enroll_in.map(&:module_type).sort == [Plc::LearningModule::CONTENT_MODULE, Plc::LearningModule::PRACTICE_MODULE]
+      @enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
+      # Redirect to script view
+      redirect_to script_path(@enrollment_unit_assignment.plc_course_unit.script)
+    else
+      redirect_to script_preview_assignments_path
+    end
+  end
+
+  private
+
+  def load_and_authorize_for_this_unit
+    script = Script.get_from_cache(params[:script_id])
+    if script.plc_course_unit
+      @enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: current_user, plc_course_unit: script.plc_course_unit)
+      if @enrollment_unit_assignment.nil?
+        redirect_to script_path(script)
+      else
+        authorize! :read, @enrollment_unit_assignment.plc_user_course_enrollment
+      end
+    else
+      redirect_to script_path(script)
+    end
   end
 end

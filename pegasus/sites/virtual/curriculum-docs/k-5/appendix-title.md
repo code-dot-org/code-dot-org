@@ -20,6 +20,8 @@ theme: none
 - Course 2 Standards
 - Course 3 Framework
 - Course 3 Standards
+- Course 4 Framework
+- Course 4 Standards
 
 [/content]
 

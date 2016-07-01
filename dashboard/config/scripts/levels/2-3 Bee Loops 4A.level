@@ -37,7 +37,11 @@
     "step_speed": "1"
   },
   "published": true,
-  "notes": "Changed from a \"drag loop around this code\" to a build it yourself."
+  "notes": "Changed from a \"drag loop around this code\" to a build it yourself.",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

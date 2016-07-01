@@ -380,10 +380,10 @@ id:
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: These are your draw blocks. Use the correct one to move the artist where he needs to go to fill in the grey lines.
+        text: Ini adalah balok balok gambarmu. Gunakan satu yang benar untuk memindahkan artis kemana dia harus pergi untuk mengisi garis-garis abu-abu.
       2:
         image: notes/C1_artist_intro_2.png
-        text: "These are jump blocks. When you use these, your artist moves but doesn't draw, so use these to jump to the next grey line."
+        text: Ini adalah balok-balok lompatan. Ketika kamu menggunakannya, artismu pindah tapi tidak menggambar, maka gunakanlah ini untuk melompat ke garis abu-abu berikutnya.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
@@ -1388,7 +1388,7 @@ id:
         text: Di dalam blok kami telah menggunakanperintah JavaScript. JavaScript adalah bahasa pemrograman paling populer untuk pengembang profesional saat ini. Blok adalah cara yang bagus untuk memulai belajar koding dan pada kenyataannya, Universitas tekenal seperti Harvard dan Berkeley mulai mengajar dengan menggunakan cara ini. Tetapi setelah kita belajar dasar-dasar, engineer menulis kode dengan mengetik karena hal ini memungkinkan kita untuk melakukannya lebih cepat dan mudah.
       2:
         image: catatan/starwars_mengetik_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: Kita dapat mengetik ratusan perintah tanpa harus mencarinya di toolbox atau menyeretnya keluar. Karena pelajaran mengetik Anda mungkin lebih lambat pada awalnya tapi kami ingin Anda mencobanya dulu.
       3:
         image: catatan/starwars_mengetik_3.JPG
         text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.

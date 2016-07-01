@@ -25,22 +25,29 @@
     }
   }
   #body {
-    color: white;
     overflow: hidden;
     padding: 10px;
     font-family: $gotham-regular;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
     vertical-align: middle;
 
     &.teacher {
-      background-color: $light_cyan;
+      background-color: $lightest_cyan;
+      color: $charcoal;
     }
     &.student {
       background-color: $light_purple;
+      color: $white;
     }
+  }
+  #plc_course_progress {
+    background-color: $lightest_cyan;
+    border-bottom: 1px solid $cyan;
+    color: $charcoal;
+    padding: 10px;
   }
   #currentprogress {
     width: 70%;

@@ -34,6 +34,8 @@ class LevelsHelperTest < ActionView::TestCase
     options = blockly_options
     assert options[:level]["map"].is_a?(Array), "Maze is not an array"
 
+    reset_view_options
+
     @level.properties["maze"] = @level.properties["maze"].to_s
     options = blockly_options
     assert options[:level]["map"].is_a?(Array), "Maze is not an array"
@@ -49,6 +51,8 @@ class LevelsHelperTest < ActionView::TestCase
     I18n.locale = default_locale
     options = blockly_options
     assert_equal I18n.t('data.level.instructions.maze_2_2', locale: default_locale), options[:level]['instructions']
+
+    reset_view_options
 
     I18n.locale = new_locale
     options = blockly_options
@@ -74,6 +78,8 @@ class LevelsHelperTest < ActionView::TestCase
     options = blockly_options
     assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: new_locale), options[:level]['instructions']
 
+    reset_view_options
+
     @level.name = 'this_level_doesnt_exist'
     options = blockly_options
     assert_equal @level.instructions, options[:level]['instructions']
@@ -89,7 +95,7 @@ class LevelsHelperTest < ActionView::TestCase
   test "blockly options converts 'impressive' => 'false' to 'impressive => false'" do
     @level = create :artist
     @stage = create :stage
-    @script_level = create :script_level, level: @level, stage: @stage
+    @script_level = create :script_level, levels: [@level], stage: @stage
     @level.impressive = "false"
     @level.free_play = "false"
 
@@ -116,7 +122,7 @@ class LevelsHelperTest < ActionView::TestCase
     script = create(:script)
     @level = create(:level, :blockly, user_id: nil)
     stage = create(:stage, script: script)
-    @script_level = create(:script_level, script: script, level: @level, stage: stage)
+    @script_level = create(:script_level, script: script, levels: [@level], stage: stage)
 
     callout1 = create(:callout, script_level: @script_level)
     callout2 = create(:callout, script_level: @script_level)
@@ -133,7 +139,7 @@ class LevelsHelperTest < ActionView::TestCase
     script = create(:script)
     @level = create(:level, :blockly, user_id: nil)
     stage = create(:stage, script: script)
-    @script_level = create(:script_level, script: script, level: @level, stage: stage)
+    @script_level = create(:script_level, script: script, levels: [@level], stage: stage)
 
     create(:callout, script_level: @script_level, localization_key: 'run')
 
@@ -294,4 +300,53 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal false, app_options[:level]['submittable']
   end
 
+  test 'show solution link shows link for appropriate courses' do
+    user = create :teacher
+    sign_in user
+
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script.update(professional_learning_course: 'Professional Learning Course')
+    @script_level = create(:script_level, level: @level, script: @script)
+    assert_not can_view_solution?
+
+    sign_out user
+    user = create :admin
+    sign_in user
+    assert can_view_solution?
+
+    @script.update(name: 'algebra')
+    assert_not can_view_solution?
+
+    @script.update(name: 'some pd script')
+    @script_level = nil
+    assert_not can_view_solution?
+
+    @script_level = create(:script_level, level: @level, script: @script)
+    @level.update(ideal_level_source_id: nil)
+    assert_not can_view_solution?
+  end
+
+  test 'show solution link shows link for appropriate users' do
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script_level = create(:script_level, level: @level, script: @script)
+
+    user = create :admin
+    sign_in user
+    assert can_view_solution?
+
+    sign_out user
+    user = create :teacher
+    sign_in user
+    assert can_view_solution?
+
+    sign_out user
+    user = create :student
+    sign_in user
+    assert_not can_view_solution?
+
+    sign_out user
+    assert_not can_view_solution?
+  end
 end

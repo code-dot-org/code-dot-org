@@ -24,9 +24,17 @@
           future: gələcəkdə ola bilməz
   hello: Salam, dünya
   welcome_back: Bir daha xoş gəldiniz, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Göndər
   unsubmit: Unsubmit
-  next_page: Next page
+  previous_page: "Əvvəlki səhifə"
+  next_page: Növbəti səhifə
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
+  cancel: "İmtina et"
+  okay: Oldu
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Müəllim əlavə edin:'
@@ -47,7 +55,7 @@
   of: "/"
   more: DAHA ÇOX
   less: DAHA AZ
-  beta: beta
+  beta: beta versiya
   try_hoc: Kod Saatında özünüzü sınayın, buraya klikləyin >> 
   try_k8intro: Bizim K-8 İnformatikaya Giriş kursunu (15-25 saat) sınaqdan keçirin
   k8intro: K-8 yaş qrupu (12-13 yaşlılar) üçün İnformatikaya giriş kursu (15-25 saat)
@@ -87,6 +95,7 @@
     teacher_title: Müəllim kimi qeydiyyatdan keçin
     student_pitch: Code.org üçün tələbə qeydiyyatı
     student_title: "Şagird qeydiyyatı"
+    signup_title: Sign up for Code.org
     school_name: Məktəbin Adı (vacib deyil)
     school_address: Məktəbin ünvanı (vacib deyil)
     address_placeholder: "ünvan, şəhər, vilayət, poçt indeksi"
@@ -111,6 +120,9 @@
       tabe olmağımı qəbul edirəm.
     additional_information: Qeydiyyatı davam etdirmək üçün bəzi əlavə məlumatlara
       ehtiyacımız var.
+    user_type_label: Account Type
+    user_type_teacher: Müəllim
+    user_type_student: "şagird"
   signin_form:
     title: Artıq hesabınız var? Daxil olun
     login: E-poçt və ya istifadəçi adı
@@ -122,7 +134,7 @@
     try_hoc: "Əvvəlcə Hour of Code yoxlayın"
     try_20hours: Bizim 20 saatliq İnformatikaya Giriş-i yoxlayın
   signinsection:
-    welcome: Welcome to %{section_name}
+    welcome: "%{section_name} bölməsinə xoş gəldiniz"
     name: Adınızı seçin
     picture: "İndi isə gizli şəkilinizi seçin"
     words: "İndi isə gizli sözünüzü daxil edin"
@@ -168,8 +180,6 @@
       student_disassociated:
         subject: 'Code.org notification: %{student_name} is no longer associated as
           your student.'
-      teacher_disassociated:
-        subject: '"Code.org" bildirişi: %{teacher_name} daha müəlliminiz deyil.'
   reports:
     error:
       access_denied: Bu şəxsin statistikasına icazəniz yoxdur
@@ -294,8 +304,8 @@
       prize_us_only: "(Yalnız ABŞ-dan olan şagirdlər)"
       prizes_link: daha ətraflı
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: Cavab
+    for_teachers_only: Ancaq müəllimlər üçün
     title:
       one: 'Müəlliminiz:'
       other: 'Müəllimləriniz:'
@@ -387,6 +397,37 @@
     no_primary_course: Try a course at Code Studio
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Sertifikatı çap edin
+    announcement_title: Elanlar
+    announcement_view_all: Hamısına baxın
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Daha ətraflı
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with
@@ -415,6 +456,8 @@
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Bütün hüquqları qorunur.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. Bütün hüquqları qorunur
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
@@ -446,23 +489,17 @@
     notes_coming_soon: Notes for this video coming soon.
     autoplay_option: Videoların avtoifası
     download: Videonu endir
-  compatability:
-    working:
-      header: Veb səyyahınızın dəstəklənməsi üzərində işləyirik.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Bu xəbərdarlığı gizlət
+  compatibility:
     upgrade:
-      header: Zəhmət olmasa, naviqatorunuzu yeniləyin.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
-      button: Take me to the list of supported browsers
+      unsupported_message: Your browser is not supported. Please upgrade your browser
+        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
+        browsers</a>. You can try viewing the page, but expect functionality to be
+        broken.
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
+        10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
+        8, 9, and 10. Please upgrade to a modern browser.
+      link: Daha ətraflı
   slow_loading: Bu, adi halda olduğundan daha çox vaxt aparır...
   try_reloading: Səhifəni yenidən yükləməyə cəhd edin
   next_stage: Qurtardı! Növbəti mərhələyə keçin
@@ -540,6 +577,15 @@
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: "Şagirdlər bunları kod yazmaqla edib!"
@@ -550,12 +596,15 @@
       yazaraq <b>%{count}</b> mobil əlavə və şəkil düzəldib. Hər proqramın necə işlədiyini
       görmək üçün şəkil və ekran təsvirlərini klikləyin."
     want_to_make_your_own: "Özünüz üçün də birini düzəltmək istərdiniz?"
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Daha çox &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: "%{time_ago} ago"
     header: Qalereya
     header_playlab: Oyun labı
     header_artist: Rəssam
+    report_abuse: Report Abuse
   landing:
     prerelease: This course is in <span class='betatext'>beta</span>.  This means
       it is not the final version of the course, and is subject to revision as feedback
@@ -590,6 +639,15 @@
     wrong_body: Thank you for submitting answers.
     correct_title: Təşəkkür
     correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Yanlış həll
     wrong_body: Daxil etdiyiniz həll yanlışdır. Lütfən, bir daha cəhd edin!
@@ -694,6 +752,10 @@
     share: Bölüşün
     share_title: Share your project
     share_copy_link: 'Copy the link:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Close
     more: Daha çox
     name: Ad
@@ -746,7 +808,77 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
       no_icons_found: No icons found
+    playzone:
+      artist_description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
+      playlab_title: New App
+      primary_header: Congratulations! You finished %{stageName}!
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
+  flex_category:
+    required: Overview
+    content: Content
+    practice: Teacher Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
+      a site that is not operated by Code.org.</strong> This site may have privacy
+      policies that differ from Code.org's.<br/><br/>We have selected these third
+      party resources because we think they will be useful to you. While we are not
+      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
+      support</a> if you find the content objectionable, or if the linked site is
+      no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: Download %{app_name} for offline use (136MB)
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

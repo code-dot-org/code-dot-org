@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:16.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Getting Started: Sending Numbers ",
+    "markdown_instructions": "Respond to the following question.\n\nList two or three challenges you faced when trying to send multi-bit messages using the bit-sending widget during previous classes?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

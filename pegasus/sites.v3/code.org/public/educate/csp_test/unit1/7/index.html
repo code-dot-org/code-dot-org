@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson, students are first introduced to the standard number-to-text encoding scheme used in computers and on the Internet known as ASCII encoding. Students will invent a communication protocol that uses only plain text ASCII characters to encode fancier formatting for text such as fonts, colors, sizes, etc. Students will demonstrate their protocol by using the Internet Simulator to send an encoded message to a partner, who must correctly interpret the formatting and draw the result on a piece of paper.">
+    <title>Encoding and Sending Formatted Text</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit1/"><span class="h2">Unit</span><span class="h1">1</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch1" data-pdf-link="#unit1chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/1" data-pdf-link="#unit1lesson1">
+                1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/2" data-pdf-link="#unit1lesson2">
+                2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/3" data-pdf-link="#unit1lesson3">
+                3
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/4" data-pdf-link="#unit1lesson4">
+                4
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/5" data-pdf-link="#unit1lesson5">
+                5
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/6" data-pdf-link="#unit1lesson6">
+                6
+            </a>
+            </div>
+            
+                
+                    
+                        <div class="lesson current">
+                    
+                
+            <a href="/educate/csp_test/unit1/7" data-pdf-link="#unit1lesson7">
+                7
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch2" data-pdf-link="#unit1chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/8" data-pdf-link="#unit1lesson8">
+                8
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/9" data-pdf-link="#unit1lesson9">
+                9
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/10" data-pdf-link="#unit1lesson10">
+                10
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/11" data-pdf-link="#unit1lesson11">
+                11
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/12" data-pdf-link="#unit1lesson12">
+                12
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/13" data-pdf-link="#unit1lesson13">
+                13
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/14" data-pdf-link="#unit1lesson14">
+                14
+            </a>
+            </div>
+            
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit1lesson7">
+        
+            
+                <h1>Lesson 7: Encoding and Sending Formatted Text</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+                
+                Group Problem Solving
+            
+                | 
+                Internet Simulator
+            
+                | 
+                Widget
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson, students are first introduced to the standard number-to-text encoding scheme used in computers and on the Internet known as <span class="vocab" title="ASCII: ASCII - American Standard Code for Information Interchange.  ASCII is the universally recognized raw text format that any computer can understand.">ASCII</span> encoding. Students will invent a communication protocol that uses only plain text ASCII characters to encode fancier formatting for text such as fonts, colors, sizes, etc.   Students will demonstrate their protocol by using the Internet Simulator to send an encoded message to a partner, who must correctly interpret the formatting and draw the result on a piece of paper.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>This lesson gives a glimpse into “coding languages” by having students invent a way to use plain ASCII text to encode other text.  At this point we really begin to see how layers upon layers of encodings - all tracing back to binary - work together to encode complex information.</p>
+<p>We also want to make a connection to the Internet and protocols. Information traveling across the Internet will often need to contain both the contents of the message, itself, and information that helps to format, route, or interpret this data. </p>
+<p>Developing means for differentiating between these two types of information has led to the creation of a number of ubiquitous protocols and languages. HTML (short for HyperText Markup Language) is the language in which the content and formatting of a web page are written.  And the protocol HTTP, or HyperText Transfer Protocol, is another ASCII-based protocol that is the foundation of communication on the web - it was designed to send and receive web page data over the internet. In both cases, plain ASCII text is imbued with deeper meaning through the development of well-defined protocols.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocencoding-and-sending-formatted-text">
+                
+                    <h3>Getting Started (15 mins)</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Assessment</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Getting Started</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Describe the ASCII encoding scheme.</li>
+                    
+                        <li>Design/invent a protocol for sending formatted text using the Internet Simulator.</li>
+                    
+                        <li>Invent a text formatting language.</li>
+                    
+                        <li>Explain the connection between binary and more complex encodings of formatted text</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit1/lesson11" target="_blank">Forum</a></li>
+<li>(Optional) Poster Paper</li>
+<li>Markers or Crayons </li>
+<li>Section prepped to use Internet Simulator in Code Studio.</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit1' target='_blank' class='print_link'>CSP Unit 1</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1nHFEshJrvQ0q92YZ46i1HGnAm-bK8wwvVorPIDjEmFc/edit?usp=sharing' target='_blank' class='print_link'>Rubric - Sending Formatted Text</a> - Rubric (<a href='https://docs.google.com/document/d/1nHFEshJrvQ0q92YZ46i1HGnAm-bK8wwvVorPIDjEmFc/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1zL5pzxXcK3s3Xq0yg1tXJMxShMABZk2hP8BhEMdc5Eo/edit?usp=sharing' target='_blank' class='print_link'>Sending Formatted Text</a> - Activity Guide (<a href='https://docs.google.com/document/d/1zL5pzxXcK3s3Xq0yg1tXJMxShMABZk2hP8BhEMdc5Eo/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Vocabulary</h2>
+                <ul>
+                    
+                        <li><strong>ASCII</strong> - ASCII - American Standard Code for Information Interchange.  ASCII is the universally recognized raw text format that any computer can understand.</li>
+                    
+                        <li><strong>code</strong> - (v) to write code, or to write instructions for a computer.</li>
+                    
+                        <li><strong>Protocol</strong> - A set of rules governing the exchange or transmission of data between devices.</li>
+                    
+                </ul>
+            
+
+        </div>
+    </div>
+
+    <div id="encoding-and-sending-formatted-textcontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started (15 mins)</h2>
+                    <div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<p>In previous lessons we explored how to encode numbers in binary, and you also developed protocols for sending a list of numbers. Today we’re going to take that method one step further and look at how we can encode text with a binary representation. Hopefully you are beginning to realize that if we can figure out a way to represent information as a set of numbers, then we can encode it in bits and store that information in a computer or send it over the Internet.</p>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_textEncode"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<p><a data-lightbox="all_images" data-title="Possible encoding" href="https://code.org/educate/docs/csp/U1L10-mapping.png"><img alt="Possible encoding" class="right" src="https://code.org/educate/docs/csp/U1L10-mapping.png"></a></p>
+</div>
+<div>
+<ul>
+<li>A conventional way to do this is to make a simple mapping of the 26 letters of the alphabet to numbers, something similar to the example on the right. This is not, however, the only solution.  </li>
+<li>Students should have the freedom to invent a text-encoding scheme however they like. Some students may wish to give common phrases or words their own sequences of bits rather than letter-to-number mappings.</li>
+<li>If students are moving quickly encourage them to add more functionality. How will their protocols encode punctuation, capital letters, special characters? </li>
+</ul>
+</div>
+</div>
+<h3 id="think-pair-share-how-would-you-encode-text">Think Pair Share - How would you encode text?</h3>
+<p><strong>Prompt:</strong></p>
+<p><em>“One of the most powerful uses of the internet is sending text to people.  Since the internet can only send bits around we need a way to encode text with bits…”</em></p>
+<p><em>“If it were up to you, how would you encode text in binary? Quickly, jot down an idea for encoding text.”</em></p>
+<ul>
+<li>Provide students a couple of minutes to write their thoughts. </li>
+<li>Emphasize that they do not need to actually specify every detail of the scheme but merely need to outline its structure.</li>
+</ul>
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_None"><i class="glyphicon glyphicon-comment"></i>Discussion Goal</p>
+<div>
+<p>Points to draw out in the discussion:</p>
+</div>
+<div>
+<ul>
+<li>Most probably invented a scheme that mapped letters of the alphabet and other text characters to numbers.</li>
+<li>There are tradeoffs in deciding how many bits per character you think you need.  How much do students’ suggestions vary?  </li>
+<li>In order to <em>transmit</em> text data we’re all going to have to agree on an encoding scheme (foreshadow <span class="vocab" title="ASCII: ASCII - American Standard Code for Information Interchange.  ASCII is the universally recognized raw text format that any computer can understand.">ASCII</span>)</li>
+</ul>
+</div>
+</div>
+<p><strong>Discuss</strong></p>
+<p>Have students compare and contrast encoding schemes with their neighbor first, then open up the discussion to the class.  Here are a few prompts:</p>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_textEncode"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<ul>
+<li>Did you and your neighbor come up with the exact same idea?  What was different?</li>
+<li>How many bits does your encoding scheme require? For example, how many bits would you need to say “hello”?</li>
+<li>Did you account for anything besides the letters of alphabet (or whole words)?</li>
+<li>Of the encoding schemes mentioned so far, which one is “best”? why?</li>
+</ul>
+<h3 id="introduce-the-ascii-encoding-scheme">Introduce the ASCII encoding scheme.</h3>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<p>You just invented your own scheme for encoding text with numbers.  It turns out that there is a standard encoding for most of the symbols you can type on an American keyboard.  </p>
+</div>
+<div>
+<p>That encoding is called the <strong>American Standard Code for Information Interchange</strong> or <strong><span class="vocab" title="ASCII: ASCII - American Standard Code for Information Interchange.  ASCII is the universally recognized raw text format that any computer can understand.">ASCII</span></strong>  (pronoucned: “Ask-ee”).  </p>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_asciiResearch"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p>Time permitting you might send students off to do their own “rapid research” on ASCII and report back.  You should be able to draw out the same points.</p>
+</div>
+</div>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_asciiResearch"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<ul>
+<li>Project or share an ASCII table for your students.  <a href="http://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart" target="_blank">Here’s an example chart</a>.</li>
+<li>
+<p>Then present the key components of this encoding scheme. </p>
+<ul>
+<li>ASCII codes were originally 7 bits long and so there are 128 possible values.</li>
+<li>0-31  are “control characters” that are largely defunct and go unused; they were formerly used to control various aspects of machines and printers. </li>
+<li>32-126 are printable characters and include the numbers 0-9, all 26 letters (both lowercase and uppercase), and many common punctuation symbols.</li>
+<li>127 is the symbol for delete.</li>
+<li>Over time, 8 bits became a standard “chunk-size” for encoding information. ASCII made the transition to this 8-bit encoding by just adding an extra 0 to the front of the old 7-bit codes.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition guide">
+<p class="admonition-title" id="guide_None"><i class="fa fa-pencil-square-o"></i>Quick Activity: write your name in ASCII codes</p>
+<div></div>
+</div>
+<div class="guide">
+<p>Using the ASCII table, translate your first name from letters to numbers using the ASCII table.</p>
+<ul>
+<li>Write your name as: *Name!”  (capital first letter, exclamation point at the end)</li>
+<li>Give students a minute to do this</li>
+</ul>
+</div>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Transitional Remark</p>
+<div>
+<ul>
+<li>Having a standardized protocol like ASCII to encode text enables us to send and receive textual information. </li>
+<li>This is very useful, but there are still instances when we will want even greater expressive power in our digital communications.</li>
+</ul>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <h3 id="formatting-text-challenge-create-a-protocol-for-encoding-formatted-text">Formatting Text Challenge: Create a protocol for encoding formatted text</h3>
+<p><strong>Introduction:</strong></p>
+<p><em>“What if you wanted to send </em>formatted text<em> that included things like the ability to underline, bold, or italicize words....specify a different font size, or color?”</em></p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_textformats"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p>You might poll the class for other kinds of formatting you see with text.  Some things that might come out:
+<em> tables or grids of text
+</em> different font faces (e.g. Arial, Times, gill sans, etc.)
+* placement of text on the page, like floating text boxes, etc.</p>
+</div>
+</div>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_textformats"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<p>Things like this: </p>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U1L11-text-formatting-1.png"><img alt="" src="https://code.org/educate/docs/csp/U1L11-text-formatting-1.png"></a></p>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<p>Today your challenge is to:</p>
+</div>
+<div>
+<ul>
+<li>Invent a protocol for sending formatted text</li>
+<li>Use the Internet Simulator to test out your protocol.</li>
+</ul>
+</div>
+<div>
+<p>You will also <strong>notice that the Internet Simulator has been updated</strong> so that you can now type ASCII text characters to send.</p>
+</div>
+</div>
+<p><strong>Transition to Code Studio</strong></p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_asciipractice"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U1L11-myDeviceTab.png"><img alt="" src="https://code.org/educate/docs/csp/U1L11-myDeviceTab.png" style="width: 200px; float: right;"></a></p>
+</div>
+<div>
+<p>Before starting the activity you might want to have students just practice sending ASCII text messages to each other to get a feel for the new environment.</p>
+</div>
+<div>
+<p>While doing this you should point out that <em>everything is still binary</em> underneath the hood.</p>
+</div>
+<div>
+<p>You can use the <strong>My Device</strong> tab in the Internet Simulator to turn different encoding schemes on or off.</p>
+</div>
+</div>
+<ul>
+<li>Place students in groups of 2 or 3</li>
+<li>Distribute a copy of <a class="resource" href="https://docs.google.com/document/d/1zL5pzxXcK3s3Xq0yg1tXJMxShMABZk2hP8BhEMdc5Eo/edit?usp=sharing" target="_blank">Sending Formatted Text</a> to each group and <a class="resource" href="https://docs.google.com/document/d/1nHFEshJrvQ0q92YZ46i1HGnAm-bK8wwvVorPIDjEmFc/edit?usp=sharing" target="_blank">Rubric - Sending Formatted Text</a>.</li>
+<li>Students should <strong>connect to their partner in the Internet Simulator</strong></li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_asciipractice"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<ul>
+<li>Students should notice the new ability to send text.</li>
+</ul>
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_None"><i class="glyphicon glyphicon-comment"></i>Activity Goal</p>
+<div>
+<p>Students must define a protocol that allows for the encoding of text formatting, while only making use of the printable ASCII character set, i.e. 32-126.</p>
+</div>
+<div>
+<p>A conventional way to do this is to specify a set of  “reserved words” or characters, that should be interpreted as formatting instructions.  For example, HTML uses angle-brackets &lt;…&gt; with opening and closing tags, for example: </p>
+</div>
+<div>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U1L11-text-formatting-3.png"><img alt="" src="https://code.org/educate/docs/csp/U1L11-text-formatting-3.png"></a></p>
+</div>
+<div>
+<p>Students who have seen HTML prior to this class may come up with schemes for the simple problems easily; give them some of the more challenging encodings, such as adding column formatting to their text, placing text at an arbitrary location on the page (like a text box), creating tables, etc.</p>
+</div>
+</div>
+<div class="admonition guide">
+<p class="admonition-title" id="guide_None"><i class="fa fa-pencil-square-o"></i>Invent a protocol for sending formatted text with the Internet Simulator</p>
+<div></div>
+</div>
+<div class="guide">
+
+<p>(from the activity guide)</p>
+<h4 id="directions">Directions</h4>
+<p>Work with a partner or in a small team to develop a protocol that allows you to send formatted text. </p>
+<h4 id="guidelines">Guidelines</h4>
+<p>Both the text and the formatting instructions must be derived from the printable ASCII character set (i.e. codes 32-126).</p>
+<p>Your protocol must encode at least:</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_develop"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p>Give teams time to develop their protocols, either on their Activity Guides or on a separate poster, document, slideshow, etc. </p>
+</div>
+<div>
+<p>Encourage students to iteratively test their protocols to make sure they have not overlooked any gaps in their protocol.</p>
+</div>
+</div>
+<ul>
+<li>bold, italics, and underlining</li>
+<li>three different font sizes (large, medium, and small)</li>
+<li>three different font colors (red, black, blue)</li>
+<li>You will demonstrate that your protocol works by sending a message with the <strong>Internet Simulator</strong></li>
+<li>
+<p>You will send a message and the recipient must be able to faithfully draw (or produce in some fashion) the formatted text, based only on the data she received.  Here’s a sample message:</p>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U1L11-text-formatting-2.png"><img alt="" src="https://code.org/educate/docs/csp/U1L11-text-formatting-2.png"></a></p>
+</li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_develop"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<h4 id="develop-your-protocol">Develop Your Protocol</h4>
+<p>Use the space below to brainstorm ideas for your protocol. Iteratively improve your protocol by testing it out with simple sample messages.</p>
+</div>
+
+<p><strong>Demonstrate:</strong> </p>
+<ul>
+<li>Test students’ protocols by providing a formatted message to one member of the team and having them send the message to their partner using the Internet Simulator. </li>
+<li>Students may recreate the message by hand or in a text document and compare results to the intended message.</li>
+<li>For stronger proof, ask one member of each group to move to the other side of the room or hallway.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <div class="admonition content">
+<p class="admonition-title" id="content_None"><i class="glyphicon glyphicon-education"></i>Content Corner</p>
+<div>
+<p>What students likely did in the activity was invent a text-based <span class="vocab" title="code: (v) to write code, or to write instructions for a computer.">code</span>.  Whether they are formatting languages like HTML, or Markdown or programming languages like Java, C, or Python, all of these languages have one thing in common: they use ASCII text to encode other text or information.</p>
+</div>
+<div>
+<p>Don’t be shy about telling students that they just invented a coding language.  At this point in the course a <span class="vocab" title="code: (v) to write code, or to write instructions for a computer.">code</span> and a <span class="vocab" title="Protocol: A set of rules governing the exchange or transmission of data between devices.">protocol</span> are very similar. Even though it’s probably something no one else will use, the process students just went through gives a taste of inventing any kind of formal language or protocol that ultimately needs to be interpreted and processed by a computer.</p>
+</div>
+</div>
+<h3 id="discuss-the-results-of-the-activity">Discuss the results of the activity</h3>
+<p><strong>Discuss</strong>
+Use a group discussion strategy to address these questions:</p>
+<ul>
+<li>Were most groups successful? </li>
+<li>If not, what caused the most trouble? </li>
+<li>Were some components of the challenge easier to address than others? </li>
+</ul>
+<h3 id="comparecontrast-encoding-schemes-with-html">Compare/contrast encoding schemes with HTML</h3>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_htmldemo"><i class="fa fa-lightbulb-o"></i>Optional Demonstration</p>
+<div>
+<ul>
+<li>Most web browsers allow you to view the source code for a web site (e.g. Chrome allows this in Developer Tools). </li>
+<li>Point out the tagging system used to structure the text of a website. Ask students to consider how similar or different this protocol is to their own.</li>
+<li>W3Schools Introductory HTML: http://www.w3schools.com/html/html_intro.asp</li>
+</ul>
+</div>
+</div>
+<ul>
+<li>Today’s activity is motivated by the real-life challenge of bringing web pages to life. </li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_htmldemo"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<ul>
+<li>Students more familiar with HTML / CSS may recognize many of these ideas, but it can still be instructive to show the class that much of the information required to view a web page isn’t the content itself, but information on how it should be formatted.</li>
+</ul>
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_layers"><i class="glyphicon glyphicon-comment"></i>Discussion Goal</p>
+<div>
+<p>There are many ways to answer this question.  Any response that acknowledges:</p>
+</div>
+<div>
+<ul>
+<li>sequences of binary states can be used to represent numbers</li>
+<li>numbers can be assigned to letters of the alphabet to encode text</li>
+<li>with plain text you can make a <em>code</em> you can use to apply other meanings (or formats) to text</li>
+<li>You can invent a “formatting language” (like HTML) to represent different ways you want text messages to appear.</li>
+</ul>
+</div>
+</div>
+<h3 id="discuss-layers-of-encodings">Discuss layers of encodings</h3>
+<p>Do a quick <em>Think Pair Share</em> or perhaps assign this question as written work.</p>
+<p><strong>Prompt:</strong></p>
+<p><em>“Take a moment to think about the layers of encodings that allowed for formatted text to be transmitted over the Internet.”</em></p>
+<p><em>“Imagine someone pointed to piece of formatted text and asked: ‘Can you explain to me how this is encoded in binary?’  How would you explain it?”</em></p>
+<ul>
+<li>Give students a moment to jot ideas down.</li>
+<li>Discuss with neighbor.</li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-discussion"><a href="#discussion_layers"><i class="glyphicon glyphicon-comment"></i></a></div>
+<p></p>
+<ul>
+<li>Share explanations with the class.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Rubric:</strong></p>
+<ul>
+<li>Use <a class="resource" href="https://docs.google.com/document/d/1nHFEshJrvQ0q92YZ46i1HGnAm-bK8wwvVorPIDjEmFc/edit?usp=sharing" target="_blank">Rubric - Sending Formatted Text</a> to assess students’ work on the activity. </li>
+</ul>
+<p><strong>Questions</strong> (found both on the Rubric and in Code Studio):</p>
+<ul>
+<li>How many bits are required to store the number “150” in ASCII?<ul>
+<li>3 bits</li>
+<li>8 bits</li>
+<li>16 bits</li>
+<li>24 bits</li>
+<li>32 bits</li>
+</ul>
+</li>
+<li>The word “Apple” translated into its ASCII number equivalent is:<ul>
+<li>097 112 112 108 101</li>
+<li>097 108 108 111 119</li>
+<li>065 112 112 108 101</li>
+<li>065 110 110 105 101</li>
+<li>065 108 108 111 119</li>
+</ul>
+</li>
+<li>What problems arose in your efforts to create a working protocol? How did you think about the problems in order to solve them?</li>
+<li>Describe one instance in which collaboration with a partner influenced the final protocol your team produced.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>Additional Formatting Encoding Challenges:<ul>
+<li>Special characters not found in the ASCII encoding (e.g. ñ)</li>
+<li>Multiple columns of text</li>
+<li>A text box at any location on the screen</li>
+<li>A table of information</li>
+</ul>
+</li>
+<li>Continue the exploration of HTML by determining how you would complete today’s activity in HTML. Further compare your own protocol with HTML.</li>
+<li>Read <a href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter3.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Chapter 3</a>, Ghosts in the Machine, pp. 73-80 (What You See Is Not What the Computer Knows), then answer the following questions:<ul>
+<li>Give an example of your own when just knowing what a computer did wasn’t sufficient - you really needed to know how and why it was doing what it was doing as well.</li>
+<li>Talk about file metadata and how it “fingerprints” a file. Include a discussion of file metadata benefits and challenges.</li>
+</ul>
+</li>
+<li>Read <a href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter3.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Chapter 3</a>, Ghosts in the Machine, pp. 80-88 (Representation, Reality, and Illusion), then answer the following questions:<ul>
+<li>How does highlighting in a PDF doc work? What are the computational ideas utilized?</li>
+</ul>
+</li>
+<li>Continue the exploration of HTML by determining how you would complete today’s activity in HTML. Further compare your own protocol with HTML.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <h3 id="introduce-ascii-encoding-scheme">Introduce ASCII encoding scheme.</h3>
+<p><strong>Introduction:</strong> Project or share an ASCII table for your students. Then present the key components of this encoding scheme. <em>NOTE:</em> <a href="http://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart" target="_blank">Here’s an example chart</a>.</p>
+<p><em>Say:</em> In the previous lesson,  you invented your own scheme for encoding text with numbers.  It turns out that there is a standard encoding for most of the symbols you can type on an American keyboard.  That encoding is called the <strong>American Standard Code for Information Interchange</strong> or ASCII (“Ask-ee”).  Key facts:</p>
+<ul>
+<li>ASCII codes were originally 7 bits long and so there are 128 possible values.</li>
+<li>0-31  are “control characters” that are largely defunct and go unused; they were formerly used to control various aspects of machines and printers. </li>
+<li>32-126 are printable characters and include the numbers 0-9, all 26 letters (both lowercase and uppercase), and many common punctuation symbols.</li>
+<li>127 is the symbol for delete.</li>
+<li>Over time, 8 bits became a standard “chunk-size” for encoding information. ASCII made the transition to this 8-bit encoding by just adding an extra 0 to the front of the old 7-bit codes.</li>
+</ul>
+<p><strong>Exploration:</strong> Using the ASCII table, translate your first name from letters to numbers using the table.</p>
+<p><strong>Transition:</strong> Say: Having a standardized protocol like ASCII to encode text enables us to send and receive textual information. This is very useful, but there are still instances when we will want even greater expressive power in our digital communications.</p>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CD</strong> - Computers &amp; Communication Devices</summary>
+                    <ul>
+                        
+                            <li><strong>CD.L2:6</strong> - Describe the major components and functions of computer systems and networks.</li>
+                        
+                            <li><strong>CD.L3A:9</strong> - Describe how the Internet facilitates global communication.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L2:13</strong> - Understand the notion of hierarchy and abstraction in computing including high level languages, translation, instruction set and logic circuits.</li>
+                        
+                            <li><strong>CT.L2:14</strong> - Examine connections between elements of mathematics and computer science including binary numbers, logic, sets and functions.</li>
+                        
+                            <li><strong>CT.L2:7</strong> - Represent data in a variety of ways including text, sounds, pictures and numbers.</li>
+                        
+                            <li><strong>CT.L2:8</strong> - Use visual representations of problem states, structures and data (e.g., graphs, charts, network diagrams, flowcharts).</li>
+                        
+                            <li><strong>CT.L3A:6</strong> - Analyze the representation and trade-offs among various forms of digital information.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>2.1</strong> - A variety of abstractions built upon binary sequences can be used to represent all digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.1</strong> - Describe the variety of abstractions used to represent data. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.1A</strong> - Digital data is represented by abstractions at different levels.</li>
+                                
+                                    <li><strong>2.1.1B</strong> - At the lowest level, all digital data are represented by bits.</li>
+                                
+                                    <li><strong>2.1.1C</strong> - At a higher level, bits are grouped to represent abstractions, including but not limited to numbers, characters, and color.</li>
+                                
+                                    <li><strong>2.1.1D</strong> - Number bases, including binary, decimal, and hexadecimal, are used to represent and investigate digital data.</li>
+                                
+                                    <li><strong>2.1.1E</strong> - At one of the lowest levels of abstraction, digital data is represented in binary (base 2) using only combinations of the digits zero and one.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.2</strong> - Explain how binary sequences are used to represent digital data. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.2B</strong> - In many programming languages, the fixed number of bits used to represent characters or integers limits the range of integer values and mathematical operations; this limitation can result in overflow or other errors.</li>
+                                
+                                    <li><strong>2.1.2D</strong> - The interpretation of a binary sequence depends on how it is used.</li>
+                                
+                                    <li><strong>2.1.2E</strong> - A sequence of bits may represent instructions or data.</li>
+                                
+                                    <li><strong>2.1.2F</strong> - A sequence of bits may represent different types of data in different contexts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.2</strong> - Multiple levels of abstraction are used to write programs or create other computational artifacts</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.2.1</strong> - Develop an abstraction when writing a program or creating other computational artifacts. [P2]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.2.1A</strong> - The process of developing an abstraction involves removing detail and generalizing functionality.</li>
+                                
+                                    <li><strong>2.2.1B</strong> - An abstraction extracts common features from specific examples in order to generalize concepts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.1</strong> - People use computer programs to process information to gain insight and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.3</strong> - Explain the insight and knowledge gained from digitally processed data by using appropriate visualizations, notations, and precise language. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.3A</strong> - Visualization tools and software can communicate information about data.</li>
+                                
+                                    <li><strong>3.1.3E</strong> - Interactivity with data is an aspect of communicating.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.3</strong> - There are trade offs when representing information as digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.3.1</strong> - Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.3.1A</strong> - Digital data representations involve trade  offs related to storage, security, and privacy concerns.</li>
+                                
+                                    <li><strong>3.3.1B</strong> - Security concerns engender tradeoffs in storing and transmitting information.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.1</strong> - The Internet is a network of autonomous systems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.1.1</strong> - Explain the abstractions in the Internet and how the Internet functions. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.1.1A</strong> - The Internet connects devices and networks all over the world.</li>
+                                
+                                    <li><strong>6.1.1B</strong> - An end to end architecture facilitates connecting new devices and networks on the Internet.</li>
+                                
+                                    <li><strong>6.1.1C</strong> - Devices and networks that make up the Internet are connected and communicate using addresses and protocols.</li>
+                                
+                                    <li><strong>6.1.1D</strong> - The Internet and the systems built on it facilitate collaboration.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.2</strong> - Characteristics of the Internet influence the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.2</strong> - Explain how the characteristics of the Internet influence the systems built on it. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.2D</strong> - Interfaces and protocols enable widespread use of the Internet.</li>
+                                
+                                    <li><strong>6.2.2F</strong> - The Internet is a packet-switched system through which digital data is sent by breaking the data into blocks of bits called packets, which contain both the data being transmitted and control information for routing the data.</li>
+                                
+                                    <li><strong>6.2.2G</strong> - Standards for packets and routing include transmission control protocol/Internet protocol (TCP/IP).</li>
+                                
+                                    <li><strong>6.2.2H</strong> - Standards for sharing information and communicating between browsers and servers on the Web include HTTP and secure sockets layer/transport layer security (SSL/TLS).</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocencoding-and-sending-formatted-text').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#encoding-and-sending-formatted-textcontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'encoding-and-sending-formatted-text', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

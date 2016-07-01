@@ -3,19 +3,19 @@
   "google_analytics_id":"UA-37745279-1",
   "us_site": "Code.org (US Site)",
   "about_nav": {
-    "About Us": "/about",
-    "Resources": "/about/resources",
-    "Partners": "/about/partners"
+    "Hakkımızda": "/about",
+    "Kaynaklar": "/about/resources",
+    "Ortaklar": "/about/partners"
   },
   "header_links": {
-    "HOME": "/",
-    "TUTORIALS": "/learn",
-    "RESOURCES": "/about/resources"
+    "Ana Sayfa": "/",
+    "Dersler": "/learn",
+    "Kaynaklar": "/about/resources"
   },
   "footer_links": {
-    "Tutorials": "/learn",
-    "About": "/about",
-    "Resources": "/about/resources",
-    "Partners": "/about/partners"
+    "Dersler": "/learn",
+    "Hakkımızda": "/about",
+    "Kaynaklar": "/about/resources",
+    "Ortaklar": "/about/partners"
   }
 }

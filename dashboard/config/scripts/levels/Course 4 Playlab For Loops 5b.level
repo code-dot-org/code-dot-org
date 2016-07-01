@@ -1,0 +1,317 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2016-05-04T21:12:06.000Z",
+  "level_num": "custom",
+  "user_id": 16,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  //return Studio.sayComplete >= 100;\r\n  \r\n  return (Studio.tickCount > 90) && (Studio.sprite[1].y - Studio.sprite[0].y <30);\r\n  //return Studio.scoreText === 1;\r\n  \r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "failure_condition": "function () {\r\n  return Studio.sprite[0].y > (Studio.sprite[1].y + 20);\r\n  //return ((Studio.sprite[1].x >= 360) && (Studio.sprite[0].x < 360);\r\n}",
+    "maze": "[[0,0,0,0,16,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,4],[0,0,4,0,0,0,0,0],[0,0,0,0,0,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,16,0,0,0]]",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "true",
+    "free_play": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "instructions": "Adjust the interval on these `for` loops so that the two characters end in the exact same place.",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "coordinate_grid_background": "false",
+    "embed": "false",
+    "disable_sharing": "false",
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "true",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "markdown_instructions": "Adjust the interval on these `for` loops so that the two characters end in the exact same place.",
+    "first_sprite_index": "13",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "callout_json": "[]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The characters are about 175 pixels away from the center.\",\r\n  \"hint_id\": \"Course_4_Playlab_For_Loops_5b_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Remember, a character's next step will be longer than their last, since the counter keeps getting larger.\",\r\n  \"hint_id\": \"Course_4_Playlab_For_Loops_5b_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "failure_message_override": "Remember, both characters need to stop in the same place.",
+    "timeout_failure_tick": "120"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "for_loops": 1,
+    "variables": 1
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false" uservisible="false">
+          <next>
+            <block type="studio_setSpriteSizeParams" inline="true">
+              <value name="SPRITE">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">0.4</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_setSpriteSizeParams" inline="true">
+                  <value name="SPRITE">
+                    <block type="math_number">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">0.4</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="studio_setBackground">
+                      <title name="VALUE">"night"</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="controls_for" inline="true" deletable="false" editable="false">
+              <title name="VAR">Actor_1_Counter</title>
+              <value name="FROM">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">40</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="studio_moveDistanceParamsSprite" inline="true">
+                  <title name="DIR">4</title>
+                  <value name="SPRITE">
+                    <block type="math_number" deletable="false" movable="false" editable="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="variables_get" deletable="false" movable="false" editable="false" id="PointToMe">
+                      <title name="VAR">Actor_1_Counter</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="controls_for" inline="true" deletable="false" editable="false">
+              <title name="VAR">Actor_2_Counter</title>
+              <value name="FROM">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">31</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="studio_moveDistanceParamsSprite" inline="true">
+                  <title name="DIR">1</title>
+                  <value name="SPRITE">
+                    <block type="math_number" deletable="false" movable="false" editable="false">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="variables_get" deletable="false" movable="false" editable="false">
+                      <title name="VAR">Actor_2_Counter</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="math_number">
+          <title name="NUM">1</title>
+        </block>
+        <block type="studio_setSpriteParams" inline="true">
+          <title name="VALUE">"bird"</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">random</title>
+        </block>
+        <block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TEXT">
+            <block type="text">
+              <title name="TEXT"/>
+            </block>
+          </value>
+          <value name="TIME">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false" uservisible="false">
+          <next>
+            <block type="studio_setBackground" uservisible="false">
+              <title name="VALUE">"night"</title>
+              <next>
+                <block type="studio_setSpriteSizeParams" inline="true" uservisible="false">
+                  <value name="SPRITE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="VALUE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">0.4</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="studio_setSpriteSizeParams" inline="true" uservisible="false">
+                      <value name="SPRITE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">2</title>
+                        </block>
+                      </value>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">0.4</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="controls_for" inline="true" deletable="false" editable="false">
+              <title name="VAR">Actor_1_Counter</title>
+              <value name="FROM">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">40</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="studio_moveDistanceParamsSprite" inline="true" movable="false" next_connection_disabled="true">
+                  <title name="DIR">4</title>
+                  <value name="SPRITE">
+                    <block type="math_number" deletable="false" movable="false" editable="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="variables_get" deletable="false" movable="false" editable="false" id="PointToMe">
+                      <title name="VAR">Actor_1_Counter</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="controls_for" inline="true" deletable="false" editable="false">
+              <title name="VAR">Actor_2_Counter</title>
+              <value name="FROM">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">31</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="studio_moveDistanceParamsSprite" inline="true" movable="false" next_connection_disabled="true">
+                  <title name="DIR">1</title>
+                  <value name="SPRITE">
+                    <block type="math_number" deletable="false" movable="false" editable="false">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="variables_get" deletable="false" movable="false" editable="false">
+                      <title name="VAR">Actor_2_Counter</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Studio>

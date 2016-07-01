@@ -23,20 +23,25 @@
  */
 'use strict';
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
-var AppView = require('../templates/AppView.jsx');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var redux = require ('../redux');
+var Provider = require('react-redux').Provider;
+var AppView = require('../templates/AppView');
+var MazeVisualizationColumn = require('./MazeVisualizationColumn');
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var mazeUtils = require('./mazeUtils');
-var _ = utils.getLodash();
+var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
+var experiments = require('../experiments');
 
 var MazeMap = require('./mazeMap');
 var Bee = require('./bee');
@@ -261,7 +266,7 @@ function drawMap() {
   var obsId = 0;
   for (y = 0; y < Maze.map.ROWS; y++) {
     for (x = 0; x < Maze.map.COLS; x++) {
-      if (Maze.map.getTile(y, x) == SquareType.OBSTACLE) {
+      if (Maze.map.getTile(y, x) === SquareType.OBSTACLE) {
         var obsIcon = document.createElementNS(SVG_NS, 'image');
         obsIcon.setAttribute('id', 'obstacle' + obsId);
         obsIcon.setAttribute('height', Maze.MARKER_HEIGHT * skin.obstacleScale);
@@ -418,7 +423,7 @@ function drawMapTiles(svg) {
           }
 
           // For the first 3 levels in maze, only show the null0 image.
-          if (level.id == '2_1' || level.id == '2_2' || level.id == '2_3') {
+          if (level.id === '2_1' || level.id === '2_2' || level.id === '2_3') {
             Maze.wallMap[y][x] = 0;
             tile = 'null0';
           }
@@ -503,8 +508,6 @@ Maze.init = function (config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
   studioApp.reset = this.reset.bind(this);
 
-  var extraControlRows = null;
-
   skin = config.skin;
   level = config.level;
 
@@ -512,16 +515,14 @@ Maze.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, studioApp, config);
     // Override default stepSpeed
     Maze.scale.stepSpeed = 2;
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
-    extraControlRows = require('./extraControlRows.html.ejs')({
-      assetUrl: studioApp.assetUrl,
-      searchWord: level.searchWord
-    });
   }
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.cellClass = BeeCell;
@@ -582,11 +583,11 @@ Maze.init = function (config) {
     for (var y = 0; y < Maze.map.ROWS; y++) {
       for (var x = 0; x < Maze.map.COLS; x++) {
         var cell = Maze.map.getTile(y, x);
-        if (cell == SquareType.START) {
+        if (cell === SquareType.START) {
           Maze.start_ = {x: x, y: y};
         } else if (cell === SquareType.FINISH) {
           Maze.finish_ = {x: x, y: y};
-        } else if (cell == SquareType.STARTANDFINISH) {
+        } else if (cell === SquareType.STARTANDFINISH) {
           Maze.start_ = {x: x, y: y};
           Maze.finish_ = {x: x, y: y};
         }
@@ -610,48 +611,34 @@ Maze.init = function (config) {
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Maze.resetButtonClick);
 
-    if (skin.hideInstructions) {
+    const instructionsInTopPane = studioApp.reduxStore.getState()
+      .pageConstants.instructionsInTopPane;
+    if (skin.hideInstructions && !instructionsInTopPane) {
       document.getElementById("bubble").style.display = "none";
     }
   };
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        localeDirection: studioApp.localeDirection(),
-        blockUsed: undefined,
-        idealBlockNumber: undefined,
-        editCode: level.editCode,
-        blockCounterClass: 'block-counter-default',
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  };
+  // Push initial level properties into the Redux store
+  studioApp.setPageConstants(config, {
+    hideRunButton: !!(level.stepOnly && !level.edit_blocks)
+  });
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({
-          assetUrl: studioApp.assetUrl,
-          showStepButton: level.step && !level.edit_blocks
-        }),
-        extraControlRows: extraControlRows
-      },
-      hideRunButton: level.stepOnly && !level.edit_blocks
-    });
-  };
+  var visualizationColumn = (
+    <MazeVisualizationColumn
+      showStepButton={!!(level.step && !level.edit_blocks)}
+      searchWord={level.searchWord}
+    />
+  );
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
-    onMount: studioApp.init.bind(studioApp, config)
-  }), document.getElementById(config.containerId));
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          visualizationColumn={visualizationColumn}
+          onMount={studioApp.init.bind(studioApp, config)}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 /**
@@ -745,7 +732,7 @@ var createPegmanAnimation = function (options) {
   * direction required which direction the pegman is facing at.
   * animationRow which row of the sprite sheet the pegman animation needs
   */
-var updatePegmanAnimation = function(options) {
+var updatePegmanAnimation = function (options) {
   var rect = document.getElementById(options.idStr + 'PegmanClipRect');
   rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   rect.setAttribute('y', getPegmanYForRow(options.row));
@@ -998,10 +985,13 @@ Maze.execute = function (stepMode) {
   beginAttempt();
   Maze.prepareForExecution();
 
-
-  var code;
+  var code = '';
   if (studioApp.isUsingBlockly()) {
-    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    if (studioApp.initializationCode) {
+      code += studioApp.initializationCode;
+    }
+
+    code += Blockly.Generator.blockSpaceToCode('JavaScript');
   } else {
     code = dropletUtils.generateCodeAliases(dropletConfig, 'Maze');
     code += studioApp.editor.getValue();
@@ -1286,7 +1276,7 @@ Maze.scheduleAnimations = function (singleStep) {
  * @param {boolean} spotlightBlocks Whether or not we should highlight entire blocks
  * @param {integer} timePerStep How much time we have allocated before the next step
  */
-function animateAction (action, spotlightBlocks, timePerStep) {
+function animateAction(action, spotlightBlocks, timePerStep) {
   if (action.blockId) {
     studioApp.highlight(String(action.blockId), spotlightBlocks);
   }
@@ -1341,7 +1331,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
           scheduleDance(true, timePerStep);
           break;
         default:
-          timeoutList.setTimeout(function() {
+          timeoutList.setTimeout(function () {
             studioApp.playAudio('failure');
           }, stepSpeed);
           break;
@@ -1365,7 +1355,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
   }
 }
 
-function animatedMove (direction, timeForMove) {
+function animatedMove(direction, timeForMove) {
   var positionChange = tiles.directionToDxDy(direction);
   var newX = Maze.pegmanX + positionChange.dx;
   var newY = Maze.pegmanY + positionChange.dy;
@@ -1607,7 +1597,7 @@ Maze.scheduleFail = function (forward) {
         });
       }, stepSpeed * 4);
     }
-  } else if (squareType == SquareType.OBSTACLE) {
+  } else if (squareType === SquareType.OBSTACLE) {
     // Play the sound
     studioApp.playAudio('obstacle');
 
@@ -1617,7 +1607,7 @@ Maze.scheduleFail = function (forward) {
     obsIcon.setAttributeNS(
         'http://www.w3.org/1999/xlink', 'xlink:href',
         skin.obstacleAnimation);
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX + deltaX / 2,
                          Maze.pegmanY + deltaY / 2,
                          frame);
@@ -1699,7 +1689,7 @@ function scheduleDance(victoryDance, timeAlloted) {
   var originalFrame = tiles.directionToFrame(Maze.pegmanD);
   Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 16);
 
-  // If victoryDance == true, play the goal animation, else reset it
+  // If victoryDance === true, play the goal animation, else reset it
   var finishIcon = document.getElementById('finish');
   if (victoryDance && finishIcon) {
     studioApp.playAudio('winGoal');
@@ -1845,7 +1835,7 @@ Maze.scheduleLookStep = function (path, delay) {
 
 function atFinish() {
   return !Maze.finish_ ||
-      (Maze.pegmanX == Maze.finish_.x && Maze.pegmanY == Maze.finish_.y);
+      (Maze.pegmanX === Maze.finish_.x && Maze.pegmanY === Maze.finish_.y);
 }
 
 function isDirtCorrect() {

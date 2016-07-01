@@ -36,7 +36,7 @@ InputIterator.prototype.next = function () {
       paramNum++;
       wrapped = true;
     }
-  } while(wrapped && paramNum < this.numParams_);
+  } while (wrapped && paramNum < this.numParams_);
   this.remaining_--;
 
   return this.indices_.map(function (index) {

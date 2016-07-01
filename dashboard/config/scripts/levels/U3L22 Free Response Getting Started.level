@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:34.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Permanent Data Storage: Getting Started",
+    "markdown_instructions": "In the previous lesson, you added a \"best score\" feature to your clicker game. It worked fine for multiple plays in one game-playing session. \n\nWhy doesn't it save your best score from one session to the next?\"\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

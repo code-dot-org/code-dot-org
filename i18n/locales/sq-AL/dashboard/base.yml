@@ -23,9 +23,17 @@ sq:
           future: nuk mund të jetë në të ardhmen
   hello: Përshëndetje Botë
   welcome_back: 'Mirë se erdhët sërish, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Dorëzo
   unsubmit: Unsubmit
+  previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
+  cancel: Anulo
+  okay: Në rregull
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Shto një mësues:'
@@ -80,6 +88,7 @@ sq:
     teacher_title: Regjistrimi për mësuesit
     student_pitch: Rregjistrimi i nënësve në Code.org
     student_title: Regjistrimi i nxënësit
+    signup_title: Sign up for Code.org
     school_name: Emri i shkollës (jo i domosdoshëm)
     school_address: Adresa e shkollës (jo e domosdoshme)
     address_placeholder: adresa, qyteti, shteti, kodi postar
@@ -98,6 +107,9 @@ sq:
     student_terms: "Unë pajtohem me <a href='http://code.org/tos'>kushtet e përdorimit</a> të Code.org. Nëse jam më pak se 13 vjeç, duke plotesuar këtë formular unë dëshmoj që kam lejen e prindërve ose mbikqyrësit ligjor për të përdorur shërbimet e Code.org.<br/> Për përdorues nën moshën 13 vjeçare, adresat e emaileve nuk do të ruhen në formularin që na lejon t'i kontaktojmë."
     teacher_terms: "Unë pajtohem me <a href='http://code.org/tos'> kushtet e përdorimit</a> të Code.org."
     additional_information: Kemi nevojë për disa informacione shtesë për të vazhduar me rregjistrimin tuaj.
+    user_type_label: Account Type
+    user_type_teacher: Mësues
+    user_type_student: student
   signin_form:
     title: Ke një llogari ekzistuese? Logohu
     login: Email-i ose emri i përdoruesit
@@ -151,8 +163,6 @@ sq:
         subject: 'Bashkohu në një klasë me %{teacher_name} tek Code.org!'
       student_disassociated:
         subject: 'Lajmërim nga Code.org: %{student_name} nuk është më studenti yt.'
-      teacher_disassociated:
-        subject: 'Lajmërim nga Code.org: %{teacher_name} nuk është më si mësuesi yt.'
   reports:
     error:
       access_denied: Ju nuk keni akses te statistikat e këtij personi
@@ -331,6 +341,24 @@ sq:
     no_primary_course: Provo një kurs të Code Studio
     choose_next_course: Provo një kurs nga Studio e Kodimit duke zgjedhur një më poshtë
     print_certificate: Printo Certifikatën
+    announcement_title: Announcements
+    announcement_view_all: View all
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Mëso në Code Studio
     description: Çdokush mund të mësojë shkencat kompjuterike. Krijoni lojra, aplikacione dhe art me kode.
@@ -346,8 +374,9 @@ sq:
     thank_you: 'Falenderojmë <a href="https://code.org/about/donors"> sponsorat </a>,<a href="https://code.org/about/partners"> partnerët </a>, skuadrën tonë të gjerë të punës<a href="https://code.org/about/team"><a href="https://code.org/about/team"></a>, grupin e videos, dhe <a href="https://code.org/about/advisors"><a href="https://code.org/about/advisors"> këshilltarin tonë të arsimit</a> për mbështetjen e dhënë në krijimin e Studios së Kodit.'
     help_from_html: Inxhinerë nga Google, Microsoft, Facebook dhe Twitter ndihmuan në krijimin e këtij tutoriali.
     help_from_html_old: Inxhinierët e Google, Microsoft, Facebook dhe Twitter kanë ndihmuar në krijimin e këtyre materialeve.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Mundësuar nga Amazon Web Services
     trademark: '&copy;Code.org%{current_year}Code.org&reg; logoja e Kodit dhe Ora e Kodit&reg;  janë marka tregtare të Code.org.'
     copyright: E drejta e autorit
@@ -378,15 +407,12 @@ sq:
     notes_coming_soon: Shënimet për këtë video vijnë së shpejti.
     autoplay_option: Luaj videot automatikisht
     download: Shkarko Videon
-  compatability:
-    working:
-      header: Ne po punojmë në suportimin e shfletuesit tuaj.
-      message: "Code.org përdor teknologji web-i bashkëkohore. Kjo e bën faqen të lehtë në përdorim. Shfletuesi juaj nuk i suporton të gjitha karakteristikat e kërkuara dhe ju mund të keni probleme ndërkohë që jeni duke përdorur këtë pjesë të faqes. Ju lutem na ndihmoni duke<a href='%{report_issue_url}'>raportuar ndonjë problem që gjeni</a>. Ju gjithashtu<a href='%{supported_browsers_url}'>mund të përmirësoni shfletuesin tuaj me një version që e suporton</a>."
-      hide_this_warning: Mbaj të fshehtë këtë paralajmërim
+  compatibility:
     upgrade:
-      header: Ju lutem përmirësoni shfletuesin tuaj.
-      message: "Code.org përdor teknologji web-i bashkëkohore. Kjo e bën faqen të shpejtë në përdorim. Për fat të keq, shfletuesi juaj nuk i suporton të gjitha karakteristikat e kërkuara, për të parë këtë pjesë të faqes.<br/><br/>Instaloni një shfletues nga lista jonë e shfletuesve për të vazhduar. Ju mund ta<a href='#'>shikoni faqen</a>, por mund të mos funksionojë si duhet."
-      button: Më ço tek lista e shfletuesve që suportohen
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      link: Mëso më shumë
   slow_loading: Kjo po zgjat më shumë seç duhet...
   try_reloading: Provo të rifreskosh faqen
   next_stage: Përfundoi! Vazhdo tek hapi tjetër
@@ -452,18 +478,25 @@ sq:
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Studentët vizatuan këto me kod!
     students_made_these_with_code: Studentët e bënë këtë me kod!
     picture_count: 'Në këto <b>%{days}</b> ditë, studentët kanë vizatuar <b>%{count}</b> piktura duke shkruar programet e tyre kompjuterike. Kliko tek pikturat për të parë çdo program që funksionon.'
     activity_count: 'Në këto <b>%{days}</b> ditë, studentët kanë bërë <b>%{count}</b> apliakcione dhe piktura duke shkruar programet e tyre kompjuterike. Kliko në pikturat dhe screenshotet për të parë çdo program që funksionon.'
     want_to_make_your_own: Dëshiron të bësh tëndin?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Më shumë &rarr;'
     caption_by_name_age: 'nga %{name}, mosha %{age}'
     caption_time_ago: '%{time_ago} më përpara'
     header: Galeria
     header_playlab: Play Lab
     header_artist: Artisti
+    report_abuse: Report Abuse
   landing:
     prerelease: "Ky kurs është në<span class='betatext'>beta</span>. Kjo nënkupton që nuk është versioni final i këtij kursi dhe referohet të përsëritet sapo feedbacku të merret dhe të bëhen përmirësime."
     prerelease_hoc2014: "Ky tutorial është në <span class='betatext'>beta</span>. Referohet të rishikohet sapo feedbacku të merret dhe të bëhen përmirësimet."
@@ -495,6 +528,12 @@ sq:
     wrong_body: Thank you for submitting answers.
     correct_title: Faleminderit
     correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Zgjidhje e pasaktë
     wrong_body: Zgjidhja që keni futur është e pasktë. Ju lutem provojeni përsëri!
@@ -585,6 +624,9 @@ sq:
     share: Shpërndaje
     share_title: Shpërndaje projektin
     share_copy_link: 'Kopjo lidhjen:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Mbyll
     more: Më shumë
     name: Emri
@@ -623,8 +665,60 @@ sq:
           infringement: Copyright Infringement
           other: Tjetër
         detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}.'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Kerko nje ikone...
+      no_icons_found: Nuk u gjet ikona
+    playzone:
+      artist_description: Vizato figura të hatashme dhe dizenjo me Artistin!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Krijo një histori ose bëj një lojë me Play Lab!
+      playlab_title: New App
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
+  flex_category:
+    required: Përmbledhja
+    content: Content
+    practice: Teaching Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

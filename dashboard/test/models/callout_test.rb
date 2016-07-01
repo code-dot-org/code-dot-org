@@ -5,8 +5,8 @@ class CalloutTest < ActiveSupport::TestCase
     @level = create(:level, :blockly, :level_num => 'level1_2_3')
     @script = create(:script, :id => 333)
     @script2 = create(:script, :id => 321)
-    @script_level = create(:script_level, :script => @script, :level => @level)
-    @script_level2 = create(:script_level, :script => @script2, :level => @level)
+    @script_level = create(:script_level, :script => @script, :levels => [@level])
+    @script_level2 = create(:script_level, :script => @script2, :levels => [@level])
     @csv_callouts = Callout.find_or_create_all_from_tsv!('test/fixtures/callouts.tsv')
   end
 
@@ -18,7 +18,7 @@ class CalloutTest < ActiveSupport::TestCase
     assert_equal('#runButton', @csv_callouts.first.element_id)
     assert_equal('run', @csv_callouts.first.localization_key)
     assert_nil(@csv_callouts.first.qtip_config)
-    assert_equal(@csv_callouts.last.qtip_config, '{position: {my: "bottom left", at: "top right", adjust: {x: 297, y:70}}}')
+    assert_equal(@csv_callouts.last.qtip_config, '{"position": {"my": "bottom left", "at": "top right", "adjust": {"x": 297, "y":70}}}')
   end
 
   test "callouts should first_or_create when imported from tsv" do

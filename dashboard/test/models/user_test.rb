@@ -61,12 +61,6 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors[:email].length == 1
   end
 
-  test "cannot create young user with invalid email" do
-    user = User.create(@good_data_young.merge({email: 'foo@bar'}))
-    assert !user.valid?
-    assert user.errors[:email].length == 1
-  end
-
   test "cannot create user with no type" do
     user = User.create(@good_data.merge(user_type: nil))
     assert !user.valid?
@@ -351,63 +345,18 @@ class UserTest < ActiveSupport::TestCase
     assert user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
   end
 
-  test 'reset_secret_picture' do
-    user = create :user
-    user.secret_picture_id = nil
-    user.save!
+  test 'students have hashed email not plaintext email' do
+    student = create :student, email: 'will_be_hashed@email.xx'
 
-    # don't have one
-    assert !user.secret_picture
-
-    user.reset_secret_picture
-    # now you do
-    assert user.secret_picture
-
-    # there's only 22 of them and this is random, so it is possible to
-    # get the same password again
-
-    pictures = 1.upto(5).map do
-      user.reset_secret_picture
-      user.secret_picture
-    end
-
-    assert pictures.uniq.length > 1
+    assert student.email.blank?
+    assert student.hashed_email.present?
   end
 
-  test 'reset_secret_words' do
-    user = create :user
-    user.secret_words = nil
-    user.save!
+  test 'teachers have hashed email and plaintext email' do
+    teacher = create :teacher, email: 'email@email.xx'
 
-    # don't have one
-    assert !user.secret_words
-
-    user.reset_secret_words
-    # now you do
-    assert user.secret_words
-
-    words = 1.upto(5).map do
-      user.reset_secret_words
-      user.secret_words
-    end
-
-    assert words.uniq.length > 1
-  end
-
-  test 'users under 13 have hashed email not plaintext email' do
-    user = create :user, birthday: Date.new(2010, 10, 4), email: 'will_be_hashed@email.xx'
-
-    assert user.age < 13
-    assert !user.email.present?
-    assert user.hashed_email.present?
-  end
-
-  test 'users over 13 have plaintext email and hashed email' do
-    user = create :user, birthday: Date.new(1990, 10, 4), email: 'will_be_hashed@email.xx'
-
-    assert user.age.to_i > 13
-    assert user.email.present?
-    assert user.hashed_email.present?
+    assert teacher.email.present?
+    assert teacher.hashed_email.present?
   end
 
   test 'cannot create duplicate hashed and plaintext email' do
@@ -451,32 +400,41 @@ class UserTest < ActiveSupport::TestCase
       user = User.create @good_data.merge(birthday: birthday_4, email: '', hashed_email: Digest::MD5.hexdigest(email2))
       assert_equal ['Email has already been taken'], user.errors.full_messages
     end
-
   end
 
-  test 'changing user from over 13 to under 13 removes email and adds hashed_email' do
-    older_user = create :user
+  test 'changing user from teacher to student removes email' do
+    user = create :teacher
+    assert user.email.present?
+    assert user.hashed_email.present?
 
-    assert older_user.email
+    user.user_type = 'student'
+    user.save!
 
-    older_user.age = 10
-    older_user.save!
-
-    assert older_user.email.blank?
-    assert older_user.hashed_email
+    assert user.email.blank?
+    assert user.hashed_email.present?
   end
 
-  test 'changing user to teacher saves email' do
-    student = create :user, age: 10, email: 'email@old.xx'
+  test 'changing user from teacher to student removes full_address' do
+    user = create :teacher
+    user.update(full_address: 'fake address')
 
-    assert student.email.blank?
-    assert student.hashed_email
+    user.user_type = 'student'
+    user.save!
 
-    student.update_attributes(user_type: 'teacher', email: 'email@old.xx')
-    student.save!
+    assert user.full_address.nil?
+  end
 
-    assert_equal 'email@old.xx', student.email
-    assert_equal '21+', student.age
+  test 'changing user from student to teacher saves email' do
+    user = create :student, email: 'email@old.xx'
+
+    assert user.email.blank?
+    assert user.hashed_email
+
+    user.update_attributes(user_type: 'teacher', email: 'email@old.xx')
+    user.save!
+
+    assert_equal 'email@old.xx', user.email
+    assert_equal '21+', user.age
   end
 
   test 'under 13' do
@@ -514,77 +472,65 @@ class UserTest < ActiveSupport::TestCase
     assert ActionMailer::Base.deliveries.empty?
   end
 
-  test "send reset password for older user" do
-    user = create :user, age: 20, password: 'oldone'
+  test 'send reset password for student' do
+    email = 'email@email.xx'
+    student = create :student, password: 'oldone', email: email
 
-    assert User.send_reset_password_instructions(email: user.email)
+    assert User.send_reset_password_instructions(email: email)
 
     mail = ActionMailer::Base.deliveries.first
-    assert_equal [user.email], mail.to
+    assert_equal [email], mail.to
     assert_equal 'Code.org reset password instructions', mail.subject
-    user = User.find(user.id)
-    old_password = user.encrypted_password
+    student = User.find(student.id)
+    old_password = student.encrypted_password
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
-    # HACK fix my syntax highlighting "
+    # HACK: Fix my syntax highlighting "
     token = $1
 
     User.reset_password_by_token(reset_password_token: token,
                                  password: 'newone',
                                  password_confirmation: 'newone')
 
-    user = User.find(user.id)
+    student = User.find(student.id)
     # password was changed
-    assert old_password != user.encrypted_password
+    assert old_password != student.encrypted_password
   end
 
-  test 'send reset password for younger user' do
+  test 'send reset password for student without age' do
     email = 'email@email.xx'
-    user = create :user, age: 10, email: email
+    student = create :student, age: 10, email: email
+
+    student.update_attribute(:birthday, nil) # hacky
+
+    student = User.find(student.id)
+    assert !student.age
 
     User.send_reset_password_instructions(email: email)
 
     mail = ActionMailer::Base.deliveries.first
     assert_equal [email], mail.to
     assert_equal 'Code.org reset password instructions', mail.subject
-    user = user.reload
-    assert user.reset_password_token
+    student = student.reload
+    assert !student.age
+    assert student.reset_password_token
   end
 
-  test 'send reset password for user without age' do
+  test 'actually reset password for student without age' do
     email = 'email@email.xx'
-    user = create :user, age: 10, email: email
+    student = create :student, age: 10, email: email
 
-    user.update_attribute(:birthday, nil) # hacky
+    student.update_attribute(:birthday, nil) # hacky
 
-    user = User.find(user.id)
-    assert !user.age
+    student = User.find(student.id)
+    assert !student.age
 
-    User.send_reset_password_instructions(email: email)
+    old_password = student.encrypted_password
 
-    mail = ActionMailer::Base.deliveries.first
-    assert_equal [email], mail.to
-    assert_equal 'Code.org reset password instructions', mail.subject
-    user = user.reload
-    assert !user.age
-    assert user.reset_password_token
-  end
-
-  test 'actually reset password for user without age' do
-    email = 'email@email.xx'
-    user = create :user, age: 10, email: email
-
-    user.update_attribute(:birthday, nil) # hacky
-
-    user = User.find(user.id)
-    assert !user.age
-
-    old_password = user.encrypted_password
-
-    user.reset_password('goodpassword', 'goodpassword')
+    student.reset_password('goodpassword', 'goodpassword')
 
     # changed password
-    assert user.reload.encrypted_password != old_password
+    assert student.reload.encrypted_password != old_password
   end
 
   test 'user is working on script' do
@@ -787,7 +733,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "needs_to_backfill_user_scripts?" do
-    user = create :student
+    user = create :student, created_at: Date.new(2014, 9, 10)
     assert !user.needs_to_backfill_user_scripts?
 
     script = Script.find_by_name("course2")
@@ -805,22 +751,176 @@ class UserTest < ActiveSupport::TestCase
     assert !user.needs_to_backfill_user_scripts?
   end
 
+  test "needs_to_backfill_user_scripts? is false for recent users" do
+    user = create :student, created_at: Date.new(2015, 9, 10)
+    assert !user.needs_to_backfill_user_scripts?
+
+    script = Script.find_by_name("course2")
+    # In normal usage, UserScript will be created alongside UserLevel.
+    create :user_level, user: user, level: script.script_levels.first.level, script: script
+    assert !user.needs_to_backfill_user_scripts?
+  end
+
   test 'update_with_password does not require current password for users without passwords' do
     student = create(:student)
     student.update_attribute(:encrypted_password, '')
 
     assert student.encrypted_password.blank?
 
-    assert student.update_with_password(name: "JADENDUMPLING",
-                                         email: "jaden.ke1@education.nsw.gov.au",
-                                         password: "[FILTERED]",
-                                         password_confirmation: "[FILTERED]",
-                                         current_password: "",
-                                         locale: "en-us",
-                                         gender: "",
-                                         age: "10")
+    assert student.update_with_password(
+      name: "JADENDUMPLING",
+      email: "jaden.ke1@education.nsw.gov.au",
+      password: "[FILTERED]",
+      password_confirmation: "[FILTERED]",
+      current_password: "",
+      locale: "en-us",
+      gender: "",
+      age: "10"
+    )
 
     assert_equal "JADENDUMPLING", student.name
+  end
+
+  test 'track_proficiency adds proficiency if necessary and no hint used' do
+    level_concept_difficulty = create :level_concept_difficulty
+    # Defaults with repeat_loops_{d1,d2,d3,d4,d5}_count = {0,2,0,3,0}.
+    user_proficiency = create :user_proficiency
+
+    User.track_proficiency(
+      user_proficiency.user_id, nil, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.
+      where(user_id: user_proficiency.user_id).
+      first
+    assert !user_proficiency.nil?
+    assert_equal 0, user_proficiency.repeat_loops_d1_count
+    assert_equal 2 + 1, user_proficiency.repeat_loops_d2_count
+    assert_equal 0, user_proficiency.repeat_loops_d3_count
+    assert_equal 3, user_proficiency.repeat_loops_d4_count
+    assert_equal 0, user_proficiency.repeat_loops_d5_count
+  end
+
+  test 'track_proficiency creates proficiency if necessary and no hint used' do
+    level_concept_difficulty = create :level_concept_difficulty
+    student = create :student
+
+    User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.where(user_id: student.id).first
+    assert !user_proficiency.nil?
+    assert_equal 0, user_proficiency.repeat_loops_d1_count
+    assert_equal 1, user_proficiency.repeat_loops_d2_count
+    assert_equal 0, user_proficiency.repeat_loops_d3_count
+    assert_equal 0, user_proficiency.repeat_loops_d4_count
+    assert_equal 0, user_proficiency.repeat_loops_d5_count
+  end
+
+  test 'track_proficiency does not update basic_proficiency_at if already proficient' do
+    TIME = '2015-01-02 03:45:43 UTC'
+    level = create :level
+    student = create :student
+    level_concept_difficulty = LevelConceptDifficulty.
+      create(level: level, events: 5)
+    UserProficiency.create(
+      user_id: student.id, sequencing_d3_count: 6, repeat_loops_d4_count: 7,
+      events_d5_count: 8, basic_proficiency_at: TIME)
+
+    User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.where(user_id: student.id).first
+    assert !user_proficiency.nil?
+    assert_equal TIME, user_proficiency.basic_proficiency_at.to_s
+  end
+
+  test 'track_proficiency updates if newly proficient' do
+    level = create :level
+    level_concept_difficulty = LevelConceptDifficulty.
+      create(level_id: level.id, events: 5)
+    student = create :student
+    UserProficiency.create(
+      user_id: student.id, sequencing_d3_count: 3, repeat_loops_d3_count: 3,
+      events_d3_count: 2)
+
+    User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.where(user_id: student.id).first
+    assert !user_proficiency.nil?
+    assert !user_proficiency.basic_proficiency_at.nil?
+  end
+
+  test 'track_proficiency does not update basic_proficiency_at if not proficient' do
+    level_concept_difficulty = create :level_concept_difficulty
+    user_proficiency = create :user_proficiency
+
+    User.track_proficiency(
+      user_proficiency.user_id, nil, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.
+      where(user_id: user_proficiency.user_id).
+      first
+    assert !user_proficiency.nil?
+    assert user_proficiency.basic_proficiency_at.nil?
+  end
+
+  def track_progress(student, script_level, result)
+    User.track_level_progress_sync(
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: result,
+      submitted: false,
+      level_source_id: nil
+    )
+  end
+
+  test 'track_level_progress_sync calls track_proficiency if new perfect score' do
+    script_level = create :script_level
+    student = create :student
+
+    User.expects(:track_proficiency).once
+    track_progress(student, script_level, 100)
+  end
+
+  test 'track_level_progress_sync does not call track_proficiency if old perfect score' do
+    script_level = create :script_level
+    student = create :student
+    create :user_level, user_id: student.id, script_id: script_level.script_id, level_id: script_level.level_id, best_result: 100
+
+    User.expects(:track_proficiency).never
+    track_progress(student, script_level, 100)
+  end
+
+  test 'track_level_progress_sync does not call track_proficiency if new passing score' do
+    script_level = create :script_level
+    student = create :student
+
+    User.expects(:track_proficiency).never
+    track_progress(student, script_level, 25)
+  end
+
+  test 'track_level_progress_sync does not call track_proficiency if hint used' do
+    script_level = create :script_level
+    student = create :student
+    create :hint_view_request,
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id
+
+    User.expects(:track_proficiency).never
+    track_progress(student, script_level, 100)
+  end
+
+  test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
+    script_level = create :script_level
+    student = create :student
+    AuthoredHintViewRequest.create(
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id
+    )
+
+    User.expects(:track_proficiency).never
+    track_progress(student, script_level, 100)
   end
 
   test 'normalize_gender' do
@@ -897,7 +997,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'generates usernames' do
     names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', 'this is a really long name blah blah blah blah blah blah']
-    expected_usernames = ['coder_a', 'coder_b', 'captain_picard', 'captain_picard1', 'captain_picard2', 'this_is_a_really']
+    expected_usernames = %w(coder_a coder_b captain_picard captain_picard1 captain_picard2 this_is_a_really)
 
     i = 0
     users = names.map do |name|
@@ -954,6 +1054,33 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal [teacher], student.teachers
     assert_equal [], student.students
+  end
+
+  test 'student_of_admin?' do
+    teacher = create :teacher
+    section1 = create :section, user_id: teacher.id
+
+    admin_teacher = create :admin_teacher
+    section2 = create :section, user_id: admin_teacher.id
+
+    student_of_none = create :student
+
+    student_of_normal_teacher = create :student
+    create :follower, section: section1, student_user: student_of_normal_teacher
+
+    student_of_admin_teacher = create :student
+    create :follower, section: section2, student_user: student_of_admin_teacher
+
+    student_of_both_teachers = create :student
+    create :follower, section: section1, student_user: student_of_both_teachers
+    create :follower, section: section2, student_user: student_of_both_teachers
+
+    assert !teacher.student_of_admin?
+    assert !admin_teacher.student_of_admin?
+    assert !student_of_none.student_of_admin?
+    assert !student_of_normal_teacher.student_of_admin?
+    assert student_of_admin_teacher.student_of_admin?
+    assert student_of_both_teachers.student_of_admin?
   end
 
   test "authorized teacher" do

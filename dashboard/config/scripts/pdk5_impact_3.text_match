@@ -1,8 +1,0 @@
-name 'PDK5 Impact 3'
-title 'Real-world applications for Students'
-content1 'Does learning about computer science help students grow into the kind of citizens you are preparing them to be? Explain why or why not.'
-placeholder 'Your thoughts here'
-
-markdown <<MARKDOWN
-
-MARKDOWN

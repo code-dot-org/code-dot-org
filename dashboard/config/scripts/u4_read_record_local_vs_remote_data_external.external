@@ -1,6 +1,5 @@
 name 'U4 - Read Record - Local vs Remote Data External'
 title 'Local vs. Remote Data'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
 # Local vs. Remote Data

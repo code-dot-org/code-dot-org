@@ -23,9 +23,17 @@ ar:
           future: لا يمكن أن يكون في المستقبل
   hello: مرحباً بالعالم
   welcome_back: 'أهلاً بكم من جديد، %{name}'
+  your_professional_learning_plan: خطة التعلم المهنية الخاصة بك
+  see_your_learning_plan: انظر خطة التعلم الخاص بك
   submit: تسجيل
   unsubmit: عدم تقديم
-  next_page: Next page
+  previous_page: الصفحة السابقة
+  next_page: الصفحة التالية
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
+  cancel: إلغاء
+  okay: حسناً
+  heading_x_of_y: '%{heading} (صفحة %{x} من %{y})'
   add_teacher_form:
     code:
       label: 'إضافة معلِّماً:'
@@ -79,6 +87,7 @@ ar:
     teacher_title: تسجيل حساب المعلم
     student_pitch: تسجيل الطلاب في Code.org
     student_title: التسجيل كطالب
+    signup_title: Sign up for Code.org
     school_name: اسم المدرسة (اختياري)
     school_address: عنوان المدرسة (اختياري)
     address_placeholder: العنوان، المدينة، الدولة، الرمز البريدي
@@ -97,6 +106,9 @@ ar:
     student_terms: "أنا أوافق على الالتزام بـ<a href='http://code.org/tos'>شروط خدمة</a> Code.org. إذا كنت أنا دون 13 سنة من العمر، فأنا أؤكد من خلال تقديم هذا النموذج بأنه لدي الإذن من أولياء الأمر أو الوصي القانوني لاستخدام خدمات Code.org.<br/>لا يتم تخزين البريد الإلكتروني للمستخدمين دون سن 13 عام بطريقة تسمح لنا الاتصال بهم."
     teacher_terms: "أوافق على الالتزام بـ<a href='http://code.org/tos'>شروط خدمة</a> Code.org."
     additional_information: نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع.
+    user_type_label: Account Type
+    user_type_teacher: المدرس
+    user_type_student: طالب
   signin_form:
     title: هل لديك حساب؟ قم بتسجيل الدخول
     login: البريد الإلكتروني أو اسم المستخدم
@@ -151,8 +163,6 @@ ar:
         subject: 'أنضم إلى الصف مع %{teacher_name} في Code.org!'
       student_disassociated:
         subject: 'إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب.'
-      teacher_disassociated:
-        subject: 'إعلام من Code.org: المعلّم %{teacher_name} لم يعد مقترن بك كمعلّمك.'
   reports:
     error:
       access_denied: لا يوجد لديك الصلاحيات للوصول إلى إحصائيات الخاصة بهذا المستخدم
@@ -321,7 +331,7 @@ ar:
     try_beta_courses: جديدنا ! جرب الآن النسخة التجريبية من دورتنا التدريبية لطلاب K-5
     use_as_teacher: استخدم هذا الموقع كمدرس
     heading_hoc2014: '<h2>ساعة من البرمجة </h2><h1>لجميع الأعمار</h1>'
-    heading_elementary: '<h2>دورات 20 ساعة</h2> <h1>أساسيات علوم الكمبيوتر (جميع الإعمار)</h1>'
+    heading_elementary: '<h2>دورات لمدة 20 ساعة</h2> <h1>في أساسيات علوم الكمبيوتر (لجميع الأعمار)</h1>'
     heading_apps: '<h2>المتعة</h2><h1>للجميع</h1>'
     heading_tools: '<h2>جاهزة للخطوة التالية؟</h2> <h1>أدوات جافا سكريبت للمدرسة الثانوية</h1>'
     heading_legacy: '<h2>الدورات المعجلةـ</h2><h1>جميع الأعمار</h1>'
@@ -329,6 +339,31 @@ ar:
     no_primary_course: 'جرب الدورة تدريبية في "كود استوديو"'
     choose_next_course: جرب دورة تدريبية من كود استوديو باختيار واحد من الأسفل
     print_certificate: طباعة الشهادة
+    announcement_title: إعلانات
+    announcement_view_all: عرض الكل
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
+    announcement_petition: |
+      كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح ممثليكم يسمع منك. هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 التعليم علوم الكمبيوتر.
+      
+    announcement_petition_button: |
+      Translate
+      
+      add your name
+      
+      إضافة اسمك
+  move_students:
+    new_section_dne: 'عذراً، لكن %{new_section_code} المقطع غير موجود. الرجاء إدخال رمز قسم مختلف.'
+    section_code_not_entered: ويرجى تقديم رمز القسم الحالي.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: تعلّم على كود استوديو
     description: أي شخص يمكن تعلّم علوم الكمبيوتر. اصنع الألعاب والتطبيقات والفن مع التعليمات البرمجية.
@@ -346,6 +381,7 @@ ar:
     help_from_html_old: ساعد مهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر في إنشاء هذه البرنامج التعليمية.
     art_from_html: 'ماينكرافت &#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق محفوظة.<br /> حروب النج&#8482;&copy; م%{current_year} ديزني و لوكاس فيلم. جميع الحقوق محفوظة.<br /> متجمد &#8482;&copy;%{current_year} ديزني. جميع الحقوق محفوظة.<br /> العصر الجليدي&#8482;&copy;%{current_year} القرن العشرين فوكس. جميع الحقوق محفوظة.<br /> الطيور الغاضبة&#8482;&copy; 2009-%{current_year} ريفيو المتحدة للترفيه.<br /> جميع الحقوق محفوظة. <br />النباتات ضد المتبلدين &#8482; &copy; %{current_year} الكترونكس ارتس. <br />جميع الحقوق محفوظة. عالم غامبل المدهش علامة مسجلة و&copy; 2015 شبكة الكرتون.'
     art_from_html_old: 'ماينكرافت&#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق محفوظة. حروب النجم&#8482;&copy;%{current_year} ديزني و لوكاس فيلم. جميع الحقوق محفوظة. متجمد&#8482;&copy;%{current_year} ديزني. جميع الحقوق محفوظة. العصر الجليدي.&#8482;&copy;%{current_year} القرن العشرين فوكس. جميع الحقوق محفوظة. الطيور الغاضبة&#8482;&copy; 2009-%{current_year} ريفيو المتحدة للترفيه. جميع الحقوق محفوظة. النباتات ضد المتبلدين&#8482;&copy;%{current_year} الكترونكس ارتس. جميع الحقوق محفوظة. عالم غامبل المدهش علامة مسجلة و&copy; 2015 شبكة الكرتون.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: تعمل على خدمات أمازون للويب
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;، إن شعار CODE و Hour of Code&reg; هما علامات تجارية لـ Code.org.'
     copyright: حقوق النسخ
@@ -376,15 +412,12 @@ ar:
     notes_coming_soon: ملاحظات على هذا الفيديو. قريبا.
     autoplay_option: تشغيل تلقائي لاشرطة الفيديو
     download: تحميل الفيديو
-  compatability:
-    working:
-      header: نحن نعمل على دعم متصفح الأنترنت الخاص بك.
-      message: "يستخدم Code.org تكنولوجيا الإنترنت الحديثة. هذا يجعل الموقع أسرع للاستخدام. لا يدعم متصفحك كافة الميزات المطلوبة، و قد تواجه مشكلات أثناء استخدام هذا الجزء من الموقع. يرجى مساعدتنا <a href='%{report_issue_url}'>بالإبلاغ عن أي مشاكل تجدها</a>. تستطيع أيضاً <a href='%{supported_browsers_url}'>تحديث متصفحك إلى نسخة مدعومة</a>."
-      hide_this_warning: إخفاء هذا التحذير
+  compatibility:
     upgrade:
-      header: من فضلك قم بتحديث متصفح الأنترنت الخاص بك.
-      message: "يستخدم Code.org تكنولوجيا الإنترنت الحديثة . هذا يجعل الموقع أسرع للاستخدام . للأسف متصفحك لا يدعم جميع الميزات المطلوبة لتشغيل هذا الجزء من الموقع .<br/><br/>قم بتثبيت متصفح من قائمة المتصفحات المدعومة للاستمرار . تستطيع <a href='#'>محاولة عرض الصفحة </a>, و لكن نتوقع وظائف قد تتعطل."
-      button: خذني إلى قائمة المتصفحات المدعومة
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      link: اعرف المزيد
   slow_loading: هذا يأخذ وقتاً اطول من المعتاد...
   try_reloading: حاول اعادة تحميل الصفحة
   next_stage: انتهى! استمر في المرحلة القادمة
@@ -450,18 +483,25 @@ ar:
     minecraft:
       title: Minecraft
       body: استكشف عالم Minecraft عن طريق الكود.
+    unplugged:
+      title: Unplugged Lessons
+      audience: العمر 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: قام الطلبة برسم هؤلاء باستخدام البرمجة (الكود)!
     students_made_these_with_code: قام الطلبة بصنع هؤلاء باستخدام البرمجة (الكود)!
     picture_count: 'في الأيام الـ <b>%{days}</b> الماضية، قام الطلبة برسم <b>%{count}</b> لوحات من خلال كتابة برامج الكمبيوتر الخاصة بهم. انقر على الصورة لترى البرنامج وهو يعمل.'
     activity_count: 'في الأيام الـ <b>%{days}</b> الماضية، قام الطلبة بإنتاج <b>%{count}</b> تطبيقات ولوحات من خلال كتابة برامج الكمبيوتر الخاصة بهم. انقر على الصورة لترى البرنامج وهو يعمل.'
     want_to_make_your_own: هل ترغب في إنجاز مشروعك الخاص؟
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'المزيد من &rarr;'
     caption_by_name_age: 'من قِبل %{name}، العمر %{age}'
     caption_time_ago: 'من قبل %{time_ago}'
     header: معرض
     header_playlab: مختبر اللعب
     header_artist: الرسام
+    report_abuse: الابلاغ عن سوء استخدام
   landing:
     prerelease: "هذا الدرس لا يزال بنسختة التجريبية <span class='betatext'> Beta </span>. مما يعني أن هذة النسخة ليست النسخة النهائية من هذا الدرس وهي عرضة للمراجعة عند الحصول على الآراء وإجراء التغييرات بناء عليها."
     prerelease_hoc2014: "هذا الدرس التعليمي لا يزال بنسختة التجريبية <span class='betatext'> Beta </span>. فهو عرضة للمراجعة عند الحصول على الآراء وإجراء التغييرات بناء عليها."
@@ -493,6 +533,12 @@ ar:
     wrong_body: شكرا لك على تقديم إجابة
     correct_title: شكراً
     correct_body: شكرا لك على تقديم إجابة
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: الحل غير صحيح
     wrong_body: 'الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!'
@@ -583,6 +629,9 @@ ar:
     share: المشاركة
     share_title: شارك مشاريعك
     share_copy_link: 'إنسخ الرابط:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: إظهار الخيارات المتقدمة
     close: إغلاق
     more: المزيد
     name: الاسم
@@ -622,7 +671,59 @@ ar:
           other: أخرى
         detail: يرجي تقديم كل التفاصيل الممكنة بشأن المحتوى الذي تريد الابلاغ عنه.
         acknowledge: 'عند تقديم هذه المعلومات, تُقرّ بأنها سوف يتم التعامل معها وفقا للشروط الموجودة في %{link_start_privacy} سياسة الخصوصية %{link_end} و %{link_start_tos}شروط الاستخدام%{link_end}'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: ابحث عن أيقونة...
+      no_icons_found: لم توجد أيقونات
+    playzone:
+      artist_description: ارسم صور رائعة و صمم مع الرسام !
+      artist_title: New Drawing
+      continue_button: انتقل إلى المرحلة التالية
+      playlab_description: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
+      playlab_title: New App
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: قم بفتح مشروع
+      secondary_header: اسأل المعلم الخاص بك ماذا تفعل المقبل
+  flex_category:
+    required: لمحة عامة
+    content: محتوى
+    practice: تمارين معلم الرياضيات
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: ساعة تحميل التعليمات البرمجية
+    capsule_title: هل لديك إنترنت؟
+    capsule_desc: 'استخدام الإنترنت، على شبكة الإنترنت <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: لا يوجد إتصال بالإنترنت؟
+    instructions: 'إرشادات للمعلمين: إذا كانت لديك خدمة إلانترنت ضعيفه، هذه الدروس "ساعة من التعليمات البرمجية" متوفرة للتحميل والتثبيت واستخدامها دون اتصال. اختر اللغة الخاصة بك ومنصة وتنزيل وتثبيتهاا على كافة أجهزة الكمبيوتر في الفصول الدراسية الخاصة بك. قد ترغب في استخدام محرك أقراص USB لتحميل وتثبيت على كافة أجهزة الكمبيوتر. ملاحظة: سوف لا يكون للطلاب القدره على تسجيل الدخول إلى "استوديو التعليمات البرمجية" أو حفظ التقدم، أو طباعة الشهادات. يمكن للمعلمين طباعة الشهادات قبل الموعد المحدد <a href="%{url}"> هنا</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

@@ -35,7 +35,12 @@
     "fast_get_nectar_animation": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2,
+    "functions": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -82,7 +87,6 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="maze_nectar"/>
         <block type="maze_honey"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
@@ -92,13 +96,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="procedures_callnoreturn">
           <mutation name="move and get nectar"/>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

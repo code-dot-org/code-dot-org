@@ -3,6 +3,7 @@
 # http://www.w3.org/TR/upgrade-insecure-requests
 
 require 'cdo/rack/process_html'
+require 'dynamic_config/dcdo'
 
 module Rack
   class UpgradeInsecureRequests < ProcessHtml
@@ -18,14 +19,15 @@ module Rack
     def initialize(app)
       super(
           app,
-          skip_if: lambda(&method(:not_ssl?)),
-          xpath: %w(img script embed iframe).map{|x|"//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
-      ) do |nodes|
+          xpath: %w(img script embed iframe).map{|x| "//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
+      ) do |nodes, env|
         nodes.each do |node|
           # Output the urls we're rewriting so we can update them to https
           # in our codebase.
-          puts "REWRITING: #{node}"
-          process(node)
+          if ssl?(env)
+            puts "REWRITING: #{node}"
+            process(node)
+          end
         end
       end
     end
@@ -46,7 +48,7 @@ module Rack
               "style-src 'self' https: 'unsafe-inline'",
               "img-src 'self' https: data: blob:",
               "font-src 'self' https: data:",
-              "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com",
+              "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com wss://*.firebaseio.com",
               "report-uri #{CDO.code_org_url('https/mixed-content')}"
           ]
         end
@@ -67,7 +69,7 @@ module Rack
           headers['X-Frame-Options'] = ''
         end
 
-        unless policies.empty?
+        unless policies.empty? || headers.key?('Content-Security-Policy')
           headers['Content-Security-Policy'] = policies.join('; ')
         end
       end

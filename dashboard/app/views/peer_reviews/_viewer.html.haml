@@ -1,0 +1,12 @@
+.peer-review
+  %p Feedback:
+  - @peer_reviews.each do |peer_review|
+    - current = (peer_review.level_source_id == @last_activity.level_source_id)
+    .peer-review-content{class: current ? nil : 'outdated'}
+      %p.peer-review-title
+        %strong= peer_review.from_instructor ? t('peer_review.instructor_feedback') : t('peer_review.peer_feedback')
+        = "\u2022 added #{time_ago_in_words(peer_review.updated_at)} ago"
+      %p.peer-review-status= peer_review.localized_status_description
+      %p= peer_review.data
+      - unless current
+        %em= t('peer_review.outdated')

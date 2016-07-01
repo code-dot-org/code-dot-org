@@ -1,4 +1,5 @@
 /* global WebKitMutationObserver */
+import $ from 'jquery';
 
 /**
  * Workaround for Chrome 34 SVG bug #349701
@@ -49,22 +50,22 @@ function handleClipPathChanges() {
   var newImages = {};
   var newClipPaths = {};
 
-  var observer = new WebKitMutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
+  var observer = new WebKitMutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
       for (i = 0; i < mutation.addedNodes.length; i++) {
         var newNode = mutation.addedNodes[i];
-        if (newNode.nodeName == 'image') { newImages[$(newNode).attr('id')] = newNode; }
-        if (newNode.nodeName == 'clipPath') { newClipPaths[$(newNode).attr('id')] = newNode; }
+        if (newNode.nodeName ===  'image') { newImages[$(newNode).attr('id')] = newNode; }
+        if (newNode.nodeName ===  'clipPath') { newClipPaths[$(newNode).attr('id')] = newNode; }
       }
       for (i = 0; i < mutation.removedNodes.length; i++) {
         var removedNode = mutation.removedNodes[i];
-        if (removedNode.nodeName == 'image' || removedNode.nodeName == 'clipPath') {
+        if (removedNode.nodeName ===  'image' || removedNode.nodeName === 'clipPath') {
           $('svg > svg:empty').remove();
         }
       }
     });
 
-    $.each(newImages, function(key, image) {
+    $.each(newImages, function (key, image) {
       var clipPathID = clipPathIDForImage(image);
       if (newClipPaths.hasOwnProperty(clipPathID)) {
         wrapImageAndClipPathWithSVG(image);
@@ -78,7 +79,7 @@ function handleClipPathChanges() {
 }
 
 function wrapExistingClipPaths() {
-  $('[clip-path]').each(function(i, image){
+  $('[clip-path]').each(function (i, image){
     if ($(image).attr('class') === PEGMAN_ORDERING_CLASS) {
       // Special case for Farmer, whose class is used for element ordering
       $(image).attr('class', '');

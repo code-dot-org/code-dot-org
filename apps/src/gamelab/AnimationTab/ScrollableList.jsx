@@ -1,11 +1,11 @@
 /** @file Vertical scrolling list */
 'use strict';
 
-var _ = require('../../lodash');
+var React = require('react');
+var Radium = require('radium');
 
 var staticStyles = {
   root: {
-    flex: '1 0 0',
     overflowX: 'hidden',
     overflowY: 'scroll'
   },
@@ -25,16 +25,13 @@ var ScrollableList = React.createClass({
   },
 
   render: function () {
-    var styles = _.merge({}, staticStyles, {
-      root: this.props.style
-    });
     return (
-      <div className={this.props.className} style={styles.root}>
-        <div style={styles.margins}>
+      <div className={this.props.className} style={[staticStyles.root, this.props.style]}>
+        <div style={staticStyles.margins}>
           {this.props.children}
         </div>
       </div>
     );
   }
 });
-module.exports = ScrollableList;
+module.exports = Radium(ScrollableList);

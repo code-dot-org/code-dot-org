@@ -3,7 +3,6 @@ default['cdo-varnish'] = {
     'localhost' => '127.0.0.1',
   },
   'secret' => '00000000-0000-0000-0000-000000000000',
-  'storage' => 'malloc,0.5G',
   redirects: {
     'forums.code.org'   => 'support.code.org',
     'aws.code.org'      => 'code.org',
@@ -29,3 +28,7 @@ default['cdo-varnish'] = {
     'cseducationweek.org' => 'csedweek.org',
   }
 }
+# Varnish memory allocation = 1/16 total available memory.
+# (expands to 1/8 total memory in practice)
+varnish_storage_gb = (node['memory']['total'].to_f / (1024 * 1024) / 16).round(1)
+default['cdo-varnish']['storage'] = "malloc,#{varnish_storage_gb}G"

@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:32.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free Response: Event-Driven Programming Wrap-Up",
+    "markdown_instructions": "Elements in your app are required to have **unique IDs**. Given what you now know about how event handlers work, why is it important for the IDs of page elements to be unique?\n\n",
+    "encrypted_solution": "++OpXF+QDErqZ2H/ilL+lckImhjqqANHJgDDTaSMT4n2olPA/EXrE5vqRNVl\nBsKmY30Fe1K314ixZyF+LFjABEsc8e/GL8IXeZ9GM8aOX00VFeUp8rFGufYy\nPdpqFM4v50C26yVcZHGQy+kSeGvX+GYBdIL0vNwm3h/vYeTAe+4jSRYSjQax\n7XAQ4tSizuYg+5EgnLCcBNjX+UDvd9TCxZme5lIVZdIkubjWmnZVsYgQAdF1\nEVq0tNyoVmhB1nnPqmZwXz6SNQLeEhEV7nf9JU66VcsEzkJCXXe+Jo3H+II=\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

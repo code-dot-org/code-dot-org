@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var processMarkdown = require('marked');
 var parseXmlElement = require('./xml').parseElement;
 var msg = require('./locale');
@@ -128,8 +129,8 @@ authoredHintUtils.finalizeHints_ = function () {
   localStorage.removeItem('last_attempt_record');
   var hints = authoredHintUtils.getFinishedHints_();
   if (finalAttemptRecord) {
-    hints = hints.map(function(hint){
-      hint = $.extend({
+    hints = hints.map(function (hint){
+      hint = Object.assign({
         finalTime: finalAttemptRecord.time,
         finalAttempt: finalAttemptRecord.attempt,
         finalTestResult: finalAttemptRecord.testResult,
@@ -153,7 +154,7 @@ authoredHintUtils.finalizeHints_ = function () {
 authoredHintUtils.recordUnfinishedHint = function (hint) {
   var lastAttemptRecord = authoredHintUtils.getLastAttemptRecord_();
   if (lastAttemptRecord) {
-    hint = $.extend({
+    hint = Object.assign({
       prevTime: lastAttemptRecord.time,
       prevAttempt: lastAttemptRecord.attempt,
       prevTestResult: lastAttemptRecord.testResult,
@@ -176,8 +177,8 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   localStorage.setItem('last_attempt_record', JSON.stringify(nextAttemptRecord));
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
-  var finishedHintViews = unfinishedHintViews.map(function(hint){
-    hint = $.extend({
+  var finishedHintViews = unfinishedHintViews.map(function (hint){
+    hint = Object.assign({
       nextTime: nextAttemptRecord.time,
       nextAttempt: nextAttemptRecord.attempt,
       nextTestResult: nextAttemptRecord.testResult,

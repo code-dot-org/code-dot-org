@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:25.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "markdown_instructions": "## Choose: Array or Variable?\n\nYour app needs to store the following information. For each type of information, decide whether you would use an array or a variable to store it:\n \n* All the messages a user has sent\n* The highest score a user has ever reached on the app\n* A username and password to unlock the app\n\n",
+    "encrypted_solution": "xZjK1+vAKBfOlIoropGUcOfwFeHFzip9QVLNvxjIPvSCrT3IqEb6rXN6JtkE\nq3OcL28DwUpsO8DDnbEeH8rPHbOsG6RIDegbVy/7ZgXPdw9H9EdTIHA14xmz\nICGhSQR6jFS9npE+8KQqSUvP7WGeiAGHan6I1ugKX+R1f5sax4NizG9qgK92\nZ5BLx2TjCbiaTn85EuoKiAQrHq96S/9nh3uRZmHw8/bBsjYb6B8ndjquW2Sp\npCUGzsLw5IDnQPFJE+louSiS1UudO0xIMgxJjH40zVYoGFmQR4bsTF6iIk8h\n1DW9tfiw7ddf7PFPMWkA2nsnXsIoWZQUmj7wmG0zExlxSrSWJ1LiJpWD0lWt\nxaODPxuEZRLgLj7OyJLKs3SugJToSx8NEev0RSRe23CbPQDzhUEvy9gwqPpi\nvjDp7aFQbhUh3GVjcUmeR7OuQwHFjebZ7CXWjAM3T5g4xIWCqbt06L0Q+nSc\n0GnmRMsw7YE+z/k3a3CopOHQ9W/6MmAJKfWtjd5Te/aZlxal+Yry5O7AAIRc\nZtZORZ3iZCrCNoQJfaXHd2V0cxlbxD4a2C6JlkmeLAYDEf7EC5YOOkveNNto\nAhCqJPZ4I6UYKH+0/1O3l0tVeFKk7fa8GFxY3gNvTitIvNFBV+nnZwFUTsHb\nPb+wI0NVxd1cxurgyzYa4+zYHWS1oKkCrfPnn8ufbJaNbixCHfFJ+KUQvWvA\nDo+1PN9Ez6hwZuYg8cQJdzpDp95ee9nE+NpwHnnAcOnxWOXL09RfXrQepFeq\nnLso46N+MJ5e3XJFhbNpthBtv7oso3CYAYN8xh906MJTnudjiqxOIGTgwmP9\n0d4W9o3tjWhXeBHsrgYZTsjXvZEgWyQkdQ3TVW6dlaY3bmitypCdB9dTADo4\nmY552opi6UtTCSeXLlzLiIsTFcnsBO3xn+NJTc92SH8mAyLGYaJ0yVEFS1CU\npalCcoG3st9gumJFjoWdsY2OSmywx5hvxKET9IXKmIqE1Ojq82hvWWRKblu5\niuwy6PcBnkh7CE7jy2XCW7SO/6jmVNmcJ5geu6e13QPT8hw=\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

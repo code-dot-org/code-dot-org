@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:37.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "While Loop Basics: Wrap Up",
+    "markdown_instructions": "In your own words, describe how a while loop works. \n\nExplain two things to pay attention to when creating while loops.  \n\nIn your response justify why the name \"while loop\" accurately describes the behavior of this new programming construct.\n",
+    "encrypted_solution": "IWxkD8EuDLGnMiQCJzzyjX222OzG8PgzYhKsPsAIWGno1TjH5Daj+wh6lyk1\nGu27w69NqaEbtCpogrlf8brLo3Niv6v5p5g5I+QiWa6HLfLNn9vjOC61QdkL\ntSeIN1jenOrsgYDcUkzAbe5AAkg6daL07Q9RHy1EPobaIWzbczhVfnzlzwYU\nfhBqC5l1NaMe7pe2FMfzV4g1agKqIQqooDebeU99DYsLb0jTvf+n72mQwbYv\nyVsHwGJdswN8YqOzoVrLnjN4EuDQd5RPH6RvIjdyN/TPvLEz//Nm9CcAdIXU\nBhCOVmOYqt4e28Ct1Abg70rM+nyqv6xGfpFKG9iqO7+kdShNjjo1Cn+dBpTo\ndKH++U58b8b6UB+RigZ/s9o4T4/n9N8jiDccJwWCdC7vn4NrgD78NH50OjoH\nQdVALmR+wqmctCOSBeRmizwP7irIELyolRTkDRC06difxbm9S2rCQZ83q0IG\nmp+GZbCBWUKFlerDeG6An8sdYswb6pcG\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

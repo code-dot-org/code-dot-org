@@ -36,7 +36,12 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You need two repeat loops (one inside the other) both repeating `sides` times.\",\r\n  \"hint_id\": \"Course_4_Artist_Vars_13_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The inner repeat loop draws an octagon (turning to the left).   \\n\\nAfterwards, you need to move forward and turn right only in the outer loop.\",\r\n  \"hint_id\": \"Course_4_Artist_Vars_13_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To adjust the shape to stay the same size when the number of sides change, use the math block to divide the length in pixels by the number of sides.\",\r\n  \"hint_id\": \"Course_4_Artist_Vars_13_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_loops": 5,
+    "variables": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

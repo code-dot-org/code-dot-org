@@ -1,6 +1,7 @@
 /* global dashboard */
 
-var IconList = require('./IconList.jsx');
+var React = require('react');
+var IconList = require('./IconList');
 
 /**
  * A component for managing icons.
@@ -11,7 +12,7 @@ var IconLibrary = React.createClass({
     assetChosen: React.PropTypes.func.isRequired
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {search: ''};
   },
 

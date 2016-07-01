@@ -1,9 +1,0 @@
-name 'PDK5 Foundation'
-title 'Computer Science as a Foundational Skill'
-
-content1 'Do you see computer science as a foundational skill for your students? Why or why not?'
-placeholder 'Your thoughts here'
-
-markdown <<MARKDOWN
-
-MARKDOWN

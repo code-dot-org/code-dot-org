@@ -1,0 +1,62 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-11T23:18:06.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "fill": null,
+      "noFill": null,
+      "color": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "arc": null,
+      "ellipse": null,
+      "line": null,
+      "point": null,
+      "rect": null,
+      "regularPolygon": null,
+      "shape": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "start_blocks": "// Use randomNumber() to draw some\r\n// randomized shapes\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "markdown_instructions": "# Randomized Shapes\r\n\r\nLet's see how we can used randomization in our drawings. Each of the inputs from the shape blocks you've seen can be replaced with calls to `randomNumber()`. Try drawing some images that are slightly randomized each time. You might try changing the position randomly by using `randomNumber()` in place of the x or y inputs, or you could change the size of the shape itself by randomizing the length or width inputs.\r\n\r\n# Do This\r\n\r\nPick a shape function and use calls to `randomNumber()` in place of one or more of the parameters. Make sure you run it a few times so you can see the effect of randomization.\r\n\r\n_Notice that the `console.log()` block is now in the Variables drawer and the `randomNumber()` block is in the Math drawer._",
+    "instructions": "Pick a shape block and use calls to randomNumber() in place of one or more of the parameters. Maker sure you run it a few times so you can see the effect of randomization.",
+    "show_d_pad": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

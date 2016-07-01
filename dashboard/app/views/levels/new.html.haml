@@ -9,20 +9,24 @@
   %li= link_to 'Build an Artist Level', new_level_path(type: 'Artist')
   %li= link_to 'Build a Playlab Level', new_level_path(type: 'Studio')
   %li= link_to 'Build a Playlab Droplet Level', new_level_path(type: 'StudioEC')
-  %li= link_to 'Build a Calc Level', new_level_path(type: 'Calc')
-  %li= link_to 'Build an Eval Level', new_level_path(type: 'Eval')
   %li= link_to 'Build a Minecraft Level', new_level_path(type: 'Craft')
+
+%h3 Content
+%ul
+  %li= link_to 'Build a Standalone Video Level', new_level_path(type: 'StandaloneVideo')
 
 %h3 DSL-Defined
 %ul
   %li= link_to 'Build a Multi Level', new_level_path(type: 'Multi')
   %li= link_to 'Build a Match Level', new_level_path(type: 'Match')
-  %li= link_to 'Build a Text Match Level', new_level_path(type: 'TextMatch')
+  %li= link_to 'Build an Evaluation Multi Level', new_level_path(type: 'EvaluationMulti')
+  %li= link_to 'Build a Text Match Level (for open-ended responses use the new Free Response level type)', new_level_path(type: 'TextMatch')
   %li= link_to 'Build a Contract Match Level', new_level_path(type: 'ContractMatch')
   %li= link_to 'Build an External HTML Level', new_level_path(type: 'External')
   %li= link_to 'Build a LevelGroup Level', new_level_path(type: 'LevelGroup')
 
 %h3 CSP Apps
+%p These level types are not localized (en_us only!)
 %ul
   %li= link_to 'Build an Applab Droplet Level', new_level_path(type: 'Applab')
   %li= link_to 'Build a Gamelab Droplet Level', new_level_path(type: 'Gamelab')
@@ -32,6 +36,13 @@
   %li= link_to 'Build a Odometer Level', new_level_path(type: 'Odometer')
   %li= link_to 'Build a Vigenere Level', new_level_path(type: 'Vigenere')
   %li= link_to 'Build a Frequency Analysis Level', new_level_path(type: 'FrequencyAnalysis')
+  %li= link_to 'Build a Free Response Level (use this for open-ended responses instead of Text Match)', new_level_path(type: 'FreeResponse')
+  %li= link_to 'Build an External Link Level', new_level_path(type: 'ExternalLink')
+
+%h3 Algebra
+%ul
+  %li= link_to 'Build a Calc Level', new_level_path(type: 'Calc')
+  %li= link_to 'Build an Eval Level', new_level_path(type: 'Eval')
 
 %h3 Your Levels
 - @levels.each do |level|

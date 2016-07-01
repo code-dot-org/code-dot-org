@@ -1,61 +1,61 @@
+general:
+  artifacts:
+    - dashboard/test/ui
+    - dashboard/log
+    - pegasus/log
 machine:
   ruby:
     version: 2.2.3
+  node:
+    version: 0.12.0
   environment:
     RAILS_ENV: test
-    SPROCKETS_DERAILLEUR_WORKER_COUNT: 2 # CircleCI build VMs have a memory limit of 4G
+    RACK_ENV: test
+    SPROCKETS_DERAILLEUR_WORKER_COUNT: 2 # CircleCI build VMs have a memory limit of 8G
   services:
     - docker
 dependencies:
   cache_directories:
     - "apps/node_modules"
+    - "code-studio/node_modules"
     - "~/.rvm/gems/ruby-2.2.3"
   override:
-    - sudo apt-get install libicu-dev
-    - bundle install
-    - "printf \"bundler_use_sudo: false\n\" > locals.yml"
-    - bundle exec rake install:pegasus
-    - npm install:
-        pwd:
-            apps
-    - bash build_with_core.sh:
-        pwd:
-            apps
-    - npm install:
-        pwd:
-            code-studio
+    - sudo apt-get install libicu-dev enscript
+    - bundle install --without ''
+    - 'echo "bundler_use_sudo: false" >> locals.yml'
+    - 'echo "npm_use_sudo: false" >> locals.yml'
+    - 'echo "properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY" >> locals.yml'
+    - 'echo "saucelabs_username: $SAUCE_USERNAME" >> locals.yml'
+    - 'echo "saucelabs_authkey: $SAUCE_ACCESS_KEY" >> locals.yml'
+    - 'echo "use_my_apps: true" >> locals.yml'
+    - 'echo "use_my_shared_js: true" >> locals.yml'
+    - 'echo "use_my_code_studio: true" >> locals.yml'
+    - 'echo "build_blockly_core: true" >> locals.yml'
+    - 'echo "build_code_studio: true" >> locals.yml'
+    - 'echo "build_shared_js: true" >> locals.yml'
+    - 'echo "build_dashboard: true" >> locals.yml'
+    - 'echo "build_pegasus: true" >> locals.yml'
+    - 'echo "build_apps: true" >> locals.yml'
+    - 'echo "localize_apps: true" >> locals.yml'
+    - 'echo "sync_assets: false" >> locals.yml'
+    # Run rake install
+    - bundle exec rake install
+    # Run rake build (twice in case of intermittent test failures within rake build)
+    - for i in 1 2; do bundle exec rake build && break; done
 database:
-    override:
-      - bundle exec rake db:create:
-          pwd:
-              dashboard
-      - bundle exec rake db:schema:load:
-          pwd:
-              dashboard
-    post:
-      - bundle exec rake assets:precompile:
-          pwd:
-              dashboard
+  override:
+    - 'echo "Skipping database phase (already ran)."'
 test:
-    override:
-        - bundle exec rake test:
-            pwd:
-                pegasus
-        - bundle exec rake test:
-            pwd:
-                shared
-        - ./test.sh:
-            pwd:
-                apps
-        - npm run lint:
-            pwd:
-                code-studio
-        - npm test:
-            pwd:
-                code-studio
-        - bundle exec rake konacha:run:
-            pwd:
-                dashboard
-        - ./test.sh:
-            pwd:
-                cookbooks
+  override:
+    - bundle exec rake lint:javascript
+    # Run tests only for changed sub-projects, unless [test all] in commit
+    - bundle exec rake circle:run_tests:
+        timeout:
+            7200
+    - ./test.sh:
+        pwd:
+            cookbooks
+    # Only run UI tests when [test ui] included in commit message
+    - bundle exec rake circle:run_ui_tests:
+        timeout:
+            7200

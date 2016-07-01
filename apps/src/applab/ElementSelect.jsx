@@ -1,3 +1,4 @@
+var React = require('react');
 var elementUtils = require('./designElements/elementUtils.js');
 
 module.exports = React.createClass({
@@ -12,7 +13,7 @@ module.exports = React.createClass({
     this.props.onChangeElement(element, null);
   },
 
-  render: function() {
+  render: function () {
     var selected = elementUtils.getId(this.props.selected);
 
     return (

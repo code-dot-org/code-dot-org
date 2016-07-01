@@ -4,7 +4,7 @@ ga:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
-          The Maze: The Maze
+          The Maze: An Chathair Ghríobháin
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -13,203 +13,203 @@ ga:
           description_short: Just an internal test course.
         course1:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
-          "Maze: Sequence": 'Maze: Sequence'
-          "Maze: Debugging": 'Maze: Debugging'
-          "Artist 1: Intro": 'Artist 1: Intro'
-          Artists 2: Artists 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee not blockly
-          "Bee 1: Intro": 'Bee 1: Intro'
-          "Maze 2: Loops": 'Maze 2: Loops'
-          "Bee 2: Loops": 'Bee 2: Loops'
-          Multi & Match: 'Multi & Match'
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Course 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
-          "Bee: Sequence": 'Bee: Sequence'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Shapes": 'Artist: Shapes'
-          "Maze: Loops": 'Maze: Loops'
-          "Bee: Loops": 'Bee: Loops'
-          "Studio: Create a Story": 'Play Lab: Create a Story'
-          "Artist: Loops": 'Artist: Loops'
-          description_audience: Ages 4-6
-          description_short: Start with Course 1 for early readers.
+          "Maze: Sequence": 'Cathair Ghríobháin: Seicheamh'
+          "Maze: Debugging": 'Cathair Ghríobháin: Dífhabhtú'
+          "Artist 1: Intro": 'Ealaíontóir 1: Réamhrá'
+          Artists 2: Ealaíontóirí 2
+          Spelling Bee: Comórtas Litrithe
+          Spelling Bee not blockly: Comórtas Litrithe gan Blockly
+          "Bee 1: Intro": 'Beach 1: Réamhrá'
+          "Maze 2: Loops": 'Cathair Ghríobháin 2: Lúba'
+          "Bee 2: Loops": 'Beach 2: Lúba'
+          Multi & Match: Ilroghnach is Meaitseáil
+          K-1 Flappy: Flappy do Naíscoileanna
+          Flappy non blockly: Flappy gan blockly
+          title: Cúrsa 1
+          Artist 2: Ealaíontóir 2
+          Happy Maps: Mapaí Meidhreacha
+          Move it, Move it: Bog é, Bog é
+          "Real-life Algorithms: Plant a Seed": 'Algartaim Fhíorshaoil: Síol a Chur'
+          Building a Foundation: Dúshraith a Leagan
+          Getting Loopy: Bí Lúbach
+          The Big Event: An Teagmhas Mór
+          Going Places Safely: Ag Taisteal Slán Sábháilte
+          description: Tá Cúrsa 1 dírithe ar pháistí atá ag foghlaim an léimh. Cruthóidh na daltaí ríomhchláir, déanfaidh siad comhoibriú le daltaí eile, forbróidh siad scileanna réitigh fadhbanna, agus leanfaidh siad ar aghaidh in ainneoin deacrachtaí. Ag deireadh an chúrsa, cruthóidh gach dalta a chluiche féin nó a scéal féin is féidir a chomhroinnt. Dírithe ar aois 5-6.
+          "Bee: Sequence": 'Beach: Seicheamh'
+          "Artist: Sequence": 'Ealaíontóir: Seicheamh'
+          "Artist: Shapes": 'Ealaíontóir: Cruthanna'
+          "Maze: Loops": 'Cathair Ghríobháin: Lúba'
+          "Bee: Loops": 'Beach: Lúba'
+          "Studio: Create a Story": 'Spraotharlann: Cruthaigh Scéal'
+          "Artist: Loops": 'Ealaíontóir: Lúba'
+          description_audience: Aois 4-6
+          description_short: Tá Cúrsa 1 dírithe ar pháistí atá ag foghlaim an léimh.
         course2:
-          The Maze: The Maze
+          The Maze: An Chathair Ghríobháin
           Suzi: Suzi
-          The Artist: The Artist
-          Artist Debugging: Artist Debugging
-          Bounce: Bounce
-          "Studio: Create a Story": 'Play Lab: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          The Artist: An tEalaíontóir
+          Artist Debugging: 'Ealaíontóir: Dífhabhtú'
+          Bounce: Preabadh
+          "Studio: Create a Story": 'Spraotharlann: Cruthaigh Scéal'
+          Artist Loops: 'Ealaíontóir: Lúba'
+          Bee Conditionals: 'Beach: Coinníollacha'
           Flappy: Flappy
-          title: Course 2
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
-          Graph Paper Programming: Graph Paper Programming
-          "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
-          Conditionals: Conditionals
-          Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
-          description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
-          "Maze: Sequence": 'Maze: Sequence'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Maze: Loops": 'Maze: Loops'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Loops": 'Bee: Loops'
-          "Bee: Debugging": 'Bee: Debugging'
-          "Artist: Debugging": 'Artist: Debugging'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Sequence2": 'Artist: Sequence2'
-          "Maze: Sequence2": 'Maze: Sequence2'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          description_audience: Ages 6-18
-          description_short: Start with Course 2 for students who can read.
+          title: Cúrsa 2
+          Bee Loops: 'Beach: Lúba'
+          Artist Functions: 'Ealaíontóir: Feidhmeanna'
+          The Artist Debugging: 'An tEalaíontóir: Dífhabhtú'
+          Bee Debugging: 'Beach: Dífhabhtú'
+          Bee Functions: 'Beach: Feidhmeanna'
+          Maze Loops: 'Cathair Ghríobháin: Lúba'
+          Graph Paper Programming: Ríomhchlárú ar Ghrafpháipéar
+          "Real-life Algorithms: Paper Planes": 'Algartaim Fhíorshaoil: Eitleáin Pháipéir'
+          Getting Loopy: Bí Lúbach
+          Relay programming: Códáil sealaíochta
+          Conditionals: Coinníollacha
+          Binary Bracelets: Bráisléid Dhénártha
+          The Big Event: An Teagmhas Mór
+          Your Digital Footprint: Do Lorg Digiteach
+          description: Tá Cúrsa 2 dírithe ar dhaltaí a bhfuil léamh acu, ach nach bhfuil aon taithí acu ar an ríomhchlárú. Sa chúrsa seo, cruthóidh na daltaí ríomhchláir chun fadhbanna a réiteach, agus forbróidh siad cluichí idirghníomhacha is féidir a chomhroinnt. Dírithe ar aois 7-10.
+          "Maze: Sequence": 'Cathair Ghríobháin: Seicheamh'
+          "Artist: Sequence": 'Ealaíontóir: Seicheamh'
+          "Maze: Loops": 'Cathair Ghríobháin: Lúba'
+          "Artist: Loops": 'Ealaíontóir: Lúba'
+          "Bee: Loops": 'Beach: Lúba'
+          "Bee: Debugging": 'Beach: Dífhabhtú'
+          "Artist: Debugging": 'Ealaíontóir: Dífhabhtú'
+          "Bee: Conditionals": 'Beach: Coinníollacha'
+          "Artist: Sequence2": 'Ealaíontóir: Seicheamh2'
+          "Maze: Sequence2": 'Cathair Ghríobháin: Seicheamh2'
+          "Artist: Nested Loops": 'Ealaíontóir: Lúba Neadaithe'
+          description_audience: Aois 6-18
+          description_short: Tá Cúrsa 2 dírithe ar dhaltaí a bhfuil léamh acu.
         course3:
-          The Maze: The Maze
-          "Studio: Create a Story": 'Play Lab: Create a Story'
-          The Artist: The Artist
-          title: Course 3
-          Artist Functions: Artist Functions
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: Computational Thinking
-          Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
-          Internet: Internet
-          Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: 'Farmer - While Loops'
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-          "Studio: Create a Game": 'Play Lab: Create a Game'
-          Maze: Maze
-          Artist: Artist
-          "Artist: Functions": 'Artist: Functions'
-          "Bee: Functions": 'Bee: Functions'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Maze: Conditionals": 'Maze: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          "Farmer: While Loops": 'Farmer: While Loops'
-          "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Bee: Debugging": 'Bee: Debugging'
-          Maze2: Maze2
-          Artist2: Artist2
-          "Artist: Functions2": 'Artist: Functions2'
-          "Bee: Functions2": 'Bee: Functions2'
-          "Bee: Conditionals2": 'Bee: Conditionals2'
-          "Maze: Conditionals2": 'Maze: Conditionals2'
-          "Artist: Nested Loops2": 'Artist: Nested Loops2'
-          "Farmer: While Loops2": 'Farmer: While Loops2'
-          "Bee: Nested Loops2": 'Bee: Nested Loops2'
-          "Bee: Debugging2": 'Bee: Debugging2'
-          "Artist: Patterns": 'Artist: Patterns'
-          Songwriting: Songwriting
-          description_audience: Ages 8-18
-          description_short: Course 3 is a follow-up to Course 2.
+          The Maze: An Chathair Ghríobháin
+          "Studio: Create a Story": 'Spraotharlann: Cruthaigh Scéal'
+          The Artist: An tEalaíontóir
+          title: Cúrsa 3
+          Artist Functions: 'Ealaíontóir: Feidhmeanna'
+          Artist For Loops: 'Ealaíontóir: Lúba "For"'
+          Artist Nested Loops: 'Ealaíontóir: Lúba Neadaithe'
+          Bee Conditionals: 'Beach: Coinníollacha'
+          Bee Nested Loops: 'Beach: Lúba Neadaithe'
+          Bee Debuggin: 'Beach: Dífhabhtú'
+          Bee Debugging: 'Beach: Dífhabhtú'
+          Bee Functions: 'Beach: Feidhmeanna'
+          Artist Functions with Params: 'Ealaíontóir: Feidhmeanna a ghlacann le Paraiméadair'
+          Bounce: Preabadh
+          Maze Conditionals: 'Cathair Ghríobháin: Coinníollacha'
+          Artist Functions with Parameters: 'Ealaíontóir: Feidhmeanna a ghlacann le Paraiméadair'
+          Computational Thinking: Smaointeoireacht Ríomhaireachtúil
+          Functional Suncatchers: Móibílí Gréine
+          Songwriting Parameters: 'Ceapadh Ceoil: Paraiméadair'
+          Dice Race: Rás Díslí
+          Internet: An tIdirlíon
+          Crowdsourcing: Sluafhoinsiú
+          Digital Citizenship: Saoránacht Dhigiteach
+          Farmer - While Loops: 'Feirmeoir - Lúba While'
+          description: "Tá Cúrsa 3 dírithe ar dhaltaí a rinne Cúrsa 2 cheana. Déanfaidh na daltaí staidéar níos doimhe ar topaicí a d'fhoghlaim siad i gCúrsaí 1 agus 2, chun réitigh níos solúbtha a thabhairt ar fadhbanna níos casta. Ag deireadh an chúrsa, cruthóidh na daltaí scéalta idirghníomhacha is féidir a chomhroinnt le héinne. Dírithe ar aois 9-10."
+          "Studio: Create a Game": 'Spraotharlann: Cruthaigh Cluiche'
+          Maze: Cathair Ghríobháin
+          Artist: Ealaíontóir
+          "Artist: Functions": 'Ealaíontóir: Feidhmeanna'
+          "Bee: Functions": 'Beach: Feidhmeanna'
+          "Bee: Conditionals": 'Beach: Coinníollacha'
+          "Maze: Conditionals": 'Cathair Ghríobháin: Coinníollacha'
+          "Artist: Nested Loops": 'Ealaíontóir: Lúba Neadaithe'
+          "Farmer: While Loops": 'Feirmeoir: Lúba "While"'
+          "Bee: Nested Loops": 'Beach: Lúba Neadaithe'
+          "Bee: Debugging": 'Beach: Dífhabhtú'
+          Maze2: Cathair Ghríobháin2
+          Artist2: Ealaíontóir2
+          "Artist: Functions2": 'Ealaíontóir: Feidhmeanna2'
+          "Bee: Functions2": 'Beach: Feidhmeanna2'
+          "Bee: Conditionals2": 'Beach: Coinníollacha2'
+          "Maze: Conditionals2": 'Cathair Ghríobháin: Coinníollacha2'
+          "Artist: Nested Loops2": 'Ealaíontóir: Lúba Neadaithe2'
+          "Farmer: While Loops2": 'Feirmeoir: Lúba "While" 2'
+          "Bee: Nested Loops2": 'Beach: Lúba Neadaithe2'
+          "Bee: Debugging2": 'Beach: Dífhabhtú2'
+          "Artist: Patterns": 'Ealaíontóir: Patrúin'
+          Songwriting: Ceapadh Ceoil
+          description_audience: Aois 8-18
+          description_short: Leanann Cúrsa 3 go díreach tar éis Cúrsa 2.
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          title: Spraotharlann
+          description: Cruthaigh scéal nó cluiche sa Spraotharlann!
+          Play Lab: Súgradh is Dáiríre
+          description_short: Cruthaigh scéal nó cluiche sa Spraotharlann!
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
-          description_short: Draw cool pictures and designs with the Artist!
+          title: Ealaíontóir
+          description: Tarraing pictiúir iontacha leis an Ealaíontóir!
+          Artist: Ealaíontóir
+          description_short: Tarraing pictiúir iontacha leis an Ealaíontóir!
         hourofcode:
-          Maze: Maze
-          title: Classic Maze
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          Maze: Cathair Ghríobháin
+          title: Cathair Ghríobháin Chlasaiceach
+          description: Foghlaim buntús na ríomheolaíochta le carachtair ó Angry Birds, Plants vs. Zombies, agus Scrat ó Ice Age!
+          description_short: Foghlaim buntús na ríomheolaíochta le go leor carachtar spraoiúil!
         frozen:
-          title: Code with Anna and Elsa
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-          Artist: Artist
-          description_short: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+          title: Códáil in éindí le hAnna agus Elsa
+          description: Gabh le hAnna agus Elsa mar a thaiscéalann siad draíocht agus áilleacht an oighir. Cruthóidh tú calóga sneachta agus patrúin le do scátaí oighir agus déanfaidh tú tírdhreach álainn geimhridh is féidir a chomhroinnt le cairde!
+          Artist: Ealaíontóir
+          description_short: Gabh le hAnna agus Elsa mar a thaiscéalann siad draíocht agus áilleacht an oighir.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
-          "Artist: Variables": 'Artist: Variables'
-          "Bee: For Loops": 'Bee: For Loops'
-          title: Course 4
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          description_short: Ba chóir go mbeadh Cúrsaí 2 agus 3 déanta ag daltaí i gCúrsa 4.
+          description: 'Tá Cúrsa 4 dírithe ar dhaltaí a rinne Cúrsaí 2 agus 3 cheana. Réiteoidh na daltaí fadhbanna níos casta trí choincheapa éagsúla a tharraingt le chéile. Nuair a bheidh an cúrsa seo críochnaithe acu, beidh siad in ann cláir a scríobh a thaispeánann scileanna éagsúla, mar shampla lúba "for" agus feidhmeanna a ghlacann le paraiméadair. Dírithe ar aois 9-13.'
+          "Artist: Variables": 'Ealaíontóir: Athróga'
+          "Bee: For Loops": 'Beach: Lúba "For"'
+          title: Cúrsa 4
+          "Algorithms: Tangrams": 'Algartaim: Tangraim'
           Variables: Athróga
-          "Play Lab: Variables": 'Play Lab: Variables'
-          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
-          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'Artist: For Loops'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
-          "Artist: Functions": 'Artist: Functions'
-          "Unplugged: Tangrams": 'Unplugged: Tangrams'
-          Artist: Artist
-          Bee: Bee
-          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
-          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
-          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
-          "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10-18
-          Super Challenge - Variables: 'Super Challenge - Variables'
-          Super Challenge - For Loops: 'Super Challenge - For Loops'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
-          Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
+          "Play Lab: Variables": 'Spraotharlann: Athróga'
+          "Play Lab: Functions with Parameters": 'Spraotharlann: Feidhmeanna a ghlacann le Paraiméadair'
+          "Bee: Functions with Parameters": 'Beach: Feidhmeanna a ghlacann le Paraiméadair'
+          "Artist: For Loops": 'Ealaíontóir: Lúba "For"'
+          "Play Lab: For Loops": 'Spraotharlann: Lúba "For"'
+          "Artist: Functions": 'Ealaíontóir: Feidhmeanna'
+          "Unplugged: Tangrams": 'Díphlugáilte: Tangraim'
+          Artist: Ealaíontóir
+          Bee: Beach
+          "Unplugged: Envelope Variables": 'Díphlugáilte: Athróga i gClúdach Litreach'
+          "Unplugged: Madlibs": 'Díphlugáilte: Madlibs'
+          "Unplugged: For Loop Fun": 'Díphlugáilte: Spraoi le Lúba "For"'
+          "Unplugged: Songwriting with Parameters": 'Díphlugáilte: Ceapadh Ceoil le Paraiméadair'
+          "Artist: Functions with Parameters": 'Ealaíontóir: Feidhmeanna a ghlacann le Paraiméadair'
+          "Unplugged: Binary": 'Díphlugáilte: Dénártha'
+          Bee Binary: 'Beach: Dénártha'
+          Farmer Binary: 'Feirmeoir: Dénártha'
+          Maze and Bee: Cathair Ghríobháin agus Beach
+          Artist Binary: 'Ealaíontóir: Dénártha'
+          description_audience: Aois 10-18
+          Super Challenge - Variables: 'Ard-Dúshlán - Athróga'
+          Super Challenge - For Loops: 'Ard-Dúshlán - Lúba "For"'
+          Super Challenge - Functions and Parameters: 'Ard-Dúshlán - Feidhmeanna agus Paraiméadair'
+          Extreme Challenge - Comprehensive: 'Sár-Dhúshlán - Cuimsitheach'
         Course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'Maze: Sequence'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          "Farmer: While Loops": 'Farmer: While Loops'
-          "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          title: Réamhriachtanas do Chúrsa 4
+          description_short: Achoimre ar choincheapa tábhachtacha, dírithe ar dhaltaí nach ndearna Cúrsaí 2 nó 3.
+          description: Achoimre ar choincheapa tábhachtacha, dírithe ar dhaltaí nach ndearna Cúrsaí 2 nó 3.
+          Course 4 Prerequisite: Réamhriachtanas do Chúrsa 4
+          "Maze: Sequence": 'Cathair Ghríobháin: Seicheamh'
+          "Artist: Sequence": 'Ealaíontóir: Seicheamh'
+          "Artist: Loops": 'Ealaíontóir: Lúba'
+          "Bee: Conditionals": 'Beach: Coinníollacha'
+          "Artist: Nested Loops": 'Ealaíontóir: Lúba Neadaithe'
+          "Farmer: While Loops": 'Feirmeoir: Lúba "While"'
+          "Bee: Nested Loops": 'Beach: Lúba Neadaithe'
+          "Artist: Functions": 'Ealaíontóir: Feidhmeanna'
+          "Bee: Debugging": 'Beach: Dífhabhtú'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Intro: Réamhrá
+          Variables and For Loops: 'Athróga agus Lúba "For"'
+          Functions and Functions with Parameters: Feidhmeanna agus Feidhmeanna a ghlacann le Paraiméadair
           title: Usability Testing
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
           Variables: Athróga
-          For Loops: For Loops
-          Binary: Binary
+          For Loops: 'Lúba "For"'
+          Binary: Dénártha
         potus:
           title: special
           description_short: special
@@ -220,45 +220,45 @@ ga:
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: Dénártha
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Unplugged: Video Games and Coordinate Planes": 'Díphlugáilte: Físchluichí agus Plánaí Comhordanáidí'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
-          "Eval: Strings and Images": Strings and Images
-          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Strings and Images": Teaghráin agus Íomhánna
+          "Unplugged: Contracts": 'Díphlugáilte: Conarthaí, Fearann, agus Raon'
           "Eval: Writing Contracts": Writing Contracts
           "Calc: Defining Variables": Defining Variables and Substitution
           "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
           "Eval: Defining Functions": Composite Functions
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Unplugged: The Design Recipe": 'Díphlugáilte: An tOideas Dearaidh'
           "Play Lab: Defining Functions": Rocket Height
           "Eval: Functions": Solving Word Problems with the Design Recipe
           "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
-          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Unplugged: Booleans": 'Díphlugáilte: Luachanna Boole agus Loighic'
           "Eval: Boolean Operators": Boolean Operators
           "Play Lab: Booleans": Sam the Bat
           "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": Conditionals
+          "Unplugged: Conditionals and Piecewise Functions": 'Díphlugáilte: Coinníollacha agus Feidhmeanna Breacleanúnacha'
+          "Eval: Conditionals": Coinníollacha
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Disney Infinity Play Lab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
-          Play Lab: Play Lab
+          title: Spraotharlann Disney Infinity
+          description_short: Úsáid an Spraotharlann chun scéal nó cluiche a chruthú ina bhfuil carachtair Disney Infinity.
+          description: Úsáid Súgradh is Dáiríre chun scéal nó cluiche a chruthú ina bhfuil carachtair Disney Infinity.
+          Play Lab: Spraotharlann
           Infinity: Éigríoch
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blocanna Luachála
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Athróga a Shainmhíniú
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: The Design Recipe
         K5PD:
@@ -285,12 +285,12 @@ ga:
           "Programming Concept: Functions": 'Programming Concept: Functions'
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: Ionsamhlóir an Idirlín
           description_short: Learn about how the Internet works
           description: Learn about how the Internet works
-          Internet Simulator: Internet Simulator
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Internet Simulator: Ionsamhlóir an Idirlín
+          Unit 1: Aonad 1
+          Unit 2: Aonad 2
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
@@ -322,68 +322,68 @@ ga:
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: Accelerated Intro to CS Course
-          description_audience: Ages 10-18
-          description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
-          Introduction to Computer Science: Introduction to Computer Science
-          The Maze: The Maze
-          Computational Thinking: Computational Thinking
-          Graph Paper Programming: Graph Paper Programming
-          The Artist: The Artist
-          Algorithms: Algorithms
-          The Artist 2: The Artist 2
-          Functions: Functions
-          The Farmer: The Farmer
-          Conditionals: Conditionals
-          The Artist 3: The Artist 3
-          Song Writing: Song Writing
-          The Farmer 2: The Farmer 2
-          Abstraction: Abstraction
-          The Artist 4: The Artist 4
-          Relay Programming: Relay Programming
-          The Farmer 3: The Farmer 3
-          The Internet: The Internet
-          The Artist 5: The Artist 5
-          Wrap-up: Wrap-up
+          title: Bunchúrsa Luathaithe Ríomheolaíochta
+          description_audience: Aois 10-18
+          description: "Is cúrsa 20 uair an chloig é seo a chlúdaíonn bunchoincheapa ríomheolaíochta agus ríomhchláraithe ó chúrsaí 2-4. Tá sé dírithe ar dhaltaí idir 10 agus 18 bliain d'aois. Féach ar chúrsaí 2-4 chun eolas níos cuimsithí a fháil!"
+          description_short: Is cúrsa 20 uair an chloig é seo a chlúdaíonn bunchoincheapa ríomheolaíochta agus ríomhchláraithe ó chúrsaí 2-4.
+          Introduction to Computer Science: Buntús na Ríomheolaíochta
+          The Maze: An Chathair Ghríobháin
+          Computational Thinking: Smaointeoireacht Ríomhaireachtúil
+          Graph Paper Programming: Ríomhchlárú ar Ghrafpháipéar
+          The Artist: An tEalaíontóir
+          Algorithms: Algartaim
+          The Artist 2: An tEalaíontóir 2
+          Functions: Feidhmeanna
+          The Farmer: An Feirmeoir
+          Conditionals: Coinníollacha
+          The Artist 3: An tEalaíontóir 3
+          Song Writing: Cumadh Ceoil
+          The Farmer 2: An Feirmeoir 2
+          Abstraction: Teibíocht
+          The Artist 4: An tEalaíontóir 4
+          Relay Programming: Códáil Sealaíochta
+          The Farmer 3: An Feirmeoir 3
+          The Internet: An tIdirlíon
+          The Artist 5: An tEalaíontóir 5
+          Wrap-up: Clabhsúr
         edit-code:
-          title: Edit Code
-          description: Edit Code
-          description_short: Edit Code
-          The Maze: The Maze
+          title: Cuir an Cód in Eagar
+          description: Cuir an Cód in Eagar
+          description_short: Cuir an Cód in Eagar
+          The Maze: An Chathair Ghríobháin
           Applab: Applab
-          The Artist: The Artist
-          Play Lab: Play Lab
-          Play Lab 2015: Play Lab 2015
+          The Artist: An tEalaíontóir
+          Play Lab: Spraotharlann
+          Play Lab 2015: Spraotharlann 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: Events
-          description: Events
-          description_short: Events
-          Bounce: Bounce
+          title: Teagmhais
+          description: Teagmhais
+          description_short: Teagmhais
+          Bounce: Preabadh
           Studio: Studio
           Calc: Calc
           Eval: Eval
         flappy:
-          title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
-          description_short: Write your own Flappy game in less than 10 minutes!
-          Flappy Code: Flappy Code
+          title: Cód Flappy
+          description: Ar mhaith leat do chluiche féin a scríobh i gceann 10 nóiméad? Bain triail as ár gcúrsa Flappy Code!
+          description_short: Scríobh do chluiche Flappy féin i gceann 10 nóiméad!
+          Flappy Code: Cód Flappy
         jigsaw:
-          title: Jigsaw
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
-          Jigsaw: Jigsaw
+          title: Míreanna Mearaí
+          description: Bain triail as na míreanna mearaí
+          description_short: Bain triail as na míreanna mearaí
+          Jigsaw: Míreanna Mearaí
         step:
           title: Céim
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Bunchúrsa céimeanna
+          description_short: Bunchúrsa céimeanna
           Step: Céim
         Hour of Code:
-          title: Hour of Code 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
-          description_short: Try the basics of computer science with many fun characters!
-          Hour of Code 2013: Hour of Code 2013
+          title: An Uair Chódála 2013
+          description: Foghlaim buntús na ríomheolaíochta le carachtair ó Angry Birds agus Plants vs. Zombies!
+          description_short: Foghlaim buntús na ríomheolaíochta le go leor carachtar spraoiúil!
+          Hour of Code 2013: An Uair Chódála 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -415,19 +415,19 @@ ga:
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
         course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'Maze: Sequence'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          "Farmer: While Loops": 'Farmer: While Loops'
-          "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          title: Réamhriachtanas do Chúrsa 4
+          description_short: Achoimre ar choincheapa tábhachtacha, dírithe ar dhaltaí nach ndearna Cúrsaí 2 nó 3.
+          description: Achoimre ar choincheapa tábhachtacha, dírithe ar dhaltaí nach ndearna Cúrsaí 2 nó 3.
+          Course 4 Prerequisite: Réamhriachtanas do Chúrsa 4
+          "Maze: Sequence": 'Cathair Ghríobháin: Seicheamh'
+          "Artist: Sequence": 'Ealaíontóir: Seicheamh'
+          "Artist: Loops": 'Ealaíontóir: Lúba'
+          "Bee: Conditionals": 'Beach: Coinníollacha'
+          "Artist: Nested Loops": 'Ealaíontóir: Lúba Neadaithe'
+          "Farmer: While Loops": 'Feirmeoir: Lúba "While"'
+          "Bee: Nested Loops": 'Beach: Lúba Neadaithe'
+          "Artist: Functions": 'Ealaíontóir: Feidhmeanna'
+          "Bee: Debugging": 'Beach: Dífhabhtú'
         cspunit1:
           title: 'CSP Unit 1 - Digital Information'
           description_short: Explore how digital information is represented and transferred
@@ -471,34 +471,34 @@ ga:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          "Eval: Functions": 'Eval: Functions'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Contracts: Contracts
+          "Unplugged: Video Games and Coordinate Planes": 'Díphlugáilte: Físchluichí agus Plánaí Comhordanáidí'
+          "Calc: Evaluation Blocks": 'Áireamhán: Blocanna Luachála'
+          "Eval: Strings and Images": 'Luacháil: Teaghráin agus Íomhánna'
+          "Unplugged: Contracts": 'Díphlugáilte: Conarthaí'
+          "Eval: Writing Contracts": 'Luacháil: Conarthaí a Scríobh'
+          "Calc: Defining Variables": 'Áireamhán: Athróga a Shainmhíniú'
+          "Play Lab: Defining Variables (Big Game)": 'Spraotharlann: Athróga a Shainmhíniú (An Cluiche Mór)'
+          "Eval: Defining Functions": 'Luacháil: Feidhmeanna a Shainmhíniú'
+          "Unplugged: The Design Recipe": 'Díphlugáilte: An tOideas Dearaidh'
+          "Play Lab: Defining Functions": 'Súgradh is Dáiríre: Feidhmeanna a Shainmhíniú'
+          "Eval: Functions": 'Luacháil: Feidhmeanna'
+          "Play Lab: Animation (Big Game)": 'Spraotharlann: Beochan (An Cluiche Mór)'
+          "Unplugged: Booleans": 'Díphlugáilte: Luachanna Boole'
+          "Eval: Boolean Operators": 'Luacháil: Oibreoirí Boole'
+          "Play Lab: Booleans": 'Spraotharlann: Luachanna Boole'
+          "Play Lab: Boolean (Big Game)": 'Spraotharlann: Luachanna Boole (An Cluiche Mór)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Díphlugáilte: Coinníollacha agus Feidhmeanna Breacleanúnacha'
+          "Eval: Conditionals": 'Luacháil: Coinníollacha'
+          "Unplugged: Collision Detection and the Distance Formula": 'Díphlugáilte: Aimisú Imbhuailte agus an Fhoirmle Faid'
+          "Play Lab: Collision Detection (Big Game)": 'Spraotharlann: Aimsiú Imbhuailte (An Cluiche Mór)'
+          Evaluation Blocks: Blocanna Luachála
+          Strings and Images: Teaghráin agus Íomhánna
+          Contracts: Conarthaí
           Your Game - Defining Variables: 'Your Game - Defining Variables'
           Simple Function Definition: Simple Function Definition
           The Design Recipe: The Design Recipe
           Your Game - Animation: 'Your Game - Animation'
-          Booleans: Booleans
+          Booleans: Luachanna Boole
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 'Your Game - Booleans'
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
@@ -514,16 +514,16 @@ ga:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Blocanna Luachála
+          Strings and Images: Teaghráin agus Íomhánna
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: 'Your Game - Animation'
-          Booleans: Booleans
+          Booleans: Luachanna Boole
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 'Your Game - Booleans'
           Luigi's Pizza: "Luigi's Pizza"
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          "Play Lab: Collision Detection (Big Game)": 'Súgradh is Dáiríre: Aimsiú Imbhuailte (Cluiche Mór)'
           Your Game - Player Movement: 'Your Game - Player Movement'
           Your Game - Collision Detection: 'Your Game - Collision Detection'
         text-compression:
@@ -590,10 +590,10 @@ ga:
         cspunit3:
           title: 'CSP Unit 3 - Programming'
           title_short: CSP Unit 3
-          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
+          description_short: This unit introduces the foundational concepts of computer programming.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
-          Functions: Functions
+          Functions: Feidhmeanna
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: 'Creating Procedures - Part 1'
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
@@ -603,7 +603,7 @@ ga:
           Scene Design Part 1 - Plan: Design a Digital Scene
           Scene Design Part 2 - Code: 'Scene Design Part 2 - Code'
           Scene Design Part 3 - Reflect: 'Scene Design Part 3 - Reflect'
-          Unplugged Events Activity -  Mission Unsortable: 'Unplugged Events Activity -  Mission Unsortable'
+          Unplugged Events Activity -  Mission Unsortable: 'Gníomhaíochtaí Díphlugáilte - Misean Neamh-Insórtáilte'
           Buttons on the Screen: Buttons on the Screen
           Unfortunate Events: Unfortunate Events
           On Beyond Buttons: On Beyond Buttons
@@ -630,7 +630,7 @@ ga:
           Sarah testing project backed levels: Sarah testing project backed levels
           Cookie Clicker: Cookie Clicker
           Clicker Variable Basics: Clicker Variable Basics
-          Events Unplugged: Events Unplugged
+          Events Unplugged: Imeachtaí Díphlugáilte
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
@@ -641,7 +641,7 @@ ga:
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
-          Creating Functions: Creating Functions
+          Creating Functions: Feidhmeanna a chruthú
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
           Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
@@ -690,9 +690,9 @@ ga:
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blocanna Luachála
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: Teaghráin agus Íomhánna
           The Design Recipe: The Design Recipe
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -740,7 +740,7 @@ ga:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blocanna Luachála
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -752,7 +752,7 @@ ga:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blocanna Luachála
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -804,8 +804,8 @@ ga:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -833,7 +833,7 @@ ga:
           description_short: Testing
         cspunit2:
           title: 'CSP Unit 2 - The Internet'
-          description_short: The Internet
+          description_short: An tIdirlíon
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -852,7 +852,7 @@ ga:
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: The Internet Is for Everyone
+          The Internet: Is le cách an tIdirlíon
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
           Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
@@ -881,16 +881,16 @@ ga:
           Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
+          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          Evaluation Blocks: Blocanna Luachála
+          Strings and Images: Teaghráin agus Íomhánna
+          Defining Variables: Athróga a Shainmhíniú
           Big Game - Variables: 'Big Game - Variables'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Play Lab: Defining Functions": 'Súgradh is Dáiríre: Feidhmeanna a Shainmhíniú'
           The Design Recipe: The Design Recipe
           Big Game - Animation: 'Big Game - Animation'
-          Booleans: Booleans
+          Booleans: Luachanna Boole
           Sam the Bat: Sam the Bat
           Big Game - Booleans: 'Big Game - Booleans'
           Luigi's Pizza: "Luigi's Pizza"
@@ -898,16 +898,16 @@ ga:
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
-          Free Play: Free Play
+          Free Play: Saorimirt
         allthethings:
-          Jigsaw: Jigsaw
-          Maze: Maze
-          Artist: Artist
-          Bee: Bee
-          PlayLab: PlayLab
+          Jigsaw: Míreanna Mearaí
+          Maze: Cathair Ghríobháin
+          Artist: Ealaíontóir
+          Bee: Beach
+          PlayLab: Súgradh is Dáiríre
           Farmer: Farmer
           Flappy: Flappy
-          Bounce: Bounce
+          Bounce: Preabadh
           Multi: Multi
           Match: Match
           TextMatch: TextMatch
@@ -929,21 +929,28 @@ ga:
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
+          Rich long assessment: Rich long assessment
+          Free Response: Free Response
+          Game Lab: Game Lab
+          Sample PLC Assessment: Sample PLC Assessment
+          Swapped Levels: Swapped Levels
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Blocanna Luachála
+          Strings and Images: Teaghráin agus Íomhánna
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Athróga a Shainmhíniú
+          Defining Functions: Feidhmeanna a Shainmhíniú
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
-          "Eval: Conditionals": 'Eval: Conditionals'
+          Booleans: Luachanna Boole
+          "Eval: Conditionals": 'Luacháil: Coinníollacha'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         cspfacilitator:
@@ -952,20 +959,20 @@ ga:
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: Ionsamhlóir an Idirlín
+          App Lab: Saotharlann Aipeanna
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: Ionsamhlóir an Idirlín
+          App Lab: Saotharlann Aipeanna
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -985,9 +992,9 @@ ga:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          Welcome!: Fáilte!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -996,7 +1003,7 @@ ga:
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: Wrap-up
+          Wrap-up: Clabhsúr
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and Web 2.0
@@ -1030,38 +1037,38 @@ ga:
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
-          Hour of Code: Hour of Code
-          Hour of Code 2015: Hour of Code 2015
+          title: An Uair Chódála 2015
+          description_short: Úsáid an Spraotharlann chun scéal nó cluiche a chruthú.
+          description: Úsáid Súgradh is Dáiríre chun scéal nó cluiche a chruthú.
+          Hour of Code: An Uair Chódála
+          Hour of Code 2015: An Uair Chódála 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Blocanna Luachála
+          Strings and Images: Teaghráin agus Íomhánna
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Athróga a Shainmhíniú
+          Defining Functions: Feidhmeanna a Shainmhíniú
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
-          "Eval: Conditionals": 'Eval: Conditionals'
+          Booleans: Luachanna Boole
+          "Eval: Conditionals": 'Luacháil: Coinníollacha'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          Welcome!: Fáilte!
           Wrap-Up: Wrap-Up
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1076,9 +1083,9 @@ ga:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          Welcome!: Fáilte!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1094,10 +1101,10 @@ ga:
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1106,9 +1113,9 @@ ga:
           Wrap-Up: Wrap-Up
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          Welcome!: Fáilte!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1122,12 +1129,12 @@ ga:
           Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Wrap-up
+          Wrap-up: Clabhsúr
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          Welcome!: Fáilte!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1141,7 +1148,7 @@ ga:
           Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Wrap-up
+          Wrap-up: Clabhsúr
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1168,15 +1175,15 @@ ga:
           description_short: Short unplugged course designed for informal learning
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
-          Graph Paper Programming: Graph Paper Programming
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Binary Bracelets: Binary Bracelets
-          Songwriting: Songwriting
+          Happy Maps: Mapaí Meidhreacha
+          Move it, Move it: Bog é, Bog é
+          "Real-life Algorithms: Plant a Seed": 'Algartaim Fhíorshaoil: Síol a Chur'
+          Graph Paper Programming: Ríomhchlárú ar Ghrafpháipéar
+          Building a Foundation: Dúshraith a Leagan
+          Getting Loopy: Bí Lúbach
+          The Big Event: An Teagmhas Mór
+          Binary Bracelets: Bráisléid Dhénártha
+          Songwriting: Ceapadh Ceoil
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1216,7 +1223,7 @@ ga:
           title: 'Exploring Computer Science: Unit 2'
           description_short: Unit 2 of the Exploring Computer Science curriculum
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1243,7 +1250,7 @@ ga:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 3 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1273,7 +1280,7 @@ ga:
           title: 'Exploring Computer Science: Unit 4'
           description_short: Unit 4 of the version 5 Exploring Computer Science curriculum.
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 4 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1306,7 +1313,7 @@ ga:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1319,7 +1326,7 @@ ga:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1346,7 +1353,7 @@ ga:
           "Data App Part 3: Code": 'Data App Part 3: Code'
           Identifying People with Data: Identifying People with Data
           Collecting Personal Information: Collecting Personal Information
-          Privacy Policy: Privacy Policy
+          Privacy Policy: Polasaí Príobháideachais
           "Debate: Privacy vs. Utility": 'Debate: Privacy vs. Utility'
           "Data App Part 4: App Permissions": 'Data App Part 4: App Permissions'
           "Data App Part 5: Clean Data": 'Data App Part 5: Clean Data'
@@ -1392,7 +1399,7 @@ ga:
           title: Computer Science in Science PD Phase 3A Post Work
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
@@ -1414,7 +1421,7 @@ ga:
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1430,21 +1437,21 @@ ga:
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: Aois 10-18
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: Aois 10-18
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
           Spring 2016: Spring 2016
         iceage:
-          title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          title: 'Spraotharlann: Ice Age'
+          description_short: Cruthaigh scéal nó cluiche sa Spraotharlann Ice Age!
+          description: Cruthaigh scéal nó cluiche sa Spraotharlann Ice Age!
+          Ice Age Play Lab: 'Spraotharlann: Ice Age'
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1462,7 +1469,7 @@ ga:
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
-          description_short: Programming
+          description_short: Códáil
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           While Loop Basics: While Loop Basics
           While Loops_ Counting Flips: While Loops_ Counting Flips
@@ -1495,30 +1502,30 @@ ga:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: 'Spraotharlann: Gumball'
+          description_short: Cruthaigh scéal nó cluiche sa Spraotharlann Gumball!
+          description: Cruthaigh scéal nó cluiche sa Spraotharlann Gumball!
+          Gumball Play Lab: 'Spraotharlann: Gumball'
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          Hour of Code 2015: Hour of Code 2015
+          title: 'Star Wars: Tóg do Réaltra Féin le Cód'
+          description_short: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
+          description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
+          Hour of Code 2015: An Uair Chódála 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          Hour of Code 2015: Hour of Code 2015
+          title: 'Star Wars: Tóg do Réaltra Féin le Cód'
+          description_short: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
+          description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
+          Hour of Code 2015: An Uair Chódála 2015
         minecraft:
           title: Minecraft
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
-          Hour of Code 2015: Hour of Code 2015
+          title: An Uair Chódála Minecraft
+          description_short: Taiscéal domhan Minecraft le cód
+          description: Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa domhan Minecraft seo
+          Hour of Code 2015: An Uair Chódála 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
@@ -1530,7 +1537,7 @@ ga:
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Fáilte!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Wrap-Up
           Assessing Computer Models: Assessing Computer Models
@@ -1617,32 +1624,522 @@ ga:
           title: 'Computer Science in Algebra: Course A'
           description_short: Learn Functional Programming through Algebra
           description: Learn Functional Programming through Algebra
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          "Eval: Functions": 'Eval: Functions'
+          "Calc: Evaluation Blocks": 'Áireamhán: Blocanna Luachála'
+          "Eval: Strings and Images": 'Luacháil: Teaghráin agus Íomhánna'
+          "Unplugged: Contracts": 'Díphlugáilte: Conarthaí'
+          "Eval: Writing Contracts": 'Luacháil: Conarthaí a Scríobh'
+          "Calc: Defining Variables": 'Áireamhán: Athróga a Shainmhíniú'
+          "Eval: Defining Functions": 'Luacháil: Feidhmeanna a Shainmhíniú'
+          "Unplugged: The Design Recipe": 'Díphlugáilte: An tOideas Dearaidh'
+          "Play Lab: Defining Functions": 'Spraotharlann: Feidhmeanna a Shainmhíniú'
+          "Eval: Functions": 'Luacháil: Feidhmeanna'
+          "Unplugged: Fast Functions": 'Unplugged: Fast Functions'
         AlgebraB:
           title: Computer Science in Algebra
           description_short: Learn Functional Programming through Algebra
           description: Learn Functional Programming through Algebra
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          "Unplugged: Video Games and Coordinate Planes": 'Díphlugáilte: Físchluichí agus Plánaí Comhordanáidí'
+          "Play Lab: Defining Variables (Big Game)": 'Spraotharlann: Athróga a Shainmhíniú (An Cluiche Mór)'
+          "Play Lab: Animation (Big Game)": 'Spraotharlann: Beochan (An Cluiche Mór)'
+          "Unplugged: Booleans": 'Díphlugáilte: Luachanna Boole'
+          "Eval: Boolean Operators": 'Luacháil: Oibreoirí Boole'
+          "Play Lab: Booleans": 'Spraotharlann: Luachanna Boole'
+          "Play Lab: Boolean (Big Game)": 'Spraotharlann: Luachanna Boole (An Cluiche Mór)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Díphlugáilte: Coinníollacha agus Feidhmeanna Breacleanúnacha'
+          "Eval: Conditionals": 'Luacháil: Coinníollacha'
+          "Unplugged: Collision Detection and the Distance Formula": 'Díphlugáilte: Aimisú Imbhuailte agus an Fhoirmle Faid'
+          "Play Lab: Collision Detection (Big Game)": 'Spraotharlann: Aimsiú Imbhuailte (An Cluiche Mór)'
         gamelab-hackathon:
           Middle_School_Hackathon: Middle_School_Hackathon
           title: Gamelab Hackathon
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
+        algebraPD1:
+          title: Ríomheolaíocht san ailgéabar, cuid 1
+          description_short: 'Phase 1: Online Introduction'
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Evaluation Blocks: Blocanna Luachála
+          Teacher Dashboard: Teacher Dashboard
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD3c:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra end of year reflection
+          description: CS in Algebra end of year reflection
+          Getting Started: Getting Started
+          Sharing Student Work: Sharing Student Work
+          Planning For the Future: Planning For the Future
+        csp1:
+          title: 'CS Principles Unit 1 - The Internet'
+          description_short: An tIdirlíon
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
+          Personal Innovations: Personal Innovations
+          Sending Binary Messages: Sending Binary Messages
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          The Internet: An tIdirlíon
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Redundancy: Routers and Redundancy
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          The Need for DNS: The Need for DNS
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
+          Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
+        csp2:
+          title: 'CS Principles Unit 2 - Digital Information'
+          description_short: Digital Information
+          description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Bytes and File Sizes: Bytes and File Sizes
+          Text Compression: Text Compression
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          Encode a Complex Thing: Encode a Complex Thing
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+        csp3:
+          title: 'CSP Unit 3 - Programming'
+          description_short: Códáil
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          The Need For Programming Languages: The Need For Programming Languages
+          The Need for Algorithms: The Need for Algorithms
+          Creativity in Algorithms: Creativity in Algorithms
+          Using Simple Commands: Using Simple Commands
+          Creating Functions: Feidhmeanna a chruthú
+          Functions and Top-Down Design: Functions and Top-Down Design
+          APIs and Function Parameters: APIs and Function Parameters
+          Creating functions with Parameters: Creating functions with Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Practice PT - Design a Digital Scene: 'Practice PT - Design a Digital Scene'
+        csp4:
+          title: 'CS Principles Unit 4 - Big Data and Privacy'
+          description_short: Big Data and Privacy
+          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
+          Identifying People with Data: Identifying People with Data
+          The Cost of Free: The Cost of Free
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Public Key Crypto: Public Key Crypto
+          Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
+        csp5:
+          title: 'CS Principles Unit 5 - Building Apps'
+          description_short: Building Apps
+          description: 'This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools. '
+          Events Unplugged: Imeachtaí Díphlugáilte
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Introducing Design Mode: Introducing Design Mode
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistants: Introduction to Digital Assistants
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+        csp6:
+          title: 'CS Principles Unit 6 - Performance Tasks'
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+        CSDU3-Draft:
+          title: ' TEMP CSD Unit 3 - Interactive Games and Animations'
+          description_short: Códáil
+          description: Temp place to work on U3 of Disco
+          Drawing in Game Lab: Drawing in Game Lab
+          Animation: Beochan
+          Draw Loop and Random: Draw Loop and Random
+          Variables: Athróga
+          Sprite Properties and Mod: Sprite Properties and Mod
+          Expressions and Reassignment: Expressions and Reassignment
+          Sprites and Properties: Sprites and Properties
+          Counting with Variables: Counting with Variables
+          Expressions: Expressions
+          Conditionals and Keyboard Input: Conditionals and Keyboard Input
+          Sprites and Images: Sprites and Images
+          CSD U3 Variables and Animation: CSD U3 Variables and Animation
+          SFLP: SFLP
+          Animations: Animations
+          "Project: Interactive Card": 'Project: Interactive Card'
+          Booleans and Conditionals: Booleans and Conditionals
+          Variables and Animation: Variables and Animation
+          Complex Conditionals: Complex Conditionals
+          Proposed Sprites and Props: Proposed Sprites and Props
+          Conditionals Update: Conditionals Update
+        2016_sciencePD_phase1:
+          title: Computer Science in Science PD 2016-2017
+          description_short: In Partnership with Project GUTS
+          description: In Partnership with Project GUTS
+          Introduction to PD: Introduction to PD
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        TEMP CSD Unit 3:
+          title: ' TEMP CSD Unit 3 - Interactive Games and Animations'
+          description_short: Códáil
+          description: ""
+          Drawing in Game Lab: Drawing in Game Lab
+        CSF_Secret_Sample:
+          title: Secret Sample
+          description_short: This is a secret...shhhhh
+          description: Test of new educational philosophy
+          description_audience: Aois 8-18
+          Computational Thinking: Smaointeoireacht Ríomhaireachtúil
+          Sample Stage: Sample Stage
+        ECSPD1:
+          title: ECS Part 1
+          description_short: 'Phase 1: Online Introduction'
+          description: Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum
+          Getting Started: Getting Started
+          What is ECS?: What is ECS?
+          ECS Curriculum: ECS Curriculum
+          Wrap Up: Wrap Up
+          Welcome to Phase 1!: Welcome to Phase 1!
+          Background and Context: Background and Context
+          Classroom and workshop style : 'Classroom and workshop style '
+          Classroom and Workshop Style : 'Classroom and Workshop Style '
+        algebraFacilitator:
+          title: Computer Science in Algebra Facilitator Pre Work
+          description_short: Teach Algebra through Functional Programming
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Evaluation Blocks: Blocanna Luachála
+          Teacher Dashboard: Teacher Dashboard
+        sciencePD1:
+          title: 'CS in Science: Part 1'
+          description_short: 'Phase 1: Online Introduction'
+          description: In Partnership with Project GUTS
+          Introduction to PD: Introduction to PD
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        cspoptional:
+          title: CS Principles Optional Lessons
+          description_short: Optional
+          description: Optional lessons and content across all of the CS Principles units are listed here
+          Unit 1 - Sending Bits in the Real World: 'Unit 1 - Sending Bits in the Real World'
+          Unit 1 - Encoding Numbers in the Real World: 'Unit 1 - Encoding Numbers in the Real World'
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+        cspunit1-support:
+          title: Online Support for CSP Unit 1
+          description: This is a test Professional Learning Course
+          Teachers and Tools: Teachers and Tools
+          Supporting Peer Learning: Supporting Peer Learning
+          Running a Constructive Classroom: Running a Constructive Classroom
+          Strategies for Student Writing: Strategies for Student Writing
+          Intro to the Unit: Intro to the Unit
+          Chapter Overviews: Chapter Overviews
+          "Tool Talk: Intro to Netsim": 'Tool Talk: Intro to Netsim'
+          Sending Binary Messages: Sending Binary Messages
+          Encoding and Sending Numbers: Encoding and Sending Numbers
+        test-teaching-ap-cs-unit-1:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        allthehiddenthings:
+          title: All the Hidden Things!
+          description_short: Unreleased level types for UI testing as admin
+          description: Unreleased level types for UI testing as admin
+          Game Lab: Game Lab
+          Contained Levels: Contained Levels
+        cspunit1-support-test:
+          title: CSP Unit 1 teacher support
+          description: Online Supports for CSP Unit 1
+          Unit 1 Overview: Unit 1 Overview
+        cspunit1-tools:
+          title: netsim task completion
+          description: introduction to the internet simulator and a discussion of how we use it to teach the internet
+          netsim: netsim
+        Test CPS PD:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        csp-facilitators :
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events
+        csp-facilitators:
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events
+        cspassessment:
+          title: CS Principles Culminating Assessment
+          description_short: Culminating
+          description: 'This 55-question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact. '
+          CS Principles Culminating Assessment: CS Principles Culminating Assessment
+        cspexam1-mWU7ilDYM9:
+          title: 'CS Principles Culminating Assessment - Part 1'
+          description_short: Culminating
+          description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.'
+          CS Principles Culminating Assessment Part 1: CS Principles Culminating Assessment Part 1
+        cspexam2-AKwgAh1ac5:
+          title: 'CS Principles Culminating Assessment - Part 2'
+          description_short: Culminating
+          description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.  It is part 2 of a two-part 50 question exam'
+          CS Principles Culminating Assessment Part 2: CS Principles Culminating Assessment Part 2
+        CSDU4-Draft:
+          title: ' TEMP CSD Unit 4 - The Design Process'
+          description_short: Design Process and App Lab
+          description: Temp place to work on U4 of Disco
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Introducing Design Mode: Introducing Design Mode
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistants: Introduction to Digital Assistants
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          The Need For Programming Languages: The Need For Programming Languages
+          Using Simple Commands: Using Simple Commands
+          Creating Functions: Feidhmeanna a chruthú
+          Functions and Top-Down Design: Functions and Top-Down Design
+          APIs and Function Parameters: APIs and Function Parameters
+          Creating functions with Parameters: Creating functions with Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          App Lab: Saotharlann Aipeanna
+          Design Mode: Design Mode
+        CSDU1-Draft:
+          title: ' TEMP CSD Unit 1'
+          description_short: Problem Solving
+          description: Temp place to work on U1 of Disco
+        CSDU2-Draft:
+          title: ' TEMP CSD Unit 2'
+          description_short: Web Development
+          description: Temp place to work on U2 of Disco
+          Headers and Lists: Headers and Lists
+          Introduction to HTML: Introduction to HTML
+        CSDU5-Draft:
+          title: ' TEMP CSD Unit 5'
+          description_short: Data
+          description: Temp place to work on U5 of Disco
+        CSDU6-Draft:
+          title: ' TEMP CSD Unit 6 '
+          description_short: Makerlab
+          description: Temp place to work on U6 of Disco
+        CSF_Secret_Sample_Story:
+          title: Secret Sample with Story
+          description_short: This is a secret...shhhh
+          description: Test of new educational philosophy with guiding storyline
+          description_audience: Ages 8-18+
+          Sample Stage: Sample Stage
+        MikeTest:
+          title: MikeTest
+          description_short: Just a script for playing around
+          description: Trying not to break anything
+          description_audience: Ages 8-98
+          Sample Stage: Sample Stage
+          Artist Functions: 'Ealaíontóir: Feidhmeanna'
+          The same thing with named levels: The same thing with named levels
+          You are a coding STAR: You are a coding STAR
+        artistExemplar:
+          title: Artist Exemplar
+          description_short: How can we make the artist levels really hum?
+          description: These artist levels will knock the socks off of third graders
+          description_audience: Aois 8-18
+          Artist Exemplar: Artist Exemplar
+        2016_sciencePD_phase2b:
+          title: Computer Science in Science PD Phase 2b 2016-2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Fáilte!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Wrap-Up
+        teachercon:
+          title: TeacherCon Supports
+          description_short: We will use this during TeacherCon to deliver supports and materials for sessions
+          description: We will use this during TeacherCon to deliver supports and materials for sessions
+          Introduction to Teachercon: Introduction to Teachercon
+          Lesson 1,4: 'Lesson 1.4: Number Systems (Circle Triangle Square)'
+          Lesson 1,6: 'Lesson 1.6: Sending Numbers'
+          Lesson 1,9: 'Lesson 1.9: Internet Addressing (Battleship)'
+          Lesson 1,10: 'Lesson 1.10: Routers and Redundancy'
+          Lesson 1,11: 'Lesson 1.11: Packets and Making a Reliable Internet'
+          Lesson 2,2: 'Lesson 2.2: Text Compression'
+          Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
+          Lesson 2,10: 'Lesson 2.10: Good and Bad Data Visualizations'
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+          Discovery Learning: Discovery Learning
+          Measuring Student Learning: Measuring Student Learning
+        2016_sciencePD-phase2b:
+          title: Computer Science in Science PD Phase 2b 2016 2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Fáilte!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Wrap-Up
+        kinderTest:
+          Kindergarten Stage 1: Kindergarten Stage 1
+        gradeKinder:
+          Debugging: Debugging
+          Persistence & Frustration: 'Persistence & Frustration'
+          Sequences & Algorithms: 'Sequences & Algorithms'
+          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          Programming: Códáil
+          Being Safe Online: Being Safe Online
+          Loops: Lúba
+          Programming Unplugged: Programming Unplugged
+          Loops Unplugged: Loops Unplugged
+          Events Unplugged: Imeachtaí Díphlugáilte
+          Events: Teagmhais
+        grade4:
+          title: Grade 4
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 9-99
+          "Mixed Review #1 (Ramp Up)": 'Mixed Review #1 (Ramp Up)'
+          Conditionals: Coinníollacha
+          "Bee: Conditionals": 'Beach: Coinníollacha'
+          "PlayLab: Conditionals": 'PlayLab: Conditionals'
+          Songwriting: Ceapadh Ceoil
+          "Bee: Functions": 'Beach: Feidhmeanna'
+          Decision Trees: Decision Trees
+          Choose Your Own Adventure: Choose Your Own Adventure
+          "Project #1": 'Project #1'
+          Nested Loops: Lúba Neadaithe
+          "Artist: Nested Loops": 'Ealaíontóir: Lúba Neadaithe'
+          "Mixed Review #2 (Conditionals, Events, Functions)": 'Mixed Review #2 (Conditionals, Events, Functions)'
+          "New Artist: Functions": 'New Artist: Functions'
+          "Project #2": 'Project #2'
+          "Mixed Review #3 (Deduce the Concept)": 'Mixed Review #3 (Deduce the Concept)'
+          Internet: An tIdirlíon
+          Crowdsourcing: Sluafhoinsiú
+          Digital Citizenship: Saoránacht Dhigiteach
+        grade1:
+          Predicting & Debugging: 'Predicting & Debugging'
+          Persistence & Frustration: 'Persistence & Frustration'
+          Sequences & Algorithms: 'Sequences & Algorithms'
+          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+        grade5:
+          title: Grade 5
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 10-110
+        ecs-unit1:
+          title: ECS Part 1
+          description_short: 'Unit 1: Human-Computer Interaction'
+          description: 'Unit 1: Human-Computer Interaction'
+          Welcome!: Fáilte!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Clabhsúr
+        ecs-unit2:
+          title: ECS Unit 2
+          description_short: 'Unit 2: Problem Solving'
+          description: 'Unit 2: Problem Solving'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Teaching Strategies: Teaching Strategies
+          Lesson Overviews: Lesson Overviews
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: 'Close & Next Steps'
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community Problems with Data
+          "Day 3 Intro To Problem Solving: Candy Bar Activity": 'Day 3 Intro To Problem Solving: Candy Bar Activity'
+          "Day 4-6 Strategies in Problem Solving: Handshake Activity": 'Day 4-6 Strategies in Problem Solving: Handshake Activity'
+          "Day 7-9 Problem Solving: Cornrow Curves": 'Day 7-9 Problem Solving: Cornrow Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          "Day 13-14 Linear and Binary Search: Tower Building Activity": 'Day 13-14 Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          "Day 17 Minimal Spanning Trees: Muddy City": 'Day 17 Minimal Spanning Trees: Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project

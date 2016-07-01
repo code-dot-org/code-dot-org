@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson, students crack the random substitution cipher, complete a short reading in Blown to Bits, and begin an exploration of the use of keys in encryption techniques through an exploration of the Vigenère cipher. Students will be provided a hands-on experience with the use of the mathematical tool of frequency analysis as a component of cipher cracking using the Frequency Analysis Tool. The reading and exploration of the Vigenère cipher present students with their first look at the components of strong encryption techniques, most notably the combination of publicly known encryption techniques with privately held keys for completing the encryption and decryption. Students will further explore this idea in the subsequent lesson.">
+    <title>Cracking the Code</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit4/"><span class="h2">Unit</span><span class="h1">4</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/1" data-pdf-link="#unit4lesson1">
+            1
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/2" data-pdf-link="#unit4lesson2">
+            2
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/3" data-pdf-link="#unit4lesson3">
+            3
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/4" data-pdf-link="#unit4lesson4">
+            4
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/5" data-pdf-link="#unit4lesson5">
+            5
+        </a>
+        </div>
+        
+            
+                
+                    <div class="lesson current">
+                
+            
+        <a href="/educate/csp_test/unit4/6" data-pdf-link="#unit4lesson6">
+            6
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/7" data-pdf-link="#unit4lesson7">
+            7
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/8" data-pdf-link="#unit4lesson8">
+            8
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/9" data-pdf-link="#unit4lesson9">
+            9
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/10" data-pdf-link="#unit4lesson10">
+            10
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/11" data-pdf-link="#unit4lesson11">
+            11
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/12" data-pdf-link="#unit4lesson12">
+            12
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/13" data-pdf-link="#unit4lesson13">
+            13
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/14" data-pdf-link="#unit4lesson14">
+            14
+        </a>
+        </div>
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit4lesson6">
+        
+            
+                <h1>Lesson 6: Cracking the Code</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson, students crack the random substitution cipher, complete a short reading in Blown to Bits, and begin an exploration of the use of keys in encryption techniques through an exploration of the Vigenère cipher. Students will be provided a hands-on experience with the use of the mathematical tool of frequency analysis as a component of cipher cracking using the Frequency Analysis Tool. The reading and exploration of the Vigenère cipher present students with their first look at the components of strong encryption techniques, most notably the combination of publicly known encryption techniques with privately held keys for completing the encryption and decryption. Students will further explore this idea in the subsequent lesson.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>Encryption techniques that derive their security merely from the method of encryption being a secret are not actually secure. It is quite likely that patterns remaining in the ciphertext will reveal the structure of the plaintext and that eventually the original message will be retrieved. Strong encryption techniques instead are typically publicly known, but have mathematical properties which ensure that the original message cannot easily be retrieved. These techniques typically feature a secret “key” or piece of information that is used when encrypting the message. As long as the key remains a secret, then strong encryption techniques can only be discovered through an exhaustive search of all possible keys. Making an encryption technique public allows computer scientists to verify the security of the technique either through mathematical proof, or by trying to crack it themselves. Counter-intuitively, public techniques are often more secure, since they have been exposed to a much more rigorous review by the computer science community.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="toccracking-the-code">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Explain reasons why people crack codes.</li>
+                    
+                        <li>Explain how and why the Vigenère cipher is a stronger form of encryption than plain substitution.</li>
+                    
+                        <li>Use frequency analysis to crack a message encrypted with random substitution.</li>
+                    
+                        <li>Explain properties that make for a good key when using the Vigenère Cipher.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit2/lesson14" target="_blank">Forum</a></li>
+<li>(Optional) Paper copies of each Activity Guide</li>
+<li>(Optional) Paper copies of <em>Blown to Bits</em>, pp. 169-170</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2/stage/14/puzzle/1' target='_blank' class='print_link'>KEY - Cracking the Random Substitution Cipher</a> - Answer Key
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2/stage/14/puzzle/1' target='_blank' class='print_link'>KEY - Exploring the Vigenère Cipher</a> - Answer Key
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf' target='_blank' class='print_link'>Blown to Bits, Chapter 5</a> - Reading
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/12oIFv1zbJZgA8FeEr9KkyjYgnTNXm-AYyNMDtYebAf0/edit' target='_blank' class='print_link'>Cracking the Random Substitution Cipher</a> - Activity Guide (<a href='https://docs.google.com/document/d/12oIFv1zbJZgA8FeEr9KkyjYgnTNXm-AYyNMDtYebAf0/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2' target='_blank' class='print_link'>CSP Unit 2</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://youtu.be/ZghMPWGXexs' target='_blank' class='print_link'>Encryption and Public Keys (optional)</a> - Video (<a href='http://videos.code.org/2015/csp/concept_encryption.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1dfbHwojluP5NNaOqcrZPnECRP5-3sRPHN_Mwm_MQKo8/edit#heading=h.8d9n45i3q3kh' target='_blank' class='print_link'>Exploring the Vigenère Cipher</a> - Activity Guide (<a href='https://docs.google.com/document/d/1dfbHwojluP5NNaOqcrZPnECRP5-3sRPHN_Mwm_MQKo8/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2/stage/13/puzzle/2' target='_blank' class='print_link'>Frequency Analysis Widget</a> - Widget
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2/stage/14/puzzle/3' target='_blank' class='print_link'>Vigenère Cipher Widget</a> - Widget
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="cracking-the-codecontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <p><strong>Goal:</strong> Provide a quick (about 5 minutes) justification for the practice of cracking ciphers, while reviewing relevant vocabulary. At the conclusion of the lesson, students will discuss other reasons we might try to crack a cipher, namely to ensure that it is difficult to do!</p>
+<p><strong>Remark:</strong> <em>Say:</em> In the previous lesson you saw how easy it was to crack a Caesar cipher with a computational tool. Today we’ll try to crack a different code to see what it’s like. Beforehand, however, we should consider why someone might want to crack a cipher in the first place. As there ethical reasons to try to crack secret codes?</p>
+<ul>
+<li>There are a lot of different reasons that a person may want to crack a code. Some of them are more ethical (legal) than others. </li>
+<li>People in the field of counterterrorism make a living by trying to crack the codes of other nations. Many attribute the success of the Allies in WWII to our ability to crack the Enigma code and uncover the plans of the Germans.</li>
+<li>Others may try to crack more abstract codes that are not written by humans, searching for patterns within DNA models in order to understand their nature and be able to describe the nature of humanity.</li>
+<li>Today, we will attempt to crack codes, paying particular attention to the processes and algorithms that we use to do so.</li>
+<li>Finally, it’s useful to try to crack your own codes to see how strong they really are.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>There’s a common misconception that “cracking” and “decrypting” are interchangeable terms.</p>
+</div>
+<div>
+<ul>
+<li>Decrypting is just using an algorithm to undo the encryption. It’s what the recipient of an encrypted message needs to do to recover the original message, and it’s what the sender expected the intended recipient (but no one else) to do.</li>
+<li>Cracking is trying to figure out a decryption algorithm for an encrypted message, using clues found within the secret message itself. If you know the algorithm that was used, then cracking the encryption means figuring out the key that was used with that algorithm. It is more like detective work. (In general, a sender does not expect the intended recipient to need to crack the algorithm, because the needed decryption information has already been provided.)</li>
+</ul>
+</div>
+</div>
+<p><strong>Transition:</strong> Today you will get back into the frequency analysis tool and try to crack a random substitution cipher with a friend. You’ll also learn about a new encryption technique that is much stronger than random substitution.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <p><strong>Note:</strong> There are two short activities of roughly equal length (15-20 mins). See Teaching Tips for how to stay on track.</p>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/code-studio-icon.png"><img alt="" src="https://code.org/educate/docs/csp/code-studio-icon.png"></a> Distribute <a href="Cracking the Random Substitution Cipher" target="_blank">Activity Guide - Cracking the Random Substitution Cipher</a>.
+(Students may also find a link to the activity guide in Code Studio.)</p>
+<p>The activity guide asks partners to attempt to crack a random substitution cipher; the instructions for what they should do are in the guide.</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<ul>
+<li>Cracking a random substitution cipher is slow going at first. But once you get about 5 or 6 letters, you can begin to see whole words and fill the rest out pretty quickly.</li>
+<li>In the interest of time, it’s okay if once one pair gets it, they share information with another group. If news of the “key” spreads, that’s fine. The point of the exercise is to see how even random substitution is relatively easy to crack.</li>
+<li>At the very least, each pair should get most of the cracked message to show up on their screen.</li>
+</ul>
+</div>
+</div>
+<p><strong>Distribute</strong> <a href="Exploring the Vigenère Cipher" target="_blank">Activity Guide - Exploring the Vigenère Cipher</a>. The activity guide asks students to:</p>
+<ul>
+<li>Read a short passage from Blown to Bits (3 paragraphs) about the Vigenère (Vee-zhun-aire) cipher.</li>
+<li>Use the Vigenère Cipher widget to experiment with encrypting messages with various keys.</li>
+<li>Understand the properties and relationships of the key to the strength of the encryption.</li>
+<li>Answer some “thought” questions that lead into the wrap-up.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<ul>
+<li>This is another fun tool to mess around with.</li>
+<li>The key take-aways for students are:<ul>
+<li>A well-chosen key makes a difference - there are certain keys that don’t produce good results. </li>
+<li>We’re approaching much stronger encryption because we don’t need to keep the encryption method a secret. </li>
+<li>For example, if I told my enemy that I encrypted a message with the Vigenère cipher, my enemy would still have to do a virtually impossible amount of work to crack the code.</li>
+<li>Even if I told my enemy the length of the key I used, as long as that length is sufficiently large, it would still leave my enemy basically randomly guessing the key. (Even for this simplified tool, if the key is 10 letters, then there are 26^10 possible keys, ~141 trillion.)</li>
+</ul>
+</li>
+<li>Try to keep students’ focus on the properties and relationships of the keys to the strength of the encryption.</li>
+</ul>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>(Optional) Video: Encryption and Public Keys (up to 4:11)</strong>
+This video is shown in full later in the curriculum, but the first portion of it explains a bit more about the Caesar cipher and a version of the Vigenère cipher and talks about how hard they are to crack.</p>
+<p><strong>Goal:</strong> The primary goal of the wrap-up is to have students recognize the role of keys in strong encryption methods. The Vigenère cipher represents a major step toward open encryption protocols - ones in which I don’t need to keep the method of encryption secret, just the key. I could tell an adversary who intercepted a message that I used the Vigenère cipher to encrypt it, but that wouldn’t get him much closer to cracking it. He would still have to figure out how long the key is, and then try every possible one. We’ll learn about the relationship between keys and passwords in the next lesson.</p>
+<p><strong>Discuss:</strong> </p>
+<ul>
+<li>For a long time, the Vigenère cipher was considered to be an unbreakable cipher and was used by governments to send important messages. Surprisingly, it was not usually a secret that this was the type of cipher that was being used. How could this encryption technique be secure if it was widely known to be used?</li>
+<li>In the modern day, it remains the case that most encryption techniques are publicly known. Why might it actually be a good thing that methods of encryption are freely shared, so that anyone who wishes can try to crack them?<ul>
+<li>If the security of an encryption technique relies solely on the method remaining a secret, it actually may not be that secure. Ideally, a method will be so secure that even if you know which technique was used, it is difficult or impossible to crack the message. By making encryption techniques public, we open them up to being tested by anyone who wishes to ensure there are no clever ways of cracking the encryption.</li>
+<li>The secrecy of these kinds of encryptions is provided by a “key,” which is used when performing the encryption. Students will learn more about this idea in the subsequent lesson.</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>Go down the rabbit’s hole of encryption at Crypto Corner: http://crypto.interactive-maths.com/.</li>
+<li>Assign each student a type of cipher. Students should then research the cipher, including information on its algorithm, its history, and what they would have to do to crack the cipher. They should present an example, and describe the process they follow in cracking the code.</li>
+<li>Caesar Cipher video from Khan Academy: https://www.khanacademy.org/computing/computer-science/cryptography/crypt/v/caesar-cipher</li>
+<li>Real world stories of cracking codes:<ul>
+<li>Cracking a code as the key to understanding of ancient culture: http://www.wired.com/2012/11/ff-the-manuscript/all/</li>
+<li>Cracking the human genome (NOVA Video): http://video.pbs.org/video/1841308959/</li>
+<li>Nobel prize given for cracking the code of DNA: http://www.nobelprize.org/educational/medicine/gene-code/history.html</li>
+<li>Navajo Code Talkers http://navajocodetalkers.org/</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <ol>
+<li>
+<p>Realign to match the following words to their definitions:</p>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>character frequency</td>
+<td>technique used to find an approximate solution</td>
+</tr>
+<tr>
+<td>heuristic</td>
+<td>encryption based upon the alphabetical order of letters</td>
+</tr>
+<tr>
+<td>encrypt</td>
+<td>use an algorithm to decode a message</td>
+</tr>
+<tr>
+<td>decrypt</td>
+<td>use an algorithm to encode a message</td>
+</tr>
+<tr>
+<td>cipher</td>
+<td>the distribution of letters in a language</td>
+</tr>
+<tr>
+<td>random substitution cipher</td>
+<td>another term for encrypted message</td>
+</tr>
+<tr>
+<td>Caesar cipher</td>
+<td>encryption in which arbitrary symbols replace letters</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Knowing what you know now about frequency analysis, would you feel comfortable sending your password over the Internet using a substitution cipher? Why or why not?</p>
+</li>
+<li>
+<p>Using the Vigenère cipher, does the length of the key matter? 
+For example, if one key has length 5 and another has length 20, does one produce a “better” encrypted message than the other, or is it basically the same? Explain your reasoning.</p>
+</li>
+<li>
+<p><strong>True or false:</strong> The Vigenère Cipher is like using multiple Caesar ciphers?</p>
+</li>
+<li>
+<p><strong>Matching.</strong> Given the original plaintext: “SECRET MESSAGE SHHHH”</p>
+<p>Match the encryption method to the output:
+    (Correct answers shown in table.)</p>
+<p>Original Plaintext: SECRET MESSAGE SHHHH</p>
+<table>
+<thead>
+<tr>
+<th>Ciphertext</th>
+<th>Encryption Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TEMVVU WIITAQIQTHRLY</td>
+<td>Vigenère Cipher</td>
+</tr>
+<tr>
+<td>AMKZMB UMAAIOM APPPP</td>
+<td>Caesar Shift Cipher (of 18)</td>
+</tr>
+<tr>
+<td>GBRXBN MBGGEFB GTTTT</td>
+<td>Random Substitution Cipher</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CPP</strong> - Computing Practice &amp; Programming</summary>
+                    <ul>
+                        
+                            <li><strong>CPP.L3A:9</strong> - Explain the principles of security by examining encryption, cryptography, and authentication techniques.</li>
+                        
+                            <li><strong>CPP.L3B:5</strong> - Deploy principles of security by implementing encryption and authentication strategies.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L3B:2</strong> - Explain the value of heuristic algorithms to approximate solutions for intractable problems.</li>
+                        
+                            <li><strong>CT.L3B:4</strong> - Evaluate algorithms by their efficiency, correctness, and clarity.</li>
+                        
+                            <li><strong>CT.L3B:5</strong> - Use data analysis to enhance understanding of complex natural and human systems.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>3.1</strong> - People use computer programs to process information to gain insight and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.1</strong> - Use computers to process information, find patterns, and test hypotheses about digitally processed information to gain insight and knowledge. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.1E</strong> - Patterns can emerge when data is transformed using computational tools.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.2</strong> - Collaborate when processing information to gain insight and knowledge. [P6]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.2A</strong> - Collaboration is an important part of solving data driven problems.</li>
+                                
+                                    <li><strong>3.1.2C</strong> - Communication between participants working on data driven problems gives rise to enhanced insights and knowledge.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>4.2</strong> - Algorithms can solve many but not all computational problems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>4.2.1</strong> - Explain the difference between algorithms that run in a reasonable time and those that do not run in a reasonable time. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>4.2.1C</strong> - Some problems cannot be solved in a reasonable time, even for small input sizes.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.3</strong> - Cybersecurity is an important concern for the Internet and the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.3.1</strong> - Identify existing cybersecurity concerns and potential options to address these issues with the Internet and the systems built on it. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.3.1C</strong> - Implementing cybersecurity has software, hardware, and human components.</li>
+                                
+                                    <li><strong>6.3.1H</strong> - Cryptography is essential to many models of cybersecurity.</li>
+                                
+                                    <li><strong>6.3.1K</strong> - Symmetric encryption is a method of encryption involving one key for encryption and decryption.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#toccracking-the-code').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#cracking-the-codecontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'cracking-the-code', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

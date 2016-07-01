@@ -17,6 +17,8 @@
  * limitations under the License.
  */
 
+/* global Blockly, goog */
+
 /**
  * @fileoverview Flyout tray containing blocks which may be created.
  * @author fraser@google.com (Neil Fraser)
@@ -26,6 +28,7 @@
 goog.provide('Blockly.Flyout');
 
 goog.require('Blockly.Block');
+goog.require('Blockly.BlockLimits');
 goog.require('Blockly.Comment');
 goog.require('goog.math.Rect');
 
@@ -273,7 +276,7 @@ Blockly.Flyout.prototype.init = function(blockSpace, withScrollbars) {
       goog.events.EventType.RESIZE, this, this.position_);
   this.position_();
   this.changeWrapper_ = Blockly.bindEvent_(this.targetBlockSpace_.getCanvas(),
-      'blocklyBlockSpaceChange', this, this.filterForCapacity_);
+      'blocklyBlockSpaceChange', this, this.onBlockSpaceChange_);
 };
 
 /**
@@ -468,6 +471,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
       // try this, I'm sure.  Kill the comment.
       child.setCommentText(null);
     }
+
     block.render();
     this.layoutBlock_(block, cursor, gaps[i], initialX);
     // Create an invisible rectangle under the block to act as a button.  Just
@@ -501,6 +505,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.reflow();
 
   this.filterForCapacity_();
+  this.updateBlockLimitTotals_();
 
   // Fire a resize event to update the flyout's scrollbar.
   Blockly.fireUiEvent(window, 'resize');
@@ -681,6 +686,10 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
       // Right-click.  Don't create a block, let the context menu show.
       return;
     }
+    if (!flyout.blockSpaceEditor_.blockLimits.blockTypeWithinLimits(originBlock.type)) {
+      // at capacity.
+      return;
+    }
     if (originBlock.disabled) {
       // Beyond capacity.
       return;
@@ -725,6 +734,15 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
 };
 
 /**
+ * All updates to be performed every time the block space changes
+ * @private
+ */
+Blockly.Flyout.prototype.onBlockSpaceChange_ = function() {
+  this.filterForCapacity_();
+  this.updateBlockLimitTotals_();
+};
+
+/**
  * Filter the blocks on the flyout to disable the ones that are above the
  * capacity limit.
  * @private
@@ -737,6 +755,14 @@ Blockly.Flyout.prototype.filterForCapacity_ = function() {
     var disabled = allBlocks.length > remainingCapacity;
     block.setDisabled(disabled);
   }
+};
+
+Blockly.Flyout.prototype.updateBlockLimitTotals_ = function() {
+  var blocks = this.blockSpaceEditor_.blockSpace.getAllVisibleBlocks();
+  var blockTypes = blocks.map(function (block) {
+    return block.type;
+  });
+  this.blockSpaceEditor_.blockLimits.updateBlockTotals(blockTypes);
 };
 
 /**

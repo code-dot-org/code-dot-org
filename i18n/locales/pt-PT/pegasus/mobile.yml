@@ -1,7 +1,12 @@
 pt-PT:
   hour_of_code: Hora de Código
   hello: Olá mundo
+  "yes": Sim
+  "no": Não
   select_language: Por favor, escolhe o teu idioma
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Saber mais
   en: Ciência da computação
   computer_science_edweek: Semana da Educação da Ciência da Computação
   csedweek_dates: De 8 a 14 de dezembro de 2014
@@ -181,11 +186,11 @@ pt-PT:
   learn_classes: Encontrar aulas perto de ti
   hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Terminar uma Hora de Código no @codeorg! #HourOfCode'
-  just_did_course1: 'Acabei de terminar o Curso 1 - Confira! @codeorg'
-  just_did_course2: 'Acabei de terminar o Curso 2 - Confira! @codeorg'
-  just_did_course3: 'Acabei de terminar o Curso 3 - Confira! @codeorg'
-  just_did_course4: 'Acabei de terminar o Curso 4 - Confira! @codeorg'
-  just_did_accelerated: 'Acabei de terminar o Curso Acelerado - Confira! @codeorg'
+  just_did_course1: Vejam! Acabei de concluir o curso 1! @codeorg
+  just_did_course2: Vejam! Acabei de concluir o curso 2! @codeorg
+  just_did_course3: Vejam! Acabei de concluir o curso 3! @codeorg
+  just_did_course4: Vejam! Acabei de concluir o curso 4! @codeorg
+  just_did_accelerated: Vejam! Acabei de concluir o curso acelerado! @codeorg
   twitter_teach_cs: 9 de 10 pessoas concordam, as escolas devem ensinar ciência da computação. http://youtu.be/nKIu9yen5nc. Visite https://code.org/.
   learn_hoc: Aprende a programar numa hora com a Hora de Código
   beyond_hoc: Além da Hora de Código
@@ -303,6 +308,8 @@ pt-PT:
   homepage_banner_privacy_link: Saber mais
   homepage_banner_20k_teachers: 20 000 professores formados para dar aulas de ciência da computação na sala de aula.
   homepage_banner_20k_teachers_link: Saber mais
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Hora de Código
   homepage_slot_text_blurb_hoc: |
     Todos podem aprender.
@@ -330,6 +337,7 @@ pt-PT:
   homepage_slot_text_link_stats: Vê as estatísticas
   homepage_slot_text_link_buy: Colaborar
   homepage_slot_text_link_donate: Faz uma doação
+  homepage_slot_text_link_shop: T-shirts, chapéus e muito mais
   homepage_header_codestudio: Criações de alunos no Code Studio
   homepage_header_donors: Agradecemos a quem nos apoia
   homepage_donors_seall: Ver todos
@@ -472,6 +480,7 @@ pt-PT:
   dashboard_landing_new_beta: Novo! Conheça nossos cursos experimentais para alunos do pré ao 5º ano.
   dashboard_landing_new_k5courses: Novo! Experimenta os nossos cursos para alunos do 1.º Ciclo.
   dashboard_landing_useful_links: Outras ligações úteis
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Faz uma pergunta pessoalmente! Estabelece uma vídeochamada com os nossos assistentes (em inglês) todos os meses.
   dashboard_landing_print_certificates: Imprima certificados para os alunos que terminarem esse curso
   dashboard_landing_educator_blog: Leia sobre notícias e atualizações nos materiais disponíveis em nosso Blog do Professor
@@ -485,6 +494,10 @@ pt-PT:
   dashboard_landing_available_courses: Aqui estão os cursos actualmente disponíveis para si e os seus alunos.
   dashboard_landing_more_tutorials: Quer ver ainda mais tutoriais?
   dashboard_landing_more_tutorials_desc: 'Existem mais tutoriais <a href="/learn/beyond">oferecidos por nossos parceiros.</a> Aprenda a programar com robôs, criar páginas web, criar seu próprio aplicativo, ou explorar linguagens como C++, Ruby, ou Python!'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: A Hora do Código para todas as idades
   dashboard_hoc_courses_desc: Experimente assistir um destes vídeos de menos de 1 hora com seus alunos!
   dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
@@ -515,6 +528,15 @@ pt-PT:
   dashboard_action_remove_confirm: Remover?
   dashboard_action_done: Terminado
   dashboard_action_required: obrigatório
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: |-
+    Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Página inicial do professor
   dashboard_navigation_section_student_progress: Contas e progresso do aluno
   dashboard_navigation_section_teacher_progress: O teu progresso no curso
@@ -523,21 +545,34 @@ pt-PT:
   dashboard_navigation_section_pd: Desenvolvimento profissional
   dashboard_navigation_section_speakers: 'Ciência da computação <br/> Palestrantes convidados'
   dashboard_navigation_all_sections: Contas e progresso do aluno
-  dashboard_navigation_view_progress: Ver progresso
-  dashboard_navigation_view_text_responses: Ver Respostas
+  dashboard_navigation_view_progress: Progresso
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Adicionar alunos
   dashboard_navigation_manage_students: Gerir alunos
   dashboard_navigation_lesson_plans_resources: Planos das aulas e recursos
-  dashboard_navigation_view_stats: Ver estatísticas
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Turma: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
+  dashboard_progress_not_started: por iniciar
+  dashboard_progress_in_progress: em progresso
+  dashboard_progress_not_completed: por concluir
+  dashboard_progress_completed_too_many_blocks: concluído, mas com muitos blocos
+  dashboard_progress_completed_perfect: concluído, na perfeição
+  dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
   dashboard_sections_new_section: Nova turma
   dashboard_sections_jumbotron_instruction: Crie novas turmas e adicione alunos a elas. As turmas ajudam na organização dos alunos em grupos menores para que você possa acompanhar seu progresso e gerenciar suas contas.
   dashboard_sections_table_section: Turma
   dashboard_sections_table_secret: Tipo de início de sessão
   dashboard_sections_table_grade: Ano
   dashboard_sections_table_course: Curso
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Alunos
   dashboard_sections_table_code: Código
   dashboard_sections_name: Nome da turma
@@ -547,6 +582,19 @@ pt-PT:
   dashboard_sections_secret_none: 'Se você quiser que seus alunos gerenciem suas próprias contas, incluindo suas senhas, escolha o tipo secreto <b>nenhum</b>.'
   dashboard_sections_print_secrets: Você pode imprimir uma folha com cartões contendo as informações da conta para distribuir individualmente para seus alunos.
   dashboard_sections_switch_section: 'Trocar de turma:'
+  dashboard_sections_close: Fechar
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Teacher
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Adicionar aluno
   dashboard_students_add_students: Adicionar vários alunos
   dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por linha:'
@@ -589,7 +637,8 @@ pt-PT:
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
-  dashboard_course4: 'Curs 4 (beta): '
+  dashboard_course4: 'Curso 4 (beta): '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: Currículo
   dashboard_curriculum_overview: Visão geral do currículo do pré ao 5º ano
   dashboard_overview: Visão geral
@@ -613,13 +662,6 @@ pt-PT:
   dashboard_login_picture: Imagem
   dashboard_login_none: E-mail
   dashboard_new_password: palavra-passe nova
-  dashboard_progress_not_started: por iniciar
-  dashboard_progress_in_progress: em progresso
-  dashboard_progress_not_completed: por concluir
-  dashboard_progress_completed_too_many_blocks: concluído, mas com muitos blocos
-  dashboard_progress_completed_perfect: concluído, na perfeição
-  dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
-  dashboard_progress_submitted: submitted
   dashboard_stage: Etapa
   dashboard_puzzle: Desafio
   dashboard_question: Pergunta
@@ -629,6 +671,8 @@ pt-PT:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Certo
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -642,7 +686,7 @@ pt-PT:
   dashboard_sections_account_creation_question: Quem cria a conta do aluno?
   dashboard_sections_password_question: 'O que é que os alunos usam como "palavra-passe"?'
   dashboard_sections_picture_account_creation: Imagem atribuída pelo Code.org
-  dashboard_sections_word_account_creation: Palavra atribuída pelo Code.org
+  dashboard_sections_word_account_creation: Uma palavra simples atribuída pela Code.org
   dashboard_sections_sign_in_question: Onde os alunos entram?
   dashboard_sections_sign_in_unique: 'Página exclusiva na guia "Gerenciar alunos"'
   dashboard_sections_sign_in_main: 'http://code.org e clica em "Iniciar sessão"'
@@ -652,10 +696,11 @@ pt-PT:
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver Todos
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
-  dashboard_announce_button_text: Saber mais
-  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Testar funcionalidade
+  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_petition_button: Adicionar o teu nome
   code_hoc_coming: 'A Hora de Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência da Computação
   learn_more: Experimentar agora
@@ -765,9 +810,35 @@ pt-PT:
   course3_name: Curso 3
   course4_name: Curso 4
   accelerated_name: Curso acelerado
-  cspunit3_name: CS Principles Unit 3
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: Curso acelerado
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Labirinto clássico
+  iceage_name: Idade do gelo
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matemática
+  hoc_category_name: Hora de Código
+  csf_category_name: CS Fundamentals
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Laboratório de aplicações
   applab_gradelevel: Maiores de 13 anos
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds

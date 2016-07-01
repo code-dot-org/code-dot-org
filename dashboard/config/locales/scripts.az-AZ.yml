@@ -1009,6 +1009,13 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
+          Rich long assessment: Rich long assessment
+          Free Response: Free Response
+          Game Lab: Game Lab
+          Sample PLC Assessment: Sample PLC Assessment
+          Swapped Levels: Swapped Levels
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1799,6 +1806,7 @@
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
+          'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
         AlgebraB:
           title: Computer Science in Algebra
           description_short: Learn Functional Programming through Algebra
@@ -1824,3 +1832,550 @@
           title: Gamelab Hackathon
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
+        algebraPD1:
+          title: Computer Science in Algebra PD
+          description_short: Teach Algebra through Functional Programming
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in
+            Algebra
+          Evaluation Blocks: Evaluation Blocks
+          Teacher Dashboard: Teacher Dashboard
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD3c:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra end of year reflection
+          description: CS in Algebra end of year reflection
+          Getting Started: Getting Started
+          Sharing Student Work: Sharing Student Work
+          Planning For the Future: Planning For the Future
+        csp1:
+          title: CS Principles Unit 1 - The Internet
+          description_short: "İnternet"
+          description: This unit explores the technical challenges and questions that
+            arise from the need to represent digital information in computers and
+            transfer it between people and computational devices. The unit then explores
+            the structure and design of the internet and the implications of those
+            design decisions.
+          Personal Innovations: Personal Innovations
+          Sending Binary Messages: Sending Binary Messages
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages
+            with the Internet Simulator
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          The Internet: "İnternet"
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Redundancy: Routers and Redundancy
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+          The Need for DNS: The Need for DNS
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Practice PT - The Internet and Society: Practice PT - The Internet and Society
+          Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
+        csp2:
+          title: CS Principles Unit 2 - Digital Information
+          description_short: Digital Information
+          description: This unit further explores the ways that digital information
+            is encoded, represented and manipulated. Being able to digitally manipulate
+            data, visualize it, and identify patterns, trends and possible meanings
+            are important practical skills that computer scientists do every day.
+            Understanding where data comes from, having intuitions about what could
+            be learned or extracted from it, and being able to use computational tools
+            to manipulate data and communicate about it are the primary skills addressed
+            in the unit.
+          Bytes and File Sizes: Bytes and File Sizes
+          Text Compression: Text Compression
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          Encode a Complex Thing: Encode a Complex Thing
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+        csp3:
+          title: CSP Unit 3 - Programming
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          The Need For Programming Languages: The Need For Programming Languages
+          The Need for Algorithms: The Need for Algorithms
+          Creativity in Algorithms: Creativity in Algorithms
+          Using Simple Commands: Using Simple Commands
+          Creating Functions: Creating Functions
+          Functions and Top-Down Design: Functions and Top-Down Design
+          APIs and Function Parameters: APIs and Function Parameters
+          Creating functions with Parameters: Creating functions with Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Practice PT - Design a Digital Scene: Practice PT - Design a Digital Scene
+        csp4:
+          title: CS Principles Unit 4 - Big Data and Privacy
+          description_short: Big Data and Privacy
+          description: The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          The Cost of Free: The Cost of Free
+          Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Public Key Crypto: Public Key Crypto
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
+        csp5:
+          title: CS Principles Unit 5 - Building Apps
+          description_short: Building Apps
+          description: 'This unit continues the introduction of foundational concepts
+            of computer programming, which unlocks the ability to make rich, interactive
+            apps. This course uses JavaScript as the programming language, and App
+            Lab as the programming environment to build apps, but the concepts learned
+            in these lessons span all programming languages and tools. '
+          Events Unplugged: Events Unplugged
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Introducing Design Mode: Introducing Design Mode
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistants: Introduction to Digital Assistants
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+        csp6:
+          title: CS Principles Unit 6 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Create
+            and Explore Performance Tasks.
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+        CSDU3-Draft:
+          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
+          description_short: Programming
+          description: Temp place to work on U3 of Disco
+          Drawing in Game Lab: Drawing in Game Lab
+          Animation: Animasiya
+          Draw Loop and Random: Draw Loop and Random
+          Variables: Dəyişənlər
+          Sprite Properties and Mod: Sprite Properties and Mod
+          Expressions and Reassignment: Expressions and Reassignment
+          Sprites and Properties: Sprites and Properties
+          Counting with Variables: Counting with Variables
+          Expressions: Expressions
+          Conditionals and Keyboard Input: Conditionals and Keyboard Input
+          Sprites and Images: Sprites and Images
+          CSD U3 Variables and Animation: CSD U3 Variables and Animation
+          SFLP: SFLP
+          Animations: Animations
+          'Project: Interactive Card': 'Project: Interactive Card'
+          Booleans and Conditionals: Booleans and Conditionals
+          Variables and Animation: Variables and Animation
+          Complex Conditionals: Complex Conditionals
+          Proposed Sprites and Props: Proposed Sprites and Props
+          Conditionals Update: Conditionals Update
+        2016_sciencePD_phase1:
+          title: Computer Science in Science PD 2016-2017
+          description_short: In Partnership with Project GUTS
+          description: In Partnership with Project GUTS
+          Introduction to PD: Introduction to PD
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
+            Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational
+            Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        TEMP CSD Unit 3:
+          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
+          description_short: Programming
+          description: ''
+          Drawing in Game Lab: Drawing in Game Lab
+        CSF_Secret_Sample:
+          title: Secret Sample
+          description_short: This is a secret...shhhhh
+          description: Test of new educational philosophy
+          description_audience: 8+ yaş (Kurs 2-dən sonra)
+          Computational Thinking: Hesablama təfəkkürü
+          Sample Stage: Sample Stage
+        ECSPD1:
+          title: ECS Part 1
+          description_short: 'Phase 1: Online Introduction'
+          description: Two hour introduction to your Professional Learning Program
+            for the ECS Version 5 curriculum
+          Getting Started: Getting Started
+          What is ECS?: What is ECS?
+          ECS Curriculum: ECS Curriculum
+          Wrap Up: Wrap Up
+          Welcome to Phase 1!: Welcome to Phase 1!
+          Background and Context: Background and Context
+          Classroom and workshop style: 'Classroom and workshop style '
+          Classroom and Workshop Style: 'Classroom and Workshop Style '
+        algebraFacilitator:
+          title: Computer Science in Algebra Facilitator Pre Work
+          description_short: Teach Algebra through Functional Programming
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in
+            Algebra
+          Evaluation Blocks: Evaluation Blocks
+          Teacher Dashboard: Teacher Dashboard
+        sciencePD1:
+          title: 'CS in Science: Part 1'
+          description_short: 'Phase 1: Online Introduction'
+          description: In Partnership with Project GUTS
+          Introduction to PD: Introduction to PD
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
+            Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational
+            Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        cspoptional:
+          title: CS Principles Optional Lessons
+          description_short: Optional
+          description: Optional lessons and content across all of the CS Principles
+            units are listed here
+          Unit 1 - Sending Bits in the Real World: Unit 1 - Sending Bits in the Real
+            World
+          Unit 1 - Encoding Numbers in the Real World: Unit 1 - Encoding Numbers in
+            the Real World
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+        cspunit1-support:
+          title: Online Support for CSP Unit 1
+          description: This is a test Professional Learning Course
+          Teachers and Tools: Teachers and Tools
+          Supporting Peer Learning: Supporting Peer Learning
+          Running a Constructive Classroom: Running a Constructive Classroom
+          Strategies for Student Writing: Strategies for Student Writing
+          Intro to the Unit: Intro to the Unit
+          Chapter Overviews: Chapter Overviews
+          'Tool Talk: Intro to Netsim': 'Tool Talk: Intro to Netsim'
+          Sending Binary Messages: Sending Binary Messages
+          Encoding and Sending Numbers: Encoding and Sending Numbers
+        test-teaching-ap-cs-unit-1:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        allthehiddenthings:
+          title: All the Hidden Things!
+          description_short: Unreleased level types for UI testing as admin
+          description: Unreleased level types for UI testing as admin
+          Game Lab: Game Lab
+          Contained Levels: Contained Levels
+        cspunit1-support-test:
+          title: CSP Unit 1 teacher support
+          description: Online Supports for CSP Unit 1
+          Unit 1 Overview: Unit 1 Overview
+        cspunit1-tools:
+          title: netsim task completion
+          description: introduction to the internet simulator and a discussion of
+            how we use it to teach the internet
+          netsim: netsim
+        Test CPS PD:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        csp-facilitators:
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These
+            levels provide a glimpse into the tools we use throughout the curriculum
+            to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events
+        cspassessment:
+          title: CS Principles Culminating Assessment
+          description_short: Culminating
+          description: 'This 55-question multiple choice assessment covers questions
+            across 7 big ideas of computer science: Creativity, Abstraction, Data,
+            Algorithms, Programming, The Internet, and Global Impact. '
+          CS Principles Culminating Assessment: CS Principles Culminating Assessment
+        cspexam1-mWU7ilDYM9:
+          title: CS Principles Culminating Assessment - Part 1
+          description_short: Culminating
+          description: 'This 25 question multiple choice assessment covers questions
+            across 7 big ideas of computer science: Creativity, Abstraction, Data,
+            Algorithms, Programming, The Internet, and Global Impact.'
+          CS Principles Culminating Assessment Part 1: CS Principles Culminating Assessment
+            Part 1
+        cspexam2-AKwgAh1ac5:
+          title: CS Principles Culminating Assessment - Part 2
+          description_short: Culminating
+          description: 'This 25 question multiple choice assessment covers questions
+            across 7 big ideas of computer science: Creativity, Abstraction, Data,
+            Algorithms, Programming, The Internet, and Global Impact.  It is part
+            2 of a two-part 50 question exam'
+          CS Principles Culminating Assessment Part 2: CS Principles Culminating Assessment
+            Part 2
+        CSDU4-Draft:
+          title: " TEMP CSD Unit 4 - The Design Process"
+          description_short: Design Process and App Lab
+          description: Temp place to work on U4 of Disco
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Introducing Design Mode: Introducing Design Mode
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistants: Introduction to Digital Assistants
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          The Need For Programming Languages: The Need For Programming Languages
+          Using Simple Commands: Using Simple Commands
+          Creating Functions: Creating Functions
+          Functions and Top-Down Design: Functions and Top-Down Design
+          APIs and Function Parameters: APIs and Function Parameters
+          Creating functions with Parameters: Creating functions with Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          App Lab: App Lab
+          Design Mode: Design Mode
+        CSDU1-Draft:
+          title: " TEMP CSD Unit 1"
+          description_short: Problem Solving
+          description: Temp place to work on U1 of Disco
+        CSDU2-Draft:
+          title: " TEMP CSD Unit 2"
+          description_short: Web Development
+          description: Temp place to work on U2 of Disco
+          Headers and Lists: Headers and Lists
+          Introduction to HTML: Introduction to HTML
+        CSDU5-Draft:
+          title: " TEMP CSD Unit 5"
+          description_short: Data
+          description: Temp place to work on U5 of Disco
+        CSDU6-Draft:
+          title: " TEMP CSD Unit 6 "
+          description_short: Makerlab
+          description: Temp place to work on U6 of Disco
+        CSF_Secret_Sample_Story:
+          title: Secret Sample with Story
+          description_short: This is a secret...shhhh
+          description: Test of new educational philosophy with guiding storyline
+          description_audience: Ages 8-18+
+          Sample Stage: Sample Stage
+        MikeTest:
+          title: MikeTest
+          description_short: Just a script for playing around
+          description: Trying not to break anything
+          description_audience: Ages 8-98
+          Sample Stage: Sample Stage
+          Artist Functions: Rəssam Funksiyalar
+          The same thing with named levels: The same thing with named levels
+          You are a coding STAR: You are a coding STAR
+        artistExemplar:
+          title: Artist Exemplar
+          description_short: How can we make the artist levels really hum?
+          description: These artist levels will knock the socks off of third graders
+          description_audience: 8+ yaş (Kurs 2-dən sonra)
+          Artist Exemplar: Artist Exemplar
+        2016_sciencePD_phase2b:
+          title: Computer Science in Science PD Phase 2b 2016-2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Welcome!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Sarımaq
+        teachercon:
+          title: TeacherCon Supports
+          description_short: We will use this during TeacherCon to deliver supports
+            and materials for sessions
+          description: We will use this during TeacherCon to deliver supports and
+            materials for sessions
+          Introduction to Teachercon: Introduction to Teachercon
+          Lesson 1,4: 'Lesson 1.4: Number Systems (Circle Triangle Square)'
+          Lesson 1,6: 'Lesson 1.6: Sending Numbers'
+          Lesson 1,9: 'Lesson 1.9: Internet Addressing (Battleship)'
+          Lesson 1,10: 'Lesson 1.10: Routers and Redundancy'
+          Lesson 1,11: 'Lesson 1.11: Packets and Making a Reliable Internet'
+          Lesson 2,2: 'Lesson 2.2: Text Compression'
+          Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
+          Lesson 2,10: 'Lesson 2.10: Good and Bad Data Visualizations'
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+          Discovery Learning: Discovery Learning
+          Measuring Student Learning: Measuring Student Learning
+        2016_sciencePD-phase2b:
+          title: Computer Science in Science PD Phase 2b 2016 2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Welcome!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Sarımaq
+        kinderTest:
+          Kindergarten Stage 1: Kindergarten Stage 1
+        gradeKinder:
+          Debugging: Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+          Programming: Programming
+          Being Safe Online: Being Safe Online
+          Loops: Dövlər
+          Programming Unplugged: Programming Unplugged
+          Loops Unplugged: Loops Unplugged
+          Events Unplugged: Events Unplugged
+          Events: Hadisələr
+        grade4:
+          title: Grade 4
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 9-99
+          'Mixed Review #1 (Ramp Up)': 'Mixed Review #1 (Ramp Up)'
+          Conditionals: "Şərti ifadələr"
+          'Bee: Conditionals': 'Arı: Şərti ifadələr'
+          'PlayLab: Conditionals': 'PlayLab: Conditionals'
+          Songwriting: Songwriting
+          'Bee: Functions': 'Arı: Funksiyalar'
+          Decision Trees: Decision Trees
+          Choose Your Own Adventure: Choose Your Own Adventure
+          'Project #1': 'Project #1'
+          Nested Loops: Nested Loops
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Mixed Review #2 (Conditionals, Events, Functions)': 'Mixed Review #2 (Conditionals,
+            Events, Functions)'
+          'New Artist: Functions': 'New Artist: Functions'
+          'Project #2': 'Project #2'
+          'Mixed Review #3 (Deduce the Concept)': 'Mixed Review #3 (Deduce the Concept)'
+          Internet: "İnternet"
+          Crowdsourcing: Crowdsourcing
+          Digital Citizenship: Digital Citizenship
+        grade1:
+          Predicting & Debugging: Predicting & Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+        grade5:
+          title: Grade 5
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 10-110
+        ecs-unit1:
+          title: ECS Part 1
+          description_short: 'Unit 1: Human-Computer Interaction'
+          description: 'Unit 1: Human-Computer Interaction'
+          Welcome!: Welcome!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Yekun
+        ecs-unit2:
+          title: ECS Unit 2
+          description_short: 'Unit 2: Problem Solving'
+          description: 'Unit 2: Problem Solving'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Teaching Strategies: Teaching Strategies
+          Lesson Overviews: Lesson Overviews
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community
+            Problems with Data
+          'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To Problem
+            Solving: Candy Bar Activity'
+          'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6 Strategies
+            in Problem Solving: Handshake Activity'
+          'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow
+            Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14
+            Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees:
+            Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project

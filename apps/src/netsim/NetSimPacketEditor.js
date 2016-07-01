@@ -5,7 +5,7 @@
  */
 'use strict';
 
-require('../utils'); // For Function.prototype.inherits()
+import $ from 'jquery';
 var netsimMsg = require('./locale');
 var markup = require('./NetSimPacketEditor.html.ejs');
 var KeyCodes = require('../constants').KeyCodes;
@@ -709,7 +709,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     rowFields.message.focus(removeWatermark);
     rowFields.message.keypress(
         makeKeypressHandlerWithWhitelist(rowType.messageAllowedCharacters));
-    rowFields.message.keydown(function(jqueryEvent){
+    rowFields.message.keydown(function (jqueryEvent){
       if (isUnmodifiedEnterPress(jqueryEvent)) {
         this.enterKeyPressedCallback_(jqueryEvent);
       }

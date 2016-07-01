@@ -1,12 +1,13 @@
-/* global $ */
-
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
-var EnumPropertyRow = require('./EnumPropertyRow.jsx');
+import $ from 'jquery';
+var React = require('react');
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
+var EnumPropertyRow = require('./EnumPropertyRow');
+var applabConstants = require('../constants');
 
 var elementUtils = require('./elementUtils');
 
@@ -70,7 +71,7 @@ var LabelProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         <EnumPropertyRow
           desc={'text alignment'}
-          initialValue={element.style.textAlign || 'center'}
+          initialValue={element.style.textAlign || 'left'}
           options={['left','right','center','justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')} />
         <BooleanPropertyRow
@@ -96,7 +97,7 @@ var LabelEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getClickEventCode: function() {
+  getClickEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
@@ -105,7 +106,7 @@ var LabelEvents = React.createClass({
     return code;
   },
 
-  insertClick: function() {
+  insertClick: function () {
     this.props.onInsertEvent(this.getClickEventCode());
   },
 
@@ -146,7 +147,7 @@ module.exports = {
     element.textContent = 'text';
     element.style.color = '#333333';
     element.style.backgroundColor = '';
-    element.style.maxWidth = Applab.appWidth + 'px';
+    element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
 
     this.resizeToFitText(element);
     return element;
@@ -160,14 +161,14 @@ module.exports = {
         visibility: 'hidden',
         width: 'auto',
         height: 'auto',
-        maxWidth: (Applab.appWidth - parseInt(element.style.left, 10)) + 'px',
+        maxWidth: (applabConstants.APP_WIDTH - parseInt(element.style.left, 10)) + 'px',
       }).appendTo($(document.body));
 
       var padding = parseInt(element.style.padding, 10);
 
       if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
         //Truncate the width before it runs off the edge of the screen
-        element.style.width = Math.min(clone.width() + 1 + 2 * padding, Applab.appWidth - clone.position().left) + 'px';
+        element.style.width = Math.min(clone.width() + 1 + 2 * padding, applabConstants.APP_WIDTH - clone.position().left) + 'px';
       }
       if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
         element.style.height = clone.height() + 1 + 2 * padding + 'px';

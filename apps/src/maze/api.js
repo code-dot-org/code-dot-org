@@ -105,7 +105,7 @@ var move = function (direction, id) {
  * @param {string} id ID of block that triggered this action.
  */
 var turn = function (direction, id) {
-  if (direction == TurnDirection.RIGHT) {
+  if (direction === TurnDirection.RIGHT) {
     // Right turn (clockwise).
     Maze.pegmanD += TurnDirection.RIGHT;
     Maze.executionInfo.queueAction('right', id);
@@ -152,7 +152,7 @@ function isRightTurn(direction, newDirection) {
  * @returns {boolean}
  */
 function isTurnAround(direction, newDirection) {
-  return Math.abs(direction - newDirection) == MoveDirection.BACKWARD;
+  return Math.abs(direction - newDirection) === MoveDirection.BACKWARD;
 }
 
 function moveAbsoluteDirection(direction, id) {

@@ -3,4 +3,4 @@
 require_relative '../deployment'
 require 'cdo/analytics/milestone_parser'
 
-puts MilestoneParser::count
+puts MilestoneParser.count

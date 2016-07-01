@@ -19,7 +19,7 @@ end
 domain = ARGV[0]
 `acmesmith current #{domain} 2>&1`
 unless $?.success?
-  required_certs = ['', 'dashboard-', 'origin-'].map{|prefix|prefix + domain}
+  required_certs = ['', 'dashboard-', 'origin-'].map{|prefix| prefix + domain}
   CDO.log.info "Authorizing SSL certificates for subdomain: #{domain}"
   required_certs.each do |auth|
     CDO.log.info `acmesmith authorize #{auth}`

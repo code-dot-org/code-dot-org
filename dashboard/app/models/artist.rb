@@ -31,6 +31,7 @@ class Artist < Blockly
     free_play
     permitted_errors
     impressive
+    discard_background
     shapeways_url
     disable_sharing
   )
@@ -41,14 +42,14 @@ class Artist < Blockly
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['artist', 'artist_zombie', 'elsa', 'anna']
+    %w(artist artist_zombie elsa anna)
   end
 
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
-        user: params[:user],
-        game: Game.custom_artist,
-        level_num: 'custom',
+      user: params[:user],
+      game: Game.custom_artist,
+      level_num: 'custom',
     ))
   end
 

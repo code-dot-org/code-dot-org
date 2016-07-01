@@ -924,6 +924,13 @@ en:
           Markdown Details: crwdns43376:0crwdne43376:0
           Studio: crwdns55916:0crwdne55916:0
           Long assessment: crwdns56190:0crwdne56190:0
+          Star wars: crwdns56270:0crwdne56270:0
+          Minecraft: crwdns56271:0crwdne56271:0
+          Rich long assessment: crwdns56314:0crwdne56314:0
+          Free Response: crwdns56595:0crwdne56595:0
+          Game Lab: crwdns56596:0crwdne56596:0
+          Sample PLC Assessment: crwdns56889:0crwdne56889:0
+          Swapped Levels: crwdns56961:0crwdne56961:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -1606,6 +1613,7 @@ en:
           "Unplugged: The Design Recipe": crwdns56203:0crwdne56203:0
           "Play Lab: Defining Functions": crwdns56204:0crwdne56204:0
           "Eval: Functions": crwdns56205:0crwdne56205:0
+          "Unplugged: Fast Functions": crwdns56597:0crwdne56597:0
         AlgebraB:
           title: crwdns56206:0crwdne56206:0
           description_short: crwdns56207:0crwdne56207:0
@@ -1626,3 +1634,488 @@ en:
           title: crwdns56234:0crwdne56234:0
           description_short: crwdns56235:0crwdne56235:0
           description: crwdns56236:0crwdne56236:0
+        algebraPD1:
+          title: crwdns56315:0crwdne56315:0
+          description_short: crwdns56316:0crwdne56316:0
+          description: crwdns56317:0crwdne56317:0
+          Introduction to PD: crwdns56318:0crwdne56318:0
+          Course Overview: crwdns56319:0crwdne56319:0
+          Why Computer Science belongs in Algebra: crwdns56320:0crwdne56320:0
+          Evaluation Blocks: crwdns56321:0crwdne56321:0
+          Teacher Dashboard: crwdns56322:0crwdne56322:0
+          Preparing for in-person PD: crwdns56323:0crwdne56323:0
+        algebraPD3c:
+          title: crwdns56324:0crwdne56324:0
+          description_short: crwdns56325:0crwdne56325:0
+          description: crwdns56326:0crwdne56326:0
+          Getting Started: crwdns56327:0crwdne56327:0
+          Sharing Student Work: crwdns56328:0crwdne56328:0
+          Planning For the Future: crwdns56598:0crwdne56598:0
+        csp1:
+          title: crwdns56329:0crwdne56329:0
+          description_short: crwdns56330:0crwdne56330:0
+          description: crwdns56331:0crwdne56331:0
+          Personal Innovations: crwdns56332:0crwdne56332:0
+          Sending Binary Messages: crwdns56333:0crwdne56333:0
+          Sending Complex Messages: crwdns56334:0crwdne56334:0
+          Sending Binary Messages with the Internet Simulator: crwdns56335:0crwdne56335:0
+          Sending Bits in the Real World: crwdns56336:0crwdne56336:0
+          Number Systems: crwdns56337:0crwdne56337:0
+          Binary Numbers: crwdns56338:0crwdne56338:0
+          Sending Numbers: crwdns56339:0crwdne56339:0
+          Encoding Numbers in the Real World: crwdns56340:0crwdne56340:0
+          Encoding and Sending Text: crwdns56341:0crwdne56341:0
+          Sending Formatted Text: crwdns56342:0crwdne56342:0
+          The Internet: crwdns56343:0crwdne56343:0
+          The Need for Addressing: crwdns56344:0crwdne56344:0
+          Invent an Addressing Protocol: crwdns56345:0crwdne56345:0
+          Routers and Redundancy: crwdns56346:0crwdne56346:0
+          Packets and Making a Reliable Internet: crwdns56347:0crwdne56347:0
+          Algorithms Detour - Minimum Spanning Tree: crwdns56348:0crwdne56348:0
+          Algorithms Detour - Shortest Path: crwdns56349:0crwdne56349:0
+          Algorithms Detour - How Routers Learn: crwdns56350:0crwdne56350:0
+          The Need for DNS: crwdns56351:0crwdne56351:0
+          DNS in the Real World: crwdns56352:0crwdne56352:0
+          HTTP and Abstraction: crwdns56353:0crwdne56353:0
+          Practice PT - The Internet and Society: crwdns56354:0crwdne56354:0
+          Encoding and Sending Formatted Text: crwdns56599:0crwdne56599:0
+        csp2:
+          title: crwdns56355:0crwdne56355:0
+          description_short: crwdns56356:0crwdne56356:0
+          description: crwdns56357:0crwdne56357:0
+          Bytes and File Sizes: crwdns56358:0crwdne56358:0
+          Text Compression: crwdns56359:0crwdne56359:0
+          Encoding B&W Images: crwdns56360:0crwdne56360:0
+          Encoding Color Images: crwdns56361:0crwdne56361:0
+          Lossy Compression and File Formats: crwdns56362:0crwdne56362:0
+          Encode a Complex Thing: crwdns56363:0crwdne56363:0
+          Intro to Data: crwdns56364:0crwdne56364:0
+          Finding Trends with Visualizations: crwdns56365:0crwdne56365:0
+          Check Your Assumptions: crwdns56366:0crwdne56366:0
+          Good and Bad Data Visualizations: crwdns56367:0crwdne56367:0
+          Making Data Visualizations: crwdns56368:0crwdne56368:0
+          Discover a Data Story: crwdns56369:0crwdne56369:0
+          Cleaning Data: crwdns56370:0crwdne56370:0
+          Creating Summary Tables: crwdns56371:0crwdne56371:0
+          Practice PT - Tell a Data Story: crwdns56372:0crwdne56372:0
+        csp3:
+          title: crwdns56373:0crwdne56373:0
+          description_short: crwdns56374:0crwdne56374:0
+          description: crwdns56375:0crwdne56375:0
+          The Need For Programming Languages: crwdns56376:0crwdne56376:0
+          The Need for Algorithms: crwdns56377:0crwdne56377:0
+          Creativity in Algorithms: crwdns56378:0crwdne56378:0
+          Using Simple Commands: crwdns56379:0crwdne56379:0
+          Creating Functions: crwdns56380:0crwdne56380:0
+          Functions and Top-Down Design: crwdns56381:0crwdne56381:0
+          APIs and Function Parameters: crwdns56382:0crwdne56382:0
+          Creating functions with Parameters: crwdns56383:0crwdne56383:0
+          Looping and Random Numbers: crwdns56384:0crwdne56384:0
+          Practice PT - Design a Digital Scene: crwdns56385:0crwdne56385:0
+        csp4:
+          title: crwdns56386:0crwdne56386:0
+          description_short: crwdns56387:0crwdne56387:0
+          description: crwdns56388:0crwdne56388:0
+          What is Big Data?: crwdns56389:0crwdne56389:0
+          Rapid Research - Data Innovations: crwdns56390:0crwdne56390:0
+          Identifying People with Data: crwdns56391:0crwdne56391:0
+          The Cost of Free: crwdns56392:0crwdne56392:0
+          Tell Me a Secret - Encrypting Text: crwdns56393:0crwdne56393:0
+          Cracking the Code: crwdns56394:0crwdne56394:0
+          Encryption Algorithms: crwdns56395:0crwdne56395:0
+          Alice and Bob and Asymmetric Keys: crwdns56396:0crwdne56396:0
+          Public Key Crypto: crwdns56397:0crwdne56397:0
+          Practice PT - Propose an Innovation: crwdns56398:0crwdne56398:0
+          Practice PT - Cybersecurity Innovations: crwdns56399:0crwdne56399:0
+        csp5:
+          title: crwdns56400:0crwdne56400:0
+          description_short: crwdns56401:0crwdne56401:0
+          description: crwdns56402:0crwdne56402:0
+          Events Unplugged: crwdns56403:0crwdne56403:0
+          Event-Driven Programming and Debugging: crwdns56404:0crwdne56404:0
+          Beyond Buttons Toward Apps: crwdns56405:0crwdne56405:0
+          Introducing Design Mode: crwdns56406:0crwdne56406:0
+          Multi-screen Apps: crwdns56407:0crwdne56407:0
+          Controlling Memory with Variables: crwdns56408:0crwdne56408:0
+          Using Variables in Apps: crwdns56409:0crwdne56409:0
+          User Input and Strings: crwdns56410:0crwdne56410:0
+          Introduction to Digital Assistants: crwdns56411:0crwdne56411:0
+          Understanding Program Flow and Logic: crwdns56412:0crwdne56412:0
+          Introduction to Conditional Logic: crwdns56413:0crwdne56413:0
+          Compound Conditional Logic: crwdns56414:0crwdne56414:0
+          Digital Assistant Project: crwdns56415:0crwdne56415:0
+          While Loops: crwdns56416:0crwdne56416:0
+          Loops and Simulations: crwdns56417:0crwdne56417:0
+          Introduction to Arrays: crwdns56418:0crwdne56418:0
+          Image Scroller with Key Events: crwdns56419:0crwdne56419:0
+          Processing Arrays: crwdns56420:0crwdne56420:0
+          Functions with Return Values: crwdns56421:0crwdne56421:0
+          Canvas and Arrays in Apps: crwdns56422:0crwdne56422:0
+          "Practice PT: Create": crwdns56423:0crwdne56423:0
+        csp6:
+          title: crwdns56424:0crwdne56424:0
+          description_short: crwdns56425:0crwdne56425:0
+          description: crwdns56426:0crwdne56426:0
+          Create PT Prep: crwdns56427:0crwdne56427:0
+          Create PT: crwdns56428:0crwdne56428:0
+          Explore PT Prep: crwdns56429:0crwdne56429:0
+          Explore PT: crwdns56430:0crwdne56430:0
+        CSDU3-Draft:
+          title: crwdns56431:0crwdne56431:0
+          description_short: crwdns56432:0crwdne56432:0
+          description: crwdns56433:0crwdne56433:0
+          Drawing in Game Lab: crwdns56434:0crwdne56434:0
+          Animation: crwdns56435:0crwdne56435:0
+          Draw Loop and Random: crwdns56436:0crwdne56436:0
+          Variables: crwdns56437:0crwdne56437:0
+          Sprite Properties and Mod: crwdns56775:0crwdne56775:0
+          Expressions and Reassignment: crwdns56600:0crwdne56600:0
+          Sprites and Properties: crwdns56601:0crwdne56601:0
+          Counting with Variables: crwdns56602:0crwdne56602:0
+          Expressions: crwdns56776:0crwdne56776:0
+          Conditionals and Keyboard Input: crwdns56777:0crwdne56777:0
+          Sprites and Images: crwdns56890:0crwdne56890:0
+          CSD U3 Variables and Animation: crwdns56962:0crwdne56962:0
+          SFLP: crwdns56964:0crwdne56964:0
+          Animations: crwdns56965:0crwdne56965:0
+          "Project: Interactive Card": crwdns56966:0crwdne56966:0
+          Booleans and Conditionals: crwdns57022:0crwdne57022:0
+          Variables and Animation: crwdns57023:0crwdne57023:0
+          Complex Conditionals: crwdns57024:0crwdne57024:0
+          Proposed Sprites and Props: crwdns57025:0crwdne57025:0
+          Conditionals Update: crwdns57026:0crwdne57026:0
+        2016_sciencePD_phase1:
+          title: crwdns56470:0crwdne56470:0
+          description_short: crwdns56471:0crwdne56471:0
+          description: crwdns56472:0crwdne56472:0
+          Introduction to PD: crwdns56473:0crwdne56473:0
+          What to Expect: crwdns56474:0crwdne56474:0
+          Introduction to Complex Adaptive Systems: crwdns56475:0crwdne56475:0
+          Introduction to Computational Science: crwdns56476:0crwdne56476:0
+          Agent Based Modeling of Complex Adaptive Systems: crwdns56477:0crwdne56477:0
+          Using Computer Models in Science: crwdns56478:0crwdne56478:0
+          Using Models in the Classroom: crwdns56479:0crwdne56479:0
+          Dispositions and Classroom Culture: crwdns56480:0crwdne56480:0
+          Computational Thinking And The Framework For K-12 Science Education: crwdns56481:0crwdne56481:0
+          Introduction to StarLogo Nova: crwdns56482:0crwdne56482:0
+          The Tutorial: crwdns56483:0crwdne56483:0
+          Post-Survey: crwdns56484:0crwdne56484:0
+        TEMP CSD Unit 3:
+          title: crwdns56485:0crwdne56485:0
+          description_short: crwdns56486:0crwdne56486:0
+          description: crwdns56487:0crwdne56487:0
+          Drawing in Game Lab: crwdns56488:0crwdne56488:0
+        CSF_Secret_Sample:
+          title: crwdns56603:0crwdne56603:0
+          description_short: crwdns56604:0crwdne56604:0
+          description: crwdns56605:0crwdne56605:0
+          description_audience: crwdns56606:0crwdne56606:0
+          Computational Thinking: crwdns56607:0crwdne56607:0
+          Sample Stage: crwdns56608:0crwdne56608:0
+        ECSPD1:
+          title: crwdns56609:0crwdne56609:0
+          description_short: crwdns56610:0crwdne56610:0
+          description: crwdns56611:0crwdne56611:0
+          Getting Started: crwdns56612:0crwdne56612:0
+          What is ECS?: crwdns56613:0crwdne56613:0
+          ECS Curriculum: crwdns56614:0crwdne56614:0
+          Wrap Up: crwdns56615:0crwdne56615:0
+          Welcome to Phase 1!: crwdns56616:0crwdne56616:0
+          Background and Context: crwdns56617:0crwdne56617:0
+          Classroom and workshop style : crwdns56618:0crwdne56618:0
+          Classroom and Workshop Style : crwdns56619:0crwdne56619:0
+        algebraFacilitator:
+          title: crwdns56620:0crwdne56620:0
+          description_short: crwdns56621:0crwdne56621:0
+          description: crwdns56622:0crwdne56622:0
+          Introduction to PD: crwdns56623:0crwdne56623:0
+          Course Overview: crwdns56624:0crwdne56624:0
+          Why Computer Science belongs in Algebra: crwdns56625:0crwdne56625:0
+          Evaluation Blocks: crwdns56626:0crwdne56626:0
+          Teacher Dashboard: crwdns56627:0crwdne56627:0
+        sciencePD1:
+          title: crwdns56628:0crwdne56628:0
+          description_short: crwdns56629:0crwdne56629:0
+          description: crwdns56630:0crwdne56630:0
+          Introduction to PD: crwdns56631:0crwdne56631:0
+          What to Expect: crwdns56632:0crwdne56632:0
+          Introduction to Complex Adaptive Systems: crwdns56633:0crwdne56633:0
+          Introduction to Computational Science: crwdns56634:0crwdne56634:0
+          Agent Based Modeling of Complex Adaptive Systems: crwdns56635:0crwdne56635:0
+          Using Computer Models in Science: crwdns56636:0crwdne56636:0
+          Using Models in the Classroom: crwdns56637:0crwdne56637:0
+          Dispositions and Classroom Culture: crwdns56638:0crwdne56638:0
+          Computational Thinking And The Framework For K-12 Science Education: crwdns56639:0crwdne56639:0
+          Introduction to StarLogo Nova: crwdns56640:0crwdne56640:0
+          The Tutorial: crwdns56641:0crwdne56641:0
+          Post-Survey: crwdns56642:0crwdne56642:0
+        cspoptional:
+          title: crwdns56643:0crwdne56643:0
+          description_short: crwdns56644:0crwdne56644:0
+          description: crwdns56645:0crwdne56645:0
+          Unit 1 - Sending Bits in the Real World: crwdns56646:0crwdne56646:0
+          Unit 1 - Encoding Numbers in the Real World: crwdns56647:0crwdne56647:0
+          Algorithms Detour - Minimum Spanning Tree: crwdns56648:0crwdne56648:0
+          Algorithms Detour - Shortest Path: crwdns56649:0crwdne56649:0
+          Algorithms Detour - How Routers Learn: crwdns56650:0crwdne56650:0
+        cspunit1-support:
+          title: crwdns56651:0crwdne56651:0
+          description: crwdns56652:0crwdne56652:0
+          Teachers and Tools: crwdns56653:0crwdne56653:0
+          Supporting Peer Learning: crwdns56654:0crwdne56654:0
+          Running a Constructive Classroom: crwdns56655:0crwdne56655:0
+          Strategies for Student Writing: crwdns56656:0crwdne56656:0
+          Intro to the Unit: crwdns56657:0crwdne56657:0
+          Chapter Overviews: crwdns56658:0crwdne56658:0
+          "Tool Talk: Intro to Netsim": crwdns56659:0crwdne56659:0
+          Sending Binary Messages: crwdns56660:0crwdne56660:0
+          Encoding and Sending Numbers: crwdns56661:0crwdne56661:0
+        test-teaching-ap-cs-unit-1:
+          test Unit 1 required reading: crwdns56662:0crwdne56662:0
+          test Unit 1 content module Alpha: crwdns56663:0crwdne56663:0
+          test Unit 1 content module Bravo: crwdns56664:0crwdne56664:0
+          test Unit 1 content module Charlie: crwdns56665:0crwdne56665:0
+          test Unit 1 practice module Delta: crwdns56666:0crwdne56666:0
+          test Unit 1 practice module Echo: crwdns56667:0crwdne56667:0
+          test Unit 1 practice module Foxtrot: crwdns56668:0crwdne56668:0
+        allthehiddenthings:
+          title: crwdns56669:0crwdne56669:0
+          description_short: crwdns56670:0crwdne56670:0
+          description: crwdns56671:0crwdne56671:0
+          Game Lab: crwdns56672:0crwdne56672:0
+          Contained Levels: crwdns57027:0crwdne57027:0
+        cspunit1-support-test:
+          title: crwdns56673:0crwdne56673:0
+          description: crwdns56674:0crwdne56674:0
+          Unit 1 Overview: crwdns56675:0crwdne56675:0
+        cspunit1-tools:
+          title: crwdns56676:0crwdne56676:0
+          description: crwdns56677:0crwdne56677:0
+          netsim: crwdns56678:0crwdne56678:0
+        Test CPS PD:
+          test Unit 1 required reading: crwdns56679:0crwdne56679:0
+          test Unit 1 content module Alpha: crwdns56680:0crwdne56680:0
+          test Unit 1 content module Bravo: crwdns56681:0crwdne56681:0
+          test Unit 1 content module Charlie: crwdns56682:0crwdne56682:0
+          test Unit 1 practice module Delta: crwdns56683:0crwdne56683:0
+          test Unit 1 practice module Echo: crwdns56684:0crwdne56684:0
+          test Unit 1 practice module Foxtrot: crwdns56685:0crwdne56685:0
+        csp-facilitators :
+          title: crwdns56686:0crwdne56686:0
+          description_short: crwdns56687:0crwdne56687:0
+          description: crwdns56688:0crwdne56688:0
+          Introduction to Text Compression: crwdns56689:0crwdne56689:0
+          Turtle Programming: crwdns56690:0crwdne56690:0
+          Introduction to Events: crwdns56691:0crwdne56691:0
+        csp-facilitators:
+          title: crwdns56692:0crwdne56692:0
+          description_short: crwdns56693:0crwdne56693:0
+          description: crwdns56694:0crwdne56694:0
+          Introduction to Text Compression: crwdns56695:0crwdne56695:0
+          Turtle Programming: crwdns56696:0crwdne56696:0
+          Introduction to Events: crwdns56697:0crwdne56697:0
+        cspassessment:
+          title: crwdns56698:0crwdne56698:0
+          description_short: crwdns56699:0crwdne56699:0
+          description: crwdns56700:0crwdne56700:0
+          CS Principles Culminating Assessment: crwdns56701:0crwdne56701:0
+        cspexam1-mWU7ilDYM9:
+          title: crwdns56779:0crwdne56779:0
+          description_short: crwdns56780:0crwdne56780:0
+          description: crwdns56781:0crwdne56781:0
+          CS Principles Culminating Assessment Part 1: crwdns56782:0crwdne56782:0
+        cspexam2-AKwgAh1ac5:
+          title: crwdns56783:0crwdne56783:0
+          description_short: crwdns56784:0crwdne56784:0
+          description: crwdns56785:0crwdne56785:0
+          CS Principles Culminating Assessment Part 2: crwdns56786:0crwdne56786:0
+        CSDU4-Draft:
+          title: crwdns56787:0crwdne56787:0
+          description_short: crwdns56788:0crwdne56788:0
+          description: crwdns56789:0crwdne56789:0
+          Event-Driven Programming and Debugging: crwdns56790:0crwdne56790:0
+          Beyond Buttons Toward Apps: crwdns56791:0crwdne56791:0
+          Introducing Design Mode: crwdns56792:0crwdne56792:0
+          Multi-screen Apps: crwdns56793:0crwdne56793:0
+          Controlling Memory with Variables: crwdns56794:0crwdne56794:0
+          Using Variables in Apps: crwdns56795:0crwdne56795:0
+          User Input and Strings: crwdns56796:0crwdne56796:0
+          Introduction to Digital Assistants: crwdns56797:0crwdne56797:0
+          Understanding Program Flow and Logic: crwdns56798:0crwdne56798:0
+          Introduction to Conditional Logic: crwdns56799:0crwdne56799:0
+          Compound Conditional Logic: crwdns56800:0crwdne56800:0
+          Digital Assistant Project: crwdns56801:0crwdne56801:0
+          While Loops: crwdns56802:0crwdne56802:0
+          Loops and Simulations: crwdns56803:0crwdne56803:0
+          Introduction to Arrays: crwdns56804:0crwdne56804:0
+          Image Scroller with Key Events: crwdns56805:0crwdne56805:0
+          Processing Arrays: crwdns56806:0crwdne56806:0
+          Functions with Return Values: crwdns56807:0crwdne56807:0
+          The Need For Programming Languages: crwdns56808:0crwdne56808:0
+          Using Simple Commands: crwdns56809:0crwdne56809:0
+          Creating Functions: crwdns56810:0crwdne56810:0
+          Functions and Top-Down Design: crwdns56811:0crwdne56811:0
+          APIs and Function Parameters: crwdns56812:0crwdne56812:0
+          Creating functions with Parameters: crwdns56813:0crwdne56813:0
+          Looping and Random Numbers: crwdns56814:0crwdne56814:0
+          App Lab: crwdns56815:0crwdne56815:0
+          Design Mode: crwdns56816:0crwdne56816:0
+        CSDU1-Draft:
+          title: crwdns56817:0crwdne56817:0
+          description_short: crwdns56818:0crwdne56818:0
+          description: crwdns56819:0crwdne56819:0
+        CSDU2-Draft:
+          title: crwdns56820:0crwdne56820:0
+          description_short: crwdns56821:0crwdne56821:0
+          description: crwdns56822:0crwdne56822:0
+          Headers and Lists: crwdns56967:0crwdne56967:0
+          Introduction to HTML: crwdns56968:0crwdne56968:0
+        CSDU5-Draft:
+          title: crwdns56823:0crwdne56823:0
+          description_short: crwdns56824:0crwdne56824:0
+          description: crwdns56825:0crwdne56825:0
+        CSDU6-Draft:
+          title: crwdns56826:0crwdne56826:0
+          description_short: crwdns56827:0crwdne56827:0
+          description: crwdns56828:0crwdne56828:0
+        CSF_Secret_Sample_Story:
+          title: crwdns56829:0crwdne56829:0
+          description_short: crwdns56830:0crwdne56830:0
+          description: crwdns56831:0crwdne56831:0
+          description_audience: crwdns56832:0crwdne56832:0
+          Sample Stage: crwdns56833:0crwdne56833:0
+        MikeTest:
+          title: crwdns56918:0crwdne56918:0
+          description_short: crwdns56919:0crwdne56919:0
+          description: crwdns56920:0crwdne56920:0
+          description_audience: crwdns56921:0crwdne56921:0
+          Sample Stage: crwdns56922:0crwdne56922:0
+          Artist Functions: crwdns56923:0crwdne56923:0
+          The same thing with named levels: crwdns57028:0crwdne57028:0
+          You are a coding STAR: crwdns57029:0crwdne57029:0
+        artistExemplar:
+          title: crwdns56977:0crwdne56977:0
+          description_short: crwdns56978:0crwdne56978:0
+          description: crwdns56979:0crwdne56979:0
+          description_audience: crwdns56980:0crwdne56980:0
+          Artist Exemplar: crwdns56981:0crwdne56981:0
+        2016_sciencePD_phase2b:
+          title: crwdns57030:0crwdne57030:0
+          description_short: crwdns57031:0crwdne57031:0
+          description: crwdns57032:0crwdne57032:0
+          Welcome!: crwdns57033:0crwdne57033:0
+          Review StarLogo Nova: crwdns57034:0crwdne57034:0
+          Reviewing the Modules: crwdns57035:0crwdne57035:0
+          Advanced StarLogo Nova: crwdns57036:0crwdne57036:0
+          Remixing Phases 1 and 2: crwdns57037:0crwdne57037:0
+          Thinking Ahead to Implementation: crwdns57038:0crwdne57038:0
+          Wrap-Up: crwdns57039:0crwdne57039:0
+        teachercon:
+          title: crwdns57040:0crwdne57040:0
+          description_short: crwdns57041:0crwdne57041:0
+          description: crwdns57042:0crwdne57042:0
+          Introduction to Teachercon: crwdns57043:0crwdne57043:0
+          Lesson 1,4: crwdns57044:0crwdne57044:0
+          Lesson 1,6: crwdns57045:0crwdne57045:0
+          Lesson 1,9: crwdns57046:0crwdne57046:0
+          Lesson 1,10: crwdns57047:0crwdne57047:0
+          Lesson 1,11: crwdns57048:0crwdne57048:0
+          Lesson 2,2: crwdns57049:0crwdne57049:0
+          Lesson 2,3: crwdns57050:0crwdne57050:0
+          Lesson 2,10: crwdns57051:0crwdne57051:0
+          Group Work and Peer Learning: crwdns57052:0crwdne57052:0
+          Balancing Teachers and Tools: crwdns57053:0crwdne57053:0
+          Discovery Learning: crwdns57054:0crwdne57054:0
+          Measuring Student Learning: crwdns57055:0crwdne57055:0
+        2016_sciencePD-phase2b:
+          title: crwdns57056:0crwdne57056:0
+          description_short: crwdns57057:0crwdne57057:0
+          description: crwdns57058:0crwdne57058:0
+          Welcome!: crwdns57059:0crwdne57059:0
+          Review StarLogo Nova: crwdns57060:0crwdne57060:0
+          Reviewing the Modules: crwdns57061:0crwdne57061:0
+          Advanced StarLogo Nova: crwdns57062:0crwdne57062:0
+          Remixing Phases 1 and 2: crwdns57063:0crwdne57063:0
+          Thinking Ahead to Implementation: crwdns57064:0crwdne57064:0
+          Wrap-Up: crwdns57065:0crwdne57065:0
+        kinderTest:
+          Kindergarten Stage 1: crwdns57066:0crwdne57066:0
+        gradeKinder:
+          Debugging: crwdns57101:0crwdne57101:0
+          Persistence & Frustration: crwdns57102:0crwdne57102:0
+          Sequences & Algorithms: crwdns57103:0crwdne57103:0
+          "Jigsaw: Learn to drag and drop": crwdns57104:0crwdne57104:0
+          Programming: crwdns57105:0crwdne57105:0
+          Being Safe Online: crwdns57106:0crwdne57106:0
+          Loops: crwdns57107:0crwdne57107:0
+          Programming Unplugged: crwdns57108:0crwdne57108:0
+          Loops Unplugged: crwdns57109:0crwdne57109:0
+          Events Unplugged: crwdns57110:0crwdne57110:0
+          Events: crwdns57111:0crwdne57111:0
+        grade4:
+          title: crwdns57112:0crwdne57112:0
+          description_short: crwdns57113:0crwdne57113:0
+          description: crwdns57114:0crwdne57114:0
+          description_audience: crwdns57115:0crwdne57115:0
+          "Mixed Review #1 (Ramp Up)": crwdns57116:0crwdne57116:0
+          Conditionals: crwdns57117:0crwdne57117:0
+          "Bee: Conditionals": crwdns57118:0crwdne57118:0
+          "PlayLab: Conditionals": crwdns57119:0crwdne57119:0
+          Songwriting: crwdns57120:0crwdne57120:0
+          "Bee: Functions": crwdns57121:0crwdne57121:0
+          Decision Trees: crwdns57122:0crwdne57122:0
+          Choose Your Own Adventure: crwdns57123:0crwdne57123:0
+          "Project #1": crwdns57124:0crwdne57124:0
+          Nested Loops: crwdns57125:0crwdne57125:0
+          "Artist: Nested Loops": crwdns57126:0crwdne57126:0
+          "Mixed Review #2 (Conditionals, Events, Functions)": crwdns57127:0crwdne57127:0
+          "New Artist: Functions": crwdns57128:0crwdne57128:0
+          "Project #2": crwdns57129:0crwdne57129:0
+          "Mixed Review #3 (Deduce the Concept)": crwdns57130:0crwdne57130:0
+          Internet: crwdns57131:0crwdne57131:0
+          Crowdsourcing: crwdns57132:0crwdne57132:0
+          Digital Citizenship: crwdns57133:0crwdne57133:0
+        grade1:
+          Predicting & Debugging: crwdns57134:0crwdne57134:0
+          Persistence & Frustration: crwdns57135:0crwdne57135:0
+          Sequences & Algorithms: crwdns57136:0crwdne57136:0
+          "Jigsaw: Learn to drag and drop": crwdns57137:0crwdne57137:0
+        grade5:
+          title: crwdns57138:0crwdne57138:0
+          description_short: crwdns57139:0crwdne57139:0
+          description: crwdns57140:0crwdne57140:0
+          description_audience: crwdns57141:0crwdne57141:0
+        ecs-unit1:
+          title: crwdns57142:0crwdne57142:0
+          description_short: crwdns57143:0crwdne57143:0
+          description: crwdns57144:0crwdne57144:0
+          Welcome!: crwdns57145:0crwdne57145:0
+          0: crwdns57146:0crwdne57146:0
+          1: crwdns57147:0crwdne57147:0
+          Unit 1, Days 3-4 Buying a Computer: crwdns57148:0crwdne57148:0
+          Unit 1, Days 5-7 Searching and Web 2: crwdns57149:0crwdne57149:0
+          Unit 1, Days 8-9 Impact of Computers and Communication: crwdns57150:0crwdne57150:0
+          Unit 1, Day 10 Telling a Story with Data: crwdns57151:0crwdne57151:0
+          Unit 1, Day 11-14 Data Modeling and Design: crwdns57152:0crwdne57152:0
+          Unit 1, Day 15-16 Computer Programs and Following Directions: crwdns57153:0crwdne57153:0
+          Unit 1, Day 17-19 What Is Intelligence?: crwdns57154:0crwdne57154:0
+          Wrap-up: crwdns57155:0crwdne57155:0
+        ecs-unit2:
+          title: crwdns57156:0crwdne57156:0
+          description_short: crwdns57157:0crwdne57157:0
+          description: crwdns57158:0crwdne57158:0
+          Getting Started: crwdns57159:0crwdne57159:0
+          Intro to Unit 2: crwdns57160:0crwdne57160:0
+          Teaching Strategies: crwdns57161:0crwdne57161:0
+          Lesson Overviews: crwdns57162:0crwdne57162:0
+          Unit 2 Challenge: crwdns57163:0crwdne57163:0
+          Close & Next Steps: crwdns57164:0crwdne57164:0
+          Day 1-2 Solving Community Problems with Data: crwdns57165:0crwdne57165:0
+          "Day 3 Intro To Problem Solving: Candy Bar Activity": crwdns57166:0crwdne57166:0
+          "Day 4-6 Strategies in Problem Solving: Handshake Activity": crwdns57167:0crwdne57167:0
+          "Day 7-9 Problem Solving: Cornrow Curves": crwdns57168:0crwdne57168:0
+          Day 10-12 Binary Number Systems: crwdns57169:0crwdne57169:0
+          "Day 13-14 Linear and Binary Search: Tower Building Activity": crwdns57170:0crwdne57170:0
+          Day 15-16 Sorting Algorithms: crwdns57171:0crwdne57171:0
+          "Day 17 Minimal Spanning Trees: Muddy City": crwdns57172:0crwdne57172:0
+          Day 18-21 Final Project: crwdns57173:0crwdne57173:0

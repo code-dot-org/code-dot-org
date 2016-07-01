@@ -8,8 +8,7 @@
 // look: Colour of sonar-like look icon.
 
 var skinsBase = require('../skins');
-var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('lodash');
 
 var CONFIGS = {
   letters: {
@@ -160,7 +159,7 @@ function soundAssetUrls(skin, mp3Sound) {
   return [skin.assetUrl(mp3Sound), skin.assetUrl(base + '.ogg')];
 }
 
-exports.load = function(assetUrl, id) {
+exports.load = function (assetUrl, id) {
   // The skin has properties from three locations
   // (1) skinBase - properties common across Blockly apps
   // (2) here - properties common across all maze skins

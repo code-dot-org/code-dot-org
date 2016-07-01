@@ -23,14 +23,14 @@ var generateSetterCode = function (ctx, name) {
 };
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
 
   blockly.Blocks.bounce_whenLeft = {
     // Block to handle event when the Left arrow button is pressed.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.whenLeft());
@@ -40,7 +40,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_whenLeft = function() {
+  generator.bounce_whenLeft = function () {
     // Generate JavaScript for handling Left arrow button event.
     return '\n';
   };
@@ -48,7 +48,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_whenRight = {
     // Block to handle event when the Right arrow button is pressed.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.whenRight());
@@ -58,7 +58,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_whenRight = function() {
+  generator.bounce_whenRight = function () {
     // Generate JavaScript for handling Right arrow button event.
     return '\n';
   };
@@ -66,7 +66,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_whenUp = {
     // Block to handle event when the Up arrow button is pressed.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.whenUp());
@@ -76,7 +76,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_whenUp = function() {
+  generator.bounce_whenUp = function () {
     // Generate JavaScript for handling Up arrow button event.
     return '\n';
   };
@@ -84,7 +84,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_whenDown = {
     // Block to handle event when the Down arrow button is pressed.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.whenDown());
@@ -94,7 +94,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_whenDown = function() {
+  generator.bounce_whenDown = function () {
     // Generate JavaScript for handling Down arrow button event.
     return '\n';
   };
@@ -102,7 +102,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_whenWallCollided = {
     // Block to handle event when a wall/ball collision occurs.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.whenWallCollided());
@@ -112,7 +112,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_whenWallCollided = function() {
+  generator.bounce_whenWallCollided = function () {
     // Generate JavaScript for handling when a wall/ball collision occurs.
     return '\n';
   };
@@ -120,7 +120,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_whenBallInGoal = {
     // Block to handle event when a ball enters a goal.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.whenBallInGoal());
@@ -130,7 +130,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_whenBallInGoal = function() {
+  generator.bounce_whenBallInGoal = function () {
     // Generate JavaScript for handling when a ball in goal event occurs.
     return '\n';
   };
@@ -138,7 +138,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_whenBallMissesPaddle = {
     // Block to handle event when a ball misses the paddle.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.whenBallMissesPaddle());
@@ -148,7 +148,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_whenBallMissesPaddle = function() {
+  generator.bounce_whenBallMissesPaddle = function () {
     // Generate JavaScript for handling when a ball misses the paddle.
     return '\n';
   };
@@ -156,7 +156,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_whenPaddleCollided = {
     // Block to handle event when a wall collision occurs.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.whenPaddleCollided());
@@ -166,7 +166,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_whenPaddleCollided = function() {
+  generator.bounce_whenPaddleCollided = function () {
     // Generate JavaScript for handling when a paddle/ball collision occurs.
     return '\n';
   };
@@ -174,7 +174,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_moveLeft = {
     // Block for moving left.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.moveLeft());
@@ -184,7 +184,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_moveLeft = function() {
+  generator.bounce_moveLeft = function () {
     // Generate JavaScript for moving left.
     return 'Bounce.moveLeft(\'block_id_' + this.id + '\');\n';
   };
@@ -192,7 +192,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_moveRight = {
     // Block for moving right.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.moveRight());
@@ -202,7 +202,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_moveRight = function() {
+  generator.bounce_moveRight = function () {
     // Generate JavaScript for moving right.
     return 'Bounce.moveRight(\'block_id_' + this.id + '\');\n';
   };
@@ -210,7 +210,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_moveUp = {
     // Block for moving up.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.moveUp());
@@ -220,7 +220,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_moveUp = function() {
+  generator.bounce_moveUp = function () {
     // Generate JavaScript for moving up.
     return 'Bounce.moveUp(\'block_id_' + this.id + '\');\n';
   };
@@ -228,7 +228,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_moveDown = {
     // Block for moving down.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.moveDown());
@@ -238,7 +238,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_moveDown = function() {
+  generator.bounce_moveDown = function () {
     // Generate JavaScript for moving down.
     return 'Bounce.moveDown(\'block_id_' + this.id + '\');\n';
   };
@@ -246,7 +246,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_playSound = {
     // Block for playing sound.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldDropdown(this.SOUNDS), 'SOUND');
@@ -270,7 +270,7 @@ exports.install = function(blockly, blockInstallOptions) {
        [msg.playSoundGoal1(), 'goal1'],
        [msg.playSoundGoal2(), 'goal2']];
 
-  generator.bounce_playSound = function() {
+  generator.bounce_playSound = function () {
     // Generate JavaScript for playing a sound.
     return 'Bounce.playSound(\'block_id_' + this.id + '\', \'' +
                this.getTitleValue('SOUND') + '\');\n';
@@ -279,7 +279,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_incrementPlayerScore = {
     // Block for incrementing the player's score.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.incrementPlayerScore());
@@ -289,7 +289,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_incrementPlayerScore = function() {
+  generator.bounce_incrementPlayerScore = function () {
     // Generate JavaScript for incrementing the player's score.
     return 'Bounce.incrementPlayerScore(\'block_id_' + this.id + '\');\n';
   };
@@ -297,7 +297,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_incrementOpponentScore = {
     // Block for incrementing the opponent's score.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.incrementOpponentScore());
@@ -307,7 +307,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_incrementOpponentScore = function() {
+  generator.bounce_incrementOpponentScore = function () {
     // Generate JavaScript for incrementing the opponent's score.
     return 'Bounce.incrementOpponentScore(\'block_id_' + this.id + '\');\n';
   };
@@ -315,7 +315,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_bounceBall = {
     // Block for bouncing a ball.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.bounceBall());
@@ -325,7 +325,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_bounceBall = function() {
+  generator.bounce_bounceBall = function () {
     // Generate JavaScript for bouncing a ball.
     return 'Bounce.bounceBall(\'block_id_' + this.id + '\');\n';
   };
@@ -333,7 +333,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_launchBall = {
     // Block for launching a ball.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.launchBall());
@@ -343,7 +343,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.bounce_launchBall = function() {
+  generator.bounce_launchBall = function () {
     // Generate JavaScript for launching a ball.
     return 'Bounce.launchBall(\'block_id_' + this.id + '\');\n';
   };
@@ -351,7 +351,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_setBallSpeed = {
     // Block for setting ball speed
     helpUrl: '',
-    init: function() {
+    init: function () {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
@@ -379,7 +379,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.bounce_setPaddleSpeed = {
     // Block for setting paddle speed
     helpUrl: '',
-    init: function() {
+    init: function () {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
@@ -409,7 +409,7 @@ exports.install = function(blockly, blockInstallOptions) {
    */
   blockly.Blocks.bounce_setBackground = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]);  // default to hardcourt
 
@@ -428,7 +428,7 @@ exports.install = function(blockly, blockInstallOptions) {
        [msg.setBackgroundHardcourt(), '"hardcourt"'],
        [msg.setBackgroundRetro(), '"retro"']];
 
-  generator.bounce_setBackground = function() {
+  generator.bounce_setBackground = function () {
     return generateSetterCode(this, 'setBackground');
   };
 
@@ -437,7 +437,7 @@ exports.install = function(blockly, blockInstallOptions) {
    */
   blockly.Blocks.bounce_setBall = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]);  // default to hardcourt
 
@@ -456,7 +456,7 @@ exports.install = function(blockly, blockInstallOptions) {
        [msg.setBallHardcourt(), '"hardcourt"'],
        [msg.setBallRetro(), '"retro"']];
 
-  generator.bounce_setBall = function() {
+  generator.bounce_setBall = function () {
     return generateSetterCode(this, 'setBall');
   };
 
@@ -465,7 +465,7 @@ exports.install = function(blockly, blockInstallOptions) {
    */
   blockly.Blocks.bounce_setPaddle = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]);  // default to hardcourt
 
@@ -484,7 +484,7 @@ exports.install = function(blockly, blockInstallOptions) {
        [msg.setPaddleHardcourt(), '"hardcourt"'],
        [msg.setPaddleRetro(), '"retro"']];
 
-  generator.bounce_setPaddle = function() {
+  generator.bounce_setPaddle = function () {
     return generateSetterCode(this, 'setPaddle');
   };
 

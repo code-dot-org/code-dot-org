@@ -13,7 +13,7 @@ Software and technology are everywhere - in our computers, in our pockets, in ou
 ### What is Code Studio?
 Code Studio is a fun, creative platform for learning basic coding and computer science! Using a blended learning model, your children are learning with a mix of online activities (on the computer) and “unplugged” classroom activities that use no computer at all.
 
-This format helps nurture creativity, problem solving, collaboration, and logic through interactive, self-paced tutorials, featuring short video lectures and game-like puzzles. 
+This format helps nurture creativity, problem solving, collaboration, and logic through interactive, self-paced tutorials, featuring short video lectures and game-like puzzles.
 
 ### What is Computer Science in Algebra?
 Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
@@ -23,7 +23,7 @@ Code.org has partnered with Bootstrap to develop a curriculum which teaches alge
 <img src="collidefunction.png" style="width: 30%; margin: 20px;"/>
 <img src="bat.png" style="width: 20%; margin: 20px;"/>
 </center>
-         
+
 ### Students will study topics such as:
 * Order of operations
 * Cartesian plane
@@ -36,11 +36,11 @@ Code.org has partnered with Bootstrap to develop a curriculum which teaches alge
 * Use smart hints to guide students with custom answers to common mistakes
 
 ### Student login - for access outside the classroom
-Because this is an online course, students can log in from outside the classroom - from a computer or tablet at home, or in the library.  For our classroom to participate in this course, we have created Code Studio accounts for each student. 
+Because this is an online course, students can log in from outside the classroom - from a computer or tablet at home, or in the library.  For our classroom to participate in this course, we have created Code Studio accounts for each student.
 
 <br/>
 ## Protecting student privacy
-Code.org assigns the utmost importance to student safety and security and has designed Code Studio to maximize student privacy.  In particular, **_participation in this course doesn’t require sharing any private student information online_**. The online course requests the student’s display name, which can be represented as an alias (eg “John S” or “Cool coder”).  
+Code.org assigns the utmost importance to student safety and security and has designed Code Studio to maximize student privacy.  In particular, **_participation in this course doesn’t require sharing any private student information online_**. The online course requests the student’s display name, which can be represented as an alias (eg “John S” or “Cool coder”).
 
 The list below summarizes what student data is stored and protected by Code.org, and how it is used. You can find further details at [https://code.org/privacy](https://code.org/privacy).
 
@@ -52,13 +52,12 @@ The list below summarizes what student data is stored and protected by Code.org,
 
 ### Optional data:
 * Gender (to summarize aggregate participation by females and males)
-* Student email (to allow password-reset, and to send students new coursework when available). 
+* Student email (to allow password-reset, and to send students new coursework when available).
 * Note: if a student creates an account directly (without a parent or teacher), the email address is required to enable password-reset. To further protect the privacy of children under 13, their email addresses are converted by Code.org into a “hashed” sate, meaning that they are replaced with a series of numbers and cannot be converted back to the original email address.
 
 For more information on Code.org and Code Studio, visit [https://code.org](https://code.org).
 
 <hr>
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
 [/content]
 

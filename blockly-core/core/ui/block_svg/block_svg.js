@@ -17,6 +17,8 @@
  * limitations under the License.
  */
 
+/* global Blockly, goog */
+
 /**
  * @fileoverview Methods for graphically rendering a block as SVG.
  * @author fraser@google.com (Neil Fraser)
@@ -24,6 +26,7 @@
 'use strict';
 
 goog.provide('Blockly.BlockSvg');
+goog.require('Blockly.BlockSvgUnused');
 
 goog.require('goog.userAgent');
 
@@ -313,6 +316,9 @@ BS.INNER_BOTTOM_LEFT_CORNER_HIGHLIGHT_LTR =
  * @return {Object} object with padding values for top, bottom, left, and right
  */
 Blockly.BlockSvg.prototype.getPadding = function() {
+  if (this.isUnused()) {
+    return this.unusedSvg_.getPadding();
+  }
   return {
     top: 0,
     right: 0,
@@ -347,6 +353,10 @@ Blockly.BlockSvg.prototype.dispose = function() {
   this.svgPath_ = null;
   this.svgPathLight_ = null;
   this.svgPathDark_ = null;
+  // dispose of children
+  if (this.isUnused()) {
+    this.unusedSvg_.dispose();
+  }
   // Break circular references.
   this.block_ = null;
 };
@@ -509,6 +519,51 @@ Blockly.BlockSvg.prototype.updateDisabled = function() {
 };
 
 /**
+ * Update block limit UI
+ * @param {number} limit count to display
+ */
+Blockly.BlockSvg.prototype.updateLimit = function (limit) {
+  var BUBBLE_SIZE = 18;
+  var HALF_BUBBLE_SIZE = BUBBLE_SIZE / 2;
+
+  if (!this.limitGroup_) {
+    this.limitGroup_ = Blockly.createSvgElement('g', {
+      'class': 'blocklyLimit',
+      y: -3
+    }, this.svgGroup_);
+
+    this.limitRect_ = Blockly.createSvgElement('rect', {
+      height: BUBBLE_SIZE,
+      width: BUBBLE_SIZE,
+      x: -HALF_BUBBLE_SIZE,
+      y: -HALF_BUBBLE_SIZE,
+      rx: HALF_BUBBLE_SIZE,
+      ry: HALF_BUBBLE_SIZE
+    }, this.limitGroup_);
+
+    this.limitText_ = Blockly.createSvgElement('text', {
+      'class': 'blocklyText',
+      'dominant-baseline': 'central',
+      'text-anchor': 'middle'
+    }, this.limitGroup_);
+  }
+
+  if (limit === 0) {
+    Blockly.addClass_(this.svgGroup_, 'blocklyUnused');
+    Blockly.removeClass_(this.svgGroup_, 'blocklyDraggable');
+  } else {
+    Blockly.removeClass_(this.svgGroup_, 'blocklyUnused');
+    Blockly.addClass_(this.svgGroup_, 'blocklyDraggable');
+  }
+
+  this.limitText_.textContent = limit;
+  var textWidth = this.limitText_.getBBox ? Math.ceil(this.limitText_.getBBox().width) : HALF_BUBBLE_SIZE;
+  var rectWidth = Math.max(textWidth + HALF_BUBBLE_SIZE, BUBBLE_SIZE);
+  this.limitRect_.setAttribute('width', rectWidth);
+  this.limitText_.setAttribute('x', Math.round(rectWidth * 0.5) - HALF_BUBBLE_SIZE);
+};
+
+/**
  * Select this block.  Highlight it visually.  Move to top of the stack.
  */
 Blockly.BlockSvg.prototype.addSelect = function() {
@@ -523,7 +578,9 @@ Blockly.BlockSvg.prototype.addSelect = function() {
  * case.
  */
 Blockly.BlockSvg.prototype.addSelectNoMove = function() {
-  Blockly.addClass_(this.svgGroup_, 'blocklySelected');
+  if (Blockly.elementHasClass_(this.svgGroup_, 'blocklyDraggable')) {
+    Blockly.addClass_(this.svgGroup_, 'blocklySelected');
+  }
 };
 
 /**
@@ -594,6 +651,10 @@ Blockly.BlockSvg.prototype.render = function(selfOnly) {
       // Top-most block.  Fire an event to allow scrollbars to resize.
       Blockly.fireUiEvent(window, 'resize');
     }
+  }
+
+  if (this.isUnused()) {
+    this.unusedSvg_.render(this.svgGroup_);
   }
 };
 
@@ -1352,4 +1413,24 @@ Blockly.BlockSvg.prototype.innerTopLeftCorner = function (notchPathRight) {
       BS.CORNER_RADIUS + ' 0 0,0 -' +
       BS.CORNER_RADIUS + ',' +
       BS.CORNER_RADIUS;
+};
+
+Blockly.BlockSvg.prototype.isUnused = function () {
+  return !!this.unusedSvg_;
+};
+
+Blockly.BlockSvg.prototype.setIsUnused = function (isUnused) {
+  if (isUnused) {
+    Blockly.addClass_(this.svgGroup_, 'blocklyUnused');
+  } else {
+    Blockly.removeClass_(this.svgGroup_, 'blocklyUnused');
+  }
+  if (!isUnused && this.unusedSvg_) {
+    this.unusedSvg_.dispose();
+    this.unusedSvg_ = null;
+  } else if (isUnused && !this.unusedSvg_) {
+    this.unusedSvg_ = new Blockly.BlockSvgUnused(this.block_);
+  }
+
+  this.render();
 };

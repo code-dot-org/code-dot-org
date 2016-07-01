@@ -1,5 +1,7 @@
 /* global dashboard */
 
+import $ from 'jquery';
+
 /**
  * Dynamic generation and event bindings for project admin section of the admin box
  */
@@ -15,8 +17,8 @@ module.exports = function showProjectAdmin() {
         '"/></span>'));
     } else {
       $('.project_admin').html($('<button id="freeze" class="btn btn-default btn-sm">Freeze for use as an exemplar &#x2744;</button>'));
-      $('#freeze').click(function() {
-        dashboard.project.freeze(function() {
+      $('#freeze').click(function () {
+        dashboard.project.freeze(function () {
           window.location.reload();
         });
       });

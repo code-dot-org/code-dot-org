@@ -1,0 +1,28 @@
+name 'CSPFinal_Question_33'
+question 'Which of the following best describes the result after the program is executed on a given list?'
+wrong 'It displays the first number in the list'
+wrong 'It displays the last number in the list'
+right 'It displays the largest number in the list'
+wrong 'It displays the smallest number in the list.'
+
+markdown <<MARKDOWN
+Consider the following program which performs an operation on the given list. 
+
+<pre>
+  PROCEDURE mystery(inputList)
+  {
+  	result &larr; inputList[1]
+    
+    FOR EACH value IN inputList
+    {
+    	IF (value &gt; result)
+    	{
+    		result &larr; value
+    	}
+    }
+
+    DISPLAY (result)
+  }
+
+</pre>
+MARKDOWN

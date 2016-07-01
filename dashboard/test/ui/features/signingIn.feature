@@ -1,6 +1,5 @@
 @dashboard_db_access
 @no_mobile
-@no_ie9
 
 Feature: Signing in and signing out
 
@@ -9,6 +8,7 @@ Scenario:
   Given I am on "http://code.org/"
   And I set the language cookie
   And I create a student named "Bob"
+  And I sign out
   Given I am on "http://code.org/"
   And I reload the page
   Then I wait for 2 seconds
@@ -30,6 +30,7 @@ Scenario:
   Given I am on "http://studio.code.org/"
   And I set the language cookie
   And I create a student named "Alice"
+  And I sign out
   Given I am on "http://studio.code.org/"
   And I reload the page
   Then I wait for 2 seconds
@@ -51,6 +52,7 @@ Scenario:
   Given I am on "http://studio.code.org/"
   And I set the language cookie
   And I create a teacher named "Casey"
+  And I sign out
   Given I am on "http://code.org/"
   And I reload the page
   Then I wait for 2 seconds

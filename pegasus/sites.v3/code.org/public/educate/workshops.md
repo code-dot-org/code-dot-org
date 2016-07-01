@@ -10,11 +10,10 @@ Click on your state to find the details for your workshop.
 
 - **[Arizona](#az)**<br/>
 - **[California](#ca)**<br/>
-- **[Florida](#fl)**<Br/>
 - **[Illinois](#il)**<br/>
 - **[Maryland](#md)**<br/>
-- **[North Carolina](#nc)**<br/>
 - **[Texas](#tx)**<br/>
+- **[Washington](#wa)**<br/>
 
 
 ________________
@@ -49,11 +48,11 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 **Location**
 
 [Phoenix Coding Academy<br/>
-Room TBD
+Room: 130<br/>
 4445 N. Central Ave.<br/> 
 Phoenix, AZ 85012](https://www.google.com/maps/place/4445+N+Central+Ave,+Phoenix,+AZ+85012/@33.5009346,-112.0754594,17z/data=!3m1!4b1!4m2!3m1!1s0x872b12ecebe8962f:0x9461b519992a8271)
 
-*More information coming soon*<br/>
+Parking is free and available.<br/>
 
  
 
@@ -106,9 +105,10 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-TBD
-
-*More information coming soon*<br/>
+[Roybal High School<br/>
+Room 113<br/>
+1200 W. Colton St. <br/>
+Los Angeles, CA 90026<br/>](https://goo.gl/maps/XCLeUNYWvcr)
  
 
 **What do I bring to my workshop?**
@@ -150,9 +150,10 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-TBD
-
-*More information coming soon*<br/>
+[Liberty Elementary<br/>
+Room TBD<br/>
+9631 Hayes St<br/>
+Riverside, CA 92503](https://goo.gl/maps/gefbQ8Wn4wA2)
 
 
 **What do I bring to my workshop?**
@@ -170,7 +171,7 @@ Laptop and charger (optional)
 
 
 <a id="east"></a>
-### East Bay Area ECS
+### NorCal ECS
 
 
 #### Phase 1: Online Introduction (~2 hours)
@@ -211,102 +212,7 @@ Laptop and charger (optional)
 
 
 [**Back to the top**](#top)
-________________
-<a id="fl"></a>
-<br/>
-<br/>
 
-## Florida
-
-- **[Broward/Miami](#miami)**<br/>
-- **[Palm Beach](#palm)**<br/>
-- **[NE Florida](#ne)**<Br/>
-
-<a id="miami"></a>
-### Broward/Miami ECS
-
-
-#### Phase 1: Online Introduction (~2 hours)
-
-The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-
-Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
-
-#### Phase 2: Summer Study (5 days in-person)
-
-During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
-
-**Save the dates**
-
-Monday, June 13 - Friday, June 17<br/>
-8:30am - 3:30pm<br/>
-
-Note: The workshop ends at 1:30pm on Friday.<br/>
-
-Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
-
-**Location**
-
-TBD
-
-*More information coming soon*<br/> 
-
-**What do I bring to my workshop?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop and charger (optional)
-</br>
-</br>
-
-
-[**Back to the top**](#top)
-
-
-<a id="ne"></a>
-### NE Florida ECS
-
-
-#### Phase 1: Online Introduction (~2 hours)
-
-The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-
-Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
-
-#### Phase 2: Summer Study (5 days in-person)
-
-During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
-
-**Save the dates**
-
-Monday, June 27 - Friday, July 1<br/>
-8:30am - 3:30pm<br/>
-
-Note: The workshop ends at 1:30pm on Friday.<br/>
-
-Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
-
-**Location**
-
-TBD
-
-*More information coming soon*<br/>
-
-
-**What do I bring to my workshop?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop and charger (optional)
-</br>
-</br>
-
-
-[**Back to the top**](#top)
 
 ________________
 <a id="il"></a>
@@ -353,8 +259,6 @@ CDM Room 924<br/>
 243 S. Wabash Ave<br/> 
 Chicago, IL 60604](https://goo.gl/maps/bR98ad2SfVk)
 
-*More information coming soon*<br/>
-
  
 **What do I bring to my workshop?**
 
@@ -397,9 +301,13 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-TBD
+Group 1 & 2 will be at the following location:
 
-*More information coming soon*<br/>
+[Microsoft 200 E Randolph St #200, 
+<br/>
+Room: MPR 2 
+<br/> 
+Chicago, IL 60601](https://goo.gl/maps/fNkGysPUCo42)
  
 
 **What do I bring to my workshop?**
@@ -469,7 +377,7 @@ ________________
 
 ## Maryland
 
-### DC Area ECS
+### Silver Spring ECS
 
 
 #### Phase 1: Online Introduction (~2 hours)
@@ -493,59 +401,12 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
+[Thomas Edison High School of Technology<br/>
+Room 2206<br/>
+12501 Dalewood Drive<br/>
+Silver Spring, MD 20906](https://goo.gl/maps/dE1KJVGR3Tv)
 
-TBD
-
-*More information coming soon*<br/>
-
-
-**What do I bring to my workshop?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop and charger (optional)
-</br>
-</br>
-
-
-[**Back to the top**](#top)
-
-________________
-<a id="nc"></a>
-<br/>
-<br/>
-
-## North Carolina
-
-### Durham ECS
-
-
-#### Phase 1: Online Introduction (~2 hours)
-
-The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-
-Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
-
-#### Phase 2: Summer Study (5 days in-person)
-
-During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
-
-**Save the dates**
-
-Monday, July 18 - Friday, July 22<br/>
-8:30am - 3:30pm<br/>
-
-Note: The workshop ends at 1:30pm on Friday.<br/>
-
-Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
-
-**Location**
-
-TBD
-
-*More information coming soon*<br/>
+Free parking is available in front of the building.
 
 
 **What do I bring to my workshop?**
@@ -560,6 +421,7 @@ Laptop and charger (optional)
 
 
 [**Back to the top**](#top)
+
 
 ________________
 <a id="tx"></a>
@@ -630,7 +492,7 @@ During the second phase of our professional learning program, you will have an o
 
 **Save the dates**
 
-Monday, July 25 - Friday, July 29<br/>
+Monday, July 11 - Friday, July 15<br/>
 8:30am - 3:30pm<br/>
 
 Note: The workshop ends at 1:30pm on Friday.<br/>
@@ -656,3 +518,54 @@ Laptop and charger (optional)
 
 
 [**Back to the top**](#top)
+
+________________
+<a id="wa"></a>
+<br/>
+<br/>
+## Washington
+
+### Everett Area ECS
+
+
+#### Phase 1: Online Introduction (~2 hours)
+
+The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
+
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
+
+#### Phase 2: Summer Study (5 days in-person)
+
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
+
+**Save the dates**
+
+Monday, August 1 - Friday, August 5<br/>
+8:30am - 3:30pm<br/>
+
+Note: The workshop ends at 1:30pm on Friday.<br/>
+
+Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
+
+**Location**
+
+Everett, WA
+
+
+*More information coming soon*<br/>
+
+ 
+
+**What do I bring to my workshop?**
+
+Water Bottle
+<br />
+Snacks
+<br />
+Laptop and charger (optional)
+</br>
+</br>
+
+
+[**Back to the top**](#top)
+

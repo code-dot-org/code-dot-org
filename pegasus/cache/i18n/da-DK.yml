@@ -1,7 +1,14 @@
 "da-DK":
   hour_of_code: Hour of Code
   hello: Hej verden
+  'yes': Ja
+  'no': Nej
   select_language: Vælg dit sprog
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Lær mere
   en: Datalogi
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
   csedweek_dates: 8.-14. december 2014
@@ -364,6 +371,9 @@
   homepage_banner_20k_teachers: 20.000 lærere uddannet, og nu underviser datalogi
     i klasseværelser.
   homepage_banner_20k_teachers_link: Lær mere
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Alle kan lære det. Start i dag
   homepage_slot_text_link_hoc: Prøv Hour of Code
@@ -389,6 +399,7 @@
   homepage_slot_text_link_stats: Se statistikken
   homepage_slot_text_link_buy: Deltag
   homepage_slot_text_link_donate: Giv et bidrag
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Elevprodukter fra Code Studio
   homepage_header_donors: Code.org takker sine støtter
   homepage_donors_seall: Se alle
@@ -577,6 +588,7 @@
   dashboard_landing_new_beta: Nyt! Prøv vores beta kurser for 5. klasses elever.
   dashboard_landing_new_k5courses: Ny! Prøv vores kurser for 5. klasses elever.
   dashboard_landing_useful_links: Andre nyttige links (kun på engelsk)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Stil et spørgsmål personligt! Besøg vores månedlige
     video kontortid.
   dashboard_landing_print_certificates: Udskriv certifikater for studerende, der er
@@ -596,6 +608,11 @@
   dashboard_landing_more_tutorials_desc: Der er flere tutorials <a href="/learn/beyond">
     udbudt af vores partnere.</a> Lære at programmere med robotter, lave websider,
     lav din egen app eller udforske andre sprog som C ++, Ruby eller Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: En Times Kodning til alle aldre
   dashboard_hoc_courses_desc: Prøv nogen af disse kortere 1 times tutorial med dine
     elever!
@@ -649,6 +666,18 @@
   dashboard_action_remove_confirm: Fjern?
   dashboard_action_done: Udfør
   dashboard_action_required: krævet
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Lærerens Startside
   dashboard_navigation_section_student_progress: Elevernes konti og fremskridt
   dashboard_navigation_section_teacher_progress: Dine kurser
@@ -657,7 +686,7 @@
   dashboard_navigation_section_pd: Efteruddannelse
   dashboard_navigation_section_speakers: Find en<br/> gæstetaler
   dashboard_navigation_all_sections: Elevernes konti og fremskridt
-  dashboard_navigation_view_progress: Se fremskridt
+  dashboard_navigation_view_progress: Fremskridt
   dashboard_navigation_view_text_responses: Vis tekstsvar
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Tilføj elever
@@ -666,6 +695,19 @@
   dashboard_navigation_view_stats: Vis statistikker
   dashboard_navigation_section: 'Hold: %{section_name}'
   dashboard_navigation_student: 'Elev: %{student_name}'
+  dashboard_progress_not_started: ikke startet
+  dashboard_progress_in_progress: i gang
+  dashboard_progress_not_completed: ikke afsluttet
+  dashboard_progress_completed_too_many_blocks: afsluttet, for mange blokke
+  dashboard_progress_completed_perfect: Afsluttet, perfekt
+  dashboard_progress_furthest_level_attempted: længst opnåede niveau
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nyt hold
   dashboard_sections_jumbotron_instruction: Opret nye hold og tilføj elever. Hold
     hjælper dig til at organisere eleverne i mindre grupper, så du kan følge deres
@@ -674,6 +716,7 @@
   dashboard_sections_table_secret: Login type
   dashboard_sections_table_grade: Graduering
   dashboard_sections_table_course: Kursus
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Elever
   dashboard_sections_table_code: Holdkode
   dashboard_sections_name: Sektionsnavnet
@@ -688,6 +731,26 @@
   dashboard_sections_print_secrets: Du kan derefter udskrive en ark af kort der indeholder
     kontooplysninger til at blive distribueret til eleverne individuelt.
   dashboard_sections_switch_section: 'Skift hold:'
+  dashboard_sections_close: Luk
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Tilføj elev
   dashboard_students_add_students: Tilføj flere elever
   dashboard_students_add_multiple: 'Skriv eller indsæt navnene på dine elever, en
@@ -746,6 +809,8 @@
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
   dashboard_course4: 'Kursus 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Læseplan
   dashboard_curriculum_overview: Indskoling og mellemtrin (0.-5. klasse)
   dashboard_overview: Oversigt
@@ -769,13 +834,6 @@
   dashboard_login_picture: Billede
   dashboard_login_none: E-mail
   dashboard_new_password: Ny adgangskode
-  dashboard_progress_not_started: ikke startet
-  dashboard_progress_in_progress: i gang
-  dashboard_progress_not_completed: ikke afsluttet
-  dashboard_progress_completed_too_many_blocks: afsluttet, for mange blokke
-  dashboard_progress_completed_perfect: Afsluttet, perfekt
-  dashboard_progress_furthest_level_attempted: længst opnåede niveau
-  dashboard_progress_submitted: submitted
   dashboard_stage: trin
   dashboard_puzzle: Opgave
   dashboard_question: Spørgsmål
@@ -785,6 +843,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Rigtigt
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -812,20 +872,17 @@
   dashboard_faq_k5: K-5 Ofte stillede spørgsmål
   dashboard_announcements: Meddelelser
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Lær mere
-  dashboard_announce_hoc: "<b>23 November 2015</b> - Ønsker du en frivillig, som er
-    dedikeret i datalogi uddannelse, til at hjælpe dig under din Hour of Code? Over
-    7.000 frivillige ønsker at inspirere dine elever ved at besøge dit klasseværelse
-    eller videochatte. Tjek kortet over frivillige for at kontakte frivillige i dit
-    område."
-  dashboard_announce_playlab: "<b>4. December 2015</b> - The Hour of Code er her!
-    Prøv 50 tutorials for alle aldre, og enhver enhed. Nyt i denne uge: Kod dine egne
-    historier og spil i nye Spil-Labs, Ice Age og Gumball."
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Tilføj dit navn
   code_hoc_coming: Hour of Code er her - 8.-14. december!
   code_sign_up: Tilmeld dig til at deltage i CS Education Week
   learn_more: Lær mere
@@ -948,15 +1005,41 @@
   course3_name: Kursus 3
   course4_name: Kursus 4
   accelerated_name: Accelereret kursus
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Accelereret kursus
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Klassisk labyrint
+  iceage_name: Is-tid
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matematik
+  hoc_category_name: Hour of Code
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Alder 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

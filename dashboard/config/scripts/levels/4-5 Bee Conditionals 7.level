@@ -34,7 +34,12 @@
     "markdown_instructions": "These flowers can have 3, 2, or 1 nectar. \r\n\r\nComplete the `check purple flower` function and use it to collect all of the nectar at the flowers."
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 3,
+    "conditionals": 5
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1,0 +1,16 @@
+:css
+  body {
+    font-family: Gotham, sans-serif;
+  }
+
+%p
+  Hi
+  = @enrollment.name.split().first.titleize + ','
+
+%p
+  This is a reminder about your upcoming Code.org
+  = @workshop.course
+  = @workshop.subject
+  workshop.
+
+= render partial: 'teacher_enrollment_details'

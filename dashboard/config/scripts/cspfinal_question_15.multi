@@ -1,0 +1,8 @@
+name 'CSPFinal_Question_15'
+wrong 'A computationally hard problem to which an exact result is necessary.'
+wrong 'A non-computationally hard problem to which an exact result is necessary.'
+right 'A computationally hard problem to which an approximate result will suffice.'
+wrong 'A non-computationally hard problem to which an approximate result will suffice.'
+markdown <<MARKDOWN
+In which of the following scenarios is it MOST appropriate to employ a heuristic approach to solving a problem?
+MARKDOWN

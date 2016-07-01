@@ -1,0 +1,25 @@
+name 'CSPFinal_Question_32'
+type 'multi2'
+right '0 0'
+wrong '1 1'
+right '2 4'
+wrong '3 1'
+markdown <<MARKDOWN
+Consider the code segment below.  Values of x and y will be displayed multiple times during the running of the program.  From the list of possible outputs, choose two of the outputs that WILL NOT be displayed during the running of this program. 
+
+<pre>
+x &larr; 0
+REPEAT_UNTIL( x = 3 )
+{
+	x &larr; x + 1
+    y &larr; 0
+	REPEAT_UNTIL ( y = 3 )
+	{
+    	y &larr; y + 1
+        DISPLAY (x)
+        DISPLAY (y)
+	}
+}
+
+</pre>
+MARKDOWN

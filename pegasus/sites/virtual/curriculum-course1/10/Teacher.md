@@ -10,7 +10,7 @@ theme: none
 
 [together]
 
-## Lesson Overview 
+## Lesson Overview
 Returning to the Artist, the puzzles in this stage are focused on drawing, combining, and dividing squares and rectangles.
 
 [summary]
@@ -31,7 +31,7 @@ Returning to the Artist, the puzzles in this stage are focused on drawing, combi
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 
 - Create a program to draw a shape using sequential steps
@@ -70,7 +70,7 @@ If students struggle to use the correct number of blocks to draw a line, point o
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 <a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### The Copy Machine
@@ -100,11 +100,11 @@ If students struggle to use the correct number of blocks to draw a line, point o
 - 4.b - Plan and manage activities to develop a solution or complete a project.
 - 6.a - Understand and use technology systems.
 - 6.c - Troubleshoot systems and applications.
-- 6.d - Transfer current knowledge to learning of new technologies.  
+- 6.d - Transfer current knowledge to learning of new technologies.
 
 
 ### CSTA K-12 Computer Science Standards
- 
+
 
 - CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
 - CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
@@ -113,14 +113,14 @@ If students struggle to use the correct number of blocks to draw a line, point o
 - CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
 - CT.L2-06. Describe and analyze a sequence of instructions being followed.
 - CT.L2-08. Use visual representations of problem states, structures, and data.
-- CT.L2-12. Use abstraction to decompose a problem into sub problems. 
+- CT.L2-12. Use abstraction to decompose a problem into sub problems.
 
 ### Next-Gen Science Standards
 
 - K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 4. Model with mathematics

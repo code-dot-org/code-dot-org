@@ -5,7 +5,7 @@ import BaseCommand from "./BaseCommand.js";
 
 export default class CheckSolutionCommand extends BaseCommand {
     constructor(gameController) {
-        var dummyFunc = function() {
+        var dummyFunc = function () {
             if (gameController.DEBUG) {
                 console.log("Execute solve command");
             }

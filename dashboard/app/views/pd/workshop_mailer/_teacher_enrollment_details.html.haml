@@ -1,0 +1,73 @@
+:css
+  td {
+    padding-bottom: .5em;
+  }
+  td.heading {
+    padding-right: 1em;
+    text-align: right;
+    vertical-align: top;
+  }
+
+%p
+  We’re excited to continue to work together to bring computer science to your classroom.
+  If you have any questions about your workshop, reach out to your workshop organizer directly:
+  = @workshop.organizer.name
+  at
+  = mail_to(@workshop.organizer.email) + '.'
+
+= render partial: 'workshop_details'
+
+%h3
+  Logistics
+
+%table
+  %tr
+    %td.heading
+      Date(s):
+    %td
+      - @workshop.sessions.each do |session|
+        = session.formatted_date_with_start_and_end_times
+        %br
+  %tr
+    %td.heading
+      Location:
+    %td
+      = @workshop.location_name
+      %br
+      = @workshop.location_address
+  %tr
+    %td.heading
+      Organizer:
+    %td
+      = @workshop.organizer.name
+      (#{mail_to(@workshop.organizer.email)})
+
+
+- unless @workshop.notes.blank?
+  %p
+    = @workshop.notes
+
+%p
+  If your facilitator plans to provide lunch and you have any food allergies, please bring your own meal or eat responsibly.
+
+%p
+  Other workshop attendees may post photos from the workshop to social media.
+  If you don't want your photo taken, make sure the facilitator knows before the workshop begins.
+
+%h3
+  How to cancel your registration
+
+%p
+  If you are unable to attend the workshop, please
+  = link_to 'cancel your registration', @cancel_url
+  in advance so the facilitator can plan accordingly.
+
+%p
+  Thank you,
+  %br
+  = @workshop.organizer.name
+
+%p
+  P.S. Connect with other computer science teachers on Twitter
+  = link_to '@TeachCode', 'https://twitter.com/teachcode'
+  for inspiration and great tips on bringing #CSforAll.

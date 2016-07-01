@@ -1,7 +1,6 @@
 name 'ECSPD program overview'
 title 'ECS Program Overview'
 description 'Overview of ECS Program'
-css 'unplugged'
 
 markdown <<MARKDOWN
 ## ECS Program Overview

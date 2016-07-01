@@ -1,0 +1,16 @@
+name 'CSPFinal_Question_4'
+wrong 'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)'
+wrong 'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)'
+wrong 'The weight of <code>A-to-C</code> increases by 4 (total cost: 6)'
+right 'The weight of <code>A-to-C</code> increases by 5 (total cost: 7)'
+markdown <<MARKDOWN
+This question refers to the same network diagram from the previous question.
+
+![](https://images.code.org/954d8014dc9b0a38fc6a62c5d196e73d-image-1463324338279.png)
+
+**Question:**
+
+Computer `A` is sending a series of packets to Computer `C`. Due to increased traffic on the network, the cost of the direct connection between `A` and `C` is slowly increasing. How much would the cost of the direct `A-to-C` connection need to increase to make it potentially faster to route through Computer `B`?  
+
+
+MARKDOWN

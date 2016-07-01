@@ -24,9 +24,17 @@
           future: gelecekte olması mümkün değil
   hello: Merhaba dünya
   welcome_back: Hoş geldiniz %{name}
+  your_professional_learning_plan: Profesyonel eğitim planın
+  see_your_learning_plan: "Öğrenme planını gör"
   submit: Gönder
   unsubmit: Gönderme
-  next_page: Next page
+  previous_page: "Önceki Sayfa"
+  next_page: Sonraki Sayfa
+  next_resource: Sonraki Kaynak
+  done_with_module: Done with this Learning Module
+  cancel: "İptal"
+  okay: Tamam
+  heading_x_of_y: "%{heading} (sayfa %{x}, %{y})"
   add_teacher_form:
     code:
       label: "Öğretmen ekleyin:"
@@ -88,6 +96,7 @@
     teacher_title: "Öğretmen Kayıt"
     student_pitch: Code.org'a öğrenci olarak kaydolun
     student_title: "Öğrenci üye ol"
+    signup_title: Code.org'a Giriş Yap
     school_name: Okul Adı (isteğe bağlı)
     school_address: Okul Adresi (isteğe bağlı)
     address_placeholder: adres, şehir, eyalet, posta kodu
@@ -111,6 +120,9 @@
       olduğumu kabul ediyorum.
     additional_information: Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç
       duymaktayız.
+    user_type_label: Hesap Türü
+    user_type_teacher: "Öğretmen"
+    user_type_student: "öğrenci"
   signin_form:
     title: Zaten bir hesabınız var mı? Oturum Aç
     login: Kullanıcı adınız veya e-posta
@@ -162,8 +174,6 @@
         subject: Code.org'ta %{teacher_name} ile bir sınıfa katıl!
       student_disassociated:
         subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
-      teacher_disassociated:
-        subject: 'Code.org bildirimi: %{teacher_name} artık öğretmeniniz değil.'
   reports:
     error:
       access_denied: Bu kişinin istatistiklerine erişemezsiniz
@@ -377,6 +387,33 @@
     no_primary_course: Code Studio'daki kurslardan birisini deneyin
     choose_next_course: Aşağıdaki Code Studio derslerinden birini seçerek deneyin
     print_certificate: Sertifikayı Yazdır
+    announcement_title: Bildirimler
+    announcement_view_all: Tümünü Gör
+    announcement_message: "<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde bir
+      çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için
+      öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir."
+    announcement_button: "Özelliği test et"
+    announcement_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar
+      bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize
+      izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde
+      gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi
+      için bir açık mektup verdi."
+    announcement_petition_button: Adınızı Ekleyin
+  move_students:
+    new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm
+      kodu girin."
+    section_code_not_entered: Lütfen current_section_code giriniz.
+    section_code_cant_be_current_section: "Şimdiki bölüm yeni bölümle aynı olamaz."
+    current_section_dne: "Üzgünüm, ama %{current_section_code} yok. Lütfen başka bir
+      bölüm kodu girin."
+    students_not_yours: "Öğrencileri size ait olmayan bir bölüme taşıyamazsınız."
+    stay_enrolled_not_entered: Lütfen stay_enrolled_in_current_section girin.
+    student_ids_not_entered: Lütfen students_ids girin.
+    student_not_found: "Öğrenci ve öğretmen bulunamadı."
+    all_students_must_be_in_current_section: Bütün öğrenciler şu anda sınıfınıza kayıtlı
+      olmalıdır.
+    already_enrolled_in_new_section: "Öğrenciler zaten başka bir bölümde bulunduğundan
+      onları başka yere taşıyamazsınız."
   share:
     title: Code Studio'da Öğrenin
     description: Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar
@@ -408,6 +445,8 @@
       Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.
     art_from_html_old: |
       Minecraft&#8482; &copy; %{current_year} Microsoft. Tüm hakları saklıdır. Star Wars&#8482; &copy; %{current_year} Disney ve Lucasfilm. Tüm hakları saklıdır. Dondurulmuş&#8482; &copy; %{current_year} Disney. Tüm hakları saklıdır. Buz çağı&#8482; &copy; %{current_year} 20th Century Fox. Tüm hakları saklıdır. Kızgın kuşlar&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tüm hakları saklıdır. Mutant vs. Zombiler&#8482; &copy; %{current_year} Electronic Arts Inc. Tüm hakları saklıdır. The Amazing World of Gumball is trademark ve &copy; 2015 Cartoon Network.
+    code_from_html: Code.org p5.play, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1</a> altında lisanslı kullanır.
     powered_by_aws: Amazon Web Services tarafından desteklenmektedir
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo ve Kod
       Saati&reg; Code.org'un ticari markalarıdır."
@@ -439,24 +478,16 @@
     notes_coming_soon: Video için notlar yakında eklenecek.
     autoplay_option: Otomatik oynayan video
     download: Videoyu indir
-  compatability:
-    working:
-      header: Tarayıcı desteği üzerinde çalışıyoruz.
-      message: Code.org modern web teknolojilerini kullanır. Bu sitenin kullanımının
-        daha hızlı olmasını sağlar. Tarayıcınız ihtiyaç duyduğumuz özellikleri desteklemiyorsa
-        sitemizi kullanırken bazı problemler ile karşılaşabilirsiniz. Bulduğunuz herhangi
-        bir hatayı <a href='%{report_issue_url}'>hata bildir</a>i kullanarak bize
-        bildirin. Ayrıca tarayıcınızı da <a href='%{supported_browsers_url}'>desteklenen
-        bir versiyon</a> ile güncelleyebilirsiniz.
-      hide_this_warning: Bu uyarıyı gizle
+  compatibility:
     upgrade:
-      header: Lütfen tarayıcınızı yükseltin.
-      message: Code.org modern web teknolojilerini kullanır. Bu sitenin kullanımının
-        daha hızlı olmasını sağlar. Maalesef tarayıcınız bu sitenin çalışması için
-        gerekli özellikleri desteklemiyor. <br/><br/>Bizim tavsiye ettiğimiz tarayıcı
-        listesinden bir tanesini kurunuz. <a href='#'>Sayfayı görüntülemeyi</a> deneyebilirsiniz,
-        fakat özelliklerin çalışmaması  muhtemeldir.
-      button: Desteklenen tarayıcılar listesi
+      unsupported_message: Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı <a href='%{supported_browsers_url}',
+        target='_blank'> desteklenen tarayıcılardan birine</a> yükseltin. Sayfayı
+        görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir.
+      ie_message: Code.org yakında Internet Explorer 8, 9, 10 tarayıcılarından desteğini
+        çekecek. Lütfen modern bir tarayıcıya geçin.
+      ie_message_csedweek: CSEdWeek.org yakında Internet Explorer 8, 9, 10 tarayıcılarından
+        desteğini çekecek. Lütfen modern bir tarayıcıya geçin.
+      link: Daha fazlasını öğren
   slow_loading: Bu normalden uzun sürüyor...
   try_reloading: Sayfayı yeniden yüklemeyi deneyin
   next_stage: Bitti! Bir sonraki aşamaya geç
@@ -531,6 +562,14 @@
     minecraft:
       title: Minecraft
       body: Kod aracılığıyla Minecraft dünyasını keşfedin.
+    unplugged:
+      title: Bağımsız dersler
+      audience: 6 yaş ve üzeri
+      body: Sınıfınızda kullanmanız için bağımsız dersler listesi toparladık. Sınıfınızda
+        bilgisayar olsa da olmasa da bilgisayar bilimlerin temellerini öğretebilirsiniz.
+        Bu ders konularını tek başına bir ders olarak kullanabileceğiniz gibi başka
+        bir bilgisayar dersini destekleyecek şekilde kullanabilirsiniz.
+      body_short: Bilgisayarınız yok ise bu bağımsız dersleri derste kullanın.
   gallery:
     students_drew_these_with_code: "Öğrenciler kod ile bunu çizdiler!"
     students_made_these_with_code: "Öğrenciler bunları kod ile yaptı!"
@@ -541,12 +580,15 @@
       yazarak <b>%{count}</b> kadar uygulama ve resimler oluşturdu. Ekran görüntülerine
       tıklayıp her bir programın nasıl çalıştığını görün.
     want_to_make_your_own: Kendininkini yapmak ister misin?
+    how_to_save: Eğitici bölümlerin son kısmında, çalışmanızı kaydetmek için "Bitir"
+      butonunu ve "Kaydet" butonunu tıklayın.
     more: Daha fazla &rarr;
     caption_by_name_age: "%{name} tarafından, %{age} yaşında"
     caption_time_ago: "%{time_ago} zaman önce"
     header: Galeri
     header_playlab: Oyun Laboratuvarı
     header_artist: Aktör
+    report_abuse: Hata Rapor Et
   landing:
     prerelease: Bu ders, <span class='betatext'> beta</span> olduğunu.  Bu dersin
       son hali değildir, geribildirimlerin alındığı ve geliştirmelerin yapıldığı versiyonudur.
@@ -580,6 +622,15 @@
     wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
     correct_title: Teşekkür ederiz
     correct_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
+    unsubmit-title: Değerlendirmeni geri al
+    unsubmit-body: Değerlendirmeni geri almak gönderme zamanını sıfırlayacaktır? Emin
+      misin?
+    submit-incomplete-title: Değerlendirmeni gönder.
+    submit-incomplete-body: Bazı soruları boş bıraktın. Değerlendirmeyi gönderdikten
+      sonra değişiklik yapamazsın. Emin misin?
+    submit-complete-title: Değerlendirmeni gönder.
+    submit-complete-body: Değerlendirmenizi gönderdikten sonra düzenleyemezsiniz,
+      gerçekten göndermek istiyor musunuz?
   match:
     wrong_title: Yanlış çözüm
     wrong_body: Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!
@@ -682,6 +733,10 @@
     share: Paylaş
     share_title: Projenizi paylaşın
     share_copy_link: 'Bağlantıyı kopyala:'
+    share_embed_description: Projeyi bir web sayfasında görüntülemek için yerleştirme
+      kodunu HTML sayfasına yapıştırın.
+    embed: Yerleştir
+    advanced_share: Gelişmiş seçenekleri göster
     close: Kapat
     more: Daha Fazla
     name: "İsim"
@@ -731,7 +786,76 @@
           veriniz.
         acknowledge: Bu bilgileri göndererek, %{link_start_privacy}Gizlilik Sözleşmesini%{link_end}
           ve %{link_start_tos}Hizmet Sözleşmesini%{link_end} kabul etmiş olursunuz
+  peer_review:
+    accepted:
+      name: Kabul edildi
+      description: "<strong>Evet</strong>, bu öneri gereksinimleri karşılıyor"
+    rejected:
+      name: Reddedildi
+      description: "<strong>Hayır</strong>, bu öneri gereksinimleri karşılamıyor"
+    escalated:
+      name: Yükseltilmiş
+      description: Bu gönderiyi gözden geçirmek için bir eğitmen istiyorum
+    instructor_feedback: Eğitmen Geribildirimi
+    peer_feedback: Geribildirim Gönder
+    outdated: Bu geribildirim daha önce yollanan gönderiye eklendi
   components:
     icon_library:
       search_placeholder_text: "Öğe ara..."
       no_icons_found: "Öğe Bulunamadı"
+    playzone:
+      artist_description: Sanatçı ile harika resimler ve tasarımlar yap!
+      artist_title: Yeni Çizim
+      continue_button: Sonraki kademeye geç
+      playlab_description: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
+      playlab_title: Yeni Uygulama
+      primary_header: Tebrikler!  %{stageName}! tamamlandı.
+      projects_description: Varolan projelerinizi birini tekrarla.
+      projects_title: Bir proje aç
+      secondary_header: "Öğretmenine sıradaki yapılacak şeyi sor"
+  flex_category:
+    required: Genel Bakış
+    content: "İçerik"
+    practice: "Öğretmen Uygulamaları"
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
+      a site that is not operated by Code.org.</strong> This site may have privacy
+      policies that differ from Code.org's.<br/><br/>We have selected these third
+      party resources because we think they will be useful to you. While we are not
+      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
+      support</a> if you find the content objectionable, or if the linked site is
+      no longer available."
+  hoc_download:
+    title: Saat Kodu İndirmeler
+    capsule_title: "İnternetiniz var mı?"
+    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: "İnternet Yok Mu?"
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Kod Saati
+    starwars_blocks_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (Blocks)'
+    starwars_javascript_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
+      (Blocks)'
+    download_message: "Çevrimdışı kullanım  için %{app_name} (136 MB) indir"
+    download_in_english: "İngilizce olarak indir:"
+    download_in_spanish: "İspanyolca olarak indir:"
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

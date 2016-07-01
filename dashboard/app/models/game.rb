@@ -109,6 +109,18 @@ class Game < ActiveRecord::Base
     @@game_multi ||= find_by_name("Multi")
   end
 
+  def self.free_response
+    @@game_free_response ||= find_by_name("FreeResponse")
+  end
+
+  def self.standalone_video
+    @@game_standalone_video ||= find_by_name("StandaloneVideo")
+  end
+
+  def self.external_link
+    @@game_external_link ||= find_by_name('ExternalLink')
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -119,6 +131,10 @@ class Game < ActiveRecord::Base
 
   def match?
     app == MATCH
+  end
+
+  def level_group?
+    app == LEVEL_GROUP
   end
 
   def supports_sharing?
@@ -207,6 +223,11 @@ class Game < ActiveRecord::Base
         Craft:craft
         Gamelab:gamelab
         LevelGroup:level_group
+        FreeResponse:free_response
+        NotUsed:not_used
+        StandaloneVideo:standalone_video
+        ExternalLink:external_link
+        EvaluationMulti:evaluation_multi
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

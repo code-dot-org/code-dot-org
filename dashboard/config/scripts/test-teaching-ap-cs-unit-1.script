@@ -1,0 +1,35 @@
+name 'Test CPS PD'
+
+stage 'test Unit 1 required reading', 'required'
+level 'CSPPD Welcome Video'
+level 'PDECS tour'
+level 'PDECS commitment'
+
+stage 'test Unit 1 content module Alpha', 'content'
+level 'CSPPD2 chunk 1'
+level 'CSPPD2 chunk 1 lessons'
+level 'CSPPD2 PIvideo'
+
+stage 'test Unit 1 content module Bravo', 'content'
+level 'CSPPD2 chunk 2'
+level 'CSPPD2 chunk 2 lessons'
+level 'CSPPD2 chunk 2 reflection'
+
+stage 'test Unit 1 content module Charlie', 'content'
+level 'CSPPD2 chunk 3'
+level 'CSPPD2 chunk 3 lessons'
+level 'CSPPD2 share protocol'
+
+stage 'test Unit 1 practice module Delta', 'practice'
+level 'CSPPD2 chunk 4'
+level 'CSPPD2 chunk 4 lessons'
+level 'CSPPD2 share compression'
+
+stage 'test Unit 1 practice module Echo', 'practice'
+level 'CSPPD2 PT'
+level 'CSPPD2 PT activity'
+level 'CSPPD2 PT forum'
+
+stage 'test Unit 1 practice module Foxtrot', 'practice'
+level 'CSPPD2 congrats'
+level 'CSPPD2 next step announcements'

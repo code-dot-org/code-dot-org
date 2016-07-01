@@ -27,8 +27,6 @@ class Applab < Blockly
   before_save :fix_examples
 
   serialized_attrs %w(
-    app_width
-    app_height
     free_play
     show_turtle_before_run
     autocomplete_palette_apis_only
@@ -44,6 +42,7 @@ class Applab < Blockly
     data_tables
     data_properties
     hide_view_data_button
+    fail_on_lint_errors
     debugger_disabled
     makerlab_enabled
   )
@@ -53,15 +52,20 @@ class Applab < Blockly
     ['applab']
   end
 
+  # List of possible palette categories
+  def self.palette_categories
+    %w(uicontrols canvas data turtle control math variables functions)
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
-        user: params[:user],
-        game: Game.applab,
-        level_num: 'custom',
-        properties: {
-          code_functions: JSON.parse(palette),
-          edit_code: true
-        }
+      user: params[:user],
+      game: Game.applab,
+      level_num: 'custom',
+      properties: {
+        code_functions: JSON.parse(palette),
+        edit_code: true
+      }
     ))
   end
 

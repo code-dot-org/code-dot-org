@@ -19,12 +19,6 @@
   white-space: normal;
 }
 
-img#turtleImage {
-  position: absolute;
-  height: 24px;
-  margin: 0px;
-}
-
 .debugger_button {
   border: 1px solid $cyan;
   background-color: $cyan;
@@ -63,55 +57,6 @@ $debug-area-initial-height: 120px;
 // Make sure the workspace default lines up with the debug area default
 #codeTextbox.pin_bottom {
   bottom: $debug-area-initial-height;
-}
-
-#debug-area-header {
-  position: absolute;
-  top: $resize-bar-width;
-  height: $workspace-headers-height;
-  left: 0;
-  right: 0;
-  background-color: $lighter_purple;
-  text-align: center;
-
-  & > span {
-    line-height: $workspace-headers-height;
-  }
-
-  & > span, .workspace-header {
-    color: $dark_charcoal;
-  }
-
-  .workspace-header-button {
-    background-color: $lightest_purple;
-    color: $charcoal;
-    margin-right: 6px;
-
-    &:hover {
-      background-color: $cyan;
-      color: $white;
-    }
-  }
-
-  span {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  #show-hide-debug-icon {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    margin: 0;
-    line-height: $workspace-headers-height;
-    font-size: 18px;
-
-    &:hover {
-      cursor: pointer;
-      color: white;
-    }
-  }
 }
 
 $debug-commands-column-width: 270px;

@@ -29,6 +29,7 @@ class Blockly < Level
   serialized_attrs %w(
     level_url
     skin
+    initialization_blocks
     start_blocks
     toolbox_blocks
     required_blocks
@@ -61,9 +62,11 @@ class Blockly < Level
     is_project_level
     edit_code
     code_functions
+    palette_category_at_start
     failure_message_override
     droplet_tooltips_disabled
     lock_zero_param_functions
+    contained_level_names
   )
 
   before_save :update_ideal_level_source
@@ -74,7 +77,7 @@ class Blockly < Level
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
-    %w(start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
+    %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
   end
 
   def to_xml(options={})
@@ -100,6 +103,15 @@ class Blockly < Level
 
   def filter_level_attributes(level_hash)
     super(level_hash.tap{|hash| hash['properties'].except!(*xml_blocks)})
+  end
+
+  before_save :update_contained_levels
+
+  def update_contained_levels
+    contained_level_names = properties["contained_level_names"]
+    contained_level_names.try(:delete_if, &:blank?)
+    contained_level_names = nil unless contained_level_names.try(:present?)
+    properties["contained_level_names"] = contained_level_names
   end
 
   before_validation {

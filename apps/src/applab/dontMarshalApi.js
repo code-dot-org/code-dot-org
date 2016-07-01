@@ -23,7 +23,7 @@ function dmapiValidateType(funcName, varName, varValue, expectedType, opt) {
       properType = (typeof varValue.data === 'number' ||
                     (typeof varValue.data === 'string' && !isNaN(varValue.data)));
     } else if (expectedType === 'array') {
-      properType = varValue.parent == window.Applab.JSInterpreter.interpreter.ARRAY;
+      properType = varValue.parent === window.Applab.JSInterpreter.interpreter.ARRAY;
     } else {
       properType = (typeof varValue.data === expectedType);
     }
@@ -40,7 +40,7 @@ function dmapiValidateType(funcName, varName, varValue, expectedType, opt) {
 
 // Array functions
 
-var getInt = function(obj, def) {
+var getInt = function (obj, def) {
   // Return an integer, or the default.
   var n = obj ? Math.floor(obj.toNumber()) : def;
   if (isNaN(n)) {

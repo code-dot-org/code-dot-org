@@ -30,7 +30,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
 
   {title: "9. Computational Thinking and the NRC Framework", yt: "kP8C6qoUgxs", dl: "https://www.dropbox.com/s/h62bfwe0lrkw3nt/Computational%20Thinking%20and%20NRC%20Framework%20-%20SCI%20PD%208_1.mp4", dltext: "Download the video"},  
 
-  {title: "10. Introduction to StarLogo Nova", yt: "QrXe-nCV1xM", dl: "https://www.dropbox.com/s/h6634d3ukpups3y/MS-SCI-PD-Intro-to-Starlogo-Nova-9-2015.mp4", dltext: "Download the video"}
+  {title: "10. Introduction to StarLogo Nova", yt: "QrXe-nCV1xM", dl: "https://www.dropbox.com/s/ehnnc2a3ftyelds/MS-SCI-PD-Intro-to-Starlogo-Nova-9-2015.mp4?dl=0", dltext: "Download the video"}
   ]) %>  
 
 Access [CS in Science Curriculum](/curriculum/science).

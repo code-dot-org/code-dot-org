@@ -1,7 +1,14 @@
 "fa-IR":
   hour_of_code: "ساعتی با کد"
   hello: "سلام دنیا"
+  'yes': "بله"
+  'no': "نه"
   select_language: "لطفا زبان خود را انتخاب کنید"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "بیشتر بیاموزید"
   en: "علوم کامپیوتر"
   computer_science_edweek: "هفته‌ی آموزش علوم رایانه"
   csedweek_dates: 8-14 دسامبر، 2014
@@ -30,9 +37,9 @@
   twentyhours_heading: "دوره‌ی مقدماتی علوم کامپیوتر ما را شروع کنید"
   twentyhours_text: "اولین ساعت کدنویسی را به پایان رساندید؟ علوم کامپیوتر و مفاهیم
     برنامه نویسی را در درس بعدی، بیشتر یاد بگیرید."
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: "هر کودک فرصت سزاوار"
+  og_description: "هر دانش آموز در هر مدرسه فرصت مطالعه علوم کامپیوتر سزاوار. آن همه
+    چیز در حال تغییر است."
   hoc2014_heading: به <a href="http://hourofcode.com">ساعتِ کدنویسی</a> بپیوندید <br/>از
     8 تا 14 دسامبر  2014<br/>
   hoc2014_students: "دانش آموزان"
@@ -77,13 +84,13 @@
   thank_you_: "با سپاس!"
   congratulations: "آفرین!"
   congratulations_on_completing_hoc: "تبریک برای کامل کردن یک ساعت کد نویسی"
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
+  congratulations_volunteer: 'تبریک: حالا که یک ساعت کد را امتحان کردید <a href="https://code.org/volunteer">
+    برای شرکت در یک کلاس داوطلب شوید </a> و به دانش آموزان کمک کنید که یک ساعت کد
+    بیاموزند!'
+  congratulations_on_completing_course1: "تبریک برای اتمام درس 1"
+  congratulations_on_completing_course2: "تبریم برای اتمام درس 2"
+  congratulations_on_completing_course3: "تبریک برای اتمام درس 3"
+  congratulations_on_completing_course4: "تبریک برای اتمام درس 4"
   congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
     Course
   congrats_next_tutorials_title: "این آموزش های بعدی را سعی کنید"
@@ -92,16 +99,17 @@
   get_a_certificate_of_achievement: "دریافت گواهی موفقیت"
   view_course: View course
   view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  make_app: "یک نرم افزار درست کن"
+  congrats_guest_speaker_title: "برای کلاست یک سخنران مهمان پیدا کن"
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
     of volunteers to contact local volunteers to visit your classroom, or search in
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
+  congrats_guest_speaker_cta: "یک سنخنران مهمان پیدا کن"
+  congrats_third_party_title: "مهارتهای جدیدت را با این نرم افزارها و وب سایتها استفاده
+    کن"
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -112,9 +120,9 @@
   third_party_platform_all: 'Platform: Web, iPad & Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_varies: "قیمت: برنامه ها متفاوت هستند"
+  third_party_price_free: "قیمت: مجانی"
+  third_party_price_299: "قیمت: 2.99 دلار/دانلود"
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
@@ -371,6 +379,9 @@
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
   homepage_banner_20k_teachers_link: "بیشتر بیاموزید"
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: "ساعتی با کد"
   homepage_slot_text_blurb_hoc: "هرکسی می تواند بیاموزد. امروز شروع کنید"
   homepage_slot_text_link_hoc: "ساعتِ کد نویسی را امتحان کنید"
@@ -396,6 +407,7 @@
   homepage_slot_text_link_stats: "آمار ها را ببینید"
   homepage_slot_text_link_buy: "شرکت کنید"
   homepage_slot_text_link_donate: "پولی اهدا کنید"
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: "ابداعات دانش آموزان استودیو ی کد"
   homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
   homepage_donors_seall: "تمامش را ببینید"
@@ -586,6 +598,7 @@
     را امتحان کنید."
   dashboard_landing_new_k5courses: "جدید! درسهای ما برای کلاس پنجمی ها را امتحان کنید."
   dashboard_landing_useful_links: "دیگر لینک های مفید (فقط به زبان انگلیسی)"
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: "سوالات خود را مستقیماً مطرح کنید! به بخش ساعات
     تماس تصویری ماهانه ما مراجعه کنید."
   dashboard_landing_print_certificates: "گواهینامه‌هایی برای دانش‌آموزانی که این دوره
@@ -608,6 +621,11 @@
     مشارکت کنندگان ما ارائه شده اند.</a> برنامه نویسی با استفاده از روبات ها، ساختن
     صفحات وب و ساختن برنامه شخصی خودتان را یاد بگیرید و در زبان های دیگری مثل C++،
     Ruby، و Python کاوش کنید.
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: "ساعت کدنویسی برای همه سنین"
   dashboard_hoc_courses_desc: "این آموزش های کوتاه 1 ساعته را با دانش آموزان خود تمرین
     کنید!"
@@ -659,6 +677,18 @@
   dashboard_action_remove_confirm: "حذف شود؟"
   dashboard_action_done: "انجام شد"
   dashboard_action_required: "اجباری"
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: "صفحه اصلی معلم"
   dashboard_navigation_section_student_progress: "حساب کاربری دانش‌ آموزان و پیشرفت
     آنها"
@@ -668,7 +698,7 @@
   dashboard_navigation_section_pd: "توسعه ی حرفه ای"
   dashboard_navigation_section_speakers: "علوم کامپیوتر <br/> سخنرانا مهمان"
   dashboard_navigation_all_sections: "حساب کاربری دانش‌ آموزان و پیشرفت آنها"
-  dashboard_navigation_view_progress: "نمایش پیشرفت"
+  dashboard_navigation_view_progress: "پیشرفت"
   dashboard_navigation_view_text_responses: "مشاهده متن پاسخ"
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "افزودن دانش آموز"
@@ -677,6 +707,20 @@
   dashboard_navigation_view_stats: "مشاهده وضعیت"
   dashboard_navigation_section: "بخش: %{section_name}"
   dashboard_navigation_student: "دانش آموز: %{student_name}"
+  dashboard_progress_not_started: "شروع نشده"
+  dashboard_progress_in_progress: "در حال اجرا"
+  dashboard_progress_not_completed: "تکمیل نشده است"
+  dashboard_progress_completed_too_many_blocks: "تکمیل شده ، با بلوک های زیادی"
+  dashboard_progress_completed_perfect: "تکمیل, کامل"
+  dashboard_progress_furthest_level_attempted: "تلاش برای دسترسی به سطح دسترسی خارج
+    از محدوده "
+  dashboard_progress_submitted: "ثبت شده"
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: "بخش تازه"
   dashboard_sections_jumbotron_instruction: "ایجاد بخش های جدید و افزودن دانش آموزان
     به آنها. بخش ها به شما کمک میکنند دانش آموزان را در گروه های کوچکتر سازماندهی
@@ -685,6 +729,7 @@
   dashboard_sections_table_secret: "نوع ورود"
   dashboard_sections_table_grade: "درجه"
   dashboard_sections_table_course: "دوره"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "دانش آموزان"
   dashboard_sections_table_code: "بخش کد"
   dashboard_sections_name: "نام بخش"
@@ -701,6 +746,26 @@
   dashboard_sections_print_secrets: "سپس شما میتوانید یک ورق از کارت های حاوی اطلاعات
     حساب کاربری را چاپ کنید و به صورت جداگانه بین دانش آموزان خود توزیع نمایید."
   dashboard_sections_switch_section: "بخش تعویض"
+  dashboard_sections_close: "ببند"
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: "افزودن دانش آموز"
   dashboard_students_add_students: "اضافه کردن چند دانش آموز"
   dashboard_students_add_multiple: "نامهای دانش آموزان خود را تایپ یا جای گذاری نمایید،
@@ -759,6 +824,8 @@
   dashboard_course2: "دوره 2:"
   dashboard_course3: "دوره 3:"
   dashboard_course4: "درس 4 (بتا): "
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: "برنامه آموزشی"
   dashboard_curriculum_overview: "بررسی اجمالی برنامه کلاس پنجمی ها"
   dashboard_overview: "بررسی اجمالی"
@@ -782,14 +849,6 @@
   dashboard_login_picture: "عکس"
   dashboard_login_none: "ایمیل"
   dashboard_new_password: "گذرواژه‌ی تازه"
-  dashboard_progress_not_started: "شروع نشده"
-  dashboard_progress_in_progress: "در حال اجرا"
-  dashboard_progress_not_completed: "تکمیل نشده است"
-  dashboard_progress_completed_too_many_blocks: "تکمیل شده ، با بلوک های زیادی"
-  dashboard_progress_completed_perfect: "تکمیل, کامل"
-  dashboard_progress_furthest_level_attempted: "تلاش برای دسترسی به سطح دسترسی خارج
-    از محدوده "
-  dashboard_progress_submitted: submitted
   dashboard_stage: "مرحله"
   dashboard_puzzle: "پازل"
   dashboard_question: "سوال"
@@ -799,6 +858,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: "صحیح است"
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -829,17 +890,17 @@
   dashboard_faq_k5: "پرسش های متداول پیش از دبستان"
   dashboard_announcements: "اطلاعیه‌ها"
   dashboard_announce_view_all: "مشاهده همه"
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: "بیشتر بیاموزید"
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: "ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!"
   code_sign_up: "ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر"
   learn_more: "بیشتر یاد بگیرید"
@@ -963,15 +1024,41 @@
   course3_name: "دورۀ 3"
   course4_name: "دوره 4"
   accelerated_name: "دوره های سریع"
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: "دوره های سریع"
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: "هزارتوی کلاسیک"
+  iceage_name: "عصر یخبندان"
+  minecraft_name: "ماینکرفت"
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: "ریاضی"
+  hoc_category_name: "ساعتی با کد"
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: "آزمایشگاه نرم افزار"
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: "سنین سیزده به بالا"
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
@@ -1481,7 +1568,7 @@
   groklearning_beyond_shortdescription: "مقدمه اساسی به برنامه نویسی پایتون"
   hacketyhack_beyond_shortdescription: "روبی را از پایه یاد بگیرید"
   robomind_beyond_shortdescription: "کدنویسی برای ربات مجازی"
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: "یاد بگیرید تا بازی آیفون را در یک ساعت بسازید"
   appinventor_beyond_shortdescription: "برنامه خودت را بساز( فقط آندروید)"
   touchdevelop_beyond_shortdescription: "برنامه های موبایل را مستقیمآ روی موبایل و
     \ تبلت و کامپیوتر برنامه نویسی کنید"
@@ -1565,11 +1652,11 @@
   robomind_beyond_longdescription: "دانش آموزان اصول اولیه ی برنامه نویسی را با کنترل
     ربات مجازی خودشان می آموزند. دوره ی آنلاین با ارائه های کوتاه، فیلم ها، امتحانات
     و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. "
-  makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
+  makeschool_beyond_longdescription: "کمی C شیئ گرا می دانید؟ در یک ساعت یاد بگیرید
+    که یک بازی آی فون بسازید! ما شما را در این فرآیند هدایت خواهیم کرد تا ،کد بنویسید،
+    تست کنید، و بازیتان را تماما در مرورگر بازی کنید و سپس آن را در فیس بوک به اشتراک
+    بگذارید تا دوستان امتحانش کنند! نیاز به هیچ تجربه ی توسعه ی آی فون نیست. شما باید
+    بفهمید که متغیر ها، روشها، و اشیا چه هستند."
   appinventor_beyond_longdescription: "ویدئو های آموزشی سریع، و سرگرم کننده شما را
     در مسیر ساخت سه برنامه ی ساده برای تلفن اندروید یا تبلتتان هدایت می کنند. این
     ساعت کد نویسی، طراحی شده برای مبتدیان و کارشناسان شما را قبل از این که بدانید

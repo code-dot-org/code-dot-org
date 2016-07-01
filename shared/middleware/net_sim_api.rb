@@ -38,7 +38,6 @@ class NetSimApi < Sinatra::Base
     }.each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
-
   end
 
   # For test, make it possible to override the usual configured API choices.
@@ -52,7 +51,7 @@ class NetSimApi < Sinatra::Base
   # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
     RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name,
-                   CDO.netsim_shard_expiry_seconds)
+      CDO.netsim_shard_expiry_seconds)
   end
 
   #
@@ -95,7 +94,7 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)$} do |shard_id|
     dont_cache
     content_type :json
-    table_map = parse_table_map_from_query_string(CGI::unescape(request.query_string))
+    table_map = parse_table_map_from_query_string(CGI.unescape(request.query_string))
     RedisTable.get_tables(get_redis_client, shard_id, table_map).to_json
   end
 
@@ -128,7 +127,7 @@ class NetSimApi < Sinatra::Base
   delete %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     content_type :json
-    ids = parse_ids_from_query_string(CGI::unescape(request.query_string))
+    ids = parse_ids_from_query_string(CGI.unescape(request.query_string))
     delete_many(shard_id, table_name, ids)
     no_content
   end
@@ -276,7 +275,7 @@ class NetSimApi < Sinatra::Base
   # @param [Hash] router - The new router we are validating
   # @return [String] a validation error, or nil if no problems were found
   def validate_router(shard_id, router)
-    return VALIDATION_ERRORS[:malformed] unless router.has_key?('routerNumber')
+    return VALIDATION_ERRORS[:malformed] unless router.key?('routerNumber')
     existing_routers = get_table(shard_id, TABLE_NAMES[:node]).
         to_a.select {|x| x['type'] == NODE_TYPES[:router]}
 
@@ -291,8 +290,8 @@ class NetSimApi < Sinatra::Base
   # @param [Hash] message - The message we're validating
   # @return [String] a validation error, or nil if no problems were found
   def validate_message(shard_id, message)
-    # TODO validate the base64
-    # TODO this is wildly inefficient, particularly when validating
+    # TODO: Validate the base64.
+    # TODO: This is wildly inefficient, particularly when validating.
     # multi-insert messages
     node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
       node['id'] == message['simulatedBy']
@@ -456,7 +455,7 @@ end
 # @private
 def parse_table_map_from_query_string(query_string)
   {}.tap do |result|
-    CGI::parse(query_string)['t[]'].each do |tv|
+    CGI.parse(query_string)['t[]'].each do |tv|
       table, min_id = tv.split('@')
       result[table] = min_id.to_i  # defaults to 0 for invalid ints.
     end
@@ -468,7 +467,7 @@ end
 # are simply omitted from the result.
 def parse_ids_from_query_string(query_string)
   [].tap do |ids|
-    CGI::parse(query_string)['id[]'].each do |id|
+    CGI.parse(query_string)['id[]'].each do |id|
       ids << Integer(id, 10) rescue ArgumentError
     end
   end

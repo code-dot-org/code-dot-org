@@ -1,0 +1,24 @@
+:css
+  .indent {
+    margin-left: 1em;
+    }
+
+Teacher Info:
+
+%table.indent
+  %tr
+    %td Name:
+    %td
+      = @enrollment.name
+  %tr
+    %td Email:
+    %td
+      = @enrollment.email
+  %tr
+    %td District:
+    %td
+      = @enrollment.try(:school_district).try(:name)
+  %tr
+    %td School:
+    %td
+      = @enrollment.school

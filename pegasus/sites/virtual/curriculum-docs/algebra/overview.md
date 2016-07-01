@@ -52,7 +52,6 @@ Across the entire CS in Algebra curriculum, students will develop the skills of 
 
 [/units]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
 [/content]
 

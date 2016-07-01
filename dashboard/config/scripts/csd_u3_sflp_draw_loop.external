@@ -1,0 +1,41 @@
+name 'CSD-U3-SFLP Draw Loop'
+href 'path/to/html/in/asset/folder'
+css 'unplugged'
+markdown <<MARKDOWN
+## Unit 3: Lesson 02 - Draw Loop and Random
+
+# Background
+
+Moving from simple static images you will learn to use randomly generated numbers as inputs to your programs. From there you will be introduced the concept of a flip-book style animation loop, using those randomized shapes to see how the draw() loop calls your code repeatedly to create animation.
+
+# Activities
+
+* Review: Shape Commands
+* Levels: Draw Loop
+* Exit Ticket
+
+# Vocab
+
+* **Loop** - The action of doing something over and over again.
+
+# Command Overview
+### Drawing : 
+|Command| Meaning| Example | Documentation |
+|---|---| --- | --- |
+|draw()|Repeatedly called draw loop| `function draw(){ rect(0,0,20,20) }` | link |
+|background()|Covers the whole display with one color| `background("white")` | link |
+|GameLab.frameRate|Controls speed of draw loop|`GameLab.frameRate = 20`| link |
+|lin(x1, y1, x2, y2)|Draws line|`line(100, 150, 200, 300)`| link |
+
+### Console:
+|Command| Meaning| Example |  Documentation |
+|---|---| --- | --- |
+|console.log(text)|Prints text to the console| `console.log("This is a test")`| link |
+
+# Resources
+
+None
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

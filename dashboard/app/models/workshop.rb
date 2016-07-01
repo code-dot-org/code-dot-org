@@ -31,9 +31,9 @@ class Workshop < ActiveRecord::Base
   has_many :teachers, through: :cohorts, class_name: 'User'
 
   has_and_belongs_to_many :unexpected_teachers,
-                          class_name: 'User',
-                          association_foreign_key: 'unexpected_teacher_id',
-                          join_table: 'unexpected_teachers_workshops'
+    class_name: 'User',
+    association_foreign_key: 'unexpected_teacher_id',
+    join_table: 'unexpected_teachers_workshops'
 
   # A Workshop is associated with one or more Cohorts
   has_many :workshop_cohorts, inverse_of: :workshop, dependent: :destroy
@@ -44,9 +44,9 @@ class Workshop < ActiveRecord::Base
 
   # A Workshop has at least one Facilitator(s)
   has_and_belongs_to_many :facilitators,
-                          class_name: 'User',
-                          association_foreign_key: 'facilitator_id',
-                          join_table: 'facilitators_workshops'
+    class_name: 'User',
+    association_foreign_key: 'facilitator_id',
+    join_table: 'facilitators_workshops'
 
   def self.ending_today
     Workshop.joins(:segments).group(:workshop_id).having("(DATE(MAX(start)) = ?)", Date.today)
@@ -102,7 +102,7 @@ class Workshop < ActiveRecord::Base
 
   def send_reminders
     automated_email_recipients.each do |recipient|
-      next unless EmailValidator::email_address?(recipient.email)
+      next unless EmailValidator.email_address?(recipient.email)
       logger.debug("Sending email reminder to #{recipient.email}")
       OpsMailer.workshop_reminder(self, recipient).deliver_now
     end
@@ -118,7 +118,7 @@ class Workshop < ActiveRecord::Base
 
   def send_exit_surveys
     automated_email_recipients.each do |recipient|
-      next unless EmailValidator::email_address?(recipient.email)
+      next unless EmailValidator.email_address?(recipient.email)
       logger.debug("Sending exit survey info to #{recipient.email}")
       OpsMailer.exit_survey_information(self, recipient).deliver_now
     end

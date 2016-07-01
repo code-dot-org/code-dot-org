@@ -23,9 +23,17 @@ en:
           future: crwdns4882:0crwdne4882:0
   hello: crwdns2556:0crwdne2556:0
   welcome_back: 'crwdns3633:0%{name}crwdne3633:0'
+  your_professional_learning_plan: crwdns56511:0crwdne56511:0
+  see_your_learning_plan: crwdns56512:0crwdne56512:0
   submit: crwdns35673:0crwdne35673:0
   unsubmit: crwdns56122:0crwdne56122:0
+  previous_page: crwdns56442:0crwdne56442:0
   next_page: crwdns56247:0crwdne56247:0
+  next_resource: crwdns56990:0crwdne56990:0
+  done_with_module: crwdns56991:0crwdne56991:0
+  cancel: crwdns56443:0crwdne56443:0
+  okay: crwdns56444:0crwdne56444:0
+  heading_x_of_y: 'crwdns56275:0%{heading}crwdnd56275:0%{x}crwdnd56275:0%{y}crwdne56275:0'
   add_teacher_form:
     code:
       label: crwdns23429:0crwdne23429:0
@@ -79,6 +87,7 @@ en:
     teacher_title: crwdns3898:0crwdne3898:0
     student_pitch: crwdns4887:0crwdne4887:0
     student_title: crwdns4632:0crwdne4632:0
+    signup_title: crwdns56992:0crwdne56992:0
     school_name: crwdns2940:0crwdne2940:0
     school_address: crwdns3037:0crwdne3037:0
     address_placeholder: crwdns2942:0crwdne2942:0
@@ -97,6 +106,9 @@ en:
     student_terms: crwdns9002:0crwdne9002:0
     teacher_terms: crwdns7339:0crwdne7339:0
     additional_information: crwdns7492:0crwdne7492:0
+    user_type_label: crwdns56993:0crwdne56993:0
+    user_type_teacher: crwdns56994:0crwdne56994:0
+    user_type_student: crwdns56995:0crwdne56995:0
   signin_form:
     title: crwdns4520:0crwdne4520:0
     login: crwdns2948:0crwdne2948:0
@@ -143,8 +155,6 @@ en:
         subject: 'crwdns3178:0%{teacher_name}crwdne3178:0'
       student_disassociated:
         subject: 'crwdns4337:0%{student_name}crwdne4337:0'
-      teacher_disassociated:
-        subject: 'crwdns4362:0%{teacher_name}crwdne4362:0'
   reports:
     error:
       access_denied: crwdns2582:0crwdne2582:0
@@ -321,6 +331,23 @@ en:
     no_primary_course: crwdns36301:0crwdne36301:0
     choose_next_course: crwdns43451:0crwdne43451:0
     print_certificate: crwdns41905:0crwdne41905:0
+    announcement_title: crwdns56513:0crwdne56513:0
+    announcement_view_all: crwdns56514:0crwdne56514:0
+    announcement_message: crwdns56515:0crwdne56515:0
+    announcement_button: crwdns56516:0crwdne56516:0
+    announcement_petition: crwdns56517:0crwdne56517:0
+    announcement_petition_button: crwdns56518:0crwdne56518:0
+  move_students:
+    new_section_dne: 'crwdns56519:0%{new_section_code}crwdne56519:0'
+    section_code_not_entered: crwdns56520:0crwdne56520:0
+    section_code_cant_be_current_section: crwdns56521:0crwdne56521:0
+    current_section_dne: 'crwdns56522:0%{current_section_code}crwdne56522:0'
+    students_not_yours: crwdns56523:0crwdne56523:0
+    stay_enrolled_not_entered: crwdns56524:0crwdne56524:0
+    student_ids_not_entered: crwdns56525:0crwdne56525:0
+    student_not_found: crwdns56526:0crwdne56526:0
+    all_students_must_be_in_current_section: crwdns56527:0crwdne56527:0
+    already_enrolled_in_new_section: crwdns56528:0crwdne56528:0
   share:
     title: crwdns45291:0crwdne45291:0
     description: crwdns45292:0crwdne45292:0
@@ -336,8 +363,9 @@ en:
     thank_you: crwdns45293:0crwdne45293:0
     help_from_html: crwdns6548:0crwdne6548:0
     help_from_html_old: crwdns45345:0crwdne45345:0
-    art_from_html: 'crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0'
-    art_from_html_old: 'crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0'
+    art_from_html: 'crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0'
+    art_from_html_old: 'crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0'
+    code_from_html: crwdns56267:0crwdne56267:0
     powered_by_aws: crwdns24789:0crwdne24789:0
     trademark: 'crwdns45294:0%{current_year}crwdne45294:0'
     copyright: crwdns45295:0crwdne45295:0
@@ -368,15 +396,12 @@ en:
     notes_coming_soon: crwdns7342:0crwdne7342:0
     autoplay_option: crwdns3091:0crwdne3091:0
     download: crwdns4163:0crwdne4163:0
-  compatability:
-    working:
-      header: crwdns18133:0crwdne18133:0
-      message: 'crwdns18134:0%{report_issue_url}crwdnd18134:0%{supported_browsers_url}crwdne18134:0'
-      hide_this_warning: crwdns18135:0crwdne18135:0
+  compatibility:
     upgrade:
-      header: crwdns18136:0crwdne18136:0
-      message: crwdns18137:0crwdne18137:0
-      button: crwdns18138:0crwdne18138:0
+      unsupported_message: 'crwdns56929:0%{supported_browsers_url}crwdne56929:0'
+      ie_message: crwdns56930:0crwdne56930:0
+      ie_message_csedweek: crwdns56931:0crwdne56931:0
+      link: crwdns56932:0crwdne56932:0
   slow_loading: crwdns3859:0crwdne3859:0
   try_reloading: crwdns3860:0crwdne3860:0
   next_stage: crwdns4078:0crwdne4078:0
@@ -442,18 +467,25 @@ en:
     minecraft:
       title: crwdns51940:0crwdne51940:0
       body: crwdns51941:0crwdne51941:0
+    unplugged:
+      title: crwdns56445:0crwdne56445:0
+      audience: crwdns56446:0crwdne56446:0
+      body: crwdns56447:0crwdne56447:0
+      body_short: crwdns56448:0crwdne56448:0
   gallery:
     students_drew_these_with_code: crwdns5091:0crwdne5091:0
     students_made_these_with_code: crwdns20426:0crwdne20426:0
     picture_count: 'crwdns5092:0%{days}crwdnd5092:0%{count}crwdne5092:0'
     activity_count: 'crwdns20427:0%{days}crwdnd20427:0%{count}crwdne20427:0'
     want_to_make_your_own: crwdns5093:0crwdne5093:0
+    how_to_save: crwdns56881:0crwdne56881:0
     more: crwdns5094:0crwdne5094:0
     caption_by_name_age: 'crwdns20428:0%{name}crwdnd20428:0%{age}crwdne20428:0'
     caption_time_ago: 'crwdns20429:0%{time_ago}crwdne20429:0'
     header: crwdns23628:0crwdne23628:0
     header_playlab: crwdns23629:0crwdne23629:0
     header_artist: crwdns23630:0crwdne23630:0
+    report_abuse: crwdns56882:0crwdne56882:0
   landing:
     prerelease: crwdns6265:0crwdne6265:0
     prerelease_hoc2014: crwdns23502:0crwdne23502:0
@@ -485,6 +517,12 @@ en:
     wrong_body: crwdns56224:0crwdne56224:0
     correct_title: crwdns56225:0crwdne56225:0
     correct_body: crwdns56226:0crwdne56226:0
+    unsubmit-title: crwdns56449:0crwdne56449:0
+    unsubmit-body: crwdns56450:0crwdne56450:0
+    submit-incomplete-title: crwdns56451:0crwdne56451:0
+    submit-incomplete-body: crwdns56452:0crwdne56452:0
+    submit-complete-title: crwdns56453:0crwdne56453:0
+    submit-complete-body: crwdns56454:0crwdne56454:0
   match:
     wrong_title: crwdns5098:0crwdne5098:0
     wrong_body: crwdns5099:0crwdne5099:0
@@ -575,6 +613,9 @@ en:
     share: crwdns35043:0crwdne35043:0
     share_title: crwdns35044:0crwdne35044:0
     share_copy_link: crwdns35045:0crwdne35045:0
+    share_embed_description: crwdns56529:0crwdne56529:0
+    embed: crwdns56530:0crwdne56530:0
+    advanced_share: crwdns56531:0crwdne56531:0
     close: crwdns35046:0crwdne35046:0
     more: crwdns35047:0crwdne35047:0
     name: crwdns35048:0crwdne35048:0
@@ -614,7 +655,59 @@ en:
           other: crwdns49680:0crwdne49680:0
         detail: crwdns49681:0crwdne49681:0
         acknowledge: 'crwdns49682:0%{link_start_privacy}crwdnd49682:0%{link_end}crwdnd49682:0%{link_start_tos}crwdnd49682:0%{link_end}crwdne49682:0'
+  peer_review:
+    accepted:
+      name: crwdns56532:0crwdne56532:0
+      description: crwdns56533:0crwdne56533:0
+    rejected:
+      name: crwdns56534:0crwdne56534:0
+      description: crwdns56535:0crwdne56535:0
+    escalated:
+      name: crwdns56536:0crwdne56536:0
+      description: crwdns56537:0crwdne56537:0
+    instructor_feedback: crwdns56731:0crwdne56731:0
+    peer_feedback: crwdns56732:0crwdne56732:0
+    outdated: crwdns56733:0crwdne56733:0
   components:
     icon_library:
       search_placeholder_text: crwdns56250:0crwdne56250:0
       no_icons_found: crwdns56251:0crwdne56251:0
+    playzone:
+      artist_description: crwdns56933:0crwdne56933:0
+      artist_title: crwdns56934:0crwdne56934:0
+      continue_button: crwdns56935:0crwdne56935:0
+      playlab_description: crwdns56936:0crwdne56936:0
+      playlab_title: crwdns56937:0crwdne56937:0
+      primary_header: 'crwdns56938:0%{stageName}crwdne56938:0'
+      projects_description: crwdns56939:0crwdne56939:0
+      projects_title: crwdns56940:0crwdne56940:0
+      secondary_header: crwdns56941:0crwdne56941:0
+  flex_category:
+    required: crwdns56538:0crwdne56538:0
+    content: crwdns56539:0crwdne56539:0
+    practice: crwdns56540:0crwdne56540:0
+  external_links:
+    disclaimer_md: 'crwdns57067:0%{support_url}crwdne57067:0'
+  hoc_download:
+    title: crwdns56942:0crwdne56942:0
+    capsule_title: crwdns56943:0crwdne56943:0
+    capsule_desc: 'crwdns56944:0%{url}crwdnd56944:0%{app_name}crwdne56944:0'
+    instructions_headline: crwdns56945:0crwdne56945:0
+    instructions: 'crwdns56946:0%{url}crwdne56946:0'
+    minecraft_name: crwdns56947:0crwdne56947:0
+    starwars_blocks_name: crwdns56948:0crwdne56948:0
+    starwars_javascript_name: crwdns56949:0crwdne56949:0
+    download_message: 'crwdns56950:0%{app_name}crwdne56950:0'
+    download_in_english: crwdns56951:0crwdne56951:0
+    download_in_spanish: crwdns56952:0crwdne56952:0
+    windows: crwdns56953:0crwdne56953:0
+    mac: crwdns56954:0crwdne56954:0
+  plc:
+    preview_assignments:
+      content_focus_header: crwdns56996:0crwdne56996:0
+      practice_focus_header: crwdns56997:0crwdne56997:0
+      content_focus_strong: crwdns56998:0crwdne56998:0
+      practice_focus_strong: crwdns56999:0crwdne56999:0
+      choose_different_focus_area: crwdns57000:0crwdne57000:0
+      other_focus_areas_available: crwdns57001:0crwdne57001:0
+      confirm_focus_areas: crwdns57002:0crwdne57002:0

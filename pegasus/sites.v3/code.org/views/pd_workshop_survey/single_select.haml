@@ -1,0 +1,11 @@
+-# Expected params: name, label
+
+%div.form-group{for: name}
+  %label.control-label{for: name}
+    = label
+  %span.form-required-field *
+  - PdWorkshopSurvey::options_for(name).map do |option|
+    .radio
+      %label{style: 'font-family: inherit'}
+        %input{name: name, type: 'radio', value: option}
+        = option

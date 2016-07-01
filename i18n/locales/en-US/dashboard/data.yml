@@ -459,6 +459,7 @@ en:
         infinity_playlab_intro: crwdns35943:0crwdne35943:0
         infinity_playlab_events: crwdns35944:0crwdne35944:0
         infinity_playlab_repeat_forever: crwdns35945:0crwdne35945:0
+        csp_applab_objects: crwdns56276:0crwdne56276:0
         csp_applab_databases_1: crwdns55910:0crwdne55910:0
         csp_applab_databases_2: crwdns55911:0crwdne55911:0
         csp_applab_processing_lists: crwdns56000:0crwdne56000:0
@@ -476,7 +477,15 @@ en:
         csp_applab_functions_parameters: crwdns51017:0crwdne51017:0
         csp_applab_loops: crwdns51018:0crwdne51018:0
         csp_applab_turtle: crwdns51019:0crwdne51019:0
+        csp_concept_bigdata_medicine: crwdns56541:0crwdne56541:0
+        csp_concept_cybercrime: crwdns56542:0crwdne56542:0
+        csp_concept_encryption: crwdns56543:0crwdne56543:0
+        csp_concept_http_html: crwdns56544:0crwdne56544:0
+        csp_concept_internet_ip_dns: crwdns56545:0crwdne56545:0
+        csp_concept_internet_packets_reliability: crwdns56546:0crwdne56546:0
+        csp_concept_internet_wires_cables_wifi: crwdns56547:0crwdne56547:0
         csp_concept_rgb: crwdns36227:0crwdne36227:0
+        csp_cs_is_changing_everything: crwdns56548:0crwdne56548:0
         csp_pixelation_color_1: crwdns36228:0crwdne36228:0
         csp_pixelation_color_2: crwdns36229:0crwdne36229:0
         csp_pixelation_color_3: crwdns36230:0crwdne36230:0

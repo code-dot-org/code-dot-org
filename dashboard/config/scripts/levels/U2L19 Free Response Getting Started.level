@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:24.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Public Key Crypto: The Modulo Operation",
+    "markdown_instructions": "Explain in your own words what the modulo operation does.  You may use the analogy of a clock in your answer if you like.\n",
+    "encrypted_solution": "lUcdloxz+1vFrK5EVY/8VT7/o6llXmL8jbJcZ+mCghnVVJ15wWSjLqE0X72p\ndWlJNn7S8BIjCbKzuwtdwu/gTVtpM8QLJUrc5SsoGLHEMy6vcyyK0JOHolSO\nrUGOH82Jtt9zQP83J/pBpdMdw2c4sisznZ0i6bmOAf58XMfDtmZZrzi8B0oV\nryBP9bmIQfCFftZI0RrmxzcYn1bWFD8v9ChBq83dOBN1+7T6gzHwn4n45uHw\neS0GOpLNwzLEimaa08mYHiuMNQnaE0GMWTC305mrx3Le2k9jb2Nvik9bPafq\n6MaijFNryyPqvotLAbl//Sml5rvEJ2Dl5bCCOstrytb2CZ/5VZn/8foQSElE\niXXmZLa/Dx2Xm00wYeVNFiMQS6wXNZG/5c1FkfWlyw75cPSFIUsq47Z3yvdt\nNohWPFEKduviHgFUNRCGRKEw3XGM/dJcxuMJoz+s+iwPeV1mWxCmHY+sObte\nDCSjIUs9si8Y63Cb60DqAeANWw0PScgv\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

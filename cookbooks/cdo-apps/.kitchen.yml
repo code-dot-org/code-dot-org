@@ -22,7 +22,11 @@ platforms:
       - recipe[cdo-apps]
 suites:
   - name: default
-  - name: nginx
+  - name: daemon
     attributes:
       cdo-apps:
-        nginx_enabled: true
+        daemon: true
+  - name: stop
+    run_list:
+      - recipe[cdo-apps]
+      - recipe[cdo-apps::stop]

@@ -1,9 +1,10 @@
 name 'U4L08v2 Making Pivot Tables'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
+## Making Pivot Tables Part 1 - The Basics
+
 # Getting Started - Copy the Data
 **To start, make a copy** of <a href="https://drive.google.com/open?id=0B2QFqkDgv9LjZU1sZ0hDdnZ6ck0" target="_blank">Teenage Movie Ratings Subset.csv</a> and open it in a spreadsheet program.  
 

@@ -55,5 +55,64 @@ module AWS
     def self.public_url(bucket, filename)
       Aws::S3::Object.new(bucket, filename, region: CDO.aws_region).public_url
     end
+
+    class LogUploader
+      # A LogUploader is constructed with some preconfigured settings that will
+      # apply to all log uploads - presumably you may be uploading many similar
+      # logs.
+      # @param [String] bucket name on S3
+      # @param [String] prefix to prepend to all log keys/filenames
+      # @param [Bool] make_public will cause the uploaded files to be given
+      #        public_read permission, and public URLs to be returned.  Otherwise,
+      #        files will be private and short-term presigned URLs will be returned.
+      def initialize(bucket, prefix, make_public=false)
+        @bucket = bucket
+        @prefix = prefix
+        @make_public = make_public
+      end
+
+      # Uploads a log to S3 at the given key (appended to the configured prefix),
+      # returning a URL to the uploaded file.
+      # @param [String] name where the log will be placed under the configured prefix
+      # @param [String] body of the log to be uploaded
+      # @param [Hash] options
+      # @return [String] public URL of uploaded log
+      # @raise [Exception] if the S3 upload fails
+      # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
+      def upload_log(name, body, options={})
+        key = "#{@prefix}/#{name}"
+        puts "The key is #{key}"
+
+        options[:acl] = 'public-read' if @make_public
+        result = AWS::S3.create_client.put_object(
+          options.merge(
+            bucket: @bucket,
+            key: key,
+            body: body
+          )
+        )
+        if @make_public
+          log_url = AWS::S3.public_url(@bucket, key)
+          log_url += "?versionId=#{result[:version_id]}" unless result[:version_id].nil?
+          log_url
+        else
+          options = {bucket: @bucket, key: key, expires_in: 3600}
+          options[:version_id] = result[:version_id] unless result[:version_id].nil?
+          Aws::S3::Presigner.new.presigned_url(:get_object, options)
+        end
+      end
+
+      # Uploads the given file to S3, returning a URL to the uploaded file.
+      # @param [String] filename to upload to S3
+      # @param [Hash] options
+      # @return [String] public URL of uploaded file
+      # @raise [Exception] if the file cannot be opened or the S3 upload fails
+      # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
+      def upload_file(filename, options={})
+        File.open(filename, 'rb') do |file|
+          return upload_log(filename, file, options)
+        end
+      end
+    end
   end
 end

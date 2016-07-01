@@ -1,0 +1,44 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-05-31T21:46:24.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "gamelab",
+    "show_d_pad": "true",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Prediction\r\n\r\nThis program has a bunch of different reactions to keyDown. One has a new kind of behavior you haven't seen before. Look at the following inputs and match them to their outputs. Once you ahve made your prediction you will be able to test it out.\r\n\r\n| Input  |\r\n| ------------- | \r\n| Press the _space_ bar  | \r\n| Press the _w_ key  | \r\n| Press the _j_ key |\r\n| Press the _j_ and _k_ keys | \r\n| Press the _k_ key |\r\n\r\n\r\n| Output |\r\n| ------------------------- |\r\n| blue_sprite rotates clockwise  |\r\n| red_sprite moves up and blue_sprite moves down  |\r\n| The sprites don't change |\r\n| red_sprite rotates counter clockwise  |\r\n| red_sprite gets bigger and blue_sprite gets smaller  |\r\n",
+    "start_blocks": "var red_sprite = createSprite(100, 200, 50, 50);\r\nred_sprite.shapeColor = \"red\";\r\nvar blue_sprite = createSprite(300, 200, 50, 50);\r\nblue_sprite.shapeColor = \"blue\";\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  if (keyDown(\"space\")) {\r\n    red_sprite.y = red_sprite.y - 1;\r\n    blue_sprite.y = blue_sprite.y + 1;\r\n  }\r\n  \r\n  if (keyDown(\"w\")) {\r\n    red_sprite.scale = 2;\r\n    blue_sprite.scale = .5;\r\n  } else {\r\n    red_sprite.scale = 1;\r\n    blue_sprite.scale = 1;\r\n  }\r\n  \r\n  if (keyDown(\"j\")) {\r\n    if (keyDown(\"k\")) {\r\n        blue_sprite.rotation = blue_sprite.rotation + 1;\r\n    } else {\r\n        red_sprite.rotation = red_sprite.rotation - 1;\r\n    }\r\n  }\r\n  drawSprites();\r\n}\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

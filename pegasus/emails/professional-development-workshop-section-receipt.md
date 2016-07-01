@@ -59,19 +59,17 @@ Attached to this email, you will also find a personalized certificate acknowledg
 <br>
 
 **For a limited time**  
+Code.org is offering $50 off [**Dash & Dot pack**](https://store.makewonder.com/). These hands-on learning tools reinforce CS concepts taught in Code.org's CS Fundamentals curriculum, like events and loops. [Learn more](https://store.makewonder.com/). *Valid June 1st-30th, 2016 only. Limited to first 1,000 people. Valid 1 per person.*
 
-Code.org is offering $50 off [**Dash robots**](https://store.makewonder.com/). These hands-on learning tools reinforce CS concepts taught in Code.org's CS Fundamentals curriculum, like events and loops. [Learn more](https://store.makewonder.com/). *Valid March 1st-30th, 2016 only. Limited to first 1,000 people.*
-
-**Redemption code for robots: CODE91738A**   
-*Valid April 1-31st, 2016 only.*
-*Limited to first 1,000*
+**Redemption code for robots: CODE546J**   
+*Valid June 1-30th, 2016 only.*
+*Limited to first 1,000. Valid 1 per person.*
 
 [Go here](https://help.makewonder.com/) for questions regarding redemption. 
 
 **Need more support?**
 
 - Refresh your skills before you teach. Check out our [online workshop](https://code.org/educate/professional-development-online).
-- Meet us online. Attend one of our [online monthly meetings](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577).
 - Connect with other educators teaching CS. Join our [Professional Learning Community](http://forum.code.org/). 
 - See our [FAQ](http://support.code.org/). 
 - Or [contact us](http://code.org/contact).

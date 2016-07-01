@@ -32,6 +32,10 @@
     "disable_examples": "false",
     "disable_sharing": "false",
     "impressive": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>

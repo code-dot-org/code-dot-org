@@ -1,0 +1,78 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-28T19:07:46.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "draw": null,
+      "drawSprites": null,
+      "frameRate": null,
+      "var sprite = createSprite": {
+        "params": [
+          "200",
+          "200"
+        ],
+        "paletteParams": [
+          "x",
+          "y"
+        ]
+      },
+      "randomNumber_min_max": null,
+      "shapeColor": null,
+      "background": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "color": null,
+      "arc": null,
+      "ellipse": null,
+      "line": null,
+      "point": null,
+      "rect": null,
+      "regularPolygon": null,
+      "shape": null,
+      "text": null,
+      "textAlign": null,
+      "textFont": null,
+      "textSize": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "markdown_instructions": "# Random Shape Color\r\n\r\n** Video on Properties**\r\n\r\nThe built in variables for sprites are called properties. Properties can be updated with in the draw loop to create animations just like variables.\r\n\r\nOne thing you need to be careful of as you write programs with sprites is that you keep `drawSprites` as the last line inside the draw loop. You don't want to draw the sprties until after all the updates in the loop have happened.\r\n\r\n# Do This\r\nCreate a sprite that is set to a new random color every loop of the draw loop.\r\n\r\n* Create a new sprite and make sure it draws on the game area\r\n* Set the `shapeColor` of the sprite to a random color inside the draw loop\r\n* Run the program and test that it works",
+    "show_d_pad": "false",
+    "start_blocks": "function draw(){\r\n \r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

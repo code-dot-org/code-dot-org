@@ -35,8 +35,8 @@ class CsrfTest < Minitest::Test
     fake_session = {Rack::Csrf.key => fake_csrf_token}
     params_with_token = params.merge(_csrf: fake_csrf_token)
     response = post('/v2/poste/send-message',
-                    params_with_token,
-                    {'rack.session' => fake_session})
+      params_with_token,
+      {'rack.session' => fake_session})
     assert_equal 200, response.status
   end
 end

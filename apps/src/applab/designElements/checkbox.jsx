@@ -1,11 +1,11 @@
-/* global $ */
-
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
+import $ from 'jquery';
+var React = require('react');
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
 
 var elementUtils = require('./elementUtils');
 
@@ -71,7 +71,7 @@ var CheckboxEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getChangeEventCode: function() {
+  getChangeEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
@@ -80,7 +80,7 @@ var CheckboxEvents = React.createClass({
     return code;
   },
 
-  insertChange: function() {
+  insertChange: function () {
     this.props.onInsertEvent(this.getChangeEventCode());
   },
 
@@ -112,7 +112,7 @@ module.exports = {
   PropertyTab: CheckboxProperties,
   EventTab: CheckboxEvents,
 
-  create: function() {
+  create: function () {
     var element = document.createElement('input');
     element.type = 'checkbox';
     element.style.width = '12px';
@@ -126,7 +126,7 @@ module.exports = {
 
   onDeserialize: function (element) {
     // Disable click events unless running
-    $(element).on('click', function(e) {
+    $(element).on('click', function (e) {
       if (!Applab.isRunning()) {
         element.checked = !element.checked;
       }

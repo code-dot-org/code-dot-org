@@ -53,7 +53,7 @@
   "blockWhileXAheadAhead":"ar aghaidh",
   "blockWhileXAheadDo":"déan",
   "blockWhileXAheadWhile":"agus",
-  "generatedCodeDescription":"Nuair a tharraingíonn tú agus a chuireann tú blocanna anseo, cruthaíonn sé treoracha i dteanga ríomhaireachta darb ainm JavaScript. Insíonn an cód seo don ríomhaire na rudaí le taispeáint ar an scáileán. Tá cód den sórt seo taobh thiar de gach uile rud a dhéanann tú in Minecraft freisin.",
+  "generatedCodeDescription":"Nuair a tharraingíonn tú agus a chuireann tú blocanna i do chlár, cruthaíonn sé treoracha i dteanga ríomhaireachta darb ainm JavaScript. Insíonn an cód seo don ríomhaire na rudaí le taispeáint ar an scáileán. Tá cód den sórt seo taobh thiar de gach uile rud nuair a imríonn tú Minecraft freisin.",
   "houseSelectChooseFloorPlan":"Roghnaigh plean urláir i gcomhair do thí.",
   "houseSelectEasy":"Éasca",
   "houseSelectHard":"Deacair",

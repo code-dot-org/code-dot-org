@@ -762,6 +762,7 @@
         infinity_playlab_intro: Play Lab - Wprowadzenie
         infinity_playlab_events: Play Lab - Zdarzenia
         infinity_playlab_repeat_forever: Play Lab - Powtarzaj w nieskończoność
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
         csp_applab_processing_lists: Processing Lists with Loops
@@ -779,7 +780,16 @@
         csp_applab_functions_parameters: Funkcje z parametrami
         csp_applab_loops: Pętle
         csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: Data & Medicine
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
+          & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Trochę o pikselach
+        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Pokoloruj pikselowy gadżet - część 1
         csp_pixelation_color_2: Pokoloruj pikselowy gadżet - część 2
         csp_pixelation_color_3: Pokoloruj pikselowy gadżet - część 3

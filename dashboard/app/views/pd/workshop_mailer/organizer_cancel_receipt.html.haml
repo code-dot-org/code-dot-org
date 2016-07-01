@@ -1,0 +1,21 @@
+:css
+  body {
+    font-family: Gotham, sans-serif;
+  }
+
+%p
+  This is an email notifying you that
+  = @enrollment.name
+  has canceled their registration for your
+  = @workshop.course
+  = @workshop.subject
+  = link_to 'workshop', "/pd/workshop_dashboard/workshops/#{@workshop.id}"
+  on
+  = @workshop.sessions.first.formatted_date
+  at
+  = "#{@workshop.location_name}."
+
+= render partial: 'teacher_info'
+
+%p
+  Their registration has been removed from your workshop dashboard and a spot has opened up for another teacher to sign up.

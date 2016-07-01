@@ -4,10 +4,11 @@
 - level = local_assigns[:level]
 - full_width = local_assigns[:full_width]
 
+// TODO: Remove IE warning Sep 1 when IE 8-10 become unsupported
+= render partial: 'layouts/ie_unsupported'
+
 - if browser.cdo_unsupported?
   = render partial: 'layouts/unsupported_browser'
-- elsif browser.cdo_partially_supported?
-  = render partial: 'layouts/partially_supported_browser'
 
 - show_bug_links = (script_level && script.show_report_bug_link?) || (level && level.try(:is_project_level))
 
@@ -49,9 +50,9 @@
                 %i.fa.fa-rocket
               %a.header_status_bar.level_free_play.artist_free_play{title: t('nav.header.free_play.artist'), href: artist_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-pencil
-              %a.header_status_bar.level_free_play.calc_free_play{title: t('nav.header.free_play.calculate'), href: calc_project_projects_path, style: 'display: none;'}
+              %a.header_status_bar.level_free_play.calc_free_play{title: t('nav.header.free_play.calculate'), href: calc_project_create_new_projects_path, style: 'display: none;'}
                 %i.fa.fa-calculator
-              %a.header_status_bar.level_free_play.eval_free_play{title: t('nav.header.free_play.artist'), href: eval_project_projects_path, style: 'display: none;'}
+              %a.header_status_bar.level_free_play.eval_free_play{title: t('nav.header.free_play.artist'), href: eval_project_create_new_projects_path, style: 'display: none;'}
                 %i.fa.fa-pencil
               %a.header_status_bar.level_free_play.applab_free_play{title: t('nav.header.free_play.applab'), href: applab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-mobile
@@ -62,9 +63,10 @@
   - view_as = @user || current_user
   - user_progress = current_user == nil ? 'null' : summarize_user_progress(script_level.script, view_as, view_as == current_user && @public_caching).to_json
 
-  - puzzle_page = params[:puzzle_page] || -1
+  - puzzle_page = params[:puzzle_page] || ApplicationHelper::PUZZLE_PAGE_NONE
+  - uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page.to_i - 1}" : script_level.level_id.to_s
 
   :javascript
     //<![CDATA[
-    dashboard.header.build(#{script_level.stage.summarize.to_json}, #{user_progress}, #{script_level.level_id}, "#{script.name}", #{puzzle_page})
+    dashboard.header.build(#{script_level.stage.summarize.to_json}, #{user_progress}, "#{uid}", "#{script.name}", #{puzzle_page})
     //]]>

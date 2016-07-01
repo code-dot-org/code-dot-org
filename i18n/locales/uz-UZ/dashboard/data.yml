@@ -3,7 +3,7 @@ uz:
     script:
       name:
         20-hour:
-          desc: K-8 Intro to Computer Science Course
+          desc: '8 - 10 yoshli bolalar uchun Informatika kursiga kirish darslari'
           Unplug1: 1-bosqich
           Maze: 2-bosqich
           Unplug2: 3-bosqich
@@ -122,7 +122,7 @@ uz:
         loop_while: Toki blogi
         loop_for: Sanovchi blok
         function: Funksiyalar
-        parameters: Functions with parameters
+        parameters: Funksiyalar (parameterlari bilan)
     level:
       instructions:
         maze_2_2: 'Quloqsiz cho‘chqachani tutishda yordam berolmaysizmi? Keraklicha “oldinga yur” bloklarini tagma-tag taxlab, “bajar” tugmasini bosib, menga uni tutishga ko‘maklashing. '
@@ -145,11 +145,12 @@ uz:
         maze_2_17: “Agar-aks holda” blogi bitta shartni tekshiradi va natijaga qarab u yoki bu amalni bajaradi. Yangi blokdan foydalanib, meni kungaboqarning oldiga olib bor.
         maze_2_18: “Agar-aks holda” blogi uchun yana bitta mashq. Bir urinishdayoq bajara olasanmi?
         maze_2_19: Faqat 3 ta blokdan foydalanib, qiyinroq masalani yecha olasanmi? Agar eplay olsang, undan keyin qancha uzun bo‘lmasin men har qanday egri yo‘llardan yura olaman.
-        turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
-        turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "set color" block.'
+        turtle_1_1: Salom, men rassomman. Men barcha narsani chiza olishim uchun sen kod yozishing mumkin. Meni rasmdagi kulrang chiziqlar uztidan chizishim uchun bir nechta bloklarni ishlat.
+        turtle_1_2: |-
+          Endi, kvadrat chizamiz. ESLATMA: "rang tanlash" blokidan o'zing yoqtirgan rangni tanla.
         turtle_1_3: "3 ta blok ishlatib, to'rtburchak yasang."
         turtle_1_4: |-
-          Draw a triangle whose sides are all in different colors, using the "random color" option that picks a different color each time. Hint: you'll have to figure out how far to turn by clicking on the number in the turn block.
+          Har bir tomoni har xil rangda bo'lgan uchburchak chizing. Har doim har xil rang ko'rsatish uchun "Tasodifiy rang" tanlovini belgilang. Maslahat: "Burilish" blokidagi raqam ustiga bosib, qanchalik ko'p burilishingiz kerakligini aniqlashingiz mumkin.
         turtle_1_5: Now, for practice, draw a triangle and then a square to draw an envelope.
         turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
         turtle_1_7: "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
@@ -330,7 +331,7 @@ uz:
         studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
+        studio_iceage_hello2: 'Manny (actor 1) found Sid (actor 2) and wants to invite him on the adventure. Help them greet each other by using the the "actor say" block twice.'
         studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
         studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
         studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
@@ -480,6 +481,7 @@ uz:
         infinity_playlab_intro: 'Play Lab - Introduction'
         infinity_playlab_events: 'Play Lab - Events'
         infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
         csp_applab_processing_lists: Processing Lists with Loops
@@ -497,7 +499,15 @@ uz:
         csp_applab_functions_parameters: Functions with Parameters
         csp_applab_loops: Sikllar
         csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: 'Data & Medicine'
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: A Little Bit About Pixels
+        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
         csp_pixelation_color_3: 'Color pixelation widget - Part 3'

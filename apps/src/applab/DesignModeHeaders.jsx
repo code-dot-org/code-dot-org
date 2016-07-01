@@ -1,5 +1,7 @@
+var React = require('react');
 var applabMsg = require('./locale');
 var msg = require('../locale');
+var FontAwesome = require('../templates/FontAwesome');
 
 module.exports = React.createClass({
   propTypes: {
@@ -8,15 +10,15 @@ module.exports = React.createClass({
     isToolboxVisible: React.PropTypes.bool.isRequired
   },
 
-  handleManageAssets: function() {
+  handleManageAssets: function () {
     this.props.handleManageAssets();
   },
 
-  onToggleToolbox: function() {
+  onToggleToolbox: function () {
     this.props.onToggleToolbox();
   },
 
-  render: function() {
+  render: function () {
     var styles = {
       toolboxHeader: {
         display: this.props.isToolboxVisible ? 'block' : 'none',
@@ -43,11 +45,14 @@ module.exports = React.createClass({
 
     var manageAssetsIcon = (
       <span style={styles.iconContainer}>
-        <i className="fa fa-cog workspace-header-clickable"
-          id="manage-assets-button"
-          style={styles.assetsIcon}
-          onClick={this.handleManageAssets}
-          title={applabMsg.manageAssets()}></i>
+        <FontAwesome
+            icon="cog"
+            className="workspace-header-clickable"
+            id="manage-assets-button"
+            style={styles.assetsIcon}
+            onClick={this.handleManageAssets}
+            title={applabMsg.manageAssets()}
+        />
       </span>
     );
 

@@ -218,7 +218,6 @@ module Ops
 
       # cohort has 3 deleted teachers but we only see 2
       assert_equal 2, cohort_json['deleted_teachers'].count
-
     end
 
     test 'district contact cannot show cohorts without their district' do
@@ -271,7 +270,7 @@ module Ops
 
     def teacher_params
       (1..5).map do |x|
-        {ops_first_name: 'Teacher', ops_last_name: "#{x}", email: "teacher_#{x}@school.edu", district: @district.name}
+        {ops_first_name: 'Teacher', ops_last_name: x.to_s, email: "teacher_#{x}@school.edu", district: @district.name}
       end
     end
 
@@ -413,7 +412,7 @@ module Ops
       response = JSON.parse(@response.body)
       assert_equal response['id'], @cohort.id
       # Ensure extra association info is provided in the right format
-      assert_equal response['districts'].map{|d|d['id']}, @cohort.district_ids
+      assert_equal response['districts'].map{|d| d['id']}, @cohort.district_ids
     end
 
     test 'ops team can list teachers in a cohort as a csv' do

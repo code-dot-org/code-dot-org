@@ -30,7 +30,10 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.\",\r\n  \"hint_id\": \"2-3_Maze_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "Can you help me catch the naughty pig? \r\n\r\nStack a couple of `move forward` blocks below the `when run` block and press \"Run\". "
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 2
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

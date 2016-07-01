@@ -1,0 +1,20 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+transport:
+  name: sftp
+  connection_timeout: 10
+  connection_retries: 5
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 12.7.2
+platforms:
+  - name: ubuntu-14.04
+    image_search:
+      owner-id: "099720109477" # Official Ubuntu
+      name: ubuntu/images/*/ubuntu-trusty
+    run_list:
+      - recipe[cdo-networking]
+suites:
+  - name: default

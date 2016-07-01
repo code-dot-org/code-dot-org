@@ -1,39 +1,27 @@
 'use strict';
 
-var _ = require('../lodash');
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
-var StudioAppWrapper = require('./StudioAppWrapper.jsx');
-
-var styles = {
-  codeWorkspace: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    // left is controlled by CSS rules
-    bottom: 0,
-    marginLeft: 15,
-    border: '1px solid #ddd',
-    overflow: 'hidden',
-  },
-  codeWorkspaceRTL: {
-    // right is controlled by CSS rules
-    left: 0,
-    marginRight: 15,
-    marginLeft: 0
-  }
-};
+import React from 'react';
+import classNames from 'classnames';
+import {connect} from 'react-redux';
+import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
+import _ from 'lodash';
+import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import StudioAppWrapper from './StudioAppWrapper';
+import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
+import CodeWorkspace from './CodeWorkspace';
 
 /**
  * Top-level React wrapper for our standard blockly apps.
  */
-var AppView = React.createClass({
+const AppView = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
-    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
-    generateVisualizationColumnHtml: React.PropTypes.func.isRequired,
-    onMount: React.PropTypes.func.isRequired
+    hideSource: React.PropTypes.bool.isRequired,
+    isResponsive: React.PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
+
+    // not provided by redux
+    visualizationColumn: React.PropTypes.element,
+    onMount: React.PropTypes.func.isRequired,
   },
 
   componentDidMount: function () {
@@ -41,24 +29,26 @@ var AppView = React.createClass({
   },
 
   render: function () {
-    var isRTL = !!document.querySelector('html[dir="rtl"]');
+    const visualizationColumnClassNames = classNames({
+      responsive: this.props.isResponsive,
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
+    });
 
-    var codeWorkspaceStyle = _.assign({}, styles.codeWorkspace,
-      isRTL && styles.codeWorkspaceRTL);
     return (
-      <StudioAppWrapper
-          assetUrl={this.props.assetUrl}
-          isEmbedView={this.props.isEmbedView}
-          isShareView={this.props.isShareView}>
-        <ProtectedStatefulDiv
-            id="visualizationColumn"
-            contentFunction={this.props.generateVisualizationColumnHtml} />
+      <StudioAppWrapper>
+        <div id="visualizationColumn" className={visualizationColumnClassNames}>
+          {this.props.visualizationColumn}
+        </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <ProtectedStatefulDiv style={codeWorkspaceStyle} id="codeWorkspace" className="editor-column">
-          <ProtectedStatefulDiv id="codeWorkspaceWrapper" contentFunction={this.props.generateCodeWorkspaceHtml}/>
-        </ProtectedStatefulDiv>
+        <InstructionsWithWorkspace>
+          <CodeWorkspace/>
+        </InstructionsWithWorkspace>
       </StudioAppWrapper>
     );
   }
 });
-module.exports = AppView;
+module.exports = connect(state => ({
+  hideSource: state.pageConstants.hideSource,
+  isResponsive: isResponsiveFromState(state),
+  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
+}))(AppView);

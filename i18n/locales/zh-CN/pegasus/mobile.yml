@@ -1,7 +1,12 @@
 zh-CN:
   hour_of_code: 编程一小时
   hello: 世界你好
+  "yes": 是
+  "no": 不
   select_language: 请选择您的语言
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: 了解详情
   en: 计算机科学
   computer_science_edweek: 计算机科学教育周
   csedweek_dates: 2014 年 12 月 8-14 日
@@ -21,7 +26,7 @@ zh-CN:
   twentyhours_heading: 看看我们对计算机科学课程的简介
   twentyhours_text: 完成您的第一个编程一小时了吗？在此后续课程中更深入的了解计算机科学和编程的概念。
   og_title: 每个孩子都应该有机会
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: 每个学校的每个学生都应该有学习计算机科学的机会。计算机科学正在改变所有的东西。
   hoc2014_heading: '加入<a href="http://hourofcode.com">编程一小时</a><br/>2014年12月8至14日<br/>'
   hoc2014_students: 学生
   hoc2014_try: 体验一下
@@ -67,72 +72,72 @@ zh-CN:
   congrats_next_tutorials_desc: '尝试这些简短的1 小时教程，或尝试 <a href="%{current_path}/next"> 合作伙伴教程</a>。'
   get_a_certificate_of_achievement: 获取结业证书
   view_course: 查看课程
-  view_unit: View unit
-  make_app: Make an app
+  view_unit: 查看单元
+  make_app: 创建一个应用
   congrats_guest_speaker_title: 为你的班级找到了一位演讲人
   congrats_guest_speaker_desc: "既然你的学生们已经完成了一门计算机科学课程，你可以考虑庆祝一下，并通过邀请一个演讲嘉宾到你的教室，使它与能在现实世界中的制作联系起来。你可以利用我们的'志愿者地图'去邀请当地的志愿者参观你的教室，你也可以在任意城市里寻找愿意远程辅导你的学生的计算机科学的学生或者专业的技术人员。"
   congrats_guest_speaker_cta: 找到的特邀演讲者
   congrats_third_party_title: 在这些应用和网站上使用你的新技能
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
+  third_party_gradelevel_kto8: 8年级
+  third_party_gradelevel_kto2: 2年级
+  third_party_gradelevel_2to8: 2-8年级
+  third_party_gradelevel_4to12: 4-12 年级
+  third_party_gradelevel_5to12: 5-12年级
+  third_party_gradelevel_6plus: 6年级以上
+  third_party_gradelevel_8plus: 8年级以上
   third_party_platform_all: 平台：网络，ipad和安卓系统
   third_party_platform_mobile: '平台: iPad & 安卓'
   third_party_platform_web: '平台: 网络'
   third_party_price_varies: 价格：根据方案变化
   third_party_price_free: 价格：免费
   third_party_price_299: 价格：2.99美元／下载
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
-  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
+  third_party_price_individual: '个人价格 ︰ 免费试用 & 25 美元/月'
+  third_party_price_school: '学校价格 ︰ 免费计划 & Pro 在 $2500年 +'
+  third_party_tynker_desc: Tynker 的创意计算平台帮助孩子愉快的，直观和富有想象力的养成计算机思维和培养编程技巧。我们创新的可视化编程语言，交互式自学课程，和游戏为基础的编程活动提供了一个简单的方式介绍编程并且让孩子学会创新和创造。
+  third_party_tynker_btn_curriculum: 早期的读者尝试 Tynker 课程
   third_party_tynker_btn_site: 访问 Tynker
-  third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_scratchjr_desc: Scratch Jr. 是一种能够让孩子（5-7岁）创造他们自己的互动故事和游戏的介绍性编程语言。孩子只要将图形化的编程块扣合在一起，就能让角色移动、跳跃、跳舞和唱歌。孩子可以在编辑器中修改角色，可以添加他们自己的声音，甚至可以插入他们自己的照片——然后用编程块使他们的角色活灵活现。
+  third_party_scratchjr_btn_curriculum: 下载Scratch Jr. 的课程
+  third_party_scratchjr_btn_site: 访问 Scratch Jr.
+  third_party_scratch_desc: 在 Scratch 中，你可以通过编程的方式来设计你自己的互动故事、游戏和动画，还可以在在线社区与他人分享你的创作。Scratch帮助年轻人学会创造性思考、系统性学习以及协同工作——21世纪生活的基本技能。
+  third_party_scratch_btn_curriculum: 下载Scratch Jr. 的课程
+  third_party_scratch_btn_forum: Scratch 教育家论坛
+  third_party_scratch_btn_site: 访问 Scratch
+  third_party_lightbot_desc: 在Lightbot上，学生们必须通过给机器人编写命令程序来解决难题。学生可以在浏览器中（需要Flash Player), 或在Android或iOS设备上玩游戏。学生们在Lightbot中玩“基本”级别的初始集时，他们将学会如何让计算机做一系列的基本命令，以及获得编写计算机程序的一般过程。
+  third_party_lightbot_btn_curriculum: 下载 Lightbot 课程
+  third_party_lightbot_btn_site: 访问 Lightbot
   third_party_khan_desc: '学习怎么使用JavaScript & ProcessingJS去编辑绘画，动漫和游戏的程序，或者学习怎么使用HTML & CSS去创建网页。你可以任意分享你的创作，也可以通过探索别人的创作从中互相学习。'
   third_party_khan_btn_learn: 与Khan Academy一起学习cs
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
-  third_party_codehs_btn_try: Intro CS Learn More for Schools
-  third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
+  third_party_khan_btn_forum: Khan 学院 CS 论坛
+  third_party_appinv_desc: MIT App Inventor是一款以模块为基础的的编程工具，可以让包括新手在内的所有人来进行编程并且创建功能齐全的安卓应用程序。第一次使用App Inventor的用户可以在一小时内创建并且运行自制的应用，而且比起传统的编程语言来讲，可以更快速的制作功能更加复杂的应用程序。
+  third_party_appinv_btn_curriculum: 下载 App Inventor 2 课程
+  third_party_appinv_btn_forum: App Inventor 2 论坛
+  third_party_appinv_btn_site: 访问 App Inventor 2
+  third_party_codehs_desc: HS代码编程介绍的基石与短片，示例代码和大量的编程练习，使编码的乐趣和适合初学者使用。对于学校和教师CodeHS提供课程，教师工具和PD 。对于个别学生，你可以得到你沿着导师的网络的方式所需要的帮助。
+  third_party_codehs_btn_try: 介绍CS了解更多的学校
+  third_party_codecademy_desc: '我们是从下到上重新思考教育。该网站已经重新考虑几乎一切 - 电子商务，社交网络，医疗保健等。我们正在建设世界需要教育 - 第一个真正的净母语教育。'
   third_party_codecademy_btn_curriculum: 下载 Codecademy 课程
-  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_codecademy_btn_site: 访问代码学院
   third_party_organization: 组织
   third_party_curriculum: 课程
-  third_party_pricing: Pricing
+  third_party_pricing: 定价
   third_party_cost_free: 学生和教师免费
-  third_party_cost_5permonth: $5/month per class
-  third_party_cost_299: $2.99/download
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: 'Between 10 & 15 lessons, geared toward grades 3-12'
-  third_party_desc_25to40_3to12: 'From 25 - 40 lessons, intended for grades 3-12'
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: 'Between 7 & 22 lessons, geared toward grades 5-12'
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_cost_5permonth: 每节课每月5美元
+  third_party_cost_299: 每次下载要2.99美元
+  third_party_cost_free_399: 免费试用，每间教室399美元
+  third_party_cost_free_2: 免费试用，每位学生2美元
+  third_party_cost_free_10: 免费试用，每月9.99美元
+  third_party_desc_5_4to8: 大约有五节课，成绩朝四到八个面向
+  third_party_desc_10to12_kto3: 最多10-12 课，为幼儿园-3年级设计
+  third_party_desc_11_kto5: 你制杖吗
+  third_party_desc_10to12_kto5: 你持盾吗
+  third_party_desc_40_4to8: 你捡币吗
+  third_party_desc_dozens_kto8: 不，我撒币
+  third_party_desc_10to15_3to12: 为 3-12 年级提供10到15节课
+  third_party_desc_25to40_3to12: 从25-40的课程，专门给3-12年级
+  third_party_desc_20_2to8: 大约有20节课时面向2到8年级的
+  third_party_desc_7to22_5to12: 课程7-22之间，倾向5-12年级
+  third_party_desc_20_4to12: 超过20个课程， 倾向4-12年级
   enter_valid_age: 请选择一个有效的年龄
   enter_valid_email: 请输入一个有效的电子邮件地址
   get_a_certificate_message: "我们会向您发送证书和有关的信息 关于如何<a href='/learn/beyond'> 学习 1小时 以外 </a> "
@@ -179,13 +184,13 @@ zh-CN:
   learn_next_level: 继续到下一级别
   learn_online: 请尝试其他在线课程
   learn_classes: 查找本地的课程
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: 学习计算机科学。计算机科学改变一切。 https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: '我刚刚完成了 #HourOfCode —— 大家也来看看吧！@codeorg'
-  just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
-  just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
-  just_did_course3: 'I just finished Course 3 - check it out! @codeorg'
-  just_did_course4: 'I just finished Course 4 - check it out! @codeorg'
-  just_did_accelerated: 'I just finished the Accelerated Course - check it out! @codeorg'
+  just_did_course1: 我刚完成课程1-请查看！@codeorg
+  just_did_course2: 我刚完成课程2-请查看！@codeorg
+  just_did_course3: 我刚完成课程3-请查看！@codeorg
+  just_did_course4: 我刚完成课程4-请查看！@codeorg
+  just_did_accelerated: '我刚完成加速课程- 请查看！@codeorg'
   twitter_teach_cs: '90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。'
   learn_hoc: 学习编程一小时
   beyond_hoc: 一小时之后
@@ -264,6 +269,8 @@ zh-CN:
   homepage_banner_privacy_link: 了解详情
   homepage_banner_20k_teachers: 两万名老师经过训练后，正在课堂上传授计算机科学。
   homepage_banner_20k_teachers_link: 了解详情
+  homepage_banner_congress: 美国领导人正在呼吁国会拨款给 幼儿园-12年级 的计算机科学课程。
+  homepage_banner_congress_link: 添加您的支持
   homepage_slot_text_title_hoc: 编程一小时
   homepage_slot_text_blurb_hoc: 任何人都可学习。立即开始
   homepage_slot_text_link_hoc: 来试试“编程一小时”项目！
@@ -289,6 +296,7 @@ zh-CN:
   homepage_slot_text_link_stats: 请看统计信息
   homepage_slot_text_link_buy: 加入进来
   homepage_slot_text_link_donate: 捐一笔钱
+  homepage_slot_text_link_shop: T 恤、 帽子，与更多
   homepage_header_codestudio: 编程工作室 学生作品
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: 查看全部
@@ -431,6 +439,7 @@ zh-CN:
   dashboard_landing_new_beta: 新功能！K-5 学生可以尝试我们的 beta 实验版课程。
   dashboard_landing_new_k5courses: 新功能！K-5 学生可以尝试我们的课程。
   dashboard_landing_useful_links: 其他有用的链接
+  dashboard_landing_classroom_resources: 你的教室的资源
   dashboard_landing_office_hours: 面对面问问题！请访问我们每月的视频办公时间。
   dashboard_landing_print_certificates: 为完成此课程的学生打印证书
   dashboard_landing_educator_blog: 阅读有关新闻和我们在教育家博客的材料的更新
@@ -444,6 +453,10 @@ zh-CN:
   dashboard_landing_available_courses: 这些是目前可供您和您的学生使用的课程。
   dashboard_landing_more_tutorials: 想看更多教程吗？
   dashboard_landing_more_tutorials_desc: '<a href="/learn/beyond">我们的合作伙伴提供了更多的教程</a>。可以通过机器人，制作网页，制作你自己的应用程序学习编程，或探索其他语言如C++，Ruby，Python！'
+  dashboard_landing_inspire: 用海报、 视频和更多来激励你的学生。
+  dashboard_landing_video_library: 使用从计算机科学概念的视频库里的视频。
+  dashboard_landing_report_bug: 请求一个特性或报告一个漏洞。
+  dashboard_landing_teacher_forum: 加入一个专业学习的团体。
   dashboard_hoc_courses: 《代码一小时》适合所有年龄的人。
   dashboard_hoc_courses_desc: 和你的学生一同尝试任何这些不到 1 小时的辅导！
   dashboard_hoc_courses_desc_and_cta: '与你的学生一起尝试这些简短的一个小时的辅导。在计算机科学教育周期间 <a href="https://hourofcode.com"> 加入编程一小时活动</a>。'
@@ -474,6 +487,14 @@ zh-CN:
   dashboard_action_remove_confirm: 移除？
   dashboard_action_done: 完成
   dashboard_action_required: 必填
+  dashboard_assessments_view: 查看评价：
+  dashboard_assessments_none: 没有评价
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: 总结
+  dashboard_assessments_answers: 全部答案
+  dashboard_filter_by_stage: 按阶段筛选 ︰
+  dashboard_filter_all: 全部
+  dashboard_download_csv: 下载 CSV
   dashboard_navigation_home_page: 教师主页
   dashboard_navigation_section_student_progress: 学生账户和进度
   dashboard_navigation_section_teacher_progress: 您的课程进度
@@ -482,21 +503,34 @@ zh-CN:
   dashboard_navigation_section_pd: 职业发展
   dashboard_navigation_section_speakers: '计算机科学 <br/> 特邀演讲人'
   dashboard_navigation_all_sections: 学生账户和进度
-  dashboard_navigation_view_progress: 查看进度
-  dashboard_navigation_view_text_responses: 查看文字回应
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_progress: 进度
+  dashboard_navigation_view_text_responses: Text Responses
+  dashboard_navigation_view_assessments: 测验
   dashboard_navigation_add_students: 添加学生
   dashboard_navigation_manage_students: 管理学生
   dashboard_navigation_lesson_plans_resources: 课程计划及资源
-  dashboard_navigation_view_stats: 查看统计
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: '学习小组：%{section_name}'
   dashboard_navigation_student: '学生：%{student_name}'
+  dashboard_progress_not_started: 未开始
+  dashboard_progress_in_progress: 正在进行
+  dashboard_progress_not_completed: 未完成
+  dashboard_progress_completed_too_many_blocks: 完成，使用太多块
+  dashboard_progress_completed_perfect: 完美完成
+  dashboard_progress_furthest_level_attempted: 尝试过最远的关卡
+  dashboard_progress_submitted: 已提交
+  dashboard_progress_view: 查看进度 ︰
+  dashboard_progress_student_in_script: '%{student_name} 的进度信息在 %{script_name}'
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 查看文本响应 ︰
+  dashboard_responses_none: 没有文本响应
   dashboard_sections_new_section: 新的学习小组
   dashboard_sections_jumbotron_instruction: 创建新的学习小组并为其添加学生。学习小组可以帮助您以小组为单位来管理学生，以便您跟踪他们的进度和管理他们的帐户。
   dashboard_sections_table_section: 单元
   dashboard_sections_table_secret: 登录类型
   dashboard_sections_table_grade: 年级
   dashboard_sections_table_course: 课程：
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: 学生
   dashboard_sections_table_code: 单元代码
   dashboard_sections_name: 学习小组名称
@@ -506,6 +540,19 @@ zh-CN:
   dashboard_sections_secret_none: '如果您希望您的学生自主管理他们自己的账户，包括选择他们自己的密码，请选择<b>无</b>加密类型。'
   dashboard_sections_print_secrets: 然后您可以打印一叠包含账户信息的卡片以单独分发给您的学生们。
   dashboard_sections_switch_section: 切换学习小组
+  dashboard_sections_close: 关闭
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Teacher
+  dashboard_sections_both_sections: 你想要学生两个部分都参加吗？
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: 添加学生
   dashboard_students_add_students: 添加多位学生
   dashboard_students_add_multiple: 输入或粘贴学生的名字，每行一个：
@@ -549,6 +596,7 @@ zh-CN:
   dashboard_course2: 课程 2：
   dashboard_course3: 课程 3：
   dashboard_course4: '课程 4 (测试版)： '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: 课程
   dashboard_curriculum_overview: K-5课程概述
   dashboard_overview: 概览
@@ -572,13 +620,6 @@ zh-CN:
   dashboard_login_picture: 图片
   dashboard_login_none: 电子邮件
   dashboard_new_password: 新密码
-  dashboard_progress_not_started: 未开始
-  dashboard_progress_in_progress: 正在进行
-  dashboard_progress_not_completed: 未完成
-  dashboard_progress_completed_too_many_blocks: 完成，使用太多块
-  dashboard_progress_completed_perfect: 完美完成
-  dashboard_progress_furthest_level_attempted: 尝试过最远的关卡
-  dashboard_progress_submitted: submitted
   dashboard_stage: 阶段
   dashboard_puzzle: 关卡
   dashboard_question: 问题
@@ -587,8 +628,10 @@ zh-CN:
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: 正确。
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_status: Status
+  dashboard_correctness_incorrect: 错误
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: 状态
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
   dashboard_multi_correct_percent: '% multiple choice correct'
@@ -611,10 +654,11 @@ zh-CN:
   dashboard_faq_k5: K-5 组的常见问题
   dashboard_announcements: 公告
   dashboard_announce_view_all: 查看全部
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
-  dashboard_announce_button_text: 了解详情
-  dashboard_announce_hoc: '<b>2015 年 11 月 23 日</b>-在你发起的编程一小时活动期间，你是否需要一名热衷于计算机科学教育的志愿者提供帮助？逾7,000 名志愿者正在寻找通过参与您的课堂或远程视频聊天的形式激发你学生的潜质。查看你所在地区的志愿者分布地图并取得的联系。'
-  dashboard_announce_playlab: '<b>2015 年 12 月 4 日</b>-编程一小时就在这里！面向所有年龄段、通过所有类型的设备尝试 50 节教程。本周新内容：在全新的游戏实验室里用冰河世纪和陶阿甘编写你自己的代码故事和游戏。'
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
+  dashboard_announce_petition: 作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、 28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。
+  dashboard_announce_petition_button: 添加您的姓名
   code_hoc_coming: 代码小时就在这里 — — 12 月 8-14 ！
   code_sign_up: 注册以便在计算机科学教育周期间参加
   learn_more: 现在就试试
@@ -724,12 +768,38 @@ zh-CN:
   course3_name: 课程 3
   course4_name: 第4课
   accelerated_name: 加速课程
-  cspunit3_name: CS Principles Unit 3
-  cspunit3_gradelevel: Grades 9-12
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 第一单元：互联网
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: '完整测试 - 共50题'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
+  cspunit3_gradelevel: 9-12年级
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: 加速课程
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: 口香糖
+  classicmaze_name: 经典迷宫
+  iceage_name: 冰河世纪
+  minecraft_name: 我的世界
+  starwarsblocks_name: 星球大战(块)
+  math_category_name: 数学
+  hoc_category_name: 编程一小时
+  csf_category_name: 电脑科学基本原理
+  csp_category_name: 电脑科学法则
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: 应用实验室
-  applab_gradelevel: Ages 13+
-  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
+  applab_gradelevel: 13岁以上
+  applab_shortdescription_congrats: 应用实验室是一个可以让你制造简单的应用程序的编程环境。设计应用程序，代码块或 JavaScript 来使它有作用，然后马上分享您的应用程序。
   codeorg_gradelevel: 适合年龄 4 岁以上
   codeintl_gradelevel: 适合年龄 4 岁以上
   thinkersmithspanish_gradelevel: Por todos
@@ -883,9 +953,9 @@ zh-CN:
   codesters_shortdescription: 开发您自己的游戏、 动画并使用 Python 进行艺术编程。
   texasinstruments_shortdescription: '使用 TI-84&#8482; +计算器。'
   teacherled_shortdescription: 从这些课件中得到启发，设计您自己的编程一小时活动。
-  course2_shortdescription_congrats: For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+  course2_shortdescription_congrats: 对于具有基本阅读能力的学生来说，本课程是基于课程1。 学生将创造程序来解决问题和开发他们可以分享的互动式游戏或者故事。建议 2-5年级。
+  course3_shortdescription_congrats: 准备好到下一个级别了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时， 学生将创造可以与任何人分享的的交互式故事和游戏。 建议给 4-5年级。
+  course4_shortdescription_congrats: 准备好继续了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时， 学生将创造可以与任何人分享的的交互式故事和游戏。 建议给 4-8年级。
   codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样的自学教程，并由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。通过学习，会了解到重复，循环，条件和基本算法。
   codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'

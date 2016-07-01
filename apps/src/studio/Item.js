@@ -4,8 +4,8 @@ var studioMsg = require('./locale');
 var spriteActions = require('./spriteActions');
 var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
-var utils = require('../utils');
-var _ = utils.getLodash();
+var utils = require('../utils'); // Provides Function.prototype.inherits
+var _ = require('lodash');
 var StudioAnimation = require('./StudioAnimation');
 var StudioSpriteSheet = require('./StudioSpriteSheet');
 
@@ -44,7 +44,7 @@ var Item = function (options) {
   this.fadeTime = constants.ITEM_FADE_TIME;
 
   /** @private {StudioAnimation} */
-  this.animation_ = new StudioAnimation($.extend({}, options, {
+  this.animation_ = new StudioAnimation(Object.assign({}, options, {
     spriteSheet: new StudioSpriteSheet({
       assetPath: options.image,
       defaultFramesPerAnimation: options.frames,
@@ -75,7 +75,7 @@ Item.prototype.getElement = function () {
 /**
  * Returns the frame of the spritesheet for the current walking direction.
  */
-Item.prototype.getDirectionFrame = function() {
+Item.prototype.getDirectionFrame = function () {
 
   // Every other frame, if we aren't yet rendering in the correct direction,
   // assign a new displayDir from state table; only one turn at a time.
@@ -191,31 +191,30 @@ Item.prototype.update = function () {
       if (this.activity === "roam") {
         candidate.score ++;
       } else if (this.activity === "chase") {
-        if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
+        if (candidateY === this.gridY - 1 && spriteY < this.y - bufferDistance) {
           candidate.score += 2;
-        } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
+        } else if (candidateY === this.gridY + 1 && spriteY > this.y + bufferDistance) {
           candidate.score += 2;
-        }
-        else {
+        } else {
           candidate.score += 1;
         }
 
-        if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
+        if (candidateX === this.gridX - 1 && spriteX < this.x - bufferDistance) {
           candidate.score ++;
-        } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
+        } else if (candidateX === this.gridX + 1 && spriteX > this.x + bufferDistance) {
           candidate.score ++;
         }
       } else if (this.activity === "flee") {
         candidate.score = 1;
-        if (candidateY == this.gridY - 1 && spriteY > this.y - bufferDistance) {
+        if (candidateY === this.gridY - 1 && spriteY > this.y - bufferDistance) {
           candidate.score ++;
-        } else if (candidateY == this.gridY + 1 && spriteY < this.y + bufferDistance) {
+        } else if (candidateY === this.gridY + 1 && spriteY < this.y + bufferDistance) {
           candidate.score ++;
         }
 
-        if (candidateX == this.gridX - 1 && spriteX > this.x - bufferDistance) {
+        if (candidateX === this.gridX - 1 && spriteX > this.x - bufferDistance) {
           candidate.score ++;
-        } else if (candidateX == this.gridX + 1 && spriteX < this.x + bufferDistance) {
+        } else if (candidateX === this.gridX + 1 && spriteX < this.x + bufferDistance) {
           candidate.score ++;
         }
       }
@@ -350,7 +349,7 @@ Item.prototype.getAnimationFrameDuration = function () {
 /**
  * Returns true if the item is currently fading away.
  */
-Item.prototype.isFading = function() {
+Item.prototype.isFading = function () {
   return !!this.startFadeTime;
 };
 
@@ -359,7 +358,7 @@ Item.prototype.isFading = function() {
  * Returns true if the item has finished fading away.  The caller will usually
  * then call removeElement to destroy this item's assets.
  */
-Item.prototype.hasCompletedFade = function() {
+Item.prototype.hasCompletedFade = function () {
   var currentTime = new Date().getTime();
 
   return this.startFadeTime && currentTime > this.startFadeTime + this.fadeTime;

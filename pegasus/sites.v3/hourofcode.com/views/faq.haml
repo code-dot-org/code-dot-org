@@ -1,7 +1,7 @@
 %h1= hoc_s(:hoc_faq_title)
 
 %h2#about= hoc_s(:hoc_faq_what_is_hoc_q)
-%div= hoc_s(:hoc_faq_what_is_hoc_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+%div= hoc_s(:hoc_faq_what_is_hoc_a).gsub(/%{tutorials}/, resolve_url('https://code.org/learn')).gsub(/%{patners}/, resolve_url('/partners'))
 
 %br/
 %a{href: resolve_url('https://code.org/learn'), target: "_blank"}
@@ -9,10 +9,10 @@
     =hoc_s(:hoc_faq_last_year)
 
 %h2= hoc_s(:hoc_faq_when_is_hoc_q)
-%div= hoc_s(:hoc_faq_when_is_hoc_a).gsub(/%{campaign_date}/, campaign_date('full'))
+%div= hoc_s(:hoc_faq_when_is_hoc_a).gsub(/%{csedweek_url}/, 'https://csedweek.org').gsub(/%{campaign_date_year}/, campaign_date('year')).gsub(/%{campaign_date_full}/, campaign_date('full')).gsub(/%{grace_hopper}/, 'http://en.wikipedia.org/wiki/Grace_Hopper')
 
 %h2= hoc_s(:hoc_faq_why_cs_q)
-%div= hoc_s(:hoc_faq_why_cs_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org'))
+%div= hoc_s(:hoc_faq_why_cs_a).gsub(/%{stats_url}/, resolve_url('/promote/stats'))
 
 %h2= hoc_s(:hoc_faq_how_participate_q)
 %div= hoc_s(:hoc_faq_how_participate_a).gsub('/how-to', resolve_url('/how-to')).gsub(/%{campaign_date}/, campaign_date('start-short'))
@@ -24,18 +24,14 @@
 %div= hoc_s(:hoc_faq_host_a).gsub('/how-to', resolve_url('/how-to')).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
 
 %h2= hoc_s(:hoc_faq_devices_q)
-%div= hoc_s(:hoc_faq_devices_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org'))
+%div= hoc_s(:hoc_faq_devices_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org')).gsub(/%{unplugged_url}/, resolve_url('https://code.org/curriculum/unplugged'))
 
 %h2= hoc_s(:hoc_faq_need_computers_q)
-%div= hoc_s(:hoc_faq_need_computers_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+%div= hoc_s(:hoc_faq_need_computers_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{pair_programming_research}/, 'http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning').gsub(/%{pair_programming_video}/, 'https://www.youtube.com/watch?v=vgkahOzFH2Q').gsub(/%{unplugged_url}/, resolve_url('https://code.org/curriculum/unplugged'))
 
 -if @country == 'us'
   %h2= hoc_s(:hoc_faq_logo_q)
   %div= hoc_s(:hoc_faq_logo_a)
-
--if @country == 'us'
-  %h2= hoc_s(:hoc_faq_posters_q)
-  %div= hoc_s(:hoc_faq_posters_a).gsub('/promote/resources', resolve_url('/promote/resources'))
 
 -if @country != 'us'
   %h2= hoc_s(:hoc_faq_international_q).gsub(/<country>/, HOC_COUNTRIES[@country]['full_name'])
@@ -49,9 +45,6 @@
 
 %h2= hoc_s(:hoc_faq_certificates_q)
 %div= hoc_s(:hoc_faq_certificates_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
-
-%h2= hoc_s(:hoc_faq_frozen_q)
-%div= hoc_s(:hoc_faq_frozen_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
 
 %h2= hoc_s(:hoc_faq_high_school_q)
 %div= hoc_s(:hoc_faq_high_school_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org'))

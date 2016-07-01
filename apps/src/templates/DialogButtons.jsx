@@ -1,5 +1,6 @@
+var React = require('react');
 var msg = require('../locale');
-var Lightbulb = require('./Lightbulb.jsx');
+var Lightbulb = require('./Lightbulb');
 
 var DialogButtons = React.createClass({
   propTypes: {
@@ -14,20 +15,7 @@ var DialogButtons = React.createClass({
     ok: React.PropTypes.bool,
     previousLevel: React.PropTypes.bool,
     shouldPromptForHint: React.PropTypes.bool,
-    tryAgain: React.PropTypes.string,
-    userId: React.PropTypes.number
-  },
-
-  getButtonMessage: function () {
-    // Used for A/B testing on the effects of the word "hint" in the
-    // "get a hint" workflow. Anonymous users and users with even IDs
-    // should get the text "See hint", whereas users with odd IDs should
-    // see "Get a block".
-    // Test initiated March 28, 2016
-    // TODO elijah - stop the experiment and pick one string or the
-    // other after a sufficient amount of data has been collected and
-    // looked at.
-    return (this.props.userId % 2 === 1) ? msg.showBlock() : msg.hintRequest();
+    tryAgain: React.PropTypes.string
   },
 
   render: function () {
@@ -81,7 +69,7 @@ var DialogButtons = React.createClass({
         if (this.props.shouldPromptForHint) {
           hintButton = (<button id="hint-request-button" className="lightbulb-button">
             <Lightbulb size={32} style={style.lightbulb}/>
-            {this.getButtonMessage()}
+            {msg.hintRequest()}
           </button>);
         }
         againButton = (<button id="again-button" className="launch">
@@ -114,3 +102,61 @@ var DialogButtons = React.createClass({
 });
 
 module.exports = DialogButtons;
+
+if (BUILD_STYLEGUIDE) {
+  DialogButtons.styleGuideExamples = storybook => {
+    storybook
+      .storiesOf('DialogButtons', module)
+      .addWithInfo(
+        'ok',
+        '',
+        () => <DialogButtons ok={true}/>
+      )
+      .addWithInfo(
+        'cancelText',
+        '',
+        () => <DialogButtons cancelText="Custom Cancel Text"/>
+      )
+      .addWithInfo(
+        'confirmText',
+        '',
+        () => <DialogButtons confirmText="Custom Confirm Text"/>
+      )
+      .addWithInfo(
+        'previousLevel',
+        '',
+        () => <DialogButtons previousLevel={true}/>
+      )
+      .addWithInfo(
+        'tryAgain',
+        '',
+        () => <DialogButtons tryAgain="Custom Try Again Text"/>
+      )
+      .addWithInfo(
+        'tryAgain with hint',
+        '',
+        () => <DialogButtons shouldPromptForHint={true} tryAgain="Custom Try Again Text"/>
+      )
+      .addWithInfo(
+        'K1 customizations',
+        'To use k1 customization, you must pass an assetUrl function.',
+        () => <DialogButtons
+                  isK1={true}
+                  tryAgain="Custom Try Again"
+                  nextLevel={true}
+                  continueText="Custom Continue"
+                  assetUrl={url => '/blockly/'+url}/>
+      )
+      .addWithInfo(
+        'K1 freePlay',
+        'To use k1 customization, you must pass an assetUrl function.',
+        () => <DialogButtons
+                  isK1={true}
+                  freePlay={true}
+                  tryAgain="Custom Try Again"
+                  nextLevel={true}
+                  continueText="Custom Continue"
+                  assetUrl={url => '/blockly/'+url}/>
+      );
+  };
+}

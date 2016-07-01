@@ -9,13 +9,12 @@
  // channels declared as local variable to avoid conflicts (cpirich)
  // cleanup jshint errors (cpirich)
  // add rgba support (davidsbailey)
-
-module.exports = function(color_string)
-{
+ // cleanup eslint errors (bbuchanan)
+module.exports = function (color_string) {
     this.ok = false;
 
     // strip any leading #
-    if (color_string.charAt(0) == '#') { // remove # if any
+    if (color_string.charAt(0) === '#') { // remove # if any
         color_string = color_string.substr(1,6);
     }
 
@@ -170,7 +169,7 @@ module.exports = function(color_string)
         yellowgreen: '9acd32'
     };
     for (var key in simple_colors) {
-        if (color_string == key) {
+        if (color_string === key) {
             color_string = simple_colors[key];
         }
     }
@@ -258,9 +257,9 @@ module.exports = function(color_string)
         var r = this.r.toString(16);
         var g = this.g.toString(16);
         var b = this.b.toString(16);
-        if (r.length == 1) { r = '0' + r; }
-        if (g.length == 1) { g = '0' + g; }
-        if (b.length == 1) { b = '0' + b; }
+        if (r.length === 1) { r = '0' + r; }
+        if (g.length === 1) { g = '0' + g; }
+        if (b.length === 1) { b = '0' + b; }
         return '#' + r + g + b;
     };
 };

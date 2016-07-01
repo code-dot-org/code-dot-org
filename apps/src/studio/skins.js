@@ -813,10 +813,10 @@ function loadHoc2015(skin, assetUrl) {
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: name == 'r2-d2' ? 14 : 16,
+        normal: name === 'r2-d2' ? 14 : 16,
         turns: 8,
         emotions: 0,
-        walk: name == 'r2-d2' ? 14 : 8
+        walk: name === 'r2-d2' ? 14 : 8
       },
       animations: {
         turns: 8
@@ -894,11 +894,10 @@ function loadHoc2015(skin, assetUrl) {
   // of the two maps that use jumbo pieces ("circle" and "horizontal") we
   // return a special version of the map that just uses regular tile pieces.
 
-  skin.getMap = function(background, map) {
-    if (background == "hoth" && (map == "circle" || map == "horizontal")) {
+  skin.getMap = function (background, map) {
+    if (background === "hoth" && (map === "circle" || map === "horizontal")) {
       return map + "_nonjumbo";
-    }
-    else {
+    } else {
       return map;
     }
   };
@@ -1321,7 +1320,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
   // Sounds.
-  skin.sounds = [ 'move1', 'move2', 'move3', 'move4' ];
+  skin.sounds = ['move1', 'move2', 'move3', 'move4'];
 
   skin.soundChoices = [
     ];
@@ -1441,7 +1440,7 @@ function loadStudio(skin, assetUrl) {
     background: skin.assetUrl('background_grid.png'),
   };
 
-  skin.avatarList = [ "dog", "cat", "penguin", "dinosaur", "octopus", "witch",
+  skin.avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus", "witch",
     "bat", "bird", "dragon", "squirrel", "wizard", "alien", "ghost", "monster",
     "robot", "unicorn", "zombie", "knight", "ninja", "pirate", "caveboy",
     "cavegirl", "princess", "spacebot", "soccergirl", "soccerboy", "tennisgirl",
@@ -1534,6 +1533,14 @@ function loadStudio(skin, assetUrl) {
     [msg.setSpriteTennisBoy(), '"tennisboy"']];
 
   skin.projectileChoices = [
+    [msg.projectileAirplane(), '"airplane"'],
+    [msg.projectileBasketball(), '"basketball"'],
+    [msg.projectileDisc(), '"disc"'],
+    [msg.projectilePie(), '"pie"'],
+    [msg.projectilePumpkin(), '"pumpkin"'],
+    [msg.projectileStar(), '"star"'],
+    [msg.projectileSandwich(), '"sandwich"'],
+    [msg.projectileSnowball(), '"snowball"'],
     [msg.projectileBlueFireball(), '"blue_fireball"'],
     [msg.projectilePurpleFireball(), '"purple_fireball"'],
     [msg.projectileRedFireball(), '"red_fireball"'],
@@ -1543,6 +1550,14 @@ function loadStudio(skin, assetUrl) {
     [msg.projectileRandom(), RANDOM_VALUE]];
 
   skin.makeProjectileChoices = [
+    [msg.makeProjectileAirplane(), '"airplane"'],
+    [msg.makeProjectileBasketball(), '"basketball"'],
+    [msg.makeProjectileDisc(), '"disc"'],
+    [msg.makeProjectilePie(), '"pie"'],
+    [msg.makeProjectilePumpkin(), '"pumpkin"'],
+    [msg.makeProjectileStar(), '"star"'],
+    [msg.makeProjectileSandwich(), '"sandwich"'],
+    [msg.makeProjectileSnowball(), '"snowball"'],
     [msg.makeProjectileBlueFireball(), '"blue_fireball"'],
     [msg.makeProjectilePurpleFireball(), '"purple_fireball"'],
     [msg.makeProjectileRedFireball(), '"red_fireball"'],
@@ -1551,6 +1566,14 @@ function loadStudio(skin, assetUrl) {
     [msg.makeProjectileRedHearts(), '"red_hearts"']];
 
   skin.whenProjectileCollidedChoices = [
+    [msg.whenSpriteCollidedWithAirplane(), 'airplane'],
+    [msg.whenSpriteCollidedWithBasketball(), 'basketball'],
+    [msg.whenSpriteCollidedWithDisc(), 'disc'],
+    [msg.whenSpriteCollidedWithPie(), 'pie'],
+    [msg.whenSpriteCollidedWithPumpkin(), 'pumpkin'],
+    [msg.whenSpriteCollidedWithStar(), 'star'],
+    [msg.whenSpriteCollidedWithSandwich(), 'sandwich'],
+    [msg.whenSpriteCollidedWithSnowball(), 'snowball'],
     [msg.whenSpriteCollidedWithBlueFireball(), 'blue_fireball'],
     [msg.whenSpriteCollidedWithPurpleFireball(), 'purple_fireball'],
     [msg.whenSpriteCollidedWithRedFireball(), 'red_fireball'],
@@ -1562,6 +1585,14 @@ function loadStudio(skin, assetUrl) {
   // NOTE: item names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
+    [msg.itemAirplane(), '"item_airplane"'],
+    [msg.itemBasketball(), '"item_basketball"'],
+    [msg.itemDisc(), '"item_disc"'],
+    [msg.itemPie(), '"item_pie"'],
+    [msg.itemPumpkin(), '"item_pumpkin"'],
+    [msg.itemStar(), '"item_star"'],
+    [msg.itemSandwich(), '"item_sandwich"'],
+    [msg.itemSnowball(), '"item_snowball"'],
     [msg.itemBlueFireball(), '"item_blue_fireball"'],
     [msg.itemPurpleFireball(), '"item_purple_fireball"'],
     [msg.itemRedFireball(), '"item_red_fireball"'],
@@ -1571,31 +1602,66 @@ function loadStudio(skin, assetUrl) {
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
-
-exports.load = function(assetUrl, id) {
+exports.load = function (assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
+    'airplane',
+    'basketball',
+    'disc',
+    'pie',
+    'pumpkin',
+    'star',
+    'sandwich',
+    'snowball',
     'blue_fireball',
     'purple_fireball',
     'red_fireball',
     'purple_hearts',
     'red_hearts',
-    'yellow_hearts',
+    'yellow_hearts'
   ];
+
+  skin.specialProjectileProperties = {
+    'airplane': { frames: 10 },
+    'basketball': { frames: 10 },
+    'disc': { frames: 10 },
+    'pie': { frames: 10 },
+    'pumpkin': { frames: 10 },
+    'star': { frames: 10 },
+    'sandwich': { frames: 10 },
+    'snowball': { frames: 10 },
+  };
+
   // TODO: proper item class names
   skin.ItemClassNames = [
+    'item_airplane',
+    'item_basketball',
+    'item_disc',
+    'item_pie',
+    'item_pumpkin',
+    'item_star',
+    'item_sandwich',
+    'item_snowball',
     'item_blue_fireball',
     'item_purple_fireball',
     'item_red_fireball',
     'item_purple_hearts',
     'item_red_hearts',
-    'item_yellow_hearts',
+    'item_yellow_hearts'
   ];
 
   // Images
+  skin.airplane = skin.assetUrl('projectile_airplane.png');
+  skin.basketball = skin.assetUrl('projectile_basketball.png');
+  skin.disc = skin.assetUrl('projectile_disc.png');
+  skin.pie = skin.assetUrl('projectile_pie.png');
+  skin.pumpkin = skin.assetUrl('projectile_pumpkin.png');
+  skin.star = skin.assetUrl('projectile_star.png');
+  skin.sandwich = skin.assetUrl('projectile_sandwich.png');
+  skin.snowball = skin.assetUrl('projectile_snowball.png');
   skin.yellow_hearts = skin.assetUrl('yellow_hearts.gif');
   skin.purple_hearts = skin.assetUrl('purple_hearts.gif');
   skin.red_hearts = skin.assetUrl('red_hearts.gif');
@@ -1604,6 +1670,14 @@ exports.load = function(assetUrl, id) {
   skin.red_fireball = skin.assetUrl('red_fireball.png');
 
   // TODO: proper item class names
+  skin.item_airplane = skin.assetUrl('projectile_airplane.png');
+  skin.item_basketball = skin.assetUrl('projectile_basketball.png');
+  skin.item_disc = skin.assetUrl('projectile_disc.png');
+  skin.item_pie = skin.assetUrl('projectile_pie.png');
+  skin.item_pumpkin = skin.assetUrl('projectile_pumpkin.png');
+  skin.item_star = skin.assetUrl('projectile_star.png');
+  skin.item_sandwich = skin.assetUrl('projectile_sandwich.png');
+  skin.item_snowball = skin.assetUrl('projectile_snowball.png');
   skin.item_yellow_hearts = skin.assetUrl('yellow_hearts.gif');
   skin.item_purple_hearts = skin.assetUrl('purple_hearts.gif');
   skin.item_red_hearts = skin.assetUrl('red_hearts.gif');
@@ -1625,7 +1699,7 @@ exports.load = function(assetUrl, id) {
   skin.goalSuccess = skin.assetUrl('goal_success.png');
 
   // Sounds
-  skin.builtinSounds = [ 'start', 'win', 'failure', 'flag' ];
+  skin.builtinSounds = ['start', 'win', 'failure', 'flag'];
   skin.sounds = [
     'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
     'winpoint', 'winpoint2', 'losepoint', 'losepoint2'
@@ -1668,6 +1742,11 @@ exports.load = function(assetUrl, id) {
   skin.dropdownThumbnailWidth = 50;
   skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;
+
+  // Offset for the rectangle in collidable in which wall collisions occur.
+  // Default to no offset here and allow other skins to override.
+  skin.wallCollisionRectOffsetX = 0;
+  skin.wallCollisionRectOffsetY = 0;
 
   skin.setSpritePrefix = msg.setSprite();
 

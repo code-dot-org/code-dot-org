@@ -26,6 +26,7 @@ exports.TestResults = {
   NO_TESTS_RUN: -1,
 
   // The level was not solved.
+  GENERIC_FAIL: 0,                    // Used by DSL defined levels.
   EMPTY_BLOCK_FAIL: 1,                // An "if" or "repeat" block was empty.
   TOO_FEW_BLOCKS_FAIL: 2,             // Fewer than the ideal number of blocks used.
   LEVEL_INCOMPLETE_FAIL: 3,           // Default failure to complete a level.
@@ -51,14 +52,20 @@ exports.TestResults = {
   MISSING_RECOMMENDED_BLOCK_UNFINISHED: -4, // The level was attempted but not solved without a recommended block
   EXTRA_FUNCTION_FAIL: -5,            // The program contains a JavaScript function when it should not
   LOCAL_FUNCTION_FAIL: -6,            // The program contains an unexpected JavaScript local function
+  GENERIC_LINT_FAIL: -7,              // The program contains a lint error
+  LOG_CONDITION_FAIL: -8,             // The program execution log did not pass a required condition
+
+  // Codes for unvalidated levels.
+  UNSUBMITTED_ATTEMPT: -50,           // Progress was saved without submitting for review, or was unsubmitted.
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,               // More than the ideal number of blocks were used.
   APP_SPECIFIC_ACCEPTABLE_FAIL: 21,       // Application-specific acceptable failure.
   MISSING_RECOMMENDED_BLOCK_FINISHED: 22, // The level was solved without a recommended block
 
-  // Other.
+  // The level was solved in an optimal way.
   FREE_PLAY: 30,   // The user is in free-play mode.
+  PASS_WITH_EXTRA_TOP_BLOCKS: 31, // There was more than one top-level block.
   EDIT_BLOCKS: 70, // The user is creating/editing a new level.
 
   // The level was solved in the ideal manner.
@@ -88,6 +95,8 @@ exports.KeyCodes = {
   UP: 38,
   RIGHT: 39,
   DOWN: 40,
+  COPY: 67,
+  PASTE: 86,
   DELETE: 127
 };
 

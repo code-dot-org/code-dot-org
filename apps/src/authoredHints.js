@@ -3,13 +3,39 @@
  * Used exclusively by StudioApp.
  */
 
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var dom = require('./dom');
 var msg = require('./locale');
-var HintSelect = require('./templates/instructions/HintSelect.jsx');
-var HintsDisplay = require('./templates/instructions/HintsDisplay.jsx');
-var HintDialogContent = require('./templates/instructions/HintDialogContent.jsx');
+var HintsDisplay = require('./templates/instructions/HintsDisplay');
+var HintDialogContent = require('./templates/instructions/HintDialogContent');
 var authoredHintUtils = require('./authoredHintUtils');
-var Lightbulb = require('./templates/Lightbulb.jsx');
+var Lightbulb = require('./templates/Lightbulb');
+import { setHasAuthoredHints } from './redux/instructions';
+
+/**
+ * For some of our skins, our partners don't want the characters appearing to
+ * say anything they haven't approved. For these, we will make it so that our
+ * hint callout doesnt have a tip
+ * @param {string} skin - Name of the skin
+ * @returns {boolean}
+ */
+function shouldDisplayTips(skin) {
+  /*eslint-disable no-fallthrough*/
+  switch (skin) {
+    case 'infinity':
+    case 'anna':
+    case 'elsa':
+    case 'craft':
+    // star wars
+    case 'hoc2015':
+    case 'hoc2015x':
+      return false;
+  }
+  /*eslint-enable no-fallthrough*/
+  return true;
+}
 
 var AuthoredHints = function (studioApp) {
   this.studioApp_ = studioApp;
@@ -85,6 +111,10 @@ AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
 
   this.contextualHints_ = newContextualHints;
   this.updateLightbulbDisplay_(animateLightbulb);
+
+  if (newContextualHints.length > 0 && this.getUnseenHints().length > 0) {
+    this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
+  }
 };
 
 /**
@@ -116,30 +146,22 @@ AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
   this.hints_ = hints;
   this.scriptId_ = scriptId;
   this.levelId_ = levelId;
+
+  if (hints && hints.length > 0) {
+    this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
+  }
 };
 
 /**
  * Sets up the Authored Hints UI; decorates the specified element with a
- * lightbulb image and hint counter, and adds a click handler to show
- * a qtip for the next unseen hint.
+ * lightbulb image and hint counter
  *
  * @param {Element} promptIcon - the page element to "decorate" with the
  *        lightbulb
- * @param {Element} clickTarget
- * @param {function} callback - a StudioApp function to be treated as
- *        the "default" action when there are no unseen hints.
  */
-AuthoredHints.prototype.display = function (promptIcon, clickTarget, callback) {
+AuthoredHints.prototype.display = function (promptIcon) {
   this.promptIcon = promptIcon;
   this.updateLightbulbDisplay_();
-  clickTarget.addEventListener('click', function () {
-    var hintsToShow = this.getUnseenHints();
-    if (hintsToShow.length > 0) {
-      this.showHint_(hintsToShow[0], callback);
-    } else {
-      callback();
-    }
-  }.bind(this));
 };
 
 /**
@@ -192,14 +214,6 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (shouldAnimate) {
 };
 
 /**
- * Marks the next unseen hint as being viewed.
- */
-AuthoredHints.prototype.userViewedHint_ = function () {
-  var nextHint = this.getUnseenHints()[0];
-  this.recordUserViewedHint_(nextHint);
-};
-
-/**
  * @returns {React.Element}
  */
 AuthoredHints.prototype.getHintsDisplay = function () {
@@ -208,8 +222,12 @@ AuthoredHints.prototype.getHintsDisplay = function () {
       hintReviewTitle={msg.hintReviewTitle()}
       seenHints={this.getSeenHints()}
       unseenHints={this.getUnseenHints()}
-      onUserViewedHint={this.userViewedHint_.bind(this)}/>
+      viewHint={this.showNextHint_.bind(this)}/>
   );
+};
+
+AuthoredHints.prototype.showNextHint_ = function () {
+  this.showHint_(this.getUnseenHints()[0]);
 };
 
 /**
@@ -220,54 +238,52 @@ AuthoredHints.prototype.getHintsDisplay = function () {
  * @param {function} callback
  */
 AuthoredHints.prototype.showHint_ = function (hint, callback) {
-  $('#prompt-icon').qtip({
-    content: {
-      text: function(html, api) {
-        var container = document.createElement('div');
+  let position = {
+    my: "bottom left",
+    at: "top right"
+  };
 
-        var element = React.createElement(HintSelect, {
-          showInstructions: function () {
-            api.destroy();
-            callback();
-          }.bind(this),
+  if (this.studioApp_.reduxStore.getState().pageConstants.instructionsInTopPane) {
+    // adjust position when hints are on top
+    position = {
+      my: "middle left",
+      at: "middle right"
+    };
+  }
 
-          showHint: function () {
-            var content = document.createElement('div');
-            api.set('content.text', content);
+  $('.modal').modal('hide');
+  $(this.promptIcon).qtip({
+    events: {
+      visible: function (event, api) {
+        var container = api.get("content.text");
 
-            ReactDOM.render(React.createElement(HintDialogContent, {
-              content: hint.content,
-              block: hint.block,
-            }), content, function () {
-              api.reposition();
-            });
-
-            $(api.elements.content).find('img').on('load', function (e) {
-              api.reposition(e);
-            });
-            this.recordUserViewedHint_(hint);
-          }.bind(this),
+        ReactDOM.render(<HintDialogContent
+          content={hint.content}
+          block={hint.block}
+        />, container, function () {
+          api.reposition();
         });
 
-        ReactDOM.render(element, container);
-
-        return container;
-      }.bind(this),
+        $(container).find('img').on('load', function (e) {
+          api.reposition(e);
+        });
+        this.recordUserViewedHint_(hint);
+      }.bind(this)
+    },
+    content: {
+      text: document.createElement('div'),
       title: {
         button: $('<div class="tooltip-x-close"/>')
       }
     },
     style: {
       classes: "cdo-qtips qtip-authored-hint",
-      tip: {
+      tip: shouldDisplayTips(this.studioApp_.skin.id) ? {
         width: 20,
         height: 20
-      }
+      } : false
     },
-    position: {
-      my: "bottom left",
-      at: "top right"
-    },
+    position: position,
     hide: {
       event: 'unfocus'
     },

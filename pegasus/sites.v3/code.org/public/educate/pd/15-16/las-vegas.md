@@ -20,38 +20,7 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
  
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the Date**
-
-Quarter 4: Saturday, April 2, 2016 
-
-8:30am - 3:30pm
-<br/>
-Breakfast and lunch will be served.
-
-
-**Location**
-
-[Innevation Center<br/>
-Collaboration Station - 3rd Floor<br/>
-6795 S Edmond St<br/>
-Las Vegas, NV 89118](https://www.google.com/maps/place/The+Innevation+Center/@36.066623,-115.2136283,15z/data=!4m2!3m1!1s0x0:0x4f1c35e8f68b2e74)
-
-Parking is free in front of the building, please park in Visitor Parking. Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop!
-
-**What to bring to Phase 3 quarterly sessions:**
-
-Laptop and Charger
-<br/>
-ECS green journal<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
-
+Milestone Complete!
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
 
@@ -70,7 +39,7 @@ Breakfast and lunch will be served.
 **Location**
 
 [Instructional Design and Professional Learning Division<br/>
-Room: TBD<br/>
+Room: Library<br/>
 3950 South Pecos-Mcleod<br/> 
 Las Vegas, NV 89121<br/>](https://goo.gl/maps/ZevyChXU3fC2)
 

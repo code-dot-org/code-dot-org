@@ -1,9 +1,0 @@
-name 'CSPPD impact in program'
-title 'Impact of Computing'
-height '100'
-skip_sound true
-
-markdown <<MARKDOWN
-
-#### What connections do you think might exist between the ideas covered in the videos you just watched and the units of CSP that you learned about earlier?
-MARKDOWN

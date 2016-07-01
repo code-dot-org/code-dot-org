@@ -1,7 +1,14 @@
 "sk-SK":
   hour_of_code: Hodina kódovania
   hello: Ahoj svet
+  'yes': "Áno"
+  'no': Nie
   select_language: Prosím, zvoľte si jazyk
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Dozvedieť sa viac
   en: Počítačová veda
   computer_science_edweek: Vzdelávací týždeň počítačovej vedy
   csedweek_dates: 8. až 14. Decembra 2014
@@ -80,7 +87,7 @@
   congratulations_on_completing_course4: Congratulations on completing Course 4
   congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
     Course
-  congrats_next_tutorials_title: Skúste nasledujúce návody
+  congrats_next_tutorials_title: Pokračovať na ďalšiu úroveň
   congrats_next_tutorials_desc: Vyskúšajte tieto kratšie, jednohodinové výuky alebo
     zkúste <a href="%{current_path}/next"> partnerská výuka</a>.
   get_a_certificate_of_achievement: Získaj osvedčenie o dokončení
@@ -364,6 +371,9 @@
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
   homepage_banner_20k_teachers_link: Dozvedieť sa viac
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Hodina kódovania
   homepage_slot_text_blurb_hoc: Učiť sa môže každý. Začni dnes
   homepage_slot_text_link_hoc: Vyskúšaj Hodinu Kódu
@@ -389,6 +399,7 @@
   homepage_slot_text_link_stats: Pozrite sa na štatistiky
   homepage_slot_text_link_buy: Zapojte sa
   homepage_slot_text_link_donate: Venuj dar
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Výtvory študentov Code Studia
   homepage_header_donors: Code.org ďakuje za podporu
   homepage_donors_seall: Zobraziť všetky
@@ -579,6 +590,7 @@
   dashboard_landing_new_k5courses: Novinka! Vyskúšajte naše kurzy pre žiakov 1. stupňa
     ZŠ.
   dashboard_landing_useful_links: "Ďalšie užitočné odkazy (iba v angličtine)"
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Spýtaj sa osobne! Zúčastni sa našich pravidelných
     mesačných video rozhovorov v úradných hodinách.
   dashboard_landing_print_certificates: Tlač certifikátov pre študentov, ktorí dokončiť
@@ -598,6 +610,11 @@
   dashboard_landing_more_tutorials_desc: <a href="/learn/beyond">Naši partneri vám
     ponúkajú</a> ďalšie návody. Naučte sa programovať s robotmi, vyrábajte webstránky,
     urobte si vlastnú appku či objavujte ďalšie jazyky – C++, Ruby alebo Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Hodina kódu pre všetky vekové kategórie
   dashboard_hoc_courses_desc: Skúste s vašimi študentmi niektorý z týchto hodinových
     návodov!
@@ -649,6 +666,18 @@
   dashboard_action_remove_confirm: Odstrániť?
   dashboard_action_done: Hotovo
   dashboard_action_required: požadované
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Domovská stránka učiteľa
   dashboard_navigation_section_student_progress: "Študentské účty a pokrok"
   dashboard_navigation_section_teacher_progress: Pokrok tvojho kurzu
@@ -657,7 +686,7 @@
   dashboard_navigation_section_pd: Profesionálny vývoj
   dashboard_navigation_section_speakers: Informatici ako <br/> hostia-rečníci
   dashboard_navigation_all_sections: "Študentské účty a pokrok"
-  dashboard_navigation_view_progress: Zobraziť pokrok
+  dashboard_navigation_view_progress: Pokrok
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Pridať Študentov
@@ -666,6 +695,19 @@
   dashboard_navigation_view_stats: Zobraziť Štatistiky
   dashboard_navigation_section: 'Sekcia: %{section_name}'
   dashboard_navigation_student: "Študent: %{student_name}"
+  dashboard_progress_not_started: nezačal
+  dashboard_progress_in_progress: v procese
+  dashboard_progress_not_completed: nedokončené
+  dashboard_progress_completed_too_many_blocks: dokončené, príliš veľa blokov
+  dashboard_progress_completed_perfect: dokončené, super
+  dashboard_progress_furthest_level_attempted: najvyššia dosiahnutá úroveň
+  dashboard_progress_submitted: predložené
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nová sekcia
   dashboard_sections_jumbotron_instruction: Vytvorte nové oddiely a pridajte do nich
     študentov. Sekcie pomáhajú organizovať študentov do menších skupín, môžete sledovať
@@ -674,6 +716,7 @@
   dashboard_sections_table_secret: Spôsob prihlásenia
   dashboard_sections_table_grade: Stupeň
   dashboard_sections_table_course: Kurz
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Študenti"
   dashboard_sections_table_code: Kód sekcie
   dashboard_sections_name: Meno sekcie
@@ -689,6 +732,26 @@
   dashboard_sections_print_secrets: Potom si môžete vytlačiť stránku s kartičkami,
     obsahujúcimi informácie o individuálnych účtoch a rozdať ich vašim študentom.
   dashboard_sections_switch_section: 'Prepnúť sekciu:'
+  dashboard_sections_close: Zatvoriť
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Pridať študenta
   dashboard_students_add_students: Pridať viacerých študentov
   dashboard_students_add_multiple: 'Zadajte nebo vložte mená vašich študentov, jedno
@@ -745,6 +808,8 @@
   dashboard_course2: 'Kurz 2:'
   dashboard_course3: 'Kurz 3:'
   dashboard_course4: 'Course 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Osnovy
   dashboard_curriculum_overview: Prehľad učiva 1. stupňa ZŠ
   dashboard_overview: Prehľad
@@ -768,14 +833,7 @@
   dashboard_login_picture: Obrázok
   dashboard_login_none: E-mail
   dashboard_new_password: nové heslo
-  dashboard_progress_not_started: nezačal
-  dashboard_progress_in_progress: v procese
-  dashboard_progress_not_completed: nedokončené
-  dashboard_progress_completed_too_many_blocks: dokončené, príliš veľa blokov
-  dashboard_progress_completed_perfect: dokončené, super
-  dashboard_progress_furthest_level_attempted: najvyššia dosiahnutá úroveň
-  dashboard_progress_submitted: submitted
-  dashboard_stage: Etapa
+  dashboard_stage: "Úroveň"
   dashboard_puzzle: "Úloha"
   dashboard_question: Otázka
   dashboard_response: Response
@@ -784,6 +842,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Správne
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -811,17 +871,17 @@
   dashboard_faq_k5: "Často kladené otázky – prvý stupeň"
   dashboard_announcements: Oznámenia
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Dozvedieť sa viac
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Pridaj svoje meno
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
   learn_more: "Ďalšie informácie"
@@ -946,15 +1006,41 @@
   course3_name: Course 3
   course4_name: Course 4
   accelerated_name: Zrýchlený kurz
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Zrýchlený kurz
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Klasické bludisko
+  iceage_name: Doba ľadová
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matematika
+  hoc_category_name: Hodina kódovania
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Laboratórium aplikácií
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Vek 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

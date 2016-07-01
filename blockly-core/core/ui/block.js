@@ -17,6 +17,8 @@
  * limitations under the License.
  */
 
+/* global Blockly, goog */
+
 /**
  * @fileoverview The class representing one block.
  * @author fraser@google.com (Neil Fraser)
@@ -67,8 +69,8 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.rendered = false;
   this.disabled = false;
   this.tooltip = '';
-  // Disabling block context menus for code.org
-  this.contextMenu = false;
+
+  this.contextMenu = true;
 
   this.parentBlock_ = null;
   this.childBlocks_ = [];
@@ -79,6 +81,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.nextConnectionDisabled_ = false;
   this.collapsed_ = false;
   this.dragging_ = false;
+
   // Used to hide function blocks when not in modal workspace. This property
   // is not serialized/deserialized.
   this.currentlyHidden_ = false;
@@ -136,6 +139,8 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
     this.setCurrentlyHidden(true);
   }
 
+  this.handleBlockLimitChanges();
+
   /** @type {goog.events.EventTarget} */
   this.blockEvents = new goog.events.EventTarget();
 };
@@ -188,6 +193,35 @@ Blockly.Block.prototype.init = null;
 Blockly.Block.prototype.onchange = null;
 
 /**
+ * Update limit UI on block count changes.
+ */
+Blockly.Block.prototype.handleBlockLimitChanges = function() {
+  if (this.blockSpace && this.blockSpace.blockSpaceEditor) {
+    // Normally we want to show block limits in the flyout, but while editing
+    // blocks (e.g. in the Toolbox Blocks Editor), we'd like to show them in
+    // the main block space.
+    var shouldShowBlockLimits = Blockly.editBlocks ? !this.isInFlyout : this.isInFlyout;
+    if (shouldShowBlockLimits) {
+      this.blockSpace.blockSpaceEditor.blockLimits.events.listen('change',
+          this.onBlockLimitChange.bind(this));
+    }
+  }
+};
+
+Blockly.Block.prototype.onBlockLimitChange = function(eventObject) {
+  if (eventObject.type !== this.type) {
+    return;
+  }
+  if (!this.svg_) {
+    return;
+  }
+
+  // When editing blocks, show full count. Otherwise, show remaining #.
+  var displayCount = Blockly.editBlocks ? eventObject.limit : eventObject.remaining;
+  this.svg_.updateLimit(displayCount);
+};
+
+/**
  * @param {Blockly.BlockSpace} blockSpace target blockspace to begin rendering on
  */
 Blockly.Block.prototype.setRenderBlockSpace = function(blockSpace) {
@@ -231,6 +265,7 @@ Blockly.Block.prototype.initSvg = function() {
   }
   this.setCurrentlyHidden(this.currentlyHidden_);
   this.moveToFrontOfMainCanvas_();
+  this.setIsUnused();
 };
 
 /**
@@ -663,8 +698,10 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
 
   if (Blockly.isRightButton(e)) {
     // Right-click.
-    // Unlike google Blockly, we don't want to show a context menu
-    //this.showContextMenu_(e);
+    // Only show context menus for level editors
+    if (Blockly.editBlocks) {
+      this.showContextMenu_(e);
+    }
   } else if (!this.isMovable() || !this.canDisconnectFromParent()) {
     // Allow unmovable blocks to be selected and context menued, but not
     // dragged.  Let this event bubble up to document, so the blockSpace may be
@@ -673,6 +710,7 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   } else {
     // Left-click (or middle click)
     Blockly.removeAllRanges();
+    this.setIsUnused(false);
     this.blockSpace.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
     // Look up the current translation and record it.
     var xy = this.getRelativeToSurfaceXY();
@@ -755,6 +793,11 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
     // that the block has been deleted.
     Blockly.fireUiEvent(window, 'resize');
   }
+
+  if (Blockly.selected) {
+    Blockly.selected.setIsUnused();
+  }
+
   if (Blockly.highlightedConnection_) {
     Blockly.highlightedConnection_.unhighlight();
     Blockly.highlightedConnection_ = null;
@@ -824,59 +867,6 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
     }
     options.push(duplicateOption);
 
-    if (Blockly.Comment && !this.collapsed_) {
-      // Option to add/remove a comment.
-      var commentOption = {enabled: true};
-      if (this.comment) {
-        commentOption.text = Blockly.Msg.REMOVE_COMMENT;
-        commentOption.callback = function() {
-          block.setCommentText(null);
-        };
-      } else {
-        commentOption.text = Blockly.Msg.ADD_COMMENT;
-        commentOption.callback = function() {
-          block.setCommentText('');
-        };
-      }
-      options.push(commentOption);
-    }
-
-    // Option to make block inline.
-    if (!this.collapsed_) {
-      for (var i = 0; i < this.inputList.length; i++) {
-        if (this.inputList[i].type == Blockly.INPUT_VALUE) {
-          // Only display this option if there is a value input on the block.
-          var inlineOption = {enabled: true};
-          inlineOption.text = this.inputsInline ? Blockly.Msg.EXTERNAL_INPUTS :
-                                                  Blockly.Msg.INLINE_INPUTS;
-          inlineOption.callback = function() {
-            block.setInputsInline(!block.inputsInline);
-          };
-          options.push(inlineOption);
-          break;
-        }
-      }
-    }
-
-    if (Blockly.collapse) {
-      // Option to collapse/expand block.
-      if (this.collapsed_) {
-        var expandOption = {enabled: true};
-        expandOption.text = Blockly.Msg.EXPAND_BLOCK;
-        expandOption.callback = function() {
-          block.setCollapsed(false);
-        };
-        options.push(expandOption);
-      } else {
-        var collapseOption = {enabled: true};
-        collapseOption.text = Blockly.Msg.COLLAPSE_BLOCK;
-        collapseOption.callback = function() {
-          block.setCollapsed(true);
-        };
-        options.push(collapseOption);
-      }
-    }
-
     // Option to disable/enable block.
     var disableOption = {
       text: this.disabled ?
@@ -907,14 +897,83 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
     options.push(deleteOption);
   }
 
-  // Option to get help.
-  var url = goog.isFunction(this.helpUrl) ? this.helpUrl() : this.helpUrl;
-  var helpOption = {enabled: !!url};
-  helpOption.text = Blockly.Msg.HELP;
-  helpOption.callback = function() {
-    block.showHelp_();
-  };
-  options.push(helpOption);
+  // Block-editor-only options
+  // Do not need to be localized
+  if (Blockly.editBlocks) {
+    // uservisible
+    var userVisibleOption = {
+      text: this.userVisible_ ?
+          "Make Invisible to Users" : "Make Visible to Users",
+      enabled: true,
+      callback: function() {
+        block.setUserVisible(!block.isUserVisible());
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(userVisibleOption);
+
+    // deletable
+    var deletableOption = {
+      text: this.deletable_ ?
+          "Make Undeletable to Users" : "Make Deletable to Users",
+      enabled: true,
+      callback: function() {
+        block.setDeletable(!block.isDeletable());
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(deletableOption);
+
+    // movable
+    var movableOption = {
+      text: this.movable_ ?
+          "Make Immovable to Users" : "Make Movable to Users",
+      enabled: true,
+      callback: function() {
+        block.setMovable(!block.isMovable());
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(movableOption);
+
+    // next connection disabled
+    var nextConnectionDisabledOption = {
+      text: this.nextConnectionDisabled_ ?
+          "Enable Next Connection" : "Disable Next Connection",
+      enabled: true,
+      callback: function () {
+        block.setNextConnectionDisabled(!block.nextConnectionDisabled_);
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(nextConnectionDisabledOption);
+
+    // editable
+    var editableOption = {
+      text: this.editable_ ?
+          "Make Uneditable" : "Make editable",
+      enabled: true,
+      callback: function () {
+        block.setEditable(!block.isEditable());
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(editableOption);
+
+    // limit
+    var getCurrentLimit = function() {
+      return block.blockSpace.blockSpaceEditor.blockLimits.getLimit(block.type);
+    };
+    var limitOption = {
+      text: "Set limit (current: " + (getCurrentLimit() || 'none') + ")",
+      enabled: true,
+      callback: function () {
+        block.blockSpace.blockSpaceEditor.blockLimits.setLimit(
+            block.type, prompt("New Limit", getCurrentLimit()));
+      }
+    };
+    options.push(limitOption);
+  }
 
   // Allow the block to add or modify options.
   if (this.customContextMenu && !block.isInFlyout) {
@@ -1346,6 +1405,7 @@ Blockly.Block.prototype.setParent = function(newParent) {
   } else {
     // Remove this block from the blockSpace's list of top-most blocks.
     this.blockSpace.removeTopBlock(this);
+    this.setIsUnused();
   }
 
   this.parentBlock_ = newParent;
@@ -1500,6 +1560,14 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
   }
 };
 
+Blockly.Block.prototype.isNextConnectionDisabled = function() {
+  return this.nextConnectionDisabled_;
+};
+
+Blockly.Block.prototype.isFunctionDefinition = function() {
+  return !!this.getProcedureInfo;
+};
+
 /**
  * Set whether this block should allow for succeeding connections.
  * Called by Xml.domToBlock, primarily used as a passthrough to
@@ -1507,9 +1575,10 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
  */
 Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
   this.nextConnectionDisabled_ = disabled;
-  if (this.nextConnectionDisabled_ === true) {
-    this.setNextStatement(false);
+  if (disabled && this.nextConnection && this.nextConnection.targetConnection) {
+    this.nextConnection.disconnect();
   }
+  this.setNextStatement(!disabled);
 };
 
 /**
@@ -1661,6 +1730,27 @@ Blockly.Block.prototype.setFillPattern = function(pattern) {
  */
 Blockly.Block.prototype.setFramed = function(isFramed) {
   this.blockSvgClass_ = isFramed ? Blockly.BlockSvgFramed : Blockly.BlockSvg;
+};
+
+Blockly.Block.prototype.isUnused = function() {
+  return this.svg_.isUnused();
+};
+
+Blockly.Block.prototype.setIsUnused = function(isUnused) {
+  if (isUnused === undefined) {
+    isUnused = this.previousConnection !== null &&
+        this.isUserVisible() &&
+        this.type !== 'functional_definition' &&
+        Blockly.mainBlockSpace &&
+        Blockly.mainBlockSpace.isReadOnly() === false &&
+        Blockly.mainBlockSpace.isTopBlock(this);
+  }
+  if (Blockly.showUnusedBlocks) {
+    this.svg_.setIsUnused(isUnused);
+  }
+  this.childBlocks_.forEach(function (block) {
+    block.setIsUnused(false);
+  });
 };
 
 /**

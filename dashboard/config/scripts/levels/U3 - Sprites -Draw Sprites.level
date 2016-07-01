@@ -1,0 +1,48 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-05-16T14:41:39.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "draw": null,
+      "drawSprites": null,
+      "var sprite = createSprite": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "markdown_instructions": "# Draw Sprites\r\n\r\nThis program is supposed to draw two sprites but when the program is run they don't show up on screen. `createSprites` only creates the sprite but does not draw it on the game area. In order draw your sprite on the display you need another block that was in the draw loop on the last level.\r\n\r\nCan you fix it? \r\n\r\n# Do This\r\n\r\n* Run the program and see what happens\r\n* Take a look back at the last level to see what is missing\r\n* Fix the program so that both sprites show up",
+    "show_d_pad": "false",
+    "start_blocks": "var sprite1 = createSprite(100,200, 30, 30);\r\nvar sprite2 = createSprite(300,20, 10, 40);\r\n\r\nfunction draw(){\r\n  \r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

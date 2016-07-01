@@ -1,7 +1,7 @@
 "bn":
   devise:
     confirmations:
-      confirmed: Your email address was successfully confirmed.
+      confirmed: Thomar email address successfully confirm hoy gatche.
       send_instructions: "কয়েক মিনিটের মধ্যে আপনার একাউন্ট কিভাবে নিশ্চিত করতে হবে
         সে সম্পর্কে নির্দেশনা সম্বলিত একটি ইমেইল আপনি পাবেন।"
       send_paranoid_instructions: "যদি আমাদের ডাটাবেসে আপনার ইমেইল ঠিকানা থাকে, তাহলে

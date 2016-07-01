@@ -90,7 +90,7 @@ Level 10 [free play]
 
 */ -%>
 <xml id="toolbox" style="display: none;">
-  <% if (page == 1) { -%>
+  <% if (page === 1) { -%>
     <block type="draw_move_by_constant"></block>
     <block type="draw_turn_by_constant<% if (level <= 8) { %>_restricted<% } %>">
       <title name="VALUE">90</title>
@@ -114,12 +114,12 @@ Level 10 [free play]
         <title name="TIMES">4</title>
       </block>
     <% } -%>
-    <% if (level == 10) { -%>
+    <% if (level === 10) { -%>
       <block id="draw-width" type="draw_width_inline" x="158" y="67">
         <title name="WIDTH">1</title>
       </block>
     <% } -%>
-  <% } else if (page == 2 || page == 3) { -%>
+  <% } else if (page === 2 || page === 3) { -%>
     <% // Actions: draw_move, draw_turn. -%>
     <category id="actions" name="<%= msg.catTurtle() %>">
       <block type="draw_move">
@@ -129,7 +129,7 @@ Level 10 [free play]
           </block>
         </value>
       </block>
-      <% if (page == 2 && level >= 8) { -%>
+      <% if (page === 2 && level >= 8) { -%>
         <block type="jump">
           <value name="VALUE">
             <block type="math_number">
@@ -145,7 +145,7 @@ Level 10 [free play]
           </block>
         </value>
       </block>
-      <% if (level == 10) { -%>
+      <% if (level === 10) { -%>
         <block id="draw-width" type="draw_width_inline">
           <title name="WIDTH">1</title>
         </block>
@@ -164,8 +164,8 @@ Level 10 [free play]
         </value>
       </block>
     </category>
-    <% // Functions differ depending on page and level. -%>
-    <% if (page == 2 && level >= 2) { -%>
+    <% // Functions differ depending on page and locals.level. -%>
+    <% if (page === 2 && level >= 2) { -%>
       <category name="<%= msg.catProcedures() %>">
         <block type="draw_a_square" inline="true">
           <value name="VALUE">
@@ -184,8 +184,8 @@ Level 10 [free play]
           </block>
         <% } -%>
       </category>
-    <% } else if (page == 3) { -%>
-      <% if (level == 1) { -%>
+    <% } else if (page === 3) { -%>
+      <% if (level === 1) { -%>
         <% // Don't use custom category yet, since it allows function definition. -%>
         <category name="<%= msg.catProcedures() %>">
           <block type="procedures_callnoreturn">
@@ -201,7 +201,7 @@ Level 10 [free play]
     <% } -%>
     <% // Control: controls_for_counter (from page 2, level 6) and repeat. -%>
     <category name="<%= msg.catControl() %>">
-      <% if ((page == 2 && level >= 6) || (page == 3 && level >= 9)) { -%>
+      <% if ((page === 2 && level >= 6) || (page === 3 && level >= 9)) { -%>
         <block type="controls_for_counter">
           <value name="FROM">
             <block type="math_number">
@@ -224,10 +224,10 @@ Level 10 [free play]
         <title name="TIMES">4</title>
       </block>
     </category>
-    <% // Math: Just number blocks until final level. -%>
+    <% // Math: Just number blocks until final locals.level. -%>
     <category name="<%= msg.catMath() %>">
       <block type="math_number"></block>
-      <% if (level == 10) { -%>
+      <% if (level === 10) { -%>
         <block type="math_arithmetic" inline="true"></block>
         <block type="math_random_int">
           <value name="FROM">
@@ -246,11 +246,11 @@ Level 10 [free play]
     </category>
     <% // Variables depends on page and level, although we never use the custom category -%>
     <% // because we want to offer simplified getters and no setters. -%>
-    <% if (page == 2 && level >= 6) { -%>
+    <% if (page === 2 && level >= 6) { -%>
       <category name="<%= msg.catVariables() %>">
         <block type="variables_get_counter"></block>
       </category>
-    <% } else if (page == 3 && level >= 6 && level < 10) { -%>
+    <% } else if (page === 3 && level >= 6 && level < 10) { -%>
       <category name="<%= msg.catVariables() %>">
         <% if (level >= 9) { -%>
           <block type="variables_get_counter"></block>
@@ -259,17 +259,17 @@ Level 10 [free play]
           <block type="variables_get_length"></block>
         <% } -%>
       </category>
-    <% } else if (page == 3 && level == 10) { -%>
+    <% } else if (page === 3 && level === 10) { -%>
       <category name="<%= msg.catVariables() %>" custom="VARIABLE">
       </category>
     <% } -%>
-  <% } else if (page == 4) { -%>
+  <% } else if (page === 4) { -%>
     <% // Actions: draw_move, draw_turn. -%>
     <block type="draw_move_by_constant"></block>
     <block type="draw_turn_by_constant">
       <title name="VALUE">90</title>
     </block>
-    <% if (level == 11) { -%>
+    <% if (level === 11) { -%>
     <block id="draw-width" type="draw_width_inline">
       <title name="WIDTH">1</title>
     </block>
@@ -288,7 +288,7 @@ Level 10 [free play]
     <block type="controls_repeat">
       <title name="TIMES">4</title>
     </block>
-  <% } else if (page == 5) { -%>
+  <% } else if (page === 5) { -%>
   <% // K1 simplified blocks for editor: keep in sync with Dashboard artist.rb -%>
     <% if (level === LEVELBUILDER_LEVEL) { -%>
       <category name="K1 Simplified">
@@ -414,7 +414,7 @@ Level 10 [free play]
       <block type="logic_null"></block>
       <block type="logic_ternary"></block>
     </category>
-    <% // Math: Just number blocks until final level. -%>
+    <% // Math: Just number blocks until final locals.level. -%>
     <category name="<%= msg.catMath() %>">
       <block type="math_number"></block>
       <block type="math_arithmetic" inline="true"></block>

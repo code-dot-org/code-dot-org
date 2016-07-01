@@ -130,7 +130,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -161,12 +162,17 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Adding a Separate *if*\r\n\r\nIt's still the case that sometimes you want to have two completely separate groups of `if` statements because there are separate conditions you want to check and possibly have responses for both. You don't always just keep adding to a giant `if` statement forever.\r\n\r\nIn the Movie Bot demo you probably saw that if you type \"please\" and \"thank you\" it adds something extra to the response (it says something like \"Thanks for being polite!\"). Let's add this functionality to your movie bot as well. \r\n\r\n**Note: ** Check out the flowchart below to see the logic we are trying to add.\r\n\r\n# Do This:\r\n\r\n* ** Add an `if` and `else-if` statement that checks for \"please\" and \"thank you\"**. \r\n\t* If the string includes \"please\" it should say \"Thank you for being so polite!\" before it gives its response.\r\n    * If the string includes \"thank you\" it should say \"You are very welcome!\" before it gives its response.\r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n<img src=\"https://images.code.org/5363cae7e68cf0a4283087c3a6acebf0-image-1446152576829.png\" style=\"width: 100%\">\r\n\r\n<a href=\"https://images.code.org/5363cae7e68cf0a4283087c3a6acebf0-image-1446152576829.png\" target=\"_blank\">Click to open in separate window.</a>",
+    "markdown_instructions": "# Adding a Separate *if*\r\n\r\nIt's still the case that sometimes you want to have two completely separate groups of `if` statements because there are separate conditions you want to check and possibly have responses for both. You don't always just keep adding to a giant `if` statement forever.\r\n\r\nIn the Movie Bot demo you probably saw that if you type \"please\" and \"thank you\" it adds something extra to the response (it says something like \"Thanks for being polite!\"). Let's add this functionality to your movie bot as well. \r\n\r\n**Note: ** Check out the flowchart below to see the logic we are trying to add.\r\n\r\n# Do This:\r\n\r\n* ** Add an `if` and `else-if` statement that checks for \"please\" and \"thank you\"**. \r\n\t* If the string includes \"please\" it should say \"Thank you for being so polite!\" before it gives its response.\r\n    * If the string includes \"thank you\" it should say \"You are very welcome!\" before it gives its response.\r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n<img src=\"https://images.code.org/3dac4019734e63ecbfd4784c82fbd402-image-1461771319064.png\" style=\"width: 100%\">\r\n\r\n<a href=\"https://images.code.org/3dac4019734e63ecbfd4784c82fbd402-image-1461771319064.png\" target=\"_blank\">Click to open in separate window.</a>",
     "project_template_level_name": "U3 - Movie Bot - Template",
     "instructions": "Add an if and else-if statement that checks for please and thank you. (Click to see full instructions)",
     "slider_speed": "1.0",
     "lock_zero_param_functions": "false",
-    "encrypted_examples": "AY0BH2ot/0SDzLegP3+OejWuwaaYDgO4eMhjJ9Pb3VFutXZxcq3sTjwhkEGZ\neXIo\n"
+    "encrypted_examples": "AY0BH2ot/0SDzLegP3+OejWuwaaYDgO4eMhjJ9Pb3VFutXZxcq3sTjwhkEGZ\neXIo\n",
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

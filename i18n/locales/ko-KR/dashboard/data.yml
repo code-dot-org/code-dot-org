@@ -475,6 +475,7 @@ ko:
         infinity_playlab_intro: '플레이 랩 - 소개'
         infinity_playlab_events: '플레이 랩 - 이벤트'
         infinity_playlab_repeat_forever: '플레이 랩 - 무한 반복'
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
         csp_applab_processing_lists: Processing Lists with Loops
@@ -492,7 +493,15 @@ ko:
         csp_applab_functions_parameters: 함수(값 전달)
         csp_applab_loops: 반복
         csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: 'Data & Medicine'
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: 픽셀에 관해서 조금
+        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: '픽셀 색상 위젯 - 1부'
         csp_pixelation_color_2: '픽셀 색상 위젯 - 2부'
         csp_pixelation_color_3: '픽셀 색상 위젯 - 3부'

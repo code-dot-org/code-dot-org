@@ -1,0 +1,53 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-11T21:23:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "randomNumber_min_max": {
+        "category": ""
+      },
+      "console.log": {
+        "category": ""
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "start_blocks": "// Use randomNumber() to randomly generate\r\n// a number in a range you define\r\n// and print it out with console.log()",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "markdown_instructions": "# Changing the minimum\r\n\r\nSo far we've only generated numbers from 0 up to some other value, but what if we wanted a different minimum? For example, if we want to use `randomNumber()` to create circles that have a radius somewhere between 50 and 100 pixels, how mught we do it?\r\n\r\nThe first input (also callend an **argument**) of the `randomNumber()` block defines the lowest number that will be randomly generated. In the previous levels we always used 0, but you could use any integer as the lower bound (even negative numbers!)\r\n\r\n# Do This\r\n\r\nUsing `console.log()` write a program that randomly returns a number in a range you define. Try coming up with an interesting range of numbers for your program, for example:\r\n* Randomly generate a month number\r\n* Ranodmly generate a temperature below boiling but above freezing\r\n* Randomly generate a year you were alive in\r\n\r\nCan you come up with a range that includes negative numbers? What about both positive and negative ones?",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Find the randomNumber() block here\",\r\n  \"element_id\": \".droplet-palette-header .orange\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions": "Using console.log() write a program that randomly returns a number in a range you define.",
+    "show_d_pad": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

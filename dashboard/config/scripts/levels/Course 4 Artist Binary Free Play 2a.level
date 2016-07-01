@@ -30,6 +30,13 @@
     "images": "[{\"filename\":\"binary_grid.svg\",\"position\":[0,0]}]",
     "never_autoplay_video": "false",
     "examples_required": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "for_loops": 1,
+    "variables": 1
   }
 }]]></config>
   <blocks>

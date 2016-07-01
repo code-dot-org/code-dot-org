@@ -23,9 +23,17 @@ gl:
           future: non pode estar no futuro
   hello: Olá mundo
   welcome_back: 'Ola outra vez, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Enviar
   unsubmit: Cancelar envío
+  previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
+  cancel: Cancelar
+  okay: De acordo
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Agrega un profesor:'
@@ -80,6 +88,7 @@ gl:
     teacher_title: Crear conta de profesor
     student_pitch: Crea unha conta de alumno
     student_title: Crear conta de alumno
+    signup_title: Sign up for Code.org
     school_name: Nome da escola (opcional)
     school_address: Enderezo da escola (opcional)
     address_placeholder: Enderezo, cidade e código postal
@@ -98,6 +107,9 @@ gl:
     student_terms: "Concordo cos<a href='http://code.org/tos'>Termos de utilización</a> da Code.org. Se tivese menos de 13 anos, declaro, ao enviar este formulario, que teño autorización dos meus pais para usar os servizos da Code.org.<br/>No caso dos alumnos con menos de 13 anos, os respectivos enderezos de e-mail son rexistrados de forma que non poidamos entrar en contacto con eles."
     teacher_terms: "Concordo cos<a href='http://code.org/tos'>Termos de utilización</a> da Code.org."
     additional_information: Necesitamos máis informacións para continuarmos o proceso de creacción da conta.
+    user_type_label: Account Type
+    user_type_teacher: Profesor
+    user_type_student: Estudante
   signin_form:
     title: Xa ten conta? Inicie a sesión
     login: E-mail ou usuario
@@ -151,8 +163,6 @@ gl:
         subject: 'Xúntate a unha aula con %{teacher_name} en Code.org!'
       student_disassociated:
         subject: 'Notificación de Code.org: %{student_name} deixou de ser o seu alumno.'
-      teacher_disassociated:
-        subject: 'Notificación de Code.org: %{teacher_name} deixou de ser o teu profesor.'
   reports:
     error:
       access_denied: Non ten acceso ás estatísticas desta persoa
@@ -329,6 +339,24 @@ gl:
     no_primary_course: Faga un curso no Code Studio
     choose_next_course: Experimenta un dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
+    announcement_title: Anuncios
+    announcement_view_all: Ver todos
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Aprende no Code Studio
     description: Todos poden aprender a programar. Constrúe xogos, aplicacións e deseños con código.
@@ -346,6 +374,7 @@ gl:
     help_from_html_old: Engeñeiros da Google, Microsoft, Facebook e Twitter axudaron a crear estes materiais.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os dereitos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Todos os dereitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos os dereitos reservados.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Todos os dereitos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball é marca rexistrada e &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. Todos os dereitos reservados. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Todos os dereitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os dereitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os dereitos reservados. The Amazing World of Gumball é marca rexistrada e &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Sostido por Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; son marcas rexistradas da Code.org.'
     copyright: Dereitos de Autor
@@ -376,15 +405,12 @@ gl:
     notes_coming_soon: As notas deste vídeo estarán dispoñíbeis en breve.
     autoplay_option: visualización automatica de vídeos
     download: Baixar Vídeo
-  compatability:
-    working:
-      header: Estamos a traballar no soporte para o teu navegador.
-      message: "A Code.org usa tecnoloxía web moderna, o que torna o sitio máis rápido de usar. O seu navegador non soporta todos os recursos necesários, e poden ocurrir problemas ao usar esta parte do sitio. Para nos axudar, informe os <a href='%{report_issue_url}'>problemas atopados</a>. Vostede tamén pode <a href='%{supported_browsers_url}'>actualizar o seu navegador a unha versión compatíbel</a>."
-      hide_this_warning: Ocultar este aviso
+  compatibility:
     upgrade:
-      header: Actualize o seu navegador.
-      message: "A Code.org usa tecnoloxía web moderna, o que torna o sitio máis rápido de usar. Infelizmente, o seu navegador non soporta todos os recursos necesarios para executar esta parte do sitio. <br/><br/>Instale un navegador de nosa lista de navegadores compatíbeis para continuar. Vostede pode <a href='#'>tentar visualizar a páxina</a>, pero algunhas funcionalidades poden non ser exhibidas correctamente."
-      button: Léveme á lista de navegadores compatíbeis
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      link: Aprende máis
   slow_loading: Isto está a demorar máis do habitual...
   try_reloading: Tente recarregar a páxina
   next_stage: Xa está! Continúa para a próxima etapa
@@ -450,18 +476,25 @@ gl:
     minecraft:
       title: Minecraft
       body: Explora un mundo Minecraft através do código.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Os alumnos crearon isto con programación!
     students_made_these_with_code: Os alumnos crearon isto con programación!
     picture_count: 'Nos <b>%{days}</b> días anteriores, os alumnos crearon <b>%{count}</b> imaxes desenvolvendo os seus proprios programas de computador. Clique nas imaxes para ver cada programa em execución.'
     activity_count: 'Nos últimos <b>%{days}</b> días, os alumnos crearon <b>%{count}</b> aplicacións e figuras escribindo os seus proprios programas de computador. Clique nas figuras e capturas de pantalla para ver cada programa en funcionamento.'
     want_to_make_your_own: Queres crear o teu propio programa?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Máis &rarr;'
     caption_by_name_age: 'feito por %{name}, anos %{age}'
     caption_time_ago: 'hai %{time_ago}'
     header: Galería
     header_playlab: Laboratorio de xogos
     header_artist: Artista
+    report_abuse: Reportar abuso
   landing:
     prerelease: "Este curso está na súa versión <span class='betatext'>beta</span>. Isto significa que esta non é a versión final do curso, e está suxeito a revisións segundo imos recibindo comentarios e se fan melloras."
     prerelease_hoc2014: "Este titorial está na versión <span class='betatext'>beta</span>. Está suxeito a revisións segundo imos recibindo comentarios e se fan melloras."
@@ -493,6 +526,12 @@ gl:
     wrong_body: Thank you for submitting answers.
     correct_title: Graciñas
     correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Solución incorrecta
     wrong_body: A súa solución non é correcta. Tente novamente!
@@ -583,6 +622,9 @@ gl:
     share: Compartir
     share_title: Comparte o teu proxecto
     share_copy_link: 'Copia a ligazón:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Pechar
     more: Máis
     name: Nome
@@ -622,7 +664,59 @@ gl:
           other: Outros
         detail: Por favor forneza todos os detalles sobre o contido que está a reportar.
         acknowledge: 'Ao enviar esta información, acepta que esta será tratada de acordo cos termos da nosa %{link_start_privacy}Política de Privacidade%{link_end} e dos %{link_start_tos}Termos de Utilización%{link_end}'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
       no_icons_found: No icons found
+    playzone:
+      artist_description: Debuxa imaxes estupendas e deseños co Artista!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Crea unha historia ou fai un xogo con Laboratorio de Xogos!
+      playlab_title: New App
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
+  flex_category:
+    required: Visión xeral
+    content: Content
+    practice: Teaching Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

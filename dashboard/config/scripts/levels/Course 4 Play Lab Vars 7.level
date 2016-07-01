@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Nice, now let's make sure this game isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts from Cat (actor 2), you should lose a point. Start with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level.",
+    "instructions": "Nice, now let's make sure this game isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor 2), you should lose a point. Start with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -39,9 +39,18 @@
     "disable_examples": "false",
     "disable_sharing": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Nice, now let's make sure this game isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts from Cat (actor 2), you should lose a point. \r\n\r\nStart with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level.",
+    "markdown_instructions": "Nice, now let's make sure this game isn't too easy to play!  \r\n\r\nAny time Dog (actor 1) gets hit by a sandwich from Cat (actor 2), you should lose a point. \r\n\r\nStart with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level.",
     "min_workspace_height": "900",
-    "maze_data": null
+    "never_autoplay_video": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "events": 2,
+    "variables": 2
   }
 }]]></config>
   <blocks>
@@ -67,7 +76,7 @@
               <next>
                 <block type="studio_throw" deletable="false">
                   <title name="SPRITE">0</title>
-                  <title name="VALUE">"purple_hearts"</title>
+                  <title name="VALUE">"pie"</title>
                   <title name="DIR">2</title>
                 </block>
               </next>
@@ -181,7 +190,7 @@
           <statement name="DO">
             <block type="studio_throw" uservisible="false">
               <title name="SPRITE">1</title>
-              <title name="VALUE">"yellow_hearts"</title>
+              <title name="VALUE">"sandwich"</title>
               <title name="DIR">8</title>
               <next>
                 <block type="studio_waitParams" inline="true" uservisible="false">
@@ -205,6 +214,14 @@
               </value>
             </block>
           </statement>
+        </block>
+        <block type="when_run" uservisible="false">
+          <next>
+            <block type="studio_showTitleScreen" uservisible="false">
+              <title name="TITLE">Food Fight!</title>
+              <title name="TEXT">Press right arrow to throw pie!</title>
+            </block>
+          </next>
         </block>
       </xml>
     </start_blocks>

@@ -1,7 +1,12 @@
 ko-KR:
   hour_of_code: Hour of Code
   hello: Hello world
+  "yes": 예
+  "no": 아니요
   select_language: 언어를 선택하세요.
+  upgrade_ie_message: Code.org는 곧 인터넷 익스플로러 8, 9, 10에 대한 지원을 종료할 것입니다. 최신 브라우저로 업그레이드 해주세요.
+  upgrade_ie_message_csedweek: CSEdWeek.org는 곧 인터넷 익스플로러 8, 9, 10에 대한 지원을 종료할 것입니다. 최신 브라우저로 업그레이드 해주세요.
+  upgrade_ie_link: 더 알아보기
   en: 컴퓨터과학(Computer Science, 정보과학)
   computer_science_edweek: 컴퓨터과학(Computer Science, 정보과학) 교육 주간
   csedweek_dates: 2014년 12월 8일-14일
@@ -21,7 +26,7 @@ ko-KR:
   twentyhours_heading: 컴퓨터과학(정보과학) 과정을 시도해 보세요.
   twentyhours_text: Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍 기초개념들을 학습해 보세요.
   og_title: 모든 아이들에게 기회가 주어져야 합니다.
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: 모든 학교의 모든 학생은 컴퓨터과학(정보과학) 을 배울 기회가 있어야 합니다. 이것은 모든 것을 변화시킬 것입니다.
   hoc2014_heading: '<a href="http://hourofcode.com">Hour of Code</a><br/>를 해보세요. December 8 - 14, 2014<br/>'
   hoc2014_students: 학생들
   hoc2014_try: 해보기
@@ -179,7 +184,7 @@ ko-KR:
   learn_next_level: 다음 단계 계속하기
   learn_online: 다른 온라인 과정 해보기
   learn_classes: 학교 수업
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: '컴퓨터 과학(정보 과학)에 대해 배워보세요. 모든 것이 바뀔 것입니다.  https://youtu.be/xJqSu1IbcHg'
   just_did_hoc: '@codeorg 에서  #HourOfCode 를 완료했습니다'
   just_did_course1: '과정1을 완료했습니다. - @codeorg 를 살펴보세요!'
   just_did_course2: '과정2를 완료했습니다. - @codeorg 를 살펴보세요!'
@@ -264,6 +269,8 @@ ko-KR:
   homepage_banner_privacy_link: 더 알아보기
   homepage_banner_20k_teachers: 20,000명의 교사들이 훈련되었고, 이제 컴퓨터 과학을 교실에서 가르치고 있습니다.
   homepage_banner_20k_teachers_link: 더 알아보기
+  homepage_banner_congress: 미국 지도자들은 K-12 컴퓨터 과학(정보 과학) 을 위한 기금을 의회에 요청하고 있습니다.
+  homepage_banner_congress_link: 지원하기
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: 누구든지 배울 수 있습니다. 오늘 시작하세요.
   homepage_slot_text_link_hoc: Hour of Code 해보기
@@ -289,6 +296,7 @@ ko-KR:
   homepage_slot_text_link_stats: 통계 보기
   homepage_slot_text_link_buy: 함께 참여하세요
   homepage_slot_text_link_donate: 기부하기
+  homepage_slot_text_link_shop: T-셔츠, 모자 등
   homepage_header_codestudio: 코드 스튜디오 학생들의 작품
   homepage_header_donors: Code.org는 후원자 여러분에게 감사의 인사를 드립니다.
   homepage_donors_seall: 모두 보기
@@ -431,6 +439,7 @@ ko-KR:
   dashboard_landing_new_beta: 초등학교 5학년을 위한 코스(beta) 살펴보기!
   dashboard_landing_new_k5courses: 초등학교 5학년을 위한 코스(beta) 살펴보기!
   dashboard_landing_useful_links: 유용한 링크(영어)
+  dashboard_landing_classroom_resources: 교실 수업을 위한 자원
   dashboard_landing_office_hours: 직접 물어보세요! monthly video office hours 를 방문해 보세요.
   dashboard_landing_print_certificates: 이 코스를 완료한 학생들을 위해 인증서 출력하기
   dashboard_landing_educator_blog: 교육 블로그를 통해 관련 뉴스와 최신정보 확인하기
@@ -444,6 +453,10 @@ ko-KR:
   dashboard_landing_available_courses: 선생님과 학생들에게 현재 가능한 코스
   dashboard_landing_more_tutorials: 더 많은 튜토리얼을 보고 싶습니까?
   dashboard_landing_more_tutorials_desc: '더 많은 튜토리얼은 <a href="/learn/beyond">우리의 파트너에 의해 제공</a>됩니다. 로봇과 함께 프로그램을 배우고, 웹 페이지를 만들고, 당신만의 어플리케이션을 만들고, C++, 루비 혹은 파이선 같은 언어를 탐험할 수 있습니다.'
+  dashboard_landing_inspire: 포스터, 비디오 등의 자료로 학생들에게 영감을 주세요.
+  dashboard_landing_video_library: 컴퓨터 과학의 개념에 대한 비디오 라이브러리를 이용하세요.
+  dashboard_landing_report_bug: 기능 요청 또는 오류 신고
+  dashboard_landing_teacher_forum: 전문적 학습 커뮤니티에 가입하세요.
   dashboard_hoc_courses: 모든 연령대를 위한 Hour of Code
   dashboard_hoc_courses_desc: 당신의 학생과 1시간 이내로 끝낼 수 있는 튜토리얼을 해보세요.
   dashboard_hoc_courses_desc_and_cta: '이 한 시간 짜리 짧은 튜토리얼들을 여러분의 학생들과 함께 해보세요. 컴퓨터과학교육주간동안 <a href="https://hourofcode.com">Hour of Code 운동</a>에 함께 참여해 주세요.'
@@ -474,6 +487,14 @@ ko-KR:
   dashboard_action_remove_confirm: 삭제할까요?
   dashboard_action_done: 완료
   dashboard_action_required: 필수 항목
+  dashboard_assessments_view: '평가 결과 보기:'
+  dashboard_assessments_none: 평가 결과 없음
+  dashboard_assessments_none_part2: 여러분이 중학교 혹은 고등학교 과정을 가르치고 있다면 학생들의 AP 시험 준비를 도울 수 있도록 코드 스튜디오의 한 부분으로서 평가 문항을 사용할 수 있습니다. 이러한 평가를 사용하려면 먼저 여러분의 수업에 과정을 등록하고 드롭다운 메뉴에서 과정을 고르면 됩니다. 그러면 여러분 학생들의 답변을 여기서 볼 수 있습니다.
+  dashboard_assessments_summaries: 요약
+  dashboard_assessments_answers: 모든 답변
+  dashboard_filter_by_stage: '단계에 따라 필터링하기:'
+  dashboard_filter_all: 모두
+  dashboard_download_csv: CSV 다운로드
   dashboard_navigation_home_page: 교사 홈페이지
   dashboard_navigation_section_student_progress: 학생 계정 및 진도
   dashboard_navigation_section_teacher_progress: 나의 학습 진도
@@ -482,21 +503,34 @@ ko-KR:
   dashboard_navigation_section_pd: 고급 교육 및 개발
   dashboard_navigation_section_speakers: '컴퓨터과학(정보과학) <br/> 특별 초청 연사들'
   dashboard_navigation_all_sections: 학생 계정 및 진도
-  dashboard_navigation_view_progress: 진도 보기
-  dashboard_navigation_view_text_responses: 텍스트 응답 보기
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_progress: 진행도
+  dashboard_navigation_view_text_responses: Text Responses
+  dashboard_navigation_view_assessments: 평가 점수
   dashboard_navigation_add_students: 학생 추가
   dashboard_navigation_manage_students: 학생 관리
   dashboard_navigation_lesson_plans_resources: 수업 계획 및 자료
-  dashboard_navigation_view_stats: 상태보기
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: '섹션: %{section_name}'
   dashboard_navigation_student: '학생: %{student_name}'
+  dashboard_progress_not_started: 시작 안됨
+  dashboard_progress_in_progress: 진행 중
+  dashboard_progress_not_completed: 완료되지 않음
+  dashboard_progress_completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
+  dashboard_progress_completed_perfect: 완료
+  dashboard_progress_furthest_level_attempted: 시도한 가장 높은 레벨
+  dashboard_progress_submitted: 제출됨
+  dashboard_progress_view: '진도 보기:'
+  dashboard_progress_student_in_script: '%{script_name} 에서 %{student_name} 에 대한 진도 정보'
+  dashboard_progress_pair_programming: 페어 프로그래밍
+  dashboard_responses_view: '텍스트 응답 보기:'
+  dashboard_responses_none: 텍스트 응답 없음
   dashboard_sections_new_section: 새 섹션
   dashboard_sections_jumbotron_instruction: 새로운 섹션을 만들고 학생을 추가합니다. 섹션은 학생들을 모다 작은 모둠으로 구성할 수 있게 하여 학생들의 계정에 따라 진도를 추적할 수 있습니다.
   dashboard_sections_table_section: 섹션
   dashboard_sections_table_secret: 로그인 유형
   dashboard_sections_table_grade: 등급
   dashboard_sections_table_course: 코스
+  dashboard_sections_table_stage_extras: 추가 단계
   dashboard_sections_table_students: 학생들
   dashboard_sections_table_code: 섹션 코드
   dashboard_sections_name: 섹션 이름
@@ -506,6 +540,19 @@ ko-KR:
   dashboard_sections_secret_none: '학생들이 자신들의 비번등을 포함한 자기 계정에 대해서 관리하기를 원하는 경우, 비밀보호를 <b>없음</b> 으로 설정하세요.'
   dashboard_sections_print_secrets: 그 다음에 학생들 개인별로 줄 수 있는 계정 정보가 담긴 카드를 인쇄할 수 있습니다.
   dashboard_sections_switch_section: '섹션 바꾸기:'
+  dashboard_sections_close: 닫기
+  dashboard_sections_move_students_desc: 새 섹션으로 이동시킬 학생을 선택하세요. 학생을 이동시켜도 그들의 진도는 지워지지 않습니다.
+  dashboard_sections_one_per_teacher: 학생들은 선생님 각각에 대해서 하나의 섹션에만 있을 수 있습니다. 여러분의 학생들은 이전 섹션에서 빠져나가서 여기 새로운 섹션에 추가될 것입니다.
+  dashboard_sections_move_to_section: '섹션으로 이동:'
+  dashboard_sections_enter_code: '섹션 코드 입력:'
+  dashboard_sections_code_placeholder: 6-문자 코드 (ABCDEF)
+  dashboard_sections_other_section: 다른 섹션
+  dashboard_sections_both_sections: 학생(들) 을 양쪽 섹션에 두고 싶으세요?
+  dashboard_sections_yes_both: 예, 현재의 섹션에 있는 학생(들) 을 새로운 섹션으로 복사하고 싶습니다.
+  dashboard_sections_no_move: 아니오, 단지 학생(들) 을 새로운 섹션으로 이동시키고 싶습니다.
+  dashboard_sections_move_students: 학생들을 이동시키기
+  dashboard_error_none_selected: 당신은 이동시킬 학생을 선택하지 않았습니다. 최소 한 명 이상의 학생을 선택하세요.
+  dashboard_error_other_section: "만약 여러분의 섹션으로 학생들을 이동시킬 것이라면, 드롭다운 목록에서 섹션을 선택하세요. 학생들을 다른 선생님의 섹션으로 이동시키려면 '다른 섹션'을 선택합니다."
   dashboard_students_add_student: 학생 추가
   dashboard_students_add_students: 여러 학생 추가
   dashboard_students_add_multiple: 학생들의 이름을 한 줄에 하나씩 입력하거나 붙여넣기 하세요.
@@ -549,6 +596,7 @@ ko-KR:
   dashboard_course2: '코스2:'
   dashboard_course3: '코스3:'
   dashboard_course4: '코스 4(베타):'
+  dashboard_unplugged: "컴퓨터가 없다면, 수업에 <a href='%{unplugged_url}'>이러한 언플러그드 활동을 시도해보세요.</a>"
   dashboard_curriculum: 교과 과정
   dashboard_curriculum_overview: K-5(초등 5학년) 교육과정 살펴보기
   dashboard_overview: 개요
@@ -572,27 +620,22 @@ ko-KR:
   dashboard_login_picture: 그림
   dashboard_login_none: 이메일
   dashboard_new_password: 새 비밀번호
-  dashboard_progress_not_started: 시작 안됨
-  dashboard_progress_in_progress: 진행 중
-  dashboard_progress_not_completed: 완료되지 않음
-  dashboard_progress_completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
-  dashboard_progress_completed_perfect: 완료
-  dashboard_progress_furthest_level_attempted: 시도한 가장 높은 레벨
-  dashboard_progress_submitted: 제출됨
   dashboard_stage: 단계
   dashboard_puzzle: 퍼즐
   dashboard_question: 질문
   dashboard_response: 응답
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: 정확성
+  dashboard_correctness_free_response: 자유 응답
+  dashboard_correctness_unsubmitted: 제출되지 않음
   dashboard_correctness_correct: 정답
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_status: Status
-  dashboard_multi_correct: '# multiple choice correct'
-  dashboard_multi_count: '# multiple choice'
-  dashboard_multi_correct_percent: '% multiple choice correct'
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_correctness_incorrect: 틀림
+  dashboard_submission_submitted: 제출됨
+  dashboard_submission_in_progress: 진행 중
+  dashboard_status: 상태
+  dashboard_multi_correct: '# 객관식 정답'
+  dashboard_multi_count: '# 객관식'
+  dashboard_multi_correct_percent: '% 객관식 정답'
+  dashboard_submission_timestamp: 제출 시간 표시
   stats_hoc_2013_heading: '지난 Hour of Code 이후의 폭발적 통계수치. 지난 1주일:'
   stats_hoc_2013_image_alt: 203 Hour of Code 이후 통계수치
   dashboard_teacher: 선생님
@@ -611,10 +654,10 @@ ko-KR:
   dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   dashboard_announcements: 공시사항
   dashboard_announce_view_all: 모두 보기
-  dashboard_announce_message: '<b>2016년 2월 29일</b> - 워크숍 참석자의 90%가 최고의 전문 개발 프로그램으로 우리의 프로그램을 선정하였습니다. 수요로 인하여, 우리는 컴퓨터 과학을 위한 고등학교 전문 학습 프로그램 지점의 개수 제한을 늘렸습니다. 여러분의 지점을 확정하기 위해 <u>3월 31일</u>까지 지원하세요.'
-  dashboard_announce_button_text: 더 알아보기
-  dashboard_announce_hoc: '<b>2015년 11월 23일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을 소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, Bb-8을 움직여 함께 임무를 수행하세요. 그리고나서 여러분이 만든 게임을 은하계멀리 멀리 공유하세요.'
-  dashboard_announce_playlab: '<b>2015년 12월 4일</b> - Hour of Code 가 돌아왔습니다! 모든 나이와 장치에서 가능한 50개의 튜토리얼들을 해보세요. 이번 주 최신: 새로운 Play Labs, 아이스 에이지, 검볼에서 자신만의 이야기들과 게임들을 만들어보세요.'
+  dashboard_announce_message: '<b>2016년 4월 22일</b> - 언플러그드 활동은 학습 과정의 필수적인 부분이지만 선생님들은 언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서 모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요.'
+  dashboard_announce_button_text: Test the feature
+  dashboard_announce_petition: 교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에 앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의 CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다.
+  dashboard_announce_petition_button: 이름을 입력하세요
   code_hoc_coming: 'Hour of Code 가 여기있습니다. - 12월8일-14일!'
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 지금 해보기
@@ -724,9 +767,35 @@ ko-KR:
   course3_name: 과정3
   course4_name: 과정4
   accelerated_name: 빠른 과정
+  cspunit1_name: CS 원리 1단원
+  cspunit2_name: CS 원리 2단원
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS 원리 4단원
+  cspunit5_name: CS 원리 5단원
+  cspunit6_name: CS 원리 6단원
+  csp1_name: '유닛 1: 인터넷'
+  csp2_name: '유닛 2: 디지털 정보'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: '전체 테스트 - 50 문항'
+  cspexam1-mWU7ilDYM9_name: '테스트 part 1 - 25문항'
+  cspexam2-AKwgAh1ac5_name: '테스트 part 2 - 25문항'
   cspunit3_gradelevel: 9-12 학년
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: 빠른 과정
+  algebra_name: 대수학에서의 CS
+  AlgebraA_name: 대수학에서의 CS 코스 A
+  AlgebraB_name: 대수학에서의 CS 코스 B
+  gumball_name: 검볼
+  classicmaze_name: 고전 미로게임
+  iceage_name: 아이스 에이지
+  minecraft_name: 마인크래프트
+  starwarsblocks_name: 스타워즈 (블록)
+  math_category_name: 계산
+  hoc_category_name: Hour of Code
+  csf_category_name: CS 기초
+  csp_category_name: CS의 원리
+  csp17_category_name: "'16 - '17 CS 원리"
+  cspexams_category_name: CS 원리 연습 테스트
   applab_name: 앱 연구실
   applab_gradelevel: 13세 이상
   applab_shortdescription_congrats: App Lab 은 간단한 앱들을 만들 수 있는 프로그래밍 환경입니다. 아주 짧은 시간에 앱을 디자인하고, 블록이나 자바스크립트로 만들고, 공유할 수 있습니다.

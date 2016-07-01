@@ -1,0 +1,291 @@
+---
+title: "Professional Development Workshop Survey"
+---
+:ruby
+  dont_cache
+  enrollment_code = request.splat_path_info[1..-1]
+  enrollment = DASHBOARD_DB[:pd_enrollments].where(code: enrollment_code).first
+  pass unless enrollment
+
+  workshop = DASHBOARD_DB[:pd_workshops].where(id: enrollment[:pd_workshop_id]).first
+  pass unless workshop
+
+  teacher_id = enrollment[:user_id]
+  teacher = DASHBOARD_DB[:users].where(id: teacher_id).first
+  name = teacher.nil? ? enrollment[:name] : teacher[:name]
+  email = teacher.nil? ? enrollment[:email] : teacher[:email]
+
+  plp = DASHBOARD_DB[:professional_learning_partners].where(contact_id: workshop[:organizer_id]).first
+  # Have they ever taken any pd-workshop-survey?
+  is_first_survey = teacher_id.nil? || DB[:forms].where(kind: 'PdWorkshopSurvey', user_id: teacher_id).count == 0
+
+  # Have they taken this particular survey?
+  previous_response = DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment[:id]).first
+
+  course = workshop[:course]
+  subject = workshop[:subject]
+
+  def local_view(name, *params)
+    view "pd_workshop_survey/#{name.to_s}", *params
+  end
+
+:javascript
+  window.pdWorkshopSurvey = {
+    enrollmentCode: "#{enrollment_code}",
+    course: "#{course}"
+  };
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "/js/pd-workshop-survey.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+- if previous_response
+  %h1 Thank you
+  %h3 You have already completed this survey.
+
+- else
+
+  %form#pd-workshop-survey-form{role: 'form'}
+    %input{name: 'user_id_i', type: 'hidden', value: teacher_id}
+    %input{name: 'email_s', type: 'hidden', value: email}
+    %input{name: 'name_s', type: 'hidden', value: name}
+
+    %input{name: 'enrollment_id_i', type:'hidden', value: enrollment[:id]}
+    %input{name: 'workshop_id_i', type: 'hidden', value: workshop[:id]}
+    %input{name: 'plp_b', type: 'hidden', value: plp.nil? ? '0' : '1'}
+    %input{name: 'include_demographics_b', type: 'hidden', value: is_first_survey ? '1' : '0'}
+
+    %h1
+      Satisfaction Survey for Code.org's
+      = course
+      = subject
+      Professional Development Workshop
+
+    #error-message{style: 'display: none'}
+
+    .main-section
+      .form-group
+        = local_view :yes_no_select,
+          name: 'consent_b',
+          label: 'Your participation is voluntary but strongly encouraged. Do you consent to completing this survey?'
+
+    .consent-only
+      .form-group
+        = local_view :yes_no_select,
+          name: 'will_teach_b',
+          label: "Will you be teaching/are you teaching #{course} #{subject} in the 2016-17 school year?"
+        %div{id: 'will-teach-no-explain-wrapper', style: 'display: none;'}
+          %label.control-label{for: 'will_not_teach_explanation_s'}
+            %em{style: 'font-weight: normal;'} Please explain why not.
+          %div
+            %input.form-control{name: 'will_not_teach_explanation_s', placeholder: 'Why not?', type: 'text'}
+
+      .form-group
+        = local_view :multi_select,
+          name: 'reason_for_attending_ss[]',
+          label: 'Reason for attending? (select all that apply)'
+        %div{id: 'reason-for-attending-other-wrapper', style: 'display: none;'}
+          %label.control-label{for: 'reason_for_attending_other_s'}
+            %em{style: 'font-weight: normal;'} Other reason?
+          %div
+            %input.form-control{name: 'reason_for_attending_other_s', placeholder: 'Other', type: 'text'}
+
+      .form-group
+        = local_view :multi_select,
+          name: 'how_heard_ss[]',
+          label: 'How did you hear about this workshop? (select all that apply)'
+        %div{id: 'how-heard-other-wrapper', style: 'display: none;'}
+          %label.control-label{for: 'how-heard-other'}<
+            %em{style: 'font-weight: normal;'} Other source?
+          %div
+            %input.form-control{name: 'how_heard_other_s', placeholder: 'Other', type: 'text'}
+
+      .form-group
+        = local_view :single_select,
+          name: 'received_clear_communication_s',
+          label: 'I received clear communication about when and where the workshop would take place.'
+
+      .form-group
+        :ruby
+          school_has_tech_label = %q(
+            Do you believe your school has the technology requirements modern web browsers/sufficient
+            internet access/1:1 computing environment necessary to effectively teach the course?'
+          )
+        = local_view :yes_no_select,
+          name: 'school_has_tech_b',
+          label: school_has_tech_label
+
+      .form-group
+        %label.control-label{for: 'venue_feedback_s'}
+          Do you have feedback about the venue and the way logistics were run for this workshop?
+          Please be specific and provide suggestions for improvement.
+        %textarea.form-control{name: 'venue_feedback_s', rows: 4, type: 'text'}
+
+      .form-group
+        = local_view :single_select,
+          name: 'how_much_learned_s',
+          label: 'Overall, how much have you learned from your workshop about computer science?'
+
+      .form-group
+        = local_view :single_select,
+          name: 'how_motivating_s',
+          label: 'During your workshop, how motivating were the activities that this program had you do?'
+
+      .form-group
+        = local_view :single_select,
+          name: 'how_clearly_presented_s',
+          label: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+
+      .form-group
+        = local_view :single_select,
+          name: 'how_interesting_s',
+          label: 'How interesting did your facilitator make what you learned in the workshop?'
+
+      .form-group
+        = local_view :single_select,
+          name: 'how_often_given_feedback_s',
+          label: 'How often did your facilitator give you feedback that helped you learn?'
+
+      .form-group
+        = local_view :single_select,
+          name: 'help_quality_s',
+          label: 'When you needed extra help, how good was your facilitator at giving you that help?'
+
+      .form-group
+        = local_view :single_select,
+          name: 'how_comfortable_asking_questions_s',
+          label: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+
+      .form-group
+        = local_view :single_select,
+          name: 'how_often_taught_new_things_s',
+          label: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+
+      .form-group
+        %label.control-label{for: 'things_facilitator_did_well_s'}
+          What were two things your facilitator(s) did well?
+          (Please name and comment on them separately if you had more than one)
+        %textarea.form-control{name: 'things_facilitator_did_well_s', rows: 4, type: 'text'}
+
+      .form-group
+        %label.control-label{for: 'things_facilitator_could_improve_s'}
+          What were two things your facilitator(s) could do better?
+          (Please name and comment on them separately if you had more than one)
+        %textarea.form-control{name: 'things_facilitator_could_improve_s', rows: 4, type: 'text'}
+
+      .form-group
+        = local_view :single_select,
+          name: 'how_much_participated_s',
+          label: 'During your workshop, how much did you participate?'
+
+      .form-group
+        = local_view :single_select,
+          name: 'how_often_talk_about_ideas_outside_s',
+          label: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
+
+      .form-group
+        = local_view :single_select,
+          name: 'how_often_lost_track_of_time_s',
+          label: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
+
+      .form-group
+        = local_view :single_select,
+          name: 'how_excited_before_s',
+          label: 'Before the workshop, how excited were you about going to your Code.org workshop?'
+
+      .form-group
+        = local_view :single_select,
+          name: 'overall_how_interested_s',
+          label: 'Overall, how interested were you in the Code.org in-person workshop?'
+
+      :ruby
+        agree_scale_questions = [{
+          name: 'more_prepared_than_before_s',
+          label: 'I feel more prepared to teach the material covered in this workshop than before I came.'
+        }, {
+          name: 'know_where_to_go_for_help_s',
+          label: 'I know where to go if I need help preparing to teach this material.'
+        }, {
+          name: 'suitable_for_my_experience_s',
+          label: 'This professional development was suitable for my level of experience with teaching CS.'
+        }, {
+          name: 'would_recommend_s',
+          label: 'I would recommend this professional development to others.'
+        }, {
+          name: 'best_pd_ever_s',
+          label: 'This was the absolute best professional development I’ve ever participated in.'
+        }, {
+          name: 'part_of_community_s',
+          label: 'I feel like I am a part of a community of teachers.'
+        }]
+
+      = local_view :agree_scale_select_table, items: agree_scale_questions
+
+      .form-group
+        %label.control-label{for: 'things_you_liked_s'}
+          What were the two things you liked most about the activities you did in this workshop and why?
+        %textarea.form-control{name: 'things_you_liked_s', rows: 4, type: 'text'}
+
+      .form-group
+        %label.control-label{for: 'things_you_would_change_s'}
+          What are the two things you would change about the activities you did in this workshop?
+          How would you improve them for future participants?
+        %textarea.form-control{name: 'things_you_would_change_s', rows: 4, type: 'text'}
+
+      .form-group
+        %label.control-label{for: 'anything_else_s'}
+          Is there anything else you’d like to tell us about your experience at this workshop?
+        %textarea.form-control{name: 'anything_else_s', rows: 4, type: 'text'}
+
+      - if is_first_survey
+        .form-group
+          = local_view :single_select,
+            name: 'gender_s',
+            label: 'Gender'
+
+        .form-group
+          = local_view :multi_select,
+            name: 'race_ss[]',
+            label: 'Race? (select all that apply)'
+
+        .form-group
+          = local_view :single_select,
+            name: 'age_s',
+            label: 'What is your age?'
+
+        .form-group
+          %label.control-label{for: 'years_taught_i'}
+            If you are/were a K-12 teacher, how many years have you taught?
+          %input.form-control{name: 'years_taught_i', type: 'text', maxlength: 2}
+
+        .form-group
+          = local_view :multi_select,
+            name: 'grades_taught_ss[]',
+            label: 'What grade level do you teach? (select all that apply)'
+
+        .form-group
+          = local_view :multi_select,
+            name: 'grades_planning_to_teach_ss[]',
+            label: 'What grade level are you planning to teach this course to? (select all that apply)'
+
+        .form-group
+          = local_view :multi_select,
+            name: 'subjects_taught_ss[]',
+            label: 'What subjects have you taught? (select all that apply)'
+
+        .form-group{id: 'years-taught-cs-wrapper', style: 'display: none;'}
+          %label.control-label{for: 'years_taught_cs_i'}
+            For how many years have you taught Computer Science?
+            %span.form-required-field *
+          %input.form-control{name: 'years_taught_cs_i', type: 'text', maxlength: 2}
+
+    .main-section
+      .form-group.submit-btn
+        %button#btn-submit.btn.btn-primary{type: "submit"} Submit
+
+  #thanks{style: 'display: none;'}
+    %h1 Thank you for your submission
+

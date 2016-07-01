@@ -1,0 +1,19 @@
+name 'CSD-U3-SFLP Variables'
+href 'path/to/html/in/asset/folder'
+css 'unplugged'
+markdown <<MARKDOWN
+## Unit 3: Lesson 04 - Animating with Variables
+
+# Background
+
+A variable is a way of connecting a label that you use in your program with a value that is stored in memory. Variables make it easy to repeatedly use the same value in a program and quickly change it every place it is used. When combined with the draw loop you can use variables to make smooth animations.
+
+# Vocabulary
+* **Variable** - A placeholder for a piece of information that can change.
+
+# Resources
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/G41G_PEWFjE?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

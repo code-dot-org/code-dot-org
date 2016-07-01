@@ -43,7 +43,7 @@ module Ops
         # ?by_teacher=1 to index the results by teacher_id
         by_teacher = workshop.segments.inject({}) do |hash, s|
           attendance = s.attendances.as_json(include: :segment).group_by { |a| a['teacher_id'] }
-          hash.merge(attendance){|_,a,b|a+b}
+          hash.merge(attendance){|_,a,b| a+b}
         end
         respond_with by_teacher
       else
@@ -163,14 +163,15 @@ module Ops
     end
 
     private
+
     # Required for CanCanCan to work with strong parameters
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
     def workshop_attendance_params
       params.require(:workshop_attendance).permit(
-          :teacher_id,
-          :segment_id,
-          :status,
-          :notes
+        :teacher_id,
+        :segment_id,
+        :status,
+        :notes
       )
     end
   end

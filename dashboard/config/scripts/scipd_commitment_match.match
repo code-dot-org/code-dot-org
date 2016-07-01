@@ -7,10 +7,10 @@ skip_sound true
 height 60
 
 question 'Phase 1'
-answer 'Online Introduction: 2 hours online'
+answer 'Online Introduction: 3 hours online'
 
 question 'Phase 2'
-answer 'Blended Summer Study: 3 days in-person and 8 hours online'
+answer 'Blended Summer Study: 2 days in-person and 7 hours online'
 
 question 'Phase 3'
 answer 'Academic Year Development: 2 days in-person and 10 hours online'

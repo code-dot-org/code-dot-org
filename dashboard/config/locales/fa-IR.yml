@@ -23,15 +23,23 @@
           future: "نمیتوان در آینده بود"
   hello: "سلام دنیا"
   welcome_back: "%{name}، خوش آمدید"
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: "ارسال کنید"
   unsubmit: "ثبت نشده"
-  next_page: Next page
+  previous_page: Previous page
+  next_page: "صفحه بعد"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
+  cancel: "لغو کن"
+  okay: "باشه"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "افزودن یک معلم:"
       placeholder: "انتخاب کد (ABCDEF)"
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: لطفا کد با شما معلم خود را به اشتراک گذاشته. 6 حرف کد مانند "ABCDEF"
+        است.
     submit: "افزودن معلم"
   add_hint_form:
     placeholder: "لطفا پیشنهادتان را اینجا وارد کنید"
@@ -87,6 +95,7 @@
     teacher_title: "ثبت نام معلم"
     student_pitch: "ثبت نام دانش‌آموز در Code.org"
     student_title: "ثبت نام دانش آموز"
+    signup_title: Sign up for Code.org
     school_name: "نام مدرسه (اختیاری)"
     school_address: "نشانی مدرسه (اختیاری)"
     address_placeholder: "نشانی، شهر، استان، کدپستی"
@@ -109,6 +118,9 @@
     teacher_terms: "من با محدودیت و شرایط استفاده از خدمات Code.org <a href='http://code.org/tos'>
       </a> موافقم."
     additional_information: "ما به اطلاعات بیشتری برای ادامه ثبت نام شما احتیاج داریم."
+    user_type_label: Account Type
+    user_type_teacher: "دبیر"
+    user_type_student: "دانش آموز"
   signin_form:
     title: "دارای حساب کاربری در حال حاضر؟ ورود"
     login: "رایانامه یا نام کاربری"
@@ -161,8 +173,6 @@
       student_disassociated:
         subject: "اعلان Code.org: %{student_name} دیگر به عنوان دانش‌آموز شما شناخته
           نمی‌شود."
-      teacher_disassociated:
-        subject: "اعلان Code.org: %{teacher_name} دیگر به عنوان معلم شما شناخته نمی‌شود."
   reports:
     error:
       access_denied: "شما به اطلاعات آماری این شخص دسترسی ندارید"
@@ -295,9 +305,9 @@
       remove: "آیا برای حذف این معلم مطمئت هستبد؟"
     students:
       dashboard: "رفتن به صفحهٔ معلم"
-    user_not_found: "معلم یا دانش آموز مورد نظر یافت نشد"
-    student_teacher_disassociated: "%{teacher_name}  به عنوان یک معلم برای %{student_name}
-      حذف شده است"
+    user_not_found: "معلم پیدا نشد."
+    student_teacher_disassociated: "شما %{teacher_name} را بعنوان معلم خود حذف کرده
+      اید."
     panel:
       answer_viewer: "بیننده پاسخ"
       student: "دانش آموز"
@@ -374,18 +384,49 @@
     heading_hoc2014: "<h2> ساعت کد نویسی برای </h2><h1> تمام سنین </h1>"
     heading_elementary: "<h2> دوره 20 ساعته برای </h2><h1> مبتدیان (تمام سنین) </h1>"
     heading_apps: "<h2>سرگرم کننده برای</h2><h1>برای همه</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>برای مرحله بعد آماده ای؟ </h2><h1> ابزارجاوا اسکریپت برای
+      دوره راهنمائی</h1>"
     heading_legacy: "<h2> دوره عمومی ما </h2><h1>همه سنین</h1>"
     your_gallery: "گالری"
     no_primary_course: "یک کلاس را در کد استدیو امتحان کنید"
     choose_next_course: "یک دوره ی استودیو ی کد را با انتخاب آن در پایین امتحان کنید"
     print_certificate: "چاپ گواهینامه"
+    announcement_title: "اطلاعیه‌ها"
+    announcement_view_all: "مشاهده همه"
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: "بیشتر بیاموزید"
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: "در استودیو ی کد یاد بگیرید"
     description: "هرکسی می تواند علوم کامپیوتر را بیاموزد. با کد نویسی بازی، نرم افزار
       و هنر ایجاد کنید."
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: "یک ساعت کدنویسی را امتحان کن!"
   gender:
     male: "مرد"
     female: "زن"
@@ -408,6 +449,8 @@
     art_from_html_old: "پرنده های خشمگین &#8482;&amp;&copy; 2009-%{current_year} کمپانی
       سرگرمی روویو. تمامی حقوق محفوظ است.<br />گیاهان در برابر زامبی ها&#8482;&amp;&copy;%{current_year}
       شرکت هنرهای الکترونیک. تمامی حقوق محفوظ است"
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "قدرت گرفته شده توسط وب سرویس های آمازون"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, لوگوی کد نویسی و
       ساعت کد نویسی &reg; علائم تجاری Code.org هستند."
@@ -425,7 +468,7 @@
     built_on_code_studio: "ساخته شده در کد استودیو"
     make_my_own_app: "برنامه ی خودم را بساز"
     how_it_works: "چگونه کار می کند"
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: "یک ساعت کدنویسی را امتحان کن!"
   reference_area:
     title: "کمک نیاز دارید؟"
     subtitle: "دیدن این فیلم ها و نکات"
@@ -439,24 +482,17 @@
     notes_coming_soon: "یادداشت ها برای این ویدیو به زودی."
     autoplay_option: "پخش خودکار فیلم ها"
     download: "دانلود ویدیو"
-  compatability:
-    working:
-      header: "ما در حال کار بر روی پشتیبانی از مرورگر شما هستیم."
-      message: Code.org از فناوری های نوین وب برای سریعتر ساختن سایت را برای استفاده  بکار
-        می گیرد . مرورگر شما تمام ویژگی های مورد نیاز را پشتیبانی نمی کند، و شما ممکن
-        است به مسایلی در موقع استفاده از این بخش از سایت برخورد کنید . لطفا ما را
-        با <a href='%{report_issue_url}'> گزارش هر گونه مسائل پیش آمده </a> یاری دهید.
-        شما همچنین می توانید <a href='%{supported_browsers_url}'> مرورگر خود را به
-        آخرین نسخه ( که از این قابلیتها پشتیبانی کند ) ارتقا دهید</a>.
-      hide_this_warning: "مخفی کردن هشدار"
+  compatibility:
     upgrade:
-      header: "لطفا مرورگر خود را ارتقا دهید."
-      message: Code.org از فناوری های نوین وب برای سریعتر ساختن سایت را برای استفاده  بکار
-        می گیرد .متاسفانه مرورگر شما تمام ویژگی های لازم برای اجرای این بخش از سایت
-        را پشتیبانی نمی کند. <br/> <br/>یکی از مرورگرهای پشتیبانی شده برای ادامه نصب
-        نمایید . شما می توانید <a href='#'> صحفه را مشاهده نمایید</a>، اما انتظار
-        درست تمام قابلیتها را نداشته باشید .
-      button: "مرا به لیست مرورگرهای پشتیبانی شده ببر"
+      unsupported_message: Your browser is not supported. Please upgrade your browser
+        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
+        browsers</a>. You can try viewing the page, but expect functionality to be
+        broken.
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
+        10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
+        8, 9, and 10. Please upgrade to a modern browser.
+      link: "بیشتر بیاموزید"
   slow_loading: "این طولانی تر از معمول طول میکشد..."
   try_reloading: "درخواست مجدد نمایش صفحه"
   next_stage: "پایان! به مرحله بعد بروید"
@@ -499,10 +535,10 @@
       body: App Lab is a programming environment where you can make simple apps. Design
         an app, code with blocks or JavaScript to make it work, then share your app
         in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body_short: "یک نرم افزار طاحی کن، با بلوک ها یا جاوا اسکریپت کدنویسی کن تا
+        کار کند، بعد ظرف چند ثانیه نرم افزار خود را به اشتراک بگذار."
+      audience: "سنین سیزده به بالا"
+      cta: "یادبگیر چگونه"
     hoc:
       title: "هزارتوی کلاسیک"
       body: "مفاهیم اساسی علم کامپیوتر را امتحان کنید. میلیون‌ها نفر آن را امتحان
@@ -535,6 +571,15 @@
     minecraft:
       title: "ماینکرفت"
       body: "یک جهان ماینکرفتی را از طریق کد کاوش کنید."
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: "دانش‌آموزان اینها را با کدنویسی رسم کرده‌اند!"
     students_made_these_with_code: "دانش آموزان اینها را با کد ساخته اند !"
@@ -545,12 +590,15 @@
       ها و تصاویر را با نوشتن برنامه های کامپیوتری خود را ساخته اند. برای دیدن هر
       برنامه در عمل بر روی عکس و یا نمای هربرنامه کلیک کنید."
     want_to_make_your_own: "می‌خواهی مال خودت را بسازی؟"
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: "بیشتر &rarr;"
     caption_by_name_age: "توسط %{name} سن %{age}"
     caption_time_ago: "%{time_ago} پیش"
     header: "گالری"
     header_playlab: "آزمایشگاه بازی"
     header_artist: "هنرمند"
+    report_abuse: "گزارش سوء استفاده"
   landing:
     prerelease: "این دوره <span class='betatext'> بتا</span> است.  یعنی نسخه نهایی
       نبوده بر مبنای بازخورد دریافت شده مورد تجدید نظر واقع شده و بهتر می گردد."
@@ -559,7 +607,7 @@
     report_bug: "گزارش اشکال"
     support: "کمک گرفتن"
     support_url: support.code.org
-    help_resources: Help and Resources
+    help_resources: "کمک و منابع"
   multi:
     wrong_title: "پاسخ اشتباه"
     wrong_body: "پاسخی که وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!"
@@ -569,21 +617,30 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: "متشکرم"
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: "برای ثبت یک پاسخ از شما تشکر میکنم."
     correct_title: "متشکرم"
-    correct_body: Thank you for submitting an answer.
+    correct_body: "برای ثبت یک پاسخ از شما تشکر میکنم."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: "متشکرم"
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "برای ثبت پاسخها از شما تشکر میکنم."
     correct_title: "متشکرم"
-    correct_body: Thank you for submitting an answer
+    correct_body: "برای ثبت پاسخها از شما تشکر میکنم."
   level_group-submittable:
     wrong_title: "متشکرم"
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "برای ثبت پاسخها از شما تشکر میکنم."
     correct_title: "متشکرم"
-    correct_body: Thank you for submitting answers.
+    correct_body: "برای ثبت پاسخها از شما تشکر میکنم."
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: "راه‌حل نادرست"
     wrong_body: "راه‌حلی که شما وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!"
@@ -670,7 +727,7 @@
     completed_perfect: "تکمیل, کامل"
     furthest_level_attempted: "تلاش برای دسترسی به سطح دسترسی خارج از محدوده "
     assessment: "ارزیابی"
-    submitted: submitted
+    submitted: "ثبت شده"
   studio:
     courses_working_on: "دوره های شما در حال کار بر روی"
     completed_courses: "دوره های تکمیل شده"
@@ -688,6 +745,10 @@
     share: "به اشتراک گذاری"
     share_title: "پروژه خود را به اشتراک بگذارید"
     share_copy_link: "لینک را کپی کنید:"
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: "ببند"
     more: "بیشتر"
     name: "نام"
@@ -740,7 +801,77 @@
         acknowledge: "با ارسال این اطلاعات، شما می پذیرید که مطابق با سیاست %{link_start_privacy}
           حفظ حریم شخصی %{link_end} و %{link_start_tos} شرایط سرویس %{link_end} با
           موضوع برخورد می شود."
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: "جستجوی یک شمایل..."
+      no_icons_found: "هیچ نمادی پیدا نشد"
+    playzone:
+      artist_description: "با نقاش چند عکس و طرح باحال بکش!"
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: "یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!"
+      playlab_title: New App
+      primary_header: Congratulations! You finished %{stageName}!
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
+  flex_category:
+    required: "بررسی اجمالی"
+    content: Content
+    practice: Teacher Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
+      a site that is not operated by Code.org.</strong> This site may have privacy
+      policies that differ from Code.org's.<br/><br/>We have selected these third
+      party resources because we think they will be useful to you. While we are not
+      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
+      support</a> if you find the content objectionable, or if the linked site is
+      no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: Download %{app_name} for offline use (136MB)
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

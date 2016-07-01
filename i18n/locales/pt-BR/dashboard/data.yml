@@ -314,7 +314,7 @@ pt-BR:
         studio_playlab_9: Defina o plano de fundo para esta invasão alienígena e ajude o robô espacial a alcançar o alienígena mais rapidamente, mudando sua velocidade. Depois, mova-o com as teclas de direção para alcançar o robô espacial e alertar a todos
         studio_playlab_10: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_iceage_hello1: 'Sid quer reunir todos para uma nova aventura. Você pode ajudá-lo a dizer "olá" arrastando o bloco "diga" para nossa área de trabalho e digitando "olá" dentro dele?'
-        studio_iceage_hello2: 'Sid (personagem 1) encontrou Manny (actor 2) e quer convidá-lo para a aventura. Ajude-os a cumprimentarem-se usando o bloco "personagem diz" duas vezes.'
+        studio_iceage_hello2: 'Sid (personagem 1) encontrou Manny (actor 2) e quer convidá-lo para uma aventura. Ajude-os a cumprimentarem-se usando o bloco "personagem diz" duas vezes.'
         studio_iceage_move_to_flag: 'O Scrat está procurando sua bolota! Ajude-o a andar os últimos 200 pixels usando o bloco "mova".'
         studio_iceage_move_to_actor: 'Diego (personagem 1) está procurando por Manny (personagem 2). Ajude Diego a andar 200 pixels para chegar até Manny usando o bloco "mova o personagem". Em seguida, conecte um bloco ao evento "quando o personagem tocar" para reproduzir um som quando eles se encontrarem.'
         studio_iceage_repeat: 'O bloco "repita infinitamente" permite que você execute o código sem parar. Você pode anexar blocos a ele para ajudar a Vovó a fazer exercícios movendo-a para a esquerda e para a direita repetidamente?'
@@ -463,6 +463,7 @@ pt-BR:
         infinity_playlab_intro: 'Laboratório - Introdução'
         infinity_playlab_events: 'Laboratório - Eventos'
         infinity_playlab_repeat_forever: 'Laboratório - Repetir infinitamente'
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
         csp_applab_processing_lists: Processing Lists with Loops
@@ -480,7 +481,15 @@ pt-BR:
         csp_applab_functions_parameters: Funções com Parâmetros
         csp_applab_loops: Laços
         csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: 'Data & Medicine'
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Um pouco sobre pixels
+        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: 'Widget de pixelização de cores - Parte 1'
         csp_pixelation_color_2: 'Widget de pixelização de cores - Parte 2'
         csp_pixelation_color_3: 'Widget de pixelização de cores - Parte 3'

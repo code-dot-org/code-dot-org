@@ -15,7 +15,7 @@ In StarLogo Nova, a model consists of the environment or terrain, the agents who
 A “model” is the virtual world you set up in StarLogo Nova. It can contain agents, the environment, and behaviors that have been specified in computer code. We call running the model forward in time “Simulation”.
 
 <br />
-<img src="https://edx.code.org/c4x/Code.org/Project_GUTS/asset/slnova-paradigm.png" style="border-radius:10px"/>
+<img src="https://images.code.org/8614a82ccfea3f3a04ce8de353cc948f-image-1461971986023.jpg" style="border-radius:10px"/>
 
 <br />
 
@@ -25,11 +25,7 @@ There are two main phases in Simulation. The first phase is called the “Setup�
 
 <br />
 
-<img src="https://edx.code.org/c4x/Code.org/Project_GUTS/asset/slnova-loop.png" style="border-radius:10px; float:left; margin-right:30px"/>
-
-<br /><br />
-
-<img src="https://edx.code.org/c4x/Code.org/Project_GUTS/asset/slnova-setup_forever.png" style="border-radius:10px"/>
+<img src="https://images.code.org/58ae49482cb5a4f2787e2c88ccd834df-image-1461971996098.jpg" style="border-radius:10px"/>
 
 <br />
 

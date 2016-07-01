@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you complete this drawing? Hint: The sides of each triangle are 25 pixels larger than the last.  The first triangle has 25 pixel sides.",
+    "instructions": "Can you complete this drawing? The sides of each triangle are 25 pixels larger than the last.  The first triangle has 25 pixel sides.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -21,7 +21,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "slider_speed": ".5",
-    "markdown_instructions": "Can you complete this drawing? \r\n\r\n*Hint: The sides of each triangle are 25 pixels larger than the last.  The first triangle has 25 pixel sides.*\r\n\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Can you complete this drawing? \r\n\r\nThe sides of each triangle are 25 pixels larger than the last.  \r\nThe first triangle has 25 pixel sides.\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,7 +33,14 @@
     "never_autoplay_video": "false",
     "ideal": "18"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "variables": 1,
+    "functions_with_params": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -283,9 +290,6 @@
         </category>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml/>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

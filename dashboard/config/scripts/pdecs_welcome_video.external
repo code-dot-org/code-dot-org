@@ -5,6 +5,8 @@ css 'unplugged'
 skip_dialog true 
 
 markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
 ## Welcome to the Family! 
 
 
@@ -15,7 +17,7 @@ markdown <<MARKDOWN
 
 <br>
 
-#### When you're ready, click continue below to get started with your Online Introduction to Professional Development.
+#### When you're ready, click continue below to get started with your Online Introduction to the Professional Learning Program.
 <br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

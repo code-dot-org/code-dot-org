@@ -2,7 +2,7 @@ require 'test_helper'
 
 class FollowerTest < ActiveSupport::TestCase
   setup do
-    # TODO put this in test_helper
+    # TODO: Put this in test_helper.
     @laurel = create(:teacher)
     @laurel_section_1 = create(:section, user: @laurel)
     @laurel_section_2 = create(:section, user: @laurel)

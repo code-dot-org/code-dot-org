@@ -7,22 +7,23 @@ skip_dialog true
 markdown <<MARKDOWN
 ### StarLogo Nova
 <br /><br />
-**Terrain**
-<br /><br />
-The Terrain is a coordinate plane that is 101 tiles long by 101 tiles wide. The center of the terrain has coordinate (0,0). You can see different views of the terrain by maneuvering the “camera” using the control, option, and command keys. Simply click on the key and click and drag on the terrain. Try seeing the world from various perspectives.<br /><br /><img src="https://edx.code.org/c4x/Code.org/Project_GUTS/asset/slnova-terrain.png" /><br /><br />
+#### **Terrain**
+<br />
+The Terrain is a coordinate plane that is 101 tiles long by 101 tiles wide. The center of the terrain has coordinate (0,0). You can see different views of the terrain by maneuvering the “camera” using the control, option, and command keys. Simply click on the key and click and drag on the terrain. Try seeing the world from various perspectives.<br /><br /><img src="https://images.code.org/bfd0aef80c3dc80c0ca7644847e49a10-image-1461973739868.jpg" /><br /><br />
 <b><br /> </b><div>
-**Agents and Breeds**
-<br /><br />
-Agents can take on different characteristics and behaviors. We often call agents “turtles” for historical reasons – the first agents in Logo were robot like “turtles”. Each agent can be represented by a 3D model. You can select shapes for your agents from the library of 3D models. (Refer to the common document called “3D shapes”)<br /><br /><img src="https://edx.code.org/c4x/Code.org/Project_GUTS/asset/slnova-agents.png" /><br /><br />
-There can be many different types of agents within a model. Each different type of agent is called a breed. For example, in a model of rabbits and coyotes, the rabbits can be one breed of agents while the coyotes can be another breed of agents. “Everyone” refers to all of the agents except for “The World”. “The World” is a special “super” agent that is responsible for setting up the world and creating the other agents.<br /><br /><img src="https://edx.code.org/c4x/Code.org/Project_GUTS/asset/slnova-shapes.png" /><br /><br />
+#### **Agents and Breeds**
+<br />
+Agents can take on different characteristics and behaviors. We often call agents “turtles” for historical reasons – the first agents in Logo were robot like “turtles”. Each agent can be represented by a 3D model. You can select shapes for your agents from the library of 3D models. (Refer to the common document called “3D shapes”)<br /><br /><img src="https://images.code.org/325f1def2a599269516155dd32b10836-image-1461973797766.jpg" /><br /><br />
+There can be many different types of agents within a model. Each different type of agent is called a breed. For example, in a model of rabbits and coyotes, the rabbits can be one breed of agents while the coyotes can be another breed of agents. “Everyone” refers to all of the agents except for “The World”. “The World” is a special “super” agent that is responsible for setting up the world and creating the other agents.<br /><br /><img src="https://images.code.org/491458c4b2d6a694b12bea0d527d3aac-image-1461973747413.jpg" /><br /><br />
 Agents can be represented by 3D models from basic shapes to creatures<br /><br /><b><br /> </b></div>
 <div>
-**Blocks and Drawers**
-<br /><br />Blocks are the instructions that make up the program. There can be many different kinds of blocks that make up a program. Blocks are organized in drawers by function.<br /><br /><img src="https://edx.code.org/c4x/Code.org/Project_GUTS/asset/slnova-blocks_drawers2.png" /><br /><br /><b><br /> </b></div>
+#### **Blocks and Drawers**
+<br />Blocks are the instructions that make up the program. There can be many different kinds of blocks that make up a program. Blocks are organized in drawers by function.<br /><br /><img src="https://images.code.org/641e5ecca52331af828c48fddd7207f8-image-1461973751911.jpg" /><br /><br /><b><br /> </b></div>
 <div>
-**Pages and Procedures**
-<br /><br />Pages are areas where the user organizes blocks to control the different agents. There are initially three different pages: Turtle, Everyone, and the World. The blocks in the Turtle page are the instructions the turtle agents follow. When you create new breeds, new pages appear for them. Turtles are the starter breed of agents so there is a “Turtle” page by default.<br /><br />Procedures are stacks of blocks that are executed or “run” when either the user clicks a button, or when the program asks the agents to take their turn.<br /><br /> <br /><br /><img src="https://edx.code.org/c4x/Code.org/Project_GUTS/asset/slnova-setup_forever.png" /></div>
+#### **Pages and Procedures**
+<br />Pages are areas where the user organizes blocks to control the different agents. There are initially three different pages: Turtle, Everyone, and the World. The blocks in the Turtle page are the instructions the turtle agents follow. When you create new breeds, new pages appear for them. Turtles are the starter breed of agents so there is a “Turtle” page by default.<br /><br />Procedures are stacks of blocks that are executed or “run” when either the user clicks a button, or when the program asks the agents to take their turn.<br /><br /> <br /><br /><img src="https://images.code.org/b5d3fd4ec3b2b46c7bbf039e713dca53-image-1461973915863.jpg" /></div>
 <br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

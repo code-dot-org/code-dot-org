@@ -34,20 +34,25 @@
     "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_loops": 1,
+    "functions": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
+            <block type="controls_repeat" movable="false" next_connection_disabled="true">
               <title name="TIMES">3</title>
               <statement name="DO">
-                <block type="procedures_callnoreturn">
+                <block type="procedures_callnoreturn" movable="false">
                   <mutation name="draw a hexagon"/>
                   <next>
-                    <block type="draw_turn_by_constant">
+                    <block type="draw_turn_by_constant" movable="false" next_connection_disabled="true">
                       <title name="DIR">turnRight</title>
                       <title name="VALUE">120</title>
                     </block>
@@ -118,11 +123,11 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <block type="procedures_callnoreturn">
         <mutation name="draw a hexagon"/>
       </block>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

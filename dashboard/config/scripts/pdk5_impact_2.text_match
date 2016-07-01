@@ -1,8 +1,0 @@
-name 'PDK5 Impact 2'
-title 'Connections to other Subjects'
-content1 'Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.'
-placeholder 'Your thoughts here'
-
-markdown <<MARKDOWN
-
-MARKDOWN

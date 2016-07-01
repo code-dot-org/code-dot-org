@@ -23,15 +23,22 @@ th:
           future: ไม่สามารถทำได้ในอนาคต
   hello: สวัสดีชาวโลก
   welcome_back: 'ยินดีต้อนรับอีกครั้ง, % {name}'
+  your_professional_learning_plan: แผนการเรียนของคุณ
+  see_your_learning_plan: ดูแผนการเรียนของคุณ
   submit: ส่ง
-  unsubmit: Unsubmit
-  next_page: Next page
+  unsubmit: ไม่ส่ง
+  previous_page: หน้าที่แล้ว
+  next_page: หน้าถัดไป
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
+  cancel: ยกเลิก
+  okay: ตกลง
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'เพิ่มครู:'
       placeholder: ส่วนรหัส (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: กรุณาใส่รหัสที่คุณครูมอบให้กับคุณ รหัสนี้ประกอบด้วยตัวอักษร 6 ตัว เช่น “ABCDEF”
     submit: เพิ่มครู
   add_hint_form:
     placeholder: กรุณาป้อนคำแนะนำของคุณที่นี่
@@ -42,7 +49,7 @@ th:
   puzzle: ปริศนา
   trophies: ถ้วยรางวัล
   courses: คอร์ส
-  unplugged_activity: Unplugged Activity
+  unplugged_activity: กิจกรรมถอดปลั๊ก
   of: ของ
   more: เพิ่มเติม
   less: น้อย
@@ -80,6 +87,7 @@ th:
     teacher_title: สมัครเป็นครู
     student_pitch: สมัครเป็นนักเรียนสำหรับ code.org
     student_title: สมัครเป็นนักเรียน
+    signup_title: Sign up for Code.org
     school_name: ชื่อโรงเรียน (ถ้ามี)
     school_address: ที่อยู่โรงเรียน (ถ้ามี)
     address_placeholder: ที่อยู่, อำเภอ, จังหวัด, รหัสไปรษณีย์
@@ -98,6 +106,9 @@ th:
     student_terms: "ฉันยอมรับ <a href='http://code.org/tos'>เงื่อนไขการใช้บริการ</a> ของ Code.org ถ้าฉันอายุต่ำกว่า 13 ปี ฉันยืนยัน โดยการส่งแบบฟอร์มนี้ที่มีสิทธิ์ของผู้ปกครองเพื่อการใช้บริการ Code.org <br/> สำหรับผู้ที่อายุต่ำกว่า 13 ที่อยู่อีเมล์จะไม่ถูกเก็บไว้ในแบบฟอร์มที่ช่วยให้เราสามารถติดต่อ"
     teacher_terms: "ฉันยอมรับ<a href='http://code.org/tos'>เงื่อนไขการใช้บริการ</a>ของ Code.org"
     additional_information: เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ
+    user_type_label: Account Type
+    user_type_teacher: ครู
+    user_type_student: นักเรียน
   signin_form:
     title: มีบัญชีผู้ใช้แล้ว? เข้าสู่ระบบ
     login: อีเมล หรือ ชื่อผู้ใช้งาน
@@ -151,8 +162,6 @@ th:
         subject: 'เข้าร่วมชั้นเรียนกับ %{teacher_name} ใน Code.org'
       student_disassociated:
         subject: 'การแจ้งเตือนของ Code.org: ขณะนี้ %{student_name} ไม่เเป็นนักเรียนของคุณ'
-      teacher_disassociated:
-        subject: 'การแจ้งเตือน Code.org: ครู %{teacher_name} ไม่เป็นอาจารย์ของคุณ'
   reports:
     error:
       access_denied: คุณไม่สามารถเข้าถึงสถิติของบุคคลนี้
@@ -198,7 +207,7 @@ th:
       not_earned_title: จบบทฝึกซ้อม, รับรางวัล(เฉพาะนักเรียนอเมริกา)
       not_earned: 'เรียนรู้ทุกแนวคิดทางวิทยาศาสตร์คอมพิวเตอร์ พิชิตทุกถ้วยรางวัลที่ชื่อ %{num_trophies} และรับรางวัลในโลกจริง คุณสามารถเลือกระหว่าง 10GB ของเนื้อที่ว่าง Dropbox, $10 เครดิตในสไกป์ และดาวน์โหลดเกมฟรี หมายเหตุ: ข้อเสนอสำหรับนักเรียนสหรัฐเท่านั้น และจนกว่าของรางวัลจะหมด'
       teacher:
-        earned: '15 or more students collected all %{num_trophies} trophies. You have won a teacher prize! (U.S. teachers only)'
+        earned: 'นักเรียน 15 คนหรือมากกว่านั้นสะสมถ้วยรางวัลได้ %{num_trophies} ถ้วย คุณเอาชนะรางวัลจากคุณครูแล้ว! (สำหรับครูในสหรัฐอเมริกาเท่านั้น)'
         not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
         not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
         bonus:
@@ -210,21 +219,21 @@ th:
     show: แสดง
     edit: แก้ไข
     edit_model: 'แก้ไข %{model}'
-    update: Update
+    update: อัพเดท
     destroy: Destroy
-    back: Back
-    confirm: Are you sure?
-    created: '%{model} was successfully created.'
-    updated: '%{model} was successfully updated.'
-    destroyed: '%{model} was successfully deleted.'
+    back: กลับ
+    confirm: คุณแน่ใจหรือไม่?
+    created: '%{model} สร้างเสร็จแล้ว'
+    updated: '%{model} ได้รับอัพเดทแล้ว'
+    destroyed: '%{model} ถูกลบออกแล้ว'
     access_denied: 'You do not have access to this %{model}.'
   nav:
     header:
-      finished_hoc: "I've finished my Hour of Code"
-      sign_in_to_save: Sign in to save progress
+      finished_hoc: ฉันผ่านชั่วโมงโค้ดของฉันแล้ว
+      sign_in_to_save: เข้าสู่ระบบเพื่อบันทึกความก้าวหน้า
       free_play:
-        playlab: Make a Play Lab app
-        artist: Draw something
+        playlab: สร้างแอพห้องทดลองหรรษา
+        artist: วาดอะไรสักอย่างสิ
         calculate: Calculate something
         applab: Make an App Lab app
     user:
@@ -247,37 +256,37 @@ th:
       puzzle_map: ขั้นตอน
       prizes: 'Collect all %{total_trophies} trophies and win prizes!'
       prize_earned: 'All %{total_trophies} trophies collected. Prize won!'
-      prize_us_only: (U.S. students only)
+      prize_us_only: (เฉพาะนักเรียนในสหรัฐอเมริกาเท่านั้น)
       prizes_link: ข้อมูลเพิ่มเติม
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: คำตอบ
+    for_teachers_only: สำหรับคุณครูเท่านั้น
     title:
       one: 'อาจารย์ของคุณ:'
       other: 'อาจารย์ของคุณ:'
-    remove: (remove teacher)
+    remove: (ลบคุณครู)
     confirm:
-      remove: Are you sure you want to remove this teacher?
+      remove: แน่ใจหรือไม่ว่าต้องการลบคุณครูท่านนี้ออก
     students:
       dashboard: Go to Teacher Dashboard
     user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    student_teacher_disassociated: 'คุณได้ลบ %{teacher_name} ออกจากการเป็นครูผู้สอนของคุณ'
     panel:
       answer_viewer: Answer Viewer
       student: นักเรียน
       viewing_solution: Viewing Solution
       try_it_yourself: ลองด้วยตัวเอง
       section: Section
-      example: Example Solution
+      example: ตัวอย่างวิธีการแก้ปัญหา
       example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on:'
-      unsubmit: Unsubmit
+      submitted_on: 'ส่งให้:'
+      unsubmit: ไม่ส่ง
   user:
-    email_confirm_needed: 'Email address has not been confirmed:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
-    email_resend_confirm: Resend confirmation instructions
-    new_password_hint: "(leave blank if you don't want to change it)"
+    email_confirm_needed: 'อีเมล์นี้ยังไม่ได้ยืนยันตัว:'
+    email_confirm_needed_required: 'อีเมล์ %{email} ของคุณยังไม่ได้รับการยืนยัน：'
+    email_confirm_wrong_email: (อีเมล์ไม่ถูกต้องหรือเปล่า?)
+    email_resend_confirm: ส่งคำแนะนำการยืนยันตัวอีกครั้ง
+    new_password_hint: (ปล่อยว่างไว้ถ้าคุณไม่ต้องการเปลี่ยน)
     current_password_hint: (we need your current password to confirm your changes)
     delete: Delete your account
     delete_text: Clicking the button below will delete your account.
@@ -327,66 +336,82 @@ th:
     heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: แกลเลอรี่
-    no_primary_course: Try a Code Studio course
-    choose_next_course: Try a Code Studio course by choosing one below
+    no_primary_course: ทดลองคอร์ส Code Studio
+    choose_next_course: ทดลองเรียนคอร์ส Code Studio โดยเลือกจากรายการต่อไปนี้
     print_certificate: พิมพ์ใบรับรอง
+    announcement_title: ประกาศ
+    announcement_view_all: ดูทั้งหมด
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
-    title: Learn on Code Studio
+    title: เรียนกับ Code Studio
     description: Anyone can learn computer science. Make games, apps and art with code.
     try_hour_of_code: Try an Hour of Code!
   gender:
     male: ชาย
     female: หญิง
-    none: Prefer not to answer
+    none: ไม่ต้องการตอบ
   user_type:
     student: นักเรียน
     teacher: ครู
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
-    help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    powered_by_aws: Powered by Amazon Web Services
+    help_from_html: เราระลึกถึงเหล่าวิศวกรจาก Google Microsoft Facebook และ Twitter รวมถึงคนอื่น ๆ ที่ช่วยกันสร้างบทเรียนนี้ขึ้นมา
+    help_from_html_old: เหล่าวิศวกรจาก Google Microsoft Facebook และ Twitter ได้ช่วยกันสร้างบทเรียนนี้ขึ้น
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    powered_by_aws: ขับเคลื่อนระบบด้วย Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    copyright: ลิขสิทธิ์
     more: เพิ่มเติม
-    feedback: Provide feedback
-    translate: Help us translate to your language
-    support: Support
+    feedback: แสดงความคิดเห็น
+    translate: ช่วยแปลเป็นภาษาของคุณ
+    support: สนับสนุน
     support_url: http://support.code.org
     tos_short: Terms
     tos: Terms of Service
-    privacy: Privacy Policy
+    privacy: นโยบายความเป็นส่วนตัว
     secure: Secure Version
-    report_abuse: Report Abuse
+    report_abuse: รายงานการละเมิด
     built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    make_my_own_app: สร้าง app ของฉันเอง
+    how_it_works: มันทำงานได้อย่างไร
     try_hour_of_code: Try an Hour of Code!
   reference_area:
-    title: Need help?
-    subtitle: See these videos and hints
+    title: ต้องการความช่วยเหลือเหรอ?
+    subtitle: ดูวิดีโอและคำใบ้พวกนี้
     teacher: See the solution
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
     direction: Start Direction (in degrees)
   video:
-    tab: Video.
+    tab: วิดีโอ
     notes: No video? Show notes.
     notes_coming_soon: Notes for this video coming soon.
     autoplay_option: Autoplay videos
-    download: Download Video
-  compatability:
-    working:
-      header: We are working on support for your browser.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: Hide this warning
+    download: ดาวน์โหลดวิดีโอ
+  compatibility:
     upgrade:
-      header: Please upgrade your browser.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: Take me to the list of supported browsers
-  slow_loading: This is taking longer than usual...
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      link: สิ่งที่น่าเรียนรู้ยังมีอีก
+  slow_loading: นี่ดูจะใช้เวลานานเกินไป...
   try_reloading: Try reloading the page
   next_stage: Finished! Continue to next stage
   download_pdf: Open Lesson Plan
@@ -415,8 +440,8 @@ th:
     back: Back to scripts
     success: You successfully edited the blocks.
     level:
-      create: Create new level
-      current: Current Levels
+      create: สร้างระดับใหม่
+      current: ระดับปัจจุบัน
       unused: Unused Levels
   upsell:
     applab:
@@ -451,18 +476,25 @@ th:
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
     activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Want to make your own?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'More &rarr;'
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ago'
     header: แกลเลอรี่
     header_playlab: Stories and games
     header_artist: ศิลปิน
+    report_abuse: รายงานการละเมิด
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
@@ -494,6 +526,12 @@ th:
     wrong_body: Thank you for submitting answers.
     correct_title: ขอบคุณ
     correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Incorrect solution
     wrong_body: "The solution you've entered is not correct.  Please try again!"
@@ -584,6 +622,9 @@ th:
     share: แบ่งปัน
     share_title: Share your project
     share_copy_link: 'Copy the link:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Close
     more: เพิ่มเติม
     name: ชื่อ
@@ -622,8 +663,60 @@ th:
           infringement: Copyright Infringement
           other: อาชีพอื่น ๆ
         detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}.'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: ค้นหาไอคอน...
+      no_icons_found: ไม่พบไอคอน
+    playzone:
+      artist_description: Draw cool pictures and designs with the ศิลปิน!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Create a story or make a game with Play Lab!
+      playlab_title: New App
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
+  flex_category:
+    required: ภาพรวม
+    content: Content
+    practice: Teaching Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

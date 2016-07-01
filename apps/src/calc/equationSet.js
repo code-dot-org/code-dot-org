@@ -1,4 +1,4 @@
-var _ = require('../utils').getLodash();
+var _ = require('lodash');
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
 var jsnums = require('./js-numbers/js-numbers');
@@ -341,7 +341,7 @@ EquationSet.getEquationFromBlock = function (block) {
       if (block.getInput('ARG2')) {
         argNames.push('ARG2');
       }
-      var args = argNames.map(function(inputName) {
+      var args = argNames.map(function (inputName) {
         var argBlock = block.getInputTargetBlock(inputName);
         if (!argBlock) {
           return 0;

@@ -331,7 +331,7 @@ ja:
         studio_iceage_hello1: シドは新しい冒険に向けてみんなに集まってほしいようです。シドに「こんにちは」と言わせましょう。ワークエリアにブロックをドラッグします。そしてブロックの中に「こんにちは」と書いてみましょう。
         studio_iceage_hello2: シド(キャラ１) がマニー(キャラ２) を見つけて、冒険に誘いたいと思っています。「キャラが話す」のブロックを二回使ってお互いにあいさつをさせましょう。
         studio_iceage_move_to_flag: スクラットがドングリを探しています！「移動」のブロックを使って最後の200ピクセルを進ませてあげましょう。
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_iceage_move_to_actor: サンディエゴ (キャラ1) は、マニー (キャラ2) を探しています。マニーに「キャラを移動」ブロックを使用して下に 200 ピクセル移動させてディエゴを助けましょう。次に、彼らはお互いを見つけたときにサウンドを再生するためのブロックを「キャラに触れたとき」 ブロックに接続します。
         studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
         studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
         studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
@@ -414,7 +414,7 @@ ja:
         C1_maze_loops: 迷路ループ
         C1_playlab_storytelling: Playラボ：　ストーリーを作成
         C1_planting_seed: 種をまこう
-        C1_building_foundation: Building a Foundation
+        C1_building_foundation: ピラミッドをたてよう
         C1_going_places_safely: 安全な道を通って行く
         C2_maze_intro: 迷路入門
         C2_artist_intro: アーティスト紹介
@@ -479,6 +479,7 @@ ja:
         infinity_playlab_intro: プレイラボ：イントロダクション
         infinity_playlab_events: 'Play Lab - Events'
         infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
         csp_applab_processing_lists: Processing Lists with Loops
@@ -496,7 +497,15 @@ ja:
         csp_applab_functions_parameters: パラメーター付き関数
         csp_applab_loops: ループ〔くりかえし〕
         csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: 'Data & Medicine'
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: A Little Bit About Pixels
+        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
         csp_pixelation_color_3: 'Color pixelation widget - Part 3'

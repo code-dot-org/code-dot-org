@@ -19,6 +19,12 @@ mysql_defaults: &mysql_defaults
     host: <%= writer.host || 'localhost' %>
     database: <%= writer.path.sub(%r{^/},"") || "dashboard_#{Rails.env}" %>
   <% if reader && reader.host != writer.host %>
+    # When there is a separate read-only database configured, do NOT
+    # include the master database in the read pool.
+    # Ref: https://github.com/bdurand/seamless_database_pool#the-master-connection
+    # "By default, the master connection will be included in the read pool.
+    #  If you would like to dedicate this connection only for write operations, you should set the pool weight to zero."
+    pool_weight: 0
   read_pool:
    - username: <%= reader.user %>
      password: <%= reader.password %>
@@ -45,9 +51,9 @@ levelbuilder:
 test:
   adapter: mysql2
   encoding: utf8
-  username: 'root'
+  username: <%= writer.user || 'root' %>
+  password: <%= writer.password || '' %>
   host: 'localhost'
-  password: ''
   pool: 5
   database: 'dashboard_test'
 

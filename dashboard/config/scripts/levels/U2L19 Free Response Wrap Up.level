@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:24.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Public Key Crypto: Why is it safe?",
+    "markdown_instructions": "Describe to a person who knows nothing about encryption why public key encryption is secure and is hard to crack.\n",
+    "encrypted_solution": "yoaHtNslWvFaZHzmpi1Fk+tostxNamz8UI5a3s5HdZjkNOAlVls2uFWLMHNk\nNKIYunAmWl3NEdGCIADXDt4C1/DwR92EhBDO4qlFKw+ANDSN1MHW97oegvRz\n4pdUqxv7q8CusJGJALhGIqewUo+oDqdnP0e12pgOPd04A8a8zKQCR2F/Uqxp\nvDmapdYlWZutmh5FUYEMyklrgOtCcWjp5PvZkeAIs72xatpVsR846r5Ba+RQ\nWzDmzn6WyM7L5pGKiS5fJtJpdi3WSzFCBOwka2dqSSW4RsyLy+jTREQm9JzY\nhCMhxZ7LDvY4dnBe+mm8KOIcilA8bBy/xvYo1bFnsHFYU1fu0HyVWXTPNIZ8\nBlR87HS1My4y2zjK0oNN0NJ21A19vUbhLitjgSwmiqP2ML+cBynbTk5AzjnH\nk59BXzh/5wX6lI2aw7/JI5NqTXcAfCZRiCcxSYM8+QjLq2euIId466Y2VMhL\nrKGKtVoOm91Lz//41h9YLQKxJmhRc+lGyqX6QZ+7rF9t6WDlsKpXI+7fa0BV\nD2/352Cy7sJxcnIOYbqzV8P41eq1QVopbelvBrC2mrP2rwcKNiEhwuYAB7XH\nKdEyCORzSyBjB57g7ZLCBoiD2jqzoA0q+PoIXtZrTre6G4GWU6Ez8lRanCxu\n2WF+gojEqFfLTi+HJthSTZbYx9RaVUySLzOwXkVVL3oZRoUbQwNqDzlxvVB8\nZcWfQyGy/yy/fV7/01cOKec0zaR813T4F7+QjN4ptjHA77fvIsvy8IWAgvgT\nGUGOVdHA2OpQuQe+YpdkmLEKdu4eXbmgb+Y7xG3ZHONCeWmx3ojKBLDItmwg\nuBgfqGHm48DRDTUcpTDYZURyiq6HYfNsmSfCPZGGrqzgqRhnuYOuKCzTFcz5\ncT5mhLXNwM7HwLz7AAQ6b8oG2gg4xWdXrJUP9ZxAumNeeTr1hEeI5wrmbO0i\n6vpCgFC7Y9tjdNYNg07ZmH5aM/TUHOr/HmrGxjXk/wc2wQZNpt9bA0kMk5mB\nu/7sGB055dZ7Feolwbnf+tXDBQZAGZNDkx4BELMTPzEtDPU=\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

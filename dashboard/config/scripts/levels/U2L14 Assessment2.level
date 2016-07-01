@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:21.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment: Question 3",
+    "markdown_instructions": "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning.",
+    "encrypted_solution": "/rTZfZsSlpzlMcOufDA6EVULZOtqlb3Zf38vIozm6r2wka/Gj8i/AUbIPFOm\nffaSpy2di+wG3CZSos/fMeVn3ScbY9565sitf1U2ivXxs0Mv+tAShZ7EevMx\nlG4+9b2MS4lJDlZyY5WrecV1KJOh8ShBxg2maUsa2iPbTuOEwc9ydKxjM3l5\ntCge+SgdXgNks9G969qL60Q+eqWUQe86HZdpBprQU7ndJi/AviCscecq3ILc\n1zLnkSr/ZUY4TBn4/lgwhKJP/LUQHT+sl6M6yf5myIUZsTzO0+0rSuhUJfhc\nn+8yqo6dFCncHgyxrJRCTcCdwQzkCm3Reg1Na3WXwVB+8UW3quL9XAzF0HQR\niBNFUoze2Mq8IFj8jUT7FdNO\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

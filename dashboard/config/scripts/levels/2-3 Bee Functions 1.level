@@ -16,7 +16,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,2,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skip_instructions_popup": "false",
-    "ideal": "8",
+    "ideal": "7",
     "video_key": "C3_bee_functions",
     "markdown_instructions": "Functions are blocks of code that perform a task.  \r\n\r\nUse the `get 2 nectar` function to collect the nectar from each flower.",
     "never_autoplay_video": "false",
@@ -35,19 +35,17 @@
     "fast_get_nectar_animation": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2,
+    "functions": 1
+  }
 }]]></config>
   <blocks>
-    <start_blocks>
+    <initialization_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="get 2 nectar"/>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false">
+        <block type="procedures_defnoreturn" deletable="false" editable="false" uservisible="false">
           <mutation/>
           <title name="NAME">get 2 nectar</title>
           <statement name="STACK">
@@ -59,6 +57,11 @@
           </statement>
         </block>
       </xml>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+
+</xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
@@ -71,8 +74,6 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
@@ -81,13 +82,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="procedures_callnoreturn">
           <mutation name="get 2 nectar"/>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

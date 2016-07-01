@@ -7,10 +7,13 @@ require 'digest'
 require 'sprockets-derailleur'
 
 module RakeUtils
-
   def self.system__(command)
     CDO.log.info command
-    output = `#{command} 2>&1`
+    system_status_output__ "#{command} 2>&1"
+  end
+
+  def self.system_status_output__(command)
+    output = `#{command}`
     status = $?.exitstatus
     [status, output]
   end
@@ -49,6 +52,31 @@ module RakeUtils
     status
   end
 
+  # Alternate version of RakeUtils.rake which always streams STDOUT to the shell
+  # during execution.
+  def self.rake_stream_output(*args)
+    system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rake', *args
+  end
+
+  # Alternate version of RakeUtils.system which always streams STDOUT to the
+  # shell during execution.
+  def self.system_stream_output(*args)
+    command = command_(*args)
+    CDO.log.info command
+    Kernel.system(command)
+    unless $?.success?
+      error = RuntimeError.new("'#{command}' returned #{$?.exitstatus}")
+      raise error, error.message
+    end
+  end
+
+  def self.exec_in_background(command)
+    puts "Running `#{command}` in background"
+    fork do
+      exec command
+    end
+  end
+
   # Changes the Bundler environment to the specified directory for the specified block.
   # Runs bundle_install ensuring dependencies are up to date.
   def self.with_bundle_dir(dir)
@@ -83,7 +111,7 @@ module RakeUtils
     system 'git', 'add', *args
   end
 
-  def self.git_branch()
+  def self.git_branch
     `git branch | grep \\* | cut -f 2 -d \\ `.strip
   end
 
@@ -91,15 +119,15 @@ module RakeUtils
     `git commit -m \"#{message}\"`.strip
   end
 
-  def self.git_fetch()
+  def self.git_fetch
     system 'git', 'fetch'
   end
 
-  def self.git_pull()
-    system 'git', 'pull', 'origin', git_branch
+  def self.git_pull
+    system 'git', 'pull', '--ff-only', 'origin', git_branch
   end
 
-  def self.git_push()
+  def self.git_push
     system 'git', 'push', 'origin', git_branch
   end
 
@@ -107,13 +135,13 @@ module RakeUtils
     `git rev-parse HEAD`.strip
   end
 
-  def self.git_update_count()
+  def self.git_update_count
     count = `git rev-list ..@{u} | wc -l`.strip.to_i
     return 0 if $?.exitstatus != 0
     count
   end
 
-  def self.git_updates_available?()
+  def self.git_updates_available?
     `git remote show origin 2>&1 | grep \"local out of date\" | grep \"#{git_branch}\" | wc -l`.strip.to_i > 0
   end
 
@@ -136,6 +164,10 @@ module RakeUtils
       system 'rm', '-f', target if(current || File.file?(target))
       system 'ln', '-s', source, target
     end
+  end
+
+  def self.glob_matches_file_path?(glob, file_path)
+    File.fnmatch?(glob, file_path, File::FNM_PATHNAME | File::FNM_DOTMATCH)
   end
 
   # Updates list of global npm packages if outdated
@@ -214,14 +246,20 @@ module RakeUtils
     new_fetchable_url
   end
 
-  # Returns true if file is different from the committed version in git.
-  def self.file_changed_from_git?(file)
-    !`git status --porcelain #{file}`.strip.empty?
-  end
-
   # Whether this is a local or adhoc environment where we should install npm and create
   # a local database.
   def self.local_environment?
     (rack_env?(:development, :test) && !CDO.chef_managed) || rack_env?(:adhoc)
+  end
+
+  def self.wait_for_url(url)
+    system_ "until $(curl --output /dev/null --silent --head --fail #{url}); do sleep 5; done"
+  end
+
+  def self.format_duration(total_seconds)
+    total_seconds = total_seconds.to_i
+    minutes = (total_seconds / 60).to_i
+    seconds = total_seconds - (minutes * 60)
+    "%.1d:%.2d minutes" % [minutes, seconds]
   end
 end

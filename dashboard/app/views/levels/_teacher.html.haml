@@ -17,7 +17,7 @@
         - if @user_level
           .user_level
             .level
-              - status = activity_css_class(@user_level.best_result)
+              - status = activity_css_class(@user_level)
               .level_link{class: status}
                 - if @level.unplugged?
                   %span.puzzle-named
@@ -39,9 +39,9 @@
                       submittedTimestamp.text((new Date(submittedTimestamp.text())).toLocaleString());
                     });
                     $('#unsubmit').click(function(ev) {
-                      $.post($(ev.target).attr('data-user-level-url'), {"_method": 'PUT', user_level: {best_result: 1}}, function( data ) {
-                        $('.teacher-panel .user_level .level_link').removeClass('submitted').addClass('attempted');
-                        $('#submitted').hide();
+                      $.post($(ev.target).attr('data-user-level-url'), {"_method": 'PUT', user_level: {best_result: 1, submitted: false}}, function( data ) {
+                        // Let's just refresh so that the dots are correct, etc.
+                        location.reload();
                       });
                     });
 
@@ -79,7 +79,8 @@
             - @section.students.order(:name).each do |student|
               - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}
-                - status = activity_css_class(student.user_level_for(@script_level).try(:best_result))
+                - user_level = student.user_level_for(@script_level, @level)
+                - status = activity_css_class(user_level)
                 %td
                   .level_link{class: status}
                     - if @level.unplugged?

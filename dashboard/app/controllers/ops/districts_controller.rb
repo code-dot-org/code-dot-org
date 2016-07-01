@@ -31,6 +31,7 @@ module Ops
     end
 
     private
+
     def contact_params(params)
       {
        # created_by_user_id: current_user.id, # TODO
@@ -48,7 +49,7 @@ module Ops
         # adding/changing district contact
         params[:district][:contact_id] =
           User.find_or_create_district_contact(contact_params(params[:district].delete(:contact)), current_user).id
-        # TODO do we need to remove the districtcontact permission from the old user?
+        # TODO: Do we need to remove the districtcontact permission from the old user?
       end
 
       params.require(:district).permit(:name, :location, :contact_id)

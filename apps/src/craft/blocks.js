@@ -94,7 +94,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   var dropdownBlockSet = {};
 
-  dropdownBlocks.forEach(function(type) {
+  dropdownBlocks.forEach(function (type) {
     dropdownBlockSet[type] = true;
   });
 
@@ -120,7 +120,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_moveForward = function() {
+  blockly.Generator.get('JavaScript').craft_moveForward = function () {
     return 'moveForward(\'block_id_' + this.id + '\');\n';
   };
 
@@ -128,7 +128,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_turn = {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldDropdown(this.DIRECTIONS), 'DIR');
@@ -141,7 +141,7 @@ exports.install = function (blockly, blockInstallOptions) {
       [[i18n.blockTurnLeft() + ' \u21BA', 'left'],
        [i18n.blockTurnRight() + ' \u21BB', 'right']];
 
-  blockly.Generator.get('JavaScript').craft_turn = function() {
+  blockly.Generator.get('JavaScript').craft_turn = function () {
     // Generate JavaScript for turning left or right.
     var dir = this.getTitleValue('DIR');
     var methodCall = dir === "left" ? "turnLeft" : "turnRight";
@@ -159,7 +159,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_destroyBlock = function() {
+  blockly.Generator.get('JavaScript').craft_destroyBlock = function () {
     return 'destroyBlock(\'block_id_' + this.id + '\');\n';
   };
 
@@ -174,7 +174,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_shear = function() {
+  blockly.Generator.get('JavaScript').craft_shear = function () {
     return 'shear(\'block_id_' + this.id + '\');\n';
   };
 
@@ -197,7 +197,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_whileBlockAhead = function() {
+  blockly.Generator.get('JavaScript').craft_whileBlockAhead = function () {
     var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
     var blockType = this.getTitleValue('TYPE');
     return 'whileBlockAhead(\'block_id_' + this.id + '\',\n"' +
@@ -226,7 +226,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_ifBlockAhead = function() {
+  blockly.Generator.get('JavaScript').craft_ifBlockAhead = function () {
     var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
     var blockType = this.getTitleValue('TYPE');
     return 'ifBlockAhead("' + blockType + '", function() {\n' +
@@ -248,7 +248,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_ifLavaAhead = function() {
+  blockly.Generator.get('JavaScript').craft_ifLavaAhead = function () {
     var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
     return 'ifLavaAhead(function() {\n' +
       innerCode +
@@ -271,7 +271,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_placeBlock = function() {
+  blockly.Generator.get('JavaScript').craft_placeBlock = function () {
     var blockType = this.getTitleValue('TYPE');
     return 'placeBlock("' + blockType + '", \'block_id_' + this.id + '\');\n';
   };
@@ -287,7 +287,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_placeTorch = function() {
+  blockly.Generator.get('JavaScript').craft_placeTorch = function () {
     return 'placeTorch(\'block_id_' + this.id + '\');\n';
   };
 
@@ -302,7 +302,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_plantCrop = function() {
+  blockly.Generator.get('JavaScript').craft_plantCrop = function () {
     return 'plantCrop(\'block_id_' + this.id + '\');\n';
   };
 
@@ -317,7 +317,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_tillSoil = function() {
+  blockly.Generator.get('JavaScript').craft_tillSoil = function () {
     return 'tillSoil(\'block_id_' + this.id + '\');\n';
   };
 
@@ -338,7 +338,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_placeBlockAhead = function() {
+  blockly.Generator.get('JavaScript').craft_placeBlockAhead = function () {
     var blockType = this.getTitleValue('TYPE');
     return 'placeBlockAhead("' + blockType + '", \'block_id_' + this.id + '\');\n';
   };

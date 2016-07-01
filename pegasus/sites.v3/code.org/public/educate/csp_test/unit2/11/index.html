@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Now that students have had the chance to see and evaluate various data visualizations, they will learn to make visualizations of their own. This lesson teaches students how to build visualizations from provided datasets. The levels in Code Studio provide a detailed walkthrough of how to use Google Sheets to create several different kinds of charts. While this lesson focuses on the Google Sheets tool, other tools may be substituted at the teacher’s discretion, and MS Excel support is coming soon to the lesson.">
+    <title>Making Data Visualizations</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit2/"><span class="h2">Unit</span><span class="h1">2</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit2/ch1" data-pdf-link="#unit2chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/1" data-pdf-link="#unit2lesson1">
+                1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/2" data-pdf-link="#unit2lesson2">
+                2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/3" data-pdf-link="#unit2lesson3">
+                3
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/4" data-pdf-link="#unit2lesson4">
+                4
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/5" data-pdf-link="#unit2lesson5">
+                5
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/6" data-pdf-link="#unit2lesson6">
+                6
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit2/ch2" data-pdf-link="#unit2chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/7" data-pdf-link="#unit2lesson7">
+                7
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/8" data-pdf-link="#unit2lesson8">
+                8
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/9" data-pdf-link="#unit2lesson9">
+                9
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/10" data-pdf-link="#unit2lesson10">
+                10
+            </a>
+            </div>
+            
+                
+                    
+                        <div class="lesson current">
+                    
+                
+            <a href="/educate/csp_test/unit2/11" data-pdf-link="#unit2lesson11">
+                11
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/12" data-pdf-link="#unit2lesson12">
+                12
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/13" data-pdf-link="#unit2lesson13">
+                13
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/14" data-pdf-link="#unit2lesson14">
+                14
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/15" data-pdf-link="#unit2lesson15">
+                15
+            </a>
+            </div>
+            
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit2lesson11">
+        
+            
+                <h1>Lesson 11: Making Data Visualizations</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+                
+                External Tools Individual Skill Building Tutorial
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>Now that students have had the chance to see and evaluate various data visualizations, they will learn to make visualizations of their own. This lesson teaches students how to build visualizations from provided datasets. The levels in Code Studio provide a detailed walkthrough of how to use Google Sheets to create several different kinds of charts. While this lesson focuses on the Google Sheets tool, other tools may be substituted at the teacher’s discretion, and MS Excel support is coming soon to the lesson.</p>
+<p>The main activity teaches students to build different chart types (scatter, line, and bar charts) from a single data set. It should be emphasized to students that the purpose of this lesson is to explore and experiment with creating different types of visualizations, not to build the perfect chart. Students will have a chance to create and customize their own charts. At the end of class, students compare their custom visualizations with those of their classmates.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>Being able to create meaningful data visualizations is extremely important in order to effectively communicate information about large data sets. It’s also an important skill to have to simply “look” at data that is typically too big see by looking at the raw data or summary tables yourself.  Any computer scientist working with data should have some skills and facility with producing visualizations of the data to get a sense of what it contains.  Visualizing the data allows you to see patterns, trends or relationships you might otherwise not.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocmaking-data-visualizations">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up (10 mins)</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Create a bar, line, and scatter chart from a dataset using a computational tool.</li>
+                    
+                        <li>Select the appropriate type of data visualization to discover trends and patterns within a dataset.</li>
+                    
+                        <li>Use the settings of a data visualization tool to manipulate and refine the features of a data visualization.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit4/lesson5" target="_blank">Forum</a></li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://drive.google.com/open?id=0B78N8p4zhHFgaHR2TG1QQ2NZQTg' target='_blank' class='print_link'>MovieRating_avgRatingByAgeByGender.csv</a> - Data Set (<a href='https://docs.google.com/spreadsheets/export?format=csv&id=1FHcK6of5uIxie4AwA1wZFwzmXyZ5WCqirj1qHhRxrjI' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit4' target='_blank' class='print_link'>CSP Unit 4</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf' target='_blank' class='print_link'>Data Visualization 101: How to design charts and graphs</a>
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="making-data-visualizationscontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <h3 id="using-visualization-to-discover-connections-and-patterns">Using visualization to discover connections and patterns</h3>
+<p><strong>Prompt:</strong> Do you have to use a computer to create a data visualization?  What are some reasons that you need to use a computer to manipulate data?
+A large data set is too big to understand by looking at a table in a spreadsheet.
+Creating a data visualization with a computer is faster and more accurate than creating one by hand.</p>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Transitional Remark</p>
+<div>
+<p>Taking data from its raw state to the point where you can create a meaningful visualization involves several steps.  Today we’re going to use visualization in attempt to discover things in the data we might not otherwise see.</p>
+</div>
+<div>
+<p>It takes practice to create good visualizations. Today, we’ll get our feet wet by learning to create charts using Google Sheets.</p>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <h3 id="make-scatter-line-bar-and-custom-charts">Make scatter, line, bar, and custom charts</h3>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/code-studio-icon.png"><img alt="" src="https://code.org/educate/docs/csp/code-studio-icon.png"></a> <strong>Transition to Making Data Visualizations on Code Studio</strong></p>
+<table>
+<thead>
+<tr>
+<th>Teacher Code Studio Reference</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Students are asked to make a copy of the data set in their Google Drive. (Students must be logged into Google Drive for this step to work.) When they open the link to the CSV file, they can click the “Open” button next to the green Google Sheets logo, which will make a copy of the CSV in their personal Drive folder.</td>
+<td><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L11-open2.png"><img alt="" src="https://code.org/educate/docs/csp/U2L11-open2.png" style="width: 100px;"></a></td>
+</tr>
+<tr>
+<td>Students follow step-by-step instructions to create a scatter plot showing the average movie rating by age of reviewer</td>
+<td><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L11-graph1.png"><img alt="" src="https://code.org/educate/docs/csp/U2L11-graph1.png"></a></td>
+</tr>
+<tr>
+<td>Students follow step-by-step instructions to create a line chart showing the average movie rating by age of reviewer, broken down by gender.</td>
+<td><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L11-graph2.png"><img alt="" src="https://code.org/educate/docs/csp/U2L11-graph2.png"></a></td>
+</tr>
+<tr>
+<td>Students follow step-by-step instructions to create a bar chart showing the number of ratings by age of reviewer, broken down by gender.</td>
+<td><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L11-graph3.png"><img alt="" src="https://code.org/educate/docs/csp/U2L11-graph3.png"></a></td>
+</tr>
+<tr>
+<td>Students experiment with creating their own charts on the same data set <br> <strong>NOTE:</strong> they’ll get a chance to explore many different data sets in the next lesson.  It should be emphasized that the purpose of this part of the lesson is to freely explore the chart tool and discover connections in the data; students should not fixate on creating the perfect chart.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p>The point of having students explore different chart types is to help them build visualizations that reveal trends or connections in the data that are too hard to see by just looking at a table in a spreadsheet. The most important piece of this lesson is not learning to create the prettiest chart; it’s about using charts to “tell the story” of what’s really going on in the data. Different charts are more or less appropriate for communicating this story, depending on the data.</p>
+</div>
+<div>
+<p>You can also point out to students that finding “no correlation” or “no relationship” is actually just as interesting as finding a strong correlation or relationship.  For example, if you examine the difference between men and women in average rating of Star Wars, you will see virtually no difference!  That’s interesting.</p>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up (10 mins)</h2>
+                    <h3 id="compare-with-a-partner">Compare with a partner</h3>
+<p>With partners or in small groups, have students discuss the following prompt. Once students have shared with each other, have students report back to the class about the charts they made and what they learned.</p>
+<p><strong>Prompt:</strong> What was the most interesting visualization you were able to create? What did it help you discover about the data?</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <p>If you want additional sources of data visualizations, consider the following sources:</p>
+<ul>
+<li>Daily Infographic: <a href="http://www.dailyinfographic.com/" target="_blank">http://www.dailyinfographic.com/</a></li>
+<li>Infographics Archive: <a href="http://www.infographicsarchive.com/" target="_blank">http://www.infographicsarchive.com/</a></li>
+</ul>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>1.2</strong> - Computing enables people to use creative development processes to create computational artifacts for creative expression or to solve a problem.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>1.2.5</strong> - Analyze the correctness, usability, functionality, and suitability of computational artifacts. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>1.2.5A</strong> - The context in which an artifact is used determines the correctness, usability, functionality, and suitability of the artifact.</li>
+                                
+                                    <li><strong>1.2.5B</strong> - A computational artifact may have weaknesses, mistakes, or errors depending on the type of artifact.</li>
+                                
+                                    <li><strong>1.2.5C</strong> - The functionality of a computational artifact may be related to how it is used or perceived.</li>
+                                
+                                    <li><strong>1.2.5D</strong> - The suitability (or appropriateness) of a computational artifact may be related to how it is used or perceived.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.1</strong> - People use computer programs to process information to gain insight and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.1</strong> - Use computers to process information, find patterns, and test hypotheses about digitally processed information to gain insight and knowledge. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.1D</strong> - Insight and knowledge can be obtained from translating and transforming digitally represented information.</li>
+                                
+                                    <li><strong>3.1.1E</strong> - Patterns can emerge when data is transformed using computational tools.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.2</strong> - Collaborate when processing information to gain insight and knowledge. [P6]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.2A</strong> - Collaboration is an important part of solving data driven problems.</li>
+                                
+                                    <li><strong>3.1.2B</strong> - Collaboration facilitates solving computational problems by applying multiple perspectives, experiences, and skill sets.</li>
+                                
+                                    <li><strong>3.1.2C</strong> - Communication between participants working on data driven problems gives rise to enhanced insights and knowledge.</li>
+                                
+                                    <li><strong>3.1.2D</strong> - Collaboration in developing hypotheses and questions, and in testing hypotheses and answering questions, about data helps participants gain insight and knowledge.</li>
+                                
+                                    <li><strong>3.1.2F</strong> - Investigating large data sets collaboratively can lead to insight and knowledge not obtained when working alone.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.3</strong> - Explain the insight and knowledge gained from digitally processed data by using appropriate visualizations, notations, and precise language. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.3A</strong> - Visualization tools and software can communicate information about data.</li>
+                                
+                                    <li><strong>3.1.3B</strong> - Tables, diagrams, and textual displays can be used in communicating insight and knowledge gained from data.</li>
+                                
+                                    <li><strong>3.1.3C</strong> - Summaries of data analyzed computationally can be effective in communicating insight and knowledge gained from digitally represented information.</li>
+                                
+                                    <li><strong>3.1.3D</strong> - Transforming information can be effective in communicating knowledge gained from data.</li>
+                                
+                                    <li><strong>3.1.3E</strong> - Interactivity with data is an aspect of communicating.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocmaking-data-visualizations').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#making-data-visualizationscontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'making-data-visualizations', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

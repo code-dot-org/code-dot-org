@@ -6,13 +6,13 @@ skip_sound true
 hide_submit true
 
 question 'Phase 1'
-answer 'Online Introduction: 2 hours online'
+answer 'Online Introduction: 2 hours online, self-paced'
 
 question 'Phase 2'
-answer 'Blended Summer Study: 3 days in-person and 8 hours online'
+answer 'Summer Study: 2 days (14 hours) in-person'
 
 question 'Phase 3'
-answer 'Academic Year Development: 2 days in-person and 10 hours online'
+answer 'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 hours) in person'
 markdown <<MARKDOWN
 
 MARKDOWN

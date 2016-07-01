@@ -1,4 +1,6 @@
-var showAssetManager = require('../../assetManagement/show.js');
+/* global dashboard */
+
+var React = require('react');
 var rowStyle = require('./rowStyle');
 
 // We'd prefer not to make GET requests every time someone types a character.
@@ -49,7 +51,7 @@ var PropertyRow = React.createClass({
     //
     // However today the `createModalDialog` function and `Dialog` component
     // are intertwined with `StudioApp` which is why we have this direct call.
-    showAssetManager(this.changeImage, 'image');
+    dashboard.assets.showAssetManager(this.changeImage, 'image');
   },
 
   changeImage: function (filename) {
@@ -57,7 +59,7 @@ var PropertyRow = React.createClass({
     this.setState({value: filename});
   },
 
-  render: function() {
+  render: function () {
     return (
       <div style={rowStyle.container}>
         <div style={rowStyle.description}>{this.props.desc}</div>

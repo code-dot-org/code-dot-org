@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Baker note 4.4.16: moving content from this lesson into previous lesson.In a continuation of the previous lesson, students are asked to consider how to use their binary messaging devices to send a more complex message - a message with more than two possibilities - by modifying how they use their device, rather than by modifying the device itself. The result is that students have to invent systems of communication that use combinations of binary signals. This lesson will also introduce the term “bit” as another way to describe a binary message. This lays the foundations for a) encoding complex information in computers using combinations of bits as well as b) developing a communication protocol for transmitting those bits from one place to another.">
+    <title>v1 Unit 1 Lesson 3 Sending Complex Messages</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/turdunit/"><span class="h2">Unit</span><span class="h1">8</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            
+                
+                    <div class="lesson current">
+                
+            
+        <a href="/educate/csp_test/turdunit/1" data-pdf-link="#unit8lesson1">
+            1
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/turdunit/2" data-pdf-link="#unit8lesson2">
+            2
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/turdunit/3" data-pdf-link="#unit8lesson3">
+            3
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/turdunit/4" data-pdf-link="#unit8lesson4">
+            4
+        </a>
+        </div>
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit8lesson1">
+        
+            
+                <h1>Lesson 1: v1 Unit 1 Lesson 3 Sending Complex Messages</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <h1 id="baker-note-4416-moving-content-from-this-lesson-into-previous-lesson">Baker note 4.4.16: moving content from this lesson into previous lesson.</h1>
+<p>In a continuation of the previous lesson, students are asked to consider how to use their binary messaging devices to send a more complex message - a message with more than two possibilities - by modifying how they use their device, rather than by modifying the device itself. The result is that students have to invent systems of communication that use combinations of binary signals. This lesson will also introduce the term “bit” as another way to describe a binary message. This lays the foundations for a) encoding complex information in computers using combinations of bits as well as b) developing a communication protocol for transmitting those bits from one place to another.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>There are two major connections that should be made in this lesson.  The first connection to make is that even though everyone’s binary message-sending devices are different, since they all are designed to send a binary message, all the devices can achieve two states, which we call state A and state B for the time being.  It also means that any one of them can be used to send any kind of message, as long as the messages are binary.  The second major connection to make is that in order to send messages a communication protocol must be established.  That means there must be an agreement between the sender and receiver about how messages will be formed, communicated, and interpreted.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocv1-unit-1-lesson-3-sending-complex-messages">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Assessment</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Experiment to create a binary message system to send messages with more than two states.</li>
+                    
+                        <li>Validate the success of the system with a demonstration.</li>
+                    
+                        <li>Connect the number of messages they need to send with the number of bits required to do so (e.g. 16 messages requires 4 bits).</li>
+                    
+                        <li>Reason about the need for communication protocols.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit1/lesson3" target="_blank">Forum</a></li>
+<li>Binary message-sending device from previous lesson</li>
+<li>Access to maker supplies</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1VsjE_cQqh3kcpCOasLDtamio9dd9IkH38aJFzfsVxjE/edit?usp=sharing' target='_blank' class='print_link'>Teaching Strategies for the CS Classroom</a> - Resource (<a href='https://docs.google.com/document/d/1VsjE_cQqh3kcpCOasLDtamio9dd9IkH38aJFzfsVxjE/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit1' target='_blank' class='print_link'>CSP Unit 1</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1N5lkggG807XKiu5kRLmBc1xm4ELQLfEoQhrLUKb59bw/' target='_blank' class='print_link'>Rubric - Sending Complex Messages</a> - Rubric (<a href='https://docs.google.com/document/d/1N5lkggG807XKiu5kRLmBc1xm4ELQLfEoQhrLUKb59bw/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1FY6RjnY8P8cLd8CYwm8nNnvVqN2dFlww0kSi_LIMoDw/' target='_blank' class='print_link'>Sending Complex Messages</a> - Activity Guide (<a href='https://docs.google.com/document/d/1FY6RjnY8P8cLd8CYwm8nNnvVqN2dFlww0kSi_LIMoDw/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="v1-unit-1-lesson-3-sending-complex-messagescontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <p><strong>Goal:</strong> The goal of this discussion is to draw out the limitations of simply trying to modify the device to make it able to represent more and more states.  We want to motivate the idea that, rather than changing the device, we can invent a new way to use it such that each possible message maps to a unique sequence of bits communicated by the device.</p>
+<h3 id="introduction">Introduction</h3>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<p>As we discussed in the previous class, information is a fairly abstract concept. To send information we need to <strong>encode</strong> it in some way, or in other words turn it into something physical that the receiver could recognize. The information we sent with our devices was <strong>binary</strong> because it could only take one of two states. We call this type of information a <strong>bit</strong>, which is short for “binary digit.”  This means that yesterday you were using your devices to <strong>encode bits</strong>. This was pretty convenient, since the messages we were sending were also <strong>binary</strong>.</p>
+</div>
+</div>
+<h3 id="think-pair-share">Think, Pair, Share</h3>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<p>Imagine that you now have to communicate an answer to a question that has 16 possible responses, instead of 2. How would you modify the device or the way you use it in order to answer a question that has a larger set of possible responses?</p>
+</div>
+</div>
+<ul>
+<li>Students journal or think quietly before discussing their ideas with their teammates.</li>
+<li>Do a quick whip-around to get students’ ideas out; you may want to write them on the board.</li>
+</ul>
+<p>It is possible that students will suggest modifying their device so that it can represent 16 different states instead of 2.  If that happens, <em>prompt</em> students to consider: </p>
+<ul>
+<li>What if it wasn’t 16 possible messages that you wanted to send, but 100, or 1,000 or 1,000,000? Is it really feasible to keep modifying your device to represent more possible states?</li>
+<li>Rather than modifying the device, can you modify the way you use it to communicate more messages?</li>
+</ul>
+<h3 id="transition">Transition</h3>
+<p>Yesterday we sent bits. You just considered sending messages that could take more than two states, i.e. are no longer bits. As our messages grow in complexity, however, it seems that the strategy of letting our messages take more than two states will quickly become unmanageable. For today’s challenge, you will need to devise a scheme that allows you to send a message that can take more than two states, while the information in the message itself is composed of only bits.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <h3 id="devise-a-scenario-with-more-than-two-possible-messages-that-need-to-be-communicated">Devise a scenario with more than two possible messages that need to be communicated.</h3>
+<p><strong>Goal:</strong> Students recognize that the bit-sending device they designed yesterday can be used to send messages more complex than a binary message, even if the components of the message are still bits. Students recognize the need for agreeing upon a protocol for interpreting sequences of bits.</p>
+<p><strong>Complex message challenge:</strong> Distribute <a href="Sending Complex Messages" target="_blank">Activity Guide - Sending Complex Messages</a>.</p>
+<p>Provide students a question that has four possible answers, along with the potential answers.  </p>
+<ul>
+<li>Favorite Season? Winter, Spring, Summer, Fall</li>
+<li>Direction towards your house? North, South, East and West</li>
+<li>What time zone is [insert a location here] in? Pacific, Mountain, Central, Eastern</li>
+<li>Feel free to design your own!</li>
+</ul>
+<h3 id="devise-a-way-to-communicate-those-messages-using-your-bit-sending-device">Devise a way to communicate those messages using your bit-sending device.</h3>
+<p><strong>Challenge Guidelines:</strong>  <em>Say:</em> Your task is to invent a way to communicate an answer to the question using the agreed-upon answers without modifying your device.</p>
+<ul>
+<li>Use the same representations of states as in the previous lesson (e.g.: pulling a string one time for state A and pulling the string two times for state B).  </li>
+<li>You can only send one bit (symbol/state) at a time.</li>
+<li>Each of the 4 messages must be represented by a sequence or combination of bits. </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div>
+<p><strong>Testing and optimizing messaging system</strong></p>
+</div>
+<div>
+<ul>
+<li>As groups are testing their systems, they should be encouraged to improve their design to make it more efficient, or faster, or more resistant to failure.</li>
+<li>You might motivate students by saying, for example, imagine that it costs $100 to send each bit across the system. How can you minimize the cost of sending the message, regardless of which message is required to answer the question? <ul>
+<li>Note: The optimal solution is to use only 2 bits.  2 bits have 4 different state-combinations (AA, AB, BA, BB).  A bit is simply a binary message, so a sequence of bits is an organized set of binary messages, where the order in which the symbols are sent matters.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<h3 id="share-communication-strategies-with-the-group">Share communication strategies with the group.</h3>
+<p><strong>Sharing Solutions:</strong> The following activity can be used both to share student solutions and as an assessment of the protocol students design.  For other ideas on how to conclude this activity check out the <a href="Teaching Strategies for the CS Classroom" target="_blank">learning strategies</a>. </p>
+<p>The teacher prepares four notecards with the possible responses to the question written on them. One at a time, groups come to the front of the class. The teacher randomly chooses one card and shows it only to the sending members of the group. The sending members then use their protocol to send that message. The receiving team indicates what message they received and compares results with the intended message. Members of the audience can ask questions about the protocol or provide helpful feedback on how to improve it.</p>
+<ul>
+<li><strong>Note:</strong> While students are still sending the responses to the questions, because these are the four possible messages that they can send, the teacher is no longer asking the question of the group.  Instead, the teacher is making a decision about which of the four responses should be sent.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>Class Discussion:</strong> Provide the class an opportunity to synthesize ideas and experiences from the activity. Key ideas for review include the ability to combine bits to send more complex messages, and the need for clear protocols to interpret sequences of bits. Prompt:</p>
+<ul>
+<li>Could you use another group’s device to send your set of messages?  Why or why not?<ul>
+<li>Are their protocols clear? Do the devices work?</li>
+</ul>
+</li>
+<li>Were some protocols more efficient than others? How would you measure efficiency?<ul>
+<li><strong>Note:</strong> Ask students to analyze which device(s) require the fewest bits in all instances.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Rubric:</strong> Share <a class="resource" href="https://docs.google.com/document/d/1N5lkggG807XKiu5kRLmBc1xm4ELQLfEoQhrLUKb59bw/" target="_blank">Rubric - Sending Complex Messages</a> for students to self-assess the work of the group.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Rubric:</strong> Assess student achievement with <a class="resource" href="https://docs.google.com/document/d/1N5lkggG807XKiu5kRLmBc1xm4ELQLfEoQhrLUKb59bw/" target="_blank">Rubric - Sending Complex Messages</a>.</p>
+<p><strong>Additional Questions:</strong> </p>
+<ul>
+<li>Can you send a message in binary to someone you’ve never before communicated with?  If yes, how? If no, what does the person receiving a message need to know in order to successfully decode the message?</li>
+<li>Why did you choose your particular message encoding strategy? List at least two reasons that justify your decision. List two issues or problems that could be improved in your encoding strategy.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>Ask students to create a user manual for their device, or make a video demonstrating its use.</li>
+<li>Instruct students to record their thoughts about the devices created by the class. Prompt: Did the devices surprise you? How is your device different from the devices created by others? How is it similar? </li>
+</ul>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                            <li><strong>CL.L2:4</strong> - Exhibit dispositions necessary for collaboration: providing useful feedback, integrating feedback, understanding and accepting multiple perspectives, socialization.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L2:7</strong> - Represent data in a variety of ways including text, sounds, pictures and numbers.</li>
+                        
+                            <li><strong>CT.L2:8</strong> - Use visual representations of problem states, structures and data (e.g., graphs, charts, network diagrams, flowcharts).</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>2.1</strong> - A variety of abstractions built upon binary sequences can be used to represent all digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.1</strong> - Describe the variety of abstractions used to represent data. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.1A</strong> - Digital data is represented by abstractions at different levels.</li>
+                                
+                                    <li><strong>2.1.1B</strong> - At the lowest level, all digital data are represented by bits.</li>
+                                
+                                    <li><strong>2.1.1C</strong> - At a higher level, bits are grouped to represent abstractions, including but not limited to numbers, characters, and color.</li>
+                                
+                                    <li><strong>2.1.1E</strong> - At one of the lowest levels of abstraction, digital data is represented in binary (base 2) using only combinations of the digits zero and one.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.2</strong> - Explain how binary sequences are used to represent digital data. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.2D</strong> - The interpretation of a binary sequence depends on how it is used.</li>
+                                
+                                    <li><strong>2.1.2E</strong> - A sequence of bits may represent instructions or data.</li>
+                                
+                                    <li><strong>2.1.2F</strong> - A sequence of bits may represent different types of data in different contexts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.3</strong> - There are trade offs when representing information as digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.3.1</strong> - Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.3.1A</strong> - Digital data representations involve trade  offs related to storage, security, and privacy concerns.</li>
+                                
+                                    <li><strong>3.3.1B</strong> - Security concerns engender tradeoffs in storing and transmitting information.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.1</strong> - The Internet is a network of autonomous systems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.1.1</strong> - Explain the abstractions in the Internet and how the Internet functions. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.1.1A</strong> - The Internet connects devices and networks all over the world.</li>
+                                
+                                    <li><strong>6.1.1C</strong> - Devices and networks that make up the Internet are connected and communicate using addresses and protocols.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocv1-unit-1-lesson-3-sending-complex-messages').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#v1-unit-1-lesson-3-sending-complex-messagescontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'v1-unit-1-lesson-3-sending-complex-messages', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

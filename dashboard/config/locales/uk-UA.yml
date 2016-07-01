@@ -1,7 +1,7 @@
 "uk":
   errors:
     messages:
-      not_saved: "Виправте ці помилки:"
+      not_saved: "Виправ ці помилки:"
       too_young: "Цей вміст має вікові обмеження і недоступний для молодших школярів"
   activerecord:
     errors:
@@ -23,15 +23,23 @@
           future: "не може бути в майбутньому"
   hello: "Привіт, світе"
   welcome_back: "З поверненням, %{name}"
+  your_professional_learning_plan: "Ваш план професійного навчання"
+  see_your_learning_plan: "Перегляд навчального плану"
   submit: "Надіслати"
   unsubmit: "Відкликати"
-  next_page: Next page
+  previous_page: "Попередня сторінка"
+  next_page: "Наступна сторінка"
+  next_resource: "Наступний ресурс"
+  done_with_module: Done with this Learning Module
+  cancel: "Скасувати"
+  okay: "Добре"
+  heading_x_of_y: "%{heading} (сторінка %{x} з %{y})"
   add_teacher_form:
     code:
       label: "Додати учителя:"
       placeholder: "Код групи (ABCDEF)"
-      instructions: Будь ласка, введіть код, виданий вам вашим викладачем. Це 6 літерний
-        код, як "ABCDEF".
+      instructions: Будь ласка, введіть код, виданий вчителем. Це 6 літерний код,
+        накшталт "ABCDEF".
     submit: "Додати викладача"
   add_hint_form:
     placeholder: "Будь ласка, введіть сюди підказку"
@@ -63,7 +71,7 @@
       тут</a> щоб вийти %{provider}.
     already_signedup: "Вже зареєстровані?"
     notyet_signedup: "Ще не приєдналися?"
-    google_oauth2: "Обліковий запис Google"
+    google_oauth2: "обліковий запис Google"
     twitter: Twitter
     facebook: Facebook
     windowslive: "Обліковий запис Microsoft"
@@ -85,6 +93,7 @@
     teacher_title: "Реєстрація вчителя"
     student_pitch: "Реєстрація для учня на Code.org"
     student_title: "Реєстрація учнів"
+    signup_title: "Реєстрація на Code.org"
     school_name: "Назва навчального закладу (необов'язково)"
     school_address: "Адреса школи (необов'язково)"
     address_placeholder: "адреса, місто, штат, індекс"
@@ -102,12 +111,15 @@
     mismatch_password: "Введені вами паролі не збігаються"
     student_terms: "Я погоджуюсь із <a href='http://code.org/tos'>умовами надання
       послуг</a> Code.org. Якщо мені менше 13 років, надсилаючи цю форму, я підтверджую
-      наявність дозволу батьків або юридичних опікунів на користування послугами Code.org.<br/>
+      наявність дозволу батьків або юридичних опікунів на користування послугами Code.org.<br/><br/>
       Для користувачів, молодших за 13 років, електронні скриньки зберігаються без
       можливості надсилання їм повідомлень."
     teacher_terms: "Я погоджуюсь з <a href='http://code.org/tos'>умовами надання послуг
       Code.org </a>."
     additional_information: "Нам потрібна додаткова інформація, щоб продовжити реєстрацію."
+    user_type_label: "Тип облікового запису"
+    user_type_teacher: "Вчитель"
+    user_type_student: "учень"
   signin_form:
     title: "Вже маєте обліковий запис? Увійдіть"
     login: "Електронної пошти або ім'я користувача"
@@ -163,8 +175,6 @@
         subject: "Приєднуйтеся до класу з %{teacher_name} на Code.org!"
       student_disassociated:
         subject: "Повідомлення Code.org: %{student_name} відтепер не є вашим учнем."
-      teacher_disassociated:
-        subject: "Повідомлення Code.org: %{teacher_name} відтепер не є вашим вчителем."
   reports:
     error:
       access_denied: "Ви не маєте доступу до статистики цієї людини"
@@ -263,9 +273,9 @@
       sign_in_to_save: "Увійдіть для збереження досягнень"
       free_play:
         playlab: "Створити програму"
-        artist: "Намалювати"
+        artist: "Намалювати щось"
         calculate: Calculate Something
-        applab: "Створити програму"
+        applab: "Створити програму в App Lab"
     user:
       classroom: "Домашня сторінка вчителя"
       district_dashboard: "Панель області"
@@ -299,8 +309,8 @@
       remove: "Ви впевнені, що хочете вилучити цього вчителя?"
     students:
       dashboard: "Перейти до панелі керування вчителя"
-    user_not_found: "Такий викладач не знайдено."
-    student_teacher_disassociated: "Ви видалили %{teacher_name} як вашoго викладача."
+    user_not_found: "Такого вчителя не знайдено."
+    student_teacher_disassociated: "Ви видалили %{teacher_name} як свого вчителя."
     panel:
       answer_viewer: "Перегляд відповідей"
       student: "учень"
@@ -382,11 +392,41 @@
     no_primary_course: "Спробуйте курс Code Studio"
     choose_next_course: "Спробуйте курс Студії коду, обравши один з варіантів"
     print_certificate: "Друкувати сертифікат"
+    announcement_title: "Оголошення"
+    announcement_view_all: "Переглянути всі"
+    announcement_message: Хочете допомогти нам протестувати нові функції? Ми знаємо,
+      що дуже важливо заохочувати учнів до перебору та експериментів з рішеннями,
+      тож ми додамо функцію "код, який не використовується", щоб дозволити учням запускати
+      свій код, навіть тоді, коли є відокремлені блоки. Ми очікуємо відгуків, перш
+      ніж оприлюднити цю функцію.
+    announcement_button: "Випробувати функцію"
+    announcement_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного учня
+      у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися із
+      своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори
+      великих компаній звертаються до Конгресу США із відкритим листом у підтримку
+      фінансування інформатичної освіти у школі."
+    announcement_petition_button: "Додайте своє ім'я"
+  move_students:
+    new_section_dne: "Вибачте, але групи %{new_section_code} не існує. Вкажіть інший
+      код групи."
+    section_code_not_entered: "Будь ласка, вкажіть current_section_code."
+    section_code_cant_be_current_section: "Поточна група не може бути такою ж, як
+      нова."
+    current_section_dne: "Вибачте, але групи %{current_section_code} не існує. Вкажіть
+      інший код групи."
+    students_not_yours: "Ви не можете перемістити учнів з групи, якою не керуєте."
+    stay_enrolled_not_entered: "Вкажіть stay_enrolled_in_current_section."
+    student_ids_not_entered: "Вкажіть student_ids."
+    student_not_found: "Одного чи більше учнів не знайдено."
+    all_students_must_be_in_current_section: "Всі учні повинні бути зараховані у ваші
+      групи."
+    already_enrolled_in_new_section: "Ви не можете перемістити цих учнів, бо вчитель
+      зарахував їх в іншу групу."
   share:
     title: "Навчання у Студії коду"
     description: "Кожен може вивчати інформатику. Створюй ігри, програмки та твори
       з кодом."
-    try_hour_of_code: "Спробуйт годину коду!"
+    try_hour_of_code: "Спробуйте Годину коду!"
   gender:
     male: "Чоловік"
     female: "Жінка"
@@ -419,6 +459,8 @@
       Ltd. Всі права захищені. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
       Arts Inc. Всі права захищені. Дивовижний світ Гамбола є торгівельною маркою
       і&copy; 2015 Cartoon Network.
+    code_from_html: Code.org використовує p5.play, за ліцензією <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "На потужностях Amazon Web Services"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE та Hour
       of Code&reg; з торговими марками Code.org."
@@ -436,7 +478,7 @@
     built_on_code_studio: "Створено у Студії коду"
     make_my_own_app: "Створити власну програму"
     how_it_works: "Як це працює"
-    try_hour_of_code: "Спробуйт годину коду!"
+    try_hour_of_code: "Спробуйте Годину коду!"
   reference_area:
     title: "Потрібна допомога?"
     subtitle: "Переглянути ці відео та підказки"
@@ -450,22 +492,16 @@
     notes_coming_soon: "Незабаром будуть доступні субтитри до цього відео."
     autoplay_option: "Автовідтворення відео"
     download: "Завантажити відео"
-  compatability:
-    working:
-      header: "Ми працюємо над підтримкою для вашого браузера."
-      message: Code.org використовує сучасні веб-технології, тому сайт працює швидко.
-        Ваш браузер не підтримує усі наші функції, тому можуть виникнути деякі труднощі
-        при користуванні цією частиною сайту. Ви можете допомогти, <a href='%{report_issue_url}'>повідомивши
-        про помилки у роботі</a>. Ви також можете <a href='%{supported_browsers_url}'>оновити
-        браузер до потрібної версії</a>.
-      hide_this_warning: "Сховати попередження"
+  compatibility:
     upgrade:
-      header: "Будь ласка, оновіть браузер."
-      message: Code.org використовує сучасні веб-технології, тому сайт працює швидко.
-        На жаль, Ваш браузер не підтримує усі функції, передбачені цією частиною сайту.<br/><br/>Встановіть
-        один із перевірених браузерів для продовження роботи. Можете також <a href='#'>спробувати
-        переглянути сторінку</a>, але її функціональність може бути порушена.
-      button: "Покажіть список підтримуваних браузерів"
+      unsupported_message: "Ваш браузер не підтримується. Оновіть свій браузер до
+        <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>.
+        Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
+      ie_message: Code.org незабаром припинить підтримку Internet Explorer 8, 9, та
+        10. Будь ласка, оновіться до сучаснішого браузера.
+      ie_message_csedweek: CSEdWeek.org незабаром припинить підтримку Internet Explorer
+        8, 9, та 10. Будь ласка, оновіться до сучаснішого браузера.
+      link: "Дізнайтеся більше"
   slow_loading: "Це займає більше часу, ніж звичайно..."
   try_reloading: "Спробуйте перезавантажити сторінку"
   next_stage: "Завершено! Перейти до наступного етапу"
@@ -509,7 +545,7 @@
       audience: "Вік 13+"
       cta: "Почати навчання"
     hoc:
-      title: "Класичний лабіринт"
+      title: "Лабіринт"
       body: "Спробуйте основи інформатики. Мільйони вже скористались цим шансом."
     flappy:
       title: "Код Пурха"
@@ -520,7 +556,7 @@
       body: "Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування.
         Цей курс розроблено для використання на заняттях в основній школі, але може
         бути цікавим для будь-якого віку."
-      body_short: "Вивчити основи інформатики у прискореній версії курсів 2-4."
+      body_short: "Вивчайте основи інформатики у прискореній версії курсів 2-4."
     hoc2014:
       try_new_tutorial: "Спробуйте новий підручник Години коду в бета-версії"
       try_frozen: "Художник з Анною та Ельзою, із Крижаного серця"
@@ -538,6 +574,15 @@
     minecraft:
       title: "Майнкрафт"
       body: "Дослідимо світ Майнкрафту через код."
+    unplugged:
+      title: "Безмашинні вправи"
+      audience: "Вік 6+"
+      body: "Ми підготували список безмашинних вправ, які можна використати у класі.
+        Тепер можна викладати основи інформатики, незалежно від наявності комп'ютерів
+        у кабінеті! Спробуйте ці уроки як окремий курс, чи додаткові вправи будь-якого
+        курсу інформатики."
+      body_short: "Якщо ви не маєте комп'ютера, спробуйте ці офлайн уроки у вашому
+        класі."
   gallery:
     students_drew_these_with_code: "Ці малюнки запрограмували учні!"
     students_made_these_with_code: "Це запрограмували учні!"
@@ -548,12 +593,15 @@
       програм та малюнків, за допомогою власноручно написаних програм. Клацайте на
       зображення та скріншоти, щоб запустити ці програми."
     want_to_make_your_own: "Хочете створити власний?"
+    how_to_save: На останньому рівні підручника клацніть "Завершити" та "Зберегти",
+      щоб зберегти свою роботу в галереї.
     more: "Більш &rarr;"
     caption_by_name_age: "від %{name}, віком %{age}"
     caption_time_ago: "%{time_ago} тому"
     header: "Галерея"
     header_playlab: "Ігрова студія"
     header_artist: "Художник"
+    report_abuse: "Повідомити про порушення"
   landing:
     prerelease: "Це <span class='betatext'>бета</span>-курс. Це означає, що перед
       Вами не остаточна версія цього курсу і він підлягає змінам та покращенням відповідно
@@ -588,6 +636,13 @@
     wrong_body: "Дякуємо за надсилання відповіді."
     correct_title: "Дякую"
     correct_body: "Дякуємо за надсилання відповіді."
+    unsubmit-title: "Скасувати оцінку"
+    unsubmit-body: "Скасування оцінки змінить час та дату здавання. Ви впевнені?"
+    submit-incomplete-title: "Надіслати оцінку"
+    submit-incomplete-body: "Ви не відповіли на деякі питання. Ви не зможете відредагувати
+      вашу оцінку після підтвердження. Продовжити?"
+    submit-complete-title: "Надіслати оцінку"
+    submit-complete-body: "Проект не можна буде редагувати після подання. Подавати?"
   match:
     wrong_title: "Неправильне рішення"
     wrong_body: "Подане рішення не є правильним.  Будь ласка, спробуйте ще раз!"
@@ -691,6 +746,10 @@
     share: "Поділитися"
     share_title: "Поділитися своїм проектом"
     share_copy_link: "Скопіювати посилання:"
+    share_embed_description: "Можете вставити HTML-код, щоб вбудувати цей проект у
+      веб-сторінку."
+    embed: "Вбудувати"
+    advanced_share: "Показати розширені налаштування"
     close: "Закрити"
     more: "Більше"
     name: "Ім’я"
@@ -743,7 +802,75 @@
         acknowledge: "Надсилаючи цю інформацію, ви підтверджуєте, що він буде оброблятися
           відповідно до умов %{link_start_privacy}Політики конфіденційності%{link_end}
           та %{link_start_tos}Умов надання послуг%{link_end}"
+  peer_review:
+    accepted:
+      name: "Прийнято"
+      description: "<strong>Так</strong>, ця робота <strong>відповідає</strong> вимогам"
+    rejected:
+      name: "Відхилено"
+      description: "<strong>Ні</strong>, ця робота <strong>не відповідає</strong>
+        вимогам"
+    escalated:
+      name: "Ескалація"
+      description: "Я хочу, щоб вчитель переглянув цю роботу"
+    instructor_feedback: "Коментар вчителя"
+    peer_feedback: "Коментар інших учнів"
+    outdated: "Цей коментар стосується попередньої версії роботи"
   components:
     icon_library:
       search_placeholder_text: "Шукати значок..."
       no_icons_found: "Значків не знайдено"
+    playzone:
+      artist_description: "Малюйте картини та узори разом з Художником!"
+      artist_title: "Новий малюнок"
+      continue_button: "Перейти до наступного етапу"
+      playlab_description: "Складіть історію або створіть гру в Ігровій студії!"
+      playlab_title: "Новий додаток"
+      primary_header: "Вітання! Завершено %{stageName}!"
+      projects_description: "Повернутись до попередніх проектів."
+      projects_title: "Відкрити проект"
+      secondary_header: "Запитай вчителя, що робити далі"
+  flex_category:
+    required: "Огляд"
+    content: "Зміст"
+    practice: "Методики викладання"
+  external_links:
+    disclaimer_md: "<strong>Відмова від відповідальності: Ви покидаєте поточний домен
+      та переходите на сайт, який не підтримується Code.org.</strong> Політики приватності
+      цього сайту можуть відрізнятись від прийнятих на Code.org's.<br/><br/>Ми відібрали
+      ці ресурси, оскільки вважаємо їх корисними. Хоча ми не несемо безпосередньої
+      відповідальності за зміст цього сайту, будь ласка, <a href='%{support_url}'>зв'яжіться
+      із службою підтримки</a> якщо ви вважаєте цей вміст неприйнятним, або якщо посилання
+      не працює."
+  hoc_download:
+    title: "Завантаження Години коду"
+    capsule_title: "Маєте Інтернет?"
+    capsule_desc: Скористайтесь онлайновою версією <a href="%{url}">%{app_name}</a>.
+    instructions_headline: "Немає Інтернету?"
+    instructions: 'Вказівки для вчителя: якщо Ви маєте поганий Інтернет-зв''язок,
+      ці підручники Години коду можна завантажити для оффлайнового використання. Оберіть
+      мову та платформу, завантажте та встановіть їх на усіх комп''ютерах свого кабінету.
+      Можна використати флешку USB для перенесення файлів на комп''ютери. Примітка:
+      учні не зможуть увійти в Студію коду, зберегти свій прогрес чи надрукувати сертифікати.
+      Вчитель може надрукувати сертифікати завчасно <a href="%{url}">тут</a>.'
+    minecraft_name: "Година коду Майнкрафт"
+    starwars_blocks_name: "Зоряні війни: Закодуємо далеку Галактику (блоки)"
+    starwars_javascript_name: "Зоряні війни: Закодуємо далеку Галактику (JavaScript)"
+    download_message: "Завантажити %{app_name} для оффлайнового використання (136MB)"
+    download_in_english: "Завантаження англійською:"
+    download_in_spanish: "Завантаження іспанською:"
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

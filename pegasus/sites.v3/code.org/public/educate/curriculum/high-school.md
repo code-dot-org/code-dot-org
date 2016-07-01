@@ -4,7 +4,7 @@ nav: educate_nav
 ---
 
 # High School 
-For high schools, we offer two years of Computer Science courses for beginners: Exploring Computer Science and AP Computer Science Principles. If you want to go even further with your students, the third party resources below provide additional courses in programming, AP Computer Science A,  algebra, and more.
+For high schools, we offer two years of Computer Science courses for beginners: Exploring Computer Science and AP Computer Science Principles. If you want to go even further with your students, the third party resources below provide additional courses in programming, AP Computer Science A, algebra, and more. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
 
 # Exploring Computer Science
 
@@ -40,6 +40,11 @@ Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, 
 Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course is currently in development and will be ready for the 2017-2018 school year.
 
 [<button>Learn more about curriculum</button>](/educate/csd)
+
+# Computer Science Fundamentals - Accelerated
+Code.org offers a four course [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students. If your students have not already taken all of these courses, the 20-hour accelerated course covers the core concepts from the first four courses at an accelerated pace designed for students ages 10-18. This can be worked into a high school school after-school program or as a unit in a technology or programming class.
+
+[<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
 
 # 3rd Party resources for high school CS
 

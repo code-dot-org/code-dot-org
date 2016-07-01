@@ -1,7 +1,6 @@
 require 'dynamic_config/dcdo'
 
 module SQS
-
   # Immutable configuration for a queue processor.
   class QueueProcessorConfig
     attr_reader :queue_url, :handler, :num_workers_per_processor, :num_processors, :logger
@@ -14,14 +13,16 @@ module SQS
     # @param [Logger] logger
     # @param [Integer] num_processors The number of processor instances.
     # @param [Integer] num_workers_per_processor How many worker threads for each processor.
-    def initialize(queue_url:,
-                   handler:,
-                   initial_max_rate:,
-                   num_processors:,
-                   num_workers_per_processor:,
-                   name: nil,
-                   max_rate_proc: nil,
-                   logger: Logger.new(STDOUT))
+    def initialize(
+      queue_url:,
+      handler:,
+      initial_max_rate:,
+      num_processors:,
+      num_workers_per_processor:,
+      name: nil,
+      max_rate_proc: nil,
+      logger: Logger.new(STDOUT)
+    )
       raise ArgumentError, 'num_workers_per_processor must be positive' unless num_workers_per_processor > 0
       raise ArgumentError, 'initial_max_rate must be non-negative' unless initial_max_rate >= 0
 
@@ -38,17 +39,17 @@ module SQS
     # Creates a config from an options hash.
     def self.create(options)
       SQS::QueueProcessorConfig.new(
-          queue_url: options['queue_url'],
-          handler: options['handler_class'].constantize.new,
-          num_processors: options['num_processors'] || 1,
-          num_workers_per_processor: options['num_workers_per_processor'] || 10,
-          initial_max_rate: options['initial_max_rate'] || 5000,
-          max_rate_proc: options['max_rate_proc'],
-          name: options['name'])
+        queue_url: options['queue_url'],
+        handler: options['handler_class'].constantize.new,
+        num_processors: options['num_processors'] || 1,
+        num_workers_per_processor: options['num_workers_per_processor'] || 10,
+        initial_max_rate: options['initial_max_rate'] || 5000,
+        max_rate_proc: options['max_rate_proc'],
+        name: options['name'])
     end
 
     def self.create_configs_from_json(json)
-      processors_options = JSON::parse(json)['queues']
+      processors_options = JSON.parse(json)['queues']
       processors_options.map do |options|
         define_proc_for_dcdo_max_rate_key(options)
         SQS::QueueProcessorConfig.create(options)

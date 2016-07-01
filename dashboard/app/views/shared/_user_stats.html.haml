@@ -1,10 +1,10 @@
 - script = @script || (user && user.primary_script) || Script.twenty_hour_script
 - script_summary = script.summarize
-- async = local_assigns[:async]
-- progress = summarize_user_progress(script, user, async) || {}
+- progress = summarize_user_progress(script, user) || {}
 - level_progress = progress[:levels] || {}
 - should_show_lesson_plan = user && user.teacher?
 - current_level_id = params[:current_level_id]
+- puzzle_page = params[:puzzle_page] || -1
 
 .user-stats-block
   - script_summary[:stages].each do |stage|
@@ -17,16 +17,23 @@
             = link_to t('view_lesson_plan'), stage[:lesson_plan_html_url], target: "_blank"
 
       .games
+        - last_level_id = nil
+        - level_repeat = 0
         - stage[:levels].each do |level|
+          - if last_level_id != level[:ids][0]
+            - level_repeat = 0
+          - else
+            - level_repeat += 1
+          - last_level_id = level[:ids][0]
           .level
-            - p = level_progress[level[:id]]
-            - if async
-              - status = 'not_tried'
-              - result = 0
+            - p = level_progress[level[:ids][0]]
+            - if p.try(:[], :pages_completed)
+              - pages_completed = p[:pages_completed]
+              - status = activity_css_class(pages_completed[level_repeat])
             - else
               - status = p.try(:[], :status) || 'not_tried'
               - result = p.try(:[], :result) || 0
-            - if current_level_id == "#{level[:id]}" && !async
+            - if current_level_id == "#{level[:ids][0]}"
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif level[:kind] == 'assessment'
               - puzzle_outer_class = 'puzzle_outer_assessment'
@@ -38,7 +45,7 @@
                 - link += "?user_id=#{user.id}"
               - if @section
                 - link += "&section_id=#{@section.id}"
-              %a.level_link{href: link, class: [status, "level-#{level[:id]}"], data: {result: result}}
+              %a.level_link{href: link, class: [status, "level-#{level[:ids][0]}"], data: {result: result}}
                 - if level[:kind] == 'unplugged'
                   %span.puzzle-named
                     = level[:title]
@@ -47,15 +54,5 @@
                 - else
                   %span.puzzle-number
                     = level[:title]
+
   = render partial: 'shared/user_stats_key'
-
-- if script_summary[:trophies]
-  %div{style: 'clear: both;'}
-  #trophies
-    = render partial: 'shared/concept_trophy_block', locals: {concept_progress: progress[:trophies], added_style: 'padding: 10px;'}
-
-- if async
-  :javascript
-    //<![CDATA[
-    window.dashboard.progress.populateProgress("#{script.name}")
-    //]]>

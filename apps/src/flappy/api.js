@@ -78,7 +78,7 @@ exports.setSpeed = function (id, value) {
   Flappy.SPEED = value;
 };
 
-exports.playSound = function(id, soundName) {
+exports.playSound = function (id, soundName) {
   studioApp.highlight(id);
   studioApp.playAudio(soundName);
 };
@@ -93,7 +93,7 @@ exports.endGame = function (id) {
   Flappy.gameState = Flappy.GameStates.ENDING;
 };
 
-exports.incrementPlayerScore = function(id) {
+exports.incrementPlayerScore = function (id) {
   studioApp.highlight(id);
   Flappy.playerScore++;
   Flappy.displayScore();

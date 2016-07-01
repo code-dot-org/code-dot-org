@@ -1,5 +1,4 @@
 module WorkshopConstants
-
   CS_IN_S = 'CS in Science'
   CS_IN_A = 'CS in Algebra'
   ECS = 'ECS'
@@ -35,6 +34,8 @@ module WorkshopConstants
     8 => {id: 8, short_name: PHASE_4, long_name: 'Phase 4: Summer Wrap Up'}
   }
 
+  # These are ids for google form surveys sent in email at the completion of various workshops.
+  # See Workshop.exit_survey_url
   EXIT_SURVEY_IDS = {
     CS_IN_S => {
       PHASE_2 => '1QG9eCbKJD26UNvTC0C9ZZyrp63WjzQSK5gQPP4lsZ2c',
@@ -51,6 +52,7 @@ module WorkshopConstants
       PHASE_3A => '19Cfv0tzvBh7JOUWhFWv5phDvcDkxYWm1nBLKXESVyB4',
       PHASE_3B => '1U92feb_2lJ8lg2uU4dLeabK9zbmznkNogYtEP-N5IH4',
       PHASE_3C => '156hOBI42fcQx6rYsuMmdMH5NqElbAsCTd5MXDs70_Vc',
+      PHASE_3D => '10_5kTEDVNn46HleKyDIEjWrk6U1iiHHPIgpZATwL4vw',
       PHASE_4 => '1KygTcSauHkt5AA_RF_PM5OIYVpvXPLOlG8O79yVRi48'
     },
     CSP => {
@@ -62,5 +64,4 @@ module WorkshopConstants
       PHASE_4 => '1aMKclWosHmvn5GH0KaVxBGvxh7KeLYQTtKiHf-lC0X0'
     }
   }
-
 end

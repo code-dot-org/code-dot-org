@@ -2,6 +2,7 @@
 @import "mixins";
 @import "style-constants";
 @import "../JsDebuggerUi.scss";
+@import "../VisualizationOverlay.scss";
 @import "skins/base.scss";
 @import "skins/modern.scss";
 
@@ -219,13 +220,22 @@ div#visualizationResizeBar {
 
 #visualizationColumn.wireframeShare {
   max-width: none !important;
+  // If you change this width and height,
+  // make sure to update the AdvancedShareOptions.jsx iframe code.
   width: 352px;
   height: 612px;
   margin: 0 auto;
   padding: 20px 0;
 
+  background-size: initial;
+
   #playSpaceHeader, #gameButtons {
     display: none;
+  }
+
+  #phoneFrameScreen {
+    width: 320px;
+    height: 480px;
   }
 
   #visualization {
@@ -235,14 +245,20 @@ div#visualizationResizeBar {
   }
 }
 
+body.embedded_iframe {
+  #visualizationColumn.wireframeShare {
+    padding: 0px;
+  }
+}
+
 #visualizationColumn.chromelessShare {
   #playSpaceHeader, #gameButtons {
     display: none;
   }
 }
 
-#divApplab, #designModeViz, #visualizationOverlay {
-  overflow: hidden;
+#divApplab, #designModeViz {
+  overflow: visible;
   outline: none;
   -webkit-touch-callout: none;
 
@@ -255,36 +271,19 @@ div#visualizationResizeBar {
   background-color: white;
 }
 
+#designModeViz.clip-content {
+  overflow: hidden;
+}
+
+#designModeViz .screen {
+  overflow: visible;
+}
+
 #visualizationOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
   // layer 1 is design mode/div applab
   // layer 2 is items being dragged out from toolbox
   // layer 3 is overlay
   z-index: 3;
-  pointer-events: none;
-  // This is a hack that enables pointer-events: none on this absolutely-
-  // positioned SVG element in IE9.
-  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=0);
-}
-
-.crosshair-overlay {
-  line {
-    stroke: #aaa;
-    stroke-width: 1.8px;
-    stroke-dasharray: 6.5px;
-  }
-
-  rect {
-    stroke: #bdc3c7;
-    stroke-width: 2px;
-    fill: rgba(255,255,255,0.8);
-  }
-
-  text {
-    text-anchor: middle;
-  }
 }
 
 #divApplab canvas, #designModeViz canvas {
@@ -322,6 +321,9 @@ div#visualizationResizeBar {
       cursor: grabbing;
       cursor: -moz-grabbing;
       cursor: -webkit-grabbing;
+    }
+    &.toDelete {
+      opacity: $delete-opacity;
     }
   }
 
@@ -471,4 +473,10 @@ div#visualizationResizeBar {
   background: -o-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, red, orange, yellow, green, blue); /* Standard syntax */
+}
+
+img#turtleImage {
+  position: absolute;
+  height: 24px;
+  margin: 0px;
 }

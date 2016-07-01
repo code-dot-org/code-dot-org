@@ -3,11 +3,10 @@
 # level_source.id) to store the level source images as, so I need to
 # rename the old ones.
 
-
 require_relative '../../config/environment'
 require 'cdo/aws/s3'
 
-START_ID = 8531000
+START_ID = 8_531_000
 #START_ID = 1
 BUCKET = 'cdo-art'
 
@@ -34,5 +33,4 @@ LevelSourceImage.where(['id > ?', START_ID]).find_each do |lsi|
   else
     puts '.'
   end
-
 end

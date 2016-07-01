@@ -1,7 +1,12 @@
 ar-SA:
   hour_of_code: ساعة البرمجة
   hello: مرحباً بالعالم
+  "yes": نعم
+  "no": لا
   select_language: من فضلك اختر لغتك
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: اعرف المزيد
   en: علوم الكمبيوتر
   computer_science_edweek: الاسبوع التعليمي لعلوم الكمبيوتر
   csedweek_dates: 8-14 كانون الأول/ديسمبر، 2014
@@ -21,7 +26,7 @@ ar-SA:
   twentyhours_heading: 'جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر'
   twentyhours_text: 'أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب ومفاهيم البرمجة الأساسية في الدورة التالية.'
   og_title: كل طفل يستحق فرصة
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: كل طالب في كل مدرسة يستحق الفرصة ليدرس علوم الحاسب . إنها تغير كل شيء.
   hoc2014_heading: 'انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/> 8-14 كانون الأول/ديسمبر، عام 2014 <br/>'
   hoc2014_students: الطلاب
   hoc2014_try: جربها
@@ -85,43 +90,43 @@ ar-SA:
   third_party_platform_web: 'البرنامج: شبكة الإنترنت'
   third_party_price_varies: 'السعر: تختلف البرامج'
   third_party_price_free: 'السعر: مجانًا'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
-  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
-  third_party_tynker_btn_site: Visit Tynker
-  third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_price_299: 'السعر: 2.99$/تحميل'
+  third_party_price_individual: 'السعر الفردي : تجربة مجانية  و25$ بالشهر'
+  third_party_price_school: 'سعر المدرسة: خطط حرة & واحترافية في 2500 دولار +'
+  third_party_tynker_desc: منصة الحوسبة الإبداعي تينكير ليساعد الأطفال على تطوير التفكير الحسابي ومهارات البرمجة في متعة، طريقة مبتكرة وبديهية. لغتنا البرمجة المرئية المبتكرة التفاعلية ذاتيان دورات وأنشطة البرمجة المستندة إلى لعبة سهلة بمثابة مقدمة للبرمجة، وتمكين الأطفال من الابتكار وخلق.
+  third_party_tynker_btn_curriculum: حاول المنهج الدراسي في تينكير للقراء في وقت مبكر
+  third_party_tynker_btn_site: زر تينكر
+  third_party_scratchjr_desc: الابن الصفر هي لغة برمجة استهلالية التي تمكن صغار الأطفال (الفئة العمرية 5-7) لإنشاء قصص تفاعلية والألعاب الخاصة بهم. الأطفال الأداة معا لبنات البرمجة الرسومية لجعل الأحرف التحرك، القفز والرقص والغناء. الأطفال يمكن تعديل الأحرف في محرر الطلاء، إضافة أصوات والأصوات الخاصة بهم، حتى إدراج صور لأنفسهم--ثم استخدام كتل البرمجة جعل شخصياتهم تأتي في الحياة.
+  third_party_scratchjr_btn_curriculum: تحميل المناهج الدراسية الابن الصفر
+  third_party_scratchjr_btn_site: زر Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_site: زر Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_lightbot_btn_site: زر Lightbot
   third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
   third_party_khan_btn_learn: Learn CS with Khan Academy
   third_party_khan_btn_forum: Khan Academy CS Forum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_appinv_btn_curriculum: تحميل منهج مخترع التطبيق 2
+  third_party_appinv_btn_forum: منتدى مخترع التطبيق 2
+  third_party_appinv_btn_site: زر مخترع التطبيق 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
-  third_party_codehs_btn_try: Intro CS Learn More for Schools
+  third_party_codehs_btn_try: مقدمة علوم الحاسب تعلم المزيد للمدارس
   third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_curriculum: تحميل مناهج اكاديمية كود
+  third_party_codecademy_btn_site: زر اكاديمية كود
+  third_party_organization: منظمة
   third_party_curriculum: المناهج
-  third_party_pricing: Pricing
-  third_party_cost_free: Free for students and teachers
+  third_party_pricing: التسعير
+  third_party_cost_free: 'مجاني للطلبة  والمدرسين'
   third_party_cost_5permonth: $5/month per class
-  third_party_cost_299: $2.99/download
+  third_party_cost_299: 2.99$ / تحميل
   third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_cost_free_2: 'مجاني للتجربة : 2$ للطالب'
+  third_party_cost_free_10: 'مجاني للتجربة : 9.99$ بالشهر'
   third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -266,6 +271,8 @@ ar-SA:
   homepage_banner_privacy_link: اعرف المزيد
   homepage_banner_20k_teachers: 20,000 معلم دربوا, والآن يعلمون علم الكمبيوتر في الصفوف الدراسية.
   homepage_banner_20k_teachers_link: اعرف المزيد
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: ساعة البرمجة
   homepage_slot_text_blurb_hoc: بإمكان أي شخص أن يتعلم. ابدأ اليوم
   homepage_slot_text_link_hoc: 'جرب ساعة من البرمجة - "Hour of Code"'
@@ -280,7 +287,7 @@ ar-SA:
   homepage_slot_text_link_othercourses: دورات أخرى على الإنترنت
   homepage_slot_text_title_educators: المتعلمون
   homepage_slot_text_blurb_educators: علم طلّابك
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: المدرسة الابتدائية
   homepage_slot_text_link_middle: المدرسة الإعدادية
   homepage_slot_text_link_high: المدرسة الثانوية
   homepage_slot_text_link_k5: دورات للروضة حتى الصف الخامس
@@ -291,6 +298,7 @@ ar-SA:
   homepage_slot_text_link_stats: انظر إلى الإحصائيات
   homepage_slot_text_link_buy: إنضم
   homepage_slot_text_link_donate: تبرع
+  homepage_slot_text_link_shop: القمصان, القبعات, و المزيد
   homepage_header_codestudio: انجازات الطالب بستوديو البرمجة
   homepage_header_donors: 'موقع code.org  يشكر الداعمين له'
   homepage_donors_seall: عرض الكل
@@ -433,6 +441,7 @@ ar-SA:
   dashboard_landing_new_beta: جديدنا ! جرب اللآن النسخة التجريبية من دورتنا التدريبية لطلاب K-5 .
   dashboard_landing_new_k5courses: جديد ! جرب دوراتنا للطلاب K-5.
   dashboard_landing_useful_links: روابط أخرى مفيدة
+  dashboard_landing_classroom_resources: موارد لفصلك
   dashboard_landing_office_hours: اسأل سؤالاً شخصيا! قم بزيارة مكاتبنا خلال ساعات العمل شهريا .
   dashboard_landing_print_certificates: طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة التدريبية
   dashboard_landing_educator_blog: أقرأ عن أخبار ومستجدات موادنا على مدونة معلمنا
@@ -446,6 +455,10 @@ ar-SA:
   dashboard_landing_available_courses: هذة هي الدورات المتاحة حاليا لكم ولطلابكم.
   dashboard_landing_more_tutorials: هل تريد رؤية المزيد من الشروحات؟
   dashboard_landing_more_tutorials_desc: 'هناك المزيد من الدروس <a href="/learn/beyond">المقدمة من قبل شركائنا.</a> لتعلم برمجة الروبوتات أو صفحات الويب أو إنشاء تطبيقك الخاص أو استكشاف لغات برمجة أخرى مثل سي ++ أو روبي أو بايثون.'
+  dashboard_landing_inspire: إلهام طلابك مع ملصقات، وأشرطة الفيديو، والمزيد.
+  dashboard_landing_video_library: استخدم فيديو من مكتبة الفيديو لمفاهيم علوم الكمبيوتر.
+  dashboard_landing_report_bug: طلب ميزة أو الإبلاغ عن خلل.
+  dashboard_landing_teacher_forum: انضم إلى مجتمع التعلم المهني.
   dashboard_hoc_courses: ساعة البرمجة لجميع الأعمار
   dashboard_hoc_courses_desc: قم بتجريب واحد من الدروس القصيرة لساعة واحدة مع طلابك!
   dashboard_hoc_courses_desc_and_cta: 'جرب هذه الدروس القصيرة ، ساعة واحدة مع طلابك. <a href="https://hourofcode.com"> انظم إلى ثورة "ساعة من التعليمات البرمجية" من خلال "اسبوع تعليم علوم الكمبيوتر".'
@@ -476,6 +489,15 @@ ar-SA:
   dashboard_action_remove_confirm: حذف؟
   dashboard_action_done: ‏‏تم
   dashboard_action_required: متطلب
+  dashboard_assessments_view: 'عرض التقييمات في:'
+  dashboard_assessments_none: |-
+    Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: الصفحة الرئيسية للمعلم
   dashboard_navigation_section_student_progress: حسابات و سير الطلاب
   dashboard_navigation_section_teacher_progress: تقدمك فى الدورة
@@ -484,21 +506,34 @@ ar-SA:
   dashboard_navigation_section_pd: التنمية المهنية
   dashboard_navigation_section_speakers: 'علوم الحاسب الآلي <br/> المتحدثين الضيوف'
   dashboard_navigation_all_sections: حسابات و سير الطلاب
-  dashboard_navigation_view_progress: عرض عملية التقدم
-  dashboard_navigation_view_text_responses: اظهار الردود النصيّة
+  dashboard_navigation_view_progress: في تقدم
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: إضافة طلاب
   dashboard_navigation_manage_students: إدارة الطلاب
   dashboard_navigation_lesson_plans_resources: خطط الدرس والموارد
-  dashboard_navigation_view_stats: عرض الإحصائيات
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'القسم: %{section_name}'
   dashboard_navigation_student: 'الطالب: %{student_name}'
+  dashboard_progress_not_started: لم تبدأ
+  dashboard_progress_in_progress: في طور التقدم
+  dashboard_progress_not_completed: غير مكتمل
+  dashboard_progress_completed_too_many_blocks: أكملت، استخدمت مربعات برمجية كثيرة جداً
+  dashboard_progress_completed_perfect: مكتمل, ممتاز
+  dashboard_progress_furthest_level_attempted: المستوى الأبعد الذي تمت محاولته
+  dashboard_progress_submitted: تم تقديمه
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
   dashboard_sections_new_section: القسم جديد
   dashboard_sections_jumbotron_instruction: انشئ أقسام جديدة وأضف الطلاب إليها، هذة الطريقة تساعد في توزيع الطلاب إلى مجموعات صغيرة يسهل متابعة عملية تقدمهم وإدارة حسابتهم.
   dashboard_sections_table_section: القسم
   dashboard_sections_table_secret: نوع تسجيل الدخول
   dashboard_sections_table_grade: الصف الدراسي
   dashboard_sections_table_course: الدرس
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: الطلاب
   dashboard_sections_table_code: قسم البرمجة
   dashboard_sections_name: إسم القسم
@@ -508,6 +543,19 @@ ar-SA:
   dashboard_sections_secret_none: 'إذا كنت تريد أن يتمكن طلابك من إدارة الحسابات الخاصة بهم، بما في ذلك اختيار كلمات المرور الخاصة بهم، اختر نوع الحماية <b>بدون</b>.'
   dashboard_sections_print_secrets: كما يمكنك بعد ذلك طباعة بطاقات ورقية تحوي معلومات الحساب وتعطى لكل طالب من طلابك بشكل فردي.
   dashboard_sections_switch_section: 'قسم التبديل:'
+  dashboard_sections_close: إغلاق
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Teacher
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: إضافة طالب
   dashboard_students_add_students: إضافة العديد من الطلاب
   dashboard_students_add_multiple: 'اكتب أو إلصق أسماء الطلاب. واحداً في كل سطر:'
@@ -551,6 +599,7 @@ ar-SA:
   dashboard_course2: 'الدرسة الثاني:'
   dashboard_course3: 'الدرس الثالت:'
   dashboard_course4: 'الدّرس 4 (تجريبي):'
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: المناهج
   dashboard_curriculum_overview: 'نظرة عامة على منهاج الروضة - صف 5'
   dashboard_overview: لمحة عامة
@@ -574,13 +623,6 @@ ar-SA:
   dashboard_login_picture: الصورة
   dashboard_login_none: البريد الإلكتروني
   dashboard_new_password: كلمة مرور جديدة
-  dashboard_progress_not_started: لم تبدأ
-  dashboard_progress_in_progress: في طور التقدم
-  dashboard_progress_not_completed: غير مكتمل
-  dashboard_progress_completed_too_many_blocks: أكملت، استخدمت مربعات برمجية كثيرة جداً
-  dashboard_progress_completed_perfect: مكتمل, ممتاز
-  dashboard_progress_furthest_level_attempted: المستوى الأبعد الذي تمت محاولته
-  dashboard_progress_submitted: تم تقديمه
   dashboard_stage: المرحلة
   dashboard_puzzle: لغز
   dashboard_question: سؤال
@@ -590,6 +632,8 @@ ar-SA:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: صحيح
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -615,10 +659,18 @@ ar-SA:
   dashboard_faq_k5: الأسئلة المتاوترة الطرح في المستوى الخامس K-5
   dashboard_announcements: إعلانات
   dashboard_announce_view_all: عرض الكل
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
-  dashboard_announce_button_text: اعرف المزيد
-  dashboard_announce_hoc: '<b>23 نوفمبر 2015</b>--هل تريد متطوع متحمساً لتعليم علوم الكمبيوتر للمساعدة أثناء الحدث "مدار للتعليمات البرمجية" الخاصة بك؟ المتطوعين ما يزيد على 7,000 يتطلعون إلى الهام الخاص بك الطلاب بزيارة الفصول الدراسية الخاصة بك أو الفيديو الدردشة عن بعد. تحقق من الخريطة المتطوعين للاتصال بالمتطوعين في المجال الخاص بك.'
-  dashboard_announce_playlab: '<b>4 ديسمبر 2015</b>-"ساعة من التعليمات البرمجية" هنا! حاول 50 الدروس لكل عصر وكل جهاز. جديد هذا الأسبوع: رمز القصص والألعاب في مختبرات اللعب الجديدة والعصر الجليدي و Gumball الخاصة بك.'
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
+  dashboard_announce_petition: |
+    كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح ممثليكم يسمع منك. هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 التعليم علوم الكمبيوتر.
+    
+  dashboard_announce_petition_button: |
+    Translate
+    
+    add your name
+    
+    إضافة اسمك
   code_hoc_coming: إرسال رسالة إلكترونية
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
   learn_more: جرب الآن
@@ -728,9 +780,35 @@ ar-SA:
   course3_name: الدورة الثالثة
   course4_name: الدورة 4
   accelerated_name: دورة تدريبية مسرّعة
-  cspunit3_name: CS Principles Unit 3
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: دورة تدريبية مسرّعة
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: المتاهة الكلاسيكية
+  iceage_name: العصر الجليدي
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: العمليات الحسابية
+  hoc_category_name: ساعة من البرمجة
+  csf_category_name: CS Fundamentals
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: مختبر التطبيق
   applab_gradelevel: أعمارهم 13 +
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
@@ -787,8 +865,8 @@ ar-SA:
   course1_gradelevel: الأعمار 4-6
   course2_gradelevel: الأعمار 6-18
   course3_gradelevel: الأعمار 8-18
-  course4_gradelevel: Ages 10-18
-  accelerated_gradelevel: Ages 10-18
+  course4_gradelevel: الذين تتراوح أعمارهم بين 10-13
+  accelerated_gradelevel: الذين تتراوح أعمارهم بين 10-13
   codeorg_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   codeintl_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   thinkersmithspanish_platformtext: غير مربوطة

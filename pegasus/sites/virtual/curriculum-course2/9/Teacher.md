@@ -13,7 +13,7 @@ This activity will begin with a short review of Graph Paper Programming, then wi
 
 
 [summary]
-## Teaching Summary 
+## Teaching Summary
 
 ### **Getting Started** - 15 minutes
 
@@ -21,16 +21,16 @@ This activity will begin with a short review of Graph Paper Programming, then wi
 2) [Vocabulary](#Vocab) <br/>
 3) [Refresh Graph Paper Programming](#GetStarted) <br/>
 
-### **Activity: Relay Programming** - 20  minutes  
+### **Activity: Relay Programming** - 20  minutes
 
 4) [Relay Programming](#Activity1)
 
-### **Wrap-up** - 10  minutes 
+### **Wrap-up** - 10  minutes
 
 5) [Flash Chat: What did we learn?](#FlashChat)<br/>
 6) [Vocab Shmocab](#Shmocab)
 
-### **Assessment** - 10  minutes 
+### **Assessment** - 10  minutes
 
 7) [Relay Programming Assessment](#Assessment):Debugging
 
@@ -39,7 +39,7 @@ This activity will begin with a short review of Graph Paper Programming, then wi
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 
 Students will:
 
@@ -53,7 +53,7 @@ Students will:
 
 ### For the Student
 
-- Blank Paper or Index Cards for programs  
+- Blank Paper or Index Cards for programs
 - Sheets of 4x4 paper grids for the students to use as practice (These are provided as part of the [Relay Programming Activity Packet](/curriculum/course2/9/Activity9-RelayProgramming.pdf), but if you have the students create their own, you can include Common Core Math standard 2.G.2.)
 - Markers, pens, or pencils
 - [Relay Programming Assessment](Assessment9-RelayProgramming.pdf)
@@ -62,8 +62,8 @@ Students will:
 
 - [Lesson Video](http://youtu.be/fvpFCI8yoeA?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
 - Locate a wide open space for this activity, such as the gym or outdoor field
-- Print out one [Relay Programming Activity Packet](/curriculum/course2/9/Activity9-RelayProgramming.pdf) for each group  
-- Print one [Relay Programming Assessment](Assessment9-RelayProgramming.pdf) for each student  
+- Print out one [Relay Programming Activity Packet](/curriculum/course2/9/Activity9-RelayProgramming.pdf) for each group
+- Print one [Relay Programming Assessment](Assessment9-RelayProgramming.pdf) for each student
 - Supply each group with plenty of paper and pens/pencils
 
 
@@ -103,14 +103,14 @@ This lesson has one new and important word:<br/>
 [/centerIt]
 
 **Debugging** - Say it with me: De-bugg-ing <br/>
-Finding and fixing problems in your algorithm or program 
+Finding and fixing problems in your algorithm or program
 
 <br/>
 
-### <a name="GetStarted"></a>3) Refresh Graph Paper Programming 
-Recall that in "Graph Paper Programming" we guided our teammates' Automatic Realization Machine (ARM) using arrows. Take a moment to do a refresher Graph Paper Programming image -- either one that you have already covered or an entirely new one.  
+### <a name="GetStarted"></a>3) Refresh Graph Paper Programming
+Recall that in "Graph Paper Programming" we guided our teammates' Automatic Realization Machine (ARM) using arrows. Take a moment to do a refresher Graph Paper Programming image -- either one that you have already covered or an entirely new one.
 
-We are going to do the same kind of thing today, but instead of 
+We are going to do the same kind of thing today, but instead of
 controlling each other, we are going to work together to create a program one symbol at a time.
 
 
@@ -121,13 +121,13 @@ The practice lesson was easy enough; let's add some action!  We're going to do t
 The rules of this game are simple:
 
 1. Divide students into groups of 3-5.
-2. Have each group queue up relay-style.  
-3. Place an identical image at the other side of the room/gym/field from each team.  
-4. Have the first student in line dash over to the image, review it, and write down the first symbol in the program to reproduce that image.  
-5. The first student then runs back and tags the next person in line, then goes to the back of the queue. 
+2. Have each group queue up relay-style.
+3. Place an identical image at the other side of the room/gym/field from each team.
+4. Have the first student in line dash over to the image, review it, and write down the first symbol in the program to reproduce that image.
+5. The first student then runs back and tags the next person in line, then goes to the back of the queue.
 6. The next person in line dashes to the image, reviews the image, reviews the program that has already been written, then either debugs the program by crossing out an incorrect symbol, or adds a new one.
-7. That student then dashes back to tag the next person, and the process continues until one group has finished their program.  
-8. First group to finish is the winner! 
+7. That student then dashes back to tag the next person, and the process continues until one group has finished their program.
+8. First group to finish is the winner!
 <br/>
 
 Play through this several times, with images of increasing difficulty.
@@ -144,12 +144,12 @@ Play through this several times, with images of increasing difficulty.
 
 [/tip]
 ## Wrap-up (10 min)
-### <a name="FlashChat"></a>5) Flash Chat: What did we learn? 
+### <a name="FlashChat"></a>5) Flash Chat: What did we learn?
 
 - What did we learn today?
-- What if we were each able to do five arrows at a time? 
-  - How important would it be to debug our own work and the work of the programmer before us? 
-  - How about with 10 arrows? 
+- What if we were each able to do five arrows at a time?
+  - How important would it be to debug our own work and the work of the programmer before us?
+  - How about with 10 arrows?
   - 10,000? Would it be more or less important?
 - Is it easier or harder to have multiple people working on the same program?
 - Do you think people make more or fewer mistakes when they're in a hurry?
@@ -175,22 +175,22 @@ You can choose to do these as a class, or have the students discuss with an elbo
 ###  <a name="Assessment"></a>7) [Relay Programming Assessment](Assessment9-RelayProgramming.pdf): Debugging <br/><br/>
 
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
-### Pass the paper 
+### Pass the paper
 
-- If you don't have the time or room for a relay, you can have students pass the paper around their desk grouping, each writing one arrow before they move the paper along.  
+- If you don't have the time or room for a relay, you can have students pass the paper around their desk grouping, each writing one arrow before they move the paper along.
 
 
-### Fill It, Move It 
+### Fill It, Move It
 
-- As the teacher, draw an image with as many filled squares as children in each group.  
+- As the teacher, draw an image with as many filled squares as children in each group.
 - Have the students write as many arrows in the program as it takes to get to a filled-in square (including actually filling that square in) before passing to the next person.
 
-### Debugging Together 
+### Debugging Together
 
-- As the teacher, draw an image on the board.  
+- As the teacher, draw an image on the board.
 - Have each student create a program for the image.
 - Ask students to trade with their elbow partner and debug each other's code.
   - Circle the first incorrect step, then pass it back.
@@ -206,16 +206,16 @@ Use these activities to enhance student learning. They can be used as outside of
 ### ISTE Standards (formerly NETS)
 
 - 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-- 1.c - Use models and simulation to explore complex systems and issues.   
-- 2.d - Contribute to project teams to solve problems.  
+- 1.c - Use models and simulation to explore complex systems and issues.
+- 2.d - Contribute to project teams to solve problems.
 - 4.b - Plan and manage activities to develop a solution or complete a project.
 - 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
 - 6.a - Understand and use technology systems.
 
 ### CSTA K-12 Computer Science Standards
- 
-- CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems. 
-- CT.L1:3-03. Understand how to arrange information into useful order without using a computer. 
+
+- CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
+- CT.L1:3-03. Understand how to arrange information into useful order without using a computer.
 - CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
 - CT.L1:6-02. Develop a simple understanding of an algorithm using computer-free exercise.
 - CT.L1:6-05.  Make a list of sub-problems to consider while addressing a larger problem.
@@ -233,17 +233,17 @@ Use these activities to enhance student learning. They can be used as outside of
 ### NGSS Science and Engineering Practices
 
 - K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
-- K-2-ETS1-1 - Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool. 
-- 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+- K-2-ETS1-1 - Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
+- 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 3. Construct viable arguments and critique the reasoning of others.
 - 6. Attend to precision.
 - 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning. 
+- 8. Look for and express regularity in repeated reasoning.
 
 ### Common Core Language Arts Standards
 
@@ -260,9 +260,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

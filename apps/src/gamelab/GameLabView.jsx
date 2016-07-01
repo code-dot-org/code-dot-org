@@ -1,32 +1,24 @@
 /** @file Top-level view for GameLab */
+/* global dashboard */
 'use strict';
 
-var _ = require('../lodash');
-var AnimationTab = require('./AnimationTab/index.jsx');
-var connect = require('react-redux').connect;
-var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper.jsx');
-var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
-var GameLabVisualizationHeader = require('./GameLabVisualizationHeader.jsx');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
+import classNames from 'classnames';
+import {connect} from 'react-redux';
+import React from 'react';
+var _ = require('lodash');
+var AnimationTab = require('./AnimationTab/AnimationTab');
+var StudioAppWrapper = require('../templates/StudioAppWrapper');
+var ErrorDialogStack = require('./ErrorDialogStack');
+var gameLabConstants = require('./constants');
+var GameLabVisualizationHeader = require('./GameLabVisualizationHeader');
+var GameLabVisualizationColumn = require('./GameLabVisualizationColumn');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
+import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
+import CodeWorkspace from '../templates/CodeWorkspace';
 
-var styles = {
-  codeWorkspace: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    left: 400,
-    bottom: 0,
-    marginLeft: 15,
-    border: '1px solid #ddd',
-    overflow: 'hidden',
-  },
-  codeWorkspaceRTL: {
-    right: 400,
-    left: 0,
-    marginRight: 15,
-    marginLeft: 0
-  }
-};
+var GameLabInterfaceMode = gameLabConstants.GameLabInterfaceMode;
+var GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 
 /**
  * Top-level React wrapper for GameLab
@@ -35,10 +27,18 @@ var GameLabView = React.createClass({
   propTypes: {
     interfaceMode: React.PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
+    isResponsive: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
-    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
-    generateVisualizationColumnHtml: React.PropTypes.func.isRequired,
+    showFinishButton: React.PropTypes.bool.isRequired,
+    hideSource: React.PropTypes.bool.isRequired,
     onMount: React.PropTypes.func.isRequired
+  },
+
+  getChannelId: function () {
+    if (dashboard && dashboard.project) {
+      return dashboard.project.getCurrentId();
+    }
+    return undefined;
   },
 
   componentDidMount: function () {
@@ -46,11 +46,6 @@ var GameLabView = React.createClass({
   },
 
   renderCodeMode: function () {
-    var isRTL = !!document.querySelector('html[dir="rtl"]');
-
-    var codeWorkspaceStyle = _.assign({}, styles.codeWorkspace,
-      isRTL && styles.codeWorkspaceRTL);
-
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
     var codeModeStyle = {};
@@ -58,25 +53,41 @@ var GameLabView = React.createClass({
       codeModeStyle.display = 'none';
     }
 
+    var visualizationColumnStyle = {
+      width: GAME_WIDTH
+    };
+
+    const visualizationColumnClassNames = classNames({
+      responsive: this.props.isResponsive,
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
+    });
+
     return (
       <div style={codeModeStyle}>
-        <div id="visualizationColumn">
+        <div
+            id="visualizationColumn"
+            className={visualizationColumnClassNames}
+            style={visualizationColumnStyle}
+        >
           {this.shouldShowHeader() && <GameLabVisualizationHeader />}
-          <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
+          <GameLabVisualizationColumn
+              finishButton={this.props.showFinishButton}
+          />
         </div>
-        <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <ProtectedStatefulDiv style={codeWorkspaceStyle} id="codeWorkspace" className="editor-column">
-          <ProtectedStatefulDiv
-              id="codeWorkspaceWrapper"
-              contentFunction={this.props.generateCodeWorkspaceHtml} />
-        </ProtectedStatefulDiv>
+        <ProtectedStatefulDiv
+            id="visualizationResizeBar"
+            className="fa fa-ellipsis-v"
+        />
+        <InstructionsWithWorkspace>
+          <CodeWorkspace/>
+        </InstructionsWithWorkspace>
       </div>
     );
   },
 
   renderAnimationMode: function () {
     return this.props.interfaceMode === GameLabInterfaceMode.ANIMATION ?
-        <AnimationTab /> :
+        <AnimationTab channelId={this.getChannelId()} /> :
         undefined;
   },
 
@@ -86,17 +97,21 @@ var GameLabView = React.createClass({
 
   render: function () {
     return (
-      <ConnectedStudioAppWrapper>
+      <StudioAppWrapper>
         {this.renderCodeMode()}
         {this.renderAnimationMode()}
-      </ConnectedStudioAppWrapper>
+        <ErrorDialogStack/>
+      </StudioAppWrapper>
     );
   }
 });
 module.exports = connect(function propsFromStore(state) {
   return {
+    hideSource: state.pageConstants.hideSource,
     interfaceMode: state.interfaceMode,
-    isEmbedView: state.level.isEmbedView,
-    isShareView: state.level.isShareView
+    isEmbedView: state.pageConstants.isEmbedView,
+    isResponsive: isResponsiveFromState(state),
+    isShareView: state.pageConstants.isShareView,
+    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
   };
 })(GameLabView);

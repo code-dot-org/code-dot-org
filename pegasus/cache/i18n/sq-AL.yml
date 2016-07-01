@@ -1,7 +1,14 @@
 "sq-AL":
   hour_of_code: Ora e Kodit
   hello: Pershendetje Botë
+  'yes': Po
+  'no': Jo
   select_language: Ju lutem zgjedheni gjuhën tuaj
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Mëso më shumë
   en: Shkencat Kompjuterike
   computer_science_edweek: Java Arsimuese per Shkencat Kompjuterike
   csedweek_dates: Dhjetor 8-14, 2014
@@ -363,6 +370,9 @@
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
   homepage_banner_20k_teachers_link: Mëso më shumë
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Ora e Kodimit
   homepage_slot_text_blurb_hoc: "Çdokush mund të mësojë. Fillo sot"
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
@@ -388,6 +398,7 @@
   homepage_slot_text_link_stats: Shiko statistikat
   homepage_slot_text_link_buy: Përfshihu
   homepage_slot_text_link_donate: Bëj një donacion
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Krijimet e studentëve në Code Studio
   homepage_header_donors: Code.org falenderon të gjithë mbështetësit
   homepage_donors_seall: Shiko të gjitha
@@ -573,6 +584,7 @@
   dashboard_landing_new_beta: E re! Provo kurset tona beta për studentët e K-5.
   dashboard_landing_new_k5courses: E re! Provo kurset tona për studentët e K-5.
   dashboard_landing_useful_links: Linke të tjera të dobishme
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Bëni një pyetje privatisht! Vizitoni orën tonë mujore
     të pyetjeve.
   dashboard_landing_print_certificates: Printo çertifikatat për studentët që mbarojnë
@@ -594,6 +606,11 @@
     të ofruara nga partnerët tanë.</a> Mëso të programosh me robota, krijo faqe zyrtare
     në rrjetet sociale, krijo aplikacionin tënd, ose eksploro gjuhë të tjera si C++,
     Ruby, ose Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Ora e Kodimit për të gjitha moshat
   dashboard_hoc_courses_desc: Provo të gjitha këto tutoriale më të shkurtra se 1 orë
     me studentët e tu!
@@ -648,6 +665,18 @@
   dashboard_action_remove_confirm: Heqje?
   dashboard_action_done: Përfunduar
   dashboard_action_required: e domosdoshme
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Faqja kryesore e mësuesit
   dashboard_navigation_section_student_progress: Llogaritë dhe Ecuria e Studentit
   dashboard_navigation_section_teacher_progress: Ecuria e Kursit Tënd
@@ -656,7 +685,7 @@
   dashboard_navigation_section_pd: Zhvillimi Profesional
   dashboard_navigation_section_speakers: Shkenca Kompjuterike <br/> Folësit
   dashboard_navigation_all_sections: Llogaritë dhe Ecuritë e Studentëve
-  dashboard_navigation_view_progress: Shiko Ecurinë
+  dashboard_navigation_view_progress: Ecuri
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Shto Studentë
@@ -665,6 +694,19 @@
   dashboard_navigation_view_stats: Shiko Statistikat
   dashboard_navigation_section: 'Seksioni: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_progress_not_started: nuk është nisur
+  dashboard_progress_in_progress: Në punë e sipër
+  dashboard_progress_not_completed: e papërfunduar
+  dashboard_progress_completed_too_many_blocks: i përfunduar, me shumë blloqe
+  dashboard_progress_completed_perfect: i përfunduar, në mënyrë perfekte
+  dashboard_progress_furthest_level_attempted: përpjekja e nivelit më të largët
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Seksion i ri
   dashboard_sections_jumbotron_instruction: Krijo seksione të reja dhe shto studentë
     në to. Seksionet të ndihmojnë për të organizuar studentët në grupe më të vogla
@@ -673,6 +715,7 @@
   dashboard_sections_table_secret: Mënyra e logimit
   dashboard_sections_table_grade: Notë
   dashboard_sections_table_course: Kurs
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Studentët
   dashboard_sections_table_code: Pjesë Kodi
   dashboard_sections_name: Emri Seksionit
@@ -691,6 +734,26 @@
     informacione të llogarive të studenteve te tu dhe t'ua shpërndash atyre në menyrë
     individuale.
   dashboard_sections_switch_section: 'Ndrysho seksionin:'
+  dashboard_sections_close: Mbyll
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Shto studentë
   dashboard_students_add_students: Shto studentë të shumëfishtë
   dashboard_students_add_multiple: 'Shkruaj emrat e studentëve të tu, një për çdo
@@ -753,6 +816,8 @@
   dashboard_course2: 'Kursi 2:'
   dashboard_course3: 'Kursi 3:'
   dashboard_course4: 'Kursi 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Plani mësimor
   dashboard_curriculum_overview: Pamja e përgjithshme e Planit Mësimor K-5
   dashboard_overview: Përmbledhja
@@ -776,13 +841,6 @@
   dashboard_login_picture: Figurë
   dashboard_login_none: Email
   dashboard_new_password: fjalëkalim i ri
-  dashboard_progress_not_started: nuk është nisur
-  dashboard_progress_in_progress: Në punë e sipër
-  dashboard_progress_not_completed: e papërfunduar
-  dashboard_progress_completed_too_many_blocks: i përfunduar, me shumë blloqe
-  dashboard_progress_completed_perfect: i përfunduar, në mënyrë perfekte
-  dashboard_progress_furthest_level_attempted: përpjekja e nivelit më të largët
-  dashboard_progress_submitted: submitted
   dashboard_stage: Fazë
   dashboard_puzzle: Enigmë
   dashboard_question: Question
@@ -792,6 +850,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: E saktë
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -820,17 +880,17 @@
   dashboard_faq_k5: Pyetje e shtruar shpesh të K-5
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Mëso më shumë
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
   code_sign_up: Rregjistrohu për të marrë pjesë në Javën Edukative për SHK
   learn_more: Mëso më Shumë
@@ -954,13 +1014,39 @@
   course3_name: Kursi 3
   course4_name: Kursi 4
   accelerated_name: Kurs i Avancuar
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Kurs i Avancuar
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Classic Maze
+  iceage_name: Epoka e Akullnajave
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matematikë
+  hoc_category_name: Ora e Kodit
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Laboratori i Aplikacioneve
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you

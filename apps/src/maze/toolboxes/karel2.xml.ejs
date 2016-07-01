@@ -6,7 +6,7 @@ var mazeMsg = require('.././locale');
 var addProcedures = function() { -%>
   <% if (level > 3) { -%>
     <category name="<%= commonMsg.catProcedures() %>" custom="PROCEDURE"></category>
-  <% } else if (level == 2 || level == 3) { -%>
+  <% } else if (level === 2 || level === 3) { -%>
     <category name="<%= commonMsg.catProcedures() %>">
       <block type="procedures_callnoreturn">
         <mutation name="<%= mazeMsg.fillN({shovelfuls: 5}) %>"></mutation>

@@ -5,59 +5,76 @@ require 'json'
 require 'yaml'
 require 'erb'
 require 'tempfile'
+require 'base64'
+require 'uglifier'
 
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
   class CloudFormation
 
     # Hard-coded values for our CloudFormation template.
+    TEMPLATE = ENV['TEMPLATE'] || 'cloud_formation_adhoc_standalone.yml.erb'
 
-    DOMAIN = 'cdn-code.org'
-    STACK_NAME = "#{rack_env}-#{RakeUtils.git_branch}"
-    # Fully qualified domain name
-    FQDN = "#{STACK_NAME}.#{DOMAIN}"
-    SSH_KEY_NAME = 'server_access_key'
-    IMAGE_ID = 'ami-df0607b5'
-    INSTANCE_TYPE = 'c4.xlarge'
-    SSH_IP = '0.0.0.0/0'
-    S3_BUCKET = 'cdo-dist'
+    DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
 
-    # Use AWS Certificate Manager for ELB and CloudFront SSL certificates.
+    # Use [DOMAIN] wildcard SSL certificate for ELB and CloudFront, if available.
+    IAM_METADATA = Aws::IAM::Client.new.get_server_certificate(server_certificate_name: DOMAIN).
+      server_certificate.server_certificate_metadata rescue nil
+
+    IAM_CERTIFICATE_ID = IAM_METADATA && IAM_METADATA.server_certificate_id
+
+    # Lookup ACM certificate for ELB and CloudFront SSL, if IAM-based certificate is not available.
     ACM_REGION = 'us-east-1'
-    CERTIFICATE_ARN = Aws::ACM::Client.new(region: ACM_REGION).
+    CERTIFICATE_ARN = IAM_METADATA ? IAM_METADATA.arn :
+      Aws::ACM::Client.new(region: ACM_REGION).
       list_certificates(certificate_statuses: ['ISSUED']).
       certificate_summary_list.
       find { |cert| cert.domain_name == "*.#{DOMAIN}" }.
       certificate_arn
+
+    BRANCH = ENV['branch'] || (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
+
+    # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
+    # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
+    STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
+    STACK_NAME = (ENV['STACK_NAME'] || "#{rack_env}-#{BRANCH}").gsub(STACK_NAME_INVALID_REGEX, '-')
+
+    # Fully qualified domain name
+    FQDN = "#{STACK_NAME}.#{DOMAIN}".downcase
+    SSH_KEY_NAME = 'server_access_key'
+    IMAGE_ID = 'ami-df0607b5' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
+    INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
+    SSH_IP = '0.0.0.0/0'
+    S3_BUCKET = 'cdo-dist'
+    CDN_ENABLED = !!ENV['CDN_ENABLED']
+
+    STACK_ERROR_LINES = 250
 
     class << self
       # Validates that the template is valid CloudFormation syntax.
       # Does not check validity of the resource properties, just the base syntax.
       # First prints the JSON-formatted template, then either raises an error (if invalid)
       # or prints the template description (if valid).
-      def validate(cdn_enabled: false)
-        json_template = json_template(cdn_enabled: cdn_enabled)
-        CDO.log.info JSON.pretty_generate(JSON.parse(json_template))
+      def validate
+        template = json_template(dry_run: true)
+        CDO.log.info JSON.pretty_generate(JSON.parse(template))
         CDO.log.info cfn.validate_template(
-          template_body: json_template
+          template_body: template
         ).description
       end
 
-      def create_or_update(cdn_enabled: false)
-        json_template = json_template(cdn_enabled: cdn_enabled)
-
-        update_certs
-        update_cookbooks
-        update_bootstrap_script
-
+      def create_or_update
+        template = json_template
         action = stack_exists? ? :update : :create
         CDO.log.info "#{action} stack: #{STACK_NAME}..."
         start_time = Time.now
-        updated_stack_id = cfn.method("#{action}_stack").call(
+        stack_options = {
           stack_name: STACK_NAME,
-          template_body: json_template,
+          template_body: template,
           capabilities: ['CAPABILITY_IAM']
-        ).stack_id
+        }
+        stack_options[:on_failure] = 'DO_NOTHING' if action == :create
+        updated_stack_id = cfn.method("#{action}_stack").call(stack_options).stack_id
         wait_for_stack(action, start_time)
         CDO.log.info 'Outputs:'
         cfn.describe_stacks(stack_name: updated_stack_id).stacks.first.outputs.each do |output|
@@ -77,6 +94,7 @@ module AWS
       end
 
       private
+
       def cfn
         @@cfn ||= Aws::CloudFormation::Client.new
       end
@@ -100,9 +118,11 @@ module AWS
           RakeUtils.with_bundle_dir(cookbooks_dir) do
             Tempfile.open('berks') do |tmp|
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
-              Aws::S3::Client.new(region: CDO.aws_region).put_object(
+              client = Aws::S3::Client.new(region: CDO.aws_region,
+                                           credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key))
+              client.put_object(
                 bucket: S3_BUCKET,
-                key: "chef/#{RakeUtils.git_branch}.tar.gz",
+                key: "chef/#{BRANCH}.tar.gz",
                 body: tmp.read
               )
             end
@@ -113,13 +133,13 @@ module AWS
       def update_bootstrap_script
         Aws::S3::Client.new.put_object(
           bucket: S3_BUCKET,
-          key: 'chef/bootstrap.sh',
+          key: "chef/bootstrap-#{STACK_NAME}.sh",
           body: File.read(aws_dir('chef-bootstrap.sh'))
         )
       end
 
       def wait_for_stack(action, start_time)
-        CDO.log.info "Stack #{action} requested, waiting for instance provisioning to complete..."
+        CDO.log.info "Stack #{action} requested, waiting for provisioning to complete..."
         begin
           cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: STACK_NAME) do |w|
             w.max_attempts = 360 # 1 hour
@@ -134,44 +154,119 @@ module AWS
             break if event.timestamp < start_time
           end
           events.reject { |event| event.resource_status_reason.nil? }.sort_by(&:timestamp).each do |event|
-            puts "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
+            CDO.log.info "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
+            if (match = event.resource_status_reason.match /with UniqueId (?<instance>i-\w+)/)
+              instance = match[:instance]
+              CDO.log.info "Printing the last #{STACK_ERROR_LINES} lines to help debug the instance failure.."
+              ec2 = Aws::EC2::Client.new
+              lines = Base64.decode64(ec2.get_console_output(instance_id: instance).output).lines
+              CDO.log.info lines[-[lines.length,STACK_ERROR_LINES].min..-1].join
+              CDO.log.info "To get full console output, run `aws ec2 get-console-output --instance-id #{instance} | jq -r .Output`."
+            end
+          end
+          if action == :create
+            CDO.log.info 'Stack will remain in its half-created state for debugging. To delete, run `rake adhoc:stop`.'
           end
           return
         end
         CDO.log.info "\nStack #{action} complete."
+        CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create
       end
 
-      def json_template(cdn_enabled:)
-        template_string = File.read(aws_dir('cloudformation', 'cloud_formation_adhoc_standalone.yml.erb'))
+      def json_template(dry_run: false)
+        template_string = File.read(aws_dir('cloudformation', TEMPLATE))
+        availability_zones = Aws::EC2::Client.new.describe_availability_zones.availability_zones.map(&:zone_name)
+        azs = availability_zones.map { |zone| zone[-1].upcase }
         @@local_variables = OpenStruct.new(
+          dry_run: dry_run,
           local_mode: !!CDO.chef_local_mode,
           stack_name: STACK_NAME,
           ssh_key_name: SSH_KEY_NAME,
           image_id: IMAGE_ID,
           instance_type: INSTANCE_TYPE,
-          branch: RakeUtils.git_branch,
+          branch: BRANCH,
           region: CDO.aws_region,
           environment: rack_env,
           ssh_ip: SSH_IP,
+          iam_certificate_id: IAM_CERTIFICATE_ID,
           certificate_arn: CERTIFICATE_ARN,
-          cdn_enabled: cdn_enabled,
+          cdn_enabled: CDN_ENABLED,
           domain: DOMAIN,
           subdomain: FQDN,
-          availability_zone: Aws::EC2::Client.new.describe_availability_zones.availability_zones.first.zone_name,
+          availability_zone: availability_zones.first,
+          availability_zones: availability_zones,
+          azs: azs,
           s3_bucket: S3_BUCKET,
-          file: method(:file)
+          file: method(:file),
+          js: method(:js),
+          subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}}.to_json,
+          public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}}.to_json,
+          lambda: method(:lambda),
+          update_certs: method(:update_certs),
+          update_cookbooks: method(:update_cookbooks),
+          update_bootstrap_script: method(:update_bootstrap_script)
         )
-        YAML.load(erb_eval(template_string)).to_json
+        erb_output = erb_eval(template_string)
+        YAML.load(erb_output).to_json
       end
 
-      # Input filename, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).
-      def file(filename)
+      # Input string, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).
+      def source(str, vars={})
+        local_vars = @@local_variables.dup
+        vars.each { |k, v| local_vars[k] = v }
+        lines = erb_eval(str, local_vars).each_line.map do |line|
+          # Support special %{"Key": "Value"} syntax for inserting Intrinsic Functions into processed file contents.
+          line.split(/(%{.*})/).map do |x|
+            x =~ /%{.*}/ ? JSON.parse(x.gsub(/%({.*})/, '\1')) : x
+          end
+        end.flatten
+        {'Fn::Join' => ['', lines]}.to_json
+      end
+
+      # Inline a file into a CloudFormation template.
+      def file(filename, vars={})
         str = File.read(aws_dir('cloudformation', filename))
-        {'Fn::Join' => ["", erb_eval(str).each_line.to_a]}.to_json
+        source(str, vars)
       end
 
-      def erb_eval(str)
-        ERB.new(str).result(@@local_variables.instance_eval{binding})
+      # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile
+      LAMBDA_ZIPFILE_MAX = 4096
+
+      # Inline a javascript file into a CloudFormation template for a Lambda function resource.
+      # Raises an error if the minified file is too large.
+      # Use UglifyJS to compress code if `uglify` parameter is set.
+      def js(filename, uglify=true)
+        str = File.read(aws_dir('cloudformation', filename))
+        str = Uglifier.compile(str) if uglify
+        if str.length > LAMBDA_ZIPFILE_MAX
+          raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{LAMBDA_ZIPFILE_MAX} characters."
+        end
+        source(str)
+      end
+
+      # Helper function to call a Lambda-function-based AWS::CloudFormation::CustomResource.
+      # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html
+      def lambda(function_name, properties={})
+        depends_on = properties.delete(:DependsOn)
+        custom_resource = {
+          Type: properties.delete('Type') || "Custom::#{function_name}",
+          Properties: {
+            ServiceToken: {'Fn::Join' => [':',[
+              'arn:aws:lambda',
+              {Ref: 'AWS::Region'},
+              {Ref: 'AWS::AccountId'},
+              'function',
+              function_name
+            ]]}
+          }.merge(properties)
+        }
+        custom_resource['DependsOn'] = depends_on if depends_on
+        custom_resource.to_json
+      end
+
+      def erb_eval(str, local_vars=nil)
+        local_vars ||= @@local_variables
+        ERB.new(str, nil, '-').result(local_vars.instance_eval{binding})
       end
 
     end

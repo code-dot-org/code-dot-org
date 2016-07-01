@@ -44,29 +44,29 @@ Millions of people of all ages have learned an [Hour of Code](http://code.org/le
 # Are you a software engineer? Help spread computer science
 
 ## Offer help to local teachers
-If you're already a software engineer, there are many opportunities to get involved locally. Volunteer to teach our [other courses](http://studio.code.org) to local student with [this guide](/educate/volunteer). And sign up to hear about volunteer opportunities near you.
+If you're a software engineer, there are many opportunities to get involved locally. Volunteer to teach our [Code Studio courses](http://studio.code.org) to local students with [this guide](/volunteer/guide). And sign up to hear about volunteer opportunities near you.
 
 [<button>Learn more</button>](/volunteer)
 
 ### Or become a volunteer teacher yourself with one of these organizations:
 
+[col-33]
+
+<img src="/images/fit-300/teals/quincy.jpg" style="margin-top: 10px; margin-left: 10px;">
+
+[/col-33]
+
+[col-66]
+
+- [TEALS](http://c.tealsk12.org/l/667) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Join the more than 1,500 CS professionals who have made an impact in local high schools by volunteering 2 days a week to teacher Intro and AP CS classes.
 - [CoderDojo](http://www.coderdojo.com) - Start a Dojo in your neighborhood, mentor children to learn to code.
-- [TEALS](http://www.tealsk12.org) - Volunteer to teach Intro and AP CS classes 2 days a week in local high schools.
 - [Citizen Schools](http://www.citizenschools.org/curriculum-category/science-technology/) - Volunteer to teach computer programming in extended-day programs at schools.
 
+[/col-66]
+
+<div style="clear: both;"></div>
 
 ## Teach an online course to your child, or in any classroom
-Code.org's online platform [Code Studio](http://studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Within Code Studio, a new Play Lab has been developed where elementary students can create and send apps or animations directly to a cell phone, just by typing in the phone number. 
+Code.org's online platform [Code Studio](https://studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Try [Play Lab](/playlab), a tool developed for elementary students to create games and stories. Or try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
 
-[<button>Learn more</button>](http://studio.code.org)
-
-<!--
-## Spend 10 minutes adding "hints" to our tutorials
-
-With millions of students trying the Hour of Code, and hundreds of thousands doing the Code.org introductory online courses, we could use your help adding helpful hints for students who make mistakes. In just 10 minutes you can help improve our courses.
-
-[<button>Learn more</button>](http://code.org/hints)
-
--->
-
-
+[<button>Learn more</button>](https://studio.code.org)

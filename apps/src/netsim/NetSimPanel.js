@@ -4,6 +4,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var utils = require('../utils');
 var markup = require('./NetSimPanel.html.ejs');
 var ArgumentUtils = require('./ArgumentUtils');
@@ -163,7 +164,7 @@ NetSimPanel.prototype.isMinimized = function () {
  * @param {string[]} [options.classes] - default [], additional classes on the
  *        button element.
  */
-NetSimPanel.prototype.addButton = function(buttonText, pressCallback, options) {
+NetSimPanel.prototype.addButton = function (buttonText, pressCallback, options) {
   options = ArgumentUtils.extendOptionsObject(options || {});
 
   var button = $('<span>')

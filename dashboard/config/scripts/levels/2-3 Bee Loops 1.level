@@ -34,7 +34,11 @@
     "markdown_instructions": "Those flowers look tasty!\r\n\r\nCollect nectar from each of the flowers using the fewest blocks possible."
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

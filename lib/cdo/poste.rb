@@ -1,12 +1,13 @@
 require 'cdo/db'
+require 'digest/md5'
 require_relative 'email_validator'
 require 'mail'
 require 'openssl'
 require 'base64'
+require 'digest/md5'
 
 module Poste
-
-  def self.logger()
+  def self.logger
     @@logger ||= $log
   end
 
@@ -18,7 +19,7 @@ module Poste
     decrypter = OpenSSL::Cipher::Cipher.new 'AES-128-CBC'
     decrypter.decrypt
     decrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
-    plain = decrypter.update Base64::urlsafe_decode64(encrypted)
+    plain = decrypter.update Base64.urlsafe_decode64(encrypted)
     plain << decrypter.final
   end
 
@@ -32,7 +33,7 @@ module Poste
     encrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
     encrypted = encrypter.update(plain.to_s)
     encrypted << encrypter.final
-    Base64::urlsafe_encode64(encrypted)
+    Base64.urlsafe_encode64(encrypted)
   end
 
   def self.encrypt_id(id)
@@ -56,7 +57,7 @@ module Poste
     nil
   end
 
-  def self.template_extnames()
+  def self.template_extnames
     ['.md','.haml','.html']
   end
 
@@ -73,35 +74,30 @@ module Poste
     if contact
       contacts.where(id: contact[:id]).update(
         unsubscribed_at: now,
-        unsubscribed_on: now.to_date,
         unsubscribed_ip: params[:ip_address],
       )
     else
       contacts.insert(
         email: email,
+        hashed_email: Digest::MD5.hexdigest(email.downcase),
         created_at: now,
-        created_on: now.to_date,
         created_ip: params[:ip_address],
         unsubscribed_at: now,
-        unsubscribed_on: now.to_date,
         unsubscribed_ip: params[:ip_address],
         updated_at: now,
-        updated_on: now.to_date,
         updated_ip: params[:ip_address],
       )
     end
   end
-
 end
 
 module Poste2
-
   @@url_cache = {}
   @@message_id_cache = {}
 
   # Returns true if address is a valid email address.
   def self.email_address?(address)
-    EmailValidator::email_address?(address)
+    EmailValidator.email_address?(address)
   end
 
   def self.find_or_create_url(href)
@@ -135,17 +131,17 @@ module Poste2
         contacts.where(id: contact[:id]).update(
           name: name,
           updated_at: now,
-          updated_on: now,
           updated_ip: ip_address,
         )
       end
     else
       id = contacts.insert({}.tap do |contact|
         contact[:email] = address
+        contact[:hashed_email] = Digest::MD5.hexdigest(address.downcase)
         contact[:name] = name if name
-        contact[:created_at] = contact[:created_on] = now
+        contact[:created_at] = now
         contact[:created_ip] = ip_address
-        contact[:updated_at] = contact[:updated_on] = now
+        contact[:updated_at] = now
         contact[:updated_ip] = ip_address
       end)
       contact = {id: id}
@@ -168,10 +164,11 @@ module Poste2
     unless contact
       id = contacts.insert({}.tap do |contact|
         contact[:email] = address
+        contact[:hashed_email] = Digest::MD5.hexdigest(address.downcase)
         contact[:name] = name if name
-        contact[:created_at] = contact[:created_on] = now
+        contact[:created_at] = now
         contact[:created_ip] = ip_address
-        contact[:updated_at] = contact[:updated_on] = now
+        contact[:updated_at] = now
         contact[:updated_ip] = ip_address
       end)
       contact = {id: id}
@@ -196,6 +193,7 @@ module Poste2
       created_ip: recipient[:ip_address],
       contact_id: recipient[:id],
       contact_email: recipient[:email],
+      hashed_email: Digest::MD5.hexdigest(recipient[:email]),
       message_id: message_id,
       params: (params||{}).to_json,
     })
@@ -203,23 +201,34 @@ module Poste2
 
   class DeliveryMethod
 
-    ALLOWED_SENDERS = Set.new ['pd@code.org', 'noreply@code.org']
-    def initialize(settings)
+    ALLOWED_SENDERS = Set.new %w[
+      pd@code.org
+      noreply@code.org
+      teacher@code.org
+      hadi_partovi@code.org
+    ]
+    def initialize(settings = nil)
     end
 
     def deliver!(mail)
       content_type = mail.header['Content-Type'].to_s
+
       raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
-      sender = mail.from.first
-      raise ArgumentError, "Unsupported sender: #{sender}" unless ALLOWED_SENDERS.include?(sender)
+      sender_email = mail.from.first
+      raise ArgumentError, "Unsupported sender: #{sender_email}" unless ALLOWED_SENDERS.include?(sender_email)
+      raise ArgumentError, 'Recipient (to field) is required.' unless mail[:to]
 
-      subject = mail.subject.to_s
-      body = mail.body.to_s
-
-      recipient = Poste2::ensure_recipient(mail.to.first, ip_address: '127.0.0.1')
-      Poste2::send_message('dashboard', recipient, body: body, subject: subject, from: sender)
+      sender = mail[:from].formatted.first
+      to_address = mail[:to].addresses.first
+      to_name = mail[:to].display_names.first
+      mail_params = {
+        body: mail.body.to_s,
+        subject: mail.subject.to_s,
+        from: sender
+      }
+      mail_params[:reply_to] = mail[:reply_to].formatted.first if mail[:reply_to]
+      recipient = Poste2.ensure_recipient(to_address, name: to_name, ip_address: '127.0.0.1')
+      Poste2.send_message('dashboard', recipient, mail_params)
     end
-
   end
-
 end

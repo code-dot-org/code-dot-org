@@ -60,6 +60,16 @@ a.level_link.submitted:hover
   color: white !important;
 }
 
+.level_link.review_accepted, .level_link.review_accepted:link, .level_link.review_accepted:visited {
+  background-color: $level_review_accepted;
+  color: white !important;
+}
+
+.level_link.review_rejected, .level_link.review_rejected:link, .level_link.review_rejected:visited {
+  background-color: $level_review_rejected;
+  color: white !important;
+}
+
 .puzzle_outer_level,
 .puzzle_outer_assessment,
 .puzzle_outer_current {
@@ -79,14 +89,14 @@ a.level_link.submitted:hover
 {
   display:inline-block;
   position:relative;
-  overflow:hidden;
   float:left;
   width:100%;
+  background-color: $white;
 }
 
 .stage-lesson-plan-link a,
 .stage-lesson-plan-link a:link,
-.stage-lesson-plan-link a:visited,
+.stage-lesson-plan-link a:visited
 {
   font-size: 10px;
   color: $purple;
@@ -96,7 +106,6 @@ a.level_link.submitted:hover
 
 .game-group {
   border-bottom: 2px solid $lighter_gray;
-  background-color: $lightest_gray;
   display: table;
   table-layout: fixed;
   padding: 10px;
@@ -137,7 +146,6 @@ a.level_link.submitted:hover
   margin: 10px 0 0 0;
   float: left;
   padding: 10px;
-  background-color: $lightest_gray;
   dl {
     margin: 0;
     float: left;

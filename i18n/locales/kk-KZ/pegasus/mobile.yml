@@ -1,7 +1,12 @@
 kk-KZ:
   hour_of_code: Код жазу Сағаты
   hello: Сәлем, әлем
+  "yes": Иә
+  "no": Жоқ
   select_language: Тілді таңдаңыз
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: толығырақ білу
   en: Информатика
   computer_science_edweek: Компьютерлік технологияның білім беру апталығы
   csedweek_dates: Желтоқсан 8-14, 2014
@@ -61,46 +66,46 @@ kk-KZ:
   congratulations: Құттықтаймыз!
   congratulations_on_completing_hoc: Код Жазу Сағатының бір бөлімінің бітуімен құттықтаймыз
   congratulations_volunteer: 'Құттықтаймыз, енді сіз <a href="https://code.org/volunteer"> "Бағдарламалау сағатын" қооданып көргенен кейін, үйренгісі келетін сыныптастарыңызды сайтта тіркеңіз </a> және де оқушыларға "Бағдарламалау сағатын" оқып үйренуге көмектесіңіз!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
+  congratulations_on_completing_course1: 1-Курсты аяқтауыңызбен құттықтаймыз
+  congratulations_on_completing_course2: 2-Курсты аяқтауыңызбен құттықтаймыз
+  congratulations_on_completing_course3: 3-Курсты аяқтауыңызбен құттықтаймыз
+  congratulations_on_completing_course4: 4-Курсты аяқтауыңызбен құттықтаймыз
+  congratulations_on_completing_accelerated: Жеделдетілген Курсты аяқтауыңызбен құттықтаймыз
   congrats_next_tutorials_title: Келесі
   congrats_next_tutorials_desc: '1 сағаттық сабақтарымызды немесе <a href="%{current_path}/next">әріптестеріміздің сабақтарын</a> өтіп көріңіз.'
   get_a_certificate_of_achievement: Бітіру туралы сертификат алу
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  view_course: Курсты көру
+  view_unit: Бірлікті көру
+  make_app: Қосымша бағдарлама жасау
+  congrats_guest_speaker_title: Өз мектебіңізге қонақ болатын шешен адамды табыңыз
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_guest_speaker_cta: Қонақ болатын шешен адамды табыңыз
   congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
+  third_party_gradelevel_kto8: 1-8 сыныптар
   third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
+  third_party_gradelevel_2to8: 2-8 сыныптар
+  third_party_gradelevel_4to12: 4-12 сыныптар
+  third_party_gradelevel_5to12: 5-12 сыныптар
+  third_party_gradelevel_6plus: 6-сыныптан бастап
+  third_party_gradelevel_8plus: 8-сыныптан бастап
+  third_party_platform_all: 'Платформа: Веб, iPad және Андроид'
+  third_party_platform_mobile: 'Платформа: iPad және Андроид'
+  third_party_platform_web: 'Платформа: Веб'
+  third_party_price_varies: 'Бағасы: Жоспарға сәйкес өзгереді'
+  third_party_price_free: 'Бағасы: Тегін'
+  third_party_price_299: 'Бағасы: $2.99/жүктеу'
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
   third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_site: Tynker-ге кіру
   third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
   third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratchjr_btn_site: Scratch Jr.-ге кіру.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_forum: Scratch Оқытушылық Форумы
+  third_party_scratch_btn_site: Scratch-қа кіру
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
   third_party_lightbot_btn_site: Visit Lightbot
@@ -115,11 +120,11 @@ kk-KZ:
   third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_site: Codecademy-ға кіру
+  third_party_organization: Ұйым
   third_party_curriculum: Оқу бағдарламасы
-  third_party_pricing: Pricing
-  third_party_cost_free: Free for students and teachers
+  third_party_pricing: Бағалар
+  third_party_cost_free: Оқушылар мен оқытушылар үшін тегін
   third_party_cost_5permonth: $5/month per class
   third_party_cost_299: $2.99/download
   third_party_cost_free_399: Free to try, $399/classroom
@@ -184,9 +189,9 @@ kk-KZ:
   learn_classes: Бағдарламалауды үйрететін ұйымдарды іздеу
   hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Мен #HourOfCode бітірдім- көріңіз! @codeorg'
-  just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
-  just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
-  just_did_course3: 'I just finished Course 3 - check it out! @codeorg'
+  just_did_course1: Мен жаңа ғана 1-Курсты аяқтадым, @codeorg-тан нәтижесін көр
+  just_did_course2: Мен жаңа ғана 2-Курсты аяқтадым, @codeorg-тан нәтижесін көр
+  just_did_course3: Мен жаңа ғана 3-Курсты аяқтадым, @codeorg-тан нәтижесін көр
   just_did_course4: 'I just finished Course 4 - check it out! @codeorg'
   just_did_accelerated: 'I just finished the Accelerated Course - check it out! @codeorg'
   twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
@@ -267,6 +272,8 @@ kk-KZ:
   homepage_banner_privacy_link: толығырақ білу
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
   homepage_banner_20k_teachers_link: толығырақ білу
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Код Жазу Сағаты
   homepage_slot_text_blurb_hoc: Барлығы үйрене алады. Бүгін бастаңыз
   homepage_slot_text_link_hoc: Код Сағатын қолданып көріңіз
@@ -275,13 +282,13 @@ kk-KZ:
   homepage_solot_text_link_volunteer: Кодтау сағатына волонтер бол
   homepage_slot_text_title_students: Оқушылар
   homepage_slot_text_blurb_students: Біздің барлық оқыту курстарымызды үйреніңіз
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Біздің курстарды зерттеп көріңіз
   homepage_slot_text_link_codestudio: Студия Кодын пайдаланып көріңіз
   homepage_slot_text_link_local: Жергілікті сыныпты іздеңіз
   homepage_slot_text_link_othercourses: Басқа да онлайн курстар
   homepage_slot_text_title_educators: Оқытушылар
   homepage_slot_text_blurb_educators: Оқушыларыңызды үйретіңіз
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: Бастауыш мектеп
   homepage_slot_text_link_middle: Орта мектеп
   homepage_slot_text_link_high: Жоғарғы сынып
   homepage_slot_text_link_k5: Балаларға арналған курс
@@ -292,6 +299,7 @@ kk-KZ:
   homepage_slot_text_link_stats: Статистиканы қарау
   homepage_slot_text_link_buy: Қатысу
   homepage_slot_text_link_donate: Қайырымдылақ жасау
+  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
   homepage_header_codestudio: Студия Коды оқушыларының шығармашылық жұмыстары
   homepage_header_donors: Code.org сайты өздерінің көмекшілеріне алғыс айтады
   homepage_donors_seall: Барлығын қарау
@@ -434,6 +442,7 @@ kk-KZ:
   dashboard_landing_new_beta: Жаңа! 5-сынып оқушыларына арналған бета-курсымызды көріңіз.
   dashboard_landing_new_k5courses: Жаңа! 5-сынып оқушыларына арналған курсымызды көріңіз.
   dashboard_landing_useful_links: Басқа да пайдалы сілтемелер (тек ағылшын тілінде)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Жеке сұрағыңды қой ! Біздің ай сайынғы видео-қабылдауымызды көріңіз.
   dashboard_landing_print_certificates: Осы курсты бітірген оқушылардың сертификаттарын басып шығару
   dashboard_landing_educator_blog: Біздің Оқытушы Блогымыздан жаңалықтар мен жаңартулар жайында оқыңыз
@@ -447,6 +456,10 @@ kk-KZ:
   dashboard_landing_available_courses: Сізге және сіздің оқушыларыңызға қолжетімді курстар.
   dashboard_landing_more_tutorials: Бұдан да көбірек сабақ көргіңіз келе ме?
   dashboard_landing_more_tutorials_desc: '<a href="/learn/beyond"> Біздің әріптестеріміздің </a> сабақтары. Роботтарды бағдарламалауды, веб-парақтар жасау, қосымшалар жасау және C++, Ruby немесе Python сияқты бағдарламалау тілдерін үйреніңіз!'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Бағдарламалау Сағаты барлығы үшін
   dashboard_hoc_courses_desc: Студенттеріңізбен кез келген қысқа сабақтарды орындап көріңіз!
   dashboard_hoc_courses_desc_and_cta: 'Студенттеріңізбен кез келген қысқа сабақтарды орындап көріңіз. Информатика Білім Апталығында <a href="https://hourofcode.com">Код Жазу Сағаты қозғалысына қосылыңыз</a>.'
@@ -477,6 +490,14 @@ kk-KZ:
   dashboard_action_remove_confirm: Өшіру?
   dashboard_action_done: Дайын
   dashboard_action_required: қажет
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: Бағалаулар жоқ
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: Барлығы
+  dashboard_download_csv: CSV жүктеп алу
   dashboard_navigation_home_page: Оқытушының жеке парақшасы
   dashboard_navigation_section_student_progress: Студенттің тіркелу және ілгерілеуі туралы
   dashboard_navigation_section_teacher_progress: Сенің оқудағы ілгерілеуін
@@ -485,21 +506,34 @@ kk-KZ:
   dashboard_navigation_section_pd: Кәсіби бағдарламалау
   dashboard_navigation_section_speakers: 'Информатика <br/> шақырылған ораторлар'
   dashboard_navigation_all_sections: Студенттің тіркелу және ілгерілеуі туралы
-  dashboard_navigation_view_progress: Орындалу барысын көру
-  dashboard_navigation_view_text_responses: Жауаптарды қарау
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_progress: Ілгерілеуі
+  dashboard_navigation_view_text_responses: Text Responses
+  dashboard_navigation_view_assessments: Бағалаулар
   dashboard_navigation_add_students: Оқушыларды қосу
   dashboard_navigation_manage_students: Оқушыларды басқару
   dashboard_navigation_lesson_plans_resources: Сабақ жоспары мен оқу материалдары
-  dashboard_navigation_view_stats: Статистика
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Бөлім: %{section_name}'
   dashboard_navigation_student: 'Оқушы: %{student_name}'
+  dashboard_progress_not_started: басталмады
+  dashboard_progress_in_progress: оқу барысында
+  dashboard_progress_not_completed: Аяқталмаған
+  dashboard_progress_completed_too_many_blocks: аяқталды, тым көп бөлімдер
+  dashboard_progress_completed_perfect: аяқталды, тамаша
+  dashboard_progress_furthest_level_attempted: жетілген ең жоғарғы деңгей
+  dashboard_progress_submitted: жіберілді
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
   dashboard_sections_new_section: Жаңа бөлім
   dashboard_sections_jumbotron_instruction: 'Жаңа бөлім құрыңыз және оған оқушыларды қосыңыз. Бөлімдер - оқушылардың оқу барысын және тіркеу жазбасын қадағалау үшін кішкене топтарға бөлуге көмектеседі.'
   dashboard_sections_table_section: Секция
   dashboard_sections_table_secret: Кіру түрі
   dashboard_sections_table_grade: Сынып
   dashboard_sections_table_course: Курс
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Оқушылар
   dashboard_sections_table_code: Секция Коды
   dashboard_sections_name: Бөлім атауы
@@ -509,6 +543,19 @@ kk-KZ:
   dashboard_sections_secret_none: 'Егер сіз оқушыларыңыздың тіркелу жазбаларын, сонымен қатар құпия сөздерін өздері басқарғаның қаласаңыз, онда құпиялылықтың <b>"жоқ"</b> түрін таңдаңыз.'
   dashboard_sections_print_secrets: Содан кейін сіз тіркелу жазбасы бар парақтарды басып шығарып, жеке тарата аласыз.
   dashboard_sections_switch_section: 'Бөлімді ауыстыру:'
+  dashboard_sections_close: Жабу
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Teacher
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Оқушыларды көшіру
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Оқушыны қосу
   dashboard_students_add_students: Бірнеше оқушыны қосу
   dashboard_students_add_multiple: 'Оқушыларыңыздың есімін жолға біртіндеп жазыңыз немесе қойыңыз:'
@@ -552,6 +599,7 @@ kk-KZ:
   dashboard_course2: '2 Курс:'
   dashboard_course3: '3 Курс:'
   dashboard_course4: '4 Курс (бета-нұсқа): '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: Оқу бағдарламасы
   dashboard_curriculum_overview: Мектепке дейінгі және бастауыш мектеп оқушылары үшін бағдарламаны шолу
   dashboard_overview: Қысқаша шолу
@@ -575,22 +623,17 @@ kk-KZ:
   dashboard_login_picture: Сурет
   dashboard_login_none: Электронды пошта
   dashboard_new_password: жаңа құпия сөз
-  dashboard_progress_not_started: басталмады
-  dashboard_progress_in_progress: оқу барысында
-  dashboard_progress_not_completed: Аяқталмаған
-  dashboard_progress_completed_too_many_blocks: аяқталды, тым көп бөлімдер
-  dashboard_progress_completed_perfect: аяқталды, тамаша
-  dashboard_progress_furthest_level_attempted: жетілген ең жоғарғы деңгей
-  dashboard_progress_submitted: submitted
   dashboard_stage: Деңгей
   dashboard_puzzle: Басқатырғыш
   dashboard_question: Сұрақ
   dashboard_response: Жауап
   dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_free_response: Тегін жауап
+  dashboard_correctness_unsubmitted: Жіберілмеген
   dashboard_correctness_correct: Дұрыс
-  dashboard_correctness_incorrect: Incorrect
+  dashboard_correctness_incorrect: Қате
+  dashboard_submission_submitted: Жіберілген
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -614,10 +657,11 @@ kk-KZ:
   dashboard_faq_k5: 5-сынып оқушыларының жиі қоятын сұрақтары
   dashboard_announcements: Хабарландыру
   dashboard_announce_view_all: Барлығын көру
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
-  dashboard_announce_button_text: толығырақ білу
-  dashboard_announce_hoc: '<b>30 қыркүйек, 2015</b> - 2015 жылғы Код Жазу Сағаты жақында басталады! Бүкіләлемдік тарихи оқу шарасына қатыс.'
-  dashboard_announce_playlab: '<b>4 желтоқсан 2015 жыл</b> - Бағдарламалау сағаты осы жерде! Кез келген жасқа және құрылғыға арналған 50 нұсқаулықтарды қарап көріңіз. Апта жаңалығы: жаңғыртылған Ойындар Лабороториясы, Мұз дәуірі, және Гамболдың таңғажайып әлемінде өзіңнің жеке ойындарың мен әңгімелеріңді бағдарламала.'
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
+  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: '"Код Жазу Сағаты" - 8-14 желтоқсанда басталады!'
   code_sign_up: Информатика Апталығына қатысу үшін тіркеліңіз
   learn_more: Қазір қолданып көріңіз
@@ -727,11 +771,37 @@ kk-KZ:
   course3_name: Курс 3
   course4_name: Курс 4
   accelerated_name: Жеделдетілген курс
-  cspunit3_name: CS Principles Unit 3
-  cspunit3_gradelevel: Grades 9-12
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
+  cspunit3_gradelevel: 9-12 сыныптар
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: Жеделдетілген курс
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Классикалық лабиринт
+  iceage_name: Мұз дәуірі
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Математика
+  hoc_category_name: Код Жазу Сағаты
+  csf_category_name: CS Fundamentals
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Қосымшалар Лабораториясы
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: 13+ жастағылар үшін
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: Жас аралығы 4-14
   codeintl_gradelevel: Жас аралығы 4-14

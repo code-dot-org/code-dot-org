@@ -1,7 +1,6 @@
 name 'U4 - Making Data Visualizations - Scatter Plot'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 
 

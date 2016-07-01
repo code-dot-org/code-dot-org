@@ -1,0 +1,19 @@
+name 'sciPD preQ p1 16-17'
+title 'Computer Science in Science Pre-Survey'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+### Pre-Survey
+
+In order to get to know you better, and provide information to improve our PD experiences, we've created a detailed <a href="http://goo.gl/forms/1npdo4i5lW" target="_new" style="color:blue;">Pre-Survey</a> for you to complete. 
+
+Please take 20 minutes to hop over to  <a href="http://goo.gl/forms/1npdo4i5lW" target="_new">this survey</a> and share a little bit about yourself.  
+
+If you cannot see the links above, type  
+<a href="http://goo.gl/forms/1npdo4i5lW" target="_new" style="color:blue;">http://goo.gl/forms/1npdo4i5lW</a><br/>
+into your browser and you will be taken to it automatically.
+
+When you are finished, come back and press the "Continue" button to keep going.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

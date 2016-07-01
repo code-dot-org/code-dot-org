@@ -1088,7 +1088,7 @@ $(document).ready(function () {
   });
 
   $('#custom-message').click(function () {
-    var dialog = new Dialog({
+    var dialog = new window.Dialog({
       header: '<p class="dialog-title">Enter your own text</p>',
       body: '<div>' +
         '<textarea style="width: 100%;" placeholder="Write or paste your text here." rows="7"></textarea>' +

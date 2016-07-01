@@ -556,7 +556,7 @@
           ajudá-lo a dizer "olá" arrastando o bloco "diga" para nossa área de trabalho
           e digitando "olá" dentro dele?
         studio_iceage_hello2: Sid (personagem 1) encontrou Manny (actor 2) e quer
-          convidá-lo para a aventura. Ajude-os a cumprimentarem-se usando o bloco
+          convidá-lo para uma aventura. Ajude-os a cumprimentarem-se usando o bloco
           "personagem diz" duas vezes.
         studio_iceage_move_to_flag: O Scrat está procurando sua bolota! Ajude-o a
           andar os últimos 200 pixels usando o bloco "mova".
@@ -773,6 +773,7 @@
         infinity_playlab_intro: Laboratório - Introdução
         infinity_playlab_events: Laboratório - Eventos
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
         csp_applab_processing_lists: Processing Lists with Loops
@@ -790,7 +791,16 @@
         csp_applab_functions_parameters: Funções com Parâmetros
         csp_applab_loops: Laços
         csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: Data & Medicine
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
+          & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Um pouco sobre pixels
+        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Widget de pixelização de cores - Parte 1
         csp_pixelation_color_2: Widget de pixelização de cores - Parte 2
         csp_pixelation_color_3: Widget de pixelização de cores - Parte 3

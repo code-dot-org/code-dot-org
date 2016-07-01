@@ -14,6 +14,9 @@
     "skip_instructions_popup": "false",
     "free_play": "true",
     "slider_speed": "0.4"
+  },
+  "published": false,
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>

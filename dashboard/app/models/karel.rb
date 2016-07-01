@@ -27,12 +27,12 @@ class Karel < Maze
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['farmer', 'farmer_night', 'bee', 'bee_night']
+    %w(farmer farmer_night bee bee_night)
   end
 
   # List of possible flower types
   def self.flower_types
-    ['redWithNectar', 'purpleNectarHidden']
+    %w(redWithNectar purpleNectarHidden)
   end
 
   def self.load_maze(maze_file, size)
@@ -47,7 +47,7 @@ class Karel < Maze
     maze = JSON.parse(maze_json)
     maze.each_with_index do |row, x|
       row.each_with_index do |cell, y|
-        unless cell.is_a?(Hash) && cell.has_key?('tileType')
+        unless cell.is_a?(Hash) && cell.key?('tileType')
           raise ArgumentError.new("Cell (#{x},#{y}) has no defined tileType")
         end
       end

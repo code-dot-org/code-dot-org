@@ -1,9 +1,10 @@
 /* global dashboard, appOptions, addToHome */
-
+import $ from 'jquery';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
 var clientState = require('../clientState');
+var color = require('../color');
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -36,7 +37,7 @@ module.exports = function (callback) {
   var isViewingStudentAnswer = !!clientState.queryParams('user_id');
 
   if (appOptions.share && !window.navigator.standalone && userAgentParser.isSafari()) {
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
       addToHome.show(true);
     }, false);
   }
@@ -51,7 +52,13 @@ module.exports = function (callback) {
       appOptions.disableSocialShare = true;
     }
 
-    $.ajax('/api/user_progress/' + appOptions.scriptName + '/' + appOptions.stagePosition + '/' + appOptions.levelPosition).done(function (data) {
+    $.ajax(
+        `/api/user_progress` +
+        `/${appOptions.scriptName}` +
+        `/${appOptions.stagePosition}` +
+        `/${appOptions.levelPosition}` +
+        `/${appOptions.serverLevelId}`
+    ).done(function (data) {
       appOptions.disableSocialShare = data.disableSocialShare;
 
       // Merge progress from server (loaded via AJAX)
@@ -61,8 +68,12 @@ module.exports = function (callback) {
         if (serverProgress[levelId] !== clientProgress[levelId]) {
           var status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
 
-          // Clear the existing class and replace
-          $('.level-' + levelId).attr('class', 'level_link ' + status);
+          // Set the progress color
+          var css = {backgroundColor: color[`level_${status}`] || color.level_not_tried};
+          if (status && status !== 'not_tried' && status !== 'attempted') {
+            Object.assign(css, {color: color.white});
+          }
+          $('.level-' + levelId).css(css);
 
           // Write down new progress in sessionStorage
           clientState.trackProgress(null, null, serverProgress[levelId], appOptions.scriptName, levelId);
@@ -93,6 +104,10 @@ module.exports = function (callback) {
         } else {
           loadLastAttemptFromSessionStorage();
         }
+      }
+
+      if (progress.refreshStageProgress) {
+        progress.refreshStageProgress();
       }
 
       if (data.disablePostMilestone) {

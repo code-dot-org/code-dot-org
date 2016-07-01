@@ -30,8 +30,6 @@ class TablesApi < Sinatra::Base
     DEFAULT_MAX_RECORD_SIZE
   end
 
-  @@redis = Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379')
-
   helpers do
     [
       'core.rb',
@@ -55,7 +53,7 @@ class TablesApi < Sinatra::Base
     rows = TableType.new(channel_id, storage_id(endpoint), table_name).to_a
 
     # Remember the number of rows in the table since we now have an accurate estimate.
-    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
     limits.set_approximate_row_count(rows.length)
 
     rows.to_json
@@ -122,7 +120,7 @@ class TablesApi < Sinatra::Base
 
     # Decrement the row count only after the delete succeeds, to avoid a spurious
     # decrement if the record isn't present or in other failure cases.
-    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
     limits.decrement_row_count
 
     no_content
@@ -178,11 +176,11 @@ class TablesApi < Sinatra::Base
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     dont_cache
     TableType.new(channel_id, storage_id(endpoint), table_name).delete_all
-    #TODO - delete metadata
+    #TODO: Delete metadata.
 
     # Zero out the approximate row count just in case the user creates a new table
     # with the same name.
-    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
     limits.set_approximate_row_count(0)
 
     no_content
@@ -215,7 +213,7 @@ class TablesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
     row_count = limits.get_approximate_row_count
     if row_count >= max_table_rows
       halt 403, {}, "Too many rows, a table may have at most #{max_table_rows} rows"
@@ -246,8 +244,8 @@ class TablesApi < Sinatra::Base
 
     new_value = JSON.parse(request.body.read)
 
-    if new_value.has_key?('id') && new_value['id'].to_i != id.to_i
-      halt 400, {}, "Updating 'id' is not allowed" if new_value.has_key? 'id'
+    if new_value.key?('id') && new_value['id'].to_i != id.to_i
+      halt 400, {}, "Updating 'id' is not allowed" if new_value.key? 'id'
     end
     new_value.delete('id')
 
@@ -325,7 +323,7 @@ class TablesApi < Sinatra::Base
 
     # deleting the old records only after all validity checks have passed.
     begin
-      table.delete_all()
+      table.delete_all
     rescue Exception
       halt 500
     end
@@ -342,10 +340,10 @@ class TablesApi < Sinatra::Base
     table.ensure_metadata
 
     # Set the approximate row count.
-    limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+    limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
     limits.set_approximate_row_count(records.length)
 
-    redirect "#{table_url}"
+    redirect table_url
   end
 
   #
@@ -404,17 +402,34 @@ class TablesApi < Sinatra::Base
         next
       end
 
-      table.delete_all()
+      table.delete_all
       json_data[table_name].each_with_index do |record, i|
         record_size = get_approximate_record_size(table_name, record.to_json)
         record_too_large(record_size, i) if record_size > max_record_size
         table.insert(record, request.ip)
       end
-      limits = TableLimits.new(@@redis, endpoint, channel_id, table_name)
+      limits = TableLimits.new(get_redis_client, endpoint, channel_id, table_name)
       limits.set_approximate_row_count(json_data[table_name].length)
 
-      table.ensure_metadata()
+      table.ensure_metadata
     end
+  end
 
+  private
+
+  # Returns a new Redis client for the current configuration.
+  #
+  # @return [Redis]
+  def get_redis_client
+    @@redis ||= Redis.new(url: redis_url)
+  end
+
+  # Returns the URL (configuration string) of the redis service in the current
+  # configuration.  Should be passed as the :url parameter in the options hash
+  # to Redis.new.
+  #
+  # @return [String]
+  def redis_url
+    CDO.geocoder_redis_url || 'redis://localhost:6379'
   end
 end
