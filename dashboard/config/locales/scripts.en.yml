@@ -2081,6 +2081,7 @@ en:
           Loops Unplugged: Loops Unplugged
           Events Unplugged: Events Unplugged
           Events: Events
+          Fuzz Fiesta: Fuzz Fiesta
         grade4:
           title: Grade 4
           description_short: Planning Script for CSF 2.0
@@ -2160,3 +2161,45 @@ en:
           Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
           'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees: Muddy City'
           Day 18-21 Final Project: Day 18-21 Final Project
+        ecs-unit3:
+          title: ECS Unit 3
+          description_short: 'Unit 3: Web Design'
+          description: 'Unit 3: Web Design'
+          Getting Started: Getting Started
+          Intro to Unit 3: Intro to Unit 3
+          Teaching Strategies: Teaching Strategies
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+        ecs-unit4:
+          title: ECS Unit 4
+          description_short: 'Unit 4: Programming'
+          description: 'Unit 4: Programming'
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Teaching Strategies: Teaching Strategies
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+        ecs-unit5:
+          title: ECS Unit 5
+          description_short: 'Unit 5: Computer and Data Analysis'
+          description: 'Unit 5: Computer and Data Analysis'
+          Getting Started: Getting Started
+          Unit 5 Overview: Unit 5 Overview
+          Unit 5 lessons: Unit 5 lessons
+          Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ecs-unit6:
+          title: ECS Unit 6
+          description_short: 'Unit 6: Robotics'
+          description: 'Unit 6: Robotics'
+          Getting Started: Getting Started
+          Unit 6 Overview: Unit 6 Overview
+          Unit 6 lessons: Unit 6 lessons
+          Alternative Ideas for Unit 6: Alternative Ideas for Unit 6
+          Unit 6 Challenge: Unit 6 Challenge
+          Share out and Submit: Share out and Submit
