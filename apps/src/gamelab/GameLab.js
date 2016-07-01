@@ -29,7 +29,8 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-import {setInitialAnimationMetadata} from './animationModule';
+import {setInitialAnimationList, saveAnimations} from './animationListModule';
+import {getSerializedAnimationList} from './PropTypes';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
@@ -212,14 +213,30 @@ GameLab.prototype.init = function (config) {
   }
 
   this.studioApp_.setPageConstants(config, {
+    channelId: config.channel,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true
   });
 
   // Push project-sourced animation metadata into store
-  if (typeof config.initialAnimationMetadata !== 'undefined') {
-    this.studioApp_.reduxStore.dispatch(setInitialAnimationMetadata(config.initialAnimationMetadata));
+  if (typeof config.initialAnimationList !== 'undefined') {
+    let animationList = config.initialAnimationList;
+
+    // TODO: Tear out this migration when we don't think we need it anymore.
+    if (Array.isArray(animationList)) {
+      // We got old animation data that needs to be migrated.
+      animationList = {
+        orderedKeys: animationList.map(a => a.key),
+        propsByKey: animationList.reduce((memo, next) => {
+          memo[next.key] = next;
+          return memo;
+        }, {})
+      };
+    }
+
+    // Load initial animation information
+    this.studioApp_.reduxStore.dispatch(setInitialAnimationList(animationList));
   }
 
   ReactDOM.render((
@@ -815,7 +832,7 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  * @return {Boolean} whether or not the preload has completed
  */
 GameLab.prototype.onP5Preload = function () {
-  this.gameLabP5.preloadAnimations(this.getAnimationMetadata());
+  this.gameLabP5.preloadAnimations(this.studioApp_.reduxStore.getState().animationList);
 
   this.initInterpreter();
   // And execute the interpreter for the first time:
@@ -979,17 +996,21 @@ GameLab.prototype.displayFeedback_ = function () {
 /**
  * Get the project's animation metadata for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
- * @return {AnimationMetadata[]}
+ * @return {AnimationList}
  */
-GameLab.prototype.getAnimationMetadata = function () {
-  return this.studioApp_.reduxStore.getState().animations;
+GameLab.prototype.getSerializedAnimationList = function (callback) {
+  this.studioApp_.reduxStore.dispatch(saveAnimations(() => {
+    callback(getSerializedAnimationList(this.studioApp_.reduxStore.getState().animationList));
+  }));
 };
 
 GameLab.prototype.getAnimationDropdown = function () {
-  return this.getAnimationMetadata().map(function (animation) {
+  const animationList = this.studioApp_.reduxStore.getState().animationList;
+  return animationList.orderedKeys.map(key => {
+    const name = animationList.propsByKey[key].name;
     return {
-      text: utils.quote(animation.name),
-      display: utils.quote(animation.name)
+      text: utils.quote(name),
+      display: utils.quote(name)
     };
   });
 };
