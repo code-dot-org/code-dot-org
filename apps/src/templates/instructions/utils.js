@@ -18,7 +18,7 @@ export function getOuterHeight(component, includeMargin=false) {
  * @param {number} animate If specified, the animation time in ms
  */
 export function scrollBy(element, deltaY, animate=200) {
-  let newScrollTop = element.scrollTop + deltaY;
+  const newScrollTop = element.scrollTop + deltaY;
   if (animate) {
     let $elem = $(element);
     if (!$elem.is(':animated')) {
