@@ -68,6 +68,43 @@ class SessionsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end
 
+  test 'signing in new user creates UserGeo' do
+    user = create(:user)
+
+    assert UserGeo.find_by_user_id(user.id).nil?
+
+    post :create, user: {
+      login: '', hashed_email: user.hashed_email, password: user.password
+    }
+
+    assert UserGeo.find_by_user_id(user.id)
+  end
+
+  test 'signing in user with UserGeo does not modify UserGeo' do
+    user = create(:user, current_sign_in_ip: '1.2.3.4')
+    UserGeo.create(
+      user_id: user.id,
+      ip_address: '9.8.7.6',
+      indexed_at: '2000-01-02 12:34:56'
+    )
+
+    post :create, user: {
+      login: '', hashed_email: user.hashed_email, password: user.password
+    }
+
+    assert_equal '9.8.7.6', UserGeo.find_by_user_id(user.id)[:ip_address]
+  end
+
+  test 'failed signin does not create UserGeo' do
+    user = create(:user)
+
+    assert_no_change('UserGeo.count') do
+      post :create, user: {
+        login: '', hashed_email: user.hashed_email, password: 'wrong password'
+      }
+    end
+  end
+
   test "users go to code.org after logging out" do
     student = create(:student)
     sign_in student
