@@ -153,6 +153,7 @@ GameLab.prototype.init = function (config) {
   });
 
   config.afterClearPuzzle = function () {
+    this.studioApp_.reduxStore.dispatch(setInitialAnimationList(this.startAnimations));
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
