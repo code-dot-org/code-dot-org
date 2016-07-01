@@ -15,6 +15,11 @@ export default class DirtDrawer extends Drawer {
     this.assetUnclippedWidth = SQUARE_SIZE * DIRT_COUNT;
   }
 
+  getAsset(prefix, row, col) {
+    let val = this.map_.getValue(row, col) || 0;
+    return (val === 0) ? undefined : super.getAsset(prefix, row, col);
+  }
+
   /**
    * @override
    */
@@ -27,7 +32,7 @@ export default class DirtDrawer extends Drawer {
       val = (val < 0) ? -11 : 11;
     }
 
-    this.updateImageWithIndex_('dirt', row, col, DirtDrawer.spriteIndexForDirt_(val));
+    this.updateImageWithIndex_('dirt', row, col, DirtDrawer.spriteIndexForDirt(val));
   }
 
   /**
@@ -62,7 +67,7 @@ export default class DirtDrawer extends Drawer {
    * @param {number} val
    * @return {number}
    */
-  static spriteIndexForDirt_(val) {
+  static spriteIndexForDirt(val) {
     let spriteIndex;
 
     if (val === 0) {

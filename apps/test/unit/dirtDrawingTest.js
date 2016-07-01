@@ -5,6 +5,8 @@ function setGlobals() {
 }
 
 var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
+var MazeMap = require('@cdo/apps/maze/mazeMap');
+var Cell = require('@cdo/apps/maze/cell');
 var cellId = require('@cdo/apps/maze/mazeUtils').cellId;
 
 function createFakeSkin() {
@@ -15,11 +17,15 @@ function createFakeSkin() {
 
 describe("DirtDrawer", function () {
   // The actual values of these are ignored by most of these tests
-  var dirtMap = [
+  var dirtMap = MazeMap.parseFromOldValues([
+    [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1]
+  ], [
     [0, 1, 2, 10, 11, -1, -2, -10, -11],
     [0, 1, 2, 10, 11, -1, -2, -10, -11],
     [0, 1, 2, 10, 11, -1, -2, -10, -11]
-  ];
+  ], Cell);
 
   var skin = createFakeSkin();
 
@@ -86,8 +92,8 @@ describe("DirtDrawer", function () {
 
   describe("updateImageWithIndex_", function () {
     var drawer;
-    var row = 2;
-    var col = 3;
+    var row = 0;
+    var col = 0;
     var dirtId = cellId('dirt', row, col);
 
     beforeEach(function () {
@@ -97,24 +103,27 @@ describe("DirtDrawer", function () {
 
     it("update from nonExistent to hidden", function () {
       assert.equal(document.getElementById(dirtId), null, 'image starts out nonexistent');
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, -1);
+      drawer.updateImageWithIndex_('dirt', row, col, -1);
       assert.equal(document.getElementById(dirtId), null, 'image still doesnt exist');
     });
 
     it("update from nonExistent to visible", function () {
       assert.equal(document.getElementById(dirtId), null, 'image starts out nonexistent');
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, 0);
+      drawer.map_.setValue(row, col, -11);
+      drawer.updateImageWithIndex_('dirt', row, col, 0);
       assert.notEqual(document.getElementById(dirtId), null, 'image now exists');
     });
 
     it("update from visible to hidden", function () {
       // create image
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, 0);
+      drawer.map_.setValue(row, col, -11);
+      drawer.updateImageWithIndex_('dirt', row, col, 0);
       var image = document.getElementById(dirtId);
       assert.notEqual(image, null, 'image exists');
       assert.equal(image.getAttribute('visibility'), 'visible');
 
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, -1);
+      drawer.map_.setValue(row, col, 0);
+      drawer.updateImageWithIndex_('dirt', row, col, -1);
       image = document.getElementById(dirtId);
       assert.notEqual(image, null, 'image still exists');
       assert.equal(image.getAttribute('visibility'), 'hidden');
@@ -122,14 +131,16 @@ describe("DirtDrawer", function () {
 
     it("update from visible to visible", function () {
       // create image
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, 0);
+      drawer.map_.setValue(row, col, -11);
+      drawer.updateImageWithIndex_('dirt', row, col, 0);
       var image = document.getElementById(dirtId);
       assert.notEqual(image, null, 'image exists');
       assert.equal(image.getAttribute('visibility'), 'visible');
       assert.equal(image.getAttribute('x'), 50 * col);
       assert.equal(image.getAttribute('y'), 50 * row);
 
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, 2);
+      drawer.map_.setValue(row, col, -9);
+      drawer.updateImageWithIndex_('dirt', row, col, 2);
       image = document.getElementById(dirtId);
       assert.notEqual(image, null, 'image still exists');
       assert.equal(image.getAttribute('visibility'), 'visible');
@@ -140,15 +151,18 @@ describe("DirtDrawer", function () {
 
     it("update from hidden to visible", function () {
       // create image
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, 0);
+      drawer.map_.setValue(row, col, -11);
+      drawer.updateImageWithIndex_('dirt', row, col, 0);
       // hide it
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, -1);
+      drawer.map_.setValue(row, col, 0);
+      drawer.updateImageWithIndex_('dirt', row, col, -1);
 
       var image = document.getElementById(dirtId);
       assert.notEqual(image, null, 'image exists');
       assert.equal(image.getAttribute('visibility'), 'hidden', 'image is hidden');
 
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, 2);
+      drawer.map_.setValue(row, col, -9);
+      drawer.updateImageWithIndex_('dirt', row, col, 2);
       image = document.getElementById(dirtId);
       assert.notEqual(image, null, 'image still exists');
       assert.equal(image.getAttribute('visibility'), 'visible');
@@ -159,15 +173,18 @@ describe("DirtDrawer", function () {
 
     it("update from hidden to hidden", function () {
       // create image
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, 0);
+      drawer.map_.setValue(row, col, -11);
+      drawer.updateImageWithIndex_('dirt', row, col, 0);
       // hide it
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, -1);
+      drawer.map_.setValue(row, col, 0);
+      drawer.updateImageWithIndex_('dirt', row, col, -1);
 
       var image = document.getElementById(dirtId);
       assert.notEqual(image, null, 'image exists');
       assert.equal(image.getAttribute('visibility'), 'hidden', 'image is hidden');
 
-      drawer.updateImageWithIndex_('dirt', row, col, drawer.dirtImageInfo_, -1);
+      drawer.map_.setValue(row, col, 0);
+      drawer.updateImageWithIndex_('dirt', row, col, -1);
       image = document.getElementById(dirtId);
       assert.notEqual(image, null, 'image still exists');
       assert.equal(image.getAttribute('visibility'), 'hidden');
