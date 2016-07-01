@@ -126,7 +126,7 @@
     padding: 5px;
     padding-top: 10px;
     position: static;
-    color: dimgray;
+    color: #4d575f;
   }
 
   .jumbo-tutorial-box {
@@ -134,7 +134,7 @@
     background-size: 605px 100px;
     padding: 10px;
     border: solid 1px #c6cacd;
-    color: dimgray;
+    color: #4d575f;
   }
 
   .jumbo-heading {
@@ -158,7 +158,7 @@
     display: block;
     margin-top: 5px;
     margin-bottom: 10px;
-    color: dimgray;
+    color: #4d575f;
   }
 
   #secondary-nav {
@@ -170,7 +170,7 @@
 
   .secondary-nav {
     background-color: white;
-    color: dimgray;
+    color: #4d575f;
   }
 
   .secondary-nav a {
@@ -184,8 +184,8 @@
   .jumbo-tutorial {
     width: 100%;
     position: static;
-    line-height: 16px;
-    color: dimgray;
+    line-height: 20px;
+    color: #4d575f;
   }
 
   .jumbo-heading {
@@ -196,7 +196,7 @@
 
   .jumbo-h1-second-box {
     display: static;
-    color: dimgray;
+    color: #4d575f;
   }
 
   .jumbo-logo {
@@ -212,7 +212,7 @@
 
   .secondary-nav {
     background-color: white;
-    color: dimgray;
+    color: #4d575f;
   }
 
   .secondary-nav a {
