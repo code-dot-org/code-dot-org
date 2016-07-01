@@ -109,6 +109,8 @@ var karmaConfig = _.extend({}, baseConfig, {
 /**
  * Generate the appropriate webpack config based off of our base config and
  * some input options
+ * @param {string} uniqueName - Unique name for the bundle. Used by a webpack
+ *   option to make sure our different bundles don't end up sharing webpack runtimes
  * @param {object} options
  * @param {string} options.output
  * @param {string[]} options.entries - list of input source files
@@ -120,6 +122,7 @@ var karmaConfig = _.extend({}, baseConfig, {
  *   bundle actually provides (and thus should not be external here)
  */
 function create(options) {
+  var uniqueName = options.uniqueName;
   var outputDir = options.output;
   var entries = options.entries;
   var commonFile = options.commonFile;
@@ -128,12 +131,19 @@ function create(options) {
   var piskelDevMode = options.piskelDevMode;
   var provides = options.provides;
 
+  if (!uniqueName) {
+    throw new Error('Must specify uniqueName for bundle');
+  }
+
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
       filename: "[name]." + (minify ? "min." : "") + "js",
+      // This option is needed so that if we have two different bundles included
+      // on one page, they're smart enough to differentiate themselves
+      jsonpFunction: 'jsonp_' + uniqueName
     },
-    // devtool: options.minify ? 'source-map' : 'cheap-module-eval-source-map',
+    devtool: options.minify ? 'source-map' : 'cheap-module-eval-source-map',
     entry: entries,
     plugins: [
       new webpack.DefinePlugin({
