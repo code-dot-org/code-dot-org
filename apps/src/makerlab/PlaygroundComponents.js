@@ -151,10 +151,12 @@ const addSensorFeatures = (fmap, sensor) => {
   let scale = undefined;
 
   sensor.lookbackLogger = new LookbackLogger();
-  sensor.on('data', () => {
-    // Add the raw (un-scaled) value to the logger.
-    sensor.lookbackLogger.addData(sensor.raw);
-  });
+  sensor.start = () => {
+    sensor.on('data', () => {
+      // Add the raw (un-scaled) value to the logger.
+      sensor.lookbackLogger.addData(sensor.raw);
+    });
+  };
   sensor.getAveragedValue = (n) => {
     const [low, high] = scale || [0, 1023];
     return fmap(sensor.lookbackLogger.getLast(n), 0, 1023, low, high);
