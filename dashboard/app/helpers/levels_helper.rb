@@ -349,9 +349,6 @@ module LevelsHelper
       app_options[:showUnusedBlocks] = enabled
     end
 
-    # LevelSource-dependent options
-    app_options[:level_source_id] = @level_source.id if @level_source
-
     # Edit blocks-dependent options
     if level_view_options[:edit_blocks]
       # Pass blockly the edit mode: "<start|toolbox|required>_blocks"
