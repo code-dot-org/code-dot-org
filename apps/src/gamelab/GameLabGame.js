@@ -26,5 +26,17 @@ createP5PropertyAlias('height', READONLY);
 createP5PropertyAlias('mouseX', READONLY);
 createP5PropertyAlias('mouseY', READONLY);
 createP5PropertyAlias('allSprites', READONLY);
+createP5PropertyAlias('frameCount', READONLY);
+
+// Transform p5play's frameRate() API into a property on the GameLabGame object:
+Object.defineProperty(GameLabGame.prototype, 'frameRate', {
+  enumerable: true,
+  get: function () {
+    return this.p5Inst.frameRate();
+  },
+  set: function (value) {
+    this.p5Inst.frameRate(value);
+  }
+});
 
 module.exports = GameLabGame;

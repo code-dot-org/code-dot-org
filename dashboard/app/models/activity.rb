@@ -32,23 +32,32 @@ class Activity < ActiveRecord::Base
   has_one :activity_hint
   has_many :experiment_activities
 
-  def Activity.best?(result)
+  def self.best?(result)
     return false if result.nil?
     (result == BEST_PASS_RESULT)
   end
 
-  def Activity.passing?(result)
+  def self.perfect?(result)
+    return false if result.nil?
+    (result > MAXIMUM_NONOPTIMAL_RESULT)
+  end
+
+  def self.passing?(result)
     return false if result.nil?
     (result >= MINIMUM_PASS_RESULT)
   end
 
-  def Activity.finished?(result)
+  def self.finished?(result)
     return false if result.nil?
     (result >= MINIMUM_FINISHED_RESULT)
   end
 
   def best?
     Activity.best? test_result
+  end
+
+  def perfect?
+    Activity.perfect? test_result
   end
 
   def passing?
@@ -59,7 +68,7 @@ class Activity < ActiveRecord::Base
     Activity.finished? test_result
   end
 
-  def Activity.recent(limit)
+  def self.recent(limit)
     # yeah, this is a lot like .last -- but I want a dataset not an array
     Activity.order('id desc').limit(limit)
   end
@@ -68,7 +77,7 @@ class Activity < ActiveRecord::Base
   # nil because it may not have been written yet.) An exception will be thrown if the object does
   # not pass validation. The object is only written asynchronously if the gatekeeper allows it for
   # this hostname.
-  def Activity.create_async!(attributes)
+  def self.create_async!(attributes)
     activity = Activity.new(attributes)
     activity.created_at = activity.updated_at = Time.now
     activity.validate!
@@ -84,7 +93,7 @@ class Activity < ActiveRecord::Base
   # Handle an async operation created by create_async! (and other async operations we might add
   # in the future).
   # @param [Hash] op A has describing the operation
-  def Activity.handle_async_op(op)
+  def self.handle_async_op(op)
     raise 'Model must be Activity' if op['model'] != 'Activity'
 
     case op['action']
@@ -97,7 +106,7 @@ class Activity < ActiveRecord::Base
     end
   end
 
-  def Activity.progress_queue
+  def self.progress_queue
     AsyncProgressHandler.progress_queue
   end
 

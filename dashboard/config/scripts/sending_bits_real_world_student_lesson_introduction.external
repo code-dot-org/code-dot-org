@@ -1,0 +1,34 @@
+name 'Sending Bits Real World Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 1: Sending Bits in the Real World
+
+# Background
+The Internet is really just an interconnected system of bit-sending devices, each relying on different methods of encoding bits. Most wired connections in your house or school will vary voltages in a copper wire to send binary messages. If you use a wireless connection your bits are translated into alternating frequencies on a radio wave. In either case, once these bits leave the building it is increasingly common that they will be converted into beams of light traveling along fiber optic cables. Each method of encoding bits has pros and cons which make it better suited for certain situations, and so a binary message may travel in many different forms on its journey across the Internet.
+
+# Vocabulary
+* Bandwidth: transmission capacity of a bit-sending system, as measured by bit rate
+* Latency: the amount of time it takes a bit to travel from a sender to a receiver
+
+# What happens in this lesson?
+* Investigate how bits are transmitted on the Internet
+* Research the bit-sending technology underlying a familiar device
+* Present your finding to your classmates
+
+
+# Resources
+
+* Video Guide: <a href="https://docs.google.com/document/d/113ZzBVzK_3Y2ksxIle03jZz9RiF-Pla9eFB6Gd4QhPw/edit?usp=sharing" target="_blank">The Internet: Wires, Cables, and WiFi</a>
+* Activity Guide: <a href="https://docs.google.com/document/d/1KenNw_AhZgxYanj8_Ko2-eyZloemBBG1URgk8hO2jbg/edit?usp=sharing" target="_blank">Sending Bits in the Real World</a>
+* Assessment: <a href="https://docs.google.com/document/d/1RdvTCff-Z_HzIkZlLw-xuLlqvKouwdhCO6EYzaxOGJ8/edit?usp=sharing" target="_blank">Research and Presentation Rubric</a>
+* Reading: <a href="http://denninginstitute.com/pjd/GP/overviews/ov_computation.pdf" target="_blank"> Computation
+: A new way of science</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

@@ -11,9 +11,10 @@ theme: none
 [together]
 
 ## Lesson Overview
-New and unsolved problems are often pretty hard. If we want to have any chance of making something creative, useful, and clever, then we need to be willing to attack hard problems even if it means failing a few times before we succeed. 
+New and unsolved problems are often pretty hard. If we want to have any chance of making something creative, useful, and clever, then we need to be willing to attack hard problems even if it means failing a few times before we succeed.
 
 This lesson teaches that failure is not the end of a journey, but a hint for how to succeed.
+
 [summary]
 
 ## Teaching Summary
@@ -21,19 +22,19 @@ This lesson teaches that failure is not the end of a journey, but a hint for how
 
 1) [Review](#Review)<br/>
 2) [Vocabulary](#Vocab) <br/>
-3) [Try, Try Again](#GetStarted)  
+3) [Try, Try Again](#GetStarted)
 
-### **Activity: Building a Foundation** - 30  minutes  
+### **Activity: Building a Foundation** - 30  minutes
 
-4) [Building a Foundation](#Activity1)  
+4) [Building a Foundation](#Activity1)
 
-### **Wrap-up** - 5  minutes 
-5) [Flash Chat](#WrapUp) - What did we learn?  
+### **Wrap-up** - 5  minutes
+5) [Flash Chat](#WrapUp) - What did we learn?
 6) [Vocab Shmocab](#Shmocab)
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Outline steps to complete a structural engineering challenge
 - Predict and discuss potential issues in structure creation
@@ -105,17 +106,17 @@ Trying again and again, even when something is very hard
 
 - Does everyone get everything right the first time?
 - When I was a baby learning to walk, did I stand up and run off on my first try?
-  - Video of [baby learning to scoot, sit, walk](https://www.youtube.com/watch?v=BqQiOOC7_Rs). 
+  - Video of [baby learning to scoot, sit, walk](https://www.youtube.com/watch?v=BqQiOOC7_Rs).
 
-- Sometimes, the best and most useful things to do are the hardest to learn. 
+- Sometimes, the best and most useful things to do are the hardest to learn.
   - It can take a while to learn hard things
   - If you don't do something well at first, does it mean that you never will?
   - Can you think of something that was hard at first, but that you can now do pretty easily?
      - Walking
      - Talking
      - Riding a bike
-     
-- When you fail at doing something, you get a hint at what went wrong. You just need to look for it. 
+
+- When you fail at doing something, you get a hint at what went wrong. You just need to look for it.
   - If your bike tips over, next time you need to work on balance.
   - If you're filling a balloon and it pops, next time you need less air.
 - Think of the mistakes as chances to learn how to do something better next time.
@@ -140,7 +141,7 @@ Here are some great resources to prep your class with the concept of persistence
 
 ## Activities: (20 min)
 ### <a name="Activity1"></a> 4) [Building a Foundation Activity](/curriculum/course1/9/Activity9-BuildingFoundation.pdf)
-Have you ever started on a task, then discovered that it was much harder than you thought it would be? Hard tasks can make us want to give up, but if we stick to our goal and keep trying, then we just might make something better than we’ve ever made before!  
+Have you ever started on a task, then discovered that it was much harder than you thought it would be? Hard tasks can make us want to give up, but if we stick to our goal and keep trying, then we just might make something better than we’ve ever made before!
 
 In this challenge, we’ll work to construct towers that are strong enough to hold a textbook for at least 10 seconds, using everyday materials.
 
@@ -174,8 +175,8 @@ In this challenge, we’ll work to construct towers that are strong enough to ho
 
 [tip]
 
-# Lesson Tip  
-The planning stage can be difficult for young students.  It may be helpful for you to place some idea "examples" at the front of the room.  Do not announce that they are there. Simply encourage students to take a walk if they get frustrated.  Try to encourage students to locate the tips on their own if at all possible. 
+# Lesson Tip
+The planning stage can be difficult for young students.  It may be helpful for you to place some idea "examples" at the front of the room.  Do not announce that they are there. Simply encourage students to take a walk if they get frustrated.  Try to encourage students to locate the tips on their own if at all possible.
 
 [/tip]
 
@@ -193,7 +194,7 @@ The planning stage can be difficult for young students.  It may be helpful for y
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future.  Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
 [/tip]
@@ -224,7 +225,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### Try It Again!
@@ -238,10 +239,10 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
+### ISTE Standards (formerly NETS)
 
 - 1.b - Create original works as a means of personal or group expression.
-- 1.c - Use models and simulation to explore complex systems and issues.  
+- 1.c - Use models and simulation to explore complex systems and issues.
 - 2.d - Contribute to project teams to solve problems.
 - 4.b - Plan and manage activities to develop a solution or complete a project.
 - 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
@@ -249,16 +250,16 @@ Use these activities to enhance student learning. They can be used as outside of
 
 
 ### CSTA K-12 Computer Science Standards
-- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task.  
-- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving. 
+- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task.
+- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving.
 - CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises.
 - CT.L1:6-05 - Make a list of sub-problems to consider while addressing a larger problem.
 - CL.L1:6-03 - Identify ways that teamwork and collaboration can support problem solving and innovation.
 - CL.L2-04 - Exhibit dispositions necessary for collaboration: providing useful feedback, integrating feedback, understanding and accepting multiple perspectives, socialization.
- 
+
 ### NGSS Science and Engineering Practices
-- K-2-ETS1-1. Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool. 
-- K-2-ETS1-2. Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem. 
+- K-2-ETS1-1. Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
+- K-2-ETS1-2. Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.
 - K-2-ETS1-3. Analyze data from tests of two objects designed to solve the same problem to compare the strengths and weaknesses of how each performs.
 
 ### Common Core Mathematical Practices
@@ -293,9 +294,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

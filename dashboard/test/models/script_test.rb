@@ -47,10 +47,10 @@ class ScriptTest < ActiveSupport::TestCase
     script_id = scripts[0].script_levels[4].script_id
     script_level_id = scripts[0].script_levels[4].id
 
-    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages].map{|stage| stage[:levels]}.flatten
+    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages].map{|stage| stage[:scriptlevels]}.flatten
 
     # Set different level name in tested script
-    parsed_script[4]['name'] = "Level 1"
+    parsed_script[4][:levels][0]['name'] = "Level 1"
 
     # Set different 'trophies' and 'hidden' options from defaults in Script.setup
     options = {name: File.basename(@script_file, ".script"), trophies: true, hidden: false}
@@ -167,7 +167,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test_fixture.script")
 
     scripts,_ = Script.setup([script_file_remove_level])
-    new_first_script_level = ScriptLevel.where(script: scripts[0], level: promoted_level).first
+    new_first_script_level = ScriptLevel.joins(:levels).where(script: scripts[0], levels: {id: promoted_level}).first
     assert_equal 1, new_first_script_level.position
   end
 
@@ -198,18 +198,81 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'blockly level in custom script' do
     script_data, _ = ScriptDSL.parse(
-                     "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
+      "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
 
     script = Script.add_script({name: 'test script'},
-                               script_data[:stages].map{|stage| stage[:levels]}.flatten)
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
     assert_equal '100', script.script_levels[1].level.level_num
   end
 
+  test 'forbid applab and gamelab levels in public scripts' do
+    assert_raises_matching /Applab and Gamelab levels can only be added to scripts that are hidden or require login/ do
+      Script.add_script(
+        {name: 'test script', hidden: false},
+        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+      )
+    end
+
+    assert_raises_matching /Applab and Gamelab levels can only be added to scripts that are hidden or require login/ do
+      Script.add_script(
+        {name: 'test script', hidden: false},
+        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+      )
+    end
+  end
+
+  test 'allow applab and gamelab levels in hidden scripts' do
+    Script.add_script(
+      {name: 'test script', hidden: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+    )
+  end
+
+  test 'allow applab and gamelab levels in login_required scripts' do
+    Script.add_script(
+      {name: 'test script', hidden: false, login_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: false, login_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+    )
+  end
+
+  test 'allow applab and gamelab levels in student_of_admin_required scripts' do
+    Script.add_script(
+      {name: 'test script', hidden: false, student_of_admin_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: false, student_of_admin_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+    )
+  end
+
+  test 'allow applab and gamelab levels in admin_required scripts' do
+    Script.add_script(
+      {name: 'test script', hidden: false, admin_required: true},
+      [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
+    )
+    Script.add_script(
+      {name: 'test script', hidden: false, admin_required: true},
+      [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
+    )
+  end
+
   test 'scripts are hidden or not' do
-    visible_scripts = %w{20-hour flappy playlab infinity artist course1 course2 course3 course4 frozen hourofcode algebra cspunit1 cspunit2 cspunit3 starwarsblocks}.
-      map{|s| Script.find_by_name(s)}
+    visible_scripts = %w{
+      20-hour flappy playlab infinity artist course1 course2 course3 course4
+      frozen hourofcode algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5
+      cspunit6 starwarsblocks
+    }.map{|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
       assert !s.hidden?, "#{s.name} is hidden when it should not be"
@@ -240,8 +303,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'banner image' do
     assert_equal nil, Script.find_by_name('flappy').banner_image
-    assert_equal 'banner_course1_cropped.png', Script.find_by_name('course1').banner_image
-    assert_equal 'banner_course2_cropped.png', Script.find_by_name('course2').banner_image
+    assert_equal 'banner_course1.jpg', Script.find_by_name('course1').banner_image
+    assert_equal 'banner_course2.jpg', Script.find_by_name('course2').banner_image
   end
 
   test 'logo image' do
@@ -286,5 +349,38 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script_level, script: script, stage: stage)
 
     assert_equal 1, script.summarize[:stages].count
+  end
+
+  test 'should generate PLC objects' do
+    script_file = File.join(self.class.fixture_path, 'test_plc.script')
+    scripts, custom_i18n = Script.setup([script_file])
+    I18n.backend.store_translations I18n.locale, custom_i18n['en']
+
+    script = scripts.first
+    script.save! # Need to trigger an update because i18n strings weren't loaded
+    assert script.professional_learning_course?
+    assert_equal 'Test plc course', script.professional_learning_course
+
+    unit = script.plc_course_unit
+    assert_equal 'PLC Test', unit.unit_name
+    assert_equal 'PLC test fixture script', unit.unit_description
+
+    lm = script.stages.first.plc_learning_module
+    assert_equal 'Sample Module', lm.name
+    assert_equal 1, unit.plc_learning_modules.count
+    assert_equal lm, unit.plc_learning_modules.first
+    assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
+
+    task = script.script_levels.first.plc_task
+    assert_equal 'Level 1', task.name
+    assert_equal 1, lm.plc_tasks.count
+    assert_equal task, lm.plc_tasks.first
+  end
+
+  test 'expect error on bad module types' do
+    script_file = File.join(self.class.fixture_path, 'test_bad_plc_module.script')
+    assert_raises ActiveRecord::RecordInvalid do
+      Script.setup([script_file])
+    end
   end
 end

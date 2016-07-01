@@ -1,8 +1,10 @@
 'use strict';
+var animationsApi = require('../clientApi').animations;
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var GameLabGame = require('./GameLabGame');
+import { getSourceUrl } from './animationMetadata';
 
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
@@ -29,6 +31,7 @@ GameLabP5.baseP5loadImage = null;
  *
  * @param {!Object} options
  * @param {!Function} options.gameLab instance of parent GameLab object
+ * @param {Number} [options.scale] Scale ratio of containing element (<1 is small)
  * @param {!Function} options.onExecutionStarting callback to run during p5 init
  * @param {!Function} options.onPreload callback to run during preload()
  * @param {!Function} options.onSetup callback to run during setup()
@@ -40,13 +43,18 @@ GameLabP5.prototype.init = function (options) {
   this.onPreload = options.onPreload;
   this.onSetup = options.onSetup;
   this.onDraw = options.onDraw;
+  this.scale = options.scale || 1;
+
+  var self = this;
 
   // Override p5.loadImage so we can modify the URL path param
   if (!GameLabP5.baseP5loadImage) {
     GameLabP5.baseP5loadImage = window.p5.prototype.loadImage;
-    window.p5.prototype.loadImage = function (path, successCallback, failureCallback) {
-      path = assetPrefix.fixPath(path);
-      return GameLabP5.baseP5loadImage.call(this, path, successCallback, failureCallback);
+    window.p5.prototype.loadImage = function (path) {
+      // Make sure to pass all arguments through to loadImage, which can get
+      // wrapped and take additional arguments during preload.
+      arguments[0] = assetPrefix.fixPath(path);
+      return GameLabP5.baseP5loadImage.apply(this, arguments);
     };
   }
 
@@ -58,7 +66,7 @@ GameLabP5.prototype.init = function (options) {
     var userSetup = this.setup || window.setup;
     var userDraw = this.draw || window.draw;
     if (typeof userDraw === 'function') {
-      this.push();
+      this.resetMatrix();
       if (typeof userSetup === 'undefined') {
         this.scale(this.pixelDensity, this.pixelDensity);
       }
@@ -79,13 +87,99 @@ GameLabP5.prototype.init = function (options) {
     this._registeredMethods.post.forEach(function (f) {
       f.call(self);
     });
-    this.pop();
   };
 
-  // Disable fullScreen() method:
-  window.p5.prototype.fullScreen = function (val) {
+  // Disable fullscreen() method:
+  window.p5.prototype.fullscreen = function (val) {
     return false;
   };
+
+  // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
+  // positions before reporting touch coordinates
+  //
+  // NOTE: _updateNextTouchCoords() is nearly identical, but calls a modified
+  // getTouchInfo() function below that can return undefined
+  window.p5.prototype._updateNextTouchCoords = function (e) {
+    if (e.type === 'mousedown' ||
+        e.type === 'mousemove' ||
+        e.type === 'mouseup' || !e.touches) {
+      this._setProperty('_nextTouchX', this._nextMouseX);
+      this._setProperty('_nextTouchY', this._nextMouseY);
+    } else {
+      if (this._curElement !== null) {
+        var touchInfo = getTouchInfo(this._curElement.elt, e, 0);
+
+        if (touchInfo) {
+          this._setProperty('_nextTouchX', touchInfo.x);
+          this._setProperty('_nextTouchY', touchInfo.y);
+        }
+
+        var touches = [];
+        var touchIndex = 0;
+        for (var i = 0; i < e.touches.length; i++) {
+          touchInfo = getTouchInfo(this._curElement.elt, e, i);
+          if (touchInfo) {
+            touches[touchIndex] = touchInfo;
+            touchIndex++;
+          }
+        }
+        this._setProperty('touches', touches);
+      }
+    }
+  };
+
+  // NOTE: returns undefined if the position is outside of the valid range
+  function getTouchInfo(canvas, e, i) {
+    i = i || 0;
+    var rect = canvas.getBoundingClientRect();
+    var touch = e.touches[i] || e.changedTouches[i];
+    var xPos = touch.clientX - rect.left;
+    var yPos = touch.clientY - rect.top;
+    if (xPos >= 0 && xPos < rect.width && yPos >= 0 && yPos < rect.height) {
+      return {
+        x: Math.round(xPos / self.scale),
+        y: Math.round(yPos / self.scale),
+        id: touch.identifier
+      };
+    }
+  }
+
+  // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
+  // positions before reporting mouse coordinates
+  //
+  // NOTE: _updateNextMouseCoords() is nearly identical, but calls a modified
+  // getMousePos() function below that can return undefined
+  window.p5.prototype._updateNextMouseCoords = function (e) {
+    if (e.type === 'touchstart' ||
+        e.type === 'touchmove' ||
+        e.type === 'touchend' || e.touches) {
+      this._setProperty('_nextMouseX', this._nextTouchX);
+      this._setProperty('_nextMouseY', this._nextTouchY);
+    } else {
+      if (this._curElement !== null) {
+        var mousePos = getMousePos(this._curElement.elt, e);
+        if (mousePos) {
+          this._setProperty('_nextMouseX', mousePos.x);
+          this._setProperty('_nextMouseY', mousePos.y);
+        }
+      }
+    }
+    this._setProperty('winMouseX', e.pageX);
+    this._setProperty('winMouseY', e.pageY);
+  };
+
+  // NOTE: returns undefined if the position is outside of the valid range
+  function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    var xPos = evt.clientX - rect.left;
+    var yPos = evt.clientY - rect.top;
+    if (xPos >= 0 && xPos < rect.width && yPos >= 0 && yPos < rect.height) {
+      return {
+        x: Math.round(xPos / self.scale),
+        y: Math.round(yPos / self.scale)
+      };
+    }
+  }
 
   // Add new p5 methods:
   window.p5.prototype.mouseDidMove = function () {
@@ -104,18 +198,17 @@ GameLabP5.prototype.init = function (options) {
     var mousePosition;
     if (this.camera.active) {
       mousePosition = this.createVector(this.camera.mouseX, this.camera.mouseY);
-    }
-    else {
+    } else {
       mousePosition = this.createVector(this.mouseX, this.mouseY);
     }
 
     if (sprite.collider instanceof this.CircleCollider) {
       return window.p5.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
     } else if (sprite.collider instanceof this.AABB) {
-      return mousePosition.x > sprite.collider.left()
-          && mousePosition.y > sprite.collider.top()
-          && mousePosition.x < sprite.collider.right()
-          && mousePosition.y < sprite.collider.bottom();
+      return mousePosition.x > sprite.collider.left() &&
+          mousePosition.y > sprite.collider.top() &&
+          mousePosition.x < sprite.collider.right() &&
+          mousePosition.y < sprite.collider.bottom();
     }
 
     return false;
@@ -127,15 +220,15 @@ GameLabP5.prototype.init = function (options) {
 
   var styleEmpty = 'rgba(0,0,0,0)';
 
-  window.p5.Renderer2D.prototype.regularPolygon = function (sides, size, x, y, rotation) {
+  window.p5.Renderer2D.prototype.regularPolygon = function (x, y, sides, size, rotation) {
     var ctx = this.drawingContext;
     var doFill = this._doFill, doStroke = this._doStroke;
     if (doFill && !doStroke) {
-      if(ctx.fillStyle === styleEmpty) {
+      if (ctx.fillStyle === styleEmpty) {
         return this;
       }
     } else if (!doFill && doStroke) {
-      if(ctx.strokeStyle === styleEmpty) {
+      if (ctx.strokeStyle === styleEmpty) {
         return this;
       }
     }
@@ -157,7 +250,7 @@ GameLabP5.prototype.init = function (options) {
     }
   };
 
-  window.p5.prototype.regularPolygon = function (sides, size, x, y, rotation) {
+  window.p5.prototype.regularPolygon = function (x, y, sides, size, rotation) {
     if (!this._renderer._doStroke && !this._renderer._doFill) {
       return this;
     }
@@ -200,11 +293,11 @@ GameLabP5.prototype.init = function (options) {
     var ctx = this.drawingContext;
     var doFill = this._doFill, doStroke = this._doStroke;
     if (doFill && !doStroke) {
-      if(ctx.fillStyle === styleEmpty) {
+      if (ctx.fillStyle === styleEmpty) {
         return this;
       }
     } else if (!doFill && doStroke) {
-      if(ctx.strokeStyle === styleEmpty) {
+      if (ctx.strokeStyle === styleEmpty) {
         return this;
       }
     }
@@ -276,6 +369,14 @@ GameLabP5.prototype.resetExecution = function () {
 };
 
 /**
+ * Register a p5 event handler function. The provided function replaces the
+ * method stored on our p5 instance.
+ */
+GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
+  this.p5[eventName] = handler;
+};
+
+/**
  * Instantiate a new p5 and start execution
  */
 GameLabP5.prototype.startExecution = function () {
@@ -307,7 +408,7 @@ GameLabP5.prototype.startExecution = function () {
             time_since_last >= target_time_between_frames - epsilon) {
 
           //mandatory update values(matrixs and stack) for 3d
-          if(this._renderer.isP3D){
+          if (this._renderer.isP3D){
             this._renderer._update();
           }
 
@@ -343,7 +444,7 @@ GameLabP5.prototype.startExecution = function () {
       }.bind(p5obj);
 
       // Overload _setup function to make it two-phase
-      p5obj._setup = function() {
+      p5obj._setup = function () {
         /*
          * Copied code from p5 _setup()
          */
@@ -374,17 +475,14 @@ GameLabP5.prototype.startExecution = function () {
          * Copied code from p5 _setup()
          */
 
-        // // unhide hidden canvas that was created
-        // this.canvas.style.visibility = '';
-        // this.canvas.className = this.canvas.className.replace('p5_hidden', '');
-
         // unhide any hidden canvases that were created
-        var reg = new RegExp(/(^|\s)p5_hidden(?!\S)/g);
-        var canvases = document.getElementsByClassName('p5_hidden');
+        var canvases = document.getElementsByTagName('canvas');
         for (var i = 0; i < canvases.length; i++) {
           var k = canvases[i];
-          k.style.visibility = '';
-          k.className = k.className.replace(reg, '');
+          if (k.dataset.hidden === 'true') {
+            k.style.visibility = '';
+            delete(k.dataset.hidden);
+          }
         }
         this._setupDone = true;
 
@@ -417,9 +515,16 @@ GameLabP5.prototype.startExecution = function () {
           }
         });
 
-        // Call our gamelabPreload() to force _start/_setup to wait.
-        p5obj.gamelabPreload();
-        this.onPreload();
+        p5obj.angleMode(p5obj.DEGREES);
+
+        if (!this.onPreload()) {
+          // If onPreload() returns false, it means that the preload phase has
+          // not completed, so we need to grab increment p5's preloadCount by
+          // calling the gamelabPreload() method.
+
+          // Call our gamelabPreload() to force _start/_setup to wait.
+          p5obj.gamelabPreload();
+        }
       }.bind(this);
 
       p5obj.setup = function () {
@@ -438,13 +543,29 @@ GameLabP5.prototype.startExecution = function () {
 };
 
 /**
- * Called when all global code is done executing. This allows us to release
- * our "preload" count reference in p5, which means that setup() can begin.
+ * Called when the preload phase is complete. When a distinct setup() method is
+ * provided, a student's global code must finish executing before this phase is
+ * done. This allows us to release our "preload" count reference in p5, which
+ * means that setup() can begin.
  */
-GameLabP5.prototype.notifyUserGlobalCodeComplete = function () {
+GameLabP5.prototype.notifyPreloadPhaseComplete = function () {
   if (this.p5decrementPreload) {
     this.p5decrementPreload();
     this.p5decrementPreload = null;
+  }
+};
+
+GameLabP5.prototype.notifyKeyCodeDown = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keydown
+  if (this.p5) {
+    this.p5._onkeydown({ which: keyCode });
+  }
+};
+
+GameLabP5.prototype.notifyKeyCodeUp = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keyup
+  if (this.p5) {
+    this.p5._onkeyup({ which: keyCode });
   }
 };
 
@@ -496,13 +617,28 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
 
 GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
   return [
+    'arguments',
+    'callee',
+    'caller',
+    'constructor',
+    'eval',
+    'prototype',
+    'stack',
+    'unwatch',
+    'valueOf',
+    'watch',
     '_userNode',
     '_elements',
     '_curElement',
     'elt',
     'canvas',
     'parent',
-    'p5'
+    'p5',
+    'downloadFile',
+    'writeFile',
+    'httpGet',
+    'httpPost',
+    'httpDo',
   ];
 };
 
@@ -544,20 +680,23 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
 
   var propList = {};
   var blockedProps = this.getCustomMarshalBlockedProperties();
+  var globalCustomMarshalProps = this.getCustomMarshalGlobalProperties();
 
   // Include every property on the p5 instance in the global property list
-  // except those on the custom marshal blocked list:
+  // except those on the custom marshal lists:
   for (var prop in this.p5) {
-    if (-1 === blockedProps.indexOf(prop)) {
-      propList[prop] = [ this.p5[prop], this.p5 ];
+    if (-1 === blockedProps.indexOf(prop) &&
+        -1 === this.p5specialFunctions.indexOf(prop) &&
+        !globalCustomMarshalProps[prop]) {
+      propList[prop] = [this.p5[prop], this.p5];
     }
   }
 
   // Create a 'p5' object in the global namespace:
-  propList.p5 = [ { Vector: window.p5.Vector }, window ];
+  propList.p5 = [{ Vector: window.p5.Vector }, window];
 
   // Create a 'Game' object in the global namespace:
-  propList.Game = [ this.gameLabGame, this ];
+  propList.Game = [this.gameLabGame, this];
 
   return propList;
 };
@@ -576,4 +715,27 @@ GameLabP5.prototype.afterDrawComplete = function () {
 
 GameLabP5.prototype.afterSetupComplete = function () {
   this.p5._setupEpilogue();
+};
+
+/**
+ * Given a collection of animation metadata for the project, preload each
+ * animation, loading it onto the p5 object for use by the setAnimation method
+ * later.
+ * @param {AnimationMetadata[]} animationMetadata
+ */
+GameLabP5.prototype.preloadAnimations = function (animationMetadata) {
+  // Preload project animations:
+  this.p5.projectAnimations = {};
+  animationMetadata.forEach(function (animation) {
+    // Note: loadImage is automatically wrapped during preload so that it
+    //       causes a preload-count increment/decrement pair.  No manual
+    //       tracking is required.
+    var image = this.p5.loadImage(
+        getSourceUrl(animation),
+        function onSuccess() {
+          var spriteSheet = this.p5.loadSpriteSheet(image, animation.frameSize.x,
+              animation.frameSize.y, animation.frameCount);
+          this.p5.projectAnimations[animation.name] = this.p5.loadAnimation(spriteSheet);
+        }.bind(this));
+  }, this);
 };

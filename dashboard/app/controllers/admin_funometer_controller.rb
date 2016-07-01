@@ -28,7 +28,8 @@ class AdminFunometerController < ApplicationController
 
       # Generate the funometer percentages for the script, by stage.
       ratings_by_stage = ratings.
-                         joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").
+                         joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id").
+                         joins("INNER JOIN levels_script_levels ON script_levels.id = levels_script_levels.script_level_id AND puzzle_ratings.level_id = levels_script_levels.level_id").
                          joins("INNER JOIN stages ON stages.id = script_levels.stage_id").
                          group('script_levels.stage_id').
                          order('script_levels.stage_id')
@@ -39,8 +40,12 @@ class AdminFunometerController < ApplicationController
       # Generate the funometer percentages for the script, by level.
       ratings_by_level = ratings.joins(:level).group(:level_id).order(:level_id)
       @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
-      @ratings_by_level = ratings_by_level.
-                          select('level_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+      @ratings_by_level = ratings_by_level.select(
+        'level_id',
+        'name',
+        '100.0 * SUM(rating) / COUNT(rating) AS percentage',
+        'COUNT(rating) AS cnt'
+      )
     end
   end
 
@@ -49,7 +54,7 @@ class AdminFunometerController < ApplicationController
       stage = Stage.find(params[:stage_id])
       @stage_name = stage[:name]
       @script_id = stage[:script_id]
-      @level_ids = ScriptLevel.where('stage_id = ?', params[:stage_id]).pluck(:level_id)
+      @level_ids = ScriptLevel.joins(:levels).where('stage_id = ?', params[:stage_id]).pluck("levels.id")
 
       # Compute the global funometer percentage for the stage.
       ratings = PuzzleRating.where(level_id: @level_ids)
@@ -61,11 +66,12 @@ class AdminFunometerController < ApplicationController
       # Generate the funometer percentages for the stage, by level.
       ratings_by_level = ratings.joins(:level).group(:level_id)
       @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
-      @ratings_by_level = ratings_by_level.
-                          select('level_id',
-                                 'name',
-                                 '100.0 * SUM(rating) / COUNT(rating) AS percentage',
-                                 'COUNT(rating) AS cnt')
+      @ratings_by_level = ratings_by_level.select(
+        'level_id',
+        'name',
+        '100.0 * SUM(rating) / COUNT(rating) AS percentage',
+        'COUNT(rating) AS cnt'
+      )
     end
   end
 
@@ -87,6 +93,7 @@ class AdminFunometerController < ApplicationController
   end
 
   private
+
   def get_ratings_by_day(ratings_to_process)
     return ratings_to_process.
            group('DATE(created_at)').

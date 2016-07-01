@@ -1,14 +1,15 @@
 namespace :adhoc do
-
   task :environment do
     require_relative '../../deployment'
-    CDO.chef_local_mode = true
-    ENV['RAILS_ENV'] = ENV['RACK_ENV'] = CDO.rack_env = 'adhoc'
+    CDO.chef_local_mode = !ENV['CHEF_SERVER']
+    if CDO.chef_local_mode
+      ENV['RAILS_ENV'] = ENV['RACK_ENV'] = 'adhoc'
+      CDO.rack_env = :adhoc
+    end
     require 'cdo/aws/cloud_formation'
   end
 
   namespace :start do
-
     task default: :environment do
       AWS::CloudFormation.create_or_update
     end
@@ -16,12 +17,12 @@ namespace :adhoc do
     desc 'Launch an adhoc server, with CloudFront CDN enabled.
 Note: Consumes AWS resources until `adhoc:stop` is called.'
     task cdn: :environment do
-      AWS::CloudFormation.create_or_update(true)
+      ENV['CDN_ENABLED'] = '1'
+      AWS::CloudFormation.create_or_update
     end
-
   end
 
-  desc 'Launch an adhoc server.
+  desc 'Launch/update an adhoc server.
 Note: Consumes AWS resources until `adhoc:stop` is called.'
   task start: ['start:default']
 
@@ -34,5 +35,4 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
   task validate: :environment do
     AWS::CloudFormation.validate
   end
-
 end

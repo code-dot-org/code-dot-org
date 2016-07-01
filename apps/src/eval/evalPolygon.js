@@ -1,5 +1,6 @@
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
+require('../utils'); // Provides Function.prototype.inherits
 
 var EvalPolygon = function (sideCount, length, style, color) {
   evalUtils.ensureNumber(sideCount);

@@ -1,7 +1,14 @@
 "pl-PL":
   hour_of_code: Godzina kodowania (Hour of Code)
   hello: Witaj świecie
+  'yes': Tak
+  'no': Nie
   select_language: Wybierz język
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Ucz się więcej
   en: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
   csedweek_dates: 8-14 grudnia 2014
@@ -30,8 +37,8 @@
   twentyhours_text: Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych
     pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
   og_title: Każde dziecko zasługuje na szansę
-  og_description: Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się
-    informatyki.
+  og_description: Każdy uczeń w każdej szkole zasługuje możliwość studiowania (uczenia)
+    się informatyki. To zmienia wszystko.
   hoc2014_heading: Dołącz do <a href="http://hourofcode.com"> Godziny Kodowania (Hour
     of Code)</a> <br/> 8-14 grudnia 2014 r. <br/>
   hoc2014_students: Uczniowie
@@ -91,39 +98,42 @@
     <a href="%{current_path}/next">samouczki partnerów</a>.
   get_a_certificate_of_achievement: Uzyskaj certyfikat osiągnięcia
   view_course: Zobacz kurs
-  view_unit: View unit
+  view_unit: Zobacz jednostkę
   make_app: Utwórz aplikację
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
+  congrats_guest_speaker_title: Znajdź język w swojej klasie
+  congrats_guest_speaker_desc: Teraz, kiedy twoi uczniowie zakończyli kurs Informatyki
+    , należy rozważyć  o podłączeniu go do realnego świata, zapraszając gościa do
+    klasy. Można skorzystać z naszej mapy wolontariuszy i skontaktować się z  lokalnych
+    wolontariuszy, aby odwiedzili twoją klasę, lub poszukać w dowolnym mieście, aby
+    znaleźć studentów informatyki lub specjalistów technicznych, którzy są gotowi,
+    aby zainspirować twoich uczniów zdalnie, za pośrednictwem czatu wideo.
+  congrats_guest_speaker_cta: Znajdź tłumacza
+  congrats_third_party_title: |
+    Używaj nowych funkcji  tych aplikacji i stron internetowych
+     
+  third_party_gradelevel_kto8: Klasa K-8
+  third_party_gradelevel_kto2: Klasa K-2
+  third_party_gradelevel_2to8: Klasy 2-8
+  third_party_gradelevel_4to12: klasa 4-12
+  third_party_gradelevel_5to12: Klasa 5-12
+  third_party_gradelevel_6plus: Klasa 6+
+  third_party_gradelevel_8plus: Klasa 8+
+  third_party_platform_all: 'Platformy: Web, iPad oraz Android'
   third_party_platform_mobile: 'Platforma: iPad i Android'
   third_party_platform_web: 'Platforma: Web'
-  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_varies: Cenowo plny się różnią
   third_party_price_free: 'Cena: bezpłatny'
   third_party_price_299: 'Cena: $2.99/Pobierz'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_price_individual: 'Indywidualne Ceny: Free Trial i $ 25 / miesiąc'
+  third_party_price_school: 'Cena dla szkół: darmowe plany i pro w  $ +2.500 +'
+  third_party_tynker_desc: 'Szkolna cena: Darmowe Plany & Pro w $ 2500 + kreatywne
+    platformy Tynker do wykonywania obliczeń pomaga dzieciom rozwijać obliczeniowej
+    myślenia i umiejętności programowania w przyjemny i intuicyjny i z użyciem wyobraźni
+    sposób. Nasza innowacyjny język wizualny programowania, interaktywne kursy samokształcenia
+    oraz działania. Programowanie do gier opartych umożliwiają łatwe wprowadzenie
+    do programowania i umożliwić dzieciom do innowacji i tworzenia.'
+  third_party_tynker_btn_curriculum: Wypróbuj Tynker program nauczania dla początkujących
+  third_party_tynker_btn_site: Odwiedź Tynker
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
@@ -360,6 +370,9 @@
   homepage_banner_20k_teachers: 20,000 nauczycieli jest wyszkolonych, a teraz uczy
     informatyki w klasach.
   homepage_banner_20k_teachers_link: Ucz się więcej
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Godzina Kodowania
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
@@ -385,6 +398,7 @@
   homepage_slot_text_link_stats: Zobacz statystyki
   homepage_slot_text_link_buy: Angażuj się
   homepage_slot_text_link_donate: Ofiaruj darowiznę
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Twórczość uczniów Studia Kodowania
   homepage_header_donors: Code.org dziękuje za wsparcie
   homepage_donors_seall: Zobacz wszystkich
@@ -574,6 +588,7 @@
   dashboard_landing_new_beta: Nowość! Wypróbuj nasze beta kursy dla uczniów w K-5.
   dashboard_landing_new_k5courses: Nowość! Wypróbuj nasze kursy dla uczniów w K-5.
   dashboard_landing_useful_links: Inne przydatne linki
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Zapytaj osobiście! Odwiedź nasze co miesięczne wideo
     godziny.
   dashboard_landing_print_certificates: Drukowanie certyfikatów dla uczniów, którzy
@@ -594,6 +609,11 @@
     oferowanych przez naszych partnerów.</a> Naucz się programować z robotami, twórz
     strony w sieci, utwórz własną aplikację, poznaj inne języki programowania, jak
     C++, Ruby i Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Godzina Kodowania dla wszystkich grup wiekowych
   dashboard_hoc_courses_desc: Wypróbuj ze swoimi uczniami którykolwiek z jednogodzinnych
     samouczków!
@@ -646,6 +666,18 @@
   dashboard_action_remove_confirm: Usunąć?
   dashboard_action_done: Wykonane
   dashboard_action_required: wymagane
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Domowa strona nauczyciela
   dashboard_navigation_section_student_progress: Konta i postępy ucznia
   dashboard_navigation_section_teacher_progress: Twoje postępy w kursie
@@ -654,7 +686,7 @@
   dashboard_navigation_section_pd: Rozwój zawodowy
   dashboard_navigation_section_speakers: Informatyka <br/> Gościnni mówcy
   dashboard_navigation_all_sections: Konta i postępy ucznia
-  dashboard_navigation_view_progress: Przejrzy postępy
+  dashboard_navigation_view_progress: Postęp
   dashboard_navigation_view_text_responses: Wyświetl tekstowe odpowiedzi
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Dodaj uczniów
@@ -663,6 +695,19 @@
   dashboard_navigation_view_stats: Przejrzyj statystyki
   dashboard_navigation_section: 'Sekcja: %{section_name}'
   dashboard_navigation_student: 'Uczeń: %{student_name}'
+  dashboard_progress_not_started: nierozpoczęte
+  dashboard_progress_in_progress: w toku
+  dashboard_progress_not_completed: nie została zakończona
+  dashboard_progress_completed_too_many_blocks: zakończona, zbyt wiele bloków
+  dashboard_progress_completed_perfect: zakończona, doskonale
+  dashboard_progress_furthest_level_attempted: próbowano najdalszy poziom
+  dashboard_progress_submitted: Wysłano
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nowa sekcja
   dashboard_sections_jumbotron_instruction: Utwórz nowe sekcje i dodaj do nich uczniów.
     Sekcje umożliwiają podział uczniów na mniejsze grupy, dzięki czemu łatwiej jest
@@ -671,6 +716,7 @@
   dashboard_sections_table_secret: Typ logowania
   dashboard_sections_table_grade: Poziom/Ocena
   dashboard_sections_table_course: Kurs (lekcja)
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Uczniowie
   dashboard_sections_table_code: Kod Sekcji
   dashboard_sections_name: Nazwa Sekcji
@@ -686,6 +732,26 @@
   dashboard_sections_print_secrets: Możesz następnie wydrukować arkusz z kartami zawierającymi
     informacje o kontach, aby indywidualnie wręczyć je swoim uczniom.
   dashboard_sections_switch_section: 'Przełącz sekcję:'
+  dashboard_sections_close: Zamknij
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Dodaj ucznia
   dashboard_students_add_students: Dodawaj wielu uczniów
   dashboard_students_add_multiple: 'Wpisz lub wklej imiona swoich uczniów, po jednym
@@ -750,6 +816,8 @@
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Program nauczania
   dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
   dashboard_overview: Streszczenie
@@ -773,13 +841,6 @@
   dashboard_login_picture: Obrazek/Zdjęcie
   dashboard_login_none: e-mail
   dashboard_new_password: nowe hasło
-  dashboard_progress_not_started: nierozpoczęte
-  dashboard_progress_in_progress: w toku
-  dashboard_progress_not_completed: nie została zakończona
-  dashboard_progress_completed_too_many_blocks: zakończona, zbyt wiele bloków
-  dashboard_progress_completed_perfect: zakończona, doskonale
-  dashboard_progress_furthest_level_attempted: próbowano najdalszy poziom
-  dashboard_progress_submitted: Wysłano
   dashboard_stage: Etap
   dashboard_puzzle: "Łamigłówka"
   dashboard_question: Pytanie
@@ -789,6 +850,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Poprawnie
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -818,20 +881,17 @@
   dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
   dashboard_announcements: Ogłoszenia
   dashboard_announce_view_all: Zobacz wszystko
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
-  dashboard_announce_button_text: Ucz się więcej
-  dashboard_announce_hoc: "<b>23 listopada 2015</b> - Czy chcesz ochotnika-pasjonata
-    edukacji informatycznej do pomocy podczas Twojej Godziny kodowania? Ponad 7000
-    wolontariusze wypatruje, by zainspirować Twoich uczniów odwiedzając Twoją klasę
-    lub prowadząc zdalny czat. Sprawdź mapę wolontariuszy, by skontaktować się z wolontariuszami
-    w Twojej okolicy."
-  dashboard_announce_playlab: "<b>4 grudnia 2015 r.</b> - Godzina Kodowania jest tutaj!
-    Wypróbuj 50 samouczków dla każdego wieku i każdego urządzenia. Nowości w tym tygodniu:
-    Zaprogramuj własną historyjkę i grę w nowej Play Labs, Ice Age i Gumball."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_button_text: Naucz się więcej
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
@@ -961,13 +1021,39 @@
   course3_name: Kurs 3
   course4_name: Kurs 4
   accelerated_name: Przyspieszony Kurs
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Przyspieszony Kurs
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Klasyczny labirynt
+  iceage_name: Epoka lodowcowa
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matematyka
+  hoc_category_name: Godzina Kodowania
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
   applab_gradelevel: Wiek 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you

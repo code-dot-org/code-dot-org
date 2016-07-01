@@ -1,0 +1,10 @@
+name 'PS U3-bakertest'
+title 'title'
+description 'description here'
+question 'These are my instructions. <h1>how\'s this!</h1>'
+wrong 'foo'
+
+markdown <<MARKDOWN
+**Here is my markdown**
+# What's this?
+MARKDOWN

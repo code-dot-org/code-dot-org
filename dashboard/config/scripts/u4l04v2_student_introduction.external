@@ -2,7 +2,6 @@ name 'U4L04v2 - Student Introduction'
 title 'title'
 css 'unplugged'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 4: Lesson 04 - Good and Bad Data Visualizations
 

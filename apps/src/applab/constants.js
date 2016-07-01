@@ -1,11 +1,14 @@
+var utils = require('../utils');
+
 module.exports = {
   FOOTER_HEIGHT: 30,
+  APP_WIDTH: 320,
+  APP_HEIGHT: 480,
   DESIGN_ELEMENT_ID_PREFIX: 'design_',
   ICON_PREFIX: 'icon://',
   ICON_PREFIX_REGEX: new RegExp('^icon://'),
   NEW_SCREEN: "New screen...",
-  ApplabInterfaceMode: {
-    CODE: 'CODE',
-    DESIGN: 'DESIGN'
-  }
+  ApplabInterfaceMode: utils.makeEnum('CODE', 'DESIGN', 'DATA'),
+  DataView: utils.makeEnum('OVERVIEW', 'PROPERTIES', 'TABLE'),
+  ANIMATION_LENGTH_MS: 200,
 };

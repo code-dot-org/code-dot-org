@@ -1,4 +1,5 @@
-var Icon = require('./Icon.jsx');
+var React = require('react');
+var Icon = require('./Icon');
 
 /**
  * A list of icons, maybe filtered by a search query.

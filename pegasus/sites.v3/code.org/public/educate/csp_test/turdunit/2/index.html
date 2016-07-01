@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Baker NOTE: this lesson is deprecated - it is being merged with Lesson 11 (Sending Formatted Text)In this lesson students will develop a protocol for encoding the characters of text message into bits. Their protocols can and should make use of the binary number system by assigning characters to numbers and then using the binary number system to make the final translation to bits. Using the Internet Simulator, which will now perform the translation from numbers to bits, students will conduct short conversations using their protocol. The lesson concludes with a discussion of the reasons for developing a “standard protocol” for encoding text into bits.">
+    <title>v1 Unit 1 Lesson 10 Encoding and Sending Text </title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/turdunit/"><span class="h2">Unit</span><span class="h1">8</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/turdunit/1" data-pdf-link="#unit8lesson1">
+            1
+        </a>
+        </div>
+        
+            
+                
+                    <div class="lesson current">
+                
+            
+        <a href="/educate/csp_test/turdunit/2" data-pdf-link="#unit8lesson2">
+            2
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/turdunit/3" data-pdf-link="#unit8lesson3">
+            3
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/turdunit/4" data-pdf-link="#unit8lesson4">
+            4
+        </a>
+        </div>
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit8lesson2">
+        
+            
+                <h1>Lesson 2: v1 Unit 1 Lesson 10 Encoding and Sending Text </h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <h1 id="baker-note-this-lesson-is-deprecated-it-is-being-merged-with-lesson-11-sending-formatted-text">Baker NOTE: this lesson is deprecated - it is being merged with Lesson 11 (Sending Formatted Text)</h1>
+<p>In this lesson students will develop a protocol for encoding the characters of text message into bits. Their protocols can and should make use of the binary number system by assigning characters to numbers and then using the binary number system to make the final translation to bits.  Using the Internet Simulator, which will now perform the translation from numbers to bits, students will conduct short conversations using their protocol. The lesson concludes with a discussion of the reasons for developing a “standard protocol” for encoding text into bits.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>When information is digitally represented, it’s encoded in binary and, therefore, takes the same fundamental form as any other type of information used in digital devices. This can mean that sending text can be reduced to the same process as sending a list of numbers. As we move to sending more complex information, the number of bits needed to represent that information increases and we start to realize that the size of the message is important.  As the number of bits increases, we need to introduce abstractions that allow us to move low-level details out of mind so we can focus on new higher-level problems. This will eventually lead us to a set of standard protocols that provide such abstractions. </p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocv1-unit-1-lesson-10-encoding-and-sending-text">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Assessment</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Create a protocol for sending messages of text and use it to send messages with the Internet Simulator.</li>
+                    
+                        <li>Explain the need for a ‘unified’ protocol for text-based communication between machines.</li>
+                    
+                        <li>Explore abstractions that allow them to focus on new higher-level problems.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit1/lesson10" target="_blank">Forum</a></li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit1' target='_blank' class='print_link'>CSP Unit 1</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1cEdRy-VYx6eM_o_QzYT44-eDtmqGoKVOF0TQxSSq0dI/edit?usp=sharing' target='_blank' class='print_link'>Encoding and Sending Text</a> - Activity Guide (<a href='https://docs.google.com/document/d/1cEdRy-VYx6eM_o_QzYT44-eDtmqGoKVOF0TQxSSq0dI/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1MctmH5qXEKgF9ylX9duw5MUwU1XBSKh0pbxrc9cpamE/edit?usp=sharing' target='_blank' class='print_link'>Rubric - Encoding and Sending Text</a> - Rubric (<a href='https://docs.google.com/document/d/1MctmH5qXEKgF9ylX9duw5MUwU1XBSKh0pbxrc9cpamE/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="v1-unit-1-lesson-10-encoding-and-sending-textcontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <h3 id="students-brainstorm-ways-to-encode-text">Students brainstorm ways to encode text.</h3>
+<p><strong>Goal:</strong> In the previous three lessons students have learned to use the binary number system to encode numbers as bits. This prompt aims to prepare students for the main idea of this lesson, whenever we wish to encode a long list of things, we can merely assign each a number and use the binary number system to translate the numbers to bits.</p>
+<p><strong>Prompt:</strong> Suppose you wished to create a bit encoding scheme that would uniquely identify every member of the class.  Try to make your encoding as efficient as possible. What might your encoding scheme look like? How many bits would it need? Can you use ideas from the previous several lessons to help you?</p>
+<p>Provide students a couple of minutes to write their thoughts. Emphasize that they do not need to actually specify every detail of the scheme but merely need to outline its structure.</p>
+<p><strong>Discuss:</strong> Share results. Compare and contrast ideas in the context of your previous work with binary numbers. Students may have many differing ideas and that is fine. Demonstrate that just as a pattern of bits could represent numbers, they could also represent people.</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>It may be the case that the idea of encoding information still needs to be reviewed. Remind students that so long as there is a protocol for translating a pattern of bits into the information you wish to represent, you have developed a valid encoding. Your exploration of binary numbers has revealed that as our patterns of bits grow in length, we repeatedly double the number of things we can encode. For a class of 30 students, you could merely assign each student to one of the 32 numbers (bit patterns) that you can form with 5 bits.</p>
+</div>
+</div>
+<p><strong>Transition:</strong> <em>Say:</em> In previous lessons we explored how to encode numbers in binary, and you also developed protocols for sending a list of numbers. Today we’re going to take that method one step further and look at how we can encode text with a binary representation. Hopefully you are beginning to realize that if we can figure out a way to represent information as a set of numbers, then we can encode it in bits and store that information in a computer or send it over the Internet.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <p>Introduction: Say: Today, we will be developing protocols for encoding text messages in bits. You will need to decide with your group what information will need to be encoded and how it will be represented. To help us test your protocols, we have a new version of the Internet Simulator that can translate chunks of bits into numbers.</p>
+<p>Distribute: The <a href="Encoding and Sending Text" target="_blank">Activity Guide - Encoding and Sending Text</a> and its <a class="resource" href="https://docs.google.com/document/d/1MctmH5qXEKgF9ylX9duw5MUwU1XBSKh0pbxrc9cpamE/edit?usp=sharing" target="_blank">Rubric - Encoding and Sending Text</a>. Students will have access to an updated version of the Internet Simulator in Code Studio.</p>
+<h3 id="text-messaging-challenge">Text Messaging Challenge</h3>
+<p><em>Say:</em> Invent a protocol for encoding and sending the letters of the alphabet, spaces, common punctuation marks, and any other symbols you would use in a standard text conversation. At the conclusion of the lesson, another group will use your protocol to try to conduct a conversation.</p>
+<p>Students should work in groups of 2 to 4 students. Encourage them to test their protocols as they develop them, and make iterative improvements. Students should record the components of their protocol in anticipation of sharing them with their classmates. There is space on the activity guide, but to reinforce the importance of presenting the components of a protocol clearly, you may wish to have students create a more formal work product, for example a small poster, one page slide/document, etc.</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p><a data-lightbox="all_images" data-title="Possible encoding" href="https://code.org/educate/docs/csp/U1L10-mapping.png"><img alt="Possible encoding" src="https://code.org/educate/docs/csp/U1L10-mapping.png"></a></p>
+</div>
+<div>
+<p>The conventional way to do this is to make a simple table that maps the 26 letters of alphabet to numbers, something similar to the example on the right.</p>
+</div>
+<div>
+<p>This is not, however, the only correct solution.  Students should have the freedom to invent a text-encoding scheme however they like.  It does not necessarily have to be a letter-to-number mapping. Some students may even wish to give common phrases or words their own sequences of bits.</p>
+</div>
+<div>
+<p>If students are moving quickly encourage them to add more functionality. How will their protocols encode punctuation, capital letters, special characters? These are not necessary but will give faster-moving groups an opportunity to expand their thinking.</p>
+</div>
+</div>
+<p><a data-lightbox="all_images" data-title="Code Studio" href="https://code.org/educate/docs/csp/code-studio-icon.png"><img alt="Code Studio" src="https://code.org/educate/docs/csp/code-studio-icon.png"></a> <strong>Testing and Trading Documentation:</strong> Each group should choose a partner group. One member of each group should log into the new version of the Internet Simulator and join a shared room. One team of each pair should construct a simple message using their protocol and send it to the other team, and then share their protocol with the receiving team. The other team should use the protocol to translate the message and send a response. Afterwards, teams should repeat the exercise using the second protocol.</p>
+<p><strong>Feedback:</strong> Once teams have tested their protocols, they should discuss the outcomes of the test. Did the protocols work? Were there problems that could be solved by altering the protocols? What improvements could be made? Were the protocols presented clearly?</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>Discussion:</strong>  Conclude the lesson with a quick comparison of the protocols created by the class. Lead students in a discussion about the confusion that can be created by having so many different protocols, and why it is necessary to have a “unified” protocol for text sending. Prompts:</p>
+<ul>
+<li>What if we all wanted to communicate with text messaging without having to exchange protocols - what would have to be true? <ul>
+<li>We’d have to all agree on what protocol to use ahead of time and call it a standard.</li>
+</ul>
+</li>
+<li>If we wanted to have a standard text-message protocol for the class, which is the “best” one to use? Or should we make a new one?<ul>
+<li>Use this opportunity to compare and contrast the protocols designed by the class and their different features.</li>
+</ul>
+</li>
+<li>What are the tradeoffs between the number of items you want to encode and the number of bits you need? <ul>
+<li>This should essentially be a review about powers of 2.  If I need to encode 27 different characters, using 4-bit chunks would only give me 16 possibilities, but 5-bit chunks would give me 32.  So I need 5 bits, but there will be some unused numbers.</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions:</strong></p>
+<ul>
+<li>What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?<ul>
+<li>5 bits</li>
+</ul>
+</li>
+<li>The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the “Shift” key at the same time. (Assume that all other keys are ignored in this question.) How many bits would you need to encode every character that could be typed on this keyboard? <br> <a data-lightbox="all_images" data-title="QWERTY Keyboard" href="https://code.org/educate/docs/csp/U1L10-qwerty-keyboard.png"><img alt="QWERTY Keyboard" class="center" src="https://code.org/educate/docs/csp/U1L10-qwerty-keyboard.png"></a><ul>
+<li>7 bits</li>
+</ul>
+</li>
+<li>Many languages do not use the characters of U.S. English.  Suppose you wanted to be able to encode the characters of every language on earth within a single protocol. Guess how many characters would need to be encoded and calculate the number of bits that would be required per character. Then discuss the benefits and drawbacks of using this single unified system.<ul>
+<li>The number of bits should correspond to the guess at the number of characters. Possible tradeoffs of this system are the flexibility it provides in terms of writing in many languages versus the fact that many more bits are needed for each character.</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>Conduct some simple research about ASCII (or UNICODE) in preparation for the next lesson.</li>
+<li>Think about what can normally be sent via text message (a mix of upper and lower case letters, numbers, punctuation, etc). Update your protocol so it works with these new characters, numbers, and letters. </li>
+<li>“Text messaging” is a common expression in modern English that typically means people sending messages to each other using phones or other mobile devices.  A text message is also commonly referred to as an SMS message.<ul>
+<li>What is an SMS message?  How is it encoded?  What protocol or protocols are used by “real” text messaging?</li>
+<li>What is the history of text messaging?  </li>
+<li>What’s different between an SMS message and, say, an email?</li>
+<li>Why is the number of characters limited?</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CD</strong> - Computers &amp; Communication Devices</summary>
+                    <ul>
+                        
+                            <li><strong>CD.L2:6</strong> - Describe the major components and functions of computer systems and networks.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L2:13</strong> - Understand the notion of hierarchy and abstraction in computing including high level languages, translation, instruction set and logic circuits.</li>
+                        
+                            <li><strong>CT.L2:14</strong> - Examine connections between elements of mathematics and computer science including binary numbers, logic, sets and functions.</li>
+                        
+                            <li><strong>CT.L2:7</strong> - Represent data in a variety of ways including text, sounds, pictures and numbers.</li>
+                        
+                            <li><strong>CT.L2:8</strong> - Use visual representations of problem states, structures and data (e.g., graphs, charts, network diagrams, flowcharts).</li>
+                        
+                            <li><strong>CT.L3A:6</strong> - Analyze the representation and trade-offs among various forms of digital information.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>2.1</strong> - A variety of abstractions built upon binary sequences can be used to represent all digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.1</strong> - Describe the variety of abstractions used to represent data. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.1A</strong> - Digital data is represented by abstractions at different levels.</li>
+                                
+                                    <li><strong>2.1.1B</strong> - At the lowest level, all digital data are represented by bits.</li>
+                                
+                                    <li><strong>2.1.1C</strong> - At a higher level, bits are grouped to represent abstractions, including but not limited to numbers, characters, and color.</li>
+                                
+                                    <li><strong>2.1.1D</strong> - Number bases, including binary, decimal, and hexadecimal, are used to represent and investigate digital data.</li>
+                                
+                                    <li><strong>2.1.1E</strong> - At one of the lowest levels of abstraction, digital data is represented in binary (base 2) using only combinations of the digits zero and one.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.2</strong> - Explain how binary sequences are used to represent digital data. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.2B</strong> - In many programming languages, the fixed number of bits used to represent characters or integers limits the range of integer values and mathematical operations; this limitation can result in overflow or other errors.</li>
+                                
+                                    <li><strong>2.1.2D</strong> - The interpretation of a binary sequence depends on how it is used.</li>
+                                
+                                    <li><strong>2.1.2E</strong> - A sequence of bits may represent instructions or data.</li>
+                                
+                                    <li><strong>2.1.2F</strong> - A sequence of bits may represent different types of data in different contexts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.2</strong> - Multiple levels of abstraction are used to write programs or create other computational artifacts</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.2.1</strong> - Develop an abstraction when writing a program or creating other computational artifacts. [P2]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.2.1A</strong> - The process of developing an abstraction involves removing detail and generalizing functionality.</li>
+                                
+                                    <li><strong>2.2.1B</strong> - An abstraction extracts common features from specific examples in order to generalize concepts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.3</strong> - Models and simulations use abstraction to generate new understanding and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.3.1</strong> - Use models and simulations to represent phenomena. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.3.1A</strong> - Models and simulations are simplified representations of more complex objects or phenomena.</li>
+                                
+                                    <li><strong>2.3.1B</strong> - Models may use different abstractions or levels of abstraction depending on the objects or phenomena being posed.</li>
+                                
+                                    <li><strong>2.3.1C</strong> - Models often omit unnecessary features of the objects or phenomena that are being modeled.</li>
+                                
+                                    <li><strong>2.3.1D</strong> - Simulations mimic real world events without the cost or danger of building and testing the phenomena in the real world.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.3.2</strong> - Use models and simulations to formulate, refine, and test hypotheses. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.3.2A</strong> - Models and simulations facilitate the formulation and refinement of hypotheses related to the objects or phenomena under consideration.</li>
+                                
+                                    <li><strong>2.3.2B</strong> - Hypotheses are formulated to explain the objects or phenomena being modeled.</li>
+                                
+                                    <li><strong>2.3.2C</strong> - Hypotheses are refined by examining the insights that models and simulations provide into the objects or phenomena.</li>
+                                
+                                    <li><strong>2.3.2D</strong> - The results of simulations may generate new knowledge and new hypotheses related to the phenomena being modeled.</li>
+                                
+                                    <li><strong>2.3.2E</strong> - Simulations allow hypotheses to be tested without the constraints of the real world.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.1</strong> - People use computer programs to process information to gain insight and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.3</strong> - Explain the insight and knowledge gained from digitally processed data by using appropriate visualizations, notations, and precise language. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.3A</strong> - Visualization tools and software can communicate information about data.</li>
+                                
+                                    <li><strong>3.1.3E</strong> - Interactivity with data is an aspect of communicating.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.3</strong> - There are trade offs when representing information as digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.3.1</strong> - Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.3.1A</strong> - Digital data representations involve trade  offs related to storage, security, and privacy concerns.</li>
+                                
+                                    <li><strong>3.3.1B</strong> - Security concerns engender tradeoffs in storing and transmitting information.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.1</strong> - The Internet is a network of autonomous systems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.1.1</strong> - Explain the abstractions in the Internet and how the Internet functions. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.1.1A</strong> - The Internet connects devices and networks all over the world.</li>
+                                
+                                    <li><strong>6.1.1B</strong> - An end to end architecture facilitates connecting new devices and networks on the Internet.</li>
+                                
+                                    <li><strong>6.1.1C</strong> - Devices and networks that make up the Internet are connected and communicate using addresses and protocols.</li>
+                                
+                                    <li><strong>6.1.1D</strong> - The Internet and the systems built on it facilitate collaboration.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.2</strong> - Characteristics of the Internet influence the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.2</strong> - Explain how the characteristics of the Internet influence the systems built on it. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.2D</strong> - Interfaces and protocols enable widespread use of the Internet.</li>
+                                
+                                    <li><strong>6.2.2F</strong> - The Internet is a packet-switched system through which digital data is sent by breaking the data into blocks of bits called packets, which contain both the data being transmitted and control information for routing the data.</li>
+                                
+                                    <li><strong>6.2.2G</strong> - Standards for packets and routing include transmission control protocol/Internet protocol (TCP/IP).</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocv1-unit-1-lesson-10-encoding-and-sending-text').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#v1-unit-1-lesson-10-encoding-and-sending-textcontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'v1-unit-1-lesson-10-encoding-and-sending-text', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

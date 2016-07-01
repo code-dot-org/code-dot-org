@@ -251,6 +251,39 @@ cspunit3:
   user_id:
   login_required: true
   properties: '{}'
+cspunit4:
+  id: 95
+  name: cspunit4
+  created_at: 2016-01-28 19:12:01.000000000 Z
+  updated_at: 2016-05-12 19:37:08.000000000 Z
+  wrapup_video_id: 
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: true
+  properties: '{}'
+cspunit5:
+  id: 96
+  name: cspunit5
+  created_at: 2016-01-28 19:12:03.000000000 Z
+  updated_at: 2016-05-12 19:37:09.000000000 Z
+  wrapup_video_id: 
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: true
+  properties: '{}'
+cspunit6:
+  id: 100
+  name: cspunit6
+  created_at: 2016-02-26 20:56:25.000000000 Z
+  updated_at: 2016-05-12 19:37:09.000000000 Z
+  wrapup_video_id: 
+  trophies: false
+  hidden: false
+  user_id:
+  login_required: true
+  properties: '{}'
 ECSPD:
   id: 16
   name: ECSPD

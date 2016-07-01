@@ -10,7 +10,7 @@ theme: none
 
 [together]
 
-## Lesson Overview 
+## Lesson Overview
 This lesson will help students realize that in order to give clear instructions, they need a common language. Students will practice controlling one another using a simple combination of hand gestures.  Once they understand the language, they will begin to "program" one another by giving multiple instructions in advance.
 
 [summary]
@@ -20,28 +20,28 @@ This lesson will help students realize that in order to give clear instructions,
 
 1) [Review](#Review) <br/>
 2) [Vocabulary](#Vocab) <br/>
-3) [Let's Control Ourselves](#GetStarted)  
+3) [Let's Control Ourselves](#GetStarted)
 
-### **Activity: Move It, Move It** - 20  minutes  
+### **Activity: Move It, Move It** - 20  minutes
 
-4) [Move It, Move It: Multi-Step Adventure](#Activity1)  
+4) [Move It, Move It: Multi-Step Adventure](#Activity1)
 
-### **Wrap-up** - 5  minutes 
+### **Wrap-up** - 5  minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?<br/>
 6) [Vocab Shmocab](#Shmocab)
 
-### **Assessment** - 10  minutes 
+### **Assessment** - 10  minutes
 7) [Move the Flurbs 2](#Assessment)
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Recognize situations where they can create programs to complete tasks
 - Predict moves necessary to get teammate from start to finish
 - Convert movements into symbolic instructions
-- Relate algorithms as programs to teammates 
+- Relate algorithms as programs to teammates
 
 [/together]
 
@@ -99,7 +99,7 @@ This lesson has one new and important word:<br/>
 [/centerIt]
 
 **Program** - Say it with me: Pro-gram <br/>
-An algorithm that has been coded into something that can be run by a machine. 
+An algorithm that has been coded into something that can be run by a machine.
 
 ### <a name="GetStarted"></a> 3) Let's Control Ourselves
 - Ask your students if they remember helping you draw a smiley face last time.
@@ -121,7 +121,7 @@ An algorithm that has been coded into something that can be run by a machine.
 [tip]
 
 # Lesson Tip
-Feel free to do an example map with the students as a class before breaking them into groups or even describing the rules (beyond how to react to each of the arm gestures).  Learning through play is often more effective than spouting off all of the rules at this age. 
+Feel free to do an example map with the students as a class before breaking them into groups or even describing the rules (beyond how to react to each of the arm gestures).  Learning through play is often more effective than spouting off all of the rules at this age.
 
 [/tip]
 
@@ -130,12 +130,12 @@ Feel free to do an example map with the students as a class before breaking them
 ## Activity: (20 min)
 ### <a name="Activity1"></a> 4) [Move It, Move It: Multi-Step Adventure](/curriculum/course1/2/Activity2-MoveItMoveIt.pdf)
 - This worksheet helps teach students how to think ahead in multiple steps, as they  plan a short route from their friend's start location to the hidden smiley face, up to three steps away.
-- Print out an activity packet for every group (ideally 2 to 4 students) and cut the Map Cards apart. 
+- Print out an activity packet for every group (ideally 2 to 4 students) and cut the Map Cards apart.
 - Explain the rules to the class, making sure to emphasise the new word "program."
 
 > **Directions for Class:**
 
-> 1. Decide who will be the Walking Machine and who will be the Controller.  
+> 1. Decide who will be the Walking Machine and who will be the Controller.
 > 2. Have the Controller set up a grid on the floor made up of pieces of paper as shown on one of the Move It Maps, except with the smiley face upside down, facing the ground.
 > 3.  The Walking Machine will start by standing on the page with the compass rose.
 > 4.  The Controller will then lead the Walking Machine step-by-step through the paper maze that they created, using the provided arm signals.
@@ -179,9 +179,9 @@ These topics will be important in the online lessons that follow, so taking an e
 
 - The Controller uses arm movements to guide the Walking Machine. Encourage the Controller to be facing the same direction as the Walking Machine to avoid having them get confused by "East is Right" and "West is Left."
 
-- Controllers should start by giving one direction at a time, allowing the Walking Machine to take a step before they move on to the next direction.  
+- Controllers should start by giving one direction at a time, allowing the Walking Machine to take a step before they move on to the next direction.
 
- - Halfway into the activity, you can encourage your students to Control with two instructions before they allow the Walking Machine to take a step, and then three.  
+ - Halfway into the activity, you can encourage your students to Control with two instructions before they allow the Walking Machine to take a step, and then three.
 
  - Ideally, by the time the lesson is complete, the students will relay the entire "program" to the Walking Machine before the Walking Machine even takes their first step.
 
@@ -210,7 +210,7 @@ Note that the rules are not the most important thing here.  Feel free to clarify
 ## Wrap-up (5 min)
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 - In the game we just played, who do you suppose was more like a programmer, and who was more like a computer?
-- What were the four directions on the compass rose? 
+- What were the four directions on the compass rose?
   - What tricks can we use to remember North, South, East and West?
 - How could we have given instructions without using our arms?
 - What was your favorite part about that game?
@@ -230,7 +230,7 @@ Note that the rules are not the most important thing here.  Feel free to clarify
 
 ## Assessment (10 min)
 ### <a name="Assessment"></a>7) [Move the Flurbs 2](/curriculum/course1/2/Assessment2-MoveIt.pdf)
-- Hand out the worksheet titled "Move the Flurbs 2" and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the worksheet titled "Move the Flurbs 2" and allow students to complete the activity independently after the instructions have been well explained.
 - This should feel familiar, thanks to the previous two activities.
 
 [/together]
@@ -238,20 +238,20 @@ Note that the rules are not the most important thing here.  Feel free to clarify
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### X's and O's
 
 - Draw a tic-tac-toe board for the class.
 - Place a single X and a single O somewhere on the board.
-- Ask the class if they can get the X to the O using arm gestures as a class. 
+- Ask the class if they can get the X to the O using arm gestures as a class.
 
 
 ### X's, O's, and Arrows
 
 - Similar to the activity above, but have the students write their programs in advance using arrows instead of hand gestures.
- - This can be done in groups. 
+ - This can be done in groups.
  - Groups can share their solutions for the class.
 
 [/together]
@@ -260,30 +260,30 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
+### ISTE Standards (formerly NETS)
 
-- 1.c - Use models and simulation to explore complex systems and issues.  
+- 1.c - Use models and simulation to explore complex systems and issues.
 - 2.d - Contribute to project teams to solve problems.
 - 4.b - Plan and manage activities to develop a solution or complete a project.
-- 6.a - Understand and use technology systems. 
+- 6.a - Understand and use technology systems.
 
 ### CSTA K-12 Computer Science Standards:
- 
-- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task.  
+
+- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task.
 - CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving.  
-- CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises. 
+- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving.
+- CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises.
 - CT.L2-03. Define an algorithm as a sequence of instructions that can be processed by a computer.
-- CT.L2-06. Describe and analyze a sequence of instructions being followed. 
+- CT.L2-06. Describe and analyze a sequence of instructions being followed.
 
 
-### Common Core Mathematical Practices 
- 
+### Common Core Mathematical Practices
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 6. Attend to precision.
 - 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.  
+- 8. Look for and express regularity in repeated reasoning.
 
 ### Common Core Math Standards
 
@@ -304,9 +304,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

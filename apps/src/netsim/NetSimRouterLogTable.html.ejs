@@ -5,7 +5,7 @@
   var Packet = require('./Packet');
 
   /** @type {Packet.HeaderType[]} */
-  var headerFields = level.routerExpectsPacketHeader;
+  var headerFields = locals.level.routerExpectsPacketHeader;
 
   var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
   var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;

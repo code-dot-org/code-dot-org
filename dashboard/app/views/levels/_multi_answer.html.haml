@@ -1,6 +1,10 @@
 / Show the correct answer to authorized teachers
 - if current_user.try(:authorized_teacher?) && !@script.try(:pd?)
-  - correct_answers = data['answers'].select { |answer| answer['correct'] } if data['answers']
+  - correct_answers = data['answers'].each_with_index.map do |answer, index|
+    - next unless answer['correct']
+    - letter = standalone ? nil : Multi.value_to_letter(index)
+    - {text: answer['text'], index: index, letter: letter}
+  - end.compact
   - unless correct_answers.empty?
     #markdown.teacher
       %h3= t('teacher.answer')
@@ -12,4 +16,9 @@
                 .item-mark
                   .fa{class: checked_class}
                 .item-label
-                  %label{style: "height: #{height}"}!= multi_t(level, correct_answer['text'])
+                  %label{style: "height: #{height}"}
+                    - if correct_answer[:letter]
+                      .item-answer-letter{style: "display: inline-block"}
+                        = "#{correct_answer[:letter]}."
+                        &nbsp;
+                    != multi_t(level, correct_answer[:text])

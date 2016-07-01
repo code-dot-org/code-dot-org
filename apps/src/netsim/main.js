@@ -5,7 +5,7 @@ var NetSim = require('./netsim');
 var levels = require('./levels');
 var skins = require('./skins');
 
-window.netsimMain = function(options) {
+window.netsimMain = function (options) {
   options.skinsModule = skins;
   options.isEditorless = true;
 

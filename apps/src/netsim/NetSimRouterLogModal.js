@@ -4,6 +4,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var i18n = require('./locale');
 var NetSimLogEntry = require('./NetSimLogEntry');
 var Packet = require('./Packet');
@@ -198,7 +199,7 @@ NetSimRouterLogModal.prototype.render = function () {
   this.rootDiv_.html(renderedMarkup);
 
   // Add input handlers
-  this.getRouterLogToggleButton().one('click', function() {
+  this.getRouterLogToggleButton().one('click', function () {
     this.toggleRouterLogMode_();
     this.render();
   }.bind(this));

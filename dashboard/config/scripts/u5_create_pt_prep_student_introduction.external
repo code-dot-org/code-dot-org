@@ -1,7 +1,6 @@
 name 'U5 - Create PT Prep - Student Introduction'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 5: Lesson 03 - Create PT Preparation
@@ -24,4 +23,44 @@ You have done many practice Performance Tasks during the course, and now it's fi
 * Guidelines: <a href="https://drive.google.com/open?id=1GMztP_ZInx-bNLZFZM-8iRkSIe1TOoZVtXjMKdQJrSA" target="_blank">Create PT - Guidelines Before Starting</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+#### Full Course Assessment
+
+If you wish to administer a longer fixed-response test, we have a **50-question cumulative multiple choice test the covers the entire course**
+
+This test is modeled after the College Board AP exam and includes a mix of practice questions from the College Board (the publicly available ones in the course description) and our own.
+
+If you do not have enough class time to do the full 50-question test in one sitting, we've created standalone Code Studio “courses" for each half of the exam so you can administer in 2 parts without exposing the entire exam all at once. 
+
+1. **Full Test** (all 50 questions) [https://studio.code.org/s/cspassessment](https://studio.code.org/s/cspassessment)
+2. **First Half** (25 questions) [https://studio.code.org/s/cspexam1-mWU7ilDYM9/](https://studio.code.org/s/cspexam1-mWU7ilDYM9)
+3. **Second Half** (25 questions) [https://studio.code.org/s/cspexam2-AKwgAh1ac5](https://studio.code.org/s/cspexam2-AKwgAh1ac5)
+
+**To Administer the Test:**
+
+It is recommended that on the day you want to administer the test you:
+
+* "Open the Test" by selecting one of these assessments in the teacher dashboard as the current “course” for your students. This will make it appear to students when they log into Code Studio.
+
+* To "Close the Test",  simply switch the current course back to something else.
+
+**Instructions to "open" and "close" the test**
+
+From the teacher dashboard:
+* Choose Student Accounts and Progress
+* Click the “Edit” button next to a section
+* Use the pull-down menu to choose the “course” you want.
+* The tests can all be found under a section called “CS Principles Practice Test”.  
+
+![](https://images.code.org/598ea8379c9579f2e01cf0c4bc68311f-image-1464110824868.png)
+
+**Viewing Results**
+
+After students take the test you can view their results by:
+
+* going to the the “Assessment” tab in the teacher dashboard.
+* going back to the test via URL and use the Teacher Answer viewer on each page.
+
 MARKDOWN

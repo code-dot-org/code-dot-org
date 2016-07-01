@@ -1,10 +1,9 @@
 'use strict';
 
-var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
+import {assert} from './configuredChai';
 
 var utils = require('@cdo/apps/utils');
-var _ = utils.getLodash();
+var _ = require('lodash');
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -247,7 +246,7 @@ exports.fakeShard = function () {
         new NetSimTable(fakeChannel, 'fakeShard', 'message', defaultTestTableConfig)),
     logTable: exports.overrideNetSimTableApi(
         new NetSimTable(fakeChannel, 'fakeShard', 'log',
-            $.extend({}, defaultTestTableConfig, {
+            Object.assign({}, defaultTestTableConfig, {
               useIncrementalRefresh: true
             })))
   };

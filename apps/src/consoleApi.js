@@ -8,7 +8,7 @@ consoleApi.setLogMethod = function (newLogMethod) {
   logMethod = newLogMethod;
 };
 
-consoleApi.log = function() {
+consoleApi.log = function () {
   var nativeArgs = arguments;
   var output = '';
   var firstArg = nativeArgs[0];

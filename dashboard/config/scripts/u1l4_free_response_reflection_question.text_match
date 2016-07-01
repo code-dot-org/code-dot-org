@@ -1,9 +1,0 @@
-name 'U1L4 Free response reflection question'
-title 'Assessment: Coordination and Binary Messages'
-content1 'Complete the Lesson 2 Rubric.'
-placeholder 'Enter your reflection here.'
-
-
-markdown <<MARKDOWN
-A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at ½ the bit rate you agreed upon. What message did you receive instead?
-MARKDOWN

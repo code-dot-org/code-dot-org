@@ -1,6 +1,0 @@
-name 'U3L03 Free Response Getting Started'
-title 'Creating Procedures Part 1: Getting Started'
-
-markdown <<MARKDOWN
-In the previous lesson we created simple turtle drawings using only four commands. At some point you probably wished that more commands were available to you. Describe a command you wanted to be able to use and explain why you wanted to use it. If you have time try to brainstorm additional commands as well.
-MARKDOWN

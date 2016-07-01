@@ -4,17 +4,17 @@ view: page_curriculum
 theme: none
 ---
 
-<%= partial('doc_header', :title => 'Implementation Tips', :disclaimer => 'K-5 Curriculum: Courses 1, 2, 3') %>
+<%= partial('doc_header', :title => 'Implementation Tips', :disclaimer => 'K-5 Curriculum: Courses 1, 2, 3, & 4') %>
 
 [content]
 
-This document offers suggestions for implementing an individual K-5 course in an elementary school classroom, as well as planning the rollout of all three K-5 courses as a pathway across elementary school grade levels.
+This document offers suggestions for implementing an individual CS Fundamentals course in an elementary school classroom, as well as planning the rollout of all four K-5 courses as a pathway across elementary school grade levels.
 
-## Scheduling the Lessons
+## Scheduling the Lessons  
 
-Where do you teach the courses? Use an existing "special" like media (library) or art. Or use a pre-existing computer lab period and split the online and unplugged lessons between the computer lab teacher and the grade level teachers respectively. 
+Where do you teach the courses? Do you use an existing "special" like media (library) or art, or do you use a pre-existing computer lab period and split the online and unplugged lessons between the lab teacher and the grade level teachers respectively?
 
-Whether you are a grade level teacher or a specialist (media, art, technology), the K-5 courses are designed to be flexibly implemented. While each course is set up to run as one lesson per week for a semester (half-year), they can alternatively be run as contiguous lessons for about a month or one lesson every two weeks for a year. Lessons are meant to be completed in order and can range from as little as 20 minutes to more than 45 minutes if extension activities are included.
+Whether you are a grade level teacher or a specialist (media, art, technology), the CS Fundamentals courses are designed to be flexibly implemented. While each course is set up to run as one lesson per week for a semester (half-year), they can alternatively be run as contiguous lessons for about a month, or one lesson every two weeks for a year. Lessons are meant to be completed in order and can range from as little as 20 minutes to more than 45 minutes if extension activities are included.
 
 
 [tip]
@@ -57,7 +57,7 @@ See this example from *Course 2* in which the unplugged lesson, Getting Loopy, p
 
 ## Rollout
 
-For schools that desire to implement all three courses, the course a student takes depends on their developmental level as well as their experience. While Code.org continues to publish more courses, teachers should strive to introduce material from our third-party partners to create a full pathway. Below is an example of what the first three years of a rollout may look like across grade levels.
+For schools that desire to implement all four courses, the course a student takes depends on their developmental level as well as their experience. While Code.org continues to publish more courses, teachers should strive to introduce material from our third-party partners to create a full pathway. Below is an example of what the first four years of a rollout may look like across grade levels.
 
 
 [rollout-table]
@@ -66,7 +66,8 @@ For schools that desire to implement all three courses, the course a student tak
 |--------|----------|----------|----------|----------|-------------------------------------|-------------------------------------|
 | Year 1 | Course 1 | Course 1 | Course 2 | Course 2 | Course 2                            | Course 2                            |
 | Year 2 | Course 1 | Course 2 | Course 2 | Course 3 | Course 3                            | Course 3                            |
-| Year 3 | Course 1 | Course 2 | Course 3 | Course 3 | See code.org for 3rd party material | See code.org for 3rd party material |
+| Year 3 | Course 1 | Course 2 | Course 3 | Course 3 | Course 4                            | Course 4                            |
+| Year 4 | Course 1 | Course 2 | Course 3 | Course 4 | Course 4                            | See code.org for 3rd party material |
 
 [/rollout-table]
 

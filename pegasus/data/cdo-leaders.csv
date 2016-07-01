@@ -2,7 +2,7 @@ name_s,url_s,description_t,role_s,kind_s
 Bobby Schnabel,leadership/bobby_schnabel,"CEO, Association for Computing Machinery",,director
 Brad Smith,leadership/brad_smith,"President, Chief Legal Officer, Microsoft",,director
 Hadi Partovi,leadership/hadi_partovi,"Founder and CEO, Code.org",,director
-Jeff Wilke,leadership/jeff_wilke,"Senior Vice President, Consumer Business, Amazon",,director
+Jeff Wilke,leadership/jeff_wilke,"CEO, Worldwide Consumer Business, Amazon",,director
 Maggie Johnson,leadership/maggie_johnson,"Director of Education and University Relations, Google",,director
 Palvi Mehta,leadership/palvi_mehta,"CFO, Extrahop - Code.org Treasurer",,director
 Robert Runcie,leadership/robert_runcie,Superintendent of Broward County Public Schools,,director
@@ -10,8 +10,10 @@ Vandana Sikka,leadership/vandana_sikka,"Chairperson, Infosys Foundation, USA",,d
 Amy Klement,leadership/amy_klement,"<b>Board Observer</b><br>Partner, Omidyar Network",,director
 Alice Steinglass,leadership/alice_steinglass,VP of Product & Marketing ,,LT
 Cameron Wilson,leadership/cameron_wilson,COO & VP of Government Affairs,,LT
+Jeremy Stone,leadership/jeremy_stone,CTO,,LT
 Michelle Page,leadership/michelle_page,VP of Finance & Administration,,LT
 Pat Yongpradit,leadership/pat_yongpradit,Chief Academic Officer,,LT
+Rachel Klein,leadership/rachel_klein,VP of Professional Learning & Community,,LT
 Sarah Filman,leadership/sarah_filman,VP of Curriculum,,LT
 Aaron Ray,http://www.linkedin.com/in/aray746,"Partner, The Collective",,advisor
 Ali Partovi,https://www.linkedin.com/in/apartovi,"Co-founder, Code.org. Tech entrepreneur / investor",,advisor

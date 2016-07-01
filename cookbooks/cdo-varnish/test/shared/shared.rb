@@ -34,6 +34,8 @@ module Cdo
         `curl -s -i #{LOCALHOST}:#{DASHBOARD_PORT}/start`
         mock_started = $?.exitstatus == 0
       end
+      `curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/mappings/new -d '#{{request: {method: 'GET', url: '/'}, response: {status: 200}}.to_json}'`
+      `sleep 1` until system("curl -sf #{LOCALHOST}:#{VARNISH_PORT}/health_check.dashboard")
       puts 'setup finished'
       [pid, ngrok_pid]
     end
@@ -73,7 +75,7 @@ module Cdo
           request: {
             method: method,
             url: url,
-            headers: Hash[*request_headers.map{|k, v|[k,{equalTo: v}]}.flatten]
+            headers: Hash[*request_headers.map{|k, v| [k,{equalTo: v}]}.flatten]
           },
           response: {
             status: 200,
@@ -94,7 +96,7 @@ module Cdo
 
       def _request(url, headers={}, cookies={}, method='GET')
         header_string = headers.map { |key, value| "-H \"#{key}: #{value}\"" }.join(' ')
-        cookie_string = cookies.empty? ? '' : "--cookie \"#{cookies.map{|k,v|"#{escape(k)}=#{escape(v)}"}.join('; ')}\""
+        cookie_string = cookies.empty? ? '' : "--cookie \"#{cookies.map{|k,v| "#{escape(k)}=#{escape(v)}"}.join('; ')}\""
         `curl -X #{method} -s #{cookie_string} #{header_string} -i #{url}`.tap{assert_equal 0, $?.exitstatus, "bad url:#{url}"}
       end
 
@@ -107,7 +109,7 @@ module Cdo
       # The proxy-cache configuration is CloudFront+Varnish or Varnish-only.
       def proxy_request(url, headers={}, cookies={}, method='GET')
         headers[:host] = @proxy_host
-        headers.merge!('X-Forwarded-Proto' => 'https'){|_, v1, _|v1}
+        headers.merge!('X-Forwarded-Proto' => 'https'){|_, v1, _| v1}
         _request("#{@proxy_address}#{url}", headers, cookies, method)
       end
 
@@ -324,12 +326,12 @@ module HttpCacheTest
         mock_response url, text_cookie_2, {'Cookie' => "#{cookie}=456;"}
 
         # Cache passes request cookie to origin
-        response = proxy_request url, {}, {"#{cookie}" => '123'}
+        response = proxy_request url, {}, {cookie => '123'}
         assert_equal text_cookie, last_line(response)
         assert_miss response
 
         # Cache miss on changed cookies
-        response = proxy_request url, {}, {"#{cookie}" => '456'}
+        response = proxy_request url, {}, {cookie => '456'}
         assert_equal text_cookie_2, last_line(response)
         assert_miss response
       end
@@ -348,7 +350,7 @@ module HttpCacheTest
         assert_miss response
 
         # Cache strips non-whitelisted request cookie and hits original cached response
-        response = proxy_request url, {}, {"#{cookie}" => '123'}
+        response = proxy_request url, {}, {cookie => '123'}
         assert_equal text, last_line(response)
         assert_hit response
       end
@@ -391,17 +393,29 @@ module HttpCacheTest
         # PUT/POST
         %w(POST PUT).each do |method|
           # PUT/POST response should NOT have cookie stripped
-          response = proxy_request url, {}, {"#{cookie}" => '123'}, method
+          response = proxy_request url, {}, {cookie => '123'}, method
           assert_equal text_cookie, last_line(response)
           assert_miss response
           # PUT/POST response should NOT be cached
-          response = proxy_request url, {}, {"#{cookie}" => '123'}, method
+          response = proxy_request url, {}, {cookie => '123'}, method
           assert_miss response
         end
       end
 
       it 'Does not strip cookies from assets in higher-priority whitelisted path' do
-        url = build_url 'api', 'image.png'
+        does_not_strip_cookies_from_png_in_path 'api'
+      end
+
+      it 'Does not strip cookies from assets in v3/assets path' do
+        does_not_strip_cookies_from_png_in_path 'v3/assets'
+      end
+
+      it 'Does not strip cookies from assets in v3/animations path' do
+        does_not_strip_cookies_from_png_in_path 'v3/animations'
+      end
+
+      def does_not_strip_cookies_from_png_in_path(path)
+        url = build_url path, 'image.png'
         cookie = 'hour_of_code' # whitelisted for this path
         text = 'Hello World!'
         text_cookie = 'Hello Cookie!'
@@ -409,7 +423,7 @@ module HttpCacheTest
         mock_response url, text_cookie, {'Cookie' => "#{cookie}=cookie_value;"}, {'Set-Cookie' => "#{cookie}=cookie_value2; path=/"}
 
         # Does not strip request cookie or response cookie
-        response = proxy_request url, {}, {"#{cookie}" => 'cookie_value'}
+        response = proxy_request url, {}, {cookie => 'cookie_value'}
         assert_equal text_cookie, last_line(response)
         refute_nil get_header(response, 'Set-Cookie')
       end
@@ -423,12 +437,12 @@ module HttpCacheTest
         mock_response url, text, {}
         mock_response url, text_cookie, {'Cookie' => "#{cookie}=123;"}
 
-        response = proxy_request url, {}, {"#{cookie}" => '123'}
+        response = proxy_request url, {}, {cookie => '123'}
         assert_equal text_cookie, last_line(response)
         assert_miss response
 
         # Changed cookie string matching all whitelisted headers will return cached result
-        response = proxy_request url, {}, {"#{cookie}" => '123', "#{cookie2}" => '456'}
+        response = proxy_request url, {}, {cookie => '123', cookie2 => '456'}
         assert_equal text_cookie, last_line(response)
         assert_hit response
       end

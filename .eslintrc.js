@@ -7,25 +7,25 @@ module.exports = {
   "env": {
     "browser": true,
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "es6": true
   },
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
-      "modules": true
+      "modules": true,
+      "ecmaVersion": 6
     }
   },
-  "globals": {
-    "$": true,
-    "jQuery": true,
-    "React": true,
-    "ReactDOM": true
-  },
   "rules": {
+    "array-bracket-spacing": ["error", "never"],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-dangle": "off",
     "curly": "error",
+    "dot-location": ["error", "property"],
     "eol-last": "error",
+    "keyword-spacing": "error",
     "no-array-constructor": "error",
     "no-console": "off",
     "no-empty": "off",
@@ -37,6 +37,12 @@ module.exports = {
     "no-undef": "error",
     "no-unused-vars": "off",
     "no-with": "error",
-    "semi": "error"
+    "object-curly-spacing": "off",
+    "semi": "error",
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never"
+    }],
+    "eqeqeq": "error"
   }
 };

@@ -1,0 +1,77 @@
+- level ||= @level
+- last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
+- in_level_group ||= false
+
+- if in_level_group # The LevelGroup will collect results for each level.
+  :javascript
+    window.levelGroup.levels[#{level.id}] = {
+      getResult: function () {
+        var response = $('#level_#{level.id}').val();
+        return {
+          response: response,
+          valid: response.length > 0,
+          result: true,
+          testResult: #{ActivityConstants::FREE_PLAY_RESULT}
+        };
+      },
+      getAppName: function () {
+        return "free_response";
+      },
+      lockAnswers: function () {
+        $("textarea#level_#{level.id}.response").prop('disabled', true);
+      },
+      getCurrentAnswerFeedback: function () {
+        // Not implemented
+      },
+      levelId: #{level.id}
+    };
+
+    $(document).ready(function() {
+      var textarea = $("textarea#level_#{level.id}.response");
+      textarea.blur(function () {
+        if (window.levelGroup && window.levelGroup.answerChangedFn) {
+          window.levelGroup.answerChangedFn(#{level.id}, true);
+        }
+      });
+      textarea.on("input", null, null, function () {
+        if (window.levelGroup && window.levelGroup.answerChangedFn) {
+          window.levelGroup.answerChangedFn(#{level.id});
+        }
+      });
+    });
+
+- else # Otherwise we need to provide a `window.getResult` function.
+  :javascript
+    function getResult() {
+      var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
+
+      return {
+        response: $('.response').val(),
+        submitted: appOptions.level.submittable || forceSubmittable,
+        result: true,
+        testResult: #{level.submittable? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::FREE_PLAY_RESULT}
+      };
+    }
+
+.free-response
+  - if level.title.present? && !in_level_group
+    %h2= level.title
+  - if level.markdown_instructions
+    %div= render(inline: level.markdown_instructions, type: :md)
+
+  - if level.allow_user_uploads?
+    %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}
+    %script{src: asset_path('js/fileupload/jquery.fileupload.js')}
+    %p#free-response-upload
+    :javascript
+      dashboard.project.getCurrentId = function () {
+        return appOptions.channel;
+      };
+      ReactDOM.render(React.createElement(dashboard.Attachments, {readonly: #{!!@view_options.readonly_workspace}}), document.querySelector('#free-response-upload'));
+
+  - height = level.height || '80'
+  %textarea.response{id: "level_#{level.id}", placeholder: level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
+
+  -# Don't render the dialog partial if we're inside a LevelGroup.
+  = render partial: 'levels/dialog', locals: {app: 'free_response', data: level.properties} unless in_level_group
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}

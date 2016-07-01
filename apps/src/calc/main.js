@@ -4,7 +4,7 @@ var blocks = require('./blocks');
 var skins = require('../skins');
 var levels = require('./levels');
 
-window.calcMain = function(options) {
+window.calcMain = function (options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   appMain(window.Calc, levels, options);

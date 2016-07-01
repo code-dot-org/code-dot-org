@@ -2,7 +2,6 @@ name 'U4L08v2 Student Intro'
 title 'title'
 description 'description here'
 css 'unplugged'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 4: Lesson 08 - Creating Summary Tables
 

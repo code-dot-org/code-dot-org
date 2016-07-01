@@ -29,7 +29,11 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Try tracing out a path with your finger.  \\nIs it the shortest path you can find?\",\r\n  \"hint_id\": \"4-5_Maze_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

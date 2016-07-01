@@ -5,8 +5,7 @@ var spriteActions = require('./spriteActions');
 var Direction = constants.Direction;
 var Emotions = constants.Emotions;
 var NextTurn = constants.NextTurn;
-var utils = require('../utils');
-var _ = utils.getLodash();
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var StudioAnimation = require('./StudioAnimation');
 var StudioSpriteSheet = require('./StudioSpriteSheet');
 
@@ -28,7 +27,7 @@ var Sprite = function (options) {
 
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED;
   this.setNormalFrameDuration(options.animationFrameDuration);
-  this.displayDir = Direction.NONE;
+  this.displayDir = options.displayDir || Direction.NONE;
   this.startFadeTime = null;
   this.fadeTime = 0;
 
@@ -119,7 +118,7 @@ Sprite.prototype.setImage = function (image, frameCounts) {
     return;
   }
 
-  this.animation_ = new StudioAnimation($.extend({}, options, {
+  this.animation_ = new StudioAnimation(Object.assign({}, options, {
     spriteSheet: new StudioSpriteSheet(options),
     animationFrameDuration: this.getAnimationFrameDuration()
   }));
@@ -186,7 +185,7 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
     return;
   }
 
-  this.legacyAnimation_ = new StudioAnimation($.extend({}, options, {
+  this.legacyAnimation_ = new StudioAnimation(Object.assign({}, options, {
     spriteSheet: new StudioSpriteSheet(options),
     animationFrameDuration: this.getAnimationFrameDuration()
   }));
@@ -224,16 +223,16 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
         // frame 0.
         this.legacyAnimation_.createSpecialAnimation('direction',
             turnIndex,
-            [ { type: 'legacyEmotionRow', index: row, frame: 0 } ]);
+            [{ type: 'legacyEmotionRow', index: row, frame: 0 }]);
         turnIndex++;
       }
       for (;turnIndex < 8; turnIndex++, frameIndex++) {
         this.legacyAnimation_.createSpecialAnimation('direction',
             turnIndex,
-            [ { type: 'legacyEmotionRow',
+            [{ type: 'legacyEmotionRow',
                 index: row,
                 frame: this.frameCounts.normal + frameIndex
-            } ]);
+            }]);
       }
     }
   }
@@ -334,7 +333,7 @@ Sprite.prototype.startFade = function (fadeTime) {
 /**
  * Remove our element/clipPath/animator
  */
-Sprite.prototype.removeElement = function() {
+Sprite.prototype.removeElement = function () {
   if (this.animation_) {
     this.animation_.removeElement();
   }
@@ -357,7 +356,7 @@ Sprite.prototype.getAnimationFrameDuration = function () {
 /**
  * Returns true if the item is currently fading away.
  */
-Sprite.prototype.isFading = function() {
+Sprite.prototype.isFading = function () {
   return !!this.startFadeTime;
 };
 
@@ -365,7 +364,7 @@ Sprite.prototype.isFading = function() {
  * Returns true if the item has finished fading away.  The caller will usually
  * then call removeElement to destroy this item's assets.
  */
-Sprite.prototype.hasCompletedFade = function() {
+Sprite.prototype.hasCompletedFade = function () {
   var currentTime = new Date().getTime();
 
   return this.startFadeTime && currentTime > this.startFadeTime + this.fadeTime;

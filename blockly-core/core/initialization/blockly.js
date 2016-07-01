@@ -182,6 +182,13 @@ Blockly.selected = null;
 Blockly.readOnly = false;
 
 /**
+ * Whether or not 'unused' blocks (non-top-blocks without a parent)
+ * should be rendered differently.
+ * @const
+ */
+Blockly.showUnusedBlocks = false;
+
+/**
  * Currently highlighted connection (during a drag).
  * @type {Blockly.Connection}
  * @private

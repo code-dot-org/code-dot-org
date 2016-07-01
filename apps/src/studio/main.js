@@ -7,7 +7,7 @@ var blocks = require('./blocks');
 var levels = require('./levels');
 var skins = require('./skins');
 
-window.studioMain = function(options) {
+window.studioMain = function (options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   appMain(window.Studio, levels, options);

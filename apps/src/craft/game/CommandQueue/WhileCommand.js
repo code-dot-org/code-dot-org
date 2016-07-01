@@ -52,8 +52,7 @@ export default class WhileCommand extends BaseCommand {
             this.WhileCode();
             this.GameController.queue.setWhileCommandInsertState(null);
             this.queue.begin();
-        }
-        else {
+        } else {
             this.state = CommandState.SUCCESS;
         }
 

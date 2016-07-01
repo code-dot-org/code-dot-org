@@ -1,0 +1,11 @@
+name 'seqAlg'
+title 'Sequences and Algorithms'
+
+markdown <<MARKDOWN
+- Sequence the story
+  - Beginning/Middle/End
+- Algorithm for Marble Maze
+  - What are the steps?
+- Paper Cut-Outs of Jigsaw
+  - Put these in order
+MARKDOWN

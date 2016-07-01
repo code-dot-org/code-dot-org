@@ -23,7 +23,7 @@ Our new course, CS Discoveries, is being designed to fit naturally between our [
 CS Discoveries aims to introduce students to tools and programming languages that are accessible for beginners, but which offer plenty of room to grow and create sophisticated projects. Using our App Lab programming environment, students will be able to transition from blocks to typed code at their own pace while learning JavaScript. New improvements to this tool will enable students to build simple animations, stories, or games as well as apps. Students will also develop Maker skills through the study of physical computing on the Arduino platform  at a very accessible cost. 
 
 ### <a name="flexible"></a>Designed for flexible implementation options
-CS Discoveries will be designed primarily for students in grades 6-9, so it can be used in middle school or high school. The two semesters spiral upon each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
+CS Discoveries will be designed primarily for students in grades 7-9, so it can be used in middle school or high school. The two semesters spiral upon each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
 
 ## <a name="content"></a>Course Overview
 Computer Science encompases far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.

@@ -1,5 +1,6 @@
 /* global dashboard */
-var VersionRow = require('./VersionRow.jsx');
+var React = require('react');
+var VersionRow = require('./VersionRow');
 var sourcesApi = require('../clientApi').sources;
 
 /**
@@ -102,6 +103,7 @@ var VersionHistory = React.createClass({
       var rows = this.state.versions.map(function (version) {
         return <VersionRow
           key={version.versionId}
+          versionId={version.versionId}
           lastModified={new Date(version.lastModified)}
           isLatest={version.isLatest}
           onChoose={this.onChooseVersion.bind(this, version.versionId)} />;

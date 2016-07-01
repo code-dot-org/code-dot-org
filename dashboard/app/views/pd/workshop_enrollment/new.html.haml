@@ -1,0 +1,112 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%div
+  %h1
+    Register for a Code Studio workshop
+  %p
+    Taught by Code.org facilitators who are experienced computer science educators,
+    our workshops will prepare you to teach the Code.org curriculum.
+
+  .container
+    .row
+
+      -# Left Column
+      .span6
+        %div.row
+          %div.span6
+            %h2
+              Workshop Details
+          %div.span2{style: 'text-align: right'}
+            = @workshop.sessions.count == 1 ? 'Date:' : 'Dates:'
+          %div.span4
+            - @workshop.sessions.each do |session|
+              = session.formatted_date_with_start_and_end_times
+              %br
+        %div.row
+          %div.span2{style: 'text-align: right'} Location:
+          %div.span2
+            = @workshop.location_name
+            %br
+            = @workshop.location_address
+        %br
+        = simple_format(@workshop.notes)
+
+        - if @enrollment.errors.any?
+          #error_explanation
+            %h2= "#{pluralize(@enrollment.errors.count, 'error')}:"
+            %ul
+              - @enrollment.errors.each do |name, message|
+                - if name == :school_district
+                  %li= "School district or school ZIP is required"
+                - else
+                  %li= @enrollment.errors.full_message(name, message)
+
+        =form_for @enrollment, url: {action: 'create'} do |form|
+          %h2
+            Your Information
+          %p
+            Fields marked with a
+            %span.form-required-field
+              *
+            are required. Your email address will be shared
+            with the workshop organizer and facilitators.
+          %div.control-group
+            %label
+              Your Name
+              %span.form-required-field
+                *
+            %div.controls
+              =form.text_field :name, class: 'span5', readonly: !current_user.nil?
+          %div.control-group
+            %label
+              Email Address
+              %span.form-required-field
+                *
+            %div.controls
+              =form.text_field :email, class: 'span5', readonly: !current_user.nil?
+          - unless current_user
+            %div.control-group
+              %label
+                Confirm Email Address
+                %span.form-required-field
+                  *
+              %div.controls
+                =form.text_field :email_confirmation, class: 'span5'
+          %div.control-group
+            %label
+              District
+              %span.form-required-field
+                *
+            - error_class = (@enrollment.errors.include? :school_district) ? "field_with_errors_div" : ""
+            #school_district.span5{class: error_class, style: "border: solid 1px #bbb; border-radius: 4px; padding: 15px; margin-left: 0px; box-sizing: border-box;"}
+              %div.controls
+                = render partial: 'shared/district_dropdown', locals: {form_name: "pd_enrollment"}
+            %div{style: "clear: both"}
+          %div.control-group
+            %label
+              School
+              %span.form-required-field
+                *
+            %div.controls
+              =form.text_field :school, class: 'span5'
+
+          %div.control-group
+            = form.submit 'Register', class: 'btn'
+
+      -# Right column
+      %div.span6
+        %div.row
+          %div.span6
+            %h2 Facilitators
+            - @workshop.facilitators.each do |facilitator|
+              -# TODO: Retire old K5 dashboard, and come up with more permanent solution that doesn't require cross-project file dependency.
+
+              - bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
+              - image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
+              = image_tag CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") if File.exists? image_file
+              - if File.exists? bio_file
+                = render file: bio_file
+              - else
+                %h2= facilitator.name
+                %p= mail_to facilitator.email

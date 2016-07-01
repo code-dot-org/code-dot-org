@@ -1,7 +1,7 @@
 if ENV['COVERAGE'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
-elsif ENV['CI'] # this is set by travis and circle
+elsif ENV['CI'] # this is set by circle
   require 'coveralls'
   Coveralls.wear!('rails')
 end
@@ -9,6 +9,7 @@ end
 require 'minitest/reporters'
 MiniTest::Reporters.use!($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)
 
+ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
 
@@ -57,6 +58,8 @@ class ActiveSupport::TestCase
 
     Gatekeeper.clear
     DCDO.clear
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
   teardown do
@@ -169,6 +172,34 @@ class ActiveSupport::TestCase
     assert_equal a.keys, b.keys, %(#{message}
   Found in #{a_name} but not #{b_name}: #{(a.keys - b.keys).join(', ')}
   Found in #{b_name} but not #{a_name}: #{(b.keys - a.keys).join(', ')})
+  end
+
+  # Given a regular expression and a block, ensure that the block raises an
+  # exception with a message matching the regular expression.
+  def assert_raises_matching(matcher)
+    assert_raises do
+      begin
+        yield
+      rescue => err
+        assert_match matcher, err.to_s
+        raise err
+      end
+    end
+  end
+
+  # Freeze time for the each test case to 9am, or the specified time
+  # To use, declare anywhere in the test class:
+  #   class MyTest < ActiveSupport::TestCase
+  #     freeze_time
+  #     #...
+  def self.freeze_time(time=nil)
+    time ||= Date.today + 9.hours
+    setup do
+      Timecop.freeze time
+    end
+    teardown do
+      Timecop.return
+    end
   end
 end
 
@@ -321,6 +352,21 @@ def storage_id(_)
   SecureRandom.hex
 end
 
+$stub_encrypted_channel_id = 'STUB_CHANNEL_ID-1234'
+def storage_encrypt_channel_id(_)
+  $stub_encrypted_channel_id
+end
+
+$stub_channel_owner = 33
+$stub_channel_id = 44
+# stubbing storage_decrypt is inappropriate access, but
+# allows storage_decrypt_channel_id to throw the right
+# errors if the input is malformed and keeps us from
+# having to access the Pegasus DB from Dashboard tests.
+def storage_decrypt(encrypted)
+  "#{$stub_channel_owner}:#{$stub_channel_id}"
+end
+
 # A fake slogger implementation that captures the records written to it.
 class FakeSlogger
   attr_reader :records
@@ -332,4 +378,8 @@ class FakeSlogger
   def write(json)
     @records << json
   end
+end
+
+def json_response
+  JSON.parse @response.body
 end

@@ -3,6 +3,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var markup = require('./NetSimRouterStatsTable.html.ejs');
 var NetSimUtils = require('./NetSimUtils');
 var NetSimLogEntry = require('./NetSimLogEntry');

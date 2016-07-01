@@ -1,15 +1,18 @@
 'use strict';
-/* global dashboard, Dialog, YT, YTConfig */
+/* global dashboard, Dialog, YT, YTConfig, trackEvent */
 
+import $ from 'jquery';
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
 
-window.createVideoWithFallback = function(parentElement, options, width, height) {
+var videos = module.exports = {};
+
+videos.createVideoWithFallback = function (parentElement, options, width, height) {
   upgradeInsecureOptions(options);
   var video = createVideo(options);
   video.width(width).height(height);
-  if(parentElement) {
+  if (parentElement) {
     parentElement.append(video);
   }
   setupVideoFallback(options, width, height);
@@ -54,7 +57,7 @@ function createVideo(options) {
 //   redirect - the redirect page after the video is dismissed.
 //   onClose - actions to take after closing the video dialog, or immediately
 //             if the video isn't shown.
-window.showVideoDialog = function(options, forceShowVideo) {
+videos.showVideoDialog = function (options, forceShowVideo) {
   if (forceShowVideo === undefined) {
     forceShowVideo = false;
   }
@@ -114,7 +117,7 @@ window.showVideoDialog = function(options, forceShowVideo) {
     document.dispatchEvent(event);
   });
 
-  var tabHandler = function(event, ui) {
+  var tabHandler = function (event, ui) {
     var tab = ui.tab || ui.newTab;  // Depends on event.
     var videoElement = $('#video');
     if (tab.find('a').attr('href') === "#video") {
@@ -146,7 +149,13 @@ window.showVideoDialog = function(options, forceShowVideo) {
 
   var download = $('<a/>').append($('<img src="/shared/images/download_button.png"/>'))
       .addClass('download-video')
-      .attr('href', options.download);
+      .attr('href', options.download)
+      .click(function () {
+          // track download in Google Analytics
+          trackEvent('downloadvideo', 'startdownloadvideo', options.key);
+          return true;
+        }
+      );
   var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
 
@@ -204,18 +213,18 @@ window.showVideoDialog = function(options, forceShowVideo) {
 
   // Don't add fallback player if a video modal has closed
   var shouldStillAdd = true;
-  videoModal.one('hidden.bs.modal', function(){
+  videoModal.one('hidden.bs.modal', function (){
     shouldStillAdd = false;
   });
 
-  setupVideoFallback(options, $div.width(), divHeight, function(){
+  setupVideoFallback(options, $div.width(), divHeight, function (){
     return shouldStillAdd;
   });
 };
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAddCallback) {
-  shouldStillAddCallback = shouldStillAddCallback || function() { return true; };
+  shouldStillAddCallback = shouldStillAddCallback || function () { return true; };
 
   if (!videoInfo.enable_fallback) {
     return;
@@ -226,17 +235,31 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
     return;
   }
 
-  window.onYouTubeBlocked(function() {
+  videos.onYouTubeBlocked(function () {
     if (!shouldStillAddCallback()) {
       return;
     }
     addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
-  });
+  }, videoInfo);
 }
 
-// This is on window because it gets accessed externally for our video test page.
-window.onYouTubeBlocked = function(callback) {
-  testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(), function(){}, callback);
+// This is exported (and placed on window) because it gets accessed externally for our video test page.
+videos.onYouTubeBlocked = function (youTubeBlockedCallback, videoInfo) {
+  var key = (videoInfo ? videoInfo.key : undefined);
+  testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(),
+      // Called when YouTube availability check succeeds.
+      function () {
+        // Track event in Google Analytics.
+        trackEvent('showvideo', 'startVideoYouTube', key);
+      },
+
+      // Called when YouTube availability check fails.
+      function () {
+        // Track event in Google Analytics.
+        trackEvent('showvideo', 'startVideoFallback', key);
+        youTubeBlockedCallback();
+      }
+  );
 };
 
 function youTubeAvailabilityEndpointURL() {
@@ -265,7 +288,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   videojs.options.flash.swf = '/code-studio/assets/video-js/video-js.swf';
   videojs.options.techOrder = ["flash", "html5"];
 
-  var videoPlayer = videojs(fallbackPlayerID, {}, function() {
+  var videoPlayer = videojs(fallbackPlayerID, {}, function () {
     var $fallbackPlayer = $('#' + fallbackPlayerID);
     var showingErrorMessage = $fallbackPlayer.find('p').length > 0;
     if (showingErrorMessage) {
@@ -275,7 +298,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
       }
     }
     // Properly dispose of video.js player instance when hidden
-    $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function(){
+    $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function (){
       videoPlayer.dispose();
     });
   });
@@ -307,7 +330,7 @@ function getShowNotes(key, success, error) {
 
 // Convert http:// video urls to protocol-relative // urls to prevent mixed-content loads on https pages.
 function upgradeInsecureOptions(options) {
-  if(options.src) {
+  if (options.src) {
     options.src = options.src.replace(/^http:\/\//, '//');
   }
   if (options.download) {

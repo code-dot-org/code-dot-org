@@ -1,0 +1,37 @@
+pd 'true'
+title 'ECS: Phase 1 PD'
+description 'Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum'
+description_short 'Introduction to the Code.org ECS Version 5 Program'
+login_required 'true'
+
+stage ‘Welcome to Phase 1!’
+level 'PDECS Welcome Video'
+level 'PDECS tour'
+level ‘ECSPD1 professional learning program phases’
+level 'ECS Matching Program Commitment'
+
+stage 'Background and Context'
+level 'ECSPD1 cs is about'
+level 'ECSPD1 dikjstra'
+level 'ECSPD1 equity in cs education'
+level 'ECSPD1 background reflection' 
+
+stage 'ECS Curriculum'
+level 'ECSPD1 curriculum design'
+level 'ECSPD1 unit overviews'
+level 'ECSPD1 Matching Unit Descriptions and Numbers’
+level 'ECSPD1 unit 1 overview'
+level 'ECSPD1 unit 2 overview'
+level 'ECSPD1 curriculum connections'
+level 'ECSPD1 computational thinker'
+
+stage 'Classroom and Workshop Style '
+level 'ECSPD1 unifying themes'
+level 'ECS PD1 classroom culture'
+level 'ECSPD1 your role'
+level 'ECSPD1 student centered learning'
+
+stage 'Wrap Up'
+level 'ECSPD1 Forum'
+level 'ECSPD1 post survey'
+level 'ECSPD1 congratulations end'

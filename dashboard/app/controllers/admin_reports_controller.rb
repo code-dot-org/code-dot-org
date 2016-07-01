@@ -41,7 +41,7 @@ class AdminReportsController < ApplicationController
       # differ from @foodstamps_all and @ethnic_all as a teacher may not answer those questions.
       @student_count = 0
 
-      SurveyResult.all.each do |survey_result|
+      SurveyResult.where(kind: 'Diversity2016').each do |survey_result|
         @participants += 1
         next if survey_result.properties.blank?
         @respondents += 1
@@ -302,6 +302,7 @@ class AdminReportsController < ApplicationController
   end
 
   private
+
   # Manipulates the count_stats hash of arrays to an array of arrays, each inner array representing
   # a slice across the hash arrays.
   # Returns nil if the hash is blank.
@@ -379,7 +380,7 @@ class AdminReportsController < ApplicationController
   def diversity_survey_csv
     send_data(
       CSV.generate do |csv|
-        diversity_survey_raw_responses().each do |response|
+        diversity_survey_raw_responses.each do |response|
           csv << response
         end
         csv

@@ -1,5 +1,6 @@
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
+require('../utils'); // Provides Function.prototype.inherits
 
 var EvalText = function (text, fontSize, color) {
   evalUtils.ensureString(text);

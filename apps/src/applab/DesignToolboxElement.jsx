@@ -1,5 +1,6 @@
-/* global $ */
-
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var library = require('./designElements/library');
 
 module.exports = React.createClass({
@@ -10,7 +11,7 @@ module.exports = React.createClass({
     handleDragStart: React.PropTypes.func.isRequired
   },
 
-  render: function() {
+  render: function () {
     var styles = {
       outerContainer: {
         // The icon images are 120px wide and depend on this width for scaling.

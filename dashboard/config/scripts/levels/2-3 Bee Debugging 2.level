@@ -35,7 +35,11 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?\",\r\n  \"hint_id\": \"2-3_Bee_Debugging_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

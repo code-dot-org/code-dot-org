@@ -1,0 +1,9 @@
+%h3 Details for #{@user_course_enrollment.user.name} enrollment in #{@user_course_enrollment.plc_course.name}
+
+- @user_course_enrollment.plc_unit_assignments.each do |unit_assignment|
+  %strong #{unit_assignment.plc_course_unit.unit_name}
+  %br
+  - unit_assignment.plc_module_assignments.each do |module_assignment|
+    = 'Module: ' + module_assignment.plc_learning_module.name
+    = 'Module Status: ' + module_assignment.status
+  %br

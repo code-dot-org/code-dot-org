@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson students are asked to consider how color is represented on a computer and to imagine how it might be encoded in binary. Students then learn about how color is actually represented on a computer - using the RGB color scheme - and attempt to create their own images using their own encoding schemes. After grappling with the prospect of possibly many bits just to represent a single pixel, students are shown how using hexadecimal allows us to represent many bits with fewer characters. Students use a new version of the pixelation tool to encode an image with color and create a personal favicon.">
+    <title>Encoding Color Images</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+
+    
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+
+    
+
+    
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.8.3.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+    
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body">
+
+
+    <div id="admin_edit">
+    
+    <button type="button" class="togglesay btn btn-success">Don't tell me what to say!</button>
+    <button type="button" class="togglesay btn btn-danger" style="display:none;">Help, what should I say?</button>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><span class="h2">Unit</span><span class="h1">1</span></div>
+
+    <div class="lessons">
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/1" data-pdf-link="#unit1lesson1">
+        1
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/2" data-pdf-link="#unit1lesson2">
+        2
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/3" data-pdf-link="#unit1lesson3">
+        3
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/4" data-pdf-link="#unit1lesson4">
+        4
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/5" data-pdf-link="#unit1lesson5">
+        5
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/6" data-pdf-link="#unit1lesson6">
+        6
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/7" data-pdf-link="#unit1lesson7">
+        7
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/8" data-pdf-link="#unit1lesson8">
+        8
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/9" data-pdf-link="#unit1lesson9">
+        9
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/10" data-pdf-link="#unit1lesson10">
+        10
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/11" data-pdf-link="#unit1lesson11">
+        11
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/12" data-pdf-link="#unit1lesson12">
+        12
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/13" data-pdf-link="#unit1lesson13">
+        13
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit1/14" data-pdf-link="#unit1lesson14">
+        14
+    </a>
+    </div>
+    
+        
+            <div class="lesson current">
+        
+    <a href="/educate/csp_test/unit1/15" data-pdf-link="#unit1lesson15">
+        15
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/educate/csp_test/unit1/16" data-pdf-link="#unit1lesson16">
+        16
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/educate/csp_test/unit1/17" data-pdf-link="#unit1lesson17">
+        17
+    </a>
+    </div>
+    
+</div>
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+
+    <div class="together" id="unit1lesson15">
+        
+            <h1>Lesson 15: Encoding Color Images</h1>
+        
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson students are asked to consider how color is represented on a computer and to imagine how it might be encoded in binary.  Students then learn about how color is actually represented on a computer - using the RGB color scheme - and attempt to create their own images using their own encoding schemes.  After grappling with the prospect of possibly many bits just to represent a single pixel, students are shown how using hexadecimal allows us to represent many bits with fewer characters.  Students use a new version of the pixelation tool to encode an image with color and create a personal favicon.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>The process of rendering color on a computer screen by mixing red, green and blue light is an important concept of this lesson.  The results are not always intuitive, because mixing pigment and mixing colored lights (like what’s on a computer screen) lead to different results. Another important objective of this lesson is to understand how (uncompressed) image file sizes can become quite large. For example, even a relatively small image of 250x250 pixels is represented by a total of 62,500 pixels. Each of those pixels requires multiple bits of information, sometimes three bytes (24 bits) for each pixel, resulting in a total of 1.5 million bits to store one image!</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocencoding-color-images">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Explain the color encoding scheme for digital images.</li>
+                    
+                        <li>Use the Pixelation Tool to encode an image of the student’s design.</li>
+                    
+                        <li>Use the Pixelation Tool to encode small color images with varying bits-per-pixel settings.</li>
+                    
+                        <li>Explain the benefits of using hexadecimal numbers for representing long streams of bits.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit1/lesson15" target="_blank">Forum</a></li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit1/stage/15/puzzle/1' target='_blank' class='print_link'>Activity Guide KEY - Encoding Color Images</a> - Answer Key
+                                </li>
+                            
+                                <li>
+                                    <a href='https://youtu.be/15aqFQQVBWU' target='_blank' class='print_link'>A Little Bit about Pixels</a> - Video (<a href='http://videos.code.org/2015/csp/concept_rgb.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='http://youtu.be/yWrmxQSnmPc' target='_blank' class='print_link'>U1L15 - Teaching Tips & Tricks Video</a> - Video (<a href='https://www.dropbox.com/s/ryke4wt445sds9c/U1L14-Tips%26Tricks-v2_1.mp4?dl=0' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit1/stage/15/puzzle/1' target='_blank' class='print_link'>Video Guide KEY for "A Little Bit about Pixels"</a> - Answer Key
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='http://youtu.be/763E3_Z6Hng' target='_blank' class='print_link'>Color Pixelation widget tutorials - Part 1</a> - Video (<a href='http://videos.code.org/2015/csp/pixelation_color_1.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='http://youtu.be/xK9z51Tin4E' target='_blank' class='print_link'>Color Pixelation widget tutorials - Part 2</a> - Video (<a href='http://videos.code.org/2015/csp/pixelation_color_2.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='http://youtu.be/Xhqz3ffGm74' target='_blank' class='print_link'>Color Pixelation widget tutorials - Part 3</a> - Video (<a href='http://videos.code.org/2015/csp/pixelation_color_3.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit1' target='_blank' class='print_link'>CSP Unit 1</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/12EVGBWX7C2Ak7GT7Gbbp-WxDtHFK4hALX0PASc7prMw/edit?usp=sharing' target='_blank' class='print_link'>Encoding Color Images</a> - Activity Guide (<a href='https://docs.google.com/document/d/12EVGBWX7C2Ak7GT7Gbbp-WxDtHFK4hALX0PASc7prMw/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://drive.google.com/open?id=1MS1dgzcmPAVpDt1fSn41A1qvFA_Oqr1UKlcM8-5A3vA' target='_blank' class='print_link'>Hexadecimal Numbers (optional)</a> - Activity Guide (<a href='https://drive.google.com/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1kIiOf-cFxS4bzF4ulEDAsjLejAOvTbUKiOXhmE3cJgM/edit?usp=sharing' target='_blank' class='print_link'>Personal Favicon Project</a> - Activity Guide (<a href='https://docs.google.com/document/d/1kIiOf-cFxS4bzF4ulEDAsjLejAOvTbUKiOXhmE3cJgM/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/17gmhxlFm8vaDKa9-wDLFzurgL49wcLDJ3ApdCXrXhq8/edit?usp=sharing' target='_blank' class='print_link'>Rubric - Personal Favicon Project</a> - Rubric
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1PwH2nRfWH-3CmkL2IxC0Le2DdRcDmsR8McMFe-ktol4/edit?usp=sharing' target='_blank' class='print_link'>Worksheet - Video Guide for "A Little Bit about Pixels"</a> - Worksheet (<a href='https://docs.google.com/document/d/1PwH2nRfWH-3CmkL2IxC0Le2DdRcDmsR8McMFe-ktol4/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="encoding-color-imagescontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <h3 id="prompt-how-might-you-encode-colors">Prompt: How might you encode colors?</h3>
+<p><strong>Goal:</strong> Prime students to understand the challenges of encoding color in bits.</p>
+<p><strong>Discussion:</strong> Use a <a href="Teaching Strategies for the CS Classroom" target="_blank">getting started strategy</a> to address these questions:</p>
+<ul>
+<li>In the previous lesson we came up with a simple encoding scheme for B&amp;W images.  What if we wanted to have color? </li>
+<li>Devise an encoding scheme for color in an image file.  How would you represent color for each pixel?  </li>
+<li>How many different colors could you represent?  Do you have a particular order to the colors?</li>
+</ul>
+<p>Pair and share ideas.  Discuss some of the difficulties of representing color; compare and contrast the different schemes students come up with.</p>
+<div class="admonition tip">
+<p class="admonition-title">Teaching Tips</p>
+<p>It is likely that many students will come up with an idea like making a list of colors and just assigning a number to each one. That is fine and reasonable. Regardless of their encoding, students should be thinking about the number of bits they will allocate to the encoding and how that will affect the number of colors that can be encoded.</p>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <p><strong>Remark:</strong> <em>Say:</em> The way color is represented in a computer is different from the ways we represented text or numbers.  With text, we just made a list of characters and assigned a number to each one.  As you are about to see, with color, we actually use binary to encode the physical phenomenon of LIGHT.  You saw this a little bit in the previous lesson, but today we will see how to make colors by mixing different amounts of colored light.</p>
+<p>Video: A Little Bit about Pixels - Kevin Systrom, founder of Instagram, explains pixels and RGB color. While students watch the video, they should complete <a class="resource" target="_blank">Worksheet - Video Guide for “A Little Bit about Pixels”</a>.</p>
+<p>Important ideas from this video include:</p>
+<ul>
+<li>Image sharing services are a universal and powerful way of communicating all over the world.</li>
+<li>Digital images are just data (lots of data) composed of layers of abstraction: pixels, RGB, binary.</li>
+<li>The RGB color scheme is composed of red, green, and blue components that have a range of intensities from 0 to 255.</li>
+<li>Screen resolution is the number of pixels and how they are arranged vertically and horizontally, and density is the number of pixels per a given area.</li>
+<li>Digital photo filters are not magic! Math is applied to RGB values to create new ones.</li>
+</ul>
+<p><strong>Discuss:</strong> Following the video, give students time to complete the video guide and address any questions generated by this activity.</p>
+<h3 id="color-pixelation-widget">Color Pixelation Widget.</h3>
+<p><img alt="" src="https://code.org/educate/docs/csp/code-studio-icon.png"> <strong>Color Pixelation Tool:</strong> Distribute the <a href="Encoding Color Images" target="_blank">Activity Guide - Encoding Color Images</a>, and direct students to work in Code Studio. This activity will allow students to create images in full RGB color and will present hexadecimal as a more efficient means of representing binary information for humans to read.</p>
+<div class="admonition tip">
+<p class="admonition-title">Teaching Tips</p>
+<p>Computer screens emit light, so when you mix RGB colors, you are really mixing light together.  This is counterintuitive for many students who have grown up mixing paints in school.  When you mix paint it absorbs light.</p>
+<p>It is illustrative to look at how you make black and white with paint vs. light:</p>
+<ul>
+<li>To make black: with paint, mix a full spectrum of colors together; with light, turn off all the lights.</li>
+<li>To make white: with paint, don’t use any paint (assuming canvas is white); with light, turn on all lights for a full spectrum of color.</li>
+</ul>
+<p>This can make mixing colors a little bizarre too:</p>
+<ul>
+<li>With paint, mix full red and full blue to make Purple</li>
+<li>With light, mix full red and full blue to make Pink</li>
+</ul>
+<p>The Pixelation Tool is in RGB mode, as long as the number of bits per pixel is a multiple of 3 (3, 6, 9, 12, etc.)  This allows for the same number of bits to be allocated to each color channel.  Other bits-per-pixel settings will set the image to grayscale, with more bits allowing finer control over the shade of gray.</p>
+</div>
+<p><strong>Hexadecimal Numbers:</strong> When working through the Activity Guide for the color version of the Pixelation Tool, students will be introduced to the concept of hexadecimal numbers, so-called because there are 16 unique symbols that can appear in each place value, 0-9, A, B, C, D, E, and F. </p>
+<p><em>It is important to note that hexadecimal numbers are used to aid humans in reading longer strings of bits, but they in no way change the underlying data being represented. Instead, they allow us to read 4 bits at a time rather than 1, and so allow us to more easily parse binary information. Hexadecimal representation is NOT a form of compression, since the underlying binary representation is not changing at all. Rather it is a more convenient way of representing that binary information when humans need to read and interact with it.</em></p>
+<p>You may wish to separately address this topic as a class. Students can practice with the <a href="http://studio.code.org/s/odometer" target="_blank">Hexadecimal Odometer</a> and can complete this <a href="Hexadecimal Numbers (optional)" target="_blank">Hexadecimal Numbers activity</a> if you deem more practice necessary.</p>
+<h3 id="personal-favicon-project">Personal Favicon Project.</h3>
+<p>Students will create a 16 by 16 pixel personal favicon in RGB color using the Pixelation Tool. This project will likely require some time to complete, and should serve as a practice with hexadecimal numbers, metadata, and the underlying encoding of images in a raster file.</p>
+<ul>
+<li>Distribute the <a href="Personal Favicon Project" target="_blank">Activity Guide - Personal Favicon Project</a> and review the criteria for the project.</li>
+<li>Students will need a decent amount of work time to create their favicon.  You might get them started in class and then assign it as homework.   </li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>Submission:</strong> You should ask students to submit a .png version of their favicon, blown up to a larger size.  And ask them to send you the bits that made up the image.  </p>
+<ul>
+<li>With the images you can make a class favicon “quilt” by printing them out.</li>
+<li>And you can copy/paste the bits into the pixelation tool to verify that image is correct.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>If you had to send your favicon using the sending bits widget, it would probably take a long time.  Could you compress your image?  How?  Describe in broad strokes the kinds of things you could do.</li>
+<li>Read <a href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter3.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Chapter 3</a>, Ghosts in the Machine, pp. 95-99 (Hiding Information in Images), then answer the following questions:<ul>
+<li>Besides hiding information sent to others, what other uses can steganography have for everyday users? For example, what uses would stenography have for an American businessman in China?</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions:</strong></p>
+<ul>
+<li>How many bits (or bytes) are required to encode an image that is 25 pixels wide and 50 pixels tall, if you encode it with 24 bits per pixel? <ul>
+<li>To help students understand how quickly the bit size of images expands as the image is enlarged, start with smaller numbers (5 X 10) and then incrementally increase the width and height to illustrate the concept.</li>
+</ul>
+</li>
+<li>Imagine that you have an image that is too dark or too bright. Describe how you would alter the RGB settings to brighten or darken it. Give an example. </li>
+</ul>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CPP</strong> - Computing Practice &amp; Programming</summary>
+                    <ul>
+                        
+                            <li><strong>CPP.L2:4</strong> - Demonstrate an understanding of algorithms and their practical application.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L2:13</strong> - Understand the notion of hierarchy and abstraction in computing including high level languages, translation, instruction set and logic circuits.</li>
+                        
+                            <li><strong>CT.L2:14</strong> - Examine connections between elements of mathematics and computer science including binary numbers, logic, sets and functions.</li>
+                        
+                            <li><strong>CT.L2:7</strong> - Represent data in a variety of ways including text, sounds, pictures and numbers.</li>
+                        
+                            <li><strong>CT.L2:8</strong> - Use visual representations of problem states, structures and data (e.g., graphs, charts, network diagrams, flowcharts).</li>
+                        
+                            <li><strong>CT.L2:9</strong> - Interact with content-specific models and simulations (e.g., ecosystems, epidemics, molecular dynamics) to support learning and research.</li>
+                        
+                            <li><strong>CT.L3A:6</strong> - Analyze the representation and trade-offs among various forms of digital information.</li>
+                        
+                            <li><strong>CT.L3B:8</strong> - Use models and simulations to help formulate, refine, and test scientific hypotheses.</li>
+                        
+                            <li><strong>CT.L3B:9</strong> - Analyze data and identify patterns through modeling and simulation.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>1.1</strong> - Creative development can be an essential process for creating computational artifacts.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>1.1.1</strong> - Apply a creative development process when creating computational artifacts. [P2]</summary>
+                            <ul>
+                                
+                                    <li><strong>1.1.1A</strong> - A creative process in the development of a computational artifact can include, but is not limited to, employing nontraditional, nonprescribed techniques; the use of novel combinations of artifacts, tools, and techniques; and the exploration of personal curiosities.</li>
+                                
+                                    <li><strong>1.1.1B</strong> - Creating computational artifacts employs an iterative and often exploratory process to translate ideas into tangible form.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>1.2</strong> - Computing enables people to use creative development processes to create computational artifacts for creative expression or to solve a problem.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>1.2.1</strong> - Create a computational artifact for creative expression. [P2]</summary>
+                            <ul>
+                                
+                                    <li><strong>1.2.1A</strong> - A computational artifact is anything created by a human using a computer and can be, but is not limited to, a program, an image, audio, video, a presentation, or a web page file.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>1.3</strong> - Computing can extend traditional forms of human expression and experience.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>1.3.1</strong> - Use computing tools and techniques for creative expression. [P2]</summary>
+                            <ul>
+                                
+                                    <li><strong>1.3.1C</strong> - Digital images can be created by generating pixel patterns, manipulating existing digital images, or combining images.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.1</strong> - A variety of abstractions built upon binary sequences can be used to represent all digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.1</strong> - Describe the variety of abstractions used to represent data. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.1A</strong> - Digital data is represented by abstractions at different levels.</li>
+                                
+                                    <li><strong>2.1.1B</strong> - At the lowest level, all digital data are represented by bits.</li>
+                                
+                                    <li><strong>2.1.1C</strong> - At a higher level, bits are grouped to represent abstractions, including but not limited to numbers, characters, and color.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.2</strong> - Explain how binary sequences are used to represent digital data. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.2D</strong> - The interpretation of a binary sequence depends on how it is used.</li>
+                                
+                                    <li><strong>2.1.2E</strong> - A sequence of bits may represent instructions or data.</li>
+                                
+                                    <li><strong>2.1.2F</strong> - A sequence of bits may represent different types of data in different contexts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.2</strong> - Multiple levels of abstraction are used to write programs or create other computational artifacts</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.2.1</strong> - Develop an abstraction when writing a program or creating other computational artifacts. [P2]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.2.1A</strong> - The process of developing an abstraction involves removing detail and generalizing functionality.</li>
+                                
+                                    <li><strong>2.2.1B</strong> - An abstraction extracts common features from specific examples in order to generalize concepts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.3</strong> - Models and simulations use abstraction to generate new understanding and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.3.1</strong> - Use models and simulations to represent phenomena. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.3.1A</strong> - Models and simulations are simplified representations of more complex objects or phenomena.</li>
+                                
+                                    <li><strong>2.3.1B</strong> - Models may use different abstractions or levels of abstraction depending on the objects or phenomena being posed.</li>
+                                
+                                    <li><strong>2.3.1C</strong> - Models often omit unnecessary features of the objects or phenomena that are being modeled.</li>
+                                
+                                    <li><strong>2.3.1D</strong> - Simulations mimic real world events without the cost or danger of building and testing the phenomena in the real world.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.1</strong> - People use computer programs to process information to gain insight and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.1</strong> - Use computers to process information, find patterns, and test hypotheses about digitally processed information to gain insight and knowledge. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.1A</strong> - Computers are used in an iterative and interactive way when processing digital information to gain insight and knowledge.</li>
+                                
+                                    <li><strong>3.1.1D</strong> - Insight and knowledge can be obtained from translating and transforming digitally represented information.</li>
+                                
+                                    <li><strong>3.1.1E</strong> - Patterns can emerge when data is transformed using computational tools.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.2</strong> - Collaborate when processing information to gain insight and knowledge. [P6]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.2A</strong> - Collaboration is an important part of solving data driven problems.</li>
+                                
+                                    <li><strong>3.1.2B</strong> - Collaboration facilitates solving computational problems by applying multiple perspectives, experiences, and skill sets.</li>
+                                
+                                    <li><strong>3.1.2C</strong> - Communication between participants working on data driven problems gives rise to enhanced insights and knowledge.</li>
+                                
+                                    <li><strong>3.1.2D</strong> - Collaboration in developing hypotheses and questions, and in testing hypotheses and answering questions, about data helps participants gain insight and knowledge.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.3</strong> - Explain the insight and knowledge gained from digitally processed data by using appropriate visualizations, notations, and precise language. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.3A</strong> - Visualization tools and software can communicate information about data.</li>
+                                
+                                    <li><strong>3.1.3E</strong> - Interactivity with data is an aspect of communicating.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.2</strong> - Computing facilitates exploration and the discovery of connections in information.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.2.1</strong> - Extract information from data to discover and explain connections, patterns, or trends. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.2.1G</strong> - Metadata is data about data.</li>
+                                
+                                    <li><strong>3.2.1H</strong> - Metadata can be descriptive data about an image, a Web page, or other complex objects.</li>
+                                
+                                    <li><strong>3.2.1I</strong> - Metadata can increase the effective use of data or data sets by providing additional information about various aspects of that data.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.3</strong> - There are trade offs when representing information as digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.3.1</strong> - Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.3.1A</strong> - Digital data representations involve trade  offs related to storage, security, and privacy concerns.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+
+    <script type="text/javascript">
+        $('#tocencoding-color-images').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#encoding-color-imagescontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'encoding-color-images', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+        $(function(){
+            $('.togglesay').live('click', function() {
+                $('.say').slideToggle();
+                $('.togglesay').toggle();
+            });
+        });
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            //$('<input type="checkbox" class="todo" name="' + (count++) + '"/>').prependTo(".prep ul li");
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+            // read the current/previous setting
+            $("input.todo").each(function() {
+                var mycookie = $.cookie($(this).attr('name'));
+                if (mycookie && mycookie == "true") {
+                    $(this).prop('checked', mycookie);
+                }
+            });
+            $("input.todo").change(function() {
+                $.cookie($(this).attr("name"), $(this).prop('checked'), {
+                    path: '/',
+                    expires: 365
+                });
+            });
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+    <!--<script type="text/javascript">
+        jQuery(function ($) {
+            $('body').annotator();
+        });
+    </script>-->
+
+    <!--<script type="text/javascript">
+        $(function() {
+            // Add conditional classname based on support
+            $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+            // Emulate <details> where necessary and enable open/close event handlers
+            $('details').details();
+            // Bind some example event handlers
+            $('details').on({
+                'open.details': function() {
+                    console.log('opened');
+                },
+                'close.details': function() {
+                    console.log('closed');
+                }
+            });
+        });
+    </script>-->
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+<!--<script async defer src="https://factlink.com/lib/dist/factlink_loader.min.js"></script>-->
+</body>
+</html>

@@ -20,18 +20,6 @@
     "version": "8.0"
   },
   {
-    "name": "IE9Win7",
-    "browserName": "Internet Explorer",
-    "version": "9.0",
-    "platform": "Windows 7"
-  },
-  {
-    "name": "IE10Win7",
-    "browserName": "Internet Explorer",
-    "version": "10.0",
-    "platform": "Windows 7"
-  },
-  {
     "name": "IE11Win10",
     "browserName": "Internet Explorer",
     "version": "11.0",
@@ -44,9 +32,9 @@
     "platform": "OS X 10.10"
   },
   {
-    "name": "FirefoxLatestWin7",
+    "name": "Firefox45Win7",
     "browserName": "firefox",
-    "version": "latest",
+    "version": "45.0",
     "platform": "Windows 7"
   },
   {

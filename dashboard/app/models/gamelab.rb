@@ -28,6 +28,8 @@ class Gamelab < Blockly
   serialized_attrs %w(
     free_play
     text_mode_at_start
+    show_d_pad
+    soft_buttons
     submittable
     data_properties
     hide_view_data_button
@@ -39,15 +41,21 @@ class Gamelab < Blockly
     ['gamelab']
   end
 
+  # List of possible palette categories
+  def self.palette_categories
+    %w(gamelab sprites groups input control math variables functions)
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
-        user: params[:user],
-        game: Game.gamelab,
-        level_num: 'custom',
-        properties: {
-          code_functions: JSON.parse(palette),
-          edit_code: true
-        }
+      user: params[:user],
+      game: Game.gamelab,
+      level_num: 'custom',
+      properties: {
+        code_functions: JSON.parse(palette),
+        show_d_pad: true,
+        edit_code: true
+      }
     ))
   end
 
@@ -68,27 +76,25 @@ class Gamelab < Blockly
     <<-JSON.strip_heredoc.chomp
       {
         // Game Lab
-        "fill": null,
-        "noFill": null,
-        "stroke": null,
-        "strokeWeight": null,
-        "noStroke": null,
-        "arc": null,
-        "ellipse": null,
-        "line": null,
-        "point": null,
-        "rect": null,
-        "regularPolygon": null,
-        "shape": null,
-        "text": null,
-        "textAlign": null,
-        "textFont": null,
-        "textSize": null,
+        "draw": null,
         "drawSprites": null,
-        "background": null,
         "Game.allSprites": null,
         "Game.width": null,
         "Game.height": null,
+        "Game.mouseX": null,
+        "Game.mouseY": null,
+        "Game.frameRate": null,
+        "Game.frameCount": null,
+        "playSound": null,
+        "keyDown": null,
+        "keyWentDown": null,
+        "keyWentUp": null,
+        "mouseDidMove": null,
+        "mouseDown": null,
+        "mouseIsOver": null,
+        "mouseWentDown": null,
+        "mouseWentUp": null,
+        "mousePressedOver": null,
         "camera.on": null,
         "camera.off": null,
         "camera.isActive": null,
@@ -97,22 +103,23 @@ class Gamelab < Blockly
         "camera.x": null,
         "camera.y": null,
         "camera.zoom": null,
-        "playSound": null,
+        "comment_GameLab": null,
 
         // Sprites
         "var sprite = createSprite": null,
         "setSpeed": null,
         "getDirection": null,
         "getSpeed": null,
-        "remove": null,
+        "isTouching": null,
+        "destroy": null,
+        "pointTo": null,
         "bounce": null,
+        "bounceOff": null,
         "collide": null,
         "displace": null,
         "overlap": null,
-        "changeAnimation": null,
+        "setAnimation": null,
         "setCollider": null,
-        "setColor": null,
-        "setColorRGB": null,
         "setVelocity": null,
         "sprite.height": null,
         "sprite.width": null,
@@ -131,25 +138,31 @@ class Gamelab < Blockly
         "rotation": null,
         "rotationSpeed": null,
         "scale": null,
+        "shapeColor": null,
         "velocityX": null,
         "velocityY": null,
         "visible": null,
+        "comment_Sprites": null,
 
         // Groups
         "var group = createGroup": null,
         "add": null,
-        "group.remove": null,
+        "remove": null,
         "clear": null,
         "contains": null,
         "get": null,
+        "group.isTouching": null,
         "group.bounce": null,
+        "group.bounceOff": null,
         "group.collide": null,
         "group.displace": null,
         "group.overlap": null,
         "maxDepth": null,
         "minDepth": null,
+        "destroyEach": null,
+        "pointToEach": null,
+        "setAnimationEach": null,
         "setColorEach": null,
-        "setColorRGBEach": null,
         "setColliderEach": null,
         "setDepthEach": null,
         "setHeightEach": null,
@@ -166,25 +179,35 @@ class Gamelab < Blockly
         "setVelocityYEach": null,
         "setVisibleEach": null,
         "setWidthEach": null,
+        "comment_Groups": null,
 
-        // Input
-        "keyDown": null,
-        "keyWentDown": null,
-        "keyWentUp": null,
-        "mouseDidMove": null,
-        "mouseDown": null,
-        "mouseIsOver": null,
-        "mouseWentDown": null,
-        "mouseWentUp": null,
-        "mousePressedOver": null,
-        "Game.mouseX": null,
-        "Game.mouseY": null,
+        // Drawing
+        "background": null,
+        "fill": null,
+        "noFill": null,
+        "stroke": null,
+        "strokeWeight": null,
+        "noStroke": null,
+        "color": null,
+        "arc": null,
+        "ellipse": null,
+        "line": null,
+        "point": null,
+        "rect": null,
+        "regularPolygon": null,
+        "shape": null,
+        "text": null,
+        "textAlign": null,
+        "textFont": null,
+        "textSize": null,
+        "comment_Drawing": null,
 
         // Control
         "forLoop_i_0_4": null,
         "ifBlock": null,
         "ifElseBlock": null,
         "whileBlock": null,
+        "comment_Control": null,
 
         // Math
         "addOperator": null,
@@ -206,11 +229,13 @@ class Gamelab < Blockly
         "mathMax": null,
         "mathMin": null,
         "mathRandom": null,
+        "comment_Math": null,
 
         // Variables
         "declareAssign_x": null,
         "declareNoAssign_x": null,
         "assign_x": null,
+        "console.log": null,
         "declareAssign_str_hello_world": null,
         "substring": null,
         "indexOf": null,
@@ -220,13 +245,15 @@ class Gamelab < Blockly
         "toLowerCase": null,
         "declareAssign_list_abd": null,
         "listLength": null,
+        "comment_Variables": null,
 
         // Functions
         "functionParams_none": null,
         "functionParams_n": null,
         "callMyFunction": null,
         "callMyFunction_n": null,
-        "return": null
+        "return": null,
+        "comment": null
       }
     JSON
   end

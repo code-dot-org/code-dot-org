@@ -1,7 +1,7 @@
 // avatar: A 1029x51 set of 21 avatar images.
 
-exports.load = function(assetUrl, id) {
-  var skinUrl = function(path) {
+exports.load = function (assetUrl, id) {
+  var skinUrl = function (path) {
     if (path !== undefined) {
       return assetUrl('media/skins/' + id + '/' + path);
     } else {

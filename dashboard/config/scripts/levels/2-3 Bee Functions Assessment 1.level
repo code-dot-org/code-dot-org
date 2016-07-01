@@ -35,7 +35,12 @@
     "fast_get_nectar_animation": "true"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1,
+    "functions": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

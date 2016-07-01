@@ -1,6 +1,8 @@
 'use strict';
 
-var RotateContainer = require('../templates/RotateContainer.jsx');
+var React = require('react');
+var RotateContainer = require('../templates/RotateContainer');
+var connect = require('react-redux').connect;
 
 /**
  * Wrapper component for all Code Studio app types, which provides rotate
@@ -27,4 +29,10 @@ var StudioAppWrapper = React.createClass({
     );
   }
 });
-module.exports = StudioAppWrapper;
+module.exports = connect(function propsFromStore(state) {
+  return {
+    assetUrl: state.pageConstants.assetUrl,
+    isEmbedView: state.pageConstants.isEmbedView,
+    isShareView: state.pageConstants.isShareView
+  };
+})(StudioAppWrapper);

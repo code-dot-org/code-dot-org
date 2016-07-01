@@ -374,8 +374,8 @@ levels.k1_3 = utils.extend(levels.dog_move_cat,  {
   'isK1': true,
   'requiredBlocks': [
     [{
-      test: function(block) {
-        return block.type == 'studio_moveEastDistance';
+      test: function (block) {
+        return block.type === 'studio_moveEastDistance';
       },
       type: 'studio_moveEastDistance'}]
   ],
@@ -470,16 +470,16 @@ levels.k1_4 = utils.extend(levels.dog_move_cat_hello,  {
   'isK1': true,
   'requiredBlocks': [
     [{
-      test: function(block) {
-        return block.type == 'studio_moveEastDistance';
+      test: function (block) {
+        return block.type === 'studio_moveEastDistance';
       },
       type: 'studio_moveEastDistance',
     }],
     [{
-      test: function(block) {
+      test: function (block) {
         // Make sure they have the right block, and have changed the default
         // text
-        return block.type == 'studio_saySprite' &&
+        return block.type === 'studio_saySprite' &&
           block.getTitleValue("SPRITE") === '1' &&
           block.getTitleValue("TEXT") !== msg.defaultSayText();
       },
@@ -1610,13 +1610,13 @@ levels.k1_6 = {
   'freePlay': true,
   'map': [
     [16, 0,16, 0,16, 0,16, 0],
-    [ 0,16, 0,16, 0,16, 0, 0],
+    [0,16, 0,16, 0,16, 0, 0],
     [16, 0,16, 0,16, 0,16, 0],
-    [ 0,16, 0,16, 0,16, 0, 0],
+    [0,16, 0,16, 0,16, 0, 0],
     [16, 0,16, 0,16, 0,16, 0],
-    [ 0,16, 0,16, 0,16, 0, 0],
+    [0,16, 0,16, 0,16, 0, 0],
     [16,16,16,16,16,16,16, 0],
-    [ 0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   'isK1': true,
   softButtons: [],
@@ -1888,7 +1888,7 @@ levels.js_hoc2015_move_right = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'main',
-  'music': [ 'song1' ],
+  'music': ['song1'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1958,7 +1958,7 @@ levels.js_hoc2015_move_right_down = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'main',
-  'music': [ 'song2' ],
+  'music': ['song2'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2007,7 +2007,7 @@ levels.js_hoc2015_move_backtrack = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'main',
-  'music': [ 'song3' ],
+  'music': ['song3'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2059,7 +2059,7 @@ levels.js_hoc2015_move_diagonal = {
   executePaletteApisOnly: true,
   'textModeAtStart': true,
   'background': 'main',
-  'music': [ 'song4' ],
+  'music': ['song4'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2131,7 +2131,7 @@ levels.js_hoc2015_move_around = {
   executePaletteApisOnly: true,
   'textModeAtStart': true,
   'background': 'main',
-  'music': [ 'song9' ],
+  'music': ['song9'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2183,7 +2183,7 @@ levels.js_hoc2015_move_finale = {
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
   'background': 'main',
-  'music': [ 'song8' ],
+  'music': ['song8'],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -2257,7 +2257,7 @@ levels.js_hoc2015_event_two_items = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'hoth',
-  'music': [ 'song7' ],
+  'music': ['song7'],
   'wallMap': 'blank',
   'softButtons': ['downButton', 'upButton'],
   'codeFunctions': {
@@ -2355,7 +2355,7 @@ levels.js_hoc2015_event_four_items = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'hoth',
-  'music': [ 'song5' ],
+  'music': ['song5'],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2422,7 +2422,7 @@ levels.js_hoc2015_score =
   preventUserDefinedFunctions: true,
   'editCode': true,
   'background': 'hoth',
-  'music': [ 'song6' ],
+  'music': ['song6'],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
@@ -2545,7 +2545,7 @@ levels.js_hoc2015_win_lose = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'endor',
-  'music': [ 'song9' ],
+  'music': ['song9'],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2649,7 +2649,7 @@ levels.js_hoc2015_add_characters = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'endor',
-  'music': [ 'song11' ],
+  'music': ['song11'],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2750,7 +2750,7 @@ levels.js_hoc2015_chain_characters = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'starship',
-  'music': [ 'song13' ],
+  'music': ['song13'],
   'wallMap': 'horizontal',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2851,7 +2851,7 @@ levels.js_hoc2015_multiply_characters = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'starship',
-  'music': [ 'song12' ],
+  'music': ['song12'],
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2939,7 +2939,7 @@ levels.js_hoc2015_change_setting = {
   executePaletteApisOnly: true,
   preventUserDefinedFunctions: true,
   'background': 'starship',
-  'music': [ 'song14' ],
+  'music': ['song14'],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -3040,9 +3040,10 @@ levels.js_hoc2015_change_setting = {
 };
 
 var js_hoc2015_event_free_markdown = [
-  '<span class="character-text">' + msg.hoc2015_event_free_instructions() + '</span>',
+  '<div class="js_hoc2015_event_free_markdown">',
+  '<p><span class="character-text">' + msg.hoc2015_event_free_instructions() + '</span></p>',
   '',
-  '<span class="instructions2">' + msg.hoc2015_event_free_instructions2() + '</span>',
+  '<p><span class="instructions2">' + msg.hoc2015_event_free_instructions2() + '</span></p>',
   '',
   '<details class="hoc2015">',
   '<summary>Example project ideas</summary>',
@@ -3088,14 +3089,15 @@ var js_hoc2015_event_free_markdown = [
   'You can change the speed of any character with the moveFast, moveNormal, and moveSlow commands.',
   '</p>',
   '',
-  '</details>'
+  '</details>',
+  '</div>',
 ].join('\r\n');
 
 levels.js_hoc2015_event_free = {
   'editCode': true,
   'freePlay': true,
   'background': 'endor',
-  'music': [ 'song15' ],
+  'music': ['song15'],
   'wallMap': 'blank',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {

@@ -14,13 +14,13 @@ class TestFlakiness
   MIN_SAMPLES = 10
   TEST_ACCOUNT_USERNAME = 'testcodeorg'
 
-  def TestFlakiness.calculate_test_flakiness
+  def self.calculate_test_flakiness
     jobs = []
 
     NUM_REQUESTS.times do
       # docs for this API: https://wiki.saucelabs.com/display/DOCS/Job+Methods
       url =  "https://saucelabs.com/rest/v1/#{TEST_ACCOUNT_USERNAME}/jobs"
-      url += "?" + URI::encode_www_form(limit: PER_REQUEST, full: 'true', skip: jobs.count)
+      url += "?" + URI.encode_www_form(limit: PER_REQUEST, full: 'true', skip: jobs.count)
 
       response = RestClient::Request.execute(method: :get,
                                              url: url,
@@ -47,7 +47,7 @@ class TestFlakiness
   CACHE_FILENAME = File.dirname(__FILE__) + "/../../dashboard/tmp/cache/flakiness.json"
   CACHE_TTL = 86400 # 1 day of seconds
 
-  def TestFlakiness.cache_test_flakiness
+  def self.cache_test_flakiness
     if File.exist?(CACHE_FILENAME) &&
         (Time.now - File.mtime(CACHE_FILENAME)) < CACHE_TTL
       return JSON.parse(File.read(CACHE_FILENAME))
@@ -60,7 +60,7 @@ class TestFlakiness
     @@test_flakiness
   end
 
-  def TestFlakiness.test_flakiness
+  def self.test_flakiness
     @@test_flakiness ||= cache_test_flakiness
   end
 end

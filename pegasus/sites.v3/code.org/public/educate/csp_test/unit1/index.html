@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols">
+    <title>Computer Science Principles | The Internet</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit1/"><span class="h2">Unit</span><span class="h1">1</span></a></div>
+
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch1" data-pdf-link="#unit1chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/1" data-pdf-link="#unit1lesson1">
+                1
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/2" data-pdf-link="#unit1lesson2">
+                2
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/3" data-pdf-link="#unit1lesson3">
+                3
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/4" data-pdf-link="#unit1lesson4">
+                4
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/5" data-pdf-link="#unit1lesson5">
+                5
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/6" data-pdf-link="#unit1lesson6">
+                6
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/7" data-pdf-link="#unit1lesson7">
+                7
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch2" data-pdf-link="#unit1chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/8" data-pdf-link="#unit1lesson8">
+                8
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/9" data-pdf-link="#unit1lesson9">
+                9
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/10" data-pdf-link="#unit1lesson10">
+                10
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/11" data-pdf-link="#unit1lesson11">
+                11
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/12" data-pdf-link="#unit1lesson12">
+                12
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/13" data-pdf-link="#unit1lesson13">
+                13
+            </a>
+            </div>
+            
+                <div class="lesson unfinished">
+                <a href="/educate/csp_test/unit1/14" data-pdf-link="#unit1lesson14">
+                14
+            </a>
+            </div>
+            
+        
+    
+</div>
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit1">
+        <h1>Unit 1 - The Internet</h1>
+        
+        <p>What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols</p>
+        
+
+        <div class="chapter_overviews">
+            
+
+                <div class="chapter">
+                <h1><a href="ch1/">Chapter 1: Representing and Transmitting Information</a></h1>
+
+                
+                    <div class="big_questions">
+                    <h3>Big Questions</h3>
+                    <ul>
+<li>Why do computers use binary to represent digital information?</li>
+<li>How does data physically get from one computer to another?</li>
+<li>Are the ways data is represented and transmitted with computers laws of nature or a laws of man?</li>
+</ul>
+                </div>
+                
+
+                
+                    <div class="enduring_understandings">
+                    <h3>Enduring Understandings</h3>
+                        <ul>
+                            
+                                <li>2.1 A variety of abstractions built upon binary sequences can be used to represent all digital data.</li>
+                            
+                                <li>3.3 There are trade offs when representing information as digital data.</li>
+                            
+                                <li>6.2 Characteristics of the Internet influence the systems built on it.</li>
+                            
+                                <li>7.2 Computing enables innovation in nearly every field.</li>
+                            
+                        </ul>
+                    </div>
+                
+
+                
+
+                
+                    <h2>Week 1</h2>
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="1">Lesson 1: Personal Innovations</a></h3>
+                            <h4>
+                            
+                            
+                            </h4>
+                            <span class="lesson_desc">Welcome to Computer Science Principles! The first lesson is about getting students excited about the course and connecting their own personal interests to computer science.  Students are asked to share something they know a lot about and teach it to a small group.  Groups make a “rapid” prototype of an innovative idea and share it.  Students watch a brief video about computing innovations.  The lesson ends with students logging into the Code.org CSP course web site, and answering a brief prompt about what “computer science” means to them.</span>
+                        </div>
+                        
+
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="2">Lesson 2: Sending Binary Messages</a></h3>
+                            <h4>
+                            
+                            
+                            </h4>
+                            <span class="lesson_desc">In this lesson students work in groups using classroom supplies and everyday objects to develop their own systems for encoding and sending simple binary messages, messages that only have two possible values. Students will think about what can be usefully conveyed in such a simple message and build a “device” to communicate the message over some physical distance. 
+Then students are asked to consider how to use their binary messaging devices to send a more complex message - a message with more than two possibilities, say four, or eight, or even thousands of different messages. Students will collaborate in an iterative design process in the “maker ethos” of rapidly building and improving their “device” for sending messages.</span>
+                        </div>
+                        
+
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="3">Lesson 3: Sending Binary Messages with the Internet Simulator</a></h3>
+                            <h4>
+                            
+                            
+                                
+                                Widget
+                            
+                                | 
+                                Internet Simulator
+                            
+                                | 
+                                Group Problem Solving
+                            
+                            </h4>
+                            <span class="lesson_desc">Students are introduced to the Internet Simulator, a tool they will return to many times in the first two units of the course. Today, the Internet Simulator will be used to simulate a single shared wire, connecting two people.  The wire can only be in one of two possible states (state A or state B) and either partner may set or read the state of the wire at any time, but this is the only way in which students may communicate.  Students must invent a binary call-response protocol using this system. Coordination, speed and timing are problems that need to be solved. At the conclusion of the lesson, students compete to demonstrate the speed and accuracy of their protocols, and calculate the bit rate of their message exchange.</span>
+                        </div>
+                        
+                            
+                                <div class="lesson_overview optional">
+                                    <h3><a href="3/optional/1">Optional Lesson: Sending Bits in the Real World</a></h3>
+                                    <h4>
+                                    
+                                    
+                                        
+                                        Optional
+                                    
+                                    </h4>
+                                    <span class="lesson_desc">In this lesson, students will be introduced to how bits are transmitted over the most common mediums (copper wire, fiber-optic cable, and radio waves) used to connect devices on the Internet.  They then chose a device that transmits bits and research that device and the system it uses.  Students create a poster presenting their findings, and the lesson concludes with a gallery walk of the posters. </span>
+                                </div>
+                            
+                        
+
+                    
+                
+                    <h2>Week 2</h2>
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="4">Lesson 4: Number Systems</a></h3>
+                            <h4>
+                            
+                            
+                            </h4>
+                            <span class="lesson_desc">Students will explore the properties of number systems by effectively inventing a base-3 number system using circles, triangles and squares as the symbols instead of arabic numerals. Students are asked to create rules that explain how each arrangement of symbols can be generated or predicated as an orderly, logical series.  The objective is to understand that you can represent any number with any agreed-upon set of symbols that appear in an agreed-upon order. This is as true for circles, triangle and squares as it is for the digits 0-9, or the number systems we commonly see in computer science (binary and hexadecimal).</span>
+                        </div>
+                        
+
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="5">Lesson 5: Binary Numbers</a></h3>
+                            <h4>
+                            
+                            
+                            </h4>
+                            <span class="lesson_desc">In this lesson, students will gain more familiarity with binary numbers. The lesson will transition away from the number systems that students created in the the circle-triangle-square activity, and begin to focus on representing numeric values using the binary number system. Though students have communicated with Binary before, developing a number system is a little different. Previously, students mapped patters of binary values to a small, fixed set of messages. A number system is infinite, and also has rules for counting - or how to get from one value to the next.</span>
+                        </div>
+                        
+
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="6">Lesson 6: Sending Numbers</a></h3>
+                            <h4>
+                            
+                            
+                            </h4>
+                            <span class="lesson_desc">In this lesson students will return to the Internet Simulator in order to send a simple line drawing to a classmate. Students will be presented a grid on which they will draw their image (connecting 3-7 dots with straight lines). They must develop a protocol which will allow them to send any image they might create on their grids, paying particular attention to how many bits are used to represent each binary number. Students will therefore have additional practice encoding and decoding binary numbers and develop further intuitions about the properties of binary numbers in a hands-on way. The lesson concludes by testing protocols using a teacher-supplied test-image to transmit. </span>
+                        </div>
+                        
+                            
+                                <div class="lesson_overview optional">
+                                    <h3><a href="6/optional/2">Optional Lesson: Encoding Numbers in the Real World</a></h3>
+                                    <h4>
+                                    
+                                    
+                                        
+                                        Optional
+                                    
+                                    </h4>
+                                    <span class="lesson_desc">In this lesson, students explore some fascinating stories from the news and history (and the future) about number encodings in computers. These stories should serve to illuminate how the kinds of decisions students have been making about number encodings are the same kinds of things that real scientists in the world have to worry about, sometimes with disastrous consequences. While this lesson has the possibility of running long, it is meant only as a short excursion into real-world application and should be limited to one class period. </span>
+                                </div>
+                            
+                        
+
+                    
+                
+                    <h2>Week 3</h2>
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="7">Lesson 7: Encoding and Sending Formatted Text</a></h3>
+                            <h4>
+                            
+                            
+                                
+                                Group Problem Solving
+                            
+                                | 
+                                Internet Simulator
+                            
+                                | 
+                                Widget
+                            
+                            </h4>
+                            <span class="lesson_desc">In this lesson, students are first introduced to the standard number-to-text encoding scheme used in computers and on the Internet known as ASCII encoding. Students will invent a communication protocol that uses only plain text ASCII characters to encode fancier formatting for text such as fonts, colors, sizes, etc.   Students will demonstrate their protocol by using the Internet Simulator to send an encoded message to a partner, who must correctly interpret the formatting and draw the result on a piece of paper.</span>
+                        </div>
+                        
+
+                    
+                
+                </div>
+                <hr/>
+            
+
+                <div class="chapter">
+                <h1><a href="ch2/">Chapter 2: Inventing the Internet</a></h1>
+
+                
+
+                
+
+                
+
+                
+                    <h2>Week 3</h2>
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="8">Lesson 8: The Internet Is for Everyone</a></h3>
+                            <h4>
+                            
+                            
+                            </h4>
+                            <span class="lesson_desc">This lesson sets the the stage for why we want to learn about how the Internet works. First students share what they currently know about how the Internet works through a KWL activity.  </span>
+                        </div>
+                        
+
+                    
+                
+                    <h2>Week 4</h2>
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="9">Lesson 9: The Need for Addressing</a></h3>
+                            <h4>
+                            
+                            
+                                
+                                Group Problem Solving
+                            
+                                | 
+                                Internet Simulator
+                            
+                                | 
+                                Unplugged
+                            
+                                | 
+                                Widget
+                            
+                            </h4>
+                            <span class="lesson_desc">In this lesson, students explore more deeply how communication between multiple computers can work over the Internet. They do this by playing a simplified game of Battleship, in which the first game is played unplugged, in their table groups, and the second game is played using the Internet Simulator, so that multiple students can connect to each other and see each other’s messages. Students must devise a messaging protocol that makes it clear who is sending the message and who the intended recipient is.</span>
+                        </div>
+                        
+
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="10">Lesson 10: Routers and Redundancy</a></h3>
+                            <h4>
+                            
+                            
+                            </h4>
+                            <span class="lesson_desc">In this lesson students explore the benefits (and potential security concerns) associated with routing traffic across the Internet. Building on their introduction to IP addresses in the previous lesson, students use a version of the Internet Simulator that allows messages to be sent only to an intended recipient, as indicated by the IP address. The Internet Simulator also allows students to examine the traffic that goes through all of the (simulated) routers on the network. They will discover that messages go through many different routers, may not always take the same path to reach the final destinaton, and that the routers (and their owners) can see all of this traffic!</span>
+                        </div>
+                        
+
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="11">Lesson 11: Packets and Making a Reliable Internet</a></h3>
+                            <h4>
+                            
+                            
+                            </h4>
+                            <span class="lesson_desc">In this lesson student develop a protocol for reliably sending a message over an unreliable internet.  The Internet Simulator has been setup for this lesson to restrict messages to no more than 6 characters each, and messages get dropped messages with some probability on every hop.</span>
+                        </div>
+                        
+                            
+                                <div class="lesson_overview optional">
+                                    <h3><a href="11/optional/1">Optional Lesson: Algorithms Detour - Minimum Spanning Tree</a></h3>
+                                    <h4>
+                                    
+                                    
+                                        
+                                        Optional
+                                    
+                                    </h4>
+                                    <span class="lesson_desc">In this and the subsequent lesson, we consider some of the strategies used to construct networks and find paths for data in them. While this has a connection to ideas about the Internet, the focus of these lessons is on algorithms, formal techniques, and processes for solving problems. Students will explore and solve the Minimum Spanning Tree (MST) problem, first, in an unplugged fashion on paper. The real challenge is not in solving a particular instance of the minimum spanning tree, but to develop an algorithm, a clear series of steps, that if followed properly, will solve any instance of the problem. There is a possible misconception to look out for: the MST has a definite, verifiable optimal solution, as opposed to the Text Compression problem (from Unit 1), which does not.</span>
+                                </div>
+                            
+                                <div class="lesson_overview optional">
+                                    <h3><a href="11/optional/2">Optional Lesson: Algorithms Detour - Shortest Path</a></h3>
+                                    <h4>
+                                    
+                                    
+                                        
+                                        Optional
+                                    
+                                    </h4>
+                                    <span class="lesson_desc">In this lesson students will explore the Single Source Shortest Path problem, by solving the problem with pencil and paper first, then by following a famous algorithm that solves the shortest path problem known as Dijkstra’s Algorithm.  Even though this is an algorithms detour, there is a strong connection in this lesson to routing algorithms used on the Internet.  This lesson also introduces ideas about how we analyze algorithms: looking for correctness, efficiency and running time.  As foreshadowing: in the next lesson students will act out another distributed shortest path algorithm used by routers to learn about the Internet dynamically.</span>
+                                </div>
+                            
+                                <div class="lesson_overview optional">
+                                    <h3><a href="11/optional/3">Optional Lesson: How Routers Learn</a></h3>
+                                    <h4>
+                                    
+                                    
+                                        
+                                        Optional
+                                    
+                                    </h4>
+                                    <span class="lesson_desc">This lesson is the last of the algorithm series. Building off of the previous lesson about shortest path algorithms, the activity in this lesson shows how routers learn about the rest of the Internet in order to route traffic so it takes the shortest path. In the previous lessons, students use the Internet Simulator to send packets to other students through simulated routers. The path that the packet follows, and how the router knows where to send it, however, has been largely untouched. Today, students simulate the process of a router joining a network and generating a router table that would allow them to send packets to anyone else in their network as efficiently as possible. They then reflect on the process by comparing the similarities between the SSSP problem and the process the used today, and how it facilitates the structure of the Internet.</span>
+                                </div>
+                            
+                        
+
+                    
+                
+                    <h2>Week 5</h2>
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="12">Lesson 12: The Need for DNS and DNS in the Real World</a></h3>
+                            <h4>
+                            
+                            
+                                
+                                Unplugged
+                            
+                                | 
+                                Group Problem Solving
+                            
+                                | 
+                                Widget
+                            
+                                | 
+                                Internet Simulator
+                            
+                                | 
+                                Research
+                            
+                            </h4>
+                            <span class="lesson_desc">The core idea of this lesson occurs in the unplugged activity that kicks off the lesson, in which students try to keep track of IP addresses that had been randomly assigned to each student in the class, while at the same time the teacher occasionally changes students’ addresses.  This leads to identifying the need for an authoritative system for name-to-address mappings, known as the Domain Name System or DNS.</span>
+                        </div>
+                        
+
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="13">Lesson 13: HTTP and Abstraction on the Internet</a></h3>
+                            <h4>
+                            
+                            
+                            </h4>
+                            <span class="lesson_desc">In this lesson students are introduced to another high-level protocols of the Internet, HTTP. The lesson begins with a review of the layers of the Internet covered thus far, before transitioning to a video covering high-level protocols of the Internet, most notably HTTP. Students will investigate HTTP traffic generated within their own browser by accessing the browser’s developer tools and visiting a variety of websites. A handout summarizing the structure of HTTP is provided to help students understand the components of the HTTP requests and responses they will observe. The lesson concludes with students sharing their findings with their classmates and a reflection on how the layers of the Internet make use of abstraction.</span>
+                        </div>
+                        
+
+                    
+                        <div class="lesson_overview">
+                            <h3><a href="14">Lesson 14: Practice PT - The Internet and Society</a></h3>
+                            <h4>
+                            
+                            
+                                
+                                Practice PT
+                            
+                            </h4>
+                            <span class="lesson_desc">This lesson is a capstone to the Internet unit. Students will research and prepare a flash talk about an issue facing society: either Net Neutrality or Internet Censorship. Developing an informed opinion about these issues hinges on an understanding of how the Internet functions as a system.  Students will prepare and deliver a flash talk that should combine forming an opinion about the issue and an exhibition of their knowledge of the internet.</span>
+                        </div>
+                        
+
+                    
+                
+                </div>
+                
+            
+        </div>
+
+    </div>
+
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

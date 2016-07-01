@@ -2,7 +2,6 @@ name 'U6 - deleteRecord - Student Introduction'
 title 'title'
 description 'description here'
 css 'unplugged'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 4: Lesson 04 - Deleting Records
 

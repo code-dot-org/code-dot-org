@@ -4,6 +4,45 @@ class AdminSearchController < ApplicationController
   before_action :require_admin
   check_authorization
 
+  def find_students
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @max_users = 50
+      @users = User.with_deleted
+
+      # If requested, filter...
+      if params[:studentNameFilter].present?
+        @users = @users.where("name LIKE ?", "%#{params[:studentNameFilter]}%")
+      end
+      if params[:studentEmailFilter].present?
+        @users = @users.where("email LIKE ?", "%#{params[:studentEmailFilter]}%")
+      end
+      if params[:teacherNameFilter].present? || params[:teacherEmailFilter].present?
+        teachers = User.
+          where("name LIKE ?", "%#{params[:teacherNameFilter]}%").
+          where("email LIKE ?", "%#{params[:teacherEmailFilter]}%").
+          all
+        if teachers.count > 1
+          # TODO(asher): Display a warning to the admin that multiple teachers
+          # matched.
+        end
+        if teachers.first
+          array_of_student_ids = Follower.
+            where(user_id: teachers.first[:id]).pluck('student_user_id').to_a
+          @users = @users.where(id: array_of_student_ids)
+        end
+      end
+      if params[:sectionFilter].present?
+        array_of_student_ids = Section.where(code: params[:sectionFilter]).
+          joins("INNER JOIN followers ON followers.section_id = sections.id").
+          pluck('student_user_id').
+          to_a
+        @users = @users.where(id: array_of_student_ids)
+      end
+
+      @users = @users.limit(@max_users)
+    end
+  end
+
   def lookup_section
     @section = Section.find_by_code params[:section_code]
     if params[:section_code] && @section.nil?

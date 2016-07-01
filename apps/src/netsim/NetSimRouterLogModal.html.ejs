@@ -31,8 +31,8 @@ var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &
  */
 
 function sortMarkupFor(sortKey) {
-  if (sortKey === sortBy) {
-    if (sortDescending) {
+  if (sortKey === locals.sortBy) {
+    if (locals.sortDescending) {
       return '<i class="fa fa-sort-desc"></i>';
     } else {
       return '<i class="fa fa-sort-asc"></i>';
@@ -45,11 +45,11 @@ function sortMarkupFor(sortKey) {
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
-      <% if (canToggleRouterLogMode) { %>
-        <button type="button" id="routerlog-toggle" class="pull-right btn btn-primary btn-mini"><%= (isAllRouterLogMode) ? i18n.logBrowserHeader_toggleMine() : i18n.logBrowserHeader_toggleAll() %></button>
+      <% if (locals.canToggleRouterLogMode) { %>
+        <button type="button" id="routerlog-toggle" class="pull-right btn btn-primary btn-mini"><%= (locals.isAllRouterLogMode) ? i18n.logBrowserHeader_toggleMine() : i18n.logBrowserHeader_toggleAll() %></button>
       <% } %>
 
-      <% if (isAllRouterLogMode) { %>
+      <% if (locals.isAllRouterLogMode) { %>
         <h4 class="modal-title"><%= i18n.logBrowserHeader_all() %></h4>
       <% } else { %>
         <h4 class="modal-title"><%= i18n.logBrowserHeader_mine() %></h4>

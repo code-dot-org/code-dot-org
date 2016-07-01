@@ -35,7 +35,11 @@
     "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "repeat_loops": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -92,15 +96,11 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">6</title>
-        </block>
-      </xml>
-    </required_blocks>
     <recommended_blocks>
       <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
         <block type="pick_one">
           <statement name="PICK">
             <block type="draw_turn_by_constant">

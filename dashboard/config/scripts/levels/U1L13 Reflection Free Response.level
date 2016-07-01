@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:13.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Conclusion 3: Text Compression",
+    "markdown_instructions": "If you send a compressed segment of text would your friend will be able to read it?  \n\nWhy is the dictionary important?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

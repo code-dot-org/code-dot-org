@@ -1,11 +1,10 @@
-/* global $ */
-
-
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
+import $ from 'jquery';
+var React = require('react');
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
 
 var elementUtils = require('./elementUtils');
 
@@ -84,7 +83,7 @@ var SliderEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getInputEventCode: function() {
+  getInputEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "input", function(event) {\n' +
@@ -93,7 +92,7 @@ var SliderEvents = React.createClass({
     return code;
   },
 
-  insertInput: function() {
+  insertInput: function () {
     this.props.onInsertEvent(this.getInputEventCode());
   },
 

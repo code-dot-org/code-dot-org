@@ -31,4 +31,8 @@ class External < DSLDefined
     href 'path/to/html/in/asset/folder'
     TEXT
   end
+
+  def icon
+    'fa-file-text'
+  end
 end

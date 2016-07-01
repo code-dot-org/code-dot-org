@@ -1,0 +1,34 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/plc', media: 'all'
+
+-# Probably won't need the script when this is no longer under the enrollment unit assignment path
+- preselected_module_ids = @enrollment_unit_assignment.plc_module_assignments.pluck(:plc_learning_module_id)
+
+= form_tag(action: 'confirm_assignments') do
+  .preview_evaluation
+    .module_type_section
+      %h3= t('plc.preview_assignments.content_focus_header')
+      %p
+        %strong= t('plc.preview_assignments.content_focus_strong')
+        = t('plc.preview_assignments.choose_different_focus_area')
+      %p= t('plc.preview_assignments.other_focus_areas_available')
+
+      - @content_learning_modules.each do |content_module|
+        %p
+          %input.radio{type: 'radio', name: 'content_module', value: content_module.id, checked: preselected_module_ids.include?(content_module.id)}
+            = content_module.stage.localized_name
+
+    .module_type_section
+      %h3= t('plc.preview_assignments.practice_focus_header')
+      %p
+        %strong= t('plc.preview_assignments.practice_focus_strong')
+        = t('plc.preview_assignments.choose_different_focus_area')
+      %p= t('plc.preview_assignments.other_focus_areas_available')
+
+      - @practice_learning_modules.each do |practice_module|
+        %p
+          %input.radio{type: 'radio', name: 'practice_module', value: practice_module.id, checked: preselected_module_ids.include?(practice_module.id)}
+            = practice_module.stage.localized_name
+
+  #submit_tag_container
+    = submit_tag(t('plc.preview_assignments.confirm_focus_areas'), id: 'confirm-assignments', class: 'btn btn-primary pull-right')

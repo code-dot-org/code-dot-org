@@ -1,0 +1,29 @@
+name 'v2 U2L5 Student Lesson Introduction'
+title 'Lossy Compression and File Formats'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+## Unit 2: Lesson 5 - Lossy Compression and File Formats
+# Background
+File formats such as JPEG or WAV or MP3 are encoding schemes for organizing and saving the bits that represent images, sounds, or other data. Sometimes all of the bits in data need to be saved, and sometimes they don’t. 
+
+# Vocabulary
+**Lossless:** A compression scheme in which every bit of the original data can be recovered from the compressed file.
+ 
+**Lossy:** A compression scheme in which “useless” or less-than-totally-necessary information is thrown out in order to reduce the size of the data. The eliminated data is unrecoverable.
+
+
+# Lesson
+* Jigsaw Rapid Research on file formats
+* Share your findings
+
+
+# Resources
+
+* <a href='https://docs.google.com/document/d/1h2pWa-RBS3ZbBg7Z_zfjeh2XqMK8xvRTTefSqz7vchI/edit?usp=sharing' target='_blank' class='print_link'>File Formats Rapid Research</a> - Worksheet (<a href='https://docs.google.com/document/d/1h2pWa-RBS3ZbBg7Z_zfjeh2XqMK8xvRTTefSqz7vchI/export?format=pdf' class='print_link'>download</a>)
+
+* <a href='https://studio.code.org/p/applab#hxXJIEGg2yza_Q7t9W04xg' target='_blank' class='print_link'>Lossy Text Compression App</a> - App Lab
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

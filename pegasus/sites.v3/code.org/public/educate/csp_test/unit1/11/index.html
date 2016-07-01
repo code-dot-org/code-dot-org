@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson student develop a protocol for reliably sending a message over an unreliable internet. The Internet Simulator has been setup for this lesson to restrict messages to no more than 6 characters each, and messages get dropped messages with some probability on every hop.">
+    <title>Packets and Making a Reliable Internet</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit1/"><span class="h2">Unit</span><span class="h1">1</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch1" data-pdf-link="#unit1chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/1" data-pdf-link="#unit1lesson1">
+                1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/2" data-pdf-link="#unit1lesson2">
+                2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/3" data-pdf-link="#unit1lesson3">
+                3
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/4" data-pdf-link="#unit1lesson4">
+                4
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/5" data-pdf-link="#unit1lesson5">
+                5
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/6" data-pdf-link="#unit1lesson6">
+                6
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/7" data-pdf-link="#unit1lesson7">
+                7
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch2" data-pdf-link="#unit1chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/8" data-pdf-link="#unit1lesson8">
+                8
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/9" data-pdf-link="#unit1lesson9">
+                9
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/10" data-pdf-link="#unit1lesson10">
+                10
+            </a>
+            </div>
+            
+                
+                    
+                        <div class="lesson current">
+                    
+                
+            <a href="/educate/csp_test/unit1/11" data-pdf-link="#unit1lesson11">
+                11
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/12" data-pdf-link="#unit1lesson12">
+                12
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/13" data-pdf-link="#unit1lesson13">
+                13
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/14" data-pdf-link="#unit1lesson14">
+                14
+            </a>
+            </div>
+            
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit1lesson11">
+        
+            
+                <h1>Lesson 11: Packets and Making a Reliable Internet</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson student develop a protocol for reliably sending a message over an unreliable internet.  The Internet Simulator has been setup for this lesson to restrict messages to no more than 6 characters each, and messages get dropped messages with some probability on every hop.</p>
+<p>Students are given time to experiment with the Internet Simulator and develop their own protocol, possibly testing or demonstrating their protocol to their peers. At the conclusion of the lesson, students watch a short video explaining how these challenges are addressed in the real world with <span class="vocab" title="TCP: Transmission Control Protocol - provides reliable, ordered, and error-checked delivery of a stream of packets on the internet. TCP is tightly linked with IP and usually seen as TCP/IP in writing.">TCP</span> - the Transmission Control Protocol.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>This is a problem-solving lesson.  On the real Internet packet sizes are limited, and transmission is unreliable.  In this lesson we have setup the Internet simulator to restrict packet-size to be very small - 6 ASCII characters beyond the bits required for the <em>to</em> and <em>from</em> addresses.  Also, the Simulator drops packets pretty regularly.  In a set of 10 messages it’s very likely one or two will be dropped.  You may need to justify these restrictions to students, acknowledging that, yes, this is a simulation, but the constraints are very real.</p>
+<p>The problem students have to solve is how to use the 6-ASCII-characters-worth of data to include both portions of the message you’re trying to send, as well as information about how many messages (packets) there are in the whole message and which number <em>this</em> packet is.</p>
+<p>Students should invent or at least appreciate the need for something like the Transmission Control Protocol <span class="vocab" title="TCP: Transmission Control Protocol - provides reliable, ordered, and error-checked delivery of a stream of packets on the internet. TCP is tightly linked with IP and usually seen as TCP/IP in writing.">TCP</span>.  TCP was designed to overcome the inherent unreliability of the Internet. A small but non-negligible percentage of packets are lost in transmission because of faults in the infrastructure of the Internet. In order to constrain the extent of these errors, larger messages are divided into many packets which are individually routed to their recipient. The receiving computer will send an acknowledgement confirming the receipt of that packet. If the sending computer does not receive an acknowledgement, it will resend the packet until all packets have been acknowledged. </p>
+<p>Since packets may arrive out of order, additional data must be included to indicate the order in which the packets should be arranged. Thus, while individual packets cannot be guaranteed to arrive, eventually an entire message can be accurately reconstructed.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocpackets-and-making-a-reliable-internet">
+                
+                    <h3>Getting Started (5 mins)</h3>
+                
+                    <h3>Activity (35 mins)</h3>
+                
+                    <h3>Wrap-up (10 mins)</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Explain why protocols are necessary to overcome the underlying unreliability of the Internet.</li>
+                    
+                        <li>Justify the need for acknowledgements and packet numbering in TCP.</li>
+                    
+                        <li>Develop a protocol for reliable communication on the Internet.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit2/lesson5" target="_blank">Forum</a></li>
+<li>Review functionality of Internet Simulator with transmission failure</li>
+<li>Copies of the Activity Guide</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='http://youtu.be/3hy8WodhtbE' target='_blank' class='print_link'>U2L05 - Teaching Tips & Tricks Video</a> - Video (<a href='http://videos.code.org/2015/csp/tips_tricks_packets.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2' target='_blank' class='print_link'>CSP Unit 2</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/13Ji9fykP0AXoIML7beAmkMSPyWcrNw1BdW2fnpBRnJo/edit?usp=sharing' target='_blank' class='print_link'>Packets and Making a Reliable Internet</a> - Activity Guide (<a href='https://docs.google.com/document/d/13Ji9fykP0AXoIML7beAmkMSPyWcrNw1BdW2fnpBRnJo/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://youtu.be/AYdF7b3nMto' target='_blank' class='print_link'>The Internet: Packets, Routing, and Reliability</a> - Video (<a href='http://videos.code.org/2015/csp/concept_internet_packets_reliability.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="packets-and-making-a-reliable-internetcontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started (5 mins)</h2>
+                    <div class="admonition discussion">
+<p class="admonition-title" id="discussion_None"><i class="glyphicon glyphicon-comment"></i>Discussion Goal</p>
+<div></div>
+<div>
+<ul>
+<li>Build on prior knowledge of the structure of the Internet to reflect on the unreliability of the Internet</li>
+<li>Introduce the use of packets</li>
+<li>Motivate the need for protocols to ensure reliability when sending messages across the Internet.</li>
+</ul>
+</div>
+</div>
+<p><strong>Prompt:</strong> </p>
+<p>Your friend sent you a message on the Internet, but you never received it. Based on what you already know about routers and the physical Internet, list what reasons might explain this fact.</p>
+<p><strong>Discuss:</strong> </p>
+<p>In groups or as a class, students should share their lists. Use this opportunity to review the layers of the Internet already covered and potential flaws that could lead to a message getting dropped. Some example points of discussion:</p>
+<ul>
+<li>Wires are cut</li>
+<li>Interference on a radio channel</li>
+<li>Router malfunctions or cannot keep up with traffic being directed to it</li>
+</ul>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Transitional Remarks</p>
+<div>
+<p>When we communicate on the Internet, we are not just sending short text messages as we did yesterday. We also use the Internet to exchange documents, videos, music, and scientific data, and these files can easily grow to enormous size. </p>
+</div>
+<div>
+<p>All of this would not be a problem if the Internet were perfectly reliable, but in reality, errors sometimes occur. Wires can be cut, routers can be overwhelmed with traffic, and interference with electric or radio signals can cause messages to become corrupted. The response to this problem is to split large messages into smaller pieces of information called <span class="vocab" title="Packets: Small chunks of information that have been carefully formed from larger chunks of information.">packets</span>.</p>
+</div>
+<div>
+<p>It turns out that splitting up a message into packets provides many benefits. If a faster route opens up halfway through transmitting a large file, it is easy to reroute later packets in the transmission through that route.</p>
+</div>
+<div>
+<p>Splitting up a message into smaller chunks doesn’t solve all the problems of unreliability on the Internet. Packets can still be dropped or arrive out of order.</p>
+</div>
+<div>
+<p>Today’s challenge is to develop a protocol to reliably send messages even though the network itself is unreliable.</p>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity (35 mins)</h2>
+                    <h3 id="introduce-new-version-of-internet-simulator-packets-and-unreliability">Introduce: new version of Internet Simulator - packets and unreliability.</h3>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_netsim"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p>You might want to demonstrate these new features of the Internet Simulator while explaining them. </p>
+</div>
+<div>
+<p>If you have the ability to project your screen you can demonstrate before having students connect by:</p>
+</div>
+<div>
+<ul>
+<li>Opening 2 windows and connect to the simulator as yourself - you will see your name appear twice</li>
+<li>Send messages to yourself (using one of the IP addresses) </li>
+<li>Open the router logs to show packets dropped.  </li>
+</ul>
+</div>
+</div>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div></div>
+<div>
+<p>The version of the Internet Simulator we will be using today has been structured to simulate the unreliability of the Internet. </p>
+</div>
+<div>
+<p>In particular you’ll notice a few changes:</p>
+</div>
+<div>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_netsim"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+</div>
+<div>
+<ul>
+<li>You will <strong>only</strong> be allowed to send packets containing <strong>6 characters</strong> of text!</li>
+<li>Anything larger than 6 characters will be cut off…</li>
+<li>However, you may construct multiple packets prior to sending them, by clicking “Add Packet”, and then send them all with one click of the “Send” button.</li>
+<li>Every message has a small chance of being dropped on each “hop” it makes between routers.</li>
+</ul>
+</div>
+<div>
+<p><a data-lightbox="all_images" data-title="" href="https://staging.code.org/educate/docs/csp/U1L11-AddingPackets.png"><img alt="" src="https://staging.code.org/educate/docs/csp/U1L11-AddingPackets.png" style="width: 300px;"></a></p>
+</div>
+</div>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/code-studio-icon.png"><img alt="" src="https://code.org/educate/docs/csp/code-studio-icon.png"></a> <strong>Open Internet Simulator:</strong> </p>
+<p>Distribute the Activity Guide: <a class="resource" href="https://docs.google.com/document/d/13Ji9fykP0AXoIML7beAmkMSPyWcrNw1BdW2fnpBRnJo/edit?usp=sharing" target="_blank">Packets and Making a Reliable Internet</a>   </p>
+<ul>
+<li>Place students in groups of 2 to 4 members. </li>
+<li>Students (individually or as a group, either is OK) should log into Code Studio and access the Internet Simulator. </li>
+<li>Add at least four routers (six or more is ideal; there’s no need to max out the connections on each router - it’s fine if only one or two students are connected to a router)</li>
+<li>Have students join a <em>DIFFERENT</em> router from their groupmates.   </li>
+</ul>
+<div class="guide">
+<h3 id="generate-traffic">Generate Traffic</h3>
+<ul>
+<li>Students will need some time to get used to the changes introduced to the Internet Simulator. </li>
+<li>Provide them a couple minutes to exchange messages across routers. </li>
+<li>Make sure students try to construct a multi-packet message and send multiple packets at once to someone else</li>
+<li>Make sure they try the same thing for a classmate on ANOTHER router and then view the router logs to examine the result of these transmissions. </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<p>This activity is designed to provide students a realistic encounter with the actual challenges of the Internet. It is more important that students develop an appreciation for the difficulty of ensuring reliable message transmission over an unreliable network than that they actually arrive at a perfectly workable solution. </p>
+</div>
+<div>
+<p>It is also OK if their solution does not perfectly match <span class="vocab" title="TCP: Transmission Control Protocol - provides reliable, ordered, and error-checked delivery of a stream of packets on the internet. TCP is tightly linked with IP and usually seen as TCP/IP in writing.">TCP</span>, the actual solution to this problem. In student solutions, you should primarily be looking for:</p>
+</div>
+<div>
+<ol>
+<li>Some way to confirm receipt of a packet / message</li>
+<li>Some way to define the ordering of packets</li>
+</ol>
+</div>
+</div>
+<p>Students should recognize:</p>
+<ul>
+<li>Packets are dropped with some frequency</li>
+<li>Packets of more than 6 characters are always truncated to just the first 6 characters</li>
+<li>Packets sometimes arrive out of order.</li>
+</ul>
+<p>If students do not immediately recognize these points, draw them out in subsequent conversations.</p>
+<h3 id="develop-a-protocol">Develop a Protocol</h3>
+<ul>
+<li>Students will spend the rest of the class developing a protocol that will allow them to overcome the unreliability of the network so that a message can be sent and both sender and receiver can be confident the full message was received.</li>
+</ul>
+<div class="admonition content">
+<p class="admonition-title" id="content_None"><i class="glyphicon glyphicon-education"></i>Content Corner</p>
+<div></div>
+<div>
+<p><strong>A Simple Solution</strong></p>
+</div>
+<div>
+<p><strong>Sender:</strong> The simplest solution is to develop something akin to TCP, in which you use part of the message to indicate the the packet number and how many there are total.  For example:</p>
+</div>
+<div>
+<ul>
+<li>Message 1: <code>1/4 Hi</code></li>
+<li>Message 2: <code>2/4 Th</code></li>
+<li>Message 3: <code>3/4 er</code></li>
+<li>Meesage 4: <code>4/4 e!</code></li>
+</ul>
+</div>
+<div>
+<p><strong>Receiver:</strong> should know how many messages there are and can request a re-send of any that are missing.  For example if you received messages 1, 2 and 4.  You could send a message back, something like one of these:</p>
+</div>
+<div>
+<p><code>req: 3</code> or <code>need 3</code> or <code>send 3</code></p>
+</div>
+<div>
+<p>The way the real TCP works is this: every once in a while TCP sends back a “cumulative acknowledgement” of how many in-order packets it has received.  For example, in an 8-packet message if you received packets:</p>
+</div>
+<div>
+<p><code>1 2 _ 4 5 6 _ 8</code></p>
+</div>
+<div>
+<p>Then you would send back a message like:</p>
+</div>
+<div>
+<p><code>ack 2</code> or maybe <code>ack 3</code> </p>
+</div>
+<div>
+<p>This would indicate to the sender that next packet you need is packet 3.  The sender would send 3, and once you got it, your next message would be:</p>
+</div>
+<div>
+<p><code>ack 6</code> or <code>ack 7</code></p>
+</div>
+<div>
+<p>Because you received packets 4, 5 and 6 already.</p>
+</div>
+</div>
+<p><strong>Guidelines for Protocol:</strong></p>
+<ul>
+<li>All communication can only be done through the Internet Simulator.</li>
+<li>The full message sent will be at least 60 characters long and might be entirely random (i.e. there’s no way to use human intuition to reconstruct the message). </li>
+<li>
+<ul>
+<li>The message is not known beforehand.</li>
+<li><em>Note:</em> The Teaching Tips &amp; Tricks video mentions a 20 character long message. 60 characters is the preferred length, as it results in more packets being dropped.</li>
+</ul>
+</li>
+<li>The sender and receiver must be confident the full message was successfully transmitted and reconstructed.</li>
+</ul>
+<p>Provide students time to work on their protocol, iteratively testing their work and recording their final protocol in the space provided in the activity guide.</p>
+<h3 id="test-protocols">Test Protocols</h3>
+<ul>
+<li>Provide students an opportunity to either present their protocols in written or visual form, or test them out by sending a randomly generated message of your choosing.</li>
+<li>The goal of this share-out would be to identify the main components of the protocols that groups developed in common. </li>
+</ul>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up (10 mins)</h2>
+                    <h3 id="video-the-internet-packets-routing-and-reliability">Video: The Internet: Packets, Routing, and Reliability</h3>
+<p>We’re going to watch a short video that talks a little more about the way this protocol and others help us ensure the reliability of the Internet.</p>
+<p><strong>Video:</strong> <a class="resource" href="https://youtu.be/AYdF7b3nMto" target="_blank">The Internet: Packets, Routing, and Reliability</a></p>
+<h3 id="connect-activity-to-tcp">Connect activity to TCP</h3>
+<p>Either say these points or draw them out through <strong>discussion</strong></p>
+<ul>
+<li>The challenges we encountered in today’s activity very closely mirror those that exist on the actual Internet. </li>
+<li>The response was the development of a protocol called the Transmission Control Protocol, or more simply, TCP. </li>
+<li>TCP divides larger messages into smaller packets which have ordering information added to their header. </li>
+<li>When a packet arrives at a destination computer, an acknowledgement is sent to the sender, letting them know they don’t need to resend that packet. </li>
+<li>Once all the packets have arrived, the ordering information in the headers of the packets allows them to be reordered to create the original message. </li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li><a href="https://www.youtube.com/watch?v=WwyJGzZmBe8" target="_blank">There and Back Again: A Packet’s Journey</a> and discuss questions that arise about how a packet travels from one person to another. (3:21)</li>
+<li><a href="https://www.youtube.com/watch?v=TbaaMQVYMYQ" target="_blank">Easy Way to Understand Packets.</a> Note: Headphones are recommended; this one has some dramatic music! (13:00)</li>
+<li>Protocols are developed by the Internet Engineering Task Force (among other groups), who publish Requests for Comment (or RFCs) detailing the components of the protocol. If students wish, they may have a look at the one of the actual RFCs for TCP here https://www.rfc-editor.org/rfc/rfc793.txt. RFCs exist for many of the protocols covered in this course.</li>
+<li><a href="https://books.google.com/books?id=Y7DOltmSGjgC&amp;pg=PA301&amp;lpg=PA301&amp;dq=blown+to+bits+appendix&amp;source=bl&amp;ots=p5iZjYKU5R&amp;sig=G9JtRiyLlLTwRU4RSLYv8prDLXg&amp;hl=en&amp;sa=X&amp;ved=0CCQQ6AEwAWoVChMIurq8wviUyQIVR0AmCh2WFAss#v=onepage&amp;q&amp;f=false" target="_blank">Blown to Bits (www.bitsbook.com), Appendix</a> - The Internet as System and Spirit, pp. 301-309, “The Internet as a Communication System,” then answer the following question:<ul>
+<li>It is interesting to think about the foresight (or luck?) that caused initial Internet designers to choose a packet-switched network as the basis for the Internet. What do you think, foresight or luck?</li>
+</ul>
+</li>
+<li><a href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter3.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Chapter 3</a> - Ghosts in the Machine, pp. 91-92, “Data Formats as Public Property,” then answer the following question:<ul>
+<li>What do you think the Internet would be like today if different companies’ network protocols were still competing for adoption for the Internet, instead of TCP being the de facto standard?</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions</strong> (also available on Code Studio):</p>
+<ol>
+<li>
+<p>Choose two: Pick the two statements about packets and routing on the Internet which are true.</p>
+<p>a) Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent.</p>
+<p>b) TCP ensures messages can be reliably transmitted across the Internet.</p>
+<p>c) TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission.</p>
+<p>d) TCP must account for the fact that packets may not arrive at a destination computer in the intended order.</p>
+</li>
+<li>
+<p>Which of the following is NOT true about packets?</p>
+<p>a) Packets are numbered, so if they arrive out of order, the message can be reassembled.</p>
+<p>b) A message sent across the Internet can always be contained in a single packet.</p>
+<p>c) Packets are routed on different paths from sender to receiver.</p>
+<p>d) The receiver computer must confirm to the sending computer that each packet was received. </p>
+</li>
+<li>
+<p>In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?</p>
+</li>
+</ol>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CD</strong> - Computers &amp; Communication Devices</summary>
+                    <ul>
+                        
+                            <li><strong>CD.L3A:8</strong> - Explain the basic components of computer networks (e.g., servers, file protection, routing, spoolers and queues, shared resources, and fault-tolerance).</li>
+                        
+                            <li><strong>CD.L3A:9</strong> - Describe how the Internet facilitates global communication.</li>
+                        
+                            <li><strong>CD.L3B:4</strong> - Describe the issues that impact network functionality (e.g., latency, bandwidth, firewalls, server capability).</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>6.2</strong> - Characteristics of the Internet influence the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.1</strong> - Explain characteristics of the Internet and the systems built on it. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.1D</strong> - Routing on the Internet is fault tolerant and redundant.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.2</strong> - Explain how the characteristics of the Internet influence the systems built on it. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.2B</strong> - The redundancy of routing (i.e., more than one way to route data) between two points on the Internet increases the reliability of the Internet and helps it scale to more devices and more people.</li>
+                                
+                                    <li><strong>6.2.2G</strong> - Standards for packets and routing include transmission control protocol/Internet protocol (TCP/IP).</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocpackets-and-making-a-reliable-internet').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#packets-and-making-a-reliable-internetcontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'packets-and-making-a-reliable-internet', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

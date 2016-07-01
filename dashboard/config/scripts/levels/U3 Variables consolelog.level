@@ -1,0 +1,52 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-20T15:40:11.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "randomNumber_min_max": null,
+      "write": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Use the write block to display the value of size",
+    "markdown_instructions": "# Console.log\r\n\r\nThe **Debug Console** is an area below your code. Your user will never see the debug console. It is useful for **displaying information only you want to see, especially while debugging your program**.\r\n\r\nThe `console.log` command can be used with **numbers, text, and the labels of a variable**, and will display the information provided on a new line in the Debug Console.\r\n\r\n```\r\nvar size = 100;\r\nconsole.log(\"The value of size is\"); //displays this text on a line\r\nconsole.log(size);                   //displays the value of size (100)\r\n```\r\n\r\n# Do This\r\n\r\n* **Use the `console.log` command** to display the random value currently stored in `size`",
+    "start_blocks": "var size = randomNumber(1,200);\r\nconsole.log(\"The value of size is\");\r\n// Add another console.log command to display the value of size\r\nrect(200, 200, size, size);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

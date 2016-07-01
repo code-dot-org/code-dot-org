@@ -4,12 +4,14 @@
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer
+#  kind       :string(255)
 #  properties :text(65535)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 # Indexes
 #
+#  index_survey_results_on_kind     (kind)
 #  index_survey_results_on_user_id  (user_id)
 #
 
@@ -26,10 +28,15 @@ class SurveyResult < ActiveRecord::Base
   ETHNICITIES["other"] = "Other"
   ETHNICITIES.freeze
 
-  RESULT_ATTRS = ETHNICITIES.keys.map{|key| "survey2016_ethnicity_#{key}"}
-  RESULT_ATTRS << "survey2016_foodstamps"
-  RESULT_ATTRS.freeze
+  DIVERSITY_ATTRS = ETHNICITIES.keys.map{|key| "survey2016_ethnicity_#{key}"}
+  DIVERSITY_ATTRS << "survey2016_foodstamps"
+  DIVERSITY_ATTRS.freeze
 
-  serialized_attrs RESULT_ATTRS
+  NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment)
+  NET_PROMOTER_SCORE_ATTRS.freeze
+
+  ALL_ATTRS = (DIVERSITY_ATTRS + NET_PROMOTER_SCORE_ATTRS).freeze
+
+  serialized_attrs ALL_ATTRS
   belongs_to :user
 end

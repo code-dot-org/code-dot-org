@@ -1,13 +1,10 @@
 - small_text = @script && (@script.name == "starwars" || @script.name == "starwarsblocks")
 .header_level
   %div.header_level_container
-    .header_text{class: ('small_font_on_tablet' if small_text)}
+    - text = @script.professional_learning_course? ? @script_level.stage.localized_name : @script_level.stage.localized_title
+    = link_to text, @script, class: ["header_text", ('small_font_on_tablet' if small_text)]
     .progress_container
     .header_finished_link{style: 'display: none;', class: ('small_font_on_tablet' if small_text)}
-    %span.header_trophy_link{style: 'display: none;'}
-      .header_text= t(:trophies)
-      .header_status_bar.current_trophies
-      .header_text.max_trophies
     %span.header_popup_link{style: 'display: none;'}
       .header_popup_link_glyph
         &#x25BC;
@@ -22,7 +19,8 @@
           = t('nav.popup.progress')
       .header_text{style: 'float: right;'}
     .header_popup_body
-      .loading
+      .user-stats-block
+        .loading
   .header_popup_footer
     .header_popup_close
       = t('nav.popup.close')

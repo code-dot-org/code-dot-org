@@ -1,11 +1,15 @@
-/* globals dashboard, trackEvent, Dialog, React, appOptions */
+/* globals dashboard, trackEvent, Dialog, appOptions */
 
+import $ from 'jquery';
+var React = require('react');
+var ReactDOM = require('react-dom');
 var _ = require('lodash');
 
 var clientState = require('./clientState');
 var popupWindow = require('./popup-window');
-var ShareDialog = require('./components/share_dialog.jsx');
+var ShareDialog = require('./components/share_dialog');
 var progress = require('./progress');
+var Dialog = require('./dialog');
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -13,6 +17,11 @@ var progress = require('./progress');
 
 // Namespace for manipulating the header DOM.
 var header = module.exports = {};
+
+/**
+ * See ApplicationHelper::PUZZLE_PAGE_NONE.
+ */
+const PUZZLE_PAGE_NONE = -1;
 
 /**
  * @param stageData{{
@@ -35,9 +44,6 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   stageData = stageData || {};
   progressData = progressData || {};
 
-  var clientProgress = clientState.allLevelsProgress()[scriptName] || {};
-
-  $('.header_text').first().text(stageData.title);
   if (stageData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', stageData.finishLink).text(stageData.finishText));
   }
@@ -47,16 +53,12 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
       $('.' + item + '_free_play').show();
     });
   }
-  if (progressData.trophies) {
-    $('.header_trophy_link').show();
-    $('.header_trophy_link .current_trophies').text(progressData.trophies.current);
-    $('.header_trophy_link .max_trophies').text(progressData.trophies.of + ' ' + progressData.trophies.max);
-  }
   if (progressData.linesOfCodeText) {
     $('.header_popup .header_text').text(progressData.linesOfCodeText);
   }
 
-  progress.renderStageProgress(stageData, progressData, clientProgress, currentLevelId, puzzlePage);
+  let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
+  progress.renderStageProgress(stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation);
 
   $('.level_free_play').qtip({
     content: {
@@ -81,7 +83,7 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
     $('.header_popup_link_glyph').html('&#x25B2;');
     $('.header_popup_link_text').text(dashboard.i18n.t('less'));
     $(document).on('click', hideHeaderPopup);
-    lazyLoadPopup($(target).closest('.header_trophy_link').length > 0);
+    lazyLoadPopup();
     isHeaderPopupVisible = true;
   }
   function hideHeaderPopup() {
@@ -92,13 +94,9 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
     isHeaderPopupVisible = false;
   }
 
-  $('.header_popup_link, .header_trophy_link').click(function (e) {
+  $('.header_popup_link').click(function (e) {
     e.stopPropagation();
-    if ($('.header_popup').is(':visible')) {
-      hideHeaderPopup();
-    } else {
-      showHeaderPopup(e.target);
-    }
+    $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup();
   });
   $('.header_popup').click(function (e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it
@@ -128,29 +126,11 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   }
 
   var popupLoaded = false;
-  function lazyLoadPopup(trophiesClicked) {
+  function lazyLoadPopup() {
     if (!popupLoaded) {
       popupLoaded = true;
-      $.ajax({
-        url: "/popup/stats",
-        data: {
-          script_id: stageData.script_id,
-          current_level_id: currentLevelId,
-          user_id: clientState.queryParams('user_id'),
-          section_id: clientState.queryParams('section_id')
-        }, success: function (result) {
-          $('.header_popup_body').html(result);
-          if (trophiesClicked) {
-            jumpToTrophies();
-          }
-        }
-      });
-    } else if (trophiesClicked) {
-      jumpToTrophies();
+      $.getJSON(`/api/script_structure/${scriptName}`, data => progress.renderCourseProgress(data, currentLevelId));
     }
-  }
-  function jumpToTrophies() {
-    window.scrollTo(0, +$('#trophies').offset().top);
   }
 };
 
@@ -182,7 +162,10 @@ function shareProject() {
       abuseContact: i18n.t('project.abuse.contact_us'),
       channelId: dashboard.project.getCurrentId(),
       appType: dashboard.project.getStandaloneApp(),
-      onClickPopup: popupWindow
+      onClickPopup: popupWindow,
+      // TODO: Can I not proliferate the use of global references to Applab somehow?
+      onClickExport: window.Applab && window.Applab.canExportApp() ?
+        window.Applab.exportApp : null,
     });
     ReactDOM.render(dialog, dialogDom);
   });
@@ -196,7 +179,7 @@ function remixProject() {
     // or we're on a blank project page that hasn't been saved for the first time
     // yet. In both cases, copy will create a new project for us.
     var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
-    dashboard.project.copy(newName, function() {
+    dashboard.project.copy(newName, function () {
       $(".project_name").text(newName);
     });
   }

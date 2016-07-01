@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Use the right arrow to shoot hearts.\r\n\r\nIn our game, how should we score points? Add 1 to your \"points\" variable each time Dog hits Cat with a heart. Use the \"when actor 2 touches anything\" event to trigger an update to your score. You can increment your variable by setting \"points = points + 1.\" Get your score up to 10 (going one at a time!) to pass the level.",
+    "instructions": "Use the right arrow to throw pie.\r\n\r\nIn our game, how should we score points? Add 1 to your \"points\" variable each time Dog hits Cat with a piece of pie. Use the \"when actor 2 touches anything\" event to trigger an update to your score. You can increment your variable by setting \"points = points + 1.\" Get your score up to 10 (going one at a time!) to pass the level.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -33,7 +33,7 @@
     "callout_json": "[]",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "<h5><b>\r\nIn our game, how should we score points? \r\n</b></h5> \r\n<br/>\r\n\r\n1. Add 1 to your `points` variable each time Dog hits Cat with a heart.  <br/>    <br/> \r\n2. Use the `when actor 2 touches anything` event to trigger an update to your score. You can increment your variable by setting `points = points + 1.`  <br/>   <br/> \r\n3. Get your score up to 10 (going one at a time!) to pass the level.\r\n\r\n<br/><br/>\r\n<h4>\r\n**Note:** Use the right arrow to shoot hearts!\r\n</h4>",
+    "markdown_instructions": "<h5><b>\r\nIn our game, how should we score points? \r\n</b></h5> \r\n<br/>\r\n\r\n1. Add 1 to your `points` variable each time Dog hits Cat with a piece of pie.  <br/>    <br/> \r\n2. Use the `when actor 2 touches anything` event to trigger an update to your score. You can increment your variable by setting `points = points + 1.`  <br/>   <br/> \r\n3. Get your score up to 10 to pass the level.\r\n\r\n<br/><br/>\r\n<h4>\r\n**Note:** Use the right arrow to throw pie!\r\n</h4>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -43,7 +43,16 @@
     "disable_examples": "false",
     "min_workspace_height": "700",
     "examples_required": "false",
-    "maze_data": null
+    "never_autoplay_video": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1,
+    "variables": 2
   }
 }]]></config>
   <blocks>
@@ -75,6 +84,14 @@
             </block>
           </next>
         </block>
+        <block type="when_run" uservisible="false">
+          <next>
+            <block type="studio_showTitleScreen" uservisible="false">
+              <title name="TITLE">Food Fight!</title>
+              <title name="TEXT">Press right arrow to throw pie!</title>
+            </block>
+          </next>
+        </block>
         <block type="studio_whenArrow" deletable="false">
           <title name="VALUE">right</title>
           <next>
@@ -83,7 +100,7 @@
               <next>
                 <block type="studio_throw" deletable="false">
                   <title name="SPRITE">0</title>
-                  <title name="VALUE">"purple_hearts"</title>
+                  <title name="VALUE">"pie"</title>
                   <title name="DIR">2</title>
                 </block>
               </next>
@@ -134,7 +151,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="variables_set" inline="false">
           <title name="VAR">points</title>
@@ -163,6 +180,6 @@
           </value>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Studio>

@@ -9,7 +9,7 @@ class CsvToSqlTable
     @table = File.basename(@path, File.extname(@path)).gsub('-','_').to_sym
   end
 
-  def up_to_date?()
+  def up_to_date?
     seed = DB[:seed_info].where(table: @table.to_s).first
     return false unless seed
 
@@ -17,12 +17,12 @@ class CsvToSqlTable
     mtime.to_s == seed[:mtime].to_s
   end
 
-  def import()
+  def import
     import! unless up_to_date?
     @table
   end
 
-  def import!()
+  def import!
     HipChat.log "Importing <b>#{@table}</b> table from <b>#{File.basename(@path)}</b>"
 
     # Starting with 1 means the first item's ID is 2 which matches the id to the line number of the item.
@@ -130,7 +130,7 @@ class GSheetToCsv
     @file = nil
   end
 
-  def up_to_date?()
+  def up_to_date?
     @file ||= (@@gdrive ||= Google::Drive.new).file(@gsheet_path)
     unless @file
       HipChat.log "Google Drive file <b>#{@gsheet_path}</b> not found.", color: 'red', notify: 1
@@ -147,12 +147,12 @@ class GSheetToCsv
     end
   end
 
-  def import()
+  def import
     import! unless up_to_date?
     @csv_path
   end
 
-  def import!()
+  def import!
     HipChat.log "Downloading <b>#{@gsheet_path}</b> from Google Drive."
 
     @file ||= (@@gdrive ||= Google::Drive.new).file(@gsheet_path)
@@ -173,10 +173,10 @@ class GSheetToCsv
         unless columns
           # Determine the set of columns to be output.
           columns = row.headers
-          if !@include_columns.empty?
-            columns = columns & @include_columns
+          unless @include_columns.empty?
+            columns &= @include_columns
           end
-          columns = columns - @exclude_columns
+          columns -= @exclude_columns
           # Output the columns.
           csv << columns
         end
@@ -196,7 +196,6 @@ end
 $gdrive_ = nil
 
 namespace :seed do
-
   def csv_smart_value(value)
     return true if value == 'TRUE'
     return false if value == 'FALSE'
@@ -228,7 +227,7 @@ namespace :seed do
     cache_dir(".#{table}-imported")
   end
 
-  def gdrive()
+  def gdrive
     $gdrive_ ||= Google::Drive.new
   end
 

@@ -26,6 +26,8 @@
  */
 'use strict';
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var color = require('../color');
 var commonMsg = require('../locale');
 var turtleMsg = require('./locale');
@@ -34,16 +36,17 @@ var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
-var AppView = require('../templates/AppView.jsx');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var Provider = require('react-redux').Provider;
+var AppView = require('../templates/AppView');
+var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
-var _ = utils.getLodash();
+var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
+var experiments = require('../experiments');
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -162,7 +165,7 @@ Artist.prototype.injectStudioApp = function (studioApp) {
 /**
  * Initialize Blockly and the turtle.  Called on page load.
  */
-Artist.prototype.init = function(config) {
+Artist.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("Artist requires a StudioApp");
   }
@@ -179,12 +182,12 @@ Artist.prototype.init = function(config) {
     this.stickers[name] = img;
   }
 
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // let's try adding a background image
     this.level.images = [{}];
     this.level.images[0].filename = 'background.jpg';
 
-    this.level.images[0].position = [ 0, 0 ];
+    this.level.images[0].position = [0, 0];
     this.level.images[0].scale = 1;
   }
 
@@ -192,11 +195,12 @@ Artist.prototype.init = function(config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  if (this.skin.id == "anna") {
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+
+  if (this.skin.id === "anna") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
-  }
-  else if (this.skin.id == "elsa") {
+  } else if (this.skin.id === "elsa") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
     this.decorationAnimationWidth = 85;
@@ -206,42 +210,25 @@ Artist.prototype.init = function(config) {
     this.avatarHeight = 51;
   }
 
-  var iconPath = 'media/turtle/' + (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        localeDirection: this.studioApp_.localeDirection(),
-        blockUsed : undefined,
-        idealBlockNumber : undefined,
-        editCode: this.level.editCode,
-        blockCounterClass : 'block-counter-default',
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  }.bind(this);
+  // Push initial level properties into the Redux store
+  this.studioApp_.setPageConstants(config);
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        visualization: '',
-        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath})
-      }
-    });
-  }.bind(this);
+  var iconPath = '/blockly/media/turtle/' +
+    (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
+  var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath}/>;
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: this.studioApp_.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
-    onMount: this.studioApp_.init.bind(this.studioApp_, config)
-  }), document.getElementById(config.containerId));
+  ReactDOM.render(
+    <Provider store={this.studioApp_.reduxStore}>
+      <AppView
+          visualizationColumn={visualizationColumn}
+          onMount={this.studioApp_.init.bind(this.studioApp_, config)}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 Artist.prototype.loadAudio_ = function () {
@@ -288,7 +275,7 @@ Artist.prototype.afterInject_ = function (config) {
   if (this.studioApp_.isUsingBlockly() && (this.skin.id === "anna" || this.skin.id === "elsa")) {
     // Override colour_random to only generate random colors from within our frozen
     // palette
-    Blockly.JavaScript.colour_random = function() {
+    Blockly.JavaScript.colour_random = function () {
       // Generate a random colour.
       if (!Blockly.JavaScript.definitions_.colour_random) {
         var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
@@ -328,7 +315,7 @@ Artist.prototype.afterInject_ = function (config) {
   imageContainer.style.display='none';
   document.body.appendChild(imageContainer);
 
-  for( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
+  for ( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
     var pattern = this.skin.lineStylePatternOptions[i][1];
     if (this.skin[pattern]) {
       var img = new Image();
@@ -345,7 +332,7 @@ Artist.prototype.afterInject_ = function (config) {
 /**
  * On startup draw the expected answer and save it to the answer canvas.
  */
-Artist.prototype.drawAnswer = function() {
+Artist.prototype.drawAnswer = function () {
   if (this.level.solutionBlocks) {
     this.drawBlocksOnCanvas(this.level.solutionBlocks, this.ctxAnswer);
   } else {
@@ -357,7 +344,7 @@ Artist.prototype.drawAnswer = function() {
  * Given a set of commands and a canvas, draws the commands onto the canvas
  * composited over the scratch canvas.
  */
-Artist.prototype.drawLogOnCanvas = function(log, canvas) {
+Artist.prototype.drawLogOnCanvas = function (log, canvas) {
   this.studioApp_.reset();
   while (log.length) {
     var tuple = log.shift();
@@ -372,7 +359,7 @@ Artist.prototype.drawLogOnCanvas = function(log, canvas) {
 /**
  * Evaluates blocks or code, and draws onto given canvas.
  */
-Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
+Artist.prototype.drawBlocksOnCanvas = function (blocksOrCode, canvas) {
   var code;
   if (this.studioApp_.isUsingBlockly()) {
     var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
@@ -392,7 +379,7 @@ Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
  * Draws the results of block evaluation (stored on api.log) onto the given
  * canvas.
  */
-Artist.prototype.drawCurrentBlocksOnCanvas = function(canvas) {
+Artist.prototype.drawCurrentBlocksOnCanvas = function (canvas) {
   this.drawLogOnCanvas(this.api.log, canvas);
 };
 
@@ -403,9 +390,9 @@ Artist.prototype.drawCurrentBlocksOnCanvas = function(canvas) {
  * @param {!Array} position An x-y pair.
  * @param {number} optional scale at which image is drawn
  */
-Artist.prototype.placeImage = function(filename, position, scale) {
+Artist.prototype.placeImage = function (filename, position, scale) {
   var img = new Image();
-  img.onload = _.bind(function() {
+  img.onload = _.bind(function () {
     if (img.width !== 0) {
       if (scale) {
         this.ctxImages.drawImage(img, position[0], position[1], img.width,
@@ -417,7 +404,7 @@ Artist.prototype.placeImage = function(filename, position, scale) {
     this.display();
   }, this);
 
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     img.src = this.skin.assetUrl(filename);
   } else {
     img.src = this.studioApp_.assetUrl('media/turtle/' + filename);
@@ -427,7 +414,7 @@ Artist.prototype.placeImage = function(filename, position, scale) {
 /**
  * Draw the images for this page and level onto this.ctxImages.
  */
-Artist.prototype.drawImages = function() {
+Artist.prototype.drawImages = function () {
   if (!this.level.images) {
     return;
   }
@@ -443,13 +430,13 @@ Artist.prototype.drawImages = function() {
 /**
  * Initial the turtle image on load.
  */
-Artist.prototype.loadTurtle = function() {
+Artist.prototype.loadTurtle = function () {
   this.avatarImage.onload = _.bind(this.display, this);
 
   this.avatarImage.src = this.skin.avatar;
-  if (this.skin.id == "anna") {
+  if (this.skin.id === "anna") {
     this.numberAvatarHeadings = 36;
-  } else if (this.skin.id == "elsa") {
+  } else if (this.skin.id === "elsa") {
     this.numberAvatarHeadings = 18;
   } else {
     this.numberAvatarHeadings = 180;
@@ -461,8 +448,8 @@ Artist.prototype.loadTurtle = function() {
 /**
  * Initial the turtle animation deocration on load.
  */
-Artist.prototype.loadDecorationAnimation = function() {
-  if (this.skin.id == "elsa") {
+Artist.prototype.loadDecorationAnimation = function () {
+  if (this.skin.id === "elsa") {
     this.decorationAnimationImage.src = this.skin.decorationAnimation;
     this.decorationAnimationImage.height = this.decorationAnimationHeight;
     this.decorationAnimationImage.width = this.decorationAnimationWidth;
@@ -475,11 +462,11 @@ var turtleFrame = 0;
 /**
  * Draw the turtle image based on this.x, this.y, and this.heading.
  */
-Artist.prototype.drawTurtle = function() {
+Artist.prototype.drawTurtle = function () {
   var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(this.heading * this.numberAvatarHeadings / 360);
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // the rotations in the sprite sheet go in the opposite direction.
     index = this.numberAvatarHeadings - index;
 
@@ -487,7 +474,7 @@ Artist.prototype.drawTurtle = function() {
     index = (index + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
   }
   var sourceX = this.avatarImage.spriteWidth * index;
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     sourceY = this.avatarImage.spriteHeight * turtleFrame;
     turtleFrame = (turtleFrame + 1) % this.skin.turtleNumFrames;
   } else {
@@ -507,13 +494,7 @@ Artist.prototype.drawTurtle = function() {
   if (sourceX < 0 ||
       sourceY < 0 ||
       sourceX + sourceWidth  -0 > this.avatarImage.width ||
-      sourceY + sourceHeight > this.avatarImage.height)
-  {
-    if (console && console.log) {
-      // TODO(bjordan): ask Brent, starting to flood grunt mochaTest messages,
-      // better fix here?
-      // console.log("drawImage is out of source bounds!");
-    }
+      sourceY + sourceHeight > this.avatarImage.height) {
     return;
   }
 
@@ -532,8 +513,8 @@ Artist.prototype.drawTurtle = function() {
   * the sprite is drawn.  For some angles it should be drawn before, and for some after.
   */
 
-Artist.prototype.drawDecorationAnimation = function(when) {
-  if (this.skin.id == "elsa") {
+Artist.prototype.drawDecorationAnimation = function (when) {
+  if (this.skin.id === "elsa") {
     var frameIndex = (turtleFrame + 10) % this.skin.decorationAnimationNumFrames;
 
     var angleIndex = Math.floor(this.heading * this.numberAvatarHeadings / 360);
@@ -544,7 +525,7 @@ Artist.prototype.drawDecorationAnimation = function(when) {
     // and they are 180 degrees out of phase.
     angleIndex = (angleIndex + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
 
-    if (ELSA_DECORATION_DETAILS[angleIndex].when == when) {
+    if (ELSA_DECORATION_DETAILS[angleIndex].when === when) {
       var sourceX = this.decorationAnimationImage.width * frameIndex;
       var sourceY = 0;
       var sourceWidth = this.decorationAnimationImage.width;
@@ -592,11 +573,11 @@ Artist.prototype.reset = function (ignore) {
   // Clear the display.
   this.ctxScratch.canvas.width = this.ctxScratch.canvas.width;
   this.ctxPattern.canvas.width = this.ctxPattern.canvas.width;
-  if (this.skin.id == "anna") {
+  if (this.skin.id === "anna") {
     this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
     this.ctxScratch.fillStyle = 'rgb(255,255,255)';
     this.ctxScratch.lineWidth = 2;
-  } else if (this.skin.id == "elsa") {
+  } else if (this.skin.id === "elsa") {
     this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
     this.ctxScratch.fillStyle = 'rgb(255,255,255)';
     this.ctxScratch.lineWidth = 2;
@@ -614,9 +595,9 @@ Artist.prototype.reset = function (ignore) {
   this.ctxFeedback.clearRect(
       0, 0, this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
 
-  if (this.skin.id == "anna") {
+  if (this.skin.id === "anna") {
     this.setPattern("annaLine");
-  } else if (this.skin.id == "elsa") {
+  } else if (this.skin.id === "elsa") {
     this.setPattern("elsaLine");
   } else {
     // Reset to empty pattern
@@ -649,7 +630,7 @@ Artist.prototype.reset = function (ignore) {
 /**
  * Copy the scratch canvas to the display canvas. Add a turtle marker.
  */
-Artist.prototype.display = function() {
+Artist.prototype.display = function () {
   // FF on linux retains drawing of previous location of artist unless we clear
   // the canvas first.
   var style = this.ctxDisplay.fillStyle;
@@ -663,18 +644,18 @@ Artist.prototype.display = function() {
   this.ctxDisplay.globalCompositeOperation = 'source-over';
   this.ctxDisplay.drawImage(this.ctxImages.canvas, 0, 0);
 
+  // Draw the predraw layer.
+  this.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
+
   // Draw the answer layer.
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     this.ctxDisplay.globalAlpha = 0.4;
   } else {
     this.ctxDisplay.globalAlpha = 0.15;
   }
   this.ctxDisplay.drawImage(this.ctxAnswer.canvas, 0, 0);
   this.ctxDisplay.globalAlpha = 1;
-
-  // Draw the predraw layer.
-  this.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
 
   // Draw the pattern layer.
   this.ctxDisplay.globalCompositeOperation = 'source-over';
@@ -705,7 +686,7 @@ Artist.prototype.runButtonClick = function () {
   this.execute();
 };
 
-Artist.prototype.evalCode = function(code) {
+Artist.prototype.evalCode = function (code) {
   try {
     codegen.evalWith(code, {
       Turtle: this.api
@@ -764,13 +745,13 @@ Artist.prototype.handleExecutionError = function (err, lineNumber) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Artist.prototype.execute = function() {
+Artist.prototype.execute = function () {
   this.api.log = [];
 
   // Reset the graphic.
   this.studioApp_.reset();
 
-  if (this.studioApp_.hasExtraTopBlocks() ||
+  if (this.studioApp_.hasUnwantedExtraTopBlocks() ||
       this.studioApp_.hasDuplicateVariablesInForLoops()) {
     // immediately check answer, which will fail and report top level blocks
     this.checkAnswer();
@@ -780,7 +761,13 @@ Artist.prototype.execute = function() {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    this.code = '';
+
+    if (this.studioApp_.initializationCode) {
+      this.code += this.studioApp_.initializationCode;
+    }
+
+    this.code += Blockly.Generator.blockSpaceToCode('JavaScript');
     this.evalCode(this.code);
   }
 
@@ -878,7 +865,7 @@ Artist.prototype.finishExecution_ = function () {
 /**
  * Iterate through the recorded path and animate the turtle's actions.
  */
-Artist.prototype.animate = function() {
+Artist.prototype.animate = function () {
 
   // All tasks should be complete now.  Clean up the PID list.
   this.pid = 0;
@@ -926,7 +913,7 @@ Artist.prototype.animate = function() {
   this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
 };
 
-Artist.prototype.calculateSmoothAnimate = function(options, distance) {
+Artist.prototype.calculateSmoothAnimate = function (options, distance) {
   var tupleDone = true;
   var stepDistanceCovered = this.stepDistanceCovered;
 
@@ -972,7 +959,7 @@ Artist.prototype.calculateSmoothAnimate = function(options, distance) {
  * @param {number} fraction How much of this step's distance do we draw?
  * @param {object} single option for now: smoothAnimate (true/false)
  */
-Artist.prototype.step = function(command, values, options) {
+Artist.prototype.step = function (command, values, options) {
   var tupleDone = true;
   var result;
   var distance;
@@ -1041,12 +1028,12 @@ Artist.prototype.step = function(command, values, options) {
     case 'PC':  // Pen Colour
       this.ctxScratch.strokeStyle = values[0];
       this.ctxScratch.fillStyle = values[0];
-      if (this.skin.id != "anna" && this.skin.id != "elsa") {
+      if (this.skin.id !== "anna" && this.skin.id !== "elsa") {
         this.isDrawingWithPattern = false;
       }
       break;
     case 'PS':  // Pen style with image
-      if (!values[0] || values[0] == 'DEFAULT') {
+      if (!values[0] || values[0] === 'DEFAULT') {
           this.setPattern(null);
       } else {
         this.setPattern(values[0]);
@@ -1173,7 +1160,7 @@ Artist.prototype.moveForward_ = function (distance) {
     this.drawForwardLineWithPattern_(distance);
 
     // Frozen gets both a pattern and a line over the top of it.
-    if (this.skin.id != "elsa" && this.skin.id != "anna") {
+    if (this.skin.id !== "elsa" && this.skin.id !== "anna") {
       return;
     }
   }
@@ -1216,7 +1203,7 @@ Artist.prototype.drawForwardWithJoints_ = function (distance) {
 
 Artist.prototype.drawForwardLine_ = function (distance) {
 
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     this.ctxScratch.beginPath();
     this.ctxScratch.moveTo(this.stepStartX, this.stepStartY);
     this.jumpForward_(distance);
@@ -1237,7 +1224,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
   var startX;
   var startY;
 
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     this.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
     img = this.currentPathPattern;
     startX = this.stepStartX;
@@ -1328,15 +1315,7 @@ Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
  * App specific displayFeedback function that calls into
  * this.studioApp_.displayFeedback when appropriate
  */
-Artist.prototype.displayFeedback_ = function() {
-  var feedbackImageCanvas;
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
-    // For frozen skins, show background and characters along with drawing
-    feedbackImageCanvas = this.ctxDisplay;
-  } else {
-    feedbackImageCanvas = this.ctxScratch;
-  }
-
+Artist.prototype.displayFeedback_ = function () {
   var level = this.level;
 
   this.studioApp_.displayFeedback({
@@ -1346,7 +1325,7 @@ Artist.prototype.displayFeedback_ = function() {
     message: this.message,
     response: this.response,
     level: level,
-    feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
+    feedbackImage: this.getFeedbackImage_(180, 180),
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
     showingSharing: !level.disableSharing && (level.freePlay || level.impressive),
     // impressive levels are already saved
@@ -1364,7 +1343,7 @@ Artist.prototype.displayFeedback_ = function() {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-Artist.prototype.onReportComplete = function(response) {
+Artist.prototype.onReportComplete = function (response) {
   this.response = response;
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
@@ -1376,7 +1355,7 @@ Artist.prototype.onReportComplete = function(response) {
 // This removes lengths from the text version of the XML of programs.
 // It is used to determine if the user program and model solution are
 // identical except for lengths.
-var removeK1Lengths = function(s) {
+var removeK1Lengths = function (s) {
   return s.replace(removeK1Lengths.regex, '">');
 };
 
@@ -1386,7 +1365,7 @@ removeK1Lengths.regex = /_length"><title name="length">.*?<\/title>/;
  * Verify if the answer is correct.
  * If so, move on to next level.
  */
-Artist.prototype.checkAnswer = function() {
+Artist.prototype.checkAnswer = function () {
   // Compare the Alpha (opacity) byte of each pixel in the user's image and
   // the sample answer image.
   var userImage =
@@ -1436,18 +1415,18 @@ Artist.prototype.checkAnswer = function() {
   // For levels where using too many blocks would allow students
   // to miss the point, convert that feedback to a failure.
   if (level.failForTooManyBlocks &&
-      this.testResults == this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
+      this.testResults === this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
     this.testResults = this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL;
 
-  } else if ((this.testResults ==
+  } else if ((this.testResults ===
       this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) ||
-      (this.testResults == this.studioApp_.TestResults.ALL_PASS)) {
+      (this.testResults === this.studioApp_.TestResults.ALL_PASS)) {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
     if (level.failForCircleRepeatValue && this.studioApp_.isUsingBlockly()) {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
-      if (code.indexOf('count < 3') == -1) {
+      if (code.indexOf('count < 3') === -1) {
         this.testResults =
             this.studioApp_.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
         this.message = commonMsg.tooMuchWork();
@@ -1498,7 +1477,7 @@ Artist.prototype.checkAnswer = function() {
   // Get the canvas data for feedback.
   if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
     !isFrozen && (level.freePlay || level.impressive)) {
-    reportData.image = this.getFeedbackImage_();
+    reportData.image = this.getFeedbackImage_().split(',')[1];
   }
 
   this.studioApp_.report(reportData);
@@ -1511,20 +1490,54 @@ Artist.prototype.checkAnswer = function() {
   // The call to displayFeedback() will happen later in onReportComplete()
 };
 
-Artist.prototype.getFeedbackImage_ = function() {
-  var feedbackImageCanvas;
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
-    feedbackImageCanvas = this.ctxDisplay;
+Artist.prototype.getFeedbackImage_ = function (width, height) {
+
+  var origWidth = this.ctxFeedback.canvas.width;
+  var origHeight = this.ctxFeedback.canvas.height;
+
+  this.ctxFeedback.canvas.width = width || origWidth;
+  this.ctxFeedback.canvas.height = height || origHeight;
+
+  // Clear the feedback layer
+  var style = this.ctxFeedback.fillStyle;
+  this.ctxFeedback.fillStyle = color.white;
+  this.ctxFeedback.clearRect(0, 0, this.ctxFeedback.canvas.width,
+    this.ctxFeedback.canvas.height);
+  this.ctxFeedback.fillStyle = style;
+
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
+    // For frozen skins, show everything - including background,
+    // characters, and pattern - along with drawing.
+    this.ctxFeedback.globalCompositeOperation = 'copy';
+    this.ctxFeedback.drawImage(this.ctxDisplay.canvas, 0, 0,
+        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
   } else {
-    feedbackImageCanvas = this.ctxScratch;
+    // Draw the images layer.
+    if (!this.level.discardBackground) {
+      this.ctxFeedback.globalCompositeOperation = 'source-over';
+      this.ctxFeedback.drawImage(this.ctxImages.canvas, 0, 0,
+          this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+    }
+
+    // Draw the predraw layer.
+    this.ctxFeedback.globalCompositeOperation = 'source-over';
+    this.ctxFeedback.drawImage(this.ctxPredraw.canvas, 0, 0,
+        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+
+    // Draw the user layer.
+    this.ctxFeedback.globalCompositeOperation = 'source-over';
+    this.ctxFeedback.drawImage(this.ctxScratch.canvas, 0, 0,
+        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
   }
 
-  // Copy the user layer
-  this.ctxFeedback.globalCompositeOperation = 'copy';
-  this.ctxFeedback.drawImage(feedbackImageCanvas.canvas, 0, 0, 154, 154);
-  var feedbackCanvas = this.ctxFeedback.canvas;
-  return encodeURIComponent(
-      feedbackCanvas.toDataURL("image/png").split(',')[1]);
+  // Save the canvas as a png
+  var image = this.ctxFeedback.canvas.toDataURL("image/png");
+
+  // Restore the canvas' original size
+  this.ctxFeedback.canvas.width = origWidth;
+  this.ctxFeedback.canvas.height = origHeight;
+
+  return image;
 };
 
 // Helper for creating canvas elements.

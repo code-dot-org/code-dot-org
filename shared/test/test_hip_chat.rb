@@ -86,7 +86,7 @@ class HipchatTest < Minitest::Test
     # Make we only tried 3 times (HipChat.MAX_RETRIES)
     assert_equal 3, HipChat.retries_for_test
     assert_in_delta BACKOFF + (2 * BACKOFF) + (4 * BACKOFF),
-                    HipChat.total_backoff_for_test
+      HipChat.total_backoff_for_test
   end
 
   # Verify correct behavior when hip chat logging is disabled.
@@ -103,6 +103,15 @@ class HipchatTest < Minitest::Test
 
     assert_equal 0, HipChat.retries_for_test
     assert_equal 0.0, HipChat.total_backoff_for_test
+  end
+
+  def test_slackify
+    assert_equal 'this should be *bold*', HipChat.slackify('this should be <b>bold</b>')
+    assert_equal 'this should be _italic_', HipChat.slackify('this should be <i>italic</i>')
+    assert_equal "this should be\n```\na block of code\n```", HipChat.slackify("this should be\n<pre>\na block of code\n</pre>")
+
+    assert_equal "*dashboard* tests failed <https://a-link.to/somewhere|html output>\n_rerun: bundle exec ./runner.rb -c iPhone -f features/applab/sharedApps.feature --html_",
+      HipChat.slackify('<b>dashboard</b> tests failed <a href="https://a-link.to/somewhere">html output</a><br/><i>rerun: bundle exec ./runner.rb -c iPhone -f features/applab/sharedApps.feature --html</i>')
   end
 
 end

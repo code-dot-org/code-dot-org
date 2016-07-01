@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson students will return to the Internet Simulator in order to send a simple line drawing to a classmate. Students will be presented a grid on which they will draw their image (connecting 3-7 dots with straight lines). They must develop a protocol which will allow them to send any image they might create on their grids, paying particular attention to how many bits are used to represent each binary number. Students will therefore have additional practice encoding and decoding binary numbers and develop further intuitions about the properties of binary numbers in a hands-on way. The lesson concludes by testing protocols using a teacher-supplied test-image to transmit.">
+    <title>Sending Numbers</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit1/"><span class="h2">Unit</span><span class="h1">1</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch1" data-pdf-link="#unit1chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/1" data-pdf-link="#unit1lesson1">
+                1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/2" data-pdf-link="#unit1lesson2">
+                2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/3" data-pdf-link="#unit1lesson3">
+                3
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/4" data-pdf-link="#unit1lesson4">
+                4
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/5" data-pdf-link="#unit1lesson5">
+                5
+            </a>
+            </div>
+            
+                
+                    
+                        <div class="lesson current">
+                    
+                
+            <a href="/educate/csp_test/unit1/6" data-pdf-link="#unit1lesson6">
+                6
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/7" data-pdf-link="#unit1lesson7">
+                7
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch2" data-pdf-link="#unit1chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/8" data-pdf-link="#unit1lesson8">
+                8
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/9" data-pdf-link="#unit1lesson9">
+                9
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/10" data-pdf-link="#unit1lesson10">
+                10
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/11" data-pdf-link="#unit1lesson11">
+                11
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/12" data-pdf-link="#unit1lesson12">
+                12
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/13" data-pdf-link="#unit1lesson13">
+                13
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/14" data-pdf-link="#unit1lesson14">
+                14
+            </a>
+            </div>
+            
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit1lesson6">
+        
+            
+                <h1>Lesson 6: Sending Numbers</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson students will return to the Internet Simulator in order to send a simple line drawing to a classmate. Students will be presented a grid on which they will draw their image (connecting 3-7 dots with straight lines). They must develop a protocol which will allow them to send any image they might create on their grids, paying particular attention to how many bits are used to represent each binary number. Students will therefore have additional practice encoding and decoding binary numbers and develop further intuitions about the properties of binary numbers in a hands-on way. The lesson concludes by testing protocols using a teacher-supplied test-image to transmit. </p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>While the binary number system can be used to represent any value we wish, in practice the range of values we are able to represent is limited by the number of bits we use to form our binary numbers. This fact is significant because protocols for exchanging binary information must specify in advance how many bits will form a single number. Without knowing this information the receivers of a message have no way of determining how to break up an incoming stream of bits into individual numbers; it will just appear to be a random string of 0s and 1s. </p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocsending-numbers">
+                
+                    <h3>Getting Started (5 mins)</h3>
+                
+                    <h3>Activity (35 mins)</h3>
+                
+                    <h3>Wrap-up (10 mins)</h3>
+                
+                    <h3>Assessment</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Calculate the range of values that can be represented using binary numbers of a given size in bits.</li>
+                    
+                        <li>Invent their own communication protocol for sending a list of numbers that represent coordinates on a cartesian grid.</li>
+                    
+                        <li>Use the Internet Simulator to send the list of points that make up the drawing to a friend.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit1/lesson8" target="_blank">Forum</a></li>
+<li>(Optional) Rulers</li>
+<li>(Optional) Extra copies of the <a href="Sending Numbers for Graphing" target="_blank">Worksheet - Sending Numbers for Graphing</a></li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit1' target='_blank' class='print_link'>CSP Unit 1</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://youtu.be/cIk2R0QuXkI?list=PLzdnOPI1iJNdVYhNyXeP4FsbSH_AkUhxB' target='_blank' class='print_link'>Internet Simulator - Part 2</a> - Video (<a href='http://videos.code.org/2015/csp/internetsimulator_2.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit?usp=sharing' target='_blank' class='print_link'>Sending Numbers</a> - Activity Guide (<a href='https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1NXy38iXUjT_K-VeHmrPzc_S9gs0xpz7OEM7HThyx4KQ/edit?usp=sharing' target='_blank' class='print_link'>Sending Numbers for Graphing</a> - Worksheet (<a href='https://docs.google.com/document/d/1NXy38iXUjT_K-VeHmrPzc_S9gs0xpz7OEM7HThyx4KQ/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Vocabulary</h2>
+                <ul>
+                    
+                        <li><strong>Protocol</strong> - A set of rules governing the exchange or transmission of data between devices.</li>
+                    
+                </ul>
+            
+
+        </div>
+    </div>
+
+    <div id="sending-numberscontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started (5 mins)</h2>
+                    <h3 id="review-binary-numbers">Review binary numbers.</h3>
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_None"><i class="glyphicon glyphicon-comment"></i>Discussion Goal</p>
+<div>
+<p>Students will likely need more time to review the binary number system if they have not seen it prior to this class. Provide students an opportunity to review key topics from yesterday, as they will be applying them in today’s lesson.</p>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>Binary review should take about 5 minutes. Do not overly emphasize binary review here if you spent enough time with binary in the previous lessons.  As long as students have a reasonable facility with the decimal equivalents of 5- or 6-bit numbers, that’s enough to do the main activity.</p>
+</div>
+</div>
+<p>Review properties of binary numbers covered in the previous lesson, especially the relationship between the powers of 2 and the number of bits you need to encode a particular number. </p>
+<p>Here are a few sample questions you can throw out:</p>
+<ul>
+<li><em>“How many more numbers can be represented with 4 bits as opposed to 3?”</em><ul>
+<li>Twice as many. Every time a bit is added the number of values we can represent doubles</li>
+</ul>
+</li>
+<li><em>“What is the highest value I can count to using 3 bits? What about with 4?</em>“<ul>
+<li>With 3 bits, 7. With 4 bits, 15. In general the answer is 2^(number of bits) - 1</li>
+</ul>
+</li>
+<li><em>“Justify the following claim: Regardless of the number of bits in our binary number system, the first value we represent is 0.</em>” <ul>
+<li>This is actually the case in any number system that uses place value. The smallest value we can represent is composed of all 0s and is exactly 0.</li>
+</ul>
+</li>
+</ul>
+<h3 id="introduce-the-idea-of-a-communication-protocol">Introduce the idea of a communication protocol.</h3>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<p>In computer science, and when talking about transmitting information between computing devices, a <span class="vocab" title="Protocol: A set of rules governing the exchange or transmission of data between devices.">protocol</span> is a set of rules that tell us how to encode, communicate and exchange information. </p>
+</div>
+<div>
+<p>Today, you and a partner will invent a communication protocol that allows you to send a list of numbers to represent a drawing.  </p>
+</div>
+<div>
+<p>DON’T WORRY - we have a <strong>new version of the Internet Simulator</strong> widget that abstracts away the coordination problems you had to deal with previously.</p>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity (35 mins)</h2>
+                    <h3 id="video-new-version-of-the-internet-simulator">Video: New Version of the Internet Simulator</h3>
+<p>Show the video: <a class="resource" href="https://youtu.be/cIk2R0QuXkI?list=PLzdnOPI1iJNdVYhNyXeP4FsbSH_AkUhxB" target="_blank">Internet Simulator - Part 2</a> which explains how the new version of the Internet simulator works. </p>
+<p>In the new version:</p>
+<ul>
+<li>you send 0’s and 1’s instead of A’s and B’s,</li>
+<li>you send a full message all at once, rather than one symbol at a time.  </li>
+</ul>
+<h3 id="develop-a-number-sending-protocol">Develop a Number Sending Protocol.</h3>
+<p><strong>Distribute:</strong></p>
+<ul>
+<li>Activity Guide: <a class="resource" href="https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit?usp=sharing" target="_blank">Sending Numbers</a>(which includes both the activity and its rubric)</li>
+<li>Graph templates: <a class="resource" href="https://docs.google.com/document/d/1NXy38iXUjT_K-VeHmrPzc_S9gs0xpz7OEM7HThyx4KQ/edit?usp=sharing" target="_blank">Sending Numbers for Graphing</a>.</li>
+</ul>
+<div class="guide">
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>While students are creating their protocol, encourage by asking:</p>
+</div>
+<div>
+<ul>
+<li>What order will the points be sent in?</li>
+<li>How does the recipient know when one number ends and the next begins?</li>
+</ul>
+</div>
+<div>
+<p>Keep the focus on what’s required of a binary protocol.  How many bits do you need to represent the image, or a particular coordinate?  You want to be efficient but also support different kinds of images.</p>
+</div>
+<div>
+<p>If students are having a difficult time encoding numbers, it may be helpful to direct them to the odometer or to pull out their Flippy Do as a reference.</p>
+</div>
+<div>
+<p>To test protocols, direct groups to trade protocols and see if they can send an image using the alternate protocol.  Students should give advice to each other to make suggestions for improvement.</p>
+</div>
+</div>
+<p><strong>Challenge:</strong> <em>(from the activity guide)</em></p>
+<p>Groups must develop a protocol or set of rules for communicating a drawing to their partners using only bits.</p>
+<p><a data-lightbox="all_images" data-title="Line drawing" href="https://code.org/educate/docs/csp/U1L08-drawing.png"><img alt="Line drawing" class="left" src="https://code.org/educate/docs/csp/U1L08-drawing.png"></a></p>
+<p><strong>Challenge Rules:</strong> <em>(from the activity guide)</em></p>
+<ul>
+<li>The image will be a line drawing created by connecting points on a grid, like the one seen here.</li>
+<li>The parties can discuss and agree on a protocol ahead of time, but the image exchange must happen without communication between the two parties, other than through using the Internet Simulator.</li>
+<li>You can only send a single message through the Internet Simulator to describe the whole image.</li>
+</ul>
+<p><strong>During the Acitivity</strong></p>
+<ul>
+<li>Give students time to develop their protocols and practice encoding and decoding their images into bits. </li>
+<li>Students should be encouraged to make a simple drawing.  A geometric shape, or the first letter of their name is a good option.  A shape that can be drawn with about 3-5 points is a good goal. (The 5-pointed star example is a good one, and is shown in the activity guide)</li>
+<li>Students have been provided three different-sized graphs, on which they could scale their initial drawing to be different sizes or draw different images.  Either way, it may necessitate the creation of different protocols. </li>
+</ul>
+<p><strong>Test It Out:</strong> </p>
+<p>Students should test their protocols with one another under the conditions defined on the sheet. Let them know that there will be a more formal testing of their protocols at the conclusion of the lesson, in which you will provide the image that needs to be transmitted. Are they absolutely sure they’ve accounted for every possible scenario? Does everyone feel comfortable encoding and decoding a message?</p>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up (10 mins)</h2>
+                    <h3 id="does-it-work">Does it work?</h3>
+<p>Give students an image as a “test” of their protocol.</p>
+<ul>
+<li>Make simple line drawings on graph paper for students to send to each other.  </li>
+<li>Give the drawing to one partner and ask him/her to use the protocol to communicate it to the other partner. </li>
+<li>The other partner must draw what she receives on a blank grid.  </li>
+<li>Compare the results to see if it came out right.  <ul>
+<li>If it didn’t, have students write a sentence or two about what went wrong, if the problem was preventable, and whether they need to change their protocol. </li>
+</ul>
+</li>
+<li>Use the rubric to assess.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions:</strong> You may assess the outcome of the challenge run at the conclusion of the activity. Assessment questions appear both on the rubric and in Code Studio.</p>
+<p><strong>Additional Questions:</strong></p>
+<ul>
+<li>Develop a protocol that allows the user to send a calendar date (mm/dd). What is the minimum number of bits necessary?<ul>
+<li>Answer: The minimum number is 9 bits.</li>
+</ul>
+</li>
+<li>Develop a protocol that allows the user to send a time (use 24hr military time hh:mm:ss). What is the minimum number of bits necessary?<ul>
+<li>Answer: The minimum number is 17 bits.</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>Develop a protocol designed for a graph that is not square, e.g. 50 * 200. How does this alter the format of your protocol?</li>
+<li>Develop a protocol that can communicate locations on the surface of the earth. Longitude and latitude might be helpful tools to use.</li>
+<li>The “Scalable Vector Graphics” (SVG) image file format represents images as a text-based protocol.  It can be used with HTML or as a standalone file.  Check it out on <a href="http://www.w3schools.com/svg/" target="_blank">W3Schools</a> or <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">Wikipedia</a>.</li>
+</ul>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L2:14</strong> - Examine connections between elements of mathematics and computer science including binary numbers, logic, sets and functions.</li>
+                        
+                            <li><strong>CT.L2:7</strong> - Represent data in a variety of ways including text, sounds, pictures and numbers.</li>
+                        
+                            <li><strong>CT.L2:8</strong> - Use visual representations of problem states, structures and data (e.g., graphs, charts, network diagrams, flowcharts).</li>
+                        
+                            <li><strong>CT.L2:9</strong> - Interact with content-specific models and simulations (e.g., ecosystems, epidemics, molecular dynamics) to support learning and research.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>2.1</strong> - A variety of abstractions built upon binary sequences can be used to represent all digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.1</strong> - Describe the variety of abstractions used to represent data. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.1A</strong> - Digital data is represented by abstractions at different levels.</li>
+                                
+                                    <li><strong>2.1.1B</strong> - At the lowest level, all digital data are represented by bits.</li>
+                                
+                                    <li><strong>2.1.1C</strong> - At a higher level, bits are grouped to represent abstractions, including but not limited to numbers, characters, and color.</li>
+                                
+                                    <li><strong>2.1.1D</strong> - Number bases, including binary, decimal, and hexadecimal, are used to represent and investigate digital data.</li>
+                                
+                                    <li><strong>2.1.1E</strong> - At one of the lowest levels of abstraction, digital data is represented in binary (base 2) using only combinations of the digits zero and one.</li>
+                                
+                                    <li><strong>2.1.1G</strong> - Numbers can be converted from any base to any other base.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.2</strong> - Explain how binary sequences are used to represent digital data. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.2A</strong> - A finite representation is used to model the infinite mathematical concept of a number. </li>
+                                
+                                    <li><strong>2.1.2B</strong> - In many programming languages, the fixed number of bits used to represent characters or integers limits the range of integer values and mathematical operations; this limitation can result in overflow or other errors.</li>
+                                
+                                    <li><strong>2.1.2C</strong> - In many programming languages, the fixed number of bits used to represent real numbers (as floating point numbers) limits the range of floating  point values and mathematical operations; this limitation can result in round</li>
+                                
+                                    <li><strong>2.1.2D</strong> - The interpretation of a binary sequence depends on how it is used.</li>
+                                
+                                    <li><strong>2.1.2E</strong> - A sequence of bits may represent instructions or data.</li>
+                                
+                                    <li><strong>2.1.2F</strong> - A sequence of bits may represent different types of data in different contexts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.3</strong> - Models and simulations use abstraction to generate new understanding and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.3.1</strong> - Use models and simulations to represent phenomena. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.3.1A</strong> - Models and simulations are simplified representations of more complex objects or phenomena.</li>
+                                
+                                    <li><strong>2.3.1B</strong> - Models may use different abstractions or levels of abstraction depending on the objects or phenomena being posed.</li>
+                                
+                                    <li><strong>2.3.1C</strong> - Models often omit unnecessary features of the objects or phenomena that are being modeled.</li>
+                                
+                                    <li><strong>2.3.1D</strong> - Simulations mimic real world events without the cost or danger of building and testing the phenomena in the real world.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.3.2</strong> - Use models and simulations to formulate, refine, and test hypotheses. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.3.2A</strong> - Models and simulations facilitate the formulation and refinement of hypotheses related to the objects or phenomena under consideration.</li>
+                                
+                                    <li><strong>2.3.2B</strong> - Hypotheses are formulated to explain the objects or phenomena being modeled.</li>
+                                
+                                    <li><strong>2.3.2C</strong> - Hypotheses are refined by examining the insights that models and simulations provide into the objects or phenomena.</li>
+                                
+                                    <li><strong>2.3.2D</strong> - The results of simulations may generate new knowledge and new hypotheses related to the phenomena being modeled.</li>
+                                
+                                    <li><strong>2.3.2E</strong> - Simulations allow hypotheses to be tested without the constraints of the real world.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.1</strong> - People use computer programs to process information to gain insight and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.3</strong> - Explain the insight and knowledge gained from digitally processed data by using appropriate visualizations, notations, and precise language. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.3A</strong> - Visualization tools and software can communicate information about data.</li>
+                                
+                                    <li><strong>3.1.3B</strong> - Tables, diagrams, and textual displays can be used in communicating insight and knowledge gained from data.</li>
+                                
+                                    <li><strong>3.1.3D</strong> - Transforming information can be effective in communicating knowledge gained from data.</li>
+                                
+                                    <li><strong>3.1.3E</strong> - Interactivity with data is an aspect of communicating.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.2</strong> - Characteristics of the Internet influence the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.2</strong> - Explain how the characteristics of the Internet influence the systems built on it. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.2D</strong> - Interfaces and protocols enable widespread use of the Internet.</li>
+                                
+                                    <li><strong>6.2.2G</strong> - Standards for packets and routing include transmission control protocol/Internet protocol (TCP/IP).</li>
+                                
+                                    <li><strong>6.2.2H</strong> - Standards for sharing information and communicating between browsers and servers on the Web include HTTP and secure sockets layer/transport layer security (SSL/TLS).</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocsending-numbers').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#sending-numberscontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'sending-numbers', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

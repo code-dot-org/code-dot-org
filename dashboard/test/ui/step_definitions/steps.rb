@@ -1,7 +1,7 @@
-require File.expand_path('../../../../config/environment.rb', __FILE__)
+DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
+SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 
-DEFAULT_WAIT_TIMEOUT = 2.minutes
-SHORT_WAIT_TIMEOUT = 30.seconds
+MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
 
 def wait_with_timeout(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout)
@@ -25,14 +25,27 @@ def replace_hostname(url)
   end
 
   # Convert http to https
-  url = url.gsub(/^http:\/\//,'https://') unless url.starts_with? 'http://localhost'
+  url = url.gsub(/^http:\/\//,'https://') unless url.start_with? 'http://localhost'
   # Convert x.y.code.org to x-y.code.org
   url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
 end
 
+# Get the SCSS color constant for a given status.
+def color_for_status(status)
+  {
+    submitted: 'rgb(118, 101, 160)',    # $level_submitted
+    perfect: 'rgb(14, 190, 14)',        # $level_perfect
+    passed: 'rgb(159, 212, 159)',       # $level_passed
+    attempted: 'rgb(255, 255, 0)',      # $level_attempted
+    not_tried: 'rgb(254, 254, 254)',    # $level_not_tried
+    review_rejected: 'rgb(204, 0, 0)',  # $level_review_rejected
+    review_accepted: 'rgb(11, 142, 11)' # level_review_accepted
+  }[status.to_sym]
+end
+
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  @browser.navigate.to "#{url}"
+  @browser.navigate.to url
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -42,16 +55,16 @@ end
 
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
-  steps %q{
+  steps <<-STEPS
     When I press "x-close"
     And I wait for 0.75 seconds
-  }
+  STEPS
 end
 
 When /^I close the React alert$/ do
-  steps %q{
+  steps <<-STEPS
     When I click selector ".react-alert button"
-  }
+  STEPS
 end
 
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
@@ -59,7 +72,7 @@ When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
 end
 
 When /^I reset the puzzle to the starting version$/ do
-  steps %q{
+  steps <<-STEPS
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
@@ -70,7 +83,7 @@ When /^I reset the puzzle to the starting version$/ do
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
     And I wait until element "#showVersionsModal" is gone
-  }
+  STEPS
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -99,6 +112,16 @@ end
 Then /^check that I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.current_url.should eq url
+end
+
+Then /^I wait until current URL contains "([^"]*)"$/ do |url|
+  url = replace_hostname(url)
+  wait_with_timeout.until { @browser.current_url.include? url }
+end
+
+Then /^I wait until I am on "([^"]*)"$/ do |url|
+  url = replace_hostname(url)
+  wait_with_timeout.until { @browser.current_url == url }
 end
 
 Then /^check that the URL contains "([^"]*)"$/i do |url|
@@ -151,9 +174,9 @@ When /^I press the first "([^"]*)" element$/ do |selector|
   end
 end
 
-When /^I press the "([^"]*)" button$/ do |buttonText|
+When /^I press the "([^"]*)" button$/ do |button_text|
   wait_with_short_timeout.until {
-    @button = @browser.find_element(:css, "input[value='#{buttonText}']")
+    @button = @browser.find_element(:css, "input[value='#{button_text}']")
   }
   @button.click
 end
@@ -179,18 +202,18 @@ When /^I (?:open|close) the small footer menu$/ do
   }
 end
 
-When /^I press menu item "([^"]*)"$/ do |menuItemText|
-  menu_item_selector = "ul#more-menu a:contains(#{menuItemText})"
+When /^I press menu item "([^"]*)"$/ do |menu_item_text|
+  menu_item_selector = "ul#more-menu a:contains(#{menu_item_text})"
   steps %{
     Then I wait until element "#{menu_item_selector}" is visible
     And I click selector "#{menu_item_selector}"
   }
 end
 
-When /^I select the "([^"]*)" small footer item$/ do |menuItemText|
+When /^I select the "([^"]*)" small footer item$/ do |menu_item_text|
   steps %{
     Then I open the small footer menu
-    And I press menu item "#{menuItemText}"
+    And I press menu item "#{menu_item_text}"
   }
 end
 
@@ -248,6 +271,11 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
 end
 
+When /^I click selector "([^"]*)" within element "([^"]*)"$/ do |jquery_selector, parent_selector|
+  # normal a href links can only be clicked this way
+  @browser.execute_script("$(\"#{jquery_selector}\", $(\"#{parent_selector}\").contents())[0].click();")
+end
+
 When /^I focus selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].focus();")
 end
@@ -271,19 +299,19 @@ When /^I press delete$/ do
   @browser.execute_script(script)
 end
 
-When /^I hold key "([^"]*)"$/ do |keyCode|
-  script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{keyCode}']})"
+When /^I hold key "([^"]*)"$/ do |key_code|
+  script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{key_code}']})"
   @browser.execute_script(script)
 end
 
-When /^I type "([^"]*)" into "([^"]*)"$/ do |inputText, selector|
-  @browser.execute_script("$('" + selector + "').val('" + inputText + "')")
+When /^I type "([^"]*)" into "([^"]*)"$/ do |input_text, selector|
+  @browser.execute_script("$('" + selector + "').val('" + input_text + "')")
   @browser.execute_script("$('" + selector + "').keyup()")
   @browser.execute_script("$('" + selector + "').change()")
 end
 
-When /^I set text compression dictionary to "([^"]*)"$/ do |inputText|
-  @browser.execute_script("editor.setValue('#{inputText}')")
+When /^I set text compression dictionary to "([^"]*)"$/ do |input_text|
+  @browser.execute_script("editor.setValue('#{input_text}')")
 end
 
 Then /^I should see title "([^"]*)"$/ do |title|
@@ -304,10 +332,23 @@ end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
   steps %{
-    And I wait to see ".progress_container"
+    And I wait to see ".header_level_container"
     And I wait for 10 seconds
-    And element ".progress_container a.level_link:nth(#{level.to_i - 1})" has class "#{test_result}"
+    And element ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
+end
+
+Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
+  steps %{
+    Then I click selector ".header_popup_link"
+    And I wait to see ".user-stats-block"
+    And I wait for 10 seconds
+    And element ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
+  }
+end
+
+Then /^I verify progress for the selector "([^"]*)" is "([^"]*)"/ do |selector, progress|
+  element_has_css(selector, 'background-color', MODULE_PROGRESS_COLOR_MAP[progress.to_sym])
 end
 
 Then /^I navigate to the course page and verify progress for course "([^"]*)" stage (\d+) level (\d+) is "([^"]*)"/ do |course, stage, level, test_result|
@@ -315,34 +356,42 @@ Then /^I navigate to the course page and verify progress for course "([^"]*)" st
     Then I am on "http://studio.code.org/s/#{course}"
     And I wait to see ".user-stats-block"
     And I wait for 10 seconds
-    And element ".user-stats-block .games:nth(#{stage.to_i - 1}) a.level_link:nth(#{level.to_i - 1})" has class "#{test_result}"
+    And element ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
-Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
-  element_has_text(selector, expectedText)
+Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  element_has_text(selector, expected_text)
+end
+
+Then /^element "([^"]*)" has css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_value|
+  element_has_css(selector, property, expected_value)
+end
+
+Then /^elements "([^"]*)" have css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_values|
+  elements_have_css(selector, property, expected_values)
 end
 
 Then /^I set selector "([^"]*)" text to "([^"]*)"$/ do |selector, text|
   @browser.execute_script("$(\"#{selector}\").text(\"#{text}\");")
 end
 
-Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   # Add more unescaping rules here as needed.
-  expectedText.gsub!(/\\n/, "\n")
-  element_has_text(selector, expectedText)
+  expected_text.gsub!(/\\n/, "\n")
+  element_has_text(selector, expected_text)
 end
 
-Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expectedHtml|
-  element_has_html(selector, expectedHtml)
+Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expected_html|
+  element_has_html(selector, expected_html)
 end
 
-Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     Then I wait to see a ".dialog-title"
-    And element ".dialog-title" has text "#{expectedText}"
+    And element ".dialog-title" has text "#{expected_text}"
   }
 end
 
@@ -355,24 +404,28 @@ end
 
 # pixelation and other dashboard levels pull a bunch of hidden dialog elements
 # into the dom, so we have to check for the dialog more carefully.
-Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     And I wait to see ".modal-body"
     And element ".modal-body .dialog-title" is visible
-    And element ".modal-body .dialog-title" contains text "#{expectedText}"
+    And element ".modal-body .dialog-title" contains text "#{expected_text}"
   }
 end
 
-Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, locKey|
-  element_has_i18n_text(selector, language, locKey)
+Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
+  element_has_i18n_text(selector, language, loc_key)
 end
 
-Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
-  element_contains_text(selector, expectedText)
+Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  element_contains_text(selector, expected_text)
 end
 
-Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expectedValue|
-  element_value_is(selector, expectedValue)
+Then /^element "([^"]*)" eventually contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  wait_with_timeout(15).until { element_contains_text?(selector, expected_text) }
+end
+
+Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expected_value|
+  element_value_is(selector, expected_value)
 end
 
 Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
@@ -380,8 +433,8 @@ Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
   value.should eq negation.nil?
 end
 
-Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expectedText|
-  element_has_attribute(selector, attribute, replace_hostname(expectedText))
+Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|
+  element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
 
 # The second regex encodes that ids should not contain spaces or quotes.
@@ -528,101 +581,21 @@ And(/^I set the language cookie$/) do
     value: 'en'
   }
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
+  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
+      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
-  @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
-end
-
-def encrypted_cookie(user)
-  key_generator = ActiveSupport::KeyGenerator.new(CDO.dashboard_secret_key_base, iterations: 1000)
-
-  encryptor = ActiveSupport::MessageEncryptor.new(
-    key_generator.generate_key('encrypted cookie'),
-    key_generator.generate_key('signed encrypted cookie')
-  )
-
-  cookie = {'warden.user.user.key' => [[user.id], user.authenticatable_salt]}
-
-  encrypted_data = encryptor.encrypt_and_sign(cookie)
-
-  CGI.escape(encrypted_data.to_s)
-end
-
-def log_in_as(user)
-  params = {
-    name: "_learn_session_#{Rails.env}",
-    value: encrypted_cookie(user)
-  }
-  params[:secure] = true if @browser.current_url.start_with? 'https://'
-
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
-    params[:domain] = '.code.org' # top level domain cookie
-  end
-
-  puts "Setting cookie: #{CGI::escapeHTML params.inspect}"
-
-  @browser.manage.delete_all_cookies
   @browser.manage.add_cookie params
 
   debug_cookies(@browser.manage.all_cookies)
 end
 
 Given(/^I sign in as "([^"]*)"/) do |name|
-  log_in_as(@users[name])
-end
-
-Given(/^I am a (student|teacher)$/) do |user_type|
-  random_name = "Test#{user_type.capitalize} " + SecureRandom.base64
-  steps %Q{
-    And I create a #{user_type} named "#{random_name}"
-    And I sign in as "#{random_name}"
-  }
-end
-
-And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
-  @users ||= {}
-  @users[name] = User.find_or_create_by!(email: "user#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
-    user.name = name
-    user.password = name + "password" # hack
-    user.user_type = user_type
-    user.age = user_type == 'student' ? 16 : 21
-    user.confirmed_at = Time.now
-  end
-end
-
-And(/I fill in username and password for "([^"]*)"$/) do |name|
-  steps %Q{
-    And I type "#{@users[name].email}" into "#user_login"
-    And I type "#{name}password" into "#user_password"
-  }
-end
-
-Given(/^I sign in as a (student|teacher)$/) do |user_type|
-  steps %Q{
-    Given I am on "http://learn.code.org/"
-    And I am a #{user_type}
-    And I am on "http://learn.code.org/users/sign_in"
-  }
-end
-
-# Signs in as name by filling in username/password fields. If name does not
-# already exist, creates a new student account for name in the db first.
-Given(/^I manually sign in as "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
-    And I set the language cookie
-    And I create a student named "#{name}"
-    Then I am on "http://studio.code.org/"
-    And I reload the page
-    Then I wait for 2 seconds
-    Then I wait to see ".header_user"
+    And I wait to see "#signin_button"
     Then I click selector "#signin_button"
     And I wait to see ".new_user"
     And I fill in username and password for "#{name}"
@@ -631,12 +604,109 @@ Given(/^I manually sign in as "([^"]*)"$/) do |name|
   }
 end
 
+Given(/^I am a (student|teacher)$/) do |user_type|
+  random_name = "Test#{user_type.capitalize} " + SecureRandom.base64
+  steps %Q{
+    And I create a #{user_type} named "#{random_name}"
+  }
+end
+
+Given(/^I am enrolled in a plc course$/) do
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users.first[1][:email])
+  course = Plc::Course.find_by(name: 'CSP Support')
+  enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
+  enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
+end
+
+Then(/^I fake completion of the assessment$/) do
+  user = User.find_by_email_or_hashed_email(@users.first[1][:email])
+  unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user)
+  unit_assignment.enroll_user_in_unit_with_learning_modules([
+    unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::CONTENT_MODULE),
+    unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::PRACTICE_MODULE)
+  ])
+end
+
+def generate_user(name)
+  email = "user#{Time.now.to_i}_#{rand(1000)}@testing.xx"
+  password = name + "password" # hack
+  @users ||= {}
+  @users[name] = {
+      password: password,
+      email: email
+  }
+  return email, password
+end
+
+And(/^I create a student named "([^"]*)"$/) do |name|
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I am on "http://learn.code.org/users/sign_up"
+    And I wait to see "#user_name"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "16" option in dropdown "user_user_age"
+    And I click selector "input[type=submit][value='Sign up']"
+    And I wait until I am on "http://studio.code.org/"
+  }
+end
+
+And(/^I create a teacher named "([^"]*)"$/) do |name|
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I am on "http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher"
+    And I wait to see "#user_name"
+    And I select the "Teacher" option in dropdown "user_user_type"
+    And I wait to see "#schoolname-block"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I click selector "input[type=submit][value='Sign up']"
+    And I wait until current URL contains "http://code.org/teacher-dashboard"
+  }
+end
+
+# TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
+# thereof, removing it if it remains unused.
+And(/I display toast "([^"]*)"$/) do |message|
+  @browser.execute_script(<<-SCRIPT)
+    var div = document.createElement('div');
+    div.className = 'ui-test-toast';
+    div.textContent = "#{message}";
+    div.style.position = 'absolute';
+    div.style.top = '50px';
+    div.style.right = '50px';
+    div.style.padding = '50px';
+    div.style.backgroundColor = 'lightyellow';
+    div.style.border = 'dashed 3px #eeee00';
+    div.style.fontWeight = 'bold';
+    div.style.fontSize = '14pt';
+    document.body.appendChild(div);
+  SCRIPT
+end
+
+And(/I fill in username and password for "([^"]*)"$/) do |name|
+  steps %Q{
+    And I type "#{@users[name][:email]}" into "#user_login"
+    And I type "#{@users[name][:password]}" into "#user_password"
+  }
+end
+
 When(/^I sign out$/) do
-  steps 'When I am on "http://studio.code.org/users/sign_out"'
+  steps %Q{
+    And I am on "http://studio.code.org/users/sign_out"
+    And I wait until current URL contains "http://code.org/"
+  }
 end
 
 When(/^I debug cookies$/) do
-  puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
+  puts "DEBUG: url=#{CGI.escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
 end
 
@@ -726,21 +796,25 @@ Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
 end
 
+Then /^I copy the embed code into a new document$/ do
+  @browser.execute_script("document.body.innerHTML = $('#project-share textarea').text();")
+end
+
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
-  @browser.navigate.to "#{url}"
+  @browser.navigate.to url
 end
 
-Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, className|
+Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(className).should eq true
+  classes.include?(class_name).should eq true
 end
 
-Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|
+Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(className).should eq false
+  classes.include?(class_name).should eq false
 end
 
 Then /^there is no horizontal scrollbar$/ do

@@ -9,8 +9,7 @@
 var msg = require('./locale');
 var commonMsg = require('../locale');
 var codegen = require('../codegen');
-var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('lodash');
 
 var RANDOM_VALUE = 'random';
 var HIDDEN_VALUE = '"hidden"';
@@ -32,13 +31,13 @@ var generateSetterCode = function (opts) {
 };
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
 
-  generator.applab_eventHandlerPrologue = function() {
+  generator.applab_eventHandlerPrologue = function () {
     return '\n';
   };
 
@@ -48,7 +47,7 @@ exports.install = function(blockly, blockInstallOptions) {
 function installContainer(blockly, generator, blockInstallOptions) {
   blockly.Blocks.applab_container = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput().appendTitle(msg.container());
       this.appendValueInput('ID');
@@ -60,7 +59,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
     }
   };
 
-  generator.applab_container = function() {
+  generator.applab_container = function () {
     var idParam = Blockly.JavaScript.valueToCode(this, 'ID',
         Blockly.JavaScript.ORDER_NONE) || '';
     var htmlParam = Blockly.JavaScript.valueToCode(this, 'HTML',

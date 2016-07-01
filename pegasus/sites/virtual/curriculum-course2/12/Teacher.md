@@ -18,27 +18,27 @@ We don’t always know ahead of time what things will be like when we run our co
 ## Teaching Summary
 ### **Getting Started** - 15 minutes
 
-1) [Review](#Review)  
+1) [Review](#Review)
 2) [Vocabulary](#Vocab) <br/>
-3) [On One Condition](#GetStarted)  
+3) [On One Condition](#GetStarted)
 
-### **Activity: Conditionals with Cards** - 30  minutes  
+### **Activity: Conditionals with Cards** - 30  minutes
 
-4) [Conditionals with Cards](#Activity1)  
+4) [Conditionals with Cards](#Activity1)
 
-### **Wrap-up** - 10  minutes 
-5) [Flash Chat](#WrapUp) - What did we learn?  
+### **Wrap-up** - 10  minutes
+5) [Flash Chat](#WrapUp) - What did we learn?
 6) [Vocab Shmocab](#Shmocab)
 
-### **Assessment** - 5  minutes 
+### **Assessment** - 5  minutes
 7) [Conditionals with Cards Assessment](#Assessment)
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Define circumstances when certain parts of programs should run and when they shouldn't
-- Determine whether a conditional is met based on criteria 
+- Determine whether a conditional is met based on criteria
 - Traverse a program and predict the outcome, given a set of input
 
 [/together]
@@ -121,7 +121,7 @@ Statements that only run under certain conditions
   - When the "IF" condition isn't met, we can look at the "ELSE" for what to do
      - Example: IF I draw a 7, everybody claps. Or ELSE, everyone says "Awwwwwwe."
      - Let's try it. (Draw a card and see if your class reacts appropriately.)
-  - Ask the class to analyze what just happened. 
+  - Ask the class to analyze what just happened.
      - What was the IF?
      - What was the ELSE?
      - Which condition was met?
@@ -131,7 +131,7 @@ Statements that only run under certain conditions
          - If is the first condition
          - Else-if gets looked at only if the "If" isn't true.
          - Else gets looked at only if nothing before it is true.
-     
+
 Now let's play a game.
 
 [/together]
@@ -185,15 +185,15 @@ Here is the same program in pseudocode:
 - What other things do you do during the day under certain conditions?
 - If you are supposed to do something when the value of a card is more than 5, and you draw a 5, do you meet that condition?
 - Notice that conditions are either "True" or "False."  There is no assessment of a condition that evaluates to "Banana."
-- When you need to meet several combinations of conditions, we can use something called "nested conditionals." 
-  - What do you think that means? 
+- When you need to meet several combinations of conditions, we can use something called "nested conditionals."
+  - What do you think that means?
   - Can you give an example of where we saw that during the game?
 - What part of that game did you like the best?
 
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future.  Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
 [/tip]
@@ -215,7 +215,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 ## Assessment (5 min)
 ### <a name="Assessment"></a>7) [Conditionals with Cards Assessment](/curriculum/course2/12/Assessment12-Conditionals.pdf)
-- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained.
 - This should feel familiar, thanks to the previous activities.
 
 [/together]
@@ -227,7 +227,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### True/False Tag
@@ -252,7 +252,7 @@ Use these activities to enhance student learning. They can be used as outside of
 - Once that's done, have students choose three of each type of strip and three playing cards, paying attention to the order selected.
 - Using three pieces of paper, have students write three different programs using only the sets of strips that they selected, in any order.
   - Encourage students to put some if statements inside other if statements.
-- Now, students should run through all three programs using the cards that they drew, in the same order for each program.  
+- Now, students should run through all three programs using the cards that they drew, in the same order for each program.
   - Did any two programs return the same answer?
   - Did any return something different?
 
@@ -264,16 +264,16 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
+### ISTE Standards (formerly NETS)
 - 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-- 1.c - Use models and simulation to explore complex systems and issues.  
+- 1.c - Use models and simulation to explore complex systems and issues.
 - 2.d - Contribute to project teams to solve problems.
 - 4.b - Plan and manage activities to develop a solution or complete a project.
 - 6.a - Understand and use technology systems.
 
 ### CSTA K-12 Computer Science Standards
 
-- CT.L1:3-03. Understand how to arrange information into useful order without using a computer. 
+- CT.L1:3-03. Understand how to arrange information into useful order without using a computer.
 - CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
 - CT.L1:6-02. Develop a simple understanding of an algorithm using computer-free exercise.
 - CT.L1:6-05.  Make a list of sub-problems to consider while addressing a larger problem.
@@ -286,17 +286,17 @@ Use these activities to enhance student learning. They can be used as outside of
 - CT.L3A-03. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.
 
 ### NGSS Science and Engineering Practices
- 
-- 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+
+- 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 4. Model with mathematics.
 - 6. Attend to precision.
 - 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.  
+- 8. Look for and express regularity in repeated reasoning.
 
 ### Common Core Math Standards
 - 1.MD.4. - Organize, represent, and interpret data with up to three categories; ask and answer questions about the total number of data points, how many in each category, and how many more or less are in one category than in another.
@@ -315,9 +315,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a>
 
 [/content]
 

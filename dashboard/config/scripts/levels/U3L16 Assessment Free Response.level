@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:32.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Beyond Buttons: Assessment",
+    "markdown_instructions": "Self-assess your clicker game project using the rubric, then respond to this prompt:\n\nIn 100 words, summarize what you learned in this activity and how you might be able to use your new knowledge in future projects.\n\n\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

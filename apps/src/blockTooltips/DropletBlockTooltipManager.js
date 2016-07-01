@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
@@ -83,7 +84,7 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
     var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
     var tooltipOffsetX = desiredXPosition - hoverDivWidth;
 
-    var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+    var configuration = Object.assign({}, DEFAULT_TOOLTIP_CONFIG, {
       content: this.getTooltipHTML(funcName),
       offsetX: tooltipOffsetX,
       functionReady: function (_, contents) {
@@ -101,7 +102,10 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
       }.bind(this)
     });
 
-    // Store the title/funcName as a block id so we can attach callouts later:
+    // Store the title/funcName as data-block so we can attach callouts later:
+    $(blockHoverDiv).attr('data-block', funcName);
+    // Store it also as a long id string for older callouts (note this
+    // won't work with jquery if the funcName contains characters such as "*"):
     $(blockHoverDiv).attr('id', 'droplet_palette_block_' + funcName);
     $(blockHoverDiv).tooltipster(configuration);
   }.bind(this));

@@ -1,6 +1,11 @@
 /* globals dashboard */
 
-var IconLibrary = require('../components/IconLibrary.jsx');
+import $ from 'jquery';
+var React = require('react');
+var ReactDOM = require('react-dom');
+var IconLibrary = require('../components/IconLibrary');
+var initializeCodeMirror = require('../initializeCodeMirror');
+var marked = require ('marked');
 
 $(window).load(function () {
   $('#toggleIconLibrary').click(function () {
@@ -12,6 +17,14 @@ $(window).load(function () {
     $('#previewIcon').removeClass();
     $('#iconDiv').toggle();
   });
+
+  if ($('#plc_written_assignment_task_assignment_description').length) {
+    var markdownEditor = initializeCodeMirror('plc_written_assignment_task_assignment_description', 'markdown', function (editor, change) {
+      $('#assignment_description_preview').html(marked(editor.getValue())).children('details').details();
+    }, true);
+
+    $('#assignment_description_preview').html(marked(markdownEditor.getValue())).children('details').details();
+  }
 });
 
 // TODO: Don't use one monolithic js file

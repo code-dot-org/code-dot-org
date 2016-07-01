@@ -19,25 +19,25 @@ Binary is extremely important to the computer world. The majority of computers t
 
 1) [Review](#Review) <br/>
 2) [Vocabulary](#Vocab)<br/>
-3) [Off and On](#GetStarted)  
+3) [Off and On](#GetStarted)
 
-### **Activity: Binary Bracelets** - 15  minutes  
+### **Activity: Binary Bracelets** - 15  minutes
 
-4) [Binary Bracelets](#Activity1)  
+4) [Binary Bracelets](#Activity1)
 
 
-### **Wrap-up** - 5  minutes 
+### **Wrap-up** - 5  minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?<br/>
 
-### **Assessment** - 10  minutes 
+### **Assessment** - 10  minutes
 6) [Binary Assessments](#Assessment)
 
 [/summary]
 
 [together]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Encode letters into binary
 - Decode binary back to letters
@@ -124,9 +124,9 @@ A way of representing information using only two options
           - **Ask if anyone knows what a grouping of eight bits is called** (it's a byte.)
           - **Fun fact: A grouping of four bits is called a nibble.**
        - Go over a few examples of converting letters into binary, then back.
-       - Afterward, write an encoded letter and give the class a few seconds to figure out what it is. 
+       - Afterward, write an encoded letter and give the class a few seconds to figure out what it is.
        - When the class can figure out your encoded letters on their own, you can move on to the activity.
-  
+
 
 [/together]
 
@@ -146,7 +146,7 @@ You **do not** need to cover the whole of binary, including counting and convert
 
 > **Directions:**
 
-> 1. Find the first letter of your first name in the Binary Decoder Key. 
+> 1. Find the first letter of your first name in the Binary Decoder Key.
 
 > 2.  Fill in the squares of the provided bracelet to match the pattern of the squares next to the letter that you selected.
 
@@ -154,7 +154,7 @@ You **do not** need to cover the whole of binary, including counting and convert
 
 > 4.  Tape the bracelet around your wrist to wear it!
 
-> 5.  Share your bracelet with your classmates to see if they can figure out your letter. 
+> 5.  Share your bracelet with your classmates to see if they can figure out your letter.
 
 ![](key.png)
 
@@ -186,7 +186,7 @@ After the activity, revisit the message that was on the board and see if your cl
 
 ## Assessment (15 min)
 ### <a name="Assessment"></a>7) [Binary Assessment](/curriculum/course2/14/Assessment14-BinaryBracelets.pdf)
-- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained.
 - This should feel familiar, thanks to the previous activities.
 
 [/together]
@@ -194,12 +194,12 @@ After the activity, revisit the message that was on the board and see if your cl
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### Binary Images
 
-- There are several great resources on the web for taking this activity to the next level. 
+- There are several great resources on the web for taking this activity to the next level.
 - If your students are interested in how images (or even music) can be represented as binary, you can find more details in Thinkersmith's [Binary Baubles](http://code.org/files/CSEDbinary.pdf).
 
 
@@ -210,14 +210,14 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
+### ISTE Standards (formerly NETS)
 
 - 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-- 1.c - Use models and simulation to explore complex systems and issues.   
-- 2.d - Contribute to project teams to solve problems. 
+- 1.c - Use models and simulation to explore complex systems and issues.
+- 2.d - Contribute to project teams to solve problems.
 - 4.b - Plan and manage activities to develop a solution or complete a project.
 - 6.a - Understand and use technology systems.
-- 6.d - Transfer current knowledge to learning of new technologies.  
+- 6.d - Transfer current knowledge to learning of new technologies.
 
 ### CSTA K-12 Computer Science Standards
 
@@ -231,11 +231,11 @@ Use these activities to enhance student learning. They can be used as outside of
 ### NGSS Science and Engineering Practices
 
  - K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
- - K-2-ETS1-1 - Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool. 
- 
+ - K-2-ETS1-1 - Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
+
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 4. Model with mathematics.
@@ -258,9 +258,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

@@ -3,7 +3,7 @@ content1 'Enter prompt here'
 answer 'Enter answer here'
 
 markdown <<MARKDOWN
-Use Top-Down Design strategy to come up with additional functions you may want to create. 
+Use Top-Down Design strategy to come up with additional functions you may want to create.
 
 **Top-Down Design Strategy:**
 
@@ -14,6 +14,6 @@ Use Top-Down Design strategy to come up with additional functions you may want t
 
 Here's an example for the first one:
 
-Function name: drawSnowfalke() <br> Description/Justification: Draw a 6 pointed snowflake
+> Function name: drawSnowflake() <br> Description/Justification: Draw a 6 pointed snowflake
 
 MARKDOWN

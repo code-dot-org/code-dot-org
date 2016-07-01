@@ -1,0 +1,24 @@
+name 'CSPFinal_Question_27'
+wrong '0  2  3'
+wrong '0  2  4'
+wrong '2  2  4'
+right '2  4  6'
+
+markdown <<MARKDOWN
+Consider the following code segment, which uses the variables a, b, and c. 
+<pre>
+a &larr; 0
+b &larr; 2
+c &larr; 3
+a &larr; a + b
+b &larr; a + b
+c &larr; a + b
+DISPLAY (a)
+DISPLAY (b)
+DISPLAY (c)
+</pre>
+
+What is displayed as a result of running the code segment?
+
+
+MARKDOWN

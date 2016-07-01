@@ -18,8 +18,7 @@ function updateGutter() {
     // Droplet will call aceSession.setAnnotations() under the hood
     // for us
     dropletEditor.setAnnotations(lintAnnotations.concat(runtimeAnnotations));
-  }
-  else {
+  } else {
     aceSession.setAnnotations(lintAnnotations.concat(runtimeAnnotations));
   }
 }
@@ -50,6 +49,15 @@ module.exports = {
     // clone annotations in case anyone else has a reference to data
     lintAnnotations = jslintResults.data.slice();
     updateGutter();
+  },
+
+  /**
+   * Return the array of lintAnnotations
+   *
+   * @returns {!Array} annotations from most recent linting pass
+   */
+  getJSLintAnnotations: function () {
+    return lintAnnotations;
   },
 
   /**

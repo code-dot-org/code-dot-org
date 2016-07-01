@@ -1,0 +1,68 @@
+# Example configuration file set up with sensible defaults for local development.
+
+# Whether to prefix bundler commands with 'sudo'.
+# It may be useful to set this false when doing local development on Linux.
+#bundler_use_sudo: false
+
+
+# Causes dashboard-server to run pegasus as middleware, starting both in a
+# single command.  This is preferred (and default) in development mode.
+dashboard_enable_pegasus: true
+
+
+# Run dashboard-server with the level editing interface enabled (for admins)
+#levelbuilder_mode: true
+
+
+# Whether rake:build should rebuild the blockly-core package
+#build_blockly_core: true
+
+
+# Whether rake:build should rebuild the apps package
+#build_apps: true
+
+
+# Whether rake:build should rebuild the code-studio package
+#build_code_studio: true
+
+
+# Whether dashboard should use your local build of the apps package.
+# If false, dashboard will try to use a prepackaged version from S3.
+#use_my_apps: true
+
+
+# Whether dashboard should use your local build of the code-studio package.
+# If false, dashboard will try to use a prepackaged version from S3.
+#use_my_code_studio: true
+
+# Whether to skip the slow `rake seed:all` command during `rake build`.
+# Until you manually run `rake seed:all` or disable this flag, you won't
+# see changes to: videos, concepts, levels, scripts, trophies, prize providers, 
+# callouts, hints, secret words, or secret pictures.
+#skip_seed_all: true
+
+# Encryption key required for decoding certain protected level sources.
+# Ask a Code.org dev for this if you need access to protected levels.
+#properties_encryption_key: ''
+
+
+# Credentials for SauceLabs.com, used to for running selenium tests against
+# multiple browsers
+#saucelabs_username: ''
+#saucelabs_authkey: ''
+
+
+# Credentails for applitools.com, used for running automated visual tests
+#applitools_eyes_api_key: ''
+
+
+# Configuration Options for Pusher.com integration
+# Optional for most devs, very useful if working on Internet Simulator
+#use_pusher: true
+#pusher_app_id: ''
+#pusher_application_key: ''
+#pusher_application_secret: ''
+
+# Credentials for new relic logging. Used to log apps build times.
+# Log in to https://rpm.newrelic.com/accounts/501463 to get the key
+#new_relic_license_key: ''

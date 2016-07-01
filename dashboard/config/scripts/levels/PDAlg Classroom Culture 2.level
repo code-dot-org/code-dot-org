@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:07.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Facilitating a positive learning environment in your computer science classroom",
+    "placeholder": "In my classroom, I want to...",
+    "markdown_instructions": "### Strategies for facilitating an engaged computer science classroom:\n\n- Be open to learning from your students. This is a very valid way for you to learn something new and if the students see you learning from others; they'll feel more comfortable to do it themselves.\n- Be calm yet persistent when problems arise (which they will) because your reaction sets the tone for students. If at the first sign of an issue, you proclaim \"I'm terrible at technology. I give up,\" your students will think it's okay to do that too. \n- Implement the \"Ask 3 and then me\" rule in your classroom, which is when students have to ask 3 classmates for help before they can ask the teacher that same question. This reduces the number of students that you have to answer individually and promotes peer learning.\n- Take pride in their programs. Show it off, put it to work, post it online. This is a big accomplishment for you and your students that should be celebrated.\n- Your students may not need you in the way you think they need you. You don't need to be the expert. Ask probing questions to a student (even if you don't know the answer to the questions). Or ask the class if anyone has the answer. Or say \"I don't know; let's figure this out together\"\n- Ask probing questions to help a student instead of taking their mouse away to solve the puzzle for them. Students will be more engaged if they have to move the mouse themselves. Also, make it a classroom rule that if a student is helping another student at a computer, they can't take the mouse from them either. \n- Understanding how to get the help you need is an important part of becoming a successful facilitator of a computer science classroom. There are a variety of ways to get questions answered: online groups, the person sitting next to you, email to a mentor or peer, Code.org community forums, or other computer science educators in your district.\n\nIt's possible that you might find something that's broken, unusable, or missing on our website, which in the computer science world is called a \"bug\". Take a screenshot of what happened, and describe the problem in an email to pd@code.org. Also include what operating system and browser version you're using (example: Windows 7, Internet explorer 9). We really appreciate teachers and users sending us bug reports.\n\n### How will you foster a healthy CS classroom environment?\nNow that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?'\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

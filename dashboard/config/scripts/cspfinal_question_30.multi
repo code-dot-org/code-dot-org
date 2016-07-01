@@ -1,0 +1,22 @@
+name 'CSPFinal_Question_30'
+wrong '<pre>0 0</pre>'
+wrong '<pre>0 10</pre>'
+wrong '<pre>4 5</pre>'
+right '<pre>4 10</pre>'
+
+markdown <<MARKDOWN
+What is displayed after the following code segment is executed?
+
+<pre>
+a &larr; 0
+b &larr; 0
+REPEAT 4 TIMES
+{
+    a &larr; a + 1
+    b &larr; a + b
+}
+DISPLAY (a)
+DISPLAY (b)
+</pre>
+
+MARKDOWN

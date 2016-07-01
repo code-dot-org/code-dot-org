@@ -35,7 +35,11 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Each repeated shape is the combination of **half of a hexagon**, followed by **2/3 of a triangle**. \",\r\n  \"hint_id\": \"Course_4_Artist_12_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The unit shape is almost the same as in the last puzzle, except the half-hexagon is a bit bigger. \",\r\n  \"hint_id\": \"Course_4_Artist_12_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"1) The first three lines are 60 pixels long and you need to turn 60 degrees.  \\n 2) The next two lines are 80 pixels long and you need to turn 120 degrees \",\r\n  \"hint_id\": \"Course_4_Artist_12_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**\\n\\n![Image of solution blocks](https://images.code.org/0aac1032df04c82fe4446e1121eb1407-image-1440051412783.01.33.png)\",\r\n  \"hint_id\": \"Course_4_Artist_12_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -90,6 +94,19 @@
           <value name="COLOUR">
             <block type="colour_random"/>
           </value>
+        </block>
+        <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+            <block type="math_number_dropdown">
+              <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+        </block>
+        <block type="sticker">
+          <title name="VALUE">Alien</title>
         </block>
       </xml>
     </toolbox_blocks>

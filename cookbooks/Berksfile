@@ -1,3 +1,6 @@
+# Workaround for berkshelf/berkshelf-api#112
+Encoding.default_external = Encoding::UTF_8
+
 source "https://supermarket.chef.io"
 
 #metadata
@@ -10,8 +13,17 @@ cookbook 'ntp', '~> 1.8.6'
 # See https://github.com/hw-cookbooks/omnibus_updater/pull/105 for details on this branch.
 cookbook 'omnibus_updater', github: 'wjordan/omnibus_updater', branch: 'mixlib-install'
 
-# Run `knife cookbook list` against local cookbook path.
-`bundle exec knife cookbook list -z 2>/dev/null`.each_line do |path|
-  path = path.split(/\s/).first
-  cookbook path, path: path
+# Not yet published to Supermarket: https://github.com/PaytmLabs/chef-ixgbevf/issues/1
+cookbook 'ixgbevf', github: 'wjordan/chef-ixgbevf', branch: 'cdo'
+
+# List all local cookbooks using local-mode Chef.
+require 'chef/local_mode'
+Chef::Config.local_mode = true
+Chef::Config.chef_repo_path = Chef::Config.find_chef_repo_path(__dir__)
+Chef::LocalMode.with_server_connectivity do
+  require 'chef/server_api'
+  cookbooks = Chef::ServerAPI.new(Chef::Config[:chef_server_url]).get('/cookbooks')
+  cookbooks.keys.each do |path|
+    cookbook path, path: path
+  end
 end

@@ -1,7 +1,6 @@
 name 'U6 - Charts - Student Introduction'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 4: Lesson 07 - Visualizing Data
 

@@ -45,5 +45,5 @@ LevelSourceImage.where('image != "S3"').find_in_batches do |batch|
   puts "blank image #{blank}\n"
   puts "other errors #{errors}\n"
   puts "already in S3 #{already}\n"
-  puts "#{Time.now - start_time}s"  
+  puts "#{Time.now - start_time}s"
 end

@@ -1,0 +1,1136 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="At some point we reach a physical limit of how fast we can send bits and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must compress the data.">
+    <title>Text Compression</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit2/"><span class="h2">Unit</span><span class="h1">2</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit2/ch1" data-pdf-link="#unit2chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/1" data-pdf-link="#unit2lesson1">
+                1
+            </a>
+            </div>
+            
+                
+                    
+                        <div class="lesson current">
+                    
+                
+            <a href="/educate/csp_test/unit2/2" data-pdf-link="#unit2lesson2">
+                2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/3" data-pdf-link="#unit2lesson3">
+                3
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/4" data-pdf-link="#unit2lesson4">
+                4
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/5" data-pdf-link="#unit2lesson5">
+                5
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/6" data-pdf-link="#unit2lesson6">
+                6
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit2/ch2" data-pdf-link="#unit2chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/7" data-pdf-link="#unit2lesson7">
+                7
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/8" data-pdf-link="#unit2lesson8">
+                8
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/9" data-pdf-link="#unit2lesson9">
+                9
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/10" data-pdf-link="#unit2lesson10">
+                10
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/11" data-pdf-link="#unit2lesson11">
+                11
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/12" data-pdf-link="#unit2lesson12">
+                12
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/13" data-pdf-link="#unit2lesson13">
+                13
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/14" data-pdf-link="#unit2lesson14">
+                14
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/15" data-pdf-link="#unit2lesson15">
+                15
+            </a>
+            </div>
+            
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit2lesson2">
+        
+            
+                <h1>Lesson 2: Text Compression</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+                
+                Widget
+            
+                | 
+                Text Compression
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>At some point we reach a physical limit of how fast we can send bits and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must <strong>compress</strong> the data.  </p>
+<p>In this lesson, students will use the Text Compression Widget to compress segments of English text by looking for patterns and substituting symbols for larger patterns of text.  After some experimentation students are asked to come up with a process (or algorithm) for arriving at a “good” amount of compression despite the fact that there is no way to know what is best or optimal.  In developing a so-called “<span class="vocab" title="Heuristic: a problem solving approach (algorithm) to find a satisfactory solution where finding an optimal or exact solution is impractical or impossible.">heuristic</span> approach” to this problem, students will grapple with the tradeoffs in compressing data and begin to develop a sense of computing problems that are “hard” to solve.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>This is a big lesson that covers a lot of bases.  It should easily take 2 or more days of class.  First and foremost it covers two or three topics directly from the CSP framework.</p>
+<p><strong>1. <span class="vocab" title="Lossless Compression: a data compression algorithm that allows the original data to be perfectly reconstructed from the compressed data.">lossless compression</span></strong></p>
+<p>The basic principle behind compression is to develop a method or protocol for using fewer bits to represent the original information. The way we represent compressed data in this lesson, with a “dictionary” of repeated patterns is similar to the <a href="http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch" target="_blank">LZW compression scheme</a>, but it should be noted that LZW is slightly different from what students do in this lesson.  Students invent their own way here.  LZW is used not only for text (zip files), but also with the GIF image file format.</p>
+<p><strong>2. <span class="vocab" title="Heuristic: a problem solving approach (algorithm) to find a satisfactory solution where finding an optimal or exact solution is impractical or impossible.">heuristic</span>s</strong> </p>
+<p>The lesson touches on computationally hard problems and heuristics but please note that <strong>computationally hard problems and heuristics will be revisited later on</strong>.  A general “hand-wavy” understanding is all that’s needed from this lesson.  </p>
+<p>We do want students to see, however, that there is no single correct way to compress text using the method we use in this lesson because a) there is no known algorithm for finding an optimal solution, and b) we don’t even know a way to verify whether a given solution is optimal. There is no way to prove it or derive it beyond trying all possibilities by brute force.  <strong>This is an example of an algorithm that cannot run in a “reasonable amount of time”</strong> - one of the CSP learning objectives.</p>
+<p><strong>3. Foreshadowing programming behaviors</strong></p>
+<p>Lastly, the Text Compression Activity is an <strong>important lesson to refer back to when students start programming.</strong>   The activity engages students in thinking and problem solving behaviors that foreshadow skills that are particularly useful for programming later down the line.  In particular, when students recognize patterns that repeat, and then represent those patterns as abstract symbols, and then further recognize patterns within those patterns, it is very similar to the kinds of abstractions we develop when writing <strong>functions and procedures when programming</strong>.   Decoding the message in the warm-up activity is very similar to tracing a sequence of function calls in a program.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="toctext-compression">
+                
+                    <h3>Getting Started (5-7 mins)</h3>
+                
+                    <h3>Activity (45 mins)</h3>
+                
+                    <h3>Activity 2 (30 mins)</h3>
+                
+                    <h3>Wrap-up (20 mins)</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Collaborate with a peer to find a solution to a text compression problem using the Text Compression Widget (lossless compression scheme).</li>
+                    
+                        <li>Explain why the “best” compression is impossible or “hard” to identify.</li>
+                    
+                        <li>Explain the factors that make compression challenging.</li>
+                    
+                        <li>Develop a strategy (heuristic algorithm) for compressing text.</li>
+                    
+                        <li>Describe the purpose and rationale for lossless compression.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit1/lesson13" target="_blank">Forum</a></li>
+<li>Test out the Text Compression Widget</li>
+<li>Review the teaching tips to decide which options you want to use</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM' target='_blank' class='print_link'>Activity Recap - Decode this Message</a> - Activity Recap (<a href='https://docs.google.com/document/d/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be' target='_blank' class='print_link'>Video: Text Compression with Aloe Blacc</a> - Video (<a href='https://videos.code.org/2015/csp/textcompression_blacc.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/edit' target='_blank' class='print_link'>Activity Guide - Text Compression</a> - Activity Guide (<a href='https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1U1SPSyBYS9tnJmpnQd-xbWnhb6TpwdJ6i82H662hxdM/edit' target='_blank' class='print_link'>Activity Guide - Text Compression Heuristics</a> - Activity Guide (<a href='https://docs.google.com/document/d/1U1SPSyBYS9tnJmpnQd-xbWnhb6TpwdJ6i82H662hxdM/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ' target='_blank' class='print_link'>Decode this message</a> - Activity Guide (<a href='https://docs.google.com/document/d/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Vocabulary</h2>
+                <ul>
+                    
+                        <li><strong>Heuristic</strong> - a problem solving approach (algorithm) to find a satisfactory solution where finding an optimal or exact solution is impractical or impossible.</li>
+                    
+                        <li><strong>Lossless Compression</strong> - a data compression algorithm that allows the original data to be perfectly reconstructed from the compressed data.</li>
+                    
+                </ul>
+            
+
+        </div>
+    </div>
+
+    <div id="text-compressioncontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started (5-7 mins)</h2>
+                    <h3 id="warm-up-abbr-in-ur-txt-msgs-5-7-mins">Warm up: Abbr In Ur Txt Msgs (5-7 mins)</h3>
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_compress"><i class="glyphicon glyphicon-comment"></i>Discussion Goal</p>
+<div>
+<p>As a warm up to thinking about Text Compression, connect to ways that most people already compress text in their lives, through abbreviations and acronyms with which most people have some experience in text messages.</p>
+</div>
+<div>
+<p>Motivate some ideas about why someone would want to compress text.</p>
+</div>
+</div>
+<p><strong>Prompt:</strong></p>
+<p>
+</p><div class="tiplink tiplink-discussion"><a href="#discussion_compress"><i class="glyphicon glyphicon-comment"></i></a></div>
+<p></p>
+<ul>
+<li><em>“When you send text messages to a friend, do you spell every word correctly?”</em> <ul>
+<li>Do you use abbreviations for common words? List as many as you can.  </li>
+<li>Write some examples of things you might see in a text message that are not proper English.</li>
+</ul>
+</li>
+</ul>
+<p>Give students a minute to write, and to share with a neighbor?</p>
+<ul>
+<li><em>“Why do you use these abbreviations?  What is the benefit?”</em><ul>
+<li>Possible answers:<ul>
+<li>to save characters/keystrokes</li>
+<li>to hide from parents/teachers</li>
+<li>to be cool, clever, funny</li>
+<li>to “speak in code”</li>
+<li>to say the same thing in less space</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>What’s this about? - Compression: Same Data, Fewer Bits</p>
+<div></div>
+<div>
+<ul>
+<li>Today’s class is about <strong>compression</strong></li>
+<li>When you abbreviate or use coded language to shorten the original text, you are “compressing text.”  Computers do this too, <strong>in order to save time and space.</strong></li>
+</ul>
+</div>
+<div>
+<ul>
+<li>The art and science of compression is about figuring out how to represent the SAME DATA with FEWER BITS.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Why is this important? One reason is that storage space is limited and you’d always prefer to use fewer bits if you could.  A much more compelling reason is that there is an upper limit to how fast bits can be transmitted over the Internet.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>What if we need to send a large amount of text faster over the Internet, but we’ve reached the physical limit of how fast we can send bits?  Our only choice is to somehow capture the same information with fewer bits; we call this <strong>compression</strong>.</li>
+</ul>
+</div>
+</div>
+<p><strong>Transition:</strong> </p>
+<p>Let’s look at an example of a text message that’s been compressed in a clever way.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity (45 mins)</h2>
+                    <h3 id="decode-this-mystery-text-10-15-mins">Decode this Mystery Text (10-15 mins)</h3>
+<div class="guide">
+<ul>
+<li><strong>Distribute or Display</strong> the Activity guide: <a class="resource" href="https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ" target="_blank">Decode this message</a></li>
+<li>Put students into partners or work individually.</li>
+<li><strong>Task:</strong> What was the original text?</li>
+<li>Give students a few minutes to decode the text.  The text should be a short poem (see activity recap below)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Student Activity Guide</th>
+<th>Activity Recap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Distribute or Display</strong> Activity guide: <a class="resource" href="https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ" target="_blank">Decode this message</a></td>
+<td>(Display or draw yourself) Activity Recap: <a class="resource" href="https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM" target="_blank">Activity Recap - Decode this Message</a></td>
+</tr>
+<tr>
+<td><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L02-pitterPatter-encoded.png"><img alt="" src="https://code.org/educate/docs/csp/U2L02-pitterPatter-encoded.png"></a></td>
+<td><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L02-pitterPatter-compressionbreakdown.png"><img alt="" src="https://code.org/educate/docs/csp/U2L02-pitterPatter-compressionbreakdown.png"></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Recap: How much was it compressed?</strong></p>
+<p>To answer, we need to compare the number of characters in the original poem to the number of characters needed to represent the compressed version. </p>
+<p>Let’s break it down.</p>
+<ul>
+<li>
+<p><strong>Display</strong> or <strong>Demonstrate</strong> yourself ideas from: <a class="resource" href="https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM" target="_blank">Activity Recap - Decode this Message</a> (shown in table above)</p>
+</li>
+<li>
+<p><strong>Important Note</strong>: </p>
+<ul>
+<li>The compressed poem is not <em>just</em> this part: <a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L02-pitterPatter-compressed.png"><img alt="" src="https://code.org/educate/docs/csp/U2L02-pitterPatter-compressed.png" style="width: 250px;"></a>  If you were to send this to someone over the Internet they would not be able to decode it.</li>
+<li>The full compressed text includes BOTH the compressed text <em>and</em> the key to solve it.  </li>
+<li>Thus, you must account for the total number of characters in the message <em>plus</em> the total number of characters in the key to see how much you’ve compressed it over the original.  </li>
+</ul>
+</li>
+</ul>
+<p><strong>Transition</strong></p>
+<p>Now you’re going to get to try your hand at compressing some things on your own.</p>
+<h3 id="use-thetext-compression-widget">Use theText Compression Widget</h3>
+<div class="admonition content">
+<p class="admonition-title" id="content_lossy"><i class="glyphicon glyphicon-education"></i>Content Corner</p>
+<div>
+<p>The video explains a little bit about compression in general - the difference between <span class="vocab" title="Lossless Compression: a data compression algorithm that allows the original data to be perfectly reconstructed from the compressed data.">lossless compression</span> and <span class="vocab" title="Lossy Compression: (or irreversible compression) a data compression method that uses inexact approximations, discarding some data to represent the content.  Most commonly seen in image formats like .jpg.">lossy compression</span>.  Todays class is about <strong><span class="vocab" title="Lossless Compression: a data compression algorithm that allows the original data to be perfectly reconstructed from the compressed data.">lossless compression</span></strong> we’ll do lossy compression in a class or two after looking at image encoding.</p>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_video"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p><strong>Teacher’s Choice</strong> whether to show the video to the whole class or let students watch it from within Code Studio.  There are benefits and drawbacks to each.</p>
+</div>
+<div>
+<p><strong>Option to Consider</strong>: Get students into the text compression tool BEFORE showing the video.  You might find students are more receptive to some of the information in the video if they have tried to use the tool first.</p>
+</div>
+<div>
+<p><strong>Communication and Collaboration:</strong>  To develop communication and collaboration between students, include one of the following scenarios in class:</p>
+</div>
+<div>
+<ul>
+<li>Have students who were assigned the same poem compare results, or seat them in the same area of the room.</li>
+<li>Have a little friendly competition - but be careful not to let “bad” competition seep in - to see which pair can compress a poem the most.  Use a poem that none of the students have compressed yet.</li>
+<li>For each poem, have the group(s) who did it figure out the best in the class, and record it on the board or somewhere that people can see.<ul>
+<li>Have a class goal of getting the compression percentages for the four poems as high as possible.</li>
+<li>The groups with the best compression percentages may be asked to share their strategy with the class.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div>
+<p>Students may be reluctant to share if they feel they don’t have the best results, but students should see others’ work and offer advice and strategies.</p>
+</div>
+</div>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/code-studio-icon.png"><img alt="" src="https://code.org/educate/docs/csp/code-studio-icon.png"></a> <strong><a class="resource" href="https://www.youtube.com/watch?v=LCGkcn1f-ms&amp;feature=youtu.be" target="_blank">Video: Text Compression with Aloe Blacc</a></strong>    </p>
+<p>
+</p><div class="tiplink tiplink-content"><a href="#content_lossy"><i class="glyphicon glyphicon-education"></i></a></div>
+<p></p>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_video"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<ul>
+<li>Video explains compression</li>
+<li>Demonstrates the use of the Text Compression Tool. </li>
+<li>NOTE: This video pops up automatically when students visit the text compression stage in Code Studio.</li>
+</ul>
+<div class="guide">
+<ul>
+<li>Divide students into groups of 2</li>
+<li>Assign each pair one of the poems provided and challenge them, as a pair to compress their poem as much as possible.</li>
+<li>Deliver or put simple instructions on the board so students can follow.<ul>
+<li><strong>Challenge</strong>: compress your assigned poem as much as possible.</li>
+<li>Compare with other groups to see if you can do better.</li>
+<li>Try to develop a general strategy that will lead to a good compression.</li>
+</ul>
+</li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_video"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<ul>
+<li>After some time, have pairs that did the same poem get together to compare schemes.  As a group their job is to come up with the best compression for that poem for the class.</li>
+</ul>
+</div>
+<ul>
+<li>Optionally: you may hand out <a href="Text Compression (optional)" target="_blank">Activity Guide - Text Compression</a>, which also explains the instructions and gives students tasks.  It may work well as an out-of-class activity or assessment.</li>
+</ul>
+<h3 id="discuss-properties-and-challenges-with-compression">Discuss properties and challenges with compression.</h3>
+<p>Ask groups to pause to discuss the questions at the end of the activity.</p>
+<p><strong>Prompts:</strong></p>
+<ul>
+<li>
+<p><em>“What makes doing this compression hard?”</em></p>
+<ul>
+<li>Invite responses.  Some of these issues should surface:  You can start in lots of different ways.  Early choices affect later ones.  Once you find one set of patterns, others emerge.</li>
+<li>There is a tipping point:  you might be making progress compressing, but at some point the scale tips and the dictionary starts to get so big that you lose the benefit of having it.  But then you might start re-thinking the dictionary to tweak some bits out.</li>
+</ul>
+</li>
+<li>
+<p><em>“Do we think that these compression amounts that we’ve found are the the best? Is there a way to know what the best compression is?</em>“</p>
+<ul>
+<li>We probably don’t know what’s best.</li>
+<li>There are so many possibilities it’s hard to know.  It turns out the only way to guarantee perfect compression is brute force.  This means trying every possible set of substitutions. Even for small texts this will take far too long. The “best” is really just the best we’ve found so far.</li>
+</ul>
+</li>
+<li>
+<p><em>“But is there a process a person can follow to find the best (or a pretty good) compression for a piece of text?</em>“</p>
+<ul>
+<li>Yes, but it’s imprecise – you might leave this as a lingering question that leads to the next student task.</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity 2 (30 mins)</h2>
+                    <div class="admonition tip">
+<p class="admonition-title" id="tip_skip"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p>You may elect to not do this heuristic activity and instead get the key take-aways (see Activity Goal below) across through discussion following the previous activity.  </p>
+</div>
+</div>
+<h3 id="develop-a-heuristic-for-doing-compression">Develop a heuristic for doing compression</h3>
+<p><strong>Distribute or Display</strong>: <a class="resource" href="https://docs.google.com/document/d/1U1SPSyBYS9tnJmpnQd-xbWnhb6TpwdJ6i82H662hxdM/edit" target="_blank">Activity Guide - Text Compression Heuristics</a></p>
+<p>In computer science there is a word for strategies to use when you’re not sure what the exact or best solution to a problem is.</p>
+<p><strong>Vocabulary</strong>: <span class="vocab" title="Heuristic: a problem solving approach (algorithm) to find a satisfactory solution where finding an optimal or exact solution is impractical or impossible.">heuristic</span> a problem solving approach (typically an algorithm) to find a satisfactory solution where finding an optimal or exact solution is impractical or impossible.</p>
+<div class="guide">
+<p><strong>Instructions</strong>:</p>
+<ul>
+<li>
+<p>Continue working on compressing your poem using the Text Compression Widget. As you do so, develop a set of rules, or a “heuristic” that generally seems to provide good results.  </p>
+</li>
+<li>
+<p><strong>Record your heuristic</strong> as a list of steps that someone else unfamiliar with the problem could follow and still end up with decent compression. </p>
+</li>
+</ul>
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_goal"><i class="glyphicon glyphicon-comment"></i>Activity Goal</p>
+<div>
+<p>The point here is to establish:</p>
+</div>
+<div>
+<ul>
+<li>There is no real way to determine for sure that you’ve got the <em>best</em> compression besides trying everything possible by brute force.</li>
+<li><span>Heuristics</span> are techniques for at least making progress toward a “good enough” solution.</li>
+<li>Following the same heuristic might lead to different results. </li>
+</ul>
+</div>
+</div>
+<ul>
+<li>
+<p><strong>Trade your heuristics with another group.</strong> 
+ Are they clear and specific enough that you always know what to do? If not, provide feedback to one another and improve your heuristics to provide clearer instructions.</p>
+</li>
+<li>
+<p>Using another group’s heuristic, attempt to compress one or more of the poems in the tool. Record the amount of compression you achieve.</p>
+</li>
+</ul>
+</div>
+<h3 id="whats-best">What’s best?</h3>
+<p><strong>Share Findings:</strong> </p>
+<p>Have one member of each group give a summary of their heuristic and the results on each of the poems.  If time is limited, these presentations can be done between groups instead in front of the entire class. The discussion questions below could also be done group to group. </p>
+<p><strong>Reflection Prompts</strong> (from the Activity Guide)</p>
+<p>
+</p><div class="tiplink tiplink-discussion"><a href="#discussion_goal"><i class="glyphicon glyphicon-comment"></i></a></div>
+<p></p>
+<p><em>“Do you think it’s possible to describe (or write) a specific set of instructions that a person could follow that would always result in better text compression than your heuristic? Why or why not?”</em></p>
+<ul>
+<li>Some compression programs (like zip) do a great job if the file is sufficiently large and has reasonable amounts of repetition. </li>
+<li>However, it is also possible to create a “compressed file” that is larger than the original because the heuristic does work in every single case.</li>
+</ul>
+<p><em>“Is there a way to know that a compressed piece of text is compressed the most possible? If yes, describe how you could determine it. If no, why not?”</em></p>
+<ul>
+<li>Stress that there is no perfect solution.</li>
+<li>The size and shape of the data will determine what the “best” answer is and we often cannot even be sure it is the best answer (only that it is better than other answers we have tried.)</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up (20 mins)</h2>
+                    <h3 id="recap-questions">Recap Questions</h3>
+<p><em>“What did all groups’ processes for compression have in common?”</em></p>
+<ul>
+<li>Pattern Recognition</li>
+<li>Abstraction (patterns referring to other patterns)</li>
+</ul>
+<p><em>“Will following this process always lead to the same compression? (i.e. two people following the process for the same poem, will result in the same compression?)”</em></p>
+<ul>
+<li>No. It’s imprecise, but still OK.  The text still gets compressed, no matter what.  </li>
+<li>Since there is no way to know what’s best, all we need is a process that comes up with some solution, and a way to make progress.</li>
+</ul>
+<p>Terminology:  Verify students know or use an *<em>exit ticket</em> on this vocabulary:</p>
+<ul>
+<li><span class="vocab" title="Lossless Compression: a data compression algorithm that allows the original data to be perfectly reconstructed from the compressed data.">lossless compression</span> v. <span class="vocab" title="Lossy Compression: (or irreversible compression) a data compression method that uses inexact approximations, discarding some data to represent the content.  Most commonly seen in image formats like .jpg.">lossy compression</span></li>
+<li><span class="vocab" title="Heuristic: a problem solving approach (algorithm) to find a satisfactory solution where finding an optimal or exact solution is impractical or impossible.">heuristic</span></li>
+</ul>
+<h3 id="compression-in-the-real-world-zip">Compression in the Real World (.zip)</h3>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<ul>
+<li>You <strong>do not</strong> have to review or demo LZW compression in depth here.  It is an interesting real-world application of the activity done in class.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>While details of LZW compression are not part of the AP course content, but the idea of <span class="vocab" title="Lossless Compression: a data compression algorithm that allows the original data to be perfectly reconstructed from the compressed data.">lossless compression</span> is.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Recommendation: demonstrate zip quickly.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Have a large text file at the ready, such as the <a href="http://www.gutenberg.org/ebooks/1524.txt.utf-8" target="_blank">plaintext version of Hamlet</a></li>
+<li>Use the .zip utility on your computer to compress into a zip file and then compare the file size to the original.  (We learned how to do this in the previous lesson).</li>
+</ul>
+</div>
+</div>
+<p><strong>Zip Compression</strong></p>
+<ul>
+<li>
+<p>There is a compression algorithm called <a href="https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch" target="_blank">LZW compression</a> upon which the common “zip” utility is based.  Zip compression does something very similar to what you did today with the text compression widget.</p>
+</li>
+<li>
+<p>Here is an <a href="http://www.data-compression.com/lempelziv.shtml" target="_blank">animation of lzw in action.</a>  You can see the algorithm doesn’t compress it the most, but it is following a heuristic that will lead to better and better compression over time.</p>
+</li>
+<li>
+<p>Do you want to use zip compression for real?  Most computers have it built in:</p>
+<ul>
+<li><strong>Windows:</strong> select a file or group of files, right-click, and choose “Send To…Compressed (zipped) Folder.”</li>
+<li><strong>Mac:</strong> select a file or group of files, ctrl+click, and choose “Compress Items.”</li>
+</ul>
+</li>
+<li>
+<p>Warning: if you try this results may vary.  </p>
+<ul>
+<li>Zip works <em>really</em> well for text, but only on large files.  If you try to compress the simple hello.txt file we used in a previous lesson, you’ll see the resulting file is actually <em>bigger</em>.</li>
+<li>Zip is meant for text.  It might not work well on non-text files very well because they are already compressed or don’t have the same kinds of embedded patterns that text documents do.</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <p><strong>Real World: Zip Compression</strong></p>
+<ul>
+<li>Experiment with zip using text files with different contents.  Are the results for small files as good as for large files? (On Macs, in the Finder choose “get info” for a file to see the actual number of bytes in the file, since the Finder display will show 4KB for any file that’s less than that.)<ul>
+<li>Warning: results may vary.  Zip works really well for text, but it might not compress other files very well because they are already compressed or don’t have the same kinds of embedded patterns that text documents do.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Challenge:  Research the LZW algorithm</strong></p>
+<ul>
+<li>
+<p>.zip compression is based on the <a href="https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch" target="_blank">LZW Compression Scheme</a></p>
+</li>
+<li>
+<p>While the idea behind the text compression tool is similar to LZW (zip) algorithm, tracing the path of compression and decompression is somewhat challenging.  Learning more about LZW and what happens in the course of this algorithm would be an excellent extension project for some individuals.</p>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions:</strong> </p>
+<ul>
+<li>If you send the compressed poem, would your friend will be able to read it?  Why is the dictionary important? <ul>
+<li>Your friend would only be able to read it if she knew how it was encoded. The dictionary is necessary because it tells her how to decompress the information that she has. </li>
+</ul>
+</li>
+<li>Why do you want to compress anything?  What’s the point?<ul>
+<li>It is useful for sending things faster or for smaller storage.  It allows for optimization of limited resources. </li>
+</ul>
+</li>
+<li>For a piece of text, what is a “good” amount of compression?  Is there a way to know when you’ve compressed it the most?  Explain how you would know, or why you can’t know.</li>
+</ul>
+<p><strong>Case Study:</strong>  A simple message has been compressed below:</p>
+<p><a data-lightbox="all_images" data-title="Compressed message" href="https://code.org/educate/docs/csp/U1L13-compressed-message.png"><img alt="Compressed message" class="center" src="https://code.org/educate/docs/csp/U1L13-compressed-message.png"></a></p>
+<ul>
+<li>What was the original message?<ul>
+<li>the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back</li>
+</ul>
+</li>
+<li>Approximately what was the percentage of compression?  (count bytes in original vs. total bytes in compressed version) <ul>
+<li>approximately: 25% compression</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CPP</strong> - Computing Practice &amp; Programming</summary>
+                    <ul>
+                        
+                            <li><strong>CPP.L2:4</strong> - Demonstrate an understanding of algorithms and their practical application.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L2:9</strong> - Interact with content-specific models and simulations (e.g., ecosystems, epidemics, molecular dynamics) to support learning and research.</li>
+                        
+                            <li><strong>CT.L3B:8</strong> - Use models and simulations to help formulate, refine, and test scientific hypotheses.</li>
+                        
+                            <li><strong>CT.L3B:9</strong> - Analyze data and identify patterns through modeling and simulation.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>2.1</strong> - A variety of abstractions built upon binary sequences can be used to represent all digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.1</strong> - Describe the variety of abstractions used to represent data. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.1A</strong> - Digital data is represented by abstractions at different levels.</li>
+                                
+                                    <li><strong>2.1.1B</strong> - At the lowest level, all digital data are represented by bits.</li>
+                                
+                                    <li><strong>2.1.1C</strong> - At a higher level, bits are grouped to represent abstractions, including but not limited to numbers, characters, and color.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.2</strong> - Multiple levels of abstraction are used to write programs or create other computational artifacts</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.2.1</strong> - Develop an abstraction when writing a program or creating other computational artifacts. [P2]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.2.1B</strong> - An abstraction extracts common features from specific examples in order to generalize concepts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.1</strong> - People use computer programs to process information to gain insight and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.1</strong> - Use computers to process information, find patterns, and test hypotheses about digitally processed information to gain insight and knowledge. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.1A</strong> - Computers are used in an iterative and interactive way when processing digital information to gain insight and knowledge.</li>
+                                
+                                    <li><strong>3.1.1D</strong> - Insight and knowledge can be obtained from translating and transforming digitally represented information.</li>
+                                
+                                    <li><strong>3.1.1E</strong> - Patterns can emerge when data is transformed using computational tools.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.2</strong> - Collaborate when processing information to gain insight and knowledge. [P6]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.2A</strong> - Collaboration is an important part of solving data driven problems.</li>
+                                
+                                    <li><strong>3.1.2B</strong> - Collaboration facilitates solving computational problems by applying multiple perspectives, experiences, and skill sets.</li>
+                                
+                                    <li><strong>3.1.2C</strong> - Communication between participants working on data driven problems gives rise to enhanced insights and knowledge.</li>
+                                
+                                    <li><strong>3.1.2D</strong> - Collaboration in developing hypotheses and questions, and in testing hypotheses and answering questions, about data helps participants gain insight and knowledge.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.3</strong> - Explain the insight and knowledge gained from digitally processed data by using appropriate visualizations, notations, and precise language. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.3A</strong> - Visualization tools and software can communicate information about data.</li>
+                                
+                                    <li><strong>3.1.3E</strong> - Interactivity with data is an aspect of communicating.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.3</strong> - There are trade offs when representing information as digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.3.1</strong> - Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.3.1A</strong> - Digital data representations involve trade  offs related to storage, security, and privacy concerns.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>4.2</strong> - Algorithms can solve many but not all computational problems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>4.2.1</strong> - Explain the difference between algorithms that run in a reasonable time and those that do not run in a reasonable time. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>4.2.1A</strong> - Many problems can be solved in a reasonable time.</li>
+                                
+                                    <li><strong>4.2.1B</strong> - Reasonable time means that as the input size grows, the number of steps the algorithm takes is proportional to the square (or cube, fourth power, fifth power, etc.) of the size of the input. </li>
+                                
+                                    <li><strong>4.2.1C</strong> - Some problems cannot be solved in a reasonable time, even for small input sizes.</li>
+                                
+                                    <li><strong>4.2.1D</strong> - Some problems can be solved but not in a reasonable time. In these cases, heuristic approaches may be helpful to find solutions in reasonable time.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>4.2.3</strong> - Explain the existence of undecidable problems in computer science. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>4.2.3A</strong> - An undecidable problem may have instances that have an algorithmic solution, but there is no algorithmic solution that solves all instances of the problem.</li>
+                                
+                                    <li><strong>4.2.3B</strong> - A decidable problem is one in which an algorithm can be constructed to answer â€œyesâ€ or â€œnoâ€ for all inputs (e.g., â€œis the number even?â€)</li>
+                                
+                                    <li><strong>4.2.3C</strong> - An undecidable problem is one in which no algorithm can be constructed that always leads to a correct yes or no answer</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>4.2.4</strong> - Evaluate algorithms analytically and empirically for efficiency, correctness, and clarity. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>4.2.4A</strong> - Determining an algorithmâ€™s efficiency is done by reasoning formally or mathematically about the algorithm.</li>
+                                
+                                    <li><strong>4.2.4C</strong> - The correctness of an algorithm is determined by reasoning formally or mathematically about the algorithm, not by testing an implementation of the algorithm.</li>
+                                
+                                    <li><strong>4.2.4D</strong> - Different correct algorithms for the same problem can have different efficiencies.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#toctext-compression').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#text-compressioncontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'text-compression', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

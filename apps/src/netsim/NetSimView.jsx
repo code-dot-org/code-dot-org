@@ -1,16 +1,14 @@
 'use strict';
 
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv.jsx');
-var StudioAppWrapper = require('../templates/StudioAppWrapper.jsx');
+var React = require('react');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+var StudioAppWrapper = require('../templates/StudioAppWrapper');
 
 /**
  * Top-level React wrapper for our NetSim app.
  */
 var NetSimView = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
     generateCodeAppHtml: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
@@ -21,10 +19,7 @@ var NetSimView = React.createClass({
 
   render: function () {
     return (
-      <StudioAppWrapper
-          assetUrl={this.props.assetUrl}
-          isEmbedView={this.props.isEmbedView}
-          isShareView={this.props.isShareView}>
+      <StudioAppWrapper>
         <ProtectedStatefulDiv contentFunction={this.props.generateCodeAppHtml} />
       </StudioAppWrapper>
     );

@@ -1,9 +1,0 @@
-name 'PDK5 Goals'
-title 'Goals for using Code.org in your Classroom'
-success_title "Awesome!"
-success_body "Thanks for your response"
-height '200'
-skip_sound true
-markdown <<MARKDOWN
-What are your goals or intentions for integrating Code.org in your classroom?
-MARKDOWN

@@ -228,8 +228,7 @@ class GameController {
       if (this.OnCompleteCallback) {
           if (this.queue.isSucceeded()) {
               this.OnCompleteCallback(true, this.levelModel);
-          }
-          else {
+          } else {
               this.OnCompleteCallback(false, this.levelModel);
           }
           this.OnCompleteCallback = null;
@@ -265,11 +264,10 @@ class GameController {
       this.levelModel.moveForward();
       // TODO: check for Lava, Creeper, water => play approp animation & call commandQueueItem.failed()
 
-      jumpOff = wasOnBlock && wasOnBlock != player.isOnBlock;
-      if(player.isOnBlock || jumpOff) {
+      jumpOff = wasOnBlock && wasOnBlock !== player.isOnBlock;
+      if (player.isOnBlock || jumpOff) {
         groundType = this.levelModel.actionPlane[this.levelModel.yToIndex(player.position[1]) + player.position[0]].blockType;
-      }
-      else {
+      } else {
         groundType = this.levelModel.groundPlane[this.levelModel.yToIndex(player.position[1]) + player.position[0]].blockType;
       }
 
@@ -283,27 +281,22 @@ class GameController {
             this.levelView.playDrownFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
               commandQueueItem.failed();
             } );
-        }
-        else if(this.levelModel.isPlayerStandingInLava()) {
+        } else if (this.levelModel.isPlayerStandingInLava()) {
           this.levelView.playBurnInLavaAnimation(player.position, player.facing, player.isOnBlock, () => {
             commandQueueItem.failed();
           } );
-        }
-        else {
+        } else {
           this.delayPlayerMoveBy(30, 200, () => {
             commandQueueItem.succeeded();
           });
         }
       });
-    }
-    else {
-      if(this.levelModel.isForwardBlockOfType("creeper"))
-      {
+    } else {
+      if (this.levelModel.isForwardBlockOfType("creeper")) {
         this.levelView.playCreeperExplodeAnimation(player.position, player.facing, this.levelModel.getMoveForwardPosition(), player.isOnBlock, () => {
           commandQueueItem.failed();
         });
-      }
-      else {
+      } else {
         this.levelView.playBumpAnimation(player.position, player.facing, false);
         this.delayPlayerMoveBy(400, 800, () => {
           commandQueueItem.succeeded();
@@ -313,11 +306,11 @@ class GameController {
   }
 
   turn(commandQueueItem, direction) {
-    if (direction == -1) {
+    if (direction === -1) {
       this.levelModel.turnLeft();
     }
 
-    if (direction == 1) {
+    if (direction === 1) {
       this.levelModel.turnRight();
     }
     this.levelView.updatePlayerDirection(this.levelModel.player.position, this.levelModel.player.facing);
@@ -339,7 +332,7 @@ class GameController {
       if (block.isDestroyable) {
         this.levelModel.computeShadingPlane();
         this.levelModel.computeFowPlane();
-        switch(blockType){
+        switch (blockType){
           case "logAcacia":
           case "treeAcacia":
             blockType = "planksAcacia";
@@ -386,7 +379,7 @@ class GameController {
         if (block.isDestroyable) {
           this.levelModel.computeShadingPlane();
           this.levelModel.computeFowPlane();
-          switch(blockType){
+          switch (blockType){
             case "logAcacia":
             case "treeAcacia":
               blockType = "planksAcacia";
@@ -470,7 +463,7 @@ class GameController {
     var blockIndex = (this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0]);
     var blockTypeAtPosition = this.levelModel.actionPlane[blockIndex].blockType;
     if (this.levelModel.canPlaceBlock()) {
-      if(this.checkMinecartLevelEndAnimation() && blockType == "rail") {
+      if (this.checkMinecartLevelEndAnimation() && blockType === "rail") {
         blockType = this.checkRailBlock(blockType);
       }
 
@@ -549,7 +542,7 @@ class GameController {
 
     forwardPosition = this.levelModel.getMoveForwardPosition();
     placementPlane = this.levelModel.getPlaneToPlaceOn(forwardPosition);
-    if(this.levelModel.isBlockOfTypeOnPlane(forwardPosition, "lava", placementPlane)) {
+    if (this.levelModel.isBlockOfTypeOnPlane(forwardPosition, "lava", placementPlane)) {
       soundEffect = ()=>{this.levelView.audioPlayer.play("fizz");};
     }
     this.levelModel.placeBlockForward(blockType, placementPlane);
@@ -574,7 +567,7 @@ class GameController {
 
     // check the final state to see if its solved
     if (this.levelModel.isSolved()) {
-      if(this.checkHouseBuiltEndAnimation()) {
+      if (this.checkHouseBuiltEndAnimation()) {
         var houseBottomRight = this.levelModel.getHouseBottomRight();
         var inFrontOfDoor = [houseBottomRight[0] - 1, houseBottomRight[1] + 2];
         var bedPosition = [houseBottomRight[0], houseBottomRight[1]];
@@ -598,13 +591,10 @@ class GameController {
               this.levelView.updateFowPlane(this.levelModel.fowPlane);
             }
         );
-      }
-      else if(this.checkMinecartLevelEndAnimation())
-      {
+      } else if (this.checkMinecartLevelEndAnimation()) {
         this.levelView.playMinecartAnimation(player.position, player.facing, player.isOnBlock,
             () => { commandQueueItem.succeeded(); }, this.levelModel.getMinecartTrack(), this.levelModel.getUnpoweredRails());
-      }
-      else if(this.checkTntAnimation()) {
+      } else if (this.checkTntAnimation()) {
         this.levelView.scaleShowWholeWorld(() => {});
         var tnt = this.levelModel.getTnt();
         var wasOnBlock = player.isOnBlock;
@@ -618,14 +608,14 @@ class GameController {
             //    .to({y: 0}, 0)
             //    .start();
           }
-          for(var i in tnt) {
+          for (var i in tnt) {
             if (tnt[i].x === this.levelModel.player.position.x && tnt[i].y === this.levelModel.player.position.y) {
               this.levelModel.player.isOnBlock = false;
             }
             var surroundingBlocks = this.levelModel.getAllBorderingPositionNotOfType(tnt[i], "tnt");
             this.levelModel.destroyBlock(tnt[i]);
-            for(var b = 1; b < surroundingBlocks.length; ++b) {
-              if(surroundingBlocks[b][0]) {
+            for (var b = 1; b < surroundingBlocks.length; ++b) {
+              if (surroundingBlocks[b][0]) {
                 this.destroyBlockWithoutPlayerInteraction(surroundingBlocks[b][1]);
               }
             }
@@ -643,8 +633,7 @@ class GameController {
             });
           });
         });
-      }
-      else {
+      } else {
         this.levelView.playSuccessAnimation(player.position, player.facing, player.isOnBlock,
             () => { commandQueueItem.succeeded(); });
       }

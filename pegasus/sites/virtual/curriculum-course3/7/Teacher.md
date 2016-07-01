@@ -10,7 +10,7 @@ theme: none
 
 [together]
 
-## Lesson Overview 
+## Lesson Overview
 
 In the Bee environment, students write programs with conditional statements. Students originally learned this concept in Course 2, but this lesson introduces more complex implementations of conditionals.
 
@@ -32,7 +32,7 @@ In the Bee environment, students write programs with conditional statements. Stu
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 
 - Compare properties and values using >, =, < symbols
@@ -76,7 +76,7 @@ In the Course 2 Bee Conditionals, we only looked at simple conditionals called "
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 <a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### True/False Tag
@@ -100,7 +100,7 @@ In the Course 2 Bee Conditionals, we only looked at simple conditionals called "
 - Once that's done, have students choose three of each type of strip and three playing cards, paying attention to the order selected.
 - Using three pieces of paper, have students write three different programs using only the sets of strips that they selected, in any order.
   - Encourage students to put some if statements inside other if statements.
-- Now, students should run through all three programs using the cards that they drew, in the same order for each program.  
+- Now, students should run through all three programs using the cards that they drew, in the same order for each program.
   - Did any two programs return the same answer?
   - Did any return something different?
 
@@ -125,11 +125,11 @@ In the Course 2 Bee Conditionals, we only looked at simple conditionals called "
 - 4.b - Plan and manage activities to develop a solution or complete a project.
 - 6.a - Understand and use technology systems.
 - 6.c - Troubleshoot systems and applications.
-- 6.d - Transfer current knowledge to learning of new technologies.  
+- 6.d - Transfer current knowledge to learning of new technologies.
 
 
 ### CSTA K-12 Computer Science Standards
- 
+
 - CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
 - CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
 - CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
@@ -139,16 +139,16 @@ In the Course 2 Bee Conditionals, we only looked at simple conditionals called "
 - CT.L2-06. Describe and analyze a sequence of instructions being followed.
 - CT.L2-07. Represent data in a variety of ways: text, sounds, pictures, numbers.
 - CT.L2-08. Use visual representations of problem states, structures, and data.
-- CT.L2-12. Use abstraction to decompose a problem into sub problems. 
-- CT.L2-14. Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions. 
+- CT.L2-12. Use abstraction to decompose a problem into sub problems.
+- CT.L2-14. Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions.
 - CT.L3A-03. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.
 
 ### Next-Gen Science Standards
 
-- 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+- 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 4. Model with mathematics
@@ -171,9 +171,7 @@ In the Course 2 Bee Conditionals, we only looked at simple conditionals called "
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

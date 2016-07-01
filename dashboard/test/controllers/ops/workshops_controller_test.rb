@@ -17,7 +17,6 @@ module Ops
       @cohort.teachers << create(:teacher)
       @cohort.teachers << create(:teacher)
       @cohort.save!
-
     end
 
     test 'Facilitators can view all workshops they are facilitating' do

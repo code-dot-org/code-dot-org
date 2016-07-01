@@ -1,0 +1,44 @@
+name 'ECSPD1 Welcome to the Code.org Family'
+title 'ECSPD1 Welcome to the Code.org Family'
+description 'Welcome to the Code.org Family'
+css 'unplugged'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+## Welcome to the Family! 
+<br>
+Welcome to the Code.org family of teachers working across the United States to bring computer science courses to students in schools nationwide. 
+<br>
+<br>
+Thank you for taking the first step to bring computer science to your students and to open a world of opportunity for them. Over the next 15 months, you’ll participate in Code.org’s Professional Learning Program, supporting version 5 of the Exploring Computer Science (ECS) curriculum. 
+<br>
+<br>
+#### As a teacher in the Exploring Computer Science Professional Learning Program, you will:
+- Join a nationwide community of educators working to change the face of CS education
+- Participate in in-person and online professional development
+- Plan and deliver the ECS curriculum to students, and reflect on your experiences
+<br>
+<br>
+We have chosen to offer ECS to schools as our introductory college preparatory computer science course designed to broaden participation in computing. Through the ECS curriculum and your professional learning, you will have the opportunity to engage in an inquiry-based approach to teaching and learning essential computer science concepts. 
+<br>
+<br>
+ECS will open a door for your students to explore what computer science is and give them a positive first experience with computer science. We look forward to working with you in the Professional Learning Program. 
+<br>
+<br>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/fDv6zirEto8" frameborder="0" allowfullscreen></iframe>
+<br>
+
+**[Can't see the video? Watch it here](https://www.dropbox.com/s/vgwlmajfe3tqdxn/ecs-p1-welcome-color.mp4?dl=0)**
+
+<br>
+This online portion is the first step in the professional learning program.  It is expected to last around two hours.  All of your Online learning will be dine here in Code Studio. In the next section,  you’ll find a quick tour of the interface which demonstrates several important features of Code Studio so that you can successfully complete the program.
+<br>
+<br>
+<strong> When you're ready, click continue below to get started with your Online Introduction to the Professional Learning Program.</strong>
+<br>
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

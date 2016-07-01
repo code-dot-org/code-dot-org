@@ -11,7 +11,7 @@ class BaseDSL
     @hash['encrypted'] = '1'
 
     begin
-      instance_eval(Encryption::decrypt_object(text))
+      instance_eval(Encryption.decrypt_object(text))
     rescue OpenSSL::Cipher::CipherError, Encryption::KeyMissingError
       puts "warning: unable to decrypt level #{@name}, skipping"
       return
@@ -19,8 +19,8 @@ class BaseDSL
   end
 
   # returns 'xyz' from 'XyzDSL' subclasses
-  def prefix()
-    self.class.to_s.tap{|s|s.slice!('DSL')}.underscore
+  def prefix
+    self.class.to_s.tap{|s| s.slice!('DSL')}.underscore
   end
 
   def self.parse_file(filename, name=nil)

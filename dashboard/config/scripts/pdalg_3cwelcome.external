@@ -1,0 +1,21 @@
+name 'PDAlg 3CWelcome'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
+
+# Getting Started > Welcome!
+
+Congratulations on completing your first year of teaching Computer Science in Algebra. We hope school year was an enjoyable one, and that seen success implementing CS in your algebra classes.
+<br><br>
+This online professional development is designed to give you an opportunity to reflect on your first year teaching CS in Algebra and prepare for futures years. By working through the stages and levels that follow, you will:
+
+- Reflect on your successes and difficulties through the year
+- Share student work with your cohort
+- Plan for teaching CS in Algebra in the future
+
+Click “Continue” below to learn more about this online PD.
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

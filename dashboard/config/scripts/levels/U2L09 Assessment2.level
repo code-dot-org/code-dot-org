@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:19.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment: Question 2",
+    "markdown_instructions": "Why do computers need to periodically check the DNS for websites you have already visited?\n",
+    "encrypted_solution": "DRf4+uU2d+YUAeKiSFxwJQ6XcX49DdGg6ZEdNbjmS5ncnbYe4dHS9mYRAA9O\nQ9xhhbh4lat2BBYE+fp6XvbIXhnICStF0tQ8XZjq8onz8Pu+Wqtoyg2lb1Xf\nu006MhGn\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

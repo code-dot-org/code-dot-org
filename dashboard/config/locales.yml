@@ -173,7 +173,6 @@
 "hy-AM":
   english: "Armenian"
   native: "Հայերեն"
-  debug: true
   webfonts: "false"  
 
 "id": "id-ID"
@@ -288,12 +287,12 @@
 "nn": "nn-NO"
 "nn-NO":
   english: "Norwegian Nynorsk"
-  native: "Norsk (nynorsk)"
+  native: "Norsk (Nynorsk)"
 
 "no": "no-NO"
 "no-NO":
   english: "Norwegian"
-  native: "Norsk (bokmål)"
+  native: "Norsk (Bokmål)"
 
 "pl": "pl-PL"
 "pl-PL":

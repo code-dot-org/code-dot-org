@@ -1,0 +1,77 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-28T20:56:04.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "draw": null,
+      "drawSprites": null,
+      "var sprite = createSprite": {
+        "params": [
+          "200",
+          "200"
+        ],
+        "paletteParams": [
+          "x",
+          "y"
+        ]
+      },
+      "shapeColor": null,
+      "background": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "color": null,
+      "arc": null,
+      "ellipse": null,
+      "line": null,
+      "point": null,
+      "rect": null,
+      "regularPolygon": null,
+      "shape": null,
+      "text": null,
+      "textAlign": null,
+      "textFont": null,
+      "textSize": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "instructions": "Do This",
+    "markdown_instructions": "# Properties\r\n\r\nIn past levels you created rectangles and then made a bunch of variables to keep track of different qualities about that rectangles such as its position and color. Sprites take away the need to make lots of separate variables because those qualities can be controlled by built in variables. The first built in variable we are going to try is `shapeColor`.  In order to access the built in variable you need to type something like `sprite.shapeColor` where sprite is the name of the sprite you are setting the color of.\r\n\r\n# Do This\r\n\r\nThe shape color of the first sprite is set for you. Can you set the color of the second sprite?\r\n\r\n* Add a command to set the `shapeColor` of the second sprite\r\n* Run the program and test it out.",
+    "show_d_pad": "false",
+    "start_blocks": "var square1 = createSprite(10,10);\r\nsquare1.shapeColor = color(100,20,40);\r\n\r\nvar square2 = createSprite(300, 40);\r\n\r\nfunction draw(){\r\n drawSprites(); \r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

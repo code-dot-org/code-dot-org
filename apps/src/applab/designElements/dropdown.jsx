@@ -1,14 +1,14 @@
-/* global $ */
-
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var OptionsSelectRow = require('./OptionsSelectRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
+import $ from 'jquery';
+var React = require('react');
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var OptionsSelectRow = require('./OptionsSelectRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
 var color = require('../../color');
-var EnumPropertyRow = require('./EnumPropertyRow.jsx');
+var EnumPropertyRow = require('./EnumPropertyRow');
 
 var elementUtils = require('./elementUtils');
 
@@ -94,7 +94,7 @@ var DropdownEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getChangeEventCode: function() {
+  getChangeEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
@@ -103,7 +103,7 @@ var DropdownEvents = React.createClass({
     return code;
   },
 
-  insertChange: function() {
+  insertChange: function () {
     this.props.onInsertEvent(this.getChangeEventCode());
   },
 
@@ -133,7 +133,7 @@ module.exports = {
   PropertyTab: DropdownProperties,
   EventTab: DropdownEvents,
 
-  create: function() {
+  create: function () {
     var element = document.createElement('select');
     element.style.width = '200px';
     element.style.height = '30px';

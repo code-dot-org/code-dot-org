@@ -57,8 +57,7 @@ class UsersHelperTest < ActionView::TestCase
        }
     }, summarize_user_progress_for_all_scripts(user))
 
-    assert_equal [0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], percent_complete(script, user)
+    assert_equal [0.0, 0.1] + Array.new(18, 0.0), percent_complete(script, user)
     assert_in_delta 0.0183, percent_complete_total(script, user)
 
     # Verify summarize_user_progress_for_all_scripts for multiple completed levels across multiple scripts.
@@ -84,6 +83,55 @@ class UsersHelperTest < ActionView::TestCase
 
          }
      }, summarize_user_progress_for_all_scripts(user))
+  end
+
+  def test_summarize_user_progress_with_pages
+    user = create :user, total_lines: 42
+    script = create :script
+
+    # Create some levels to be embedded in the LevelGroup.
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+
+    # Create a LevelGroup level.
+    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level.properties['title'] =  'Long assessment 1'
+    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
+    level.save!
+
+    # Create a ScriptLevel joining this level to the script.
+    create :script_level, script: script, levels: [level], assessment: true
+
+    # Create a UserLevel joining this level to the user.
+    ul = create :user_level, user: user, best_result: 100, level: level, script: script
+
+    # The Activity record will point at a LevelSource with JSON data in which
+    # page one has all valid answers and page two has no valid answers.
+    level_source = create :level_source,
+      data: "{\"#{sub_level1.id}\":{\"valid\":true},\"#{sub_level2.id}\":{\"valid\":true},\"#{sub_level3.id}\":{\"valid\":false},\"#{sub_level4.id}\":{\"valid\":false}}"
+
+    # And now create the Activity record.
+    create :activity, level_id: level.id,
+      user_id: user.id,
+      level_source_id: level_source.id,
+      test_result: Activity::BEST_PASS_RESULT
+
+    # Validate.
+    assert_equal({
+      linesOfCode: 42,
+      linesOfCodeText: 'Total lines of code: 42',
+      levels: {
+        ul.level_id => {
+          status: 'perfect',
+          result: 100,
+          submitted: false,
+          pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]},
+        "#{ul.level_id}_0" => {result: ActivityConstants::FREE_PLAY_RESULT, submitted: false},
+        "#{ul.level_id}_1" => {result: nil, submitted: false}
+      }
+    }, summarize_user_progress(script, user))
   end
 
 end

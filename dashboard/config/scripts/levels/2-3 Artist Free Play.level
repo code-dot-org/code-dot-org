@@ -33,7 +33,10 @@
     "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

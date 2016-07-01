@@ -67,8 +67,12 @@ class ScriptLevelsController < ApplicationController
     # In the case of the puzzle_page, send it through to be included in the
     # generation of the script level path.
     extra_params = {}
-    if (params[:puzzle_page])
-      extra_params[:puzzle_page] = params[:puzzle_page]
+    if @script_level.long_assessment?
+      if params[:puzzle_page]
+        extra_params[:puzzle_page] = params[:puzzle_page]
+      else
+        extra_params[:puzzle_page] = 1
+      end
     end
 
     if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
@@ -81,7 +85,7 @@ class ScriptLevelsController < ApplicationController
     return if performed?
     load_section
 
-    return if redirect_applab_under_13(@script_level.level)
+    return if redirect_under_13(@script_level.level)
 
     present_level
   end
@@ -141,19 +145,20 @@ class ScriptLevelsController < ApplicationController
   def load_level_source
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
       # load the solution for teachers clicking "See the Solution"
-      authorize! :manage, :teacher
+      authorize! :view_level_solutions, @script
       level_source = @ideal_level_source
       readonly_view_options
     elsif @user && current_user && @user != current_user
       # load other user's solution for teachers viewing their students' solution
       level_source = @user.last_attempt(@level).try(:level_source)
+      @user_level = @user.user_level_for(@script_level, @level)
       readonly_view_options
     elsif current_user
       # load user's previous attempt at this puzzle.
       @last_activity = current_user.last_attempt(@level)
       level_source = @last_activity.try(:level_source)
 
-      user_level = current_user.user_level_for(@script_level)
+      user_level = current_user.user_level_for(@script_level, @level)
       if user_level && user_level.submitted?
         level_view_options(submitted: true)
         level_view_options(unsubmit_url: url_for(user_level))
@@ -175,10 +180,9 @@ class ScriptLevelsController < ApplicationController
 
     user = User.find(params[:user_id])
 
-    # TODO this should use cancan/authorize
+    # TODO: This should use cancan/authorize.
     if user.student_of?(current_user)
       @user = user
-      @user_level = @user.user_level_for(@script_level)
     end
   end
 
@@ -186,7 +190,7 @@ class ScriptLevelsController < ApplicationController
     if params[:section_id]
       section = Section.find(params[:section_id])
 
-      # TODO this should use cancan/authorize
+      # TODO: This should use cancan/authorize.
       if section.user == current_user
         @section = section
       end
@@ -195,15 +199,59 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
+  def select_level
+    # If there's only one level in this scriptlevel, use that
+    return @script_level.levels[0] if @script_level.levels.length == 1
+
+    # For teachers, load the student's most recent attempt
+    if @user && current_user != @user
+      last_attempt = @user.last_attempt_for_any(@script_level.levels)
+      return last_attempt.level if last_attempt
+    end
+
+    # If they've tried at least one variant before, use the most recently attempted
+    # (unless overridden by a force_reload query string param)
+    if current_user && !params[:force_reload]
+      last_attempt = current_user.last_attempt_for_any(@script_level.levels)
+      return last_attempt.level if last_attempt
+    end
+
+    # Otherwise return the oldest active level
+    oldest_active = @script_level.oldest_active_level
+    raise "No active levels found for scriptlevel #{@script_level.id}" unless oldest_active
+    oldest_active
+  end
+
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
-    @level = @script_level.level
+    @level = select_level
     @game = @level.game
     @stage = @script_level.stage
 
     load_level_source
 
-    @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
+    if @level.try(:pages)
+      puzzle_page = params[:puzzle_page] || 1
+      @pages = [@level.pages[puzzle_page.to_i - 1]]
+      @total_page_count = @level.pages.count
+      @total_level_count = @level.levels.length
+    end
+
+    if @level.try(:peer_reviewable)
+      @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(status: nil)
+    end
+
+    @callback = milestone_script_level_url(
+      user_id: current_user.try(:id) || 0,
+      script_level_id: @script_level.id,
+      level_id: @level.id)
+
+    if @level.game.level_group? || @level.try(:contained_levels).present?
+      @sublevel_callback = milestone_script_level_url(
+        user_id: current_user.try(:id) || 0,
+        script_level_id: @script_level.id,
+        level_id: '')
+    end
 
     view_options(
       full_width: true,
@@ -213,8 +261,8 @@ class ScriptLevelsController < ApplicationController
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
-      success: milestone_response(script_level: @script_level, solved?: true),
-      failure: milestone_response(script_level: @script_level, solved?: false)
+      success: milestone_response(script_level: @script_level, level: @level, solved?: true),
+      failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
     render 'levels/show', formats: [:html]
   end

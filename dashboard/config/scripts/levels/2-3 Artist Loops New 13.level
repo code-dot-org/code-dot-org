@@ -35,7 +35,11 @@
     "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": "Why did we do this with diamonds?  Triangles would have been more appropriate for this age/level."
+  "notes": "Why did we do this with diamonds?  Triangles would have been more appropriate for this age/level.",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

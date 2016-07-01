@@ -9,13 +9,13 @@ module UserHelpers
   def self.generate_username(queryable, name)
     prefix = name.downcase.gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].squish.gsub(' ', '_')
 
-    if (prefix.empty? || prefix == '')
+    if prefix.empty? || prefix == ''
       prefix = 'coder' + (rand(900000) + 100000).to_s
     end
 
     prefix = "coder_#{prefix}" if prefix.length < 5
 
-    return prefix if queryable.where(username: prefix).limit(1).count == 0
+    return prefix if queryable.where(username: prefix).limit(1).empty?
 
     similar_users = queryable.where(["username like ?", prefix + '%']).select(:username).to_a
     similar_usernames = similar_users.map do |user|

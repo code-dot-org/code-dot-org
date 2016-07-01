@@ -93,7 +93,7 @@ html[dir='rtl'] #visualizationColumn {
   position: relative;
   top: 0px;
   left: 0px;
-  overflow-x: hidden;
+  overflow: visible;
 }
 
 #visualizationColumn.centered_embed {
@@ -103,7 +103,6 @@ html[dir='rtl'] #visualizationColumn {
 #visualizationColumn.pin_bottom {
   position: absolute;
   bottom: 0px;
-  overflow-y: hidden;
 
   #belowVisualization {
     position: absolute;
@@ -259,6 +258,41 @@ button.arrow:disabled {
   background-color: #C7C7C7;
 }
 
+$dpad-red: #F78183;
+
+#studio-dpad {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -5px;
+  -webkit-touch-callout: none;
+  &.studio-dpad-none {
+    display: none;
+  }
+}
+
+#studio-dpad-button {
+  display: inline;
+  position: relative;
+  border-radius: 21px;
+  margin: 5px;
+  &.active {
+    background: $dpad-red;
+    border: 1px solid $dpad-red;
+  }
+  &.left {
+    left: -5px;
+  }
+  &.right {
+    left: 5px;
+  }
+  &.up {
+    top: -5px;
+  }
+  &.down {
+    top: 5px;
+  }
+}
+
 #soft-buttons {
   display: inline-block;
   vertical-align: top;
@@ -311,11 +345,11 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
-html[dir='rtl'] #codeWorkspace:not(.applab) {
+html[dir='rtl'] .editor-column {
    right: 400px;
 }
 
-#codeWorkspace:not(.applab) {
+.editor-column {
   left: 400px
 }
 
@@ -385,6 +419,10 @@ html[dir='rtl'] #codeWorkspace:not(.applab) {
   line-height: 400px;
 }
 
+html[dir='rtl'] div#visualizationResizeBar {
+  right: 400px;
+}
+
 #visualization {
   position: relative;
   height: 400px;
@@ -404,10 +442,6 @@ html[dir='rtl'] #codeWorkspace:not(.applab) {
 
 /* Shrink the visualization area on small displays. */
 
-#visualizationEditor.responsive {
-  margin-left: 400px;
-  padding-left: 15px;
-}
 #visualization.responsive > * {
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
@@ -440,23 +474,13 @@ html[dir='rtl'] #codeWorkspace:not(.applab) {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  #codeWorkspace {
+  .editor-column {
     left: $width;
   }
-  // Even though this is already defined above, define it again using the
-  // ":not(.applab)" selector. If we dont do this, then the rule for
-  // #codeWorkspace:not(.applab) defined outside of the media query will always
-  // take precedence as it's more specific, and we wont resize
-  #codeWorkspace:not(.applab) {
-    left: $width;
-  }
-  html[dir='rtl'] #codeWorkspace {
+  html[dir='rtl'] .editor-column {
     right: $width;
   }
-  html[dir='rtl'] #codeWorkspace:not(.applab) {
-    right: $width;
-  }
-  html[dir='rtl'] body.readonly #codeWorkspace {
+  html[dir='rtl'] body.readonly .editor-column {
     right: 0px;
   }
   div#visualizationResizeBar {
@@ -465,9 +489,6 @@ html[dir='rtl'] #codeWorkspace:not(.applab) {
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
-  }
-  #visualizationEditor.responsive {
-    margin-left: $width;
   }
   #visualization.responsive > * {
     -webkit-transform: scale($scale);
@@ -582,8 +603,6 @@ button.blocklyLaunch {
   &#resetButton {
     border: 1px solid $cyan;
     background-color: $cyan;
-  }
-  &#runButton div {
   }
 }
 button.share {
@@ -775,7 +794,7 @@ input[type="radio"] {
 #puzzleRatingButtons {
 
   $red: #FF3014;
-  $dark-red: #7F150A;
+  $dark-red: #D62911;
   $dark-blue: #00647F;
   $gray: #333333;
   $dark-gray: #4D4D4D;
@@ -829,8 +848,8 @@ input[type="radio"] {
 
 }
 
-/* Instructions. */
-#bubble {
+/* Instructions. Not netsim-bubbles are styled in JSX */
+#bubble.netsim-bubble {
   color: $black;
   margin-bottom: 10px;
   position: relative;
@@ -842,7 +861,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 
-#prompt-icon-cell {
+.prompt-icon-cell {
   vertical-align: top;
   width: 50px;
   padding-right: 10px;
@@ -907,45 +926,19 @@ input[type="radio"] {
 
     li {
       list-style: none;
+      position: relative;
       &:before {
         content: counter(list, decimal) ") ";
         counter-increment: list;
         position: absolute;
-        left: 35px;
+        left: -35px;
         font-size: 18px;
       }
     }
   }
 }
 
-.modal-content {
-  .instructionsImage {
-    height: 35px;
-    vertical-align: text-bottom;
-  }
-  .instructions2 {
-    .instructionsImage {
-      height: 24px;
-      vertical-align: text-bottom;
-    }
-  }
-}
-
-#prompt-table {
-  .instructionsImage {
-    height: 25px;
-    vertical-align: text-bottom;
-  }
-  #prompt2 {
-    .instructionsImage {
-      height: 20px;
-      vertical-align: text-bottom;
-    }
-  }
-}
-
 #ani-gif-preview-wrapper {
-  display: inline-block;
   vertical-align: top;
 }
 
@@ -980,10 +973,6 @@ $aniGifPreviewHeight: 60px;
     right: 0px;
     top: 0px;
   }
-}
-
-.workspace-header-height {
-  height: $workspace-headers-height;
 }
 
 .workspace-header {
@@ -1030,15 +1019,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     padding-right: 8px;
     font-size: 15px;
   }
-  .fa-code {
-    font-weight: bold;
-  }
-  .blocks-glyph {
-    display: none;
-    height: 18px;
-    vertical-align: text-bottom;
-    padding-right: 8px;
-  }
 }
 
 #versions-header {
@@ -1064,14 +1044,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 }
 
 #headers, .purple-header {
-  height: $workspace-headers-height;
-  background-color: $purple;
-  overflow-y: hidden;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
   #show-toolbox-icon, #hide-toolbox-icon {
     position: absolute;
     top: 0;
@@ -1116,11 +1088,13 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   #clear-puzzle-header:hover {
     background-color: $red;
   }
-  .block-counter-default {
-    color: white;
-  }
   .block-counter-overflow {
     color: $yellow;
+  }
+  &.is-running {
+    .block-counter-overflow {
+      color: $dark_orange;
+    }
   }
 }
 
@@ -1204,14 +1178,24 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-.show-code {
-  summary {
-    color: $charcoal;
-    font-family: $gotham-bold;
+.modal-content {
+  .show-code {
+    summary {
+      color: $charcoal;
+      font-family: $gotham-bold;
+    }
+
+    .generated-code-container {
+      margin: 25px 10px 25px -80px;
+    }
   }
 
-  .generated-code-container {
-    margin: 25px 10px 25px -80px;
+  &.no-modal-icon {
+    .show-code {
+      .generated-code-container {
+        margin-left: 0px;
+      }
+    }
   }
 }
 
@@ -1443,6 +1427,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
+// icon26 run26 and reset26 are currently only used by blockly-core
 // Includes an icon at position x, y (starting from top-left)
 @mixin icon26($x, $y) {
   $x-offset: $x * 26px;
@@ -1453,7 +1438,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 }
 
 .run26 {
-  @include icon26(0, 0);
+   @include icon26(0, 0);
 }
 
 .reset26 {
@@ -1581,6 +1566,7 @@ a.WireframeSendToPhone_send-to-phone-link {
 
 #visualizationColumn.wireframeShare {
   background: url("#{$common_root}phone_wireframe.png") center center no-repeat;
+  background-size: 432px 757px;
 }
 
 .legacy-share-view {
@@ -1595,7 +1581,6 @@ a.WireframeSendToPhone_send-to-phone-link {
       #visualizationContainer {
         display: inline-block;
         #visualization {
-          height: auto;
           overflow: hidden;
         }
       }
@@ -1603,20 +1588,20 @@ a.WireframeSendToPhone_send-to-phone-link {
   }
 
   #visualizationColumn.wireframeShare {
-    width: 352px !important;
-    height: 612px !important;
+    width: 432px !important;
+    height: 757px !important;
     margin: 0 auto;
     padding: 20px 0;
     overflow: hidden;
 
     #phoneFrameScreen {
       position: relative;
-      top: 68px;
+      top: 78px;
       left: 16px;
       border: solid thin #202b34;
       background-color: #202b34;
-      width: 320px;
-      height: 480px;
+      width: 400px;
+      height: 600px;
     }
   }
 

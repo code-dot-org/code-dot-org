@@ -1,15 +1,24 @@
 / This partial contains general content-display code applicable across all of our content-based level types.
 / Set 'data' and 'app' to use this partial.
-- app, data, content_class = %i(app data content_class).map{ |x| local_assigns[x] }
+/ Note that content_class, source_level, and hide_header are optional.
+- app, data, content_class, source_level, hide_header = %i(app data content_class source_level hide_header).map{ |x| local_assigns[x] }
 
-%h2!= string_or_image(app, data['title']) unless app == 'external'
+- unless data['title'].blank? || hide_header
+  %h2!= string_or_image(app, data['title'], source_level) unless app == 'external'
 %div.content-level{class: (content_class unless content_class.blank?)}
   - unless app == 'external'
-    %p.content1!= string_or_image(app, data['content1']) unless data['content1'].blank?
-    %p.content2!= string_or_image(app, data['content2']) unless data['content2'].blank?
-    %p.content3!= string_or_image(app, data['content3']) unless data['content3'].blank?
+    - unless data['content1'].blank?
+      %p.content.content1!= string_or_image(app, data['content1'], source_level)
+    - unless data['content2'].blank?
+      %p.content.content2!= string_or_image(app, data['content2'], source_level)
+    - unless data['content3'].blank?
+      %p.content.content3!= string_or_image(app, data['content3'], source_level)
   / Markdown support using the 'markdown' property.
   - if data['markdown'].present?
     #markdown
       / Render markdown text through the ActionView template engine.
       = ActionView::Base.new.render(inline: data['markdown'], type: :md)
+
+  - if @script.try(:professional_learning_course?) && @script_level && @level.class == External
+    = link_to @script_level.end_of_stage? ? t('done_with_module') : t('next_resource'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn pull-right btn-primary submitButton'
+

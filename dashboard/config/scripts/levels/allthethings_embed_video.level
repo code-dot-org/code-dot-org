@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:07:58.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Getting Started: A Look at Siri",
+    "markdown_instructions": "Siri is a digital assistant built into Apple's iOS devices, including iPhones and iPads. Watch the advertisement for Siri, below. \n\n<iframe width=\"637px\" height=\"375px\" src=\"https://www.youtube.com/embed/8ciagGASro0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br/>\n__Reflect on the prompts below:__ \n\n- What types of information does Siri respond to in the video?\n- What do you think Siri is paying attention to in order to create these answers?\n",
+    "encrypted_solution": "PBLoJKXX6Mq1Ru1lk6qZKIn195gLTSTP5e4azykMA9XOaTTsaBf/m65AuAKZ\nevckXyjgFVGhlB+RvjnG3nZ7fAp+ccHFw34UE1BelCFDuRuHSHS5Hp4F/hAH\nFTY4gNZoXCvomPi1Z5EVwxZAXwVn2SxCBitKfwXjY2ce7h2r2txF465oQij2\nE6143dyGiJnCcTWo/bsHqhy1BCLiTV+baCMjFtDG25aTEokwQsFnsAMRG6hB\nGCu4nRBrp8zdUyqWLSy6cnPwFICTvdQe2gCTRlN2GtnItyHKxpb1lmGh0E34\nYs3lNOlhnzav5dcSE6jrwkGa08j+UgcK1qS+MsvrKBo0BeQbKB3+mo7czA2d\n4Aa+vzrGVQndmUg22lM5AhpA2XJ6tlHyBZtqwOCHw5i2ZoM2h/5vTk6xsxZN\nLCiGO/NI5a0HbgfJAbfa3WAXPeov\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

@@ -3,21 +3,23 @@ chart: true
 ---
 # Other Advocacy Materials
 
-This page contains numerous resources to assist in advocacy. You can find links to some of our popular blog posts, related documents, studies and resources outside of Code.org, and (soon) a master slide deck.  
+This page contains numerous resources to assist in advocacy. You can find links to some of our popular blog posts, related documents, studies, and resources outside of Code.org.  
 
 
 ## Code.org blog posts
 ### Miscellaneous
 
-
-* Americans' perceptions of computer science are [changing](http://blog.code.org/post/139445414968)
-* Computer science jobs account for the majority of "skilled worker" [immigration](http://blog.code.org/post/116568172243/with-all-the-national-debate-on-immigration-i) (H1B Visas)
+* [More high school students](http://blog.code.org/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
+* Computing occupations are the [#1 source of new wages](http://blog.code.org/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://blog.code.org/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
+* Americans' perceptions of computer science are [changing](http://blog.code.org/post/139445414968).
+* Computer science jobs account for the majority of "skilled worker" [immigration](http://blog.code.org/post/116568172243/with-all-the-national-debate-on-immigration-i) (H1B Visas).
 * What [percent of STEM](http://blog.code.org/post/89267280803/stem) should be Computer Science?
 * Is learning computer science linked to [improved learning](http://blog.code.org/post/125429946375/cs-other-subjects)  in other subjects?
 
 
 ### Diversity
 
+* Students who learn computer science in high school are   [6 times](http://blog.code.org/post/143007230537/computer-science-the-impact-of-k-12-on-university) more likely to major in it. Women: 10x more likely
 * [Maryland makes a simple policy change to boost diversity in computer science](http://blog.code.org/post/121123281798/md) 
 * Reporting on [our efforts](http://blog.code.org/post/98856300118/diversity) to increase diversity in computer science
 * Code.org's [team diversity](http://blog.code.org/post/98703117328/codeorgs-team-diversity-putting-our-money-where): putting our money where our mouth is
@@ -43,7 +45,5 @@ We are interested in seeing what's happening in computer science education inter
 - [Twice as many Americans](http://changetheequation.org/blog/hidden-half) use computing in their jobs than previously reported, and half of those are in non-STEM fields. Outside of STEM fields, 40% of those doing complex computing work are [women](http://changetheequation.org/blog/grid-uncounted-women-computing). 
 - Change the Equation has a [summary](http://changetheequation.org/blog/talent-hidden-plain-sight-addressing-gaps-computer-science) of untapped minority talent in computing.
 - [Americans believe](http://www.prnewswire.com/news-releases/horizon-media-study-reveals-americans-prioritize-stem-subjects-over-the-arts-science-is-cool-coding-is-new-literacy-300154137.html) computer science is cool and one of the most important subjects of study in school. 
+- For each new high-tech job in a city, five jobs outside of tech are [ultimately created](http://eml.berkeley.edu//~moretti/book.htm).
 
-
-## Master slide deck 
-Coming soon!

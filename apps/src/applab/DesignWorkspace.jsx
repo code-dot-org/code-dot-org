@@ -1,6 +1,7 @@
+var React = require('react');
 var applabMsg = require('./locale');
-var DesignModeBox = require('./DesignModeBox.jsx');
-var DesignModeHeaders = require('./DesignModeHeaders.jsx');
+var DesignModeBox = require('./DesignModeBox');
+var DesignModeHeaders = require('./DesignModeHeaders');
 
 module.exports = React.createClass({
   propTypes: {
@@ -11,24 +12,25 @@ module.exports = React.createClass({
     handleChange: React.PropTypes.func.isRequired,
     onChangeElement: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
+    onDuplicate: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired,
     onInsertEvent: React.PropTypes.func.isRequired,
     isDimmed: React.PropTypes.bool.isRequired
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       isToolboxVisible: true
     };
   },
 
-  onToggleToolbox: function() {
+  onToggleToolbox: function () {
     this.setState({
       isToolboxVisible: !this.state.isToolboxVisible
     });
   },
 
-  render: function() {
+  render: function () {
     return <div id="designWorkspaceWrapper">
       <DesignModeHeaders
         handleManageAssets={this.props.handleManageAssets}
@@ -41,6 +43,7 @@ module.exports = React.createClass({
         handleChange={this.props.handleChange}
         onChangeElement={this.props.onChangeElement}
         onDepthChange={this.props.onDepthChange}
+        onDuplicate={this.props.onDuplicate}
         onDelete={this.props.onDelete}
         onInsertEvent={this.props.onInsertEvent}
         isToolboxVisible={this.state.isToolboxVisible}

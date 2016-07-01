@@ -5,13 +5,14 @@ require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
 
 module ApplicationHelper
-
   include LocaleHelper
   include ScriptLevelsHelper
   include ViewOptionsHelper
   include SurveyResultsHelper
 
   USER_AGENT_PARSER = UserAgentParser::Parser.new
+
+  PUZZLE_PAGE_NONE = -1
 
   def browser
     @browser ||= USER_AGENT_PARSER.parse request.headers["User-Agent"]
@@ -48,9 +49,25 @@ module ApplicationHelper
     image_tag(image_url('white-checkmark.png'))
   end
 
-  def activity_css_class(result)
+  def activity_css_class(user_level)
+    best_activity_css_class([user_level])
+  end
+
+  def best_activity_css_class(user_levels)
     # For definitions of the result values, see /app/src/constants.js.
-    if result.nil? || result == 0
+    user_level = user_levels.
+        select {|ul| ul.try(:best_result) && ul.best_result != 0}.
+        max_by &:best_result ||
+        user_levels.first
+    result = user_level.try(:best_result)
+
+    if result == Activity::REVIEW_REJECTED_RESULT
+      'review_rejected'
+    elsif result == Activity::REVIEW_ACCEPTED_RESULT
+      'review_accepted'
+    elsif user_level.try(:submitted)
+      'submitted'
+    elsif result.nil? || result == 0
       'not_tried'
     elsif result >= Activity::FREE_PLAY_RESULT
       'perfect'
@@ -90,6 +107,11 @@ module ApplicationHelper
 
   def teacher_dashboard_student_progress_url(section, user)
     CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}/student/#{user.id}"
+  end
+
+  # used by sign-up to retrieve the return_to URL from the session and delete it.
+  def get_and_clear_session_return_to
+    return session.delete(:return_to) if session[:return_to]
   end
 
   # used by devise to redirect user after signing in
@@ -150,8 +172,8 @@ module ApplicationHelper
     sentence = resource.oauth? ?
       I18n.t("signup_form.additional_information") :
       I18n.t("errors.messages.not_saved",
-                      count: resource.errors.count,
-                      resource: resource.class.model_name.human.downcase)
+        count: resource.errors.count,
+        resource: resource.class.model_name.human.downcase)
 
     html = <<-HTML
     <div id="error_explanation">
@@ -171,9 +193,9 @@ module ApplicationHelper
 
   def script_certificate_image_url(user, script)
     certificate_image_url(
-        name: user.name,
-        course: script.name,
-        course_title: data_t_suffix('script.name', script.name, 'title'))
+      name: user.name,
+      course: script.name,
+      course_title: data_t_suffix('script.name', script.name, 'title'))
   end
 
   def minifiable_asset_path(path)

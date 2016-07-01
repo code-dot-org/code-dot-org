@@ -7,7 +7,20 @@
       - if current_user.teacher?
         = link_to teacher_dashboard_url do
           %button.primary{class: 'teacherdashboard', style: "margin-left: 20px;"}= t('teacher.students.dashboard')
-
+    - plc_enrollments = Plc::UserCourseEnrollment.where(user: current_user)
+    - plc_enrollments.each do |course_enrollment|
+      - uncompleted_units = course_enrollment.plc_unit_assignments.where.not(status: [Plc::EnrollmentUnitAssignment::COMPLETED, Plc::EnrollmentUnitAssignment::START_BLOCKED])
+      - if uncompleted_units.any?
+        - unit_enrollment = uncompleted_units.first
+        #plc_course_progress{class: role_class}
+          %h4
+            = t('your_professional_learning_plan')
+          .flex_container{style: 'display: flex'}
+            .flex_item{style: 'width: 50%'}
+              #{course_enrollment.plc_course.name}
+            .flex_item{style: 'width: 50%'}
+              = link_to course_path(course_enrollment.plc_course.name.downcase.sub(' ', '-')) do
+                %button.primary{class: 'teacherdashboard', style: "margin-left: 20px;"}= t('see_your_learning_plan')
     - if Gatekeeper.allows('logged_in_studio_hero', default: true)
       #body{class: role_class}
         - script = current_user.primary_script

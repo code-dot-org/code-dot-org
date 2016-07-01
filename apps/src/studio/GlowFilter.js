@@ -1,7 +1,7 @@
 /** @file Filter that adds a white glowing outline to an image. */
 'use strict';
 
-require('../utils');
+require('../utils'); // Provides Function.prototype.inherits
 var color = require('../color');
 var SVG_NS = require('../constants').SVG_NS;
 var ImageFilter = require('./ImageFilter');

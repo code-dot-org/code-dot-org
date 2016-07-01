@@ -1,3 +1,5 @@
+require_relative '../../deployment'
+
 # Rake tasks for asset packages.
 namespace :package do
   # Special package-specific configurations listed here.
@@ -29,15 +31,16 @@ namespace :package do
       end
       desc "Update Dashboard symlink for #{package} package."
       task 'symlink' do
+        package_dash = package.to_s.gsub('_', '-')
         Dir.chdir(method("#{package}_dir").call) do
-          target = CDO["use_my_#{package}"] ? PACKAGES[package][:target] : "#{package}-package"
+          target = CDO["use_my_#{package}"] ? PACKAGES[package][:target] : "#{package_dash}-package"
           RakeUtils.ln_s target, dashboard_dir('public', PACKAGES[package][:symlink_name])
         end
       end
     end
     desc "Update #{package} package and create Dashboard symlink."
-    task(package => %w(update symlink).map{|x|"package:#{package}:#{x}"})
+    task(package => %w(update symlink).map{|x| "package:#{package}:#{x}"})
   end
 end
 desc "Update all packages (#{PACKAGES.keys.join(', ')})."
-task package: PACKAGES.keys.map{|x|"package:#{x}"}
+task package: PACKAGES.keys.map{|x| "package:#{x}"}

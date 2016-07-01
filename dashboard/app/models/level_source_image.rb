@@ -26,7 +26,7 @@ class LevelSourceImage < ActiveRecord::Base
     return false if image.blank?
 
     begin
-      image = ImageLib::to_png(image)
+      image = ImageLib.to_png(image)
     rescue MiniMagick::Invalid, MiniMagick::Error # something wrong with the image or runtime error.
       return false
     end
@@ -60,8 +60,10 @@ class LevelSourceImage < ActiveRecord::Base
     end
 
     begin
-      framed_image = ImageLib::overlay_image(:background_url => Rails.root.join(frame_image_filename),
-                                             :foreground_blob => image).to_blob
+      framed_image = ImageLib.overlay_image(
+        :background_url => Rails.root.join(frame_image_filename),
+        :foreground_blob => image
+      ).to_blob
     rescue MiniMagick::Invalid, MiniMagick::Error # something wrong with the image or runtime error.
       return false
     end
@@ -69,7 +71,7 @@ class LevelSourceImage < ActiveRecord::Base
     upload_image(s3_framed_filename, framed_image)
   end
 
-  def LevelSourceImage.hashify_filename(plain)
+  def self.hashify_filename(plain)
     [Digest::MD5.hexdigest(plain), plain].join('=')
   end
 

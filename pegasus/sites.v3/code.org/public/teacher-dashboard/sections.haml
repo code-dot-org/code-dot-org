@@ -36,6 +36,8 @@ content-type: text/ng-template
       %th.manage-th
         %a{href: "", "ng-click" => "order = 'course.name'"}= I18n.t('dashboard_sections_table_course')
       %th.manage-th
+        %a{href: "", "ng-click" => "order = 'stage_extras'"}= I18n.t('dashboard_sections_table_stage_extras')
+      %th.manage-th
         %a{href: "", "ng-click" => "order = 'students.length'"}= I18n.t('dashboard_sections_table_students')
       %th.manage-th= I18n.t('dashboard_sections_table_code')
       %th.manage-th
@@ -61,10 +63,14 @@ content-type: text/ng-template
         %span{"ng-show" => "section.editing"}
           %select{"ng-model" => "section.grade", "ng-options"=>"value for value in #{DashboardSection::valid_grades.inspect}"}
       %td
-        %span{"ng-hide" => "section.editing"} {{course_list[section.course.id]}}
+        %span{"ng-hide" => "section.editing"} {{course_list | getNameById:section.course.id}}
         %span{"ng-show" => "section.editing"}
-          %select{"ng-model" => "section.course.id", "ng-options"=>"k*1 as v for (k, v) in course_list"}
+          %select{"ng-model" => "section.course.id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category', 'position', 'name']"}
             %option{value: ''}
+      %td
+        %span{"ng-hide" => "section.editing"} {{section.stage_extras ? "#{I18n.t('yes')}" : "#{I18n.t('no')}"}}
+        %span{"ng-show" => "section.editing"}
+          %input{"ng-model" => "section.stage_extras", type: "checkbox"}/
       %td {{section.students.length}}
       %td
         {{section.code}}

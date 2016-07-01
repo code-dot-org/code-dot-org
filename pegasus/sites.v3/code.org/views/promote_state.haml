@@ -4,15 +4,16 @@
 -statename = get_us_state_from_abbr(state)
 -petition_url = data[:petition_url_t]
 %script{type: "text/javascript", src: "/shared/js/helpers.js"}
+%script{type: "text/javascript", src: "/js/promote.js"}
 %p#state-title
   #{statename}
-%p.fact{style: "margin-bottom: 0px"}
+%p.fact{style: "margin-bottom: 0px;"}
   -unless data[:cs_jobs_i] == 0
     %strong.figure
       =format_integer_with_commas(data[:cs_jobs_i])
     open computing jobs
 -unless data[:growth_vs_average_f] < 0.0
-  %p.fact{style: "color: #ddd"}
+  %p.fact{style: "color: #ddd;"}
     (<b>#{data[:growth_vs_average_f]}x</b> the state average demand rate)
 %p.fact
   -unless data[:cs_graduates] == 0
@@ -20,47 +21,80 @@
       =format_integer_with_commas(data[:cs_graduates_i])
     computer science graduates
 
-%div.fact{style: "margin-left:20px;"}
-  - if data[:cs_counts_t] == "No"
+%div.fact{style: "margin-left: 20px;"}
+  - if data[:pd_funding_s] == "No"
     %i.fa.fa-times-circle
     &nbsp;
-    CS doesn't count as math or science credit
-  - elsif data[:cs_counts_t] == "Yes"
+    No dedicated state funding for CS PD
+  - elsif data[:pd_funding_s] == "Yes"
     %i.fa.fa-check-circle
     &nbsp;
-    CS counts as math or science credit
+    Dedicated state funding for CS PD
+  - elsif data[:pd_funding_s] == "Other"
+    %i.fa.fa-check-circle
+    &nbsp;
+    = data[:pd_funding_exception_s]
   %br
 
-  - if data[:cs_teacher_cert_s] == "No"
+  - if data[:require_hs_s] == "No"
     %i.fa.fa-times-circle
     &nbsp;
-    No clear CS teacher certification pathways
-  - elsif data[:cs_teacher_cert_s] == "Yes"
+    Does not require all high schools to offer CS
+  - elsif data[:require_hs_s] == "Yes"
     %i.fa.fa-check-circle
     &nbsp;
-    Clear certification pathways for CS teachers
+    Requires all high schools to offer CS
+  - elsif data[:require_hs_s] == "Other"
+    %i.fa.fa-check-circle
+    &nbsp;
+    = data[:require_hs_exception_s]
   %br
 
   - if data[:cs_standards_s] == "No"
     %i.fa.fa-times-circle
     &nbsp;
-    No CS K-12 curriculum standards
+    No K-12 CS curriculum standards
   - elsif data[:cs_standards_s] == "Yes"
     %i.fa.fa-check-circle
     &nbsp;
-    CS K-12 curriculum standards
+    K-12 CS curriculum standards
+  - elsif data[:cs_standards_s] == "Other"
+    %i.fa.fa-check-circle
+    &nbsp;
+    = data[:cs_standards_exception_s]
+
+%p.fact{style: "margin-top: 5px; margin-bottom: 0px;"}
+  #show-ap-stats{style: "cursor: pointer;"} &#9654;&nbsp; AP Stats
+  #hide-ap-stats{style: "display: none;"}
+    %div{style: "cursor: pointer;"} &#9660;&nbsp; AP Stats
+    .fact{style: "margin-left: 20px;"}
+      %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
+      &nbsp;
+      = "#{data[:percent_schools_ap_cs_i]}% of schools teach AP CS"
+    .fact{style: "margin-left: 20px;"}
+      %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
+      &nbsp;
+      = "#{format_integer_with_commas(data[:ap_cs_exams_i])} students took the AP exam last year"
+    .fact{style: "margin-left: 20px;"}
+      %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
+      &nbsp;
+      = "#{data[:percent_ap_female_i]}% of them were female"
+    .fact{style: "margin-left: 20px;"}
+      %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
+      &nbsp;
+      = "#{format_integer_with_commas(data[:total_ap_students_color_i])} were underrepresented minorities"
 
 -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
-  %div.download-fact-sheet<
-    %a{href: "/advocacy/state-facts/#{state}.pdf", target: '_blank'}<
-      Download #{statename} fact-sheet
-      %img{:src=>"/images/download.png", width: "35px", style: 'margin-top:-5px'}
+  %div.download-fact-sheet
+    %a{:href=>"/advocacy/state-facts/#{state}.pdf", target: '_blank'}
+      %button{style: 'height:40px; padding-left: 20px; padding-right: 20px;'}<
+        View #{statename} fact-sheet
 
 -if data[:text_t]
   %p
     =data[:text_t]
-%p
-  %button{onclick: "return adjustScroll('tools-section')"}
+%p{style: "margin-left: 21px;"}
+  %a{style: "color:white;", onclick: "return adjustScroll('tools-section')"}
     Take action
 
   -if data[:action_text_s] && data[:action_url_s]
@@ -78,9 +112,10 @@
   =succeed "," do
     %a{href: "http://www.conference-board.org/", style: "color: #BCC2C6", target: '_blank'} The Conference Board
   =succeed "," do
-    %a{href: "http://www.nsf.gov/", style: "color: #BCC2C6", target: '_blank'} National Science Foundation
+    %a{href: "http://nces.ed.gov/", style: "color: #BCC2C6", target: '_blank'} National Center for Education Statistics
+  and the
   =succeed "." do
-    %a{href: "http://code.org/learn/local", style: "color:#BCC2C6", target: '_blank'} Code.org database
+    %a{href: "https://research.collegeboard.org/programs/ap/data", style: "color:#BCC2C6", target: '_blank'} College Board
   =succeed "." do
     %a{href: "https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", style: "color: #BCC2C6", target: '_blank'} More info
 

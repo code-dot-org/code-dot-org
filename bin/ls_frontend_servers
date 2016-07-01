@@ -1,57 +1,32 @@
 #!/usr/bin/env ruby
 #
-# Script to list the name, public DNS name, and private DNS name of
-# each running AWS frontend instance. For example:
+# Script to list the name and private DNS name of each running production frontend instance.
 #
-# $ ruby ls_frontend_servers
-# frontend-b4             ip-10-145-54-123.ec2.internal   http://ec2-54-204-132-24.compute-1.amazonaws.com:8080
-# frontend-d02            ip-10-157-137-197.ec2.internal  http://ec2-54-146-39-69.compute-1.amazonaws.com:8080
+# For example:
+#
+# $ bin/ls_frontend_servers
+# frontend-b4             ip-10-145-54-123.ec2.internal
+# frontend-d02            ip-10-157-137-197.ec2.internal
 # ...
 
-require 'aws-sdk'
 require 'optparse'
+ENV['RAILS_ENV'] = 'production'
 require_relative '../deployment'
-
-# Returns an array of [name, private_dns, public_url] tuples for the
-# currently running Code.org EC2 instances whose name starts with
-# "frontend".
-def describe_frontends(path = nil, json_format = false)
-  ec2client = Aws::EC2::Client.new
-  instances = ec2client.describe_instances
-  [].tap do |result|
-    instances.reservations.each do |reservation|
-      reservation.instances.each do |instance|
-        name = instance.tags.detect{|tag| tag.key == 'Name'}
-        next unless name && name.value.start_with?('frontend')
-        if json_format
-          # Format output as json.
-          result << %Q{"#{name.value}": "#{instance.private_dns_name}",}
-        else
-          # Format output as tab separated values.
-          result << [(name ? name.value : '').ljust(16),
-                     instance.private_dns_name,
-                     "http://#{instance.public_dns_name}:8080/#{path || ''}"]
-        end
-      end
-    end
-  end
-end
+require 'aws-sdk'
+CDO.chef_managed = true
+CDO.log.level = Logger::WARN
 
 if __FILE__ == $0
-  path = nil
   json_format = false
   OptionParser.new do |opts|
-    opts.on('-p', '--path path', 'Path to append to example server URLs') { |p| path = p }
     opts.on('-j', '--json', 'Format output as Json') { json_format = true }
     opts.on('-h', '--help', 'Print this') { puts opts; exit }
   end.parse!
 
-  lines = describe_frontends(path, json_format)
+  output = CDO.app_servers
   if json_format
-    puts '{'
-    lines.each { |entry| puts entry }
-    puts '}'
+    puts output.to_json
   else
-    lines.each { |t| puts t.join("\t") }
+    output.each{|k, v| puts "#{k}\t#{v}" }
   end
 end

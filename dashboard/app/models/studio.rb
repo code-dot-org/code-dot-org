@@ -63,9 +63,34 @@ class Studio < Grid
     level
   end
 
+  def self.load_maze(maze_file, size)
+    raw_maze = maze_file.read[0...size]
+    raw_maze.map {|row| row.map {|cell| JSON.parse(cell)}}
+  end
+
+  # Attempt to parse the maze using the legacy parser, which assumes
+  # nothing but integers. If it raises a TypeError, attempt to parse the
+  # maze using the new parse, which expects hashes and insists each has
+  # a tileType.
+  def self.parse_maze(maze_json)
+    super
+  rescue TypeError
+    maze_json = maze_json.to_json if maze_json.is_a? Array
+    maze = JSON.parse(maze_json)
+    maze.each_with_index do |row, x|
+      row.each_with_index do |cell, y|
+        unless cell.is_a?(Hash) && cell.key?('tileType')
+          raise ArgumentError.new("Cell (#{x},#{y}) has no defined tileType")
+        end
+      end
+    end
+
+    { 'maze' => maze_json }
+  end
+
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['studio', 'infinity', 'hoc2015']
+    %w(studio infinity hoc2015)
   end
 
   def self.default_success_condition
@@ -198,6 +223,8 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_setSpritePosition" />
+  <block type="studio_addGoal" />
+  <block type="studio_addGoalXY" />
   <block type="studio_setSpriteXY" inline="true">
     <value name="XPOS">
       <block type="math_number">

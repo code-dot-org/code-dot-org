@@ -1,4 +1,5 @@
 /* global dashboard */
+import $ from 'jquery';
 
 $(window).load(function () {
   $('#evaluationTable .new_question').click(function (event) {
@@ -23,7 +24,7 @@ $(window).load(function () {
   });
 
   function handleNewQuestionName() {
-    $('#newQuestionsList').val(JSON.stringify($('.new_question_row .new_question_name').map(function() {
+    $('#newQuestionsList').val(JSON.stringify($('.new_question_row .new_question_name').map(function () {
       return $(this).val();
     }).get()));
 
@@ -36,14 +37,16 @@ $(window).load(function () {
 
     $('.question_section .new_answer_row').each(function (index, element) {
       var questionId = element.getAttribute('question_id');
-      var answerText = $(element).find('input').val();
+      var answerText = $(element).find('input:first').val();
+      var weight = $(element).find('input:last').val();
       var associatedModule = $(element).find('select').val();
 
       newAnswerData[questionId] = newAnswerData[questionId] || [];
 
       newAnswerData[questionId].push({
         answer: answerText,
-        learningModuleId: associatedModule
+        learningModuleId: associatedModule,
+        weight: weight
       });
     });
 

@@ -1,7 +1,14 @@
 "ca-ES":
   hour_of_code: Hour of Code
   hello: Hola món
+  'yes': Sí
+  'no': 'No'
   select_language: Seleccioneu l'idioma
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Aprèn més
   en: Informàtica
   computer_science_edweek: Setmana de l'Educació en Informàtica
   csedweek_dates: 8-14 de desembre de 2014
@@ -361,6 +368,9 @@
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
   homepage_banner_20k_teachers_link: Aprèn més
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Hora del codi
   homepage_slot_text_blurb_hoc: Tothom pot aprendre. Comença avui
   homepage_slot_text_link_hoc: Proveu l'Hora de programació
@@ -386,6 +396,7 @@
   homepage_slot_text_link_stats: Veure les estadístiques
   homepage_slot_text_link_buy: Involucra't
   homepage_slot_text_link_donate: Fes una donació
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Creacions d'estudiants del Code Studio
   homepage_header_donors: Code.org dóna gràcies als seus seguidors
   homepage_donors_seall: Mostra-ho tot
@@ -576,6 +587,7 @@
   dashboard_landing_new_k5courses: Nou! Proveu els nostres cursos per a estudiants
     de cicle superior de primària.
   dashboard_landing_useful_links: Altres enllaços d'interès (només en anglès)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Fes una pregunta en persona! Visita el nostre vídeo
     mensual en horari d'oficina.
   dashboard_landing_print_certificates: Imprimeix certificats per als estudiants que
@@ -598,6 +610,11 @@
   dashboard_landing_more_tutorials_desc: Hi ha més tutorials <a href="/learn/beyond">
     oferts pels nostres socis.</a> Aprèn a programar amb robots, fes pàgines web,
     fes la teva pròpia app o explora altres llenguatges com C++, Python o Ruby!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: L'hora de codi per a totes les edats
   dashboard_hoc_courses_desc: Prova algun d'aquests tutorials de menys d'1 hora amb
     els teus alumnes!
@@ -652,6 +669,18 @@
   dashboard_action_remove_confirm: Esborrar?
   dashboard_action_done: Fet
   dashboard_action_required: obligatori
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Pàgina d'inici de mestre
   dashboard_navigation_section_student_progress: Comptes i progrés dels alumnes
   dashboard_navigation_section_teacher_progress: El progrés del curs
@@ -660,7 +689,7 @@
   dashboard_navigation_section_pd: Desenvolupament professional
   dashboard_navigation_section_speakers: Informàtica <br/> Oradors convidats
   dashboard_navigation_all_sections: Comptes i progrés dels alumnes
-  dashboard_navigation_view_progress: Veure el progrés
+  dashboard_navigation_view_progress: Progrés
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Afegeix estudiants
@@ -669,6 +698,19 @@
   dashboard_navigation_view_stats: Veure estadístiques
   dashboard_navigation_section: 'Secció: %{section_name}'
   dashboard_navigation_student: 'Alumne: %{student_name}'
+  dashboard_progress_not_started: no començat
+  dashboard_progress_in_progress: En curs
+  dashboard_progress_not_completed: no finalitzat
+  dashboard_progress_completed_too_many_blocks: completat, massa blocs
+  dashboard_progress_completed_perfect: completat, perfecte
+  dashboard_progress_furthest_level_attempted: nivell més alt intentat
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nova secció
   dashboard_sections_jumbotron_instruction: Crea noves seccions i afegeix-hi alumnes.
     Les seccions t'ajuden a organitzar els estudiants en grups més petits de manera
@@ -677,6 +719,7 @@
   dashboard_sections_table_secret: Tipus d'inici de sessió
   dashboard_sections_table_grade: Grau
   dashboard_sections_table_course: Curs
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Alumnes
   dashboard_sections_table_code: Secció Codi
   dashboard_sections_name: Nom de la secció
@@ -693,6 +736,26 @@
   dashboard_sections_print_secrets: Pots imprimir un full de targetes on hi ha la
     informació del compte per repartir als teus alumnes individualment.
   dashboard_sections_switch_section: 'Canvia de secció:'
+  dashboard_sections_close: Tancar
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Afegeix alumne
   dashboard_students_add_students: Afegiu múltiples alumnes
   dashboard_students_add_multiple: 'Escriu o enganxa els noms dels teus alumnes, un
@@ -754,6 +817,8 @@
   dashboard_course2: 'Curs 2:'
   dashboard_course3: 'Curs 3:'
   dashboard_course4: 'Curs 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Pla d'estudis
   dashboard_curriculum_overview: Resum del curriculum de cicle superior de primària
   dashboard_overview: Vista general
@@ -777,13 +842,6 @@
   dashboard_login_picture: Imatge
   dashboard_login_none: Email
   dashboard_new_password: Nova contrasenya
-  dashboard_progress_not_started: no començat
-  dashboard_progress_in_progress: En curs
-  dashboard_progress_not_completed: no finalitzat
-  dashboard_progress_completed_too_many_blocks: completat, massa blocs
-  dashboard_progress_completed_perfect: completat, perfecte
-  dashboard_progress_furthest_level_attempted: nivell més alt intentat
-  dashboard_progress_submitted: submitted
   dashboard_stage: etapa
   dashboard_puzzle: Puzzle
   dashboard_question: Question
@@ -793,6 +851,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Correcte
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -821,17 +881,17 @@
   dashboard_faq_k5: Preguntes freqüents sobre K-5
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Aprèn més
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: L'hora del Codi és aquí - 8-14 de desembre!
   code_sign_up: Inscriure's a participar durant la setmana de l'educació CS
   learn_more: Més informació
@@ -955,13 +1015,39 @@
   course3_name: Curs 3
   course4_name: Curs 4
   accelerated_name: Curs Accelerat
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Curs Accelerat
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Classic Maze
+  iceage_name: Ice Age
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Mates
+  hoc_category_name: Hora del codi
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Laboratori d'aplicacions
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you

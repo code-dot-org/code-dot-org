@@ -1,7 +1,6 @@
 name 'equity discussion'
 title 'Leading an Equity Discussion'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
 

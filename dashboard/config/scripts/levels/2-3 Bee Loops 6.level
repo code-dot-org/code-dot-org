@@ -35,7 +35,11 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_6_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n  {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There should be 6 blocks inside your `repeat` loop when you're done.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_6_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

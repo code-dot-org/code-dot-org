@@ -1,8 +1,8 @@
-
-var PropertyRow = require('./PropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
+var React = require('react');
+var PropertyRow = require('./PropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
 
 var elementUtils = require('./elementUtils');
 
@@ -57,7 +57,7 @@ var CanvasEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getClickEventCode: function() {
+  getClickEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
@@ -68,7 +68,7 @@ var CanvasEvents = React.createClass({
     return code;
   },
 
-  insertClick: function() {
+  insertClick: function () {
     this.props.onInsertEvent(this.getClickEventCode());
   },
 

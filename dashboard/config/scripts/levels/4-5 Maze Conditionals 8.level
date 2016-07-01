@@ -31,7 +31,12 @@
     "step_speed": "1"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_until_while": 4,
+    "conditionals": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -64,13 +69,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_ifElse">
           <title name="DIR">isPathForward</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

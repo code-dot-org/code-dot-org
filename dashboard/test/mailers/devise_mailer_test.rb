@@ -2,12 +2,12 @@ require 'test_helper'
 
 class DeviseMailerTest < ActionMailer::TestCase
   def assert_no_http_urls(string)
-    matchdata = URI::regexp('http').match(string)
+    matchdata = URI.regexp('http').match(string)
     assert matchdata.nil?, "Expected no http urls, found #{matchdata.try(:[], 0)}"
   end
 
   test "confirmation instructions" do
-    user = create :user
+    user = create :teacher
 
     mail = Devise::Mailer.confirmation_instructions(user, 'faketoken')
 
@@ -20,7 +20,7 @@ class DeviseMailerTest < ActionMailer::TestCase
   end
 
   test "invitation instructions" do
-    user = create :user
+    user = create :teacher
 
     mail = Devise::Mailer.invitation_instructions(user, 'faketoken')
 
@@ -33,7 +33,7 @@ class DeviseMailerTest < ActionMailer::TestCase
   end
 
   test "reset password instructions" do
-    user = create :user
+    user = create :teacher
 
     mail = Devise::Mailer.reset_password_instructions(user, 'faketoken')
 

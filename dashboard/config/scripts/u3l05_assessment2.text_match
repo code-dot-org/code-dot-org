@@ -1,7 +1,0 @@
-name 'U3L05 Assessment2'
-title 'Programming Efficiency Question 2'
-
-
-markdown <<MARKDOWN
-Describe the trade-offs of writing highly efficient code. Give an example.
-MARKDOWN

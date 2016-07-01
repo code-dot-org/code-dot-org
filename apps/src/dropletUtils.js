@@ -1,5 +1,4 @@
-var utils = require('./utils');
-var _ = utils.getLodash();
+var _ = require('lodash');
 
 /**
  * @name DropletBlock
@@ -9,6 +8,8 @@ var _ = utils.getLodash();
  * @property {Object} parent object within which this function is defined as a property, keyed by the func name
  * @property {String} category category within which to place the block
  * @property {String} type type of the block (e.g. value, either, property, readonlyproperty)
+ * @property {Object[]} dropdown array of dropdown info for arguments (see Droplet docs)
+ * @property {Object|string[]|Function} objectDropdown dropdown info for object on the left side of member expression (assumes wildcard in name)
  * @property {string[]} paletteParams
  * @property {string[]} params
  * @property {Object.<number, function>} dropdown
@@ -19,6 +20,9 @@ var _ = utils.getLodash();
  * @property {string} tipPrefix Prepend this string before the tooltip formed from the function name and (optionally) parameters
  * @property {string} docFunc Use the provided func as the key for our documentation.
  * @property {string} modeOptionName Alternate name to be used when generating droplet mode options
+ * @property {Object} paramButtons The function block should render with buttons to add or remove parameters if minArgs or maxArgs are populated
+ * @property {number} [paramButtons.minArgs] Minimum number of arguments (implies that buttons should appear)
+ * @property {number} [paramButtons.maxArgs] Maximum number of arguments (implies that buttons should appear)
  */
 
 /**
@@ -46,7 +50,7 @@ exports.randomNumber = function (min, max) {
   return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
 };
 
-exports.getTime = function() {
+exports.getTime = function () {
   return (new Date()).getTime();
 };
 
@@ -135,33 +139,40 @@ standardConfig.blocks = [
   {func: 'callMyFunction', block: 'myFunction()', category: 'Functions' },
   {func: 'callMyFunction_n', block: 'myFunction(n)', category: 'Functions' },
   {func: 'return', block: 'return __;', category: 'Functions' },
-  {func: 'comment', block: '// Comment', category: 'Functions' }
+  {func: 'comment', block: '// Comment', expansion: '// ', category: 'Functions' }
 ];
 
 standardConfig.categories = {
   Control: {
+    id: 'control',
     color: 'blue',
     rgb: COLOR_BLUE,
     blocks: []
   },
   Math: {
+    id: 'math',
     color: 'orange',
     rgb: COLOR_ORANGE,
     blocks: []
   },
   Variables: {
+    id: 'variables',
     color: 'purple',
     rgb: COLOR_PURPLE,
     blocks: []
   },
   Functions: {
+    id: 'functions',
     color: 'green',
     rgb: COLOR_GREEN,
     blocks: []
   },
   // create blank category in case level builders want to move all blocks here
   // (which will cause the palette header to disappear)
-  '' : { 'blocks': [] },
+  '' : {
+    id: 'default',
+    blocks: []
+  },
 };
 
 /**
@@ -212,7 +223,7 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
     return !options.paletteOnly || block.func in codeFunctions || block.func in docFunctions;
   }).map(function (block) {
     // We found this particular block, now override the defaults with extend
-    return $.extend({}, block, codeFunctions[block.func]);
+    return Object.assign({}, block, codeFunctions[block.func]);
   });
 }
 
@@ -227,7 +238,7 @@ function mergeCategoriesWithConfig(dropletConfig) {
   var dropletCategories = dropletConfig && dropletConfig.categories;
   // We include dropletCategories twice so that (a) it's ordering of categories
   // gets preference and (b) it's value override anything in standardConfig
-  return _.cloneDeep($.extend({}, dropletCategories, standardConfig.categories,
+  return _.cloneDeep(Object.assign({}, dropletCategories, standardConfig.categories,
     dropletCategories));
 }
 
@@ -273,7 +284,7 @@ function buildFunctionPrototype(prefix, params) {
 }
 
 // Generate a read-write property expansion function:
-function generatePropertyExpansion (propname) {
+function generatePropertyExpansion(propname) {
   return function (block) {
     if (!block || block.type === 'socket') {
       return propname;
@@ -428,7 +439,7 @@ function populateCompleterFromPredefValues(apis, predefValues) {
  * @param {Object} pos Ace editor position
  * @return {boolean} true if position is at the start of a method or property
  */
-function isPositionAfterDot (session, pos) {
+function isPositionAfterDot(session, pos) {
   var acUtil = window.ace.require("ace/autocomplete/util");
   var line = session.getLine(pos.row);
   var identifier = acUtil.retrievePrecedingIdentifier(line, pos.column);
@@ -470,7 +481,7 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   }
 
   return {
-    getCompletions: function(editor, session, pos, prefix, callback) {
+    getCompletions: function (editor, session, pos, prefix, callback) {
       if (prefix.length === 0) {
         callback(null, []);
         return;
@@ -490,16 +501,19 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
  * @param {object} config
  * @param {object[]} config.blocks
  * @param {object[]} config.categories
+ * @param {codeFunctions|null} codeFunctions with block overrides, may be null
  */
-function getModeOptionFunctionsFromConfig(config) {
+function getModeOptionFunctionsFromConfig(config, codeFunctions) {
   var mergedCategories = mergeCategoriesWithConfig(config);
+  var mergedFuncs = filteredBlocksFromConfig(codeFunctions, config, null, null);
 
   var modeOptionFunctions = {};
 
-  for (var i = 0; i < config.blocks.length; i++) {
+  for (var i = 0; i < mergedFuncs.length; i++) {
+    var block = mergedFuncs[i];
     var newFunc = {};
 
-    switch (config.blocks[i].type) {
+    switch (block.type) {
       case 'value':
         newFunc.value = true;
         break;
@@ -514,14 +528,19 @@ function getModeOptionFunctionsFromConfig(config) {
         break;
     }
 
-    var category = mergedCategories[config.blocks[i].category];
+    var category = mergedCategories[block.category];
     if (category) {
       newFunc.color = category.rgb || category.color;
     }
 
-    newFunc.dropdown = config.blocks[i].dropdown;
+    newFunc.dropdown = block.dropdown;
+    newFunc.objectDropdown = block.objectDropdown;
+    if (block.paramButtons) {
+      newFunc.minArgs = block.paramButtons.minArgs;
+      newFunc.maxArgs = block.paramButtons.maxArgs;
+    }
 
-    var modeOptionName = config.blocks[i].modeOptionName || config.blocks[i].func;
+    var modeOptionName = block.modeOptionName || block.func;
     newFunc.title = modeOptionName;
 
     modeOptionFunctions[modeOptionName] = newFunc;
@@ -553,13 +572,17 @@ exports.generateDropletModeOptions = function (config) {
       assignments: { color: COLOR_PURPLE }
       // errors: { },
     },
-    lockZeroParamFunctions: config.level.lockZeroParamFunctions
+    lockZeroParamFunctions: config.level.lockZeroParamFunctions,
+    paramButtonsForUnknownFunctions: true
   };
 
-  $.extend(modeOptions.functions,
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks }),
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks }),
-    getModeOptionFunctionsFromConfig(config.dropletConfig)
+  Object.assign(modeOptions.functions,
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks },
+      config.level.codeFunctions),
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks },
+      config.level.codeFunctions),
+    getModeOptionFunctionsFromConfig(config.dropletConfig,
+      config.level.codeFunctions)
   );
 
   return modeOptions;

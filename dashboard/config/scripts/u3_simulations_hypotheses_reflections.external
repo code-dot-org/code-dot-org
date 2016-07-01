@@ -1,6 +1,5 @@
 name 'U3 Simulations Hypotheses Reflections'
 css 'unplugged'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Updating Your Hypotheses - Part 2
 

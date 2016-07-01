@@ -1,0 +1,17 @@
+name 'PDAlg 3CGathering'
+css 'k5pd'
+skip_dialog true
+
+markdown <<MARKDOWN
+
+<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
+
+# Sharing Student Work > Gathering Artifacts
+
+Through the course of this curriculum your students have probably come up with some pretty awesome programs. For this stage of the PD you'll need to gather up a handful of student programs that you'd like to share. It would also be a great idea to put together a page where you can showcase all of your students' work.
+
+Click “Continue” below for ideas about where and how to gather student artifacts.
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

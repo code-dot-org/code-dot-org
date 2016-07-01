@@ -21,24 +21,24 @@ offline and online communities as a step toward learning how to be good digital 
 ## Teaching Summary
 ### **Getting Started** - 15 minutes
 
-1) [Review](#Review)  
+1) [Review](#Review)
 2) [Vocabulary](#Vocab) <br/>
-3) [Personal vs. Private Online](#GetStarted)  
+3) [Personal vs. Private Online](#GetStarted)
 
-### **Activity: Digital Citizens** - 30  minutes  
+### **Activity: Digital Citizens** - 30  minutes
 
-4) [Digital Citizens](#Activity1)  
+4) [Digital Citizens](#Activity1)
 
-### **Wrap-up** - 10  minutes 
-5) [Flash Chat](#WrapUp) - What did we learn?  
+### **Wrap-up** - 10  minutes
+5) [Flash Chat](#WrapUp) - What did we learn?
 6) [Vocab Shmocab](#Shmocab)
 
-### **Assessment** - 5  minutes 
+### **Assessment** - 5  minutes
 7) [Digital Citizens Assessment](#Assessment)
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Compare and contrast their responsibilities to their online and offline communities
 - Understand what type of information can put them at risk for identity theft and other scams
@@ -105,12 +105,12 @@ Someone who acts safely, responsibly, and respectfully online
 ### <a name="GetStarted"></a> 3) Personal vs. Private Online
 - Ask "What types of information do you think are okay to share publicly online or on a profile that others will see?"
 - What are some examples of websites where you must register in order to participate?
-  - Write the names of the websites on the board. 
+  - Write the names of the websites on the board.
   - What information is required and why do you think it is required?
      - Information may be required to help distinguish one person from another.
      - The website may keep a record of who uses it.
   - Explain that it’s important to know that sharing some kinds of user information can put you and your family’s privacy at risk.
-  - Point out that you do not have to fill out fields on websites if they are not required. 
+  - Point out that you do not have to fill out fields on websites if they are not required.
      - Required fields are usually marked by an asterisk (*) or are highlighted in red.
 - Elementary school students should never register for sites that require private information without the approval and guidance of a parent or guardian.
 - Here is an example of public versus private information:
@@ -119,14 +119,14 @@ Someone who acts safely, responsibly, and respectfully online
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 If you have access to a computer, feel free to navigate to a site that might require this type of information, such as Gmail or Facebook.
 
 [/tip]
 
-- Explain that some people will actively try to get you to share this kind of information so that they can use it to take over your identity. Once a thief has taken someone’s identity, he or she can use that person’s name to get a driver’s license or buy things, even if the person whose identity they stole isn’t old enough to do these things! 
+- Explain that some people will actively try to get you to share this kind of information so that they can use it to take over your identity. Once a thief has taken someone’s identity, he or she can use that person’s name to get a driver’s license or buy things, even if the person whose identity they stole isn’t old enough to do these things!
   - It’s often not until much later that people realize that their identity has been stolen. Identity thieves may also apply for credit cards in other people’s names and run up big bills that they don’t pay off. Let students know that identity thieves often target children and teens because they have a clean credit history and their parents are unlikely to be aware that someone is taking on their child’s identity.
-  
+
 Now, let's see what we can do to keep ourselves safe.
 
 
@@ -135,12 +135,12 @@ Now, let's see what we can do to keep ourselves safe.
 [together]
 
 ## Activities: (20 min)
-### <a name="Activity1"></a> 4) [Papercraft Super Heroes](https://www.google.com/search?q=cubeecraft+superheroes&es_sm=119&tbm=isch&tbo=u&source=univ&sa=X&ei=v9SxU4TnJdHroATI5YDYCA&ved=0CCEQsAQ&biw=1273&bih=635) 
+### <a name="Activity1"></a> 4) [Papercraft Super Heroes](https://www.google.com/search?q=cubeecraft+superheroes&es_sm=119&tbm=isch&tbo=u&source=univ&sa=X&ei=v9SxU4TnJdHroATI5YDYCA&ved=0CCEQsAQ&biw=1273&bih=635)
 
 - Spiderman says "With great power comes great responsibility." This is also true when working or playing on the Internet.
 - The things we read, see, and hear online can lead people to have all sorts of feelings (e.g.,
-happy, hurt, excited, angry, curious). 
-  - What we do and say online can be powerful. 
+happy, hurt, excited, angry, curious).
+  - What we do and say online can be powerful.
 - The Internet allows us to learn about anything, talk to people at any time (no matter where
 they are in the world), and share our knowledge and creative projects with other people.
   - This also means that negative comments can spread very quickly to friends of all ages.
@@ -165,7 +165,7 @@ Now, let's really make sure we understand how to be a Super Digital Citizen!
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 For more in-depth modules, you can find additions to this curriculum at the [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) page on Scope and Sequence.
 
 [/tip]
@@ -183,7 +183,7 @@ For more in-depth modules, you can find additions to this curriculum at the [Com
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future.  Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
 [/tip]
@@ -203,7 +203,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 ## Assessment (5 min)
 ### <a name="Assessment"></a>7) [Digital Citizen Assessment](Assessment20-DigitalCitizenship.pdf)
-- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained.
 - This should feel familiar, thanks to the previous activities.
 
 [/together]
@@ -215,13 +215,13 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### Common Sense Media
 
 - Visit [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) to learn more about how you can keep your students safe in this digital age.
- 
+
 
 [/together]
 
@@ -230,10 +230,10 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
+### ISTE Standards (formerly NETS)
 
-- 1.c - Use models and simulation to explore complex systems and issues.   
-- 2.d - Contribute to project teams to solve problems.  
+- 1.c - Use models and simulation to explore complex systems and issues.
+- 2.d - Contribute to project teams to solve problems.
 - 5.a - Advocate and practice safe, legal, and responsible use of information and technology.
 - 5.b - Exhibit a positive attitude toward using technology that supports collaboration, learning, and productivity.
 - 5.d. - Exhibit leadership for digital citizenship.
@@ -262,9 +262,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 <a href="https://www.commonsensemedia.org/"><img src="https://code.org/curriculum/docs/k-5/commonSense.png" border="0"></a><br/>
 

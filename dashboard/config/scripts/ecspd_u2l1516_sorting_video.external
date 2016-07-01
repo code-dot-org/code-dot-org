@@ -1,6 +1,5 @@
 name 'ECSPD U2L1516 Sorting Video'
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Sorting Algorithms Video
 

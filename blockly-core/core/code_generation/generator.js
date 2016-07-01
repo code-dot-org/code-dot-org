@@ -83,6 +83,10 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
         // it wants to append a semicolon, or something.
         line = generator.scrubNakedValue(line);
       }
+
+      if (block.isUnused()) {
+        line = "/*\n" + line + "*/\n";
+      }
       code.push(line);
     }
   }
@@ -94,6 +98,21 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
   code = code.replace(/[ \t]+\n/g, '\n');
   return code;
 };
+
+/**
+ * Generate code for all blocks defined by the given xml. Creates a
+ * temporary readOnly BlockSpace to load the blocks into.
+ * @param {string} name Language name (e.g. 'JavaScript').
+ * @param {!Element} xml XML block
+ *   blocks, defaults to true. Nested blocks always inherit visibility.
+ * @return {string} Generated code.
+ */
+Blockly.Generator.xmlToCode = function(name, xml) {
+  var div = document.createElement('div');
+  var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(div, xml);
+  var blocks = blockSpace.getTopBlocks(true);
+  return Blockly.Generator.blocksToCode(name, blocks);
+}
 
 /**
  * Generate code for all blocks in the blockSpace to the specified language.
@@ -191,6 +210,7 @@ Blockly.CodeGenerator.prototype.blockToCode = function(block, opt_showHidden) {
         'for block type "' + block.type + '".';
   }
   var code = func.call(block);
+
   if (code instanceof Array) {
     // Value blocks return tuples of code and operator order.
     return [this.scrub_(block, code[0], opt_showHidden), code[1]];

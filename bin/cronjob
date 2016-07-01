@@ -7,16 +7,13 @@
 # SUCCESS (no notifications): The process exited with a 0 exit code with no output (after
 #   stripping whitespace).
 #
-# WARNING (email notification, HipChat yellow message): The process exited with a non-0 exit code
+# WARNING (email notification): The process exited with a non-0 exit code
 #   or returned output.
 #
 # ERROR (not currently differentiated): A non-0 exit code could be elevated to mean error and
 #   result in a red HipChat message and/or channel notification.
 #
-# FUTURE THOUGHTS: It may make sense to deliver WARNING and ERROR cases to HoneyBadger.io in
-#   addition to (or instead of) HipChat.
-#
-# CRONJOBs are defined the crontab: `chef/cookbooks/cdo-apps/templates/default/crontab.erb`.
+# CRONJOBs are defined the cdo-apps::crontab Chef recipe: `chef/cookbooks/cdo-apps/recipes/crontab.rb`.
 #
 
 require_relative '../deployment.rb'
@@ -70,7 +67,7 @@ end
 # main - run the command (provided as the first command-line argument) and deliver an email
 #   notification to the second argument (if provided).
 #
-def main()
+def main
   command = ARGV[0]
   stdout, stderr, status = Open3.capture3(command)
   result = stdout + stderr
@@ -80,4 +77,4 @@ def main()
   email_notify command, exitstatus, result, ARGV[1]
 end
 
-main()
+main

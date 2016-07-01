@@ -14,6 +14,7 @@ module SerializedProperties
     init_properties
     attributes = new_attributes.stringify_keys
     new_properties = attributes.delete('properties').try(:stringify_keys!)
+
     super(attributes)
     # If the properties hash is explicitly assigned then merge its keys with existing properties
     # instead of replacing the entire hash
@@ -40,10 +41,14 @@ module SerializedProperties
       (serialized_properties[self.to_s] ||= []).concat args
     end
 
+    def permitted_params
+      serialized_properties.values.flatten.map{ |s| s.to_s.gsub(ENCRYPTED_PROPERTY_REGEX, '') }
+    end
+
     def define_methods_for_property(property_name)
       define_method(property_name) { read_attribute('properties')[property_name] }
       define_method("#{property_name}=") { |value| read_attribute('properties')[property_name] = value }
-      define_method("#{property_name}?") { read_attribute('properties')[property_name] }
+      define_method("#{property_name}?") { !!JSONValue.value(read_attribute('properties')[property_name]) }
     end
 
     ENCRYPTED_PROPERTY_REGEX = /^encrypted_/
@@ -53,19 +58,18 @@ module SerializedProperties
 
       define_method(cleartext_property_name) do
         begin
-          Encryption::decrypt_object(read_attribute('properties')[property_name])
+          Encryption.decrypt_object(read_attribute('properties')[property_name])
         rescue OpenSSL::Cipher::CipherError, Encryption::KeyMissingError
           return nil
         end
       end
 
       define_method("#{cleartext_property_name}=") do |value|
-        read_attribute('properties')[property_name] = Encryption::encrypt_object(value)
+        read_attribute('properties')[property_name] = Encryption.encrypt_object(value)
       end
 
       define_method("#{cleartext_property_name}?") do
-        # same as the getter without ?
-        self.send(cleartext_property_name)
+        !!JSONValue.value(self.send(cleartext_property_name))
       end
     end
 
@@ -82,8 +86,8 @@ module SerializedProperties
   end
 
   private
+
   def init_properties
     write_attribute('properties', {}) unless read_attribute('properties')
   end
-
 end

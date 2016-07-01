@@ -12,4 +12,5 @@ window.$ = require('jquery');
 require('./consoleShim')(window);
 
 // Provide video player functionality
-require('./videos');
+window.dashboard = window.dashboard || {};
+window.dashboard.videos = require('./videos');

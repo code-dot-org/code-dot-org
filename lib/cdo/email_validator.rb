@@ -3,7 +3,6 @@ require 'active_support/core_ext/object/blank'
 
 # A module for checking email addresses for validity.
 module EmailValidator
-
   # Returns true if address is a valid email address.
   def self.email_address?(address)
     return false if address.blank?  # Must not be blank

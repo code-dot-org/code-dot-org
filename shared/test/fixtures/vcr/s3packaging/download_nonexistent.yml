@@ -4,6 +4,35 @@ http_interactions:
     method: get
     uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-nonexistent-hash.tar.gz
     body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 06 Apr 2016 23:20:53 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>test-package/fake-nonexistent-hash.tar.gz</Key><RequestId>1C7EB35F2C1BB195</RequestId><HostId>VjzICHwKMETPZQMVOEYhmFKQ1/CZ/EAs8kKqLuJFCyvhQP2D4Wq9fa4X9EIkNhhLaQGcPJK8n+o=</HostId></Error>
+    http_version: 
+  recorded_at: Wed, 06 Apr 2016 23:20:54 GMT
+- request:
+    method: get
+    uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-nonexistent-hash.tar.gz
+    body:
       encoding: US-ASCII
       string: ''
     headers: {}
@@ -17,14 +46,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 15 Mar 2016 22:11:35 GMT
+      - Wed, 06 Apr 2016 23:20:53 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>5E081C55BA30CA4A</RequestId><HostId>Vyqr/w+xsxSW7ENkFAP9GjdeIAtBThGsMqxEtNaNfv+Il7jITGxt4EDWRNbkK6pzqyXxh1JEwHc=</HostId></Error>
+        <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>C47E4CECA23B7ED7</RequestId><HostId>epAT7K6MirEFNl4imOU7p3/NhV74DVcqxvK5BcuKofInT2Iyfo9YRyJcT9Ntqd9b</HostId></Error>
     http_version: 
-  recorded_at: Tue, 15 Mar 2016 22:11:35 GMT
+  recorded_at: Wed, 06 Apr 2016 23:20:54 GMT
 recorded_with: VCR 3.0.0

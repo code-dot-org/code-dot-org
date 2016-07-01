@@ -1,0 +1,38 @@
+name 'plc csp1 philosophy and commentary'
+css 'unplugged'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+## Curriculum Commentary
+### Unit 1 Chapter 1 - Representing and Transmitting Information
+
+#### Content and Teaching Strategies
+The purpose of the lessons in this chapter is to acquaint students with a fundamental truth about computers: all information on computers is represented and stored in binary.  Even though a lot of people can regurgitate that fact, very few actually get a hands-on experience that exposes why that is true and how it works. 
+
+**Teaching Binary and the Internet**
+Our approach to teaching binary is a bit unconventional.  We aim to simultaneously tackle teaching binary and the fundamentals of how the Internet works. Specifically, we teach the need to represent information in binary as an engineering constraint imposed by the need for two computers connected by a single wire to send and receive data.  If the wire can only hold one of two states (on/off, light/dark, etc.) then how can we send information from one machine to another such as numbers, text, images and sounds?
+
+The answer is that we (humans) must invent ways to represent information as sequences of binary states: A-B-B-A, 0-1-1-0, off-on-on-off, etc. We ask students to invent a physical device (lesson 2) to send a sequence of binary states, and then continue to invent representations for more and more sophisticated types of information (lessons 6 and 7) that could be sent with that same device.  These illustrative activities help build toward the enduring understandings that: (2.1) A variety of abstractions built upon binary sequences can be used to represent all digital data and that (6.2) characteristics of the Internet influence the systems built on it.
+
+**Teaching Number Systems**
+In computer science it’s common to move between different representations of numbers. Typically we see numbers represented in decimal (base-10), binary (base-2), and hexadecimal (base-16).  While numbers themselves are laws of nature, the symbols we use to represent numbers are an arbitrary, man-made abstraction.  As long as you have 1) a set of distinct symbols 2) an agreement about how those symbols should be ordered, then you can represent any number with them.  The “circle, triangle, square” lesson (lesson 4) asks students to invent a number system using those shapes.
+
+### Unit 1 Chapter 2 - Inventing the Internet
+#### Content and Teaching Strategies
+
+**Teaching Internet Protocols**
+<img src="https://images.code.org/dce30f4406256be09bcd6ae068bce6c0-image-1462406387384.gif" style=" width:300px; float:right; margin-left:30px">
+Again we lean on the strategy of concept invention by asking students to invent a solution to an Internet problem (usually with a protocol).  Students will invent versions of protocols that parallel some of the most important protocols on the Internet such as: IP, TCP, DNS and HTTP/HTTPS. The general pattern again is: ABC - Activity Before Concept, CBV - Concept Before Vocabulary.  We want students to solve a problem to get the concept, and then reveal what that idea is actually called in the real world.
+<br><br>
+For example, in lesson 9 - Internet Addressing, students use a version of the Internet Simulator where every message is broadcast to everyone else. To know where messages are coming from and going to we need to invent an addressing protocol.  Through this, students will figure out the basic requirements of an typical IP packet and when the real IP packet structure is revealed they will have an intuitive grasp of why it is that way.  The same should be true for the concepts of Routing, TCP, DNS and HTTP.
+<br><br>
+With each lesson the Internet Simulator changes to incorporate a solution to the previous problem students solved. This process mimics the layered sets of protocols on the real Internet and builds toward the enduring understandings that The Internet is a network of autonomous systems (6.1) and that How the Internet was designed (layers of protocols) affects the systems built on top of it (6.2) as well as its ability to grow and adapt. 
+
+#### Why do it this way? and The Role of the Teacher
+Teaching networking concepts is very challenging and relatively unaddressed at the K-12 level.  It is very easy while teaching these concepts for things to get abstract, intangible, and involve a lot of reading.  Our intent here is to give students a more visceral experience, using unplugged activities and the Internet Simulator to bolster student’s understanding of how the Internet was designed and built to function as we know it today.  
+
+Inventing these things should be both revelatory, educational and empowering. We want students to say: “whoa, I feel like I just invented the Internet”
+
+
+MARKDOWN

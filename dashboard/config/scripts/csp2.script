@@ -1,0 +1,84 @@
+title 'CS Principles Unit 2 - Digital Information'
+description 'This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.'
+description_short "Digital Information"
+login_required 'true'
+hidden 'false'
+
+stage 'Bytes and File Sizes'
+level 'v2 U2L1 Student Lesson Introduction'
+assessment 'U1L12 Reflection Free Response'
+
+stage 'Text Compression'
+level 'v2 U2L2 Student Lesson Summary'
+level 'U1L13 Text Compression'
+assessment 'U1L13 - Assess Text Compression reverse process'
+assessment 'U1L13 Assess Text Compression amount'
+assessment 'U1L13 Assessment 1'
+assessment 'U1L13 Assessment 2'
+
+stage 'Encoding B&W Images'
+level 'v2 U2L3 Student Lesson Summary'
+level 'Pixelation - Lesson 14 - Make the Letter A'
+level 'Pixelation - Lesson 14 - Fix bit offset'
+level 'Pixelation - Lesson 14 - Make your own B and W Image'
+assessment 'U1L14 Assessment 1'
+assessment 'U1L14 - Assessment 2'
+
+stage 'Encoding Color Images'
+level 'v2 U2L4 Student Lesson Summary'
+level 'Pixelation - Lesson 15 - Complete 3-bit color'
+level 'Pixelation - Lesson 15 - Color Shades'
+level 'Pixelation - Lesson 15 - Color Shades 4x4'
+level 'Pixelation Flappy'
+level 'Pixelation Bee'
+level 'Pixelation - Lesson 15 - Favicon Instructions'
+level 'Pixelation - Lesson 15 - Color Free Play'
+level 'a bit about pixels'
+
+stage 'Lossy Compression and File Formats'
+level 'v2 U2L5 Student Lesson Introduction'
+assessment 'U1L16 - Matching File Compression Types'
+
+stage 'Encode a Complex Thing'
+level 'v2 U2L6 Student Lesson Introduction'
+
+stage 'Intro to Data'
+level 'v2 U2L7 Student Lesson Introduction'
+
+stage 'Finding Trends with Visualizations'
+level 'v2 U2L8 Student Lesson Introduction'
+
+stage 'Check Your Assumptions'
+level 'v2 U2L9 Student Lesson Introduction'
+
+stage 'Good and Bad Data Visualizations'
+level 'v2 U2L10 Student Lesson Introduction'
+level 'GoodBadVisualizations_v1'
+level 'GoodBadVisualizations_v2'
+
+stage 'Making Data Visualizations'
+level 'v2 U2L11 Student Lesson Introduction'
+level 'U4 - Making Data Visualizations - Getting Started'
+level 'U4 - Making Data Visualizations - Scatter Plot'
+level 'U4 - Making Data Visualizations - Line Chart'
+level 'U4 - Making Data Visualizations - Bar Chart'
+level 'U4 - Making Data Visualizations - Edit Chart Appearance'
+level 'U4 - Making Data Visualizations - Free Play'
+
+stage 'Discover a Data Story'
+level 'v2 U2L12 Student Lesson Introduction'
+
+stage 'Cleaning Data'
+level 'v2 U2L13 Student Lesson Introduction'
+level 'U4 - Cleaning Data - Activity Guide'
+level 'U4 Cleaning Data Activity Guide Pt2'
+level 'U4 Cleaning Data Activity Guide Pt3'
+
+stage 'Creating Summary Tables'
+level 'v2 U2L14 Student Lesson Introduction'
+level 'U4L08v2 Making Pivot Tables'
+level 'U4L08v2 Making Pivot Tables Part 2'
+level 'U4L08v2 Making Pivot Tables Part 3'
+
+stage 'Practice PT - Tell a Data Story'
+level 'v2 U2L15 Student Lesson Introduction'

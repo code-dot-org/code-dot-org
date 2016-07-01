@@ -21,40 +21,7 @@ Milestone Complete!
 Milestone Complete!
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Teachers from Broward, Florida will attend PD in Broward. Please visit the [Broward CSP page](/educate/pd/15-16/broward)  for your workshop dates and details.
-
-All teachers from Boston, New York, and Montogomery County, MD will travel to the PD location to attend the workshop in-person. 
-
-**Save the date:**
-
-Quarter 4: Saturday, April 9, 2016<br/>
-This workshop will be in Montgomery County, Maryland.
-
-8:30am - 3:30pm
-<br/>
-Breakfast and lunch will be served.
-
-
-**Location**
-
-[I/O Spaces
-<br/>
-8120 Fenton Street<br/>Suite 202<br/> 
-Silver Spring, MD 20910](https://goo.gl/maps/puTUhhZYrMA2)
-
-Free parking is available in front of the building, and  in the lot near the track.
-
-
-**What to bring to Phase 3 quarterly sessions:**
-
-Laptop and Charger
-<br/>
-Green journal<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Milestone Complete!
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
@@ -73,32 +40,7 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-**Save the date:**<br/>
-
-Quarter 4: Saturday, April 16, 2016
-
-8:30am - 3:30pm
-<br/>
-Breakfast and lunch will be served.
-
-**Location**
-
-[Microsoft<br/>
-Music Box 5411<br/>
-11 Times Square<br/>
-NY, NY 10036](https://www.google.com/maps/search/Microsoft,+11+Times+Square,+New+York,+NY+10036/@40.7567826,-73.9906628,18z)
-
-
-**What to bring to Phase 3 quarterly sessions:**
-
-Laptop and Charger
-<br/>
-ECS Green journal<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Milestone Complete!
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 

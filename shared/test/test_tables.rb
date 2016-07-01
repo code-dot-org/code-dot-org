@@ -268,7 +268,7 @@ class TablesTest < Minitest::Test
     csv_filename = File.expand_path('../roster.csv', __FILE__)
     import(csv_filename)
 
-    result_body = export().body.split("\n")
+    result_body = export.body.split("\n")
     original_body = File.read(csv_filename).split("\n")
 
     result_columns = result_body[0]
@@ -411,7 +411,7 @@ class TablesTest < Minitest::Test
     post "/v3/import-shared-tables/#{@channel_id}/#{@table_name}", "import_file" => import_file
   end
 
-  def export()
+  def export
     get "/v3/export-shared-tables/#{@channel_id}/#{@table_name}"
   end
 

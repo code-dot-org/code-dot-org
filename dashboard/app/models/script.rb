@@ -32,67 +32,99 @@ class Script < ActiveRecord::Base
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
+  has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
 
   include SerializedProperties
 
-  serialized_attrs %w(pd admin_required)
+  after_save :generate_plc_objects
 
-  def Script.twenty_hour_script
+  def generate_plc_objects
+    if professional_learning_course?
+      course = Plc::Course.find_or_create_by! name: professional_learning_course
+      unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
+      unit.update!(
+        plc_course_id: course.id,
+        unit_name: I18n.t("data.script.name.#{name}.title"),
+        unit_description: I18n.t("data.script.name.#{name}.description")
+      )
+
+      stages.each do |stage|
+        lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
+        lm.update!(
+          plc_course_unit_id: unit.id,
+          name: stage.name,
+          module_type: stage.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
+          plc_tasks: []
+        )
+
+        stage.script_levels.each do |sl|
+          task = Plc::Task.find_or_initialize_by(script_level_id: sl.id)
+          task.name = sl.level.name
+          task.save!
+          lm.plc_tasks << task
+        end
+      end
+    end
+  end
+
+  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required)
+
+  def self.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
   end
 
-  def Script.hoc_2014_script
+  def self.hoc_2014_script
     Script.get_from_cache(Script::HOC_NAME)
   end
 
-  def Script.starwars_script
+  def self.starwars_script
     Script.get_from_cache(Script::STARWARS_NAME)
   end
 
-  def Script.minecraft_script
+  def self.minecraft_script
     Script.get_from_cache(Script::MINECRAFT_NAME)
   end
 
-  def Script.starwars_blocks_script
+  def self.starwars_blocks_script
     Script.get_from_cache(Script::STARWARS_BLOCKS_NAME)
   end
 
-  def Script.frozen_script
+  def self.frozen_script
     Script.get_from_cache(Script::FROZEN_NAME)
   end
 
-  def Script.course1_script
+  def self.course1_script
     Script.get_from_cache(Script::COURSE1_NAME)
   end
 
-  def Script.course2_script
+  def self.course2_script
     Script.get_from_cache(Script::COURSE2_NAME)
   end
 
-  def Script.course3_script
+  def self.course3_script
     Script.get_from_cache(Script::COURSE3_NAME)
   end
 
-  def Script.course4_script
+  def self.course4_script
     Script.get_from_cache(Script::COURSE4_NAME)
   end
 
-  def Script.infinity_script
+  def self.infinity_script
     Script.get_from_cache(Script::INFINITY_NAME)
   end
 
-  def Script.flappy_script
+  def self.flappy_script
     Script.get_from_cache(Script::FLAPPY_NAME)
   end
 
-  def Script.playlab_script
+  def self.playlab_script
     Script.get_from_cache(Script::PLAYLAB_NAME)
   end
 
-  def Script.artist_script
+  def self.artist_script
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
@@ -129,7 +161,7 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
+        script = Script.includes([{script_levels: [{levels: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
@@ -162,7 +194,7 @@ class Script < ActiveRecord::Base
       script_level_cache.values.each do |script_level|
         level = script_level.level
         next unless level
-        cache[level.id] = level unless cache.has_key? level.id
+        cache[level.id] = level unless cache.key? level.id
       end
     end
   end
@@ -228,19 +260,19 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    ScriptConstants.twenty_hour?(self.name)
+    ScriptConstants.script_in_category?(:twenty_hour, self.name)
   end
 
   def hoc?
-    ScriptConstants.hoc?(self.name)
+    ScriptConstants.script_in_category?(:hoc, self.name)
   end
 
   def flappy?
-    ScriptConstants.flappy?(self.name)
+    ScriptConstants.script_in_category?(:flappy, self.name)
   end
 
   def minecraft?
-    ScriptConstants.minecraft?(self.name)
+    ScriptConstants.script_in_category?(:minecraft, self.name)
   end
 
   def find_script_level(level_id)
@@ -269,7 +301,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'cspunit4' || name == 'cspunit5'
+    name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'cspunit4' || name == 'cspunit5'
   end
 
   def is_k1?
@@ -282,7 +314,7 @@ class Script < ActiveRecord::Base
 
   def banner_image
     if has_banner?
-      "banner_#{name}_cropped.png"
+      "banner_#{name}.jpg"
     end
   end
 
@@ -298,27 +330,34 @@ class Script < ActiveRecord::Base
     k5_course? || twenty_hour?
   end
 
+  def cs_in_a?
+    name.match(Regexp.union('algebra', 'Algebra'))
+  end
+
   def show_report_bug_link?
     beta? || k5_course?
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
   end
 
   def has_banner?
-    k5_course? || %w(cspunit1 cspunit2 cspunit3).include?(self.name)
+    k5_course? || %w(csp1 csp2 cspunit1 cspunit2 cspunit3).include?(self.name)
   end
 
   def freeplay_links
-    if name.include?('algebra')
+    if cs_in_a?
       ['calc', 'eval']
     elsif name.start_with?('csp')
       ['applab']
     else
       ['playlab', 'artist']
     end
+  end
 
+  def professional_course?
+    pd? || professional_learning_course?
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
@@ -333,6 +372,7 @@ class Script < ActiveRecord::Base
       custom_files.map do |script|
         name = File.basename(script, '.script')
         script_data, i18n = ScriptDSL.parse_file(script)
+
         stages = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
@@ -346,8 +386,10 @@ class Script < ActiveRecord::Base
           properties: {
                        pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
+                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
+                       student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
                       },
-        }, stages.map{|stage| stage[:levels]}.flatten]
+        }, stages.map{|stage| stage[:scriptlevels]}.flatten]
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
@@ -358,7 +400,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def self.add_script(options, data)
+  def self.add_script(options, raw_script_levels)
     script = fetch_script(options)
     chapter = 0
     stage_position = 0; script_level_position = Hash.new(0)
@@ -367,59 +409,77 @@ class Script < ActiveRecord::Base
     levels_by_key = script.levels.index_by(&:key)
 
     # Overwrites current script levels
-    script.script_levels = data.map do |row|
-      row.symbolize_keys!
+    script.script_levels = raw_script_levels.map do |raw_script_level|
+      raw_script_level.symbolize_keys!
 
-      # Concepts are comma-separated, indexed by name
-      row[:concept_ids] = (concepts = row.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-        (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
+      assessment = nil
+      named_level = nil
+      stage_flex_category = nil
+
+      levels = raw_script_level[:levels].map do |raw_level|
+        raw_level.symbolize_keys!
+
+        # Concepts are comma-separated, indexed by name
+        raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
+          (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
+        end
+
+        raw_level_data = raw_level.dup
+        assessment = raw_level.delete(:assessment)
+        named_level = raw_level.delete(:named_level)
+        stage_flex_category = raw_level.delete(:stage_flex_category)
+
+        key = raw_level.delete(:name)
+
+        if raw_level[:level_num] && !key.starts_with?('blockly')
+          # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
+          key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
+        end
+
+        level = levels_by_key[key] || Level.find_by_key(key)
+
+        if key.starts_with?('blockly')
+          # this level is defined in levels.js. find/create the reference to this level
+          level = Level.
+            create_with(name: 'blockly').
+            find_or_create_by!(Level.key_to_params(key))
+          level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
+          level.update(raw_level)
+        elsif raw_level[:video_key]
+          level.update(video_key: raw_level[:video_key])
+        end
+
+        unless level
+          raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
+        end
+
+        if [Game.applab, Game.gamelab].include? level.game
+          unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
+            raise <<-ERROR.gsub(/^\s+/, '')
+              Applab and Gamelab levels can only be added to scripts that are hidden or require login
+              (while adding level "#{level.name}" to script "#{script.name}")
+            ERROR
+          end
+        end
+        level
       end
 
-      row_data = row.dup
-      stage_name = row.delete(:stage)
-      assessment = row.delete(:assessment)
-
-      key = row.delete(:name)
-
-      if row[:level_num] && !key.starts_with?('blockly')
-        # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
-        key = ['blockly', row.delete(:game), row.delete(:level_num)].join(':')
-      end
-
-      level = levels_by_key[key] || Level.find_by_key(key)
-
-      if key.starts_with?('blockly')
-        # this level is defined in levels.js. find/create the reference to this level
-        level = Level.
-          create_with(name: 'blockly').
-          find_or_create_by!(Level.key_to_params(key))
-        level = level.with_type(row.delete(:type) || 'Blockly') if level.type.nil?
-        level.update(row)
-      elsif row[:video_key]
-        level.update(video_key: row[:video_key])
-      end
-
-      unless level
-        raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
-      end
-
-      if level.game && level.game == Game.gamelab && !script.hidden && !script.admin_required
-        raise 'Gamelab levels can only be added to a script that requires admin (temporarily)'
-      end
-
-      if level.game && (level.game == Game.applab || level.game == Game.gamelab) && !script.hidden && !script.login_required
-        raise 'Applab/Gamelab levels can only be added to a script that requires login'
-      end
+      stage_name = raw_script_level.delete(:stage)
+      properties = raw_script_level.delete(:properties)
 
       script_level_attributes = {
         script_id: script.id,
-        level_id: level.id,
         chapter: (chapter += 1),
+        named_level: named_level,
         assessment: assessment
       }
+      script_level_attributes[:properties] = properties.to_json if properties
       script_level = script.script_levels.detect{|sl|
-        script_level_attributes.all?{ |k, v| sl.send(k) == v }
-      } || ScriptLevel.find_or_create_by(script_level_attributes)
+        script_level_attributes.all?{ |k, v| sl.send(k) == v } &&
+          sl.levels == levels
+      } || ScriptLevel.create(script_level_attributes) {|sl|
+        sl.levels = levels
+      }
       # Set/create Stage containing custom ScriptLevel
       if stage_name
         stage = script.stages.detect{|s| s.name == stage_name} ||
@@ -427,6 +487,10 @@ class Script < ActiveRecord::Base
             name: stage_name,
             script: script
           )
+
+        stage.assign_attributes(flex_category: stage_flex_category)
+        stage.save! if stage.changed?
+
         script_level_attributes[:stage_id] = stage.id
         script_level_attributes[:position] = (script_level_position[stage.id] += 1)
         script_level.reload
@@ -461,13 +525,15 @@ class Script < ActiveRecord::Base
 
     script.stages = script_stages
     script.reload.stages
+    script.generate_plc_objects
+
     script
   end
 
   # script is found/created by 'id' (if provided) otherwise by 'name'
   def self.fetch_script(options)
     options.symbolize_keys!
-    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.has_key? v
+    v = :wrapup_video; options[v] = Video.find_by(key: options[v]) if options.key? v
     name = {name: options.delete(:name)}
     script_key = ((id = options.delete(:id)) && {id: id}) || name
     script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)
@@ -488,8 +554,10 @@ class Script < ActiveRecord::Base
           properties: {
                        pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
+                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
+                       student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
           }
-        }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
+        }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
         Script.update_i18n(i18n)
       end
     rescue StandardError => e
@@ -531,7 +599,7 @@ class Script < ActiveRecord::Base
   end
 
   def csf_finish_url
-    if (name == Script::TWENTY_HOUR_NAME)
+    if name == Script::TWENTY_HOUR_NAME
       # Rename from 20-hour to public facing Accelerated
       CDO.code_org_url "/congrats/#{Script::ACCELERATED_NAME}"
     else
@@ -543,6 +611,7 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
+      plc: professional_learning_course,
       stages: stages.map(&:summarize),
     }
 

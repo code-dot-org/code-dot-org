@@ -3,6 +3,7 @@
  */
 /* global inlineAttach */
 'use strict';
+import $ from 'jquery';
 var CodeMirror = require('codemirror');
 require("codemirror/mode/markdown/markdown");
 require("codemirror/addon/edit/closetag");
@@ -30,7 +31,7 @@ module.exports = function (name, mode, callback, attachments) {
     htmlMode = true;
   }
 
-  var editor = CodeMirror.fromTextArea(document.getElementById('level_' + name), {
+  var editor = CodeMirror.fromTextArea(document.getElementById(name), {
     mode: mode,
     htmlMode: htmlMode,
     viewportMargin: Infinity,

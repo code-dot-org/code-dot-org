@@ -35,7 +35,11 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \\n\\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?\",\r\n  \"hint_id\": \"2-3_Artist_Nested_Loops_5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

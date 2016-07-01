@@ -1,0 +1,7 @@
+name 'Sample CSP Assessment'
+title 'Sample CSP Assessment'
+submittable 'true'
+
+page
+level 'CSP PD Example Question 1'
+level 'CSP PD Example Question 2' 

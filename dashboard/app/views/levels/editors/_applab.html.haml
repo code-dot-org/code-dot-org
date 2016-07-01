@@ -3,17 +3,6 @@
   %p Number from 0.0 to 1.0 for how fast Applab runs by default while in the IDE. If not set, default is 1.0
   = f.number_field :slider_speed, :step => 0.1
 .field
-  = f.label :app_width
-  %p Integer representing the width of the app in pixel coordinates. Default is 320.
-  = f.number_field :app_width, disabled: true
-.field
-  = f.label :app_height
-  %p
-    Integer representing the height of the app in pixel coordinates. Default is 480. Note:
-    this number includes 30 pixels of space reserved for the footer (i.e. if I make the
-    height 30, it will consist entirely of a footer).
-  = f.number_field :app_height, disabled: true
-.field
   = f.label :show_turtle_before_run, 'Show turtle before Run is pressed'
   = boolean_check_box f, :show_turtle_before_run
 .field
@@ -54,7 +43,7 @@
     #{html_escape("<div xmlns='http://www.w3.org/1999/xhtml' id='divApplab'")}...)
   = f.text_area :start_html, placeholder: 'Start html', rows: 4, value: @level.start_html
   :javascript
-    levelbuilder.initializeCodeMirror('start_html', 'html');
+    levelbuilder.initializeCodeMirror('level_start_html', 'html');
 .field.examples
   = f.label :examples, 'Example solutions'
   %p
@@ -83,7 +72,13 @@
         ]
   = f.text_area 'log_conditions', placeholder: 'Insert JSON Data', rows: 4, value: @level.log_conditions ? JSON.pretty_generate(@level.log_conditions) : ''
   :javascript
-    levelbuilder.initializeCodeMirror('log_conditions', 'javascript');
+    levelbuilder.initializeCodeMirror('level_log_conditions', 'javascript');
+
+.field
+  = f.label :fail_on_lint_errors
+  %p
+    Lint warnings and errors (in the editor's gutter area) will prevent the student from continuing when the Finish button is pressed.
+  = boolean_check_box f, :fail_on_lint_errors
 
 .field
   = f.label 'Table Data'
@@ -98,7 +93,7 @@
         }
   = f.text_area 'data_tables', placeholder: 'Insert JSON Data', rows: 4, value: @level.data_tables or ''
   :javascript
-    levelbuilder.initializeCodeMirror('data_tables', 'javascript');
+    levelbuilder.initializeCodeMirror('level_data_tables', 'javascript');
 
 .field
   = f.label 'Key-Value Data'
@@ -113,7 +108,7 @@
         }
   = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
   :javascript
-    levelbuilder.initializeCodeMirror('data_properties', 'javascript');
+    levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
 
 .field
   = f.label 'Hide View Data Button'

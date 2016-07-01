@@ -10,7 +10,6 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[16,0,0,16,0,0,16,0],[0,0,0,0,0,0,0,0],[16,0,0,16,0,0,16,0],[0,0,0,0,0,0,0,0],[16,0,0,16,0,0,16,0],[0,0,0,0,0,0,0,0],[16,0,0,16,0,0,16,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Create your own story or game! Your code is saved as a project you can return to at any time.",
     "is_k1": "false",
     "is_project_level": "true",
     "skip_instructions_popup": "true",
@@ -42,7 +41,16 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "min_workspace_height": "1250",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
@@ -184,12 +192,12 @@
             <title name="SOUND">hit</title>
           </block>
           <block type="studio_makeProjectile">
-            <title name="VALUE">"blue_fireball"</title>
+            <title name="VALUE">"basketball"</title>
             <title name="ACTION">"bounce"</title>
           </block>
           <block type="studio_throw">
             <title name="SPRITE">0</title>
-            <title name="VALUE">"blue_fireball"</title>
+            <title name="VALUE">"basketball"</title>
             <title name="DIR">1</title>
           </block>
           <block type="studio_saySpriteParamsTime" inline="true">
@@ -297,6 +305,19 @@
                 <title name="NUM">???</title>
               </block>
             </value>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="controls_if" inline="false"/>
+          <block type="logic_compare" inline="true">
+            <title name="OP">EQ</title>
+          </block>
+          <block type="logic_operation" inline="true">
+            <title name="OP">AND</title>
+          </block>
+          <block type="logic_negate" inline="false"/>
+          <block type="logic_boolean">
+            <title name="BOOL">TRUE</title>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">

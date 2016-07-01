@@ -1,8 +1,9 @@
+import $ from 'jquery';
 var constants = require('../constants');
 var utils = require('../../utils');
 
 // Taken from http://stackoverflow.com/a/3627747/2506748
-module.exports.rgb2hex = function (rgb) {
+export function rgb2hex(rgb) {
   if (rgb === '') {
     return rgb;
   }
@@ -14,7 +15,7 @@ module.exports.rgb2hex = function (rgb) {
     return ("0" + parseInt(x).toString(16)).slice(-2);
   }
   return "#" + hex(parsed[1]) + hex(parsed[2]) + hex(parsed[3]);
-};
+}
 
 /**
  * Gets the element's id, stripping the prefix.
@@ -22,7 +23,7 @@ module.exports.rgb2hex = function (rgb) {
  * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
  * @returns {string} The element id with prefix stripped, or null if it had no id.
  */
-var getId = module.exports.getId = function (element, prefix) {
+export function getId(element, prefix) {
   var elementId = element.getAttribute('id');
   if (elementId === null) {
     return null;
@@ -30,7 +31,7 @@ var getId = module.exports.getId = function (element, prefix) {
   prefix = utils.valueOr(prefix, constants.DESIGN_ELEMENT_ID_PREFIX);
   checkId(element, prefix);
   return elementId.substr(prefix.length);
-};
+}
 
 /**
  * Sets the element's id, adding the prefix.
@@ -38,13 +39,13 @@ var getId = module.exports.getId = function (element, prefix) {
  * @param value (string)
  * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
  */
-var setId = module.exports.setId = function (element, value, prefix) {
+export function setId(element, value, prefix) {
   if (value === null) {
     return;
   }
   prefix = utils.valueOr(prefix, constants.DESIGN_ELEMENT_ID_PREFIX);
   element.setAttribute('id', prefix + value);
-};
+}
 
 /**
  * Throws an error if the element's id does not start with the prefix.
@@ -63,10 +64,10 @@ function checkId(element, prefix) {
  * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
  * @returns {Element}
  */
-var getPrefixedElementById = module.exports.getPrefixedElementById = function(elementId, prefix) {
+export function getPrefixedElementById(elementId, prefix) {
   prefix = prefix === undefined ? constants.DESIGN_ELEMENT_ID_PREFIX : prefix;
   return document.getElementById(prefix + elementId);
-};
+}
 
 /**
  * Adds the prefix to the element's id.
@@ -74,19 +75,19 @@ var getPrefixedElementById = module.exports.getPrefixedElementById = function(el
  * @param prefix {string} Optional prefix to add. Defaults to ''.
  * @returns {Element}
  */
-module.exports.addIdPrefix = function (element, prefix) {
+export function addIdPrefix(element, prefix) {
   prefix = utils.valueOr(prefix, '');
   setId(element, element.getAttribute('id'), prefix);
-};
+}
 
 /**
  * Removes the DESIGN_ELEMENT_ID_PREFIX from the element's id.
  * @param element {Element}
  * @returns {Element}
  */
-module.exports.removeIdPrefix = function (element) {
+export function removeIdPrefix(element) {
   element.setAttribute('id', getId(element));
-};
+}
 
 // TODO(dave): remove blacklist once element ids inside divApplab
 // are namespaced: https://www.pivotaltracker.com/story/show/113011395
@@ -117,7 +118,7 @@ var TURTLE_CANVAS_ID = 'turtleCanvas';
  *     to be created. Default: false
  * @returns {boolean}
  */
-module.exports.isIdAvailable = function(newId, options) {
+export function isIdAvailable(newId, options) {
   options = options || {};
   if (!newId) {
     return false;
@@ -170,8 +171,12 @@ module.exports.isIdAvailable = function(newId, options) {
   }
 
   return true;
-};
+}
 
-module.exports.getScreens = function getScreens() {
+export function getScreens() {
   return $('#designModeViz > .screen');
-};
+}
+
+export function getDefaultScreenId() {
+  return getId(getScreens()[0]);
+}

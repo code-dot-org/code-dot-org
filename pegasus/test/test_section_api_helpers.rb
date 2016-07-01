@@ -16,12 +16,12 @@ class SectionApiHelperTest < Minitest::Test
   describe SectionHelpers do
     describe 'random code' do
       it 'does not generate the same code twice' do
-        codes = 10.times.map { SectionHelpers::random_code }
+        codes = 10.times.map { SectionHelpers.random_code }
         assert_equal 10, codes.uniq.length
       end
 
       it 'does not generate vowels' do
-        codes = 10.times.map { SectionHelpers::random_code }
+        codes = 10.times.map { SectionHelpers.random_code }
         assert codes.grep(/[AEIOU]/).empty?
       end
     end
@@ -53,10 +53,10 @@ class SectionApiHelperTest < Minitest::Test
       before do
         # mock scripts (the first query to the db gets the scripts)
         @fake_db.fetch = [
-            {id: 1, name: 'Foo', hidden: '0'},
-            {id: 3, name: 'Bar', hidden: '0'},
-            {id: 4, name: 'mc', hidden: '0'},
-            {id: 5, name: 'hourofcode', hidden: '0'}
+            {id: 1, name: 'Foo', hidden: false},
+            {id: 3, name: 'Bar', hidden: false},
+            {id: 4, name: 'mc', hidden: false},
+            {id: 5, name: 'hourofcode', hidden: false}
         ]
       end
 
@@ -71,9 +71,11 @@ class SectionApiHelperTest < Minitest::Test
         assert !DashboardSection.valid_course_id?('invalid!!')
       end
 
-      it 'rewrites mc as minecraft, hourofcode as classicmaze' do
-        assert_equal 'minecraft', DashboardSection.valid_courses[4]
-        assert_equal 'classicmaze', DashboardSection.valid_courses[5]
+      it 'rewrites mc as Minecraft, hourofcode as "Classic Maze"' do
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft'
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Classic Maze'
+        refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'mc'
+        refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'hourofcode'
       end
     end
 
@@ -94,15 +96,12 @@ class SectionApiHelperTest < Minitest::Test
         DashboardSection.create(params)
         assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
       end
-
     end
   end
 
   describe DashboardStudent do
-
   end
 
   describe DashboardUserScript do
-
   end
 end

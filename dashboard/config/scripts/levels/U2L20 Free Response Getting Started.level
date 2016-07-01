@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:24.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Security and Hacking: Getting Started",
+    "markdown_instructions": "Why do you think Internet hacking becomes \"really big news\" when it occurs?\n",
+    "encrypted_solution": "xss3kUzCT84MjDMcw03b9If8isJVqjNdFEfV5AAWQIPdYjloDmHH5SEBaPmG\nNWxfIL+osREizSXNVO5yTn89TffZW5OzRUJNkZFUjKxOnH8NJS2DoNpl+LOC\nRD6tFMsP\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

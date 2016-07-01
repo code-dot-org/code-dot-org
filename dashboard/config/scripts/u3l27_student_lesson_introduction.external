@@ -1,30 +1,38 @@
 name 'U3L27 Student Lesson Introduction'
-title 'Digital Assistant Challenge'
-css 'unplugged'
-
-markdown <<MARKDOWN
-## Unit 3: Lesson 27 - Functions with Return Values
-
-# Background
-
-Functions can accept input in the form of parameters, but we'll often want our functions to generate output which can be used in the logic of a program as well. We have already seen several functions that return values, for example `randomNumber` and `getText`. The ability to write your own functions that return values allows you to reuse useful calculations at many places in your program, and is a further step in creating generally useful programs.
-
-# Vocabulary
-
-**`return`:** a command used to end execution of a function and resume execution at the point where the function was called.
-
-**Return Value:** a value that is passed when a function returns to the place in the code where the function was called, potentially to be used in further computation.
-
-# Lesson
-
-* Introduction to the use of the `return` command.
-* Write functions that return values.
-* Use functions that return values to analyze information stored in an array.
-
-# Resources
-* Activity Guide: <a href="https://docs.google.com/document/d/1rGKhRhH5pzJJfYBa_tZy96-bg-SWgSbf_nomluTl18U/edit?usp=sharing" target="_blank">
-Go Fish
-</a>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
+encrypted '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
+'

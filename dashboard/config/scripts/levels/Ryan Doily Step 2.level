@@ -29,7 +29,9 @@
     "project_template_level_name": "Ryan Doily Step 1"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -43,16 +45,18 @@
           </value>
         </block>
         <block type="controls_repeat">
-          <title name="TIMES">4</title>
+          <title name="TIMES">20</title>
         </block>
         <block type="draw_turn" inline="true">
           <title name="DIR">turnRight</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">100</title>
+              <title name="NUM">90</title>
             </block>
           </value>
         </block>
+        <block type="draw_move_by_constant"/>
+        <block type="draw_turn_by_constant"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

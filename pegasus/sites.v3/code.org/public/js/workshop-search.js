@@ -1,8 +1,11 @@
+/* global google */
+
 var gmap,
   markers = {},
-  info_window;
+  infoWindow,
+  remainingWorkshops;
 
-$(document).ready(function() {
+$(document).ready(function () {
   initializeMap();
   loadWorkshops();
 });
@@ -16,47 +19,89 @@ function initializeMap() {
   };
 
   gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
-  info_window = new google.maps.InfoWindow();
+  infoWindow = new google.maps.InfoWindow();
 }
 
 function loadWorkshops() {
   var params = [];
 
-  $.post('/forms/ProfessionalDevelopmentWorkshop/query', $.param(params), function(response) {
+  $.get('/dashboardapi/v1/pd/k5workshops').done(function (data) {
+    processPdWorkshops(data);
+  });
+
+  $.post('/forms/ProfessionalDevelopmentWorkshop/query', $.param(params), function (response) {
     var results = JSON.parse(response);
 
-    $.each(results.response.docs, function(index, workshop) {
-      if (typeof workshop.location_p != 'undefined') {
+    $.each(results.response.docs, function (index, workshop) {
+      if (typeof workshop.location_p !== 'undefined') {
         var location = workshop.location_p.split(',');
         var latLng = new google.maps.LatLng(location[0], location[1]);
 
         // This hash will round the latLngs to 6 decimals.
         var hash = latLng.toUrlValue();
 
-        var infowindow_content = '';
+        var infoWindowContent = '';
 
-        if(typeof markers[hash]==='undefined'){
-          infowindow_content = compileHtml(workshop, true);
+        if (typeof markers[hash] === 'undefined') {
+          infoWindowContent = compileHtml(workshop, true);
           markers[hash] = new google.maps.Marker({
             position: latLng,
             map: gmap,
             title: workshop.location_name_p,
-            infowindow_content: infowindow_content
+            infoWindowContent: infoWindowContent
           });
           google.maps.event.addListener(markers[hash], "click",
             function (e) {
-              info_window.setContent(this.get('infowindow_content'));
-              info_window.open(gmap, this);
+              infoWindow.setContent(this.get('infoWindowContent'));
+              infoWindow.open(gmap, this);
             });
-        }
-        else {
-          infowindow_content = compileHtml(workshop, false);
+        } else {
+          infoWindowContent = compileHtml(workshop, false);
           // Extend existing marker.
-          markers[hash].infowindow_content += infowindow_content;
+          markers[hash].infoWindowContent += infoWindowContent;
         }
       }
     });
-  }).done(addGeocomplete).fail(displayQueryError);
+  }).fail(displayQueryError).always(addGeocomplete());
+}
+
+function processPdWorkshops(workshops) {
+  remainingWorkshops = workshops.length;
+  $.each(workshops, function (i, workshop) {
+    var location = workshop.processed_location;
+    var latLng = new google.maps.LatLng(location.latitude, location.longitude);
+    var hash = latLng.toUrlValue();
+
+    var infoWindowContent = '';
+
+    if (typeof markers[hash] === 'undefined') {
+      infoWindowContent = compileHtmlNew(workshop, true);
+      markers[hash] = new google.maps.Marker({
+        position: latLng,
+        map: gmap,
+        title: workshop.location_name,
+        infoWindowContent: infoWindowContent
+      });
+      google.maps.event.addListener(markers[hash], "click",
+        function (e) {
+          infoWindow.setContent(this.get('infoWindowContent'));
+          infoWindow.open(gmap, this);
+        });
+    } else {
+      infoWindowContent = compileHtmlNew(workshop, false);
+      // Extend existing marker.
+      markers[hash].infoWindowContent += infoWindowContent;
+    }
+
+    geolocateComplete();
+  });
+}
+
+function geolocateComplete() {
+  remainingWorkshops--;
+  if (remainingWorkshops < 1) {
+    addGeocomplete();
+  }
 }
 
 function compileHtml(workshop, first) {
@@ -65,8 +110,7 @@ function compileHtml(workshop, first) {
 
   if (first) {
     html += '<div class="workshop-item workshop-item-first">';
-  }
-  else {
+  } else {
     html += '<div class="workshop-item">';
   }
 
@@ -74,7 +118,7 @@ function compileHtml(workshop, first) {
 
   // Add the date(s).
   html += '<div class="workshop-dates">';
-  $.each(workshop.dates_ss, function(key, value) {
+  $.each(workshop.dates_ss, function (key, value) {
     html += '<div class="workshop-date" style="white-space: nowrap;">' + value + '</div>';
   });
   html += '</div>';
@@ -88,25 +132,53 @@ function compileHtml(workshop, first) {
   return html;
 }
 
+function compileHtmlNew(workshop, first) {
+  // Compile HTML.
+  var html = '';
+
+  if (first) {
+    html += '<div class="workshop-item workshop-item-first">';
+  } else {
+    html += '<div class="workshop-item">';
+  }
+  html += '<div class="workshop-location-name"><strong>' + workshop.location_name + '</strong></div>';
+
+  // Add the date(s).
+  html += '<div class="workshop-dates">';
+  $.each(workshop.sessions, function (i, session) {
+    html += '<div class="workshop-date" style="white-space: nowrap;">' + session + '</div>';
+  });
+  html += '</div>';
+
+  var code_studio_root = $('#properties').attr('data-studio-url');
+  var url = code_studio_root + "/pd/workshops/" + workshop.id + '/enroll';
+  if (workshop.id) {
+    html += '<div class="workshop-link"><a style="" href=' + url + '>Info and Signup</a></div>';
+  }
+  html += '</div>';
+
+  return html;
+}
+
 function addGeocomplete() {
   var geocomplete_options = {
     country: 'us'
   };
 
-  if (html5_storage_supported() && typeof localStorage['geocomplete'] != 'undefined') {
+  if (html5_storage_supported() && typeof localStorage['geocomplete'] !== 'undefined') {
     geocomplete_options.location = localStorage['geocomplete'];
   }
 
   $("#geocomplete").geocomplete(geocomplete_options)
-    .bind("geocode:result", function(event, result){
+    .bind("geocode:result", function (event, result) {
       gmap.fitBounds(result.geometry.viewport);
 
       var bounds = gmap.getBounds();
       var marker_found = false;
 
       while (!marker_found && gmap.getZoom() > 4) {
-        $.each(markers, function(index, marker) {
-          if( bounds.contains(marker.getPosition()) ){
+        $.each(markers, function (index, marker) {
+          if (bounds.contains(marker.getPosition())) {
             marker_found = true;
           }
         });
@@ -122,15 +194,15 @@ function addGeocomplete() {
       }
     });
 
-  $("#btn-submit").click(function(){
+  $("#btn-submit").click(function () {
     $("#geocomplete").trigger("geocode");
   });
 
-  $("#btn-reset").click(function(){
+  $("#btn-reset").click(function () {
     $('#geocomplete').val('');
     gmap.setCenter(new google.maps.LatLng(37.6, -95.665));
     gmap.setZoom(4);
-    info_window.close();
+    infoWindow.close();
     if (html5_storage_supported()) {
       localStorage.removeItem('geocomplete');
     }

@@ -4,30 +4,26 @@ Feature: Authored Hints
 Scenario: View Authored Hints
   Given I am on "http://learn.code.org/s/allthethings/stage/6/puzzle/2?noautoplay=true"
   And I rotate to landscape
-  And I close the dialog
+
+  # The initial instructions dialog has no hint prompt button
+  Then element "#hint-button" does not exist
+
+  When I close the dialog
   And I wait to see "#prompt-table"
 
   # This level has a total of three authored hints
   Then the hint lightbulb shows 3 hints available
 
-  When I press "prompt-table"
-  And I wait to see ".qtip"
-
-  Then element ".qtip a.show-instructions" has text "Instructions and old hints"
-  And element ".qtip a.show-hint" has text "Get a new hint"
-
-  When I press the first ".qtip a.show-instructions" element
-  And I wait to see a dialog titled "Puzzle 2 of 2"
-  And I wait for 2 seconds
+  When I view the instructions and old hints
 
   # No hints in the instructions dialog yet
   Then element ".authored-hints ol" does not exist
   And element ".qtip" is not visible
 
   # View the first hint
-  When I close the dialog
-  And I wait to see "#prompt-table"
-  And I view the next authored hint
+  When I press "hint-button"
+  And I wait to see ".qtip"
+  And I wait for 1 seconds
 
   Then element ".qtip" contains text "This is the first hint."
   And element ".qtip" contains text "It has some basic markup"
@@ -68,3 +64,4 @@ Scenario: View Authored Hints
   And element ".authored-hints" contains text "This is the first hint"
   And element ".authored-hints" contains text "This is the second hint"
   And element ".authored-hints" contains text "This is the third and final hint"
+  And element "#hint-button" does not exist

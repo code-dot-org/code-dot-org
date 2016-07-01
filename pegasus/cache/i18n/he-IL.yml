@@ -1,7 +1,14 @@
 "he-IL":
   hour_of_code: "שעת תיכנות"
   hello: "הי עולם"
+  'yes': "כן"
+  'no': "לא"
   select_language: "אנא בחר את שפתך"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "למד עוד"
   en: "מדעי המחשב"
   computer_science_edweek: "שבוע החינוך למדעי המחשב"
   csedweek_dates: 8-14 בדצמבר, 2014
@@ -26,7 +33,8 @@
   twentyhours_text: "גמרת את שעת הקוד הראשונה שלך? למד עוד מבסיס מדעי המחשב ומושגים
     בתכנות בקורס הבא הזה."
   og_title: "לכל ילד מגיע הזדמנות"
-  og_description: "לכל תלמיד בכל מוסד לימודי מגיע הזדמנות ללמוד מדעי המחשב."
+  og_description: "כל תלמיד בכל בית ספר deserves the opportunity ללמוד computer science.
+    It's changing everything."
   hoc2014_heading: הצטרפו ל <a href="http://hourofcode.com">שעה של קוד </a><br/>דצמבר
     8-14, 2014<br/>
   hoc2014_students: "סטודנטים"
@@ -36,13 +44,13 @@
   hoc2014_everyone: "כולם"
   hoc2014_support: "תמוך בו &#x25BE;"
   hoc2014_whatishoc: "מהו Hour of Code?"
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: "# CSEdWeek / אירועי שעה של קוד ברחבי העולם"
   csedweek_map_signup: "העלה את התכנות שלך"
-  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_placeholder: "חפש אירועי שעה של קוד"
   csedweek_map_search_search: "חפש"
   csedweek_map_search_reset: "אפס"
   csedweek_map_legend_title: "מקרא"
-  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_event: "אירוע שעה של קוד"
   csedweek_map_legend_cs_tech_jam: "אירוע מיוחד"
   cded_sign_up: "הירשם"
   cded_try_it: "נסו זאת"
@@ -69,30 +77,28 @@
   thank_you_: "תודה!"
   congratulations: "ברכות!"
   congratulations_on_completing_hoc: "ברכות על השלמת שעה אחת של קוד"
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
-  congrats_next_tutorials_title: Try these courses next
+  congratulations_volunteer: 'ברכות: עכשיו לאחר שניסית את שעה של קוד, <a href="https://code.org/volunteer">
+    הרשם בכדי להתנדב בכיתה </a>, ותעזור לסטודנטים ללמוד שעה של קוד!'
+  congratulations_on_completing_course1: "ברכות על סיום קורס 1"
+  congratulations_on_completing_course2: "ברכות על סיום קורס 2"
+  congratulations_on_completing_course3: "ברכות על סיום קורס 3"
+  congratulations_on_completing_course4: "ברכות על סיום קורס 4"
+  congratulations_on_completing_accelerated: "ברכות על סיום הקורס המואץ"
+  congrats_next_tutorials_title: "הוסמכת לשלב הבא"
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: "קבל תעודה על ההישג"
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  view_course: "צפה בקורס"
+  view_unit: "הצג יחידה"
+  make_app: "צור אפליקציה"
+  congrats_guest_speaker_title: "מצא מרצה אורח לכיתה שלך"
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
     of volunteers to contact local volunteers to visit your classroom, or search in
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_guest_speaker_cta: "מצא מרצה אורח"
   congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
@@ -101,13 +107,13 @@
   third_party_gradelevel_5to12: Grades 5-12
   third_party_gradelevel_6plus: Grades 6+
   third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
+  third_party_platform_all: "פלטפורמה: דפדפן, אייפד ואנדרואיד"
+  third_party_platform_mobile: "פלטפורמה: אייפד ואנדרואיד"
+  third_party_platform_web: "פלטפורמה: דפדפן"
   third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_free: "מחיר: חינם"
+  third_party_price_299: "מחיר: $2.99/הורדה"
+  third_party_price_individual: "מחיר יחיד: ניסיון חינם ו - $25/לחודש"
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
@@ -162,11 +168,11 @@
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
     native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_curriculum: "הורד את תוכנית הלימודים של Codecademy"
+  third_party_codecademy_btn_site: "בקר את Codecademy"
+  third_party_organization: "ארגון"
   third_party_curriculum: "תוכנית לימוד"
-  third_party_pricing: Pricing
+  third_party_pricing: "מחירים"
   third_party_cost_free: Free
   third_party_cost_5permonth: "$5/month per class"
   third_party_cost_299: "$2.99/download"
@@ -344,6 +350,9 @@
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
   homepage_banner_20k_teachers_link: "למד עוד"
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: "שעה של קוד"
   homepage_slot_text_blurb_hoc: "כל אחד יכול ללמוד. התחל היום"
   homepage_slot_text_link_hoc: נסה את "שעת הקוד" (Hour of Code)
@@ -369,6 +378,7 @@
   homepage_slot_text_link_stats: "ראה סטטיסטיקה"
   homepage_slot_text_link_buy: "השתתף"
   homepage_slot_text_link_donate: "תרום"
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: "יצירותיהם של תלמידי קוד סטודיו"
   homepage_header_donors: code.org מודה לתומכיו
   homepage_donors_seall: "ראה הכל"
@@ -466,7 +476,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: "עדכן את המידע שלך"
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: "שם"
@@ -554,6 +564,7 @@
   dashboard_landing_new_beta: "חדש! נסה את קורסי הבטה שלנו לגילאי גן חובה-כיתה ה'."
   dashboard_landing_new_k5courses: "חדש! נסה את הקורסים שלנו לגילאי גן חובה-כיתה ה'."
   dashboard_landing_useful_links: "קישורים שימושיים נוספים (באנגלית בלבד)"
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: "שאל שאלות באופן אישי! בקר בשעות הקבלה בוידאו החודשיות
     שלנו."
   dashboard_landing_print_certificates: "הדפס תעודות לתלמידים שגמרו את הקורס הזה"
@@ -571,6 +582,11 @@
   dashboard_landing_more_tutorials_desc: הדרכות נוספות מוצעות על ידי <a href="/learn/beyond">שותפים
     שלנו.</a>. למד תכנות עם רובוטים, צור דפי אינטרנט, צור אפליקציות משלך או חקור שפות
     שנות כגון C++, Ruby או Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: "שעה של קוד לכל הגילאים"
   dashboard_hoc_courses_desc: "נסה את אחת מההדרכות הקצרות הללו (באורך שעה) עם התלמידים
     שלך!"
@@ -620,6 +636,18 @@
   dashboard_action_remove_confirm: "להסיר?"
   dashboard_action_done: "מוכן"
   dashboard_action_required: "דרוש"
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: "דף הבית של המורה"
   dashboard_navigation_section_student_progress: "חשבונות תלמידים וההתקדמות שלהם"
   dashboard_navigation_section_teacher_progress: "התקדמות הקורס שלך"
@@ -628,7 +656,7 @@
   dashboard_navigation_section_pd: "פיתוח מקצועי"
   dashboard_navigation_section_speakers: "מדעי המחשב <br/> מציגים אורחים"
   dashboard_navigation_all_sections: "חשבונות תלמידים וההתקדמות שלהם"
-  dashboard_navigation_view_progress: "צפה בהתקדמות"
+  dashboard_navigation_view_progress: "התקדמות"
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "הוסף תלמידים"
@@ -637,6 +665,19 @@
   dashboard_navigation_view_stats: "ראה סטטיסטיקה"
   dashboard_navigation_section: "חלק: %{section_name}"
   dashboard_navigation_student: "תלמיד: %{student_name}"
+  dashboard_progress_not_started: "לא החל"
+  dashboard_progress_in_progress: "בביצוע"
+  dashboard_progress_not_completed: "לא הושלם"
+  dashboard_progress_completed_too_many_blocks: "הושלם, בלוקים רבים מדי"
+  dashboard_progress_completed_perfect: "הושלם, מושלם"
+  dashboard_progress_furthest_level_attempted: "רמת הרחוקה ניסיון"
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: "חלק חדש"
   dashboard_sections_jumbotron_instruction: "צור חלקים חדשים והוסף תלמידים אליהם.
     חלקים עוזרים לך לארגן תלמידים לקבוצות קטנות כדי שתוכל לעקוב אחרי התהליך למידה
@@ -645,6 +686,7 @@
   dashboard_sections_table_secret: "סוג התחברות"
   dashboard_sections_table_grade: "כיתה"
   dashboard_sections_table_course: "קורס"
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "סטודנטים"
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: "שם החלק"
@@ -659,6 +701,26 @@
   dashboard_sections_print_secrets: "ואז ניתן להדפיס גיליון של כרטיסים המכיל את פרטי
     החשבון שיחולקו לסטודנטים שלך בנפרד."
   dashboard_sections_switch_section: "בורר מקטע:"
+  dashboard_sections_close: "סגור"
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: "הוסף תלמיד"
   dashboard_students_add_students: "להוסיף מספר סטודנטים"
   dashboard_students_add_multiple: "הקלד או הדבק את שמות התלמידים שלך, אחד בכל שורה:"
@@ -710,6 +772,8 @@
   dashboard_course2: "חוג 2:"
   dashboard_course3: "חוג 3:"
   dashboard_course4: "קורס 4 (בטא): "
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: "תוכנית לימוד"
   dashboard_curriculum_overview: "סקירה על תוכנית הלימודים מגן חובה עד כיתה ה'"
   dashboard_overview: "סקירה"
@@ -733,13 +797,6 @@
   dashboard_login_picture: "תמונה"
   dashboard_login_none: "דואר אלקטרוני"
   dashboard_new_password: "סיסמה חדשה"
-  dashboard_progress_not_started: "לא החל"
-  dashboard_progress_in_progress: "בביצוע"
-  dashboard_progress_not_completed: "לא הושלם"
-  dashboard_progress_completed_too_many_blocks: "הושלם, בלוקים רבים מדי"
-  dashboard_progress_completed_perfect: "הושלם, מושלם"
-  dashboard_progress_furthest_level_attempted: "רמת הרחוקה ניסיון"
-  dashboard_progress_submitted: submitted
   dashboard_stage: "שלב"
   dashboard_puzzle: "חידה"
   dashboard_question: Question
@@ -749,6 +806,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: "נכון"
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -774,17 +833,17 @@
   dashboard_faq_k5: "שאלות נפוצות למורי יסודי"
   dashboard_announcements: "הודעות"
   dashboard_announce_view_all: "הצג הכל"
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: "למד עוד"
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: "שעה של הקוד הוא כאן - דצמבר 8-14!"
   code_sign_up: "הירשם להשתתף במהלך שבוע חינוך מדעי המחשב"
   learn_more: "למד עוד"
@@ -906,13 +965,39 @@
   course3_name: "קורס 3"
   course4_name: "קורס 4"
   accelerated_name: "קורס מואץ"
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: "קורס מואץ"
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: "מבוך קלאסי"
+  iceage_name: "עידן הקרח"
+  minecraft_name: "מיינקראפט"
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: "מתמטיקה"
+  hoc_category_name: "שעה של קוד"
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: "מעבדת היישומים"
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you

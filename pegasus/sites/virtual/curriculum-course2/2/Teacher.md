@@ -9,7 +9,7 @@ theme: none
 [content]
 
 ## Lesson Overview
-In this lesson, students will relate the concept of algorithms back to everyday real-life activities by making paper airplanes. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa. 
+In this lesson, students will relate the concept of algorithms back to everyday real-life activities by making paper airplanes. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.
 
 [summary]
 
@@ -18,25 +18,25 @@ In this lesson, students will relate the concept of algorithms back to everyday 
 
 1) [Review](#Review) <br/>
 2) [Vocabulary](#Vocab)<br/>
-3) [What We Do Daily](#GetStarted)  
+3) [What We Do Daily](#GetStarted)
 
-### **Activity: Real-Life Algorithms** - 20  minutes  
+### **Activity: Real-Life Algorithms** - 20  minutes
 
-4) [Real-Life Algorithms](#Activity1): Paper Airplanes  
+4) [Real-Life Algorithms](#Activity1): Paper Airplanes
 
 
-### **Wrap-up** - 5  minutes 
+### **Wrap-up** - 5  minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?<br/>
 
-### **Assessment** - 10  minutes 
+### **Assessment** - 10  minutes
 6) [Daily Algorithms](#Assessment)
 
 [/summary]
 
 [together]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Name various activities that make up their day
 - Decompose large activities into a series of smaller events
@@ -99,7 +99,7 @@ This lesson has one vocabulary word that is important to review:<br/>
 [/centerIt]
 
 **Algorithm** - Say it with me: Al-go-ri-thm <br/>
-A list of steps that you can follow to finish a task 
+A list of steps that you can follow to finish a task
 
 ### <a name="GetStarted"></a> 3) What We Do Daily
 - Ask your students what they did to get ready for school this morning.
@@ -127,7 +127,7 @@ You know your classroom best.  As the teacher, decide if students should do this
 [/tip]
 
 - You can use algorithms to help describe things that people do every day.  In this activity, we will create an algorithm to help each other fold a paper airplane.
- 
+
 
 > **Directions:**
 
@@ -135,7 +135,7 @@ You know your classroom best.  As the teacher, decide if students should do this
 > 2. Work together to choose the six correct steps from the nine total options.
 > 3. Glue the six correct steps, in order, onto a separate piece of paper.
 > 4. Trade the finished algorithm with another person or group and let them use it to make their plane!
-> 5. If you are concerned about injury when your students begin flying their paper airplanes, we recommend having them blunt the tip of the plane by either folding it inward or ripping it off and covering the ripped edges with tape. 
+> 5. If you are concerned about injury when your students begin flying their paper airplanes, we recommend having them blunt the tip of the plane by either folding it inward or ripping it off and covering the ripped edges with tape.
 
 
 [/together]
@@ -170,7 +170,7 @@ If deciding on the correct steps seems too difficult for your students, do that 
 
 ## Assessment (15 min)
 ### <a name="Assessment"></a>6) Assessment Worksheet: [Daily Algorithms](Assessment2-EverydayAlgorithms.pdf)
-- Hand out the worksheet titled "Daily Algorithms" and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the worksheet titled "Daily Algorithms" and allow students to complete the activity independently after the instructions have been well explained.
 - This should feel familiar, thanks to the previous activities.
 
 [/together]
@@ -178,7 +178,7 @@ If deciding on the correct steps seems too difficult for your students, do that 
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### Go Figure
@@ -196,9 +196,9 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
-- 1.a - Apply existing knowledge to generate new ideas, products, or processes 
-- 1.c - Use models and simulation to explore complex systems and issues.    
+### ISTE Standards (formerly NETS)
+- 1.a - Apply existing knowledge to generate new ideas, products, or processes
+- 1.c - Use models and simulation to explore complex systems and issues.
 - 2.b - Communicate information and ideas effectively to multiple audiences using a variety of media and formats.
 - 2.d - Contribute to project teams to produce original works or solve problems.
 - 4.b - Plan and manage activities to develop a solution or complete a project.
@@ -206,12 +206,12 @@ Use these activities to enhance student learning. They can be used as outside of
 
 
 ### CSTA K-12 Computer Science Standards
- 
+
 - CT.L1:3-03. Understand how to arrange information into useful order without using a computer.
 - CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
 - CT.L1:6-02. Develop a simple understanding of an algorithm using computer-free exercise.
 - CT.L1:6-05. Make a list of sub-problems to consider while addressing a larger problem.
-- CPP.L1:3-04. Construct a set of statements to be acted out to accomplish a simple task. 
+- CPP.L1:3-04. Construct a set of statements to be acted out to accomplish a simple task.
 - CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out (e.g., make a peanut butter and jelly sandwich activity).
 - CT.L2-03. Define an algorithm as a sequence of instructions that can be processed by a computer.
 - CT.L2-06. Describe and analyze a sequence of instructions being followed.
@@ -219,17 +219,17 @@ Use these activities to enhance student learning. They can be used as outside of
 
 
 ### NGSS Science and Engineering Practices
- - K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem. 
-- 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+ - K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
+- 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 3. Construct viable arguments and critique the reasoning of others
 - 6. Attend to precision.
 - 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.  
+- 8. Look for and express regularity in repeated reasoning.
 
 ### Common Core Math Standards
 - 1.G.1 - Distinguish between defining attributes versus non-defining attributes; build and draw shapes to possess defining attributes.
@@ -252,9 +252,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

@@ -35,7 +35,11 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.\",\r\n  \"hint_id\": \"2-3_Artist_Functions_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

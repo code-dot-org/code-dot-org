@@ -1,5 +1,5 @@
-/* global React */
-var AbuseError = require('./abuse_error.jsx');
+import React from 'react';
+var AbuseError = require('./abuse_error');
 
 /**
  * A big blue box with an exclamation mark on the left and our abuse text on

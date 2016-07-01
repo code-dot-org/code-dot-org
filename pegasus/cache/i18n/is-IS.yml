@@ -1,7 +1,14 @@
 "is-IS":
   hour_of_code: Klukkustund kóðunar
   hello: Halló heimur
+  'yes': Já
+  'no': Nei
   select_language: Vinsamlegast veldu tungumál þitt
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Læra meira
   en: Tölvunarfræði
   computer_science_edweek: Vika tölvunarfræði
   csedweek_dates: 8.-14. desember 2014
@@ -30,8 +37,8 @@
   twentyhours_text: Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með
     því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði.
   og_title: Hvert barn á skilið tækifæri
-  og_description: Sérhver nemandi í sérhverjum skóla ætti að fá tækifæri til að læra
-    tölvunarfræði.
+  og_description: Sérhver nemandi í sérhverjum skóla á skilið að fá tækifæri til að
+    læra tölvunarfræði. Hún er að breyta öllu.
   hoc2014_heading: Vertu með í <a href="http://hourofcode.com">Klukkustund kóðunar</a><br/>8.
     - 14. desember 2014<br/>
   hoc2014_students: Nemendur
@@ -91,37 +98,37 @@
   view_course: Skoða námskeið
   view_unit: Skoða einingu
   make_app: Búa til app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  congrats_guest_speaker_title: Finna gestafyrirlesara til að koma í skólann
+  congrats_guest_speaker_desc: Nú þegar nemendur þínir hafa lokið námskeiði í tölvunarfræði,
+    ættir þú að íhuga að halda upp á það og mynda tengsl við það sem er að gerast
+    út í heiminum með því að fá fyrirlesara í heimsókn. Þú getur notað kort okkar
+    yfir sjálfboðaliða til að finna fyrirlesara í nágrenninu eða leitað í hvaða borg
+    sem er  að tölvunarfræðinemum eða starfandi sérfræðingum sem eru reiðubúnir að
+    hvetja nemendur þína til dáða gegnum netspjall.
+  congrats_guest_speaker_cta: Finna gestafyrirlesara
+  congrats_third_party_title: Notaðu hina nýju færni þína með þessum öppum og vefsetrum
+  third_party_gradelevel_kto8: 5-14 ára
+  third_party_gradelevel_kto2: 5-8 ára
+  third_party_gradelevel_2to8: 8-14 ára
+  third_party_gradelevel_4to12: 10-18 ára
+  third_party_gradelevel_5to12: 11-18 ára
+  third_party_gradelevel_6plus: 12 ára og eldri
+  third_party_gradelevel_8plus: 14 ára og eldri
+  third_party_platform_all: Fyrir vef, iPad og Android
+  third_party_platform_mobile: Fyrir iPad og Android
+  third_party_platform_web: Fyrir vef
+  third_party_price_varies: 'Verð: Ýmsir valkostir'
+  third_party_price_free: 'Verð: Frítt'
+  third_party_price_299: 'Verð: $2,99/niðurhal'
+  third_party_price_individual: 'Einstaklingsgjald: Frí prófun, síðan $25/mán.'
+  third_party_price_school: 'Verð til skóla: Frí áætlanagerð & Pro á $2.500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
     and game-based programming activities provide an easy introduction to programming,
     and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_curriculum: Prófaðu námsefni Tynker fyrir byrjendur í lestri
+  third_party_tynker_btn_site: Heimsækja Tynker
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
@@ -365,6 +372,9 @@
   homepage_banner_20k_teachers: 20.000 kennarar hafa fengið þjálfun og eru nú að kenna
     tölvunarfræði í skólum.
   homepage_banner_20k_teachers_link: Læra meira
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Klukkustund kóðunar
   homepage_slot_text_blurb_hoc: Allir geta lært. Byrjaðu í dag
   homepage_slot_text_link_hoc: Prófa Klukkustund kóðunar
@@ -390,6 +400,7 @@
   homepage_slot_text_link_stats: Sjá tölfræðina
   homepage_slot_text_link_buy: Taktu þátt
   homepage_slot_text_link_donate: Styrkja með peningagjöf
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Sköpunarverk nemenda í Kóðastúdíói
   homepage_header_donors: Code.org þakkar stuðningsaðilum
   homepage_donors_seall: Sjá allt
@@ -579,6 +590,7 @@
   dashboard_landing_new_beta: Nýtt! Prófaðu beta námskeiðin okkar fyrir 5 - 10 ára.
   dashboard_landing_new_k5courses: Nýtt! Prófaðu námskeiðin fyrir 5 - 10 ára bekki.
   dashboard_landing_useful_links: Aðrar gagnlegar krækjur (aðeins á ensku)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Spurðu í eigin persónu! Komdu í mánaðarlega myndspjallstíma
     okkar.
   dashboard_landing_print_certificates: Prenta skírteini fyrir nemendur sem ljúka
@@ -600,6 +612,11 @@
   dashboard_landing_more_tutorials_desc: Það er hægt að nálgast áframhaldandi <a href="/learn/beyond">kennsluefni
     hjá samstarfsaðilum okkar.</a> Lærðu að forrita með vélmennum, búa til vefsíður,
     búa til eigið app, eða kynntu þér önnur forritunarmál eins og C++, Ruby eða Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Klukkstund kóðunar fyrir alla aldurshópa
   dashboard_hoc_courses_desc: Prófaðu eitthvað af þessum styttri stöku kennslustundum
     með nemendum þínum!
@@ -650,6 +667,18 @@
   dashboard_action_remove_confirm: Fjarlægja?
   dashboard_action_done: Búið
   dashboard_action_required: nauðsynlegt
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Heimasíða kennara
   dashboard_navigation_section_student_progress: Reikningar og árangur nemenda
   dashboard_navigation_section_teacher_progress: Námskeiðsframvinda þín
@@ -660,7 +689,7 @@
     Gestafyrirlesarar<br/>
     í Tölvunarfræði
   dashboard_navigation_all_sections: Reikningar og árangur nemenda
-  dashboard_navigation_view_progress: Skoða framvindu
+  dashboard_navigation_view_progress: Framvinda
   dashboard_navigation_view_text_responses: Skoða textasvör
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Bæta við nemendum
@@ -669,6 +698,19 @@
   dashboard_navigation_view_stats: Skoða tölfræði
   dashboard_navigation_section: 'Hópur: %{section_name}'
   dashboard_navigation_student: 'Nemandi: %{student_name}'
+  dashboard_progress_not_started: ekki byrjað
+  dashboard_progress_in_progress: "í vinnslu"
+  dashboard_progress_not_completed: "ólokið"
+  dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
+  dashboard_progress_completed_perfect: lokið, fullkomið
+  dashboard_progress_furthest_level_attempted: hæsti unninn áfangi
+  dashboard_progress_submitted: sent inn
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nýr hópur
   dashboard_sections_jumbotron_instruction: Búa til nýja hópa og bæta nemendum í þá.
     Með því að skipta nemendum í hópa er auðveldara að fylgjast með framgangi námsins
@@ -677,6 +719,7 @@
   dashboard_sections_table_secret: Gerð innskráningar
   dashboard_sections_table_grade: Bekkur
   dashboard_sections_table_course: Námskeið
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Nemendur
   dashboard_sections_table_code: Hópkóði
   dashboard_sections_name: Hópsheiti
@@ -691,6 +734,26 @@
   dashboard_sections_print_secrets: "Þú getur síðan prentað spjöld með aðgangsupplýsingum
     til að úthluta til einstakra nemenda."
   dashboard_sections_switch_section: 'Skipta um hóp:'
+  dashboard_sections_close: Loka
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Bæta við nemanda
   dashboard_students_add_students: Bæta við mörgum nemendum
   dashboard_students_add_multiple: 'Ritaðu eða límdu nöfn nemenda þinna, eitt í hverja
@@ -754,6 +817,8 @@
   dashboard_course2: 'Námskeið 2:'
   dashboard_course3: 'Námskeið 3:'
   dashboard_course4: 'Námskeið 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Námskrá
   dashboard_curriculum_overview: Yfirlit 5 - 10 ára (K-5) námsefnis
   dashboard_overview: Yfirlit
@@ -777,13 +842,6 @@
   dashboard_login_picture: Mynd
   dashboard_login_none: Netfang
   dashboard_new_password: nýtt leyniorð
-  dashboard_progress_not_started: ekki byrjað
-  dashboard_progress_in_progress: "í vinnslu"
-  dashboard_progress_not_completed: "ólokið"
-  dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
-  dashboard_progress_completed_perfect: lokið, fullkomið
-  dashboard_progress_furthest_level_attempted: hæsti unninn áfangi
-  dashboard_progress_submitted: sent inn
   dashboard_stage: "Áfangi"
   dashboard_puzzle: "Þraut"
   dashboard_question: Spurning
@@ -793,6 +851,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Rétt
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -819,20 +879,17 @@
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
   dashboard_announcements: Tilkynningar
   dashboard_announce_view_all: Skoða allt
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Læra meira
-  dashboard_announce_hoc: "<b>23. nóvember 2015</b> - Viltu fá sjálfboðaliða sem hefur
-    brennandi áhuga á menntun á sviði tölvunarfræði til að hjálpa til við þína Klukkustund
-    kóðunar? Meira en 7.000 sjálfboðaliðar eru tilbúnir að veita nemendum hvatningu
-    með því að heimsækja bekkinn þinn eða spjalla á netinu. Skoðaðu liðveislukortið
-    til að ná sambandi við sjálfboðaliða á þínu svæði."
-  dashboard_announce_playlab: "<b>4. desember 2015</b> - Klukkustund kóðunar er hér!
-    Prófaðu 50 kennslustundir fyrir alla aldurshópa og öll tæki. Nýtt þessa viku:
-    Kóðaðu þínar eigin sögur og leiki í nýjum Leikjasmiðjum, Ísöld og Gumball."
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: Klukkustund kóðunar er komin - 8. - 14. desember!
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
   learn_more: Prófaðu núna
@@ -956,13 +1013,39 @@
   course3_name: Námskeið 3
   course4_name: Námskeið 4
   accelerated_name: Hraðnámskeið
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Hraðnámskeið
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Hefðbundið völundarhús
+  iceage_name: Ice Age
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Reikningur
+  hoc_category_name: Klukkustund kóðunar
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Appsmiðja
   applab_gradelevel: Aldur 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you

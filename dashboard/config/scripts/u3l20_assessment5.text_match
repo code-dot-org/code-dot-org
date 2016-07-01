@@ -1,6 +1,0 @@
-name 'U3L20 Assessment5'
-title 'Conditional Basics Question 5'
-
-markdown <<MARKDOWN
-How do you decide when to use an “if” statement or “if-else” statement?
-MARKDOWN

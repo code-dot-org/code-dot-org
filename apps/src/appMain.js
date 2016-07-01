@@ -1,5 +1,5 @@
 var utils = require('./utils');
-var _ = utils.getLodash();
+var _ = require('lodash');
 var requiredBlockUtils = require('./required_block_utils');
 var studioApp = require('./StudioApp').singleton;
 var authoredHintUtils = require('./authoredHintUtils');
@@ -22,7 +22,7 @@ window.__TestInterface = {
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');
 
-module.exports = function(app, levels, options) {
+module.exports = function (app, levels, options) {
 
   // If a levelId is not provided, then options.level is specified in full.
   // Otherwise, options.level overrides resolved level on a per-property basis.
@@ -51,6 +51,7 @@ module.exports = function(app, levels, options) {
   }
 
   studioApp.configure(options);
+  studioApp.configureRedux(app.getAppReducers ? app.getAppReducers() : null);
 
   options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 
@@ -69,7 +70,7 @@ module.exports = function(app, levels, options) {
     options.blocksModule.install(Blockly, blockInstallOptions);
   }
 
-  addReadyListener(function() {
+  addReadyListener(function () {
     if (options.readonly) {
       if (app.initReadonly) {
         app.initReadonly(options);

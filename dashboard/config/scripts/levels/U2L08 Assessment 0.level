@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:18.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "markdown_instructions": "## Router Table: Assessment\n\nIn this activity you filled in a routing table by visiting other routers you were directly connected to find out what paths they were using. Why do routers need to use this method of talking to their direct neighbors in order to fill in their routing tables?\n",
+    "encrypted_solution": "fF7dOq/mrEc9Wn5eFUgWJXnoFjdd00E/1S+VqS+xGaCaE5DrNloFmH3gKY2c\nctnXfVexEqf26B6fjxwbJTZiWuR0/J41OIEbzV2YenZRq4BMsBTCPLHwVfok\nzOoaIWlhivVOnx+11LxGqosio+WY7u9cinKaIXTYrsTfEsZOBHTuSGoO5pvY\nBIUGN1Y5vBbyy+EXVKeE/SiXe7JBqpKFn/spXHZKfwCj7gsuGV0bkFVonzpj\ndvgPXAF1uI2zqH5kpZsbL8HL6WaffHZILUWnOO26zlsZvW8M/bifoGGCbBBH\nD59aDIg6BSOTHMYov9sSvFrUz3GDpe1Plyq2pw+5V6kAcsM08VIJdzh5TZfR\nRz0ReJAPU0Hi9TohJ+PTZupmiiAgeEz3CPz5AzUhzcGaW+pORkqrYv6u5RRd\nK5MVMQPqudEKla8fLU2BJUTVq5wslOsS/5eOwFNyTsERsiEbTfAKNCiXum7E\nhjYETnTkHRtTbwBlIbvwkjeQ/dzfZ3g48rTlJv1GQMUa65I4rX29uRZb9ML/\nYBkChpucAJGyqRILe1T4H/bW8tSJWR2fO5VT3eTCXEhe/jOPxRA+0om4U/Xe\nkixOWMQNjB1rmkcweUAq8hlsRKZn144Zyj/4qSZMuDT8eJvjQuHt8IZHxJKp\nen3CRdhuyOFlnQJgh28+d2rUMraWUobob4FKMFo3m9Tk\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

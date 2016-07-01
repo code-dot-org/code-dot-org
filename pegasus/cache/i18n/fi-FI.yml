@@ -1,7 +1,14 @@
 "fi-FI":
   hour_of_code: Koodaustunti
   hello: Hei maailma
+  'yes': Kyllä
+  'no': Ei
   select_language: Valitse kieli
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Lue lisää
   en: Tietojenkäsittelytiede
   computer_science_edweek: Tietotekniikan koulutusviikko
   csedweek_dates: 8. -14. Joulukuuta 2014
@@ -360,6 +367,9 @@
   homepage_banner_20k_teachers: 20,000 opettajaa koulutettu, ja nyt opettamassa tietotekniikkaa
     luokkahuoneissa.
   homepage_banner_20k_teachers_link: Lue lisää
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Koodaustunti
   homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
   homepage_slot_text_link_hoc: Kokeile koodaustuntia
@@ -385,6 +395,7 @@
   homepage_slot_text_link_stats: Katso tilastot
   homepage_slot_text_link_buy: Tule mukaan
   homepage_slot_text_link_donate: Tee lahjoitus
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Koodistudion oppilas luomukset
   homepage_header_donors: Code.org kiittää tukijoitaan
   homepage_donors_seall: Näytä kaikki
@@ -573,6 +584,7 @@
   dashboard_landing_new_beta: Uutta! Kokeile beta-kurssejamme alakoululaisille.
   dashboard_landing_new_k5courses: Uutta! Kokeile kurssejamme alakoululaisille.
   dashboard_landing_useful_links: Muita hyödyllisiä linkkejä (vain englanniksi)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Kysy henkilökohtaisesti! Vieraile kuukausittaisella
     videovastaanotolla.
   dashboard_landing_print_certificates: Tulosta sertifikaatit kurssin loppuun suorittaneille
@@ -592,6 +604,11 @@
   dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
     by our partners.</a> Learn to program with robots, make web pages, make your own
     app, or explore other languages like C++, Ruby, or Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Koodaustunti kaikenikäisille
   dashboard_hoc_courses_desc: Kokeile jotakin näistä lyhyemmista yhden tunnin harjoitustunneista
     oppilaittesi kanssa!
@@ -642,6 +659,18 @@
   dashboard_action_remove_confirm: Poista?
   dashboard_action_done: Valmis
   dashboard_action_required: vaaditaan
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Opettajan päänäyttö
   dashboard_navigation_section_student_progress: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_section_teacher_progress: Sinun kurssisi edistyminen
@@ -650,7 +679,7 @@
   dashboard_navigation_section_pd: Ammatimainen kehitys
   dashboard_navigation_section_speakers: Tietojenkäsittelyopin <br/> puhujavieraat
   dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
-  dashboard_navigation_view_progress: Tarkastele etenemistä
+  dashboard_navigation_view_progress: Edistyminen
   dashboard_navigation_view_text_responses: Näytä tekstin vastaukset
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Lisää oppilaita
@@ -659,6 +688,19 @@
   dashboard_navigation_view_stats: Tarkastele tilastoja
   dashboard_navigation_section: 'Ryhmä: %{section_name}'
   dashboard_navigation_student: 'Oppilas: %{student_name}'
+  dashboard_progress_not_started: ei aloitettu
+  dashboard_progress_in_progress: käynnissä
+  dashboard_progress_not_completed: kesken
+  dashboard_progress_completed_too_many_blocks: valmis, liian monta lohkoa
+  dashboard_progress_completed_perfect: valmis, täydellinen
+  dashboard_progress_furthest_level_attempted: vaikein taso jota yritetty
+  dashboard_progress_submitted: lähetetty
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Uusi ryhmä
   dashboard_sections_jumbotron_instruction: Luo uusia ryhmiä ja lisää opiskelijoita
     niihin. Ryhmät auttavat sinua organisoimaan oppilaat pienempiin ryhmiin niin että
@@ -667,6 +709,7 @@
   dashboard_sections_table_secret: Kirjautumisen tyyppi
   dashboard_sections_table_grade: Taso
   dashboard_sections_table_course: Kurssi
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Oppilaat
   dashboard_sections_table_code: Ryhmän tunnus
   dashboard_sections_name: Ryhmän nimi
@@ -682,6 +725,26 @@
   dashboard_sections_print_secrets: Voit tulostaa tunnustiedot sisältävät kortit jaettavaksi
     kullekin oppilaalle.
   dashboard_sections_switch_section: 'Vaihda ryhmää:'
+  dashboard_sections_close: Sulje
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Lisää oppilaita
   dashboard_students_add_students: Lisää useita oppilaita
   dashboard_students_add_multiple: 'Lisää oppilaidesi nimet, yksi kullekin riville:'
@@ -736,6 +799,8 @@
   dashboard_course2: 'Kurssi 2:'
   dashboard_course3: 'Kurssi 3:'
   dashboard_course4: 'Kurssi 4 (beta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Opetussuunnitelma
   dashboard_curriculum_overview: Ala-asteen opetussuunnitelman yleiskatsaus
   dashboard_overview: Yleiskatsaus
@@ -759,13 +824,6 @@
   dashboard_login_picture: Kuva
   dashboard_login_none: Sähköposti
   dashboard_new_password: uusi salasana
-  dashboard_progress_not_started: ei aloitettu
-  dashboard_progress_in_progress: käynnissä
-  dashboard_progress_not_completed: kesken
-  dashboard_progress_completed_too_many_blocks: valmis, liian monta lohkoa
-  dashboard_progress_completed_perfect: valmis, täydellinen
-  dashboard_progress_furthest_level_attempted: vaikein taso jota yritetty
-  dashboard_progress_submitted: submitted
   dashboard_stage: Taso
   dashboard_puzzle: Tehtävä
   dashboard_question: Kysymys
@@ -775,6 +833,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Oikein
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -801,19 +861,17 @@
   dashboard_faq_k5: Esi- ja alakoulu, usein kysyttyjä kysymyksiä
   dashboard_announcements: Ilmoituksia
   dashboard_announce_view_all: Näytä kaikki
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Lue lisää
-  dashboard_announce_hoc: "<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus
-    on täällä, teemanaan elokuva Star Wars: The Force Awakens. Auta Rey:tä opastamaan
-    uutta droidia, BB-8:aa, joukossa tehtäviä. Sitten, yhdessä Leian kanssa, luo ja
-    jaa oma, kaukaiseen galaksiin sijoittuva, pelisi."
-  dashboard_announce_playlab: "<b>4. joulukuuta 2015</b> - Koodauskoodi on täällä!
-    50 harjoitusta kaikenikäisille ja kaikille eri laitteille. Uutta tällä viikolla:
-    Ohjelmoi omia tarinoita ja pelejä Pelilabrassa, tai Ice Age- ja Gumball-maailmoissa."
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: Koodaustunti on täällä - 8.-14. Joulukuuta!
   code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
   learn_more: Lisätietoja
@@ -936,15 +994,41 @@
   course3_name: Kurssi 3
   course4_name: Kurssi 4
   accelerated_name: Nopeutettu kurssi
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Nopeutettu kurssi
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Klassinen sokkelo
+  iceage_name: Jääkausi
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matematiikka
+  hoc_category_name: Koodaustunti
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: Sovelluksien laboratorio
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Ikäryhmille 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

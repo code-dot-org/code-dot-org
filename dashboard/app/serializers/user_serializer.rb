@@ -23,7 +23,6 @@
 #  name                       :string(255)
 #  locale                     :string(10)       default("en-US"), not null
 #  birthday                   :date
-#  parent_email               :string(255)
 #  user_type                  :string(16)
 #  school                     :string(255)
 #  full_address               :string(1024)
@@ -39,7 +38,6 @@
 #  confirmation_sent_at       :datetime
 #  unconfirmed_email          :string(255)
 #  prize_teacher_id           :integer
-#  hint_access                :boolean
 #  secret_picture_id          :integer
 #  active                     :boolean          default(TRUE), not null
 #  hashed_email               :string(255)
@@ -54,6 +52,7 @@
 #  invited_by_id              :integer
 #  invited_by_type            :string(255)
 #  invitations_count          :integer          default(0)
+#  terms_of_service_version   :integer
 #
 # Indexes
 #

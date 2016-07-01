@@ -30,7 +30,11 @@
     "disable_examples": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_until_while": 2
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -45,11 +49,11 @@
         <block type="maze_forever"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_forever"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

@@ -9,6 +9,7 @@
  * not static but can in fact be randomized between runs.
  */
 
+require('../utils'); // Provides Function.prototype.inherits
 var Cell = require('./cell');
 
 var tiles = require('./tiles');

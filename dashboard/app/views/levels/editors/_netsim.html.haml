@@ -132,7 +132,7 @@
     where to route them.
   = f.text_area :router_expects_packet_header, placeholder: 'Router packet header format', rows: 4
   :javascript
-      levelbuilder.initializeCodeMirror('router_expects_packet_header', 'javascript');
+      levelbuilder.initializeCodeMirror('level_router_expects_packet_header', 'javascript');
   %p
     Packet headers can be customized to different header column combinations,
     orderings, and sizes with a JSON spec.  This can safely be left empty
@@ -155,7 +155,7 @@
     manually compose their header.
   = f.text_area :client_initial_packet_header, placeholder: 'Client packet header format', rows: 4
   :javascript
-      levelbuilder.initializeCodeMirror('client_initial_packet_header', 'javascript');
+      levelbuilder.initializeCodeMirror('level_client_initial_packet_header', 'javascript');
 
 %h3 Network Visualization
 .field
@@ -195,7 +195,7 @@
     "router" and "dns".  Example: <tt>["my_device", "router"]</tt>
   = f.text_area :show_tabs, placeholder: 'Which tabs to show?', rows: 4
   :javascript
-      levelbuilder.initializeCodeMirror('show_tabs', 'javascript');
+      levelbuilder.initializeCodeMirror('level_show_tabs', 'javascript');
 .field
   = f.label :default_tab_index, 'Default tab index'
   %p
@@ -213,7 +213,7 @@
     Example: <tt>["a_and_b", "binary", "ascii"]</tt>
   = f.text_area :show_encoding_controls, placeholder: 'Which encodings can the student control?', rows: 4
   :javascript
-      levelbuilder.initializeCodeMirror('show_encoding_controls', 'javascript');
+      levelbuilder.initializeCodeMirror('level_show_encoding_controls', 'javascript');
 .field
   = f.label :default_enabled_encodings, 'Default enabled encodings'
   %p
@@ -224,7 +224,7 @@
     Example: <tt>["a_and_b", "binary", "ascii"]</tt>
   = f.text_area :default_enabled_encodings, placeholder: 'Which encodings are enabled by default?', rows: 4
   :javascript
-      levelbuilder.initializeCodeMirror('default_enabled_encodings', 'javascript');
+      levelbuilder.initializeCodeMirror('level_default_enabled_encodings', 'javascript');
 .field
   %table.checkboxes
     %tr

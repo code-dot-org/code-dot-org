@@ -1,0 +1,59 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-05-11T00:04:15.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": null,
+      "keyDown": null,
+      "var sprite = createSprite": null,
+      "x": null,
+      "y": null,
+      "background": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "ifBlock": null,
+      "comment": null,
+      "console.log": null
+    },
+    "show_d_pad": "true",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Moving Sprites\r\n\r\nYou saw on the last level that `keyDown` returns `true` while you are holding a key down and `false` when the key is not pressed down.\r\n\r\nWe can use `keyDown` as an input to an `if` statement to change our animations based on key presses!\r\n\r\nThe input for the `keyDown` command is the name of key you want to check in quotes. Some examples are \"x\", \"up\" and \"space\".\r\n\r\n# Do This\r\nYou have been provided with the start of a bug sprite. You need to pick the bug picture you want to use from the animation tab.\r\n\r\n* Set the animation of the sprite to your favorite bug.\r\n* Add an `if` statement inside your draw loop\r\n* Add a call to `keyDown` as the input to the `if` statement to check if the **up** arrow was pressed\r\n* Add code inside the conditional to move the sprite up if the up arrow is down.\r\n\r\n_Do you need to change sprite's x or y property to move it up?_\r\n\r\n# Till The Animation Tab Works\r\n\r\n* <a href=\"https://images.code.org/19a7db32d19c730a7c91a14723eda647-image-1466127102036.png\"> Spider </a>\r\n* <a href=\"https://images.code.org/bc152ec988e1682bd1e6864da6ec4d28-image-1466127057045.jpg\"> Ladybug </a>\r\n* <a href=\"https://images.code.org/cfc074a91fc2962bc452dda95bb82cf1-image-1466127065627.jpg\"> Beatle </a>\r\n* <a href=\"https://images.code.org/4ecea2e39414e115f6862493a79c2133-image-1466127062769.jpg\"> Dragonfly </a>",
+    "start_blocks": "var sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"something.png\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  // Add Code for: If the up arrow is pressed, move the sprite up on the screen\r\n\r\n  drawSprites();\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add an if statement and place your movement code inside it\",\r\n  \"element_id\": \".droplet-gutter-line:nth-child(5)\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "project_template_level_name": "CSD U3- arrows template",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

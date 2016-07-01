@@ -32,6 +32,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
   }
 }]]></config>
   <blocks>

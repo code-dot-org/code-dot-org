@@ -1,0 +1,18 @@
+name 'CSPFinal_Question_13'
+wrong '<pre>dieRoll = 2</pre>'
+wrong '<pre>rollCounter = 5</pre>'
+right '<pre>evenCounter * 2 = rollCounter</pre>'
+wrong '<pre>dieRoll = evenCounter + RollCounter</pre>'
+markdown <<MARKDOWN
+A casino is trying to determine the odds for a new game.  They have created the algorithm below to simulate rolling a six sided dice ten times.  Consider the goal of determining if the simulation resulted in the same number of even numbers and odd numbers.  
+
+ * Step 1: Initialize the variables `rollCounter` and `evenCounter` to 0.
+ * Step 2: A variable `dieRoll` is randomly assigned a value from 1 to 6.
+ * Step 3: If `dieRoll mod 2` is 0, increment `evenCounter` by 1.
+ * Step 4: Increment `rollCounter` by 1.
+ * Step 5: Repeat steps 2-4 until `rollCounter` = 10.
+ 
+Following the execution of this algorithm, which expression indicates the simulation resulted in the same number of even and odd results?
+		
+
+MARKDOWN

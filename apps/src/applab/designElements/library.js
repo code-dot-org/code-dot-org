@@ -1,5 +1,5 @@
+import $ from 'jquery';
 var utils = require('../../utils');
-var _ = utils.getLodash();
 var elementUtils = require('./elementUtils');
 
 /**
@@ -13,34 +13,34 @@ var nextElementIdMap = {};
  * @readonly
  * @enum {string}
  */
-var ElementType = {
-  BUTTON: 'BUTTON',
-  LABEL: 'LABEL',
-  TEXT_INPUT: 'TEXT_INPUT',
-  CHECKBOX: 'CHECKBOX',
-  DROPDOWN: 'DROPDOWN',
-  RADIO_BUTTON: 'RADIO_BUTTON',
-  TEXT_AREA: 'TEXT_AREA',
-  IMAGE: 'IMAGE',
-  CANVAS: 'CANVAS',
-  SCREEN: 'SCREEN',
-  CHART: 'CHART',
-  SLIDER: 'SLIDER'
-};
+var ElementType = utils.makeEnum(
+  'BUTTON',
+  'LABEL',
+  'TEXT_INPUT',
+  'CHECKBOX',
+  'DROPDOWN',
+  'RADIO_BUTTON',
+  'TEXT_AREA',
+  'IMAGE',
+  'CANVAS',
+  'SCREEN',
+  'CHART',
+  'SLIDER'
+);
 
 var elements = {};
-elements[ElementType.BUTTON] = require('./button.jsx');
-elements[ElementType.LABEL] = require('./label.jsx');
-elements[ElementType.TEXT_INPUT] = require('./textInput.jsx');
-elements[ElementType.CHECKBOX] = require('./checkbox.jsx');
-elements[ElementType.DROPDOWN] = require('./dropdown.jsx');
-elements[ElementType.RADIO_BUTTON] = require('./radioButton.jsx');
-elements[ElementType.TEXT_AREA] = require('./textarea.jsx');
-elements[ElementType.IMAGE] = require('./image.jsx');
-elements[ElementType.CANVAS] = require('./canvas.jsx');
-elements[ElementType.SCREEN] = require('./screen.jsx');
-elements[ElementType.CHART] = require('./chart.jsx');
-elements[ElementType.SLIDER] = require('./slider.jsx');
+elements[ElementType.BUTTON] = require('./button');
+elements[ElementType.LABEL] = require('./label');
+elements[ElementType.TEXT_INPUT] = require('./textInput');
+elements[ElementType.CHECKBOX] = require('./checkbox');
+elements[ElementType.DROPDOWN] = require('./dropdown');
+elements[ElementType.RADIO_BUTTON] = require('./radioButton');
+elements[ElementType.TEXT_AREA] = require('./textarea');
+elements[ElementType.IMAGE] = require('./image');
+elements[ElementType.CANVAS] = require('./canvas');
+elements[ElementType.SCREEN] = require('./screen');
+elements[ElementType.CHART] = require('./chart');
+elements[ElementType.SLIDER] = require('./slider');
 
 module.exports = {
   ElementType: ElementType,
@@ -107,7 +107,7 @@ module.exports = {
     return elements[elementType].PropertyTab;
   },
 
-  getElementEventTab: function(elementType) {
+  getElementEventTab: function (elementType) {
     return elements[elementType].EventTab;
   },
 

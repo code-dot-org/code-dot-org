@@ -196,6 +196,16 @@ td.studentname {
     background-color: $level_submitted;
   }
 
+  &.review_accepted {
+    border: none;
+    background-color: $level_review_accepted;
+  }
+
+  &.review_rejected {
+    border: none;
+    background-color: $level_review_rejected;
+  }
+
   &:hover,
   &:link,
   &:visited {
@@ -362,8 +372,8 @@ td.studentname {
       max-height: 90px;
       overflow: hidden;
       padding-left: 10px;
-      line-height: 22px;
-      width: 690px;
+      line-height: 20px;
+      width: 610px;
 
       b {
         font-family: 'Gotham 5r', sans-serif;
@@ -376,5 +386,86 @@ td.studentname {
     bottom: 10px;
     position: absolute;
     right: 10px;
+  }
+}
+
+
+.move-students-modal {
+  .modal-header {
+    padding: 15px 25px;
+  }
+
+  .section-title {
+    font-family: 'Gotham 5r', sans-serif;
+    margin-bottom: 7px;
+  }
+
+  .selection-text {
+    font-family: 'Gotham 4r', sans-serif;
+  }
+
+  .move-students-container {
+    text-align: left;
+    width: inherit;
+  }
+
+  .destination-section-area {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  .student-selection-area {
+    display: inline-block;
+    padding-right: 28px;
+    vertical-align: top;
+    width: 375px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .modal-dialog {
+    width: 1000px;
+  }
+
+  .modal-buttons {
+    padding: 30px 0 35px;
+    text-align: right;
+  }
+
+  input.selection-text {
+    width: 210px;
+  }
+
+  .section-title {
+    display: inline-block;
+  }
+
+  .move-students-error {
+    color: $red;
+    text-align: left;
+  }
+
+  form {
+    padding-left: 15px;
+  }
+
+  .selection {
+    margin-bottom: 15px;
+    width: 145px;
+  }
+
+  .option {
+    display: inline-block;
+    vertical-align: middle;
+    width: 330px;
+  }
+
+  .move-students-header {
+    margin-bottom: 15px;
+    text-align: left;
   }
 }

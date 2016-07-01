@@ -31,10 +31,16 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "callout_json": "[]"
+    "callout_json": "[]",
+    "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 3,
+    "functions_with_params": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -202,15 +208,9 @@
             <mutation name="get 3 nectar"/>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_set" inline="false">
-            <title name="VAR">left</title>
-          </block>
+        <category name="Variables ">
           <block type="variables_get">
             <title name="VAR">left</title>
-          </block>
-          <block type="variables_set" inline="false">
-            <title name="VAR">right</title>
           </block>
           <block type="variables_get">
             <title name="VAR">right</title>
@@ -225,8 +225,18 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="get 3 nectar">
+            <arg name="direction"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="variables_get">
+              <title name="VAR">???</title>
+            </block>
+          </value>
+        </block>
         <block type="controls_repeat">
-          <title name="TIMES">2</title>
+          <title name="TIMES">???</title>
         </block>
       </xml>
     </recommended_blocks>

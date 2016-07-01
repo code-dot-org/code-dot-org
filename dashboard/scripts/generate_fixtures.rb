@@ -43,7 +43,7 @@ def handle_level(level)
   @level_sources["level_source_#{level.id}"] = level_source.attributes if level_source
 end
 
-scripts_map.each do |script_id, name|
+scripts_map.each do |_script_id, name|
   puts name
   script = Script.find_by_name name
   @scripts[name] = script.attributes
@@ -63,13 +63,13 @@ scripts_map.each do |script_id, name|
   end
 end
 
-ProjectsController::STANDALONE_PROJECTS.each do |k, v|
+ProjectsController::STANDALONE_PROJECTS.each do |_k, v|
   handle_level(Level.find_by_name(v['name']))
 end
 
 def yamlize(hsh)
-  hsh.each do |k, v|
-    if v.has_key? "properties"
+  hsh.each do |_k, v|
+    if v.key? "properties"
       v['properties'] = v['properties'].to_json
     end
   end

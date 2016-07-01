@@ -1,7 +1,6 @@
 name 'CSP Unit 3 - Learning JavaScript Resources'
 title 'Learning JavaScript Resources'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <table cellpadding="10">
   <colgroup>

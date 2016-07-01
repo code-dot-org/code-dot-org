@@ -12,7 +12,7 @@
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "7",
+    "ideal": "5",
     "slider_speed": "0.4",
     "free_play": "false",
     "embed": "false",
@@ -32,10 +32,16 @@
     "examples_required": "false",
     "disable_examples": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The artist needs to turn 60 degrees farther left before starting to draw!\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_9_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n  {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You don't need to add another block to get the full turn, just add 60 degrees to the `turn left` block that's already there!\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_9_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The artist needs to turn 60 degrees farther left before starting to draw!\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_9_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n  {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You don't need to add another block to get the full turn, just add 60 degrees to the `turn left` block that's already there!\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_9_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

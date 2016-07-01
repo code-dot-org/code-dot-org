@@ -411,7 +411,7 @@ export default class AssetLoader {
   }
 
   loadAsset(key, config) {
-    switch(config.type) {
+    switch (config.type) {
       case 'image':
         this.game.load.image(key, config.path);
         break;

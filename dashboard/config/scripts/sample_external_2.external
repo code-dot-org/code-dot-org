@@ -1,0 +1,8 @@
+name 'sample external 2'
+title 'sample external 2'
+markdown <<MARKDOWN
+### Sample external 2
+
+This is a second sample of some instruction text that's stored in a .external file.  Here is some extra text so that we can hopefully get some line wrapping as we view this in our LevelGroup which will consume this to show some instructions amongst the regular embedded levels.
+
+MARKDOWN

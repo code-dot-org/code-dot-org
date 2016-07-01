@@ -53,13 +53,13 @@
     = f.label :code_functions, 'Edit Droplet Palette'
     = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
     :javascript
-      levelbuilder.initializeCodeMirror('code_functions', 'javascript');
+      levelbuilder.initializeCodeMirror('level_code_functions', 'javascript');
 - else
   .field
     = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
     = f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
     :javascript
-      levelbuilder.initializeCodeMirror('toolbox_blocks', 'xml');
+      levelbuilder.initializeCodeMirror('level_toolbox_blocks', 'xml');
 .field
   - if @level.game.uses_droplet?
     = f.label :start_blocks, 'Edit Starting JavaScript Program'
@@ -67,7 +67,7 @@
     = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
   = f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.game.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
   :javascript
-    levelbuilder.initializeCodeMirror('start_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+    levelbuilder.initializeCodeMirror('level_start_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 .field
   - if @level.game.uses_droplet?
     = f.label :required_blocks, 'Edit Required Blocks'
@@ -75,7 +75,7 @@
     = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
   = f.text_area :required_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('required')
   :javascript
-    levelbuilder.initializeCodeMirror('required_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+    levelbuilder.initializeCodeMirror('level_required_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 .field
   - if @level.game.uses_droplet?
     = f.label :recommended_blocks, 'Edit Recommended Blocks'
@@ -83,7 +83,13 @@
     = link_to 'Edit Recommended Blocks', level_edit_blocks_path(@level, :recommended_blocks) unless @level.new_record?
   = f.text_area :recommended_blocks, placeholder: 'Recommended Blocks', rows: 4, value: @level.pretty_block('recommended')
   :javascript
-    levelbuilder.initializeCodeMirror('recommended_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+    levelbuilder.initializeCodeMirror('level_recommended_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+- unless @level.game.uses_droplet?
+  .field
+    = link_to 'Edit Initialization Blocks', level_edit_blocks_path(@level, :initialization_blocks) unless @level.new_record?
+    = f.text_area :initialization_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('initialization')
+    :javascript
+      levelbuilder.initializeCodeMirror('level_initialization_blocks', 'xml');
 .field
   = f.label :ideal, 'Ideal block number'
   = f.number_field :ideal
@@ -117,8 +123,8 @@
   = f.label :project_template_level_name, 'Project Template Level Name'
   %p What this does:
   %ul
-    %li uses start_blocks from the project template level instead of this level
-    %li uses toolbox_blocks from the project template level instead of this level
+    %li if start_blocks are defined in the project template level, use those instead of the start blocks for this level
+    %li if toolbox_blocks are defined in the project template level, use those instead of the toolbox blocks for this level
     %li autocreate a project that is shared with all levels with the same project template level
   %p (Leave blank if you do not want all of this)
   = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
@@ -132,7 +138,7 @@
   %p i.e. The table for f(x) = x - 5 might look like: [ [15, 10], [10, 5], [25, 20] ]
   = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: @level.input_output_table
   :javascript
-      levelbuilder.initializeCodeMirror('input_output_table', 'javascript')
+      levelbuilder.initializeCodeMirror('level_input_output_table', 'javascript')
 -if @level.respond_to? :solution_blocks
   .field
     - if @level.game.uses_droplet?
@@ -141,11 +147,24 @@
       = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
     = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
     :javascript
-      levelbuilder.initializeCodeMirror('solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+      levelbuilder.initializeCodeMirror('level_solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 -if @level.game.uses_droplet?
+  .field
+    = f.label :palette_category_at_start
+    = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
   .field
     = f.label :droplet_tooltips_disabled, "Hide droplet documentation tooltips"
     = boolean_check_box f, :droplet_tooltips_disabled
   .field
     = f.label :lock_zero_param_functions, "Don't allow parameters to be added to user-defined functions with no parameters"
     = boolean_check_box f, :lock_zero_param_functions
+.field
+  = f.label :contained_level_names, 'Contained Level Names'
+  %p Each level name referenced here will be embedded in the Instructions Pane (click the plus sign to add a contained level)
+  - @level.contained_level_names = [''] unless @level.contained_level_names.try(:present?)
+  - @level.contained_level_names.each do |level_name|
+    = text_field_tag 'level[contained_level_names][]', level_name, placeholder: 'name of contained level'
+  #plusanswer
+    %i.fa.fa-plus-circle
+  :javascript
+    $("#plusanswer").on("click", function () { $("#plusanswer").prev().clone().insertBefore("#plusanswer") });

@@ -6,7 +6,6 @@ class PrizeTools
   TEACHER_PRIZE_PROVIDER = 8
   BONUS_PRIZE_PROVIDER = 9
 
-
   def self.add_250(user)
     TeacherBonusPrize.assign_to_user(user, BONUS_PRIZE_PROVIDER)
   end

@@ -1,0 +1,19 @@
+// Styles for the visualization overlay
+@import 'mixins';
+
+#visualizationOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+  outline: none;
+  -webkit-touch-callout: none;
+
+  @include user-selects(none);
+
+  pointer-events: none;
+  // This is a hack that enables pointer-events: none on this absolutely-
+  // positioned SVG element in IE9.
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=0);
+}

@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Move the code that searches the list for a 5 into a function called \"search\". (Click to see full instructions)",
-    "markdown_instructions": "# Generalize *search* by Making It Into a Function\r\n\r\nYou've just written code to search for a value in a list!  If we could generalize this behavior, it might be useful to us in the future - it's probably something that we want to do over and over again.  \r\n\r\nOver the next few levels, we'll build up a very useful, general function for searching for *any* value in *any* list.  But we'll do it one step at a time...\r\n\r\n# Do This:\r\n\r\n**Note:** We've provided **new starter code** that implements the pseudocode from the last exercise. It also **creates two more arrays** that we'll be using later for testing.  For this level just worry about `testArray`. \r\n\r\n* **Run the starter** code to verfiy that it works correctly.\r\n* **Create a new function**. Name the function `search`.\r\n* **Move the code that checks for a 5 inside the function.** **Note:** You must move the boolean variable inside the function as well, or it won't reset each time you call the function!\r\n* **Call the function** to make sure your code still works.  The actual behavior will be the same as when you ran it the first time.  The difference now is that you're calling a function to do it.\r\n\r\n(Steps are shown in code animation below.)\r\n\r\n![](https://images.code.org/dfad49ac35cd605410c52828716b712c-image-1447631609779.gif)",
+    "markdown_instructions": "# Generalize *search* by Making It Into a Function\r\n\r\nYou've just written code to search for a value in a list!  If we could generalize this behavior, it might be useful to us in the future - it's probably something that we want to do over and over again.  \r\n\r\nOver the next few levels, we'll build up a very useful, general function for searching for *any* value in *any* list.  But we'll do it one step at a time...\r\n\r\n# Do This:\r\n\r\n**Note:** We've provided **new starter code** that implements the pseudocode from the last exercise. It also **creates two more arrays** that we'll be using later for testing.  For this level just worry about `testArray`. \r\n\r\n* **Run the starter** code to verify that it works correctly.\r\n* **Create a new function**. Name the function `search`.\r\n* **Move the code that checks for a 5 inside the function.** **Note:** You must move the boolean variable inside the function as well, or it won't reset each time you call the function!\r\n* **Call the function** to make sure your code still works.  The actual behavior will be the same as when you ran it the first time.  The difference now is that you're calling a function to do it.\r\n\r\n(Steps are shown in code animation below.)\r\n\r\n![](https://images.code.org/dfad49ac35cd605410c52828716b712c-image-1447631609779.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -40,7 +40,12 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "project_template_level_name": "U3 - Loops And Arrays - Linear Search Function Template",
-    "encrypted_examples": "LMqCPCMfOqMxE3fQFKwsNOTScr9bFvYhTsCc6KzJNzomHWO1y/qynOFXS1/R\n53/l\n"
+    "encrypted_examples": "LMqCPCMfOqMxE3fQFKwsNOTScr9bFvYhTsCc6KzJNzomHWO1y/qynOFXS1/R\n53/l\n",
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

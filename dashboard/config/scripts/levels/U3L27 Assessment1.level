@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:36.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Digital Assistant Reflection 1",
+    "markdown_instructions": "Assess your digital assistant using the rubric.\n\nDiscuss how you incrementally developed your program. What did you create first? What came next? What problems did you encounter and solve? (100 words max)\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

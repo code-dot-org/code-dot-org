@@ -1,0 +1,14 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:02.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "markdown_instructions": "## Handshake Problem #1:\n\nAssume there are 20 people in a room, including you. You must shake hands with everyone else in the room. How many hands will you shake? If there are N (where N>0) people in the room, how many hands will you shake?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

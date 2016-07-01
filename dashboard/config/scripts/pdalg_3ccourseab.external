@@ -1,0 +1,31 @@
+name 'PDAlg 3CCourseAB'
+css 'k5pd'
+skip_dialog true
+
+markdown <<MARKDOWN
+
+<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
+
+# Planning For the Future > Updates to the Structure of CS in Algebra
+
+## Splitting the course in two
+
+We've recieved a ton of great feedback from teachers in this first year of CS in Algebra, and one comment we received frequently was for better direction for using only half the course, or for splitting the lessons across multiple grade levels. To better support teachers using those implementations we are splitting the course into 2 units, providing a clear stopping point in the middle.
+
+<img style="float: right; margin-left: 10px; width: 200px" src="https://code.org/educate/algebra/img/csina.png"/>
+
+### CS in Algebra Course A
+The first 10 hour course provides students with the foundational skills and knowledge to begin using computer programming as a tool to learn about and develop algebraic functions. Students will be introduced to a graphical programming language designed for Algebra instruction, through which they will gain a deeper understanding of the order of operations, create images with algebraic expressions, and learn a technique for creating functions called the Design Recipe. By the end of Course A students will have the tools necessary to turn word problems from their own Algebra class into functions that can be used as mini apps.
+
+### CS in Algebra Course B
+For classes that wish to go further, the second 10 hour course builds on the skills students developed in Course A through the development of a simple video game. Students will delve deeper into the intersection of Math and CS by studying topics such as boolean logic, piecewise functions, and collision detection with the Pythagorean Theorem, using these concepts to build supporting functions that will eventually drive the logic in their culminating game.
+
+## What if I don't want to split?
+
+None of the lessons from the original version of CS in Algebra have been removed, but in response to teacher feedback we have restructued the course to make it easier to integrate just the Evaluation Blocks and Design Recipe elements into your class. Course A and Course B together make up the same original 20 lessons, but if you would like to use the original materials they are still available [here](https://code.org/curriculum/algebra)
+
+<br><br>
+Click the “Continue” button below to review tips for using this online learning space.
+<br><br>
+<a class="btn btn-large btn-info" target="_blank" href="https://code.org/educate/algebra">Learn More</a><a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

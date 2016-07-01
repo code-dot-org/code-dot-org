@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 #
-# Script for deploying an new Amazon EC2 frontend instance.
+# Script for deploying a new production Amazon EC2 frontend instance.
 # For details usage instructions, please see:
 # http://wiki.code.org/display/PROD/How+to+add+a+new+Frontend+server
+# This script no longer supports creation of adhoc instances. To do that,
+# use "rake adhoc:start".
 
 require 'aws-sdk'
 require_relative '../deployment'
@@ -14,11 +16,13 @@ require 'json'
 require 'set'
 require 'thread'
 
+CHEF_VERSION='12.7.2'
+
 # A map from a supported environment to the corresponding Chef role to use for
 # that environment.
 ROLE_MAP = {
   'production' => 'front-end',
-  'adhoc' => 'unmonitored-standalone',
+  # No other environments are currently supported.
 }
 
 # Wait no longer than 10 minutes for instance creation. Typically this takes a
@@ -74,12 +78,10 @@ end
 # Return the AWS instance type to use for the given role.
 def aws_instance_type(environment)
   case environment
-  when 'adhoc'
-    'c3.xlarge'  # Default to a somewhat smaller instance type for adhco
   when 'production'
     'c3.8xlarge'
   else
-    raise "Unknown environment #{environment} - currently adhoc and production are supported"
+    raise "Unknown environment #{environment} - currently production is supported"
   end
 end
 
@@ -112,7 +114,7 @@ def create_instance_provisioning_infos
   instance_distribution = determine_frontend_instance_distribution
   instances_to_provision = @options['count']
 
-  instances_to_provision_for_zones = Hash.new()
+  instances_to_provision_for_zones = Hash.new
 
   instance_distribution.keys.each do |zone|
     instances_to_provision_for_zones[zone] = (instances_to_provision / instance_distribution.keys.count)
@@ -214,8 +216,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
                                                       monitoring: {
                                                           enabled: true
                                                       },
-                                                      # Prevent api termination, except for adhoc instances.
-                                                      disable_api_termination: (environment != 'adhoc'),
+                                                      disable_api_termination: true,
                                                       placement: {
                                                           availability_zone: instance_provisioning_info.zone
                                                       },
@@ -285,38 +286,12 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   OUTPUT_MUTEX.synchronize {
     print "\nCreated instance #{instance_id} with name #{instance_provisioning_info.name}\n"
     print "Private dns name: #{private_dns_name}\n\n"
-    puts "Writing new configuration file\n"
   }
 
-  file_suffix = rand(100_000_000)
+  # Note: updating node['cdo-secrets']['app_servers'] is no longer needed, CDO.app_servers uses `knife search` directly.
+  # Ref: https://github.com/code-dot-org/code-dot-org/pull/8219
 
-  Net::SSH.start('gateway.code.org', @username) do |ssh|
-    ssh.exec!("knife environment show #{environment} -F json > /tmp/old_knife_config#{file_suffix}")
-  end
-
-  Net::SCP.download!('gateway.code.org', @username, "/tmp/old_knife_config#{file_suffix}",
-                     "/tmp/knife_config#{file_suffix}")
-
-  OUTPUT_MUTEX.synchronize {
-    configuration_json = JSON.parse(File.read("/tmp/knife_config#{file_suffix}"))
-    configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
-    configuration_json['override_attributes']['cdo-secrets']['app_servers'][instance_provisioning_info.name] = private_dns_name
-    File.open('/tmp/new_knife_config.json', 'w') do |f|
-      f.write(JSON.dump(configuration_json))
-    end
-  }
-
-  Net::SCP.upload!('gateway.code.org', @username, '/tmp/new_knife_config.json', "/tmp/new_knife_config#{file_suffix}.json")
-  print "New configuration file uploaded, now loading it.\n"
-
-  Net::SSH.start('gateway.code.org', @username) do |ssh|
-    execute_ssh_on_channel(ssh,
-                           "knife environment from file /tmp/new_knife_config#{file_suffix}.json",
-                           "Unable to update environment #{environment}")
-    ssh.exec!("rm /tmp/*#{file_suffix}*")
-  end
-
-  cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_provisioning_info.name} -r role[#{role}]'\""
+  cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo --bootstrap-version #{CHEF_VERSION} -E #{environment} -N #{instance_provisioning_info.name} -r role[#{role}]'\""
   print "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes.\n"
   print cmd + "\n"
   bootstrap_result = `#{cmd}`
@@ -345,6 +320,9 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
 end
 
 @options = {}
+
+# Default to the production environment, which is currently the only one we support.
+@options['environment'] = 'production'
 
 OptionParser.new do |opts|
   opts.on('-e', '--environment ENVIRONMENT', 'Environment to add frontend to') do |env|
@@ -412,7 +390,7 @@ puts @options
 instance_type = aws_instance_type(environment)
 instances_to_create = []
 
-if (@options['count'] == 1)
+if @options['count'] == 1
   determined_instance_zone, instance_name = generate_instance_zone_and_name(@ec2client, @username, @options['name'])
 
   puts "Naming instance #{instance_name}, creating frontend server with instance type #{instance_type}"

@@ -3,11 +3,11 @@ title: CS in Algebra Educator Application
 nav: plc_algebra_nav
 ---
 
-# Computer Science in Science Application 
+# Computer Science in Algebra Application 
 
 We're so excited that you are interested in applying for our Professional Learning Program for CS in Algebra. Space for the 2016-17 school year is limited, so be sure to get your application in soon.
 ## Who is eligible?
-Please note that this application is for teachers from districts that have partnerships with Code.org. If your district does not have a partnership, contact [Bootstrap](http://www.bootstrapworld.org/workshops/), our preferred professional development provider for CS in Algebra.
+Please note that this application is for teachers from districts that have partnerships with Code.org. If your district does not have a partnership, please complete our [Single School Application](https://form.jotform.com/61175232916151) and we'll let you know if space opens up.
 
 **Some of our district partners have their own application process.**  If you do not see your district on the application [click on your district's pin on the map](/educate/professional-learning/cs-in-algebra-apply) to find the appropriate form.
 

@@ -85,17 +85,6 @@ def geocode_address(address)
   "#{location.latitude},#{location.longitude}"
 end
 
-def geocode_ip_address(ip_address)
-  geocode_address(ip_address)
-end
-
-def geocode_zip_code(code)
-  zip_code = zip_code_from_code(code)
-  return nil unless zip_code
-  return nil unless zip_code[:latitude_f] && zip_code[:longitude_f]
-  "#{zip_code[:latitude_f]},#{zip_code[:longitude_f]}"
-end
-
 require 'securerandom'
 require 'json'
 

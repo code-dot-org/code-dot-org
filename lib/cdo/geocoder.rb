@@ -2,13 +2,12 @@ require 'geocoder'
 require 'redis'
 
 module Geocoder
-
   module Result
     class Base
       def to_solr(prefix='location_')
         {}.tap do |results|
           results['location_p'] = "#{latitude},#{longitude}" if latitude && longitude
-          ['street_number', 'route', 'street_address', 'city', 'state', 'state_code', 'country', 'country_code', 'postal_code'].each do |component_name|
+          %w(street_number route street_address city state state_code country country_code postal_code).each do |component_name|
             component = self.send component_name
             results["#{prefix}#{component_name}_s"] = component unless component.nil_or_empty?
           end
@@ -38,17 +37,13 @@ module Geocoder
 end
 
 module ReplaceFreegeoipHostModule
-
   def self.included base
     base.class_eval do
-
       def query_url(query)
         "#{protocol}://#{CDO.freegeoip_host}/json/#{query.sanitized_text}"
       end
-
     end
   end
-
 end
 Geocoder::Lookup::Freegeoip.send(:include,ReplaceFreegeoipHostModule) if CDO.freegeoip_host
 

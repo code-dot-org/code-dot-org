@@ -1,3 +1,4 @@
+var React = require('react');
 var rowStyle = require('./rowStyle');
 
 var EnumPropertyRow = React.createClass({
@@ -19,7 +20,7 @@ var EnumPropertyRow = React.createClass({
   },
 
   render: function () {
-    let options = this.props.options.map(function(option, index) {
+    let options = this.props.options.map(function (option, index) {
         return <option key={index} value={option}>{option}</option>;
     });
     return (

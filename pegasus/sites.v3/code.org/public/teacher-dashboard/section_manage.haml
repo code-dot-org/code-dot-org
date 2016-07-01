@@ -4,6 +4,54 @@ layout: none
 theme: none
 content-type: text/ng-template
 ---
+%div{class: "modal fade move-students-modal", id: "move-students", "ng-controller" => "MovingStudentsController as msCtrl", "ng-init" => "transferUrl = '#{CDO.studio_url("/sections/transfer")}'"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button{ type: "button", class: "close", :"data-dismiss"=> "modal" }
+          %span{ :"aria-hidden"=>"true" } &times;
+          %span.sr-only= I18n.t('dashboard_sections_close')
+        .move-students-error
+        .move-students-header= I18n.t('dashboard_sections_move_students_desc')
+        .move-students-container
+          .student-selection-area
+            %table
+              %tr
+                %th.manage-th.checkboxes
+                  %input{ type: "checkbox", "ng-model" => "selectedAll", "ng-click" => "checkAll()" }
+                %th.manage-th
+                  = I18n.t('dashboard_students_name')
+              %tr{ "ng-repeat" => "student in students" }
+                %td
+                  %input{ type: "checkbox", "ng-model" => "student.selected" }
+                %td
+                  {{student.name}}
+          .destination-section-area
+            %label
+              .section-title.selection= I18n.t('dashboard_sections_move_to_section')
+              %select{ "ng-model" => "selectedSectionCode" }
+                %option{"ng-repeat" => "section in sections | filter: {id: '!' + currentSection.id}", value: "{{section.code}}"}
+                  {{section.name}}
+                %option{value: "{{otherTeacher}}"}
+                  = I18n.t('dashboard_sections_other_section')
+            %div{ "ng-show" => "selectedSectionCode != '{{otherTeacher}}'" }
+              = I18n.t('dashboard_sections_one_per_teacher')
+            %div{ "ng-show" => "selectedSectionCode == '{{otherTeacher}}'" }
+              %label
+                .section-title.selection= I18n.t('dashboard_sections_enter_code')
+                %input{ class: "text-box selection-text", type: 'text', maxlength: 6, "ng-model" => "manuallySelectedSectionCode", placeholder: I18n.t('dashboard_sections_code_placeholder') }
+              %div
+                .section-title= I18n.t('dashboard_sections_both_sections')
+                %form
+                  %label.selection-text
+                    %input{ type: 'radio', "ng-model" => "stayEnrolledInCurrentSection", value: "true" }
+                    .option= I18n.t('dashboard_sections_yes_both')
+                  %label.selection-text
+                    %input{ type: 'radio', "ng-model" => "stayEnrolledInCurrentSection", value: "false" }
+                    .option= I18n.t('dashboard_sections_no_move')
+            .modal-buttons
+              %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= I18n.t('dashboard_action_cancel')
+              %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "moveStudents()" }= I18n.t('dashboard_sections_move_students')
 
 %div{style: "padding-left:20px"}
 
@@ -44,8 +92,8 @@ content-type: text/ng-template
           %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
           %div{"ng-show" => "section.login_type == 'email' && student.username"}
             = I18n.t('dashboard_students_username', student_username: '{{student.username}}')
-          %div{"ng-show" => "section.login_type == 'email' && (student.email || student.hashed_email)"}
-            = I18n.t('dashboard_students_email', student_email: '{{student.email || "hidden"}}')
+          %div{"ng-show" => "section.login_type == 'email' && student.user_type == 'teacher' && student.email"}
+            = I18n.t('dashboard_students_email', student_email: '{{student.email}}')
         %span{"ng-show" => "student.editing"}
           %input{"ng-model" => "student.name", placeholder: I18n.t('dashboard_students_placeholder_name'), style: "width: 100%", type: "text", required: "true"}/
           %span.required= I18n.t('dashboard_action_required')

@@ -1,5 +1,5 @@
 'use strict';
-
+import $ from 'jquery';
 var CodeMirror = require('codemirror');
 
 /**
@@ -45,7 +45,12 @@ module.exports = function (container, options) {
       if (value && typeof value === 'object') {
         updateTemplate(value, $template);
       } else {
-        $template.find('.' + key).val(model[key]);
+        var item = $template.find('.' + key);
+        if (item.prop('type') === 'checkbox') {
+          item.prop('checked', model[key]);
+        } else {
+          item.val(model[key]);
+        }
       }
     });
     if (options.onNewSpace) {
@@ -63,7 +68,12 @@ module.exports = function (container, options) {
       if (typeof value === 'object') {
         updateModel(value, $template);
       } else {
-        value = $template.find('.' + key).val();
+        var item = $template.find('.' + key);
+        if (item.prop('type') === 'checkbox') {
+          value = item.prop('checked');
+        } else {
+          value = item.val();
+        }
         model[key] = typeof model[key] === 'number' ? +value : value;
       }
     });

@@ -43,55 +43,55 @@ var removeShovelfuls = function(n) { -%>
   </block>
 <% }; %>
 
-<% if (page == 1) { -%>
-  <% if (level == 1) { -%>
+<% if (page === 1) { -%>
+  <% if (level === 1) { -%>
     <block type="maze_moveForward" x="70" y="70"></block>
-  <% } else if (level == 2) { -%>
+  <% } else if (level === 2) { -%>
     <block type="maze_moveForward" x="70" y="70"></block>
-  <% } else if (level == 3) { -%>
+  <% } else if (level === 3) { -%>
     <block type="maze_moveForward" x="70" y="70"></block>
-  <% } else if (level == 4) { -%>
+  <% } else if (level === 4) { -%>
     <block type="maze_moveForward" x="70" y="70"></block>
-  <% } else if (level == 5) { -%>
+  <% } else if (level === 5) { -%>
     <block type="maze_untilBlocked" x="70" y="70"></block>
-  <% } else if (level == 6) { -%>
+  <% } else if (level === 6) { -%>
     <block type="maze_dig" x="70" y="70"></block>
-  <% } else if (level == 7) { -%>
+  <% } else if (level === 7) { -%>
     <block type="maze_turn" x="70" y="70">
           <title name="DIR">turnRight</title>
     </block>
-  <% } else if (level == 8) { -%>
+  <% } else if (level === 8) { -%>
     <block type="maze_moveForward" x="70" y="70"></block>
-  <% } else if (level == 9) { -%>
+  <% } else if (level === 9) { -%>
     <block type="maze_moveForward" x="70" y="70"></block>
-  <% } else if (level == 10) { -%>
+  <% } else if (level === 10) { -%>
     <block type="maze_untilBlocked" x="70" y="70"></block>
-  <% } else if (level == 11) { -%>
+  <% } else if (level === 11) { -%>
     <block type="maze_untilBlocked" x="70" y="70"></block>
   <% } -%>
-<% } else if (page == 2) { -%>
-  <% if (level == 2) { -%>
+<% } else if (page === 2) { -%>
+  <% if (level === 2) { -%>
     <block type="maze_moveForward" x="20" y="70"></block>
     <% fillShovelfuls(5) -%>
-  <% } else if (level == 3) { -%>
+  <% } else if (level === 3) { -%>
     <% fillShovelfuls(5) -%>
-  <% } else if (level == 4) { -%>
+  <% } else if (level === 4) { -%>
     <% fillShovelfuls(5) -%>
     <block type="procedures_defnoreturn" x="300" y="200" editable="false"
       deletable="false">
       <mutation></mutation>
       <title name="NAME"><%= msg.removeN({shovelfuls: 7}) %></title>
     </block>
-  <% } else if (level == 5) { -%>
+  <% } else if (level === 5) { -%>
     <block type="procedures_defnoreturn" x="20" y="200" editable="false"
       deletable="false">
       <mutation></mutation>
       <title name="NAME"><%= msg.removeN({shovelfuls: 6}) %></title>
     </block>
-  <% } else if (level == 6) { -%>
+  <% } else if (level === 6) { -%>
     <% fillShovelfuls(8) -%>
     <% removeShovelfuls(8) -%>
-  <% } else if (level == 7) { -%>
+  <% } else if (level === 7) { -%>
     <block type="procedures_callnoreturn" x="20" y="70" editable="false"
       deletable="false">
       <mutation name="<%= msg.avoidCowAndRemove() %>"></mutation>
@@ -101,7 +101,7 @@ var removeShovelfuls = function(n) { -%>
       <mutation></mutation>
       <title name="NAME"><%= msg.avoidCowAndRemove() %></title>
     </block>
-  <% } else if (level == 8) { -%>
+  <% } else if (level === 8) { -%>
     <block type="procedures_defnoreturn" x="20" y="200" editable="false"
       deletable="false">
       <mutation></mutation>
@@ -153,7 +153,7 @@ var removeShovelfuls = function(n) { -%>
         </block>
       </statement>
     </block>
-  <% } else if (level == 9) { -%>
+  <% } else if (level === 9) { -%>
     <block type="procedures_defnoreturn" x="20" y="200" editable="false"
       deletable="false">
       <mutation></mutation>
@@ -204,7 +204,7 @@ var removeShovelfuls = function(n) { -%>
         </block>
       </statement>
     </block>
-  <% } else if (level == 10) { -%>
+  <% } else if (level === 10) { -%>
     <block type="procedures_defnoreturn" x="20" y="200" editable="false"
       deletable="false">
       <mutation></mutation>
@@ -305,7 +305,7 @@ var removeShovelfuls = function(n) { -%>
         </block>
       </statement>
     </block>
-  <% } else if (level == 11) { -%>
+  <% } else if (level === 11) { -%>
     <block type="procedures_defnoreturn" x="20" y="200" editable="false"
       deletable="false">
       <mutation></mutation>
@@ -359,8 +359,8 @@ var removeShovelfuls = function(n) { -%>
       </statement>
     </block>
   <% } -%>
-<% } else if (page == 3) { -%>
-  <% if (level == 1) { -%>
+<% } else if (page === 3) { -%>
+  <% if (level === 1) { -%>
     <block type="maze_moveForward" x="70" y="70">
       <next>
         <block type="maze_turn">
@@ -388,7 +388,7 @@ var removeShovelfuls = function(n) { -%>
         </block>
       </next>
     </block>
-  <% } else if (level == 2) { -%>
+  <% } else if (level === 2) { -%>
     <block type="maze_moveForward" x="70" y="70">
       <next>
         <block type="maze_moveForward">
@@ -406,7 +406,7 @@ var removeShovelfuls = function(n) { -%>
         </block>
       </next>
     </block>
-  <% } else if (level == 3) { -%>
+  <% } else if (level === 3) { -%>
     <block type="maze_moveForward" x="70" y="70">
       <next>
         <block type="maze_turn">
@@ -452,7 +452,7 @@ var removeShovelfuls = function(n) { -%>
         </block>
       </next>
     </block>
-  <% } else if (level == 4) { -%>
+  <% } else if (level === 4) { -%>
     <block type="controls_repeat" x="70" y="70">
       <title name="TIMES">5</title>
       <statement name="DO">
@@ -467,7 +467,7 @@ var removeShovelfuls = function(n) { -%>
         </block>
       </next>
     </block>
-  <% } else if (level == 5) { -%>
+  <% } else if (level === 5) { -%>
     <block type="controls_repeat" x="70" y="70">
       <title name="TIMES">7</title>
       <statement name="DO">
@@ -493,7 +493,7 @@ var removeShovelfuls = function(n) { -%>
         </block>
       </statement>
     </block>
-  <% } else if (level == 6) { -%>
+  <% } else if (level === 6) { -%>
     <block type="controls_repeat" x="70" y="70">
       <title name="TIMES">7</title>
       <statement name="DO">
@@ -523,7 +523,7 @@ var removeShovelfuls = function(n) { -%>
         </block>
       </statement>
     </block>
-  <% } else if (level == 7) { -%>
+  <% } else if (level === 7) { -%>
     <block type="procedures_callnoreturn" x="20" y="70"
       editable="false" deletable="false">
       <mutation name="<%= msg.removeSquare() %>"></mutation>
@@ -554,7 +554,7 @@ var removeShovelfuls = function(n) { -%>
         </block>
       </statement>
     </block>
-  <% } else if (level == 8) { -%>
+  <% } else if (level === 8) { -%>
     <block type="procedures_callnoreturn" x="20" y="70">
       <mutation name="<%= msg.fillSquare() %>"></mutation>
       <next>
@@ -625,7 +625,7 @@ var removeShovelfuls = function(n) { -%>
         </block>
       </statement>
     </block>
-  <% } else if (level == 9) { -%>
+  <% } else if (level === 9) { -%>
     <block type="controls_for" inline="true" x="20" y="70">
       <title name="VAR">counter</title>
       <value name="FROM">

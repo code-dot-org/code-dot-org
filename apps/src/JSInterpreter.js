@@ -1,6 +1,7 @@
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
+import { setIsDebuggerPaused } from './redux/runState';
 
 /**
  * Create a JSInterpreter object. This object wraps an Interpreter object and
@@ -17,7 +18,7 @@ var utils = require('./utils');
  */
 var JSInterpreter = module.exports = function (options) {
   this.studioApp = options.studioApp;
-  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
+  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function () { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
   this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
   this.customMarshalBlockedProperties = options.customMarshalBlockedProperties || [];
@@ -43,11 +44,111 @@ var JSInterpreter = module.exports = function (options) {
   this.executionError = null;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
-  this.executeLoopDepth = 0;
+  this.isExecuting = false;
   this.callExpressionSeenAtDepth = [];
   this.stoppedAtBreakpointRows = [];
   this.logExecution = options.logExecution;
   this.executionLog = [];
+
+  this.patchInterpreterMethods_();
+};
+
+JSInterpreter.prototype.patchInterpreterMethods_ = function () {
+
+  if (!JSInterpreter.baseHasProperty &&
+      !JSInterpreter.baseGetProperty &&
+      !JSInterpreter.baseSetProperty) {
+    JSInterpreter.baseHasProperty = window.Interpreter.prototype.hasProperty;
+    JSInterpreter.baseGetProperty = window.Interpreter.prototype.getProperty;
+    JSInterpreter.baseSetProperty = window.Interpreter.prototype.setProperty;
+  }
+
+  // These methods need to be patched in order to support custom marshaling.
+
+  // These changes revert a 10% speedup commit that bypassed hasProperty,
+  // getProperty, and setProperty:
+  // https://github.com/NeilFraser/JS-Interpreter/commit/c6f25b4a30046a858e5e90a92a8c0d24a93c0231
+
+  /**
+  * Retrieves a value from the scope chain.
+  * @param {!Object} name Name of variable.
+  * @return {!Object} The value.
+  */
+  window.Interpreter.prototype.getValueFromScope = function (name) {
+    var scope = this.getScope();
+    var nameStr = name.toString();
+    while (scope) {
+      if (this.hasProperty(scope, nameStr)) {
+        return this.getProperty(scope, nameStr);
+      }
+      scope = scope.parentScope;
+    }
+    this.throwException('Unknown identifier: ' + nameStr);
+    return this.UNDEFINED;
+  };
+
+  /**
+  * Sets a value to the current scope.
+  * @param {!Object} name Name of variable.
+  * @param {!Object} value Value.
+  * @param {boolean} declarator true if called from variable declarator.
+  */
+  window.Interpreter.prototype.setValueToScope = function (name, value, declarator) {
+    var scope = this.getScope();
+    var strict = scope.strict;
+    var nameStr = name.toString();
+    while (scope) {
+      if (this.hasProperty(scope, nameStr) || (!strict && !scope.parentScope)) {
+        if (declarator) {
+          // from a declarator, always call baseSetProperty
+          JSInterpreter.baseSetProperty.call(this, scope, nameStr, value);
+        } else {
+          this.setProperty(scope, nameStr, value);
+        }
+        return;
+      }
+      scope = scope.parentScope;
+    }
+    this.throwException('Unknown identifier: ' + nameStr);
+  };
+
+  /**
+   * Sets a value to the scope chain or to an object property.
+   * @param {!Object|!Array} left Name of variable or object/propname tuple.
+   * @param {!Object} value Value.
+   * @param {boolean} declarator true if called from variable declarator.
+   */
+  window.Interpreter.prototype.setValue = function (left, value, declarator) {
+    if (left.length) {
+      var obj = left[0];
+      var prop = left[1];
+      this.setProperty(obj, prop, value);
+    } else {
+      this.setValueToScope(left, value, declarator);
+    }
+  };
+
+  // Patched to add the 3rd "declarator" parameter on the setValue() call(s).
+  // Also removed erroneous? call to hasProperty when there is node.init
+  // Changed to call setValue with this.UNDEFINED when there is no node.init
+  // and JSInterpreter.baseHasProperty returns false for current scope.
+  window.Interpreter.prototype['stepVariableDeclarator'] = function () {
+    var state = this.stateStack[0];
+    var node = state.node;
+    if (node.init && !state.done) {
+      state.done = true;
+      this.stateStack.unshift({node: node.init});
+    } else {
+      if (node.init) {
+        this.setValue(this.createPrimitive(node.id.name), state.value, true);
+      } else {
+        if (!JSInterpreter.baseHasProperty.call(this, this.getScope(), node.id.name)) {
+          this.setValue(this.createPrimitive(node.id.name), this.UNDEFINED, true);
+        }
+      }
+      this.stateStack.shift();
+    }
+  };
 };
 
 /**
@@ -65,11 +166,14 @@ var JSInterpreter = module.exports = function (options) {
  *        place in the interpreter global scope.
  * @param {boolean} [options.enableEvents] - allow the interpreter to define
  *        event handlers that can be invoked by native code. (default false)
+ * @param {Function} [options.initGlobals] when supplied, this function will
+ *        be called during interpreter initialization so that additional globals
+ *        can be added with calls to createGlobalProperty()
  */
 JSInterpreter.prototype.parse = function (options) {
-  if (!this.studioApp.hideSource) {
-    this.calculateCodeInfo(options.code);
+  this.calculateCodeInfo(options.code);
 
+  if (!this.studioApp.hideSource) {
     var session = this.studioApp.editor.aceEditor.getSession();
     this.isBreakpointRow = codegen.isAceBreakpointRow.bind(null, session);
   } else {
@@ -102,7 +206,7 @@ JSInterpreter.prototype.parse = function (options) {
             arguments: args
           });
 
-          if (self.executeLoopDepth === 0) {
+          if (!self.isExecuting) {
             // Execute the interpreter and if a return value is sent back from the
             // interpreter's event handler, pass that back in the native world
 
@@ -125,27 +229,19 @@ JSInterpreter.prototype.parse = function (options) {
     // Store globalScope on JSInterpreter
     self.globalScope = scope;
     // Override Interpreter's get/has/set Property functions with JSInterpreter
-    interpreter.getProperty = self.getProperty.bind(
-        self,
-        interpreter,
-        interpreter.getProperty);
-    interpreter.hasProperty = self.hasProperty.bind(
-        self,
-        interpreter,
-        interpreter.hasProperty);
-    // Store this for later because we need to bypass our overriden function
-    // in createGlobalProperty()
-    self.baseSetProperty = interpreter.setProperty;
-    interpreter.setProperty = self.setProperty.bind(
-        self,
-        interpreter,
-        interpreter.setProperty);
+    interpreter.getProperty = self.getProperty.bind(self, interpreter);
+    interpreter.hasProperty = self.hasProperty.bind(self, interpreter);
+    interpreter.setProperty = self.setProperty.bind(self, interpreter);
     codegen.initJSInterpreter(
         interpreter,
         options.blocks,
         options.blockFilter,
         scope,
         options.globalFunctions);
+
+    if (options.initGlobals) {
+      options.initGlobals();
+    }
 
     // Only allow five levels of depth when marshalling the return value
     // since we will occasionally return DOM Event objects which contain
@@ -172,9 +268,16 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
-    new window.Interpreter(options.code, initFunc);
-  }
-  catch(err) {
+    new window.Interpreter('', initFunc);
+    // We initialize with an empty program so that all of our global functions
+    // can be injected before the user code is processed (thus allowing user
+    // code to override globals of the same names)
+
+    // Now append the user code:
+    this.interpreter.appendCode(options.code);
+    // And repopulate scope since appendCode() doesn't do this automatically:
+    this.interpreter.populateScope_(this.interpreter.ast, this.globalScope);
+  } catch (err) {
     this.executionError = err;
     this.handleError();
   }
@@ -352,7 +455,9 @@ JSInterpreter.prototype.removeStoppedAtBreakpointRowForScope = function (scope) 
 JSInterpreter.prototype.isProgramDone = function () {
   return this.executionError ||
       !this.interpreter ||
-      !this.interpreter.stateStack.length;
+      !this.interpreter.stateStack[0] ||
+      (this.interpreter.stateStack[0].node.type === 'Program' &&
+        this.interpreter.stateStack[0].done);
 };
 
 /**
@@ -367,9 +472,16 @@ var INTERSTITIAL_NODES = {
 
 /**
  * Execute the interpreter
+ *
+ * @param {boolean} firstStep Pass true only on the first call
+ * @param {boolean} runUntilCallbackReturn Exit after processing event callback
  */
 JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallbackReturn) {
-  this.executeLoopDepth++;
+  if (this.isExecuting) {
+    console.error('Attempt to call executeInterpreter while already executing ignored');
+    return;
+  }
+  this.isExecuting = true;
   this.runUntilCallbackReturn = runUntilCallbackReturn;
   if (runUntilCallbackReturn) {
     delete this.lastCallbackRetVal;
@@ -387,6 +499,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       case StepType.RUN:
         // Bail out here if in a break state (paused), but make sure that we still
         // have the next tick queued first, so we can resume after un-pausing):
+        this.isExecuting = false;
         return;
       case StepType.OUT:
         // If we haven't yet set stepOutToStackDepth, work backwards through the
@@ -580,7 +693,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       if (this.executionError) {
         this.handleError(inUserCode ? (userCodeRow + 1) : undefined);
       }
-      this.executeLoopDepth--;
+      this.isExecuting = false;
       return;
     }
   }
@@ -589,7 +702,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // code may not be selected in the editor, so do it now:
     this.selectCurrentCode();
   }
-  this.executeLoopDepth--;
+  this.isExecuting = false;
 };
 
 /**
@@ -655,14 +768,20 @@ JSInterpreter.prototype.logStep_ = function () {
     return;
   }
 
+  // Log call and new expressions just before we step into a function (after the
+  // last argument has been processed). (NOTE: as a result, a single stateful
+  // async function call may appear multiple times in the log)
   if ((node.type === "CallExpression" || node.type === "NewExpression") &&
-      !state.doneCallee_) {
+      state.doneCallee_ &&
+      !state.doneExec &&
+      !node.arguments[state.n_ || 0]) {
     switch (node.callee.type) {
       case "Identifier":
-        this.executionLog.push(node.callee.name);
+        this.executionLog.push(node.callee.name + ':' + node.arguments.length);
         break;
       case "MemberExpression":
-        this.executionLog.push(JSInterpreter.getMemberExpressionName_(node.callee));
+        this.executionLog.push(JSInterpreter.getMemberExpressionName_(node.callee) +
+            ':' + node.arguments.length);
         break;
       default:
         throw "Unexpected callee node property type: " + node.object.type;
@@ -724,43 +843,72 @@ JSInterpreter.prototype.createPrimitive = function (data) {
 };
 
 /**
+ * Helper to determine if we should prevent custom marshalling from occurring
+ * in a situation where we normally would use it. Allows us to block from a
+ * specific list of properties and a hardcoded list of instance types that are
+ * not safe to return into the interpreter sandbox.
+ *
+ * @param {string} name Name of property.
+ * @param {!Object} obj Data object.
+ * @param {Object} nativeParent Native parent object (if parented).
+ * @return {boolean} true if property access should be blocked.
+ */
+JSInterpreter.prototype.shouldBlockCustomMarshalling_ = function (name, obj,
+    nativeParent) {
+  if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+    return true;
+  }
+  var value = obj.isCustomMarshal ? obj.data[name] : nativeParent[name];
+  if (value instanceof Node || value instanceof Window) {
+    return true;
+  }
+  return false;
+};
+
+/**
  * Wrapper to Interpreter's getProperty (extended for custom marshaling)
  *
  * Fetch a property value from a data object.
  * @param {!Object} interpeter Interpreter instance.
- * @param {!Function} baseGetProperty Original getProperty() implementation.
  * @param {!Object} obj Data object.
  * @param {*} name Name of property.
  * @return {!Object} Property value (may be UNDEFINED).
  */
 JSInterpreter.prototype.getProperty = function (
     interpreter,
-    baseGetProperty,
     obj,
     name) {
   name = name.toString();
   var nativeParent;
-  if (obj.isCustomMarshal ||
-      (obj === this.globalScope &&
-          (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
-    var value;
-    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
-      return baseGetProperty.call(interpreter, obj, name);
-    }
-    if (obj.isCustomMarshal) {
-      value = obj.data[name];
+  var customMarshalValue;
+  if (obj.isCustomMarshal) {
+    if (this.shouldBlockCustomMarshalling_(name, obj)) {
+      return interpreter.UNDEFINED;
     } else {
-      value = nativeParent[name];
-    }
-    var type = typeof value;
-    if (type === 'number' || type === 'boolean' || type === 'string' ||
-        type === 'undefined' || value === null) {
-      return interpreter.createPrimitive(value);
-    } else {
-      return codegen.marshalNativeToInterpreter(interpreter, value, obj.data);
+      customMarshalValue = obj.data[name];
     }
   } else {
-    return baseGetProperty.call(interpreter, obj, name);
+    var hasProperty = false;
+    if (!obj.isPrimitive) {
+        hasProperty = JSInterpreter.baseHasProperty.call(interpreter, obj, name);
+    }
+    if (!hasProperty &&
+        obj === this.globalScope &&
+        !!(nativeParent = this.customMarshalGlobalProperties[name]) &&
+        !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      customMarshalValue = nativeParent[name];
+    } else {
+      return JSInterpreter.baseGetProperty.call(interpreter, obj, name);
+    }
+  }
+  var type = typeof customMarshalValue;
+  if (type === 'number' || type === 'boolean' || type === 'string' ||
+      type === 'undefined' || customMarshalValue === null) {
+    return interpreter.createPrimitive(customMarshalValue);
+  } else {
+    return codegen.marshalNativeToInterpreter(interpreter,
+        customMarshalValue,
+        obj.data);
   }
 };
 
@@ -769,30 +917,32 @@ JSInterpreter.prototype.getProperty = function (
  *
  * Does the named property exist on a data object.
  * @param {!Object} interpeter Interpreter instance.
- * @param {!Function} baseHasProperty Original hasProperty() implementation.
  * @param {!Object} obj Data object.
  * @param {*} name Name of property.
  * @return {boolean} True if property exists.
  */
 JSInterpreter.prototype.hasProperty = function (
     interpreter,
-    baseHasProperty,
     obj,
     name) {
   name = name.toString();
   var nativeParent;
-  if (obj.isCustomMarshal ||
-      (obj === this.globalScope &&
-          (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
-    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
-      return baseHasProperty.call(interpreter, obj, name);
-    } else if (obj.isCustomMarshal) {
-      return name in obj.data;
+  if (obj.isCustomMarshal) {
+    if (this.shouldBlockCustomMarshalling_(name, obj)) {
+      return false;
     } else {
-      return name in nativeParent;
+      return name in obj.data;
     }
   } else {
-    return baseHasProperty.call(interpreter, obj, name);
+    var hasProperty = JSInterpreter.baseHasProperty.call(interpreter, obj, name);
+    if (!hasProperty &&
+        obj === this.globalScope &&
+        !!(nativeParent = this.customMarshalGlobalProperties[name]) &&
+        !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      return true;
+    } else {
+      return hasProperty;
+    }
   }
 };
 
@@ -801,16 +951,14 @@ JSInterpreter.prototype.hasProperty = function (
  *
  * Set a property value on a data object.
  * @param {!Object} interpeter Interpreter instance.
- * @param {!Function} baseSetProperty Original setProperty() implementation.
  * @param {!Object} obj Data object.
  * @param {*} name Name of property.
  * @param {*} value New property value.
  * @param {boolean} opt_fixed Unchangeable property if true.
  * @param {boolean} opt_nonenum Non-enumerable property if true.
  */
-JSInterpreter.prototype.setProperty = function(
+JSInterpreter.prototype.setProperty = function (
     interpreter,
-    baseSetProperty,
     obj,
     name,
     value,
@@ -819,21 +967,23 @@ JSInterpreter.prototype.setProperty = function(
   name = name.toString();
   var nativeParent;
   if (obj.isCustomMarshal) {
-    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
-      return baseSetProperty.call(
-          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    if (!this.shouldBlockCustomMarshalling_(name, obj)) {
+      obj.data[name] = codegen.marshalInterpreterToNative(interpreter, value);
     }
-    obj.data[name] = codegen.marshalInterpreterToNative(interpreter, value);
-  } else if (obj === this.globalScope &&
-      (!!(nativeParent = this.customMarshalGlobalProperties[name]))) {
-    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
-      return baseSetProperty.call(
-          interpreter, obj, name, value, opt_fixed, opt_nonenum);
-    }
-    nativeParent[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else {
-    return baseSetProperty.call(
-        interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    var hasProperty = false;
+    if (!obj.isPrimitive) {
+        hasProperty = JSInterpreter.baseHasProperty.call(interpreter, obj, name);
+    }
+    if (!hasProperty &&
+        obj === this.globalScope &&
+        !!(nativeParent = this.customMarshalGlobalProperties[name]) &&
+        !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      nativeParent[name] = codegen.marshalInterpreterToNative(interpreter, value);
+    } else {
+      return JSInterpreter.baseSetProperty.call(
+          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    }
   }
 };
 
@@ -942,7 +1092,7 @@ JSInterpreter.prototype.createGlobalProperty = function (name, value, parent) {
 
   // Bypass setProperty since we've hooked it and it will not create the
   // property if it is in customMarshalGlobalProperties
-  this.baseSetProperty.call(
+  JSInterpreter.baseSetProperty.call(
       this.interpreter,
       this.globalScope,
       name,
@@ -1033,7 +1183,7 @@ JSInterpreter.prototype.findGlobalFunction = function (funcName) {
  * in the interpreter's global scope. Built-in global functions are excluded.
  */
 JSInterpreter.prototype.getGlobalFunctionNames = function () {
-  var builtInExclusionList = [ "eval", "getCallback", "setCallbackRetVal" ];
+  var builtInExclusionList = ["eval", "getCallback", "setCallbackRetVal"];
 
   var names = [];
   for (var objName in this.globalScope.properties) {
@@ -1107,18 +1257,44 @@ JSInterpreter.prototype.evalInCurrentScope = function (expression) {
   // Patch getProperty, hasProperty, and setProperty to enable custom marshalling
   evalInterpreter.getProperty = this.getProperty.bind(
       this,
-      evalInterpreter,
-      evalInterpreter.getProperty);
+      evalInterpreter);
   evalInterpreter.hasProperty = this.hasProperty.bind(
       this,
-      evalInterpreter,
-      evalInterpreter.hasProperty);
+      evalInterpreter);
   evalInterpreter.setProperty = this.setProperty.bind(
       this,
-      evalInterpreter,
-      evalInterpreter.setProperty);
+      evalInterpreter);
 
   // run() may throw if there's a problem in the expression
   evalInterpreter.run();
   return evalInterpreter.value;
+};
+
+JSInterpreter.prototype.handlePauseContinue = function () {
+  // We have code and are either running or paused
+  if (this.paused && this.nextStep === StepType.RUN) {
+    this.paused = false;
+  } else {
+    this.paused = true;
+    this.nextStep = StepType.RUN;
+  }
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
+};
+
+JSInterpreter.prototype.handleStepOver = function () {
+  this.paused = true;
+  this.nextStep = StepType.OVER;
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
+};
+
+JSInterpreter.prototype.handleStepIn = function () {
+  this.paused = true;
+  this.nextStep = StepType.IN;
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
+};
+
+JSInterpreter.prototype.handleStepOut = function () {
+  this.paused = true;
+  this.nextStep = StepType.OUT;
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
 };

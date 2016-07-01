@@ -24,7 +24,7 @@ class ActivitiesController < ApplicationController
 
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
-      @level = @script_level.level
+      @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name
     elsif params[:level_id]
       # TODO: do we need a cache_find for Level like we have for ScriptLevel?
@@ -35,7 +35,7 @@ class ActivitiesController < ApplicationController
     # disabled. (A cached view might post to this action even if milestone posts
     # are disabled in the gatekeeper.)
     enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
-    if !enabled
+    unless enabled
       head 503
       return
     end
@@ -85,6 +85,7 @@ class ActivitiesController < ApplicationController
                   end
 
     render json: milestone_response(script_level: @script_level,
+                                    level: @level,
                                     total_lines: total_lines,
                                     trophy_updates: @trophy_updates,
                                     solved?: solved,
@@ -143,7 +144,7 @@ class ActivitiesController < ApplicationController
     attributes = {
         user: current_user,
         level: @level,
-        action: solved, # TODO I think we don't actually use this. (maybe in a report?)
+        action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
         test_result: test_result,
         attempt: params[:attempt].to_i,
         lines: lines,
@@ -163,7 +164,13 @@ class ActivitiesController < ApplicationController
     end
 
     if @script_level
-      @new_level_completed = current_user.track_level_progress_async(@script_level, test_result, params[:submitted])
+      @new_level_completed = current_user.track_level_progress_async(
+        script_level: @script_level,
+        new_result: test_result,
+        submitted: params[:submitted],
+        level_source_id: @level_source.try(:id),
+        level: @level
+      )
     end
 
     passed = Activity.passing?(test_result)
@@ -207,16 +214,16 @@ class ActivitiesController < ApplicationController
       current = current_trophies[concept]
       pct = counts[:current].to_f/counts[:max]
 
-      new_trophy = Trophy.find_by_id case
+      new_trophy = Trophy.find_by_id(
+        case
         when pct == Trophy::GOLD_THRESHOLD
           Trophy::GOLD
         when pct >= Trophy::SILVER_THRESHOLD
           Trophy::SILVER
         when pct >= Trophy::BRONZE_THRESHOLD
           Trophy::BRONZE
-        else
-          # "no trophy earned"
-      end
+        end
+      )
 
       if new_trophy
         if new_trophy.id == current.try(:trophy_id)

@@ -34,7 +34,12 @@
     "markdown_instructions": "What a sweet challenge!\r\n\r\nFix the error(s) to collect all of the nectar."
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 4,
+    "repeat_loops": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

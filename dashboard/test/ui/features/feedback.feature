@@ -2,6 +2,12 @@
 @as_student
 Feature: Recommended/Required Blocks Feedback
 
+# Rather than using @as_student - which creates for us a test user with
+# an arbitrary id - we duplicate the functionality of that helper in
+# each scenario, replacin the arbitrary creation step with a step that
+# creates for us a user with the appropriate kind of ID for our A/B
+# tests.
+
 Scenario: Attempt 2-3 Maze 1
   Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/3?noautoplay=true"
   And I rotate to landscape

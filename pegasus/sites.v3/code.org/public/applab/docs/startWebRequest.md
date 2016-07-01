@@ -146,6 +146,22 @@ When startWebRequest() is finished executing, the callback function is automatic
 
 [/tips]
 
+### Allowed hostnames
+- For security reasons, only URLs with certain hostnames can be accessed using startWebRequest. Currently, the hostname must end in one of the following:
+  - accuweather.com
+  - api.data.gov
+  - api.randomuser.me
+  - api.zippopotam.us
+  - code.org
+  - data.cityofchicago.org
+  - googleapis.com
+  - query.yahooapis.com
+  - noaa.gov
+  - rhcloud.com
+  - wikipedia.org
+
+Want to use a URL that's not currently allowed? Let us know at support@code.org.
+
 [bug]
 
 Found a bug in the documentation? Let us know at documentation@code.org

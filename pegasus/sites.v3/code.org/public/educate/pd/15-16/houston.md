@@ -25,52 +25,20 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Milestone Complete!
 
+### Repeated Phase 2: Summer Study (5 days in-person - Summer 2016) ###
 
-**Save the date:**
+This summer, in lieu of providing a separate Phase 4 training for your Code.org ECS cohort, we'd like to extend an invitation to revisit ECS PD content and re-attend the Phase 2: Summer Study
 
-Quarter 4: Saturday, April 9, 2016
+The goal of this is to experience the workshop with a new perspective and prepare for the school year ahead. Attending this 5-day workshop for a second time will allow you to make more connections, see how the curriculum spirals, reflect on your first year teaching the curriculum, and prepare to improve and adapt for the next year. You will receive a stipend for this workshop.
 
-8:30am - 3:30pm
-<br/>
-Breakfast and lunch will be served.
-
-**Location**
-
-[Ryan Professional Development Center<br/>
-Building A<br/>
-Room PL7<br/>
-4001 Hardy Street<br/>
-Houston, TX 77009](https://www.google.com/maps/place/Houston+Independent+School+District/@29.7965147,-95.3534077,19z/data=!4m7!1m4!3m3!1s0x8640b8e008405e8f:0x898b37886b4ad089!2s4001+Hardy+St,+Houston,+TX+77009!3b1!3m1!1s0x0000000000000000:0x887b49612ae7419a)
-
-Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop! 
-
-Free parking is available at the building. 
-
-
-**What to bring to Phase 3 quarterly sessions:**
-
-Laptop and Charger
-<br/>
-ECS green journal <br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
-
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
-
-Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
-will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+Rice University School Mathematics Project will be running logistics for your summer workshop as an official Code.org Professional Learning Partner in Houston, TX. If you have any questions about your workshop, reach out to your local contact at Rice University: rusmpcoding@rice.edu
 
 
 **Save the Dates**
 
-TBD
-
-*More information coming soon*
+Monday, July 11th - Friday, July 15th
 
 **Location**
 

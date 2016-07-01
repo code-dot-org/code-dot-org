@@ -36,7 +36,7 @@ Gumball_add_score	gumball	gumball_sound_and_points	Studio	playlab_add_score	[blo
 Gumball_add_blocks	gumball	gumball_warn_food_fight	Studio	playlab_add_blocks	[block-id='7']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
 Iceage_drag_say	iceage	iceage_hello1	Studio	playlab_drag_say	[block-id='2']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
 Icage_use_twice	iceage	iceage_hello2	Studio	playlab_use_twice	[block-id='1']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 62, "y":0}} }
-Iceage_play_sound	iceage	iceage_move_to_actor	Studio	playlab_play_sound	[block-id='7']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}}
+Iceage_play_sound	iceage	iceage_move_to_actor	Studio	playlab_play_sound	[block-id='7']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
 Iceage_arrow_keys	iceage	iceage_move_events	Studio	arrows_move_actor	#rightButton	{"position": {"my": "bottom left", "at": "top middle", "adjust": {"x": 0, "y":4}} }
 Iceage_add_move	iceage	iceage_repeat	Studio	playlab_add_move	[block-id='5']	{"position": {"my": "top left", "at": "top left", "adjust": {"x": 60, "y":40}} }
 Iceage_add_score	iceage	iceage_sound_and_points	Studio	playlab_add_score	[block-id='3']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }

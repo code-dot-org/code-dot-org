@@ -1,0 +1,33 @@
+name 'ECSPD1 unifying themes'
+title 'ECS Unifying Themes'
+description 'ECS Unifying Themes'
+css 'unplugged' 
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+
+
+## Unifying themes in Exploring Computer Science: classroom and workshop style
+<br>
+<img src="https://images.code.org/d598c3caadbf220673f7040d02a66fde-image-1461909718829.png" width="200" style="float:left; margin-right:30px">
+
+<br>
+As you saw in the previous stage, this is an introductory course that dives into some of the big ideas of computer science.  
+<br>
+The individual lessons in this course were developed to explore unifying themes and support the use of computational practices that we expect students to employ. 
+<br><br><br>[(*source*)](http://www.thinkplandorepeat.com/thinkplandologo.jpg)<br>
+<h5>Unifying themes</h5>
+
+<ul><li> The creative nature of computing </li>
+<li>Technology as a tool for solving problems</li>
+<li>The relevance of computer science and its impact on society </li></ul>
+
+We will look at teaching with a new lens of equity, access and cultural awareness.  Throughout the next 15 months of the professional learning program we will provide space to look at a variety of pedagogical approaches to successfully engage all students in learning, while being thoughtful in our assessments. 
+<br><br>
+The professional learning model encourages teachers to take on the role of reflective practitioners so that you can examine how your instructional practices influence student learning, and growth, particularly for our underrepresented groups.
+
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

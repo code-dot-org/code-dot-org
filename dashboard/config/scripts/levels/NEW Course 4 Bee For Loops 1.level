@@ -31,7 +31,13 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false",
-    "maze_data": null
+    "step_speed": "1"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2
   }
 }]]></config>
   <blocks>
@@ -50,23 +56,27 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">5</title>
             </block>
           </value>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">5</title>
+            <block type="controls_repeat_ext" inline="true">
+              <value name="TIMES">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
               <statement name="DO">
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>

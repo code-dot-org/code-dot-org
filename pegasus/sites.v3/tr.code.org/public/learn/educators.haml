@@ -4,9 +4,9 @@ tagline: ''
 theme: responsive
 responsivePadMobile: yes
 social:
-  'og:title' : 'Every child deserves opportunity'
-  'og:description' : "For every student and classroom: learn how fun coding is in just one hour during the Hour of Code"
-  'og:image' : "http://<%=request.host%>/images/code-video-thumbnail.jpg"
+  'og:title' : 'Her çocuk bir fırsatı hak eder.'
+  'og:description' : "Öğrenciler ve Sınıflar; Kod Saatine sadece bir saatinizi ayırarak programlamanın ne kadar eğlenceli olduğunu keşfedin"
+  'og:image' : "http://<%=request.host%>/images/ogimage.png"
   "og:image:width": 1705
   "og:image:height": 949
   "og:url": "http://tr.code.org"

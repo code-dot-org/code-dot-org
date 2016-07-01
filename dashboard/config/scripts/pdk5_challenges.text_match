@@ -1,9 +1,0 @@
-name 'PDK5 Challenges'
-title 'Biggest Challenges'
-success_title "Awesome!"
-success_body "Thanks for your response"
-skip_sound true
-height '200'
-markdown <<MARKDOWN
-What are your biggest challenges to implementing Code.org's curriculum in your classroom?
-MARKDOWN

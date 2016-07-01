@@ -1,0 +1,32 @@
+name 'CSD U3 Variables2 STOP intro expressions'
+css 'unplugged'
+markdown <<MARKDOWN
+# Expressions
+
+The **add, subtract, multiply, and divide** operations are a part of essentially every programming language. You can combine as many of these as you wish in order to create a single **expression**, like those shown below.
+
+	// Each of these is an "expression"
+    
+    4 * 5;              // Multiplication
+    10 / 2;             // Division
+	1 + 2 - 3;          // Addition and subtraction
+    (4 + 1) * 3;		// Using parenetheses
+    (1 + 2) - (3 + 4);  // More complex expressions
+
+The computer will perform all the operations in an expression to calculate a **single value**. If you just want to use your computer like a calculator you can **display the value in the console**.
+
+	// Using expressions inside a console.log statement
+    
+    console.log(1 + 1);           // Output: 2
+    console.log(4 * 5);           // Output: 20
+    console.log((4 + 1) * 3);     // Output: 15
+
+You can also **store this value inside of a variable**.
+
+	// Storing the value of an expression in a variable
+    
+    var total = 2 + 3 + 4;
+    console.log(total);           // Output: 9
+    
+Let's get some practice making expressions of our own    
+MARKDOWN

@@ -15,7 +15,7 @@ function removedHtml(before, after) {
     afterLinesMap[afterLines[i]] = true;
   }
 
-  var removedLines = beforeLines.filter(function(line) {
+  var removedLines = beforeLines.filter(function (line) {
     return !afterLinesMap[line];
   });
 
@@ -43,16 +43,51 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
   // for why this works. This hack is necessary in order to warn when
   // attributes containing disallowed URL schemes are removed.
   var allSchemes = [];
-  allSchemes.indexOf = function() {
+  allSchemes.indexOf = function () {
     return 0;
   };
+
+  // Do not warn when these attributes are removed.
+  var ignoredAttributes = [
+    'pmbx_context',   // Used by Chrome plugins such as Bitdefender Wallet.
+    'kl_vkbd_parsed', // Possibly from Kaspersky Labs password manager.
+    'kl_virtual_keyboard_secure_input', // Possibly from Kaspersky Labs password manager.
+    'vk_16761',       // Origin unknown.
+    'vk_19391',       // Origin unknown.
+    'vk_197cd',       // Origin unknown.
+    '_vkenabled',     // Origin unknown.
+    'abp'             // adblock plus plugin.
+  ];
+
+  var ignoredTags = [
+    'grammarly-btn'   // Grammarly plugin.
+  ];
 
   var processed = sanitize(unsafe, {
     allowedTags: false,
     allowedAttributes: false,
-    allowedSchemes: allSchemes
+    allowedSchemes: allSchemes,
+    // Use transformTags to ignore certain attributes, since allowedAttributes
+    // can only accept a whitelist not a blacklist.
+    transformTags: {
+      '*': function (tagName, attribs) {
+        for (var i = 0; i < ignoredAttributes.length; i++) {
+          var ignored = ignoredAttributes[i];
+          if (attribs[ignored]) {
+            delete attribs[ignored];
+          }
+        }
+        return {
+          tagName: tagName,
+          attribs: attribs
+        };
+      }
+    },
+    exclusiveFilter: function (element) {
+      return (ignoredTags.indexOf(element.tag) !== -1);
+    }
   });
-  if (processed != safe) {
+  if (processed !== safe) {
     warn(removedHtml(processed, safe), unsafe, safe, warnings);
   }
 }
@@ -86,25 +121,44 @@ function isIdAvailable(elementId) {
  */
 module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
   var warnings = [];
-  var defaultAttributes = ['id', 'class', 'data-*', 'height', 'style',  'title', 'width'];
 
+  // Define tags with a standard set of allowed attributes
+
+  var standardAttributes = [
+    'id', 'class', 'data-*', 'height', 'spellcheck', 'style',  'title', 'width'
+  ];
+  // <i> could allow people to covertly specify font awesome icons, which seems ok
+  var tagsWithStandardAttributes = [
+    'b', 'br', 'canvas', 'em', 'font', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr',
+    'i', 'label', 'li', 'ol', 'option', 'p', 'span', 'strong', 'table', 'td', 'th',
+    'tr', 'u', 'ul'
+  ];
+  var defaultAttributesMap = {};
+  tagsWithStandardAttributes.forEach(function (tag) {
+    defaultAttributesMap[tag] = standardAttributes;
+  });
+
+  // Define tags with a custom set of allowed attributes
+
+  var customAttributesMap = {
+    button: standardAttributes.concat(['data-canonical-image-url']),
+    div: standardAttributes.concat(['contenteditable', 'data-canonical-image-url', 'tabindex', 'xmlns']),
+    img: standardAttributes.concat(['data-canonical-image-url', 'src']),
+    input: standardAttributes.concat(['autocomplete', 'checked', 'max', 'min', 'name', 'placeholder', 'step', 'type', 'value']),
+    select: standardAttributes.concat(['multiple', 'size'])
+  };
+  var tagsWithCustomAttributes = Object.keys(customAttributesMap);
+
+  var allowedTags = sanitize.defaults.allowedTags.concat(tagsWithStandardAttributes)
+    .concat(tagsWithCustomAttributes);
+  var allowedAttributes = Object.assign({}, sanitize.defaults.allowedAttributes,
+    defaultAttributesMap, customAttributesMap);
   var safe = sanitize(unsafe, {
-    allowedTags: sanitize.defaults.allowedTags.concat([
-      'button', 'canvas', 'img', 'input', 'option', 'label', 'select', 'span', 'font']),
-    allowedAttributes: $.extend({}, sanitize.defaults.allowedAttributes, {
-      button: defaultAttributes.concat(['data-canonical-image-url']),
-      canvas: defaultAttributes,
-      div: defaultAttributes.concat(['contenteditable', 'data-canonical-image-url', 'tabindex', 'xmlns']),
-      font: defaultAttributes,
-      img: defaultAttributes.concat(['data-canonical-image-url', 'src']),
-      input: defaultAttributes.concat(['autocomplete', 'checked', 'max', 'min', 'name', 'placeholder', 'step', 'type', 'value']),
-      label: defaultAttributes,
-      select: defaultAttributes,
-      span: defaultAttributes
-    }),
+    allowedTags: allowedTags,
+    allowedAttributes: allowedAttributes,
     allowedSchemes: sanitize.defaults.allowedSchemes.concat(['data']),
     transformTags: {
-      '*': function(tagName, attribs) {
+      '*': function (tagName, attribs) {
         if (rejectExistingIds && attribs.id && !isIdAvailable(attribs.id)) {
           warnings.push('element id is already in use: ' + attribs.id);
           delete attribs.id;
@@ -117,7 +171,7 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
     }
   });
 
-  if (typeof warn === 'function' && safe != unsafe) {
+  if (typeof warn === 'function' && safe !== unsafe) {
     warnAboutUnsafeHtml(warn, unsafe, safe, warnings);
   }
 

@@ -1,7 +1,14 @@
 "nl-NL":
   hour_of_code: Uur Code
   hello: Hallo wereld
+  'yes': Ja
+  'no': Nee
   select_language: Kies de gewenste taal
+  upgrade_ie_message: Code.org beëindigt de ondersteuning voor Internet Explorer 8,
+    9 en 10. Probeer te upgraden naar een moderne browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Leer meer
   en: informatica
   computer_science_edweek: Week van het Informaticaonderwijs
   csedweek_dates: 8-14 December 2014
@@ -30,8 +37,8 @@
   twentyhours_text: Klaar met je eerste 'Hour of Code'? Leer meer over Informatica
     en programmeerconcepten in deze vervolgcursus.
   og_title: Ieder kind verdient een kans
-  og_description: Elke leerling op elke school verdient de kans om te leren werken
-    met computers.
+  og_description: Elke leerling op elke school moet de kans krijgen om te leren programmeren.
+    Dit verandert alles.
   hoc2014_heading: Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br
     />8 - 14 december 2014<br/>
   hoc2014_students: Leerlingen
@@ -123,25 +130,26 @@
   third_party_price_individual: 'Individuele prijs: gratis demo & $25/maand (=+/-
     €22,41)'
   third_party_price_school: 'School prijs: gratis plannen &Pro voor $2500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_tynker_desc: Tynker's creatieve computerplatform helpt kinderen te ontwikkelen
+    door computationeel te denken en programmering vaardigheden op een leuke, intuïtieve
+    en creatieve manier. Onze innovatieve visuele programmeertaal, interactieve zelfstudie
+    cursussen, en spel gebaseerde programmering activiteiten bieden een eenvoudige
+    Inleiding voor het programmeren, en laten kinderen in staat stellen om zelf te
+    innoveren te creëren.
+  third_party_tynker_btn_curriculum: Probeer Tynkers Curriculum uit voor jonge lezers
   third_party_tynker_btn_site: Bezoek Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
+  third_party_scratchjr_desc: Kras Jr. is een inleidende programmeertaal waarmee jonge
+    kinderen (leeftijd 5-7) hun eigen interactieve verhalen en spelletjes maken. Kinderen
+    kunnen samen grafische programmeren, blokken en tekens verplaatsen, springen,
+    dansen en zingen. Kinderen kunnen tekens in de verf-editor wijzigen, voegen hun
+    eigen stemmen en geluiden toe, zelfs invoegen van eigen foto's - vervolgens met
+    de programmering blokken maken zij hun personage en komt hij tot leven.
   third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
   third_party_scratchjr_btn_site: Bezoek Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_desc: Met Scratch kunt u uw eigen geprogrammeerde interactieve
+    verhalen, games en animaties en jouw creaties delen met anderen in de online gemeenschap.
+    Scratch helpt jonge mensen te leren om creatief, reden systematisch en samenwerkend
+    te denken — essentiële vaardigheden voor het leven in de 21e eeuw.
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
   third_party_scratch_btn_site: Bezoek Scratch
@@ -151,12 +159,12 @@
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_lightbot_btn_site: Bezoek Lightbot
+  third_party_khan_desc: Leer hoe je tekeningen, animaties en games moet programmeren
+    met behulp van JavaScript & ProcessingJS, of leer hoe je webpagina's maakt met
+    HTML & CSS. U kan alles delen wat u maakt, ontdek wat anderen hebben gecreëerd
+    en leer van elkaar!
+  third_party_khan_btn_learn: Leer CS met Khan Academy
   third_party_khan_btn_forum: Khan Academy CS Forum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
@@ -165,39 +173,38 @@
     less time than with more traditional, text-based languages.
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_appinv_btn_site: Bezoek App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
     fun and accessible for beginners. With CodeHS, you can get the help that every
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_codehs_btn_try: Intro CS leer meer voor scholen
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
     native education.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_site: Bezoek Codecademy
+  third_party_organization: Organisatie
   third_party_curriculum: Lesprogramma
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_pricing: Prijzen
+  third_party_cost_free: Gratis voor studenten en docenten
+  third_party_cost_5permonth: "$5/ per maand per klas"
+  third_party_cost_299: "$2.99/per download"
+  third_party_cost_free_399: Gratis te proberen, $399/per klas
+  third_party_cost_free_2: Gratis uit te proberen, $2/per student
+  third_party_cost_free_10: Gratis uit te proberen, $9.99/ per maand
+  third_party_desc_5_4to8: Ongeveer 5 lessen, gericht op niveau 4-8
+  third_party_desc_10to12_kto3: Ongeveer 10-12 lessen, gericht op niveau K-3
+  third_party_desc_11_kto5: Ongeveer 11 lessen, gericht op niveau K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
     K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_40_4to8: Meer dan 40 lessen, gericht op niveaus 4-8
+  third_party_desc_dozens_kto8: Tientallen lessen voor alle niveaus K-8
+  third_party_desc_10to15_3to12: Tussen 10 & 15 lessen, gericht op niveaus 3-12
+  third_party_desc_25to40_3to12: Van 25-40 lessen, bestemd voor niveaus 3-12
+  third_party_desc_20_2to8: Ongeveer 20 lessen, gericht op niveaus 2-8
   third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
   third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: Selecteer een geldige leeftijd
@@ -377,6 +384,9 @@
   homepage_banner_20k_teachers: 20.000 leraren zijn getraind en doceren nu informatica
     in de klas.
   homepage_banner_20k_teachers_link: Leer meer
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
@@ -402,6 +412,7 @@
   homepage_slot_text_link_stats: Bekijk de statistieken
   homepage_slot_text_link_buy: Doe mee
   homepage_slot_text_link_donate: Doneer
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Creaties van Code Studio leerlingen
   homepage_header_donors: Code.org dankt zijn aanhangers
   homepage_donors_seall: Alles weergeven
@@ -592,6 +603,7 @@
     voor basisschoolleerlingen.
   dashboard_landing_new_k5courses: Nieuw! Probeer onze cursussen voor basisschoolleerlingen.
   dashboard_landing_useful_links: Andere nuttige links (alleen in het Engels)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Stel ons persoonlijk een vraag! Bezoek onze maandelijkse
     video kantooruren.
   dashboard_landing_print_certificates: Print certificaten voor leerlingen die deze
@@ -612,6 +624,11 @@
   dashboard_landing_more_tutorials_desc: Er zijn meer opdrachten <a href="/learn/beyond">van
     onze partners.</a> Leer programmeren met robots, maak webpagina's, maak je eigen
     app of ontdek andere programmeertalen zoals C++, Ruby en Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Het Uur Code voor alle leeftijden
   dashboard_hoc_courses_desc: Probeer een 1-uurs cursus met je leerlingen!
   dashboard_hoc_courses_desc_and_cta: Probeer deze korte lessen van één uur met uw
@@ -662,6 +679,18 @@
   dashboard_action_remove_confirm: Verwijder?
   dashboard_action_done: Voltooid
   dashboard_action_required: verplicht
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Startpagina voor de leerkracht
   dashboard_navigation_section_student_progress: Leerlingaccounts en vooruitgang
   dashboard_navigation_section_teacher_progress: De vooruitgang van je cursus
@@ -670,7 +699,7 @@
   dashboard_navigation_section_pd: Professionele ontwikkeling
   dashboard_navigation_section_speakers: Informatica <br/> gastsprekers
   dashboard_navigation_all_sections: Leerlingaccounts en vooruitgang
-  dashboard_navigation_view_progress: bekijk de vooruitgang
+  dashboard_navigation_view_progress: Voortgang
   dashboard_navigation_view_text_responses: Bekijk de tekstuele reacties
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Leerlingen Toevoegen
@@ -679,6 +708,19 @@
   dashboard_navigation_view_stats: Statistieken Bekijken
   dashboard_navigation_section: 'groep: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_progress_not_started: niet gestart
+  dashboard_progress_in_progress: wordt uitgevoerd
+  dashboard_progress_not_completed: niet voltooid
+  dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
+  dashboard_progress_completed_perfect: voltooid, perfect
+  dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
+  dashboard_progress_submitted: verstuurd
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nieuw onderdeel
   dashboard_sections_jumbotron_instruction: Maak nieuwe groepen aan en voeg er studenten
     aan toe. Groepen helpen u met het verdelen van studenten in kleinere groepen,
@@ -687,6 +729,7 @@
   dashboard_sections_table_secret: Login-Type
   dashboard_sections_table_grade: Cijfer
   dashboard_sections_table_course: Cursus
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Leerlingen
   dashboard_sections_table_code: Groepscode
   dashboard_sections_name: Groepsnaam
@@ -703,6 +746,26 @@
   dashboard_sections_print_secrets: U kan dan een vel printen met kaarten et accmountgegevens
     van uw individuele leerlingen, die u kunt ronddelen.
   dashboard_sections_switch_section: 'switch groep:'
+  dashboard_sections_close: Afsluiten
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Voeg leerling toe
   dashboard_students_add_students: Voeg meerdere leerlingen toe
   dashboard_students_add_multiple: 'Typ of plak hier de namen van uw studenten, één
@@ -761,6 +824,8 @@
   dashboard_course2: 'Cursus 2:'
   dashboard_course3: 'Cursus 3:'
   dashboard_course4: 'Cursus 4 (bèta): '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Lesprogramma
   dashboard_curriculum_overview: Basisschool Curriculum overzicht
   dashboard_overview: Overzicht
@@ -784,13 +849,6 @@
   dashboard_login_picture: Beeld
   dashboard_login_none: E-mail
   dashboard_new_password: Nieuw wachtwoord
-  dashboard_progress_not_started: niet gestart
-  dashboard_progress_in_progress: wordt uitgevoerd
-  dashboard_progress_not_completed: niet voltooid
-  dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
-  dashboard_progress_completed_perfect: voltooid, perfect
-  dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
-  dashboard_progress_submitted: submitted
   dashboard_stage: niveau
   dashboard_puzzle: puzzel
   dashboard_question: Vraag
@@ -800,6 +858,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Juist
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -826,18 +886,18 @@
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
   dashboard_announce_view_all: Alles weergeven
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Leer meer
-  dashboard_announce_hoc: "<b>15 oktober 2015</b> - het Uur Code komt &mdash; elke
-    deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel
-    als een bedankje. Doe mee met klassen over de hele wereld tijdens 7-13 December."
-  dashboard_announce_playlab: "<b>4 December 2015</b> - de Hour of Code is hier! 50
-    lessen voor elke leeftijd en elk device proberen. Nieuw deze week: uw eigen verhalen
-    en spelletjes maken met de speel labs Ice Age en Gumball."
+  dashboard_announce_petition: Als leerkracht neemt u het voortouw in een beweging
+    die elke leerling op elke school de mogelijkheid geeft om informatica te leren.
+    Nu is het de tijd om uw vertegenwoordigers van u te laten horen. Deze week schrijven
+    onderwijsleiders, 28 gouverneurs en CEO's van Amerika's grootste bedrijven samen
+    een open brief aan het Amerikaanse Congres met de vraag om informatica op de basisschool
+    te financieren.
+  dashboard_announce_petition_button: Voeg je naam toe
   code_hoc_coming: Het Uur Code is hier - van 8 -14 december!
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   learn_more: Probeer nu
@@ -960,15 +1020,41 @@
   course3_name: Cursus 3
   course4_name: Les 4
   accelerated_name: versnelde cursus
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: versnelde cursus
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Klassiek doolhof
+  iceage_name: Ice Age
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Wiskunde
+  hoc_category_name: Een Uur Code
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Leeftijd 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

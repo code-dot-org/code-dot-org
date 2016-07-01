@@ -116,7 +116,7 @@ StudioAnimation.prototype.createElement = function (parentElement) {
 /**
  * Remove our element/clipPath/animator
  */
-StudioAnimation.prototype.removeElement = function() {
+StudioAnimation.prototype.removeElement = function () {
 
   if (this.element_) {
     this.element_.parentNode.removeChild(this.element_);

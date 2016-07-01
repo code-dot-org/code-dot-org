@@ -5,25 +5,21 @@ end
 
 # Returns the state name associated with the state abbreviation abbr.
 # abbr: A two character (uppercase or lowercase) symbol or string.
-def get_us_state_from_abbr(abbr)
-  return STATE_ABBR_HASH[get_uppercase_symbol(abbr)]
-end
-
-# Returns the state name associated with the state (including Washington DC)
-# abbreviation abbr.
-# abbr: A two character (uppercase or lowercase) symbol or string.
-def get_us_state_with_dc_from_abbr(abbr)
+# include_dc: (default: false) Whether to include Washington DC as a state.
+def get_us_state_from_abbr(abbr, include_dc = false)
   abbr = get_uppercase_symbol(abbr)
-  if abbr == :DC
-    return 'Washington DC'
-  end
-  return get_us_state_from_abbr(abbr)
+  return include_dc ? STATE_ABBR_WITH_DC_HASH[abbr] : STATE_ABBR_HASH[abbr]
 end
 
 # Returns whether the abbreviation is a state (including Washington DC)
 # abbreviation.
-def us_state_with_dc_abbr?(abbr)
-  return !get_us_state_with_dc_from_abbr(abbr).nil?
+def us_state_abbr?(abbr, include_dc = false)
+  return !get_us_state_from_abbr(abbr, include_dc).nil?
+end
+
+# Returns the entire list of states (including Washington DC)
+def get_all_states_with_dc
+  return STATE_ABBR_WITH_DC_HASH.sort_by {|_code, name| name}
 end
 
 STATE_ABBR_HASH = {
@@ -78,3 +74,5 @@ STATE_ABBR_HASH = {
   WI: 'Wisconsin',
   WY: 'Wyoming',
 }
+
+STATE_ABBR_WITH_DC_HASH = STATE_ABBR_HASH.merge({DC: 'Washington DC'})

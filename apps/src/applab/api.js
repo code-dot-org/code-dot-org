@@ -256,14 +256,14 @@ exports.dropdown = function (elementId) {
                            'optionsArray': optionsArray });
 };
 
-exports.getAttribute = function(elementId, attribute) {
+exports.getAttribute = function (elementId, attribute) {
   return Applab.executeCmd(null,
                            'getAttribute',
                            {elementId: elementId,
                             attribute: attribute});
 };
 
-exports.setAttribute = function(elementId, attribute, value) {
+exports.setAttribute = function (elementId, attribute, value) {
   return Applab.executeCmd(null,
                            'setAttribute',
                            {elementId: elementId,
@@ -380,7 +380,7 @@ exports.playSound = function (url) {
                           {'url': url});
 };
 
-exports.getKeyValue = function(key, onSuccess, onError) {
+exports.getKeyValue = function (key, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'getKeyValue',
                            {'key':key,
@@ -388,14 +388,14 @@ exports.getKeyValue = function(key, onSuccess, onError) {
                             'onError': onError});
 };
 
-exports.getKeyValueSync = function(key, callback) {
+exports.getKeyValueSync = function (key, callback) {
   return Applab.executeCmd(null,
                            'getKeyValueSync',
                            {'key':key,
                             'callback': callback});
 };
 
-exports.setKeyValue = function(key, value, onSuccess, onError) {
+exports.setKeyValue = function (key, value, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'setKeyValue',
                            {'key':key,
@@ -404,7 +404,7 @@ exports.setKeyValue = function(key, value, onSuccess, onError) {
                             'onError': onError});
 };
 
-exports.setKeyValueSync = function(key, value, callback) {
+exports.setKeyValueSync = function (key, value, callback) {
   return Applab.executeCmd(null,
                            'setKeyValueSync',
                            {'key':key,
@@ -621,4 +621,39 @@ exports.drawChartFromRecords = function (chartId, chartType, tableName, columns,
                            'columns': columns,
                            'options': options,
                            'callback': callback });
+};
+
+exports.pinMode = function (pin, mode) {
+  return Applab.executeCmd(null,
+      'pinMode',
+      {'pin': pin,
+       'mode': mode });
+};
+
+exports.digitalWrite = function (pin, value) {
+  return Applab.executeCmd(null,
+      'digitalWrite',
+      {'pin': pin,
+       'value': value });
+};
+
+exports.digitalRead = function (pin, callback) {
+  return Applab.executeCmd(null,
+      'digitalRead',
+      {'pin': pin,
+       'callback': callback });
+};
+
+exports.analogWrite = function (pin, value) {
+  return Applab.executeCmd(null,
+      'analogWrite',
+      {'pin': pin,
+       'value': value });
+};
+
+exports.analogRead = function (pin, callback) {
+  return Applab.executeCmd(null,
+      'analogRead',
+      {'pin': pin,
+       'callback': callback });
 };

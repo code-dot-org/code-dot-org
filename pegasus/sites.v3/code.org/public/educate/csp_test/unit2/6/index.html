@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this 2-day lesson, students will design their own way to encode a personal experience (such as attending a party, playing a game, etc). The project begins with students doing some top-down design to figure out the components and subcomponents of an experience that are encodable as binary information. Students then select a portion of the experience to flesh out into a a more detailed design. The project includes a written reflection questions similar to those students will see on the AP Performance Tasks. While students will complete this project individually, they will exchange feedback with a classmate at one point of the project.">
+    <title>Practice PT - Encode an Experience</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit2/"><span class="h2">Unit</span><span class="h1">2</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit2/ch1" data-pdf-link="#unit2chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/1" data-pdf-link="#unit2lesson1">
+                1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/2" data-pdf-link="#unit2lesson2">
+                2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/3" data-pdf-link="#unit2lesson3">
+                3
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/4" data-pdf-link="#unit2lesson4">
+                4
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/5" data-pdf-link="#unit2lesson5">
+                5
+            </a>
+            </div>
+            
+                
+                    
+                        <div class="lesson current">
+                    
+                
+            <a href="/educate/csp_test/unit2/6" data-pdf-link="#unit2lesson6">
+                6
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit2/ch2" data-pdf-link="#unit2chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/7" data-pdf-link="#unit2lesson7">
+                7
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/8" data-pdf-link="#unit2lesson8">
+                8
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/9" data-pdf-link="#unit2lesson9">
+                9
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/10" data-pdf-link="#unit2lesson10">
+                10
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/11" data-pdf-link="#unit2lesson11">
+                11
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/12" data-pdf-link="#unit2lesson12">
+                12
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/13" data-pdf-link="#unit2lesson13">
+                13
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/14" data-pdf-link="#unit2lesson14">
+                14
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/15" data-pdf-link="#unit2lesson15">
+                15
+            </a>
+            </div>
+            
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit2lesson6">
+        
+            
+                <h1>Lesson 6: Practice PT - Encode an Experience</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+                
+                Practice PT
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this 2-day lesson, students will design their own way to encode a personal experience (such as attending a party, playing a game, etc). The project begins with students doing some top-down design to figure out the components and subcomponents of an experience that are encodable as binary information. Students then select a portion of the experience to flesh out into a a more detailed design.  The project includes a written reflection questions similar to those students will see on the AP Performance Tasks. While students will complete this project individually, they will exchange feedback with a classmate at one point of the project.</p>
+<p><strong>Note:</strong> This is NOT the official AP® Performance Task that will be submitted as part of the Advanced Placement exam; it is a practice activity intended to prepare students for some portions of their individual performance at a later time.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>In terms of Big Ideas in AP CSP this lesson is very much about Abstraction.  Abstraction is the practice of temporarily ignoring details to focus only on the most significant or relevant portions of a problem. In the instance of binary information, we know that it’s just a sequence of bits underlying even seemingly complex data structures, but we don’t have to worry about that all the time.  The ability to rely on high-level encodings and temporarily ignore lower-level details is the key to building the complex systems that we use and interact with every day.</p>
+<p>The main purposes of this lesson are to:</p>
+<ul>
+<li>Put a bow on thinking about the digital (binary) representation of information.</li>
+<li>Practice creating an abstraction of their own design</li>
+<li>Practice writing in response to an open prompt</li>
+<li>Submit a written project</li>
+</ul>
+<p>The course focuses so much on the digital representation of information because it is probably the most fundamental law of computing. So much of computer science is abstract, but it is all grounded in the laws and limitations of having to represent <em>everything</em> in binary.  Internalizing this fact, and internalizing the levels of abstraction that result, we believe is central to what makes a person “good with computers” or “natural” with them.  Similarly, being able to take a high-level, human idea and break it down into something that <em>could be</em> computed on is the fundamental essence of what it means to do computing work.</p>
+<p>Certainly, it helps a person explain and grapple with abstract computing ideas later on this course.  For example, when programming you have to manage complexity in code by breaking things down into smaller procedures and routines.  You have to make many choices about how to represent and store the information your program needs.  The person who implicitly understands the difference between choosing to use the number 5 instead of the character “5” is more likely to make the right choice. </p>
+<p>It’s useful to practice the mechanics of producing a project like this on a tight timeline, especially one that includes both design and written elements. It’s up to you how much you want to mimic the AP Performance Task process, but this relatively small-scoped project would be a very useful barometer for you and your students to see what it takes to take a project from initial understanding to actual submission of an artifact.  </p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocpractice-pt-encode-an-experience">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity (2 days)</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Assessment</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Break a complex piece of information down into its component parts such that it could be represented on a computer.</li>
+                    
+                        <li>Complete reflection questions in a format similar to those on the AP®  performance tasks.</li>
+                    
+                        <li>Choose appropriate binary encodings for specific pieces of information and justify those choices.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit1/lesson17" target="_blank">Forum</a></li>
+<li>Determine how you want to collect the project - digitally or on paper - and prepare to explain that to students</li>
+<li>Determine what (if anything) you want to print for distribution to students</li>
+<li>Review the “birthday party” example from the activity guide</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit1' target='_blank' class='print_link'>CSP Unit 1</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1Qao_Qq5Z4Ta1ns_K3T7wip53MLQvJOouwFHIP2zmKsE' target='_blank' class='print_link'>Encode and Experience Templates</a> - Project Templates (<a href='https://docs.google.com/document/d/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1kmIJlEyS4V6kU47vzyZMlENsdgLJoV-ZLyYQ2RIjuN8' target='_blank' class='print_link'>Encode an Experience</a> - Activity Guide (includes Rubric) (<a href='https://docs.google.com/document/d/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Vocabulary</h2>
+                <ul>
+                    
+                        <li><strong>Abstraction</strong> - Pulling out specific differences to make one solution work for multiple problems.</li>
+                    
+                </ul>
+            
+
+        </div>
+    </div>
+
+    <div id="practice-pt-encode-an-experiencecontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <div class="admonition discussion">
+<p class="admonition-title" id="discussion_None"><i class="glyphicon glyphicon-comment"></i>Discussion Goal</p>
+<div>
+<p>Introduce the term “abstraction” (see paragraph below), and frame the coming project as an opportunity for students to develop their own layers of abstraction.</p>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_abstraction"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<p>You do not have to give all of these examples if you think students get it, or you have already covered these ideas with some detail.  The point is to convey the central importance that developing abstractions and understanding the effects and trade-offs that result from having to represent <em>all</em> information in binary has on pretty much anything having to do with computers.</p>
+</div>
+</div>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div></div>
+<div>
+<p>Throughout this unit, we have been building layers of encodings on top of the foundation of bits. </p>
+</div>
+<div>
+<p>First we learned to develop binary numbers, then ASCII text, then formatted text, and finally color images. High-level encodings are actually quite removed from the underlying bits from which they are made.  </p>
+</div>
+<div>
+<p>In the world of computer science, we call this <strong>abstraction</strong> - a mental tool that allows us to ignore low-level details when they are unnecessary. This ability to ignore small details is what allows us to develop complex encodings and protocols. </p>
+</div>
+<div>
+<p>For example, the encoding for an image doesn’t need to know that the RGB values in each pixel are actually 8-bit numbers, and an encoding for formatted text does not care how the ASCII symbols that comprise it are actually represented. As long as there is some way to encode numbers and characters, these high-level encodings will function.</p>
+</div>
+<div>
+<p>We also so this with the layers of Internet Protocols that we designed.  The DNS protocol doesn’t need to care or know how the bits are physically being transmitted to and from it, or even how the request is routed to it.  That all has to happen of course, but DNS only has to focus on the the higher-level task of mapping a domain name to a number.</p>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity (2 days)</h2>
+                    <h3 id="introduce-the-project-encode-an-experience">Introduce the Project: Encode an Experience</h3>
+<p>Today we are starting a project in which you are going to apply this idea of abstraction as you set out to build your own encoding and layers of abstraction for a complex piece of information.</p>
+<p>The Big Question is: <strong>How can you take something complex like a human experience, and break it down so that it <em>could</em> be represented in a computer?</strong></p>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_example"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<p>For example: how might you digitally encode the experience of attending a birthday party?</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_example"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p>If you are comfortable doing it, you should consider demonstrating the birthday party example from the activity guide for the class <strong>BEFORE</strong> distributing the activity guide to students.</p>
+</div>
+<div>
+<p>Understanding the requirements of the project might be much easier to understand once students have seen a more fully worked example. </p>
+</div>
+<div>
+<p>You could simply display the example from the activity guide, or do a more interactive, inquiry-based approach asking students for examples and drawing the diagram on the board as you go.  It doesn’t need to end up exactly like the one provided in the activity guide, but you could probably coerce students toward it.</p>
+</div>
+</div>
+<h3 id="distribute-activity-guide-and-project-templates">Distribute Activity Guide and Project Templates</h3>
+<ul>
+<li>
+<p>Distribute the <strong>Activity Guide: <a class="resource" href="https://docs.google.com/document/d/1kmIJlEyS4V6kU47vzyZMlENsdgLJoV-ZLyYQ2RIjuN8" target="_blank">Encode an Experience</a></strong>.  The activity guide contains:</p>
+<ul>
+<li>A description of the project</li>
+<li>An example of encoding a birthday party</li>
+<li>Submission guidelines and Rubric</li>
+</ul>
+</li>
+<li>
+<p>(Optional) Distribute the <strong><a class="resource" href="https://docs.google.com/document/d/1Qao_Qq5Z4Ta1ns_K3T7wip53MLQvJOouwFHIP2zmKsE" target="_blank">Encode and Experience Templates</a></strong>.  You can collect student work on paper, or digitally free form, or use these templates.  This document contains:</p>
+<ul>
+<li>A page for drawing a diagram</li>
+<li>A template for the detailed encoding</li>
+<li>Space for the written reflection</li>
+</ul>
+</li>
+<li>
+<p>Review the project guidelines</p>
+</li>
+<li>
+<p>Review the “Birthday Party” Example</p>
+</li>
+<li>
+<p>Answer questions. Students will need time to understand the extent of the project and expectations for their final product.</p>
+</li>
+</ul>
+<div class="admonition guide">
+<p class="admonition-title" id="guide_None"><i class="fa fa-pencil-square-o"></i>Practice PT: Encode an Experience</p>
+<div></div>
+</div>
+<div class="guide">
+<p>A proposed schedule of the steps of this project is provided below, as well as more thorough explanations of how to conduct the various stages.</p>
+<h3 id="day-1">Day 1</h3>
+<ul>
+<li>Review Project Guidelines and Rubric.</li>
+<li>Step 1: Choose the experience to encode: Brainstorm ideas.</li>
+<li>Step 2: Break down the topic – Create the top-down diagram of the experience chosen.</li>
+<li>Consult a peer – Present ideas and provide feedback to each other on progress thus far.</li>
+<li>Start Step 3: Detailed encoding</li>
+</ul>
+<h3 id="day-2">Day 2</h3>
+<ul>
+<li>Finish Step 3: Develop a detailed encoding .</li>
+<li>Respond to reflection Question: There are trade-offs in the digital representation of information</li>
+<li>Submit project</li>
+</ul>
+<p><strong>Selecting an Experience to Encode</strong></p>
+<p>Provide students with time to develop a topic of their encoding. Encourage them to pick something they really like, are interested in, or know a lot about. The most important thing is to pick a category of experience rather than a single instance.  For example, “taking a trip to the grand canyon” is better than “that time I went to the grand canyon”.  You might need to encourage or remind students that ultimately we’re trying to figure out if there is a way to encode this kind of experience in such a way that it could be represented in a computer.</p>
+<p><strong> Making the diagram </strong></p>
+<p>If you intend to collect this digitally this is an opportunity to have students use a digital tool to make the diagram.  The diagrams in the activity guide itself were made simply with the drawing tool provided in Google Docs (Insert -&gt; Drawing). Students could do this directly in the google doc templates provided.  Alternatively you can print out the templates and have students draw it by hand.  </p>
+<p>Either way, in the interest of time <em>some amount</em> of hand-drawing and sketching is probably a good idea.  Draw by hand first, then commit to digital form if you’re going that route.</p>
+<p><strong> Choosing a Peer Reviewer </strong></p>
+<p>While the project will be completed individually, students should consult a peer during the process to receive feedback and brainstorm ideas. Either assign pairs or allow students to pick their own.</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<p>If students are having difficulty developing their encoding, or with any part of the project, encourage them to talk with their peer reviewer. Develop the expectation that prior to asking you for help, students will have consulted one another.</p>
+</div>
+</div>
+<p><strong> Peer Consultation </strong>
+After students have outlined their encoding, they should meet with their peer reviewers, present their work so far, and provide feedback regarding their progress. Potential Questions to address:</p>
+<ul>
+<li>Do you think this experience is a good choice? Why or why not?</li>
+<li>Have I identified the basic elements correctly? Did I miss any?</li>
+<li>Do you think I will be able to encode this data? What challenges do you think I will have?</li>
+<li>Do you have any suggestions for the next steps?</li>
+</ul>
+<p><strong> Creating the Detailed Encoding </strong>
+Students incorporate feedback from their peer reviewer to develop their encoding. This project can be completed entirely digitally, using the templates provided, but if students will be visually arranging their tables on a poster or on paper, they should be given access to needed supplies. </p>
+<p><strong> Written reflection and submission </strong>
+It is likely students will need a decent amount of time to write a response for the written portion of the project. </p>
+<p>Communicate to students how they will be submitting their projects and ensure they have the tools necessary to produce and submit their projects.</p>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p><strong>Gallery Walk:</strong> If students create visual representations of their encodings, then you may want to provide time to present their work to their classmates in a gallery walk. Students should hopefully appreciate the diversity of interests and encodings created.</p>
+</div>
+<div>
+<p>Feel free to exclude the wrap-up activity in the interest of time. Neither is an essential portion of the Performance Tasks and they are included only to provide a more natural conclusion to the project within your class.</p>
+</div>
+</div>
+<p><strong>Self-assess:</strong> It can be a useful exercise to have students briefly assess themselves using the rubric they were provided at the beginning of the project. Ask them to identify points where they could improve, and remind them that this rubric is very similar in structure to the one that will be used on the actual AP Performance Tasks they will see later in the year.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <ul>
+<li><strong>Rubric:</strong> Use the provided rubric in the activity guide, or one of your own creation, to assess  students’ submissions.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>Ask students to each examine a classmate’s submission and identify potential additions or improvements to the encoding.</li>
+<li>Locate the most recent Performance Task Descriptions: http://media.collegeboard.com/digitalServices/pdf/ap/ap-computer-science-principles-performance-assessment.pdf</li>
+<li>Locate the most recent Performance Task Rubrics: http://www.csprinciples.org/home/about-the-project</li>
+</ul>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L2:13</strong> - Understand the notion of hierarchy and abstraction in computing including high level languages, translation, instruction set and logic circuits.</li>
+                        
+                            <li><strong>CT.L2:14</strong> - Examine connections between elements of mathematics and computer science including binary numbers, logic, sets and functions.</li>
+                        
+                            <li><strong>CT.L2:7</strong> - Represent data in a variety of ways including text, sounds, pictures and numbers.</li>
+                        
+                            <li><strong>CT.L2:8</strong> - Use visual representations of problem states, structures and data (e.g., graphs, charts, network diagrams, flowcharts).</li>
+                        
+                            <li><strong>CT.L2:9</strong> - Interact with content-specific models and simulations (e.g., ecosystems, epidemics, molecular dynamics) to support learning and research.</li>
+                        
+                            <li><strong>CT.L3A:6</strong> - Analyze the representation and trade-offs among various forms of digital information.</li>
+                        
+                            <li><strong>CT.L3B:8</strong> - Use models and simulations to help formulate, refine, and test scientific hypotheses.</li>
+                        
+                            <li><strong>CT.L3B:9</strong> - Analyze data and identify patterns through modeling and simulation.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>2.1</strong> - A variety of abstractions built upon binary sequences can be used to represent all digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.1</strong> - Describe the variety of abstractions used to represent data. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.1A</strong> - Digital data is represented by abstractions at different levels.</li>
+                                
+                                    <li><strong>2.1.1B</strong> - At the lowest level, all digital data are represented by bits.</li>
+                                
+                                    <li><strong>2.1.1C</strong> - At a higher level, bits are grouped to represent abstractions, including but not limited to numbers, characters, and color.</li>
+                                
+                                    <li><strong>2.1.1D</strong> - Number bases, including binary, decimal, and hexadecimal, are used to represent and investigate digital data.</li>
+                                
+                                    <li><strong>2.1.1E</strong> - At one of the lowest levels of abstraction, digital data is represented in binary (base 2) using only combinations of the digits zero and one.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.2</strong> - Explain how binary sequences are used to represent digital data. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.2A</strong> - A finite representation is used to model the infinite mathematical concept of a number. </li>
+                                
+                                    <li><strong>2.1.2B</strong> - In many programming languages, the fixed number of bits used to represent characters or integers limits the range of integer values and mathematical operations; this limitation can result in overflow or other errors.</li>
+                                
+                                    <li><strong>2.1.2D</strong> - The interpretation of a binary sequence depends on how it is used.</li>
+                                
+                                    <li><strong>2.1.2F</strong> - A sequence of bits may represent different types of data in different contexts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.2</strong> - Multiple levels of abstraction are used to write programs or create other computational artifacts</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.2.1</strong> - Develop an abstraction when writing a program or creating other computational artifacts. [P2]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.2.1A</strong> - The process of developing an abstraction involves removing detail and generalizing functionality.</li>
+                                
+                                    <li><strong>2.2.1B</strong> - An abstraction extracts common features from specific examples in order to generalize concepts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocpractice-pt-encode-an-experience').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#practice-pt-encode-an-experiencecontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'practice-pt-encode-an-experience', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

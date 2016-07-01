@@ -21,6 +21,10 @@ var MAX_DEBUG_AREA_HEIGHT = 400;
 var WATCH_TIMER_PERIOD = 500;
 /** @const {string} */
 var WATCH_COMMAND_PREFIX = "$watch ";
+/** @const {string} */
+var UNWATCH_COMMAND_PREFIX = "$unwatch ";
+/** @const {string} */
+var WATCH_VALUE_NOT_RUNNING = "undefined";
 
 /**
  * Debugger controls and debug console used in our rich JavaScript IDEs, like
@@ -78,24 +82,6 @@ var JsDebuggerUi = module.exports = function (runApp) {
 };
 
 /**
- * Generate DOM element markup from an ejs file for the debug area.
- * @param {!function} assetUrl - Helper for getting asset URLs.
- * @param {!Object} options
- * @param {!boolean} options.showButtons - Whether to show the debug buttons
- * @param {!boolean} options.showConsole - Whether to show the debug console
- * @param {!boolean} options.showWatch - Whether to show the debug watch area
- * @returns {string} of HTML markup to be embedded in codeWorkspace.html.ejs
- */
-JsDebuggerUi.prototype.getMarkup = function (assetUrl, options) {
-  return require('./JsDebuggerUi.html.ejs')({
-    assetUrl: assetUrl,
-    debugButtons: options.showButtons,
-    debugConsole: options.showConsole,
-    debugWatch: options.showWatch
-  });
-};
-
-/**
  * Attach the debugger to a particular JSInterpreter instance.  Reinitializes
  * the UI state and begins listening for interpreter events.
  * @param {JSInterpreter} jsInterpreter
@@ -109,7 +95,7 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
   this.observer_.observe(jsInterpreter.onExecutionWarning,
       this.log.bind(this));
 
-  this.watchIntervalId_ = setInterval(this.onWatchTimer_.bind(this),
+  this.watchIntervalId_ = setInterval(this.updateWatchView_.bind(this),
       WATCH_TIMER_PERIOD);
 
   this.updatePauseUiState();
@@ -127,13 +113,9 @@ JsDebuggerUi.prototype.detach = function () {
   this.observer_.unobserveAll();
   this.jsInterpreter_ = null;
 
-  var debugWatchDiv = this.getElement_('#debug-watch');
-  if (debugWatchDiv) {
-    clearAllChildElements(debugWatchDiv);
-  }
-  this.watchExpressions_ = {};
   clearInterval(this.watchIntervalId_);
   this.watchIntervalId_ = 0;
+  this.updateWatchView_();
 
   this.resetDebugControls_();
 };
@@ -306,17 +288,25 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     e.target.textContent = '';
     this.log('> ' + input);
     var jsInterpreter = this.jsInterpreter_;
-    if (jsInterpreter) {
-      if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
-        var watchExpression = input.substring(WATCH_COMMAND_PREFIX.length);
-        this.watchExpressions_[watchExpression] = {};
-      } else {
-        try {
-          var result = jsInterpreter.evalInCurrentScope(input);
-          this.log('< ' + String(result));
-        } catch (err) {
-          this.log('< ' + String(err));
-        }
+    var watchExpression;
+    if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
+      watchExpression = input.substring(WATCH_COMMAND_PREFIX.length);
+      this.watchExpressions_[watchExpression] = {};
+      // Update immediately. When not running, this will confirm that the watch
+      // was added, since no timer will refresh automatically:
+      this.updateWatchView_();
+    } else if (0 === input.indexOf(UNWATCH_COMMAND_PREFIX)) {
+      watchExpression = input.substring(UNWATCH_COMMAND_PREFIX.length);
+      delete this.watchExpressions_[watchExpression];
+      // Update immediately. When not running, this will confirm that the watch
+      // was removed, since no timer will refresh automatically:
+      this.updateWatchView_();
+    } else if (jsInterpreter) {
+      try {
+        var result = jsInterpreter.evalInCurrentScope(input);
+        this.log('< ' + String(result));
+      } catch (err) {
+        this.log('< ' + String(err));
       }
     } else {
       this.log('< (not running)');
@@ -449,23 +439,16 @@ JsDebuggerUi.prototype.clearDebugInput = function () {
   }
 };
 
-JsDebuggerUi.prototype.onPauseContinueButton = function() {
+JsDebuggerUi.prototype.onPauseContinueButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    // We have code and are either running or paused
-    if (jsInterpreter.paused &&
-        jsInterpreter.nextStep === StepType.RUN) {
-      jsInterpreter.paused = false;
-    } else {
-      jsInterpreter.paused = true;
-      jsInterpreter.nextStep = StepType.RUN;
-    }
+    jsInterpreter.handlePauseContinue();
 
     this.updatePauseUiState();
   }
 };
 
-JsDebuggerUi.prototype.updatePauseUiState = function() {
+JsDebuggerUi.prototype.updatePauseUiState = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (!jsInterpreter) {
     return;
@@ -532,32 +515,29 @@ JsDebuggerUi.prototype.resetDebugControls_ = function () {
   }
 };
 
-JsDebuggerUi.prototype.onStepOverButton = function() {
+JsDebuggerUi.prototype.onStepOverButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    jsInterpreter.paused = true;
-    jsInterpreter.nextStep = StepType.OVER;
+    jsInterpreter.handleStepOver();
     this.updatePauseUiState();
   }
 };
 
-JsDebuggerUi.prototype.onStepInButton = function() {
+JsDebuggerUi.prototype.onStepInButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (!jsInterpreter) {
     this.runApp_();
     this.onPauseContinueButton();
     jsInterpreter = this.jsInterpreter_;
   }
-  jsInterpreter.paused = true;
-  jsInterpreter.nextStep = StepType.IN;
+  jsInterpreter.handleStepIn();
   this.updatePauseUiState();
 };
 
-JsDebuggerUi.prototype.onStepOutButton = function() {
+JsDebuggerUi.prototype.onStepOutButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    jsInterpreter.paused = true;
-    jsInterpreter.nextStep = StepType.OUT;
+    jsInterpreter.handleStepOut();
     this.updatePauseUiState();
   }
 };
@@ -572,28 +552,29 @@ function clearAllChildElements(element) {
  * Refresh the watch expressions.
  * @private
  */
-JsDebuggerUi.prototype.onWatchTimer_ = function() {
+JsDebuggerUi.prototype.updateWatchView_ = function () {
   var jsInterpreter = this.jsInterpreter_;
-  if (jsInterpreter) {
-
+  var debugWatchDiv = this.getElement_('#debug-watch');
+  if (debugWatchDiv) {
+    clearAllChildElements(debugWatchDiv);
     for (var watchExpression in this.watchExpressions_) {
-      var currentValue = jsInterpreter.evaluateWatchExpression(watchExpression);
+      var currentValue;
+      if (jsInterpreter) {
+        currentValue = jsInterpreter.evaluateWatchExpression(watchExpression);
+      } else {
+        currentValue = WATCH_VALUE_NOT_RUNNING;
+      }
       if (this.watchExpressions_[watchExpression].lastValue !== currentValue) {
         // Store new value
         this.watchExpressions_[watchExpression].lastValue = currentValue;
       }
-      var debugWatchDiv = this.getElement_('#debug-watch');
-      if (debugWatchDiv) {
-        clearAllChildElements(debugWatchDiv);
-        var watchItem = document.createElement('div');
-        watchItem.className = 'debug-watch-item';
-        watchItem.innerHTML = require('./JsDebuggerWatchItem.html.ejs')({
-          varName: watchExpression,
-          varValue: currentValue
-        });
-        debugWatchDiv.appendChild(watchItem);
-      }
+      var watchItem = document.createElement('div');
+      watchItem.className = 'debug-watch-item';
+      watchItem.innerHTML = require('./JsDebuggerWatchItem.html.ejs')({
+        varName: watchExpression,
+        varValue: currentValue
+      });
+      debugWatchDiv.appendChild(watchItem);
     }
   }
 };
-

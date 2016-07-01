@@ -21,14 +21,33 @@ module UsersHelper
   #             "levels": {"135": {"status": "perfect", "result": 100}}},
   #         "artist": {
   #             "levels": {
-  #                "1138": {"status": "attempted", "result": 5},
-  #                "1147": {"status": "perfect", "result": 30}}}}}
+  #                "1138": {"status": "attempted", "result": 5, submitted: false},
+  #                "1139": {"status": "attempted", "result": 5, submitted: true},
+  #                "1142": {"status": "attempted", "result": 5, pages_completed: [true, false, false], submitted: false},
+  #                "1147": {"status": "perfect", "result": 30, submitted: false}}}}}
   def summarize_user_progress_for_all_scripts(user)
     user_data = {}
     merge_user_summary(user_data, user)
     user_data[:scripts] = {}
     merge_scripts_progress(user_data[:scripts], user)
     user_data
+  end
+
+  def summarize_trophies(script, user = current_user)
+    return {} unless user
+
+    progress = user.progress(script)
+    trophies = {
+      current: progress['current_trophies'],
+      of: I18n.t(:of),
+      max: progress['max_trophies'],
+    }
+
+    user.concept_progress(script).each_pair do |concept, counts|
+      trophies[concept.name] = counts[:current].to_f / counts[:max]
+    end
+
+    trophies
   end
 
   # Merge the user summary into the specified result hash.
@@ -60,15 +79,14 @@ module UsersHelper
     return user_data unless user
 
     if script.trophies
-      progress = user.progress(script)
-      user_data[:trophies] = {
-          current: progress['current_trophies'],
-          of: I18n.t(:of),
-          max: progress['max_trophies'],
-      }
+      user_data[:trophies] = summarize_trophies(script, user)
+    end
 
-      user.concept_progress(script).each_pair do |concept, counts|
-        user_data[:trophies][concept.name] = counts[:current].to_f / counts[:max]
+    if script.professional_learning_course?
+      unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
+      if unit_assignment
+        user_data[:focusAreaPositions] = unit_assignment.focus_area_positions
+        user_data[:changeFocusAreaPath] = script_preview_assignments_path script
       end
     end
 
@@ -77,20 +95,88 @@ module UsersHelper
       script_levels = script.script_levels
       user_data[:levels] = {}
       script_levels.each do |sl|
-        result = level_info(user, sl, uls)
-        submitted = level_submitted(user, sl, uls)
-        completion_status = submitted ? "submitted" : (activity_css_class result)
-        if completion_status != 'not_tried'
-          user_data[:levels][sl.level_id] = {
-              status: completion_status,
-              result: result,
-              submitted: submitted
-          }
+        sl.level_ids.each do |level_id|
+          ul = uls.try(:[], level_id)
+          completion_status = activity_css_class(ul)
+          submitted = !!ul.try(:submitted)
+          if completion_status != 'not_tried'
+            user_data[:levels][level_id] = {
+                status: completion_status,
+                result: ul.try(:best_result) || 0,
+                submitted: submitted
+            }
+
+            # Just in case this level has multiple pages, in which case we add an additional
+            # array of booleans indicating which pages have been completed.
+            pages_completed = get_pages_completed(user, sl)
+            if pages_completed
+              user_data[:levels][level_id][:pages_completed] = pages_completed
+              pages_completed.each_with_index do |result, index|
+                user_data[:levels]["#{level_id}_#{index}"] = {
+                  result: result,
+                  submitted: submitted
+                }
+              end
+            end
+          end
         end
       end
     end
 
     user_data
+  end
+
+  # Given a user and a script-level, returns a nil if there is only one page, or an array of
+  # values if there are multiple pages.  The array contains whether each page is completed, partially
+  # completed, or not yet attempted.  These values are ActivityConstants::FREE_PLAY_RESULT,
+  # ActivityConstants::UNSUBMITTED_RESULT, and nil, respectively.
+  #
+  # Since this is currently just used for multi-page LevelGroup levels, we only check that a valid
+  # (though not necessarily correct) answer has been given for each level embedded on a given page.
+  def get_pages_completed(user, sl)
+    level = sl.level
+
+    if level.is_a? LevelGroup
+      pages_completed = []
+
+      last_attempt = JSON.parse(user.last_attempt(level).level_source.data)
+
+      # Go through each page.
+      level.properties["pages"].each do |page|
+        page_valid_result_count = 0
+
+        # Construct an array of the embedded level names used on the page.
+        embedded_level_names = []
+        page["levels"].each do |level_name|
+          embedded_level_names << level_name
+        end
+
+        # Retrieve the level information for those embedded levels.  These results
+        # won't necessarily match the order of level names as requested, but
+        # fortunately we are just accumulating a count and don't mind the order.
+        Level.where(name: embedded_level_names).each do |embedded_level|
+          level_id = embedded_level.id
+
+          # Do we have a valid result for this level in the LevelGroup last_attempt?
+          if last_attempt[level_id.to_s] && last_attempt[level_id.to_s]["valid"]
+            page_valid_result_count += 1
+          end
+        end
+
+        # The page is considered complete if there was a valid result for each
+        # embedded level.
+        if page_valid_result_count == 0
+          page_completed_value = nil
+        elsif page_valid_result_count == page["levels"].length
+          page_completed_value = ActivityConstants::FREE_PLAY_RESULT
+        else
+          page_completed_value = ActivityConstants::UNSUBMITTED_RESULT
+        end
+        pages_completed << page_completed_value
+      end
+
+      pages_completed
+    end
   end
 
   def percent_complete(script, user = current_user)
@@ -108,23 +194,4 @@ module UsersHelper
     completed = levels.count{|l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}
     completed.to_f / levels.count
   end
-
-  private
-
-  def level_info(user, script_level, user_levels)
-    if user
-      user_levels[script_level.level_id].try(:best_result) || 0
-    else
-      0
-    end
-  end
-
-  def level_submitted(user, script_level, user_levels)
-    if user
-      user_levels[script_level.level_id].try(:submitted) || false
-    else
-      false
-    end
-  end
-
 end

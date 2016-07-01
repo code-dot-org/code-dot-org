@@ -1,13 +1,12 @@
-/* global $ */
-
-
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
-var EnumPropertyRow = require('./EnumPropertyRow.jsx');
+import $ from 'jquery';
+import React from 'react';
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
+var EnumPropertyRow = require('./EnumPropertyRow');
 
 var elementUtils = require('./elementUtils');
 
@@ -88,7 +87,7 @@ var TextInputEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getChangeEventCode: function() {
+  getChangeEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
@@ -97,11 +96,11 @@ var TextInputEvents = React.createClass({
     return code;
   },
 
-  insertChange: function() {
+  insertChange: function () {
     this.props.onInsertEvent(this.getChangeEventCode());
   },
 
-  getInputEventCode: function() {
+  getInputEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "input", function(event) {\n' +
@@ -110,7 +109,7 @@ var TextInputEvents = React.createClass({
     return code;
   },
 
-  insertInput: function() {
+  insertInput: function () {
     this.props.onInsertEvent(this.getInputEventCode());
   },
 
@@ -159,8 +158,8 @@ module.exports = {
     return element;
   },
 
-  onDeserialize: function(element) {
-    $(element).on('mousedown', function(e) {
+  onDeserialize: function (element) {
+    $(element).on('mousedown', function (e) {
       if (!Applab.isRunning()) {
         // Disable clicking into text input unless running
         e.preventDefault();

@@ -1,5 +1,8 @@
 /*jshint scripturl:true*/
 
+import $ from 'jquery';
+import _ from 'lodash';
+var React = require('react');
 window.dashboard = window.dashboard || {};
 
 var MenuState = {
@@ -27,6 +30,7 @@ var SmallFooter = React.createClass({
       thank_you: React.PropTypes.string.isRequired,
       help_from_html: React.PropTypes.string.isRequired,
       art_from_html: React.PropTypes.string.isRequired,
+      code_from_html: React.PropTypes.string.isRequired,
       powered_by_aws: React.PropTypes.string.isRequired,
       trademark: React.PropTypes.string.isRequired
     }),
@@ -136,7 +140,7 @@ var SmallFooter = React.createClass({
       smallFooter: {
         fontSize: this.props.fontSize
       },
-      base: $.extend({}, this.props.baseStyle, {
+      base: _.assign({}, this.props.baseStyle, {
         paddingBottom: 3,
         paddingTop: 3,
         // subtract top/bottom padding from row height
@@ -195,6 +199,7 @@ var SmallFooter = React.createClass({
             <EncodedParagraph text={this.props.copyrightStrings.thank_you}/>
             <p>{this.props.copyrightStrings.help_from_html}</p>
             <EncodedParagraph text={this.props.copyrightStrings.art_from_html}/>
+            <EncodedParagraph text={this.props.copyrightStrings.code_from_html}/>
             <p>{this.props.copyrightStrings.powered_by_aws}</p>
             <EncodedParagraph text={this.props.copyrightStrings.trademark}/>
           </div>

@@ -1,11 +1,13 @@
-/* globals $ */
-
+import $ from 'jquery';
+var React = require('react');
+var msg = require('../locale');
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
  */
 var VersionRow = React.createClass({
   propTypes: {
+    versionId: React.PropTypes.string.isRequired,
     lastModified: React.PropTypes.instanceOf(Date),
     isLatest: React.PropTypes.bool,
     onChoose: React.PropTypes.func
@@ -22,11 +24,15 @@ var VersionRow = React.createClass({
   render: function () {
     var button;
     if (this.props.isLatest) {
-      button = <button className="btn-default" disabled="disabled" style={{cursor: "default"}}>Current Version</button>;
+      button = <button className="btn-default" disabled="disabled" style={{cursor: "default"}}>{msg.currentVersion()}</button>;
     } else {
-      button = <button className="btn-info" onClick={this.props.onChoose}>
-        Restore this Version
-      </button>;
+      button = [
+        <a key={0} href={location.href + '?version=' + this.props.versionId}
+          target="_blank">
+          <button className="version-preview"><i className="fa fa-eye"></i></button>
+        </a>,
+        <button key={1} className="btn-info" onClick={this.props.onChoose}>{msg.restoreThisVersion()}</button>
+      ];
     }
 
     return (
@@ -35,7 +41,7 @@ var VersionRow = React.createClass({
           <p>Saved <time className="versionTimestamp" dateTime={this.props.lastModified.toISOString()}>{this.getLastModifiedTimestamp()}</time></p>
           {this.getLastModifiedTimestamp()}
         </td>
-        <td width="250" style={{textAlign: 'right'}}>
+        <td width="275" style={{textAlign: 'right'}}>
           {button}
         </td>
       </tr>

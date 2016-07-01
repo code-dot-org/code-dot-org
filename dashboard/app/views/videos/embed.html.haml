@@ -4,6 +4,7 @@
 - video_info = local_assigns[:video_info]
 %head
   = stylesheet_link_tag    '/code-studio/assets/video-js/video-js', media: 'all'
+  = render partial: 'layouts/analytics'
   = javascript_include_tag 'js/embedVideo'
 %html{:dir => locale_dir}
   :css
@@ -33,4 +34,4 @@
   :javascript
     var width = $(window).width();
     var height = $(window).height();
-    createVideoWithFallback($('#video-container'), #{video_info.to_json}, width, height);
+    window.dashboard.videos.createVideoWithFallback($('#video-container'), #{video_info.to_json}, width, height);

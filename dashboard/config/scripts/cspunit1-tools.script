@@ -1,0 +1,7 @@
+pd 'true'
+title 'netsim task completion'
+description 'introduction to the internet simulator and a discussion of how we use it to teach the internet'
+login_required 'true'
+
+stage 'netsim'
+level 'plc csp1 intro to tools'

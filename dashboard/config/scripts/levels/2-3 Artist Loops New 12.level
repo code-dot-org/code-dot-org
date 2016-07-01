@@ -34,7 +34,11 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Before starting the diamond, the artist needs to turn left by 60 degrees to get on the right path.\",\r\n  \"hint_id\": \"2-3_Artist Loops_New_12_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n   {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"After the artist goes forward 100 pixels, he will need to turn right 120 degrees to make the sharp corner.\",\r\n  \"hint_id\": \"2-3_Artist Loops_New_12_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n   {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The artist will need to turn right only 60 degrees to create a wide corner.\",\r\n  \"hint_id\": \"2-3_Artist Loops_New_12_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": "Edited 3/3/16 to remove loop requirement (since next puzzle didn't assume it and it would have created a nested loop situation.) Also added three hints to help construct the diamond.  Removed block count.\r\n\r\n"
+  "notes": "Edited 3/3/16 to remove loop requirement (since next puzzle didn't assume it and it would have created a nested loop situation.) Also added three hints to help construct the diamond.  Removed block count.\r\n\r\n",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

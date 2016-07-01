@@ -1,46 +1,49 @@
 class Ability
   include CanCan::Ability
 
+  # Define abilities for the passed in user here. For more information, see the
+  # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
   def initialize(user)
-    # Define abilities for the passed in user here. For example:
-    #
-    user ||= User.new # guest user (not logged in)
-    if user.admin?
-      can :manage, :all
+    user ||= User.new
 
-      # Only custom levels are editable
-      cannot [:update, :destroy], Level do |level|
-        !level.custom?
-      end
-    else
-      can :read, :all
-      cannot :read, [
-        Script, # see override below
-        ScriptLevel, # see override below
-        PrizeProvider,
-        Prize,
-        TeacherPrize,
-        TeacherBonusPrize,
-        LevelSourceHint,
-        FrequentUnsuccessfulLevelSource,
-        :reports,
-        User,
-        Follower,
-        # Ops models
-        District,
-        Workshop,
-        Cohort,
-        WorkshopAttendance,
-        # PLC Stuff
-        Plc::Course,
-        Plc::LearningModule,
-        Plc::Task,
-        Plc::UserCourseEnrollment,
-        Plc::CourseUnit
-      ]
-    end
+    # Abilities for all users, signed in or not signed in.
+    can :read, :all
+    cannot :read, [
+      Script, # see override below
+      ScriptLevel, # see override below
+      PrizeProvider,
+      Prize,
+      TeacherPrize,
+      TeacherBonusPrize,
+      LevelSourceHint,
+      FrequentUnsuccessfulLevelSource,
+      :reports,
+      User,
+      UserPermission,
+      Follower,
+      PeerReview,
+      # Ops models
+      District,
+      Workshop,
+      Cohort,
+      WorkshopAttendance,
+      # PLC Stuff
+      Plc::Course,
+      Plc::LearningModule,
+      Plc::Task,
+      Plc::UserCourseEnrollment,
+      Plc::CourseUnit,
+      # PD models
+      Pd::Workshop,
+      Pd::Attendance,
+      Pd::DistrictPaymentTerm,
+      Pd::DistrictReport,
+      Pd::WorkshopOrganizerReport,
+      Pd::TeacherProgressReport,
+      Pd::CourseFacilitator
+    ]
 
-    if user.id
+    if user.persisted?
       can :manage, user
 
       can :create, Activity, user_id: user.id
@@ -51,8 +54,9 @@ class Ability
       can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower, student_user_id: user.id
+      can :read, UserPermission, user_id: user.id
 
-      if user.hint_access? || user.teacher?
+      if user.teacher? || (user.persisted? && user.permission?(UserPermission::HINT_ACCESS))
         can :manage, [LevelSourceHint, FrequentUnsuccessfulLevelSource]
       end
 
@@ -64,6 +68,11 @@ class Ability
         can :read, Workshop
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty?
+        end
+        can :read, Plc::UserCourseEnrollment, user_id: user.id
+        can :manage, Pd::Enrollment, teacher_id: user.id
+        can :view_level_solutions, Script do |script|
+          !script.professional_learning_course?
         end
       end
 
@@ -79,6 +88,8 @@ class Ability
         can :manage, Workshop do |workshop|
           workshop.facilitators.include? user
         end
+        can [:read, :start, :end], Pd::Workshop, facilitators: {id: user.id}
+        can :manage, Pd::Attendance, workshop: {facilitators: {id: user.id}}
       end
 
       if user.district_contact?
@@ -88,45 +99,96 @@ class Ability
             district.contact_id == user.id
           end
         end
+        can :read, Pd::TeacherProgressReport
+        can :group_view, Plc::UserCourseEnrollment
+        can :manager_view, Plc::UserCourseEnrollment do |enrollment|
+          DistrictsUsers.exists?(user: enrollment.user, district: District.where(contact: user.id).pluck(:id))
+        end
+        can :read, Pd::DistrictReport
+      end
+
+      if user.workshop_organizer?
+        can :create, Pd::Workshop
+        can :manage, Pd::Workshop, organizer_id: user.id
+        can :manage, Pd::Attendance, workshop: {organizer_id: user.id}
+        can :read, Pd::WorkshopOrganizerReport
+        can :read, Pd::TeacherProgressReport
+        can :read, Pd::CourseFacilitator
       end
     end
 
-    if user.id && user.admin?
+    # Override Script and ScriptLevel.
+    if user.persisted? && user.admin?
       can :read, Script
       can :read, ScriptLevel
-    elsif user.id # logged in, not admin
+    elsif user.persisted? && user.student_of_admin? # logged in, not admin, is student of admin
       can :read, Script do |script|
         !script.admin_required?
       end
       can :read, ScriptLevel do |script_level|
         !script_level.script.admin_required?
       end
-    else # not logged in
+    elsif user.persisted? # logged in, not admin, not student of admin
       can :read, Script do |script|
-        !script.admin_required? && !script.login_required?
+        !script.admin_required? &&
+            !script.student_of_admin_required?
       end
       can :read, ScriptLevel do |script_level|
-        !script_level.script.login_required? && !script_level.script.admin_required?
+        !script_level.script.admin_required? &&
+            !script_level.script.student_of_admin_required?
+      end
+    else # not logged in
+      can :read, Script do |script|
+        !script.admin_required? &&
+            !script.student_of_admin_required? &&
+            !script.login_required?
+      end
+      can :read, ScriptLevel do |script_level|
+        !script_level.script.login_required? &&
+            !script_level.script.student_of_admin_required? &&
+            !script_level.script.admin_required?
       end
     end
 
-    #
-    # The first argument to `can` is the action you are giving the user
-    # permission to do.
-    # If you pass :manage it will apply to every action. Other common actions
-    # here are :read, :create, :update and :destroy.
-    #
-    # The second argument is the resource the user can perform the action on.
-    # If you pass :all it will apply to every resource. Otherwise pass a Ruby
-    # class of the resource.
-    #
-    # The third argument is an optional hash of conditions to further filter the
-    # objects.
-    # For example, here the user can only update published articles.
-    #
-    #   can :update, Article, :published => true
-    #
-    # See the wiki for details:
-    # https://github.com/ryanb/cancan/wiki/Defining-Abilities
+    # Handle standalone projects as a special case.
+    # They don't necessarily have a model, permissions and redirects are run
+    # through ProjectsController and their view/edit requirements are defined
+    # there.
+    ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
+      if project_type_props[:admin_required]
+        can :load_project, project_type_key if user.admin?
+      elsif project_type_props[:student_of_admin_required]
+        can :load_project, project_type_key if user.admin? || user.student_of_admin?
+      elsif project_type_props[:login_required]
+        can :load_project, project_type_key if user.id
+      else
+        can :load_project, project_type_key
+      end
+    end
+
+    # In order to accommodate the possibility of there being no database, we
+    # need to check that the user is persisted before checking the user
+    # permissions.
+    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+      can :manage, [
+        Level,
+        Script,
+        ScriptLevel
+      ]
+
+      # Only custom levels are editable.
+      cannot [:update, :destroy], Level do |level|
+        !level.custom?
+      end
+    end
+
+    if user.admin?
+      can :manage, :all
+
+      # Only custom levels are editable
+      cannot [:update, :destroy], Level do |level|
+        !level.custom?
+      end
+    end
   end
 end

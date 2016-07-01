@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:31.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Scene Design Part 3 Reflection: Getting Started",
+    "markdown_instructions": "What can you learn by reflecting on your independent work in this project and on your contributions to an effective team effort?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

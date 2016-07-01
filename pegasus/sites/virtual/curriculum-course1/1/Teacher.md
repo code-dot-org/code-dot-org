@@ -10,8 +10,8 @@ theme: none
 
 [together]
 
-## Lesson Overview 
-At the root of all computer science is something called an algorithm.  The word “algorithm” may sound like something complicated, but really it’s just a list of instructions that someone can follow to achieve a result.  To provide a solid base for the rest of your students’ computer science education, we’re going to focus on building a secure relationship with algorithms. 
+## Lesson Overview
+At the root of all computer science is something called an algorithm.  The word “algorithm” may sound like something complicated, but really it’s just a list of instructions that someone can follow to achieve a result.  To provide a solid base for the rest of your students’ computer science education, we’re going to focus on building a secure relationship with algorithms.
 
 [summary]
 
@@ -19,27 +19,27 @@ At the root of all computer science is something called an algorithm.  The word 
 ### **Getting Started** - 10 minutes
 
 1) [Vocabulary](#Vocab) <br/>
-2) [Step-by-Step](#GetStarted)  
+2) [Step-by-Step](#GetStarted)
 
-### **Activity: Happy Maps** - 20  minutes  
+### **Activity: Happy Maps** - 20  minutes
 
-3) [Happy Maps: Single-Step Adventure](#Activity1)  
+3) [Happy Maps: Single-Step Adventure](#Activity1)
 
-<!-- 
+<!--
 4) [Double-Step Adventure](#Activity2)
---> 
+-->
 
-### **Wrap-up** - 5  minutes 
+### **Wrap-up** - 5  minutes
 
 4) [Flash Chat](#WrapUp) - What did we learn?  
 5) [Vocab Shmocab](#Shmocab)
 
-### **Assessment** - 10  minutes 
+### **Assessment** - 10  minutes
 6) [Move the Flurbs Assessment](#Assessment)
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - List steps to move character around a map
 - Arrange directions to reach predetermined goal
@@ -54,7 +54,7 @@ At the root of all computer science is something called an algorithm.  The word 
 ## Materials, Resources and Prep
 ### For the Student
 - Maps and arrows from [Happy Maps: Single-Step Adventure](/curriculum/course1/1/Activity1-HappyMaps.pdf)
-- Game Pieces: Flurbs, Arrows, and Things 
+- Game Pieces: Flurbs, Arrows, and Things
 - Assessment Worksheet: [Move the Flurbs Assessment](/curriculum/course1/1/Assessment1-HappyMaps.pdf)
 - Scissors
 - Glue
@@ -81,14 +81,14 @@ This lesson has one new and important word:<br/>
 [/centerIt]
 
 **Algorithm** - Say it with me: Al-go-ri-thm <br/>
-A list of steps that you can follow to finish a task. 
+A list of steps that you can follow to finish a task.
 
 ### <a name="GetStarted"></a> 2) Step-by-Step
 - Ask your students for directions to the chalkboard.
-	- If they start shouting simultaneously, explain that you can only hear one instruction at a time.  Call on students individually if that helps. 
+	- If they start shouting simultaneously, explain that you can only hear one instruction at a time.  Call on students individually if that helps.
 - When you reach the board, ask for instructions to draw a smiley face.
 	- Again, request one step at a time.
-- Explain that many tasks can be described using a specific list of instructions. That list is called an algorithm. 
+- Explain that many tasks can be described using a specific list of instructions. That list is called an algorithm.
 - Challenge your students to work together in small groups to come up with algorithms for their single-step and double-step mazes.
 
 [/together]
@@ -96,7 +96,7 @@ A list of steps that you can follow to finish a task.
 [tip]
 
 # Lesson Tip
-Students can work in pairs to create the adventures, then work in pairs to solve the adventures of others.  If this feels too chaotic you can work together as a class and create the adventure on a document camera, then work together to solve it. 
+Students can work in pairs to create the adventures, then work in pairs to solve the adventures of others.  If this feels too chaotic you can work together as a class and create the adventure on a document camera, then work together to solve it.
 
 [/tip]
 
@@ -108,15 +108,15 @@ Students can work in pairs to create the adventures, then work in pairs to solve
 - Print out an activity packet for every group (ideally 2 to 4 students) and cut the Maps apart. Leave the arrow symbols for the students to cut apart.
 - Explain the rules to the class, making sure to emphasise the new word "algorithm."
 
-> Flurbs are happy, fuzzy little things. 
+> Flurbs are happy, fuzzy little things.
 
-> Flurbs love to eat fruit.  Fruit is hard to find in Flurb Town. Use the maps to help the Flurb find some fruit. 
+> Flurbs love to eat fruit.  Fruit is hard to find in Flurb Town. Use the maps to help the Flurb find some fruit.
 
-> Work with your group to decide which direction the Flurb needs to step to get to the fruit.  
+> Work with your group to decide which direction the Flurb needs to step to get to the fruit.
 
 **Directions for Class:**
 
-> 1)  Cut out an arrow for each member of your team. 
+> 1)  Cut out an arrow for each member of your team.
 
 [centerIt]
 
@@ -136,7 +136,7 @@ Students can work in pairs to create the adventures, then work in pairs to solve
 
 <br/><br/>
 
-> 3)  Have each member of your group put an arrow next to the map to vote for which way the Flurb should step.  
+> 3)  Have each member of your group put an arrow next to the map to vote for which way the Flurb should step.
 
 > 4)  If not all arrows are pointing the same way, talk to each other and decide as a group which way the arrow should point.
 
@@ -146,10 +146,10 @@ Students can work in pairs to create the adventures, then work in pairs to solve
 
 <br/><br/>
 
-<!-- 
+<!--
 ### <a name="Activity2"></a> 4) Double-Step Adventure
-- The Double-Step sheet encourages students to take their knowledge just a little bit further as they find algorithms that will lead their Flurbs to their goal which is two or more steps away. 
---> 
+- The Double-Step sheet encourages students to take their knowledge just a little bit further as they find algorithms that will lead their Flurbs to their goal which is two or more steps away.
+-->
 
 [/together]
 
@@ -163,7 +163,7 @@ Students can work in pairs to create the adventures, then work in pairs to solve
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future.  Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
 [/tip]
@@ -186,7 +186,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 ## Assessment (10 min)
 ### <a name="Assessment"></a>6) [Move the Flurbs](/curriculum/course1/1/Assessment1-HappyMaps.pdf)
-- Hand out the worksheet titled "Move the Flurbs" and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the worksheet titled "Move the Flurbs" and allow students to complete the activity independently after the instructions have been well explained.
 
 [/together]
 
@@ -196,7 +196,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### Create Your Own
@@ -207,7 +207,7 @@ If the students are still excited by the exercise, give them a more complicated 
 
 ### Flurb Flash
 
-- Cycle quickly through single-step puzzles on your projector. Have the students hold up an arrow card or simply point in the direction that they think the Flurb should move.  
+- Cycle quickly through single-step puzzles on your projector. Have the students hold up an arrow card or simply point in the direction that they think the Flurb should move.
 
 [/together]
 
@@ -217,27 +217,27 @@ If the students are still excited by the exercise, give them a more complicated 
 
 ### ISTE Standards (formerly NETS)
 
-- 1.c - Use models and simulation to explore complex systems and issues.   
-- 2.d - Contribute to project teams to solve problems.  
-- 6.a - Understand and use technology systems.   
+- 1.c - Use models and simulation to explore complex systems and issues.
+- 2.d - Contribute to project teams to solve problems.
+- 6.a - Understand and use technology systems.
 
 
 ### CSTA K-12 Computer Science Standards
- 
-- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task. 
-- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving. 
-- CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises.  
+
+- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task.
+- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving.
+- CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises.
 - CT.L2-03 - Define an algorithm as a sequence of instructions that can be processed by a computer.
 - CT.L2-06 - Describe and analyze a sequence of instructions being followed.
 
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 6. Attend to precision.
 - 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.  
+- 8. Look for and express regularity in repeated reasoning.
 
 ### Common Core Math Standards
 
@@ -253,16 +253,14 @@ If the students are still excited by the exercise, give them a more complicated 
 - SL.1.2 - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
 - SL.1.5 - Add drawings or other visual displays to descriptions when appropriate to clarify ideas, thoughts, and feelings.
 - L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-- SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups. 
+- SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
 - SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
 - SL.2.5 - Create audio recordings of stories or poems; add drawings or other visual displays to stories or recounts of experiences when appropriate to clarify ideas, thoughts, and feelings.
 - L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

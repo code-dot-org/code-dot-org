@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson, students continue their exploration of computationally hard problems as they investigate a one-way function, a problem which is easy to construct in such a way that you know the solution, but it is computationally hard to solve. Students will begin the lesson by trying to solve the “Wireless Hotspot Problem” (also know as the vertex cover or dominating sets problem) to experience first-hand the challenge of solving it. They will then be instructed on how easy it is to create such a problem and will practice doing so themselves. In the Wrap-up, students are introduced to the concept of a one-way function and consider why such problems might be useful tools when constructing methods of encryption. If it’s easy to create a problem that is hard for a computer (or human!) to solve, then perhaps it is possible to make truly secure encryptions.">
+    <title>One-way Functions - The WiFi Hotspot Problem</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit4/"><span class="h2">Unit</span><span class="h1">4</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/1" data-pdf-link="#unit4lesson1">
+            1
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/2" data-pdf-link="#unit4lesson2">
+            2
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/3" data-pdf-link="#unit4lesson3">
+            3
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/4" data-pdf-link="#unit4lesson4">
+            4
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/5" data-pdf-link="#unit4lesson5">
+            5
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/6" data-pdf-link="#unit4lesson6">
+            6
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/7" data-pdf-link="#unit4lesson7">
+            7
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/8" data-pdf-link="#unit4lesson8">
+            8
+        </a>
+        </div>
+        
+            
+                
+                    <div class="lesson current">
+                
+            
+        <a href="/educate/csp_test/unit4/9" data-pdf-link="#unit4lesson9">
+            9
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/10" data-pdf-link="#unit4lesson10">
+            10
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/11" data-pdf-link="#unit4lesson11">
+            11
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/12" data-pdf-link="#unit4lesson12">
+            12
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/13" data-pdf-link="#unit4lesson13">
+            13
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/14" data-pdf-link="#unit4lesson14">
+            14
+        </a>
+        </div>
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit4lesson9">
+        
+            
+                <h1>Lesson 9: One-way Functions - The WiFi Hotspot Problem</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+                
+                Optional
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson, students continue their exploration of computationally hard problems as they investigate a one-way function, a problem which is easy to construct in such a way that you know the solution, but it is computationally hard to solve. Students will begin the lesson by trying to solve the “Wireless Hotspot Problem” (also know as the vertex cover or dominating sets problem) to experience first-hand the challenge of solving it. They will then be instructed on how easy it is to create such a problem and will practice doing so themselves. In the Wrap-up, students are introduced to the concept of a one-way function and consider why such problems might be useful tools when constructing methods of encryption. If it’s easy to create a problem that is hard for a computer (or human!) to solve, then perhaps it is possible to make truly secure encryptions.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>Modern encryption techniques are designed around a set of problems that are known to be computationally hard to solve. A computationally hard problem is one for which the number of possible solutions grows quickly (typically exponentially), and which requires a computer to check each possible solution, also called a brute force search. The Traveling Salesman problem is computationally hard, but it has the drawback that even the person who constructed the problem might not know the optimal solution. In other words, the creator also has to do a brute force search, just like everyone else. Some computationally hard problems, such as the one covered in this lesson, can easily be constructed so that the creator knows the solution, but they are still computationally hard for anyone else to solve. These problems are called one-way functions and are very useful for encryption, since all encryption is an attempt to create a one-way function.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocone-way-functions-the-wifi-hotspot-problem">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Describe the properties of a one-way function.</li>
+                    
+                        <li>Construct a wireless hotspot map,  starting from a solution key.</li>
+                    
+                        <li>Explain why the wireless hotspot problem is a computationally hard problem.</li>
+                    
+                        <li>Describe the difference between the Traveling Salesman Problem and the Wireless Hotspot Problem and why one-way functions are desirable when creating cryptographic methods.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit2/lesson17" target="_blank">Forum</a></li>
+<li>Paper copies of both worksheets, one of each per student</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2/stage/17/puzzle/1' target='_blank' class='print_link'>KEY - Make Your Own Wireless Hotspot Problem</a> - Answer Key
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2/stage/17/puzzle/1' target='_blank' class='print_link'>KEY - Wireless Hotspot Problem</a> - Answer Key
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1luezxRb3SeHnehy32SB_keXboZktutVG4RB3JNvW2r4/edit?usp=sharing' target='_blank' class='print_link'>Make Your Own Wireless Hotspot Problem</a> - Worksheet (<a href='https://docs.google.com/document/d/1luezxRb3SeHnehy32SB_keXboZktutVG4RB3JNvW2r4/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1npOrwCrM80LCXMgRYGM6V-gNm-pbpIp9KBUca2P5AMs/edit?usp=sharing' target='_blank' class='print_link'>Wireless Hotspot Problem</a> - Worksheet (<a href='https://docs.google.com/document/d/1npOrwCrM80LCXMgRYGM6V-gNm-pbpIp9KBUca2P5AMs/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="one-way-functions-the-wifi-hotspot-problemcontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <p><strong>Review:</strong> <em>Say:</em> In the previous lesson we explored a computationally hard problem called the Traveling Salesman Problem. The only known way to find the shortest path is to perform a brute force search, or in other words, try every possible path.  There are <strong>heuristics</strong> for getting close to a good solution but no known way to get the exact solution without trying every possible path, which is prohibitively large.  It would take an <strong>unreasonable</strong> amount of time to solve.  </p>
+<p>As we saw, it’s fairly easy to draw a map which will take a computer (or person) thousands of years to solve.  An interesting thing about the Traveling Salesman Problem is that, even if you are the one making the map (assuming it’s not trivial), it’s also impossible for you to know the correct solution without also using the brute force approach. </p>
+<p>Computationally hard problems are used to make encryption really strong, but we don’t totally know how this works yet. Today we’re going to look at another hard problem that moves us back toward the path to encryption.  We’d like to have some way to construct a problem that is computationally hard to solve but to which we know the answer!</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>You may choose to skip this introduction if you would rather not clue students in on the surprise of today’s lesson. If you feel students are comfortable with the vocabulary and concepts of the previous lesson, dive right into trying to crack the Wireless Hotspot Problem, and make the connection between the previous lesson and this one after students have experienced the challenge and learned to create the problem themselves.</p>
+</div>
+<div>
+<p><strong>How is this different from one-way functions we’ve seen before?</strong></p>
+</div>
+<div>
+<p>The Caesar and Vigenère encryption algorithms are attempts to create a one-way function.  However, they result in ciphertexts that are crackable using heuristics and techniques like frequency analysis.  Up to this point, we have not seen a one-way function that produces a problem that is actually computationally hard to solve.</p>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <p><strong>Distribute:</strong> Provide students with copies of <a href="Wireless Hotspot Problem" target="_blank">Worksheet - Wireless Hotspot Problem</a>. Students may work individually or in pairs on this challenge. You may choose to read the instructions together, to ensure that the challenge is clear and students know how to proceed.</p>
+<p><strong>Work on the Challenge:</strong> Students should work on the challenge for several minutes, but probably 10 at the most. You should offer help as needed, and encourage students to continue to work on their solutions. Just because students found a good solution doesn’t mean that it’s actually the best! With a more competitive class, you might want to keep a running track of the best solution found so far. Alternately, ask students to check one another’s solutions or help one another get started if they’re having trouble.</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>If one group claims to have found a solution, ask how many hotspots they needed, and challenge other groups to find the same or a better solution.  (The optimal number is 5.  If anyone claims fewer than 5, they’re missing a connection somewhere.)</p>
+</div>
+<div>
+<p>It’s possible that no one will find the optimal solution. That’s the point! This is a chance to better understand another computationally hard problem. Ideally, this will also drive home the significance of the fact that they can easily create this kind of problem and know the solution.</p>
+</div>
+<div>
+<p>(The solution is in <a href="KEY - Wireless Hotspot Problem" target="_blank">Worksheet KEY - Wireless Hotspot Problem</a>).</p>
+</div>
+</div>
+<p><strong>Share Results:</strong> Ask students to stop working and compare their results with classmates, other groups, or as a class. <em>Prompts:</em></p>
+<ul>
+<li>What was the smallest set of hot spots they were able to find? </li>
+<li>What types of heuristics did you employ to find your solution? (e.g., pick the most connected corners first)<ul>
+<li>Use this opportunity to recall this vocabulary from the previous lesson. A heuristic is just a strategy for arriving at a “pretty good” solution when there’s no obvious way to get a perfect one.</li>
+<li><strong>Note:</strong> Even if some heuristics for this problem do a good job, none will always guarantee a perfect solution.</li>
+</ul>
+</li>
+<li>Are you sure this is the actual smallest? How could you be certain?<ul>
+<li>Students should begin to suspect that this problem can only be solved through a brute force search, i.e., trying every combination with one node, then two, then three, and so on, until a solution is found. Clearly, this could take a very long time, just like the Traveling Salesman Problem.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Discuss:</strong> Relate the experience with this problem to that on the Traveling Salesman Problem. </p>
+<p><em>Prompts:</em></p>
+<ul>
+<li>How is this problem similar to the Traveling Salesman Problem? <ul>
+<li>Possible points: it’s a graph algorithm, you’re looking for one best solution, it just seems hard to do. This question is more to draw the original connection and prepare for the following question.</li>
+</ul>
+</li>
+<li>How would a computer approach this problem? How long is it going to take? <ul>
+<li>If students have not already noticed, confirm that this is a computationally hard problem and would require a brute force search. Just like in the Traveling Salesman Problem, the number of possible solutions is multiplied every time another node is added, so even for small graphs, this problem can take an extremely long time to solve.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>If you are interested in the math….how hard is this problem?</p>
+</div>
+<div>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L17-hotspots-1.png"><img alt="" class="right" src="https://code.org/educate/docs/csp/U2L17-hotspots-1.png"></a> There is no known algorithmic way to figure out the placement of the hotspots besides brute force.  That means if you think there is a 3-hotspot solution, you have to try every possible placement of 3 hotspots in the map to verify that it does (or doesn’t) work.</p>
+</div>
+<div>
+<p>Our town has 23 locations in it.  So there 23 ways to place the first hotspot, 22 remaining locations to place the second, 21 for the third, and so on.  </p>
+</div>
+<div>
+<p>This means for 5 hotspots (the actual minimum number), to make sure that you would find the solution, you would have to try: 23 x 22 x 21 x 20 x 19 = 4,037,880 possibilities!  Of course, you’d have to try all the possibilities for fewer hotspots first, since you wouldn’t actually know ahead of time that 5 was the minimum.  To see how fast this grows: a 100-node map, with a 10-hotspot solution (something you could draw by hand in minutes) would have 100 x 99 x 98 x …. x 91 = 62,815,650,955,529,470,000 (62 quintillion) possibilities.</p>
+</div>
+</div>
+<p><strong>Transition:</strong> The problem we just explored is actually a very famous one in computer science, technically known as the vertex cover problem. It is significant because, just like the Traveling Salesman Problem, it is computationally hard to solve perfectly. Heuristics give good solutions, but perfect solutions can only be found with a brute force search. But there is one very big difference between the Traveling Salesman Problem and the Wireless Hotspot Problem: the person who creates the problem can know the solution ahead of time - WITHOUT performing a brute force search. Let’s see how.</p>
+<p><strong>Distribute:</strong> Distribute to each group or student the <a href="Make Your Own Wireless Hotspot Problem" target="_blank">Worksheet - Make Your Own Wireless Hotspot Problem</a>. Students may either read through the explanation there or you can review the explanation as a class.</p>
+<p>Following the instructions the worksheet, students have been provided space to create their own maps. Ask students to follow the steps to make a map, and keep track of their solution somewhere else (a separate sheet of paper, their journals, etc.) They should then exchange with a partner to see if they can find the results. If they follow the steps, it’s quite easy to make a problem that their classmates will have a very hard time cracking, even with just a few nodes.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>Reflect:</strong> Students should complete the reflection questions at the bottom of their worksheets in preparation for the following discussion.</p>
+<p><strong>Discuss:</strong> <em>Say:</em> The Wireless Hotspot Problem is one of a category of problems called “one-way functions.” The person who creates the problem can easily know the solution, but for anyone else, finding the solution requires a brute force search. A problem you create in 20 seconds could take even the most powerful computers years to solve.</p>
+<ul>
+<li>When else have we seen things that act like one-way functions?<ul>
+<li>Students may make the connection to encryption.  With the Vigenère cipher, if you know the key, encrypting the text is easy, but undoing it is very hard.</li>
+<li><strong>Important Note:</strong> The Vigenère cipher is actually NOT a computationally hard problem to solve.  It is an attempt to make text hard to crack, but there are techniques for cracking it very quickly.  The Wireless Hotspot Problem is the first one-way function we’ve actually seen that results in a computationally hard problem.</li>
+</ul>
+</li>
+<li>Why might we want to use a one-way-function when designing a method of cryptography?<ul>
+<li>When we encrypt a piece of information, we would like it to be easy for the person doing the encryption, but hard for even a powerful computer to crack the encryption.</li>
+</ul>
+</li>
+<li>In the Wireless Hotspot Problem, what could act as a “key” to our encryption?<ul>
+<li>Recall that the key is the portion of the encryption that remains a secret. When constructing your own map, perhaps there is some way of using those “secret nodes” as a key.</li>
+<li><strong>Note:</strong> Students don’t yet need to know HOW this will be done.</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li><strong>Subset Sum Problem:</strong> Another one-way function that students can practice with is the subset sum problem. The problem is perhaps even easier to make than the Wireless Hotspot Problem, and has the same property of being computationally hard to solve. If you have time, this may be a good way to provide additional examples of a one-way function and further reinforce the mathematical foundations of cryptography using familiar mathematical concepts. Students can quickly make these problems for classmates and challenge them to solve them.<ul>
+<li>The Problem: Given a list of positive and negative numbers, is there some group of these numbers which adds up to 0?</li>
+<li>Example: (45, -100, 23, 11, -14, 25, -81, 37, 10)  The solution is 45, -100, 23, 11, -14, 25, 10. Don’t worry if you didn’t get it yourself; the whole point is that it’s hard to find a solution!</li>
+<li>Creating the problem: Choose a set of numbers known to add up to 0 beforehand. For example, -12, -10, 3, and 19. Then add in a bunch of “distractor” values. Present a randomly sorted list containing the solution values and the distractors. There’s no guaranteed solution, other than checking all possibilities by brute force!</li>
+</ul>
+</li>
+<li><strong>Make Your Own Graphs:</strong> Students can practice cracking one-way functions with the provided map and key, or practice creating one-way functions using maps and keys of their own creation. They can use this Graph Creator tool: http://illuminations.nctm.org/Activity.aspx?id=3550</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p>The following questions can be found on Code Studio.</p>
+<ol>
+<li>
+<p><strong>Multiple Choice:</strong> Which of the following correctly defines a one-way function?</p>
+<p>a) Hard to create and hard to solve</p>
+<p>b) Hard to create and easy to solve</p>
+<p>c) Easy to create and hard to solve</p>
+<p>d) Easy to create and easy to solve</p>
+</li>
+<li>
+<p><strong>Matching:</strong> Match each word to the phrase that best describes it:</p>
+<table>
+<thead>
+<tr>
+<th>Word/Phrase</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a. Heuristic</td>
+<td>1. Requiring many computers or a long time in order to be solved</td>
+</tr>
+<tr>
+<td>b. Brute force</td>
+<td>2. Requires much more effort to solve than to create</td>
+</tr>
+<tr>
+<td>c. One-way function</td>
+<td>3. Trying every possible solution</td>
+</tr>
+<tr>
+<td>d. Computationally hard</td>
+<td>4. Rules or an algorithm for finding an approximate solution</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Free Response:</strong> Given that the Traveling Salesman Problem and the Wireless Hotspot Problem are computationally hard to solve, why might the Wireless Hotspot Problem be a more ideal candidate for using an encryption method? Make reference to properties of the two problems in your answer.</p>
+</li>
+</ol>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L3B:1</strong> - Classify problems as tractable, intractable, or computationally unsolvable.</li>
+                        
+                            <li><strong>CT.L3B:2</strong> - Explain the value of heuristic algorithms to approximate solutions for intractable problems.</li>
+                        
+                            <li><strong>CT.L3B:3</strong> - Critically examine classical algorithms and implement an original algorithm.</li>
+                        
+                            <li><strong>CT.L3B:4</strong> - Evaluate algorithms by their efficiency, correctness, and clarity.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>4.2</strong> - Algorithms can solve many but not all computational problems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>4.2.1</strong> - Explain the difference between algorithms that run in a reasonable time and those that do not run in a reasonable time. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>4.2.1A</strong> - Many problems can be solved in a reasonable time.</li>
+                                
+                                    <li><strong>4.2.1C</strong> - Some problems cannot be solved in a reasonable time, even for small input sizes.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>4.2.4</strong> - Evaluate algorithms analytically and empirically for efficiency, correctness, and clarity. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>4.2.4A</strong> - Determining an algorithmâ€™s efficiency is done by reasoning formally or mathematically about the algorithm.</li>
+                                
+                                    <li><strong>4.2.4C</strong> - The correctness of an algorithm is determined by reasoning formally or mathematically about the algorithm, not by testing an implementation of the algorithm.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.3</strong> - Cybersecurity is an important concern for the Internet and the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.3.1</strong> - Identify existing cybersecurity concerns and potential options to address these issues with the Internet and the systems built on it. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.3.1H</strong> - Cryptography is essential to many models of cybersecurity.</li>
+                                
+                                    <li><strong>6.3.1I</strong> - Cryptography has a mathematical foundation.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocone-way-functions-the-wifi-hotspot-problem').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#one-way-functions-the-wifi-hotspot-problemcontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'one-way-functions-the-wifi-hotspot-problem', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

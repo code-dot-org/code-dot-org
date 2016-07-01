@@ -12,7 +12,7 @@ theme: none
 
 As an elementary teacher, computer science may be a new and foreign subject area. Just like any subject area, there are some tips and tricks unique to computer science in general, and our curriculum specifically, that we think will make your life a bit easier.
 
-In addition to the detailed lesson plans, we've put together some helpful printables for both teachers and students. These guides and handouts can serve as helpful resources each time your students sit down at to tackle a new set of puzzles. One the following pages you'll see a flag to let you know which are teacher facing documents and which are for students.
+In addition to the detailed lesson plans, we've put together some helpful printables for both teachers and students. These guides and handouts can serve as helpful resources each time your students sit down to tackle a new set of puzzles. One the following pages you'll see a flag to let you know which are teacher facing documents and which are for students.
 
 [handout-flags]
 

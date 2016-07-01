@@ -1,6 +1,5 @@
 name 'ECSPD U3 D 11-13 Intro'
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 3 Day 11-13: HTML and CSS
 

@@ -6,21 +6,24 @@
  */
 'use strict';
 
-var _ = require('../../lodash');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var _ = require('lodash');
 
 /**
  * Wraps its children to display them in a flexbox layout.
  */
 var ResizablePanes = React.createClass({
   propTypes: {
-    style: React.PropTypes.object
+    style: React.PropTypes.object,
+    columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
+    onChange: React.PropTypes.func.isRequired
   },
 
   getInitialState: function () {
     return {
       dragging: false,
-      index: 0,
-      overrideSizes: {}
+      index: 0
     };
   },
 
@@ -57,14 +60,11 @@ var ResizablePanes = React.createClass({
       return;
     }
 
-    var boundingRect = resizingPaneDOMNode.getBoundingClientRect();
-    var newWidth = event.clientX - boundingRect.left;
-    var overrideSizesChange = {};
-    overrideSizesChange[this.state.index] = newWidth;
+    const boundingRect = resizingPaneDOMNode.getBoundingClientRect();
 
-    this.setState({
-      overrideSizes: _.assign({}, this.state.overrideSizes, overrideSizesChange)
-    });
+    let newSizes = this.props.columnSizes.slice();
+    newSizes[this.state.index] = event.clientX - boundingRect.left;
+    this.props.onChange(newSizes);
   },
 
   onMouseUp() {
@@ -82,11 +82,11 @@ var ResizablePanes = React.createClass({
   },
 
   getClonedChild: function (child, index) {
-    var overrideSize = this.state.overrideSizes[index];
+    var columnSize = this.props.columnSizes[index];
     var style = _.assign(
         {flex: '1'},
         child.props.style,
-        (typeof overrideSize !== 'undefined' ? {flex: '0 0 ' + overrideSize + 'px'} : undefined)
+        (typeof columnSize !== 'undefined' ? {flex: '0 0 ' + columnSize + 'px'} : undefined)
     );
 
     return React.cloneElement(child, {
@@ -102,7 +102,8 @@ var ResizablePanes = React.createClass({
           key={"resizer-" + index}
           data-resizer-index={index}
           className="resizer"
-          onMouseDown={this.onResizerMouseDown} />
+          onMouseDown={this.onResizerMouseDown}
+      />
     );
   },
 
