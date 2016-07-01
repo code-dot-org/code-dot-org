@@ -5,21 +5,22 @@ video_player: true
 ---
 
 %link{href: "/css/jumbotron-banner.css", rel: "stylesheet"}
+%link{href: "/css/widgets.css", rel: "stylesheet"}
 
 = view :jumbotron_banner, img: CDO.code_org_url('/images/app-lab/csp-widgets.jpg'), title: 'CS Principles Widgets', desc: 'Widgets are small digital tools that act as a playground for exploring and experimenting with a single concept. Widgets are like a "plugged in" version of an unplugged activity that lets you experiment with different approaches to problems more quickly and accurately than having to eyeball it on paper.', specs: 'Ages 14+, All modern browsers, English only', nav_bar: [{text: 'Text compression', url: '#text-compression'}, {text: 'Pixelation', url: '#pixelation'}, {text: 'Cryptography', url: '#cryptography'}, {text: 'Internet Simulator', url: '#internet-simulator'}]
 
-#text-compression
-  %h1{style: 'background-color: #7665a0; color: white; height: 60px; padding-top: 10px; padding-left: 15px;'} Text compression
-  .tool-video{style: 'float: left; width: 40%; margin-right: 20px;'}
+#text-compression{style: 'margin-top: 40px;'}
+  %h1.block-header Text compression
+  .tool-thumbnail
     = view :display_video_thumbnail, id: 'text_compression', video_code: 'By30SCp-Tsw', play_button: 'center', download_path: 'https://video.code.org/2015/csp/textcompression_blacc.mp4', letterbox: 'false'
-    Digital Compression with Aloe Blacc
+    .thumbnail-title Digital Compression with Aloe Blacc
   .tool-desc
     The text compression widget lets students interactively experiment with compressing a piece of text by identifying patterns in text, storing those patterns in a "dictionary," and replacing the dictionary pattern with a 1-byte symbol to create a lossless compressed version of the text. The widget updates with every keystroke and also performs the compression calculations so you can see if you’re increasing or decreasing the total file size in real time. The most intriguing idea to play with is figuring out how to best harness the power of representing patterns of patterns. Done right, it can dramatically improve compression; done wrong, it can...dramatically go very wrong.
-    .standalone-tool{style: 'margin-left: 45%; margin-top: 20px;'}
+    .standalone-tool
       %a{href: CDO.code_org_url('/textcompression'), target:'_blank'}
         %button
           Try standalone tool
-    %ul.tool-links{style: 'margin-left: 45%'}
+    %ul.tool-links
       %li
         %i.fa.fa-file-text
         %a{href: CDO.code_org_url('/curriculum/csp2/2/Teacher'), target:'_blank'}
@@ -29,30 +30,30 @@ video_player: true
         %a{href: CDO.studio_url('/s/csp2/stage/2/puzzle/1'), target:'_blank'}
           Stage in CS Principles
   .clear
-  .back-to-top{style: 'text-align: right; margin-right: 20px; margin-top: 50px;'}
+  .back-to-top
     %a{href: '#'}
       %i.fa.fa-caret-up
       Back to top
 
 #pixelation
-  %h1{style: 'background-color: #7665a0; color: white; height: 60px; padding-top: 10px; padding-left: 15px; margin-top: 10px;'} Pixelation
-  .tool-video{style: 'float: left; width: 40%; margin-right: 20px;'}
+  %h1.block-header Pixelation
+  .tool-thumbnail
     = view :display_video_thumbnail, id: 'images_pixels', video_code: '15aqFQQVBWU', play_button: 'center', letterbox: 'false'
-    Images, Pixels & RGB w/Kevin Systrom
+    .thumbnail-title Images, Pixels & RGB w/Kevin Systrom
   .tool-desc
     This widget lets students compose an image "in binary" by filling in binary information and the widget renders the image that the binary represents. It’s like having an instant binary interpreter that obeys the rules of the agreed upon image format. The widget has a few variants of increasing sophistication that are used over a few lessons.
-    .standalone-tool{style: 'margin-left: 45%; margin-top: 20px;'}
+    .standalone-tool
       %a{href: CDO.code_org_url('/pixelation'), target:'_blank'}
         %button
           Try standalone tool
 
   .clear
   %h2 Black and White Pixelation  
-  .tool-video{style: 'float: left; width: 40%; margin-right: 20px;'}
+  .tool-thumbnail{style: 'border: solid 1px #c6cacd;'}
     = view :display_video_thumbnail, id: 'bw_pixelation', video_code: 'rJOa5Q5a1WM', play_button: 'center', download_path: 'https://videos.code.org/2015/csp/pixelation_bw.mp4', letterbox: 'false'
   .tool-desc
     The black and white version of the widget simply encodes images with 1 bit per pixel - 0 is black, 1 is white. There is also some metadata to encode the width and height of the image. This is a good one to get your feet wet.
-    %ul.tool-links{style: 'margin-left: 45%'}
+    %ul.tool-links
       %li
         %i.fa.fa-file-text
         %a{href: CDO.code_org_url('/curriculum/csp2/3/Teacher'), target:'_blank'}
@@ -64,10 +65,10 @@ video_player: true
   .clear
 
   %h2 Color Pixelation
-  %img{src: '/images/app-lab/color-pixelation.png', style: 'float: left; margin-right: 20px; width: 40%'}
+  %img.tool-thumbnail{src: '/images/app-lab/color-pixelation.png'}
   .tool-desc
     The color version of the widget lets you encode each pixel with any number of bits from 1 to 24. Using the widget, you'll understand much more deeply how RGB colors work, and why hexadecimal representation is so useful for looking at long strings of binary values. Try your hand at mixing digital colors by writing the binary yourself!
-  %ul.tool-links{style: 'margin-left: 45%;'}
+  %ul.tool-links
     %li
       %i.fa.fa-file-text
       %a{href: CDO.code_org_url('/curriculum/csp2/4/Teacher'), target:'_blank'}
@@ -77,28 +78,29 @@ video_player: true
       %a{href: CDO.studio_url('/s/csp2/stage/4/puzzle/1'), target:'_blank'}
         Stage in CS Principles
   .clear
-  .back-to-top{style: 'text-align: right; margin-right: 20px; margin-top: 50px;'}
+  .back-to-top
     %a{href: '#'}
       %i.fa.fa-caret-up
       Back to top
 
 #cryptography
-  %h1{style: 'background-color: #7665a0; color: white; height: 60px; padding-top: 10px; padding-left: 15px; margin-top: 10px;'} Cryptography
-  .tool-video{style: 'float: left; width: 40%; margin-right: 20px;'}
+  %h1.block-header Cryptography
+  .tool-thumbnail
     = view :display_video_thumbnail, id: 'cryptography', video_code: 'ZghMPWGXexs', play_button: 'center', download_path: 'http://videos.code.org/2015/csp/concept_encryption.mp4', letterbox: 'false'
+    .thumbnail-title The Internet: Encryption and Public Keys
   .tool-desc
     This widget lets you play with two classic substitution ciphers, one known as the Caesar Shift (encryption by shifting each letter of alphabet the same amount) and random substitution (encryption via a 1:1 substitution of one letter for another, but randomly assigned as opposed to a uniform shift).
   .clear
 
   %h2 Frequency analysis widget
-  %img{src: '/images/app-lab/frequency-analysis.png', style: 'float: left; margin-right: 20px; width: 40%'}
+  %img.tool-thumbnail{src: '/images/app-lab/frequency-analysis.png'}
   .tool-desc
     This widget lets you play with two classic substitution ciphers, one known as the Caesar Shift (encryption by shifting each letter of alphabet the same amount) and random substitution (encryption via a 1:1 substitution of one letter for another, but randomly assigned as opposed to a uniform shift).
-  .standalone-tool{style: 'margin-left: 45%; margin-top: 20px;'}
+  .standalone-tool
     %a{href: CDO.studio_url('/s/frequency_analysis'), target:'_blank'}
       %button
         Try standalone tool
-  %ul.tool-links{style: 'margin-left: 45%;'}
+  %ul.tool-links
     %li
       %i.fa.fa-file-text
       %a{href: CDO.code_org_url('/curriculum/cspunit2/13/Teacher'), target:'_blank'}
@@ -117,14 +119,14 @@ video_player: true
         Frequency analysis Stage in CS Principles
 
   %h2 Vigenere cipher widget
-  %img{src: '/images/app-lab/vigenere-cipher.png', style: 'float: left; margin-right: 20px; width: 40%'}
+  %img.tool-thumbnail{src: '/images/app-lab/vigenere-cipher.png'}
   .tool-desc
     This widget is used in the same lesson as the the random substitution cipher, and allows students to play with a much more sophisticated encryption technique that was considered (basically) unbreakable for a very long time. The Vigenère cipher is similar to the caesar or random substitution cipher, but the shift changes for each letter based on a secret key.
-  .standalone-tool{style: 'margin-left: 45%; margin-top: 20px;'}
+  .standalone-tool
     %a{href: CDO.studio_url('/s/vigenere'), target:'_blank'}
       %button
         Try standalone tool
-  %ul.tool-links{style: 'margin-left: 45%;'}
+  %ul.tool-links
     %li
       %i.fa.fa-external-link-square
       %a{href: CDO.code_org_url('/curriculum/cspunit2/14/Teacher'), target:'_blank'}
@@ -134,14 +136,14 @@ video_player: true
       %a{href: CDO.studio_url('/s/cspunit2/stage/14/puzzle/1'), target:'_blank'}
         Stage in CS Principles
   .clear
-  .back-to-top{style: 'text-align: right; margin-right: 20px; margin-top: 50px;'}
+  .back-to-top
     %a{href: '#'}
       %i.fa.fa-caret-up
       Back to top
 
 #internet-simulator
-  %h1{style: 'background-color: #7665a0; color: white; height: 60px; padding-top: 10px; padding-left: 15px; margin-top: 10px;'} Internet Simulator
-  .tool-video{style: 'float: left; width: 40%; margin-right: 20px;'}
+  %h1.block-header Internet Simulator
+  .tool-thumbnail
     = view :display_video_thumbnail, id: 'the_internet', video_code: 'Dxcc6ycZ73M', play_button: 'center', letterbox: 'false'
   .tool-desc
     Similar to a widget, but much larger in scope, the Internet Simulator is designed to let students visualize, experiment with, and solve different kinds of problems associated with networked computers in a hands-on way. Often these problems involve inventing a communication protocol, or inventing ways to encode information that makes transporting it over the Internet feasible. 
@@ -151,7 +153,7 @@ video_player: true
     %br
     %br
     The Simulator is configured differently in each lesson to enforce different rules or expose different behaviors of the internet that students must creatively problem solve around. Specifically, each version of the Internet Simulator is configured to mirror a high level version of the layered Internet Protocol stack. With each lesson the Internet Simulator changes to incorporate the solution to the previous problem students solved. In this way we work from the bottom up, first solving physical coordination problems with sending bits back and forth, then addressing (IP), then packeting (TCP) then name-to-address mapping (DNS) and finally HTTP.
-  .standalone-tool{style: 'margin-left: 40px; margin-top: 20px;'}
+  .standalone-tool{style: 'margin-left: 40px;'}
     %a{href: CDO.code_org_url('/internetsimulator'), target:'_blank'}
       %button
         Try standalone tool
@@ -184,8 +186,8 @@ video_player: true
       %i.fa.fa-file-text
       %a{href: CDO.code_org_url('/curriculum/csp1/12/Teacher'), target:'_blank'}
         Lesson Plan for U1L12: The Need for DNS
-  %img{src: '/images/app-lab/internet-simulator-lessons.png', style: 'margin-top: 20px; margin-left: 30px;'}
-  .back-to-top{style: 'text-align: right; margin-right: 20px; margin-top: 50px;'}
+  %img.tool-thumbnail{src: '/images/app-lab/internet-simulator-lessons.png', style: 'width: 100%'}
+  .back-to-top
     %a{href: '#'}
       %i.fa.fa-caret-up
       Back to top
