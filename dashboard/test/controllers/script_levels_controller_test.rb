@@ -197,6 +197,46 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal '<div><label id="label1">real_level html</label></div>', app_options[:level]['startHtml']
   end
 
+  test 'project template level sets start animations when defined' do
+    template_animations_json = '{"orderedKeys":["expected"],"propsByKey":{"expected":{}}}'
+    template_level = create :gamelab
+    template_level.start_animations = template_animations_json
+    template_level.save!
+
+    real_animations_json = '{"orderedKeys":["wrong"],"propsByKey":{"wrong":{}}}'
+    real_level = create :gamelab
+    real_level.project_template_level_name = template_level.name
+    real_level.start_animations = real_animations_json
+    real_level.save!
+
+    sl = create :script_level, levels: [real_level]
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
+
+    assert_response :success
+    # start animations comes from project_level not real_level
+    app_options = assigns(:level).blockly_options
+    assert_equal template_animations_json, app_options[:level]['startAnimations']
+  end
+
+  test 'project template level does not set start animations when not defined' do
+    template_level = create :gamelab
+    template_level.save!
+
+    real_animations_json = '{"orderedKeys":["expected"],"propsByKey":{"expected":{}}}'
+    real_level = create :gamelab
+    real_level.project_template_level_name = template_level.name
+    real_level.start_animations = real_animations_json
+    real_level.save!
+
+    sl = create :script_level, levels: [real_level]
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
+
+    assert_response :success
+    # start animations comes from real_level not project_level
+    app_options = assigns(:level).blockly_options
+    assert_equal real_animations_json, app_options[:level]['startAnimations']
+  end
+
   test 'project template level sets toolbox blocks when defined' do
     template_level = create :level
     template_level.toolbox_blocks = '<xml><toolbox/></xml>'
