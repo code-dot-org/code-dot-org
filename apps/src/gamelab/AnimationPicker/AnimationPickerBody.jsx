@@ -5,7 +5,6 @@ import React from 'react';
 import Radium from 'radium';
 import gamelabMsg from '../locale';
 import animationLibrary from '../animationLibrary';
-import { getLabel } from '../animationMetadata';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
@@ -34,12 +33,12 @@ const AnimationPickerBody = React.createClass({
               icon="upload"
               onClick={this.props.onUploadClick}
           />
-          {animationLibrary.map(animation =>
+          {animationLibrary.map(animationProps =>
             <AnimationPickerListItem
-                key={animation.sourceUrl}
-                label={getLabel(animation)}
-                animation={animation}
-                onClick={this.props.onPickLibraryAnimation.bind(this, animation)}
+                key={animationProps.sourceUrl}
+                label={`${animationProps.name} (${animationProps.frameCount})`}
+                animationProps={animationProps}
+                onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
             />
           )}
         </ScrollableList>

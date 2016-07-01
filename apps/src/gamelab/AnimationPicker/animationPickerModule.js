@@ -2,9 +2,9 @@
 'use strict';
 
 import _ from 'lodash';
-import {addAnimation} from '../animationModule';
-import { makeEnum, createUuid } from '../../utils';
-import { sourceUrlFromKey } from '../animationMetadata';
+import {addAnimation, addLibraryAnimation} from '../animationListModule';
+import { makeEnum } from '../../utils';
+import { animations as animationsApi } from '../../clientApi';
 
 /**
  * @enum {string} Export possible targets for animation picker for consumers
@@ -103,7 +103,7 @@ export function handleUploadComplete(result) {
   return function (dispatch, getState) {
     const { goal, uploadFilename } = getState().animationPicker;
     const key = result.filename.replace(/\.png$/i, '');
-    const sourceUrl = sourceUrlFromKey(key);
+    const sourceUrl = animationsApi.basePath(key + '.png');
 
     // TODO (bbuchanan): This sequencing feels backwards.  Eventually, we
     // ought to preview and get dimensions from the local filesystem, async
@@ -111,7 +111,6 @@ export function handleUploadComplete(result) {
     // jQuery uploader.
     loadImageMetadata(sourceUrl, metadata => {
       const animation = _.assign({}, metadata, {
-        key: key,
         name: uploadFilename,
         sourceUrl: sourceUrl,
         size: result.size,
@@ -119,7 +118,7 @@ export function handleUploadComplete(result) {
       });
 
       if (goal === Goal.NEW_ANIMATION) {
-        dispatch(addAnimation(animation));
+        dispatch(addAnimation(key, animation));
       } else if (goal === Goal.NEW_FRAME) {
         // TODO (bbuchanan): Implement after integrating Piskel
       }
@@ -161,18 +160,16 @@ export function handleUploadError(status) {
 
 /**
  * A library animation was selected by the user.  This concludes our picking
- * process. Dispatch root gamelab action to add appropriate metadta and then
+ * process. Dispatch root gamelab action to add appropriate metadata and then
  * close the animation picker.
- * @param {!AnimationMetadata} animation
+ * @param {!AnimationProps} animation
  * @returns {function}
  */
 export function pickLibraryAnimation(animation) {
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      dispatch(addAnimation(Object.assign({}, animation, {
-        key: createUuid()
-      })));
+      dispatch(addLibraryAnimation(animation));
     } else if (goal === Goal.NEW_FRAME) {
       // TODO (bbuchanan): Implement after integrating Piskel
     }
