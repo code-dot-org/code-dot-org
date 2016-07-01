@@ -81,7 +81,6 @@
 
 .secondary-nav {
   width: 100%;
-  height: 45px;
   padding-top: 12px;
   border-radius: 0px 0px 5px 5px;
   text-align: center;
@@ -114,6 +113,10 @@
     margin-top: 20px;
     margin-left: 60px;
   }
+
+  .secondary-nav {
+    height: 45px;
+  }
 }
 
 @media screen and (min-width: 0px) and (max-width: 970px) {
@@ -123,7 +126,7 @@
     padding: 5px;
     padding-top: 10px;
     position: static;
-    color: dimgray;
+    color: #4d575f;
   }
 
   .jumbo-tutorial-box {
@@ -131,7 +134,7 @@
     background-size: 605px 100px;
     padding: 10px;
     border: solid 1px #c6cacd;
-    color: dimgray;
+    color: #4d575f;
   }
 
   .jumbo-heading {
@@ -155,15 +158,25 @@
     display: block;
     margin-top: 5px;
     margin-bottom: 10px;
-    color: dimgray;
+    color: #4d575f;
   }
 
   #secondary-nav {
-    position: absolute;
-    top: 182px;
-    width: 100%;
-    padding-left: 5px;
-    padding-right: 10px;
+    display: block;
+    position: static;
+    margin-top: 120px;
+    margin-left: 10px;
+  }
+
+  .secondary-nav {
+    background-color: white;
+    color: #4d575f;
+  }
+
+  .secondary-nav a {
+    color: #7664a0;
+    text-decoration: none;
+    font-family: 'Gotham 7r', sans-serif;
   }
 }
 
@@ -171,8 +184,8 @@
   .jumbo-tutorial {
     width: 100%;
     position: static;
-    line-height: 16px;
-    color: dimgray;
+    line-height: 20px;
+    color: #4d575f;
   }
 
   .jumbo-heading {
@@ -183,7 +196,7 @@
 
   .jumbo-h1-second-box {
     display: static;
-    color: dimgray;
+    color: #4d575f;
   }
 
   .jumbo-logo {
@@ -191,6 +204,20 @@
   }
 
   #secondary-nav {
-    display: none;
+    display: block;
+    position: static;
+    margin-top: 120px;
+    margin-left: 10px;
+  }
+
+  .secondary-nav {
+    background-color: white;
+    color: #4d575f;
+  }
+
+  .secondary-nav a {
+    color: #7664a0;
+    text-decoration: none;
+    font-family: 'Gotham 7r', sans-serif;
   }
 }
