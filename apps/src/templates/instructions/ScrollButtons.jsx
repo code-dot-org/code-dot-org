@@ -20,6 +20,7 @@ const styles = {
   },
 };
 
+const MARGIN = 5;
 
 /**
  * A pair of buttons for scrolling instructions in CSF
@@ -36,7 +37,7 @@ const ScrollButtons = React.createClass({
   getMinHeight() {
     const scrollButtonsHeight = getOuterHeight(this.refs.scrollUp, true)
         + getOuterHeight(this.refs.scrollDown, true);
-    return scrollButtonsHeight;
+    return scrollButtonsHeight + (MARGIN * 2);
   },
 
   render() {
@@ -46,7 +47,7 @@ const ScrollButtons = React.createClass({
       styles.arrowUp,
       {
         opacity: this.props.visible ? 1 : 0,
-        top: 0
+        top: MARGIN
       }
     ];
 
@@ -55,7 +56,7 @@ const ScrollButtons = React.createClass({
       styles.arrowDown,
       {
         opacity: this.props.visible ? 1 : 0,
-        bottom: -this.props.height
+        bottom: -(this.props.height - MARGIN)
       }
     ];
 

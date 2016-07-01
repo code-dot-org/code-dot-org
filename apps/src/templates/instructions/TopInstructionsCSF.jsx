@@ -197,9 +197,9 @@ var TopInstructions = React.createClass({
     const domNode = $(ReactDOM.findDOMNode(this));
     const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
 
-    const leftColHeight = minIconHeight,
-        middleColHeight = minInstructionsHeight,
-        rightColHeight = collapseButtonHeight + scrollButtonsHeight;
+    const leftColHeight = minIconHeight;
+    const middleColHeight = minInstructionsHeight;
+    const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
 
     return Math.max(leftColHeight, middleColHeight, rightColHeight)
         + RESIZER_HEIGHT + margins;
@@ -371,12 +371,12 @@ var TopInstructions = React.createClass({
                 onClick={this.handleClickCollapser}
             />
             {!this.props.collapsed && <ScrollButtons
-              style={styles.scrollButtons}
-              ref='scrollButtons'
-              onScrollUp={this.handleScrollInstructionsUp}
-              onScrollDown={this.handleScrollInstructionsDown}
-              visible={!atMaxHeight}
-              height={this.props.height - styles.scrollButtons.top - resizerHeight}
+                style={styles.scrollButtons}
+                ref='scrollButtons'
+                onScrollUp={this.handleScrollInstructionsUp}
+                onScrollDown={this.handleScrollInstructionsDown}
+                visible={!atMaxHeight}
+                height={this.props.height - styles.scrollButtons.top - resizerHeight}
             />}
           </div>
         </ThreeColumns>
