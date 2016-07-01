@@ -233,6 +233,21 @@ Resources:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
       QueueName: <%="activities_dead-#{stack_name}"%>
+  PdWorkshopQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      ReceiveMessageWaitTimeSeconds: 20
+      VisibilityTimeout: 15
+      QueueName: <%="pd_workshop-#{stack_name}"%>
+      RedrivePolicy:
+        maxReceiveCount: 3
+        deadLetterTargetArn: {'Fn::GetAtt': [PdWorkshopDeadQueue,Arn]}
+  PdWorkshopDeadQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      ReceiveMessageWaitTimeSeconds: 20
+      VisibilityTimeout: 15
+      QueueName: <%="pd_workshop_dead-#{stack_name}"%>
 Outputs:
   DashboardURL:
     Value: "https://dashboard-<%=subdomain%>"
