@@ -27,8 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "[Ryan, 6/28] Updated to remove \"undeletable\" move forward and replace it with a limited # of move forwards in the toolbox",
