@@ -204,7 +204,6 @@ class Blockly < Level
 
   def blockly_app_options(game, skin_id)
     options = Rails.cache.fetch("#{cache_key}/blockly_app_options/v2") do
-
       app_options = {}
 
       app_options[:levelGameName] = game.name if game
