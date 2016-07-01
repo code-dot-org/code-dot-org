@@ -1,0 +1,5 @@
+name 'grade1_activity_groupTower1'
+title 'Group Tower Debugging'
+markdown <<MARKDOWN
+Teacher shows how tower is failing.  How to fix?
+MARKDOWN

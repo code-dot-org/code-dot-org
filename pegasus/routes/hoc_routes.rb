@@ -118,7 +118,7 @@ end
 
 get '/api/hour/finish' do
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  complete_tutorial()
+  complete_tutorial
 end
 
 get '/api/hour/finish/:code' do |code|

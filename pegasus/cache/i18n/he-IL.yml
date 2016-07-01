@@ -89,7 +89,7 @@
     tutorial</a>.
   get_a_certificate_of_achievement: "קבל תעודה על ההישג"
   view_course: "צפה בקורס"
-  view_unit: View unit
+  view_unit: "הצג יחידה"
   make_app: "צור אפליקציה"
   congrats_guest_speaker_title: "מצא מרצה אורח לכיתה שלך"
   congrats_guest_speaker_desc: Now that your students have finished a computer science
@@ -476,7 +476,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: "עדכן את המידע שלך"
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: "שם"

@@ -805,9 +805,9 @@ en:
           Big Game: Big Game
           new stage: new stage
         sciencePD2:
-          title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          title: 'CS in Science: Part 2'
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -818,6 +818,13 @@ en:
           Curricular Modules: Curricular Modules
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
+          Welcome!: Welcome!
+          Review StarLogo Nova: Review StarLogo Nova
+          Creating Breeds in Starlogo Nova: Creating Breeds in Starlogo Nova
+          Revisiting Agent Movement: Revisiting Agent Movement
+          Epidemic Model Extensions: Epidemic Model Extensions
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Wrap-Up
         sciencePD3:
           title: Computer Science in Science PD
           description: Phase 3 Professional Development
@@ -2102,6 +2109,14 @@ en:
           Persistence & Frustration: Persistence & Frustration
           Sequences & Algorithms: Sequences & Algorithms
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+          Debugging: Debugging
+          Programming Unplugged: Programming Unplugged
+          Programming: Programming
+          Being Safe Online: Being Safe Online
+          Loops Unplugged: Loops Unplugged
+          Loops: Loops
+          Events Unplugged: Events Unplugged
+          Events: Events
         grade5:
           title: Grade 5
           description_short: Planning Script for CSF 2.0

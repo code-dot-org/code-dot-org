@@ -73,8 +73,8 @@ class UserProficiency < ActiveRecord::Base
   # Returns the number of levels the user has shown proficiency in for the
   # indicated concept and difficulty or higher.
   def get_level_count(concept, difficulty_number)
-    return 0 if !CONCEPTS.include? concept
-    return 0 if !(1..MAXIMUM_CONCEPT_DIFFICULTY).cover? difficulty_number
+    return 0 unless CONCEPTS.include? concept
+    return 0 unless (1..MAXIMUM_CONCEPT_DIFFICULTY).cover? difficulty_number
 
     num_levels = 0
     (difficulty_number..MAXIMUM_CONCEPT_DIFFICULTY).each do |d|

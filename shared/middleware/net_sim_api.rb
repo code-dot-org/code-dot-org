@@ -38,7 +38,6 @@ class NetSimApi < Sinatra::Base
     }.each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
-
   end
 
   # For test, make it possible to override the usual configured API choices.
