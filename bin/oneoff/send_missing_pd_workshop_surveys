@@ -16,7 +16,6 @@ def main
   ended_workshops.each do |workshop|
     puts "Workshop #{workshop.id}"
     workshop.enrollments.order(id: :desc).each do |enrollment|
-
       puts "  Enrollment #{enrollment.id}: #{enrollment.email}"
       found_email = DB[:poste_deliveries].where(message_id: dashboard_message_id, contact_email: enrollment.email).
         where(Sequel.like(:params, '%Please take a minute to complete this short survey%')).
