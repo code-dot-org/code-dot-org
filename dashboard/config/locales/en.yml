@@ -262,7 +262,6 @@ en:
         calculate: 'Calculate something'
         applab: 'Make an App Lab app'
     user:
-      pair_programming: 'Pair Programming'
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
       label: 'Hi %{username}'
@@ -273,6 +272,10 @@ en:
       signin: 'Sign in'
       signup: 'Sign up'
       already_registered: 'Already registered?'
+      pair_programming: 'Pair Programming'
+      team: 'Team'
+      driver: 'Driver'
+      navigator: 'Navigator'
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'
@@ -308,8 +311,6 @@ en:
       submitted_on: 'Submitted on:'
       unsubmit: 'Unsubmit'
       worked_with: 'Worked With'
-      driver: 'Driver'
-      navigator: 'Navigator'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
