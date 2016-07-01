@@ -6,6 +6,8 @@ import color from '../color';
 
 const ARROW_WIDTH = 58;
 const ARROW_HEIGHT = ARROW_WIDTH * 2;
+const ARROW_BUTTON_HEIGHT = 44; // originally from common.scss .arrow-text rule
+const ARROW_BUTTON_PADDING = 10; // originally from common.scss .arrow-left .arrow-text rule
 const style = {
   base: {
     borderWidth: 2,
@@ -56,7 +58,7 @@ const style = {
 style.withArrow = {
   base: {
     position: 'relative',
-    top: (ARROW_HEIGHT - style.base.borderWidth - 10 * 2 - 44)/2,
+    top: (ARROW_HEIGHT - style.base.borderWidth - ARROW_BUTTON_PADDING * 2 - ARROW_BUTTON_HEIGHT)/2,
     margin: 0,
   },
   left: {
@@ -122,9 +124,7 @@ const ArrowButton = Radium(function ArrowButton(props) {
   const config = BUTTON_TYPES[props.type];
   if (process.env.NODE_ENV === 'development') {
     if (!props.size === 'large') {
-      throw new Error(
-        `Arrows can only be used with large buttons. This button is "${props.size}" can't use arrows.`
-      );
+      throw new Error(`This "${props.size}" button can't use arrows.`);
     }
   }
   return (
