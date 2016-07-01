@@ -26,7 +26,8 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "disable_examples": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
   "notes": "Testing Start Stage for K Debugging Sequences",
