@@ -149,14 +149,32 @@ function animationPropsReducer(state, action) {
 }
 
 /**
- *
  * @param {!SerializedAnimationList} serializedAnimationList
  * @returns {function()}
  */
 export function setInitialAnimationList(serializedAnimationList) {
+  // Set default empty animation list if none was provided
+  if (!serializedAnimationList) {
+    serializedAnimationList = {orderedKeys: [], propsByKey: {}};
+  }
+
+  // TODO: Tear out this migration when we don't think we need it anymore.
+  if (Array.isArray(serializedAnimationList)) {
+    // We got old animation data that needs to be migrated.
+    serializedAnimationList = {
+      orderedKeys: serializedAnimationList.map(a => a.key),
+      propsByKey: serializedAnimationList.reduce((memo, next) => {
+        memo[next.key] = next;
+        return memo;
+      }, {})
+    };
+  }
+
+  // TODO: Validate here.
+  // We might be receiving JSON from levelbuilder, and
+  // should complain loudly if it isn't valid.
+
   return dispatch => {
-    // TODO: Should I validate here?
-    // TODO: Should I add transient properties here?
     dispatch({
       type: SET_INITIAL_ANIMATION_LIST,
       animationList: serializedAnimationList
