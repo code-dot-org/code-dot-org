@@ -2,19 +2,21 @@
 #
 # Table name: pd_enrollments
 #
-#  id                 :integer          not null, primary key
-#  pd_workshop_id     :integer          not null
-#  name               :string(255)      not null
-#  email              :string(255)      not null
-#  created_at         :datetime
-#  updated_at         :datetime
-#  code               :string(255)
-#  school             :string(255)
-#  school_district_id :integer
-#  school_zip         :integer
-#  school_type        :string(255)
-#  school_state       :string(255)
-#  user_id            :integer
+#  id                  :integer          not null, primary key
+#  pd_workshop_id      :integer          not null
+#  name                :string(255)      not null
+#  email               :string(255)      not null
+#  created_at          :datetime
+#  updated_at          :datetime
+#  school              :string(255)
+#  code                :string(255)
+#  school_district_id  :integer
+#  school_zip          :integer
+#  school_type         :string(255)
+#  school_state        :string(255)
+#  user_id             :integer
+#  survey_sent_at      :datetime
+#  completed_survey_id :integer
 #
 # Indexes
 #
@@ -49,6 +51,7 @@ class Pd::Enrollment < ActiveRecord::Base
     user || User.find_by_email_or_hashed_email(self.email)
   end
 
+  # Create an enrollment entry for anyone in the workshop section, regardless of actual attendance
   def self.create_for_unenrolled_attendees(workshop)
     enrolled_user_ids = Set.new
     workshop.enrollments.each do |enrollment|
@@ -57,7 +60,8 @@ class Pd::Enrollment < ActiveRecord::Base
     end
 
     [].tap do |new_enrollments|
-      Pd::Attendance.for_workshop(workshop).distinct_teachers.each do |attendee|
+      next unless workshop.section
+      workshop.section.students.each do |attendee|
         next if enrolled_user_ids.include? attendee.id
 
         if attendee.email.blank?
