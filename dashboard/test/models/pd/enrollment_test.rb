@@ -87,10 +87,11 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'create_for_unenrolled_attendees with no email logs warning' do
-    workshop = create :pd_workshop
+    workshop = create :pd_ended_workshop
     workshop.sessions << create(:pd_session)
 
     unenrolled_attendee_no_email = create :student
+    workshop.section.add_student unenrolled_attendee_no_email
     create :pd_attendance, session: workshop.sessions.first, teacher: unenrolled_attendee_no_email
 
     mock_logger = mock
