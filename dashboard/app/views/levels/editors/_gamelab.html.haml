@@ -47,3 +47,12 @@
 .field
   =f.label 'Disable code debugger (Console is still enabled)'
   = boolean_check_box f, :debugger_disabled
+
+.field
+  = f.label :start_animations, 'Starting animation list JSON'
+  %p
+    This should be equivalent to the animation JSON created by the animation tab.
+    The recommended way to generate this is... TBD
+  = f.text_area :start_animations, placeholder: 'Starting animations JSON', rows: 4, value: @level.start_animations
+  :javascript
+    levelbuilder.initializeCodeMirror('level_start_animations', 'json');
