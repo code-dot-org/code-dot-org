@@ -27,6 +27,9 @@
   "copy": "コピー",
   "copyright": "著作権",
   "currentVersion": "現行版",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "無限\n",
   "jump": "ジャンプ",
   "keepPlaying": "ゲームをつづける",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "必要（ひつよう）なブロックをすべて使（つか）っていますが、使い方（つかいかた）が適切（てきせつ）ではありません。",
   "listVariable": "リスト",
   "makeYourOwnFlappy": "自分だけの「パタパタゲーム」を作りましょう。",
@@ -241,9 +245,5 @@
   "watchVideo": "ビデオを見る",
   "when": "とき",
   "whenRun": "実行した時",
-  "workspaceHeaderShort": "ワークスペース：",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "ワークスペース："
 }

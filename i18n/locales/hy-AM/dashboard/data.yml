@@ -25,7 +25,7 @@ hy:
           Artist5: Բեմական 19
           Unplug11: Բեմական 20
         Hour of Code:
-          desc: Ժամ օրենսգրքի
+          desc: Կոդի ժամ
           Maze: Փուլ 1
         Edit Code:
           desc: Խմբագրել օրենսգրքի (բետա)
@@ -105,7 +105,7 @@ hy:
         StudioEC: Play Lab
         Applab: App Lab
         NetSim: Ինտերնետ Simulator
-        Custom: Artist
+        Custom: Արտիստ
         CustomStudio: Play Lab
     trophy:
       name:
@@ -374,7 +374,7 @@ hy:
         loop_while: Մինչ Block
         loop_for: Counter Block
         parameters: Գործառույթները պարամետրերով
-        hoc_wrapup: Ժամ օրենսգրքի Wrapup
+        hoc_wrapup: Կոդի Ժամի ամփոփում
         Unplug1: 'Ինչ է CS:'
         Unplug2: հաշվողական Մտածմունք
         Unplug3: Գրաֆիկի Թուղթ Ծրագրավորում

@@ -27,6 +27,9 @@
   "copy": "Copiar",
   "copyright": "Direitos Autorais",
   "currentVersion": "Versão Atual",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Infinito",
   "jump": "pule",
   "keepPlaying": "Continuar",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Continue programando! Algo ainda não está correto.",
   "listVariable": "lista",
   "makeYourOwnFlappy": "Crie seu próprio jogo Flappy bird",
@@ -241,9 +245,5 @@
   "watchVideo": "Assista ao vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Área de trabalho: ",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "Área de trabalho: "
 }

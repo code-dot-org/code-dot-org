@@ -1,0 +1,7 @@
+name 'grade1_story_theGreatTowerTopple'
+title 'The Great Tower Topple'
+description 'PlayLab character learns to deal with frustration'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+PlayLab character learns to deal with frustration
+MARKDOWN

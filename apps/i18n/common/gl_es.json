@@ -27,6 +27,9 @@
   "copy": "Copiar",
   "copyright": "Dereitos de Autor",
   "currentVersion": "Current Version",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Infinito",
   "jump": "saltar",
   "keepPlaying": "Continúa xogando",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Estás a empregar todos os tipos de bloques necesarios pero non do xeito correcto.",
   "listVariable": "lista",
   "makeYourOwnFlappy": "Crea o teu propio xogo Flappy",
@@ -241,9 +245,5 @@
   "watchVideo": "Mira o vídeo",
   "when": "cando",
   "whenRun": "cando se executa",
-  "workspaceHeaderShort": "Espazo de traballo: ",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "Espazo de traballo: "
 }

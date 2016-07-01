@@ -29,7 +29,7 @@ bg:
   unsubmit: Не е добавено
   previous_page: Предишна страница
   next_page: Следваща страница
-  next_resource: Next resource
+  next_resource: Следващ ресурс
   done_with_module: Done with this Learning Module
   cancel: Отмени
   okay: Добре
@@ -87,7 +87,7 @@ bg:
     teacher_title: Регистрация за Учители/Възпитатели
     student_pitch: регистрация като ученик в Code.org
     student_title: регистрация
-    signup_title: Sign up for Code.org
+    signup_title: Абонирайте се за Code.org
     school_name: Име на училище (по желание)
     school_address: Адрес на училището (по избор)
     address_placeholder: адрес, град, държава, пощенски код
@@ -106,7 +106,7 @@ bg:
     student_terms: "Съгласен съм да се обвържа с Code.org <a href='http://code.org/tos'> условията за ползване</a>. Ако аз съм на възраст под 13 години, аз потвърждавам с подаването на този формуляр, че имам разрешението на моя родител или законен настойник за ползване на услугите на Code.org. <br/>За потребители под 13 имейл адресите не се съхраняват във форма, която да ни позволява да се свържем с тях."
     teacher_terms: "Съгласен съм да се обвържа с Code.org <a href='http://code.org/tos'> условията за ползване</a>."
     additional_information: 'Ние изискваме  допълнителна информация за да продължим  вписването ви.'
-    user_type_label: Account Type
+    user_type_label: Тип акаунт
     user_type_teacher: Учител
     user_type_student: Ученик
   signin_form:
@@ -339,7 +339,7 @@ bg:
     announcement_title: Съобщения
     announcement_view_all: Преглед на всички
     announcement_message: '<b>22 април 2016</b> - Дейностите без компютър са важна част от процеса на обучение, но учителите ни казват, че намирането им в ресурсите може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите всички ресурси без компютър на една целева страница. Свържете уроците с всеки Кн клас, или използвайте самостоятелно като независим курс.'
-    announcement_button: Test the feature
+    announcement_button: Тестване на функцията
     announcement_petition: Като учител, Вие трябва да намерите подход, така че да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки. Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица, образователни лидери, 28 управители и директори на компании в Америка се обединяват зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно образование.
     announcement_petition_button: Добавете името си
   move_students:
@@ -692,7 +692,7 @@ bg:
     content: Съдържание
     practice: Учителски практики
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_md: "<strong>Отказ от отговорност: Вие сте на път да напуснете Code.org и да преминете към сайт, който не се управлява от Code.org.</strong> Този сайт може да има политика за поверителност, която се различава от тази на Code.org в. <br/> <br/> Ние сме избрали тези партньорски ресурси, защото смятаме, че те ще бъдат полезни за Вас. Но ние не сме пряко отговорни за съдържанието на този сайт, моля, <a href='%{support_url}'>contact support</a>свържете се с поддръжката</a> ако откриете, че съдържанието е нежелателно, или ако свързания сайт вече не е достъпен."
   hoc_download:
     title: Часът на кода за сваляне
     capsule_title: Имате ли интернет?

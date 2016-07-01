@@ -156,6 +156,10 @@ rows.forEach(row => {
 function testFromS3Key(key) {
   let escapedSuffix = S3_KEY_SUFFIX.replace(/\./g, '\\.');
   var result = new RegExp(`[^/]+\/([^_]+)_(.*)${escapedSuffix}`, 'i').exec(key);
+  // Ignore tests with a different suffix (from other runs, e.g. eyes vs. non-eyes).
+  if (!result) {
+    return undefined;
+  }
   var browser = result[1];
   var feature = `features/${result[2]}.feature`;
   // If we don't have the browser, we definitely don't have the test.
@@ -327,11 +331,11 @@ function toggleHideSucceeded() {
   hideSucceededButton.textContent = `${hideSucceeded ? 'Show' : 'Hide'} Succeeded`;
   let sheet = document.styleSheets[document.styleSheets.length - 1];
   let display = hideSucceeded ? 'none' : 'inherit';
-  let rule = _.findLast(sheet.rules, rule => rule.selectorText == '.SUCCEEDED');
+  let rule = _.findLast(sheet.rules, rule => rule.selectorText === '.SUCCEEDED');
   if (rule) {
     rule.style.display = display;
   } else {
-    sheet.insertRule(`.SUCCEEDED{display: ${display}}`,sheet.cssRules.length)
+    sheet.insertRule(`.SUCCEEDED{display: ${display}}`,sheet.cssRules.length);
   }
 }
 let hideSucceededButton = document.querySelector('#hide-succeeded-button');

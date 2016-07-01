@@ -737,6 +737,9 @@ en:
       Forum-ECSPD-Unit 2-Teaching Practice: {}
       Forum-ECSPD-Unit 3-Teaching Practice: {}
       Forum-ECSPD-Unit 4-Teaching Practice: {}
+      FrustrationSolutions:
+        Frustration Solutions: Frustration Solutions
+        Unplugged Drawing Assessment of Solutions to Frustration K: Unplugged Drawing Assessment of Solutions to Frustration K
       GoodBadVisualizations_v1:
         description here: description here
         title: title
@@ -760,6 +763,12 @@ en:
         tour of the PD space: tour of the PD space
       Lesson 1.4 Overview: {}
       Lesson Prep Final: {}
+      MarbleMaze:
+        Marble Maze: Marble Maze
+        Marble Maze Activity for K Level: Marble Maze Activity for K Level
+      MarbleMaze2:
+        Marble Maze 2: Marble Maze 2
+        Second Marble Maze K Activity: Second Marble Maze K Activity
       OPD-K5 About: {}
       OPD-K5 Assessment: {}
       OPD-K5 CS: {}
@@ -1017,6 +1026,9 @@ en:
       Sending Bits Real World Student Lesson Introduction:
         description here: description here
         title: title
+      StevieMarbles:
+        Stevie and the Marbles: Stevie and the Marbles
+        Story for K Level about Frustration: Story for K Level about Frustration
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
@@ -1027,6 +1039,9 @@ en:
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
+      TheGreatBugBash:
+        Debugging Story for K Level: Debugging Story for K Level
+        The Great Bug Bash: The Great Bug Bash
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
@@ -1502,6 +1517,8 @@ en:
       challenges sample 7:
         Give these a try: Give these a try
         Life Science Challenges: Life Science Challenges
+      comingSoon:
+        Coming Soon!: Coming Soon!
       duino auduino:
         duino auduino: duino auduino
       duino battery led:
@@ -1545,6 +1562,8 @@ en:
       newCSFsample:
         Intro: Intro
         description here: description here
+      onlineNeighbors:
+        Your Online Neighborhood: Your Online Neighborhood
       plc csp1 chapter overviews: {}
       plc csp1 intro to tools: {}
       plc csp1 introduction to unit: {}
@@ -1785,6 +1804,8 @@ en:
         Thanks for your time: Thanks for your time
       sciencePD2b remixing:
         Remixing in StarLogo Nova: Remixing in StarLogo Nova
+      seqAlg:
+        Sequences and Algorithms: Sequences and Algorithms
       storyline1:
         The Adventurer Meets the Wizard: The Adventurer Meets the Wizard
         The Wizards Potions: The Wizards Potions
@@ -2102,6 +2123,16 @@ en:
         ? "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         Maybe: Maybe
+      CSD U3 Keypress Matching:
+        Is true only once when the key is pressed.: Is true only once when the key is pressed.
+        Is true only once when the key is released.: Is true only once when the key is released.
+        Is true the whole time the key is pressed or held down.: Is true the whole time the key is pressed or held down.
+        ? Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.
+        : Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.
+        'Matching: Responding to Keypresses': 'Matching: Responding to Keypresses'
+        keyDown(): keyDown()
+        keyWentDown(): keyWentDown()
+        keyWentUp(): keyWentUp()
       CSPPD AP quiz:
         AP Assessment Matching: AP Assessment Matching
         Create Task: Create Task

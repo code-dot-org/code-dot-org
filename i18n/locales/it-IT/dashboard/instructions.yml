@@ -162,10 +162,7 @@ it:
       2-3 Maze 12 (copy 1)_instruction: 'Riesci a sostituire la risposta precedente con solo due blocchi? (Aiuto: Crea un ciclo usando un blocco "ripeti".)'
       2-3 Maze 12 (copy 2)_instruction: 'Riesci a sostituire la risposta precedente con solo due blocchi? (Aiuto: Crea un ciclo usando un blocco "ripeti".)'
       2-3 Maze 12 (old)_instruction: 'Portami al maiale, ora con il comando Ripeti il blocco "n" volte!'
-      2-3 Maze 12 - One Move Block_instruction: |
-        Get to the pig! But this time, you
-        can only use one `move forward` block. Do you see any other blocks that could
-        help you?
+      2-3 Maze 12 - One Move Block_instruction: "Raggiungi il maiale! Ma questa volta, è possibile utilizzare solo un blocco 'muovi avanti'. Riesci a vedere quali altri blocchi potrebbero aiutarti?"
       2-3 Maze 12_instruction: |
         Riesci a sostituire questi cinque blocchi con due soli blocchi?
         (Suggerimento: Crea un ciclo usando il blocco "ripeti 5 volte".)
@@ -508,6 +505,42 @@ it:
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
       Artist - Nested Loops Assessment 1_instruction: 'Questo è un esercizio di riepilogo -- Usa un ciclo annidato per completare il disegno.'
+      artistLoopsK1_instruction: |
+        This is a new type of puzzle called "Artist".
+        Play with the level and draw something fun.
+      artistLoopsK2_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
+      artistLoopsK3_instruction: |
+        Draw a line eight steps long. This will become
+        the land for our kingdom!
+      artistLoopsK4_instruction: |
+        Now we need a castle with a draw bridge.  Fix the
+        code so that the bridge lays straight instead of falling down.
+      artistLoopsK5_instruction: |
+        Now we need to fix the top of the castle. Can you
+        loop the code three times?
+      artistLoopsK6_instruction: |
+        Someone is stuck in the tower!  Fix the stairs
+        to set them free. 
+      artistLoopsK7_instruction: |
+        This tower is lovely, what is downstairs? Build
+        another staircase to find out! 
+      artistLoopsK8_instruction: |
+        Wow! There's a garden over there!  Help fix these
+        stairs so I can get to it.
+      artistLoopsK9_instruction: |
+        **Challenge:**  Lovely! Let's take a walk around
+        the garden.
+      artistLoopsKA_instruction: |
+        These stones are in the wrong place.  Help me move
+        them so I don't fall in!
+      artistLoopsKB_instruction: |
+        Look!  It's a theater.  Help me set up the chairs
+        so we can all see the stage. 
+      artistLoopsKFP_instruction: |
+        Picture time!  Use what you have learned to draw
+        a picture of what you think the Artist saw on stage.
       Auto Open Function Editor_instruction: |-
         Puoi chiamare funzioni dall'interno di altre funzioni! Usando la tua funzione "forma" come base, crea 3 forme di una casa, ognuna più larga di 20 pixel rispetto alla precedente, iniziando da una lunghezza di 50 pixel. Può essere utile utilizzare un ciclo contatore. 
       Bee Recommended Blocks test_instruction: 'I fiori viola possono avere una quantità di nettare pari a 0 oppure 1, ma tu non lo sai! Fai attenzione a non raccogliere nettare da un fiore viola se ne ha una quantità pari a 0. Usa il blocco "se" per controllare se la quantità è 0 oppure 1.'
@@ -944,12 +977,12 @@ it:
         E ora una piccola sfida! Per ottenere la figura che vedi devi usare solo blocchi che ti sono già stati mostrati. Riesci a capire come ricrearla? Sentiti libero di fare più tentativi e di commettere errori. Nessuno si aspetta che tu ci riesca perfettamente al primo tentativo. <br><br>
         (Suggerimento: La figura che viene ripetuta è quasi identica a quella del precedente esercizio, l'unica differenza consiste nel fatto che il primo ciclo disegna tratti un po' più corti.)
       Course 4 Artist 12_instruction: |
-        <a href="https://studio.code.org/c/105671120">Clicca qui</a> e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
+        <a href="https://studio.code.org/c/105671120" target="_blank">Clicca qui</a> e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
         Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
-        1. Ogni figura che viene ripetuta è formata dalla combinazione di mezzo esagono con due terzi di un triangolo.<br><br>
-        2. Ogni singola figura è quasi uguale a quella dell'ultimo puzzle, tranne per il fatto che il mezzo esagono è un po' più grande.<br><br>
-        3. Le prime tre linee sono lunghe 60 pixel e devi ruotare di 60 gradi. Le ultime due linee sono lunghe 80 pixel e devi ruotare di 120 gradi.<br><br>
-        Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/105671120">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
+        <b>1)</b> Ogni figura che viene ripetuta è formata dalla combinazione di mezzo esagono con due terzi di un triangolo.<br><br>
+        <b>2)</b> Ogni singola figura è quasi uguale a quella dell'ultimo puzzle, tranne per il fatto che il mezzo esagono è un po' più grande.<br><br>
+        <b>3)</b> Le prime tre linee sono lunghe 60 pixel e devi ruotare di 60 gradi. Le ultime due linee sono lunghe 80 pixel e devi ruotare di 120 gradi.<br><br>
+        Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/105671120" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist 13_instruction: Hai ancora voglia di giocare? Ecco una tela bianca su cui puoi disegnare qualunque cosa tu voglia!
       Course 4 Artist 2_instruction: Riesci ad inserire questo codice in un ciclo per disegnare il quadrato in grigio? Ogni lato è lungo 300 pixel.
       Course 4 Artist 20_instruction: Hai ancora voglia di giocare? Ecco una tela bianca su cui puoi disegnare qualunque cosa tu voglia!
@@ -969,12 +1002,14 @@ it:
         (Suggerimento: ci sono 3 triangoli in una rotazione complessiva di 360 gradi... quante volte ci sta il 3 in 360?)
       Course 4 Artist 9_instruction: "Ripeti 10 volte la figura disegnata dal codice che trovi già pronto e assicurati di ruotare un po' tra una figura e l'altra. Di quanti gradi devi ruotare ad ogni ripetizione? <br> (Suggerimento: quanto fa 360 diviso 10?)"
       Course 4 Artist Binary 1_instruction: |
-        La funzione "disegna in binario" (draw binary) prende in ingresso una stringa binaria, cioè fatta di caratteri "1" e "0", e dà istruzioni all'artista di accendere o spegnere i quadrati in base ai caratteri della stringa, mentre va da sinistra verso destra e dall'alto verso il basso. L'artista quindi colora di bianco i quadrati quando incontra un "1" mentre non li colora quando incontra uno "0".<br><br>
-        Clicca su "Esegui" per vedere come l'artista usa la stringa binaria per disegnare questa figura.
+        La funzione "disegna in binario" (<i>draw binary</i>) prende in ingresso una stringa binaria, cioè fatta di caratteri "1" e "0", e fa sì che l'artista – mentre va da sinistra verso destra e dall'alto verso il basso – accenda o spenga i quadrati in base ai caratteri della stringa.<br><br>
+        L'artista quindi colora di bianco i quadrati quando incontra un "1" mentre non li colora quando incontra uno "0".<br><br>
+        Clicca su "Esegui" per vedere come l'artista usa le stringhe binarie per disegnare questa figura.
       Course 4 Artist Binary 1a_instruction: |
-        La funzione "disegna in binario" (draw binary) prende in ingresso una stringa binaria, cioè fatta di caratteri "1" e "0", e dà istruzioni all'artista di accendere o spegnere i quadrati in base ai caratteri della stringa, mentre va da sinistra verso destra e dall'alto verso il basso. L'artista quindi colora di bianco i quadrati quando incontra un "1" mentre non li colora quando incontra uno "0".<br><br>
-        Clicca su "Esegui" per vedere come l'artista usa la stringa binaria per disegnare questa figura.
-      Course 4 Artist Binary 2_instruction: Quale di queste stringhe binarie devi ripetere 8 volte per disegnare questa figura?
+        La funzione "disegna in binario" (<i>draw binary</i>) prende in ingresso una stringa binaria, cioè fatta di caratteri "1" e "0", e fa sì che l'artista – mentre va da sinistra verso destra e dall'alto verso il basso – accenda o spenga i quadrati in base ai caratteri della stringa.<br><br>
+        L'artista quindi colora di bianco i quadrati quando incontra un "1" mentre non li colora quando incontra uno "0".<br><br>
+        Clicca su "Esegui" per vedere come l'artista usa le stringhe binarie per disegnare questa figura.
+      Course 4 Artist Binary 2_instruction: Qual è di queste stringhe binarie quella che devi ripetere 8 volte per disegnare questa figura?
       Course 4 Artist Binary 3_instruction: Riesci a disegnare questa figura inserendo in un ciclo una stringa binaria di 3 cifre?
       Course 4 Artist Binary 4_instruction: Ogni stringa binaria rappresenta una riga di questa figura. Le stringhe binarie che trovi già pronte disegnano una faccina triste. Riesci, sistemando diversamente i blocchi, a disegnare una faccina allegra invece che triste?
       Course 4 Artist Binary 5_instruction: Quale stringa binaria di 6 cifre, ripetuta 11 volte, ti farà disegnare questa figura?
@@ -984,24 +1019,34 @@ it:
       Course 4 Artist Binary Free Play 2a_instruction: |
         Ecco una griglia 16 x 16 di quadrati per disegnare con una risoluzione superiore!<br><br>
         Clicca su "Esegui" e guarda cosa succede quando cominciamo a essere creativi con i bit.
-      Course 4 Artist Binary Free Play 2b_instruction: Clicca qui per i suggerimenti.
+      Course 4 Artist Binary Free Play 2b_instruction: |
+        <a href="https://studio.code.org/c/146760662" target="_blank">Clicca qui</a> e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
+        Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
+        <b>1)</b> Clicca su "Esegui" per vedere cosa disegna il codice che trovi già pronto.<br><br>
+        <b>2)</b> La figura può essere scomposta in 2 parti: superiore e inferiore, ognuna di 8 righe, che hanno un andamento simmetrico. Per ogni parte serve un "ciclo con contatore", il primo che conta "a salire", il secondo "a scendere".<br><br>
+        <b>3)</b> In ognuna delle parti, la metà di sinistra e quella di destra, entrambe di 8 colonne, hanno anch'esse un andamento simmetrico. Per ognuna di tali metà servono due "cicli", uno per disegnare i quadrati bianchi ed uno per quelli neri, in cui il numero di ripetizioni dipende dal valore di "contatore".<br><br>
+        Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/146760662" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.<br><br>
+        <b>Nota</b>: è possibile definire una soluzione alternativa che usa solo 3 "cicli" all'interno di ogni "ciclo con contatore".<br><br>
+        Se vuoi conoscerla <a href="https://studio.code.org/c/118205099" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist Binary Free Play_instruction: 'Tempo di giocare: disegna qualunque cosa ti piaccia usando le stringhe binarie!'
       Course 4 Artist Binary pre1_instruction: |
         La codifica binaria è una modalità di rappresentazione delle informazioni usando solo due valori.  In questa lezione usiamo i valori "spento" (rappresentato dal numero 0) e "acceso" (rappresentato dal numero 1).<br><br>
-        Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Riesci a far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101"?
+        Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.<br><br>
+        Riesci a far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101"?
       Course 4 Artist Binary ryan_instruction: |
         La codifica binaria è una modalità di rappresentazione delle informazioni usando solo due valori.  In questa lezione usiamo i valori "spento" (rappresentato dal numero 0) e "acceso" (rappresentato dal numero 1).<br><br>
-        Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Riesci a far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101"?
+        Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.<br><br>
+        Riesci a far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101"?
       Course 4 Artist For  Functions 10_instruction: 'Facciamo un passo avanti, Riesci a disegnare una Stella usando la funzione "Draw a Square Line". Buona Fortuna!'
       Course 4 Artist For  Functions 11_instruction: 'Facciamo un passo avanti, Riesci a disegnare una Stella usando la funzione "Draw a Square Line". Buona Fortuna!'
       Course 4 Artist For Loops 1_instruction: 'Usa il blocco "ripeti ... volte" per disegnare un triangolo equilatero con i lati di 50 pixel.'
       Course 4 Artist For Loops 10_instruction: Spazio Libero! Divertiti disegnando quello che vuoi con i blocchi che hai imparato ad usare
       Course 4 Artist For Loops 11_instruction: 'Ricordi che nella lezione 6 (esercizio 10 e seguenti) abbiamo usato la variabile "lati" (sides) per rappresentare il numero dei lati di un poligono? Ora devi fare la stessa cosa con la variabile "contatore" (counter). La figura di questo esercizio inizia con un triangolo ed aggiunge un lato per volta fino ad arrivare a disegnare un decagono (poligono con 10 lati). Ogni lato è lungo 100 pixel. Come puoi usare la variabile "contatore" (counter) presente nel "ciclo con contatore" per disegnare questa figura? <br><br>Suggerimento: Il numero di gradi di cui girare deve cambiare per ogni poligono. 360 diviso il numero di lati del poligono ti restituisce il numero di gradi di cui devi girare per disegnarlo: usa un blocco matematico per calcolarlo.'
       Course 4 Artist For Loops 11a_instruction: |
-        Cerchiamo di mettere tutto insieme!  Usando le conoscenze che hai acquisito sui "cicli con contatore" e sulla variabile "contatore" (counter), prova a creare questo disegno in cui ogni figura ha due lati in più della precedente. Accertati che ogni lato sia 10 volte più lungo del numero di lati del poligono.<br><br>
+        Cerchiamo di mettere tutto insieme!  Usando le conoscenze che hai acquisito sui "cicli con contatore" e sulla variabile "contatore" (<i>counter</i>), prova a creare questo disegno in cui ogni figura ha due lati in più della precedente. Accertati che ogni lato sia 10 volte più lungo del numero di lati del poligono.<br><br>
         Trovi già pronta solo una piccola parte del codice che ti serve.<br><br>Se vuoi altri suggerimenti leggi più sotto.<br><br>
-        <b>1: </b>360 diviso il numero di lati del poligono ti restituisce il numero di gradi di cui devi girare per disegnarlo.<br><br>
-        <b>2: </b>in ogni poligono devi avanzare di quantità pari a 10 volte il numero di lati del poligono stesso.
+        <b>1) </b>360 diviso il numero di lati del poligono ti restituisce il numero di gradi di cui devi girare per disegnarlo.<br><br>
+        <b>2) </b>in ogni poligono devi avanzare di quantità pari a 10 volte il numero di lati del poligono stesso.
       Course 4 Artist For Loops 12_instruction: 'Andava piuttosto bene, ma adesso vorrei disegnare ogni forma vicino alla precedente. Questa volta ogni lato è di 20 pixel. Usa un blocco "salta" per saltare avanti di 40 pixel dopo ogni forma.'
       Course 4 Artist For Loops 13_instruction: 'Hmmm, queste forme stanno diventando sempre più grandi! Non avevamo già risolto questo problema usando le variabili? Come possiamo usare la variabile "contatore" per rendere i lati più piccoli man mano che ce ne sono sempre di più? Invece di spostarti in avanti di una quantità sempre fissa, prova a spostarti di una quantità di pixel pari a  (100 / contatore).'
       Course 4 Artist For Loops 14_instruction: "Se ruoti un po' di più, o un po' di meno, di quanto fai di solito, puoi ottenere un effetto diverso. Per creare questa spirale quadrata avvitata, prova ad usare il codice del precedente esercizio ruotando di 89 gradi, invece di 90 gradi."
@@ -1027,15 +1072,15 @@ it:
       Course 4 Artist For Loops Challenge_instruction: |
         Riesci a capire come utilizzare tutte le cose che hai imparato finora per disegnare questa immagine composta di poligoni, tutti con lato di 40 pixel?<br><br>
         Se vuoi dei suggerimenti leggi più sotto.<br><br>
-        1. Il poligono più grande ha 19 lati.<br><br>
-        2. Tutti i poligoni sono incompleti, ossia ogni poligono ha un lato di meno rispetto a quelli che dovrebbe avere ("contatore - 1").<br><br>
+        <b>1)</b> Il poligono più grande ha 19 lati.<br><br>
+        <b>2)</b> Tutti i poligoni sono incompleti, ossia ogni poligono viene disegnato con un lato di meno rispetto a quelli che dovrebbe avere ("<i>counter</i> - 1").
       Course 4 Artist For Loops inspire_instruction: |
-        <a href="https://studio.code.org/c/109045588">Clicca qui</a> e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
+        <a href="https://studio.code.org/c/109045588" target="_blank">Clicca qui</a> e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
         Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
-        1. La soluzione di questo esercizio è quasi uguale a quella dell'esercizio precedente... con un paio di cambiamenti.<br><br>
-        2. Prova ad usare un ciclo con contatore che va da 3 a 10 con passo di 1.<br><br>
-        3. All'interno del ciclo con contatore ci sono due cicli uguali, ma il secondo ciclo gira nella direzione opposta del primo.<br><br>
-        Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/109045588">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
+        <b>1)</b> La soluzione di questo esercizio è quasi uguale a quella dell'esercizio precedente... con un paio di cambiamenti.<br><br>
+        <b>2)</b> Prova ad usare un ciclo con contatore che va da 3 a 10 con passo di 1.<br><br>
+        <b>3)</b> All'interno del ciclo con contatore ci sono due cicli uguali, ma il secondo ciclo gira nella direzione opposta del primo.<br><br>
+        Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/109045588" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist Functions 1_instruction: Riesci a disegnare un quadrato con lato di 100 pixels, usando un CICLO?
       Course 4 Artist Functions 10_instruction: Quale blocco è necessario aggiungere per far si che il triangolo sia posizionato sopra il quadrato?
       Course 4 Artist Functions 11_instruction: 'Controlla questo codice e disegna un cubo - Riesci ad inserirla nella funzione chiamata "Disegna un Cubo" (Draw a Cube)'
@@ -1059,31 +1104,31 @@ it:
       Course 4 Artist Functions 8_instruction: 'Stai imparando ad usare i blocchi funzione? Prova a modificare la funzione "disegna un quadrato" (draw a square) in modo che disegni un quadrato con i lati di 200 pixel. Suggerimento: clicca su "modifica" per cambiare il codice della funzione. Se vuoi, puoi cambiare anche il nome della funzione. Alla fine, clicca su "Chiudi" per salvare le modifiche.'
       Course 4 Artist Functions 9_instruction: Vi abbiamo fornito la maggior parte del codice ncessario per creare una funzione. Tuttavia ci sembra ci sia qualcosa che manca. Riouscite a fare in modo che questa funzione sia completa?
       Course 4 Artist Functions challenge_instruction: |
-        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come i seguenti: clicca su <a href="https://studio.code.org/c/159080658">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930">figura 2</a> o poi clicca su "Esegui". Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come i seguenti: clicca su <a href="https://studio.code.org/c/159080658" target="_blank">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930" target="_blank">figura 2</a> o poi clicca su "Esegui". Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
         Vuoi realizzare una delle figure che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
-        1. Un parte importante nel realizzare le funzioni è capire quali blocchi ti servono e quali no.<br><br>
-        2. Per la figura 1, usa un "ciclo con contatore" all'esterno e al suo interno un ciclo "ripeti" che riutilizza la variabile "contatore" (counter).<br><br>
-        3. Ad ogni ripetizione, disegna un quadratino e fai un salto in avanti.<br><br>
-        4. Devi girare di 90 gradi dopo ogni ciclo "ripeti", ma sempre all'interno del "ciclo con contatore".<br><br>
-        5. Per la figura 2 usa il codice del precedente esercizio ed aggiungi un blocco "gira a ..." di 1 grado e mezzo all'interno del ciclo interno.<br><br>
-        Se vuoi sapere come sono state realizzate le figure che ti abbiamo mostrato, clicca su <a href="https://studio.code.org/c/159080658">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930">figura 2</a> e poi su "Come funziona" per scoprirlo.
+        <b>1)</b> Un parte importante nel realizzare le funzioni è capire quali blocchi ti servono e quali no.<br><br>
+        <b>2)</b> Per la figura 1, usa un "ciclo con contatore" all'esterno e al suo interno un ciclo "ripeti" che riutilizza la variabile "contatore" (counter).<br><br>
+        <b>3)</b> Ad ogni ripetizione, disegna un quadratino e fai un salto in avanti.<br><br>
+        <b>4)</b> Devi girare di 90 gradi dopo ogni ciclo "ripeti", ma sempre all'interno del "ciclo con contatore".<br><br>
+        <b>5)</b> Per la figura 2 usa il codice del precedente esercizio ed aggiungi un blocco "gira a ..." di 1 grado e mezzo all'interno del ciclo interno.<br><br>
+        Se vuoi sapere come sono state realizzate le figure che ti abbiamo mostrato, clicca su <a href="https://studio.code.org/c/159080658" target="_blank">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930" target="_blank">figura 2</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist Functions Inspiration_instruction: |
-        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come i seguenti: clicca su <a href="https://studio.code.org/c/159080658">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930">figura 2</a> o poi clicca su "Esegui". Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come i seguenti: clicca su <a href="https://studio.code.org/c/159080658" target="_blank">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930" target="_blank">figura 2</a> o poi clicca su "Esegui". Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
         Vuoi realizzare una delle figure che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
-        1. Un parte importante nel realizzare le funzioni è capire quali blocchi ti servono e quali no.<br><br>
-        2. Per la figura 1, usa un "ciclo con contatore" all'esterno e al suo interno un ciclo "ripeti" che riutilizza la variabile "contatore" (counter).<br><br>
-        3. Ad ogni ripetizione, disegna un quadratino e fai un salto in avanti.<br><br>
-        4. Devi girare di 90 gradi dopo ogni ciclo "ripeti", ma sempre all'interno del "ciclo con contatore".<br><br>
-        5. Per la figura 2 usa il codice del precedente esercizio ed aggiungi un blocco "gira a ..." di 1 grado e mezzo all'interno del ciclo interno.<br><br>
-        Se vuoi sapere come sono state realizzate le figure che ti abbiamo mostrato, clicca su <a href="https://studio.code.org/c/159080658">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930">figura 2</a> e poi su "Come funziona" per scoprirlo.
+        <b>1)</b> Un parte importante nel realizzare le funzioni è capire quali blocchi ti servono e quali no.<br><br>
+        <b>2)</b> Per la figura 1, usa un "ciclo con contatore" all'esterno e al suo interno un ciclo "ripeti" che riutilizza la variabile "contatore" (counter).<br><br>
+        <b>3)</b> Ad ogni ripetizione, disegna un quadratino e fai un salto in avanti.<br><br>
+        <b>4)</b> Devi girare di 90 gradi dopo ogni ciclo "ripeti", ma sempre all'interno del "ciclo con contatore".<br><br>
+        <b>5)</b> Per la figura 2 usa il codice del precedente esercizio ed aggiungi un blocco "gira a ..." di 1 grado e mezzo all'interno del ciclo interno.<br><br>
+        Se vuoi sapere come sono state realizzate le figure che ti abbiamo mostrato, clicca su <a href="https://studio.code.org/c/159080658" target="_blank">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930" target="_blank">figura 2</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist Functions inspire_instruction: "Tempo di giocare: guarda la figura che trovi al link https://studio.code.org/c/110671172. Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se questa immagine ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo. \\r\n\nVuoi realizzare la figura che ti abbiamo suggerito? Ecco alcuni aiuti:\n\nSuggerimento 1: usa un ciclo con contatore, quindi usa la sua variabile contatore all'interno di un ciclo annidato.\n\nSuggerimento 2: ad ogni iterazione, dovresti disegnare un quadrato e fare un salto in avanti. \n\nSuggerimento 3: dovresti girare a sinistra di 90 gradi all'esterno del ciclo annidato, ma ancora all'interno del ciclo con contatore.\n\n\\r\nVuoi sapere come è stato realizzata la figura che ti abbiamo suggerito? Visita il link https://studio.code.org/c/110671172/edit per scoprirlo.\n\nCosa succede se disegni i quadrati un po' più piccoli o un po' più grandi? E cosa succede se invece di girare a sinistra giri a destra?"
       Course 4 Artist Inspire_instruction: |
-        <a href="https://studio.code.org/c/105765376">Clicca qui</a> e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
+        <a href="https://studio.code.org/c/105765376" target="_blank">Clicca qui</a> e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
         Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
-        1. Dopo aver completato un quadrato, prova a saltare in avanti di metà della sua lunghezza, prima di girarti e cominciarne un altro.<br><br>
-        2. Per disegnare una singola girandola, devi ripetere per 4 volte (con una svolta a sinistra nel mezzo) ogni quadrato e ogni salto in avanti.<br><br>
-        3. Per completare la figura, ogni girandola viene ripetuta per 4 volte, con una svolta a destra di 360/"lati" (sides) gradi tra l'una e l'altra.<br><br>
-        Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/105765376">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
+        <b>1)</b> Dopo aver completato un quadrato, prova a saltare in avanti di metà della sua lunghezza, prima di girarti e cominciarne un altro.<br><br>
+        <b>2)</b> Per disegnare una singola girandola, devi ripetere per 4 volte (con una svolta a sinistra nel mezzo) ogni quadrato e ogni salto in avanti.<br><br>
+        <b>3)</b> Per completare la figura, ogni girandola viene ripetuta per 4 volte, con una svolta a destra di 360/"lati" (<i>sides</b>) gradi tra l'una e l'altra.<br><br>
+        Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/105765376" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist Params 1_instruction: Modifichiamo ora una funzione che disegna un quadrato con lati di 50 pixel
       Course 4 Artist Params 10_instruction: |-
         Puoi chiamare funzioni dall'interno di altre funzioni! Usando la tua funzione "forma" come base, crea 3 forme di una casa, ognuna più larga di 20 pixel rispetto alla precedente, iniziando da una lunghezza di 50 pixel. Può essere utile utilizzare un ciclo contatore. 
@@ -1124,23 +1169,25 @@ it:
         Questo è un algoritmo che disegna un triangolo all'esterno di triangoli più piccoli. Modificatelo in modo che venga utilizzata la variabile "lati" disegnare ogni triangolo. Studiate il codice e ogni volta che vedete il numero 3, sostituitelo con la variabile "lati". Ricordatevi di utilizzare il blocco che imposta i lati.
       Course 4 Artist Vars 11_instruction: 'Quello che vedi è un codice che utilizza, in maniera più complessa, gli stessi concetti del precedente esercizio - quale valore devi assegnare alla variabile "lati" (sides) per disegnare questa immagine composta da quadrati?'
       Course 4 Artist Vars 12_instruction: |-
-        Per disegnare la figura che vedi la variabile "lati" (sides) va impostata a 5. Se usi valori più grandi disegni poligoni con più lati ed ottieni una figura più grande! Nota che, oltre alla variabile "lati", c'è un'altra variabile chiamata "lunghezza" (length). Puoi utilizzare questa variabile ogni volta che devi "spostarti in avanti". Per disegnare questa figura la variabile "lunghezza" va impostata a 75.
+        Per disegnare la figura che vedi la variabile "lati" (<i>sides</i>) va impostata a 5. Se usi valori più grandi disegni poligoni con più lati ed ottieni una figura più grande! Nota che, oltre alla variabile "lati", c'è un'altra variabile chiamata "lunghezza" (<i>length</i>). Puoi utilizzare questa variabile ogni volta che devi "spostarti in avanti". Per disegnare questa figura la variabile "lunghezza" va impostata a 75.
       Course 4 Artist Vars 13_instruction: |
         Quando una figura ha molti lati, ogni lato deve essere più corto se desideri che l'intero modello si adatti allo schermo.<br>
-        Ricrea l'algoritmo per questo bellissimo modello, ma anziché impostare manualmente la variabile "lunghezza" (length), usa un blocco matematico con all'interno la variabile "lati" (sides) per assicurarti che ogni forma si adatti correttamente. Il perimetro di ciascun poligono è 300 pixel.<br><br>
+        Ricrea l'algoritmo per questo bellissimo modello, ma anziché impostare manualmente la variabile "lunghezza" (<i>length</i>), usa un blocco matematico con all'interno la variabile "lati" (<i>sides</i>) per assicurarti che ogni forma si adatti correttamente. Il perimetro di ciascun poligono è 300 pixel.<br><br>
         Se vuoi dei suggerimenti leggi più sotto.<br><br>
-        1. Hai bisogno di due cicli (uno dentro l'altro), entrambi che ripetono "lati" volte.<br><br>
-        2. Il ciclo interno disegna un ottagono (girando verso sinistra). Poi, nel ciclo esterno, devi muoverti in avanti e girare a destra.<br><br>
-        3. Per aggiustare la figura in modo che rimanga della stessa dimensione al variare del numero di lati, usa un blocco matematico per dividere la lunghezza del perimetro per il numero dei lati.
+        <b>1</b>. Hai bisogno di due cicli (uno dentro l'altro), entrambi che ripetono "lati" volte.<br><br>
+        <b>2</b>. Il ciclo interno disegna un ottagono (girando verso sinistra). Poi, nel ciclo esterno, devi muoverti in avanti e girare a destra.<br><br>
+        <b>3</b>. Per aggiustare la figura in modo che rimanga della stessa dimensione al variare del numero di lati, usa un blocco matematico per dividere la lunghezza del perimetro per il numero dei lati.
       Course 4 Artist Vars 14_instruction: |
         Tempo di giocare: Guarda! Ora l'algoritmo precedente è annidato all'interno di un altro ciclo. Fai degli esperimenti modificando i valori delle due variabili per disegnare delle figure fantastiche.<br><br>
         Per disegni ancora più belli, prova a giocare con i colori! Assegna dei colori a caso all'interno di ogni ciclo e osserva come cambia la figura che ottieni.
-      Course 4 Artist Vars 2_instruction: 'Adesso nel blocco "vai avanti ...", invece di usare un valore esplicito di pixel, si fa riferimento ad una variabile di nome "lunghezza" (length). Puoi impostare la variabile "lunghezza" a 150 per disegnare questo nuovo triangolo?'
+      Course 4 Artist Vars 2_instruction: 'Adesso nel blocco "vai avanti ...", invece di usare un valore esplicito di pixel, si fa riferimento ad una variabile di nome "lunghezza" (<i>length</i>). Puoi impostare la variabile "lunghezza" a 150 per disegnare questo nuovo triangolo?'
       Course 4 Artist Vars 3_instruction: 'Il ciclo proposto disegna un quadrato, ma manca qualcosa. Correggi in modo che utilizzi la variabile "lunghezza" per capire quanto lungo deve essere ogni lato? '
       Course 4 Artist Vars 4_instruction: |-
-        Vorrei disegnare un rettangolo che sia alto il doppio di quanto è largo. C'è una variabile denominata "larghezza" (width) che deve essere impostata a 100. Riesci ad utilizzare il blocco matematico con le operazioni per risolvere questo esercizio?
+        Vorrei disegnare un rettangolo che sia alto il doppio di quanto è largo. C'è una variabile denominata "larghezza" (<i>width</i>) che deve essere impostata a 100. Riesci ad utilizzare il blocco matematico con le operazioni per risolvere questo esercizio?
       Course 4 Artist Vars 5_instruction: 'Utilizzare la variabile "lati" per controllare quante volte questo ciclo debba essere eseguito.'
-      Course 4 Artist Vars 6_instruction: "Ecco del codice che ti consente di disegnare un qualsiasi poligono regolare. C'è una nuova variabile denominata \"lati\" che è impostata a 4. Riesci ad usare la variabile \"lati\" (insieme ad un blocco matematico) per girare del giusto numero di gradi a prescindere da quanti lati ci sono nel poligono? \\r\n\\r\nSuggerimento: 360 diviso il numero di lati ti darà il numero di gradi da ruotare ogni volta che devi disegnare un poligono regolare."
+      Course 4 Artist Vars 6_instruction: |
+        Ecco del codice che ti consente di disegnare un qualsiasi poligono regolare. C'è una nuova variabile denominata "lati" (<i>sides/i>) che è impostata a 4. Riesci ad usare la variabile "lati" (insieme al blocco matematico) per girare del giusto numero di gradi a prescindere da quanti lati ci sono nel poligono?<br><br>
+        Suggerimento: il numero di gradi di cui girare ogni volta è dato da 360 diviso il numero di lati.
       Course 4 Artist Vars 7_instruction: |
         Utilizza ciò che hai imparato nel precedente esercizio per disegnare questo esagono usando la variabile "lati" (sides).<br><br>
         Hai notato che è possibile modificare un solo valore per disegnare un triangolo, un quadrato, un pentagono o un ottagono?
@@ -1214,8 +1261,13 @@ it:
       Course 4 Bee Params 8 clone 3_instruction: "Oooh, ora c'è miele di cui occuparsi! Come si potrebbe aggiornare la funzione per ottenere il nettare o fare il miele."
       Course 4 Bee Params 8 Clone_instruction: "Oooh, ora c'è miele di cui occuparsi! Come si potrebbe aggiornare la funzione per ottenere il nettare o fare il miele."
       Course 4 Bee Params 8 new_instruction: "Oooh, ora c'è miele di cui occuparsi! Come si potrebbe aggiornare la funzione per ottenere il nettare o fare il miele."
-      Course 4 Bee Params 8_instruction: |-
-        Una piccola sfida: ora c'è anche il miele di cui occuparsi! Modifica la funzione in modo che usi, oltre ai parametri "direzione" (direction) e "dosi di nettare" (nectar_units), anche il nuovo parametro "dosi di miele" (honey_units). Come dovresti usare questi parametri per decidere cosa fare?
+      Course 4 Bee Params 8_instruction: |
+        Una piccola sfida: ora c'è anche il miele di cui occuparsi!<br><br>
+        Adesso la funzione "raccogli nettare - produci miele" (<i>get nectar make honey</i>), oltre ai parametri "direzione" (<i>direction<i>) e "dosi di nettare" (<i>nectar_units</i>), ha anche il nuovo parametro "dosi di miele" (<i>honey_units</i>).<br><br>
+        Come devi modificare il codice della funzione in modo da usare i valori di questi parametri per decidere cosa fare?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1: </b>all'interno della funzione la quantità di dosi da raccogliere può essere usata per decidere quale azione svolgere<br><br>
+        <b>2: </b>quando l'ape è su un favo, il numero di dosi di nettare da raccogliere è 0, mentre se è su un fiore, è 0 il numero di dosi di miele da produrre
       Course 4 Bee Params Ex_instruction: |
         Usa la nuova funzione "prendi molte dosi di nettare" (<i>get many nectar</i>) per raccogliere tutto il nettare.<br><br>
         Se vuoi dei suggerimenti leggi più sotto.<br><br>
@@ -1231,12 +1283,24 @@ it:
       Course 4 Binary 6_instruction: Quale stringa binaria, ripetuta 10 volte, disegnerà questa immagine?
       Course 4 Binary 7_instruction: Quale stringa binaria, ripetuta 10 volte, disegnerà questa immagine?
       Course 4 Binary 8_instruction: "Puoi completare la maggior parte di questa immagine impostando un ciclo con un numero binario a 5 bit - poi avrai bisogno di un altro numero a 4 bit per ottenere l'angolo in basso a destra."
-      Course 4 EC 1a_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
-      Course 4 EC 1b_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
-      Course 4 EC 2a_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
-      Course 4 EC 2b_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
-      Course 4 EC 2c_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
-      Course 4 EC 2d_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
+      Course 4 EC 1a_instruction: |
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!<br><br>
+        Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 EC 1b_instruction: |
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!<br><br>
+        Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 EC 2a_instruction: |
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!<br><br>
+        Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 EC 2b_instruction: |
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!<br><br>
+        Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 EC 2c_instruction: |
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!<br><br>
+        Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 EC 2d_instruction: |
+        Nessuna istruzione. Nessun suggerimento. Solo la sfida!<br><br>
+        Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
       Course 4 EC 3_instruction: "Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come questa. NB: Il codice diventa più semplice se si incorporano i parametri. "
       Course 4 EC 3a_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
       Course 4 Maze 1_instruction: "Fai arrivare l'uccellino arrabbiato (Angry Bird) fino al maialino!"
@@ -1280,30 +1344,31 @@ it:
         La variabile "punteggio" deve essere incrementata ogni volta il che il cane colpisce il gatto con una fetta di torta e decrementata ogni volta che il gatto colpisce il cane con un sandwich.<br><br>
         Una volta concluse queste modifiche clicca su "Esegui" per giocare. Quando il punteggio arriva a 6 si passa all'esercizio successivo. 
       Course 4 Play Lab Vars 1_instruction: 'In questo esercizio non devi scrivere alcun codice. Devi solo premere "Esegui" per giocare! <br> <br> Qui sei il cane che sta cercando di raccogliere più bandierine del gatto. Utilizza la freccia verso il basso per muovere il cane. Premi "Termina" quando hai finito di giocare.'
-      Course 4 Play Lab Vars 2_instruction: 'Quella del precedente esercizio non è stata un bella gara! Modifica la variabile denominata "velocità del cane" (dog_speed) per essere sicuro di poter raccogliere più bandierine del gatto. Il primo che raccoglie 10 bandierine vince!'
+      Course 4 Play Lab Vars 2_instruction: 'Quella del precedente esercizio non è stata un bella gara! Modifica la variabile denominata "velocità del cane" (<i>dog_speed</i>) per essere sicuro di poter raccogliere più bandierine del gatto. Il primo che raccoglie 10 bandierine vince!'
       Course 4 Play Lab Vars 3_instruction: "Ecco un nuovo tipo di gioco!<br>Non devi modificare niente in questo esercizio.<br><br>Utilizza le frecce verso sinistra e verso destra per muoverti, e la freccia verso l'alto per saltare. Riesci a raccogliere tutte le bandierine?"
       Course 4 Play Lab Vars 4_instruction: |-
-        Ora c'è una nuova variabile chiamata "altezza" (height) che serve a controllare quanto in alto il cane può arrivare con un salto. Modifica il valore a cui viene impostata "altezza", in modo che il cane possa saltare abbastanza in alto da arrivare a raggiungere tutte le bandierine.
-      Course 4 Play Lab Vars 5_instruction: 'Costruiamo un gioco! In primo luogo abbiamo bisogno di un punteggio. Imposta il valore iniziale della variabile "punteggio" (points) a 10.'
+        Ora c'è una nuova variabile chiamata "altezza" (<i>height</i>) che serve a controllare quanto in alto il cane può arrivare con un salto. Modifica il valore a cui viene impostata "altezza", in modo che il cane possa saltare abbastanza in alto da arrivare a raggiungere tutte le bandierine.
+      Course 4 Play Lab Vars 5_instruction: 'Costruiamo un gioco! In primo luogo abbiamo bisogno di un punteggio. Imposta il valore iniziale della variabile "punteggio" (<i>points</i>) a 10.'
       Course 4 Play Lab Vars 6 (copy 1)_instruction: "Forte! Abbiamo ora una nostra variabile per il punteggio. Ma come possiamo rederla utile?  Che ne dite di aggiungere dei punti alla variabile ogni volta che colpite il nemico con una palla di fuoco ? Usate l'evento «quando l'attore 2 tocca qualsiasi cosa » per aggiornare la variabile quando la palla di fuoco colpisce il gatto. Potete incrementare il punteggio impostando score = score + 1. Fate in modo che il vostro punteggio arrivi a 10, incrementandolo di 1 alla volta, per risolvere l'esercizio."
       Course 4 Play Lab Vars 6_instruction: |
         Utilizza la freccia verso destra per far lanciare al cane una fetta di torta.<br><br>
         Come vengono assegnati i punti? <br>
-        Bisogna aggiungere 1 a "points" (punteggio) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta.<br>
-        Per ottenere questo risultato, usa l'evento "quando il personaggio 2 tocca una cosa qualunque" così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare "points" impostalo a "points + 1".<br>
+        Bisogna aggiungere 1 a "punteggio" (<i>points</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta.<br><br>
+        Per ottenere questo risultato, usa l'evento "quando il personaggio 2 tocca una cosa qualunque" così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare "<i>points</i>" impostalo a "<i>points</i> + 1".<br><br>
         Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
       Course 4 Play Lab Vars 7_instruction: |
-        Bello! Ora facciamo in modo che il gioco non sia troppo facile.<br>
-        Modifica il codice in modo da perdere un punto ogni volta che il cane (personaggio 1) viene colpito da un sandwich lanciato dal gatto (personaggio 2).<br>Iniziamo con 10 punti così non è troppo difficile. Lascia che il punteggio scenda da 10 fino a 0 per risolvere l'esercizio.
+        Bello! Ora facciamo in modo che il gioco non sia troppo facile.<br><br>
+        Modifica il codice in modo da perdere un punto ogni volta che il cane (personaggio 1) viene colpito da un sandwich lanciato dal gatto (personaggio 2).<br><br>Iniziamo con 10 punti così non è troppo difficile. Lascia che il punteggio scenda da 10 fino a 0 per risolvere l'esercizio.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |-
         Bene. Un'ultima cosa per questo gioco. Predisponiamolo in modo che il giocatore possa vincere (o perdere). Usiamo un blocco "ripeti per sempre" per controllare il valore del punteggio. Quando il punteggio diventa maggiore di 20, fai scomparire il nemico. Quando il punteggio diventa 0, fai scomparire il giocatore. Clicca su "Termina" quando il gioco funziona come volevi tu.
       Course 4 Play Lab Vars 8_instruction: 'Predisponiamo ora il gioco in modo che il cane possa vincere (o perdere). Usiamo un blocco "ripeti per sempre" per controllare il valore del punteggio. Quando il punteggio diventa maggiore di 20, fai scomparire il nemico (il gatto). Quando il punteggio diventa 0, fai scomparire il giocatore (il cane). Clicca su "Termina" quando il gioco funziona come volevi tu.'
       Course 4 Play Lab Vars 9_instruction: |
-        Tempo di giocare: qui ci sono tutte le variabili con cui abbiamo giocato finora, e anche qualcuna in più in caso ti serva.<br><br><b>Attenzione</b>:<br> se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove. Clicca sul triangolino con la punta verso il basso accanto al nome della variabile.<br><br>
-        Nota che ora ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esaminare tutto ciò che è a tua disposizione. Scorri verso il basso per vedere tutti i comandi nell'area di lavoro.<br>Quando hai finito la tua esplorazione, prova a creare un gioco oppure una storia usando i cicli, le variabili e gli eventi.
+        Tempo di giocare: qui ci sono tutte le variabili con cui abbiamo giocato finora, e anche qualcuna in più in caso ti serva.<br><br><b>Attenzione</b>: se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove. Clicca sul triangolino con la punta verso il basso accanto al nome della variabile.<br><br>
+        Ora ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esaminare tutto ciò che è a tua disposizione. Scorri verso il basso per vedere tutti i comandi nell'area di lavoro.<br><br>
+        Quando hai finito la tua esplorazione, prova a creare un gioco oppure una storia usando i cicli, le variabili e gli eventi.
       Course 4 Play Lab Vars_instruction: |-
         Bene. Un'ultima cosa per questo gioco. Predisponiamolo in modo che il giocatore possa vincere (o perdere). Usiamo un blocco "ripeti per sempre" per controllare il valore del punteggio. Quando il punteggio diventa maggiore di 20, fai scomparire il nemico. Quando il punteggio diventa 0, fai scomparire il giocatore.
-      Course 4 Play Labs For Loops 1_instruction: 'Fai in modo che il cane dica tutti i numeri da 1 a 100. Utilizza un "ciclo con contatore" e un blocco "contatore" (counter) per far dire al cane il valore della variabile contatore ogni volta che il ciclo viene ripetuto.'
+      Course 4 Play Labs For Loops 1_instruction: 'Fai in modo che il cane dica tutti i numeri da 1 a 100. Utilizza un "ciclo con contatore" e il blocco "contatore" (<i>counter</i>) per far dire al cane il valore della variabile contatore ogni volta che il ciclo viene ripetuto.'
       Course 4 Play Labs For Loops 2_instruction: Questa volta prova a far dire al cane i numeri dispari da 1 a 100.
       Course 4 Play Labs For Loops 3_instruction: Se contiamo con un passo più grande, nella stessa quantità di tempo possiamo contare fino ad un numero più grande. Prova a far contare il pirata da 10 a 1000, a passi di 10.
       Course 4 Play Labs For Loops 4_instruction: Cambiare il passo può essere utile, ma stiamo ancora contando in modo lineare (la distanza tra due valori successivi è sempre la stessa). Come potremmo fare se volessimo contare in modo esponenziale? Senza cambiare le impostazioni del ciclo con contatore, riesci a contare 1, 4, 9, 16, 25... (il contatore al quadrato)?
@@ -1328,60 +1393,169 @@ it:
         Modifica i valori usati nel "ciclo con contatore" (e, se vuoi, anche il personaggio) per creare il gioco che preferisci! <br>
         Premi "Esegui" e clicca più volte possibile sul personaggio. Ce la fai a raggiungere il nostro record di 24? 
       Course 4 SCF 1_instruction: |
-        Usa le funzioni suggerite per disegnare quattro file di tre esagoni l'una ("draw a line of heagons" = "disegna una fila di esagoni"). Osserva che le file di numero pari vengono disegnate spostate a destra.<br><br>
-        Nota: "shift down/forward" = "scivola in basso e avanti"; "shift down/backward" = "scivola in basso e indietro".<br><br>
-        Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
-        1. Ogni esagono ha il lato di 40 pixel.<br><br>
-        2. C'è un salto di 120 pixel tra un esagono e il successivo della stessa fila.<br><br>
-        3. Prima di disegnare la seconda fila di esagoni, devi girare a destra di 60 gradi e saltare avanti di 40 pixel. Poi devi girare indietro l'artista e saltare indietro di 320 pixel.<br><br>
-        4. Prima di disegnare la terza fila di esagoni, devi girare a destra di 60 gradi e saltare avanti di 40 pixel. Poi devi girare indietro l'artista e saltare indietro di 440 pixel (120 pixel in più della seconda).<br><br>
-        <a href="https://studio.code.org/c/159884109">Clicca qui</a> e poi su "Come funziona" per vedere la soluzione.
+        <b>Super Sfida sulle funzioni:</b> Usa le funzioni suggerite per disegnare quattro file di tre esagoni l'una (<i>draw a line of hexagons</i> = "disegna una fila di esagoni"). Osserva che le file di numero pari vengono disegnate spostate a destra.<br><br>
+        <b>Nota</b>: <i>shift down/forward</i> = "scivola in basso e avanti"; <i>shift down/backward</i> = "scivola in basso e indietro".<br><br>
+        Vuoi realizzare la figura che ti abbiamo mostrato? Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> Ogni esagono ha il lato di 40 pixel.<br><br>
+        <b>2)</b> C'è un salto di 120 pixel tra un esagono e il successivo della stessa fila.<br><br>
+        <b>3)</b> Prima di disegnare la seconda fila di esagoni, devi girare a destra di 60 gradi e saltare avanti di 40 pixel. Poi devi girare indietro l'artista e saltare indietro di 320 pixel.<br><br>
+        <b>4)</b> Prima di disegnare la terza fila di esagoni, devi girare a destra di 60 gradi e saltare avanti di 40 pixel. Poi devi girare indietro l'artista e saltare indietro di 440 pixel (120 pixel in più della seconda).<br><br>
+        <b>5)</b> Se vuoi, <a href="https://studio.code.org/c/159884109" target="_blank">clicca qui</a> e poi su "Come funziona" per vedere la soluzione.<br><br>
+        <b>6)</b> Se hai fatto accesso con il tuo account, puoi anche cliccare sul link "Vedi la soluzione" in basso a sinistra.
       Course 4 SCF 1a_instruction: |
-        Riesci a capire come raccogliere tutto questo nettare con il minor numero possibile di blocchi?<br><br>
-        Ecco alcuni suggerimenti:<br><br>
-        1. Riprendi la funzione definita nella <a href="https://studio. code. org/s/course4/stage/16/puzzle/6">lezione 16</a> per raccogliere un quantità specificata di nettare in una direzione specificata.<br><br>
-        2. Osserva che il percorso base dell'ape è uno zig-zag che scende in basso a destra.<br><br>
-        3. Rifletti su come usare un "ciclo con contatore" per chiamare la funzione con il valore corretto del parametro.
+        <b>Super Sfida sulle funzioni:</b> Riesci a capire come raccogliere tutto questo nettare con il minor numero possibile di blocchi?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> Riprendi la funzione definita nella <a href="https://studio. code. org/s/course4/stage/16/puzzle/6" target="_blank">lezione 16</a> per raccogliere un quantità specificata di nettare in una direzione specificata.<br><br>
+        <b>2)</b> Osserva che il percorso base dell'ape è uno zig-zag che scende in basso a destra.<br><br>
+        <b>3)</b> Rifletti su come usare un "ciclo con contatore" per chiamare la funzione con il valore corretto del parametro.<br><br>
+        <b>4)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
       Course 4 SCF 1b_instruction: |
-        Riesci a capire come produrre tutto questo miele con il minor numero possibile di blocchi?<br><br>
-        Ecco alcuni suggerimenti:<br><br>
-        1. Osserva che le dosi di miele da produrre sono sempre le stesse: puoi usare una funzione.<br><br>
-        2. Osserva questa regolarità del percorso dell'ape per avvicinarsi ai favi: 2 passi verso sinistra e 2 verso l'alto, poi 3 verso sinistra e 3 verso l'alto.<br><br>
-        3. Puoi usare un "ciclo con contatore" per far fare all'ape il percorso opportuno.
+        <b>Super Sfida sulle funzioni:</b> Riesci a capire come produrre tutto questo miele con il minor numero possibile di blocchi?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> Osserva che le dosi di miele da produrre sono sempre le stesse: puoi usare una funzione.<br><br>
+        <b>2)</b> Osserva questa regolarità del percorso dell'ape per avvicinarsi ai favi: 2 passi verso sinistra e 2 verso l'alto, poi 3 verso sinistra e 3 verso l'alto.<br><br>
+        <b>3)</b> Puoi usare un "ciclo con contatore" per far fare all'ape il percorso opportuno.<br><br>
+        <b>4)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
       Course 4 SCF 2_instruction: |
-        Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come quella mostrata in questo esercizio.<br><br>Nota: Il codice diventa più semplice se usi le funzioni con parametri.<br><br>
-        Ecco alcuni suggerimenti:<br><br>
-        1. Ogni ottagono ha i lati lunghi 40 pixel.<br><br>
-        2. C'è un salto di 136 pixel tra un ottagono e il successivo della stessa fila orizzontale.<br><br>
-        3. Prima di disegnare le file pari di ottagoni, devi girare l'artista a destra di 45 gradi e farlo saltare in avanti di 96 pixel. Poi lo devi girare indietro e farlo saltare indietro di 408 pixel.<br><br>
-        4. Osserva che, siccome ci sono più ottagoni nelle file pari, non devi far saltare indietro l'artista di una quantità supplementare prima di iniziare a disegnare le successive file dispari. Puoi quindi usare la stessa funzione per riposizionare l'artista prima di disegnare ogni fila successiva.<br><br>
-        <a href="https://studio.code.org/c/159876895">Clicca qui</a> e poi su "Come funziona" per vedere la soluzione.
+        <b>Super Sfida sulle funzioni:</b> Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come quella mostrata in questo esercizio.<br><br><b>Nota</b>: Il codice diventa più semplice se usi le funzioni con parametri.<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> Ogni ottagono ha i lati lunghi 40 pixel.<br><br>
+        <b>2)</b> C'è un salto di 136 pixel tra un ottagono e il successivo della stessa fila orizzontale.<br><br>
+        <b>3)</b> Prima di disegnare le file pari di ottagoni, devi girare l'artista a destra di 45 gradi e farlo saltare in avanti di 96 pixel. Poi lo devi girare indietro e farlo saltare indietro di 408 pixel.<br><br>
+        <b>4)</b> Osserva che, siccome ci sono più ottagoni nelle file pari, non devi far saltare indietro l'artista di una quantità supplementare prima di iniziare a disegnare le successive file dispari. Puoi quindi usare la stessa funzione per riposizionare l'artista prima di disegnare ogni fila successiva.<br><br>
+        <b>5)</b> Se vuoi, <a href="https://studio.code.org/c/159876895" target="_blank">clicca qui</a> e poi su "Come funziona" per vedere la soluzione.<br><br>
+        <b>6)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
       Course 4 SCF 3 Fail 1_instruction: Riesci a capire come...
       Course 4 SCF 3 Fail 2_instruction: Riesci a capire come...
       Course 4 SCF 3_instruction: |
-        Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come quella mostrata in questo esercizio.<br><br>Nota: Il codice diventa più semplice se usi le funzioni con parametri.<br><br>
-        Ecco alcuni suggerimenti:<br><br>
-        1. Il disegno è formato da una serie di ottagoni ognuno con i lati lunghi "contatore" (counter) pixel.<br><br>
-        2. La funzione che disegna l'ottagono è chiamata dall'interno di un "ciclo con contatore" che conta all'indietro da 200 a 2 con passo 2.<br><br>
-        3. Ad ogni ripetizione del "ciclo con contatore" devi girare di 22.5 gradi.<br><br>
-        4. Il valore del "contatore" controlla sia il colore (diminuisce il "rosso" e aumenta sia il "verde" che il "blu") che la larghezza del pennello.<br><br>
-        <a href="https://studio.code.org/c/159877686">Clicca qui</a> e poi su "Come funziona" per vedere la soluzione.
-      Course 4 SCFL 1_instruction: Risolvi questo esercizio usando il minor numero di blocchi possibile.
-      Course 4 SCFL 1a_instruction: Puoi far arrivare Scrat alla sua ghianda usando il minor numero possibile di blocchi?
-      Course 4 SCFL 1b_instruction: Puoi far arrivare Scrat alla sua ghianda usando il minor numero possibile di blocchi?
-      Course 4 SCFL 2_instruction: Risolvi questo esercizio usando il minor numero di blocchi possibile.
-      Course 4 SCFL 3_instruction: Riesci a ricreare questo disegno?
-      Course 4 SCFL 4_instruction: Riesci a ricreare questo disegno?
-      Course 4 SCFL 5_instruction: Riesci a ricreare questo disegno?
-      Course 4 SCFL 6_instruction: Riesci a ricreare questo disegno usando solo un ciclo?
-      Course 4 SCFL 7_instruction: "L'artista vuole disegnare qualche onda! Riesci ad aiutarlo ricreando questo disegno?"
+        <b>Super Sfida sulle funzioni:</b> Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come quella mostrata in questo esercizio.<br><br>Nota: Il codice diventa più semplice se usi le funzioni con parametri.<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> Il disegno è formato da una serie di ottagoni ognuno con i lati lunghi "contatore" (<i>counter</i>) pixel.<br><br>
+        <b>2)</b> La funzione che disegna l'ottagono è chiamata dall'interno di un "ciclo con contatore" che conta all'indietro da 200 a 2 con passo 2.<br><br>
+        <b>3)</b> Ad ogni ripetizione del "ciclo con contatore" devi girare di 22.5 gradi.<br><br>
+        <b>4)</b> Il valore del "contatore" controlla sia il colore (diminuisce il "rosso" e aumentano sia il "verde" che il "blu") che la larghezza del pennello.<br><br>
+        <b>5)</b> Se vuoi, <a href="https://studio.code.org/c/159877686">clicca qui</a> e poi su "Come funziona" per vedere la soluzione.
+        <b>6)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCFL 1_instruction: |
+        <b>Super Sfida sui cicli con contatore:</b> Risolvi questo esercizio usando il minor numero di blocchi possibile.<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> L'ape dovrebbe seguire un percorso in cui raccoglie prima tutto il nettare (andando a zig-zag verso destra e verso l'alto) e poi tutto il miele (andando a zig-zag verso il basso e verso sinistra).<br><br>
+        <b>2)</b> È conveniente usare 2 "cicli con contatore": uno per salire mentre si raccoglie il nettare, uno per scendere mentre si produce il miele.<br><br>
+        <b>3)</b> Mentre il "ciclo con contatore per salire deve usare il passo che si incrementa sia per spostarsi che per raccogliere il nettare, quello per scendere lo deve usare solo per produrre il miele.<br><br>
+        <b>4)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCFL 1a_instruction: |
+        <b>Super Sfida sui cicli con contatore:</b> Puoi far arrivare Skrat alla sua ghianda usando il minor numero possibile di blocchi?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> Skrat dovrebbe seguire un percorso a zig-zag che va prima a destra e poi in alto e poi di nuovo a destra e in alto, e così via, con dei tratti via via più corti.<br><br>
+        <b>2)</b> Usa un "ciclo con contatore" per far muovere Skrat.<br><br>
+        <b>3)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCFL 1b_instruction: |
+        <b>Super Sfida sui cicli con contatore:</b> Puoi far arrivare Skrat alla sua ghianda usando il minor numero possibile di blocchi?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> Per usare il minor numero possibile di blocchi potrebbe essere necessario doversi spostare di più del minimo necessario.<br><br>
+        <b>2)</b> Skrat dovrebbe seguire un percorso che passa per entrambi gli "anelli" in alto a sinistra e in alto a destra.<br><br>
+        <b>3)</b> Un "ciclo con contatore" ti può aiutare ad eseguire una stessa serie di mosse, con un numero di passi che cambia ogni volta. Nota che il numero di passi necessari diminuisce da 7 a 5, con passo 1.<br><br>
+        <b>4)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCFL 2_instruction: |
+        <b>Super Sfida sui cicli con contatore:</b> Risolvi questo esercizio usando il minor numero di blocchi possibile.<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> L'ape dovrebbe seguire un percorso in cui alternativamente si raccoglie il nettare sull'esterno e si produce il miele convergendo sul fiore all'interno, mentre si gira in senso orario intorno ai favi.<br><br>
+        <b>2)</b> Il giro intorno ai favi può essere controllato da un "ciclo con contatore" nel quale in 3 momenti ci si ferma per svolgere delle azioni su degli oggetti.<br><br>
+        <b>3)</b> Riesci a capire con quale regola, ad ogni ripetizione di tale "ciclo con contatore", varia il numero di azioni da compiere con ognuno dei 3 oggetti con cui si interagisce?<br><br>
+        <b>4)</b> Nella prima interazione la sequenza di ripetizioni è: 1, 2, 3, 4.<br><br>
+        <b>5)</b> Nella seconda interazione la sequenza di ripetioni e: 3, 6, 9, 12.<br><br>
+        <b>6)</b> Nella terza interazione la sequenza di ripetizioni è: 2, 4, 8, quando il contatore vale: 1, 2, 3. Riesci a capire qual è la regola?<br><br> 
+        <b>7)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCFL 3_instruction: |
+        <b>Super Sfida sui cicli con contatore:</b> Riesci a ricreare questo disegno?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> La larghezza del pennello (<i>pen width</i>) è 1. Il primo quadrato ha il lato di 50 pixel, ed ogni quadrato successivo ha il lato di 50 pixel più lungo.<br><br>
+        <b>2)</b> Il valore dell'opacità (<i>alpha</i>) del pennello è sempre la metà del valore del contatore (<i>counter</i>).
+        <b>3)</b> Al termine del disegno di un quadrato devi posizionare l'artista un po' più in alto a sinistra per disegnare correttamente il successivo quadrato.<br><br>
+        <b>4)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCFL 4_instruction: |
+        <b>Super Sfida sui cicli con contatore:</b> Riesci a ricreare questo disegno?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> La figura è composta da ripetizioni di un quadrato di di colore mutevole e dimensioni via via crescenti.<br><br>
+        <b>2)</b> Il primo quadrato ha il lato lungo 5 pixel, ed ogni quadrato successivo è 5 pixel più lungo, fino a 200 pixel.<br><br>
+        <b>3)</b> Il cambiamento del colore si attua col blocco "imposta il colore con rosso, verde, blu" (<i>set color with red, green, blue</i>). Il valore del rosso è sempre uguale a quello del "contatore (<i>counter</i>) mentre quello del verde a 255-contatore, ed il blue rimane sempre fisso a 255.<br><br>
+        <b>4)</b> L'artista gira di 15 gradi prima di disegnare il successivo quadrato.<br><br>
+        <b>5)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCFL 5_instruction: '<b>Super Sfida con i cicli con contatore:</b> Riesci a ricreare questo disegno?'
+      Course 4 SCFL 6_instruction: |
+        <b>Super Sfida sui cicli con contatore:</b> Riesci a ricreare questo disegno usando un solo ciclo?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> La figura è una spirale di colore mutevole e tratti rettilinei progressivamente più lunghi.<br><br>
+        <b>2)</b> Il primo segmento è lungo 5 pixel ed ogni successivo segmento è 2 pixel più lungo, fino a 250.<br><br>
+        <b>3)</b> Al termine di ogni segmento l'artista gira di 80 gradi.<br><br>
+        <b>4)</b> Il cambiamento del colore si attua col blocco "imposta il colore con rosso, verde, blu" (<i>set color with red, green, blue</i>). Il valore del rosso è sempre fisso a 255 mentre quello del verde è sempre uguale a quello del "contatore (<i>counter</i>), ed il blue è uguale a 255-contatore.<br><br>
+        <b>5)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCFL 7_instruction: |
+        <b>Super Sfida sui cicli con contatore:</b> L'artista vuole disegnare qualche onda! Riesci ad aiutarlo ricreando questo disegno?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> La figura è composta da due onde, ognuna delle quali è disegnata da un "ciclo con contatore", il primo che conta "a salire" ed il secondo che conta "a scendere".<br><br>
+        <b>2)</b> Entrambi i cicli hanno come estremi 5 e 200, come passo 2, ed eseguono <b>quasi</b> le stesse azioni.<br><br>
+        <b>3)</b> La grandezza del pennello varia progressivamente all'interno del ciclo, seguendo il valore del "contatore" <i>counter</i>).<br><br>
+        <b>4)</b> Ad ogni ripetizione l'artista deve avanzare di 5 pixel e poi girare di 360/contatore: attenzione alla direzione in cui gira!<br><br>
+        <b>5)</b> Il pennello ha un'opacità di 20.<br><br>
+        <b>6)</b> Il cambiamento del colore si attua col blocco "imposta il colore con rosso, verde, blu" (<i>set color with red, green, blue</i>). Il valore del rosso è sempre uguale a quello del "contatore (<i>counter</i>) mentre quello del verde a 255-contatore, ed il blue rimane sempre fisso a 255.<br><br>
+        <b>7)</b> Al termine del primo ciclo l'artista deve girare di 225 gradi a sinistra prima di iniziare il secondo.<br><br>
+        <b>8)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
       Course 4 SCFP 1_instruction: "Crea una funzione con parametri che permetta all'artista di saltare all'indietro e in avanti di x pixel e anche su e giù di y pixel (con numeri positivi e negativi)."
-      Course 4 SCV 1_instruction: Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
-      Course 4 SCV 2_instruction: Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
-      Course 4 SCV 3_instruction: 'Ecco un gioco di scontri!  Muovendo il cane, tocca il gatto per ottenere 2 punti e il pinguino per ottenere 3 punti.  Arriva a 10 punti per vincere!<br><br>Ma fai attenzione, quando il gatto e il pinguino si toccano, perdi 1 punto.<br><br>Aggiungi i blocchi necessari per far funzionare il gioco nel modo in cui è stato spiegato.  Come puoi muovere il cane in tutte le direzioni utilizzando i tasti freccia?  Come puoi aggiungere punti quando il cane tocca il gatto o il pinguino?  Come puoi togliere un punto quando il gatto ed il pinguino si toccano?'
-      Course 4 SCV 4_instruction: Risolvi questo esercizio usando il minor numero possibile di blocchi.
-      Course 4 SCV 5_instruction: Risolvi questo esercizio usando il minor numero possibile di blocchi.
-      Course 4 SCV 6_instruction: Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
+      Course 4 SCV 1_instruction: |
+        <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> La figura è composta dalla ripetizione del disegno di un pentagono e di un decagono.<br><br>
+        <b>2)</b> Il perimetro di ogni poligono ha una lunghezza (<i>length</i>) di 500 pixel.<br><br>
+        <b>3)</b> Ogni poligono è ripetuto un numero di volte pari al numero dei suoi lati (<i>sides</i>).<br><br>
+        <b>4)</b> Al termine delle ripetizioni di ogni poligono l'artista ha fatto un giro completo di 360 gradi.<br><br>
+        <b>5)</b> Entrambi i poligoni sono disegnati dallo stesso ciclo, basato sulla variabile <i>sides</i> - il cui valore viene opportunamente cambiato.<br><br>
+        <b>6)</b> Vengono disegnate prima tutte le ripetizioni del pentagono e poi tutte quelle del decagono.<br><br>
+        <b>7)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCV 2_instruction: |
+        <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> La figura è composta da 10 ripetizioni di un "fiore", che è disegnato da 10 ripetizioni di un decagono il cui perimetro ha una lunghezza (<i>length</i>) di 400 pixel.<br><br>
+        <b>2)</b> Sono quindi necessari 3 "cicli annidati" ognuno dei quali esegue 10 ripetizioni, pari al numero dei lati (<i>sides</i>) del decagono.<br><br>
+        <b>3)</b> Alla fine del ciclo più interno (quello che disegna il singolo decagono) l'artista gira un po' a sinistra, mentre gira a destra alla fine degli altri due cicli.<br><br>
+        <b>4)</b> Come nel disegno del decagono, così sia per disegnare un fiore che tutta la figura l'artista svolge un giro completo di 360 gradi.<br><br>
+        <b>5)</b> Dopo aver disegnato un fiore è necessario spostarsi un po' in avanti prima di girare a destra, per evitare di disegnare le varie ripetizioni del fiore tutte nello stesso punto.<br><br>
+        <b>6)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCV 3_instruction: |
+        <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per risolvere un esercizio difficile come questo! Il gioco che ti proponiamo di realizzare è complicato. Ce la fai a perseverare fino a trovare la soluzione?<br><br>
+        Questo è un gioco di inseguimenti!  Muovendo il cane, tocca il gatto per ottenere 2 punti, e il pinguino per ottenere 3 punti.  Arriva <u>esattamente</u> a 10 punti per vincere! Ma fai attenzione, quando il gatto e il pinguino si toccano, perdi 1 punto.<br><br>
+        Aggiungi i blocchi necessari per far funzionare il gioco nel modo in cui è stato spiegato.<br>
+        Come puoi muovere il cane (personaggio 1) in tutte le direzioni utilizzando i tasti freccia?<br>
+        Come puoi aggiungere punti quando il cane tocca il gatto (personaggio 2) o il pinguino (personaggio 3)?<br>
+        Come puoi togliere un punto quando il gatto ed il pinguino si toccano?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> Usa il blocco con le operazione per aggiungere e sottrarre punti alla variabile <i>points</i> (punteggio) quando i personaggi si toccano.<br><br>
+        <b>2)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCV 4_instruction: |
+        <b>Super Sfida sulle variabili:</b> risolvi questo esercizio con il minore numero possibile di blocchi!<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> L'ape dovrebbe seguire un tracciato che arriva fino al bordo inferiore, poi va verso il bordo sinistro, infine risale.<br><br>
+        <b>2)</b> Ad ogni ripetizione del ciclo che fa percorrere all'ape questo tracciato, sui fiori ci sono due dosi di nettare in meno e l'ape deve produrre una dose di miele in più.<br><br>
+        <b>3)</b> Ad ogni ripetizione di questo ciclo il numero di passi che l'ape deve fare per arrivare al fiore è uguale al numero di dosi di nettare sul fiore stesso.<br><br>
+        <b>4)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCV 5_instruction: |
+        <b>Super Sfida sulle variabili:</b> risolvi questo esercizio con il minore numero possibile di blocchi!<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> L'ape dovrebbe seguire un tracciato che arriva fino al bordo destro, poi va verso il bordo inferiore, poi continua andando verso il bordo sinistro, infine risale e piega a destra.<br><br>
+        <b>2)</b> Per questo esercizio servono 3 variabili: una per le dosi di nettare da raccogliere, una per quelle di miele da produrre, ed una per il numero di passi di cui l'ape si deve muovere ad ogni ripetizione.<br><br>
+        <b>3)</b> È conveniente avere 3 cicli all'interno di un ciclo più esterno: un ciclo per muovere l'ape, uno per raccogliere il nettare, uno per produrre il miele.
+        <b>4)</b> Osserva come cambia il numero dei passi di cui si deve muovere l'ape, delle dosi di nettare da raccogliere e di miele da produrre e cerca di determinare una regola per le loro variazioni. Prendi esempio dalla soluzione del <a href="https://studio.code.org/s/course4/stage/19/puzzle/2" target="_blank">precedente esercizio</a>.
+        <b>5)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
+      Course 4 SCV 6_instruction: |
+        <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br><br>
+        <b>1)</b> La figura è composta da ripetizioni di un poligono con 5 lati (<i>sides</i>) disegnati a zig-zag.<br><br>
+        <b>2)</b> Ogni ripetizione del pentagono è per metà sovrapposta alla precedente: pertanto al termine del disegno di ogni pentagono si gira di 180/<i>sides</i> gradi e vanno effettuate 2*<i>sides</i> ripetizioni per completare il giro di 360 gradi.<br><br>
+        <b>3)</b> Ognuno dei lati del pentagono ha una lunghezza (<i>length</i>) di 140 pixel ed è composto da 5 segmenti "zig" di un colore e 5 segmenti "zag" di un altro colore: ogni segmento è quindi lungo 140 / (2*<i>sides</i> pixel.<br><br>
+        <b>4)</b> Sono necessari 3 "cicli annidati", il più esterno per ripetere i pentagoni, quello intermedio per disegnare il singolo pentagono, quello più interno per disegnare il singolo lato.
+        <b>5)</b> Il colore dei segmenti "zig" ha le seguenti componenti: rosso=0, verde=175, blu=200; mentre quello degli "zag" ha: rosso=100, verde=50, blu=150.<br><br>
+        <b>6)</b> Per disegnare lo zig bisogna ruotare a sinistra di 360/<i>sides</i>, per lo zag a destra della stessa quantità.<br><br>
+        <b>7)</b> Se hai fatto accesso con il tuo account, puoi cliccare sul link "Vedi la soluzione" in basso a sinistra.
       Course 4 SCVP 1_instruction: "Crea una funzione con parametri che permetta all'artista di saltare all'indietro e in avanti di x pixel e anche su e giù di y pixel (con numeri positivi e negativi)."
       Course 4 Variables Assessment_instruction: È possibile creare questa immagine utilizzando una variabile per i lati? Ogni latio dovrebbe essere lungo 50 pixel.
       Course1BeePuzzle12_instruction: Prendi tre dosi di nettare e poi fai due dosi di miele
@@ -1899,6 +2073,7 @@ it:
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      eventsIntro_instruction: Need a better playlab/events combo
       Farmer for Authored Hint testing_instruction: |
         Wow, I found a really deep hole!
         I don't know how many shovelfuls of dirt it needs.  Can you write a program
@@ -2059,6 +2234,24 @@ it:
       K-1 Maze Multi 15_instruction: Esercizio di verifica
       K-1 Maze Sequence Assessment 1_instruction: "Questo è un esercizio di riepilogo --\\r Spostami in una direzione e poi in un'altra per farmi prendere il maialino."
       K-1 Maze Sequence Assessment 2_instruction: "Questo è un esercizio di riepilogo --\\r Spostami in una direzione e poi in un'altra per farmi prendere il maialino!"
+      K2.0 sequence 1_instruction: Modifica il codice per farmi arrivare al maialino!
+      K2.0 sequence 10_instruction: Move me around the TNT to get to the pig.
+      K2.0 sequence 2_instruction: Modifica il codice per farmi arrivare al maialino!
+      K2.0 sequence 3_instruction: |
+        Something is not quite right. REMOVE blocks to
+        get me to the pig!
+      K2.0 sequence 4_instruction: |
+        Try it yourself!  Move one way, then another
+        to get me to the pig.
+      K2.0 sequence 5_instruction: "Spostami in una direzione e poi in un'altra per farmi prendere il maialino!"
+      K2.0 sequence 6_instruction: Cerca di capire che cosa manca, quindi aggiungi i blocchi necessari per farmi arrivare al maialino!
+      K2.0 sequence 7_instruction: |
+        Debug this level by adding and changing blocks
+        to get me to the pig!
+      K2.0 sequence 8_instruction: |
+        Debug this level by adding blocks to get me to
+        the pig!
+      K2.0 sequence 9_instruction: Gira intorno alla dinamite (TNT) per farmi prendere il maialino!
       kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
       KTest1_instruction: Can you make me move South once more to get to the pig?
@@ -2276,7 +2469,7 @@ it:
         <b>3: </b>come dovresti modificare il codice per disegnare una stella con linee normali?
       NEW Course 4 Artist Functions 14_instruction: 'Tempo di giocare: disegna qualunque cosa ti piaccia. '
       NEW Course 4 Artist Functions 2_instruction: "Sai disegnare tre quadrati a distanza di 20 pixel l'uno dall'altro? Ogni quadrato è largo 100 pixel."
-      NEW Course 4 Artist Functions 3_instruction: 'Quello in verde è un nuovo tipo di blocco. Si chiama "funzione". Clicca su "modifica" per inserire in questo blocco "funzione" il codice per disegnare un quadrato con i lati di 100 pixel. Se vuoi, cambia anche il nome (draw a square = disegna un quadrato) e scrivi una descrizione di cosa fa.<br><br>Quando hai finito di modificare la funzione clicca su "Chiudi" per tornare al programma. Adesso puoi usare la "funzione" come un qualunque altro blocco.'
+      NEW Course 4 Artist Functions 3_instruction: 'Quello in verde è un nuovo tipo di blocco. Si chiama "funzione" (<i>function</i>). Clicca su "modifica" (<i>edit</i>) per inserire in questo blocco "funzione" il codice per disegnare un quadrato con i lati di 100 pixel. Se vuoi, cambia anche il nome (<i>draw a square</i> = disegna un quadrato) e scrivi una descrizione di cosa fa.<br><br>Quando hai finito di modificare la funzione clicca su "Chiudi" (<i>Close</i>) per tornare al programma. Adesso puoi usare la "funzione" come un qualunque altro blocco.'
       NEW Course 4 Artist Functions 4_instruction: |
         Usa la funzione "disegna un quadrato" (draw a square) per disegnare questa figura.<br><br>
         Suggerimento: devi utilizzare un blocco "gira a destra di 120 gradi" dopo ogni quadrato.
@@ -2345,15 +2538,15 @@ it:
         Poi usa la funzione così definita per disegnare 3 quadrati con i lati di 25, 50 e 75 pixel: in ognuno di essi l'angolo in basso a sinistra è a distanza di 100 pixel da quello del precedente.<br><br>
         <b>Nota</b>: riesci a capire come modificare ulteriormente la funzione per risolvere l'esercizio con soli 15 blocchi in totale?
       NEW Course 4 Artist Params inspire_instruction: |
-        <a href="https://studio.code.org/c/238594589">Clicca qui</a> e poi su "Esegui".<br><br>
+        <a href="https://studio.code.org/c/238594589" target="_blank">Clicca qui</a> e poi su "Esegui".<br><br>
         Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
         Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
-        <b>1: </b>come prima cosa, assegna lo spessore del pennello a 1 ed il suo colore a blu
-        <b>2: </b>prova ad inserire un "ciclo con contatore" all'interno di un altro ciclo<br><br>
-        <b>3: </b>in ogni petalo, il poligono più piccolo ha 3 lati ed il più grande ne ha 17<br><br>
-        <b>4: </b>il blocco "imposta l'opacità" usa un blocco divisione per rendere il colore sempre più trasparente man mano che il numero dei lati del poligono aumenta (minore è il valore dell'opacità più trasparente è il colore)<br><br>
-        <b>5: </b>quando hai finito un petalo, assicurati di spostarti in avanti di 20 pixel prima di ruotare di 60 gradi per iniziare il petalo successivo.<br><br>
-        Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/238594589">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
+        <b>1)</b> Come prima cosa, assegna lo spessore del pennello a 1 ed il suo colore a blu
+        <b>2)</b> Prova ad inserire un "ciclo con contatore" all'interno di un altro ciclo<br><br>
+        <b>3)</b> In ogni petalo, il poligono più piccolo ha 3 lati ed il più grande ne ha 17<br><br>
+        <b>4)</b> Il blocco "imposta l'opacità" usa un blocco divisione per rendere il colore sempre più trasparente man mano che il numero dei lati del poligono aumenta (minore è il valore dell'opacità più trasparente è il colore)<br><br>
+        <b>5)</b> Quando hai finito un petalo, assicurati di spostarti in avanti di 20 pixel prima di ruotare di 60 gradi per iniziare il petalo successivo.<br><br>
+        Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/238594589" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       NEW Course 4 Artist Vars 1.5_instruction: |-
         Date un'occhiata al codice. Potete vedere come il blocco "imposta lunghezza" e il blocco "lunghezza" lavorano insieme? Clicca su "Esegui" per vederlo in azione. 
       NEW Course 4 Artist Vars 12_instruction: "Riutilizza adesso l'algoritmo dell'esercizio precedente e scrivi il codice per disegnare un pentagono con i lati lunghi 150 pixel."
@@ -2363,8 +2556,8 @@ it:
       NEW Course 4 Artist Vars 4 5_instruction: "Lavoro impressionante sull'ultimo puzzle, proviamo di nuovo facendo stavolta questo fenomenale disegno utilizzando esagoni di 60 pixel."
       NEW Course 4 Artist Vars 4_instruction: "Proviamo di nuovo. \\r \\r Puoi impostare il valore della variabile \"lunghezza\" (length) a 60, così da disegnare questa accattivante figura con esagoni?"
       NEW Course 4 Artist Vars 6_instruction: |
-        Questa figura è formata da pentagoni con il lato da 100 pixel. Riesci a disegnarla mettendo la variabile "lunghezza" (length) nei posti corretti ed impostandone il giusto valore? <br><br>
-        Hai notato che è sufficiente impostare il valore della lunghezza una sola volta e il codice utilizza il valore giusto dappertutto?
+        Questa figura è formata da pentagoni con il lato da 100 pixel. Riesci a disegnarla mettendo la variabile "lunghezza" (<i>length</i>) nei posti corretti ed impostandone il giusto valore? <br><br>
+        Hai notato che è sufficiente impostare il valore di "lunghezza" una sola volta e il codice utilizza il valore giusto dappertutto?
       NEW Course 4 Bee For Loops 1_instruction: 'Usa un blocco "ripeti ... volte" (detto anche ciclo) per raccogliere il nettare da ogni fiore.'
       NEW Course 4 Bee For Loops 10_instruction: 'Usa la variabile "contatore" del ciclo per controllare lo spostamento in senso orizzontale.'
       NEW Course 4 Bee For Loops 10a_instruction: |
@@ -2628,6 +2821,10 @@ it:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      playEventsK1_instruction: |
+        This game is called "Play Lab".  See if you can
+        figure out what each block does.
+      playEventsK2_instruction: "Jorge wants to say \"Hi there.\"\\r\n\\r\nCan you\nhelp?"
       Poorva copy U3L2 Using Simple Commands_instruction: |
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -2774,9 +2971,14 @@ it:
       Standalone_Artist_9_instruction: Ora continua e realizza qualsiasi figura desideri! Hai anche una funzione vuota che puoi riempire a tuo piacere!
       Standalone_Artist_v2_instruction: |-
         Benvenuto all'Artista! Prima di tutto, cerchiamo di disegnare un semplice quadrato utilizzando il blocco "gira a destra" e il blocco "vai avanti". Ogni lato è lungo 100 pixel.
+      StepIntro_instruction: |-
+        Here's how to use the "Step" button.
       template test_instruction: "what's up"
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi hi
+      testArtistForTestK_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)

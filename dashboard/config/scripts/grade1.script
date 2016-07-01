@@ -1,6 +1,18 @@
-stage 'Predicting & Debugging'
+stage 'Debugging'
+level 'grade1_story_spottedBugs'
+level 'grade1_activity_groupTower1'
+
+
 stage 'Persistence & Frustration'
+level 'grade1_story_theGreatTowerTopple'
+level 'grade1_activity_frustration'
+level 'grade1_activity_groupTower2'
+
+
 stage 'Sequences & Algorithms'
+level 'seqAlg'
+
+
 stage 'Jigsaw: Learn to drag and drop'
 skin 'jigsaw'
 video_key_for_next_level 'C1_pair_programming'
@@ -28,3 +40,58 @@ level 'blockly:Jigsaw:11'
 level_concept_difficulty '{}'
 level 'blockly:Jigsaw:12'
 assessment 'blockly:Jigsaw:13'
+
+stage 'Programming Unplugged'
+level 'comingSoon'
+
+stage 'Programming'
+level 'DebuggingIntro'
+level 'grade1_sequence_pre'
+level 'K2.0 sequence 1'
+level 'K2.0 sequence 2'
+level 'K2.0 sequence 3'
+level 'K2.0 sequence 4a'
+level 'K2.0 sequence 5'
+level 'K2.0 sequence 6'
+level 'K2.0 sequence 7'
+level 'K2.0 sequence 8'
+level 'K2.0 sequence 9'
+level 'K2.0 sequence 10'
+
+
+stage 'Being Safe Online'
+level 'onlineNeighbors'
+
+
+stage 'Loops Unplugged'
+level 'comingSoon'
+
+
+stage 'Loops'
+level 'ArtistIntro'
+level 'artistLoopsK1'
+level 'ArtistLoopsIntro'
+level 'artistLoopsK2'
+level 'artistLoopsK3'
+level 'artistLoopsK4'
+level 'artistLoopsK5'
+level 'artistLoopsK6'
+level 'artistLoopsK7'
+level 'artistLoopsK8'
+level 'artistLoopsK9'
+level 'artistLoopsKA'
+level 'artistLoopsKB'
+level 'artistLoopsKFP'
+
+stage 'Events Unplugged'
+level 'comingSoon'
+
+stage 'Events'
+level 'eventsIntro'
+level 'playEventsK1'
+level 'playEventsK2'
+level 'playEventsK3'
+level 'playEventsK4'
+level 'playEventsK5'
+level 'playEventsK6'
+level 'playEventsK7'

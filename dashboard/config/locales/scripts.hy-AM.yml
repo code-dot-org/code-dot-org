@@ -122,7 +122,7 @@
             with anyone. Recommended for grades 4-5.
           'Studio: Create a Game': 'Play Lab: Create a Game'
           Maze: Maze
-          Artist: Artist
+          Artist: "Արտիստ"
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -151,9 +151,9 @@
           Play Lab: Play Lab
           description_short: Create a story or make a game with Play Lab!
         artist:
-          title: Artist
+          title: "Արտիստ"
           description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
+          Artist: "Արտիստ"
           description_short: Draw cool pictures and designs with the Artist!
         hourofcode:
           Maze: Maze
@@ -166,7 +166,7 @@
           description: Let's use code to join Anna and Elsa as they explore the magic
             and beauty of ice. You will create snowflakes and patterns as you ice-skate
             and make a winter wonderland that you can then share with your friends!
-          Artist: Artist
+          Artist: "Արտիստ"
           description_short: Let's use code to join Anna and Elsa as they explore
             the magic and beauty of ice.
         course4:
@@ -189,7 +189,7 @@
           'Play Lab: For Loops': 'Play Lab: For Loops'
           'Artist: Functions': 'Artist: Functions'
           'Unplugged: Tangrams': 'Unplugged: Tangrams'
-          Artist: Artist
+          Artist: "Արտիստ"
           Bee: Bee
           'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
           'Unplugged: Madlibs': 'Unplugged: Madlibs'
@@ -401,11 +401,11 @@
           Calc: Calc
           Eval: Eval
         flappy:
-          title: Flappy Code
+          title: Flappy-ի կոդը
           description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք
             մեր Flappy Code խնամակալական!'
           description_short: Write your own Flappy game in less than 10 minutes!
-          Flappy Code: Flappy Code
+          Flappy Code: Flappy-ի կոդը
         jigsaw:
           title: "ոլորահատ սղոց"
           description: ''
@@ -979,7 +979,7 @@
         allthethings:
           Jigsaw: "ոլորահատ սղոց"
           Maze: Maze
-          Artist: Artist
+          Artist: "Արտիստ"
           Bee: Bee
           PlayLab: PlayLab
           Farmer: Farmer
@@ -1132,7 +1132,7 @@
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
-          Hour of Code: "Ժամ օրենսգրքի"
+          Hour of Code: "Կոդի ժամ"
           Hour of Code 2015: Hour of Code 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
@@ -2281,3 +2281,98 @@
           Wrap-Up: Wrap-Up
         kinderTest:
           Kindergarten Stage 1: Kindergarten Stage 1
+        gradeKinder:
+          Debugging: Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+          Programming: Programming
+          Being Safe Online: Being Safe Online
+          Loops: loops
+          Programming Unplugged: Programming Unplugged
+          Loops Unplugged: Loops Unplugged
+          Events Unplugged: Events Unplugged
+          Events: "Իրադարձություններ"
+        grade4:
+          title: Grade 4
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 9-99
+          'Mixed Review #1 (Ramp Up)': 'Mixed Review #1 (Ramp Up)'
+          Conditionals: conditionals
+          'Bee: Conditionals': 'Bee: Conditionals'
+          'PlayLab: Conditionals': 'PlayLab: Conditionals'
+          Songwriting: songwriting
+          'Bee: Functions': 'Bee: Functions'
+          Decision Trees: Decision Trees
+          Choose Your Own Adventure: Choose Your Own Adventure
+          'Project #1': 'Project #1'
+          Nested Loops: nested Loops
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Mixed Review #2 (Conditionals, Events, Functions)': 'Mixed Review #2 (Conditionals,
+            Events, Functions)'
+          'New Artist: Functions': 'New Artist: Functions'
+          'Project #2': 'Project #2'
+          'Mixed Review #3 (Deduce the Concept)': 'Mixed Review #3 (Deduce the Concept)'
+          Internet: Internet
+          Crowdsourcing: Crowdsourcing
+          Digital Citizenship: Digital Citizenship
+        grade1:
+          Predicting & Debugging: Predicting & Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+        grade5:
+          title: Grade 5
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 10-110
+        ecs-unit1:
+          title: ECS Part 1
+          description_short: 'Unit 1: Human-Computer Interaction'
+          description: 'Unit 1: Human-Computer Interaction'
+          Welcome!: Welcome!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: "Փաթեթավորեք-up"
+        ecs-unit2:
+          title: ECS Unit 2
+          description_short: 'Unit 2: Problem Solving'
+          description: 'Unit 2: Problem Solving'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Teaching Strategies: Teaching Strategies
+          Lesson Overviews: Lesson Overviews
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community
+            Problems with Data
+          'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To Problem
+            Solving: Candy Bar Activity'
+          'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6 Strategies
+            in Problem Solving: Handshake Activity'
+          'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow
+            Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14
+            Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees:
+            Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project

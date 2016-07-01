@@ -27,6 +27,9 @@
   "copy": "Köçür",
   "copyright": "Copyright",
   "currentVersion": "Current Version",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Sonsuzluq",
   "jump": "atıl",
   "keepPlaying": "Oyuna davam edin",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Siz bütün lazım olan bloklardan istifadə edirsiniz amma səhv formada.",
   "listVariable": "siyahı",
   "makeYourOwnFlappy": "Öz qanadlı oyununuzu düzəldin",
@@ -241,9 +245,5 @@
   "watchVideo": "Videoya baxın",
   "when": "nə zaman",
   "whenRun": "icra etdikdə",
-  "workspaceHeaderShort": "iş sahəsi: ",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "iş sahəsi: "
 }

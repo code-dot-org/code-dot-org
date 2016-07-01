@@ -1,10 +1,10 @@
 {
-  "continue":"Hald fram",
-  "nextLevel":"Gratulerer! Du har fullført denne oppgåva.",
+  "continue":"Fortsett",
+  "nextLevel":"Gratulerer! Du har fullført denne oppgaven.",
   "no":"Nei",
-  "numBlocksNeeded":"Denne oppgåva kan løysast med %1 blokker.",
-  "reinfFeedbackMsg":"Du kan trykke på \"Prøv igjen\" for å gå tilbake til spelet ditt.",
+  "numBlocksNeeded":"Denne oppgaven kan løses med %1 blokker.",
+  "reinfFeedbackMsg":"Du kan trykke på \"Prøv igjen\" for å gå tilbake til spillet ditt.",
   "share":"Del",
-  "shareGame":"Del spelet ditt:",
+  "shareGame":"Del ditt spill:",
   "yes":"Ja"
 }
