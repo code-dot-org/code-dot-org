@@ -160,9 +160,9 @@ export function handleUploadError(status) {
 
 /**
  * A library animation was selected by the user.  This concludes our picking
- * process. Dispatch root gamelab action to add appropriate metadta and then
+ * process. Dispatch root gamelab action to add appropriate metadata and then
  * close the animation picker.
- * @param {!Animation} animation
+ * @param {!AnimationProps} animation
  * @returns {function}
  */
 export function pickLibraryAnimation(animation) {
