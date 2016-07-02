@@ -935,6 +935,9 @@ GameLab.prototype.runPreloadEventHandler_ = function () {
  * the appropriate report of completion if it is.
  */
 GameLab.prototype.completePreloadIfPreloadComplete = function () {
+  // This function will have been created in runPreloadEventHandler if we
+  // actually had an interpreter and might have run preload code.  It could
+  // be null if we didn't have an interpreter, or we've already called it.
   if (typeof this.reportPreloadEventHandlerComplete_ !== 'function') {
     return;
   }
