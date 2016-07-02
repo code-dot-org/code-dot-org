@@ -840,15 +840,13 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  *         the game.
  */
 GameLab.prototype.onP5Preload = function () {
-  let isReadyNow = false;
   Promise.all([
       this.preloadAnimations_(),
       this.runPreloadEventHandler_()
   ]).then(() => {
-    isReadyNow = true;
     this.gameLabP5.notifyPreloadPhaseComplete();
   });
-  return isReadyNow;
+  return false;
 };
 
 /**
