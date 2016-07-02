@@ -1,0 +1,14 @@
+.json_editor {
+  button {
+    font-size: 100%;
+  }
+
+  .required:after {
+    content: ' *';
+    color: #FF0000;
+  }
+
+  .json_template {
+    display: none;
+  }
+}

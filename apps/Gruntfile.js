@@ -246,10 +246,17 @@ module.exports = function (grunt) {
       options: {
         // Compression currently occurs at the ../dashboard sprockets layer.
         outputStyle: 'nested',
-        includePaths: ['../shared/css/']
+        includePaths: [
+          'node_modules',
+          '../shared/css/'
+        ]
       },
       files: _.zipObject([
-        ['build/package/css/common.css', 'style/common.scss']
+        ['build/package/css/common.css', 'style/common.scss'],
+        ['build/package/css/levelbuilder.css', 'style/code-studio/levelbuilder.scss'],
+        ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
+        ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
+        ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
       ].concat(appsToBuild.map(function (app) {
         return [
           'build/package/css/' + app + '.css', // dst
