@@ -900,6 +900,24 @@ GameLab.prototype.runPreloadEventHandler_ = function () {
   });
 };
 
+GameLab.prototype.completePreloadIfPreloadComplete = function () {
+  if (typeof this.onPreloadComplete_ !== 'function') {
+    return;
+  }
+
+  if (this.globalCodeRunsDuringPreload &&
+      !this.JSInterpreter.startedHandlingEvents) {
+    // Global code should run during the preload phase, but global code hasn't
+    // completed.
+    return;
+  }
+
+  if (!this.eventHandlers.preload ||
+      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
+    this.onPreloadComplete_();
+  }
+};
+
 /**
  * This is called while this.gameLabP5 is in the setup phase. We restore the
  * interpreter methods that were modified during preload, then call the user's
@@ -945,24 +963,6 @@ GameLab.prototype.completeSetupIfSetupComplete = function () {
       this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
     this.gameLabP5.afterSetupComplete();
     this.setupInProgress = false;
-  }
-};
-
-GameLab.prototype.completePreloadIfPreloadComplete = function () {
-  if (typeof this.onPreloadComplete_ !== 'function') {
-    return;
-  }
-
-  if (this.globalCodeRunsDuringPreload &&
-      !this.JSInterpreter.startedHandlingEvents) {
-    // Global code should run during the preload phase, but global code hasn't
-    // completed.
-    return;
-  }
-
-  if (!this.eventHandlers.preload ||
-      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
-    this.onPreloadComplete_();
   }
 };
 
