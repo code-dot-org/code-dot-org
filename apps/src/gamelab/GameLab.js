@@ -834,10 +834,9 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  * - (optional) execute global code
  * - call the user's preload function
  *
- * @return {Boolean} whether or not the preload has completed.  If we return
- *         FALSE here, P5 will internally increment a preload count; calling
- *         notifyPreloadPhaseComplete is then necessary to continue starting
- *         the game.
+ * @return {Boolean} FALSE so that P5 will internally increment a preload count;
+ *         calling notifyPreloadPhaseComplete is then necessary to continue
+ *         loading the game.
  */
 GameLab.prototype.onP5Preload = function () {
   Promise.all([
