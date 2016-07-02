@@ -80,7 +80,7 @@ var GameLab = function () {
   this.globalCodeRunsDuringPreload = false;
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.preloadInProgress = false;
+  this.onPreloadComplete_ = null;
   this.gameLabP5 = new GameLabP5();
   this.api = api;
   this.api.injectGameLab(this);
@@ -380,7 +380,7 @@ GameLab.prototype.reset = function (ignore) {
   // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.preloadInProgress = false;
+  this.onPreloadComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
   if (this.debugger_) {
@@ -832,32 +832,72 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  * @return {Boolean} whether or not the preload has completed
  */
 GameLab.prototype.onP5Preload = function () {
-  this.gameLabP5.preloadAnimations(this.studioApp_.reduxStore.getState().animationList);
+  let isReadyNow = false;
+  Promise.all([
+      this.preloadAnimations_(),
+      this.runPreloadEventHandler_()
+  ]).then(() => {
+    isReadyNow = true;
+    this.gameLabP5.notifyPreloadPhaseComplete();
+  });
+  return isReadyNow;
+};
 
-  this.initInterpreter();
-  // And execute the interpreter for the first time:
-  if (this.JSInterpreter && this.JSInterpreter.initialized()) {
-    // Start executing the interpreter's global code as long as a setup() method
-    // was provided. If not, we will skip running any interpreted code in the
-    // preload phase and wait until the setup phase.
-    this.preloadInProgress = true;
-    if (this.globalCodeRunsDuringPreload) {
-      this.JSInterpreter.executeInterpreter(true);
-      this.interpreterStarted = true;
-
-      // In addition, execute the global function called preload()
-      if (this.eventHandlers.preload) {
-        this.eventHandlers.preload.apply(null);
-      }
+GameLab.prototype.preloadAnimations_ = function () {
+  let store = this.studioApp_.reduxStore;
+  return new Promise(resolve => {
+    if (this.areAnimationsReady_()) {
+      resolve();
     } else {
-      if (this.eventHandlers.preload) {
-        this.log("WARNING: preload() was ignored because setup() was not provided");
-        this.eventHandlers.preload = null;
-      }
+      const unsubscribe = store.subscribe(() => {
+        if (this.areAnimationsReady_()) {
+          resolve();
+          unsubscribe();
+        }
+      });
     }
-    this.completePreloadIfPreloadComplete();
-  }
-  return !this.preloadInProgress;
+  }).then(() => {
+    this.gameLabP5.preloadAnimations(store.getState().animationList);
+  });
+};
+
+GameLab.prototype.areAnimationsReady_ = function () {
+  const animationList = this.studioApp_.reduxStore.getState().animationList;
+  return animationList.orderedKeys.every(key => animationList.propsByKey[key].loadedFromSource);
+};
+
+GameLab.prototype.runPreloadEventHandler_ = function () {
+  return new Promise(resolve => {
+    this.initInterpreter();
+    // And execute the interpreter for the first time:
+    if (this.JSInterpreter && this.JSInterpreter.initialized()) {
+      // Start executing the interpreter's global code as long as a setup() method
+      // was provided. If not, we will skip running any interpreted code in the
+      // preload phase and wait until the setup phase.
+      this.onPreloadComplete_ = () => {
+        this.onPreloadComplete_ = null;
+        resolve();
+      };
+      if (this.globalCodeRunsDuringPreload) {
+        this.JSInterpreter.executeInterpreter(true);
+        this.interpreterStarted = true;
+
+        // In addition, execute the global function called preload()
+        if (this.eventHandlers.preload) {
+          this.eventHandlers.preload.apply(null);
+        }
+      } else {
+        if (this.eventHandlers.preload) {
+          this.log("WARNING: preload() was ignored because setup() was not provided");
+          this.eventHandlers.preload = null;
+        }
+      }
+      this.completePreloadIfPreloadComplete();
+    } else {
+      // If we didn't run anything resolve now.
+      resolve();
+    }
+  });
 };
 
 /**
@@ -909,7 +949,7 @@ GameLab.prototype.completeSetupIfSetupComplete = function () {
 };
 
 GameLab.prototype.completePreloadIfPreloadComplete = function () {
-  if (!this.preloadInProgress) {
+  if (typeof this.onPreloadComplete_ !== 'function') {
     return;
   }
 
@@ -922,8 +962,7 @@ GameLab.prototype.completePreloadIfPreloadComplete = function () {
 
   if (!this.eventHandlers.preload ||
       this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
-    this.gameLabP5.notifyPreloadPhaseComplete();
-    this.preloadInProgress = false;
+    this.onPreloadComplete_();
   }
 };
 
