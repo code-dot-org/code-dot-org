@@ -80,7 +80,7 @@ var GameLab = function () {
   this.globalCodeRunsDuringPreload = false;
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.onPreloadComplete_ = null;
+  this.reportPreloadEventHandlerComplete_ = null;
   this.gameLabP5 = new GameLabP5();
   this.api = api;
   this.api.injectGameLab(this);
@@ -380,7 +380,7 @@ GameLab.prototype.reset = function (ignore) {
   // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.onPreloadComplete_ = null;
+  this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
   if (this.debugger_) {
@@ -826,10 +826,18 @@ GameLab.prototype.onP5ExecutionStarting = function () {
 };
 
 /**
- * This is called while this.gameLabP5 is in the preload phase. We initialize
- * the interpreter, start its execution, and call the user's preload function.
+ * This is called while this.gameLabP5 is in the preload phase. Do the following:
  *
- * @return {Boolean} whether or not the preload has completed
+ * - load animations into the P5 engine
+ * - initialize the interpreter
+ * - start its execution
+ * - (optional) execute global code
+ * - call the user's preload function
+ *
+ * @return {Boolean} whether or not the preload has completed.  If we return
+ *         FALSE here, P5 will internally increment a preload count; calling
+ *         notifyPreloadPhaseComplete is then necessary to continue starting
+ *         the game.
  */
 GameLab.prototype.onP5Preload = function () {
   let isReadyNow = false;
@@ -843,39 +851,63 @@ GameLab.prototype.onP5Preload = function () {
   return isReadyNow;
 };
 
+/**
+ * Wait for animations to be loaded into memory and ready to use, then pass
+ * those animations to P5 to be loaded into the engine as animations.
+ * @returns {Promise} which resolves once animations are in memory in the redux
+ *          store and we've started loading them into P5.
+ *          Loading to P5 is also an async process but it has its own internal
+ *          effect on the P5 preloadCount, so we don't need to track it here.
+ * @private
+ */
 GameLab.prototype.preloadAnimations_ = function () {
   let store = this.studioApp_.reduxStore;
   return new Promise(resolve => {
     if (this.areAnimationsReady_()) {
       resolve();
     } else {
+      // Watch store changes until all the animations are ready.
       const unsubscribe = store.subscribe(() => {
         if (this.areAnimationsReady_()) {
-          resolve();
           unsubscribe();
+          resolve();
         }
       });
     }
   }).then(() => {
+    // Animations are ready - send them to p5 to be loaded into the engine.
     this.gameLabP5.preloadAnimations(store.getState().animationList);
   });
 };
 
+/**
+ * Check whether all animations in the project animation list have been loaded
+ * into memory and are ready to use.
+ * @returns {boolean}
+ * @private
+ */
 GameLab.prototype.areAnimationsReady_ = function () {
   const animationList = this.studioApp_.reduxStore.getState().animationList;
   return animationList.orderedKeys.every(key => animationList.propsByKey[key].loadedFromSource);
 };
 
+/**
+ * Run the preload event handler, and optionally global code, and report when
+ * it is done by resolving a returned Promise.
+ * @returns {Promise} Which will resolve immediately if there is no code to run,
+ *          otherwise will resolve when the preload handler has completed.
+ * @private
+ */
 GameLab.prototype.runPreloadEventHandler_ = function () {
   return new Promise(resolve => {
     this.initInterpreter();
-    // And execute the interpreter for the first time:
+    // Execute the interpreter for the first time:
     if (this.JSInterpreter && this.JSInterpreter.initialized()) {
       // Start executing the interpreter's global code as long as a setup() method
       // was provided. If not, we will skip running any interpreted code in the
       // preload phase and wait until the setup phase.
-      this.onPreloadComplete_ = () => {
-        this.onPreloadComplete_ = null;
+      this.reportPreloadEventHandlerComplete_ = () => {
+        this.reportPreloadEventHandlerComplete_ = null;
         resolve();
       };
       if (this.globalCodeRunsDuringPreload) {
@@ -900,8 +932,12 @@ GameLab.prototype.runPreloadEventHandler_ = function () {
   });
 };
 
+/**
+ * Called on tick to check whether preload code is done running, and trigger
+ * the appropriate report of completion if it is.
+ */
 GameLab.prototype.completePreloadIfPreloadComplete = function () {
-  if (typeof this.onPreloadComplete_ !== 'function') {
+  if (typeof this.reportPreloadEventHandlerComplete_ !== 'function') {
     return;
   }
 
@@ -914,7 +950,7 @@ GameLab.prototype.completePreloadIfPreloadComplete = function () {
 
   if (!this.eventHandlers.preload ||
       this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
-    this.onPreloadComplete_();
+    this.reportPreloadEventHandlerComplete_();
   }
 };
 
