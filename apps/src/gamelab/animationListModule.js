@@ -7,6 +7,7 @@ import {animations as animationsApi} from '../clientApi';
 import assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
+import {throwIfSerializedAnimationListIsInvalid} from './PropTypes';
 /* global dashboard */
 
 // TODO: Overwrite version ID within session
@@ -162,9 +163,7 @@ export function setInitialAnimationList(serializedAnimationList) {
     };
   }
 
-  // TODO: Validate here.
-  // We might be receiving JSON from levelbuilder, and
-  // should complain loudly if it isn't valid.
+  throwIfSerializedAnimationListIsInvalid(serializedAnimationList);
 
   return dispatch => {
     dispatch({
@@ -410,7 +409,6 @@ export function saveAnimations(onComplete) {
     const changedAnimationKeys = state.orderedKeys.filter(key =>
         !state.propsByKey[key].sourceUrl && state.propsByKey[key].blob &&
         !state.propsByKey[key].saved);
-    console.log('changedAnimations', changedAnimationKeys);
     Promise.all(changedAnimationKeys.map(key => {
           return saveAnimation(key, state.propsByKey[key])
               .then(action => { dispatch(action); });

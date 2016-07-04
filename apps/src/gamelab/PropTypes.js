@@ -111,6 +111,40 @@ function getSerializedAnimationProps(animation) {
     'version'
   ]);
 }
+
+/**
+ * @param {!SerializedAnimationList} serializedAnimationList
+ * @throws {Error} if the list is not in a valid format.
+ */
+export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList) {
+  if (!serializedAnimationList) {
+    throw new Error('Animation List may not be null');
+  }
+
+  const rootKeys = Object.keys(serializedAnimationList);
+  if (!serializedAnimationList.hasOwnProperty('orderedKeys') ||
+      !serializedAnimationList.hasOwnProperty('propsByKey') ||
+      rootKeys.length !== 2) {
+    throw new Error('Animation List must have two root properties: orderedKeys and propsByKey');
+  }
+
+  if (!Array.isArray(serializedAnimationList.orderedKeys)) {
+    throw new Error('Animation List orderedKeys should be an array');
+  }
+
+  serializedAnimationList.orderedKeys.forEach(key => {
+    if (!serializedAnimationList.propsByKey.hasOwnProperty(key)) {
+      throw new Error(`Animation List has a key ${key} but not associated props`);
+    }
+
+    ['name', 'sourceSize', 'frameSize', 'frameCount', 'frameRate'].forEach(prop => {
+      if (!serializedAnimationList.propsByKey[key].hasOwnProperty(prop)) {
+        throw new Error(`Animation ${key} is missing required property ${prop}`);
+      }
+    });
+  });
+}
+
 /**
  * @typedef {Object} AnimationList
  * @property {AnimationKey[]} orderedKeys - Animation keys in project order
