@@ -8,12 +8,10 @@ import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 /* global dashboard */
 
-// TODO: Don't upload to S3 if an animation is never modified
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
 // TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
 //       is deleted, so nothing is selected.
-// TODO: Enable starting new blank animation
 // TODO: Warn about duplicate-named animations.
 
 // Args: {SerializedAnimationList} animationList
@@ -24,8 +22,6 @@ export const ADD_ANIMATION = 'AnimationList/ADD_ANIMATION';
 export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
 // Args: {AnimationKey} key, {AnimationProps} props
 export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
-// Args: {AnimationKey} key
-const INVALIDATE_ANIMATION = 'AnimationList/INVALIDATE_ANIMATION';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
 // Args: {AnimationKey} key
@@ -79,7 +75,6 @@ function propsByKey(state, action) {
     case ADD_ANIMATION:
     case ADD_ANIMATION_AT:
     case EDIT_ANIMATION:
-    case INVALIDATE_ANIMATION:
     case SET_ANIMATION_NAME:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
@@ -112,12 +107,6 @@ function animationPropsReducer(state, action) {
     case EDIT_ANIMATION:
       return Object.assign({}, state, action.props, {
         sourceUrl: null, // Once edited this animation is custom.
-        saved: false // Dirty, so it'll get saved soon.
-      });
-
-    case INVALIDATE_ANIMATION:
-      return Object.assign({}, state, {
-        sourceUrl: null, // Once edited, this animation is custom.
         saved: false // Dirty, so it'll get saved soon.
       });
 
@@ -251,22 +240,9 @@ export function addLibraryAnimation(props) {
       props
     });
     dispatch(loadAnimationFromSource(key, props.sourceUrl, () => {
-      dispatch(invalidateAnimation(key));
       dispatch(selectAnimation(key));
     }));
     dashboard.project.projectChanged();
-  };
-}
-
-/**
- * Mark an animation as needing to be saved to S3.
- * @param {AnimationKey} key
- * @returns {{type: ActionType, key: AnimationKey}}
- */
-function invalidateAnimation(key) {
-  return {
-    type: INVALIDATE_ANIMATION,
-    key
   };
 }
 
@@ -433,7 +409,9 @@ export function saveAnimations(onComplete) {
     // should not be saved - until an edit operation clears the sourceUrl.
     // Also check the saved flag, so we only upload animations that have changed.
     const changedAnimationKeys = state.orderedKeys.filter(key =>
-        !state.propsByKey[key].sourceUrl && !state.propsByKey[key].saved);
+        !state.propsByKey[key].sourceUrl && state.propsByKey[key].blob &&
+        !state.propsByKey[key].saved);
+    console.log('changedAnimations', changedAnimationKeys);
     Promise.all(changedAnimationKeys.map(key => {
           return saveAnimation(key, state.propsByKey[key])
               .then(action => { dispatch(action); });
@@ -457,11 +435,6 @@ export function saveAnimations(onComplete) {
  */
 function saveAnimation(animationKey, animationProps) {
   return new Promise((resolve, reject) => {
-    if (animationProps.blob === undefined) {
-      reject(new Error(`Animation ${animationKey} has no loaded content.`));
-      return;
-    }
-
     let xhr = new XMLHttpRequest();
 
     const onError = function () {
