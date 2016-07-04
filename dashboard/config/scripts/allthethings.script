@@ -161,3 +161,6 @@ variants
   level '2-3 Artist Loops 4'
   level '2-3 Artist 3', active: false
 endvariants
+
+stage 'Anonymous student survey'
+assessment 'Test anonymous student survey'

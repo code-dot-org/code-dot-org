@@ -29,6 +29,7 @@ class LevelGroup < DSLDefined
 name 'unique level name here'
 title 'title of the assessment here'
 submittable 'true'
+anonymous 'false'
 
 page
 level 'level1'

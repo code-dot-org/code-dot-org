@@ -72,6 +72,10 @@ class LevelGroupDSL < BaseDSL
     @hash[:submittable] = text
   end
 
+  def anonymous(text)
+    @hash[:anonymous] = text
+  end
+
   def i18n_strings
     @i18n_strings['title'] = @title if @title
     @i18n_strings['description_short'] = @description_short if @description_short
