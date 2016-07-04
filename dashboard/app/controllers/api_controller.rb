@@ -157,6 +157,119 @@ class ApiController < ApplicationController
     render json: data
   end
 
+
+
+  # If at least five students have completed a given long-assessment LevelGroup that is marked anonymous,
+  # then for each multi return a summary of the percentage of each answer, and also return all free
+  # response texts but in a randomized order.
+  # In theory this could be a unique codepath inside the section_assessments function, but given the
+  # serious risk of exposing student information in a non-anonymous fashion, this function has been
+  # built separately.
+  def section_surveys
+    puts 'in section_surveys'
+
+    load_section
+    load_script
+
+    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
+
+    puts "script levels: #{level_group_script_levels.to_json}"
+
+    # Go through each anonymous long-assessment LevelGroup.
+
+    data = level_group_script_levels.map do |script_level|
+      puts "script level level: #{script_level.level.to_json}"
+
+      next unless script_level.long_assessment?
+      next unless script_level.anonymous?
+
+      #puts "script level: #{script_level}"
+
+      # Go through each student who has submitted a response to it.
+      # Do this in a shuffled order.
+
+      puts "section students: #{@section.students.to_json}"
+
+      student_count = 0
+
+      @section.students.all.shuffle.map do |student|
+        last_attempt = student.last_attempt(script_level.level)
+        response = last_attempt.try(:level_source).try(:data)
+
+        #puts "student: #{student.to_json}"
+
+        next unless response
+
+        response_parsed = JSON.parse(response)
+
+        user_level = student.user_level_for(script_level, script_level.level)
+        submitted = user_level.try(:submitted)
+
+        # And construct a listing of all the individual levels and their results.
+        level_results = []
+
+        student_count += 1
+
+        # Go through each sublevel of the assessment.
+        # Record text responses, and build counts of multi choices.
+
+        script_level.level.levels.each do |level|
+
+          #puts "level: #{level.to_json}"
+
+          level_response = response_parsed[level.id.to_s]
+
+          level_result = {}
+
+          if level_response
+            case level
+            when TextMatch, FreeResponse
+              student_result = level_response["result"]
+              level_result[:student_result] = student_result
+            when Multi
+              answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
+              student_result = level_response["result"].split(",").sort.join(",")
+              # unless unsubmitted
+              unless student_result == "-1"
+                # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
+                level_result[:student_result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
+                level_result[:type] = "multi"
+              end
+            end
+          end
+
+          level_results << level_result
+
+        end
+
+        timestamp = user_level[:updated_at].to_formatted_s
+
+        # all the results for one contained sublevel for one student
+
+        {
+          stage: script_level.stage.localized_title,
+          puzzle: script_level.position,
+          question: script_level.level.properties["title"],
+          # todo: pass something special? since we took out:   , user_id: student.id
+          url: build_script_level_url(script_level, section_id: @section.id),
+          submitted: submitted,
+          timestamp: timestamp,
+          level_results: level_results
+        }
+      end.compact
+    end.flatten.compact
+
+    #data[:student_count] = @section.students.length if @section.students.length > 0
+    puts "student count: #{@section.students.all.length}"
+
+    puts "final data: #{data.to_json}"
+
+    render json: data
+  end
+
+
+
+
   # For each student, return an array of each long-assessment LevelGroup in progress or submitted.
   # Each such array contains an array of individual level results, matching the order of the LevelGroup's
   # levels.  For each level, the student's answer content is in :student_result, and its correctness
@@ -172,6 +285,9 @@ class ApiController < ApplicationController
 
       level_group_script_levels.map do |script_level|
         next unless script_level.long_assessment?
+
+        # Don't allow somebody to peek inside an anonymous survey using this API.
+        next if script_level.anonymous?
 
         last_attempt = student.last_attempt(script_level.level)
         response = last_attempt.try(:level_source).try(:data)

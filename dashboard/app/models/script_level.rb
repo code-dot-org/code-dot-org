@@ -144,6 +144,11 @@ class ScriptLevel < ActiveRecord::Base
     false
   end
 
+  def anonymous?
+    puts "anonymous? #{level.properties["anonymous"]}"
+    return assessment && level.properties["anonymous"] == "true"
+  end
+
   def name
     I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end
