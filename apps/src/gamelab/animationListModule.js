@@ -111,11 +111,13 @@ function animationPropsReducer(state, action) {
 
     case EDIT_ANIMATION:
       return Object.assign({}, state, action.props, {
+        sourceUrl: null, // Once edited this animation is custom.
         saved: false // Dirty, so it'll get saved soon.
       });
 
     case INVALIDATE_ANIMATION:
       return Object.assign({}, state, {
+        sourceUrl: null, // Once edited, this animation is custom.
         saved: false // Dirty, so it'll get saved soon.
       });
 
@@ -195,7 +197,7 @@ export function addBlankAnimation() {
     dispatch({
       type: ADD_ANIMATION,
       key,
-      data: {
+      props: {
         name: 'New animation', // TODO: Better generated name?
         sourceUrl: null,
         sourceSize: {x: 100, y: 100},
@@ -357,11 +359,18 @@ export function deleteAnimation(key) {
  * @param {function} [callback]
  */
 function loadAnimationFromSource(key, sourceUrl, callback) {
-  // Figure out URL from animation key
-  // TODO: Take version ID into account here...
-  sourceUrl = sourceUrl || animationsApi.basePath(key) + '.png';
   callback = callback || function () {};
-  return dispatch => {
+  return (dispatch, getState) => {
+    const state = getState().animationList;
+    // Figure out where to get the animation from.
+    // 1. If a sourceUrl was provided as an argument, use that.
+    // 2. If the animation has a sourceUrl it's external (from the library
+    //    or some other outside source, not the animation API)
+    // 3. Otherwise use the animation key to look it up in the animations API
+    // TODO: Take version ID into account here...
+    sourceUrl = sourceUrl ||
+        state.propsByKey[key].sourceUrl ||
+        animationsApi.basePath(key) + '.png';
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
@@ -420,7 +429,11 @@ function blobToDataURI(blob, onComplete) {
 export function saveAnimations(onComplete) {
   return (dispatch, getState) => {
     const state = getState().animationList;
-    const changedAnimationKeys = state.orderedKeys.filter(key => !state.propsByKey[key].saved);
+    // Animations with a sourceUrl are referencing an external spritesheet and
+    // should not be saved - until an edit operation clears the sourceUrl.
+    // Also check the saved flag, so we only upload animations that have changed.
+    const changedAnimationKeys = state.orderedKeys.filter(key =>
+        !state.propsByKey[key].sourceUrl && !state.propsByKey[key].saved);
     Promise.all(changedAnimationKeys.map(key => {
           return saveAnimation(key, state.propsByKey[key])
               .then(action => { dispatch(action); });

@@ -50,8 +50,10 @@ export const AnimationKey = React.PropTypes.string;
 /**
  * @typedef {Object} AnimationProps
  * @property {string} name
- * @property {string} sourceUrl - Remote location where the animation spritesheet
- *           is stored.  Should be replaced soon with more of a 'gallery' concept.
+ * @property {string} sourceUrl - If provided, points to an external spritesheet.
+ *           (From the animation library or some other outside source)
+ *           Otherwise this is a custom spritesheet stored via the animations API
+ *           and we look it up by key.
  * @property {Vector2} sourceSize
  * @property {Vector2} frameSize
  * @property {number} frameCount
