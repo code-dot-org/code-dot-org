@@ -207,7 +207,7 @@ class Blockly < Level
       app_options = {}
 
       app_options[:levelGameName] = game.name if game
-      app_options[:skin_id] = skin_id if skin_id
+      app_options[:skinId] = skin_id if skin_id
 
       # Set some values that Blockly expects on the root of its options string
       app_options.merge!({
@@ -260,9 +260,9 @@ class Blockly < Level
       end
 
       if is_a?(Maze) && step_mode
-        step_mode = JSONValue.value(step_mode)
-        level_prop['step'] = step_mode == 1 || step_mode == 2
-        level_prop['stepOnly'] = step_mode == 2
+        step_mode_value = JSONValue.value(step_mode)
+        level_prop['step'] = step_mode_value == 1 || step_mode_value == 2
+        level_prop['stepOnly'] = step_mode_value == 2
       end
 
       level_prop['images'] = JSON.parse(level_prop['images']) if level_prop['images'].present?
