@@ -7,7 +7,7 @@ import Radium from 'radium';
 import React from 'react';
 import { changeView } from './redux/data';
 import { connect } from 'react-redux';
-import dataStyles from './dataStyles';
+import * as dataStyles from './dataStyles';
 
 const DataProperties = React.createClass({
   propTypes: {
@@ -24,8 +24,11 @@ const DataProperties = React.createClass({
     return (
       <div id='dataProperties' style={{display: visible ? 'block' : 'none'}}>
         <h4>
-         <a href='#' style={dataStyles.link}
-             onClick={() => this.props.onViewChange(DataView.OVERVIEW)}>
+         <a
+             href='#'
+             style={dataStyles.link}
+             onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
+         >
            Data
          </a>
          &nbsp;&gt; Key/value pairs

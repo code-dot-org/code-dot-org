@@ -10,7 +10,7 @@ import React from 'react';
 import msg from '../locale';
 import { changeView } from './redux/data';
 import { connect } from 'react-redux';
-import dataStyles from './dataStyles';
+import * as dataStyles from './dataStyles';
 
 const tableWidth = 400;
 const buttonColumnWidth = 90;
