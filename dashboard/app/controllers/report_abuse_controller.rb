@@ -20,7 +20,7 @@ class ReportAbuseController < ApplicationController
                 "URL: #{params[:abuse_url]}",
                 "abuse type: #{params[:abuse_type]}",
                 "user detail:",
-                "#{params[:abuse_detail]}"
+                params[:abuse_detail]
               ].join("\n")
             },
             custom_fields: [{ id: AGE_CUSTOM_FIELD_ID, value: params[:age] }],
@@ -39,7 +39,7 @@ class ReportAbuseController < ApplicationController
         'PATH_INFO' => channels_path,
         'REQUEST_PATH' => channels_path,
         'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
-        'rack.input' => StringIO.new()
+        'rack.input' => StringIO.new
         )
 
       abuse_score = JSON.parse(body[0])["abuse_score"]
@@ -50,7 +50,7 @@ class ReportAbuseController < ApplicationController
         'REQUEST_PATH' => assets_path,
         'QUERY_STRING' => "abuse_score=#{abuse_score}",
         'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
-        'rack.input' => StringIO.new()
+        'rack.input' => StringIO.new
       )
     end
 

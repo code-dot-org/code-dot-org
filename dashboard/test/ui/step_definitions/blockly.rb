@@ -203,7 +203,6 @@ When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do 
     });"
   puts script
   @browser.execute_script(script)
-
 end
 
 When(/^"(.+)" refers to block "(.+)"$/) do |block_alias, block_id|

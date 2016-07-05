@@ -14,7 +14,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,3,0],[0,0,0,4,1,1,1,0],[0,0,1,1,1,0,0,0],[2,1,1,4,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "7",
     "step_speed": "2",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try tracing the path with your finger.  \\nHow many times do you have to go over before you climb up? How many times do you repeat that stair-step pattern?\",\r\n  \"hint_id\": \"2-3_Maze_Loops_21_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try tracing the path with your finger.  \\nHow many times do you have to go over before you climb up? How many times do you repeat that stair-step pattern?\",\r\n  \"hint_id\": \"2-3_Maze_Loops_21_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you are having trouble finding the stair-step pattern, try covering the blocked paths with your finger.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_21_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -27,9 +27,12 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 4

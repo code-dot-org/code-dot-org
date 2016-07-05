@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,4,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Debug this level by adding and changing blocks to get me to the pig!",
+    "instructions": "Debug this level by changing a block to get me to the pig!",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",
@@ -26,7 +26,6 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
     "contained_level_names": null
   },
   "published": true,
@@ -37,12 +36,19 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="maze_moveEast">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="maze_moveEast">
               <next>
-                <block type="maze_moveNorth">
-        </block>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveWest">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
               </next>
             </block>
           </next>

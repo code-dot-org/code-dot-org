@@ -11,7 +11,6 @@ namespace :stack do
   end
 
   namespace :start do
-
     task default: :environment do
       AWS::CloudFormation.create_or_update
     end
@@ -22,7 +21,6 @@ Note: Consumes AWS resources until `stack:stop` is called.'
       ENV['CDN_ENABLED'] = nil
       AWS::CloudFormation.create_or_update
     end
-
   end
 
   desc 'Launch/update a full-stack deployment.
@@ -57,7 +55,6 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
       end
 
       # `stop` command intentionally removed. Use AWS console to manually delete stacks.
-
     end
   end
 end

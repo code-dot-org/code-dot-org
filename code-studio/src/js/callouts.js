@@ -40,17 +40,35 @@ module.exports = function createCallouts(callouts) {
     $('.cdo-qtips').qtip('hide');
   });
 
-  // Update callout positions when an editor is scrolled.
+  // Update callout positions when a blockly editor is scrolled.
   $(window).on('block_space_metrics_set', function () {
     snapCalloutsToTargets();
     showHideWorkspaceCallouts();
   });
 
   $(window).on('droplet_change', function (e, dropletEvent) {
-    if (dropletEvent === 'scrollpalette') {
-      snapCalloutsToTargets();
+    switch (dropletEvent) {
+      case 'scrollace':
+        // Destroy all ace gutter tooltips on scroll. Ace dynamically reuses
+        // gutter elements with a scroll of even a singe line, moving one line
+        // number to a different DOM element, so the only ways to track with the
+        // gutter movement would be to manually adjust position or to destroy
+        // the qtips and manually recreate new ones with each scroll.
+        $('.cdo-qtips').each(function () {
+          var api = $(this).qtip('api');
+          var target = $(api.elements.target);
+          if ($('.ace_gutter').has(target)) {
+            api.destroy();
+          }
+        });
+        return;
+      case 'scrollpalette':
+      case 'scrolleditor':
+        snapCalloutsToTargets();
+        break;
     }
     showHidePaletteCallouts();
+    showHideDropletGutterCallouts();
   });
 
   var showCalloutsMode = document.URL.indexOf('show_callouts=1') !== -1;
@@ -186,6 +204,7 @@ function snapCalloutsToTargets() {
 var showHideWorkspaceCallouts = showOrHideCalloutsByTargetVisibility('#codeWorkspace');
 var showHidePaletteCallouts =
     showOrHideCalloutsByTargetVisibility('.droplet-palette-scroller');
+var showHideDropletGutterCallouts = showOrHideCalloutsByTargetVisibility('.droplet-gutter');
 
 /**
  * For callouts with targets in the containerSelector (blockly, flyout elements,
