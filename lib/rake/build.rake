@@ -56,6 +56,17 @@ namespace :build do
     end
   end
 
+  # TODO: (brent) - temporarily leave in a build step that just does a clean of
+  # code-studio to make sure we don't have artifacts from old builds
+  desc 'Builds code studio.'
+  task :code_studio do
+    Dir.chdir(code_studio_dir) do
+      HipChat.log 'Building <b>code-studio</b>...'
+      RakeUtils.system 'npm run clean'
+    end
+  end
+  task :'code-studio' => :code_studio
+
   task :stop_varnish do
     Dir.chdir(aws_dir) do
       unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') != 0)
@@ -173,6 +184,8 @@ namespace :build do
   tasks << :configure
   tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
+  tasks << :apps if CDO.build_apps
+  tasks << :code_studio if CDO.build_code_studio
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
