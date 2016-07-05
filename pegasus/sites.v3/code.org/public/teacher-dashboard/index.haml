@@ -910,40 +910,38 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
           survey.status = survey.submitted ? submission_list.submitted : submission_list.in_progress;
 
-          // Don't show a timestamp for non-submittted surveys.
-          if (!survey.submitted) {
-            survey.timestamp = null;
-          }
-
           // Each LevelGroup's result has a list of the results for the levels in that order.
           // Because angular's nested iterators are kind of funky when trying to generate a table,
           // let's just generate a flat list of the level results to go into $scope.
-          $.each(survey.level_results, function(index, level_result) {
+          $.each(survey.levelgroup_results, function(index, sublevel_results) {
 
-            // Do we already have this level result?  If so, bump the count, otherwise create and
-            // add it.
+            // There can be multiple results for each sublevel.
+            $.each(sublevel_results, function(sublevel_index, sublevel_result) {
+              // Do we already have this level result?  If so, bump the count, otherwise create and
+              // add it.
 
-            var existingLevelResult = $scope.levels.find(function (entry) {
-              return entry.studentResult == level_result.student_result &&
-                     entry.stage == survey.stage &&
-                     entry.puzzle == survey.puzzle &&
-                     entry.question == index + 1;
+              var existingLevelResult = $scope.levels.find(function (entry) {
+                return entry.result == sublevel_result.result &&
+                       entry.stage == survey.stage &&
+                       entry.puzzle == survey.puzzle &&
+                       entry.question == index + 1;
+              });
+
+              if (existingLevelResult) {
+                existingLevelResult.count++;
+                existingLevelResult.percent = existingLevelResult.count / sublevel_results.length * 100;
+              } else {
+                var levelResult = {
+                  stage: survey.stage,
+                  puzzle: survey.puzzle,
+                  question: parseInt(index) + 1,
+                  result: sublevel_result.result,
+                  count: 1,
+                  percent: 1 / sublevel_results.length * 100
+                };
+                $scope.levels.push(levelResult);
+              }
             });
-
-            if (existingLevelResult) {
-              existingLevelResult.count++;
-              existingLevelResult.percent = existingLevelResult.count / $scope.surveys.length * 100;
-            } else {
-              var levelResult = {
-                stage: survey.stage,
-                puzzle: survey.puzzle,
-                question: index + 1,
-                studentResult: level_result.student_result,
-                count: 1,
-                percent: 1 / $scope.surveys.length * 100
-              };
-              $scope.levels.push(levelResult);
-            }
           });
         });
       });

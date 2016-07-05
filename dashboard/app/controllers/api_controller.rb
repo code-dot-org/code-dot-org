@@ -157,8 +157,6 @@ class ApiController < ApplicationController
     render json: data
   end
 
-
-
   # If at least five students have completed a given long-assessment LevelGroup that is marked anonymous,
   # then for each multi return a summary of the percentage of each answer, and also return all free
   # response texts but in a randomized order.
@@ -166,109 +164,74 @@ class ApiController < ApplicationController
   # serious risk of exposing student information in a non-anonymous fashion, this function has been
   # built separately.
   def section_surveys
-    puts 'in section_surveys'
-
     load_section
     load_script
 
     level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
 
-    puts "script levels: #{level_group_script_levels.to_json}"
-
     # Go through each anonymous long-assessment LevelGroup.
-
     data = level_group_script_levels.map do |script_level|
-      puts "script level level: #{script_level.level.to_json}"
-
       next unless script_level.long_assessment?
       next unless script_level.anonymous?
 
-      #puts "script level: #{script_level}"
+      levelgroup_results = {}
 
-      # Go through each student who has submitted a response to it.
-      # Do this in a shuffled order.
+      # Go through each sublevel
+      script_level.level.levels.each_with_index do |sublevel, sublevel_index|
+        sublevel_results = []
 
-      puts "section students: #{@section.students.to_json}"
+        # Go through each student who has submitted a response to it.
+        @section.students.all.shuffle.each do |student|
+          # Skip student if they haven't submitted for this LevelGroup.
+          user_level = student.user_level_for(script_level, script_level.level)
+          next unless user_level.try(:submitted)
 
-      student_count = 0
+          last_attempt = student.last_attempt(script_level.level)
+          response = last_attempt.try(:level_source).try(:data)
+          next unless response
 
-      @section.students.all.shuffle.map do |student|
-        last_attempt = student.last_attempt(script_level.level)
-        response = last_attempt.try(:level_source).try(:data)
+          response_parsed = JSON.parse(response)
+          sublevel_response = response_parsed[sublevel.id.to_s]
 
-        #puts "student: #{student.to_json}"
+          sublevel_result = {}
 
-        next unless response
-
-        response_parsed = JSON.parse(response)
-
-        user_level = student.user_level_for(script_level, script_level.level)
-        submitted = user_level.try(:submitted)
-
-        # And construct a listing of all the individual levels and their results.
-        level_results = []
-
-        student_count += 1
-
-        # Go through each sublevel of the assessment.
-        # Record text responses, and build counts of multi choices.
-
-        script_level.level.levels.each do |level|
-
-          #puts "level: #{level.to_json}"
-
-          level_response = response_parsed[level.id.to_s]
-
-          level_result = {}
-
-          if level_response
-            case level
+          if sublevel_response
+            case sublevel
             when TextMatch, FreeResponse
-              student_result = level_response["result"]
-              level_result[:student_result] = student_result
+              student_result = sublevel_response["result"]
+              sublevel_result[:result] = student_result
+              sublevel_result[:type] = "free_response"
             when Multi
-              answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
-              student_result = level_response["result"].split(",").sort.join(",")
+              student_result = sublevel_response["result"].split(",").sort.join(",")
               # unless unsubmitted
               unless student_result == "-1"
                 # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-                level_result[:student_result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
-                level_result[:type] = "multi"
+                sublevel_result[:result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
+                sublevel_result[:type] = "multi"
               end
             end
           end
 
-          level_results << level_result
-
+          sublevel_results << sublevel_result
         end
 
-        timestamp = user_level[:updated_at].to_formatted_s
+        # All the results for one sublevel for a group of studentss
+        levelgroup_results[sublevel_index] = sublevel_results
+      end
 
-        # all the results for one contained sublevel for one student
-
-        {
-          stage: script_level.stage.localized_title,
-          puzzle: script_level.position,
-          question: script_level.level.properties["title"],
-          # todo: pass something special? since we took out:   , user_id: student.id
-          url: build_script_level_url(script_level, section_id: @section.id),
-          submitted: submitted,
-          timestamp: timestamp,
-          level_results: level_results
-        }
-      end.compact
-    end.flatten.compact
-
-    #data[:student_count] = @section.students.length if @section.students.length > 0
-    puts "student count: #{@section.students.all.length}"
+      # All the results for one levelgroup for a group of students
+      {
+        stage: script_level.stage.localized_title,
+        puzzle: script_level.position,
+        url: build_script_level_url(script_level, section_id: @section.id),
+        levelgroup_results: levelgroup_results
+      }
+    end.compact
 
     puts "final data: #{data.to_json}"
 
     render json: data
   end
-
-
-
 
   # For each student, return an array of each long-assessment LevelGroup in progress or submitted.
   # Each such array contains an array of individual level results, matching the order of the LevelGroup's
