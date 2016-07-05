@@ -180,6 +180,9 @@ var TopInstructions = React.createClass({
   },
 
   /**
+   * @param {boolean} collapsed whether or not the height should be
+   * caluclated as if the instructions are collapsed. Defaults to
+   * current collapsed state.
    * @returns {number} The minimum height of the top instructions (which is just
    * the height of the little icon and the height of the resizer if we're not
    * collapsed
