@@ -145,7 +145,6 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def anonymous?
-    puts "anonymous? #{level.properties["anonymous"]}"
     return assessment && level.properties["anonymous"] == "true"
   end
 
