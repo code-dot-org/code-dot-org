@@ -19,17 +19,6 @@ const DataProperties = React.createClass({
     onViewChange: React.PropTypes.func.isRequired
   },
 
-  /**
-   * Formats the key/value pairs on this.props.keyValueData and returns
-   * them as an array of arrays [[key1, val1], [key2, val2] ...].
-   * @returns {Array}
-   */
-  getKeyValueData() {
-    return Object.keys(this.props.keyValueData).map(key => {
-      return [key, this.props.keyValueData[key]];
-    });
-  },
-
   render() {
     const visible = (DataView.PROPERTIES === this.props.view);
     return (
@@ -69,10 +58,9 @@ const DataProperties = React.createClass({
             </tr>
 
             {
-              this.getKeyValueData().map(row => {
-                const [key, value] = row;
-                return <EditKeyRow key={key} keyName={key} value={value}/>;
-              })
+              Object.keys(this.props.keyValueData).map(key => (
+                <EditKeyRow key={key} keyName={key} value={this.props.keyValueData[key]}/>
+              ))
             }
           </tbody>
         </table>
