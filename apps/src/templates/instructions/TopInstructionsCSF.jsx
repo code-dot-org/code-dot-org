@@ -173,7 +173,7 @@ var TopInstructions = React.createClass({
    * If we then resize it to be larger again, we want to increase height.
    */
   componentWillReceiveProps(nextProps) {
-    const minHeight = this.getMinHeight();
+    const minHeight = this.getMinHeight(nextProps.collapsed);
     if (nextProps.height < minHeight && nextProps.height < nextProps.maxHeight) {
       this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, minHeight));
     }
@@ -184,9 +184,9 @@ var TopInstructions = React.createClass({
    * the height of the little icon and the height of the resizer if we're not
    * collapsed
    */
-  getMinHeight() {
+  getMinHeight(collapsed=this.props.collapsed) {
     const collapseButtonHeight = getOuterHeight(this.refs.collapser, true);
-    const scrollButtonsHeight = this.refs.scrollButtons ?
+    const scrollButtonsHeight = (!collapsed && this.refs.scrollButtons) ?
         this.refs.scrollButtons.getMinHeight() : 0;
 
     const minIconHeight = this.refs.icon ?
@@ -249,7 +249,7 @@ var TopInstructions = React.createClass({
 
     // adjust rendered height based on next collapsed state
     if (nextCollapsed) {
-      this.props.setInstructionsRenderedHeight(this.getMinHeight());
+      this.props.setInstructionsRenderedHeight(this.getMinHeight(nextCollapsed));
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
     }
