@@ -2,6 +2,7 @@ Blockly.Msg.ACTUAL = "تماس";
 Blockly.Msg.ADD = "اضافه کردن";
 Blockly.Msg.ADD_COMMENT = "نظر دادن";
 Blockly.Msg.ADD_PARAMETER = "اضافه کردن پارامتر";
+Blockly.Msg.CANCEL = "Cancel";
 Blockly.Msg.CHANGE_VALUE_TITLE = "تغییر قیمت:";
 Blockly.Msg.CLOSE = "ببند";
 Blockly.Msg.COLLAPSE_ALL = "بستن بلاک ها";
@@ -23,7 +24,9 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "قرمز";
 Blockly.Msg.COLOUR_RGB_TITLE = "رنگ آمیزی با";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "یک رنگ با ترکیب مقدار مشخص شده از قرمز، سبز،و آبی ایجاد کنید. همه مقادیر باید بین 0 و 100 باشند.";
+Blockly.Msg.CONFIRM_CREATE_VARIABLE = "Create";
 Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE = "هشدار! آیا مطمئنید می خواهید %1 را پاک کنید?";
+Blockly.Msg.CONFIRM_RENAME_VARIABLE = "Rename";
 Blockly.Msg.CONTRACT_EDITOR_HEADER = "دستور العمل طرح";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "از حلقه تکرار خارج شو";
@@ -373,6 +376,7 @@ Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH = "تراشیدن فاصله‌ها از ه�
 Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "تراشیدن فاصله‌ها از طرف چپ";
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "تراشیدن فاصله‌ها از طرف چپ";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "کپی از متن با فاصله‌های حذف‌شده از یک یا هر دو پایان باز می‌گرداند.";
+Blockly.Msg.UNUSED_CODE = "Unused code";
 Blockly.Msg.VARIABLES_DEFAULT_NAME = "مورد";
 Blockly.Msg.VARIABLES_GET_CREATE_SET = "درست‌کردن «تنظیم %1»";
 Blockly.Msg.VARIABLES_GET_HELPURL = "http://code.google.com/p/blockly/wiki/Variables#Get";
