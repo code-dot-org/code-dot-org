@@ -6,7 +6,7 @@ import { DataView } from './constants';
 import Radium from 'radium';
 import React from 'react';
 import { changeView } from './redux/data';
-import dataStyles from './dataStyles';
+import * as dataStyles from './dataStyles';
 import { connect } from 'react-redux';
 
 const DataTable = React.createClass({

@@ -52,7 +52,7 @@ const input = {
   padding: '4px 6px'
 };
 
-export default {
+export {
   editRow,
   addRow,
   cell,
