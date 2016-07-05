@@ -5,12 +5,6 @@ def main
   rerun = "rerun -p '**/*.{rb,ru,yml}' -d'#{deploy_dir('lib')},#{deploy_dir('shared/middleware')},#{pegasus_dir}' --" if CDO.dashboard_enable_pegasus
   pids = []
 
-  unless CDO.use_my_code_studio && CDO.rack_env == 'development'
-    # Note: This will report "code-studio-watcher Launch Failed" because it expects something
-    # that continues to run.
-    pids.push spawn("rerun -d #{code_studio_dir}/src --background -n code-studio-watcher rake package:code_studio")
-  end
-
   unless CDO.use_my_apps
     # Note: This will report "apps-watcher Launch Failed" because it expects something
     # that continues to run.
