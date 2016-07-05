@@ -2,7 +2,7 @@
 'use strict';
 
 var assert = require('assert');
-var progress = require('../../src/js/progress');
+var progress = require('@cdo/apps/code-studio/progress');
 
 describe('progress', function () {
   it ('returns the correct activity CSS class', function () {

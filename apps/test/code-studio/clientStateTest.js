@@ -5,7 +5,7 @@
 var assert = require('assert');
 window.$ = require('jquery');
 require('jquery.cookie');
-var state = require('../../src/js/clientState');
+var state = require('@cdo/apps/code-studio/clientState');
 var chai = require('chai');
 
 chai.should();

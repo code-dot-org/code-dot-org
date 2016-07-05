@@ -335,6 +335,11 @@ module.exports = function (grunt) {
         {src: ['test/integration-tests.js'], watched: false},
       ],
     },
+    codeStudio: {
+      files: [
+        {src: ['test/code-studio-tests.js'], watched: false},
+      ],
+    },
     all: {
       files: [
         {src: ['test/index.js'], watched: false},
@@ -677,6 +682,14 @@ module.exports = function (grunt) {
     'newer:copy:static',
     'concat',
     'karma:integration'
+  ]);
+
+  grunt.registerTask('codeStudioTest', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'newer:copy:static',
+    'concat',
+    'karma:codeStudio'
   ]);
 
   grunt.registerTask('test', [
