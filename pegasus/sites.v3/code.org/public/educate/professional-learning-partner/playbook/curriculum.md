@@ -1,4 +1,4 @@
-
+---
 title: Curriculum
 nav: plp_playbook_nav
 ---
