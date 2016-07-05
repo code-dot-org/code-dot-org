@@ -3,21 +3,16 @@
  */
 
 import { DataView } from './constants';
+import Radium from 'radium';
 import React from 'react';
 import { changeView } from './redux/data';
-import color from '../color';
+import * as dataStyles from './dataStyles';
 import { connect } from 'react-redux';
-
-const styles = {
-  link: {
-    color: color.purple,
-    fontFamily: "'Gotham 7r', sans-serif"
-  }
-};
 
 const DataTable = React.createClass({
   propTypes: {
     // from redux state
+    tableData: React.PropTypes.object.isRequired,
     tableName: React.PropTypes.string.isRequired,
     view: React.PropTypes.oneOf(Object.keys(DataView)),
 
@@ -30,12 +25,14 @@ const DataTable = React.createClass({
     return (
       <div id='dataTable' style={{display: visible ? 'block' : 'none'}}>
         <h4>
-          <a href='#' style={styles.link}
+          <a href='#' style={dataStyles.link}
              onClick={() => this.props.onViewChange(DataView.OVERVIEW)}>
             Data
           </a>
           &nbsp;&gt; {this.props.tableName}
         </h4>
+        {/* placeholder display of table contents */}
+        {JSON.stringify(this.props.tableData, null, 2)}
       </div>
     );
   }
@@ -43,9 +40,10 @@ const DataTable = React.createClass({
 
 export default connect(state => ({
   view: state.data.view,
+  tableData: state.data.tableData,
   tableName: state.data.tableName || ''
 }), dispatch => ({
   onViewChange(view) {
     dispatch(changeView(view));
   }
-}))(DataTable);
+}))(Radium(DataTable));
