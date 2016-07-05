@@ -269,13 +269,20 @@ class FilesApi < Sinatra::Base
 
   # PUT /v3/animations/<channel-id>/<filename>?src=<source-filename>
   #
-  # Create or replace an animation. We use this method so that IE9 can still
-  # upload by posting to an iframe.
+  # Create or replace an animation.
   #
   put %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type 'text/plain'
-    copy_file(endpoint, encrypted_channel_id, filename, request.GET['src'])
+    if request.content_type == 'image/png'
+      body = request.body.read
+      put_file(endpoint, encrypted_channel_id, filename, body)
+    elsif !request.GET['src'].nil?
+      # We use this method so that IE9 can still upload by posting to an iframe.
+      copy_file(endpoint, encrypted_channel_id, filename, request.GET['src'])
+    else
+      bad_request
+    end
   end
 
   #

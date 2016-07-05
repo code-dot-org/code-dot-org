@@ -4,7 +4,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import color from '../../color';
-import { METADATA_SHAPE } from '../animationMetadata';
+import * as PropTypes from '../PropTypes';
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
 import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
@@ -26,19 +26,20 @@ const styles = {
  */
 const AnimationList = React.createClass({
   propTypes: {
-    animations: React.PropTypes.arrayOf(React.PropTypes.shape(METADATA_SHAPE)).isRequired,
-    selectedAnimation: React.PropTypes.string,
+    animationList: PropTypes.AnimationList.isRequired,
+    selectedAnimation: PropTypes.AnimationKey,
     onNewItemClick: React.PropTypes.func.isRequired
   },
 
   render() {
     return (
         <ScrollableList style={styles.root} className="animationList">
-          {this.props.animations.map(animation =>
+          {this.props.animationList.orderedKeys.map(key =>
             <AnimationListItem
-                key={animation.key}
-                animation={animation}
-                isSelected={animation.key === this.props.selectedAnimation}
+                key={key}
+                animationKey={key}
+                animationProps={this.props.animationList.propsByKey[key]}
+                isSelected={key === this.props.selectedAnimation}
             />
           )}
           <NewListItem
@@ -51,7 +52,7 @@ const AnimationList = React.createClass({
   }
 });
 export default connect(state => ({
-  animations: state.animations,
+  animationList: state.animationList,
   selectedAnimation: state.animationTab.selectedAnimation
 }), dispatch => ({
   onNewItemClick() {
