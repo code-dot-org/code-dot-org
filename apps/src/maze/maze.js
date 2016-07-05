@@ -521,6 +521,11 @@ Maze.init = function (config) {
 
   config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
+  // Initialize Maze subtypes. Explicitly clear the options beforehand
+  // so we avoid conflicts.
+  Maze.bee = undefined;
+  Maze.collector = undefined;
+  Maze.wordSearch = undefined;
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, studioApp, config);
     // Override default stepSpeed
