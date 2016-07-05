@@ -9,7 +9,7 @@ end
 def hoc_load_countries
   JSON.parse(IO.read(hoc_dir('i18n/countries.json')))
 end
-HOC_COUNTRIES = hoc_load_countries()
+HOC_COUNTRIES = hoc_load_countries
 
 def hoc_load_i18n
   i18n = {}
@@ -18,7 +18,7 @@ def hoc_load_i18n
   end
   i18n
 end
-HOC_I18N = hoc_load_i18n()
+HOC_I18N = hoc_load_i18n
 
 def trans_load_i18n
   i18n = {}
@@ -27,7 +27,7 @@ def trans_load_i18n
   end
   i18n
 end
-TRANS_I18N = trans_load_i18n()
+TRANS_I18N = trans_load_i18n
 
 def hoc_s(id)
   id = id.to_s
@@ -54,12 +54,12 @@ def hoc_canonicalized_i18n_path(uri)
       path = File.join([possible_language, path].select{|i| !i.nil_or_empty?})
     end
   else
-    @country = hoc_detect_country()
+    @country = hoc_detect_country
     path = File.join([possible_country_or_company, possible_language, path].select{|i| !i.nil_or_empty?})
   end
 
   country_language = HOC_COUNTRIES[@country]['default_language']
-  @language = @user_language || country_language || hoc_detect_language()
+  @language = @user_language || country_language || hoc_detect_language
 
   canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}",path].select{|i| !i.nil_or_empty?})]
   canonical_urls << File.join(["/#{(@company || @country)}",path].select{|i| !i.nil_or_empty?}) if @language == country_language

@@ -1,7 +1,9 @@
 @import "color";
 
 .projects-page {
-  h1 {text-align: center;}
+  h1 {
+    text-align: center;
+  }
   .level_link,.level_link:link, .level_link:visited {
     background-color: $purple;
     border-color: $purple;

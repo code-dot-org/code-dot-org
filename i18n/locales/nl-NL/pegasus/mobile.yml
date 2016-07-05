@@ -93,49 +93,49 @@ nl-NL:
   third_party_price_299: 'Prijs: $2.99 per download'
   third_party_price_individual: 'Individuele prijs: gratis demo & $25/maand (=+/- €22,41)'
   third_party_price_school: 'School prijs: gratis plannen &Pro voor $2500+'
-  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
-  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
+  third_party_tynker_desc: "Tynker's creatieve computerplatform helpt kinderen te ontwikkelen door computationeel te denken en programmering vaardigheden op een leuke, intuïtieve en creatieve manier. Onze innovatieve visuele programmeertaal, interactieve zelfstudie cursussen, en spel gebaseerde programmering activiteiten bieden een eenvoudige Inleiding voor het programmeren, en laten kinderen in staat stellen om zelf te innoveren te creëren."
+  third_party_tynker_btn_curriculum: Probeer Tynkers Curriculum uit voor jonge lezers
   third_party_tynker_btn_site: Bezoek Tynker
   third_party_scratchjr_desc: "Kras Jr. is een inleidende programmeertaal waarmee jonge kinderen (leeftijd 5-7) hun eigen interactieve verhalen en spelletjes maken. Kinderen kunnen samen grafische programmeren, blokken en tekens verplaatsen, springen, dansen en zingen. Kinderen kunnen tekens in de verf-editor wijzigen, voegen hun eigen stemmen en geluiden toe, zelfs invoegen van eigen foto's - vervolgens met de programmering blokken maken zij hun personage en komt hij tot leven."
   third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
   third_party_scratchjr_btn_site: Bezoek Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_desc: Met Scratch kunt u uw eigen geprogrammeerde interactieve verhalen, games en animaties en jouw creaties delen met anderen in de online gemeenschap. Scratch helpt jonge mensen te leren om creatief, reden systematisch en samenwerkend te denken — essentiële vaardigheden voor het leven in de 21e eeuw.
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
   third_party_scratch_btn_site: Bezoek Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
   third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
-  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_lightbot_btn_site: Bezoek Lightbot
+  third_party_khan_desc: "Leer hoe je tekeningen, animaties en games moet programmeren met behulp van JavaScript & ProcessingJS, of leer hoe je webpagina's maakt met HTML & CSS. U kan alles delen wat u maakt, ontdek wat anderen hebben gecreëerd en leer van elkaar!"
+  third_party_khan_btn_learn: Leer CS met Khan Academy
   third_party_khan_btn_forum: Khan Academy CS Forum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_appinv_btn_site: Bezoek App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
-  third_party_codehs_btn_try: Intro CS Learn More for Schools
+  third_party_codehs_btn_try: Intro CS leer meer voor scholen
   third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_site: Bezoek Codecademy
+  third_party_organization: Organisatie
   third_party_curriculum: Lesprogramma
-  third_party_pricing: Pricing
-  third_party_cost_free: Free for students and teachers
-  third_party_cost_5permonth: $5/month per class
-  third_party_cost_299: $2.99/download
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_pricing: Prijzen
+  third_party_cost_free: Gratis voor studenten en docenten
+  third_party_cost_5permonth: $5/ per maand per klas
+  third_party_cost_299: $2.99/per download
+  third_party_cost_free_399: Gratis te proberen, $399/per klas
+  third_party_cost_free_2: Gratis uit te proberen, $2/per student
+  third_party_cost_free_10: Gratis uit te proberen, $9.99/ per maand
+  third_party_desc_5_4to8: Ongeveer 5 lessen, gericht op niveau 4-8
+  third_party_desc_10to12_kto3: Ongeveer 10-12 lessen, gericht op niveau K-3
+  third_party_desc_11_kto5: Ongeveer 11 lessen, gericht op niveau K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: 'Between 10 & 15 lessons, geared toward grades 3-12'
-  third_party_desc_25to40_3to12: 'From 25 - 40 lessons, intended for grades 3-12'
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_40_4to8: Meer dan 40 lessen, gericht op niveaus 4-8
+  third_party_desc_dozens_kto8: Tientallen lessen voor alle niveaus K-8
+  third_party_desc_10to15_3to12: 'Tussen 10 & 15 lessen, gericht op niveaus 3-12'
+  third_party_desc_25to40_3to12: Van 25-40 lessen, bestemd voor niveaus 3-12
+  third_party_desc_20_2to8: Ongeveer 20 lessen, gericht op niveaus 2-8
   third_party_desc_7to22_5to12: 'Between 7 & 22 lessons, geared toward grades 5-12'
   third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: Selecteer een geldige leeftijd

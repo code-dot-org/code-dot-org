@@ -1,5 +1,6 @@
 /* global Applab, dashboard */
 import $ from 'jquery';
+import 'jquery-ui'; // for $.fn.resizable();
 import React from 'react';
 import ReactDOM from 'react-dom';
 var DesignWorkspace = require('./DesignWorkspace');
@@ -40,11 +41,6 @@ designMode.setupReduxSubscribers = function (store) {
     if (!lastState ||
         state.screens.currentScreenId !== lastState.screens.currentScreenId) {
       renderScreens(state.screens.currentScreenId);
-    }
-
-    if (!lastState ||
-        state.interfaceMode !== lastState.interfaceMode) {
-      onInterfaceModeChange(state.interfaceMode);
     }
   });
 };
@@ -591,6 +587,38 @@ function getUnsafeHtmlReporter(sanitizationTarget) {
 }
 
 /**
+ * Parses/modifies a single screen's html representation as loaded from levelHTML.
+ *
+ * @param screenEl {Element|string} element encapsulating the dom for a single screen
+ *     within a level's html. Can be a string of html as well. Note: If this is an element,
+ *     then this function will have side effects.
+ * @param allowDragging {boolean} Whether to make elements resizable and draggable.
+ * @param prefix {string} Optional prefix to attach to element ids of children and
+ *     grandchildren after parsing. Defaults to ''.
+ *
+ * @returns returns the modified version of the element passed in for screenEl.
+ */
+designMode.parseScreenFromLevelHtml = function (screenEl, allowDragging, prefix) {
+  var screen = $(screenEl);
+  elementUtils.addIdPrefix(screen[0], prefix);
+  screen.children().each(function () {
+    elementUtils.addIdPrefix(this, prefix);
+  });
+
+  if (allowDragging) {
+    // screen are screens. make grandchildren draggable
+    makeDraggable(screen.children());
+  }
+
+  elementLibrary.onDeserialize(screen[0], designMode.updateProperty.bind(this));
+  screen.children().each(function () {
+    var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
+    elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
+  });
+  return screen[0];
+};
+
+/**
  * Replace the contents of rootEl with the children of the DOM node obtained by
  * parsing Applab.levelHtml (the root node in the levelHtml is ignored).
  * @param rootEl {Element} Element whose children should be replaced.
@@ -613,48 +641,9 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   var reportUnsafeHtml = getUnsafeHtmlReporter(rootEl.id);
   var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
   var children = $(levelDom).children();
-
-  children.each(function () {
-    elementUtils.addIdPrefix(this, prefix);
-  });
-  children.children().each(function () {
-    elementUtils.addIdPrefix(this, prefix);
-  });
-
+  children.each(function () { designMode.parseScreenFromLevelHtml(this, allowDragging, prefix); });
   children.appendTo(rootEl);
-  if (allowDragging) {
-    // children are screens. make grandchildren draggable
-    makeDraggable(children.children());
-  }
-
-  children.each(function () {
-    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
-  });
-  children.children().each(function () {
-    var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
-    elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
-  });
 };
-
-designMode.toggleDesignMode = function (enable) {
-  studioApp.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
-};
-
-function onInterfaceModeChange(mode) {
-  var enable = (ApplabInterfaceMode.DESIGN === mode);
-  var designWorkspace = document.getElementById('designWorkspace');
-  if (!designWorkspace) {
-    // Currently we don't run design mode in some circumstances (i.e. user is
-    // not an admin)
-    return;
-  }
-  designWorkspace.style.display = enable ? 'block' : 'none';
-
-  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
-  codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
-
-  Applab.toggleDivApplab(!enable);
-}
 
 /**
  * When we make elements resizable, we wrap them in an outer div. Given an outer

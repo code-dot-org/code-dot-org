@@ -487,6 +487,7 @@ El Cajon, CA
 
 schwappach@pd.code.org
 
+[/col-33]
 
 <p
 style="clear:both">&nbsp;</p>
@@ -494,6 +495,7 @@ style="clear:both">&nbsp;</p>
 
 <a id="co"></a>
 ## Colorado
+[col-33]
 ### Ann Root
 Boulder, CO
 

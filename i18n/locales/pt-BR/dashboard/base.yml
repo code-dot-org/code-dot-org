@@ -29,7 +29,7 @@ pt-BR:
   unsubmit: Cancelar envio
   previous_page: Página anterior
   next_page: Próxima página
-  next_resource: Next resource
+  next_resource: Próximo recurso
   done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: Ok
@@ -87,7 +87,7 @@ pt-BR:
     teacher_title: Cadastro de professores
     student_pitch: Cadastro de aluno na Code.org
     student_title: Cadastro de alunos
-    signup_title: Sign up for Code.org
+    signup_title: Cadastre-se no Code.org
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
     address_placeholder: endereço, cidade, estado, CEP
@@ -106,7 +106,7 @@ pt-BR:
     student_terms: "Concordo com os <a href='http://code.org/tos'>termos de serviço</a> da Code.org. Se tenho menos de 13 anos de idade, ao enviar este formulário confirmo que tenho autorização de meus pais ou tutor legal para usar os serviços da Code.org.<br/> No caso dos alunos com menos de 13 anos, os endereços de e-mail não são armazenados em um formulário que nos permita entrar em contato com eles."
     teacher_terms: "Concordo com os <a href='http://code.org/tos'>termos de serviço</a> da Code.org."
     additional_information: Precisamos de mais informações para continuar com o processo de inscrição.
-    user_type_label: Account Type
+    user_type_label: Tipo de conta
     user_type_teacher: Professor
     user_type_student: Estudante
   signin_form:
@@ -341,7 +341,7 @@ pt-BR:
     announcement_title: Anúncios
     announcement_view_all: Ver todos
     announcement_message: '<b>22 de abril de 2016</b> - Atividades offline são partes vitais do processo de aprendizagem, mas os professores nos disseram que encontrar todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você pode encontrar todos os recursos offline numa página só. Associar as lições com qualquer aula de ciência da computação, ou usar a vídeo-aula como um curso independente.'
-    announcement_button: Test the feature
+    announcement_button: Teste a funcionalidade
     announcement_petition: Como professor, você está liderando o caminho em um movimento para dar a cada aluno em todas as escolas a oportunidade de aprender informática. Agora, é hora de deixar seus representantes notícias suas. Esta semana, líderes de educação, 28 governadores e maiores empresas de CEOs da América se uniram em uma carta aberta pedindo o Congresso dos EUA para financiar a educação de ciência de computador K-12.
     announcement_petition_button: Adicione o seu nome
   move_students:

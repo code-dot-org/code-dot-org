@@ -9,7 +9,7 @@ fr:
         text: Nous allons utiliser Blockly, un langage de programmation visuel où tu glisses et déposes des blocs pour écrire le code.
       3:
         image: notes/hoc1_3.jpg
-        text: "La plupart du code est écrit, mais Blockly est visuel. Chaque bloc correspond à une ligne de code «\\_réel\\_»."
+        text: La plupart du code est écrit, mais Blockly est visuel. Chaque bloc correspond à une ligne de code «réel».
       4:
         image: notes/hoc1_4.jpg
         text: "Tu vas apprendre les bases de l'informatique, des concepts utilisés partout : de la création d'applications jusqu'au contrôle du véhicule qui s'est posé sur Mars."
@@ -30,16 +30,16 @@ fr:
         text: À droite, il y a ton espace de travail où tu déposeras les blocs de la boîte à outils pour construire ton programme. Pour supprimer un bloc, déplace-le vers la poubelle dans le coin.
       10:
         image: notes/hoc1_10.jpg
-        text: "Chaque bloc est une instruction. Si tu fais glisser un bloc «\\_Avancer\\_» dans ton espace de travail et appuies sur «\\_Exécuter le programme\\_», l'oiseau se déplacera d'un espace dans le labyrinthe."
+        text: "Chaque bloc est une instruction. Si tu fais glisser un bloc «Avancer» dans ton espace de travail et appuies sur «Exécuter le programme», l'oiseau se déplacera d'un espace dans le labyrinthe."
       11:
         image: notes/hoc1_11.jpg
         text: "Pour faire plusieurs actions, tu peux faire glisser de nombreux blocs sur ton espace de travail et les attacher les uns aux autres. L'oiseau exécutera toutes les commandes indiquées de haut en bas."
       12:
         image: notes/hoc1_12.jpg
-        text: "Si tu exécutes un programme et que tu veux le corriger et réessayer, appuies sur le bouton «\\_Réinitialiser\\_»."
+        text: Si tu exécutes un programme et que tu veux le corriger et réessayer, appuies sur le bouton «Réinitialiser».
       13:
         image: notes/hoc1_13.jpg
-        text: "Allons attraper ces cochons\\_!"
+        text: Allons attraper ces cochons!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
@@ -78,19 +78,19 @@ fr:
         text: "Chaque fois que quelqu'un clique ou appuie ou tapote sur un ordinateur ou un téléphone, ça génère un ÉVÈNEMENT, et il y a un code qui décide quoi faire quand un ÉVÈNEMENT a lieu."
       3:
         image: notes/flappy03.jpg
-        text: "Par exemple, tu pourrais avoir un GESTIONNAIRE D’ÉVÉNEMENTS qui dit «\\_quand on clique sur la souris, joue un son.\\_» "
+        text: 'Par exemple, tu pourrais avoir un GESTIONNAIRE D’ÉVÉNEMENTS qui dit «quand on clique sur la souris, joue un son.» '
       4:
         image: notes/flappy04.jpg
-        text: "As-tu déjà entendu parler du jeu Flappy l’oiseau\\_? En utilisant les Gestionnaires d'événements, nous allons apprendre à programmer notre version personnalisée de Flappy l’oiseau\\_!"
+        text: "As-tu déjà entendu parler du jeu Flappy l’oiseau? En utilisant les Gestionnaires d'événements, nous allons apprendre à programmer notre version personnalisée de Flappy l’oiseau!"
       5:
         image: notes/flappy05.jpg
         text: "Le code que tu vas écrire implique de glisser et de déposer des blocs qui représentent des commandes pour l'ordinateur. Mais en fait, chacun de ces blocs est représenté par du code réel."
       6:
         image: notes/flappy06.jpg
-        text: "Si tu regardes dans l'espace de travail, il y a quelques blocs verts qui sont déjà remplis pour toi - ce sont des «\\_Gestionnaires d'événements.\\_» "
+        text: "Si tu regardes dans l'espace de travail, il y a quelques blocs verts qui sont déjà remplis pour toi - ce sont des «Gestionnaires d'événements.» "
       7:
         image: notes/flappy07.jpg
-        text: "Si tu veux que l'oiseau BATTE DES AILES quand tu CLIQUES sur la souris, tu peux le faire en attachant le bloc «\\_BATTRE DES AILES\\_» au gestionnaire d'événements approprié\\_; et maintenant dans ton jeu, chaque fois que tu cliqueras sur la souris, l'oiseau battra des ailes."
+        text: "Si tu veux que l'oiseau BATTE DES AILES quand tu CLIQUES sur la souris, tu peux le faire en attachant le bloc «BATTRE DES AILES» au gestionnaire d'événements approprié; et maintenant dans ton jeu, chaque fois que tu cliqueras sur la souris, l'oiseau battra des ailes."
       8:
         image: notes/flappy08.jpg
         text: "Dans chaque puzzle de cette activité, nous allons introduire des nouveaux types d'événements sous la forme de blocs verts sur l'espace de travail, et tu pourras décider quel est le bloc approprié à ajouter en réponse à ces événements."
@@ -99,7 +99,7 @@ fr:
         text: 'Quand tu vois une flèche déroulante comme ça, cela veut dire que tu peux changer les paramètres - comme par exemple, quel son jouer quand Flappy l’oiseau touche le sol.'
       10:
         image: notes/flappy10.jpg
-        text: "Dans le puzzle final, tu seras capable de créer ton propre jeu et de le partager avec tes amis. Amuse-toi bien\\_!"
+        text: Dans le puzzle final, tu seras capable de créer ton propre jeu et de le partager avec tes amis. Amuse-toi bien!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
@@ -118,68 +118,68 @@ fr:
         text: "Nous pouvons mettre le bloc « Avancer » à l'intérieur du bloc « Répéter » et écrire un nombre dans le bloc lui indiquant combien de fois il doit répéter l’action."
       6:
         image: notes/hoc2_6.jpg
-        text: "Et ceci est important\\_: tu peux mettre plus d'une commande à l'intérieur d'un bloc « Répéter » ."
+        text: "Et ceci est important: tu peux mettre plus d'une commande à l'intérieur d'un bloc « Répéter » ."
       7:
         image: notes/hoc2_7.jpg
-        text: "Amuse-toi en utilisant ton nouveau bloc « Répéter »\\_!"
+        text: Amuse-toi en utilisant ton nouveau bloc « Répéter »!
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: "Salut, je suis Chris. Avant de rejoindre le Heat de Miami, je suis allé à Georgia Tech pour étudier l'informatique. Essayons notre nouveau bloc, le bloc «\\_Répéter jusqu'à\\_»."
+        text: "Salut, je suis Chris. Avant de rejoindre le Heat de Miami, je suis allé à Georgia Tech pour étudier l'informatique. Essayons notre nouveau bloc, le bloc «Répéter jusqu'à»."
       2:
         image: notes/hoc3_2.jpg
-        text: "Et si on ne sait pas de quelle distance l'oiseau doit se déplacer pour arriver au cochon\\_?"
+        text: "Et si on ne sait pas de quelle distance l'oiseau doit se déplacer pour arriver au cochon?"
       3:
         image: notes/hoc3_3.jpg
-        text: "Si nous mettons un bloc « Avancer » à l'intérieur d'un bloc «\\_Répéter jusqu'à\\_», l'oiseau va avancer JUSQU'À ce qu'il atteigne le cochon (ou qu'il se cogne contre un mur)."
+        text: "Si nous mettons un bloc « Avancer » à l'intérieur d'un bloc «Répéter jusqu'à», l'oiseau va avancer JUSQU'À ce qu'il atteigne le cochon (ou qu'il se cogne contre un mur)."
       4:
         image: notes/hoc3_4.jpg
-        text: "Et ceci est important\\_: comme avant, on peut mettre plusieurs blocs à l'intérieur du bloc « Répéter jusqu’à », et ils seront tous répétés."
+        text: "Et ceci est important: comme avant, on peut mettre plusieurs blocs à l'intérieur du bloc « Répéter jusqu’à », et ils seront tous répétés."
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: "Salut, je suis Bill ! Nous allons apprendre un nouveau concept fondamental : les instructions «\\_Si\\_». C'est de cette manière que les ordinateurs prennent des décisions."
+        text: "Salut, je suis Bill ! Nous allons apprendre un nouveau concept fondamental : les instructions «Si». C'est de cette manière que les ordinateurs prennent des décisions."
       2:
         image: notes/hoc4_2.jpg
-        text: "Tu utilises des instructions « Si » toi-même tous les jours. Avant de sortir chaque matin, tu dis\\_: «\\_SI il pleut dehors, je dois mettre mon imperméable.\\_»"
+        text: 'Tu utilises des instructions « Si » toi-même tous les jours. Avant de sortir chaque matin, tu dis: «SI il pleut dehors, je dois mettre mon imperméable.»'
       3:
         image: notes/hoc4_3.jpg
         text: "Nous pouvons dire au zombie d'aller vérifier SI il y a un chemin à gauche, et SI il en trouve un, il peut tourner dans cette direction."
       4:
         image: notes/hoc4_4.jpg
-        text: "Afin d'écrire le code pour ceci, déposons un bloc « Si » et mettons-y un bloc «\\_Tourner à gauche\\_» à l'intérieur."
+        text: "Afin d'écrire le code pour ceci, déposons un bloc « Si » et mettons-y un bloc «Tourner à gauche» à l'intérieur."
       5:
         image: notes/hoc4_5.jpg
         text: "Maintenant, si nous mettons un bloc « Avancer » au-dessus et englobons le tout d'un bloc « Répéter », chaque fois que le zombie bouge, il va vérifier s’il y a un chemin à gauche et tourner. La commande « Répéter » est essentielle pour vérifier si on peut tourner à chaque étape."
       6:
         image: notes/hoc4_6.jpg
-        text: "Les instructions «\\_Si\\_» sont vraiment importantes en informatique. Un des premiers programmes que j'ai écrits était un jeu de morpion, et il y avait une instruction «\\_Si\\_» qui disait «\\_SI l'autre personne est sur le point de gagner, bloque la case qui va le faire gagner.\\_»"
+        text: "Les instructions «Si» sont vraiment importantes en informatique. Un des premiers programmes que j'ai écrits était un jeu de morpion, et il y avait une instruction «Si» qui disait «SI l'autre personne est sur le point de gagner, bloque la case qui va le faire gagner.»"
       7:
         image: notes/hoc4_7.jpg
-        text: "Amuse-toi à utiliser le bloc « Si »\\_!"
+        text: Amuse-toi à utiliser le bloc « Si »!
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: "Salut, mon nom est Saloni. J'utilise l'informatique pour résoudre des problèmes dans le domaine de la santé et de la médecine. Apprenons-en un peu plus sur le bloc «\\_Si-Sinon\\_». Il ressemble au bloc « Si », mais il contient une partie supplémentaire à la fin qui dit «\\_Sinon\\_»."
+        text: "Salut, mon nom est Saloni. J'utilise l'informatique pour résoudre des problèmes dans le domaine de la santé et de la médecine. Apprenons-en un peu plus sur le bloc «Si-Sinon». Il ressemble au bloc « Si », mais il contient une partie supplémentaire à la fin qui dit «Sinon»."
       2:
         image: notes/hoc5_2.jpg
-        text: "Si je mets un bloc « Avancer » à l'endroit où «\\_Faire\\_» est indiqué, et un bloc «\\_Tourner à gauche\\_» à l’endroit où « Sinon » est indiqué, cela signifie que le zombie choisira entre 2 options. SI il y a un chemin devant, le zombie avancera et AUTREMENT (s’il n’y a pas de chemin devant), le zombie tournera à gauche."
+        text: "Si je mets un bloc « Avancer » à l'endroit où «Faire» est indiqué, et un bloc «Tourner à gauche» à l’endroit où « Sinon » est indiqué, cela signifie que le zombie choisira entre 2 options. SI il y a un chemin devant, le zombie avancera et AUTREMENT (s’il n’y a pas de chemin devant), le zombie tournera à gauche."
       3:
         image: notes/hoc5_3.jpg
         text: "Comme pour le bloc « Si », nous pouvons mettre des blocs « Si-Sinon » à l'intérieur de blocs « Répéter », afin que le zombie continue à se déplacer et le bloc « Si-Sinon » continuera de vérifier s'il y a un endroit où tourner."
       4:
         image: notes/hoc5_4.jpg
-        text: "Maintenant, ramène ces zombies à leur place\\_!"
+        text: Maintenant, ramène ces zombies à leur place!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
         text: "Une instruction « Si-Sinon » est une décision entre deux choses. Nous allons voir comment nous pouvons utiliser une instruction « Si-Sinon » avec notre copain Scrat l'écureuil."
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: "Ce bloc ressemble au bloc « Si », mais il y a une partie supplémentaire en bas qui dit «\\_Sinon\\_». Si je mets un bloc « Avancer » à l’endroit où « Faire » est indiqué, et un bloc « Tourner à gauche » à l’endroit où « Sinon » est indiqué, cela signifie que Scrat l’écureuil avancera s’il y a un chemin devant. S'il n'y a pas de chemin devant, Scrat tournera à gauche."
+        text: "Ce bloc ressemble au bloc « Si », mais il y a une partie supplémentaire en bas qui dit «Sinon». Si je mets un bloc « Avancer » à l’endroit où « Faire » est indiqué, et un bloc « Tourner à gauche » à l’endroit où « Sinon » est indiqué, cela signifie que Scrat l’écureuil avancera s’il y a un chemin devant. S'il n'y a pas de chemin devant, Scrat tournera à gauche."
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: "C'est prendre une décision et faire l'une des deux actions basées sur cette décision. Et tout comme les blocs « Si », tu peux mettre des blocs «\\_Si-Sinon\\_» à l'intérieur de blocs « Répéter »."
+        text: "C'est prendre une décision et faire l'une des deux actions basées sur cette décision. Et tout comme les blocs « Si », tu peux mettre des blocs «Si-Sinon» à l'intérieur de blocs « Répéter »."
       4:
         image: notes/saloni_ifelse_scrat4.jpg
         text: "Maintenant, aidons Scrat l'écureuil à obtenir ce gland !"
@@ -195,14 +195,14 @@ fr:
         text: "Les blocs qui vont à l'intérieur de la définition nous disent ce qu'elle fait. Ainsi cette définition de fonction s'appelle « Remplir 5 » et est composée d'un bloc « Répéter » et d'un bloc « Remplir »."
       4:
         image: notes/stage13_4.jpg
-        text: "La définition se trouve sur l'espace de travail, mais notre fermier n’exécutera pas la fonction tant que nous ne sortirons pas le bloc de fonction «\\_Remplir 5\\_» de la catégorie fonctions."
+        text: "La définition se trouve sur l'espace de travail, mais notre fermier n’exécutera pas la fonction tant que nous ne sortirons pas le bloc de fonction «Remplir 5» de la catégorie fonctions."
       5:
         image: notes/stage13_5.jpg
-        text: "Amusons-nous avec les fonctions\\_! "
+        text: Amusons-nous avec les fonctions!
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: "Salut, je suis Makinde ! Découvrons le bloc «\\_Tant que\\_». "
+        text: 'Salut, je suis Makinde ! Découvrons le bloc «Tant que». '
       2:
         image: notes/stage9_6.jpg
         text: Le bloc « Tant que » fera tout ce que tu mets dedans TANT QUE la condition énoncée au-dessus reste VRAIE.
@@ -215,10 +215,10 @@ fr:
         text: "Salut, je suis Trina, et je travaille pour Pixar. J'ai travaillé sur plusieurs films, y compris celui de Shrek."
       2:
         image: notes/stage11_2.jpg
-        text: "Il s'agit de notre nouvelle boucle «\\_Compteur\\_». Cette boucle répète des actions encore et encore, et tu peux modifier légèrement les actions à chaque fois."
+        text: "Il s'agit de notre nouvelle boucle «Compteur». Cette boucle répète des actions encore et encore, et tu peux modifier légèrement les actions à chaque fois."
       3:
         image: notes/stage11_3.jpg
-        text: "Dans cet exemple, notre boucle «\\_Compteur\\_» dit «\\_Compter avec un compteur de 50 à 90 par saut de 10\\_» et à l'intérieur, nous avons notre bloc «\\_Dessiner un carré\\_». Déplace le bloc «\\_Compteur\\_» de la section «\\_Variables\\_» à l'emplacement de «\\_Longueur\\_»."
+        text: "Dans cet exemple, notre boucle «Compteur» dit «Compter avec un compteur de 50 à 90 par saut de 10» et à l'intérieur, nous avons notre bloc «Dessiner un carré». Déplace le bloc «Compteur» de la section «Variables» à l'emplacement de «Longueur»."
       4:
         image: notes/stage11_4.jpg
         text: "Cela signifie que notre artiste va dessiner un carré qui a des côtés de 50 pixels de longueur, puis 10 pixels seront rajoutés, et l’artiste va dessiner un carré avec des côtés de 60 pixels de longueur. Puis il va continuer en ajoutant 10 pixels, et dessiner des carrés jusqu'à ce qu'ils atteignent 90 pixels. Donc nous aurons des carrés aux côtés long de 50, 60, 70, 80 et 90 pixels."
@@ -234,32 +234,32 @@ fr:
         text: Nous pouvons écrire tout ce code à la main, ou bien utiliser une fonction accompagnée de paramètres.
       4:
         image: notes/stage15_4.jpg
-        text: "Pour ce faire, clique sur l'étoile bleue dans la définition de la fonction «\\_Dessiner un triangle\\_». Ensuite, déplace le bloc «\\_Nom d'entrée\\_» vers le bloc «\\_Entrée\\_»."
+        text: "Pour ce faire, clique sur l'étoile bleue dans la définition de la fonction «Dessiner un triangle». Ensuite, déplace le bloc «Nom d'entrée» vers le bloc «Entrée»."
       5:
         image: notes/stage15_5.jpg
-        text: "Ensuite, si tu écris «\\_Longueur\\_» à l'endroit où se trouve le «\\_x\\_» et appuies sur «\\_Entrée\\_», tu vas créer une longueur donnée à ta fonction."
+        text: "Ensuite, si tu écris «Longueur» à l'endroit où se trouve le «x» et appuies sur «Entrée», tu vas créer une longueur donnée à ta fonction."
       6:
         image: notes/stage15_6.jpg
-        text: "Clique ensuite sur l'étoile. Maintenant clique sur la catégorie variables et déplace le bloc «\\_Longueur\\_» dans le bloc « Avancer » de ta définition de fonction. Finalement, déplace le vieux bloc «\\_Nombre\\_» à l'extérieur."
+        text: "Clique ensuite sur l'étoile. Maintenant clique sur la catégorie variables et déplace le bloc «Longueur» dans le bloc « Avancer » de ta définition de fonction. Finalement, déplace le vieux bloc «Nombre» à l'extérieur."
       7:
         image: notes/stage15_7.jpg
-        text: "Pour utiliser ta fonction avec des paramètres, clique sur la catégorie des fonctions et déplace ta fonction «\\_Dessine un triangle avec une longueur\\_» vers l'extérieur."
+        text: "Pour utiliser ta fonction avec des paramètres, clique sur la catégorie des fonctions et déplace ta fonction «Dessine un triangle avec une longueur» vers l'extérieur."
       8:
         image: notes/stage15_8.jpg
         text: Tu peux maintenant utiliser le bloc « Mathématique » pour saisir différents chiffres et dessiner des triangles de différentes tailles.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: "Félicitations ! Félicitations\\_! Avec le dernier puzzle que tu viens de résoudre, tu viens d'écrire un code qui dit à N'IMPORTE QUEL robot comment trouver son chemin dans un labyrinthe sans ramifications ou un tunnel de n'importe quelle longueur, qu'il soit un zombie, un oiseau, un engin spatial ou même une voiture qui se conduit toute seule."
+        text: "Félicitations ! Avec le dernier puzzle que tu viens de résoudre, tu viens d'écrire un code qui dit à N'IMPORTE QUEL robot comment trouver son chemin dans un labyrinthe sans ramifications ou dans un tunnel de n'importe quelle longueur, que ce soit un zombie, un oiseau, un engin spatial ou même une voiture qui se conduit toute seule."
       2:
         image: notes/hoc6_2.jpg
-        text: "Les concepts de base que tu as utilisés sont au cœur de chaque programme ou application que tu essaieras.  Nous avons découvert les boucles «\\_Répéter\\_», les instructions «\\_Répéter jusqu'à\\_», les instructions « Si », et les instructions « Si-Sinon »."
+        text: "Les concepts de base que tu as utilisés sont au cœur de chaque programme ou application que tu essaieras.  Nous avons découvert les boucles «Répéter», les instructions «Répéter jusqu'à», les instructions « Si », et les instructions « Si-Sinon »."
       3:
         image: notes/hoc6_3.jpg
         text: "Si tu as aimé ta première heure du code, alors consulte le site Web code.org pour poursuivre ton apprentissage de l’informatique ! Lorsque tu auras terminé notre cours de 20 heures, tu maîtriseras les bases de la programmation, et tu pourras commencer à apprendre comment écrire des applications pour téléphones, des instructions pour un robot, des jeux... C'est toi qui choisis."
       4:
         image: notes/hoc6_4.jpg
-        text: "La technologie change tout ce que nous faisons, peu importe qu'on soit jeune ou moins jeune\\_: programmer est amusant, c'est un processus créatif, et n'importe qui peut apprendre à le faire !"
+        text: "La technologie change tout ce que nous faisons, peu importe qu'on soit jeune ou moins jeune: programmer est amusant, c'est un processus créatif, et n'importe qui peut apprendre à le faire !"
     20_wrapup:
       1:
         image: notes/bird.png
@@ -288,10 +288,10 @@ fr:
         text: "La zone blanche à droite est l'espace de travail, et c'est ici que nous allons construire notre programme. Pour te déplacer autour de la surface de glace, tu utiliseras le bloc « Avancer »."
       8:
         image: notes/frozen1_8.jpg
-        text: "Ici, le bloc « Avancer » dit: « Avancer par 100 pixels ». Lorsque nous appuyons sur « Exécuter\\_», que se passe-t-il ? Elsa avance d’un certain montant de pixels sur l'écran, 100 pixels en fait ! Les pixels sont en réalité de tous petits carrés sur ton écran."
+        text: "Ici, le bloc « Avancer » dit: « Avancer par 100 pixels ». Lorsque nous appuyons sur « Exécuter», que se passe-t-il ? Elsa avance d’un certain montant de pixels sur l'écran, 100 pixels en fait ! Les pixels sont en réalité de tous petits carrés sur ton écran."
       9:
         image: notes/frozen1_9.jpg
-        text: "L'autre bloc que nous avons dans ce puzzle dit « Tourner à droite de 90 degrés. » Et lorsque nous utilisons ce bloc «\\_Tourner à droite\\_», cela fait tourner Elsa un certain nombre de degrés. Tu peux jouer avec ces blocs pour faire tourner Elsa comme tu veux. L'angle est mesuré à partir du chemin devant Elsa. Ainsi, c’est un virage à 90 degrés. Et c’est un virage à 120 degrés."
+        text: "L'autre bloc que nous avons dans ce puzzle dit « Tourner à droite de 90 degrés. » Et lorsque nous utilisons ce bloc «Tourner à droite», cela fait tourner Elsa un certain nombre de degrés. Tu peux jouer avec ces blocs pour faire tourner Elsa comme tu veux. L'angle est mesuré à partir du chemin devant Elsa. Ainsi, c’est un virage à 90 degrés. Et c’est un virage à 120 degrés."
       10:
         image: notes/frozen1_10.jpg
         text: "N'oublie pas, tu peux changer le nombre de pixels et de degrés en cliquant sur les flèches qui se trouvent à leurs côtés."
@@ -307,7 +307,7 @@ fr:
         text: "Tous les blocs de code que tu places à l'intérieur du bloc « Répéter » seront répétés en séquence, autant de fois que tu le souhaites."
       4:
         image: notes/frozen2_4.jpg
-        text: "Pour dessiner un carré, tu peux utiliser le bloc « Avancer » et «Tourner à droite\\_» 4 fois. Mais le plus simple consiste à indiquer à l'ordinateur d’« Avancer » et de «\\_Tourner à droite de 90 degrés\\_» une fois, et de lui dire de répéter cette paire d'actions 4 fois. Pour ce faire, tu dois mettre les blocs «\\_Avancer\\_» et «\\_Tourner à droite\\_» à l'intérieur d'un bloc « Répéter »."
+        text: "Pour dessiner un carré, tu peux utiliser le bloc « Avancer » et «Tourner à droite» 4 fois. Mais le plus simple consiste à indiquer à l'ordinateur d’« Avancer » et de «Tourner à droite de 90 degrés» une fois, et de lui dire de répéter cette paire d'actions 4 fois. Pour ce faire, tu dois mettre les blocs «Avancer» et «Tourner à droite» à l'intérieur d'un bloc « Répéter »."
       5:
         image: notes/frozen2_5.jpg
         text: "Souviens-toi, tu peux changer le nombre dans le bloc « Répéter » en ce que tu veux, et cela va répéter ce qu’il y a à l'intérieur du bloc ce nombre de fois."
@@ -345,10 +345,10 @@ fr:
         text: "La zone centrale est la boîte à outils et chacun de ces blocs est un morceau de code. La zone blanche à droite est l'espace de travail et c'est ici que nous allons construire notre programme."
       4:
         image: notes/playlab_intro_4.png
-        text: "Pour commencer, tu devras lier tes blocs au bloc orange «\\_Lors du lancement\\_». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies la ligne jaune, et alors ils s'emboîteront."
+        text: "Pour commencer, tu devras lier tes blocs au bloc orange «Lors du lancement». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies la ligne jaune, et alors ils s'emboîteront."
       5:
         image: notes/playlab_intro_5.png
-        text: "Dans le premier puzzle, notre acteur est un pingouin et on va lui faire dire « Bonjour\\_! » en faisant glisser le bloc «\\_Dire\\_» dehors, en le liant au bloc « Lors du lancement » et en écrivant «\\_Bonjour\\_». Nous pouvons également faire bouger le pingouin en utilisant les blocs « Déplacer vers la droite » et « Déplacer vers la gauche ». Lorsque tes blocs sont en place, clique sur le bouton «\\_Exécuter\\_» pour voir ce que tu as programmé."
+        text: Dans le premier puzzle, notre acteur est un pingouin et on va lui faire dire « Bonjour! » en faisant glisser le bloc «Dire» dehors, en le liant au bloc « Lors du lancement » et en écrivant «Bonjour». Nous pouvons également faire bouger le pingouin en utilisant les blocs « Déplacer vers la droite » et « Déplacer vers la gauche ». Lorsque tes blocs sont en place, clique sur le bouton «Exécuter» pour voir ce que tu as programmé.
       6:
         image: notes/playlab_intro_6.png
         text: Commençons, et à la fin tu seras capable de créer ton propre jeu avec toutes sortes de joueurs qui peuvent interagir, devenir contents ou tristes, marquer des points, ou jeter des boules de feu, ou même se faire disparaître. Tout dépend de toi et du jeu que tu souhaites faire.
@@ -358,13 +358,13 @@ fr:
         text: Maintenant, nous allons apprendre quelque chose que tous les programmeurs de jeux utilisent tous les jours. On les appelle des événements. Un événement dit à ton programme d’écouter lorsque quelque chose se passe. Lorsque cette chose se passe, il effectue une action.
       2:
         image: notes/playlab_events_2.png
-        text: "Quelques exemples d'évènements sont\\_: l'écoute des clics de souris, l’activation d’une touche fléchée du clavier ou un tapotement de l'écran."
+        text: "Quelques exemples d'évènements sont: l'écoute des clics de souris, l’activation d’une touche fléchée du clavier ou un tapotement de l'écran."
       3:
         image: notes/playlab_events_3.png
-        text: "Ici, nous allons faire en sorte que le robot venu de l’espace salue les terriens lorsqu'un joueur clique sur lui. Nous allons utiliser le bloc « Quand clic » et lui attacher le bloc «\\_Dire\\_». Lorsque le joueur clique sur le robot venu de l'espace, tout ce qui est attaché à l’événement « Quand clic » sera effectué. Que dit ton extra-terrestre ?"
+        text: "Ici, nous allons faire en sorte que le robot venu de l’espace salue les terriens lorsqu'un joueur clique sur lui. Nous allons utiliser le bloc « Quand clic » et lui attacher le bloc «Dire». Lorsque le joueur clique sur le robot venu de l'espace, tout ce qui est attaché à l’événement « Quand clic » sera effectué. Que dit ton extra-terrestre ?"
       4:
         image: notes/playlab_events_4.png
-        text: "Il y a aussi des blocs «\\_Quand flèche\\_». Si tu lies les blocs «\\_Déplacer\\_» à ces derniers, tu peux commencer à déplacer tes acteurs vers le haut, vers le bas, vers la gauche ou vers la droite. Étape par étape, ton jeu devient plus interactif."
+        text: Il y a aussi des blocs «Quand flèche». Si tu lies les blocs «Déplacer» à ces derniers, tu peux commencer à déplacer tes acteurs vers le haut, vers le bas, vers la gauche ou vers la droite. Étape par étape, ton jeu devient plus interactif.
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
@@ -385,7 +385,7 @@ fr:
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: "Les abeilles ne sont-elles pas super cool ? Dans cette prochaine série de puzzles, ton objectif est d'aider l'abeille à aller jusqu’aux fleurs, recueillir le nectar des fleurs et voler jusqu’au nid d'abeilles pour faire du miel. Tu devras utiliser les blocs « Recueillir du nectar » et «\\_Faire du miel\\_» pour cet exercice."
+        text: "Les abeilles ne sont-elles pas super cool ? Dans cette prochaine série de puzzles, ton objectif est d'aider l'abeille à aller jusqu’aux fleurs, recueillir le nectar des fleurs et voler jusqu’au nid d'abeilles pour faire du miel. Tu devras utiliser les blocs « Recueillir du nectar » et «Faire du miel» pour cet exercice."
       2:
         image: notes/C1_bee_level_intro_2.png
         text: "Chaque fleur possède un nombre différent de nectars : 1, 2, 3 ou plus. Nous savons combien de nectars il y a dans les fleurs rouges, grâce au petit nombre dans le coin. Alors n’oublie pas de prendre tout le nectar de la fleur avant d’avancer. De même, chaque nid d'abeilles ne peut contenir que cette quantité de miel : 1, 2, 3 ou plus. Alors assure-toi de faire autant de miel que ce que peut contenir le nid d'abeilles."
@@ -414,10 +414,10 @@ fr:
         text: Des choses se produisent auxquelles nous répondons tous. Nous avons faim, et donc, nous allons au réfrigérateur. Nous entendons le facteur et il met notre courrier dans la boîte aux lettres, et ensuite nous allons chercher notre courrier. Ce sont des événements, tout comme appuyer sur un bouton ou déplacer un joystick. Ce sont des choses qui se produisent et nous poussent à faire quelque chose, à agir.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: "Dans les jeux vidéo, il y a un événement appelé «\\_Mise à jour\\_» et il se produit 30 ou 60 fois par seconde. Pour les programmeurs de jeux vidéo, c'est presque plus important en tant qu’événement que les boutons ou le joystick."
+        text: "Dans les jeux vidéo, il y a un événement appelé «Mise à jour» et il se produit 30 ou 60 fois par seconde. Pour les programmeurs de jeux vidéo, c'est presque plus important en tant qu’événement que les boutons ou le joystick."
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: "Le principal événement que nous surveillons est ce moment de la «\\_Mise à jour\\_». Et ensuite nous vérifions le joystick. Et donc nous disons «\\_Oh, quelqu'un a appuyé sur le bouton de ce cadre ? Oui ou non\\_?\\_» Sans événements, le joueur ne pourrait pas bouger, tu ne pourrais pas sauter, tu ne serais pas en mesure de contrôler ce qui se passe. Le jeu vidéo ne serait pas en mesure d'animer quoi que ce soit."
+        text: "Le principal événement que nous surveillons est ce moment de la «Mise à jour». Et ensuite nous vérifions le joystick. Et donc nous disons «Oh, quelqu'un a appuyé sur le bouton de ce cadre ? Oui ou non?» Sans événements, le joueur ne pourrait pas bouger, tu ne pourrais pas sauter, tu ne serais pas en mesure de contrôler ce qui se passe. Le jeu vidéo ne serait pas en mesure d'animer quoi que ce soit."
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
@@ -440,7 +440,7 @@ fr:
         text: Bonjour, mon nom est Miral Kotb, et je suis le créateur de Iluminate. Dans mon travail, il y a quelque chose que nous utilisons dans les danses et la programmation des costumes de lumière. Et ce sont des boucles ! Les boucles répètent une action encore et encore.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: "Quand tu répètes quelque chose plusieurs fois, comme par exemple les mouvements pour que le cerceau continue de tourner, tu fais ce qui s'appelle une «\\_Boucle\\_». Ceci est une boucle. Ceci est une boucle. Et ceci est une boucle."
+        text: "Quand tu répètes quelque chose plusieurs fois, comme par exemple les mouvements pour que le cerceau continue de tourner, tu fais ce qui s'appelle une «Boucle». Ceci est une boucle. Ceci est une boucle. Et ceci est une boucle."
       3:
         image: notes/C1_getting_loopy_3.png
         text: "Aujourd'hui, nous allons organiser une soirée dansante. Nous allons utiliser les boucles avec une nouvelle danse. L'itération. Nous allons découvrir les boucles à l'aide de la danse. Tu vas apprendre quelques pas faciles et les répéter encore et encore pour terminer la danse."
@@ -475,10 +475,10 @@ fr:
         text: "J’ai traversé chaque partie étape par étape et réalisé où était mon erreur. Je ne mettais pas mes mains correctement sur la poutre. Alors j'ai essayé un autre salto arrière sur la poutre avec ma nouvelle position des mains et j’ai réussi. J'étais vraiment content d’avoir débogué mon salto arrière."
       3:
         image: notes/C1_maze_debugging_3.png
-        text: "Pour découvrir le débogage, nous commençons par un ensemble de blocs qui sont déjà en place. Tu remarqueras que ces blocs ne t’emmènent pas vers ton objectif. Nous avons besoin de déboguer la solution et de la réparer. Qu’est-ce qui s’est mal passé\\_? Tu remarqueras que tu devais aller vers l’ouest un bloc de plus."
+        text: Pour découvrir le débogage, nous commençons par un ensemble de blocs qui sont déjà en place. Tu remarqueras que ces blocs ne t’emmènent pas vers ton objectif. Nous avons besoin de déboguer la solution et de la réparer. Qu’est-ce qui s’est mal passé? Tu remarqueras que tu devais aller vers l’ouest un bloc de plus.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: "Réparons cela en ajoutant un autre bloc «\\_Vers l'ouest\\_» et en appuyant sur « Exécuter » pour voir si tu as réussi. Oui, tu as réussi !"
+        text: "Réparons cela en ajoutant un autre bloc «Vers l'ouest» et en appuyant sur « Exécuter » pour voir si tu as réussi. Oui, tu as réussi !"
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
@@ -495,11 +495,11 @@ fr:
         text: Par exemple, si je voulais souhaiter à tout le monde sur Facebook un Joyeux Anniversaire en leur envoyant un e-mail, ça pourrait me prendre plus d’un siècle pour écrire tous ces e-mails personnels. Mais avec seulement quelques lignes de code, je pourrais demander à un système d’envoyer un e-mail à tout le monde sur Facebook en leur souhaitant un Joyeux Anniversaire.
       3:
         image: notes/C1_maze_loops_3.png
-        text: "Pour que l'oiseau arrive au cochon dans ce niveau... plutôt que de faire glisser trois blocs «\\_Nord\\_» vers l'espace de travail, tu utiliseras le bloc « Répéter ». Fais glisser le bloc « Répéter » sur l'espace de travail et entre le chiffre 3. Ensuite, fais glisser le bloc «\\_Déplacer vers le nord\\_» dans le bloc « Répéter » et clique sur «\\_Exécuter\\_» pour voir si tu as réussi. Félicitations, tu as réussi !"
+        text: "Pour que l'oiseau arrive au cochon dans ce niveau... plutôt que de faire glisser trois blocs «Nord» vers l'espace de travail, tu utiliseras le bloc « Répéter ». Fais glisser le bloc « Répéter » sur l'espace de travail et entre le chiffre 3. Ensuite, fais glisser le bloc «Déplacer vers le nord» dans le bloc « Répéter » et clique sur «Exécuter» pour voir si tu as réussi. Félicitations, tu as réussi !"
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: "Cette leçon s’appelle «\\_Déplace-le, déplace-le\\_». Ensemble, nous allons écrire un programme pour déplacer nos amis depuis la rose des vents jusqu'au smiley."
+        text: "Cette leçon s’appelle «Déplace-le, déplace-le». Ensemble, nous allons écrire un programme pour déplacer nos amis depuis la rose des vents jusqu'au smiley."
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
         text: Mais le smiley regarde vers le bas et une seule personne sait comment y aller. Démarrons ce programme.
@@ -509,7 +509,7 @@ fr:
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: "Mon nom est Jeremiah. Salut\\_! J'ai sept ans. J'aime jouer sur l'ordinateur de ma mère mais je dois toujours avoir la permission d’abord. «\\_Maman, puis-je utiliser ton ordinateur ? Bien sûr mon chéri !\\_»"
+        text: "Mon nom est Jeremiah. Salut! J'ai sept ans. J'aime jouer sur l'ordinateur de ma mère mais je dois toujours avoir la permission d’abord. «Maman, puis-je utiliser ton ordinateur ? Bien sûr mon chéri !»"
       2:
         image: notes/C1_going_places_safely_2.png
         text: "J'aime ordinateur de ma mère parce que je peux naviguer sur Internet. L'Internet est un peu comme ton voisinage. Tu peux visiter des endroits cool, tu peux parler à la famille et aux amis et tu peux apprendre plein de nouvelles choses."
@@ -518,7 +518,7 @@ fr:
         text: "Hier, j'ai visité un zoo qui est près de ma maison. J'ai vu un bébé zèbre. J'ai pris sa photo et changé la couleur de ses rayures, puis je lui ai ajouté un chapeau et je l’ai ajouté à ma collection d'animaux farfelus. Génial ! Plus tard, je suis allé à un endroit très éloigné. J’ai visité le Kenya. C'est un pays d'Afrique. On y trouve beaucoup de zèbres."
       4:
         image: notes/C1_going_places_safely_4.png
-        text: "Parfois sur Internet, je parle à des gens que je connais, comme ma grand-mère qui vit dans un autre État. Bonjour mamie ! Elle me fait des cookies qu’elle m'enverra pour mon anniversaire. «\\_Délicieux, je voudrais qu'Internet puisse transmettre les odeurs\\_!\\_» Je peux parler à différentes personnes sur Internet, comme mon cousin, mais je parle seulement aux personnes que je connais."
+        text: "Parfois sur Internet, je parle à des gens que je connais, comme ma grand-mère qui vit dans un autre État. Bonjour mamie ! Elle me fait des cookies qu’elle m'enverra pour mon anniversaire. «Délicieux, je voudrais qu'Internet puisse transmettre les odeurs!» Je peux parler à différentes personnes sur Internet, comme mon cousin, mais je parle seulement aux personnes que je connais."
       5:
         image: notes/C1_going_places_safely_5.png
         text: "Ce qui me plaît le plus sur Internet, c'est que je peux jouer à des jeux amusants. But ! J'aime aussi dessiner et créer de nouvelles choses et les partager avec mes amis. Cool ! Parfois, je consulte des sites Web où j'apprends de nouvelles choses, mais je m'en tiens toujours aux sites Web qui sont bien pour moi. Wow, des dinosaures !"
@@ -563,13 +563,13 @@ fr:
         text: "Il est temps de faire preuve de créativité et d'utiliser tes compétences en codage pour raconter une histoire. Ton histoire aura des acteurs et tu pourras les faire parler et les faire interagir. Commence à réfléchir à quelle sorte d'histoire tu veux raconter."
       2:
         image: notes/C1_playlab_storytelling_2.png
-        text: "Le chat a toujours eu peur du chien et que se passe-t-il si le chat comprend que le chien essaie d'être gentil ? Le bloc « Lors du lancement » commence tout. Le bloc «\\_Déplacer\\_» déplacera ton personnage et le bloc «\\_Dire\\_» fera dire à ton personnage tout ce que tu écris."
+        text: "Le chat a toujours eu peur du chien et que se passe-t-il si le chat comprend que le chien essaie d'être gentil ? Le bloc « Lors du lancement » commence tout. Le bloc «Déplacer» déplacera ton personnage et le bloc «Dire» fera dire à ton personnage tout ce que tu écris."
       3:
         image: notes/C1_playlab_storytelling_3.png
         text: Ceci est le bloc « Quand les acteurs se cognent » que tu peux connecter aux autres blocs.
       4:
         image: notes/C1_playlab_storytelling_4.png
-        text: "J’indiquais au chien de venir dire «\\_Salut\\_», mais alors le chat a eu peur et donc s'est enfui. «\\_Ah\\_!\\_» si on avait plus de temps, on aurait pu inventer une fin heureuse. La fin\\_!"
+        text: "J’indiquais au chien de venir dire «Salut», mais alors le chat a eu peur et donc s'est enfui. «Ah!» si on avait plus de temps, on aurait pu inventer une fin heureuse. La fin!"
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
@@ -589,10 +589,10 @@ fr:
         text: "Dans cet exemple, ton but est de déplacer l'oiseau pour qu’il attrape le cochon. Maintenant, nous allons pouvoir utiliser le bloc « Répéter » afin de pouvoir faire ça très facilement. Tu peux soit donner à l'ordinateur une commande « Avancer » cinq fois afin de faire avancer l'oiseau d'un pas à chaque fois vers le cochon, ou tu peux juste demander à l'ordinateur d'avancer une seule fois, puis de lui demander de répéter l’action cinq fois, cela donnera le même résultat."
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: "Pour ce faire, tu fais glisser ta commande « Avancer » et puis tu la mets à l'intérieur du bloc «\\_Répéter\\_». Et puis tu peux cliquer dessus et lui dire combien de fois répéter le bloc pour lui dire de combien de pas tu veux l’avancer."
+        text: "Pour ce faire, tu fais glisser ta commande « Avancer » et puis tu la mets à l'intérieur du bloc «Répéter». Et puis tu peux cliquer dessus et lui dire combien de fois répéter le bloc pour lui dire de combien de pas tu veux l’avancer."
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: "Encore une chose, tu peux mettre autant de commandes que tu veux à l'intérieur du bloc « Répéter ». Ainsi dans cet exemple, tu lui dis d’avancer et de tourner à gauche, ce qu’il fera cinq fois. Amuse-toi bien\\_!"
+        text: "Encore une chose, tu peux mettre autant de commandes que tu veux à l'intérieur du bloc « Répéter ». Ainsi dans cet exemple, tu lui dis d’avancer et de tourner à gauche, ce qu’il fera cinq fois. Amuse-toi bien!"
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
@@ -625,7 +625,7 @@ fr:
         text: "C'est la leçon des bracelets binaires. Nous allons coder nos initiales sur un bracelet que nous pourrons porter et montrer à tous nos amis !"
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: "Le binaire est une manière de représenter des informations à l'aide de seulement deux options. Parfois les gens s’imaginent que ce sont simplement des «\\_1\\_» et des «\\_0\\_». Mais tu peux représenter le binaire avec des combinaisons  comme allumé ou éteint, haut et bas, dedans et dehors ou vraiment tout ensemble de notions contraires."
+        text: "Le binaire est une manière de représenter des informations à l'aide de seulement deux options. Parfois les gens s’imaginent que ce sont simplement des «1» et des «0». Mais tu peux représenter le binaire avec des combinaisons  comme allumé ou éteint, haut et bas, dedans et dehors ou vraiment tout ensemble de notions contraires."
       3:
         image: notes/C2_binary_bracelets_3.png
         text: Salut, je suis Orion et je programme des robots ici à Play-im. Tous les ordinateurs et les cerveaux de robots à leur niveau le plus fondamental sont de petites portes électroniques. Lorsque la porte est ouverte, l’électricité peut circuler à l’intérieur, et lorsqu’elle est fermée, l’électricité ne peut pas passer.
@@ -641,7 +641,7 @@ fr:
         text: "Je veux marcher vers le parc, mais tout d'abord, je dois décider si je dois prendre un parapluie ou non. Alors, je regarde par la fenêtre. Si c’est nuageux, je vais prendre mon parapluie. Sinon, je vais prendre des lunettes de soleil. Je pense que je ferais mieux de prendre le parapluie. Ce que je vois et entends détermine ce que j’emmène au parc."
       3:
         image: notes/C2_conditionals_with_cards_3.png
-        text: "Les instructions conditionnelles sont également utilisées dans les jeux. Aujourd'hui, nous allons nous entraîner aux instructions conditionnelles avec un jeu de cartes. Dans ce jeu, la carte que je tire détermine ce que mes amis vont faire. Si je tire un sept, tout le monde applaudit. Sinon, tout le monde dit «\\_Ahhh\\_». Essayons ! «\\_Ahhh\\_» « Santé »"
+        text: "Les instructions conditionnelles sont également utilisées dans les jeux. Aujourd'hui, nous allons nous entraîner aux instructions conditionnelles avec un jeu de cartes. Dans ce jeu, la carte que je tire détermine ce que mes amis vont faire. Si je tire un sept, tout le monde applaudit. Sinon, tout le monde dit «Ahhh». Essayons ! «Ahhh» « Santé »"
       4:
         image: notes/C2_conditionals_with_cards_4.png
         text: "Je parie que tu peux faire des jeux qui sont encore plus amusants avec des instructions conditionnelles. Faisons un essai ! Les instructions conditionnelles sont ce qui fait que les ordinateurs semblent intelligents. Un programme informatique qui comprend des instructions conditionnelles peut réagir à l'utilisateur et modifier sa façon d'agir."
@@ -674,7 +674,7 @@ fr:
         text: 'Sur ta tête tu tiens ton chapeau et ton intelligence te dira où tu en es et de penser au zoo et de dire bonjour à celui-ci et celui-là ! Utilise ta tête lorsque tu es en ligne afin de conserver le bien en toi et de savoir comment être en sécurité - comment donner à ta vie un peu d’espace privé. De la tête jusqu’aux pieds, fais une pause, et penses-y. Des pieds jusqu’au nez, fais une pause et pense en ligne !'
       2:
         image: notes/C2_digital_footprint_2.png
-        text: "Utilise ton cœur pour croître et grandir et pour te donner bonne mine et pour faire une carte de St-Valentin, et dire à quelqu'un « Je serai à toi !\\_» Utilise ton cœur quand tu es en ligne, ressens ce qui est juste et sois toujours aimable et montre du respect à tes amis, pour être juste et agréable sur Internet. De la tête jusqu’aux pieds, fais une pause, et penses-y. Des pieds jusqu’au nez, fais une pause et pense en ligne !"
+        text: "Utilise ton cœur pour croître et grandir et pour te donner bonne mine et pour faire une carte de St-Valentin, et dire à quelqu'un « Je serai à toi !» Utilise ton cœur quand tu es en ligne, ressens ce qui est juste et sois toujours aimable et montre du respect à tes amis, pour être juste et agréable sur Internet. De la tête jusqu’aux pieds, fais une pause, et penses-y. Des pieds jusqu’au nez, fais une pause et pense en ligne !"
       3:
         image: notes/C2_digital_footprint_3.png
         text: "Utilise tes bras pour câliner ton animal de compagnie, pour empêcher tes vêtements de se mouiller et pour porter tes manches préférées et te permettre de voler et de rêver. Utilise tes bras lorsque tu es en ligne, pour prendre le temps de faire une pause et d'équilibrer le temps et de laisser la technologie derrière toi et de te retrouver en train de grimper à un arbre. De la tête jusqu’aux pieds, fais une pause, et penses-y. Des pieds jusqu’au nez, fais une pause et pense en ligne !"
@@ -694,7 +694,7 @@ fr:
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: "Cette leçon s’appelle «\\_Programmation avec Papier millimétré\\_» et elle aborde les algorithmes. Aujourd'hui, nous allons apprendre à écrire des programmes qui montrent comment recréer de simples images en noir et blanc, uniquement à l’aide de flèches dessinées à la main."
+        text: "Cette leçon s’appelle «Programmation avec Papier millimétré» et elle aborde les algorithmes. Aujourd'hui, nous allons apprendre à écrire des programmes qui montrent comment recréer de simples images en noir et blanc, uniquement à l’aide de flèches dessinées à la main."
       2:
         image: notes/C2_graph_paper_2.png
         text: "Un algorithme est une liste d'instructions qui sert à mener à bien une tâche. Nous allons suivre cet ensemble d'instructions destinées à faire le bol. Les algorithmes sont vraiment utiles quand tu as besoin de quelqu'un d'autre pour comprendre comment faire quelque chose."
@@ -710,7 +710,7 @@ fr:
         text: Ici nous allons utiliser le bloc « Répéter » pour nous aider à sauter des étapes lorsque nous programmons notre artiste. Nous avons déjà quelques blocs dehors sur notre scène, mais ils sont juste là pour nous aider à démarrer.
       2:
         image: notes/C2_artist_loops_2.png
-        text: "Pour faire boucler 4 fois ces blocs afin de dessiner le carré complet, nous devons juste faire glisser le bloc «\\_Répéter\\_» et mettre les blocs «\\_Avancer\\_» et «\\_Tourner à droite\\_» à l'intérieur du bloc «\\_Répéter\\_». Lorsque nous appuyons sur « Exécuter », l'artiste répète ces étapes quatre fois pour compléter le carré."
+        text: "Pour faire boucler 4 fois ces blocs afin de dessiner le carré complet, nous devons juste faire glisser le bloc «Répéter» et mettre les blocs «Avancer» et «Tourner à droite» à l'intérieur du bloc «Répéter». Lorsque nous appuyons sur « Exécuter », l'artiste répète ces étapes quatre fois pour compléter le carré."
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
@@ -727,13 +727,13 @@ fr:
         text: "Blockly est divisé en trois grandes parties. Sur la gauche, il y a un labyrinthe d’oiseaux où ton programme s'exécutera. Les instructions pour chaque niveau sont écrites sous le labyrinthe. La zone du milieu est la boîte à outils, et chacun de ces blocs est une action que l’oiseau peut comprendre. La zone blanche à droite est l'espace de travail et c'est ici que nous allons construire notre programme."
       3:
         image: notes/C2_maze_intro_3.png
-        text: "Si je fais glisser le bloc «\\_Déplacer\\_» dans notre espace de travail et appuie sur « Exécuter », que se passe-t-il ? L'oiseau avance d’une case sur la grille. Et si je veux que l’oiseau fasse quelque chose après avoir avancé d’une case ? Je peux ajouter un autre bloc à notre programme."
+        text: "Si je fais glisser le bloc «Déplacer» dans notre espace de travail et appuie sur « Exécuter », que se passe-t-il ? L'oiseau avance d’une case sur la grille. Et si je veux que l’oiseau fasse quelque chose après avoir avancé d’une case ? Je peux ajouter un autre bloc à notre programme."
       4:
         image: notes/C2_maze_intro_4.png
-        text: "Je vais choisir le bloc «\\_Tourner à droite\\_» et je vais le glisser sous mon bloc «\\_Déplacer\\_» jusqu'à ce que la flèche jaune apparaisse. Puis je le dépose et les deux blocs s’emboîteront. Lorsque j'appuie sur « Exécuter » à nouveau, l'oiseau effectue les commandes qui sont empilées de haut en bas sur notre espace de travail."
+        text: "Je vais choisir le bloc «Tourner à droite» et je vais le glisser sous mon bloc «Déplacer» jusqu'à ce que la flèche jaune apparaisse. Puis je le dépose et les deux blocs s’emboîteront. Lorsque j'appuie sur « Exécuter » à nouveau, l'oiseau effectue les commandes qui sont empilées de haut en bas sur notre espace de travail."
       5:
         image: notes/C2_maze_intro_5.png
-        text: "Si jamais tu veux supprimer un bloc, il suffit de le retirer de la pile et de le faire glisser dans la corbeille. Après avoir cliqué sur « Exécuter », tu peux toujours cliquer sur le bouton «\\_Réinitialiser\\_» pour faire revenir l’oiseau au départ. Maintenant attrapons ces cochons !"
+        text: Si jamais tu veux supprimer un bloc, il suffit de le retirer de la pile et de le faire glisser dans la corbeille. Après avoir cliqué sur « Exécuter », tu peux toujours cliquer sur le bouton «Réinitialiser» pour faire revenir l’oiseau au départ. Maintenant attrapons ces cochons !
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
@@ -779,7 +779,7 @@ fr:
         text: "Dans cet exemple, ton but va être de déplacer l'oiseau pour attraper le cochon.  Maintenant, nous utiliserons le bloc « Répéter » afin de pouvoir faire ça très facilement. Tu peux le faire en donnant cinq fois à l'ordinateur une commande « Avancer » afin de faire avancer l’oiseau d’un pas à chaque fois vers le cochon."
       4:
         image: notes/C2_zuck_repeat_loop_4.png
-        text: "Ou tu peux juste dire à l'ordinateur d’«\\_Avancer\\_» une fois et puis lui dire de le « Répéter » 5 fois, et il fera la même chose. Pour faire cela, tu dois déplacer la commande « Avancer » et la mettre à l'intérieur du bloc « Répéter ». Alors, tu pourras cliquer dessus pour indiquer au bloc « Répéter » de combien de pas tu veux avancer."
+        text: "Ou tu peux juste dire à l'ordinateur d’«Avancer» une fois et puis lui dire de le « Répéter » 5 fois, et il fera la même chose. Pour faire cela, tu dois déplacer la commande « Avancer » et la mettre à l'intérieur du bloc « Répéter ». Alors, tu pourras cliquer dessus pour indiquer au bloc « Répéter » de combien de pas tu veux avancer."
       5:
         image: notes/C2_zuck_repeat_loop_5.png
         text: "Maintenant, encore une chose, tu peux mettre autant de commandes que tu veux à l'intérieur du bloc « Répéter ». Ainsi dans cet exemple, tu lui dis d’avancer et de tourner à gauche, ce qu’il fera cinq fois. Très bien, bon boulot et amuse-toi !"
@@ -789,7 +789,7 @@ fr:
         text: "Une des choses géniales dans la programmation informatique c’est qu'une fois qu'on a appris à un ordinateur comment faire une action, on peut toujours rappeler cette fonction. Tu lui donnes un nom et ensuite tu l’appelles. C'est vraiment comme prolonger le langage."
       2:
         image: notes/C3_artist_functions_2.png
-        text: "Dans le programme que nous avons construit, nous avons appris comment dessiner un carré en avançant et en tournant quatre fois. Nous pouvons prendre cette fonction et lui donner un nom comme «\\_Dessiner un carré\\_» pour que chaque fois qu’on en a envie, on puisse simplement dire « Dessiner un carré », et l’ordinateur appellera cette fonction, ce code. Il le fera pour nous. Nous avons ajouté cette notion dans notre langage de programmation."
+        text: Dans le programme que nous avons construit, nous avons appris comment dessiner un carré en avançant et en tournant quatre fois. Nous pouvons prendre cette fonction et lui donner un nom comme «Dessiner un carré» pour que chaque fois qu’on en a envie, on puisse simplement dire « Dessiner un carré », et l’ordinateur appellera cette fonction, ce code. Il le fera pour nous. Nous avons ajouté cette notion dans notre langage de programmation.
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
@@ -812,7 +812,7 @@ fr:
         text: "Quand tu mets une boucle à l'intérieur d'une autre boucle, on appelle ça une boucle imbriquée. Par exemple, ici, nous avons déjà le code pour dessiner un triangle de 100 pixels de côté en utilisant le bloc « Répéter » calé sur trois, une fois pour chaque côté du triangle."
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: "Mais nous voulons dessiner six triangles. Pour faire cela, nous allons prendre cette boucle et la placer dans un autre bloc « Répéter jusqu’à\\_». Plutôt cool\\_!"
+        text: Mais nous voulons dessiner six triangles. Pour faire cela, nous allons prendre cette boucle et la placer dans un autre bloc « Répéter jusqu’à». Plutôt cool!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
@@ -839,13 +839,13 @@ fr:
         text: Un des concepts les plus importants en informatique est la façon de définir de nouvelles commandes, en d’autres mots la façon d’ajouter tes propres mots à un langage informatique. La plupart des langages informatiques possèdent plus ou moins cent mots ou commandes. L’art et la magie sont dans la définition de tes propres nouveaux mots pour ces blocs de construction.
       2:
         image: notes/C3_bee_functions_2.png
-        text: "Nous faisons ça tout le temps en sport. Par exemple, au basket, tu commences par apprendre à dribbler, à tirer en courant et à faire rebondir le ballon. Lorsque tu as appris ces mouvements de base, tu apprends de nouveaux mouvements et tu mets en place ces blocs de construction, comme les techniques de jeux du «\\_pick and roll\\_» ou du «\\_passe et cours\\_». De là, tu peux passer à des jeux plus complexes. Lorsque tu apprends ce jeu et que tu lui donnes un nom, tout le monde dans l'équipe sait comment le faire."
+        text: "Nous faisons ça tout le temps en sport. Par exemple, au basket, tu commences par apprendre à dribbler, à tirer en courant et à faire rebondir le ballon. Lorsque tu as appris ces mouvements de base, tu apprends de nouveaux mouvements et tu mets en place ces blocs de construction, comme les techniques de jeux du «pick and roll» ou du «passe et cours». De là, tu peux passer à des jeux plus complexes. Lorsque tu apprends ce jeu et que tu lui donnes un nom, tout le monde dans l'équipe sait comment le faire."
       3:
         image: notes/C3_bee_functions_3.png
         text: "De même, lorsque tu as appris à un ordinateur comment faire une action une fois en utilisant cette suite de commandes, tu peux donner un nom à cette action pour qu'elle soit facile à répéter ensuite. Quand tu définis ta propre commande et lui donnes un nom, on appelle ça une fonction. Maintenant, nous allons utiliser des fonctions pour aider l'abeille."
       4:
         image: notes/C3_bee_functions_4.png
-        text: "Dans cet exemple, notre fonction s’appelle «\\_Recueillir 2 nectars\\_», ce bloc vert juste là. Nous savons à quoi ressemble « Recueillir 2 nectars » en regardant cette boîte grise qui donne la définition de la fonction. Si nous regardons à l'intérieur, le bloc « Recueillir 2 nectars » va « Recueillir du nectar » et puis recueillir à nouveau du nectar. Regarde toujours ce qui est à l'intérieur de la boîte grise, afin que tu saches ce que ces blocs de fonction verts peuvent faire."
+        text: "Dans cet exemple, notre fonction s’appelle «Recueillir 2 nectars», ce bloc vert juste là. Nous savons à quoi ressemble « Recueillir 2 nectars » en regardant cette boîte grise qui donne la définition de la fonction. Si nous regardons à l'intérieur, le bloc « Recueillir 2 nectars » va « Recueillir du nectar » et puis recueillir à nouveau du nectar. Regarde toujours ce qui est à l'intérieur de la boîte grise, afin que tu saches ce que ces blocs de fonction verts peuvent faire."
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
@@ -859,7 +859,7 @@ fr:
         text: Pour démarrer, nous devons lier les commandes de la palette aux touches fléchées de notre clavier.
       3:
         image: notes/C3_bounce_3.png
-        text: "Nous pouvons le faire en liant le bloc «\\_Quand flèche vers le gauche\\_» au bloc « Déplacer vers la gauche », et le bloc « Quand flèche vers le droite » au bloc « Déplacer vers la droite ». Fais un essai et tu vas programmer ton propre jeu de casse-brique à rebond en moins de deux !"
+        text: Nous pouvons le faire en liant le bloc «Quand flèche vers le gauche» au bloc « Déplacer vers la gauche », et le bloc « Quand flèche vers le droite » au bloc « Déplacer vers la droite ». Fais un essai et tu vas programmer ton propre jeu de casse-brique à rebond en moins de deux !
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
@@ -908,10 +908,10 @@ fr:
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: "Les boucles «\\_Tant que\\_» sont assez similaires à ce que tu fais dans la vie quotidienne. Imagine que tu laves ta voiture, tu vas frotter jusqu'à ce qu'elle soit propre. Tant qu’elle n'est pas propre, continue à frotter. Tu évalues ces choses tout le temps."
+        text: "Les boucles «Tant que» sont assez similaires à ce que tu fais dans la vie quotidienne. Imagine que tu laves ta voiture, tu vas frotter jusqu'à ce qu'elle soit propre. Tant qu’elle n'est pas propre, continue à frotter. Tu évalues ces choses tout le temps."
       2:
         image: notes/C3_farmer_while_2.png
-        text: "Nous avons quelque chose de nouveau pour dépanner ton fermier. Cela s’appelle un bloc «\\_Tant que\\_». C'est assez simple en fait. Tant qu’une instruction indiquée en haut est vraie, fais quelque chose. Par exemple, tant qu’il y a un tas de foin, déplace une fourche de foin. Vas-y, et fais un essai avec ton fermier."
+        text: "Nous avons quelque chose de nouveau pour dépanner ton fermier. Cela s’appelle un bloc «Tant que». C'est assez simple en fait. Tant qu’une instruction indiquée en haut est vraie, fais quelque chose. Par exemple, tant qu’il y a un tas de foin, déplace une fourche de foin. Vas-y, et fais un essai avec ton fermier."
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
@@ -940,30 +940,30 @@ fr:
         text: "Contrairement à la poste, la première chose qui se passe lorsque j’envoie mon message, c’est qu'Internet décompose le message en parties plus petites afin qu’il puisse être envoyé plus facilement. Ces petites parties sont appelées des paquets. Chaque paquet du message est livré à destination, un par un. Ces paquets sont tous remis dans le bon ordre afin que le destinataire puisse lire le message correctement. Bien sûr, il y a beaucoup plus de choses à apprendre sur le fonctionnement d'Internet, mais c’est un très bon départ. Tu es en passe de devenir un utilisateur chevronné d’Internet ! N'oublie pas de raconter à ta famille et à tes amis ce que tu as appris !"
       5:
         image: notes/C3_internet_5.png
-        text: "Mon nom est Amanda Camp et je suis ingénieur logiciel chez Google. Je fais partie d’une équipe qui travaille sur un serveur dorsal qui stocke les profils et les contacts. Dans mon travail, nous pensons beaucoup à la façon dont les contacts peuvent être envoyés à d'autres appareils, comme ton téléphone. La plupart des gens ont beaucoup de contacts\\_; tu peux avoir, disons, 1000 contacts et nous ne voulons pas envoyer tous ces contacts en une fois à ton téléphone, car ce message serait beaucoup trop long. Semblable à la façon dont l'Internet décompose des messages volumineux en paquets, nous utilisons un concept appelé «\\_pagination\\_» où nous pourrions envoyer à ton téléphone seulement 100 contacts à la fois, et laisser ton téléphone nous répondre et nous demander les 100 contacts suivants."
+        text: "Mon nom est Amanda Camp et je suis ingénieur logiciel chez Google. Je fais partie d’une équipe qui travaille sur un serveur dorsal qui stocke les profils et les contacts. Dans mon travail, nous pensons beaucoup à la façon dont les contacts peuvent être envoyés à d'autres appareils, comme ton téléphone. La plupart des gens ont beaucoup de contacts; tu peux avoir, disons, 1000 contacts et nous ne voulons pas envoyer tous ces contacts en une fois à ton téléphone, car ce message serait beaucoup trop long. Semblable à la façon dont l'Internet décompose des messages volumineux en paquets, nous utilisons un concept appelé «pagination» où nous pourrions envoyer à ton téléphone seulement 100 contacts à la fois, et laisser ton téléphone nous répondre et nous demander les 100 contacts suivants."
       6:
         image: notes/C3_internet_6.png
         text: "La chose la plus excitante à propos d’un logiciel est le fait qu'il puisse impacter le monde entier. J'ai d'abord appris à programmer quand j'avais environ dix-neuf ans. Je pense que j'étais déjà étudiant en première ou deuxième année d’université. Le premier programme que je me souviens avoir écrit est quelque chose qui convertissait les degrés Celsius en degrés Fahrenheit. J’aime programmer parce que j’aime aider les gens. Je peux écrire des programmes chez Google qui aident les gens dans le monde entier, et c'est vraiment ahurissant et passionnant."
     C3_maze_conditionals:
       1:
         image: notes/C3_maze_conditionals_1.png
-        text: "Les gens prennent des décisions tous les jours. Par exemple, avant de sortir, tu penses à une instruction «\\_Si\\_» qui dit que si il pleut, alors tu devras prendre ta veste. Les ordinateurs sont incroyables, car lorsque tu décides de ce genre d’instructions, ils peuvent les exécuter avec fiabilité et à une vitesse incroyable. Un programme informatique c’est vraiment un peu de maths et un peu d’instructions «\\_Si\\_» lorsque la décision est prise."
+        text: Les gens prennent des décisions tous les jours. Par exemple, avant de sortir, tu penses à une instruction «Si» qui dit que si il pleut, alors tu devras prendre ta veste. Les ordinateurs sont incroyables, car lorsque tu décides de ce genre d’instructions, ils peuvent les exécuter avec fiabilité et à une vitesse incroyable. Un programme informatique c’est vraiment un peu de maths et un peu d’instructions «Si» lorsque la décision est prise.
       2:
         image: notes/C3_maze_conditionals_2.png
-        text: "Le bloc « Si » aide le zombie à prendre une décision. Il vérifie quelque chose. Par exemple, utilisons le bloc «\\_S’il y a un chemin vers la gauche\\_», et mets une commande « Tourner à gauche » à l'intérieur. Nous allons dire au zombie de vérifier autour de lui, voir s'il y a un chemin sur la gauche et dans l'affirmative, d’aller dans cette direction."
+        text: "Le bloc « Si » aide le zombie à prendre une décision. Il vérifie quelque chose. Par exemple, utilisons le bloc «S’il y a un chemin vers la gauche», et mets une commande « Tourner à gauche » à l'intérieur. Nous allons dire au zombie de vérifier autour de lui, voir s'il y a un chemin sur la gauche et dans l'affirmative, d’aller dans cette direction."
       3:
         image: notes/C3_maze_conditionals_3.png
-        text: "Ensuite, nous utilisons le bloc «\\_Avancer\\_» à l'intérieur de ce bloc «\\_Répéter\\_» pour qu'il puisse continuer à avancer, car il veut juste aller tout droit. Puis quand il y a un virage, le bloc «\\_Si\\_» lui dira de tourner à gauche. Tu peux voir que si nous faisons cela, si nous tournons à gauche et autrement si nous avançons, nous allons atteindre notre objectif."
+        text: "Ensuite, nous utilisons le bloc «Avancer» à l'intérieur de ce bloc «Répéter» pour qu'il puisse continuer à avancer, car il veut juste aller tout droit. Puis quand il y a un virage, le bloc «Si» lui dira de tourner à gauche. Tu peux voir que si nous faisons cela, si nous tournons à gauche et autrement si nous avançons, nous allons atteindre notre objectif."
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: "C'est un exemple d'utilisation d'une instruction « Si » qui est vraiment un concept fondamental en programmation informatique. Une des premières choses que j'ai apprises était comment écrire un programme qui jouait au morpion. J’avais des instructions « Si » pour dire «\\_OK, si l'autre personne s'apprête à gagner, vas-y et bloque cet endroit\\_». Amuse-toi à apprendre comment utiliser les instructions « Si », car c'est un concept-clé."
+        text: "C'est un exemple d'utilisation d'une instruction « Si » qui est vraiment un concept fondamental en programmation informatique. Une des premières choses que j'ai apprises était comment écrire un programme qui jouait au morpion. J’avais des instructions « Si » pour dire «OK, si l'autre personne s'apprête à gagner, vas-y et bloque cet endroit». Amuse-toi à apprendre comment utiliser les instructions « Si », car c'est un concept-clé."
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
-        text: "Dans cet exemple, ton but est que les zombies atteignent le tournesol. Nous pourrions utiliser cinq blocs « Avancer » ou nous pourrions dire à l'ordinateur d’avancer et de répéter cinq fois l’action à l'aide du bloc «\\_Répéter\\_»."
+        text: "Dans cet exemple, ton but est que les zombies atteignent le tournesol. Nous pourrions utiliser cinq blocs « Avancer » ou nous pourrions dire à l'ordinateur d’avancer et de répéter cinq fois l’action à l'aide du bloc «Répéter»."
       2:
         image: notes/C3_maze_level_4_2.png
-        text: "Cela fait gagner du temps et simplifie beaucoup le code. Pour l'utiliser, il suffit de mettre le bloc « Avancer » à l'intérieur du bloc « Répéter ». Appuie sur «\\_Exécuter\\_» et le zombie va avancer cinq fois vers le délicieux tournesol."
+        text: "Cela fait gagner du temps et simplifie beaucoup le code. Pour l'utiliser, il suffit de mettre le bloc « Avancer » à l'intérieur du bloc « Répéter ». Appuie sur «Exécuter» et le zombie va avancer cinq fois vers le délicieux tournesol."
     C3_playlab_create_game:
       1:
         image: notes/C3_playlab_create_game_1.png
@@ -980,31 +980,31 @@ fr:
         text: Nous appelons cela le refrain. Dans un programme informatique, les parties du programme qui sont utilisées à plusieurs reprises sont appelées les fonctions. Lorsque tu lis les paroles de la chanson, et qu’il est écrit le mot refrain, chantes-tu le mot refrain ? Non, tu regardes en haut de la page pour voir quels mots composent le refrain.
       3:
         image: notes/C3_songwriting_with_parameters_3.png
-        text: "Dans cette leçon, tu vas apprendre une petite chanson idiote appelée «\\_le petit lapin Foo Foo\\_». La chanson a un refrain que tu vas répéter plusieurs fois. Une fonction est un morceau de code que tu peux appeler et utiliser maintes et maintes fois. Elle rend la programmation plus facile et plus efficace pour que tu n'aies pas à écrire les étapes de ta fonction encore et encore. Tu peux les écrire juste une fois !"
+        text: "Dans cette leçon, tu vas apprendre une petite chanson idiote appelée «le petit lapin Foo Foo». La chanson a un refrain que tu vas répéter plusieurs fois. Une fonction est un morceau de code que tu peux appeler et utiliser maintes et maintes fois. Elle rend la programmation plus facile et plus efficace pour que tu n'aies pas à écrire les étapes de ta fonction encore et encore. Tu peux les écrire juste une fois !"
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
         text: "Il s'agit d’un bloc conditionnel. Il dit « Si » tu es à la fleur ou au nid d'abeilles, alors fais quelque chose. Cela est utile lorsque nous ne savons pas combien de miel ou de nectar recueillir, comme nous le voyons ici avec ce point d'interrogation."
       2:
         image: notes/C4_bee_conditional_2.png
-        text: "Dans cet exemple, nous allons dire, «\\_Si c'est une fleur, recueillir tout le nectar\\_», et ensuite utiliser un autre bloc pour dire «\\_Si c'est un nid d'abeilles, faire du miel\\_». La-la !"
+        text: "Dans cet exemple, nous allons dire, «Si c'est une fleur, recueillir tout le nectar», et ensuite utiliser un autre bloc pour dire «Si c'est un nid d'abeilles, faire du miel». La-la !"
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: "Nous avons un nouveau bloc qui s’appelle le bloc « Si-Sinon ». Il s'agit d'une instruction conditionnelle, tout comme le bloc « Si » que tu as utilisé dans le puzzle auparavant. Mais il y a maintenant une nouvelle partie en bas qui dit « Sinon ». Le bloc « Si-Sinon » laisse l'abeille prendre une décision entre deux séries d'actions. Si l'abeille est sur une fleur, l'abeille va faire l'ensemble des actions que tu as mis dans la première partie où il est dit «\\_Faire\\_». Si l'abeille n’est pas sur une fleur, l'abeille va faire l'ensemble des actions que tu mets dans le créneau « Sinon »."
+        text: "Nous avons un nouveau bloc qui s’appelle le bloc « Si-Sinon ». Il s'agit d'une instruction conditionnelle, tout comme le bloc « Si » que tu as utilisé dans le puzzle auparavant. Mais il y a maintenant une nouvelle partie en bas qui dit « Sinon ». Le bloc « Si-Sinon » laisse l'abeille prendre une décision entre deux séries d'actions. Si l'abeille est sur une fleur, l'abeille va faire l'ensemble des actions que tu as mis dans la première partie où il est dit «Faire». Si l'abeille n’est pas sur une fleur, l'abeille va faire l'ensemble des actions que tu mets dans le créneau « Sinon »."
       2:
         image: notes/C4_conditionals_2.png
-        text: "Les instructions «\\_Si\\_» sont la façon dont les ordinateurs sont capables de prendre des décisions. Les humains mettent en place des conditions pour l'ordinateur qui disent\\_: si l’ordinateur rencontre cette situation, alors il doit faire cette action. « Sinon », qui signifie simplement dans le cas contraire, l’ordinateur doit faire cela. La partie supérieure de notre bloc « Si-Sinon » dit « Si à une fleur\\_». Mais la partie supérieure de notre bloc pourrait dire d’autres choses, comme «\\_Si le nectar est égal à 2\\_» ou «\\_S'il y a un chemin devant\\_», notre bloc se comportera de la même manière. Si l’instruction dans la partie supérieure est vraie, alors elle fera la première série d'actions. Mais si l'instruction dans la partie supérieure est fausse, alors elle fera la deuxième série d'actions."
+        text: "Les instructions «Si» sont la façon dont les ordinateurs sont capables de prendre des décisions. Les humains mettent en place des conditions pour l'ordinateur qui disent: si l’ordinateur rencontre cette situation, alors il doit faire cette action. « Sinon », qui signifie simplement dans le cas contraire, l’ordinateur doit faire cela. La partie supérieure de notre bloc « Si-Sinon » dit « Si à une fleur». Mais la partie supérieure de notre bloc pourrait dire d’autres choses, comme «Si le nectar est égal à 2» ou «S'il y a un chemin devant», notre bloc se comportera de la même manière. Si l’instruction dans la partie supérieure est vraie, alors elle fera la première série d'actions. Mais si l'instruction dans la partie supérieure est fausse, alors elle fera la deuxième série d'actions."
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
         text: "Quand tu utilises un bloc « Répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « Répéter » cache en fait un morceau de code plus sophistiqué, appelé une « Boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin avec une augmentation spécifique."
       2:
         image: notes/C4_for_loops_2.png
-        text: "Par exemple, un bloc « Répéter 3\\_» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «\\_Boucle pour\\_» sait combien de fois elle a exécuté l’action en utilisant une variable «\\_Compteur\\_» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «\\_Compteur\\_» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner."
+        text: "Par exemple, un bloc « Répéter 3» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «Boucle pour» sait combien de fois elle a exécuté l’action en utilisant une variable «Compteur» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «Compteur» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner."
       3:
         image: notes/C4_for_loops_3.png
-        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «\\_Compteur\\_» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «\\_Boucle pour\\_» afin de dire à l'abeille de butiner les nectars du «\\_Compteur\\_» à chaque fois, ce qui fait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
+        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «Boucle pour» afin de dire à l'abeille de butiner les nectars du «Compteur» à chaque fois, ce qui fait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
       4:
         image: notes/C4_for_loops_4.png
         text: De même, dans une « Boucle pour », tu peux augmenter le nombre du compteur par un chiffre autre que 1 à chaque fois. Tu peux éventuellement compter par 2, 4 ou même un montant qui change à chaque fois.
@@ -1014,10 +1014,10 @@ fr:
         text: "Quand tu utilises un bloc « Répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « Répéter » cache en fait un morceau de code plus sophistiqué, appelé une « Boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin avec une augmentation spécifique."
       2:
         image: notes/C4_for_loops_bee_2.png
-        text: "Par exemple, un bloc « Répéter 3\\_» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «\\_Boucle pour\\_» sait combien de fois elle a exécuté l’action en utilisant une variable «\\_Compteur\\_» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «\\_Compteur\\_» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner."
+        text: "Par exemple, un bloc « Répéter 3» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «Boucle pour» sait combien de fois elle a exécuté l’action en utilisant une variable «Compteur» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «Compteur» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner."
       3:
         image: notes/C4_for_loops_bee_3.png
-        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «\\_Compteur\\_» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «\\_Boucle pour\\_» afin de dire à l'abeille de butiner les nectars du «\\_Compteur\\_» à chaque fois, ce qui fait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
+        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «Boucle pour» afin de dire à l'abeille de butiner les nectars du «Compteur» à chaque fois, ce qui fait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
       4:
         image: notes/C4_for_loops_bee_4.png
         text: De même, dans une « Boucle pour », tu peux augmenter le nombre du compteur par un chiffre autre que 1 à chaque fois. Tu peux éventuellement compter par 2, 4 ou même un montant qui change à chaque fois.
@@ -1027,11 +1027,11 @@ fr:
         text: "Quand tu utilises un bloc « Répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « Répéter » cache en fait un morceau de code plus sophistiqué, appelé une « Boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin avec une augmentation spécifique."
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: "Par exemple, un bloc « Répéter 3\\_» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «\\_Boucle pour\\_» sait combien de fois elle a exécuté l’action en utilisant une variable «\\_Compteur\\_» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «\\_Compteur\\_» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner. L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «\\_Compteur\\_» et l’utiliser dans ta boucle."
+        text: "Par exemple, un bloc « Répéter 3» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «Boucle pour» sait combien de fois elle a exécuté l’action en utilisant une variable «Compteur» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «Compteur» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner. L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle."
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
-        text: "Maintenant que tu as modifié des blocs de fonctions, il est temps de créer un nouveau bloc de fonction à partir de zéro. C'est vraiment simple. Tu verras que la boîte à outils a une catégorie appelée «\\_fonctions\\_». Si tu cliques dessus, tu verras un bouton orange appelé «\\_Créer une fonction\\_». Cliquer dessus affiche l'éditeur de fonction que tu as déjà utilisé pour modifier des blocs de fonctions existants."
+        text: "Maintenant que tu as modifié des blocs de fonctions, il est temps de créer un nouveau bloc de fonction à partir de zéro. C'est vraiment simple. Tu verras que la boîte à outils a une catégorie appelée «fonctions». Si tu cliques dessus, tu verras un bouton orange appelé «Créer une fonction». Cliquer dessus affiche l'éditeur de fonction que tu as déjà utilisé pour modifier des blocs de fonctions existants."
       2:
         image: notes/C4_function_create_2.png
         text: "Tout comme avant, tu as commencé en nommant ta fonction, en rédigeant une description de ce que la fonction doit faire. Par exemple, elle doit dessiner un carré ou dessiner un triangle, et ensuite faire glisser des blocs depuis la boîte à outils vers l'espace de travail blanc ci-dessous. N'oublie pas de glisser ces blocs à l'intérieur du bloc d’emballage vert de la fonction."
@@ -1057,10 +1057,10 @@ fr:
         text: "Voici une fonction qui dessine un carré avec des côtés de 50 pixels. C'est très bien, mais si je voulais dessiner un carré avec des côtés de 50 pixels et un autre carré avec des côtés de 100 pixels ? Nous ne devrions pas avoir à faire deux fonctions séparées qui font presque la même chose. Au lieu de cela, nous pouvons utiliser une fonction avec un paramètre."
       2:
         image: notes/C4_function_parameters_2.png
-        text: "Les paramètres nous permettent de transmettre des valeurs à une fonction, qui est utilisée comme variable à l'intérieur de la fonction. Nous allons essayer d'ajouter un paramètre à cette fonction afin de pouvoir l'utiliser pour créer des carrés de différentes tailles. Dans l'éditeur de fonction, tu peux modifier le nom et la description comme tu l’as fait auparavant, mais maintenant, tu peux également rajouter un paramètre. Écris le nom de ton paramètre dans l'espace, puis clique sur Ajouter un paramètre. Cela va créer un bloc rouge avec le nom du paramètre que tu viens de créer. Maintenant, nous pouvons remplacer le bloc « Avancer » de 100 par le paramètre «\\_Longueur\\_» et il va donc avancer de la longueur indiquée."
+        text: "Les paramètres nous permettent de transmettre des valeurs à une fonction, qui est utilisée comme variable à l'intérieur de la fonction. Nous allons essayer d'ajouter un paramètre à cette fonction afin de pouvoir l'utiliser pour créer des carrés de différentes tailles. Dans l'éditeur de fonction, tu peux modifier le nom et la description comme tu l’as fait auparavant, mais maintenant, tu peux également rajouter un paramètre. Écris le nom de ton paramètre dans l'espace, puis clique sur Ajouter un paramètre. Cela va créer un bloc rouge avec le nom du paramètre que tu viens de créer. Maintenant, nous pouvons remplacer le bloc « Avancer » de 100 par le paramètre «Longueur» et il va donc avancer de la longueur indiquée."
       3:
         image: notes/C4_function_parameters_3.png
-        text: "Clique sur Enregistrer et Fermer et glisse ton nouveau bloc «\\_Dessiner un carré\\_» de la catégorie Fonctions de la boîte à outils. Tu remarqueras qu'il y a un espace vide à côté de «\\_Longueur\\_» parce que la fonction veut savoir quelle valeur le paramètre « Longueur » doit avoir. Fais glisser un bloc numérique de la catégorie Maths et place-le dans cet espace. Tu vois comment tu peux utiliser la fonction encore et encore avec des longueurs différentes pour faire des carrés de différentes tailles ? Essaie de faire un carré tout seul !"
+        text: "Clique sur Enregistrer et Fermer et glisse ton nouveau bloc «Dessiner un carré» de la catégorie Fonctions de la boîte à outils. Tu remarqueras qu'il y a un espace vide à côté de «Longueur» parce que la fonction veut savoir quelle valeur le paramètre « Longueur » doit avoir. Fais glisser un bloc numérique de la catégorie Maths et place-le dans cet espace. Tu vois comment tu peux utiliser la fonction encore et encore avec des longueurs différentes pour faire des carrés de différentes tailles ? Essaie de faire un carré tout seul !"
     C4_intro:
       1:
         image: notes/C4_intro_1.png
@@ -1070,20 +1070,20 @@ fr:
         text: "Blockly est divisé en trois grandes parties. Sur la gauche, il y a un labyrinthe d’oiseaux où ton programme s'exécutera. Les instructions pour chaque niveau sont écrites sous le labyrinthe. La zone du milieu est la boîte à outils, et chacun de ces blocs est une action que l’oiseau peut comprendre. La zone blanche à droite est l'espace de travail et c'est ici que nous allons construire notre programme."
       3:
         image: notes/C4_intro_3.png
-        text: "Si je fais glisser le bloc «\\_Déplacer\\_» dans notre espace de travail et appuie sur « Exécuter », que se passe-t-il ? L'oiseau avance d’une case sur la grille. Et si je veux que l’oiseau fasse quelque chose après avoir avancé d’une case ? Je peux ajouter un autre bloc à notre programme."
+        text: "Si je fais glisser le bloc «Déplacer» dans notre espace de travail et appuie sur « Exécuter », que se passe-t-il ? L'oiseau avance d’une case sur la grille. Et si je veux que l’oiseau fasse quelque chose après avoir avancé d’une case ? Je peux ajouter un autre bloc à notre programme."
       4:
         image: notes/C4_intro_4.png
-        text: "Je vais choisir le bloc «\\_Tourner à droite\\_» et je vais le glisser sous mon bloc «\\_Déplacer\\_» jusqu'à ce que la flèche jaune apparaisse. Puis je le dépose et les deux blocs s’emboîteront. Lorsque j'appuie à nouveau sur « Exécuter », l'oiseau effectue les commandes qui sont empilées de haut en bas sur notre espace de travail."
+        text: "Je vais choisir le bloc «Tourner à droite» et je vais le glisser sous mon bloc «Déplacer» jusqu'à ce que la flèche jaune apparaisse. Puis je le dépose et les deux blocs s’emboîteront. Lorsque j'appuie à nouveau sur « Exécuter », l'oiseau effectue les commandes qui sont empilées de haut en bas sur notre espace de travail."
       5:
         image: notes/C4_intro_5.png
-        text: "Si jamais tu veux supprimer un bloc, il suffit de le retirer de la pile et de le faire glisser dans la corbeille. Après avoir cliqué sur « Exécuter », tu peux toujours cliquer sur le bouton «\\_Réinitialiser\\_» pour faire revenir l’oiseau au départ. Maintenant attrapons ces cochons !"
+        text: Si jamais tu veux supprimer un bloc, il suffit de le retirer de la pile et de le faire glisser dans la corbeille. Après avoir cliqué sur « Exécuter », tu peux toujours cliquer sur le bouton «Réinitialiser» pour faire revenir l’oiseau au départ. Maintenant attrapons ces cochons !
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
         text: "Si je veux dessiner un rectangle de 50 pixels de hauteur qui soit deux fois plus large que haut, comment dois-je programmer l'ordinateur pour faire ça ? Eh bien, je pourrais dire à l'artiste de monter jusqu'à cinquante, de tourner à droite et puis d’aller à 100 et de déplacer le tout deux fois. Mais alors je fais des maths pour l'ordinateur."
       2:
         image: notes/C4_math_artist_2.png
-        text: "Multiplier cinquante par deux dans ta tête n’est pas difficile, mais les ordinateurs sont vraiment bons pour faire des maths, alors il faut leur laisser faire les calculs autant que possible. Si j'avais simplement utilisé une variable appelée «\\_Hauteur\\_», alors j'aurais pu facilement changer la hauteur à cinquante, et ensuite changer mon algorithme pour indiquer à l'artiste de monter de la hauteur voulue, de tourner à droite, et ensuite d'avancer de deux fois la hauteur\\_; ce qui nous donne un rectangle deux fois plus large que haut."
+        text: "Multiplier cinquante par deux dans ta tête n’est pas difficile, mais les ordinateurs sont vraiment bons pour faire des maths, alors il faut leur laisser faire les calculs autant que possible. Si j'avais simplement utilisé une variable appelée «Hauteur», alors j'aurais pu facilement changer la hauteur à cinquante, et ensuite changer mon algorithme pour indiquer à l'artiste de monter de la hauteur voulue, de tourner à droite, et ensuite d'avancer de deux fois la hauteur; ce qui nous donne un rectangle deux fois plus large que haut."
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
@@ -1100,10 +1100,10 @@ fr:
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: "La personne qui donne des instructions est la personne qui tient le papier\\_; chaque équipe doit imaginer ce que va être son symbole «\\_Éteint\\_» et ce que va être son symbole «\\_En marche\\_».  En binaire, c'est un peu comme un alphabet avec deux lettres. Comme si A et B formaient tout alphabet, mais tu as un 0 et un 1."
+        text: "La personne qui donne des instructions est la personne qui tient le papier; chaque équipe doit imaginer ce que va être son symbole «Éteint» et ce que va être son symbole «En marche».  En binaire, c'est un peu comme un alphabet avec deux lettres. Comme si A et B formaient tout alphabet, mais tu as un 0 et un 1."
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: "La façon la plus courante d’utiliser le binaire est avec l’instruction «\\_Si\\_». C'est un classique de la programmation. Le programme s'exécute et dit si quelque chose est vrai, et ensuite le fait. Ou si ce n’est pas vrai, fais quelque chose d’autres. Et si tu voulais faire quelque chose d’un peu plus compliqué peut-être. Au lieu d’une instruction « Si », tu voulais travailler avec quelque chose comme une image ou un son sur un ordinateur."
+        text: "La façon la plus courante d’utiliser le binaire est avec l’instruction «Si». C'est un classique de la programmation. Le programme s'exécute et dit si quelque chose est vrai, et ensuite le fait. Ou si ce n’est pas vrai, fais quelque chose d’autres. Et si tu voulais faire quelque chose d’un peu plus compliqué peut-être. Au lieu d’une instruction « Si », tu voulais travailler avec quelque chose comme une image ou un son sur un ordinateur."
       3:
         image: notes/C4_unplugged_binary_3.png
         text: "Un ordinateur ne connaît que le binaire, mais une image n'est pas binaire, ce n’est pas des uns et des zéros, alors comment fais-tu cela ? Voici un exemple : Tu as cette belle photo. Maintenant, une image est essentiellement une forme d'information. Toutes les informations peuvent être encodées en binaire d’une façon ou d’une autre, il suffit de comprendre comment le faire."
@@ -1113,10 +1113,10 @@ fr:
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
-        text: "Cette leçon s’appelle Jouer avec la «\\_Boucle pour\\_». Dans cette leçon, nous allons utiliser une ligne de numéros pour jouer à un jeu de dés. Chaque joueur va faire rouler les dés trois fois pour assigner une valeur initiale, une valeur d'arrêt et notre intervalle. À chaque tour, nous encerclons notre valeur de départ, et chaque valeur qui est le même nombre de pas en avant que la valeur de notre intervalle. Nous nous arrêtons d’encercler lorsque nous arriverons à notre valeur d'arrêt. La personne avec le plus haut score gagne !"
+        text: "Cette leçon s’appelle Jouer avec la «Boucle pour». Dans cette leçon, nous allons utiliser une ligne de numéros pour jouer à un jeu de dés. Chaque joueur va faire rouler les dés trois fois pour assigner une valeur initiale, une valeur d'arrêt et notre intervalle. À chaque tour, nous encerclons notre valeur de départ, et chaque valeur qui est le même nombre de pas en avant que la valeur de notre intervalle. Nous nous arrêtons d’encercler lorsque nous arriverons à notre valeur d'arrêt. La personne avec le plus haut score gagne !"
       2:
         image: notes/C4_unplugged_forloops_2.png
-        text: "Les «\\_Boucles pour\\_» peuvent être très pratiques à plusieurs endroits et si un jour tu deviens météorologue, tu utiliseras des « Boucles pour » tout le temps. Salut, je suis Becky. Je travaille à EverPower Renewables comme météorologue du vent. Je prédis les vitesses des vents pour la région de la gorge du fleuve Columbia où la société possède des parcs éoliens."
+        text: Les «Boucles pour» peuvent être très pratiques à plusieurs endroits et si un jour tu deviens météorologue, tu utiliseras des « Boucles pour » tout le temps. Salut, je suis Becky. Je travaille à EverPower Renewables comme météorologue du vent. Je prédis les vitesses des vents pour la région de la gorge du fleuve Columbia où la société possède des parcs éoliens.
       3:
         image: notes/C4_unplugged_forloops_3.png
         text: "Nous essayons de comprendre les vents à venir afin de définir de combien de puissance nous disposons. Nous donnons cette information en temps réel aux négociants d’électricité. Ils achètent et vendent l’énergie sur la base de la quantité d’énergie que nous leur annonçons afin de s'assurer que le réseau électrique reste équilibré, que les lumières restent allumées et que nous maximisions la quantité d'énergie produite par nos parcs éoliens."
@@ -1125,7 +1125,7 @@ fr:
         text: "Nous sommes au centre de contrôle national de EverPower Renewables ici à Portland, et c'est là où nous recevons les informations provenant de tous les parcs éoliens du pays. Aujourd’hui, même les ordinateurs les plus puissants ne peuvent pas simuler l'atmosphère partout. Dans les modèles de prévisions informatiques, nous avons ce que nous appelons une grille. Chaque point de la grille est une latitude et une longitude. Il faut calculer la physique et essayer de trouver la vitesse du vent, la température, la pression - ce genre de choses."
       5:
         image: notes/C4_unplugged_forloops_5.png
-        text: "Puisque ce sont des grilles plutôt grandes et que nous faisons cela à plusieurs endroits, nous faisons ces choses en boucle des millions et des millions de fois. Dans tout ce que je fais, j’utilise des «\\_Boucles pour\\_». Voici par exemple une « Boucles pour » juste là. Lorsque tu prévois le vent, il y a tellement de paramètres différents qui entrent en jeu, qu’il serait impossible pour un être humain de s'asseoir et de faire tous ces calculs. Il y a tant d’aspects différents qui ont une incidence sur ce qui se passe en ce qui concerne le vent, qu’il nous faut un modèle informatique afin de le prévoir."
+        text: "Puisque ce sont des grilles plutôt grandes et que nous faisons cela à plusieurs endroits, nous faisons ces choses en boucle des millions et des millions de fois. Dans tout ce que je fais, j’utilise des «Boucles pour». Voici par exemple une « Boucles pour » juste là. Lorsque tu prévois le vent, il y a tellement de paramètres différents qui entrent en jeu, qu’il serait impossible pour un être humain de s'asseoir et de faire tous ces calculs. Il y a tant d’aspects différents qui ont une incidence sur ce qui se passe en ce qui concerne le vent, qu’il nous faut un modèle informatique afin de le prévoir."
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
@@ -1136,7 +1136,7 @@ fr:
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: "Cette leçon s’appelle la Composition de chansons avec des paramètres. Nous allons écrire quelques chansons ici. Le refrain est parfois juste un peu différent chaque fois que tu le chantes. Tu te souviens de Le vieux Macdonald avait une ferme ? Le refrain est légèrement différent pour chaque animal. Et sur cette ferme, il avait une vache, i-a-i-a-o. Le petit changement dans chaque refrain peut être montré en utilisant quelque chose que nous appelons les «\\_paramètres\\_»."
+        text: Cette leçon s’appelle la Composition de chansons avec des paramètres. Nous allons écrire quelques chansons ici. Le refrain est parfois juste un peu différent chaque fois que tu le chantes. Tu te souviens de Le vieux Macdonald avait une ferme ? Le refrain est légèrement différent pour chaque animal. Et sur cette ferme, il avait une vache, i-a-i-a-o. Le petit changement dans chaque refrain peut être montré en utilisant quelque chose que nous appelons les «paramètres».
       2:
         image: notes/C4_unplugged_parameters_2.png
         text: "Parfois, une fonction nécessite un paramètre. Un paramètre est un morceau supplémentaire d'information que tu peux donner à une fonction afin de le personnaliser pour un besoin particulier. Quand tu fais des crèmes glacées avec tes amis, tu utilises un processus semblable aux paramètres dans un programme informatique."
@@ -1152,17 +1152,17 @@ fr:
         text: "Les variables sont des espaces réservés aux éléments d'information qui peuvent changer. En utilisant une variable pour les informations manquantes, nous pouvons continuer à travailler sur ce que nous faisons et laisser quelqu'un d'autre compléter les informations manquantes plus tard. Dans un logiciel, nous utilisons beaucoup les variables. Nous utilisons les variables comme espaces réservés aux noms, aux adresses e-mail et même au nom d’utilisateur. De cette façon, nous pouvons indiquer au programme que ces détails apparaîtront plus tard lorsque l’utilisateur les renseignera. Nous utilisons les variables tout le temps dans notre travail."
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: "Chaque fois que tu dois stocker un élément d'information pour plus tard, nous utilisons une variable. Disons que nous devons compter le nombre de fois où l'utilisateur a envoyé un message sur Twitter ou qu’il a «\\_twitté\\_», ou gazouillé en français. Chaque fois que l'utilisateur envoie un message sur Twitter, nous allons ajouter 1 à ce nombre et chaque fois que l'utilisateur supprime l’un de ses «\\_gazouillis\\_» (pour utiliser un terme français), nous allons réduire ce nombre de 1. Chaque fois que nous devons savoir combien de fois l'utilisateur a gazouillé, nous regarderons seulement cette variable."
+        text: "Chaque fois que tu dois stocker un élément d'information pour plus tard, nous utilisons une variable. Disons que nous devons compter le nombre de fois où l'utilisateur a envoyé un message sur Twitter ou qu’il a «twitté», ou gazouillé en français. Chaque fois que l'utilisateur envoie un message sur Twitter, nous allons ajouter 1 à ce nombre et chaque fois que l'utilisateur supprime l’un de ses «gazouillis» (pour utiliser un terme français), nous allons réduire ce nombre de 1. Chaque fois que nous devons savoir combien de fois l'utilisateur a gazouillé, nous regarderons seulement cette variable."
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
         text: "Une variable est un conteneur dans lequel tu peux stocker une valeur. Lorsque tu utilises cette variable dans un algorithme, elle ouvre le conteneur et examine la valeur à l'intérieur. Cela te permet d'écrire des algorithmes plus intelligents qui se comportent différemment en fonction de la valeur stockée dans la variable."
       2:
         image: notes/C4_variables_artist_2.png
-        text: "Par exemple, si tu voulais écrire un algorithme permettant de dire «\\_Joyeux Anniversaire, tu as 10 ans !\\_» à mon petit frère, c'est très bien maintenant, mais quand j’exécuterai l’algorithme l'année prochaine je voudrais lui dire, «\\_Joyeux Anniversaire, tu as 11 ans !\\_» Je pourrais créer une variable appelée «\\_Âge\\_» pour stocker l'âge de mon frère et écrire mon algorithme pour dire Joyeux Anniversaire, tu as « Âge » à la place. Comme la variable peut changer, chaque année, je peux mettre à jour la variable « Âge » égale à « Âge » plus 1."
+        text: "Par exemple, si tu voulais écrire un algorithme permettant de dire «Joyeux Anniversaire, tu as 10 ans !» à mon petit frère, c'est très bien maintenant, mais quand j’exécuterai l’algorithme l'année prochaine je voudrais lui dire, «Joyeux Anniversaire, tu as 11 ans !» Je pourrais créer une variable appelée «Âge» pour stocker l'âge de mon frère et écrire mon algorithme pour dire Joyeux Anniversaire, tu as « Âge » à la place. Comme la variable peut changer, chaque année, je peux mettre à jour la variable « Âge » égale à « Âge » plus 1."
       3:
         image: notes/C4_variables_artist_3.png
-        text: "Dans ce puzzle, nous allons utiliser une variable qui définira la longueur de la ligne que notre artiste dessinera. Par la suite dans notre code, le bloc « Avancer » examinera cette variable «\\_Longueur\\_» pour voir à quelle valeur tu l’as réglée."
+        text: Dans ce puzzle, nous allons utiliser une variable qui définira la longueur de la ligne que notre artiste dessinera. Par la suite dans notre code, le bloc « Avancer » examinera cette variable «Longueur» pour voir à quelle valeur tu l’as réglée.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
@@ -1176,7 +1176,7 @@ fr:
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
-        text: "Maintenant, nous allons apprendre quelque chose que tous les programmeurs de jeux utilisent tous les jours. On les appelle des événements. Un événement dit à ton programme d’écouter lorsque quelque chose se passe. Et puis, quand cela arrive, il exécute une action. Quelques exemples d'évènements sont\\_: l'écoute des clics de souris, l’activation d’une touche fléchée du clavier ou un tapotement de l'écran."
+        text: "Maintenant, nous allons apprendre quelque chose que tous les programmeurs de jeux utilisent tous les jours. On les appelle des événements. Un événement dit à ton programme d’écouter lorsque quelque chose se passe. Et puis, quand cela arrive, il exécute une action. Quelques exemples d'évènements sont: l'écoute des clics de souris, l’activation d’une touche fléchée du clavier ou un tapotement de l'écran."
       2:
         image: notes/infinity_playlab_events_2.png
         text: Ici, nous allons faire monter Baymax pour toucher Hiro et redescendre pour toucher Raiponce lorsque le joueur utilise les flèches du clavier ou les boutons haut/bas. Nous allons utiliser le bloc « Quand flèche vers le haut » et lui attacher le bloc « Déplacer acteur vers le haut », donc lorsque le joueur appuie sur la flèche vers le haut du clavier, tout ce qui est attaché au bloc « Quand flèche vers le haut » est exécuté. Nous ferons la même chose pour faire descendre Baymax. Étape par étape, ton jeu devient plus interactif.
@@ -1189,7 +1189,7 @@ fr:
         text: "L'informatique est la base de beaucoup de choses que les professionnels et les étudiants à l’université vont faire pour les vingt ou trente prochaines années. J’aime programmer parce que j’aime aider les gens. J'ai l'occasion de construire quelque chose qui va simplifier la vie des gens. Je pense que c'est la chose que nous avons qui se rapproche le plus d’un super-pouvoir. Le démarrage est la partie la plus importante. Je suis moi-même un débutant et je veux que tu apprennes avec moi."
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: "Je suis John Vechey, je suis l'un des cofondateurs de PopCap Games. Nous faisons des jeux comme Plants vs. Zombies, Bejeweled et Peggle. L’important dans un jeu, ce n'est pas à quel point ton code est parfait ou à quel point ton art est parfait - c’est ce qu’on ressent en jouant et à quel point c’est amusant. Tu ne peux obtenir cette sensation qu’en l'essayant ou en le faisant\\_; ou encore, en apprenant, en adaptant et en réitérant tes propres compétences à créer des jeux."
+        text: "Je suis John Vechey, je suis l'un des cofondateurs de PopCap Games. Nous faisons des jeux comme Plants vs. Zombies, Bejeweled et Peggle. L’important dans un jeu, ce n'est pas à quel point ton code est parfait ou à quel point ton art est parfait - c’est ce qu’on ressent en jouant et à quel point c’est amusant. Tu ne peux obtenir cette sensation qu’en l'essayant ou en le faisant; ou encore, en apprenant, en adaptant et en réitérant tes propres compétences à créer des jeux."
       4:
         image: notes/infinity_playlab_intro_4.png
         text: "As-tu un jeu vidéo préféré ? Eh bien, nous allons faire un pas vers la création de jeux - juste comme ça - à l'aide du Labo de jeux. Les bons jeux ont une histoire et chaque histoire présente des acteurs. Les acteurs font des choses comme parler, se déplacer et interagir. Peut-être même marquer des points selon les règles du jeu. Aujourd'hui, nous allons apprendre comment faire toutes ces choses, une par une, avec des personnages de Disney comme Anna, Elsa, Hiro, Baymax et Raiponce. Nous allons construire un jeu à partir de zéro qui peut être partagé et joué sur un téléphone."
@@ -1198,21 +1198,21 @@ fr:
         text: "Ton écran est divisé en trois parties principales. Sur la gauche, il y a l'espace de jeu, où ton programme s'exécutera. Les instructions pour chaque niveau sont écrites ci-dessous. La zone centrale est la boîte à outils et chacun de ces blocs est un morceau de code. La zone blanche à droite est l'espace de travail, et c'est ici que nous allons construire notre programme."
       6:
         image: notes/infinity_playlab_intro_6.png
-        text: "Pour commencer, tu devras lier tes blocs au bloc orange «\\_Lors du lancement\\_». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies la ligne jaune, et ainsi, ils s'emboîteront. Dans ce premier puzzle, Hiro est Acteur 1 et Baymax est Acteur 2. Nous devons aider Hiro à rejoindre Baymax en tirant le bloc « Déplacer vers la droite » dehors et en le liant au bloc « Lors du lancement ». Lorsque tu as tes blocs en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé."
+        text: "Pour commencer, tu devras lier tes blocs au bloc orange «Lors du lancement». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies la ligne jaune, et ainsi, ils s'emboîteront. Dans ce premier puzzle, Hiro est Acteur 1 et Baymax est Acteur 2. Nous devons aider Hiro à rejoindre Baymax en tirant le bloc « Déplacer vers la droite » dehors et en le liant au bloc « Lors du lancement ». Lorsque tu as tes blocs en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé."
       7:
         image: notes/infinity_playlab_intro_7.png
         text: Commence, et à la fin tu pourras créer ton propre jeu avec ces incroyables acteurs qui peuvent interagir, marquer des points, lancer des microbots, des cerises, des poêles, des étincelles et de la glace... et se faire disparaitre. Ça ne dépend que de toi !
     infinity_playlab_repeat_forever:
       1:
         image: notes/infinity_playlab_repeat_forever_1.png
-        text: "Tu imagines si tu devais répéter quelque chose encore et toujours\\_? Heureusement tu n’auras jamais à faire ça parce que les ordinateurs savent vraiment bien répéter les choses. C'est le bloc « Répéter à l’infini\\_». Tout ce qui se trouve dans ce bloc sera effectué à l’infini tout au long du jeu."
+        text: "Tu imagines si tu devais répéter quelque chose encore et toujours? Heureusement tu n’auras jamais à faire ça parce que les ordinateurs savent vraiment bien répéter les choses. C'est le bloc « Répéter à l’infini». Tout ce qui se trouve dans ce bloc sera effectué à l’infini tout au long du jeu."
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
         text: "Alors si on voulait qu'un acteur fasse quelque chose de manière répétée, sans que le joueur ait à faire quoi que ce soit, nous placerions ces blocs à l’intérieur du bloc « Répéter à l’infini ». Dans le prochain puzzle , notre objectif est d'aider Anna à monter et à descendre en permanence. Apprendre comment toutes les commandes « Répéter » fonctionnent te permettra d'économiser énormément de temps plus tard lorsque tu développeras ton propre jeu."
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
-        text: "Que veux-tu faire quand tu seras grande Olivia ? Devenir astronaute. Sais-tu ce qu’est un programmeur informatique ? Oui euh non. Hum, attends, quoi ? Je ne sais pas vraiment comment l'expliquer mais la programmation informatique est plutôt simple. C’est un ensemble d’instructions comme une recette\\_; tu dois les suivre pas à pas pour obtenir le résultat souhaité."
+        text: "Que veux-tu faire quand tu seras grande Olivia ? Devenir astronaute. Sais-tu ce qu’est un programmeur informatique ? Oui euh non. Hum, attends, quoi ? Je ne sais pas vraiment comment l'expliquer mais la programmation informatique est plutôt simple. C’est un ensemble d’instructions comme une recette; tu dois les suivre pas à pas pour obtenir le résultat souhaité."
       2:
         image: notes/tutorial_puzzle_challenge_2.png
         text: "Je peux changer le nombre de pixels et la longueur de la ligne à l'aide de ce menu déroulant. C’était long comment déjà ? Tu peux revoir les instructions en regardant sous le bouton « Exécuter ». Ici j'ai utilisé le bloc « Avancer » et je vais sélectionner 100 pixels. Je peux supprimer un bloc en le faisant glisser dans la boîte à outils ou dans la poubelle. Remettons-le en place."
@@ -1221,13 +1221,13 @@ fr:
         text: Exécute le code en appuyant sur « Exécuter ». Eh bien, cela n’a pas fonctionné ! Je vais appuyer sur Réinitialiser et essayer de comprendre ce qui ne marche pas. Tu peux essayer un puzzle autant de fois que tu le souhaites et sauter des puzzles et y revenir plus tard. Assure-toi de faire de ton mieux et de ne pas abandonner. Ajoutons un autre « Avancer ». Cela ne fonctionne toujours pas. Je peux placer un bloc entre d’autres blocs.
       4:
         image: notes/tutorial_puzzle_challenge_4.png
-        text: "Nous allons prendre un bloc «\\_Tourner\\_» et le placer entre les blocs «\\_Avancer\\_». Tourner à gauche de 45 degrés. Exécutons-le à nouveau. Remise à zéro, exécution, génial ! Voici un autre puzzle. Parfois, on te donne un code de démarrage à compléter. Ici, je dois ajouter les longueurs et les degrés appropriés."
+        text: Nous allons prendre un bloc «Tourner» et le placer entre les blocs «Avancer». Tourner à gauche de 45 degrés. Exécutons-le à nouveau. Remise à zéro, exécution, génial ! Voici un autre puzzle. Parfois, on te donne un code de démarrage à compléter. Ici, je dois ajouter les longueurs et les degrés appropriés.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: "Tu peux parfois supprimer accidentellement le code de démarrage. Que fais-tu alors ? Tu peux appuyer sur «\\_Supprimer le puzzle\\_» et tout recommencer. Je vais faire glisser ce pavé numérique dans les différentes zones de pixels. Sélectionne 100 pour les pixels, 45 pour les degrés et de nouveau 100 pour les pixels. Génial ! Voici l'abeille de Code Studio. J'ai besoin de déplacer l'abeille vers chaque fleur et recueillir du nectar."
+        text: "Tu peux parfois supprimer accidentellement le code de démarrage. Que fais-tu alors ? Tu peux appuyer sur «Supprimer le puzzle» et tout recommencer. Je vais faire glisser ce pavé numérique dans les différentes zones de pixels. Sélectionne 100 pour les pixels, 45 pour les degrés et de nouveau 100 pour les pixels. Génial ! Voici l'abeille de Code Studio. J'ai besoin de déplacer l'abeille vers chaque fleur et recueillir du nectar."
       6:
         image: notes/tutorial_puzzle_challenge_6.png
-        text: "La première fleur est à trois blocs, alors j’ai besoin de trois « Avancer ». 1, 2, 3. Puis un bloc « Recueillir du nectar », puis un autre bloc « Recueillir du nectar ». Eh bien, cela n’a pas fonctionné ! Je vais placer un autre bloc « Avancer » entre « Recueillir du nectar » et «\\_Exécuter\\_» à nouveau. Youpi, ça marche ! Tu viens d'apprendre comment utiliser l’artiste de Code Studio et les puzzles des abeilles. Bonne chance pour le Défi du puzzle de Code Studio."
+        text: "La première fleur est à trois blocs, alors j’ai besoin de trois « Avancer ». 1, 2, 3. Puis un bloc « Recueillir du nectar », puis un autre bloc « Recueillir du nectar ». Eh bien, cela n’a pas fonctionné ! Je vais placer un autre bloc « Avancer » entre « Recueillir du nectar » et «Exécuter» à nouveau. Youpi, ça marche ! Tu viens d'apprendre comment utiliser l’artiste de Code Studio et les puzzles des abeilles. Bonne chance pour le Défi du puzzle de Code Studio."
     unplug1:
       1:
         image: notes/unplug1_1.png
@@ -1278,7 +1278,7 @@ fr:
     unplug6:
       1:
         image: notes/unplug6_1.png
-        text: "Cette activité s’appelle coder avec des cartes et s’avère formidable pour tous les âges. Comme tu l’as appris avec les instructions «\\_Si\\_» dans les leçons précédentes avec Blockly, les instructions « Si » détiennent une partie que tu dois évaluer afin de savoir si c'est vrai ou faux. C'est l’instruction conditionnelle, et elle peut être utilisée de plusieurs manières différentes."
+        text: "Cette activité s’appelle coder avec des cartes et s’avère formidable pour tous les âges. Comme tu l’as appris avec les instructions «Si» dans les leçons précédentes avec Blockly, les instructions « Si » détiennent une partie que tu dois évaluer afin de savoir si c'est vrai ou faux. C'est l’instruction conditionnelle, et elle peut être utilisée de plusieurs manières différentes."
       2:
         image: notes/unplug6_2.png
         text: "Nous en profitons en créant des programmes sur papier que tu exécutes à l'aide d'un tirage au sort de cartes à jouer. Tu pourrais avoir une instruction « Si » qui dit quelque chose comme, si la carte que tu tires est supérieure à 8, tu obtiens un point. Autrement, ton adversaire gagne un point. Tu peux rendre le jeu aussi simple ou aussi compliqué que tu le souhaites."
@@ -1288,7 +1288,7 @@ fr:
         text: "Par exemple, quand tu recherches les paroles d'une chanson, en général le refrain est présenté au tout début et ensuite pour le reste de la chanson, tu dois y revenir après chaque couplet. Voilà le parfait exemple d’une fonction."
       2:
         image: notes/unplug7_2.png
-        text: "Dans cette leçon, nous définissons le refrain au début de notre chanson et puis nous chantons notre chanson - nous remarquons que la classe ne chante pas le mot «\\_refrain\\_», mais plutôt, les chanteurs reviennent automatiquement en haut de la page où le refrain à été défini, et le chante. Nous utilisons cela comme une excellente introduction à la façon de comprendre ce que fait un programme lorsqu'il définit et appelle une fonction."
+        text: "Dans cette leçon, nous définissons le refrain au début de notre chanson et puis nous chantons notre chanson - nous remarquons que la classe ne chante pas le mot «refrain», mais plutôt, les chanteurs reviennent automatiquement en haut de la page où le refrain à été défini, et le chante. Nous utilisons cela comme une excellente introduction à la façon de comprendre ce que fait un programme lorsqu'il définit et appelle une fonction."
       3:
         image: notes/unplug7_3.png
         text: "Nous utilisons des chansons connues, dont le vieux Macdonald, pour parler de la façon dont un refrain est appelé encore et encore, et comment un refrain peut parfois être modifier. Lorsque tu as une chanson comme le vieux Macdonald, où certains mots changent, c'est un endroit idéal pour introduire l'idée de paramètres. C’est introduire certains mots pour envoyer des informations supplémentaires à ta fonction. Lorsque tu es sûr que tout le monde comprend, tu peux utiliser tes propres chansons familières et les décomposer toi-même. Vois si tu trouves la solution."
@@ -1356,13 +1356,13 @@ fr:
         text: Si je fais glisser le bloc « Se déplacer vers la gauche(); » dans notre espace de travail et appuie sur Démarrer, que se passe-t-il ? BB-8 se déplace à gauche d’un bloc sur la grille.
       8:
         image: notes/starwars_intro_8.JPG
-        text: "Et si je veux que BB-8 fasse quelque chose après le bloc « Se déplacer vers la gauche();\\_» ? Je peux ajouter un autre bloc à notre programme. Je vais choisir le bloc « Se déplacer vers le haut(); » et je vais le glisser sous mon bloc « Se déplacer vers la gauche(); » jusqu'à ce que le surlignage apparaisse. Puis je le dépose et les deux blocs s’emboîteront."
+        text: "Et si je veux que BB-8 fasse quelque chose après le bloc « Se déplacer vers la gauche();» ? Je peux ajouter un autre bloc à notre programme. Je vais choisir le bloc « Se déplacer vers le haut(); » et je vais le glisser sous mon bloc « Se déplacer vers la gauche(); » jusqu'à ce que le surlignage apparaisse. Puis je le dépose et les deux blocs s’emboîteront."
       9:
         image: notes/starwars_intro_9.JPG
         text: "Lorsque j'appuie à nouveau sur Démarrer, BB-8 effectue les commandes qui sont empilées de haut en bas dans notre espace de travail. Si jamais tu veux supprimer un bloc, il suffit de le retirer de la pile et de le refaire glisser dans la boîte à outils."
       10:
         image: notes/starwars_intro_10.JPG
-        text: "Après avoir cliqué sur « Exécuter », tu peux toujours cliquer sur le bouton «\\_Réinitialiser\\_» pour faire revenir BB-8 au départ. Maintenant allons-y !"
+        text: Après avoir cliqué sur « Exécuter », tu peux toujours cliquer sur le bouton «Réinitialiser» pour faire revenir BB-8 au départ. Maintenant allons-y !
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
@@ -1403,7 +1403,7 @@ fr:
         text: Ici nous allons faire monter R2-D2 pour qu’il remettre un message au pilote rebelle, et ensuite descendre vers l’autre pilote rebelle. Nous allons utiliser des événements pour qu’il se déplace. Lorsque le joueur utilise les flèches haut/bas du clavier ou les boutons haut/bas.
       6:
         image: notes/starwars_events_6.JPG
-        text: "Nous utilisons le bloc d'événement «\\_Quand vers le haut()\\_» et lui attachons le bloc «\\_Monter()\\_». Lorsque le joueur appuie sur la touche de la flèche vers le haut\\_du clavier, le code attaché au bloc « Quand vers le haut() » est exécuté. Et nous ferons la même chose pour faire descendre Baymax."
+        text: "Nous utilisons le bloc d'événement «Quand vers le haut()» et lui attachons le bloc «Monter()». Lorsque le joueur appuie sur la touche de la flèche vers le hautdu clavier, le code attaché au bloc « Quand vers le haut() » est exécuté. Et nous ferons la même chose pour faire descendre Baymax."
       7:
         image: notes/starwars_events_7.JPG
         text: "Pour ce faire, nous allons utiliser une commande appelée « Quand vers le haut() ». Lorsque tu fais glisser la commande hors de la boîte à outils, tu verras qu'elle se commence et se termine par une parenthèse bouclée au lieu d'un point-virgule. Cela nous donne de l'espace pour mettre d’autres commandes au milieu. Toutes les commandes que nous mettons à l'intérieur de ces parenthèses seront exécutées lorsque le joueur appuie sur la flèche du haut du clavier."
@@ -1412,7 +1412,7 @@ fr:
         text: "Nous voulons que R2-D2 monte alors mettons un bloc « Monter(); » à l'intérieur de la commande. Et nous ferons la même chose pour faire descendre R2-D2."
       9:
         image: notes/starwars_events_9.JPG
-        text: "Maintenant, au lieu d'écrire tout le code pour contrôler notre droïde à l'avance, nous pouvons laisser R2-D2 réagir aux événements «\\_bouton pressé\\_» pour le déplacer sur l'écran. Étape par étape, ton jeu devient plus interactif."
+        text: "Maintenant, au lieu d'écrire tout le code pour contrôler notre droïde à l'avance, nous pouvons laisser R2-D2 réagir aux événements «bouton pressé» pour le déplacer sur l'écran. Étape par étape, ton jeu devient plus interactif."
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
@@ -1428,7 +1428,7 @@ fr:
         text: "[élèves parlant] Nous avons fait un jeu où tu ne peux pas perdre et tout que tu tues te donne des points. Pour mon programme, j'ai inversé les clés afin que chaque fois que tu cliques sur monter, ton personnage descende, et quand tu vas à droite, ton personnage va à gauche. C'est vraiment difficile ! Parfois, tu obtiens juste un avantage, un avantage inéquitable si tu es le développeur du jeu. Est-ce que j’ai réussi ? Ouais !"
       5:
         image: notes/starwars_congrats_5.JPG
-        text: "Lorsque tu as terminé de créer ton jeu, choisis «\\_Partager\\_» pour obtenir un lien à partager avec tes amis, ou pour jouer à ton jeu sur ton téléphone. Amuse-toi bien\\_!"
+        text: Lorsque tu as terminé de créer ton jeu, choisis «Partager» pour obtenir un lien à partager avec tes amis, ou pour jouer à ton jeu sur ton téléphone. Amuse-toi bien!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
@@ -1453,7 +1453,7 @@ fr:
         text: Si je fais glisser le bloc « Se déplacer vers la gauche(); » dans notre espace de travail, que se passe-t-il ? BB-8 se déplace à gauche d’un bloc sur la grille.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "Et si je veux que BB-8 fasse quelque chose après le bloc « Se déplacer vers la gauche();\\_» ? Je peux ajouter un autre bloc à notre programme. Je vais choisir le bloc « Se déplacer vers le haut(); » et je vais le glisser sous mon bloc « Se déplacer vers la gauche(); » jusqu'à ce que le surlignage apparaisse. Puis je le dépose et les deux blocs s’emboîteront. Lorsque j’appuie à nouveau sur Démarrer, BB-8 effectue les commandes qui sont empilées de haut en bas dans notre espace de travail."
+        text: "Et si je veux que BB-8 fasse quelque chose après le bloc « Se déplacer vers la gauche();» ? Je peux ajouter un autre bloc à notre programme. Je vais choisir le bloc « Se déplacer vers le haut(); » et je vais le glisser sous mon bloc « Se déplacer vers la gauche(); » jusqu'à ce que le surlignage apparaisse. Puis je le dépose et les deux blocs s’emboîteront. Lorsque j’appuie à nouveau sur Démarrer, BB-8 effectue les commandes qui sont empilées de haut en bas dans notre espace de travail."
       9:
         image: notes/starwars_blocks_intro_9.JPG
         text: Si jamais tu veux supprimer un bloc, il suffit de le retirer de la pile et de le faire glisser dans la boîte à outils.
@@ -1478,7 +1478,7 @@ fr:
         text: Ici nous allons faire monter R2-D2 pour qu’il remettre un message au pilote rebelle, et ensuite descendre vers l’autre pilote rebelle. Nous allons utiliser des événements pour qu’il se déplace. Lorsque le joueur utilise les flèches haut/bas du clavier ou les boutons haut/bas.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: "Nous utilisons le bloc d'événement «\\_Quand vers le haut()\\_» et lui attachons le bloc «\\_Monter()\\_». Lorsque le joueur appuie sur la touche de la flèche vers le haut\\_du clavier, le code attaché au bloc « Quand vers le haut() » est exécuté. Et nous ferons la même chose pour faire descendre Baymax. Maintenant, au lieu d'écrire tout le code pour contrôler notre droïde à l'avance, nous pouvons laisser R2-D2 réagir aux événements «\\_bouton pressé\\_» pour le déplacer sur l'écran."
+        text: "Nous utilisons le bloc d'événement «Quand vers le haut()» et lui attachons le bloc «Monter()». Lorsque le joueur appuie sur la touche de la flèche vers le hautdu clavier, le code attaché au bloc « Quand vers le haut() » est exécuté. Et nous ferons la même chose pour faire descendre Baymax. Maintenant, au lieu d'écrire tout le code pour contrôler notre droïde à l'avance, nous pouvons laisser R2-D2 réagir aux événements «bouton pressé» pour le déplacer sur l'écran."
       7:
         image: notes/starwars_blocks_events_7.JPG
         text: Étape par étape, ton jeu devient plus interactif.
@@ -1497,7 +1497,7 @@ fr:
         text: "[élèves parlant] Nous avons fait un jeu où tu ne peux pas perdre et tout que tu tues te donne des points. Pour mon programme, j'ai inversé les clés afin que chaque fois que tu cliques sur monter, ton personnage descende, et quand tu vas à droite, ton personnage va à gauche. C'est vraiment difficile ! Parfois, tu obtiens juste un avantage, un avantage inéquitable si tu es le développeur du jeu. Est-ce que j’ai réussi ? Ouais !"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: "Lorsque tu as terminé de créer ton jeu, choisis «\\_Partager\\_» pour obtenir un lien à partager avec tes amis, ou pour jouer à ton jeu sur ton téléphone. Amuse-toi bien\\_!"
+        text: Lorsque tu as terminé de créer ton jeu, choisis «Partager» pour obtenir un lien à partager avec tes amis, ou pour jouer à ton jeu sur ton téléphone. Amuse-toi bien!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -1525,16 +1525,16 @@ fr:
         text: "La zone blanche à droite s’appelle l'espace de travail, et c'est ici que nous allons construire notre programme."
       9:
         image: notes/mc_intro_9.JPG
-        text: "Si nous glissons le bloc « Avancer ();\\_» dans l'espace de travail et cliquons sur »\\_Exécuter\\_», que se passe-t-il ? Alex avance d'un espace sur la grille."
+        text: "Si nous glissons le bloc « Avancer ();» dans l'espace de travail et cliquons sur »Exécuter», que se passe-t-il ? Alex avance d'un espace sur la grille."
       10:
         image: notes/mc_intro_10.JPG
-        text: "Et que se passe-t-il si nous voulons faire quelque chose après qu'elle a avancé d'un espace ? Nous pouvons ajouter un autre bloc à notre programme. Je vais choisir le bloc « Tourner à droite de 90 degrés();\\_» et je vais le faire glisser sous mon bloc « Avancer ();\\_» jusqu'à ce que cette ligne orange apparaisse. Puis je le dépose et les deux blocs s’emboîteront. Lorsque nous appuyons à nouveau sur « Exécuter », Alex effectuera les commandes qui sont empilées du haut vers le bas sur notre espace de travail."
+        text: "Et que se passe-t-il si nous voulons faire quelque chose après qu'elle a avancé d'un espace ? Nous pouvons ajouter un autre bloc à notre programme. Je vais choisir le bloc « Tourner à droite de 90 degrés();» et je vais le faire glisser sous mon bloc « Avancer ();» jusqu'à ce que cette ligne orange apparaisse. Puis je le dépose et les deux blocs s’emboîteront. Lorsque nous appuyons à nouveau sur « Exécuter », Alex effectuera les commandes qui sont empilées du haut vers le bas sur notre espace de travail."
       11:
         image: notes/mc_intro_11.JPG
         text: Si jamais tu veux supprimer un bloc, il te suffit de le refaire glisser de la pile vers la boîte à outils.
       12:
         image: notes/mc_intro_12.JPG
-        text: "Pour annuler tes modifications et revenir à la façon dont le niveau a démarré, utilise le bouton Recommencer dans le coin supérieur droit de l'espace de travail. Une dernière chose : tu vois le petit triangle sur les blocs «\\_Tourner\\_» ? Chaque fois que tu vois ces triangles, cela signifie que tu peux choisir une option différente. Commençons à coder !"
+        text: "Pour annuler tes modifications et revenir à la façon dont le niveau a démarré, utilise le bouton Recommencer dans le coin supérieur droit de l'espace de travail. Une dernière chose : tu vois le petit triangle sur les blocs «Tourner» ? Chaque fois que tu vois ces triangles, cela signifie que tu peux choisir une option différente. Commençons à coder !"
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
@@ -1553,23 +1553,23 @@ fr:
         text: La nuit tombe, alors dans les deux prochains niveaux, nous allons construire une maison pour être en sécurité. Nous allons utiliser le bloc « Répéter » pour faire ça très facilement.
       6:
         image: notes/mc_repeat_6.JPG
-        text: "Pour construire le mur de notre maison, nous pouvons soit dire à Alex d’« Avancer (); » et de placer des planches quatre fois, ou nous pouvons lui dire d’« Avancer (); » et de placer une planche, et ensuite prendre cette commande et utiliser le bloc «\\_Répéter\\_» pour qu'elle exécute l'action plusieurs fois.  Maintenant, nous allons cliquer sur le bloc « Répéter » et lui dire combien de fois nous voulons qu'il exécute cette action. Maintenant nous allons construire notre maison avant que la nuit tombe ! Amuse-toi."
+        text: "Pour construire le mur de notre maison, nous pouvons soit dire à Alex d’« Avancer (); » et de placer des planches quatre fois, ou nous pouvons lui dire d’« Avancer (); » et de placer une planche, et ensuite prendre cette commande et utiliser le bloc «Répéter» pour qu'elle exécute l'action plusieurs fois.  Maintenant, nous allons cliquer sur le bloc « Répéter » et lui dire combien de fois nous voulons qu'il exécute cette action. Maintenant nous allons construire notre maison avant que la nuit tombe ! Amuse-toi."
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Maintenant, nous allons apprendre les instructions «\\_Si\\_». Les instructions « Si » sont un élément fondamental de l’apprentissage de la programmation. Elles aident un ordinateur à prendre des décisions."
+        text: Maintenant, nous allons apprendre les instructions «Si». Les instructions « Si » sont un élément fondamental de l’apprentissage de la programmation. Elles aident un ordinateur à prendre des décisions.
       2:
         image: notes/mc_if_statements_2.JPG
         text: "Tous les ordinateurs utilisent des instructions « Si », y compris mon téléphone. Par exemple, quand je déverrouille mon téléphone, il exécute un code qui dit que si j'entre correctement le mot de passe, alors il déverrouillera le téléphone. Dans le cas contraire, il affiche un message d'erreur."
       3:
         image: notes/mc_if_statements_3.JPG
-        text: "Tu peux utiliser des instructions «\\_Si\\_» dans ton code pour faire réagir Steve et Alice à ce qu'ils voient dans le monde. Par exemple, s'il y a un rocher en face d'eux, ils peuvent tourner à gauche. Ou tourner à droite s’ils courent vers un arbre."
+        text: "Tu peux utiliser des instructions «Si» dans ton code pour faire réagir Steve et Alice à ce qu'ils voient dans le monde. Par exemple, s'il y a un rocher en face d'eux, ils peuvent tourner à gauche. Ou tourner à droite s’ils courent vers un arbre."
       4:
         image: notes/mc_if_statements_4.JPG
         text: "Dans ce cas, nous ne voulons pas tomber dans la lave. C’est facile de prévoir pour la lave. Nous pouvons la voir sur l'écran. Mais qu'en est-il de la lave que nous ne pouvons pas voir sous la pierre ?"
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "Après avoir extrait les pierres, nous devrons vérifier s’il y a de la lave à cet endroit avant d'avancer. S'il y a de la lave, nous voulons placer une pierre en face de notre personnage avant qu’il avance. De cette façon, nous pouvons passer en toute sécurité. Il faut encore extraire quelques pierres ! Et n'oubliez pas d'utiliser l’instruction «\\_Si\\_» pour faire attention où tu marches."
+        text: "Après avoir extrait les pierres, nous devrons vérifier s’il y a de la lave à cet endroit avant d'avancer. S'il y a de la lave, nous voulons placer une pierre en face de notre personnage avant qu’il avance. De cette façon, nous pouvons passer en toute sécurité. Il faut encore extraire quelques pierres ! Et n'oubliez pas d'utiliser l’instruction «Si» pour faire attention où tu marches."
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
@@ -1582,7 +1582,7 @@ fr:
         text: "[élèves parlant] C' est sur le point de se réaliser. Cisaillement. J'ai fait un L avec des torches. J'ai fait un A en planches de bouleau. Cela a fonctionné, cela a fonctionné. Nous avons construit une maison avec de la laine !"
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "Lorsque tu as terminé ta création, sélectionne «\\_Partager\\_» pour obtenir un lien et partager tes créations avec tes amis. Amuse-toi bien\\_!"
+        text: Lorsque tu as terminé ta création, sélectionne «Partager» pour obtenir un lien et partager tes créations avec tes amis. Amuse-toi bien!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
@@ -1595,7 +1595,7 @@ fr:
         text: "[élèves parlant] C' est sur le point de se réaliser. Cisaillement. J'ai fait un L avec des torches. J'ai fait un A en planches de bouleau. Cela a fonctionné, cela a fonctionné. Nous avons construit une maison avec de la laine !"
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: "Maintenant tu peux construire tout ce que tu veux. Amuse-toi bien\\_!"
+        text: Maintenant tu peux construire tout ce que tu veux. Amuse-toi bien!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -1620,7 +1620,7 @@ fr:
         text: "Pour commencer, tu devras lier tes blocs au bloc orange « Lors du lancement ». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies la ligne jaune, et de cette façon, ils s'emboîteront."
       8:
         image: notes/gumball_intro_8.JPG
-        text: "Dans ce premier puzzle, nous allons faire dire quelque chose aux acteurs en liant le bloc «\\_Dire\\_» au bloc « Lors du lancement » et en y écrivant ton message. Lorsque tes blocs sont en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé."
+        text: Dans ce premier puzzle, nous allons faire dire quelque chose aux acteurs en liant le bloc «Dire» au bloc « Lors du lancement » et en y écrivant ton message. Lorsque tes blocs sont en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé.
       9:
         image: notes/gumball_intro_9.JPG
         text: Commence, et à la fin tu pourras créer ton propre jeu, avec toutes sortes de joueurs qui peuvent interagir, marquer des points, jeter des objets et se faire disparaitre. Ça ne dépend que de toi !
@@ -1633,17 +1633,17 @@ fr:
         text: "Parmi les exemples d’événements figurent l'écoute d'un clic de souris ou d'une touche flèche vers en haut ou en bas du clavier, ou même un tapotement de l'écran."
       3:
         image: notes/gumball_events_3.JPG
-        text: "Ici, nous allons faire dire quelque chose à l'acteur lorsque le joueur clique dessus. Nous allons utiliser le bloc « Quand clic » et lui attacher le bloc «\\_Dire\\_». Lorsque le joueur clique, tous les blocs attachés à ce bloc seront exécutés."
+        text: "Ici, nous allons faire dire quelque chose à l'acteur lorsque le joueur clique dessus. Nous allons utiliser le bloc « Quand clic » et lui attacher le bloc «Dire». Lorsque le joueur clique, tous les blocs attachés à ce bloc seront exécutés."
       4:
         image: notes/gumball_events_4.JPG
-        text: "Il y a aussi des blocs « Quand flèche ». Si tu lies les blocs «\\_Déplacer\\_» à ces derniers, tu peux commencer à déplacer tes acteurs vers le haut, vers le bas, vers la gauche ou vers la droite avec les touches fléchées du clavier. Petit à petit, ton jeu devient plus interactif."
+        text: Il y a aussi des blocs « Quand flèche ». Si tu lies les blocs «Déplacer» à ces derniers, tu peux commencer à déplacer tes acteurs vers le haut, vers le bas, vers la gauche ou vers la droite avec les touches fléchées du clavier. Petit à petit, ton jeu devient plus interactif.
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: "Tu imagines si tu devais répéter quelque chose encore et toujours\\_? Heureusement tu n’auras jamais à faire ça parce que les ordinateurs savent vraiment bien répéter les choses."
+        text: Tu imagines si tu devais répéter quelque chose encore et toujours? Heureusement tu n’auras jamais à faire ça parce que les ordinateurs savent vraiment bien répéter les choses.
       2:
         image: notes/gumball_repeat_2.JPG
-        text: "C'est le bloc « Répéter à l’infini\\_». Tout ce qui se trouve dans ce bloc sera effectué à l’infini tout au long du jeu. Si tu veux qu'un acteur fasse quelque chose de manière répétée, sans que le joueur ait à faire quoi que ce soit, nous allons placer ces blocs à l’intérieur du bloc «\\_Répéter à l'infini\\_»."
+        text: "C'est le bloc « Répéter à l’infini». Tout ce qui se trouve dans ce bloc sera effectué à l’infini tout au long du jeu. Si tu veux qu'un acteur fasse quelque chose de manière répétée, sans que le joueur ait à faire quoi que ce soit, nous allons placer ces blocs à l’intérieur du bloc «Répéter à l'infini»."
       3:
         image: notes/gumball_repeat_3.JPG
         text: "Dans le prochain puzzle, notre objectif est d'aider l'acteur à faire un travail en continu. Apprendre comment toutes les commandes « Répéter » fonctionnent te permettra d'économiser énormément de temps plus tard lorsque tu développeras ton propre jeu."
@@ -1671,7 +1671,7 @@ fr:
         text: "Pour commencer, tu devras lier tes blocs au bloc orange « Lors du lancement ». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies la ligne jaune, et de cette façon, ils s'emboîteront."
       8:
         image: notes/iceage_intro_8.JPG
-        text: "Dans ce premier puzzle, nous allons faire dire quelque chose aux acteurs en liant le bloc «\\_Dire\\_» au bloc « Lors du lancement » et en y écrivant ton message. Lorsque tes blocs sont en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé."
+        text: Dans ce premier puzzle, nous allons faire dire quelque chose aux acteurs en liant le bloc «Dire» au bloc « Lors du lancement » et en y écrivant ton message. Lorsque tes blocs sont en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé.
       9:
         image: notes/iceage_intro_9.JPG
         text: Commence, et à la fin tu pourras créer ton propre jeu, avec toutes sortes de joueurs qui peuvent interagir, marquer des points, jeter des objets et se faire disparaitre. Ça ne dépend que de toi !
@@ -1684,17 +1684,17 @@ fr:
         text: "Parmi les exemples d’événements figurent l'écoute d'un clic de souris ou d'une touche flèche vers en haut ou en bas du clavier, ou même un tapotement de l'écran."
       3:
         image: notes/iceage_events_3.JPG
-        text: "Ici, nous allons faire dire quelque chose à l'acteur lorsque le joueur clique dessus. Nous allons utiliser le bloc « Quand clic » et lui attacher le bloc «\\_Dire\\_». Lorsque le joueur clique, tous les blocs attachés à ce bloc seront exécutés."
+        text: "Ici, nous allons faire dire quelque chose à l'acteur lorsque le joueur clique dessus. Nous allons utiliser le bloc « Quand clic » et lui attacher le bloc «Dire». Lorsque le joueur clique, tous les blocs attachés à ce bloc seront exécutés."
       4:
         image: notes/iceage_events_4.JPG
-        text: "Il y a aussi des blocs « Quand flèche ». Si tu lies les blocs «\\_Déplacer\\_» à ces derniers, tu peux commencer à déplacer tes acteurs vers le haut, vers le bas, vers la gauche ou vers la droite avec les touches fléchées du clavier. Petit à petit, ton jeu devient plus interactif."
+        text: Il y a aussi des blocs « Quand flèche ». Si tu lies les blocs «Déplacer» à ces derniers, tu peux commencer à déplacer tes acteurs vers le haut, vers le bas, vers la gauche ou vers la droite avec les touches fléchées du clavier. Petit à petit, ton jeu devient plus interactif.
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: "Tu imagines si tu devais répéter quelque chose encore et toujours\\_? Heureusement tu n’auras jamais à faire ça parce que les ordinateurs savent vraiment bien répéter les choses."
+        text: Tu imagines si tu devais répéter quelque chose encore et toujours? Heureusement tu n’auras jamais à faire ça parce que les ordinateurs savent vraiment bien répéter les choses.
       2:
         image: notes/iceage_repeat_2.JPG
-        text: "C'est le bloc « Répéter à l’infini\\_». Tout ce qui se trouve dans ce bloc sera effectué à l’infini tout au long du jeu. Si tu veux qu'un acteur fasse quelque chose de manière répétée, sans que le joueur ait à faire quoi que ce soit, nous allons placer ces blocs à l’intérieur du bloc «\\_Répéter à l'infini\\_»."
+        text: "C'est le bloc « Répéter à l’infini». Tout ce qui se trouve dans ce bloc sera effectué à l’infini tout au long du jeu. Si tu veux qu'un acteur fasse quelque chose de manière répétée, sans que le joueur ait à faire quoi que ce soit, nous allons placer ces blocs à l’intérieur du bloc «Répéter à l'infini»."
       3:
         image: notes/iceage_repeat_3.JPG
         text: "Dans le prochain puzzle, notre objectif est d'aider l'acteur à faire un travail en continu. Apprendre comment toutes les commandes « Répéter » fonctionnent te permettra d'économiser énormément de temps plus tard lorsque tu développeras ton propre jeu."

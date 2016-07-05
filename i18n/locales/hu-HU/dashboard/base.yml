@@ -23,17 +23,17 @@ hu:
           future: nem lehet a jövőben
   hello: Helló világ
   welcome_back: 'Üdv újra, %{name}'
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Saját Profi Tanulmányi Terv
+  see_your_learning_plan: Tekintsd meg a tanulmányi tervedet
   submit: Elküldés
   unsubmit: Visszavon
   previous_page: Előző oldal
   next_page: Következő oldal
-  next_resource: Next resource
+  next_resource: Következő erőforrás
   done_with_module: Done with this Learning Module
   cancel: Mégsem
   okay: Oké
-  heading_x_of_y: '%{heading} (page %{x} of %{y})'
+  heading_x_of_y: '%{heading} (oldal %{x} %{y})'
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
@@ -87,7 +87,7 @@ hu:
     teacher_title: Tanár regisztrálás
     student_pitch: Diák fiók létrehozása a Code.org-on
     student_title: Diák regisztráció
-    signup_title: Sign up for Code.org
+    signup_title: Fiók létrehozása a Code.org-on
     school_name: Iskola neve (nem kötelező)
     school_address: Iskola címe (nem kötelező)
     address_placeholder: cím, város, állam(megye), irányítószám
@@ -106,7 +106,7 @@ hu:
     student_terms: "Beleegyezem a Code.org <a href='http://code.org/tos'>Felhasználói szabályaiba</a>. Ha 13 éves kor alatt regisztráltam, ezen űrlap kitöltésével igazolom, hogy a szüleim vagy a törvényes gyámom beleegyezett, hogy használjam a Code.org szolgáltatásait. <br/> A 13 évesnél fiatalabb felhasználóink e-mail címét nem tároljuk abból a célból, hogy kapcsolatba lépjünk velük."
     teacher_terms: "Beleegyezem a Code.org <a href='http://code.org/tos'>Felhasználói szabályaiba</a>."
     additional_information: 'Még szükségünk van néhány adatra  a regisztráció folytatásához.'
-    user_type_label: Account Type
+    user_type_label: Fióktípus
     user_type_teacher: Tanár
     user_type_student: Diák
   signin_form:
@@ -336,9 +336,8 @@ hu:
     print_certificate: Igazolás kinyomtatása
     announcement_title: Közlemények
     announcement_view_all: Összes megtekintése
-    announcement_message: |-
-      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-    announcement_button: Test the feature
+    announcement_message: 'Segíts egy új funkció tesztelésében. Fontosnak tartjuk, hogy a tanulók bátran próbálkozzanak és kísérletezzenek. Ezért akkor is futtathatóvá tesszük a programot, ha nincs minden blokk összekapcsolva. Várjuk Visszajelzéseiteket a "fel nem használt blokk" funkcióról annak bevezetése előtt.'
+    announcement_button: Teszteld a funkciót
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add meg a nevedet
   move_students:

@@ -89,13 +89,13 @@ class LevelTest < ActiveSupport::TestCase
     level = Level.create(@maze_data)
     toolbox = Nokogiri::XML(level.complete_toolbox(:start_blocks))
 
-    assert_equal "xml", toolbox.root().name
-    assert_equal "toolbox", toolbox.root().attributes["id"].value
+    assert_equal "xml", toolbox.root.name
+    assert_equal "toolbox", toolbox.root.attributes["id"].value
 
-    first_category = toolbox.root().children.first
+    first_category = toolbox.root.children.first
     assert_equal "category", first_category.name
 
-    first_block = toolbox.root().css('category > *').first
+    first_block = toolbox.root.css('category > *').first
     assert_equal "block", first_block.name
     assert_equal 'category', first_block.attributes['type'].value
   end
