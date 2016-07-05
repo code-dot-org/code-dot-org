@@ -4,6 +4,7 @@
 import {combineReducers} from 'redux';
 import utils from '../utils';
 import {animations as animationsApi} from '../clientApi';
+import assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 /* global dashboard */
@@ -220,7 +221,7 @@ export function addAnimation(key, props) {
       key,
       props
     });
-    dispatch(loadAnimationFromSource(key, undefined, () => {
+    dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
     dashboard.project.projectChanged();
@@ -239,7 +240,7 @@ export function addLibraryAnimation(props) {
       key,
       props
     });
-    dispatch(loadAnimationFromSource(key, props.sourceUrl, () => {
+    dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
     dashboard.project.projectChanged();
@@ -331,22 +332,20 @@ export function deleteAnimation(key) {
  * Load the indicated animation (which must already have an entry in the project
  * animation list) from its source, whether that is S3 or the animation library.
  * @param {!AnimationKey} key
- * @param {string} [sourceUrl]
  * @param {function} [callback]
  */
-function loadAnimationFromSource(key, sourceUrl, callback) {
+function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState().animationList;
     // Figure out where to get the animation from.
-    // 1. If a sourceUrl was provided as an argument, use that.
-    // 2. If the animation has a sourceUrl it's external (from the library
+    // 1. If the animation has a sourceUrl it's external (from the library
     //    or some other outside source, not the animation API)
-    // 3. Otherwise use the animation key to look it up in the animations API
+    // 2. Otherwise use the animation key to look it up in the animations API
     // TODO: Take version ID into account here...
-    sourceUrl = sourceUrl ||
-        state.propsByKey[key].sourceUrl ||
-        animationsApi.basePath(key) + '.png';
+
+    const rawSourceUrl = state.propsByKey[key].sourceUrl;
+    let sourceUrl = rawSourceUrl ? assetPrefix.fixPath(rawSourceUrl) : animationsApi.basePath(key) + '.png';
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
