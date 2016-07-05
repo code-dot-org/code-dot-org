@@ -97,6 +97,7 @@ module.exports.blocks = [
   //{func: 'accelerometer', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'accelerometer.getOrientation', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
   {func: 'accelerometer.getAcceleration', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"x"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
+  {func: 'accelerometer.start', category: CIRCUIT_CATEGORY},
   {func: 'accelerometer.sensitivity', category: CIRCUIT_CATEGORY, type: 'property' },
 
   {func: 'value', blockPrefix: `${touchSensorVariables[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: touchSensorType, modeOptionName: '*.value', objectDropdown: {options: touchSensorVariables}, type: 'readonlyproperty'},
@@ -110,6 +111,7 @@ module.exports.blocks = [
 
   {func: 'value', objectDropdown: { options: sensorVariables }, modeOptionName: "*.value", blockPrefix: `${sensorVariables[0]}.`, category: CIRCUIT_CATEGORY, type: 'readonlyproperty', tipPrefix: '[Sensor].'},
   {func: 'getAveragedValue', objectDropdown: { options: sensorVariables }, modeOptionName: "*.getAveragedValue", blockPrefix: `${sensorVariables[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['500'], paletteParams: ['ms'], type: 'value'},
+  {func: 'start', objectDropdown: { options: sensorVariables }, modeOptionName: "*.start", blockPrefix: `${sensorVariables[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].'},
   {func: 'setScale', objectDropdown: { options: sensorVariables }, modeOptionName: "*.setScale", blockPrefix: `${sensorVariables[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['0', '100'], paletteParams: ['low', 'high']},
   {func: 'threshold', objectDropdown: { options: sensorVariables }, modeOptionName: "*.threshold", blockPrefix: `${sensorVariables[0]}.`, category: CIRCUIT_CATEGORY, type: 'property', tipPrefix: '[Sensor].' },
 
