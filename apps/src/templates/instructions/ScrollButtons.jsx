@@ -3,20 +3,31 @@ import Radium from 'radium';
 import color from '../../color';
 import { getOuterHeight } from './utils';
 
+const WIDTH = 20;
+const HEIGHT = WIDTH;
+
 const styles = {
   arrow: {
     width: 0,
     height: 0,
-    borderLeft: '20px solid transparent',
-    borderRight: '20px solid transparent',
+    cursor: 'pointer',
+    borderStyle: 'solid',
+    borderColor: 'transparent',
+    borderRightWidth: WIDTH,
+    borderLeftWidth: WIDTH,
     position: 'absolute',
     transition: 'opacity 200ms',
+    ':hover': {
+      filter: 'drop-shadow(2px 2px 5px rgba(0,0,0,0.3))'
+    }
   },
   arrowUp: {
-    borderBottom: '20px solid ' + color.purple,
+    borderBottomWidth: HEIGHT,
+    borderBottomColor: color.purple,
   },
   arrowDown: {
-    borderTop: '20px solid ' + color.purple,
+    borderTopWidth: HEIGHT,
+    borderTopColor: color.purple,
   },
 };
 
