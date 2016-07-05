@@ -2,7 +2,7 @@
  * @overview React for the End-of-Stage Experience
  */
 /* global React */
-import color from '../color';
+import color from '../../color';
 
 const styles = {
   container: {
