@@ -46,8 +46,8 @@ const ScrollButtons = React.createClass({
   },
 
   getMinHeight() {
-    const scrollButtonsHeight = getOuterHeight(this.refs.scrollUp, true)
-        + getOuterHeight(this.refs.scrollDown, true);
+    const scrollButtonsHeight = getOuterHeight(this.refs.scrollUp, true) +
+        getOuterHeight(this.refs.scrollDown, true);
     return scrollButtonsHeight + (MARGIN * 2);
   },
 

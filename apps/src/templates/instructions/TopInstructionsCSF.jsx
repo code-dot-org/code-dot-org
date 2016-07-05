@@ -204,8 +204,8 @@ var TopInstructions = React.createClass({
     const middleColHeight = minInstructionsHeight;
     const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
 
-    return Math.max(leftColHeight, middleColHeight, rightColHeight)
-        + RESIZER_HEIGHT + margins;
+    return Math.max(leftColHeight, middleColHeight, rightColHeight) +
+        RESIZER_HEIGHT + margins;
   },
 
   /**
