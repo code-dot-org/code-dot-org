@@ -823,7 +823,8 @@ function setupReduxSubscribers(store) {
     // Simulate a data view change when switching into data mode.
     const view = state.data && state.data.view;
     const lastView = lastState.data && lastState.data.view;
-    if (view !== lastView || changedToDataMode(state, lastState)) {
+    const isDataMode = (state.interfaceMode === ApplabInterfaceMode.DATA);
+    if ((isDataMode && view !== lastView) || changedToDataMode(state, lastState)) {
       onDataViewChange(state.data.view, state.data.tableName);
     }
 
