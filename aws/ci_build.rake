@@ -143,34 +143,6 @@ task :firebase_task do
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:set_config'
 end
 
-#
-# Define the CODE STUDIO BUILD task.
-#
-task :code_studio_task do
-  packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
-
-  updated_package = packager.update_from_s3
-  if updated_package
-    HipChat.log "Downloaded code-studio package from S3: #{packager.commit_hash}"
-    next # no need to do anything if we already got a package from s3
-  end
-
-  # Test and staging are the only environments that should be uploading new packages
-  raise 'No valid code-studio package found' unless rack_env?(:staging) || rack_env?(:test)
-
-  raise 'Wont build code-studio with staged changes' if RakeUtils.git_staged_changes?(code_studio_dir)
-
-  HipChat.log 'Building code-studio...'
-  RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
-  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
-  HipChat.log 'code-studio built'
-
-  # upload to s3
-  package = packager.upload_package_to_s3('/build')
-  HipChat.log "Uploaded code-studio package to S3: #{packager.commit_hash}"
-  packager.decompress_package(package)
-end
-
 file deploy_dir('rebuild') do
   touch deploy_dir('rebuild')
 end
@@ -308,7 +280,6 @@ $websites = build_task('websites', [
   BLOCKLY_CORE_TASK,
   :apps_task,
   :firebase_task,
-  :code_studio_task,
   :build_with_cloudfront,
   :deploy
 ])
