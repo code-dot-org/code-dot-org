@@ -103,30 +103,27 @@ class AbilityTest < ActiveSupport::TestCase
   test "as admin" do
     ability = Ability.new(create(:admin))
 
-    assert ability.cannot?(:read, Activity)
-    assert ability.cannot?(:read, Game)
-    assert ability.cannot?(:read, Level)
-    assert ability.cannot?(:read, Script)
-    assert ability.cannot?(:read, ScriptLevel)
-    assert ability.cannot?(:read, UserLevel)
-    assert ability.cannot?(:read, UserScript)
+    assert ability.can?(:read, Game)
+    assert ability.can?(:read, Level)
+    assert ability.can?(:read, Activity)
 
-    assert ability.cannot?(:destroy, Game)
-    assert ability.cannot?(:destroy, Level)
-    assert ability.cannot?(:destroy, Activity)
+    assert ability.can?(:destroy, Game)
+    # Can only destroy custom levels
+    assert ability.can?(:destroy, Level.where.not(user_id: nil).first)
+    assert ability.can?(:destroy, Activity)
 
-    assert ability.cannot?(:read, Script.find_by_name('ECSPD'))
-    assert ability.cannot?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
 
-    assert ability.cannot?(:read, @public_script)
-    assert ability.cannot?(:read, @login_required_script)
-    assert ability.cannot?(:read, @student_of_admin_script)
-    assert ability.cannot?(:read, @admin_script)
+    assert ability.can?(:read, @public_script)
+    assert ability.can?(:read, @login_required_script)
+    assert ability.can?(:read, @student_of_admin_script)
+    assert ability.can?(:read, @admin_script)
 
-    assert ability.cannot?(:read, @public_script_level)
-    assert ability.cannot?(:read, @login_required_script_level)
-    assert ability.cannot?(:read, @student_of_admin_script_level)
-    assert ability.cannot?(:read, @admin_script_level)
+    assert ability.can?(:read, @public_script_level)
+    assert ability.can?(:read, @login_required_script_level)
+    assert ability.can?(:read, @student_of_admin_script_level)
+    assert ability.can?(:read, @admin_script_level)
   end
 
   test 'with hint_access manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
@@ -186,7 +183,6 @@ class AbilityTest < ActiveSupport::TestCase
       user_id: user.id, permission: UserPermission::LEVELBUILDER)
     ability = Ability.new user
 
-    assert ability.can?(:manage, Game)
     assert ability.can?(:manage, Level)
     assert ability.can?(:manage, Script)
     assert ability.can?(:manage, ScriptLevel)
