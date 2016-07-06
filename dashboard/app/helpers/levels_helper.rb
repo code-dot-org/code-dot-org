@@ -218,7 +218,7 @@ module LevelsHelper
   # appropriate to the level being rendered.
   def render_app_dependencies
     use_droplet = app_options[:droplet]
-    use_makerlab = @level.game == Game.applab && @level.makerlab_enabled
+    use_makerlab = @level.is_a?(Applab) && @level.makerlab_enabled
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
     use_gamelab = @level.game == Game.gamelab
@@ -284,8 +284,10 @@ module LevelsHelper
     l = @level
     raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
-    app_options = l.blockly_options.dup
-    level_options = app_options[:level] = app_options[:level].dup
+    app_options = l.blockly_app_options(l.game, l.skin).dup
+    level_options = l.blockly_level_options.dup
+    app_options[:level] = level_options
+    app_options[:levelId] = l.level_num
 
     # Locale-dependent option
     # Fetch localized strings

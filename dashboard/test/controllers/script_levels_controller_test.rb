@@ -138,8 +138,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # start blocks comes from project_level not real_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<xml/>', app_options[:level]['startBlocks']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<xml/>', level_options['startBlocks']
   end
 
   test 'project template level does not set start blocks when not defined' do
@@ -156,8 +156,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # start blocks comes from real_level not project_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<shouldnot:override/>', app_options[:level]['startBlocks']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<shouldnot:override/>', level_options['startBlocks']
   end
 
   test 'project template level sets start html when defined' do
@@ -175,8 +175,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # start html comes from project_level not real_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<div><label id="label1">expected html</label></div>', app_options[:level]['startHtml']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<div><label id="label1">expected html</label></div>', level_options['startHtml']
   end
 
   test 'project template level does not set start html when not defined' do
@@ -193,8 +193,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # start html comes from real_level not project_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<div><label id="label1">real_level html</label></div>', app_options[:level]['startHtml']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<div><label id="label1">real_level html</label></div>', level_options['startHtml']
   end
 
   test 'project template level sets start animations when defined' do
@@ -252,8 +252,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # toolbox blocks comes from project_level not real_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<xml><toolbox/></xml>', app_options[:level]['toolbox']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<xml><toolbox/></xml>', level_options['toolbox']
   end
 
   test 'project template level does not set toolbox blocks when not defined' do
@@ -270,8 +270,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # toolbox blocks comes from real_level not project_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<shouldnot:override/>', app_options[:level]['toolbox']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<shouldnot:override/>', level_options['toolbox']
   end
 
   test 'should show video in twenty hour script level' do

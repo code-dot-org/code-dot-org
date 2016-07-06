@@ -502,14 +502,13 @@ var projects = module.exports = {
     this.sourceHandler.getAnimationList(animations => {
       const source = this.sourceHandler.getLevelSource();
       const html = this.sourceHandler.getLevelHtml();
-      if (currentSources.source === source &&
-          currentSources.html === html &&
-          currentSources.animations === animations) {
+      const newSources = {source, html, animations};
+      if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
         hasProjectChanged = false;
         return;
       }
 
-      this.save({source, html, animations}, function () {
+      this.save(newSources, () => {
         hasProjectChanged = false;
       });
     });

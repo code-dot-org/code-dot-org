@@ -8,7 +8,7 @@ nav: plp_playbook_nav
 # Facilitator Support
 
 
-### Facilitators are key to building a sustainable computer science community in your region. They are the bridge between your organization and the teachers you serve and impact the quality of the professional learning programs. The following resources will help you sustain and grow a strong corps of local facilitators.
+#### Facilitators are key to building a sustainable computer science community in your region. They are the bridge between your organization and the teachers you serve and impact the quality of the professional learning programs. The following resources will help you sustain and grow a strong corps of local facilitators.
 
 ## Table of Contents
 - [Example Facilitator One Pager](#page)
@@ -19,7 +19,9 @@ nav: plp_playbook_nav
 ________________
 <a id="page"></a>
 ## Example Facilitator One Pager
-<a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>This one pager</a> is an example of how to format the information that facilitators will need to run a successful workshop. 
+The facilitator one pager should be sent to facilitators at least 10 days prior to the workshop. It provides facilitators all of the logistical information needed to run their workshop.
+
+Use <a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop. 
 
 ________________
 <a id="contract"></a>
