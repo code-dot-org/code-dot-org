@@ -1,6 +1,4 @@
-require 'cdo/regexp'
-require 'cdo/geocoder'
-require 'cdo/web_purify'
+require 'cdo/share_filtering'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -12,7 +10,6 @@ class ActivitiesController < ApplicationController
   protect_from_forgery except: :milestone
 
   MAX_INT_MILESTONE = 2_147_483_647
-  USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
 
   MIN_LINES_OF_CODE = 0
   MAX_LINES_OF_CODE = 1000
@@ -42,12 +39,8 @@ class ActivitiesController < ApplicationController
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
     if params[:program] && sharing_allowed
-      begin
-        share_failure = find_share_failure(params[:program])
-      rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
-        # If WebPurify fails, the program will be allowed
-      end
-
+      fail_type, contents, share_checking_error = ShareFiltering.find_share_failure(params[:program], locale)
+      share_failure = share_failure_for(fail_type, contents)
       unless share_failure
         @level_source = LevelSource.find_identical_or_create(@level, params[:program])
         slog(tag: 'share_checking_error', error: "#{share_checking_error.class.name}: #{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
@@ -107,22 +100,28 @@ class ActivitiesController < ApplicationController
 
   private
 
-  def find_share_failure(program)
-    return nil unless program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+  def share_failure_for(failure_type, content)
+    return nil unless failure_type
+    {
+        message: share_message_for(failure_type),
+        contents: content,
+        type: failure_type
+    }.reject{|k, _| failure_type == 'profanity' && k == :contents}
+  end
 
-    xml_tag_regexp = /<[^>]*>/
-    program_tags_removed = program.gsub(xml_tag_regexp, "\n")
-
-    if email = RegexpUtils.find_potential_email(program_tags_removed)
-      return {message: t('share_code.email_not_allowed'), contents: email, type: 'email'}
-    elsif street_address = Geocoder.find_potential_street_address(program_tags_removed)
-      return {message: t('share_code.address_not_allowed'), contents: street_address, type: 'address'}
-    elsif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
-      return {message: t('share_code.phone_number_not_allowed'), contents: phone_number, type: 'phone'}
-    elsif WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
-      return {message: t('share_code.profanity_not_allowed'), type: 'profanity'}
+  def share_message_for(failure_type)
+    case failure_type
+      when 'email'
+        t('share_code.email_not_allowed')
+      when 'address'
+        t('share_code.address_not_allowed')
+      when 'phone'
+        t('share_code.phone_number_not_allowed')
+      when 'profanity'
+        t('share_code.profanity_not_allowed')
+      else
+        nil
     end
-    nil
   end
 
   def milestone_logger

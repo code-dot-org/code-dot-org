@@ -977,7 +977,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with http error slogs' do
     # allow sharing when there's an error, slog so it's possible to look up and review later
 
-    @controller.stubs(:find_share_failure).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
+    WebPurify.stubs(:find_potential_profanity).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
       params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && !params[:level_source_id].nil?
     end
