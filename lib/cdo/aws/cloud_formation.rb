@@ -230,7 +230,8 @@ module AWS
           lambda: method(:lambda),
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
-          update_bootstrap_script: method(:update_bootstrap_script)
+          update_bootstrap_script: method(:update_bootstrap_script),
+          log_name: LOG_NAME
         )
         erb_output = erb_eval(template_string)
         YAML.load(erb_output).to_json
