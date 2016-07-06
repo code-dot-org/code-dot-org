@@ -82,6 +82,9 @@ To run a specific unit test, you can run
 
 ### UI Tests and Eyes Tests
 We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) and "Eyes tests" (Selenium+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
+Or you can just use this shortcut:
+
+`rake test:ui feature=dashboard/test/ui/features/sometest.feature`
 
 ### Pegasus Tests
 `cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~10 seconds to run.
