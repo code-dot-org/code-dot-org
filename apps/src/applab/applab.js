@@ -367,13 +367,13 @@ function shouldRenderFooter() {
   return studioApp.share;
 }
 
-const APPLAB_URL_PATTERN = /^(.*\/projects\/applab\/[A-Za-z0-9-]+)\/.*/;
+const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
 /**
  * @returns the absolute url to the root of this project without a trailing slash.
  *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
  */
 function getProjectUrl() {
-  const match = location.href.match(APPLAB_URL_PATTERN);
+  const match = location.href.match(PROJECT_URL_PATTERN);
   if (match) {
     return match[1];
   }
