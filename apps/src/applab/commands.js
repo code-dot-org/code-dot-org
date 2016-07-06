@@ -1840,8 +1840,6 @@ applabCommands.analogRead = function (opts) {
 };
 
 applabCommands.onBoardEvent = function (opts) {
-  //apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
-
   return Applab.makerlabController.onBoardEvent(opts.component, opts.event, opts.callback);
 };
 
