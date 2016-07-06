@@ -1,18 +1,5 @@
 {
   "name": "@cdo/apps/test",
   "version": "0.0.1",
-  "description": "Tests for cdo apps",
-  "browserify": {
-    "transform": [
-      ["babelify", {"compact": false, "ignore": "blockly"}],
-      "require-globify",
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "blockly": {
-      "exports": "Blockly"
-    },
-    "marked": "global:marked"
-  }
+  "description": "Tests for cdo apps"
 }
