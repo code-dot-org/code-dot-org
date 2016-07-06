@@ -32,6 +32,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"All 4 of the starting blocks should go inside of your repeat block to solve this puzzle.\",\r\n  \"hint_id\": \"artistLoopsK5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,

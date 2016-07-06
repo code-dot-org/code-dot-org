@@ -28,6 +28,7 @@
     "examples_required": "false",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
     "markdown_instructions": "**Challenge:** Debug this level by adding blocks to get me to the pig!",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Stuck? Try tracing the bird's path with your finger.\",\r\n  \"hint_id\": \"K2.0_sequence_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
@@ -65,6 +66,7 @@
       <xml>
         <block type="maze_moveEast"/>
         <block type="maze_moveNorth"/>
+        <block type="maze_moveSouth"/>
       </xml>
     </recommended_blocks>
     <solution_blocks>
