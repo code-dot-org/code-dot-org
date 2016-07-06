@@ -18,7 +18,14 @@ try {
 import {initializeCircuitPlaygroundComponents, TouchSensor} from './PlaygroundComponents';
 
 /** @const {string} */
-var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
+const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
+const J5_CONSTANTS = {
+  INPUT: 0,
+  OUTPUT: 1,
+  ANALOG: 2,
+  PWM: 3,
+  SERVO: 4
+};
 
 var BoardController = module.exports = function () {
   ChromeSerialPort.extensionId = CHROME_APP_ID;
@@ -65,8 +72,12 @@ BoardController.prototype.ensureBoardConnected = function () {
 };
 
 BoardController.prototype.installComponentsOnInterpreter = function (codegen, jsInterpreter) {
-  this.prewiredComponents = this.prewiredComponents ||
-      initializeCircuitPlaygroundComponents(this.board_.io, this.board_, five, PlaygroundIO);
+  if (!this.prewiredComponents) {
+    this.prewiredComponents = _.assign({},
+        initializeCircuitPlaygroundComponents(this.board_.io, five, PlaygroundIO),
+        {board: this.board_},
+        J5_CONSTANTS);
+  }
 
   /**
    * Set of classes used by interpreter to understand the type of instantiated

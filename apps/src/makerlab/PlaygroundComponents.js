@@ -20,7 +20,7 @@ import _ from 'lodash';
  *
  * @returns {Object.<String, Object>} board components
  */
-export function initializeCircuitPlaygroundComponents(io, board, five, PlaygroundIO) {
+export function initializeCircuitPlaygroundComponents(io, five, PlaygroundIO) {
   const colorLeds = Array.from({length: N_COLOR_LEDS}, (_, index) => new five.Led.RGB({
     controller: PlaygroundIO.Pixel,
     pin: index
@@ -102,17 +102,6 @@ export function initializeCircuitPlaygroundComponents(io, board, five, Playgroun
     buttonL: buttonL,
 
     buttonR: buttonR,
-
-    board: board,
-
-    /**
-     * Constants helpful for prototyping direct board usage
-     */
-    INPUT: 0,
-    OUTPUT: 1,
-    ANALOG: 2,
-    PWM: 3,
-    SERVO: 4
   });
 }
 
