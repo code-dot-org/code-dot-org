@@ -31,7 +31,7 @@ const DELETE_ANIMATION = 'AnimationList/DELETE_ANIMATION';
 // Args: {AnimationKey} key
 const START_LOADING_FROM_SOURCE = 'AnimationList/START_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {Blob} blob, {String} dataURI. Version?
-const DONE_LOADING_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SgOURCE';
+const DONE_LOADING_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {string} version
 const ON_ANIMATION_SAVED = 'AnimationList/ON_ANIMATION_SAVED';
 
@@ -344,7 +344,7 @@ function loadAnimationFromSource(key, callback) {
     // TODO: Take version ID into account here...
 
     const rawSourceUrl = state.propsByKey[key].sourceUrl;
-    let sourceUrl = rawSourceUrl ? assetPrefix.fixPath(rawSourceUrl) : animationsApi.basePath(key) + '.png';
+    const sourceUrl = rawSourceUrl ? assetPrefix.fixPath(rawSourceUrl) : animationsApi.basePath(key) + '.png';
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
