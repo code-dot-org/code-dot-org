@@ -8,11 +8,11 @@ class LevelsControllerTest < ActionController::TestCase
     Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
 
     @level = create(:level)
-    @user = create(:admin)
-    sign_in(@user)
-    @program = '<hey/>'
-
+    @admin = create(:admin)
     @not_admin = create(:user)
+    @levelbuilder = create(:levelbuilder)
+    sign_in(@levelbuilder)
+    @program = '<hey/>'
   end
 
   test "should get index" do
@@ -48,22 +48,24 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should alphanumeric order custom levels on new" do
-    Level.where(user_id: @user.id).map(&:destroy)
-    level_1 = create(:level, user: @user, name: "BBBB")
-    level_2 = create(:level, user: @user, name: "AAAA")
-    level_3 = create(:level, user: @user, name: "Z1")
-    level_4 = create(:level, user: @user, name: "Z10")
-    level_5 = create(:level, user: @user, name: "Z2")
+    Level.where(user_id: @levelbuilder.id).map(&:destroy)
+    level_1 = create(:level, user: @levelbuilder, name: "BBBB")
+    level_2 = create(:level, user: @levelbuilder, name: "AAAA")
+    level_3 = create(:level, user: @levelbuilder, name: "Z1")
+    level_4 = create(:level, user: @levelbuilder, name: "Z10")
+    level_5 = create(:level, user: @levelbuilder, name: "Z2")
 
     get :new, game_id: @level.game
 
     assert_equal [level_2, level_1, level_3, level_5, level_4], assigns(:levels)
   end
 
-  test "should not get builder if not admin" do
-    sign_in @not_admin
-    get :new, game_id: @level.game
-    assert_response :forbidden
+  test "should not get builder if not levelbuilder" do
+    [@not_admin, @admin].each do |user|
+      sign_in user
+      get :new, game_id: @level.game
+      assert_response :forbidden
+    end
   end
 
   test "should create maze level" do
@@ -136,7 +138,7 @@ class LevelsControllerTest < ActionController::TestCase
 
     assert assigns(:level)
     assert assigns(:level).game
-    assert_equal @user, assigns(:level).user
+    assert_equal @levelbuilder, assigns(:level).user
 
     assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
   end
@@ -203,28 +205,32 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal level.properties[:toolbox_blocks.to_s], @program
   end
 
-  test "should not update blocks if not admin" do
-    sign_in @not_admin
-    post :update_blocks, :level_id => @level.id, :game_id => @level.game.id, :type => 'toolbox_blocks', :program => @program
-    assert_response :forbidden
+  test "should not update blocks if not levelbuilder" do
+    [@not_admin, @admin].each do |user|
+      sign_in user
+      post :update_blocks, :level_id => @level.id, :game_id => @level.game.id, :type => 'toolbox_blocks', :program => @program
+      assert_response :forbidden
+    end
   end
 
   test "should not edit level if not custom level" do
     level = Script.twenty_hour_script.levels.first
-    can_edit =  Ability.new(@user).can? :edit, level
+    can_edit =  Ability.new(@levelbuilder).can? :edit, level
     assert_equal false, can_edit
 
     post :update_blocks, :level_id => level.id, :game_id => level.game.id, :type => 'toolbox_blocks', :program => @program
     assert_response :forbidden
   end
 
-  test "should not create level if not admin" do
-    sign_in @not_admin
-    assert_no_difference('Level.count') do
-      post :create, :name => "NewCustomLevel", :program => @program
-    end
+  test "should not create level if not levelbuilder" do
+    [@not_admin, @admin].each do |user|
+      sign_in user
+      assert_no_difference('Level.count') do
+        post :create, :name => "NewCustomLevel", :program => @program
+      end
 
-    assert_response :forbidden
+      assert_response :forbidden
+    end
   end
 
   # This should represent the behavior on production.
@@ -415,7 +421,7 @@ class LevelsControllerTest < ActionController::TestCase
   test 'should hide legacy unplugged pdf download button for students' do
     level = create :unplugged, name: 'OldUnplugged', type: 'Unplugged'
     teacher = create(:teacher)
-    sign_out(@user)
+    sign_out(@levelbuilder)
     sign_in(teacher)
     get :show, id: level, game_id: level.game
     assert_select '.pdf-button'
@@ -439,7 +445,7 @@ class LevelsControllerTest < ActionController::TestCase
   test 'should hide unplugged pdf download section for students' do
     level = create :unplugged, name: 'NewUnplugged', type: 'Unplugged'
     teacher = create(:teacher)
-    sign_out(@user)
+    sign_out(@levelbuilder)
     sign_in(teacher)
     get :show, id: level, game_id: level.game
     assert_select '.pdf-button'
@@ -520,7 +526,7 @@ class LevelsControllerTest < ActionController::TestCase
     set_env :test
 
     level = create :artist
-    sign_out @user
+    sign_out @levelbuilder
 
     get :edit, id: level
     assert_response :redirect
@@ -533,7 +539,7 @@ class LevelsControllerTest < ActionController::TestCase
     set_env :test
 
     level = create :artist
-    sign_out @user
+    sign_out @levelbuilder
 
     get :embed_level, level_id: level
     assert_response :success
@@ -543,7 +549,7 @@ class LevelsControllerTest < ActionController::TestCase
     set_env :test
 
     level = create :artist
-    sign_out @user
+    sign_out @levelbuilder
 
     get :embed_blocks, level_id: level, block_type: :solution_blocks
     assert_response :success
