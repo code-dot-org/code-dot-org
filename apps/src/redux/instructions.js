@@ -13,6 +13,7 @@ const SET_INSTRUCTIONS_HEIGHT = 'instructions/SET_INSTRUCTIONS_HEIGHT';
 const SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED';
 const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE';
 const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
+const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
 
 const ENGLISH_LOCALE = 'en_us';
 
@@ -116,6 +117,12 @@ export default function reducer(state = instructionsInitialState, action) {
     });
   }
 
+  if (action.type === SET_FEEDBACK) {
+    return _.assign({}, state, {
+      feedback: action.feedback
+    });
+  }
+
   return state;
 }
 
@@ -165,6 +172,11 @@ export const setInstructionsMaxHeightAvailable = height => ({
 export const setHasAuthoredHints = hasAuthoredHints => ({
   type: SET_HAS_AUTHORED_HINTS,
   hasAuthoredHints
+});
+
+export const setFeedback = feedback => ({
+  type: SET_FEEDBACK,
+  feedback
 });
 
 // HELPERS

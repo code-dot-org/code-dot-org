@@ -41,7 +41,8 @@ import { Provider } from 'react-redux';
 import {
   substituteInstructionImages,
   determineInstructionsConstants,
-  setInstructionsConstants
+  setInstructionsConstants,
+  setFeedback
 } from './redux/instructions';
 import {
   openDialog as openInstructionsDialog,
@@ -1571,9 +1572,36 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  this.feedback_.displayFeedback(options, this.requiredBlocks_,
+  if (this.shouldDisplayFeedbackDialog(options)) {
+    // let feedback handle creating the dialog
+    this.feedback_.displayFeedback(options, this.requiredBlocks_,
       this.maxRequiredBlocksToFlag_, this.recommendedBlocks_,
       this.maxRecommendedBlocksToFlag_);
+  } else {
+    // update the block hints lightbulb
+    let missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_);
+    this.displayMissingBlockHints(missingBlockHints);
+
+    // communicate the feedback message to the top instructions via
+    // redux
+    let message = this.feedback_.getFeedbackMessage(options);
+    this.reduxStore.dispatch(setFeedback({ message }));
+  }
+};
+
+/**
+* Whether feedback should be displayed as a modal dialog or integrated
+* into the top instructions
+* @param {{feedbackType: number}} Test results (a constant property of
+*     this.TestResults).
+*/
+StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
+  // If instructions in top pane are enabled, we only use dialogs for
+  // success feedback.
+  if (this.reduxStore.getState().pageConstants.instructionsInTopPane) {
+    return this.feedback_.canContinueToNextLevel(options.feedbackType);
+  }
+  return true;
 };
 
 /**
@@ -1702,6 +1730,7 @@ StudioApp.prototype.resetButtonClick = function () {
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
+  this.reduxStore.dispatch(setFeedback(null));
   if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
