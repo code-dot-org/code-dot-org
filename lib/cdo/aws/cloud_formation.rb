@@ -176,8 +176,8 @@ module AWS
           tail_log(quiet: true)
           stack_id = cfn.describe_stacks(stack_name: stack_id).stacks.first.stack_id
           cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: stack_id) do |w|
-            w.max_attempts = 360 # 1 hour
-            w.delay = 10
+            w.delay = 10 # seconds
+            w.max_attempts = 360 # = 1 hour
             w.before_wait do
               tail_events(stack_id)
               tail_log
