@@ -16,6 +16,9 @@
         ]
       },
       "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 0
+        },
         "params": [
           ""
         ],
@@ -26,7 +29,8 @@
       "penUp": null,
       "penDown": null,
       "functionParams_none": null,
-      "callMyFunction": null
+      "callMyFunction": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -56,7 +60,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "encrypted_examples": "ydHzZtnGZ/G71WCKKdpIdiW1CGgABSHec/1JAIQ69Fgh6n/OCsAC8kE1gZWy\ngjUJ\n",
-    "markdown_instructions": "#Do This:\r\nGet some more practice **calling** a function by using `turnAround()` to create a plus sign, as shown below. The function has already been **defined** for you. \r\n\r\n![](https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14 AM.png)",
+    "markdown_instructions": "#Do This:\r\nGet some more practice **calling** a function by using `turnAround()` to create a plus sign, as shown below. Even though you just wrote this function, we've already **defined** `turnAround()` for you. Remember, add lines of code that call the function *above* the definition.\r\n\r\n![](https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14 AM.png)",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "submittable": "false",
@@ -64,7 +68,14 @@
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "true",
-    "execute_palette_apis_only": "true"
+    "execute_palette_apis_only": "true",
+    "data_tables": "[\r\n  {\r\n    \"entries\": [\r\n      \"[forTest]\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 0,\r\n    \"maxTimes\": 0,\r\n    \"message\": \"Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem.\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"turnLeft:1\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 0,\r\n    \"maxTimes\": 0,\r\n    \"message\": \"You seem to have discovered that the turnLeft() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem - use only turnLeft().\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"moveForward:1\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 0,\r\n    \"maxTimes\": 0,\r\n    \"message\": \"You seem to have discovered that the moveForward() function can accept the number of pixels to move forward!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem.\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"turnRight\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 0,\r\n    \"maxTimes\": 0,\r\n    \"message\": \"You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem.\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"turnAround\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 1,\r\n    \"message\": \"You need to define a function called turnAround and call it. Did you spell and capitalize it the same way as the instructions? Did you call it?\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"turnAround\",\r\n      \"turnLeft\",\r\n      \"turnLeft\"\r\n    ],\r\n    \"matchType\": \"exact\",\r\n    \"minTimes\": 1,\r\n    \"message\": \"The turnAround function should be calling turnLeft two times.\"\r\n  },\r\n  {\r\n    \"entries\": [\r\n      \"turnAround\",\"turnAround\",\r\n      \"moveForward\",\"moveForward\",\"moveForward\",\"moveForward\"\r\n    ],\r\n    \"matchType\": \"inexact\",\r\n    \"minTimes\": 1,\r\n    \"message\": \"It doesn't seem like you are calling turnAround() or moving forward enough times to draw the figure.\"\r\n  }\r\n]",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

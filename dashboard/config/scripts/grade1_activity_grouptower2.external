@@ -1,6 +1,0 @@
-name 'grade1_activity_groupTower2'
-title 'Student Group Tower'
-description 'Students build group towers and try to identify points of frustration'
-markdown <<MARKDOWN
-Students build group towers and try to identify points of frustration
-MARKDOWN
