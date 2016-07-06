@@ -145,13 +145,13 @@ module AWS
 
       # Prints the latest output from a CloudWatch Logs log stream, if present.
       def tail_log(quiet: false)
-        return if @@log_token.nil? && logs.describe_log_streams(log_group_name: STACK_NAME, log_stream_name_prefix: LOG_NAME, limit: 1).log_streams.none?
         log_config = {
           log_group_name: STACK_NAME,
           log_stream_name: LOG_NAME
         }
         log_config[:next_token] = @@log_token unless @@log_token.nil?
-        resp = logs.get_log_events(log_config)
+        # Return silently if log doesn't exist.
+        resp = logs.get_log_events(log_config) rescue return
         resp.events.each do |event|
           CDO.log.info(event.message) unless quiet
         end

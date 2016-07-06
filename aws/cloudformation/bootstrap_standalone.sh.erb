@@ -48,6 +48,10 @@ log_stream_name = ${LOG}
 file = ${LOG}
 CONF
 curl -s ${AWSLOGS_AGENT_URL} | python - -n -r ${REGION} -c ${AWSLOGS_CONF} > /dev/null
+aws logs put-retention-policy \
+  --log-group-name ${STACK} \
+  --retention-in-days 1 \
+  --region ${REGION}
 
 # Fetch acmesmith-provisioned SSL certificate and key from S3
 aws configure set s3.signature_version s3v4
