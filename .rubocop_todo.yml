@@ -249,13 +249,6 @@ Style/RescueModifier:
 Style/SpaceAfterComma:
   Enabled: false
 
-# Offense count: 197
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: space, no_space
-Style/SpaceAroundEqualsInParameterDefault:
-  Enabled: false
-
 # Offense count: 13
 # Cop supports --auto-correct.
 Style/SpaceAroundKeyword:
@@ -285,13 +278,6 @@ Style/SpaceInsideBlockBraces:
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
 # SupportedStyles: space, no_space
 Style/SpaceInsideHashLiteralBraces:
-  Enabled: false
-
-# Offense count: 13953
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
   Enabled: false
 
 # Offense count: 30
