@@ -74,7 +74,7 @@ export function initializeCircuitPlaygroundComponents(io, five, PlaygroundIO) {
     addSensorFeatures(five.Board.fmap, s);
   });
 
-  return _.merge(touchSensors, {
+  return _.assign({}, touchSensors, {
     colorLeds: colorLeds,
 
     led: new five.Led(13),
