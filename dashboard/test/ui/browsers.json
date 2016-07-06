@@ -32,9 +32,9 @@
     "platform": "OS X 10.10"
   },
   {
-    "name": "FirefoxLatestWin7",
+    "name": "Firefox45Win7",
     "browserName": "firefox",
-    "version": "latest",
+    "version": "45.0",
     "platform": "Windows 7"
   },
   {
