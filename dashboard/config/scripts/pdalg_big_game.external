@@ -14,7 +14,7 @@ Of all the changes we've made to the course software over the summer, the Big Ga
 As a project whose primary focus is constant revision and iteration the Big Game, being able to revert back to a previous working version is a crucial feature that was missing during PD. Now you'll see a Version History button at the top right corner of the workspace.
 
 <br><br>
-![version control](https://staging-studio.code.org/script_assets/pd/version_history.gif)
+![version control](//studio.code.org/script_assets/pd/version_history.gif)
 <br><br>
 
 Each time you complete a level of the Big Game a version will be recorded in your version history, allowing you to easily roll back to a previous version if you ever get stuck with an error you can't resolve. Because you get a new version for each puzzle that you complete, it's important to encourage students to do their work a bit at a time (as we suggest in the level instructions) instead of trying to complete a lot of work all at once.
@@ -24,7 +24,7 @@ Each time you complete a level of the Big Game a version will be recorded in you
 
 If you went through PD later in the summer you may have already seen the Remix button used to keep multiple versions of your game. In every Big Game level you'll see a Remix button next to the Code Studio logo. Clicking Remix spins off a new copy of your game that you can edit and play with without the risk of breaking your working copy.  
 <br><br>
-![remix](https://staging-studio.code.org/script_assets/pd/remix.gif)
+![remix](//studio.code.org/script_assets/pd/remix.gif)
 <br><br>
 Each time you click Remix you'll get a new copy of your game in your projects folder <a href="studio.code.org/projects" target="_blank">studio.code.org/projects</a>, each of which can be iterated on independently of the Big Game levels. This is a great way for students to experiment with adding new features to their game safely before integrating those features into their actual Big Game.
 <br><br>

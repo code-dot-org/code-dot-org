@@ -1,7 +1,7 @@
 name 'CSPPD3-u3 chunk 3 resources'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Unit 3 Overview > Chunk 3: Introduction to Variables and Strings > Resources
 
