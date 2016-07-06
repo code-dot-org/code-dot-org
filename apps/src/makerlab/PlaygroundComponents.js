@@ -13,7 +13,6 @@ import _ from 'lodash';
  * connected Circuit Playground board.
  *
  * Components:
- *   - will each have .start() called on Run
  *   - will each have .stop() called on Reset
  *
  * TODO(bcjordan): Import dependencies directly once conditional imports sorted.
@@ -21,7 +20,7 @@ import _ from 'lodash';
  * @returns {Object.<String, Object>} board components
  */
 export function initializeCircuitPlaygroundComponents(io, five, PlaygroundIO) {
-  const colorLeds = Array.from({length: N_COLOR_LEDS}, (_, index) => new five.Led.RGB({
+  const colorLeds = _.range(N_COLOR_LEDS).map(index => new five.Led.RGB({
     controller: PlaygroundIO.Pixel,
     pin: index
   }));
