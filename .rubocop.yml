@@ -9,7 +9,7 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.2
 
-# Code.org style overrides.
+# BEGIN CODE.ORG OVERRIDES
 
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
@@ -35,8 +35,9 @@ Style/Semicolon:
 Style/WordArray:
   MinSize: 5
 
-# Listed below are rules we don't plan to enable in the foreseeable future.
-# Add rules we plan to fix (but are currently failing) to .rubocop_todo.yml.
+# END CODE.ORG OVERRIDES
+
+# BEGIN BLACKLIST
 
 Metrics/AbcSize:
   Enabled: false
@@ -70,3 +71,17 @@ Style/IfInsideElse:
 
 Style/RedundantReturn:
   Enabled: false
+
+# As of July 2016, there is enough disagreement in our codebase, on our team,
+# and apathy to the rule to suggest a negative cost-benefit of enabling the
+# rule.
+Style/SpaceAroundEqualsInParameterDefault:
+  Enabled: false
+
+# As of July 2016, there is enough disagreement in our codebase, on our team,
+# and apathy to the rule to suggest a negative cost-benefit of enabling the
+# rule.
+Style/StringLiterals:
+  Enabled: false
+
+# END BLACKLIST
