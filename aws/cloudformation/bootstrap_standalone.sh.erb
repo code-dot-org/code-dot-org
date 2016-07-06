@@ -2,9 +2,23 @@
 # UserData bootstrap script for CloudFormation stack instances.
 # This script overrides variables useful for setting up an standalone adhoc instance.
 
+# Redirect copy of stdout/stderr to a log file for later auditing.
+LOG=/var/log/bootstrap.log
+exec >> >(tee -i ${LOG})
+exec 2>&1
+
+# Temp dir that cleans up after itself.
+MYTMPDIR=$(mktemp -d)
+trap 'rm -rf "$MYTMPDIR"' EXIT
+
 # Modify cloud-init to re-run bootstrap script every time instance restarts.
 # Ref: http://stackoverflow.com/a/10455027
 sed -i 's/scripts-user$/\[scripts-user, always\]/' /etc/cloud/cloud.cfg
+
+ENVIRONMENT=<%=environment%>
+
+# Workaround to delete any locally-modified files
+(cd /home/ubuntu/${ENVIRONMENT} && git reset --hard --quiet &)
 
 # Bootstrap prerequisites
 apt-get update
@@ -20,7 +34,20 @@ S3_BUCKET=<%=s3_bucket%>
 REGION=<%=region%>
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 NODE_NAME=<%=rack_env%>-${INSTANCE_ID}
-ENVIRONMENT=<%=environment%>
+
+# Install AWS CloudWatch Logs
+# Ref: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/EC2NewInstanceCWL.html
+AWSLOGS_AGENT_URL=https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py
+AWSLOGS_CONF=${MYTMPDIR}/awslogs.conf
+cat <<CONF > ${AWSLOGS_CONF}
+[general]
+region = ${REGION}
+[${LOG}]
+log_group_name = ${STACK}
+log_stream_name = ${LOG}
+file = ${LOG}
+CONF
+curl ${AWSLOGS_AGENT_URL} | python - -n -r ${REGION} -c ${AWSLOGS_CONF}
 
 # Fetch acmesmith-provisioned SSL certificate and key from S3
 aws configure set s3.signature_version s3v4
@@ -70,9 +97,6 @@ JSON
 # Bootstrap the first cdo-apps Rakefile build on a new instance.
 # TODO move this run-once notification somewhere more appropriate
 rm -f /etc/init.d/{dashboard,pegasus}
-
-# Workaround to delete any locally-modified files
-(cd /home/ubuntu/${ENVIRONMENT} && git reset --hard --quiet)
 
 OPTIONS="<%=local_mode ? '-z' : ''%> -b ${BRANCH} -n ${NODE_NAME}"
 sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- ${OPTIONS}"
