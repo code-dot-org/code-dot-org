@@ -62,7 +62,7 @@ namespace :build do
   task :code_studio do
     Dir.chdir(code_studio_dir) do
       HipChat.log 'Building <b>code-studio</b>...'
-      RakeUtils.system 'npm run clean'
+      RakeUtils.system 'rm -rf build'
     end
   end
   task :'code-studio' => :code_studio
