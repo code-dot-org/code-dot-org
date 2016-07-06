@@ -79,4 +79,29 @@ class HintViewRequestsControllerTest < ActionController::TestCase
     assert_response :unauthorized
   end
 
+  test 'creates hints for both users when pairing' do
+    driver = create :user
+    navigator = create :user
+    section = create :section
+    section.add_student driver
+    section.add_student navigator
+
+    driver_initial = HintViewRequest.where(user: driver).count
+    navigator_initial = HintViewRequest.where(user: navigator).count
+
+    sign_in driver
+    @controller.send :pairings=, [navigator]
+    post :create, {
+      script_id: Script.first.id,
+      level_id: Script.first.script_levels.first.level,
+      feedback_type: 1,
+      feedback_xml: 'test_hint',
+    }
+
+    driver_final = HintViewRequest.where(user: driver).count
+    navigator_final = HintViewRequest.where(user: navigator).count
+
+    assert_equal(1, driver_final - driver_initial)
+    assert_equal(1, navigator_final - navigator_initial)
+  end
 end
