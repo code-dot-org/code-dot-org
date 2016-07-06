@@ -26,8 +26,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/06_V2.gif",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This should be an angry birds style \"freeplay\"",
