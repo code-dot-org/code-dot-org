@@ -150,7 +150,7 @@ module AWS
           log_stream_name: LOG_NAME
         }
         log_config[:next_token] = @@log_token unless @@log_token.nil?
-        # Return silently if log doesn't exist.
+        # Return silently if we can't get the log events for any reason.
         resp = logs.get_log_events(log_config) rescue return
         resp.events.each do |event|
           CDO.log.info(event.message) unless quiet
