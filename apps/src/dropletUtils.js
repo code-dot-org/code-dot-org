@@ -656,7 +656,7 @@ function getFirstParamFromCode(methodName, code) {
   var prefix = `${methodName}(`;
   code = code.slice(code.lastIndexOf(prefix));
   // quote/empty, followed by param, followed by end quote/empty, comma, and optional whitespace
-  const backslashEscapedRegex = `^${methodName}\\((['"]?)(([^\\1]*)\\1,\\s*$`;
+  const backslashEscapedRegex = `^${methodName}\\((['"]?)([^\\1]*)\\1,\\s*$`;
   var matchQuote = new RegExp(backslashEscapedRegex).exec(code);
   if (matchQuote) {
     return matchQuote[2];
