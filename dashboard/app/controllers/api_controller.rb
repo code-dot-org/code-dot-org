@@ -178,7 +178,8 @@ class ApiController < ApplicationController
 
       # Go through each sublevel
       script_level.level.levels.each_with_index do |sublevel, sublevel_index|
-        sublevel_results = []
+        question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text")
+        sublevel_results = {question: question_text, results: []}
 
         # Go through each student who has submitted a response to it.
         @section.students.all.shuffle.each do |student|
@@ -205,6 +206,8 @@ class ApiController < ApplicationController
               student_result = sublevel_response["result"].split(",").sort.join(",")
               # unless unsubmitted
               unless student_result == "-1"
+                answer_text = sublevel.properties.try(:[], "answers").try(:[], student_result.to_i).try(:[], "text")
+                sublevel_result[:result_text] = answer_text
                 # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
                 sublevel_result[:result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
                 sublevel_result[:type] = "multi"
@@ -212,7 +215,7 @@ class ApiController < ApplicationController
             end
           end
 
-          sublevel_results << sublevel_result
+          sublevel_results[:results] << sublevel_result
         end
 
         # All the results for one sublevel for a group of studentss
@@ -227,8 +230,6 @@ class ApiController < ApplicationController
         levelgroup_results: levelgroup_results
       }
     end.compact
-
-    puts "final data: #{data.to_json}"
 
     render json: data
   end
