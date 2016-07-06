@@ -1,3 +1,11 @@
+-# Gamelab-only fields for level edit page on levelbuilder
+- content_for(:head) do
+  :css
+    #level-start-animations-validation {
+      padding: 0.2em;
+      font-weight: bold;
+    }
+  = javascript_include_tag 'js/levelbuilder_gamelab'
 .field
   = f.label :text_mode_at_start, 'Text mode (showing code) at start'
   = boolean_check_box f, :text_mode_at_start
@@ -84,5 +92,4 @@
       There are some known bugs with specifying a frame size larger than the actual source image, so please set this correctly!
     %li <tt>frameRate</tt> is given in frames per second.
   = f.text_area :start_animations, placeholder: 'Starting animations JSON', rows: 4, value: @level.start_animations
-  :javascript
-    levelbuilder.initializeCodeMirror('level_start_animations', 'json');
+  #level-start-animations-validation
