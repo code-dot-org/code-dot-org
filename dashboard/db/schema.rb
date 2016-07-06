@@ -671,6 +671,7 @@ ActiveRecord::Schema.define(version: 20160721221335) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "flex_category", limit: 255
+    t.boolean  "lockable"
   end
 
   create_table "survey_results", force: :cascade do |t|

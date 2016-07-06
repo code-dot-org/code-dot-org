@@ -8,6 +8,7 @@ class ScriptDSL < BaseDSL
     @description_audience = nil
     @stage = nil
     @stage_flex_category = nil
+    @stage_lockable = false
     @concepts = []
     @skin = nil
     @current_scriptlevel = nil
@@ -42,10 +43,17 @@ class ScriptDSL < BaseDSL
 
   string :wrapup_video
 
-  def stage(name, flex = nil)
+  # Can either provide a flex_category as an optional param, or an options hash
+  def stage(name, properties = {})
+    # convert to opiton hash as necessary
+    if properties.is_a? String
+      properties = { flex_category: properties }
+    end
+
     @stages << {stage: @stage, scriptlevels: @scriptlevels} if @stage
     @stage = name
-    @stage_flex_category = flex
+    @stage_flex_category = properties[:flex_category]
+    @stage_lockable = properties[:lockable]
     @scriptlevels = []
     @concepts = []
     @skin = nil
@@ -98,6 +106,7 @@ class ScriptDSL < BaseDSL
     level = {
       :name => name,
       :stage_flex_category => @stage_flex_category,
+      :stage_lockable => @stage_lockable,
       :skin => @skin,
       :concepts => @concepts.join(','),
       :level_concept_difficulty => @level_concept_difficulty || {},
