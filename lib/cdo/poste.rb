@@ -177,7 +177,13 @@ module Poste2
     {id: contact[:id], email: address, name: name, ip_address: ip_address}
   end
 
-  ATTACHMENT_DIR = '~/poste_attachments'
+  def self.attachment_dir
+    # Get directory from settings (locals.yml / globals.yml)
+    # If none specified, use ./poste_attachments
+    path = CDO.poste_attachment_dir || File.join(Dir.pwd, 'poste_attachments')
+    Dir.mkdir(path) unless Dir.exist?(path)
+    path
+  end
 
   # Takes a hash of name=>content, saves each to a file, and returns a
   # hash of name=>saved_filename
@@ -185,8 +191,8 @@ module Poste2
     timestamp = DateTime.now.strftime('%Y%m%d_%H%M_%S%L')
     {}.tap do |saved|
       attachments.each do |name, content|
-        filename = File.expand_path "#{ATTACHMENT_DIR}/#{timestamp}-#{name}"
-        File.write filename, content
+        filename = File.expand_path "#{attachment_dir}/#{timestamp}-#{name}"
+        File.open(filename, 'w+b'){|f| f.write content}
         saved[name] = filename
       end
     end

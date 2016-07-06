@@ -112,7 +112,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
       height: 100,
     )
     image.format = 'jpg'
-    Base64.encode64(image.to_blob)
+    image.to_blob
   end
 
   def email_address(display_name, email)
