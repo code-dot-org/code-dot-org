@@ -34,7 +34,7 @@ class GatekeeperBase
     rule_map = get_rule_map(feature)
     conditions = []
     conditions << where_key(where)
-    conditions << where_key({}) if !where.empty?
+    conditions << where_key({}) unless where.empty?
 
     conditions.each do |k|
       return rule_map[k] if rule_map.key? k
@@ -78,7 +78,7 @@ class GatekeeperBase
   # @returns [Hash]
   def get_rule_map(feature)
     json_map = @datastore_cache.get(feature)
-    return json_map if !json_map.nil?
+    return json_map unless json_map.nil?
     return {}
   end
 
@@ -131,7 +131,7 @@ class GatekeeperBase
         rule = {"rule" => nil}
 
         conditions = JSON.load(conditions)
-        if !conditions.empty?
+        unless conditions.empty?
           where_clause = {}
           rule['where'] = where_clause
           conditions.each do |property, value|
@@ -193,4 +193,4 @@ class GatekeeperBase
   end
 end
 
-Gatekeeper = GatekeeperBase.create()
+Gatekeeper = GatekeeperBase.create

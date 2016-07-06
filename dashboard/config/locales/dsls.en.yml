@@ -1556,6 +1556,24 @@ en:
       equity vids:
         Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
+      grade1_activity_frustration:
+        Dealing with Frustration: Dealing with Frustration
+      grade1_activity_groupTower:
+        Students build group tower: Students build group tower
+      grade1_activity_whatDoesItDo:
+        What does it do: What does it do
+      grade1_activity_whatGoesWrong:
+        What Will Go Wrong: What Will Go Wrong
+      grade1_story_spottedBugs:
+        The Spotted Bugs: The Spotted Bugs
+        The spotted bugs are so much less trouble than the unspotted ones!: The spotted bugs are so much less trouble than the unspotted ones!
+      grade1_story_theGreatTowerTopple:
+        PlayLab character learns to deal with frustration: PlayLab character learns to deal with frustration
+        The Great Tower Topple: The Great Tower Topple
+      gradek1_activity_beNice:
+        The computer is your friend: The computer is your friend
+      gradek_partner_fuzzConditionals:
+        Fuzz Family Fiesta: Fuzz Family Fiesta
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
@@ -3952,6 +3970,15 @@ en:
         a secret password: a secret password
         a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
         a week-long course to learn about computers: a week-long course to learn about computers
+      PS MC predictive q1:
+        Make a prediction: Make a prediction
+        What do you think will happen?: What do you think will happen?
+        nope.  try again.: nope.  try again.
+        nope...: nope...
+        really??: really??
+        right answer: right answer
+        wrong answer: wrong answer
+        you are so smart!: you are so smart!
       PS U3 Q1-1:
         Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.

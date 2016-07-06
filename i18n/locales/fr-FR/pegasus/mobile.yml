@@ -510,12 +510,12 @@ fr-FR:
   dashboard_navigation_section_speakers: 'Informatique/Sciences informatiques <br/> Conférenciers invités'
   dashboard_navigation_all_sections: "Comptes et progression de l'élève"
   dashboard_navigation_view_progress: Progression
-  dashboard_navigation_view_text_responses: Text Responses
+  dashboard_navigation_view_text_responses: 'Root->dashboard_navigation_voir_text_réponses'
   dashboard_navigation_view_assessments: Évaluations
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
-  dashboard_navigation_view_stats: Stats
+  dashboard_navigation_view_stats: 'Root -> dashboard_navigation_view_stats'
   dashboard_navigation_section: 'Section&#160;: %{section_name}'
   dashboard_navigation_student: 'Élève&#160;: %{student_name}'
   dashboard_progress_not_started: pas commencé
@@ -536,7 +536,10 @@ fr-FR:
   dashboard_sections_table_secret: Type de connexion
   dashboard_sections_table_grade: Classe
   dashboard_sections_table_course: Cours
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: |
+    Root -> dashboard_sélections_table_stage_extras When a student completes a stage in a course, they have the option to see additional resources, suggested tutorials, etc. This string is for the teacher dashboard, to enable whether students see these extras at the end of each stage.
+    
+    Quand un élève complète une stage dans une course, ils ont l'option à voir des ressources additionelles, des tutoriels suggérés, etc. Cette string est pour le dashboard de l'enseignant, pour activer si les élèves peuvent voir ses extras à la fin de chaque stage
   dashboard_sections_table_students: Élèves
   dashboard_sections_table_code: Code de la section
   dashboard_sections_name: Nom de la section

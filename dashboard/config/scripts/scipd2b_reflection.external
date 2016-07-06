@@ -3,7 +3,7 @@ title 'Reflection on Phase 2'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
 
 ### Stay in Touch!
 
@@ -16,9 +16,7 @@ Your Summer PD may be over, but this isn't the end of your support for teaching 
 <a href="http://forum.code.org/t/reflecting-on-summer-cs-in-science-pd/1698" target="blank"><button class="plc">Reflect on your PD >></button></a>
 <br/><br/>
 
-Now that you've completed the second phase of PD, please take a few minutes to give us your feedback on the material by completing this post-survey. We really appreciate you taking the time to let us know what we can do to support you better! (If you are having trouble viewing the form, click this [link](https://docs.google.com/forms/d/1Ras8L-5R_6BY2u1SZBrU2-ax8ByhSqXcgf9iHUvkUq4/viewform?usp=send_form) to access the form directly.)
 
-<iframe src="https://docs.google.com/forms/d/1Ras8L-5R_6BY2u1SZBrU2-ax8ByhSqXcgf9iHUvkUq4/viewform?embedded=true" width="760" height="500" frameborder="2" marginheight="0" marginwidth="0">Loading...</iframe>
 
 <br/><br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

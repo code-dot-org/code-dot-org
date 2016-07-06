@@ -8,6 +8,7 @@ import _ from 'lodash';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import StudioAppWrapper from './StudioAppWrapper';
 import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
+import CodeWorkspace from './CodeWorkspace';
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -39,7 +40,9 @@ const AppView = React.createClass({
           {this.props.visualizationColumn}
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <InstructionsWithWorkspace/>
+        <InstructionsWithWorkspace>
+          <CodeWorkspace/>
+        </InstructionsWithWorkspace>
       </StudioAppWrapper>
     );
   }

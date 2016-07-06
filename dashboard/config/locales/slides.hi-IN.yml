@@ -7,8 +7,8 @@
           प्रोग्रामिंग शुरू करते हैं."
       2:
         image: notes/hoc1_2.jpg
-        text: We'll be using Blockly, a visual programming language where you drag
-          and drop blocks to write code.
+        text: "हम Blockly का प्रयोग करेंगे, जो की एक विज़ुअल प्रोग्रामिंग भाषा है जिसमे
+          हम ब्लॉक को खींच कर और छोडकर कोडिंग करते हैं ।"
       3:
         image: notes/hoc1_3.jpg
         text: Most code is typed, but Blockly is visual. Each blocks corresponds to

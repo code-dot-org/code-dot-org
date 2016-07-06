@@ -27,6 +27,9 @@
   "copy": "คัดลอก",
   "copyright": "ลิขสิทธิ์",
   "currentVersion": "เวอร์ชั่นที่กำลังใช้งาน",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "ไม่จำกัด",
   "jump": "กระโดด",
   "keepPlaying": "เล่นต่อไป",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "คุณกำลังใช้ทุกสิ่งทุกอย่างที่จำเป็นของบล็อก แต่ไม่ใช่ทางที่ถูกต้อง.",
   "listVariable": "รายการ",
   "makeYourOwnFlappy": "สร้าง Flappy เกม ไว้เป็นของเราเอง",
@@ -241,9 +245,5 @@
   "watchVideo": "ดูวีดีโอ",
   "when": "เมื่อ",
   "whenRun": "เมื่อเรียกให้ทำงาน",
-  "workspaceHeaderShort": "พื้นที่ทำงาน: ",
-  "dataMode": "Data",
-  "dataTableNamePlaceholder": "Table name",
-  "dataWorkspaceHeader": "Data Browser",
-  "keyValuePairLink": "Key/value pairs"
+  "workspaceHeaderShort": "พื้นที่ทำงาน: "
 }

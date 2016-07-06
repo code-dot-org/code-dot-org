@@ -29,7 +29,7 @@
   unsubmit: Intrekken
   previous_page: Vorige pagina
   next_page: Volgende pagina
-  next_resource: Next resource
+  next_resource: Volgende hulpbron
   done_with_module: Done with this Learning Module
   cancel: Annuleren
   okay: Oké
@@ -96,7 +96,7 @@
     teacher_title: Inschrijven voor leraren
     student_pitch: Code.org-aanmelding als leerling
     student_title: Registreren als leerling
-    signup_title: Sign up for Code.org
+    signup_title: Meld u aan voor Code.org
     school_name: School naam (optioneel)
     school_address: Schooladres (optioneel)
     address_placeholder: adres, stad, provincie, postcode
@@ -122,7 +122,7 @@
       gebruikersvoorwaarden</a>.
     additional_information: We hebben aanvullende informatie nodig om door te kunnen
       gaan met uw registratie.
-    user_type_label: Account Type
+    user_type_label: Account type
     user_type_teacher: Leerkracht
     user_type_student: Leerling
   signin_form:

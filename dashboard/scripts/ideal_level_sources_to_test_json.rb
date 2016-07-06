@@ -19,7 +19,7 @@ def main
 
   level_hashes = levels_to_test.map { |level|
     level_hash = {
-      levelDefinition: level.blockly_options()[:level],
+      levelDefinition: level.blockly_level_options,
       tests: [{
         description: "Validate Solution for: #{level.name} (#{level.id})",
         expected: {
@@ -47,4 +47,4 @@ def main
   }))
 end
 
-main()
+main

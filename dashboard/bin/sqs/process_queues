@@ -101,7 +101,7 @@ class QueueProcessorManager
         print "."
         last_changed = false
       else
-        puts if !last_changed
+        puts unless last_changed
         last_changed = true
         metrics_map.each do |k,v|
           logger.info "#{k}: #{v}  time=#{Time.now.to_i - start_time}"

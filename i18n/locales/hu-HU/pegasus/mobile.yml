@@ -80,17 +80,17 @@ hu-HU:
   congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
+  third_party_gradelevel_2to8: 2-8. évfolyam
+  third_party_gradelevel_4to12: 4-12. évfolyam
+  third_party_gradelevel_5to12: 5-12. évfolyam
+  third_party_gradelevel_6plus: 6+ évfolyam
+  third_party_gradelevel_8plus: 8+ évfolyam
+  third_party_platform_all: 'Platform: Web, iPad és Android'
+  third_party_platform_mobile: 'Platform: iPad és Android'
   third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_varies: 'Ár: változtatás tervben'
+  third_party_price_free: 'Ár: ingyenes'
+  third_party_price_299: 'Ár: $2.99/letöltés'
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
@@ -685,9 +685,8 @@ hu-HU:
   dashboard_faq_k5: K-5 Gyakran Ismételt Kérdések
   dashboard_announcements: Közlemények
   dashboard_announce_view_all: Összes megtekintése
-  dashboard_announce_message: |-
-    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_message: 'Segíts egy új funkció tesztelésében. Fontosnak tartjuk, hogy a tanulók bátran próbálkozzanak és kísérletezzenek. Ezért akkor is futtathatóvá tesszük a programot, ha nincs minden blokk összekapcsolva. Várjuk Visszajelzéseiteket a "fel nem használt blokk" funkcióról annak bevezetése előtt.'
+  dashboard_announce_button_text: Teszteld a funkciót
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add meg a nevedet
   code_hoc_coming: 'Megkezdődött a Kódolás Órája - December 8-14.'

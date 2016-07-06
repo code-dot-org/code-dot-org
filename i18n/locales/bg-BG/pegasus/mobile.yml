@@ -504,12 +504,12 @@ bg-BG:
   dashboard_navigation_section_speakers: 'Компютърни науки <br/> гости говорители'
   dashboard_navigation_all_sections: Ученически акаунти и прогрес
   dashboard_navigation_view_progress: Прогрес
-  dashboard_navigation_view_text_responses: Text Responses
+  dashboard_navigation_view_text_responses: Текстови отговори
   dashboard_navigation_view_assessments: Оценки
   dashboard_navigation_add_students: Добавяне на ученици
   dashboard_navigation_manage_students: Управление на ученици
   dashboard_navigation_lesson_plans_resources: Учебни планове и ресурси
-  dashboard_navigation_view_stats: Stats
+  dashboard_navigation_view_stats: Статистика
   dashboard_navigation_section: 'Раздел: %{section_name}'
   dashboard_navigation_student: 'Ученик: %{student_name}'
   dashboard_progress_not_started: не е стартиран
@@ -655,7 +655,7 @@ bg-BG:
   dashboard_announcements: Съобщения
   dashboard_announce_view_all: Преглед на всички
   dashboard_announce_message: '<b>22 април 2016</b> - Дейностите без компютър са важна част от процеса на обучение, но учителите ни казват, че намирането им в ресурсите може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите всички ресурси без компютър на една целева страница. Свържете уроците с всеки Кн клас, или използвайте самостоятелно като независим курс.'
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_button_text: Тестване на функцията
   dashboard_announce_petition: Като учител, Вие трябва да намерите подход, така че да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки. Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица, образователни лидери, 28 управители и директори на компании в Америка се обединяват зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно образование.
   dashboard_announce_petition_button: Добавете името си
   code_hoc_coming: 'Часът на кода е тук - декември 8-14!'

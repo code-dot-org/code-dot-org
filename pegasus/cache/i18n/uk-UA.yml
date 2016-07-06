@@ -695,7 +695,7 @@
   dashboard_navigation_section_speakers: "Запрошені гості <br/> з галузі інформатики"
   dashboard_navigation_all_sections: "Облікові записи учнів та їх прогрес"
   dashboard_navigation_view_progress: "Прогрес"
-  dashboard_navigation_view_text_responses: "Переглянути тексти відповідей"
+  dashboard_navigation_view_text_responses: "Текстові відповіді"
   dashboard_navigation_view_assessments: "Завдання"
   dashboard_navigation_add_students: "Додати учнів"
   dashboard_navigation_manage_students: "Керування учнями"
@@ -879,11 +879,12 @@
   dashboard_faq_k5: K-5 запитання й відповіді
   dashboard_announcements: "Оголошення"
   dashboard_announce_view_all: "Переглянути всі"
-  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
-    problem in computer science. Code Studio teachers are leading the way in educating
-    underrepresented minorities. Our annual survey shows record diversity in your
-    classrooms! Check out the numbers."
-  dashboard_announce_button_text: "Дізнайтеся більше"
+  dashboard_announce_message: Хочете допомогти нам протестувати нові функції? Ми знаємо,
+    що дуже важливо заохочувати учнів до перебору та експериментів з рішеннями, тож
+    ми додамо функцію "код, який не використовується", щоб дозволити учням запускати
+    свій код, навіть тоді, коли є відокремлені блоки. Ми очікуємо відгуків, перш ніж
+    оприлюднити цю функцію.
+  dashboard_announce_button_text: "Випробувати функцію"
   dashboard_announce_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного
     учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися
     із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори

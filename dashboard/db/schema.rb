@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160617163547) do
+ActiveRecord::Schema.define(version: 20160706173136) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -351,20 +351,23 @@ ActiveRecord::Schema.define(version: 20160617163547) do
   add_index "pd_district_payment_terms", ["district_id", "course"], name: "index_pd_district_payment_terms_on_district_id_and_course", using: :btree
 
   create_table "pd_enrollments", force: :cascade do |t|
-    t.integer  "pd_workshop_id",     limit: 4,   null: false
-    t.string   "name",               limit: 255, null: false
-    t.string   "email",              limit: 255, null: false
+    t.integer  "pd_workshop_id",      limit: 4,   null: false
+    t.string   "name",                limit: 255, null: false
+    t.string   "email",               limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "school",             limit: 255
-    t.string   "code",               limit: 255
-    t.integer  "school_district_id", limit: 4
-    t.integer  "school_zip",         limit: 4
-    t.string   "school_type",        limit: 255
-    t.string   "school_state",       limit: 255
-    t.integer  "user_id",            limit: 4
+    t.string   "school",              limit: 255
+    t.string   "code",                limit: 255
+    t.integer  "school_district_id",  limit: 4
+    t.integer  "school_zip",          limit: 4
+    t.string   "school_type",         limit: 255
+    t.string   "school_state",        limit: 255
+    t.integer  "user_id",             limit: 4
+    t.datetime "survey_sent_at"
+    t.integer  "completed_survey_id", limit: 4
   end
 
+  add_index "pd_enrollments", ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
   add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
   add_index "pd_enrollments", ["school_district_id"], name: "index_pd_enrollments_on_school_district_id", using: :btree
 
@@ -642,6 +645,7 @@ ActiveRecord::Schema.define(version: 20160617163547) do
     t.string   "login_type",   limit: 255, default: "email", null: false
     t.datetime "deleted_at"
     t.boolean  "stage_extras",             default: false,   null: false
+    t.string   "type",         limit: 255
   end
 
   add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree
@@ -900,6 +904,7 @@ ActiveRecord::Schema.define(version: 20160617163547) do
     t.integer  "invited_by_id",              limit: 4
     t.string   "invited_by_type",            limit: 255
     t.integer  "invitations_count",          limit: 4,     default: 0
+    t.integer  "terms_of_service_version",   limit: 4
   end
 
   add_index "users", ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
