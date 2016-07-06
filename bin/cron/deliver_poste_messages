@@ -171,7 +171,8 @@ class Deliverer
         message.puts 'Content-Transfer-Encoding: base64'
         message.puts "Content-Disposition: attachment; filename=\"#{filename}\""
         message.puts ''
-        message.write content.scan(/.{61}/).join("\n")
+
+        message.write content.scan(/.{1,61}/).join("\n")
       end
     end
 
