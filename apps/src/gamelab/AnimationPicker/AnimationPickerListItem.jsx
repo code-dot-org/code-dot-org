@@ -4,8 +4,8 @@
 import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
+import * as PropTypes from '../PropTypes';
 import AnimationPreview from './AnimationPreview';
-import { METADATA_SHAPE } from '../animationMetadata';
 
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
@@ -53,7 +53,7 @@ const styles = {
 
 const AnimationPickerListItem = React.createClass({
   propTypes: {
-    animation: React.PropTypes.shape(METADATA_SHAPE),
+    animationProps: PropTypes.AnimationProps,
     icon: React.PropTypes.string,
     label: React.PropTypes.string.isRequired,
     onClick: React.PropTypes.func
@@ -73,9 +73,10 @@ const AnimationPickerListItem = React.createClass({
     return (
       <div style={styles.root} onClick={this.props.onClick}>
         <div style={thumbnailStyle}>
-          {this.props.animation &&
+          {this.props.animationProps &&
               <AnimationPreview
-                  animation={this.props.animation}
+                  animationProps={this.props.animationProps}
+                  sourceUrl={this.props.animationProps.sourceUrl}
                   width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
                   height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
               />

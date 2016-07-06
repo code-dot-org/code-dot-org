@@ -6,13 +6,10 @@ module NewRelic
       return '' if script_tag == ''
 
       # The following guard will prevent versions of IE <= 9 from processing
-      # the script_tag while exposing it to IE10+ and other browsers.
-      # We then follow it with a script that will disable NewRelic on IE10, tho
-      # unlike the IE <=9 case, will still result in us loading the script
-      result = "<!--[if !IE]><!--> " +
-        "#{script_tag} " +
-        "<script>if (navigator.userAgent.match('MSIE 10.0;')) { delete window.NREUM; }</script>" +
-        "<!--<![endif]-->"
+      # the script_tag while exposing it to IE10+ and other browsers. (Note that
+      # IE10+ and other browser don't support conditional comments so the
+      # guard will does nothing in those cases.)
+      result = "<!--[if !IE]><!--> #{script_tag} <!--<![endif]-->"
 
       # Mark the result as html_safe in Rails.
       result = result.html_safe if result.respond_to? :html_safe

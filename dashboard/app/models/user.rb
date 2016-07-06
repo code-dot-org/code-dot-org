@@ -255,6 +255,13 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
+  TERMS_OF_SERVICE_VERSIONS = [
+    1  # (July 2016) Teachers can grant access to labs for U13 students.
+  ]
+  validates :terms_of_service_version,
+    inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
+    allow_nil: true
+
   def dont_reconfirm_emails_that_match_hashed_email
     # we make users "reconfirm" when they change their email
     # addresses. Skip reconfirmation when the user is using the same
@@ -1001,4 +1008,17 @@ SQL
     followeds.collect(&:section).find { |section| section.script_id == script.id }
   end
 
+  # Returns the version of our Terms of Service we consider the user as having
+  # accepted. For teachers, this is the latest major version of the Terms of
+  # Service accepted. For students, this is the latest major version accepted by
+  # any their teachers.
+  def terms_version
+    if teacher?
+      return terms_of_service_version
+    end
+    followeds.
+      collect{|followed| followed.user.terms_of_service_version}.
+      compact.
+      max
+  end
 end
