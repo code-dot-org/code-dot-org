@@ -1289,8 +1289,9 @@ a.download-video {
     font-family: 'Gotham 5r', sans-serif;
   }
   .teacher-announce .announce-learn-more {
-    float: right;
-    margin-top: 25px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
   }
   .teacher-announce a {
     text-decoration: none;
