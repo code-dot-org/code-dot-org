@@ -98,15 +98,15 @@ def content_push(server_name, environment_name, user_name)
 
       #{bold "Connecting to #{server_name}."} Type 'logout' when you're done.
 
-      #{dim "d[ o_0 ]b"}
+      #{dim 'd[ o_0 ]b'}
 
       EOS
       system "ssh -t gateway.code.org ssh #{server_name}"
       puts <<-EOS.unindent
 
-      #{dim "d[ o_0 ]b"}
+      #{dim 'd[ o_0 ]b'}
 
-      #{bold "Welcome back!"}
+      #{bold 'Welcome back!'}
 
       EOS
       press_enter_to_continue

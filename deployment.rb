@@ -64,7 +64,6 @@ def load_configuration
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'hip_chat_log_room'           => rack_env.to_s,
     'hip_chat_logging'            => false,
-    'home_dir'                    => File.expand_path('~'),
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
     'name'                        => hostname,
@@ -348,10 +347,6 @@ end
 
 def dashboard_dir(*dirs)
   deploy_dir('dashboard', *dirs)
-end
-
-def home_dir(*paths)
-  File.join(CDO.home_dir, *paths)
 end
 
 def pegasus_dir(*paths)
