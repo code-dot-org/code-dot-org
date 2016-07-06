@@ -915,8 +915,14 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
           // let's just generate a flat list of the level results to go into $scope.
           $.each(survey.levelgroup_results, function(index, sublevel_results) {
 
+            var questionText = sublevel_results.question;
+
+            // How many students answered this question?
+            var resultsLength = sublevel_results.results.length;
+
             // There can be multiple results for each sublevel.
-            $.each(sublevel_results, function(sublevel_index, sublevel_result) {
+            $.each(sublevel_results.results, function(sublevel_index, sublevel_result) {
+
               // Do we already have this level result?  If so, bump the count, otherwise create and
               // add it.
 
@@ -929,15 +935,18 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
               if (existingLevelResult) {
                 existingLevelResult.count++;
-                existingLevelResult.percent = existingLevelResult.count / sublevel_results.length * 100;
+                if (existingLevelResult.percent !== null) {
+                  existingLevelResult.percent = Math.round(existingLevelResult.count / resultsLength * 100) + "%";
+                }
               } else {
+                var percent = sublevel_result.type == "multi" ? (Math.round(1 / resultsLength * 100)) + "%" : null;
                 var levelResult = {
                   stage: survey.stage,
                   puzzle: survey.puzzle,
-                  question: parseInt(index) + 1,
-                  result: sublevel_result.result,
+                  question: (parseInt(index) + 1) + ". " + questionText,
+                  result: sublevel_result.result + ". " + sublevel_result.result_text,
                   count: 1,
-                  percent: 1 / sublevel_results.length * 100
+                  percent: percent
                 };
                 $scope.levels.push(levelResult);
               }

@@ -23,15 +23,14 @@ content-type: text/ng-template
 %div{style: "padding-left:20px", 'ng-show' => 'surveys.length'}
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'surveys.length', "ng-form" => "allForm"}
     %colgroup
-      %col{width: "100"}/
-      %col{width: "175"}/
+      %col{width: "250"}/
       %col{width: "75"}/
-      %col{width: "75"}/
+      %col{width: "300"}/
       %col{width: "275"}/
       %col{width: "125"}/
 
     %tr
-      %th.manage-th{colspan: 6}
+      %th.manage-th{colspan: 5}
         %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
           = I18n.t('dashboard_filter_by_stage')
           %select{'ng-model' => 'stageFilterAnswers', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
@@ -66,4 +65,4 @@ content-type: text/ng-template
       %td
         {{level.result}}
       %td
-        {{level.percent}}%
+        {{level.percent}}
