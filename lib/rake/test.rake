@@ -11,7 +11,7 @@ namespace :test do
     TestRunUtils.run_apps_tests
   end
 
-  desc 'Run a single eyes test.'
+  desc 'Run a single eyes test locally using chromedriver.'
   task :ui do
     TestRunUtils.run_local_ui_test
   end
