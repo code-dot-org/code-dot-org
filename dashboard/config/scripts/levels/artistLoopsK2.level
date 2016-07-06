@@ -69,7 +69,7 @@
       <xml>
         <block type="simple_move_right"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES">uninitialized</title>
+          <title name="TIMES">5</title>
         </block>
       </xml>
     </recommended_blocks>

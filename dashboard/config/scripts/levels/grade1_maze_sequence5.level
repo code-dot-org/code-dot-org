@@ -1,19 +1,19 @@
 <Maze>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2016-07-06T19:25:53.000Z",
+  "created_at": "2016-07-06T22:02:09.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,4,0,0,0,0],[0,0,2,1,3,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[4,1,1,1,3,4,0,0],[0,0,2,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Can you add 2 blocks to get the bird to the pig.",
-    "start_direction": "2",
+    "instructions": "Move one way, then another to get me to the pig!",
+    "start_direction": "0",
     "step_mode": "1",
     "is_k1": "true",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/07_V2.gif",
     "skip_instructions_popup": "true",
-    "ideal": "2",
+    "ideal": "4",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -22,12 +22,12 @@
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
+    "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "never_autoplay_video": "true",
-    "examples_required": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try adding one instruction at a time until you get to the pig.\",\r\n  \"hint_id\": \"grade1_maze_sequence3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Your final code should have three movement blocks.\",\r\n  \"hint_id\": \"K2.0_sequence_5\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null,
     "maze_data": null
   },
@@ -37,11 +37,6 @@
   }
 }]]></config>
   <blocks>
-    <start_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-      </xml>
-    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="maze_moveNorth"/>
@@ -52,6 +47,7 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
+        <block type="maze_moveNorth"/>
         <block type="maze_moveEast"/>
       </xml>
     </recommended_blocks>
@@ -59,9 +55,13 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveEast">
+            <block type="maze_moveNorth">
               <next>
-                <block type="maze_moveEast"/>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast"/>
+                  </next>
+                </block>
               </next>
             </block>
           </next>
