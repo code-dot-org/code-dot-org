@@ -45,6 +45,15 @@ class Section < ActiveRecord::Base
   end
   validate :user_must_be_teacher
 
+  SECTION_TYPES = {
+    CLASSROOM: 'classroom',
+    K5_AFFILIATE_PD: 'k5_affiliate_pd',
+    PLC_PD: 'plc_pd',
+  }.freeze
+  validates :type,
+    inclusion: {in: SECTIONS_TYPES.values},
+    allow_nil: true
+
   before_create :assign_code
   def assign_code
     self.code = unused_random_code
