@@ -1,7 +1,7 @@
 name 'CSPPD3-u5 chapter 1 concepts'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Explore PT Breakdown > Concepts
 <img src="https://images.code.org/b5868cc016bcbeca6db29560eecd0674-image-1457475688634.45.54 PM.png" width="450" style="float:right; margin-right:10px; margin-left: 30px">
