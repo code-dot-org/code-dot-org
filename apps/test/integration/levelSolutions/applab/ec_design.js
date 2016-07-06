@@ -559,7 +559,7 @@ module.exports = {
         assertPropertyRowValue(2, 'height (px)', 100, assert);
         assertPropertyRowExists(3, 'x position (px)', assert);
         assertPropertyRowExists(4, 'y position (px)', assert);
-        assertPropertyRowExists(5, 'picture Choose...', assert);
+        assertPropertyRowExists(5, 'image Choose...', assert);
         assertPropertyRowExists(6, 'hidden', assert);
         assertPropertyRowExists(7, 'depth', assert);
 
@@ -816,7 +816,7 @@ module.exports = {
     },
 
     {
-      description: "images reset when picture is cleared",
+      description: "images reset when image is cleared",
       editCode: true,
       xml: '',
       // Use an asset path which we can access so that image loading will succeed
@@ -836,7 +836,7 @@ module.exports = {
         $('#designModeButton').click();
         $('#design_image1').click();
 
-        assertPropertyRowExists(5, 'picture Choose...', assert);
+        assertPropertyRowExists(5, 'image Choose...', assert);
 
         var input = $('#propertyRowContainer input').eq(5)[0];
         var designImage = $('#design_image1')[0];
