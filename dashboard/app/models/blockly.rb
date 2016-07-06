@@ -265,6 +265,7 @@ class Blockly < Level
         level_prop['stepOnly'] = step_mode_value == 2
       end
 
+      level_prop['levelId'] = level_num
       level_prop['images'] = JSON.parse(level_prop['images']) if level_prop['images'].present?
 
       # Blockly requires startDirection as an integer not a string

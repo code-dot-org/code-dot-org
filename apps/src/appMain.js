@@ -26,10 +26,10 @@ module.exports = function (app, levels, options) {
 
   // If a levelId is not provided, then options.level is specified in full.
   // Otherwise, options.level overrides resolved level on a per-property basis.
-  if (options.levelId) {
-    var level = levels[options.levelId];
+  if (options.level && options.level.levelId) {
+    var level = levels[options.level.levelId];
     options.level = options.level || {};
-    options.level.id = options.levelId;
+    options.level.id = options.level.levelId;
     for (var prop in options.level) {
       level[prop] = options.level[prop];
     }

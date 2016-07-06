@@ -260,7 +260,6 @@ module LevelsHelper
     app_options = l.blockly_app_options(l.game, l.skin).dup
     level_options = l.blockly_level_options.dup
     app_options[:level] = level_options
-    app_options[:levelId] = l.level_num
 
     # Locale-dependent option
     # Fetch localized strings
