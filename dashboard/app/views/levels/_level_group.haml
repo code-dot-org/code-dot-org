@@ -27,15 +27,18 @@
 
     -# Show any text from an external level.
 
-    -# Fall back to retrieving the the last_attempt from the parsed levelgroup last_attempt
-    - sublevel_last_attempt = parsed[level.id.to_s].try(:[], 'result')
-    - if @user && current_user && @user != current_user
-      -# load other user's solution for teachers viewing their students' solution
-      - sublevel_last_attempt = @user.last_attempt(level).try(:level_source).try(:data)
-    - elsif current_user
-      -# load user's previous attempt at this puzzle.
-      - sublevel_last_attempt = current_user.last_attempt(level).try(:level_source).try(:data)
-
+    -# Show last attempted answer, unless this is a teacher looking at a student's attempt
+    -# at an anonymous survey.  In that case it's very important that we do not show the
+    -# last attempt.
+    - unless @user && current_user && @user != current_user && @script_level.anonymous?
+      -# Fall back to retrieving the the last_attempt from the parsed levelgroup last_attempt
+      - sublevel_last_attempt = parsed[level.id.to_s].try(:[], 'result')
+      - if @user && current_user && @user != current_user
+        -# load other user's solution for teachers viewing their students' solution
+        - sublevel_last_attempt = @user.last_attempt(level).try(:level_source).try(:data)
+      - elsif current_user
+        -# load user's previous attempt at this puzzle.
+        - sublevel_last_attempt = current_user.last_attempt(level).try(:level_source).try(:data)
     - if data["texts"]
       - data["texts"].select {|text| text["index"] == page.offset + index}.each do |text_level_info|
         - text_level = Level.find_by_name(text_level_info["level_name"])
