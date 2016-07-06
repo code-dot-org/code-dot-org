@@ -12,6 +12,7 @@ Course 4: Stage 1",,,,,,,,,,
 binary,binary,A way of representing information using only two options.,"Course 2: Stage 14 <br/>
 Course 4: Stages 17, 18","Course 2: Stage 14 | 
 Course 4: Stages 17, 18",,,,,,,,,,
+blockBased,block-based programming language,"Any programming language that lets users create programs by manipulating “blocks” or graphical programing elements, rather than writing code using text.  Examples include Code Studio, Scratch, Blockly, and Swift. (Sometimes called visual coding, drag and drop programming, or graphical programming blocks) ",General,General,,,,,,,,,,
 Blockly,Blockly,The visual programming language used in Code.org's online learning system for K-5 students.,Course 1: Stage 3,Course 1: Stage 3,,,,,,,,,,
 bug,bug,An error in a program that prevents the program from running as expected.,"Course 1: Stage 5<br/>
 Course 2: Stages 9, 10, 11<br/>

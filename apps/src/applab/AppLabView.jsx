@@ -8,7 +8,7 @@ var StudioAppWrapper = require('../templates/StudioAppWrapper');
 var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
 import { ApplabInterfaceMode } from './constants';
 import CodeWorkspace from '../templates/CodeWorkspace';
-import DataWorkspace from './DataWorkspace';
+import DataWorkspace from './dataBrowser/DataWorkspace';
 import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
 import { connect } from 'react-redux';
 

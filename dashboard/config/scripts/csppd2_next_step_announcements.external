@@ -2,7 +2,7 @@ name 'CSPPD2 next step announcements'
 css 'unplugged'
 markdown <<MARKDOWN
 
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 ### Wrap Up > What's next? 
 
 Professional development will start back up in the early fall. Over the school year we'll have 4 in-person sessions on weekends along with ongoing online PD, which will be mapped to particular lessons in units 2-5. 
@@ -16,7 +16,7 @@ You can always find out more about PD dates by checking the PD website for your 
 >+ [FL - Broward](http://code.org/educate/pd/15-16/broward)
 + [IL - Chicago](http://code.org/educate/pd/15-16/chicago)
 + [NY - New York City](http://code.org/educate/pd/15-16/nyc)
-+ [VA - CodeVA](https://staging.code.org/educate/pd/15-16/codeva)
++ [VA - CodeVA](//code.org/educate/pd/15-16/codeva)
 + [WA - Spokane](http://code.org/educate/pd/15-16/spokane)
 
 <br/><br/>

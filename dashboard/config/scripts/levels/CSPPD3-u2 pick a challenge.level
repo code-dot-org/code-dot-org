@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "markdown_instructions": "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://staging.code.org/curriculum/docs/web/k5online.css\">\n\n### Challenge Overview > What's your Challenge? \n\n<br/>\n\n>Now that you've selected a lesson, head to the forum and **share which lesson you plan to complete** for your challenge. \n<br>\n<a href=\"http://forum.code.org/t/unit-2-online-pd-challenge-selection/2222\" target=_blank>forums >> </a>\n\n##### Enter the lesson you selected for your challenge below: \n<br>\n",
+    "markdown_instructions": "<link rel=\"stylesheet\" type=\"text/css\" href=\"//code.org/curriculum/docs/web/k5online.css\">\n\n### Challenge Overview > What's your Challenge? \n\n<br/>\n\n>Now that you've selected a lesson, head to the forum and **share which lesson you plan to complete** for your challenge. \n<br>\n<a href=\"http://forum.code.org/t/unit-2-online-pd-challenge-selection/2222\" target=_blank>forums >> </a>\n\n##### Enter the lesson you selected for your challenge below: \n<br>\n",
     "skip_dialog": true,
     "skip_sound": true
   },

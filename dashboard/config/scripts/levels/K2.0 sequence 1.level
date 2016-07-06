@@ -27,8 +27,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This program is missing one block. Can you figure out which one?\",\r\n  \"hint_id\": \"K2.0_sequence_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "debug: add command to end",
@@ -61,7 +61,7 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveNorth"/>
+        <block type="maze_moveWest"/>
       </xml>
     </recommended_blocks>
     <solution_blocks>

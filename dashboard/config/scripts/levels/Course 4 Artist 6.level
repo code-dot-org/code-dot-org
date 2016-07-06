@@ -35,8 +35,8 @@
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"There are 3 triangles within the 360 degree rotation...how many times does 3 go into 360?\",\r\n  \"hint_id\": \"Course_4_Artist_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
-    "contained_level_names": null,
-    "discard_background": "false"
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

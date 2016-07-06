@@ -1,12 +1,12 @@
-import { ApplabInterfaceMode } from './constants';
+import { ApplabInterfaceMode } from '../constants';
 import DataOverview from './DataOverview';
 import DataProperties from './DataProperties';
 import DataTable from './DataTable';
 import React from 'react';
-import PaneHeader, { PaneSection } from '../templates/PaneHeader';
+import PaneHeader, { PaneSection } from '../../templates/PaneHeader';
 import { connect } from 'react-redux';
-import msg from '../locale';
-import color from '../color';
+import msg from '../../locale';
+import color from '../../color';
 
 const styles = {
   container: {
