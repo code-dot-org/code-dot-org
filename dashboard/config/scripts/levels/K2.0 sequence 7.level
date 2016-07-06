@@ -26,6 +26,7 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you're stuck, try running the code to find the bug.\",\r\n  \"hint_id\": \"K2.0_sequence_7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
@@ -44,7 +45,7 @@
                   <next>
                     <block type="maze_moveWest">
                       <next>
-                        <block type="maze_moveNorth"/>
+                        <block type="maze_moveSouth"/>
                       </next>
                     </block>
                   </next>

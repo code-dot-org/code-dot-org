@@ -1,12 +1,14 @@
 stage 'Debugging'
+level 'grade1_activity_whatDoesItDo'
 level 'grade1_story_spottedBugs'
-level 'grade1_activity_groupTower1'
+level 'grade1_activity_whatGoesWrong'
 
 
 stage 'Persistence & Frustration'
-level 'grade1_story_theGreatTowerTopple'
+#level 'grade1_story_theGreatTowerTopple'
+level 'grade1_video_frustrationRainbow'
+level 'grade1_activity_groupTower'
 level 'grade1_activity_frustration'
-level 'grade1_activity_groupTower2'
 
 
 stage 'Sequences & Algorithms'
@@ -15,6 +17,7 @@ level 'seqAlg'
 
 stage 'Jigsaw: Learn to drag and drop'
 skin 'jigsaw'
+level 'gradek1_activity_beNice'
 video_key_for_next_level 'C1_pair_programming'
 #level 'Jigsaw_Level_1'
 level_concept_difficulty '{}'
@@ -41,6 +44,9 @@ level_concept_difficulty '{}'
 level 'blockly:Jigsaw:12'
 assessment 'blockly:Jigsaw:13'
 
+stage 'Being Safe Online'
+level 'onlineNeighbors'
+
 stage 'Programming Unplugged'
 level 'comingSoon'
 
@@ -57,10 +63,6 @@ level 'K2.0 sequence 7'
 level 'K2.0 sequence 8'
 level 'K2.0 sequence 9'
 level 'K2.0 sequence 10'
-
-
-stage 'Being Safe Online'
-level 'onlineNeighbors'
 
 
 stage 'Loops Unplugged'
@@ -95,3 +97,6 @@ level 'playEventsK4'
 level 'playEventsK5'
 level 'playEventsK6'
 level 'playEventsK7'
+
+stage 'More Computer Science'
+level 'comingSoon'
