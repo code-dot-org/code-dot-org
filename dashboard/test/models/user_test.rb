@@ -862,7 +862,7 @@ class UserTest < ActiveSupport::TestCase
     assert user_proficiency.basic_proficiency_at.nil?
   end
 
-  def track_progress(student, script_level, result)
+  def track_progress(student, script_level, result, pairings = nil)
     User.track_level_progress_sync(
       user_id: student.id,
       level_id: script_level.level_id,
@@ -870,7 +870,7 @@ class UserTest < ActiveSupport::TestCase
       new_result: result,
       submitted: false,
       level_source_id: nil,
-      pairing_user_ids: nil
+      pairing_user_ids: pairings
     )
   end
 
@@ -922,6 +922,14 @@ class UserTest < ActiveSupport::TestCase
 
     User.expects(:track_proficiency).never
     track_progress(student, script_level, 100)
+  end
+
+  test 'track_level_progress_sync does not call track_proficiency when pairing' do
+    script_level = create :script_level
+    student = create :student
+
+    User.expects(:track_proficiency).never
+    track_progress(student, script_level, 100, [create(:user).id])
   end
 
   test 'normalize_gender' do
