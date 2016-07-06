@@ -48,7 +48,7 @@ def main
     # TODO(asher): Consider whether we should log the exception and continue to
     # attempt to delete further messages rather than stopping deletion.
     sanitized_error_message = e.message.sub CDO.twilio_sid, 'CDO.twilio_sid'
-    message_sid_string = "(Message SID: #{message.sid})" if message.sid
+    message_sid_string = message.sid ? "(Message SID: #{message.sid})" : ''
     raise "Twilio::REST::RequestError #{message_sid_string}: #{sanitized_error_message}"
   end
 end
