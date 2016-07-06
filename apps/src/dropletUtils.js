@@ -615,9 +615,16 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, p
 };
 
 /**
+ * Gets the first parameter of the given function name, given either that
+ * function's DropletBlock or an AceEditor instance with its current cursor
+ * set to after the method.
+ *
+ *
  * @param {string} methodName name of method to get first param of
  * @param {DropletBlock} block Droplet block, or undefined if in text mode
  * @param {AceEditor} editor
+ * @return {string|null} found parameter (without quotes) or null if none found
+ * @throws {Error} encountered unexpected Droplet token
  */
 exports.getFirstParam = function (methodName, block, editor) {
   if (!block) {
