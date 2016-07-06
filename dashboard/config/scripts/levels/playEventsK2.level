@@ -70,7 +70,13 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run"/>
+        <block type="when_run">
+          <next>
+            <block type="studio_saySpriteChoices">
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+        </block>
       </xml>
     </solution_blocks>
   </blocks>

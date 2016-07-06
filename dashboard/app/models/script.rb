@@ -72,59 +72,59 @@ class Script < ActiveRecord::Base
 
   serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required)
 
-  def Script.twenty_hour_script
+  def self.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
   end
 
-  def Script.hoc_2014_script
+  def self.hoc_2014_script
     Script.get_from_cache(Script::HOC_NAME)
   end
 
-  def Script.starwars_script
+  def self.starwars_script
     Script.get_from_cache(Script::STARWARS_NAME)
   end
 
-  def Script.minecraft_script
+  def self.minecraft_script
     Script.get_from_cache(Script::MINECRAFT_NAME)
   end
 
-  def Script.starwars_blocks_script
+  def self.starwars_blocks_script
     Script.get_from_cache(Script::STARWARS_BLOCKS_NAME)
   end
 
-  def Script.frozen_script
+  def self.frozen_script
     Script.get_from_cache(Script::FROZEN_NAME)
   end
 
-  def Script.course1_script
+  def self.course1_script
     Script.get_from_cache(Script::COURSE1_NAME)
   end
 
-  def Script.course2_script
+  def self.course2_script
     Script.get_from_cache(Script::COURSE2_NAME)
   end
 
-  def Script.course3_script
+  def self.course3_script
     Script.get_from_cache(Script::COURSE3_NAME)
   end
 
-  def Script.course4_script
+  def self.course4_script
     Script.get_from_cache(Script::COURSE4_NAME)
   end
 
-  def Script.infinity_script
+  def self.infinity_script
     Script.get_from_cache(Script::INFINITY_NAME)
   end
 
-  def Script.flappy_script
+  def self.flappy_script
     Script.get_from_cache(Script::FLAPPY_NAME)
   end
 
-  def Script.playlab_script
+  def self.playlab_script
     Script.get_from_cache(Script::PLAYLAB_NAME)
   end
 
-  def Script.artist_script
+  def self.artist_script
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
@@ -343,7 +343,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_banner?
-    k5_course? || %w(csp1 csp2 cspunit1 cspunit2 cspunit3).include?(self.name)
+    k5_course? || %w(csp1 csp2 csp3 cspunit1 cspunit2 cspunit3).include?(self.name)
   end
 
   def freeplay_links

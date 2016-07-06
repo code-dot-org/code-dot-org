@@ -279,10 +279,12 @@ var projects = module.exports = {
   /**
    *
    * @param {Object} sourceHandler Object containing callbacks provided by caller.
-   * @param {Function} sourceHandler.setInitialLevelHtml
-   * @param {Function} sourceHandler.getLevelHtml
-   * @param {Function} sourceHandler.setInitialLevelSource
-   * @param {Function} sourceHandler.getLevelSource
+   * @param {function(string)} sourceHandler.setInitialLevelHtml
+   * @param {function(): string} sourceHandler.getLevelHtml
+   * @param {function(string)} sourceHandler.setInitialLevelSource
+   * @param {function(): string} sourceHandler.getLevelSource
+   * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
+   * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
    */
   init: function (sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -296,7 +298,7 @@ var projects = module.exports = {
       }
 
       if (currentSources.animations) {
-        sourceHandler.setInitialAnimationMetadata(currentSources.animations);
+        sourceHandler.setInitialAnimationList(currentSources.animations);
       }
 
       if (isEditing) {
@@ -414,25 +416,26 @@ var projects = module.exports = {
       return;
     }
 
+    $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
+
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.
       var args = Array.prototype.slice.apply(arguments);
       callback = args[0];
       forceNewVersion = args[1];
-
-      sourceAndHtml = {
-        source: this.sourceHandler.getLevelSource(),
-        html: this.sourceHandler.getLevelHtml(),
-        animations: this.sourceHandler.getAnimationMetadata()
-      };
+      this.sourceHandler.getAnimationList(animations => {
+        const source = this.sourceHandler.getLevelSource();
+        const html = this.sourceHandler.getLevelHtml();
+        this.save({source, html, animations}, callback, forceNewVersion);
+      });
+      return;
     }
 
     if (forceNewVersion) {
       currentSourceVersionId = null;
     }
 
-    $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
     // TODO(dave): Remove this check and remove clearHtml() once all projects
     // have versioning: https://www.pivotaltracker.com/story/show/103347498
@@ -496,19 +499,18 @@ var projects = module.exports = {
       return;
     }
 
-    var source = this.sourceHandler.getLevelSource();
-    var html = this.sourceHandler.getLevelHtml();
-    var animations = this.sourceHandler.getAnimationMetadata();
+    this.sourceHandler.getAnimationList(animations => {
+      const source = this.sourceHandler.getLevelSource();
+      const html = this.sourceHandler.getLevelHtml();
+      const newSources = {source, html, animations};
+      if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
+        hasProjectChanged = false;
+        return;
+      }
 
-    if (currentSources.source === source &&
-        currentSources.html === html &&
-        currentSources.animations === animations) {
-      hasProjectChanged = false;
-      return;
-    }
-
-    this.save({source: source, html: html, animations: animations}, function () {
-      hasProjectChanged = false;
+      this.save(newSources, () => {
+        hasProjectChanged = false;
+      });
     });
   },
   /**

@@ -4,24 +4,103 @@ description "Planning Script for CSF 2.0"
 description_audience "Ages 9-99"
 
 stage 'Mixed Review #1 (Ramp Up)'
+level '2-3 Artist 1 new'
+level '2-3 Artist 6'
+level '2-3 Artist 3.4'
+level '2-3 Artist 9'
+level '2-3 Bee Loops 3B'
+level '2-3 Bee Loops 7'
+level '2-3 Bee Loops 3'
+level '2-3 Bee Loops 4'
+level '2-3 Bee Conditionals 12'
+level '2-3 Bee Conditionals 15'
+assessment '2-3 Bee Conditionals Assessment 1'
+level_concept_difficulty '{"events":2,"sequencing":4}'
+level 'blockly:Studio:c2_4'
+level_concept_difficulty '{"events":2,"sequencing":4}'
+level 'blockly:Studio:c2_5'
+level_concept_difficulty '{"events":4,"sequencing":4}'
+level 'blockly:Studio:c2_6'
+
 stage 'Conditionals'
+stage 'Unplugged: Conditionals with Cards'
+level 'Conditionals'
+assessment '2-3 Conditionals Multi 1'
+
 stage 'Bee: Conditionals'
+level '4-5 Bee Conditionals 1'
+level '4-5 Bee Conditionals 2'
+level '4-5 Bee Conditionals 3'
+level '4-5 Bee Conditionals 4'
+
 stage 'PlayLab: Conditionals'
+level 'comingSoon'
+
 stage 'Songwriting'
+level 'SongwritingParameters'
+assessment '4-5 Songwriting Multi 1'
+
 stage 'Bee: Functions'
+level 'comingSoon'
+
 stage 'Decision Trees'
+stage 'Unplugged: Decision Trees (New)'
+level 'comingSoon'
+
 stage 'Choose Your Own Adventure'
+level 'comingSoon'
+
 stage 'Project #1'
+level 'comingSoon'
+
 stage 'Nested Loops'
+stage 'Unplugged: Nested Loops (New)'
+level 'comingSoon'
+
 stage 'Artist: Nested Loops'
+level 'frozen diamond'
+level 'frozen diamond mini snowflake'
+level 'frozen diamond snowflake'
+level '4-5 Nested Loops 1'
+level '4-5 Nested Loops 2'
+level '4-5 Nested Loops 6'
+level '4-5 Nested Loops 9'
+level '4-5 Nested Loops 3'
+level '4-5 Nested Loops 5'
+level '4-5 Nested Loops 7'
+level '4-5 Nested Loops 11'
+level '4-5 Nested Loops 8'
+level '4-5 Nested Loops 12'
+assessment '4-5 Nested Loops Assessment 1'
+assessment '4-5 artist loops multi 1'
+
 stage 'Mixed Review #2 (Conditionals, Events, Functions)'
+level 'comingSoon'
+
 stage 'New Artist: Functions'
-level 'MikeStarNested'
-level 'MikeStarHard'
-level 'MikeStar'
+level '2-3 Artist Functions 1'
+level '2-3 Artist Functions 2'
+level 'grade4_artist_functions_stars1'
+level 'grade4_artist_functions_stars2'
+level 'grade4_artist_functions_stars3'
+
 stage 'Project #2'
+level 'comingSoon'
+
 stage 'Mixed Review #3 (Deduce the Concept)'
+level 'comingSoon'
+
 stage 'Internet'
+level 'Internet'
+assessment '4-5 Internet Multi 1'
+assessment '4-5 Internet Multi 2'
+
 stage 'Crowdsourcing'
+level 'Crowdsourcing'
+assessment '4-5 Crowdsourcing Multi 1'
+assessment '4-5 Crowdsourcing Multi 2'
+
 stage 'Digital Citizenship'
+level 'DigitalCitizenship'
+assessment '4-5 Digital Footprint Multi 1'
 

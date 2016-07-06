@@ -163,7 +163,6 @@ class HocRoutesTest < Minitest::Test
 
     it 'starts and ends given tutorial, tracking time' do
       DB.transaction(rollback: :always) do
-
         before_start_row = get_session_hoc_activity_entry
         assert_nil before_start_row
 

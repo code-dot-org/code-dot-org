@@ -32,13 +32,23 @@ class CollectionsApi {
     this.collectionType = collectionType;
   }
 
+  withProjectId(projectId) {
+    var boundApi = new this.constructor(this.collectionType);
+    boundApi.projectId = projectId;
+    return boundApi;
+  }
+
   basePath(path) {
-    return apiPath(this.collectionType, window.dashboard.project.getCurrentId(), path);
+    return apiPath(
+      this.collectionType,
+      this.projectId || window.dashboard.project.getCurrentId(),
+      path
+    );
   }
 
   ajax(method, file, success, error, data) {
     error = error || function () {};
-    if (!window.dashboard) {
+    if (!window.dashboard && !this.projectId) {
       error({status: "No dashboard"});
       return;
     }
@@ -48,7 +58,10 @@ class CollectionsApi {
 
 class AssetsApi extends CollectionsApi {
   copyAssets(sourceProjectId, assetFilenames, success, error) {
-    var path = apiPath('copy-assets', window.dashboard.project.getCurrentId());
+    var path = apiPath(
+      'copy-assets',
+      this.projectId || window.dashboard.project.getCurrentId()
+    );
     path += '?' + queryString.stringify({
       src_channel: sourceProjectId,
       src_files: JSON.stringify(assetFilenames)
@@ -60,5 +73,6 @@ class AssetsApi extends CollectionsApi {
 module.exports = {
   animations: new CollectionsApi('animations'),
   assets: new AssetsApi('assets'),
-  sources: new CollectionsApi('sources')
+  sources: new CollectionsApi('sources'),
+  channels: new CollectionsApi('channels'),
 };

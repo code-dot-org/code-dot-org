@@ -71,7 +71,7 @@ class LevelSourceImage < ActiveRecord::Base
     upload_image(s3_framed_filename, framed_image)
   end
 
-  def LevelSourceImage.hashify_filename(plain)
+  def self.hashify_filename(plain)
     [Digest::MD5.hexdigest(plain), plain].join('=')
   end
 

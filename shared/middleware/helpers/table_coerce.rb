@@ -11,7 +11,7 @@ module TableCoerce
   # Given a set of records, and a list of columns, attempt to convert each
   # column to a particular type. If we can convert the entire column to
   # number or boolean, we'll do that, otherwise we'll convert all values to strings.
-  def TableCoerce.coerce_columns_from_data(records, columns)
+  def self.coerce_columns_from_data(records, columns)
     # first do a pass to determine types. we can't do coercion right away since
     # we dont want to change anything if we cant coerce the entire column
     # begin with no type definitions
@@ -34,7 +34,7 @@ module TableCoerce
     records
   end
 
-  def TableCoerce.column_types(records, columns)
+  def self.column_types(records, columns)
     # do an initial pass to determine column types
     return columns.map do |col|
       if records.empty?
@@ -52,7 +52,7 @@ module TableCoerce
   # Attempts to coerce a single column to the given type.
   # @return {[Array, boolean]} The new set of records, and a boolean indicating
   #  whether we were able to convert every single row.
-  def TableCoerce.coerce_column(records, column_name, type)
+  def self.coerce_column(records, column_name, type)
     all_converted = true
     records.map do |record|
       val = record[column_name]
@@ -74,23 +74,23 @@ module TableCoerce
   end
 
   # @param val [String|Boolean|Number]
-  def TableCoerce.boolean?(val)
+  def self.boolean?(val)
     return true if val == true || val == false
     return false unless val.is_a?(String)
     return !TRUE.match(val).nil? || !FALSE.match(val).nil?
   end
 
   # converts a value to a boolean, throwing if unable to do so
-  def TableCoerce.to_boolean(val)
+  def self.to_boolean(val)
     return val if val == true || val == false
     raise 'Cannot coerce to boolean' unless val.is_a?(String)
-    return true if !TRUE.match(val).nil?
-    return false if !FALSE.match(val).nil?
+    return true unless TRUE.match(val).nil?
+    return false unless FALSE.match(val).nil?
     raise 'Cannot coerce to boolean'
   end
 
   # @param val [String|Boolean|Number]
-  def TableCoerce.number?(val)
+  def self.number?(val)
     return true if val.is_a?(Numeric)
     return false unless val.is_a?(String)
     # TODO: Doesn't work on things like 1,234.
@@ -98,7 +98,7 @@ module TableCoerce
   end
 
   # converts a value to a number, throwing if unable to do so
-  def TableCoerce.to_number(val)
+  def self.to_number(val)
     return val if val.is_a?(Numeric)
     raise 'Cannot coerce to number' unless val.is_a?(String) && NUMBER.match(val)
     new_val = val.to_f

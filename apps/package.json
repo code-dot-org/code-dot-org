@@ -16,7 +16,7 @@
     "test:entry": "grunt karma:entry",
     "clean": "grunt clean",
     "build": "DEV=1 grunt build && grunt logBuildTimes",
-    "build:dist": "NODE_ENV=production DEV=0 grunt clean build && grunt logBuildTimes",
+    "build:dist": "NODE_ENV=production grunt clean build && grunt logBuildTimes",
     "start": "DEV=1 grunt dev; grunt logBuildTimes",
     "start:applab": "DEV=1 grunt dev --app=applab; grunt logBuildTimes",
     "start:gamelab": "DEV=1 grunt dev --app=gamelab; grunt logBuildTimes",
@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/piskel": "0.2.0",
+    "@code-dot-org/piskel": "0.4.0",
     "@kadira/react-storybook-addon-info": "^3.0.4",
     "@kadira/storybook": "^1.34.0",
     "Base64": "0.3.0",

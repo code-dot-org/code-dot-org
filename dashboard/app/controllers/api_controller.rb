@@ -8,7 +8,7 @@ class ApiController < ApplicationController
   end
 
   def user_hero
-    head :not_found if !current_user
+    head :not_found unless current_user
   end
 
   def section_progress
@@ -191,7 +191,6 @@ class ApiController < ApplicationController
         level_results = []
 
         script_level.level.levels.each do |level|
-
           if level.is_a? Multi
             multi_count += 1
           end

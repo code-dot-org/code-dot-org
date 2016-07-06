@@ -713,12 +713,12 @@
     convidados
   dashboard_navigation_all_sections: Contas e progresso do aluno
   dashboard_navigation_view_progress: Progresso
-  dashboard_navigation_view_text_responses: Ver respostas dissertativas
+  dashboard_navigation_view_text_responses: Respostas de texto
   dashboard_navigation_view_assessments: Avaliações
   dashboard_navigation_add_students: Adicionar alunos
   dashboard_navigation_manage_students: Gerenciar alunos
   dashboard_navigation_lesson_plans_resources: Planos e recursos da aula
-  dashboard_navigation_view_stats: Ver estatísticas
+  dashboard_navigation_view_stats: Estatísticas
   dashboard_navigation_section: 'Turma: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
   dashboard_progress_not_started: não iniciado
@@ -910,7 +910,7 @@
     encontrar todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você
     pode encontrar todos os recursos offline numa página só. Associar as lições com
     qualquer aula de ciência da computação, ou usar a vídeo-aula como um curso independente."
-  dashboard_announce_button_text: Saiba mais
+  dashboard_announce_button_text: Teste a funcionalidade
   dashboard_announce_petition: Como professor, você está liderando o caminho em um
     movimento para dar a cada aluno em todas as escolas a oportunidade de aprender
     informática. Agora, é hora de deixar seus representantes notícias suas. Esta semana,

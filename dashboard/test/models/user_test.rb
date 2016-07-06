@@ -400,7 +400,6 @@ class UserTest < ActiveSupport::TestCase
       user = User.create @good_data.merge(birthday: birthday_4, email: '', hashed_email: Digest::MD5.hexdigest(email2))
       assert_equal ['Email has already been taken'], user.errors.full_messages
     end
-
   end
 
   test 'changing user from teacher to student removes email' do
@@ -1171,4 +1170,31 @@ class UserTest < ActiveSupport::TestCase
     assert student_with_oauth.can_edit_account? # only in a picture section
   end
 
+  test 'terms_of_service_version for teacher without version' do
+    teacher = create :teacher
+    assert_nil teacher.terms_version
+  end
+
+  test 'terms_of_service_version for teacher with version' do
+    teacher = create :teacher, terms_of_service_version: 1
+    assert_equal 1, teacher.terms_version
+  end
+
+  test 'terms_of_service_version for student without teachers' do
+    student = create :student
+    assert_nil student.terms_version
+  end
+
+  test 'terms_of_service_version for student with teachers without version' do
+    follower = create :follower
+    assert_nil follower.student_user.terms_version
+  end
+
+  test 'terms_of_service_version for student with teachers with version' do
+    follower = create :follower
+    follower.user.update(terms_of_service_version: 1)
+    another_teacher = create :teacher
+    create :follower, user: another_teacher, student_user: follower.student_user
+    assert_equal 1, follower.student_user.terms_version
+  end
 end

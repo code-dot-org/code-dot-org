@@ -1,7 +1,7 @@
 name 'CSPPD2 lesson 1 reflection'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 ### Welcome to the Course > Lesson 1 Discussion
 
 <img src="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/kROPqudAyIm2zdw/Screen%20Shot%202015-07-17%20at%209.49.21%20PM.png" width=350 style="float:right; margin-left:30px">
