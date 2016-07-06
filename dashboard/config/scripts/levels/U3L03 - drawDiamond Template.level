@@ -33,28 +33,18 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "false",
-    "code_functions": {
-      "moveForward": {
-        "params": [
-          ""
-        ],
-        "paletteParams": [
-          ""
-        ]
-      },
-      "turnLeft": {
-        "params": [
-          ""
-        ],
-        "paletteParams": [
-          ""
-        ]
-      },
-      "penUp": null,
-      "penDown": null,
-      "functionParams_none": null,
-      "callMyFunction": null
-    }
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>
