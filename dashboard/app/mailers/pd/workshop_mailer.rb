@@ -96,7 +96,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     attachments['certificate.jpg'] = generate_csf_certificate if @workshop.course == Pd::Workshop::COURSE_CSF
 
-    mail content_type: 'text/html',
+    mail content_type: 'multipart/mixed',
       from: from_hadi,
       subject: 'How was your Code.org workshop?',
       to: email_address(@teacher.name, @teacher.email)
