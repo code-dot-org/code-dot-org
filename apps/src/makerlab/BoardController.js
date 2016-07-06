@@ -15,6 +15,7 @@ try {
    */
 }
 
+import _ from 'lodash';
 import {initializeCircuitPlaygroundComponents, TouchSensor} from './PlaygroundComponents';
 
 /** @const {string} */
