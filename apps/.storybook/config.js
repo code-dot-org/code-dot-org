@@ -1,6 +1,8 @@
 import React from 'react';
 import * as storybook from '@kadira/storybook';
 import infoAddon from '@kadira/react-storybook-addon-info';
+import Node from '@kadira/react-storybook-addon-info/dist/components/Node';
+import {Pre} from '@kadira/react-storybook-addon-info/dist/components/markdown/code';
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
 import {setExternalGlobals, setupLocale} from '../test/util/testUtils';
 setExternalGlobals();
@@ -19,6 +21,11 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  storyTable: {
+    table: {backgroundColor: 'white', tableLayout: 'fixed'},
+    row: {border: '1px solid #ccc'},
+    cell: {width:'50%', padding: 10},
   },
 };
 
@@ -48,6 +55,47 @@ function loadStories() {
 function Centered({children}) {
   return <div style={styles.centeredStory}>{children}</div>;
 }
+
+storybook.setAddon({
+  addStoryTable(items) {
+    let hasDescription = false;
+    items.forEach(item => hasDescription = hasDescription || !!item.description);
+    this.add(
+      'Overview',
+      () => (
+        <div>
+          <table style={styles.storyTable.table}>
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Rendered</th>
+              </tr>
+            </thead>
+            <tbody>
+              {items.map(item => (
+                 <tr style={styles.storyTable.row}>
+                   <td style={styles.storyTable.cell}>
+                     <strong>
+                       {item.name}
+                     </strong>
+                     <p>
+                       {item.description || ''}
+                     </p>
+                     <Pre>
+                       <Node depth={0} node={item.story()}/>
+                     </Pre>
+                   </td>
+                   <td>{item.story()}</td>
+                 </tr>
+               ))}
+            </tbody>
+          </table>
+        </div>
+      )
+    );
+    items.forEach(item => this.add(item.name, item.story));
+  }
+});
 
 storybook.setAddon(infoAddon);
 storybook.setAddon(addStoriesGroup);
