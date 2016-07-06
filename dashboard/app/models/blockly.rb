@@ -259,7 +259,7 @@ class Blockly < Level
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
       end
 
-      if level.is_a? Gamelab
+      if is_a? Gamelab
         level_prop['startAnimations'] = level.try(:project_template_level).try(:start_animations) || level.start_animations
       end
 
