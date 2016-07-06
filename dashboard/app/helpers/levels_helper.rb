@@ -592,7 +592,14 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
-    user_id = current_user ? current_user.id.to_s : session.id
+    if current_user
+      user_id = current_user.id.to_s
+    elsif session.id
+      user_id = session.id.to_s
+    else
+      # a signed-out user may not have a session id on their first visit
+      user_id = 'anon'
+    end
     payload = {
       :uid => user_id,
       :is_dashboard_user => !!current_user
