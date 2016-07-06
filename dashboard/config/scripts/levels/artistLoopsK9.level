@@ -89,6 +89,13 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES">uninitialized</title>
+        </block>
+      </xml>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

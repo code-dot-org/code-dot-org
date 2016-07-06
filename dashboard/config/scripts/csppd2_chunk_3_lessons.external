@@ -2,7 +2,7 @@ name 'CSPPD2 chunk 3 lessons'
 css 'unplugged'
 markdown <<MARKDOWN
 
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 ### Chunk 3: Encoding and Sending Text > Exploring the Lessons
 
 #### Reviewing Lessons 10 - 11
