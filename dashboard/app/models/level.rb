@@ -91,6 +91,10 @@ class Level < ActiveRecord::Base
     "<xml id='toolbox' style='display: none;'>#{toolbox(type)}</xml>"
   end
 
+  def host_level
+    project_template_level || self
+  end
+
   # Overriden by different level types.
   def toolbox(type)
   end
@@ -101,6 +105,14 @@ class Level < ActiveRecord::Base
 
   def finishable?
     !unplugged?
+  end
+
+  def enable_scrolling?
+    is_a?(Blockly)
+  end
+
+  def enable_examples?
+    is_a?(Blockly)
   end
 
   # Overriden by different level types.
@@ -312,4 +324,5 @@ class Level < ActiveRecord::Base
   def write_to_file?
     custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
+
 end
