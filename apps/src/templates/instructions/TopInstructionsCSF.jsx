@@ -23,6 +23,7 @@ import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
 import PromptIcon from './PromptIcon';
+import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
@@ -160,12 +161,15 @@ var TopInstructions = React.createClass({
   },
 
   getInitialState() {
-    return { rightColWidth: 90 };
+    return {
+      rightColWidth: 90,
+      promptForHint: false
+    };
   },
 
   componentDidUpdate() {
     this.adjustMaxNeededHeight();
-    if (this.props.feedback) {
+    if (this.props.feedback || this.state.promptForHint) {
       this.scrollInstructionsToBottom();
     }
   },
@@ -319,11 +323,40 @@ var TopInstructions = React.createClass({
     scrollBy(contentContainer, contentHeight * SCROLL_BY_PERCENT);
   },
 
+  /**
+   * Manually scroll instructions to bottom
+   */
+  scrollInstructionsToBottom() {
+    const contentContainer = this.refs.instructions.parentElement;
+    const contentHeight = contentContainer.scrollHeight;
+    scrollBy(contentContainer, contentHeight);
+  },
+
+  /**
+   * Handle a click to the hint display bubble (lightbulb)
+   */
   handleClickBubble() {
     // If we don't have authored hints, clicking bubble shouldnt do anything
     if (this.props.hasAuthoredHints) {
-      this.props.showInstructionsDialog();
+      this.setState({
+        promptForHint: true
+      });
     }
+  },
+
+  dismissHintPrompt() {
+    this.setState({
+      promptForHint: false
+    });
+  },
+
+  showHint() {
+    this.dismissHintPrompt();
+    this.props.showInstructionsDialog();
+  },
+
+  shouldPromptForHint() {
+    return this.state && this.state.promptForHint;
   },
 
   render: function () {
@@ -408,6 +441,14 @@ var TopInstructions = React.createClass({
                   message: styles.instructionsChatText
                 }}
                 message={this.props.feedback.message}
+            />}
+            {this.shouldPromptForHint() && <HintPrompt
+                style={{
+                  container: styles.instructionsChatBubble,
+                  message: styles.instructionsChatText
+                }}
+                onConfirm={this.showHint}
+                onDismiss={this.dismissHintPrompt}
             />}
           </div>
           <div>
