@@ -3,7 +3,14 @@
 import api from './api';
 import _ from 'lodash';
 import {getFirstParam} from '../dropletUtils';
-import {N_COLOR_LEDS, TOUCH_PINS} from './PlaygroundConstants';
+import {
+    N_COLOR_LEDS,
+    TOUCH_PINS,
+    TOUCH_SENSOR_VARS,
+    SENSOR_VARS,
+    BUTTON_VARS,
+    COMPONENT_EVENTS
+} from './PlaygroundConstants';
 
 const COLOR_LIGHT_GREEN = '#D3E965';
 const COLOR_CYAN = '#4DD0E1';
@@ -27,24 +34,7 @@ const CIRCUIT_CATEGORY = 'Circuit';
 const pixelType = '[ColorLed].';
 const touchSensorType = '[TouchSensor].';
 const colorPixelVariables = _.range(N_COLOR_LEDS).map(index => `colorLeds[${index}]`);
-const touchSensorVariables = _.map(TOUCH_PINS, pin => `touchSensor${pin}`);
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
-const sensorVariables = ['soundSensor', 'lightSensor', 'tempSensor'];
-const buttonVariables = ['buttonL', 'buttonR'];
-
-const buttonEvents = ['press', 'down', 'up'];
-const sensorEvents = ['change', 'data'];
-const touchEvents = ['touch'];
-
-const eventDropdowns = {
-  buttonL: buttonEvents,
-  buttonR: buttonEvents,
-  toggleSwitch: ['open', 'close'],
-  accelerometer: ['change', 'data']
-};
-
-sensorVariables.forEach(s => eventDropdowns[s] = sensorEvents);
-touchSensorVariables.forEach(s => eventDropdowns[s] = touchEvents);
 
 /**
  * Relies on `this` being the Droplet socket when in droplet mode, and, in
@@ -55,7 +45,7 @@ touchSensorVariables.forEach(s => eventDropdowns[s] = touchEvents);
 const boardEventDropdownGenerator = function (editor) {
   const firstParam = getFirstParam('onBoardEvent', this.parent, editor);
   const wrapInQuotes = e => `"${e}"`;
-  return eventDropdowns[firstParam].map(wrapInQuotes);
+  return COMPONENT_EVENTS[firstParam].map(wrapInQuotes);
 };
 
 module.exports.blocks = [
@@ -71,7 +61,7 @@ module.exports.blocks = [
   /**
    * Circuit-Playground-specific blocks
    */
-  {func: 'onBoardEvent', parent: api, category: CIRCUIT_CATEGORY, paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"press"', "function(event) {\n  \n}"], dropdown: { 0: Object.keys(eventDropdowns), 1: boardEventDropdownGenerator }},
+  {func: 'onBoardEvent', parent: api, category: CIRCUIT_CATEGORY, paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"press"', "function(event) {\n  \n}"], dropdown: { 0: Object.keys(COMPONENT_EVENTS), 1: boardEventDropdownGenerator }},
 
   {func: 'led', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'led.on', category: CIRCUIT_CATEGORY},
@@ -100,20 +90,20 @@ module.exports.blocks = [
   {func: 'accelerometer.start', category: CIRCUIT_CATEGORY},
   {func: 'accelerometer.sensitivity', category: CIRCUIT_CATEGORY, type: 'property' },
 
-  {func: 'value', blockPrefix: `${touchSensorVariables[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: touchSensorType, modeOptionName: '*.value', objectDropdown: {options: touchSensorVariables}, type: 'readonlyproperty'},
-  {func: 'sensitivity', blockPrefix: `${touchSensorVariables[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: touchSensorType, modeOptionName: '*.sensitivity', objectDropdown: {options: touchSensorVariables}, type: 'property'},
+  {func: 'value', blockPrefix: `${TOUCH_SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: touchSensorType, modeOptionName: '*.value', objectDropdown: {options: TOUCH_SENSOR_VARS}, type: 'readonlyproperty'},
+  {func: 'sensitivity', blockPrefix: `${TOUCH_SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: touchSensorType, modeOptionName: '*.sensitivity', objectDropdown: {options: TOUCH_SENSOR_VARS}, type: 'property'},
 
   // TODO(bjordan): re-add when dropdowns work with object refs
   //{func: 'buttonL', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   //{func: 'buttonR', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
-  {func: 'isPressed', objectDropdown: {options: buttonVariables, dropdownOnly: true}, category: CIRCUIT_CATEGORY, blockPrefix: `${buttonVariables[0]}.`, modeOptionName: "*.isPressed", type: 'readonlyproperty', tipPrefix: '[Button].'},
-  {func: 'holdtime', objectDropdown: {options: buttonVariables, dropdownOnly: true}, category: CIRCUIT_CATEGORY, blockPrefix: `${buttonVariables[0]}.`, modeOptionName: "*.holdtime", type: 'readonlyproperty', tipPrefix: '[Button].'},
+  {func: 'isPressed', objectDropdown: {options: BUTTON_VARS, dropdownOnly: true}, category: CIRCUIT_CATEGORY, blockPrefix: `${BUTTON_VARS[0]}.`, modeOptionName: "*.isPressed", type: 'readonlyproperty', tipPrefix: '[Button].'},
+  {func: 'holdtime', objectDropdown: {options: BUTTON_VARS, dropdownOnly: true}, category: CIRCUIT_CATEGORY, blockPrefix: `${BUTTON_VARS[0]}.`, modeOptionName: "*.holdtime", type: 'readonlyproperty', tipPrefix: '[Button].'},
 
-  {func: 'value', objectDropdown: { options: sensorVariables }, modeOptionName: "*.value", blockPrefix: `${sensorVariables[0]}.`, category: CIRCUIT_CATEGORY, type: 'readonlyproperty', tipPrefix: '[Sensor].'},
-  {func: 'getAveragedValue', objectDropdown: { options: sensorVariables }, modeOptionName: "*.getAveragedValue", blockPrefix: `${sensorVariables[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['500'], paletteParams: ['ms'], type: 'value'},
-  {func: 'start', objectDropdown: { options: sensorVariables }, modeOptionName: "*.start", blockPrefix: `${sensorVariables[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].'},
-  {func: 'setScale', objectDropdown: { options: sensorVariables }, modeOptionName: "*.setScale", blockPrefix: `${sensorVariables[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['0', '100'], paletteParams: ['low', 'high']},
-  {func: 'threshold', objectDropdown: { options: sensorVariables }, modeOptionName: "*.threshold", blockPrefix: `${sensorVariables[0]}.`, category: CIRCUIT_CATEGORY, type: 'property', tipPrefix: '[Sensor].' },
+  {func: 'value', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.value", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, type: 'readonlyproperty', tipPrefix: '[Sensor].'},
+  {func: 'getAveragedValue', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.getAveragedValue", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['500'], paletteParams: ['ms'], type: 'value'},
+  {func: 'start', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.start", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].'},
+  {func: 'setScale', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.setScale", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['0', '100'], paletteParams: ['low', 'high']},
+  {func: 'threshold', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.threshold", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, type: 'property', tipPrefix: '[Sensor].' },
 
   // TODO(bjordan): re-add when dropdowns work with object refs
   //{func: 'toggleSwitch', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
