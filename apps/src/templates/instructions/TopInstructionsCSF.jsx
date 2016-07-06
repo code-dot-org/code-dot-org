@@ -23,6 +23,7 @@ import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
 import PromptIcon from './PromptIcon';
+import InlineFeedback from './InlineFeedback';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
 import { getOuterHeight, scrollBy } from './utils';
@@ -143,6 +144,7 @@ var TopInstructions = React.createClass({
     shortInstructions: React.PropTypes.string.isRequired,
     shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
+    feedback: React.PropTypes.string,
     hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     smallStaticAvatar: React.PropTypes.string,
@@ -159,6 +161,13 @@ var TopInstructions = React.createClass({
 
   getInitialState() {
     return { rightColWidth: 90 };
+  },
+
+  componentDidUpdate() {
+    this.adjustMaxNeededHeight();
+    if (this.props.feedback) {
+      this.scrollInstructionsToBottom();
+    }
   },
 
   /**
@@ -393,6 +402,13 @@ var TopInstructions = React.createClass({
                 />
               }
             </div>
+            {this.props.feedback && <InlineFeedback
+                style={{
+                  container: styles.instructionsChatBubble,
+                  message: styles.instructionsChatText
+                }}
+                message={this.props.feedback.message}
+            />}
           </div>
           <div>
             <CollapserButton
@@ -434,6 +450,7 @@ module.exports = connect(function propsFromStore(state) {
     shortInstructions2: state.instructions.shortInstructions2,
     longInstructions: state.instructions.longInstructions,
     hasAuthoredHints: state.instructions.hasAuthoredHints,
+    feedback: state.instructions.feedback,
     isRtl: state.pageConstants.localeDirection === 'rtl',
     smallStaticAvatar: state.pageConstants.smallStaticAvatar,
     inputOutputTable: state.pageConstants.inputOutputTable,
