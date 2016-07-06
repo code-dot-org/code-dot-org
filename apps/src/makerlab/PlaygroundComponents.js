@@ -135,7 +135,11 @@ export class TouchSensor extends EventEmitter {
  * @param {five.Sensor} sensor
  */
 const addSensorFeatures = (fmap, sensor) => {
-  /** @type {undefined} */
+  /**
+   * Cache scale setting locally (cannot grab after the fact from five.Sensor).
+   * Scale is a 2-element array of [low, high].
+   * @type {Array.<number>|undefined}
+   */
   let scale = undefined;
 
   sensor.lookbackLogger = new LookbackLogger();
