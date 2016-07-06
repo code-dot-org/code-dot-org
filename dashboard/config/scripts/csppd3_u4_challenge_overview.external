@@ -1,7 +1,7 @@
 name 'CSPPD3-u4 challenge overview'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Challenge Overview > What’s Inside
 

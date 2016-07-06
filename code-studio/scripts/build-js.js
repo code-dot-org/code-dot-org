@@ -36,6 +36,7 @@ Promise.all([
     filenames: [
       'code-studio.js',
       'levelbuilder.js',
+      'levelbuilder_gamelab.js',
       'levelbuilder_markdown.js',
       'levelbuilder_studio.js',
       'districtDropdown.js',

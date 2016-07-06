@@ -1,7 +1,7 @@
 name 'Forum-ECSPD-Unit 2-Teaching Practice'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ## Teaching Strategies > Overview
 For each unit in ECS, your online PD courses (like this one) will introduce you to teaching strategies that are relevant to the content of that unit. 

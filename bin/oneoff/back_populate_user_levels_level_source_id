@@ -25,7 +25,7 @@ until start_index > end_index
 
   UserLevel.
     where(id: start_index..(start_index + batch_size)).
-    where(level_source_id: nil).each do |user_level|
+    where(level_source_id: nil).find_each do |user_level|
     activity = Activity.
       where(user_id: user_level.user_id, level_id: user_level.level_id).last
     level_source_id = activity[:level_source_id]

@@ -17,7 +17,7 @@ Examples are a great tool to help students build pattern recognition skills, but
 You'll see that examples each have a _Test_ button underneath them. Clicking the _Test_ button will do two things. First, it will run  your example code in the play space so you can see what it produces. Second, it will compare the example against your definition, letting you know whether it does or does not match the definition.
 
 <br><br>
-![examples](https://staging-studio.code.org/script_assets/pd/examples.gif)
+![examples](//studio.code.org/script_assets/pd/examples.gif)
 <br><br>
 The examples will be tested again when you run your entire program, and you'll get a warning if your examples don't match your definition.
 <br><br>

@@ -1,7 +1,7 @@
 name 'CSPPD3-u4 overview'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Getting Started > About the PD
 <img src="https://images.code.org/7850bdfa554806f7c83bf6ab8358bfdf-image-1455045769991.22.29 PM.png" width="450" style="float:right; margin-left:30px">
