@@ -121,14 +121,15 @@ const styles = {
     backgroundColor: 'white',
     borderRadius: 10,
     marginBottom: 10,
-    padding: '0 10px',
+    padding: 10,
   },
   instructionsChatText: {
     // note that we actually do need to specify lineHeight
     // in pixels; it defaults to a multiple of fontSize
     lineHeight: '25px',
     fontSize: 16,
-    color: 'black'
+    color: 'black',
+    margin: 0
   },
 };
 
