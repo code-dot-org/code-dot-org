@@ -168,6 +168,18 @@ var TopInstructions = React.createClass({
   },
 
   componentDidUpdate() {
+    // Update right col width now that we know how much space it needs, and
+    // rerender if it has changed. One thing to note is that if we end up
+    // resizing our column significantly, it can result in our maxNeededHeight
+    // being inaccurate. This isn't that big a deal except that it means when we
+    // adjust maxNeededHeight below, it might not be as large as we want.
+    var width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
+    if (width !== this.state.rightColWidth) {
+      this.setState({
+        rightColWidth: width
+      });
+    }
+
     this.adjustMaxNeededHeight();
     if (this.props.feedback || this.state.promptForHint) {
       this.scrollInstructionsToBottom();
@@ -191,28 +203,28 @@ var TopInstructions = React.createClass({
 
     const maxNeededHeight = this.adjustMaxNeededHeight();
 
-    // Update right col width now that we know how much space it needs. One thing
-    // to note is that if we end up resizing our column significantly, it can
-    // result in our maxNeededHeight being inaccurate. This isn't that big a deal
-    // except that it means when we set instructionsRenderedHeight below, it might
-    // not be as large as we want.
-    this.setState({
-      rightColWidth: $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true)
-    });
-
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
   },
 
   /**
-   * Height can get below min height iff we resize the window to be super small.
-   * If we then resize it to be larger again, we want to increase height.
+   * When collapsed, height can change when we get additional feedback
+   * or the hint prompt. In that case, we want to always resize.
+   * When in resize mode, height can get below min height iff we resize
+   * the window to be super small.  If we then resize it to be larger
+   * again, we want to increase height.
    */
   componentWillReceiveProps(nextProps) {
     const minHeight = this.getMinHeight(nextProps.collapsed);
-    if (nextProps.height < minHeight && nextProps.height < nextProps.maxHeight) {
-      this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, minHeight));
+    const newHeight = Math.min(nextProps.maxHeight, minHeight);
+
+    const shouldUpdateHeight = (nextProps.collapsed)
+        ? newHeight !== this.props.height
+        : nextProps.height < minHeight && nextProps.height < nextProps.maxHeight;
+
+    if (shouldUpdateHeight) {
+      this.props.setInstructionsRenderedHeight(newHeight);
     }
   },
 
