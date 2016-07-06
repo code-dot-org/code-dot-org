@@ -68,7 +68,7 @@ class SessionsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end
 
-  test 'signing in new user creates UserGeo' do
+  test 'signing in new user creates blank UserGeo' do
     user = create(:user)
 
     assert UserGeo.find_by_user_id(user.id).nil?
@@ -80,19 +80,17 @@ class SessionsControllerTest < ActionController::TestCase
     assert UserGeo.find_by_user_id(user.id)
   end
 
-  test 'signing in user with UserGeo does not modify UserGeo' do
-    user = create(:user, current_sign_in_ip: '1.2.3.4')
-    UserGeo.create(
-      user_id: user.id,
-      ip_address: '9.8.7.6',
-      indexed_at: '2000-01-02 12:34:56'
-    )
+  test 'signing in user with existing UserGeo does not change UserGeo' do
+    user = create(:user)
+    UserGeo.create(user_id: user.id, ip_address: '127.0.0.1')
 
-    post :create, user: {
-      login: '', hashed_email: user.hashed_email, password: user.password
-    }
+    assert_no_change('UserGeo.find_by_user_id(user.id)') do
+      post :create, user: {
+        login: '', hashed_email: user.hashed_email, password: user.password
+      }
+    end
 
-    assert_equal '9.8.7.6', UserGeo.find_by_user_id(user.id)[:ip_address]
+    assert_equal 1, UserGeo.count
   end
 
   test 'failed signin does not create UserGeo' do
