@@ -39,7 +39,7 @@ const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 /**
  * Relies on `this` being the Droplet socket when in droplet mode, and, in
  * text mode, this.parent being undefined.
- * @param editor
+ * @param {AceEditor} editor
  * @returns {Array.<string>}
  */
 const boardEventDropdownGenerator = function (editor) {
