@@ -7,7 +7,6 @@ class ScriptsControllerTest < ActionController::TestCase
   setup do
     @admin = create(:admin)
     @not_admin = create(:user)
-    @levelbuilder = create(:levelbuilder)
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
@@ -15,7 +14,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should get index" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    sign_in(@levelbuilder)
+    sign_in(@admin)
     get :index
     assert_response :success
     assert_not_nil assigns(:scripts)
@@ -28,14 +27,12 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  test "should not get index if not levelbuilder" do
-    [@admin, @not_admin].each do |user|
-      sign_in user
+  test "should not get index if not admin" do
+    sign_in @not_admin
 
-      get :index
+    get :index
 
-      assert_response :forbidden
-    end
+    assert_response :forbidden
   end
 
   test "should get show of hoc" do
@@ -128,12 +125,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'should not get show if admin' do
-    sign_in @admin
-    get :show, id: Script::FLAPPY_NAME
-    assert_response :forbidden
-  end
-
   test "should use script name as param where script name is words but looks like a number" do
     script = create(:script, name: '15-16')
     get :show, id: "15-16"
@@ -162,9 +153,9 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
-  test "should not get edit if not levelbuilder mode" do
+  test "should not get edit if not levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in @admin
     get :edit, id: 'course1'
 
     assert_response :forbidden
@@ -177,19 +168,17 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  test "should not get edit if not levelbuilder" do
+  test "should not get edit if not admin" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    [@not_admin, @admin].each do |user|
-      sign_in user
-      get :edit, id: 'course1'
+    sign_in @not_admin
+    get :edit, id: 'course1'
 
-      assert_response :forbidden
-    end
+    assert_response :forbidden
   end
 
   test "edit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in @admin
     script = Script.find_by_name('course1')
     get :edit, id: script.name
 
@@ -211,7 +200,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "edit forbidden if not on levelbuilder" do
-    sign_in @levelbuilder
+    sign_in @admin
     get :edit, id: 'course1'
     assert_response :forbidden
   end
@@ -235,11 +224,11 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "should not get show of admin script if signed in as admin" do
+  test "should get show of admin script if signed in as admin" do
     admin_script = create_admin_script
 
     sign_in @admin
     get :show, id: admin_script.name
-    assert_response :forbidden
+    assert_response :success
   end
 end

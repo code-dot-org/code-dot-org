@@ -171,7 +171,6 @@ class Ability
     # permissions.
     if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
       can :manage, [
-        Game,
         Level,
         Script,
         ScriptLevel
@@ -186,15 +185,10 @@ class Ability
     if user.admin?
       can :manage, :all
 
-      cannot :manage, [
-        Activity,
-        Game,
-        Level,
-        Script,
-        ScriptLevel,
-        UserLevel,
-        UserScript
-      ]
+      # Only custom levels are editable
+      cannot [:update, :destroy], Level do |level|
+        !level.custom?
+      end
     end
   end
 end
