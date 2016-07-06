@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,2,1,4,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,4,0,0,0,0],[0,0,2,1,3,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "instructions": "Something is not quite right. REMOVE a block to get me to the pig!",
     "start_direction": "2",
@@ -38,19 +38,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="maze_moveEast">
-              <next>
-                <block type="maze_moveSouth">
-                  <next>
-                    <block type="maze_moveNorth"/>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -73,7 +61,7 @@
           <next>
             <block type="maze_moveEast">
               <next>
-                <block type="maze_moveNorth"/>
+                <block type="maze_moveEast"/>
               </next>
             </block>
           </next>
