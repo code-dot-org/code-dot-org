@@ -2,7 +2,7 @@ name 'ECSPD1 computational thinker'
 skip_sound true
 skip_dialogue true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 
 ## Reflecting on the ECS Curriculum?
