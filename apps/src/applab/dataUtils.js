@@ -12,7 +12,7 @@ export function castValue(val) {
   if (val === 'false' || val === false ) {
     return false;
   }
-  if (!isNaN(val)) {
+  if (!isNaN(parseFloat(val))) {
     return parseFloat(val);
   }
   return val;
