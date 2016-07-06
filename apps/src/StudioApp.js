@@ -360,7 +360,6 @@ StudioApp.prototype.init = function (config) {
       containerId: config.containerId,
       embed: config.embed,
       level: config.level,
-      level_source_id: config.level_source_id,
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
       twitter: config.twitter,
