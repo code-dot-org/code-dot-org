@@ -412,6 +412,10 @@ NetSimSendPanel.prototype.onSendEventTriggered_ = function (jQueryEvent) {
   if (level.messageGranularity === MessageGranularity.PACKETS) {
     this.beginSendingPackets_();
   } else if (level.messageGranularity === MessageGranularity.BITS) {
+    if (this.getNextBit_() === undefined) {
+      // Ignore send events in BITS mode when there are no bits queued.
+      return;
+    }
     this.sendOneBit_();
   }
 };
