@@ -110,27 +110,24 @@ if (BUILD_STYLEGUIDE) {
       .addStoryTable([
         {
           name: 'ok',
-          description: '',
           story: () => <DialogButtons ok={true}/>
         }, {
           name: 'cancelText',
-          description: '',
           story: () => <DialogButtons cancelText="Custom Cancel Text"/>,
         }, {
           name: 'confirmText',
-          description: '',
           story: () => <DialogButtons confirmText="Custom Confirm Text"/>,
         }, {
           name: 'previousLevel',
-          description: '',
           story: () => <DialogButtons previousLevel={true}/>,
         }, {
+          name: 'nextLevel',
+          story: () => <DialogButtons nextLevel={true} continueText="Custom Continue Text"/>,
+        }, {
           name: 'tryAgain',
-          description: '',
           story: () => <DialogButtons tryAgain="Custom Try Again Text"/>,
         }, {
           name: 'tryAgain with hint',
-          description: '',
           story: () => <DialogButtons shouldPromptForHint={true} tryAgain="Custom Try Again Text"/>,
         }, {
           name: 'K1 customizations',
