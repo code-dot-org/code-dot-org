@@ -107,56 +107,51 @@ if (BUILD_STYLEGUIDE) {
   DialogButtons.styleGuideExamples = storybook => {
     storybook
       .storiesOf('DialogButtons', module)
-      .addWithInfo(
-        'ok',
-        '',
-        () => <DialogButtons ok={true}/>
-      )
-      .addWithInfo(
-        'cancelText',
-        '',
-        () => <DialogButtons cancelText="Custom Cancel Text"/>
-      )
-      .addWithInfo(
-        'confirmText',
-        '',
-        () => <DialogButtons confirmText="Custom Confirm Text"/>
-      )
-      .addWithInfo(
-        'previousLevel',
-        '',
-        () => <DialogButtons previousLevel={true}/>
-      )
-      .addWithInfo(
-        'tryAgain',
-        '',
-        () => <DialogButtons tryAgain="Custom Try Again Text"/>
-      )
-      .addWithInfo(
-        'tryAgain with hint',
-        '',
-        () => <DialogButtons shouldPromptForHint={true} tryAgain="Custom Try Again Text"/>
-      )
-      .addWithInfo(
-        'K1 customizations',
-        'To use k1 customization, you must pass an assetUrl function.',
-        () => <DialogButtons
-                  isK1={true}
-                  tryAgain="Custom Try Again"
-                  nextLevel={true}
-                  continueText="Custom Continue"
-                  assetUrl={url => '/blockly/'+url}/>
-      )
-      .addWithInfo(
-        'K1 freePlay',
-        'To use k1 customization, you must pass an assetUrl function.',
-        () => <DialogButtons
-                  isK1={true}
-                  freePlay={true}
-                  tryAgain="Custom Try Again"
-                  nextLevel={true}
-                  continueText="Custom Continue"
-                  assetUrl={url => '/blockly/'+url}/>
-      );
+      .addStoryTable([
+        {
+          name: 'ok',
+          description: '',
+          story: () => <DialogButtons ok={true}/>
+        }, {
+          name: 'cancelText',
+          description: '',
+          story: () => <DialogButtons cancelText="Custom Cancel Text"/>,
+        }, {
+          name: 'confirmText',
+          description: '',
+          story: () => <DialogButtons confirmText="Custom Confirm Text"/>,
+        }, {
+          name: 'previousLevel',
+          description: '',
+          story: () => <DialogButtons previousLevel={true}/>,
+        }, {
+          name: 'tryAgain',
+          description: '',
+          story: () => <DialogButtons tryAgain="Custom Try Again Text"/>,
+        }, {
+          name: 'tryAgain with hint',
+          description: '',
+          story: () => <DialogButtons shouldPromptForHint={true} tryAgain="Custom Try Again Text"/>,
+        }, {
+          name: 'K1 customizations',
+          description: 'To use k1 customization, you must pass an assetUrl function.',
+          story: () => <DialogButtons
+                           K1={true}
+                           tryAgain="Custom Try Again"
+                           nextLevel={true}
+                           continueText="Custom Continue"
+                           assetUrl={url => '/blockly/'+url}/>,
+        }, {
+          name: 'K1 freePlay',
+          description: 'To use k1 customization, you must pass an assetUrl function.',
+          story: () => <DialogButtons
+                           K1={true}
+                           freePlay={true}
+                           tryAgain="Custom Try Again"
+                           nextLevel={true}
+                           continueText="Custom Continue"
+                           assetUrl={url => '/blockly/'+url}/>
+        }
+      ]);
   };
 }
