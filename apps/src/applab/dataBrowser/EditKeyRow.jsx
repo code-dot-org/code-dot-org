@@ -1,6 +1,6 @@
 /** @overview Component for editing a key/value pair row. */
 
-import FirebaseStorage from './firebaseStorage';
+import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
 import { castValue } from './dataUtils';

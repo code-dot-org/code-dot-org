@@ -2,7 +2,7 @@
  * @file Styles shared by various react components in the applab data browser.
  */
 
-import color from '../color';
+import color from '../../color';
 
 const rowHeight = 45;
 const cellPadding = 10;
