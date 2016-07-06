@@ -159,8 +159,8 @@ module AWS
       end
 
       # Prints the latest CloudFormation stack events.
-      def tail_events
-        stack_events = cfn.describe_stack_events(stack_name: STACK_NAME).stack_events
+      def tail_events(stack_id)
+        stack_events = cfn.describe_stack_events(stack_name: stack_id).stack_events
         stack_events.reject{|event| event.timestamp <= @@event_timestamp}.sort_by(&:timestamp).each do |event|
           CDO.log.info "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
         end
@@ -169,23 +169,25 @@ module AWS
 
       def wait_for_stack(action, start_time)
         CDO.log.info "Stack #{action} requested, waiting for provisioning to complete..."
+        stack_id = STACK_NAME
         begin
           @@event_timestamp = start_time
           @@log_token = nil
           tail_log(quiet: true)
-          cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: STACK_NAME) do |w|
+          stack_id = cfn.describe_stacks(stack_name: stack_id).stacks.first.stack_id
+          cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: stack_id) do |w|
             w.max_attempts = 360 # 1 hour
             w.delay = 10
             w.before_wait do
-              tail_events
+              tail_events(stack_id)
               tail_log
               print '.'
             end
           end
-          tail_events
+          tail_events(stack_id)
           tail_log
         rescue Aws::Waiters::Errors::FailureStateError
-          tail_events
+          tail_events(stack_id)
           tail_log
           CDO.log.info "\nError on #{action}."
           if action == :create
