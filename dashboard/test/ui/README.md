@@ -18,6 +18,7 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
   - a window will pop up in the background in which you can watch the tests happen
 7. In a separate window, run `tail -f *.log` to watch the results of your tests
   - `-f` streams the log in your shell, so it will be updated as new lines are written
+8. To run a single ui test, you can simply run `rake test:ui feature=path/to/test.feature`
 
 ### With remote browsers: Saucelabs
 
