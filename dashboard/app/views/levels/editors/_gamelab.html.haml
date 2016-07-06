@@ -47,3 +47,42 @@
 .field
   =f.label 'Disable code debugger (Console is still enabled)'
   = boolean_check_box f, :debugger_disabled
+
+.field
+  = f.label :start_animations, 'Starting animation list JSON'
+  %p
+    This should be equivalent to the animation JSON created by the animation tab.
+    Here is an example.
+  %pre
+    :preserve
+      {
+        "orderedKeys": ["animation1"],
+        "propsByKey": {
+          "animation1": {
+            "name": "asterisk_circle",
+            "sourceUrl": "/blockly/media/gamelab/library/asterisk_circle.png",
+            "sourceSize": {"x":396, "y": 378},
+            "frameSize": {"x":132, "y": 126},
+            "frameCount": 9,
+            "frameRate": 15,
+          }
+        }
+      }
+  %p
+    Some considerations:
+  %ul
+    %li <tt>orderedKeys</tt> defines the order the animations are listed in the animation tab, and each key must reference a set of props in <tt>propsByKey</tt>
+    %li <tt>name</tt>, <tt>sourceUrl</tt>, <tt>sourceSize</tt>, <tt>frameSize</tt>, <tt>frameCount</tt> and <tt>frameRate</tt> are all required.
+    %li <tt>name</tt> is used to refer to the animation in code; the "animation key" is never visible to the student.
+    %li
+      <tt>sourceUrl</tt> can take absolute URLs (which will run through our media proxy, so you can refer to almost anything)
+      or domain-relative URLs for the limited set of animations in the current library,
+      <a href="https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/gamelab/animationLibrary.js">which you can find here.</a>
+      The sourceUrl should point to an image or spritesheet - not an animated gif.
+    %li
+      <tt>sourceSize</tt> is the size of the entire source image.  <tt>frameSize</tt> is the size of an individual frame in the source image (they must be uniform).
+      There are some known bugs with specifying a frame size larger than the actual source image, so please set this correctly!
+    %li <tt>frameRate</tt> is given in frames per second.
+  = f.text_area :start_animations, placeholder: 'Starting animations JSON', rows: 4, value: @level.start_animations
+  :javascript
+    levelbuilder.initializeCodeMirror('level_start_animations', 'json');
