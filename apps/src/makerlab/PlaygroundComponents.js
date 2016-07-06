@@ -35,9 +35,9 @@ export function initializeCircuitPlaygroundComponents(io, five, PlaygroundIO) {
   });
   const buttonL = new five.Button('4');
   const buttonR = new five.Button('19');
-  [buttonL, buttonR].forEach((button) => {
+  [buttonL, buttonR].forEach(button => {
     Object.defineProperty(button, 'isPressed', {
-      get: () => this.value === 1
+      get: () => button.value === 1
     });
   });
 
