@@ -61,7 +61,7 @@ namespace :build do
   desc 'Builds code studio.'
   task :code_studio do
     Dir.chdir(code_studio_dir) do
-      HipChat.log 'Building <b>code-studio</b>...'
+      HipChat.log 'Removing <b>code-studio</b>...'
       RakeUtils.system 'rm -rf build'
     end
   end
