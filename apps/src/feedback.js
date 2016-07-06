@@ -85,11 +85,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   options.level = options.level || {};
   options.numTrophies = this.numTrophiesEarned_(options);
 
-  // Tracking event for level newly completed
-  if (options.response && options.response.new_level_completed) {
-    trackEvent('Puzzle', 'Completed', options.response.level_path, options.response.level_attempts);
-  }
-
   var hadShareFailure = (options.response && options.response.share_failure);
   // options.response.level_source is the url that we are sharing; can't
   // share without it
@@ -102,9 +97,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   var sharingDiv = (canContinue && showingSharing) ? this.createSharingDiv(options) : null;
   var showCode = displayShowCode ? this.getShowCodeElement_(options) : null;
   var shareFailureDiv = hadShareFailure ? this.getShareFailure_(options) : null;
-  if (hadShareFailure) {
-    trackEvent('Share', 'Failure', options.response.share_failure.type);
-  }
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
     feedbackBlocks = new FeedbackBlocks(
@@ -121,14 +113,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     feedback.appendChild(feedbackMessage);
   }
   if (options.numTrophies) {
-    // Tracking event for new trophy earned
-    if (options.numTrophies > 0) {
-      for (var i = 0; i < options.numTrophies; i++) {
-        var concept_name = options.response.trophy_updates[i][0];
-        var trophy_name = options.response.trophy_updates[i][1];
-        trackEvent('Trophy', concept_name, trophy_name);
-      }
-    }
     var trophies = this.getTrophiesElement_(options);
     feedback.appendChild(trophies);
   }
@@ -314,7 +298,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         }
       });
     }
-
   }
 
   if (continueButton) {

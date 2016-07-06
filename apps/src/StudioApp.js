@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, droplet, dashboard, addToHome */
+/* global trackEvent, Blockly, ace:true, droplet, dashboard, addToHome */
 
 import $ from 'jquery';
 import React from 'react';
@@ -1143,6 +1143,27 @@ StudioApp.prototype.displayMissingBlockHints = function (blocks) {
 
 StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
+
+  if (!response) {
+    return;
+  }
+
+  // Track GA events
+  if (response.new_level_completed) {
+    trackEvent('Puzzle', 'Completed', response.level_path, response.level_attempts);
+  }
+
+  if (response.share_failure) {
+    trackEvent('Share', 'Failure', response.share_failure.type);
+  }
+
+  if (response.trophy_updates) {
+    response.trophy_updates.forEach(update => {
+      let concept_name = update[0];
+      let trophy_name = update[1];
+      trackEvent('Trophy', concept_name, trophy_name);
+    });
+  }
 };
 
 /**
