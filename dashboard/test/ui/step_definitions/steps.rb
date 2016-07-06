@@ -711,7 +711,7 @@ When(/^I debug cookies$/) do
 end
 
 When(/^I debug focus$/) do
-  puts "Focused element id: #{@browser.execute_script("return document.activeElement.id")}"
+  puts "Focused element id: #{@browser.execute_script('return document.activeElement.id')}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|
