@@ -38,6 +38,25 @@ const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 
 const SCROLL_BY_PERCENT = 0.4;
 
+// Minecraft-specific styles
+const craftStyles = {
+  main: {
+    marginTop: 20,
+    marginBottom: 10
+  },
+  body: {
+    // $below-header-background from craft/style.scss
+    backgroundColor: '#646464'
+  },
+  instructionsChatBubble: {
+    backgroundColor: '#3B3B3B',
+    borderRadius: 4
+  },
+  instructionsChatText: {
+    color: 'white'
+  },
+};
+
 const styles = {
   main: {
     position: 'absolute',
@@ -52,10 +71,6 @@ const styles = {
     top: 0,
     left: 0,
     // right handled by media queries for .editor-column
-  },
-  mainMinecraft: {
-    marginTop: 20,
-    marginBottom: 10
   },
   noViz: {
     left: 0,
@@ -73,10 +88,6 @@ const styles = {
     bottom: 0,
     left: 0,
     marginLeft: 0
-  },
-  bodyCraft: {
-    // $below-header-background from craft/style.scss
-    backgroundColor: '#646464'
   },
   embedView: {
     height: undefined,
@@ -382,7 +393,7 @@ var TopInstructions = React.createClass({
       },
       this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
-      this.props.isMinecraft && styles.mainMinecraft
+      this.props.isMinecraft && craftStyles.main
     ];
 
     const atMaxHeight = this.props.height === this.props.maxHeight;
@@ -401,7 +412,7 @@ var TopInstructions = React.createClass({
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
             style={{
-              container: [styles.body, this.props.isMinecraft && styles.bodyCraft],
+              container: [styles.body, this.props.isMinecraft && craftStyles.body],
               left: styles.leftCol
             }}
             leftColWidth={leftColWidth}
@@ -424,8 +435,8 @@ var TopInstructions = React.createClass({
               }
             </ProtectedStatefulDiv>
           </div>
-          <div ref="instructions" onWheel={this.handleInstructionsWheel} style={styles.instructions}>
-            <div style={[styles.instructionsChatBubble]}>
+          <div ref="instructions" className="top-instructions" onWheel={this.handleInstructionsWheel} style={styles.instructions}>
+            <div style={[styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble]}>
               {this.props.hasContainedLevels && <ProtectedStatefulDiv
                   id="containedLevelContainer"
                   ref="containedLevelContainer"
@@ -450,15 +461,15 @@ var TopInstructions = React.createClass({
             </div>
             {this.props.feedback && <InlineFeedback
                 style={{
-                  container: styles.instructionsChatBubble,
-                  message: styles.instructionsChatText
+                  container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
+                  message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
                 }}
                 message={this.props.feedback.message}
             />}
             {this.shouldPromptForHint() && <HintPrompt
                 style={{
-                  container: styles.instructionsChatBubble,
-                  message: styles.instructionsChatText
+                  container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
+                  message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
                 }}
                 onConfirm={this.showHint}
                 onDismiss={this.dismissHintPrompt}
