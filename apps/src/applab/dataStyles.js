@@ -41,7 +41,8 @@ const editButton = {
   marginTop: 0,
   marginLeft: 0,
   marginBottom: 0,
-  marginRight: 10
+  marginRight: 10,
+  width: 60
 };
 
 const input = {

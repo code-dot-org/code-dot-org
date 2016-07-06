@@ -100,14 +100,14 @@ const AddKeyRow = Radium(React.createClass({
               style={dataStyles.input}
               onChange={this.handleKeyChange}
               value={this.state.key}
-          ></input>
+          />
         </td>
         <td style={dataStyles.cell}>
           <input
               style={dataStyles.input}
               onChange={this.handleValueChange}
               value={this.state.value}
-          ></input>
+          />
         </td>
         <td style={dataStyles.cell}>
           <button
@@ -148,8 +148,10 @@ const EditKeyRow = Radium(React.createClass({
   },
 
   handleSave() {
-    const value = castValue(this.state.newValue);
-    FirebaseStorage.setKeyValue(this.props.keyName, value, this.handleSaveComplete,
+    FirebaseStorage.setKeyValue(
+      this.props.keyName,
+      castValue(this.state.newValue),
+      this.handleSaveComplete,
       this.handleError);
   },
 
@@ -175,7 +177,7 @@ const EditKeyRow = Radium(React.createClass({
                 style={dataStyles.input}
                 value={this.state.newValue}
                 onChange={this.handleChange}
-            ></input> :
+            /> :
             this.props.value}
         </td>
         <td style={dataStyles.cell}>
