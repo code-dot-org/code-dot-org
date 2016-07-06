@@ -106,6 +106,9 @@ level 'Applab allthethings onRecordEvent'
 level 'allthethings_embed_video'
 level 'Test Applab Predictive'
 
+stage 'Gamelab'
+level 'Gamelab AllTheThings With Prepopulated Animation'
+
 stage 'Online PD'
 level 'PDK5 Intro C'
 level 'PDK5 Foundations F'

@@ -14,6 +14,9 @@ class PosteTest < Minitest::Test
   BODY = 'blah blah blah'
   CONTENT_TYPE = 'text/html; charset=UTF-8'
   IP = '127.0.0.1'
+  MULTIPART_CONTENT_TYPE = 'multipart/mixed'
+  ATTACHMENT_FILENAME = 'file.txt'
+  ATTACHMENT_CONTENT = 'hello world'
 
   def setup
     @mail = Mail.new
@@ -25,21 +28,21 @@ class PosteTest < Minitest::Test
     @mail.content_type = CONTENT_TYPE
 
     @delivery_method = Poste2::DeliveryMethod.new
+
+    @mock_recipient = {id: -1, email: TO_EMAIL, name: TO_NAME, ip_address: IP}
   end
 
   def test_delivery_method
-    mock_recipient = {id: -1, email: TO_EMAIL, name: TO_NAME, ip_address: IP}
-
     Poste2.expects(:ensure_recipient).with(
       TO_EMAIL,
       name: TO_NAME,
       ip_address: IP
-    ).returns(mock_recipient).times(2)
+    ).returns(@mock_recipient).times(2)
 
     # With Reply-to
     Poste2.expects(:send_message).with(
       'dashboard',
-      mock_recipient,
+      @mock_recipient,
       body: BODY,
       subject: SUBJECT,
       from: "#{FROM_NAME} <#{FROM_EMAIL}>",
@@ -51,7 +54,7 @@ class PosteTest < Minitest::Test
     @mail.reply_to = nil
     Poste2.expects(:send_message).with(
       'dashboard',
-      mock_recipient,
+      @mock_recipient,
       body: BODY,
       subject: SUBJECT,
       from: "#{FROM_NAME} <#{FROM_EMAIL}>"
@@ -84,5 +87,33 @@ class PosteTest < Minitest::Test
       @delivery_method.deliver!(@mail)
     end
     assert e.message.include? 'Unsupported message type'
+  end
+
+  def test_multipart_mail
+    mail = Mail.new(
+      content_type: MULTIPART_CONTENT_TYPE,
+      to: TO_EMAIL,
+      from: FROM_EMAIL,
+      subject: SUBJECT
+    )
+    mail.attachments[ATTACHMENT_FILENAME] = ATTACHMENT_CONTENT
+    mail.body = BODY
+    mail.parts.last.content_type = CONTENT_TYPE
+
+    Poste2.expects(:ensure_recipient).with(
+      TO_EMAIL,
+      name: nil,
+      ip_address: IP
+    ).returns(@mock_recipient)
+
+    Poste2.expects(:send_message).with(
+      'dashboard',
+      @mock_recipient,
+      body: BODY,
+      subject: SUBJECT,
+      from: FROM_EMAIL,
+      attachments: {ATTACHMENT_FILENAME => ATTACHMENT_CONTENT}
+    )
+    @delivery_method.deliver!(mail)
   end
 end

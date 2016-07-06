@@ -259,6 +259,10 @@ class Blockly < Level
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
       end
 
+      if is_a? Gamelab
+        level_prop['startAnimations'] = try(:project_template_level).try(:start_animations) || start_animations
+      end
+
       if is_a?(Maze) && step_mode
         step_mode_value = JSONValue.value(step_mode)
         level_prop['step'] = step_mode_value == 1 || step_mode_value == 2
