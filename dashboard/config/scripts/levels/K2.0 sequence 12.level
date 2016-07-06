@@ -12,7 +12,7 @@
     "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "true",
-    "ideal": "3",
+    "ideal": "5",
     "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -26,6 +26,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the pig isn't moving far enough, try adding another block.\",\r\n  \"hint_id\": \"K2.0_sequence_12_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
