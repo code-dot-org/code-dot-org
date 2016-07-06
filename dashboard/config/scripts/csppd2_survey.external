@@ -3,7 +3,7 @@ css 'unplugged'
 
 markdown <<MARKDOWN
 
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 ### Wrap Up > Post-Survey
 <br><br>
 Now that you've completed the second phase of PD, please take a few minutes to give us your feedback on the material by completing this post-survey. We really appreciate you taking the time to let us know what we can do to support you better! *(If you are having trouble viewing the form, click this [link](https://docs.google.com/forms/d/1B_z73ePDN-gyMUNvKmy4-0Kgg4yA2gBhxULR0foFeoc/viewform) to access the form directly.)*
