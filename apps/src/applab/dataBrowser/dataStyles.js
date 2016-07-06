@@ -2,7 +2,7 @@
  * @file Styles shared by various react components in the applab data browser.
  */
 
-import color from '../color';
+import color from '../../color';
 
 const rowHeight = 45;
 const cellPadding = 10;
@@ -41,7 +41,8 @@ const editButton = {
   marginTop: 0,
   marginLeft: 0,
   marginBottom: 0,
-  marginRight: 10
+  marginRight: 10,
+  width: 60
 };
 
 const input = {
