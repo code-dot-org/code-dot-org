@@ -107,7 +107,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 * Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
 ## Enabling JavaScript builds
-The default dashboard install uses a static build of apps JS, but if you want to make modifications to these you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
+The default dashboard install uses a static build of JS, but if you want to make modifications to these you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
 
 1. (OS X) Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 1. Edit locals.yml and enable the following options:
