@@ -38,6 +38,21 @@ Style/WordArray:
 # Listed below are rules we don't plan to enable in the foreseeable future.
 # Add rules we plan to fix (but are currently failing) to .rubocop_todo.yml.
 
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
 Style/BarePercentLiterals:
   Enabled: false
 
@@ -54,19 +69,4 @@ Style/IfInsideElse:
   Enabled: false
 
 Style/RedundantReturn:
-  Enabled: false
-
-Metrics/AbcSize:
-  Enabled: false
-
-Metrics/LineLength:
-  Enabled: false
-
-Metrics/ModuleLength:
-  Enabled: false
-
-Metrics/BlockNesting:
-  Enabled: false
-
-Style/AsciiComments:
   Enabled: false
