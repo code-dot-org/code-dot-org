@@ -21,9 +21,9 @@ ENVIRONMENT=<%=environment%>
 (cd /home/ubuntu/${ENVIRONMENT} && git reset --hard --quiet &)
 
 # Bootstrap prerequisites
-apt-get -q update
-apt-get -q -y install python3-pip jq curl
-test "$(pip3 show awscli)" || pip3 install -q awscli
+apt-get -qq update
+apt-get -qq -y install python3-pip jq curl
+pip3 show -q awscli || pip3 install -q awscli
 
 STACK=<%=stack_name%>
 CHEF_VERSION=12.7.2
