@@ -131,6 +131,8 @@ function create(options) {
   var piskelDevMode = options.piskelDevMode;
   var provides = options.provides;
 
+  // Note: In a world where we have a single webpack config instead of an array
+  // of them, this becomes unnecessary.
   if (!uniqueName) {
     throw new Error('Must specify uniqueName for bundle');
   }
