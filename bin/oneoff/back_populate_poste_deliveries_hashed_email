@@ -20,13 +20,21 @@ batch_size = ARGV[2].to_i
 until start_index > end_index
   puts "Processing from #{start_index} to #{start_index + batch_size}..."
 
+  # For efficiency reasons, we keep a hash of ID to hashed_email, doing the
+  # update in a transaction. To minimize locking of the table, we compute the
+  # hash outside of the update transaction.
+  hashed_email_updates = {}
   DB[:poste_deliveries].
     where(id: start_index..(start_index + batch_size)).
     each do |delivery|
     hashed_email = Digest::MD5.hexdigest(delivery[:contact_email])
-    DB[:poste_deliveries].
-      where(id: delivery[:id]).
-      update(hashed_email: hashed_email)
+    hashed_email_updates[delivery[:id]] = hashed_email
+  end
+
+  DB.transaction do
+    hashed_email_updates.each_pair do |id, hashed_email|
+      DB[:poste_deliveries].where(id: id).update(hashed_email: hashed_email)
+    end
   end
 
   start_index += batch_size

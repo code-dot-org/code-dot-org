@@ -7,7 +7,7 @@ skip_dialog ' true'
 markdown <<MARKDOWN
 
 
-<img src = "http://staging.code.org/images/cspunit1/ColorTask1.png" align=left width=200 hspace=20>
+<img src = "//code.org/images/cspunit1/ColorTask1.png" align=left width=200 hspace=20>
 # Instructions: Task 1
 In the next screen you'll be shown the 4x2 image Maddie was creating, but we've left out the last two squares.  Finish off the image by figuring out which two colors are missing and encode them.
 

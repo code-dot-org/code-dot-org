@@ -1,7 +1,7 @@
 name 'CSPPD2 congrats'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 ### Wrap up > Congratulations! 
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mjMLCpXz3eo" frameborder="0" allowfullscreen style="float:left; margin-right:30px"></iframe>

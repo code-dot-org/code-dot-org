@@ -166,6 +166,10 @@ class Game < ActiveRecord::Base
     !(app == NETSIM || app == APPLAB || app == GAMELAB)
   end
 
+  def use_firebase_for_new_project?
+    app == APPLAB && CDO.use_firebase_for_new_applab_projects
+  end
+
   def self.setup
     transaction do
       # Format: name:app:intro_video
