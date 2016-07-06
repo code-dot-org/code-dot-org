@@ -30,6 +30,7 @@ EXCLUDED_BROWSERS = [
   'IE 7.0',
   'IE 8.0',
   'IE 9.0',
+  'IE 10.0',
   'IE Mobile',
   'Other',
   'Slurp',
