@@ -62,9 +62,15 @@ const styles = {
     marginLeft: 0
   },
   body: {
-    backgroundColor: 'white',
-    borderRadius: 10,
+    backgroundColor: '#ddd',
+    borderRadius: 5,
     width: '100%',
+  },
+  leftCol: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    marginLeft: 0
   },
   bodyCraft: {
     // $below-header-background from craft/style.scss
@@ -93,17 +99,35 @@ const styles = {
   },
   // bubble has pointer cursor by default. override that if no hints
   noAuthoredHints: {
-    cursor: 'default'
+    cursor: 'default',
+    marginBottom: 0
   },
   authoredHints: {
     // raise by 20 so that the lightbulb "floats" without causing the original
     // icon to move. This strangeness happens in part because prompt-icon-cell
     // is managed outside of React
-    marginTop: -20
+    //marginTop: -20
+    marginBottom: 0
   },
   containedLevelContainer: {
     minHeight: 200,
-  }
+  },
+  instructions: {
+    padding: '5px 0'
+  },
+  instructionsChatBubble: {
+    backgroundColor: 'white',
+    borderRadius: 10,
+    marginBottom: 10,
+    padding: '0 10px',
+  },
+  instructionsChatText: {
+    // note that we actually do need to specify lineHeight
+    // in pixels; it defaults to a multiple of fontSize
+    lineHeight: '25px',
+    fontSize: 16,
+    color: 'black'
+  },
 };
 
 var TopInstructions = React.createClass({
@@ -321,7 +345,10 @@ var TopInstructions = React.createClass({
     return (
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
-            style={[styles.body, this.props.isMinecraft && styles.bodyCraft]}
+            style={{
+              container: [styles.body, this.props.isMinecraft && styles.bodyCraft],
+              left: styles.leftCol
+            }}
             leftColWidth={leftColWidth}
             rightColWidth={this.state.rightColWidth}
             height={this.props.height - resizerHeight}
@@ -342,29 +369,30 @@ var TopInstructions = React.createClass({
               }
             </ProtectedStatefulDiv>
           </div>
-          <div ref="instructions" onWheel={this.handleInstructionsWheel}>
-            {this.props.hasContainedLevels && <ProtectedStatefulDiv
-              id="containedLevelContainer"
-              ref="containedLevelContainer"
-              style={styles.containedLevelContainer}/>
-            }
-            {!this.props.hasContainedLevels && <Instructions
-                ref="instructions"
-                renderedMarkdown={renderedMarkdown}
-                onResize={this.adjustMaxNeededHeight}
-                inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
-                aniGifURL={this.props.aniGifURL}
-                inTopPane
-              />
-            }
-            {!this.props.hasContainedLevels && this.props.collapsed && instructions2 &&
-              <div
-                style={[
-                  styles.secondaryInstructions
-                ]}
-                dangerouslySetInnerHTML={{ __html: instructions2 }}
-              />
-            }
+          <div ref="instructions" onWheel={this.handleInstructionsWheel} style={styles.instructions}>
+            <div style={[styles.instructionsChatBubble]}>
+              {this.props.hasContainedLevels && <ProtectedStatefulDiv
+                  id="containedLevelContainer"
+                  ref="containedLevelContainer"
+                  style={styles.containedLevelContainer}
+                />
+              }
+              {!this.props.hasContainedLevels && <Instructions
+                  ref="instructions"
+                  renderedMarkdown={renderedMarkdown}
+                  onResize={this.adjustMaxNeededHeight}
+                  inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                  aniGifURL={this.props.aniGifURL}
+                  inTopPane
+                />
+              }
+              {!this.props.hasContainedLevels && this.props.collapsed && instructions2 &&
+                <div
+                    style={styles.secondaryInstructions}
+                    dangerouslySetInnerHTML={{ __html: instructions2 }}
+                />
+              }
+            </div>
           </div>
           <div>
             <CollapserButton

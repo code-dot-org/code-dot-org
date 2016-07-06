@@ -41,10 +41,10 @@ const ThreeColumns = (props) => {
   };
 
   return (
-    <div style={[styles.container].concat(style)}>
-      <div style={styles.middle}>{children[1]}</div>
-      <div style={styles.left}>{children[0]}</div>
-      <div style={styles.right}>{children[2]}</div>
+    <div style={[styles.container, style.container]}>
+      <div style={[styles.middle, style.middle]}>{children[1]}</div>
+      <div style={[styles.left, style.left]}>{children[0]}</div>
+      <div style={[styles.right, style.right]}>{children[2]}</div>
     </div>
   );
 };
