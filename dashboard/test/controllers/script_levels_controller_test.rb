@@ -215,7 +215,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
     # start animations comes from project_level not real_level
     level_options = assigns(:level).blockly_level_options
-    assert_equal template_animations_json, level_options[:level]['startAnimations']
+    assert_equal template_animations_json, level_options['startAnimations']
   end
 
   test 'project template level does not set start animations when not defined' do
@@ -234,7 +234,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
     # start animations comes from real_level not project_level
     level_options = assigns(:level).blockly_level_options
-    assert_equal real_animations_json, level_options[:level]['startAnimations']
+    assert_equal real_animations_json, level_options['startAnimations']
   end
 
   test 'project template level sets toolbox blocks when defined' do
