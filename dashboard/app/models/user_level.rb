@@ -75,6 +75,10 @@ class UserLevel < ActiveRecord::Base
     most_recent ? most_recent.user.name : nil
   end
 
+  def paired?
+    driver? || navigator?
+  end
+
   def handle_unsubmit
     if submitted_changed? from: true, to: false
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT
