@@ -39,8 +39,15 @@ class ActivitiesController < ApplicationController
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
     if params[:program] && sharing_allowed
-      fail_type, contents, share_checking_error = ShareFiltering.find_share_failure(params[:program], locale)
-      share_failure = share_failure_for(fail_type, contents)
+      share_failure = nil
+      if @level.game.sharing_filtered?
+        begin
+          share_failure = ShareFiltering.find_share_failure(params[:program], locale)
+        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
+          # If WebPurify or Geocoder fail, the program will be allowed, but we will note the level source
+        end
+      end
+
       unless share_failure
         @level_source = LevelSource.find_identical_or_create(@level, params[:program])
         slog(tag: 'share_checking_error', error: "#{share_checking_error.class.name}: #{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
@@ -86,7 +93,7 @@ class ActivitiesController < ApplicationController
                                     level_source_image: @level_source_image,
                                     activity: @activity,
                                     new_level_completed: @new_level_completed,
-                                    share_failure: share_failure)
+                                    share_failure: share_failure_for(share_failure))
 
     slog(:tag => 'activity_finish',
          :script_level_id => @script_level.try(:id),
@@ -100,12 +107,12 @@ class ActivitiesController < ApplicationController
 
   private
 
-  def share_failure_for(failure_type, content)
-    return nil unless failure_type
+  def share_failure_for(share_failure)
+    return nil unless share_failure
     {}.tap do |failure|
-      failure[:message] = share_message_for(failure_type)
-      failure[:type] = failure_type
-      failure[:contents] = content unless failure_type == ShareFiltering::FailureType::PROFANITY
+      failure[:message] = share_message_for(share_failure.type)
+      failure[:type] = share_failure.type
+      failure[:contents] = share_failure.content unless share_failure.type == ShareFiltering::FailureType::PROFANITY
     end
   end
 
