@@ -14,8 +14,8 @@ module.exports.createSprite = function (x, y, width, height) {
   var s = new this.Sprite(x, y, width, height);
   var p5Inst = this;
 
-  var unscaledHeight = width;
-  var unscaledWidth = height;
+  var unscaledHeight = height;
+  var unscaledWidth = width;
 
   s.setAnimation = function (animationName) {
     var animation = p5Inst.projectAnimations[animationName];
@@ -111,12 +111,11 @@ module.exports.createSprite = function (x, y, width, height) {
   Object.defineProperty(s, 'width', {
     enumerable: true,
     get: function () {
-      if (width === undefined) {
+      if (unscaledWidth === undefined) {
         return 100;
       } else if (!s.animation) {
         return unscaledWidth;
       } else {
-        console.log("old width: " + width);
         return unscaledWidth * this.scale;
       }
     },
@@ -128,12 +127,11 @@ module.exports.createSprite = function (x, y, width, height) {
   Object.defineProperty(s, 'height', {
     enumerable: true,
     get: function () {
-      if (height === undefined) {
+      if (unscaledHeight === undefined) {
         return 100;
       } else if (!s.animation) {
         return unscaledHeight;
       } else {
-        console.log("old height: " + height);
         return unscaledHeight * this.scale;
       }
     },
