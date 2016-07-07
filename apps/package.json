@@ -78,6 +78,7 @@
     "classnames": "^2.2.5",
     "connect-livereload": "0.5.3",
     "copy-webpack-plugin": "^3.0.0",
+    "data-collection": "^1.1.6",
     "ejs": "0.8.4",
     "ejs-compiled-loader": "2.1.1",
     "ejs-loader": "0.2.1",
