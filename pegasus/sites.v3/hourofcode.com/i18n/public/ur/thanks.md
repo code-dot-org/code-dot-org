@@ -1,35 +1,34 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
+  title: <%= hoc_s(:title_signup_thanks) %>
+  layout: wide
+  nav: how_to_nav
 
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
+  social:
+    "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+    "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+    "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+    "og:image:width": 1440
+    "og:image:height": 900
+    "og:url": "http://<%=request.host%>"
 
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
----
+    "twitter:card": player
+    "twitter:site": "@codeorg"
+    "twitter:url": "http://<%=request.host%>"
+    "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+    "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+    "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  ---
 
 <%
-  facebook = {:u=>"http://#{request.host}/us"}
+    facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
 # آور-آف-کوڈ کو ھوسٹ کرنے کے لیے سائن-اَپ کرنے کا شکریہ!
 
-آپ دنیا بھر کے تمام اسٹوڈینٹس کے لیے آور-آف-کوڈ کو سیکھنا ممکن بنا رہے ہیں جو کہ <%= campaign_date('full') %> کے دوران *ان کی باقی ماندہ تمام زندگی تبدیل کر دے گا۔* پرائیزز، نئے ٹیٹوریئلز اور دیگر دلچسپ اَپ-ڈیٹس کے لیے ہم رابطہ میں رہیں گے۔ اب آپ کیا کر سکتے ہیں؟
-
+آپ دنیا بھر کے تمام اسٹوڈینٹس کے لیے آور-آف-کوڈ کو سیکھنا ممکن بنا رہے ہیں جو کہ *ان کی باقی ماندہ تمام زندگی تبدیل کر دے گا* دوران، <%= ('campaign_date('full %> We'll be in touch about new tutorials and other exciting updates. اب آپ کیا کر سکتے ہیں؟
 
 ## 1. دوسروں تک بھجیں
 

@@ -6,51 +6,49 @@ nav: promote_nav
 
 ---
 
-
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Παρακάτω είναι ένα δείγμα ψηφίσματος υποστηρικτή για την εβδομάδα εκπαίδευσης στην επιστήμη υπολογιστών και τους στόχους που θα μπορούσε να χρησιμοποιηθεί από το κράτος και τοπικούς νομοθέτες.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[ΟΙΚΟΣ, ΓΕΡΟΥΣΙΑ, ΚΡΑΤΟΣ, ΝΟΜΟΣ Ή ΠΟΛΗ ΑΠΟΦΑΣΗ Ή ΔΙΑΚΉΡΥΞΗ ###]-Ενώ η Εβδομάδα Εκπαίδευσης στην Επιστήμη των Υπολογιστών υπογραμμίζει τον αποφασιστικό ρόλο που παίζει η Πληροφορική στον μετασχηματισμό της κοινωνίας μας και πώς η πληροφορικής δίνει τη δυνατότητα καινοτομίας και δημιουργεί ευκαιρίες στον χώρο της οικονομίας
 
-[HOUSE OR SENATE RESOLUTION ###]
+[ΑΠΟΦΑΣΗ ΟΙΚΟΥ Ή ΓΕΡΟΥΣΙΑΣ###]
 
 [DATE]
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Ενώ η επιστήμη των υπολογιστών μετατρέπει την βιομηχανία, δημιουργώντας νέους τομείς εμπορίου, προωθεί την καινοτομία σε όλους τους τομείς της επιστήμης, και ενισχύει την παραγωγικότητα στους καθιερωμένους οικονομικούς τομείς·
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Ενώ το πεδίο της επιστήμης των υπολογιστών στηρίζει τον τομέα της τεχνολογίας της πληροφορικής στην οικονομία μας, η οποία έχει μια σημαντική συμβολή στην οικονομική παραγωγή στις Ηνωμένες Πολιτείες
 
-Whereas the field of computer science is a foundational science for the digital age;
+Ενώ το πεδίο της επιστήμης των υπολογιστών είναι μια θεμελιώδης επιστήμη για την ψηφιακή εποχή
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Ενώ ο τομέας της πληροφορικής είναι σε θέση να βοηθήσει στην οικονομική ανάκαμψη μέσω της έρευνας και ανάπτυξης νέων καινοτομιών
 
-Whereas the outlook for computer science jobs is bright with one in every two STEM jobs in the country in computing occupations;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Ενώ όσο περισσότερο έρχονται οι μαθητές σε επαφή με την επιστήμη των υπολογιστών τόσο συναντούν ευκαιρίες που προσφέρει αυτός ο τομέας και επιπλέον τους προσφέρει ικανότητες κριτικής σκέψης που θα χρειαστούν σε όλη τους τη ζωη
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Ενώ όλοι οι μαθητές αξίζουν μια ενδελεχή προετοιμασία στην επιστήμη των υπολογιστών περιλαμβανομένης και της πρόσβασης σε ειδικευμένους καθηγητές, τεχνολογία και ένα εκπαιδευτικό πρόγραμμα κατάλληλο για την ηλικία τους ώστε να εκπαιδευτούν κατάλληλα στην πρωτοβάθμια και δευτεροβάθμια εκπαίδευση
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Ενώ η εκπαίδευση στην επιστήμη των υπολογιστών τόσο στην περίληψη μαθημάτων υπολογιστών για την απόκτηση απολυτηρίου γυμνασίου όσο και στην επαγγελματική ανάπτυξη των καθηγητών πληροφορικής
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Ενώ η συμμετοχή στην δράση της Ώρας του Κώδικα μπορεί να βοηθήσει στην απομυθοποίηση του πεδίου της πληροφορικής και έτσι να ενθαρρύνει περισσότερους μαθητές να επιδιώξουν περαιτέρω σπουδές
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Ενώ το πεδίο της πληροφορικής μπορεί να βοηθήσει στην αντιμετώπιση εμποδίων στην πρόσβαση στην ισότητα όπως στην ενδυνάμωση της συμμετοχής γυναικών και άλλων μειονεκτικών κατηγοριών σε περισσότερα επίπεδα και κατευθύνσεις
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Ενώ η Γκρέις Μάρευ Χόπερ, μια από τις πρώτες γυναίκες στον χώρο της πληροφορικής, δημιούργησε νέες γλώσσες προγραμματισμού και πρωτοπόρησε θέτοντας νέα δεδομένα στα υπολογιστικά συστήματα θέτοντας τις βάσεις για πολλές εξελίξεις στην πληροφορική και
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Ενώ η καμπάνια προς τιμή της χαρακτηρίζεται ως η Εβδομάδα Πληροφορικής, πλέον πρέπει
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+να αποφασισθεί ώστε οι [ΟΙΚΟΙ, ΓΕΡΟΥΣΙΑ, ΠΕΡΙΦΕΡΕΙΑ, ΠΟΛΗ Ή ΣΧΟΛΙΚΗ ΕΠΙΤΡΟΠΗ]-
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) υποστηρίζει τον ορισμό της εκπαίδευσης εβδομάδας επιστήμης υπολογιστών (< % = campaign_date('full'), %>)?
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) ενθαρρύνει σχολεία, τους εκπαιδευτικούς, τους γονείς και πολιτικούς να συμμετέχουν στην εκπαίδευση εβδομάδας επιστήμης υπολογιστών, επιτρέποντας τους μαθητές να συμμετάσχουν στην ώρα του κώδικα·
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) ενθαρρύνει σχολεία, καθηγητές, ερευνητές, πανεπιστήμια, επιχειρηματίες και νομοθέτες να αποτυπώσουν τους μηχανισμούς που οι εκπαιδευτικοί πρέπει να χρησιμοποιήσουν για την δική τους επαγγελματική εξέλιξη αλλά και να μπορούν να παρέχουν σταθερή διδακτική εμπειρία σε μαθητές που μαθαίνουν την επιστήμη της πληροφορικής.
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) ενθαρρύνει τους νομοθέτες να απομακρύνουν τυχόν εμπόδια που δεν επέτρεπαν στην επιστήμη της πληροφορικής να προσμετράτε σαν προσόν στην απόκτηση απολυτηρίου.
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
-
+(5) ενθαρρύνει ευκαιρίες μέσω προγραμμάτων που ήδη υλοποιούνται για γυναίκες και μειονότητες που βρίσκονται σε μειονεκτική θέση όσον αφορά την πληροφορική.

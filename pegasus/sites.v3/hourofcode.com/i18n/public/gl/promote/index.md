@@ -7,40 +7,32 @@ nav: promote_nav
 ---
 
 <%
-  facebook = {:u=>"http://#{request.host}/us"}
+    facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# How to get involved
+# Como participar?
 
-## 1. Sign up to host an Hour of Code
+## 1. Corre a voz
 
-Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to receive updates and qualify for prizes.   
-
-
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
-
-## 2. Spread the word
-
-Tell your friends about the **#HourOfCode**!
+Cóntalle ós teus amigos sobre **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 3. Ask your whole school to offer an Hour of Code
+## 2. Pídelle a todo o teu colexio que ofreza unha Hora do Código
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Envía este correo electrónico](<%= resolve_url('/promote/resources#sample-emails') %>) ó teu director e desafía a cada clase da túa escola a apuntarse. < % si @pais == 'us' %> Un colexio con sorte en *cada* estado dos Estados Unidos (e D.C. Washington) vai gañar $10.000 en tecnoloxía. <% end %>
 
-## 4. Ask your employer to get involved
+## 3. Preguntalle a tua empresa para que se implique
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+[Envía este correo electrónico](<%= resolve_url('/promote/resources#sample-emails') %>) ó teu xerente ou CEO.
 
-## 5. Promote Hour of Code in your community
+## Promove "Unha Hora do Código" dentro da tua comunidade
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Recluta un grupo local](<%= resolve_url('/promote/resources#sample-emails') %>)-nen@s das asociacións locais, igrexa, universidade, grupos de veteranos, sindicatos e incluso ós amigos. Non tes que estar no colexio para aprender novas habilidades. Usa estes [posters, banners, stickers, videos e máis](<%= resolve_url('/promote/resources') %>) para o teu propio evento.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 5. Pídelle a un cargo electo da tua zona que apoie a Hora do Código
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
-
+[Envía este correo electrónico](<%= resolve_url('/promote/resources#sample-emails') %>) ós teus representantes locais, concello ou xunta escolar e invítatos a visitar a túa escola para a Hora do Código. Pode axudar a dar apoio a que a Informática por mais dunha hora.
