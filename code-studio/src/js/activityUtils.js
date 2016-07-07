@@ -3,6 +3,37 @@
  */
 
 /**
+ * See ActivityConstants.
+ */
+const MINIMUM_PASS_RESULT = 20;
+const MINIMUM_OPTIMAL_RESULT = 30;
+export const SUBMITTED_RESULT = 1000;
+const REVIEW_REJECTED_RESULT = 1500;
+const REVIEW_ACCEPTED_RESULT = 2000;
+
+/**
+ * See ApplicationHelper#activity_css_class.
+ * @param result
+ * @return {string}
+ */
+export const activityCssClass = result => {
+  if (!result) {
+    return 'not_tried';
+  }
+  if (result === SUBMITTED_RESULT) {
+    return 'submitted';
+  }
+  if (result >= MINIMUM_OPTIMAL_RESULT) {
+    return 'perfect';
+  }
+  if (result >= MINIMUM_PASS_RESULT) {
+    return 'passed';
+  }
+  return 'attempted';
+};
+
+
+/**
  * Returns the "best" of the two results, as defined in apps/src/constants.js.
  * Note that there are negative results that count as an attempt, so we can't
  * just take the maximum.

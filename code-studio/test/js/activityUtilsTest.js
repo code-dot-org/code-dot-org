@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-import { mergeActivityResult } from '../../src/js/activityUtils';
+import { activityCssClass, mergeActivityResult } from '../../src/js/activityUtils';
 
 describe("mergeActivityResult", function () {
   it('returns the result with highest priority', function () {
@@ -13,5 +13,18 @@ describe("mergeActivityResult", function () {
     assert.strictEqual(mergeActivityResult(-50, 0), -50);
     assert.strictEqual(mergeActivityResult(30, 0), 30);
     assert.strictEqual(mergeActivityResult(0, 0), 0);
+  });
+});
+
+describe('activityCssClass', function () {
+  it ('returns the correct activity CSS class', function () {
+    assert.strictEqual(activityCssClass(null), 'not_tried');
+    assert.strictEqual(activityCssClass(0), 'not_tried');
+    assert.strictEqual(activityCssClass(-5), 'attempted');
+    assert.strictEqual(activityCssClass(19), 'attempted');
+    assert.strictEqual(activityCssClass(20), 'passed');
+    assert.strictEqual(activityCssClass(29), 'passed');
+    assert.strictEqual(activityCssClass(30), 'perfect');
+    assert.strictEqual(activityCssClass(101), 'perfect');
   });
 });
