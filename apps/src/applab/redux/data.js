@@ -26,9 +26,9 @@ export default function (state = initialState, action) {
   let map;
   switch (action.type) {
     case ADD_TABLE_NAME:
-      map = {};
-      map[action.tableName] = true;
-      return state.set('tableListMap', Object.assign({}, state.tableListMap, map));
+      return state.set('tableListMap', Object.assign({}, state.tableListMap, {
+        [action.tableName]: true
+      }));
     case CHANGE_VIEW:
       // Discard table data when not viewing a table, so that we don't momentarily
       // show data for the wrong table when we return to the table view.
