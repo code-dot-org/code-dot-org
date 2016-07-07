@@ -1113,6 +1113,16 @@ class UserTest < ActiveSupport::TestCase
     assert_equal true, student.can_pair?
     assert_equal false, teacher.can_pair?
     assert_equal false, other_user.can_pair?
+
+    # can_pair_with? method
+    classmate = create :student
+    section.add_student classmate
+    assert classmate.can_pair_with?(student)
+    assert student.can_pair_with?(classmate)
+    refute student.can_pair_with?(other_user)
+    refute student.can_pair_with?(teacher)
+    refute teacher.can_pair_with?(student)
+    refute student.can_pair_with?(student)
   end
 
   test 'student_of_admin?' do
