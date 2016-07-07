@@ -14,6 +14,9 @@ module.exports.createSprite = function (x, y, width, height) {
   var s = new this.Sprite(x, y, width, height);
   var p5Inst = this;
 
+  var unscaledHeight = width;
+  var unscaledWidth = height;
+
   s.setAnimation = function (animationName) {
     var animation = p5Inst.projectAnimations[animationName];
     if (typeof animation === 'undefined') {
@@ -104,6 +107,58 @@ module.exports.createSprite = function (x, y, width, height) {
       s.position.y = value;
     }
   });
+
+  Object.defineProperty(s, 'width', {
+    enumerable: true,
+    get: function () {
+      if (width === undefined) {
+        return 100;
+      } else if (!s.animation) {
+        return unscaledWidth;
+      } else {
+        console.log("old width: " + width);
+        return unscaledWidth * this.scale;
+      }
+    },
+    set: function (value) {
+      unscaledWidth = value / this.scale;
+    }
+  });
+
+  Object.defineProperty(s, 'height', {
+    enumerable: true,
+    get: function () {
+      if (height === undefined) {
+        return 100;
+      } else if (!s.animation) {
+        return unscaledHeight;
+      } else {
+        console.log("old height: " + height);
+        return unscaledHeight * this.scale;
+      }
+    },
+    set: function (value) {
+      unscaledHeight =  value / this.scale;
+    }
+  });
+
+  s.getDisplayWidth = function () {
+    if (width === undefined) {
+      return 100;
+    } else {
+      console.log("old width: " + width);
+      return unscaledWidth * this.scale;
+    }
+  };
+
+  s.getDisplayHeight = function () {
+    if (height === undefined) {
+      return 100;
+    } else {
+      console.log("old height: " + height);
+      return unscaledHeight * this.scale;
+    }
+  };
 
   Object.defineProperty(s, 'velocityX', {
     enumerable: true,
