@@ -22,5 +22,4 @@ Feature: App Lab Embed
     Then I wait until element "a:contains('How It Works')" is visible within element "iframe"
     And I click selector "a:contains('How It Works')" within element "iframe"
 
-    Then I go to the newly opened tab
     And I wait to see Applab code mode
