@@ -2,6 +2,7 @@
 'use strict';
 import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
+var NetSimLocalClientNode = require("@cdo/apps/netsim/NetSimLocalClientNode");
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimRouterLogModal = require('@cdo/apps/netsim/NetSimRouterLogModal');
 var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
@@ -71,6 +72,81 @@ describe("NetSimRouterLogModal", function () {
 
   });
 
+  describe('Traffic filtering modes', function () {
+    var modal, rootDiv, testShard, localNode, router, levelConfig;
+
+    beforeEach(function () {
+      levelConfig = NetSimGlobals.getLevelConfig();
+      testShard = fakeShard();
+      rootDiv = $('<div>');
+      modal = new NetSimRouterLogModal(rootDiv);
+
+      NetSimRouterNode.create(testShard, function (e, r) {
+        router = r;
+      });
+      assert.isDefined(router, "Failed to create a remote router.");
+
+      NetSimLocalClientNode.create(testShard, "testLocalNode", function (err, node) {
+        localNode = node;
+      });
+      assert.isDefined(localNode, "Made a local node");
+    });
+
+    it("defaults to showing all traffic in every case", function () {
+      assert.equal('none', modal.currentTrafficFilter_);
+
+      modal.onShardChange(testShard, localNode);
+      assert.equal('none', modal.currentTrafficFilter_);
+
+      localNode.connectToRouter(router);
+      assert.equal('none', modal.currentTrafficFilter_);
+    });
+
+    it("can cycle traffic filter modes only when the local client has an address", function () {
+      assert.isFalse(modal.canCycleTrafficFilterMode_());
+      assert.isFalse(!!localNode.getAddress());
+
+      modal.onShardChange(testShard, localNode);
+      assert.isFalse(modal.canCycleTrafficFilterMode_());
+      assert.isFalse(!!localNode.getAddress());
+
+      localNode.connectToRouter(router);
+      assert.isTrue(modal.canCycleTrafficFilterMode_());
+      assert.isTrue(!!localNode.getAddress());
+    });
+
+    it("cycles traffic filter modes in order", function () {
+      modal.onShardChange(testShard, localNode);
+      localNode.connectToRouter(router);
+      var address = localNode.getAddress();
+      assert.equal('none', modal.currentTrafficFilter_);
+
+      modal.cycleTrafficFilterMode_();
+      assert.equal('with ' + address, modal.currentTrafficFilter_);
+
+      modal.cycleTrafficFilterMode_();
+      assert.equal('from ' + address, modal.currentTrafficFilter_);
+
+      modal.cycleTrafficFilterMode_();
+      assert.equal('to ' + address, modal.currentTrafficFilter_);
+
+      modal.cycleTrafficFilterMode_();
+      assert.equal('none', modal.currentTrafficFilter_);
+    });
+
+    it("disconnecting from a router coerces filter mode back to 'none'", function () {
+      modal.onShardChange(testShard, localNode);
+      localNode.connectToRouter(router);
+      var address = localNode.getAddress();
+      modal.cycleTrafficFilterMode_();
+      assert.equal('with ' + address, modal.currentTrafficFilter_);
+
+      localNode.disconnectRemote();
+      modal.setRouter(null); // Normally netsim.js does this
+      assert.equal('none', modal.currentTrafficFilter_);
+    });
+  });
+
   describe("Partial DOM updates", function () {
     var testShard, rootDiv, modal;
 
@@ -78,7 +154,7 @@ describe("NetSimRouterLogModal", function () {
       testShard = fakeShard();
       rootDiv = $(document.createElement('div'));
       modal = new NetSimRouterLogModal(rootDiv);
-      modal.setShard(testShard);
+      modal.onShardChange(testShard, null);
 
       // Start with modal showing
       modal.onShow_();
