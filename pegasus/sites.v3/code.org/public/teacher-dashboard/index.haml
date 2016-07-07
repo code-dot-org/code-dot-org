@@ -52,8 +52,6 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionResponsesController', tab: 'responses'});
     $routeProvider.when('/sections/:id/assessments',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionAssessmentsController', tab: 'assessments'});
-    $routeProvider.when('/sections/:id/surveys',
-        {templateUrl: '/teacher-dashboard/section', controller: 'SectionSurveysController', tab: 'surveys'});
     $routeProvider.when('/sections/:id/:tab',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionDetailController'});
     $routeProvider.when('/sections/:sectionid/student/:studentid',
@@ -791,6 +789,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       $scope.assessmentsLoaded = false;
       $scope.stages = [];
 
+      // Load assessments
+
       $scope.assessments = sectionsService.assessments({id: $routeParams.id, script_id: scriptId});
 
       $scope.levels = [];
@@ -829,82 +829,15 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
           });
         });
       });
-    };
 
-    $scope.findStages = function() {
-      $scope.stages = $.map($scope.assessments, function(row) {
-        return row.stage;
-      }).filter(function(item, i, array) { // uniquify
-        return array.indexOf(item) == i;
-      });
-    }
-  }]);
-
-
-  app.controller('SectionSurveysController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
-    $scope.section = sectionsService.get({id: $routeParams.id});
-    $scope.sections = sectionsService.query();
-    $scope.tab = 'surveys';
-
-    $scope.surveys = sectionsService.surveys({id: $routeParams.id});
-    // error handling
-    $scope.genericError = function(result) {
-      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
-    };
-    $scope.section.$promise.catch($scope.genericError);
-    $scope.sections.$promise.catch($scope.genericError);
-    $scope.surveys.$promise.catch($scope.genericError);
-
-    // fill in the course dropdown with the section's default course
-    $scope.section.$promise.then(
-      function(section) {
-        $scope.course_id = section.course.id;
-      }
-    );
-
-    // the ng-select in the nav compares by reference not by value, so we can't just set
-    // selectedSection to section, we have to find it in sections.
-    $scope.sections.$promise.then(
-      function( sections ){
-        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
-      }
-    );
-
-    $scope.surveysLoaded = false;
-    $scope.stages = [];
-
-    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
-
-    // wait until we have both the students and the student progress
-    $q.all([$scope.section.$promise, $scope.surveys.$promise]).then(function(){
-      $scope.surveysLoaded = true;
-      $scope.findStages();
-    });
-
-    var submission_list = {
-      submitted:   '#{I18n.t('dashboard_submission_submitted')}',
-      in_progress: '#{I18n.t('dashboard_submission_in_progress')}',
-    };
-
-    var correctness_list = {
-      free_response: '#{I18n.t('dashboard_correctness_free_response')}',
-      unsubmitted:   '#{I18n.t('dashboard_correctness_unsubmitted')}',
-      correct:       '#{I18n.t('dashboard_correctness_correct')}',
-      incorrect:     '#{I18n.t('dashboard_correctness_incorrect')}'
-    };
-
-    $scope.changeScript = function(scriptId) {
-      $scope.surveysLoaded = false;
-      $scope.stages = [];
+      // Load surveys
 
       $scope.surveys = sectionsService.surveys({id: $routeParams.id, script_id: scriptId});
 
-      $scope.levels = [];
+      $scope.surveyLevels = [];
 
       $scope.surveys.$promise.then(function(){
         $scope.surveysLoaded = true;
-        $scope.findStages();
 
         $.each($scope.surveys, function(survey_index, survey) {
 
@@ -926,7 +859,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
               // Do we already have this level result?  If so, bump the count, otherwise create and
               // add it.
 
-              var existingLevelResult = $scope.levels.find(function (entry) {
+              var existingLevelResult = $scope.surveyLevels.find(function (entry) {
                 return entry.result == sublevel_result.result &&
                        entry.stage == survey.stage &&
                        entry.puzzle == survey.puzzle &&
@@ -956,27 +889,27 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
                   count: 1,
                   percent: percentField
                 };
-                $scope.levels.push(levelResult);
+                $scope.surveyLevels.push(levelResult);
               }
             });
           });
         });
-      });
 
-      // sort by stage, puzzle, question
-      $scope.levels.sort(function (a, b) {
-        if (a.stage !== b.stage) {
-          return a.stage - b.stage;
-        } else if (a.puzzle !== b.puzle) {
-          return a.puzzle - b.puzzle;
-        } else {
-          return a.question - b.question;
-        }
+        // Sort by stage, puzzle, question.
+        $scope.surveyLevels.sort(function (a, b) {
+          if (a.stage !== b.stage) {
+            return a.stage - b.stage;
+          } else if (a.puzzle !== b.puzle) {
+            return a.puzzle - b.puzzle;
+          } else {
+            return a.question - b.question;
+          }
+        });
       });
     };
 
     $scope.findStages = function() {
-      $scope.stages = $.map($scope.surveys, function(row) {
+      $scope.stages = $.map($scope.assessments, function(row) {
         return row.stage;
       }).filter(function(item, i, array) { // uniquify
         return array.indexOf(item) == i;
