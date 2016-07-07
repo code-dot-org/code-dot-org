@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 ## Como atraer ós medios ó teu evento da Hora do Código
 
 *Para todas as consultas da prensa e os medios, contacta con <press@code.org>*
@@ -16,7 +15,7 @@ nav: promote_nav
   * Contacta cos medios de comunicación dúas semanas antes do teu evento vía correo electrónico. Se non recibes unha resposta incial, intentao de novo por correo electrónico ou teléfono.
   * Pídelle a un membro do persoal do colexio ou volundario que tome fotos para publicalas en liña ou envialas á prensa.
   * Escribe sobre a Hora do Código nos teus sitios web e no periódico do colexio. Publica os detalles do evento e imaxes de actividades dos estudantes.
-  * En Facebook e Twitter, comparte actualizacións dos planes, anuncia eventos e publica imaxes durante a semana do 7-13 de decembro. Usa o hashtag **#HourOfCode** para que Code.org poida ver e promover os teus eventos.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Guía paso a paso:
 
@@ -36,7 +35,7 @@ Busca en liña para atopar a información de contacto dun reporteiro. Se non a p
 
 **3. Contacta cos medios locais**
 
-O mellor xeito de contactar e por correo electrónico. Debe ser curto e respostar á seguinte pregunta: por que debería outra xente interesarse por este evento? Inclúe información de contacto (sobretodo un número de teléfono móvil) de quen vaia a estar no lugar do evento. **Consulta un [exemplo de abordaxe para os medios](<%= resolve_url('/promote/resources#sample-emails') %>):**
+O mellor xeito de contactar e por correo electrónico. Debe ser curto e respostar á seguinte pregunta: por que debería outra xente interesarse por este evento? Inclúe información de contacto (sobretodo un número de teléfono móvil) de quen vaia a estar no lugar do evento. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
 
 **4. Prepárate para respostar ás preguntas que che fagan sobre o evento do teu colexio. Algúns exemplos:**
 
@@ -44,20 +43,19 @@ O mellor xeito de contactar e por correo electrónico. Debe ser curto e resposta
 
 Mentres que todos sabemos que é importante que os estudantes aprendan a navegar neste mundo saturado de techoloxía, moitos mestres non teñen a experiencia en informática e non saben por onde comezar. Este evento é unha oportunidade para que todos vexamos de qué vai a informática.
 
-Esperamos que esto desperte o interese dos estudantes por seguir aprendendo. As investigacións tamén mostran que os rapaces poden aprender conceptos de programación incluso antes de que sepan ler ou escribir. De feito, os seus cerebros son máis receptivos ás linguaxes de programación nunha idade temperá, do mesmo xeito que coas linguas estranxeiras.
+Esperamos que esto desperte o interese dos estudantes por seguir aprendendo. Research also shows that kids can pick up programming concepts before they know how to read and write. De feito, os seus cerebros son máis receptivos ás linguaxes de programación nunha idade temperá, do mesmo xeito que coas linguas estranxeiras.
 
 *Por que é isto importante?*
 
-In China, every student takes computer science to graduate high school. Nos Eua, o 90 por cento dos colexios nin siquera o ensinan. Vai sendo hora de que nos actualicemos ata o século 21. Sabemos que con independencia de o que nos nosos estudantes fagan cando sexan maiores, medicina, empresariais, política, arte, saber como construir tecnoloxía daralles a confianza e o coñecemento necesario para teren éxito.
+Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
 **Máis detalles e frases que podes usar nos teus materiais**
 
-"A Hora do Código esta deseñada para desmitificar o código e amosar que a informática non é difícil e calquera pode aprender os fundamentos", dixo Hadi Partovi, fundador e CEO de Code.org. "Máis de 100 millóns de estudantes de todo o mundo fixeron unha Hora do Código. A demanda dunha educación informática relevante do século 21 cruza tódalas fronteiras e non coñece límites."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Máis de 100 millóns de estudantes de todo o mundo fixeron unha Hora do Código. A demanda dunha educación informática relevante do século 21 cruza tódalas fronteiras e non coñece límites."
 
-**Acerca de Code.org**
+**Sobre a Code.org**
 
 Code.org é una organización 501c3 pública sen ánimo de lucro dedicada a promover a participación en informática e a incrementar a participación por parte de mulleres e estudantes de cor. A súa visión é que cada estudante en cada colexio debe ter a oportunidade de aprender programación. Tras o seu lanzamento en 2013, Code.org organizou a campaña da Hora do Código - que, ata o día de hoxe, ten introducido a máis de 100 millóns de estudantes na informática - e tense asociado con máis de 70 distritos de colexios públicos para difundir os programas de informática. Code.org está apoiado por donacións filantrópicas de corporacións, fundacións e individuos xenerosos, incluíndo Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network e outros. Para máis información, por favor visita: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
 Atopa máis recursos e modelos de emails [aquí](<%= resolve_url('/promote') %>).
-
