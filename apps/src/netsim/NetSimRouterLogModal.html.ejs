@@ -21,6 +21,21 @@ var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &
  */
 
 /**
+ * @name canToggleRouterLogMode
+ * @type {boolean}
+ */
+
+/**
+ * @name currentTrafficFilter
+ * @type {string}
+ */
+
+/**
+ * @name canCycleTrafficFilterMode
+ * @type {boolean}
+ */
+
+/**
  * @name sortBy
  * @type {string}
  */
@@ -29,6 +44,69 @@ var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &
  * @name sortDescending
  * @type {boolean}
  */
+
+function routerLogModeToggleButton() {
+  if (!locals.canToggleRouterLogMode) {
+    return '';
+  }
+
+  var markup = '<button type="button" id="routerlog-toggle" class="pull-right btn btn-primary btn-mini">';
+  if (locals.isAllRouterLogMode) {
+    markup += i18n.logBrowserHeader_toggleMine()
+  } else {
+    markup += i18n.logBrowserHeader_toggleAll()
+  }
+  markup += '</button>';
+  return markup;
+}
+
+/**
+ * Intentionally mirrors NetSimRouterLogModal.cycleTrafficFilterMode_
+ */
+function trafficFilterCycleButton() {
+  if (!locals.canCycleTrafficFilterMode) {
+    return '';
+  }
+  var markup = '<button type="button" id="trafficfilter-cycle" class="pull-right btn btn-primary btn-mini">';
+  if (/^none/.test(locals.currentTrafficFilter)) {
+    markup += i18n.logBrowserHeader_showMyTraffic();
+  } else if (/^with/.test(locals.currentTrafficFilter)) {
+    markup += i18n.logBrowserHeader_showTrafficFromMe();
+  } else if (/^from/.test(locals.currentTrafficFilter)) {
+    markup += i18n.logBrowserHeader_showTrafficToMe();
+  } else {
+    markup += i18n.logBrowserHeader_showAllTraffic();
+  }
+  markup += '</button>';
+  return markup;
+}
+
+function dialogTitle() {
+  var header;
+  if (locals.isAllRouterLogMode) {
+    header = i18n.logBrowserHeader_all();
+  } else {
+    header = i18n.logBrowserHeader_mine();
+  }
+
+  var match = /^(from|to|with) ([\d\.]+)/.exec(locals.currentTrafficFilter);
+  if (match) {
+    if ('from' === match[1]) {
+      header += i18n.logBrowserHeader_trafficFromAddress({
+        address: match[2]
+      });
+    } else if ('to' === match[1]) {
+      header += i18n.logBrowserHeader_trafficToAddress({
+        address: match[2]
+      });
+    } else if ('with' === match[1]) {
+      header += i18n.logBrowserHeader_trafficToAndFromAddress({
+        address: match[2]
+      });
+    }
+  }
+  return header;
+}
 
 function sortMarkupFor(sortKey) {
   if (sortKey === locals.sortBy) {
@@ -44,16 +122,9 @@ function sortMarkupFor(sortKey) {
 <div class="modal-dialog modal-lg">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
-      <% if (locals.canToggleRouterLogMode) { %>
-        <button type="button" id="routerlog-toggle" class="pull-right btn btn-primary btn-mini"><%= (locals.isAllRouterLogMode) ? i18n.logBrowserHeader_toggleMine() : i18n.logBrowserHeader_toggleAll() %></button>
-      <% } %>
-
-      <% if (locals.isAllRouterLogMode) { %>
-        <h4 class="modal-title"><%= i18n.logBrowserHeader_all() %></h4>
-      <% } else { %>
-        <h4 class="modal-title"><%= i18n.logBrowserHeader_mine() %></h4>
-      <% } %>
+      <%- routerLogModeToggleButton(); %>
+      <%- trafficFilterCycleButton(); %>
+      <h4 class="modal-title"><%= dialogTitle() %></h4>
     </div>
     <div class="modal-body">
       <table>
