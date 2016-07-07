@@ -9,9 +9,9 @@ exports.install = function (blockly, blockInstallOptions) {
   // Block for collecting collectibles
   blockUtils.generateSimpleBlock(blockly, generator, {
     name: 'collector_collect',
-    helpUrl: 'TODO',
-    title: 'collect',
-    tooltip: 'TODO',
+    helpUrl: '',
+    title: msg.collect(),
+    tooltip: msg.collectorCollectTooltip(),
     functionName: 'Maze.dig'
   });
 
@@ -32,9 +32,9 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   generator.collector_ifCollectible = function () {
-    var argument = 'Maze.pilePresent(\'block_id_' + this.id + '\')';
+    var argument = `Maze.pilePresent('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
-    var code = 'if (' + argument + ') {\n' + branch + '}\n';
+    var code = `if (${argument}) {\n${branch}}\n`;
     return code;
   };
 
@@ -54,11 +54,9 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   generator.collector_whileCollectible = function () {
-    var argument = 'Maze.pilePresent(\'block_id_' + this.id + '\')';
+    var argument = `Maze.pilePresent('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
     branch = codegen.loopTrap() + branch;
-    return 'while (' + argument + ') {\n' + branch + '}\n';
+    return `while (${argument}) {\n${branch}}\n`;
   };
-
-
 };
