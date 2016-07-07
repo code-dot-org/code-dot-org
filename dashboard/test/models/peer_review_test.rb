@@ -15,11 +15,12 @@ class PeerReviewTest < ActiveSupport::TestCase
     level.save!
 
     @script_level = create :script_level, levels: [level]
+    @script = @script_level.script
     @user = create :user
   end
 
-  def track_progress(level_source_id)
-    User.track_level_progress_sync(user_id: @user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source_id)
+  def track_progress(level_source_id, user = @user)
+    User.track_level_progress_sync(user_id: user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source_id)
   end
 
   test 'submitting a peer reviewed level should create PeerReview objects' do
@@ -136,5 +137,59 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal first_review.id, new_review.id
     assert_equal reviewer_3, new_review.reviewer
     assert_equal Set.new([reviewer_2, reviewer_3]), Set.new(PeerReview.all.map(&:reviewer))
+  end
+
+  test 'Merging peer review progress does not merge progress with no user, script nor enrollment' do
+    assert PeerReview.get_peer_review_summaries(nil, @script).empty?
+
+    assert PeerReview.get_peer_review_summaries(@user, @script).empty?
+
+    @script.update(professional_learning_course: true)
+    assert PeerReview.get_peer_review_summaries(@user, @script).empty?
+  end
+
+  test 'Merging peer review progress merges progress for enrolled users' do
+    @script.update(professional_learning_course: true)
+    Plc::UserCourseEnrollment.create(user: @user, plc_course: @script.plc_course_unit.plc_course)
+
+    assert PeerReview.get_peer_review_summaries(@user, @script).empty?
+
+    submitter_1 = create :teacher
+    submitter_2 = create :teacher
+
+    level_source_1 = create(:level_source, data: 'Some answer')
+    level_source_2 = create(:level_source, data: 'Other answer')
+
+    Activity.create!(user: submitter_1, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source_1)
+    track_progress(level_source_1.id, submitter_1)
+
+    Activity.create!(user: submitter_2, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source_2)
+    track_progress(level_source_2.id, submitter_2)
+
+    first_review = PeerReview.pull_review_from_pool(@script, @user)
+    first_review.update!(status: 'accepted')
+    second_review = PeerReview.pull_review_from_pool(@script, @user)
+
+    #Expect two peer reviews, one marked complete, the other not complete
+    expected_review = [
+        {
+            id: first_review.id,
+            status: 'perfect',
+            name: I18n.t('peer_review.link_to_submitted_review'),
+            result: ActivityConstants::BEST_PASS_RESULT,
+            icon: 'fa-check',
+            locked: false
+        },
+        {
+            id: second_review.id,
+            status: 'not_started',
+            name: I18n.t('peer_review.review_in_progress'),
+            result: ActivityConstants::UNSUBMITTED_RESULT,
+            icon: '',
+            locked: false
+        }
+    ]
+
+    assert_equal expected_review, PeerReview.get_peer_review_summaries(@user, @script)
   end
 end

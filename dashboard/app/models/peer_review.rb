@@ -140,13 +140,27 @@ class PeerReview < ActiveRecord::Base
     end
   end
 
-  def summarize
-    return Hash.new.tap do |summary_hash|
-      summary_hash[:id] = id
-      summary_hash[:status] = status.nil? ? 'attempted' : 'perfect'
-      summary_hash[:name] = status.nil? ? I18n.t('peer_review.review_in_progress') : I18n.t('peer_review.link_to_submitted_review')
-      summary_hash[:result] = status.nil? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::BEST_PASS_RESULT
-      summary_hash[:icon] = status.nil? ? '' : 'fa-check'
+  def self.get_peer_review_summaries(user, script)
+    peer_review_summaries = []
+
+    if user &&
+        script.professional_learning_course? &&
+        Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
+
+      peer_review_summaries = PeerReview.where(reviewer: user, script: script).map(&:summarize)
     end
+
+    peer_review_summaries
+  end
+
+  def summarize
+    return {
+      id: id,
+      status: status.nil? ? 'not_started' : 'perfect',
+      name: status.nil? ? I18n.t('peer_review.review_in_progress') : I18n.t('peer_review.link_to_submitted_review'),
+      result: status.nil? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::BEST_PASS_RESULT,
+      icon: status.nil? ? '' : 'fa-check',
+      locked: false
+    }
   end
 end
