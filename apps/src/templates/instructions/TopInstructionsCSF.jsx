@@ -119,7 +119,6 @@ const styles = {
     // raise by 20 so that the lightbulb "floats" without causing the original
     // icon to move. This strangeness happens in part because prompt-icon-cell
     // is managed outside of React
-    //marginTop: -20
     marginBottom: 0
   },
   containedLevelContainer: {
@@ -185,7 +184,7 @@ var TopInstructions = React.createClass({
     // resizing our column significantly, it can result in our maxNeededHeight
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
-    var width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
+    const width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
     if (width !== this.state.rightColWidth) {
       this.setState({
         rightColWidth: width
@@ -241,9 +240,9 @@ var TopInstructions = React.createClass({
     const minHeight = this.getMinHeight(nextProps.collapsed);
     const newHeight = Math.min(nextProps.maxHeight, minHeight);
 
-    const shouldUpdateHeight = (nextProps.collapsed)
-        ? newHeight !== this.props.height
-        : nextProps.height < minHeight && nextProps.height < nextProps.maxHeight;
+    const shouldUpdateHeight = (nextProps.collapsed) ?
+        newHeight !== this.props.height :
+        nextProps.height < minHeight && nextProps.height < nextProps.maxHeight;
 
     if (shouldUpdateHeight) {
       this.props.setInstructionsRenderedHeight(newHeight);
@@ -424,7 +423,7 @@ var TopInstructions = React.createClass({
     return (
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
-            style={{
+            styles={{
               container: [styles.body, this.props.isMinecraft && craftStyles.body],
               left: styles.leftCol
             }}
@@ -448,7 +447,10 @@ var TopInstructions = React.createClass({
               }
             </ProtectedStatefulDiv>
           </div>
-          <div ref="instructions" className="top-instructions" onWheel={this.handleInstructionsWheel} style={styles.instructions}>
+          <div ref="instructions"
+              onWheel={this.handleInstructionsWheel}
+              style={styles.instructions}
+          >
             <div style={[styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble]}>
               {this.props.hasContainedLevels && <ProtectedStatefulDiv
                   id="containedLevelContainer"
@@ -473,14 +475,14 @@ var TopInstructions = React.createClass({
               }
             </div>
             {this.props.feedback && !this.props.collapsed && <InlineFeedback
-                style={{
+                styles={{
                   container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
                   message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
                 }}
                 message={this.props.feedback.message}
             />}
             {this.shouldDisplayHintPrompt() && <HintPrompt
-                style={{
+                styles={{
                   container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
                   message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
                 }}
