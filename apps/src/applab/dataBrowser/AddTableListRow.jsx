@@ -30,16 +30,16 @@ const AddTableListRow = React.createClass({
       <tr style={dataStyles.addRow}>
         <td style={dataStyles.cell}>
           <input
-            style={dataStyles.input}
-            placeholder={msg.dataTableNamePlaceholder()}
-            value={this.state.newTableName}
-            onChange={this.handleChange}/>
+              style={dataStyles.input}
+              placeholder={msg.dataTableNamePlaceholder()}
+              value={this.state.newTableName}
+              onChange={this.handleChange}/>
         </td>
         <td style={dataStyles.cell}>
           <button
-            className='btn btn-primary'
-            style={dataStyles.button}
-            onClick={this.handleAdd}
+              className='btn btn-primary'
+              style={dataStyles.button}
+              onClick={this.handleAdd}
           >
             Add
           </button>

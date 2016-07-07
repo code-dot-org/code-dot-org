@@ -66,10 +66,10 @@ const DataOverview = React.createClass({
           {
             Object.keys(this.props.tableListMap).map(tableName => (
               <EditTableListRow
-                key={tableName}
-                tableName={tableName}
-                onViewChange={this.props.onViewChange}
-                onTableDelete={this.props.onTableDelete}/>
+                  key={tableName}
+                  tableName={tableName}
+                  onViewChange={this.props.onViewChange}
+                  onTableDelete={this.props.onTableDelete}/>
             ))
           }
           <AddTableListRow onTableAdd={this.props.onTableAdd}/>
