@@ -521,6 +521,15 @@ StudioApp.prototype.init = function (config) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
+  if (!!config.level.pairingDriver) {
+    this.displayWorkspaceAlert(
+      'warning',
+      <div>
+        {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
+      </div>
+    );
+  }
+
   var vizResizeBar = document.getElementById('visualizationResizeBar');
   if (vizResizeBar) {
     dom.addMouseDownTouchEvent(vizResizeBar,
