@@ -4,16 +4,16 @@
 import {combineReducers} from 'redux';
 import utils from '../utils';
 import {animations as animationsApi} from '../clientApi';
+import assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
+import {throwIfSerializedAnimationListIsInvalid} from './PropTypes';
 /* global dashboard */
 
-// TODO: Don't upload to S3 if an animation is never modified
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
 // TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
 //       is deleted, so nothing is selected.
-// TODO: Enable starting new blank animation
 // TODO: Warn about duplicate-named animations.
 
 // Args: {SerializedAnimationList} animationList
@@ -24,8 +24,6 @@ export const ADD_ANIMATION = 'AnimationList/ADD_ANIMATION';
 export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
 // Args: {AnimationKey} key, {AnimationProps} props
 export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
-// Args: {AnimationKey} key
-const INVALIDATE_ANIMATION = 'AnimationList/INVALIDATE_ANIMATION';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
 // Args: {AnimationKey} key
@@ -33,7 +31,7 @@ const DELETE_ANIMATION = 'AnimationList/DELETE_ANIMATION';
 // Args: {AnimationKey} key
 const START_LOADING_FROM_SOURCE = 'AnimationList/START_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {Blob} blob, {String} dataURI. Version?
-const DONE_LOADING_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SgOURCE';
+const DONE_LOADING_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {string} version
 const ON_ANIMATION_SAVED = 'AnimationList/ON_ANIMATION_SAVED';
 
@@ -79,7 +77,6 @@ function propsByKey(state, action) {
     case ADD_ANIMATION:
     case ADD_ANIMATION_AT:
     case EDIT_ANIMATION:
-    case INVALIDATE_ANIMATION:
     case SET_ANIMATION_NAME:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
@@ -111,11 +108,7 @@ function animationPropsReducer(state, action) {
 
     case EDIT_ANIMATION:
       return Object.assign({}, state, action.props, {
-        saved: false // Dirty, so it'll get saved soon.
-      });
-
-    case INVALIDATE_ANIMATION:
-      return Object.assign({}, state, {
+        sourceUrl: null, // Once edited this animation is custom.
         saved: false // Dirty, so it'll get saved soon.
       });
 
@@ -149,14 +142,30 @@ function animationPropsReducer(state, action) {
 }
 
 /**
- *
  * @param {!SerializedAnimationList} serializedAnimationList
  * @returns {function()}
  */
 export function setInitialAnimationList(serializedAnimationList) {
+  // Set default empty animation list if none was provided
+  if (!serializedAnimationList) {
+    serializedAnimationList = {orderedKeys: [], propsByKey: {}};
+  }
+
+  // TODO: Tear out this migration when we don't think we need it anymore.
+  if (Array.isArray(serializedAnimationList)) {
+    // We got old animation data that needs to be migrated.
+    serializedAnimationList = {
+      orderedKeys: serializedAnimationList.map(a => a.key),
+      propsByKey: serializedAnimationList.reduce((memo, next) => {
+        memo[next.key] = next;
+        return memo;
+      }, {})
+    };
+  }
+
+  throwIfSerializedAnimationListIsInvalid(serializedAnimationList);
+
   return dispatch => {
-    // TODO: Should I validate here?
-    // TODO: Should I add transient properties here?
     dispatch({
       type: SET_INITIAL_ANIMATION_LIST,
       animationList: serializedAnimationList
@@ -164,6 +173,36 @@ export function setInitialAnimationList(serializedAnimationList) {
     serializedAnimationList.orderedKeys.forEach(key => {
       dispatch(loadAnimationFromSource(key));
     });
+  };
+}
+
+export function addBlankAnimation() {
+  const key = utils.createUuid();
+  return dispatch => {
+    // Special behavior here:
+    // By pushing an animation that is "loadedFromSource" but has a null
+    // blob and dataURI, Piskel will know to create a new document with
+    // the given dimensions.
+    dispatch({
+      type: ADD_ANIMATION,
+      key,
+      props: {
+        name: 'New animation', // TODO: Better generated name?
+        sourceUrl: null,
+        sourceSize: {x: 100, y: 100},
+        frameSize: {x: 100, y: 100},
+        frameCount: 1,
+        frameRate: 15,
+        version: null,
+        loadedFromSource: true,
+        saved: false,
+        blob: null,
+        dataURI: null,
+        hasNewVersionThisSession: false
+      }
+    });
+    dispatch(selectAnimation(key));
+    dashboard.project.projectChanged();
   };
 }
 
@@ -181,7 +220,7 @@ export function addAnimation(key, props) {
       key,
       props
     });
-    dispatch(loadAnimationFromSource(key, undefined, () => {
+    dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
     dashboard.project.projectChanged();
@@ -200,23 +239,10 @@ export function addLibraryAnimation(props) {
       key,
       props
     });
-    dispatch(loadAnimationFromSource(key, props.sourceUrl, () => {
-      dispatch(invalidateAnimation(key));
+    dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
     dashboard.project.projectChanged();
-  };
-}
-
-/**
- * Mark an animation as needing to be saved to S3.
- * @param {AnimationKey} key
- * @returns {{type: ActionType, key: AnimationKey}}
- */
-function invalidateAnimation(key) {
-  return {
-    type: INVALIDATE_ANIMATION,
-    key
   };
 }
 
@@ -305,15 +331,20 @@ export function deleteAnimation(key) {
  * Load the indicated animation (which must already have an entry in the project
  * animation list) from its source, whether that is S3 or the animation library.
  * @param {!AnimationKey} key
- * @param {string} [sourceUrl]
  * @param {function} [callback]
  */
-function loadAnimationFromSource(key, sourceUrl, callback) {
-  // Figure out URL from animation key
-  // TODO: Take version ID into account here...
-  sourceUrl = sourceUrl || animationsApi.basePath(key) + '.png';
+function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
-  return dispatch => {
+  return (dispatch, getState) => {
+    const state = getState().animationList;
+    // Figure out where to get the animation from.
+    // 1. If the animation has a sourceUrl it's external (from the library
+    //    or some other outside source, not the animation API)
+    // 2. Otherwise use the animation key to look it up in the animations API
+    // TODO: Take version ID into account here...
+
+    const rawSourceUrl = state.propsByKey[key].sourceUrl;
+    const sourceUrl = rawSourceUrl ? assetPrefix.fixPath(rawSourceUrl) : animationsApi.basePath(key) + '.png';
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
@@ -372,7 +403,12 @@ function blobToDataURI(blob, onComplete) {
 export function saveAnimations(onComplete) {
   return (dispatch, getState) => {
     const state = getState().animationList;
-    const changedAnimationKeys = state.orderedKeys.filter(key => !state.propsByKey[key].saved);
+    // Animations with a sourceUrl are referencing an external spritesheet and
+    // should not be saved - until an edit operation clears the sourceUrl.
+    // Also check the saved flag, so we only upload animations that have changed.
+    const changedAnimationKeys = state.orderedKeys.filter(key =>
+        !state.propsByKey[key].sourceUrl && state.propsByKey[key].blob &&
+        !state.propsByKey[key].saved);
     Promise.all(changedAnimationKeys.map(key => {
           return saveAnimation(key, state.propsByKey[key])
               .then(action => { dispatch(action); });
@@ -396,11 +432,6 @@ export function saveAnimations(onComplete) {
  */
 function saveAnimation(animationKey, animationProps) {
   return new Promise((resolve, reject) => {
-    if (animationProps.blob === undefined) {
-      reject(new Error(`Animation ${animationKey} has no loaded content.`));
-      return;
-    }
-
     let xhr = new XMLHttpRequest();
 
     const onError = function () {

@@ -2,7 +2,7 @@
 'use strict';
 
 import _ from 'lodash';
-import {addAnimation, addLibraryAnimation} from '../animationListModule';
+import {addBlankAnimation, addAnimation, addLibraryAnimation} from '../animationListModule';
 import { makeEnum } from '../../utils';
 import { animations as animationsApi } from '../../clientApi';
 
@@ -155,6 +155,23 @@ export function handleUploadError(status) {
   return {
     type: HANDLE_UPLOAD_ERROR,
     status: status
+  };
+}
+
+/**
+ * The user chose to draw their own animation.  This concludes our picking
+ * process.  Dispatch action to add a new image, and then close the animation
+ * picker.
+ */
+export function pickNewAnimation() {
+  return (dispatch, getState) => {
+    const goal = getState().animationPicker.goal;
+    if (goal === Goal.NEW_ANIMATION) {
+      dispatch(addBlankAnimation());
+    } else if (goal === Goal.NEW_FRAME) {
+      // TODO (bbuchanan): Implement after integrating Piskel
+    }
+    dispatch(hide());
   };
 }
 
