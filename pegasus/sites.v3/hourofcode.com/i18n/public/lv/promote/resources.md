@@ -62,13 +62,13 @@ nav: promote_nav
 
 ## Paprasiet savai skolai, darba devējam vai draugiem piereģistrēties:
 
-Datori ir visur, bet daudz mazāk skolas māca datorzinātni nekā pirms desmit gadiem. Labās ziņas ir tādas, ka mēs esam gatavi to mainīt. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. Labās ziņas ir tādas, ka mēs esam gatavi to mainīt. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! un Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! un Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Izplatiet informāciju, rīkojiet pasākumu, pajautājiet vietējai skolai reģistrēties vai pamēģiniet "Programmēšanas stundu" pats - ikviens var gūt labumu iemācoties programmēšanas pamatus.
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
 Get started at http://hourofcode.com/<%= @country %>
 
@@ -78,15 +78,15 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
-Datori ir atrodami visur, taču skolu skaits, kur pasniedz datorzinātnes ilgāk par 10 gadiem, ir salīdzinoši mazs. Meitenes un minoritātes ir mazpārstāvētas. Labās ziņas ir tādas, ka mēs esam gatavi to mainīt.
+Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Labās ziņas ir tādas, ka mēs esam gatavi to mainīt.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! un Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! un Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 Es rakstu, lai [DATE] ielūgtu Jūs apmeklēt atklāšanas pasākumu.
 
-"Programmēšanas stunda", kuru organizē bezpeļņas organizācija Code.org un 100 citu partneru, ir paziņojums, ka mūsdienu paaudzes skolēni ir gatavi mācīties 21. gadsimtam kritiski nepieciešamas zināšanas. Lūdzu pievienojaties mums.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Lūdzu pievienojaties mums.
 
 **Kontakti:** [JŪSU VĀRDS], [TITULS], mob.tālr.: [TELEFONS]
 
@@ -102,33 +102,36 @@ Ceru uz turpmāku saziņu.
 
 Cienījamie vecāki,
 
-Mēs dzīvojam pasaulē kuru ieskauj tehnoloģijas. Un mēs zinām, lai arī kādu karjeru mūsu skolēni izvēlētos, viņu iespējas izcelties būs atkarīgas no viņu spējas saprast mūsdienu tehnoloģijas. Bet tikai maza daļiņa no mums mācas datorzinātnes. Vēl mazāk skolēnu mācās datorzinātnes nekā pirms 10 gadiem.
+Mēs dzīvojam pasaulē kuru ieskauj tehnoloģijas. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-Tādēļ mūsu skola pievienosies lielākajam mācību pasākumam vēsturē: "Programmēšanas stunda" kas norisināsies kā daļa no Datorzinātnes izglītības nedēļā 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
-"Programmēšanas stunda" ir paziņojums ka [SKOLAS NOSAUKUMS] ir gatava iemācīt šīs 21. gadsimta zināšanas. Lai turpinātu pasniegt jūsu skolēniem programmēšanas nodarbības, mēs vēlamies padarīt "Programmēšanas stundu" par lielu pasākumu. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Šī ir iespēja mainīt izglītības nākotni [Pilsētas nosaukums].
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
 See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Ar cieņu,
+Sincerely,
 
-Jūsu direktors
+Your principal
 
 <a id="politicians"></a>
 
 ## Ielūdziet vietējo politiķi uz savu skolas pasākumu:
 
-Cienījamais [Mērs/Gubernators/Pārstāvis/Senators UZVĀRDS]:
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Vai Jūs zinājāt ka mūsdienu ekonomijā, skaitļošanas darbavietas pārsniedz studentus kuri absolvē šajā nozarē 3 pret 1? Datorzinātne mūsdienās ir pamats *jebkurai* industrijai. Yet most of schools don’t teach it. [SKOLAS NOSAUKUMS] mēs mēģinam to mainīt.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Tādēļ mūsu skola pievienosies lielākajam mācību pasākumam vēsturē: "Programmēšanas stunda" kas norisināsies kā daļa no Datorzinātnes izglītības nedēļā 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+Computer science is foundational for *every* industry today. Yet 75% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Es rakstu, lai uzaicinātu Jūs piedalīties Programmēšanas stundas pasākumā un teikt dažus vārdus atklāšanas daļā. Pasākums norisināsies [DATUMS, LAIKS, VIETA], un šis pasākums liecinās par [PILSĒTAS VAI NOVADA] apņemšanos mācīt skolēniem šī 21 gadsimtam nozīmīgās prasmes. Mēs vēlamies lai mūsu studenti ir jauno tehnoloģiju veidotāji, nevis tikai patērētāji.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Lūdzu sazinieties ar mani izmantojot [E-PASTS VAI TELEFONS]. Ar nepacietību gaidu Jūsu ziņu.
+I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Ar cieņu, [NAME], [TITLE]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
+Sincerely, [NAME], [TITLE]

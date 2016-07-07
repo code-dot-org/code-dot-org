@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 ## Πώς να προσελκύσεις τα ΜΜΕ στην εκδήλωσή σου για την Ώρα του Κώδικα
 
 *Για ερωτήσεις σχετικά με τον τύπο και τα ΜΜΕ επικοινώνησε με το <press@code.org>*
@@ -16,17 +15,17 @@ nav: promote_nav
   * Προσέγγισε τα ΜΜΕ δύο εβδομάδες πριν την εκδήλωση με email. Αν δεν λάβεις απάντηση, προσπάθησε ξανά με e-mail ή τηλεφωνικά.
   * Ζήτησε από έναν εργαζόμενο στο σχολείο ή κάποιον εθελοντή να τραβήξει φωτογραφίες που θα μοιραστείς online ή θα στείλεις στον τύπο.
   * Γράψε για την Ώρα του Κώδικα τόσο στην αρχική σελίδα του ιστοχώρου σου, όσο και στη σχολική εφημερίδα. Δημοσίευσε τις λεπτομέρειες της εκδήλωσης και φωτογραφίες από τις δραστηριότητες των μαθητών.
-  * Στο Facebook και το Twitter, μοιράσου τις ενημερώσεις των σχεδίων σου, ανακοίνωσε τις εκδηλώσεις και δημοσίευσε φωτογραφίες κατά τη διάρκεια της εβδομάδας 7-13 Δεκεμβρίου. Χρησιμοποίησε το hashtag **#HourOfCode**, ώστε το Code.org να δει και να τα προβάλλει τις δραστηριότητές σου.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Οδηγός Βήμα προς Βήμα:
 
 **1. Σχεδίασε την εκδήλωσή σου**
 
   * Σχεδίασε μια συγκέντρωση για να ξεκινήσεις την Ώρα του Κώδικα.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Στείλε [επιστολή](<%= resolve_url('/promote/resources#sample-emails') %>) προς τους γονείς. Να τους ζητήσεις να εξαπλωθεί η δράση.
+  * Στείλε ένα [γράμμα](<%= hoc_uri('/resources/#sample-emails') %>) στον τοπικό δήμαρχο, κυβερνήτη ή έναν ισχυρό επιχειρηματία με σκοπό να έρθει και να μιλήσει στους μαθητές.
   * Οργάνωσε ομαδικές δραστηριότητες (όπως μια προγραμματιστική δραστηριότητα χωρίς τη χρήση υπολογιστή), ή πρόβαλλε δραστηριότητες που οργάνωσαν και υλοποιούν οι μαθητές σου.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+  * Δείξε το βίντεο του Code.org το [Ώρα του κώδικα βίντεο](<%= resolve_url('/') %>) ή μία από [αυτές](<%= resolve_url('/promote/resources#videos') %>)για να εμπνεύσει την συμμετοχή.
 
 **2. Βρεις ποιοι τοπικοί δημοσιογράφοι καλύπτουν τα εκπαιδευτικά και τις τοπικές εκδηλώσεις.**
 
@@ -36,7 +35,7 @@ nav: promote_nav
 
 **3. Επικοινώνησε με τα τοπικά μέσα ενημέρωσης**
 
-Ο καλύτερος τρόπος για να προσεγγίσεις τα ΜΜΕ είναι το e-mail. Θα πρέπει να είναι σύντομο και να περιγράφει γλαφυρά: γιατί πρέπει ο κόσμος να μάθει για αυτή την εκδήλωση; Να συμπεριλάβεις πληροφορίες επικοινωνίας (και αριθμό κινητού τηλεφώνου) για όσους θα είναι στην εκδήλωση. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
+Ο καλύτερος τρόπος για να προσεγγίσεις τα ΜΜΕ είναι το e-mail. Θα πρέπει να είναι σύντομο και να περιγράφει γλαφυρά: γιατί πρέπει ο κόσμος να μάθει για αυτή την εκδήλωση; Να συμπεριλάβεις πληροφορίες επικοινωνίας (και αριθμό κινητού τηλεφώνου) για όσους θα είναι στην εκδήλωση. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
 
 **4. Προετοιμάσου για να απαντήσεις σε ερωτήσεις για την σχολική εκδήλωσή σου. Ακολουθούν μερικά παραδείγματα:**
 
@@ -44,20 +43,19 @@ nav: promote_nav
 
 Ενώ όλοι μας γνωρίζουμε ότι είναι σημαντικό για τους μαθητές να μάθουν πώς να ενεργούν στον σημερινό τεχνολογικά κορεσμένο κόσμο, πολλοί εκπαιδευτές δεν είναι έμπειροι στην επιστήμη των υπολογιστών και δεν γνωρίζουν από πού να αρχίσουν. Αυτήν η εκδήλωση είναι μια ευκαιρία για όλους μας να καταλάβουμε τον σκοπό της επιστήμης των υπολογιστών.
 
-Ελπίζουμε ότι θα προκαλέσει το ενδιαφέρον των μαθητών να συνεχίσουν να μαθαίνουν. Έρευνα δείχνει ότι τα παιδιά καταλαβαίνουν έννοιες του προγραμματισμού πριν μάθουν να διαβάζουν και να γράφουν. Στην πραγματικότητα, το μυαλό τους σε μικρές ηλικίες είναι πιο δεκτικό στις γλώσσες προγραμματισμού, όπως ακριβώς συμβαίνει και με τις ξένες γλώσσες.
+Ελπίζουμε ότι θα προκαλέσει το ενδιαφέρον των μαθητών για να συνεχίσουν να μαθαίνουν. Research also shows that kids can pick up programming concepts before they know how to read and write. Στην πραγματικότητα, το μυαλό τους σε μικρές ηλικίες είναι πιο δεκτικό στις γλώσσες προγραμματισμού, όπως ακριβώς συμβαίνει και με τις ξένες γλώσσες.
 
 *Γιατί είναι τόσο σημαντικό;*
 
-Στην Κίνα, κάθε μαθητής χρειάζεται την Πληροφορική για να αποφοιτήσει από το Λύκειο. Στις Ηνωμένες Πολιτείες το 90% των σχολείων δεν την διδάσκει καν. Ήρθε η ώρα να προλάβουμε τον 21 αιώνα. Γνωρίζουμε ότι, ανεξάρτητα από το τι θα κάνουν οι μαθητές μας όταν μεγαλώσουν, αν θα ασχοληθούν με την ιατρική, με επιχειρήσεις, την πολιτική ή τις τέχνες, αν γνωρίζουν πώς να δημιουργήσουν τεχνολογία, θα έχουν την αυτοπεποίθηση και την τεχνογνωσία να πετύχουν.
+Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
 **Περισσότερες λεπτομέρειες και ένα απόσπασμα που μπορείς να χρησιμοποιήσεις στο υλικό σου**
 
-«Η Ώρα του Κώδικα έχει σχεδιαστεί με σκοπό να απομυθοποιήσει τον προγραμματισμό και να δείξει ότι η Πληροφορική δεν είναι απλησίαστη, οποιοσδήποτε μπορεί να μάθει τα βασικά», είπε ο Hadi Partovi, ιδρυτής και διεθύνων σύμβουλος του Code.org. "Πάνω από 100 εκατομμύρια μαθητές σε όλο τον κόσμο έχουν δοκιμάσει μια ώρα του κώδικα. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Πάνω από 100 εκατομμύρια μαθητές σε όλο τον κόσμο έχουν δοκιμάσει μια ώρα του κώδικα. Η ζήτηση για εκπαίδευση στην επιστήμη της πληροφορικής στον 21ο αιώνα διασχίζει όλα τα σύνορα και δεν γνωρίζει όρια."
 
 **Περί του Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Το όραμά της είναι ότι κάθε ένας μαθητής σε οποιοδήποτε σχολείο πρέπει να έχει τη δυνατότητα να μάθει προγραμματισμό υπολογιστών. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Για περισσότερες πληροφορίες, παρακαλούμε επισκεφθείτε: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Το Code.org® είναι μία δημόσια μη κερδοσκοπική οργάνωση, αφιερωμένη στην εξάπλωση της συμμετοχής στην επιστήμη της πληροφορικής και ιδιαίτερα στην αύξηση της συμμετοχής των γυναικών και των μαθητών από διαφορετικές φυλές που δεν εκπροσωπούνται επαρκώς. Το όραμά της είναι ότι κάθε ένας μαθητής σε οποιοδήποτε σχολείο πρέπει να έχει τη δυνατότητα να μάθει προγραμματισμό υπολογιστών. Μετά την έναρξη το 2013, η Code.org οργάνωσε την εκστρατεία για την ώρα του κώδικα – η οποία έχει εισάγει πάνω από 100 εκατομμύρια μαθητές στην επιστήμη των υπολογιστών μέχρι σήμερα – και συνεργάζεται με 70 δημόσια σχολικές περιοχές σε εθνικό επίπεδο για την επέκταση των προγραμμάτων της επιστήμης των ηλεκτρονικών υπολογιστών. Το Code.org υποστηρίζεται από φιλανθρωπικές δωρεές από εταιρείες, ιδρύματα και γενναιόδωρους ιδιώτες, συμπεριλαμβανομένης της Microsoft, Infosys, ΗΠΑ, το Ίδρυμα της οικογένειας Ballmer, το Δίκτυο Omidyar και άλλους. Για περισσότερες πληροφορίες, παρακαλούμε επισκεφθείτε: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
-
+Βρείτε περισσότερους πόρους και δείγματα από ηλεκτρονικά μηνύματα [εδώ](<%= resolve_url('/promote') %>).

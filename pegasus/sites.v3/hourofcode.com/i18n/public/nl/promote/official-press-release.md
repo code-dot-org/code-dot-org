@@ -1,11 +1,9 @@
 ---
 
-title: <%= hoc_s(:title_press_release) %>
-layout: wide
+titel: < % = hoc_s(:title_press_release) %> lay-out: breed
 nav: promote_nav
 
 ---
-
 
 # Voorbeeld perscommuniqué voor verkozenen
 
@@ -33,18 +31,13 @@ contact: [**CONTACT informatie**]
 [**SAMPLE STOCK TEXT FOR CONTEXT:**]  
 Computers zijn overal, maar er onderwijzen nu minder scholen informatica dat tien jaar terug. Getinte leerlingen zijn ernstig ondervertegenwoordigd. Het goede nieuws is dat we dit veranderen. Het Uur Code is de toegangspoort om alle studenten te voorzien tot hoge kwaliteit-informatica.
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! en Disney. President Obama, Shakira en Ashton Kutcher startte het Uur Code met video's. Meer dan 100 partners ondersteunen deze beweging.
+Wereldwijd hebben er meer dan 100 miljoen studenten meegedaan met CodeUur. Dankzij het CodeUur, was programmeren op homepages van Google, MSN, Yahoo! en Disney. President Obama, Shakira en Ashton Kutcher startten het CodeUur met video's. Meer dan 100 organisaties ondersteunen de stichting CodeUur.
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. "Elke student heeft recht om informatica te leren om de beste banen van de 21ste eeuw te kunnen uitvoeren."
+“We moeten de interesse van de studenten in programmeren aanmoedigen en omarmen, aldus [**INSERT NAME**]. "Elke student heeft recht om programmeren te leren en om zo de beste banen van de 21ste eeuw te kunnen uitvoeren."
 
 [**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
 
 [**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
 
-Voor meer informatie over [**EVENT/PROGRAM/ETC**], bezoek [**INSERT WEBSITE**]of neem contact op met [**INSERT CONTACT INFORMATION**]
-
-  
-  
-
-
+Voor meer informatie over [**EVENT/PROGRAM/ETC**], bezoek [**INSERT WEBSITE**] of neem contact op met [**INSERT CONTACT INFORMATION**]

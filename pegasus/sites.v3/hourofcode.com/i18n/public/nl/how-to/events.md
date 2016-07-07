@@ -1,34 +1,30 @@
 ---
 
-title: <%= hoc_s(:title_how_to_events) %>
-layout: wide
+titel: < % = hoc_s(:title_how_to_volunteers) %> lay-out: breed
 nav: how_to_nav
 
 ---
 
+# Hoe kunt u een CodeUur evenement organiseren
 
-# How to organize an Hour of Code event
-
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
-
-## 1) Bereiden u voor op uw evenement
+## 1) Bereid u voor op uw evenement
 
   * Bepaal een locatie, datum en tijd
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
+  * Stuur [een brief](<%= hoc_uri('https://docs. google. com/a/code. org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) om de burgemeester, een congreslid, of een andere invloedrijke bedrijfspersoon uit te nodigen om te spreken.
+  * Nodig media en pers uit zoals de locale nieuwsstation, de krant of bloggers. Bekijk onze [pers Kit](<%= hoc_uri('/resources/press-kit') %>) voor hulp.
 
-## 2) tijdens uw evenement
+## 2) Tijdens uw evenement
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
+  * Start uw evenement met een van onze [inspirerende video 's](<%= resolve_url('/promote/resources#videos') %>).
+  * Geef een intro over het belang van programmeren, met behulp van deze [stats en infographics](<%= resolve_url('/promote/stats') %>).   
       
     
   * Andere evenement ideeën: 
-      * Nodig een lokale industrieleider uit om zijn/haar werk te bespreken met inbegrip van de informatica
-      * Nodig een lokale politicus uit en laat leerlingen hem uit leggen hoe hij moet programmeren
+      * Nodig een lokale industrieleider uit om zijn/haar werk te bespreken waarmee hij/zij gebruik maakt van programmeren
+      * Nodig een lokale politicus uit en laat leerlingen hem uitleggen hoe hij moet programmeren
       * Laat een groep leerlingen een unplugged activiteit demonstreren
       * Laat een groep leerlingen/leerkrachten de basisfundamenten leren over programmeren
-      * Als je school al informatica geeft, laat studenten projecten demonstreren
+      * Als uw school al informatica geeft, laat leerlingen projecten demonstreren
 
 ## 3) Deel hoe het ging
 
@@ -37,24 +33,23 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## Voorbeeld van een evenementsplan
 
-**Evenement:** Schoolbrede Computer Science Education Week aftrap
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Tijd:** Tijdens de schooldag. Halverwege de ochtend heeft de voorkeur. ongeveer een uur.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Locatie:** verzamelruimte (bijv. theater of gymzaal)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
 ## Programma
 
-| Tijdstip         | Actie                                                                                                                                           |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                      |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>) |
-| 10:15 - 10:30 am | Speciale gasten praten over hun achtergrond en welke belangrijke rol informatica in hun alledaagse leven speelt.                                |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
-| 10:40 - 11:00 am | Studenten laten een unplugged activiteit zien om te laten zien hoe informatica kan worden geleerd zonder computers.                             |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
-
+| Tijdstip    | Actie                                                                                                                                          |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00-10:05 | Start met één van onze [inspirerende video's](<%= resolve_url('/promote/resources#videos') %>)                                                   |
+| 10:05-10:15 | De directeur geeft een intro over het belang van programmeren. Gebruik deze [stats en infographics](<%= resolve_url('/promote/stats') %>)        |
+| 10:15-10:30 | Speciale gasten praten over hun achtergrond en welke belangrijke rol informatica in hun alledaagse leven heeft.                                |
+| 10:30-10:40 | Studenten doen een demo van CodeUur voor de school. Misschien kunnen zij het leren aan de directeur, aan de politicus of aan andere studenten. |
+| 10:40-11:00 | Studenten laten een unplugged activiteit zien om te demonstreren hoe programmeren kan worden geleerd zonder computers.                         |
+| 11:00-11:05 | De leraar die de evenement heeft georganiseerd sluit af.                                                                                       |
