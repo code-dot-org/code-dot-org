@@ -422,9 +422,10 @@ ActiveRecord::Schema.define(version: 20160706173136) do
     t.string   "unit_name",        limit: 255
     t.string   "unit_description", limit: 255
     t.integer  "unit_order",       limit: 4
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.integer  "script_id",        limit: 4
+    t.boolean  "started",                      default: false, null: false
   end
 
   add_index "plc_course_units", ["plc_course_id"], name: "index_plc_course_units_on_plc_course_id", using: :btree
