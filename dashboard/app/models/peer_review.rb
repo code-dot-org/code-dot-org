@@ -49,13 +49,7 @@ class PeerReview < ActiveRecord::Base
     # Reviewer is nil or it has been assigned for more than a day
     # Reviewer is not currently reviewing this level source
     transaction do
-      level_sources_reviewing = PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
-
-      peer_review = where(script: script).
-          where.not(submitter: user).
-          where(status: nil).
-          where('reviewer_id is null or created_at < now() - interval 1 day').
-          where.not(level_source_id: level_sources_reviewing).take
+      peer_review = get_review_for_user(script, user)
 
       if peer_review
         peer_review.update!(reviewer: user)
@@ -65,6 +59,18 @@ class PeerReview < ActiveRecord::Base
         nil
       end
     end
+  end
+
+  def self.get_review_for_user(script, user)
+    where(
+      script: script,
+      status: nil
+    ).where.not(
+      submitter: user,
+      level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
+    ).where(
+      'reviewer_id is null or created_at < now() - interval 1 day'
+    ).take
   end
 
   def mark_user_level

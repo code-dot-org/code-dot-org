@@ -1,5 +1,5 @@
 - script = @script || (user && user.primary_script) || Script.twenty_hour_script
-- script_summary = script.summarize
+- script_summary = script.summarize(user)
 - progress = summarize_user_progress(script, user) || {}
 - level_progress = progress[:levels] || {}
 - should_show_lesson_plan = user && user.teacher?
