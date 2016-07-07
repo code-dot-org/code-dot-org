@@ -9,14 +9,40 @@
     "code_functions": {
       "moveForward": null,
       "moveTo": null,
-      "turnRight": null,
-      "turnLeft": null,
+      "turnRight": {
+        "paramButtons": {
+          "minArgs": 1,
+          "maxArgs": 1
+        }
+      },
+      "turnLeft": {
+        "paramButtons": {
+          "minArgs": 1,
+          "maxArgs": 1
+        }
+      },
       "penUp": null,
       "penDown": null,
       "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null
+      "functionParams_n": {
+        "paramButtons": {
+          "minArgs": 0,
+          "maxArgs": 2
+        }
+      },
+      "callMyFunction": {
+        "paramButtons": {
+          "minArgs": 0,
+          "maxArgs": 0
+        }
+      },
+      "callMyFunction_n": {
+        "paramButtons": {
+          "minArgs": 1,
+          "maxArgs": 1
+        }
+      },
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -55,7 +81,13 @@
     "video_key": "csp_applab_functions_parameters",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "encrypted_examples": "5Ot7bDDuTK/42jNXiOS6k1KbwZ/hGrzwv0mbeXY0VsI7ks2fAd/vL4U+oWDZ\nycgZ\n"
+    "encrypted_examples": "5Ot7bDDuTK/42jNXiOS6k1KbwZ/hGrzwv0mbeXY0VsI7ks2fAd/vL4U+oWDZ\nycgZ\n",
+    "contained_level_names": null,
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

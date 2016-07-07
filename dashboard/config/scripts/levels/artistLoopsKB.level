@@ -66,6 +66,9 @@
     <recommended_blocks>
       <xml>
         <block type="simple_jump_left"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-8">???</title>
+        </block>
       </xml>
     </recommended_blocks>
     <solution_blocks>

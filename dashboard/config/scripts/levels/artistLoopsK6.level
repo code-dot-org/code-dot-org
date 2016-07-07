@@ -45,7 +45,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="3-10">3</title>
+              <title name="TIMES" config="2-6">3</title>
               <statement name="DO">
                 <block type="simple_move_up">
                   <next>
@@ -72,7 +72,7 @@
     <recommended_blocks>
       <xml>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES">uninitialized</title>
+          <title name="TIMES" config="2-6">3</title>
         </block>
       </xml>
     </recommended_blocks>
