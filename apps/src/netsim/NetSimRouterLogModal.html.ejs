@@ -16,33 +16,15 @@ var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &
     headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
 /**
- * @name isAllRouterLogMode
- * @type {boolean}
- */
-
-/**
- * @name canToggleRouterLogMode
- * @type {boolean}
- */
-
-/**
- * @name currentTrafficFilter
- * @type {string}
- */
-
-/**
- * @name localAddress - address of local node, or undefined if not available.
- * @type {string}
- */
-
-/**
- * @name sortBy
- * @type {string}
- */
-
-/**
- * @name sortDescending
- * @type {boolean}
+ * Parameters that should be supplied to the EJS template by the render invocation.
+ * @name locals
+ * @type {Object}
+ * @property {boolean} isAllRouterLogMode
+ * @property {boolean} canToggleRouterLogMode
+ * @property {string} currentTrafficFilter
+ * @property {string} localAddress
+ * @property {string} sortBy
+ * @property {boolean} sortDescending
  */
 
 function routerLogModeToggleButton() {
@@ -82,12 +64,8 @@ function trafficFilterCycleDropdown() {
 }
 
 function dialogTitle() {
-  var header;
-  if (locals.isAllRouterLogMode) {
-    header = i18n.logBrowserHeader_all();
-  } else {
-    header = i18n.logBrowserHeader_mine();
-  }
+  var header = locals.isAllRouterLogMode ?
+      i18n.logBrowserHeader_all() : i18n.logBrowserHeader_mine();
 
   var match = /^(from|to|with) ([\d\.]+)/.exec(locals.currentTrafficFilter);
   if (match) {
