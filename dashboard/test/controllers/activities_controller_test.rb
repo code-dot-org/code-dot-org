@@ -967,8 +967,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     with_default_locale(:de) do
       assert_does_not_create(LevelSource, GalleryActivity) do
         post :milestone, @milestone_params.merge(
-            script_level_id: create(:script_level, :playlab).id,
-            program: studio_program_with_text('scheiße'))
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('scheiße'))
       end
     end
     assert_response :success
@@ -987,8 +987,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       post :milestone, @milestone_params.merge(
-          script_level_id: create(:script_level, :playlab).id,
-          program: studio_program_with_text('shit'))
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('shit'))
     end
 
     assert_response :success
@@ -1005,8 +1005,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       post :milestone, @milestone_params.merge(
-          script_level_id: create(:script_level, :playlab).id,
-          program: studio_program_with_text('shit'))
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('shit'))
     end
 
     assert_response :success
@@ -1021,8 +1021,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     with_default_locale(:es) do
       assert_does_not_create(LevelSource, GalleryActivity) do
         post :milestone, @milestone_params.merge(
-            script_level_id: create(:script_level, :playlab).id,
-            program: studio_program_with_text('putamadre'))
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('putamadre'))
       end
     end
     assert_response :success
@@ -1033,8 +1033,8 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with phone number' do
     assert_does_not_create(LevelSource, GalleryActivity) do
       post :milestone, @milestone_params.merge(
-          script_level_id: create(:script_level, :playlab).id,
-          program: studio_program_with_text('800-555-5555'))
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('800-555-5555'))
     end
     assert_response :success
 
@@ -1054,8 +1054,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     Gatekeeper.set('shareEnabled', where: {script_name: script_level.script.name}, value: false)
 
     post :milestone, @milestone_params.merge(
-        script_level_id: script_level.id,
-        program: studio_program_with_text('hey some text'))
+      script_level_id: script_level.id,
+      program: studio_program_with_text('hey some text'))
 
     assert_response :success
     response = JSON.parse(@response.body)
@@ -1069,8 +1069,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     Gatekeeper.set('shareEnabled', where: {script_name: 'Best script ever'}, value: false)
 
     post :milestone, @milestone_params.merge(
-        script_level_id: create(:script_level, :playlab).id,
-        program: studio_program_with_text('hey some text'))
+      script_level_id: create(:script_level, :playlab).id,
+      program: studio_program_with_text('hey some text'))
 
     assert_response :success
     response = JSON.parse(@response.body)
