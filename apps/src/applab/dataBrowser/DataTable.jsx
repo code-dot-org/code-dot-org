@@ -2,10 +2,10 @@
  * @overview Component for editing a data table.
  */
 
-import { DataView } from './constants';
+import { DataView } from '../constants';
 import Radium from 'radium';
 import React from 'react';
-import { changeView } from './redux/data';
+import { changeView } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import { connect } from 'react-redux';
 

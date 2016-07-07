@@ -2,10 +2,12 @@
  * @overview Component for editing key/value pairs.
  */
 
-import { DataView } from './constants';
+import AddKeyRow from './AddKeyRow';
+import { DataView } from '../constants';
+import EditKeyRow from './EditKeyRow';
 import Radium from 'radium';
 import React from 'react';
-import { changeView } from './redux/data';
+import { changeView } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
 
@@ -17,6 +19,10 @@ const DataProperties = React.createClass({
 
     // from redux dispatch
     onViewChange: React.PropTypes.func.isRequired
+  },
+
+  getValue(key) {
+    return String(JSON.parse(this.props.keyValueData[key]));
   },
 
   render() {
@@ -34,12 +40,11 @@ const DataProperties = React.createClass({
          &nbsp;&gt; Key/value pairs
         </h4>
 
-        {/* placeholder display of key-value pairs */}
         <table>
           <colgroup>
             <col width='200'/>
             <col width='200'/>
-            <col width='160'/>
+            <col width='162'/>
           </colgroup>
           <tbody>
             <tr>
@@ -48,21 +53,11 @@ const DataProperties = React.createClass({
               <th style={dataStyles.headerCell}></th>
             </tr>
 
-            <tr style={dataStyles.addRow}>
-              <td style={dataStyles.cell}>
-                <input style={dataStyles.input}></input>
-              </td>
-              <td style={dataStyles.cell}>
-                <input style={dataStyles.input}></input>
-              </td>
-              <td style={dataStyles.cell}>
-                <button className="btn btn-primary" style={dataStyles.button}>Add pair</button>
-              </td>
-            </tr>
+            <AddKeyRow/>
 
             {
               Object.keys(this.props.keyValueData).map(key => (
-                <EditKeyRow key={key} keyName={key} value={this.props.keyValueData[key]}/>
+                <EditKeyRow key={key} keyName={key} value={this.getValue(key)}/>
               ))
             }
           </tbody>
@@ -72,29 +67,9 @@ const DataProperties = React.createClass({
   }
 });
 
-const EditKeyRow = Radium(React.createClass({
-  propTypes: {
-    keyName: React.PropTypes.string.isRequired,
-    value: React.PropTypes.any.isRequired
-  },
-
-  render() {
-    return (
-      <tr style={dataStyles.editRow}>
-        <td style={dataStyles.cell}>{this.props.keyName}</td>
-        <td style={dataStyles.cell}>{this.props.value}</td>
-        <td style={dataStyles.cell}>
-          <button className="btn" style={dataStyles.editButton}>Edit</button>
-          <button className="btn btn-danger" style={dataStyles.button}>Delete</button>
-        </td>
-      </tr>
-    );
-  }
-}));
-
 export default connect(state => ({
   view: state.data.view,
-  keyValueData: state.data.keyValueData
+  keyValueData: state.data.keyValueData || {}
 }), dispatch => ({
   onViewChange(view) {
     dispatch(changeView(view));

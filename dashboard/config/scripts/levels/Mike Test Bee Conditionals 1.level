@@ -34,8 +34,7 @@
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":2},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"featureType\":0,\"value\":3,\"range\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "step_speed": "1",
     "markdown_instructions": "This cloud is blocking my view! \r\n\r\nCheck to see if there's a flower under the cloud, and only get nectar if there's a flower.   \r\nBe careful, it can change!",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

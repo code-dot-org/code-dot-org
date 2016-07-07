@@ -374,6 +374,7 @@ module.exports = function (grunt) {
         levelbuilder: './src/code-studio/levelbuilder.js',
         levelbuilder_markdown: './src/code-studio/levelbuilder_markdown.js',
         levelbuilder_studio: './src/code-studio/levelbuilder_studio.js',
+        levelbuilder_gamelab: './src/code-studio/levelbuilder_gamelab.js',
         districtDropdown: './src/code-studio/districtDropdown.js',
         'levels/contract_match': './src/code-studio/levels/contract_match.jsx',
         'levels/widget': './src/code-studio/levels/widget.js',

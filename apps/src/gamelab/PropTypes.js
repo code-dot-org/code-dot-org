@@ -36,7 +36,8 @@ const Vector2 = React.PropTypes.shape({
  *
  *  We serialize a smaller set of information {SerializedAnimationProps}.
  *
- *  We migrate if the old style gets loaded. See GameLab::init() for how this works.
+ *  We migrate if the old style gets loaded. See setInitialAnimationList() in
+ *  animationListModule.js for how this works.
  */
 
 /**
@@ -49,8 +50,10 @@ export const AnimationKey = React.PropTypes.string;
 /**
  * @typedef {Object} AnimationProps
  * @property {string} name
- * @property {string} sourceUrl - Remote location where the animation spritesheet
- *           is stored.  Should be replaced soon with more of a 'gallery' concept.
+ * @property {string} sourceUrl - If provided, points to an external spritesheet.
+ *           (From the animation library or some other outside source)
+ *           Otherwise this is a custom spritesheet stored via the animations API
+ *           and we look it up by key.
  * @property {Vector2} sourceSize
  * @property {Vector2} frameSize
  * @property {number} frameCount
@@ -108,6 +111,40 @@ function getSerializedAnimationProps(animation) {
     'version'
   ]);
 }
+
+/**
+ * @param {!SerializedAnimationList} serializedAnimationList
+ * @throws {Error} if the list is not in a valid format.
+ */
+export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList) {
+  if (!serializedAnimationList) {
+    throw new Error('Animation List may not be null');
+  }
+
+  const rootKeys = Object.keys(serializedAnimationList);
+  if (!serializedAnimationList.hasOwnProperty('orderedKeys') ||
+      !serializedAnimationList.hasOwnProperty('propsByKey') ||
+      rootKeys.length !== 2) {
+    throw new Error('Animation List must have two root properties: orderedKeys and propsByKey');
+  }
+
+  if (!Array.isArray(serializedAnimationList.orderedKeys)) {
+    throw new Error('Animation List orderedKeys should be an array');
+  }
+
+  serializedAnimationList.orderedKeys.forEach(key => {
+    if (!serializedAnimationList.propsByKey.hasOwnProperty(key)) {
+      throw new Error(`Animation List has a key ${key} but not associated props`);
+    }
+
+    ['name', 'sourceSize', 'frameSize', 'frameCount', 'frameRate'].forEach(prop => {
+      if (!serializedAnimationList.propsByKey[key].hasOwnProperty(prop)) {
+        throw new Error(`Animation ${key} is missing required property ${prop}`);
+      }
+    });
+  });
+}
+
 /**
  * @typedef {Object} AnimationList
  * @property {AnimationKey[]} orderedKeys - Animation keys in project order
