@@ -2,7 +2,7 @@
 @import "font";
 @import "mixins";
 
-.admin {
+.extraLinks {
   @include selectable;
   border: 2px solid $light_gray;
   padding: 10px;
