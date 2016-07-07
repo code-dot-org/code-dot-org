@@ -134,6 +134,13 @@ GameLab.prototype.init = function (config) {
   this.level = config.level;
 
   this.level.softButtons = this.level.softButtons || {};
+  if (this.level.startAnimations && this.level.startAnimations.length > 0) {
+    try {
+      this.startAnimations = JSON.parse(this.level.startAnimations);
+    } catch (err) {
+      console.error("Unable to parse default animation list", err);
+    }
+  }
 
   config.usesAssets = true;
 
@@ -146,6 +153,7 @@ GameLab.prototype.init = function (config) {
   });
 
   config.afterClearPuzzle = function () {
+    this.studioApp_.reduxStore.dispatch(setInitialAnimationList(this.startAnimations));
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -220,24 +228,8 @@ GameLab.prototype.init = function (config) {
   });
 
   // Push project-sourced animation metadata into store
-  if (typeof config.initialAnimationList !== 'undefined') {
-    let animationList = config.initialAnimationList;
-
-    // TODO: Tear out this migration when we don't think we need it anymore.
-    if (Array.isArray(animationList)) {
-      // We got old animation data that needs to be migrated.
-      animationList = {
-        orderedKeys: animationList.map(a => a.key),
-        propsByKey: animationList.reduce((memo, next) => {
-          memo[next.key] = next;
-          return memo;
-        }, {})
-      };
-    }
-
-    // Load initial animation information
-    this.studioApp_.reduxStore.dispatch(setInitialAnimationList(animationList));
-  }
+  const initialAnimationList = config.initialAnimationList || this.startAnimations;
+  this.studioApp_.reduxStore.dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((
     <Provider store={this.studioApp_.reduxStore}>

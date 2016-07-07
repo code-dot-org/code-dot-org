@@ -1,0 +1,5 @@
+name 'grade1_activity_whatDoesItDo'
+title 'What does it do'
+markdown <<MARKDOWN
+Students should make a prediction as to what is going to happen when the teacher does something.
+MARKDOWN

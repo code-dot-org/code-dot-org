@@ -9,7 +9,7 @@ right 'My understanding of these lessons has not changed'
 right 'I understand what these lessons are about less than I did before I started' 
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Unit 2 Overview > Checking in on Chunk 2
 

@@ -18,7 +18,7 @@ require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'
 
 SECONDS_PER_MSEC = 1000
-ONE_HOUR = 60 * 60 * SECONDS_PER_MSEC
+ONE_HOUR_MSEC = 60 * 60 * SECONDS_PER_MSEC
 
 EXCLUDED_BROWSERS = [
   'bingbot',
@@ -30,6 +30,7 @@ EXCLUDED_BROWSERS = [
   'IE 7.0',
   'IE 8.0',
   'IE 9.0',
+  'IE 10.0',
   'IE Mobile',
   'Other',
   'Slurp',
