@@ -3,10 +3,10 @@ require 'cdo/geocoder'
 require 'cdo/web_purify'
 
 USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
+ShareFailure = Struct.new(:type, :content)
 
 # Utilities for finding personally-identifiable and profane content in user
 # submitted programs.
-
 module ShareFiltering
   module FailureType
     EMAIL = 'email'
@@ -17,6 +17,9 @@ module ShareFiltering
 
   # Searches for a sharing failure given a program and locale.
   # Returns both the error type and the offending text snippet.
+  #
+  # May throw OpenURI::HTTPError, IO::EAGAINWaitReadable depending on
+  # service availability.
   def self.find_share_failure(program, locale)
     return nil unless program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
 
@@ -24,17 +27,14 @@ module ShareFiltering
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
 
     if email = RegexpUtils.find_potential_email(program_tags_removed)
-      return FailureType::EMAIL, email, nil
+      return ShareFailure.new(FailureType::EMAIL, email)
     elsif street_address = Geocoder.find_potential_street_address(program_tags_removed)
-      return FailureType::ADDRESS, street_address, nil
+      return ShareFailure.new(FailureType::ADDRESS, street_address)
     elsif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
-      return FailureType::PHONE, phone_number, nil
+      return ShareFailure.new(FailureType::PHONE, phone_number)
     elsif expletive = WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
-      return FailureType::PROFANITY, expletive, nil
+      return ShareFailure.new(FailureType::PROFANITY, expletive)
     end
-    return nil, nil
-  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
-    # If WebPurify fails, the program will be allowed
-    return nil, nil, share_checking_error
+    nil
   end
 end
