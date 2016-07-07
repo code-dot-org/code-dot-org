@@ -102,25 +102,25 @@ class ActivitiesController < ApplicationController
 
   def share_failure_for(failure_type, content)
     return nil unless failure_type
-    {
-        message: share_message_for(failure_type),
-        contents: content,
-        type: failure_type
-    }.reject{|k, _| failure_type == 'profanity' && k == :contents}
+    {}.tap do |failure|
+      failure[:message] = share_message_for(failure_type)
+      failure[:type] = failure_type
+      failure[:contents] = content unless failure_type == ShareFiltering::FailureType::PROFANITY
+    end
   end
 
   def share_message_for(failure_type)
     case failure_type
-      when 'email'
+      when ShareFiltering::FailureType::EMAIL
         t('share_code.email_not_allowed')
-      when 'address'
+      when ShareFiltering::FailureType::ADDRESS
         t('share_code.address_not_allowed')
-      when 'phone'
+      when ShareFiltering::FailureType::PHONE
         t('share_code.phone_number_not_allowed')
-      when 'profanity'
+      when ShareFiltering::FailureType::PROFANITY
         t('share_code.profanity_not_allowed')
       else
-        nil
+        raise ArgumentError.new("Unknown share failure type #{failure_type}")
     end
   end
 
