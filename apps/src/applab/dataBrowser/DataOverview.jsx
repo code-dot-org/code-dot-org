@@ -16,8 +16,8 @@ import { addTableName, changeView, deleteTableName } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
 
-const tableWidth = 400;
-const buttonColumnWidth = 90;
+const tableWidth = 500;
+const buttonColumnWidth = 175;
 
 const styles = {
   table: {

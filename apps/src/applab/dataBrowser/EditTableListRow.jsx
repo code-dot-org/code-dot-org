@@ -1,4 +1,5 @@
 import { DataView } from '../constants';
+import DeleteElementButton from '../designElements/DeleteElementButton';
 import EditLink from './EditLink';
 import Radium from 'radium';
 import React from 'react';
@@ -25,14 +26,10 @@ const EditTableListRow = React.createClass({
         <td style={dataStyles.cell}>
           <EditLink name={this.props.tableName} onClick={this.handleEdit}/>
         </td>
-        <td style={dataStyles.cell}>
-          <button
-            className='btn btn-danger'
-            style={dataStyles.button}
-            onClick={this.handleDelete}
-          >
-            Delete
-          </button>
+        <td style={dataStyles.deleteTableCell}>
+          <DeleteElementButton
+            shouldConfirm={true}
+            handleDelete={this.handleDelete}/>
         </td>
       </tr>
     );

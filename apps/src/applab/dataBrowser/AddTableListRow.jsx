@@ -3,6 +3,12 @@ import React from 'react';
 import msg from '../../locale';
 import * as dataStyles from './dataStyles';
 
+const styles = {
+  right: {
+    float: 'right'
+  }
+};
+
 const AddTableListRow = React.createClass({
   propTypes: {
     onTableAdd: React.PropTypes.func.isRequired
@@ -38,7 +44,7 @@ const AddTableListRow = React.createClass({
         <td style={dataStyles.cell}>
           <button
             className='btn btn-primary'
-            style={dataStyles.button}
+            style={[dataStyles.button, styles.right]}
             onClick={this.handleAdd}
           >
             Add

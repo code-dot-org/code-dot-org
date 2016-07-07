@@ -7,9 +7,6 @@ var styles = {
   right: {
     float: 'right'
   },
-  confirming: {
-    marginLeft: 20
-  },
   red: {
     backgroundColor: color.red,
     color: color.white
