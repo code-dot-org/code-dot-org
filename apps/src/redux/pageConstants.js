@@ -17,6 +17,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'isSubmitted',
   'isViewDataButtonHidden',
   'instructionsInTopPane',
+  'noInstructionsWhenCollapsed',
   'puzzleNumber',
   'stageTotal',
   'showDebugButtons',

@@ -1595,9 +1595,10 @@ StudioApp.prototype.displayFeedback = function (options) {
 *     this.TestResults).
 */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
-  // If instructions in top pane are enabled, we only use dialogs for
-  // success feedback.
-  if (this.reduxStore.getState().pageConstants.instructionsInTopPane) {
+  // If instructions in top pane are enabled and we show instructions
+  // when collapsed, we only use dialogs for success feedback.
+  const constants = this.reduxStore.getState().pageConstants;
+  if (constants.instructionsInTopPane && !constants.noInstructionsWhenCollapsed) {
     return this.feedback_.canContinueToNextLevel(options.feedbackType);
   }
   return true;
@@ -2885,6 +2886,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
     instructionsInTopPane: !!config.showInstructionsInTopPane,
+    noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
     hasContainedLevels: config.hasContainedLevels,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
