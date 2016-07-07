@@ -932,6 +932,40 @@ class UserTest < ActiveSupport::TestCase
     track_progress(student, script_level, 100, [create(:user).id])
   end
 
+  test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
+    script_level = create :script_level
+    student = create :student
+    level_source = create :level_source, data: 'sample answer'
+
+    User.track_level_progress_sync(
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: 30,
+      submitted: false,
+      level_source_id: level_source.id,
+      pairing_user_ids: nil
+    )
+
+    ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
+    assert_equal 30, ul.best_result
+    assert_equal 'sample answer', ul.level_source.data
+
+    User.track_level_progress_sync(
+      user_id: create(:user).id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: 100,
+      submitted: false,
+      level_source_id: level_source.id,
+      pairing_user_ids: [student.id]
+    )
+
+    ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
+    assert_equal 100, ul.best_result
+    assert_equal 'sample answer', ul.level_source.data
+  end
+
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
     assert_equal 'm', User.normalize_gender('m')
