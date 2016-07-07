@@ -10,7 +10,7 @@ const ARROW_BUTTON_HEIGHT = 44; // originally from common.scss .arrow-text rule
 const ARROW_BUTTON_PADDING = 10; // originally from common.scss .arrow-left .arrow-text rule
 const style = {
   base: {
-    borderWidth: 2,
+    borderWidth: 1,
     borderStyle: 'solid',
     minWidth: 100,
   },
@@ -81,8 +81,8 @@ const BUTTON_TYPES = {
   "default": {
     style: {
       backgroundColor: color.white,
-      borderColor: color.lightest_gray,
-      color: color.black,
+      borderColor: color.charcoal,
+      color: color.charcoal,
     },
   },
   cancel: {
@@ -129,7 +129,8 @@ const ArrowButton = Radium(function ArrowButton(props) {
   }
   return (
     <div style={[style.arrow.base,
-                 style.arrow[props.arrow]]}>
+                 style.arrow[props.arrow],
+                 props.style]}>
       <div style={[style.arrowHead.base,
                    style.arrowHead[props.arrow](config.style.backgroundColor)]}/>
       <BaseButton {...props} style={[
