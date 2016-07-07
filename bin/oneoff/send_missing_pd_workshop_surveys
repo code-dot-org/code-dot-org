@@ -3,9 +3,9 @@
 # This script updates the pd_enrollment survey_sent_at and survey_id fields for existing surveys
 # from before those fields existed, and sends missing pd_workshop survey emails that didn't go out.
 
+require_relative '../../dashboard/config/environment'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
-require_relative '../../../dashboard/config/environment'
 
 def main
   dashboard_message_id = DB[:poste_messages].where(name: 'dashboard').order(:id).last[:id]
@@ -24,8 +24,9 @@ def main
 
       if found_email
         puts "    Found email (#{found_email[:id]}) for enrollment #{enrollment.id}"
-        workshop_ids_missing_surveys.add(enrollment.workshop.id)
         enrollment.update!(survey_sent_at: found_email[:created_at])
+      else
+        workshop_ids_missing_surveys.add(enrollment.workshop.id)
       end
     end
   end
@@ -35,7 +36,7 @@ def main
     data = JSON.parse(survey[:data])
     enrollment_id = data['enrollment_id_i']
     puts "Survey response: #{survey[:id]}"
-    Pd::Enrollment.find(enrollment_id).update!(survey_id: survey[:id])
+    Pd::Enrollment.find(enrollment_id).update!(completed_survey_id: survey[:id])
   end
 
   # Finally, send missing emails after confirmation.
