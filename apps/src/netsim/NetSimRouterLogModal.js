@@ -205,7 +205,7 @@ NetSimRouterLogModal.prototype.render = function () {
   // Re-render entire log browser UI
   var renderedMarkup = $(markup({
     isAllRouterLogMode: this.isAllRouterLogMode_,
-    canToggleRouterLogMode: this.canToggleRouterLogMode_(),
+    canSetRouterLogMode: this.canSetRouterLogMode_(),
     currentTrafficFilter: this.currentTrafficFilter_,
     localAddress: this.localNode_ ? this.localNode_.getAddress() : undefined,
     sortBy: this.sortBy_,
@@ -214,8 +214,8 @@ NetSimRouterLogModal.prototype.render = function () {
   this.rootDiv_.html(renderedMarkup);
 
   // Add input handlers
-  this.getRouterLogToggleButton().one('click', () => {
-    this.toggleRouterLogMode_();
+  this.getRouterLogModeDropdown().one('change', (evt) => {
+    this.setRouterLogMode_(evt.target.value);
     this.render();
   });
 
@@ -452,7 +452,7 @@ NetSimRouterLogModal.prototype.hasLocalRouter_ = function () {
  * @returns {boolean}
  * @private
  */
-NetSimRouterLogModal.prototype.canToggleRouterLogMode_ = function () {
+NetSimRouterLogModal.prototype.canSetRouterLogMode_ = function () {
   if (this.isAllRouterLogMode_) {
     return this.hasLocalRouter_();
   } else {
@@ -461,16 +461,18 @@ NetSimRouterLogModal.prototype.canToggleRouterLogMode_ = function () {
 };
 
 /**
- * Toggles this.isAllRouterLogMode_ between `true` and `false`
+ * Changes the router log filtering mode
+ * @param {string} mode - either "all" or "mine"
  * @private
  */
-NetSimRouterLogModal.prototype.toggleRouterLogMode_ = function () {
-  this.isAllRouterLogMode_ = !this.isAllRouterLogMode_;
+NetSimRouterLogModal.prototype.setRouterLogMode_ = function (mode) {
+  this.isAllRouterLogMode_ = mode === 'all';
 };
 
 
 /**
  * Sets this.currentTrafficFilter_.
+ * @param {string} newMode - the new traffic filter mode
  * @private
  */
 NetSimRouterLogModal.prototype.setTrafficFilterMode_ = function (newMode) {
@@ -478,12 +480,12 @@ NetSimRouterLogModal.prototype.setTrafficFilterMode_ = function (newMode) {
 };
 
 /**
- * Finds the button used to toggle between router log modes
+ * Finds the dropdown used to change router log modes
  * @returns {jQuery}
  * @private
  */
-NetSimRouterLogModal.prototype.getRouterLogToggleButton = function () {
-  return this.rootDiv_.find('button#routerlog-toggle');
+NetSimRouterLogModal.prototype.getRouterLogModeDropdown = function () {
+  return this.rootDiv_.find('select#routerlog-mode');
 };
 
 /**

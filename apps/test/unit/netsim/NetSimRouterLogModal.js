@@ -62,12 +62,12 @@ describe("NetSimRouterLogModal", function () {
     });
 
     it("detects if it can switch between modes", function () {
-      assert.isFalse(modal.canToggleRouterLogMode_());
+      assert.isFalse(modal.canSetRouterLogMode_());
       modal.setRouter(router);
       levelConfig.connectedRouters = true;
-      assert.isTrue(modal.canToggleRouterLogMode_());
+      assert.isTrue(modal.canSetRouterLogMode_());
       levelConfig.connectedRouters = false;
-      assert.isFalse(modal.canToggleRouterLogMode_());
+      assert.isFalse(modal.canSetRouterLogMode_());
     });
 
   });
