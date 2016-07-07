@@ -63,6 +63,17 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
 };
 
 /**
+ * Deletes the key-value pair.
+ * @param {string} key
+ * @param {function ()} onSuccess
+ * @param {function (string)} onError
+ */
+FirebaseStorage.deleteKeyValue = function (key, onSuccess, onError) {
+  const keyRef = getKeysRef(Applab.channelId).child(key);
+  keyRef.set(null).then(onSuccess, onError);
+};
+
+/**
  * Reads the record to determine whether it exists.
  * @param {string} tableName
  * @param {string} recordId

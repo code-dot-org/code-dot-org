@@ -171,20 +171,17 @@ if (BUILD_STYLEGUIDE) {
   Lightbulb.styleGuideExamples = storybook => {
     return storybook
       .storiesOf('Lightbulb', module)
-      .addWithInfo(
-        'With default props',
-        '',
-        () => <Lightbulb/>
-      )
-      .addWithInfo(
-        'Unlit',
-        '',
-        () => <Lightbulb lit={false}/>
-      )
-      .addWithInfo(
-        'With a count',
-        '',
-        () => <Lightbulb count={10}/>
-      );
+      .addStoryTable([
+        {
+          name: 'With default props',
+          story: () => <Lightbulb />,
+        }, {
+          name: 'Unlit',
+          story: () => <Lightbulb lit={false}/>,
+        }, {
+          name: 'With a count',
+          story: () => <Lightbulb count={10}/>,
+        }
+      ]);
   };
 }

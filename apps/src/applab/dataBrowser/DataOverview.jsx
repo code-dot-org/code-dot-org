@@ -4,11 +4,11 @@
  * a new data table.
  */
 
-import { DataView } from './constants';
+import { DataView } from '../constants';
 import Radium from 'radium';
 import React from 'react';
-import msg from '../locale';
-import { changeView } from './redux/data';
+import msg from '../../locale';
+import { changeView } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
 
