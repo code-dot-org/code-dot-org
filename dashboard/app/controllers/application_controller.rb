@@ -153,7 +153,7 @@ class ApplicationController < ActionController::Base
     end
 
     if options[:share_failure]
-      response[:share_failure] = options[:share_failure]
+      response[:share_failure] = response_for_share_failure(options[:share_failure])
     end
 
     if HintViewRequest.enabled?
@@ -220,5 +220,31 @@ class ApplicationController < ActionController::Base
 
   def require_admin
     authorize! :read, :reports
+  end
+
+  private
+
+  def response_for_share_failure(share_failure)
+    return nil unless share_failure
+    {}.tap do |failure|
+      failure[:message] = share_failure_message(share_failure.type)
+      failure[:type] = share_failure.type
+      failure[:contents] = share_failure.content unless share_failure.type == ShareFiltering::FailureType::PROFANITY
+    end
+  end
+
+  def share_failure_message(failure_type)
+    case failure_type
+      when ShareFiltering::FailureType::EMAIL
+        t('share_code.email_not_allowed')
+      when ShareFiltering::FailureType::ADDRESS
+        t('share_code.address_not_allowed')
+      when ShareFiltering::FailureType::PHONE
+        t('share_code.phone_number_not_allowed')
+      when ShareFiltering::FailureType::PROFANITY
+        t('share_code.profanity_not_allowed')
+      else
+        raise ArgumentError.new("Unknown share failure type #{failure_type}")
+    end
   end
 end
