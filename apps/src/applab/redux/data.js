@@ -23,7 +23,6 @@ const DataState = Record({
 const initialState = new DataState();
 
 export default function (state = initialState, action) {
-  let map;
   switch (action.type) {
     case ADD_TABLE_NAME:
       return state.set('tableListMap', Object.assign({}, state.tableListMap, {
@@ -36,10 +35,11 @@ export default function (state = initialState, action) {
         state = state.set('tableData', {});
       }
       return state.set('view', action.view).set('tableName', action.tableName);
-    case DELETE_TABLE_NAME:
-      map = Object.assign({}, state.tableListMap);
+    case DELETE_TABLE_NAME: {
+      let map = Object.assign({}, state.tableListMap);
       delete map[action.tableName];
       return state.set('tableListMap', map);
+    }
     case UPDATE_KEY_VALUE_DATA:
       return state.set('keyValueData', action.keyValueData);
     case UPDATE_TABLE_DATA:
