@@ -59,7 +59,8 @@ progress.renderStageProgress = function (stageData, progressData, scriptName, cu
 
   store.dispatch({
     type: 'MERGE_PROGRESS',
-    progress: _.mapValues(progressData.levels, level => level.submitted ? SUBMITTED_RESULT : level.result)
+    progress: _.mapValues(progressData.levels, level => level.submitted ? SUBMITTED_RESULT : level.result),
+    pairing: _.mapValues(progressData.levels, level => !!level.paired)
   });
 
   // Provied a function that can be called later to merge in progress now saved on the client.
@@ -107,7 +108,8 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     if (data.levels) {
       store.dispatch({
         type: 'MERGE_PROGRESS',
-        progress: _.mapValues(data.levels, level => level.submitted ? SUBMITTED_RESULT : level.result)
+        progress: _.mapValues(data.levels, level => level.submitted ? SUBMITTED_RESULT : level.result),
+        pairing: _.mapValues(data.levels, level => !!level.paired)
       });
     }
   });
@@ -153,16 +155,22 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
     if (action.type === 'MERGE_PROGRESS') {
       // TODO: _.mergeWith after upgrading to Lodash 4+
       let newProgress = {};
+      let newPairing = {};
       Object.keys(Object.assign({}, state.progress, action.progress)).forEach(key => {
         newProgress[key] = clientState.mergeActivityResult(state.progress[key], action.progress[key]);
+        newPairing[key] = state.pairing[key] || (action.pairing && action.pairing[key]);
       });
 
       return Object.assign({}, state, {
         progress: newProgress,
+        pairing: newPairing,
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || progress.bestResultLevelId(level.ids, newProgress);
 
-          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
+          return Object.assign({}, level, {
+            status: progress.activityCssClass(newProgress[id]),
+            paired: newPairing[id]
+          });
         })}))
       });
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {
@@ -180,6 +188,7 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
     progress: {},
+    pairing: {},
     focusAreaPositions: [],
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
     stages: scriptData.stages

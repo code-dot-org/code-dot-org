@@ -14,7 +14,7 @@
         - if current_user.can_pair?
           - if session[:pairings].present?
             = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-              %i.fa.fa-users
+              %i.fa.fa-user-plus
               = t('nav.user.pair_programming')
               .pairing_summary
                 #{t('nav.user.driver')}:
@@ -24,7 +24,7 @@
                 = session[:pairings].map{ |id| h(User.find(id).short_name) }.join(', ')
           - else
             = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-              %i.fa.fa-users
+              %i.fa.fa-user-plus
               = t('nav.user.pair_programming')
         = link_to t('nav.user.stats'), root_url
         - if current_user.can_edit_account?
