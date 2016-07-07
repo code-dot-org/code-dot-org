@@ -106,7 +106,7 @@
     "karma-webpack": "^1.7.0",
     "linklocal": "2.5.2",
     "load-grunt-tasks": "2.0.0",
-    "lodash": "2.4.2",
+    "lodash": "3.10.1",
     "loose-envify": "^1.1.0",
     "marked": "0.3.2",
     "messageformat": "0.2.2",
