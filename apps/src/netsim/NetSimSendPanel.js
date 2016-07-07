@@ -320,7 +320,7 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
  */
 NetSimSendPanel.prototype.resetPackets_ = function () {
   if (this.packets_.length > 0) {
-    this.packetsDiv_.children().slice(1).remove();
+    this.packets_.slice(1).forEach(packet => packet.getRoot().remove());
     this.packets_.length = Math.min(1, this.packets_.length);
     this.packets_[0].resetPacket();
   } else {
@@ -421,30 +421,30 @@ NetSimSendPanel.prototype.onSendEventTriggered_ = function (jQueryEvent) {
  * @private
  */
 NetSimSendPanel.prototype.sendOneBit_ = function () {
-  var myNode = this.netsim_.myNode;
+  let myNode = this.netsim_.myNode;
   if (!myNode) {
     throw new Error("Tried to set wire state when no connection is established.");
   }
 
-  // Find the first bit of the first packet. Disallow setting the wire
-  // if there is no first bit.
-  var nextBit = this.getNextBit_();
+  // Find the first bit of the first packet
+  // If there are no bits queued, no work is necessary.
+  const nextBit = this.getNextBit_();
   if (nextBit === undefined) {
-    throw new Error("Tried to set wire state when no bit is queued.");
-  } else {
-    this.disableEverything();
-    this.netsim_.animateSetWireState(nextBit);
-    myNode.setSimplexWireState(nextBit, function (err) {
-      if (err) {
-        logger.warn(err.message);
-        return;
-      }
-
-      this.consumeFirstBit();
-      this.enableEverything();
-      this.conditionallyToggleSetWireButton();
-    }.bind(this));
+    return;
   }
+
+  this.disableEverything();
+  this.netsim_.animateSetWireState(nextBit);
+  myNode.setSimplexWireState(nextBit, err => {
+    if (err) {
+      logger.warn(err.message);
+      return;
+    }
+
+    this.consumeFirstBit();
+    this.enableEverything();
+    this.conditionallyToggleSetWireButton();
+  });
 };
 
 /**

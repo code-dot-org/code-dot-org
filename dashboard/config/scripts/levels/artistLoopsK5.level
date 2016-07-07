@@ -76,7 +76,7 @@
     <recommended_blocks>
       <xml>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-6">???</title>
+          <title name="TIMES" config="2-6">3</title>
         </block>
       </xml>
     </recommended_blocks>
