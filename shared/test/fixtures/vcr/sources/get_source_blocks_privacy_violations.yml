@@ -1,0 +1,498 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/main.json&versions
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jul 2016 23:26:04 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/main.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>sources_test/1/1/main.json</Key><VersionId>iawMTcq7VqGbXySn_rpWND66gIiYieZG</VersionId><IsLatest>true</IsLatest><LastModified>2016-07-07T23:26:03.000Z</LastModified><ETag>&quot;5dc1140b693871c61090c819f1746608&quot;</ETag><Size>218</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Thu, 07 Jul 2016 23:26:03 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>sources_test/1/1/main.json</Key>
+            <VersionId>iawMTcq7VqGbXySn_rpWND66gIiYieZG</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - x/bLh/0HFo0y2nlicS1Z1g==
+      Content-Length:
+      - '214'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jul 2016 23:26:05 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Thu, 07 Jul 2016 23:26:04 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jul 2016 23:26:05 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>sources_test/1/1/replace_me.js</Key><LastModified>2016-04-13T21:57:36.000Z</LastModified><ETag>&quot;d4ca1ed7571e2e7b1f1c375bd50fa220&quot;</ETag><Size>9</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Thu, 07 Jul 2016 23:26:04 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {"source":"<xml><block type=\"when_run\" id=\"when_run\"><next><block type=\"studio_showTitleScreen\"><title name=\"TITLE\">800-555-1234</title><title name=\"TEXT\"></title></block></next></block></xml>","animations":{}}
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - hJ3mrziIIPQ/c6Gxj6gJcQ==
+      Content-Length:
+      - '221'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jul 2016 23:26:05 GMT
+      X-Amz-Version-Id:
+      - 0h2.Dcp7yShGiek_M9JAiQRFiNK.b0xM
+      Etag:
+      - '"849de6af388820f43f73a1b18fa80971"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 07 Jul 2016 23:26:05 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jul 2016 23:26:06 GMT
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - 0h2.Dcp7yShGiek_M9JAiQRFiNK.b0xM
+      Last-Modified:
+      - Thu, 07 Jul 2016 23:26:05 GMT
+      Etag:
+      - '"849de6af388820f43f73a1b18fa80971"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '221'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |
+        {"source":"<xml><block type=\"when_run\" id=\"when_run\"><next><block type=\"studio_showTitleScreen\"><title name=\"TITLE\">800-555-1234</title><title name=\"TEXT\"></title></block></next></block></xml>","animations":{}}
+    http_version: 
+  recorded_at: Thu, 07 Jul 2016 23:26:05 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=800-555-1234&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 07 Jul 2016 23:20:54 GMT
+      Expires:
+      - Fri, 08 Jul 2016 23:20:54 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '934'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - public, max-age=86400
+      Age:
+      - '311'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICAicmVzdWx0cyIgOiBbCiAgICAgIHsKICAgICAgICAgImFkZHJlc3Nf
+        Y29tcG9uZW50cyIgOiBbCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAg
+        ImxvbmdfbmFtZSIgOiAiMTIzNC4gU29rYWsiLAogICAgICAgICAgICAgICAi
+        c2hvcnRfbmFtZSIgOiAiMTIzNC4gU2suIiwKICAgICAgICAgICAgICAgInR5
+        cGVzIiA6IFsgInJvdXRlIiBdCiAgICAgICAgICAgIH0sCiAgICAgICAgICAg
+        IHsKICAgICAgICAgICAgICAgImxvbmdfbmFtZSIgOiAiTWVobWV0w6dpayBN
+        YWhhbGxlc2kiLAogICAgICAgICAgICAgICAic2hvcnRfbmFtZSIgOiAiTWVo
+        bWV0w6dpayIsCiAgICAgICAgICAgICAgICJ0eXBlcyIgOiBbICJhZG1pbmlz
+        dHJhdGl2ZV9hcmVhX2xldmVsXzQiLCAicG9saXRpY2FsIiBdCiAgICAgICAg
+        ICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgImxvbmdfbmFt
+        ZSIgOiAiTXVyYXRwYcWfYSIsCiAgICAgICAgICAgICAgICJzaG9ydF9uYW1l
+        IiA6ICJNdXJhdHBhxZ9hIiwKICAgICAgICAgICAgICAgInR5cGVzIiA6IFsg
+        ImFkbWluaXN0cmF0aXZlX2FyZWFfbGV2ZWxfMiIsICJwb2xpdGljYWwiIF0K
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAi
+        bG9uZ19uYW1lIiA6ICJBbnRhbHlhIiwKICAgICAgICAgICAgICAgInNob3J0
+        X25hbWUiIDogIkFudGFseWEiLAogICAgICAgICAgICAgICAidHlwZXMiIDog
+        WyAiYWRtaW5pc3RyYXRpdmVfYXJlYV9sZXZlbF8xIiwgInBvbGl0aWNhbCIg
+        XQogICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAg
+        ICJsb25nX25hbWUiIDogIlR1cmtleSIsCiAgICAgICAgICAgICAgICJzaG9y
+        dF9uYW1lIiA6ICJUUiIsCiAgICAgICAgICAgICAgICJ0eXBlcyIgOiBbICJj
+        b3VudHJ5IiwgInBvbGl0aWNhbCIgXQogICAgICAgICAgICB9LAogICAgICAg
+        ICAgICB7CiAgICAgICAgICAgICAgICJsb25nX25hbWUiIDogIjA3MzAwIiwK
+        ICAgICAgICAgICAgICAgInNob3J0X25hbWUiIDogIjA3MzAwIiwKICAgICAg
+        ICAgICAgICAgInR5cGVzIiA6IFsgInBvc3RhbF9jb2RlIiBdCiAgICAgICAg
+        ICAgIH0KICAgICAgICAgXSwKICAgICAgICAgImZvcm1hdHRlZF9hZGRyZXNz
+        IiA6ICJNZWhtZXTDp2lrLCAxMjM0LiBTay4sIDA3MzAwIE11cmF0cGHFn2Ev
+        QW50YWx5YSwgVHVya2V5IiwKICAgICAgICAgImdlb21ldHJ5IiA6IHsKICAg
+        ICAgICAgICAgImJvdW5kcyIgOiB7CiAgICAgICAgICAgICAgICJub3J0aGVh
+        c3QiIDogewogICAgICAgICAgICAgICAgICAibGF0IiA6IDM2Ljg5MzY5MiwK
+        ICAgICAgICAgICAgICAgICAgImxuZyIgOiAzMC43NDk2MTk5CiAgICAgICAg
+        ICAgICAgIH0sCiAgICAgICAgICAgICAgICJzb3V0aHdlc3QiIDogewogICAg
+        ICAgICAgICAgICAgICAibGF0IiA6IDM2Ljg5MTgwMSwKICAgICAgICAgICAg
+        ICAgICAgImxuZyIgOiAzMC43NDkwMzA4CiAgICAgICAgICAgICAgIH0KICAg
+        ICAgICAgICAgfSwKICAgICAgICAgICAgImxvY2F0aW9uIiA6IHsKICAgICAg
+        ICAgICAgICAgImxhdCIgOiAzNi44OTI4NDMwMDAwMDAwMSwKICAgICAgICAg
+        ICAgICAgImxuZyIgOiAzMC43NDkwODkzCiAgICAgICAgICAgIH0sCiAgICAg
+        ICAgICAgICJsb2NhdGlvbl90eXBlIiA6ICJHRU9NRVRSSUNfQ0VOVEVSIiwK
+        ICAgICAgICAgICAgInZpZXdwb3J0IiA6IHsKICAgICAgICAgICAgICAgIm5v
+        cnRoZWFzdCIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogMzYuODk0
+        MDk1NDgwMjkxNSwKICAgICAgICAgICAgICAgICAgImxuZyIgOiAzMC43NTA2
+        NzQzMzAyOTE1CiAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICJz
+        b3V0aHdlc3QiIDogewogICAgICAgICAgICAgICAgICAibGF0IiA6IDM2Ljg5
+        MTM5NzUxOTcwODUxLAogICAgICAgICAgICAgICAgICAibG5nIiA6IDMwLjc0
+        Nzk3NjM2OTcwODUKICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAg
+        ICAgICAgIH0sCiAgICAgICAgICJwYXJ0aWFsX21hdGNoIiA6IHRydWUsCiAg
+        ICAgICAgICJwbGFjZV9pZCIgOiAiQ2hJSmhTUkt2eVNGd3hRUjM4ZlBxRTlt
+        TEFNIiwKICAgICAgICAgInR5cGVzIiA6IFsgInJvdXRlIiBdCiAgICAgIH0s
+        CiAgICAgIHsKICAgICAgICAgImFkZHJlc3NfY29tcG9uZW50cyIgOiBbCiAg
+        ICAgICAgICAgIHsKICAgICAgICAgICAgICAgImxvbmdfbmFtZSIgOiAiODAw
+        LiBTb2thayIsCiAgICAgICAgICAgICAgICJzaG9ydF9uYW1lIiA6ICI4MDAu
+        IFNrLiIsCiAgICAgICAgICAgICAgICJ0eXBlcyIgOiBbICJyb3V0ZSIgXQog
+        ICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICJs
+        b25nX25hbWUiIDogIsSwbGtlciBNYWhhbGxlc2kiLAogICAgICAgICAgICAg
+        ICAic2hvcnRfbmFtZSIgOiAixLBsa2VyIiwKICAgICAgICAgICAgICAgInR5
+        cGVzIiA6IFsgImFkbWluaXN0cmF0aXZlX2FyZWFfbGV2ZWxfNCIsICJwb2xp
+        dGljYWwiIF0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAg
+        ICAgICAgICAibG9uZ19uYW1lIiA6ICLDh2Fua2F5YSIsCiAgICAgICAgICAg
+        ICAgICJzaG9ydF9uYW1lIiA6ICLDh2Fua2F5YSIsCiAgICAgICAgICAgICAg
+        ICJ0eXBlcyIgOiBbICJhZG1pbmlzdHJhdGl2ZV9hcmVhX2xldmVsXzIiLCAi
+        cG9saXRpY2FsIiBdCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAg
+        ICAgICAgICAgICAgImxvbmdfbmFtZSIgOiAiQW5rYXJhIiwKICAgICAgICAg
+        ICAgICAgInNob3J0X25hbWUiIDogIkFua2FyYSIsCiAgICAgICAgICAgICAg
+        ICJ0eXBlcyIgOiBbICJhZG1pbmlzdHJhdGl2ZV9hcmVhX2xldmVsXzEiLCAi
+        cG9saXRpY2FsIiBdCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAg
+        ICAgICAgICAgICAgImxvbmdfbmFtZSIgOiAiVHVya2V5IiwKICAgICAgICAg
+        ICAgICAgInNob3J0X25hbWUiIDogIlRSIiwKICAgICAgICAgICAgICAgInR5
+        cGVzIiA6IFsgImNvdW50cnkiLCAicG9saXRpY2FsIiBdCiAgICAgICAgICAg
+        IH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgImxvbmdfbmFtZSIg
+        OiAiMDY0NTAiLAogICAgICAgICAgICAgICAic2hvcnRfbmFtZSIgOiAiMDY0
+        NTAiLAogICAgICAgICAgICAgICAidHlwZXMiIDogWyAicG9zdGFsX2NvZGUi
+        IF0KICAgICAgICAgICAgfQogICAgICAgICBdLAogICAgICAgICAiZm9ybWF0
+        dGVkX2FkZHJlc3MiIDogIsSwbGtlciwgODAwLiBTay4sIDA2NDUwIMOHYW5r
+        YXlhL0Fua2FyYSwgVHVya2V5IiwKICAgICAgICAgImdlb21ldHJ5IiA6IHsK
+        ICAgICAgICAgICAgImJvdW5kcyIgOiB7CiAgICAgICAgICAgICAgICJub3J0
+        aGVhc3QiIDogewogICAgICAgICAgICAgICAgICAibGF0IiA6IDM5Ljg2MzMy
+        NDg5OTk5OTk5LAogICAgICAgICAgICAgICAgICAibG5nIiA6IDMyLjg0MjU1
+        NDgKICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgInNvdXRod2Vz
+        dCIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogMzkuODU5NTI3NiwK
+        ICAgICAgICAgICAgICAgICAgImxuZyIgOiAzMi44MzYxNjg2CiAgICAgICAg
+        ICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgImxvY2F0aW9u
+        IiA6IHsKICAgICAgICAgICAgICAgImxhdCIgOiAzOS44NjA3MzMzLAogICAg
+        ICAgICAgICAgICAibG5nIiA6IDMyLjgzOTcwODQKICAgICAgICAgICAgfSwK
+        ICAgICAgICAgICAgImxvY2F0aW9uX3R5cGUiIDogIkdFT01FVFJJQ19DRU5U
+        RVIiLAogICAgICAgICAgICAidmlld3BvcnQiIDogewogICAgICAgICAgICAg
+        ICAibm9ydGhlYXN0IiA6IHsKICAgICAgICAgICAgICAgICAgImxhdCIgOiAz
+        OS44NjMzMjQ4OTk5OTk5OSwKICAgICAgICAgICAgICAgICAgImxuZyIgOiAz
+        Mi44NDI1NTQ4CiAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICJz
+        b3V0aHdlc3QiIDogewogICAgICAgICAgICAgICAgICAibGF0IiA6IDM5Ljg1
+        OTUyNzYsCiAgICAgICAgICAgICAgICAgICJsbmciIDogMzIuODM2MTY4Ngog
+        ICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgfSwKICAg
+        ICAgICAgInBhcnRpYWxfbWF0Y2giIDogdHJ1ZSwKICAgICAgICAgInBsYWNl
+        X2lkIiA6ICJDaElKUzFWX2lMQkYweFFScF9ibWJGOXNwdGMiLAogICAgICAg
+        ICAidHlwZXMiIDogWyAicm91dGUiIF0KICAgICAgfSwKICAgICAgewogICAg
+        ICAgICAiYWRkcmVzc19jb21wb25lbnRzIiA6IFsKICAgICAgICAgICAgewog
+        ICAgICAgICAgICAgICAibG9uZ19uYW1lIiA6ICIxNTEzLiBTb2thayIsCiAg
+        ICAgICAgICAgICAgICJzaG9ydF9uYW1lIiA6ICIxNTEzLiBTay4iLAogICAg
+        ICAgICAgICAgICAidHlwZXMiIDogWyAicm91dGUiIF0KICAgICAgICAgICAg
+        fSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAibG9uZ19uYW1lIiA6
+        ICLEsHZlZGlrIE9yZ2FuaXplIFNhbmF5aSBCw7ZsZ2VzaSIsCiAgICAgICAg
+        ICAgICAgICJzaG9ydF9uYW1lIiA6ICLEsHZlZGlrIE9TQiIsCiAgICAgICAg
+        ICAgICAgICJ0eXBlcyIgOiBbICJhZG1pbmlzdHJhdGl2ZV9hcmVhX2xldmVs
+        XzMiLCAicG9saXRpY2FsIiBdCiAgICAgICAgICAgIH0sCiAgICAgICAgICAg
+        IHsKICAgICAgICAgICAgICAgImxvbmdfbmFtZSIgOiAiWWVuaW1haGFsbGUi
+        LAogICAgICAgICAgICAgICAic2hvcnRfbmFtZSIgOiAiWWVuaW1haGFsbGUi
+        LAogICAgICAgICAgICAgICAidHlwZXMiIDogWyAiYWRtaW5pc3RyYXRpdmVf
+        YXJlYV9sZXZlbF8yIiwgInBvbGl0aWNhbCIgXQogICAgICAgICAgICB9LAog
+        ICAgICAgICAgICB7CiAgICAgICAgICAgICAgICJsb25nX25hbWUiIDogIkFu
+        a2FyYSIsCiAgICAgICAgICAgICAgICJzaG9ydF9uYW1lIiA6ICJBbmthcmEi
+        LAogICAgICAgICAgICAgICAidHlwZXMiIDogWyAiYWRtaW5pc3RyYXRpdmVf
+        YXJlYV9sZXZlbF8xIiwgInBvbGl0aWNhbCIgXQogICAgICAgICAgICB9LAog
+        ICAgICAgICAgICB7CiAgICAgICAgICAgICAgICJsb25nX25hbWUiIDogIlR1
+        cmtleSIsCiAgICAgICAgICAgICAgICJzaG9ydF9uYW1lIiA6ICJUUiIsCiAg
+        ICAgICAgICAgICAgICJ0eXBlcyIgOiBbICJjb3VudHJ5IiwgInBvbGl0aWNh
+        bCIgXQogICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAg
+        ICAgICJsb25nX25hbWUiIDogIjA2Mzc4IiwKICAgICAgICAgICAgICAgInNo
+        b3J0X25hbWUiIDogIjA2Mzc4IiwKICAgICAgICAgICAgICAgInR5cGVzIiA6
+        IFsgInBvc3RhbF9jb2RlIiBdCiAgICAgICAgICAgIH0KICAgICAgICAgXSwK
+        ICAgICAgICAgImZvcm1hdHRlZF9hZGRyZXNzIiA6ICIxNTEzLiBTay4sIDA2
+        Mzc4IMSwdmVkaWsgT1NCL1llbmltYWhhbGxlL0Fua2FyYSwgVHVya2V5IiwK
+        ICAgICAgICAgImdlb21ldHJ5IiA6IHsKICAgICAgICAgICAgImJvdW5kcyIg
+        OiB7CiAgICAgICAgICAgICAgICJub3J0aGVhc3QiIDogewogICAgICAgICAg
+        ICAgICAgICAibGF0IiA6IDM5Ljk5NzcwMDgsCiAgICAgICAgICAgICAgICAg
+        ICJsbmciIDogMzIuNzY2MjU3CiAgICAgICAgICAgICAgIH0sCiAgICAgICAg
+        ICAgICAgICJzb3V0aHdlc3QiIDogewogICAgICAgICAgICAgICAgICAibGF0
+        IiA6IDM5Ljk5NTk1NywKICAgICAgICAgICAgICAgICAgImxuZyIgOiAzMi43
+        NjQzNDU0CiAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAg
+        ICAgICAgImxvY2F0aW9uIiA6IHsKICAgICAgICAgICAgICAgImxhdCIgOiAz
+        OS45OTY4OTUzLAogICAgICAgICAgICAgICAibG5nIiA6IDMyLjc2NTI3NjIK
+        ICAgICAgICAgICAgfSwKICAgICAgICAgICAgImxvY2F0aW9uX3R5cGUiIDog
+        IkdFT01FVFJJQ19DRU5URVIiLAogICAgICAgICAgICAidmlld3BvcnQiIDog
+        ewogICAgICAgICAgICAgICAibm9ydGhlYXN0IiA6IHsKICAgICAgICAgICAg
+        ICAgICAgImxhdCIgOiAzOS45OTgxNzc4ODAyOTE1LAogICAgICAgICAgICAg
+        ICAgICAibG5nIiA6IDMyLjc2NjY1MDE4MDI5MTUKICAgICAgICAgICAgICAg
+        fSwKICAgICAgICAgICAgICAgInNvdXRod2VzdCIgOiB7CiAgICAgICAgICAg
+        ICAgICAgICJsYXQiIDogMzkuOTk1NDc5OTE5NzA4NSwKICAgICAgICAgICAg
+        ICAgICAgImxuZyIgOiAzMi43NjM5NTIyMTk3MDg1CiAgICAgICAgICAgICAg
+        IH0KICAgICAgICAgICAgfQogICAgICAgICB9LAogICAgICAgICAicGFydGlh
+        bF9tYXRjaCIgOiB0cnVlLAogICAgICAgICAicGxhY2VfaWQiIDogIkNoSUpr
+        enpXYmMxTDB4UVJNY0J2WlJBZlY2USIsCiAgICAgICAgICJ0eXBlcyIgOiBb
+        ICJyb3V0ZSIgXQogICAgICB9CiAgIF0sCiAgICJzdGF0dXMiIDogIk9LIgp9
+        Cg==
+    http_version: 
+  recorded_at: Thu, 07 Jul 2016 23:26:06 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jul 2016 23:26:07 GMT
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - 0h2.Dcp7yShGiek_M9JAiQRFiNK.b0xM
+      Last-Modified:
+      - Thu, 07 Jul 2016 23:26:05 GMT
+      Etag:
+      - '"849de6af388820f43f73a1b18fa80971"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '221'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |
+        {"source":"<xml><block type=\"when_run\" id=\"when_run\"><next><block type=\"studio_showTitleScreen\"><title name=\"TITLE\">800-555-1234</title><title name=\"TEXT\"></title></block></next></block></xml>","animations":{}}
+    http_version: 
+  recorded_at: Thu, 07 Jul 2016 23:26:06 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jul 2016 23:26:07 GMT
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - 0h2.Dcp7yShGiek_M9JAiQRFiNK.b0xM
+      Last-Modified:
+      - Thu, 07 Jul 2016 23:26:05 GMT
+      Etag:
+      - '"849de6af388820f43f73a1b18fa80971"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '221'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |
+        {"source":"<xml><block type=\"when_run\" id=\"when_run\"><next><block type=\"studio_showTitleScreen\"><title name=\"TITLE\">800-555-1234</title><title name=\"TEXT\"></title></block></next></block></xml>","animations":{}}
+    http_version: 
+  recorded_at: Thu, 07 Jul 2016 23:26:06 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jul 2016 23:26:08 GMT
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - 0h2.Dcp7yShGiek_M9JAiQRFiNK.b0xM
+      Last-Modified:
+      - Thu, 07 Jul 2016 23:26:05 GMT
+      Etag:
+      - '"849de6af388820f43f73a1b18fa80971"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '221'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |
+        {"source":"<xml><block type=\"when_run\" id=\"when_run\"><next><block type=\"studio_showTitleScreen\"><title name=\"TITLE\">800-555-1234</title><title name=\"TEXT\"></title></block></next></block></xml>","animations":{}}
+    http_version: 
+  recorded_at: Thu, 07 Jul 2016 23:26:07 GMT
+- request:
+    method: delete
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Thu, 07 Jul 2016 23:26:08 GMT
+      X-Amz-Version-Id:
+      - fOxLTxH5oXnzJqBDeF5kCE.JtTdHt3ai
+      X-Amz-Delete-Marker:
+      - 'true'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 07 Jul 2016 23:26:07 GMT
+recorded_with: VCR 3.0.0
