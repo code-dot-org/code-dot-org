@@ -16,7 +16,9 @@ const EditTableListRow = React.createClass({
   },
 
   handleDelete() {
-    this.props.onTableDelete(this.props.tableName);
+    if (confirm('Do you really want to delete this entire table? You cannot undo this action.')) {
+      this.props.onTableDelete(this.props.tableName);
+    }
   },
 
   render() {
