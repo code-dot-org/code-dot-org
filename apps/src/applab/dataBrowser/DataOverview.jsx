@@ -4,7 +4,10 @@
  * a new data table.
  */
 
+import AddTableListRow from './AddTableListRow';
 import { DataView } from '../constants';
+import EditLink from './EditLink';
+import EditTableListRow from './EditTableListRow';
 import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
@@ -23,102 +26,6 @@ const styles = {
     marginBottom: 10
   }
 };
-
-const EditLink = React.createClass({
-  propTypes: {
-    name: React.PropTypes.string.isRequired,
-    onClick: React.PropTypes.func.isRequired
-  },
-  render() {
-    return (
-      <a style={dataStyles.link} href='#' onClick={this.props.onClick}>
-        {this.props.name}
-      </a>
-    );
-  }
-});
-
-const EditTableRow = React.createClass({
-  propTypes: {
-    onTableDelete: React.PropTypes.func.isRequired,
-    onViewChange: React.PropTypes.func.isRequired,
-    tableName: React.PropTypes.string.isRequired
-  },
-
-  handleEdit() {
-    this.props.onViewChange(DataView.TABLE, this.props.tableName);
-  },
-
-  handleDelete() {
-    FirebaseStorage.deleteTable(this.props.tableName);
-    this.props.onTableDelete(this.props.tableName);
-  },
-
-  render() {
-    return (
-      <tr style={dataStyles.editRow}>
-        <td style={dataStyles.cell}>
-          <EditLink name={this.props.tableName} onClick={this.handleEdit}/>
-        </td>
-        <td style={dataStyles.cell}>
-          <button
-              className='btn btn-danger'
-              style={dataStyles.button}
-              onClick={this.handleDelete}
-          >
-            Delete
-          </button>
-        </td>
-      </tr>
-    );
-  }
-});
-
-const AddTableRow = React.createClass({
-  propTypes: {
-    onTableAdd: React.PropTypes.func.isRequired
-  },
-
-  getInitialState() {
-    return {
-      newTableName: ''
-    };
-  },
-
-  handleAdd() {
-    if (this.state.newTableName) {
-      this.props.onTableAdd(this.state.newTableName);
-      this.setState(this.getInitialState());
-    }
-  },
-
-  handleChange(event) {
-    this.setState({newTableName: event.target.value});
-  },
-
-  render() {
-    return (
-      <tr style={dataStyles.addRow}>
-        <td style={dataStyles.cell}>
-          <input
-              style={dataStyles.input}
-              placeholder={msg.dataTableNamePlaceholder()}
-              value={this.state.newTableName}
-              onChange={this.handleChange}/>
-        </td>
-        <td style={dataStyles.cell}>
-          <button
-              className='btn btn-primary'
-              style={dataStyles.button}
-              onClick={this.handleAdd}
-          >
-            Add
-          </button>
-        </td>
-      </tr>
-    );
-  }
-});
 
 const DataOverview = React.createClass({
   propTypes: {
@@ -158,14 +65,14 @@ const DataOverview = React.createClass({
           <tbody>
           {
             Object.keys(this.props.tableListMap).map(tableName => (
-              <EditTableRow
+              <EditTableListRow
                 key={tableName}
                 tableName={tableName}
                 onViewChange={this.props.onViewChange}
                 onTableDelete={this.props.onTableDelete}/>
             ))
           }
-          <AddTableRow onTableAdd={this.props.onTableAdd}/>
+          <AddTableListRow onTableAdd={this.props.onTableAdd}/>
           </tbody>
         </table>
       </div>
@@ -195,5 +102,7 @@ export default connect(state => ({
     // not exist in the database. This could happen when deleting a table after adding it
     // without adding any records to it.
     dispatch(deleteTableName(tableName));
+
+    FirebaseStorage.deleteTable(tableName);
   }
 }))(Radium(DataOverview));
