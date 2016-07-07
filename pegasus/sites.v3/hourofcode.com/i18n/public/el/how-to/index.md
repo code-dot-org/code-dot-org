@@ -131,8 +131,10 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   * Ελέγξτε τις [βέλτιστες πρακτικές](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) από παλαιότερους διοργανωτές ώρας του Κώδικα. 
   * Παρακολουθήστε την βιντεοσκόπηση του [webinar "Οδηγός Εκπαιδευτικών για την Ώρα του Κώδικα"](https://youtu.be/EJeMeSW2-Mw).
   * [Συμμετοχή σε ζωντανές "Ερωτοαπαντήσεις"](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) με τον ιδρυτή μας, Hadi Partovi, για να προετοιμαστείτε για την Ώρα του Κώδικα.
-  * Επισκεφτείτε το φόρουμ για Εκπαιδευτικούς για συμβουλές και υποστήριξη. <% if @country == 'us' %>
-  * Δείτε την [ώρα του κώδικα FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+  * Επισκεφτείτε το φόρουμ για Εκπαιδευτικούς για συμβουλές και υποστήριξη.
+  <% if @country == 'us' %>
+  * Δείτε την [ώρα του κώδικα FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+  <% end %>
 
 ## Τι γίνεται μετά την Ώρα του Κώδικα;
 
