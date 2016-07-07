@@ -846,16 +846,18 @@ function setupReduxSubscribers(store) {
     }
   });
 
-  // Initialize redux's list of tables from firebase, and keep it up to date as
-  // new tables are added and removed. This strategy reads all existing table
-  // data only once.
-  const tablesRef = getDatabase(Applab.channelId).child('storage/tables');
-  tablesRef.on('child_added', snapshot => {
-    store.dispatch(addTableName(snapshot.key()));
-  });
-  tablesRef.on('child_removed', snapshot => {
-    store.dispatch(deleteTableName(snapshot.key()));
-  });
+  if (store.getState().pageConstants.hasDataMode) {
+    // Initialize redux's list of tables from firebase, and keep it up to date as
+    // new tables are added and removed. This strategy reads all existing table
+    // data only once.
+    const tablesRef = getDatabase(Applab.channelId).child('storage/tables');
+    tablesRef.on('child_added', snapshot => {
+      store.dispatch(addTableName(snapshot.key()));
+    });
+    tablesRef.on('child_removed', snapshot => {
+      store.dispatch(deleteTableName(snapshot.key()));
+    });
+  }
 }
 
 Applab.onIsRunningChange = function () {
