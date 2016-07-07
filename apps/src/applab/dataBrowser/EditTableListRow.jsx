@@ -1,5 +1,6 @@
 import { DataView } from '../constants';
 import EditLink from './EditLink';
+import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
 import * as dataStyles from './dataStyles';
@@ -18,6 +19,7 @@ const EditTableListRow = React.createClass({
   handleDelete() {
     if (confirm('Do you really want to delete this entire table? You cannot undo this action.')) {
       this.props.onTableDelete(this.props.tableName);
+      FirebaseStorage.deleteTable(this.props.tableName);
     }
   },
 

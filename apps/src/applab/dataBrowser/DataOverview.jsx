@@ -8,7 +8,6 @@ import AddTableListRow from './AddTableListRow';
 import { DataView } from '../constants';
 import EditLink from './EditLink';
 import EditTableListRow from './EditTableListRow';
-import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
 import msg from '../../locale';
@@ -102,7 +101,5 @@ export default connect(state => ({
     // not exist in the database. This could happen when deleting a table after adding it
     // without adding any records to it.
     dispatch(deleteTableName(tableName));
-
-    FirebaseStorage.deleteTable(tableName);
   }
 }))(Radium(DataOverview));
