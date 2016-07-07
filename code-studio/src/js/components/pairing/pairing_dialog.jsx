@@ -33,8 +33,4 @@ var PairingDialog = React.createClass({
     );
   }
 });
-
 export default PairingDialog;
-
-window.dashboard = window.dashboard || {};
-window.dashboard.PairingDialog = PairingDialog;

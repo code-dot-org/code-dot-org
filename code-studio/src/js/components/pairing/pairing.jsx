@@ -21,7 +21,7 @@ const Pairing = React.createClass({
     };
   },
 
-  componentDidMount() {
+  componentWillMount() {
     $.ajax({
       url: this.props.source,
       method: 'GET',
@@ -55,18 +55,15 @@ const Pairing = React.createClass({
   },
 
   handleAddPartners(studentIds) {
-    var pairings = [];
-    this.selectedSection().students.forEach(student => {
-      if (studentIds.indexOf(student.id) !== -1) {
-        pairings.push(student);
-      }
-    });
+    var pairings = this.selectedSection().students.filter(
+      student => studentIds.indexOf(student.id) !== -1
+    );
 
     this.props.handleClose && this.props.handleClose();
 
     $.ajax({
       url: this.props.source,
-      data: JSON.stringify({pairings: pairings}),
+      data: JSON.stringify({pairings}),
       contentType: 'application/json; charset=utf-8',
       method: 'PUT',
       dataType: 'json',
