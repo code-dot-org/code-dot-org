@@ -72,7 +72,9 @@ const DataOverview = React.createClass({
                   onTableDelete={this.props.onTableDelete}/>
             ))
           }
-          <AddTableListRow onTableAdd={this.props.onTableAdd}/>
+          <AddTableListRow
+              onTableAdd={this.props.onTableAdd}
+              onViewChange={this.props.onViewChange}/>
           </tbody>
         </table>
       </div>
@@ -93,8 +95,6 @@ export default connect(state => ({
     // addTableName() is idempotent, so we won't double-count the table name later
     // when the the first record is added to it.
     dispatch(addTableName(tableName));
-
-    dispatch(changeView(DataView.TABLE, tableName));
   },
   onTableDelete(tableName) {
     // Explicitly remove the table from the model to make sure it disappears from the
