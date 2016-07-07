@@ -1,6 +1,6 @@
 ---
 
-Tytuł: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 
@@ -44,7 +44,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 **Pokaż inspirujący film:**
 
   * Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [Wideo inaugurujące Godzinę Kodowania 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) lub < % if @country == 'uk' %> [Wideo Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) < % else %> [Wideo Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Wideo inaugurujące Godzinę Kodowania 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) lub <% if @country == 'uk' %> [Wideo Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Wideo Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Prezydent Obama zachęcający wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Znajdź więcej inspirujących filmów [tutaj](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

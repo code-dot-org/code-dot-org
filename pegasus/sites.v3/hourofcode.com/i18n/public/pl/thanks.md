@@ -17,7 +17,7 @@
     "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
     "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
     "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  ---
+---
 
 <%
     facebook = {:u=>"http://#{request.host}/us"}

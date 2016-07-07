@@ -153,7 +153,7 @@ Visite [ la página de envío de actividades de Hora de Código ™ ](https://go
           * Compartir en las redes sociales que completaron la Hora del Código
           * Recibe un certificado que dice que completaron la Hora del Código
           * Ver tablas con los países/ciudades que tienen las mayores tasas de participación en las actividades de la Hora del Código
-          * Para los usuarios que pasan una hora en tu actividad y no la completan, favor incluye un botón en tu actividad que diga "He terminado con mi Hora del Código" que une de nuevo a [<% =resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) tambien. 
+          * Para los usuarios que pasan una hora en tu actividad y no la completan, favor incluye un botón en tu actividad que diga "He terminado con mi Hora del Código" que une de nuevo a [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) tambien. 
   * *(Opcional)* Realizaremos un seguimiento con un enlace a una encuesta, pidiendo un informe de los siguientes parámetros de la actividad en la semana del 7 de diciembre, 12:01 a.m. hasta el 13 de diciembre, 11:59 p.m.) 
       * Para actividades en línea (especialmente aplicaciones para smartphone/tablet): 
           * Número de usuarios

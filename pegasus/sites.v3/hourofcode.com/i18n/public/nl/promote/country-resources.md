@@ -1,6 +1,7 @@
 ---
 
-Titel: < % = hoc_s(:title_country_resources) %> lay-out: breed
+title: <%= hoc_s(:title_country_resources) %>
+layout: wide
 nav: promote_nav
 
 ---

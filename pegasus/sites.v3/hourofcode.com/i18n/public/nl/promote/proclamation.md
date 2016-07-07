@@ -1,6 +1,7 @@
 ---
 
-titel: < % = hoc_s(:title_proclamation) %> lay-out: breed
+title: <%= hoc_s(:title_proclamation) %>
+layout: wide
 nav: promote_nav
 
 ---
