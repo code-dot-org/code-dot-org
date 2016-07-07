@@ -856,14 +856,19 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
             // There can be multiple results for each sublevel.
             $.each(sublevel_results.results, function(sublevel_result_index, sublevel_result) {
 
+              // Disambiguate free responses that are unsubmitted and that are empty strings.
+              if (sublevel_result.result === undefined || sublevel_result.result === "") {
+                sublevel_result.result = null;
+              }
+
               // Do we already have this level result?  If so, bump the count, otherwise create and
               // add it.
 
               var existingLevelResult = $scope.surveyLevels.find(function (entry) {
-                return entry.result == sublevel_result.result &&
-                       entry.stage == survey.stage &&
-                       entry.puzzle == survey.puzzle &&
-                       entry.question == sublevel_index + 1;
+                return entry.result === sublevel_result.result &&
+                       entry.stage === survey.stage &&
+                       entry.puzzle === survey.puzzle &&
+                       entry.question === parseInt(sublevel_index) + 1;
               });
 
               if (existingLevelResult) {
@@ -877,7 +882,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
                 if (sublevel_result.result_text) {
                   resultFieldText += ". " + sublevel_result.result_text;
                 }
-                var percentField = sublevel_result.type == "multi" ? (Math.round(1 / resultsLength * 100)) + "%" : null;
+                var percentField = sublevel_result.type === "multi" ? (Math.round(1 / resultsLength * 100)) + "%" : null;
 
                 var levelResult = {
                   stage: survey.stage,
@@ -889,7 +894,11 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
                   count: 1,
                   percent: percentField
                 };
-                $scope.surveyLevels.push(levelResult);
+
+                // Let's not create separate rows for answers which have no result to show.
+                if (levelResult.resultText !== null) {
+                  $scope.surveyLevels.push(levelResult);
+                }
               }
             });
           });

@@ -20,7 +20,7 @@ content-type: text/ng-template
 :ruby
   surveys_filtered = "surveyLevels | orderBy:orderAnswers | filter:(stageFilterAnswers && {stage: stageFilterAnswers}):true"
 
-%h1{'ng-show' => 'surveys.length'}= I18n.t('dashboard_surveys_answers')
+%h1{'ng-show' => 'surveys.length', style: "margin-top: 0px"}= I18n.t('dashboard_surveys_answers')
 
 %div{style: "padding-left:20px", 'ng-show' => 'surveys.length'}
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'surveys.length', "ng-form" => "allForm"}
