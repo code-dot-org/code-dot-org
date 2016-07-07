@@ -8,6 +8,7 @@ import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
+import { mergeActivityResult } from './activityUtils';
 
 var progress = module.exports;
 
@@ -50,7 +51,7 @@ progress.activityCssClass = function (result) {
  * @return {string} The result css class.
  */
 progress.mergedActivityCssClass = function (a, b) {
-  return progress.activityCssClass(clientState.mergeActivityResult(a, b));
+  return progress.activityCssClass(mergeActivityResult(a, b));
 };
 
 progress.renderStageProgress = function (stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation) {
@@ -155,7 +156,7 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
       // TODO: _.mergeWith after upgrading to Lodash 4+
       let newProgress = {};
       Object.keys(Object.assign({}, state.progress, action.progress)).forEach(key => {
-        newProgress[key] = clientState.mergeActivityResult(state.progress[key], action.progress[key]);
+        newProgress[key] = mergeActivityResult(state.progress[key], action.progress[key]);
       });
 
       const stages = state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
