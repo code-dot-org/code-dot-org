@@ -104,6 +104,10 @@ module.exports = function (callback) {
         } else {
           loadLastAttemptFromSessionStorage();
         }
+
+        if (data.pairingDriver) {
+          appOptions.level.pairingDriver = data.pairingDriver;
+        }
       }
 
       if (progress.refreshStageProgress) {

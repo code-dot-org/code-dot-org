@@ -120,6 +120,11 @@ class ApiController < ApplicationController
       response[:disableSocialShare] = current_user.under_13?
       response[:disablePostMilestone] =
         !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
+
+      recent_driver_ul = UserLevel.find_by(script: script, level: level, user: current_user).driver_user_levels.last
+      if recent_driver_ul
+        response[:pairingDriver] = recent_driver_ul.user.name
+      end
     end
 
     slog(tag: 'activity_start',

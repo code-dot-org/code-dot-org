@@ -184,6 +184,7 @@
   "numLinesOfCodeWritten": "You just wrote {numLines, plural, one {1 line} other {# lines}} of code!",
   "openWorkspace": "How It Works",
   "orientationLock": "Turn off orientation lock in device settings.",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team.",
   "pause": "Break",
   "play": "play",
   "print": "Print",
