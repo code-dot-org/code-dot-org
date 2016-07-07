@@ -7,10 +7,10 @@ nav: promote_nav
 ---
 
 <%
-    facebook = {:u=>"http://#{request.host}/us"}
+  facebook = {:u=>"http://#{request.host}/us"}
 
-    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
 # Как да се включите
@@ -23,7 +23,7 @@ nav: promote_nav
 
 ## 2. Попитайте във Вашето училище, дали се предлага участие в Часът на кодирането
 
-[ Изпратете този имейл](<%= resolve_url('/promote/resources#sample-emails') %>) на директора и предизвикайте всяка класна стая в училището да се регистрира. < % ако @country == "нас" %> Едно училище от *всеки* щат на Сащ (и Вашингтон) ще спечели $10,000 за технологии. <% end %>
+[ Изпратете този имейл](<%= resolve_url('/promote/resources#sample-emails') %>) на директора и предизвикайте всяка класна стая в училището да се регистрира. <% if @country == "us" %> Едно училище от *всеки* щат на Сащ (и Вашингтон) ще спечели $10,000 за технологии. <% end %>
 
 ## 3. Предложете на Вашия работодател да се включи в инициативата
 
