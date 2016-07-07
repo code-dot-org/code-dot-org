@@ -945,7 +945,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # end
 
     assert_does_not_create(LevelSource, GalleryActivity) do
-      post :milestone, user_id: @user.id, script_level_id: @script_level.id, :program => studio_program_with_text('shit')
+      post :milestone, user_id: @user.id, script_level_id: create(:script_level, :playlab).id, program: studio_program_with_text('shit')
     end
     assert_response :success
     expected_response = {
@@ -966,7 +966,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     with_default_locale(:de) do
       assert_does_not_create(LevelSource, GalleryActivity) do
-        post :milestone, @milestone_params.merge(program: studio_program_with_text('scheiße'))
+        post :milestone, @milestone_params.merge(
+            script_level_id: create(:script_level, :playlab).id,
+            program: studio_program_with_text('scheiße'))
       end
     end
     assert_response :success
@@ -984,7 +986,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
     assert_creates(LevelSource) do
-      post :milestone, @milestone_params.merge(program: studio_program_with_text('shit'))
+      post :milestone, @milestone_params.merge(
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('shit'))
     end
 
     assert_response :success
@@ -1000,7 +1004,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
     assert_creates(LevelSource) do
-      post :milestone, @milestone_params.merge(program: studio_program_with_text('shit'))
+      post :milestone, @milestone_params.merge(
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('shit'))
     end
 
     assert_response :success
@@ -1014,7 +1020,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     with_default_locale(:es) do
       assert_does_not_create(LevelSource, GalleryActivity) do
-        post :milestone, @milestone_params.merge(program: studio_program_with_text('putamadre'))
+        post :milestone, @milestone_params.merge(
+            script_level_id: create(:script_level, :playlab).id,
+            program: studio_program_with_text('putamadre'))
       end
     end
     assert_response :success
@@ -1024,7 +1032,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with phone number' do
     assert_does_not_create(LevelSource, GalleryActivity) do
-      post :milestone, @milestone_params.merge(program: studio_program_with_text('800-555-5555'))
+      post :milestone, @milestone_params.merge(
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('800-555-5555'))
     end
     assert_response :success
 
@@ -1040,9 +1050,12 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing when gatekeeper has disabled sharing does not work' do
-    Gatekeeper.set('shareEnabled', where: {script_name: @script.name}, value: false)
+    script_level = create(:script_level, :playlab)
+    Gatekeeper.set('shareEnabled', where: {script_name: script_level.script.name}, value: false)
 
-    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+    post :milestone, @milestone_params.merge(
+        script_level_id: script_level.id,
+        program: studio_program_with_text('hey some text'))
 
     assert_response :success
     response = JSON.parse(@response.body)
@@ -1055,7 +1068,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     WebPurify.stubs(:find_potential_profanity).returns false
     Gatekeeper.set('shareEnabled', where: {script_name: 'Best script ever'}, value: false)
 
-    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+    post :milestone, @milestone_params.merge(
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('hey some text'))
 
     assert_response :success
     response = JSON.parse(@response.body)
