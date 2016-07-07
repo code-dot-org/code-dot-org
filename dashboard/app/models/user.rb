@@ -1012,7 +1012,7 @@ SQL
   end
 
   def can_pair_with?(other_user)
-    sections_as_student.any? {|section| other_user.sections_as_student.include? section}
+    self != other_user && sections_as_student.any?{ |section| other_user.sections_as_student.include? section }
   end
 
   # make some random-ish fake progress for a user. As you may have

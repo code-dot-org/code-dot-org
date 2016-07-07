@@ -4,11 +4,11 @@ class PairingsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
+    @user = create :user
+    sign_in @user
   end
 
   test 'should get show for logged in user' do
-    sign_in create(:user)
-
     xhr :get, :show
     assert_response :success
 
@@ -17,9 +17,8 @@ class PairingsControllerTest < ActionController::TestCase
   end
 
   test 'should get show for logged in user with sections' do
-    sign_in user = create(:user)
-    section_1 = create(:follower, student_user: user).section
-    section_2 = create(:follower, student_user: user).section
+    section_1 = create(:follower, student_user: @user).section
+    section_2 = create(:follower, student_user: @user).section
 
     xhr :get, :show
     assert_response :success
@@ -35,8 +34,7 @@ class PairingsControllerTest < ActionController::TestCase
   end
 
   test 'should get show for logged in user with sections and pairings' do
-    sign_in user = create(:user)
-    section = create(:follower, student_user: user).section
+    section = create(:follower, student_user: @user).section
     classmate = create(:follower, section: section).student_user
     session[:pairings] = [classmate.id]
 
@@ -55,8 +53,7 @@ class PairingsControllerTest < ActionController::TestCase
   end
 
   test 'should set pairings in session if they are valid classmates' do
-    sign_in user = create(:user)
-    section = create(:follower, student_user: user).section
+    section = create(:follower, student_user: @user).section
     classmate_1 = create(:follower, section: section).student_user
     classmate_2 = create(:follower, section: section).student_user
 
@@ -67,8 +64,7 @@ class PairingsControllerTest < ActionController::TestCase
   end
 
   test 'should not set pairings in session if they are not valid classmates' do
-    sign_in user = create(:user)
-    section = create(:follower, student_user: user).section
+    section = create(:follower, student_user: @user).section
     classmate = create(:follower, section: section).student_user
     invalid_user = create(:student)
 
@@ -80,9 +76,7 @@ class PairingsControllerTest < ActionController::TestCase
   end
 
   test 'should remove pairings in session' do
-    sign_in user = create(:user)
-
-    section = create(:follower, student_user: user).section
+    section = create(:follower, student_user: @user).section
     classmate = create(:follower, section: section).student_user
     session[:pairings] = [classmate.id]
 
