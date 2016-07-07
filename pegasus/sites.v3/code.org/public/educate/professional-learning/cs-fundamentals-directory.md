@@ -1991,10 +1991,10 @@ bricker@pd.code.org
 
 [col-33]
 
-### Tammie Scrader
+### Tammie Schrader
 Spokane, Washington
 
-scrader@pd.code.org
+schrader@pd.code.org
 
 [/col-33]
 
