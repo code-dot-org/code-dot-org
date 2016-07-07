@@ -1,3 +1,4 @@
+import { DataView } from '../constants';
 import Radium from 'radium';
 import React from 'react';
 import msg from '../../locale';
@@ -5,7 +6,8 @@ import * as dataStyles from './dataStyles';
 
 const AddTableListRow = React.createClass({
   propTypes: {
-    onTableAdd: React.PropTypes.func.isRequired
+    onTableAdd: React.PropTypes.func.isRequired,
+    onViewChange: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -17,11 +19,12 @@ const AddTableListRow = React.createClass({
   handleAdd() {
     if (this.state.newTableName) {
       this.props.onTableAdd(this.state.newTableName);
+      this.props.onViewChange(DataView.TABLE, this.state.newTableName);
       this.setState(this.getInitialState());
     }
   },
 
-  handleChange(event) {
+  handleInputChange(event) {
     this.setState({newTableName: event.target.value});
   },
 
@@ -33,7 +36,7 @@ const AddTableListRow = React.createClass({
               style={dataStyles.input}
               placeholder={msg.dataTableNamePlaceholder()}
               value={this.state.newTableName}
-              onChange={this.handleChange}/>
+              onChange={this.handleInputChange}/>
         </td>
         <td style={dataStyles.cell}>
           <button
