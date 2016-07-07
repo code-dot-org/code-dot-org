@@ -95,7 +95,7 @@ class ActivitiesController < ApplicationController
                                     level_source_image: @level_source_image,
                                     activity: @activity,
                                     new_level_completed: @new_level_completed,
-                                    share_failure: share_failure_for(share_failure))
+                                    share_failure: share_failure)
 
     slog(:tag => 'activity_finish',
          :script_level_id => @script_level.try(:id),
@@ -108,30 +108,6 @@ class ActivitiesController < ApplicationController
   end
 
   private
-
-  def share_failure_for(share_failure)
-    return nil unless share_failure
-    {}.tap do |failure|
-      failure[:message] = share_message_for(share_failure.type)
-      failure[:type] = share_failure.type
-      failure[:contents] = share_failure.content unless share_failure.type == ShareFiltering::FailureType::PROFANITY
-    end
-  end
-
-  def share_message_for(failure_type)
-    case failure_type
-      when ShareFiltering::FailureType::EMAIL
-        t('share_code.email_not_allowed')
-      when ShareFiltering::FailureType::ADDRESS
-        t('share_code.address_not_allowed')
-      when ShareFiltering::FailureType::PHONE
-        t('share_code.phone_number_not_allowed')
-      when ShareFiltering::FailureType::PROFANITY
-        t('share_code.profanity_not_allowed')
-      else
-        raise ArgumentError.new("Unknown share failure type #{failure_type}")
-    end
-  end
 
   def milestone_logger
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
