@@ -207,7 +207,7 @@ NetSimRouterLogModal.prototype.render = function () {
     isAllRouterLogMode: this.isAllRouterLogMode_,
     canToggleRouterLogMode: this.canToggleRouterLogMode_(),
     currentTrafficFilter: this.currentTrafficFilter_,
-    canCycleTrafficFilterMode: this.canCycleTrafficFilterMode_(),
+    localAddress: this.localNode_ ? this.localNode_.getAddress() : undefined,
     sortBy: this.sortBy_,
     sortDescending: this.sortDescending_
   }));
@@ -219,8 +219,8 @@ NetSimRouterLogModal.prototype.render = function () {
     this.render();
   });
 
-  this.getTrafficFilterCycleButton().one('click', () => {
-    this.cycleTrafficFilterMode_();
+  this.getTrafficFilterCycleDropdown().one('change', (evt) => {
+    this.setTrafficFilterMode_(evt.target.value);
     this.render();
   });
 
@@ -461,16 +461,6 @@ NetSimRouterLogModal.prototype.canToggleRouterLogMode_ = function () {
 };
 
 /**
- * Whether or not we can switch between showing packets for all IPs and various
- * address filter modes.
- * @returns {boolean}
- * @private
- */
-NetSimRouterLogModal.prototype.canCycleTrafficFilterMode_ = function () {
-  return !!this.localNode_ && !!this.localNode_.getAddress();
-};
-
-/**
  * Toggles this.isAllRouterLogMode_ between `true` and `false`
  * @private
  */
@@ -480,24 +470,11 @@ NetSimRouterLogModal.prototype.toggleRouterLogMode_ = function () {
 
 
 /**
- * Cycles this.currentTrafficFilter_ through the following states:
- * 'with <my ip>', 'from <my ip>', 'to <my ip>', 'none'
- * If the current state is unknown, returns it to 'none'
+ * Sets this.currentTrafficFilter_.
  * @private
  */
-NetSimRouterLogModal.prototype.cycleTrafficFilterMode_ = function () {
-  let newFilter = 'none';
-  const myAddress = this.localNode_.getAddress();
-  if (myAddress) {
-    if (/^none/.test(this.currentTrafficFilter_)) {
-      newFilter = `with ${myAddress}`;
-    } else if (/^with/.test(this.currentTrafficFilter_)) {
-      newFilter = `from ${myAddress}`;
-    } else if (/^from/.test(this.currentTrafficFilter_)) {
-      newFilter = `to ${myAddress}`;
-    }
-  }
-  this.currentTrafficFilter_ = newFilter;
+NetSimRouterLogModal.prototype.setTrafficFilterMode_ = function (newMode) {
+  this.currentTrafficFilter_ = newMode;
 };
 
 /**
@@ -510,12 +487,12 @@ NetSimRouterLogModal.prototype.getRouterLogToggleButton = function () {
 };
 
 /**
- * Finds the button used to cycle between traffic filter modes
+ * Finds the dropdown used to change traffic filter modes
  * @returns {jQuery}
  * @private
  */
-NetSimRouterLogModal.prototype.getTrafficFilterCycleButton = function () {
-  return this.rootDiv_.find('button#trafficfilter-cycle');
+NetSimRouterLogModal.prototype.getTrafficFilterCycleDropdown = function () {
+  return this.rootDiv_.find('select#traffic-filter');
 };
 
 /**
