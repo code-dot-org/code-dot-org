@@ -3,11 +3,13 @@
 require File.expand_path('../../pegasus/src/env', __FILE__)
 require 'cdo/languages'
 require 'fileutils'
+require 'tempfile'
 
 def push_out_translated_files
   # rename_downloads_from_crowdin_code_to_locale
   # copy_from_i18n_source_to_hoc
-  clean_crowdin_markdown_errors
+  # clean_crowdin_markdown_errors
+  check_for_bad_translations
 end
 
 def rename_downloads_from_crowdin_code_to_locale
@@ -143,21 +145,48 @@ def clean_crowdin_markdown_errors
   end
 end
 
+def check_for_bad_translations
+  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |i18n_file|
+    pattern = /pegasus\/sites.v3\/hourofcode.com\/i18n\/public\/[a-z][a-z]/
+    source_file = i18n_file.gsub(pattern, "i18n/locales/source/hourofcode")
+
+    puts "checking: " + i18n_file
+    diff_checker(i18n_file, source_file)
+  end
+end
+
+def diff_checker(i18n_file, source_file)
+  # Returns a string describing the difference in the code blocks (<% ... %>) in
+  # the files at path 1 and path2
+  def diff_code(path1, path2)
+    out1 = create_tempfile(strip_code(read_file(path1)))
+    out2 = create_tempfile(strip_code(read_file(path2)))
+    `diff #{out1.path} #{out2.path} -b | cat -t`
+  end
+
+  # Returns only the code enclosed in <% .. %> blocks in str.
+  def strip_code(str)
+    result = ''
+    str.scan(/<%.*?%>/m) do |match|
+      result += match
+    end
+    result
+  end
+
+  # Returns the contents of the file at path.
+  def read_file(path)
+    File.open(path) { |f| return f.read }
+  end
+
+  # Returns a tempfile containing str.
+  def create_tempfile(str)
+    out = Tempfile.new('i18n')
+    out.write(str)
+    out.write("\n")
+    out.flush
+  end
+
+  print diff_code(i18n_file, source_file)
+end
+
 push_out_translated_files
-
-# #########################################################################################
-# ##                                                                                     ##
-# ## check for bad translations                                                          ##
-# ##                                                                                     ##
-# #########################################################################################
-
-# def compare_files
-#   Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |i18n_file|
-#     pattern = /..\/..\/pegasus\/sites.v3\/hourofcode.com\/i18n\/public\/[a-z][a-z]/
-#     source_file = i18n_file.gsub(pattern, "../locales/source/hourofcode")
-
-#     puts "checking: " + i18n_file
-#     system("./diff_code.rb", i18n_file, source_file)
-#   end
-# end
-# compare_files
