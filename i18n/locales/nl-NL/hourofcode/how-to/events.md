@@ -1,14 +1,10 @@
 * * *
 
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+titel: < % = hoc_s(:title_how_to_volunteers) %> lay-out: breed nav: how_to_nav
 
 * * *
 
-<%= view :signup_button %>
-
-# Hoe een CodeUur evenement organiseren
-
-Host een CodeUur event tijdens de week van programmeren (< % = campaign_date('short') %>) om programmeren te vieren en inspireer meer studenten om het uit te proberen. Iedereen, waar dan ook kan een CodeUur evenement organiseren.
+# Hoe kunt u een CodeUur evenement organiseren
 
 ## 1) Bereid u voor op uw evenement
 
@@ -27,7 +23,7 @@ Host een CodeUur event tijdens de week van programmeren (< % = campaign_date('sh
       * Nodig een lokale politicus uit en laat leerlingen hem uitleggen hoe hij moet programmeren
       * Laat een groep leerlingen een unplugged activiteit demonstreren
       * Laat een groep leerlingen/leerkrachten de basisfundamenten leren over programmeren
-      * Als je school al informatica geeft, laat studenten projecten demonstreren
+      * Als uw school al informatica geeft, laat leerlingen projecten demonstreren
 
 ## 3) Deel hoe het ging
 
@@ -36,13 +32,13 @@ Host een CodeUur event tijdens de week van programmeren (< % = campaign_date('sh
 
 ## Voorbeeld van een evenementsplan
 
-**Evenement:** Schoolbrede Computer Science Education Week aftrap
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Datum:** 7 december (begin van de week van programmeren)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Tijd:** Tijdens de schooldag. Halverwege de ochtend heeft de voorkeur. ongeveer een uur.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Locatie:** verzamelruimte (bijv. theater of gymzaal)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -56,5 +52,3 @@ Host een CodeUur event tijdens de week van programmeren (< % = campaign_date('sh
 | 10:30-10:40 | Studenten doen een demo van CodeUur voor de school. Misschien kunnen zij het leren aan de directeur, aan de politicus of aan andere studenten. |
 | 10:40-11:00 | Studenten laten een unplugged activiteit zien om te demonstreren hoe programmeren kan worden geleerd zonder computers.                         |
 | 11:00-11:05 | De leraar die de evenement heeft georganiseerd sluit af.                                                                                       |
-
-<%= view :signup_button %>

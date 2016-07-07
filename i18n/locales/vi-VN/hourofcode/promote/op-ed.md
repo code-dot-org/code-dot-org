@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### Dưới đây là mẫu bài báo của một tác giả hỗ trợ tuần lễ giáo dục về khoa học máy tính và mục tiêu của nó có thể được sử dụng cho các bang, các nhà lập pháp địa phương , lãnh đạo doanh nghiệp vv.
 
   
@@ -13,36 +11,34 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
 
-**Tiêu đề: máy tính...nguồn cung cấp việc làm**
+**Title: Computing…Where the Jobs Are**
 
-**Bởi [NAME] và [xem xét đồng tác giả với nhà giáo, giám đốc hoặc lãnh đạo doanh nghiệp]**
+**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-Máy tính ở khắp mọi nơi. chúng trong tầm kiểm soát chúng ta. chúng ở trên tường. Chúng trong xe ô tô. chúng là một phần quan trọng của cơ sở hạ tầng, từ điện lưới đến đèn giao thông đến các hoạt động bên trong của các thị trường tài chính. Và tất cả các máy tính có một điểm chung. chúng phụ thuộc vào các phần mềm điều khiển
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-Nhưng chính xác ai sẽ viết phần mềm này?
+But who exactly is going to write this software?
 
-Khi nhìn thế giới chúng ta đã có sự biến đổi nhanh chóng nhờ công nghệ, bạn có thể mong lượng sinh viên học khoa học máy tính trong giáo dục K-12 ngày nay ở mức cao nhất mọi thời đại. Bạn đã sai. Trong thực tế, ít sinh viên đang học khoa học máy tính, và ít trường học giảng dạy nó hơn một thập kỷ trước.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-Hiện nay khi nhu cầu về lập trình viên có tay nghề cao chưa bao giờ cao hơn, chúng ta đang tạo ra ít nhà khoa học máy tính hơn. Ngay cả trong thời điểm tỷ lệ thất nghiệp cao, hàng nghìn việc làm, nhiều việc làm ở đây **[Chèn bang/thành phố]**, sẽ bị bỏ trống vì thiếu các cá nhân có đúng kỹ năng.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
 
-Tại sao có điều này? Và làm thế nào chúng ta có thể giải quyết nó?
+Why is this? And how can we address it?
 
-Vấn đề bắt nguồn từ trường trung học cơ sở và phổ thông. Chín trong số mười trường học của chúng ta không cung cấp các lớp học lập trình máy tính. Năm ngoái, trong **[học khu]** , chỉ **[số lượng]** sinh viên thi được trình độ đại học(ĐH) trong môn khoa học máy tính, chỉ **[%]** sinh viên của chúng ta đạt được trình độ ĐH. Đơn giản là vì chúng ta không có đủ sự chuẩn bị hoặc khuyến khích sinh viên theo đuổi nghề nghiệp quan trọng và có thu nhập cao.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-Gần như tất cả sáng kiến về máy tính đã được phát minh ở đất nước này, nhưng chúng ta đang có nguy cơ mất quyền lãnh đạo nếu không làm điều gì đó bây giờ.
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-Chúng ta cần phải thực hiện một số thay đổi.
+We need to make some changes.
 
-**MÔN TỰ CHỌN VÀ NƠI ÁP DỤNG**
+**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-Một thay đổi tích cực có thể đòi hỏi môn khoa học máy tính trở thành môn bắt buộc để tốt nghiệp trường chuyên toán học hoặc khoa học. Trong **[Chèn bang]**, khóa học khoa học máy tính là môn tự chọn. Do nhu cầu học tập, học sinh không có đủ khả năng để chọn khóa học khoa học máy tính. Và sự thay đổi này có thể có một tác động lớn. Tại tiểu bang nơi mà các khóa học khoa học máy tính nằm trong yêu cầu tốt nghiệp, các khóa học chiếm năm mươi phần trăm kết quả thu hút sinh viên với tỷ lệ cao hơn nhiều so với tiểu bang nơi khoa học máy tính là môn tự chọn.
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-Chúng tôi cũng sẽ làm việc với các các bạn trẻ để thắp lửa đam mê về khoa học máy tính và mã hóa. Trẻ em không nên chỉ biết cách sử dụng ứng dụng và chơi trò chơi điện tử-chúng nên biết làm thế nào để tạo ra ứng dụng đó. Trẻ em có thể tìm hiểu về mã hóa căn bản từ lớp thứ hai.
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 
-Chúng ta cần phải tuyển dụng giáo viên khoa học máy tính nhiều hơn và khuyến khích phát triển chuyên môn trong lĩnh vực của họ. Ngày nay, có rất nhiều tài liệu trực tuyến có thể giúp giáo viên truy cập và nâng cấp công nghệ mới nhất cho học sinh của mình.
+We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-Theo thống kê Cục Lao động, đến năm 2020, sẽ có 9.2 triệu việc làm trong lĩnh vực STEM. Một nửa trong số những việc làm — 4,6 triệu — sẽ nằm trong công nghệ máy tính hoặc công nghệ thông tin. Và khoa học máy tính sẽ trở thành nền tảng kiến thức cho thế kỷ 21. Ai là người sẽ lấp lỗ hổng nguồn nhân lực nếu trẻ em của chúng ta không có được cơ hội để đạt được những kỹ năng cần thiết?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. Tại các trường học trong suốt **[bang]**, sinh viên của chúng tôi sẽ được tham gia vào một giờ mã quốc gia, chủ đề khoa học máy tính sẽ được làm sáng tỏ và hy vọng sẽ thúc đẩy ham muốn tìm hiểu của các bạn. Tôi sẽ tham gia cùng họ, và tôi xin mời các bạn cùng tham gia. Tất cả mọi người nên tìm hiểu làm thế nào để mã hóa. Visit https://hourofcode.com/<%= @country %> to learn more and get started. Và hỗ trợ sự nỗ lực của chúng tôi để mang khoa học máy tính tới các trường học tại **[bang]**.
-
-<%= view :signup_button %>
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.

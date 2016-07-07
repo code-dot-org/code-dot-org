@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### Më poshtë është një shembull i një opinioni mbështetës për Javën Edukative të Shkencave Kompjuterike dhe qëllimeve të saj që mund të përdoret nga shteti, ligjvënësit lokal, liderat e biznesit etj.
 
   
@@ -44,5 +42,3 @@ Ne kemi nevojë për të rekrutuar më shumë mësues të shkencave kompjuterike
 Sipas Laboratorit Bureau të Statistikave, nga 2020, do të jenë 9.2 milion punë në fushat STEM. Gjysma e këtyre punëve—4.6 milion—do të jenë në informatikë ose teknologji informacioni. Dhe shkenca kompjuterike është gjithnjë njohuri themelore për shekullin e 21-të. Kush do t'i plotësojë këto punë nëse fëmijëve tanë nuk i është dhënë mundësia për të fituar aftësitë e nevojshme?
 
 Këtë javë, <%= campaign_date('full') %>, është Java Edukative e Shkencave Kompjuterike. Në të gjitha shkollat e **[STATE]**, studentët tanë do të marrin pjesë në një Orë Kodimi kombëtar, çmitizojmë subjektin e shkencave kompjuterike dhe shpresojmë të nxisim dëshirën e tyre për të shkuar përpara dhe të mësojnë më shumë. Unë do bashkohem me ata, dhe të ftoj dhe ty të bashkohesh. Çdokush duhet të mësojë si të kodojë. Vizito https://hourofcode.com/<%= @country %> për të mësuar më shumë. Dhe mbështet përpjekjen tonë për të sjell shkencën kompjuterike në **[STATE]**.
-
-<%= view :signup_button %>

@@ -8,11 +8,14 @@ hu:
   campaign_date_start_long: december 7
   campaign_date_short: dec 7-13
   campaign_date_full: december 7-13
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Nézd meg az új videót
   front_watch_regular_video: Nézd meg a videót
   front_volunteers: Technical volunteers wanted
+  front_start_learning: Start learning
   header_menu_resources: Segédlet
   header_menu_faq: GYIK
   header_menu_prizes: Díjak
@@ -174,7 +177,9 @@ hu:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Prizes for every educator
   prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
+  prizes_more: More exciting prizes
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -243,7 +248,7 @@ hu:
   signup_name_placeholder: Neved
   signup_email_placeholder: nev@pelda.hu
   signup_organization_name_placeholder: Például Kossuth Szakközépiskola
-  signup_event_location_placeholder: "Irányítószám és ország vagy teljes cím.\r\n(Ennek a segítségével tudjuk bejelölni a térképen)"
+  signup_event_location_placeholder: "Irányítószám és ország vagy teljes cím.\\r\n(Ennek a segítségével tudjuk bejelölni a térképen)"
   signup_special_event_details_placeholder: Írd le, hogy mitől különleges ez az esemény
   signup_send_posters_address_placeholder: Ez a cím nem jelenik meg a térképen
   signup_event_type_in_school: Iskolában
@@ -252,6 +257,7 @@ hu:
   signup_submit_error_message: Hiba történt. Kérlek ellenőrizd, hogy minden szükséges mezőt megfelelően töltöttél-e ki.
   signup_thank_you_header: Köszönjük, hogy jelentkeztél egy Kódolás Órája esemény megtartására.
   signup_thank_you_message: Küldtünk egy megerősítő e-mailt, amiben segítséget kapsz az induláshoz is.
+  map_title: Hour of Code map
   map_header: '# Kódolás Órája esemény szerte a nagyvilágban'
   see_all_events: See all events
   map_header_company: '# cégek szervezésében'
@@ -298,7 +304,7 @@ hu:
   hoc_faq_what_is_hoc_a: "A Kódolás Órája egy egy órás bevezetés a számítástudomány alapjaiba, célja, hogy eloszlassa a kód homályát, és megmutassa, hogy bárki megtanulhatja az alapokat.  <a href='http://code.org/learn'>Próbáld ki az oktatóanyagokat</a>."
   hoc_faq_last_year: Próbáld ki az oktatóanyagokat
   hoc_faq_when_is_hoc_q: Mikor lesz a Kódolás órája?
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. You're welcome to split up the Hour of Code into multiple sessions so long as your students finish the Hour of Code tutorial. Just do whatever works best for you and your students. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
   hoc_faq_why_cs_q: Miért számítástechnika?
   hoc_faq_why_cs_a: "<i>Minden</i> diáknak meg kellene kapnia a lehetőséget, hogy számítástechnikát tanuljon. Segít a problémamegoldó képesség, a logika és a kreativitás fejlesztésében. A korai kezdéssel a diákok olyan tudáshoz jutnak, ami bármilyen 21. századi karrierpályán biztosítja a siker alapjait. További statisztikák a <a href='http://code.org'>Code.org</a> oldalon."
   hoc_faq_how_participate_q: Hogyan vehetek részt a Kódolás Órája eseményen?
@@ -308,7 +314,7 @@ hu:
   hoc_faq_host_q: Nem tudok semmit a kódolásról. Így is szervezhetek eseményt?
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: Minden résztvevőnek szüksége lesz számítógépre?
   hoc_faq_need_computers_a: "Nem. Az oktatóanyagok között van olyan, ami számítógépen, telefonon vagy táblagépen működik, de akad olyan is, amihez egyáltalán nincs szükség számítógépre. Csatlakozhatsz bárhonnan bármilyen eszközzel.<p><i>Íme néhány opció:</i><br><ul><li><b>Dolgozzatok párokban.</b>Kutatások azt mutatják, hogy a diákok úgy tanulnak a legjobban, ha <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>párokban programoznak</a>, megosztják a számítógépet és együtt dolgoznak.<li><b>Használj kivetítőt</b> Ha van egy projektorod, amire egy internetre kötött számítógép képét ki tudod vetíteni, akkor a Kódolás Óráját egy egész csoport is együtt tudja csinálni. Nézzétek megy együtt a videókat és felváltva próbálják meg a gyerekek megoldani a problémákat vagy megválaszolni a kérdéseket.<li><b>Tedd el a gépet</b> Olyan anyagokat is kínálunk, amelyekhez egyáltalán nincs szükség számítógépre.</ul>"
   hoc_faq_international_q: 'Lakhelyem <country>. Hogyan vehetek részt nemzetközileg?'
@@ -317,8 +323,6 @@ hu:
   hoc_faq_tutorial_a: "Ha szeretnél partner lenni az oktatóanyagok kialakításában, akkor <a href='target-tutorial-guidelines'>nézd meg az útmutatóinkat</a>. Szeretnénk egy sor vonzó lehetőséget kínálni, de az elsődleges cél, hogy a számítástechnikával most ismerkedő diákok és tanárok számára optimalizáljuk a rendszert."
   hoc_faq_account_q: Be kell jelentkezniük a diákoknak egy fiókkal?
   hoc_faq_account_a: "Nem. Semmiféle feliratkozás vagy bejelentkezés nem szükséges a Kódolás órájának kipróbálásához. A <a href='http://code.org/learn/beyond'>kiegészítő tanfolyamok</a> használatához azonban szükgéses a fiók létrehozása a tanuló előrehaladásának elmentéséhez."
-  hoc_faq_frozen_q: Hol van az Annaval és Elsaval készült oktatóanyag?
-  hoc_faq_frozen_a: "Mostantól a <a href='http://code.org/learn'>Code.org/tanulás</a> oldalon található meg. Reméljük élvezni fogod!"
   hoc_faq_high_school_q: Mely gyakorlatokat mutassam meg középiskolás diákoknak?
   hoc_faq_high_school_a: "Kezdésképp minden korosztálynak a <a href='http://code.org/learn'>Code.org/tanulás</a> oldalon található bevezető oktatóanyagokat ajánljuk, mint például az Angry Birds vagy az Anna és Elsa. Egy középiskolás diák ezek egyikével 30 perc alatt végez, ezek után továbbléphet a bonyolultabb JavaScript tanfolyamokra, mint a Khan Academy vagy a CodeHS."
   hoc_faq_scratch_q: A Scratchet használom a Kódolás óráján, de mi van, ha a diákjaimnak iPadjük van, és nem laptopjuk?
@@ -334,10 +338,12 @@ hu:
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: A 2013-as Kódolás Órája statisztikája
   stats_growth: 15 millió felhasználó elérése a legrövidebb idő alatt.
-  stats_i18n: Students are learning in 40 languages
+  stats_i18n: Students are learning in over 45 languages
   stats_tumblr: 'Tumblr: 3,5 év'
   stats_facebook: 'Facebook: 3 év'
   stats_twitter: 'Twitter: 2,5 év'
@@ -419,6 +425,9 @@ hu:
   events_orgs_title: A partner szervezetek által szervezett összes Kódolás Órája esemény
   event: esemény
   events: események
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: Copyright 2015 Code.org. Minden jog fenntartva.
   footer_trademark_message: Hour of Code™ a Code.org bejegyzett védjegye.
   footer_menu_partners: Partnerek
