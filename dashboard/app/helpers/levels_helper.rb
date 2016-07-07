@@ -161,7 +161,7 @@ module LevelsHelper
     end
 
     if @user
-      recent_driver_ul = UserLevel.find_by(script: @script, level: @level, user: @user).driver_user_levels.last
+      recent_driver_ul = UserLevel.find_by(script: @script, level: @level, user: @user).try(:driver_user_levels).try(:last)
       if recent_driver_ul
         level_view_options pairing_driver: recent_driver_ul.user.name
       end
