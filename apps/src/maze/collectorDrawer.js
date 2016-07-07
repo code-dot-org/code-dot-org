@@ -12,8 +12,8 @@ export default class CollectorDrawer extends Drawer {
    * @override
    */
   updateImageWithIndex_(prefix, row, col) {
-    let img = super.updateImageWithIndex_(prefix, row, col);
-    let val = this.map_.getValue(row, col);
+    const img = super.updateImageWithIndex_(prefix, row, col);
+    const val = this.map_.getValue(row, col);
     img.setAttribute('visibility', val ? 'visible' : 'hidden');
     return img;
   }
@@ -35,7 +35,7 @@ export default class CollectorDrawer extends Drawer {
    * @return {boolean}
    */
   shouldUpdateItemImage(row, col) {
-    let cell = this.map_.getCell(row, col);
+    const cell = this.map_.getCell(row, col);
     return cell && cell.getOriginalValue();
   }
 
@@ -45,10 +45,10 @@ export default class CollectorDrawer extends Drawer {
    * @param {number} col
    */
   updateCounter_(row, col) {
-    let prefix = 'counter';
-    let counterText = this.map_.getValue(row, col) || null;
+    const prefix = 'counter';
+    const counterText = this.map_.getValue(row, col) || null;
     // get or create the appropriate counter element
-    let counterElement = document.getElementById(cellId(prefix, row, col))
+    const counterElement = document.getElementById(cellId(prefix, row, col))
         || this.createText(prefix, row, col, counterText);
     counterElement.firstChild.nodeValue = counterText;
   }
@@ -62,13 +62,13 @@ export default class CollectorDrawer extends Drawer {
    * @param {string} counterText
    */
   createText(prefix, row, col, counterText) {
-    let pegmanElement = document.getElementsByClassName('pegman-location')[0];
-    let svg = document.getElementById('svgMaze');
+    const pegmanElement = document.getElementsByClassName('pegman-location')[0];
+    const svg = document.getElementById('svgMaze');
 
     // Create text.
-    let hPadding = 2;
-    let vPadding = 2;
-    let text = document.createElementNS(SVG_NS, 'text');
+    const hPadding = 2;
+    const vPadding = 2;
+    const text = document.createElementNS(SVG_NS, 'text');
     // Position text just inside the bottom right corner.
     text.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
     text.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);

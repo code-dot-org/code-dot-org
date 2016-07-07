@@ -1869,7 +1869,7 @@ function isDirtCorrect() {
 
 /**
  * Certain Maze types - namely, WordSearch, Collector, and any Maze with
- * Quantum maps, don't want to check for success until the user's conde
+ * Quantum maps, don't want to check for success until the user's code
  * has finished running completely.
  */
 Maze.shouldCheckSuccessOnMove = function () {
