@@ -44,7 +44,9 @@ class ActivitiesController < ApplicationController
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
         rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
-          # If WebPurify or Geocoder fail, the program will be allowed, but we will note the level source
+          # If WebPurify or Geocoder fail, the program will be allowed, and we
+          # retain the share_checking_error to log it alongside the level_source
+          # ID below.
         end
       end
 
