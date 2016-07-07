@@ -840,8 +840,9 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
 
 /**
  * Determines whether the user can proceed to the next level, based on the level feedback
- * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by StudioApp.getTestResults().
+ * @param {Object} options
+ * @param {number} options.feedbackType Test results (a constant property
+ *     of this.TestResults).false
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||

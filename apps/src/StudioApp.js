@@ -1159,8 +1159,8 @@ StudioApp.prototype.onReportComplete = function (response) {
 
   if (response.trophy_updates) {
     response.trophy_updates.forEach(update => {
-      let concept_name = update[0];
-      let trophy_name = update[1];
+      const concept_name = update[0];
+      const trophy_name = update[1];
       trackEvent('Trophy', concept_name, trophy_name);
     });
   }
@@ -1578,22 +1578,23 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    let missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_);
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
     // redux
-    let message = this.feedback_.getFeedbackMessage(options);
+    const message = this.feedback_.getFeedbackMessage(options);
     this.reduxStore.dispatch(setFeedback({ message }));
   }
 };
 
 /**
-* Whether feedback should be displayed as a modal dialog or integrated
-* into the top instructions
-* @param {{feedbackType: number}} Test results (a constant property of
-*     this.TestResults).
-*/
+ * Whether feedback should be displayed as a modal dialog or integrated
+ * into the top instructions
+ * @param {Object} options
+ * @param {number} options.feedbackType Test results (a constant property
+ *     of this.TestResults).false
+ */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
   // If instructions in top pane are enabled and we show instructions
   // when collapsed, we only use dialogs for success feedback.

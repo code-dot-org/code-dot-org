@@ -8,9 +8,9 @@ import Radium from 'radium';
  */
 
 const ThreeColumns = (props) => {
-  const { style, leftColWidth, rightColWidth, height, children } = props;
+  const { styles, leftColWidth, rightColWidth, height, children } = props;
 
-  const styles = {
+  const defaultStyles = {
     container: {
       paddingLeft: leftColWidth,
       paddingRight: rightColWidth,
@@ -41,10 +41,10 @@ const ThreeColumns = (props) => {
   };
 
   return (
-    <div style={[styles.container, style.container]}>
-      <div style={[styles.middle, style.middle]}>{children[1]}</div>
-      <div style={[styles.left, style.left]}>{children[0]}</div>
-      <div style={[styles.right, style.right]}>{children[2]}</div>
+    <div style={[defaultStyles.container, styles.container]}>
+      <div style={[defaultStyles.middle, styles.middle]}>{children[1]}</div>
+      <div style={[defaultStyles.left, styles.left]}>{children[0]}</div>
+      <div style={[defaultStyles.right, styles.right]}>{children[2]}</div>
     </div>
   );
 };
