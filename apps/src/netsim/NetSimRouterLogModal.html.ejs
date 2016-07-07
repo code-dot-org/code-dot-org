@@ -31,8 +31,8 @@ var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &
  */
 
 /**
- * @name canCycleTrafficFilterMode
- * @type {boolean}
+ * @name localAddress - address of local node, or undefined if not available.
+ * @type {string}
  */
 
 /**
@@ -60,24 +60,24 @@ function routerLogModeToggleButton() {
   return markup;
 }
 
-/**
- * Intentionally mirrors NetSimRouterLogModal.cycleTrafficFilterMode_
- */
-function trafficFilterCycleButton() {
-  if (!locals.canCycleTrafficFilterMode) {
+function trafficFilterCycleDropdown() {
+  if (!locals.localAddress) {
     return '';
   }
-  var markup = '<button type="button" id="trafficfilter-cycle" class="pull-right btn btn-primary btn-mini">';
-  if (/^none/.test(locals.currentTrafficFilter)) {
-    markup += i18n.logBrowserHeader_showMyTraffic();
-  } else if (/^with/.test(locals.currentTrafficFilter)) {
-    markup += i18n.logBrowserHeader_showTrafficFromMe();
-  } else if (/^from/.test(locals.currentTrafficFilter)) {
-    markup += i18n.logBrowserHeader_showTrafficToMe();
-  } else {
-    markup += i18n.logBrowserHeader_showAllTraffic();
-  }
-  markup += '</button>';
+
+  var selectedIf = function (regex) {
+    if (regex.test(locals.currentTrafficFilter)) {
+      return ' selected';
+    }
+    return '';
+  };
+
+  var markup = '<select id="traffic-filter" class="pull-right">';
+  markup += '<option' + selectedIf(/^none/) + ' value="none">' + i18n.logBrowserHeader_showAllTraffic() + '</option>';
+  markup += '<option' + selectedIf(/^with/) + ' value="with ' + localAddress + '">' + i18n.logBrowserHeader_showMyTraffic() + '</option>';
+  markup += '<option' + selectedIf(/^from/) + ' value="from ' + localAddress + '">' + i18n.logBrowserHeader_showTrafficFromMe() + '</option>';
+  markup += '<option' + selectedIf(/^to/) + ' value="to ' + localAddress + '">' + i18n.logBrowserHeader_showTrafficToMe() + '</option>';
+  markup += '</select>';
   return markup;
 }
 
@@ -122,8 +122,8 @@ function sortMarkupFor(sortKey) {
 <div class="modal-dialog modal-lg">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <%- routerLogModeToggleButton(); %>
-      <%- trafficFilterCycleButton(); %>
+      <%- routerLogModeToggleButton() %>
+      <%- trafficFilterCycleDropdown() %>
       <h4 class="modal-title"><%= dialogTitle() %></h4>
     </div>
     <div class="modal-body">
