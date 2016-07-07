@@ -2,6 +2,7 @@
  * This file manages logic for the dropdown used in our setProperty block
  */
 var _ = require('lodash');
+import {getFirstParam} from '../dropletUtils';
 var library = require('./designElements/library');
 var ElementType = library.ElementType;
 
@@ -231,40 +232,12 @@ for (var elementType in PROPERTIES) {
   });
 }
 
-function getFirstSetPropertyParamFromCode(code) {
-  var prefix = 'setProperty(';
-  code = code.slice(code.lastIndexOf(prefix));
-
-  // quote, followed by param, followed by end quote, comma, and optional whitespace
-  var match = /^setProperty\((['"])(.*)\1,\s*$/.exec(code);
-  return match ? match[2] : null;
-}
-
 /**
  * @param {DropletBlock} block Droplet block, or undefined if in text mode
  * @param {AceEditor}
  */
 function getFirstSetPropertyParam(block, editor) {
-  if (!block) {
-    // If we're not given a block, assume that we're in text mode
-    var cursor = editor.session.selection.getCursor();
-    var contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
-
-    return getFirstSetPropertyParamFromCode(contents);
-  }
-  // We have a block. Parse it to find our first socket.
-  var token = block.start;
-  do {
-    if (token.type === 'socketStart') {
-      var textToken = token.next;
-      if (textToken.type !== 'text') {
-        throw new Error('unexpected');
-      }
-      return textToken.value;
-    }
-    token = token.next;
-  } while (token);
-  return null;
+  return getFirstParam('setProperty', block, editor);
 }
 
 /**
@@ -336,7 +309,6 @@ module.exports.setPropertyDropdown = function () {
 };
 
 module.exports.__TestInterface = {
-  getFirstSetPropertyParamFromCode: getFirstSetPropertyParamFromCode,
   stripQuotes: stripQuotes,
   getDropdownProperties: getDropdownProperties
 };

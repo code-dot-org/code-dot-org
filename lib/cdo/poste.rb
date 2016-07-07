@@ -203,7 +203,8 @@ module Poste2
   def self.load_attachments(attachments)
     {}.tap do |results|
       attachments.each do |name, filename|
-        results[name] = File.binread(filename)
+        content = File.binread(filename)
+        results[name] = Base64.encode64(content)
       end
     end
   end
