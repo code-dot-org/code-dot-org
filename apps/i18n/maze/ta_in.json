@@ -82,5 +82,12 @@
   "whileTooltip": "உள்ளடக்கப்பட்ட செயல்களை மீண்டும் செய், புள்ளியை அடையும் வரை.",
   "word": "சொல்லை கண்டறி",
   "yes": "ஆம்",
-  "youSpelled": "நீங்கள் உச்சரித்தது"
+  "youSpelled": "நீங்கள் உச்சரித்தது",
+  "collectiblePresent": "there is some treasure",
+  "collect": "collect",
+  "collectorCollectTooltip": "Collect an item",
+  "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
+  "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
+  "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!"
 }
