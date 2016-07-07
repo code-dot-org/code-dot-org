@@ -1,7 +1,7 @@
 import React from 'react';
 import utils from '../../utils';
 import { connect } from 'react-redux';
-import Dialog from '../../templates/DialogComponent.jsx';
+import BaseDialog from '../../templates/BaseDialog.jsx';
 import gamelabMsg from '../locale';
 import styles from './styles';
 import { hide, pickNewAnimation, pickLibraryAnimation, beginUpload,
@@ -66,8 +66,9 @@ const AnimationPicker = React.createClass({
     }
 
     return (
-      <Dialog
+      <BaseDialog
           isOpen
+          useDeprecatedGlobalStyles
           handleClose={this.props.onClose}
           uncloseable={this.props.uploadInProgress}>
         <HiddenUploader
@@ -78,7 +79,7 @@ const AnimationPicker = React.createClass({
             onUploadDone={this.props.onUploadDone}
             onUploadError={this.props.onUploadError} />
         {this.renderVisibleBody()}
-      </Dialog>
+      </BaseDialog>
     );
   }
 });
