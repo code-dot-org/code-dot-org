@@ -28,13 +28,6 @@ const headerCell = {
   backgroundColor: color.teal
 };
 
-// Use just the right amount of padding to fit the confirming delete button.
-const deleteTableCell = {
-  padding: 5,
-  border: '1px solid gray',
-  fontSize: 14
-};
-
 const link = {
   color: color.purple,
   fontFamily: "'Gotham 7r', sans-serif"
@@ -65,7 +58,6 @@ export {
   addRow,
   cell,
   headerCell,
-  deleteTableCell,
   link,
   button,
   editButton,
