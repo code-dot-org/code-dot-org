@@ -8,51 +8,9 @@ import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
-import { mergeActivityResult } from './activityUtils';
+import { SUBMITTED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
 
 var progress = module.exports;
-
-/**
- * See ActivityConstants.
- */
-const MINIMUM_PASS_RESULT = 20;
-const MINIMUM_OPTIMAL_RESULT = 30;
-const SUBMITTED_RESULT = 1000;
-const REVIEW_REJECTED_RESULT = 1500;
-const REVIEW_ACCEPTED_RESULT = 2000;
-
-/**
- * See ApplicationHelper#activity_css_class.
- * @param result
- * @return {string}
- */
-progress.activityCssClass = function (result) {
-  if (!result) {
-    return 'not_tried';
-  }
-  if (result === SUBMITTED_RESULT) {
-    return 'submitted';
-  }
-  if (result >= MINIMUM_OPTIMAL_RESULT) {
-    return 'perfect';
-  }
-  if (result >= MINIMUM_PASS_RESULT) {
-    return 'passed';
-  }
-  return 'attempted';
-};
-
-/**
- * Returns the "best" of the two results, as defined in apps/src/constants.js.
- * Note that there are negative results that count as an attempt, so we can't
- * just take the maximum.
- * @param {Number} a
- * @param {Number} b
- * @return {string} The result css class.
- */
-progress.mergedActivityCssClass = function (a, b) {
-  return progress.activityCssClass(mergeActivityResult(a, b));
-};
 
 progress.renderStageProgress = function (stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation) {
   var store = loadProgress({name: scriptName, stages: [stageData]}, currentLevelId, saveAnswersBeforeNavigation);
@@ -163,7 +121,7 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || progress.bestResultLevelId(level.ids, newProgress);
 
-          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
+          return Object.assign({}, level, {status: activityCssClass(newProgress[id])});
         })}))
       });
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {
