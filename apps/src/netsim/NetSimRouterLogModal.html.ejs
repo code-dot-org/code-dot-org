@@ -20,29 +20,28 @@ var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &
  * @name locals
  * @type {Object}
  * @property {boolean} isAllRouterLogMode
- * @property {boolean} canToggleRouterLogMode
+ * @property {boolean} canSetRouterLogMode
  * @property {string} currentTrafficFilter
  * @property {string} localAddress
  * @property {string} sortBy
  * @property {boolean} sortDescending
  */
 
-function routerLogModeToggleButton() {
-  if (!locals.canToggleRouterLogMode) {
+function routerLogModeDropdown() {
+  if (!locals.canSetRouterLogMode) {
     return '';
   }
 
-  var markup = '<button type="button" id="routerlog-toggle" class="pull-right btn btn-primary btn-mini">';
-  if (locals.isAllRouterLogMode) {
-    markup += i18n.logBrowserHeader_toggleMine()
-  } else {
-    markup += i18n.logBrowserHeader_toggleAll()
-  }
-  markup += '</button>';
+  var markup = '<select id="routerlog-mode" class="pull-right">';
+  markup += '<option' + (locals.isAllRouterLogMode ? '' : ' selected') + ' value="mine">' +
+      i18n.logBrowserHeader_toggleMine() + '</option>';
+  markup += '<option' + (locals.isAllRouterLogMode ? ' selected' : '')+ ' value="all">' +
+      i18n.logBrowserHeader_toggleAll() + '</option>';
+  markup += '</select>';
   return markup;
 }
 
-function trafficFilterCycleDropdown() {
+function trafficFilterDropdown() {
   if (!locals.localAddress) {
     return '';
   }
@@ -55,10 +54,14 @@ function trafficFilterCycleDropdown() {
   };
 
   var markup = '<select id="traffic-filter" class="pull-right">';
-  markup += '<option' + selectedIf(/^none/) + ' value="none">' + i18n.logBrowserHeader_showAllTraffic() + '</option>';
-  markup += '<option' + selectedIf(/^with/) + ' value="with ' + localAddress + '">' + i18n.logBrowserHeader_showMyTraffic() + '</option>';
-  markup += '<option' + selectedIf(/^from/) + ' value="from ' + localAddress + '">' + i18n.logBrowserHeader_showTrafficFromMe() + '</option>';
-  markup += '<option' + selectedIf(/^to/) + ' value="to ' + localAddress + '">' + i18n.logBrowserHeader_showTrafficToMe() + '</option>';
+  markup += '<option' + selectedIf(/^none/) + ' value="none">' +
+      i18n.logBrowserHeader_showAllTraffic() + '</option>';
+  markup += '<option' + selectedIf(/^with/) + ' value="with ' + localAddress + '">' +
+      i18n.logBrowserHeader_showMyTraffic() + '</option>';
+  markup += '<option' + selectedIf(/^from/) + ' value="from ' + localAddress + '">' +
+      i18n.logBrowserHeader_showTrafficFromMe() + '</option>';
+  markup += '<option' + selectedIf(/^to/) + ' value="to ' + localAddress + '">' +
+      i18n.logBrowserHeader_showTrafficToMe() + '</option>';
   markup += '</select>';
   return markup;
 }
@@ -100,8 +103,8 @@ function sortMarkupFor(sortKey) {
 <div class="modal-dialog modal-lg">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <%- routerLogModeToggleButton() %>
-      <%- trafficFilterCycleDropdown() %>
+      <%- routerLogModeDropdown() %>
+      <%- trafficFilterDropdown() %>
       <h4 class="modal-title"><%= dialogTitle() %></h4>
     </div>
     <div class="modal-body">
