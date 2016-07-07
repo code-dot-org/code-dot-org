@@ -1,7 +1,7 @@
 <Maze>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2016-07-06T22:36:36.053Z",
+  "created_at": "2016-07-06T22:36:36.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
@@ -28,10 +28,13 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There is 1 block that you need to add to move the bird to the pig.\",\r\n  \"hint_id\": \"K2.0_sequence_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

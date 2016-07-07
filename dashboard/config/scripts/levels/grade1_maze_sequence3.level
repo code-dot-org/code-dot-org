@@ -28,8 +28,7 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try adding one instruction at a time until you get to the pig.\",\r\n  \"hint_id\": \"grade1_maze_sequence3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
