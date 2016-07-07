@@ -121,9 +121,9 @@ class ApiController < ApplicationController
       response[:disablePostMilestone] =
         !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
 
-      recent_driver_ul = UserLevel.find_by(script: script, level: level, user: current_user).try(:driver_user_levels).try(:last)
-      if recent_driver_ul
-        response[:pairingDriver] = recent_driver_ul.user.name
+      recent_driver = UserLevel.most_recent_driver(script, level, current_user)
+      if recent_driver
+        response[:pairingDriver] = recent_driver
       end
     end
 

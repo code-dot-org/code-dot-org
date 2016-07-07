@@ -9,11 +9,13 @@ export default {
 
     function lazyInitDialog() {
       if (!pairingDialog) {
-        $('body').append('<div id="pairing"></div>');
+        const container = document.createElement('div');
+        container.id = 'pairing';
+        document.body.appendChild(container);
 
         pairingDialog = ReactDOM.render(
           <PairingDialog source={pairingUrl} />,
-          document.getElementById('pairing')
+          container
         );
       }
       pairingDialog.open();

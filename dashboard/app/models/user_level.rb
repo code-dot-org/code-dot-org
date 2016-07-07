@@ -70,6 +70,11 @@ class UserLevel < ActiveRecord::Base
     driver_user_levels.present?
   end
 
+  def self.most_recent_driver(script, level, user)
+    most_recent = find_by(script: script, level: level, user: user).try(:driver_user_levels).try(:last)
+    most_recent ? most_recent.user.name : nil
+  end
+
   def handle_unsubmit
     if submitted_changed? from: true, to: false
       self.best_result = ActivityConstants::UNSUBMITTED_RESULT
