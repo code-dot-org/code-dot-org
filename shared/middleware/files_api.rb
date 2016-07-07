@@ -1,8 +1,11 @@
 require 'cdo/aws/s3'
+require 'cdo/share_filtering'
 require 'cdo/rack/request'
 require 'sinatra/base'
 
 class FilesApi < Sinatra::Base
+  BLOCKLY_SOURCE_FILENAME = 'main.json'
+
   def max_file_size
     5_000_000 # 5 MB
   end
@@ -38,6 +41,10 @@ class FilesApi < Sinatra::Base
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
 
     teaches_student?(owner_user_id)
+  end
+
+  def can_view_profane_or_pii_assets?(encrypted_channel_id)
+    owns_channel?(encrypted_channel_id) || admin?
   end
 
   def file_too_large(quota_type)
@@ -100,6 +107,28 @@ class FilesApi < Sinatra::Base
     get_bucket_impl(endpoint).new.list(encrypted_channel_id).to_json
   end
 
+  def profanity_privacy_violation?(filename, body)
+    return false unless filename == BLOCKLY_SOURCE_FILENAME
+
+    body_string = body.string
+
+    begin
+      parsed_json = JSON.parse(body_string)
+    rescue JSON::ParserError
+      return false
+    end
+
+    blockly_source = parsed_json['source']
+    return false unless blockly_source
+
+    begin
+      return ShareFiltering.find_share_failure(blockly_source, request.locale)
+    rescue OpenURI::HTTPError, IO::EAGAINWaitReadable
+      # If WebPurify or Geocoder are unavailable, default to viewable
+      return false
+    end
+  end
+
   #
   # GET /v3/(animations|assets|sources)/<channel-id>/<filename>?version=<version-id>
   #
@@ -122,7 +151,7 @@ class FilesApi < Sinatra::Base
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
-
+    not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
     result[:body]
   end
 

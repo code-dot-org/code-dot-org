@@ -1,5 +1,6 @@
 require_relative 'files_api_test_base' # Must be required first to establish load paths
 require_relative 'files_api_test_helper'
+require 'cdo/share_filtering'
 
 class SourcesTest < FilesApiTestBase
 
@@ -44,6 +45,76 @@ class SourcesTest < FilesApiTestBase
 
     # Check cache headers
     assert_equal 'private, must-revalidate, max-age=0', last_response['Cache-Control']
+  end
+
+  def test_get_source_blocks_profanity_violations
+    # Given a Play Lab program with a privacy violation
+    filename = FilesApi::BLOCKLY_SOURCE_FILENAME
+    file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
+    file_headers = { 'CONTENT_TYPE' => 'application/json' }
+    delete_all_source_versions(filename)
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+
+    # Given a program with profanity
+    WebPurify.stubs(:find_potential_profanity).returns true
+
+    # owner can view
+    @api.get_object(filename)
+    assert successful?
+
+    # non-owner cannot view
+    with_session(:non_owner) do
+      non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+      non_owner_api.get_object(filename)
+      refute successful?
+      assert not_found?
+    end
+  end
+
+  def test_get_source_blocks_privacy_violations
+    filename = FilesApi::BLOCKLY_SOURCE_FILENAME
+    file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
+    file_headers = { 'CONTENT_TYPE' => 'application/json' }
+    delete_all_source_versions(filename)
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+
+    # Given a program with profanity or PII
+    WebPurify.stubs(:find_potential_profanity).returns true
+
+    # owner can view
+    @api.get_object(filename)
+    assert successful?
+
+    # admin can view
+    with_session(:admin) do
+      admin_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+      FilesApi.any_instance.stubs(:admin?).returns(true)
+      admin_api.get_object(filename)
+      assert successful?
+      FilesApi.any_instance.unstub(:admin?)
+    end
+
+    # non-owner cannot view
+    with_session(:non_owner) do
+      non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+      non_owner_api.get_object(filename)
+      refute successful?
+      assert not_found?
+    end
+
+    # teacher cannot view
+    with_session(:teacher) do
+      teacher_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+      FilesApi.any_instance.stubs(:teaches_student?).returns(true)
+      teacher_api.get_object(filename)
+      refute successful?
+      assert not_found?
+      FilesApi.any_instance.unstub(:teaches_student?)
+    end
+
+    @api.delete_object(filename)
   end
 
   def test_replace_version
