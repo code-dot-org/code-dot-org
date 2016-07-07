@@ -188,9 +188,7 @@ export const ProgressDot = React.createClass({
               styles.status[level.status || 'not_tried']
             ]}
           >
-            {level.kind === 'named_level' ? '\u00a0' : (
-              level.paired ? <i className='fa fa-users' /> : level.title
-            )}
+            {level.kind === 'named_level' ? '\u00a0' : level.title}
           </div>
         }
         {showLevelName &&
