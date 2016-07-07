@@ -1227,12 +1227,4 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
   end
-
-  test "milestone with pairings does not recreate paired user level if existing" do
-
-  end
-
-  test "milestone without pairings does not update previously paired user levels" do
-
-  end
 end
