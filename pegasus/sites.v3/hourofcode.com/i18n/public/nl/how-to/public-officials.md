@@ -1,6 +1,7 @@
 ---
 
-titel: < % = hoc_s(:title_how_to_volunteers) %> lay-out: breed
+title: <%= hoc_s(:title_how_to_volunteers) %>
+layout: wide
 nav: how_to_nav
 
 ---

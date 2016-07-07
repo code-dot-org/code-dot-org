@@ -18,7 +18,7 @@ Cóntalle ós teus amigos sobre **#HourOfCode**!
 
 ## 2. Pídelle a todo o teu colexio que ofreza unha Hora do Código
 
-[Envía este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) ó teu director e desafía a cada clase da túa escola a apuntarse. < % si @pais == 'us' %> Un colexio con sorte en *cada* estado dos Estados Unidos (e D.C. Washington) vai gañar $10.000 en tecnoloxía. <% end %>
+[Envía este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) ó teu director e desafía a cada clase da túa escola a apuntarse. <% if @country == 'us' %> Un colexio con sorte en *cada* estado dos Estados Unidos (e D.C. Washington) vai gañar $10.000 en tecnoloxía. <% end %>
 
 ## 3. Preguntalle a tua empresa para que se implique
 

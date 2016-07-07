@@ -17,7 +17,7 @@
     "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
     "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
     "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  ---
+---
 
 <%
     facebook = {:u=>"http://#{request.host}/us"}
@@ -28,7 +28,7 @@
 
 # Bedankt dat je je hebt opgegeven om een CodeUur te organiseren!
 
-Je maakt het mogelijk voor studenten over de hele wereld om te leren van één uur van CodeUur die *de rest van hun leven zal veranderen*, tijdens < % = campaign_date('full') % >. We'll be in touch about new tutorials and other exciting updates. Wat kunt u nu doen?
+Je maakt het mogelijk voor studenten over de hele wereld om te leren van één uur van CodeUur die *de rest van hun leven zal veranderen*, tijdens <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Wat kunt u nu doen?
 
 ## 1. Spreid het woord
 

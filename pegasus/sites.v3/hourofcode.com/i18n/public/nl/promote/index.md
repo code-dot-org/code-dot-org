@@ -1,6 +1,7 @@
 ---
 
-titel: < % = hoc_s(:title_how_to_promote) %> lay-out: breed
+title: <%= hoc_s(:title_how_to_promote) %>
+layout: wide
 nav: promote_nav
 
 ---
@@ -22,7 +23,7 @@ Vertel uw vrienden over de **#HourOfCode**!
 
 ## 2. Vraag je hele school om een Uur Code aan te bieden
 
-[Stuur deze e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) naar uw opdrachtgever en daag elk klaslokaal op uw school uit om aan te melden. < % als @country == 'ons' %> Een gelukkige school in *elke* Amerikaanse staat (en Washington D.C.) wint $10000 waard van technologie. (Dit geldt alleen voor de Verenigde Staten). <% end %>
+[Stuur deze e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) naar uw opdrachtgever en daag elk klaslokaal op uw school uit om aan te melden. <% if @country == 'us' %> Een gelukkige school in *elke* Amerikaanse staat (en Washington D.C.) wint $10000 waard van technologie. (Dit geldt alleen voor de Verenigde Staten). <% end %>
 
 ## 3. Vraag je werkgever betrokken te raken
 

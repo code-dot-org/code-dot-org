@@ -1,6 +1,7 @@
 ---
 
-titel: < % = hoc_s(:title_press_release) %> lay-out: breed
+title: <%= hoc_s(:title_press_release) %>
+layout: wide
 nav: promote_nav
 
 ---

@@ -11,9 +11,6 @@ Code.org realizará una gran variedad de actividades de la Hora del Código en l
 
 Nos gustaría ofrecer una amplia variedad de opciones atractivas, pero el objetivo principal es optimizar la experiencia de los estudiantes y profesores que son nuevos en las Ciencias de la Computación. Por favor usa este documento como guía para la creación de tu actividad, diseñada para usuarios sin experiencia alguna en programación ni Ciencias de la Computación.
 
-  
-
-
 **Después de leer las pautas, puede enviar el tutorial a través de nuestra [Página de la Hora del Código ™ de entrega de actividades](https://goo.gl/kNrV3l).**
 
 **NUEVO:** A diferencia de años anteriores, pretendemos introducir un nuevo formato "dirigida por el maestro" en las actividades de la Hora del Código. Estos serán listados debajo de las actividades autoguiadas en paginas orientadas al estudiante y correos electrónicos. Detalles a continuación.
@@ -153,7 +150,7 @@ Visite [ la página de envío de actividades de Hora de Código ™ ](https://go
           * Compartir en las redes sociales que completaron la Hora del Código
           * Recibe un certificado que dice que completaron la Hora del Código
           * Ver tablas con los países/ciudades que tienen las mayores tasas de participación en las actividades de la Hora del Código
-          * Para los usuarios que pasan una hora en tu actividad y no la completan, favor incluye un botón en tu actividad que diga "He terminado con mi Hora del Código" que une de nuevo a [<% =resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) tambien. 
+          * Para los usuarios que pasan una hora en tu actividad y no la completan, favor incluye un botón en tu actividad que diga "He terminado con mi Hora del Código" que une de nuevo a [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) tambien. 
   * *(Opcional)* Realizaremos un seguimiento con un enlace a una encuesta, pidiendo un informe de los siguientes parámetros de la actividad en la semana del 7 de diciembre, 12:01 a.m. hasta el 13 de diciembre, 11:59 p.m.) 
       * Para actividades en línea (especialmente aplicaciones para smartphone/tablet): 
           * Número de usuarios

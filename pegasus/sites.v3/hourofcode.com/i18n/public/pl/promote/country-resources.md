@@ -1,6 +1,7 @@
 ---
 
-Tytuł: < % = hoc_s(:title_country_resources) %> Układ: szeroki
+title: <%= hoc_s(:title_country_resources) %>
+layout: wide
 nav: promote_nav
 
 ---

@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Grazas por rexistrarte para realizar unha Hora do Código!
 
-Ti estas a facer posible que os estudantes de todo o mundo aprendan unha Hora do Código que pode *cambiar resto das suas vidas*, dende o < % = 7 ao 13_de Decembro('completo') % &gt. We'll be in touch about new tutorials and other exciting updates. ¿Qué podes facer agora?
+Ti estas a facer posible que os estudantes de todo o mundo aprendan unha Hora do Código que pode *cambiar resto das suas vidas*, dende o <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. ¿Qué podes facer agora?
 
 ## 1. Corre a voz
 

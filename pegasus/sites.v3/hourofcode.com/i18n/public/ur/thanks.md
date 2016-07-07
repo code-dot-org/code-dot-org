@@ -17,7 +17,7 @@
     "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
     "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
     "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  ---
+---
 
 <%
     facebook = {:u=>"http://#{request.host}/us"}
@@ -28,7 +28,7 @@
 
 # آور-آف-کوڈ کو ھوسٹ کرنے کے لیے سائن-اَپ کرنے کا شکریہ!
 
-آپ دنیا بھر کے تمام اسٹوڈینٹس کے لیے آور-آف-کوڈ کو سیکھنا ممکن بنا رہے ہیں جو کہ *ان کی باقی ماندہ تمام زندگی تبدیل کر دے گا* دوران، <%= ('campaign_date('full %> We'll be in touch about new tutorials and other exciting updates. اب آپ کیا کر سکتے ہیں؟
+آپ دنیا بھر کے تمام اسٹوڈینٹس کے لیے آور-آف-کوڈ کو سیکھنا ممکن بنا رہے ہیں جو کہ *ان کی باقی ماندہ تمام زندگی تبدیل کر دے گا* دوران، <%= campaign_date('full') %> We'll be in touch about new tutorials and other exciting updates. اب آپ کیا کر سکتے ہیں؟
 
 ## 1. دوسروں تک بھجیں
 

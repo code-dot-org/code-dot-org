@@ -1,6 +1,7 @@
 ---
 
-Tytuł: < % = hoc_s(:title_how_to_promote) %> Układ: szeroki
+title: <%= hoc_s(:title_how_to_promote) %>
+layout: wide
 nav: promote_nav
 
 ---
@@ -22,7 +23,7 @@ Powiedz swoim znajomym o **#HourOfCode**!
 
 ## 2. Zaproponuj całej swojej szkole udział w Godzinie Kodowania
 
-[Wyślij tego e-maila](<%= resolve_url('/promote/resources#sample-emails') %>) swojemu dyrektorowi i zaproś każdą klasę w swojej szkole, aby się zarejestrowała. < % jeśli @country == 'nas' %> Jedna szczęśliwa szkoła w *każdym* stanie USA (i w Washington D.C.) wygra technologię wartą 10.000 dolarów. <% end %>
+[Wyślij tego e-maila](<%= resolve_url('/promote/resources#sample-emails') %>) swojemu dyrektorowi i zaproś każdą klasę w swojej szkole, aby się zarejestrowała. <% if @country == 'us' %> Jedna szczęśliwa szkoła w *każdym* stanie USA (i w Washington D.C.) wygra technologię wartą 10.000 dolarów. <% end %>
 
 ## 3. Poproś swojego pracodawcę o przyłączenie się
 
