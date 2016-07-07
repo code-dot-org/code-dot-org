@@ -399,7 +399,6 @@ function renderFooterInSharedGame() {
     {
       text: commonMsg.openWorkspace(),
       link: getProjectUrl() + '/view',
-      newWindow: true
     },
     {
       text: commonMsg.copyright(),
