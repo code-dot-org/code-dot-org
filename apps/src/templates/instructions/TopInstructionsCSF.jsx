@@ -179,7 +179,7 @@ var TopInstructions = React.createClass({
     };
   },
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     // Update right col width now that we know how much space it needs, and
     // rerender if it has changed. One thing to note is that if we end up
     // resizing our column significantly, it can result in our maxNeededHeight
@@ -190,6 +190,16 @@ var TopInstructions = React.createClass({
       this.setState({
         rightColWidth: width
       });
+    }
+
+    const gotNewFeedback = this.props.feedback && !prevProps.feedback;
+    if (gotNewFeedback) {
+      this.setState({
+        promptForHint: false
+      });
+      if (this.props.collapsed) {
+        this.handleClickCollapser();
+      }
     }
 
     this.adjustMaxNeededHeight();
@@ -365,6 +375,9 @@ var TopInstructions = React.createClass({
       this.setState({
         promptForHint: true
       });
+      if (this.props.collapsed) {
+        this.handleClickCollapser();
+      }
     }
   },
 
@@ -379,8 +392,8 @@ var TopInstructions = React.createClass({
     this.props.showInstructionsDialog();
   },
 
-  shouldPromptForHint() {
-    return this.state && this.state.promptForHint;
+  shouldDisplayHintPrompt() {
+    return this.state && this.state.promptForHint && !this.props.collapsed;
   },
 
   render: function () {
@@ -459,14 +472,14 @@ var TopInstructions = React.createClass({
                 />
               }
             </div>
-            {this.props.feedback && <InlineFeedback
+            {this.props.feedback && !this.props.collapsed && <InlineFeedback
                 style={{
                   container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
                   message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
                 }}
                 message={this.props.feedback.message}
             />}
-            {this.shouldPromptForHint() && <HintPrompt
+            {this.shouldDisplayHintPrompt() && <HintPrompt
                 style={{
                   container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
                   message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
