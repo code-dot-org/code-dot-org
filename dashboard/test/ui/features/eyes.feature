@@ -199,9 +199,9 @@ Examples:
   | http://learn.code.org/s/allthethings/stage/3/puzzle/6?noautoplay=true | auto open function editor |
   | http://learn.code.org/s/algebra/stage/10/puzzle/6?noautoplay=true     | auto open contract editor |
   | http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true      | auto open variable editor |
-  | http://learn.code.org/s/allthethings/stage/23/puzzle/1?noautoplay=true | star wars |
-  | http://learn.code.org/s/allthethings/stage/23/puzzle/2?noautoplay=true | star wars blocks |
-  | http://learn.code.org/s/allthethings/stage/24/puzzle/1?noautoplay=true | minecraft |
+  | http://learn.code.org/s/allthethings/stage/24/puzzle/1?noautoplay=true | star wars |
+  | http://learn.code.org/s/allthethings/stage/24/puzzle/2?noautoplay=true | star wars blocks |
+  | http://learn.code.org/s/allthethings/stage/25/puzzle/1?noautoplay=true | minecraft |
   | http://learn.code.org/s/course1/stage/11/puzzle/1?noautoplay=true      | wordsearch level |
 
 @dashboard_db_access

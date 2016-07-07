@@ -147,14 +147,16 @@ class Deliverer
     message.puts 'MIME-Version: 1.0'
 
     attachments = header['attachments'] || {}
+    if params['attachments']
+      attached_files = Poste2.load_attachments(params['attachments'])
+      attachments.merge! attached_files
+    end
 
-    #unless attachments.empty?
     marker = "==_mimepart_#{SecureRandom.hex(17)}"
     message.puts "Content-Type: multipart/mixed; boundary=\"#{marker}\""
 
     message.puts ''
     message.puts "--#{marker}"
-    #end
 
     message.puts 'Content-Type: text/html; charset=UTF-8'
     message.puts 'Content-Transfer-Encoding: 8bit'
@@ -169,7 +171,8 @@ class Deliverer
         message.puts 'Content-Transfer-Encoding: base64'
         message.puts "Content-Disposition: attachment; filename=\"#{filename}\""
         message.puts ''
-        message.write content.scan(/.{61}/).join("\n")
+
+        message.write content.scan(/.{1,61}/).join("\n")
       end
     end
 

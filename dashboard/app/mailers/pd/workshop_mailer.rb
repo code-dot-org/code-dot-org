@@ -94,12 +94,12 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
 
-    mail content_type: 'text/html',
+    attachments['certificate.jpg'] = generate_csf_certificate if @workshop.course == Pd::Workshop::COURSE_CSF
+
+    mail content_type: 'multipart/mixed',
       from: from_hadi,
       subject: 'How was your Code.org workshop?',
       to: email_address(@teacher.name, @teacher.email)
-
-    attachments['certificate.jpg'] = generate_csf_certificate if @workshop.course == Pd::Workshop::COURSE_CSF
   end
 
   private
@@ -112,7 +112,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
       height: 100,
     )
     image.format = 'jpg'
-    Base64.encode64(image.to_blob)
+    image.to_blob
   end
 
   def email_address(display_name, email)

@@ -17,11 +17,10 @@ require 'cdo/only_one'
 require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'
 
-FiveMinutes = 5 * 60 * 1000
-OneHour = 60 * 60 * 1000
-OneDay = 24 * OneHour
+SECONDS_PER_MSEC = 1000
+ONE_HOUR_MSEC = 60 * 60 * SECONDS_PER_MSEC
 
-ExcludedBrowsers = [
+EXCLUDED_BROWSERS = [
   'bingbot',
   'Camino',
   'Chrome Frame',
@@ -31,6 +30,7 @@ ExcludedBrowsers = [
   'IE 7.0',
   'IE 8.0',
   'IE 9.0',
+  'IE 10.0',
   'IE Mobile',
   'Other',
   'Slurp',
@@ -40,11 +40,11 @@ ExcludedBrowsers = [
   'Mo%20PTT/50 CFNetwork/672.1.15 Darwin/14.0.0',
   'AppleMail',
   /Edmodo/, # edmodo customer support said we can ignore this
-]
+].freeze
 
-ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415, 3468, 4186, 4188, 4283]
+EXCLUDED_LEVELS = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415, 3468, 4186, 4188, 4283].freeze
 
-HardLevelAttemptsPerHour = {
+HARD_LEVEL_ATTEMPTS_PER_HOUR = {
   50 => 10,
   54 => 20,
   57 => 10,
@@ -58,11 +58,11 @@ HardLevelAttemptsPerHour = {
   1434 => 10,
   1441 => 10,
   3301 => 20
-}
+}.freeze
 
-MinimumAttemptsPerHour = 10
+MINIMUM_ATTEMPTS_PER_HOUR = 10
 
-HoursToTest = 2
+HOURS_TO_TEST = 2
 
 $user_agent_cache = {}
 def browser_name(user_agent)
@@ -75,12 +75,7 @@ def browser_name(user_agent)
   $user_agent_cache[user_agent] = name
 end
 
-def slog(h)
-  puts ({ application: :dashboard }).merge(h).to_json
-end
-
 class Collater
-
   def initialize
     @results = {browsers: {}, locales: {}}
   end
@@ -106,11 +101,9 @@ class Collater
     @results[:locales][locale][level][:starts] += 1 if tag == :activity_start
     @results[:locales][locale][level][:finishes] += 1 if tag == :activity_finish
   end
-
 end
 
 class Monitor
-
   def initialize(params)
     @start = params[:start]
     @finish = params[:finish]
@@ -158,10 +151,9 @@ class Monitor
     reader = Slog::Reader.new(secret: CDO.logentries_secret, hosts: @hosts)
     reader.get(filter: 'tag=activity_start OR tag=activity_finish', start: @start, end: @finish)
   end
-
 end
 
-BrowserToBrowserStack = {
+BROWSER_TO_BROWSER_STACK = {
   'IE 11.0' => {os: 'Windows', os_version: '8.1', browser: 'IE', browser_version: '11.0'},
   'IE 10.0' => {os: 'Windows', os_version: '7', browser: 'IE', browser_version: '10.0'},
   'IE 9.0' => {os: 'Windows', os_version: '7', browser: 'IE', browser_version: '9.0'},
@@ -171,10 +163,10 @@ BrowserToBrowserStack = {
   'Android' => {os: 'android', os_version: '4.4', device: 'Samsung Galaxy S5'},
   'Mobile Safari' => {os: 'ios', os_version: '8.0', device: 'iPad Air'},
   'Opera Mini' => {os: 'opera', device: 'Samsung Galaxy Tab'}
-}
+}.freeze
 
 def browserstack_url(browser, destination_url)
-  params = BrowserToBrowserStack[browser]
+  params = BROWSER_TO_BROWSER_STACK[browser]
   return nil unless params
 
   # eg: http://www.browserstack.com/start#os=Windows&os_version=7&browser=IE&browser_version=11.0&zoom_to_fit=true&full_screen=true&autofit=true&url=studio.code.org&resolution=2048x1536&speed=1
@@ -182,7 +174,7 @@ def browserstack_url(browser, destination_url)
 end
 
 def excluded_browser?(ua_string)
-  ExcludedBrowsers.any? do |r|
+  EXCLUDED_BROWSERS.any? do |r|
     if r.is_a? Regexp
       ua_string.match r
     else
@@ -192,31 +184,22 @@ def excluded_browser?(ua_string)
 end
 
 def main
-  now = DateTime.now.new_offset(0)
-
-  hours = HoursToTest
-  finish = DateTime.new(now.year, now.month, now.day, now.hour, now.minute).new_offset(0).strftime('%Q').to_i
-  start = finish - (hours * OneHour)
+  finish = DateTime.now.new_offset(0).strftime('%s') * SECONDS_PER_MSEC
+  start = finish - (HOURS_TO_TEST * ONE_HOUR_MSEC)
 
   Monitor.collate(start: start, finish: finish).each_by_browser do |i|
     next if excluded_browser?(i[:browser])
-    next if ExcludedLevels.include?(i[:level])
+    next if EXCLUDED_LEVELS.include?(i[:level])
 
     starts = i[:starts]
     finishes = [starts, i[:finishes]].min
 
-    min_attempts_per_hour =  HardLevelAttemptsPerHour[i[:level]] || MinimumAttemptsPerHour
+    min_attempts_per_hour = HARD_LEVEL_ATTEMPTS_PER_HOUR[i[:level]] || MINIMUM_ATTEMPTS_PER_HOUR
 
-    status = :pass if finishes > 0 || starts == 0
-    status ||= :fail if starts > (min_attempts_per_hour * hours)
-    status ||= :warn
+    if finishes == 0 && starts > min_attempts_per_hour * HOURS_TO_TEST
+      level_url = "https://studio.code.org/levels/#{i[:level]}"
 
-    starts == 0 ? 1.0 : finishes.to_f / starts.to_f
-
-    if status == :fail
-      level_url = "http://learn.code.org/levels/#{i[:level]}"
-
-      log_string = %[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{hours} hour(s)]
+      log_string = %[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{HOURS_TO_TEST} hour(s)]
       sl = Level.find(i[:level]).script_levels.first
       if sl
         level_url = "http://studio.code.org/s/#{sl.script.id}/level/#{sl.id}"

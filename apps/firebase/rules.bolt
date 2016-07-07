@@ -26,8 +26,8 @@ path /v3/channels/{channelId} {
   read() { isLoggedIn() }
 }
 
-path /v3/channels/{channelId}/serverTime/{user_id} is Number {
-  write() { auth.uid === user_id }
+path /v3/channels/{channelId}/serverTime is Number {
+  write() { isLoggedIn() }
 }
 
 path /v3/channels/{channelId}/counters is Counters {
