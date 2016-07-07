@@ -102,43 +102,21 @@ describe("NetSimRouterLogModal", function () {
       assert.equal('none', modal.currentTrafficFilter_);
     });
 
-    it("can cycle traffic filter modes only when the local client has an address", function () {
-      assert.isFalse(modal.canCycleTrafficFilterMode_());
-      assert.isFalse(!!localNode.getAddress());
-
-      modal.onShardChange(testShard, localNode);
-      assert.isFalse(modal.canCycleTrafficFilterMode_());
-      assert.isFalse(!!localNode.getAddress());
-
-      localNode.connectToRouter(router);
-      assert.isTrue(modal.canCycleTrafficFilterMode_());
-      assert.isTrue(!!localNode.getAddress());
-    });
-
-    it("cycles traffic filter modes in order", function () {
+    it("can set traffic filter modes", function () {
       modal.onShardChange(testShard, localNode);
       localNode.connectToRouter(router);
       var address = localNode.getAddress();
       assert.equal('none', modal.currentTrafficFilter_);
 
-      modal.cycleTrafficFilterMode_();
+      modal.setTrafficFilterMode_('with ' + address);
       assert.equal('with ' + address, modal.currentTrafficFilter_);
-
-      modal.cycleTrafficFilterMode_();
-      assert.equal('from ' + address, modal.currentTrafficFilter_);
-
-      modal.cycleTrafficFilterMode_();
-      assert.equal('to ' + address, modal.currentTrafficFilter_);
-
-      modal.cycleTrafficFilterMode_();
-      assert.equal('none', modal.currentTrafficFilter_);
     });
 
     it("disconnecting from a router coerces filter mode back to 'none'", function () {
       modal.onShardChange(testShard, localNode);
       localNode.connectToRouter(router);
       var address = localNode.getAddress();
-      modal.cycleTrafficFilterMode_();
+      modal.setTrafficFilterMode_('with ' + address);
       assert.equal('with ' + address, modal.currentTrafficFilter_);
 
       localNode.disconnectRemote();
