@@ -57,14 +57,14 @@
         <block type="simple_move_right"/>
         <block type="simple_move_left"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-8">???</title>
+          <title name="TIMES" config="3-10">???</title>
         </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES">uninitialized</title>
+          <title name="TIMES" config="3-10">6</title>
         </block>
       </xml>
     </recommended_blocks>
