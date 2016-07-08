@@ -6,27 +6,26 @@ nav: promote_nav
 
 ---
 
-
 ### Нижче наводиться зразок резолюції підтримки тижня інформатики та її цілей, який можуть використати органи державної та місцевої влади.
 
   
-[Резолюція або оголошення від палати, парламенту, штата, округу або міста ###] – Тиждень освіти з інформатики підкреслює важливу роль, яку інформатика грає в перетворенні бачення нашого суспільства, і те як інформатика дає можливість впроваджувати інновації та створювати простір для економічних можливостей;
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-Рішення парламенту
+[HOUSE OR SENATE RESOLUTION ###]
 
-Дата
+[DATE]
 
-Оскільки обчислювальна техніка вже є невід'ємною частиною культури та змінює уявлення про те, як люди взаємодіють одне з одним та з навколишнім світом;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-Завдяки інформатиці промисловість якісно змінюється, створюються нові галузі торгівлі, впроваджуються інновації у всіх галузях науки та посилюється продуктивність у встановлених секторах економіки;
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-Тоді як галузь інформатики лежить в основі сектора інформаційних технологій нашої економіки та вносить значний вклад в економічне виробництво в США;
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Тоді як галузь інформатики є основоположною наукою для цифрової епохи;
+Whereas the field of computer science is a foundational science for the digital age;
 
 Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
-Whereas the outlook for computer science jobs is bright with one in every two STEM jobs in the country in computing occupations;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
@@ -53,4 +52,3 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 (4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
-

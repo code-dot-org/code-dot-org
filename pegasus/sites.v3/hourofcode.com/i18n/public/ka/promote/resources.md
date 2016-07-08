@@ -9,15 +9,15 @@ nav: promote_nav
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
-# გაუკეთეთ რეკლამა კოდის ერთ საათს
+# გაუწიეთ პოპულარიზაცია კოდის ერთ საათს
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## ატარებთ "კოდის ერთ საათს"? <a
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
 <a id="posters"></a>
 
-## გამოფინეთ ეს პლაკატები თქვენს სკოლაში
+## გააკარით ეს პლაკატები თქვენს სკოლაში
 
 <%= view :promote_posters %>
 
@@ -31,44 +31,44 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## გამოიყენეთ კოდის ერთი საათის ლოგო ხმის გასავრცელებლად
 
 [![გამოსახულება](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[მაღალი გარჩევადობის ვერსიების გადმოწერა](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+**"კოდის ერთი საათი" არის სავაჭრო ნიშანი. ჩვენ არ გვსურს ამ გამოყენების შეზღუდვა, მაგრამ გვინდა დავრწმუნდეთ, რომ იგი გარკვეულ წესებს შეესაბამება:**
 
-  1. ნებისმიერი მითითება "კოდის საათზე" უნდა გამოყენებულ იქნეს ისე, რომ გამოჩნდეს არა როგორც თქვენი ბრენდის სახელი, არამედ როგორც მითითება კოდის საათზე როგორც grassroots-ის მოძრაობაზე. კარგი მაგალითი: "იმონაწილევეთ კოდის საათი™-ში ACMECorp.com-ზე". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-  3. ჩასვით ენა თქვენს გვერდზე (ან footer-ში), CSEdWeek-ის ბმულებისა და Code.org-ის ვებგვერდების ჩათვლით, რომელშიც შემდეგი რამ იქნება გადმოცემული:
+  1. ნებისმიერი მითითება "კოდის ერთ საათზე" უნდა გამოყენებულ იქნეს ისე, რომ გამოჩნდეს არა როგორც თქვენი ბრენდის სახელი, არამედ როგორც მითითება კოდის ერთ საათზე, როგორც საერთაშორისო მოძრაობაზე. კარგი მაგალითი: "მიიღეთ მონაწილეობა კოდის ერთი საათში™ ACMECorp.com-ზე". ცუდი მაგალითი: "სცადეთ კოდის ერთი საათი ACME Corp-ის მეშვეობით".
+  2. გამოიყენეთ "TM" ზედა ინდექსი ყველაზე გამოსაჩენ ადგილებში სადაც ახსენებთ "კოდის ერთ საათს", თქვენს ვებგვერდზეც და აპლიკაციის აღწერილობაშიც.
+  3. ჩასვით ტექსტი თქვენს გვერდზე, CSEdWeek-ის ბმულებისა და Code.org-ის ვებგვერდების ჩათვლით, რომელშიც შემდეგი რამ იქნება გადმოცემული:
     
-    *"'კოდის საათი™' არის ქვეყნის მასშტაბის ინიციატივა კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის[csedweek.org] და Code.org-ის[code.org] მიერ, წარვუდგნოთ მილიონობით მოსწავლეს კომპიუტერული მეცნიერების და კომპიუტერული პროგრამირების ერთი საათი."*
+    *"'კოდის ერთი საათი™' არის ქვეყნის მასშტაბის ინიციატივა, წარდგენილი კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის[csedweek.org] და Code.org-ის[code.org] მიერ, რომლის მიზანია წარვუდგნოთ მილიონობით მოსწავლეს კომპიუტერული მეცნიერების და კომპიუტერული პროგრამირების ერთი საათი."*
 
-  4. No use of "Hour of Code" in app names.
+  4. არ შეიძლება "Hour of Code"-ის გამოყენება აპლიკაციების სახელებში.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## ამობეჭდეთ ეს სტიკერები და დაურიგეთ თქვენს მოსწავლეებს
 
-(Stickers are 1" diameter, 63 per sheet)  
+(სტიკეტების დიამეტრია 1", თითო გვერდზე არის 63)  
 [![გამოსახულება](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## გაგზავნეთ ეს ელ. წერილები კოდის საათის რეკლამისთვის
+## გაგზავნეთ ეს ელ. წერილები კოდის ერთი საათის რეკლამისთვის
 
 <a id="email"></a>
 
 ## სთხოვეთ თქვენს სკოლას, დამსაქმებელს ან მეგობარს დარეგისტრირდეს:
 
-კომპიუტერები ყველგანაა, მაგრამ ნაკლები სკოლა ასწავლის კომპიუტერულ მეცნიერებას ვიდრე 10 წლის წინ. კარგი სიახლე ისაა, რომ ჩვენ ვმუშაობთ ამის შეცვლაზე. თუკი გსმენიათ Hour of Code-ის შესახებ, გეცოდინებათ რომ მან ისტორიაზე გავლენა იქონია. 100 მილიონზე მეტმა სტუდენტმა სცადა კოდის საათი.
+Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. კარგი სიახლე ისაა, რომ ჩვენ ვმუშაობთ ამის შეცვლაზე. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-კოდის საათის მეშვეობით, კომპიუტერულმა მეცნიერებამ Google-ს, MSN-ისა და Yahoo-ს მთავარი გვერდები დაიკავა! და დისნეი. ჩვენი მოძრაობის მხარდასაჭერად 100–ზე მეტი პირი და ორგანიზაცია გაერთიანდა. გასულ წელს, მსოფლიოს Apple-ის ყველა მაღაზია მასპინძლობდა კოდის საათს(Hour of Code) და პრეზიდენტმა ობამამაც კი დაწერა მისი კოდის პირველი ხაზი, როგორც კამპანიის ნაწილი.
+კოდის ერთი საათის მეშვეობით, კომპიუტერულმა მეცნიერებამ Google-ის, MSN-ისა და Yahoo-ს მთავარი გვერდები დაიკავა! და Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-მოდით წელს ის უფრო მასშტაბური გავხადოთ. მოგიწოდებთ შემოუერთდეთ "Hour of Code 2015"-ს. ჩაერთეთ კოდის საათის ღონიძიებაში კომპიუტერულ მეცნიერებათა საგანმანათლებლო კვირეულის განმავლობაში, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-გაავრცელე ინფორმაცია. უმასპინძლე ღონისძიებას. სთხოვე ადგილობრივ სკოლას მონაწილეობის მიღება. ან თვითონ მოსინჯე კოდის საათი -- ყველას ეძლევა საშუალება ისარგებლოს საფუძვლების შესწავლით.
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
 დაიწყეთ ვებგვერდზე http://hourofcode.com/<%= @country %>
 
@@ -78,15 +78,15 @@ nav: promote_nav
 
 **სათაური:** ადგილობრივი სკოლა შეურთდება მოსწავლეებისთვის კომპიტერული მეცნიერებების გაცნობის მისიას
 
-კომპიუტერები ყველგანაა, თუმცა სულ უფრო ცოტა სკოლაში ასწავლიან კომპიუტერულ მეცნიერებას ვიდრე ეს 10 წლის წინ ხდებოდა. გოგონები და უნცირესობები ნაკლებად არიან წარმოდგენილნი. კარგი სიახლე კი ის არის, რომ ამ პრობლემაზე მუშაობა მიმდინარეობს.
+Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. კარგი სიახლე ისაა, რომ ჩვენ ვმუშაობთ ამის შეცვლაზე.
 
-კოდის საათის მეშვეობით, კომპიუტერულმა მეცნიერებამ Google-ს, MSN-ისა და Yahoo-ს მთავარი გვერდები დაიკავა! და დისნეი. ჩვენი მოძრაობის მხარდასაჭერად 100–ზე მეტი პირი და ორგანიზაცია გაერთიანდა. გასულ წელს, მსოფლიოს Apple-ის ყველა მაღაზია მასპინძლობდა კოდის საათს(Hour of Code) და პრეზიდენტმა ობამამაც კი დაწერა მისი კოდის პირველი ხაზი, როგორც კამპანიის ნაწილი.
+კოდის ერთი საათის მეშვეობით, კომპიუტერულმა მეცნიერებამ Google-ის, MSN-ისა და Yahoo-ს მთავარი გვერდები დაიკავა! და Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-სწორედ ამიტომ [სკოლის სახელი] სკოლის [მოსწავლეთა რიცხვი]-ვე მოსწავლე იღებს მონაწილეობას ისტორიის უდიდეს ღონისძიებაში: კოდის ერთ საათში, რომელიც 7-13 დეკემბერს გაიმართება.
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-გწერთ, რათა მოგიწვიოთ გახნაზე, რომელზეც ბავშვები დაიწყებენ სწავლას და რომელიც ჩატარდება [DATE].
+გწერთ, რათა მოგიწვიოთ გახსნაზე, რომელზეც ბავშვები დაიწყებენ სწავლას და რომელიც ჩატარდება [DATE].
 
-არაკომერციული ორგანიზაცია Code.org -ის და სხვა 100-ზე მეტის მიერ ორგანიზებული "კოდის საათი" არის განაცხადი იმაზე, რომ მოსწავლეების დღევანდელი თაობა მზადაა დაეუფლოს იმ უნარებს, რომლებიც კრიტიკულად მნიშვნელოვანია 21-ე საუკუნეში წარმატების მისაღწევად. შემოგვიერთდით.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. შემოგვიერთდით.
 
 **კონტაქტი:** [თქვენი სახელი], [თანამდებობა], ტელეფონი: (212) 555-5555
 
@@ -102,33 +102,36 @@ nav: promote_nav
 
 ძვირფასო მშობლებო,
 
-ჩვენ ვცხოვრობთ ტექნოლოგიით გარშემორტყმულ სამყაროში. და ვიცით, რომ რა სფეროც არ უნდა აირჩიონჩვენმა მოსწავლეებმა მომავალში, მათი წარმატების მიღწევის უნარი დამოკიდებული იქნება იმის გაგებაზე თუ როგორ მუშაობს ტექნოლოგია. მაგრამ კომპიუტერულ მეცნიერებებს ძალიან ცოტა ადამიანი სწავლობს, ნაკლები, ვიდრე 10 წლის წინ სწავლობდა.
+ჩვენ ვცხოვრობთ ტექნოლოიებით აღსავსე სამყაროში. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-სწორედ ამიტომ ჩვენი სკოლა უერთდება ისტორიის მანძილზე უდიდეს სასწავლო ღონისძიებას: "კოდის საათი", კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულის განმავლობაში (დეკემბერი. 7-13). 100 მილიონზე მეტმა მოსწავლემ უკვე მიიღო მონაწილეობა კოდის საათში.
+But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
-ჩვენი "კოდის საათი" არის განაცხადი იმის შესახებ, რომ [სკოლის სახელი] მზად არის ასწავლოს 21-ე საუკუნის ეს ძირითადი უნარები. აუცილებელია, გავნაგრძოთ პროგრამირების სწავლება კოდის ერთი საათის შემდგომაც - სწორედ ამიტომ, ეს ღონისძიება არნახული მასშტაბის უნდა იყოს. მოგიწოდებთ, რომ ჩაერთოთ მოხალისედ, დაუკავშირდეთ ადგილობრივ მედიას, გაავრცელოთ ამბები სოციალურ ქსელებში და ჩაატაროთ დამატებითი კოდის ერთი საათი.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-ეს არის შანსი შევცვალოთ განათლების მომავალი [ქალაქის დასახელება]-ში.
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-დაწვრილებითი ინფორმაციისთვის იხილეთ http://hourofcode.com/<%= @country %>, და დაგვეხმარეთ ინფორმაციის გავრცელებაში.
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
-პატივისცემით,
+See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-თქვენი დირექტორი
+Sincerely,
+
+Your principal
 
 <a id="politicians"></a>
 
 ## მოიწვიეთ ადგილობრივი პოლიტიკოსები თქვენს სასკოლო ღონისძიებაზე:
 
-ძვირფასო [მერის / გამგებლის / წარმომადგენლის / დეპუტატის გვარი]:
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-იცით, რომ დღევანდელი მონაცემებით პროგრამირების ვაკანსიების და შესაბამის დარგში განათლების მიმღები სტუდენტების შეფარდება არის სამი ერთთან? და, დღესდღეობით, კომპიუტერული მეცნიერება არის *ყველა* ინდუსტრიის საფუძველი. თუმცა, სკოლების უმეტესობაში ის არ ისწავლება. [სკოლის დასახელება]-ში, ვცდილობთ ამის შეცვლას.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-სწორედ ამიტომ ჩვენი სკოლა უერთდება ისტორიის მანძილზე უდიდეს სასწავლო ღონისძიებას: "კოდის საათი", კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულის განმავლობაში (დეკემბერი. 7-13). 100 მილიონზე მეტმა მოსწავლემ უკვე მიიღო მონაწილეობა კოდის საათში.
+Computer science is foundational for *every* industry today. Yet 75% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-გწერთ, რათა მოგიწვიოთ კოდის ერთი საათის ღონისძიებაში მონაწილეობის მისაღებად და გახსნის ცერემონიაზე გამოსასვლელად. ღონისძიება ჩატარებდება [თარიღი, დრო, ადგილი] და მისი მიზანია განაცხადოს, რომ [ქალაქის სახელი] მზადაა ასწავლოს სკოლებში ეს 21-ე საუკუნისთვის აუცილებელი უნარები. ჩვენ გვინდა, რომ ჩვენი მოსწავლეები არა მხოლოდ მოიხმარდნენ ტექნოლოგიებს, არამედ ქმნიდნენ მათ.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-დამიკავშირდით [ტელეფონის ნომერი ან ელ. ფოსტის მისამართი]. ველი თქვენს პასუხს.
+I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-პატივისცემით, [NAME], [TITLE]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
+Sincerely, [NAME], [TITLE]

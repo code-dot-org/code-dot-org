@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
+# Kutsu terve oma kool osalema
 
-# Kutsu oma terve kool osalema
-
-Teave selle kohta, kuidas terve kool saaks osaleda Koodi Tunnil, tuleb siia.
-
+Information about getting whole schools to participate in the Hour of Code will go here.

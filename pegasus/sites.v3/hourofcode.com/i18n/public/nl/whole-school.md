@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # Zorg dat je hele school meedoet
 
-Information about getting whole schools to participate in the Hour of Code will go here.
-
+Hier komt informatie waarmee je je hele school kunt laten meedoen met het CodeUur.
