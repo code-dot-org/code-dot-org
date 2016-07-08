@@ -204,10 +204,7 @@
     "hide_view_data_button": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

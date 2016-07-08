@@ -32,8 +32,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "contained_level_names": null,
-    "start_animations": "{\r\n  \"orderedKeys\": [\"balloon\", \"pop\"],\r\n  \"propsByKey\": {\r\n    \"balloon\": {\r\n      \"name\": \"balloon\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/balloon.png\",\r\n      \"sourceSize\": {\"x\":444, \"y\": 598},\r\n      \"frameSize\": {\"x\":444, \"y\": 598},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"pop\": {\r\n      \"name\": \"pop\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/pop.png\",\r\n      \"sourceSize\": {\"x\":600, \"y\": 465},\r\n      \"frameSize\": {\"x\":600, \"y\": 465},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}"
+    "start_animations": "{\r\n  \"orderedKeys\": [\"balloon\", \"pop\"],\r\n  \"propsByKey\": {\r\n    \"balloon\": {\r\n      \"name\": \"balloon\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/balloon.png\",\r\n      \"sourceSize\": {\"x\":444, \"y\": 598},\r\n      \"frameSize\": {\"x\":444, \"y\": 598},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"pop\": {\r\n      \"name\": \"pop\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/pop.png\",\r\n      \"sourceSize\": {\"x\":600, \"y\": 465},\r\n      \"frameSize\": {\"x\":600, \"y\": 465},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

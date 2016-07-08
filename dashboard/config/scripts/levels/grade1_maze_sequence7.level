@@ -27,8 +27,7 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you're stuck, try adding one block at a time until you solve the puzzle.\",\r\n  \"hint_id\": \"grade1_maze_sequence7a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
