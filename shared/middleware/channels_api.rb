@@ -139,7 +139,7 @@ class ChannelsApi < Sinatra::Base
     content_type :json
 
     value = get_privacy_profanity(id)
-    {:abuse_score => "#{value}" }.to_json
+    {:has_violation => value }.to_json
   end
 
   def get_privacy_profanity(channel_id)

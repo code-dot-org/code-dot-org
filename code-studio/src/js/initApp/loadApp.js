@@ -1,6 +1,7 @@
 /* global dashboard, appOptions, addToHome */
 import $ from 'jquery';
 var renderAbusive = require('./renderAbusive');
+var renderPrivacyProfanityViolating = require('./renderPrivacyProfanityViolating');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
 var clientState = require('../clientState');
@@ -123,6 +124,10 @@ module.exports = function (callback) {
     dashboard.project.load().then(function () {
       if (dashboard.project.hideBecauseAbusive()) {
         renderAbusive();
+        return $.Deferred().reject();
+      }
+      if (dashboard.project.hideBecausePrivacyViolationOrProfane()) {
+        renderPrivacyProfanityViolating();
         return $.Deferred().reject();
       }
     }).then(callback);

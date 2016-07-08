@@ -60,6 +60,7 @@ var PathPart = {
 var current;
 var currentSourceVersionId;
 var currentAbuseScore = 0;
+var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
 
 /**
@@ -185,8 +186,42 @@ var projects = module.exports = {
    * @returns {boolean} true if project has been reported enough times to
    *   exceed our threshold
    */
+  hasPrivacyProfanityViolation: function () {
+    return currentHasPrivacyProfanityViolation;
+  },
+
+  /**
+   * @returns {boolean} true if project has been reported enough times to
+   *   exceed our threshold
+   */
   exceedsAbuseThreshold: function () {
     return currentAbuseScore >= ABUSE_THRESHOLD;
+  },
+
+  /**
+   * @return {boolean} true if we should show our abuse box instead of showing
+   *   the project.
+   */
+  hideBecausePrivacyViolationOrProfane: function () {
+    if (!this.hasPrivacyProfanityViolation() || appOptions.scriptId) {
+      // Never want to hide when in the context of a script, as this will always
+      // either be me or my teacher viewing my last submission
+      return false;
+    }
+
+    // When owners edit a project, we don't want to hide it entirely. Instead,
+    // we'll load the project and show them a small alert
+    var pageAction = parsePath().action;
+
+    // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
+    // by the user. In this case that's okay, since all that does is allow them to
+    // view a project that was marked as abusive.
+    if ((this.isOwner() || appOptions.isAdmin) &&
+        (pageAction === 'edit' || pageAction === 'view')) {
+      return false;
+    }
+
+    return true;
   },
 
   /**
@@ -735,9 +770,8 @@ function fetchAbuseScore(deferred) {
 
 function fetchPrivacyProfanityViolations(deferred) {
   channels.fetch(current.id + '/privacy-profanity', function (err, data) {
-    currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
-    console.log("Privacy resolved.");
-    console.log(currentAbuseScore);
+    // data.has_violation is 0 or true, coerce to a boolean
+    currentHasPrivacyProfanityViolation = (data && !!data.has_violation) || currentHasPrivacyProfanityViolation;
     deferred.resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
