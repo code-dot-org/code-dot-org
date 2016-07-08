@@ -130,6 +130,51 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
+  # GET /v3/channels/<channel-id>/privacy-profanity
+  #
+  # Get an indication of privacy/profanity violation.
+  #
+  get %r{/v3/channels/([^/]+)/privacy-profanity} do |id|
+    dont_cache
+    content_type :json
+
+    value = get_privacy_profanity(id)
+    {:abuse_score => "#{value}" }.to_json
+  end
+
+  def get_privacy_profanity(channel_id)
+    bucket = SourceBucket.new
+    filename = 'main.json'
+    result = bucket.get(channel_id, filename)
+    profanity_privacy_violation?(filename, result[:body])
+  end
+
+  require 'cdo/share_filtering'
+  # TODO(bcjordan): de-duplicate with files_api version.
+  def profanity_privacy_violation?(filename, body)
+    return false unless filename == 'main.json'
+
+    body_string = body.string
+
+    begin
+      parsed_json = JSON.parse(body_string)
+    rescue JSON::ParserError
+      return false
+    end
+
+    blockly_source = parsed_json['source']
+    return false unless blockly_source
+
+    begin
+      return !ShareFiltering.find_share_failure(blockly_source, request.locale).nil?
+    rescue OpenURI::HTTPError, IO::EAGAINWaitReadable
+      # If WebPurify or Geocoder are unavailable, default to viewable
+      return false
+    end
+  end
+
+  #
+  #
   # GET /v3/channels/<channel-id>/abuse
   #
   # Get an abuse score.

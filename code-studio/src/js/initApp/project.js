@@ -632,7 +632,7 @@ var projects = module.exports = {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
-              fetchAbuseScore(function () {
+              fetchAbuseScoreAndPrivacyViolations(function () {
                 deferred.resolve();
               });
             }, queryParams('version'));
@@ -650,7 +650,7 @@ var projects = module.exports = {
         } else {
           fetchSource(data, function () {
             projects.showHeaderForProjectBacked();
-            fetchAbuseScore(function () {
+            fetchAbuseScoreAndPrivacyViolations(function () {
               deferred.resolve();
             });
           }, queryParams('version'));
@@ -719,15 +719,42 @@ function fetchSource(channelData, callback, version) {
   }
 }
 
-function fetchAbuseScore(callback) {
+function fetchAbuseScore(deferred) {
   channels.fetch(current.id + '/abuse', function (err, data) {
     currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
-    callback();
+    console.log("Abuse resolved.");
+    console.log(currentAbuseScore);
+    deferred.resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
       // affect anything else
       throw err;
     }
+  });
+}
+
+function fetchPrivacyProfanityViolations(deferred) {
+  channels.fetch(current.id + '/privacy-profanity', function (err, data) {
+    currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
+    console.log("Privacy resolved.");
+    console.log(currentAbuseScore);
+    deferred.resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else
+      throw err;
+    }
+  });
+}
+
+function fetchAbuseScoreAndPrivacyViolations(callback) {
+  const deferredCallsToMake = [$.Deferred(fetchAbuseScore)];
+
+  if (dashboard.project.getStandaloneApp() === 'playlab') {
+    deferredCallsToMake.push($.Deferred(fetchPrivacyProfanityViolations));
+  }
+  $.when(...deferredCallsToMake).then(function () {
+    callback();
   });
 }
 
