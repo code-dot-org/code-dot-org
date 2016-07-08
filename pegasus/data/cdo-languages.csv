@@ -68,5 +68,5 @@ ur,ur,ur,ur-PK,اردو,Urdu (Pakistan),FALSE,TRUE,ur-PK,Urdu (Pakistan),,FALSE,
 uz,uz,uz,uz-UZ,Oʻzbekcha,Uzbek,FALSE,FALSE,uz,Uzbek,,FALSE,FALSE,FALSE
 vi,vi,vi,vi-VN,Tiếng Việt,Vietnamese,TRUE,TRUE,vi,Vietnamese,Giờ của mã,FALSE,TRUE,TRUE
 zh-CN,cn,zh,zh-CN,简体字,Chinese (Simplified),TRUE,TRUE,zh-CN,Chinese Simplified,编程一小时,TRUE,TRUE,TRUE
-zh-TW,tw,zh,zh-TW,繁體字,Chinese (Traditional),TRUE,TRUE,zh-TW,Chinese Traditional,一小時程式設計,TRUE,TRUE,TRUE
+zh-TW,zh,zh,zh-TW,繁體字,Chinese (Traditional),TRUE,TRUE,zh-TW,Chinese Traditional,一小時程式設計,TRUE,TRUE,TRUE
 zu,zu,zu,zu-ZA,isiZulu,Zulu,FALSE,FALSE,zu,Zulu,,FALSE,FALSE,FALSE
