@@ -28,8 +28,7 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There is 1 block that you need to add to move the bird to the pig.\",\r\n  \"hint_id\": \"K2.0_sequence_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
