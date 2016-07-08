@@ -32,7 +32,8 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Use the jump block to move forward without drawing a line.\",\r\n  \"hint_id\": \"artistLoopsKA_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nThese stones are in the wrong place.  Help me move them so I don't fall in!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif\" width=\"300\"/>\r\n"
   },
   "published": true,
   "notes": "",

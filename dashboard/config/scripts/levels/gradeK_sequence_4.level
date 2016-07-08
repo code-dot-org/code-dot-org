@@ -27,7 +27,9 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try writing down the steps on paper to find a solution!\",\r\n  \"hint_id\": \"gradeK_sequence_4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nTry this one yourself from the beginning.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/43001078c4df6feea1a6edf025192d85-image-1467929743355.gif\" width=\"300\"/>\r\n",
+    "maze_data": null
   },
   "published": true,
   "notes": "",

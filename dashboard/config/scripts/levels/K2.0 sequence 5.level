@@ -11,7 +11,7 @@
     "start_direction": "0",
     "step_mode": "1",
     "is_k1": "true",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "ideal": "4",
     "never_autoplay_video": "true",
     "disable_param_editing": "true",
@@ -28,7 +28,9 @@
     "disable_examples": "false",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Your final code should have three movement blocks.\",\r\n  \"hint_id\": \"K2.0_sequence_5\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nMove one way, then another to get me to the pig!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/0b324bc0f684f7a22171acd8b38c8d9f-image-1467931807767.gif\" width=\"300\"/>\r\n",
+    "maze_data": null
   },
   "published": true,
   "notes": "",

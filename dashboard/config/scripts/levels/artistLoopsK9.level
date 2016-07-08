@@ -32,7 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This challenge uses FOUR loops, one right after another!\",\r\n  \"hint_id\": \"artistLoopsK9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "markdown_instructions": "**Challenge:**  Lovely! Let's take a walk around the garden.",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\n**Challenge:**  Lovely! Let's take a walk around the garden.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/cb5646ef57f68b47fa6c2762253a7044-image-1467936260174.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,

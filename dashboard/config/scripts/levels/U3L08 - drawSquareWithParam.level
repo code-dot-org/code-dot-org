@@ -82,8 +82,8 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "encrypted_examples": "5Ot7bDDuTK/42jNXiOS6k1KbwZ/hGrzwv0mbeXY0VsI7ks2fAd/vL4U+oWDZ\nycgZ\n",
-    "contained_level_names": null,
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
