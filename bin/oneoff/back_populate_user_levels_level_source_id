@@ -37,10 +37,8 @@ begin
         where(user_id: user_level.user_id, level_id: user_level.level_id).
         where.not(level_source_id: nil).
         last
+      next unless activity
       level_source_id = activity[:level_source_id]
-
-      next if level_source_id.nil?
-
       user_level.update!(level_source_id: level_source_id)
     end
 
