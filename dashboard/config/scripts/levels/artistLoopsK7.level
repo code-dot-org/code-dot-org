@@ -32,6 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"All of the blocks you need for this puzzle are already in your workspace!\",\r\n  \"hint_id\": \"artistLoopsK7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nThis tower is lovely, what is downstairs? Build another staircase to find out!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/af040c27be11c3a639e18c440c8a047c-image-1467936046481.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,
