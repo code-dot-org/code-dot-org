@@ -115,8 +115,8 @@ module UsersHelper
               pages_completed.each_with_index do |result, index|
                 user_data[:levels]["#{level_id}_#{index}"] = {
                   result: result,
-                  submitted: submitted
-                }
+                  submitted: submitted ? true : nil
+                }.compact
               end
             end
           end
