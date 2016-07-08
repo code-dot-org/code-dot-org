@@ -666,6 +666,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('dev', [
     'prebuild',
+    'newer:sass',
     'concurrent:watch',
     'postbuild',
   ]);
