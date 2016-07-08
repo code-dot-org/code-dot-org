@@ -143,9 +143,9 @@ end
 task :code_studio_task do
   HipChat.log 'Cleaning code-studio package'
   # get rid of any symlink to a built package
-  RakeUtils.system 'rm', dashboard_dir('public/code-studio')
+  RakeUtils.system 'rm', dashboard_dir('public/code-studio') if File.exist?(dashboard_dir('public/code-studio'))
   # also delete the package itself
-  RakeUtils.system 'rm -rf', dashboard_dir('public/code-studio-package')
+  RakeUtils.system 'rm -rf', dashboard_dir('public/code-studio-package') if File.exist?(dashboard_dir('public/code-studio-package'))
 end
 
 task :firebase_task do
