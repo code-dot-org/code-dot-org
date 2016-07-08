@@ -148,7 +148,7 @@ content-type: text/ng-template
   &nbsp;
 
 :ruby
-  levels_filtered = "levels | orderBy:orderAnswers | filter:(stageFilterAnswers && {stage: stageFilterAnswers}):true"
+  levels_filtered = "assessmentLevels | orderBy:orderAnswers | filter:(stageFilterAnswers && {stage: stageFilterAnswers}):true"
 
 %h1{'ng-show' => 'assessments.length'}= I18n.t('dashboard_assessments_answers')
 

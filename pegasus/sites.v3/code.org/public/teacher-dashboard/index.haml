@@ -793,7 +793,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
       $scope.assessments = sectionsService.assessments({id: $routeParams.id, script_id: scriptId});
 
-      $scope.levels = [];
+      $scope.assessmentLevels = [];
 
       $scope.assessments.$promise.then(function(){
         $scope.assessmentsLoaded = true;
@@ -825,7 +825,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
               studentResult: level_result.student_result,
               correct: correctness_list[level_result.correct]
             };
-            $scope.levels.push(levelResult);
+            $scope.assessmentLevels.push(levelResult);
           });
         });
       });
@@ -924,4 +924,5 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         return array.indexOf(item) == i;
       });
     }
+
   }]);

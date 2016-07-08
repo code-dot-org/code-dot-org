@@ -178,8 +178,11 @@ class ApiController < ApplicationController
 
       # Go through each sublevel
       script_level.level.levels.each_with_index do |sublevel, sublevel_index|
-        question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text")
+        question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
+                        sublevel.properties.try(:[], "markdown_instructions")
         sublevel_results = {question: question_text, results: []}
+
+        # TODO: skip this sublevel if we don't have at least 5 responses to it.
 
         # Go through each student who has submitted a response to it.
         @section.students.all.shuffle.each do |student|
