@@ -633,8 +633,6 @@ var displayFeedback = function (response) {
   studioApp.displayFeedback(options);
 };
 
-window.displayFeedback = displayFeedback;
-
 /**
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
