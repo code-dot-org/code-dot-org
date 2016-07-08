@@ -102,6 +102,12 @@
 
     this.showEmailError(false);
 
+    // Do not send the email server-side for under thirteen users for privacy
+    // reasons.
+    if (parseInt(document.getElementById('age').value) < 13) {
+      document.getElementById('email').value = 'anonymous@code.org';
+    }
+
     $.ajax({
       url: "/forms/Petition",
       type: "post",
