@@ -508,6 +508,10 @@ Eval.execute = function () {
   }
 
   studioApp.playAudio(Eval.result ? 'win' : 'failure');
+
+  if (!Eval.result && level.isProjectLevel) {
+    displayFeedback();
+  }
 };
 
 Eval.checkExamples_ = function (resetPlayspace) {
@@ -628,6 +632,8 @@ var displayFeedback = function (response) {
   }
   studioApp.displayFeedback(options);
 };
+
+window.displayFeedback = displayFeedback;
 
 /**
  * Function to be called when the service report call is complete
