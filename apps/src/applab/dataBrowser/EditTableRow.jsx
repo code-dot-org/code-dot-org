@@ -14,7 +14,7 @@ const EditTableRow = React.createClass({
         {
           this.props.columnNames.map(columnName => (
             <td key={columnName} style={dataStyles.cell}>
-              {this.props.record[columnName]}
+              {JSON.stringify(this.props.record[columnName])}
             </td>
           ))
         }
