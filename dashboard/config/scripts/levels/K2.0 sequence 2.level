@@ -11,7 +11,7 @@
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "ideal": "5",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -27,6 +27,7 @@
     "examples_required": "false",
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"One of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?\",\r\n  \"hint_id\": \"K2.0_sequence_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nFix the code to get me to the pig!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,

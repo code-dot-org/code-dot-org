@@ -29,8 +29,7 @@
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
     "markdown_instructions": "**Challenge:** Debug this level by adding blocks to get me to the pig!",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Stuck? Try tracing the bird's path with your finger.\",\r\n  \"hint_id\": \"grade1_maze_sequence8_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png)\",\r\n  \"hint_id\": \"grade1_maze_sequence8_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

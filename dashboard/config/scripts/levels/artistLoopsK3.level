@@ -32,6 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try using what you've learned about repeat blocks to complete this puzzle!\",\r\n  \"hint_id\": \"artistLoopsK3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nDraw a line eight steps long. This will become the land for our kingdom!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/c00b930eb5fb13ae946847adc51c9bd3-image-1467935631246.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,
