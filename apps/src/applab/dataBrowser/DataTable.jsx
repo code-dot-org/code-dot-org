@@ -15,6 +15,10 @@ const DataTable = React.createClass({
   propTypes: {
     // from redux state
     tableName: React.PropTypes.string.isRequired,
+    // "if all of the keys are integers, and more than half of the keys between 0 and
+    // the maximum key in the object have non-empty values, then Firebase will render
+    // it as an array."
+    // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
     tableRecords: React.PropTypes.oneOfType([
       React.PropTypes.object,
       React.PropTypes.array
