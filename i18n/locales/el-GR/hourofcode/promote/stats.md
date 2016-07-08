@@ -4,18 +4,16 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Περιλήψεις και Χρήσιμα Στατιστικά
 
 ## Χρησιμοποιήστε αυτή τη σύντομη περίληψη στα ενημερωτικά δελτία
 
 ### Φέρτε την επιστήμη των υπολογιστών στο σχολείο σας. Ξεκινήστε με μία Ώρα του Κώδικα
 
-Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν Πληροφορική από ό, τι πριν από 10 χρόνια. Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό. Αν ακούσατε για την [Ώρα του Κώδικα](%= resolve_url('/') %) πέρυσι, ίσως γνωρίζετε ότι έγραψε ιστορία. Στην πρώτη Ώρα του Κώδικα, 15 εκατομμύρια μαθητές δοκίμασαν την επιστήμη των υπολογιστών. Πέρυσι, αυτός ο αριθμός αυξήθηκε σε 60 εκατομμύρια μαθητές! Η [Ώρα του Κώδικα](%= resolve_url('/') %) είναι μία ωριαία εισαγωγή στην επιστήμη των υπολογιστών, σχεδιασμένη για να απομυθοποιήσει τον προγραμματισμό και να δείξει ότι οποιοσδήποτε μπορεί να μάθει τα βασικά. [Εγγραφείτε](%= resolve_url('/') %) για να διοργανώσετε μία Ώρα του Κώδικα στις <%= campaign_date('full') %> κατά τη διάρκεια της Εβδομάδας Εκπαίδευσης στην Επιστήμη των Υπολογιστών. Για να προσθέσετε το σχολείο σας στο χάρτη, πηγαίνετε στο https://hourofcode.com/<%= @country %>
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+
+The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
 ## Γραφήματα
 
 <%= view :stats_carousel %>
-
-<%= view :signup_button %>

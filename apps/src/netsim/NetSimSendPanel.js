@@ -320,7 +320,7 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
  */
 NetSimSendPanel.prototype.resetPackets_ = function () {
   if (this.packets_.length > 0) {
-    this.packetsDiv_.children().slice(1).remove();
+    this.packets_.slice(1).forEach(packet => packet.getRoot().remove());
     this.packets_.length = Math.min(1, this.packets_.length);
     this.packets_[0].resetPacket();
   } else {

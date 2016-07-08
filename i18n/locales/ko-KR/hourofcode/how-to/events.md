@@ -4,11 +4,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Hour of Code 이벤트를 준비하는 방법
-
-컴퓨터과학 교육 주간(<%= campaign_date('short') %>) 동안에 컴퓨터과학을 기념하고 더 많은 학생들이 시도해 보도록 영감을 주기 위해 Hour of Code 이벤트를 운영하세요. 누구나, 어디서나 Hour of Code 이벤트를 준비할 수 있습니다.
 
 ## 1) 이벤트 준비하기
 
@@ -36,13 +32,13 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 ## 이벤트 계획 예시
 
-**이벤트:** 학교 전체 행사로서 컴퓨터과학교육주간 킥오프 과정
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**일자:** 12월 7일(컴퓨터과학 교육 주간 시작일)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**시간:** 학교 일과 중. 아침-점심 사이 시간. 대략 1시간 정도.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**장소:** 학교 강당 시설(예를 들어 극장, 체육관, 카페테리아 식당)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -56,5 +52,3 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 | 오전 10:30 - 10:40 | 학교 전체를 위해 학생들이 Hour of Code 의 데모를 시연한다. 재미있는 이벤트로 학생들이 교장, 정치인, 다른 학생들을 가르쳐 주도록 한다.            |
 | 오전 10:40 - 11:00 | 학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.             |
 | 오전 11:00 - 11:05 | 학교 전체 활동을 계획하고 주도한 선생님이 맺음말 한다.                                                                |
-
-<%= view :signup_button %>

@@ -14,10 +14,33 @@ Vizito një klasë vendore për të inspiruar studentët të vazhdojnë mësimin
 
 We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Ne do të diskutojmë si të koordinohemi më mësimdhënës përpara ngjarjes së Orës së tyre të Kodimit dhe gjithashtu çfarë duhet të bëni në ditën e ngjarjes për tu pregaditur. Ju lutem ejani me pytjet e juaja! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Data      | Koha                                | Link to info session                                                            |
-| --------- | ----------------------------------- | ------------------------------------------------------------------------------- |
-| 16 Nëntor | 1:00 pasdite - 1:30 pasdite PST     | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
-| 3 Dhjetor | 11:00 paradite - 11:30 paradite PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
+<table>
+  <tr>
+    <th>
+      Data
+    </th>
+    
+    <th>
+      Koha
+    </th>
+    
+    <th>
+      Link to info session
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      <strong>Sessions to be announced! Stay tuned!</strong>
+    </td>
+    
+    <td>
+    </td>
+    
+    <td>
+    </td>
+  </tr>
+</table>
 
 ## 3. Shpenzoni 30 minuta duke provuar tutorilet më përpara
 
@@ -33,29 +56,33 @@ Tregoji shokëve dhe kolegëve tuaj rreth Orës së Kodimit. We have thousands o
 
 Nese e kujtoni rreshtin tuaj të parë të kodimit, e dini që i ka dhënë formë pjesës tjetër të jetës.
 
-Ajo është rreth çka bën fjalë Ora e Kodimit. Në dy vitet e fundit, lëvizja ka shpartalluar paragjykimet së si është të kodosh dhe ndihmoi më shumë se 100 milion studentë në 180 vende të provojnë shkencat kompjuterike për herën e parë.
+Ajo është rreth çka bën fjalë Ora e Kodimit. In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**Unë u regjistrova për vullnetarë në klasën vendore**  
-7,098 mësimdhënës tashmë kanë kërkuar për ndihmë. Code.org është duke përshtatur klasët me vullnetarë teknik sikur ju të cilët mund të ndihmojnë studentët dhe mësimdhënësit në Orën e tyre të parë të Kodimit.
+**I signed up to volunteer in a local classroom, and you can, too!**   
+Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
 
-Ju lutem [vullnetarizo për një orë](https://code.org/volunteer/engineer). Pasi që regjistroheni, mësimdhënësit vendorë do të jenë të gatshëm të ju kontaktojnë për ndihmë duke përdorur një formë të sigurt.*Nuk mund të vullnetarizoni? [Ndihmo për të përhapur fjalen rreth Orës së Kodimit](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.
 
-**Eksperienca juaj ka rëndësi**  
-Shumica e shkollave ende nuk mësojnë shkenca kompjuterike. Shumica e studenteve nuk e dijnë se është për të zgjidhur probleme të mëdhaja dhe për të na bashkuar të gjithë neve më afer. Kjo është një shansë për të inspiruar së paku një person të ri në rrethin tuaj.
+Can’t volunteer? [Help spread the word about the Hour of Code instead!](https://hourofcode.com/promote).
 
-**[Regjistrohu për vullnetarë](https://code.org/volunteer/engineer)**
+**Your experience matters**  
+Most schools still don’t teach computer science. Most students don’t know that coding is about solving big problems and connecting people. This is a chance to inspire at least one young person in your area.
 
-*Adresa e email tuaj kurrë nuk do të shpërndahet me mësimdhënës.
+**[Sign up to volunteer](https://code.org/volunteer/engineer)**
+
+*Your email address will never be shared with teachers.
 
 ## 5. Pyet punëdhënësin tuaj të bashkangjitet
 
-[Dërgo këtë email](https://hourofcode.com/promote/resources#email) te menagjeri, apo shefi juaj.
+[Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
 ## 6. Promovo Orën e Kodimit në komunitetin tuaj
 
-Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organizo një "festë ne lagje" me Orën e Kodimit. [Dërgo këtë email](https://hourofcode.com/promote/resources#email).
+Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organizo një "festë ne lagje" me Orën e Kodimit. [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Lexo agjendën e sygjeruar më poshtë kështu që ju e dini çfarë të prisni kur ju vizitoni një klasë.
+## 7. Prepare before you visit a classroom.
+
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Agjenda për vullnetarizim në një klasë
 

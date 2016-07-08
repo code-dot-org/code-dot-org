@@ -82,5 +82,12 @@
   "whileTooltip": "重复所包含的操作直到完成。",
   "word": "找到一个单词",
   "yes": "是",
-  "youSpelled": "你拼写的"
+  "youSpelled": "你拼写的",
+  "collectiblePresent": "there is some treasure",
+  "collect": "collect",
+  "collectorCollectTooltip": "Collect an item",
+  "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
+  "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
+  "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!"
 }

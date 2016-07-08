@@ -4,13 +4,11 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
-Vi ønsker å arrangere flere forskjellige engasjerende muligheter, men hovedmålet er å gi studenter og lærere som er nye til datavitenskap en best mulig opplevelese. Vennligst bruk dette dokumentet for å veilede deg i utviklingen av din aktivitet, hvis målgruppe er brukere som har ingen bakgrunn i koden, programmering eller datavitenskap.
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
   
 
@@ -52,7 +50,7 @@ Examples:
 
   
   
-**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Instrukser og gjennomgang bør ideelt sett være integrert direkte i programmeringsmiljøet slik at man unngår å måtte bytte faner eller vinduer mellom gjennomgangen og programmeringsmiljøet.
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
 
 Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
 
@@ -66,15 +64,15 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 **Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
 
-[**Tilbake til toppen**](#top)
+[**Back to the top**](#top)
 
 <a id="inclusion"></a>
 
 ## Hvordan en gjennomgang vil bli vurdert for inkludering
 
-En komite av datavitenskapslærere vil rangere innleveringene basert på kvalitative og kvalitative kriterier, inkludert resultater fra spørreundersøkelser utdelt til en videre gruppe av lærere.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Veiledninger vil bli satt høyere hvis de har:**
+**Tutorials will be listed higher if they are:**
 
   * har høy kvalitet
   * designed for beginners - among students AND teachers
@@ -87,7 +85,7 @@ En komite av datavitenskapslærere vil rangere innleveringene basert på kvalita
   * promote learning by all demographic groups (esp. under-represented groups)
   * ikke bare fokuserer på HTML+CSS web design (målet vårt er IT, ikke bare HTML-koding)
 
-**Veiledninger vil bli satt lavere hvis de har:**
+**Tutorials will be listed lower if they are:**
 
   * har lavere kvalitet
   * mer avansert læringsnivå (ikke for nybegynnere)
@@ -96,7 +94,7 @@ En komite av datavitenskapslærere vil rangere innleveringene basert på kvalita
   * reinforce stereotypes that hinder participation by under-represented student groups
   * tjener som innsalg for en læringsplattform som tar betalt for undervisning
 
-**Veiledninger vil IKKE bli vist hvis de:**
+**Tutorials will NOT be listed if they:**
 
   * er ikke utformet for å være (omtrent) én times aktivitet
   * krever registrering 
@@ -107,9 +105,9 @@ En komite av datavitenskapslærere vil rangere innleveringene basert på kvalita
 
 **If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
 
-Til sist, er målet til Kodetimekampanjen å utvide deltagelsen i datavitenskap av studenter og lærere, og for å hjelpe og vise at datavitenskap er tilgjengelig for alle, og «lettere enn du tror.» På mange måter er dette målet lettere oppnådd med å gi studenter og lærere færre og lettere valg, med fokus på valgene med høy kvalitet for førstegangsbrukerene. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
-[**Tilbake til toppen**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
@@ -117,7 +115,7 @@ Til sist, er målet til Kodetimekampanjen å utvide deltagelsen i datavitenskap 
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
-**Det du kommer til å trenge:**
+**What you’ll need:**
 
   * Navnet ditt, logo (jpg, png etc.)
   * Webadressen til et skjermbilde eller markedsføringsbilde av Kodetime-aktiviteten. Bilder/skjermbilder bør ha eksakt 446 x 335 oppløsning. Hvis et passende bilde ikke er levert, kan vi ta eget skjermbilde av gjennomgangen eller vi kan velge ikke å liste den.
@@ -165,32 +163,32 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
       * For offline aktiviteter 
           * Antall nedlastinger av aktivitet i papirversjon (hvis aktuelt)
 
-[**Tilbake til toppen**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
 ## Forslag til utforming av din aktivitet
 
-You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Under ingen omstendigheter kan Code.org logoen og navn bli brukt. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
-**Vær sikker på at gjennomsnittseleven kan fullføre godt innenfor en time.** Vurder å legge til en aktivitet med åpen-slutt på slutten av timen for studenter som beveger seg raskere gjennom leksjonen. Husk at de fleste barn vil være helt nye til datavitenskap og programmering.
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
-**Inkluder notater til læreren.** De fleste aktiviteter burde være student-rettet, men hvis en aktivitet er tilrettelagt eller holdt av en lærer, vær så snill å inkluder klare og enkle instruksjoner for læreren i form av lærer-notater på en separat lenke innlevert med din aktivitet. Ikke bare studentene er nybegynnere, noen av lærerene er også det. Inkluder info som:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
   * Vår veiledning funker best på følgende plattformer og nettlesere
   * Does it work on smartphones? Tablets?
   * anbefaler du par-programmering? 
   * Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
-**Inkluder tilbakemeldinger på slutten av aktiviteten.**(E.g:«Du fullførte 10 levler og lære om løkker! Godt jobba!»)
+**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #Kodetimen» eller «Jeg har fullført #Kodetimen som en del av #CSEdWeek. Har du? @Scratch.» Bruk hashtagen **#Kodetimen**(med stor forbokstav)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
 **Create your activity in Spanish or in other languages besides English.** ]
 
-**Forklar eller koble din aktivitet til en sosialt signifikant kontekst.** Programmering blir en superkraft når studenter ser hvordan det kan forandre verden til det bedre!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Ikke krev registrering eller betaling før studentene kan prøve din veiledning.** Veiledninger som krever registrering eller betaling vil ikke bli vist
+**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
 
 **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** The three rules of pair programming in a school setting are:
 
@@ -198,13 +196,13 @@ You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojll
   * Navigatøren gir forslag, peker ut feil, og stiller spørsmål. 
   * Studentene burde bytte rolle minst to ganger per sesjon.
 
-Fordelene med Par Programmering:
+Benefits of Pair Programming:
 
   * Studentene kan hjelpe hverandre isteden for å være avhengig av læreren
   * Vis at koding er ikke en solo-aktivitet, men en som involverer sosial interaksjon
   * Ikke alle klasserom eller labber har nok datamaskiner for en 1:1 opplevelse
 
-[**Tilbake til toppen**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
@@ -212,7 +210,7 @@ Fordelene med Par Programmering:
 
 After the success of the 2013 campaign, we took steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
-En del av dette er å beskytte varemerket «Kodetimen» for å forhindre forvirring. Mange av våre veiledningsparntere har brukt «Kodetimen» på sine sider. Vi ønsker ikke å forhindre denne bruken, men vi ønsker å være sikker på at det passer innenfor et par rammer:
+One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
   1. En hver referanse til «Kodetimen» burde bli brukt på en slik måte at det ikke tyder på at det er ditt eget merkenavn, men heller reffererer til Kodetimen som en grasrotbevegelse. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
   2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
@@ -222,46 +220,44 @@ En del av dette er å beskytte varemerket «Kodetimen» for å forhindre forvirr
 
   4. No use of "Hour of Code" in app names.
 
-[**Tilbake til toppen**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
 ## Sporingspiksel
 
-For å mer presist følge deltagelsen spørr vi hver tredjeparts veiledningspartnere å inkludere en 1-pixel sporingsbilde på første og siste siden på deres Kodetimen veiledninger (En start pixel-bilde på startsiden og et siste pixel-bilde på slutt siden. og ikke på sider i mellom).
+In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
 
-Dette vil gjøre det mulig for oss å telle antall brukere som du har rekruttert til å besøke din side for å gjøre sin Kodetime, eller brukere som besøker når en lærer skriver din lenke på deres tavle. Det vil føre til mer nøyaktig deltagelsestall for din veiledning, som vil hjelpe deg å tiltrekke deg brukere. Hvis du integrerer pixelen på slutten vil det tillate oss å måle hvor mange som fullfører opplæringen.
+This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
 
-Hvis din veldening er godkjent og er inkludert på den siste veiledningsiden, Code.org vil gi deg en unik sporingspixel slik at du kan inkludere det i din veiledning. Se eksemplet under.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-OBS: Dette er ikke viktig for installerbare apper (iOS/Android apper, eller desktop-install apper)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Eksempel sporingspixler for AppInventor:
+Example tracking pixels for AppInventor:
 
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-[**Tilbake til toppen**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
 ## Markedsføre dine gjennomganger, IT-utdanningsuka og Kodetimen
 
-Vi ber aller å reklamere for sine egne 1-times veiledninger til dine brukere. Please direct them to ***your*** Hour of Code page. Det er mer sannsynlig at dine brukere reagerer på en mail fra deg om din veiledning. Bruk den internasjonale Kodetimen kampanjen for Utdanningsuken for Datavitenskap som en unnskyldning til å oppfordre brukere til å invitere andre til å være med, hjelp oss å nå 100 millioner deltagere totalt.
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to ***your*** Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
   * Frem Kodetimen ved hjelp av sosiale medier, tradisjonelle medier, epostlister, etc, ved å bruke hashtaggen **#Kodetimen**(med stor forbokstav)
   * Hold et lokalt arrangement eller spør dine ansatte om å holde et arrangement på lokale skoler eller samfunnsgrupper.
   * Se våre resurser for mer informasjon (kommer snart).
 
-[**Tilbake til toppen**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
 ## En spesiell beskjed til studenter med funksjonshemminger
 
-Hvis du lager en veiledning som er skapt for personer med synsproblemer, hadde vi elsket å utheve det for seere med skjerm-lesere. Vi har enda ikke mottatt en slik veiledning, og vi vil være ivrige på å inkludere en som et valg for disse studentene.
+If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Tilbake til toppen**](#top)
-
-<%= view :signup_button %>
+[**Back to the top**](#top)

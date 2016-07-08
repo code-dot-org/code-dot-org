@@ -4,6 +4,7 @@ layout: wide
 nav: promote_nav
 ---
 
+<%= view :signup_button %>
 
 # Blurbs and Useful Stats
 
@@ -17,3 +18,5 @@ The Hour of Code is a one-hour introduction to computer science, designed to dem
 ## Infographics
 
 <%= view :stats_carousel %>
+
+<%= view :signup_button %>
