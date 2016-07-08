@@ -10,6 +10,7 @@
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  script_id        :integer
+#  started          :boolean          default(FALSE), not null
 #
 # Indexes
 #

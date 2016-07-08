@@ -20,7 +20,6 @@
 
   header_menu_resources: 'Resources'
   header_menu_faq: 'FAQ'
-  header_menu_prizes: 'Prizes'
   header_menu_how_to: 'How-To'
   header_menu_promote: 'Promote'
 
@@ -149,15 +148,6 @@
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
 
-  prizes_all: 'Prizes for every organizer'
-  prizes_every_organizer: 'Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you, while supplies last.'
-  prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
-  prizes_tech_chats: '# classrooms will win video chats with very special guests'
-  prizes_robots: '100 classrooms will win a set of programmable robots'
-  prizes_brilliant: 'One school in each province and territory will receive $2000 for a Brilliant Project'
-  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
-  prizes_details: 'Details'
-
   nav_back_to_resources: "Back to Resources"
 
   how_to_nav_educators: "For educators"
@@ -170,25 +160,6 @@
   how_to_nav_companies: "For companies"
   how_to_nav_afterschool_educators: "For after-school educators"
   how_to_nav_volunteers: "For volunteers"
-
-  prizes_nav_title: "Prizes"
-  prizes_nav_home: "All prizes"
-  prizes_nav_hardware: "Hardware prize signup"
-  prizes_nav_terms: "Terms and conditions"
-  prizes_nav_faq: "Frequently asked questions"
-  prizes_nav_dc: "Mystery trip to Washington D.C."
-  prizes_nav_technology: "$10,000 of technology for your school"
-  prizes_nav_video_chat: "Video chat with a tech titan"
-  prizes_nav_skype_dropbox: "Skype credit or Dropbox space for every organizer"
-  prizes_nav_brilliant: "$2,000 Brilliant Labs project"
-  prizes_nav_actua: "Actua workshop"
-  prizes_nav_kids_code: "Kids Code Jeunesse"
-
-  prizes_header: "Prizes for every educator"
-  prizes_10k: "One public school in every US state (and Washington D.C.) will win $10,000 worth of technology"
-  prizes_10k_past: "One public school in every US state (and Washington D.C.) won $10,000 worth of technology"
-  prizes_gift_cards: "<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last."
-  prizes_more: "More exciting prizes"
 
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
@@ -293,29 +264,6 @@
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 45 languages. Ages 4 to 104.'
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
-
-  hardware_prizes_form_name_label: 'Your name'
-  hardware_prizes_form_name_placeholder: 'Your name'
-  hardware_prizes_form_email_label: 'Your email'
-  hardware_prizes_form_email_placeholder: 'Your email'
-  hardware_prizes_form_school_name_label: 'School name'
-  hardware_prizes_form_school_name_placeholder: 'School name'
-  hardware_prizes_form_school_address_label: 'School address'
-  hardware_prizes_form_school_address_placeholder: 'School address'
-  hardware_prizes_form_school_type_label: 'School type'
-  hardware_prizes_form_school_type_option_elementary: 'Elementary'
-  hardware_prizes_form_school_type_option_middle_school: 'Middle school'
-  hardware_prizes_form_school_type_option_high_school: 'High school'
-  hardware_prizes_form_qualifying_school_label: 'This is a K-12 US public school'
-  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
-  hardware_prizes_form_title_I_school_help_text: "Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards."
-  hardware_prizes_form_number_students_label: 'Number of students participating'
-  hardware_prizes_form_number_students_placeholder: 'Number of students'
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
-  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
-  hardware_prizes_form_plan_file_label: 'Upload your Hour of Code logistics plan'
-  hardware_prizes_form_plan_file_description: 'Submit a simple schedule of how you plan to organize every student to do the Hour of Code at your school. See a sample plan: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: 'Submit'
 
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'What is the Hour of Code?'
@@ -429,11 +377,6 @@
   title_stats: Blurbs and Stats
 
   title_partners: Partners
-  title_prizes_faq: Prizes FAQ
-  title_prizes_terms: Prizes Terms
-  title_prizes_thanks: Thank you
-  title_prizes: Prizes
-  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Resources
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines

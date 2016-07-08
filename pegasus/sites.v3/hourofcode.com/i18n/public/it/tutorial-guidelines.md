@@ -5,10 +5,9 @@ layout: wide
 
 ---
 
-
 # Linee guida per i Corsi de "L'Ora del Codice" e per "La Settimana dell'Insegnamento dell'Informatica"
 
-Code.org vuol mettere a disposizione un gran numero di corsi dell'Ora del Codice sui siti Code.org, Hour of Code, e CSEdWeek. La lista corrente è disponibile alla pagina [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
+Code.org intende mettere a disposizione un gran numero di corsi dell'Ora del Codice sui siti Code.org, Hour of Code, e CSEdWeek. La lista corrente è disponibile alla pagina [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 Vorremmo mettere a disposizione dei fruitori diverse interessanti opportunità, ma il nostro obiettivo principale è quello di garantire il massimo dell'esperienza a studenti e docenti che si avvicinano all'informatica per la prima volta. Ti chiediamo di usare questo documento come guida per la creazione del tuo corso, destinato ad utenti che non hanno alcuna esperienza nella scrittura di codice, nella programmazione e, in generale, nell'informatica.
 
@@ -263,4 +262,3 @@ Chiediamo a tutti di promuovere i propri corsi da un'ora ai propri utenti. Ti pr
 Se crei un corso progettato per gli ipovedenti, ci piacerebbe metterlo in evidenza per gli utenti dotati di un lettore di schermo. Non abbiamo ancora ricevuto un corso di questo tipo e ci piacerebbe molto includerne almeno uno come opzione per questi studenti.
 
 [**Torna all'inizio**](#top)
-

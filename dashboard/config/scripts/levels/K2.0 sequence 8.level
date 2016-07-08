@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,0,3,0,0],[0,0,0,1,0,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,4,4,4,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,0,3,0,0],[0,0,0,1,4,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,4,4,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "instructions": "Debug this level by adding blocks to get me to the pig!",
     "start_direction": "2",
@@ -29,7 +29,8 @@
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
     "markdown_instructions": "**Challenge:** Debug this level by adding blocks to get me to the pig!",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Stuck? Try tracing the bird's path with your finger.\",\r\n  \"hint_id\": \"K2.0_sequence_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
   "notes": "",

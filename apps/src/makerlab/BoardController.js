@@ -15,8 +15,18 @@ try {
    */
 }
 
+import _ from 'lodash';
+import {initializeCircuitPlaygroundComponents, TouchSensor} from './PlaygroundComponents';
+
 /** @const {string} */
-var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
+const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
+const J5_CONSTANTS = {
+  INPUT: 0,
+  OUTPUT: 1,
+  ANALOG: 2,
+  PWM: 3,
+  SERVO: 4
+};
 
 var BoardController = module.exports = function () {
   ChromeSerialPort.extensionId = CHROME_APP_ID;
@@ -63,9 +73,17 @@ BoardController.prototype.ensureBoardConnected = function () {
 };
 
 BoardController.prototype.installComponentsOnInterpreter = function (codegen, jsInterpreter) {
-  this.prewiredComponents = this.prewiredComponents ||
-      initializeCircuitPlaygroundComponents(this.board_.io, this.board_);
+  if (!this.prewiredComponents) {
+    this.prewiredComponents = _.assign({},
+        initializeCircuitPlaygroundComponents(this.board_.io, five, PlaygroundIO),
+        {board: this.board_},
+        J5_CONSTANTS);
+  }
 
+  /**
+   * Set of classes used by interpreter to understand the type of instantiated
+   * objects, allowing it to make methods and properties of instances available.
+   */
   var componentConstructors = {
     Led: five.Led,
     Board: five.Board,
@@ -78,7 +96,8 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
     Pin: five.Pin,
     CapTouch: PlaygroundIO.CapTouch,
     Tap: PlaygroundIO.Tap,
-    Accelerometer: five.Accelerometer
+    Accelerometer: five.Accelerometer,
+    TouchSensor: TouchSensor
   };
 
   Object.keys(componentConstructors).forEach(function (key) {
@@ -96,12 +115,7 @@ BoardController.prototype.reset = function () {
     return;
   }
 
-  var standaloneComponents = [
-    this.prewiredComponents.tap,
-    this.prewiredComponents.touch
-  ];
-
-  this.board_.register.concat(standaloneComponents).forEach(function (component) {
+  const resetComponent = (component) => {
     try {
       if (component.state && component.state.intervalId) {
         clearInterval(component.state.intervalId);
@@ -114,6 +128,10 @@ BoardController.prototype.reset = function () {
       if (component.off) {
         component.off();
       }
+      if (component.threshold) {
+        // Reset sensor thresholds to 1.0 in case changed.
+        component.threshold = 1;
+      }
       if (component.removeAllListeners) {
         component.removeAllListeners();
       }
@@ -121,7 +139,15 @@ BoardController.prototype.reset = function () {
       console.log('Error trying to cleanup component', error);
       console.log(component);
     }
-  });
+  };
+
+  // Components which do not get registered with the johnny-five board, but
+  // which can be reset in the same way.
+  var standaloneComponents = [
+    this.prewiredComponents.tap,
+    this.prewiredComponents.touch
+  ];
+  this.board_.register.concat(standaloneComponents).forEach(resetComponent);
 };
 
 BoardController.prototype.pinMode = function (pin, modeConstant) {
@@ -144,6 +170,10 @@ BoardController.prototype.analogRead = function (pin, callback) {
   return this.board_.analogRead(pin, callback);
 };
 
+BoardController.prototype.onBoardEvent = function (component, event, callback) {
+  component.on(event, callback);
+};
+
 function connect() {
   return getDevicePort().then(connectToBoard);
 }
@@ -151,7 +181,7 @@ function connect() {
 function connectToBoard(portId) {
   return new Promise(function (resolve, reject) {
     var serialPort = new ChromeSerialPort.SerialPort(portId, {
-      baudrate: 57600
+      bitrate: 57600
     }, true);
     var io = new PlaygroundIO({port: serialPort});
     var board = new five.Board({io: io, repl: false});
@@ -196,83 +226,6 @@ function getDevicePort() {
 function deviceOnPortAppearsUsable(port) {
   var comNameRegex = /usb|acm|^com/i;
   return comNameRegex.test(port.comName);
-}
-
-/**
- * Initializes a set of Johnny-Five components for the currently connected
- * Circuit Playground board.
- * @returns {Object.<String, Object>} board components
- */
-function initializeCircuitPlaygroundComponents(io, board) {
-  const colorLeds = Array.from({length: 10}, (_, index) => new five.Led.RGB({
-    controller: PlaygroundIO.Pixel,
-    pin: index
-  }));
-
-  /**
-   * Must initialize sound sensor BEFORE left button, otherwise left button
-   * will not respond to input.
-   */
-  const sound = new five.Sensor({
-    pin: "A4",
-    freq: 100
-  });
-  const buttonL = new five.Button('4');
-  const buttonR = new five.Button('19');
-  [buttonL, buttonR].forEach((button) => {
-    Object.defineProperty(button, "isPressed", {
-      get: () => this.value === 1
-    });
-  });
-
-  return {
-    colorLeds: colorLeds,
-
-    led: new five.Led(13),
-
-    toggleSwitch: new five.Switch('21'),
-
-    buzzer: new five.Piezo({
-      pin: '5',
-      controller: PlaygroundIO.Piezo
-    }),
-
-    thermometer: new five.Thermometer({
-      controller: "TINKERKIT",
-      pin: "A0",
-      freq: 100
-    }),
-
-    light: new five.Sensor({
-      pin: "A5",
-      freq: 100
-    }),
-
-    accelerometer: new five.Accelerometer({
-      controller: PlaygroundIO.Accelerometer
-    }),
-
-    tap: new PlaygroundIO.Tap(io),
-
-    touch: new PlaygroundIO.CapTouch(io),
-
-    sound: sound,
-
-    buttonL: buttonL,
-
-    buttonR: buttonR,
-
-    board: board,
-
-    /**
-     * Constants helpful for prototyping direct board usage
-     */
-    INPUT: 0,
-    OUTPUT: 1,
-    ANALOG: 2,
-    PWM: 3,
-    SERVO: 4
-  };
 }
 
 BoardController.__testonly__ = {
