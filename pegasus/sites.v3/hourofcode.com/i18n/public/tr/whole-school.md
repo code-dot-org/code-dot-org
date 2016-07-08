@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # Bütün okulunuzu dahil edin
 
-Bütün okulları Kodlama Saati'ne dahil etmek için gerekli bilgiler burada olacaktır.
-
+Information about getting whole schools to participate in the Hour of Code will go here.

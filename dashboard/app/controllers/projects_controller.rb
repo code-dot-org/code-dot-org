@@ -128,6 +128,7 @@ class ProjectsController < ApplicationController
       nil,
       src_channel_id)
     AssetBucket.new.copy_files src_channel_id, new_channel_id
+    AnimationBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
   end

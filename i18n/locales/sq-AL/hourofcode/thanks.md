@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Faleminderit që u regjistruat si organizator në Orën e Kodimit!
 
-Ju po i mundësoni studentëve në mbarë botën të mësojnë Orën e Kodimit e cila *mund të ndryshojë jetën e tyre*, gjatë <%= campaign_date('full') %>. Ne do të jemi në kontakt rreth shpërblimeve, tutorialeve te rinj dhe përditësimeve. Cfarë mund të bëni tani?
+Ju po i mundësoni studentëve në mbarë botën të mësojnë Orën e Kodimit e cila *mund të ndryshojë jetën e tyre*, gjatë <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Cfarë mund të bëni tani?
 
 ## 1. Përhap fjalën
 
