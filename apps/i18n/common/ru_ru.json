@@ -245,5 +245,7 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "при запуске",
-  "workspaceHeaderShort": "Место сбора блоков: "
+  "workspaceHeaderShort": "Место сбора блоков: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }
