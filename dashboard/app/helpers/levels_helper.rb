@@ -160,6 +160,13 @@ module LevelsHelper
       view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
     end
 
+    if @user
+      recent_driver = UserLevel.most_recent_driver(@script, @level, @user)
+      if recent_driver
+        level_view_options pairing_driver: recent_driver
+      end
+    end
+
     if @level.is_a? Blockly
       @app_options = blockly_options
     elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
@@ -433,6 +440,7 @@ module LevelsHelper
     submitted
     unsubmit_url
     iframe_embed
+    pairing_driver
   ))
   # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)
