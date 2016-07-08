@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "The halfway line on a soccer field is *perpendicular* to the sidelines.   \r\nThis rectangle has a perimeter of 800 pixels total, and it is 240 pixels wide. How tall is it?   \r\n\r\nDraw the bounds and the halfway line.",
+    "instructions": "The halfway line on a soccer field is perpendicular to the sidelines.   \r\nThis rectangle has a perimeter of 800 pixels total, and it is 240 pixels wide. How tall is it?   \r\n\r\nDraw the bounds and the halfway line.",
     "x": "80",
     "y": "280",
     "start_direction": "90",
@@ -31,8 +31,10 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The long sides are 240 pixels each.  That means that the 2 short sides must total:\\n\\n**800 - 240 - 240 = 320**\\n\\nWhat is **320/2** ? \",\r\n  \"hint_id\": \"4-5_Artist_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The long sides are 240 pixels each.  That means that the 2 short sides must total:\\n\\n**800 - 240 - 240 = 320**\\n\\nWhat is **320/2** ? \",\r\n  \"hint_id\": \"4-5_Artist_8_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This image can be done 2 ways!  \\n- Draw two rectangles that are **120** wide and **160** tall, with an overlapping side\\n\\n- Draw one rectangle that is **240** wide and **160** tall, then add a line in the middle.\",\r\n  \"hint_id\": \"4-5_Artist_8_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "never_autoplay_video": "false",
+    "contained_level_names": null,
+    "discard_background": "false"
   },
   "published": true,
   "notes": "",
