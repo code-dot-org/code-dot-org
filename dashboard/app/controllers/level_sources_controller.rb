@@ -12,8 +12,9 @@ class LevelSourcesController < ApplicationController
   def show
     if params[:embed]
       # embed only the play area (eg. ninjacat)
-      level_view_options hide_source: true
       level_view_options(
+        @level_source.level_id,
+        hide_source: true,
         embed: true,
         share: false,
         skip_instructions_popup: true
@@ -22,7 +23,7 @@ class LevelSourcesController < ApplicationController
       # embed the play area and code area for viewing solutions when contributing hints
     else
       # sharing
-      level_view_options hide_source: true
+      level_view_options @level_source.level_id, hide_source: true
       view_options(no_header: true, no_footer: true, code_studio_logo: true)
       @is_legacy_share = true
     end
@@ -30,7 +31,7 @@ class LevelSourcesController < ApplicationController
 
   def edit
     authorize! :read, @level_source
-    level_view_options hide_source: false
+    level_view_options @level_source.level_id, hide_source: false
     view_options small_footer: true
     @is_legacy_share = true
     # currently edit is the same as show...
@@ -90,6 +91,7 @@ class LevelSourcesController < ApplicationController
     )
     @callback = milestone_level_url(user_id: current_user.try(:id) || 0, level_id: @level.id)
     level_view_options(
+      @level_source.level_id,
       start_blocks: @level_source.data,
       share: true
     )
