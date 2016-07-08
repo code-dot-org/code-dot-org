@@ -28,9 +28,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you're having trouble, try writing down the steps on a piece of paper first.\",\r\n  \"hint_id\": \"K2.0_sequence_9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
     "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nGo around the TNT to get me to the pig!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/fa04813e9451e0bc070af50bc01d4a6b-image-1467932582838.gif\" width=\"300\"/>\r\n",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
