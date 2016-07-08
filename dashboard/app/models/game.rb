@@ -141,7 +141,9 @@ class Game < ActiveRecord::Base
     app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT || app == GAMELAB
   end
 
-  def sharing_filtered?
+  # True if sharing & completion of levels should be restricted by detected
+  # swear words or privacy policy violations (email, phone, addresses)
+  def block_profane_privacy_shares?
     app == STUDIO
   end
 

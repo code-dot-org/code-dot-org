@@ -40,7 +40,7 @@ class ActivitiesController < ApplicationController
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
     if params[:program] && sharing_allowed
       share_failure = nil
-      if @level.game.sharing_filtered?
+      if @level.game.block_profane_privacy_shares?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
         rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
