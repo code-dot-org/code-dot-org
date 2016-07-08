@@ -692,7 +692,11 @@ Calc.execute = function () {
     onComplete: onReportComplete
   };
 
-  appState.waitingForReport = true;
+  if (!level.isProjectLevel) {
+    // On project levels, report never actually returns. Don't set this as
+    // it would otherwise make our preAnimationFailure not display feedback.
+    appState.waitingForReport = true;
+  }
   studioApp.report(reportData);
 
   studioApp.playAudio(appState.result === ResultType.SUCCESS ? 'win' : 'failure');
@@ -720,6 +724,7 @@ function isPreAnimationFailure(testResult) {
     testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
     testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
     testResult === TestResults.EXAMPLE_FAILED ||
+    testResult === TestResults.APP_SPECIFIC_FAIL || // TODO(bcjordan): is this wrong?
     testResult === TestResults.EMPTY_FUNCTION_NAME;
 }
 
