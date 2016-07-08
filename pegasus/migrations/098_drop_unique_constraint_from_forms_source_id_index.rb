@@ -14,6 +14,9 @@ Sequel.migration do
     end
   end
 
+  # Note in production (or any other place where the original index existed)
+  # this will not recreate it and will not leave the DB in its original state.
+  # It will however still be able to migrate up and down.
   down do
     alter_table(:forms) do
       drop_index [:source_id, :kind]
