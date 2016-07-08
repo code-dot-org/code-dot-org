@@ -32,7 +32,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "authored_hints": "[ {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the puzzle seems challenging, try building your function a little at a time.  \\n\\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\",\r\n  \"hint_id\": \"2-3_Bee_Functions_8_a\",\r\n  \"hint_type\": \"general\"\r\n }]"
+    "authored_hints": "[ {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the puzzle seems challenging, try building your function a little at a time.  \\n\\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\",\r\n  \"hint_id\": \"2-3_Bee_Functions_8_a\",\r\n  \"hint_type\": \"general\"\r\n }]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -47,21 +48,21 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_move">
+            <block type="maze_move" deletable="false" movable="false">
               <title name="DIR">moveForward</title>
               <next>
-                <block type="procedures_callnoreturn">
+                <block type="procedures_callnoreturn" deletable="false" movable="false">
                   <mutation name="get 7 make 7"/>
                   <next>
-                    <block type="controls_repeat">
+                    <block type="controls_repeat" deletable="false" movable="false">
                       <title name="TIMES">3</title>
                       <statement name="DO">
-                        <block type="maze_move">
+                        <block type="maze_move" deletable="false" movable="false">
                           <title name="DIR">moveForward</title>
                         </block>
                       </statement>
                       <next>
-                        <block type="procedures_callnoreturn">
+                        <block type="procedures_callnoreturn" deletable="false" movable="false">
                           <mutation name="get 7 make 7"/>
                         </block>
                       </next>
@@ -72,7 +73,7 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false" y="280">
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
           <mutation/>
           <title name="NAME">get 7 make 7</title>
         </block>

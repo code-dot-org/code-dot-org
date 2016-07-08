@@ -11,7 +11,7 @@
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "ideal": "7",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -27,7 +27,7 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
-    "markdown_instructions": "**Challenge:** Debug this level by adding blocks to get me to the pig!",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\n<b>Challenge:</b> Debug this level by adding blocks to get me to the pig!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/810d7189bcd0767d37ea82319b4c678c-image-1467932445247.gif\" width=\"300\"/>\r\n",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Stuck? Try tracing the bird's path with your finger.\",\r\n  \"hint_id\": \"K2.0_sequence_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null,
     "maze_data": null
