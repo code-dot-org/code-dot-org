@@ -71,7 +71,7 @@ designMode.onDesignModeVizClick = function (event) {
     // div with no class, and we want to use the full text area element.
     element = getInnerElement(element.parentNode.parentNode);
   }
-  // give the div focus so that we can listen for keyboard events
+  // Give the div focus so that we can listen for keyboard events.
   $("#designModeViz").focus();
   designMode.editElementProperties(element);
 };
