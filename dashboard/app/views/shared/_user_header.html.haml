@@ -19,9 +19,10 @@
               .pairing_summary
                 #{t('nav.user.driver')}:
                 = h(current_user.short_name)
-                %br
-                #{t('nav.user.navigator')}:
-                = session[:pairings].map{ |id| h(User.find(id).short_name) }.join(', ')
+                - session[:pairings].map do |id|
+                  %br
+                  #{t('nav.user.navigator')}:
+                  = h(User.find(id).short_name)
           - else
             = link_to '#', {id: 'pairing_link', style: 'display: none'} do
               %i.fa.fa-user-plus
