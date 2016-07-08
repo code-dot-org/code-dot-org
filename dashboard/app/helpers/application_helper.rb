@@ -236,16 +236,16 @@ module ApplicationHelper
 
   def share_failure_message(failure_type)
     case failure_type
-      when ShareFiltering::FailureType::EMAIL
-        t('share_code.email_not_allowed')
-      when ShareFiltering::FailureType::ADDRESS
-        t('share_code.address_not_allowed')
-      when ShareFiltering::FailureType::PHONE
-        t('share_code.phone_number_not_allowed')
-      when ShareFiltering::FailureType::PROFANITY
-        t('share_code.profanity_not_allowed')
-      else
-        raise ArgumentError.new("Unknown share failure type #{failure_type}")
+    when ShareFiltering::FailureType::EMAIL
+      t('share_code.email_not_allowed')
+    when ShareFiltering::FailureType::ADDRESS
+      t('share_code.address_not_allowed')
+    when ShareFiltering::FailureType::PHONE
+      t('share_code.phone_number_not_allowed')
+    when ShareFiltering::FailureType::PROFANITY
+      t('share_code.profanity_not_allowed')
+    else
+      raise ArgumentError.new("Unknown share failure type #{failure_type}")
     end
   end
 end
