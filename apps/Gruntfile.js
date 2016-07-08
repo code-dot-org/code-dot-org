@@ -127,11 +127,20 @@ module.exports = function (grunt) {
           //TODO: Would be preferrable to separate Blockly media.
           dest: 'build/package/media'
         },
+        // We have to do some weird stuff to get our fallback video player working.
+        // video.js expects some of its own files to be served by the application, so
+        // we include them in our build and access them via static (non-fingerprinted)
+        // root-relative paths.
+        // We may have to do something similar with ace editor later, but generally
+        // we'd prefer to avoid this way of doing things.
+        // TODO: At some point, we may want to better rationalize the package
+        // structure for all of our different assets (including vendor assets,
+        // blockly media, etc).
         {
           expand: true,
-          cwd: 'style/applab',
-          src: ['*.css'],
-          dest: 'build/package/css'
+          cwd: './node_modules/video.js/dist/video-js',
+          src: ['**'],
+          dest: 'build/package/video-js'
         }
       ]
     },
@@ -246,11 +255,17 @@ module.exports = function (grunt) {
       options: {
         // Compression currently occurs at the ../dashboard sprockets layer.
         outputStyle: 'nested',
-        includePaths: ['../shared/css/']
+        includePaths: [
+          'node_modules',
+          '../shared/css/'
+        ]
       },
       files: _.zipObject([
         ['build/package/css/common.css', 'style/common.scss'],
-        ['build/package/css/readonly.css', 'style/readonly.scss']
+        ['build/package/css/levelbuilder.css', 'style/code-studio/levelbuilder.scss'],
+        ['build/package/css/leveltype_widget.css', 'style/code-studio/leveltype_widget.scss'],
+        ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
+        ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
       ].concat(appsToBuild.map(function (app) {
         return [
           'build/package/css/' + app + '.css', // dst
@@ -320,6 +335,11 @@ module.exports = function (grunt) {
         {src: ['test/integration-tests.js'], watched: false},
       ],
     },
+    codeStudio: {
+      files: [
+        {src: ['test/code-studio-tests.js'], watched: false},
+      ],
+    },
     all: {
       files: [
         {src: ['test/index.js'], watched: false},
@@ -335,36 +355,128 @@ module.exports = function (grunt) {
     },
   };
 
-  // Create our set of entries (an object mapping target name to entry source
-  // file
-  var entries = _.zipObject(appsToBuild.map(function (app) {
-    return [app, './src/' + app + '/main.js'];
-  }));
-  if (appsToBuild.indexOf('applab') !== -1) {
-    entries['applab-api'] = './src/applab/api-entry.js';
+
+  var bundles = [
+    {
+      uniqueName: 'apps',
+      entries: _.zipObject(appsToBuild.map(function (app) {
+        return [app, './src/' + app + '/main.js'];
+      }).concat(appsToBuild.indexOf('applab') === -1 ? [] :
+        [['applab-api', './src/applab/api-entry.js']]
+      )),
+      commonFile: 'common'
+    },
+
+    {
+      uniqueName: 'codeStudio',
+      entries: {
+        'code-studio': './src/code-studio/code-studio.js',
+        levelbuilder: './src/code-studio/levelbuilder.js',
+        levelbuilder_markdown: './src/code-studio/levelbuilder_markdown.js',
+        levelbuilder_studio: './src/code-studio/levelbuilder_studio.js',
+        levelbuilder_gamelab: './src/code-studio/levelbuilder_gamelab.js',
+        districtDropdown: './src/code-studio/districtDropdown.js',
+        'levels/contract_match': './src/code-studio/levels/contract_match.jsx',
+        'levels/widget': './src/code-studio/levels/widget.js',
+        'levels/external': './src/code-studio/levels/external.js',
+        // put these entry points in arrays so that they can be required elsewhere
+        // https://github.com/webpack/webpack/issues/300
+        'levels/multi': ['./src/code-studio/levels/multi.js'],
+        'levels/textMatch': ['./src/code-studio/levels/textMatch.js'],
+        'levels/levelGroup': './src/code-studio/levels/levelGroup.js',
+        'levels/dialogHelper': './src/code-studio/levels/dialogHelper.js',
+        'initApp/initApp': './src/code-studio/initApp/initApp.js'
+      },
+      commonFile: 'code-studio-common',
+      provides: ['marked', 'react', 'react-dom', 'radium']
+    },
+
+    {
+      uniqueName: 'plc',
+      entries: {
+        plc: './src/code-studio/plc/plc.js'
+      },
+      provides: ['marked']
+    },
+
+    // Build embedVideo.js in its own step (skipping factor-bundle) so that
+    // we don't have to include the large code-studio-common file in the
+    // embedded video page, keeping it fairly lightweight.
+    // (I wonder how much more we could slim it down by removing jQuery!)
+    // @see embed.html.haml
+    {
+      uniqueName: 'embedVideo',
+      entries: {
+        embedVideo: './src/code-studio/embedVideo.js'
+      },
+      provides: ['jquery']
+    },
+
+    // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
+    // in a bundle to minimize the amound of stuff we need when loading blocks
+    // in an iframe.
+    {
+      uniqueName: 'embedBlocks',
+      entries: {
+        embedBlocks: './src/code-studio/embedBlocks.js'
+      },
+      provides: ['react', 'react-dom', 'radium']
+    },
+
+    {
+      uniqueName: 'makerlabDependencies',
+      entries: {
+        makerlab: './src/code-studio/makerlab/makerlabDependencies.js'
+      },
+      provides: ['johnny-five', 'playground-io', 'chrome-serialport']
+    },
+
+    {
+      uniqueName: 'pd',
+      entries: {
+        pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx'
+      }
+    }
+  ];
+
+  // Create a config for each of our bundles
+  function createConfigs(bundles, options) {
+    var minify = options.minify;
+    var watch = options.watch;
+
+    return bundles.map(function (bundle) {
+      var uniqueName = bundle.uniqueName;
+      var entries = bundle.entries;
+      var commonFile = bundle.commonFile;
+      var provides = bundle.provides;
+
+      return webpackConfig.create({
+        uniqueName: bundle.uniqueName,
+        output: path.resolve(__dirname, OUTPUT_DIR),
+        entries: entries,
+        commonFile: commonFile,
+        provides: provides,
+        minify: minify,
+        watch: watch,
+        piskelDevMode: PISKEL_DEVELOPMENT_MODE
+      });
+    });
   }
 
   config.webpack = {
-    build: webpackConfig.create({
-      output: path.resolve(__dirname, OUTPUT_DIR),
-      entries: entries,
+    build: createConfigs(bundles, {
       minify: false,
       watch: false,
-      piskelDevMode: PISKEL_DEVELOPMENT_MODE
     }),
-    uglify: webpackConfig.create({
-      output: path.resolve(__dirname, OUTPUT_DIR),
-      entries: entries,
+
+    uglify: createConfigs(bundles, {
       minify: true,
-      watch: false,
-      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+      watch: false
     }),
-    watch: webpackConfig.create({
-      output: path.resolve(__dirname, OUTPUT_DIR),
-      entries: entries,
+
+    watch: createConfigs(bundles, {
       minify: false,
-      watch: true,
-      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+      watch: true
     })
   };
 
@@ -571,6 +683,14 @@ module.exports = function (grunt) {
     'newer:copy:static',
     'concat',
     'karma:integration'
+  ]);
+
+  grunt.registerTask('codeStudioTest', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'newer:copy:static',
+    'concat',
+    'karma:codeStudio'
   ]);
 
   grunt.registerTask('test', [

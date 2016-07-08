@@ -1,5 +1,5 @@
 import experiments from '@cdo/apps/experiments';
-var color = require('../color.js');
+var color = require('../../color.js');
 var React = require('react');
 var Radium = require('radium');
 
