@@ -724,7 +724,6 @@ function isPreAnimationFailure(testResult) {
     testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
     testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
     testResult === TestResults.EXAMPLE_FAILED ||
-    testResult === TestResults.APP_SPECIFIC_FAIL || // TODO(bcjordan): is this wrong?
     testResult === TestResults.EMPTY_FUNCTION_NAME;
 }
 
