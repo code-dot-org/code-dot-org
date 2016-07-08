@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Příručka ke cvičením v Hodině kódu a k Týdnu informatiky
 
 Code.org bude pořádat různé aktivity Hodiny kódu na stránkách Code.org, Hodina kódu a Týden informatiky. Aktuální seznam je na [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
@@ -29,7 +27,7 @@ Rádi bychom nabídli různé zajímavé možnosti, ale naším hlavním cílem 
   * [Rady pro vytvoření aktivity](#design)
   * [Pokyny k ochranným známkám](#tm)
   * [Sledovací obrázek](#pixel)
-  * [Propagujte výukové programy, akce CSEdWeek a Hodina kódu](#promote)
+  * [Propagujte vaše lekce, akce Týdne informatiky a Hodinu kódu](#promote)
   * [Poznámka pro studenty se zdravotním postižením](#disabilities)
 
 <a id="guidelines"></a>
@@ -263,5 +261,3 @@ Obracíme se s žádostí na každého, aby propagoval svůj vlastní hodinový 
 Pokud vytvoříte výukový materiál pro nevidomé nebo slabozraké, rádi bychom jej zvýraznili pro uživatele se čtečkou obrazovky. Dosud jsme takový výukový materiál neobdrželi a velmi rádi bychom nějaký zařadili jako možnost pro takové žáky.
 
 [**Zpět nahoru**](#top)
-
-<%= view :signup_button %>

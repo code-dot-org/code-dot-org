@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ## Come attirare l'attenzione dei media sul tuo evento dell'Ora del Codice
 
 *Per tutte le richieste relative alla stampa e ai media, contatta <press@code.org>*
@@ -15,7 +13,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
   * Mettiti in contatto con i media due settimane prima dell'evento via e-mail. Se non ricevi una risposta, riprova via e-mail oppure via telefono.
   * Chiedi ad un volontario oppure a un collaboratore della scuola di scattare fotografie da condividere online o trasmettere ai giornali.
   * Scrivi dell'Ora del Codice sulla homepage del sito web della scuola e sul giornale scolastico. &Egrave; utile arricchire i testi con dettagli sugli eventi e con foto delle attività svolte dagli studenti.
-  * Condividi, annuncia gli eventi e posta le foto dal 7 al 13 Dicembre su Twitter e Facebook. Usa l'hashtag **#HourOfCode** in modo che Code.org possa visualizzare e promuovere i tuoi eventi.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Guida passo-passo:
 
@@ -35,7 +33,7 @@ Cerca online i contatti dei giornalisti. Se non riesci a trovarlo il giornalista
 
 **3. Contatta i media locali**
 
-Spesso il miglior modo di entrare in contatto con i media è l'email. Scrivi una mail breve in cui venga messo in risalto perché le altre persone dovrebbero interessarsi all'evento. Includi tutte le informazioni perché sia possibile contattore chi sarà presente allo svolgimento dell'evento (compreso un numero di cellulare). **Vedi un [esempio di invito](%= resolve_url('/promote/resources#sample-emails') %):**
+Spesso il miglior modo di entrare in contatto con i media è l'email. Scrivi una mail breve in cui venga messo in risalto perché le altre persone dovrebbero interessarsi all'evento. Includi tutte le informazioni perché sia possibile contattore chi sarà presente allo svolgimento dell'evento (compreso un numero di cellulare). **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %).**
 
 **4. Preparati a rispondere a domande giornalistiche sull'evento della tua scuola. Eccone alcuni esempi:**
 
@@ -43,15 +41,15 @@ Spesso il miglior modo di entrare in contatto con i media è l'email. Scrivi una
 
 Mentre tutti noi sappiamo quanto sia importante per gli studenti imparare a muoversi nel mondo di oggi che è saturo di tecnologia, molti insegnanti non sono esperti in informatica e non sanno da dove iniziare. Questo evento costituisce una possibilità per tutti noi per capire di cosa si occupi l'informatica.
 
-Speriamo che stimoli l'interesse degli studenti a continuare ad imparare. Le ricerche mostrano anche che i ragazzi afferrano i concetti alla base della programmazione anche prima di saper leggere e scrivere. Infatti i loro cervelli sono più ricettivi ai linguaggi di programmazione in giovane età, proprio come avviene con le lingue straniere.
+Speriamo che stimoli l'interesse degli studenti a continuare ad imparare. Research also shows that kids can pick up programming concepts before they know how to read and write. Infatti i loro cervelli sono più ricettivi ai linguaggi di programmazione in giovane età, proprio come avviene con le lingue straniere.
 
 *Perché è importante tutto questo?*
 
-In China, every student takes computer science to graduate high school. Mentre negli Stati Uniti, il 90 per cento delle scuole non la include neppure tra le materie da insegnare. È ora di superare questo divario e prendere il treno del 21-mo secolo. Sappiamo che, indipendentemente da ciò che i nostri studenti fanno quando saranno cresciuti, sia che vogliano lavorare nel campo della medicina, degli affari, della politica o delle arti, sapere come si costruiscono degli strumenti tecnologi fornirà loro la fiducia in se stessi necessaria e le conoscenze importanti per poter riuscire nel loro campo.
+Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
 
 **Maggiori dettagli e una citazione che puoi usare nei tuoi materiali**
 
-"L'Ora del Codice è stata progettata per rimuovere l'alone di mistero che spesso avvolge la programmazione dei computer e per mostrare che l'informatica non è affatto difficile da capire, chiunque può impararne le basi," ha affermato Hadi Partovi, fondatore e CEO di Code.org. "Più di 100 milioni di studenti in tutto il mondo hanno provato l'Ora del Codice. La richiesta di una rilevante educazione informatica nel XXI secolo attraversa tutti i confini e non conosce limiti."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Più di 100 milioni di studenti in tutto il mondo hanno provato l'Ora del Codice. La richiesta di una rilevante educazione informatica nel XXI secolo attraversa tutti i confini e non conosce limiti."
 
 **Chi siamo**
 
@@ -59,5 +57,3 @@ Code.org® è un'associazione 501c3 senza scopo di lucro, dedicata alla diffusio
 
   
 Puoi trovare altre risorse ed e-mail di esempio [qui](%= resolve_url('/promote') %).
-
-<%= view :signup_button %>

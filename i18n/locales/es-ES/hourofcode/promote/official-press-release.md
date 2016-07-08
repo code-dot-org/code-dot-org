@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Muestra del comunicado a la prensa para los funcionarios electos
 
 Para publicación inmediata   
@@ -42,9 +40,3 @@ Más de 100 millones de estudiantes de todo el mundo ya hicieron una Hora del C�
 [**INSERTE CITA DE OTRA ORGANIZACIÓN O ALGUIEN QUE ASISTIÓ AL EVENTO**
 
 Para obtener más información sobre [**EVENTO/PROGRAMA/ETC**], visite [**INSERTE SITIO WEB**] o contacte [**INSERTE INFORMATION DE CONTACTO**]
-
-  
-  
-
-
-<%= view :signup_button %>

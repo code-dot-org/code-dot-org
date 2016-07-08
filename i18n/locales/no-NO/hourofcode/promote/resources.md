@@ -60,13 +60,13 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Be om at skole, arbeidgiver eller venner registrerer seg:
 
-Datamaskiner er overalt, men færre skoler underviser i informatikk nå enn for 10 år siden. De gode nyhetene er at vi jobber for å endre dette. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. De gode nyhetene er at vi jobber for å endre dette. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! og Disney, Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! og Disney, Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Snakk om det! Lag et arrangement! Be din skole om å melde seg på! Eller prøv Kodetimen selv! Alle kan ha nytte av å lære det grunnleggende.
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
 Get started at http://hourofcode.com/<%= @country %>
 
@@ -76,15 +76,15 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
-Datamaskiner er overalt, men færre skoler underviser data nå enn for 10 år siden. Jenter og minoriteter er sterkt underrepresentert. Den gode nyheten er at nå skal det bli en forandring.
+Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. De gode nyhetene er at vi jobber for å endre dette.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! og Disney, Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! og Disney, Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 Jeg vil invitere deg til å delta bli med og se barna starte aktiviteten den [dato].
 
-Kodetimen er organisert av den ideelle organisasjonen Code.org og over 100 andre anser at det er nødvendig at dagens elever må lære seg kritiske ferdigheter for å lykkes i fremtiden. Vennligst bli med oss.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Vennligst bli med oss.
 
 **Kontakt:** [Ditt navn], [tittel], mobil: 55 55 55 55
 
@@ -100,34 +100,36 @@ Jeg ser frem til å snakke med dere.
 
 Kjære foreldre!
 
-Vi lever i en verden omgitt av teknologi. Og vi vet at uansett hvilket område våre elever vil satse på som voksne, vil deres evne til å lykkes være avhengig av at de forstår hvordan teknologi fungerer. Men bare en lite brøkdel av oss lærer informatikk, og ferre studerer velger det nå enn for ti år siden.
+Vi lever i en verden omgitt av teknologi. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-Derfor vil hele skolen våren bli med på det største lærearrangementet i historien: Kodetimen som arrangeres 8. til 14. desember. 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
-Vår Kodetime er et uttrykk for at [navn på skole] er opptatt av å lære eleven ferdigheter for framtida. For at våre elever skal fortsette med programmering, så vil vil lage Kodetimen til et stort arrangement. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Dette er en mulighet til å forande innholdet i skolene i [navn på sted eller by].
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
 See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Vennlig hilsen
+Sincerely,
 
-Rektor
+Your principal
 
 <a id="politicians"></a>
 
 ## Inviter en lokalpolitiker til skolens arrangement:
 
-Kjære [ordfører/bystyrerepresentant Etternavn]:
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Visste du at i dagens arbeidsliv er det tre ganger så mange ledige IT-jobber som uteksaminerte kandidater innen fagområdet? Og programmering er i dag viktig for *alle* bransjer. Yet most of schools don’t teach it. På [navn på UTDANNINGSINSTITUSJON] prøver vi å endre på dette.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Derfor vil hele skolen våren bli med på det største lærearrangementet i historien: Kodetimen som arrangeres 8. til 14. desember. 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+Computer science is foundational for *every* industry today. Yet 75% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Jeg skriver for å invitere deg til å delta i vårt arrangement Kodetimen og holde en apell ved åpningen. Det vil foregå på [dato, tidspunkt, sted], og vil gi et viktig signal om at [delstat eller byen navn] vil lære elvene viktige ferdighetene for det 21. århundret. Vi ønsker å sikre at våre elever går i bresjen med å skape teknologi for fremtiden og ikke bare forbruker den.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Vennligst kontakt meg på [telefon eller epost]. Jeg ser frem til å høre fra deg.
+I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Med vennlig hilsen [navn], [tittel]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
-<%= view :signup_button %>
+Sincerely, [NAME], [TITLE]

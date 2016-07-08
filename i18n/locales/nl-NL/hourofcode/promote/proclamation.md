@@ -1,10 +1,8 @@
 * * *
 
-title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
+titel: < % = hoc_s(:title_proclamation) %> lay-out: breed nav: promote_nav
 
 * * *
-
-<%= view :signup_button %>
 
 ### Hieronder vindt u een voorbeeld resolutie die de week van programmeren ondersteunt en de doelstellingen die door de staat en lokale wetgevers kunnen worden gebruikt.
 
@@ -13,9 +11,9 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 [HUIS OF SENAAT RESOLUTIE ###]
 
-[DATE]
+[DATUM]
 
-Waarbij het meten van technologie een integrale onderdeel van de cultuur is en de interactie tussen mensen en de wereld veranderd;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
 Waarbij programmering de industrie veranderd, nieuwe handelsvelden creëert, innovatie aanstuurt op alle gebieden van wetenschap en de productiviteit versterkt in gevestigde economische sectoren;
 
@@ -25,7 +23,7 @@ Waarbij programmering een fundamentele wetenschap voor het digitale tijdperk is;
 
 Waarbij de informatie technologiesector uniek is gepositioneerd om te helpen met het economisch herstel door middel van onderzoek en ontwikkeling van nieuwe innovaties;
 
-Waarbij de vooruitzichten van programmering banen helder is;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 Waarbij scholieren de kans aangeboden krijgen om deel te nemen in hoge kwalitatieve programmering activiteiten, die hen blootstelt aan de rijke mogelijkheden die het veld biedt en kritisch denken vaardigheden biedt die hen gedurende hun hele leven zal dienen;
 
@@ -52,5 +50,3 @@ Opgelost, [THUIS OF SENAAT, STAAT, COUNTY, STAD OF SCHOOLBESTUUR]--
 (4) Moedigt beleidsmakers aan om belemmeringen te verwijderen die programmering klassen voorkomen gezien te worden als wiskunde of wetenschap lessen;
 
 (5) Biedt kansen voor vrouwen en ondervertegenwoordigde minderheden in programmering, onder andere via bestaande programma's,.
-
-<%= view :signup_button %>

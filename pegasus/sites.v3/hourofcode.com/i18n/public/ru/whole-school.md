@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # Участвуй всей школой
 
-Узнать о том, как принять участие всей школой в Часе Кода, можно будет здесь.
-
+Information about getting whole schools to participate in the Hour of Code will go here.

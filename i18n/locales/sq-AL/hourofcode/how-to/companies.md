@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Si ta sjellësh Orën e Kodimit në kompaninë tuaj
 
 ## Inspire students and volunteer for the Hour of Code
@@ -24,16 +22,15 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 ## Si ta mbash një ngjarje Orë Kodim
 
-## 1) Regjistrohu
+## 1) Promote your Hour of Code
 
-  * Regjistro [ Orën tuaj të Kodimit](%= resolve_url('/') %) gjatë <%= campaign_date('short') %> ngjarjes.
   * Promovo [ Orën tuaj të Kodimit ](%= resolve_url('/promote') %) dhe inkurajo të tjerët ta mbajnë.
   * Duke inkurajuar **inxhinierët e softuer-it ** në kompaninë tuaj të vizitojnë një klasë vendore për të ndihmuar të udhëheqin një Orë Kodim dhe inspirojnë studentët të studiojne shkenca kompjuterike. Ata mund të [ regjistrohen](%= resolve_url('https://code.org/volunteer/engineer') %)për të qenë të lidhur me klasën.
 
 ## 2) Ndiqni këtë video udhëzuese <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Zgjidh një tutorial:
 
-Ne do të mirëpresim një llojllojshmëri të[knaqësisë, tutorialeve të gjata](%= resolve_url('https://code.org/learn') %) për pjesëmarrësit e të gjitha moshave, të krijuara nga një llojllojshmëri të partnerëve. *Tutoriale të reja po vinë në Orën e Kodimit përpara <%= campaign_date('full') %>.* [ Provo tutorialin e tanishëm ](%= resolve_url("https://code.org/learn") %)
+Ne do të mirëpresim një llojllojshmëri të[knaqësisë, tutorialeve të gjata](%= resolve_url('https://code.org/learn') %) për pjesëmarrësit e të gjitha moshave, të krijuara nga një llojllojshmëri të partnerëve. [Try them out!](%= resolve_url("https://code.org/learn") %)
 
 **Të gjitha tutorialet e Orës së Kodimit:**
 
@@ -44,18 +41,20 @@ Ne do të mirëpresim një llojllojshmëri të[knaqësisë, tutorialeve të gjat
 
 ## 4) Planifikoni nevojat tuaja teknologjike — kompjuterët janë opsional
 
-Përvoja më e mirë e Orës së Kodimit do të jetë me kompjutera të lidhur me Internet. Ju **nuk** keni nevojë për kompjuter për secilin pjesëmarrës, dhe mund edhe të bësh Orën e Kodimit pa një kompjuter së fundmi.
+The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
-  * Testo tutorialet mbi pajisjet ju planifikoni të përdorni. Sigurohuni që ata punojnë siç duhet në shfletues me zë dhe video.
-  * Nëse tutoriali që ju zgjedhni punon më mirë me zë ju mund të dëshironi të konsideroni përdorimin e kufjeve.
-  * **Nuk ke pajisje sa duhet?** Përdor [ programimin cift](https://www.youtube.com/watch?v=vgkahOzFH2Q). Bëni pjesëmarrësit partner me njëri tjetrin. Ata gjithashtu do ta kuptojnë që shkencat kompjuterike janë sociale dhe bashkëpunuese.
-  * Apo provo [ unplugged/ tutorialet pa internet](%= resolve_url('https://code.org/learn') %). Këto nuk kërkojnë kompjuter dhe është një mënyrë e mrekullueshme për ti nxitë pjesëmarrësit. 
+**Plan Ahead!** Do the following before your event starts:
+
+  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
+  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
+  * **Nuk ke pajisje sa duhet?** Përdor [ programimin cift](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Ata gjithashtu do ta kuptojnë që shkencat kompjuterike janë sociale dhe bashkëpunuese.
+  * **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Inspiro pjesëmarrësit për të filluar Orën e Kodimit
+## 5) Start your Hour of Code off with an inspiring video
 
-Filloje Orën tuaj të Kodimit duke inspiruar pjesëmarrësit dhe duke diskutuar si shkencat kompjuterike kanë ndikim në çdo pjesë të jetës tuaj. Shpërndaj më shumë se çka të ka inspiruar ty të vazhdosh me Shkenca Kompjuterike dhe për rolin tuaj në kompani.
+Filloje Orën tuaj të Kodimit duke inspiruar pjesëmarrësit dhe duke diskutuar si shkencat kompjuterike kanë ndikim në çdo pjesë të jetës tuaj. Share more about what inspired you to pursue computer science and your role at your company.
 
 **Trego një video inspiruese:**
 
@@ -64,16 +63,22 @@ Filloje Orën tuaj të Kodimit duke inspiruar pjesëmarrësit dhe duke diskutuar
   * [Presidenti i SHBA-së Obama duke i bërë thirrje të gjithë studentëve të mësojnë shkencat kompjuterike](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Gjej më shumë video inspiruese [këtu](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-** Ide për të filluar aktivitetin e Orës së Kodimit:** - Shpego mënyrat si teknologjia ndikon në jetët e juaja, me shembuj si djemtë dhe vajzat kanë interes (Fol si teknologjia shpëton jetet, ndihmon njerëzit, lidh njerëzit). - Nëse ju jeni një kompani e teknologjisë, demostro knaqësinë, produkte të reja në të cilat kompania juaj është duke punuar. - Nëse ju nuk jeni një kompani e tekologjisë, diskuto mënyrat si kompania juaj përdorë teknologjinë të zgjidhë problemet dhe përmbush qëllimet. - Fto inxhinierët e softuer-it nga kompania juaj të flasin rreth asaj se pse ata kanë vendosur të studiojnë shkenca kompjuterike dhe për projektet që ata punojnë. - Shiko këshillat për ti bërë vajzat të interesuara në Shkenca Kompjuterike [këtu](%= resolve_url('https://code.org/girls') %).
+**Ideas to introduce your Hour of Code activity:**
+
+  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about technology that’s saving lives, helping people, connecting people). 
+  * If you are a tech company, demo fun, innovative products your company is working on.
+  * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+  * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+  * Shiko këshillat për të shtuar interesimin e vajzave në Shkenca Kompjuterike [këtu](%= resolve_url('https://code.org/girls') %).
 
 ## 6) Kod!
 
 **Pjesëmarrje direkte në aktivitet**
 
   * Shkruaje në tabelë (dërrasë të zezë) linkun e tutorialit. Poshtë numrit të pjesëmarrësve gjeni të listuar linkun e [të dhëna rreth tutorialit të zgjedhur](%= resolve_url('https://code.org/learn') %) nga ju.
-  * Për nxënësit më të vegjël, ngarkoni faqen tutorial para kohe apo ruani atë si një bookmark.
+  * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
-**Kur pjesëmarrësit hasin në vështirësi është e mirë për t'iu përgjigjur:**
+**When participants come across difficulties it's okay to respond:**
 
   * "Nuk e di. Le ta zgjidhim së bashku."
   * "Teknologjia nuk punon gjithmon ashtu siç duam ne."
@@ -81,8 +86,8 @@ Filloje Orën tuaj të Kodimit duke inspiruar pjesëmarrësit dhe duke diskutuar
 
 **Çfarë të bëj nëse dikush përfundon shpejt?**
 
-  * Ata mund të provojnë një aktivitet tjetër të Orës së Kodimit në code.org/learn
-  * Ose, pyet ata për të ndihmuar një mik i cili është duke pasur probleme me aktivitetin.
+  * They can try another Hour of Code activity at code.org/learn
+  * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]
 
@@ -102,8 +107,8 @@ Filloje Orën tuaj të Kodimit duke inspiruar pjesëmarrësit dhe duke diskutuar
 
 ## 7) Festo
 
-  * [Printo çertifikatat](%= resolve_url('https://code.org/certificates') %) për pjesëmarrësit.
-  * [Printo stikerët "Unë bëra një Orë Kodim!"](%= resolve_url('/promote/resources#stickers') %).
+  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
   * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
   * Shpërnda fotot dhe videot e Orës tuaj të Kodit në mediat sociale. Përdorimi #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
@@ -131,6 +136,4 @@ Filloje Orën tuaj të Kodimit duke inspiruar pjesëmarrësit dhe duke diskutuar
 
 ## Çfarë vjen pas Orës së Kodimit?
 
-Ora e Kodimit është thjesht hapi i parë i një udhëtimi për të mësuar më shumë se si teknologjia funksionon dhe se si të krijojmë një aplikacion software-ik. Për të vazhduar këtë udhëtim, [inkurajo pjesëmarrësit tuaj të mësojnë online](%= resolve_url('https://code.org/learn/beyond') %).
-
-<%= view :signup_button %>
+Ora e Kodimit është thjesht hapi i parë i një udhëtimi për të mësuar më shumë se si teknologjia funksionon dhe se si të krijojmë një aplikacion software-ik. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).

@@ -4,11 +4,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Cum sa organizezi un eveniment Hour of Code
-
-Organizeaza un eveniment Hour of Code in timpul Saptamanii Mondiale a Educatiei in Stiinta Computerelor (<%= campaign_date('short') %>) pentru a celebra tehnologia computerelor si programarea si pentru a inspira cat mai multi elevi sa o incerce. Oricine, oriunde poate organiza un eveniment Hour of Code.
 
 ## 1) Pregăteşte-te pentru eveniment
 
@@ -36,13 +32,13 @@ Organizeaza un eveniment Hour of Code in timpul Saptamanii Mondiale a Educatiei 
 
 ## Exemplu de plan pentru eveniment
 
-**Eveniment:** Saptamana Informaticii in Educatie, program desfasurat la nivelul intregii scoli
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Data:** 7 decembrie (inceputul Saptamanii Mondiale a Educatiei in tehnologia computerelor)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Desfasurare:** In timpul zilelor de scoala. Evenimentele organizate dimineata sunt preferate. Desfasurarea dureaza aproximativ o ora.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Locatie:** O sala din scoala(de exemplu amfiteatrul, sala de sport, sala de mese)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -56,5 +52,3 @@ Organizeaza un eveniment Hour of Code in timpul Saptamanii Mondiale a Educatiei 
 | 10:30-10:40 am | Elevii vor desfasura o activitate demonstrativa in cadrul Orei de Programare pentru scoala. Intorsatura amuzanta - ei trebuie sa predea directorului, politicienilor sau altor elevi. |
 | 10:40-11:00 am | Elevii deruleaza o activitate care sa nu implice utilizarea computerului si arata cum informatica poate fi studiata fara a folosi computerul.                                         |
 | 11:00-11:05 am | Profesorul organizator ofera concluzii de final.                                                                                                                                      |
-
-<%= view :signup_button %>
