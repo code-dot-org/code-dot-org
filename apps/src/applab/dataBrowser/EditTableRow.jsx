@@ -21,15 +21,15 @@ const EditTableRow = React.createClass({
 
         <td style={dataStyles.cell}>
           <button
-            className="btn"
-            style={dataStyles.editButton}
+              className="btn"
+              style={dataStyles.editButton}
           >
             Edit
           </button>
 
           <button
-            className="btn btn-danger"
-            style={dataStyles.button}
+              className="btn btn-danger"
+              style={dataStyles.button}
           >
             Delete
           </button>
