@@ -6,6 +6,7 @@
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Goal:",
+  "imaginaryNumberError": "Your program results in division by zero.",
   "levelIncompleteError": "Your expression does not match the goal.",
   "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Your expression is missing variable {var}.",

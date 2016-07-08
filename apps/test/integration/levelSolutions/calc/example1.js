@@ -177,7 +177,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function (assert) {
-        assert.equal(Calc.__testonly__.appState.message, 'Imaginary number.');
+        assert.equal(Calc.__testonly__.appState.message, calcMsg.imaginaryNumberError());
         return true;
       },
       xml: '<xml>' +
