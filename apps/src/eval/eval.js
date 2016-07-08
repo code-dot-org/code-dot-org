@@ -510,6 +510,8 @@ Eval.execute = function () {
   studioApp.playAudio(Eval.result ? 'win' : 'failure');
 
   if (!Eval.result && level.isProjectLevel) {
+    // In projects mode, report callback is never called. In the case of a
+    // failure, immediately display any feedback.
     displayFeedback();
   }
 };
