@@ -4,8 +4,8 @@ import { expect } from 'chai';
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 
-import { ProgressDot } from '../../src/js/components/progress/progress_dot';
-import color from '../../src/js/color';
+import { ProgressDot } from '@cdo/apps/code-studio/components/progress/progress_dot';
+import color from '@cdo/apps/color';
 
 /**
  * Combine the given styles array like Radium.

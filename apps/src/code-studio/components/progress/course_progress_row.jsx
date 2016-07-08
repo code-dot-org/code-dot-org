@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 import { stageShape } from './types';
 import StageProgress from './stage_progress.jsx';
-import color from '../../color';
+import color from '../../../color';
 
 const styles = {
   lessonPlanLink: {

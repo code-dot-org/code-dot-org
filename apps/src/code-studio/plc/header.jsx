@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import color from '../color';
+import color from '../../color';
 
 var PlcHeader = React.createClass({
   propTypes: {

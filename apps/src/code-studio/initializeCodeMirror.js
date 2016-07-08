@@ -12,7 +12,7 @@ require("codemirror/addon/edit/matchbrackets");
 require("codemirror/addon/fold/xml-fold");
 require("codemirror/mode/xml/xml");
 require("codemirror/mode/javascript/javascript");
-require("@cdo/code-studio-vendor/js/codemirror.inline-attach");
+require("./vendor/codemirror.inline-attach");
 
 /**
  * initializeCodeMirror replaces a textarea on the page with a full-featured
