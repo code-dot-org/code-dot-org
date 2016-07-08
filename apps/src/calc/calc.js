@@ -472,6 +472,10 @@ function divZeroOrFailure(err) {
     return appSpecificFailureOutcome(calcMsg.divideByZeroError(), null);
   }
 
+  if (err instanceof ExpressionNode.ImaginaryNumberError) {
+    return appSpecificFailureOutcome('Imaginary number.', null);
+  }
+
   // One way we know we can fail is with infinite recursion. Log if we fail
   // for some other reason
   if (!utils.isInfiniteRecursionError(err)) {
@@ -756,14 +760,20 @@ Calc.generateResults_ = function () {
   appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopUsedBlocks());
   appState.failedInput = null;
 
-  // Note: This will take precedence over free play, so you can "fail" a free
-  // play level with a divide by zero error.
-  // Also worth noting, we might still end up getting a div zero later when
-  // we start varying inputs in evaluateResults_
+  // Note: These checks will take precedence over free play, so you can "fail"
+  // a free play level with a divide by zero or imaginary # error.
+  // Also worth noting, we might still end up getting a div zero or imaginary #
+  // later when we start varying inputs in evaluateResults_
   if (appState.userSet.hasDivZero()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.APP_SPECIFIC_FAIL;
     appState.message = calcMsg.divideByZeroError();
+    return;
+  }
+  if (appState.userSet.hasImaginary()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.APP_SPECIFIC_FAIL;
+    appState.message = 'Imaginary number.';
     return;
   }
 
@@ -924,6 +934,7 @@ function tokenListForEvaluation_(userSet, targetSet) {
   // Check for div zero
   if (evaluation.err) {
     if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+        evaluation.err instanceof ExpressionNode.ImaginaryNumberError ||
         utils.isInfiniteRecursionError(evaluation.err)) {
       // Expected type of error, do nothing.
     } else {
@@ -967,7 +978,8 @@ function tokenListForFailedFunctionInput_(userSet, targetSet) {
   }
   var evaluation = userSet.evaluateWithExpression(expression);
   if (evaluation.err) {
-    if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+    if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+        evaluation.err instanceof ExpressionNode.ImaginaryNumberError) {
       evaluation.result = ''; // result will not be used in this case
     } else {
       throw evaluation.err;

@@ -15,6 +15,10 @@ function DivideByZeroError(message) {
   this.message = message || '';
 }
 
+function ImaginaryNumberError(message) {
+  this.message = message || '';
+}
+
 /**
  * Converts numbers to jsnumber representations. This is needed because some
  * jsnumber methods will return a number or jsnumber depending on their values,
@@ -67,6 +71,7 @@ var ExpressionNode = function (val, args, blockId) {
 };
 module.exports = ExpressionNode;
 ExpressionNode.DivideByZeroError = DivideByZeroError;
+ExpressionNode.ImaginaryNumberError = ImaginaryNumberError;
 
 /**
  * What type of expression node is this?
@@ -209,6 +214,9 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
       switch (this.value_) {
         case 'sqrt':
           val = jsnums.sqrt(left);
+          if ((val instanceof jsnums.Complex) && !val.isReal()) {
+            throw new ImaginaryNumberError();
+          }
           break;
         case 'sqr':
           val = jsnums.sqr(left);
