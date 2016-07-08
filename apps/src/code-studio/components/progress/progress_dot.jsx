@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
-import color from '../../color';
+import color from '../../../color';
 
 function createOutline(color) {
   return `

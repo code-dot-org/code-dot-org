@@ -4,7 +4,7 @@ var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
 var clientState = require('../clientState');
-var color = require('../color');
+var color = require('../../color');
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;

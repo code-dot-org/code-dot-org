@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 import { stageShape } from './types';
 import CourseProgressRow from './course_progress_row.jsx';
-import color from '../../color';
+import color from '../../../color';
 
 const styles = {
   flexHeader: {

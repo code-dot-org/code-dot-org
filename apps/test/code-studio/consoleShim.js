@@ -3,7 +3,7 @@
 'use strict';
 
 var assert = require('assert');
-var consoleShim = require('../../src/js/consoleShim');
+var consoleShim = require('@cdo/apps/code-studio/consoleShim');
 
 describe('consoleShim', function () {
   it ('creates console object with standard functions if console is missing', function () {

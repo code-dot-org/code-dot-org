@@ -33,12 +33,6 @@ namespace :install do
     end
   end
 
-  task :code_studio do
-    if RakeUtils.local_environment?
-      RakeUtils.install_npm
-    end
-  end
-
   desc 'Install Dashboard rubygems and setup database.'
   task :dashboard do
     if RakeUtils.local_environment?
@@ -64,7 +58,6 @@ namespace :install do
   tasks << :hooks if rack_env?(:development)
   tasks << :locals_yml if rack_env?(:development)
   tasks << :apps if CDO.build_apps
-  tasks << :code_studio if CDO.build_code_studio
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
