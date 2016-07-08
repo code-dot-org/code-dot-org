@@ -22,7 +22,7 @@ Please make sure your code conforms to our [style guide](STYLEGUIDE.md).  We hav
   * pegasus Ruby: `cd pegasus && rubocop`
   * pegasus HAML: `haml-lint pegasus`
   * apps: See the [apps README](./apps#style-guide)
-  * code-studio: See the [code-studio README](./code-studio#code-style)
+
 
 ## Testing
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { stageProgressShape } from './types';
 import ProgressDot from './progress_dot.jsx';
-import color from '../../color';
+import color from '../../../color';
 
 const styles = {
   courseOverviewContainer: {
