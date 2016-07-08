@@ -473,7 +473,7 @@ function divZeroOrFailure(err) {
   }
 
   if (err instanceof ExpressionNode.ImaginaryNumberError) {
-    return appSpecificFailureOutcome('Imaginary number.', null);
+    return appSpecificFailureOutcome(calcMsg.imaginaryNumberError(), null);
   }
 
   // One way we know we can fail is with infinite recursion. Log if we fail
@@ -773,7 +773,7 @@ Calc.generateResults_ = function () {
   if (appState.userSet.hasImaginary()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.APP_SPECIFIC_FAIL;
-    appState.message = 'Imaginary number.';
+    appState.message = calcMsg.imaginaryNumberError();
     return;
   }
 
