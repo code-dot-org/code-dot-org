@@ -291,6 +291,7 @@ $websites = build_task('websites', [
   BLOCKLY_CORE_TASK,
   :apps_task,
   :firebase_task,
+  :code_studio_task,
   :build_with_cloudfront,
   :deploy
 ])
