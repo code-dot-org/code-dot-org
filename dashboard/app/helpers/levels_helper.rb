@@ -28,7 +28,7 @@ module LevelsHelper
   end
 
   def readonly_view_options
-    level_view_options skip_instructions_popup: true
+    level_view_options @level.id, skip_instructions_popup: true
     view_options readonly_workspace: true
     view_options callouts: []
   end
@@ -225,7 +225,7 @@ module LevelsHelper
   def unplugged_options
     app_options = {}
     app_options[:level] ||= {}
-    app_options[:level].merge! level_view_options
+    app_options[:level].merge! level_view_options(@level.id)
     app_options.merge! view_options.camelize_keys
     app_options
   end
@@ -246,8 +246,8 @@ module LevelsHelper
 
     app_options.merge! view_options.camelize_keys
 
-    app_options[:submitted] = level_view_options[:submitted]
-    app_options[:unsubmitUrl] = level_view_options[:unsubmit_url]
+    app_options[:submitted] = level_view_options(@level.id)[:submitted]
+    app_options[:unsubmitUrl] = level_view_options(@level.id)[:unsubmit_url]
 
     app_options
   end
@@ -325,11 +325,11 @@ module LevelsHelper
     end
 
     # Edit blocks-dependent options
-    if level_view_options[:edit_blocks]
+    if level_view_options(@level.id)[:edit_blocks]
       # Pass blockly the edit mode: "<start|toolbox|required>_blocks"
-      level_options['edit_blocks'] = level_view_options[:edit_blocks]
+      level_options['edit_blocks'] = level_view_options(@level.id)[:edit_blocks]
       level_options['edit_blocks_success'] = t('builder.success')
-      level_options['toolbox'] = level_view_options[:toolbox_blocks]
+      level_options['toolbox'] = level_view_options(@level.id)[:toolbox_blocks]
       level_options['embed'] = false
       level_options['hideSource'] = false
     end
@@ -344,7 +344,7 @@ module LevelsHelper
     end
 
     # Process level view options
-    level_overrides = level_view_options.dup
+    level_overrides = level_view_options(@level.id).dup
     if level_options['embed'] || level_overrides[:embed]
       level_overrides[:hide_source] = true
       level_overrides[:show_finish] = true
@@ -420,29 +420,6 @@ module LevelsHelper
         :powered_by_aws => I18n.t('footer.powered_by_aws'),
         :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }
-  end
-
-  LevelViewOptions = Struct.new(*%i(
-    success_condition
-    start_blocks
-    toolbox_blocks
-    edit_blocks
-    skip_instructions_popup
-    embed
-    share
-    hide_source
-    submitted
-    unsubmit_url
-    iframe_embed
-  ))
-  # Sets custom level options to be used by the view layer. The option hash is frozen once read.
-  def level_view_options(opts = nil)
-    @level_view_options ||= LevelViewOptions.new
-    if opts.blank?
-      @level_view_options.freeze.to_h.delete_if { |_k, v| v.nil? }
-    else
-      opts.each{|k, v| @level_view_options[k] = v}
-    end
   end
 
   def string_or_image(prefix, text, source_level = nil)
