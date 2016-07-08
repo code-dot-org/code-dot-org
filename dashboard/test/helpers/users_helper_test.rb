@@ -126,10 +126,9 @@ class UsersHelperTest < ActionView::TestCase
         ul.level_id => {
           status: 'perfect',
           result: 100,
-          submitted: false,
           pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]},
         "#{ul.level_id}_0" => {result: ActivityConstants::FREE_PLAY_RESULT},
-        "#{ul.level_id}_1" => {result: nil, submitted: false}
+        "#{ul.level_id}_1" => {}
       }
     }, summarize_user_progress(script, user))
   end
