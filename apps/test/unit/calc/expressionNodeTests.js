@@ -410,7 +410,7 @@ describe("ExpressionNode", function () {
       assert(evaluation.err instanceof ExpressionNode.DivideByZeroError);
     });
 
-    it('can\'t evaluate an expression that becomes an imaginary number (sqrt -1)', function () {
+    it("can't evaluate an expression that becomes an imaginary number (sqrt -1)", function () {
       var node = new ExpressionNode('sqrt', [-1]);
       evaluation = node.evaluate();
       assert(evaluation.err);

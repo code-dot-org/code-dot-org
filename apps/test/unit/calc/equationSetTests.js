@@ -390,7 +390,7 @@ describe('EquationSet', function () {
       assert(evaluation.err instanceof ExpressionNode.DivideByZeroError);
     });
 
-    it('cant evaluate if function has imaginary sqrt result', function () {
+    it("can't evaluate if function has imaginary sqrt result", function () {
       var set = new EquationSet();
       set.addEquation_(new Equation('f', ['x'], new ExpressionNode('sqrt', ['x'])));
       set.addEquation_(new Equation(null, [], new ExpressionNode('f', [-1])));
