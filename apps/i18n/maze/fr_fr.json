@@ -82,5 +82,12 @@
   "whileTooltip": "Répète les actions incluses jusqu'à ce que le point final soit atteint.",
   "word": "Trouver le mot",
   "yes": "Oui",
-  "youSpelled": "Tu as épelé"
+  "youSpelled": "Tu as épelé",
+  "collectiblePresent": "there is some treasure",
+  "collect": "collect",
+  "collectorCollectTooltip": "Collect an item",
+  "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
+  "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
+  "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!"
 }

@@ -6,16 +6,16 @@ nav: promote_nav
 
 ---
 
-
 # 推薦と統計データ
 
 ## ニュースレター用に以下の宣伝文句をご利用ください
 
 ### あなたの学校にもコンピューターサイエンスを導入しましょう。Hour of Codeで始めましょう。
 
-コンピューターはありふれていますが、コンピューター科学を教える学校は10年前より少なくなっています。 良いお知らせは、私たちはこれを変えようとしているということです。 昨年、 [Hour of Code](<%= resolve_url('/') %>) について聞いたことがありますか？もしそうならば、我々の素晴らしい成果をご存じかもしれません。 最初のHour of Codeでは、1500万人もの生徒たちがコンピュータサイエンスの扉を開きました。 そして昨年、その数は6000万人に増えたのです！ [Hour of Code](<%= resolve_url('/') %>) は１時間でできるのコンピュータサイエンスの教材で、プログラミングに関する人々の勘違いを解くこと、そして誰もがその基礎を学ぶために設計されました。 コンピュータサイエンス教育週間の間に、Hour of Code を主催するために[登録](<%= resolve_url('/') %>) してください。<%= campaign_date('full') %> 下記のページより、あなたの学校を地図に登録してください。 （https://hourofcode.com/）<%= @country %>
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! 良いお知らせは、私たちはこれを変えようとしているということです。 If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+
+The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
 ## インフォグラフィック
 
 <%= view :stats_carousel %>
-

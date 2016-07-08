@@ -40,7 +40,7 @@ const DataTable = React.createClass({
 
 export default connect(state => ({
   view: state.data.view,
-  tableData: state.data.tableData,
+  tableData: state.data.tableData || {},
   tableName: state.data.tableName || ''
 }), dispatch => ({
   onViewChange(view) {

@@ -6,45 +6,39 @@ nav: promote_nav
 
 ---
 
-
-# Simple comunicado de prensa para los funcionarios electos
+# Muestra del comunicado a la prensa para los funcionarios electos
 
 Para publicación inmediata   
 [**FECHA**]   
-contacto: [**INFORMACIÓN DE CONTACTO**]  
+Contacto: [**INFORMACIÓN DE CONTACTO**]  
   
 
 
 **
 
 <center>
-  GOVERNADOR/SENADOR/MIEMBRO DE ASAMBLEA/REPRESENTANTE/ALCALDE/ MIEMBRO DEL CONSEJO [INSERTE NOMBRE][PARTICIPANTE EN LA HORA DE CODIGO CON ESTUDIANTES LOCALES]</strong><br /> La comunidad se une para crear conciencia sobre la importancia de la enseñanza de computación, al participar en la Semana de la Educación Ciencias de la Computación
+  GOBERNADOR/SENADOR/MIEMBRO DE LA ASAMBLEA/REPRESENTANTE/ALCALDE/ MIEMBRO DEL CONSEJO [INSERTE NOMBRE][PARTICIPANTE EN LA HORA DE CÓDIGO CON ESTUDIANTES LOCALES]</strong><br /> La comunidad se une para crear conciencia sobre la importancia de la enseñanza de las Ciencias de la Computación, al participar en la Semana de la Educación Ciencias de la Computación
 </center>
 
   
   
 </p> 
 
-**Fecha** - [**Inserte el nombre**] se unió a los miembros principales y de Facultad[**Inserte el nombre de la escuela**], líderes empresariales y familias locales hoy por [**Nombre del evento**] para participar en la hora del código como parte de ciencias de Computación Semana educativa. [Inserte el nombre] y miembros de la comunidad que esta aprendiendo entre decenas de millones de personas alrededor del mundo a participar en el mayor evento en la historia.
+**FECHA** - [**INSERTE NOMBRE**] se unió a los directores y miembros de la Facultad de[**INSERTE NOMBRE DE LA ESCUELA**], líderes empresariales y familias locales hoy en [**NOMBRE DEL EVENTO**] para participar en la Hora de Código como parte de la Semana Educativa de Ciencias de Computación. [INSERTE NOMBRE] y miembros de la comunidad que están entre las decenas de millones de personas alrededor del mundo que participan en el mayor evento de aprendizaje de la historia.
 
-[INSERTAR **DETALLES DEL EVENTO, USAR LENGUAJE DESCRIPTIVO Y CUANTIFICABLE. POR ejemplo:**]   
-"Daniels Run Elementary school celebró una hora en toda la escuela del evento código para exponer a sus estudiantes las Ciencias de la computación. Más de 700 estudiantes de todos los grados hicieron al menos una hora de código. Y una docena de padres y voluntarios de la comunidad ayudaron con el día y reunieron a los niños para un ensamblado mostrando por qué informática es importante en la vida de estos estudiantes"
+[**INSERTE DETALLES DEL EVENTO, USE LENGUAJE DESCRIPTIVO Y CUANTIFICABLE. POR EJEMPLO:**]   
+"La escuela primaria Daniels Run celebró en toda la escuela un evento de la Hora de Código para exponer a sus estudiantes a las Ciencias de la Computación. Más de 700 estudiantes de todos los grados hicieron al menos una Hora del Código. Y una docena de padres y voluntarios de la comunidad ayudaron durante el día y reunieron a los niños para una demostración de por qué ciencias de la computación es importante en la vida de estos estudiantes"
 
-[**TEXTO COMÚN MUESTRA DE CONTEXTO:**]   
-Los equipos están por todas partes, pero menos escuelas enseñan ciencias de la computación que hace 10 años. Las niñas y los estudiantes de color están severamente subrepresentados. La buena noticia es que esto vamos a cambiar para mejor. La hora del código es una presentación o puerta de entrada para todos los estudiantes que tendrán acceso a la educación de la ciencia de computación de alta calidad.
+[**TEXTO COMÚN DE MUESTRA PARA EL CONTEXTO:**]   
+Los ordenadores están por todas partes, pero menos escuelas enseñan Ciencias de la Computación que hace 10 años. Las chicas y los estudiantes de color están severamente subrepresentados. La buena noticia es que lo estamos cambiando para mejor. La Hora del Código es una puerta de entrada para proveer a todos los estudiantes el acceso de alta calidad a la educación en Ciencias de la Computación.
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! y Disney. El presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora de Código a través de mensajes de vídeo. Más de 100 socios se unieron para apoyar este movimiento.
+Más de 100 millones de estudiantes de todo el mundo ya hicieron una Hora del Código. Gracias a la Hora del Código, las Ciencias de la Computación estuvieron en las páginas principales de Google, MSN, Yahoo! y Disney. El Presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora del Código con vídeos. Más de 100 socios aunaron esfuerzos para apoyar este movimiento.
 
-[**INSERTAR CITA DE PORTAVOZ,EJEMPLO SIGUIENTE:**]   
-"Tenemos que fomentar y adoptar a nuestros alumnas y alumnos de la informática," dijo [**Inserte el nombre**]. "Cada estudiante merece la oportunidad de aprender informática para acceder a las mejores carreras del siglo XXI".
+[**INSERTAR CITA DEL PORTAVOZ, EJEMPLO DEBAJO:**]   
+"Tenemos que fomentar y adoptar el interés de los estudiantes en las Ciencias de la Computación," dijo [**INSERTAR NOMBRE**]. "Cada estudiante merece la oportunidad de aprender las Ciencias de Computación para acceder a las mejores carreras del siglo XXI".
 
-[**INSERTAR MÁS INFORMACIÓN ACERCA DE SU EVENTO O SU ORGANIZACIÓN**]
+[**INSERTE MÁS INFORMACIÓN ACERCA DE SU EVENTO Y/O DE SU ORGANIZACIÓN**]
 
-[**INSERTAR LA CITA DE OTRA ORGANIZACIÓN O ALGUIEN QUE ASISTIÓ AL EVENTO**.
+[**INSERTE CITA DE OTRA ORGANIZACIÓN O ALGUIEN QUE ASISTIÓ AL EVENTO**
 
-Para obtener más información sobre [**Evento/programa/ETC**], visite [**Insert Web**] o póngase en contacto con [**INSERT CONTACT INFORMATION**]
-
-  
-  
-
-
+Para obtener más información sobre [**EVENTO/PROGRAMA/ETC**], visite [**INSERTE SITIO WEB**] o contacte [**INSERTE INFORMATION DE CONTACTO**]

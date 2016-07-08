@@ -1,10 +1,8 @@
 * * *
 
-title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
+titel: < % = hoc_s(:title_op_ed) %> lay-out: breed nav: promote_nav
 
 * * *
-
-<%= view :signup_button %>
 
 ### Hieronder is een voorbeeld van een voorstander opiniepagina van de week van programmeren en zijn doelstellingen die kunnen worden gebruikt door de staat, lokale wetgevers, bedrijfsleiders enz.
 
@@ -44,5 +42,3 @@ We moeten meer in programmeer leeraren werven en professionele ontwikkeling binn
 Volgens het Bureau of Labor Statistics, zullen er in 2020, 9,2 miljoen banen in de STEM velden zijn. De helft van die banen — 4,6 miljoen — zullen in programmeren of informatie technologie zijn. En programmeren is steeds meer een fundamentele kennis voor de 21e eeuw. Wie zullen deze banen vervullen als onze kinderen niet kans krijgen om de vaardigheden te leren die nodig zijn.
 
 Deze week, < % = campaign_date('full') % >, is de week van programmeren. In scholen uit de hele **[STATE]**, zullen onze leerlingen deelnemen aan het nationale CodeUur, zij zullen het onderwerp van programmeren ontraadselen en hopelijk worden ze gemotiveerd om meer te leren. Ik zal meedoen met hen en ik nodig u ook uit. Iedereen moet leren programmeren. Bezoek https://hourofcode.com/ < % = het @country %> om meer te leren en ga aan de slag. En ondersteun onze inspanningen door programmeren op meer scholen te brengen **[STATE]**.
-
-<%= view :signup_button %>

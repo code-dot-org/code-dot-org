@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Hour of Code 행사와, 컴퓨터과학(정보과학) 교육 주간을 위한 튜토리얼 가이드라인
 
 Code.org 는 매우 많고 다양한 Hour of Code 활동들을 Code.org, Hour of Code, CSEdWeek 웹 사이트들에서 진행합니다. 현재 진행중인 활동들: [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
@@ -214,13 +212,13 @@ CSEdWeek ([작은 ](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-fina
 
 이러한 내용의 목적은 "Hour of Code" 이름이 혼란스럽게 사용되는 것을 막고자 하는 것입니다. 우리와 함께하는 많은 튜토리얼 파트너들은 "Hour of Code"를 여러분의 웹 사이트에 사용해 왔습니다. 이러한 이름 사용을 제한하고 싶지는 않지만, 다음과 같은 몇가지 제한 사항은 지켜주길 바랍니다.
 
-  1. 의류 등 각종 패션 제품에 사용되는 "Hour of Code"는 브랜드 이름으로서 사용되서는 안되며, Hour of Code 운동에 대한 참조를 달아야 합니다. 좋은 예시: "ACMECorp.com 에서 Hour of Code 에 함께 참여하세요" Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  1. 의류 등 각종 패션 제품에 사용되는 "Hour of Code"는 브랜드 이름으로서 사용되서는 안되며, Hour of Code 운동에 대한 참조를 달아야 합니다. 좋은 예시: "ACMECorp.com 에서 Hour of Code 에 함께 참여하세요" 나쁜 예시: "ACME Corp 가 만든 Hour of Code를 해보세요".
+  2. "Hour of Code"를 언급하는 경우, 웹사이트에 게제하거나, 앱/프로그램에 설명하는 경우에는 윗 첨자 "TM"를 눈에 띄게 표시해 주세요.
   3. 알압로 수 있는 말로된 언어와 함께(혹은 페이지의 하단에), 다음과 같은 문구와 함께 CSEdWeek 와 Code.org 웹사이트의 URL 링크를 포함시켜주세요.
     
     *" 'Hour of Code'는 1시간 짜리의 컴퓨터과학/컴퓨터프로그래밍 과정을 전세계 수천만명의 학생들에게 소개하고 경험할 수 있도록 하기 위해, 컴퓨터과학교육주간(Computer Science Education Week[csedweek.org]) 과 Code.org [code.org] 에 의해 조직/운영되는 전세계적인 운동입니다."*
 
-  4. No use of "Hour of Code" in app names.
+  4. "Hour of Code"를 앱/프로그램 이름으로 사용하지 말아주세요.
 
 [**맨 위로**](#top)
 
@@ -264,5 +262,3 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 시각 장애인을 위한 튜토리얼을 만들어주신다면, 잘 보이는 위치에 강조하여 배치하여 안내할 것입니다. 아직 그러한 튜토리얼을 받지는 못했지만, 그렇게 몸이 불편한 학생들을 위한 튜토리얼이 있으면 매우 좋을 것 같습니다.
 
 [**맨 위로**](#top)
-
-<%= view :signup_button %>

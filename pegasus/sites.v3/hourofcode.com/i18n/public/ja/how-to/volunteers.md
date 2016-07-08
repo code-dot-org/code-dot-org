@@ -12,14 +12,37 @@ nav: how_to_nav
 
 地元の学校へ行き、コンピューター科学を学ぶように、生徒を励ましてください。[１時間ボランティア](https://code.org/volunteer/engineer).
 
-## 2. Join a volunteer info session
+## 2. ボランティア情報セッションに参加
 
 We'll be hosting two info sessions to explain what a typical volunteer experience will be like. 教育関係者との、Hour of Code 事前準備の内容や、イベントのためにどのような準備をすればよいかを説明します。 質問を用意して、ご参加ください。 These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| 日      | 時刻                 | Link to info session                                                            |
-| ------ | ------------------ | ------------------------------------------------------------------------------- |
-| １１月１６日 | 太平洋標準時　午後１時から１時半   | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
-| １２月３日  | 太平洋標準時　午前１１時から１１時半 | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
+<table>
+  <tr>
+    <th>
+      日付
+    </th>
+    
+    <th>
+      時刻
+    </th>
+    
+    <th>
+      セッションの情報
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      <strong>Sessions to be announced! Stay tuned!</strong>
+    </td>
+    
+    <td>
+    </td>
+    
+    <td>
+    </td>
+  </tr>
+</table>
 
 ## ３．３０分間　チュートリアルを試す
 
@@ -35,29 +58,33 @@ We'll be hosting two info sessions to explain what a typical volunteer experienc
 
 初めて、コーディングした時のこと覚えてますか？人生の道順を決定した重要な経験でしたよね。
 
-まさに、Hour of Codeは、そのために生まれたのです。 過去２年間のHour of Codeの働きは、初めてのコンピューター科学の体験を通じて、１８０ヶ国、１億人以上の生徒の間に存在していた、コーディングに関する固定観念を粉々に崩すことに参加してきました。
+まさに、Hour of Codeは、そのために生まれたのです。 In the last three years, the movement has shattered stereotypes in tech and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**私は、地元の学校でボランティアするために登録しました。**   
-すでに、7,098の教育者が援助を求めています。 Code.orgは、初めてのHour of Codeを経験する、学生達を助けることができる、貴方のような、技術者のボランティアと生徒のマッチングをしています。
+**I signed up to volunteer in a local classroom, and you can, too!**   
+Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
 
-[１時間ボランティア](https://code.org/volunteer/engineer)できませんか。 ボランティア登録後は、セキュリティの保護されたフォームを利用して地元の教育者からの、連絡が可能になります。＊ボランティア不可能ですか？ [Hour of Codeの情報を広げてください。](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.
 
-**貴方の経験は大切です**  
-コンピューターサイエンスを教えている学校は殆どありません。 殆どの生徒たちは、コンピューターサイエンスが、大きな問題を解決し、親近性を増してくれることだとは理解していません。 これは、少なくとも一人の地元の少年、少女を励ますのに良い機会です。
+Can’t volunteer? [Help spread the word about the Hour of Code instead!](https://hourofcode.com/promote).
 
-**[ボランティアとして登録してください。](https://code.org/volunteer/engineer)**
+**Your experience matters**  
+Most schools still don’t teach computer science. Most students don’t know that coding is about solving big problems and connecting people. This is a chance to inspire at least one young person in your area.
 
-＊教育者とは、貴方のメールアドレスは共有しませ。
+**[Sign up to volunteer](https://code.org/volunteer/engineer)**
 
-## 5. Ask your employer to get involved
+*Your email address will never be shared with teachers.
+
+## ５．雇用主にも参加するよう声をかけてください。
 
 [Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
 
-## 6. Promote the Hour of Code in your community
+## ６．地域全体に、Hour of Codeの働きを広めてください。
 
 Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. もしくは、周囲に住む人と一緒にHour of Code"パーティ"をしてみても面白いでしょう。 [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Read the suggested agenda below so you know what to expect when you visit a classroom.
+## 7. Prepare before you visit a classroom.
+
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Agenda for Volunteering in a Classroom
 
