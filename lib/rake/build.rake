@@ -56,14 +56,13 @@ namespace :build do
     end
   end
 
+  # TODO: (brent) - temporarily leave in a build step that just does a clean of
+  # code-studio to make sure we don't have artifacts from old builds
   desc 'Builds code studio.'
   task :code_studio do
     Dir.chdir(code_studio_dir) do
-      HipChat.log 'Installing <b>code-studio</b> dependencies...'
-      RakeUtils.npm_install
-
-      HipChat.log 'Building <b>code-studio</b>...'
-      RakeUtils.system 'npm run build:dist'
+      HipChat.log 'Removing <b>code-studio</b>...'
+      RakeUtils.system 'rm -rf build'
     end
   end
   task :'code-studio' => :code_studio

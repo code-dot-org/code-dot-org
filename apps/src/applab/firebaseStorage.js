@@ -279,6 +279,17 @@ FirebaseStorage.resetRecordListener = function () {
 };
 
 /**
+ * Delete an entire table from firebase storage.
+ * @param {string} tableName
+ * @param {function ()} onSuccess
+ * @param {function (string)} onError
+ */
+FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
+  const tableRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}`);
+  tableRef.set(null).then(onSuccess, onError);
+};
+
+/**
  * Populates a channel with table data for one or more tables
  * @param {string} jsonData The json data that represents the tables in the format of:
  *   {

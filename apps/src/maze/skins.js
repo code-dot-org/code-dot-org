@@ -55,6 +55,19 @@ var CONFIGS = {
     pegmanWidth: 50
   },
 
+  collector: {
+    obstacleIdle: 'obstacle.png',
+
+    goal: 'gold.png',
+
+    look: '#000',
+    transparentTileEnding: true,
+    nonDisappearingPegmanHittingObstacle: true,
+    background: 'background.png',
+    pegmanYOffset: -8,
+    danceOnLoad: true
+  },
+
   farmer: {
     obstacleIdle: 'obstacle.png',
 

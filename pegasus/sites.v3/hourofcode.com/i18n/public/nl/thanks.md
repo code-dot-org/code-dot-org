@@ -1,55 +1,63 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
+  title: <%= hoc_s(:title_signup_thanks) %>
+  layout: wide
+  nav: how_to_nav
 
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
+  social:
+    "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+    "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+    "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+    "og:image:width": 1440
+    "og:image:height": 900
+    "og:url": "http://<%=request.host%>"
 
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+    "twitter:card": player
+    "twitter:site": "@codeorg"
+    "twitter:url": "http://<%=request.host%>"
+    "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+    "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+    "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
 
 <%
-  facebook = {:u=>"http://#{request.host}/us"}
+    facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Bedankt dat je je hebt opgegeven om een Uur Code te organiseren!
+# Bedankt dat je je hebt opgegeven om een CodeUur te organiseren!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
+Je maakt het mogelijk voor studenten over de hele wereld om te leren van één uur van CodeUur die *de rest van hun leven zal veranderen*, tijdens <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Wat kunt u nu doen?
 
-## 1. Zegt het voort
+## 1. Spreid het woord
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+U heeft zojuist deelgenomen aan de CodeUur beweging. Vertel het uw vrienden met **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Vraag je hele school een Uur Code aan te bieden
+## 2. Vind een vrijwilliger uit de buurt die u kunt helpen met uw evenement.
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Kijk op onze vrijwilligers kaart](<%= resolve_url('https://code.org/volunteer/local') %>) voor vrijwilligers die uw klas kunnen bezoeken of met de klas kunnen videochatten om uw studenten te inspireren over de breedte van mogelijkheden van programmering.
 
-## 3. Vraag je werkgever betrokken te raken
+## 2. Vraag je hele school om een CodeUur aan te bieden
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+[Stuur deze e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) naar uw opdrachtgever en daag elk klaslokaal op uw school uit om aan te melden.
 
-## 4. Promote Hour of Code in your community
+## 4. Vraag uw werkgever om betrokken te raken
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Stuur deze e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) naar uw manager of bedrijf CEO.
 
-## Vraag een politicus het Uur Code te ondersteunen
+## 5. Promoot het CodeUur in uw gemeenschap
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Werf een lokale groep](<%= resolve_url('/promote/resources#sample-emails') %>) — jongen/meisje scout clubs, kerk, universiteit, veteranen groep, vakbond of zelfs sommige vrienden. U hoeft niet op school te zitten om nieuwe skills te leren. Gebruik deze [posters, banners, stickers, video's en meer](<%= resolve_url('/promote/resources') %>) voor uw eigen evenement.
+
+## 6. Vraag een politicus het CodeUur te ondersteunen
+
+[Stuur deze e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) naar uw lokale vertegenwoordigers, gemeenteraad of schoolbestuur, om hen uit te nodigen voor het CodeUur op uw school. Het kan steun bieden aan programmering binnen uw gemeente in maar één uur.
+
+## 7. Plan uw CodeUur
+
+Kies een CodeUur activiteit en [bekijk deze how-to guide](<%= resolve_url('/how-to') %>).
 
 <%= view 'popup_window.js' %>
