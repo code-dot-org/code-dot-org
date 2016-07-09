@@ -467,12 +467,7 @@ Blockly.ContractEditor.prototype.setBlockInputsToType_ = function (newType) {
  * @private
  */
 Blockly.ContractEditor.prototype.currentFunctionDefinitionType_ = function () {
-  var functionDefinitionCheck = this.functionDefinitionBlock.previousConnection.getCheck();
-  if (!functionDefinitionCheck || functionDefinitionCheck.length !== 1) {
-    throw "Contract editor function definition should have exactly one type check";
-  }
-
-  return functionDefinitionCheck[0];
+  return this.functionDefinitionBlock.outputType_;
 };
 
 /**

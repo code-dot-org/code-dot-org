@@ -41,7 +41,7 @@ Blockly.Blocks.functional_definition = {
       headerHeight: 0,
       rowBuffer: 3
     });
-    this.setFunctionalOutput(true, Blockly.BlockValueType.NUMBER);
+    this.setFunctionalOutput(false);
     var name = Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE)
@@ -182,7 +182,7 @@ Blockly.Blocks.functional_definition = {
   },
   updateOutputType: function(outputType) {
     this.outputType_ = outputType;
-    this.changeFunctionalOutput(this.outputType_);
+    this.setHSV.apply(this, Blockly.FunctionalTypeColors[outputType]);
   },
   /**
    * Disposes of this block and (optionally) its callers
