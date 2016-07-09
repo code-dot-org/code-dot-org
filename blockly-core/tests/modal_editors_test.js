@@ -466,6 +466,20 @@ function test_contractEditor_new_function_then_variable_then_function() {
   goog.dom.removeNode(container);
 }
 
+function test_contractEditor_new_function_no_output_definition() {
+  Blockly.defaultNumExampleBlocks = 2;
+  var container = initializeWithContractEditor('<xml/>');
+  var contractEditor = Blockly.contractEditor;
+
+  contractEditor.openWithNewFunction();
+
+  assert('New functional definition block should not have an output',
+      !contractEditor.functionDefinitionBlock.previousConnection);
+
+  contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
 function assertContractDefinitionLaidOutAsExpected(contractEditor) {
   var definitionSectionLogic = contractEditor.definitionSectionLogic_;
   var definitionTableGroup = definitionSectionLogic.definitionTableGroup;
