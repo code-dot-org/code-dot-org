@@ -25,7 +25,7 @@ const styles = {
   storyTable: {
     table: {backgroundColor: 'white', tableLayout: 'fixed'},
     row: {border: '1px solid #ccc'},
-    cell: {width:'50%', padding: 10},
+    cell: {width:'50%', padding: 20},
   },
 };
 
@@ -72,8 +72,8 @@ storybook.setAddon({
               </tr>
             </thead>
             <tbody>
-              {items.map(item => (
-                 <tr style={styles.storyTable.row}>
+              {items.map((item, index) => (
+                 <tr style={styles.storyTable.row} key={index}>
                    <td style={styles.storyTable.cell}>
                      <strong>
                        {item.name}
@@ -85,7 +85,7 @@ storybook.setAddon({
                        <Node depth={0} node={item.story()}/>
                      </Pre>
                    </td>
-                   <td>{item.story()}</td>
+                   <td style={styles.storyTable.cell}>{item.story()}</td>
                  </tr>
                ))}
             </tbody>
