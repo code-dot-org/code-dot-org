@@ -65,7 +65,7 @@
 -# TODO(asher): Remove the current_user.admin? as part of admin account lockdown.
 - if current_user && (current_user.admin? || current_user.permission?(UserPermission::LEVELBUILDER))
   -# Show all the levels, their names, and instructions in the admin box.
-  = render layout: 'shared/admin' do
+  = render layout: 'shared/extra_links' do
     - levels = Script.get_from_cache(@script.name).stages.map{ |stage| stage.script_levels.map{ |sl| sl.level }}.flatten
     - levels.each_with_index do |level, index|
       .row
