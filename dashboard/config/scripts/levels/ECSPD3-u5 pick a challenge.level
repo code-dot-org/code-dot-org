@@ -5,10 +5,16 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "markdown_instructions": "<link rel=\"stylesheet\" type=\"text/css\" href=\"//code.org/curriculum/docs/web/k5online.css\">\n\n### Challenge Overview > What's your Challenge? \n\n<br/>\n#### Enter the lesson you selected for your challenge in the text box below.\n\n- Day 1 - 3: Room data project, set up final project\n- Day 4 - 5: Developing research questions\n- Day 6 - 7: Building group norms\n- Day 8: Check in Day\n- Day 9 - 11: Maps, identifying variables, subsetting data, sorting data, frequency of types. \n- Day 12: Bubble Charts\n- Day 13: Review: Bubble Charts\n- Day 14 - 15: Bar Plots\n- Day 16: Mosaic Plots\n- Day 17: Review: Bar and Mosaic Plots\n- Day 18 - 20: Mean, Median, Minimum, Maximum, Histograms, Box Plots\n- Day 21: Review: Mean, Median, Minimum, Maximum\n- Days 22 - 24: Filtering Text data (remove punctuation, remove case, remove stop words, stemming), Analyzing word counts. \n- Day 25: Review: Text Data\n- Day 26 - 27: Incorporate  data techniques into final project \t\t\n- Day 28 - 29: Build project presentations \t\t\n- Day 30: Present final project\n\n>##### Now that you've selected a lesson, head to the forum and **share which lesson you plan to complete** for your challenge. \n<a href=\"http://forum.code.org/c/ecs/ecs-unit5\" target=_blank>forums >> </a>\n\n<br>\n\n",
+    "markdown_instructions": "# Challenge Overview > What's your Challenge? \r\n\r\n## Enter the lesson you selected for your challenge in the text box below.\r\n\r\n- Day 1 - 3: Room data project, set up final project\r\n- Day 4 - 5: Developing research questions\r\n- Day 6 - 7: Building group norms\r\n- Day 8: Check in Day\r\n- Day 9 - 11: Maps, identifying variables, subsetting data, sorting data, frequency of types.\r\n- Day 12: Bubble Charts\r\n- Day 13: Review: Bubble Charts\r\n- Day 14 - 15: Bar Plots\r\n- Day 16: Mosaic Plots\r\n- Day 17: Review: Bar and Mosaic Plots\r\n- Day 18 - 20: Mean, Median, Minimum, Maximum, Histograms, Box Plots\r\n- Day 21: Review: Mean, Median, Minimum, Maximum\r\n- Days 22 - 24: Filtering Text data (remove punctuation, remove case, remove stop words, stemming), Analyzing word counts.\r\n- Day 25: Review: Text Data\r\n- Day 26 - 27: Incorporate  data techniques into final project\r\n- Day 28 - 29: Build project presentations\r\n- Day 30: Present final project\r\n\r\nNow that you've selected a lesson, head to the forum and **share which lesson you plan to complete** for your challenge.\r\n\r\n<h4><a href=\"http://forum.code.org/c/ecs/ecs-unit5\" target=_blank>Forums <i class=\"fa fa-external-link\" /></a></h4>",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

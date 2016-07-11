@@ -5,12 +5,12 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Documenting Your Course Goals",
-    "markdown_instructions": "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://code.org/curriculum/docs/web/k5online.css\" />\r\n\r\n***Now that you've learned more about the CS in Algebra Professional Learning Program and curriculum, let's consider your goals***\r\n<br><br>\r\nWhat are your goals for your CS in Algebra class? How do you you see it integrating into your class, and what do you hope that you and your students get out of the experience?\r\n\r\n*These goals will change over time, and we'll revisit your response as we go through the course so we can check in on how we're progressing towards those goals.*\r\n",
+    "markdown_instructions": "# Documenting Your Course Goals\r\n\r\n**Now that you've learned more about the CS in Algebra Professional Learning Program and curriculum, let's consider your goals**\r\n\r\n - What are your goals for your CS in Algebra class?\r\n - How do you you see it integrating into your class, and what do you hope that you and your students get out of the experience?\r\n\r\n*These goals will change over time, and we'll revisit your response as we go through the course so we can check in on how we're progressing towards those goals.*\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "allow_user_uploads": "false",
-    "submittable": "false"
+    "submittable": "false",
+    "peer_reviewable": "false"
   },
   "published": true,
   "notes": "",
