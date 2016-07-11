@@ -81,7 +81,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test 'signing in user with existing UserGeo does not change UserGeo' do
-    user = create(:user)
+    user = create(:user, current_sign_in_ip: '1.2.3.4')
     UserGeo.create(user_id: user.id, ip_address: '127.0.0.1')
 
     assert_no_change('UserGeo.find_by_user_id(user.id)') do

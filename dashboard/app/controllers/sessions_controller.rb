@@ -12,7 +12,12 @@ class SessionsController < Devise::SessionsController
   def create
     super do |user|
       if user.persisted? && user.current_sign_in_ip
-        UserGeo.find_or_create_by!(user_id: user.id)
+        if UserGeo.find_by_user_id(user.id).nil?
+          UserGeo.create!(
+            user_id: user.id,
+            ip_address: user.current_sign_in_ip
+          )
+        end
       end
     end
   end
