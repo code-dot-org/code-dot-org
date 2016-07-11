@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "\"Me zombie artist. Me love drawing!\"  \r\n\r\nHelp the zombie draw square glasses.  \r\n\r\nThe bridge between the glasses is 25 pixels shorter than the width of the squares.",
+    "instructions": "\"Me zombie artist. Me love drawing!\"  \r\n\r\nHelp the zombie draw square glasses.  \r\n\r\nThe bridge between the glasses is 25 pixels shorter than the width of the squares, which is 100 pixels.",
     "x": "30",
     "y": "225",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "8",
     "slider_speed": "0.7",
     "embed": "false",
-    "markdown_instructions": "\"Me zombie artist. Me love drawing!\" \r\n\r\nHelp the zombie draw square glasses.  \r\n\r\nThe bridge between the glasses is 25 pixels shorter than the width of the squares.\r\n\r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)",
+    "markdown_instructions": "\"Me zombie artist. Me love drawing!\" \r\n\r\nHelp the zombie draw square glasses.  \r\n\r\nThe bridge between the glasses is 25 pixels shorter than the width of the squares, which is 100 pixels.\r\n\r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -32,7 +32,9 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.\",\r\n  \"hint_id\": \"2-3_Artist_Functions_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.\",\r\n  \"hint_id\": \"2-3_Artist_Functions_1_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"It is okay to draw overlapping lines to make your glasses.\",\r\n  \"hint_id\": \"2-3_Artist_Functions_1_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null,
+    "discard_background": "false"
   },
   "published": true,
   "notes": "",

@@ -32,7 +32,10 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null,
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Your program should:\\n- Use function\\n- Move forward 100 + 75 pixels\\n- Use function\",\r\n  \"hint_id\": \"2-3_Artist_Functions_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "discard_background": "false"
   },
   "published": true,
   "notes": "",

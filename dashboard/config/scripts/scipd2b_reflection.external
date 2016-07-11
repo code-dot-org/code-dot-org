@@ -3,7 +3,7 @@ title 'Reflection on Phase 2'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
 
 ### Stay in Touch!
 

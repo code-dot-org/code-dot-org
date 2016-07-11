@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # Neka vaša škola učestvuje
 
-Informacije o sudjelovanju cijele škole u Satu programiranja će ići ovdje.
-
+Information about getting whole schools to participate in the Hour of Code will go here.

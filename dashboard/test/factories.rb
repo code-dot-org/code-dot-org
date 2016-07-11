@@ -1,4 +1,9 @@
 FactoryGirl.define do
+  factory :paired_user_level do
+    driver_user_level {user_level}
+    navigator_user_level {user_level}
+  end
+
   factory :user do
     birthday Date.new(1991, 03, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }

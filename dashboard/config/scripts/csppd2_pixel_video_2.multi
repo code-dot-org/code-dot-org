@@ -11,7 +11,7 @@ wrong' Monitor 1 has higher density than Monitor 2.'
 right 'There is not enough information to compare the density of the monitors.'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Lesson Chunk 4: Compressing and Storing Information > Pixels and RGB Video
 

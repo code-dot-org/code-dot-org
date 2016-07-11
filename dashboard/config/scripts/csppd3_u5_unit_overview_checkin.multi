@@ -9,7 +9,7 @@ right 'I feel like I need to do SOME review of the tasks before I run this unit'
 right 'I feel like I need to do A LOT of review of the tasks before I run this unit'  
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Unit 5 Overview > Checking In
 

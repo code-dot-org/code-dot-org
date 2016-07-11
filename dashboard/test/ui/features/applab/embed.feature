@@ -17,3 +17,9 @@ Feature: App Lab Embed
     And I wait until element ".fa-play" is visible within element "iframe"
     And I click selector ".fa-play" within element "iframe"
     And I wait until element "#divApplab > .screen > button#hello" is visible within element "iframe"
+    Then I wait until element "a.more-link" is visible within element "iframe"
+    And I click selector "a.more-link" within element "iframe"
+    Then I wait until element "a:contains('How It Works')" is visible within element "iframe"
+    And I click selector "a:contains('How It Works')" within element "iframe"
+
+    And I wait to see Applab code mode

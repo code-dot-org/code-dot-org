@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # Məhtəbinizdən hamının iştirak etməsini təmin edin
 
-Məktəbdən hamının "Kod saatı"nda iştirak etməsi haqqında məlumat burada olacaq.
-
+Information about getting whole schools to participate in the Hour of Code will go here.
