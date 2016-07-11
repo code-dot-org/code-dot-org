@@ -69,8 +69,9 @@ module Poste
       first
   end
 
-  # Unsubscribes the (hashed) email.
-  # @param email [string | nil] the email to unsubscribe.
+  # Unsubscribes the specified hashed email.
+  # @param email [string | nil] the email to record being unsubscribed.
+  #   WARNING: The contact to unsubscribe is chosen using hashed_email.
   # @param hashed_email [string] the MD5 hash of the email to unsubscribe.
   # @param params [hash] A hash of parameters, including ip_address.
   def self.unsubscribe(email, hashed_email, params={})
