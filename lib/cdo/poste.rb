@@ -63,7 +63,7 @@ module Poste
 
   def self.unsubscribed?(email)
     hashed_email = Digest::MD5.hexdigest(email.to_s.strip.downcase)
-    !!POSTE_DB[:contacts].where('hashed_email = ? AND unsubscribed_on IS NOT NULL', hashed_email).first
+    !!POSTE_DB[:contacts].where('hashed_email = ? AND unsubscribed_at IS NOT NULL', hashed_email).first
   end
 
   def self.unsubscribe(email, params={})
