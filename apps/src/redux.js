@@ -24,7 +24,9 @@ module.exports.createStore = function (reducer, initialState) {
   // to your url
   var enableReduxDebugging = experiments.isEnabled('reduxLogging');
   if (process.env.NODE_ENV !== "production" && enableReduxDebugging) {
-    var reduxLogger = createLogger();
+    var reduxLogger = createLogger({
+      collapsed: true
+    });
 
     // window.devToolsExtension is a Redux middleware function that must be
     //   included to attach to the Redux DevTools Chrome extension.
