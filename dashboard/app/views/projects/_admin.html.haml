@@ -1,6 +1,6 @@
 -# TODO(asher): Remove current_user.admin? as part of admin account lockdown.
 - if current_user && (current_user.admin? || current_user.permission?(UserPermission::LEVELBUILDER))
-  = render layout: 'shared/admin' do
+  = render layout: 'shared/extra_links' do
     %h3 Debug
     %h4 projects ({{projects.length}} total including hidden)
     %pre

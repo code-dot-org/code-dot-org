@@ -26,10 +26,17 @@ module.exports = function (app, levels, options) {
 
   // If a levelId is not provided, then options.level is specified in full.
   // Otherwise, options.level overrides resolved level on a per-property basis.
-  if (options.levelId) {
-    var level = levels[options.levelId];
+  //
+  // Levelbuilder-built levels specify a levelId of "custom" while providing a
+  // full level definition, ignoring the base "custom" level provided in the
+  // corresponding levels.js file. Legacy levels just override the skin and/or
+  // the video_key of the levels defind in levels.js. Fortunately, there aren't
+  // any levels (as of this comment) that are defined half in levels.js and
+  // half on the server.
+  if (options.level && options.level.levelId) {
+    var level = levels[options.level.levelId];
     options.level = options.level || {};
-    options.level.id = options.levelId;
+    options.level.id = options.level.levelId;
     for (var prop in options.level) {
       level[prop] = options.level[prop];
     }

@@ -16,9 +16,11 @@ nav: about_nav
 - **Marketing**
  	- [Marketing Associate](#market)
 - **Partnerships & Outreach**
- 	- [Regional Manager - Northeast, MidAtlantic, Southeast locations](#dcdm)
+ 	- [Regional Manager - Northeast, Southeast locations](#dcdm)
 - **Product**
 	- [Senior Backend Engineer / Infrastructure Lead](#backend)
+	- [Senior Software Engineer](#senior)
+	- [Software Engineer](#software)
 	- [UX / Visual Designer (Part time)](#design)
 - **Professional Learning & Community**
 	- [Training and Development Specialist](#train)
@@ -178,7 +180,7 @@ The ideal candidate has the following qualifications:
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="dcdm"href="#dcdm"> Regional Manager - Northeast, MidAtlantic, Southeast locations (Boston, New York, Washington, D.C., Florida/Georgia)</a>
+## <a name="dcdm"href="#dcdm"> Regional Manager - Northeast, Southeast locations (Boston, New York, Florida/Georgia)</a>
 
 **Job Summary:**
 
@@ -245,6 +247,46 @@ The ideal candidate has the following qualifications:
 - Experience scaling web services 
 - Experience building developer infrastructure
 - Expertise in some of these technologies preferred: Ruby / Rails, JavaScript, Sinatra, SQL/Databases/MySQL, React
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="senior" href="#senior">Senior Software Engineer (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
+
+As Senior Software Engineer at Code.org, you’ll be a key contributor in delivering features in Code Studio, used by tens of millions students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
+
+**Skills and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of #CSForAll
+- Bachelor’s degree with a major in Computer Science
+- 5+ years as a software engineer
+- Ability to make senior level engineering contributions including a high level of output, tackling the hardest problems, and being a guiding voice on the team 
+- Experience shipping significant features in commercial software products 
+- Expertise in some of these technologies preferred: JavaScript, React, Ruby / Rails, SQL/Databases/MySQL
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="software" href="#software">Software Engineer (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
+
+As Software Engineer at Code.org, you’ll be delivering features in Code Studio, used by tens of millions students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
+
+**Skills and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of #CSForAll
+- Bachelor’s degree with a major in Computer Science
+- 3+ years as a software engineer
+- Expertise in some of these technologies preferred: JavaScript, React, Ruby / Rails, SQL/Databases/MySQL
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 

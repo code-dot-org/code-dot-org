@@ -26,7 +26,7 @@ const CollapserButton = props => (
         icon={props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'}
         style={styles.collapseIcon}
     />
-    {props.collapsed ? msg.more() : msg.hide()}
+    {props.collapsed ? msg.more() : msg.less()}
   </button>
 );
 CollapserButton.propTypes = {

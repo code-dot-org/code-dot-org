@@ -53,10 +53,18 @@ window.dashboard.utils = {
 window.dashboard.header = require('./header');
 window.dashboard.videos = require('./videos');
 window.dashboard.assets = require('./assets');
+window.dashboard.pairing = require('./pairing');
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
 // arguably each of the above files belongs in code-studio
 window.Dialog = require('./dialog');
+
+// When we were in browserify world, all modules in a bundle (i.e. code-studio-common)
+// would get preloaded. In webpack, they're only loaded as needed. We were
+// depending on these two modules being loaded when code-studio-common was
+// included, so force that load here.
+require('./levels/multi');
+require('./levels/textMatch');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in New Relic.

@@ -245,5 +245,7 @@
   "watchVideo": "Urmărește clipul video",
   "when": "când",
   "whenRun": "când rulezi",
-  "workspaceHeaderShort": "Spaţiu de lucru: "
+  "workspaceHeaderShort": "Spaţiu de lucru: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

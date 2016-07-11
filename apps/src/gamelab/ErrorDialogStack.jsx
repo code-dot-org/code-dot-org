@@ -4,7 +4,7 @@
 var React = require('react');
 var actions = require('./errorDialogStackModule');
 var connect = require('react-redux').connect;
-var Dialog = require('../templates/DialogComponent.jsx');
+var BaseDialog = require('../templates/BaseDialog.jsx');
 
 /**
  * Renders error dialogs in sequence, given a stack of errors.
@@ -21,9 +21,9 @@ var ErrorDialogStack = React.createClass({
     }
 
     return (
-      <Dialog isOpen handleClose={this.props.dismissError}>
+      <BaseDialog isOpen useDeprecatedGlobalStyles handleClose={this.props.dismissError}>
         <h1>{this.props.errors[0].message}</h1>
-      </Dialog>
+      </BaseDialog>
     );
   }
 });

@@ -3,7 +3,40 @@ require 'mocha/test_unit'
 require 'cdo/poste'
 
 class PosteTest < Minitest::Test
+  SUBSCRIBED_EMAIL = 'subscribed@example.net'
+  UNSUBSCRIBED_EMAIL = 'unsubscribed@example.net'
 
+  def setup
+    Poste2.create_recipient(
+      SUBSCRIBED_EMAIL, {name: 'Subscriber', ip_address: '1.2.3.4'})
+    Poste2.create_recipient(
+      UNSUBSCRIBED_EMAIL, {name: 'Unsubscriber', ip_address: '9.8.7.6'})
+    Poste.unsubscribe(UNSUBSCRIBED_EMAIL)
+  end
+
+  def test_unsubscribed_for_unsubscribed_contact
+    assert Poste.unsubscribed?(UNSUBSCRIBED_EMAIL)
+  end
+
+  def test_unsubscribed_for_subscribed_contact
+    assert !Poste.unsubscribed?(SUBSCRIBED_EMAIL)
+  end
+
+  def test_unsubscribe_for_existing_contact
+    email = 'existing@example.net'
+    Poste2.create_recipient(email, {ip_address: '5.6.7.8.'})
+    Poste.unsubscribe(email)
+    assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
+  end
+
+  def test_unsubscribe_for_new_contact
+    email = 'new@example.net'
+    Poste.unsubscribe(email, {ip_address: '5.6.7.8.'})
+    assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
+  end
+end
+
+class Poste2Test < Minitest::Test
   FROM_NAME = 'Code dot org'
   FROM_EMAIL = 'noreply@code.org'
   REPLY_TO_NAME = 'Reply-to Person'

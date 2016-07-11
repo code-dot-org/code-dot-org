@@ -245,5 +245,7 @@
   "watchVideo": "Glej video",
   "when": "ko",
   "whenRun": "ob zagonu",
-  "workspaceHeaderShort": "Delovni prostor: "
+  "workspaceHeaderShort": "Delovni prostor: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }
