@@ -73,6 +73,19 @@ describe('propTypes module', () => {
     });
 
     describe('does return an error when', () => {
+
+      it('used on a prop other than children', () => {
+        check = (...children) => propTypes.childrenOfType(Foo, Bar)(
+          {children},
+          'nonChildrenProp',
+          'SomeComponent'
+        );
+        expect(check(<Baz />)).to.be.an.instanceOf(Error);
+        expect(check(<Baz />).message).to.equal(
+          'The childrenOfType prop type should only be used on the children prop.'
+        );
+      });
+
       it('children of an invalid type are give', () => {
         expect(check(<Baz />)).to.be.an.instanceOf(Error);
         expect(check(<Baz />).message).to.equal(
