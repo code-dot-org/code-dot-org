@@ -6,7 +6,7 @@
 #  user_id     :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  indexed_at  :datetime         not null
+#  indexed_at  :datetime
 #  ip_address  :string(255)
 #  city        :string(255)
 #  state       :string(255)
@@ -17,7 +17,8 @@
 #
 # Indexes
 #
-#  index_user_geos_on_user_id  (user_id)
+#  index_user_geos_on_indexed_at  (indexed_at)
+#  index_user_geos_on_user_id     (user_id)
 #
 
 class UserGeo < ActiveRecord::Base
