@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+#
+# This script incrementally populates the dashboard user_geos table using
+# geolocation of the existing ip_address.
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/geocoder'
+
+DASHBOARD = sequel_connect(CDO.dashboard_db_writer, CDO.dashboard_db_writer)
+
+def main
+  to_geolocate = DASHBOARD[:user_geos].where(indexed_at: nil).limit(1000)
+
+  to_geolocate.each do |user_geo|
+    location = Geocoder.search(user_geo.ip_address).first
+    if location
+      user_geo.city = location.city
+      user_geo.state = location.state
+      user_geo.country = location.country
+      user_geo.postal_code = location.postal_code
+      user_geo.latitude = location.latitude
+      user_geo.longitude = location.longitude
+    end
+
+    user_geo.save!
+  end
+end
+
+main if only_one_running?(__FILE__)
