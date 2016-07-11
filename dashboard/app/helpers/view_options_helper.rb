@@ -54,7 +54,9 @@ module ViewOptionsHelper
     unsubmit_url
     iframe_embed
   ))
-  # Sets custom level options to be used by the view layer. The option hash is frozen once read.
+  # Sets custom level options to be used by the view layer. The option hash is
+  # frozen once read. Accepts a level_id argument. If an option isn't naturally
+  # associated with a specific level, it should probably go into view_options.
   def level_view_options(level_id, opts = nil)
     @level_view_options_map ||= {}
     level_view_options = @level_view_options_map[level_id] ||= LevelViewOptions.new
