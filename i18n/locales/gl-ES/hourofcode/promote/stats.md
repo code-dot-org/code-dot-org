@@ -4,18 +4,16 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Estatísticas de difusión útiles
 
-## Use esta breve presentación nos boletins informativos
+## Use esta breve presentación nos boletíns informativos
 
-### Leva a Informática o teu colexio ou empresa. Comeza cunha Hora do Código
+### Leva a Informática a túa escola ou empresa. Comeza cunha Hora do Código
 
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. Se escoitaches falar da [ Hora do Código](%= resolve_ur('/') %>) o ano pasado, xa sabes que fixo historia. Na primeira edición da Hora do Código, 15 millóns de estudantes probaron como programar. O ano pasado, ese número incrementouse ata os 60 millóns de estudantes! A [Hora do Código](%= resolve_ur('/') %), é unha hora de introducción a Informática e a programación, deseñada para desmitificar o que se pensa sobre a programación e demostrar que calquera pode aprender os conceptos básicos. [Rexistrate](%= resolve_url('/') %) para facer unha Hora de Código durante a Semana da Educación en Informática <%= fecha_campaña('completa') %>. Para engadir o teu colexio no mapa, vai a https://hourofcode.com/<%= @country %>
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! A boa noticia é que estamos en camiño de mudar esta realidade. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+
+The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
 ## Infografías
 
 <%= view :stats_carousel %>
-
-<%= view :signup_button %>

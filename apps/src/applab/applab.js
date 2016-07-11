@@ -65,7 +65,7 @@ var consoleApi = require('../consoleApi');
 
 var BoardController = require('../makerlab/BoardController');
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
-import { updateTableData, updateKeyValueData } from './redux/data';
+import { addTableName, deleteTableName, updateTableRecords, updateKeyValueData } from './redux/data';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -399,7 +399,6 @@ function renderFooterInSharedGame() {
     {
       text: commonMsg.openWorkspace(),
       link: getProjectUrl() + '/view',
-      newWindow: true
     },
     {
       text: commonMsg.copyright(),
@@ -845,6 +844,19 @@ function setupReduxSubscribers(store) {
       Applab.onIsRunningChange();
     }
   });
+
+  if (store.getState().pageConstants.hasDataMode) {
+    // Initialize redux's list of tables from firebase, and keep it up to date as
+    // new tables are added and removed. This strategy reads all existing table
+    // data only once.
+    const tablesRef = getDatabase(Applab.channelId).child('storage/tables');
+    tablesRef.on('child_added', snapshot => {
+      store.dispatch(addTableName(snapshot.key()));
+    });
+    tablesRef.on('child_removed', snapshot => {
+      store.dispatch(deleteTableName(snapshot.key()));
+    });
+  }
 }
 
 Applab.onIsRunningChange = function () {
@@ -1290,8 +1302,8 @@ function onDataViewChange(view, tableName) {
       return;
     case DataView.TABLE:
       storageRef.off();
-      storageRef.child(`tables/${tableName}`).on('value', snapshot => {
-        studioApp.reduxStore.dispatch(updateTableData(snapshot.val()));
+      storageRef.child(`tables/${tableName}/records`).on('value', snapshot => {
+        studioApp.reduxStore.dispatch(updateTableRecords(snapshot.val()));
       });
       return;
     default:

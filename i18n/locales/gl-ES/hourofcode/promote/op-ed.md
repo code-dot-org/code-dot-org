@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### A continuación atópase un exemplo dun artículo de opinión dando o seu apio á Semana da Educación en Informática e os seus obxectivos, que poden ser usados por lexisladores locais, líderes empreariais, etc.
 
   
@@ -44,5 +42,3 @@ Necesitamos reclutar máis profesores de informática e promover o seu desenrolo
 De acordo coa oficina de estadísticas laborales, no ano 2020, haberá 9,2 millos de postos de traballo nos campos STEM. A metade deses postos de traballo - 4,6 millóns - serán en computación ou tecnoloxías da información. E a informática considérase, cada vez máis, un coñecemento fundamental para o século 21. Quen ocupará estes postos de traballo se os nosos fillos non teñen a oportunidade de adquiriren as habilidades que precisan?
 
 Esta semana, <%= campaign_date('full') %>, e a Semana da Educación en Informática. En colexios por todo **[STATE]**, os nosos estudantes tomarán parte a nivel nacional na Hora do Código, desmitificando a asignatura de informática e con algo de sorte, despertando o seu gusto por continuar e aprender máis. Eu unireime a eles, e invítovos a que fagades o mesmo. Todos deberíamos aprender a programar. Visita https://hourofcode.com/<%= @country %> para saber máis e empezar. E apoia os nosos esforzos de traer a informática a máis colexios de **[STATE]**.
-
-<%= view :signup_button %>

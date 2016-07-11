@@ -184,7 +184,7 @@ def excluded_browser?(ua_string)
 end
 
 def main
-  finish = DateTime.now.new_offset(0).strftime('%s') * SECONDS_PER_MSEC
+  finish = DateTime.now.new_offset(0).strftime('%s').to_i * SECONDS_PER_MSEC
   start = finish - (HOURS_TO_TEST * ONE_HOUR_MSEC)
 
   Monitor.collate(start: start, finish: finish).each_by_browser do |i|

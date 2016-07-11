@@ -4,6 +4,8 @@ layout: wide
 nav: promote_nav
 ---
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Promote the Hour of Code
@@ -126,3 +128,4 @@ Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your res
 Sincerely,
 [NAME], [TITLE]
 
+<%= view :signup_button %>

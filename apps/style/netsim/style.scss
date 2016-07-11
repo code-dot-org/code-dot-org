@@ -111,6 +111,15 @@ $wide-column-width: 121px;
     width: 90%;
     margin-left: -45%;
 
+    select {
+      margin: 5px 5px 0 5px;
+      padding: 0;
+      height: 22px;
+      line-height: 20px;
+      font-size: smaller;
+      vertical-align: middle;
+    }
+
     .modal-body {
       max-height: 450px;
       overflow-y: auto;
