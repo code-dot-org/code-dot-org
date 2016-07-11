@@ -68,12 +68,15 @@ body.pin_bottom {
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
+  font-size: 32px;
   color: $purple;
 }
 
 h2 {
   font-family: $gotham-bold;
   font-weight: normal;
+  font-size: 22px;
+  color: $teal;
 }
 
 hr {
@@ -1756,6 +1759,23 @@ a.download-video {
       margin: 0;
     }
   }
+
+  blockquote {
+    padding: 15px 20px;
+    background: $lightest_purple;
+    border: 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+.level-image {
+  width: 40%;
+  float: right;
+  margin: 0 0 20px 30px;
+  transform: rotate(2deg);
+  box-shadow: 2px 2px 10px $shadow;
+  border: 1px solid $lighter_gray;
 }
 
 .standalone-video {
