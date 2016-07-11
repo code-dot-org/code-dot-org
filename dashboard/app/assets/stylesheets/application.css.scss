@@ -537,6 +537,11 @@ $small-footer-standard-width: 400px;
   color: black;
 }
 
+.user_options .pairing_summary {
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+
 .full_container {
   padding: 0px 25px 25px 25px;
 }
@@ -1437,6 +1442,10 @@ a.download-video {
 }
 
 #signinsection {
+  ul.students, ul.pictures {
+    margin-left: 0;
+  }
+
   ul.students li,
   ul.pictures li {
     list-style-type: none;
@@ -1457,6 +1466,18 @@ a.download-video {
   ul.students li.selected,
   ul.pictures li.selected {
     background-color: $yellow;
+  }
+
+  #pairing_checkbox {
+    margin: 5px 0;
+    label {
+      font-size: 17.5px;
+    }
+    label, input {
+      margin: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 }
 

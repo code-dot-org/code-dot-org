@@ -169,7 +169,8 @@ class ActivitiesController < ApplicationController
         new_result: test_result,
         submitted: params[:submitted],
         level_source_id: @level_source.try(:id),
-        level: @level
+        level: @level,
+        pairings: pairings
       )
     end
 
