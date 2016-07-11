@@ -85,6 +85,9 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
 /**
  * Creates a redux store with our initial progress
+ * @param scriptData
+ * @param currentLevelId
+ * @param saveAnswersBeforeNavigation
  * @returns {object} The created redux store
  */
 function createStoreWithProgress(scriptData, currentLevelId,
