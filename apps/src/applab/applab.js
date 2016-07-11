@@ -65,7 +65,7 @@ var consoleApi = require('../consoleApi');
 
 var BoardController = require('../makerlab/BoardController');
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
-import { addTableName, deleteTableName, updateTableData, updateKeyValueData } from './redux/data';
+import { addTableName, deleteTableName, updateTableRecords, updateKeyValueData } from './redux/data';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -1302,8 +1302,8 @@ function onDataViewChange(view, tableName) {
       return;
     case DataView.TABLE:
       storageRef.off();
-      storageRef.child(`tables/${tableName}`).on('value', snapshot => {
-        studioApp.reduxStore.dispatch(updateTableData(snapshot.val()));
+      storageRef.child(`tables/${tableName}/records`).on('value', snapshot => {
+        studioApp.reduxStore.dispatch(updateTableRecords(snapshot.val()));
       });
       return;
     default:

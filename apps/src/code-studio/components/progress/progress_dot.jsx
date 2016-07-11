@@ -160,7 +160,7 @@ export const ProgressDot = React.createClass({
     return (
       <a
         key='link'
-        href={level.url}
+        href={level.url + location.search}
         onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
         style={[styles.outer, showLevelName && {display: 'table-row'}]}
       >

@@ -11,9 +11,6 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
-:javascript
-  var petitionIncluded = false;
-
 -state ||= nil
 
 %script{:src=>"/js/jquery.placeholder.js"}
@@ -25,8 +22,6 @@ social:
 
     #petition-section.section.clear
       = view :petition
-    :javascript
-      petitionIncluded = true;
 
     #interactive-map.section.clear
       %h2{:style=>"margin-top: 0px"} Choose a State
@@ -59,7 +54,5 @@ social:
 
   $(document).ready()
   {
-    if (petitionIncluded) {
-      petition = new Petition();
-    }
+    petition = new Petition();
   }
