@@ -902,7 +902,7 @@
     отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'>
     изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты
     могут сделать? </i>"
-  dashboard_announce_button_text: "Узнать больше"
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "Как учитель вы лидер движения, чтобы дать каждому
     студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло
     время, чтобы ваши представители услышали вас. На этой неделе лидеры образования,
@@ -1806,3 +1806,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "играть"
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys
