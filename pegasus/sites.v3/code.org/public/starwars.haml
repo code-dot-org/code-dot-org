@@ -57,6 +57,10 @@ social:
   = I18n.t(:starwars_speak_languages)
   %a{href: "/translate/starwarws"}= I18n.t(:starwars_help_translate)
 
+%h2.sw-header2
+  = I18n.t(:starwars_no_internet)
+  %a{href: CDO.studio_url("/download/starwars")}= I18n.t(:starwars_download_offline)
+
 = view 'mobilecheck.js'
 
 :javascript
