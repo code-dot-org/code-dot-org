@@ -19,14 +19,19 @@ import progressReducer, {
 
 var progress = module.exports;
 
-progress.renderStageProgress = function (stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation) {
-  var store = createStoreWithProgress({name: scriptName, stages: [stageData]}, currentLevelId, saveAnswersBeforeNavigation);
-  var mountPoint = document.querySelector('.progress_container');
+progress.renderStageProgress = function (stageData, progressData, scriptName,
+    currentLevelId, saveAnswersBeforeNavigation) {
+  const store = createStoreWithProgress({
+    name: scriptName,
+    stages: [stageData]
+  }, currentLevelId, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
     level => level.submitted ? SUBMITTED_RESULT : level.result)));
 
   // Provied a function that can be called later to merge in progress now saved on the client.
+  // TODO we should probably instead be exposing the store, and anyone can dispatch
+  // this action
   progress.refreshStageProgress = function () {
     store.dispatch(mergeProgress(clientState.allLevelsProgress()[scriptName] || {}));
   };
@@ -35,12 +40,12 @@ progress.renderStageProgress = function (stageData, progressData, scriptName, cu
     <Provider store={store}>
       <StageProgress />
     </Provider>,
-    mountPoint
+    document.querySelector('.progress_container')
   );
 };
 
 progress.renderCourseProgress = function (scriptData, currentLevelId) {
-  var store = createStoreWithProgress(scriptData, currentLevelId);
+  const store = createStoreWithProgress(scriptData, currentLevelId);
   var mountPoint = document.createElement('div');
 
   $.ajax(
