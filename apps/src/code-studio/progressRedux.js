@@ -123,3 +123,10 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaPositions) => ({
 });
 
 export const showLessonPlans = () => ({ type: SHOW_LESSON_PLANS });
+
+/* start-test-block */
+// export private function(s) to expose to unit testing
+export const __testonly__ = {
+  bestResultLevelId
+};
+/* end-test-block */
