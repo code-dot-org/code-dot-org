@@ -145,7 +145,8 @@ function create(options) {
       // on one page, they're smart enough to differentiate themselves
       jsonpFunction: 'jsonp_' + uniqueName
     },
-    devtool: options.minify ? 'source-map' : 'cheap-module-eval-source-map',
+    // devtool: options.minify ? 'source-map' : 'cheap-module-eval-source-map',
+    devtool: 'inline-source-map',
     entry: entries,
     plugins: [
       new webpack.DefinePlugin({
