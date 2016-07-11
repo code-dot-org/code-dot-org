@@ -61,14 +61,20 @@ module Poste
     ['.md','.haml','.html']
   end
 
-  def self.unsubscribed?(email)
-    hashed_email = Digest::MD5.hexdigest(email.to_s.strip.downcase)
-    !!POSTE_DB[:contacts].where('hashed_email = ? AND unsubscribed_at IS NOT NULL', hashed_email).first
+  # Returns whether the email (given by its hash) has unsubscribed.
+  # TODO(asher): Remove this method, as it seems unused as of 11 July 2016.
+  def self.unsubscribed?(hashed_email)
+    !!POSTE_DB[:contacts].
+      where('hashed_email = ? AND unsubscribed_at IS NOT NULL', hashed_email).
+      first
   end
 
-  def self.unsubscribe(email, params={})
-    email = email.to_s.strip.downcase
-    hashed_email = Digest::MD5.hexdigest(email)
+  # Unsubscribes the (hashed) email.
+  # @param email [string | nil] the email to unsubscribe.
+  # @param hashed_email [string] the MD5 hash of the email to unsubscribe.
+  # @param params [hash] A hash of parameters, including ip_address.
+  def self.unsubscribe(email, hashed_email, params={})
+    email = email.strip.downcase if email
     now = DateTime.now
 
     contacts = POSTE_DB[:contacts]
