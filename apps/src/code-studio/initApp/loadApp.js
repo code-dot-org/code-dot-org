@@ -6,6 +6,8 @@ var progress = require('../progress');
 var clientState = require('../clientState');
 var color = require('../../color');
 
+import { activityCssClass, mergeActivityResult } from '../activityUtils';
+
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
 
@@ -66,7 +68,8 @@ module.exports = function (callback) {
       var clientProgress = clientState.allLevelsProgress()[appOptions.scriptName] || {};
       Object.keys(serverProgress).forEach(function (levelId) {
         if (serverProgress[levelId] !== clientProgress[levelId]) {
-          var status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
+          var mergedResult = mergeActivityResult(clientProgress[levelId], serverProgress[levelId]);
+          var status = activityCssClass(mergedResult);
 
           // Set the progress color
           var css = {backgroundColor: color[`level_${status}`] || color.level_not_tried};
