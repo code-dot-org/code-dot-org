@@ -1,8 +1,8 @@
 var React = require('react');
 var ShareDialogBody = require('./share_dialog_body');
-// Note: DialogComponent uses window.React directly, otherwise we end up pulling
+// Note: BaseDialog uses window.React directly, otherwise we end up pulling
 // in apps's copy of React into our bundle
-var Dialog = require('@cdo/apps/templates/DialogComponent');
+var BaseDialog = require('@cdo/apps/templates/BaseDialog');
 
 /**
  * Share Dialog used by projects
@@ -39,7 +39,7 @@ var ShareDialog = React.createClass({
 
   render: function () {
     return (
-      <Dialog isOpen={this.state.isOpen} handleClose={this.close}>
+      <BaseDialog useDeprecatedGlobalStyles isOpen={this.state.isOpen} handleClose={this.close}>
         <ShareDialogBody
           i18n={this.props.i18n}
           icon={this.props.icon}
@@ -57,7 +57,7 @@ var ShareDialog = React.createClass({
           onClickClose={this.close}
           onClickExport={this.props.onClickExport}
           />
-      </Dialog>
+      </BaseDialog>
     );
   }
 });

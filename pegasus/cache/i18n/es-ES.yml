@@ -896,7 +896,7 @@
   dashboard_announce_message: "<b>6 de enero, 2015</b> - Aprender más allá de una
     Hora de Code en tu clase. Comienza un nuevo curso de introducción y realiza un
     seguimiento del progreso del alumno."
-  dashboard_announce_button_text: Aprende más
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: Como profesor, está liderando el camino de un movimiento
     para dar a cada estudiante en todas las escuelas la oportunidad de aprender informática.
     Ahora, es tiempo de dejar que sus representantes escuchen de usted. Esta semana,
@@ -1795,3 +1795,11 @@
   infinity_shortcode: inf
   playlab_shortcode: jugar
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys

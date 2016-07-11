@@ -15,7 +15,7 @@
     "free_play": "false",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "This house needs a roof! Draw the triangle.  \r\n\r\nHint: all three sides are the same length.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "This house needs a roof! Draw the triangle.  \r\n\r\nHint: all three sides are the same length.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\" width=\"300\"/>\r\n\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>\r\n",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -31,7 +31,9 @@
     "impressive": "false",
     "disable_sharing": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To make those little angles, you have to turn *farther* each time than you did with the square.   \",\r\n  \"hint_id\": \"2-3_Artist_6_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.\",\r\n  \"hint_id\": \"2-3_Artist_6_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Each side of the triangle is the same length as each side of the square...100 pixels!\",\r\n  \"hint_id\": \"2-3_Artist_6_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null,
+    "discard_background": "false"
   },
   "published": true,
   "notes": "",

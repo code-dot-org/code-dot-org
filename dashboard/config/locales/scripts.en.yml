@@ -1814,6 +1814,8 @@ en:
           Complex Conditionals: Complex Conditionals
           Proposed Sprites and Props: Proposed Sprites and Props
           Conditionals Update: Conditionals Update
+          Draw Loop and Randomization: Draw Loop and Randomization
+          Variables Unplugged: Variables Unplugged
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2109,6 +2111,7 @@ en:
           'Unplugged: Conditionals with Cards': 'Unplugged: Conditionals with Cards'
           'Unplugged: Decision Trees (New)': 'Unplugged: Decision Trees (New)'
           'Unplugged: Nested Loops (New)': 'Unplugged: Nested Loops (New)'
+          Artist Ramp Up (including Nested Loops): Artist Ramp Up (including Nested Loops)
         grade1:
           Predicting & Debugging: Predicting & Debugging
           Persistence & Frustration: Persistence & Frustration

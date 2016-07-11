@@ -919,10 +919,10 @@
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver Todos
-  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
-    problem in computer science. Code Studio teachers are leading the way in educating
-    underrepresented minorities. Our annual survey shows record diversity in your
-    classrooms! Check out the numbers."
+  dashboard_announce_message: Want to help us test a new feature? We know it’s important
+    to encourage students to iterate and experiment, so we'll be adding an "unused
+    code" feature to allow students to run their code even when there are unattached
+    blocks. We welcome your feedback before we publicly release the feature.
   dashboard_announce_button_text: Testar funcionalidade
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
@@ -1828,3 +1828,11 @@
   infinity_shortcode: inf
   playlab_shortcode: jogar
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys
