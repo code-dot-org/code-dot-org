@@ -148,7 +148,7 @@ const BubbleInterior = React.createClass({
     courseOverviewPage: React.PropTypes.bool,
     showingIcon: React.PropTypes.bool,
     showingLevelName: React.PropTypes.bool,
-    title: React.PropTypes.number
+    title: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number])
   },
 
   render() {
@@ -248,7 +248,7 @@ export const ProgressDot = React.createClass({
               courseOverviewPage={this.props.courseOverviewPage}
               showingIcon={!!iconForLevelStatus}
               showingLevelName={showLevelName}
-              title={level.title || undefined}
+              title={level.title ? level.title.toString() : undefined}
             />
           </div>
         }
