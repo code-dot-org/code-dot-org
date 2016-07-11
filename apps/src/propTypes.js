@@ -21,6 +21,11 @@ import React from 'react';
  */
 export function childrenOfType(...validChildrenTypes) {
   return function (props, propName, componentName) {
+    if (propName !== 'children') {
+      return new Error(
+        'The childrenOfType prop type should only be used on the children prop.'
+      );
+    }
     const prop = props[propName];
     const actualChildrenTypes = React.Children.map(prop, el => el.type);
     let error;
