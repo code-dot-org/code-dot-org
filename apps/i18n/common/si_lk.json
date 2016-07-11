@@ -245,5 +245,7 @@
   "watchVideo": "වීඩියෝව නරඹන්න",
   "when": "විට",
   "whenRun": "දුවන විට",
-  "workspaceHeaderShort": "වැඩ අවකාශය: "
+  "workspaceHeaderShort": "වැඩ අවකාශය: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

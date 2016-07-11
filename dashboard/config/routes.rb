@@ -8,6 +8,8 @@ end
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: { format: 'json' }
 
+  resource :pairing, only: [:show, :update]
+
   resources :user_levels, only: [:update]
 
   get '/download/:product', to: 'hoc_download#index'

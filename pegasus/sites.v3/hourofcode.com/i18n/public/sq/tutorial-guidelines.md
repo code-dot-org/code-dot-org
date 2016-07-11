@@ -5,7 +5,6 @@ shtrirje: e gjerë
 
 ---
 
-
 # Udhëzime tutoriali për Orën e Kodimit dhe Javës së Arsimimit në Shkencat Kompjuterike
 
 Code.Org do të jetë mbaje disa aktiviteteve rreth Orës së Kodimit në Code.org, Orën e Kodimit dhe website-in 'CSEdWeek'. Lista aktuale është në[<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
@@ -264,4 +263,3 @@ Ne po kërkojmë nga të gjithë për të promovuar 1-orë tutorial tek përdoru
 Nëse keni krijuar një tutorial që është projektuar për vizionin-e dobët, ne do të duam ta nxjerrim në pah atë për shikuesit. Ne nuk kemi marrë ende një tutorial të tillë, dhe do të jemi të paduruar për të përfshirë një të tillë si një opsion për këta studentë.
 
 [**Përsëri në krye**](#top)
-

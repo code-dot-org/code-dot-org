@@ -31,7 +31,10 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "contained_level_names": null,
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side.\",\r\n  \"hint_id\": \"2-3_Artist_Functions_11_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "discard_background": "false"
   },
   "published": true,
   "notes": "",

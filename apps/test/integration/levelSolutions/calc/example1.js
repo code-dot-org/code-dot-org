@@ -171,6 +171,20 @@ module.exports = {
       '</xml>'
     },
     {
+      description: "imaginary number",
+      expected: {
+        result: false,
+        testResult: TestResults.APP_SPECIFIC_FAIL
+      },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, calcMsg.imaginaryNumberError());
+        return true;
+      },
+      xml: '<xml>' +
+        blockUtils.calcBlockXml('functional_sqrt', [-1]) +
+      '</xml>'
+    },
+    {
       description: "unnamed variable",
       expected: {
         result: false,

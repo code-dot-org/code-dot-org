@@ -53,6 +53,10 @@ When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   wait_with_timeout.until { @browser.find_element(selection_criteria) }
 end
 
+When /^I go to the newly opened tab$/ do
+  @browser.switch_to.window(@browser.window_handles.last)
+end
+
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps <<-STEPS
@@ -711,7 +715,7 @@ When(/^I debug cookies$/) do
 end
 
 When(/^I debug focus$/) do
-  puts "Focused element id: #{@browser.execute_script("return document.activeElement.id")}"
+  puts "Focused element id: #{@browser.execute_script('return document.activeElement.id')}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|

@@ -90,13 +90,10 @@ var move = function (direction, id) {
   Maze.executionInfo.queueAction(command, id);
   if (Maze.wordSearch) {
     Maze.wordSearch.markTileVisited(Maze.pegmanY, Maze.pegmanX, false);
-    // wordsearch doesnt check for success until it has finished running completely
-    return;
-  } else if (Maze.map.hasMultiplePossibleGrids()) {
-    // neither do quantum maps
-    return;
   }
-  Maze.checkSuccess();
+  if (Maze.shouldCheckSuccessOnMove()) {
+    Maze.checkSuccess();
+  }
 };
 
 /**

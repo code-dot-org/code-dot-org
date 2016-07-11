@@ -11,7 +11,7 @@
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "ideal": "5",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -26,6 +26,8 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you're stuck, try running the code to find the bug.\",\r\n  \"hint_id\": \"K2.0_sequence_7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nDebug this level by changing a block to get me to the pig!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/1eb9139e2887083dc80b98d9aeb3bef2-image-1467932105884.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,
@@ -36,23 +38,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="maze_moveEast">
-              <next>
-                <block type="maze_moveEast">
-                  <next>
-                    <block type="maze_moveWest">
-                      <next>
-                        <block type="maze_moveNorth"/>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

@@ -108,8 +108,9 @@ module UsersHelper
             user_data[:levels][level_id] = {
                 status: completion_status,
                 result: ul.try(:best_result) || 0,
-                submitted: submitted
-            }
+                submitted: submitted ? true : nil,
+                paired: ul.paired? ? true : nil
+            }.compact
 
             # Just in case this level has multiple pages, in which case we add an additional
             # array of booleans indicating which pages have been completed.
@@ -119,8 +120,8 @@ module UsersHelper
               pages_completed.each_with_index do |result, index|
                 user_data[:levels]["#{level_id}_#{index}"] = {
                   result: result,
-                  submitted: submitted
-                }
+                  submitted: submitted ? true : nil
+                }.compact
               end
             end
           end
