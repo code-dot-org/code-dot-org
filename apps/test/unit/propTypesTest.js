@@ -5,10 +5,47 @@ var propTypes = require('@cdo/apps/propTypes');
 
 describe('propTypes module', () => {
 
+  function Foo(){}
+  function Bar(){}
+  function Baz(){}
+
+  describe('whenNoChildOfType prop type', () => {
+    var check;
+    beforeEach(() => {
+      check = ({children, someProp}) => propTypes.whenNoChildOfTypes(Foo)(
+        {children, someProp},
+        'someProp',
+        'SomeComponent'
+      );
+    });
+
+    describe('does not return an error when', () => {
+
+      it('no children are given', () => {
+        expect(check({someProp: 'foo'})).not.to.be.ok;
+      });
+
+      it('no prop is given', () => {
+        expect(check({children: [<Foo />]})).not.to.be.ok;
+      });
+
+    });
+
+    describe('does return an error when', () => {
+
+      it('both a prop and child are given', () => {
+        const error = check({children: [<Foo />], someProp:'foo'});
+        expect(error).to.be.an.instanceOf(Error);
+        expect(error.message).to.equal(
+          'SomeComponent was given a someProp prop and a <Foo> child, ' +
+          'but only one of those is allowed.'
+        );
+      });
+
+    });
+  });
+
   describe('childrenOfType prop type', () => {
-    function Foo(){}
-    function Bar(){}
-    function Baz(){}
     var check;
     beforeEach(() => {
       check = (...children) => propTypes.childrenOfType(Foo, Bar)(
