@@ -44,11 +44,6 @@
         dashboard.progress.renderCourseProgress(#{@script.summarize.to_json});
       = render partial: 'shared/user_stats_key'
 
-      - if @script.trophies
-        %div{style: 'clear: both;'}
-        #trophies
-          = render partial: 'shared/concept_trophy_block', locals: {concept_progress: summarize_trophies(@script), added_style: 'padding: 10px;'}
-
   %div{style: 'clear: both;'}
   %br/
   %br/
