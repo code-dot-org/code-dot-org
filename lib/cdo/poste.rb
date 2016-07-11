@@ -1,10 +1,9 @@
+require 'base64'
 require 'cdo/db'
 require 'digest/md5'
 require_relative 'email_validator'
 require 'mail'
 require 'openssl'
-require 'base64'
-require 'digest/md5'
 
 module Poste
   def self.logger
