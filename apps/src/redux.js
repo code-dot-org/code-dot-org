@@ -16,7 +16,7 @@ if (process.env.NODE_ENV !== "production") {
  * @param {!function} reducer
  * @return {Store} Configured Redux store, ready for use.
  */
-module.exports.createStore = function (reducer) {
+module.exports.createStore = function (reducer, initialState) {
 
   // You have to manually enable debugging, both to keep the logger out
   // of production bundles, and because it causes a lot of console noise and
@@ -35,11 +35,11 @@ module.exports.createStore = function (reducer) {
         window.devToolsExtension() :
         function (f) { return f; };
 
-    return redux.createStore(reducer, redux.compose(
+    return redux.createStore(reducer, initialState, redux.compose(
         redux.applyMiddleware(reduxThunk, reduxLogger),
         devTools
     ));
   }
 
-  return redux.createStore(reducer, redux.applyMiddleware(reduxThunk));
+  return redux.createStore(reducer, initialState, redux.applyMiddleware(reduxThunk));
 };
