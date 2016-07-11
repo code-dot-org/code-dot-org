@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-import { activityCssClass, mergeActivityResult } from '../../src/js/activityUtils';
+import { activityCssClass, mergeActivityResult } from '@cdo/apps/code-studio/activityUtils';
 
 describe("mergeActivityResult", function () {
   it('returns the result with highest priority', function () {
