@@ -3,7 +3,7 @@
 import React from 'react';
 
 import Pairing from './pairing.jsx';
-import Dialog from '@cdo/apps/templates/DialogComponent';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 /**
  * Pair programming dialog.
@@ -27,9 +27,9 @@ var PairingDialog = React.createClass({
 
   render() {
     return (
-      <Dialog isOpen={this.state.isOpen} handleClose={this.close}>
+      <BaseDialog isOpen={this.state.isOpen} handleClose={this.close}>
         <Pairing source={this.props.source} handleClose={this.close} />
-      </Dialog>
+      </BaseDialog>
     );
   }
 });
