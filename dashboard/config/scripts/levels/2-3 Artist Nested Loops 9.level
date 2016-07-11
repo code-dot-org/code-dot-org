@@ -33,7 +33,8 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Need help finding the correct angle?\\n\\n**360 / 12 = 30**\",\r\n  \"hint_id\": \"2-3_Artist_Nested_Loops_9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
   "notes": "",

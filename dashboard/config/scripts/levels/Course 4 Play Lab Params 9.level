@@ -44,7 +44,8 @@
     "examples_required": "false",
     "min_workspace_height": "1500",
     "wall_map_collisions": "false",
-    "block_moving_into_walls": "false"
+    "block_moving_into_walls": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
