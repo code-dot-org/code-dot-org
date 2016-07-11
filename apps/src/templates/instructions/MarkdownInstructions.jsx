@@ -9,8 +9,8 @@ var styles = {
     paddingTop: 19
   },
   inTopPane: {
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 0,
+    marginBottom: 0,
     paddingTop: 0
   },
   inTopPaneWithImage: {

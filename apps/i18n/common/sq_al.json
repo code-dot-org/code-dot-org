@@ -245,5 +245,7 @@
   "watchVideo": "Shiko Videon",
   "when": "kur",
   "whenRun": "kur vrapon",
-  "workspaceHeaderShort": "Vendi i punës: "
+  "workspaceHeaderShort": "Vendi i punës: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

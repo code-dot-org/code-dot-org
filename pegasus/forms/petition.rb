@@ -9,6 +9,8 @@ class Petition
     data[:age_i] = (age == 0) ? nil : age
     result[:age_i] = required data[:age_i]
 
+    # Though this should have been done client-side, we do this server-side
+    # for redundancy.
     if age < 13
       result[:email_s] = 'anonymous@code.org' unless result[:email_s].class == FieldError
       result[:name_s] = nil unless result[:name_s].class == FieldError

@@ -414,6 +414,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal "/s/laurel/stage/2/puzzle/2", build_script_level_path(@custom_s2_l2)
   end
 
+  test "build_script_level_url" do
+    assert_equal "/s/laurel/stage/1/puzzle/1", build_script_level_path(@custom_s1_l1)
+    assert_equal "http://test.host/s/laurel/stage/1/puzzle/1", build_script_level_url(@custom_s1_l1)
+  end
+
   test "next routing for custom scripts" do
     assert_routing({method: "get", path: "/s/laurel/puzzle/next"},
       {controller: "script_levels", action: "show", script_id: 'laurel', chapter: "next"})
