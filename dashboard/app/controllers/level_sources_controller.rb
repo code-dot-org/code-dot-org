@@ -91,7 +91,7 @@ class LevelSourcesController < ApplicationController
     )
     @callback = milestone_level_url(user_id: current_user.try(:id) || 0, level_id: @level.id)
     level_view_options(
-      @level_source.level_id,
+      @level.id,
       start_blocks: @level_source.data,
       share: true
     )
