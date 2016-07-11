@@ -6,10 +6,7 @@ nav: how_to_nav
 
 ---
 
-
 # Hour of Codeの、全校イベントを開催する方法
-
-Hour of Codeのイベントをコンピュータサイエンス教育週間(<%= campaign_date('short') %>) に開催して、より多くの生徒にコンピュータサイエンス教育を届けましょう。 誰でも、どこでもHour of Codeのイベントを開催することができます。
 
 ## 1) イベントの準備
 
@@ -37,13 +34,13 @@ Hour of Codeのイベントをコンピュータサイエンス教育週間(<%= 
 
 ## イベント計画の例
 
-**イベント:** コンピュータサイエンス教育週間開始の学校集会
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**日付:** 12月7日(コンピュータサイエンス教育週間の最初の日)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**時間:** 授業時間中、午前半ばが望ましいでしょう。所要時間約1時間です。
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**場所:** 全校集会用のホール (例 シアター, 体育館, 食堂)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -57,4 +54,3 @@ Hour of Codeのイベントをコンピュータサイエンス教育週間(<%= 
 | 10:30-10:40 | 数人の生徒に、Hour of Codeのチュートリアルのデモをお願いしましょう。校長や議員、もしくはその他の生徒に教える様子が見せられると、とても楽しいと思います。             |
 | 10:40-11:00 | 生徒にオフラインのアクティビティをデモしてもらいます。コンピューターサイエンスはコンピューターがなくても教えられることを見てもらいます。                           |
 | 11:00-11:05 | このイベントを主催した先生に、閉会の言葉を頂きましょう。                                                                   |
-

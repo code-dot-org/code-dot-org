@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 # Exemplo de comunicado de imprensa para representantes políticos
 
 Para publicação imediata  
@@ -43,8 +42,3 @@ Mais de 100 milhões de alunos por todo mundo já experimentaram uma Hora do Có
 [**INSERIR CITAÇÃO DE OUTRA ORGANIZAÇÃO OU PESSOA QUE ESTEVE PRESENTE NO EVENTO**]
 
 Para saber mais sobre o [**EVENTO/PROGRAMA/ETC.**], visite [**INSERIR SITE**] ou entre em contato com [**INSERIR INFORMAÇÕES DE CONTATO**]
-
-  
-  
-
-

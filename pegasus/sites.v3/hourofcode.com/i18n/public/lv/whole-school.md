@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # Piesaki dalībai visu skolu
 
-Informācija par visu skolu dalību "Programmēšanas stundā" būs izvietota šeit.
-
+Information about getting whole schools to participate in the Hour of Code will go here.

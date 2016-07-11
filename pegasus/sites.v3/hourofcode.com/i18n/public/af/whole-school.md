@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # كل مکتب را به شركت در برنامه دعوت كن
 
-اطلاعات شرکت كل مدرسه در ساعت کدنويسي در اینجا قرار خواهد گرفت.
-
+Information about getting whole schools to participate in the Hour of Code will go here.

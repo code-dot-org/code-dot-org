@@ -19,16 +19,15 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   def track_progress(level_source_id)
-    User.track_level_progress_sync(user_id: @user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source_id)
+    User.track_level_progress_sync(user_id: @user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source_id, pairing_user_ids: nil)
   end
 
   test 'submitting a peer reviewed level should create PeerReview objects' do
     level_source = create :level_source, data: 'My submitted answer'
 
-    initial = PeerReview.count
-
-    track_progress level_source.id
-    assert_equal PeerReview::REVIEWS_PER_SUBMISSION, PeerReview.count - initial
+    assert_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
+      track_progress level_source.id
+    end
   end
 
   test 'resubmitting for review should remove unassigned PeerReview objects' do
