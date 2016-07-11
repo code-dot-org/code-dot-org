@@ -147,6 +147,8 @@ en:
     picture: 'Now find your secret picture'
     words: 'Now enter your secret words'
     login: 'Sign in'
+    invalid_login: 'Invalid login, please try again'
+    pair_programming: 'I have a partner at my computer'
   password:
     reset_form:
       title: 'Forgot your password?'
@@ -270,6 +272,10 @@ en:
       signin: 'Sign in'
       signup: 'Sign up'
       already_registered: 'Already registered?'
+      pair_programming: 'Pair Programming'
+      team: 'Team'
+      driver: 'Driver'
+      navigator: 'Navigator'
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'
@@ -304,6 +310,7 @@ en:
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
       unsubmit: 'Unsubmit'
+      worked_with: 'Worked With'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -698,6 +705,10 @@ en:
     instructor_feedback: 'Instructor Feedback'
     peer_feedback: 'Peer Feedback'
     outdated: 'This feedback was added for a previously submitted version'
+    review_in_progress: 'Ready to review'
+    link_to_submitted_review: 'Link to submitted review'
+    reviews_unavailable: 'Reviews unavailable at this time'
+    review_count: 'You must complete %{review_count} reviews for this unit'
   components:
     icon_library:
       search_placeholder_text: 'Search for an icon...'
