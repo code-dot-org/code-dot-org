@@ -5,7 +5,7 @@ require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
 
 class PosteRoutesTest < Minitest::Test
-  EMAIL = 'example@example.com'.freeze
+  EMAIL = 'fake_email@example.net'.freeze
   HASHED_EMAIL = Digest::MD5.hexdigest(EMAIL).freeze
 
   describe 'Poste Routes' do
