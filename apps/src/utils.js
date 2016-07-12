@@ -3,6 +3,30 @@
 
 import Immutable from 'immutable';
 
+/**
+ * Checks whether the given subsequence is truly a subsequence of the given sequence,
+ * and whether the elements appear in the same order as the sequence.
+ *
+ * @param sequence Array - The sequence that the subsequence should be a subsequence of.
+ * @param subsequence Array - A subsequence of the given sequence.
+ * @returns boolean - whether or not subsequence is really a subsequence of sequence.
+ */
+export function isSubsequence(sequence, subsequence) {
+  let superIndex = 0, subIndex = 0;
+  while (subIndex < subsequence.length) {
+    while (superIndex < sequence.length && subsequence[subIndex] !== sequence[superIndex]) {
+      superIndex++;
+    }
+    if (superIndex >= sequence.length) {
+      // we went off the end while searching
+      return false;
+    }
+    subIndex++;
+    superIndex++;
+  }
+  return true;
+}
+
 exports.shallowCopy = function (source) {
   var result = {};
   for (var prop in source) {
