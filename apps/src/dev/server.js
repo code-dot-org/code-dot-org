@@ -90,6 +90,10 @@ app.get('/netsim', function (req, res) {
   renderApp('netsim', req, res);
 });
 
+app.get('/weblab', function (req, res) {
+  renderApp('weblab', req, res);
+});
+
 // Proxy to locally-running dashboard server for channels api and assets
 // (like application.css).  Requires dashboard-server to be running on port 3000.
 var dashboardProxy = httpProxy.createProxyServer();

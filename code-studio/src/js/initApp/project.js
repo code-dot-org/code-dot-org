@@ -377,6 +377,8 @@ var projects = module.exports = {
           return null;
         }
         return 'playlab';
+      case 'weblab':
+        return 'weblab';
       default:
         return null;
     }
@@ -575,7 +577,8 @@ var projects = module.exports = {
         this.setName('Big Game Template');
       } else if (url === '/projects/applab' ||
           url === '/projects/makerlab' ||
-          url === '/projects/gamelab') {
+          url === '/projects/gamelab' ||
+          url === '/projects/weblab') {
         this.setName('My Project');
       }
     }

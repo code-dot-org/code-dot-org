@@ -189,6 +189,8 @@ module LevelsHelper
 
     if @level.is_a? Blockly
       @app_options = blockly_options
+    elsif @level.is_a? Weblab
+      @app_options = weblab_options
     elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
       @app_options = question_options
     elsif @level.is_a? Widget
@@ -222,6 +224,7 @@ module LevelsHelper
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
     use_gamelab = @level.game == Game.gamelab
+    use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim
     hide_source = app_options[:hideSource]
@@ -233,6 +236,7 @@ module LevelsHelper
                use_blockly: use_blockly,
                use_applab: use_applab,
                use_gamelab: use_gamelab,
+               use_weblab: use_weblab,
                use_phaser: use_phaser,
                use_makerlab: use_makerlab,
                hide_source: hide_source,
@@ -246,6 +250,16 @@ module LevelsHelper
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
     app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  # Options hash for Weblab
+  def weblab_options
+    app_options = {}
+    app_options[:level] ||= {}
+    app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options[:app] = 'weblab'
     app_options
   end
 

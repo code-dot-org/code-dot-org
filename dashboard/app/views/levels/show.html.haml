@@ -33,7 +33,8 @@
   - if @level.is_a?(Widget)
     = render partial: 'levels/widget'
   - elsif @level.is_a?(Weblab)
-    = render partial: 'levels/weblab'
+    -# = render partial: 'levels/weblab'
+    = render partial: 'levels/blockly'
   - else
     = render partial: "levels/#{@level.class.to_s.underscore}"
   - unless @level.is_a?(StandaloneVideo)

@@ -78,6 +78,10 @@ class Game < ActiveRecord::Base
     @@game_gamelab ||= find_by_name("Gamelab")
   end
 
+  def self.weblab
+    @@game_weblab ||= find_by_name("Weblab")
+  end
+
   def self.netsim
     @@game_netsim ||= find_by_name("NetSim")
   end

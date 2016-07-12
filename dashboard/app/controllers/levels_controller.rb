@@ -176,6 +176,8 @@ class LevelsController < ApplicationController
         @game = Game.netsim
       elsif @type_class == Craft
         @game = Game.craft
+      elsif @type_class == Weblab
+        @game = Game.weblab
       end
       @level = @type_class.new
       render :edit

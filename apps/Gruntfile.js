@@ -58,7 +58,8 @@ module.exports = function (grunt) {
     'eval',
     'netsim',
     'craft',
-    'gamelab'
+    'gamelab',
+    'weblab'
   ];
 
   if (APP_TO_BUILD) {

@@ -1,0 +1,93 @@
+$root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
+
+@import 'font';
+@import 'color';
+@import 'mixins';
+@import "../JsDebuggerUi.scss";
+@import "./ResizablePanes.scss";
+@import '../VisualizationOverlay.scss';
+
+#divGameLab {
+  overflow: hidden;
+  outline: none;
+  -webkit-touch-callout: none;
+
+  position: relative;
+  z-index: 1;
+  background-color: white;
+
+  @include user-selects(none);
+
+  &.withCrosshair {
+    cursor: crosshair;
+  }
+}
+
+.legacy-share-view {
+  #runButton, #resetButton {
+    display:none !important;
+  }
+  #studio-dpad {
+    width: 100%;
+    margin-left: 0;
+  }
+  #studio-dpad-button {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+#visualizationOverlay {
+  // layer 1 is divGameLab
+  // layer 2 is overlay
+  z-index: 2;
+}
+
+/* Sprited icons. */
+.icon21 {
+  height: 21px;
+  width: 21px;
+  background-image: url("#{$root}icons.png");
+  background-size: 42px 147px;
+}
+.code {
+  background-position: -21px 0px;
+}
+.link {
+  background-position: 0px 0px;
+}
+.run {
+  background-position: 0px -21px;
+  margin-right: 3px;
+}
+.stop {
+  background-position: -21px -21px;
+  margin-right: 3px;
+}
+.dpad-btn {
+  background-position: -21px -63px;
+}
+.left-btn {
+  background-position: -21px -42px;
+  margin-right: 3px;
+}
+.right-btn {
+  background-position: -21px -126px;
+  margin-right: 3px;
+}
+.up-btn {
+  background-position: 0px -63px;
+  margin-right: 3px;
+}
+.down-btn {
+  background-position: 0px -42px;
+  margin-right: 3px;
+}
+
+#share-cell {
+  display: inline-block;
+  vertical-align: top;
+  &.share-cell-none {
+    display: none;
+  }
+}
