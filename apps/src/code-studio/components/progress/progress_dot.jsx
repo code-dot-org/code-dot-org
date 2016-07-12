@@ -28,12 +28,8 @@ const styles = {
     paddingLeft: 5,
     fontFamily: '"Gotham 4r", sans-serif'
   },
-  disabledLevel: {
-    pointerEvents: 'none',
-    cursor: 'default'
-  },
   dot: {
-    common: {
+    puzzle: {
       display: 'inline-block',
       width: dotSize,
       height: dotSize,
@@ -42,20 +38,15 @@ const styles = {
       lineHeight: dotSize + 'px',
       borderRadius: dotSize,
       borderWidth: 2,
+      borderStyle: 'solid',
       borderColor: color.lighter_gray,
       margin: '0 2px',
-    },
-    puzzle: {
-      borderStyle: 'solid',
       transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
       ':hover': {
         textDecoration: 'none',
         color: color.white,
         backgroundColor: color.level_current
       }
-    },
-    lockedReview: {
-      borderStyle: 'dotted'
     },
     unplugged: {
       width: 'auto',
@@ -143,35 +134,6 @@ function dotClicked(url, e) {
   saveAnswersAndNavigate(url);
 }
 
-const BubbleInterior = React.createClass({
-  propTypes: {
-    courseOverviewPage: React.PropTypes.bool,
-    showingIcon: React.PropTypes.bool,
-    showingLevelName: React.PropTypes.bool,
-    title: React.PropTypes.number
-  },
-
-  render() {
-    let bubbleInterior = '\u00a0';
-
-    if (this.props.courseOverviewPage) {
-      if (this.props.showingLevelName) {
-        if (this.props.showingIcon) {
-          bubbleInterior = '';
-        }
-      } else {
-        bubbleInterior = this.props.title;
-      }
-    }
-
-    return (
-      <span>
-        {bubbleInterior}
-      </span>
-    );
-  }
-});
-
 /**
  * Stage progress component used in level header and course overview.
  */
@@ -181,16 +143,6 @@ export const ProgressDot = React.createClass({
     currentLevelId: React.PropTypes.string,
     courseOverviewPage: React.PropTypes.bool,
     saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
-  },
-
-  getIconForLevelStatus(level) {
-    if (level.locked) {
-      return 'fa-lock';
-    } else if (level.status === 'perfect') {
-      return 'fa-check';
-    } else {
-      return null;
-    }
   },
 
   render() {
@@ -203,26 +155,19 @@ export const ProgressDot = React.createClass({
     const showUnplugged = isUnplugged && (this.props.courseOverviewPage || onCurrent);
     const outlineCurrent = this.props.courseOverviewPage && onCurrent;
     const smallDot = !this.props.courseOverviewPage && !onCurrent;
-    const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
-    const isPeerReview = level.kind === 'peer_review';
-    const iconForLevelStatus = this.props.courseOverviewPage && this.getIconForLevelStatus(level);
+    const showLevelName = level.kind === 'named_level' && this.props.courseOverviewPage;
 
     return (
       <a
         key='link'
-        href={level.locked ? undefined : level.url + location.search}
+        href={level.url + location.search}
         onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
-        style={[
-          styles.outer,
-          (showLevelName || isPeerReview) && {display: 'table-row'},
-           level.locked && styles.disabledLevel
-         ]}
+        style={[styles.outer, showLevelName && {display: 'table-row'}]}
       >
-        {(level.icon && !isPeerReview) ?
+        {level.icon ?
           <i
             className={`fa ${level.icon}`}
             style={[
-              styles.dot.common,
               styles.dot.puzzle,
               this.props.courseOverviewPage && styles.dot.overview,
               styles.dot.icon,
@@ -232,40 +177,27 @@ export const ProgressDot = React.createClass({
             ]}
           /> :
           <div
-            className={`level-${level.id}${iconForLevelStatus ? ` fa ${iconForLevelStatus}` : ''}`}
+            className={`level-${level.id}`}
             style={[
-              styles.dot.common,
-              level.locked ? styles.dot.lockedReview : styles.dot.puzzle,
+              styles.dot.puzzle,
               this.props.courseOverviewPage && styles.dot.overview,
               smallDot && styles.dot.small,
               level.kind === 'assessment' && styles.dot.assessment,
               outlineCurrent && {borderColor: color.level_current},
               showUnplugged && styles.dot.unplugged,
-              styles.status[level.status || 'not_tried'],
+              styles.status[level.status || 'not_tried']
             ]}
           >
-            <BubbleInterior
-              courseOverviewPage={this.props.courseOverviewPage}
-              showingIcon={!!iconForLevelStatus}
-              showingLevelName={showLevelName}
-              title={level.title || undefined}
-            />
+            {level.kind === 'named_level' ? '\u00a0' : level.title}
           </div>
         }
-        {
-          showLevelName &&
-            <span
-              key='named_level'
-              style={[styles.levelName, level.locked && {color: color.charcoal}]}
-            >
-              {level.name}
-            </span>
+        {showLevelName &&
+          <span key='named_level' style={styles.levelName}>{level.name}</span>
         }
       </a>
     );
   }
 });
-
 export default connect(state => ({
   currentLevelId: state.currentLevelId,
   saveAnswersBeforeNavigation: state.saveAnswersBeforeNavigation
