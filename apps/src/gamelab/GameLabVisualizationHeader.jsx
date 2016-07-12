@@ -1,22 +1,22 @@
 /** @file Row of controls above the visualization. */
 import React from 'react';
 import {changeInterfaceMode} from './actions';
-var connect = require('react-redux').connect;
-var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
-var msg = require('../locale');
-var ToggleGroup = require('../templates/ToggleGroup');
-var styleConstants = require('../styleConstants');
+import {connect} from 'react-redux';
+import {GameLabInterfaceMode} from './constants';
+import msg from '../locale';
+import ToggleGroup from '../templates/ToggleGroup';
+import styleConstants from '../styleConstants';
 
-var styles = {
+const styles = {
   main: {
-    height: styleConstants["workspace-headers-height"],
+    height: styleConstants["workspace-headers-height"]
   }
 };
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
  */
-var GameLabVisualizationHeader = React.createClass({
+const GameLabVisualizationHeader = React.createClass({
   propTypes: {
     isShareView: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes
@@ -26,12 +26,13 @@ var GameLabVisualizationHeader = React.createClass({
     onInterfaceModeChange: React.PropTypes.func.isRequired
   },
 
-  render: function () {
+  render() {
     return (
       <div style={styles.main}>
         <ToggleGroup
             selected={this.props.interfaceMode}
-            onChange={this.props.onInterfaceModeChange}>
+            onChange={this.props.onInterfaceModeChange}
+        >
           <button value={GameLabInterfaceMode.CODE} id="codeMode">
             {msg.codeMode()}
           </button>
@@ -44,16 +45,10 @@ var GameLabVisualizationHeader = React.createClass({
     );
   }
 });
-module.exports = connect(function propsFromStore(state) {
-  return {
-    isShareView: state.pageConstants.isShareView,
-    interfaceMode: state.interfaceMode,
-    showAnimationMode: state.pageConstants.showAnimationMode
-  };
-}, function propsFromDispatch(dispatch) {
-  return {
-    onInterfaceModeChange: function (mode) {
-      dispatch(changeInterfaceMode(mode));
-    }
-  };
-})(GameLabVisualizationHeader);
+module.exports = connect(state => ({
+  isShareView: state.pageConstants.isShareView,
+  interfaceMode: state.interfaceMode,
+  showAnimationMode: state.pageConstants.showAnimationMode
+}), dispatch => ({
+  onInterfaceModeChange: mode => dispatch(changeInterfaceMode(mode))
+}))(GameLabVisualizationHeader);
