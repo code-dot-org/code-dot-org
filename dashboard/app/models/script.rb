@@ -605,12 +605,12 @@ class Script < ActiveRecord::Base
       peer_reviews_to_complete.times do |x|
         levels << {
             ids: [x],
+            position: 0,
             kind: 'peer_review',
             title: '',
             url: '',
             name: I18n.t('peer_review.reviews_unavailable'),
-            icon: 'fa-lock',
-            locked: true
+            icon: 'fa-lock'
         }
       end
 
@@ -646,12 +646,12 @@ class Script < ActiveRecord::Base
   end
 
   def self.build_property_hash(script_data)
-    {
-      pd: script_data[:pd] || false, # default false
-      admin_required: script_data[:admin_required] || false, # default false
-      professional_learning_course: script_data[:professional_learning_course] || false, # default false
-      student_of_admin_required: script_data[:student_of_admin_required] || false, # default false
-      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil
-    }.compact
+    Hash.new.tap do |property_hash|
+      property_hash[:pd] = script_data[:pd] || false # default false
+      property_hash[:admin_required] = script_data[:admin_required] || false # default false
+      property_hash[:professional_learning_course] = script_data[:professional_learning_course] || false # default false
+      property_hash[:student_of_admin_required] = script_data[:student_of_admin_required] || false # default false
+      property_hash[:peer_reviews_to_complete] = script_data[:peer_reviews_to_complete] if script_data[:peer_reviews_to_complete]
+    end
   end
 end

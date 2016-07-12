@@ -158,8 +158,8 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
         newProgress[key] = clientState.mergeActivityResult(state.progress[key], action.progress[key]);
       });
 
-      const stages = state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
-        const id = level.uid || progress.bestResultLevelId(level.ids, newProgress);
+      let stages = state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
+        let id = level.uid || progress.bestResultLevelId(level.ids, newProgress);
 
         return Object.assign({}, level, {
           status: progress.activityCssClass(newProgress[id]),
@@ -168,12 +168,12 @@ function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = 
         });
       })}));
 
-      const returnState = Object.assign({}, state, {
+      let returnState =  Object.assign({}, state, {
         progress: newProgress,
         stages: stages
       });
 
-      const peerReviewStage = _.findLast(returnState.stages, function (stage) {
+      let peerReviewStage = _.findLast(returnState.stages, function (stage) {
         return stage.flex_category === 'Peer Review';
       });
 

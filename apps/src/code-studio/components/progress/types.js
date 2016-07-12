@@ -7,8 +7,7 @@ const levelProgressShape = React.PropTypes.shape({
   kind: React.PropTypes.oneOf(['unplugged', 'assessment', 'puzzle', 'named_level', 'peer_review']),
   icon: React.PropTypes.string,
   url: React.PropTypes.string,
-  id: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
-  locked: React.PropTypes.bool
+  id: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number])
 });
 module.exports.levelProgressShape = levelProgressShape;
 

@@ -28,10 +28,6 @@ const styles = {
     paddingLeft: 5,
     fontFamily: '"Gotham 4r", sans-serif'
   },
-  disabledLevel: {
-    pointerEvents: 'none',
-    cursor: 'default'
-  },
   dot: {
     common: {
       display: 'inline-block',
@@ -167,55 +163,72 @@ export const ProgressDot = React.createClass({
     const smallDot = !this.props.courseOverviewPage && !onCurrent;
     const showLevelName = level.kind === 'named_level' && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
+    const isLockedReview = isPeerReview && level.status === 'not_tried';
 
-    return (
-      <a
-        key='link'
-        href={level.locked ? undefined : level.url + location.search}
-        onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
-        style={[styles.outer, (showLevelName || isPeerReview) && {display: 'table-row'}, level.locked && styles.disabledLevel]}
-      >
-        {(level.icon && !isPeerReview) ?
-        <i
-          className={`fa ${level.icon}`}
-          style={[
-            styles.dot.common,
-            styles.dot.puzzle,
-            this.props.courseOverviewPage && styles.dot.overview,
-            styles.dot.icon,
-            smallDot && styles.dot.icon_small,
-            level.status && level.status !== 'not_tried' && styles.dot.icon_complete,
-            outlineCurrent && {textShadow: createOutline(color.level_current)}
-          ]}
+    const iconElement = (level.icon && !isPeerReview) ?
+      <i
+        className={`fa ${level.icon}`}
+        style={[
+              styles.dot.common,
+              styles.dot.puzzle,
+              this.props.courseOverviewPage && styles.dot.overview,
+              styles.dot.icon,
+              smallDot && styles.dot.icon_small,
+              level.status && level.status !== 'not_tried' && styles.dot.icon_complete,
+              outlineCurrent && {textShadow: createOutline(color.level_current)}
+            ]}
         /> :
+      <div
+        className={`level-${level.id} ${isPeerReview && `fa ${level.icon}`}`}
+        style={[
+              styles.dot.common,
+              isLockedReview ? styles.dot.lockedReview : styles.dot.puzzle,
+              this.props.courseOverviewPage && styles.dot.overview,
+              smallDot && styles.dot.small,
+              level.kind === 'assessment' && styles.dot.assessment,
+              outlineCurrent && {borderColor: color.level_current},
+              showUnplugged && styles.dot.unplugged,
+              styles.status[level.status || 'not_tried'],
+            ]}
+        >
+        {(showLevelName || (isPeerReview && level.icon === '')) ? '\u00a0' : level.title}
+      </div>;
+
+    const rowText = (showLevelName || isPeerReview) &&
+      <span
+        key='named_level'
+        style={[styles.levelName, isLockedReview && {color: color.charcoal}]}
+      >
+        {level.name}
+      </span>;
+
+
+    if (isLockedReview) {
+      return (
         <div
-          className={`level-${level.id} ${isPeerReview && `fa ${level.icon}`}`}
-          style={[
-            styles.dot.common,
-            level.locked ? styles.dot.lockedReview : styles.dot.puzzle,
-            this.props.courseOverviewPage && styles.dot.overview,
-            smallDot && styles.dot.small,
-            level.kind === 'assessment' && styles.dot.assessment,
-            outlineCurrent && {borderColor: color.level_current},
-            showUnplugged && styles.dot.unplugged,
-            styles.status[level.status || 'not_tried'],
-          ]}
+          key='lockedReview'
+          style={[styles.outer, {display: 'table-row'}]}
         >
-          {(showLevelName || (isPeerReview && level.icon === '')) ? '\u00a0' : level.title}
-        </div>}
-        {(showLevelName || isPeerReview) &&
-        <span
-          key='named_level'
-          style={[styles.levelName, level.locked && {color: color.charcoal}]}
+          {iconElement}
+          {rowText}
+        </div>
+      );
+    } else {
+      return (
+        <a
+          key='link'
+          href={level.url}
+          onClick={this.props.saveAnswersBeforeNavigation && dotClicked.bind(null, level.url)}
+          style={[styles.outer, (showLevelName || isPeerReview) && {display: 'table-row'}]}
         >
-          {level.name}
-        </span>}
-      </a>
-    );
+          {iconElement}
+          {rowText}
+        </a>
+      );
+    }
   }
 });
-
-export default connect((state) => ({
+export default connect((state, ownProps) => ({
   currentLevelId: state.currentLevelId,
   saveAnswersBeforeNavigation: state.saveAnswersBeforeNavigation
 }))(Radium(ProgressDot));
