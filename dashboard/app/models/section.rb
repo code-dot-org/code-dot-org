@@ -40,6 +40,9 @@ class Section < ActiveRecord::Base
   LOGIN_TYPE_PICTURE = 'picture'
   LOGIN_TYPE_WORD = 'word'
 
+  # Disable single table inheritance for this model.
+  self.inheritance_column = nil
+
   def user_must_be_teacher
     errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
   end
