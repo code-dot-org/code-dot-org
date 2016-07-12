@@ -138,44 +138,11 @@ const styles = {
   }
 };
 
+
 function dotClicked(url, e) {
   e.preventDefault();
   saveAnswersAndNavigate(url);
 }
-
-const BubbleInterior = React.createClass({
-  propTypes: {
-    courseOverviewPage: React.PropTypes.bool,
-    showingIcon: React.PropTypes.bool,
-    showingLevelName: React.PropTypes.bool,
-    title: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number])
-  },
-
-  render() {
-    /*
-    Render &nbsp if the bubble is empty, OR if this is showing up in the header
-    Render '' if the bubble has an icon and we're on the course page
-    Render the the title if we don't have an icon and we're on the course page and we're not showing the level name
-     */
-    let bubbleInterior = '\u00a0';
-
-    if (this.props.courseOverviewPage) {
-      if (this.props.showingIcon) {
-        bubbleInterior = '';
-      } else {
-        if (!this.props.showingLevelName) {
-          bubbleInterior = this.props.title;
-        }
-      }
-    }
-
-    return (
-      <span>
-        {bubbleInterior}
-      </span>
-    );
-  }
-});
 
 /**
  * Stage progress component used in level header and course overview.
@@ -186,16 +153,6 @@ export const ProgressDot = React.createClass({
     currentLevelId: React.PropTypes.string,
     courseOverviewPage: React.PropTypes.bool,
     saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
-  },
-
-  getIconForLevelStatus(level) {
-    if (level.locked) {
-      return 'fa-lock';
-    } else if (level.status === 'perfect') {
-      return 'fa-check';
-    } else {
-      return null;
-    }
   },
 
   render() {
@@ -210,7 +167,6 @@ export const ProgressDot = React.createClass({
     const smallDot = !this.props.courseOverviewPage && !onCurrent;
     const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
-    const iconForLevelStatus = this.props.courseOverviewPage && this.getIconForLevelStatus(level);
 
     return (
       <a
@@ -237,7 +193,7 @@ export const ProgressDot = React.createClass({
             ]}
           /> :
           <div
-            className={`level-${level.id}${iconForLevelStatus ? ` fa ${iconForLevelStatus}` : ''}`}
+            className={`level-${level.id} fa ${level.locked ? 'fa-lock' : level.icon}`}
             style={[
               styles.dot.common,
               level.locked ? styles.dot.lockedReview : styles.dot.puzzle,
@@ -249,12 +205,7 @@ export const ProgressDot = React.createClass({
               styles.status[level.status || 'not_tried'],
             ]}
           >
-            <BubbleInterior
-              courseOverviewPage={this.props.courseOverviewPage}
-              showingIcon={!!iconForLevelStatus}
-              showingLevelName={showLevelName}
-              title={level.title ? level.title.toString() : undefined}
-            />
+            {(showLevelName  && !level.icon) ? '\u00a0' : level.title}
           </div>
         }
         {

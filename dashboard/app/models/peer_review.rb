@@ -146,6 +146,8 @@ class PeerReview < ActiveRecord::Base
         Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
 
       PeerReview.where(reviewer: user, script: script).map(&:summarize)
+    else
+      []
     end
   end
 
@@ -155,6 +157,7 @@ class PeerReview < ActiveRecord::Base
       status: status.nil? ? 'not_started' : 'perfect',
       name: status.nil? ? I18n.t('peer_review.review_in_progress') : I18n.t('peer_review.link_to_submitted_review'),
       result: status.nil? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::BEST_PASS_RESULT,
+      icon: status.nil? ? '' : 'fa-check',
       locked: false
     }
   end

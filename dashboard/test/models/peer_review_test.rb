@@ -147,12 +147,12 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'Merging peer review progress does not merge progress with no user, script nor enrollment' do
-    assert_nil PeerReview.get_peer_review_summaries(nil, @script)
+    assert PeerReview.get_peer_review_summaries(nil, @script).empty?
 
-    assert_nil PeerReview.get_peer_review_summaries(@user, @script)
+    assert PeerReview.get_peer_review_summaries(@user, @script).empty?
 
     @script.update(professional_learning_course: true)
-    assert_nil PeerReview.get_peer_review_summaries(@user, @script)
+    assert PeerReview.get_peer_review_summaries(@user, @script).empty?
   end
 
   test 'Merging peer review progress merges progress for enrolled users' do
@@ -184,6 +184,7 @@ class PeerReviewTest < ActiveSupport::TestCase
             status: 'perfect',
             name: I18n.t('peer_review.link_to_submitted_review'),
             result: ActivityConstants::BEST_PASS_RESULT,
+            icon: 'fa-check',
             locked: false
         },
         {
@@ -191,6 +192,7 @@ class PeerReviewTest < ActiveSupport::TestCase
             status: 'not_started',
             name: I18n.t('peer_review.review_in_progress'),
             result: ActivityConstants::UNSUBMITTED_RESULT,
+            icon: '',
             locked: false
         }
     ]
