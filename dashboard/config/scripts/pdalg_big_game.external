@@ -2,32 +2,25 @@ name 'PDAlg Big Game'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-<style>img{border-radius:5px;}</style>
-
-### BIG GAME > Lots of updates
+# Big Game > Lots of updates
 
 Of all the changes we've made to the course software over the summer, the Big Game was definitely the largest single focus. As the underlying project of the whole curriculum, ensuring that students are successful in developing their games is important to us, and to that end we've added a number of new features to ease the process.
 
-#### Version Control!
+## Version Control!
 
 As a project whose primary focus is constant revision and iteration the Big Game, being able to revert back to a previous working version is a crucial feature that was missing during PD. Now you'll see a Version History button at the top right corner of the workspace.
 
-<br><br>
 ![version control](//studio.code.org/script_assets/pd/version_history.gif)
-<br><br>
 
 Each time you complete a level of the Big Game a version will be recorded in your version history, allowing you to easily roll back to a previous version if you ever get stuck with an error you can't resolve. Because you get a new version for each puzzle that you complete, it's important to encourage students to do their work a bit at a time (as we suggest in the level instructions) instead of trying to complete a lot of work all at once.
 
-<br>
-#### Remix
+## Remix
 
 If you went through PD later in the summer you may have already seen the Remix button used to keep multiple versions of your game. In every Big Game level you'll see a Remix button next to the Code Studio logo. Clicking Remix spins off a new copy of your game that you can edit and play with without the risk of breaking your working copy.  
-<br><br>
+
 ![remix](//studio.code.org/script_assets/pd/remix.gif)
-<br><br>
+
 Each time you click Remix you'll get a new copy of your game in your projects folder <a href="studio.code.org/projects" target="_blank">studio.code.org/projects</a>, each of which can be iterated on independently of the Big Game levels. This is a great way for students to experiment with adding new features to their game safely before integrating those features into their actual Big Game.
-<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

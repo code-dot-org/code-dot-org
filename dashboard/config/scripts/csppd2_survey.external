@@ -2,16 +2,15 @@ name 'CSPPD2 survey'
 css 'unplugged'
 
 markdown <<MARKDOWN
+# Wrap Up > Post-Survey
 
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-### Wrap Up > Post-Survey
-<br><br>
-Now that you've completed the second phase of PD, please take a few minutes to give us your feedback on the material by completing this post-survey. We really appreciate you taking the time to let us know what we can do to support you better! *(If you are having trouble viewing the form, click this [link](https://docs.google.com/forms/d/1B_z73ePDN-gyMUNvKmy4-0Kgg4yA2gBhxULR0foFeoc/viewform) to access the form directly.)*
-<br><br>
+Now that you've completed the second phase of PD, please take a few minutes to give us your feedback on the material by completing this post-survey. We really appreciate you taking the time to let us know what we can do to support you better!
 
->##### Don't forget to click 'I'm finished' once you've completed the survey in order to get credit for completing the entire online PD!  
+*(If you are having trouble viewing the form, click this [link](https://docs.google.com/forms/d/1B_z73ePDN-gyMUNvKmy4-0Kgg4yA2gBhxULR0foFeoc/viewform) to access the form directly.)*
+
+>Don't forget to click 'I'm finished' once you've completed the survey in order to get credit for completing the entire online PD!
 
 <iframe src="https://docs.google.com/forms/d/1B_z73ePDN-gyMUNvKmy4-0Kgg4yA2gBhxULR0foFeoc/viewform?embedded=true" width="800" height="600" frameborder="0" marginheight="0" marginwidth="0">CSP phase 2 online pd survey</iframe>
-<br/><br/>
+
 <a class="btn btn-large btn-primary next-stage submitButton">I'm finished!</a>
 MARKDOWN

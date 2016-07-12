@@ -2,39 +2,27 @@ name 'PDAlg Projects'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
-### PROJECTS > More than just a game
-<br/><br/>
+# Projects > More than just a game
 
 All of these features and updates we've added to the Big Game are great, but there's a much bigger benefit underlying all of these additions - the ability to create projects of your very own! From any puzzle, you can now click on the calculator and pencil icons to start new projects.
-<br>
-<br>
+
 ![project links](//studio.code.org/script_assets/pd/freeplay_header.png)
-<br>
-<br>
+
 From there you'll get the same saving, sharing, and remixing features that you've seen in the Big Game, but in a sandbox enviroment where *you* can choose what to build.
 
-<br/><br/>
-#### What's the difference?
+## What's the difference?
 
 The two icons will bring you to our two main environments. The <a href="https://studio.code.org/projects/calc" target="_blank">calculator</a> icon will take you to an environment that is strictly mathematical, where the only blocks available are for the Number data type. This is a great environment for working through word problems in your text book to see how your expression gets evaluated.
-<br>
-<br>
+
 ![calc](//studio.code.org/script_assets/pd/calc.gif)
-<br>
-<br>
+
 The <a href="https://studio.code.org/projects/eval" target="_blank">pencil</a> icon will take you to an environment where Strings, Images, Booleans, and Conditionals are all available. This allows students to create projects that go beyond strictly mathematical programs and really flex their creativity.
 
-<br/><br/>
-#### Making it your own
+## Making it your own
 
 Using these open project sandboxes with your students allows you to customize the curriculum to your classroom and your students' interests. Think about your students and your course - how might you use sandbox projects in your classroom to engage students and more tightly tie CS in Algebra to the curriculum you already teach?
 
 <a href="http://forum.code.org/t/ideas-for-sanbox-projects/1708" target="_blank"><button class="plc">Share Your Ideas >></button></a><br>
-
-<br/>
-<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
