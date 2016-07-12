@@ -152,15 +152,20 @@ const BubbleInterior = React.createClass({
   },
 
   render() {
+    /*
+    Render &nbsp if the bubble is empty, OR if this is showing up in the header
+    Render '' if the bubble has an icon and we're on the course page
+    Render the the title if we don't have an icon and we're on the course page and we're not showing the level name
+     */
     let bubbleInterior = '\u00a0';
 
     if (this.props.courseOverviewPage) {
-      if (this.props.showingLevelName) {
-        if (this.props.showingIcon) {
-          bubbleInterior = '';
-        }
+      if (this.props.showingIcon) {
+        bubbleInterior = '';
       } else {
-        bubbleInterior = this.props.title;
+        if (!this.props.showingLevelName) {
+          bubbleInterior = this.props.title;
+        }
       }
     }
 
