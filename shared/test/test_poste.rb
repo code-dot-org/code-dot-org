@@ -38,6 +38,18 @@ class PosteTest < Minitest::Test
       email, Digest::MD5.hexdigest(email), {ip_address: '5.6.7.8.'})
     assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
   end
+
+  def test_encrypt_then_decrypt_noop
+    my_string = 'ABCDEF'
+    assert_equal my_string, Poste.decrypt(Poste.encrypt(my_string))
+  end
+
+  def test_decrypt_then_encrypt_noop
+    my_string = 'ABCDEF'
+    my_string_encrypted = Poste.encrypt(my_string)
+    assert_equal my_string_encrypted,
+      Poste.encrypt(Poste.decrypt(my_string_encrypted))
+  end
 end
 
 class Poste2Test < Minitest::Test
