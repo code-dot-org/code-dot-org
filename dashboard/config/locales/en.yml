@@ -604,9 +604,6 @@ en:
         events:
           title: Events
           description: ""
-        builder:
-          title: Builder
-          description: ""
         flappy:
           title: Flappy Code
           description: "Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!"
@@ -615,9 +612,6 @@ en:
           description: ""
         step:
           title: Step
-          description: ""
-        sample_level_builder:
-          title: Sample Level Builder
           description: ""
   age_interstitial:
     age: Your age

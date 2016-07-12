@@ -36,24 +36,6 @@ en:
         'Hour of Code':
           desc: 'Hour of Code'
           'Maze': 'Stage 1'
-        'Edit Code':
-          desc: 'Edit Code (beta)'
-          'MazeEC': 'Stage 1'
-        '2014 Levels':
-          desc: 'Bounce (beta)'
-          'Bounce': 'Stage 1'
-        'Builder Levels':
-          desc: 'User-Created Puzzles (beta)'
-          'Custom': 'Stage 1'
-        'Flappy Levels':
-          desc: 'Flappy Bird'
-          'Flappy': 'Stage 1'
-        'Jigsaw Levels':
-          desc: 'Jigsaw (beta)'
-          'Jigsaw': 'Stage 1'
-        'Step Levels':
-          desc: 'Maze (beta)'
-          'MazeStep': 'Stage Step'
         'edit-code':
           desc: 'Edit Code (beta)'
           'MazeEC': 'Stage 1'
@@ -64,9 +46,6 @@ en:
           desc: 'Bounce (beta)'
           'Bounce': 'Stage 1'
           'Studio': 'Stage 2'
-        'builder':
-          desc: 'User-Created Puzzles (beta)'
-          'Custom': 'Stage 1'
         'flappy':
           desc: 'Flappy Bird'
           'Flappy': 'Stage 1'
@@ -76,9 +55,6 @@ en:
         'step':
           desc: 'Maze (beta)'
           'MazeStep': 'Stage Step'
-        'wordsearch':
-          desc: 'Spelling Bee (beta)'
-          'WordSearch': 'Stage 1'
     game:
       name:
         'Unplug1': 'Introduction to Computer Science'
