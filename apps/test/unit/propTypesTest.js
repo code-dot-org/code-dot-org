@@ -22,11 +22,11 @@ describe('propTypes module', () => {
     describe('does not return an error when', () => {
 
       it('no children are given', () => {
-        expect(check({someProp: 'foo'})).not.to.be.ok;
+        expect(check({someProp: 'foo'})).not.to.be.an.instanceOf(Error);
       });
 
       it('no prop is given', () => {
-        expect(check({children: [<Foo />]})).not.to.be.ok;
+        expect(check({children: [<Foo />]})).not.to.be.an.instanceOf(Error);
       });
 
     });
@@ -58,16 +58,16 @@ describe('propTypes module', () => {
     describe('does not return an error when', () => {
 
       it('no children are given', () => {
-        expect(check()).not.to.be.ok;
+        expect(check()).not.to.be.an.instanceOf(Error);
       });
 
       it('only some children are given in the correct order', () => {
-        expect(check(<Foo/>)).not.to.be.ok;
-        expect(check(<Bar/>)).not.to.be.ok;
+        expect(check(<Foo/>)).not.to.be.an.instanceOf(Error);
+        expect(check(<Bar/>)).not.to.be.an.instanceOf(Error);
       });
 
       it('all children are given in the correct order', () => {
-        expect(check(<Foo/>, <Bar/>)).not.to.be.ok;
+        expect(check(<Foo/>, <Bar/>)).not.to.be.an.instanceOf(Error);
       });
 
     });

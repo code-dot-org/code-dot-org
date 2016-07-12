@@ -3,6 +3,8 @@
  */
 import React from 'react';
 
+import {isSubsequence} from './utils';
+
 /**
  * A custom React PropType to ensure that the specified
  * component types are given in the specified order
@@ -28,29 +30,15 @@ export function childrenOfType(...validChildrenTypes) {
     }
     const prop = props[propName];
     const actualChildrenTypes = React.Children.map(prop, el => el.type);
-    let error;
-    let typeIndex = -1;
-    actualChildrenTypes.forEach((childType, index) => {
-      if (error) {
-        return;
-      }
-      typeIndex++;
-      while (childType !== validChildrenTypes[typeIndex]) {
-        if (typeIndex < validChildrenTypes.length - 1) {
-          typeIndex++;
-        } else {
-          error = new Error(
-            componentName +
-            ' was given children of types ' +
-            actualChildrenTypes.map(t => `<${t.name}>`).join(', ') +
-            ' but only accepts one of each child in the following order: ' +
-            validChildrenTypes.map(t => `<${t.name}>`).join(', ') + '.'
-          );
-          break;
-        }
-      }
-    });
-    return error;
+    if (!isSubsequence(validChildrenTypes, actualChildrenTypes)) {
+      return new Error(
+        componentName +
+        ' was given children of types ' +
+        actualChildrenTypes.map(t => `<${t.name}>`).join(', ') +
+        ' but only accepts one of each child in the following order: ' +
+        validChildrenTypes.map(t => `<${t.name}>`).join(', ') + '.'
+      );
+    }
   };
 }
 
@@ -80,7 +68,7 @@ export function childrenOfType(...validChildrenTypes) {
  * Example:
  *
  *   propTypes: {
- *     children: whenNoChildOfTypes(Icon, AnimatedIcon)
+ *     icon: whenNoChildOfTypes(Icon, AnimatedIcon)
  *   }
  *
  */
