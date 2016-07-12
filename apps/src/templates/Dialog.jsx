@@ -103,10 +103,10 @@ export var Icon = Radium(function Icon({src}) {
   );
 });
 Icon.propTypes = {
-  src: React.PropTypes.string,
+  src: React.PropTypes.string.isRequired,
 };
 
-var Dialog = React.createClass({
+const Dialog = React.createClass({
   propTypes: Object.assign({}, BaseDialog.propTypes, {
     children: childrenOfType(
       Icon,
