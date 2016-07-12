@@ -19,7 +19,7 @@ theme: pdf
 - state = splat.last
 - state_param = state.upcase
 - state_info = DB[:cdo_state_promote].where(state_code_s: state_param).first
-- pass unless get_all_states_with_dc.any? { |state| state.first == state_param.to_sym }
+- pass unless STATE_ABBR_WITH_DC_HASH.key? state_param.to_sym
 
 :css
   .together {
