@@ -1731,6 +1731,28 @@ a.download-video {
   }
 }
 
+.external-link-icon {
+  margin-left: 0.33em;
+}
+
+.external-link-disclaimer {
+  padding: 20px;
+  margin: 20px 0;
+  color: $dark_charcoal;
+  background-color: $lighter_gray;
+  font-size: 13px;
+  h2 {
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  strong {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
 .external,
 .text-match,
 .free-response,
