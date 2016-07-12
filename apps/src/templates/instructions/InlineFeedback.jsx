@@ -3,7 +3,7 @@ import Radium from 'radium';
 
 const InlineFeedback = ({ extra, message, styles }) => {
   return (
-    <div style={styles.container}>
+    <div style={styles.container} className="topInstructions-inline-feedback">
       <p style={styles.message}>{message}</p>
       {extra && <p style={styles.message}>{extra}</p>}
     </div>
@@ -12,7 +12,7 @@ const InlineFeedback = ({ extra, message, styles }) => {
 
 InlineFeedback.propTypes = {
   extra: React.PropTypes.string,
-  messge: React.PropTypes.string.isRequired,
+  message: React.PropTypes.string.isRequired,
   styles: React.PropTypes.object,
 };
 
