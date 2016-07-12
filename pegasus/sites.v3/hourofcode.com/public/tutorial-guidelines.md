@@ -36,7 +36,7 @@ Unlike previous years, we will not filter the activity list—all activities tha
 <a id="top"></a>
 ## Index:
 
-- [What to Submit] (#whatsubmit)
+- [What to Submit](#whatsubmit)
 - [General guidelines for creating an Hour of Code™ activity](#guidelines)
 - [How to Submit (Due 10/1/2016)](#submit)
 - [How tutorials will be evaluated](#inclusion)
@@ -47,7 +47,7 @@ Unlike previous years, we will not filter the activity list—all activities tha
 
 <a id="whatsubmit"></a>
 
-##What to Submit
+## What to Submit
 
 
 **Self-guided puzzle or game ([example](https://code.org/mc))**
@@ -102,102 +102,80 @@ The activities should teach a computer science concept such as how the Internet 
 
 <a id="submit"></a>
 
-##How to submit (Due 10/1/2016)
+## How to submit (Due 10/1/2016)
 
 Visit the [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki) and complete the questions to submit your tutorial.
 
 What you’ll need:
 
-- Your name and email, you will be the primary contact representing the submitted activity
-
-- Activity Name (cannot include “Hour of Code” in the name)
-
-- URL link to the activity
-
-- Activity descriptions
-	- Longer description for desktop-view with max character count: 400
-	- Longer description for mobile-view with max character count: 75
-	- Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-
-- Recommended grade level(s) for intended users. You may refer to the [Computer Science Teachers’ Association’s K-12 Standards] (http://csta.acm.org/Curriculum/sub/K12Standards.html) for grade-appropriate computer science concepts. Example grade levels include:
-	- Kindergarten - Grade 1 (ages 4-6)
-	- Grades 2-5 (ages 7-10)
-	- Grades 6-8 (ages 11-13)
-	- Grades 9+ (ages 14+)
+* Your name and email, you will be the primary contact representing the submitted activity
+* Activity Name (cannot include “Hour of Code” in the name)
+* URL link to the activity
+* Activity descriptions
+	* Longer description for desktop-view with max character count: 400
+	* Longer description for mobile-view with max character count: 75
+	* Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the [Computer Science Teachers’ Association’s K-12 Standards] (http://csta.acm.org/Curriculum/sub/K12Standards.html) for grade-appropriate computer science concepts. Example grade levels include:
+	* Kindergarten - Grade 1 (ages 4-6)
+	* Grades 2-5 (ages 7-10)
+	* Grades 6-8 (ages 11-13)
+	* Grades 9+ (ages 14+)
+* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your tutorial to teach about angles or parabolas, list as math. If you have a mad libs tutorial that teaches verbs/nouns/etc. choose language arts.
+* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
+* A list of supported natural languages. Note: Language-detection is the job of the tutorial provider, we will redirect all users to the single URL provided.
+* What level of experience should an educator have to use your activity? (e.g. Beginner, Comfortable, or Experienced.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your tutorial
+	* 1 hour only
+	* 1 hour with follow-on course
+	* 2-6 hours (can be multiple lessons)
 	
-- A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your tutorial to teach about angles or parabolas, list as math. If you have a mad libs tutorial that teaches verbs/nouns/etc. choose language arts.
+#### Additional things you’ll need when submitting Lesson Plans
 
-- A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
+* Your name
+* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
+* School where you teach, city, and state (optional)
+* Grade(s) and subjects(s) you teach (optional)
+* Your picture (optional)
+* What software the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
 
-- A list of supported natural languages. Note: Language-detection is the job of the tutorial provider, we will redirect all users to the single URL provided.
+#### Additional things you’ll need when submitting Online Activities
 
-- What level of experience should an educator have to use your activity? (e.g. Beginner, Comfortable, or Experienced.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* Name and logo of your organization
+* whether it is COPPA compliant or not
+* a URL link to teacher notes (optional)
+* A list of tested/compatible platforms:
+	* Web based: Which platforms have you tested?
+		* OS - Mac, Win, and other versions
+		* Browsers - IE11, Edge, Firefox, Chrome, Safari
+		* iOS mobile Safari (mobile-optimized)
+		* Android Chrome (mobile-optimized)
+	* Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
+	* Unplugged
+* Screenshots or marketing images of the Hour of Code activity. Please send at least one image for each of the three sizes below. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
+	* 1:1 square image with at least 600 x 600 resolution
+	* 4:3 image with at least 800 x 600 resolution
+	* 2:3 image with at least 400 x 600 resolution
+	* 10:3 image with at least 1000 x 300 resolution
+* In order to more accurately track participation we want third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. Place a starting pixel-image on the start page and a final pixel-image on the end page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details.
+* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to:
+	* Share on social media that they completed the Hour of Code
+	* Receive a certificate that they completed the Hour of Code
+	* See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+	* For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+* (Optional) We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 5, 12:01 am through Dec. 11, 11:59 pm)
+	* For online activities (especially smartphone/tablet apps):
+		* Number of users
+		* How many completed the task
+		* Average time on task
+		* Number of total lines of code written over all users
+		* How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
+	* For offline activities
+		* Number of downloads of paper version of activity (if applicable)
 
-- The length of your tutorial
-	- 1 hour only
-	- 1 hour with follow-on course
-	- 2-6 hours (can be multiple lessons)
-	
-####Additional things you’ll need when submitting Lesson Plans
+#### Additional things you’ll need when submitting Robotics
 
-- Your name
-
-- Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-
-- School where you teach, city, and state (optional)
-
-- Grade(s) and subjects(s) you teach (optional)
-
-- Your picture (optional)
-
-- What software the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
-
-####Additional things you’ll need when submitting Online Activities
-
-- Name and logo of your organization
-
-- whether it is COPPA compliant or not
-
-- a URL link to teacher notes (optional)
-
-- A list of tested/compatible platforms:
-	- Web based: Which platforms have you tested?
-		- OS - Mac, Win, and other versions
-		- Browsers - IE11, Edge, Firefox, Chrome, Safari
-		- iOS mobile Safari (mobile-optimized)
-		- Android Chrome (mobile-optimized)
-	- Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-	- Unplugged
-	
-- Screenshots or marketing images of the Hour of Code activity. Please send at least one image for each of the three sizes below. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-	- 1:1 square image with at least 600 x 600 resolution
-	- 4:3 image with at least 800 x 600 resolution
-	- 2:3 image with at least 400 x 600 resolution
-	- 10:3 image with at least 1000 x 300 resolution
-
-- In order to more accurately track participation we want third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. Place a starting pixel-image on the start page and a final pixel-image on the end page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details.
-
-- Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to:
-	- Share on social media that they completed the Hour of Code
-	- Receive a certificate that they completed the Hour of Code
-	- See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
-	- For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-
-- (Optional) We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 5, 12:01 am through Dec. 11, 11:59 pm)
-	- For online activities (especially smartphone/tablet apps):
-		- Number of users
-		- How many completed the task
-		- Average time on task
-		- Number of total lines of code written over all users
-		- How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-	- For offline activities
-		- Number of downloads of paper version of activity (if applicable)
-
-####Additional things you’ll need when submitting Robotics
-
-- If you submit a robotics activity, we need to know the cost per student for robotics
-
-- To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* If you submit a robotics activity, we need to know the cost per student for robotics
+* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
 
 [**Back to the top**](#top)
 
@@ -209,13 +187,9 @@ A committee of computer science educators will rank submissions based on qualita
 The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
 
 - High production quality
-
 - Promote learning by all demographic groups (esp. under-represented groups)
-
 - Educational (teaches computer science concepts well)
-
 - Fun and engaging
-
 - Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
 
 If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
@@ -223,29 +197,19 @@ If the review committee rates the activity a zero in production quality (due to 
 In addition, in order to be listed, all activities must:
 
 - Be appropriate for the classroom (no guns, explicit content, etc.)
-
 - Require no sign up 
-
 - Require no payment (exception for robotics tutorials these can require robot/kit purchase)
-
 For self-directed activities for new teachers and students the review committee will be looking for whether:
-
 - Teachers can use the tutorial or activity with no background in computer science
-
 - Students can be successful with no background in computer science
-
 - Students can direct themselves through the tutorial without parental or teacher guidance
 
 Teachers and students will be able to search through and filter our list of tutorials based on filters such (grade, experience level, subject, hardware, etc.). By default, we will show lesson plans and activities first that:
 
 - Receive the highest ratings from the review committee
-
 - Are one hour self-directed activities designed for beginners (students and teachers)
-
 - Appeal to a wide range of users (across platforms, languages, and ages)
-
 - Require no installation
-
 - Are new this year
 
 [**Back to the top**](#top)  
@@ -283,12 +247,9 @@ Many of our tutorial partners have used our trademark "Hour of Code" on their we
 
 1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. 
 	a. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-	
 2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-
 3. Include language on the page (or in the the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that says the following:
 	a. “The '[Hour of Code](http://hourofcode.com)™' is a nationwide initiative by [Computer Science Education Week](http://csedweek.org) and [Code.org](http://code.org) to introduce millions of students to one hour of computer science and computer programming.”
-
 4. No use of "Hour of Code" in app names.
 
 [**Back to the top**](#top)
@@ -317,11 +278,8 @@ Please promote your 1-hour tutorial to your network! Direct them to your Hour of
 
 - Feature Hour of Code and CSEdWeek on your website. Ex: [http://www.tynker.com/hour-of-code](http://www.tynker.com/hour-of-code
 )
-
 - Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-
 - Host a local event or ask your employees to host an event at local schools or community groups.
-
 - See our resource kit for further information (coming soon).
 
 
