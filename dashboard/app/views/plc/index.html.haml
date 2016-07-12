@@ -1,14 +1,14 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/plc', media: 'all'
 
-%h2 PLC Admin
+%h1 PLC Admin
 
-%h3 Create professional learning content
+%h2 Create professional learning content
 %ul
   %li
     =link_to 'Build a Professional Learning Script', new_script_path
-    (Add "professional_learning_course '<course name>'" to the script)
+    (Add "professional_learning_course 'course name'" to the script)
 
-%h3 Manage enrollment
+%h2 Manage enrollment
 %ul
   %li= link_to 'Enroll users in a course by email', new_plc_user_course_enrollment_path
