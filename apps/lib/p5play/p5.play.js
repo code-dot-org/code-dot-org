@@ -1015,11 +1015,49 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * Width of the sprite's current image.
   * If no images or animations are set it's the width of the
   * placeholder rectangle.
+  * Used internally to make calculations.
+  *
+  * @property internalWidth
+  * @type {Number}
+  * @default 100
+  */
+
+  this.internalWidth = _w;
+
+  /**
+  * Height of the sprite's current image.
+  * If no images or animations are set it's the height of the
+  * placeholder rectangle.
+  * Used internally to make calculations.
+  *
+  * @property internalHeight
+  * @type {Number}
+  * @default 100
+  */
+
+  this.internalHeight = _h;
+
+  /**
+  * Width of the sprite's current image.
+  * If no images or animations are set it's the width of the
+  * placeholder rectangle.
   *
   * @property width
   * @type {Number}
   * @default 100
   */
+
+  Object.defineProperty(this, 'width', {
+    enumerable: true,
+    configurable: true,
+    get: function() {
+      return this.internalWidth;
+    },
+    set: function(value) {
+      this.internalWidth = value;
+    }
+  });
+
   if(_w === undefined)
     this.width = 100;
   else
@@ -1034,6 +1072,18 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @type {Number}
   * @default 100
   */
+
+  Object.defineProperty(this, 'height', {
+    enumerable: true,
+    configurable: true,
+    get: function() {
+      return this.internalHeight;
+    },
+    set: function(value) {
+      this.internalHeight = value;
+    }
+  });
+
   if(_h === undefined)
     this.height = 100;
   else
@@ -1048,7 +1098,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @type {Number}
   * @default 100
   */
-  this.originalWidth = this.width;
+  this.originalWidth = this.internalWidth;
 
   /**
   * Unscaled height of the sprite
@@ -1059,7 +1109,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @type {Number}
   * @default 100
   */
-  this.originalHeight = this.height;
+  this.originalHeight = this.internalHeight;
 
   /**
   * True if the sprite has been removed.
@@ -1172,17 +1222,17 @@ function Sprite(pInst, _x, _y, _w, _h) {
         {
         this.collider = this.getBoundingBox();
         this.colliderType = 'image';
-        this.width = animations[currentAnimation].getWidth()*abs(this.scale);
-        this.height = animations[currentAnimation].getHeight()*abs(this.scale);
+        this.internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
+        this.internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
         //quadTree.insert(this);
         }
 
         //update size and collider
-        if(animations[currentAnimation].frameChanged || this.width === undefined || this.height === undefined)
+        if(animations[currentAnimation].frameChanged || this.internalWidth === undefined || this.internalHeight === undefined)
         {
         //this.collider = this.getBoundingBox();
-        this.width = animations[currentAnimation].getWidth()*abs(this.scale);
-        this.height = animations[currentAnimation].getHeight()*abs(this.scale);
+        this.internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
+        this.internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
         }
       }
 
@@ -1217,11 +1267,11 @@ function Sprite(pInst, _x, _y, _w, _h) {
           }
         else if(this.colliderType === 'image')
           {
-          this.collider.extents.x = this.width * abs(cos(t)) +
-          this.height * abs(sin(t));
+          this.collider.extents.x = this.internalWidth * abs(cos(t)) +
+          this.internalHeight * abs(sin(t));
 
-          this.collider.extents.y = this.width * abs(sin(t)) +
-          this.height * abs(cos(t));
+          this.collider.extents.y = this.internalWidth * abs(sin(t)) +
+          this.internalHeight * abs(cos(t));
           }
         }
 
@@ -1283,8 +1333,8 @@ function Sprite(pInst, _x, _y, _w, _h) {
     if(animations[currentAnimation] && (animations[currentAnimation].getWidth() !== 1 && animations[currentAnimation].getHeight() !== 1))
     {
       this.collider = this.getBoundingBox();
-      this.width = animations[currentAnimation].getWidth()*abs(this.scale);
-      this.height = animations[currentAnimation].getHeight()*abs(this.scale);
+      this.internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
+      this.internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
       //quadTree.insert(this);
       this.colliderType = 'image';
       //print("IMAGE COLLIDER ADDED");
@@ -1296,7 +1346,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
     }
     else //get the with and height defined at the creation
     {
-      this.collider = new AABB(pInst, this.position, createVector(this.width, this.height));
+      this.collider = new AABB(pInst, this.position, createVector(this.internalWidth, this.internalHeight));
       //quadTree.insert(this);
       this.colliderType = 'default';
     }
@@ -1559,7 +1609,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
     {
       noStroke();
       fill(this.shapeColor);
-      rect(0, 0, this.width, this.height);
+      rect(0, 0, this.internalWidth, this.internalHeight);
     }
   };
 
