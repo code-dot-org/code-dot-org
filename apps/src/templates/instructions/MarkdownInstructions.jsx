@@ -117,6 +117,7 @@ const MarkdownInstructions = React.createClass({
   }
 });
 
-module.exports = connect(state => ({
+export const StatelessMarkdownInstructions = Radium(MarkdownInstructions);
+export default connect(state => ({
   noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
 }))(Radium(MarkdownInstructions));
