@@ -68,12 +68,16 @@ body.pin_bottom {
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
+  font-size: 32px;
   color: $purple;
 }
 
 h2 {
   font-family: $gotham-bold;
   font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+  color: $teal;
 }
 
 hr {
@@ -1386,9 +1390,6 @@ a.download-video {
   #lesson {
     #heading {
       width: 700px;
-      h2 {
-        margin-top: 0;
-      }
     }
     #trynow {
       float: right;
@@ -1904,7 +1905,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
 
 .multi {
   margin: auto;
-  h2 {
+  h1 {
     text-align: center;
   }
   p {
