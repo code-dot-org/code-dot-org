@@ -876,7 +876,7 @@
     so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
     concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
     the user experience</a> to answer the big question: <i>What can students do?</i>'
-  dashboard_announce_button_text: "Սովորել ավելին"
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "Որպես ուսուցիչ, դու առաջատար ճանապարհ է շարժման տալ
     յուրաքանչյուր ուսանող յուրաքանչյուր դպրոց հնարավորություն է տալիս սովորել համակարգչային
     գիտությունը: Հիմա, որ ժամանակն է, թող ձեր ներկայացուցիչները լսել ձեզ. Այս շաբաթ,
@@ -1723,3 +1723,11 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys
