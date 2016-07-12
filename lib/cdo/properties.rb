@@ -40,15 +40,15 @@ def fetch_metrics
   # Include stale default values as of 2016-01-04 so we never show 0. These
   # would be used, for example, if the DB is unavailable.
   Properties.get(:metrics) || {
-    'created_at'=>"2016-01-04T21:37:19+00:00",
-    'created_on'=>"2016-01-04",
-    'csedweek_organizers'=>38236,
-    'csedweek_teachers'=>24025,
-    'csedweek_entire_schools'=>12754,
-    'csedweek_students'=>4_875_091,
-    'csedweek_countries'=>356,
-    'petition_signatures'=>2_053_571,
-    'lines_of_code'=>11_151_730_618,
+    'created_at' => "2016-01-04T21:37:19+00:00",
+    'created_on' => "2016-01-04",
+    'csedweek_organizers' => 38236,
+    'csedweek_teachers' => 24025,
+    'csedweek_entire_schools' => 12754,
+    'csedweek_students' => 4_875_091,
+    'csedweek_countries' => 356,
+    'petition_signatures' => 2_053_571,
+    'lines_of_code' => 11_151_730_618,
   }
 end
 

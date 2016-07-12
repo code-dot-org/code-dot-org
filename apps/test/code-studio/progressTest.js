@@ -4,19 +4,6 @@
 var assert = require('assert');
 var progress = require('@cdo/apps/code-studio/progress');
 
-describe('progress', function () {
-  it ('returns the correct activity CSS class', function () {
-    assert.strictEqual(progress.activityCssClass(null), 'not_tried');
-    assert.strictEqual(progress.activityCssClass(0), 'not_tried');
-    assert.strictEqual(progress.activityCssClass(-5), 'attempted');
-    assert.strictEqual(progress.activityCssClass(19), 'attempted');
-    assert.strictEqual(progress.activityCssClass(20), 'passed');
-    assert.strictEqual(progress.activityCssClass(29), 'passed');
-    assert.strictEqual(progress.activityCssClass(30), 'perfect');
-    assert.strictEqual(progress.activityCssClass(101), 'perfect');
-  });
-});
-
 describe('bestResultLevelId', function () {
   var progressData;
   before(function () {

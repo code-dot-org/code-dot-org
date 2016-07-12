@@ -213,7 +213,7 @@ class ActivitiesController < ApplicationController
 
     progress.each_pair do |concept, counts|
       current = current_trophies[concept]
-      pct = counts[:current].to_f/counts[:max]
+      pct = counts[:current].to_f / counts[:max]
 
       new_trophy = Trophy.find_by_id(
         case

@@ -8,7 +8,16 @@
     "skin": "gamelab",
     "code_functions": {
       "drawSprites": null,
-      "var sprite = createSprite": null,
+      "var sprite = createSprite": {
+        "params": [
+          "200",
+          "200"
+        ],
+        "paletteParams": [
+          "x",
+          "y"
+        ]
+      },
       "setAnimation": null,
       "x": null,
       "y": null,
@@ -34,7 +43,7 @@
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Putting it All Together\r\n\r\nLet's put all of this together in a fun way. We're going to make three sprites \"race\" across the screen by combining the counter pattern, random numbers, and sprite properties.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/2f9214a801a60af226fa604a9b6533f5-image-1466008001402.26.15 AM.png\" style=\"float:right; width:200px\">\r\n\r\nTo begin with make three different sprites and put them in a row on the left side of your screen.\r\n\r\n* **Create three sprites** and give them labels\r\n* **Add code to the \"Drawing\" section of the draw loop that draws the background and your sprites**\r\n* Your animation should look like the example at the right.\r\n\r\n",
-    "start_blocks": "// Creating Sprites and Setting Starting Properties\r\n\r\nfunction draw(){\r\n\t// Update Properties\r\n\t \r\n\t// Drawing\r\n\r\n}",
+    "start_blocks": "// Creating Sprites and Setting Starting Properties\r\n\r\nfunction draw(){\r\n  \t// Draw Background\r\n  \r\n\t// Update Properties\r\n\t \r\n\t// Draw Animations\r\n\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

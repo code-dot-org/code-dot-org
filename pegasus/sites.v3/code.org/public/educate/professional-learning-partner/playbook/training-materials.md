@@ -5,7 +5,7 @@ nav: plp_playbook_nav
 
 # Training Materials
 
-## CS Principles Reources
+## CS Principles Resources
 
 Refer to the slide decks listed below as a resource for details about the CS Principles curriculum and tools.
 
@@ -22,7 +22,9 @@ Refer to the slide decks listed below as a resource for details about the CS Pri
 
 ## Professional Learning Partner Reources
 
-Use the slide decks below from Facilitation Summit to answer questions you may have about the Professional Learning Partner Program, your role, and tips on how to successfuly host events and provide support to your teachers and facilitators.
+Use the links below to access PDFs and Slide Decks as resources to answer questions you may have about the Professional Learning Partner Program, your role, and tips on how to successfuly host events and provide support to your teachers and facilitators.
+
+<u>**Facilitation Summit Resources** </u>
 
 [Worksheets and Agendas - PDF](https://www.dropbox.com/s/vc587goy08xkdun/PLP%20Facilitation%20Summit%20Packet.pdf?dl=0)
 
@@ -37,5 +39,11 @@ Use the slide decks below from Facilitation Summit to answer questions you may h
 [Running an Effective Professional Learning Event - Slides](https://docs.google.com/a/code.org/presentation/d/148wkzac1rwnK-O6q3PqIYer87MjwlVHLDBENOdbfBmA/edit?usp=sharing)</br>
 
 [Being a Successful Program Manager - Slides](https://docs.google.com/a/code.org/presentation/d/1Q8m-DquU2ZtCpIFC4-Oxc1MrSViOvFq4quc9qeTYZGc/edit?usp=sharing)<br/>
+
+<u>**TeacherCon Resources**</u>
+
+
+
+**White House Findraising Event Webinar**
 
 

@@ -99,13 +99,13 @@ class V2SectionRoutesTest < Minitest::Test
         assert_equal 200, @pegasus.last_response.status
         assert_equal [
           {
-            "id"=>150001,
-            "location"=>"/v2/sections/150001",
-            "name"=>"Fake Section A",
-            "login_type"=>"email",
-            "grade"=>nil,
-            "code"=>nil,
-            "stage_extras"=>false
+            "id" => 150001,
+            "location" => "/v2/sections/150001",
+            "name" => "Fake Section A",
+            "login_type" => "email",
+            "grade" => nil,
+            "code" => nil,
+            "stage_extras" => false
           }],
           JSON.parse(@pegasus.last_response.body)
       end
