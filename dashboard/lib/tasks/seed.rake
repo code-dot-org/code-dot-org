@@ -145,7 +145,7 @@ namespace :seed do
         {name: 'DonorsChoose.org $250', description_token: 'donors_choose_bonus', url: 'http://www.donorschoose.org/', image_name: 'donorschoose_card.jpg'},
         {name: 'Skype', description_token: 'skype', url: 'http://www.skype.com/', image_name: 'skype_card.jpg'}
       ].each_with_index do |pp, id|
-        PrizeProvider.create!(pp.merge!({:id=>id + 1}))
+        PrizeProvider.create!(pp.merge!({:id => id + 1}))
       end
     end
   end

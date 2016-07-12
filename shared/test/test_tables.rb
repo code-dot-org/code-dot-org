@@ -113,13 +113,13 @@ class TablesTest < Minitest::Test
     create_channel
 
     data1 = {
-      'table1' => [{'name'=> 'trevor'}, {'name'=>'alex'}],
-      'table2' => [{'word'=> 'cow'}, {'word'=>'pig'}],
+      'table1' => [{'name' => 'trevor'}, {'name' => 'alex'}],
+      'table2' => [{'word' => 'cow'}, {'word' => 'pig'}],
     }
 
     data2 = {
-      'table1' => [{'city'=> 'SFO'}, {'city'=>'SEA'}],
-      'table2' => [{'state'=> 'CA', 'country'=> 'USA'}, {'state'=>'MT', 'country'=> 'USA'}],
+      'table1' => [{'city' => 'SFO'}, {'city' => 'SEA'}],
+      'table2' => [{'state' => 'CA', 'country' => 'USA'}, {'state' => 'MT', 'country' => 'USA'}],
     }
 
     # Test basic populating
@@ -294,8 +294,8 @@ class TablesTest < Minitest::Test
     assert_equal [], TableType.table_names(decrypted_channel_id)
 
     data1 = {
-      'table1' => [{'name'=> 'trevor'}, {'name'=>'alex'}],
-      'table2' => [{'word'=> 'cow'}, {'word'=>'pig'}],
+      'table1' => [{'name' => 'trevor'}, {'name' => 'alex'}],
+      'table2' => [{'word' => 'cow'}, {'word' => 'pig'}],
     }
 
     populate_table(data1, true)

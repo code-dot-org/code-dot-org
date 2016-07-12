@@ -121,7 +121,7 @@ class UserLevelTest < ActiveSupport::TestCase
     student2 = create :student
 
     level = create :level
-    script  = create :script
+    script = create :script
     driver = create :user_level, user: student1, level: level, script: script
     navigator = create :user_level, user: student2, level: level, script: script
 

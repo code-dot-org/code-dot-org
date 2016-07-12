@@ -33,13 +33,16 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.\",\r\n  \"hint_id\": \"2-3_Artist_1_new_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Having trouble turning the corner? Use the `turn right 90 degrees` block.\",\r\n  \"hint_id\": \"2-3_Artist_1_new_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "callout_json": "[]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "discard_background": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
