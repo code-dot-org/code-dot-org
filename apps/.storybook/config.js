@@ -4,8 +4,6 @@ import infoAddon from '@kadira/react-storybook-addon-info';
 import Node from '@kadira/react-storybook-addon-info/dist/components/Node';
 import {Pre} from '@kadira/react-storybook-addon-info/dist/components/markdown/code';
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
-import {setExternalGlobals, setupLocale} from '../test/util/testUtils';
-setExternalGlobals();
 
 function addStyleguideExamples(subcomponent) {
   if (subcomponent && subcomponent.styleGuideExamples) {
