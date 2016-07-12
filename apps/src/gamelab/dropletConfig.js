@@ -95,8 +95,8 @@ module.exports.blocks = [
   {func: 'comment_GameLab', block: '// Comment', expansion: '// ', category: 'Game Lab' },
 
   // Sprites
-  {func: 'createSprite', category: 'Sprites', paramButtons: { minArgs: 2, maxArgs: 4}, paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
-  {func: 'var sprite = createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], noAutocomplete: true, docFunc: 'createSprite', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
+  {func: 'createSprite', category: 'Sprites', paramButtons: { minArgs: 2, maxArgs: 4}, paletteParams: ['x','y'], params: ["200", "200"], type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
+  {func: 'var sprite = createSprite', category: 'Sprites', paletteParams: ['x','y'], params: ["200", "200"], noAutocomplete: true, docFunc: 'createSprite', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
   {func: 'setSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setSpeed', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-setSpeed" },
   {func: 'getAnimationLabel', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getAnimationLabel', type: 'value', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-getAnimationLabel" },
   {func: 'getDirection', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getDirection', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-getDirection" },
