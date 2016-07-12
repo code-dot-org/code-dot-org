@@ -6,12 +6,12 @@
   "user_id": 63,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  // return ((Studio.Globals.clicked >= 1)&&(Studio.sprite[0].value == \"hidden\"));\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n   return ((Studio.Globals.clicked >= 1)&&(Studio.Globals.jumped >= 1));\r\n}",
     "failure_condition": "function () {\r\n}",
     "timeout_after_when_run": "true",
-    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.65,\"emotion\":1,\"sprite\":7},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"emotion\":1,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75,\"sprite\":14},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.65,\"emotion\":1,\"sprite\":7},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"emotion\":1,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75,\"sprite\":14},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "This program makes Robin fly.  Can you get her to hide when you click her?\r\n",
+    "instructions": "This program makes Robin fly.  Can you make the robot jump when you press the up button?\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -36,7 +36,7 @@
     "coordinate_grid_background": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "timeout_failure_tick": "200",
+    "timeout_failure_tick": "250",
     "contained_level_names": null
   },
   "published": true,
@@ -53,7 +53,7 @@
         <block type="when_run" deletable="false">
           <next>
             <block type="procedures_callnoreturn">
-              <mutation name="patrol"/>
+              <mutation name="Robin Fly"/>
             </block>
           </next>
         </block>
@@ -66,8 +66,21 @@
                   <title name="NUM">0</title>
                 </block>
               </value>
+              <next>
+                <block type="variables_set" inline="false" uservisible="false">
+                  <title name="VAR">jumped</title>
+                  <value name="VALUE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
             </block>
           </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
         </block>
         <block type="studio_whenSpriteClicked">
           <title name="SPRITE">0</title>
@@ -77,8 +90,81 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenSpriteClicked" deletable="false" editable="false" uservisible="false">
-          <title name="SPRITE">0</title>
+        <block type="procedures_defnoreturn" deletable="false" uservisible="false">
+          <mutation/>
+          <title name="NAME">Robot Jump</title>
+          <statement name="STACK">
+            <block type="studio_setSpriteSpeed" uservisible="false">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+              <next>
+                <block type="studio_moveDistance" uservisible="false">
+                  <title name="SPRITE">1</title>
+                  <title name="DIR">1</title>
+                  <title name="DISTANCE">200</title>
+                  <next>
+                    <block type="studio_moveDistance" uservisible="false">
+                      <title name="SPRITE">1</title>
+                      <title name="DIR">4</title>
+                      <title name="DISTANCE">200</title>
+                      <next>
+                        <block type="studio_wait" uservisible="false">
+                          <title name="VALUE">5000</title>
+                          <next>
+                            <block type="controls_if" inline="false" uservisible="false">
+                              <value name="IF0">
+                                <block type="logic_compare" inline="true" uservisible="false">
+                                  <title name="OP">GTE</title>
+                                  <value name="A">
+                                    <block type="variables_get" uservisible="false">
+                                      <title name="VAR">clicked</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">1</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO0">
+                                <block type="math_change" inline="false" uservisible="false">
+                                  <title name="VAR">jumped</title>
+                                  <value name="DELTA">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">1</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="studio_wait" uservisible="false">
+                                      <title name="VALUE">2000</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="variables_set" inline="false" uservisible="false">
+                                  <title name="VAR">clicked</title>
+                                  <value name="VALUE">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">0</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="studio_whenArrow" deletable="false" uservisible="false">
+          <title name="VALUE">up</title>
           <next>
             <block type="math_change" inline="false" uservisible="false">
               <title name="VAR">clicked</title>
@@ -92,7 +178,7 @@
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation/>
-          <title name="NAME">patrol</title>
+          <title name="NAME">Robin Fly</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">
@@ -122,6 +208,12 @@
     <toolbox_blocks>
       <xml>
         <block type="studio_setBackgroundParam" inline="true"/>
+        <block type="procedures_callnoreturn">
+          <mutation name="Robin Fly"/>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="Robot Jump"/>
+        </block>
         <block type="studio_vanish">
           <title name="SPRITE">0</title>
         </block>
@@ -161,12 +253,9 @@
             </block>
           </value>
         </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="patrol"/>
-        </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation/>
-          <title name="NAME">patrol</title>
+          <title name="NAME">Robin Fly</title>
           <statement name="STACK">
             <block type="controls_whileUntil" inline="false" uservisible="false">
               <title name="MODE">WHILE</title>
@@ -192,6 +281,30 @@
             </block>
           </statement>
         </block>
+        <block type="procedures_defnoreturn" deletable="false" uservisible="false">
+          <mutation/>
+          <title name="NAME">Robot Jump</title>
+          <statement name="STACK">
+            <block type="studio_setSpriteSpeed" uservisible="false">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+              <next>
+                <block type="studio_moveDistance" uservisible="false">
+                  <title name="SPRITE">1</title>
+                  <title name="DIR">1</title>
+                  <title name="DISTANCE">200</title>
+                  <next>
+                    <block type="studio_moveDistance" uservisible="false">
+                      <title name="SPRITE">1</title>
+                      <title name="DIR">4</title>
+                      <title name="DISTANCE">200</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
@@ -199,7 +312,7 @@
         <block type="when_run" deletable="false">
           <next>
             <block type="procedures_callnoreturn">
-              <mutation name="patrol"/>
+              <mutation name="Robin Fly"/>
             </block>
           </next>
         </block>
@@ -213,7 +326,7 @@
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation/>
-          <title name="NAME">patrol</title>
+          <title name="NAME">Robin Fly</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">

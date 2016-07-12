@@ -32,9 +32,9 @@
     "fast_get_nectar_animation": "true",
     "markdown_instructions": "**Assessment:** Collect all of the nectar.  \r\nBe careful not to try to collect nectar from a purple flower if it doesn't have any.",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":2},{\"tileType\":1,\"featureType\":0,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"flowerColor\":0,\"range\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "contained_level_names": null,
     "nectar_goal": "3",
-    "honey_goal": "4"
+    "honey_goal": "4",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
