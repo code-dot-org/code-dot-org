@@ -68,9 +68,11 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
     // Merge progress from server (loaded via AJAX)
     if (data.levels) {
-      store.dispatch(mergeProgress(_.mapValues(data.levels,
-        level => level.submitted ? SUBMITTED_RESULT : level.result)
-      ));
+      store.dispatch(mergeProgress(
+        _.mapValues(data.levels,
+          level => level.submitted ? SUBMITTED_RESULT : level.result)
+        ), data.peerReviewsPerformed
+      );
     }
   });
 
@@ -98,7 +100,9 @@ function createStoreWithProgress(scriptData, currentLevelId,
     progress: {},
     focusAreaPositions: [],
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
-    stages: scriptData.stages
+    stages: scriptData.stages,
+    peerReviewsRequired: scriptData.peerReviewsRequired,
+    peerReviewsPerformed: []
   });
 
   // Merge in progress saved on the client.

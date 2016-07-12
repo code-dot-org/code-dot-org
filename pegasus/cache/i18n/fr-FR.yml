@@ -930,7 +930,7 @@
     Remarque : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier.
     Veuillez prévoir un retard des réponses aux questions que vous poserez jusqu'au
     4 janvier."
-  dashboard_announce_button_text: Pour en savoir plus
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: Comme enseignant, vous ouvrez la voie à un mouvement
     visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique.
     Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine,
@@ -1870,3 +1870,11 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys

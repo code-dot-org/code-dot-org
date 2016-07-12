@@ -44,8 +44,12 @@ export default function reducer(state = initialState, action) {
 
     return Object.assign({}, state, {
       progress: newProgress,
-      stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
+      stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
         let id = level.uid || bestResultLevelId(level.ids, newProgress);
+
+        if (action.peerReviewsPerformed && stage.flex_category === 'Peer Review') {
+          Object.assign(level, action.peerReviewsPerformed[index]);
+        }
 
         return Object.assign({}, level, {status: activityCssClass(newProgress[id])});
       })}))
@@ -111,9 +115,10 @@ export const initProgress = ({currentLevelId, professionalLearningCourse,
   stages
 });
 
-export const mergeProgress = progress => ({
+export const mergeProgress = (progress, peerReviewsPerformed) => ({
   type: MERGE_PROGRESS,
-  progress
+  progress,
+  peerReviewsPerformed
 });
 
 export const updateFocusArea = (changeFocusAreaPath, focusAreaPositions) => ({
