@@ -37,10 +37,11 @@ get '/u/:id' do |id|
   dont_cache
 
   delivery = DB[:poste_deliveries].where(id: Poste.decrypt_id(id)).first
-  email = delivery[:contact_email].downcase
-  hashed_email = Digest::MD5.hexdigest(email)
-
-  Poste.unsubscribe(email, hashed_email, ip_address: request.ip) if delivery
+  Poste.unsubscribe(
+    delivery[:contact_email],
+    delivery[:hashed_email],
+    ip_address: request.ip
+  ) if delivery
   halt(200, "You're unsubscribed.\n")
 end
 
