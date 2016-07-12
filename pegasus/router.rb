@@ -145,7 +145,7 @@ class Documents < Sinatra::Base
     lang, path = params[:captures]
     pass unless DB[:cdo_languages].first(code_s: lang)
     dont_cache
-    response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
+    response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365 * 24 * 3600)})
     redirect "/#{path}"
   end
 
@@ -228,14 +228,14 @@ class Documents < Sinatra::Base
     if @locals[:header]['content-type']
       response.headers['Content-Type'] = @locals[:header]['content-type']
     end
-    layout = @locals[:header]['layout']||'default'
+    layout = @locals[:header]['layout'] || 'default'
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
       raise Exception, "'#{layout}' layout not found." unless template
       body render_template(template, @locals.merge({body: body.join('')}))
     end
 
-    theme = @locals[:header]['theme']||'default'
+    theme = @locals[:header]['theme'] || 'default'
     unless ['', 'none'].include?(theme)
       template = resolve_template('themes', settings.template_extnames, theme)
       raise Exception, "'#{theme}' theme not found." unless template
@@ -468,7 +468,7 @@ class Documents < Sinatra::Base
       metadata['article:publisher'] = 'https://www.facebook.com/Code.org'
       metadata['og:url'] = request.url
 
-      (@header['social']||{}).each_pair do |key, value|
+      (@header['social'] || {}).each_pair do |key, value|
         if value == ""
           metadata.delete(key)
         else

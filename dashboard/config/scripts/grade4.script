@@ -4,32 +4,34 @@ description "Planning Script for CSF 2.0"
 description_audience "Ages 9-99"
 
 stage 'Mixed Review #1 (Ramp Up)'
+#Artist
+level 'grade4_intro_vid'
 level 'grade4_review_artist1'
 level 'grade4_review_artist2'
 level 'grade4_review_artist3'
-level 'ArtistLoopsIntro'
-level '2-3 Bee Loops 3B'
-level '2-3 Bee Loops 7'
-level '2-3 Bee Loops 3'
-level '2-3 Bee Loops 4'
-#level '2-3 Bee Conditionals 12'
-#level '2-3 Bee Conditionals 15'
-#assessment '2-3 Bee Conditionals Assessment 1'
-level_concept_difficulty '{"events":2,"sequencing":4}'
-level 'blockly:Studio:c2_4'
-level_concept_difficulty '{"events":2,"sequencing":4}'
+#Frozen Loops
+level 'grade4_review_frozen_loopvid'
+level 'grade4_frozen_square_loop1'
+level 'grade4_frozen_square_loop2'
+level 'grade4_frozen_square_loop3'
+#Bee Loops
+level 'grade4_bee_loopsvid'
+level 'grade4_review_bee1'
+level 'grade4_review_bee2'
+level 'grade4_review_bee3'
+#PlayLab Events
+level 'grade4_playlab_introvid'
 level 'blockly:Studio:c2_5'
-level_concept_difficulty '{"events":4,"sequencing":4}'
+level 'blockly:Studio:c2_4'
 level 'blockly:Studio:c2_6'
 
 stage 'Unplugged: Nested Loops (New)'
 level 'comingSoon'
 
-stage 'Artist: Nested Loops'
 stage 'Artist Ramp Up (including Nested Loops)'
-level 'frozen diamond'
-level 'frozen diamond mini snowflake'
-level 'frozen diamond snowflake'
+stage 'Nested Loops'
+stage 'Artist: Nested Loops'
+#Artist Loops
 level '4-5 Nested Loops 1'
 level '4-5 Nested Loops 2'
 level '4-5 Nested Loops 6'
@@ -42,8 +44,10 @@ level '4-5 Nested Loops 8'
 level '4-5 Nested Loops 12'
 assessment '4-5 Nested Loops Assessment 1'
 assessment '4-5 artist loops multi 1'
+level 'frozen diamond'
+level 'frozen diamond mini snowflake'
+level 'frozen diamond snowflake'
 
-stage 'Nested Loops'
 
 stage 'Bee: Conditionals'
 level 'grade4_bee_conditionals_ifvid'
@@ -68,6 +72,7 @@ assessment '2-3 Conditionals Multi 1'
 
 stage 'Conditionals'
 #If,ElseIf,Else,etc, nested
+level 'comingSoon'
 
 stage 'Decision Trees'
 stage 'Unplugged: Decision Trees (New)'

@@ -3,8 +3,6 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Unit 3: Lesson 06 - Sprites and Images
-
 # Background
 
 You are going to get to turn their rectangular sprites into images for the first time! There will be lots of practice in this lesson of using images to create some simple animations including spinning gears, swimming fish and a flying kite. You will be introduced to the mouse position is the first time. The mouse position will give user input to change the animations of your sprites.
@@ -12,7 +10,7 @@ You are going to get to turn their rectangular sprites into images for the first
 
 * Warm Up
 * Levels: Sprites and Images
-* Wrap Up
+* Wrap Up: Update Sprite Card and Add Game Card
 
 # Vocabulary
 
@@ -33,7 +31,7 @@ You are going to get to turn their rectangular sprites into images for the first
 ### Input : 
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |
-|mouseX|Gives the x position of the mouse|`sprite.x = mouseX;`  | link |
+|mouseX|Gives the x position of the mouse|`sprite.x = mouseX;` | link |
 |mouseY|Gives the y position of the mouse|`sprite.y = mouseY;` | link |
 
 # Resources

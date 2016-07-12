@@ -43,8 +43,8 @@ def main
     exit 1
   end
 
-  db_host=ARGV[0]
-  environment=ARGV[1]
+  db_host = ARGV[0]
+  environment = ARGV[1]
 
   # 1. Update application code to point to new DB instance endpoint.
   # (Will not take effect until chef-client is called.)
