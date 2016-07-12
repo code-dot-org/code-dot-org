@@ -1044,7 +1044,7 @@ class UserTest < ActiveSupport::TestCase
 
     i = 0
     users = names.map do |name|
-      User.create!(@good_data.merge(name: name, email: "test_email#{i+=1}@test.xx")) # use real create method not the factory
+      User.create!(@good_data.merge(name: name, email: "test_email#{i += 1}@test.xx")) # use real create method not the factory
     end
 
     assert_equal expected_usernames, users.collect(&:username)

@@ -15,7 +15,7 @@ MEMORY_RATIO = 0.8.to_f
 # Parse Varnish storage backend allocation from existing Chef attribute.
 # Syntax: https://www.varnish-cache.org/docs/trunk/users-guide/storage-backends.html#storage-backends
 varnish_storage_gb = node['cdo-varnish']['storage'].match(/malloc,(\d+[,.]?\d*)([KkMmGgTt])?/)
-varnish_suffix_map = {b: 1.0/1024, k: 1, m: 1024, g: 1024*1024, t: 1024*1024*1024}
+varnish_suffix_map = {b: 1.0 / 1024, k: 1, m: 1024, g: 1024 * 1024, t: 1024 * 1024 * 1024}
 varnish_overhead = varnish_storage_gb ?
   varnish_storage_gb[1].to_f *
     varnish_suffix_map[(varnish_storage_gb[2] || 'b').downcase.to_sym] :

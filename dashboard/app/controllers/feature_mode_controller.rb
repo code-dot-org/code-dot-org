@@ -24,7 +24,7 @@ class FeatureModeController < ApplicationController
       @mode = @pending_mode
       flash[:notice] = PLEASE_WAIT_MESSAGE
     elsif @current_mode
-      @mode =  @current_mode
+      @mode = @current_mode
     else
       @mode = 'custom'
       flash[:alert] = 'The current feature flags do not match any of the pre-defined modes.'
