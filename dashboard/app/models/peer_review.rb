@@ -49,7 +49,13 @@ class PeerReview < ActiveRecord::Base
     # Reviewer is nil or it has been assigned for more than a day
     # Reviewer is not currently reviewing this level source
     transaction do
-      peer_review = get_review_for_user(script, user)
+      level_sources_reviewing = PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
+
+      peer_review = where(script: script).
+          where.not(submitter: user).
+          where(status: nil).
+          where('reviewer_id is null or created_at < now() - interval 1 day').
+          where.not(level_source_id: level_sources_reviewing).take
 
       if peer_review
         peer_review.update!(reviewer: user)
@@ -59,18 +65,6 @@ class PeerReview < ActiveRecord::Base
         nil
       end
     end
-  end
-
-  def self.get_review_for_user(script, user)
-    where(
-      script: script,
-      status: nil
-    ).where.not(
-      submitter: user,
-      level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
-    ).where(
-      'reviewer_id is null or created_at < now() - interval 1 day'
-    ).take
   end
 
   def mark_user_level
@@ -138,24 +132,5 @@ class PeerReview < ActiveRecord::Base
         )
       end
     end
-  end
-
-  def self.get_peer_review_summaries(user, script)
-    if user &&
-        script.professional_learning_course? &&
-        Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
-
-      PeerReview.where(reviewer: user, script: script).map(&:summarize)
-    end
-  end
-
-  def summarize
-    return {
-      id: id,
-      status: status.nil? ? 'not_started' : 'perfect',
-      name: status.nil? ? I18n.t('peer_review.review_in_progress') : I18n.t('peer_review.link_to_submitted_review'),
-      result: status.nil? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::BEST_PASS_RESULT,
-      locked: false
-    }
   end
 end
