@@ -31,7 +31,7 @@ def social_metadata(request, header=nil)
   metadata['article:publisher'] = 'https://www.facebook.com/Code.org'
   metadata['og:url'] = request.url
 
-  (header['social']||{}).each_pair do |key, value|
+  (header['social'] || {}).each_pair do |key, value|
     if value == ""
       metadata.delete(key)
     else
@@ -61,7 +61,7 @@ class HttpDocument
 
   def self.from_file(path,headers={}, status=200)
     content_type = content_type_from_path(path)
-    self.new(IO.read(path), {'Content-Type'=>content_type, 'X-Pegasus-File'=>path}.merge(headers))
+    self.new(IO.read(path), {'Content-Type' => content_type, 'X-Pegasus-File' => path}.merge(headers))
   end
 
   def charset?(charset)
@@ -103,7 +103,7 @@ class HttpDocument
   end
 
   def apply_theme!(locals)
-    theme = headers['X-Pegasus-Theme']||'theme'
+    theme = headers['X-Pegasus-Theme'] || 'theme'
     return if theme == 'none'
 
     content = @body
@@ -123,10 +123,10 @@ class HttpDocument
     raise Exception, "'#{theme}' theme not found." if path.nil?
 
     @body = TextRender.haml_file(path, locals.merge({
-      :header=>JSON.parse(headers['X-Pegasus-Header']||'{}'),
-      :body=>content,
-      :classes=>classes,
-      :head=>head,
+      :header => JSON.parse(headers['X-Pegasus-Header'] || '{}'),
+      :body => content,
+      :classes => classes,
+      :head => head,
     }))
     @headers['Content-Length'] = @body.bytesize.to_s
   end
@@ -139,7 +139,7 @@ class HttpDocument
     raise Exception, "'#{view}' view not found." if path.nil?
 
     @body = TextRender.haml_file(path, locals.merge({
-      header: JSON.parse(headers['X-Pegasus-Header']||'{}'),
+      header: JSON.parse(headers['X-Pegasus-Header'] || '{}'),
       body:   @body,
     }))
     @headers['Content-Length'] = @body.bytesize.to_s
@@ -181,8 +181,8 @@ class HttpDocument
 
     @body = TextRender.haml(haml, locals)
     @headers['Content-Length'] = @body.bytesize.to_s
-    @headers['Content-Type'] = http_content_type('text/html', charset: options[:charset]||default_charset)
-    @headers['X-Pegasus-View'] = header['view']||'page'
+    @headers['Content-Type'] = http_content_type('text/html', charset: options[:charset] || default_charset)
+    @headers['X-Pegasus-View'] = header['view'] || 'page'
     @headers['X-Pegasus-Theme'] = 'none' if header['view'] == 'none'
     @headers['X-Pegasus-Theme'] = 'none' if headers['X-Pegasus-View'] == 'page'
     @headers['X-Pegasus-Theme'] = header['theme'] unless header['theme'].nil?
@@ -195,8 +195,8 @@ class HttpDocument
 
     @body = TextRender.markdown(markdown, locals)
     @headers['Content-Length'] = @body.bytesize.to_s
-    @headers['Content-Type'] = http_content_type('text/html', charset: options[:charset]||default_charset)
-    @headers['X-Pegasus-View'] = header['view']||'page'
+    @headers['Content-Type'] = http_content_type('text/html', charset: options[:charset] || default_charset)
+    @headers['X-Pegasus-View'] = header['view'] || 'page'
     @headers['X-Pegasus-Theme'] = 'none' if header['view'] == 'none'
     @headers['X-Pegasus-Theme'] = 'none' if headers['X-Pegasus-View'] == 'page'
     @headers['X-Pegasus-Theme'] = header['theme'] unless header['theme'].nil?
@@ -267,7 +267,7 @@ module Pegasus
 
     def deliver_manipulated_image(path,format,mode,width,height=nil)
       content_type format.to_sym
-      cache_control :public, :must_revalidate, :max_age=>settings.image_max_age
+      cache_control :public, :must_revalidate, :max_age => settings.image_max_age
 
       begin
         img = load_manipulated_image(path, mode, width, height)
@@ -324,7 +324,7 @@ module Pegasus
         extnames.each do |extname|
           if File.file?(path = "#{parent}/_all#{extname}")
             return HttpDocument.from_file(path,headers.merge({
-              'Cache-Control'=>"max-age=#{settings.document_max_age}, private, must-revalidate"
+              'Cache-Control' => "max-age=#{settings.document_max_age}, private, must-revalidate"
             }))
           end
         end
@@ -344,10 +344,10 @@ module Pegasus
       halt 403 if settings.read_only
       begin
         content_type :json
-        cache_control :private, :must_revalidate, :max_age=>0
+        cache_control :private, :must_revalidate, :max_age => 0
         kind.submit(request, params).to_json
-      rescue FormError=>e
-        halt 400, {'Content-Type'=>'text/json'}, e.errors.to_json
+      rescue FormError => e
+        halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
       end
     end
 
@@ -393,7 +393,7 @@ class CurriculumRouter < Pegasus::Base
     pass if settings.template_extnames.include?(File.extname(path))
     pass unless File.file?(path)
 
-    cache_control :public, :must_revalidate, :max_age=>settings.document_max_age
+    cache_control :public, :must_revalidate, :max_age => settings.document_max_age
     return send_file(path)
   end
 
@@ -426,12 +426,12 @@ class CurriculumRouter < Pegasus::Base
       lesson_dir = File.join(dir, unit_lesson)
     end
 
-    document = resolve_document(lesson_dir, filename||'lesson')
+    document = resolve_document(lesson_dir, filename || 'lesson')
     return render(document, unit_lesson: unit_lesson, partials_dir: lesson_dir) unless document.nil?
 
     if File.file?(static_path = File.join(dir, parts))
       pass if settings.template_extnames.include?(File.extname(static_path))
-      cache_control :public, :must_revalidate, :max_age=>settings.document_max_age
+      cache_control :public, :must_revalidate, :max_age => settings.document_max_age
       return send_file(static_path)
     end
 

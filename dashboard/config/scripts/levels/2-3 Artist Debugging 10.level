@@ -33,8 +33,8 @@
     "disable_sharing": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Remember, you want the control panel 10 pixels *wider*...so be sure to **add** 10 to whatever number you change.\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_10_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"**Trial and error is perfectly fine here!**  \\n\\nStart by changing one number at a time.   \\n\\nWhich numbers do what?  \\n\\nIf you get too lost, just click \\\"Start over\\\" and your code will be reset.\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_10_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
-    "contained_level_names": null,
-    "discard_background": "false"
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
