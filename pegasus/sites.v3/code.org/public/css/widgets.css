@@ -34,6 +34,11 @@
   margin-top: 50px;
 }
 
+.animated-gif {
+  width: 100%;
+  margin-top: 10px;
+}
+
 @media screen and (min-width: 501px) and (max-width: 970px) {
   .block-header {
     height: 50px;
