@@ -34,11 +34,12 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
     AWS::CloudFormation.validate
   end
 
-  %I(vpc iam ami).each do |stack|
+  %I(vpc iam ami lambda).each do |stack|
     namespace stack do
       task :environment do
         require_relative '../../deployment'
         ENV['TEMPLATE'] ||= "#{stack}.yml.erb"
+        ENV['STACK_NAME'] ||= 'lambda' if stack == :lambda
         ENV['STACK_NAME'] ||= stack == :ami ? "AMI-#{rack_env}" : stack.upcase.to_s
         CDO.chef_local_mode = true if rack_env? :adhoc
         require 'cdo/aws/cloud_formation'
