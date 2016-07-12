@@ -17,7 +17,9 @@ const initialState = {
   progress: {},
   focusAreaPositions: [],
   saveAnswersBeforeNavigation: null,
-  stages: null
+  stages: null,
+  peerReviewsRequired: {},
+  peerReviewsPerformed: []
 };
 
 /**
@@ -36,7 +38,6 @@ export default function reducer(state = initialState, action) {
 
   if (action.type === MERGE_PROGRESS) {
     // TODO: _.mergeWith after upgrading to Lodash 4+
-    // TODO - make sure this is right after mehal's PR is merged in
     let newProgress = {};
     Object.keys(Object.assign({}, state.progress, action.progress)).forEach(key => {
       newProgress[key] = mergeActivityResult(state.progress[key], action.progress[key]);
@@ -107,12 +108,13 @@ function bestResultLevelId(levelIds, progressData) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages}) => ({
+    saveAnswersBeforeNavigation, stages, peerReviewsRequired}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
-  stages
+  stages,
+  peerReviewsRequired
 });
 
 export const mergeProgress = (progress, peerReviewsPerformed) => ({
