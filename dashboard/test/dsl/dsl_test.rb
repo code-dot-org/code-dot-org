@@ -43,7 +43,8 @@ class DslTest < ActiveSupport::TestCase
       admin_required: false,
       student_of_admin_required: false,
       professional_learning_course: nil,
-      pd: false
+      pd: false,
+      peer_reviews_to_complete: nil
     }
 
     i18n_expected = {'en'=>{'data'=>{'script'=>{'name'=>{'test'=>{
@@ -70,7 +71,8 @@ class DslTest < ActiveSupport::TestCase
       admin_required: true,
       student_of_admin_required: false,
       professional_learning_course: nil,
-      pd: false
+      pd: false,
+      peer_reviews_to_complete: nil
     }
 
     assert_equal expected, output
@@ -92,7 +94,8 @@ class DslTest < ActiveSupport::TestCase
       admin_required: true,
       student_of_admin_required: false,
       professional_learning_course: nil,
-      pd: false
+      pd: false,
+      peer_reviews_to_complete: nil
     }
 
     assert_equal expected, output
@@ -114,7 +117,8 @@ class DslTest < ActiveSupport::TestCase
       admin_required: false,
       student_of_admin_required: true,
       professional_learning_course: nil,
-      pd: false
+      pd: false,
+      peer_reviews_to_complete: nil
     }
 
     assert_equal expected, output
@@ -136,7 +140,8 @@ class DslTest < ActiveSupport::TestCase
       admin_required: false,
       student_of_admin_required: true,
       professional_learning_course: nil,
-      pd: false
+      pd: false,
+      peer_reviews_to_complete: nil
     }
 
     assert_equal expected, output
@@ -173,7 +178,8 @@ level 'Level 3'
       admin_required: false,
       pd: false,
       student_of_admin_required: false,
-      professional_learning_course: nil
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -234,7 +240,8 @@ level 'Level 3'
       admin_required: false,
       pd: false,
       student_of_admin_required: false,
-      professional_learning_course: nil
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -291,7 +298,8 @@ level 'Level 3'
       admin_required: false,
       pd: false,
       student_of_admin_required: false,
-      professional_learning_course: nil
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
