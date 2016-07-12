@@ -1,7 +1,7 @@
 %h1= hoc_s(:hoc_faq_title)
 
 %h2#about= hoc_s(:hoc_faq_what_is_hoc_q)
-%div= hoc_s(:hoc_faq_what_is_hoc_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+%div= hoc_s(:hoc_faq_what_is_hoc_a).gsub(/%{tutorials}/, resolve_url('https://code.org/learn')).gsub(/%{partners}/, resolve_url('/partners'))
 
 %br/
 %a{href: resolve_url('https://code.org/learn'), target: "_blank"}
@@ -9,7 +9,7 @@
     =hoc_s(:hoc_faq_last_year)
 
 %h2= hoc_s(:hoc_faq_when_is_hoc_q)
-%div= hoc_s(:hoc_faq_when_is_hoc_a).gsub(/%{campaign_date_year}/, campaign_date('year')).gsub(/%{campaign_date_full}/, campaign_date('full'))
+%div= hoc_s(:hoc_faq_when_is_hoc_a).gsub(/%{csedweek_url}/, 'https://csedweek.org').gsub(/%{campaign_date_year}/, campaign_date('year')).gsub(/%{campaign_date_full}/, campaign_date('full')).gsub(/%{grace_hopper}/, 'http://en.wikipedia.org/wiki/Grace_Hopper')
 
 %h2= hoc_s(:hoc_faq_why_cs_q)
 %div= hoc_s(:hoc_faq_why_cs_a).gsub(/%{stats_url}/, resolve_url('/promote/stats'))

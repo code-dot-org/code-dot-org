@@ -52,6 +52,7 @@
 #  invited_by_id              :integer
 #  invited_by_type            :string(255)
 #  invitations_count          :integer          default(0)
+#  terms_of_service_version   :integer
 #
 # Indexes
 #
@@ -158,7 +159,7 @@ class User < ActiveRecord::Base
     district.try(:name)
   end
 
-  def User.find_or_create_teacher(params, invited_by_user, permission = nil)
+  def self.find_or_create_teacher(params, invited_by_user, permission = nil)
     user = User.find_by_email_or_hashed_email(params[:email])
     unless user
       # initialize new users with name and school
@@ -181,11 +182,11 @@ class User < ActiveRecord::Base
     user
   end
 
-  def User.find_or_create_district_contact(params, invited_by_user)
+  def self.find_or_create_district_contact(params, invited_by_user)
     find_or_create_teacher(params, invited_by_user, UserPermission::DISTRICT_CONTACT)
   end
 
-  def User.find_or_create_facilitator(params, invited_by_user)
+  def self.find_or_create_facilitator(params, invited_by_user)
     find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
   end
 
@@ -207,16 +208,18 @@ class User < ActiveRecord::Base
 
   has_many :gallery_activities, -> {order 'id desc'}
 
-  has_many :sections
-
   has_many :user_trophies
   has_many :trophies, through: :user_trophies, source: :trophy
 
+  # student/teacher relationships where I am the teacher
   has_many :followers
-  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
-
   has_many :students, through: :followers, source: :student_user
+  has_many :sections
+
+  # student/teacher relationships where I am the student
+  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
   has_many :teachers, through: :followeds, source: :user
+  has_many :sections_as_student, through: :followeds, source: :section
 
   has_one :prize
   has_one :teacher_prize
@@ -254,6 +257,13 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
+  TERMS_OF_SERVICE_VERSIONS = [
+    1  # (July 2016) Teachers can grant access to labs for U13 students.
+  ]
+  validates :terms_of_service_version,
+    inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
+    allow_nil: true
+
   def dont_reconfirm_emails_that_match_hashed_email
     # we make users "reconfirm" when they change their email
     # addresses. Skip reconfirmation when the user is using the same
@@ -275,7 +285,7 @@ class User < ActiveRecord::Base
     self.age = 21
   end
 
-  def User.hash_email(email)
+  def self.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
   end
 
@@ -291,14 +301,14 @@ class User < ActiveRecord::Base
     end
   end
 
-  def User.find_by_email_or_hashed_email(email)
+  def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
 
     User.find_by_email(email.downcase) ||
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
   end
 
-  def User.find_channel_owner(encrypted_channel_id)
+  def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
     User.find(user_id)
@@ -440,6 +450,35 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.authenticate_with_section(section:, params:)
+    User.authenticate_with_section_and_secret_words(section: section, params: params.slice(:user_id, :secret_words)) ||
+      User.authenticate_with_section_and_secret_picture(section: section, params: params.slice(:user_id, :secret_picture_id))
+  end
+
+  def self.authenticate_with_section_and_secret_words(section:, params:)
+    return if section.login_type != Section::LOGIN_TYPE_WORD
+
+    User.
+      joins('inner join followers on followers.student_user_id = users.id').
+      find_by(
+        id: params[:user_id],
+        secret_words: params[:secret_words],
+        'followers.section_id' => section.id
+      )
+  end
+
+  def self.authenticate_with_section_and_secret_picture(section:, params:)
+    return if section.login_type != Section::LOGIN_TYPE_PICTURE
+
+    User.
+      joins('inner join followers on followers.student_user_id = users.id').
+      find_by(
+        id: params[:user_id],
+        secret_picture_id: params[:secret_picture_id],
+        'followers.section_id' => section.id
+      )
+  end
+
   def user_levels_by_level(script)
     user_levels.
       where(script_id: script.id).
@@ -538,7 +577,7 @@ SQL
   end
 
   def student_of_admin?
-    teachers.any? &:admin?
+    teachers.any?(&:admin?)
   end
 
   def authorized_teacher?
@@ -634,7 +673,7 @@ SQL
   # reset their password with their email (by looking up the hash)
 
   attr_accessor :raw_token
-  def User.send_reset_password_instructions(attributes={})
+  def self.send_reset_password_instructions(attributes={})
     # override of Devise method
     if attributes[:email].blank?
       user = User.new
@@ -794,7 +833,7 @@ SQL
     end
   end
 
-  def User.track_script_progress(user_id, script_id)
+  def self.track_script_progress(user_id, script_id)
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
       time_now = Time.now
@@ -809,9 +848,9 @@ SQL
 
   # Increases the level counts for the concept-difficulties associated with the
   # completed level.
-  def User.track_proficiency(user_id, script_id, level_id)
+  def self.track_proficiency(user_id, script_id, level_id)
     level_concept_difficulty = LevelConceptDifficulty.where(level_id: level_id).first
-    if !level_concept_difficulty
+    unless level_concept_difficulty
       return
     end
 
@@ -822,7 +861,7 @@ SQL
 
       ConceptDifficulties::CONCEPTS.each do |concept|
         difficulty_number = level_concept_difficulty.send(concept)
-        if !difficulty_number.nil?
+        unless difficulty_number.nil?
           user_proficiency.increment_level_count(concept, difficulty_number)
         end
       end
@@ -838,21 +877,26 @@ SQL
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:)
+  def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairings:)
     level_id = level.id
     script_id = script_level.script_id
-    old_user_level = UserLevel.where(user_id: self.id,
-                                 level_id: level_id,
-                                 script_id: script_id).first
+    old_user_level = UserLevel.where(
+      user_id: self.id,
+      level_id: level_id,
+      script_id: script_id
+    ).first
 
-    async_op = {'model' => 'User',
-                'action' => 'track_level_progress',
-                'user_id' => self.id,
-                'level_id' => level_id,
-                'script_id' => script_id,
-                'new_result' => new_result,
-                'level_source_id' => level_source_id,
-                'submitted' => submitted}
+    async_op = {
+      'model' => 'User',
+      'action' => 'track_level_progress',
+      'user_id' => self.id,
+      'level_id' => level_id,
+      'script_id' => script_id,
+      'new_result' => new_result,
+      'level_source_id' => level_source_id,
+      'submitted' => submitted,
+      'pairing_user_ids' => pairings ? pairings.map(&:id) : nil
+    }
     if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
       User.progress_queue.enqueue(async_op.to_json)
     else
@@ -864,7 +908,7 @@ SQL
   end
 
   # The synchronous handler for the track_level_progress helper.
-  def User.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:)
+  def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids:, is_navigator: false)
     new_level_completed = false
     new_level_perfected = false
 
@@ -890,9 +934,30 @@ SQL
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
       user_level.submitted = submitted
-      user_level.level_source_id = level_source_id
+      user_level.level_source_id = level_source_id unless is_navigator
 
       user_level.save!
+    end
+
+    if pairing_user_ids
+      pairing_user_ids.each do |navigator_user_id|
+        navigator_user_level = User.track_level_progress_sync(
+          user_id: navigator_user_id,
+          level_id: level_id,
+          script_id: script_id,
+          new_result: new_result,
+          submitted: submitted,
+          level_source_id: level_source_id,
+          pairing_user_ids: nil,
+          is_navigator: true
+        )
+        retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+          PairedUserLevel.find_or_create_by(
+            navigator_user_level_id: navigator_user_level.id,
+            driver_user_level_id: user_level.id
+          )
+        end
+      end
     end
 
     # Create peer reviews after submitting a peer_reviewable solution
@@ -904,12 +969,13 @@ SQL
       User.track_script_progress(user_id, script_id)
     end
 
-    if new_level_perfected
+    if new_level_perfected && pairing_user_ids.blank? && !is_navigator
       User.track_proficiency(user_id, script_id, level_id)
     end
+    user_level
   end
 
-  def User.handle_async_op(op)
+  def self.handle_async_op(op)
     raise 'Model must be User' if op['model'] != 'User'
     case op['action']
       when 'track_level_progress'
@@ -919,7 +985,8 @@ SQL
           script_id: op['script_id'],
           new_result: op['new_result'],
           submitted: op['submitted'],
-          level_source_id: op['level_source_id']
+          level_source_id: op['level_source_id'],
+          pairing_user_ids: op['pairing_user_ids']
         )
       else
         raise "Unknown action in #{op}"
@@ -938,6 +1005,14 @@ SQL
 
   def recent_activities(limit = 10)
     self.activities.order('id desc').limit(limit)
+  end
+
+  def can_pair?
+    !sections_as_student.empty?
+  end
+
+  def can_pair_with?(other_user)
+    self != other_user && sections_as_student.any?{ |section| other_user.sections_as_student.include? section }
   end
 
   # make some random-ish fake progress for a user. As you may have
@@ -967,7 +1042,7 @@ SQL
     User.track_script_progress(self.id, script.id)
   end
 
-  def User.csv_attributes
+  def self.csv_attributes
     # same as in UserSerializer
     [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender]
   end
@@ -976,7 +1051,7 @@ SQL
     User.csv_attributes.map{ |attr| self.send(attr) }
   end
 
-  def User.progress_queue
+  def self.progress_queue
     AsyncProgressHandler.progress_queue
   end
 
@@ -996,4 +1071,17 @@ SQL
     followeds.collect(&:section).find { |section| section.script_id == script.id }
   end
 
+  # Returns the version of our Terms of Service we consider the user as having
+  # accepted. For teachers, this is the latest major version of the Terms of
+  # Service accepted. For students, this is the latest major version accepted by
+  # any their teachers.
+  def terms_version
+    if teacher?
+      return terms_of_service_version
+    end
+    followeds.
+      collect{|followed| followed.user.terms_of_service_version}.
+      compact.
+      max
+  end
 end

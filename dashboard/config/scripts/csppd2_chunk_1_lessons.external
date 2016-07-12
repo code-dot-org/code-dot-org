@@ -2,7 +2,7 @@ name 'CSPPD2 chunk 1 lessons'
 css 'unplugged'
 markdown <<MARKDOWN
 
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Chunk 1: Sending Binary Messages > Exploring the Lessons
 

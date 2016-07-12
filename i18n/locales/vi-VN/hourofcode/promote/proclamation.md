@@ -4,53 +4,49 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### Dưới đây là mẫu nghị quyết trợ giúp Tuần Khoa Học Máy Tính và các nhà lập pháp liên bang và địa phương có thể sử dụng những mục tiêu của nó.
 
   
-[Nhà trắng, Thượng viện, tiểu bang, Quận hoặc nghị quyết của thành phố hoặc sự tuyên bố ###] - trong đó Tuần Khoa Học Máy Tính làm nổi bật vai trò quan trọng rằng khoa học máy tính đã làm thay đổi xã hội của chúng ta và làm thế nào mà khoa học máy tính đã tạo ra sự đổi mới và những cơ hội kinh tế;
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-[Nghị quyết của Nhà trắng hoặc Thượng viện ###]
+[HOUSE OR SENATE RESOLUTION ###]
 
-[NGÀY]
+[DATE]
 
-Công nghệ máy tính là một phần của nền văn hóa, nó đang thay đổi cách mà con người tương tác với nhau và với thế giới xung quanh.
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-Khoa học máy tính đang chuyển đổi ngành công nghiệp, tạo ra các lĩnh vực thương mại mới, đem sự đổi mới đến với tất cả những ngành khoa học, và nâng cao năng suất ngành kinh tế hiện tại;
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-Lĩnh vực khoa học máy tính là nền tảng của ngành công nghệ thông tin trong nền kinh tế của chúng ta, có đóng góp đáng kể cho sản lượng kinh tế Hoa Kì; 
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Trong thời đại số, ngành khoa học máy tính là 1 ngành khoa học nền tảng;
+Whereas the field of computer science is a foundational science for the digital age;
 
-Ngành công nghệ thông tin có một vị trí trọng yếu trong phục hồi nền kinh tế qua các nghiên cứu và phát triển sáng kiến mới;
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
-Có nhiều triển vọng việc làm cho ngành khoa học máy tính, với 1 trong 2 công việc mũi nhọn trong ngành nghề vi tính của quốc gia;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Nhằm cung cấp cho sinh viên cơ hội tham gia vào những hoạt động khoa học máy tính chất lượng cao, giúp các bạn tiếp cận với những cơ hội phong phú của ngành này và rèn luyện kĩ năng tư duy phê phán sẽ theo các bạn đến hết cuộc đời;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Tất cả học sinh đều xứng đáng có được một sự chuẩn bị kĩ lưỡng trong đào tạo khoa học máy tính, bao gồm việc được học từ những giáo viên giỏi, truy cập công nghệ, và chương trình giảng dạy phù hợp với lứa tuổi để tìm hiểu khoa học máy tính ở cấp 1 và cấp 2;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Giáo dục khoa học máy tính gặp nhiều thách thức trong việc thông báo, bao gồm kể đến việc khoa học máy tính sẽ là môn học yêu cầu để tốt nghiệp cấp 3, và cung cấp phát triển chuyên môn cho giáo viên môn khoa học máy tính;
+Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
 
-Khi tham gia "Giờ Lập Trình" trong tuần Giáo dục Khoa học máy tính có thể giúp cho môn khoa học máy tính dễ hiểu hơn và khuyến khích các em học sinh tiếp tục tìm hiểu sâu hơn về bộ môn khoa học này;
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Trong lĩnh vực khoa học máy tính có nhiều rào cản lớn, bao gồm việc thu hút nhiều người tham gia hơn đặc biệt là phái nữ và dân tộc thiểu số bất kể lứa tuổi, ngành nghề;
+Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
 
-Grace Murray Hopper là một trong những người phụ nữ đầu tiên trong lĩnh vực khoa học máy tính, bà đã thiết kế ra một ngôn ngữ lập trình mới và đi tiên phong cho các tiêu chuẩn trong hệ thống máy tính, đặt nền móng cho sự tiến bộ của khoa học máy tính sau này; và
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
 Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
-Quyết định, [Nhà Trắng hoặc Thượng viện, Tiểu bang, Quận, Thành phố hoặc Hội đồng nhà trường] --
+Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
 (1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
-(2) khuyến khích trường học, các nhà giáo dục, phụ huynh và các nhà hoạch định chính sách tham gia tuần khoa học máy tính bằng cách cho học sinh của họ tham gia vào Giờ Lập Trình;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) khuyến khích trường học, giáo viên, các trường đại học, chủ doanh nghiệp và các nhà hoạch định chính sách xác định cơ chế cho giáo viên nhận được sự phát triển nghề nghiệp mới để cung cấp những trải nghiệm học tập lâu dài trong khoa học máy tính ở mọi cấp học và khuyến khích các em tiếp cận với các khái niệm của khoa học máy tính;
+(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) khuyến khích các nhà hoạch định chính sách loại bỏ những rào cản ngăn môn khoa học máy tính được xem như toán hay những môn khoa học khác là những môn để tốt nghiệp; 
+(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
-(5) khuyến khích cơ hội, gồm những chương trình hiện có, cho phụ nữ và dân tộc thiểu số trong khoa học máy tính.
-
-<%= view :signup_button %>
+(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.

@@ -27,6 +27,9 @@
   "copy": "Скопіювати",
   "copyright": "Авторські права",
   "currentVersion": "Поточна версія",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Infiinty",
   "jump": "стрибок",
   "keepPlaying": "Продовжити",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Ти використав усі необхідні типи блоків, але у неправильному порядку.",
   "listVariable": "список",
   "makeYourOwnFlappy": "Створити свою власну гру в Пурха (Flappy Game)",
@@ -241,5 +245,7 @@
   "watchVideo": "Переглянути відео",
   "when": "коли",
   "whenRun": "коли гра починається",
-  "workspaceHeaderShort": "Робоча область: "
+  "workspaceHeaderShort": "Робоча область: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

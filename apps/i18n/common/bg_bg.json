@@ -27,6 +27,9 @@
   "copy": "Копиране",
   "copyright": "Авторско право",
   "currentVersion": "Текуща версия",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Инфинити",
   "jump": "скок",
   "keepPlaying": "Продължете да играете",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Продължи да опитваш. Нещо все още не е по правилния начин.",
   "listVariable": "списък",
   "makeYourOwnFlappy": "Направете своя собствена Flappy Bird игра",
@@ -241,5 +245,7 @@
   "watchVideo": "Гледайте видеото",
   "when": "когато",
   "whenRun": "при стартиране",
-  "workspaceHeaderShort": "Работна област: "
+  "workspaceHeaderShort": "Работна област: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

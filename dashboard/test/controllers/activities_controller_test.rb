@@ -47,12 +47,23 @@ class ActivitiesControllerTest < ActionController::TestCase
     @script_level = @script_level_prev.next_progression_level
     @script_level_next = @script_level.next_progression_level
     @script = @script_level.script
+    @level = @script_level.level
 
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
     @good_image = File.read('test/fixtures/artist_image_1.png', binmode: true)
     @another_good_image = File.read('test/fixtures/artist_image_2.png', binmode: true)
     @jpg_image = File.read('test/fixtures/playlab_image.jpg', binmode: true)
-    @milestone_params = {user_id: @user, script_level_id: @script_level.id, lines: 20, attempt: '1', result: 'true', testResult: '100', time: '1000', app: 'test', program: '<hey>'}
+    @milestone_params = {
+      user_id: @user,
+      script_level_id: @script_level.id,
+      lines: 20,
+      attempt: '1',
+      result: 'true',
+      testResult: '100',
+      time: '1000',
+      app: 'test',
+      program: '<hey>'
+    }
 
     # Stub out the SQS client to invoke the handler on queued messages only when requested.
     @fake_queue = FakeQueue.new(AsyncProgressHandler.new)
@@ -282,7 +293,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone does not allow negative lines of code" do
-
     expect_controller_logs_milestone_regexp(/-20/)
     @controller.expects :slog
 
@@ -356,8 +366,14 @@ class ActivitiesControllerTest < ActionController::TestCase
     script_start_date = Time.now - 5.days
     existing_sl = @script_level.script.script_levels.last
     UserLevel.record_timestamps = false
-    UserLevel.create!(user_id: @user.id, level_id: existing_sl.level.id, script_id: existing_sl.script_id, best_result: 100,
-                     created_at: script_start_date, updated_at: script_start_date)
+    UserLevel.create!(
+      user_id: @user.id,
+      level_id: existing_sl.level.id,
+      script_id: existing_sl.script_id,
+      best_result: 100,
+      created_at: script_start_date,
+      updated_at: script_start_date
+    )
     UserLevel.record_timestamps = true
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
@@ -487,7 +503,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, @milestone_params.merge(save_to_gallery: 'false', image: Base64.encode64(@good_image))
-
         end
       end
     end
@@ -1134,5 +1149,82 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
     assert !@user.needs_to_backfill_user_scripts?
+  end
+
+  test "milestone with one pairing creates new user levels" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+
+    assert_difference('UserLevel.count', 2) do # both get a UserLevel
+      assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    paired_user_level = PairedUserLevel.last
+    assert_equal @user, paired_user_level.driver_user_level.user
+    assert_equal pairing, paired_user_level.navigator_user_level.user
+  end
+
+  test "milestone with multiple pairings creates multiple new user levels" do
+    section = create(:follower, student_user: @user).section
+    pairings = 3.times.map {create(:follower, section: section).student_user}
+    session[:pairings] = pairings.map(&:id)
+
+    assert_difference('UserLevel.count', 4) do # all 4 people
+      assert_difference('PairedUserLevel.count', 3) do # there are 3 PairedUserLevel links
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    user_level = UserLevel.find_by(user_id: @user.id, script_id: @script.id, level_id: @level.id)
+    pairings.each do |pairing|
+      pairing_user_level = UserLevel.find_by(user_id: pairing.id, script_id: @script.id, level_id: @level.id)
+      assert PairedUserLevel.find_by(driver_user_level_id: user_level, navigator_user_level_id: pairing_user_level),
+        "could not find PairedUserLevel"
+    end
+  end
+
+  test "milestone with pairings updates driver's existing user level" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+
+    existing_navigator_user_level = create :user_level, user: pairing, script: @script, level: @level, best_result: 10
+
+    assert_difference('UserLevel.count', 1) do # one gets a new user level
+      assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    existing_navigator_user_level.reload
+    assert_equal 100, existing_navigator_user_level.best_result
+
+    assert_equal [@user], existing_navigator_user_level.driver_user_levels.map(&:user)
+  end
+
+  test "milestone with pairings updates navigator's existing user level" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+
+    existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
+
+    assert_difference('UserLevel.count', 1) do # one gets a new user level
+      assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    existing_driver_user_level.reload
+    assert_equal 100, existing_driver_user_level.best_result
+
+    assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
   end
 end

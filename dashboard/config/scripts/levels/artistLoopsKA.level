@@ -31,7 +31,8 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Use the jump block to move forward without drawing a line.\",\r\n  \"hint_id\": \"artistLoopsKA_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nThese stones are in the wrong place.  Help me move them so I don't fall in!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,
@@ -47,19 +48,10 @@
             <block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="3-10">3</title>
               <statement name="DO">
-                <block type="simple_move_right">
-                  <next>
-                    <block type="simple_move_down"/>
-                  </next>
-                </block>
+                <block type="simple_move_right"/>
               </statement>
               <next>
-                <block type="controls_repeat_simplified_dropdown">
-                  <title name="TIMES" config="3-10">3</title>
-                  <statement name="DO">
-                    <block type="simple_move_right"/>
-                  </statement>
-                </block>
+                <block type="simple_jump_right"/>
               </next>
             </block>
           </next>
@@ -75,13 +67,21 @@
         <block type="simple_jump_right"/>
         <block type="simple_jump_down"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-8">???</title>
+          <title name="TIMES" config="3-10">???</title>
         </block>
         <block type="draw_colour_simple">
           <title name="COLOUR">#ff0000</title>
         </block>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="simple_jump_right"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+        </block>
+      </xml>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

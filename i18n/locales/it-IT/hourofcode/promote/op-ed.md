@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### Qui di seguito trovate un esempio di articolo di appoggio alla Settimana dell'Educazione Informatica e una descrizione dei suoi obiettivi che potrebbero essere usati dallo stato, da legislatori locali, imprenditori, ecc.
 
   
@@ -44,5 +42,3 @@ Abbiamo bisogno di reclutare più insegnanti di informatica e favorire lo svilup
 Secondo il Bureau of Labor Statistics americano, entro il 2020, ci saranno nei soli Stati Uniti 9,2 milioni di posti di lavoro in campo scientifico, ingegneristico, matematico e informatico. La metà di quei lavori — 4,6 milioni — sarà rivolta ad esperti di informatica o di tecnologie informatiche. La conoscenza dell'informatica è sempre più fondamentale nel XXI secolo. Chi è che sarà assunto se ai nostri figli non viene data l'opportunità di acquisire le competenze necessarie?
 
 Questa settimana, < % = campaign_date('full') % >, è la Settimana Internazionale di Educazione all'Informatica In molte scuole italiane gli studenti parteciperanno ad un evento dell'Ora del Codice, sollevando il velo di mistero che avvolge l'informatica e, speriamo, stuzzicando la loro curiosità affinché possano andare avanti e imparare molto di più. Io mi unirò a loro e invito anche voi a partecipare. Tutti dovrebbero imparare a programmare. Visita https://italia.code.org per ulteriori informazioni e per iniziare. E sostieni i nostri sforzi per portare l'informatica in molte più scuole in **Italia**.
-
-<%= view :signup_button %>

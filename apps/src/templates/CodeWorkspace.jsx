@@ -49,6 +49,7 @@ var CodeWorkspace = React.createClass({
     editCode: React.PropTypes.bool.isRequired,
     readonlyWorkspace: React.PropTypes.bool.isRequired,
     showDebugger: React.PropTypes.bool.isRequired,
+    style: React.PropTypes.bool,
     isRunning: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired
@@ -60,8 +61,8 @@ var CodeWorkspace = React.createClass({
     // update styles. However, we do want to prevent property changes that would
     // change the DOM structure.
     Object.keys(nextProps).forEach(function (key) {
-      // isRunning only affects style, and can be updated
-      if (key === 'isRunning') {
+      // isRunning and style only affect style, and can be updated
+      if (key === 'isRunning' || key === 'style') {
         return;
       }
 
@@ -114,7 +115,7 @@ var CodeWorkspace = React.createClass({
     ];
 
     return (
-      <span id="codeWorkspaceWrapper">
+      <span id="codeWorkspaceWrapper" style={props.style}>
         <PaneHeader
             id="headers"
             dir={props.localeDirection}

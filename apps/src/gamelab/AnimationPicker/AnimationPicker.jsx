@@ -1,11 +1,11 @@
 import React from 'react';
 import utils from '../../utils';
 import { connect } from 'react-redux';
-import Dialog from '../../templates/DialogComponent.jsx';
+import BaseDialog from '../../templates/BaseDialog.jsx';
 import gamelabMsg from '../locale';
 import styles from './styles';
-import { hide, pickLibraryAnimation, beginUpload, handleUploadComplete,
-    handleUploadError } from './animationPickerModule';
+import { hide, pickNewAnimation, pickLibraryAnimation, beginUpload,
+    handleUploadComplete, handleUploadError } from './animationPickerModule';
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 const HiddenUploader = window.dashboard.HiddenUploader;
 
@@ -34,6 +34,7 @@ const AnimationPicker = React.createClass({
     uploadInProgress: React.PropTypes.bool.isRequired,
     uploadError: React.PropTypes.string,
     onClose: React.PropTypes.func.isRequired,
+    onPickNewAnimation: React.PropTypes.func.isRequired,
     onPickLibraryAnimation: React.PropTypes.func.isRequired,
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
@@ -52,6 +53,7 @@ const AnimationPicker = React.createClass({
     }
     return (
         <AnimationPickerBody
+            onDrawYourOwnClick={this.props.onPickNewAnimation}
             onPickLibraryAnimation={this.props.onPickLibraryAnimation}
             onUploadClick={this.onUploadClick}
         />
@@ -64,8 +66,9 @@ const AnimationPicker = React.createClass({
     }
 
     return (
-      <Dialog
+      <BaseDialog
           isOpen
+          useDeprecatedGlobalStyles
           handleClose={this.props.onClose}
           uncloseable={this.props.uploadInProgress}>
         <HiddenUploader
@@ -76,7 +79,7 @@ const AnimationPicker = React.createClass({
             onUploadDone={this.props.onUploadDone}
             onUploadError={this.props.onUploadError} />
         {this.renderVisibleBody()}
-      </Dialog>
+      </BaseDialog>
     );
   }
 });
@@ -88,6 +91,9 @@ export default connect(state => ({
 }), dispatch => ({
   onClose() {
     dispatch(hide());
+  },
+  onPickNewAnimation() {
+    dispatch(pickNewAnimation());
   },
   onPickLibraryAnimation(animation) {
     dispatch(pickLibraryAnimation(animation));

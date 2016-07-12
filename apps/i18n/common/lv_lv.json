@@ -27,6 +27,9 @@
   "copy": "Kopija",
   "copyright": "Copyright",
   "currentVersion": "Current Version",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Bezgalība",
   "jump": "lēkt",
   "keepPlaying": "Turpināt spēlēt",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Jūs izmantojat visus nepieciešamos bloka veidus, bet ne pareizā veidā.",
   "listVariable": "saraksts",
   "makeYourOwnFlappy": "Izveido savu \"Flappy\" spēli",
@@ -241,5 +245,7 @@
   "watchVideo": "Noskaties video",
   "when": "kad",
   "whenRun": "kad izpilda",
-  "workspaceHeaderShort": "Darba virsma: "
+  "workspaceHeaderShort": "Darba virsma: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

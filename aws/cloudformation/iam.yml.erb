@@ -54,6 +54,9 @@ Resources:
                   - 'cloudformation:DescribeStackResources'
                   - 'autoscaling:CompleteLifecycleAction'
                   - 'ec2:DescribeImages'
+                  - 'logs:Create*'
+                  - 'logs:PutLogEvents'
+                  - 'logs:PutRetentionPolicy'
                 Resource: '*'
               - Effect: Allow
                 Action:
@@ -69,7 +72,7 @@ Resources:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
-      Roles: [Ref: FrontendRole]
+      Roles: [Ref: StandaloneFrontendRole]
   LifecycleHookRole:
     Type: AWS::IAM::Role
     Properties:

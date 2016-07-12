@@ -5,17 +5,26 @@ markdown <<MARKDOWN
 ## Unit 3 Lesson 03 - Creativity in Algorithms
 
 # Background
-In this lesson you get more practice designing algorithms using the "Human Machine Language".  In particular you see that new problems are often easily solved by combining other algorithms that you know.  You can also optionally try your hand at actually programming in the human machine language with a widget.
+In this lesson you get more practice designing algorithms using the "Human Machine Language".  In particular you see that new problems are often easily solved by combining other algorithms that you know.  
+
+# Vocabulary
+* **Algorithm** - A precise sequence of instructions for processes that can be executed by a computer
+* **CSP Framework statements:**
+  * "4.1.1A Sequencing, selection, and iteration are building blocks of algorithms."
+  * "4.1.2G Every algorithm can be constructed using only sequencing, selection and iteration"
+   * **Sequencing** is the application of each step of an algorithm in the order in which the statements are given.
+   * **Selection** uses a Boolean condition (a TRUE/FALSE condition) to determine which of two parts of an algorithm is used.
+   * **Iteration** is the repetition of part of an algorithm until a condition is met or for a specified number of times.
 
 # Lesson
 * Introduce the 'swap' command, new to the Human Machine Language
-* Design an algorithm for the "High-Low" problem
+* Design an algorithm for the "Min-to-Front" problem
 * Optionally try other algorithms
 
 # Resources
 
 * Activity Guide: <a href="https://docs.google.com/document/d/1l2XoaDmn0vYphlT_KS9_Yl7TVgoy6z310qUuUGGKbGg" target="_blank">Human Machine Language - Part 2: Min To Front</a>
-* (Optional) App Lab Widget: <a href="#" target="_blank">Human Machine App</a>
+* (Optional) App Lab Widget: (Coming Soon)
 
 
 MARKDOWN

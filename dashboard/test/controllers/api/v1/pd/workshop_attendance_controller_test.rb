@@ -152,6 +152,10 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionController::TestCa
   end
 
   test 'admins can create new users in attendance' do
+    # Start the workshop to create a section
+    @workshop.start!
+    @workshop.reload
+
     sign_in create(:admin)
     email = "new_teacher#{SecureRandom.hex(4)}@example.net"
     create :pd_enrollment, workshop: @workshop, email: email
@@ -161,6 +165,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionController::TestCa
       assert_response :success
     end
     assert_equal 1, Pd::Attendance.for_teacher(User.last).for_workshop(@workshop).count
+    assert @workshop.section.students.exists?(User.last.id)
   end
 
   test 'admin creating a user without enrollment raises error' do

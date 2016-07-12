@@ -1,34 +1,34 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
+  title: <%= hoc_s(:title_signup_thanks) %>
+  layout: wide
+  nav: how_to_nav
 
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
+  social:
+    "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+    "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+    "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+    "og:image:width": 1440
+    "og:image:height": 900
+    "og:url": "http://<%=request.host%>"
 
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
----
+    "twitter:card": player
+    "twitter:site": "@codeorg"
+    "twitter:url": "http://<%=request.host%>"
+    "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+    "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+    "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  ---
 
 <%
-  facebook = {:u=>"http://#{request.host}/us"}
+    facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
 # Obrigado por se inscrever para sediar a Hora do Código!
 
-Você está possibilitando que alunos de todo o mundo aprendam uma Hora do Código que pode *mudar suas vidas*, no período de <%= campaign_date('full') %>. Entraremos em contato para falar dos prêmios, novos tutoriais e outras atualizações. O que você pode fazer agora?
+Você está possibilitando que alunos de todo o mundo aprendam uma Hora do Código que pode *mudar suas vidas*, no período de <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. O que você pode fazer agora?
 
 ## 1. Divulgue
 
@@ -36,9 +36,9 @@ Você acabou de se juntar ao movimento da Hora do Código. Conte ao seus amigos 
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Find a local volunteer to help you with your event.
+## 2. Encontre um voluntário da região para ajudar com o seu evento.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Procure em nosso mapa de voluntários](<%= resolve_url('https://code.org/volunteer/local') %>) para ver os voluntários que podem visitar sua sala de aula ou participar de uma videoconferência remota para inspirar seus alunos sobre as várias possibilidades trazidas pela ciência da computação.
 
 ## 3. Peça para sua escola oferecer uma Hora do Código
 
@@ -54,10 +54,10 @@ Você acabou de se juntar ao movimento da Hora do Código. Conte ao seus amigos 
 
 ## 6. Peça a um representante político para apoiar a Hora do Código
 
-[Envie este e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) para seu prefeito, Câmara Municipal ou conselho escolar e convide-os para visitar sua escola durante a Hora do Código. Isso pode ajudar a criar um suporte para a ciência da computação em sua área além de uma hora de programação.
+[Envie este e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) para seu prefeito, Câmara Municipal ou conselho escolar e convide-os para visitar sua escola durante a Hora do Código. Isso pode ajudá-lo a conseguir suporte para o ensino da Ciência da Computação para além de uma hora.
 
-## 7. Plan your Hour of Code
+## 7. Planeje sua Hora do Código
 
-Choose an Hour of Code activity and [review this how-to guide](<%= resolve_url('/how-to') %>).
+Escolha uma atividade da Hora do Código e [veja esse guia prático](<%= resolve_url('/how-to') %>).
 
 <%= view 'popup_window.js' %>

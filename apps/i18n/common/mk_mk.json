@@ -27,6 +27,9 @@
   "copy": "копирај",
   "copyright": "Copyright",
   "currentVersion": "Тековна верзија",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Бесконечно",
   "jump": "Рипај ",
   "keepPlaying": "Продолжи со играта",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Вие ѓи користете  сите потребни видови на блокови, но не на вистински начин.",
   "listVariable": "листа",
   "makeYourOwnFlappy": "Направете своја Flappy игра",
@@ -241,5 +245,7 @@
   "watchVideo": "Погледни го видеото",
   "when": "Кога",
   "whenRun": "Кога трча",
-  "workspaceHeaderShort": "Работна површина: "
+  "workspaceHeaderShort": "Работна површина: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

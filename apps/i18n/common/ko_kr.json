@@ -27,6 +27,9 @@
   "copy": "복사",
   "copyright": "저작권",
   "currentVersion": "현재 버전",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "무한",
   "jump": "점프",
   "keepPlaying": "계속 진행",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "계속 코딩하세요! 아직 정확히 완성되지 않았습니다.",
   "listVariable": "리스트",
   "makeYourOwnFlappy": "자신만의 플래피 게임을 만들어보세요.",
@@ -241,5 +245,7 @@
   "watchVideo": "비디오 보기",
   "when": "~할 때",
   "whenRun": "실행하면",
-  "workspaceHeaderShort": "작업 영역: "
+  "workspaceHeaderShort": "작업 영역: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

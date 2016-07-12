@@ -373,6 +373,18 @@ en:
       Artist - Nested Loops 8_instruction: crwdns34192:0crwdne34192:0
       Artist - Nested Loops 9_instruction: crwdns30575:0crwdne30575:0
       Artist - Nested Loops Assessment 1_instruction: crwdns34193:0crwdne34193:0
+      artistLoopsK1_instruction: crwdns57074:0crwdne57074:0
+      artistLoopsK2_instruction: crwdns57075:0crwdne57075:0
+      artistLoopsK3_instruction: crwdns57076:0crwdne57076:0
+      artistLoopsK4_instruction: crwdns57077:0crwdne57077:0
+      artistLoopsK5_instruction: crwdns57078:0crwdne57078:0
+      artistLoopsK6_instruction: crwdns57079:0crwdne57079:0
+      artistLoopsK7_instruction: crwdns57080:0crwdne57080:0
+      artistLoopsK8_instruction: crwdns57081:0crwdne57081:0
+      artistLoopsK9_instruction: crwdns57082:0crwdne57082:0
+      artistLoopsKA_instruction: crwdns57083:0crwdne57083:0
+      artistLoopsKB_instruction: crwdns57084:0crwdne57084:0
+      artistLoopsKFP_instruction: crwdns57085:0crwdne57085:0
       Auto Open Function Editor_instruction: crwdns49693:0crwdne49693:0
       Bee Recommended Blocks test_instruction: crwdns51029:0crwdne51029:0
       Bergeron Robot Maze1_instruction: crwdns57012:0crwdne57012:0
@@ -876,6 +888,7 @@ en:
       Eval Strings Images 7_instruction: crwdns38338:0crwdne38338:0
       Eval Strings Images 8_instruction: crwdns36009:0crwdne36009:0
       Eval Strings Images Free Play_instruction: crwdns36446:0crwdne36446:0
+      eventsIntro_instruction: crwdns57086:0crwdne57086:0
       Farmer for Authored Hint testing_instruction: crwdns55887:0crwdne55887:0
       Frequency Analysis_instruction: crwdns49707:0crwdne49707:0
       frozen circle function in circle_instruction: crwdns34503:0crwdne34503:0
@@ -1027,6 +1040,16 @@ en:
       K-1 Maze Multi 15_instruction: crwdns31060:0crwdne31060:0
       K-1 Maze Sequence Assessment 1_instruction: crwdns38658:0crwdne38658:0
       K-1 Maze Sequence Assessment 2_instruction: crwdns38659:0crwdne38659:0
+      K2.0 sequence 1_instruction: crwdns57087:0crwdne57087:0
+      K2.0 sequence 10_instruction: crwdns57088:0crwdne57088:0
+      K2.0 sequence 2_instruction: crwdns57089:0crwdne57089:0
+      K2.0 sequence 3_instruction: crwdns57090:0crwdne57090:0
+      K2.0 sequence 4_instruction: crwdns57091:0crwdne57091:0
+      K2.0 sequence 5_instruction: crwdns57092:0crwdne57092:0
+      K2.0 sequence 6_instruction: crwdns57093:0crwdne57093:0
+      K2.0 sequence 7_instruction: crwdns57094:0crwdne57094:0
+      K2.0 sequence 8_instruction: crwdns57095:0crwdne57095:0
+      K2.0 sequence 9_instruction: crwdns57096:0crwdne57096:0
       kikiTesta_instruction: crwdns57014:0crwdne57014:0
       kikiTesting_instruction: crwdns54266:0crwdne54266:0
       KTest1_instruction: crwdns57015:0crwdne57015:0
@@ -1220,6 +1243,8 @@ en:
       Play Lab Rocket 4_instruction: crwdns35189:0crwdne35189:0
       Play Lab Rocket 5_instruction: crwdns35190:0crwdne35190:0
       Play Lab Rocket Free Play_instruction: crwdns35191:0crwdne35191:0
+      playEventsK1_instruction: crwdns57097:0crwdne57097:0
+      playEventsK2_instruction: crwdns57098:0crwdne57098:0
       Poorva copy U3L2 Using Simple Commands_instruction: crwdns56766:0crwdne56766:0
       Poorva-test_instruction: crwdns55888:0crwdne55888:0
       PS Log test - Define and use turnAround_instruction: crwdns56269:0crwdne56269:0
@@ -1277,9 +1302,11 @@ en:
       Standalone_Artist_8_instruction: crwdns34699:0crwdne34699:0
       Standalone_Artist_9_instruction: crwdns34700:0crwdne34700:0
       Standalone_Artist_v2_instruction: crwdns35014:0crwdne35014:0
+      StepIntro_instruction: crwdns57099:0crwdne57099:0
       template test_instruction: crwdns50670:0crwdne50670:0
       Test Play Lab_instruction: crwdns43227:0crwdne43227:0
       test_sarah_instruction: crwdns50671:0crwdne50671:0
+      testArtistForTestK_instruction: crwdns57100:0crwdne57100:0
       Testing Quantum Farmer_instruction: crwdns56301:0crwdne56301:0
       Text Compression 1_instruction: crwdns48389:0crwdne48389:0
       Total Artist Clone Me_instruction: crwdns50672:0crwdne50672:0

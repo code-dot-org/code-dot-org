@@ -27,6 +27,9 @@
   "copy": "Copia",
   "copyright": "Copyright",
   "currentVersion": "Versione attuale",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Infinito",
   "jump": "salta",
   "keepPlaying": "Continua a giocare",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Stai usando tutti i tipi di blocco che servono per risolvere l'esercizio, ma non nel modo giusto.",
   "listVariable": "lista",
   "makeYourOwnFlappy": "Costruisci la tua versione del gioco Flappy",
@@ -241,5 +245,7 @@
   "watchVideo": "Guarda il video",
   "when": "quando",
   "whenRun": "quando si clicca su \"Esegui\"",
-  "workspaceHeaderShort": "Area di lavoro: "
+  "workspaceHeaderShort": "Area di lavoro: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

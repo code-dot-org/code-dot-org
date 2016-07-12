@@ -5,13 +5,13 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,3,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,2,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,1,1,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Change the code to get me to the pig!",
-    "start_direction": "0",
-    "step_mode": "1",
+    "instructions": "A bug! Fix the code to get me to the pig.",
+    "start_direction": "3",
+    "step_mode": "0",
     "is_k1": "true",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "ideal": "4",
     "video_key": "C1_maze_debugging",
     "never_autoplay_video": "true",
@@ -27,7 +27,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/06_V2.gif",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This program is missing one block. Can you figure out which one?\",\r\n  \"hint_id\": \"K2.0_sequence_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nA bug! Fix the code to get me to the pig.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/2843193ce2d869ad2f06f0f5b114c9d0-image-1467924400663.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,
@@ -42,9 +43,9 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveNorth">
+            <block type="maze_moveWest">
               <next>
-                <block type="maze_moveNorth"/>
+                <block type="maze_moveWest"/>
               </next>
             </block>
           </next>
@@ -61,18 +62,18 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveNorth"/>
+        <block type="maze_moveWest"/>
       </xml>
     </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveNorth">
+            <block type="maze_moveWest">
               <next>
-                <block type="maze_moveNorth">
+                <block type="maze_moveWest">
                   <next>
-                    <block type="maze_moveNorth"/>
+                    <block type="maze_moveWest"/>
                   </next>
                 </block>
               </next>

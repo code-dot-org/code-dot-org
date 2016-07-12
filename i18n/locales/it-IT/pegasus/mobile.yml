@@ -548,12 +548,12 @@ it-IT:
   dashboard_navigation_section_speakers: 'Computer Science <br/> Guest Speakers'
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
   dashboard_navigation_view_progress: Avanzamento
-  dashboard_navigation_view_text_responses: Text Responses
+  dashboard_navigation_view_text_responses: Risultati del test
   dashboard_navigation_view_assessments: Valutazioni
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: Stats
+  dashboard_navigation_view_stats: Statistiche
   dashboard_navigation_section: 'Classe: %{section_name}'
   dashboard_navigation_student: 'Studente: %{student_name}'
   dashboard_progress_not_started: non avviato
@@ -700,7 +700,7 @@ it-IT:
   dashboard_announcements: Annunci
   dashboard_announce_view_all: Visualizza tutto
   dashboard_announce_message: "<b>22 aprile 2016</b>- Le lezioni senza computer sono una parte fondamentale dell'apprendimento, ma gli insegnanti ci hanno comunicato che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo. Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
-  dashboard_announce_button_text: Test the feature
+  dashboard_announce_button_text: Testare la funzionalità
   dashboard_announce_petition: "Come insegnante, stai aprendo la strada per permettere ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa settimana, personaggi chiave del mondo dell'istruzione, 28 governatori e gli amministratori delegati delle più grandi aziende d'America si sono riuniti firmando una lettera aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di informatica K-12."
   dashboard_announce_petition_button: Aggiungi il tuo nome
   code_hoc_coming: "L'Ora del Codice è qui: 8-14 Dicembre!"

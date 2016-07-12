@@ -27,6 +27,9 @@
   "copy": "複製",
   "copyright": "版權所有",
   "currentVersion": "當前版本",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "無限大",
   "jump": "跳",
   "keepPlaying": "繼續玩",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "您已使用了所有必要類型的程式積木，但方式不太正確。",
   "listVariable": "清單變數",
   "makeYourOwnFlappy": "做出自己的 Flappy 遊戲",
@@ -241,5 +245,7 @@
   "watchVideo": "觀看影片",
   "when": "當",
   "whenRun": "當按下\"執行\"時",
-  "workspaceHeaderShort": "工作區:"
+  "workspaceHeaderShort": "工作區:",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

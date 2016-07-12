@@ -27,6 +27,9 @@
   "copy": "Kopyala",
   "copyright": "Telif Hakkı",
   "currentVersion": "Geçerli sürüm",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -149,7 +152,7 @@
   "generatedCodeInfo": "Dünyanın en iyi üniversiteleri bile yap-boz oyun tabanlı kodlama öğretiyor (Örn. {berkeleyLink}, {harvardLink}). Ayrıca detaylı incelerseniz, birleştirdiğiniz bloklar dünyanın en yaygın kullanılan kodlama dili olan JavaScript dilinde de görüntüleniyor:",
   "hashError": "Üzgünüz, '%1' kayıtlı herhangi bir programa karşılık gelmez.",
   "help": "Yardım",
-  "hide": "Hide",
+  "hide": "Gizle",
   "hideToolbox": "(Gizle)",
   "hintHeader": "İşte bir ipucu:",
   "hintPrompt": "Yardım ister misiniz?",
@@ -163,6 +166,7 @@
   "infinity": "Sonsuz",
   "jump": "zıpla",
   "keepPlaying": "Oynamaya devam et",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Tüm gerekli türdeki blokları kullanıyorsunuz ama doğru şekilde değil.",
   "listVariable": "liste",
   "makeYourOwnFlappy": "Kendi Flappy Oyununu Yap",
@@ -241,5 +245,7 @@
   "watchVideo": "Videoyu İzle",
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
-  "workspaceHeaderShort": "Çalışma alanı: "
+  "workspaceHeaderShort": "Çalışma alanı: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }
