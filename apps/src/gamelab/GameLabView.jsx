@@ -31,7 +31,8 @@ var GameLabView = React.createClass({
     isShareView: React.PropTypes.bool.isRequired,
     showFinishButton: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
-    onMount: React.PropTypes.func.isRequired
+    onMount: React.PropTypes.func.isRequired,
+    showAnimationMode: React.PropTypes.bool.isRequired
   },
 
   getChannelId: function () {
@@ -86,13 +87,15 @@ var GameLabView = React.createClass({
   },
 
   renderAnimationMode: function () {
-    return this.props.interfaceMode === GameLabInterfaceMode.ANIMATION ?
+    const {showAnimationMode, interfaceMode} = this.props;
+    return showAnimationMode && interfaceMode === GameLabInterfaceMode.ANIMATION ?
         <AnimationTab channelId={this.getChannelId()} /> :
         undefined;
   },
 
   shouldShowHeader: function () {
-    return !(this.props.isEmbedView || this.props.isShareView);
+    const {showAnimationMode, isEmbedView, isShareView} = this.props;
+    return showAnimationMode && !(isEmbedView || isShareView);
   },
 
   render: function () {
@@ -112,6 +115,7 @@ module.exports = connect(function propsFromStore(state) {
     isEmbedView: state.pageConstants.isEmbedView,
     isResponsive: isResponsiveFromState(state),
     isShareView: state.pageConstants.isShareView,
-    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
+    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
+    showAnimationMode: state.pageConstants.showAnimationMode
   };
 })(GameLabView);

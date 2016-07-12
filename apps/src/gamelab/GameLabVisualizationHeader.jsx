@@ -22,6 +22,7 @@ var GameLabVisualizationHeader = React.createClass({
     interfaceMode: React.PropTypes
         .oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION])
         .isRequired,
+    showAnimationMode: React.PropTypes.bool.isRequired,
     onInterfaceModeChange: React.PropTypes.func.isRequired
   },
 
@@ -34,9 +35,10 @@ var GameLabVisualizationHeader = React.createClass({
           <button value={GameLabInterfaceMode.CODE}>
             {msg.codeMode()}
           </button>
-          <button value={GameLabInterfaceMode.ANIMATION} id="animationMode">
-            {msg.animationMode()}
-          </button>
+          {this.props.showAnimationMode &&
+            <button value={GameLabInterfaceMode.ANIMATION} id="animationMode">
+              {msg.animationMode()}
+            </button>}
         </ToggleGroup>
       </div>
     );
@@ -45,7 +47,8 @@ var GameLabVisualizationHeader = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isShareView: state.pageConstants.isShareView,
-    interfaceMode: state.interfaceMode
+    interfaceMode: state.interfaceMode,
+    showAnimationMode: state.pageConstants.showAnimationMode
   };
 }, function propsFromDispatch(dispatch) {
   return {
