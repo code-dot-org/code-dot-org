@@ -143,25 +143,25 @@ function dotClicked(url, e) {
   saveAnswersAndNavigate(url);
 }
 
-const BubbleInterior = React.createClass({
+export const BubbleInterior = React.createClass({
   propTypes: {
     courseOverviewPage: React.PropTypes.bool,
     showingIcon: React.PropTypes.bool,
     showingLevelName: React.PropTypes.bool,
-    title: React.PropTypes.number
+    title: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.string])
   },
 
   render() {
-    let bubbleInterior = '\u00a0';
+    let bubbleInterior;
 
-    if (this.props.courseOverviewPage) {
-      if (this.props.showingLevelName) {
-        if (this.props.showingIcon) {
-          bubbleInterior = '';
-        }
+    if (this.props.courseOverviewPage && this.props.showingLevelName) {
+      if (this.props.showingIcon) {
+        bubbleInterior = '';
       } else {
-        bubbleInterior = this.props.title;
+        bubbleInterior = '\u00a0';
       }
+    } else {
+      bubbleInterior = this.props.title;
     }
 
     return (
