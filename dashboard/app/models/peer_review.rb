@@ -141,14 +141,16 @@ class PeerReview < ActiveRecord::Base
   end
 
   def self.get_peer_review_summaries(user, script)
+    peer_review_summaries = []
+
     if user &&
         script.professional_learning_course? &&
         Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
 
-      PeerReview.where(reviewer: user, script: script).map(&:summarize)
-    else
-      []
+      peer_review_summaries = PeerReview.where(reviewer: user, script: script).map(&:summarize)
     end
+
+    peer_review_summaries
   end
 
   def summarize

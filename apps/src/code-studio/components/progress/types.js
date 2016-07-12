@@ -8,7 +8,7 @@ const levelProgressShape = React.PropTypes.shape({
   icon: React.PropTypes.string,
   url: React.PropTypes.string,
   id: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
-  locked: React.PropTypes.bool,
+  locked: React.PropTypes.bool
 });
 module.exports.levelProgressShape = levelProgressShape;
 
@@ -19,6 +19,6 @@ const stageShape = React.PropTypes.shape({
   name: React.PropTypes.string,
   lesson_plan_html_url: React.PropTypes.string,
   flex_category: React.PropTypes.string,
-  levels: stageProgressShape,
+  levels: stageProgressShape
 });
 module.exports.stageShape = stageShape;

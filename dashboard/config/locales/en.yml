@@ -705,7 +705,7 @@ en:
     instructor_feedback: 'Instructor Feedback'
     peer_feedback: 'Peer Feedback'
     outdated: 'This feedback was added for a previously submitted version'
-    review_in_progress: 'Ready to review'
+    review_in_progress: 'Review in progress'
     link_to_submitted_review: 'Link to submitted review'
     reviews_unavailable: 'Reviews unavailable at this time'
     review_count: 'You must complete %{review_count} reviews for this unit'
