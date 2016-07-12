@@ -8,7 +8,7 @@ require 'csv'
 def fetch_workshop_info(workshop_id)
   workshop = DB[:forms].where(id: workshop_id.to_i).first
   return {} unless workshop
-  JSON.parse(workshop[:data]).merge(JSON.parse(workshop[:processed_data])).merge({'user_id'=>workshop[:user_id]})
+  JSON.parse(workshop[:data]).merge(JSON.parse(workshop[:processed_data])).merge({'user_id' => workshop[:user_id]})
 end
 
 def satisfaction_s_to_i(value)

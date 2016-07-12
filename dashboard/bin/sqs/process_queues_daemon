@@ -6,7 +6,7 @@
 require 'daemons'
 require 'pathname'
 
-pwd  = File.dirname(File.expand_path(__FILE__))
+pwd = File.dirname(File.expand_path(__FILE__))
 log_dir = Pathname.new(File.join(pwd, '../../log/')).cleanpath
 config_dir = Pathname.new(File.join(pwd, '../../config/')).cleanpath
 
@@ -36,7 +36,7 @@ end
 
 argv = [command, '--', config_file]
 
-options =  {
+options = {
   dir_mode: :normal, # Use absolute directory paths.
   dir: config_dir, # directory where pid file will be stored
   log_dir: log_dir,

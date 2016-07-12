@@ -43,7 +43,7 @@ def forbidden!
 end
 
 def form_error!(e)
-  halt(400, {'Content-Type'=>'text/json'}, e.errors.to_json)
+  halt(400, {'Content-Type' => 'text/json'}, e.errors.to_json)
 end
 
 def have_permission?(permission)

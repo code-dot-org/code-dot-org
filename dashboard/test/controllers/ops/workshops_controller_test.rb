@@ -46,7 +46,7 @@ module Ops
       unexpected_teacher_params = [
           {email: unexpected_teacher_1.email},
           {email: unexpected_teacher_2.email}]
-      workshop_params = {"unexpected_teachers"=>unexpected_teacher_params}
+      workshop_params = {"unexpected_teachers" => unexpected_teacher_params}
       put :update, id: @workshop.id, workshop: workshop_params
       @workshop.reload
       assert_equal [unexpected_teacher_1, unexpected_teacher_2], @workshop.unexpected_teachers
@@ -61,7 +61,7 @@ module Ops
     test 'Ops team can add multiple cohorts to a workshop' do
       sign_in @admin
       another_cohort = create(:cohort)
-      workshop_params = {"id"=>@workshop.id, "name"=>@workshop.name, "program_type"=>"5", "location"=>@workshop.location, "instructions"=>nil, "cohorts"=>[{"id"=>@cohort.id}, {"id"=>another_cohort.id}], "facilitators"=>nil, "teachers"=>nil}
+      workshop_params = {"id" => @workshop.id, "name" => @workshop.name, "program_type" => "5", "location" => @workshop.location, "instructions" => nil, "cohorts" => [{"id" => @cohort.id}, {"id" => another_cohort.id}], "facilitators" => nil, "teachers" => nil}
       patch :update, id: @workshop.id, workshop: workshop_params
       assert_response :success
       @workshop.reload

@@ -51,7 +51,7 @@ def load_configuration
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
     'dashboard_secret_key_base'   => 'not a secret',
-    'dashboard_honeybadger_api_key' =>'00000000',
+    'dashboard_honeybadger_api_key' => '00000000',
     'dashboard_host'              => 'localhost',
     'dashboard_port'              => 3000,
     'dashboard_unicorn_name'      => 'dashboard',
@@ -75,7 +75,7 @@ def load_configuration
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
-    'pegasus_honeybadger_api_key' =>'00000000',
+    'pegasus_honeybadger_api_key' => '00000000',
     'pegasus_port'                => 3000,
     'pegasus_unicorn_name'        => 'pegasus',
     'pegasus_workers'             => 8,
@@ -91,8 +91,8 @@ def load_configuration
     'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
     'dynamo_tables_table'         => "#{rack_env}_tables",
     'dynamo_properties_table'     => "#{rack_env}_properties",
-    'dynamo_table_metadata_table'         => "#{rack_env}_table_metadata",
-    'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
+    'dynamo_table_metadata_table' => "#{rack_env}_table_metadata",
+    'throttle_data_apis' => [:staging, :adhoc, :test, :production].include?(rack_env),
     'firebase_max_channel_writes_per_15_sec' => 300,
     'firebase_max_channel_writes_per_60_sec' => 600,
     'firebase_max_table_rows'     => 1000,
@@ -126,7 +126,7 @@ def load_configuration
     config.merge! global_config
     config.merge! local_config
 
-    config['channels_api_secret']     ||= config['poste_secret']
+    config['channels_api_secret'] ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
