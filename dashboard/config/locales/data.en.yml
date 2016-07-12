@@ -175,7 +175,7 @@ en:
         'bounce_5': "We're going to send a ball flying down towards the paddle. Attach a block to the \"when ball hits paddle\" block to ensure the ball reaches the finish target."
         'bounce_6': "Now the finish target is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
         'bounce_7': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the finish target."
-        'bounce_10': "There is a now a goal at the top. Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses paddle\" blocks to make a game. See how many points you can score before your opponent scores twice."
+        'bounce_10': "There is now a goal at the top. Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses paddle\" blocks to make a game. See how many points you can score before your opponent scores twice."
         'bounce_11': "You can now attach blocks to the \"when run\" block. You have to attach the new \"launch new ball\" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice."
         'bounce_12': "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
         'Custom_builder': "Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press \"Run\" when you are ready."
