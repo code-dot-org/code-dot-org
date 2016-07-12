@@ -22,7 +22,7 @@ Scenario: Top Instructions
 
   Then I close the dialog
   And I press "runButton"
-  And I wait to see ".topInstructions-inline-feedback"
+  And I wait to see ".uitest-topInstructions-inline-feedback"
   And I see no difference for "maze with hints"
 
   Then I am on "http://learn.code.org/s/course4/stage/19/puzzle/3?noautoplay=true&enableExperiments=topInstructionsCSF"
