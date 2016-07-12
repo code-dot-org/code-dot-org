@@ -40,7 +40,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to 'http://test.host/users/sign_up'
-    attributes =  session['devise.user_attributes']
+    attributes = session['devise.user_attributes']
 
     assert_equal nil, attributes['email']
     assert_equal nil, attributes['age']
@@ -155,7 +155,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to 'http://test.host/users/sign_up'
-    attributes =  session['devise.user_attributes']
+    attributes = session['devise.user_attributes']
 
     assert_equal nil, attributes['email']
   end

@@ -81,14 +81,14 @@ def analyze_day_fast(date)
   finished = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{weighted_count} #{finished_from_where}").first[:count].to_i
 
   {
-    'started'=>started,
-    'finished'=>finished,
-    'cities'=>cities,
-    'states'=>states,
-    'countries'=>countries,
-    'tutorials'=>tutorials,
-    'codedotorg_tutorial_count'=>codedotorg_tutorial_count,
-    'votes'=>{ 'boys'=>'0', 'girls'=>'0' },
+    'started' => started,
+    'finished' => finished,
+    'cities' => cities,
+    'states' => states,
+    'countries' => countries,
+    'tutorials' => tutorials,
+    'codedotorg_tutorial_count' => codedotorg_tutorial_count,
+    'votes' => { 'boys' => '0', 'girls' => '0' },
   }
 end
 
