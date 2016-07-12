@@ -1,17 +1,15 @@
 <StandaloneVideo>
   <config><![CDATA[{
   "game_id": 54,
-  "created_at": "2016-07-11T19:03:05.851Z",
+  "created_at": "2016-07-12T14:11:15.291Z",
   "level_num": "custom",
   "user_id": 285,
   "properties": {
-    "video_key": "C4_conditionals",
+    "video_key": "playlab_events",
     "skip_dialog": true,
     "skip_sound": true
   },
   "published": true,
-  "notes": "",
-  "level_concept_difficulty": {
-  }
+  "notes": ""
 }]]></config>
 </StandaloneVideo>

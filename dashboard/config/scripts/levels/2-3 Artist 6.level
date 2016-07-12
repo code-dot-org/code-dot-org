@@ -32,8 +32,8 @@
     "disable_sharing": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"To make those little angles, you have to turn *farther* each time than you did with the square.   \",\r\n  \"hint_id\": \"2-3_Artist_6_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.\",\r\n  \"hint_id\": \"2-3_Artist_6_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Each side of the triangle is the same length as each side of the square...100 pixels!\",\r\n  \"hint_id\": \"2-3_Artist_6_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
-    "contained_level_names": null,
-    "discard_background": "false"
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
