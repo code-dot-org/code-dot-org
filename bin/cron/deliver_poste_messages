@@ -207,11 +207,11 @@ class Deliverer
     raise ArgumentError, "[Poste] '#{name}' template wasn't found." unless path
 
     engine = {
-      '.haml'=>TextRender::HamlEngine,
-      '.html'=>TextRender::ErbEngine,
-      '.md'=>TextRender::MarkdownEngine,
-      '.txt'=>TextRender::MarkdownEngine,
-      '.yml'=>TextRender::YamlEngine,
+      '.haml' => TextRender::HamlEngine,
+      '.html' => TextRender::ErbEngine,
+      '.md' => TextRender::MarkdownEngine,
+      '.txt' => TextRender::MarkdownEngine,
+      '.yml' => TextRender::YamlEngine,
     }[File.extname(path).downcase]
 
     @templates[name] = Poste::Template.new IO.read(path), engine

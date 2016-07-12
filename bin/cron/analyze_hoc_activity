@@ -69,7 +69,7 @@ def main
     total_finished += day_data['finished'] if day_data['finished']
     total_tutorials = add_hashes(total_tutorials, day_data['tutorials'])
     total_cities = add_hashes(total_cities, day_data['cities'])
-    total_states = add_hashes(total_states, day_data['states']||{})
+    total_states = add_hashes(total_states, day_data['states'] || {})
     total_countries = add_hashes(total_countries, day_data['countries'])
     total_codedotorg += day_data['codedotorg_tutorial_count'] if day_data['codedotorg_tutorial_count']
 

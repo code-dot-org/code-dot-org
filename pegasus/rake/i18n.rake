@@ -25,7 +25,7 @@ def hash_to_yml_with_quoted_values(hash, yml_path)
 
   File.open(yml_path, 'wb') do |file|
     buffer.each_line do |line|
-      next if line=="---\n"
+      next if line == "---\n"
       next if line.empty?
       file.write(format_enus_yml_with_quotes(line))
     end
@@ -48,10 +48,10 @@ namespace :i18n do
       en_us = {}
       line = 1
       CSV.parse(file.spreadsheet_csv) do |row|
-        en_us[row[0]]=row[1] unless line == 1
+        en_us[row[0]] = row[1] unless line == 1
         line += 1
       end
-      hash_to_yml_with_quoted_values({'en-US'=>en_us}, path)
+      hash_to_yml_with_quoted_values({'en-US' => en_us}, path)
       File.utime(File.atime(path), mtime, path)
     end
   end

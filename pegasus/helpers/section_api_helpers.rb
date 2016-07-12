@@ -12,8 +12,8 @@ class DashboardStudent
   # Returns all users who are followers of the user with ID user_id.
   def self.fetch_user_students(user_id)
     Dashboard.db[:users].
-      join(:followers, :student_user_id=>:users__id).
-      join(Sequel.as(:users, :users_students), :id=>:followers__student_user_id).
+      join(:followers, :student_user_id => :users__id).
+      join(Sequel.as(:users, :users_students), :id => :followers__student_user_id).
       where(followers__user_id: user_id, followers__deleted_at: nil).
       where(users_students__deleted_at: nil).
       select(*fields).
@@ -291,7 +291,7 @@ class DashboardSection
     # get all the students passwords when we get the list of sections).
 
     return nil unless row = Dashboard.db[:sections].
-      join(:users, :id=>:user_id).
+      join(:users, :id => :user_id).
       where(sections__id: id, sections__deleted_at: nil).
       select(*fields).
       first
@@ -303,7 +303,7 @@ class DashboardSection
 
   def self.fetch_if_teacher(id, user_id)
     return nil unless row = Dashboard.db[:sections].
-      join(:users, :id=>:user_id).
+      join(:users, :id => :user_id).
       select(*fields).
       where(sections__id: id, sections__deleted_at: nil).
       first
@@ -317,7 +317,7 @@ class DashboardSection
     return if user_id.nil?
 
     Dashboard.db[:sections].
-      join(:users, :id=>:user_id).
+      join(:users, :id => :user_id).
       select(*fields).
       where(sections__user_id: user_id, sections__deleted_at: nil).
       map{|row| self.new(row).to_owner_hash}
@@ -328,8 +328,8 @@ class DashboardSection
 
     Dashboard.db[:sections].
       select(*fields).
-      join(:followers, :section_id=>:id).
-      join(:users, :id=>:student_user_id).
+      join(:followers, :section_id => :id).
+      join(:users, :id => :student_user_id).
       where(student_user_id: student_id).
       where(sections__deleted_at: nil, followers__deleted_at: nil).
       map{|row| self.new(row).to_member_hash}

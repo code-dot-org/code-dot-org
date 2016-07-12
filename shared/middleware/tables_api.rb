@@ -192,7 +192,7 @@ class TablesApi < Sinatra::Base
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
   post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)/delete$} do |_endpoint, _channel_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
   def get_approximate_record_size(table_name, record_json)
@@ -260,11 +260,11 @@ class TablesApi < Sinatra::Base
   end
 
   patch %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |_endpoint, _channel_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'POST'))
+    call(env.merge('REQUEST_METHOD' => 'POST'))
   end
 
   put %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |_endpoint, _channel_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'POST'))
+    call(env.merge('REQUEST_METHOD' => 'POST'))
   end
 
   # GET /v3/export-(shared|user)-tables/<channel-id>/table-name
