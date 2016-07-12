@@ -1,17 +1,16 @@
 name 'CSPPD2 lesson 1 reflection'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
-### Welcome to the Course > Lesson 1 Discussion
+# Welcome to the Course > Lesson 1 Discussion
 
-<img src="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/kROPqudAyIm2zdw/Screen%20Shot%202015-07-17%20at%209.49.21%20PM.png" width=350 style="float:right; margin-left:30px">
-<br><br><br>
-#### Reminder: Accessing Forums
+<img src="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/kROPqudAyIm2zdw/Screen%20Shot%202015-07-17%20at%209.49.21%20PM.png" class="level-image">
+
+## Reminder: Accessing Forums
 *Each lesson plan includes a link to a dedicated forum thread in the "Materials and Prep" section on the right side of the first page (shown on the right). You can always access the thread for a given lesson by following the link inside the lesson*. 
-<br><br><br><br>
-<a href="http://www.google.com/url?q=http%3A%2F%2Fforum.code.org%2Ft%2Flesson-1-the-impact-of-innovation%2F586%2F1&sa=D&sntz=1&usg=AFQjCNG6jca0p_Sge_wiKDUWG-2nedKqUQ" target="blank"><button class="plc">Forum Thread for Lesson 1 >></button></a>
-<br><br>
->#### Assignment: Post to forum with thoughts on Lesson 1
+
+<h4><a href="http://www.google.com/url?q=http%3A%2F%2Fforum.code.org%2Ft%2Flesson-1-the-impact-of-innovation%2F586%2F1&sa=D&sntz=1&usg=AFQjCNG6jca0p_Sge_wiKDUWG-2nedKqUQ" target="blank">Forum Thread for Lesson 1 <i class="fa fa-external-link-square" /></a></h4>
+
+>## Assignment: Post to forum with thoughts on Lesson 1
 Now that you've read more about lesson 1, use the forum to discuss your questions about and plans for the lesson. **For example, consider questions like**:
 
 >- What will you use from the **provided lesson materials?** 
@@ -20,9 +19,8 @@ Now that you've read more about lesson 1, use the forum to discuss your question
 - What **content questions** do you have about the lesson? 
 
 Be on the lookout for questions from other that you feel comfortable answering, and make note of any strategies or ideas you want to borrow from others for teaching the lesson! 
-<br><br>
-#####  **Once you've posted in the forum, click continue below**
-<br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
+**Once you've posted in the forum, click continue below.**
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

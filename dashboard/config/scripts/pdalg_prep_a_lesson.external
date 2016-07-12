@@ -2,13 +2,11 @@ name 'PDAlg Prep a Lesson'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
-### LESSON PREP > Prepping a mini lesson
+# Lesson Prep > Prepping a mini lesson
 
 In preparation for your next in-person PD (refer to dates [here](https://code.org/educate/pd/15-16)) you're going to work on preparing a mini lesson using one of the sandbox environments. The best way to help students build strong connections between the skills they are learning in this course and their application in algebra is to break down the barrier between CS lessons and text book lessons. By using the Design Recipe on problems outside of the curriculum, students will start to see it as a tool in their back pocket that can be used whenever it becomes useful.
 
-#### Artfully chosen problems
+## Artfully chosen problems
 
 The lesson you're going to teach in PD will be about using the Design Recipe to write a program based on a word problem you've chosen. This can be a word problem from your text book, something you've found elsewhere, or a problem of your own design. As you're selecting a problem, consider the following:
 
@@ -17,14 +15,11 @@ The lesson you're going to teach in PD will be about using the Design Recipe to 
 - Is it solvable with the blocks available?
 - Do you want a problem that is strictly mathy, or something that incorporates other data types?
 
-#### Make it worth programming
+## Make it worth programming
 
 Once you've selected a word problem, consider how you might modify it to make it feel more worthy of writing a program for. Could this be the first step to writing a mobile app? Could you integrate graphics into the problem to make it more visually appealing?
-<br><br>
+
 When you have a problem in mind, continue to the next step.
 
-<br><br>
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

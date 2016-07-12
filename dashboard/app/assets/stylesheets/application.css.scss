@@ -76,6 +76,7 @@ h2 {
   font-family: $gotham-bold;
   font-weight: normal;
   font-size: 22px;
+  line-height: 30px;
   color: $teal;
 }
 
@@ -1765,17 +1766,29 @@ a.download-video {
     background: $lightest_purple;
     border: 0;
     border-radius: 10px;
-    overflow: hidden;
+    clear: both;
+    p {
+      margin-bottom: 10px;
+    }
   }
 }
 
 .level-image {
-  width: 40%;
+  width: 380px;
   float: right;
-  margin: 0 0 20px 30px;
+  margin: 20px 0 30px 30px;
   transform: rotate(2deg);
   box-shadow: 2px 2px 10px $shadow;
   border: 1px solid $lighter_gray;
+}
+
+.external, .free-response {
+  max-width: 970px;
+  margin: auto;
+}
+
+.free-response .response {
+  width: 100%;
 }
 
 .standalone-video {
