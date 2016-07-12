@@ -1011,31 +1011,31 @@ function Sprite(pInst, _x, _y, _w, _h) {
   */
   this.mouseIsPressed = false;
 
-  /**
+  /*
   * Width of the sprite's current image.
   * If no images or animations are set it's the width of the
   * placeholder rectangle.
-  * Used internally to make calculations.
+  * Used internally to make calculations and draw the sprite.
   *
-  * @property internalWidth
+  * @private
+  * @property _internalWidth
   * @type {Number}
   * @default 100
   */
+  this._internalWidth = _w;
 
-  this.internalWidth = _w;
-
-  /**
+  /*
   * Height of the sprite's current image.
   * If no images or animations are set it's the height of the
   * placeholder rectangle.
-  * Used internally to make calculations.
+  * Used internally to make calculations and draw the sprite.
   *
-  * @property internalHeight
+  * @private
+  * @property _internalHeight
   * @type {Number}
   * @default 100
   */
-
-  this.internalHeight = _h;
+  this._internalHeight = _h;
 
   /**
   * Width of the sprite's current image.
@@ -1046,15 +1046,14 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @type {Number}
   * @default 100
   */
-
   Object.defineProperty(this, 'width', {
     enumerable: true,
     configurable: true,
     get: function() {
-      return this.internalWidth;
+      return this._internalWidth;
     },
     set: function(value) {
-      this.internalWidth = value;
+      this._internalWidth = value;
     }
   });
 
@@ -1072,15 +1071,14 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @type {Number}
   * @default 100
   */
-
   Object.defineProperty(this, 'height', {
     enumerable: true,
     configurable: true,
     get: function() {
-      return this.internalHeight;
+      return this._internalHeight;
     },
     set: function(value) {
-      this.internalHeight = value;
+      this._internalHeight = value;
     }
   });
 
@@ -1098,7 +1096,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @type {Number}
   * @default 100
   */
-  this.originalWidth = this.internalWidth;
+  this.originalWidth = this._internalWidth;
 
   /**
   * Unscaled height of the sprite
@@ -1109,7 +1107,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @type {Number}
   * @default 100
   */
-  this.originalHeight = this.internalHeight;
+  this.originalHeight = this._internalHeight;
 
   /**
   * True if the sprite has been removed.
@@ -1222,17 +1220,17 @@ function Sprite(pInst, _x, _y, _w, _h) {
         {
         this.collider = this.getBoundingBox();
         this.colliderType = 'image';
-        this.internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
-        this.internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
+        this._internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
+        this._internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
         //quadTree.insert(this);
         }
 
         //update size and collider
-        if(animations[currentAnimation].frameChanged || this.internalWidth === undefined || this.internalHeight === undefined)
+        if(animations[currentAnimation].frameChanged || this._internalWidth === undefined || this._internalHeight === undefined)
         {
         //this.collider = this.getBoundingBox();
-        this.internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
-        this.internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
+        this._internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
+        this._internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
         }
       }
 
@@ -1267,11 +1265,11 @@ function Sprite(pInst, _x, _y, _w, _h) {
           }
         else if(this.colliderType === 'image')
           {
-          this.collider.extents.x = this.internalWidth * abs(cos(t)) +
-          this.internalHeight * abs(sin(t));
+          this.collider.extents.x = this._internalWidth * abs(cos(t)) +
+          this._internalHeight * abs(sin(t));
 
-          this.collider.extents.y = this.internalWidth * abs(sin(t)) +
-          this.internalHeight * abs(cos(t));
+          this.collider.extents.y = this._internalWidth * abs(sin(t)) +
+          this._internalHeight * abs(cos(t));
           }
         }
 
@@ -1333,8 +1331,8 @@ function Sprite(pInst, _x, _y, _w, _h) {
     if(animations[currentAnimation] && (animations[currentAnimation].getWidth() !== 1 && animations[currentAnimation].getHeight() !== 1))
     {
       this.collider = this.getBoundingBox();
-      this.internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
-      this.internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
+      this._internalWidth = animations[currentAnimation].getWidth()*abs(this.scale);
+      this._internalHeight = animations[currentAnimation].getHeight()*abs(this.scale);
       //quadTree.insert(this);
       this.colliderType = 'image';
       //print("IMAGE COLLIDER ADDED");
@@ -1346,7 +1344,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
     }
     else //get the with and height defined at the creation
     {
-      this.collider = new AABB(pInst, this.position, createVector(this.internalWidth, this.internalHeight));
+      this.collider = new AABB(pInst, this.position, createVector(this._internalWidth, this._internalHeight));
       //quadTree.insert(this);
       this.colliderType = 'default';
     }
@@ -1609,7 +1607,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
     {
       noStroke();
       fill(this.shapeColor);
-      rect(0, 0, this.internalWidth, this.internalHeight);
+      rect(0, 0, this._internalWidth, this._internalHeight);
     }
   };
 
@@ -3260,22 +3258,22 @@ defineLazyP5Property('AABB', boundConstructorFactory(AABB));
    * "data/file0003.png" and "data/file0004.png" will be loaded as well.
    *
    * @example
-	* <code>
-	* var sequenceAnimation;<br>
+  * <code>
+  * var sequenceAnimation;<br>
    * var glitch;<br><br>
-	* function preload() {<br>
+  * function preload() {<br>
    *   sequenceAnimation = loadAnimation("data/walking0001.png", "data/walking0005.png");<br>
    *   glitch = loadAnimation("data/dog.png", "data/horse.png", "data/cat.png", "data/snake.png");<br>
    * }<br><br>
-	* function setup() {<br>
-	*   createCanvas(800, 600);<br>
-	* }<br><br>
-	* function draw() {<br>
-	*   background(0);<br>
-	*   animation(sequenceAnimation, 100, 100);<br>
+  * function setup() {<br>
+  *   createCanvas(800, 600);<br>
+  * }<br><br>
+  * function draw() {<br>
+  *   background(0);<br>
+  *   animation(sequenceAnimation, 100, 100);<br>
    *   animation(glitch, 200, 100);<br>
-	* }
-	* </code>
+  * }
+  * </code>
    *
    * @class Animation
    * @constructor
@@ -3863,7 +3861,7 @@ function SpriteSheet(pInst) {
   this.drawFrame = function(frame_name, x, y, width, height) {
     var frameToDraw;
     if (typeof frame_name === 'number') {
-      frameToDraw = this.frames[frame_name];
+      frameToDraw = this.frames[frame_name].frame;
     } else {
       for (var i = 0; i < this.frames.length; i++) {
         if (this.frames[i].name === frame_name) {
@@ -3938,15 +3936,15 @@ function construct(constructor, args) {
 function Quadtree( bounds, max_objects, max_levels, level ) {
 
   this.active = true;
-  this.max_objects	= max_objects || 10;
-  this.max_levels		= max_levels || 4;
+  this.max_objects  = max_objects || 10;
+  this.max_levels   = max_levels || 4;
 
-  this.level 			= level || 0;
-  this.bounds 		= bounds;
+  this.level      = level || 0;
+  this.bounds     = bounds;
 
-  this.objects 		= [];
-  this.object_refs	= [];
-  this.nodes 			= [];
+  this.objects    = [];
+  this.object_refs  = [];
+  this.nodes      = [];
 }
 
 Quadtree.prototype.updateBounds = function() {
@@ -3981,61 +3979,61 @@ Quadtree.prototype.updateBounds = function() {
 };
 
 /*
-	 * Split the node into 4 subnodes
-	 */
+   * Split the node into 4 subnodes
+   */
 Quadtree.prototype.split = function() {
 
-  var nextLevel	= this.level + 1,
-      subWidth	= Math.round( this.bounds.width / 2 ),
-      subHeight 	= Math.round( this.bounds.height / 2 ),
-      x 			= Math.round( this.bounds.x ),
-      y 			= Math.round( this.bounds.y );
+  var nextLevel = this.level + 1,
+      subWidth  = Math.round( this.bounds.width / 2 ),
+      subHeight   = Math.round( this.bounds.height / 2 ),
+      x       = Math.round( this.bounds.x ),
+      y       = Math.round( this.bounds.y );
 
   //top right node
   this.nodes[0] = new Quadtree({
-    x	: x + subWidth,
-    y	: y,
-    width	: subWidth,
-    height	: subHeight
+    x : x + subWidth,
+    y : y,
+    width : subWidth,
+    height  : subHeight
   }, this.max_objects, this.max_levels, nextLevel);
 
   //top left node
   this.nodes[1] = new Quadtree({
-    x	: x,
-    y	: y,
-    width	: subWidth,
-    height	: subHeight
+    x : x,
+    y : y,
+    width : subWidth,
+    height  : subHeight
   }, this.max_objects, this.max_levels, nextLevel);
 
   //bottom left node
   this.nodes[2] = new Quadtree({
-    x	: x,
-    y	: y + subHeight,
-    width	: subWidth,
-    height	: subHeight
+    x : x,
+    y : y + subHeight,
+    width : subWidth,
+    height  : subHeight
   }, this.max_objects, this.max_levels, nextLevel);
 
   //bottom right node
   this.nodes[3] = new Quadtree({
-    x	: x + subWidth,
-    y	: y + subHeight,
-    width	: subWidth,
-    height	: subHeight
+    x : x + subWidth,
+    y : y + subHeight,
+    width : subWidth,
+    height  : subHeight
   }, this.max_objects, this.max_levels, nextLevel);
 };
 
 
 /*
-	 * Determine the quadtrant for an area in this node
-	 */
+   * Determine the quadtrant for an area in this node
+   */
 Quadtree.prototype.getIndex = function( pRect ) {
   if(!pRect.collider)
     return -1;
   else
   {
-    var index 				= -1,
-        verticalMidpoint 	= this.bounds.x + (this.bounds.width / 2),
-        horizontalMidpoint 	= this.bounds.y + (this.bounds.height / 2),
+    var index         = -1,
+        verticalMidpoint  = this.bounds.x + (this.bounds.width / 2),
+        horizontalMidpoint  = this.bounds.y + (this.bounds.height / 2),
 
         //pRect can completely fit within the top quadrants
         topQuadrant = (pRect.collider.top() < horizontalMidpoint && pRect.collider.top() + pRect.collider.size().y < horizontalMidpoint),
@@ -4066,10 +4064,10 @@ Quadtree.prototype.getIndex = function( pRect ) {
 
 
 /*
-	 * Insert an object into the node. If the node
-	 * exceeds the capacity, it will split and add all
-	 * objects to their corresponding subnodes.
-	 */
+   * Insert an object into the node. If the node
+   * exceeds the capacity, it will split and add all
+   * objects to their corresponding subnodes.
+   */
 Quadtree.prototype.insert = function( obj ) {
   //avoid double insertion
   if(this.objects.indexOf(obj) === -1)
@@ -4114,8 +4112,8 @@ Quadtree.prototype.insert = function( obj ) {
 
 
 /*
-	 * Return all objects that could collide with a given area
-	 */
+   * Return all objects that could collide with a given area
+   */
 Quadtree.prototype.retrieve = function( pRect ) {
 
 
@@ -4153,8 +4151,8 @@ Quadtree.prototype.retrieveFromGroup = function( pRect, group ) {
 };
 
 /*
-	 * Get all objects stored in the quadtree
-	 */
+   * Get all objects stored in the quadtree
+   */
 Quadtree.prototype.getAll = function() {
 
   var objects = this.objects;
@@ -4168,8 +4166,8 @@ Quadtree.prototype.getAll = function() {
 
 
 /*
-	 * Get the node in which a certain object is stored
-	 */
+   * Get the node in which a certain object is stored
+   */
 Quadtree.prototype.getObjectNode = function( obj ) {
 
   var index;
@@ -4200,9 +4198,9 @@ Quadtree.prototype.getObjectNode = function( obj ) {
 
 
 /*
-	 * Removes a specific object from the quadtree
-	 * Does not delete empty subnodes. See cleanup-function
-	 */
+   * Removes a specific object from the quadtree
+   * Does not delete empty subnodes. See cleanup-function
+   */
 Quadtree.prototype.removeObject = function( obj ) {
 
   var node = this.getObjectNode( obj ),
@@ -4215,8 +4213,8 @@ Quadtree.prototype.removeObject = function( obj ) {
 
 
 /*
-	 * Clear the quadtree and delete all objects
-	 */
+   * Clear the quadtree and delete all objects
+   */
 Quadtree.prototype.clear = function() {
 
   this.objects = [];
@@ -4233,9 +4231,9 @@ Quadtree.prototype.clear = function() {
 
 
 /*
-	 * Clean up the quadtree
-	 * Like clear, but objects won't be deleted but re-inserted
-	 */
+   * Clean up the quadtree
+   * Like clear, but objects won't be deleted but re-inserted
+   */
 Quadtree.prototype.cleanup = function() {
 
   var objects = this.getAll();
