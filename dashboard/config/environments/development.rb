@@ -14,7 +14,7 @@ Dashboard::Application.configure do
   config.static_cache_control = 'must-revalidate, max-age=0'
 
   # Show full error reports
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local = true
 
   config.action_mailer.delivery_method = Poste2::DeliveryMethod
 

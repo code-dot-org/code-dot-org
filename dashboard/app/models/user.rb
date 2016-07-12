@@ -649,7 +649,7 @@ SQL
   # https://github.com/plataformatec/devise/blob/master/lib/devise/models/database_authenticatable.rb#L46
   def valid_password?(password)
     return false if encrypted_password.blank?
-    bcrypt   = ::BCrypt::Password.new(encrypted_password)
+    bcrypt = ::BCrypt::Password.new(encrypted_password)
     # check with the pepper
     spicy_password = ::BCrypt::Engine.hash_secret("#{password}#{self.class.pepper}", bcrypt.salt)
     if Devise.secure_compare(spicy_password, encrypted_password)
