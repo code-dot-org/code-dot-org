@@ -31,7 +31,6 @@ class ScriptDSL < BaseDSL
   string :description
   string :description_audience
   string :professional_learning_course
-  integer :peer_reviews_to_complete
 
   boolean :hidden
   boolean :login_required
@@ -63,8 +62,7 @@ class ScriptDSL < BaseDSL
       admin_required: @admin_required,
       pd: @pd,
       student_of_admin_required: @student_of_admin_required,
-      professional_learning_course: @professional_learning_course,
-      peer_reviews_to_complete: @peer_reviews_to_complete
+      professional_learning_course: @professional_learning_course
     }
   end
 
