@@ -66,18 +66,4 @@ class SectionTest < ActiveSupport::TestCase
 
     assert !Section.exists?(section.id)
   end
-
-  # Make sure the type field can be set and queried.
-  # https://github.com/code-dot-org/code-dot-org/pull/9341 added the type column,
-  # but type is the default column used by STI and setting it to any value caused
-  # ActiveRecord::SubclassNotFound errors on queries.
-  # Fixed by disabling STI via `self.inheritance_column = nil` in the model.
-  test 'type field can be set and queried' do
-    type = SecureRandom.hex(10)
-    create(:section, type: type)
-
-    # With STI enabled, this next line would fail with ActiveRecord::SubclassNotFound
-    section = Section.last
-    assert_equal type, section.type
-  end
 end
