@@ -3,6 +3,7 @@
 
 import React from 'react';
 import Radium from 'radium';
+import color from '../../color';
 import gamelabMsg from '../locale';
 import animationLibrary from '../animationLibrary';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
@@ -23,6 +24,9 @@ const AnimationPickerBody = React.createClass({
         <h1 style={styles.title}>
           {gamelabMsg.animationPicker_title()}
         </h1>
+        <WarningLabel>
+          {gamelabMsg.animationPicker_warning()}
+        </WarningLabel>
         <AnimationPickerSearchBar />
         <ScrollableList style={{maxHeight: 400}}> {/* TODO: Is this maxHeight appropriate? */}
           <AnimationPickerListItem
@@ -49,3 +53,15 @@ const AnimationPickerBody = React.createClass({
   }
 });
 export default Radium(AnimationPickerBody);
+
+const WarningLabel = ({children}) => (
+    <span style={warningLabelStyle}>
+      {children}
+    </span>
+);
+WarningLabel.propTypes = {
+  children: React.PropTypes.node
+};
+const warningLabelStyle = {
+  color: color.red
+};
