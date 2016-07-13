@@ -246,6 +246,14 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 'http://test.host/sms/send', app_options[:send_to_phone_url]
   end
 
+  test 'submittable level is submittable for teacher enrolled in plc' do
+    @level = create(:free_response, submittable: true, peer_reviewable: true)
+
+    user = create(:teacher)
+    sign_in user
+    
+  end
+
   test 'submittable level is submittable for student with teacher' do
     @level = create(:applab, submittable: true)
 

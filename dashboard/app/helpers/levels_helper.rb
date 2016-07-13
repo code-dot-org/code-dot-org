@@ -246,8 +246,8 @@ module LevelsHelper
     level_options[:lastAttempt] = @last_attempt
     level_options.merge! @level.properties.camelize_keys
 
-    if current_user.nil? || current_user.teachers.empty?
-      # only students with teachers should be able to submit
+    unless current_user && (current_user.teachers.any? || (@level.peer_reviewable && Plc::UserCourseEnrollment.exists?(user: current_user)))
+      # only students with teachers or teachers enrolled in PLC submitting for a peer reviewable level
       level_options['submittable'] = false
     end
 
