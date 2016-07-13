@@ -156,28 +156,29 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'Merging peer review progress merges progress for enrolled users' do
-    @script.update(professional_learning_course: true)
+    @script.update(professional_learning_course: true, peer_reviews_to_complete: 3)
     Plc::UserCourseEnrollment.create(user: @user, plc_course: @script.plc_course_unit.plc_course)
 
     assert PeerReview.get_peer_review_summaries(@user, @script).empty?
 
     submitter_1 = create :teacher
     submitter_2 = create :teacher
+    submitter_3 = create :teacher
 
     level_source_1 = create(:level_source, data: 'Some answer')
     level_source_2 = create(:level_source, data: 'Other answer')
+    level_source_3 = create(:level_source, data: 'Unreviewed answer')
 
-    Activity.create!(user: submitter_1, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source_1)
-    track_progress(level_source_1.id, submitter_1)
-
-    Activity.create!(user: submitter_2, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source_2)
-    track_progress(level_source_2.id, submitter_2)
+    [[submitter_1, level_source_1], [submitter_2, level_source_2], [submitter_3, level_source_3]].each do |submitter, level_source|
+      Activity.create!(user: submitter, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source)
+      track_progress(level_source.id, submitter)
+    end
 
     first_review = PeerReview.pull_review_from_pool(@script, @user)
     first_review.update!(status: 'accepted')
     second_review = PeerReview.pull_review_from_pool(@script, @user)
 
-    #Expect two peer reviews, one marked complete, the other not complete
+    #Expect three peer reviews, one marked complete, one not complete, and one for pulling a new review
     expected_review = [
         {
             id: first_review.id,
@@ -191,6 +192,13 @@ class PeerReviewTest < ActiveSupport::TestCase
             status: 'not_started',
             name: I18n.t('peer_review.review_in_progress'),
             result: ActivityConstants::UNSUBMITTED_RESULT,
+            locked: false
+        },
+        {
+            status: 'not_started',
+            name: 'Review a new submission',
+            result: ActivityConstants::UNSUBMITTED_RESULT,
+            icon: '',
             locked: false
         }
     ]

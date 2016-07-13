@@ -15,19 +15,27 @@ class PeerReviewsController < ApplicationController
 
   def pull_review
     script = Script.find_by_name(params[:script_id])
+
+    # If the user is not enrolled in this script, don't let them pull a review
+    unless Plc::EnrollmentUnitAssignment.exists?(user: current_user, plc_course_unit: script.plc_course_unit)
+      flash[:notice] = t('peer_review.must_be_enrolled')
+      redirect_to script_path(script)
+      return
+    end
+
     peer_review = PeerReview.pull_review_from_pool(script, current_user)
 
     if peer_review
       redirect_to peer_review_path(peer_review)
     else
-      flash[:notice] = 'There are no peer reviews available at this moment, please check back soon'
+      flash[:notice] = t('peer_review.no_reviews_at_this_moment_notice')
       redirect_to script_path(script)
     end
   end
 
   def update
     if @peer_review.update(peer_review_params.merge(reviewer: current_user))
-      flash[:notice] = 'Your peer review was submitted'
+      flash[:notice] = t('peer_review.review_submitted')
       redirect_to script_path(@peer_review.script)
     else
       render action: :show
