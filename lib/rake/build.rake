@@ -60,9 +60,11 @@ namespace :build do
   # code-studio to make sure we don't have artifacts from old builds
   desc 'Builds code studio.'
   task :code_studio do
-    Dir.chdir(code_studio_dir) do
-      HipChat.log 'Removing <b>code-studio</b>...'
-      RakeUtils.system 'rm -rf build'
+    if File.exist?(code_studio_dir)
+      Dir.chdir(code_studio_dir) do
+        HipChat.log 'Removing <b>code-studio</b>...'
+        RakeUtils.system 'rm -rf build'
+      end
     end
   end
   task :'code-studio' => :code_studio
