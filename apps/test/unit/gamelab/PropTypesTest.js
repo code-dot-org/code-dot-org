@@ -109,6 +109,17 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
     })).to.throw(Error,
         'Name "duplicate" appears more than once in propsByKey');
   });
+
+  it('does not throw if it finds an unexpected property', function () {
+    const keys = ['mykey'];
+    let props = buildValidPropsForKeys(keys);
+    props['mykey'].extraStuff = 'here is something else';
+    expect(() => throwIfSerializedAnimationListIsInvalid({
+      orderedKeys: keys,
+      propsByKey: props,
+      somethingElse: {}
+    })).not.to.throw();
+  });
 });
 
 function buildValidPropsForKeys(keys) {
