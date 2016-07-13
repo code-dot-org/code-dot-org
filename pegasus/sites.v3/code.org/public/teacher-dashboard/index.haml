@@ -739,6 +739,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.tab = 'assessments';
 
     $scope.assessments = sectionsService.assessments({id: $routeParams.id});
+    $scope.surveys = sectionsService.surveys({id: $routeParams.id});
+
     // error handling
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
@@ -763,14 +765,18 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     );
 
     $scope.assessmentsLoaded = false;
-    $scope.stages = [];
+    $scope.assessmentStages = [];
+
+    $scope.surveysLoaded = false;
+    $scope.surveyStages = [];
 
     $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
     // wait until we have both the students and the student progress
-    $q.all([$scope.section.$promise, $scope.assessments.$promise]).then(function(){
+    $q.all([$scope.section.$promise, $scope.assessments.$promise, $scope.surveys.$promise]).then(function(){
       $scope.assessmentsLoaded = true;
-      $scope.findStages();
+      $scope.assessmentStages = $scope.findStages($scope.assessments);
+      $scope.surveyStages = $scope.findStages($scope.surveys);
     });
 
     var submission_list = {
@@ -787,7 +793,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.changeScript = function(scriptId) {
       $scope.assessmentsLoaded = false;
-      $scope.stages = [];
+      $scope.assessmentStages = [];
 
       // Load assessments
 
@@ -797,7 +803,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
       $scope.assessments.$promise.then(function(){
         $scope.assessmentsLoaded = true;
-        $scope.findStages();
+        $scope.assessmentStages = $scope.findStages($scope.assessments);
 
         $.each($scope.assessments, function(index, assessment) {
 
@@ -838,70 +844,73 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
       $scope.surveys.$promise.then(function(){
         $scope.surveysLoaded = true;
+        $scope.surveyStages = $scope.findStages($scope.surveys);
 
         $.each($scope.surveys, function(survey_index, survey) {
 
           survey.status = survey.submitted ? submission_list.submitted : submission_list.in_progress;
 
-          // Each LevelGroup's result has a list of the results for the levels in that order.
-          // Because angular's nested iterators are kind of funky when trying to generate a table,
-          // let's just generate a flat list of the level results to go into $scope.
-          $.each(survey.levelgroup_results, function(sublevel_index, sublevel_results) {
+          if (survey.levelgroup_results) {
+            // Each LevelGroup's result has a list of the results for the levels in that order.
+            // Because angular's nested iterators are kind of funky when trying to generate a table,
+            // let's just generate a flat list of the level results to go into $scope.
+            $.each(survey.levelgroup_results, function(sublevel_index, sublevel_results) {
 
-            var questionText = sublevel_results.question;
+              var questionText = sublevel_results.question;
 
-            // How many students answered this question?
-            var resultsLength = sublevel_results.results.length;
+              // How many students answered this question?
+              var resultsLength = sublevel_results.results.length;
 
-            // There can be multiple results for each sublevel.
-            $.each(sublevel_results.results, function(sublevel_result_index, sublevel_result) {
+              // There can be multiple results for each sublevel.
+              $.each(sublevel_results.results, function(sublevel_result_index, sublevel_result) {
 
-              // Disambiguate free responses that are unsubmitted and that are empty strings.
-              if (sublevel_result.result === undefined || sublevel_result.result === "") {
-                sublevel_result.result = null;
-              }
+                // Disambiguate free responses that are unsubmitted and that are empty strings.
+                if (sublevel_result.result === undefined || sublevel_result.result === "") {
+                  sublevel_result.result = null;
+                }
 
-              // Do we already have this level result?  If so, bump the count, otherwise create and
-              // add it.
+                // Do we already have this level result?  If so, bump the count, otherwise create and
+                // add it.
 
-              var existingLevelResult = $scope.surveyLevels.find(function (entry) {
-                return entry.result === sublevel_result.result &&
-                       entry.stage === survey.stage &&
-                       entry.puzzle === survey.puzzle &&
-                       entry.question === parseInt(sublevel_index) + 1;
+                var existingLevelResult = $scope.surveyLevels.find(function (entry) {
+                  return entry.result === sublevel_result.result &&
+                         entry.stage === survey.stage &&
+                         entry.puzzle === survey.puzzle &&
+                         entry.question === parseInt(sublevel_index) + 1;
+                });
+
+                if (existingLevelResult) {
+                  existingLevelResult.count++;
+                  if (existingLevelResult.percent !== null) {
+                    existingLevelResult.percent = Math.round(existingLevelResult.count / resultsLength * 100) + "%";
+                  }
+                } else {
+                  var questionFieldText = (parseInt(sublevel_index) + 1) + (questionText ? ". " + questionText : "");
+                  var resultFieldText = sublevel_result.result;
+                  if (sublevel_result.result_text) {
+                    resultFieldText += ". " + sublevel_result.result_text;
+                  }
+                  var percentField = sublevel_result.type === "multi" ? (Math.round(1 / resultsLength * 100)) + "%" : null;
+
+                  var levelResult = {
+                    stage: survey.stage,
+                    puzzle: survey.puzzle,
+                    question: parseInt(sublevel_index) + 1,
+                    questionText: questionFieldText,
+                    result: sublevel_result.result,
+                    resultText: resultFieldText,
+                    count: 1,
+                    percent: percentField
+                  };
+
+                  // Let's not create separate rows for answers which have no result to show.
+                  if (levelResult.resultText !== null) {
+                    $scope.surveyLevels.push(levelResult);
+                  }
+                }
               });
-
-              if (existingLevelResult) {
-                existingLevelResult.count++;
-                if (existingLevelResult.percent !== null) {
-                  existingLevelResult.percent = Math.round(existingLevelResult.count / resultsLength * 100) + "%";
-                }
-              } else {
-                var questionFieldText = (parseInt(sublevel_index) + 1) + (questionText ? ". " + questionText : "");
-                var resultFieldText = sublevel_result.result;
-                if (sublevel_result.result_text) {
-                  resultFieldText += ". " + sublevel_result.result_text;
-                }
-                var percentField = sublevel_result.type === "multi" ? (Math.round(1 / resultsLength * 100)) + "%" : null;
-
-                var levelResult = {
-                  stage: survey.stage,
-                  puzzle: survey.puzzle,
-                  question: parseInt(sublevel_index) + 1,
-                  questionText: questionFieldText,
-                  result: sublevel_result.result,
-                  resultText: resultFieldText,
-                  count: 1,
-                  percent: percentField
-                };
-
-                // Let's not create separate rows for answers which have no result to show.
-                if (levelResult.resultText !== null) {
-                  $scope.surveyLevels.push(levelResult);
-                }
-              }
             });
-          });
+          }
         });
 
         // Sort by stage, puzzle, question.
@@ -917,8 +926,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       });
     };
 
-    $scope.findStages = function() {
-      $scope.stages = $.map($scope.assessments, function(row) {
+    $scope.findStages = function(source) {
+      return $.map(source, function(row) {
         return row.stage;
       }).filter(function(item, i, array) { // uniquify
         return array.indexOf(item) == i;

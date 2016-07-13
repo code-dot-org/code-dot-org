@@ -157,86 +157,6 @@ class ApiController < ApplicationController
     render json: data
   end
 
-  # If at least five students have completed a given long-assessment LevelGroup that is marked anonymous,
-  # then for each multi return a summary of the percentage of each answer, and also return all free
-  # response texts but in a randomized order.
-  # In theory this could be a unique codepath inside the section_assessments function, but given the
-  # serious risk of exposing student information in a non-anonymous fashion, this function has been
-  # built separately.
-  def section_surveys
-    load_section
-    load_script
-
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
-
-    # Go through each anonymous long-assessment LevelGroup.
-    data = level_group_script_levels.map do |script_level|
-      next unless script_level.long_assessment?
-      next unless script_level.anonymous?
-
-      levelgroup_results = {}
-
-      # Go through each sublevel
-      script_level.level.levels.each_with_index do |sublevel, sublevel_index|
-        question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
-                        sublevel.properties.try(:[], "markdown_instructions")
-        sublevel_results = {question: question_text, results: []}
-
-        # TODO: skip this sublevel if we don't have at least 5 responses to it.
-
-        # Go through each student who has submitted a response to it.
-        @section.students.all.shuffle.each do |student|
-          # Skip student if they haven't submitted for this LevelGroup.
-          user_level = student.user_level_for(script_level, script_level.level)
-          next unless user_level.try(:submitted)
-
-          last_attempt = student.last_attempt(script_level.level)
-          response = last_attempt.try(:level_source).try(:data)
-          next unless response
-
-          response_parsed = JSON.parse(response)
-          sublevel_response = response_parsed[sublevel.id.to_s]
-
-          sublevel_result = {}
-
-          if sublevel_response
-            case sublevel
-            when TextMatch, FreeResponse
-              student_result = sublevel_response["result"]
-              sublevel_result[:result] = student_result
-              sublevel_result[:type] = "free_response"
-            when Multi
-              student_result = sublevel_response["result"].split(",").sort.join(",")
-              # unless unsubmitted
-              unless student_result == "-1"
-                answer_text = sublevel.properties.try(:[], "answers").try(:[], student_result.to_i).try(:[], "text")
-                sublevel_result[:result_text] = answer_text
-                # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-                sublevel_result[:result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
-                sublevel_result[:type] = "multi"
-              end
-            end
-          end
-
-          sublevel_results[:results] << sublevel_result
-        end
-
-        # All the results for one sublevel for a group of studentss
-        levelgroup_results[sublevel_index] = sublevel_results
-      end
-
-      # All the results for one levelgroup for a group of students
-      {
-        stage: script_level.stage.localized_title,
-        puzzle: script_level.position,
-        url: build_script_level_url(script_level, section_id: @section.id),
-        levelgroup_results: levelgroup_results
-      }
-    end.compact
-
-    render json: data
-  end
-
   # For each student, return an array of each long-assessment LevelGroup in progress or submitted.
   # Each such array contains an array of individual level results, matching the order of the LevelGroup's
   # levels.  For each level, the student's answer content is in :student_result, and its correctness
@@ -329,6 +249,85 @@ class ApiController < ApplicationController
         }
       end.compact
     end.flatten
+
+    render json: data
+  end
+
+  # If at least five students have completed a given long-assessment LevelGroup that is marked anonymous,
+  # then for each multi return a summary of the percentage of each answer, and also return all free
+  # response texts but in a randomized order.
+  # In theory this could be a unique codepath inside the section_assessments function, but given the
+  # serious risk of exposing student information in a non-anonymous fashion, this function has been
+  # built separately.
+  def section_surveys
+    load_section
+    load_script
+
+    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
+
+    # Go through each anonymous long-assessment LevelGroup.
+    data = level_group_script_levels.map do |script_level|
+      next unless script_level.long_assessment?
+      next unless script_level.anonymous?
+
+      levelgroup_results = {}
+
+      # Go through each sublevel
+      script_level.level.levels.each_with_index do |sublevel, sublevel_index|
+        question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
+                        sublevel.properties.try(:[], "markdown_instructions")
+        sublevel_results = {question: question_text, results: []}
+
+        # Go through each student who has submitted a response to it.
+        @section.students.all.shuffle.each do |student|
+
+          # Skip student if they haven't submitted for this LevelGroup.
+          user_level = student.user_level_for(script_level, script_level.level)
+          next unless user_level.try(:submitted)
+
+          last_attempt = student.last_attempt(script_level.level)
+          response = last_attempt.try(:level_source).try(:data)
+          next unless response
+
+          response_parsed = JSON.parse(response)
+          sublevel_response = response_parsed[sublevel.id.to_s]
+
+          sublevel_result = {}
+
+          if sublevel_response
+            case sublevel
+            when TextMatch, FreeResponse
+              student_result = sublevel_response["result"]
+              sublevel_result[:result] = student_result
+              sublevel_result[:type] = "free_response"
+            when Multi
+              student_result = sublevel_response["result"].split(",").sort.join(",")
+              # unless unsubmitted
+              unless student_result == "-1"
+                answer_text = sublevel.properties.try(:[], "answers").try(:[], student_result.to_i).try(:[], "text")
+                sublevel_result[:result_text] = answer_text
+                # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
+                sublevel_result[:result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
+                sublevel_result[:type] = "multi"
+              end
+            end
+          end
+
+          sublevel_results[:results] << sublevel_result
+        end
+
+        # All the results for one sublevel for a group of students.
+        levelgroup_results[sublevel_index] = sublevel_results
+      end
+
+      # All the results for one LevelGroup for a group of students.
+      {
+        stage: script_level.stage.localized_title,
+        puzzle: script_level.position,
+        url: build_script_level_url(script_level, section_id: @section.id),
+        levelgroup_results: levelgroup_results
+      }
+    end.compact
 
     render json: data
   end
