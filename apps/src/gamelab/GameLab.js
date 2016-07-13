@@ -124,6 +124,8 @@ GameLab.baseP5loadImage = null;
 
 /**
  * Initialize Blockly and this GameLab instance.  Called on page load.
+ * @param {!AppOptionsConfig} config
+ * @param {!GameLabLevel} config.level
  */
 GameLab.prototype.init = function (config) {
   if (!this.studioApp_) {
@@ -224,7 +226,8 @@ GameLab.prototype.init = function (config) {
     channelId: config.channel,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
-    showDebugWatch: true
+    showDebugWatch: true,
+    showAnimationMode: !config.level.hideAnimationMode
   });
 
   // Push project-sourced animation metadata into store
