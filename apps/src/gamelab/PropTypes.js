@@ -132,6 +132,15 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
     throw new Error('Animation List orderedKeys should be an array');
   }
 
+  // Check for duplicates in the orderedKeys array
+  let knownKeys = {};
+  serializedAnimationList.orderedKeys.forEach(key => {
+    if (knownKeys.hasOwnProperty(key)) {
+      throw new Error(`Key ${key} appears more than once in orderedKeys`);
+    }
+    knownKeys[key] = true;
+  });
+
   // The ordered keys set and the keys from propsByKey should match (but can
   // be in a different order)
   let orderedKeysNotInProps = serializedAnimationList.orderedKeys.slice();
