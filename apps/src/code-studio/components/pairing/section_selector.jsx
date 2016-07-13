@@ -11,7 +11,8 @@ const SectionSelector = React.createClass({
       name: React.PropTypes.string,
       students: studentsShape
     })),
-    selectedSectionId: React.PropTypes.number
+    selectedSectionId: React.PropTypes.number,
+    handleChange: React.PropTypes.func.isRequired,
   },
 
   handleChange(event) {

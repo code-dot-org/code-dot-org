@@ -1,5 +1,4 @@
-// TODO: Temporary measure to make sure code-studio doesn't end up with two Reacts
-var React = window.React;
+import React from 'react';
 
 /**
  * BaseDialog
@@ -14,6 +13,7 @@ var BaseDialog = React.createClass({
     uncloseable: React.PropTypes.bool,
     hideBackdrop: React.PropTypes.bool,
     useDeprecatedGlobalStyles: React.PropTypes.bool,
+    children: React.PropTypes.node,
   },
 
   componentDidMount: function () {
