@@ -119,11 +119,55 @@ function getSerializedAnimationProps(animation) {
 }
 
 /**
+ * @typedef {Object} AnimationList
+ * @property {AnimationKey[]} orderedKeys - Animation keys in project order
+ * @property {Object.<AnimationKey, AnimationProps>} propsByKey
+ */
+export const AnimationList = React.PropTypes.shape({
+  orderedKeys: React.PropTypes.arrayOf(AnimationKey).isRequired,
+  propsByKey: React.PropTypes.objectOf(AnimationProps).isRequired
+});
+
+/**
+ * @typedef {Object} SerializedAnimationList
+ * @property {AnimationKey[]} orderedKeys - Animations in project order
+ * @property {Object.<AnimationKey, SerializedAnimationProps>} propsByKey
+ */
+const serializedAnimationListShape = {
+  orderedKeys: React.PropTypes.arrayOf(AnimationKey).isRequired,
+  propsByKey: React.PropTypes.objectOf(SerializedAnimationProps).isRequired
+};
+const SerializedAnimationList = React.PropTypes.shape(serializedAnimationListShape);
+
+/**
+ * Converts the full AnimationList to the serializable subset of itself.
+ * Two transformations happen when we serialize animations out.
+ * 1. We only save a subset of animation attributes - see getSerializedAnimation
+ * 2. We stop saving animation data for any animations not in the project
+ *    animation list - we should clean this up on delete, but in case things
+ *    get in an inconsistent state we clean it up here.
+ * @param {AnimationList} animationList
+ * @return {SerializedAnimationList}
+ */
+export function getSerializedAnimationList(animationList) {
+  return {
+    orderedKeys: animationList.orderedKeys,
+    propsByKey: _.pick(
+        _.mapValues(animationList.propsByKey, getSerializedAnimationProps),
+        animationList.orderedKeys)
+  };
+}
+
+/**
  * @param {!SerializedAnimationList} serializedAnimationList
  * @throws {Error} if the list is not in a valid format.
  */
 export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList) {
-  let validationResult = SerializedAnimationList.isRequired({serializedAnimationList}, 'serializedAnimationList', 'Animation Validation');
+  let validationResult = SerializedAnimationList.isRequired(
+      {serializedAnimationList},
+      'serializedAnimationList',
+      'Animation List JSON',
+      'prop');
   if (validationResult instanceof Error) {
     throw validationResult;
   }
@@ -171,43 +215,4 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
     }
     knownNames[name] = true;
   }
-}
-
-/**
- * @typedef {Object} AnimationList
- * @property {AnimationKey[]} orderedKeys - Animation keys in project order
- * @property {Object.<AnimationKey, AnimationProps>} propsByKey
- */
-export const AnimationList = React.PropTypes.shape({
-  orderedKeys: React.PropTypes.arrayOf(AnimationKey).isRequired,
-  propsByKey: React.PropTypes.objectOf(AnimationProps).isRequired
-});
-
-/**
- * @typedef {Object} SerializedAnimationList
- * @property {AnimationKey[]} orderedKeys - Animations in project order
- * @property {Object.<AnimationKey, SerializedAnimationProps>} propsByKey
- */
-const SerializedAnimationList = React.PropTypes.shape({
-  orderedKeys: React.PropTypes.arrayOf(AnimationKey).isRequired,
-  propsByKey: React.PropTypes.objectOf(SerializedAnimationProps).isRequired
-});
-
-/**
- * Converts the full AnimationList to the serializable subset of itself.
- * Two transformations happen when we serialize animations out.
- * 1. We only save a subset of animation attributes - see getSerializedAnimation
- * 2. We stop saving animation data for any animations not in the project
- *    animation list - we should clean this up on delete, but in case things
- *    get in an inconsistent state we clean it up here.
- * @param {AnimationList} animationList
- * @return {SerializedAnimationList}
- */
-export function getSerializedAnimationList(animationList) {
-  return {
-    orderedKeys: animationList.orderedKeys,
-    propsByKey: _.pick(
-        _.mapValues(animationList.propsByKey, getSerializedAnimationProps),
-        animationList.orderedKeys)
-  };
 }
