@@ -7,14 +7,10 @@ var select = function (event) {
   event.target.select();
 };
 
-/**
- * The body of our share project dialog.
- * Note: The only consumer of this calls renderToStaticMarkup, so any events
- * will be lost.
- */
 var ShareDialogBody = React.createClass({
   propTypes: {
     icon: React.PropTypes.string,
+    i18n: React.PropTypes.object.isRequired,
     title: React.PropTypes.string.isRequired,
     shareCopyLink: React.PropTypes.string.isRequired,
     shareUrl: React.PropTypes.string.isRequired,

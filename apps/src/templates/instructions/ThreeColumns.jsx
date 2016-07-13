@@ -50,6 +50,11 @@ const ThreeColumns = (props) => {
 };
 
 ThreeColumns.propTypes = {
+  styles: React.PropTypes.object,
+  leftColWidth: React.PropTypes.number,
+  rightColWidth: React.PropTypes.number,
+  height: React.PropTypes.number,
+  children: React.PropTypes.node,
   customProp: (props) => {
     if (props.children.length !== 3) {
       throw new Error('ThreeColumns expects exactly 3 children, got ' +
