@@ -267,6 +267,6 @@ export const ProgressDot = React.createClass({
 });
 
 export default connect(state => ({
-  currentLevelId: state.currentLevelId,
-  saveAnswersBeforeNavigation: state.saveAnswersBeforeNavigation
+  currentLevelId: state.progress.currentLevelId,
+  saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation
 }))(Radium(ProgressDot));
