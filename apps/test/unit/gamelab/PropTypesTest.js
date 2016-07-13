@@ -97,7 +97,7 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
 
 function buildValidPropsForKeys(keys) {
   return keys.reduce((memo, next) => {
-    memo[next] = {name: next, sourceSize: {}, frameSize: {}, frameCount: 0, frameRate: 0};
+    memo[next] = {name: next, sourceSize: {x: 0, y: 0}, frameSize: {x: 0, y: 0}, frameCount: 0, frameRate: 0};
     return memo;
   }, {});
 }
