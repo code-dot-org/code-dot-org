@@ -7,9 +7,11 @@
 
 Sequel.migration do
   up do
-    alter_table(:contacts) do
-      drop_constraint(:email, :type => :unique)
-    end if DB.indexes(:contacts)[:email] &&
+    if DB.indexes(:contacts)[:email] &&
       DB.indexes(:contacts)[:email].key?(:unique)
+      alter_table(:contacts) do
+        drop_constraint(:email, :type => :unique)
+      end
+    end
   end
 end
