@@ -1,6 +1,7 @@
 ---
 title: Code.org Professional Learning Partner Program
 nav: plc_plp_nav
+video_player: true
 ---
 # Professional Learning Partner Program #
 
@@ -11,6 +12,14 @@ Code.org is selecting organizations, as partners, to help spread computer scienc
 Each partner's program manager will attend our Program Manager Summit, a fabulous experience designed to welcome Professional Learning Partners to the extended Code.org family. In addition, we will provide funding based on demonstrated need to help each organization establish itself as a local Code.org professional learning partner.
 
 The ideal Professional Learning Partner is a regional education unit, a non-profit, or a university with existing, positive relationships with nearby school districts and the local education community.
+
+[col-50]
+
+<%= view :display_video_thumbnail, id: "plp_intro", video_code: "3VYujs75eIs", play_button: 'center' %>
+
+[/col-50]
+
+<div style="clear: both;"></div>
 
 ## What we'd expect of you
 Below is a list of program commitments:

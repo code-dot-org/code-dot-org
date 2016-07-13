@@ -1,38 +1,54 @@
 require_relative 'test_helper'
 require 'mocha/test_unit'
 require 'cdo/poste'
+require 'digest/md5'
 
 class PosteTest < Minitest::Test
   SUBSCRIBED_EMAIL = 'subscribed@example.net'
+  SUBSCRIBED_EMAIL_HASH = Digest::MD5.hexdigest(SUBSCRIBED_EMAIL)
   UNSUBSCRIBED_EMAIL = 'unsubscribed@example.net'
+  UNSUBSCRIBED_EMAIL_HASH = Digest::MD5.hexdigest(UNSUBSCRIBED_EMAIL)
 
   def setup
     Poste2.create_recipient(
       SUBSCRIBED_EMAIL, {name: 'Subscriber', ip_address: '1.2.3.4'})
     Poste2.create_recipient(
       UNSUBSCRIBED_EMAIL, {name: 'Unsubscriber', ip_address: '9.8.7.6'})
-    Poste.unsubscribe(UNSUBSCRIBED_EMAIL)
+    Poste.unsubscribe(UNSUBSCRIBED_EMAIL, UNSUBSCRIBED_EMAIL_HASH)
   end
 
   def test_unsubscribed_for_unsubscribed_contact
-    assert Poste.unsubscribed?(UNSUBSCRIBED_EMAIL)
+    assert Poste.unsubscribed?(UNSUBSCRIBED_EMAIL_HASH)
   end
 
   def test_unsubscribed_for_subscribed_contact
-    assert !Poste.unsubscribed?(SUBSCRIBED_EMAIL)
+    assert !Poste.unsubscribed?(SUBSCRIBED_EMAIL_HASH)
   end
 
   def test_unsubscribe_for_existing_contact
     email = 'existing@example.net'
     Poste2.create_recipient(email, {ip_address: '5.6.7.8.'})
-    Poste.unsubscribe(email)
+    Poste.unsubscribe(email, Digest::MD5.hexdigest(email))
     assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
   end
 
   def test_unsubscribe_for_new_contact
     email = 'new@example.net'
-    Poste.unsubscribe(email, {ip_address: '5.6.7.8.'})
+    Poste.unsubscribe(
+      email, Digest::MD5.hexdigest(email), {ip_address: '5.6.7.8.'})
     assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
+  end
+
+  def test_encrypt_then_decrypt_noop
+    my_string = 'ABCDEF'
+    assert_equal my_string, Poste.decrypt(Poste.encrypt(my_string))
+  end
+
+  def test_decrypt_then_encrypt_noop
+    my_string = 'ABCDEF'
+    my_string_encrypted = Poste.encrypt(my_string)
+    assert_equal my_string_encrypted,
+      Poste.encrypt(Poste.decrypt(my_string_encrypted))
   end
 end
 
