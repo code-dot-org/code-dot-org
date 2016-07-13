@@ -39,6 +39,42 @@ class PosteTest < Minitest::Test
     assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
   end
 
+  def test_unsubscribe_for_code_studio_student_stores_no_email
+    email = 'student@example.net'
+    hashed_email = Digest::MD5.hexdigest(email)
+    DASHBOARD_DB[:users].insert(
+      email: email,
+      hashed_email: hashed_email,
+      username: 'code studio student',
+      user_type: 'student',
+      birthday: '2000-01-02'
+    )
+
+    Poste.unsubscribe(email, hashed_email, {ip_address: '1.2.3.4'})
+
+    assert POSTE_DB[:contacts].
+      where(hashed_email: hashed_email).first[:unsubscribed_at]
+    assert POSTE_DB[:contacts].where(email: email).first.nil?
+  end
+
+  def test_unsubscribe_for_code_studio_teacher_stores_no_email
+    email = 'teacher@example.net'
+    hashed_email = Digest::MD5.hexdigest(email)
+    DASHBOARD_DB[:users].insert(
+      email: email,
+      hashed_email: hashed_email,
+      username: 'code studio teacher',
+      user_type: 'student',
+      birthday: '1990-01-02'
+    )
+
+    Poste.unsubscribe(email, hashed_email, {ip_address: '1.2.3.4'})
+
+    assert POSTE_DB[:contacts].
+      where(hashed_email: hashed_email).first[:unsubscribed_at]
+    assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
+  end
+
   def test_encrypt_then_decrypt_noop
     my_string = 'ABCDEF'
     assert_equal my_string, Poste.decrypt(Poste.encrypt(my_string))
@@ -49,6 +85,18 @@ class PosteTest < Minitest::Test
     my_string_encrypted = Poste.encrypt(my_string)
     assert_equal my_string_encrypted,
       Poste.encrypt(Poste.decrypt(my_string_encrypted))
+  end
+
+  def test_encrypt_id_then_decrypt_id_noop
+    my_int = 123456
+    assert_equal my_int, Poste.decrypt_id(Poste.encrypt_id(my_int))
+  end
+
+  def test_decrypt_id_then_encrypt_id_noop
+    my_int = 123456
+    my_int_encrypted = Poste.encrypt_id(my_int)
+    assert_equal my_int_encrypted,
+      Poste.encrypt_id(Poste.decrypt_id(my_int_encrypted))
   end
 end
 
