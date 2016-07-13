@@ -23,7 +23,8 @@ var InstructionsWithWorkspace = React.createClass({
     showInstructions: React.PropTypes.bool.isRequired,
     instructionsHeight: React.PropTypes.number.isRequired,
 
-    setInstructionsMaxHeightAvailable: React.PropTypes.func.isRequired
+    setInstructionsMaxHeightAvailable: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
   },
 
   getInitialState() {

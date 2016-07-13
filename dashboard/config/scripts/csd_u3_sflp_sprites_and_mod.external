@@ -2,21 +2,21 @@ name 'CSD-U3-SFLP Sprites and Mod'
 href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
-## Unit 3: Lesson 05 - Sprites and Properties
-
 # Background
 
 Building on the use of variables to control the drawing of simple shapes, students are introduced to the Sprite object as a way to simplify the creation of animations. Applying the same incrementor pattern that we used in drawing simple shapes, students will build up to an animated race using Sprite properties.
 
-# Vocabulary
+# Activities
+
+* Warm Up: How Many Variables?
+* Levels: Sprites and Properties
+* Journal
+
+
+# Vocab
 
 * **Property** - Attributes that describe an object&#39;s characteristics
 * **Sprite** - A graphic character on the screen with properties that describe its location, movement, and look.
-
-# Resources
-
-* <a href='https://docs.google.com/document/d/139IxGQ-CGpf-cNhZmQXiLkAwCevmT0gK7DnNtvSn36c/' target='_blank' class='print_link'>Sprites and Properties Unplugged</a> - Activity Guide (<a href='https://docs.google.com/document/d/139IxGQ-CGpf-cNhZmQXiLkAwCevmT0gK7DnNtvSn36c/export?format=pdf' class='print_link'>PDF</a> | <a href='https://docs.google.com/document/d/139IxGQ-CGpf-cNhZmQXiLkAwCevmT0gK7DnNtvSn36c/export?format=doc' class='print_link'>DOCX</a>)
-* Sprites, Objects and Properties - Conceptorial
 
 # Commands 
 
@@ -29,6 +29,11 @@ Building on the use of variables to control the drawing of simple shapes, studen
 |sprite.y| Property for y position of sprite| `sprite.y = 200;` | link |
 |sprite.width| Property for width of sprite| `sprite.width = randomNumber(0,100);` | link |
 |sprite.height|Property for height of sprite| `sprite.height = 30;`  | link |
+
+# Resources
+
+* <a href='https://docs.google.com/document/d/139IxGQ-CGpf-cNhZmQXiLkAwCevmT0gK7DnNtvSn36c/' target='_blank' class='print_link'>Sprites and Properties Unplugged</a> - Activity Guide (<a href='https://docs.google.com/document/d/139IxGQ-CGpf-cNhZmQXiLkAwCevmT0gK7DnNtvSn36c/export?format=pdf' class='print_link'>PDF</a> | <a href='https://docs.google.com/document/d/139IxGQ-CGpf-cNhZmQXiLkAwCevmT0gK7DnNtvSn36c/export?format=doc' class='print_link'>DOCX</a>)
+* Sprites, Objects and Properties - Conceptorial
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

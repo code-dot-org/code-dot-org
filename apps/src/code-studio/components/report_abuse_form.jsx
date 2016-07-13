@@ -1,4 +1,5 @@
 /* global dashboard */
+/* eslint-disable react/no-danger */
 
 var React = require('react');
 var ReactDOM = require('react-dom');

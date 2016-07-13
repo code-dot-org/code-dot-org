@@ -1,3 +1,4 @@
+/* eslint-disable react/no-is-mounted */
 /* global dashboard */
 
 var React = require('react');
