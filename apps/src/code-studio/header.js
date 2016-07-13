@@ -138,7 +138,6 @@ function shareProject() {
   dashboard.project.save(function () {
     var origin = location.protocol + '//' + location.host;
     var shareUrl = origin + dashboard.project.getPathName();
-    var encodedShareUrl = encodeURIComponent(shareUrl);
 
     var i18n = window.dashboard.i18n;
 
@@ -153,7 +152,6 @@ function shareProject() {
       i18n: i18n,
       icon: appOptions.skin.staticAvatar,
       shareUrl: shareUrl,
-      encodedShareUrl: encodedShareUrl,
       isAbusive: dashboard.project.exceedsAbuseThreshold(),
       channelId: dashboard.project.getCurrentId(),
       appType: dashboard.project.getStandaloneApp(),
