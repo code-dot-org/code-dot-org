@@ -148,17 +148,27 @@ function shareProject() {
       document.body.appendChild(dialogDom);
     }
 
+    // TODO: ditch this in favor of react-redux connector
+    // once more of code-studio is integrated into mainline react tree.
+    const appType = dashboard.project.getStandaloneApp();
+    const studioApp = require('../../StudioApp').singleton;
+    const pageConstants = studioApp.reduxStore.getState().pageConstants;
+    const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus || (
+      appType !== 'applab' &&
+      appType !== 'gamelab');
+
     var dialog = React.createElement(ShareDialog, {
       i18n: i18n,
       icon: appOptions.skin.staticAvatar,
       shareUrl: shareUrl,
       isAbusive: dashboard.project.exceedsAbuseThreshold(),
       channelId: dashboard.project.getCurrentId(),
-      appType: dashboard.project.getStandaloneApp(),
+      appType,
       onClickPopup: popupWindow,
       // TODO: Can I not proliferate the use of global references to Applab somehow?
       onClickExport: window.Applab && window.Applab.canExportApp() ?
-        window.Applab.exportApp : null,
+      window.Applab.exportApp : null,
+      canShareSocial,
     });
     ReactDOM.render(dialog, dialogDom);
   });
