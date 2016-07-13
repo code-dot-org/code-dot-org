@@ -1,6 +1,7 @@
 require 'cdo/aws/s3'
 require 'cdo/rack/request'
 require 'sinatra/base'
+require_relative 'helpers/profanity_privacy_helper'
 
 class FilesApi < Sinatra::Base
   def max_file_size
