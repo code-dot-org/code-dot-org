@@ -64,7 +64,7 @@ class PosteTest < Minitest::Test
       email: email,
       hashed_email: hashed_email,
       username: 'code studio teacher',
-      user_type: 'student',
+      user_type: 'teacher',
       birthday: '1990-01-02'
     )
 
