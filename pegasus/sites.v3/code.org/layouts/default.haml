@@ -1,6 +1,7 @@
 %link{:href=>"/shared/css/warning-banner.css", :rel=>"stylesheet"}
 
 .wrapper
+  = view :unsupported_browser
   -if header['theme'] == 'responsive'
     #desktop-header.desktop-feature
       = view :header
