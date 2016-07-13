@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # Залучіть всю свою школу
 
-Інформація про те, як залучити до заходів усю школу, розміщуватиметься тут.
-
+Information about getting whole schools to participate in the Hour of Code will go here.

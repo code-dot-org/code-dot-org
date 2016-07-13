@@ -20,7 +20,7 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Ordering Supplies', description_t: "Click here for access to the Marketplace and resources for ordering workshop supplies.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/ordering-supplies"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Professional Learning Partner Directory', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Professional Learning Partner Directory', description_t: "Click here to learn more about our other Professional Larning Partners and their regions of service.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/directory"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Recruiting Teachers', description_t: "Coming soon!"} %>
 

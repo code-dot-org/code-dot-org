@@ -1,6 +1,6 @@
 var React = require('react');
-var MarkdownInstructions = require('./MarkdownInstructions');
-var NonMarkdownInstructions = require('./NonMarkdownInstructions');
+import MarkdownInstructions from './MarkdownInstructions';
+import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
 

@@ -20,7 +20,7 @@
           %br/
 
     #heading
-      %h2
+      %h1
         = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
         = data_t_suffix('script.name', @script.name, 'title')
         - if @script.beta?
@@ -44,11 +44,6 @@
         dashboard.progress.renderCourseProgress(#{@script.summarize.to_json});
       = render partial: 'shared/user_stats_key'
 
-      - if @script.trophies
-        %div{style: 'clear: both;'}
-        #trophies
-          = render partial: 'shared/concept_trophy_block', locals: {concept_progress: summarize_trophies(@script), added_style: 'padding: 10px;'}
-
   %div{style: 'clear: both;'}
   %br/
   %br/
@@ -70,7 +65,7 @@
 -# TODO(asher): Remove the current_user.admin? as part of admin account lockdown.
 - if current_user && (current_user.admin? || current_user.permission?(UserPermission::LEVELBUILDER))
   -# Show all the levels, their names, and instructions in the admin box.
-  = render layout: 'shared/admin' do
+  = render layout: 'shared/extra_links' do
     - levels = Script.get_from_cache(@script.name).stages.map{ |stage| stage.script_levels.map{ |sl| sl.level }}.flatten
     - levels.each_with_index do |level, index|
       .row

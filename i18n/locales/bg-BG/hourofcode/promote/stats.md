@@ -4,18 +4,16 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Отзиви и полезна статистика
 
 ## Използвайте този текст в бюлетините
 
 ### Въведете компютърните науки във Вашето училище. Започнете с един Час на кодирането
 
-Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Добрата новина е, че ние сме на път да променим това. Ако сте чували за [за часът на кодирането](%= resolve_url('/') %) миналата година, може би знаете, че ние влезнахме в историята. В първия час на Един Час Програмиране 15 милиона ученици опитаха компютърните науки. Миналата година, номера се увеличи до 60 милиона студенти! [Часът на кодирането](%= resolve_url('/') %) е един час Въведение в компютърните науки, предназначен да развенчае мита за програмирането и да се покаже, че всички могат да научат основите. [Регистрирайте се](%= resolve_url('/') %), за да домакин на часът на кода <%= campaign_date('full') %> по време на Csew. За да добавите училището си на картата, отидете на https://hourofcode.com/<%= @country %>
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! Добрата новина е, че ние сме на път да променим това. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+
+The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
 ## Инфомационни графики
 
 <%= view :stats_carousel %>
-
-<%= view :signup_button %>

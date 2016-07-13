@@ -17,7 +17,7 @@ export function getOuterHeight(component, includeMargin=false) {
  *        to scroll by
  * @param {number} animate If specified, the animation time in ms
  */
-export function scrollBy(element, deltaY, animate=200) {
+export function scrollBy(element, deltaY, animate=400) {
   const newScrollTop = element.scrollTop + deltaY;
   if (animate) {
     let $elem = $(element);

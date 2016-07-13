@@ -862,14 +862,15 @@ class UserTest < ActiveSupport::TestCase
     assert user_proficiency.basic_proficiency_at.nil?
   end
 
-  def track_progress(student, script_level, result)
+  def track_progress(student, script_level, result, pairings = nil)
     User.track_level_progress_sync(
       user_id: student.id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,
       new_result: result,
       submitted: false,
-      level_source_id: nil
+      level_source_id: nil,
+      pairing_user_ids: pairings
     )
   end
 
@@ -921,6 +922,48 @@ class UserTest < ActiveSupport::TestCase
 
     User.expects(:track_proficiency).never
     track_progress(student, script_level, 100)
+  end
+
+  test 'track_level_progress_sync does not call track_proficiency when pairing' do
+    script_level = create :script_level
+    student = create :student
+
+    User.expects(:track_proficiency).never
+    track_progress(student, script_level, 100, [create(:user).id])
+  end
+
+  test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
+    script_level = create :script_level
+    student = create :student
+    level_source = create :level_source, data: 'sample answer'
+
+    User.track_level_progress_sync(
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: 30,
+      submitted: false,
+      level_source_id: level_source.id,
+      pairing_user_ids: nil
+    )
+
+    ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
+    assert_equal 30, ul.best_result
+    assert_equal 'sample answer', ul.level_source.data
+
+    User.track_level_progress_sync(
+      user_id: create(:user).id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: 100,
+      submitted: false,
+      level_source_id: level_source.id,
+      pairing_user_ids: [student.id]
+    )
+
+    ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
+    assert_equal 100, ul.best_result
+    assert_equal 'sample answer', ul.level_source.data
   end
 
   test 'normalize_gender' do
@@ -1001,7 +1044,7 @@ class UserTest < ActiveSupport::TestCase
 
     i = 0
     users = names.map do |name|
-      User.create!(@good_data.merge(name: name, email: "test_email#{i+=1}@test.xx")) # use real create method not the factory
+      User.create!(@good_data.merge(name: name, email: "test_email#{i += 1}@test.xx")) # use real create method not the factory
     end
 
     assert_equal expected_usernames, users.collect(&:username)
@@ -1034,6 +1077,7 @@ class UserTest < ActiveSupport::TestCase
 
     other_user = create :student
 
+    # student_of? method
     assert !student.student_of?(student)
     assert !student.student_of?(other_user)
     assert student.student_of?(teacher)
@@ -1046,6 +1090,7 @@ class UserTest < ActiveSupport::TestCase
     assert !other_user.student_of?(other_user)
     assert !other_user.student_of?(teacher)
 
+    # user associations
     assert_equal [], other_user.teachers
     assert_equal [], other_user.students
 
@@ -1054,6 +1099,30 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal [teacher], student.teachers
     assert_equal [], student.students
+
+    # section associations
+    assert_equal [section], student.sections_as_student
+    assert_equal [], teacher.sections_as_student
+    assert_equal [], other_user.sections_as_student
+
+    assert_equal [], student.sections
+    assert_equal [section], teacher.sections
+    assert_equal [], other_user.sections
+
+    # can_pair? method
+    assert_equal true, student.can_pair?
+    assert_equal false, teacher.can_pair?
+    assert_equal false, other_user.can_pair?
+
+    # can_pair_with? method
+    classmate = create :student
+    section.add_student classmate
+    assert classmate.can_pair_with?(student)
+    assert student.can_pair_with?(classmate)
+    refute student.can_pair_with?(other_user)
+    refute student.can_pair_with?(teacher)
+    refute teacher.can_pair_with?(student)
+    refute student.can_pair_with?(student)
   end
 
   test 'student_of_admin?' do

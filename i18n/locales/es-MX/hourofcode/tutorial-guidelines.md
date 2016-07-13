@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Guía para los tutoriales de la Hora de Programación y la semana educativa de Ciencias Computacionales
 
 Code.org realizará una gran variedad de actividades de la Hora del Código en las página(s) web de Code.org, de la Hora de Código y CSEdWeek. La lista actual está en [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
@@ -52,19 +50,19 @@ Ejemplos:
 
   
   
-** Formato guiado de estudiante (autoguiado)**: La Hora del Código original fue construida sobretodo en el éxito de tutoriales o lecciones auto-guiadas, opcionalmente facilitados por el profesor. Hay varias opciones existentes, pero si quieres crear uno nuevo, estas actividades deben diseñarse de forma divertida para un estudiante que trabaja solo, o en un aula cuyo profesor tiene un mínimo de preparación de CS. Deben proporcionar instrucciones para los estudiantes frente a un desafío abierto con una hora de duración. Idealmente, las instrucciones y las tutorías están integradas directamente en la plataforma de programación, para evitar intercambio de pestañas o ventanas entre la tutoría y la plataforma de programación.
+** Formato guiado de estudiante (autoguiado)**: La Hora del Código original fue construida sobretodo en el éxito de tutoriales o lecciones auto-guiadas, opcionalmente facilitados por el profesor. Hay varias opciones existentes, pero si quieres crear uno nuevo, estas actividades deben diseñarse de forma divertida para un estudiante que trabaja solo, o en un aula cuyo profesor tiene un mínimo de preparación en Ciencias de la Computación. Deben proporcionar instrucciones para los estudiantes frente a un desafío abierto con una hora de duración. Idealmente, las instrucciones y las tutorías están integradas directamente en la plataforma de programación, para evitar intercambio de pestañas o ventanas entre la tutoría y la plataforma de programación.
 
-Nota: En las páginas de los estudiantes mostraremos las actividades dirigidas por el maestro *abajo* los autoguiados, pero vamos a llamar de manera específica en las páginas o correos electrónicos destinados a los educadores.
+Nota: En las páginas dirigidas a los estudiantes mostraremos las actividades dirigidas por el maestro *abajo* de los autoguiados, pero vamos a listarlos de manera específica en las páginas o correos electrónicos destinados a los educadores.
 
 ## Guía general para crear una actividad de la Hora de Programación
 
-El objetivo de una Hora de Código es darle a principiantes un gusto accesible de ciencia de la computación o programación (no HTML). El tono debe ser:
+El objetivo de una Hora del Código es darle a principiantes un primera muestra accesible de Ciencias de la Computación o programación (no HTML). El tono debe ser:
 
-  * Ciencias de la computación no es solo para genios, sin importar edad, género, raza. Cualquiera *puede* aprender!
-  * La ciencia computacional está conectada a una gran variedad de campos e intereses. Todos *deberían* aprender!
+  * Las Ciencias de la Computación no es solo para genios, sin importar la edad, género, raza. ¡Cualquiera *puede* aprender!
+  * Las Ciencias de la Computacional están conectadas a una gran variedad de campos e intereses. ¡Todos *deberían* aprender!
   * Anima a los estudiantes a crear algo que puede ser compartido con amigos en línea.
 
-**Requisitos técnicos**: debido a la amplia variedad de configuraciones de tecnología de aula y escuela, las mejores actividades son basadas en la web o teléfono inteligente amistoso o de otra manera es actividades sin conección que enseñan conceptos de la ciencia de computación sin el uso de una computadora (ver <http://csunplugged.com/>). Actividades que requieren de una instalación de la aplicación, aplicación de escritorio o consola de juegos las experiencias son aceptables pero no ideal.
+**Requisitos técnicos**: debido a la amplia variedad de configuraciones tecnológicas de aulas y escuelas, las mejores actividades son basadas en la web o pueden ejecutarse en teléfono móvil, o por otra parte actividades sin conexión que enseñan conceptos de las Ciencias de Computación sin el uso de un ordenador (ver <http://csunplugged.com/>). Actividades que requieren de una instalación de una app, aplicación de escritorio o experiencias de consola de juegos las experiencia son aceptables pero no ideales.
 
 [**Volver al principio**](#top)
 
@@ -101,13 +99,13 @@ Un comité de educadores en Ciencias de la Computación evaluarán las propuesta
   * no estan diseñados para ser actividades de aproximadamente una hora
   * requieren registro 
   * requieren pago
-  * requiere instalación (otro mas que aplicaciones móviles)
+  * requiere instalación (aparte de apps de móviles)
   * se centran solamente en diseño web HTML+CSS
   * se envían después de la fecha límite, o con información incompleta (vea más abajo)
 
-**Si tu tutorial esta dirigido a el estudiante** Tutoriales dirigidos a estudiantes necesitan estar diseñados para ser auto dirigidos, no requerire instrucciónes significativas de instructor de CS o preparación de maestros
+**Si tu tutorial esta dirigido al estudiante** Los tutoriales dirigidos a estudiantes necesitan estar diseñados para ser auto dirigidos, no requerir instrucción significativa en Ciencias de la Computación o preparación de los maestros
 
-La principal meta de la campaña de la Hora del Código es ampliar la participación en Ciencias de Computación por parte de maestros y estudiantes, y además demostrar que las Ciencias de Computacion son accesibles a todos y "más fáciles de lo que crees". Desde varios puntos de vista, ésta meta se alcanza de mejor manera ofreciendo a los estudiantes y maestros menos opciones y más simples, concentrándose en las opciones de más alta calidad para un usuario nuevo. Tenga en cuenta también que las campañas del 2013 y 2014 de la Hora de Código fueron un éxito fantástico con más de 120M, con casi unanime respuestas de la encuesta positiva de estudiantes y profesores participantes. Como resultado, los listados actuales están "suficientemente bien", y la razón para agregar más tutorías a los listados de la Hora de Código no es ampliar las opciones, sino elevar la calidad (o novedad) para los estudiantes, o expandir las opciones para los que no hablan inglés, debido a la naturaleza global de la campaña 2015.
+La principal meta de la campaña de la Hora del Código es ampliar la participación en Ciencias de Computación por parte de maestros y estudiantes, y además demostrar que las Ciencias de Computacion son accesibles a todos y "más fáciles de lo que crees". Desde varios puntos de vista, ésta meta se alcanza de mejor manera ofreciendo a los estudiantes y maestros menos opciones y más simples, concentrándose en las opciones de más alta calidad para un usuario nuevo. Tenga en cuenta también que las campañas de 2013 y 2014 de la Hora del Código fueron un éxito fantástico con más de 120M, con respuestas positivas casi unánimes de los estudiantes y profesores participantes. Como resultado, los listados actuales están "suficientemente bien", y la razón para agregar más tutorías a los listados de la Hora del Código no es ampliar las opciones, sino elevar la calidad (o novedad) para los estudiantes, o expandir las opciones para los que no hablan inglés, debido a la naturaleza global de la campaña de 2015.
 
 [**Volver al principio**](#top)
 
@@ -115,7 +113,7 @@ La principal meta de la campaña de la Hora del Código es ampliar la participac
 
 ## ¿Cómo enviar? (Fecha límite 15/10/2015)
 
-Visite [Hora de Código ™ pagina de presentación de actividad](https://goo.gl/kNrV3l) y seguir los pasos para enviar tu tutorial.
+Visite [ la página de envío de actividades de Hora de Código ™ ](https://goo.gl/kNrV3l) y seguir los pasos para enviar tu tutorial.
 
 **Necesitarás:**
 
@@ -147,14 +145,14 @@ Visite [Hora de Código ™ pagina de presentación de actividad](https://goo.gl
       * De 5º de Primaria a 1º de Eso
       * Secundaria: 2º de ESO a Bachillerato
       * Todas las edades
-  * Por favor incluye también el nivel de conocimiento en Ciencias de la Computación recomendada dentro del nivel: Principiante, Intermedio o Avanzado. El sitio web de la Hora de Programación destacará principalmente actividades para principiantes. Si deseas preparar actividades Intermedias y Avanzadas para la Hora de Código, por favor incluye el conocimiento previo necesario en la descripción de tu actividad.
+  * Por favor incluye también el nivel de conocimiento en Ciencias de la Computación recomendada dentro del nivel: Principiante, Intermedio o Avanzado. El sitio web de la Hora de Programación destacará principalmente actividades para principiantes. Si deseas preparar actividades de nivel intermedio y avanzado para la Hora del Código, por favor incluye el conocimiento previo necesario en la descripción de tu actividad.
   * Requisitos técnicos: 
       * Con el fin de realizar un seguimiento más preciso de la participación, queremos que todos las terceras partes asociadas con tutoriales incluyan imágenes de seguimiento de 1 píxel en la primera y la última páginas de sus tutoriales para la Hora del Código. Coloca la imagen de píxel de inicio en la página de inicio y la imagen de píxel de final en la última página. No coloques los pixeles en las páginas intermedias). Consulte la sección del píxel de seguimiento abajo para más detalles. 
       * Al finalizar tu actividad, los usuarios deben ser dirigidos a [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) donde serán capaces de: 
           * Compartir en las redes sociales que completaron la Hora del Código
           * Recibe un certificado que dice que completaron la Hora del Código
           * Ver tablas con los países/ciudades que tienen las mayores tasas de participación en las actividades de la Hora del Código
-          * Para usuarios que pasan una hora sobre su actividad y no completan, favor de incluir un botón en su actividad que dice "He terminado con mi Hora de Código" que une de nuevo a [<% = resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) tambien. 
+          * Para los usuarios que pasan una hora en tu actividad y no la completan, favor incluye un botón en tu actividad que diga "He terminado con mi Hora del Código" que une de nuevo a [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) tambien. 
   * *(Opcional)* Realizaremos un seguimiento con un enlace a una encuesta, pidiendo un informe de los siguientes parámetros de la actividad en la semana del 7 de diciembre, 12:01 a.m. hasta el 13 de diciembre, 11:59 p.m.) 
       * Para actividades en línea (especialmente aplicaciones para smartphone/tablet): 
           * Número de usuarios
@@ -171,7 +169,7 @@ Visite [Hora de Código ™ pagina de presentación de actividad](https://goo.gl
 
 ## Sugerencias para diseñar tu actividad
 
-Puede incluir el logo de CSEdWeek ([pequeño](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) o [grande](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) o el [logo de la Hora de Código](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) en tu tutorial, pero no es necesario. Si utiliza el logo de la Hora del Código, consulte las directrices de la marca registrada más abajo. Bajo ninguna circunstancia se puede utilizar el nombre o logotipo de Code.org. Ambos son marcas registradas y no pueden ser mezclados conjuntamente con una 3er partido marca sin permiso expreso por escrito.
+Puede incluir el logo de CSEdWeek ([pequeño](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) o [grande](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) o el [logo de la Hora del Código](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) en tu tutorial, pero no es necesario. Si utiliza el logo de la Hora del Código, consulte las directrices de la marca registrada más abajo. Bajo ninguna circunstancia se puede utilizar el nombre o logotipo de Code.org. Ambas son marcas registradas y no pueden ser mezclados conjuntamente con una 3ª marca sin permiso expreso por escrito.
 
 **Asegúrese de que el estudiante promedio pueda finalizar confortablemente en una hora.** Considere agregar una actividad abierta al final, para los alumnos que avancen más rápidamente durante la lección. Recuerde que la mayoría de los niños son totalmente principiantes para las ciencias de la computación y la programación.
 
@@ -180,11 +178,11 @@ Puede incluir el logo de CSEdWeek ([pequeño](https://www.dropbox.com/s/ojlltueg
   * Nuestro tutorial funciona mejor en las siguientes plataformas y navegadores
   * ¿Funciona en teléfonos inteligentes? ¿y en tabletas?
   * ¿Recomiendas programar en parejas? 
-  * ¿Consideraciones para el uso en el aula? por ejemplo, si hay videos, aconseja a los profesores que los muestren en una pantalla proyectada para toda la clase para verlos juntos
+  * ¿Consideraciones para el uso en el aula? Por ejemplo, si hay videos, aconseja a los profesores que los muestren en una pantalla proyectada para toda la clase para verlos juntos
 
 **Incorpore retroalimentación al final de la actividad.** (Por ejemplo: “¡Has finalizado 10 niveles y aprendido sobre bucles! ¡Felicidades!”)
 
-**Animar a los estudiantes a publicar en los medios sociales (donde sea apropiado) cuando terminaron.** ¿Por ejemplo "He hecho una Hora de Código con ________ y tu? #HourOfCode” o “He hecho una #HourOfCode como parte de la #CSEdWeek. ¿y tu? @Scratch.” Use el HashTag **#HourOfCode** (Con las letras H, O, C en mayúsculas)
+**Anima a los estudiantes a publicar en las redes sociales (donde sea apropiado) cuando terminen.** ¿Por ejemplo "He hecho una Hora del Código con ________ y tu? #HourOfCode” o “He hecho una #HourOfCode como parte de la #CSEdWeek. ¿y tu? @Scratch.” Use el HashTag **#HourOfCode** (Con las letras H, O, C en mayúsculas)
 
 **Crear su actividad en español o en otros idiomas además del inglés.** ]
 
@@ -192,7 +190,7 @@ Puede incluir el logo de CSEdWeek ([pequeño](https://www.dropbox.com/s/ojlltueg
 
 ** No hagas necesario el login o pago para que los estudiantes puedan probar el tutorial. ** Los tutoriales que requieren login o pago no serán listados.
 
-**Asegúrese de que su tutorial pueda ser utilizado en [Programación en par](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigma.** Las tres reglas de par de programación en el ambiente escolar son:
+**Asegúrese de que su tutorial pueda ser utilizado en el paradigma de [Programación en parejas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).** Las tres reglas de programación en pareja en el entorno escolar son:
 
   * El driver controla el ratón y el teclado.
   * El navegante hace sugerencias, señala errores y hace preguntas. 
@@ -210,17 +208,17 @@ Beneficios de la programación en parejas:
 
 ## Guía de Marca Registrada
 
-Después del éxito de la campaña 2013, tomamos medidas para cerciorarnos de que hemos establecido la Hora de Código como un movimiento que puede repetirse anualmente con una mayor fidelidad y sin confusión.
+Después del éxito de la campaña de 2013, tomamos medidas para cerciorarnos de que hemos establecido la Hora del Código como un movimiento que puede repetirse anualmente con una mayor fidelidad y sin confusión.
 
 Una pieza de esto es para proteger la marca "Hora del Código" para evitar confusiones. Muchos de nuestros socios de tutoriales han usado "Hora del Código" en sus propios sitios web. No queremos evitar este uso, pero queremos asegurarnos de que encaje dentro de unos pocos límites:
 
-  1. Cualquier referencia a "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu propia marca, sino que haga referencia a la "Hora del Código" como un movimiento de base. Buen ejemplo: "Participar en la Hora del Código ™ en ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  1. Cualquier referencia a "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu propia marca, sino que haga referencia a la "Hora del Código" como un movimiento de base. Buen ejemplo: "Participar en la Hora del Código ™ en ACMECorp.com". Mal ejemplo: "Participa en la Hora del Código de ACME Corp".
+  2. Usa un "TM" en forma de superíndice en los lugares más importantes donde menciones la "Hora del Código", así como en tu sitio web o en las descripciones de apps.
   3. Incluye el idioma en la página (o en el pie de página") incluyendo links hacia las paginas web de CSEdWeek y Code.org que digan lo siguiente:
     
-    *"La 'Hora de Código ™' es una iniciativa nacional por la Semana de Educación de la Ciencia de Computación[csedweek.org] y Code.org[code.org] para presentar a millones de estudiantes a una hora de ciencia computacional y programación."*
+    *"La 'Hora del Código ™' es una iniciativa nacional por la Semana de Educación en Ciencias de Computación[csedweek.org] y Code.org[code.org] para introducir las Ciencias de la Computación y la programación a millones de estudiantes."*
 
-  4. No use of "Hour of Code" in app names.
+  4. No usar la marca "Hora del Código" en nombres de apps.
 
 [**Volver al principio**](#top)
 
@@ -264,5 +262,3 @@ Pedimos a todos que promocionen sus propios tutoriales de 1 hora con todos sus u
 Si haz creado un tutorial orientado a estudiantes con visión deteriorada, nos gustaría resaltarlo para estudiantes con lectores de pantalla. Aún no hemos recibido este tipo de tutorial, y nos encantaría incluirlo uno como una opción para estos estudiantes.
 
 [**Volver al principio**](#top)
-
-<%= view :signup_button %>

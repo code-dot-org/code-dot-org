@@ -46,7 +46,7 @@ end
 basename = File.basename(csv_path, '.csv')
 
 samples.each_with_index do |sample, i|
-  output_csv("#{basename}-experiment-#{i+1}.csv", input_columns, sample)
+  output_csv("#{basename}-experiment-#{i + 1}.csv", input_columns, sample)
 end
 
 output_csv("#{basename}-remainder.csv", input_columns, input_rows)
