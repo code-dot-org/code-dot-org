@@ -293,7 +293,19 @@ def main
         raise
       end
 
-      POSTE_DB[:poste_deliveries].where(id: delivery[:id]).update(sent_at: sent_at)
+      is_dashboard_user = DASHBOARD_DB[:users].
+        where(hashed_email: hashed_email).
+        any?
+      is_dashboard_student = DASHBOARD_DB[:users].
+        where(hashed_email: hashed_email).
+        first[:user_type] == 'student' if is_dashboard_user
+      if is_dashboard_user && is_dashboard_student
+        POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
+          update(sent_at: sent_at, email: '')
+      else
+        POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
+          update(sent_at: sent_at)
+      end
     end
   end
   workers.each(&:join)

@@ -85,8 +85,13 @@ module Poste
         unsubscribed_ip: params[:ip_address],
       )
     else
+      is_dashboard_user = DASHBOARD_DB[:users].where(hashed_email: hashed_email).any?
+      is_dashboard_student = DASHBOARD_DB[:users].
+        where(hashed_email: hashed_email).
+        first[:user_type] == 'student' if is_dashboard_user
+      sanitized_email = is_dashboard_user && is_dashboard_student ? '' : email
       contacts.insert(
-        email: email,
+        email: sanitized_email,
         hashed_email: hashed_email,
         created_at: now,
         created_ip: params[:ip_address],
