@@ -293,13 +293,9 @@ def main
         raise
       end
 
-      is_dashboard_user = DASHBOARD_DB[:users].
-        where(hashed_email: hashed_email).
-        any?
-      is_dashboard_student = DASHBOARD_DB[:users].
-        where(hashed_email: hashed_email).
-        first[:user_type] == 'student' if is_dashboard_user
-      if is_dashboard_user && is_dashboard_student
+      if Poste.dashboard_student?(hashed_email)
+        # We clear the email here for privacy. Note that (given architecture)
+        # it has to be persisted for a short while to actually send the email.
         POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
           update(sent_at: sent_at, email: '')
       else

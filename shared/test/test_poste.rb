@@ -54,10 +54,10 @@ class PosteTest < Minitest::Test
 
     assert POSTE_DB[:contacts].
       where(hashed_email: hashed_email).first[:unsubscribed_at]
-    assert POSTE_DB[:contacts].where(email: email).first.nil?
+    assert_nil POSTE_DB[:contacts].where(email: email).first
   end
 
-  def test_unsubscribe_for_code_studio_teacher_stores_no_email
+  def test_unsubscribe_for_code_studio_teacher_stores_email
     email = 'teacher@example.net'
     hashed_email = Digest::MD5.hexdigest(email)
     DASHBOARD_DB[:users].insert(
