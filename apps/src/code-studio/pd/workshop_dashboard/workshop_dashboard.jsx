@@ -1,7 +1,7 @@
 /*
   Main landing page and router for the workshop dashboard.
  */
-
+import React from 'react';
 const Router = require('react-router').Router;
 const Route = require('react-router').Route;
 const IndexRedirect = require('react-router').IndexRedirect;

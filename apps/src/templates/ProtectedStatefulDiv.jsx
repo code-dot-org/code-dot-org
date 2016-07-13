@@ -13,7 +13,8 @@ var Radium = require('radium');
  */
 var ProtectedStatefulDiv = React.createClass({
   propTypes: {
-    contentFunction: React.PropTypes.func
+    contentFunction: React.PropTypes.func,
+    children: React.PropTypes.node,
   },
 
   shouldComponentUpdate: function () {
