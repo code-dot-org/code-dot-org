@@ -73,6 +73,7 @@ h1 {
 }
 
 h2 {
+  margin: 25px 0 10px 0;
   font-family: $gotham-bold;
   font-weight: normal;
   font-size: 22px;
@@ -1769,6 +1770,9 @@ a.download-video {
     clear: both;
     p {
       margin-bottom: 10px;
+    }
+    h2:first-child {
+      margin-top: 5px;
     }
   }
 }
