@@ -681,7 +681,7 @@
   dashboard_faq_k5: "K-5 Frequently Asked Questions"
   dashboard_announcements: "Announcements"
   dashboard_announce_view_all: "View all"
-  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so you, the teacher, can track completed progress for both individuals and teams."
+  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
   dashboard_announce_csp_widgets_message: "CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course."
   dashboard_announce_learn_more_button: "Learn more"
   dashboard_announce_try_now_button: "Try it now"
