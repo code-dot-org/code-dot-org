@@ -66,9 +66,9 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     if (data.levels) {
       store.dispatch(mergeProgress(
         _.mapValues(data.levels,
-          level => level.submitted ? SUBMITTED_RESULT : level.result)
-        ), data.peerReviewsPerformed
-      );
+          level => level.submitted ? SUBMITTED_RESULT : level.result),
+        data.peerReviewsPerformed
+      ));
     }
   });
 
