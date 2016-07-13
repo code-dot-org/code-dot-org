@@ -132,11 +132,32 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
     throw new Error('Animation List orderedKeys should be an array');
   }
 
-  serializedAnimationList.orderedKeys.forEach(key => {
-    if (!serializedAnimationList.propsByKey.hasOwnProperty(key)) {
-      throw new Error(`Animation List has a key ${key} but not associated props`);
+  // The ordered keys set and the keys from propsByKey should match (but can
+  // be in a different order)
+  let orderedKeysNotInProps = serializedAnimationList.orderedKeys.slice();
+  let propsNotInOrderedKeys = Object.keys(serializedAnimationList.propsByKey);
+  for (let i = propsNotInOrderedKeys.length - 1; i >= 0; i--) {
+    let j = orderedKeysNotInProps.indexOf(propsNotInOrderedKeys[i]);
+    if (j !== -1) {
+      propsNotInOrderedKeys.splice(i, 1);
+      orderedKeysNotInProps.splice(j, 1);
     }
+  }
+  if (orderedKeysNotInProps.length > 0) {
+    throw new Error('Animation List has ' +
+        (orderedKeysNotInProps.length === 1 ? 'key' : 'keys') + ' ' +
+        orderedKeysNotInProps.map(k => `"${k}"`).join(', ') +
+        ' but not associated props');
+  }
+  if (propsNotInOrderedKeys.length > 0) {
+    throw new Error('Animation List has a props for ' +
+        propsNotInOrderedKeys.map(k => `"${k}"`).join(', ') +
+        ' but ' +
+        (propsNotInOrderedKeys.length === 1 ? "that key isn't" : "those keys aren't") +
+        ' in the orderedKeys list');
+  }
 
+  serializedAnimationList.orderedKeys.forEach(key => {
     ['name', 'sourceSize', 'frameSize', 'frameCount', 'frameRate'].forEach(prop => {
       if (!serializedAnimationList.propsByKey[key].hasOwnProperty(prop)) {
         throw new Error(`Animation ${key} is missing required property ${prop}`);
