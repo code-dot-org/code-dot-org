@@ -4,8 +4,21 @@ import AdvancedShareOptions from './AdvancedShareOptions';
 import AbuseError from './abuse_error';
 import SendToPhone from './SendToPhone';
 
-var select = function (event) {
+function select(event) {
   event.target.select();
+}
+
+const styles = {
+  abuseStyle: {
+    border: '1px solid',
+    borderRadius: 10,
+    padding: 10,
+    marginBottom: 20
+  },
+  abuseTextStyle: {
+    color: '#b94a48',
+    fontSize: 14
+  },
 };
 
 /**
@@ -62,13 +75,13 @@ var ShareDialog = React.createClass({
   clickExport: function () {
     this.setState({exporting: true});
     this.props.onClickExport().then(
-      this.setState.bind(this, {exporting: false}),
-      function () {
+      () => this.setState({exporting: false}),
+      () => {
         this.setState({
           exporting: false,
           exportError: 'Failed to export project. Please try again later.'
         });
-      }.bind(this)
+      }
     );
   },
 
@@ -88,61 +101,25 @@ var ShareDialog = React.createClass({
                           "&amp;text=Check%20out%20what%20I%20made%20@codeorg" +
                           "&amp;hashtags=HourOfCode&amp;related=codeorg";
 
-    var abuseStyle = {
-      border: '1px solid',
-      borderRadius: 10,
-      padding: 10,
-      marginBottom: 20
-    };
-
-    var abuseTextStyle = {
-      color: '#b94a48',
-      fontSize: 14
-    };
-
-    var abuseContents;
-    if (this.props.isAbusive) {
-      abuseContents = <AbuseError
-                          i18n={{
-                              tos: this.props.i18n.t('project.abuse.tos'),
-                              contact_us: this.props.i18n.t('project.abuse.contact_us')
-                            }}
-                          className='alert-error'
-                          style={abuseStyle}
-                          textStyle={abuseTextStyle}/>;
-    }
-
-    var sendToPhone;
-    if (this.state.showSendToPhone) {
-      sendToPhone = <SendToPhone
-                        channelId={this.props.channelId}
-                        appType={this.props.appType}
-                        styles={{label:{marginTop: 15, marginBottom: 0}}}
-                    />;
-    }
-
-    var advancedOptions;
-    if (this.props.appType === 'applab') {
-      advancedOptions = (
-        <AdvancedShareOptions
-            i18n={this.props.i18n}
-            onClickExport={this.props.onClickExport}
-            expanded={this.state.showAdvancedOptions}
-            onExpand={this.showAdvancedOptions}
-        />
-      );
-    }
-
     return (
-      <BaseDialog useDeprecatedGlobalStyles
-                  isOpen={this.state.isOpen}
-                  handleClose={this.close}
-                  hideBackdrop={this.props.hideBackdrop}>
+      <BaseDialog
+          useDeprecatedGlobalStyles
+          isOpen={this.state.isOpen}
+          handleClose={this.close}
+          hideBackdrop={this.props.hideBackdrop}>
         <div>
           {image}
           <div id="project-share" className={modalClass} style={{position: 'relative'}}>
             <p className="dialog-title">{this.props.i18n.t('project.share_title')}</p>
-            {abuseContents}
+            {this.props.isAbusive &&
+             <AbuseError
+                 i18n={{
+                     tos: this.props.i18n.t('project.abuse.tos'),
+                     contact_us: this.props.i18n.t('project.abuse.contact_us')
+                   }}
+                 className='alert-error'
+                 style={styles.abuseStyle}
+                 textStyle={styles.abuseTextStyle}/>}
             <p style={{fontSize: 20}}>
               {this.props.i18n.t('project.share_copy_link')}
             </p>
@@ -169,14 +146,25 @@ var ShareDialog = React.createClass({
                 <i className="fa fa-twitter"></i>
               </a>
             </div>
-            {sendToPhone}
-            {advancedOptions}
+            {this.state.showSendToPhone &&
+             <SendToPhone
+                 channelId={this.props.channelId}
+                 appType={this.props.appType}
+                 styles={{label:{marginTop: 15, marginBottom: 0}}}
+             />}
+            {this.props.appType === 'applab' &&
+             <AdvancedShareOptions
+                 i18n={this.props.i18n}
+                 onClickExport={this.props.onClickExport}
+                 expanded={this.state.showAdvancedOptions}
+                 onExpand={this.showAdvancedOptions}
+             />}
             {/* Awkward that this is called continue-button, when text is
             close, but id is (unfortunately) used for styling */}
             <button
                 id="continue-button"
                 style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
-                onClick={this.props.onClickClose}>
+                onClick={this.close}>
               {this.props.i18n.t('project.close')}
             </button>
           </div>
@@ -207,65 +195,75 @@ if (BUILD_STYLEGUIDE) {
       .addStoryTable([
         {
           name: 'basic example',
-          story: () => <ShareDialog
-                           hideBackdrop={true}
-                           i18n={fakei18n}
-                           shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                           isAbusive={false}
-                           channelId="some-id"
-                           appType="gamelab"
-                           onClickPopup={storybook.action('onClickPopup')}
-                       />
+          story: () => (
+            <ShareDialog
+                hideBackdrop={true}
+                i18n={fakei18n}
+                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                isAbusive={false}
+                channelId="some-id"
+                appType="gamelab"
+                onClickPopup={storybook.action('onClickPopup')}
+            />
+          )
         }, {
           name: 'applab',
           description: `The applab version has an advanced sharing dialog with more options`,
-          story: () => <ShareDialog
-                           hideBackdrop={true}
-                           i18n={fakei18n}
-                           shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                           isAbusive={false}
-                           channelId="some-id"
-                           appType="applab"
-                           onClickPopup={storybook.action('onClickPopup')}
-                       />
+          story: () => (
+            <ShareDialog
+                hideBackdrop={true}
+                i18n={fakei18n}
+                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                isAbusive={false}
+                channelId="some-id"
+                appType="applab"
+                onClickPopup={storybook.action('onClickPopup')}
+            />
+          )
         }, {
           name: 'with export',
           description: `This feature has not yet shipped.`,
-          story: () => <ShareDialog
-                           hideBackdrop={true}
-                           i18n={fakei18n}
-                           shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                           isAbusive={false}
-                           channelId="some-id"
-                           appType="applab"
-                           onClickPopup={storybook.action('onClickPopup')}
-                           onClickExport={storybook.action('onClickExport')}
-                       />
+          story: () => (
+            <ShareDialog
+                hideBackdrop={true}
+                i18n={fakei18n}
+                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                isAbusive={false}
+                channelId="some-id"
+                appType="applab"
+                onClickPopup={storybook.action('onClickPopup')}
+                onClickExport={storybook.action('onClickExport')}
+            />
+          )
         }, {
           name: 'abusive',
           description: `The abusive version shows a warning message`,
-          story: () => <ShareDialog
-                           hideBackdrop={true}
-                           i18n={fakei18n}
-                           shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                           isAbusive={true}
-                           channelId="some-id"
-                           appType="gamelab"
-                           onClickPopup={storybook.action('onClickPopup')}
-                       />
+          story: () => (
+            <ShareDialog
+                hideBackdrop={true}
+                i18n={fakei18n}
+                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                isAbusive={true}
+                channelId="some-id"
+                appType="gamelab"
+                onClickPopup={storybook.action('onClickPopup')}
+            />
+          )
         }, {
           name: 'with icon',
           description: `An icon can be specifid for the dialog`,
-          story: () => <ShareDialog
-                           hideBackdrop={true}
-                           icon="https://studio.code.org/blockly/media/skins/pvz/static_avatar.png"
-                           i18n={fakei18n}
-                           shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                           isAbusive={false}
-                           channelId="some-id"
-                           appType="gamelab"
-                           onClickPopup={storybook.action('onClickPopup')}
-                       />
+          story: () => (
+            <ShareDialog
+                hideBackdrop={true}
+                icon="https://studio.code.org/blockly/media/skins/pvz/static_avatar.png"
+                i18n={fakei18n}
+                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                isAbusive={false}
+                channelId="some-id"
+                appType="gamelab"
+                onClickPopup={storybook.action('onClickPopup')}
+            />
+          )
         }
       ]);
   };
