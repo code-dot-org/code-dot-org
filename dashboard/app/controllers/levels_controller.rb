@@ -153,7 +153,7 @@ class LevelsController < ApplicationController
   end
 
   def new
-    authorize! :create, :level
+    authorize! :create, Level
     if params.key? :type
       @type_class = params[:type].constantize
       if @type_class == Artist

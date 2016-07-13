@@ -4,15 +4,6 @@ en:
   data:
     script:
       name:
-        test:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          The Maze: The Maze
-          Multi: Multi
-          Match: Match
-          Math Image: Math Image
-          title: Test Course
-          description: Just an internal test course.
-          description_short: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
           'Maze: Sequence': 'Maze: Sequence'
@@ -212,17 +203,6 @@ en:
           Variables: Variables
           For Loops: For Loops
           Binary: Binary
-        potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
-        special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
-          Binary: Binary
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -386,28 +366,8 @@ en:
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
           Hour of Code 2013: Hour of Code 2013
-        Code Studio Puzzle Challenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
-        Test - Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
-        How to do the Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
-        Tutorial - Code Studio Puzzle Challenge:
-          title: Tutorial - Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
@@ -697,24 +657,6 @@ en:
           Strings and Images: Strings and Images
           The Design Recipe: The Design Recipe
           Next Steps: Next Steps
-        sciPD complex adaptive 2:
-          title: Computer Science in Science PD
-          description: 'Phase 1: Online Introduction'
-          description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: Introduction to PD
-          Pre-Workshop Online Component: Pre-Workshop Online Component
-        sciPD complex adaptive forum:
-          title: Computer Science in Science PD
-          description: 'Phase 1: Online Introduction'
-          description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: Introduction to PD
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
-        Glenallan Career Day Demo:
-          new stage: new stage
-          title: Glenallan Career Day Demo
-          description_short: Let's make some puzzles!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
         ECSPD-NexTech:
           Introduction to PD: Introduction to PD
           What is ECS?: What is ECS?
@@ -795,15 +737,6 @@ en:
           Introduction to StarLogo Nova: Introduction to StarLogo Nova
           The Tutorial: The Tutorial
           Post-Survey: Post-Survey
-        ui_tests:
-          title: UI Tests
-          description: Script for test. Careful, don't change level ordering.
-          description_short: Script for test. Careful, don't change level ordering.
-          All the Tests: All the Tests
-          Free Response: Free Response
-          Multi: Multi
-          Big Game: Big Game
-          new stage: new stage
         sciencePD2:
           title: 'CS in Science: Part 2'
           description: Phase 2 Online Blended Summer Study
@@ -974,17 +907,6 @@ en:
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
           Welcome!: Welcome!
-        CSPfac intro:
-          title: 'CS Principles Facilitator Workshop '
-          description: Online levels for PD workshop
-          description_short: Online levels for PD workshop
-          Welcome!: Welcome!
-          Pixelation Widget: Pixelation Widget
-          Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
-          Broadcast Lesson: Broadcast Lesson
-          Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
@@ -1046,12 +968,6 @@ en:
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
           Equity PD: Equity PD
-        hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
-          Hour of Code: Hour of Code
-          Hour of Code 2015: Hour of Code 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1204,11 +1120,6 @@ en:
           description_short: Vigenere Cipher Widget
           description: Use the Vigenere Cipher Widget to explore encrypting and decrypting messages using a Vigenere Cipher
           Vigenere: Vigenere
-        frequency:
-          title: Frequency Analysis Widget
-          description_short: Frequency Analysis Widget
-          description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
-          Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Computer Science in Algebra PD
           description_short: 'Phase 3 (Part 1): CS in Algebra blended online school year study'
@@ -1526,11 +1437,6 @@ en:
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           Hour of Code 2015: Hour of Code 2015
-        minecraft:
-          title: Minecraft
-          description_short: Use code to survive in a Minecraft world!
-          description: Use code to survive in a Minecraft world!
-          Craft: Craft
         mc:
           title: Minecraft Hour of Code
           description_short: Explore a Minecraft world through code
@@ -1924,14 +1830,6 @@ en:
           title: netsim task completion
           description: introduction to the internet simulator and a discussion of how we use it to teach the internet
           netsim: netsim
-        Test CPS PD:
-          test Unit 1 required reading: test Unit 1 required reading
-          test Unit 1 content module Alpha: test Unit 1 content module Alpha
-          test Unit 1 content module Bravo: test Unit 1 content module Bravo
-          test Unit 1 content module Charlie: test Unit 1 content module Charlie
-          test Unit 1 practice module Delta: test Unit 1 practice module Delta
-          test Unit 1 practice module Echo: test Unit 1 practice module Echo
-          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
         'csp-facilitators ':
           title: CSP Tool Overview
           description_short: Introduction to CS Principles for new Facilitators
@@ -2246,3 +2144,11 @@ en:
           Robot Running the Farm: Robot Running the Farm
           Farmer Impacts of Computing: Farmer Impacts of Computing
           Preview to What is Next: Preview to What is Next
+        Test CPS PD:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot

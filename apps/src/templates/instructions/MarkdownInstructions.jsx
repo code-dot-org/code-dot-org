@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';

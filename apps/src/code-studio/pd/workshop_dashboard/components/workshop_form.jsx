@@ -47,7 +47,8 @@ var WorkshopForm = React.createClass({
       sessions: React.PropTypes.array.isRequired
     }),
     onSaved: React.PropTypes.func,
-    readOnly: React.PropTypes.bool
+    readOnly: React.PropTypes.bool,
+    children: React.PropTypes.node,
   },
 
   getInitialState: function () {
@@ -275,7 +276,7 @@ var WorkshopForm = React.createClass({
         </Input>
       );
     } else {
-      this.state.subject = null;
+      this.setState({subject: null});
     }
   },
 

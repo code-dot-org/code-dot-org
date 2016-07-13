@@ -97,7 +97,8 @@ GameButtons.propTypes = {
   hideRunButton: React.PropTypes.bool,
   instructionsInTopPane: React.PropTypes.bool,
   isMinecraft: React.PropTypes.bool,
-  playspacePhoneFrame: React.PropTypes.bool
+  playspacePhoneFrame: React.PropTypes.bool,
+  children: React.PropTypes.node,
 };
 
 export default connect(state => ({

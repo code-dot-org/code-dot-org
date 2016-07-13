@@ -11,7 +11,7 @@ embedded_layout: simple_embedded
 
 [category]
 
-Category: UI Controls
+Category: UI controls
 
 [/category]
 
