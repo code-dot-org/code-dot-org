@@ -14,7 +14,7 @@
 #  login_type   :string(255)      default("email"), not null
 #  deleted_at   :datetime
 #  stage_extras :boolean          default(FALSE), not null
-#  type         :string(255)
+#  section_type :string(255)
 #
 # Indexes
 #
@@ -39,9 +39,6 @@ class Section < ActiveRecord::Base
 
   LOGIN_TYPE_PICTURE = 'picture'
   LOGIN_TYPE_WORD = 'word'
-
-  # Disable single table inheritance for this model.
-  self.inheritance_column = nil
 
   def user_must_be_teacher
     errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
