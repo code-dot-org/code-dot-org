@@ -1,3 +1,4 @@
+import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
 import * as dataStyles from './dataStyles';
@@ -5,7 +6,21 @@ import * as dataStyles from './dataStyles';
 const EditTableRow = React.createClass({
   propTypes: {
     columnNames: React.PropTypes.array.isRequired,
+    tableName: React.PropTypes.string.isRequired,
     record: React.PropTypes.object.isRequired
+  },
+
+  handleError(msg) {
+    console.warn(msg);
+  },
+
+  handleDelete() {
+    FirebaseStorage.deleteRecord(
+      this.props.tableName,
+      this.props.record,
+      () => {},
+      this.handleError
+    );
   },
 
   render() {
@@ -30,6 +45,7 @@ const EditTableRow = React.createClass({
           <button
               className="btn btn-danger"
               style={dataStyles.button}
+              onClick={this.handleDelete}
           >
             Delete
           </button>
