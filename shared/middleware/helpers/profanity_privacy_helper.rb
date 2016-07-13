@@ -1,5 +1,6 @@
 require 'cdo/share_filtering'
 
+# The standard source filename used for blockly projects using channels
 BLOCKLY_SOURCE_FILENAME = 'main.json'
 
 def profanity_privacy_violation?(filename, body)

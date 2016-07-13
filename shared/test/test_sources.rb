@@ -49,7 +49,7 @@ class SourcesTest < FilesApiTestBase
 
   def test_get_source_blocks_profanity_violations
     # Given a Play Lab program with a privacy violation
-    filename = FilesApi::BLOCKLY_SOURCE_FILENAME
+    filename = 'main.json'
     file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
     file_headers = { 'CONTENT_TYPE' => 'application/json' }
     delete_all_source_versions(filename)
@@ -73,7 +73,7 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_get_source_blocks_privacy_violations
-    filename = FilesApi::BLOCKLY_SOURCE_FILENAME
+    filename = 'main.json'
     file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = { 'CONTENT_TYPE' => 'application/json' }
     delete_all_source_versions(filename)

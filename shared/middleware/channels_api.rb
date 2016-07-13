@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'base64'
 require 'cdo/db'
 require 'cdo/rack/request'
+require_relative 'helpers/profanity_privacy_helper'
 
 class ChannelsApi < Sinatra::Base
 
