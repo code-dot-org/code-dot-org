@@ -454,7 +454,7 @@ Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  @browser.execute_script("return $(#{selector.dump}).length").should eq 0
+  expect(@browser.execute_script("return $(#{selector.dump}).length")).to eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|

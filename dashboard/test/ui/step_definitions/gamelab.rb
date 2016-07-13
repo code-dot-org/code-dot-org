@@ -19,3 +19,27 @@ Given /^I am on the (\d+)(?:st|nd|rd|th)? Game ?Lab test level$/ do |level_index
     And I wait to see "#runButton"
   STEPS
 end
+
+When /^I (?:run the game|press run)$/ do
+  # Use a short wait to surface any errors that occur during the first few frames
+  steps <<-STEPS
+    And I press "runButton"
+    And I wait for 2 seconds
+  STEPS
+end
+
+When /^I (?:reset the game|press reset)$/ do
+  steps 'And I press "resetButton"'
+end
+
+When /^I switch to(?: the)? animation (?:mode|tab)$/ do
+  steps 'When I press "animationMode"'
+end
+
+Then /^I do not see "([^"]*)" in the Game Lab console$/ do |message|
+  expect(element_contains_text?('#debug-output', message)).to be false
+end
+
+Then /^I see (\d+) animations in the animation column$/ do |num_animations|
+  expect(@browser.execute_script('return $(".animationList>div>div").not(".newListItem").length')).to eq num_animations.to_i
+end
