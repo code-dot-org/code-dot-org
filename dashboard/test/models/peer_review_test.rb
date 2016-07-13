@@ -178,8 +178,8 @@ class PeerReviewTest < ActiveSupport::TestCase
     first_review.update!(status: 'accepted')
     second_review = PeerReview.pull_review_from_pool(@script, @user)
 
-    #Expect three peer reviews, one marked complete, one not complete, and one for pulling a new review
-    expected_review = [
+    #Expect three things, one complete peer review, one incomplete peer review, and one link to new reviews
+    expected_reviews = [
         {
             id: first_review.id,
             status: 'perfect',
@@ -203,6 +203,6 @@ class PeerReviewTest < ActiveSupport::TestCase
         }
     ]
 
-    assert_equal expected_review, PeerReview.get_peer_review_summaries(@user, @script)
+    assert_equal expected_reviews, PeerReview.get_peer_review_summaries(@user, @script)
   end
 end

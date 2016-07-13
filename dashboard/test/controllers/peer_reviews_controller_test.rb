@@ -6,15 +6,8 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @other_user = create :teacher
     sign_in(@user)
 
-    level = FreeResponse.find_or_create_by!(
-      game: Game.free_response,
-      name: 'FreeResponseTest',
-      level_num: 'custom',
-      user_id: 0
-    )
-    level.submittable = true
-    level.peer_reviewable = true
-    level.save!
+    level = create :free_response
+    level.update(submittable: true, peer_reviewable: true)
 
     @script_level = create :script_level, levels: [level]
     @script = @script_level.script
