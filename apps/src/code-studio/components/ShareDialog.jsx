@@ -17,14 +17,9 @@ var ShareDialog = React.createClass({
       t: React.PropTypes.func.isRequired,
     }).isRequired,
     icon: React.PropTypes.string,
-    title: React.PropTypes.string.isRequired,
-    shareCopyLink: React.PropTypes.string.isRequired,
     shareUrl: React.PropTypes.string.isRequired,
     encodedShareUrl: React.PropTypes.string.isRequired,
-    closeText: React.PropTypes.string.isRequired,
     isAbusive: React.PropTypes.bool.isRequired,
-    abuseTos: React.PropTypes.string.isRequired,
-    abuseContact: React.PropTypes.string.isRequired,
     channelId: React.PropTypes.string.isRequired,
     appType: React.PropTypes.string.isRequired,
     onClickPopup: React.PropTypes.func.isRequired,
@@ -107,8 +102,8 @@ var ShareDialog = React.createClass({
     if (this.props.isAbusive) {
       abuseContents = <AbuseError
                           i18n={{
-                              tos: this.props.abuseTos,
-                              contact_us: this.props.abuseContact
+                              tos: this.props.i18n.t('project.abuse.tos'),
+                              contact_us: this.props.i18n.t('project.abuse.contact_us')
                             }}
                           className='alert-error'
                           style={abuseStyle}
@@ -144,10 +139,10 @@ var ShareDialog = React.createClass({
         <div>
           {image}
           <div id="project-share" className={modalClass} style={{position: 'relative'}}>
-            <p className="dialog-title">{this.props.title}</p>
+            <p className="dialog-title">{this.props.i18n.t('project.share_title')}</p>
             {abuseContents}
             <p style={{fontSize: 20}}>
-              {this.props.shareCopyLink}
+              {this.props.i18n.t('project.share_copy_link')}
             </p>
             <div style={{marginBottom: 10}}>
               <input
@@ -180,7 +175,7 @@ var ShareDialog = React.createClass({
                 id="continue-button"
                 style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
                 onClick={this.props.onClickClose}>
-              {this.props.closeText}
+              {this.props.i18n.t('project.close')}
             </button>
           </div>
         </div>
@@ -193,8 +188,7 @@ module.exports = ShareDialog;
 if (BUILD_STYLEGUIDE) {
   const fakei18n = {
     t(s) {
-      return {
-      }[s] || s;
+      return `<i18n>${s}</i18n>`;
     }
   };
 
@@ -207,14 +201,9 @@ if (BUILD_STYLEGUIDE) {
           story: () => <ShareDialog
                            hideBackdrop={true}
                            i18n={fakei18n}
-                           title="Share your project"
-                           shareCopyLink="Copy the link:"
                            shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
                            encodedShareUrl="some encoded url"
-                           closeText="Close"
                            isAbusive={false}
-                           abuseTos="foo"
-                           abuseContact="bar"
                            channelId="some-id"
                            appType="applab"
                            onClickPopup={storybook.action('onClickPopup')}
