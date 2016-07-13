@@ -13,34 +13,43 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
   });
 
   it('throws if passed anything falsy', function () {
-    expect(() => throwIfSerializedAnimationListIsInvalid(undefined)).to.throw(Error);
-    expect(() => throwIfSerializedAnimationListIsInvalid(null)).to.throw(Error);
-    expect(() => throwIfSerializedAnimationListIsInvalid(false)).to.throw(Error);
+    expect(() => throwIfSerializedAnimationListIsInvalid(undefined)).to.throw(Error,
+        'Required prop `serializedAnimationList` was not specified in `Animation List JSON`.');
+    expect(() => throwIfSerializedAnimationListIsInvalid(null)).to.throw(Error,
+        'Required prop `serializedAnimationList` was not specified in `Animation List JSON`.');
+    expect(() => throwIfSerializedAnimationListIsInvalid(false)).to.throw(Error,
+        'Invalid prop `serializedAnimationList` of type `boolean` supplied to `Animation List JSON`, expected `object`.');
   });
 
   it('throws if missing orderedKeys or propsByKey', function () {
-    expect(() => throwIfSerializedAnimationListIsInvalid({})).to.throw(Error);
+    expect(() => throwIfSerializedAnimationListIsInvalid({})).to.throw(Error,
+        'Required prop `serializedAnimationList.orderedKeys` was not specified in `Animation List JSON`.');
     expect(() => throwIfSerializedAnimationListIsInvalid({
       orderedKeys: []
-    })).to.throw(Error);
+    })).to.throw(Error,
+        'Required prop `serializedAnimationList.propsByKey` was not specified in `Animation List JSON`.');
     expect(() => throwIfSerializedAnimationListIsInvalid({
       propsByKey: {}
-    })).to.throw(Error);
+    })).to.throw(Error,
+        'Required prop `serializedAnimationList.orderedKeys` was not specified in `Animation List JSON`.');
   });
 
   it('throws if orderedKeys is not an array', function () {
     expect(() => throwIfSerializedAnimationListIsInvalid({
       orderedKeys: {},
       propsByKey: {}
-    })).to.throw(Error);
+    })).to.throw(Error,
+        'Invalid prop `serializedAnimationList.orderedKeys` of type `object` supplied to `Animation List JSON`, expected an array.');
     expect(() => throwIfSerializedAnimationListIsInvalid({
       orderedKeys: "",
       propsByKey: {}
-    })).to.throw(Error);
+    })).to.throw(Error,
+        'Invalid prop `serializedAnimationList.orderedKeys` of type `string` supplied to `Animation List JSON`, expected an array.');
     expect(() => throwIfSerializedAnimationListIsInvalid({
       orderedKeys: null,
       propsByKey: {}
-    })).to.throw(Error);
+    })).to.throw(Error,
+        'Required prop `serializedAnimationList.orderedKeys` was not specified in `Animation List JSON`.');
   });
 
   it('throws if duplicates are found in the orderedKeys array', function () {
@@ -54,21 +63,24 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
     expect(() => throwIfSerializedAnimationListIsInvalid({
       orderedKeys: invalidKeys,
       propsByKey: buildValidPropsForKeys(invalidKeys)
-    })).to.throw(Error);
+    })).to.throw(Error,
+        'Key "is" appears more than once in orderedKeys');
   });
 
   it('throws if it finds keys without associated props', function () {
     expect(() => throwIfSerializedAnimationListIsInvalid({
       orderedKeys: ['keyWithoutProps'],
       propsByKey: {}
-    })).to.throw(Error);
+    })).to.throw(Error,
+        'Animation List has key "keyWithoutProps" but not associated props');
   });
 
   it('throws if it finds props without associated key', function () {
     expect(() => throwIfSerializedAnimationListIsInvalid({
       orderedKeys: [],
       propsByKey: buildValidPropsForKeys(['propsWithoutKey'])
-    })).to.throw(Error);
+    })).to.throw(Error,
+        'Animation List has a props for "propsWithoutKey" but that key isn\'t in the orderedKeys list');
   });
 
   it('throws if required prop fields are missing', function () {
@@ -80,7 +92,10 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
       expect(() => throwIfSerializedAnimationListIsInvalid({
         orderedKeys: keys,
         propsByKey: props
-      })).to.throw(Error);
+      })).to.throw(Error,
+          'Required prop `serializedAnimationList.propsByKey.mykey.' +
+          requiredField +
+          '` was not specified in `Animation List JSON`.');
     });
   });
 
@@ -91,7 +106,8 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
     expect(() => throwIfSerializedAnimationListIsInvalid({
       orderedKeys: keys,
       propsByKey: props
-    })).to.throw(Error);
+    })).to.throw(Error,
+        'Name "duplicate" appears more than once in propsByKey');
   });
 });
 
