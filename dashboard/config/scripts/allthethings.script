@@ -164,3 +164,6 @@ endvariants
 
 stage 'Anonymous student survey'
 assessment 'Test anonymous student survey'
+
+stage 'Anonymous student survey 2'
+assessment 'Test anonymous student survey 2'
