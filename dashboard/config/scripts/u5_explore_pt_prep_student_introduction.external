@@ -3,20 +3,20 @@ title 'title'
 description 'description here'
 css 'unplugged'
 markdown <<MARKDOWN
-## Unit 5: Lesson 01 - Explore PT Preparation
+# Unit 5: Lesson 01 - Explore PT Preparation
 
-# Background
+## Background
 
 You have done many practice Performance Tasks during the course, and now it's finally time for you to take on the Explore Performance Task. This will be the last lesson before you start working individually on your project without teacher support. As such, this is your chance to ask any final questions you have about the Explore Performance Task.
 
-# Lesson
+## Lesson
 
 * Review Practice PTs.
 * Review the Explore Performance Task.
 * Review research practices.
 * Check in on student preparedness guidelines.
 
-# Resources
+## Resources
 
 * Performance Task: <a href="https://drive.google.com/open?id=0B2UNlnU_5Vg4eWlNN1dKNnRCTG8" target="_blank">Explore Performance Task</a>
 * Rubric: Explore Performance Task Rubric
