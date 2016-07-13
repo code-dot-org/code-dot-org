@@ -63,6 +63,7 @@
     "enzyme": "^2.3.0",
     "es6-promise": "3.0.2",
     "eslint": "^2.8.0",
+    "eslint-plugin-react": "^5.2.2",
     "exports-loader": "^0.6.3",
     "express": "4.11.2",
     "factor-bundle": "2.5.0",
