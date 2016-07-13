@@ -190,7 +190,14 @@ module.exports = ShareDialog;
 if (BUILD_STYLEGUIDE) {
   const fakei18n = {
     t(s) {
-      return `<i18n>${s}</i18n>`;
+      return {
+        'project.share_title': 'Share your project',
+        'project.share_copy_link': 'Copy the link:',
+        'project.close': 'Close',
+        'project.advanced_share': 'Show advanced options',
+        'project.embed': 'Embed',
+        'project.share_embed_description': 'You can paste the embed code into an HTML page to display the project on a webpage.',
+      }[s] || `<i18n>${s}</i18n>` ;
     }
   };
 
@@ -206,9 +213,58 @@ if (BUILD_STYLEGUIDE) {
                            shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
                            isAbusive={false}
                            channelId="some-id"
+                           appType="gamelab"
+                           onClickPopup={storybook.action('onClickPopup')}
+                       />
+        }, {
+          name: 'applab',
+          description: `The applab version has an advanced sharing dialog with more options`,
+          story: () => <ShareDialog
+                           hideBackdrop={true}
+                           i18n={fakei18n}
+                           shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                           isAbusive={false}
+                           channelId="some-id"
+                           appType="applab"
+                           onClickPopup={storybook.action('onClickPopup')}
+                       />
+        }, {
+          name: 'with export',
+          description: `This feature has not yet shipped.`,
+          story: () => <ShareDialog
+                           hideBackdrop={true}
+                           i18n={fakei18n}
+                           shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                           isAbusive={false}
+                           channelId="some-id"
                            appType="applab"
                            onClickPopup={storybook.action('onClickPopup')}
                            onClickExport={storybook.action('onClickExport')}
+                       />
+        }, {
+          name: 'abusive',
+          description: `The abusive version shows a warning message`,
+          story: () => <ShareDialog
+                           hideBackdrop={true}
+                           i18n={fakei18n}
+                           shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                           isAbusive={true}
+                           channelId="some-id"
+                           appType="gamelab"
+                           onClickPopup={storybook.action('onClickPopup')}
+                       />
+        }, {
+          name: 'with icon',
+          description: `An icon can be specifid for the dialog`,
+          story: () => <ShareDialog
+                           hideBackdrop={true}
+                           icon="https://studio.code.org/blockly/media/skins/pvz/static_avatar.png"
+                           i18n={fakei18n}
+                           shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                           isAbusive={false}
+                           channelId="some-id"
+                           appType="gamelab"
+                           onClickPopup={storybook.action('onClickPopup')}
                        />
         }
       ]);
