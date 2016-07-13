@@ -22,6 +22,8 @@ class PeerReviewsControllerTest < ActionController::TestCase
     User.track_level_progress_sync(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source.id)
     @peer_review = PeerReview.first
     PeerReview.where.not(id: @peer_review.id).destroy_all
+
+    PeerReview.stubs(:exists?).returns(true)
   end
 
   test 'non admins cannot access index' do
@@ -69,7 +71,16 @@ class PeerReviewsControllerTest < ActionController::TestCase
   end
 
   test 'Submitting a review redirects to the script view' do
+    @peer_review.update(reviewer_id: @user.id)
     post :update, id: @peer_review.id, peer_review: {status: 'accepted', data: 'This is great'}
+    assert_redirected_to script_path(@script)
+  end
+
+  test 'Must be enrolled in a script to pull a review' do
+    PeerReview.stubs(:exists?).returns(false)
+    assert_equal 0, PeerReview.where(reviewer: @user).size
+    get :pull_review, script_id: @script.name
+    assert_equal 0, PeerReview.where(reviewer: @user).size
     assert_redirected_to script_path(@script)
   end
 end

@@ -28,6 +28,7 @@ class Gamelab < Blockly
   serialized_attrs %w(
     free_play
     text_mode_at_start
+    hide_animation_mode
     show_d_pad
     soft_buttons
     submittable
