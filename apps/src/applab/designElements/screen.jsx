@@ -13,7 +13,7 @@ var elementUtils = require('./elementUtils');
 var ScreenProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
   },
 
   handleIconColorChange: function (value) {
@@ -62,7 +62,8 @@ var ScreenProperties = React.createClass({
 var ScreenEvents = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired,
   },
 
   // The screen click event handler code currently receives clicks to any
