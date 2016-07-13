@@ -38,7 +38,8 @@ var ALLOWED_KEYS = utils.makeEnum(
   'inputOutputTable',
   'showAnimationMode',
   'nonResponsiveVisualizationColumnWidth',
-  'is13Plus'
+  'is13Plus',
+  'isSignedIn'
 );
 
 const initialState = {

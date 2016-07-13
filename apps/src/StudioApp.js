@@ -2921,7 +2921,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     smallStaticAvatar: config.skin.smallStaticAvatar,
     aniGifURL: config.level.aniGifURL,
     inputOutputTable: config.level.inputOutputTable,
-    is13Plus: config.is13Plus
+    is13Plus: config.is13Plus,
+    isSignedIn: config.isSignedIn,
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
