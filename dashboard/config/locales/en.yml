@@ -619,6 +619,7 @@ en:
     share_title: Share your project
     share_copy_link: "Copy the link:"
     share_embed_description: "You can paste the embed code into an HTML page to display the project on a webpage."
+    share_u13_warning: "Ask your teacher before sharing. Only share with others in your school."
     embed: "Embed"
     advanced_share: "Show advanced options"
     close: "Close"
