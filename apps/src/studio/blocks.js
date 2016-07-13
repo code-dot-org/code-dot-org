@@ -913,10 +913,35 @@ exports.install = function (blockly, blockInstallOptions) {
         studioValue: Direction.NORTH.toString(),
         tooltip: msg.moveUpTooltip()
       },
-      South: { letter: commonMsg.directionSouthLetter(),
+      South: {
+        letter: commonMsg.directionSouthLetter(),
         image: skin.downArrow,
         studioValue: Direction.SOUTH.toString(),
         tooltip: msg.moveDownTooltip()
+      },
+      NorthWest: {
+        letter: commonMsg.directionNorthWestLetter(),
+        image: skin.upLeftArrow,
+        studioValue: Direction.NORTHWEST.toString(),
+        tooltip: msg.moveUpLeftTooltip()
+      },
+      NorthEast: {
+        letter: commonMsg.directionNorthEastLetter(),
+        image: skin.upRightArrow,
+        studioValue: Direction.NORTHEAST.toString(),
+        tooltip: msg.moveUpRightTooltip()
+      },
+      SouthWest: {
+        letter: commonMsg.directionSouthWestLetter(),
+        image: skin.downLeftArrow,
+        studioValue: Direction.SOUTHWEST.toString(),
+        tooltip: msg.moveDownLeftTooltip()
+      },
+      SouthEast: {
+        letter: commonMsg.directionSouthEastLetter(),
+        image: skin.downRightArrow,
+        studioValue: Direction.SOUTHEAST.toString(),
+        tooltip: msg.moveDownRightTooltip()
       }
     },
     DISTANCES: [
@@ -929,6 +954,10 @@ exports.install = function (blockly, blockInstallOptions) {
       SimpleMove.generateBlocksForDirection("South");
       SimpleMove.generateBlocksForDirection("West");
       SimpleMove.generateBlocksForDirection("East");
+      SimpleMove.generateBlocksForDirection("NorthWest");
+      SimpleMove.generateBlocksForDirection("NorthEast");
+      SimpleMove.generateBlocksForDirection("SouthWest");
+      SimpleMove.generateBlocksForDirection("SouthEast");
     },
     generateBlocksForDirection: function (direction) {
       generator["studio_move" + direction] = SimpleMove.generateCodeGenerator(direction, true);
