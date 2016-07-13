@@ -16,7 +16,7 @@ end
 
 def disallow_case_change
   `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.split("\n").each do |line|
-    if %r{^R  ([^ ]+) -> ([^ ]+)}.match(line) && $1.casecmp($2) == 0
+    if (%r{^R  ([^ ]+) -> ([^ ]+)}.match(line) || %r{^R  ("[^"]+") -> ("[^"]+")}.match(line)) && $1.casecmp($2) == 0
       STDERR.puts "\nAborting due to case-only rename: #{line}"
       STDERR.puts "To fix this, run the following commands:\n\n"
       STDERR.puts "git mv #{$2} #{$2}.tmp\n\n"
