@@ -58,10 +58,8 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     }
 
     if (data.focusAreaPositions) {
-      store.dispatch(updateFocusArea({
-        changeFocusAreaPath: data.changeFocusAreaPath,
-        focusAreaPositions: data.focusAreaPositions
-      }));
+      store.dispatch(updateFocusArea(data.changeFocusAreaPath,
+        data.focusAreaPositions));
     }
 
     // Merge progress from server (loaded via AJAX)
