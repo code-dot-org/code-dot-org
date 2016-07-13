@@ -37,15 +37,15 @@ nav: promote_nav
 
 [Descarcati variantele cu rezoluție mare](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+**"Ora de cod" este marcă înregistrată. Nu vrem să prevenim utilizarea acesteia, dar vrem să ne asigurăm că se plasează în câteva limite:**
 
-  1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază. Exemplu corect: "Participa la Hour of Code la ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază. Exemplu corect: "Participa la Hour of Code la ACMECorp.com". Exemplu negativ: "Încercaţi Ora de Cod de ACME Corp".
+  2. Utilizează un exponent "TM" în locurile cele mai proeminente în care menționezi "Hour of Code", atât pe site-ul tău de web cât şi în descrierea aplicației.
   3. Includeți limba pe pagina (sau în subsol), inclusiv link-uri către CSEdWeek şi Code.org, care spun următoarele:
     
     *"Hour of Code este o iniţiativă internațională a Computer Science Education Week[csedweek.org] şi Code.org [code.org] pentru a iniția milioane de studenţi în tehnologia computerelor și în programare cu ajutorul unei ore globale de programare."*
 
-  4. No use of "Hour of Code" in app names.
+  4. A nu se utiliza "Hour of Code"/Ora de Cod în nume de aplicații.
 
 <a id="stickers"></a>
 
@@ -62,13 +62,13 @@ nav: promote_nav
 
 ## Cereți școlii, angajaților sau prietenilor să se înscrie:
 
-Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Vestea bună e că suntem pe cale să schimbăm acest lucru. Daca ati auzit şi inainte de Hour of Code, atunci stiti ca a facut istorie. Mai mult de 100 de milioane de studenţi au încercat o Ora de Programare.
+Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. Vestea bună e că suntem pe cale să schimbăm acest lucru. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Anul trecut, fiecare magazin Apple din lume gazduit o Ora de Programare şi chiar Preşedintele Obama a scris prima lui linie de cod, alaturandu-se campaniei.
+In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-În acest an, haideți sa il facem si mai mare. Va rog sa va alaturati evenimentului Hour of Codr 2015. Implicati-va cu evenimentul dvs Hour of Code in timpul Saptamanii educatiei in tehnologia computerelor <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Împăștiați vestea. Găzduiți un eveniment. Cereți unei școli locale să se înscrie. Sau încercați chiar dvs. Ora de Programare -- oricine poate beneficia din învățarea noțiunilor de bază.
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
 Începeți la http://hourofcode.com/<%= @country %>
 
@@ -78,15 +78,15 @@ In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima p
 
 **Linia de titlu:** O școală se alătură misiunii de a iniția 100 milioane de elevi în Informatică
 
-Computerele sunt peste tot, dar tot mai puţine şcoli predau acum programarea în raport cu 10 ani în urmă. Fetele şi minorităţile sunt foarte slab reprezentate. Vestea bună este că suntem pe cale să schimbăm acest lucru.
+Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Vestea bună e că suntem pe cale să schimbăm acest lucru.
 
-In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. S-au adunat peste 100 de parteneri pentru a susține această mișcare. Anul trecut, fiecare magazin Apple din lume gazduit o Ora de Programare şi chiar Preşedintele Obama a scris prima lui linie de cod, alaturandu-se campaniei.
+In cadrul Hour of Code, tehnologia computerelor si programarea a fost pe prima pagina a site-urilor Google, MSN sau Yahoo! și Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-De aceea, fiecare dintre cei [X] elevi de la [numele şcolii] ne alaturăm celui mai mare eveniment educativ în istorie: Ora de Programare, în săptămâna 7-13 Decembrie 2015.
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 Vă scriu pentru a vă invita să participați la reuniunea noastră de impact și să vedeți cum încep copiii această activitate pe data de [DATA].
 
-"Ora de Programare" (Hour of Code), organizată de Code.org (o organizaţie non-profit) şi peste 100 alte organizaţii, este o mărturie că generaţia de astăzi este gata să își formeze deprinderi esenţiale pentru a avea succes în secolul 21. Vă rugăm să vă alăturaţi.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Vă rugăm să vă alăturaţi.
 
 **Contact:** [NUMELE DVS.], [TITLE], telefon: (212) 555-5555
 
@@ -102,33 +102,36 @@ Aştept cu nerăbdare să comunicăm.
 
 Dragi părinți,
 
-Trăim într-o lume a tehnologiei. Şi noi ştim că oricare ar fi domeniul pe care elevii noştri aleg să continue ca adulţi, capacitatea lor de a reuşi va depinde tot mai mult de înţelegerea modului în care funcţionează tehnologia. Dar numai o mică parte dintre noi învăţăm informatică şi tot mai puţin elevi o studiază față de un deceniu în urmă.
+Trăim într-o lume a tehnologiei. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Educatiei in Tehnologia Computerelor. 7-13). Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
+But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
-Ora noastră de Programare este o declaraţie că [numele şcolii] este gata să ne formeze aceste abilităţi fundamentale ale secolului 21. Pentru a continua aducerea unor activități de programare pentru elevi, vrem să avem propriul nostru eveniment uriaș Ora de Programare. Vă incurajez sa fiți voluntari, să ajungeți catre mass-media locală si sa distribuiti veştile pe canalrle social media. Luați in considerare si organizarea unor evenimente adiționale în comunitate.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Aceasta este o şansă de a schimba viitorul educaţiei în [nume oraş/oraş].
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-Pentru detalii, vedeți http://hourofcode.com/<%= @country %> și ajutați la aflarea veștii.
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
-Cu stimă,
+See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-[Nume Profesor/ Director]
+Sincerely,
+
+Your principal
 
 <a id="politicians"></a>
 
 ## Invitați un politician local la evenimentul şcolii dumneavoastră:
 
-Stimate [numele primarului/consilierului/senatorului]:
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Ştiaţi că în economia de astăzi, numărul locurilor de muncă din programare este mai mare de 3-la-1 decât numărul absolvenților în domeniu ? Şi tehnologia computerului este fundamentală pentru *fiecare* industrie de astăzi. Dar cele mai multe dintre şcoli nu o predau. La [numele şcolii], încercăm să schimbăm asta.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Educatiei in Tehnologia Computerelor. 7-13). Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
+Computer science is foundational for *every* industry today. Yet 75% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Vă scriu pentru a vă invita să luați parte la evenimentul nostru Ora de Programare și pentru a vorbi despre impactul acestei reuniuni. Acesta va avea loc pe [data, ora, locul] şi va face o declaraţie puternică, că [nume de stat sau un oraş] este gata să le formeze elevilor noştri abilităţi esențiale pentru secolul 21. Vrem să ne asiguram că elevii noştri sunt în primul plan prvind crearea tehnologiei de viitor--nu doar consumatorii ei.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Vă rugăm să mă contactaţi la [telefon număr sau adresă de E-mail]. Aştept cu nerăbdare răspunsul dumneavoastră.
+I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Cu sinceritate, [NAME], [TITLE]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
+Sincerely, [NAME], [TITLE]

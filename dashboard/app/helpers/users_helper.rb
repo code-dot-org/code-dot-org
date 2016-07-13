@@ -9,7 +9,12 @@ module UsersHelper
     user_data = {}
     merge_user_summary(user_data, user)
     merge_script_progress(user_data, user, script, exclude_level_progress)
-    user_data
+
+    user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, script).try(:map) do |summary|
+      summary.merge(url: peer_review_path(summary[:id]))
+    end
+
+    user_data.compact
   end
 
   # Summarize a user and his or her progress across all scripts.
@@ -103,8 +108,9 @@ module UsersHelper
             user_data[:levels][level_id] = {
                 status: completion_status,
                 result: ul.try(:best_result) || 0,
-                submitted: submitted
-            }
+                submitted: submitted ? true : nil,
+                paired: ul.paired? ? true : nil
+            }.compact
 
             # Just in case this level has multiple pages, in which case we add an additional
             # array of booleans indicating which pages have been completed.
@@ -114,8 +120,8 @@ module UsersHelper
               pages_completed.each_with_index do |result, index|
                 user_data[:levels]["#{level_id}_#{index}"] = {
                   result: result,
-                  submitted: submitted
-                }
+                  submitted: submitted ? true : nil
+                }.compact
               end
             end
           end

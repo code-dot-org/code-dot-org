@@ -7,7 +7,7 @@ skip_dialog ' true'
 markdown <<MARKDOWN
 
 
-<img src = "http://staging.code.org/images/cspunit1/ColorTask3.png" align=left width=250 hspace=20>
+<img src = "//code.org/images/cspunit1/ColorTask3.png" align=left width=250 hspace=20>
 # Instructions: Task 3
 On the next screen we start you out with the 4x4 image Maddie created in the video.
 

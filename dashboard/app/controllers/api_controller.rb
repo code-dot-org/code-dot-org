@@ -3,6 +3,7 @@ class ApiController < ApplicationController
   include LevelsHelper
 
   def user_menu
+    @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
     render partial: 'shared/user_header'
   end
 
@@ -24,9 +25,12 @@ class ApiController < ApplicationController
     students = @section.students.map do |student|
       level_map = student.user_levels_by_level(@script)
       student_levels = @script.script_levels.map do |script_level|
-        user_levels = script_level.level_ids.map{|id| level_map[id]}
+        user_levels = script_level.level_ids.map{|id| level_map[id]}.compact
         level_class = best_activity_css_class user_levels
-        {class: level_class, title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
+        paired = user_levels.any?(&:paired?)
+        level_class << ' paired' if paired
+        title = paired ? '' : script_level.position
+        {class: level_class, title: title, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
       end
       {id: student.id, levels: student_levels}
     end
@@ -119,6 +123,11 @@ class ApiController < ApplicationController
       response[:disableSocialShare] = current_user.under_13?
       response[:disablePostMilestone] =
         !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
+
+      recent_driver = UserLevel.most_recent_driver(script, level, current_user)
+      if recent_driver
+        response[:pairingDriver] = recent_driver
+      end
     end
 
     slog(tag: 'activity_start',

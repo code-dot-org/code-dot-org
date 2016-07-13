@@ -241,7 +241,7 @@ features_to_run = passed_features.empty? ? all_features : passed_features
 browser_features = $browsers.product features_to_run
 
 git_branch = `git rev-parse --abbrev-ref HEAD`.strip
-ENV['BATCH_NAME'] =  "#{git_branch} | #{Time.now}"
+ENV['BATCH_NAME'] = "#{git_branch} | #{Time.now}"
 
 test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
@@ -382,8 +382,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
         max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1
                       1].max # rerun at least once even if not flaky
 
-        confidence = (1.0 - flakiness ** (max_reruns + 1)).round(3)
-        flakiness_message +=  "we should rerun #{max_reruns} times for #{confidence} confidence"
+        confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
+        flakiness_message += "we should rerun #{max_reruns} times for #{confidence} confidence"
 
         if max_reruns < 2
           $lock.synchronize { puts flakiness_message.green }
@@ -423,7 +423,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
-    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || '?'})..."
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 

@@ -1,7 +1,7 @@
 name 'CSPPD3-u2 breakdown of u2 chunks'
 css 'unplugged' 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 ### Unit 2 Overview > Breaking Down into Lessons Chunks
 <br/>
 <img src="https://images.code.org/abfe5350deb45714b2ca888c0d073dba-image-1443815602080.26.07 PM.png" width="450" style="float:right; margin-left:30px">

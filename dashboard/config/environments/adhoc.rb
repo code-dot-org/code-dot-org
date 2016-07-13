@@ -14,7 +14,7 @@ Dashboard::Application.configure do
   config.eager_load = true
 
   # Show full error reports
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local = true
 
   # Use digests.
   config.assets.digest = true

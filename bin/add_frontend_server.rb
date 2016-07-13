@@ -16,7 +16,7 @@ require 'json'
 require 'set'
 require 'thread'
 
-CHEF_VERSION='12.7.2'
+CHEF_VERSION = '12.7.2'
 
 # A map from a supported environment to the corresponding Chef role to use for
 # that environment.

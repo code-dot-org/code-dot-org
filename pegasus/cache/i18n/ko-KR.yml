@@ -767,7 +767,7 @@
   dashboard_announce_message: "<b>2016년 4월 22일</b> - 언플러그드 활동은 학습 과정의 필수적인 부분이지만 선생님들은
     언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서
     모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요."
-  dashboard_announce_button_text: "더 알아보기"
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에
     앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의
     CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
@@ -1480,3 +1480,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "실행"
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys

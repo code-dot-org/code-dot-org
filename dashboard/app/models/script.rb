@@ -70,7 +70,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required)
+  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required peer_reviews_to_complete)
 
   def self.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -343,7 +343,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_banner?
-    k5_course? || %w(csp1 csp2 cspunit1 cspunit2 cspunit3).include?(self.name)
+    k5_course? || %w(csp1 csp2 csp3 cspunit1 cspunit2 cspunit3).include?(self.name)
   end
 
   def freeplay_links
@@ -383,12 +383,7 @@ class Script < ActiveRecord::Base
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
-          properties: {
-                       pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
-                       admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
-                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
-                       student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
-                      },
+          properties: build_property_hash(script_data)
         }, stages.map{|stage| stage[:scriptlevels]}.flatten]
       end
 
@@ -551,12 +546,7 @@ class Script < ActiveRecord::Base
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
-          properties: {
-                       pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
-                       admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
-                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
-                       student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
-          }
+          properties: build_property_hash(script_data)
         }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
         Script.update_i18n(i18n)
       end
@@ -608,11 +598,37 @@ class Script < ActiveRecord::Base
   end
 
   def summarize
+    summarized_stages = stages.map(&:summarize)
+
+    if peer_reviews_to_complete
+      levels = []
+      peer_reviews_to_complete.times do |x|
+        levels << {
+            ids: [x],
+            kind: 'peer_review',
+            title: '',
+            url: '',
+            name: I18n.t('peer_review.reviews_unavailable'),
+            icon: 'fa-lock',
+            locked: true
+        }
+      end
+
+      peer_review_section = {
+          name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
+          flex_category: 'Peer Review',
+          levels: levels
+      }
+
+      summarized_stages << peer_review_section
+    end
+
     summary = {
       id: id,
       name: name,
-      plc: professional_learning_course,
-      stages: stages.map(&:summarize),
+      plc: professional_learning_course?,
+      stages: summarized_stages,
+      peerReviewsRequired: peer_reviews_to_complete || 0
     }
 
     summary[:trophies] = Concept.summarize_all if trophies
@@ -627,5 +643,15 @@ class Script < ActiveRecord::Base
 
   def localized_title
     I18n.t "data.script.name.#{name}.title"
+  end
+
+  def self.build_property_hash(script_data)
+    {
+      pd: script_data[:pd] || false, # default false
+      admin_required: script_data[:admin_required] || false, # default false
+      professional_learning_course: script_data[:professional_learning_course] || false, # default false
+      student_of_admin_required: script_data[:student_of_admin_required] || false, # default false
+      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil
+    }.compact
   end
 end

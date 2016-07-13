@@ -27,23 +27,6 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
-  # Create a new channel.
-  # @param [Hash] data Data to store in the channel.
-  # @param [String] src Optional source channel to copy data from, instead of
-  #   using the value from the `data` param.
-  def create_channel(data = {}, src = nil)
-    storage_app = StorageApps.new(storage_id('user'))
-    if src
-      data = storage_app.get(src)
-      data['name'] = "Remix: #{data['name']}"
-      data['hidden'] = false
-      data['frozen'] = false
-    end
-
-    timestamp = Time.now
-    storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
-  end
-
   def readonly_view_options
     level_view_options skip_instructions_popup: true
     view_options readonly_workspace: true
@@ -55,35 +38,25 @@ module LevelsHelper
     # sent back to the client if it is modified by ChannelsApi.
     return unless current_user
 
-    # The channel should be associated with the template level, if present.
-    # Otherwise the current level.
-    host_level = @level.project_template_level || @level
-
     if @user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
-
-      channel_token = ChannelToken.find_by(level: host_level, user: @user)
+      channel_token = ChannelToken.find_channel_token(@level, @user)
       readonly_view_options
     else
-      # If `create` fails because it was beat by a competing request, a second
-      # `find_by` should succeed.
-      channel_token = retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-        # your own channel
-        ChannelToken.find_or_create_by!(level: host_level, user: current_user) do |ct|
-          # Get a new channel_id.
-          ct.channel = create_channel({
-            hidden: true,
-            useFirebase: use_firebase_for_new_project?
-          })
-        end
-      end
+      channel_token = ChannelToken.find_or_create_channel_token(
+        @level,
+        current_user,
+        request.ip,
+        StorageApps.new(storage_id('user')),
+        {
+          hidden: true,
+          useFirebase: @level.game.use_firebase_for_new_project?
+        })
     end
 
-    if channel_token
-      view_options channel: channel_token.channel
-    end
+    view_options channel: channel_token.channel if channel_token
   end
 
   def select_and_track_autoplay_video
@@ -187,6 +160,13 @@ module LevelsHelper
       view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
     end
 
+    if @user
+      recent_driver = UserLevel.most_recent_driver(@script, @level, @user)
+      if recent_driver
+        level_view_options pairing_driver: recent_driver
+      end
+    end
+
     if @level.is_a? Blockly
       @app_options = blockly_options
     elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
@@ -218,7 +198,7 @@ module LevelsHelper
   # appropriate to the level being rendered.
   def render_app_dependencies
     use_droplet = app_options[:droplet]
-    use_makerlab = @level.game == Game.applab && @level.makerlab_enabled
+    use_makerlab = @level.is_a?(Applab) && @level.makerlab_enabled
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
     use_gamelab = @level.game == Game.gamelab
@@ -284,8 +264,9 @@ module LevelsHelper
     l = @level
     raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
-    app_options = l.blockly_options.dup
-    level_options = app_options[:level] = app_options[:level].dup
+    app_options = l.blockly_app_options(l.game, l.skin).dup
+    level_options = l.blockly_level_options.dup
+    app_options[:level] = level_options
 
     # Locale-dependent option
     # Fetch localized strings
@@ -349,9 +330,6 @@ module LevelsHelper
       app_options[:showUnusedBlocks] = enabled
     end
 
-    # LevelSource-dependent options
-    app_options[:level_source_id] = @level_source.id if @level_source
-
     # Edit blocks-dependent options
     if level_view_options[:edit_blocks]
       # Pass blockly the edit mode: "<start|toolbox|required>_blocks"
@@ -403,9 +381,9 @@ module LevelsHelper
     app_options[:firebaseAuthToken] = firebase_auth_token if @game == Game.applab
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
-    app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
-    app_options[:hasVerticalScrollbars] = true if enable_scrolling?
-    app_options[:showExampleTestButtons] = true if enable_examples?
+    app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
+    app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
+    app_options[:showExampleTestButtons] = true if l.enable_examples?
     app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
         fallback_response: @fallback_response,
@@ -462,6 +440,7 @@ module LevelsHelper
     submitted
     unsubmit_url
     iframe_embed
+    pairing_driver
   ))
   # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)
@@ -590,7 +569,14 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
-    user_id = current_user ? current_user.id.to_s : session.id
+    if current_user
+      user_id = current_user.id.to_s
+    elsif session.id
+      user_id = session.id.to_s
+    else
+      # a signed-out user may not have a session id on their first visit
+      user_id = 'anon'
+    end
     payload = {
       :uid => user_id,
       :is_dashboard_user => !!current_user
@@ -603,18 +589,6 @@ module LevelsHelper
     # TODO(dave): cache token generator across requests
     generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_secret)
     generator.create_token(payload, options)
-  end
-
-  def use_firebase_for_new_project?
-    @game == Game.applab && CDO.use_firebase_for_new_applab_projects
-  end
-
-  def enable_scrolling?
-    @level.is_a?(Blockly)
-  end
-
-  def enable_examples?
-    @level.is_a?(Blockly)
   end
 
   # If this is a restricted level (i.e., applab) and user is under 13, redirect

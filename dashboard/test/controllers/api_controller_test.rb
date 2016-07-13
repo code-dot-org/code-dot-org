@@ -83,12 +83,12 @@ class ApiControllerTest < ActionController::TestCase
 
     # create 2 text_match levels
     level1 = create :text_match
-    level1.properties['title'] =  'Text Match 1'
+    level1.properties['title'] = 'Text Match 1'
     level1.save!
     create :script_level, script: script, levels: [level1]
 
     level2 = create :text_match
-    level2.properties['title'] =  'Text Match 2'
+    level2.properties['title'] = 'Text Match 2'
     level2.save!
     create :script_level, script: script, levels: [level2]
     # create some other random levels
@@ -178,21 +178,21 @@ class ApiControllerTest < ActionController::TestCase
 
     expected_response =
       [
-       {"student"=>{"id"=>@student_1.id, "name"=>@student_1.name},
-        "stage"=>"translation missing: en-us.data.script.name.#{script.name}.title",
-        "puzzle"=>1,
-        "question"=>"Long assessment 1",
-        "url"=>"http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
-        "multi_correct"=>1,
-        "multi_count"=>4,
-        "submitted"=>true,
-        "timestamp"=>updated_at.utc.to_s,
-        "level_results"=>[
-          {"student_result"=>"This is a free response", "correct"=>"free_response"},
-          {"student_result"=>"A", "correct"=>"correct"},
-          {"student_result"=>"B", "correct"=>"incorrect"},
-          {"student_result"=>"", "correct"=>"unsubmitted"},
-          {"correct"=>"unsubmitted"}]
+       {"student" => {"id" => @student_1.id, "name" => @student_1.name},
+        "stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
+        "puzzle" => 1,
+        "question" => "Long assessment 1",
+        "url" => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+        "multi_correct" => 1,
+        "multi_count" => 4,
+        "submitted" => true,
+        "timestamp" => updated_at.utc.to_s,
+        "level_results" => [
+          {"student_result" => "This is a free response", "correct" => "free_response"},
+          {"student_result" => "A", "correct" => "correct"},
+          {"student_result" => "B", "correct" => "incorrect"},
+          {"student_result" => "", "correct" => "unsubmitted"},
+          {"correct" => "unsubmitted"}]
         }
       ]
     assert_equal expected_response, JSON.parse(@response.body)
@@ -661,6 +661,28 @@ class ApiControllerTest < ActionController::TestCase
     assert_select 'a[href="http://test.host/redeemprizes"]', 0
   end
 
+  test "user menu should open pairing dialog if asked to in the session" do
+    sign_in create(:student)
+
+    session[:show_pairing_dialog] = true
+
+    get :user_menu
+
+    assert assigns(:show_pairing_dialog)
+    assert !session[:show_pairing_dialog] # should only show once
+  end
+
+  test "user menu should not open pairing dialog if not asked to in the session" do
+    sign_in create(:student)
+
+    session[:show_pairing_dialog] = nil
+
+    get :user_menu
+
+    assert !assigns(:show_pairing_dialog)
+    assert !session[:show_pairing_dialog] # should only show once
+  end
+
   test "do show prize link when you already have a prize" do
     teacher = create(:teacher)
     sign_in teacher
@@ -697,6 +719,28 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_select 'a[href="http://test.host/users/sign_out"]', 'Sign out'
+  end
+
+  test 'show link to pair programming when in a section' do
+    student = create(:follower).student_user
+    sign_in student
+
+    assert student.can_pair?
+
+    get :user_menu
+
+    assert_response :success
+    assert_select '#pairing_link'
+  end
+
+  test "don't show link to pair programming when not in a section" do
+    student = create(:student)
+    sign_in student
+
+    get :user_menu
+
+    assert_response :success
+    assert_select 'a[href="http://test.host/pairing"]', false
   end
 
   test 'api routing' do

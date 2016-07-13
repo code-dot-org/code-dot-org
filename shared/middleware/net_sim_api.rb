@@ -116,7 +116,7 @@ class NetSimApi < Sinatra::Base
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)/delete$} do |_shard_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
   #
@@ -138,7 +138,7 @@ class NetSimApi < Sinatra::Base
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/delete$} do |_shard_id, _table_name|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
   #
@@ -182,7 +182,7 @@ class NetSimApi < Sinatra::Base
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
   post %r{/v3/netsim/([^/]+)/delete$} do |_shard_id|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
   #
@@ -336,10 +336,10 @@ class NetSimApi < Sinatra::Base
     value.to_json
   end
   patch %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |_shard_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'POST'))
+    call(env.merge('REQUEST_METHOD' => 'POST'))
   end
   put %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |_shard_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'POST'))
+    call(env.merge('REQUEST_METHOD' => 'POST'))
   end
 
   # TEST-ONLY METHODS

@@ -5,12 +5,11 @@ layout: wide
 
 ---
 
-
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
-نود أن تستضيف مجموعة متنوعة من خيارات جذابة، ولكن الهدف الأساسي هو تحسين الخبرة للطلاب والمدرسين المبتدئين في مجال علوم الحاسوب. الرجاء استخدام هذه الوثيقة كدليل لإنشاء النشاط الخاص بك، هذا النشاط موجه للمستخدم الذي ليست لديه أي معرفة في البرمجة وعلوم الكمبيوتر.
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
   
 
@@ -52,7 +51,7 @@ Examples:
 
   
   
-**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. ومن الناحية المثالية، تكون التعليمات والدروس موجودة بمنصة واحدة، و ذلك لتجنب التنقل بين النوافذ او التنقل بين الدرس و برنامج الانجاز.
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
 
 Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
 
@@ -66,15 +65,15 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 **Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
 
-[**العودة إلى الأعلى**](#top)
+[**Back to the top**](#top)
 
 <a id="inclusion"></a>
 
 ## كيف سيتم تقييم الانشطة للإدراج
 
-ستقوم لجنة نتكونة من مربين في علوم الحاسوب بترتيب الاعمال المرسلة استنادا إلى المقاييس كمية ونوعية، بما في ذلك نتائج الاستبيان الصادرة عن مجموعة أوسع من المربين.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**ترتيب الانشطة المنشورة سيكون افضل اذا:**
+**Tutorials will be listed higher if they are:**
 
   * جودة عالية
   * designed for beginners - among students AND teachers
@@ -87,7 +86,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
   * promote learning by all demographic groups (esp. under-represented groups)
   * ليست مركزة على تصميم مواقع الانترنت فقط باستعمال HTML و CSS (أن هدفنا هو علوم الحاسوب ، ليس فقط ربمجة إتش تي أم ال HTML)
 
-**ترتيب الانشطة سيكون اقل اذا:**
+**Tutorials will be listed lower if they are:**
 
   * جودة أقل
   * مستوى أكثر تقدما من التدريس (نشاط ليس موجه للمبتدئين)
@@ -96,7 +95,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
   * reinforce stereotypes that hinder participation by under-represented student groups
   * تكون ذربعة لدعم منصة تعليمية غير مجانية
 
-**لن يتم ادراج الدروس إذا:**
+**Tutorials will NOT be listed if they:**
 
   * لم تصمم لتكون نشاطا يدوم ساعة واحدة (تقريبا)
   * يتطلب تسجيل للدخول 
@@ -107,9 +106,9 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 **If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
 
-في نهاية المطاف، الهدف من ساعة البرمجة هو القيام بحملة توسيع نطاق المشاركة في علوم الحاسوب من طرف الطلاب والمعلمين، إظهار أن علوم الحاسوب متاحة للجميع، و "أسهل مما كنت أعتقد". من نواح كثيرة، أفضل طريقة لتحقيق هذا الهدف يتم بإعطاء الطلاب والمعلمين اختيارات أقل وأبسط، مع التركيز على اعلى الخيارات جودة للمرة الأولى للاستعمال. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
-[**العودة إلى الأعلى**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
@@ -117,7 +116,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
-**ما ستحتاج :**
+**What you’ll need:**
 
   * الاسم والشعار (jpg، png، إلخ.)
   * عنوان الرابط او صورة تسويقية للنشاط. الصور/اللقطات ينبغي أن تكون ابعادها 446 في 335 بالضبط. إذا لم يتم ارسال صورة مناسبة، قد نضطر لأخذها بنفسنا او قد نختار عدم ادراج النشاط في القائمة.
@@ -165,13 +164,13 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
       * For offline activities 
           * Number of downloads of paper version of activity (if applicable)
 
-[**العودة إلى الأعلى**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
 ## اقتراحات لتصميم النشاط الخاص بك
 
-You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. لا يمكن تحت أي ظرف من الظروف استعمال اسم و شعار Code.org . Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
 **Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
@@ -204,7 +203,7 @@ Benefits of Pair Programming:
   * Show that coding is not a solo activity, but one involving social interaction
   * Not all classrooms or labs have enough computers for a 1:1 experience
 
-[**العودة إلى الأعلى**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
@@ -222,17 +221,17 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. No use of "Hour of Code" in app names.
 
-[**العودة إلى الأعلى**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
 ## تتبع البكسل
 
-من أجل تتبع بدقة أكثرالمشاركة ونطلب من كل طرف ثالث شريك في انتاج الدروس اضافة صورة تعقب 1-بكسل على الصفحة الأولى والأخيرة من الدروس المقدمة (صورة بكسل-في صفحة البداية. وصورة بكسل في نهاية الصفحة. لا نضيف على صفحات مؤقتة).
+In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
 
-وهذا سيتيح لنا حساب عدد المستخدمين الذين قاموا بزيارة موقع الويب الخاص بك للقيام بساعة البرمجة ، أو المستخدمين الذين يقومون بزيارة الموقع عندما يكتب معلم عنوان URL الخاص بك مباشرة السبورة. فإنه سيؤدي إلى أكثر دقة في حساب المشاركة للبرنامج التعليمي الخاص بك، وسوف تساعدك على جذب المستخدمين. إذا كنت تدمج الصورة بكسل في النهاية فسوف تسمح لنا بقياس معدلات الإنجاز الكامل للنشاط.
+This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
 
-إذا وقع اعتماد النشاط الذي قدمته و وقع ادراجه في اللائحة النهائية، فان موقع Code.org سوف يوفر لك بكسل لادماجه في النشاط. راجع المثال أدناه.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
 NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
@@ -241,26 +240,25 @@ Example tracking pixels for AppInventor:
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-[**العودة إلى الأعلى**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
 ## التعريف بانشطتك، اسبوع تعليم الحاسوب، و ساعة البرمجة
 
-ونحن نطلب من الجميع التعريف بالانشطة الخاصة بهم. Please direct them to ***your*** Hour of Code page. المستخدمون لانشطتك سيتفاعلون باجابية اكثر عند تلقي رسائل من عندك حول الانشطة المقدمة. استخدام حملة ساعة البرمجة الدولية لأسبوع تعليم علوم الحاسوب كذريعة لتشجيع المستخدمين على دعوة الآخرين الانضمام، وتساعدنا على الوصول إلى 100 مليون مشترك.
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to ***your*** Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
   * التعريف بساعةالبرمجة باستخدام الشبكات الاجتماعية، وسائل الإعلام التقليدية، البريد الالكتروني، إلخ، باستخدام الهاشتاك **#HourOfCode** (مع حروف H، O، C)
   * استضافة حدث محلي، أو أطلب من موظفيك لاستضافة حدث في المدارس المحلية أو الجماعات المحلية.
   * راجع قائمة الموارد للحصول على مزيد من المعلومات (قريبا).
 
-[**العودة إلى الأعلى**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
 ## ملاحظة خاصة للطلاب ذوي الاحتياجات الخاصة
 
-إذا أنشأت درسً تعليمياً موجهاً للمكفوفين، فإننا نحب أن نسلط الضوء عليه للمشاهدين الذين يملكون قارئات الشاشة. نحن لم نستلم درساً تعليمياً كهذا من قبل، وسنكون متشوقين لجعله خياراً متاحاً لهؤلاء الطلاب.
+If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**العودة إلى الأعلى**](#top)
-
+[**Back to the top**](#top)
