@@ -24,7 +24,7 @@ level 'U3 - Simple Drawing - text'
 level 'U3 - Simple Drawing - Plan Personal Drawing'
 level 'U3 - Simple Drawing - Personal Drawing'
 
-stage 'Draw Loop and Random'
+stage 'Draw Loop and Randomization'
 level 'CSD-U3-SFLP Draw Loop'
 level 'CSD U3 Random Intro'
 level 'CSD U3 Random Choice'
@@ -43,7 +43,8 @@ level 'CSD U3 Simple Drawing - Animation'
 level 'CSD U3 Simple Drawing - Animation 2'
 level 'CSD U3 Simple Drawing - Personal Animation'
 
-stage 'Variables'
+
+stage 'Variables Unplugged'
 level 'CSD U3 Variables2 SFLP'
 
 stage 'Variables and Animation'
@@ -168,5 +169,6 @@ stage 'Sprite Properties and Mod'
 stage 'Expressions and Reassignment'
 stage 'Expressions'
 stage 'Counting with Variables'
-
+stage 'Draw Loop and Random'
+stage 'Variables'
 

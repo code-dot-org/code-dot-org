@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # 謝謝您報名舉辦Hour of Code!
 
-您的努力讓世界各地的學生都有機會在<%= campaign_date('full') %>，透過一小時的程式設計課程來*改變他們的一生*。 We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
+您的努力讓世界各地的學生都有機會在<%= campaign_date('full') %>，透過一小時的程式設計課程來*改變他們的一生*。 We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
 ## 1.廣為宣傳
 

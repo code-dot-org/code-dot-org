@@ -47,6 +47,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @script_level = @script_level_prev.next_progression_level
     @script_level_next = @script_level.next_progression_level
     @script = @script_level.script
+    @level = @script_level.level
 
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
     @good_image = File.read('test/fixtures/artist_image_1.png', binmode: true)
@@ -1069,7 +1070,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, @milestone_params.merge(script_level_id: last_level_in_stage.id)
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal({'previous'=>{'name'=>'The Artist', 'position'=>5}}, response['stage_changing'])
+    assert_equal({'previous' => {'name' => 'The Artist', 'position' => 5}}, response['stage_changing'])
   end
 
   test 'milestone changes to next stage in custom script' do
@@ -1148,5 +1149,82 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
     assert !@user.needs_to_backfill_user_scripts?
+  end
+
+  test "milestone with one pairing creates new user levels" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+
+    assert_difference('UserLevel.count', 2) do # both get a UserLevel
+      assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    paired_user_level = PairedUserLevel.last
+    assert_equal @user, paired_user_level.driver_user_level.user
+    assert_equal pairing, paired_user_level.navigator_user_level.user
+  end
+
+  test "milestone with multiple pairings creates multiple new user levels" do
+    section = create(:follower, student_user: @user).section
+    pairings = 3.times.map {create(:follower, section: section).student_user}
+    session[:pairings] = pairings.map(&:id)
+
+    assert_difference('UserLevel.count', 4) do # all 4 people
+      assert_difference('PairedUserLevel.count', 3) do # there are 3 PairedUserLevel links
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    user_level = UserLevel.find_by(user_id: @user.id, script_id: @script.id, level_id: @level.id)
+    pairings.each do |pairing|
+      pairing_user_level = UserLevel.find_by(user_id: pairing.id, script_id: @script.id, level_id: @level.id)
+      assert PairedUserLevel.find_by(driver_user_level_id: user_level, navigator_user_level_id: pairing_user_level),
+        "could not find PairedUserLevel"
+    end
+  end
+
+  test "milestone with pairings updates driver's existing user level" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+
+    existing_navigator_user_level = create :user_level, user: pairing, script: @script, level: @level, best_result: 10
+
+    assert_difference('UserLevel.count', 1) do # one gets a new user level
+      assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    existing_navigator_user_level.reload
+    assert_equal 100, existing_navigator_user_level.best_result
+
+    assert_equal [@user], existing_navigator_user_level.driver_user_levels.map(&:user)
+  end
+
+  test "milestone with pairings updates navigator's existing user level" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+
+    existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
+
+    assert_difference('UserLevel.count', 1) do # one gets a new user level
+      assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    existing_driver_user_level.reload
+    assert_equal 100, existing_driver_user_level.best_result
+
+    assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630000001) do
+ActiveRecord::Schema.define(version: 20160707171413) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -315,6 +315,16 @@ ActiveRecord::Schema.define(version: 20160630000001) do
   add_index "levels_script_levels", ["level_id"], name: "index_levels_script_levels_on_level_id", using: :btree
   add_index "levels_script_levels", ["script_level_id"], name: "index_levels_script_levels_on_script_level_id", using: :btree
 
+  create_table "paired_user_levels", force: :cascade do |t|
+    t.integer  "driver_user_level_id",    limit: 4
+    t.integer  "navigator_user_level_id", limit: 4
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+  end
+
+  add_index "paired_user_levels", ["driver_user_level_id"], name: "index_paired_user_levels_on_driver_user_level_id", using: :btree
+  add_index "paired_user_levels", ["navigator_user_level_id"], name: "index_paired_user_levels_on_navigator_user_level_id", using: :btree
+
   create_table "pd_attendances", force: :cascade do |t|
     t.integer  "pd_session_id", limit: 4, null: false
     t.integer  "teacher_id",    limit: 4, null: false
@@ -422,9 +432,10 @@ ActiveRecord::Schema.define(version: 20160630000001) do
     t.string   "unit_name",        limit: 255
     t.string   "unit_description", limit: 255
     t.integer  "unit_order",       limit: 4
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.integer  "script_id",        limit: 4
+    t.boolean  "started",                      default: false, null: false
   end
 
   add_index "plc_course_units", ["plc_course_id"], name: "index_plc_course_units_on_plc_course_id", using: :btree
@@ -635,6 +646,7 @@ ActiveRecord::Schema.define(version: 20160630000001) do
     t.string   "login_type",   limit: 255, default: "email", null: false
     t.datetime "deleted_at"
     t.boolean  "stage_extras",             default: false,   null: false
+    t.string   "type",         limit: 255
   end
 
   add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree
@@ -715,7 +727,7 @@ ActiveRecord::Schema.define(version: 20160630000001) do
     t.integer  "user_id",     limit: 4,                           null: false
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
-    t.datetime "indexed_at",                                      null: false
+    t.datetime "indexed_at"
     t.string   "ip_address",  limit: 255
     t.string   "city",        limit: 255
     t.string   "state",       limit: 255
@@ -725,6 +737,7 @@ ActiveRecord::Schema.define(version: 20160630000001) do
     t.decimal  "longitude",               precision: 9, scale: 6
   end
 
+  add_index "user_geos", ["indexed_at"], name: "index_user_geos_on_indexed_at", using: :btree
   add_index "user_geos", ["user_id"], name: "index_user_geos_on_user_id", using: :btree
 
   create_table "user_levels", force: :cascade do |t|

@@ -62,15 +62,17 @@ module Poste
   end
 
   def self.unsubscribed?(email)
-    !!POSTE_DB[:contacts].where('email = ? AND unsubscribed_on IS NOT NULL', email.to_s.strip.downcase).first
+    hashed_email = Digest::MD5.hexdigest(email.to_s.strip.downcase)
+    !!POSTE_DB[:contacts].where('hashed_email = ? AND unsubscribed_at IS NOT NULL', hashed_email).first
   end
 
   def self.unsubscribe(email, params={})
     email = email.to_s.strip.downcase
+    hashed_email = Digest::MD5.hexdigest(email)
     now = DateTime.now
 
     contacts = POSTE_DB[:contacts]
-    contact = contacts.where(email: email).first
+    contact = contacts.where(hashed_email: hashed_email).first
     if contact
       contacts.where(id: contact[:id]).update(
         unsubscribed_at: now,
@@ -79,7 +81,7 @@ module Poste
     else
       contacts.insert(
         email: email,
-        hashed_email: Digest::MD5.hexdigest(email.downcase),
+        hashed_email: hashed_email,
         created_at: now,
         created_ip: params[:ip_address],
         unsubscribed_at: now,
@@ -115,9 +117,10 @@ module Poste2
     @@url_cache[href] = url_id
   end
 
-  def self.create_recipient(address, params={})
-    address = address.to_s.strip.downcase
-    raise ArgumentError, "Invalid email address (#{address})" unless email_address?(address)
+  def self.create_recipient(email, params={})
+    email = email.to_s.strip.downcase
+    hashed_email = Digest::MD5.hexdigest(email)
+    raise ArgumentError, "Invalid email address (#{email})" unless email_address?(email)
 
     name = params[:name].strip if params[:name]
     ip_address = params[:ip_address]
@@ -125,7 +128,7 @@ module Poste2
 
     contacts = POSTE_DB[:contacts]
 
-    contact = contacts.where(email: address).first
+    contact = contacts.where(hashed_email: hashed_email).first
     if contact
       if contact[:name] != name && !name.nil_or_empty?
         contacts.where(id: contact[:id]).update(
@@ -136,8 +139,8 @@ module Poste2
       end
     else
       id = contacts.insert({}.tap do |contact|
-        contact[:email] = address
-        contact[:hashed_email] = Digest::MD5.hexdigest(address.downcase)
+        contact[:email] = email
+        contact[:hashed_email] = hashed_email
         contact[:name] = name if name
         contact[:created_at] = now
         contact[:created_ip] = ip_address
@@ -147,12 +150,13 @@ module Poste2
       contact = {id: id}
     end
 
-    {id: contact[:id], email: address, name: name, ip_address: ip_address}
+    {id: contact[:id], email: email, name: name, ip_address: ip_address}
   end
 
-  def self.ensure_recipient(address, params={})
-    address = address.to_s.strip.downcase
-    raise ArgumentError, 'Invalid email address' unless email_address?(address)
+  def self.ensure_recipient(email, params={})
+    email = email.to_s.strip.downcase
+    hashed_email = Digest::MD5.hexdigest(email)
+    raise ArgumentError, 'Invalid email address' unless email_address?(email)
 
     name = params[:name].strip if params[:name]
     ip_address = params[:ip_address]
@@ -160,11 +164,11 @@ module Poste2
 
     contacts = POSTE_DB[:contacts]
 
-    contact = contacts.where(email: address).first
+    contact = contacts.where(hashed_email: hashed_email).first
     unless contact
       id = contacts.insert({}.tap do |contact|
-        contact[:email] = address
-        contact[:hashed_email] = Digest::MD5.hexdigest(address.downcase)
+        contact[:email] = email
+        contact[:hashed_email] = hashed_email
         contact[:name] = name if name
         contact[:created_at] = now
         contact[:created_ip] = ip_address
@@ -174,11 +178,47 @@ module Poste2
       contact = {id: id}
     end
 
-    {id: contact[:id], email: address, name: name, ip_address: ip_address}
+    {id: contact[:id], email: email, name: name, ip_address: ip_address}
   end
 
-  def self.send_message(message_name, recipient, params)
+  def self.attachment_dir
+    # Get directory from settings (locals.yml / globals.yml)
+    # If none specified, use ./poste_attachments
+    path = CDO.poste_attachment_dir || File.join(Dir.pwd, 'poste_attachments')
+    Dir.mkdir(path) unless Dir.exist?(path)
+    path
+  end
+
+  # Takes a hash of name=>content, saves each to a file, and returns a
+  # hash of name=>saved_filename
+  def self.save_attachments(attachments)
+    timestamp = DateTime.now.strftime('%Y%m%d_%H%M_%S%L')
+    {}.tap do |saved|
+      attachments.each do |name, content|
+        filename = File.expand_path "#{attachment_dir}/#{timestamp}-#{name}"
+        File.open(filename, 'w+b'){|f| f.write content}
+        saved[name] = filename
+      end
+    end
+  end
+
+  # Takes a hash of name=>saved_filename, loads each file, and returns a
+  # hash of name=>content
+  def self.load_attachments(attachments)
+    {}.tap do |results|
+      attachments.each do |name, filename|
+        content = File.binread(filename)
+        results[name] = Base64.encode64(content)
+      end
+    end
+  end
+
+  def self.send_message(message_name, recipient, params = {})
     raise ArgumentError, 'No recipient' unless recipient && recipient[:id] && recipient[:email] && recipient[:ip_address]
+
+    if params[:attachments]
+      params[:attachments] = save_attachments(params[:attachments])
+    end
 
     message_name = message_name.to_s.strip
     unless message_id = @@message_id_cache[message_name]
@@ -195,25 +235,42 @@ module Poste2
       contact_email: recipient[:email],
       hashed_email: Digest::MD5.hexdigest(recipient[:email]),
       message_id: message_id,
-      params: (params||{}).to_json,
+      params: (params).to_json,
     })
   end
 
   class DeliveryMethod
-
     ALLOWED_SENDERS = Set.new %w[
       pd@code.org
       noreply@code.org
       teacher@code.org
       hadi_partovi@code.org
     ]
+
     def initialize(settings = nil)
     end
 
     def deliver!(mail)
-      content_type = mail.header['Content-Type'].to_s
+      attachments = nil
 
+      # Support multipart/mixed emails consisting of attachment(s) and a main part
+      if mail.multipart?
+        attachment_parts, body_parts = mail.parts.partition(&:attachment?)
+        raise 'Multipart messages are only supported with attachments and a single body' unless body_parts.length == 1
+        body_part = body_parts.first
+
+        attachments = {}
+        attachment_parts.each do |attachment|
+          attachments[attachment.filename] = attachment.body.decoded
+        end
+      else
+        body_part = mail
+      end
+
+      content_type = body_part.content_type
       raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
+      body = body_part.body.to_s
+
       sender_email = mail.from.first
       raise ArgumentError, "Unsupported sender: #{sender_email}" unless ALLOWED_SENDERS.include?(sender_email)
       raise ArgumentError, 'Recipient (to field) is required.' unless mail[:to]
@@ -222,11 +279,12 @@ module Poste2
       to_address = mail[:to].addresses.first
       to_name = mail[:to].display_names.first
       mail_params = {
-        body: mail.body.to_s,
+        body: body,
         subject: mail.subject.to_s,
         from: sender
       }
       mail_params[:reply_to] = mail[:reply_to].formatted.first if mail[:reply_to]
+      mail_params[:attachments] = attachments if attachments
       recipient = Poste2.ensure_recipient(to_address, name: to_name, ip_address: '127.0.0.1')
       Poste2.send_message('dashboard', recipient, mail_params)
     end

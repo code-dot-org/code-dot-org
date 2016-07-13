@@ -82,5 +82,12 @@
   "whileTooltip": "Ulitin ang mga nakalakip na mga aksyon hanggang ang dulo ay maabot.",
   "word": "Hanapin ang salita",
   "yes": "Oo",
-  "youSpelled": "Ini-spell mo ang"
+  "youSpelled": "Ini-spell mo ang",
+  "collectiblePresent": "there is some treasure",
+  "collect": "collect",
+  "collectorCollectTooltip": "Collect an item",
+  "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
+  "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
+  "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!"
 }

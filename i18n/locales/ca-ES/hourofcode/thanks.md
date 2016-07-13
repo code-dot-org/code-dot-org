@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Gràcies per registrar-se per acollir una Hora de Codi!
 
-Estàs fent possible que estudiants d'arreu del món puguin aprendre una Hora de Codi que pot canviar *la resta de les seves vides* durant la setmana del <%= campaign_date('full') %>. Seguirem en contacte sobre premis, nous tutorials i altres emocionants actualitzacions. Què és el que pots fer?
+Estàs fent possible que estudiants d'arreu del món puguin aprendre una Hora de Codi que pot canviar *la resta de les seves vides* durant la setmana del <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Què és el que pots fer?
 
 ## 1. Corre la veu
 

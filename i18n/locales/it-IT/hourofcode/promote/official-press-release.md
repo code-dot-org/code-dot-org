@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Esempio di comunicato stampa
 
 Pubblicazione immediata  
@@ -42,9 +40,3 @@ Più di 100 milioni di studenti di tutto il mondo hanno già provato l'Ora del C
 [**INSERIRE CITAZIONI DI ALTRI PARTECIPANTI**]
 
 Per ulteriori informazioni riguardanti [**EVENTO/PROGRAMMA/ECC**], visita [**SITOWEB**] o contatta [**CONTATTI**]
-
-  
-  
-
-
-<%= view :signup_button %>

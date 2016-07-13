@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Οδηγός σεναρίων εκμάθησης για την Ώρα του Κώδικα και την Εκπαιδευτική Εβδομάδα Πληροφορικής (CsedWeek)
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
@@ -25,7 +23,7 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
   * [General guidelines for creating an Hour of Code™ activity](#guidelines)
   * [Τρόπος αξιολόγησης των σεναρίων προς ανάρτηση](#inclusion)
-  * [How to submit (Due 10/15/2015)](#submit)
+  * [Πώς να υποβάλετε (προθεσμία 15/10/2015)](#submit)
   * [Προτάσεις για το σχεδιασμό της δραστηριότητάς σας](#design)
   * [Βασικές κατευθύνσεις](#tm)
   * [Εικονοστοιχείο ανίχνευσης](#pixel)
@@ -42,13 +40,13 @@ Now that tens of thousands of educators have tried the Hour of Code, many classr
 
 You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
 
-Examples:
+Παραδείγματα:
 
   * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
-  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
-  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+  * [Μια δραστηριότητα arduino για έναν καθηγητή φυσικής](https://csedweek.org/csteacher/arduino.pdf)
+  * [Μια ιστορία δραστηριότητας τεχνολογίας για έναν καθηγητή ιστορίας](https://csedweek.org/csteacher/besttechnology.pdf)
 
-[<button>How can I submit my own lesson plan?</button>](#submit)
+[<button>Πώς μπορώ να υποβάλω το δικό μου σχέδιο μαθήματος;</button>](#submit)
 
   
   
@@ -113,7 +111,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 <a id="submit"></a>
 
-## How to submit (Due 10/15/2015)
+## Πώς να υποβάλετε (προθεσμία 15/10/2015)
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
@@ -264,5 +262,3 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 Εάν δημιουργείτε ένα φροντιστήριο που σχεδιάζεται για άτομα με προβλήματα όρασης, θα θέλαμε να το τονίσουμε για όσους χρησιμοποιούν αναγνώστες οθόνης. Δεν έχουμε λάβει ακόμη κάποιο τέτοιο οδηγό, και θα ήταν πολύ ωραίο να συμπεριλάβουμε και αυτή την επιλογή για αυτούς τους μαθητές.
 
 [**Επιστροφή στην κορυφή**](#top)
-
-<%= view :signup_button %>

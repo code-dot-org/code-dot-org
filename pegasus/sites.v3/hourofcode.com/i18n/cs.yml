@@ -8,16 +8,19 @@ cs:
   campaign_date_start_long: 7. prosinec
   campaign_date_short: Prosinec 7-13
   campaign_date_full: Prosinec 7-13
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: Připojte se k největší vzdělávací akce v dějinách, Prosinec 7-13, 2015
   front_intro_default: 'Hodina kódu je celosvětová akce, které se účastní desítky milionů žáků z více než 180 zemí světa. Kdokoliv může zorganizovat svoji akci v rámci Hodiny kódu. Jsou k dispozici jednohodinové výukové programy. Nejsou požadované žádné předchozí zkušenosti. <strong>Určeno pro věk od 4 do 104.</strong>'
   front_watch_video: Podívejte se na nové video
   front_watch_regular_video: Podívejte se na video
   front_volunteers: Hledáme technické dobrovolníky
+  front_start_learning: Start learning
   header_menu_resources: Zdroje
-  header_menu_faq: 'FAQ - nejčastější dotazy'
+  header_menu_faq: Nejčastější dotazy
   header_menu_prizes: Ceny
   header_menu_how_to: Jak na to
-  header_menu_promote: Promujte
+  header_menu_promote: Rozšiřte dále
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -174,15 +177,17 @@ cs:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Ceny pro každého učitele
   prizes_10k: Jedna veřejná škola v každém státě US (a Washington D.C.) vyhraje technologie v ceně $10,000
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: '<i>Každý</i> organizátor dostane <b> $10 na Amazon.com, iTunes nebo Windows Store</b> jako děkovný dárek! Dokuď vydrží zásoby.'
+  prizes_more: More exciting prizes
   whats_next_header: Co dál?
   whats_next_description: "Zašleme Vám materiály a užitečné tipy pro Vaší akci. Brzy budou k dispozici nové tutoriály pro rok 2015, které budou pro všechny prohlížeče, smartphony - nebo dokonce i bez počítače. <a href='http://code.org/learn'>Zkuste současné tutoriály</a>"
   whats_next_how_to: "<a href='/how-to'>Jak vést Hodinu kódu</a>"
-  whats_next_promote: "<a href='/promote'>Promujte Hodinu kódu</a>"
+  whats_next_promote: "<a href='/promote'>Rozšiřte Hodinu kódu dále</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>Jak promovat Hodinu kódu</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Jak promovat Hodinu kódu</a>"
   whats_next_try: "<a href='http://code.org/learn'>Zkuste tutoriály</a>"
-  whats_next_try_button: Vyzkoušet kurzy
+  whats_next_try_button: Vyzkoušejte kurzy
   n_have_learned_an_hoc: '<h1>Vyzkoušejte</h1><h2>Hodinu kódu</h2><h3># obsloužený</h3>'
   anybody_can_learn: Kdokoliv se může učit.
   get_started: Začít
@@ -200,18 +205,18 @@ cs:
   front_join_us_teacher: Jste učitel?
   front_join_us_inspire: Inspirujte studenty a žáky
   front_join_us_inspire_link: Hodinou kódu ve Vaší třídě.
-  front_join_us_teacher_link: Inspirujte studenty hodnou kódu v učebně
+  front_join_us_teacher_link: Inspirujte studenty Hodinou kódu ve třídě
   front_join_us_teacher_volunteer: Hledejte místní dobrovolníky, kteří mohou navštívit vaše učebny nebo inspirujte své studenty na dálku
   front_join_us_parent: Jste rodič?
   front_join_us_ask_link: Požádejte místní školu,
   front_join_us_ask: aby uspořádala Hodinu kódu.
   front_join_us_parent_link: Požádejte místní školu aby uspořádala hodinu kódu
   front_join_us_computer_science: Prostě milujete informatiku?
-  front_join_us_cs_volunteer: Vášnivý o informatickém vzdělání?
+  front_join_us_cs_volunteer: Máte vášeň k informatice?
   front_join_us_spread: Rozšiřujte povědomí.
   front_join_us_spread_word: Šiřte povědomí ve svém okolí
   front_join_us_spread_word_work: Šiřte povědomí ve svém okolí či na pracovišti
-  front_join_us_sign_up_volunteer: Připojte se jako dobrovolník v místní učebně nebo skrze video chat
+  front_join_us_sign_up_volunteer: Připojte se jako dobrovolník v místní třídě nebo skrze video chat
   front_join_us_organize: Nebo sami uspořádejte Hodinu kódu.
   front_join_us_how_to_run: Zde je návod, jak vést Hodinu kódu
   front_join_us_help_promote: Pomozte s propagací Hodiny kódu
@@ -219,43 +224,44 @@ cs:
   front_join_us_teachers: Učitelé
   front_join_us_everyone: Kdokoli
   front_join_us_try: Vyzkoušejte
-  front_join_us_sign_up: Zaregistrovat se
+  front_join_us_sign_up: Zaregistrujte se
   front_join_us_host: Uspořádejte
   front_join_us_support: Podpořte
   front_join_us_more_info: "Pro více informací navštivte <a href='https://code.org'> code.org</a>."
   front_join_us_code_info: Pro více informací navštivte code.org
   front_join_us_n_students_served: '# lidí vyzkoušelo'
-  signup_header: 'Zorganizujte Hodinu kódu během %{campaign_date}, a zaregistrujte se zde.'
+  signup_header: 'Zaregistrujte se zde a zorganizujte Hodinu kódu během 7. - 13. prosince. (%{campaign_date})'
   signup_name_label: Vaše jméno
   signup_email_label: Váš email
   signup_organization_name_label: Název školy nebo organizace
   signup_event_type_label: Typ události
   signup_event_entire_school_label: Moje celá škola se zúčastní
   signup_event_location_label: Místo akce (volitelné)
-  signup_special_event_flag_label: Zvýrazněte svou zvláštní událost
+  signup_special_event_flag_label: Zvýrazněte moji zvláštní událost
   signup_special_event_details_label: Podrobnosti o zvláštních událostech
   signup_send_posters_flag_label: 'Zašlete <a href= "/resources#posters"> plakáty</a> do mé školy nebo organizace'
   signup_send_posters_address_label: Adresa školy nebo organizace
   signup_whole_school_flag_label: Tato událost je pro celou školu
-  signup_your_event: Přihlásit svoji událost
-  signup_match_volunteer: Pomožte mi najít místního softwarového inženýra, k inspiraci mých studentů
-  signup_multiple_event_warning: Pokuď hostujete více událostí, prosím přiložte jiné jméno nebo jiný email pro každou událost. Počítáme pouze jednu událost na jméno a email zkombinovaně.
+  signup_your_event: Zaregistrujte svoji akci
+  signup_match_volunteer: Pomozte mi najít místního experta, aby inspiroval mé studenty
+  signup_multiple_event_warning: Pokud pořádáte více událostí, zvolte prosím jiné jméno nebo email pro každou akci. Počítáme pouze jednu událost na jméno a email.
   signup_name_placeholder: Vaše jméno
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Např. Lincolnova střední škola
-  signup_event_location_placeholder: "PSČ a zemi nebo plnou adresu. \r (použijeme to k umístění špendlíku na mapě)"
+  signup_event_location_placeholder: "PSČ a zemi nebo plnou adresu. \\r (použijeme to k umístění špendlíku na mapě)"
   signup_special_event_details_placeholder: Popiště, co je to za zvláštní událost
   signup_send_posters_address_placeholder: Tato adresa nebude sdílena na naší mapě
   signup_event_type_in_school: Ve škole
   signup_event_type_out_of_school: Mimo školu
-  signup_submit_label: Zaregistrovat se
+  signup_submit_label: Zaregistrujte se
   signup_submit_error_message: Došlo k chybě. Zkontrolujte všechna požadovaná pole, zda jsou řádně vyplněná.
   signup_thank_you_header: Děkujeme Vám, že pořádáte akci Hodina kódu.
   signup_thank_you_message: Zaslali jsme vám potvrzovací e-mail s informacemi, které vám pomohou začít akci.
-  map_header: '# Akcí Hodiny kódu na celém světě'
+  map_title: Hour of Code map
+  map_header: '# akcí Hodiny kódu na celém světě'
   see_all_events: Zobrazit všechny události
   map_header_company: '# od firemních organizátorů'
-  map_header_country: '# v %{country}'
+  map_header_country: '# v České republice (%{country})'
   map_search_placeholder: Vyhledání událostí Hodiny kódu
   map_search_search: Hledat
   map_search_reset: Obnovit
@@ -266,7 +272,7 @@ cs:
   meta_tag_og_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily desítky milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od 4 do 104 let.
   meta_tag_twitter_title: Hodina kódu se blíží
   meta_tag_twitter_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily desítky milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od 4 do 104 let.
-  twitter_default_text: 'Účastním se letošní akce #HodinaKodu, co ty? @codeorg'
+  twitter_default_text: 'Účastním se letošní akce #HourOfCode, co ty? @codeorg'
   hardware_prizes_form_name_label: Vaše jméno
   hardware_prizes_form_name_placeholder: Vaše jméno
   hardware_prizes_form_email_label: Váš email
@@ -291,49 +297,49 @@ cs:
   hardware_prizes_form_submit_label: Odeslat
   hoc_faq_title: Nejčastější dotazy
   hoc_faq_what_is_hoc_q: 'Co je Hodina kódu? '
-  hoc_faq_what_is_hoc_a: "Hodina kódu je hodinovým úvodem do informatiky, s cílem přiblížit programování a ukázat, že každý se může naučit jeho základy. <a href='http://code.org/learn'> Podívejte se na kurzy</a>."
-  hoc_faq_last_year: Vyzkoušet kurzy
+  hoc_faq_what_is_hoc_a: "Hodina kódu je hodinovým úvodem do informatiky, který má za cíl přiblížit programování a ukázat, že každý se může naučit jeho základy. <a href='%{codeorg_url}'> Podívejte se na kurzy</a>."
+  hoc_faq_last_year: Vyzkoušejte kurzy
   hoc_faq_when_is_hoc_q: Kdy začne akce Hodina kódu?
-  hoc_faq_when_is_hoc_a: "Kdokoliv může kdykoliv uspořádat Hodinu kódu, ovšem cílem masové kampaně je poskytnout Hodinu kódu desítkám milionů žáků v týdnu během %{campaign_date}, kdy slavíme <a href='http://csedweek.org'>Týden vyučování informatiky</a>. Je stanovena nějaká konkrétní <i>hodina? </i>Ne. Hodiny kódu se můžeš zúčastnit kdykoliv v tomto týdnu (a jestliže nemůžeš v tento týden, pak to zkus týden před nebo po)."
+  hoc_faq_when_is_hoc_a: "Hodinu kódu může uspořádat kdykoliv a kdokoliv. Cílem kampaně je poskytnout Hodinu kódu desítkám milionů žáků v jednom týdnu 7. - 13. prosince (%{campaign_date}), kdy slavíme <a href='http://csedweek.org'>Týden informatiky</a>. Je stanovena nějaká konkrétní <i>hodina</i>? Ne. Hodiny kódu se můžeš zúčastnit kdykoliv během tohoto týdne. Jestliže nemůžeš, tak to zkus týden předtím nebo potom."
   hoc_faq_why_cs_q: Proč informatika?
   hoc_faq_why_cs_a: "<i>Každý</i> student by měl mít možnost se učit informatiku. Pomáhá to podporovat dovednost, logiku a tvořivost při řešení problémů. Hned na začátku studenti získají základy pro úspěch v jakékoliv profesní dráze 21.století. Více ve statistikách na <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Jak se zúčastnit akce Hodina kódu?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Začněte plánovat tady</a> tím, že si prohlídnete náš how-to průvodce. Můžete organizovat Hodinu kódu na vaší škole nebo ve vaší komunitě &mdash; jako v mimoškolním nebo neziskovém klubu, nebo v práci. Nebo, to zkuste sami poté co %{campaign_date} dorazí."
-  hoc_faq_behind_hoc_q: Kdo je v pozadí akce Hodina kódu?
-  hoc_faq_behind_hoc_a: "Událost Hodina kódu organizuje <a href='http://code.org'>Code.org</a>, veřejná nezisková organizace (US § 501 c3), která se věnuje zvyšování podílu zájmu o informatiku ve společnosti, zvyšování účasti žen a nedostatečně zastoupených menšin. Je k dispozici ve více školách. <a href='http://code.org/about/partners'>Bezprecedentní koalice partnerů</a> se též spojila k podpoře akce Hodina kódu &mdash; včetně Microsoftu, Applu, Amazonu, Boys and Girls Clubs of America a College Board."
-  hoc_faq_host_q: Nevím nic o kódování. Mohu hostovat akci?
+  hoc_faq_how_participate_a: "<a href='/how-to'>Naplánujte ji zde</a> tím, že si prohlídnete náši příručku. Hodinu kódu můžete organizovat na vaší škole nebo ve vaší komunitě, jako je mimoškolní klub, případně v práci. Můžete to zkusit i sami, jakmile začneme (datum: %{campaign_date})."
+  hoc_faq_behind_hoc_q: Kdo je v pořádá akci Hodina kódu?
+  hoc_faq_behind_hoc_a: "Hodina kódu je organizována <a href='http://code.org'>Code.org</a>, veřejnou nezisková organizací (US § 501 c3), která se věnuje zvyšování zájmu o informatiku ve společnosti, zvyšování účasti žen a menšin tím, že ji nabízí k dispozici na více školách. Též se <a href='%{codeorg_url}/about/partners'>velká skupina partnerů</a> spojila k podpoře této akce &mdash; Microsoftu, Apple, Amazon, Boys and Girls Clubs of America, College Board a další."
+  hoc_faq_host_q: Nevím nic o kódování. Mohu uspořádat takovou akci?
   hoc_faq_host_a: "Samozřejmě. Aktivity Hodiny kódu jsou samostatně vedené. Vše, co musíte udělat je <a href='%{codeorg_url}/learn'> zkusit naše aktuální kurzy</a>, vybrat kurz, který chcete, a hodinu &mdash; my se postaráme o zbytek. Máme také možnosti pro každý věk a úroveň zkušeností - od školky a dále. Začněte plánovat vaše události čtením <a href='/how-to'>průvodce</a>."
   hoc_faq_devices_q: Jaké zařízení mám pro své studenty použít?
-  hoc_faq_devices_a: Code.org kurzy fungují na všech zařízeních a prohlížečích. Více informací o technických záležitostech lekcí Code.org najdete v <a href='%{codeorg_url}/educate/it'> videu. Technické požadavky pro jiné než Code.org lekce najdete na <a href='%{codeorg_url}/learn'> v popisku konkrétního kurzu. Nezapomeňte, že pokud vaše škola nemůže přizpůsobit kurzy nabízíme také jiné aktivity!
+  hoc_faq_devices_a: "Code.org kurzy fungují na všech zařízeních a prohlížečích. Více informací o technických záležitostech lekcí Code.org najdete ve <a href='%{codeorg_url}/educate/it'> videu</a>. Technické požadavky pro jiné než Code.org lekce najdete <a href='%{codeorg_url}/learn'>zde</a> v popisku konkrétního kurzu. Nezapomeňte, že pokud vaše škola nemůže přizpůsobit kurzy nabízíme také jiné aktivity!"
   hoc_faq_need_computers_q: Potřebuji počítač pro každého účastníka?
-  hoc_faq_need_computers_a: "Ne. Máme výukové programy akce Hodina kódu, které pracují na PC, smartfounech, tabletech a některé nevyžadují počítač vůbec! Můžete se připojit kdekoliv jste, s tím co máte. <p><i>Zde je několik možností:</i> <br> <ul> <li><b>Práce ve dvojicích.</b> Výzkumy ukazují, že studenti se učí nejlépe <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programováním ve dvojicích</a>, sdílením počítače, pracují-li společně. Povzbuzujte své studenty v práci ve dvojicích. <li><b>Používejte projektor obrazovky.</b> Pokud máte projektor a monitor počítače připojeném na Webu, celá skupina si může udělat společně událost Hodina kódu. Sledujte společně video části, střídejte se v řešení hádanek nebo odpovědí na otázky. <li><b>Bez připojení.</b> Nabízíme i kurzy, které nevyžadují počítač.</ul>"
-  hoc_faq_international_q: 'Jsem v <country>. Jak se mohu mezinárodně zúčastnit?'
+  hoc_faq_need_computers_a: "Ne. Máme lekce, které fungují na počítačích, smartphonech, tabletech a některé nevyžadují počítač vůbec! Můžete se připojit kdekoliv jste a s čímkoliv. <p><i>Je několik možností:</i> <br> <ul> <li><b>Práce ve dvojicích.</b> Výzkumy ukazují, že studenti se učí nejlépe <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programováním ve dvojicích</a>, sdílením počítače, pracují-li společně. Povzbuďte své studenty, aby pracovali ve dvojicích. <li><b>Použití projektoru.</b> Pokud máte projektor a počítač připojený k webu, celá skupina může dělat Hodinu kódu společně. Sledujte videa, střídejte se v řešení úkolů nebo odpovědí. <li><b>Bez připojení.</b> Nabízíme i kurzy, které nevyžadují počítač.</ul>"
+  hoc_faq_international_q: 'Jsem v České republice (<country>). Jakým způsobem se mohu zúčastnit?'
   hoc_faq_international_a: "Kdokoliv může organizovat Hodinu kódu kdekoliv na světě. Minulý rok se pro Hodinu kódu spojili studenti celého světa. Více naleznete <a href='/promote'>zde</a>."
   hoc_faq_tutorial_q: Jak mohu udělat výukový kurz pro akci Hodina kódu?
-  hoc_faq_tutorial_a: "Pokud máte zájem se stát partnerem ve výuce, <a href='/tutorial-guidelines'>Viz naše pokyny a instrukce</a>. Rádi bychom hostovali řadu dalších nabízených možností, ale hlavním naším cílem je optimalizovat zkušenost studentů a učitelů, pro které je informatika něco úplně nového."
-  hoc_faq_account_q: Potřebují studenti přihlásit pomocí účtu? Budu si muset založit účet?
-  hoc_faq_account_a: "Ne. Aby si studenti mohli vyzkoušet Hodinu kódu, není potřeba žádná registrace nebo přihlašování. Většina <a href='%{codeorg_url}/learn/beyond'>pokračujících kurzů</a> vyžaduje účet pro uložení postupu. Registrace pro Hodinu kódu nevytvoří automaticky účet v Code Studio. Pokud chcete pro studenty vytvořit účty, následujte tyto <a href='https://youtu.be/_smelV_KISE'>instrukce</a>."
-  hoc_faq_frozen_q: Kde mohu najít nové lekce se Star Wars, Minecraft a Annou a Elsou z Frozen?
-  hoc_faq_frozen_a: "Je nyní dostupná na <a href='%{codeorg_url}/learn'>stránce s tutoriály</a>. Doufáme, že si ji užijete!"
+  hoc_faq_tutorial_a: "Pokud máte zájem se stát partnerem ve výuce, podívejte se na<a href='/tutorial-guidelines'>naše pokyny a instrukce</a>. Rádi bychom pořádali i řadu dalších možností, ale hlavním cílem je předat zkušenosti studentům a učitelům, pro které je informatika něco úplně nového."
+  hoc_faq_account_q: Potřebují se studenti přihlásit pomocí účtu? Budu si muset založit svůj účet?
+  hoc_faq_account_a: "Ne. Aby si studenti mohli vyzkoušet Hodinu kódu, není potřeba žádná registrace nebo přihlašování. Většina <a href='%{codeorg_url}/learn/beyond'>pokračujících kurzů</a> vyžaduje účet pro uložení postupu. Registrace na Hodině kódu nevytvoří automaticky účet v Code Studio. Pokud chcete pro studenty vytvořit účty, následujte tyto <a href='https://youtu.be/_smelV_KISE'>instrukce</a>."
   hoc_faq_high_school_q: Které činnosti bych měl(a) dělat se studenty středních škol?
   hoc_faq_high_school_a: "Přes všechny věkové kategorie doporučujeme vyzkoušet jeden ze začátečnických kurzů na <a href='%{codeorg_url}/learn'>%{partner_url}/učit</a> se začít, jako například kurz s Angry Birds nebo s Annou a Elsou. Student střední školy by měl být schopen dokončit jeden z nich za 30 minut a poté může vyzkoušet pokročilejší kurz v JavaScriptu, Khan Academy nebo CodeHS."
   hoc_faq_scratch_q: Pro Hodinu kódu používám Scratch, ale co když mí studenti mají iPady a ne notebooky ?
-  hoc_faq_scratch_a: "Scratch neběží na tabletech. Jsou-li vaši studenti mladí, mohou používat aplikaci pro iPad ScratchJR (pro rané čtenáře). Pokud se podíváte na návody na <a href='http://code.org/learn'> Code.org/learn</a>, můžete najít další návody, které fungují na tabletech - od Code.org, Tynker, Lightbot nebo CodeSpark."
+  hoc_faq_scratch_a: "Scratch nefunguje na tabletech. Jsou-li vaši studenti velmi mladí, mohou používat aplikaci ScratchJR pro iPad. Pokud se podíváte na cvičení <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, můžete najít další cvičení, která na iPad fungují (od Code.org, Tynker, Lightbot nebo CodeSpark)."
   hoc_faq_count_hoc_q: Jak počítáte hodiny kódu?
   hoc_faq_map_q: Proč nevidím svoji tečku na mapě?
   hoc_faq_map_a: Je nám líto, že nevidíte vaší událost v mapě Hodiny kódu. Kvůli desítkám tisíc organizátoru, kteří se registrují, mapa shromažďuje data jednou za čas. Pokud kliknete na číslo nad mapou, budete přesměrování na seznam všech událostí podle státu a můžete zde najít i vaši. Normálně trvá i 48 hodin, než se mapa aktualizuje. Zkontrolujte to za pár dní!
-  hoc_faq_count_hoc_a: "Tracker Hodiny kódu není přesné měření využití. Nepočítáme unikátní ID studentů dokonale, když sledujeme účast v Hodině kódu, zvlášť protože nevyžadujeme, aby se studenti přihlašovali nebo registrovali. Ve výsledku současně počítáme více i méně. Přečtěte si veškeré detaily <a href='%{codeorg_url}/loc'>zde</a>."
+  hoc_faq_count_hoc_a: "Systém ke sledování Hodiny kódu není přesné měření využití. Nepočítáme unikátní ID studentů vždy dobře, protože nevyžadujeme, aby se studenti přihlašovali nebo registrovali. Ve výsledku současně počítáme více i méně. Přečtěte si veškeré detaily <a href='%{codeorg_url}/loc'>zde</a>."
   hoc_faq_one_hour_q: Kolik toho můžu za hodinu naučit?
   hoc_faq_one_hour_a: 'Cílem Hodiny kódu není někoho učit tak, aby se stal expertem v informatice za hodinu. Hodina stačí pouze na to, abychom ukázali, že informatika je zábavná a kreativní, že je přístupná všem věkovým kategoriím, všem studentům, bez rozdílu odkud jsou. Měřítkem úspěchu této kampaně není kolik informatiky se studenti naučí - úspěchem je široká účast napříč pohlavími, etnickými a sociálně-ekonomickými skupinami a výsledný nárůst zapojení, které sledujeme v kurzech informatiky na všech úrovních. Miliony účastnících se učitelů a studentů se rozhodly jít dále než udělat jednu hodinu - učit celý den, týden nebo ještě déle a mnoho studentů se rozhodlo účastnit dalších kurzů (třeba i seminářů).<br/><br/> Kromě samotných studentů je dalším kdo se učí i školitel, který získá větší sebevědomí po hodině, kdy učí informatiku, i když nemají vysokoškolský titul právě z informatiky. Desítky tisíc učitelů se rozhodly šířit informatiku dále nabízením dalších kurzů. Toto platí i pro školní administrátory, kteří si uvědomují, že informatika je něco, co jejich studenti chtějí a učitelé jsou schopni. <br/><br/> V závěru, vše co se studenti mohou za hodinu naučit je, že to můžeme zvládnout.'
   hoc_faq_more_questions_q: Máte ještě další otázky?
   hoc_faq_more_questions_a: "Zkuste najít odpověď na našem <a href='http://support.code.org'>fóru pro podporu</a>."
   hoc_faq_keep_learning_q: Jak mohu pokračovat se svým učením po hodině kódu?
-  hoc_faq_keep_learning_a: "Kdykoliv a kdokoliv může pořádat Hodinu kódu. Kurzy zůstávají po celý rok. Můžete očekávat, že všechny naše kurzy a výuky budou k dispozici na našich stránkách permanentně. Prosím přejděte na <a href='/promote'> naše zdroje</a> pro návody k událostem další zdroje, které vám pomohou s úspěšnou hodinou kódu."
+  hoc_faq_keep_learning_a: "Kdykoliv a kdokoliv může pořádat Hodinu kódu. Kurzy zůstávají po celý rok. Můžete očekávat, že všechny naše kurzy a výuky budou k dispozici na našich stránkách trvale. Prosím přejděte na <a href='/promote'> sem</a> pro návody k událostem a další zdroje, které vám pomohou s úspěšnou Hodinou kódu."
   hoc_faq_certificates_q: Kde mohu vytisknout certifikáty pro své studenty?
   hoc_faq_certificates_a: "Přejděte na naši <a href='%{codeorg_url}/certificates'> stránku s certifikáty</a>, kde můžete dopředu tisknout certifikáty pro celou třídu."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: Statistika roku 2013 akce Hodina kódu
   stats_growth: Byl to nejrychlejší způsob, jak dosáhnout 15 milionů uživatelů.
-  stats_i18n: Studenti se učí v 40 jazycích
+  stats_i18n: Studenti se učí ve 40 jazycích
   stats_tumblr: 'Tumblr: 3 a půl roku'
   stats_facebook: 'Facebook: 3 roky'
   stats_twitter: 'Twitter: 2 a půl roku'
@@ -363,11 +369,11 @@ cs:
   resources_country_resources: Prostředky specifické pro zemi
   resources_stickers: Nálepky
   resources_how_to_guides: Návody
-  resources_promote: Promujte
-  resources_nav_tutorials: Vyzkoušet kurzy
+  resources_promote: Rozšiřte dále
+  resources_nav_tutorials: Vyzkoušejte kurzy
   resources_nav_promote: Rozšiřujte povědomí
   resources_nav_spread_word: Jak se zapojit
-  resources_banner_promote_text: Promujte
+  resources_banner_promote_text: Rozšiřte dále
   resources_banner_promote_button: Povzbuďte ostatní, aby se přihlásili s brožurami, inspirativními plakáty a bannery na sociálních sítích.
   resources_banner_howto_text: Jak na to
   resources_banner_howto_button: Zdroje pro školitele, rodiče a území, která pořádají Hodinu kódu.
@@ -394,7 +400,7 @@ cs:
   title_proclamation: Ukázkové řešení podporující Týden informatiky a Hodinu kódu
   title_stats: Popisky a statistiky
   title_partners: Partneři
-  title_prizes_faq: FAQ cen
+  title_prizes_faq: Nejčastější dotazy k cenám
   title_prizes_terms: Podmínky cen
   title_prizes_thanks: Děkuji
   title_prizes: Ceny
@@ -415,6 +421,9 @@ cs:
   events_orgs_title: Všechny hodiny kódu pořádané partnerskými organizacemi
   event: událost
   events: akce
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: Copyright 2015 Code.org. Všechna práva vyhrazena.
   footer_trademark_message: Hour of Code™ je ochranná známka společnosti Code.org.
   footer_menu_partners: Partneři
