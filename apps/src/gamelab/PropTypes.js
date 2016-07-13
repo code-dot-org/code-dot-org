@@ -136,7 +136,7 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
   let knownKeys = {};
   serializedAnimationList.orderedKeys.forEach(key => {
     if (knownKeys.hasOwnProperty(key)) {
-      throw new Error(`Key ${key} appears more than once in orderedKeys`);
+      throw new Error(`Key "${key}" appears more than once in orderedKeys`);
     }
     knownKeys[key] = true;
   });
@@ -169,10 +169,20 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
   serializedAnimationList.orderedKeys.forEach(key => {
     ['name', 'sourceSize', 'frameSize', 'frameCount', 'frameRate'].forEach(prop => {
       if (!serializedAnimationList.propsByKey[key].hasOwnProperty(prop)) {
-        throw new Error(`Animation ${key} is missing required property ${prop}`);
+        throw new Error(`Animation "${key}" is missing required property ${prop}`);
       }
     });
   });
+
+  // Catch duplicate names (not a fatal problem, but not great either)
+  let knownNames = {};
+  for (let key in serializedAnimationList.propsByKey) {
+    let name = serializedAnimationList.propsByKey[key].name;
+    if (knownNames.hasOwnProperty(name)) {
+      throw new Error(`Name "${name}" appears more than once in propsByKey`);
+    }
+    knownNames[name] = true;
+  }
 }
 
 /**
