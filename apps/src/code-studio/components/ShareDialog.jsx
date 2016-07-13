@@ -3,6 +3,7 @@ import BaseDialog from '../../templates/BaseDialog';
 import AdvancedShareOptions from './AdvancedShareOptions';
 import AbuseError from './abuse_error';
 import SendToPhone from './SendToPhone';
+import color from '../../color';
 
 function select(event) {
   event.target.select();
@@ -18,6 +19,11 @@ const styles = {
   abuseTextStyle: {
     color: '#b94a48',
     fontSize: 14
+  },
+  shareWarning: {
+    color: color.red,
+    fontSize: 13,
+    fontWeight: 'bold'
   },
 };
 
@@ -85,6 +91,16 @@ var ShareDialog = React.createClass({
     );
   },
 
+  canShareSocial() {
+    // TODO: ditch this in favor of react-redux connector
+    // once more of code-studio is integrated into mainline react tree.
+    const studioApp = require('../../StudioApp').singleton;
+    const pageConstants = studioApp.reduxStore.getState().pageConstants;
+    return !pageConstants.isSignedIn || pageConstants.is13Plus || (
+      this.props.appType !== 'applab' &&
+      this.props.appType !== 'gamelab');
+  },
+
   render: function () {
     var image;
     var modalClass = 'modal-content';
@@ -120,6 +136,10 @@ var ShareDialog = React.createClass({
                  className='alert-error'
                  style={styles.abuseStyle}
                  textStyle={styles.abuseTextStyle}/>}
+            {!this.canShareSocial() &&
+             <p style={styles.shareWarning}>
+               {this.props.i18n.t('project.share_u13_warning')}
+             </p>}
             <p style={{fontSize: 20}}>
               {this.props.i18n.t('project.share_copy_link')}
             </p>
@@ -137,14 +157,17 @@ var ShareDialog = React.createClass({
                 <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
                 <span>Send to phone</span>
               </a>
-              <a href={facebookShareUrl}
-                 target="_blank"
-                 onClick={this.props.onClickPopup.bind(this)}>
-                <i className="fa fa-facebook"></i>
-              </a>
-              <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
-                <i className="fa fa-twitter"></i>
-              </a>
+              {this.canShareSocial() &&
+               <span>
+                 <a href={facebookShareUrl}
+                    target="_blank"
+                    onClick={this.props.onClickPopup.bind(this)}>
+                   <i className="fa fa-facebook"></i>
+                 </a>
+                 <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
+                   <i className="fa fa-twitter"></i>
+                 </a>
+               </span>}
             </div>
             {this.state.showSendToPhone &&
              <SendToPhone
