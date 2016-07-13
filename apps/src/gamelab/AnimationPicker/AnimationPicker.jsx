@@ -1,5 +1,5 @@
 import React from 'react';
-import utils from '../../utils';
+const createUuid = require('../../utils').createUuid;
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog.jsx';
 import gamelabMsg from '../locale';
@@ -73,7 +73,7 @@ const AnimationPicker = React.createClass({
           uncloseable={this.props.uploadInProgress}>
         <HiddenUploader
             ref="uploader"
-            toUrl={'/v3/animations/' + this.props.channelId + '/' + utils.createUuid() + '.png'}
+            toUrl={'/v3/animations/' + this.props.channelId + '/' + createUuid() + '.png'}
             typeFilter={this.props.typeFilter}
             onUploadStart={this.props.onUploadStart}
             onUploadDone={this.props.onUploadDone}
