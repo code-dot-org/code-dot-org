@@ -1,4 +1,4 @@
-professional_learning_course 'All Of The PLC Things'
+professional_learning_course 'All The PLC Things'
 title 'Sample course for PLC things'
 description_short 'This is a sample course that has all of the plc special things'
 description 'This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it\'s just a copy of TeacherCon'
@@ -40,37 +40,11 @@ stage 'Group Work and Peer Learning', 'practice'
  named_level 'Collaborative Learning and Group Work: description and strategies'
  named_level 'The Official Peer Instruction Blog'
  named_level 'the Journal of Peer Learning '
-<<<<<<< HEAD
  named_level 'Peer Review Level 1 - Tuesday Report'
  named_level 'Peer Review Level 2 - Wednesday Report'
-=======
- named_level 'Tuesday Report: group work and peer learning in unit 1'
- named_level 'Wednesday Report: group work and peer learning in unit 1'
->>>>>>> 4ffb9be... Stuff
 
 stage 'Balancing Teachers and Tools', 'practice'
  named_level 'Exploring Practices and Strategies during TeacherCon'
  named_level  'Overview: Balancing Teachers and Tools'
-<<<<<<< HEAD
  named_level 'Peer Review Level 1 - Tuesday Report'
  named_level 'Peer Review Level 2 - Wednesday Report'
-=======
- named_level 'Tuesday Report: balancing teachers and tools in unit 1'
-  named_level 'Wednesday Report: balancing teachers and tools in unit 1'
-
-stage 'Discovery Learning', 'practice'
- named_level 'Exploring Practices and Strategies during TeacherCon'
- named_level 'Overview: Discovery Learning'
- named_level 'Discovery learning definition and history'
- named_level 'Discovery learning techniques'
- named_level 'Tuesday Report: discovery learning in unit 1'
- named_level 'Wednesday Report: discovery learning in unit 1'
-
-stage 'Measuring Student Learning', 'practice'
- named_level 'Exploring Practices and Strategies during TeacherCon'
- named_level  'Overview: Capturing Student Learning'
- named_level 'What is the difference between formative and summative assessment?'
- named_level 'Classroom Assessment Techniques'
- named_level 'Tuesday Report: measuring student learning in unit 1'
- named_level 'Wednesday Report: measuring student learning in unit 1'
->>>>>>> 4ffb9be... Stuff

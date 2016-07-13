@@ -69,6 +69,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
   end
 
   test 'Submitting a review redirects to the script view' do
+    @peer_review.update(reviewer_id: @user.id)
     post :update, id: @peer_review.id, peer_review: {status: 'accepted', data: 'This is great'}
     assert_redirected_to script_path(@script)
   end
