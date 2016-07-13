@@ -1,7 +1,7 @@
 import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
-import { castValue } from './dataUtils';
+import { castValue, displayValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
 const AddTableRow = React.createClass({
@@ -39,7 +39,7 @@ const AddTableRow = React.createClass({
                 (columnName !== 'id') &&
                   <input
                       style={dataStyles.input}
-                      value={this.state.newRecord[columnName] || ''}
+                      value={displayValue(this.state.newRecord[columnName])}
                       onChange={event => this.handleChange(columnName, event)}/>
               }
             </td>
