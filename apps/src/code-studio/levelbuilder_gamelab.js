@@ -6,12 +6,12 @@ import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/gamelab/PropTyp
 $(document).ready(function () {
 
   // Live-validate animations JSON using same validation code we use in Gamelab
-  let levelStartAnimationsValidationDiv = $('#level-start-animations-validation');
-  initializeCodeMirror('level_start_animations', 'json', codeMirror => {
-    const editorContent = codeMirror.getValue().trim();
+  const levelStartAnimationsValidationDiv = $('#level-start-animations-validation');
+  const validateAnimationJSON = function (json) {
+    json = json.trim();
     try {
-      if (editorContent.length > 0) {
-        const animationList = JSON.parse(codeMirror.getValue());
+      if (json.length > 0) {
+        const animationList = JSON.parse(json);
         throwIfSerializedAnimationListIsInvalid(animationList);
       }
       levelStartAnimationsValidationDiv.text('Animations JSON appears valid.');
@@ -20,5 +20,11 @@ $(document).ready(function () {
       levelStartAnimationsValidationDiv.text(err.toString());
       levelStartAnimationsValidationDiv.css('color', '#dd0000');
     }
+  };
+  // Run validation at start, and then on every codeMirror change
+  validateAnimationJSON(document.getElementById('level_start_animations').value);
+  initializeCodeMirror('level_start_animations', 'json', codeMirror => {
+    validateAnimationJSON(codeMirror.getValue());
   });
 });
+
