@@ -387,12 +387,11 @@ td.studentname {
       }
     }
 
-  }
-
-  .announce-learn-more {
-    bottom: 10px;
-    position: absolute;
-    right: 10px;
+    .announce-learn-more {
+      position: relative;
+      float: right;
+      margin-top: 75px;
+    }
   }
 }
 
