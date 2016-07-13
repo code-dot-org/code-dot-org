@@ -81,7 +81,8 @@ const CourseProgressRow = React.createClass({
     showLessonPlanLinks: React.PropTypes.bool,
     professionalLearningCourse: React.PropTypes.bool,
     isFocusArea: React.PropTypes.bool,
-    stage: stageShape
+    stage: stageShape,
+    changeFocusAreaPath: React.PropTypes.string,
   },
 
   render() {

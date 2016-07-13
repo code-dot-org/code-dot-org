@@ -1,3 +1,4 @@
+/* eslint-disable react/no-is-mounted */
 var React = require('react');
 var assetsApi = require('@cdo/apps/clientApi').assets;
 

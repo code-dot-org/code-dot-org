@@ -53,6 +53,9 @@ export function Title({children}) {
     </h1>
   );
 }
+Title.propTypes = {
+  children: React.PropTypes.node,
+};
 
 export function Body({children}) {
   return (
@@ -61,14 +64,23 @@ export function Body({children}) {
     </div>
   );
 }
+Body.propTypes = {
+  children: React.PropTypes.node,
+};
 
 export function Confirm(props) {
   return <Button type="primary" {...props}>{props.children || locale.dialogOK()}</Button>;
 }
+Confirm.propTypes = {
+  children: React.PropTypes.node,
+};
 
 export function Cancel(props) {
   return <Button type="cancel" {...props}>{props.children || locale.dialogCancel()}</Button>;
 }
+Cancel.propTypes = {
+  children: React.PropTypes.node,
+};
 
 export function Buttons({children}) {
   children = React.Children.toArray(children);
@@ -95,6 +107,9 @@ export function Footer({children}) {
     </div>
   );
 }
+Footer.propTypes = {
+  children: React.PropTypes.node,
+};
 
 
 export var Icon = Radium(function Icon({src}) {
