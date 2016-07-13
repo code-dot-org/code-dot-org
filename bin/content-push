@@ -14,11 +14,23 @@ def ask_for_name
   name
 end
 
+def disallow_case_change
+  `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.split("\n").each do |line|
+    puts "reading line: #{line}"
+    if %r{^R  ([^ ]+) -> ([^ ]+)}.match(line) && $1.casecmp($2)
+      STDERR.puts "Aborting due to case-only rename: #{line}"
+      exit 1
+    end
+  end
+end
+
 def check_changes
   if `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.empty?
     puts "There are no unstaged or untracked files to commit."
     return false
   end
+
+  disallow_case_change
 
   system("git status --untracked-files=all #{CONTENT_PATHS}")
   print "Should I commit and push all of these unstaged and untracked files in pegasus and dashboard? [Y/n] "
