@@ -262,12 +262,9 @@ class ApiController < ApplicationController
     render json: data
   end
 
-  # If at least five students have completed a given long-assessment LevelGroup that is marked anonymous,
-  # then for each multi return a summary of the percentage of each answer, and also return all free
-  # response texts but in a randomized order.
-  # In theory this could be a unique codepath inside the section_assessments function, but given the
-  # serious risk of exposing student information in a non-anonymous fashion, this function has been
-  # built separately.
+  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
+  # At least five students in the section must have submitted answers.  The answers for each contained
+  # sublevel are shuffled randomly.
   def section_surveys
     load_section
     load_script
