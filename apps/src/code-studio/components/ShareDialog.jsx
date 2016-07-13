@@ -18,7 +18,6 @@ var ShareDialog = React.createClass({
     }).isRequired,
     icon: React.PropTypes.string,
     shareUrl: React.PropTypes.string.isRequired,
-    encodedShareUrl: React.PropTypes.string.isRequired,
     isAbusive: React.PropTypes.bool.isRequired,
     channelId: React.PropTypes.string.isRequired,
     appType: React.PropTypes.string.isRequired,
@@ -82,9 +81,12 @@ var ShareDialog = React.createClass({
       modalClass += ' no-modal-icon';
     }
 
-    var facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + this.props.encodedShareUrl;
-    var twitterShareUrl = "https://twitter.com/intent/tweet?url=" + this.props.encodedShareUrl +
-                          "&amp;text=Check%20out%20what%20I%20made%20@codeorg&amp;hashtags=HourOfCode&amp;related=codeorg";
+    var facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
+                           encodeURIComponent(this.props.shareUrl);
+    var twitterShareUrl = "https://twitter.com/intent/tweet?url=" +
+                          encodeURIComponent(this.props.shareUrl) +
+                          "&amp;text=Check%20out%20what%20I%20made%20@codeorg" +
+                          "&amp;hashtags=HourOfCode&amp;related=codeorg";
 
     var abuseStyle = {
       border: '1px solid',
@@ -202,7 +204,6 @@ if (BUILD_STYLEGUIDE) {
                            hideBackdrop={true}
                            i18n={fakei18n}
                            shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                           encodedShareUrl="some encoded url"
                            isAbusive={false}
                            channelId="some-id"
                            appType="applab"
