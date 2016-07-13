@@ -1,21 +1,19 @@
 name 'CSD U3 - complex conditionals - SFLP'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Unit 3: Lesson 09 - Complex Conditionals
+# Overview
 
-# Background
-
-Blah Blah
+An introduction to else statements and nested if statements to add more complex logic to programs.
 
 # Lesson
 
-* Blah
-* Blah
-* Blah
+* Video: Conditionals
+* Levels: Complex Conditionals
+* Share: Sharing your final creation
 
 # Vocab
 
-None
+* **Conditionals** - Statements that only run under certain conditions.
 
 # Commands 
 

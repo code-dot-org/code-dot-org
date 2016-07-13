@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-disable react/no-danger */
 
 import $ from 'jquery';
 import React from 'react';
@@ -156,7 +156,9 @@ var TopInstructions = React.createClass({
     shortInstructions: React.PropTypes.string.isRequired,
     shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
-    feedback: React.PropTypes.string,
+    feedback: React.PropTypes.shape({
+      message: React.PropTypes.string.isRequired,
+    }),
     hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     smallStaticAvatar: React.PropTypes.string,
@@ -168,7 +170,8 @@ var TopInstructions = React.createClass({
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired
+    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
+    showInstructionsDialog: React.PropTypes.func.isRequired,
   },
 
   getInitialState() {
@@ -186,6 +189,7 @@ var TopInstructions = React.createClass({
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
     if (width !== this.state.rightColWidth) {
+      // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         rightColWidth: width
       });
@@ -193,6 +197,7 @@ var TopInstructions = React.createClass({
 
     const gotNewFeedback = this.props.feedback && !prevProps.feedback;
     if (gotNewFeedback) {
+      // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         promptForHint: false
       });
@@ -410,7 +415,7 @@ var TopInstructions = React.createClass({
 
     const atMaxHeight = this.props.height === this.props.maxHeight;
 
-    const renderedMarkdown = processMarkdown(this.props.collapsed ?
+    const renderedMarkdown = processMarkdown((this.props.collapsed || !this.props.longInstructions) ?
       this.props.shortInstructions : this.props.longInstructions);
 
     // Only used by star wars levels
@@ -493,7 +498,7 @@ var TopInstructions = React.createClass({
           <div>
             <CollapserButton
                 ref='collapser'
-                style={[styles.collapserButton, !this.props.longInstructions && commonStyles.hidden]}
+                style={[styles.collapserButton, !this.props.longInstructions && !this.props.feedback && commonStyles.hidden]}
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
             />

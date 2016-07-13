@@ -13,6 +13,7 @@ const style = {
     borderWidth: 1,
     borderStyle: 'solid',
     minWidth: 100,
+    margin: 0,
   },
   large: {
     fontSize: 35,

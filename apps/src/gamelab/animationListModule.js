@@ -2,7 +2,7 @@
  * @file Redux module for new format for tracking project animations.
  */
 import {combineReducers} from 'redux';
-import utils from '../utils';
+const utils = require('../utils');
 import {animations as animationsApi} from '../clientApi';
 import assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';

@@ -31,6 +31,7 @@ var Cell = React.createClass({
     onMouseOver: React.PropTypes.func.isRequired,
     onMouseUp: React.PropTypes.func.isRequired,
     skin: React.PropTypes.string.isRequired,
+    highlighted: React.PropTypes.bool,
   },
 
   render: function () {

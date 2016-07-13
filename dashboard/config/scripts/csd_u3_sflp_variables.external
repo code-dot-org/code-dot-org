@@ -14,7 +14,7 @@ A variable is a way of connecting a label that you use in your program with a va
 # Vocab
 * **Variable** - A placeholder for a piece of information that can change.
 
-# Command Overview
+# Commands
 ### Variables : 
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |
@@ -23,8 +23,8 @@ A variable is a way of connecting a label that you use in your program with a va
 |var x = _ |Creates a variable label and sets the value of it|`var shapeSize = 10;`| link |
 
 # Resources
-* Video: Intro To Variables<br>
-<iframe width="480" height="270" src="https://www.youtube.com/embed/G41G_PEWFjE?rel=0" frameborder="0" allowfullscreen></iframe>
+
+None
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
