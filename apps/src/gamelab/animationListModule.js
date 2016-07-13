@@ -8,7 +8,7 @@ import assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './PropTypes';
-/* global dashboard */
+/* global console, dashboard */
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
@@ -163,7 +163,12 @@ export function setInitialAnimationList(serializedAnimationList) {
     };
   }
 
-  throwIfSerializedAnimationListIsInvalid(serializedAnimationList);
+  try {
+    throwIfSerializedAnimationListIsInvalid(serializedAnimationList);
+  } catch (err) {
+    console.error('Unable to load animations:', err);
+    return;
+  }
 
   return dispatch => {
     dispatch({
