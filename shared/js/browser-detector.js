@@ -8,7 +8,7 @@ function isUnsupportedIE() {
   var IE9 = navigator.userAgent.match('MSIE 9.0;');
   var IE10 = navigator.userAgent.match('MSIE 10.0;');
 
-  var unsupported = IEBelow8 || IE8 || IE9 || IE10 ? true : false
+  var unsupported = IEBelow8 || IE8 || IE9 || IE10;
   return unsupported;
 }
 
@@ -16,7 +16,7 @@ function isUnsupportedIE() {
 function isUnsupportedChrome() {
   var isChrome = navigator.userAgent.lastIndexOf('Chrome/') !== -1;
   var chromeVersion = navigator.userAgent.substr(navigator.userAgent.lastIndexOf('Chrome/') + 7, 2);
-  var unsupported = isChrome && chromeVersion < 33 ? true : false
+  var unsupported = isChrome && chromeVersion < 33;
   return unsupported;
 }
 
@@ -24,7 +24,7 @@ function isUnsupportedChrome() {
 function isUnsupportedSafari() {
   var isSafari = navigator.userAgent.indexOf('Safari/') !== -1;
   var safariVersion = navigator.userAgent.substr(navigator.userAgent.lastIndexOf('Version/') + 8, 1);
-  var unsupported =  isSafari && safariVersion < 7 ? true : false
+  var unsupported =  isSafari && safariVersion < 7;
   return unsupported;
 }
 
@@ -32,7 +32,7 @@ function isUnsupportedSafari() {
 function isUnsupportedFirefox() {
   var isFirefox = navigator.userAgent.indexOf('Firefox') !== -1;
   var firefoxVersion = navigator.userAgent.substr(navigator.userAgent.lastIndexOf('Firefox/') + 8, 2); 
-  var unsupported =  isFirefox && firefoxVersion < 25 ? true : false
+  var unsupported =  isFirefox && firefoxVersion < 25;
   return unsupported;
 }
 
