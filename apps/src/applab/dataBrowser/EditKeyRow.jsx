@@ -3,7 +3,7 @@
 import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
-import { castValue } from './dataUtils';
+import { castValue, displayValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
 const EditKeyRow = React.createClass({
@@ -14,13 +14,12 @@ const EditKeyRow = React.createClass({
 
   getInitialState() {
     return {
-      isEditing: false,
-      newValue: this.props.value
+      isEditing: false
     };
   },
 
   handleChange(event) {
-    this.setState({newValue: event.target.value});
+    this.setState({newValue: castValue(event.target.value)});
   },
 
   handleEdit() {
@@ -33,7 +32,7 @@ const EditKeyRow = React.createClass({
   handleSave() {
     FirebaseStorage.setKeyValue(
       this.props.keyName,
-      castValue(this.state.newValue),
+      this.state.newValue,
       this.handleSaveComplete,
       this.handleError);
   },
@@ -58,10 +57,10 @@ const EditKeyRow = React.createClass({
           {this.state.isEditing ?
             <input
               style={dataStyles.input}
-              value={this.state.newValue}
+              value={displayValue(this.state.newValue)}
               onChange={this.handleChange}
             /> :
-            this.props.value}
+            JSON.stringify(this.props.value)}
         </td>
         <td style={dataStyles.cell}>
           {

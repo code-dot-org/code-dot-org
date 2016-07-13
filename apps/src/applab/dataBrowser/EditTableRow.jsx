@@ -13,8 +13,7 @@ const EditTableRow = React.createClass({
 
   getInitialState() {
     return {
-      isEditing: false,
-      newRecord: this.props.record
+      isEditing: false
     };
   },
 
