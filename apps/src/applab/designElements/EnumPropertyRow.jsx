@@ -6,6 +6,7 @@ var EnumPropertyRow = React.createClass({
     initialValue: React.PropTypes.string.isRequired,
     options: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     handleChange: React.PropTypes.func.isRequired,
+    desc: React.PropTypes.node,
   },
 
   getInitialState: function () {

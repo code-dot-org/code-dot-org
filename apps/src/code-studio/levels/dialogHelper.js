@@ -1,5 +1,6 @@
 /* globals appOptions, Dialog, getResult, CDOSounds, showVideoDialog, dashboard */
 import $ from 'jquery';
+import React from 'react';
 import PlayZone from '../components/playzone';
 import ReactDOM from 'react-dom';
 

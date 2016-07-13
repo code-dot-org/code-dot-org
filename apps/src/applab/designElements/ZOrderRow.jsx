@@ -6,17 +6,7 @@ var FontAwesome = require('../../templates/FontAwesome');
 var ZOrderRow = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    onDepthChange: React.PropTypes.func.isRequired
-  },
-
-  getInitialState: function () {
-    return {
-      value: this.props.initialValue
-    };
-  },
-
-  componentWillReceiveProps: function (newProps) {
-    this.setState({value: newProps.initialValue});
+    onDepthChange: React.PropTypes.func.isRequired,
   },
 
   render: function () {

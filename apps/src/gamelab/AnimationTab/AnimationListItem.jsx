@@ -74,7 +74,9 @@ const AnimationListItem = React.createClass({
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
-    setAnimationName: React.PropTypes.func.isRequired
+    setAnimationName: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
+    style: React.PropTypes.object,
   },
 
   componentWillReceiveProps(nextProps) {

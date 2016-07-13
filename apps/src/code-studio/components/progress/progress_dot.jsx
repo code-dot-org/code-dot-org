@@ -161,7 +161,7 @@ export const BubbleInterior = React.createClass({
         bubbleInterior = '\u00a0';
       }
     } else {
-      bubbleInterior = this.props.title;
+      bubbleInterior = !this.props.showingIcon && this.props.title;
     }
 
     return (

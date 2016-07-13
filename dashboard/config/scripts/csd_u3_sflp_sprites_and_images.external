@@ -6,13 +6,13 @@ markdown <<MARKDOWN
 # Background
 
 You are going to get to turn their rectangular sprites into images for the first time! There will be lots of practice in this lesson of using images to create some simple animations including spinning gears, swimming fish and a flying kite. You will be introduced to the mouse position is the first time. The mouse position will give user input to change the animations of your sprites.
-# Lesson
+# Activities
 
 * Warm Up
 * Levels: Sprites and Images
 * Wrap Up: Update Sprite Card and Add Game Card
 
-# Vocabulary
+# Vocab
 
 * **Property** - Attributes that describe an object&#39;s characteristics
 * **Rotate** - To turn a shape around a center point.
