@@ -1,5 +1,4 @@
-// TODO: Temporary measure to make sure code-studio doesn't end up with two Reacts
-var React = window.React;
+import React from 'react';
 
 /**
  * BaseDialog

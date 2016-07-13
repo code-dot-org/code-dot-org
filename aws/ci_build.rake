@@ -342,7 +342,7 @@ end
 task :regular_ui_tests do
   Dir.chdir(dashboard_dir('test/ui')) do
     HipChat.log 'Running <b>dashboard</b> UI tests...'
-    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '90', '--magic_retry', '--with-status-page', '--fail_fast'
+    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '120', '--magic_retry', '--with-status-page', '--fail_fast'
     if failed_browser_count == 0
       message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
       HipChat.log message
