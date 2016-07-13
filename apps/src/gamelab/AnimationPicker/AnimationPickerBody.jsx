@@ -13,6 +13,7 @@ import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 
 const AnimationPickerBody = React.createClass({
   propTypes: {
+    is13Plus: React.PropTypes.bool,
     onDrawYourOwnClick: React.PropTypes.func.isRequired,
     onPickLibraryAnimation: React.PropTypes.func.isRequired,
     onUploadClick: React.PropTypes.func.isRequired
@@ -24,9 +25,11 @@ const AnimationPickerBody = React.createClass({
         <h1 style={styles.title}>
           {gamelabMsg.animationPicker_title()}
         </h1>
-        <WarningLabel>
-          {gamelabMsg.animationPicker_warning()}
-        </WarningLabel>
+        {this.props.is13Plus ||
+          <WarningLabel>
+            {gamelabMsg.animationPicker_warning()}
+          </WarningLabel>
+        }
         <AnimationPickerSearchBar />
         <ScrollableList style={{maxHeight: 400}}> {/* TODO: Is this maxHeight appropriate? */}
           <AnimationPickerListItem
