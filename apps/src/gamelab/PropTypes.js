@@ -133,11 +133,10 @@ export const AnimationList = React.PropTypes.shape({
  * @property {AnimationKey[]} orderedKeys - Animations in project order
  * @property {Object.<AnimationKey, SerializedAnimationProps>} propsByKey
  */
-const serializedAnimationListShape = {
+const SerializedAnimationList = React.PropTypes.shape({
   orderedKeys: React.PropTypes.arrayOf(AnimationKey).isRequired,
   propsByKey: React.PropTypes.objectOf(SerializedAnimationProps).isRequired
-};
-const SerializedAnimationList = React.PropTypes.shape(serializedAnimationListShape);
+});
 
 /**
  * Converts the full AnimationList to the serializable subset of itself.
