@@ -93,7 +93,7 @@ class Blockly < Level
   end
 
   def load_level_xml(xml_node)
-    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map{|x| '//'+x}.join(' | ')).map(&:remove) : []
+    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map{|x| '//' + x}.join(' | ')).map(&:remove) : []
     level_properties = super(xml_node)
     block_nodes.each do |attr_node|
       level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
@@ -269,6 +269,7 @@ class Blockly < Level
         level_prop['stepOnly'] = step_mode_value == 2
       end
 
+      level_prop['levelId'] = level_num
       level_prop['images'] = JSON.parse(level_prop['images']) if level_prop['images'].present?
 
       # Blockly requires startDirection as an integer not a string

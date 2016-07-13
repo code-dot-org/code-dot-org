@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
+# Fai que toda a túa escola participe
 
-# Fai que todo o teu colexio participe
-
-A información a cerca de conseguir que o colexio enteiro participe na Hora do Código irá aquí.
-
+A información sobre como conseguir que a escola enteira participe na Hora do Código irá aquí.

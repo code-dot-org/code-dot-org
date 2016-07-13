@@ -6,17 +6,16 @@ nav: promote_nav
 
 ---
 
-
 ### Ispod je primjer podrške tjednu računarskog obrazovanja i njegovim ciljevima za državne i lokalne zakonodavce.
 
   
-[Kuća, Senat, država, županija ili grad Odluka ili PROGLAS ###] – Budući da tjedan računarstva naglašava ključnu ulogu koju informatika ima u preobrazovanju našega društva i kako znanost omogućuje inovacije i stvara ekonomske prilike;
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-[ REZOLUCIJA KUĆE ILI SENATA ###]
+[HOUSE OR SENATE RESOLUTION ###]
 
 [DATE]
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
 Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
@@ -26,7 +25,7 @@ Whereas the field of computer science is a foundational science for the digital 
 
 Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
-Whereas the outlook for computer science jobs is bright with one in every two STEM jobs in the country in computing occupations;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
@@ -53,4 +52,3 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 (4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
-

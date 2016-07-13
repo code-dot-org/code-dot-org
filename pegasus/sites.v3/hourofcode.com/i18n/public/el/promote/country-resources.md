@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 <% if @country == 'la' %>
 
 # Recursos
@@ -21,6 +20,11 @@ p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del
 <
 
 p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
+
+<% elsif @country == 'al' %> <iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 
 <% elsif @country == 'ca' %>
 
@@ -44,6 +48,39 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'nl' %>
+
+  
+  
+  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
+
+<% elsif @country == 'nz' %>
+
+  
+  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
+
+  
+  
+
+
+<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
+
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
+<% elsif @country == 'ro' %>
+
+Va multumim pentru inregistrare, daca doriti materiale printate pentru promovarea evenimentului, echipa din Romania vi le poate trimite prin curier. Trebuie doar sa trimiteti un email la HOC@adfaber.org si sa le solicitati.
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -52,7 +89,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Try the tutorials:
+## 1) Δοκίμασε τα προγράμματα εκμάθησης:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -63,32 +100,31 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Σχεδίασε τις ανάγκες σου σε υλικό - οι υπολογιστές είναι προαιρετικοί
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+Η καλύτερη εμπειρία της Ώρας του Κώδικα θα είναι με υπολογιστές συνδεδεμένους στο διαδίκτυο. Όμως δεν χρειάζεστε έναν υπολογιστή για κάθε συμμετέχοντα κι επιπλέον μπορείτε ακόμη να πραγματοποιήσετε την Ώρα του Κώδικα χωρίς καν υπολογιστή.
 
   * **Δοκίμασε τους οδηγους στους υπολογιστές ή τις συσκευές των μαθητών.** Βεβαιώσου ότι δουλεύουν σωστά (με ήχο και βίντεο).
   * **Κάνε προεπισκόπηση της σελίδας των συγχαρητηρίων** για να δεις τι θα βλέπουν οι μαθητές όταν τελειώνουν. 
   * **Δώσε ακουστικά στην ομάδα σου**, ή ζήτησε τους να φέρουν τα δικά τους, αν η δραστηριότητα που επέλεξες λειτουργεί καλύτερα με ήχο.
 
-## 3) Plan ahead based on your technology available
+## 3) Σχεδίασε έγκαιρα βασισμένος στη διαθέσιμη τεχνολογία
 
   * **Δεν έχεις αρκετές συσκευές;** Χρησιμοποίησε τον [προγραμματισμό σε ζευγάρια](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Όταν οι συμμετέχοντες συνεργάζονται, βοηθούν ο ένας τον άλλον και βασίζονται λιγότερο στον εκπαιδευτικό.
   * **Έχεις αργή σύνδεση στο δίκτυο;** Δείξε τα βίντεο κεντρικά σε όλη την τάξη ώστε να μη χρειάζεται ο κάθε μαθητής να κατεβάζει το δικό του βίντεο. Ή δοκίμασε εκπαιδευτικούς οδηγούς που δεν απαιτούν σύνδεση στο διαδίκτυο.
 
-## 4) Inspire students - show them a video
+## 4) Ενέπνευσε τους μαθητές - Δείξε τους ένα βίντεο
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Στην έναρξη της εκδήλωσης δείξε στο μαθητές ένα βίντεο έμπνευσης. Παραδείγματα:
 
   * Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Ο πρόεδρος Ομπάμα καλεί όλους του μαθητές να μάθουν την Επιστήμη της Πληροφορικής](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Ενθουσίασε του μαθητές σου - κάνε μια μικρή εισαγωγή**
 
 <% else %>
 
 # Πρόσθετο υλικό έρχεται σύντομα!
 
 <% end %>
-

@@ -82,7 +82,7 @@ module Rack
 
       def each(&block)
         @writer = block
-        gzip  =::Zlib::GzipWriter.new(self)
+        gzip = ::Zlib::GzipWriter.new(self)
         gzip.mtime = @mtime
         @body.each { |part|
           gzip.write(part)

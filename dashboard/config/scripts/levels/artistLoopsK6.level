@@ -32,6 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try running the code to see where there is a bug.\",\r\n  \"hint_id\": \"artistLoopsK6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nSomeone is stuck in the tower!  Fix the stairs to set them free.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/1efb95ca15f66b46145725769d3d279c-image-1467935856461.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,
@@ -45,7 +46,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="3-10">3</title>
+              <title name="TIMES" config="2-6">3</title>
               <statement name="DO">
                 <block type="simple_move_up">
                   <next>
@@ -72,7 +73,7 @@
     <recommended_blocks>
       <xml>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES">uninitialized</title>
+          <title name="TIMES" config="2-6">3</title>
         </block>
       </xml>
     </recommended_blocks>

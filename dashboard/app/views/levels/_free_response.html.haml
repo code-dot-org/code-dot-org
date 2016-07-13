@@ -55,7 +55,7 @@
 
 .free-response
   - if level.title.present? && !in_level_group
-    %h2= level.title
+    %h1= level.title
   - if level.markdown_instructions
     %div= render(inline: level.markdown_instructions, type: :md)
 

@@ -32,6 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try running the code to see where there is a bug.\",\r\n  \"hint_id\": \"artistLoopsK8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nWow! There's a garden over there!  Help fix these stairs so I can get to it.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/bf368872da36217b0d19261fc6b84bf6-image-1467936147116.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,
@@ -73,13 +74,16 @@
         <block type="simple_move_right"/>
         <block type="simple_move_left"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-8">???</title>
+          <title name="TIMES" config="3-10">???</title>
         </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
         <block type="simple_move_up"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+        </block>
       </xml>
     </recommended_blocks>
     <solution_blocks>

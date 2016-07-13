@@ -153,7 +153,8 @@ class ActivitiesController < ApplicationController
         new_result: test_result,
         submitted: params[:submitted],
         level_source_id: @level_source.try(:id),
-        level: @level
+        level: @level,
+        pairings: pairings
       )
     end
 
@@ -196,7 +197,7 @@ class ActivitiesController < ApplicationController
 
     progress.each_pair do |concept, counts|
       current = current_trophies[concept]
-      pct = counts[:current].to_f/counts[:max]
+      pct = counts[:current].to_f / counts[:max]
 
       new_trophy = Trophy.find_by_id(
         case

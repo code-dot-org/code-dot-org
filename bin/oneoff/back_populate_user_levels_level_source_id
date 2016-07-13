@@ -7,36 +7,50 @@
 # of its execution in production. A migration will follow after the column is
 # populated in production so as to assure the column is populated in all
 # environments.
+#
+# Note that, observationally, approximately 1% of activities do not have a
+# level_source_id. Thus, after running this script, there will be UserLevel rows
+# without a level_source_id.
 
 require_relative '../../dashboard/config/environment'
 
-if ARGV.length != 4
-  puts 'Usage: ./bin/oneoff/back_populate_user_levels_level_source_id start_index end_index batch_size delay_sec'
+if ARGV.length != 3
+  puts 'Usage: ./bin/oneoff/back_populate_user_levels_level_source_id start_index end_index batch_size'
   exit 1
 end
 
 start_index = ARGV[0].to_i
 end_index = ARGV[1].to_i
 batch_size = ARGV[2].to_i
-delay_sec = ARGV[3].to_f
 
-until start_index > end_index
-  puts "Processing UserLevels with IDs in [#{start_index}, #{start_index+batch_size}]..."
+# Since the updated_at field is used as a proxy for "last_progress_at" for the
+# user_level, we intentionally do not want to modify that field.
+ActiveRecord::Base.record_timestamps = false
+begin
+  until start_index > end_index
+    puts "Processing UserLevels with IDs in [#{start_index}, #{start_index + batch_size}]..."
 
-  UserLevel.
-    where(id: start_index..(start_index + batch_size)).
-    where(level_source_id: nil).find_each do |user_level|
-    activity = Activity.
-      where(user_id: user_level.user_id, level_id: user_level.level_id).last
-    level_source_id = activity[:level_source_id]
+    user_level_id_to_level_source_id = {}
+    UserLevel.
+      where(id: start_index..(start_index + batch_size)).
+      where(level_source_id: nil).find_each do |user_level|
+      activity = Activity.
+        where(user_id: user_level.user_id, level_id: user_level.level_id).
+        where.not(level_source_id: nil).
+        last
+      user_level_id_to_level_source_id[user_level[:id]] = activity[:level_source_id] if activity
+    end
 
-    raise RangeError.new(
-      "Missing level_source_id in activity (id = #{activity[:id]})."
-    ) unless level_source_id
+    ActiveRecord::Base.transaction do
+      user_level_id_to_level_source_id.each do |user_level_id, level_source_id|
+        UserLevel.
+          where(id: user_level_id).
+          update(level_source_id: level_source_id)
+      end
+    end
 
-    user_level.update!(level_source_id: level_source_id)
+    start_index += batch_size
   end
-
-  sleep(delay_sec)
-  start_index += batch_size
+ensure
+  ActiveRecord::Base.record_timestamps = true
 end

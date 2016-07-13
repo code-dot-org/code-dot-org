@@ -15,13 +15,14 @@
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
-      "callMyFunction_n": null
+      "callMyFunction_n": null,
+      "comment": null
     },
     "edit_code": true,
     "encrypted_examples": "XqDmNbuRBi8Sq4/gi4i3QW7Q/zaoEm8Ey+7wjy6L+XDnGU+DDz8E2niNXN0Y\nFrCWb7iCw3ePud6PGAQCvhSDHg==\n",
     "embed": "false",
     "instructions": "Define a function that accepts a parameter to match the function calls and complete the image. (Click to see full instructions)",
-    "markdown_instructions": "# Defining Functions with Parameters\r\n\r\nThis time you're going to write your own function with parameters to complete an image. Two function calls to `drawTriangle` have been placed at the top of the program but the function itself needs to be defined.  The program should draw this:\r\n\r\n![](https://images.code.org/4a96eff03ba79b881b98137048140953-image-1442523578705.59.20 PM.png)\r\n\r\n# Do This:\r\n**Complete** the function definition for `drawTriangle(sideLength)` . Notice that you have already been given a **descriptive and meaningful parameter name**, `sideLength`, but you can change it if you wish.\r\n\r\nAs a reminder of how to use a parameter within the function here is a correct version of `drawSquare(size)` for reference.\r\n\r\n![](https://images.code.org/ead2720df19b117cae753c4397dd832d-image-1442868072299.png)",
+    "markdown_instructions": "# Defining Functions with Parameters\r\n\r\nThis time you're going to write your own function with parameters to complete an image. Two function calls to `drawTriangle` have been placed at the top of the program but the function itself needs to be defined.  The program should draw this:\r\n\r\n![](https://images.code.org/4a96eff03ba79b881b98137048140953-image-1442523578705.59.20 PM.png)\r\n\r\n# Do This:\r\n**Complete** the function definition for `drawTriangle(lengthOfSide)` . Notice that you have already been given a **descriptive and meaningful parameter name**, `sideLength`, but you can change it if you wish.\r\n\r\nAs a reminder of how to use a parameter within the function here is a correct version of `drawSquare(size)` for reference.\r\n\r\n![](https://images.code.org/ead2720df19b117cae753c4397dd832d-image-1442868072299.png)",
     "start_blocks": "penUp();\r\nmoveTo(150,150);\r\ndrawTriangle(100);\r\nmoveTo(250,300);\r\ndrawTriangle(150);\r\n\r\nfunction drawTriangle(sideLength){\r\n  \r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -53,7 +54,13 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>
