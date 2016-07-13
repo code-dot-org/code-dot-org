@@ -16,9 +16,8 @@ content-type: text/ng-template
 
 %br/
 
-
 :ruby
-  surveys_filtered = "surveyLevels | orderBy:orderAnswers | filter:(stageFilterAnswers && {stage: stageFilterAnswers}):true"
+  surveys_filtered = "surveyLevels | orderBy:orderSurveyAnswers | filter:(stageFilterSurveyAnswers && {stage: stageFilterSurveyAnswers}):true"
 
 %h1{'ng-show' => 'surveys.length', style: "margin-top: 0px"}= I18n.t('dashboard_surveys_answers')
 
@@ -33,9 +32,9 @@ content-type: text/ng-template
 
     %tr
       %th.manage-th{colspan: 5}
-        %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
+        %div{'ng-show' => 'surveyStages && surveyStages.length > 1', style: 'float: left; line-height: 35px'}
           = I18n.t('dashboard_filter_by_stage')
-          %select{'ng-model' => 'stageFilterAnswers', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
+          %select{'ng-model' => 'stageFilterSurveyAnswers', "ng-options" => "stage for stage in surveyStages", "ng-show" => 'surveyStages'}
             %option{value: ""}= I18n.t('dashboard_filter_all')
         %button.btn.btn-white{'ng-csv' => surveys_filtered,
                 filename: "survey_levels.csv",
@@ -47,15 +46,15 @@ content-type: text/ng-template
 
     %tr
       %th.manage-th
-        %a{href: "", "ng-click" => "orderAnswers = 'stage'"}= I18n.t('dashboard_stage')
+        %a{href: "", "ng-click" => "orderSurveyAnswers = 'stage'"}= I18n.t('dashboard_stage')
       %th.manage-th
-        %a{href: "", "ng-click" => "orderAnswers = 'puzzle'"}= I18n.t('dashboard_puzzle')
+        %a{href: "", "ng-click" => "orderSurveyAnswers = 'puzzle'"}= I18n.t('dashboard_puzzle')
       %th.manage-th
-        %a{href: "", "ng-click" => "orderAnswers = 'question'"}= I18n.t('dashboard_question')
+        %a{href: "", "ng-click" => "orderSurveyAnswers = 'question'"}= I18n.t('dashboard_question')
       %th.manage-th
-        %a{href: "", "ng-click" => "orderAnswers = ['!studentResult', 'studentResult']"}= I18n.t('dashboard_response')
+        %a{href: "", "ng-click" => "orderSurveyAnswers = ['!studentResult', 'studentResult']"}= I18n.t('dashboard_response')
       %th.manage-th
-        %a{href: "", "ng-click" => "orderAnswers = 'count'"}= I18n.t('dashboard_percent')
+        %a{href: "", "ng-click" => "orderSurveyAnswers = 'count'"}= I18n.t('dashboard_percent')
 
     %tr{"ng-repeat" => "level in #{surveys_filtered}", "ng-form" => "form"}
       %td
@@ -68,10 +67,6 @@ content-type: text/ng-template
         {{level.resultText}}
       %td
         {{level.percent}}
-
-
-
-
 
 :ruby
   assessments_filtered = "assessments | orderBy:orderSummaries | filter:(stageFilterSummaries && {stage: stageFilterSummaries}):true"
@@ -96,9 +91,9 @@ content-type: text/ng-template
       %col{width: "125"}/
     %tr
       %th.manage-th{colspan: 8}
-        %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
+        %div{'ng-show' => 'assessmentStages && assessmentStages.length > 1', style: 'float: left; line-height: 35px'}
           = I18n.t('dashboard_filter_by_stage')
-          %select{'ng-model' => 'stageFilterSummaries', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
+          %select{'ng-model' => 'stageFilterSummaries', "ng-options" => "stage for stage in assessmentStages", "ng-show" => 'assessmentStages'}
             %option{value: ""}= I18n.t('dashboard_filter_all')
         %button.btn.btn-white{'ng-csv' => assessments_filtered,
                 filename: "assessments.csv",
@@ -164,9 +159,9 @@ content-type: text/ng-template
 
     %tr
       %th.manage-th{colspan: 6}
-        %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
+        %div{'ng-show' => 'assessmentStages && assessmentStages.length > 1', style: 'float: left; line-height: 35px'}
           = I18n.t('dashboard_filter_by_stage')
-          %select{'ng-model' => 'stageFilterAnswers', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
+          %select{'ng-model' => 'stageFilterAnswers', "ng-options" => "stage for stage in assessmentStages", "ng-show" => 'assessmentStages'}
             %option{value: ""}= I18n.t('dashboard_filter_all')
         %button.btn.btn-white{'ng-csv' => levels_filtered,
                 filename: "assessment_levels.csv",
