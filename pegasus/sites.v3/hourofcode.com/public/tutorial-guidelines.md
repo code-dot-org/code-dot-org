@@ -3,6 +3,12 @@ title: <%= hoc_s(:title_tutorial_guidelines) %>
 layout: wide
 ---
 
+<style>
+  ul {
+    margin: 0px 20px 20px 20px;
+  }
+</style>
+
 <%= view :signup_button %>
 
 # Lesson guidelines for the Hour of Code™ and Computer Science Education Week

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 var React = require('react');
 import { connect } from 'react-redux';
 var commonStyles = require('../commonStyles');
