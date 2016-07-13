@@ -14,12 +14,10 @@ content-type: text/ng-template
   = I18n.t('dashboard_assessments_view')
   %select{"ng-model" => "course_id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category', 'position', 'name']", 'ng-change' => 'changeScript(course_id)'}
 
-%br/
-
 :ruby
   surveys_filtered = "surveyLevels | orderBy:orderSurveyAnswers | filter:(stageFilterSurveyAnswers && {stage: stageFilterSurveyAnswers}):true"
 
-%h1{'ng-show' => 'surveys.length', style: "margin-top: 0px"}= I18n.t('dashboard_surveys_answers')
+%h1{'ng-show' => 'surveys.length'}= I18n.t('dashboard_surveys_answers')
 
 %div{style: "padding-left:20px", 'ng-show' => 'surveys.length'}
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'surveys.length', "ng-form" => "allForm"}
@@ -74,6 +72,8 @@ content-type: text/ng-template
 %h1{'ng-show' => 'assessments.length'}= I18n.t('dashboard_assessments_summaries')
 
 %div{style: "padding-left:20px", 'ng-show' => '!assessments.length'}
+  %br
+  %br
   = I18n.t('dashboard_assessments_none')
   %br
   %br
@@ -138,9 +138,6 @@ content-type: text/ng-template
         {{assessment.multi_correct_percent}}
       %td
         {{assessment.timestamp}}
-
-%p
-  &nbsp;
 
 :ruby
   levels_filtered = "assessmentLevels | orderBy:orderAnswers | filter:(stageFilterAnswers && {stage: stageFilterAnswers}):true"
