@@ -371,49 +371,4 @@ EOS
     assert_equal(level3, Level.cache_find(level3.id))
   end
 
-  test 'where we want to calculate ideal level source' do
-    match_level = Match.create(name: 'a match level')
-    level_with_ideal_level_source_already = Artist.create(name: 'an artist level with a solution', solution_blocks: '<xml></xml>')
-    freeplay_artist = Artist.create(name: 'freeplay artist', free_play: true)
-    regular_artist = Artist.create(name: 'regular artist')
-
-    levels = Level.where_we_want_to_calculate_ideal_level_source
-
-    assert !levels.include?(match_level)
-    assert !levels.include?(level_with_ideal_level_source_already)
-    assert !levels.include?(freeplay_artist)
-    assert levels.include?(regular_artist)
-  end
-
-  test 'calculate_ideal_level_source_id does nothing if no level sources' do
-    level = Maze.create(name: 'maze level with no level sources')
-    assert_equal nil, level.ideal_level_source_id
-
-    level.calculate_ideal_level_source_id
-    assert_equal nil, level.ideal_level_source_id
-  end
-
-  test 'calculate_ideal_level_source_id sets ideal_level_source_id to best solution' do
-    level = Maze.create(name: 'maze level with level sources')
-    assert_equal nil, level.ideal_level_source_id
-
-    right = create(:level_source, level: level, data: "<xml><right/></xml>")
-    6.times do
-      create(:activity, level: level, level_source: right, test_result: 100)
-    end
-
-    wrong = create(:level_source, level: level, data: "<xml><wrong/></xml>")
-    10.times do
-      create(:activity, level: level, level_source: wrong, test_result: 0)
-    end
-
-    right_but_unpopular = create(:level_source, level: level, data: "<xml><right_but_unpopular/></xml>")
-    2.times do
-      create(:activity, level: level, level_source: right_but_unpopular, test_result: 100)
-    end
-
-    level.calculate_ideal_level_source_id
-    assert_equal right, level.ideal_level_source
-  end
-
 end
