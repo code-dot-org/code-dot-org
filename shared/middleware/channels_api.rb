@@ -139,15 +139,15 @@ class ChannelsApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    value = get_privacy_profanity(id)
+    value = channel_policy_violation?(id)
     {:has_violation => value }.to_json
   end
 
-  def get_privacy_profanity(channel_id)
+  def channel_policy_violation?(channel_id)
     bucket = SourceBucket.new
     filename = 'main.json'
     result = bucket.get(channel_id, filename)
-    return false unless result
+    return false unless result && result[:body]
     profanity_privacy_violation?(filename, result[:body])
   end
 

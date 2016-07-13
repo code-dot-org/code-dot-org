@@ -4,7 +4,6 @@ require 'cdo/share_filtering'
 BLOCKLY_SOURCE_FILENAME = 'main.json'
 
 def profanity_privacy_violation?(filename, body)
-
   return false unless filename == BLOCKLY_SOURCE_FILENAME
 
   body_string = body.string
