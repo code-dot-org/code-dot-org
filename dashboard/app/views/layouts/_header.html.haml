@@ -4,8 +4,7 @@
 - level = local_assigns[:level]
 - full_width = local_assigns[:full_width]
 
-- if browser.cdo_unsupported?
-  = render partial: 'layouts/unsupported_browser'
+= render partial: 'layouts/unsupported_browser'
 
 - show_bug_links = (script_level && script.show_report_bug_link?) || (level && level.try(:is_project_level))
 
