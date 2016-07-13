@@ -370,7 +370,7 @@ en:
     print_certificate: "Print Certificate"
     announcement_title: "Announcements"
     announcement_view_all: "View all"
-    announcement_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so you, the teacher, can track completed progress for both individuals and teams."
+    announcement_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
     announcement_csp_widgets_message: "CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course."
     announcement_learn_more_button: "Learn more"
     announcement_try_now_button: "Try it now"
