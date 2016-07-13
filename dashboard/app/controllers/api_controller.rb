@@ -272,24 +272,32 @@ class ApiController < ApplicationController
 
       levelgroup_results = {}
 
-      # Go through each sublevel
-      script_level.level.levels.each_with_index do |sublevel, sublevel_index|
-        question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
-                        sublevel.properties.try(:[], "markdown_instructions")
-        sublevel_results = {question: question_text, results: []}
+      student_count = 0
 
-        # Go through each student who has submitted a response to it.
-        @section.students.all.shuffle.each do |student|
+      # Go through each student who has submitted a response to it.
+      @section.students.each do |student|
+        # Skip student if they haven't submitted for this LevelGroup.
+        user_level = student.user_level_for(script_level, script_level.level)
+        next unless user_level.try(:submitted)
 
-          # Skip student if they haven't submitted for this LevelGroup.
-          user_level = student.user_level_for(script_level, script_level.level)
-          next unless user_level.try(:submitted)
+        last_attempt = student.last_attempt(script_level.level)
+        response = last_attempt.try(:level_source).try(:data)
+        next unless response
 
-          last_attempt = student.last_attempt(script_level.level)
-          response = last_attempt.try(:level_source).try(:data)
-          next unless response
+        response_parsed = JSON.parse(response)
 
-          response_parsed = JSON.parse(response)
+        student_count += 1
+
+        # Go through each sublevel
+        script_level.level.levels.each_with_index do |sublevel, sublevel_index|
+          # If it's the first time we're saving a result for this sublevel, then
+          # create the full entry.
+          unless levelgroup_results[sublevel_index]
+            question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
+                            sublevel.properties.try(:[], "markdown_instructions")
+            levelgroup_results[sublevel_index] = {question: question_text, results: []}
+          end
+
           sublevel_response = response_parsed[sublevel.id.to_s]
 
           sublevel_result = {}
@@ -313,20 +321,26 @@ class ApiController < ApplicationController
             end
           end
 
-          sublevel_results[:results] << sublevel_result
+          levelgroup_results[sublevel_index][:results] << sublevel_result
         end
-
-        # All the results for one sublevel for a group of students.
-        levelgroup_results[sublevel_index] = sublevel_results
       end
 
-      # All the results for one LevelGroup for a group of students.
-      {
-        stage: script_level.stage.localized_title,
-        puzzle: script_level.position,
-        url: build_script_level_url(script_level, section_id: @section.id),
-        levelgroup_results: levelgroup_results
-      }
+      # Shuffle all the results.
+      levelgroup_results.each do |_, levelgroup_result|
+        levelgroup_result[:results].shuffle!
+      end
+
+      if student_count < 5
+        nil
+      else
+        # All the results for one LevelGroup for a group of students.
+        {
+          stage: script_level.stage.localized_title,
+          puzzle: script_level.position,
+          url: build_script_level_url(script_level, section_id: @section.id),
+          levelgroup_results: levelgroup_results
+        }
+      end
     end.compact
 
     render json: data

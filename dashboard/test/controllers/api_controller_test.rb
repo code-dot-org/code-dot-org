@@ -267,8 +267,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal script, assigns(:script)
 
     # all these are translation missing because we don't actually generate i18n files in tests
-    expected_response =
-    [
+    expected_response = [
       {"stage"=>"translation missing: en-us.data.script.name.#{script.name}.title",
         "puzzle"=>1,
         "url"=>"http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}",
