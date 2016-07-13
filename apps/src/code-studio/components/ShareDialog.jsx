@@ -13,7 +13,9 @@ var select = function (event) {
  */
 var ShareDialog = React.createClass({
   propTypes: {
-    i18n: React.PropTypes.object.isRequired,
+    i18n: React.PropTypes.shape({
+      t: React.PropTypes.func.isRequired,
+    }).isRequired,
     icon: React.PropTypes.string,
     title: React.PropTypes.string.isRequired,
     shareCopyLink: React.PropTypes.string.isRequired,
@@ -27,6 +29,7 @@ var ShareDialog = React.createClass({
     appType: React.PropTypes.string.isRequired,
     onClickPopup: React.PropTypes.func.isRequired,
     onClickExport: React.PropTypes.func,
+    hideBackdrop: BaseDialog.propTypes.hideBackdrop,
   },
 
   getInitialState: function () {
@@ -134,7 +137,10 @@ var ShareDialog = React.createClass({
     }
 
     return (
-      <BaseDialog useDeprecatedGlobalStyles isOpen={this.state.isOpen} handleClose={this.close}>
+      <BaseDialog useDeprecatedGlobalStyles
+                  isOpen={this.state.isOpen}
+                  handleClose={this.close}
+                  hideBackdrop={this.props.hideBackdrop}>
         <div>
           {image}
           <div id="project-share" className={modalClass} style={{position: 'relative'}}>
@@ -183,3 +189,38 @@ var ShareDialog = React.createClass({
   }
 });
 module.exports = ShareDialog;
+
+if (BUILD_STYLEGUIDE) {
+  const fakei18n = {
+    t(s) {
+      return {
+      }[s] || s;
+    }
+  };
+
+  ShareDialog.styleGuideExamples = storybook => {
+    storybook
+      .storiesOf('ShareDialog', module)
+      .addStoryTable([
+        {
+          name: 'basic example',
+          story: () => <ShareDialog
+                           hideBackdrop={true}
+                           i18n={fakei18n}
+                           title="Share your project"
+                           shareCopyLink="Copy the link:"
+                           shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                           encodedShareUrl="some encoded url"
+                           closeText="Close"
+                           isAbusive={false}
+                           abuseTos="foo"
+                           abuseContact="bar"
+                           channelId="some-id"
+                           appType="applab"
+                           onClickPopup={storybook.action('onClickPopup')}
+                           onClickExport={storybook.action('onClickExport')}
+                       />
+        }
+      ]);
+  };
+}
