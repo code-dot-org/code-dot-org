@@ -5,8 +5,8 @@ testUtils.setExternalGlobals();
 import React from 'react';
 var ReactTestUtils = require('react-addons-test-utils');
 
-var MarkdownInstructions = require('@cdo/apps/templates/instructions/MarkdownInstructions');
-var NonMarkdownInstructions = require('@cdo/apps/templates/instructions/NonMarkdownInstructions');
+import { StatelessMarkdownInstructions } from '@cdo/apps/templates/instructions/MarkdownInstructions';
+import NonMarkdownInstructions from '@cdo/apps/templates/instructions/NonMarkdownInstructions';
 
 function shallowRender(element) {
   var renderer = ReactTestUtils.createRenderer();
@@ -18,10 +18,12 @@ describe('MarkdownInstructions', function () {
   it('standard case had top padding and no left margin', function () {
     var dom = ReactTestUtils.renderIntoDocument(
       <div>
-        <MarkdownInstructions
+        <StatelessMarkdownInstructions
           renderedMarkdown="md"
           markdownClassicMargins={false}
-          inTopPane={false}/>
+          inTopPane={false}
+          noInstrucstionsWhenCollapsed={true}
+        />
       </div>
     );
     var element = dom.children[0];
@@ -33,28 +35,15 @@ describe('MarkdownInstructions', function () {
   it('inTopPane has no top padding', function () {
     var dom = ReactTestUtils.renderIntoDocument(
       <div>
-        <MarkdownInstructions
+        <StatelessMarkdownInstructions
           renderedMarkdown="md"
-          markdownClassicMargins={false}
-          inTopPane={true}/>
+          inTopPane={true}
+          noInstrucstionsWhenCollapsed={true}
+        />
       </div>
     );
     var element = dom.children[0];
     assert.equal(element.style.paddingTop, '0px');
-  });
-
-  it('markdownClassicMargins has no top padding and big left margin', function () {
-    var dom = ReactTestUtils.renderIntoDocument(
-      <div>
-        <MarkdownInstructions
-          renderedMarkdown="md"
-          markdownClassicMargins={true}
-          inTopPane={false}/>
-      </div>
-    );
-    var element = dom.children[0];
-    assert.equal(element.style.paddingTop, '0px');
-    assert.equal(element.style.marginLeft, '90px');
   });
 });
 

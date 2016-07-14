@@ -18,7 +18,7 @@ Dashboard::Application.configure do
   config.use_schema_cache_dump = true
 
   # Configure static asset server for tests with Cache-Control for performance.
-  config.serve_static_files  = true
+  config.serve_static_files = true
   config.static_cache_control = "public, max-age=3600, s-maxage=1800"
 
   # test environment should use precompiled digested assets like production,

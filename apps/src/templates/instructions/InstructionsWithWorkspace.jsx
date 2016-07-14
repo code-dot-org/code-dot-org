@@ -101,8 +101,9 @@ var InstructionsWithWorkspace = React.createClass({
         {this.props.showInstructions && <TopInstructions/>}
         <CodeWorkspaceContainer
             ref="codeWorkspaceContainer"
-            topMargin={this.props.instructionsHeight}
-        />
+            topMargin={this.props.instructionsHeight}>
+          {this.props.children}
+        </CodeWorkspaceContainer>
       </span>
     );
   }

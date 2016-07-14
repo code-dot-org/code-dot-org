@@ -17,7 +17,7 @@ def authentication_required!(url=request.url)
   redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?return_to=#{url}"), 302)
 end
 
-def dont_cache()
+def dont_cache
   cache_control(:private, :must_revalidate, max_age: 0)
 end
 
@@ -38,12 +38,12 @@ def canonical_hostname(domain)
   CDO.canonical_hostname(domain)
 end
 
-def forbidden!()
+def forbidden!
   halt(403, "Forbidden\n")
 end
 
 def form_error!(e)
-  halt(400, {'Content-Type'=>'text/json'}, e.errors.to_json)
+  halt(400, {'Content-Type' => 'text/json'}, e.errors.to_json)
 end
 
 def have_permission?(permission)
@@ -51,15 +51,15 @@ def have_permission?(permission)
   dashboard_user_helper.has_permission?(permission)
 end
 
-def no_content!()
+def no_content!
   halt(204, "No content\n")
 end
 
-def not_authorized!()
+def not_authorized!
   halt(401, "Not authorized\n")
 end
 
-def not_found!()
+def not_found!
   path = resolve_template('views', settings.template_extnames, '404')
   content = path ? document(path) : "Not found\n"
   halt(404, content)
@@ -73,11 +73,11 @@ def only_for(site)
   end
 end
 
-def service_unavailable!()
+def service_unavailable!
   halt(503, "Service Unavailable\n")
 end
 
-def unsupported_media_type!()
+def unsupported_media_type!
   halt(415, "Unsupported Media Type\n")
 end
 

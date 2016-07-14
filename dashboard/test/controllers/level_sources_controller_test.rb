@@ -84,14 +84,22 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'routing' do
-    assert_routing({ path: '/c/1', method: :get },
-                   { controller: 'level_sources', action: 'show', id: '1' })
-    assert_routing({ path: '/c/1/edit', method: :get },
-                   { controller: 'level_sources', action: 'edit', id: '1' })
-    assert_routing({ path: '/c/1/original_image', method: :get },
-                   {controller: 'level_sources', action: 'original_image', id: '1' })
-    assert_routing({ path: '/c/1/generate_image', method: :get },
-                   { controller: 'level_sources', action: 'generate_image', id: '1' })
+    assert_routing(
+      {path: '/c/1', method: :get},
+      {controller: 'level_sources', action: 'show', id: '1'}
+    )
+    assert_routing(
+      {path: '/c/1/edit', method: :get},
+      {controller: 'level_sources', action: 'edit', id: '1'}
+    )
+    assert_routing(
+      {path: '/c/1/original_image', method: :get},
+      {controller: 'level_sources', action: 'original_image', id: '1'}
+    )
+    assert_routing(
+      {path: '/c/1/generate_image', method: :get},
+      {controller: 'level_sources', action: 'generate_image', id: '1'}
+    )
   end
 
   def expect_s3_upload
@@ -159,31 +167,17 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_equal "max-age=36000, public", response.headers["Cache-Control"]
   end
 
-  test 'include level source ID for send to phone dialog' do
-    # Prevents regressions in #79201066
-    # Note: This test depends on the current structure of the 'appOptions' interface to Blockly in LevelSourcesController#show.
-    # If that interface changes, this test will fail and need to be updated or removed/disabled.
-
-    # Since loading, running and testing functionality within the full Blockly app is too complex,
-    # for now just test that the level source ID is correctly set in the appOptions global.
-    get :show, id: @level_source.id
-    assert_response :success
-
-    # `app_options` can't be called a second time unless we clear out @view_options (Pivotal #98153794)
-    @controller.instance_variable_set :@view_options, nil
-
-    assert_equal @level_source.id, @controller.app_options[:level_source_id]
-  end
-
   test 'artist levelsource has sharing meta tags' do
     level_source = create(:level_source, level: Artist.first)
     get :show, id: level_source.id
 
     assert_response :success
-    assert_sharing_meta_tags(url: "http://test.host/c/#{level_source.id}",
-                            image: 'http://test.host/assets/sharing_drawing.png',
-                            image_width: 500,
-                            image_height: 261)
+    assert_sharing_meta_tags(
+      url: "http://test.host/c/#{level_source.id}",
+      image: 'http://test.host/assets/sharing_drawing.png',
+      image_width: 500,
+      image_height: 261
+    )
   end
 
   test 'playlab levelsource has sharing meta tags' do
@@ -192,11 +186,13 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert_sharing_meta_tags(url: "http://test.host/c/#{level_source.id}",
-                            image: 'http://test.host/assets/sharing_drawing.png',
-                            image_width: 400,
-                            image_height: 400,
-                            apple_mobile_web_app: true)
+    assert_sharing_meta_tags(
+      url: "http://test.host/c/#{level_source.id}",
+      image: 'http://test.host/assets/sharing_drawing.png',
+      image_width: 400,
+      image_height: 400,
+      apple_mobile_web_app: true
+    )
   end
 
   test 'migrates old flappy levels' do

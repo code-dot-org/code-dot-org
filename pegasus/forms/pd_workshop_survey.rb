@@ -76,6 +76,17 @@ class PdWorkshopSurvey
     result
   end
 
+  def self.process_(form)
+    # Save this form id in the relevant dashboard pd_enrollment row
+    id = form[:id]
+    data = JSON.load(form[:data])
+    enrollment_id = data['enrollment_id_i']
+    DASHBOARD_DB[:pd_enrollments][id: enrollment_id].update(survey_id: id)
+
+    # We don't actually need to save any processed data with the form, so return an empty hash.
+    {}
+  end
+
   def self.get_source_id(data)
     data[:enrollment_id_i]
   end

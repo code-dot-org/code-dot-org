@@ -4,7 +4,6 @@ require 'cdo/rake_utils'
 require 'cdo/git_utils'
 
 namespace :build do
-
   desc 'Runs Chef Client to configure the OS environment.'
   task :configure do
     if CDO.chef_managed
@@ -57,14 +56,13 @@ namespace :build do
     end
   end
 
+  # TODO: (brent) - temporarily leave in a build step that just does a clean of
+  # code-studio to make sure we don't have artifacts from old builds
   desc 'Builds code studio.'
   task :code_studio do
     Dir.chdir(code_studio_dir) do
-      HipChat.log 'Installing <b>code-studio</b> dependencies...'
-      RakeUtils.npm_install
-
-      HipChat.log 'Building <b>code-studio</b>...'
-      RakeUtils.system 'npm run build:dist'
+      HipChat.log 'Removing <b>code-studio</b>...'
+      RakeUtils.system 'rm -rf build'
     end
   end
   task :'code-studio' => :code_studio
@@ -81,6 +79,11 @@ namespace :build do
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   task dashboard: :package do
     Dir.chdir(dashboard_dir) do
+      # Unless on production, serve UI test directory
+      unless rack_env?(:production)
+        RakeUtils.ln_s('../test/ui', dashboard_dir('public', 'ui_test'))
+      end
+
       HipChat.log 'Stopping <b>dashboard</b>...'
       RakeUtils.stop_service CDO.dashboard_unicorn_name unless rack_env?(:development)
 

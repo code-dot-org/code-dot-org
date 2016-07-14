@@ -4,10 +4,10 @@
   'yes': "Да"
   'no': "Не"
   select_language: "Моля, изберете вашия език"
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org скоро ще спре поддръжката за Internet Explorer 8, 9
+    и 10. Надстройте до модерен браузър.
+  upgrade_ie_message_csedweek: CSEdWeek.org скоро ще спре да поддръжа Internet Explorer
+    8, 9 и 10. Надстройте до модерен браузър.
   upgrade_ie_link: "Научете повече"
   en: "Компютърни науки"
   computer_science_edweek: "Седмица на Компютърните Науки"
@@ -693,13 +693,13 @@
   dashboard_navigation_section_pd: "Професионално развитие"
   dashboard_navigation_section_speakers: "Компютърни науки <br/> гости говорители"
   dashboard_navigation_all_sections: "Ученически акаунти и прогрес"
-  dashboard_navigation_view_progress: "Преглед на напредъка"
-  dashboard_navigation_view_text_responses: "Изглед на текстовите отговори"
+  dashboard_navigation_view_progress: "Прогрес"
+  dashboard_navigation_view_text_responses: "Текстови отговори"
   dashboard_navigation_view_assessments: "Оценки"
   dashboard_navigation_add_students: "Добавяне на ученици"
   dashboard_navigation_manage_students: "Управление на ученици"
   dashboard_navigation_lesson_plans_resources: "Учебни планове и ресурси"
-  dashboard_navigation_view_stats: "Преглед на статистиката"
+  dashboard_navigation_view_stats: "Статистика"
   dashboard_navigation_section: "Раздел: %{section_name}"
   dashboard_navigation_student: "Ученик: %{student_name}"
   dashboard_progress_not_started: "не е стартиран"
@@ -723,7 +723,7 @@
   dashboard_sections_table_secret: "Тип парола за влизане"
   dashboard_sections_table_grade: "Клас"
   dashboard_sections_table_course: "Курс"
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: "Еекстри"
   dashboard_sections_table_students: "Ученици"
   dashboard_sections_table_code: "Код за раздел"
   dashboard_sections_name: "Име на раздел"
@@ -891,7 +891,7 @@
     може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите
     всички ресурси без компютър на една целева страница. Свържете уроците с всеки
     Кн клас, или използвайте самостоятелно като независим курс."
-  dashboard_announce_button_text: "Научете повече"
+  dashboard_announce_button_text: "Тестване на функцията"
   dashboard_announce_petition: "Като учител, Вие трябва да намерите подход, така че
     да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки.
     Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица,
@@ -1030,6 +1030,7 @@
   cspunit6_name: "Пост AP: Бази данни в приложения"
   csp1_name: "Раздел 1: Интернет"
   csp2_name: "Част 1 - Дигитална информация"
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: "Пълен тест - 50 въпроса"
   cspexam1-mWU7ilDYM9_name: "Тест част 1-25 въпроси"
   cspexam2-AKwgAh1ac5_name: "Тест част 2 - 25 въпроси"
@@ -1759,3 +1760,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "играй"
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys

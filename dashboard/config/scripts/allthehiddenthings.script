@@ -5,3 +5,8 @@ student_of_admin_required 'true'
 
 stage 'Game Lab'
 level 'allthethings_U3 - Simple Drawing - Rectangle Width and Height'
+
+stage 'Contained Levels'
+level 'Test GameLab Predictive'
+level 'Test Contained Multi'
+level 'PS predictive Applab level test'

@@ -4,10 +4,10 @@
   'yes': "Да"
   'no': "Нет"
   select_language: "Выберите язык"
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org скоро удалит поддержку для Internet Explorer 8, 9 и
+    10. Выполните обновление до любого современного браузера.
+  upgrade_ie_message_csedweek: CSEdWeek.org скоро удалит поддержку для Internet Explorer
+    8, 9 и 10. Выполните обновление до любого современного браузера.
   upgrade_ie_link: "Узнать больше"
   en: "Информатика"
   computer_science_edweek: "Неделя информатики"
@@ -697,7 +697,7 @@
   dashboard_navigation_section_pd: "Профессиональная разработка"
   dashboard_navigation_section_speakers: "Информатика <br/> Приглашенные лекторы"
   dashboard_navigation_all_sections: "Учетные записи и успехи ученика"
-  dashboard_navigation_view_progress: "Просмотр хода выполнения"
+  dashboard_navigation_view_progress: "Прогресс"
   dashboard_navigation_view_text_responses: "Просмотр текстовых ответов"
   dashboard_navigation_view_assessments: "оценки"
   dashboard_navigation_add_students: "Добавить учеников"
@@ -902,7 +902,7 @@
     отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'>
     изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты
     могут сделать? </i>"
-  dashboard_announce_button_text: "Узнать больше"
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "Как учитель вы лидер движения, чтобы дать каждому
     студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло
     время, чтобы ваши представители услышали вас. На этой неделе лидеры образования,
@@ -1042,6 +1042,7 @@
   cspunit6_name: CS принципы блок 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1235,7 +1236,7 @@
     Birds!"
   frozen_shortdescription: "Давайте использовать код, чтобы присоединиться к Анне
     и Эльзе, открывающим магию и красоту льда."
-  starwars_shortdescription: "Научись программировать дроидов и создай свою собственную
+  starwars_shortdescription: "Научись программировать роботов и создай свою собственную
     игру по мотивам Звездных войн в далекой-далекой галактике."
   playlab_shortdescription: "Создай историю или игру с Лабораторией игр!"
   infinity_shortdescription: "Используйте лабораторию игр, чтобы создать историю или
@@ -1805,3 +1806,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "играть"
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys

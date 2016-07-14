@@ -4,10 +4,10 @@
   'yes': Sí
   'no': 'No'
   select_language: Selecciona tu idioma
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org pronto eliminará el soporte para Internet Explorer
+    8, 9 y 10. Por favor actualice a un navegador moderno.
+  upgrade_ie_message_csedweek: CSEdWeek.org pronto eliminará el soporte para Internet
+    Explorer 8, 9 y 10. Por favor actualice a un navegador moderno.
   upgrade_ie_link: Aprende más
   en: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
@@ -698,7 +698,7 @@
   dashboard_navigation_section_pd: Desarrollo profesional
   dashboard_navigation_section_speakers: Informática<br/>Oradores invitados
   dashboard_navigation_all_sections: Cuentas de estudiantes y sus progresos
-  dashboard_navigation_view_progress: Ver progreso
+  dashboard_navigation_view_progress: Progreso
   dashboard_navigation_view_text_responses: Ver respuestas de texto
   dashboard_navigation_view_assessments: Evaluaciones
   dashboard_navigation_add_students: Añadir alumnos
@@ -729,7 +729,7 @@
   dashboard_sections_table_secret: Tipo de inicio de sesión
   dashboard_sections_table_grade: Grado
   dashboard_sections_table_course: Curso
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Etapa Extra
   dashboard_sections_table_students: Alumnos
   dashboard_sections_table_code: Código de sección
   dashboard_sections_name: Nombre de la sección
@@ -896,12 +896,13 @@
   dashboard_announce_message: "<b>6 de enero, 2015</b> - Aprender más allá de una
     Hora de Code en tu clase. Comienza un nuevo curso de introducción y realiza un
     seguimiento del progreso del alumno."
-  dashboard_announce_button_text: Aprende más
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_button_text: Test the feature
+  dashboard_announce_petition: Como profesor, está liderando el camino de un movimiento
+    para dar a cada estudiante en todas las escuelas la oportunidad de aprender informática.
+    Ahora, es tiempo de dejar que sus representantes escuchen de usted. Esta semana,
+    los líderes de la educación, los 28 gobernadores y CEO's de las compañías más
+    grandes de América se unieron en una carta abierta pidiendo al congreso de los
+    Estados Unidos financiar la educación en informática para K-12.
   dashboard_announce_petition_button: Agrega tu nombre
   code_hoc_coming: "¡La Hora de Code está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
@@ -1035,6 +1036,7 @@
   cspunit6_name: 'Post-AP: Bases de Datos en Aplicaciones'
   csp1_name: 'Tema 1: El Internet'
   csp2_name: 'Unidad 2: Información Digital'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Prueba completa - 50 preguntas
   cspexam1-mWU7ilDYM9_name: Parte del test 1 - 25 preguntas
   cspexam2-AKwgAh1ac5_name: Parte del test 2 - 25 preguntas
@@ -1793,3 +1795,11 @@
   infinity_shortcode: inf
   playlab_shortcode: jugar
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys

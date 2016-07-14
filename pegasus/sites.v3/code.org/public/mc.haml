@@ -41,19 +41,19 @@ social:
         %p.mc-tutorial-description= I18n.t(:mc_longdescription)
         %p.mc-tutorial-specs= I18n.t(:mc_specs)
       %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
-        %button= I18n.t(:starwars_javascript_start_button)
+        %button= I18n.t(:try_now)
 
 %div{style: "clear:both"}
 
-%h2.mc-header2
-  = I18n.t(:starwars_speak_languages)
-  %a{href: "/translate/mc"}= I18n.t(:starwars_help_translate)
-
 .mc-videos{style: "clear: both;"}
-  %h2.mc-header2= I18n.t(:starwars_watch_videos)
+  %h2.mc-header2= I18n.t(:watch_inspirational_videos)
   =view :inspirational_videos
 
 %h2.mc-header2
-  = I18n.t(:starwars_speak_languages)
-  %a{href: "/translate/mc"}= I18n.t(:starwars_help_translate)
+  = I18n.t(:speak_another_language)
+  %a{href: "/translate/mc"}= I18n.t(:help_translate)
+
+%h2.mc-header2
+  = I18n.t(:no_internet)
+  %a{href: CDO.studio_url("/download/mc")}= I18n.t(:download_offline)
 

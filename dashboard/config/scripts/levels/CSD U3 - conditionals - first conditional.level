@@ -1,0 +1,45 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-16T18:26:46.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "gamelab",
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "markdown_instructions": "# If Statement\r\n\r\nThe boolean expression we tested on the last level allows us to make decisions. In order to make these decisions we need to use something called an **if statement**. If statements takes a boolean expression as input and check if it is true or false. When the boolean expression is true then they execute some code inside the if statement. \r\n\r\n# Where do if statements go in my program?\r\n\r\nIf statments go inside your draw loop because we want to check them each time the loop runs. With in the draw loop we have created the structure of first **Updating** and then **Drawing**. If statements are part of the updating phase. The order in the updating phase depends on the order of updating you want to check.\r\n\r\n# Do This\r\n\r\n* Add an `if` statement after you update the position of the race car. \r\n* Move the boolean expression from the console.log statment to the input of the if statement.\r\n* Inside the `if` statement draw text on the screen to say \"Winner\"",
+    "callout_json": "[]",
+    "show_d_pad": "false",
+    "project_template_level_name": "CSD U3 - car template",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

@@ -4,7 +4,6 @@ var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var GameLabGame = require('./GameLabGame');
-import { getSourceUrl } from './animationMetadata';
 
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
@@ -721,21 +720,21 @@ GameLabP5.prototype.afterSetupComplete = function () {
  * Given a collection of animation metadata for the project, preload each
  * animation, loading it onto the p5 object for use by the setAnimation method
  * later.
- * @param {AnimationMetadata[]} animationMetadata
+ * @param {AnimationList} animationList
  */
-GameLabP5.prototype.preloadAnimations = function (animationMetadata) {
+GameLabP5.prototype.preloadAnimations = function (animationList) {
   // Preload project animations:
   this.p5.projectAnimations = {};
-  animationMetadata.forEach(function (animation) {
-    // Note: loadImage is automatically wrapped during preload so that it
-    //       causes a preload-count increment/decrement pair.  No manual
-    //       tracking is required.
-    var image = this.p5.loadImage(
-        getSourceUrl(animation),
-        function onSuccess() {
-          var spriteSheet = this.p5.loadSpriteSheet(image, animation.frameSize.x,
-              animation.frameSize.y, animation.frameCount);
-          this.p5.projectAnimations[animation.name] = this.p5.loadAnimation(spriteSheet);
-        }.bind(this));
-  }, this);
+  animationList.orderedKeys.forEach(key => {
+    const props = animationList.propsByKey[key];
+    const image = this.p5.loadImage(props.dataURI, () => {
+      const spriteSheet = this.p5.loadSpriteSheet(
+          image,
+          props.frameSize.x,
+          props.frameSize.y,
+          props.frameCount
+      );
+      this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
+    });
+  });
 };

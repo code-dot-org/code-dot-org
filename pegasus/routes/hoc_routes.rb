@@ -34,7 +34,7 @@ get '/api/hour/begin/:code' do |code|
   # The lang parameter is used only by the cartoon network integration.
   lang = request.GET['lang']
   if company == CARTOON_NETWORK && (lang == 'ar' || lang == 'en')
-    response.set_cookie('language_', {value: lang, domain: ".code.org", path: '/', expires: Time.now + (365*24*3600)})
+    response.set_cookie('language_', {value: lang, domain: ".code.org", path: '/', expires: Time.now + (365 * 24 * 3600)})
   end
 
   launch_tutorial(tutorial, company: company)
@@ -118,7 +118,7 @@ end
 
 get '/api/hour/finish' do
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  complete_tutorial()
+  complete_tutorial
 end
 
 get '/api/hour/finish/:code' do |code|

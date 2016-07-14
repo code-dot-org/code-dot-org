@@ -9,9 +9,11 @@ class SmsControllerTest < ActionController::TestCase
 
   test "send to phone with level_source succeeds when twilio succeeds" do
     level_source = create :level_source
-    expected_twilio_options = { messaging_service_sid: 'fake_messaging_service_sid',
-                               to: 'xxxxxx',
-                               body: "Check this out on Code Studio: http://test.host/c/#{level_source.id} (reply STOP to stop receiving this)"}
+    expected_twilio_options = {
+      messaging_service_sid: 'fake_messaging_service_sid',
+      to: 'xxxxxx',
+      body: "Check this out on Code Studio: http://test.host/c/#{level_source.id} (reply STOP to stop receiving this)"
+    }
 
     twilio_messages_mock = stub(:messages)
     twilio_messages_mock.expects(:create).with(expected_twilio_options).returns(true)
@@ -25,9 +27,11 @@ class SmsControllerTest < ActionController::TestCase
   test "send to phone with project succeeds when twilio succeeds" do
     channel_id = "xxproject_channelxx"
     project_share_url = "http://test.host/projects/applab/#{channel_id}"
-    expected_twilio_options = { messaging_service_sid: 'fake_messaging_service_sid',
-                               to: 'xxxxxx',
-                               body: "Check this out on Code Studio: #{project_share_url} (reply STOP to stop receiving this)"}
+    expected_twilio_options = {
+      messaging_service_sid: 'fake_messaging_service_sid',
+      to: 'xxxxxx',
+      body: "Check this out on Code Studio: #{project_share_url} (reply STOP to stop receiving this)"
+    }
 
     twilio_messages_mock = stub(:messages)
     twilio_messages_mock.expects(:create).with(expected_twilio_options).returns(true)

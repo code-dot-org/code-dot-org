@@ -1,0 +1,5 @@
+name 'gradek_partner_fuzzConditionals'
+title 'Fuzz Family Fiesta'
+markdown <<MARKDOWN
+<iframe src="https://dashboard.kodable.com/#/curriculum/2/4" width="800px" height="800px" style="margins: 0 auto 0 auto;"  />
+MARKDOWN

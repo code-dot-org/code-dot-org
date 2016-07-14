@@ -11,9 +11,9 @@ namespace :test do
     TestRunUtils.run_apps_tests
   end
 
-  desc 'Runs code studio tests.'
-  task :code_studio do
-    TestRunUtils.run_code_studio_tests
+  desc 'Run a single eyes test locally using chromedriver.'
+  task :ui do
+    TestRunUtils.run_local_ui_test
   end
 
   desc 'Runs blockly-core tests.'
@@ -41,13 +41,6 @@ namespace :test do
     task :apps do
       run_tests_if_changed('apps', ['apps/**/*', 'blockly-core/**/*', 'shared/**/*.js', 'shared/**/*.css']) do
         TestRunUtils.run_apps_tests
-      end
-    end
-
-    desc 'Runs code-studio tests if code-studio might have changed from staging.'
-    task :code_studio do
-      run_tests_if_changed('code-studio', ['code-studio/**/*', 'apps/**/*']) do
-        TestRunUtils.run_code_studio_tests
       end
     end
 
@@ -79,12 +72,12 @@ namespace :test do
       end
     end
 
-    task all: [:apps, :code_studio, :blockly_core, :dashboard, :pegasus, :shared]
+    task all: [:apps, :blockly_core, :dashboard, :pegasus, :shared]
   end
 
   task changed: ['changed:all']
 
-  task all: [:apps, :code_studio, :blockly_core, :dashboard, :pegasus, :shared]
+  task all: [:apps, :blockly_core, :dashboard, :pegasus, :shared]
 end
 task test: ['test:changed']
 

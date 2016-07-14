@@ -129,7 +129,7 @@ By the end of each course, students create interactive games or stories that the
 
 The courses are flexible, too, so educators can adjust them based on their students’ developmental level and prior experience. 
 
-All lessons align to <a href="http://csta.acm.org/Curriculum/sub/K12Standards.html" target="_blank">CSTA Computer Science Standards</a> and <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. 
+All lessons align to all relevant computer science standards, as well as to the <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
 
 ### <strong>Examples of student creations</strong>
 
