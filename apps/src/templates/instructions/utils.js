@@ -19,14 +19,18 @@ export function getOuterHeight(component, includeMargin=false) {
  */
 export function scrollBy(element, deltaY, animate=400) {
   const newScrollTop = element.scrollTop + deltaY;
+  scrollTo(element, newScrollTop, animate);
+}
+
+export function scrollTo(element, scrollTop, animate=400) {
   if (animate) {
     let $elem = $(element);
     if (!$elem.is(':animated')) {
       $elem.animate({
-        scrollTop: newScrollTop
+        scrollTop: scrollTop
       }, animate);
     }
   } else {
-    element.scrollTop = newScrollTop;
+    element.scrollTop = scrollTop;
   }
 }
