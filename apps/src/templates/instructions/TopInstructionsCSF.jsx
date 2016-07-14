@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-disable react/no-danger */
 
 import $ from 'jquery';
 import React from 'react';
@@ -170,7 +170,8 @@ var TopInstructions = React.createClass({
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired
+    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
+    showInstructionsDialog: React.PropTypes.func.isRequired,
   },
 
   getInitialState() {
@@ -188,6 +189,7 @@ var TopInstructions = React.createClass({
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
     if (width !== this.state.rightColWidth) {
+      // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         rightColWidth: width
       });
@@ -195,6 +197,7 @@ var TopInstructions = React.createClass({
 
     const gotNewFeedback = this.props.feedback && !prevProps.feedback;
     if (gotNewFeedback) {
+      // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         promptForHint: false
       });

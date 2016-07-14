@@ -818,8 +818,8 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * It can either be an Axis Aligned Bounding Box (a non-rotated rectangle)
   * or a circular collider.
   * If the sprite is checked for collision, bounce, overlapping or mouse events the
-  * collider is automatically created from the width and height parameter passed at the
-  * creation of the sprite or the from the image dimension in case of animate sprites
+  * collider is automatically created from the width and height
+  * of the sprite or from the image dimension in case of animate sprites
   *
   * You can set a custom collider with Sprite.setCollider
   *
@@ -1258,10 +1258,10 @@ function Sprite(pInst, _x, _y, _w, _h) {
           }
         else if(this.colliderType === 'default')
           {
-          this.collider.extents.x = this.originalWidth * abs(this.scale) * abs(cos(t)) +
-          this.originalHeight * abs(this.scale) * abs(sin(t));
-          this.collider.extents.y = this.originalWidth * abs(this.scale) * abs(sin(t)) +
-          this.originalHeight * abs(this.scale) * abs(cos(t));
+          this.collider.extents.x = this._internalWidth * abs(this.scale) * abs(cos(t)) +
+          this._internalHeight * abs(this.scale) * abs(sin(t));
+          this.collider.extents.y = this._internalWidth * abs(this.scale) * abs(sin(t)) +
+          this._internalHeight * abs(this.scale) * abs(cos(t));
           }
         else if(this.colliderType === 'image')
           {

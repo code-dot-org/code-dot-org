@@ -174,6 +174,10 @@ FactoryGirl.define do
     game {Game.applab}
   end
 
+  factory :free_response, :parent => Level, :class => FreeResponse do
+    game {Game.free_response}
+  end
+
   factory :playlab, :parent => Level, :class => Studio do
     game {create(:game, app: Game::PLAYLAB)}
   end
