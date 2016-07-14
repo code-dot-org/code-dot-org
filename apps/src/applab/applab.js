@@ -776,13 +776,9 @@ Applab.init = function (config) {
     }
   }.bind(this);
 
-  // Force phoneFrame on when viewing or editing firebase projects.
-  var playspacePhoneFrame = !config.share && (experiments.isEnabled('phoneFrame') ||
-    useFirebase);
-
   // Push initial level properties into the Redux store
   studioApp.setPageConstants(config, {
-    playspacePhoneFrame,
+    playspacePhoneFrame: !config.share,
     channelId: config.channel,
     visualizationHasPadding: !config.noPadding,
     hasDataMode: useFirebase,

@@ -16,9 +16,14 @@ Functions are a way of naming chunks of code that you can call (execute) as many
 * Write functions with names that describe what each function does in solving the problem.
 * Write a program that uses more than one function and more than one level of abstraction.
 
+## Vocabulary
+
+* **Abstraction:** Pulling out specific differences to make one solution work for multiple problems.
+* **Function:** A piece of code that you can easily call over and over again.
+
 ## Resources
 
-* Tutorial Video: Defining and Calling Functions
+* Tutorial Video: Defining and Calling Functions<br>
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/yPWQfa4CHbw?rel=0" frameborder="0" allowfullscreen></iframe>
 
