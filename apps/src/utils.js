@@ -539,3 +539,19 @@ exports.createEvent = function (type, bubbles = false, cancelable = false) {
   }
   return customEvent;
 };
+
+/**
+ * @param {Object} vector with x and y coordinates
+ * @returns {Object} vector with x and y coordinates and length 1 (or 0 if
+ *   the argument also had length 0)
+ */
+exports.normalize = function (vector) {
+  var mag = Math.sqrt((vector.x * vector.x) + (vector.y * vector.y));
+  if (mag === 0) {
+    return vector;
+  }
+  return {
+    x: vector.x / mag,
+    y: vector.y / mag
+  };
+};

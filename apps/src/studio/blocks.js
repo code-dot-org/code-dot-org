@@ -898,49 +898,49 @@ exports.install = function (blockly, blockInstallOptions) {
       West: {
         letter: commonMsg.directionWestLetter(),
         image: skin.leftArrow,
-        studioValue: Direction.WEST.toString(),
+        studioValue: Direction.WEST,
         tooltip: msg.moveLeftTooltip()
       },
       East: {
         letter: commonMsg.directionEastLetter(),
         image: skin.rightArrow,
-        studioValue: Direction.EAST.toString(),
+        studioValue: Direction.EAST,
         tooltip: msg.moveRightTooltip()
       },
       North: {
         letter: commonMsg.directionNorthLetter(),
         image: skin.upArrow,
-        studioValue: Direction.NORTH.toString(),
+        studioValue: Direction.NORTH,
         tooltip: msg.moveUpTooltip()
       },
       South: {
         letter: commonMsg.directionSouthLetter(),
         image: skin.downArrow,
-        studioValue: Direction.SOUTH.toString(),
+        studioValue: Direction.SOUTH,
         tooltip: msg.moveDownTooltip()
       },
       NorthWest: {
         letter: commonMsg.directionNorthWestLetter(),
         image: skin.upLeftArrow,
-        studioValue: Direction.NORTHWEST.toString(),
+        studioValue: Direction.NORTHWEST,
         tooltip: msg.moveUpLeftTooltip()
       },
       NorthEast: {
         letter: commonMsg.directionNorthEastLetter(),
         image: skin.upRightArrow,
-        studioValue: Direction.NORTHEAST.toString(),
+        studioValue: Direction.NORTHEAST,
         tooltip: msg.moveUpRightTooltip()
       },
       SouthWest: {
         letter: commonMsg.directionSouthWestLetter(),
         image: skin.downLeftArrow,
-        studioValue: Direction.SOUTHWEST.toString(),
+        studioValue: Direction.SOUTHWEST,
         tooltip: msg.moveDownLeftTooltip()
       },
       SouthEast: {
         letter: commonMsg.directionSouthEastLetter(),
         image: skin.downRightArrow,
-        studioValue: Direction.SOUTHEAST.toString(),
+        studioValue: Direction.SOUTHEAST,
         tooltip: msg.moveDownRightTooltip()
       }
     },
@@ -950,14 +950,9 @@ exports.install = function (blockly, blockInstallOptions) {
     ],
     DEFAULT_MOVE_DISTANCE: '100',
     generateBlocksForAllDirections: function () {
-      SimpleMove.generateBlocksForDirection("North");
-      SimpleMove.generateBlocksForDirection("South");
-      SimpleMove.generateBlocksForDirection("West");
-      SimpleMove.generateBlocksForDirection("East");
-      SimpleMove.generateBlocksForDirection("NorthWest");
-      SimpleMove.generateBlocksForDirection("NorthEast");
-      SimpleMove.generateBlocksForDirection("SouthWest");
-      SimpleMove.generateBlocksForDirection("SouthEast");
+      Object.keys(SimpleMove.DIRECTION_CONFIGS).forEach(function (dir) {
+        SimpleMove.generateBlocksForDirection(dir);
+      });
     },
     generateBlocksForDirection: function (direction) {
       generator["studio_move" + direction] = SimpleMove.generateCodeGenerator(direction, true);
@@ -999,9 +994,13 @@ exports.install = function (blockly, blockInstallOptions) {
 
       return function () {
         var sprite = this.getTitleValue('SPRITE') || '0';
-        var direction = directionConfig.studioValue;
+        var direction = directionConfig.studioValue.toString();
         var methodName = isEventMove ? 'move' : 'moveDistance';
-        var distance = this.getTitleValue('DISTANCE') || SimpleMove.DEFAULT_MOVE_DISTANCE;
+        var defaultDistance =
+          constants.CardinalDirections.includes(directionConfig.studioValue) ?
+          SimpleMove.DEFAULT_MOVE_DISTANCE :
+          SimpleMove.DEFAULT_MOVE_DISTANCE * Math.sqrt(2);
+        var distance = this.getTitleValue('DISTANCE') || defaultDistance;
         return 'Studio.' + methodName + '(\'block_id_' + this.id + '\'' +
           ', ' + sprite +
           ', ' + direction +
