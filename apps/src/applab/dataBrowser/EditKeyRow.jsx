@@ -14,7 +14,8 @@ const EditKeyRow = React.createClass({
 
   getInitialState() {
     return {
-      isEditing: false
+      isEditing: false,
+      newValue: undefined
     };
   },
 
@@ -34,19 +35,15 @@ const EditKeyRow = React.createClass({
       this.props.keyName,
       this.state.newValue,
       this.handleSaveComplete,
-      this.handleError);
+      msg => console.warn(msg));
   },
 
   handleSaveComplete() {
     this.setState({isEditing: false});
   },
 
-  handleError(msg) {
-    console.warn(msg);
-  },
-
   handleDelete() {
-    FirebaseStorage.deleteKeyValue(this.props.keyName, undefined, this.handleError);
+    FirebaseStorage.deleteKeyValue(this.props.keyName, undefined, msg => console.warn(msg));
   },
 
   render() {

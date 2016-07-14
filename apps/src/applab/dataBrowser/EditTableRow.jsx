@@ -13,7 +13,8 @@ const EditTableRow = React.createClass({
 
   getInitialState() {
     return {
-      isEditing: false
+      isEditing: false,
+      newRecord: {}
     };
   },
 
@@ -29,7 +30,7 @@ const EditTableRow = React.createClass({
       this.props.tableName,
       this.state.newRecord,
       () => this.setState({ isEditing: false }),
-      this.handleError
+      msg => console.warn(msg)
     );
   },
 
@@ -40,16 +41,12 @@ const EditTableRow = React.createClass({
     });
   },
 
-  handleError(msg) {
-    console.warn(msg);
-  },
-
   handleDelete() {
     FirebaseStorage.deleteRecord(
       this.props.tableName,
       this.props.record,
       () => {},
-      this.handleError
+      msg => console.warn(msg)
     );
   },
 
@@ -82,13 +79,13 @@ const EditTableRow = React.createClass({
             >
               Save
             </button> :
-              <button
-                  className="btn"
-                  style={dataStyles.editButton}
-                  onClick={this.handleEdit}
-              >
-                Edit
-              </button>
+            <button
+                className="btn"
+                style={dataStyles.editButton}
+                onClick={this.handleEdit}
+            >
+              Edit
+            </button>
           }
 
           <button
