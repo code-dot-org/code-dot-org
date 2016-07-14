@@ -701,6 +701,7 @@ en:
     required: 'Overview'
     content: 'Content'
     practice: 'Teaching Practices'
+    peer_review: 'Peer Review'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

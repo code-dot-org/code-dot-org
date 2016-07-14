@@ -35,5 +35,21 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     assert_equal @required_learning_module, module_assignments.first.plc_learning_module
     assert_equal @learning_module1, module_assignments.second.plc_learning_module
     assert_equal @learning_module2, module_assignments.third.plc_learning_module
+
+    assert_equal [
+                    {
+                        category:
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                 ], unit_enrollment.summarize
+  end
+
+  test 'Summarizing progress of a course with peer reviews returns expected' do
+
   end
 end
