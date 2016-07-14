@@ -3,25 +3,26 @@ title 'Looping and Random Numbers'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 09 - Looping and Random Numbers
+# Unit 3: Lesson 09 - Looping and Random Numbers
 
-# Background
+## Background
 
 Even after creating functions with parameters, there are still instances when our code can be repetitive because we wish to call the same function or group of functions many times. The ability to repeat a series of steps, often referred to as **iteration**, allows us to more easily solves these problems. In most programming languages a programming construct called a **loop** allows you to repeatedly call (or "loop over") a set of commands. This lesson explores the power of loops by introducing the **`for` loop**.
 
-# Vocabulary
+## Vocabulary
 
 * Iteration: the repetition of a statement, process, or procedure.
 * Loop: a programming construct that repeats a group of commands.
 
-# Lesson
+## Lesson
 
 * Introduction to the `for` loop.
 * Practice using loops to draw figures.
 * Use loops in conjunction with Top-Down Design and random values to complete a digital scene.
 
-# Resources
-* Tutorial Video: Loops<br>
+## Resources
+
+* Tutorial Video: Loops
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/G8hfAk4PfOM?rel=0" frameborder="0" allowfullscreen></iframe>
 

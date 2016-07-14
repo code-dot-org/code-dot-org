@@ -5,31 +5,28 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 1: Lesson 2 - Sending Binary Messages
+# Unit 1: Lesson 2 - Sending Binary Messages
 
-# Background
+## Background
 
 One of the most simple forms of communication is the transmission of a binary message. Interestingly enough, “binary” is not a computing term. The word “binary” is used to describe something that can be in one of only two possible states. For example, the question, "Do we have a quiz today?" is a binary question, as there are only two possible responses: "yes" and "no.” In fact, any question that can only be answered with a "yes/no” or "true/false” or something along those lines would be considered a binary question. It is also possible to make a question binary by limiting the acceptable responses to two, as in, “Which do you prefer: Coke or Pepsi? Country music or hip hop?”
 
-# Vocabulary
+## Vocabulary
 
 __Binary Question:__ a question to which there are only two possible answers
 
 __Binary Message:__ a message that can only be one of two possible values
 
-# Lesson
+## Lesson
 
-* Think of a message that can be communicated with such a simple method. 
-* Build a device from everyday objects to communicate the message across the room. 
-* Work with your teammates in an iterative design process of rapidly building and improving your device.  
+* Think of a message that can be communicated with such a simple method.
+* Build a device from everyday objects to communicate the message across the room.
+* Work with your teammates in an iterative design process of rapidly building and improving your device.
 
-
-# Resources
+## Resources
 
 * Activity Guide: <a href="https://docs.google.com/document/d/1s3qa6U2mPFSH_n6Uf0I9IHV2FOzXtOlxZ3LSTOM3JTQ/edit?usp=sharing" target="_blank">Sending Binary Numbers</a>
 * Assessment:  <a href="https://docs.google.com/document/d/1sO2881fgXnLSnF29qhYbCygfKDLPz-kdL5owZofp31I/edit?usp=sharing" target="_blank">Sending Binary Numbers Rubric</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN
