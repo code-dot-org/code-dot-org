@@ -21,7 +21,8 @@ var staticStyles = {
 var ScrollableList = React.createClass({
   propTypes: {
     className: React.PropTypes.string,
-    style: React.PropTypes.object
+    style: React.PropTypes.object,
+    children: React.PropTypes.node,
   },
 
   render: function () {

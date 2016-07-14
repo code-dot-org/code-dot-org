@@ -41,7 +41,7 @@ describe('instructions reducer', () => {
     assert.strictEqual(newState.collapsed, false);
   });
 
-  it('fails to collapse if no long instructions', () => {
+  it('will collapse even if no long instructions', () => {
     var initialState, newState;
 
     // start collapsed
@@ -50,9 +50,8 @@ describe('instructions reducer', () => {
       shortInstructions: 'short',
       longInstructions: undefined
     };
-    assert.throws(() => {
-      newState = reducer(initialState, toggleInstructionsCollapsed());
-    });
+    newState = reducer(initialState, toggleInstructionsCollapsed());
+    assert.strictEqual(newState.collapsed, true);
   });
 
   it('setInstructionsRenderedHeight updates rendered and expanded height if not collapsed', () => {

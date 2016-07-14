@@ -24,7 +24,8 @@ const WorkshopEnrollment = React.createClass({
         school: React.PropTypes.string.isRequired,
         user_id: React.PropTypes.number
       })
-    ).isRequired
+    ).isRequired,
+    workshopId: React.PropTypes.string.isRequired,
   },
 
   render: function () {

@@ -1,4 +1,4 @@
-/*jshint scripturl:true*/
+/* eslint-disable react/no-danger */
 
 import $ from 'jquery';
 import _ from 'lodash';
@@ -13,6 +13,9 @@ var MenuState = {
 };
 
 var EncodedParagraph = React.createClass({
+  propTypes: {
+    text: React.PropTypes.string,
+  },
   render: function () {
     return <p dangerouslySetInnerHTML={{
         __html: decodeURIComponent(this.props.text)
@@ -47,7 +50,9 @@ var SmallFooter = React.createClass({
     ).isRequired,
     // True if we're displaying this inside a phone (real, or our wireframe)
     phoneFooter: React.PropTypes.bool,
-    className: React.PropTypes.string
+    className: React.PropTypes.string,
+    fontSize: React.PropTypes.number,
+    rowHeight: React.PropTypes.number,
   },
 
   getInitialState: function () {

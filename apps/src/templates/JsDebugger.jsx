@@ -69,6 +69,10 @@ var DebugConsole = function (props) {
     </div>
   );
 };
+DebugConsole.propTypes = {
+  debugButtons: React.PropTypes.bool,
+  debugWatch: React.PropTypes.bool,
+};
 
 /**
  * Buttons for stepping through code.
@@ -118,6 +122,9 @@ var DebugWatch = function (props) {
   return (
     <div id="debug-watch" className={classes}/>
   );
+};
+DebugWatch.propTypes = {
+  debugButtons: React.PropTypes.bool,
 };
 
 var sliderImages = {
@@ -175,7 +182,8 @@ var Slider = function (props) {
   );
 };
 Slider.propTypes = {
-  hasFocus: React.PropTypes.bool.isRequired
+  hasFocus: React.PropTypes.bool.isRequired,
+  style: React.PropTypes.object,
 };
 
 /**
