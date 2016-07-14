@@ -53,9 +53,7 @@ var styles = {
   },
   embedView: {
     height: undefined,
-    bottom: 0,
-    // Visualization is hard-coded on embed levels. Do the same for instructions position
-    left: 340
+    bottom: 0
   },
   containedLevelContainer: {
     minHeight: 200,
@@ -65,6 +63,7 @@ var styles = {
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
+    embedViewLeftOffset: React.PropTypes.number.isRequired,
     hasContainedLevels: React.PropTypes.bool.isRequired,
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
@@ -156,9 +155,15 @@ var TopInstructions = React.createClass({
   },
 
   render() {
-    const mainStyle = [styles.main, {
-      height: this.props.height - RESIZER_HEIGHT
-    }, this.props.isEmbedView && styles.embedView];
+    const mainStyle = [
+      styles.main,
+      {
+        height: this.props.height - RESIZER_HEIGHT
+      },
+      this.props.isEmbedView && Object.assign({}, styles.embedView, {
+        left: this.props.embedViewLeftOffset
+      })
+    ];
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -199,6 +204,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
+    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + 20,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     puzzleNumber: state.pageConstants.puzzleNumber,
     stageTotal: state.pageConstants.stageTotal,

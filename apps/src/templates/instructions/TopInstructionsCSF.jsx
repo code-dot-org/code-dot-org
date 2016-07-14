@@ -91,9 +91,7 @@ const styles = {
   },
   embedView: {
     height: undefined,
-    bottom: 0,
-    // Visualization is hard-coded on embed levels. Do the same for instructions position
-    left: 340
+    bottom: 0
   },
   secondaryInstructions: {
     fontSize: 12,
@@ -146,6 +144,7 @@ const styles = {
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
+    embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
     hasContainedLevels: React.PropTypes.bool.isRequired,
     aniGifURL: React.PropTypes.string,
@@ -408,7 +407,9 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - resizerHeight
       },
-      this.props.isEmbedView && styles.embedView,
+      this.props.isEmbedView && Object.assign({}, styles.embedView, {
+        left: this.props.embedViewLeftOffset
+      }),
       this.props.noVisualization && styles.noViz,
       this.props.isMinecraft && craftStyles.main
     ];
@@ -523,6 +524,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
+    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + 20,
     isMinecraft: !!state.pageConstants.isMinecraft,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     aniGifURL: state.pageConstants.aniGifURL,

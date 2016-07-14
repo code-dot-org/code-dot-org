@@ -784,6 +784,7 @@ Applab.init = function (config) {
   studioApp.setPageConstants(config, {
     playspacePhoneFrame,
     channelId: config.channel,
+    nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
     hasDataMode: useFirebase,
     hasDesignMode: !config.level.hideDesignMode,
