@@ -145,7 +145,19 @@ class PeerReview < ActiveRecord::Base
         script.professional_learning_course? &&
         Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
 
-      PeerReview.where(reviewer: user, script: script).map(&:summarize)
+      PeerReview.where(reviewer: user, script: script).map(&:summarize).tap do |reviews|
+        if script.peer_reviews_to_complete &&
+            reviews.size < script.peer_reviews_to_complete &&
+            PeerReview.get_review_for_user(script, user)
+          reviews << {
+              status: 'not_started',
+              name: I18n.t('peer_review.review_new_submission'),
+              result: ActivityConstants::UNSUBMITTED_RESULT,
+              icon: '',
+              locked: false
+          }
+        end
+      end
     end
   end
 
