@@ -68,6 +68,35 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     plc_module_assignments.map{ |a| a.plc_learning_module.stage.position unless a.plc_learning_module.is_required? }.compact
   end
 
+  def summarize_progress
+    summary = []
+
+    plc_course_unit.script.stages.map(&:flex_category).uniq.each do |flex_category|
+      summary << {
+          category: flex_category || Plc::LearningModule::CONTENT_MODULE,
+          status: module_assignment_for_type(flex_category) || Plc::EnrollmentModuleAssignment::NOT_STARTED
+      }
+    end
+
+    if plc_course_unit.script.peer_reviews_to_complete && plc_course_unit.script.peer_reviews_to_complete > 0
+      review_count = PeerReview.where(reviewer_id: user.id, script: plc_course_unit.script).where.not(status: nil).size
+      review_status = if (review_count == plc_course_unit.script.peer_reviews_to_complete)
+                        Plc::EnrollmentModuleAssignment::COMPLETED
+                      elsif review_count > 0
+                        Plc::EnrollmentModuleAssignment::IN_PROGRESS
+                      else
+                        Plc::EnrollmentModuleAssignment::NOT_STARTED
+                      end
+
+      summary << {
+          category: 'peer_review',
+          status: review_status
+      }
+    end
+
+    summary
+  end
+
   private
 
   def enroll_in_module(learning_module)
