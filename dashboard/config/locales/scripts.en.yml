@@ -2152,3 +2152,18 @@ en:
           test Unit 1 practice module Delta: test Unit 1 practice module Delta
           test Unit 1 practice module Echo: test Unit 1 practice module Echo
           test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        alltheplcthings:
+          title: Sample course for PLC things
+          description_short: This is a sample course that has all of the plc special things
+          description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
+          Introduction to Teachercon: Introduction to Teachercon
+          Lesson 1,4: Lesson 1,4
+          Lesson 1,6: Lesson 1,6
+          Lesson 1,9: Lesson 1,9
+          Lesson 1,10: Lesson 1,10
+          Lesson 1,11: Lesson 1,11
+          Lesson 2,2: Lesson 2,2
+          Lesson 2,3: Lesson 2,3
+          Lesson 2,10: Lesson 2,10
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
