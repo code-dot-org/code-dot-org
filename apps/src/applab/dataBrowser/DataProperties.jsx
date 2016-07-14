@@ -37,11 +37,6 @@ const DataProperties = React.createClass({
         </h4>
 
         <table>
-          <colgroup>
-            <col width='200'/>
-            <col width='200'/>
-            <col width='162'/>
-          </colgroup>
           <tbody>
             <tr>
               <th style={dataStyles.headerCell}>Key</th>
