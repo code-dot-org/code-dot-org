@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-def main()
+def main
   params = {
     csv: 'domestic.csv',
     groups: [

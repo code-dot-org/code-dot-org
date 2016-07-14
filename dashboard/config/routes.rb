@@ -8,6 +8,8 @@ end
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: { format: 'json' }
 
+  resource :pairing, only: [:show, :update]
+
   resources :user_levels, only: [:update]
 
   get '/download/:product', to: 'hoc_download#index'
@@ -213,6 +215,8 @@ Dashboard::Application.routes.draw do
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
 
+  get '/admin/styleguide', :to => redirect('/styleguide/')
+
   get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
@@ -339,6 +343,10 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
+
+      # Routes used by UI test status pages
+      get 'test_logs/:branch/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
+      get 'test_logs/:branch/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
     end
   end
 

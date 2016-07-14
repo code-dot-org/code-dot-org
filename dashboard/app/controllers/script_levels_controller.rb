@@ -246,14 +246,16 @@ class ScriptLevelsController < ApplicationController
       script_level_id: @script_level.id,
       level_id: @level.id)
 
-    @sublevel_callback = milestone_script_level_url(
-      user_id: current_user.try(:id) || 0,
-      script_level_id: @script_level.id,
-      level_id: '') if @level.game.level_group?
+    if @level.game.level_group? || @level.try(:contained_levels).present?
+      @sublevel_callback = milestone_script_level_url(
+        user_id: current_user.try(:id) || 0,
+        script_level_id: @script_level.id,
+        level_id: '')
+    end
 
     view_options(
       full_width: true,
-      small_footer: @game.uses_small_footer? || enable_scrolling?,
+      small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
       has_i18n: @game.has_i18n?
     )
 

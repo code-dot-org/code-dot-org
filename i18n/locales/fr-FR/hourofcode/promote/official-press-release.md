@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Modèle de communiqué de presse pour les élus
 
 Pour diffusion immédiate   
@@ -42,9 +40,3 @@ Plus de 100 millions d'étudiants ont déjà essayé Une Heure de Code dans le m
 [**INSÉRER LA CITATION D'UN AUTRE ORGANISME OU D'UNE PERSONNE QUI A ASSISTÉ À L'ÉVÈNEMENT**]
 
 Pour plus d'informations sur [**Évènement/programme/etc.**], visitez [**INSEREZ un lien vers le site**] ou contactez [**INSEREZ DES COORDONNEES POUR TOUTES INFORMATIONS**]
-
-  
-  
-
-
-<%= view :signup_button %>

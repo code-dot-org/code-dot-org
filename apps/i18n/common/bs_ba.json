@@ -27,6 +27,9 @@
   "copy": "Copy",
   "copyright": "Autorska prava",
   "currentVersion": "Current Version",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Beskonačnost",
   "jump": "skoči",
   "keepPlaying": "Nastaviti Igrati",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Koristiš sve potrebne vrste blokova, ali na pogrešan način.",
   "listVariable": "lista",
   "makeYourOwnFlappy": "Napravi Svoju vlastitu Flappy igricu",
@@ -241,5 +245,7 @@
   "watchVideo": "Pogledaj Video",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Radni prostor: "
+  "workspaceHeaderShort": "Radni prostor: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

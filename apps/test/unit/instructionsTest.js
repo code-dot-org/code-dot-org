@@ -41,7 +41,7 @@ describe('instructions reducer', () => {
     assert.strictEqual(newState.collapsed, false);
   });
 
-  it('fails to collapse if no long instructions', () => {
+  it('will collapse even if no long instructions', () => {
     var initialState, newState;
 
     // start collapsed
@@ -50,9 +50,8 @@ describe('instructions reducer', () => {
       shortInstructions: 'short',
       longInstructions: undefined
     };
-    assert.throws(() => {
-      newState = reducer(initialState, toggleInstructionsCollapsed());
-    });
+    newState = reducer(initialState, toggleInstructionsCollapsed());
+    assert.strictEqual(newState.collapsed, true);
   });
 
   it('setInstructionsRenderedHeight updates rendered and expanded height if not collapsed', () => {
@@ -133,6 +132,7 @@ describe('determineInstructionsConstants', () => {
   describe('CSP mode', () => {
     const noInstructionsWhenCollapsed = true;
     const showInstructionsInTopPane = true;
+    const hasContainedLevels = false;
 
     it('sets longInstructions to markdownInstructions regardless of locale', () => {
       const locales = ['fr-fr', ENGLISH_LOCALE, undefined];
@@ -144,7 +144,8 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         locale,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        hasContainedLevels
       }));
 
       results.forEach(result => {
@@ -161,7 +162,8 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        hasContainedLevels
       });
 
       assert.equal(result.longInstructions, 'non-markdown');
@@ -177,7 +179,8 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        hasContainedLevels
       });
 
       assert.equal(result.shortInstructions, undefined);
@@ -191,7 +194,8 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        hasContainedLevels
       });
 
       assert.equal(result2.shortInstructions, undefined);
@@ -205,7 +209,8 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        hasContainedLevels
       });
 
       assert.equal(result3.shortInstructions, undefined);
@@ -215,6 +220,7 @@ describe('determineInstructionsConstants', () => {
   describe('CSF mode', () => {
     const noInstructionsWhenCollapsed = false;
     const showInstructionsInTopPane = true;
+    const hasContainedLevels = false;
 
     it('sets long and short instructions for english locale', () => {
       // en_us and undefined should both be treated as english
@@ -227,13 +233,15 @@ describe('determineInstructionsConstants', () => {
           skin: {},
           locale,
           noInstructionsWhenCollapsed,
-          showInstructionsInTopPane
+          showInstructionsInTopPane,
+          hasContainedLevels
         });
         assert.deepEqual(result, {
           noInstructionsWhenCollapsed,
           shortInstructions: 'non-markdown',
           shortInstructions2: undefined,
-          longInstructions: 'markdown'
+          longInstructions: 'markdown',
+          hasContainedLevels
         });
       });
     });
@@ -247,13 +255,15 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         locale: 'fr-fr',
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        hasContainedLevels
       });
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
         shortInstructions: 'non-markdown',
         shortInstructions2: undefined,
-        longInstructions: undefined
+        longInstructions: undefined,
+        hasContainedLevels
       });
     });
 
@@ -267,13 +277,15 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        hasContainedLevels
       });
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
         shortInstructions: 'non-markdown',
         shortInstructions2: undefined,
-        longInstructions: undefined
+        longInstructions: undefined,
+        hasContainedLevels
       });
     });
 
@@ -288,7 +300,8 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        hasContainedLevels
       });
       assert.equal(result.longInstructions, 'non-markdown');
 
@@ -301,7 +314,8 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        showInstructionsInTopPane
+        showInstructionsInTopPane,
+        hasContainedLevels
       });
       assert.equal(result2.longInstructions, 'markdown');
     });

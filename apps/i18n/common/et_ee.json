@@ -27,6 +27,9 @@
   "copy": "Kopeeri",
   "copyright": "Autoriõigus",
   "currentVersion": "Praegune Versioon",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Lõpmatus",
   "jump": "hüppa",
   "keepPlaying": "Jätka mängimist",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Sa kasutad kõiki vajalikke plokke, aga mitte õiges järjekorras.",
   "listVariable": "loend",
   "makeYourOwnFlappy": "Tee oma Flappy mäng",
@@ -241,5 +245,7 @@
   "watchVideo": "Vaata videot",
   "when": "kui",
   "whenRun": "pärast käivitamist",
-  "workspaceHeaderShort": "Tööruum: "
+  "workspaceHeaderShort": "Tööruum: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

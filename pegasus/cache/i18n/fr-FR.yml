@@ -721,13 +721,13 @@
   dashboard_navigation_section_speakers: Informatique/Sciences informatiques <br/>
     Conférenciers invités
   dashboard_navigation_all_sections: Comptes et progression de l'élève
-  dashboard_navigation_view_progress: Voir la progression
-  dashboard_navigation_view_text_responses: Afficher les réponses écrites
+  dashboard_navigation_view_progress: Progression
+  dashboard_navigation_view_text_responses: Root->dashboard_navigation_voir_text_réponses
   dashboard_navigation_view_assessments: "Évaluations"
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
-  dashboard_navigation_view_stats: Consulter les statistiques
+  dashboard_navigation_view_stats: Root -> dashboard_navigation_view_stats
   dashboard_navigation_section: 'Section&#160;: %{section_name}'
   dashboard_navigation_student: "Élève&#160;: %{student_name}"
   dashboard_progress_not_started: pas commencé
@@ -751,7 +751,10 @@
   dashboard_sections_table_secret: Type de connexion
   dashboard_sections_table_grade: Classe
   dashboard_sections_table_course: Cours
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: |
+    Root -> dashboard_sélections_table_stage_extras When a student completes a stage in a course, they have the option to see additional resources, suggested tutorials, etc. This string is for the teacher dashboard, to enable whether students see these extras at the end of each stage.
+
+    Quand un élève complète une stage dans une course, ils ont l'option à voir des ressources additionelles, des tutoriels suggérés, etc. Cette string est pour le dashboard de l'enseignant, pour activer si les élèves peuvent voir ses extras à la fin de chaque stage
   dashboard_sections_table_students: "Élèves"
   dashboard_sections_table_code: Code de la section
   dashboard_sections_name: Nom de la section
@@ -927,7 +930,7 @@
     Remarque : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier.
     Veuillez prévoir un retard des réponses aux questions que vous poserez jusqu'au
     4 janvier."
-  dashboard_announce_button_text: Pour en savoir plus
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: Comme enseignant, vous ouvrez la voie à un mouvement
     visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique.
     Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine,
@@ -1073,6 +1076,7 @@
   cspunit6_name: Principes de l'informatique, unité 6
   csp1_name: 'Unité 1: Internet'
   csp2_name: 'Unité 2: L’Information numérique'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Test complet - 50 questions
   cspexam1-mWU7ilDYM9_name: Test, partie 1, 25 questions
   cspexam2-AKwgAh1ac5_name: Test, partie 2, 25 questions
@@ -1866,3 +1870,11 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys

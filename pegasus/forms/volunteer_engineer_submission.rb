@@ -9,7 +9,7 @@ class VolunteerEngineerSubmission
     result[:time_commitment_s] = required data[:time_commitment_s]
     result[:location_flexibility_ss] = nil_if_empty data[:location_flexibility_ss]
     result[:languages_ss] = nil_if_empty data[:languages_ss]
-    if result[:languages_ss].class != FieldError && (result[:languages_ss]||[]).include?('other')
+    if result[:languages_ss].class != FieldError && (result[:languages_ss] || []).include?('other')
       result[:languages_other_ss] = required stripped csv_multivalue data[:languages_other_ss]
     end
     result[:experience_s] = nil_if_empty data[:experience_s]
@@ -25,7 +25,7 @@ class VolunteerEngineerSubmission
     result
   end
 
-  def self.receipt()
+  def self.receipt
     'volunteer_engineer_submission_receipt'
   end
 
@@ -33,7 +33,7 @@ class VolunteerEngineerSubmission
     {'location_p' => geocode_address(data['location_s'])}
   end
 
-  def self.commitments()
+  def self.commitments
     (@commitments ||= {})[I18n.locale] ||= commitments_with_i18n_labels(
       'uncertain',
       'now_and_then',
@@ -52,7 +52,7 @@ class VolunteerEngineerSubmission
     results
   end
 
-  def self.locations()
+  def self.locations
     (@locations ||= {})[I18n.locale] ||= locations_with_i18n_labels(
       'onsite',
       'remote',
@@ -68,7 +68,7 @@ class VolunteerEngineerSubmission
     results
   end
 
-  def self.experiences()
+  def self.experiences
     (@experiences ||= {})[I18n.locale] ||= experiences_with_i18n_labels(
       'unspecified',
       'university_student_or_researcher',

@@ -29,8 +29,8 @@ class UsersHelperTest < ActionView::TestCase
       linesOfCode: 42,
       linesOfCodeText: 'Total lines of code: 42',
       levels: {
-        ul1.level_id => {status: 'perfect', result: 100, submitted: false},
-        ul3.level_id => {status: 'passed', result: 20, submitted: false}
+        ul1.level_id => {status: 'perfect', result: 100},
+        ul3.level_id => {status: 'passed', result: 20}
       },
       trophies: {current: 0, of: 'of', max: 27}
     }, summarize_user_progress(script, user))
@@ -49,16 +49,15 @@ class UsersHelperTest < ActionView::TestCase
        scripts: {
            script.name => {
                levels: {
-                   ul1.level_id => {status: 'perfect', result: 100, submitted: false},
-                   ul3.level_id => {status: 'passed', result: 20, submitted: false}
+                   ul1.level_id => {status: 'perfect', result: 100},
+                   ul3.level_id => {status: 'passed', result: 20}
                },
                trophies: {current: 0, of: 'of', max: 27},
            }
        }
     }, summarize_user_progress_for_all_scripts(user))
 
-    assert_equal [0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], percent_complete(script, user)
+    assert_equal [0.0, 0.1] + Array.new(18, 0.0), percent_complete(script, user)
     assert_in_delta 0.0183, percent_complete_total(script, user)
 
     # Verify summarize_user_progress_for_all_scripts for multiple completed levels across multiple scripts.
@@ -71,14 +70,14 @@ class UsersHelperTest < ActionView::TestCase
          scripts: {
              script.name => {
                  levels: {
-                     ul1.level_id => {status: 'perfect', result: 100, submitted: false},
-                     ul3.level_id => {status: 'passed', result: 20, submitted: false}
+                     ul1.level_id => {status: 'perfect', result: 100},
+                     ul3.level_id => {status: 'passed', result: 20}
                  },
                  trophies: {current: 0, of: 'of', max: 27}
              },
              course1.name => {
                  levels: {
-                     ul1b.level_id => {status: 'attempted', result: 10, submitted: false},
+                     ul1b.level_id => {status: 'attempted', result: 10},
                  }
              }
 
@@ -127,10 +126,9 @@ class UsersHelperTest < ActionView::TestCase
         ul.level_id => {
           status: 'perfect',
           result: 100,
-          submitted: false,
           pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]},
-        "#{ul.level_id}_0" => {result: ActivityConstants::FREE_PLAY_RESULT, submitted: false},
-        "#{ul.level_id}_1" => {result: nil, submitted: false}
+        "#{ul.level_id}_0" => {result: ActivityConstants::FREE_PLAY_RESULT},
+        "#{ul.level_id}_1" => {}
       }
     }, summarize_user_progress(script, user))
   end

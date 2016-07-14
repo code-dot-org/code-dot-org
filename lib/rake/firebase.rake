@@ -3,6 +3,15 @@ require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
 namespace :firebase do
+  desc 'Compile firebase security rules and store them in the apps package.'
+  task :compile_rules do
+    if rack_env?(:production)
+      raise "Cannot compile firebase security rules on production, because npm is not installed.\n"\
+        "Instead, upload security rules from the apps package which was downloaded from s3."
+    end
+    Dir.chdir(apps_dir) { RakeUtils.system 'grunt compile-firebase-rules' }
+  end
+
   desc 'Uploads compiled security rules to firebase from the apps package.'
   task :upload_rules do
     if CDO.firebase_name
@@ -21,16 +30,23 @@ namespace :firebase do
       Dir.chdir(apps_dir) {
         url = "https://#{CDO.firebase_name}.firebaseio.com/v3/config.json?auth=#{CDO.firebase_secret}"
         config = {
-            channels: {
-                limits: {
-                    '15': CDO.firebase_max_channel_writes_per_15_sec,
-                    '60': CDO.firebase_max_channel_writes_per_60_sec
-                },
-                maxTableRows: CDO.firebase_max_table_rows
-            }
+          channels: {
+            limits: {
+              '15': CDO.firebase_max_channel_writes_per_15_sec,
+              '60': CDO.firebase_max_channel_writes_per_60_sec
+            },
+            maxRecordSize: CDO.firebase_max_record_size,
+            maxPropertySize: CDO.firebase_max_property_size,
+            maxTableRows: CDO.firebase_max_table_rows
+          }
         }
         RakeUtils.system("curl -X PUT -d '#{config.to_json}' '#{url}'")
       }
     end
   end
+
+  task :all => [:compile_rules, :upload_rules, :set_config]
 end
+
+desc 'Compile and upload firebase rules, and set firebase config.'
+task :firebase => ['firebase:all']

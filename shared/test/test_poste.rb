@@ -3,7 +3,40 @@ require 'mocha/test_unit'
 require 'cdo/poste'
 
 class PosteTest < Minitest::Test
+  SUBSCRIBED_EMAIL = 'subscribed@example.net'
+  UNSUBSCRIBED_EMAIL = 'unsubscribed@example.net'
 
+  def setup
+    Poste2.create_recipient(
+      SUBSCRIBED_EMAIL, {name: 'Subscriber', ip_address: '1.2.3.4'})
+    Poste2.create_recipient(
+      UNSUBSCRIBED_EMAIL, {name: 'Unsubscriber', ip_address: '9.8.7.6'})
+    Poste.unsubscribe(UNSUBSCRIBED_EMAIL)
+  end
+
+  def test_unsubscribed_for_unsubscribed_contact
+    assert Poste.unsubscribed?(UNSUBSCRIBED_EMAIL)
+  end
+
+  def test_unsubscribed_for_subscribed_contact
+    assert !Poste.unsubscribed?(SUBSCRIBED_EMAIL)
+  end
+
+  def test_unsubscribe_for_existing_contact
+    email = 'existing@example.net'
+    Poste2.create_recipient(email, {ip_address: '5.6.7.8.'})
+    Poste.unsubscribe(email)
+    assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
+  end
+
+  def test_unsubscribe_for_new_contact
+    email = 'new@example.net'
+    Poste.unsubscribe(email, {ip_address: '5.6.7.8.'})
+    assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
+  end
+end
+
+class Poste2Test < Minitest::Test
   FROM_NAME = 'Code dot org'
   FROM_EMAIL = 'noreply@code.org'
   REPLY_TO_NAME = 'Reply-to Person'
@@ -14,6 +47,9 @@ class PosteTest < Minitest::Test
   BODY = 'blah blah blah'
   CONTENT_TYPE = 'text/html; charset=UTF-8'
   IP = '127.0.0.1'
+  MULTIPART_CONTENT_TYPE = 'multipart/mixed'
+  ATTACHMENT_FILENAME = 'file.txt'
+  ATTACHMENT_CONTENT = 'hello world'
 
   def setup
     @mail = Mail.new
@@ -25,21 +61,21 @@ class PosteTest < Minitest::Test
     @mail.content_type = CONTENT_TYPE
 
     @delivery_method = Poste2::DeliveryMethod.new
+
+    @mock_recipient = {id: -1, email: TO_EMAIL, name: TO_NAME, ip_address: IP}
   end
 
   def test_delivery_method
-    mock_recipient = {id: -1, email: TO_EMAIL, name: TO_NAME, ip_address: IP}
-
     Poste2.expects(:ensure_recipient).with(
       TO_EMAIL,
       name: TO_NAME,
       ip_address: IP
-    ).returns(mock_recipient).times(2)
+    ).returns(@mock_recipient).times(2)
 
     # With Reply-to
     Poste2.expects(:send_message).with(
       'dashboard',
-      mock_recipient,
+      @mock_recipient,
       body: BODY,
       subject: SUBJECT,
       from: "#{FROM_NAME} <#{FROM_EMAIL}>",
@@ -51,7 +87,7 @@ class PosteTest < Minitest::Test
     @mail.reply_to = nil
     Poste2.expects(:send_message).with(
       'dashboard',
-      mock_recipient,
+      @mock_recipient,
       body: BODY,
       subject: SUBJECT,
       from: "#{FROM_NAME} <#{FROM_EMAIL}>"
@@ -84,5 +120,33 @@ class PosteTest < Minitest::Test
       @delivery_method.deliver!(@mail)
     end
     assert e.message.include? 'Unsupported message type'
+  end
+
+  def test_multipart_mail
+    mail = Mail.new(
+      content_type: MULTIPART_CONTENT_TYPE,
+      to: TO_EMAIL,
+      from: FROM_EMAIL,
+      subject: SUBJECT
+    )
+    mail.attachments[ATTACHMENT_FILENAME] = ATTACHMENT_CONTENT
+    mail.body = BODY
+    mail.parts.last.content_type = CONTENT_TYPE
+
+    Poste2.expects(:ensure_recipient).with(
+      TO_EMAIL,
+      name: nil,
+      ip_address: IP
+    ).returns(@mock_recipient)
+
+    Poste2.expects(:send_message).with(
+      'dashboard',
+      @mock_recipient,
+      body: BODY,
+      subject: SUBJECT,
+      from: FROM_EMAIL,
+      attachments: {ATTACHMENT_FILENAME => ATTACHMENT_CONTENT}
+    )
+    @delivery_method.deliver!(mail)
   end
 end

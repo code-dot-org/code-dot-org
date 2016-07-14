@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
 
-Δίνετε τη δυνατότητα σε όλους τους μαθητές σε όλο τον κόσμο να μάθουν μία Ώρα του Κώδικα που μπορεί να *αλλάξει τη ζωή τους*, μεταξύ <%= campaign_date('full') %>. Θα είμαστε σε επαφή σχετικά με τα βραβεία, νέους οδηγούς και άλλες συναρπαστικές ανανεώσεις. Τι μπορείτε να κάνετε τώρα;
+Δίνετε τη δυνατότητα σε όλους τους μαθητές σε όλο τον κόσμο να μάθουν μία Ώρα του Κώδικα που μπορεί να *αλλάξει τη ζωή τους*, μεταξύ <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Τι μπορείτε να κάνετε τώρα;
 
 ## 1. Διαδώστε το
 
@@ -22,9 +22,9 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Find a local volunteer to help you with your event.
+## 2. Βρείτε έναν τοπικό εθελοντή για να σας βοηθήσει με την εκδήλωσή σας.
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Αναζητήστε τον χάρτη των εθελοντές μας](%= resolve_url('https://code.org/volunteer/local') %) για εθελοντές που μπορούν να σας επισκεφθούν στην τάξη ή να συνομιλήσουν μαζί σας από απόσταση μέσω βίντεο για να εμπνεύσει στους μαθητές σας για το εύρος των δυνατοτήτων της Πληροφορικής.
 
 ## Ζητήστε από όλο το σχολείο να προσφέρει μία Ώρα του Κώδικα
 
@@ -42,8 +42,8 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 [Στείλετε αυτό το μήνυμα](%= resolve_url('/promote/resources#sample-emails') %) σε τοπικούς αντιπροσώπους, Δημοτικό Συμβούλιο, ή Σχολική Εφορεία για να τους καλέσει να επισκεφτούν το σχολείο σας, για την ώρα του κώδικα. Βοηθά η δημιουργία υποστήριξης στην επιστήμη των υπολογιστών στην περιοχή σας πέρα της μίας ώρας.
 
-## 7. Plan your Hour of Code
+## 7. Σχεδιάστε τη δική σας Ώρα του Κώδικα
 
-Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
+Επιλέξτε μια δραστηριότητα για την Ώρα του Κώδικα και [ελέγξτε αυτόν τον οδηγό πώς-να](%= resolve_url('/how-to') %).
 
 <%= view 'popup_window.js' %>

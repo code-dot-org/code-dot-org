@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Děkujeme, že jste nabízíte hostování akce Hodina kódu!
 
-Dáváte šanci všem studentům po celém světě se zúčastnit Hodiny kódu, která může *změnit zbytek jejich života*, during <%= campaign_date('full') %>. Ozveme se ohledně cen, nových tutoriálů a dalších důležitých novinek. Co můžete udělat dále?
+Dáváte šanci všem studentům po celém světě se zúčastnit Hodiny kódu, která může *změnit zbytek jejich života*, during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Co můžete udělat dále?
 
 ## 1. Povídejte o tom
 

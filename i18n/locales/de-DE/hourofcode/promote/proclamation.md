@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
 
   
@@ -13,9 +11,9 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 [HOUSE OR SENATE RESOLUTION ###]
 
-[DATUM]
+[DATE]
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
 Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
@@ -25,7 +23,7 @@ Whereas the field of computer science is a foundational science for the digital 
 
 Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
-Whereas the outlook for computer science jobs is bright with one in every two STEM jobs in the country in computing occupations;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
@@ -52,5 +50,3 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 (4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
-
-<%= view :signup_button %>

@@ -4,10 +4,10 @@
   'yes': "예"
   'no': "아니요"
   select_language: "언어를 선택하세요."
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org는 곧 인터넷 익스플로러 8, 9, 10에 대한 지원을 종료할 것입니다. 최신 브라우저로 업그레이드
+    해주세요.
+  upgrade_ie_message_csedweek: CSEdWeek.org는 곧 인터넷 익스플로러 8, 9, 10에 대한 지원을 종료할 것입니다.
+    최신 브라우저로 업그레이드 해주세요.
   upgrade_ie_link: "더 알아보기"
   en: "컴퓨터과학(Computer Science, 정보과학)"
   computer_science_edweek: "컴퓨터과학(Computer Science, 정보과학) 교육 주간"
@@ -583,11 +583,9 @@
   dashboard_action_required: "필수 항목"
   dashboard_assessments_view: "평가 결과 보기:"
   dashboard_assessments_none: "평가 결과 없음"
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  dashboard_assessments_none_part2: "여러분이 중학교 혹은 고등학교 과정을 가르치고 있다면 학생들의 AP 시험 준비를
+    도울 수 있도록 코드 스튜디오의 한 부분으로서 평가 문항을 사용할 수 있습니다. 이러한 평가를 사용하려면 먼저 여러분의 수업에 과정을 등록하고
+    드롭다운 메뉴에서 과정을 고르면 됩니다. 그러면 여러분 학생들의 답변을 여기서 볼 수 있습니다."
   dashboard_assessments_summaries: "요약"
   dashboard_assessments_answers: "모든 답변"
   dashboard_filter_by_stage: "단계에 따라 필터링하기:"
@@ -601,7 +599,7 @@
   dashboard_navigation_section_pd: "고급 교육 및 개발"
   dashboard_navigation_section_speakers: "컴퓨터과학(정보과학) <br/> 특별 초청 연사들"
   dashboard_navigation_all_sections: "학생 계정 및 진도"
-  dashboard_navigation_view_progress: "진도 보기"
+  dashboard_navigation_view_progress: "진행도"
   dashboard_navigation_view_text_responses: "텍스트 응답 보기"
   dashboard_navigation_view_assessments: "평가 점수"
   dashboard_navigation_add_students: "학생 추가"
@@ -620,7 +618,7 @@
   dashboard_progress_view: "진도 보기:"
   dashboard_progress_student_in_script: "%{script_name} 에서 %{student_name} 에 대한 진도
     정보"
-  dashboard_progress_pair_programming: pair programming
+  dashboard_progress_pair_programming: "페어 프로그래밍"
   dashboard_responses_view: "텍스트 응답 보기:"
   dashboard_responses_none: "텍스트 응답 없음"
   dashboard_sections_new_section: "새 섹션"
@@ -630,7 +628,7 @@
   dashboard_sections_table_secret: "로그인 유형"
   dashboard_sections_table_grade: "등급"
   dashboard_sections_table_course: "코스"
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: "추가 단계"
   dashboard_sections_table_students: "학생들"
   dashboard_sections_table_code: "섹션 코드"
   dashboard_sections_name: "섹션 이름"
@@ -769,12 +767,10 @@
   dashboard_announce_message: "<b>2016년 4월 22일</b> - 언플러그드 활동은 학습 과정의 필수적인 부분이지만 선생님들은
     언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서
     모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요."
-  dashboard_announce_button_text: "더 알아보기"
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_button_text: Test the feature
+  dashboard_announce_petition: "교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에
+    앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의
+    CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
   dashboard_announce_petition_button: "이름을 입력하세요"
   code_hoc_coming: Hour of Code 가 여기있습니다. - 12월8일-14일!
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
@@ -901,6 +897,7 @@
   cspunit6_name: CS 원리 6단원
   csp1_name: "유닛 1: 인터넷"
   csp2_name: "유닛 2: 디지털 정보"
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: "전체 테스트 - 50 문항"
   cspexam1-mWU7ilDYM9_name: "테스트 part 1 - 25문항"
   cspexam2-AKwgAh1ac5_name: "테스트 part 2 - 25문항"
@@ -1483,3 +1480,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "실행"
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys

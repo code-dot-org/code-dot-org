@@ -4,13 +4,11 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
-Çeşitli birleştirici etkinliğe ev sahipliği yapmak istiyoruz, ancak birincil amacımız bilgisayar bilimine yeni olan öğrenci ve öğretmenlerin deneyimlerini iyileştirmektir. Lütfen bu belge yardımıyla aktivitenizin oluşumunu yönlendirin; hiçbir kodlama, bilgisayar programlama ve bilgisayar bilimi geçmişi olmayan bir kitleye hitap ettiğinizi unutmayın.
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
   
 
@@ -52,7 +50,7 @@ Examples:
 
   
   
-**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. En iyisi, anlatımların ve öğreticilerin programlama platformuyla birleştirilmesidir. Böylelikle ayrı sayfa veya pencerelerde açık olan öğretici ve programlama platformu arasında sürekli gidip gelme sorunu ortadan kalkmış olur.
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
 
 Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
 
@@ -66,15 +64,15 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 **Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="inclusion"></a>
 
 ## Öğreticilerin eğitime dahil edilmesi için değerlendirilme yolu
 
-Bir bilgisayar bilimi eğitimcisi komitesi, daha geniş bir eğitimci kitlesi tarafından yapılan anketleri de dahil ederek, nitel ve nicel ölçümlerle başvuruları sıralayacak.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Öğreticilerin listede yukarılarda yer almasını sağlayacak durumlar:**
+**Tutorials will be listed higher if they are:**
 
   * yüksek kaliteli
   * designed for beginners - among students AND teachers
@@ -87,7 +85,7 @@ Bir bilgisayar bilimi eğitimcisi komitesi, daha geniş bir eğitimci kitlesi ta
   * promote learning by all demographic groups (esp. under-represented groups)
   * sadece HTML+CSS web tasarımı odağında olmayan - (hedefimiz bilgisayar bilimi, sadece HTML kodlaması değil)
 
-**Öğreticilerin listede aşağılarda yer almasına sebep olacak durumlar:**
+**Tutorials will be listed lower if they are:**
 
   * düşük kaliteli
   * daha ileri düzeyde eğitime uygun (başlangıç düzeyine uygun olmayan)
@@ -96,7 +94,7 @@ Bir bilgisayar bilimi eğitimcisi komitesi, daha geniş bir eğitimci kitlesi ta
   * reinforce stereotypes that hinder participation by under-represented student groups
   * paralı bir eğitim sistemine yönlendirme amacıyla çalışan
 
-**Öğreticiler listede aşağıdaki durumlarda yer ALMAZLAR:**
+**Tutorials will NOT be listed if they:**
 
   * bir saatten fazla uzun veya fazla kısa olan
   * kaydolmayı gerektiren 
@@ -107,9 +105,9 @@ Bir bilgisayar bilimi eğitimcisi komitesi, daha geniş bir eğitimci kitlesi ta
 
 **If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
 
-Neticede, Kodlama Saati kampanyasının amacı öğretmen ve öğrencilerin bilgisayar bilimine katılım oranını arttırmak, bu bilime herkesin ulaşabileceğini ve bunun “düşündüğünüzden daha kolay olduğunu“ göstermektir. Birçok şekilde hedef, öğrenci ve öğretmenlere daha az ve basit seçenekler vererek, ilk kez kullanan biri için en yüksek kaliteyi sunmak olmalıdır. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
@@ -117,7 +115,7 @@ Neticede, Kodlama Saati kampanyasının amacı öğretmen ve öğrencilerin bilg
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
-**İhtiyacınız olanlar:**
+**What you’ll need:**
 
   * İsminiz, logonuz (jpg, png, vs.)
   * Kodlama Saati aktiviteniz için pazarlama görselinizin URL'si. Görseller tam olarak 446 x 335 çözünürlükte olmalıdır. Eğer uygun bir fotoğraf sağlanamazsa, biz sizin için öğreticinizin ekran görüntüsünü çekebiliriz VEYA öğreticinizi listeye koymayabiliriz.
@@ -165,32 +163,32 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
       * Çevrimdışı aktiviteler için 
           * Aktivitenin kağıt versiyonunun indirilme sayısı (uygulanabiliyorsa)
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
 ## Aktivitenizi tasarlamak için öneriler
 
-You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Hiçbir şart altında Code.org logosu ve ismi kullanılamaz. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
-**Ortalama bir öğrencinin rahatlıkla bir saat içerisinde aktiviteyi bitirebileceğinden emin olun.** Dersin sonuna aktiviteyi çabuk bitiren öğrenciler için ucu açık bir başka aktivite daha koymayı düşünün. Çoğu çocuğun bilgisayar bilimi ve kodlamaya tamamen yeni başlıyor olduğunu unutmayın.
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
-**Öğretmen notlarını ekleyin.** Çoğu aktiviteler öğrenciler tarafından yönlendirilmelidir, ancak eğer aktivite bir öğretmen tarafından yönletiliyorsa, lütfen ayrı bir URL'ye, açık ve basit yönlendirmeler kullanarak aktivitenizin bir öğretmen notunu yükleyin. Acemi olan sadece öğrenciler değil, bazı öğretmenler de bu konuda acemi olabilir. Şu bilgileri ekleyin:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
   * Öğreticimiz en iyi aşağıdaki platform ve tarayıcılarda çalışır
   * Does it work on smartphones? Tablets?
   * Takım çalışmasını öneriyor musunuz? 
   * Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
-**Aktivitenin sonunda yapıcı geri bildirimler.** (Örneğin: “10 seviye bitirdin ve döngüleri öğrendin! Harikasın!“)
+**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode“ veya “Ben bir Kodlama Saatini - #HourOfCode - Bilgisayar Bilimi Eğitimi Haftasının - #CSEdWeek - bir parçası olarak bitirdim. Ya sen? @Scratch.” **#HourOfCode** etiketini kullanın (büyük H, O, C harfleri ile)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
 **Create your activity in Spanish or in other languages besides English.** ]
 
-**Aktiviteyi toplum için önemli bir içerikte anlatın veya bağlantı kurun.** Öğrenciler dünyayı bilgisayar programlama ile daha iyiye taşıyabileceklerini gördüklerinde bu beceri bir süper güce dönüşecek!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Öğrenciler öğreticinizi denemeden kayıt veya ücret istemeyin.** Kayıt veya ücret isteyen öğreticiler listeye eklenmeyecektir
+**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
 
 **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** The three rules of pair programming in a school setting are:
 
@@ -198,13 +196,13 @@ You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojll
   * Yol gösterici öneri yapar, hataları gösterir ve sorular sorar. 
   * Öğrenciler rollerini bir öğreticide en az iki kez değiştirmelidir.
 
-İkili Takım Olmanın Avantajları:
+Benefits of Pair Programming:
 
   * Öğrenciler, öğretmene güvenmek yerine birbirlerine yardımcı olabilirler
   * Kodlamanın yalnız yapılan bir aktivite olmadığını, aslında sosyal iletişim gerektirdiğini görürler
   * Her sınıfta veya laboratuvarda birebir ders için yeterince bilgisayar bulunmayabilir
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
@@ -212,7 +210,7 @@ You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojll
 
 After the success of the 2013 campaign, we took steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
-Bunun bir parçası da marka olarak "Hour of Code"'un (Kodlama Saati) karışıklığa sebebiyet vermemek adına korunmasıdır. Çoğu öğretici ortaklarımız "Hour of Code"'u web sitelerinde kullandılar. Biz bu kullanımı önlemek istemiyoruz, ancak bazı kısıtlamalara uymasını istiyoruz:
+One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
   1. "Hour of Code"'a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü harekete hitap etmelidir. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
   2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
@@ -222,46 +220,44 @@ Bunun bir parçası da marka olarak "Hour of Code"'un (Kodlama Saati) karışık
 
   4. No use of "Hour of Code" in app names.
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
 ## Takip Pikseli
 
-Daha net bir şekilde katılımı takip edebilmek için, her üçüncü parti öğretici ortağının Kodlama Saati öğreticilerinin başına ve sonuna 1-piksel takip görüntüsü yerleştirmelerini istiyoruz. (Başlangıç sayfasına bir başlangıç piksel-görüntüsü ve son sayfaya da son bir piksel-görüntüsü yerleştirin. Ara sayfalara piksel yerleştirmeyin).
+In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
 
-Böylelikle Kodlama Saatlerini gerçekleştirmek amacıyla direkt olarak websitenizi ziyaret eden kullanıcıların sayısına ulaşabiliriz, ya da bir öğretmen tahtaya sizin URL'nizi yazdığında hangi kullanıcıların ziyaret ettiğini görebiliriz. Bu, daha net bir katılımcı sayısına ulaşmanızı sağlayarak daha çok yeni kullanıcı çekmenizi sağlayacaktır. Sona koyduğunuz pikseller ise aktivitenin tamamlanma oranlarını tespit etmemize yardımcı olacaktır.
+This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
 
-Öğreticiniz kabul edildiyse ve son öğretici sayfasına eklendiyse, Code.org size özel bir takip pikselini öğreticinizle birleştirmeniz için verecektir. Aşağıda örneği mevcuttur.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-NOT: Bu, yüklenebilir uygulamalar için önemli değildir (iOS/Android uygulamaları, ya da masaüstüne indirilen uygulamalar)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-AppInventor için örnek takip pikselleri:
+Example tracking pixels for AppInventor:
 
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
 ## Öğreticilerinizi desteklemek, Bilgisayar Bilimi Eğitimi Haftası ve Kodlama Saati
 
-Herkesten kendi 1 saatlik öğreticisini kullanıcılarına tanıtmalarını ve desteklemelerini rica ediyoruz. Please direct them to ***your*** Hour of Code page. Kullanıcılarınız sizden öğreticiniz hakkında e-posta aldıklarında onlardan daha büyük bir geri dönüş alırsınız. Bilgisayar Bilimi Eğitimi Haftası adına düzenlenen Uluslararası Kodlama Saati kampanyasını bahane ederek kullanıcılarınızı diğerlerini de davet etmesi için teşvik edin, 100 milyon toplam katılımcıya ulaşmamıza yardımcı olun.
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to ***your*** Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
   * Kodlama Saatini genel medya, sosyal medya, e-posta listeleri, vs. aracılığıyla **#HourOfCode** (büyük H, O, C harfleriyle) etiketini kullanarak destekleyin
   * Yerel bir etkinliğe ev sahipliği yapın ya da çalışanlarınızdan yerel okullarda ve yerel sosyal gruplarda bir etkinlik düzenlemelerini rica edin.
   * Kaynaklar Kitimizde daha detaylı bilgiler bulabilirsiniz (çok yakında).
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
 ## Engelli öğrenciler için özel bir not
 
-Eğer görme engelliler için bir öğretici hazırladıysanız, ekran okuyucusu kullanacak katılımcılar için öğreticiyi vurgulamaktan mutluluk duyarız. Şimdiye dek elimize böyle bir öğretici ulaşmadı, ancak görme engelli öğrenciler için bir seçenek bulundurmak adına bir tane eklemek bizi gerçekten çok mutlu eder.
+If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Başa dön**](#top)
-
-<%= view :signup_button %>
+[**Back to the top**](#top)

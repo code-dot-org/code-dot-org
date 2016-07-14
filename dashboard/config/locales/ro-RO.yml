@@ -30,6 +30,8 @@
   unsubmit: Retrage
   previous_page: Previous page
   next_page: Pagina următoare
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Anulează
   okay: Bine
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -94,6 +96,7 @@
     teacher_title: "Înregistrare Profesor"
     student_pitch: "Înscriere student la Code.org"
     student_title: "Înscriere student"
+    signup_title: Sign up for Code.org
     school_name: Numele şcolii (opţional)
     school_address: Adresa şcolii (opţional)
     address_placeholder: adresă, oraş, județ, cod poștal
@@ -118,6 +121,9 @@
       de utilizare</a> de la Code.org.
     additional_information: Mai avem nevoie de câteva informaţii adiționale pentru
       a te putea înscrie.
+    user_type_label: Account Type
+    user_type_teacher: Profesor
+    user_type_student: elev
   signin_form:
     title: Ai deja un cont? Conectează-te
     login: Email sau nume de utilizator
@@ -881,3 +887,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

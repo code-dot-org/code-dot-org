@@ -41,6 +41,38 @@ class PeerReview < ActiveRecord::Base
     escalated: 2
   }
 
+  def self.pull_review_from_pool(script, user)
+    # Find the first review such that meets these criteria
+    # Review is for this script
+    # I am not the submitter X
+    # Review status is nil
+    # Reviewer is nil or it has been assigned for more than a day
+    # Reviewer is not currently reviewing this level source
+    transaction do
+      peer_review = get_review_for_user(script, user)
+
+      if peer_review
+        peer_review.update!(reviewer: user)
+        peer_review
+      else
+        # Eventually, more complex logic will go here for duplicating existing reviews
+        nil
+      end
+    end
+  end
+
+  def self.get_review_for_user(script, user)
+    where(
+      script: script,
+      status: nil
+    ).where.not(
+      submitter: user,
+      level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
+    ).where(
+      'reviewer_id is null or created_at < now() - interval 1 day'
+    ).take
+  end
+
   def mark_user_level
     user_level = UserLevel.find_by!(user: submitter, level: level)
 
@@ -68,12 +100,12 @@ class PeerReview < ActiveRecord::Base
     # Need at least `REVIEWS_FOR_CONSENSUS` reviews to accept/reject
     return unless reviews.size >= REVIEWS_FOR_CONSENSUS
 
+    # TODO: Add an else clause with find_or_create PeerReview assigned to the
+    # instructor.
     if reviews.all?(&:accepted?)
       user_level.update!(best_result: Activity::REVIEW_ACCEPTED_RESULT)
     elsif reviews.all?(&:rejected?)
       user_level.update!(best_result: Activity::REVIEW_REJECTED_RESULT)
-    else
-      # TODO: find_or_create PeerReview assigned to the instructor
     end
   end
 
@@ -106,5 +138,24 @@ class PeerReview < ActiveRecord::Base
         )
       end
     end
+  end
+
+  def self.get_peer_review_summaries(user, script)
+    if user &&
+        script.professional_learning_course? &&
+        Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
+
+      PeerReview.where(reviewer: user, script: script).map(&:summarize)
+    end
+  end
+
+  def summarize
+    return {
+      id: id,
+      status: status.nil? ? 'not_started' : 'perfect',
+      name: status.nil? ? I18n.t('peer_review.review_in_progress') : I18n.t('peer_review.link_to_submitted_review'),
+      result: status.nil? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::BEST_PASS_RESULT,
+      locked: false
+    }
   end
 end

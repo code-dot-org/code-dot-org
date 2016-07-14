@@ -503,13 +503,13 @@ zh-CN:
   dashboard_navigation_section_pd: 职业发展
   dashboard_navigation_section_speakers: '计算机科学 <br/> 特邀演讲人'
   dashboard_navigation_all_sections: 学生账户和进度
-  dashboard_navigation_view_progress: 查看进度
-  dashboard_navigation_view_text_responses: 查看文字回应
+  dashboard_navigation_view_progress: 进度
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: 测验
   dashboard_navigation_add_students: 添加学生
   dashboard_navigation_manage_students: 管理学生
   dashboard_navigation_lesson_plans_resources: 课程计划及资源
-  dashboard_navigation_view_stats: 查看统计
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: '学习小组：%{section_name}'
   dashboard_navigation_student: '学生：%{student_name}'
   dashboard_progress_not_started: 未开始
@@ -654,8 +654,9 @@ zh-CN:
   dashboard_faq_k5: K-5 组的常见问题
   dashboard_announcements: 公告
   dashboard_announce_view_all: 查看全部
-  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-  dashboard_announce_button_text: 了解详情
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: 作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、 28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。
   dashboard_announce_petition_button: 添加您的姓名
   code_hoc_coming: 代码小时就在这里 — — 12 月 8-14 ！
@@ -773,12 +774,13 @@ zh-CN:
   cspunit4_name: 'Unit 4: Data'
   cspunit5_name: 'Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
-  csp1_name: 'Unit 1: The Internet'
+  csp1_name: 第一单元：互联网
   csp2_name: 'Unit 2: Digital Information'
-  cspassessment_name: 'Full Test - 50 questions'
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: '完整测试 - 共50题'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
-  cspunit3_gradelevel: Grades 9-12
+  cspunit3_gradelevel: 9-12年级
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: 加速课程
   algebra_name: CS in Algebra

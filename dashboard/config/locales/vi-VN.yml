@@ -29,6 +29,8 @@
   unsubmit: Ngưng gửi
   previous_page: Trang trước
   next_page: Trang tiếp theo
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Huỷ
   okay: "Đồng ý"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -94,6 +96,7 @@
     teacher_title: Giáo viên đăng ký
     student_pitch: Sinh viên đăng ký Code.org
     student_title: Sinh viên đăng ký
+    signup_title: Sign up for Code.org
     school_name: Tên trường (tùy chọn)
     school_address: "Địa chỉ trường (không bắt buộc)"
     address_placeholder: "địa chỉ, thành phố, tỉnh, mã bưu điện"
@@ -118,6 +121,9 @@
       khoản Dịch vụ</a> Code.org.
     additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng
       ký cho bạn.
+    user_type_label: Account Type
+    user_type_teacher: Giáo viên
+    user_type_student: học sinh
   signin_form:
     title: "Đã có một tài khoản? Đăng nhập"
     login: Email hoặc tên người dùng
@@ -889,3 +895,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

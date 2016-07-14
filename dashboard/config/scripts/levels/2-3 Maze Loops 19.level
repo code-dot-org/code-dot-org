@@ -27,7 +27,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Let's take this to another level! \r\n\r\nUse loops to get me to the sunflower with the fewest loops possible."
+    "markdown_instructions": "Let's take this to another level! \r\n\r\nUse loops to get me to the sunflower with the fewest loops possible.",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you are stuck, try writing out the code without loops first and looking for patterns.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_19_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Putting one repeat loop inside of another can help decrease the number of blocks used.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_19_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -953,24 +953,24 @@
           квадрати на екрані комп'ютера."
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: "Інший блок, який є у цій головоломці вказує на поворот праворуч на
+          90 градусів. І коли ми перетягуємо його наш художник повертається на задану
+          величину. Тож ви можете грати так як захочете щоб художник повернувся. Це
+          поворот на 90 градусів."
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: "А це поворот на 120 градусів. І запам'ятайте, ви можете змінити ці
+          величини натискаючи на стрілки поруч з номерами для пікселів і градусів.
+          Насолоджуйтеся малюнками з вашим художником!"
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: "Це умовний блок. Він показує що вам потрібно щось робити лише в тому
+          випадку, якщо нектару або меду менше, порівну чи більше ніж певне число."
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: "Це корисно у тому випадку, коли ми не знаємо як багато меду чи нектару
+          виробити, коли ми бачимо знак питання."
       3:
         image: notes/C2_bee_conditionals_3.png
         text: In this example, we're going to say IF the purple flower has nectar
@@ -1326,15 +1326,15 @@
           квадрати на екрані комп'ютера."
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: "Інший блок, який є у цій головоломці вказує на поворот праворуч на
+          90 градусів. І коли ми перетягуємо його наш художник повертається на задану
+          величину. Тож ви можете грати так як захочете щоб художник повернувся. Це
+          поворот на 90 градусів."
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: "А це поворот на 120 градусів. І запам'ятайте, ви можете змінити ці
+          величини натискаючи на стрілки поруч з номерами для пікселів і градусів.
+          Насолоджуйтеся малюнками з вашим художником!"
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
@@ -1350,12 +1350,12 @@
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: "Це умовний блок. Він показує що вам потрібно щось робити лише в тому
+          випадку, якщо нектару або меду менше, порівну чи більше ніж певне число."
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: "Це корисно у тому випадку, коли ми не знаємо як багато меду чи нектару
+          виробити, коли ми бачимо знак питання."
       3:
         image: notes/C3_bee_conditionals_3.png
         text: In this example, we're going to say IF the purple flower has nectar

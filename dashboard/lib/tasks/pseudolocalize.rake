@@ -1,5 +1,4 @@
 task :pseudolocalize => :environment do
-
   def pseudolocalize_string(s)
     #TODO: Something smarter
     "!!-#{s}-!!"
@@ -44,5 +43,4 @@ task :pseudolocalize => :environment do
       YAML.dump(transformed, f)
     end
   end
-
 end

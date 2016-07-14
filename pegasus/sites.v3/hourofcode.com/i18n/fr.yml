@@ -1,20 +1,23 @@
 fr:
   site_name: UNE HEURE de CODE
-  hour_of_code: Une Heure du code
+  hour_of_code: Une Heure de code
   language: Français
   front_title: "Rejoignez le plus grand cours en ligne de l'Histoire, %{campaign_date}, 2015"
   coming_soon: Prochainement
   campaign_date_start_short: 7 déc.
   campaign_date_start_long: Le 7 décembre
-  campaign_date_short: 7-13 déc.
+  campaign_date_short: 7–13 déc.
   campaign_date_full: Du 7 au 13 décembre
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: "Rejoignez le plus grand cours en ligne de l'Histoire, du 7 au 13 décembre 2015"
-  front_intro_default: "Une Heure de Code est un mouvement mondial qui touche plusieurs dizaines de millions d’élèves dans plus de 180 pays. Tout le monde peut organiser un évènement une Heure de Code. Les tutoriels d'une heure sont disponibles dans plus de 40 langues. Que vous ayez ou pas de l'expérience. <strong>Pour tous, de 4 à 104 ans.</strong>"
+  front_intro_default: "Une Heure de Code est un mouvement mondial qui touche plusieurs dizaines de millions d'élèves dans plus de 180 pays. Tout le monde peut organiser un événement Une Heure de Code. Les tutoriels d'une heure sont disponibles dans plus de 40 langues. Que vous ayez ou non de l'expérience. <strong>Pour tous, de 4 à 104 ans.</strong>"
   front_watch_video: Regardez la nouvelle vidéo
   front_watch_regular_video: Regardez la vidéo
-  front_volunteers: Volontaires techniques recherchés
+  front_volunteers: Bénévoles techniques recherchés
+  front_start_learning: Start learning
   header_menu_resources: Ressources
-  header_menu_faq: Foire aux questions
+  header_menu_faq: FAQ
   header_menu_prizes: Prix
   header_menu_how_to: Guide pratique
   header_menu_promote: Promouvoir
@@ -126,7 +129,7 @@ fr:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
-  company_sjusd: San Juan Unified School District
+  company_sjusd: "Quartier de l'école San Juan unifiée"
   company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
@@ -166,7 +169,7 @@ fr:
   prizes_nav_terms: "Conditions d'utilisation"
   prizes_nav_faq: Foire aux questions
   prizes_nav_dc: Voyage mystère à Washington D.C.
-  prizes_nav_technology: $ 10 000 de technologie pour votre école
+  prizes_nav_technology: 10 000 $ de technologie pour votre école
   prizes_nav_video_chat: Chattez en vidéo avec une personnalités des nouvelles technologies
   prizes_nav_skype_dropbox: "Du crédits Skype ou de l'espace Dropbox pour chaque organisateur"
   prizes_nav_brilliant: Brillants projets de labs de 2000$
@@ -174,8 +177,10 @@ fr:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Prix pour chaque éducateur
   prizes_10k: Une école publique dans chaque état américain gagnera 10 000 $ de biens technologies
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: '<i>Chaque</i> organisateur recevra une carte-cadeau Amazon.com ou Microsoft Windows Store de <b>$10!'
-  whats_next_header: Ensuite ?
+  prizes_more: More exciting prizes
+  whats_next_header: Et ensuite ?
   whats_next_description: "Nous vous enverrons des outils et conseils utiles pour votre évènement. Les tutoriels 2015 seront bientôt à votre disposition pour tous les navigateurs, smartphones - ou si vous n'avez pas d'ordinateur ! <a href='http://code.org/learn'>Essayez les tutoriels déjà disponibles </a>"
   whats_next_how_to: "<a href='/how-to'> Comment organiser Une Heure de Code ?</a>"
   whats_next_promote: "<a href='/promote'> Promouvoir votre Heure de Code</a>"
@@ -243,7 +248,7 @@ fr:
   signup_name_placeholder: Votre Nom
   signup_email_placeholder: vous@exemple.fr
   signup_organization_name_placeholder: 'Exemple : Lycée Condorcet'
-  signup_event_location_placeholder: "Code postal et pays OU adresse complète.\r\n(Nous utiliserons ces informations pour ajouter une épingle sur notre carte)"
+  signup_event_location_placeholder: "Code postal et pays OU adresse complète.\\r\n(Nous utiliserons ces informations pour ajouter une épingle sur notre carte)"
   signup_special_event_details_placeholder: Décrivez ce qui en ferait un évènement exceptionnel
   signup_send_posters_address_placeholder: Cette adresse ne sera pas diffusée sur notre carte
   signup_event_type_in_school: Dans une école
@@ -252,6 +257,7 @@ fr:
   signup_submit_error_message: Une erreur est survenue. Veuillez vérifier que tous les champs obligatoires ont bien été renseignés.
   signup_thank_you_header: "Merci pour votre inscription et merci d'organiser un évènement Une Heure de Code."
   signup_thank_you_message: Nous vous avons envoyé une confirmation par e-mail avec des conseils pour vous aider à commencer.
+  map_title: Hour of Code map
   map_header: '# évènements Une Heure de Code dans le monde'
   see_all_events: Voir tous les évènements
   map_header_company: '# par les organisateurs de la société'
@@ -264,7 +270,7 @@ fr:
   map_legend_cs_tech_jam: Évènements spéciaux
   meta_tag_og_title: Une Heure de Code va arriver
   meta_tag_og_description: Une Heure de Code est un mouvement mondial qui touche des dizaines de millions d’élèves dans plus de 180 pays et plus de 30 langues. De 4 à 104 ans.
-  meta_tag_twitter_title: Une Heure de Code va arriver
+  meta_tag_twitter_title: "L'Heure de Code est ici"
   meta_tag_twitter_description: Une Heure de Code est un mouvement mondial qui touche des dizaines de millions d’élèves dans plus de 180 pays et plus de 30 langues. De 4 à 104 ans.
   twitter_default_text: 'Je participe à #HourOfCode cette année, et vous ? @codeorg'
   hardware_prizes_form_name_label: Votre Nom
@@ -303,8 +309,8 @@ fr:
   hoc_faq_behind_hoc_a: "Une Heure de Code est organisée par <a href='https://code.org'>Code.org</a>, une association public a but non-lucrative, dédiée à la démocratisation de l'informatique, en la rendant Une Heure de Code est organisée par <a href='https://code.org'>Code.org</a>, une association à but non lucratif dédiée à l'expansion de l'apprentissage de l'informatique. L'objectif est de le rendre accessible dans plus d'écoles, et en augmentant la participation des femmes et des élèves de couleur sous représentés. Une <a href='%{codeorg_url}/about/partners'>coalition sans précédente de partenaires</a> nous a rejoint pour supporter Une Heure de Code, &mdash; dont Microsoft, Apple, Amazon, Boys and Girls Clubs of America et the College Board."
   hoc_faq_host_q: Je ne connais rien en programmation. Puis-je tout de même organiser un évènement ?
   hoc_faq_host_a: "Évidement, les activités d'Une Heure de code sont guidées. Tout ce que vous avez à faire c'est <a href='%{codeorg_url}/learn'>d'essayer nos tutoriels disponibles</a>, choisissez celui que vous voulez, prenez une heure &mdash; nous nous occupons du reste. Nous offrons également des options adaptées à l'âge et au niveau d’expérience, soit de la maternelle à l'enseignement supérieur. Commencez à organiser votre évènement en lisant notre <a href='/resources/how-to'>guide d'utilisation</a>."
-  hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_q: Quels appareils utiliser pour mes étudiants?
+  hoc_faq_devices_a: "Les tutoriels Code.org fonctionnent sur tous les appareils et navigateurs. Vous pouvez voir plus d'information sur les besoins des tutoriels de Code.org <a href='%{codeorg_url}/educate/it'>ici</a>. Les besoins techniques des tutoriels ne provenant pas de Code.org peuvent être trouvés sur <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> dans la description spécifique du tutoriel. N'oubliez pas que nous proposons également des activités déconnectées si votre école ne peut pas faire fonctionner les tutoriels !"
   hoc_faq_need_computers_q: "Ai-je besoin d'un ordinateur pour chaque participant ?"
   hoc_faq_need_computers_a: "Non. Nous proposons des tutoriels d'Une Heure de Code sur PC, smartphones, tablettes et certain ne nécessitent pas d'ordinateur du tout ! Vous pouvez vous joindre à l'initiative où que vous soyez, quelque soit le matériel en votre possession. <p><i>Voici quelques possibilités :</i> <br> <ul> <li><b>Travailler en binôme.</b> Des recherches montrent que les élèves apprennent mieux en <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programmant à deux</a>, en partageant un ordinateur et en travaillant ensemble. Encouragez vos élèves à travailler en équipe. <li><b>Utilisez un vidéoprojecteur.</b> si vous avez un vidéoprojecteur ainsi qu'un ordinateur connecté à internet, votre groupe entier peut faire Une Heure de Code ensemble. Regardez les portions de vidéos ensemble et a tour de rôle résoudre les puzzles et répondre aux questions. <li><b>En déconnexion.</b> Nous offrons aussi des tutoriels qui ne nécessitent pas d’ordinateur du tout. </ul>"
   hoc_faq_international_q: 'Je suis au <country>. Comment puis-je participer internationalement ?  '
@@ -313,24 +319,24 @@ fr:
   hoc_faq_tutorial_a: "Si vous souhaitez devenir partenaires pour nos tutoriels, <a href='targetHOC'> consultez nos instructions</a>. Nous tenons à accueillir une variété d'options engageantes, mais le but principal demeure d'optimiser l'expérience pour les élèves et les enseignants qui sont débutant en informatique."
   hoc_faq_account_q: Les étudiants doivent-ils se connecter en utilisant un compte ?
   hoc_faq_account_a: "Non. Absolument aucune inscription ou authentification n'est nécessaire pour que des élèves essaient l'Heure de Code. La plupart des <a href='%{codeorg_url}/learn/beyond'>cours avancés</a> nécessitent en revanche la création d'un compte pour enregistrer les progrès de l'élève."
-  hoc_faq_frozen_q: Où est le tutoriel avec Anna et Elsa ?
-  hoc_faq_frozen_a: "Il a maintenant été publié sur <a href='http://code.org/learn'> Code.org/learn</a>. Nous espérons qu'il vous plaira !"
   hoc_faq_high_school_q: Quelle activité faire avec des élèves du secondaire ?
   hoc_faq_high_school_a: "Pour tous les âges, nous vous recommandons d'essayer tout d'abord un des tutoriels pour débutants sur <a href='http://code.org/learn'> Code.org/learn</a>, par exemple le tutoriel avec Angry Birds ou Anna et Elsa. Un élève du secondaire doit être en mesure de terminer l'un d'entre eux en 30 minutes et peut alors essayer un tutoriel plus avancé en JavaScript, par exemple Khan Academy ou CodeHS."
   hoc_faq_scratch_q: "J'utilise Scratch pour l'Heure de Code, mais que faire si mes élèves ont des iPads plutôt que des ordinateurs portables ?"
   hoc_faq_scratch_a: "Scratch ne fonctionne pas sur tablettes. Si vos élèves sont jeunes, ils peuvent utiliser l'application iPad ScratchJR (pour les lecteurs débutants). En consultant les tutoriels sur <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, vous y trouverez d'autres tutoriels qui fonctionnent sur iPad: Code.org, Tynker, Lightbot ou CodeSpark."
   hoc_faq_count_hoc_q: Comment compter les Heures de Code ?
-  hoc_faq_map_q: "Why don't I see my dot on the map?"
-  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
+  hoc_faq_map_q: Pourquoi je ne peux pas voir mon point sur la carte?
+  hoc_faq_map_a: "Nous sommes vraiment désolés que vous ne voyiez pas votre événement sur la carte d'Une Heure de Code. À cause des milliers d'organisateurs qui s'inscrivent, la carte combine les données et affiche un point pour plusieurs événements. Si vous cliquez sur le nombre au-dessus de la carte, vous serez dirigé vers une liste de tous les événements par état et pourrez trouver votre événement listé à cet endroit. De plus, en raison des milliers de personnes qui s'inscrivent pour l'Heure de Code, la carte et la liste d'événements met généralement 48 heures à s'actualiser. Vérifiez dans quelques jours !"
   hoc_faq_count_hoc_a: "Le compte d'Une Heure de Code n'est pas une science exacte. Nous ne comptons pas parfaitement les ID étudiants uniques pendant les évènements, en particulier parce que nous n'imposons pas aux étudiants de s'inscrire ou de se connecter. En conséquence, nous pouvons aussi bien sur ou sous-estimer le nombre de participants au même moment. En savoir plus <a href='%{codeorg_url}/loc'> ici</a>."
-  hoc_faq_one_hour_q: How much can one learn in an hour?
-  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
+  hoc_faq_one_hour_q: Que peut-on apprendre en une heure ?
+  hoc_faq_one_hour_a: "L'objectif de l'Heure de Code n'est pas de permettre à quiconque de devenir un informaticien expert en une heure. Une heure est seulement suffisante pour apprendre que l'informatique est amusante et créative, qu'elle est accessible à tous les âges, pour tous les élèves, indépendamment de leur origine. La mesure du succès de cette campagne n'est pas dans le nombre d'élèves qui apprennent — la réussite se reflète dans la participation de genres, d'ethnies et de groupes socio-économiques variés, et l'augmentation résultante dans l'embauche et la participation que nous constatons dans les cours d'informatique à tous les niveaux de classe. Des millions d'enseignants et d'élèves parmi les participants ont décidé d'aller au-delà d'une heure — pour apprendre pendant une journée, une semaine ou plus, et de nombreux élèves ont décidé de suivre un cours complet (ou même des études) en conséquence. <br/><br/> Outre les élèves, un autre « apprenant » est l'éducateur qui découvre ainsi après une heure qu'il peut enseigner l'informatique même s'il n'a jamais eu de diplôme en informatique. Des dizaines de milliers d'enseignants décident de poursuivre davantage l'informatique, soit en assistant à des cours ou en proposant des cours en ligne, ou les deux. Et cela s'applique aux administrateurs scolaires également, qui réalisent que l'informatique est quelque chose dont leurs élèves ont envie et que leurs enseignants peuvent utiliser. <br/><br/> Et surtout, ce que tous les participants peuvent apprendre en une heure est que nous pouvons faire cela."
   hoc_faq_more_questions_q: Avez-vous encore des questions ?
   hoc_faq_more_questions_a: "Trouvez une réponse dans notre <a href='http://support.code.org'>forum de support</a>."
-  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
-  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
-  hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_keep_learning_q: Comment puis-je continuer à apprendre après une Heure de Code?
+  hoc_faq_keep_learning_a: "N'importe qui peut organiser Une Heure de Code à tout moment. Les tutoriels restent présents le long de l'année. Vous pouvez compter sur le fait que tous nos tutoriels et nos parcours resteront disponibles sur notre site à perpétuité. Veuillez consulter <a href='/promote'>nos ressources</a> pour des guides pratiques sur les événements et d'autres ressources pour vous aider à réussir votre événement Une Heure de Code."
+  hoc_faq_certificates_q: Où puis-je imprimer les certificats de mes étudiants?
+  hoc_faq_certificates_a: "Rendez-vous sur notre <a href='%{codeorg_url}/certificates'>page de certificats</a> sur laquelle vous pouvez imprimer des certificats pour votre classe à l'avance. Vous pouvez également imprimer des <a href='%{codeorg_url}/certificates?course=mc'>certificats spéciaux</a> pour les étudiants faisant le tutoriel Minecraft."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: "Statistiques sur l'évènement Une Heure de Code de 2013"
   stats_growth: "C'était l'évènement qui a atteint 15 millions d'utilisateurs le plus rapidement."
   stats_i18n: Les élèves peuvent apprendre dans 40 langues
@@ -389,7 +395,7 @@ fr:
   title_how_to_companies: 'Comment héberger Une Heure de Code - Entreprises'
   title_how_to_officials: Guide pratique pour les institutionnels
   title_how_to_volunteers: Guide pratique pour les bénévoles Une Heure de Code
-  title_how_to: Guide pratique
+  title_how_to: Guide
   title_press_release: 'Une Heure de Code - communiqué de presse pour les élus'
   title_op_ed: "Exemple de papier d'opinion favorable à la semaine d'éducation sur l'informatique et à Une Heure de Code"
   title_press_kit: Dossier de presse
@@ -417,6 +423,9 @@ fr:
   events_orgs_title: Tous les évènements Une Heure de Code organisés par des organisations partenaires
   event: évènement
   events: évènements
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: Copyright 2015 Code.org. Tous droits réservés.
   footer_trademark_message: Une Heure de Code™ est une marque de Code.org.
   footer_menu_partners: Partenaires

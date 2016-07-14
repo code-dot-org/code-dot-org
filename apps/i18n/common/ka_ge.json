@@ -1,6 +1,6 @@
 {
   "and": "და",
-  "animationMode": "Animation",
+  "animationMode": "ანიმაცია",
   "backToPreviousLevel": "წინა დონეზე დაბრუნება",
   "blocklyMessage": "Blockly",
   "blocks": "ბლოკი",
@@ -27,10 +27,13 @@
   "copy": "კოპირება",
   "copyright": "საავტორო უფლება",
   "currentVersion": "Current Version",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
-  "debugWatchHeader": "Watch",
+  "debugWatchHeader": "ყურება",
   "debugWatchNotAvailable": "<not available>",
   "defaultTwitterText": "ნახეთ, რა გავაკეთე",
   "designMode": "დიზაინი",
@@ -149,7 +152,7 @@
   "generatedCodeInfo": "ბლოკებზე დაფუძნებული პროგრამირება საუკეთესო უნივერსიტეტებშიც კი ისწავლება (მაგალითად, {berkeleyLink}, {harvardLink}). მაგრამ რეალურად ბლოკების ნახვა ასევე მსოფლიოს ყველაზე ფართოდ გამოყენებად პროგრამირების ენაში, JavaScript-შიც შეიძლება:",
   "hashError": "სამწუხაროდ, '%1' არ შეესაბამება არცერთ შენახულ პროგრამას.",
   "help": "დახმარება",
-  "hide": "Hide",
+  "hide": "დამალვა",
   "hideToolbox": "(დამალვა)",
   "hintHeader": "რჩევა:",
   "hintPrompt": "გჭირდებათ დახმარება?",
@@ -163,6 +166,7 @@
   "infinity": "უსასრულობა",
   "jump": "ახტომა",
   "keepPlaying": "განაგრძეთ თამაში",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "გააგრძელეთ კოდის წერა! ჯერ ყველაფერი არ არის სწორად.",
   "listVariable": "სია",
   "makeYourOwnFlappy": "შექმენით საკუთარი Flappy თამაში",
@@ -241,5 +245,7 @@
   "watchVideo": "უყურეთ ვიდეოს",
   "when": "როდის",
   "whenRun": "გაშვებისას",
-  "workspaceHeaderShort": "სამუშაო სივრცე: "
+  "workspaceHeaderShort": "სამუშაო სივრცე: ",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

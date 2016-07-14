@@ -29,6 +29,8 @@
   unsubmit: Intrekken
   previous_page: Vorige pagina
   next_page: Volgende pagina
+  next_resource: Volgende hulpbron
+  done_with_module: Done with this Learning Module
   cancel: Annuleren
   okay: Oké
   heading_x_of_y: "%{heading} (pagina %{x} van %{y})"
@@ -94,6 +96,7 @@
     teacher_title: Inschrijven voor leraren
     student_pitch: Code.org-aanmelding als leerling
     student_title: Registreren als leerling
+    signup_title: Meld u aan voor Code.org
     school_name: School naam (optioneel)
     school_address: Schooladres (optioneel)
     address_placeholder: adres, stad, provincie, postcode
@@ -119,6 +122,9 @@
       gebruikersvoorwaarden</a>.
     additional_information: We hebben aanvullende informatie nodig om door te kunnen
       gaan met uw registratie.
+    user_type_label: Account type
+    user_type_teacher: Leerkracht
+    user_type_student: Leerling
   signin_form:
     title: Heb je al een account? Log in
     login: Email of gebruikersnaam
@@ -497,12 +503,12 @@
     download: Video downloaden
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
+      unsupported_message: Uw browser wordt niet ondersteund. Probeer uw browser te
+        upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van
+        onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken, maar
+        verwacht problemen met de functionaliteit.
+      ie_message: Code.org beëindigt de ondersteuning voor Internet Explorer 8, 9
+        en 10. Probeer te upgraden naar een moderne browser.
       ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
         8, 9, and 10. Please upgrade to a modern browser.
       link: Leer meer
@@ -875,3 +881,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

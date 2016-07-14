@@ -45,8 +45,8 @@ ms,ms,ms,ms-MY,بهاس ملايو,Malay,FALSE,TRUE,ms,Malay,Hour of Code,FALSE,
 mt,mt,mt,mt-MT,Malti,Maltese,FALSE,FALSE,mt,Maltese,,FALSE,FALSE,FALSE
 ne,ne,ne,ne-NP,नेपाली,Nepali,FALSE,TRUE,ne-NP,Nepali,Hour of Code,FALSE,FALSE,FALSE
 nl,nl,nl,nl-NL,Nederlands,Dutch,TRUE,TRUE,nl,Dutch,Hour of Code,TRUE,TRUE,TRUE
-nn,nn,nn,nn-NO,Nynorsk,Norwegian,TRUE,FALSE,nn-NO,Norwegian,Kodetimen,TRUE,TRUE,TRUE
-no,no,no,no-NO,Norsk,Norwegian (Nynorsk),TRUE,TRUE,no,Norwegian Nynorsk,Kodetimen,TRUE,TRUE,TRUE
+nn,nn,nn,nn-NO,Norsk (Nynorsk),Norwegian (Nynorsk),TRUE,FALSE,nn-NO,Norwegian Nynorsk,Kodetimen,TRUE,TRUE,TRUE
+no,no,no,no-NO,Norsk (Bokmål),Norwegian (Bokmål),TRUE,TRUE,no,Norwegian,Kodetimen,TRUE,TRUE,TRUE
 pl,pl,pl,pl-PL,Polski,Polish,TRUE,TRUE,pl,Polish,Godzina Kodowania,TRUE,TRUE,TRUE
 ps,ps,ps,ps-AF,پښتو,Pashto,FALSE,FALSE,ps,Pashto,,FALSE,FALSE,FALSE
 pt-BR,pt,pt,pt-BR,Português (Brasil),Portuguese (Brazil),TRUE,TRUE,pt-BR,"Portuguese, Brazilian",Hora do Código,TRUE,TRUE,TRUE

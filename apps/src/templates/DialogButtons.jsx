@@ -1,3 +1,4 @@
+import Button from './Button';
 var React = require('react');
 var msg = require('../locale');
 var Lightbulb = require('./Lightbulb');
@@ -34,71 +35,154 @@ var DialogButtons = React.createClass({
     };
 
     if (this.props.ok) {
-      okButton = (<div className="farSide">
-        <button id="ok-button" className="secondary">
-          {msg.dialogOK()}
-        </button>
-      </div>);
+      okButton = (
+        <div className="farSide">
+          <Button type="primary" id="ok-button" className="secondary">
+            {msg.dialogOK()}
+          </Button>
+        </div>
+      );
     }
 
     if (this.props.cancelText) {
-      cancelButton = (<button id="again-button" className={this.props.cancelButtonClass || ''}>
-        {this.props.cancelText}
-      </button>);
+      cancelButton = (
+        <Button type="cancel" id="again-button" className={this.props.cancelButtonClass || ''}>
+          {this.props.cancelText}
+        </Button>
+      );
     }
 
     if (this.props.confirmText) {
-      confirmButton = (<button id="confirm-button" className="launch" style={style.confirmButton}>
-        {this.props.confirmText}
-      </button>);
+      confirmButton = (
+        <Button type="primary" id="confirm-button" className="launch" style={style.confirmButton}>
+          {this.props.confirmText}
+        </Button>
+      );
     }
 
     if (this.props.previousLevel) {
-      previousButton = (<button id="back-button" className="launch">
-        {msg.backToPreviousLevel()}
-      </button>);
+      previousButton = (
+        <Button type="primary" id="back-button" className="launch">
+          {msg.backToPreviousLevel()}
+        </Button>
+      );
     }
 
     if (this.props.tryAgain) {
       if (this.props.isK1 && !this.props.freePlay) {
-        againButton = (<div id="again-button" className="launch arrow-container arrow-left">
-          <div className="arrow-head"><img src={this.props.assetUrl('media/tryagain-arrow-head.png')} alt="Arrowhead" width="67" height="130"/></div>
-          <div className="arrow-text">{this.props.tryAgain}</div>
-        </div>);
+        againButton = (
+          <Button type="cancel"
+                  size="large"
+                  arrow="left"
+                  id="again-button"
+                  className="launch">
+            {this.props.tryAgain}
+          </Button>
+        );
       } else {
         if (this.props.shouldPromptForHint) {
-          hintButton = (<button id="hint-request-button" className="lightbulb-button">
-            <Lightbulb size={32} style={style.lightbulb}/>
-            {msg.hintRequest()}
-          </button>);
+          hintButton = (
+            <Button type="default" id="hint-request-button">
+              <Lightbulb size={32} style={style.lightbulb}/>
+              {msg.hintRequest()}
+            </Button>
+          );
         }
-        againButton = (<button id="again-button" className="launch">
-          {this.props.tryAgain}
-        </button>);
+        againButton = (
+          <Button type="cancel" id="again-button" className="launch">
+            {this.props.tryAgain}
+          </Button>
+        );
       }
     }
 
     if (this.props.nextLevel) {
       nextButton = (this.props.isK1 && !this.props.freePlay) ?
-          (<div id="continue-button" className="launch arrow-container arrow-right">
-            <div className="arrow-head"><img src={this.props.assetUrl('media/next-arrow-head.png')} alt="Arrowhead" width="66" height="130"/></div>
-            <div className="arrow-text">{this.props.continueText}</div>
-          </div>) :
-          (<button id="continue-button" className="launch" style={style.nextButton}>
-            {this.props.continueText}
-          </button>);
+                   (
+                     <Button type="primary"
+                             size="large"
+                             arrow="right"
+                             id="continue-button"
+                             className="launch"
+                             style={style.nextButton}>
+                       {this.props.continueText}
+                     </Button>
+                   ) : (
+                     <Button type="primary"
+                             id="continue-button"
+                             className="launch"
+                             style={style.nextButton}>
+                       {this.props.continueText}
+                     </Button>
+                   );
     }
 
-    return (<div>
-      {okButton}
-      {cancelButton}
-      {confirmButton}
-      {previousButton}
-      {hintButton}
-      {againButton}
-      {nextButton}
-    </div>);
+    return (
+      <div>
+        {okButton}
+        {cancelButton}
+        {confirmButton}
+        {previousButton}
+        {hintButton}
+        {againButton}
+        {nextButton}
+      </div>
+    );
   },
 });
 
 module.exports = DialogButtons;
+
+if (BUILD_STYLEGUIDE) {
+  DialogButtons.styleGuideExamples = storybook => {
+    storybook
+      .storiesOf('DialogButtons', module)
+      .addStoryTable([
+        {
+          name: 'ok',
+          story: () => <DialogButtons ok={true}/>
+        }, {
+          name: 'cancelText',
+          story: () => <DialogButtons cancelText="Custom Cancel Text"/>,
+        }, {
+          name: 'confirmText',
+          story: () => <DialogButtons confirmText="Custom Confirm Text"/>,
+        }, {
+          name: 'previousLevel',
+          story: () => <DialogButtons previousLevel={true}/>,
+        }, {
+          name: 'nextLevel',
+          story: () => <DialogButtons nextLevel={true} continueText="Custom Continue Text"/>,
+        }, {
+          name: 'tryAgain',
+          story: () => <DialogButtons tryAgain="Custom Try Again Text"/>,
+        }, {
+          name: 'tryAgain with hint',
+          story: () => <DialogButtons shouldPromptForHint={true} tryAgain="Custom Try Again Text"/>,
+        }, {
+          name: 'K1 customizations',
+          description: 'To use k1 customization, you must pass an assetUrl function.',
+          story: () => (
+            <DialogButtons
+                isK1={true}
+                tryAgain="Custom Try Again"
+                nextLevel={true}
+                continueText="Custom Continue"
+                assetUrl={url => '/blockly/'+url}/>
+          ),
+        }, {
+          name: 'K1 freePlay',
+          description: 'To use k1 customization, you must pass an assetUrl function.',
+          story: () => (
+            <DialogButtons
+                isK1={true}
+                freePlay={true}
+                tryAgain="Custom Try Again"
+                nextLevel={true}
+                continueText="Custom Continue"
+                assetUrl={url => '/blockly/'+url}/>
+          ),
+        }
+      ]);
+  };
+}

@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Спасибо за регистрацию на проведение Часа Кода!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
 ## 1. Распространите новость
 
@@ -30,7 +30,7 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 [Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
 
-## 4. Ask your employer to get involved
+## 4. Попросите своего работодателя принять участие
 
 [Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
 

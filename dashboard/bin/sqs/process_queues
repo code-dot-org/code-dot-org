@@ -32,6 +32,11 @@ class QueueProcessorManager
     metrics_map = {}
     configs = SQS::QueueProcessorConfig.create_configs_from_json(json)
     configs.each do |config|
+      if config.queue_url.blank?
+        logger.warn "Ignoring #{config.name} since it has no queue url."
+        next
+      end
+
       logger.info "Starting queue processor for #{config.name}"
       sqs_metrics = SQS::Metrics.new
       metrics_map[config.name] = sqs_metrics
@@ -96,7 +101,7 @@ class QueueProcessorManager
         print "."
         last_changed = false
       else
-        puts if !last_changed
+        puts unless last_changed
         last_changed = true
         metrics_map.each do |k,v|
           logger.info "#{k}: #{v}  time=#{Time.now.to_i - start_time}"

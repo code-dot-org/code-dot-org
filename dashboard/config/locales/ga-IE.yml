@@ -23,12 +23,14 @@
           future: earráid - dáta sa todhchaí
   hello: Dia dhuit a dhomhain
   welcome_back: Fáilte ar ais a %{name}
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Do phlean foghlamtha proifisiúnta
+  see_your_learning_plan: Féach ar do phlean foghlamtha
   submit: Seol
   unsubmit: Dísheol
   previous_page: An leathanach roimhe seo
   next_page: An chéad leathanach eile
+  next_resource: An chéad acmhainn eile
+  done_with_module: Done with this Learning Module
   cancel: Cealaigh
   okay: Ceart go leor
   heading_x_of_y: "%{heading} (leathanach %{x} as %{y})"
@@ -96,6 +98,7 @@
     teacher_title: Clárú mar mhúinteoir
     student_pitch: Cláraigh le Code.org mar dhalta
     student_title: Clárú mar dhalta
+    signup_title: Cláraigh le Code.org
     school_name: Ainm do Scoile (roghnach)
     school_address: Seoladh do Scoile (roghnach)
     address_placeholder: seoladh, cathair, stát, cód poist
@@ -120,6 +123,9 @@
       Code.org.
     additional_information: Teastaíonn tuilleadh eolais uainn sular féidir linn tú
       a chlárú.
+    user_type_label: Sórt cuntais
+    user_type_teacher: Múinteoir
+    user_type_student: Dalta
   signin_form:
     title: An bhfuil cuntas agat cheana? Logáil isteach
     login: Seoladh ríomhphoist nó ainm úsáideora
@@ -395,35 +401,35 @@
     print_certificate: Priontáil Teastas
     announcement_title: Fógraí
     announcement_view_all: Féach uile
-    announcement_message: 'We''ve started to measure student learning in Courses 1-4
-      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
-      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
-      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
-      the user experience</a> to answer the big question: <i>What can students do?</i>'
-    announcement_button: Tuilleadh eolais
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
+    announcement_message: Ar mhaith leat cabhrú linn chun gné nua a thástáil? Tuigimid
+      go bhfuil sé tábhachtach daltaí a spreagadh chun triail agus atriail, mar sin
+      beimid ag cur gné "cód neamhúsáidte" leis seo ionas go bhfuil daltaí ábalta
+      a gcuid cóid a rith fiú má tá blocanna neamhcheangailte. Cuirimid fáilte roimh
+      do chuid aiseolais sula gcraolfaimid an gné go poiblí.
+    announcement_button: Tástáil an ghné
+    announcement_petition: Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht
+      chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim.
+      Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo,
+      tháinig ceannairí oideachais, 28 gobharnóir, agus príomhoifigigh na gcomhlachtaí
+      is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil
+      na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
+    announcement_petition_button: Cuir d'ainm leis
   move_students:
-    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
-      enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as
-      the new section.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    new_section_dne: Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin
+      eile.
+    section_code_not_entered: Tabhair cód an rannáin reatha.
+    section_code_cant_be_current_section: Is ionann iad an rannán reatha agus an rannán
+      nua.
+    current_section_dne: Níl rannán %{current_section_code} ann. Cuir isteach cód
+      rannáin eile.
+    students_not_yours: Níl cead agat daltaí a bhogadh as rannán nach bhfuil agatsa.
+    stay_enrolled_not_entered: Tabhair "fág cláraithe leis an rannán reatha".
+    student_ids_not_entered: Tabhair uimhreacha aitheantais.
+    student_not_found: Níor aimsíodh dalta nó daltaí de do chuid.
+    all_students_must_be_in_current_section: Ní mór do na daltaí go léir a bheith
+      cláraithe le do rannánsa.
+    already_enrolled_in_new_section: Ní féidir leat na daltaí seo a bhogadh toisc
+      go bhfuil siad i rannán eile de chuid an mhúinteora seo.
   share:
     title: Foghlaim sa Stiúideo Códála
     description: Is féidir le haon duine an ríomheolaíocht a fhoghlaim. Déan cluichí,
@@ -499,14 +505,14 @@
     download: "Íoslódáil an Físeán"
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
+      unsupported_message: Ní thacaímid le do bhrabhsálaí. Ba chóir duit <a href='%{supported_browsers_url}',
+        target='_blank'>ceann de na brabhsálaithe tacaithe</a> a shuiteáil. Nó is
+        féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe
+        ar an leathanach briste.
+      ie_message: Stopfaidh Code.org ag tacú le hInternet Explorer 8, 9, agus 10 go
+        luath. Ba chóir duit brabhsálaí nua-aimseartha a shuiteáil.
+      ie_message_csedweek: Stopfaidh CSEdWeek.org ag tacú le hInternet Explorer 8,
+        9, agus 10 go luath. Ba chóir duit brabhsálaí nua-aimseartha a shuiteáil.
       link: Tuilleadh eolais
   slow_loading: Moill as an ngnáth air seo...
   try_reloading: Déan iarracht an leathanach a lódáil arís
@@ -587,7 +593,7 @@
       body: Taiscéal domhan Minecraft le cód.
     unplugged:
       title: Ceachtanna Díphlugáilte
-      audience: Aois 6+
+      audience: Aois 4+
       body: Bhailíomar liosta de cheachtanna díphlugáilte is féidir a úsáid i do sheomra
         ranga. Anois, beidh tú in ann buntús na ríomheolaíochta a mhúineadh, is cuma
         mura bhfuil ríomhairí i do sheomra ranga! Bain úsáid as na ceachtanna seo
@@ -604,8 +610,8 @@
       aip agus pictiúr trína ríomhchláir féin a scríobh. Cliceáil na pictiúir le gach
       ceann acu a fheiceáil i ngníomh.
     want_to_make_your_own: Ar mhaith leat do cheann féin a dhéanamh?
-    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
-      save your work to the gallery.
+    how_to_save: Ar an leibhéal deireanach de na cúrsaí teagaisc seo, cliceáil "Críochnaigh"
+      agus "Sábháil" le do chuid oibre a shábháil sa ghailearaí.
     more: Tuilleadh &rarr;
     caption_by_name_age: le %{name}, aois %{age}
     caption_time_ago: "%{time_ago} ó shin"
@@ -760,10 +766,10 @@
     share: Comhroinn
     share_title: Comhroinn do thogra
     share_copy_link: 'Cóipeáil an nasc:'
-    share_embed_description: You can paste the embed code into an HTML page to display
-      the project on a webpage.
-    embed: Embed
-    advanced_share: Show advanced options
+    share_embed_description: Is féidir an cód leabaithe a ghreamú isteach i leathanach
+      HTML chun an togra a chur ar taispeáint ar leathanach Gréasáin.
+    embed: Leabaigh
+    advanced_share: Taispeáin na hardroghanna
     close: Dún
     more: Tuilleadh
     name: Ainm
@@ -818,62 +824,74 @@
           agus de réir na %{link_start_tos}dTéarmaí Seirbhíse%{link_end}
   peer_review:
     accepted:
-      name: Accepted
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      name: Glactha
+      description: "<strong>Comhlíonann</strong> sé seo na riachtanais"
     rejected:
-      name: Rejected
-      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
-        the requirements"
+      name: Diúltaithe
+      description: "<strong>Ní chomhlíonann</strong> sé seo na riachtanais"
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+      name: Ardaithe
+      description: Ba mhaith liom é seo a chur faoi bhráid múinteora
+    instructor_feedback: Aiseolas ó Mhúinteoir
+    peer_feedback: Aiseolas ó Scoláirí Eile
+    outdated: Baineann an t-aiseolas seo le seanleagan
   components:
     icon_library:
       search_placeholder_text: Lorg deilbhín...
       no_icons_found: Níor aimsíodh aon deilbhíní
     playzone:
       artist_description: Tarraing pictiúir iontacha leis an Ealaíontóir!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: Líníocht Nua
+      continue_button: Ar aghaidh go dtí an chéad chéim eile
       playlab_description: Cruthaigh scéal nó cluiche sa Spraotharlann!
-      playlab_title: New App
-      primary_header: Congratulations! You finished %{stageName}!
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      playlab_title: Aip Nua
+      primary_header: Comhghairdeas! Chríochnaigh tú %{stageName}!
+      projects_description: Fill ar sheantogra de do chuid.
+      projects_title: Oscail togra
+      secondary_header: Fiafraigh de do mhúinteoir cad a dhéanfaidh tú anois
   flex_category:
     required: Foramharc
-    content: Content
-    practice: Teacher Practices
+    content: "Ábhar"
+    practice: Cleachtais Mhúinteoireachta
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer_md: "<strong>Séanadh: Tá tú ar tí an fearann seo a fhágáil, chun cuairt
+      a thabhairt ar shuíomh nach bhfuil faoi stiúir Code.org.</strong> Seans nach
+      ionann na polasaithe príobháideachais ar an suíomh seo agus ar Code.org.<br/><br/>Roghnaigh
+      muid na hacmhainní tríú páirtí seo toisc go gceapaimid go mbainfidh tú tairbhe
+      astu. Cé nach bhfuilimid freagrach as an ábhar atá ar an suíomh, bheadh fáilte
+      romhat <a href='%{support_url}'>dul i dteagmháil linn</a> dá mbeadh ábhar gránna
+      nó maslach air, nó dá mbeadh an nasc leis an suíomh briste."
   hoc_download:
-    title: Hour of Code downloads
-    capsule_title: Do you have Internet?
-    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: No Internet?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    title: "Íoslódálacha: An Uair Chódála"
+    capsule_title: An bhfuil tú ceangailte leis an Idirlíon?
+    capsule_desc: Bain triail as an acmhainn ar líne <a href="%{url}">%{app_name}</a>.
+    instructions_headline: Gan ceangal Idirlín?
+    instructions: 'Treoracha do mhúinteoirí: mura bhfuil do cheangal Idirlín thar
+      mholadh beirte, is féidir leat na cúrsaí teagaisc seo a íoslódáil agus a shuiteáil
+      len iad a úsáid as líne. Roghnaigh do theanga agus d''ardán, íoslódáil an pacáiste,
+      agus suiteáil ar na ríomhairí i do sheomra ranga é. Is furasta é a íoslódáil
+      uair amháin ar chipín USB, ansin a shuiteáil ar gach ríomhaire. Tabhair faoi
+      deara nach mbeidh na daltaí ábalta logáil isteach sa Stiúideo Códála, dul chun
+      cinn a shábháil, nó teastais a phriontáil. Is féidir le múinteoirí na teastais
+      a phriontáil roimh ré <a href="%{url}">anseo</a>.'
+    minecraft_name: An Uair Chódála Minecraft
+    starwars_blocks_name: 'Star Wars: Tóg do Réaltra Féin le Cód (Blocanna)'
+    starwars_javascript_name: 'Star Wars: Tóg do Réaltra Féin le Cód (JavaScript)'
+    download_message: "Íoslódáil %{app_name} lena úsáid as líne (136MB)"
+    download_in_english: "Íoslódáil i mBéarla:"
+    download_in_spanish: "Íoslódáil i Spáinnis:"
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

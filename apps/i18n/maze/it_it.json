@@ -18,7 +18,7 @@
   "fillTooltip": "metti 1 palata di terra",
   "finalLevel": "Complimenti! Hai risolto l'esercizio finale.",
   "flowerEmptyError": "Il fiore su cui ti trovi non ha più nettare.",
-  "didNotCollectEverything": "Assicurati di non lasciare nettare o miele dietro di te!",
+  "didNotCollectEverything": "Assicurati di raccogliere tutto il nettare o produrre tutto il miele!",
   "get": "prendi",
   "heightParameter": "altezza",
   "holePresent": "c'è una buca",
@@ -82,5 +82,12 @@
   "whileTooltip": "Ripete le azioni incluse, smettendo quando diventa vera la condizione di arresto.",
   "word": "Scrivi la parola",
   "yes": "Sì",
-  "youSpelled": "Hai scritto finora"
+  "youSpelled": "Hai scritto finora",
+  "collectiblePresent": "there is some treasure",
+  "collect": "collect",
+  "collectorCollectTooltip": "Collect an item",
+  "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
+  "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
+  "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!"
 }

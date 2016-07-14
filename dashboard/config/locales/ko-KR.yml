@@ -29,6 +29,8 @@
   unsubmit: "제출 취소"
   previous_page: "이전 페이지"
   next_page: "다음 페이지"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "취소"
   okay: "알겠어"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -88,6 +90,7 @@
     teacher_title: "선생님 가입"
     student_pitch: "학생 가입(Code.org)"
     student_title: "학생 가입"
+    signup_title: Sign up for Code.org
     school_name: "학교 이름 (옵션)"
     school_address: "학교 주소 (옵션)"
     address_placeholder: "주소, 군구, 시도, 우편번호"
@@ -107,6 +110,9 @@
       13세 미만인 경우에는 부모님 또는 보호자의 허락하에 Code.org의 서비스를 사용합니다. 13세 미만의 이메일 주소는 저장되지 않습니다."
     teacher_terms: "나는 Code.org 의 <a href='http://code.org/tos'>서비스 정책과 약관</a>에 동의합니다."
     additional_information: "가입하기 위해서는 추가적인 정보가 필요합니다."
+    user_type_label: Account Type
+    user_type_teacher: "선생님"
+    user_type_student: student
   signin_form:
     title: "계정이 있으면? 로그인"
     login: "이메일 또는 아이디"
@@ -358,11 +364,9 @@
       언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서
       모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요."
     announcement_button: "더 알아보기"
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition: "교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에 앞장서고
+      있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의 CEO들은
+      미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
     announcement_petition_button: "이름을 입력하세요"
   move_students:
     new_section_dne: "죄송합니다. %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
@@ -370,9 +374,9 @@
     section_code_cant_be_current_section: "현재 섹션과 새로운 섹션은 동일할 수 없습니다."
     current_section_dne: "죄송합니다. %{current_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
     students_not_yours: "여러분에게 속해 있지 않은 학생들을 섹션에서 이동시킬 수 없습니다."
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    stay_enrolled_not_entered: "'현재 섹션에 등록'을 입력하십시오."
     student_ids_not_entered: "학생의 ID를 입력하세요."
-    student_not_found: "한명 또는 그 이상의 학생을 찾을 수 없습니다."
+    student_not_found: "한 명 이상의 학생을 찾을 수 없습니다."
     all_students_must_be_in_current_section: "모든 학생들은 당신의 섹션에 등록되어야 합니다."
     already_enrolled_in_new_section: "이 학생들은 다른 섹션에 등록하였기 때문에 이동이 불가능합니다."
   share:
@@ -444,14 +448,13 @@
     download: "동영상 다운로드"
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
-      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and
-        10. Please upgrade to a modern browser.
-      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer
-        8, 9, and 10. Please upgrade to a modern browser.
+      unsupported_message: "브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}',
+        target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게
+        동작하지 않을 수 있습니다."
+      ie_message: Code.org는 곧 인터넷 익스플로러 8, 9, 10에 대한 지원을 종료할 것입니다. 최신 브라우저로 업그레이드
+        해주세요.
+      ie_message_csedweek: CSEdWeek.org는 곧 인터넷 익스플로러 8, 9, 10에 대한 지원을 종료할 것입니다. 최신
+        브라우저로 업그레이드 해주세요.
       link: "더 알아보기"
   slow_loading: "연결이 느립니다."
   try_reloading: "페이지를 다시 로드 해 보세요."
@@ -535,8 +538,7 @@
     activity_count: "지난  <b>%{days}</b>일 동안 학생들이 <b>%{count}</b>개의 앱과 그림을 자기 자신의 힘으로
       만들었습니다. 그림이나 스크린샷을 누르면 각각의 프로그램을 실행시켜볼 수 있습니다."
     want_to_make_your_own: "자기 코드를 만들겠습니까?"
-    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
-      save your work to the gallery.
+    how_to_save: 이 튜토리얼의 마지막 레벨에서 여러분의 작품을 갤러리에 저장하기 위해 "완료"와 "저장"을 클릭하세요.
     more: "더 살펴보기"
     caption_by_name_age: "%{age}살, %{name}가"
     caption_time_ago: "%{time_ago} 전에"
@@ -677,10 +679,9 @@
     share: "공유하기"
     share_title: "프로젝트 공유"
     share_copy_link: "링크 복사"
-    share_embed_description: You can paste the embed code into an HTML page to display
-      the project on a webpage.
-    embed: Embed
-    advanced_share: Show advanced options
+    share_embed_description: "웹 페이지에서 프로젝트를 보여주기 위해 HTML 페이지에 소스 코드를 붙여넣을 수 있습니다."
+    embed: "삽입"
+    advanced_share: "고급 옵션 표시"
     close: "닫기"
     more: "더 많은"
     name: "이름"
@@ -728,36 +729,34 @@
   peer_review:
     accepted:
       name: "승인됨"
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      description: "<strong>네</strong>, 제출 요구 사항을 <strong>만족</strong>합니다."
     rejected:
       name: "거절됨"
-      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
-        the requirements"
+      description: "<strong>아니오</strong>, 제출 요구 사항을 <strong>만족하지않습니다.</strong>"
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+      name: "상부에 보고됨"
+      description: "제출 내용을 검토해 주세요."
+    instructor_feedback: "강사 피드백"
+    peer_feedback: "동료 피드백"
+    outdated: "이 피드백은 이전에 제출된 버전에 추가되었습니다."
   components:
     icon_library:
       search_placeholder_text: "아이콘 검색..."
       no_icons_found: "아이콘이 발견되지 않음"
     playzone:
       artist_description: "화가를 이용해 멋진 그림과 디자인을 만들어보세요!"
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: "새로운 그림"
+      continue_button: "다음단계로 가세요"
       playlab_description: Play Lab을 이용해 스토리나 게임을 만드세요!
-      playlab_title: New App
-      primary_header: Congratulations! You finished %{stageName}!
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      playlab_title: "새로운 앱"
+      primary_header: "축하합니다! 당신은 %{stageName}! 를 마쳤습니다."
+      projects_description: "기존 프로젝트 중에서 다시 열기"
+      projects_title: "프로젝트 열기"
+      secondary_header: "다음으로 해야 할 일을 선생님께 여쭤보세요."
   flex_category:
     required: "개요"
     content: "콘텐츠"
-    practice: Teacher Practices
+    practice: "선생님 연습"
   external_links:
     disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
       a site that is not operated by Code.org.</strong> This site may have privacy
@@ -767,22 +766,32 @@
       support</a> if you find the content objectionable, or if the linked site is
       no longer available."
   hoc_download:
-    title: Hour of Code downloads
-    capsule_title: Do you have Internet?
-    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: No Internet?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
-    windows: Windows
-    mac: Mac OS X
+    title: Hour of Code 다운로드
+    capsule_title: "인터넷을 사용할 수 있습니까?"
+    capsule_desc: 웹 기반의 <a href="%{url}">%{app_name}</a>를 이용하세요.
+    instructions_headline: "인터넷 연결이 안되요?"
+    instructions: '교사용 지침: 인터넷 서비스가 좋지 못하다면 Hour of Code 튜토리얼을 오프라인용으로 다운로드하고 설치하여
+      사용할 수 있습니다. 언어와 플랫폼을 선택하고, 다운로드 한 후, 여러분 학급의 모든 컴퓨터에 설치하세요. USB 드라이브에 한 번 다운로드
+      한 후 모든 컴퓨터에 설치하면 됩니다. 참고: 학생들은 Code Studio에 접속하거나 진행 사항을 저장하거나 인증서를 출력할 수 없습니다.
+      선생님은 <a href="%{url}">여기</a>에서 미리 인증서를 출력할 수 있습니다.'
+    minecraft_name: "마인크래프트 코드의 시간"
+    starwars_blocks_name: "스타워즈: 코드로 은하계를 건설하기 (\t블록)"
+    starwars_javascript_name: "스타워즈: 코드로 은하계를 건설하기 (자바스크립트)"
+    download_message: "오프라인용 (136 Mb) 다운로드 %{app_name}"
+    download_in_english: "영어로 다운로드:"
+    download_in_spanish: "스페인어로 다운로드:"
+    windows: "윈도우즈"
+    mac: "맥 OS X"
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

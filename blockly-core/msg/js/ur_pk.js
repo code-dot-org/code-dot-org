@@ -1,7 +1,8 @@
 Blockly.Msg.ACTUAL = "بلانا";
-Blockly.Msg.ADD = "شامل کرنا";
+Blockly.Msg.ADD = "ا ضافہ کرنا";
 Blockly.Msg.ADD_COMMENT = "تبصرہ شامل کریں";
 Blockly.Msg.ADD_PARAMETER = "پیرامیٹر کا اضافہ کرنا";
+Blockly.Msg.CANCEL = "منسوخ کریں";
 Blockly.Msg.CHANGE_VALUE_TITLE = "قیمت تبدیل کریں:";
 Blockly.Msg.CLOSE = "Close";
 Blockly.Msg.COLLAPSE_ALL = "بلاکس کھولیں";
@@ -23,7 +24,9 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "لال";
 Blockly.Msg.COLOUR_RGB_TITLE = "رنگ کے ساتھ";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "سرخ، سبز اور نیلے رنگ کی مخصوص مقدار کے ساتھ ایک رنگ تخلیق کریں ۔  تمام اقدار 0 اور 100 کے درمیان ہونا چاہیے ۔";
+Blockly.Msg.CONFIRM_CREATE_VARIABLE = "بنائیں";
 Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE = "انتباہ! آپ کو یقین ہے کہ آپ %1 کو ختم کرنا چاہتے ہیں؟";
+Blockly.Msg.CONFIRM_RENAME_VARIABLE = "Rename";
 Blockly.Msg.CONTRACT_EDITOR_HEADER = "ڈیزائن کے ریسپی";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "لوپ سے نکل جائیں";
@@ -45,7 +48,7 @@ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "آخر میں catch-all کی شرط کا
 Blockly.Msg.CONTROLS_IF_HELPURL = "http://code.google.com/p/blockly/wiki/If_Then";
 Blockly.Msg.CONTROLS_IF_IF_TOOLTIP = "اس if کی رکاوٹ کو دوبارہ تشکِل دینے کے لئے اس کے حصوں میں اضافہ کریں ، ہٹائیں یا دوبارہ ترتیب دیں۔";
 Blockly.Msg.CONTROLS_IF_MSG_ELSE = "ni to";
-Blockly.Msg.CONTROLS_IF_MSG_ELSEIF = "agr ni to";
+Blockly.Msg.CONTROLS_IF_MSG_ELSEIF = "ورنہ تو";
 Blockly.Msg.CONTROLS_IF_MSG_IF = "agr";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_1 = "Agr aik adad sahi hai to kuch aur bayanaat (Statments) dijiye.";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_2 = "Agr aik raqam sahi hai to pehle hisse k bayanaat ko muqammal kijiye. ni to dosre hisse k bayanaat (statments) ko kijiye. ";
@@ -373,6 +376,7 @@ Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH = "دونوں جانب سے اسپیسز ک�
 Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "لیفٹ سائڈ سے اسپیسز ٹرم کریں";
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "رائٹ سائڈ سے اسپیسز ٹزم کریں";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "ایک یا دونوں جانب سے اسپیسز نکال کر ٹیسکٹ کی ایک کاپی ریٹرن کریں۔";
+Blockly.Msg.UNUSED_CODE = "غیر استعمال شدہ ضابطہ";
 Blockly.Msg.VARIABLES_DEFAULT_NAME = "آئیٹم";
 Blockly.Msg.VARIABLES_GET_CREATE_SET = "'set %1' کری-ایٹ کریں";
 Blockly.Msg.VARIABLES_GET_HELPURL = "http://code.google.com/p/blockly/wiki/Variables#Get";

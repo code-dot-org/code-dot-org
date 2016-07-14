@@ -142,6 +142,7 @@ en:
       2-3 Maze 12 (copy 1)_instruction: crwdns34039:0crwdne34039:0
       2-3 Maze 12 (copy 2)_instruction: crwdns34040:0crwdne34040:0
       2-3 Maze 12 (old)_instruction: crwdns34041:0crwdne34041:0
+      2-3 Maze 12 - One Move Block_instruction: crwdns57003:0crwdne57003:0
       2-3 Maze 12_instruction: crwdns34042:0crwdne34042:0
       2-3 Maze 13 (old)_instruction: crwdns34043:0crwdne34043:0
       2-3 Maze 13_instruction: crwdns30367:0crwdne30367:0
@@ -340,6 +341,14 @@ en:
       aE1_instruction: crwdns56955:0crwdne56955:0
       aE2_instruction: crwdns56956:0crwdne56956:0
       aE3_instruction: crwdns56957:0crwdne56957:0
+      aE3alternate_instruction: crwdns57004:0crwdne57004:0
+      aE3alternateB_instruction: crwdns57005:0crwdne57005:0
+      aE4_instruction: crwdns57006:0crwdne57006:0
+      aE5_instruction: crwdns57007:0crwdne57007:0
+      aE6_instruction: crwdns57008:0crwdne57008:0
+      aE7_instruction: crwdns57009:0crwdne57009:0
+      aE8_instruction: crwdns57010:0crwdne57010:0
+      aEfreeplay_instruction: crwdns57011:0crwdne57011:0
       AlgPD DR Free Play_instruction: crwdns43212:0crwdne43212:0
       AllTheThings Applab - Turtle move with button_instruction: crwdns50293:0crwdne50293:0
       allthethings data blocks test_instruction: crwdns55903:0crwdne55903:0
@@ -364,8 +373,21 @@ en:
       Artist - Nested Loops 8_instruction: crwdns34192:0crwdne34192:0
       Artist - Nested Loops 9_instruction: crwdns30575:0crwdne30575:0
       Artist - Nested Loops Assessment 1_instruction: crwdns34193:0crwdne34193:0
+      artistLoopsK1_instruction: crwdns57074:0crwdne57074:0
+      artistLoopsK2_instruction: crwdns57075:0crwdne57075:0
+      artistLoopsK3_instruction: crwdns57076:0crwdne57076:0
+      artistLoopsK4_instruction: crwdns57077:0crwdne57077:0
+      artistLoopsK5_instruction: crwdns57078:0crwdne57078:0
+      artistLoopsK6_instruction: crwdns57079:0crwdne57079:0
+      artistLoopsK7_instruction: crwdns57080:0crwdne57080:0
+      artistLoopsK8_instruction: crwdns57081:0crwdne57081:0
+      artistLoopsK9_instruction: crwdns57082:0crwdne57082:0
+      artistLoopsKA_instruction: crwdns57083:0crwdne57083:0
+      artistLoopsKB_instruction: crwdns57084:0crwdne57084:0
+      artistLoopsKFP_instruction: crwdns57085:0crwdne57085:0
       Auto Open Function Editor_instruction: crwdns49693:0crwdne49693:0
       Bee Recommended Blocks test_instruction: crwdns51029:0crwdne51029:0
+      Bergeron Robot Maze1_instruction: crwdns57012:0crwdne57012:0
       Big Game Animation 1 (copy 1)_instruction: crwdns34923:0crwdne34923:0
       Big Game Animation 1_instruction: crwdns37642:0crwdne37642:0
       Big Game Animation 2 (copy 1)_instruction: crwdns34925:0crwdne34925:0
@@ -737,6 +759,7 @@ en:
       CSD U3 Simple Drawing - Animation_instruction: crwdns56287:0crwdne56287:0
       CSD U3 Simple Drawing - Background_instruction: crwdns56288:0crwdne56288:0
       CSD U3 Simple Drawing - Personal Animation_instruction: crwdns56458:0crwdne56458:0
+      CSD U3 Sprites intro sprites_instruction: crwdns57013:0crwdne57013:0
       CSD U3 Variable Arithmetic pt2_instruction: crwdns56289:0crwdne56289:0
       CSD U3 Variable Arithmetic_instruction: crwdns56290:0crwdne56290:0
       CSD U3 Variable Incrementation pt2_instruction: crwdns56291:0crwdne56291:0
@@ -865,6 +888,7 @@ en:
       Eval Strings Images 7_instruction: crwdns38338:0crwdne38338:0
       Eval Strings Images 8_instruction: crwdns36009:0crwdne36009:0
       Eval Strings Images Free Play_instruction: crwdns36446:0crwdne36446:0
+      eventsIntro_instruction: crwdns57086:0crwdne57086:0
       Farmer for Authored Hint testing_instruction: crwdns55887:0crwdne55887:0
       Frequency Analysis_instruction: crwdns49707:0crwdne49707:0
       frozen circle function in circle_instruction: crwdns34503:0crwdne34503:0
@@ -1016,7 +1040,21 @@ en:
       K-1 Maze Multi 15_instruction: crwdns31060:0crwdne31060:0
       K-1 Maze Sequence Assessment 1_instruction: crwdns38658:0crwdne38658:0
       K-1 Maze Sequence Assessment 2_instruction: crwdns38659:0crwdne38659:0
+      K2.0 sequence 1_instruction: crwdns57087:0crwdne57087:0
+      K2.0 sequence 10_instruction: crwdns57088:0crwdne57088:0
+      K2.0 sequence 2_instruction: crwdns57089:0crwdne57089:0
+      K2.0 sequence 3_instruction: crwdns57090:0crwdne57090:0
+      K2.0 sequence 4_instruction: crwdns57091:0crwdne57091:0
+      K2.0 sequence 5_instruction: crwdns57092:0crwdne57092:0
+      K2.0 sequence 6_instruction: crwdns57093:0crwdne57093:0
+      K2.0 sequence 7_instruction: crwdns57094:0crwdne57094:0
+      K2.0 sequence 8_instruction: crwdns57095:0crwdne57095:0
+      K2.0 sequence 9_instruction: crwdns57096:0crwdne57096:0
+      kikiTesta_instruction: crwdns57014:0crwdne57014:0
       kikiTesting_instruction: crwdns54266:0crwdne54266:0
+      KTest1_instruction: crwdns57015:0crwdne57015:0
+      KTest2_instruction: crwdns57016:0crwdne57016:0
+      Limited Quantity of Blocks Test_instruction: crwdns57017:0crwdne57017:0
       love_spring_1_instruction: crwdns56176:0crwdne56176:0
       love_spring_2_instruction: crwdns56177:0crwdne56177:0
       love_spring_3_instruction: crwdns56178:0crwdne56178:0
@@ -1028,7 +1066,11 @@ en:
       Luigi's Pizza 4_instruction: crwdns36011:0crwdne36011:0
       Middle School Hackathon Pt 1_instruction: crwdns56231:0crwdne56231:0
       Middle School Hackathon Pt 2_instruction: crwdns56232:0crwdne56232:0
+      Mike Pair Programming_instruction: crwdns57018:0crwdne57018:0
       MikeAssessment1_instruction: crwdns56885:0crwdne56885:0
+      MikeStar_instruction: crwdns57019:0crwdne57019:0
+      MikeStarHard_instruction: crwdns57020:0crwdne57020:0
+      MikeStarNested_instruction: crwdns57021:0crwdne57021:0
       MikeTest1_instruction: crwdns56886:0crwdne56886:0
       MikeTest2_instruction: crwdns56887:0crwdne56887:0
       MikeTest3_instruction: crwdns56888:0crwdne56888:0
@@ -1132,7 +1174,6 @@ en:
       NEW Course 4 Play Labs For Loops 7a_instruction: crwdns43360:0crwdne43360:0
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: crwdns34646:0crwdne34646:0
       NEW Course 4 Play Labs For Loops 8a_instruction: crwdns43361:0crwdne43361:0
-      New Play Lab Project_instruction: crwdns35010:0crwdne35010:0
       Ninjacat Demo B (copy 1)_instruction: crwdns34647:0crwdne34647:0
       Ninjacat Demo B_instruction: crwdns35750:0crwdne35750:0
       Ninjacat Demo No Animate_instruction: crwdns39002:0crwdne39002:0
@@ -1202,6 +1243,8 @@ en:
       Play Lab Rocket 4_instruction: crwdns35189:0crwdne35189:0
       Play Lab Rocket 5_instruction: crwdns35190:0crwdne35190:0
       Play Lab Rocket Free Play_instruction: crwdns35191:0crwdne35191:0
+      playEventsK1_instruction: crwdns57097:0crwdne57097:0
+      playEventsK2_instruction: crwdns57098:0crwdne57098:0
       Poorva copy U3L2 Using Simple Commands_instruction: crwdns56766:0crwdne56766:0
       Poorva-test_instruction: crwdns55888:0crwdne55888:0
       PS Log test - Define and use turnAround_instruction: crwdns56269:0crwdne56269:0
@@ -1259,9 +1302,11 @@ en:
       Standalone_Artist_8_instruction: crwdns34699:0crwdne34699:0
       Standalone_Artist_9_instruction: crwdns34700:0crwdne34700:0
       Standalone_Artist_v2_instruction: crwdns35014:0crwdne35014:0
+      StepIntro_instruction: crwdns57099:0crwdne57099:0
       template test_instruction: crwdns50670:0crwdne50670:0
       Test Play Lab_instruction: crwdns43227:0crwdne43227:0
       test_sarah_instruction: crwdns50671:0crwdne50671:0
+      testArtistForTestK_instruction: crwdns57100:0crwdne57100:0
       Testing Quantum Farmer_instruction: crwdns56301:0crwdne56301:0
       Text Compression 1_instruction: crwdns48389:0crwdne48389:0
       Total Artist Clone Me_instruction: crwdns50672:0crwdne50672:0

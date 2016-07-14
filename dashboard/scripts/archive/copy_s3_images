@@ -33,5 +33,4 @@ LevelSourceImage.where(['id > ?', START_ID]).find_each do |lsi|
   else
     puts '.'
   end
-
 end

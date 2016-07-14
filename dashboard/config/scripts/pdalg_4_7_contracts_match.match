@@ -10,6 +10,6 @@ question 'text: String Number -> Image'
 answer 'Missing an item in the domain'
 
 markdown <<MARKDOWN
-<img src="https://staging-studio.code.org/script_assets/pd/text.png" style="float:left; margin: 10px; width: 300px;"/>Common mistakes when students first write down contracts include writing values (such as `red`) instead of types (such as `String`) and forgetting arguments. Match the following contracts for the function `text` with the student confusion they reflect. 
+<img src="//studio.code.org/script_assets/pd/text.png" style="float:left; margin: 10px; width: 300px;"/>Common mistakes when students first write down contracts include writing values (such as `red`) instead of types (such as `String`) and forgetting arguments. Match the following contracts for the function `text` with the student confusion they reflect.
 
 MARKDOWN

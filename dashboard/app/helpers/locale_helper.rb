@@ -1,5 +1,4 @@
 module LocaleHelper
-
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
     current = request.env['cdo.locale']
@@ -85,5 +84,4 @@ module LocaleHelper
       (hidden_field_tag :return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
     end
   end
-
 end

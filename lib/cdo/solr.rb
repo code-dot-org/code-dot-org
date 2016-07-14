@@ -1,7 +1,6 @@
 require 'json'
 
 module Solr
-
   class Server
 
     def initialize(params={})
@@ -36,10 +35,10 @@ module Solr
       def initialize(http, params)
         @http = http
         @params = params.dup
-        @start, @count, @docs = fetch(params[:start]||0)
+        @start, @count, @docs = fetch(params[:start] || 0)
       end
 
-      def count()
+      def count
         @count
       end
 
