@@ -1,7 +1,6 @@
 require 'cdo/aws/s3'
 require 'cdo/rack/request'
 require 'sinatra/base'
-require_relative 'helpers/profanity_privacy_helper'
 
 class FilesApi < Sinatra::Base
   def max_file_size
@@ -88,7 +87,7 @@ class FilesApi < Sinatra::Base
   end
 
   helpers do
-    %w(core.rb bucket_helper.rb animation_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb).each do |file|
+    %w(core.rb bucket_helper.rb animation_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
