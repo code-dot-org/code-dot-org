@@ -114,7 +114,23 @@ class SourcesTest < FilesApiTestBase
       FilesApi.any_instance.unstub(:teaches_student?)
     end
 
-    @api.delete_object(filename)
+    delete_all_source_versions(filename)
+  end
+
+  def test_policy_channel_api
+    filename = 'main.json'
+    file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
+    file_headers = { 'CONTENT_TYPE' => 'application/json' }
+    delete_all_source_versions(filename)
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+    policy_check_response = @api.channel_policy_violation
+    assert successful?
+
+    # use assert_equal to check both type and value of response (true vs 'true')
+    assert_equal true, JSON.parse(policy_check_response)['has_violation']
+
+    delete_all_source_versions(filename)
   end
 
   def test_replace_version

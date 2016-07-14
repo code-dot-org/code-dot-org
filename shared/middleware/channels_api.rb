@@ -2,7 +2,6 @@ require 'sinatra/base'
 require 'base64'
 require 'cdo/db'
 require 'cdo/rack/request'
-require_relative 'helpers/profanity_privacy_helper'
 
 class ChannelsApi < Sinatra::Base
 
@@ -12,6 +11,7 @@ class ChannelsApi < Sinatra::Base
       storage_apps.rb
       storage_id.rb
       auth_helpers.rb
+      profanity_privacy_helper.rb
     ).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
@@ -141,14 +141,6 @@ class ChannelsApi < Sinatra::Base
 
     value = channel_policy_violation?(id)
     {:has_violation => value }.to_json
-  end
-
-  def channel_policy_violation?(channel_id)
-    bucket = SourceBucket.new
-    filename = 'main.json'
-    result = bucket.get(channel_id, filename)
-    return false unless result && result[:body]
-    profanity_privacy_violation?(filename, result[:body])
   end
 
   #

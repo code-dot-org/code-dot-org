@@ -3,6 +3,8 @@ require 'cdo/geocoder'
 require 'cdo/web_purify'
 
 USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
+PLAYLAB_APP_INDICATOR = 'studio_'
+
 ShareFailure = Struct.new(:type, :content)
 
 # Utilities for finding personally-identifiable and profane content in user
@@ -21,7 +23,7 @@ module ShareFiltering
   # May throw OpenURI::HTTPError, IO::EAGAINWaitReadable depending on
   # service availability.
   def self.find_share_failure(program, locale)
-    return nil unless program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+    return nil unless should_filter_program(program)
 
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
@@ -36,5 +38,10 @@ module ShareFiltering
       return ShareFailure.new(FailureType::PROFANITY, expletive)
     end
     nil
+  end
+
+  def self.should_filter_program(program)
+    program =~ /#{PLAYLAB_APP_INDICATOR}/ &&
+        program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
   end
 end
