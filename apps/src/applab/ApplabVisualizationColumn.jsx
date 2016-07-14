@@ -11,14 +11,10 @@ var PhoneFrame = require('./PhoneFrame');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-var applabConstants = require('./constants');
 var connect = require('react-redux').connect;
 var classNames = require('classnames');
 
 var styles = {
-  nonResponsive: {
-    maxWidth: applabConstants.APP_WIDTH,
-  },
   completion: {
     display: 'inline'
   },
@@ -65,6 +61,7 @@ var ApplabVisualizationColumn = React.createClass({
     visualizationHasPadding: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
+    nonResponsiveWidth: React.PropTypes.number.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.string.isRequired,
@@ -110,7 +107,7 @@ var ApplabVisualizationColumn = React.createClass({
       <div
           id="visualizationColumn"
           className={visualizationColumnClassNames}
-          style={[!this.props.isResponsive && styles.nonResponsive]}
+          style={[!this.props.isResponsive && {maxWidth: this.props.nonResponsiveWidth}]}
       >
         {!this.props.isReadOnlyWorkspace && <PlaySpaceHeader
             isEditingProject={this.props.isEditingProject}
@@ -147,6 +144,7 @@ module.exports = connect(function propsFromStore(state) {
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
     isShareView: state.pageConstants.isShareView,
     isResponsive: isResponsiveFromState(state),
+    nonResponsiveWidth: state.pageConstants.nonResponsiveVisualizationColumnWidth,
     isIframeEmbed: state.pageConstants.isIframeEmbed,
     hideSource: state.pageConstants.hideSource,
     isRunning: state.runState.isRunning,
