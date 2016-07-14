@@ -16,6 +16,10 @@
         ]
       },
       "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        },
         "params": [
           ""
         ],
@@ -26,7 +30,8 @@
       "penUp": null,
       "penDown": null,
       "functionParams_none": null,
-      "callMyFunction": null
+      "callMyFunction": null,
+      "comment": null
     },
     "edit_code": true,
     "encrypted_examples": "8MrvS0E5eMdRaN0C0oU4U115dG5R7E3MEPqfHUBpkGz6shljXs6gE1aOYbCV\n6tgA\n",
@@ -37,7 +42,7 @@
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
     "slider_speed": ".9",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -63,7 +68,13 @@
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
     "execute_palette_apis_only": "true",
-    "lock_zero_param_functions": "true"
+    "lock_zero_param_functions": "true",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>
