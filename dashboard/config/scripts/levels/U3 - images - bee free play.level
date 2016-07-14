@@ -80,7 +80,7 @@
     "debugger_disabled": "false",
     "instructions": "Do this",
     "show_d_pad": "false",
-    "markdown_instructions": "# Bee Free Play\r\n\r\nHere is the swarm of bees you have been working on. Continute to improve the animation!\r\n\r\n# Do This\r\n* Add a background \r\n* Add a flower sprite\r\n* Make the flower sprite move\r\n* Add more ideas of your own!",
+    "markdown_instructions": "# Bee Free Play\r\n\r\nHere is the swarm of bees you have been working on. Continute to improve the animation!\r\n\r\n# Do This\r\n* Add a background \r\n* Add a flower or nest sprite\r\n* Make the flower or nest sprite move\r\n* Add more ideas of your own!",
     "start_blocks": "function draw() {\r\n\r\n}",
     "project_template_level_name": "CSD U3 - images - bee template",
     "contained_level_names": null

@@ -3,12 +3,11 @@
 ## Table of Contents
 * [Math](#Math)
 * [Variables](#Variables)
-* [UI Controls](#UI Controls)
 * [Control](#Control)
 * [Data](#Data)
 * [Canvas](#Canvas)
 * [Functions](#Functions)
-* [UI controls](#UI controls)
+* [UI controls](#UIcontrols)
 * [Turtle](#Turtle)
 
 
@@ -65,18 +64,6 @@
 | [functionsignature(requiredparam1, requiredparam2, *optionalparam3*)](https://code.org/applab/docs/template) |1 sentence (2 max) that describes what the function does. This should be mirrored in the tooltip in App Lab. Be pithy.|
 | [[string].toLowerCase()](https://code.org/applab/docs/toLowerCase) |Returns a new string that is the original *string* converted to all lower case letters.|
 | [[string].toUpperCase()](https://code.org/applab/docs/toUpperCase) |Returns a new string that is the original *string* converted to all upper case letters.|
-
-
-<a name=UI Controls></a>
-## UI Controls
-|name|description|
-|----|-----------|
-| [deleteElement(id)](https://code.org/applab/docs/deleteElement) |Deletes the element with the provided id.|
-| [getImageURL(id)](https://code.org/applab/docs/getImageURL) |Gets the URL for the provided image element id.|
-| [hideElement(id)](https://code.org/applab/docs/hideElement) |Hides the element with the provided id so it is not shown on the screen.|
-| [image(id, url)](https://code.org/applab/docs/image) |Displays the image from the provided URL on the screen.|
-| [setImageURL(id, url)](https://code.org/applab/docs/setImageURL) |Sets the URL for the specified image element id.|
-| [showElement(id)](https://code.org/applab/docs/showElement) |Shows the element with the provided id.|
 
 
 <a name=Control></a>
@@ -150,27 +137,33 @@
 | [return](https://code.org/applab/docs/return) |Returns a value from a function.|
 
 
-<a name=UI controls></a>
+<a name=UIcontrols></a>
 ## UI controls
 |name|description|
 |----|-----------|
 | [button(id, text)](https://code.org/applab/docs/button) |Creates a button on the screen displaying the *text* provided and referenced by the given *id* at default location (0,0).|
 | [checkbox(id, checked)](https://code.org/applab/docs/checkbox) |Creates a checkbox on the screen with the initial *checked* boolean value and referenced by the given *id* at default location (0,0).|
+| [deleteElement(id)](https://code.org/applab/docs/deleteElement) |Deletes the element with the provided id.|
 | [dropdown(id, option1, *option2, ..., optionX*)](https://code.org/applab/docs/dropdown) |Creates a dropdown selection box on the screen displaying the *options* provided and referenced by the given *id* at default location (0,0).|
 | [getChecked(id)](https://code.org/applab/docs/getChecked) |Gets the state of a checkbox or radioButton.|
+| [getImageURL(id)](https://code.org/applab/docs/getImageURL) |Gets the URL for the provided image element id.|
 | [getNumber(id)](https://code.org/applab/docs/getNumber) |Gets the number from the specified screen element.|
 | [getText(id)](https://code.org/applab/docs/getText) |Gets the text from the specified screen element.|
 | [getXPosition(id)](https://code.org/applab/docs/getXPosition) |Gets the element's x position.|
 | [getYPosition(id)](https://code.org/applab/docs/getYPosition) |Gets the element's y position.|
+| [hideElement(id)](https://code.org/applab/docs/hideElement) |Hides the element with the provided id so it is not shown on the screen.|
+| [image(id, url)](https://code.org/applab/docs/image) |Displays the image from the provided URL on the screen.|
 | [onEvent(id, type, callback)](https://code.org/applab/docs/onEvent) |Executes the *callback* function code when a specific event *type* occurs for the specified UI element *id*.|
 | [playSound(url)](https://code.org/applab/docs/playSound) |Plays the MP3 sound file from the specified URL.|
 | [radioButton(id, checked, *group*)](https://code.org/applab/docs/radioButton) |Creates a radio button on the screen with the initial *checked* boolean value and referenced by the given *id* at default location (0,0). Only one radio button in a group can be selected at a time.|
 | [setChecked(id, checked)](https://code.org/applab/docs/setChecked) |Sets the state of a checkbox or radioButton.|
+| [setImageURL(id, url)](https://code.org/applab/docs/setImageURL) |Sets the URL for the specified image element id.|
 | [setNumber(id, number)](https://code.org/applab/docs/setNumber) |Sets the number for the specified screen element.|
 | [setPosition(id, x, y, *width*, *height*)](https://code.org/applab/docs/setPosition) |Positions an element at an *x,y* screen coordinate, and optionally sets a new *width* and *height* for the element.|
 | [setScreen(screenId)](https://code.org/applab/docs/setScreen) |Sets the screen to the given screenId.|
 | [setSize(id, width, height)](https://code.org/applab/docs/setSize) |Sets the *width* and *height* for the UI element.|
 | [setText(id, text)](https://code.org/applab/docs/setText) |Sets the text for the specified screen element.|
+| [showElement(id)](https://code.org/applab/docs/showElement) |Shows the element with the provided id.|
 | [textInput(id, text)](https://code.org/applab/docs/textInput) |Creates a text input box on the screen displaying the *text* provided and referenced by the given *id* at default location (0,0).|
 | [textLabel(id, text, *forId*)](https://code.org/applab/docs/textLabel) |Creates a text label on the screen displaying the *text* provided and referenced by the given *id* at default location (0,0).|
 | [write(text)](https://code.org/applab/docs/write) |Displays a string and/or variable values to the app screen. The text can also be formatted as HTML.|

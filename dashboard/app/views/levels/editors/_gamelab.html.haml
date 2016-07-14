@@ -11,6 +11,10 @@
   = boolean_check_box f, :text_mode_at_start
 
 .field
+  = f.label :hide_animation_mode, 'Hide the Animation Tab (you can still seed a level with animations)'
+  = boolean_check_box f, :hide_animation_mode
+
+.field
   = f.label :show_d_pad
   = boolean_check_box f, :show_d_pad
 
@@ -72,7 +76,7 @@
             "sourceSize": {"x":396, "y": 378},
             "frameSize": {"x":132, "y": 126},
             "frameCount": 9,
-            "frameRate": 15,
+            "frameRate": 15
           }
         }
       }

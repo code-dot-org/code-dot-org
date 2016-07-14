@@ -22,7 +22,8 @@ export function isResponsiveFromState(state) {
  */
 const ProtectedVisualizationDiv = React.createClass({
   propTypes: {
-    isResponsive: React.PropTypes.bool.isRequired
+    isResponsive: React.PropTypes.bool.isRequired,
+    children: React.PropTypes.node,
   },
 
   render() {

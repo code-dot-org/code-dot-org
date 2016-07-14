@@ -74,13 +74,6 @@ export default function reducer(state = instructionsInitialState, action) {
   }
 
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
-    const longInstructions = state.longInstructions;
-    if (!longInstructions && !state.hasContainedLevels) {
-      // No longInstructions or contained levels implies either
-      // (a) no instructions or (b) we only have short instructions.
-      // In both cases, we should be collapsed.
-      throw new Error('Can not toggle instructions collapsed without longInstructions');
-    }
     return Object.assign({}, state, {
       collapsed: !state.collapsed
     });
