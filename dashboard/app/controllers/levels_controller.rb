@@ -231,7 +231,7 @@ class LevelsController < ApplicationController
       share: false,
       skip_instructions_popup: true
     )
-    view_options full_width: true
+    view_options(full_width: true)
     render 'levels/show'
   end
 
