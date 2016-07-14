@@ -228,7 +228,8 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
     if (!recordExists) {
       onComplete(false);
     } else {
-      incrementRateLimitCounters()
+      loadConfig()
+        .then(() => incrementRateLimitCounters())
         .then(() => updateTableCounters(tableName, -1))
         .then(() => recordRef.set(null))
         .then(() => onComplete(true), onError);
