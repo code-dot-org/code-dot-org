@@ -1,7 +1,7 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2014-07-07T17:31:12.000Z",
+  "created_at": "2016-07-14T17:37:55.362Z",
   "level_num": "custom",
   "user_id": 6,
   "properties": {
@@ -37,12 +37,7 @@
     "contained_level_names": null
   },
   "published": true,
-  "notes": "",
-  "level_concept_difficulty": {
-    "sequencing": 5,
-    "repeat_loops": 3,
-    "conditionals": 2
-  }
+  "notes": ""
 }]]></config>
   <blocks>
     <toolbox_blocks>
