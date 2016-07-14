@@ -2813,8 +2813,6 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
 
 /**
  * If the current project is considered abusive, display a small alert box
- * @param {string} parentSelector The selector for the DOM element parent we
- *   should display the error in.
  */
 StudioApp.prototype.alertIfAbusiveProject = function () {
   if (window.dashboard && dashboard.project &&
@@ -2830,9 +2828,6 @@ StudioApp.prototype.alertIfAbusiveProject = function () {
 /**
  * If the current project violates privacy policy or contains profanity,
  * display a small alert box.
- *
- * @param {string} parentSelector The selector for the DOM element parent we
- *   should display the error in.
  */
 StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function () {
   if (window.dashboard && dashboard.project &&
