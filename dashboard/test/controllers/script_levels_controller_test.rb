@@ -797,23 +797,23 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'includes makerlab javascript dependencies when makerlab level' do
-    sign_in @admin
+    sign_in @teacher
 
     level = create :makerlab
     script_level = create :script_level, levels: [level]
 
-    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @teacher.id
 
     assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab')
   end
 
   test 'excludes makerlab javascript dependencies when applab level' do
-    sign_in @admin
+    sign_in @teacher
 
     level = create :applab
     script_level = create :script_level, levels: [level]
 
-    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @teacher.id
 
     assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab'), false
   end
@@ -1006,12 +1006,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "should get show of admin script if signed in as admin" do
+  # TODO(asher): Consolidate the tests when the user is an admin. In particular,
+  # these scripts should no longer exist, should be accessible to noone, and
+  # will go away.
+  test "should not get show of admin script if signed in as admin" do
     admin_script = create_admin_script
 
     sign_in create(:admin)
     get :show, script_id: admin_script.name, stage_id: 1, id: 1
-    assert_response :success
+    assert_response :forbidden
   end
 
   def create_student_of_admin_script
@@ -1043,12 +1046,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get show of student_of_admin script if signed in as admin" do
+  test "should not get show of student_of_admin script if signed in as admin" do
     script = create_student_of_admin_script
 
     sign_in create(:admin)
     get :show, script_id: script.name, stage_id: 1, id: 1
-    assert_response :success
+    assert_response :forbidden
   end
 
   test "should have milestone posting disabled if Milestone is set" do

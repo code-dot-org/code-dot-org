@@ -113,7 +113,7 @@ class LevelsController < ApplicationController
   # POST /levels
   # POST /levels.json
   def create
-    authorize! :create, :level
+    authorize! :create, Level
     type_class = level_params[:type].constantize
 
     # Set some defaults.
