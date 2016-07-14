@@ -3,14 +3,14 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from '@cdo/apps/redux';
 import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
 import { SUBMITTED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
+import { getStore } from './redux';
 
-import progressReducer, {
+import {
   initProgress,
   mergeProgress,
   updateFocusArea,
@@ -21,7 +21,7 @@ var progress = module.exports;
 
 progress.renderStageProgress = function (stageData, progressData, scriptName,
     currentLevelId, saveAnswersBeforeNavigation) {
-  const store = createStoreWithProgress({
+  const store = initializeStoreWithProgress({
     name: scriptName,
     stages: [stageData]
   }, currentLevelId, saveAnswersBeforeNavigation);
@@ -43,7 +43,7 @@ progress.renderStageProgress = function (stageData, progressData, scriptName,
 };
 
 progress.renderCourseProgress = function (scriptData, currentLevelId) {
-  const store = createStoreWithProgress(scriptData, currentLevelId);
+  const store = initializeStoreWithProgress(scriptData, currentLevelId);
   var mountPoint = document.createElement('div');
 
   $.ajax(
@@ -88,9 +88,9 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
  * @param saveAnswersBeforeNavigation
  * @returns {object} The created redux store
  */
-function createStoreWithProgress(scriptData, currentLevelId,
+function initializeStoreWithProgress(scriptData, currentLevelId,
     saveAnswersBeforeNavigation = false) {
-  const store = createStore(progressReducer);
+  const store = getStore();
 
   store.dispatch(initProgress({
     currentLevelId: currentLevelId,

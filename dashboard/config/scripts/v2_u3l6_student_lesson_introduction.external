@@ -17,6 +17,10 @@ Large problems can be “abstracted” into sub-problems. Sometimes even the sub
 * Practice top-down design on a small problem.
 * Program a solution to that problem.
 * Revisit the 3x3 grid problem and consider using functions to solve it more efficiently.
+  
+## Vocabulary
+* **Abstraction:** Pulling out specific differences to make one solution work for multiple problems.
+* **Function:** A piece of code that you can easily call over and over again.
 
 ## Resources
 
