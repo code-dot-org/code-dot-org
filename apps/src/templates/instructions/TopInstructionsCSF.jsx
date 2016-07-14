@@ -35,6 +35,7 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
+const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
 
 const SCROLL_BY_PERCENT = 0.4;
 
@@ -524,7 +525,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
-    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + 20,
+    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     isMinecraft: !!state.pageConstants.isMinecraft,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     aniGifURL: state.pageConstants.aniGifURL,
