@@ -28,9 +28,9 @@ module LevelsHelper
   end
 
   def readonly_view_options
-    level_view_options @level.id, skip_instructions_popup: true
-    view_options readonly_workspace: true
-    view_options callouts: []
+    level_view_options(@level.id, skip_instructions_popup: true)
+    view_options(readonly_workspace: true)
+    view_options(callouts: [])
   end
 
   def set_channel
@@ -56,7 +56,7 @@ module LevelsHelper
         })
     end
 
-    view_options channel: channel_token.channel if channel_token
+    view_options(channel: channel_token.channel) if channel_token
   end
 
   def select_and_track_autoplay_video
@@ -120,7 +120,7 @@ module LevelsHelper
 
     set_channel if @level.channel_backed?
 
-    view_options server_level_id: @level.id
+    view_options(server_level_id: @level.id)
     if @script_level
       view_options(
         stage_position: @script_level.stage.position,
@@ -129,7 +129,7 @@ module LevelsHelper
     end
 
     if @script
-      view_options script_name: @script.name
+      view_options(script_name: @script.name)
     end
 
     unless params[:share]
@@ -163,7 +163,7 @@ module LevelsHelper
     if @user
       recent_driver = UserLevel.most_recent_driver(@script, @level, @user)
       if recent_driver
-        level_view_options pairing_driver: recent_driver
+        level_view_options(pairing_driver: recent_driver)
       end
     end
 

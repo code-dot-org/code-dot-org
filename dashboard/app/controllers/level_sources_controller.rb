@@ -23,7 +23,7 @@ class LevelSourcesController < ApplicationController
       # embed the play area and code area for viewing solutions when contributing hints
     else
       # sharing
-      level_view_options @level_source.level_id, hide_source: true
+      level_view_options(@level_source.level_id, hide_source: true)
       view_options(no_header: true, no_footer: true, code_studio_logo: true)
       @is_legacy_share = true
     end
@@ -31,8 +31,8 @@ class LevelSourcesController < ApplicationController
 
   def edit
     authorize! :read, @level_source
-    level_view_options @level_source.level_id, hide_source: false
-    view_options small_footer: true
+    level_view_options(@level_source.level_id, hide_source: false)
+    view_options(small_footer: true)
     @is_legacy_share = true
     # currently edit is the same as show...
     render "show"
