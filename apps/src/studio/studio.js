@@ -619,7 +619,7 @@ var calcMoveDistanceFromQueues = function (index, modifyQueues) {
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
       var distThisMove = Math.min(cmd.opts.queuedDistance,
                                   Studio.sprite[cmd.opts.spriteIndex].speed);
-      var moveVector = Direction.getUnitVector(cmd.opts.dir);
+      var moveVector = utils.normalize(Direction.getUnitVector(cmd.opts.dir));
       totalDelta.x += distThisMove * moveVector.x;
       totalDelta.y += distThisMove * moveVector.y;
 
