@@ -52,7 +52,7 @@ export default function reducer(state = initialState, action) {
           Object.assign(level, action.peerReviewsPerformed[index]);
         }
 
-        return Object.assign({}, level, {status: activityCssClass(newProgress[id])});
+        return Object.assign({}, level, level.kind !== 'peer_review' && {status: activityCssClass(newProgress[id])});
       })}))
     });
   }
