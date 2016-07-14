@@ -56,6 +56,7 @@ if (typeof SVGElement !== 'undefined') {
 }
 
 var Direction = constants.Direction;
+var CardinalDirections = constants.CardinalDirections;
 var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
@@ -619,11 +620,11 @@ var calcMoveDistanceFromQueues = function (index, modifyQueues) {
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
       var distThisMove = Math.min(cmd.opts.queuedDistance,
                                   Studio.sprite[cmd.opts.spriteIndex].speed);
-      var moveVector = utils.normalize(Direction.getUnitVector(cmd.opts.dir));
-      totalDelta.x += distThisMove * moveVector.x;
-      totalDelta.y += distThisMove * moveVector.y;
+      var moveDirection = utils.normalize(Direction.getUnitVector(cmd.opts.dir));
+      totalDelta.x += distThisMove * moveDirection.x;
+      totalDelta.y += distThisMove * moveDirection.y;
 
-      if (modifyQueues && (moveVector.x !== 0 || moveVector.y !== 0)) {
+      if (modifyQueues && (moveDirection.x !== 0 || moveDirection.y !== 0)) {
         cmd.opts.queuedDistance -=  distThisMove;
         if ("0.00" === Math.abs(cmd.opts.queuedDistance).toFixed(2)) {
           cmd.opts.queuedDistance = 0;
@@ -644,6 +645,8 @@ var cancelQueuedMovements = function (index, yAxis) {
       if (yAxis && (dir === Direction.NORTH || dir === Direction.SOUTH)) {
         cmd.opts.queuedDistance = 0;
       } else if (!yAxis && (dir === Direction.EAST || dir === Direction.WEST)) {
+        cmd.opts.queuedDistance = 0;
+      } else if (!CardinalDirections.includes(dir)) {
         cmd.opts.queuedDistance = 0;
       }
     }
