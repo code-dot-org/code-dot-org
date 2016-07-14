@@ -6,13 +6,21 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+var redux = require('./redux');
 var dom = require('./dom');
 var msg = require('./locale');
 var HintsDisplay = require('./templates/instructions/HintsDisplay');
 var HintDialogContent = require('./templates/instructions/HintDialogContent');
 var authoredHintUtils = require('./authoredHintUtils');
 var Lightbulb = require('./templates/Lightbulb');
+
 import { setHasAuthoredHints } from './redux/instructions';
+import authoredHintsReducer from './redux/authoredHints';
+import {
+  enqueueHints,
+  showNextHint,
+  displayMissingBlockHints
+} from './redux/authoredHints';
 
 /**
  * For some of our skins, our partners don't want the characters appearing to
@@ -41,23 +49,9 @@ var AuthoredHints = function (studioApp) {
   this.studioApp_ = studioApp;
 
   /**
-   * @typedef {Object} AuthoredHint
-   * @property {string} content
-   * @property {string} hintId
-   * @property {string} hintClass
-   * @property {string} hintType
-   * @property {boolean} alreadySeen
-   */
-  /**
-   * @type {!AuthoredHint[]}
-   */
-  this.hints_ = [];
-  this.contextualHints_ = [];
-
-  /**
    * @type {number}
    */
-  this.scrptId_ = undefined;
+  this.scriptId_ = undefined;
 
   /**
    * @type {number}
@@ -69,6 +63,8 @@ var AuthoredHints = function (studioApp) {
    */
   this.lightbulb = document.createElement('div');
   this.lightbulb.id = "lightbulb";
+
+  this.reduxStore = redux.createStore(authoredHintsReducer);
 };
 
 module.exports = AuthoredHints;
@@ -77,20 +73,14 @@ module.exports = AuthoredHints;
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getUnseenHints = function () {
-  var hints = this.contextualHints_.concat(this.hints_ || []);
-  return hints.filter(function (hint) {
-    return hint.alreadySeen === false;
-  });
+  return this.reduxStore.getState().unseenHints;
 };
 
 /**
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getSeenHints = function () {
-  var hints = this.contextualHints_.concat(this.hints_ || []);
-  return hints.filter(function (hint) {
-    return hint.alreadySeen === true;
-  });
+  return this.reduxStore.getState().seenHints;
 };
 
 /**
@@ -102,15 +92,11 @@ AuthoredHints.prototype.getSeenHints = function () {
 AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
   var newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
 
-  // if the set of contextual hints currently being shown has changed,
-  // animate the hint display lightbulb when we update it.
-  var oldContextualHints = this.contextualHints_.filter(function (hint) {
-    return hint.alreadySeen === false;
-  });
-  var animateLightbulb = oldContextualHints.length !== newContextualHints.length;
+  let oldNumHints = this.getUnseenHints().length;
+  this.reduxStore.dispatch(displayMissingBlockHints(newContextualHints));
+  let newNumHints = this.getUnseenHints().length;
 
-  this.contextualHints_ = newContextualHints;
-  this.updateLightbulbDisplay_(animateLightbulb);
+  this.updateLightbulbDisplay_(oldNumHints !== newNumHints);
 
   if (newContextualHints.length > 0 && this.getUnseenHints().length > 0) {
     this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
@@ -143,9 +129,10 @@ AuthoredHints.prototype.submitHints = function (url) {
  * @param {number} levelId
  */
 AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
-  this.hints_ = hints;
   this.scriptId_ = scriptId;
   this.levelId_ = levelId;
+
+  this.reduxStore.dispatch(enqueueHints(hints));
 
   if (hints && hints.length > 0) {
     this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
@@ -170,7 +157,7 @@ AuthoredHints.prototype.display = function (promptIcon) {
  * @param {AuthoredHint} hint
  */
 AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
-  hint.alreadySeen = true;
+  this.reduxStore.dispatch(showNextHint({ hint }));
   this.updateLightbulbDisplay_();
 
   authoredHintUtils.recordUnfinishedHint({
