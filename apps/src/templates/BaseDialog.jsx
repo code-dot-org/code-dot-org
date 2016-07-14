@@ -13,6 +13,7 @@ var BaseDialog = React.createClass({
     uncloseable: React.PropTypes.bool,
     hideBackdrop: React.PropTypes.bool,
     useDeprecatedGlobalStyles: React.PropTypes.bool,
+    children: React.PropTypes.node,
   },
 
   componentDidMount: function () {

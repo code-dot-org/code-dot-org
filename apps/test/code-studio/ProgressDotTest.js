@@ -60,15 +60,15 @@ describe('ProgressDot component tests', () => {
     expect(radiumHelper(result.props.children[0].props.style).borderColor).to.equal(color.lighter_gray);
   });
 
-  it('bubble interior renders level title if not on overview page', () => {
+  it('bubble interior renders level title if not on overview page and not showing an icon', () => {
     const result = ReactTestUtils.renderIntoDocument(
-      <BubbleInterior title={level.title} courseOverviewPage={false} showingIcon={true} showingLevelName={true} />
+      <BubbleInterior title={level.title} courseOverviewPage={false} showingIcon={false} showingLevelName={true} />
     );
 
     expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('1');
   });
 
-  it('bubble interior renders title if not showing level name', () => {
+  it('bubble interior renders title if not showing level name nor level icon', () => {
     const result = ReactTestUtils.renderIntoDocument(
       <BubbleInterior title={level.title} courseOverviewPage={true} showingIcon={false} showingLevelName={false} />
     );

@@ -108,6 +108,9 @@ var PaneHeader = React.createClass({
 var PaneSection = function (props) {
   return <div {...props} style={[styles.paneSection, props.style]}/>;
 };
+PaneSection.propTypes = {
+  style: React.PropTypes.object,
+};
 
 /**
  * A button within or PaneHeader, whose styles change whether or not the pane
@@ -143,7 +146,9 @@ PaneButton.propTypes = {
   iconClass: React.PropTypes.string.isRequired,
   label: React.PropTypes.string.isRequired,
   isRtl: React.PropTypes.bool.isRequired,
-  hiddenImage: React.PropTypes.element
+  hiddenImage: React.PropTypes.element,
+  isMinecraft: React.PropTypes.bool,
+  id: React.PropTypes.string,
 };
 
 module.exports = Radium(PaneHeader);

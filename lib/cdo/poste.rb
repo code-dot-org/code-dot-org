@@ -39,6 +39,15 @@ module Poste
     encrypt(id)
   end
 
+  # Returns whether there is a dashboard student account associated with the
+  # specified hashed_email.
+  def self.dashboard_student?(hashed_email)
+    dashboard_user = DASHBOARD_DB[:users].
+      where(hashed_email: hashed_email).
+      first
+    return !dashboard_user.nil? && dashboard_user[:user_type] == 'student'
+  end
+
   def self.resolve_template(name)
     template_extnames.each do |extname|
       path = emails_dir "#{name}#{extname}"
@@ -85,8 +94,9 @@ module Poste
         unsubscribed_ip: params[:ip_address],
       )
     else
+      sanitized_email = dashboard_student?(hashed_email) ? '' : email
       contacts.insert(
-        email: email,
+        email: sanitized_email,
         hashed_email: hashed_email,
         created_at: now,
         created_ip: params[:ip_address],

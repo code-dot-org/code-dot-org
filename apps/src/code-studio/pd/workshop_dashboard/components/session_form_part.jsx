@@ -30,7 +30,8 @@ var SessionFormPart = React.createClass({
     onAdd: React.PropTypes.func,
     onRemove: React.PropTypes.func,
     shouldValidate: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool
+    readOnly: React.PropTypes.bool,
+    onChange: React.PropTypes.func.isRequired,
   },
 
   handleDateChange: function (e) {

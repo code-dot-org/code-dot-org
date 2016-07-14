@@ -408,7 +408,7 @@ class LevelsControllerTest < ActionController::TestCase
   test 'should show legacy unplugged level' do
     level = create :unplugged, name: 'OldUnplugged', type: 'Unplugged'
     get :show, id: level, game_id: level.game
-    assert_select 'div.unplugged > h2', 'Test title'
+    assert_select 'div.unplugged > h1', 'Test title'
     assert_select 'div.unplugged > p', 'Test description'
   end
 
@@ -432,7 +432,7 @@ class LevelsControllerTest < ActionController::TestCase
     level = create :unplugged, name: 'NewUnplugged', type: 'Unplugged'
     get :show, id: level, game_id: level.game
 
-    assert_select 'div.unplugged > h2', 'Test title'
+    assert_select 'div.unplugged > h1', 'Test title'
     assert_select 'div.unplugged > p', 'Test description'
   end
 
