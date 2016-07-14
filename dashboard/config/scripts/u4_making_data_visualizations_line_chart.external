@@ -7,9 +7,9 @@ markdown <<MARKDOWN
 
 You can use many different kinds of charts to look at the same data. You'll now investigate different columns of your data with a **line chart**. Line charts are helpful for showing the progression of values over time. In this case you will be showing how the average movie rating changes with the reviewer’s age.
 
-<hr>
+---
 
-# Select Data
+## Select Data
 
 **Do This:** Select the **“age,”** **“avg rating women,”** and **“avg rating men"** columns.
 
@@ -27,9 +27,9 @@ To select cells in non-adjacent columns, you need to use some fancy hotkeys: <br
 ![](https://images.code.org/19de3c9486f50fe1fc1aa7fa8a1da283-image-1454102836246.gif)
 *Select the cells to include in the chart.*
 
-<hr>
+---
 
-# Insert Chart
+## Insert Chart
 
 **Do This:** Select **Insert -> Chart** from the main toolbar to open the Chart Editor.
 
@@ -40,9 +40,9 @@ To select cells in non-adjacent columns, you need to use some fancy hotkeys: <br
 ![](https://images.code.org/210a6d48dd0266ee192d7cd374839ddf-image-1454102597958.gif)
 *Change chart type and insert your line chart into the spreadsheet.*
 
-<hr>
+---
 
-# Do a Visual Check
+## Do a Visual Check
 
 At this point, your chart should look something like this:
 
@@ -58,6 +58,4 @@ Once your chart looks close to the one above, switch to **View** mode and take a
 After you’ve thought about these questions, move your line chart off to the side of your spreadsheet. **Don’t delete it!** You will be coming back to it later in the lesson. Then move on to the next section to learn how to make a bar chart.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

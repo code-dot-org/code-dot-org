@@ -523,7 +523,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert_select 'div.unplugged > h2', 'Happy Maps'
+    assert_select 'div.unplugged > h1', 'Happy Maps'
     assert_select 'div.unplugged > p', 'Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.'
     assert_select '.pdf-button', 2
 
