@@ -1,13 +1,4 @@
-%script{src: asset_path('browser-detector.js')}
-
-#warning-banner{style: 'display: none; height: 25px;'}
+#warning-banner{style: 'height: 25px;'}
   %i.fa.fa-warning.warning-sign
   &nbsp;
   != t("compatibility.upgrade.unsupported_message", supported_browsers_url: 'https://support.code.org/hc/en-us/articles/202591743')
-
-:javascript
-  $(document).ready(function () {
-    if (isUnsupportedBrowser()) {
-      $("#warning-banner").show();
-    }
-  });
