@@ -6,7 +6,6 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-var redux = require('./redux');
 var dom = require('./dom');
 var msg = require('./locale');
 var HintsDisplay = require('./templates/instructions/HintsDisplay');
@@ -63,8 +62,6 @@ var AuthoredHints = function (studioApp) {
    */
   this.lightbulb = document.createElement('div');
   this.lightbulb.id = "lightbulb";
-
-  this.reduxStore = redux.createStore(authoredHintsReducer);
 };
 
 module.exports = AuthoredHints;
@@ -73,14 +70,14 @@ module.exports = AuthoredHints;
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getUnseenHints = function () {
-  return this.reduxStore.getState().unseenHints;
+  return this.studioApp_.reduxStore.getState().authoredHints.unseenHints || [];
 };
 
 /**
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getSeenHints = function () {
-  return this.reduxStore.getState().seenHints;
+  return this.studioApp_.reduxStore.getState().authoredHints.seenHints || [];
 };
 
 /**
@@ -93,7 +90,7 @@ AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
   var newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
 
   let oldNumHints = this.getUnseenHints().length;
-  this.reduxStore.dispatch(displayMissingBlockHints(newContextualHints));
+  this.studioApp_.reduxStore.dispatch(displayMissingBlockHints(newContextualHints));
   let newNumHints = this.getUnseenHints().length;
 
   this.updateLightbulbDisplay_(oldNumHints !== newNumHints);
@@ -132,7 +129,7 @@ AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
   this.scriptId_ = scriptId;
   this.levelId_ = levelId;
 
-  this.reduxStore.dispatch(enqueueHints(hints));
+  this.studioApp_.reduxStore.dispatch(enqueueHints(hints));
 
   if (hints && hints.length > 0) {
     this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
@@ -151,13 +148,19 @@ AuthoredHints.prototype.display = function (promptIcon) {
   this.updateLightbulbDisplay_();
 };
 
+AuthoredHints.prototype.showNextHint = function () {
+  const hint = this.getUnseenHints()[0];
+  this.recordUserViewedHint_(hint);
+  return hint;
+};
+
 /**
  * Mostly a passthrough to authoredHintUtils.recordUnfinishedHint. Also
  * marks the given hint as seen.
  * @param {AuthoredHint} hint
  */
 AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
-  this.reduxStore.dispatch(showNextHint({ hint }));
+  this.studioApp_.reduxStore.dispatch(showNextHint(hint));
   this.updateLightbulbDisplay_();
 
   authoredHintUtils.recordUnfinishedHint({

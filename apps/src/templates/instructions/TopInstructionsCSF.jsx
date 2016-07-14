@@ -25,9 +25,10 @@ import ThreeColumns from './ThreeColumns';
 import PromptIcon from './PromptIcon';
 import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
+import InlineHint from './InlineHint';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
-import { getOuterHeight, scrollBy } from './utils';
+import { getOuterHeight, scrollBy, scrollTo } from './utils';
 
 const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
@@ -125,26 +126,18 @@ const styles = {
     minHeight: 200,
   },
   instructions: {
-    padding: '5px 0'
-  },
-  instructionsChatBubble: {
-    backgroundColor: 'white',
-    borderRadius: 10,
-    marginBottom: 10,
-    padding: 10,
-  },
-  instructionsChatText: {
-    // note that we actually do need to specify lineHeight
-    // in pixels; it defaults to a multiple of fontSize
-    lineHeight: '25px',
-    fontSize: 16,
-    color: 'black',
-    margin: 0
+    padding: '5px 0',
   },
 };
 
 var TopInstructions = React.createClass({
   propTypes: {
+    hints: React.PropTypes.arrayOf(React.PropTypes.shape({
+      hintId: React.PropTypes.string.isRequired,
+      content: React.PropTypes.string.isRequired,
+      block: React.PropTypes.object, // XML
+    })).isRequired,
+    showNextHint: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
     hasContainedLevels: React.PropTypes.bool.isRequired,
@@ -156,6 +149,7 @@ var TopInstructions = React.createClass({
     shortInstructions: React.PropTypes.string.isRequired,
     shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
+    clearFeedback: React.PropTypes.func.isRequired,
     feedback: React.PropTypes.shape({
       message: React.PropTypes.string.isRequired,
     }),
@@ -195,20 +189,30 @@ var TopInstructions = React.createClass({
       });
     }
 
-    const gotNewFeedback = this.props.feedback && !prevProps.feedback;
-    if (gotNewFeedback) {
-      // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({
-        promptForHint: false
-      });
-      if (this.props.collapsed) {
-        this.handleClickCollapser();
+    this.adjustMaxNeededHeight();
+
+    const gotNewHint = prevProps.hints.length !== this.props.hints.length;
+    if (gotNewHint) {
+      const images = ReactDOM.findDOMNode(this.refs.instructions).getElementsByTagName('img');
+      for (const image of images) {
+        image.onload = image.onload || this.scrollInstructionsToBottom;
       }
     }
 
-    this.adjustMaxNeededHeight();
-    if (this.props.feedback || this.state.promptForHint) {
+    if (this.props.feedback || this.state.promptForHint || gotNewHint) {
       this.scrollInstructionsToBottom();
+    }
+  },
+
+  componentWillUpdate(nextProps, nextState) {
+    const gotNewFeedback = !this.props.feedback && nextProps.feedback;
+    if (gotNewFeedback) {
+      this.setState({
+        promptForHint: false
+      });
+      if (nextProps.collapsed) {
+        this.handleClickCollapser();
+      }
     }
   },
 
@@ -289,7 +293,7 @@ var TopInstructions = React.createClass({
    * @param {number} delta
    * @returns {number} How much we actually changed
    */
-  handleHeightResize: function (delta) {
+  handleHeightResize: function (delta = 0) {
     const minHeight = this.getMinHeight();
     const currentHeight = this.props.height;
 
@@ -393,7 +397,8 @@ var TopInstructions = React.createClass({
 
   showHint() {
     this.dismissHintPrompt();
-    this.props.showInstructionsDialog();
+    this.props.showNextHint();
+    this.props.clearFeedback();
   },
 
   shouldDisplayHintPrompt() {
@@ -479,6 +484,15 @@ var TopInstructions = React.createClass({
                 />
               }
             </div>
+            {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
+              <InlineHint
+                  key={hint.hintId}
+                  isMinecraft={this.props.isMinecraft}
+                  borderColor={color.yellow}
+                  content={hint.content}
+                  block={hint.block}
+              />
+            )}
             {this.props.feedback && !this.props.collapsed && <InlineFeedback
                 styles={{
                   container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
@@ -498,7 +512,7 @@ var TopInstructions = React.createClass({
           <div>
             <CollapserButton
                 ref='collapser'
-                style={[styles.collapserButton, !this.props.longInstructions && !this.props.feedback && commonStyles.hidden]}
+                style={[styles.collapserButton, !(this.props.longInstructions || this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback) && commonStyles.hidden]}
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
             />
@@ -522,6 +536,8 @@ var TopInstructions = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
+    hints: state.authoredHints.seenHints,
+    showNextHint: state.pageConstants.showNextHint,
     isEmbedView: state.pageConstants.isEmbedView,
     isMinecraft: !!state.pageConstants.isMinecraft,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
@@ -554,6 +570,9 @@ module.exports = connect(function propsFromStore(state) {
     },
     setInstructionsMaxHeightNeeded(height) {
       dispatch(instructions.setInstructionsMaxHeightNeeded(height));
+    },
+    clearFeedback(height) {
+      dispatch(instructions.setFeedback(null));
     },
     showInstructionsDialog(height) {
       dispatch(openDialog({
