@@ -2,10 +2,10 @@
   - if @level.markdown_instructions
     %div= render(inline: @level.markdown_instructions, type: :md)
 
-  %h4<
+  %h4
     = link_to @level.url, target: '_blank' do
-      = @level.link_title
       %i.fa.fa-external-link-square.external-link-icon>
+      = @level.link_title
 
   .external-link-disclaimer
     %h2= t('external_links.disclaimer')
@@ -23,4 +23,4 @@
           result: true
         };
       }
-    = link_to @script_level.end_of_stage? ? t('done_with_module') : t('next_resource'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn pull-right btn-primary submitButton'
+    = link_to @script_level.end_of_stage? ? t('done_with_module') : t('continue'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn btn-large pull-right btn-primary next-stage submitButton'
