@@ -677,6 +677,10 @@ en:
     link_to_submitted_review: 'Link to submitted review'
     reviews_unavailable: 'Reviews unavailable at this time'
     review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: 'You must be enrolled in this course to review peers'
+    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
+    review_submitted: 'Your peer review was submitted'
+    review_new_submission: 'Review a new submission'
   components:
     icon_library:
       search_placeholder_text: 'Search for an icon...'
