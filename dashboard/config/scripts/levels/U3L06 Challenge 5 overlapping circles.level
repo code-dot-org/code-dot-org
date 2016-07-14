@@ -10,8 +10,18 @@
       "moveForward": null,
       "moveBackward": null,
       "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
       "penUp": null,
       "penDown": null,
       "penWidth": null,
@@ -19,6 +29,10 @@
       "arcLeft": null,
       "arcRight": null,
       "penRGB": {
+        "paramButtons": {
+          "maxArgs": 4,
+          "minArgs": 4
+        },
         "params": [
           "0",
           "0",
@@ -71,9 +85,14 @@
     "debugger_disabled": "true",
     "encrypted_examples": "b7beInscIUpPOSy/abrlSHYIZJeaBRfAbjrsHHHd9x6Qy8tHvYnVnEoJQKxz\n6z9N\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

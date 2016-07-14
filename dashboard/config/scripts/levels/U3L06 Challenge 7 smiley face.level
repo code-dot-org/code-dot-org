@@ -10,8 +10,18 @@
       "moveForward": null,
       "moveTo": null,
       "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
       "turnTo": null,
       "arcRight": null,
       "arcLeft": null,
@@ -19,7 +29,24 @@
       "penDown": null,
       "penWidth": null,
       "penColor": null,
-      "penRGB": null,
+      "penRGB": {
+        "paramButtons": {
+          "maxArgs": 4,
+          "minArgs": 4
+        },
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
       "functionParams_none": null,
       "callMyFunction": null,
       "comment": null
@@ -30,7 +57,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "0.9",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -60,7 +87,8 @@
     "encrypted_examples": "Lw+9Kkhyxqfvk9gjoWqa6ov3+8pLzsilAKeVlNRs9T4uPBinCbmKchk2PPdy\n1i8H\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
