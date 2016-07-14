@@ -1659,3 +1659,8 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Learn more
   dashboard_announce_try_now_button: Try it now
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
