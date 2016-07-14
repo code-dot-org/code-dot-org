@@ -1662,7 +1662,16 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
     if(isNaN(direction))
       direction = 0;
-    return degrees(direction);
+
+    // Unlike Math.atan2, the atan2 method above will return degrees if
+    // the current p5 angleMode is DEGREES, and radians if the p5 angleMode is
+    // RADIANS.  This method should always return degrees (for now).
+    // See https://github.com/molleindustria/p5.play/issues/94
+    if (pInst._angleMode === pInst.RADIANS) {
+      direction = degrees(direction);
+    }
+
+    return direction;
   };
 
   /**
