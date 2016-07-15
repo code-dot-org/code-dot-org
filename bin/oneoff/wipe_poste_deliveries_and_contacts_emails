@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# This script removes plaintext emails from the contacts and psote_deliveries
+# This script removes plaintext emails from the contacts and poste_deliveries
 # tables for all and young Code Studio students, respectively.
 
 require_relative '../../deployment'
