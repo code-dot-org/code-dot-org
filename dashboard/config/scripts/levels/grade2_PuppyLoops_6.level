@@ -1,0 +1,105 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2016-07-15T17:41:26.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,2,0,0],[0,0,0,1,0,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,4,0,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "pvz",
+    "instructions": "Loops even work with more than one block inside!  Can you loop this sequence to get the zombie to the sunflower?",
+    "start_direction": "1",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "5",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.\",\r\n  \"hint_id\": \"2-3_Maze_16_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \\n\\nConnect it all back to the `when run` block and you're good to go!\",\r\n  \"hint_id\": \"2-3_Maze_16_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null,
+    "maze_data": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false">
+          <next>
+            <block type="maze_turn">
+              <title name="DIR">turnRight</title>
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_moveForward"/>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+      </xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_moveForward"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

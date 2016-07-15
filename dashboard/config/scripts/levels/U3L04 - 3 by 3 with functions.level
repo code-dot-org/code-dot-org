@@ -70,7 +70,6 @@
     "execute_palette_apis_only": "true",
     "lock_zero_param_functions": "true",
     "fail_on_lint_errors": "false",
-    "contained_level_names": null,
     "log_conditions": [
       {
         "entries": [
@@ -124,7 +123,8 @@
         "minTimes": 24,
         "message": "It seems like you’re not moving the turtle enough times to draw the full 3x3 grid."
       }
-    ]
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
