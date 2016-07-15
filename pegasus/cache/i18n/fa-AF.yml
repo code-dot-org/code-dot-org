@@ -1769,12 +1769,11 @@
   sphero_beyond_longdescription: "اگر یک آموزگار یا پدر و مادر هستید، درس های SPRK
     یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی
     های آن ها در ریاضی و علوم را تقویت می کند."
-  compatibility_https_header: "لطفا مرور امن (HTTPS) را برای code.org فعال کنید."
-  compatibility_https_message: "برای افزایش امنیت سایت ما در تاریخ %{https_date} به
-    حالت مرور امن (HTTPS) تغییر می کند. شما بعد از این تاریخ به Code.org دسترسی نخواهید
-    داشت. برای این که ببینید چه طور می توانید مرور امن (HTTPS) را برای Code.org فعال
-    کنید <a href='%{it_requirements_url}'>اینجا کلیک کنید</a>."
-  compatibility_https_hide_this_warning: "مخفی کردن هشدار"
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: Hide this warning
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1791,3 +1790,14 @@
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
   dashboard_navigation_view_surveys: Surveys
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Learn more
+  dashboard_announce_try_now_button: Try it now
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
