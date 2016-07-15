@@ -218,7 +218,7 @@ var projects = module.exports = {
 
   useFirebaseForNewProject() {
     return experiments.isEnabled('useFirebaseForNewProject') &&
-      parsePath().appName === 'applab';
+      current.level === '/projects/applab';
   },
 
   //////////////////////////////////////////////////////////////////////
