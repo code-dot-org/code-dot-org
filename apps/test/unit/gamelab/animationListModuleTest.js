@@ -7,9 +7,6 @@ import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
 import {createStore} from '@cdo/apps/redux';
 import {expect} from '../../util/configuredChai';
 
-// var testUtils = require('../../util/testUtils');
-// testUtils.setExternalGlobals();
-
 describe('animationListModule', function () {
   describe('loadAnimationFromSource', function () {
     // Note: I'm basically unable to test loadAnimationFromSource right now,
