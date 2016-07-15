@@ -72,7 +72,7 @@ class ProjectsController < ApplicationController
       StorageApps.new(storage_id('user')),
       {
         name: 'Untitled Project',
-        useFirebase: @level.game.use_firebase_for_new_project?,
+        useFirebase: use_firebase,
         level: polymorphic_url([params[:key], 'project_projects'])
       })
   end
@@ -126,7 +126,8 @@ class ProjectsController < ApplicationController
       request.ip,
       StorageApps.new(storage_id('user')),
       nil,
-      src_channel_id)
+      src_channel_id,
+      use_firebase)
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     AnimationBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id
