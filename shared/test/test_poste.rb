@@ -1,57 +1,69 @@
 require_relative 'test_helper'
-require 'mocha/test_unit'
+require_relative '../../pegasus/test/sequel_test_case'
+require 'mocha/mini_test'
 require 'cdo/poste'
 require 'digest/md5'
 
-class PosteTest < Minitest::Test
+class PosteTest < SequelTestCase
+  STUDENT_EMAIL = 'student@example.net'.freeze
+  STUDENT_EMAIL_HASH = Digest::MD5.hexdigest(STUDENT_EMAIL).freeze
+  TEACHER_EMAIL = 'teacher@example.net'.freeze
+  TEACHER_EMAIL_HASH = Digest::MD5.hexdigest(TEACHER_EMAIL).freeze
+
   def test_unsubscribe_for_existing_contact
     email = 'existing@example.net'
+    hashed_email = Digest::MD5.hexdigest(email)
+
     Poste2.create_recipient(email, {ip_address: '5.6.7.8.'})
+    assert POSTE_DB[:contacts].where(hashed_email: hashed_email).first
+
     Poste.unsubscribe(email, Digest::MD5.hexdigest(email))
-    assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
+    assert POSTE_DB[:contacts].
+      where(hashed_email: hashed_email).first[:unsubscribed_at]
   end
 
   def test_unsubscribe_for_new_contact
     email = 'new@example.net'
+    hashed_email = Digest::MD5.hexdigest(email)
+
+    assert POSTE_DB[:contacts].where(hashed_email: hashed_email).empty?
     Poste.unsubscribe(
       email, Digest::MD5.hexdigest(email), {ip_address: '5.6.7.8.'})
-    assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
+    assert POSTE_DB[:contacts].
+      where(hashed_email: hashed_email).first[:unsubscribed_at]
   end
 
   def test_unsubscribe_for_code_studio_student_stores_no_email
-    email = 'student@example.net'
-    hashed_email = Digest::MD5.hexdigest(email)
-    DASHBOARD_DB[:users].insert(
-      email: email,
-      hashed_email: hashed_email,
-      username: 'code studio student',
-      user_type: 'student',
-      birthday: '2000-01-02'
-    )
-
-    Poste.unsubscribe(email, hashed_email, {ip_address: '1.2.3.4'})
+    Poste.unsubscribe(
+      STUDENT_EMAIL, STUDENT_EMAIL_HASH, {ip_address: '1.2.3.4'})
 
     assert POSTE_DB[:contacts].
-      where(hashed_email: hashed_email).first[:unsubscribed_at]
-    assert_nil POSTE_DB[:contacts].where(email: email).first
+      where(hashed_email: STUDENT_EMAIL_HASH).first[:unsubscribed_at]
+    assert_nil POSTE_DB[:contacts].where(email: STUDENT_EMAIL).first
   end
 
   def test_unsubscribe_for_code_studio_teacher_stores_email
-    email = 'teacher@example.net'
-    hashed_email = Digest::MD5.hexdigest(email)
-    DASHBOARD_DB[:users].insert(
-      email: email,
-      hashed_email: hashed_email,
-      username: 'code studio teacher',
-      user_type: 'teacher',
-      birthday: '1990-01-02'
-    )
-
-    Poste.unsubscribe(email, hashed_email, {ip_address: '1.2.3.4'})
+    Poste.unsubscribe(
+      TEACHER_EMAIL, TEACHER_EMAIL_HASH, {ip_address: '1.2.3.4'})
 
     assert POSTE_DB[:contacts].
-      where(hashed_email: hashed_email).first[:unsubscribed_at]
-    assert POSTE_DB[:contacts].where(email: email).first[:unsubscribed_at]
+      where(hashed_email: TEACHER_EMAIL_HASH).first[:unsubscribed_at]
+    assert POSTE_DB[:contacts].
+      where(email: TEACHER_EMAIL).first[:unsubscribed_at]
+  end
+
+  def test_dashboard_student_for_nonuser
+    email = 'nonexistent_email@fake_domain.com'
+    hashed_email = Digest::MD5.hexdigest(email)
+    assert !Poste.dashboard_student?(hashed_email)
+  end
+
+  def test_dashboard_student_for_student
+    assert Poste.dashboard_student?(STUDENT_EMAIL_HASH)
+  end
+
+  def test_dashboard_student_for_teacher
+    assert !Poste.dashboard_student?(TEACHER_EMAIL_HASH)
   end
 
   def test_encrypt_then_decrypt_noop
@@ -79,7 +91,7 @@ class PosteTest < Minitest::Test
   end
 end
 
-class Poste2Test < Minitest::Test
+class Poste2Test < SequelTestCase
   FROM_NAME = 'Code dot org'
   FROM_EMAIL = 'noreply@code.org'
   REPLY_TO_NAME = 'Reply-to Person'
@@ -191,5 +203,105 @@ class Poste2Test < Minitest::Test
       attachments: {ATTACHMENT_FILENAME => ATTACHMENT_CONTENT}
     )
     @delivery_method.deliver!(mail)
+  end
+
+  def test_create_recipient_for_bad_email
+    bad_email = 'not_an_email'
+    assert_raises ArgumentError do
+      Poste2.create_recipient(bad_email)
+    end
+  end
+
+  def test_create_recipient_for_new_contact
+    email = 'new_contact@example.net'
+    hashed_email = Digest::MD5.hexdigest(email)
+
+    Poste2.create_recipient(email, {ip_address: '1.2.3.4'})
+    assert POSTE_DB[:contacts].where(hashed_email: hashed_email).first
+  end
+
+  def test_create_recipient_for_existing_contact
+    email = 'new_contact@example.net'
+    hashed_email = Digest::MD5.hexdigest(email)
+    id = POSTE_DB[:contacts].insert({
+      email: email,
+      hashed_email: hashed_email,
+      created_at: DateTime.now,
+      created_ip: '1.2.3.4',
+      updated_at: DateTime.now,
+      updated_ip: '1.2.3.4'
+    })
+
+    recipient = Poste2.create_recipient(email)
+    assert_equal id, recipient[:id]
+  end
+
+  def test_create_recipient_for_dashboard_student
+    email = 'student@example.com'
+    hashed_email = Digest::MD5.hexdigest(email)
+    DASHBOARD_DB[:users].insert(
+      email: email,
+      hashed_email: hashed_email,
+      username: 'code studio student',
+      user_type: 'student',
+      birthday: '2000-01-02'
+    )
+
+    Poste2.create_recipient(email, {ip_address: '1.2.3.4'})
+    assert POSTE_DB[:contacts].where(hashed_email: hashed_email).first
+    assert !POSTE_DB[:contacts].where(email: email).first
+  end
+
+  def test_create_recipient_for_dashboard_teacher
+    email = 'teacher@example.com'
+    hashed_email = Digest::MD5.hexdigest(email)
+    DASHBOARD_DB[:users].insert(
+      email: email,
+      hashed_email: hashed_email,
+      username: 'code studio teacher',
+      user_type: 'teacher',
+      birthday: '2000-01-02'
+    )
+
+    Poste2.create_recipient(email, {ip_address: '1.2.3.4'})
+    assert POSTE_DB[:contacts].where(hashed_email: hashed_email).first
+    assert POSTE_DB[:contacts].where(email: email).first
+  end
+
+  def test_ensure_recipient_for_bad_email
+    bad_email = 'not_an_email'
+    assert_raises ArgumentError do
+      Poste2.ensure_recipient(bad_email)
+    end
+  end
+
+  def test_ensure_recipient_for_new_contact
+    email = 'new_contact@example.net'
+    hashed_email = Digest::MD5.hexdigest(email)
+
+    assert POSTE_DB[:contacts].where(hashed_email: hashed_email).empty?
+    Poste2.ensure_recipient(email, {ip_address: '1.2.3.4'})
+    assert POSTE_DB[:contacts].where(hashed_email: hashed_email).first
+  end
+
+  def test_ensure_recipient_for_existing_contact
+    email = 'existing_contact@example.net'
+    hashed_email = Digest::MD5.hexdigest(email)
+    POSTE_DB[:contacts].insert({
+      email: email,
+      hashed_email: hashed_email,
+      created_at: DateTime.now,
+      created_ip: '1.2.3.4',
+      updated_at: DateTime.now,
+      updated_ip: '1.2.3.4'
+    })
+
+    recipient = Poste2.ensure_recipient(email, {ip_address: '5.6.7.8'})
+    # Intentional or not, the IP address returned is the IP address passed in.
+    assert_equal '5.6.7.8', recipient[:ip_address]
+    assert POSTE_DB[:contacts].where(hashed_email: hashed_email).first
+    # Intentional or not, the IP address is not updated in the DB.
+    assert_equal '1.2.3.4',
+      POSTE_DB[:contacts].where(hashed_email: hashed_email).first[:created_ip]
   end
 end
