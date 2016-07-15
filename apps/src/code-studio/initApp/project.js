@@ -97,7 +97,7 @@ var projects = module.exports = {
    * @returns {string} id of the current project, or undefined if we don't have
    *   a current project.
    */
-  getCurrentId: function () {
+  getCurrentId() {
     if (!current) {
       return;
     }
@@ -108,14 +108,14 @@ var projects = module.exports = {
    * @returns {string} name of the current project, or undefined if we don't have
    *   a current project
    */
-  getCurrentName: function () {
+  getCurrentName() {
     if (!current) {
       return;
     }
     return current.name;
   },
 
-  getCurrentTimestamp: function () {
+  getCurrentTimestamp() {
     if (!current) {
       return;
     }
@@ -125,14 +125,14 @@ var projects = module.exports = {
   /**
    * @returns {number}
    */
-  getAbuseScore: function () {
+  getAbuseScore() {
     return currentAbuseScore;
   },
 
   /**
    * Whether this project uses Firebase for data storage.
    */
-  useFirebase: function () {
+  useFirebase() {
     if (!current) {
       return;
     }
@@ -142,7 +142,7 @@ var projects = module.exports = {
   /**
    * Sets abuse score to zero, saves the project, and reloads the page
    */
-  adminResetAbuseScore: function () {
+  adminResetAbuseScore() {
     var id = this.getCurrentId();
     if (!id) {
       return;
@@ -168,7 +168,7 @@ var projects = module.exports = {
   /**
    * @returns {boolean} true if we're frozen
    */
-  isFrozen: function () {
+  isFrozen() {
     if (!current) {
       return;
     }
@@ -178,7 +178,7 @@ var projects = module.exports = {
   /**
    * @returns {boolean}
    */
-  isOwner: function () {
+  isOwner() {
     return current && current.isOwner;
   },
 
@@ -186,7 +186,7 @@ var projects = module.exports = {
    * @returns {boolean} true if project has been reported enough times to
    *   exceed our threshold
    */
-  hasPrivacyProfanityViolation: function () {
+  hasPrivacyProfanityViolation() {
     return currentHasPrivacyProfanityViolation;
   },
 
@@ -194,7 +194,7 @@ var projects = module.exports = {
    * @returns {boolean} true if project has been reported enough times to
    *   exceed our threshold
    */
-  exceedsAbuseThreshold: function () {
+  exceedsAbuseThreshold() {
     return currentAbuseScore >= ABUSE_THRESHOLD;
   },
 
@@ -202,7 +202,7 @@ var projects = module.exports = {
    * @return {boolean} true if we should show our abuse box instead of showing
    *   the project.
    */
-  hideBecausePrivacyViolationOrProfane: function () {
+  hideBecausePrivacyViolationOrProfane() {
     if (!this.hasPrivacyProfanityViolation() || appOptions.scriptId) {
       // Never want to hide when in the context of a script, as this will always
       // either be me or my teacher viewing my last submission
@@ -228,7 +228,7 @@ var projects = module.exports = {
    * @return {boolean} true if we should show our abuse box instead of showing
    *   the project.
    */
-  hideBecauseAbusive: function () {
+  hideBecauseAbusive() {
     if (!this.exceedsAbuseThreshold() || appOptions.scriptId) {
       // Never want to hide when in the context of a script, as this will always
       // either be me or my teacher viewing my last submission
@@ -264,44 +264,44 @@ var projects = module.exports = {
   /**
    * @returns {boolean} true if we're editing
    */
-  isEditing: function () {
+  isEditing() {
     return isEditing;
   },
 
   // Whether the current level is a project level (i.e. at the /projects url).
-  isProjectLevel: function () {
+  isProjectLevel() {
     return (appOptions.level && appOptions.level.isProjectLevel);
   },
 
-  shouldUpdateHeaders: function () {
+  shouldUpdateHeaders() {
     return !appOptions.isExternalProjectLevel;
   },
 
-  showProjectHeader: function () {
+  showProjectHeader() {
     if (this.shouldUpdateHeaders()) {
       header.showProjectHeader();
     }
   },
 
-  showMinimalProjectHeader: function () {
+  showMinimalProjectHeader() {
     if (this.shouldUpdateHeaders()) {
       header.showMinimalProjectHeader();
     }
   },
 
-  showHeaderForProjectBacked: function () {
+  showHeaderForProjectBacked() {
     if (this.shouldUpdateHeaders()) {
       header.showHeaderForProjectBacked();
     }
   },
-  setName: function (newName) {
+  setName(newName) {
     current = current || {};
     if (newName) {
       current.name = newName;
       this.setTitle(newName);
     }
   },
-  setTitle: function (newName) {
+  setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
       document.title = newName + ' - ' + appOptions.gameDisplayName;
     }
@@ -321,7 +321,7 @@ var projects = module.exports = {
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
    */
-  init: function (sourceHandler) {
+  init(sourceHandler) {
     this.sourceHandler = sourceHandler;
     if (redirectFromHashUrl() || redirectEditView()) {
       return;
@@ -388,14 +388,14 @@ var projects = module.exports = {
     // here whether we're an admin, and depend on dashboard getting this right.
     showProjectAdmin();
   },
-  projectChanged: function () {
+  projectChanged() {
     hasProjectChanged = true;
   },
   /**
    * @returns {string} The name of the standalone app capable of running
    * this project as a standalone project, or null if none exists.
    */
-  getStandaloneApp: function () {
+  getStandaloneApp() {
     switch (appOptions.app) {
       case 'applab':
         return appOptions.level.makerlabEnabled ? 'makerlab' : 'applab';
@@ -423,7 +423,7 @@ var projects = module.exports = {
    * this project as a standalone app.
    * @throws {Error} If no standalone app exists.
    */
-  appToProjectUrl: function () {
+  appToProjectUrl() {
     var app = projects.getStandaloneApp();
     if (!app) {
       throw new Error('This type of project cannot be run as a standalone app.');
@@ -434,7 +434,7 @@ var projects = module.exports = {
    * Explicitly clear the HTML, circumventing safety measures which prevent it from
    * being accidentally deleted.
    */
-  clearHtml: function () {
+  clearHtml() {
     currentSources.html = '';
   },
   /**
@@ -445,7 +445,7 @@ var projects = module.exports = {
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
-  save: function (sourceAndHtml, callback, forceNewVersion) {
+  save(sourceAndHtml, callback, forceNewVersion) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -494,7 +494,7 @@ var projects = module.exports = {
       }.bind(this));
     }.bind(this));
   },
-  updateCurrentData_: function (err, data, isNewChannel) {
+  updateCurrentData_(err, data, isNewChannel) {
     if (err) {
       $('.project_updated_at').text('Error saving project');  // TODO i18n
       return;
@@ -519,7 +519,7 @@ var projects = module.exports = {
   /**
    * Autosave the code if things have changed
    */
-  autosave_: function () {
+  autosave_() {
     // Bail if baseline code doesn't exist (app not yet initialized)
     if (currentSources.source === null) {
       return;
@@ -551,14 +551,14 @@ var projects = module.exports = {
   /**
    * Renames and saves the project.
    */
-  rename: function (newName, callback) {
+  rename(newName, callback) {
     this.setName(newName);
     this.save(callback);
   },
   /**
    * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
    */
-  freeze: function (callback) {
+  freeze(callback) {
     current.frozen = true;
     current.hidden = true;
     this.save(function (data) {
@@ -570,7 +570,7 @@ var projects = module.exports = {
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
    */
-  copy: function (newName, callback) {
+  copy(newName, callback) {
     var srcChannel = current.id;
     var wrappedCallback = this.copyAssets.bind(this, srcChannel,
         this.copyAnimations.bind(this, srcChannel, callback));
@@ -582,7 +582,7 @@ var projects = module.exports = {
       this.save(wrappedCallback);
     }.bind(this));
   },
-  copyAssets: function (srcChannel, callback) {
+  copyAssets(srcChannel, callback) {
     if (!srcChannel) {
       executeCallback(callback);
       return;
@@ -596,7 +596,7 @@ var projects = module.exports = {
       executeCallback(callback);
     });
   },
-  copyAnimations: function (srcChannel, callback) {
+  copyAnimations(srcChannel, callback) {
     if (!srcChannel) {
       executeCallback(callback);
       return;
@@ -605,7 +605,7 @@ var projects = module.exports = {
     // TODO: Copy animation assets to new channel
     executeCallback(callback);
   },
-  serverSideRemix: function () {
+  serverSideRemix() {
     if (current && !current.name) {
       var url = projects.appToProjectUrl();
       if (url === '/projects/algebra_game') {
@@ -626,12 +626,12 @@ var projects = module.exports = {
       redirectToRemix();
     }
   },
-  createNew: function () {
+  createNew() {
     projects.save(function () {
       location.href = projects.appToProjectUrl() + '/new';
     });
   },
-  delete: function (callback) {
+  delete(callback) {
     var channelId = current.id;
     channels.delete(channelId, function (err, data) {
       executeCallback(callback, data);
@@ -640,7 +640,7 @@ var projects = module.exports = {
   /**
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
    */
-  load: function () {
+  load() {
     var deferred = new $.Deferred();
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
@@ -703,7 +703,7 @@ var projects = module.exports = {
    * @returns {string} Url to the specified action.
    * @throws {Error} If this type of project does not have a standalone app.
    */
-  getPathName: function (action) {
+  getPathName(action) {
     var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
     if (action) {
       pathName += '/' + action;
