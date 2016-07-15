@@ -3,26 +3,26 @@ title 'Why Programming and Programming Languages?'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 01 - The Need for Programming Languages
+# Unit 3: Lesson 01 - The Need for Programming Languages
 
-# Background
+## Background
 
 Algorithms are the way we express solutions to problems in the field of computer science. Once we've identified a problem we seek to create an algorithm that can be used to solve that problem and ideally a whole class of similar problems. The ability to express algorithms in a way that someone else (or a computer) can understand and use them allows us to solve a problem only once and then let that other person or machine worry about actually implementing our solution.
 
-# Lesson
+## Lesson
 
 * Create instructions using only words to construct a specific arrangement of toy blocks.
 * Test the clarity of your instructions by exchanging with another member of the class.
 * Brainstorm strategies for effectively communicating the steps of an algorithm.
 
+## Resources
 
-# Resources
 * Activity Guide: <a href="https://docs.google.com/document/d/1O8A2HyfxYuWiZUAtKczEdrcqjEXW0hM9dI6PIJPIpv4/edit?usp=sharing" target="_blank">
 LEGO Algorithms</a> (or <a href="https://docs.google.com/document/d/1OlZwHo-XsEpOdDQ_9CgUMq1P41GNNoQg7mjqHGZxSJs/edit?usp=sharing" target="_blank">Building Blocks of Drawing</a>)
 * Video: <a href="https://www.youtube.com/watch?v=xfBWk4nw440" target="_blank">
 You Should Learn to Program</a> 
-<br><br>
-*LEGO® is a trademark of Penguin Group (USA) LLC, which does not sponsor, authorize or endorse this site.*
-<br><br>
+
+*LEGO&reg; is a trademark of Penguin Group (USA) LLC, which does not sponsor, authorize or endorse this site.*
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

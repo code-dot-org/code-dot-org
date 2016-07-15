@@ -28,7 +28,7 @@ class ServerTools
     production_attributes = `knife environment show production`
     ids.each do |id|
       unless production_attributes.index("#{id.name}:").nil?
-        raise "Before deprovisoning #{id.name}, you must remove it from the chef " +
+        raise "Before deprovisoning #{id.name}, you must remove it from the chef " \
               "app-servers attribute using 'knife environment edit production'."
       end
     end

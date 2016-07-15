@@ -389,7 +389,7 @@ module.exports = {
 
         $("#runButton").click();
         assert.equal($('#design-mode-dimmed').length, 1, 'transparency layer visible when running in design mode');
-        assert.equal($('#screenSelector:disabled').length, 1, 'screen select disabled when running');
+        assert.equal($('#screenSelector').length, 0, 'no screen selector while running');
 
         $("#resetButton").click();
         assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible after resetting');
