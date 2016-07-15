@@ -4,33 +4,28 @@ description 'description here'
 css 'unplugged'
 skip_dialog 'true'
 markdown <<MARKDOWN
-## Unit 1: Lesson 6 - Sending Numbers
+# Unit 1: Lesson 6 - Sending Numbers
 
-# Background
+## Background
+
 All communication protocols solve the problem of how to send (binary encoded) information from one place to another. This requires that the sender and receiver agree on how many bits form a proper message and how big the “chunks” of bits should be.
 
 In this lesson you will use the Internet Simulator to send a simple line drawing to a classmate encoded in binary. The the drawing will be encoded as coordinates on a grid to connect lines.  You must develop a protocol for sending a list of numbers to your partner over the internet simulator.
 
-# Lesson
+## Vocabulary
+
+* **Protocol:** A set of rules governing the exchange or transmission of data between devices.
+
+## Lesson
 
 * Invent your own communication protocol to send a list of numbers to create an image on a grid.
 * Use the Internet Simulator to send the numbers to a friend.
 * Could your partner draw the image based upon your message?
 
-# Vocabulary
-
-* Protocol - A set of rules governing the exchange or transmission of data between devices.
-
-
-# Resources
+## Resources
 
 * <a href='https://docs.google.com/document/d/1yoXIBpv1qjhMEBUqxvmVOERRgcGoQ_0dXfho3sDWgg8/edit?usp=sharing' target='_blank' class='print_link'>Sending Numbers</a> - Activity Guide (<a href='https://docs.google.com/document/d/1yoXIBpv1qjhMEBUqxvmVOERRgcGoQ_0dXfho3sDWgg8/export?format=pdf' class='print_link'>download</a>)
-
 * <a href='https://docs.google.com/document/d/1C0_8V-LGHUM1ykxiyHQEWl7HdVnLUA3QLnOQVEXUMZM/edit?usp=sharing' target='_blank' class='print_link'>Sending Numbers for Graphing</a> - Worksheet (<a href='https://docs.google.com/document/d/1C0_8V-LGHUM1ykxiyHQEWl7HdVnLUA3QLnOQVEXUMZM/export?format=pdf' class='print_link'>download</a>)
 
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
-
 MARKDOWN

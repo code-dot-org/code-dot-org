@@ -207,8 +207,8 @@ def upgrade_frontend(name, host)
     HipChat.log "Upgraded <b>#{name}</b> (#{host})."
   rescue
     # The frontend is in an indeterminate state, and is not registered with the load balancer.
-    HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, and may currently be out of the load balancer rotation.\n" +
-      "Either re-deploy, or run the following command (from Gateway) to manually upgrade this instance:\n" +
+    HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, and may currently be out of the load balancer rotation.\n" \
+      "Either re-deploy, or run the following command (from Gateway) to manually upgrade this instance:\n" \
       "`ssh #{name} '~/#{rack_env}/bin/deploy_frontend/deregister_from_elb.sh && #{command} && ~/#{rack_env}/bin/deploy_frontend/register_with_elb.sh'`",
       color: 'red'
     HipChat.log "log command: `ssh gateway.code.org ssh production-daemon cat #{log_path}`"

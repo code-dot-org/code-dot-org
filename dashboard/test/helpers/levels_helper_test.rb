@@ -246,6 +246,30 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 'http://test.host/sms/send', app_options[:send_to_phone_url]
   end
 
+  test 'submittable level is submittable for teacher enrolled in plc' do
+    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    Plc::UserCourseEnrollment.stubs(:exists?).returns(true)
+
+    user = create(:teacher)
+    sign_in user
+
+    app_options = self.question_options
+
+    assert_equal true, app_options[:level]['submittable']
+  end
+
+  test 'submittable level is not submittable for a teacher not enrolled in plc' do
+    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    Plc::UserCourseEnrollment.stubs(:exists?).returns(false)
+
+    user = create(:teacher)
+    sign_in user
+
+    app_options = self.question_options
+
+    assert_not app_options[:level]['submittable']
+  end
+
   test 'submittable level is submittable for student with teacher' do
     @level = create(:applab, submittable: true)
 
