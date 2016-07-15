@@ -326,3 +326,11 @@ And /^I drag element "([^"]*)" ([\d]+) horizontally and ([\d]+) vertically$/ do 
 
   @browser.execute_script(script)
 end
+
+And /^Firebase is enabled$/ do
+  @browser.execute_script("return dashboard.project.useFirebase()").should eq true
+end
+
+And /^Firebase is disabled$/ do
+  @browser.execute_script("return dashboard.project.useFirebase()").should eq false
+end
