@@ -834,7 +834,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal @student, assigns(:user)
 
     assert_equal true, assigns(:view_options)[:readonly_workspace]
-    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal true, assigns(:level_view_options_map)[level.id][:skip_instructions_popup]
     assert_equal [], assigns(:view_options)[:callouts]
   end
 
@@ -918,7 +918,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '.teacher-panel.hidden', 0 # not hidden
 
     assert_equal true, assigns(:view_options)[:readonly_workspace]
-    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal true, assigns(:level_view_options_map)[sl.levels[0].id][:skip_instructions_popup]
     assert_equal [], assigns(:view_options)[:callouts]
   end
 
@@ -981,8 +981,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level
     assert_response :success
 
-    assert_equal true, assigns(:level_view_options)[:submitted]
-    assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options)[:unsubmit_url]
+    assert_equal true, assigns(:level_view_options_map)[level.id][:submitted]
+    assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options_map)[level.id][:unsubmit_url]
   end
 
   def create_admin_script
