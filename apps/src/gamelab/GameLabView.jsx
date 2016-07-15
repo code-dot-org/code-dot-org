@@ -13,6 +13,7 @@ import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import CodeWorkspace from '../templates/CodeWorkspace';
+import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 
 /**
  * Top-level React wrapper for GameLab
@@ -24,13 +25,11 @@ const GameLabView = React.createClass({
     onMount: React.PropTypes.func.isRequired,
     // Provided by Redux
     interfaceMode: React.PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
-    showAnimationMode: React.PropTypes.bool.isRequired
+    allowAnimationMode: React.PropTypes.bool.isRequired,
+    showVisualizationHeader: React.PropTypes.bool.isRequired
   },
 
   getChannelId() {
@@ -70,7 +69,7 @@ const GameLabView = React.createClass({
             className={visualizationColumnClassNames}
             style={visualizationColumnStyle}
         >
-          {this.shouldShowHeader() && <GameLabVisualizationHeader />}
+          {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
           <GameLabVisualizationColumn finishButton={showFinishButton}/>
         </div>
         <ProtectedStatefulDiv
@@ -85,15 +84,10 @@ const GameLabView = React.createClass({
   },
 
   renderAnimationMode() {
-    const {showAnimationMode, interfaceMode} = this.props;
-    return showAnimationMode && interfaceMode === GameLabInterfaceMode.ANIMATION ?
+    const {allowAnimationMode, interfaceMode} = this.props;
+    return allowAnimationMode && interfaceMode === GameLabInterfaceMode.ANIMATION ?
         <AnimationTab channelId={this.getChannelId()} /> :
         undefined;
-  },
-
-  shouldShowHeader() {
-    const {showAnimationMode, isEmbedView, isReadOnlyWorkspace, isShareView} = this.props;
-    return showAnimationMode && !(isEmbedView || isReadOnlyWorkspace || isShareView);
   },
 
   render() {
@@ -109,10 +103,8 @@ const GameLabView = React.createClass({
 module.exports = connect(state => ({
   hideSource: state.pageConstants.hideSource,
   interfaceMode: state.interfaceMode,
-  isEmbedView: state.pageConstants.isEmbedView,
   isResponsive: isResponsiveFromState(state),
-  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-  isShareView: state.pageConstants.isShareView,
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-  showAnimationMode: state.pageConstants.showAnimationMode
+  allowAnimationMode: allowAnimationMode(state),
+  showVisualizationHeader: showVisualizationHeader(state)
 }))(GameLabView);

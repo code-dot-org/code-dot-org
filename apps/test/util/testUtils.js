@@ -217,3 +217,41 @@ exports.setAceText = function (text) {
   aceEditor.textInput.focus();
   aceEditor.setValue(text);
 };
+
+/**
+ * Given a function with n required boolean arguments, invokes the
+ * function 2^n times, once with every possible permutation of arguments.
+ * If the given function has no arguments it will be invoked once.
+ * @param {function} fn
+ * @example
+ *   forEveryBooleanPermutation((a, b) => {
+ *     console.log(a, b);
+ *   });
+ *   // Runs four times, logging:
+ *   // false, false
+ *   // false, true
+ *   // true, false
+ *   // true, true
+ */
+export function forEveryBooleanPermutation(fn) {
+  const argCount = fn.length;
+  if (argCount === 0) {
+    fn.apply(null);
+    return;
+  }
+
+  const numPermutations = Math.pow(2, argCount);
+  for (let i = 0; i < numPermutations; i++) {
+    fn.apply(null, getBooleanPermutation(i, argCount));
+  }
+}
+
+function getBooleanPermutation(n, numberOfBooleans) {
+  return zeroPadLeft(n.toString(2), numberOfBooleans) // Padded binary string
+      .split('') // to array of '0' and '1'
+      .map(x => x === '1'); // to array of booleans
+}
+
+function zeroPadLeft(string, desiredWidth) {
+  return ('0'.repeat(desiredWidth) + string).slice(-desiredWidth);
+}
