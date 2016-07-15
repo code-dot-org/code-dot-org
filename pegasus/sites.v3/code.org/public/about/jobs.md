@@ -153,7 +153,7 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 
 The Hour of Code initiative is a yearly campaign that encourages students to try computer science during Computer Science Education Week (Dec. 5-11). Since 2013, it has reached over 200M students worldwide in 180+ countries. Supporters of the campaign include President Obama, Sheryl Sandberg, Bill Gates, Susan Wojcicki, Ashton Kutcher and many more. Code.org is recruiting a temporary staff member to assist the Marketing team in the planning and execution of December’s Hour of Code campaign. The Marketing Associate will make essential contributions to a global and highly visible marketing effort, supporting social media and email outreach, live events, partnership cultivation, and more. 
 
-This is a full time, short term (June-December) staff position based in our Seattle office. 
+This is a full time, short term (July-December) staff position based in our Seattle office. 
 
 Duties of this role include: 
 

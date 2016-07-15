@@ -7,7 +7,7 @@ var _ = require('lodash');
 
 var clientState = require('./clientState');
 var popupWindow = require('./popup-window');
-var ShareDialog = require('./components/share_dialog');
+var ShareDialog = require('./components/ShareDialog');
 var progress = require('./progress');
 var Dialog = require('./dialog');
 
@@ -138,7 +138,6 @@ function shareProject() {
   dashboard.project.save(function () {
     var origin = location.protocol + '//' + location.host;
     var shareUrl = origin + dashboard.project.getPathName();
-    var encodedShareUrl = encodeURIComponent(shareUrl);
 
     var i18n = window.dashboard.i18n;
 
@@ -152,14 +151,8 @@ function shareProject() {
     var dialog = React.createElement(ShareDialog, {
       i18n: i18n,
       icon: appOptions.skin.staticAvatar,
-      title: i18n.t('project.share_title'),
-      shareCopyLink: i18n.t('project.share_copy_link'),
       shareUrl: shareUrl,
-      encodedShareUrl: encodedShareUrl,
-      closeText: i18n.t('project.close'),
       isAbusive: dashboard.project.exceedsAbuseThreshold(),
-      abuseTos: i18n.t('project.abuse.tos'),
-      abuseContact: i18n.t('project.abuse.contact_us'),
       channelId: dashboard.project.getCurrentId(),
       appType: dashboard.project.getStandaloneApp(),
       onClickPopup: popupWindow,

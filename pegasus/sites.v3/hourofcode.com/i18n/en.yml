@@ -4,6 +4,8 @@
   language: 'English'
   front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: 'Coming Soon'
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+
   campaign_date_start_short: "Dec. 5"
   campaign_date_start_long: "December 5"
   campaign_date_short: "Dec. 5-11"
@@ -379,7 +381,7 @@
   title_partners: Partners
   title_resources: Resources
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
-  title_tutorial_guidelines: Tutorial Guidelines
+  title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation
 
   events_nav_title: Hour of Code Events

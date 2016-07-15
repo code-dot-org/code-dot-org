@@ -5,27 +5,25 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 9 - The Need for DNS
+# Unit 2: Lesson 9 - The Need for DNS
 
-# Background
+## Background
 
 It would be impossible for packets to be routed across the internet without IP addresses. The problem with this system is that, while computers are good at referring to other computers by numbers, humans are not. The Domain Name System (DNS) solves this problem so that we can identify a webpage by its name, even when the IP addresses change.
 
-# Vocabulary
+## Vocabulary
 
-<strong>DNS</strong>: an abbreviation for Domain Name System, the Internet's system for converting alphabetic names into numeric IP addresses. 
+**DNS:** an abbreviation for Domain Name System, the Internet's system for converting alphabetic names into numeric IP addresses.
 
-# Lesson
+## Lesson
 
 * Discover how DNS translates human-readable locations on the Internet into a numeric IP address.
 * Use the Internet Simulator to send requests to the built-in DNS to get the IP addresses of other computers in the network.
 
-# Resources
+## Resources
 
 * Worksheet: <a href="https://docs.google.com/document/d/1ast9GYpMTTtvdtUpr37ntOjcOvGhy8jynodPVF5-Lv8/edit?usp=sharing" target="_blank"> Names and Addresses </a>
 * Handout: <a href="https://docs.google.com/document/d/1fuOV_aqOix3J7-bs3OxPiLzkdROYe1Vn1t2ATTDFEk0/edit?usp=sharing" target="_blank"> Questionnaire </a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

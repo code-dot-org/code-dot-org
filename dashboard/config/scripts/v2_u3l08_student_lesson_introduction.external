@@ -3,9 +3,9 @@ title 'Creating Functions with Parameters'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 08 - Creating Functions with Parameters
+# Unit 3: Lesson 08 - Creating Functions with Parameters
 
-# Background
+## Background
 
 The ability to make functions that accept parameters has already proven to
 be an extremely useful addition to our toolbox, allowing us to create
@@ -19,20 +19,21 @@ experiment with different inputs to see what kind of output we can produce.
 In this lesson we'll explore these ideas as we create an "Under the Sea"
 drawing.
 
-# Lesson
+## Lesson
 
 * Identify situations for creating functions with parameters.
 * Incorporate functions with parameters into an “Under the Sea” digital scene.
 * Test functions with parameters using random input.
 
-# Vocabulary
-* **Parameter** - An extra piece of information that you pass to the function to customize it for a specific need.
+## Vocabulary
 
-# Resources
+* **Parameter:** An extra piece of information that you pass to the function to customize it for a specific need.
+
+## Resources
+
 * Tutorial video: Functions with Parameters
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/k7Ji1E97-V0?rel=0" frameborder="0" allowfullscreen></iframe>
-
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
