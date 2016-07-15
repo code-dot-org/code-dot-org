@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Draw this.",
+    "instructions": "Now try drawing the same images using the function \"draw a star\"",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Don't give up!\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
