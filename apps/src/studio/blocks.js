@@ -996,6 +996,9 @@ exports.install = function (blockly, blockInstallOptions) {
         var sprite = this.getTitleValue('SPRITE') || '0';
         var direction = directionConfig.studioValue.toString();
         var methodName = isEventMove ? 'move' : 'moveDistance';
+        // For diagonal move blocks, the move distance is longer than normal by
+        // a factor of sqrt(2), so that a move north followed by a move west
+        // takes you to the same spot as a single move northwest.
         var defaultDistance =
           constants.CardinalDirections.includes(directionConfig.studioValue) ?
           SimpleMove.DEFAULT_MOVE_DISTANCE :
