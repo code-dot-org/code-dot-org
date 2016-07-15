@@ -1,7 +1,7 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2016-07-14T17:38:18.992Z",
+  "created_at": "2016-07-14T17:38:18.000Z",
   "level_num": "custom",
   "user_id": 9,
   "properties": {
@@ -65,6 +65,9 @@
           <title name="LOC">atFlower</title>
         </block>
         <block type="maze_nectar"/>
+        <block type="controls_repeat">
+          <title name="TIMES">2</title>
+        </block>
       </xml>
     </recommended_blocks>
     <solution_blocks>
