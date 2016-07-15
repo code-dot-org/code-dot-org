@@ -297,7 +297,7 @@ def main
         # We clear the email here for privacy. Note that (given architecture)
         # it has to be persisted for a short while to actually send the email.
         POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
-          update(sent_at: sent_at, email: '')
+          update(sent_at: sent_at, contact_email: '')
       else
         POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
           update(sent_at: sent_at)
