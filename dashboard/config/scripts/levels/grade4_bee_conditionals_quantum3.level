@@ -42,34 +42,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat">
-              <title name="TIMES">2</title>
-              <statement name="DO">
-                <block type="maze_moveForward">
-                  <next>
-                    <block type="maze_moveForward">
-                      <next>
-                        <block type="bee_ifFlower">
-                          <title name="LOC">atFlower</title>
-                          <statement name="DO">
-                            <block type="maze_nectar"/>
-                          </statement>
-                          <next>
-                            <block type="maze_turn">
-                              <title name="DIR">turnLeft</title>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -93,17 +66,10 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
         <block type="bee_ifFlower">
           <title name="LOC">atHoneycomb</title>
         </block>
         <block type="maze_honey"/>
-        <block type="controls_repeat">
-          <title name="TIMES">2</title>
-        </block>
       </xml>
     </recommended_blocks>
     <solution_blocks>

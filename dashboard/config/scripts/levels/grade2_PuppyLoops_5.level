@@ -1,18 +1,18 @@
 <Maze>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2016-07-14T20:50:32.000Z",
+  "created_at": "2016-07-15T17:41:15.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,4,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,4,2,0],[0,3,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "This pig is ruffling my feathers. Help me get to him!",
+    "instructions": "Can you figure out the fastest way to get me to the pig?",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
-    "ideal": "4",
+    "skip_instructions_popup": "false",
+    "ideal": "5",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -26,7 +26,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
   "notes": "",
@@ -43,11 +44,19 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveForward"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
       </xml>
     </recommended_blocks>
     <solution_blocks>
@@ -56,9 +65,15 @@
           <next>
             <block type="maze_moveForward">
               <next>
-                <block type="maze_moveForward">
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
                   <next>
-                    <block type="maze_moveForward"/>
+                    <block type="controls_repeat">
+                      <title name="TIMES">5</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                    </block>
                   </next>
                 </block>
               </next>
