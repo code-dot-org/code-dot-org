@@ -2,13 +2,13 @@ name 'U3L13 Student Facing Lesson Plan'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 13 - Multi-screen App
+# Unit 3: Lesson 13 - Multi-screen App
 
-# Background
+## Background
 
 In the last lesson we looked at Design Mode, an easy way to add UI elements to our apps. This lesson is all about you getting a chance to use those new skills to make a multi-screen app. Use your creativity and personal interests to make your app unique.
 
-# Lesson
+## Lesson
 
 * Choose the theme of your app.
 * Complete the Planning Guide.
@@ -16,10 +16,9 @@ In the last lesson we looked at Design Mode, an easy way to add UI elements to o
 * Program your app.
 * Give and receive feedback on apps.
 
-# Resources
+## Resources
 
 * Activity Guide: <a href="https://docs.google.com/document/d/1R9OB-hiyfJ5C6dh5UD9PDRJPCEp8vtWal6KlzHoI7Ak/edit?usp=sharing" target="_blank">Multi-screen App</a>
-
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

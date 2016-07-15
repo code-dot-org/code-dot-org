@@ -71,12 +71,13 @@ const DataTable = React.createClass({
             <th style={dataStyles.headerCell}/>
           </tr>
 
-          <AddTableRow columnNames={columnNames}/>
+          <AddTableRow tableName={this.props.tableName} columnNames={columnNames}/>
 
           {
             Object.keys(this.props.tableRecords).map(id => (
               <EditTableRow
                   columnNames={columnNames}
+                  tableName={this.props.tableName}
                   record={JSON.parse(this.props.tableRecords[id])}
                   key={id}
               />

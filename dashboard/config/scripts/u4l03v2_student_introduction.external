@@ -3,24 +3,23 @@ title 'title'
 css 'unplugged'
 description 'description here'
 markdown <<MARKDOWN
-## Unit 4: Lesson 03 - Check Your Assumptions
+# Unit 4: Lesson 03 - Check Your Assumptions
 
-# Background
+## Background
 Analyzing and interpreting data will typically require some assumptions to be made about the accuracy of the data and the cause of the relationships observed within it. When decisions are made based on a collection of data, they will often rest just as much on that set of assumptions about the data as the data itself. Learning to validate and clearly call out assumptions being made when interpreting data is an important part of both analyzing and communicating about data.
 
-# Lesson
+## Lesson
 
 * Case study of Google Flu Trends
 * Examination of the "digital divide"
 * Identify assumptions made in a set of data-driven decisions
 
-# Resources
+## Resources
 
 * Activity Guide: <a href="https://docs.google.com/document/d/1jL1jFmyCsrpyO_FqSI8AX3SelSMHY9bn5Jubt42XlFI/edit?usp=sharing"
  target="_blank">The Digital Divide & Checking Assumptions</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

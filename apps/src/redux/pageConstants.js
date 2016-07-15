@@ -37,6 +37,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'aniGifURL',
   'inputOutputTable',
   'showAnimationMode',
+  'nonResponsiveVisualizationColumnWidth',
   'is13Plus'
 );
 
