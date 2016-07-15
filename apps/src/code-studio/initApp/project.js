@@ -748,12 +748,12 @@ function fetchSource(channelData, callback, version) {
   }
 }
 
-function fetchAbuseScore(deferred) {
+function fetchAbuseScore(resolve) {
   channels.fetch(current.id + '/abuse', function (err, data) {
     currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
     console.log("Abuse resolved.");
     console.log(currentAbuseScore);
-    deferred.resolve();
+    resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
       // affect anything else
@@ -762,11 +762,11 @@ function fetchAbuseScore(deferred) {
   });
 }
 
-function fetchPrivacyProfanityViolations(deferred) {
-  channels.fetch(current.id + '/privacy-profanity', function (err, data) {
+function fetchPrivacyProfanityViolations(resolve) {
+  channels.fetch(current.id + '/privacy-profanity', (err, data) => {
     // data.has_violation is 0 or true, coerce to a boolean
     currentHasPrivacyProfanityViolation = (data && !!data.has_violation) || currentHasPrivacyProfanityViolation;
-    deferred.resolve();
+    resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
       // affect anything else
@@ -776,12 +776,12 @@ function fetchPrivacyProfanityViolations(deferred) {
 }
 
 function fetchAbuseScoreAndPrivacyViolations(callback) {
-  const deferredCallsToMake = [$.Deferred(fetchAbuseScore)];
+  const deferredCallsToMake = [new Promise(fetchAbuseScore)];
 
   if (dashboard.project.getStandaloneApp() === 'playlab') {
-    deferredCallsToMake.push($.Deferred(fetchPrivacyProfanityViolations));
+    deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
   }
-  $.when(...deferredCallsToMake).then(function () {
+  Promise.all(deferredCallsToMake).then(function () {
     callback();
   });
 }
