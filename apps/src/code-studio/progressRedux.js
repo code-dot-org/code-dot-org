@@ -8,7 +8,7 @@ import { SUBMITTED_RESULT, mergeActivityResult, activityCssClass } from './activ
 const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
-const SHOW_LESSON_PLANS = 'progress/SHOW_LESSON_PLANS';
+const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 
 const initialState = {
   currentLevelId: null,
@@ -19,7 +19,8 @@ const initialState = {
   saveAnswersBeforeNavigation: null,
   stages: null,
   peerReviewsRequired: {},
-  peerReviewsPerformed: []
+  peerReviewsPerformed: [],
+  showTeacherInfo: false
 };
 
 /**
@@ -64,9 +65,9 @@ export default function reducer(state = initialState, action) {
     });
   }
 
-  if (action.type === SHOW_LESSON_PLANS) {
+  if (action.type === SHOW_TEACHER_INFO) {
     return Object.assign({}, state, {
-      showLessonPlanLinks: true
+      showTeacherInfo: true
     });
   }
 
@@ -129,7 +130,7 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaPositions) => ({
   focusAreaPositions
 });
 
-export const showLessonPlans = () => ({ type: SHOW_LESSON_PLANS });
+export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
 
 /* start-test-block */
 // export private function(s) to expose to unit testing
