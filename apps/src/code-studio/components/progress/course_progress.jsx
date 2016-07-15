@@ -61,7 +61,7 @@ const CourseProgress = React.createClass({
 });
 
 export default connect(state => ({
-  professionalLearningCourse: state.professionalLearningCourse,
-  focusAreaPositions: state.focusAreaPositions,
-  stages: state.stages,
+  professionalLearningCourse: state.progress.professionalLearningCourse,
+  focusAreaPositions: state.progress.focusAreaPositions,
+  stages: state.progress.stages,
 }))(Radium(CourseProgress));
