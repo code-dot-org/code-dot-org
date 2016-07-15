@@ -150,23 +150,6 @@ namespace :seed do
     end
   end
 
-  MAX_LEVEL_SOURCES = 10_000
-  desc "calculate solutions (ideal_level_source) for levels based on most popular correct solutions (very slow)"
-  task ideal_solutions: :environment do
-    require 'benchmark'
-    Level.where_we_want_to_calculate_ideal_level_source.each do |level|
-      next if level.try(:free_play?)
-      puts "Level #{level.id}"
-      level_sources_count = level.level_sources.count
-      if level_sources_count > MAX_LEVEL_SOURCES
-        puts "...skipped, too many possible solutions"
-      else
-        times = Benchmark.measure { level.calculate_ideal_level_source_id }
-        puts "... analyzed #{level_sources_count} in #{times.real.round(2)}s"
-      end
-    end
-  end
-
   task dummy_prizes: :environment do
     # placeholder data
     Prize.connection.execute('truncate table prizes')
