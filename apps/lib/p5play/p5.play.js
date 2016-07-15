@@ -1522,6 +1522,21 @@ function Sprite(pInst, _x, _y, _w, _h) {
       return dirY;
   };
 
+  /*
+   * Allows animations to be scaled in the x direction.
+   * This is an extension on p5.play upstream.
+   * @private
+   * @property
+   */
+  this._horizontalStretch = 1;
+
+  /*
+   * Allows animations to be scaled in the y direction.
+   * This is an extension on p5.play upstream.
+   * @private
+   * @property
+   */
+  this._verticalStretch = 1;
 
   /**
    * Manages the positioning, scale and rotation of the sprite
@@ -1543,8 +1558,11 @@ function Sprite(pInst, _x, _y, _w, _h) {
       imageMode(CENTER);
 
       translate(this.position.x, this.position.y);
-      scale(this.scale*dirX, this.scale*dirY);
-      if (pInst._angleMode === pInst.RADIANS) {
+      // This line differs from p5.play upstream because GameLab users
+      // should be able to change the width and height of their animations.
+      scale(this.scale*dirX*this._horizontalStretch, this.scale*dirY*this._verticalStretch);
+
+      if (pInst._angleMode == pInst.RADIANS) {
         rotate(radians(this.rotation));
       } else {
         rotate(this.rotation);
