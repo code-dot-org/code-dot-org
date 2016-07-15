@@ -3,11 +3,7 @@ require 'fake_sqs/test_integration'
 
 # Launch a fake SQS service running on Localhost
 Aws.config.update(region: 'us-east-1', access_key_id: 'fake id', secret_access_key: 'fake secret')
-$fake_sqs_service = FakeSQS::TestIntegration.new(
-  database: ":memory#{ENV['TEST_ENV_NUMBER']}:",
-  sqs_endpoint: 'localhost',
-  sqs_port: 4568
-)
+$fake_sqs_service = FakeSQSService.create
 
 class Pd::AsyncWorkshopHandlerTest < ActiveSupport::TestCase
 

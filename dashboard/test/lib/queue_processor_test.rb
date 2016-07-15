@@ -14,17 +14,7 @@ require 'sqs/queue_processor_config'
 # Launch a fake SQS service running on Localhost unless an environment
 # variable is set to use the actual SQS service.
 unless ENV['USE_REAL_SQS'] == 'true'
-  require 'fake_sqs/test_integration'
-  Aws.config.update(
-    region: 'us-east-1',
-    :access_key_id     => "access key id",
-    :secret_access_key => "secret access key"
-  )
-  $fake_sqs_service = FakeSQS::TestIntegration.new(
-    database: ":memory#{ENV['TEST_ENV_NUMBER']}:", # TODO: use parallel env?
-    sqs_endpoint: 'localhost',
-    sqs_port: 4568,
-  )
+  $fake_sqs_service = FakeSQSService.create
 end
 
 class QueueProcessorTest < ActiveSupport::TestCase
