@@ -45,8 +45,7 @@ assessment '4-5 artist loops multi 1'
 level 'grade4_frozen_nested_loop_diamonds1'
 level 'grade4_frozen_nested_loop_diamonds2'
 level 'grade4_frozen_nested_loop_diamonds3'
-level 'frozen diamond mini snowflake'
-level 'frozen diamond snowflake'
+
 
 
 stage 'Bee: Conditionals'
@@ -95,6 +94,7 @@ stage 'New Artist: Functions'
 level '2-3 Artist Functions 1'
 level 'grade4_artist_functionsvid'
 level '2-3 Artist Functions 2'
+level 'grade4_artist_functions_stars0'
 level 'grade4_artist_functions_stars1'
 level 'grade4_artist_functions_stars2'
 level 'grade4_artist_functions_stars3'

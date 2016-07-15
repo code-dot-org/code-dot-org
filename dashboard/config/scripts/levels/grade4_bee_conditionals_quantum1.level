@@ -1,7 +1,7 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2016-07-14T17:37:55.362Z",
+  "created_at": "2016-07-14T17:37:55.000Z",
   "level_num": "custom",
   "user_id": 6,
   "properties": {
@@ -61,11 +61,12 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
-        </block>
-        <block type="bee_ifFlower">
-          <title name="LOC">atFlower</title>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="bee_ifFlower">
+              <title name="LOC">atFlower</title>
+            </block>
+          </statement>
         </block>
       </xml>
     </recommended_blocks>

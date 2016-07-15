@@ -1,8 +1,3 @@
-title 'Grade 2'
-description_short "Planning Script for CSF 2.0"
-description "Planning Script for CSF 2.0"
-description_audience "Ages 5-18"
-
 stage 'Online My New Pet Jigsaw'
 level 'comingSoon'
 
@@ -13,7 +8,6 @@ stage 'Caring for My New Pet'
 level 'comingSoon'
 
 stage 'New Home for My Pet'
-
 level 'grade2_CaringForNewPet_1'
 level 'grade2_CaringForNewPet_2'
 level 'grade2_CaringForNewPet_3'
@@ -32,12 +26,32 @@ stage 'Build A Puppy Picture'
 level 'comingSoon'
 
 stage 'Make a Dog Tag'
+level 'grade2_MakeDogTag_1'
+level 'grade2_MakeDogTag_2'
+level 'grade2_MakeDogTag_3'
+level 'grade2_MakeDogTag_4'
+level 'grade2_MakeDogTag_5'
+level 'grade2_MakeDogTag_6'
+level 'grade2_MakeDogTag_7'
+level 'grade2_MakeDogTag_8'
+level 'grade2_MakeDogTag_9'
+level 'grade2_MakeDogTag_10'
 level 'comingSoon'
 
 stage 'Getting Loopy with Puppy'
 level 'comingSoon'
 
 stage 'Puppy Loops'
+level 'grade2_PuppyLoops_1'
+level 'grade2_PuppyLoops_2'
+level 'grade2_PuppyLoops_3'
+level 'grade2_PuppyLoops_4'
+level 'grade2_PuppyLoops_5'
+level 'grade2_PuppyLoops_6'
+level 'grade2_PuppyLoops_7'
+level 'grade2_PuppyLoops_8'
+level 'grade2_PuppyLoops_9'
+level 'grade2_PuppyLoops_10'
 level 'comingSoon'
 
 stage 'Puppy Event'

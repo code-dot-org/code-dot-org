@@ -70,7 +70,6 @@
     "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true",
     "fail_on_lint_errors": "false",
-    "contained_level_names": null,
     "log_conditions": [
       {
         "entries": [
@@ -134,7 +133,8 @@
         "maxTimes": 0,
         "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft()."
       }
-    ]
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
