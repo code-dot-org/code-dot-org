@@ -10,6 +10,23 @@ class PosteTest < SequelTestCase
   TEACHER_EMAIL = 'teacher@example.net'.freeze
   TEACHER_EMAIL_HASH = Digest::MD5.hexdigest(TEACHER_EMAIL).freeze
 
+  def setup
+    DASHBOARD_DB[:users].insert({
+      email: STUDENT_EMAIL,
+      hashed_email: STUDENT_EMAIL_HASH,
+      username: 'code studio student',
+      user_type: 'student',
+      birthday: '2000-01-02'
+    })
+    DASHBOARD_DB[:users].insert({
+      email: TEACHER_EMAIL,
+      hashed_email: TEACHER_EMAIL_HASH,
+      username: 'code studio teacher',
+      user_type: 'teacher',
+      birthday: '2000-01-02'
+    })
+  end
+
   def test_unsubscribe_for_existing_contact
     email = 'existing@example.net'
     hashed_email = Digest::MD5.hexdigest(email)
