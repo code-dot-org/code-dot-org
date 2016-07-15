@@ -58,13 +58,10 @@ const AnimationPickerBody = React.createClass({
 export default Radium(AnimationPickerBody);
 
 const WarningLabel = ({children}) => (
-    <span style={warningLabelStyle}>
+    <span style={{color: color.red}}>
       {children}
     </span>
 );
 WarningLabel.propTypes = {
   children: React.PropTypes.node
-};
-const warningLabelStyle = {
-  color: color.red
 };
