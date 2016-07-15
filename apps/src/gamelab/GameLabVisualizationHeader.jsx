@@ -6,6 +6,7 @@ import {GameLabInterfaceMode} from './constants';
 import msg from '../locale';
 import ToggleGroup from '../templates/ToggleGroup';
 import styleConstants from '../styleConstants';
+import {allowAnimationMode} from './stateQueries';
 
 const styles = {
   main: {
@@ -18,17 +19,15 @@ const styles = {
  */
 const GameLabVisualizationHeader = React.createClass({
   propTypes: {
-    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes
         .oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION])
         .isRequired,
-    showAnimationMode: React.PropTypes.bool.isRequired,
+    allowAnimationMode: React.PropTypes.bool.isRequired,
     onInterfaceModeChange: React.PropTypes.func.isRequired
   },
 
   render() {
-    const {isReadOnlyWorkspace, interfaceMode, showAnimationMode,
+    const {interfaceMode, allowAnimationMode,
         onInterfaceModeChange} = this.props;
     return (
       <div style={styles.main}>
@@ -39,20 +38,19 @@ const GameLabVisualizationHeader = React.createClass({
           <button value={GameLabInterfaceMode.CODE} id="codeMode">
             {msg.codeMode()}
           </button>
-          {showAnimationMode && !isReadOnlyWorkspace &&
+          {allowAnimationMode &&
             <button value={GameLabInterfaceMode.ANIMATION} id="animationMode">
               {msg.animationMode()}
-            </button>}
+            </button>
+          }
         </ToggleGroup>
       </div>
     );
   }
 });
 module.exports = connect(state => ({
-  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-  isShareView: state.pageConstants.isShareView,
   interfaceMode: state.interfaceMode,
-  showAnimationMode: state.pageConstants.showAnimationMode
+  allowAnimationMode: allowAnimationMode(state)
 }), dispatch => ({
   onInterfaceModeChange: mode => dispatch(changeInterfaceMode(mode))
 }))(GameLabVisualizationHeader);
