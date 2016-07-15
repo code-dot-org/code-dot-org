@@ -3,20 +3,20 @@ title 'title'
 css 'unplugged'
 description 'description here'
 markdown <<MARKDOWN
-## Unit 4: Lesson 05 - Making Data Visualizations
+# Unit 4: Lesson 05 - Making Data Visualizations
 
-# Background
+## Background
 
 Good visualizations can help people make sense of data sets that are too large to interpret by looking at the raw data. Now that you’ve had the chance to see and evaluate some data visualizations, you will learn to use a spreadsheet tool to make visualizations of your own.
 
-# Lesson
+## Lesson
 
 * Make a scatter chart.
 * Make a line chart.
 * Make a bar chart.
 * Make your own chart.
 
-# Resources
+## Resources
 
 * [Data Visualization 101: How to Design Charts and Graphs](http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf)
 * Data Set: [MovieRating_ratingByAgeByGender.csv](https://drive.google.com/file/d/0B78N8p4zhHFgaHR2TG1QQ2NZQTg/view?usp=sharing)

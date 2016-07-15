@@ -109,6 +109,7 @@ level 'Test Applab Predictive'
 stage 'Gamelab'
 level 'Gamelab AllTheThings With No Animation Tab'
 level 'Gamelab AllTheThings With Prepopulated Animation'
+level 'Gamelab AllTheThings Embed Level'
 
 stage 'Online PD'
 level 'PDK5 Intro C'
