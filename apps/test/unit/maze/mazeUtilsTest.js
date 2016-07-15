@@ -1,4 +1,4 @@
-import {assert} from '../util/configuredChai';
+import {assert} from '../../util/configuredChai';
 import {cellId} from '@cdo/apps/maze/mazeUtils';
 
 describe("mazeUtils", function () {
