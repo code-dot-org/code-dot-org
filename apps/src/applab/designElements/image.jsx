@@ -66,7 +66,7 @@ var ImageProperties = React.createClass({
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
         <ImagePickerPropertyRow
-          desc={'picture'}
+          desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')} />
         {iconColorPicker}
