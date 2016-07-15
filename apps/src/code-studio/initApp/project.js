@@ -588,7 +588,9 @@ var projects = module.exports = {
       }
     }
     function redirectToRemix() {
-      location.href = projects.getPathName('remix');
+      const suffix = projects.useFirebaseForNewProject() ? '?useFirebase=1' : '';
+      const url = `${projects.getPathName('remix')}${suffix}`;
+      location.href = url;
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
