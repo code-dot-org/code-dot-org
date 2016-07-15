@@ -7,15 +7,14 @@ markdown <<MARKDOWN
 
 In this exercise, you will use some different columns in the spreadsheet to create a **bar chart**. Bar charts are useful for viewing data grouped by different categories.
 
-<hr>
+---
 
-# Select Data
+## Select Data
 
 **Do This:** Select the **“age,”** **“number of women,”** and **“number of men”** columns
 
 * Select the first column of data using the mouse
 * Hold down the **"Control"** key, (or **"Command"** on a Mac) and select the additional columns of data
-
 
 <details>
 <summary>Using Hotkeys</summary>
@@ -31,9 +30,9 @@ In this exercise, you will use some different columns in the spreadsheet to crea
 ![](https://images.code.org/4208af40200c99a749ddeddbba3a1ebe-image-1454103069438.gif)
 *Select the "age," "number of women," and "number of men" columns.
 
-<hr>
+---
 
-# Insert Chart
+## Insert Chart
 
 **Do This:** Select **Insert -> Chart** from the main toolbar to open the Chart Editor.
 
@@ -44,9 +43,9 @@ In this exercise, you will use some different columns in the spreadsheet to crea
 ![](https://images.code.org/700f3ade7e049c608d06c9d56952079c-image-1454103075843.gif)
 *Change chart type and insert your bar chart into the spreadsheet.*
 
-<hr>
+---
 
-# Do a Visual Check
+## Do a Visual Check
 
 At this point, your chart should look something like this:
 
@@ -62,6 +61,4 @@ Once your chart looks close to the one above, switch to View mode and take a mom
 After you’ve thought about these questions, move on to the next section to learn how to further customize your chart.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

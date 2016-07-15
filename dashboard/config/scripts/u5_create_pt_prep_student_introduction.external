@@ -3,20 +3,20 @@ title 'title'
 description 'description here'
 css 'unplugged'
 markdown <<MARKDOWN
-## Unit 5: Lesson 03 - Create PT Preparation
+# Unit 5: Lesson 03 - Create PT Preparation
 
-# Background
+## Background
 
 You have done many practice Performance Tasks during the course, and now it's finally time for you to take on the Create Performance Task. This will be the last lesson before you start working individually on your project without teacher support. As such, this is your chance to ask any final questions you have about the Create Performance Task.
 
-# Lesson
+## Lesson
 
 * Review the Practice PTs.
 * Review the Create Performance Task.
 * Review collaboration practices.
 * Check in on the student preparedness guidelines.
 
-# Resources
+## Resources
 
 * Performance Task: <a href="https://drive.google.com/open?id=0B78N8p4zhHFgWHRQVE9PeEs5WmM" target="_blank">Create Performance Task</a>
 * Rubric: Create Performance Task Rubric

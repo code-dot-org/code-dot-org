@@ -518,9 +518,9 @@ $errbrowserfile.close
 
 $suite_duration = Time.now - $suite_start_time
 
-HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
-  "Test count: #{($suite_success_count + $suite_fail_count)}. " +
-  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " +
+HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
+  "Test count: #{($suite_success_count + $suite_fail_count)}. " \
+  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
   "Total reruns of flaky tests: #{$total_flaky_reruns}."
 
 if $suite_fail_count > 0
