@@ -52,7 +52,7 @@ module LevelsHelper
         StorageApps.new(storage_id('user')),
         {
           hidden: true,
-          useFirebase: @level.game.use_firebase_for_new_project?
+          useFirebase: use_firebase
         })
     end
 
