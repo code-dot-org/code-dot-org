@@ -18,6 +18,7 @@ const styles = {
  */
 const GameLabVisualizationHeader = React.createClass({
   propTypes: {
+    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes
         .oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION])
@@ -27,16 +28,18 @@ const GameLabVisualizationHeader = React.createClass({
   },
 
   render() {
+    const {isReadOnlyWorkspace, interfaceMode, showAnimationMode,
+        onInterfaceModeChange} = this.props;
     return (
       <div style={styles.main}>
         <ToggleGroup
-            selected={this.props.interfaceMode}
-            onChange={this.props.onInterfaceModeChange}
+            selected={interfaceMode}
+            onChange={onInterfaceModeChange}
         >
           <button value={GameLabInterfaceMode.CODE} id="codeMode">
             {msg.codeMode()}
           </button>
-          {this.props.showAnimationMode &&
+          {showAnimationMode && !isReadOnlyWorkspace &&
             <button value={GameLabInterfaceMode.ANIMATION} id="animationMode">
               {msg.animationMode()}
             </button>}
@@ -46,6 +49,7 @@ const GameLabVisualizationHeader = React.createClass({
   }
 });
 module.exports = connect(state => ({
+  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isShareView: state.pageConstants.isShareView,
   interfaceMode: state.interfaceMode,
   showAnimationMode: state.pageConstants.showAnimationMode
