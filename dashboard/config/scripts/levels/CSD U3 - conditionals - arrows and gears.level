@@ -175,7 +175,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Gears with Conditionals\r\n\r\nLets make the gears spin only when the space key being held down.\r\n\r\n# Do This\r\n\r\n* Add an `if` statement\r\n* Use `keyDown` as input to the if statement to check when the space key is pressed\r\n* Move the code that makes the gears rotate and move it inside the `if`",
+    "markdown_instructions": "# Gears with Conditionals\r\n\r\nLets make the gears spin only when the space key is being held down.\r\n\r\n# Do This\r\n\r\n* Add an `if` statement\r\n* Use `keyDown` as input to the if statement to check when the space key is pressed\r\n* Move the code that makes the gears rotate and move it inside the `if`",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

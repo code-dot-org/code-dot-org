@@ -41,7 +41,7 @@ delete '/v2/sections/:id' do |id|
   no_content!
 end
 post '/v2/sections/:id/delete' do |id|
-  call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>"/v2/sections/#{id}"))
+  call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => "/v2/sections/#{id}"))
 end
 
 patch '/v2/sections/:id' do |id|
@@ -53,7 +53,7 @@ patch '/v2/sections/:id' do |id|
   JSON.pretty_generate(section.to_owner_hash)
 end
 post '/v2/sections/:id/update' do |id|
-  call(env.merge('REQUEST_METHOD'=>'PATCH', 'PATH_INFO'=>"/v2/sections/#{id}"))
+  call(env.merge('REQUEST_METHOD' => 'PATCH', 'PATH_INFO' => "/v2/sections/#{id}"))
 end
 
 get '/v2/sections/:id/students' do |id|
@@ -82,7 +82,7 @@ delete '/v2/sections/:id/students/:student_id' do |id, student_id|
   no_content!
 end
 post '/v2/sections/:id/delete' do |id|
-  call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>"/v2/sections/#{id}/students/#{student_id}"))
+  call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => "/v2/sections/#{id}/students/#{student_id}"))
 end
 
 get '/v2/sections/:id/teachers' do |id|

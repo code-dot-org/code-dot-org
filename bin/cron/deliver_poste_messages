@@ -207,11 +207,11 @@ class Deliverer
     raise ArgumentError, "[Poste] '#{name}' template wasn't found." unless path
 
     engine = {
-      '.haml'=>TextRender::HamlEngine,
-      '.html'=>TextRender::ErbEngine,
-      '.md'=>TextRender::MarkdownEngine,
-      '.txt'=>TextRender::MarkdownEngine,
-      '.yml'=>TextRender::YamlEngine,
+      '.haml' => TextRender::HamlEngine,
+      '.html' => TextRender::ErbEngine,
+      '.md' => TextRender::MarkdownEngine,
+      '.txt' => TextRender::MarkdownEngine,
+      '.yml' => TextRender::YamlEngine,
     }[File.extname(path).downcase]
 
     @templates[name] = Poste::Template.new IO.read(path), engine
@@ -293,7 +293,15 @@ def main
         raise
       end
 
-      POSTE_DB[:poste_deliveries].where(id: delivery[:id]).update(sent_at: sent_at)
+      if Poste.dashboard_student?(hashed_email)
+        # We clear the email here for privacy. Note that (given architecture)
+        # it has to be persisted for a short while to actually send the email.
+        POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
+          update(sent_at: sent_at, email: '')
+      else
+        POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
+          update(sent_at: sent_at)
+      end
     end
   end
   workers.each(&:join)

@@ -71,6 +71,7 @@ var ApplabVisualizationColumn = React.createClass({
     playspacePhoneFrame: React.PropTypes.bool,
     isIframeEmbed: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
+    isPaused: React.PropTypes.bool,
 
     // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,

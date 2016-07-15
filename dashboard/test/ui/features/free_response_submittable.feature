@@ -12,7 +12,7 @@ Background:
   And element ".submitButton" is visible
 
 Scenario: Loading the level
-  And element ".free-response > h2" has text "Submit a Lesson Plan: Routing and Packets"
+  And element ".free-response > h1" has text "Submit a Lesson Plan: Routing and Packets"
 
 Scenario: Submit anything, unsubmit, be able to resubmit.
   # First, submit something.

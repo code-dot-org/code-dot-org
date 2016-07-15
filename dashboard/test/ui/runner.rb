@@ -241,7 +241,7 @@ features_to_run = passed_features.empty? ? all_features : passed_features
 browser_features = $browsers.product features_to_run
 
 git_branch = `git rev-parse --abbrev-ref HEAD`.strip
-ENV['BATCH_NAME'] =  "#{git_branch} | #{Time.now}"
+ENV['BATCH_NAME'] = "#{git_branch} | #{Time.now}"
 
 test_type = $options.run_eyes_tests ? 'Eyes' : 'UI'
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
@@ -382,8 +382,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
         max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1
                       1].max # rerun at least once even if not flaky
 
-        confidence = (1.0 - flakiness ** (max_reruns + 1)).round(3)
-        flakiness_message +=  "we should rerun #{max_reruns} times for #{confidence} confidence"
+        confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
+        flakiness_message += "we should rerun #{max_reruns} times for #{confidence} confidence"
 
         if max_reruns < 2
           $lock.synchronize { puts flakiness_message.green }
@@ -518,9 +518,9 @@ $errbrowserfile.close
 
 $suite_duration = Time.now - $suite_start_time
 
-HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
-  "Test count: #{($suite_success_count + $suite_fail_count)}. " +
-  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " +
+HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " \
+  "Test count: #{($suite_success_count + $suite_fail_count)}. " \
+  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " \
   "Total reruns of flaky tests: #{$total_flaky_reruns}."
 
 if $suite_fail_count > 0

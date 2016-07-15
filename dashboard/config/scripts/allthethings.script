@@ -107,6 +107,7 @@ level 'allthethings_embed_video'
 level 'Test Applab Predictive'
 
 stage 'Gamelab'
+level 'Gamelab AllTheThings With No Animation Tab'
 level 'Gamelab AllTheThings With Prepopulated Animation'
 
 stage 'Online PD'
@@ -163,4 +164,16 @@ endvariants
 variants
   level '2-3 Artist Loops 4'
   level '2-3 Artist 3', active: false
+endvariants
+variants
+level '4-5 Maze 4', active: false
+level '4-5 Maze 1'
+endvariants
+variants
+level '4-5 Maze 5', active: false
+level '4-5 Maze 2'
+endvariants
+variants
+level '4-5 Maze 6', active: false
+level '4-5 Maze 3'
 endvariants

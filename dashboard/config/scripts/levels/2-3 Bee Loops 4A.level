@@ -33,8 +33,9 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "true",
     "markdown_instructions": "How many times can loops help you in this puzzle?  \r\n\r\nLoops are your friend! Use a few of them to complete this puzzle with the fewest blocks possible.",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_4A_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "step_speed": "1"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The first action will be a turn, rather than a move.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_4A_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The last piece of the program can be finished by writing code at the end of your program outside of your loop.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_4A_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_4A_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "step_speed": "1",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Changed from a \"drag loop around this code\" to a build it yourself.",

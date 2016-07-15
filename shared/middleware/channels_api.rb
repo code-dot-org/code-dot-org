@@ -100,7 +100,7 @@ class ChannelsApi < Sinatra::Base
     no_content
   end
   post %r{/v3/channels/([^/]+)/delete$} do |_name|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
   #
@@ -123,10 +123,10 @@ class ChannelsApi < Sinatra::Base
     value.to_json
   end
   patch %r{/v3/channels/([^/]+)$} do |_id|
-    call(env.merge('REQUEST_METHOD'=>'POST'))
+    call(env.merge('REQUEST_METHOD' => 'POST'))
   end
   put %r{/v3/channels/([^/]+)$} do |_id|
-    call(env.merge('REQUEST_METHOD'=>'PATCH'))
+    call(env.merge('REQUEST_METHOD' => 'PATCH'))
   end
 
   #
@@ -170,6 +170,6 @@ class ChannelsApi < Sinatra::Base
     {:abuse_score => value }.to_json
   end
   post %r{/v3/channels/([^/]+)/abuse/delete$} do |_id|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 end

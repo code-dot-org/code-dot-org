@@ -24,7 +24,7 @@ level 'U3 - Simple Drawing - text'
 level 'U3 - Simple Drawing - Plan Personal Drawing'
 level 'U3 - Simple Drawing - Personal Drawing'
 
-stage 'Draw Loop and Random'
+stage 'Draw Loop and Randomization'
 level 'CSD-U3-SFLP Draw Loop'
 level 'CSD U3 Random Intro'
 level 'CSD U3 Random Choice'
@@ -43,7 +43,8 @@ level 'CSD U3 Simple Drawing - Animation'
 level 'CSD U3 Simple Drawing - Animation 2'
 level 'CSD U3 Simple Drawing - Personal Animation'
 
-stage 'Variables'
+
+stage 'Variables Unplugged'
 level 'CSD U3 Variables2 SFLP'
 
 stage 'Variables and Animation'
@@ -121,7 +122,7 @@ level 'CSD U3 - conditionals - transition 2'
 level 'CSD U3 - conditionals - first conditional'
 level 'CSD U3 - conditionals - first conditional 2'
 level 'CSD U3 -conditionals - stop booleans'
-level 'CSD U3 - Conditionals Video'
+
 #Introduce Keys
 level 'CSD U3 Keypress Boolean'
 level 'CSD U3 UP_ARROW'
@@ -132,6 +133,7 @@ level 'CSD U3 Direction Animations'
 
 stage 'Complex Conditionals'
 level 'CSD U3 - complex conditionals - SFLP'
+level 'CSD U3 - Conditionals Video'
 #Else
 level 'CSD U3 Else'
 level 'CSD U3 If Else'
@@ -168,5 +170,6 @@ stage 'Sprite Properties and Mod'
 stage 'Expressions and Reassignment'
 stage 'Expressions'
 stage 'Counting with Variables'
-
+stage 'Draw Loop and Random'
+stage 'Variables'
 

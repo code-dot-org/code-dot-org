@@ -68,12 +68,16 @@ body.pin_bottom {
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
+  font-size: 32px;
   color: $purple;
 }
 
 h2 {
   font-family: $gotham-bold;
   font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+  color: $teal;
 }
 
 hr {
@@ -1386,9 +1390,6 @@ a.download-video {
   #lesson {
     #heading {
       width: 700px;
-      h2 {
-        margin-top: 0;
-      }
     }
     #trynow {
       float: right;
@@ -1731,6 +1732,28 @@ a.download-video {
   }
 }
 
+.external-link-icon {
+  margin: 0 0.33em 0 20px;
+}
+
+.external-link-disclaimer {
+  padding: 20px;
+  margin: 40px 0 20px 0;
+  color: $dark_charcoal;
+  background-color: $lighter_gray;
+  font-size: 13px;
+  h2 {
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  strong {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
 .external,
 .text-match,
 .free-response,
@@ -1904,7 +1927,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
 
 .multi {
   margin: auto;
-  h2 {
+  h1 {
     text-align: center;
   }
   p {

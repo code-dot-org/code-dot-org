@@ -4,7 +4,7 @@ require 'cdo/google_drive'
 class CsvToSqlTable
 
   def initialize(path, params={})
-    @db = params[:db]||DB
+    @db = params[:db] || DB
     @path = path
     @table = File.basename(@path, File.extname(@path)).gsub('-','_').to_sym
   end
@@ -30,14 +30,14 @@ class CsvToSqlTable
 
     CSV.open(@path, 'rb') do |csv|
       table, columns = create_table(csv.shift)
-      while(values = csv.shift)
-        table.insert(hash_from_keys_and_values(columns, values).merge({id: at+=1}))
+      while values = csv.shift
+        table.insert(hash_from_keys_and_values(columns, values).merge({id: at += 1}))
       end
     end
 
     set_table_mtime(File.mtime(@path))
 
-    HipChat.log "Imported <b>#{at-1}</b> rows into <b>#{@table}</b>"
+    HipChat.log "Imported <b>#{at - 1}</b> rows into <b>#{@table}</b>"
 
     @table
   end
@@ -46,7 +46,7 @@ class CsvToSqlTable
 
   def hash_from_keys_and_values(keys, values)
     h = {}
-    (0..keys.count-1).each do |i|
+    (0..keys.count - 1).each do |i|
       key_name = keys[i].to_s
       case key_name[key_name.rindex('_')..-1]
       when '_b'
@@ -91,13 +91,13 @@ class CsvToSqlTable
     type_info = name[i..-1]
 
     type = {
-      '_b'=>{type: 'boolean'},
-      '_dt'=>{type: 'datetime'},
-      '_f'=>{type: 'float'},
-      '_i'=>{type: 'integer'},
-      '_s'=>{type: 'varchar(255)'},
-      '_ss'=>{type: 'varchar(255)'},
-      '_t'=>{type: 'text'},
+      '_b' => {type: 'boolean'},
+      '_dt' => {type: 'datetime'},
+      '_f' => {type: 'float'},
+      '_i' => {type: 'integer'},
+      '_s' => {type: 'varchar(255)'},
+      '_ss' => {type: 'varchar(255)'},
+      '_t' => {type: 'text'},
     }[type_info] || {type: 'varchar(255)'}
 
     type = type.merge(unique: true) if type_flag == '!'
@@ -241,7 +241,7 @@ namespace :seed do
   imports.each_pair do |table,path|
     extname = File.extname(path)
     if extname == '.gsheet'
-      gsheet = path[0..-(extname.length+1)]
+      gsheet = path[0..-(extname.length + 1)]
       path = "cache/#{path.gsub(File::SEPARATOR,'_')}.csv"
 
       sync = "sync:#{table}"

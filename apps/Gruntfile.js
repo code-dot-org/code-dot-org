@@ -21,6 +21,7 @@ module.exports = function (grunt) {
     // get compiled.
     fs.writeFileSync(
       'test/entry-tests.js',
+      "require('babel-polyfill');\n" +
       "require('"+path.resolve(process.env.mocha_entry)+"');\n"
     );
   }
