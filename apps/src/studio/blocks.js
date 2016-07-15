@@ -919,26 +919,26 @@ exports.install = function (blockly, blockInstallOptions) {
         studioValue: Direction.SOUTH,
         tooltip: msg.moveDownTooltip()
       },
-      NorthWest: {
-        letter: commonMsg.directionNorthWestLetter(),
+      Northwest: {
+        letter: commonMsg.directionNorthwestLetter(),
         image: skin.upLeftArrow,
         studioValue: Direction.NORTHWEST,
         tooltip: msg.moveUpLeftTooltip()
       },
-      NorthEast: {
-        letter: commonMsg.directionNorthEastLetter(),
+      Northeast: {
+        letter: commonMsg.directionNortheastLetter(),
         image: skin.upRightArrow,
         studioValue: Direction.NORTHEAST,
         tooltip: msg.moveUpRightTooltip()
       },
-      SouthWest: {
-        letter: commonMsg.directionSouthWestLetter(),
+      Southwest: {
+        letter: commonMsg.directionSouthwestLetter(),
         image: skin.downLeftArrow,
         studioValue: Direction.SOUTHWEST,
         tooltip: msg.moveDownLeftTooltip()
       },
-      SouthEast: {
-        letter: commonMsg.directionSouthEastLetter(),
+      Southeast: {
+        letter: commonMsg.directionSoutheastLetter(),
         image: skin.downRightArrow,
         studioValue: Direction.SOUTHEAST,
         tooltip: msg.moveDownRightTooltip()
