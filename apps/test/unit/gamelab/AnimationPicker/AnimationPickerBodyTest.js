@@ -32,4 +32,39 @@ describe('AnimationPickerBody', function () {
     expect(renderedWarning).not.to.be.undefined;
     expect(renderedWarning.props.children).to.equal(gamelabMsg.animationPicker_warning());
   });
+
+  it('shows an upload warning if the user age is not known', function () {
+    let renderer = ReactTestUtils.createRenderer();
+    const emptyFunction = function () {};
+    renderer.render(
+        <AnimationPickerBody
+            is13Plus={undefined}
+            onDrawYourOwnClick={emptyFunction}
+            onPickLibraryAnimation={emptyFunction}
+            onUploadClick={emptyFunction}
+        />
+    );
+    const output = renderer.getRenderOutput();
+    const renderedWarning = React.Children.toArray(output.props.children)
+        .find(child => child.type === WarningLabel);
+    expect(renderedWarning).not.to.be.undefined;
+    expect(renderedWarning.props.children).to.equal(gamelabMsg.animationPicker_warning());
+  });
+
+  it('does not show an upload warning if the user is 13 or older', function () {
+    let renderer = ReactTestUtils.createRenderer();
+    const emptyFunction = function () {};
+    renderer.render(
+        <AnimationPickerBody
+            is13Plus={true}
+            onDrawYourOwnClick={emptyFunction}
+            onPickLibraryAnimation={emptyFunction}
+            onUploadClick={emptyFunction}
+        />
+    );
+    const output = renderer.getRenderOutput();
+    const renderedWarning = React.Children.toArray(output.props.children)
+        .find(child => child.type === WarningLabel);
+    expect(renderedWarning).to.be.undefined;
+  });
 });
