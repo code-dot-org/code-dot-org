@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+
+# This script removes plaintext emails from the contacts and psote_deliveries
+# tables for all and young Code Studio students, respectively.
+
+require_relative '../../deployment'
+require_relative '../../lib/cdo/db'
+
+# Populate a hash of hashed_emails to birthdays.
+puts 'Populating hashed_email_to_birthday...'
+hashed_email_to_birthday = {}
+DASHBOARD_DB[:users].
+  where(user_type: 'student').
+  where('hashed_email IS NOT NULL').
+  paged_each(rows_per_fetch: 10_000) do |user|
+  hashed_email_to_birthday[user[:hashed_email]] = user[:birthday].strftime('%F')
+end
+
+# Wipe the plaintext email of young students.
+puts 'Wiping contacts...'
+PEGASUS_DB[:contacts].each do |contact|
+  birthday = hashed_email_to_birthday[contact[:hashed_email]]
+  if birthday && birthday > '2003-07-01'
+    PEGASUS_DB[:contacts].where(id: contact[:id]).update(email: '')
+  end
+end
+
+# Wipe the email of all students.
+puts 'Wiping poste_deliveries...'
+PEGASUS_DB[:poste_deliveries].each do |delivery|
+  if hashed_email_to_birthday.key? delivery[:hashed_email]
+    PEGASUS_DB[:poste_deliveries].
+      where(id: delivery[:id]).
+      update(contact_email: '')
+  end
+end
