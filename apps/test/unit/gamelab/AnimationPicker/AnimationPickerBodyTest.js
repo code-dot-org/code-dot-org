@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 import {expect} from '../../../util/configuredChai';
