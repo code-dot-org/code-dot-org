@@ -106,36 +106,50 @@ module.exports.createSprite = function (x, y, width, height) {
   });
 
   // p5.play stores width unscaled, but users in
-  // Game Lab should access and set a scaled version.
+  // Game Lab should access and set a scaled version
+  // and be able to change the width of an animation.
   Object.defineProperty(s, 'width', {
     enumerable: true,
     configurable: true,
     get: function () {
       if (s._internalWidth === undefined) {
         return 100;
+      } else if (s.animation) {
+        return s._internalWidth * this.scale * s._horizontalStretch;
       } else {
         return s._internalWidth * this.scale;
       }
     },
     set: function (value) {
-      s._internalWidth = value / this.scale;
+      if (s.animation) {
+        s._horizontalStretch = value / s._internalWidth * this.scale;
+      } else {
+        s._internalWidth = value / this.scale;
+      }
     }
   });
 
   // p5.play stores heigth unscaled, but users in
-  // Game Lab should access and set a scaled version.
+  // Game Lab should access and set a scaled version
+  // and be able to change the height of an animation.
   Object.defineProperty(s, 'height', {
     enumerable: true,
     configurable: true,
     get: function () {
       if (s._internalHeight === undefined) {
         return 100;
+      } else if (s.animation) {
+        return s._internalHeight * this.scale * s._verticalStretch;
       } else {
         return s._internalHeight * this.scale;
       }
     },
     set: function (value) {
-      s._internalHeight =  value / this.scale;
+      if (s.animation) {
+        s._verticalStretch = value / s._internalHeight * this.scale;
+      } else {
+        s._internalHeight =  value / this.scale;
+      }
     }
   });
 
