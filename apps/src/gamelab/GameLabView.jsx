@@ -26,6 +26,7 @@ const GameLabView = React.createClass({
     interfaceMode: React.PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
+    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
@@ -91,8 +92,8 @@ const GameLabView = React.createClass({
   },
 
   shouldShowHeader() {
-    const {showAnimationMode, isEmbedView, isShareView} = this.props;
-    return showAnimationMode && !(isEmbedView || isShareView);
+    const {showAnimationMode, isEmbedView, isReadOnlyWorkspace, isShareView} = this.props;
+    return showAnimationMode && !(isEmbedView || isReadOnlyWorkspace || isShareView);
   },
 
   render() {
@@ -110,6 +111,7 @@ module.exports = connect(state => ({
   interfaceMode: state.interfaceMode,
   isEmbedView: state.pageConstants.isEmbedView,
   isResponsive: isResponsiveFromState(state),
+  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isShareView: state.pageConstants.isShareView,
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
   showAnimationMode: state.pageConstants.showAnimationMode
