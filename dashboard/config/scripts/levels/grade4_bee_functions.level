@@ -34,5 +34,61 @@
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">check flower</title>
+          <statement name="STACK">
+            <block type="bee_ifFlower">
+              <title name="LOC">atFlower</title>
+              <statement name="DO">
+                <block type="bee_whileNectarAmount">
+                  <title name="ARG1">nectarRemaining</title>
+                  <title name="OP">&gt;</title>
+                  <title name="ARG2">0</title>
+                  <statement name="DO">
+                    <block type="maze_nectar"/>
+                  </statement>
+                </block>
+              </statement>
+              <next>
+                <block type="bee_ifFlower">
+                  <title name="LOC">atHoneycomb</title>
+                  <statement name="DO">
+                    <block type="bee_whileNectarAmount">
+                      <title name="ARG1">honeyAvailable</title>
+                      <title name="OP">&gt;</title>
+                      <title name="ARG2">0</title>
+                      <statement name="DO">
+                        <block type="maze_honey"/>
+                      </statement>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="maze_nectar"/>
+        <block type="maze_honey"/>
+        <block type="procedures_callnoreturn">
+          <mutation name="check flower"/>
+        </block>
+        <block type="bee_ifNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
 </Karel>
