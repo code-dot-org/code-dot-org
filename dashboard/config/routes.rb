@@ -318,6 +318,9 @@ Dashboard::Application.routes.draw do
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
+    get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
+    post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
+    patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
 
     # This is a developer aid that allows previewing rendered mail views with fixed test data.
     # The route is restricted so it only exists in development mode.
