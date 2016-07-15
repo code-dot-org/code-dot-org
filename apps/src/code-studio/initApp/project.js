@@ -14,6 +14,7 @@ var assets = require('./clientApi').create('/v3/assets');
 var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
 
+import experiments from '../../experiments';
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
 var queryParams = require('../utils').queryParams;
@@ -213,6 +214,11 @@ var projects = module.exports = {
     }
 
     return true;
+  },
+
+  useFirebaseForNewProject() {
+    return experiments.isEnabled('useFirebaseForNewProject') &&
+      parsePath().appName === 'applab';
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -592,8 +598,10 @@ var projects = module.exports = {
     }
   },
   createNew: function () {
+    const suffix = projects.useFirebaseForNewProject() ? '?useFirebase=1' : '';
+    const url = `${projects.appToProjectUrl()}/new${suffix}`;
     projects.save(function () {
-      location.href = projects.appToProjectUrl() + '/new';
+      location.href = url;
     });
   },
   delete: function (callback) {

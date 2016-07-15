@@ -72,7 +72,7 @@ class ProjectsController < ApplicationController
       StorageApps.new(storage_id('user')),
       {
         name: 'Untitled Project',
-        useFirebase: @level.game.use_firebase_for_new_project?,
+        useFirebase: @level.game.use_firebase_for_new_project? || !!params[:useFirebase],
         level: polymorphic_url([params[:key], 'project_projects'])
       })
   end
