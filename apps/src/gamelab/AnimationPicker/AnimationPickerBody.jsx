@@ -57,7 +57,7 @@ const AnimationPickerBody = React.createClass({
 });
 export default Radium(AnimationPickerBody);
 
-const WarningLabel = ({children}) => (
+export const WarningLabel = ({children}) => (
     <span style={{color: color.red}}>
       {children}
     </span>
