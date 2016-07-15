@@ -72,7 +72,7 @@ class ProjectsController < ApplicationController
       StorageApps.new(storage_id('user')),
       {
         name: 'Untitled Project',
-        useFirebase: @level.game.use_firebase_for_new_project?,
+        useFirebase: use_firebase,
         level: polymorphic_url([params[:key], 'project_projects'])
       })
   end
@@ -91,6 +91,7 @@ class ProjectsController < ApplicationController
       return if redirect_under_13(@level)
     end
     level_view_options(
+      @level.id,
       hide_source: sharing,
       share: sharing,
       iframe_embed: iframe_embed,
@@ -126,7 +127,8 @@ class ProjectsController < ApplicationController
       request.ip,
       StorageApps.new(storage_id('user')),
       nil,
-      src_channel_id)
+      src_channel_id,
+      use_firebase)
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     AnimationBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id
