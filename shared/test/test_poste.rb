@@ -17,14 +17,6 @@ class PosteTest < Minitest::Test
     Poste.unsubscribe(UNSUBSCRIBED_EMAIL, UNSUBSCRIBED_EMAIL_HASH)
   end
 
-  def test_unsubscribed_for_unsubscribed_contact
-    assert Poste.unsubscribed?(UNSUBSCRIBED_EMAIL_HASH)
-  end
-
-  def test_unsubscribed_for_subscribed_contact
-    assert !Poste.unsubscribed?(SUBSCRIBED_EMAIL_HASH)
-  end
-
   def test_unsubscribe_for_existing_contact
     email = 'existing@example.net'
     Poste2.create_recipient(email, {ip_address: '5.6.7.8.'})
