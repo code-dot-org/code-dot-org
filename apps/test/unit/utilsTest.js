@@ -10,7 +10,8 @@ import {
     unescapeText,
     makeEnum,
     ellipsify,
-    deepMergeConcatArrays
+    deepMergeConcatArrays,
+    createUuid
 } from '@cdo/apps/utils';
 
 describe('utils modules', () => {
@@ -675,6 +676,15 @@ describe('utils modules', () => {
       assert.deepEqual(expected, actual, 'overrides expected values');
       assert.deepEqual(Object.keys(expected), Object.keys(actual),
           'merges in original order');
+    });
+  });
+
+  describe('createUuid', function () {
+    it('returns a random uuid', function () {
+      // Check layout
+      expect(createUuid()).to.match(/^........-....-4...-....-............$/);
+      // Check allowed characters
+      expect(createUuid()).to.match(/^[0-9a-f\-]+$/);
     });
   });
 });
