@@ -33,6 +33,7 @@ const AnimationPicker = React.createClass({
     visible: React.PropTypes.bool.isRequired,
     uploadInProgress: React.PropTypes.bool.isRequired,
     uploadError: React.PropTypes.string,
+    is13Plus: React.PropTypes.bool,
     onClose: React.PropTypes.func.isRequired,
     onPickNewAnimation: React.PropTypes.func.isRequired,
     onPickLibraryAnimation: React.PropTypes.func.isRequired,
@@ -53,6 +54,7 @@ const AnimationPicker = React.createClass({
     }
     return (
         <AnimationPickerBody
+            is13Plus={this.props.is13Plus}
             onDrawYourOwnClick={this.props.onPickNewAnimation}
             onPickLibraryAnimation={this.props.onPickLibraryAnimation}
             onUploadClick={this.onUploadClick}
@@ -87,7 +89,8 @@ const AnimationPicker = React.createClass({
 export default connect(state => ({
   visible: state.animationPicker.visible,
   uploadInProgress: state.animationPicker.uploadInProgress,
-  uploadError: state.animationPicker.uploadError
+  uploadError: state.animationPicker.uploadError,
+  is13Plus: state.pageConstants.is13Plus
 }), dispatch => ({
   onClose() {
     dispatch(hide());
