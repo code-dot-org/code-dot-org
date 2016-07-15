@@ -1,8 +1,9 @@
 import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
+import ChatBubble from './ChatBubble';
 
-const HintPrompt = ({ styles, onConfirm, onDismiss }) => {
+const HintPrompt = ({ styles, onConfirm, onDismiss, isMinecraft, borderColor }) => {
   const buttonStyles = {
     common: {
       color: 'white',
@@ -19,18 +20,20 @@ const HintPrompt = ({ styles, onConfirm, onDismiss }) => {
   };
 
   return (
-    <div style={[styles.container]}>
-      <p style={[styles.message]}>Do you want a hint?</p>
+    <ChatBubble isMinecraft={isMinecraft} borderColor={borderColor}>
+      <p>Do you want a hint?</p>
       <button onClick={onConfirm} style={[buttonStyles.common, buttonStyles.yes]}>Yes</button>
       <button onClick={onDismiss} style={[buttonStyles.common, buttonStyles.no]}>No</button>
-    </div>
+    </ChatBubble>
   );
 };
 
 HintPrompt.propTypes = {
-  styles: React.PropTypes.object,
+  borderColor: React.PropTypes.string,
+  isMinecraft: React.PropTypes.bool,
   onConfirm: React.PropTypes.func.isRequired,
   onDismiss: React.PropTypes.func.isRequired,
+  styles: React.PropTypes.object.isRequired,
 };
 
 export default Radium(HintPrompt);

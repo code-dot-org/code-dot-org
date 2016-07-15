@@ -26,6 +26,7 @@ import PromptIcon from './PromptIcon';
 import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
+import ChatBubble from './ChatBubble';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
 import { getOuterHeight, scrollBy, scrollTo } from './utils';
@@ -48,13 +49,6 @@ const craftStyles = {
   body: {
     // $below-header-background from craft/style.scss
     backgroundColor: '#646464'
-  },
-  instructionsChatBubble: {
-    backgroundColor: '#3B3B3B',
-    borderRadius: 4
-  },
-  instructionsChatText: {
-    color: 'white'
   },
 };
 
@@ -458,10 +452,11 @@ var TopInstructions = React.createClass({
             </ProtectedStatefulDiv>
           </div>
           <div ref="instructions"
+              className="csf-top-instructions"
               onWheel={this.handleInstructionsWheel}
               style={styles.instructions}
           >
-            <div style={[styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble]}>
+            <ChatBubble isMinecraft={this.props.isMinecraft}>
               {this.props.hasContainedLevels && <ProtectedStatefulDiv
                   id="containedLevelContainer"
                   ref="containedLevelContainer"
@@ -483,7 +478,7 @@ var TopInstructions = React.createClass({
                     dangerouslySetInnerHTML={{ __html: instructions2 }}
                 />
               }
-            </div>
+            </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
               <InlineHint
                   key={hint.hintId}
@@ -494,17 +489,13 @@ var TopInstructions = React.createClass({
               />
             )}
             {this.props.feedback && !this.props.collapsed && <InlineFeedback
-                styles={{
-                  container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
-                  message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
-                }}
+                isMinecraft={this.props.isMinecraft}
+                borderColor={color.charcoal}
                 message={this.props.feedback.message}
             />}
             {this.shouldDisplayHintPrompt() && <HintPrompt
-                styles={{
-                  container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
-                  message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
-                }}
+                isMinecraft={this.props.isMinecraft}
+                borderColor={color.yellow}
                 onConfirm={this.showHint}
                 onDismiss={this.dismissHintPrompt}
             />}
