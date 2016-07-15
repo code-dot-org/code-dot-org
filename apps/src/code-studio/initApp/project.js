@@ -199,29 +199,14 @@ var projects = module.exports = {
   },
 
   /**
-   * @return {boolean} true if we should show our abuse box instead of showing
-   *   the project.
+   * @return {boolean} true if we should show our policy violation box instead
+   *   of showing the project.
    */
   hideBecausePrivacyViolationOrProfane() {
-    if (!this.hasPrivacyProfanityViolation() || appOptions.scriptId) {
-      // Never want to hide when in the context of a script, as this will always
-      // either be me or my teacher viewing my last submission
+    if (this.showEvenIfPolicyViolatingOrAbusiveProject()) {
       return false;
     }
-
-    // When owners edit a project, we don't want to hide it entirely. Instead,
-    // we'll load the project and show them a small alert
-    var pageAction = parsePath().action;
-
-    // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
-    // by the user. In this case that's okay, since all that does is allow them to
-    // view a project that was marked as abusive.
-    if ((this.isOwner() || appOptions.isAdmin) &&
-        (pageAction === 'edit' || pageAction === 'view')) {
-      return false;
-    }
-
-    return true;
+    return this.hasPrivacyProfanityViolation();
   },
 
   /**
@@ -229,25 +214,34 @@ var projects = module.exports = {
    *   the project.
    */
   hideBecauseAbusive() {
-    if (!this.exceedsAbuseThreshold() || appOptions.scriptId) {
+    if (this.showEvenIfPolicyViolatingOrAbusiveProject()) {
+      return false;
+    }
+    return this.exceedsAbuseThreshold();
+  },
+
+  /**
+   * @returns {boolean} true if we should show a project regardless of its
+   * profanity, policy violations or abuse rating level.
+   */
+  showEvenIfPolicyViolatingOrAbusiveProject() {
+    if (appOptions.scriptId) {
       // Never want to hide when in the context of a script, as this will always
       // either be me or my teacher viewing my last submission
-      return false;
+      return true;
     }
 
     // When owners edit a project, we don't want to hide it entirely. Instead,
     // we'll load the project and show them a small alert
-    var pageAction = parsePath().action;
+    const pageAction = parsePath().action;
 
     // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
     // by the user. In this case that's okay, since all that does is allow them to
     // view a project that was marked as abusive.
-    if ((this.isOwner() || appOptions.isAdmin) &&
-        (pageAction === 'edit' || pageAction === 'view')) {
-      return false;
-    }
+    const hasEditPermissions = this.isOwner() || appOptions.isAdmin;
+    const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
-    return true;
+    return hasEditPermissions && isEditOrViewPage;
   },
 
   //////////////////////////////////////////////////////////////////////
