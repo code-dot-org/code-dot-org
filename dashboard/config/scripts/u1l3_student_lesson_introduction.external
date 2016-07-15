@@ -5,26 +5,23 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 1: Lesson 3 - Sending Complex Messages
+# Unit 1: Lesson 3 - Sending Complex Messages
 
-# Background
+## Background
+
 As you discussed in your previous class, information is a fairly abstract concept. To send information, we need to encode it in some way; in other words, we need to turn it into something physical that the receiver could recognize. The information you sent with your devices was binary because it could only take one of two states. We call this type of information a bit, which is short for "binary digit." This means that in the last class, you were using your devices to encode bits. That was pretty convenient, since the messages you were sending were <i>also</i> binary. Today, you will consider how to communicate information that may have more than two states.
 
-# Lesson
+## Lesson
 
-* Use your bit-sending device to send a message that has more than two possibilities. 
-* Invent a system of communication that uses combinations of binary messages. 
-* Use the term "bit" as another way to describe a binary message. 
+* Use your bit-sending device to send a message that has more than two possibilities.
+* Invent a system of communication that uses combinations of binary messages.
+* Use the term "bit" as another way to describe a binary message.
 
 
-# Resources
+## Resources
 
 * Activity Guide: <a href="https://docs.google.com/document/d/1FY6RjnY8P8cLd8CYwm8nNnvVqN2dFlww0kSi_LIMoDw/edit?usp=sharing" target="_blank">Bit-sending Device</a>
 * Assessment: <a href="https://docs.google.com/document/d/1N5lkggG807XKiu5kRLmBc1xm4ELQLfEoQhrLUKb59bw/edit?usp=sharing" target="_blank">Bit-sending Device Rubric</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN
-
-

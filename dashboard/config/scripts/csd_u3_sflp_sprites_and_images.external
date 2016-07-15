@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Background
+# Overview
 
 You are going to get to turn their rectangular sprites into images for the first time! There will be lots of practice in this lesson of using images to create some simple animations including spinning gears, swimming fish and a flying kite. You will be introduced to the mouse position is the first time. The mouse position will give user input to change the animations of your sprites.
 # Activities
@@ -24,7 +24,7 @@ You are going to get to turn their rectangular sprites into images for the first
 ### Sprites : 
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |
-|sprite.rotation|Property for angle of rotation of sprite in degrees| `sprite.roation = randomNumber(0,360);` | link |
+|sprite.rotation|Property for angle of rotation of sprite in degrees| `sprite.rotation = randomNumber(0,360);` | link |
 |sprite.scale|Property that make the image of the sprite bigger or smaller| `sprite.scale = 2;` | link |
 |sprite.setAnimation(image)|Sets the image of the sprite| `sprite.setAnimation("dog.png");` | link |
 

@@ -35,6 +35,7 @@ var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
+import {GAME_WIDTH} from './constants';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -224,6 +225,7 @@ GameLab.prototype.init = function (config) {
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
+    nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true,

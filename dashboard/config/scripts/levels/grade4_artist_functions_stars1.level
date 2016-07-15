@@ -108,11 +108,8 @@
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="controls_repeat" editable="false">
+        <block type="controls_repeat">
           <title name="TIMES">4</title>
-        </block>
-        <block type="controls_repeat" editable="false">
-          <title name="TIMES">8</title>
         </block>
       </xml>
     </toolbox_blocks>
