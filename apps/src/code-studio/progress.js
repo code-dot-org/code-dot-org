@@ -14,7 +14,7 @@ import {
   initProgress,
   mergeProgress,
   updateFocusArea,
-  showLessonPlans
+  showTeacherInfo
 } from './progressRedux';
 
 var progress = module.exports;
@@ -52,9 +52,9 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   ).done(data => {
     data = data || {};
 
-    // Show lesson plan links if teacher
+    // Show lesson plan links and other teacher info if teacher
     if (data.isTeacher) {
-      store.dispatch(showLessonPlans());
+      store.dispatch(showTeacherInfo());
     }
 
     if (data.focusAreaPositions) {
