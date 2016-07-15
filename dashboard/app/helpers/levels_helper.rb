@@ -52,11 +52,16 @@ module LevelsHelper
         StorageApps.new(storage_id('user')),
         {
           hidden: true,
-          useFirebase: @level.game.use_firebase_for_new_project?
+          useFirebase: use_firebase
         })
     end
 
     view_options channel: channel_token.channel if channel_token
+  end
+
+  def use_firebase
+    !!@level.game.use_firebase_for_new_project? ||
+        !!(request.parameters && request.parameters['useFirebase'])
   end
 
   def select_and_track_autoplay_video
