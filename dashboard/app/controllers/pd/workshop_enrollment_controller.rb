@@ -78,6 +78,58 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     end
   end
 
+  # GET /pd/workshops/join/:section_code
+  def join_section
+    unless current_user
+      redirect_to "/users/sign_in?return_to=#{request.url}"
+      return
+    end
+
+    @workshop = Pd::Workshop.find_by_section_code(params.require(:section_code))
+    unless @workshop
+      render_404
+      return
+    end
+    if workshop_closed?
+      render :closed
+      return
+    elsif workshop_owned_by? current_user
+      render :own
+      return
+    end
+
+    @enrollment = get_workshop_user_enrollment
+  end
+
+  # POST /pd/workshops/join/:section_code
+  # PATCH /pd/workshops/join/:section_code
+  def confirm_join
+    @workshop = Pd::Workshop.find_by_section_code(params.require(:section_code))
+    unless @workshop && current_user
+      render_404
+      return
+    end
+
+    @enrollment = get_workshop_user_enrollment
+    @enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
+
+    if @enrollment.valid? && Digest::MD5.hexdigest(@enrollment.email) != current_user.hashed_email
+      @enrollment.errors[:email] = 'must match your login email. If you want to use this email, first go to account settings and update your current email address.'
+      render :join_section
+      return
+    end
+
+    if @enrollment.valid? && @enrollment.save
+      # Upgrade to teacher and set email in cases where the user email is missing.
+      # Note the supplied email must match the user's hashed_email in order to get here. Otherwise it will fail above.
+      current_user.update!(user_type: User::TYPE_TEACHER, email: @enrollment.email) if current_user.email.blank?
+
+      redirect_to root_path, notice: I18n.t('follower.registered', section_name: @workshop.section.name)
+    else
+      render :join_section
+    end
+  end
+
   private
 
   def workshop_closed?
@@ -91,6 +143,19 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   def workshop_owned_by?(user)
     return false unless user
     @workshop.organizer_id == user.id || @workshop.facilitators.exists?(id: user.id)
+  end
+
+  # Gets the workshop enrollment associated with the current user id or email if one exists.
+  # Otherwise returns a new enrollment for that user.
+  def get_workshop_user_enrollment
+    @workshop.enrollments.where(
+      'user_id = ? OR email = ?', current_user.id, current_user.email
+    ).first || Pd::Enrollment.new(
+      pd_workshop_id: @workshop.id,
+      user_id: current_user.id,
+      name: current_user.name,
+      email: current_user.email
+    )
   end
 
   def enrollment_params
