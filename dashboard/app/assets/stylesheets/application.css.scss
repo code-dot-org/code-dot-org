@@ -2273,8 +2273,7 @@ $modal-no-icon-gap: 22px;
   }
 }
 
-.instructions-markdown {
-  padding-top: 19px;
+.csf-top-instructions, .instructions-markdown {
   p {
     line-height: 25px;
     font-size: 16px;
@@ -2284,6 +2283,10 @@ $modal-no-icon-gap: 22px;
   strong {
     font-family: $gotham-bold;
   }
+}
+
+.instructions-markdown {
+  padding-top: 19px;
 }
 
 .markdown-level-header-text {
