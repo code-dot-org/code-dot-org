@@ -69,14 +69,6 @@ module Poste
     ['.md','.haml','.html']
   end
 
-  # Returns whether the email (given by its hash) has unsubscribed.
-  # TODO(asher): Remove this method, as it seems unused as of 11 July 2016.
-  def self.unsubscribed?(hashed_email)
-    !!POSTE_DB[:contacts].
-      where('hashed_email = ? AND unsubscribed_at IS NOT NULL', hashed_email).
-      first
-  end
-
   # Unsubscribes the specified hashed email.
   # @param email [string | nil] the email to record being unsubscribed.
   #   WARNING: The contact to unsubscribe is chosen using hashed_email.
