@@ -235,11 +235,6 @@ exports.setAceText = function (text) {
  */
 export function forEveryBooleanPermutation(fn) {
   const argCount = fn.length;
-  if (argCount === 0) {
-    fn.apply(null);
-    return;
-  }
-
   const numPermutations = Math.pow(2, argCount);
   for (let i = 0; i < numPermutations; i++) {
     fn.apply(null, getBooleanPermutation(i, argCount));
