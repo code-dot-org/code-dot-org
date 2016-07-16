@@ -262,72 +262,82 @@ class ApiController < ApplicationController
     render json: data
   end
 
-  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
-  # At least five students in the section must have submitted answers.  The answers for each contained
-  # sublevel are shuffled randomly.
-  def section_surveys
-    load_section
-    load_script
+  # Given a sublevel, and the known response to it, return a result object.
+  def get_sublevel_result(sublevel, sublevel_response)
+    sublevel_result = {}
+    if sublevel_response
+      case sublevel
+      when TextMatch, FreeResponse
+        student_result = sublevel_response["result"]
+        sublevel_result[:result] = student_result
+        sublevel_result[:type] = "free_response"
+      when Multi
+        student_result = sublevel_response["result"].split(",").sort.join(",")
+        # unless unsubmitted
+        unless student_result == "-1"
+          answer_text = sublevel.properties.try(:[], "answers").try(:[], student_result.to_i).try(:[], "text")
+          sublevel_result[:result_text] = answer_text
+          # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
+          sublevel_result[:result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
+          sublevel_result[:type] = "multi"
+        end
+      end
+    end
+    sublevel_result
+  end
 
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
+  # Returns all survey results given a student and a script level of type LevelGroup.
+  def get_survey_results_for_student(student, script_level)
+    student_results = {}
+
+    # Skip student if they haven't submitted for this LevelGroup.
+    user_level = student.user_level_for(script_level, script_level.level)
+    return unless user_level.try(:submitted)
+
+    last_attempt = student.last_attempt(script_level.level)
+    response = last_attempt.try(:level_source).try(:data)
+    return unless response
+
+    response_parsed = JSON.parse(response)
+
+    # Go through each sublevel
+    script_level.level.levels.each_with_index do |sublevel, sublevel_index|
+      # If it's the first time we're saving a result for this sublevel, then
+      # create the full entry.
+      unless student_results[sublevel_index]
+        question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
+                        sublevel.properties.try(:[], "markdown_instructions")
+        student_results[sublevel_index] = {question: question_text, results: []}
+      end
+
+      sublevel_response = response_parsed[sublevel.id.to_s]
+
+      student_results[sublevel_index][:results] << get_sublevel_result(sublevel, sublevel_response)
+    end
+
+    student_results
+  end
+
+  # Returns all anonymized survey results, given a script and a section.
+  def get_survey_results(script, section)
+    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
 
     # Go through each anonymous long-assessment LevelGroup.
-    data = level_group_script_levels.map do |script_level|
+    level_group_script_levels.map do |script_level|
       next unless script_level.long_assessment?
       next unless script_level.anonymous?
 
       levelgroup_results = {}
 
-      student_count = 0
-
       # Go through each student who has submitted a response to it.
-      @section.students.each do |student|
-        # Skip student if they haven't submitted for this LevelGroup.
-        user_level = student.user_level_for(script_level, script_level.level)
-        next unless user_level.try(:submitted)
-
-        last_attempt = student.last_attempt(script_level.level)
-        response = last_attempt.try(:level_source).try(:data)
-        next unless response
-
-        response_parsed = JSON.parse(response)
-
-        student_count += 1
-
-        # Go through each sublevel
-        script_level.level.levels.each_with_index do |sublevel, sublevel_index|
-          # If it's the first time we're saving a result for this sublevel, then
-          # create the full entry.
-          unless levelgroup_results[sublevel_index]
-            question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
-                            sublevel.properties.try(:[], "markdown_instructions")
-            levelgroup_results[sublevel_index] = {question: question_text, results: []}
+      section.students.each do |student|
+        student_result = get_survey_results_for_student(student, script_level)
+        if student_result
+          student_result.each do |key, value|
+            levelgroup_results[key] = {results: []} unless levelgroup_results[key]
+            levelgroup_results[key][:question] = value[:question]
+            levelgroup_results[key][:results] += value[:results]
           end
-
-          sublevel_response = response_parsed[sublevel.id.to_s]
-
-          sublevel_result = {}
-
-          if sublevel_response
-            case sublevel
-            when TextMatch, FreeResponse
-              student_result = sublevel_response["result"]
-              sublevel_result[:result] = student_result
-              sublevel_result[:type] = "free_response"
-            when Multi
-              student_result = sublevel_response["result"].split(",").sort.join(",")
-              # unless unsubmitted
-              unless student_result == "-1"
-                answer_text = sublevel.properties.try(:[], "answers").try(:[], student_result.to_i).try(:[], "text")
-                sublevel_result[:result_text] = answer_text
-                # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-                sublevel_result[:result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
-                sublevel_result[:type] = "multi"
-              end
-            end
-          end
-
-          levelgroup_results[sublevel_index][:results] << sublevel_result
         end
       end
 
@@ -336,9 +346,14 @@ class ApiController < ApplicationController
         levelgroup_result[:results].shuffle!
       end
 
-      if student_count < 5
-        nil
-      else
+      # We will have results, even empty ones, for each student that submitted
+      # an answer.
+      student_count = 0
+      unless levelgroup_results.empty?
+        student_count = levelgroup_results.values.first[:results].length
+      end
+
+      if student_count >= 5
         # All the results for one LevelGroup for a group of students.
         {
           stage: script_level.stage.localized_title,
@@ -346,10 +361,20 @@ class ApiController < ApplicationController
           url: build_script_level_url(script_level, section_id: @section.id),
           levelgroup_results: levelgroup_results
         }
+      else
+        nil
       end
     end.compact
+  end
 
-    render json: data
+  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
+  # At least five students in the section must have submitted answers.  The answers for each contained
+  # sublevel are shuffled randomly.
+  def section_surveys
+    load_section
+    load_script
+
+    render json: get_survey_results(@script, @section)
   end
 
   private
