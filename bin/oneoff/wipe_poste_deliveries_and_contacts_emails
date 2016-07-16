@@ -6,6 +6,8 @@
 require_relative '../../deployment'
 require_relative '../../lib/cdo/db'
 
+SLICE_SIZE = 10_000
+
 # Populate a hash of hashed_emails to birthdays.
 puts 'Populating hashed_email_to_birthday...'
 hashed_email_to_birthday = {}
@@ -18,19 +20,23 @@ end
 
 # Wipe the plaintext email of young students.
 puts 'Wiping contacts...'
-PEGASUS_DB[:contacts].each do |contact|
-  birthday = hashed_email_to_birthday[contact[:hashed_email]]
-  if birthday && birthday > '2003-07-01'
-    PEGASUS_DB[:contacts].where(id: contact[:id]).update(email: '')
-  end
+
+hashed_email_to_birthday.
+  select {|_hash, birthday| birthday > '2003-07-01'}.
+  keys.
+  each_slice(SLICE_SIZE) do |hashed_email_list|
+  PEGASUS_DB[:contacts].
+    where(hashed_email: hashed_email_list).
+    update(email: '')
 end
 
 # Wipe the email of all students.
 puts 'Wiping poste_deliveries...'
-PEGASUS_DB[:poste_deliveries].each do |delivery|
-  if hashed_email_to_birthday.key? delivery[:hashed_email]
-    PEGASUS_DB[:poste_deliveries].
-      where(id: delivery[:id]).
-      update(contact_email: '')
-  end
+
+hashed_email_to_birthday.
+  keys.
+  each_slice(SLICE_SIZE) do |hashed_email_list|
+  PEGASUS_DB[:poste_deliveries].
+    where(hashed_email: hashed_email_list).
+    update(contact_email: '')
 end
