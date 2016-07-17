@@ -1,7 +1,9 @@
 /** @file Tests for NetSimRouterLogModal */
 'use strict';
 import $ from 'jquery';
-import {assert} from '../../util/configuredChai';
+import {assert, expect} from '../../util/configuredChai';
+var testUtils = require('../../util/testUtils');
+testUtils.setupLocale('netsim');
 var NetSimLocalClientNode = require("@cdo/apps/netsim/NetSimLocalClientNode");
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimRouterLogModal = require('@cdo/apps/netsim/NetSimRouterLogModal');
@@ -122,6 +124,20 @@ describe("NetSimRouterLogModal", function () {
       localNode.disconnectRemote();
       modal.setRouter(null); // Normally netsim.js does this
       assert.equal('none', modal.currentTrafficFilter_);
+    });
+
+    it("can render the dropdown with no local address", function () {
+      expect(() => {
+        modal.onShow_();
+      }).not.to.throw();
+    });
+
+    it("can render the dropdown with a local address", function () {
+      modal.onShardChange(testShard, localNode);
+      localNode.connectToRouter(router);
+      expect(() => {
+        modal.onShow_();
+      }).not.to.throw();
     });
   });
 
