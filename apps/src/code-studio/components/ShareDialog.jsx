@@ -110,7 +110,7 @@ var ShareDialog = React.createClass({
 
     const showShareWarning = (
       !this.props.canShareSocial &&
-      (this.props.appType === 'applab' || this.propsAppType === 'gamelab')
+      (this.props.appType === 'applab' || this.props.appType === 'gamelab')
     );
     return (
       <BaseDialog
