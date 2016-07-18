@@ -153,7 +153,7 @@ class ApplicationController < ActionController::Base
     end
 
     if options[:share_failure]
-      response[:share_failure] = response_for_share_failure(options[:share_failure])
+      response[:share_failure] = options[:share_failure]
     end
 
     if HintViewRequest.enabled?
