@@ -1,5 +1,5 @@
 import React from 'react';
-const createUuid = require('../../utils').createUuid;
+import {createUuid} from '../../utils';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog.jsx';
 import gamelabMsg from '../locale';

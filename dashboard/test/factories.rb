@@ -18,6 +18,13 @@ FactoryGirl.define do
       admin true
     end
 
+    factory :levelbuilder do
+      after(:create) do |levelbuilder|
+        levelbuilder.permission = UserPermission::LEVELBUILDER
+        levelbuilder.save
+      end
+    end
+
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 03, 14)
