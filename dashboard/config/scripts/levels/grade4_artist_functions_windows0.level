@@ -1,7 +1,7 @@
 <Artist>
   <config><![CDATA[{
   "game_id": 23,
-  "created_at": "2016-07-15T18:10:47.000Z",
+  "created_at": "2016-07-15T21:19:26.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
@@ -14,9 +14,9 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".7",
     "free_play": "false",
-    "ideal": "5",
+    "ideal": "6",
     "embed": "false",
-    "markdown_instructions": "Have you drawn something like this star before? Practice making it one more time by adding a `turn` and a `repeat` block.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Have you drawn something like this before? Create this drawing by drawing four squares with a `turn right 90 degrees` between each.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -43,25 +43,12 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">25</title>
-              <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveBackward</title>
-                  <title name="VALUE">25</title>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
+        <block type="draw_move_by_constant" limit="1">
           <title name="DIR">moveForward</title>
           <title name="VALUE">25</title>
         </block>
@@ -73,19 +60,19 @@
           <title name="DIR">turnLeft</title>
           <title name="VALUE">90</title>
         </block>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
-        <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-            <block type="colour_picker">
-              <title name="COLOUR">#ffff00</title>
-            </block>
-          </value>
+        <block type="controls_repeat" limit="2">
+          <title name="TIMES">4</title>
         </block>
         <block type="draw_colour" inline="true">
           <value name="COLOUR">
             <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
           </value>
         </block>
       </xml>
@@ -95,21 +82,26 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">8</title>
+              <title name="TIMES">4</title>
               <statement name="DO">
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">25</title>
-                  <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
                     <block type="draw_move_by_constant">
-                      <title name="DIR">moveBackward</title>
+                      <title name="DIR">moveForward</title>
                       <title name="VALUE">25</title>
                       <next>
-                        <block type="draw_turn_by_constant_dropdown">
+                        <block type="draw_turn_by_constant">
                           <title name="DIR">turnRight</title>
-                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <title name="VALUE">90</title>
                         </block>
                       </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
                     </block>
                   </next>
                 </block>
@@ -119,10 +111,5 @@
         </block>
       </xml>
     </solution_blocks>
-    <predraw_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-      </xml>
-    </predraw_blocks>
   </blocks>
 </Artist>
