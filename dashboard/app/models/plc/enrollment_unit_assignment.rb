@@ -71,16 +71,18 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   def summarize_progress
     summary = []
 
-    plc_course_unit.script.stages.map(&:flex_category).uniq.each do |flex_category|
+    categories_for_stage = plc_course_unit.script.stages.map{|stage| stage.flex_category || 'content'}.uniq
+
+    Plc::LearningModule::MODULE_TYPES.keep_if { |type| categories_for_stage.include?(type)}.each do |flex_category|
       summary << {
           category: flex_category || Plc::LearningModule::CONTENT_MODULE,
-          status: module_assignment_for_type(flex_category) || Plc::EnrollmentModuleAssignment::NOT_STARTED
+          status: module_assignment_for_type(flex_category).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED
       }
     end
 
-    if plc_course_unit.script.peer_reviews_to_complete && plc_course_unit.script.peer_reviews_to_complete > 0
+    if plc_course_unit.script.try(:peer_reviews_to_complete).try(:>, 0)
       review_count = PeerReview.where(reviewer_id: user.id, script: plc_course_unit.script).where.not(status: nil).size
-      review_status = if (review_count == plc_course_unit.script.peer_reviews_to_complete)
+      review_status = if review_count == plc_course_unit.script.peer_reviews_to_complete
                         Plc::EnrollmentModuleAssignment::COMPLETED
                       elsif review_count > 0
                         Plc::EnrollmentModuleAssignment::IN_PROGRESS
