@@ -16,9 +16,9 @@ namespace :firebase do
   task :upload_rules do
     if CDO.firebase_name
       HipChat.log 'Uploading security rules to firebase...'
-      Dir.chdir(apps_dir) {
+      Dir.chdir(dashboard_dir) {
         url = "https://#{CDO.firebase_name}.firebaseio.com/.settings/rules.json?auth=#{CDO.firebase_secret}"
-        RakeUtils.system("curl -X PUT -T ./build/package/firebase/rules.json '#{url}'")
+        RakeUtils.system("curl -X PUT -T ./public/blockly/firebase/rules.json '#{url}'")
       }
     end
   end
