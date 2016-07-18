@@ -1,7 +1,14 @@
 "zh-CN":
   hour_of_code: "编程一小时"
   hello: "世界你好"
+  'yes': "是"
+  'no': "不"
   select_language: "请选择您的语言"
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: "了解详情"
   en: "计算机科学"
   computer_science_edweek: "计算机科学教育周"
   csedweek_dates: 2014 年 12 月 8-14 日
@@ -141,10 +148,10 @@
   third_party_desc_40_4to8: "你捡币吗"
   third_party_desc_dozens_kto8: "不，我撒币"
   third_party_desc_10to15_3to12: "为 3-12 年级提供10到15节课"
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
+  third_party_desc_25to40_3to12: "从25-40的课程，专门给3-12年级"
   third_party_desc_20_2to8: "大约有20节课时面向2到8年级的"
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_desc_7to22_5to12: "课程7-22之间，倾向5-12年级"
+  third_party_desc_20_4to12: "超过20个课程， 倾向4-12年级"
   enter_valid_age: "请选择一个有效的年龄"
   enter_valid_email: "请输入一个有效的电子邮件地址"
   get_a_certificate_message: "我们会向您发送证书和有关的信息 关于如何<a href='/learn/beyond'> 学习 1小时
@@ -193,13 +200,13 @@
   learn_next_level: "继续到下一级别"
   learn_online: "请尝试其他在线课程"
   learn_classes: "查找本地的课程"
-  hoc_is_here: "在过去的计算机科学教育周，参与#HourOfCode的学生已达 5000 万。 https://youtu.be/Ofze6CWUCx8。"
+  hoc_is_here: "学习计算机科学。计算机科学改变一切。 https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: "我刚刚完成了 #HourOfCode —— 大家也来看看吧！@codeorg"
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
+  just_did_course1: "我刚完成课程1-请查看！@codeorg"
+  just_did_course2: "我刚完成课程2-请查看！@codeorg"
+  just_did_course3: "我刚完成课程3-请查看！@codeorg"
+  just_did_course4: "我刚完成课程4-请查看！@codeorg"
+  just_did_accelerated: "我刚完成加速课程- 请查看！@codeorg"
   twitter_teach_cs: 90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。
   learn_hoc: "学习编程一小时"
   beyond_hoc: "一小时之后"
@@ -280,9 +287,8 @@
   homepage_banner_privacy_link: "了解详情"
   homepage_banner_20k_teachers: "两万名老师经过训练后，正在课堂上传授计算机科学。"
   homepage_banner_20k_teachers_link: "了解详情"
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress: "美国领导人正在呼吁国会拨款给 幼儿园-12年级 的计算机科学课程。"
+  homepage_banner_congress_link: "添加您的支持"
   homepage_slot_text_title_hoc: "编程一小时"
   homepage_slot_text_blurb_hoc: "任何人都可学习。立即开始"
   homepage_slot_text_link_hoc: "来试试“编程一小时”项目！"
@@ -308,7 +314,7 @@
   homepage_slot_text_link_stats: "请看统计信息"
   homepage_slot_text_link_buy: "加入进来"
   homepage_slot_text_link_donate: "捐一笔钱"
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: T 恤、 帽子，与更多
   homepage_header_codestudio: "编程工作室 学生作品"
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: "查看全部"
@@ -459,7 +465,7 @@
   dashboard_landing_new_beta: "新功能！K-5 学生可以尝试我们的 beta 实验版课程。"
   dashboard_landing_new_k5courses: "新功能！K-5 学生可以尝试我们的课程。"
   dashboard_landing_useful_links: "其他有用的链接"
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: "你的教室的资源"
   dashboard_landing_office_hours: "面对面问问题！请访问我们每月的视频办公时间。"
   dashboard_landing_print_certificates: "为完成此课程的学生打印证书"
   dashboard_landing_educator_blog: "阅读有关新闻和我们在教育家博客的材料的更新"
@@ -473,11 +479,10 @@
   dashboard_landing_available_courses: "这些是目前可供您和您的学生使用的课程。"
   dashboard_landing_more_tutorials: "想看更多教程吗？"
   dashboard_landing_more_tutorials_desc: <a href="/learn/beyond">我们的合作伙伴提供了更多的教程</a>。可以通过机器人，制作网页，制作你自己的应用程序学习编程，或探索其他语言如C++，Ruby，Python！
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_inspire: "用海报、 视频和更多来激励你的学生。"
+  dashboard_landing_video_library: "使用从计算机科学概念的视频库里的视频。"
+  dashboard_landing_report_bug: "请求一个特性或报告一个漏洞。"
+  dashboard_landing_teacher_forum: "加入一个专业学习的团体。"
   dashboard_hoc_courses: "《代码一小时》适合所有年龄的人。"
   dashboard_hoc_courses_desc: "和你的学生一同尝试任何这些不到 1 小时的辅导！"
   dashboard_hoc_courses_desc_and_cta: 与你的学生一起尝试这些简短的一个小时的辅导。在计算机科学教育周期间 <a href="https://hourofcode.com">
@@ -513,13 +518,18 @@
   dashboard_action_remove_confirm: "移除？"
   dashboard_action_done: "完成"
   dashboard_action_required: "必填"
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_assessments_view: "查看评价："
+  dashboard_assessments_none: "没有评价"
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
+  dashboard_assessments_summaries: "总结"
+  dashboard_assessments_answers: "全部答案"
+  dashboard_filter_by_stage: "按阶段筛选 ︰"
+  dashboard_filter_all: "全部"
+  dashboard_download_csv: "下载 CSV"
   dashboard_navigation_home_page: "教师主页"
   dashboard_navigation_section_student_progress: "学生账户和进度"
   dashboard_navigation_section_teacher_progress: "您的课程进度"
@@ -528,7 +538,7 @@
   dashboard_navigation_section_pd: "职业发展"
   dashboard_navigation_section_speakers: "计算机科学 <br/> 特邀演讲人"
   dashboard_navigation_all_sections: "学生账户和进度"
-  dashboard_navigation_view_progress: "查看进度"
+  dashboard_navigation_view_progress: "进度"
   dashboard_navigation_view_text_responses: "查看文字回应"
   dashboard_navigation_view_assessments: "测验"
   dashboard_navigation_add_students: "添加学生"
@@ -544,17 +554,18 @@
   dashboard_progress_completed_perfect: "完美完成"
   dashboard_progress_furthest_level_attempted: "尝试过最远的关卡"
   dashboard_progress_submitted: "已提交"
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_progress_view: "查看进度 ︰"
+  dashboard_progress_student_in_script: "%{student_name} 的进度信息在 %{script_name}"
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: "查看文本响应 ︰"
+  dashboard_responses_none: "没有文本响应"
   dashboard_sections_new_section: "新的学习小组"
   dashboard_sections_jumbotron_instruction: "创建新的学习小组并为其添加学生。学习小组可以帮助您以小组为单位来管理学生，以便您跟踪他们的进度和管理他们的帐户。"
   dashboard_sections_table_section: "单元"
   dashboard_sections_table_secret: "登录类型"
   dashboard_sections_table_grade: "年级"
   dashboard_sections_table_course: "课程："
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "学生"
   dashboard_sections_table_code: "单元代码"
   dashboard_sections_name: "学习小组名称"
@@ -690,11 +701,11 @@
   dashboard_faq_k5: K-5 组的常见问题
   dashboard_announcements: "公告"
   dashboard_announce_view_all: "查看全部"
-  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
-    problem in computer science. Code Studio teachers are leading the way in educating
-    underrepresented minorities. Our annual survey shows record diversity in your
-    classrooms! Check out the numbers."
-  dashboard_announce_button_text: "了解详情"
+  dashboard_announce_message: Want to help us test a new feature? We know it’s important
+    to encourage students to iterate and experiment, so we'll be adding an "unused
+    code" feature to allow students to run their code even when there are unattached
+    blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
     28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。"
   dashboard_announce_petition_button: "添加您的姓名"
@@ -818,12 +829,13 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
-  csp1_name: 'Unit 1: The Internet'
+  csp1_name: "第一单元：互联网"
   csp2_name: 'Unit 2: Digital Information'
-  cspassessment_name: Full Test - 50 questions
+  csp3_name: 'Unit 3: Algorithms and Programming'
+  cspassessment_name: "完整测试 - 共50题"
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: Grades 9-12
+  cspunit3_gradelevel: 9-12年级
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
@@ -1290,8 +1302,22 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Learn more
+  dashboard_announce_try_now_button: Try it now
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.

@@ -8,7 +8,11 @@ end
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: { format: 'json' }
 
+  resource :pairing, only: [:show, :update]
+
   resources :user_levels, only: [:update]
+
+  get '/download/:product', to: 'hoc_download#index'
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -142,11 +146,13 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get 'preview_assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
+    get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
     post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
+
+    get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
 
-  get '/pl/:course', to: 'plc/user_course_enrollments#index'
+  get '/course/:course', to: 'plc/user_course_enrollments#index', as: 'course'
 
   get '/beta', to: redirect('/')
 
@@ -211,6 +217,8 @@ Dashboard::Application.routes.draw do
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
 
+  get '/admin/styleguide', :to => redirect('/styleguide/')
+
   get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
@@ -269,25 +277,13 @@ Dashboard::Application.routes.draw do
     concerns :ops_routes
   end
 
-  get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
-  %w(courses learning_modules tasks course_units evaluation_questions).each do |object|
-    get '/plc/' + object, to: redirect('plc/content_creator/show_courses_and_modules')
-  end
-
   get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
   get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
 
   namespace :plc do
     root to: 'plc#index'
-    resources :courses
-    resources :learning_modules
     resources :user_course_enrollments
-    resources :course_units
-    resources :enrollment_unit_assignments
-    resources :evaluation_questions
   end
-
-  post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
 
   concern :api_v1_pd_routes do
     namespace :pd do
@@ -349,6 +345,10 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
+
+      # Routes used by UI test status pages
+      get 'test_logs/:branch/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
+      get 'test_logs/:branch/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
     end
   end
 

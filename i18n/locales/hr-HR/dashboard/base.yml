@@ -27,8 +27,10 @@ hr:
   see_your_learning_plan: See your learning plan
   submit: Pošalji
   unsubmit: Poništi objavu
-  previous_page: Previous page
-  next_page: Next page
+  previous_page: Prethodna stranica
+  next_page: Sljedeća stranica
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Odustani
   okay: U redu
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
@@ -86,6 +88,7 @@ hr:
     teacher_title: Prijava učitelja
     student_pitch: Prijava za učenike za Code.org
     student_title: Prijava učenika
+    signup_title: Sign up for Code.org
     school_name: Naziv škole (nije obavezno)
     school_address: Adresa škole (nije obavezno)
     address_placeholder: adresa, grad, država, poštanski broj
@@ -104,6 +107,9 @@ hr:
     student_terms: "Slažem se poštivati <a href='http://code.org/tos'>uvjete korištenja</a> Code.org. Ako imam manje od 13 godina, potvrđujem slanjem ovog obrasca da moj roditelj ili zakonski skrbnik daje dozvolu za korištenje usluga Code.org. <br/>Korisnicima ispod 13 godina starosti e-mail adrese nisu pohranjene u obliku koji nam omogućuje da ih kontaktiramo."
     teacher_terms: "Pristajem poštivati <a href='http://code.org/tos'>uvjete korištenja</a> Code.org."
     additional_information: Trebamo dodatne informacije kako bi nastavili vašu prijavu.
+    user_type_label: Account Type
+    user_type_teacher: Učitelj
+    user_type_student: Učenik
   signin_form:
     title: Već imate račun? Prijavite se
     login: E-mail ili korisničko ime
@@ -332,10 +338,11 @@ hr:
     print_certificate: Ispišite diplome
     announcement_title: Announcements
     announcement_view_all: View all
-    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-    announcement_button: Doznaj više
+    announcement_message: |-
+      Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+    announcement_button: Test the feature
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: Add your name
+    announcement_petition_button: Unesi svoje ime
   move_students:
     new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
     section_code_not_entered: Please provide current_section_code.
@@ -395,15 +402,12 @@ hr:
     notes_coming_soon: Bilješke za ovaj video stižu uskoro.
     autoplay_option: Automatska reprodukcija videozapisa
     download: Preuzimanje videa
-  compatability:
-    working:
-      header: Radimo na podršci za vaš preglednik.
-      message: "Code.org koristi moderne web tehnologije. To čini ovo sjedište bržim. Vaš preglednik ne podržava sve potrebne značajke i mogu se pojaviti problemi dok koristite ovaj dio sjedišta. Molimo vas da nam pomognete tako da nas <a href='%{report_issue_url}'>izvijestite o problemima na koje ste naišli</a>. Također možete <a href='%{supported_browsers_url}'>nadograditi svoj preglednik na podržanu verziju</a>."
-      hide_this_warning: Sakrij ovo upozorenje
+  compatibility:
     upgrade:
-      header: Molimo vas da nadogradite vaš preglednik.
-      message: "Code.org koristi moderne web tehnologije. To čini ovo sjedište bržim. Nažalost, vaš preglednik ne podržava sve značajke potrebne za korištenje ovog dijela sjedišta.<br/><br/>Za nastavak instalirajte preglednik s naše liste podržanih preglednika. Možete <a href='#'>pokušati pregledati stranicu</a>, ali očekujte nepotpunu funkcionalnost."
-      button: Odvedi me na popis podržanih preglednika
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+      link: Doznaj više
   slow_loading: Ovo traje dulje nego inače...
   try_reloading: Pokušajte ponovo učitati stranicu
   next_stage: Završeno! Nastaviti na sljedeću fazu
@@ -480,12 +484,14 @@ hr:
     picture_count: 'U proteklih <b>%{days}</b> dana, učenici su nacrtali <b>%{count}</b> slika pisanjem vlastitih računalnih programa. Kliknite na slike da biste vidjeli svaki program na djelu.'
     activity_count: 'U proteklih <b>%{days}</b> dana, učenici su napravili <b>%{count}</b> aplikacija i slika pisanjem vlastitih računalnih programa. Kliknite na slike i snimke ekrana da biste vidjeli svaki program na djelu.'
     want_to_make_your_own: Želite li napraviti svoj vlastiti?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Više &rarr;'
     caption_by_name_age: 'od %{name}, dob %{age}'
     caption_time_ago: 'prije %{time_ago}'
     header: Galerija
     header_playlab: Laboratorij igara
     header_artist: Umjetnik
+    report_abuse: Prijava zloupotrebe
   landing:
     prerelease: "Ovaj tečaj je u <span class='betatext'> beta fazi</span>. To znači da ovo nije konačna verzija tečaja, te da podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."
     prerelease_hoc2014: "Ovaj tutorial je u <span class='betatext'> beta fazi</span>.  Podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."
@@ -672,9 +678,42 @@ hr:
     icon_library:
       search_placeholder_text: Traženje ikona...
       no_icons_found: Nema pronađenih ikona
+    playzone:
+      artist_description: Nacrtaj cool slike i uzorke pomoću Umjetnika!
+      artist_title: New Drawing
+      continue_button: Go on to the next Stage
+      playlab_description: Napravi priču ili igru pomoću Laboratorija igara!
+      playlab_title: New App
+      primary_header: 'Congratulations! You finished %{stageName}!'
+      projects_description: Revisit one of your existing projects.
+      projects_title: Open a project
+      secondary_header: Ask your teacher what to do next
   flex_category:
     required: Pregled
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Do you have Internet?
+    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: No Internet?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_english: 'Download in English:'
+    download_in_spanish: 'Download in Spanish:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

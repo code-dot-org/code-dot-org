@@ -2,7 +2,7 @@ name 'OPD-K5 Keep Learning'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"/>
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css"/>
 
 ### NEXT STEPS > Keep Learning
 <br><br>

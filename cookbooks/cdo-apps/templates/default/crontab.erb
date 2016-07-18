@@ -46,33 +46,34 @@
   # instances are all their own daemon)
   if node['cdo-apps']['daemon']
     unless node.chef_environment == 'production' # non-production daemons
-      cronjob at:'@reboot', do:"#{deploy_dir('bin','solr-server')} > #{pegasus_dir('log','solr.log')} 2>&1"
+      cronjob at:'@reboot', do:"#{deploy_dir('bin', 'solr', 'solr_server')} > #{pegasus_dir('log','solr.log')} 2>&1"
     end
 
     if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
       cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
-      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'import_google_sheets')
-      cronjob at:'*/2 * * * *', do:deploy_dir('bin','run_server_generate_pdfs')
+      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
+      cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'run_server_generate_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'*/2 * * * *', do:dashboard_dir('bin','build_scripts'), notify:'dev+crontab@code.org'
-      cronjob at:'*/5 * * * *', do:deploy_dir('bin','fetch-external-resources'), notify:'dev+crontab@code.org'
+      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'fetch_external_resources'), notify:'dev+crontab@code.org'
       cronjob at:'30 16 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
     end
 
     if node.chef_environment == 'production' # production daemon
       cronjob at:'20 */2 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
-      cronjob at:'5 6 * * *', do:deploy_dir('bin', 'send_workshop_reminder_emails')
+      cronjob at:'5 6 * * *', do:deploy_dir('bin', 'cron', 'send_workshop_reminder_emails')
       cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
-      cronjob at:'30 16 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
-      cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'index-users-in-solr')
-      cronjob at:'25 7 * * *', do:deploy_dir('bin', 'update-hoc-map')
+      cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
+      cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'index_users_in_solr')
+      cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
+      cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
     end
 
     # 'daemons' in all environments
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'process_forms')
     cronjob at:'35 * * * *', do:deploy_dir('bin', 'cron', 'analyze_hoc_activity')
-    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
+    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'deliver_poste_messages')
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'geocode_hoc_activity')
     cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
     cronjob at:'45 5 * * *', do:deploy_dir('bin', 'cron', 'admin_stats')

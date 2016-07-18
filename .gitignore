@@ -44,3 +44,5 @@ crowdin.yaml
 /levelbuilder_ci_last_run
 /coverage
 /apps/coverage
+/apps/test/entry-tests.js
+/dashboard/public/styleguide

@@ -5,16 +5,37 @@
 - if in_level_group # The LevelGroup will collect results for each level.
   :javascript
     window.levelGroup.levels[#{level.id}] = {
-      getCurrentAnswer: function () {
+      getResult: function () {
         var response = $('#level_#{level.id}').val();
-        return { response: response, valid: response.length > 1 };
-      }
+        return {
+          response: response,
+          valid: response.length > 0,
+          result: true,
+          testResult: #{ActivityConstants::FREE_PLAY_RESULT}
+        };
+      },
+      getAppName: function () {
+        return "free_response";
+      },
+      lockAnswers: function () {
+        $("textarea#level_#{level.id}.response").prop('disabled', true);
+      },
+      getCurrentAnswerFeedback: function () {
+        // Not implemented
+      },
+      levelId: #{level.id}
     };
 
     $(document).ready(function() {
-      $("textarea#level_#{level.id}.response").blur(function () {
+      var textarea = $("textarea#level_#{level.id}.response");
+      textarea.blur(function () {
         if (window.levelGroup && window.levelGroup.answerChangedFn) {
-          window.levelGroup.answerChangedFn();
+          window.levelGroup.answerChangedFn(#{level.id}, true);
+        }
+      });
+      textarea.on("input", null, null, function () {
+        if (window.levelGroup && window.levelGroup.answerChangedFn) {
+          window.levelGroup.answerChangedFn(#{level.id});
         }
       });
     });
@@ -34,8 +55,9 @@
 
 .free-response
   - if level.title.present? && !in_level_group
-    %h2= level.title
-  %div= render(inline: level.markdown_instructions, type: :md)
+    %h1= level.title
+  - if level.markdown_instructions
+    %div= render(inline: level.markdown_instructions, type: :md)
 
   - if level.allow_user_uploads?
     %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}

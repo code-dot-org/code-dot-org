@@ -1,0 +1,35 @@
+name 'CSD U3 SFLP Card Project'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Overview
+
+In this cumulative project for Chapter 1, you will plan for and develop and an interactive greeting card using all of the programming techniques you have learned to this point.
+
+# Activities
+
+* Demo Project Examplars
+* Unplugged: Interactive Card Planning
+* Levels: Implementing Interactive Card
+* Sharing Cards
+* Self Asssement
+
+# Vocab
+
+None
+
+# Commands 
+
+None
+
+# Resources
+
+* Activity Guide: <a href="https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/edit" alt="Rubric">Interactive Card Planning</a>
+* Rubric: <a href="https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/edit" alt="Rubric">Interactive Card</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* Exemplar Project: <a href="https://studio.code.org/projects/gamelab/t48VTLNp-Os5t7Cy8v0jvA/" > Happy Birthday Card</a>
+MARKDOWN

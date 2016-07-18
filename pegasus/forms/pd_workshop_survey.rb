@@ -3,6 +3,10 @@ class PdWorkshopSurvey
   def self.normalize(data)
     result = {}
 
+    result[:user_id_i] = integer data[:user_id_i]
+    result[:email_s] = required data[:email_s]
+    result[:name_s] = required data[:name_s]
+
     result[:enrollment_id_i] = required integer data[:enrollment_id_i]
     result[:workshop_id_i] = required integer data[:workshop_id_i]
     result[:plp_b] = required data[:plp_b]
@@ -26,8 +30,8 @@ class PdWorkshopSurvey
       end
 
       result[:received_clear_communication_s] = required enum data[:received_clear_communication_s], AGREE_SCALE_OPTIONS
-      result[:school_has_tech_b] = required_enum data, :school_has_tech_b
-      result[:venue_feedback_s] = required stripped data[:venue_feedback_s]
+      result[:school_has_tech_b] = required data[:school_has_tech_b]
+      result[:venue_feedback_s] = stripped data[:venue_feedback_s]
       result[:how_much_learned_s] = required_enum data, :how_much_learned_s
       result[:how_motivating_s] = required_enum data, :how_motivating_s
       result[:how_clearly_presented_s] = required_enum data, :how_clearly_presented_s
@@ -70,6 +74,17 @@ class PdWorkshopSurvey
     end
 
     result
+  end
+
+  def self.process_(form)
+    # Save this form id in the relevant dashboard pd_enrollment row
+    id = form[:id]
+    data = JSON.load(form[:data])
+    enrollment_id = data['enrollment_id_i']
+    DASHBOARD_DB[:pd_enrollments][id: enrollment_id].update(survey_id: id)
+
+    # We don't actually need to save any processed data with the form, so return an empty hash.
+    {}
   end
 
   def self.get_source_id(data)

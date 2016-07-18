@@ -14,8 +14,29 @@ def ask_for_name
   name
 end
 
+def disallow_case_change
+  `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.split("\n").each do |line|
+    if (%r{^R  ([^ ]+) -> ([^ ]+)}.match(line) || %r{^R  ("[^"]+") -> ("[^"]+")}.match(line)) && $1.casecmp($2) == 0
+      STDERR.puts "\nAborting due to case-only rename: #{line}"
+      STDERR.puts "To fix this, run the following commands:\n\n"
+      STDERR.puts "git mv #{$2} #{$2}.tmp\n\n"
+      STDERR.puts "git commit --only #{$1} #{$2}.tmp -m 'temporarily rename #{$1} -> #{$2}.tmp'\n\n"
+      STDERR.puts "git mv #{$2}.tmp #{$2}\n\n"
+      STDERR.puts "bin/content-push\n\n"
+      exit 1
+    end
+  end
+end
+
 def check_changes
-  system("git status -uall #{CONTENT_PATHS}")
+  if `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.empty?
+    puts "There are no unstaged or untracked files to commit."
+    return false
+  end
+
+  disallow_case_change
+
+  system("git status --untracked-files=all #{CONTENT_PATHS}")
   print "Should I commit and push all of these unstaged and untracked files in pegasus and dashboard? [Y/n] "
   input = gets.chomp
   if input == '' || input[0].downcase == 'y'
@@ -29,9 +50,9 @@ end
 
 def commit_changes(name)
   branchname = `git rev-parse --abbrev-ref HEAD`.strip
-  system("git add -A #{CONTENT_PATHS}")
-  system("git commit #{CONTENT_PATHS} -m '#{branchname} content changes (-#{name})'")
-  puts `git push`
+  exit 1 unless system("git add -A #{CONTENT_PATHS}")
+  exit 1 unless system("git commit #{CONTENT_PATHS} -m '#{branchname} content changes (-#{name})'")
+  exit 1 unless system("git push")
 end
 
 options = {}

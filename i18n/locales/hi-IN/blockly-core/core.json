@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"बाईं ओर से रिक्त स्थान को हटाओ",
   "TEXT_TRIM_OPERATOR_RIGHT":"दाईं ओर से रिक्त स्थान को हटाए",
   "TEXT_TRIM_TOOLTIP":"एक या दोनों सिरों से रिक्तियों को हटाने के बाद पाठ की एक प्रतिलिपि लौटाए ।",
+  "UNUSED_CODE":"अप्रयुक्त कोड",
   "VARIABLES_DEFAULT_NAME":"वस्तु",
   "VARIABLES_GET_CREATE_SET":"'get %1 '  बनाएँ",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

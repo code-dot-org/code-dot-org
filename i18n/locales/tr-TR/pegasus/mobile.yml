@@ -1,7 +1,12 @@
 tr-TR:
   hour_of_code: Saat Kodu
   hello: Merhaba dünya
+  "yes": Evet
+  "no": Hayır
   select_language: Lütfen dilinizi seçiniz
+  upgrade_ie_message: Code.org yakında Internet Explorer 8, 9, 10 tarayıcılarından desteğini çekecek. Lütfen modern bir tarayıcıya geçin.
+  upgrade_ie_message_csedweek: CSEdWeek.org yakında Internet Explorer 8, 9, 10 tarayıcılarından desteğini çekecek. Lütfen modern bir tarayıcıya geçin.
+  upgrade_ie_link: Daha fazlasını öğren
   en: Bilgisayar Bilimi
   computer_science_edweek: Bilgisayar Bilimleri Eğitim Haftası
   csedweek_dates: 8-14 Aralık 2014
@@ -290,7 +295,7 @@ tr-TR:
   homepage_banner_20k_teachers: 20.000 öğretmen eğitildi ve (onlar) şu anda sınıflarda bilgisayar bilimleri öğretiyorlar.
   homepage_banner_20k_teachers_link: Daha fazlasını öğren
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress_link: Yardımlarınızı ekleyiniz
   homepage_slot_text_title_hoc: Saat Kodu
   homepage_slot_text_blurb_hoc: Herkes öğrenebilir. Bugün başlayın.
   homepage_slot_text_link_hoc: "Kodlama Saati'ni Deneyin"
@@ -316,7 +321,7 @@ tr-TR:
   homepage_slot_text_link_stats: Istatistiklere göz atın
   homepage_slot_text_link_buy: Dahil olun
   homepage_slot_text_link_donate: Bağış yap
-  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
+  homepage_slot_text_link_shop: Tişörtler, şapkalar ve daha fazlası
   homepage_header_codestudio: Code Studio öğrencilerinin yaptıkları
   homepage_header_donors: Code.org destekleyenlere teşekkürler
   homepage_donors_seall: Tümünü göster
@@ -509,6 +514,7 @@ tr-TR:
   dashboard_action_required: gerekli
   dashboard_assessments_view: 'Değerlendirmeleri gör:'
   dashboard_assessments_none: Değerlendirme yok
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Aşamaya göre filtrele:'
@@ -522,13 +528,13 @@ tr-TR:
   dashboard_navigation_section_pd: Mesleki Gelişim
   dashboard_navigation_section_speakers: 'Bilgisayar Bilimi<br/>Davetli Konuşmacılar'
   dashboard_navigation_all_sections: Öğrenci hesapları ve ilerleme
-  dashboard_navigation_view_progress: İlerlemeyi Görüntüle
-  dashboard_navigation_view_text_responses: Yanıtları Görüntüle
+  dashboard_navigation_view_progress: İlerleme Durumu
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Değerlendirmeler
   dashboard_navigation_add_students: Öğrenci EKle
   dashboard_navigation_manage_students: Öğrencileri Yönet
   dashboard_navigation_lesson_plans_resources: Ders planları ve kaynaklar
-  dashboard_navigation_view_stats: İstatistikleri görüntüle
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Bölüm: %{section_name}'
   dashboard_navigation_student: 'Öğrenci: %{student_name}'
   dashboard_progress_not_started: Başlatılmadı
@@ -540,6 +546,7 @@ tr-TR:
   dashboard_progress_submitted: gönderildi
   dashboard_progress_view: İlerlemeyi Görüntüle
   dashboard_progress_student_in_script: 'İlerleme bilgilerini %{script_name} %{student_name} için'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: Yanıtları Görüntüle
   dashboard_responses_none: Cevap yok
   dashboard_sections_new_section: Yeni bölüm
@@ -548,6 +555,7 @@ tr-TR:
   dashboard_sections_table_secret: Oturum açma türü
   dashboard_sections_table_grade: Sınıf
   dashboard_sections_table_course: Kurs
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Öğrenciler
   dashboard_sections_table_code: Bölge Kodu
   dashboard_sections_name: Bölüm İsmi
@@ -674,9 +682,9 @@ tr-TR:
   dashboard_announcements: Bildirimler
   dashboard_announce_view_all: Tümünü Gör
   dashboard_announce_message: '<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde bir çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir.'
-  dashboard_announce_button_text: Daha fazlasını öğren
-  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_button_text: Özelliği test et
+  dashboard_announce_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi için bir açık mektup verdi."
+  dashboard_announce_petition_button: Adınızı Ekleyin
   code_hoc_coming: 'Kod Saati burada - Aralık 8-14!'
   code_sign_up: "CS Education Week' e katılmak için kaydolun."
   learn_more: Daha Fazla Bilgi Edinin
@@ -796,6 +804,7 @@ tr-TR:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

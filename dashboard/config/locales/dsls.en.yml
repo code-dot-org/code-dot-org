@@ -90,6 +90,41 @@ en:
         How will you teach students?: How will you teach students?
         I will make them learn from peers: I will make them learn from peers
         I will make them write: I will make them write
+      TeacherCon Eval Q1:
+        '1.10: Routing and Redundancy': '1.10: Routing and Redundancy'
+        '1.11: Packets and Making a Reliable Internet': '1.11: Packets and Making a Reliable Internet'
+        '1.4: Number Systems - Circle Triangle Square': '1.4: Number Systems - Circle Triangle Square'
+        '1.6: Sending Numbers': '1.6: Sending Numbers'
+        '1.9: Internet Addressing (Battleship)': '1.9: Internet Addressing (Battleship)'
+        '2.10: Good and Bad Data Visualization': '2.10: Good and Bad Data Visualization'
+        '2.2: Text Compression': '2.2: Text Compression'
+        '2.3: Black and White Pixelation': '2.3: Black and White Pixelation'
+        What lesson are you planning and teaching at TeacherCon?: What lesson are you planning and teaching at TeacherCon?
+      TeacherCon Eval Q2:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      TeacherCon Eval Q3:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      TeacherCon Eval Q5:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      TeacherCon Eval Q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      TeacherCon Eval Q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      TeacherCon Evaluation Q4:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
@@ -109,12 +144,22 @@ en:
         description here: description here
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
+      CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
+      CSD U3 - complex conditionals - SFLP: {}
+      CSD U3 - images - pick your final work: {}
+      CSD U3 -conditionals - stop booleans: {}
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Keypress Stop: {}
+      CSD U3 SFLP Card Project: {}
+      CSD U3 SFLP Conditionals: {}
+      CSD U3 SFLP Sprites and Images:
+        description here: description here
+        title: title
+      CSD U3 Sprites STOP sprites and variables: {}
       CSD U3 Variables Reassign Predict No Response: {}
       CSD U3 Variables STOP misconceptions: {}
       CSD U3 Variables STOP misconceptions prediction: {}
@@ -690,6 +735,9 @@ en:
       Forum-ECSPD-Unit 2-Teaching Practice: {}
       Forum-ECSPD-Unit 3-Teaching Practice: {}
       Forum-ECSPD-Unit 4-Teaching Practice: {}
+      FrustrationSolutions:
+        Frustration Solutions: Frustration Solutions
+        Unplugged Drawing Assessment of Solutions to Frustration K: Unplugged Drawing Assessment of Solutions to Frustration K
       GoodBadVisualizations_v1:
         description here: description here
         title: title
@@ -713,6 +761,12 @@ en:
         tour of the PD space: tour of the PD space
       Lesson 1.4 Overview: {}
       Lesson Prep Final: {}
+      MarbleMaze:
+        Marble Maze: Marble Maze
+        Marble Maze Activity for K Level: Marble Maze Activity for K Level
+      MarbleMaze2:
+        Marble Maze 2: Marble Maze 2
+        Second Marble Maze K Activity: Second Marble Maze K Activity
       OPD-K5 About: {}
       OPD-K5 Assessment: {}
       OPD-K5 CS: {}
@@ -970,6 +1024,9 @@ en:
       Sending Bits Real World Student Lesson Introduction:
         description here: description here
         title: title
+      StevieMarbles:
+        Stevie and the Marbles: Stevie and the Marbles
+        Story for K Level about Frustration: Story for K Level about Frustration
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
@@ -980,6 +1037,9 @@ en:
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
+      TheGreatBugBash:
+        Debugging Story for K Level: Debugging Story for K Level
+        The Great Bug Bash: The Great Bug Bash
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
@@ -1430,6 +1490,9 @@ en:
         title: title
       Unit 3 Survey 2: {}
       Welcome to TeacherCon!: {}
+      aEstory1:
+        Artist Exemplar First Story: Artist Exemplar First Story
+        Why are they doing this stage?: Why are they doing this stage?
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -1452,6 +1515,8 @@ en:
       challenges sample 7:
         Give these a try: Give these a try
         Life Science Challenges: Life Science Challenges
+      comingSoon:
+        Coming Soon!: Coming Soon!
       duino auduino:
         duino auduino: duino auduino
       duino battery led:
@@ -1489,12 +1554,30 @@ en:
       equity vids:
         Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
+      grade1_activity_frustration:
+        Dealing with Frustration: Dealing with Frustration
+      grade1_activity_groupTower:
+        Students build group tower: Students build group tower
+      grade1_activity_whatDoesItDo:
+        What does it do: What does it do
+      grade1_activity_whatGoesWrong:
+        What Will Go Wrong: What Will Go Wrong
+      grade1_story_spottedBugs:
+        The Spotted Bugs: The Spotted Bugs
+        The spotted bugs are so much less trouble than the unspotted ones!: The spotted bugs are so much less trouble than the unspotted ones!
+      grade1_story_theGreatTowerTopple:
+        PlayLab character learns to deal with frustration: PlayLab character learns to deal with frustration
+        The Great Tower Topple: The Great Tower Topple
+      gradek1_activity_beNice:
+        The computer is your friend: The computer is your friend
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
       newCSFsample:
         Intro: Intro
         description here: description here
+      onlineNeighbors:
+        Your Online Neighborhood: Your Online Neighborhood
       plc csp1 chapter overviews: {}
       plc csp1 intro to tools: {}
       plc csp1 introduction to unit: {}
@@ -1597,6 +1680,22 @@ en:
       sciPD2 SLN explore:
         Exploring StarLogo Nova Advanced Features: Exploring StarLogo Nova Advanced Features
       sciPD2 StarLogoNova:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed2a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed2b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed3a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed3b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed4a:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed4b:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD2 breed4c:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 breed4d:
         Reviewing StarLogo Nova: Reviewing StarLogo Nova
       sciPD2 camera:
         Changing Camera View: Changing Camera View
@@ -1719,6 +1818,8 @@ en:
         Thanks for your time: Thanks for your time
       sciencePD2b remixing:
         Remixing in StarLogo Nova: Remixing in StarLogo Nova
+      seqAlg:
+        Sequences and Algorithms: Sequences and Algorithms
       storyline1:
         The Adventurer Meets the Wizard: The Adventurer Meets the Wizard
         The Wizards Potions: The Wizards Potions
@@ -1730,6 +1831,9 @@ en:
         bee leaves: bee leaves
       storyline5:
         wrapup: wrapup
+      test cb level:
+        description here: description here
+        test cb level: test cb level
       test demo level:
         demo description: demo description
         demo title: demo title
@@ -1827,6 +1931,26 @@ en:
       v2 U2L9 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U3L01 Student Lesson Introduction:
+        Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      v2 U3L02 Student Lesson Introduction:
+        The Need for Algorithms: The Need for Algorithms
+      v2 U3L03 Student Lesson Introduction:
+        Creativity in Algorithms: Creativity in Algorithms
+      v2 U3L04 Student Lesson Introduction:
+        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Creating Functions
+      v2 U3L07 Student Lesson Introduction:
+        APIs and Function Parameters: APIs and Function Parameters
+      v2 U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Creating Functions with Parameters
+      v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: Looping and Random Numbers
+      v2 U3L10 Student Lesson Introduction:
+        Design a Digital Scene: Design a Digital Scene
+      v2 U3L6 Student Lesson Introduction:
+        Functions and Top-Down Design: Functions and Top-Down Design
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
@@ -1836,6 +1960,8 @@ en:
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
         Sample CSP Assessment: {}
+        TeacherCon Self-Assessment: {}
+        TeacherCon Unit 1 Assessment: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
     match:
@@ -1994,10 +2120,33 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U3 - conditionals - Matching:
+        Is the width of dog sprite greater than the width of cat sprite?: Is the width of dog sprite greater than the width of cat sprite?
+        Is the width of dog sprite less than the width of cat sprite?: Is the width of dog sprite less than the width of cat sprite?
+        Is the x of the dog sprite equal to the x of the cat sprite?: Is the x of the dog sprite equal to the x of the cat sprite?
+        Is the x of the dog sprite greater than the x of the cat sprite?: Is the x of the dog sprite greater than the x of the cat sprite?
+        Is the x of the dog sprite less than the x of the cat sprite?: Is the x of the dog sprite less than the x of the cat sprite?
+        Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
+        'Matching: Comparison Operators': 'Matching: Comparison Operators'
+        dog.width &gt; cat.width: dog.width &gt; cat.width
+        dog.width &lt; cat.width: dog.width &lt; cat.width
+        dog.x &gt; cat.x: dog.x &gt; cat.x
+        dog.x &lt; cat.x: dog.x &lt; cat.x
+        dog.x == cat.x: dog.x == cat.x
       CSD U3 Counters match trial:
         ? "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         Maybe: Maybe
+      CSD U3 Keypress Matching:
+        Is true only once when the key is pressed.: Is true only once when the key is pressed.
+        Is true only once when the key is released.: Is true only once when the key is released.
+        Is true the whole time the key is pressed or held down.: Is true the whole time the key is pressed or held down.
+        ? Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.
+        : Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.
+        'Matching: Responding to Keypresses': 'Matching: Responding to Keypresses'
+        keyDown(): keyDown()
+        keyWentDown(): keyWentDown()
+        keyWentUp(): keyWentUp()
       CSPPD AP quiz:
         AP Assessment Matching: AP Assessment Matching
         Create Task: Create Task
@@ -2391,6 +2540,17 @@ en:
         Answer 1: Answer 1
         Question: Question
         What is an unplugged activity?: What is an unplugged activity?
+      Poorva match PL:
+        'Given the following program, match the user input with the expected output:': 'Given the following program, match the user input with the expected output:'
+        Make a prediction and hit run: Make a prediction and hit run
+        Press the j and k keys: Press the j and k keys
+        Press the j key: Press the j key
+        Press the space bar: Press the space bar
+        Press the w key: Press the w key
+        blue_sprite rotates clockwise: blue_sprite rotates clockwise
+        red_sprite gets bigger and blue_sprite gets smaller: red_sprite gets bigger and blue_sprite gets smaller
+        red_sprite moves up and blue_sprite moves down: red_sprite moves up and blue_sprite moves down
+        red_sprite rotates counter clockwise: red_sprite rotates counter clockwise
       U1L16 - Matching File Compression Types:
         BMP: BMP
         Compressed Files - Lossless: Compressed Files - Lossless
@@ -3806,6 +3966,13 @@ en:
         a secret password: a secret password
         a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
         a week-long course to learn about computers: a week-long course to learn about computers
+      PS MC predictive q1:
+        Make a prediction: Make a prediction
+        Not quite.  This answer does not work because of some reason specific to this answer choice: Not quite.  This answer does not work because of some reason specific to this answer choice
+        What do you think will happen?: What do you think will happen?
+        right answer: right answer
+        wrong answer: wrong answer
+        you are so smart!: you are so smart!
       PS U3 Q1-1:
         Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
@@ -3889,6 +4056,18 @@ en:
         red: red
         teal: teal
         yellow: yellow
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+        Contained Multi: Contained Multi
+        Here is some information.: Here is some information.
+        No, that is 1 * 1.: No, that is 1 * 1.
+        No, that is 1 - 1.: No, that is 1 - 1.
+        No, that is not even close.: No, that is not even close.
+        What is 1 + 1?: What is 1 + 1?
+        Yes, you are a genius!: Yes, you are a genius!
       U1L07 Assessment 1:
         A: A
         B: B
@@ -5077,11 +5256,10 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
+        Answer 1: Answer 1
+        'Given the following program, match the user input with the expected output:': 'Given the following program, match the user input with the expected output:'
+        Make a prediction and hit run: Make a prediction and hit run
         Question: Question
-        description here: description here
-        right answer: right answer
-        title: title
-        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

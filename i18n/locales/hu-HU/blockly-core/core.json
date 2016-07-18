@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"vágd le a szóközöket az elejéről",
   "TEXT_TRIM_OPERATOR_RIGHT":"vágd le a szóközöket a végéről",
   "TEXT_TRIM_TOOLTIP":"Levágja a megadott szöveg végeiről a szóközöket.",
+  "UNUSED_CODE":"Nem használt kód",
   "VARIABLES_DEFAULT_NAME":"tárgy",
   "VARIABLES_GET_CREATE_SET":"'legyen %1' létrehozása",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

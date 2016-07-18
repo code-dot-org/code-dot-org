@@ -2,51 +2,37 @@ name 'CSD-U3-SFLP Draw Loop'
 href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
-## Unit 3: Lesson 02 - Draw Loop and Random
+# Overview
 
-# Background
+Moving from simple static images you will learn to use randomly generated numbers as inputs to your programs. From there you will be introduced the concept of a flip-book style animation loop, using those randomized shapes to see how the draw() loop calls your code repeatedly to create animation.
 
-Game Lab Gary and Stuff
+# Activities
 
-# Lesson
-
-* Blah
-* Blah
-* Blah
+* Review: Shape Commands
+* Levels: Draw Loop
+* Exit Ticket
 
 # Vocab
 
-* Program - blah blah
-* Bug - blah blah
-* Debugging - blah blah
+* **Loop** - The action of doing something over and over again.
 
-# Command Overview
-### Shapes : 
+# Commands
+### Drawing : 
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |
-|rect(x, y, width, height)|Draws a rectangle| `rect(100, 200, 50, 20)` | link |
-|ellipse(x, y, width, height)|Draws an oval| `ellipse(10, 25, 100, 300)` | link |
-|regularPolygon(x, y, number of sides, radius)|Draws a multi-sided shape with equal length sides|`regularPolygon(100, 50, 5, 50)`| link |
-|text("string", x, y)|Draws text|`text("Code.org", 100, 100)`| link |
+|draw()|Repeatedly called draw loop| `function draw(){ rect(0,0,20,20) }` | link |
+|background()|Covers the whole display with one color| `background("white")` | link |
+|GameLab.frameRate|Controls speed of draw loop|`GameLab.frameRate = 20`| link |
+|lin(x1, y1, x2, y2)|Draws line|`line(100, 150, 200, 300)`| link |
 
-### Color and Style:
+### Console:
 |Command| Meaning| Example |  Documentation |
 |---|---| --- | --- |
-|color(red, green, blue)|Creates a color using RGB values| `color(255,125,255)`| link |
-|fill(‘color’)|Sets the internal color for shapes| `fill("teal")`| link |
-|noFill()|Sets the shapes to have no internal color|`noFill()`|link |
-|stroke(‘color’)|Sets the outline color for shapes| `stroke("magenta")`|link |
-|noStroke()|Sets shapes to have no outline| `noStroke()`|link |
-|strokeWeight()|Sets the thickness of the outline| `strokeWeight(30)` |link |
-
-### Clean Code :
-|Command| Meaning| Example |  Documentation |
-|---|---| --- | --- |
-|// comment|Creates information for humans| `// Creates arms ` |link |
+|console.log(text)|Prints text to the console| `console.log("This is a test")`| link |
 
 # Resources
-* Activity Guide: <a href="https://drive.google.com/open?id=1_Dkh33G7NTrnlAR0kD8UJZ9A2xFO_ICIJeDrxm-S6e4">Simple Drawings in Game Lab</a>
-* Activity Guide: <a href="https://drive.google.com/open?id=17-rj7SWbn1Nb0IQl-o-4h3VlS1kjId8T0o6HUGojglA">Plan Your Drawing</a>
+
+None
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

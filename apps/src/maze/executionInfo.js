@@ -1,4 +1,4 @@
-var _ = require('../lodash');
+var _ = require('lodash');
 
 /**
  * Stores information about a current Maze execution.  Execution consists of a
@@ -67,7 +67,7 @@ ExecutionInfo.prototype.getActions = function (singleStep) {
   // Some steps will contain multiple actions.  For example a K1 North block can
   // consist of a turn and a move. We instead want to return a flat list of
   // all actions, regardless of which step they were in.
-  return _.flatten(actions);
+  return _.flattenDeep(actions);
 };
 
 ExecutionInfo.prototype.stepsRemaining = function () {

@@ -1,5 +1,5 @@
 - if current_user && current_user.admin?
-  = render layout: 'shared/admin' do
+  = render layout: 'shared/extra_links' do
     %li
       Support tools
       %ul
@@ -7,6 +7,7 @@
         %li= link_to 'Confirm Email', confirm_email_form_path
         %li= link_to 'Reset Password', new_user_password_path
         %li= link_to 'Look up section', lookup_section_path
+        %li= link_to 'Find Users', find_students_path
     %li= link_to 'Gatekeeper', gatekeeper_show_path
     %li= link_to 'Grant Permissions/Privileges', CDO.code_org_url('/private/privileges')
     %li= link_to 'Videos', videos_path

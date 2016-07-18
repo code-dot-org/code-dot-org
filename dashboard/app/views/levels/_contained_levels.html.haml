@@ -1,0 +1,20 @@
+-# NOTE: we only show the first contained level for now, but this could be expanded to allow multiple levels
+- unless @level.contained_levels.empty?
+  #contained_levels
+    - contained_level = @level.contained_levels.first
+    %div{id: "containedLevel0"}
+      - if @user && current_user && @user != current_user
+        -# load other user's solution for teachers viewing their students' solution
+        - sublevel_last_attempt = @user.last_attempt(contained_level).try(:level_source).try(:data)
+      - elsif current_user
+        -# load user's previous attempt at this puzzle.
+        - sublevel_last_attempt = current_user.last_attempt(contained_level).try(:level_source).try(:data)
+
+      - level_class = contained_level.class.to_s.underscore
+      - if level_class == "multi"
+        = render partial: 'levels/single_multi', locals: {standalone: false, contained_mode: true, last_attempt: sublevel_last_attempt, level: contained_level, tight_layout: false}
+      - elsif level_class == "text_match"
+        = render partial: 'levels/single_text_match', locals: {standalone: false, level: contained_level }
+      - elsif level_class == "free_response"
+        = render partial: 'levels/free_response', locals: {in_level_group: true, last_attempt: sublevel_last_attempt, level: contained_level }
+%div{style: 'clear: both;'}

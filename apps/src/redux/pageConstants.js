@@ -1,4 +1,4 @@
-var _ = require('../lodash');
+var _ = require('lodash');
 var utils = require('../utils');
 
 var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
@@ -6,7 +6,8 @@ var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 var ALLOWED_KEYS = utils.makeEnum(
   'assetUrl',
   'channelId',
-  'isDesignModeHidden',
+  'hasDataMode',
+  'hasDesignMode',
   'isEmbedView',
   'isIframeEmbed',
   'isReadOnlyWorkspace',
@@ -16,12 +17,14 @@ var ALLOWED_KEYS = utils.makeEnum(
   'isSubmitted',
   'isViewDataButtonHidden',
   'instructionsInTopPane',
+  'noInstructionsWhenCollapsed',
   'puzzleNumber',
   'stageTotal',
   'showDebugButtons',
   'showDebugConsole',
   'showDebugWatch',
   'localeDirection',
+  'hasContainedLevels',
   'isDroplet',
   'isMinecraft',
   'visualizationHasPadding',
@@ -31,11 +34,16 @@ var ALLOWED_KEYS = utils.makeEnum(
   'noVisualization',
   'pinWorkspaceToBottom',
   'smallStaticAvatar',
-  'aniGifURL'
+  'aniGifURL',
+  'inputOutputTable',
+  'showAnimationMode',
+  'nonResponsiveVisualizationColumnWidth',
+  'is13Plus',
+  'isSignedIn'
 );
 
 const initialState = {
-  assertUrl() {
+  assetUrl() {
   }
 };
 

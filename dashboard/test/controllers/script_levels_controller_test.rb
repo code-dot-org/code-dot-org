@@ -54,8 +54,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # Verify the default max age is used if none is specifically configured.
     get_show_script_level_page(@script_level)
     assert_caching_enabled response.headers['Cache-Control'],
-                           ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
-                           ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
+      ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
+      ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
   end
 
   test 'should allow public caching for script level pages with dynamic lifetime' do
@@ -138,8 +138,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # start blocks comes from project_level not real_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<xml/>', app_options[:level]['startBlocks']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<xml/>', level_options['startBlocks']
   end
 
   test 'project template level does not set start blocks when not defined' do
@@ -156,8 +156,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # start blocks comes from real_level not project_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<shouldnot:override/>', app_options[:level]['startBlocks']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<shouldnot:override/>', level_options['startBlocks']
   end
 
   test 'project template level sets start html when defined' do
@@ -175,8 +175,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # start html comes from project_level not real_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<div><label id="label1">expected html</label></div>', app_options[:level]['startHtml']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<div><label id="label1">expected html</label></div>', level_options['startHtml']
   end
 
   test 'project template level does not set start html when not defined' do
@@ -193,8 +193,48 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # start html comes from real_level not project_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<div><label id="label1">real_level html</label></div>', app_options[:level]['startHtml']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<div><label id="label1">real_level html</label></div>', level_options['startHtml']
+  end
+
+  test 'project template level sets start animations when defined' do
+    template_animations_json = '{"orderedKeys":["expected"],"propsByKey":{"expected":{}}}'
+    template_level = create :gamelab
+    template_level.start_animations = template_animations_json
+    template_level.save!
+
+    real_animations_json = '{"orderedKeys":["wrong"],"propsByKey":{"wrong":{}}}'
+    real_level = create :gamelab
+    real_level.project_template_level_name = template_level.name
+    real_level.start_animations = real_animations_json
+    real_level.save!
+
+    sl = create :script_level, levels: [real_level]
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
+
+    assert_response :success
+    # start animations comes from project_level not real_level
+    level_options = assigns(:level).blockly_level_options
+    assert_equal template_animations_json, level_options['startAnimations']
+  end
+
+  test 'project template level does not set start animations when not defined' do
+    template_level = create :gamelab
+    template_level.save!
+
+    real_animations_json = '{"orderedKeys":["expected"],"propsByKey":{"expected":{}}}'
+    real_level = create :gamelab
+    real_level.project_template_level_name = template_level.name
+    real_level.start_animations = real_animations_json
+    real_level.save!
+
+    sl = create :script_level, levels: [real_level]
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
+
+    assert_response :success
+    # start animations comes from real_level not project_level
+    level_options = assigns(:level).blockly_level_options
+    assert_equal real_animations_json, level_options['startAnimations']
   end
 
   test 'project template level sets toolbox blocks when defined' do
@@ -212,8 +252,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # toolbox blocks comes from project_level not real_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<xml><toolbox/></xml>', app_options[:level]['toolbox']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<xml><toolbox/></xml>', level_options['toolbox']
   end
 
   test 'project template level does not set toolbox blocks when not defined' do
@@ -230,8 +270,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # toolbox blocks comes from real_level not project_level
-    app_options = assigns(:level).blockly_options
-    assert_equal '<shouldnot:override/>', app_options[:level]['toolbox']
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '<shouldnot:override/>', level_options['toolbox']
   end
 
   test 'should show video in twenty hour script level' do
@@ -337,46 +377,51 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
     assert_routing({method: "get", path: build_script_level_path(sl)},
-        {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.to_param, id: sl.to_param})
+      {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.to_param, id: sl.to_param})
   end
 
   test "chapter based routing" do
     assert_routing({method: "get", path: '/hoc/reset'},
-                   {controller: "script_levels", action: "reset", script_id: Script::HOC_NAME})
+      {controller: "script_levels", action: "reset", script_id: Script::HOC_NAME})
 
     hoc_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::HOC_NAME).id, chapter: 1)
     assert_routing({method: "get", path: '/hoc/1'},
-                   {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"})
+      {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"})
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
     flappy_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5)
     assert_routing({method: "get", path: '/flappy/5'},
-                   {controller: "script_levels", action: "show", script_id: Script::FLAPPY_NAME, chapter: "5"})
+      {controller: "script_levels", action: "show", script_id: Script::FLAPPY_NAME, chapter: "5"})
     assert_equal "/flappy/5", build_script_level_path(flappy_level)
 
     jigsaw_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::JIGSAW_NAME).id, chapter: 3)
     assert_routing({method: "get", path: '/jigsaw/3'},
-                   {controller: "script_levels", action: "show", script_id: Script::JIGSAW_NAME, chapter: "3"})
+      {controller: "script_levels", action: "show", script_id: Script::JIGSAW_NAME, chapter: "3"})
     assert_equal "/s/jigsaw/stage/1/puzzle/3", build_script_level_path(jigsaw_level)
   end
 
   test "routing for custom scripts with stage" do
     assert_routing({method: "get", path: "/s/laurel/stage/1/puzzle/1"},
-                   {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "1", id: "1"})
+      {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "1", id: "1"})
     assert_equal "/s/laurel/stage/1/puzzle/1", build_script_level_path(@custom_s1_l1)
 
     assert_routing({method: "get", path: "/s/laurel/stage/2/puzzle/1"},
-                   {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "2", id: "1"})
+      {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "2", id: "1"})
     assert_equal "/s/laurel/stage/2/puzzle/1", build_script_level_path(@custom_s2_l1)
 
     assert_routing({method: "get", path: "/s/laurel/stage/2/puzzle/2"},
-                   {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "2", id: "2"})
+      {controller: "script_levels", action: "show", script_id: 'laurel', stage_id: "2", id: "2"})
     assert_equal "/s/laurel/stage/2/puzzle/2", build_script_level_path(@custom_s2_l2)
+  end
+
+  test "build_script_level_url" do
+    assert_equal "/s/laurel/stage/1/puzzle/1", build_script_level_path(@custom_s1_l1)
+    assert_equal "http://test.host/s/laurel/stage/1/puzzle/1", build_script_level_url(@custom_s1_l1)
   end
 
   test "next routing for custom scripts" do
     assert_routing({method: "get", path: "/s/laurel/puzzle/next"},
-                   {controller: "script_levels", action: "show", script_id: 'laurel', chapter: "next"})
+      {controller: "script_levels", action: "show", script_id: 'laurel', chapter: "next"})
     assert_equal "/s/laurel/puzzle/next", script_puzzle_path(@custom_script, 'next')
   end
 
@@ -478,7 +523,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert_select 'div.unplugged > h2', 'Happy Maps'
+    assert_select 'div.unplugged > h1', 'Happy Maps'
     assert_select 'div.unplugged > p', 'Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.'
     assert_select '.pdf-button', 2
 
@@ -521,7 +566,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "reset routing for custom scripts" do
     assert_routing({method: "get", path: "/s/laurel/reset"},
-                   {controller: "script_levels", action: "reset", script_id: 'laurel'})
+      {controller: "script_levels", action: "reset", script_id: 'laurel'})
   end
 
   test "reset resets for custom scripts" do
@@ -737,7 +782,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '#codeApp'
     assert_select '#notStarted', 0
-
   end
 
   test 'does not load applab if you are a teacher viewing your student and they do not have a channel id' do
@@ -753,23 +797,23 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'includes makerlab javascript dependencies when makerlab level' do
-    sign_in @admin
+    sign_in @teacher
 
     level = create :makerlab
     script_level = create :script_level, levels: [level]
 
-    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @teacher.id
 
     assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab')
   end
 
   test 'excludes makerlab javascript dependencies when applab level' do
-    sign_in @admin
+    sign_in @teacher
 
     level = create :applab
     script_level = create :script_level, levels: [level]
 
-    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @teacher.id
 
     assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab'), false
   end
@@ -790,7 +834,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal @student, assigns(:user)
 
     assert_equal true, assigns(:view_options)[:readonly_workspace]
-    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal true, assigns(:level_view_options_map)[level.id][:skip_instructions_popup]
     assert_equal [], assigns(:view_options)[:callouts]
   end
 
@@ -845,7 +889,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = create(:maze)
     create(:script_level, script: script, stage: stage, level: level)
 
-    script.update(professional_learning_course: true)
+    script.update(professional_learning_course: 'Professional Learning Course')
     assert script.professional_learning_course?
     assert script.professional_course?
 
@@ -859,9 +903,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       levels:  Level.key_to_params('K-1 Artist1 1'))
 
     assert_routing({method: "get", path: build_script_level_path(sl)},
-                   {controller: "script_levels", action: "show", script_id: 'allthethings', stage_id: sl.stage.position.to_s, id: sl.position.to_s, solution: true},
-                   {},
-                   {solution: true})
+      {controller: "script_levels", action: "show", script_id: 'allthethings', stage_id: sl.stage.position.to_s, id: sl.position.to_s, solution: true},
+      {},
+      {solution: true})
 
     sign_in @teacher
 
@@ -874,7 +918,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '.teacher-panel.hidden', 0 # not hidden
 
     assert_equal true, assigns(:view_options)[:readonly_workspace]
-    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal true, assigns(:level_view_options_map)[sl.levels[0].id][:skip_instructions_popup]
     assert_equal [], assigns(:view_options)[:callouts]
   end
 
@@ -937,8 +981,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level
     assert_response :success
 
-    assert_equal true, assigns(:level_view_options)[:submitted]
-    assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options)[:unsubmit_url]
+    assert_equal true, assigns(:level_view_options_map)[level.id][:submitted]
+    assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options_map)[level.id][:unsubmit_url]
   end
 
   def create_admin_script
@@ -962,12 +1006,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "should get show of admin script if signed in as admin" do
+  # TODO(asher): Consolidate the tests when the user is an admin. In particular,
+  # these scripts should no longer exist, should be accessible to noone, and
+  # will go away.
+  test "should not get show of admin script if signed in as admin" do
     admin_script = create_admin_script
 
     sign_in create(:admin)
     get :show, script_id: admin_script.name, stage_id: 1, id: 1
-    assert_response :success
+    assert_response :forbidden
   end
 
   def create_student_of_admin_script
@@ -999,12 +1046,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get show of student_of_admin script if signed in as admin" do
+  test "should not get show of student_of_admin script if signed in as admin" do
     script = create_student_of_admin_script
 
     sign_in create(:admin)
     get :show, script_id: script.name, stage_id: 1, id: 1
-    assert_response :success
+    assert_response :forbidden
   end
 
   test "should have milestone posting disabled if Milestone is set" do

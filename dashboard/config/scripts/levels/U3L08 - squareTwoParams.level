@@ -9,7 +9,18 @@
     "code_functions": {
       "moveForward": null,
       "moveTo": null,
-      "turnLeft": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
       "penUp": null,
       "penDown": null,
       "penWidth": null,
@@ -17,13 +28,14 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "encrypted_examples": "uh0JuvFxhkLQrHkc5MNkb3DfqsNeL3JiEbf/2bI+KRURWVpMvR265LW9NmVz\n2fz0\n",
     "embed": "false",
     "instructions": "Call drawSquare() to complete the drawing of two squares. (Click to see full instructions)",
-    "markdown_instructions": "# Calling Functions with Multiple Parameters\r\n\r\nYou're about to see a new definition for `drawSquare` that has two parameters: `drawSquare(size, borderWidth)` Notice how **multiple parameters are separated by commas**.\r\n\r\n![](https://images.code.org/c9766f914d59531614c753e9147d29dd-image-1447801298794.01.15 PM.png)\r\n\r\n# Do This:\r\nAdd to the code to **make two calls** to the new two-parameter version of `drawSquare()` to make an image similar to this one.\r\n\r\n![](https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38 PM.png)\r\n\r\n",
+    "markdown_instructions": "# Calling Functions with Multiple Parameters\r\n\r\nYou're about to see a new definition for `drawSquare` that has two parameters: `drawSquare(size, borderWidth)` Notice how **multiple parameters are separated by commas**.\r\n\r\n![](https://images.code.org/c9766f914d59531614c753e9147d29dd-image-1447801298794.01.15 PM.png)\r\n\r\n# Do This:\r\nAdd to the code to **make two calls** to the new two-parameter version of `drawSquare` to make an image similar to this one.\r\n\r\n![](https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38 PM.png)\r\n\r\n",
     "start_blocks": "penUp();\r\nmoveTo(150,150);\r\n\r\nmoveTo(250,300);\r\n\r\n\r\nfunction drawSquare(size, borderWidth){\r\n  penDown();\r\n  penWidth(borderWidth);\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  penUp();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -55,7 +67,13 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

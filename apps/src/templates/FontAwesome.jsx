@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import _ from '../lodash';
+import _ from 'lodash';
 
 /**
  * Given an icon name, render the icon using an <i> tag in typical font-awesome
@@ -17,5 +17,6 @@ export default function FontAwesome(props) {
 }
 
 FontAwesome.propTypes = {
-  icon: React.PropTypes.string.isRequired
+  icon: React.PropTypes.string.isRequired,
+  className: React.PropTypes.string,
 };

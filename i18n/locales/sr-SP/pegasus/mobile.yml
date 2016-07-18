@@ -1,7 +1,12 @@
 sr-SP:
   hour_of_code: Час кода
   hello: Здраво свете
+  "yes": Да
+  "no": не
   select_language: Молимо изаберите језик
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Сазнајте више
   en: Информатика
   computer_science_edweek: Недеља информатике
   csedweek_dates: 8-14 Децембар, 2014
@@ -523,7 +528,9 @@ sr-SP:
   dashboard_action_done: Готово
   dashboard_action_required: потребно
   dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
+  dashboard_assessments_none: |-
+    Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
@@ -537,13 +544,13 @@ sr-SP:
   dashboard_navigation_section_pd: Професионални развој
   dashboard_navigation_section_speakers: 'Рачунарске науке <br/> Гостујући говорници'
   dashboard_navigation_all_sections: Налози за ученике и напредак
-  dashboard_navigation_view_progress: Видите напредак
-  dashboard_navigation_view_text_responses: Види текстуалне одговоре
+  dashboard_navigation_view_progress: Напредак
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Додајте ученике
   dashboard_navigation_manage_students: Управљање ученицима
   dashboard_navigation_lesson_plans_resources: План лекција и ресурса
-  dashboard_navigation_view_stats: Видите статистике
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Секција:%{section_name}'
   dashboard_navigation_student: 'Ученик:%{student_name}'
   dashboard_progress_not_started: not started
@@ -555,14 +562,16 @@ sr-SP:
   dashboard_progress_submitted: submitted
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
   dashboard_sections_new_section: Нова секција
   dashboard_sections_jumbotron_instruction: Направите нову секцију и додајте ученике у њих.Секције вам помажу да организујете ученике у мање групе да би могли да видите њихов напредак и управљате њиховим налозима.
   dashboard_sections_table_section: Секција
   dashboard_sections_table_secret: Врста пријаве
   dashboard_sections_table_grade: Степен
   dashboard_sections_table_course: Курс
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Студенти
   dashboard_sections_table_code: Секција програмирања
   dashboard_sections_name: Име секције
@@ -578,7 +587,7 @@ sr-SP:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
@@ -686,8 +695,9 @@ sr-SP:
   dashboard_faq_k5: K-5 Често постављана питања
   dashboard_announcements: Објаве
   dashboard_announce_view_all: Prikaži sve
-  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-  dashboard_announce_button_text: Сазнајте више
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'Сат Програмирања је стигао: 8-14 Децембра!'
@@ -807,6 +817,7 @@ sr-SP:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

@@ -23,7 +23,7 @@ hr:
       2-3 Artist Debugging 11_instruction: 'Pomozi mi dovršiti moju prekrasnu pahuljicu. Koliko puta moram "ponoviti" da je završim?'
       2-3 Artist Debugging 12_instruction: Trebam dodati val oceana na ovu scenu. Možeš li mi pomoći?
       2-3 Artist Debugging 2_instruction: 'Kod tri brka koja vidiš je pogrešan. Savjet: svaki brk je dugačak 75 piksela. Popravi ovaj kod da nacrtaš brkove.'
-      2-3 Artist Debugging 3_instruction: 'Moj brod ima rupu. Možeš li ga popraviti promjenom kuta linije? Savjet: zadnji kut je pogrešan za 15 stupnjeva.'
+      2-3 Artist Debugging 3_instruction: "Moj čamac ima rupu. \\r \n\\r\nŠto treba ispraviti da bi se crte spojile?"
       2-3 Artist Debugging 4_instruction: Kakvu sliku pokušavamo nacrtati? Dovrši spajanje točaka koristeći odgovarajuće linije i kuteve.
       2-3 Artist Debugging 5_instruction: 'Kod za nogu i stopalo koji vidiš je pogrešan. Savjet: Noga je predugačka, trebaš izbrisati jedan korak (namjerna igra riječima)'
       2-3 Artist Debugging 6_instruction: Izgleda da sjedim na stolici kojoj nedostaje noga. Popravi blokove da nacrtaš drugu nogu.
@@ -36,6 +36,7 @@ hr:
       2-3 Artist Functions 10_instruction: Evo dvije funkcije, jedna za crtanje velikog zupčanika i jedna za crtanje malog zupčanika. Koristite ih za crtanje unutar stroja!
       2-3 Artist Functions 11.5_instruction: 'Ovdje je ta ista "Nacrtati šesterokut" funkcija. Što ako samo okrenete za 60 stupnjeva kod svakog ponavljanja?'
       2-3 Artist Functions 11_instruction: 'Promijenili smo naziv funkcije "nacrtaj kvadrat" u funkciju "nacrtaj šesterokut", ali još uvijek crta samo kvadrate! Možete li izmijeniti "nacrtaj šesterokut" funkciju da crta šesterokute sa stranicom od 50 pixela i zatim je nacrtati pomoću funkcije?'
+      2-3 Artist Functions 12 Mike_instruction: 'Funkcije su odlične za crtanje složenih stvari više puta. Možeš li koristeći naredbu "nacrtaj cvijet" ispuniti ostatak cvjetnjaka? (Pomoć: biljke su udaljene 100 piksela)  '
       2-3 Artist Functions 12_instruction: 'Funkcije su odlične za crtanje složenih stvari više puta. Možeš li koristeći naredbu "nacrtaj cvijet" ispuniti ostatak cvjetnjaka? (Pomoć: biljke su udaljene 100 piksela)  '
       2-3 Artist Functions 13_instruction: Ponuđene su ti četiri funkcije. Upotrijebi ih po želji unutar jedne ili više petlji kako bi nacrtao sliku, koju poslije možeš podijeliti s prijateljima. Pritisnite Pokreni i pogledaj primjer.
       2-3 Artist Functions 2_instruction: 'Funkcije nam omogućuju definiranje novih blokova! Premjestili smo blokove za crtanje kvadrata u funkciju pod nazivom "Crtanje kvadrata". Možeš li nacrtati naočale koristeći funkciju "Crtanje kvadrata"? Kvadrati su udaljeni 75 piksela.'
@@ -56,50 +57,29 @@ hr:
       2-3 Artist Loops 8_instruction: Stavi oba elementa unutar naredbe ponavljanja.
       2-3 Artist Loops 9_instruction: "Sada ćemo prolaziti kroz iste elemente, ali ćemo ovaj put dodati određeni razmak između njih.\\r Koristite isti kod kao i prije, ali dodajte korak naprijed na kraju vanjske petlje."
       2-3 Artist Loops New 1_instruction: Nacrtaj robotu glavu! Možeš li napraviti kvadrat sa stranicama dužine 100 piksela?
-      2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together
-        in a loop.
-      2-3 Artist Loops New 11_instruction: |
-        Rebuild the code from the last puzzle,
-        but this time, add a left turn of 30 degrees inside the loop. Now, repeat
-        it 24 times instead of 7.
+      2-3 Artist Loops New 10_instruction: Sada povežimo nekoliko V-ova zajedno u petlju.
+      2-3 Artist Loops New 11_instruction: Ponovo napiši kȏd kao u prethodnom zadatku, ali ovaj put dodaj okret ulijevo za 30 stupnjeva, unutar petlje. Zatim ponovi to 24 puta, umjesto 7.
       2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
+        Nacrtaj dijamant sa stranicama od 100 piksela.
         
       2-3 Artist Loops New 13_instruction: "We are going to start you with some code\n(in grey) to make one diamond. \\r\n\\r\nLoop the grey code to create a fun\npattern!"
-      2-3 Artist Loops New 14_instruction: |
-        Play around with the code for the diamond
-        and see what other patterns you can make. Try changing how many degrees you
-        turn and how many times you loop.
+      2-3 Artist Loops New 14_instruction: Igraj se s kodom za dijamant i vidi koje još uzorke možeš napraviti. Pokušaj promijeniti za koliko ćeš se stupnjeva okrenuti i koliko ćeš petlji imati.
       2-3 Artist Loops New 15_instruction: Nacrtaj nešto zabavno.
-      2-3 Artist Loops New 2_instruction: |
-        Here is the same puzzle that we just solved,
-        but this time, we have to use loops to pass it.  Can you put a `repeat` around
-        the starter code to finish the robot head?
-      2-3 Artist Loops New 9_instruction: |
-        Draw a simple V (where both sides are
-        50 pixels) to complete the arrow.
+      2-3 Artist Loops New 2_instruction: "Evo istog pitanja koje si već riješio/la, no ovaj put trebamo upotrijebiti petlje. Možeš li staviti 'Ponovi' oko početnog koda kako bi dovršio/la robotu glavu?"
+      2-3 Artist Loops New 9_instruction: Nacrtaj jednostavan V (obje strane duge 50 piksela) da dovršiš strelicu.
       2-3 Artist Match Hex Pic_instruction: 'Spoji parove: Pomogni dovršiti šesterokut.'
       2-3 Artist Match Rho Pic_instruction: 'Spoji parove: Dovrši kod koji nedostaje.'
       2-3 Artist Match Sq Pic_instruction: 'Spoji parove: Dopuni kod koji nedostaje'
       2-3 Artist Match Tri pic_instruction: 'Spoji parove: Ubaci kod koji nedostaje.'
-      2-3 Artist Nested Loops 1_instruction: |
-        Put a `repeat` block around this whole
-        stack of code to draw the pattern.
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
-      2-3 Artist Nested Loops 11_instruction: |
-        Loop this code 4 times to complete
-        the pattern, turn 90 degrees after each circle.
-      2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
-      2-3 Artist Nested Loops 2_instruction: "Now loop the triangle 6 times. \\r\n\\r\nAfter\neach triangle, you'll need to turn 60 degrees before drawing the next."
+      2-3 Artist Nested Loops 1_instruction: "Stavi blok 'Ponovi' oko čitavog koda kako bi nacrtao ovaj uzorak."
+      2-3 Artist Nested Loops 10_instruction: Ponovi ovak kod 12 puta kako bi dovršio uzorak.
+      2-3 Artist Nested Loops 11_instruction: Ponovi ovaj kod 4 puta kako bi dovršio uzorak; okreni 90 stupnjeva nakon svakog kruga.
+      2-3 Artist Nested Loops 12_instruction: Ponovi ovaj kod 12 puta kako bi dovršio kovrče.
+      2-3 Artist Nested Loops 2_instruction: "Sada ponovi ovaj trokut 6 puta. \\r \n\\r\nNakon svakog trokuta morat ćeš zaokrenuti 60 stupnjeva, prije nego kreneš crtati sljedeći."
       2-3 Artist Nested Loops 3_instruction: "You'll need to loop the triangle 12\ntimes to draw this pattern. \\r\n\\r\nDivide the number of degrees in a circle\n(360) by the number of shapes you're drawing (12) to figure out how far to\nturn after each shape."
-      2-3 Artist Nested Loops 4_instruction: "Loop this diamond 12 times to draw\na flower!\\r\n\\r\nNote: We'll use the same angle to loop 12 diamonds as we\ndid for 12 triangles.  \\r\nHow much do you need to turn after each shape?"
-      2-3 Artist Nested Loops 5_instruction: "Fill in this building's windows using\na nested loop. \\r\n\\r\nThe windows are 20 pixels long and 20 pixels apart."
-      2-3 Artist Nested Loops 6_instruction: "This dinosaur has 8 spikes running\nup its tail.\\r\nEach spike is 30 pixels long. Loop the triangle 8 times, but\nmake sure to jump forward after each one!"
+      2-3 Artist Nested Loops 4_instruction: "Ponovi ovaj dijamant 12 puta da nacrtaš cvijet!\\r\n\\r\nPazi: Upotrijebit ćemo isti kut da ponovimo 12 dijamanata kao što smo učinili za 12 trokuta. \\r \nKoliko okret trebaš načiniti nakon svakog oblika?"
+      2-3 Artist Nested Loops 5_instruction: "Popuni prozore zgrade koristeći ugniježđene petlje. \\r\n\\r \nProzori su dugi 20 piksela te udaljeni jedan od drugoga 20 piksela."
+      2-3 Artist Nested Loops 6_instruction: "Ovaj dinosaur ima 8 šiljaka na repu.\\r \nSvaki šiljak dug je 30 piksela. Ponovi trokut 8 puta, no pripazi da skučiš naprijed nakon svakoga!"
       2-3 Artist Nested Loops 7_instruction: Ponovi trokut u petlji 10 puta da bi nacrtao sunce. Trebat ćeš se pomaknuti i okrenuti nakon svakog trokuta. Koliko se trebaš okrenuti izračunaj tako da podijeliš broj stupnjeva za puni krug s brojem likova koji ti trebaju.
       2-3 Artist Nested Loops 8_instruction: "Now let's add some grass to our picture.\n\\r\n\\r\nEach tuft of grass is 50 pixels apart."
       2-3 Artist Nested Loops 9_instruction: "We'll finish this picture by adding\nour flower. \\r\n\\r\nLoop the diamond 12 times to draw the flower."
@@ -197,16 +177,10 @@ hr:
       2-3 Bee Loops 12_instruction: |
         Use while loops to collect all of the nectar
         from the flowers in this field.
-      2-3 Bee Loops 13_instruction: |
-        Assessment: Collect all of the nectar using
-        the fewest blocks possible.
-      2-3 Bee Loops 1A_instruction: |
-        Hi, I'm a bee. Can you help me collect the
-        nectar from these flowers? 
-      2-3 Bee Loops 2_instruction: |
-        Collect all the nectar and make all of the honey
-        using the fewest blocks possible.
-      2-3 Bee Loops 2A_instruction: This time, use a loop to gather all of the nectar.
+      2-3 Bee Loops 13_instruction: 'Procjena: Pokupi sav nektar koristeći što je moguće manje blokova.'
+      2-3 Bee Loops 1A_instruction: 'Bok, ja sam pčelica. Možeš li mi pomoći pokupiti nektar s ovog cvijeća? '
+      2-3 Bee Loops 2_instruction: Pokupi sav nektar i napravi sav med koristeći što je moguće manje blokova.
+      2-3 Bee Loops 2A_instruction: Ovaj put upotrijebi petlju da pokupiš sav nektar.
       2-3 Bee Loops 3_instruction: |
         Collect nectar from each flower and make honey
         at each honeycomb using the fewest blocks possible.
@@ -215,7 +189,7 @@ hr:
         Now use the `repeat` block to collect all of
         the nectar and make all of the honey.
       2-3 Bee Loops 4_instruction: "Such a busy bee!\\r\n\\r\nHelp bee collect all\nof the nectar and make all of the honey with the fewest blocks possible."
-      2-3 Bee Loops 4A_instruction: "How many times can loops help you in this puzzle?  \\r\n\\r\nLoops\nare your friend! Use a few of them to complete this puzzle with the fewest\nblocks possible."
+      2-3 Bee Loops 4A_instruction: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \\r\n\\r Petlje su ti prijatelji! Upotrijebi nekoliko njih da dovršiš ovaj zadatak koristeći što manje blokova."
       2-3 Bee Loops 5_instruction: "The shape of this path is different than the\nothers. \\r\n\\r\nCan you collect all of the nectar using as few blocks as possible?"
       2-3 Bee Loops 6_instruction: |
         Can you find the quickest way for the bee to
@@ -247,6 +221,10 @@ hr:
       2-3 Maze 12 (old)_instruction: |
         Get me to the pig, now with the Repeat times
         block!
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: |
         Can you get to the pig by creating a loop that uses
         only one `move forward` block inside of a `repeat`?
@@ -271,7 +249,7 @@ hr:
       2-3 Maze 3_instruction: Prati stazu i odvedi me do šašave svinje. Zaobiđi TNT ili će perje letjeti na sve strane!
       2-3 Maze 4_instruction: Vodi me do zelene zloće! (Pazi se TNT-a)
       2-3 Maze 5_instruction: Vodi me do zelene zloće! (Pazi se TNT-a)
-      2-3 Maze 6_instruction: Ostani smiren i pomozi mi pronaći zločestu svinju inače bih se mogao naljutiti!
+      2-3 Maze 6_instruction: Ostani smiren i pomozi mi pronaći zločestu svinju. U suprotnom mogao bih se naljutiti!
       2-3 Maze 7_instruction: Vodi me do zelene zloće! (Pazi se TNT-a)
       2-3 Maze 8_instruction: Odvedi me do svinje!
       2-3 Maze 9_instruction: Vodi me do zelene zloće! (Pazi se TNT-a)
@@ -296,8 +274,8 @@ hr:
         Can you replace the previous answer with a loop
         by using a "repeat times" block?
       2-3 maze sq13_instruction: |
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
+        Dragi čovječe. Ja zombi. Moram... doći... do suncokreta.
+        Napravi petlju s blokom "ponovi dok ne".
       2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
       2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
       2-3 maze sq16_instruction: |
@@ -305,7 +283,7 @@ hr:
         you do it in only five blocks?
       2-3 Maze sq2_instruction: Prati stazu i odvedi me do šašave svinje. Zaobiđi TNT ili će perje letjeti na sve strane!
       2-3 Maze sq3_instruction: Vodi me do zelene zloće! (Pazi se TNT-a)
-      2-3 Maze sq4_instruction: Ostani smiren i pomozi mi pronaći zločestu svinju inače bih se mogao naljutiti!
+      2-3 Maze sq4_instruction: Ostani smiren i pomozi mi pronaći zločestu svinju. U suprotnom mogao bih se naljutiti!
       2-3 Maze sq5_instruction: |
         Get me to the pig! How many times do you have to
         repeat a block?
@@ -641,6 +619,7 @@ hr:
       4-5 Maze Conditionals 1_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
@@ -711,6 +690,22 @@ hr:
       4-5 While Loops Assessment 1_instruction: |
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na square with 20 pixel sides. "
+      aE2_instruction: |
+        If you place your square loop inside another loop, we call
+        that a nested loop. What do you need to add as an outer loop to make sure
+        all 14 napkins line up next to each other?
+      aE3_instruction: "We've got to have a tablecloth!  \\r\n\\r\nTake your row of\n14 napkins and sew 14 of those together with another **outer loop** to make\na cover for our table."
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: |
+        How many times do you need to loop this to draw half  of
+        a circle? 
+      aE7_instruction: "If you create another loop like this one, but turn left instead\nof right, what happens? \\r\n\\r\nCan you repeat all of that to draw this wave?"
+      aE8_instruction: "Now let's loop that whole thing four times to create this\npicture frame. Watch out for the corners - you can't just turn 90 degrees!\n\\r\n\\r\nIf looping a 3 degree turn 60 times makes a half circle, which of\nthese blocks of code will make an additional quarter circle for the corners?"
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -783,6 +778,42 @@ hr:
       Artist - Nested Loops Assessment 1_instruction: |
         Use a nested loop to complete
         the design.
+      artistLoopsK1_instruction: |
+        This is a new type of puzzle called "Artist".
+        Play with the level and draw something fun.
+      artistLoopsK2_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
+      artistLoopsK3_instruction: |
+        Draw a line eight steps long. This will become
+        the land for our kingdom!
+      artistLoopsK4_instruction: |
+        Now we need a castle with a draw bridge.  Fix the
+        code so that the bridge lays straight instead of falling down.
+      artistLoopsK5_instruction: |
+        Now we need to fix the top of the castle. Can you
+        loop the code three times?
+      artistLoopsK6_instruction: |
+        Someone is stuck in the tower!  Fix the stairs
+        to set them free. 
+      artistLoopsK7_instruction: |
+        This tower is lovely, what is downstairs? Build
+        another staircase to find out! 
+      artistLoopsK8_instruction: |
+        Wow! There's a garden over there!  Help fix these
+        stairs so I can get to it.
+      artistLoopsK9_instruction: |
+        **Challenge:**  Lovely! Let's take a walk around
+        the garden.
+      artistLoopsKA_instruction: |
+        These stones are in the wrong place.  Help me move
+        them so I don't fall in!
+      artistLoopsKB_instruction: |
+        Look!  It's a theater.  Help me set up the chairs
+        so we can all see the stage. 
+      artistLoopsKFP_instruction: |
+        Picture time!  Use what you have learned to draw
+        a picture of what you think the Artist saw on stage.
       Auto Open Function Editor_instruction: |
         You can call functions from inside
         other functions! Using your "shape" function as a base, create 3 house shapes
@@ -793,6 +824,10 @@ hr:
         or 0 nectar, but you don't know which one! Be careful not to collect nectar
         from a purple flower if it doesn't have any. Check if the nectar is equal
         to 1 by using the if block.
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
+        
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1778,7 +1813,7 @@ hr:
       Course 4 Play Lab Params 8_instruction: |
         Use the `when actor touches` block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith pie, and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
         This time you don't have to write any
         code, just hit "Run" to play the game! In this game, you're the dog who
@@ -1806,12 +1841,12 @@ hr:
         actor 2 touches anything" event to trigger an update to your score when your
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
+      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to throw pie.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a piece of pie. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
-        from Cat (actor 2), you should lose a point. Start with 10 points so it's
-        not too hard. Let your score drop down from 10 to 0 to pass the level.
+        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
+        Cat (actor 2), you should lose a point. Start with 10 points so it's not
+        too hard. Let your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |
         Alright, one last thing for
         this game - let's set it up so the player can win (or lose). Use a forever
@@ -2001,6 +2036,7 @@ hr:
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -2037,6 +2073,9 @@ hr:
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a big square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       CSD U3 Variables make a square_instruction: |
         Change the value of size multiple
         times. How does it change your drawing?
@@ -2442,6 +2481,7 @@ hr:
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      eventsIntro_instruction: Need a better playlab/events combo
       Farmer for Authored Hint testing_instruction: |
         Wow, I found a really deep hole!
         I don't know how many shovelfuls of dirt it needs.  Can you write a program
@@ -2549,16 +2589,12 @@ hr:
         a snowflake.  Then click "Run" and steer her to touch each snowflake once.
       jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
-      K-1 Artist 1 Assessment 1_instruction: |
-        Draw a short line up and a long one
-        to the right!
-      K-1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both the
-        jump and draw blocks
-      K-1 artist 1 level 9_instruction: Draw this using three lines
-      K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
-      K-1 Artist Loops 2_instruction: Now, draw the same line using a loop.
-      K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
+      K-1 Artist 1 Assessment 1_instruction: Nacrtaj kratku crtu prema gore te dugu crtu udesno!
+      K-1 artist 1 level 10_instruction: Nacrtaj isprekidanu crtu koristeći blokove za skakanje i za crtanje
+      K-1 artist 1 level 9_instruction: Nacrtaj ovo koristeći tri crte
+      K-1 Artist Loops 1_instruction: Nacrtaj ovu crtu krećući se 4 puta na Istok.
+      K-1 Artist Loops 2_instruction: Sada nacrtaj istu crtu koristeći petlju.
+      K-1 Artist Loops 3_instruction: Možeš li napraviti petlju od ovih blokova da nacrtaš 6 crta?
       K-1 Artist Loops 4_instruction: |
         Could a loop help us draw the top of this
         castle?
@@ -2614,26 +2650,26 @@ hr:
       K-1 Bee 13_instruction: Get three nectar and then make one honey!
       K-1 Bee 14_instruction: |
         Get me to the nectar, pick it up, get me to the honey,
-        and make honey
-      K-1 Bee 15_instruction: Get two nectar to make two honey!
+        and make honey!
+      K-1 Bee 15_instruction: Pokupi dva nektara i napravi dva meda!
       K-1 Bee 2_instruction: |
         Move me to the flower, get the nectar, then move me
         to the honeycomb, and make honey
       K-1 Bee 3_instruction: |
         Move me to the flower, get the nectar, then move me
         to the honeycomb, and make honey
-      K-1 Bee 4_instruction: Get two nectar and then make two honey!
-      K-1 Bee 5_instruction: Get three nectar and then make three honey!
-      K-1 Bee 6_instruction: Get two nectar and then make two honey!
+      K-1 Bee 4_instruction: Pokupi dva nektara i zatim napravi dva meda!
+      K-1 Bee 5_instruction: Pokupi tri nektara i zatim napravi tri meda!
+      K-1 Bee 6_instruction: Pokupi dva nektara i zatim napravi dva meda!
       K-1 Bee 7_instruction: Get three nectar and then make two honey!
-      K-1 Bee 8_instruction: Get two nectar and then make two honey!
-      K-1 Bee 9_instruction: Get two nectar and then make two honey!
-      K-1 Bee Assessment 1_instruction: Get nectar to make honey!
-      K-1 Bee Assessment 2_instruction: Get nectar to make honey!
-      K-1 Bee Loops 1_instruction: Get the nectar to make honey!
-      K-1 Bee Loops 10_instruction: Get all of the nectar and make all of the honey.
-      K-1 Bee Loops 11_instruction: Get all of the nectar and honey!
-      K-1 Bee Loops 12_instruction: Get all of the nectar and all of the honey.
+      K-1 Bee 8_instruction: Pokupi dva nektara i zatim napravi dva meda!
+      K-1 Bee 9_instruction: Pokupi dva nektara i zatim napravi dva meda!
+      K-1 Bee Assessment 1_instruction: Pokupi nektar i napravi med!
+      K-1 Bee Assessment 2_instruction: Pokupi nektar i napravi med!
+      K-1 Bee Loops 1_instruction: Pokupi nektar i napravi med!
+      K-1 Bee Loops 10_instruction: Pokupi sav nektar i napravi sav med.
+      K-1 Bee Loops 11_instruction: Pokupi sav nektar i med!
+      K-1 Bee Loops 12_instruction: Pokupi sav nektar i sav med.
       K-1 Bee Loops 2_instruction: |
         Use a `repeat` loop to move and then get the
         nectar and make honey!
@@ -2665,8 +2701,8 @@ hr:
         Trace the path and lead me to the silly pig. Avoid
         TNT or the feathers will fly! Hint: He's South of me.
       K-1 Maze 2_instruction: Move me East to get me to the pig!
-      K-1 Maze 3_instruction: Move me South to get me to the pig!
-      K-1 Maze 4_instruction: Move me North to get me to the pig!
+      K-1 Maze 3_instruction: Pokreni me prema Jugu da dođem do svinje!
+      K-1 Maze 4_instruction: Pokreni me prema Sjeveru da dođem do svinje!
       K-1 Maze 5_instruction: Move me East to get me to the pig!
       K-1 Maze 6_instruction: Move one way, then another to get me to the pig!
       K-1 Maze 7_instruction: Move one way, then another to get me to the pig!
@@ -2736,7 +2772,35 @@ hr:
       K-1 Maze Sequence Assessment 2_instruction: |
         Move one way, then another to
         get me to the pig.
+      K2.0 sequence 1_instruction: Change the code to get me to the pig!
+      K2.0 sequence 10_instruction: Move me around the TNT to get to the pig.
+      K2.0 sequence 2_instruction: Change the code to get me to the pig!
+      K2.0 sequence 3_instruction: |
+        Something is not quite right. REMOVE blocks to
+        get me to the pig!
+      K2.0 sequence 4_instruction: |
+        Try it yourself!  Move one way, then another
+        to get me to the pig.
+      K2.0 sequence 5_instruction: Move one way, then another to get me to the pig!
+      K2.0 sequence 6_instruction: |
+        Figure out what is missing and then add blocks
+        to get me to the pig!
+      K2.0 sequence 7_instruction: |
+        Debug this level by adding and changing blocks
+        to get me to the pig!
+      K2.0 sequence 8_instruction: |
+        Debug this level by adding blocks to get me to
+        the pig!
+      K2.0 sequence 9_instruction: 'Go around the TNT to get me to the pig! '
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -2778,6 +2842,14 @@ hr:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      Mike Pair Programming_instruction: Here are the instructions
+      MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -3120,9 +3192,6 @@ hr:
         Challenge: How would you
         use the "for loop" to get every actor to go around and say their actor number,
         then vanish from the screen? 
-      New Play Lab Project_instruction: |
-        Create your own story or game! Your code
-        is saved as a project you can return to at any time.
       Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
@@ -3351,6 +3420,10 @@ hr:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      playEventsK1_instruction: |
+        This game is called "Play Lab".  See if you can
+        figure out what each block does.
+      playEventsK2_instruction: "Jorge wants to say \"Hi there.\"\\r\n\\r\nCan you\nhelp?"
       Poorva copy U3L2 Using Simple Commands_instruction: |
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -3535,9 +3608,14 @@ hr:
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
+      StepIntro_instruction: |-
+        Here's how to use the "Step" button.
       template test_instruction: "what's up"
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi hi
+      testArtistForTestK_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
@@ -3838,6 +3916,7 @@ hr:
       U3 - High Low - If_instruction: |
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
+      U3 - images - bee free play_instruction: Do this
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
         the text area with an image and setText with setImageURL. Then test your app!
@@ -5276,4 +5355,7 @@ hr:
       Underground Mining Coal_instruction: Najcjenjenije resurse pronaći će te ispod zemlje, no tamo može postati mračno. Stoga upalite bar dvije baklje i iskopajte bar dva bloka ugljena.
       Underground Test Level_instruction: Prikupi sve minerale!
       Vigenere_instruction: Test
+      WhileAdventure_instruction: |
+        Our adventurer wants to collect coins. Can you
+        help her grab as many as she can using only one remove 1 block?
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

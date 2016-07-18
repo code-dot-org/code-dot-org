@@ -4,7 +4,7 @@
 - app, data, content_class, source_level, hide_header = %i(app data content_class source_level hide_header).map{ |x| local_assigns[x] }
 
 - unless data['title'].blank? || hide_header
-  %h2!= string_or_image(app, data['title'], source_level) unless app == 'external'
+  %h1!= string_or_image(app, data['title'], source_level) unless app == 'external'
 %div.content-level{class: (content_class unless content_class.blank?)}
   - unless app == 'external'
     - unless data['content1'].blank?
@@ -18,3 +18,7 @@
     #markdown
       / Render markdown text through the ActionView template engine.
       = ActionView::Base.new.render(inline: data['markdown'], type: :md)
+
+  - if @script.try(:professional_learning_course?) && @script_level && @level.class == External
+    = link_to @script_level.end_of_stage? ? t('done_with_module') : t('next_resource'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn pull-right btn-primary submitButton'
+

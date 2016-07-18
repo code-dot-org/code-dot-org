@@ -6,8 +6,29 @@ nav: plp_playbook_nav
 
 # Communications Playbook
 
+## Table of contents
+
+- [Weekly Newsletter Archive](#archive)
+- [Communication to teachers from Code.org](#code.org)
+- [Workshop communications](#workshop)
+- [Email templates](#templates)
+- [Tips for writing an awesome email](#tips)
+- [Branding guidelines](#branding)
+
+________________
+<a id="archive"></a>
+<br/>
+<br/>
+
+## [Weekly Newsletter Archive](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing)
+
+<br/>
+________________
+<a id="code.org"></a>
+<br/>
+<br/>
 ## Communications to Teachers from Code.org
-Code.org sends emails directly to teachers regarding information about any Code.org products, programs, or resources. Click the links below for an example of these emails. 
+Code.org sends emails directly to teachers regarding information about any Code.org products, programs, or resources. **Click the links below for an example of these emails.** 
 
 - [**Professional Learning Program Updates**](http://us9.campaign-archive2.com/?u=dc783682a08c5eb6dfe447070&id=7f8734bcaa) 
 	- These emails include updates about the curriculum and online modules, Code Studio tools and resources, and other items related to the Code.org Professional Learning Program. 
@@ -20,7 +41,13 @@ Code.org sends emails directly to teachers regarding information about any Code.
 
 Teachers will have the option to unsubscribe from different types of emails. Please make sure you check the [Technology Requirements](/educate/professional-learning-partner/playbook/teacher-support#technology) to be sure teachers are able to receive the emails from Code.org.
 
+<br/>
+[**Back to the top**](#top)
+________________
 
+<a id="workshop"></a>
+<br/>
+<br/>
 ## Workshop Communications
 
 There are two types of emails regarding logistical information for locally hosted professional development workshops; **manual emails** written by the Workshop Organizer to invite participants to register for the workshop, and **automated emails** sent from the workshop dashboard. Click the purple links below to see examples:
@@ -32,8 +59,26 @@ There are two types of emails regarding logistical information for locally hoste
 - **Automated emails** Participants who sign up for a workshop will receive the following automated emails from Code.org. <i>*Note: Workshop Details information will vary by program. </i>
 	- [**Workshop Sign Up Confirmation**](/files/workshop_signup_confirmation.pdf)<br/>This email will automatically send to a teacher that signs up for a workshop. 
 	- [**Workshop Reminder Emails**](/files/auto-workshop-reminder.pdf)<br/>These emails will automatically send to every teacher that is signed up for a workshop 10 and 3 calendar days before it begins. These include details fromt he workshop dashboard about the location, dates, parking information and what to bring to the workshop.
+	
+<br/>
+[**Back to the top**](#top)
+________________
+<a id="templates"></a>
+<br/>
+<br/>
+## Email Templates
+Below are some templates we encourage you to use when sending emails to teachers.
+
+- [Middle school teacher application response emails](https://docs.google.com/document/d/1yC9BI2atOzosuFouuG70hRr6AmGfgT4EmjHByYSoamM/edit#) - this includes accept and reject emails for middle school teachers and instructions on how they access the online pre-work.
+- [Providing teachers workshop registration links and Phase 3 workshop dates](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.udcag7rgm3fg) - this includes how to ask teachers to register for your workshop and how to inform them of the academic year workshop dates during the summer.
 
 
+<br/>
+[**Back to the top**](#top)
+________________
+<a id="tips"></a>
+<br/>
+<br/>
 ## Tips for writing an awesome email
 We know you’ll be sending out emails about community meetups, workshops, and other important information to your teachers. Here are some tips from Boomerang about how to make emails more effective. 
  
@@ -54,11 +99,12 @@ We know you’ll be sending out emails about community meetups, workshops, and o
 
 [Read more here.](http://blog.boomerangapp.com/2016/02/7-tips-for-getting-more-responses-to-your-emails-with-data/?utm_medium=email&utm_source=year+in+review&utm_content=CTA)
 
-
-
-
- 
-
+<br/>
+[**Back to the top**](#top)
+________________
+<a id="branding"></a>
+<br/>
+<br/>
 ## Branding guidelines
 [Click here](https://www.dropbox.com/s/ukvf5kiwxf91bdv/Code.org_ProLearn_brandguide_03.14.16_v3.pdf?dl=0) to access the guidelines for co-branding as a Code.org Professional Learning Partner.
 

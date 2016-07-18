@@ -30,6 +30,8 @@
   unsubmit: Cancelar envio
   previous_page: Página anterior
   next_page: Próxima página
+  next_resource: Próximo recurso
+  done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: Ok
   heading_x_of_y: "%{heading} (página %{y} de %{x})"
@@ -96,6 +98,7 @@
     teacher_title: Cadastro de professores
     student_pitch: Cadastro de aluno na Code.org
     student_title: Cadastro de alunos
+    signup_title: Cadastre-se no Code.org
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
     address_placeholder: endereço, cidade, estado, CEP
@@ -120,6 +123,9 @@
       da Code.org.
     additional_information: Precisamos de mais informações para continuar com o processo
       de inscrição.
+    user_type_label: Tipo de conta
+    user_type_teacher: Professor
+    user_type_student: Estudante
   signin_form:
     title: Já tem uma conta? Entre
     login: Email ou nome de usuário
@@ -403,7 +409,7 @@
       todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você pode
       encontrar todos os recursos offline numa página só. Associar as lições com qualquer
       aula de ciência da computação, ou usar a vídeo-aula como um curso independente."
-    announcement_button: Saiba mais
+    announcement_button: Teste a funcionalidade
     announcement_petition: Como professor, você está liderando o caminho em um movimento
       para dar a cada aluno em todas as escolas a oportunidade de aprender informática.
       Agora, é hora de deixar seus representantes notícias suas. Esta semana, líderes
@@ -417,12 +423,12 @@
     section_code_not_entered: Forneça por favor current_section_code.
     section_code_cant_be_current_section: A seção atual não pode ser o mesmo que a
       nova seção.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
+    current_section_dne: Desculpe, mas a seção %{current_section_code} não existe.
+      Por favor insira um código de seção diferente.
     students_not_yours: Você não pode mover os alunos de uma seção que não pertence
       a você.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
+    stay_enrolled_not_entered: Por favor, forneça stay_enrolled_in_current_section.
+    student_ids_not_entered: Por favor, forneça students_ids.
     student_not_found: Um ou mais alunos não podem ser encontrados.
     all_students_must_be_in_current_section: Todos os alunos, atualmente, devem estar
       inscrito em sua seção.
@@ -499,25 +505,17 @@
     notes_coming_soon: As notas deste vídeo estarão disponíveis em breve.
     autoplay_option: Vídeos com reprodução automática
     download: Baixar Vídeo
-  compatability:
-    working:
-      header: Estamos trabalhando no suporte para seu navegador.
-      message: A Code.org usa tecnologia web moderna, o que torna o site mais rápido
-        para usar. Seu navegador não suporta todos os recursos necessários, e podem
-        ocorrer problemas ao usar esta parte do site. Para nos ajudar, informe os
-        <a href='%{report_issue_url}'>problemas encontrados</a>. Você também pode
-        <a href='%{supported_browsers_url}'>atualizar seu navegador para uma versão
-        compatível</a>.
-      hide_this_warning: Ocultar este aviso
+  compatibility:
     upgrade:
-      header: Atualize seu navegador.
-      message: A Code.org usa tecnologia web moderna, o que torna o site mais rápido
-        para usar. Infelizmente, seu navegador não suporta todos os recursos necessários
-        para executar esta parte do site. <br/><br/>Instale um navegador de nossa
-        lista de navegadores compatíveis para continuar. Você pode <a href='#'>tentar
-        visualizar a página</a>, mas algumas funcionalidades podem não ser exibidas
-        corretamente.
-      button: Leve-me à lista de navegadores compatíveis
+      unsupported_message: Seu navegador não é suportado. Por favor atualize seu navegador
+        para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores
+        suportados</a>. Você pode tentar visualizar a página, mas algumas funcionalidades
+        podem não funcionar.
+      ie_message: Code.org em breve irá remover o suporte para o Internet Explorer
+        8, 9 e 10. Por favor, atualize para um navegador moderno.
+      ie_message_csedweek: CSEdWeek.org em breve irá remover o suporte para o Internet
+        Explorer 8, 9 e 10. Por favor, atualize para um navegador moderno.
+      link: Saiba mais
   slow_loading: Isso está demorando mais do que o normal...
   try_reloading: Tente recarregar a página
   next_stage: Concluído! Continuar para a próxima fase
@@ -615,12 +613,15 @@
       aplicativos e figuras escrevendo seus próprios programas de computador. Clique
       nas figuras e capturas de tela para ver cada programa em funcionamento.
     want_to_make_your_own: Quer criar seu próprio programa?
+    how_to_save: No último nível destes tutoriais, clique em "Terminar" e "Salvar"
+      para salvar seu trabalho na galeria.
     more: Mais &rarr;
     caption_by_name_age: feito por %{name}, %{age} anos
     caption_time_ago: há %{time_ago}
     header: Galeria
     header_playlab: Laboratório
     header_artist: Artista
+    report_abuse: Reportar abuso
   landing:
     prerelease: Este curso está em sua versão <span class='betatext'>beta</span>.
       Isso significa que esta não é a versão final do curso, e ele está sujeito a
@@ -778,8 +779,8 @@
     updated: Atualizado
     project_type: Tipo de projeto
     help_text: Clique em <strong>Crie um aplicativo</strong> ou <strong>Desenhe alguma
-      coisa</strong> abaixo para fazer um novo Laboratório ou Projeto de artista!<br/>Você
-      pode voltar a trabalhar nos seus projetos a qualquer hora.
+      coisa</strong> abaixo para iniciar um novo projeto!<br/>Você pode voltar a trabalhar
+      nos seus projetos a qualquer hora.
     need_help: Precisa de ajuda para começar?
     really_delete: Excluir?
     delete_yes: Sim
@@ -826,8 +827,8 @@
   peer_review:
     accepted:
       name: Aceito
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      description: "<strong>Sim</strong>, essa submissão<strong>cumpre</strong>os
+        requisitos"
     rejected:
       name: Rejeitado
       description: "<strong>Não</strong>, essa submissão <strong>não satisfaz</strong>
@@ -835,22 +836,65 @@
     escalated:
       name: Escalonado
       description: Eu gostaria de um instrutor para rever esta apresentação
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+    instructor_feedback: Feedback do instrutor
+    peer_feedback: Feedback de mesmo nível
+    outdated: Este feedback foi adicionado para uma versão anterior apresentada
   components:
     icon_library:
       search_placeholder_text: Procure por um ícone...
       no_icons_found: Nenhum ícone foi encontrado
+    playzone:
+      artist_description: Faça desenhos e figuras legais com o Artista!
+      artist_title: Novo Desenho
+      continue_button: Vá para a próxima fase
+      playlab_description: Crie uma história ou um jogo no Laboratório!
+      playlab_title: Novo Aplicativo
+      primary_header: Parabéns! Você completou %{stageName}!
+      projects_description: Revisite um dos seus projetos existentes.
+      projects_title: Abrir um projeto
+      secondary_header: Pergunte a seu professor o que fazer em seguida
   flex_category:
     required: Visão geral
     content: Conteúdo
     practice: Professor de práticas
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer_md: "<strong>Aviso: Você está agora deixando o domínio Code.org, para
+      um site que não é operado por Code.org.</strong> Este site pode ter políticas
+      de privacidade que diferem do Code.org. <br/> <br/> Nós selecionamos estes recursos
+      de terceiros, porque achamos que eles serão úteis para você. Enquanto nós não
+      somos diretamente responsáveis pelo conteúdo deste site, por favor <a href='mailto:support@code.org'>
+      entre em contato com o suporte</a> se você encontrar o conteúdo censurável,
+      ou se o site vinculado não está mais disponível."
+  hoc_download:
+    title: Downloads do Hour of Code
+    capsule_title: Você tem Internet?
+    capsule_desc: Use o on-line, web-based <a href="%{url}">%{app_name}</a>.
+    instructions_headline: Sem Internet?
+    instructions: 'Instruções para os professores: se você tem um mau serviço de Internet,
+      estes tutoriais do Hour of Code (Hora de Código) estão disponiveis para baixar
+      e instalar para uso offline. Escolha seu idioma e a plataforma, baixe e instale-o
+      em todos os computadores da sua sala de aula. Você pode usar um Pendrive para
+      instalar em todas as maquinas. Nota: os estudantes não serão capaz de fazer
+      entrar no Code Studio (Estúdio de Código) para salvar ou imprimir certificados.
+      Os professores podem imprimimir os certificados <a href="%{url}">aqui</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Construindo uma galáxia com código (Blocos)'
+    starwars_javascript_name: 'Star Wars: Construindo uma galáxia com código (JavaScript)'
+    download_message: Baixar %{app_name} para uso offline (136MB)
+    download_in_english: 'Download em inglês:'
+    download_in_spanish: 'Download em espanhol:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

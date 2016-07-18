@@ -8,7 +8,7 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var _ = require('../../lodash');
+var _ = require('lodash');
 
 /**
  * Wraps its children to display them in a flexbox layout.
@@ -17,7 +17,8 @@ var ResizablePanes = React.createClass({
   propTypes: {
     style: React.PropTypes.object,
     columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    onChange: React.PropTypes.func.isRequired
+    onChange: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
   },
 
   getInitialState: function () {

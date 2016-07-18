@@ -18,7 +18,7 @@ class HocSignup2014
     result
   end
 
-  def self.receipt()
+  def self.receipt
     'hoc_signup_2014_receipt'
   end
 

@@ -386,7 +386,7 @@ tr:
         text: 'Eğer karakterimizin bir şey yapmasına gerek kalmadan tekrar eden işleri yapmasını istiyorsak, bloklarımızı "Sonsuz Tekrar" bloğunun içine koyarız.'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
+        text: Sonraki bulmacada, hedefimiz büyücünün krallığın sınırlarında sürekli sol ve sağa giderek devriye gezmesidir. Tekrar komutlarının nasıl çalıştığını öğrenmek, senin kendi oyununu yaparken bir ton zaman kazanmanı sağlayacak.
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
@@ -414,20 +414,19 @@ tr:
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: "This lesson is called the big event. It's all about how we can control our programs and actually change the way a program runs on the fly using events, like the push of a button or the click of a mouse."
+        text: Bu derse büyük olay denir. Bunda programlarımızı nasıl denetleyeceğimizi ve aslında bir programın çalışma şeklini bir düğmeye basarak veya bir fare tıklaması gibi olayları kullanarak anında değiştirebileceğimizi göreceğiz.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: "For this lesson, you'll be controlled with a paper remote control. It's just like a real-live video game."
+        text: Bu ders için bir kağıttan uzaktan kumanda ile kontrol edileceksin. Sanki gerçek zamanlı bir video oyunu gibi.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: "An event is an action  that causes something to happen. It's like when you click the button on a mouse and a webpage loads. That's an event. When you touch your screen on a tablet to scroll, that's an event also. Events are a great way of letting the user direct your program whenever they need or want to."
+        text: Bir olay bir şeyin olmasını sağlayan eylemdir. Bir butona tıkladığında bir internet sitesinin yüklenmesi gibi. Bu bir olaydır. Kaydırmak için tabletine dokunman da bir olaydır. Olaylar kullanıcı programa istediği zaman veya ihtiyacı olduğunda müdahale etmesini sağlar.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: 'Things happen that we all respond to. We feel hungry and we go to the fridge. We hear the mailman come and he puts our mail in the mailbox  and then we go get our mail. Those are just like the events of pushing a button or moving a joystick. They are something that happens that triggers us to do something.'
+        text: Karşılık vermemiz gereken olaylar vardır. Aç hissettiğimiz zaman buzdolabına gideriz. Bir postacının geldiğini duyduğumuzda ve mektupları posta kutusuna koyduğunda gider ve mektuplarımızı alırız. Bu olaylar aynı bir butona basmak veya bir oyun kolunu hareket ettirmek gibidir. Bu gibi olaylar bizim bir şeyler yapmamızı tetikler.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: |-
-          In video games, there's an event called "Update" and it happens 30 or 60 times a second. For videogame programmers that's almost more important as an event than the buttons or the joystick.
+        text: 'Video oyunlarında, "Güncelle" adlı bir olay bulunur ve bu olay saniye 30 ya da 60 kez gerçekleşir. Video oyun programcıları için bu butonlardan veya oyun kollarından neredeyse daha önemlidir.'
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: |-
@@ -451,7 +450,7 @@ tr:
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: Merhaba, benim ismim Miral Kotb ve ben iluzyonun kurucusuyum. Benim çalıstığım işte, yaptığımız danslarda ve programlarda ışıklı kıyafetler kullanıyoruz. Ve bunlar döngüler! Döngüler üzerinde tekrarlandıkca harekete geçiyor.
       2:
         image: notes/C1_getting_loopy_2.png
         text: 'Birşeyi birçok kez yapınca "döngü" yapmış oluyoruz. Aynı benim bu çemberi çevirmek için yaptığım gibi. Bu bir döngü bu bir döngü Ve bu bir döngü.'

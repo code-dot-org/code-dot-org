@@ -35,7 +35,7 @@ class ActivitiesController < ApplicationController
     # disabled. (A cached view might post to this action even if milestone posts
     # are disabled in the gatekeeper.)
     enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
-    if !enabled
+    unless enabled
       head 503
       return
     end
@@ -168,7 +168,9 @@ class ActivitiesController < ApplicationController
         script_level: @script_level,
         new_result: test_result,
         submitted: params[:submitted],
-        level_source_id: @level_source.try(:id)
+        level_source_id: @level_source.try(:id),
+        level: @level,
+        pairings: pairings
       )
     end
 
@@ -211,18 +213,18 @@ class ActivitiesController < ApplicationController
 
     progress.each_pair do |concept, counts|
       current = current_trophies[concept]
-      pct = counts[:current].to_f/counts[:max]
+      pct = counts[:current].to_f / counts[:max]
 
-      new_trophy = Trophy.find_by_id case
+      new_trophy = Trophy.find_by_id(
+        case
         when pct == Trophy::GOLD_THRESHOLD
           Trophy::GOLD
         when pct >= Trophy::SILVER_THRESHOLD
           Trophy::SILVER
         when pct >= Trophy::BRONZE_THRESHOLD
           Trophy::BRONZE
-        else
-          # "no trophy earned"
-      end
+        end
+      )
 
       if new_trophy
         if new_trophy.id == current.try(:trophy_id)
@@ -245,7 +247,7 @@ class ActivitiesController < ApplicationController
     else
       log_string += "\tanon"
     end
-    log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" +
+    log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" \
                   "\t#{params[:testResult]}\t#{params[:time]}\t#{params[:attempt]}\t#{params[:lines]}"
     log_string += level_source.try(:id) ? "\t#{level_source.id}" : "\t"
     log_string += "\t#{request.user_agent}"

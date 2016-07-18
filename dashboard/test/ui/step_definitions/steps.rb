@@ -1,6 +1,8 @@
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 
+MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
+
 def wait_with_timeout(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout)
 end
@@ -43,12 +45,16 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  @browser.navigate.to "#{url}"
+  @browser.navigate.to url
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   wait_with_timeout.until { @browser.find_element(selection_criteria) }
+end
+
+When /^I go to the newly opened tab$/ do
+  @browser.switch_to.window(@browser.window_handles.last)
 end
 
 When /^I close the dialog$/ do
@@ -229,7 +235,7 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   name_selector = ".blocklyTreeLabel:contains(#{name})"
   # seems we usually have two of these item, and want the second if the function
   # editor is open, the first if it isn't
-  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " +
+  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
     "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
   @browser.execute_script(script)
 end
@@ -289,16 +295,16 @@ end
 
 When /^I press delete$/ do
   script = "Blockly.mainBlockSpaceEditor.onKeyDown_("
-  script +="{"
-  script +="  target: {},"
-  script +="  preventDefault: function() {},"
-  script +="  keyCode: $.simulate.keyCode['DELETE']"
-  script +="})"
+  script += "{"
+  script += "  target: {},"
+  script += "  preventDefault: function() {},"
+  script += "  keyCode: $.simulate.keyCode['DELETE']"
+  script += "})"
   @browser.execute_script(script)
 end
 
 When /^I hold key "([^"]*)"$/ do |key_code|
-  script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{key_code}']})"
+  script = "$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{key_code}']})"
   @browser.execute_script(script)
 end
 
@@ -332,7 +338,7 @@ Then /^I verify progress in the header of the current page is "([^"]*)" for leve
   steps %{
     And I wait to see ".header_level_container"
     And I wait for 10 seconds
-    And element ".header_level_container a:nth(#{level.to_i - 1})" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And element ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -341,8 +347,12 @@ Then /^I verify progress in the drop down of the current page is "([^"]*)" for s
     Then I click selector ".header_popup_link"
     And I wait to see ".user-stats-block"
     And I wait for 10 seconds
-    And element ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And element ".user-stats-block .react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
+end
+
+Then /^I verify progress for the selector "([^"]*)" is "([^"]*)"/ do |selector, progress|
+  element_has_css(selector, 'background-color', MODULE_PROGRESS_COLOR_MAP[progress.to_sym])
 end
 
 Then /^I navigate to the course page and verify progress for course "([^"]*)" stage (\d+) level (\d+) is "([^"]*)"/ do |course, stage, level, test_result|
@@ -350,7 +360,7 @@ Then /^I navigate to the course page and verify progress for course "([^"]*)" st
     Then I am on "http://studio.code.org/s/#{course}"
     And I wait to see ".user-stats-block"
     And I wait for 10 seconds
-    And element ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})" has css property "background-color" equal to "#{color_for_status(test_result)}"
+    And element ".react_stage:nth(#{stage.to_i - 1}) > a:nth(#{level.to_i - 1})  :first-child" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -362,6 +372,10 @@ end
 
 Then /^element "([^"]*)" has css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_value|
   element_has_css(selector, property, expected_value)
+end
+
+Then /^elements "([^"]*)" have css property "([^"]*)" equal to "([^"]*)"$/ do |selector, property, expected_values|
+  elements_have_css(selector, property, expected_values)
 end
 
 Then /^I set selector "([^"]*)" text to "([^"]*)"$/ do |selector, text|
@@ -440,7 +454,7 @@ Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  @browser.execute_script("return $(#{selector.dump}).length").should eq 0
+  expect(@browser.execute_script("return $(#{selector.dump}).length")).to eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
@@ -601,6 +615,23 @@ Given(/^I am a (student|teacher)$/) do |user_type|
   }
 end
 
+Given(/^I am enrolled in a plc course$/) do
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users.first[1][:email])
+  course = Plc::Course.find_by(name: 'CSP Support')
+  enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
+  enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
+end
+
+Then(/^I fake completion of the assessment$/) do
+  user = User.find_by_email_or_hashed_email(@users.first[1][:email])
+  unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user)
+  unit_assignment.enroll_user_in_unit_with_learning_modules([
+    unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::CONTENT_MODULE),
+    unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::PRACTICE_MODULE)
+  ])
+end
+
 def generate_user(name)
   email = "user#{Time.now.to_i}_#{rand(1000)}@testing.xx"
   password = name + "password" # hack
@@ -622,7 +653,7 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
-    And I type "16" into "#user_age"
+    And I select the "16" option in dropdown "user_user_age"
     And I click selector "input[type=submit][value='Sign up']"
     And I wait until I am on "http://studio.code.org/"
   }
@@ -634,6 +665,8 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher"
     And I wait to see "#user_name"
+    And I select the "Teacher" option in dropdown "user_user_type"
+    And I wait to see "#schoolname-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
@@ -643,25 +676,8 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   }
 end
 
-And(/^I sign in as an admin named "([^"]*)"$/) do |name|
-  steps %Q{
-    Given I am on "http://studio.code.org/reset_session"
-    And I am on "http://studio.code.org/users/sign_in"
-    And I display toast "Loading Rails, creating admin user... (This may take 30 seconds)"
-  }
-
-  require_rails_env
-  email, password = generate_user(name)
-  create_admin_user(name, email, password)
-
-  steps %Q{
-    When I type "#{email}" into "#user_login"
-    And I type "#{password}" into "#user_password"
-    And I click selector "input[type=submit][value='Sign in']"
-    Then I wait to see ".header_user"
-  }
-end
-
+# TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
+# thereof, removing it if it remains unused.
 And(/I display toast "([^"]*)"$/) do |message|
   @browser.execute_script(<<-SCRIPT)
     var div = document.createElement('div');
@@ -699,7 +715,7 @@ When(/^I debug cookies$/) do
 end
 
 When(/^I debug focus$/) do
-  puts "Focused element id: #{@browser.execute_script("return document.activeElement.id")}"
+  puts "Focused element id: #{@browser.execute_script('return document.activeElement.id')}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|
@@ -790,7 +806,7 @@ end
 
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
-  @browser.navigate.to "#{url}"
+  @browser.navigate.to url
 end
 
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|

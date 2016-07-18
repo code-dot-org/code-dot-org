@@ -1,7 +1,14 @@
 "lv-LV":
   hour_of_code: Programmēšanas stunda
   hello: Sveika, pasaule
+  'yes': Jā
+  'no': Nē
   select_language: Lūdzu izvēlieties savu valodu
+  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
+    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
+    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_link: Uzzini vairāk
   en: Datorzinātne
   computer_science_edweek: Datorzinātnes Izglītības nedēļa
   csedweek_dates: 2014. gada 8. - 14. decembris
@@ -678,6 +685,11 @@
   dashboard_action_required: nepieciešams
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
@@ -710,6 +722,7 @@
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Jauna sadaļa
@@ -720,6 +733,7 @@
   dashboard_sections_table_secret: Autorizēšanās veids
   dashboard_sections_table_grade: Vērtējums
   dashboard_sections_table_course: Kurss
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Skolēni
   dashboard_sections_table_code: Sadaļas kods
   dashboard_sections_name: Sadaļas nosaukums
@@ -873,11 +887,11 @@
   dashboard_faq_k5: No bērnudārza līdz 5. klases līmeņa Biežāk Uzdotie Jautājumi
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
-    problem in computer science. Code Studio teachers are leading the way in educating
-    underrepresented minorities. Our annual survey shows record diversity in your
-    classrooms! Check out the numbers."
-  dashboard_announce_button_text: Uzzini vairāk
+  dashboard_announce_message: Want to help us test a new feature? We know it’s important
+    to encourage students to iterate and experiment, so we'll be adding an "unused
+    code" feature to allow students to run their code even when there are unattached
+    blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1015,6 +1029,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1717,8 +1732,22 @@
   infinity_shortcode: inf
   playlab_shortcode: spēlēt
   artist_shortcode: art
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Learn more
+  dashboard_announce_try_now_button: Try it now
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.

@@ -2,6 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
 import FontAwesome from '../FontAwesome';
+import msg from '../../locale';
 
 const styles = {
   collapseButton: {
@@ -25,7 +26,7 @@ const CollapserButton = props => (
         icon={props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'}
         style={styles.collapseIcon}
     />
-    {props.collapsed ? 'More' : 'Hide'}
+    {props.collapsed ? msg.more() : msg.less()}
   </button>
 );
 CollapserButton.propTypes = {

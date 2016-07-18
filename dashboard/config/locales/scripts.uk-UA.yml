@@ -157,7 +157,7 @@
           description_short: "Малюйте картини та узори разом з Художником!"
         hourofcode:
           Maze: "Лабіринт"
-          title: "Класичний лабіринт"
+          title: "Лабіринт"
           description: "Спробуйте основи інформатики з персонажами  Angry Birds, Plants
             vs. Zombies, та Білкою з Льодовикового періоду!"
           description_short: "Спробуйте основи інформатики з цікавими персонажами!"
@@ -173,11 +173,11 @@
         course4:
           description_short: "Учні, котрі приступають до Курсу 4, повинні попередньо
             пройти Курси 2 та 3."
-          description: "Курс 4 розроблено для учнів, котрі опанували Курси 2 та 3.
-            Учні глибше розглянуть деякі розділи програмування, з якими ознайомились
-            раніше, розроблятимуть гнучкіші рішення складніших задач. Протягом навчання
-            учні створюватимуть інтерактивні ігри чи історії, якими зможуть поділитися
-            з іншими. Рекомендується для 4-8 класу."
+          description: "Курс 4 призначений для учнів, які пройшли Курси 2 та 3. Учні
+            навчаться розв'язувати завдання підвищеної складності, а також комбінувати
+            поняття при розв'язуванні цих завдань. Завершивши курс, учні зможуть створювати
+            програми, які демонструватимуть опанування численних навичок, в тому числі
+            циклів та функцій з параметрами. Рекомендовано для 4-8 класів."
           'Artist: Variables': "Художник: змінні"
           'Bee: For Loops': "Бджілка - цикли з параметром"
           title: "Курс 4"
@@ -510,7 +510,7 @@
           Lossy Compression and File Formats: Lossy Compression and File Formats
           'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
           Bytes and File Sizes: Bytes and File Sizes
-          Personal Innovations: Personal Innovations
+          Personal Innovations: "Особисті інновації"
           Sending Complex Messages: Sending Complex Messages
           Sending Binary Messages with the Internet Simulator: Sending Binary Messages
             with the Internet Simulator
@@ -1020,6 +1020,8 @@
           Rich long assessment: Rich long assessment
           Free Response: Free Response
           Game Lab: Game Lab
+          Sample PLC Assessment: Sample PLC Assessment
+          Swapped Levels: Swapped Levels
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: "Етап 2 онлайн: Змішане літнє навчання"
@@ -1036,8 +1038,8 @@
           Booleans: "Логічні вирази"
           'Eval: Conditionals': "Оцінка: умови"
           Next Steps: Next Steps
-          Best Practices for Teaching Computer Science: Best Practices for Teaching
-            Computer Science
+          Best Practices for Teaching Computer Science: "Успішні методики викладання
+            інформатики"
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -1061,11 +1063,13 @@
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
-          title: Teaching Computer Science Fundamentals
-          description: Learn how to teach computer science using Code.org's Computer
-            Science Fundamentals with this free, self-paced online course.
-          description_short: Learn how to teach computer science using Code.org's
-            Computer Science Fundamentals with this free, self-paced online course.
+          title: "Викладання основ інформатики"
+          description: "Дізнайтеся, як викладати інформатику за допомогою безкоштовного
+            онлайнового курсу основ інформатики від Code.org, який можна проходити
+            у довільному темпі."
+          description_short: "Дізнайтеся, як викладати інформатику за допомогою безкоштовного
+            онлайнового курсу основ інформатики від Code.org, який можна проходити
+            у довільному темпі."
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
@@ -1073,8 +1077,8 @@
           'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
           'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
           'Mastering the Basics: Events': 'Mastering the Basics: Events'
-          Best Practices for Teaching Computer Science: Best Practices for Teaching
-            Computer Science
+          Best Practices for Teaching Computer Science: "Успішні методики викладання
+            інформатики"
           Planning: Planning
           Next Steps: Next Steps
           Looking Ahead: Looking Ahead
@@ -1159,8 +1163,8 @@
           Booleans: "Логічні вирази"
           'Eval: Conditionals': "Оцінка: умови"
           Next Steps: Next Steps
-          Best Practices for Teaching Computer Science: Best Practices for Teaching
-            Computer Science
+          Best Practices for Teaching Computer Science: "Успішні методики викладання
+            інформатики"
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
           Welcome!: "Ласкаво просимо!"
@@ -1842,7 +1846,7 @@
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
         algebraPD1:
-          title: Computer Science in Algebra PD
+          title: "Інформатика в алгебрі - Частина 1"
           description_short: Teach Algebra through Functional Programming
           description: Teach Algebra through Functional Programming
           Introduction to PD: "Знайомство з профессійним кодуванням"
@@ -1867,7 +1871,7 @@
             transfer it between people and computational devices. The unit then explores
             the structure and design of the internet and the implications of those
             design decisions.
-          Personal Innovations: Personal Innovations
+          Personal Innovations: "Особисті інновації"
           Sending Binary Messages: Sending Binary Messages
           Sending Complex Messages: Sending Complex Messages
           Sending Binary Messages with the Internet Simulator: Sending Binary Messages
@@ -2008,6 +2012,16 @@
           Counting with Variables: Counting with Variables
           Expressions: Expressions
           Conditionals and Keyboard Input: Conditionals and Keyboard Input
+          Sprites and Images: Sprites and Images
+          CSD U3 Variables and Animation: CSD U3 Variables and Animation
+          SFLP: SFLP
+          Animations: Animations
+          'Project: Interactive Card': 'Project: Interactive Card'
+          Booleans and Conditionals: Booleans and Conditionals
+          Variables and Animation: Variables and Animation
+          Complex Conditionals: Complex Conditionals
+          Proposed Sprites and Props: Proposed Sprites and Props
+          Conditionals Update: Conditionals Update
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2119,6 +2133,7 @@
           description_short: Unreleased level types for UI testing as admin
           description: Unreleased level types for UI testing as admin
           Game Lab: Game Lab
+          Contained Levels: Contained Levels
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -2208,6 +2223,8 @@
           title: " TEMP CSD Unit 2"
           description_short: Web Development
           description: Temp place to work on U2 of Disco
+          Headers and Lists: Headers and Lists
+          Introduction to HTML: Introduction to HTML
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description_short: Data
@@ -2222,3 +2239,156 @@
           description: Test of new educational philosophy with guiding storyline
           description_audience: Ages 8-18+
           Sample Stage: Sample Stage
+        MikeTest:
+          title: MikeTest
+          description_short: Just a script for playing around
+          description: Trying not to break anything
+          description_audience: Ages 8-98
+          Sample Stage: Sample Stage
+          Artist Functions: "Художник - функції"
+          The same thing with named levels: The same thing with named levels
+          You are a coding STAR: You are a coding STAR
+        artistExemplar:
+          title: Artist Exemplar
+          description_short: How can we make the artist levels really hum?
+          description: These artist levels will knock the socks off of third graders
+          description_audience: "Вік 8-18"
+          Artist Exemplar: Artist Exemplar
+        2016_sciencePD_phase2b:
+          title: Computer Science in Science PD Phase 2b 2016-2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: "Ласкаво просимо!"
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: "Підведення підсумків"
+        teachercon:
+          title: TeacherCon Supports
+          description_short: We will use this during TeacherCon to deliver supports
+            and materials for sessions
+          description: We will use this during TeacherCon to deliver supports and
+            materials for sessions
+          Introduction to Teachercon: Introduction to Teachercon
+          Lesson 1,4: 'Lesson 1.4: Number Systems (Circle Triangle Square)'
+          Lesson 1,6: 'Lesson 1.6: Sending Numbers'
+          Lesson 1,9: 'Lesson 1.9: Internet Addressing (Battleship)'
+          Lesson 1,10: 'Lesson 1.10: Routers and Redundancy'
+          Lesson 1,11: 'Lesson 1.11: Packets and Making a Reliable Internet'
+          Lesson 2,2: 'Lesson 2.2: Text Compression'
+          Lesson 2,3: 'Lesson 2.3: Black and White Pixelation'
+          Lesson 2,10: 'Lesson 2.10: Good and Bad Data Visualizations'
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+          Discovery Learning: Discovery Learning
+          Measuring Student Learning: Measuring Student Learning
+        2016_sciencePD-phase2b:
+          title: Computer Science in Science PD Phase 2b 2016 2017
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: "Ласкаво просимо!"
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: "Підведення підсумків"
+        kinderTest:
+          Kindergarten Stage 1: Kindergarten Stage 1
+        gradeKinder:
+          Debugging: Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': "Пазли: вчимося перетягувати"
+          Programming: "Програмування"
+          Being Safe Online: Being Safe Online
+          Loops: "Цикли"
+          Programming Unplugged: Programming Unplugged
+          Loops Unplugged: Loops Unplugged
+          Events Unplugged: Events Unplugged
+          Events: "Події"
+        grade4:
+          title: Grade 4
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 9-99
+          'Mixed Review #1 (Ramp Up)': 'Mixed Review #1 (Ramp Up)'
+          Conditionals: "Умови"
+          'Bee: Conditionals': "Бджілка - умови"
+          'PlayLab: Conditionals': 'PlayLab: Conditionals'
+          Songwriting: "Написання пісень"
+          'Bee: Functions': "Бджілка - функції"
+          Decision Trees: Decision Trees
+          Choose Your Own Adventure: Choose Your Own Adventure
+          'Project #1': 'Project #1'
+          Nested Loops: "Вкладені цикли"
+          'Artist: Nested Loops': "Художник - вкладені цикли"
+          'Mixed Review #2 (Conditionals, Events, Functions)': 'Mixed Review #2 (Conditionals,
+            Events, Functions)'
+          'New Artist: Functions': 'New Artist: Functions'
+          'Project #2': 'Project #2'
+          'Mixed Review #3 (Deduce the Concept)': 'Mixed Review #3 (Deduce the Concept)'
+          Internet: "Інтернет"
+          Crowdsourcing: "Краудсорсинг"
+          Digital Citizenship: "Цифрове громадянство"
+        grade1:
+          Predicting & Debugging: Predicting & Debugging
+          Persistence & Frustration: Persistence & Frustration
+          Sequences & Algorithms: Sequences & Algorithms
+          'Jigsaw: Learn to drag and drop': "Пазли: вчимося перетягувати"
+        grade5:
+          title: Grade 5
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 10-110
+        ecs-unit1:
+          title: ECS Part 1
+          description_short: 'Unit 1: Human-Computer Interaction'
+          description: 'Unit 1: Human-Computer Interaction'
+          Welcome!: "Ласкаво просимо!"
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: "Підведення підсумків"
+        ecs-unit2:
+          title: ECS Unit 2
+          description_short: 'Unit 2: Problem Solving'
+          description: 'Unit 2: Problem Solving'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Teaching Strategies: Teaching Strategies
+          Lesson Overviews: Lesson Overviews
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community
+            Problems with Data
+          'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To Problem
+            Solving: Candy Bar Activity'
+          'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6 Strategies
+            in Problem Solving: Handshake Activity'
+          'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow
+            Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14
+            Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees:
+            Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project

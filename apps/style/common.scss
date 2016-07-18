@@ -848,8 +848,8 @@ input[type="radio"] {
 
 }
 
-/* Instructions. */
-#bubble {
+/* Instructions. Not netsim-bubbles are styled in JSX */
+#bubble.netsim-bubble {
   color: $black;
   margin-bottom: 10px;
   position: relative;
@@ -934,32 +934,6 @@ input[type="radio"] {
         left: -35px;
         font-size: 18px;
       }
-    }
-  }
-}
-
-.modal-content {
-  .instructionsImage {
-    height: 35px;
-    vertical-align: text-bottom;
-  }
-  .instructions2 {
-    .instructionsImage {
-      height: 24px;
-      vertical-align: text-bottom;
-    }
-  }
-}
-
-#prompt-table {
-  .instructionsImage {
-    height: 25px;
-    vertical-align: text-bottom;
-  }
-  #prompt2 {
-    .instructionsImage {
-      height: 20px;
-      vertical-align: text-bottom;
     }
   }
 }

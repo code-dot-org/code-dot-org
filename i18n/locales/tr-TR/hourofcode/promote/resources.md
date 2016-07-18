@@ -60,13 +60,13 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Okulunuzdan, iş vereninizden veya arkadaşlarınızdan etkinliğe katılmalarını isteyin:
 
-Bilgisayarlar her yerde, ancak artık 10 yıl öncesine kıyasla daha az okul bilgisayar bilimini öğretiyor. İyi haber şu ki, biz bu durumu değiştirmek için yola çıktık. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. İyi haber şu ki, biz bu durumu değiştirmek için yola çıktık. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! anasayfalarındaydı. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! anasayfalarındaydı. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Organizasyondan bahsedin. Bir etkinlik düzenleyin. Yerel okullardan kaydolmalarını isteyin. Veya Kodlama Saatini kendiniz deneyin -- herkes temelleri öğrenerek kendine fayda sağlayabilir.
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
 Get started at http://hourofcode.com/<%= @country %>
 
@@ -76,15 +76,15 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
-Bilgisayarlar her yerde, ancak artık 10 yıl öncesine kıyasla daha az okul bilgisayar bilimini öğretiyor. Kızlar ve azınlıklar ciddi bir şekilde bu alanda yer alamıyor. İyi haber şu ki, biz bu durumu değiştirmek için yola çıktık.
+Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. İyi haber şu ki, biz bu durumu değiştirmek için yola çıktık.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! anasayfalarındaydı. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! anasayfalarındaydı. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 Size başlangıç komitemize katılmanız için yazıyorum, böylece çocukların [DATE]'ta etkinliğe başlayışını da görebileceksiniz.
 
-Kar amacı gütmeyen Code.org ve 100 diğer ortak tarafından organize edilen Kodlama Saati, bugünün öğrenci neslinin 21. yüzyılın başarıya ulaştıracak becerilerini öğrenmeye hazır olduğunu belirten bir ifadedir. Lütfen bize katılın.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Lütfen bize katılın.
 
 **İletişim:** [İSMİNİZ], [TITLE], GSM: (212) 555-5555
 
@@ -100,34 +100,36 @@ Geri dönüşünüzü sabırsızlıkla bekliyorum.
 
 Değerli veliler,
 
-Teknoloji ile donatılmış bir dünyada yaşıyoruz. Ve biliyoruz ki öğrencilerimiz yetişkin hayatlarında hangi alanda çalışmayı seçerse seçsinler, başarılı olma becerileri teknolojinin nasıl çalıştığını anlamaya gün geçtikçe daha da çok dayanacaktır. Ancak içimizden sadece küçük bir kitle bilgisayar bilimini öğreniyor, ve günümüzde 10 yıl öncesine kıyasla daha az öğrenci bilgisayar bilimini öğrenmeyi seçiyor.
+Teknoloji ile donatılmış bir dünyada yaşıyoruz. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-Bu nedenle tüm okulumuz tarihteki en büyük öğrenme etkinliğine katılıyor: Kodlama Saati, Bilgisayar Bilimi Eğitimi Haftası boyunca (8-14 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
-Bizim Kodlama Saatimiz [OKUL ADI]'nın temel 21. yüzyıl becerilerini öğretmeye hazır olduğunu belirten bir ifadedir. Öğrencilere programlama aktivitelerini getirmeye devam etmek için, biz Kodlama Saati etkinliğimizi büyük yapmak istiyoruz. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Bu [SEMT/ŞEHİR ADI]'deki eğitimin geleceğini değiştirmek için bir şans.
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
 See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Saygılarımla,
+Sincerely,
 
-Okul müdürünüz
+Your principal
 
 <a id="politicians"></a>
 
 ## Yerel bir siyasetçiyi okulunuzun etkinliğine davet edin:
 
-Değerli [Belediye Başkanı/Vali/Milletvekili SOYADI]:
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Günümüz ekonomisinde, bilgisayar alanında mezun olan öğrenci sayısının, bu alanda gereksinim duyulan çalışan sayısının sadece üçte birini karşılayabildiğini biliyor muydunuz? Üstelik, bilgisayar bilimi günümüzün *tüm* sektörleri için artık bir temel halindedir. Yet most of schools don’t teach it. [OKUL ADI]'nda, biz bunu değiştirmeye çalışıyoruz.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Bu nedenle tüm okulumuz tarihteki en büyük öğrenme etkinliğine katılıyor: Kodlama Saati, Bilgisayar Bilimi Eğitimi Haftası boyunca (8-14 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+Computer science is foundational for *every* industry today. Yet 75% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Size yazma amacım, sizi Kodlama Saati etkinliğimize davet etmek ve başlangıç komitemizde bir konuşma yapmanızdır. Etkinlik [TARİH, SAAT, YER]'de gerçekleştirilecek, ve [Semt veya Şehir adı]'nın öğrencilerine 21. yüzyılın kritik becerilerini öğretmeye hazır olduğunu sağlam bir şekilde ifade edecektir. Öğrencilerimizin teknolojiyi yaratma konusunda ön saflarda yer aldıklarından emin olmak istiyoruz -- sadece teknolojiyi tüketmelerini değil.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Lütfen [TELEFON NUMARASI VEYA E-POSTA ADRESİ]'den bana ulaşın. Cevabınızı dört gözle bekliyorum.
+I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Saygılarımla, [NAME],[TITLE]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
-<%= view :signup_button %>
+Sincerely, [NAME], [TITLE]

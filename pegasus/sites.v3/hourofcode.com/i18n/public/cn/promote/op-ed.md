@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 ### 以下示范专栏是关于支持计算机科学教育周，其目的是让其为州，议员，商界领袖等所用。
 
   
@@ -14,35 +13,34 @@ nav: promote_nav
 
 Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to find state specific information about computer science.
 
-**标题：计算机化......任何有工作的地方**
+**Title: Computing…Where the Jobs Are**
 
-**由[姓名]和[通过教育者，管理者或者商界领袖共同撰写]**
+**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-计算机无处不在。 他们在我们的口袋里。 他们在墙壁上。 他们在汽车里。 他们是我们基础设施的关键部分，从电网到红绿灯到金融市场的内部运作。 所有这些计算机都有共同的特点。 他们依靠软件来告诉他们该怎么做。
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-但是真正编写这些软件的又是谁？
+But who exactly is going to write this software?
 
-考虑到科技如此飞速的改变着我们当今的世界，你应该会想到在K-12教育下学习计算机科学的学生人数如今达到一个新的高度。 那你就错了。 事实上，和十年前相比，学习计算机科学的学生更少了，而且教这门课的学校也更少了。
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-但是我们会发现当我们对高级编程人才的需求空前高涨时，我们面对的现状却是极少的学习计算机的学生。 即使当下失业率居高不下，还是有数以千计的就业机会，就摆在这里**[插入州/市]**，但是并不会由一个缺乏足够相应技能的个体来填补这个空缺。
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
 
-为什么会这样？我们怎样才能解决这个问题？
+Why is this? And how can we address it?
 
-问题开始于我们的初中和高中。 我们的学校中有十分之九不提供计算机程序设计课。 在**[学区]**去年只有**[数字]**学生参加了大学预修水平（AP）的计算机科学考试，而在本州只有**[％]**的学生参加了AP。 我们根本没有做足够的准备或鼓励我们的学生追求这些高收入，重要的事业。
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-几乎所有主要的计算机创新技术都是在我们国家发明，但我们现在正面临失去这些优势，如果我们什么都不做。
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-我们学要做出改变。
+We need to make some changes.
 
-**[本文适用数据可选]**
+**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-一个积极的变化是让计算机科学课程更为严格，以满足高中数学或科学毕业要求。 在**[插入州]**，计算机科学课程是选修课。 鉴于学业要求，学生不能不选修计算机科学课程。 这个改变会产生巨大的影响。 相比于把计算机科学作为选修课的州，那些把计算机科学课程计入毕业要求的州，课程数量多于百分之五十并且少数人群参与率也更高。 
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-我们应该在学生年纪还小的时候就激发他们对计算机科学和编程的兴趣。 我们的孩子不应该只知道如何使用软件或者玩视频游戏-他们应该知道怎样创造它们。 孩子们可以早在二年级就开始学习基础的编程。
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 
-我们需要招聘更多的计算机科学教师，并鼓励他们在各自领域内的专业发展。 目前网上有很多资源，可以帮助教师为学生获取和不断更新的最新的科技技术。
+We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-根据劳动统计局的数据，到2020年，在STEM领域将有920万就业岗位。 这些工作中的半数-4.6亿-将和计算机或信息科技有关。 计算机科学正日趋成为21世纪的基础知识。 谁将填补这些职位，如果我们的孩子没有机会获得所需要的技能？
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. 整个**[州]**的学校，学生们将参加全国编程一小时，探秘计算机科学并希望能激发他们不断的更多的学习。 我也会加入他们，并同样邀请你也加入进来。 每个人都应该学习如何编程。 Visit https://hourofcode.com/<%= @country %> to learn more and get started. 支持我们的努力，把计算机科学带到更多的学校**[州]**。.
-
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.

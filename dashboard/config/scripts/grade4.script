@@ -1,0 +1,141 @@
+title 'Grade 4'
+description_short "Planning Script for CSF 2.0"
+description "Planning Script for CSF 2.0"
+description_audience "Ages 9-99"
+
+stage 'Mixed Review #1 (Ramp Up)'
+#Artist
+level 'grade4_intro_vid'
+level 'grade4_review_artist1'
+level 'grade4_review_artist2'
+level 'grade4_review_artist3'
+#Frozen Loops
+level 'grade4_review_frozen_loopvid'
+level 'grade4_frozen_square_loop1'
+level 'grade4_frozen_square_loop2'
+level 'grade4_frozen_square_loop3'
+#Bee Loops
+level 'grade4_bee_loopsvid'
+level 'grade4_review_bee1'
+level 'grade4_review_bee2'
+level 'grade4_review_bee3'
+#PlayLab Events
+level 'grade4_playlab_introvid'
+level 'blockly:Studio:c2_5'
+level 'blockly:Studio:c2_4'
+level 'blockly:Studio:c2_6'
+
+stage 'Unplugged: Nested Loops (New)'
+level 'comingSoon'
+
+stage 'Artist Ramp Up (including Nested Loops)'
+stage 'Nested Loops'
+stage 'Artist: Nested Loops'
+#Artist Loops
+level 'grade4_artist_nested_loop_triangles1'
+level 'grade4_artist_nested_loop_triangles2'
+level 'grade4_artist_nested_loop_triangles3'
+level 'grade4_artist_nested_loop_triangles4'
+level 'grade4_artist_nested_loop_triangles5'
+level 'grade4_artist_nested_loop_polygons1'
+level 'grade4_artist_nested_loop_squares1'
+level 'grade4_artist_nested_loop_polygons2'
+assessment 'grade4_artist_nested_loop_circles1'
+assessment '4-5 artist loops multi 1'
+level 'grade4_frozen_nested_loop_diamonds1'
+level 'grade4_frozen_nested_loop_diamonds2'
+level 'grade4_frozen_nested_loop_diamonds3'
+
+
+
+stage 'Bee: Conditionals'
+level 'grade4_bee_conditionals_ifvid'
+level 'grade4_bee_conditionals_quantum1'
+level 'grade4_bee_conditionals_quantum2'
+level 'grade4_bee_conditionals_new1a'
+#level 'grade4_bee_conditionals_new1'
+level 'grade4_bee_conditionals_new2a'
+level 'grade4_bee_conditionals_new2'
+level 'grade4_bee_conditionals_quantum3'
+level 'grade4_bee_conditionals_ifelsevid'
+level 'grade4_bee_conditionals_quantum4'
+level 'grade4_bee_conditionals_quantum5'
+level 'grade4_bee_conditionals_new3a'
+level 'grade4_bee_conditionals_new3b'
+level 'grade4_bee_conditionals_new3c'
+
+
+stage 'Unplugged: Conditionals with Cards'
+level 'Conditionals'
+assessment '2-3 Conditionals Multi 1'
+
+stage 'Conditionals'
+#If,ElseIf,Else,etc, nested
+level 'comingSoon'
+
+stage 'Decision Trees'
+stage 'Unplugged: Decision Trees (New)'
+level 'comingSoon'
+
+stage 'PlayLab: Conditionals'
+stage 'Choose Your Own Adventure'
+level 'comingSoon'
+
+stage 'Project #1'
+level 'comingSoon'
+
+
+
+stage 'Songwriting'
+level 'SongwritingParameters'
+assessment '4-5 Songwriting Multi 1'
+
+stage 'New Artist: Functions'
+level '2-3 Artist Functions 1'
+level 'grade4_artist_functionsvid'
+level '2-3 Artist Functions 2'
+level 'grade4_artist_functions_stars0'
+level 'grade4_artist_functions_stars1'
+level 'grade4_artist_functions_stars2'
+level 'grade4_artist_functions_stars3'
+level 'grade4_artist_functions_windows0'
+level 'grade4_artist_functions_windows1'
+level 'grade4_artist_functions_windows2'
+level 'grade4_frozen_functions0'
+level 'grade4_frozen_functions1'
+level 'grade4_frozen_functions2'
+level 'grade4_frozen_functions3'
+level 'grade4_frozen_functions4'
+level 'grade4_frozen_freeplay'
+
+stage 'Bee: Functions'
+level 'comingSoon'
+
+
+
+stage 'Mixed Review #2 (Conditionals, Events, Functions)'
+level 'comingSoon'
+
+
+stage 'Mixed Review #3 (Deduce the Concept)'
+level 'comingSoon'
+
+
+stage 'Project #2'
+level 'comingSoon'
+
+
+stage 'Internet'
+level 'Internet'
+assessment '4-5 Internet Multi 1'
+assessment '4-5 Internet Multi 2'
+
+stage 'Crowdsourcing'
+level 'Crowdsourcing'
+assessment '4-5 Crowdsourcing Multi 1'
+assessment '4-5 Crowdsourcing Multi 2'
+
+stage 'Digital Citizenship'
+level 'DigitalCitizenship'
+assessment '4-5 Digital Footprint Multi 1'
+

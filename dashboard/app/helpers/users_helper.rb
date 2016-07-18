@@ -9,7 +9,12 @@ module UsersHelper
     user_data = {}
     merge_user_summary(user_data, user)
     merge_script_progress(user_data, user, script, exclude_level_progress)
-    user_data
+
+    user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, script).try(:map) do |summary|
+      summary.merge(url: summary.key?(:id) ? peer_review_path(summary[:id]) : script_pull_review_path(script))
+    end
+
+    user_data.compact
   end
 
   # Summarize a user and his or her progress across all scripts.
@@ -82,31 +87,42 @@ module UsersHelper
       user_data[:trophies] = summarize_trophies(script, user)
     end
 
+    if script.professional_learning_course?
+      unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
+      if unit_assignment
+        user_data[:focusAreaPositions] = unit_assignment.focus_area_positions
+        user_data[:changeFocusAreaPath] = script_preview_assignments_path script
+      end
+    end
+
     unless exclude_level_progress
       uls = user.user_levels_by_level(script)
       script_levels = script.script_levels
       user_data[:levels] = {}
       script_levels.each do |sl|
-        ul = uls.try(:[], sl.level_id)
-        completion_status = activity_css_class(ul)
-        submitted = !!ul.try(:submitted)
-        if completion_status != 'not_tried'
-          user_data[:levels][sl.level_id] = {
-              status: completion_status,
-              result: ul.try(:best_result) || 0,
-              submitted: submitted
-          }
+        sl.level_ids.each do |level_id|
+          ul = uls.try(:[], level_id)
+          completion_status = activity_css_class(ul)
+          submitted = !!ul.try(:submitted)
+          if completion_status != 'not_tried'
+            user_data[:levels][level_id] = {
+                status: completion_status,
+                result: ul.try(:best_result) || 0,
+                submitted: submitted ? true : nil,
+                paired: ul.paired? ? true : nil
+            }.compact
 
-          # Just in case this level has multiple pages, in which case we add an additional
-          # array of booleans indicating which pages have been completed.
-          pages_completed = get_pages_completed(user, sl)
-          if pages_completed
-            user_data[:levels][sl.level_id][:pages_completed] = pages_completed
-            pages_completed.each_with_index do |result, index|
-              user_data[:levels]["#{sl.level_id}_#{index}"] = {
-                result: result,
-                submitted: submitted
-              }
+            # Just in case this level has multiple pages, in which case we add an additional
+            # array of booleans indicating which pages have been completed.
+            pages_completed = get_pages_completed(user, sl)
+            if pages_completed
+              user_data[:levels][level_id][:pages_completed] = pages_completed
+              pages_completed.each_with_index do |result, index|
+                user_data[:levels]["#{level_id}_#{index}"] = {
+                  result: result,
+                  submitted: submitted ? true : nil
+                }.compact
+              end
             end
           end
         end

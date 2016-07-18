@@ -1,10 +1,9 @@
-import testUtils from '../../../util/testUtils';
+import {setupLocale} from '../../../util/testUtils';
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 import blockUtils from '@cdo/apps/block_utils';
-testUtils.setupLocale('craft');
-import craftMsg from '@cdo/apps/craft/locale';
+setupLocale('craft');
 
-let _ = require('@cdo/apps/lodash');
+let _ = require('lodash');
 
 let blankPlane = _.range(100).map(function () {
   return "";

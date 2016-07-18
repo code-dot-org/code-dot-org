@@ -1,0 +1,40 @@
+name 'CSD U3 - complex conditionals - SFLP'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Overview
+
+An introduction to else statements and nested if statements to add more complex logic to programs.
+
+# Activities
+
+* Video: Conditionals
+* Levels: Complex Conditionals
+* Share: Sharing your final creation
+
+# Vocab
+
+* **Conditionals** - Statements that only run under certain conditions.
+
+# Commands 
+
+### Conditionals: 
+|Command| Meaning| Example | Documentation |
+|---|---| --- | --- |
+|else{}|Executes set of commands if all previous conditions are false|`if(keyDown("up"){} else{}`  | link |
+
+### Input : 
+|Command| Meaning| Example | Documentation |
+|---|---| --- | --- |
+|mouseDidMove()|Returns true if the mouse did move|`if(mouseDidMove()){}`  | link |
+|mouseWentDown(side)|Gives the y position of the mouse|`if(mouseWentDown("left")){}` | link |
+|mouseWentUp(side)|Gives the x position of the mouse|`if(mouseWentUp("left")){}`  | link |
+|keyWentDown(key)|Gives the y position of the mouse|`if(keyWentDown("e")){}`| link |
+|keyWentUp(key)|Gives the y position of the mouse|`if(keyWentDown("m")){}` | link |
+
+# Resources
+
+None
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

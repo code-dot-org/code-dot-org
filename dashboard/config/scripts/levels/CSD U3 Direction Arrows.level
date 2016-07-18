@@ -7,45 +7,23 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "drawSprites": {
-        "category": ""
-      },
-      "keyDown": {
-        "category": ""
-      },
-      "var sprite = createSprite": {
-        "category": ""
-      },
-      "x": {
-        "category": ""
-      },
-      "y": {
-        "category": ""
-      },
-      "background": {
-        "category": ""
-      },
-      "addOperator": {
-        "category": ""
-      },
-      "subtractOperator": {
-        "category": ""
-      },
-      "ifBlock": {
-        "category": ""
-      },
-      "comment": {
-        "category": ""
-      },
-      "console.log": {
-        "category": ""
-      }
+      "drawSprites": null,
+      "keyDown": null,
+      "var sprite = createSprite": null,
+      "x": null,
+      "y": null,
+      "background": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "ifBlock": null,
+      "comment": null,
+      "console.log": null
     },
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Move in All Directions\r\nOnce you've got your sprite moving in one direction by responding to a keypress, getting it to move in all four directions should be more of the same. The basic keyboard control that you're developing here will become the basis for many of the games you might want to make down the road\r\n\r\n# Do This\r\nStarting from just the `draw()` loop, you'll want to:\r\n\r\n- Create a sprite\r\n- Use conditionals to move it in all four directions from the keyboard\r\n\r\nAs you're working, make sure you consider both which axis your sprite should be moving depending on the key (x or y), and whether or not your should be increasing or decreasing to go in the desired direction.",
-    "start_blocks": "// Create a sprite\r\n\r\nfunction draw() {\r\n  // Draw the background\r\n  \r\n  // Move up if the UP_ARROW is pressed\r\n  \r\n  // Move down if the DOWN_ARROW is pressed\r\n  \r\n  // Move left if the LEFT_ARROW is pressed\r\n  \r\n  // Move right if the RIGHT_ARROW is pressed\r\n  \r\n  // Draw the sprite(s) on screen\r\n  drawSprites();\r\n}",
+    "markdown_instructions": "# Move in All Directions\r\nOnce you've got your sprite moving in one direction by responding to a `keyDown`, getting it to move in all four directions should be more of the same. The basic keyboard control that you're developing here will become the basis for many of the games you might want to make down the road\r\n\r\n# Do This\r\nThe bug sprite you made respond to the up arrow has been brought to this level. Add the interaction for the other three arrow keys!\r\n\r\n- Add three if statements - one for each arrow\r\n- Each if statement should move the sprite in the direction of the arrow\r\n- HINT: As you're working, make sure you consider both which axis (x or y) your sprite should be moving depending on the key , and whether or not your should be increasing or decreasing to go in the desired direction.",
+    "start_blocks": "// Create a sprite\r\n\r\nfunction draw() {\r\n  // Draw the background\r\n  \r\n  // Move up if the up arrow is pressed\r\n  \r\n  // Move down if the down arrow is pressed\r\n  \r\n  // Move left if the left arrow is pressed\r\n  \r\n  // Move right if the right arrow is pressed\r\n  \r\n  // Draw the sprite(s) on screen\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -68,7 +46,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "callout_json": "[]"
+    "callout_json": "[]",
+    "project_template_level_name": "CSD U3- arrows template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

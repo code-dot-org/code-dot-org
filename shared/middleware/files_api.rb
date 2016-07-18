@@ -64,13 +64,13 @@ class FilesApi < Sinatra::Base
   end
 
   def record_metric(quota_event_type, quota_type, value = 1)
-    return if !CDO.newrelic_logging
+    return unless CDO.newrelic_logging
 
     NewRelic::Agent.record_metric("Custom/FilesApi/#{quota_event_type}_#{quota_type}", value)
   end
 
   def record_event(quota_event_type, quota_type, encrypted_channel_id)
-    return if !CDO.newrelic_logging
+    return unless CDO.newrelic_logging
 
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
@@ -232,6 +232,20 @@ class FilesApi < Sinatra::Base
     put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
   end
 
+  # POST /v3/copy-assets/<channel-id>?src_channel=<src-channel-id>&src_files=<src-filenames-json>
+  #
+  # Copy assets from another channel. Note that when specifying the src files, you must
+  # json encode it
+  #
+  post %r{/v3/copy-assets/([^/]+)$} do |encrypted_channel_id|
+    dont_cache
+    AssetBucket.new.copy_files(
+      request['src_channel'],
+      encrypted_channel_id,
+      {filenames: JSON.parse(request['src_files'])}
+    ).to_json
+  end
+
   # POST /v3/animations/<channel-id>/<filename>?version=<version-id>
   #
   # Create or replace an animation. We use this method so that IE9 can still
@@ -255,13 +269,20 @@ class FilesApi < Sinatra::Base
 
   # PUT /v3/animations/<channel-id>/<filename>?src=<source-filename>
   #
-  # Create or replace an animation. We use this method so that IE9 can still
-  # upload by posting to an iframe.
+  # Create or replace an animation.
   #
   put %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type 'text/plain'
-    copy_file(endpoint, encrypted_channel_id, filename, request.GET['src'])
+    if request.content_type == 'image/png'
+      body = request.body.read
+      put_file(endpoint, encrypted_channel_id, filename, body)
+    elsif !request.GET['src'].nil?
+      # We use this method so that IE9 can still upload by posting to an iframe.
+      copy_file(endpoint, encrypted_channel_id, filename, request.GET['src'])
+    else
+      bad_request
+    end
   end
 
   #

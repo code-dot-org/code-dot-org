@@ -30,6 +30,8 @@
   unsubmit: Zurücknehmen
   previous_page: Vorherige Seite
   next_page: Nächste Seite
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Abbrechen
   okay: Okay
   heading_x_of_y: "%{heading} (page %{x} von %{y})"
@@ -94,6 +96,7 @@
     teacher_title: Registrierung für Lehrer
     student_pitch: Schüler-Registrierung für Code.org
     student_title: Registrierung für Schüler
+    signup_title: Sign up for Code.org
     school_name: Name der Schule (optional)
     school_address: Adresse der Schule (optional)
     address_placeholder: Adresse, Ort, Bundesland, PLZ
@@ -119,6 +122,9 @@
       von Code.org einverstanden.
     additional_information: Wir benötigen noch ein paar weitere Informationen, um
       mit deiner Anmeldung fortzufahren.
+    user_type_label: Account Type
+    user_type_teacher: Lehrer
+    user_type_student: Schüler
   signin_form:
     title: Hast du bereits einen Account? Anmelden
     login: E-Mail oder Benutzername
@@ -499,25 +505,17 @@
     notes_coming_soon: Hinweise für dieses Video kommen bald.
     autoplay_option: Autoplay Videos
     download: Video herunterladen
-  compatability:
-    working:
-      header: Wir arbeiten an der Unterstützung für Ihren Browser.
-      message: Code.org nutzt moderne Webtechnologie. Dies beschleunigt die Seitennutzung.
-        Dein Browser unterstützt nicht alle erforderlichen Funktionen. Gegebenenfalls
-        können bei der Nutzung der Seite Probleme auftreten. Bitte unterstütze uns,
-        indem du <a href='%{report_issue_url}'>auftretende Probleme meldest</a>. Du
-        kannst auch <a href='%{supported_browsers_url}'>eine aktuelle Version deines
-        Browsers herunterladen</a>.
-      hide_this_warning: Diese Warnung ausblenden
+  compatibility:
     upgrade:
-      header: Bitte aktualisiere dein Browser.
-      message: Code.org nutzt moderne Webtechnologie. Dies beschleunigt die Seitennutzung.
-        Leider unterstützt dein Browser nicht alle erforderlichen Funktionen dieser
-        Webseite.<br/><br/>Installiere einen der Browser auf unserer Liste unterstützter
-        Browser, um fortzufahren. Du kannst versuchen, <a href='#'>try die Seite anzusehen</a>,
-        aber die interaktiven Funktionen werden mit großer Wahrscheinlichkeit nicht
-        funktionieren.
-      button: Liste aller unterstützten Browser
+      unsupported_message: Ihr Browser wird nicht unterstützt. Bitte aktualisieren
+        Sie Ihren Browser auf <a href='%{supported_browsers_url}', target='_blank'>
+        einen von uns unterstützten Browser</a>. Sie können versuchen diese Seite
+        zu betrachten, aber es können Fehler auftreten.
+      ie_message: Code.org wird bald aufhören Internet Explorer 8, 9 und 10 zu unterstützen.
+        Bitte installieren Sie einen modernen Browser.
+      ie_message_csedweek: CSEdWeek.org wird bald aufhören Internet Explorer 8, 9
+        und 10 zu unterstützen. Bitte installieren Sie einen modernen Browser.
+      link: Mehr erfahren
   slow_loading: Das benötigt länger als normal...
   try_reloading: Versuche die Seite neu zu laden
   next_stage: Geschafft! Fahre mit dem nächsten Level fort.
@@ -618,12 +616,15 @@
       Schreiben eigener Computerprogramme <b>%{count}</b> Apps und Bilder gemacht.
       Klicke auf die Bilder und Screenshots der Programme, um sie in Aktion zu sehen.
     want_to_make_your_own: Möchtest du dein eigenes Programm machen?
+    how_to_save: Eine der letzten Stufe dieser Tutorials klicken Sie auf "Fertig stellen"
+      und "Speichern", um Ihre Arbeit in der Galerie speichern.
     more: Mehr &rarr;
     caption_by_name_age: Von %{name}, Alter %{age}
     caption_time_ago: vor %{time_ago}
     header: Galerie
     header_playlab: Geschichten und Spiele
     header_artist: Code-Kunst
+    report_abuse: Missbrauch melden
   landing:
     prerelease: Dieser Kurs ist in der <span class='betatext'>Beta-Version</span>.  Das
       bedeutet, dass dies nicht die endgültige Fassung des Kurses ist und noch Änderungen
@@ -843,13 +844,23 @@
     escalated:
       name: Eskaliert
       description: Ich möchte, dass ein Instrukteur die Einreichung überprüft
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+    instructor_feedback: Rückmeldung von der Lehrperson
+    peer_feedback: Rückmeldung von Mitschülern
+    outdated: Dieses Feedback wurde für eine frühere Version hinzugefügt
   components:
     icon_library:
       search_placeholder_text: Suche für ein Symbol...
       no_icons_found: Keine Symbole gefunden
+    playzone:
+      artist_description: Zeichne coole Bilder und Designs mit dem Künstler!
+      artist_title: Neue Zeichnung
+      continue_button: Gehen Sie zur nächsten Stufe
+      playlab_description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
+      playlab_title: Neue App
+      primary_header: Herzlichen Glückwunsch! Sie %{stageName} fertiggestellt!
+      projects_description: Besuchen Sie eines Ihrer bestehenden Projekte.
+      projects_title: Projekt öffnen
+      secondary_header: Fragen Sie Ihren Lehrer, was als nächstes zu tun ist
   flex_category:
     required: "Übersicht"
     content: Inhalt
@@ -862,3 +873,36 @@
       directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
       support</a> if you find the content objectionable, or if the linked site is
       no longer available."
+  hoc_download:
+    title: Hour of Code downloads
+    capsule_title: Haben Sie eine Internetverbindung?
+    capsule_desc: Verwenden Sie die online, Web-basierte <a href="%{url}">%{app_name}</a>.
+    instructions_headline: Keine Internetverbindung?
+    instructions: 'Instructions for teachers: if you have poor Internet service, these
+      Hour of Code tutorials are available to download and install for offline use.
+      Choose your language and platform, download and install it on all the computers
+      in your classroom. You may want to use a USB drive to download once and install
+      on all computers. Note: students will not be able to log into Code Studio, save
+      progress, or print certificates. Teachers may print certificates ahead of time
+      <a href="%{url}">here</a>.'
+    minecraft_name: Minecraft Hour Of Code
+    starwars_blocks_name: 'Star Wars: Aufbau einer Galaxis mit Code (Blöcke)'
+    starwars_javascript_name: 'Star Wars: Aufbau einer Galaxis mit Code (JavaScript)'
+    download_message: "%{app_name} zur Offline-Nutzung (136MB) herunterladen"
+    download_in_english: 'Download in englischer Sprache:'
+    download_in_spanish: 'Download in Spanisch:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

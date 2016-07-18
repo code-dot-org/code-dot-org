@@ -42,7 +42,7 @@
     "default_bit_rate_bits_per_second": "2",
     "show_chunk_size_control": "true",
     "lock_chunk_size_control": "false",
-    "default_chunk_size_bits": "4",
+    "default_chunk_size_bits": "8",
     "show_router_bandwidth_control": "false",
     "show_router_memory_control": "false",
     "show_dns_mode_control": "false",
@@ -53,6 +53,10 @@
     "markdown_instructions": "## Sending Formatted Text Activity\r\n\r\n**Directions:**  \r\nWork with a partner or in a small team to develop a protocol that allows you to send formatted text. \r\n\r\n**Guidelines:**  \r\n- Both the text and the formatting instructions must be derived from the printable ASCII character set (i.e. codes 32-126).\r\n- Your protocol must encode at least:\r\n\t- bold, italics, and underlining\r\n\t- three different font sizes (large, medium, and small)\r\n\t- three different font colors (red, black, blue)\r\n- You will demonstrate that your protocol works by having the recipient be able to faithfully draw (or produce in some fashion) the formatted text based only on the data she received through an ASCII-text version of the Internet Simulator. A sample message can be found below.\r\n\r\n![](https://images.code.org/6fa1d53e4d36a9d0bac5b9b8fb4bc81d-image-1434427211242.PNG)\r\n\r\n**Develop Your Protocol:**  \r\nUse the worksheet handed out by your teacher to brainstorm ideas for your protocol. Iteratively improve your protocol by testing it out with simple sample messages.\r\n",
     "examples_required": "false",
     "never_autoplay_video": "true"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

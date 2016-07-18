@@ -171,6 +171,75 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal end_expected, Pd::Workshop.end_in_days(10).all.map(&:id)
   end
 
+  test 'process_ended_workshop_async' do
+    workshop = create :pd_ended_workshop
+    Pd::Workshop.expects(:find).with(workshop.id).returns(workshop)
+    workshop.expects(:send_exit_surveys)
+
+    Pd::Workshop.process_ended_workshop_async workshop.id
+  end
+
+  test 'process_ended_workshop_async for non-closed workshop raises error' do
+    workshop = create :pd_workshop
+
+    e = assert_raises RuntimeError do
+      Pd::Workshop.process_ended_workshop_async workshop.id
+    end
+    assert e.message.include? 'Unexpected workshop state'
+  end
+
+  test 'send_exit_surveys enrolled-only teacher does not get mail' do
+    workshop = create :pd_ended_workshop
+
+    create :pd_workshop_participant, workshop: workshop, enrolled: true
+    Pd::WorkshopMailer.expects(:exit_survey).never
+
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys teachers in the section get emails' do
+    workshop = create :pd_ended_workshop
+
+    teachers = [
+      create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true),
+      create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true),
+      create(:pd_workshop_participant, workshop: workshop, enrolled: false, in_section: true),
+      create(:pd_workshop_participant, workshop: workshop, enrolled: false, in_section: true, attended: true)
+    ]
+
+    mock_mail = stub(deliver_now: nil)
+    teachers.each do |teacher|
+      Pd::WorkshopMailer.expects(:exit_survey).with(
+        workshop, teacher, instance_of(Pd::Enrollment)
+      ).returns(mock_mail)
+    end
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys turns accidental students accounts into teacher accounts' do
+    workshop = create :pd_ended_workshop
+
+    accidental_student_email = 'i-should-be-a-teacher@example.net'
+    accidental_student_attendee = create :student, email: accidental_student_email
+    create :pd_enrollment, workshop: workshop,
+      name: accidental_student_attendee.name, email: accidental_student_email
+    workshop.section.add_student accidental_student_attendee
+    create :pd_attendance, session: workshop.sessions.first, teacher: accidental_student_attendee
+
+    assert_empty accidental_student_attendee.email
+    mock_mail = stub(deliver_now: nil)
+    Pd::WorkshopMailer.expects(:exit_survey).with(
+      workshop, accidental_student_attendee, instance_of(Pd::Enrollment)
+    ).returns(mock_mail)
+
+    workshop.send_exit_surveys
+
+    accidental_student_attendee.reload
+    refute_empty accidental_student_attendee.email
+    assert accidental_student_attendee.teacher?
+    assert_equal accidental_student_email, accidental_student_attendee.email
+  end
+
   private
 
   def session_on_day(day_offset)

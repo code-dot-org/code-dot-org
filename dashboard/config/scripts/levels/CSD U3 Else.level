@@ -7,41 +7,25 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "draw": {
-        "category": ""
-      },
-      "drawSprites": {
-        "category": ""
-      },
-      "keyDown": {
-        "category": ""
-      },
-      "var sprite = createSprite": {
-        "category": ""
-      },
-      "shapeColor": {
-        "category": ""
-      },
-      "background": {
-        "category": ""
-      },
-      "ifBlock": {
-        "category": ""
-      },
-      "ifElseBlock": {
-        "category": ""
-      },
-      "comment": {
-        "category": ""
-      },
-      "console.log": {
-        "category": ""
-      }
+      "draw": null,
+      "drawSprites": null,
+      "keyDown": null,
+      "var sprite = createSprite": null,
+      "shapeColor": null,
+      "background": null,
+      "ifBlock": null,
+      "ifElseBlock": null,
+      "comment_Sprites": null,
+      "comment_GameLab": null,
+      "comment_Variables": null,
+      "comment_Control": null,
+      "comment_Drawing": null,
+      "console.log": null
     },
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# What If My Condition Isn't True?\r\nDepending on how you wrote the last program, your sprite may never have reset when its properties were changed. Take this conditional for example:\r\n\r\n```javascript\r\nif (sprite.x < 100) {\r\n\tsprite.rotation = 45;\r\n}\r\n```\r\n\r\nAfter the sprite's x property goes lower than 100 it will get rotated, but it won't rotate back if it goes above 100. Sometimes we want to tell our program what to do if a condition is `true`, but also what to do if it's `false`. Pressing the plus button at the bottom of your conditional block will give you another section called `else`. This `else` section is a fallback - it will get called whenever the conditions that come before it are all `false`.\r\n\r\nSo if we want the sprite to return to 0 rotation if it goes out of the left side of the screen, we could use `else` to change our program to:\r\n\r\n```javascript\r\nif (sprite.x < 100) {\r\n\tsprite.rotation = 45;\r\n} else {\r\n\tsprite.rotation = 0;\r\n}\r\n```\r\n\r\n# Do This\r\n\r\nThis simple program changes the sprite's color to blue if the _space_ key is pressed. You need to add an _else_ clause to turn it back to \"blue\". There are two ways you could do this\r\n\r\n* Click the _plus_ button at the bottom of the if block to add an else \r\n\r\n![](https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif)\r\n\r\n* Drag out the premade if/else block from the toolbox\r\n\r\n<img src=\"https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png\" width=\"125px\"/>",
+    "markdown_instructions": "# What If My Condition Isn't True?\r\n\r\n<img src=\"https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png\" width=\"125px\" style=\"float:right\">\r\n\r\nSometimes we want to tell our program what to do if a condition is `true`, but also what to do if it's `false`. Pressing the plus button at the bottom of your conditional block will give you another section called `else`. This `else` section is a fallback - it will get called whenever the condition in the `if` before it is `false`.\r\n\r\n# Do This\r\nThe gears are back again.  The last time you messed with them you made them only spin when the space bar is pressed. Instead of the gears only spinning when the space key is pressed we want them to spin one way when the space key is pressed and the rest of the time spin the other way.\r\n<img src=\"https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif\" style=\"float:right\">\r\n\r\n* Click the _plus_ button at the bottom of the if block to add an else \r\n* Add commands to make the gears spin the opposite direction than they do when the space bar is pressed",
     "start_blocks": "// Create a sprite\r\nvar sprite = createSprite(200, 200, 50, 50);\r\nsprite.shapeColor = \"blue\";\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  \r\n  // If the space key is down, change the sprite to red\r\n  // Else, change it back to blue\r\n  if (keyDown(\"space\")) {\r\n      sprite.shapeColor = \"red\";\r\n  }\r\n  \r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -65,7 +49,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "callout_json": "[]"
+    "callout_json": "[]",
+    "project_template_level_name": "CSD U3 - images - gears template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

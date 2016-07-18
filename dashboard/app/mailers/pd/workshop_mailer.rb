@@ -1,6 +1,4 @@
 class Pd::WorkshopMailer < ActionMailer::Base
-  default from: 'noreply@code.org'
-
   SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'
 
   # Name of partial view for workshop details organized by course, then subject.
@@ -40,6 +38,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @online_url = ONLINE_URL[@workshop.course]
 
     mail content_type: 'text/html',
+      from: from_teacher,
       subject: 'Your upcoming Code.org workshop and next steps',
       to: email_address(@enrollment.name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
@@ -51,9 +50,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @teacher_dashboard_url = CDO.code_org_url "/teacher-dashboard#/sections/#{@workshop.section_id}/manage"
 
     mail content_type: 'text/html',
+      from: from_no_reply,
       subject: 'Code.org workshop registration',
-      to: email_address(@workshop.organizer.name, @workshop.organizer.email),
-      reply_to: 'noreply@code.org'
+      to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def teacher_cancel_receipt(enrollment)
@@ -61,9 +60,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @workshop = enrollment.workshop
 
     mail content_type: 'text/html',
+      from: from_teacher,
       subject: 'Code.org workshop cancellation',
-      to: email_address(@enrollment.name, @enrollment.email),
-      reply_to: 'noreply@code.org'
+      to: email_address(@enrollment.name, @enrollment.email)
   end
 
   def organizer_cancel_receipt(enrollment)
@@ -71,9 +70,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @workshop = enrollment.workshop
 
     mail content_type: 'text/html',
+      from: from_no_reply,
       subject: 'Code.org workshop cancellation',
-      to: email_address(@workshop.organizer.name, @workshop.organizer.email),
-      reply_to: 'noreply@code.org'
+      to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def teacher_enrollment_reminder(enrollment)
@@ -82,31 +81,60 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
 
     mail content_type: 'text/html',
+      from: from_teacher,
       subject: 'Your upcoming Code.org workshop and next steps',
       to: email_address(@enrollment.name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  # TODO: Make sure every teacher has an enrollment
   def exit_survey(workshop, teacher, enrollment)
     @workshop = workshop
     @teacher = teacher
     @is_first_workshop = Pd::Workshop.attended_by(teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
 
-    @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}"
+    @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
 
-    mail content_type: 'text/html',
+    content_type = 'text/html'
+    if @workshop.course == Pd::Workshop::COURSE_CSF
+      attachments['certificate.jpg'] = generate_csf_certificate
+      content_type = 'multipart/mixed'
+    end
+
+    mail content_type: content_type,
+      from: from_hadi,
       subject: 'How was your Code.org workshop?',
-      to: email_address(@teacher.name, @teacher.email),
-      reply_to: email_address('Hadi Partovi', 'hadi_partovi@code.org')
+      to: email_address(@teacher.name, @teacher.email)
   end
 
   private
+
+  def generate_csf_certificate
+    image = create_certificate_image2(
+      dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
+      @teacher.name || @teacher.email,
+      y: 444,
+      height: 100,
+    )
+    image.format = 'jpg'
+    image.to_blob
+  end
 
   def email_address(display_name, email)
     Mail::Address.new(email).tap do |address|
       address.display_name = display_name
     end.format
+  end
+
+  def from_teacher
+    email_address('Code.org', 'teacher@code.org')
+  end
+
+  def from_no_reply
+    email_address('Code.org', 'noreply@code.org')
+  end
+
+  def from_hadi
+    email_address('Hadi Partovi', 'hadi_partovi@code.org')
   end
 
   def get_details_partial(course, subject)

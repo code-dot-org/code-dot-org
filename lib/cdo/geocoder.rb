@@ -2,7 +2,6 @@ require 'geocoder'
 require 'redis'
 
 module Geocoder
-
   module Result
     class Base
       def to_solr(prefix='location_')
@@ -38,17 +37,13 @@ module Geocoder
 end
 
 module ReplaceFreegeoipHostModule
-
   def self.included base
     base.class_eval do
-
       def query_url(query)
         "#{protocol}://#{CDO.freegeoip_host}/json/#{query.sanitized_text}"
       end
-
     end
   end
-
 end
 Geocoder::Lookup::Freegeoip.send(:include,ReplaceFreegeoipHostModule) if CDO.freegeoip_host
 

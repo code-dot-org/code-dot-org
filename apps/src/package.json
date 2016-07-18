@@ -12,5 +12,6 @@
   },
   "browserify-shim": {
     "marked": "global:marked"
-  }
+  },
+  "dependencies": {}
 }

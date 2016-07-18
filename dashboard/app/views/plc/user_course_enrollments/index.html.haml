@@ -1,9 +1,7 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/plc', media: 'all'
 
-- if @user_course_enrollments.nil? || @user_course_enrollments.empty?
-  %p Hello #{current_user.name}, your future course progress will go here
-- else
+- if @user_course_enrollments.try(:any?)
   - @user_course_enrollments.each do |user_course_enrollment|
     %h3.course_title
       = user_course_enrollment.plc_course.name
@@ -13,7 +11,7 @@
         - unit_group.each do |unit_enrollment|
           .course_unit_section
             .course_unit_title
-              = unit_enrollment.plc_course_unit.unit_name
+              = link_to unit_enrollment.plc_course_unit.unit_name, unit_enrollment.plc_course_unit.script
             - if unit_enrollment.status == Plc::EnrollmentUnitAssignment::START_BLOCKED
               .coming_soon
                 Coming soon!
@@ -21,20 +19,20 @@
               - required_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::REQUIRED_MODULE
               - content_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::CONTENT_MODULE
               - practice_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::PRACTICE_MODULE
-              - evaluation_pending = required_module_assignment && content_module_assignment.nil? && practice_module_assignment.nil?
-              - unit_overview_status = evaluation_pending ? 'in_progress' : required_module_assignment.try(:status) || 'completed'
-              = link_to unit_enrollment.plc_course_unit.script do
+              = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'overview') do
                 .module_assignment
-                  Overview
+                  = t('flex_category.required')
                   .ribbon-wrapper
-                    .ribbon{class: unit_overview_status}
-              = link_to unit_enrollment.plc_course_unit.script do
+                    .ribbon{class: required_module_assignment.try(:status) || 'not_started'}
+              = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'content') do
                 .module_assignment
-                  Content
+                  = t('flex_category.content')
                   .ribbon-wrapper
                     .ribbon{class: content_module_assignment.try(:status) || 'not_started'}
-              = link_to unit_enrollment.plc_course_unit.script do
+              = link_to script_path(unit_enrollment.plc_course_unit.script, anchor: 'teaching-practices') do
                 .module_assignment
-                  Teaching Practice
+                  = t('flex_category.practice')
                   .ribbon-wrapper
                     .ribbon{class: practice_module_assignment.try(:status) || 'not_started'}
+- else
+  %p Hello #{current_user.name}, your future course progress will go here

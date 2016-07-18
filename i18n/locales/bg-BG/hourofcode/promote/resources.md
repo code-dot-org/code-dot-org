@@ -35,15 +35,15 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 [Изтегли версии с висока резолюция](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+**"Hour of Code" е търговска марка. Ние не искаме да спираме това използване, но при няколко ограничения:**
 
-  1. Всяко позоваване на "Часът на кодирането" трябва да се използва по начин, който не предполага, че това е ваша собствена търговска марка, но по-скоро да се разбира, че Часът на кодирането е вид масово движение. Добър пример: "Участвайте в Hour of Code на ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  1. Всяко позоваване на "Часът на кодирането" трябва да се използва по начин, който не предполага, че това е ваша собствена търговска марка, но по-скоро да се разбира, че Часът на кодирането е вид масово движение. Добър пример: "Участвайте в Hour of Code на ACMECorp.com". Лош пример: "Опитайте Hour of Code от ACME Corp".
+  2. Използвайте "ТМ" с горен индекс на най-видимите места, на които споменавате "Hour of Code", както на вашия уеб сайт така и в описанието на дейността си.
   3. Обяснете нашата кампания на вашият език на страницата ви(или в допълнителна опция), като включите връзки към CSEdWeek и Code.org сайтовете, както и следното:
     
     *"Hour of Code ™" е национална инициатива на Csew [csedweek.org] и Code.org[code.org] да се подпомогнат милиони ученици с един час в компютърните науки и по компютърно програмиране."*
 
-  4. No use of "Hour of Code" in app names.
+  4. Не се разрешава използването на "Hour of Code" в имена на приложения.
 
 <a id="stickers"></a>
 
@@ -60,13 +60,13 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Попитайте Вашето училище, работодател или приятели дали може се регистрирате:
 
-Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Добрата новина е, че ние сме на път да променим това. Ако сте чували за часът на кода преди, може би знаете че той влезе в историята. Повече от 100 милиона ученици са пробвали Часът на кода.
+Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. Добрата новина е, че ние сме на път да променим това. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-С часа на кода, компютърните науки бяха на началните страници на Google, MSN, Yahoo! и Дисни. Над 100 партньора се събраха в подкрепа на това движение. Миналата година, всеки Apple Магазин в света стана домакин на Часът на кода и дори президента Обама написа своята първа линия код като част от кампанията.
+С часа на кода, компютърните науки бяха на началните страници на Google, MSN, Yahoo! и Дисни. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-Тази година, нека го направим още по-голямо. Аз Ви моля да се включите в Часа на кода 2015 <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Вземете думата. Организирайте събитие. Помогнете на местното училище да се регистрира. Или пробвайте сами - всеки може да се възползва от изучаването на основите.
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
 Първи стъпки в http://hourofcode.com/<%= @country %>
 
@@ -76,15 +76,15 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 **Тема:** Местното училище се присъединява към мисията да въведе 100 милиона ученици в компютърните науки
 
-Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Момичета не проявяват интерес към тях. Добрата новина е, че ние сме на път да се променим това.
+Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Добрата новина е, че ние сме на път да променим това.
 
-С часа на кода, компютърните науки бяха на началните страници на Google, MSN, Yahoo! и Дисни. Над 100 партньора се събраха в подкрепа на това движение. Миналата година, всеки Apple Магазин в света стана домакин на Часът на кода и дори президента Обама написа своята първа линия код като част от кампанията.
+С часа на кода, компютърните науки бяха на началните страници на Google, MSN, Yahoo! и Дисни. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
-Ето защо всеки един [X] ученик от [името на училището] може да се присъедини към най-голямото обучително събитие в историята: Часът на кодирането, през декември 7-13.
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
 Аз писмено ви каня да присъствате на нашето откриване и да видите как децата започват дейността на [DATE].
 
-Часът на кодирането е движение, организирано от Code.org и над 100 други организации, с идеята да подпомогне днешното поколение да мисли научно и критично за да придобие умения за успех през 21-ви век. Моля, присъединете се към нас.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Моля, присъединете се към нас.
 
 **Контакт:** [Вашето име], [TITLE], мобилен: (212) 555-5555
 
@@ -100,34 +100,36 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 Уважаеми родители,
 
-Ние живеем в един свят, заобиколени от технологиите. И ние знаем, че каквото и поле на изява, нашите ученици да изберат когато пораснат, способността им за успех все повече ще зависи от разбирането как технологията работи. Но само една малка част от нас учат компютърни науки, и тази част е значително по-малка отколкото преди десетилетие.
+Ние живеем в един свят, заобиколени от технологиите. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-Ето защо нашето училище се присъединява към най-голямото обучително събитие в историята: часът на кодирането, по време на CSEW (зал. 7-13). Повече от 100 милиона ученици по света вече сте опитали един Час по кодиране.
+But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
 
-Нашият Час на кодирането е декларация, че [име на училището] е готово да преподава тези умения, фундаментални за 21-ви век. За да продължи провеждането на дейности по програмиране за учениците ни, ние искаме да направим нашият час на кодирането огромен. Препоръчваме Ви да информирате местните медии, които да споделят новината и да помислим за провеждане на допълнително Час на кодирането събитие в Общността.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Това е шанс да промените бъдещето на образованието в [името на град].
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-Вижте http://hourofcode.com/<%= @country %> за подробности, както и за помощ в разпространяването на събитието.
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
-Искрено Ваш
+See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Директор
+Sincerely,
+
+Your principal
 
 <a id="politicians"></a>
 
 ## Поканете местен политик на училищното ви събитие:
 
-Уважаеми [кмет/управител/представител/сенатор фамилно име]:
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Знаете ли, че в днешната икономика, компютърните работни места са повече от студентите, завършващи в съотношение от 3 към 1? А компютърните науки са основополагащи за *всяка* индустрия днес. Все пак повечето от училища не преподават това. В [името на училището] се опитваме да променим това.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Ето защо нашето училище се присъединява към най-голямото обучително събитие в историята: часът на кодирането, по време на CSEW (зал. 7-13). Повече от 100 милиона ученици по света вече сте опитали един Час по кодиране.
+Computer science is foundational for *every* industry today. Yet 75% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Аз писмено ви каня да участвате в нашия Час на кодирането и да говорите на откриването. Събитието ще се проведе на [дата, час, място] и ще отбележи готовността, че [държава или град име] е готов да се преподават на нашите ученици критични за 21-ви век умения. Ние искаме да гарантираме, че нашите ученици са в челните редици на създаване на технологията на бъдещето--не само го консумират.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Моля свържете се с мен [ТЕЛЕФОНЕН номер или имейл адрес]. Очаквам с нетърпение вашия отговор.
+I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Искрено Ваш/а, [NAME], [TITLE]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
-<%= view :signup_button %>
+Sincerely, [NAME], [TITLE]

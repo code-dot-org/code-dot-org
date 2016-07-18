@@ -31,3 +31,12 @@ commonStyles.button = {
   paddingBottom: 5,
   fontSize: 14
 };
+
+// Div contain instructions, either below visualization or in top instructions
+// May not need a common location once everything is in top instructions
+commonStyles.bubble = {
+  color: color.black,
+  marginBottom: 10,
+  position: 'relative',
+  cursor: 'pointer'
+};

@@ -8,7 +8,7 @@
 // look: Colour of sonar-like look icon.
 
 var skinsBase = require('../skins');
-var _ = require('../lodash');
+var _ = require('lodash');
 
 var CONFIGS = {
   letters: {
@@ -53,6 +53,19 @@ var CONFIGS = {
     tileSheetWidth: 5,
     pegmanHeight: 50,
     pegmanWidth: 50
+  },
+
+  collector: {
+    obstacleIdle: 'obstacle.png',
+
+    goal: 'gold.png',
+
+    look: '#000',
+    transparentTileEnding: true,
+    nonDisappearingPegmanHittingObstacle: true,
+    background: 'background.png',
+    pegmanYOffset: -8,
+    danceOnLoad: true
   },
 
   farmer: {

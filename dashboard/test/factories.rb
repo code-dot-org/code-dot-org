@@ -1,4 +1,9 @@
 FactoryGirl.define do
+  factory :paired_user_level do
+    driver_user_level {user_level}
+    navigator_user_level {user_level}
+  end
+
   factory :user do
     birthday Date.new(1991, 03, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }
@@ -11,6 +16,13 @@ FactoryGirl.define do
     # Child of :user factory, since it's in the `factory :user` block
     factory :admin do
       admin true
+    end
+
+    factory :levelbuilder do
+      after(:create) do |levelbuilder|
+        levelbuilder.permission = UserPermission::LEVELBUILDER
+        levelbuilder.save
+      end
     end
 
     factory :teacher do
@@ -42,6 +54,23 @@ FactoryGirl.define do
         after(:create) do |district_contact|
           district_contact.permission = UserPermission::DISTRICT_CONTACT
           district_contact.save
+        end
+      end
+      # Creates a teacher optionally enrolled in a workshop,
+      # joined the workshop section,
+      # or marked attended on the first workshop session.
+      factory :pd_workshop_participant do
+        transient do
+          workshop nil
+          enrolled true
+          in_section false
+          attended false
+        end
+        after(:create) do |teacher, evaluator|
+          raise 'workshop required' unless evaluator.workshop
+          create :pd_enrollment, workshop: evaluator.workshop, name: teacher.name, email: teacher.email if evaluator.enrolled
+          evaluator.workshop.section.add_student teacher if evaluator.in_section
+          create :pd_attendance, session: evaluator.workshop.sessions.first, teacher: teacher if evaluator.attended
         end
       end
     end
@@ -152,9 +181,17 @@ FactoryGirl.define do
     game {Game.applab}
   end
 
+  factory :free_response, :parent => Level, :class => FreeResponse do
+    game {Game.free_response}
+  end
+
   factory :makerlab, :parent => Level, :class => Applab do
     game {Game.applab}
     properties{{makerlab_enabled: true}}
+  end
+
+  factory :gamelab, :parent => Level, :class => Gamelab do
+    game {Game.gamelab}
   end
 
   factory :multi, :parent => Level, :class => Applab do
@@ -162,8 +199,11 @@ FactoryGirl.define do
     properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
   end
 
-  factory :external, parent: Level, class: External do
+  factory :evaluation_multi, :parent => Level, :class => EvaluationMulti do
+    game {create(:game, app: 'evaluation_multi')}
+  end
 
+  factory :external, parent: Level, class: External do
   end
 
   factory :external_link, parent: Level, class: ExternalLink do
@@ -364,26 +404,6 @@ FactoryGirl.define do
     unit_order 1
   end
 
-  factory :plc_written_submission_task, parent: :plc_task, class: 'Plc::WrittenAssignmentTask' do
-    level_id nil
-  end
-
-  factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
-    resource_url nil
-    icon nil
-  end
-
-  factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
-    answer "MyString"
-    plc_evaluation_question nil
-    plc_learning_module nil
-  end
-
-  factory :plc_evaluation_question, :class => 'Plc::EvaluationQuestion' do
-    question "MyString"
-    plc_course_unit nil
-  end
-
   factory :plc_enrollment_module_assignment, :class => 'Plc::EnrollmentModuleAssignment' do
     plc_enrollment_unit_assignment nil
     plc_learning_module nil
@@ -414,26 +434,6 @@ FactoryGirl.define do
   end
   factory :plc_course, :class => 'Plc::Course' do
     name "MyString"
-  end
-
-  factory :user_professional_learning_course_enrollment do
-    user nil
-    professional_learning_course nil
-  end
-
-  factory :professional_learning_course do
-    name "Some course"
-  end
-
-  factory :professional_learning_module do
-    name "Some module"
-    learning_module_type "Some learning module type"
-    required false
-  end
-
-  factory :professional_learning_task do
-    name "Some task"
-    professional_learning_module nil
   end
 
   factory :level_group do
@@ -472,7 +472,13 @@ FactoryGirl.define do
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
     capacity 10
+  end
 
+  factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
+    sessions {[create(:pd_session)]}
+    section {create(:section)}
+    started_at {Time.zone.now}
+    ended_at {Time.zone.now}
   end
 
   factory :pd_session, class: 'Pd::Session' do
@@ -519,5 +525,4 @@ FactoryGirl.define do
     state "WA"
     zip "98101"
   end
-
 end

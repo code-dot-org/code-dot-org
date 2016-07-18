@@ -1,7 +1,8 @@
 /**
  * This file manages logic for the dropdown used in our setProperty block
  */
-var _ = require('../lodash');
+var _ = require('lodash');
+import {getFirstParam} from '../dropletUtils';
 var library = require('./designElements/library');
 var ElementType = library.ElementType;
 
@@ -15,6 +16,8 @@ var ElementType = library.ElementType;
  * friendlyName: Name used in the code editor to refer to this property
  * internalName: Name used in updateProperty to refer to this property
  * type: Type of this property, used for validation at run time.
+ * alias (optional): True if this property should not be displayed to the user
+ *     in the drop down list of properties
  */
 var PROP_INFO = {
   width: { friendlyName: 'width', internalName: 'style-width', type: 'number'},
@@ -32,7 +35,11 @@ var PROP_INFO = {
   placeholder: { friendlyName: 'placeholder', internalName: 'placeholder', type: 'string' },
   image: { friendlyName: 'image', internalName: 'image', type: 'string' },
   screenImage: { friendlyName: 'image', internalName: 'screen-image', type: 'string' },
-  picture: { friendlyName: 'picture', internalName: 'picture', type: 'string' },
+  // pictureImage and picture both map to 'picture' internally, but allow us to accept
+  // either 'image' or 'picture' as the property name. picture is marked as an alias so
+  // it won't show up in the dropdown.
+  pictureImage: { friendlyName: 'image', internalName: 'picture', type: 'string' },
+  picture: { friendlyName: 'picture', internalName: 'picture', type: 'string', alias: true },
   groupId: { friendlyName: 'group-id', internalName: 'groupId', type: 'string' },
   checked: { friendlyName: 'checked', internalName: 'checked', type: 'boolean' },
   readonly: { friendlyName: 'readonly', internalName: 'readonly', type: 'boolean' },
@@ -48,145 +55,181 @@ var fullDropdownOptions = _.uniq(Object.keys(PROP_INFO).map(function (key) {
   return '"' + PROP_INFO[key].friendlyName + '"';
 }));
 
-// Which of the items from PROP_INFO should each element type use
-var PROP_NAMES = {};
-PROP_NAMES[ElementType.BUTTON] = [
-  'text',
-  'width',
-  'height',
-  'x',
-  'y',
-  'textColor',
-  'backgroundColor',
-  'fontSize',
-  'textAlign',
-  'image',
-  'hidden'
-];
-PROP_NAMES[ElementType.TEXT_INPUT] = [
-  'placeholder',
-  'width',
-  'height',
-  'x',
-  'y',
-  'textColor',
-  'backgroundColor',
-  'fontSize',
-  'textAlign',
-  'hidden'
-];
-PROP_NAMES[ElementType.LABEL] = [
-  'text',
-  'width',
-  'height',
-  'x',
-  'y',
-  'textColor',
-  'backgroundColor',
-  'fontSize',
-  'textAlign',
-  'hidden'
-];
-PROP_NAMES[ElementType.DROPDOWN] = [
-  'options',
-  'width',
-  'height',
-  'x',
-  'y',
-  'textColor',
-  'backgroundColor',
-  'fontSize',
-  'textAlign',
-  'hidden'
-];
-PROP_NAMES[ElementType.RADIO_BUTTON] = [
-  'groupId',
-  'width',
-  'height',
-  'x',
-  'y',
-  'hidden',
-  'checked'
-];
-PROP_NAMES[ElementType.CHECKBOX] = [
-  'width',
-  'height',
-  'x',
-  'y',
-  'hidden',
-  'checked'
-];
-PROP_NAMES[ElementType.IMAGE] = [
-  'width',
-  'height',
-  'x',
-  'y',
-  'picture',
-  'hidden'
-];
-PROP_NAMES[ElementType.CANVAS] = [
-  'canvasWidth',
-  'canvasHeight',
-  'x',
-  'y',
-];
-PROP_NAMES[ElementType.SCREEN] = [
-  'backgroundColor',
-  'screenImage'
-];
-PROP_NAMES[ElementType.TEXT_AREA] = [
-  'text',
-  'width',
-  'height',
-  'x',
-  'y',
-  'textColor',
-  'backgroundColor',
-  'fontSize',
-  'textAlign',
-  'readonly',
-  'hidden'
-];
-PROP_NAMES[ElementType.CHART] = [
-  'width',
-  'height',
-  'x',
-  'y',
-  'hidden'
-];
-PROP_NAMES[ElementType.SLIDER] = [
-  'width',
-  'height',
-  'x',
-  'y',
-  'value',
-  'min',
-  'max',
-  'step',
-  'hidden'
-];
+/**
+ * Information about properties pertaining to each element type. Values have the following
+ * fields. The latter two fields (friendlyNames and infoForFriendlyNames) are initialized
+ * through code run at startup time.
+ * propertyNames: a list of names (keys for PROP_INFO) associated with that element
+ * dropdownOptions: an array of property friendly names to be shown to the user for that element
+ * infoForFriendlyName: map from all friendly names for that element to property info
+ */
+var PROPERTIES = {};
+PROPERTIES[ElementType.BUTTON] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'textColor',
+    'backgroundColor',
+    'fontSize',
+    'textAlign',
+    'image',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.TEXT_INPUT] = {
+  propertyNames: [
+    'text',
+    'placeholder',
+    'width',
+    'height',
+    'x',
+    'y',
+    'textColor',
+    'backgroundColor',
+    'fontSize',
+    'textAlign',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.LABEL] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'textColor',
+    'backgroundColor',
+    'fontSize',
+    'textAlign',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.DROPDOWN] = {
+  propertyNames: [
+    'text',
+    'options',
+    'width',
+    'height',
+    'x',
+    'y',
+    'textColor',
+    'backgroundColor',
+    'fontSize',
+    'textAlign',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.RADIO_BUTTON] = {
+  propertyNames: [
+    'text',
+    'groupId',
+    'width',
+    'height',
+    'x',
+    'y',
+    'hidden',
+    'checked'
+  ]
+};
+PROPERTIES[ElementType.CHECKBOX] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'hidden',
+    'checked'
+  ]
+};
+PROPERTIES[ElementType.IMAGE] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'pictureImage',
+    'picture', // Since this is an alias, it is not shown in the dropdown but is allowed as a value
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.CANVAS] = {
+  propertyNames: [
+    'text',
+    'canvasWidth',
+    'canvasHeight',
+    'x',
+    'y'
+  ]
+};
+PROPERTIES[ElementType.SCREEN] = {
+  propertyNames: [
+    'text',
+    'backgroundColor',
+    'screenImage'
+  ]
+};
+PROPERTIES[ElementType.TEXT_AREA] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'textColor',
+    'backgroundColor',
+    'fontSize',
+    'textAlign',
+    'readonly',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.CHART] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'hidden'
+  ]
+};
+PROPERTIES[ElementType.SLIDER] = {
+  propertyNames: [
+    'text',
+    'width',
+    'height',
+    'x',
+    'y',
+    'value',
+    'min',
+    'max',
+    'step',
+    'hidden'
+  ]
+};
 
-// Create a mapping of PROPS_PER_TYPE[elementType][friendlyName] => prop info
-var PROPS_PER_TYPE = {};
-Object.keys(PROP_NAMES).map(function (elementType) {
-  PROPS_PER_TYPE[elementType] = {};
-  PROP_NAMES[elementType].forEach(function (propName) {
+// Initialize dropdownOptions and infoForFriendlyNames fields in PROPERTIES map.
+for (var elementType in PROPERTIES) {
+  var elementProperties = PROPERTIES[elementType];
+  elementProperties.dropdownOptions = [];
+  elementProperties.infoForFriendlyName = {};
+  elementProperties.propertyNames.forEach(function (propName) {
     var friendlyName = PROP_INFO[propName].friendlyName;
-    if (PROPS_PER_TYPE[elementType][friendlyName]) {
+    if (elementProperties.infoForFriendlyName[friendlyName]) {
       throw new Error('Multiple props for friendlyName: ' + friendlyName +
         ' in elementType: ' + elementType);
     }
-    PROPS_PER_TYPE[elementType][friendlyName] = PROP_INFO[propName];
+    elementProperties.infoForFriendlyName[friendlyName] = PROP_INFO[propName];
+    if (!PROP_INFO[propName].alias) {
+      elementProperties.dropdownOptions.push('"' + friendlyName + '"');
+    }
   });
-});
-
-function getFirstSetPropertyParamFromCode(code) {
-  var prefix = 'setProperty(';
-  code = code.slice(code.lastIndexOf(prefix));
-
-  // quote, followed by param, followed by end quote, comma, and optional whitespace
-  var match = /^setProperty\((['"])(.*)\1,\s*$/.exec(code);
-  return match ? match[2] : null;
 }
 
 /**
@@ -194,26 +237,7 @@ function getFirstSetPropertyParamFromCode(code) {
  * @param {AceEditor}
  */
 function getFirstSetPropertyParam(block, editor) {
-  if (!block) {
-    // If we're not given a block, assume that we're in text mode
-    var cursor = editor.session.selection.getCursor();
-    var contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
-
-    return getFirstSetPropertyParamFromCode(contents);
-  }
-  // We have a block. Parse it to find our first socket.
-  var token = block.start;
-  do {
-    if (token.type === 'socketStart') {
-      var textToken = token.next;
-      if (textToken.type !== 'text') {
-        throw new Error('unexpected');
-      }
-      return textToken.value;
-    }
-    token = token.next;
-  } while (token);
-  return null;
+  return getFirstParam('setProperty', block, editor);
 }
 
 /**
@@ -228,6 +252,23 @@ function stripQuotes(str) {
 }
 
 /**
+ * Gets the properties that should be shown in the dropdown list for elements of the given type.
+ * @param {string} elementType
+ * @returns {!Array<string>} list of quoted property names
+ */
+function getDropdownProperties(elementType) {
+  if (!elementType) {
+    return fullDropdownOptions;
+  }
+
+  if (!(elementType in PROPERTIES)) {
+    return fullDropdownOptions;
+  }
+
+  return PROPERTIES[elementType].dropdownOptions;
+}
+
+/**
  * Given an element and a friendly name for that element, returns an object
  * containing the internal equivalent for that friendly name, or undefined
  * if we don't have info for this element/property.
@@ -236,7 +277,7 @@ module.exports.getInternalPropertyInfo = function (element, friendlyPropName) {
   var elementType = library.getElementType(element, true);
   var info;
   if (elementType) {
-    info = PROPS_PER_TYPE[elementType][friendlyPropName];
+    info = PROPERTIES[elementType].infoForFriendlyName[friendlyPropName];
   }
   return info;
 };
@@ -263,21 +304,11 @@ module.exports.setPropertyDropdown = function () {
       return fullDropdownOptions;
     }
 
-    var elementType = library.getElementType(element);
-    if (!elementType) {
-      return fullDropdownOptions;
-    }
-
-    var keys = Object.keys(PROPS_PER_TYPE[elementType]);
-    if (!keys) {
-      return fullDropdownOptions;
-    }
-
-    return keys.map(function (key) { return '"' + key + '"'; });
+    return getDropdownProperties(library.getElementType(element));
   };
 };
 
 module.exports.__TestInterface = {
-  getFirstSetPropertyParamFromCode: getFirstSetPropertyParamFromCode,
-  stripQuotes: stripQuotes
+  stripQuotes: stripQuotes,
+  getDropdownProperties: getDropdownProperties
 };

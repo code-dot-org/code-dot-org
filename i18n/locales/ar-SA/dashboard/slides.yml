@@ -405,36 +405,35 @@ ar:
         text: مرحبا, أنا كريس بوش. أنا لاعب كرة سلة محترف و اكتب التعليمات البرمجية في الكلية.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+        text: واحد من أهم المفاهيم في علم الحاسوب كيفية تعريف الأوامر الجديدة. معظم لغات الكمبيوتر تحوي فقط حوالي 100 من كلمة أو أمر. وحقاً، بالفن والمهارة تكمن في تحديد الكلمات الجديدة الخاصة بك خارج هذه القطع البرمجية.
       3:
         image: notes/frozen3_3.jpg
-        text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
+        text: بمجرد دراستك للكمبيوتر وكيفية القيام بعمل مرة واحدة باستخدام هذا التسلسل من الأوامر، يمكنك عمل الاسم الخاص بك لهذا العمل حتى يكون من السهل تكرار ذلك في وقت لاحق. عند تعريف الأوامر الخاصة بك وتعطيها اسماً، تسمى الدالة.
       4:
         image: notes/frozen3_4.jpg
-        text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
+        text: مرحبا، أنا جيس. عند البرمجة بواسطة القطع البرمجية، يمكنك استخدام دالات إذا كانت هناك مجموعة من الإجراءات التي ترغب في استخدامها عدة مرات. على سبيل المثال، لقد كتبت الكود لإنشاء مربع.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'يمكنك تسمية هذه كدالة تسمى "إنشاء مربع" '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple squares.
+        text: الان لديك مربع جديد يمكنك استخدامه عدة مرات لإنشاء عدة مربعات.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: يمكن استخدام الكثير من الأشكال البسيطة لإنشاء أنماط أكثر تعقيداً. في اللغز القادم، الكود التي كتبته مؤخراً لعمل الدائرة متاح لك كوظيفة جديدة يمكنها عمل دوائر ذات أحجام مختلفة. هل يمكنك استخدامه لمساعدة إلسا في إنشاء أنماط معقدة وجميلة في الثلج؟
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: 'سوف نقوم بإنشاء العاب باستخدام "بلاي لاب". الالعاب الرائعة لها قصة، ولكل قصة ممثلين. سوف نتعلم كيفية عمل ممثلينا مثل السحرة، الكائنات الفضائية، والحيوانات التي تتكلم وتتحرك، وتتفاعل مع بعضها البعض. بنهاية هذا البرنامج التعليمي، يمكنك تصميم لعبة من الصفر وتقاسمها مع أصدقائك.'
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: الشاشة مقسمة إلى ثلاثة أجزاء رئيسية. على اليسار مساحة اللعبة حيث سيتم تشغيل برنامجك. التعليمات لكل مستوى مذكورة في الأسفل.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: المنطقة الوسطى يوجد بها صندوق الأدوات، وكل من هذه المربعات هي قطعة من الكود. المساحة البيضاء على اليمين تسمى مساحة العمل، وهذه المنطقة التي سوف نبني برنامجنا.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'لنبدأ، ستحتاج إلى ربط المربعات الخاصة بك إلى أمر "عند الركض" البرتقالي. يمكنك ربط أوامر متعددة معا عن طريق سحبهم حتى ترى الخط الأصفر, وبعدها سيلتصقون معا.'
       5:
         image: notes/playlab_intro_5.png
         text: |-

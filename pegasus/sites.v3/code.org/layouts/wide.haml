@@ -1,4 +1,7 @@
+%link{:href=>"/shared/css/warning-banner.css", :rel=>"stylesheet"}
+
 .wrapper
+  = view :unsupported_browser
   -unless header['theme'] == 'responsive_wide'
     = view :header
 

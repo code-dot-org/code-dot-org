@@ -1,7 +1,12 @@
 "en-US":
   hour_of_code: "Hour of Code"
   hello: "Hello world"
+  'yes': 'Yes'
+  'no': 'No'
   select_language: "Please select your language"
+  upgrade_ie_message: "Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
+  upgrade_ie_message_csedweek: "CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
+  upgrade_ie_link: "Learn more"
   en: "Computer Science"
   computer_science_edweek: "Computer Science Education Week"
   csedweek_dates: "December 8-14, 2014"
@@ -40,7 +45,7 @@
   csedweek_map_legend_cs_tech_jam: "Special Event"
   cded_sign_up: "Sign up"
   cded_try_it: "Try it"
-  twentyhours_trynow: "Try now"
+  try_now: "Try now"
   california_heading: "Ask your school to teach computer science"
   california_text: "Any teacher can offer our <a href='http://studio.code.org/'>free courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner with us."
   california_button: "Learn More"
@@ -370,14 +375,9 @@
   starwars_javascript_title: "JavaScript"
   starwars_javascript_description: "Use drag-drop blocks and JavaScript."
   starwars_javascript_specs: "English only | Modern browsers | Ages 11+"
-  starwars_javascript_start_button: "Try now"
   starwars_blocks_title: "Blocks"
   starwars_blocks_description: "Use drag-drop blocks."
   starwars_blocks_specs: "Many languages | Modern browsers, smartphones, tablets | Ages 6-106"
-  starwars_blocks_start_button: "Try now"
-  starwars_watch_videos: "Before you get started, watch one of these inspirational videos"
-  starwars_speak_languages: "Speak another language?"
-  starwars_help_translate: "Help us translate"
   starwars_platform_text: "Modern browsers, smartphones, tablets"
   mc_name: "Minecraft Hour of Code"
   mc_longdescription: "Use blocks of code to take Steve or Alex on an adventure through this Minecraft world."
@@ -386,6 +386,11 @@
   mc_platformtext: "Modern browsers, smartphones, tablets"
   mc_specs: "Many languages | Modern browsers and tablets | Ages 6-106"
   minecraft_subtitle: "Minecraft Hour of Code"
+  watch_inspirational_videos: "Before you get started, watch one of these inspirational videos"
+  speak_another_language: "Speak another language?"
+  help_translate: "Help us translate."
+  no_internet: "Don't have Internet?"
+  download_offline: "Download the offline version."
   volunteer_engineer_submission_title: "Inspire students and volunteer"
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them."
@@ -510,7 +515,7 @@
   dashboard_action_required: "required"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio."
-  dashboard_assessments_none_part2: "If you are teaching a Computer Science Principles course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the assessment to your class and then pick it from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: "Summaries"
   dashboard_assessments_answers: "All answers"
   dashboard_filter_by_stage: 'Filter by stage:'
@@ -524,13 +529,14 @@
   dashboard_navigation_section_pd: "Professional Development"
   dashboard_navigation_section_speakers: "Computer Science <br/> Guest Speakers"
   dashboard_navigation_all_sections: "Student Accounts and Progress"
-  dashboard_navigation_view_progress: "View Progress"
-  dashboard_navigation_view_text_responses: "View Text Responses"
+  dashboard_navigation_view_progress: "Progress"
+  dashboard_navigation_view_text_responses: "Text Responses"
   dashboard_navigation_view_assessments: "Assessments"
+  dashboard_navigation_view_surveys: "Surveys"
   dashboard_navigation_add_students: "Add Students"
   dashboard_navigation_manage_students: "Manage Students"
   dashboard_navigation_lesson_plans_resources: "Lesson Plans and Resources"
-  dashboard_navigation_view_stats: "View Stats"
+  dashboard_navigation_view_stats: "Stats"
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_progress_not_started: "not started"
@@ -542,14 +548,16 @@
   dashboard_progress_submitted: "submitted"
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: "Progress information for %{student_name} in %{script_name}"
+  dashboard_progress_pair_programming: "pair programming"
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: "Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in Computer Science Principles, you can see their responses to open-ended text response questions by choosing a unit from the drop down above."
+  dashboard_responses_none: "Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above."
   dashboard_sections_new_section: "New section"
   dashboard_sections_jumbotron_instruction: "Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts."
   dashboard_sections_table_section: "Section"
   dashboard_sections_table_secret: "Login Type"
   dashboard_sections_table_grade: "Grade"
   dashboard_sections_table_course: "Course"
+  dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Students"
   dashboard_sections_table_code: "Section Code"
   dashboard_sections_name: "Section Name"
@@ -565,7 +573,7 @@
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: "6-character code (ABCDEF)"
-  dashboard_sections_other_section: "Other Section"
+  dashboard_sections_other_section: "Other Teacher"
   dashboard_sections_both_sections: "Would you like the student(s) to be in both sections?"
   dashboard_sections_yes_both: "Yes, I want to copy student(s) to be in this current section AND the new section"
   dashboard_sections_no_move: "No, I want to move student(s) to be in the new section only."
@@ -673,8 +681,10 @@
   dashboard_faq_k5: "K-5 Frequently Asked Questions"
   dashboard_announcements: "Announcements"
   dashboard_announce_view_all: "View all"
-  dashboard_announce_message: "Our Computer Science Fundamentals Course 4 is out of \"beta\" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!"
-  dashboard_announce_button_text: "Learn more"
+  dashboard_announce_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+  dashboard_announce_csp_widgets_message: "CS Principles is a high school course that teaches several concepts including text compression, encoding images with bits and bytes, cryptography, and Internet protocol. Now you can use the widgets used to teach these concepts as standalone tools in any computer science course."
+  dashboard_announce_learn_more_button: "Learn more"
+  dashboard_announce_try_now_button: "Try it now"
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: "Add your name"
   code_hoc_coming: "The Hour of Code is here - December 8-14!"
@@ -794,6 +804,7 @@
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: "Full Test - 50 questions"
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1206,9 +1217,8 @@
   processing_beyond_longdescription: "Processing is a programming language, development environment, and online community. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. Initially created to serve as a software sketchbook and to teach computer programming fundamentals within a visual context, Processing evolved into a development tool for professionals. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production."
   alice_beyond_longdescription: "Using an innovative programming environment to support the creation of 3D animations, the Alice Project provides tools and materials for teaching and learning computational thinking, problem solving, and computer programming across a spectrum of ages and grade levels."
   sphero_beyond_longdescription: "Whether you're an educator or a parent, SPRK lessons give kids a fun crash course in programming robots while sharpening their skills in math and science."
-  compatibility_https_header: "Please enable HTTPS for Code.org."
-  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-  compatibility_https_hide_this_warning: "Hide this warning"
+  compatibility_hide_this_warning: "Hide this warning"
+  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: "star"
   mc_shortcode: "mc"
   frozen_shortcode: "frzn"

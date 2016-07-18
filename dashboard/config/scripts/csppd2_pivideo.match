@@ -12,7 +12,7 @@ question 'Wireless'
 answer 'uses radio waves, cannot travel very far'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 ### Lesson Chunk 1: Sending Binary Messages >  Wires, Cables, and Wifi Video
 

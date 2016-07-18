@@ -26,7 +26,7 @@
   "honeyAvailable": "honey",
   "honeyTooltip": "Make honey from nectar",
   "honeycombFullError": "This honeycomb does not have room for more honey.",
-  "ifCode": "if",
+  "ifCode": "जर",
   "ifInRepeatError": "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked.",
   "ifPathAhead": "if path ahead",
   "ifTooltip": "If there is a path in the specified direction, then do some actions.",
@@ -82,5 +82,12 @@
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
   "word": "Find the word",
   "yes": "Yes",
-  "youSpelled": "You spelled"
+  "youSpelled": "You spelled",
+  "collectiblePresent": "there is some treasure",
+  "collect": "collect",
+  "collectorCollectTooltip": "Collect an item",
+  "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
+  "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
+  "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!"
 }

@@ -1,0 +1,59 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-15T15:08:06.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": {
+        "params": [
+
+        ],
+        "paletteParams": [
+
+        ]
+      },
+      "x": null,
+      "y": null,
+      "background": null,
+      "comment": null
+    },
+    "show_d_pad": "false",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Properties\r\n\r\n<img src=\"https://images.code.org/9567c9df55163104ff91df0920457ad3-image-1466047307713.21.28 PM.png\" style=\"float:right\">\r\n\r\n**Properties:** When you create a sprite it will automatically be given many special variables called properties. Properties keep track of information about the sprite which is used when you draw it on the screen. For example, these two properties keep track of a sprite's x and y position on the screen.\r\n\r\n**Changing Properties:** Properties are just variables and so you can change their values using `=` just like any other variable. Here's an example of how you might change the `x` property of a sprite called `myFavoriteSprite`.\r\n\r\n![](https://images.code.org/6976d707cba95e92369831729cdb7435-image-1466085767357.02.35 AM.png)\r\n\r\n<img src=\"https://images.code.org/2743e55cef5da23bf61db1556c88f174-image-1466049906667.04.41 PM.png\" style=\"float:right;width:150px\">\r\n\r\n# Do This\r\n\r\nThis program creates a new sprite, gives it a label, and then sets its `x` and `y` properties.\r\n\r\n* **Read the code**. Notice that the label given to the sprite is used in the sprite's property.\r\n* **Change the values given to the `x` and `y` properties** to move the sprite to the bottom right corner of the screen.",
+    "start_blocks": "// Creating Sprites\r\nvar mySprite = createSprite();\r\n\r\n// Setting Properties\r\nmySprite.x = 100;\r\nmySprite.y = 100;\r\n\r\n// Drawing\r\ndrawSprites();",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

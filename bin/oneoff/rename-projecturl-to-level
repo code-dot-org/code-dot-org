@@ -6,7 +6,7 @@ require 'json'
 PEGASUS_DB = Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'))
 STORAGE_APPS = PEGASUS_DB[:storage_apps]
 
-def main()
+def main
   STORAGE_APPS.where{updated_at > '2015-06-23'}.each{ |row|
     val = row[:value]
     if /"projectUrl":/ =~ val

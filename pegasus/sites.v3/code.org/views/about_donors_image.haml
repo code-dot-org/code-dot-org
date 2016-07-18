@@ -18,7 +18,7 @@
       - avatar_url = avatar_image(supporter[:name_s], 200)
       %td{style: "width: #{780/columns}px; height: #{height}px"}
         - fontsize = fontsize || "14px"
-        %a{:href=>supporter[:url_s], :target=>"_blank"}
+        %a{:href=>supporter[:url_s], :target=>"_blank", :style=>"color: #7665a0"}
           - if avatar_url
             %img{:src=>avatar_url, :style=>"max-width: 100%; max-height: #{height*0.8}px"}
           %p{style: "font-size: #{fontsize}px"}

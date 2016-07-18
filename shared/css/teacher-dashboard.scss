@@ -256,6 +256,13 @@ td.studentname {
   display: none;
 }
 
+.zoomed-in .level_link.paired::before {
+  font: normal normal normal 14px/1 FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f0c0';
+}
+
 .key {
   margin: 10px 0;
   width: 100%;
@@ -372,8 +379,8 @@ td.studentname {
       max-height: 90px;
       overflow: hidden;
       padding-left: 10px;
-      line-height: 22px;
-      width: 690px;
+      line-height: 20px;
+      width: 610px;
 
       b {
         font-family: 'Gotham 5r', sans-serif;

@@ -689,13 +689,13 @@ nl:
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
-        text: "On your head you hold your hat and your smarts will tell you where you're at and to think about the zoo, and to nod hello to you and you! Use your head when you're online to keep what's yours inside your mind and to know how to be safe, how to give your life some private space! From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: Op je hoofd hou je je hoed en je verstand vertelt je waar je bent en om te denken aan de dierentuin, knik hallo naar jou en jou! Gebruik je hoofd als je online bent om wat van jou is van jou te houden en om te weten hoe je veilig bent, hoe je leven privé blijft! Van je hoofd tot aan je tenen, wacht, om eraan te denken. Van je voeten tot je neus, wacht en denk online!
       2:
         image: notes/C2_digital_footprint_2.png
-        text: "Use your heart to grow and grow, and to give yourself a healthy glow, and to make a valentine, tell someone that you'll be mine! Use your heart when you're online, feel what's right and always kind, and show your friends respect, to be fair and nice on the Internet. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: Gebruik je hart om te groeien en groeien, en om jezelf een gezonde gloed te geven, en om een valentijn te maken, zeg tegen iemand dat je de mijne zal zijn! Gebruik je hart als je online bent, voel wat goed is en altijd aardig, en respecteer je vrienden, door eerlijk en aardig te zijn op het internet. Van je hoofd tot aan je tenen, wacht, denk na. Van je voeten tot je neus, wacht en denk online!
       3:
         image: notes/C2_digital_footprint_3.png
-        text: "Use your arms to hug your pet, to keep your clothes from getting wet, and to wear your favorite sleeves and to help you fly and make believe. Use your arms when you're online, to take break and balance time and leave your tech behind and to find yourself a tree to climb. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: Gebruik je armen om je huisdier te knuffelen, om te zorgen dat je kleren niet nat worden, om je favoriete trui te dragen en om je te helpen vliegen en te laten geloven. Gebruik je armen als je online bent, om een pauze te nemen en je technologie achter te laten en om een boom te vinden om in te klimmen. Van je hoofd tot aan je tenen, wacht en denk na. Van je voeten tot je neus, wacht en denk online!
       4:
         image: notes/C2_digital_footprint_4.png
         text: "Use your gut to store your food, and to listen to its growling mood, to make a belly flop, and to feel the gas in soda pop. Use your gut when you're online, to know to watch for certain signs, and to let it guide the way and tell you when it's not ok. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
@@ -758,13 +758,13 @@ nl:
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
-        text: This lesson is called Real Life Algorithms. Algorithms describe things that people do everyday. Cookie recipes and directions for building a birdhouse are both everyday algorithms.
+        text: Deze les heet Algoritmen in het echte leven. Algoritmen beschrijven dingen die mensen dagelijks doen. Koekjes recepten en aanwijzingen voor het bouwen van een vogelhuisje zijn beide dagelijkse algoritmen.
       2:
         image: notes/C2_paper_airplanes_2.png
         text: Vandaag maken en testen we een algoritme voor een papieren vliegtuigje. Voordat we daaraan beginnen, moeten we dit grote project verdelen in kleinere makkelijk te volgen stapjes. Daarbij moeten we bedenken welke stappen er zijn en in welke volgorde ze gedaan moeten worden.
       3:
         image: notes/C2_paper_airplanes_3.png
-        text: "You'll create your algorithm by first cutting apart the pictures. Next, you'll select the 6 pictures that show the steps needed to make a paper airplane and arrange those pictures in the correct order. After you have everything in order, you will trade algorithms with another student team to test out the algorithm to see if the algorithm works. A well designed algorithm is super important to making the best paper airplane."
+        text: Je gaat je algoritme maken door eerst de afbeeldingen los te snijden. Vervolgens kies je 6 afbeeldingen die de stappen laten zien die nodig zijn om een papieren vliegtuigje te maken, en zet je ze in de juiste volgorde. Nadat je alles op volgorde hebt, zal je je algoritme ruilen met een andere groep leerlingen om te kijken of je algoritme werkt. Een goed ontworpen algoritme is zeer belangrijk voor het maken van het beste papieren vliegtuigje.
       4:
         image: notes/C2_paper_airplanes_4.png
         text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."

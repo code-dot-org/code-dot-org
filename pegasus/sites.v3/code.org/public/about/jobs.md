@@ -7,18 +7,20 @@ nav: about_nav
 
 **We are currently hiring for:**
 
-- **Curriculum**
- 	- [2016 Summer Curriculum Writing Cohort](#summercohort)
+
 - **Finance and Administration**
+ 	- [Administrative Assistant](#admin)
  	- [Controller](#controller)
 - **Fundraising**
- 	- [Grant Writer](#grant)
+ 	- [Donor Relations Manager](#donor)
 - **Marketing**
  	- [Marketing Associate](#market)
 - **Partnerships & Outreach**
- 	- [Regional Manager - Northeast, MidAtlantic, Southeast locations](#dcdm)
+ 	- [Regional Manager - Northeast, Southeast locations](#dcdm)
 - **Product**
 	- [Senior Backend Engineer / Infrastructure Lead](#backend)
+	- [Senior Software Engineer](#senior)
+	- [Software Engineer](#software)
 	- [UX / Visual Designer (Part time)](#design)
 - **Professional Learning & Community**
 	- [Training and Development Specialist](#train)
@@ -27,48 +29,50 @@ nav: about_nav
 **[Working at Code.org](#info)**
 
 
-## <a name="summercohort"href="#summercohort">2016 Summer Curriculum Writing Cohort (Seattle, WA or Chicago, IL preferred)</a>
+
+
+
+## <a name="admin"href="#admin">Administrative Assistant (Seattle, WA)</a>
 
 **Job Summary:**
 
-Code.org is looking for experienced Curriculum Writers to work with and support the goals of Code.org’s Education team as a full-time, 8-week contract from June 27-August 19. This summer cohort will help develop the curriculum for our newest middle school course, Computer Science Discoveries. You can learn more at https://code.org/educate/csd.
+Code.org is seeking an experienced Administrative Assistant to join our administrative team. This is a terrific opportunity for the right candidate, with a great deal of responsibility and visibility into the successful operation of an internationally ­recognized non­profit experiencing incredible growth. 
 
-Responsibilities of the position include: 
+High ­level responsibilities include: 
 
-- Working closely with the Education team to design, develop, write, and “go to market” with original curricular materials (lesson plans, formative/summative assessments, and videos).
-- Planning for evaluating the effectiveness of curriculum (from both student and teacher perspectives) and making programmatic improvements.
+- Managing a variety of administrative tasks and projects 
+- Increasing office productivity by overseeing smooth and efficient office administration
+- Supporting VP level staff
+- Event planning, coordinating, and logistics  
+
+**Duties and Responsibilities:**
+
+- Handle routine administrative tasks and oversee office administration; primary point of contact for meeting staff needs 
+- Coordinate travel and manage select Leadership Team individual calendars
+- Support discrete strategic and tactical projects with data entry, analysis, drafting communications, or logistics.
+- Troubleshoot basic technology issues (printers, videoconferencing system)
+Coordinate events (office, social, and corporate) and visitor logistics
+- Other duties, as assigned 
+
 
 **Skills and Qualifications:**
 
-The ideal candidates have experience designing, developing, and writing computer science or STEM curriculum to standards; has strong writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. 
+We are looking for an energetic, positive, collaborative professional to join our small, nimble administrative team. You should be a tech-savvy self starter experienced in using tools to solve problems, with a willingness to take ownership and get-it-done attitude. Experience in a start up environment and/or with events planning a plus. 
 
-The candidate should also have: 
 
-- Comprehensive knowledge of computer science (required) 
-- Prior curriculum writing experience / activity design (required)
-- Recent computer science or STEM teaching experience in upper elementary, middle, or high school field (required)
-- a Bachelor’s degree or higher in Education or Computer Science (preferred)
-- Experience using the Understanding by Design curriculum framework (preferred)  
-- Experience/familiarity with the CS Principles Framework (preferred) 
-- Experience/familiarity with Exploring Computer Science curriculum/PD (preferred) 
-- Proficiency in working with Microsoft Office and Google Docs (required) 
+The ideal candidate has the following qualifications:
 
-**Travel Requirement:**
+- Excellent written and verbal communications skills 
+- Strong attention to detail 
+- Experience learning and using modern tech tools
+- 2-5 years experience in administrative support, event planning, or office management preferred 
+- Bachelor’s degree preferred 
 
-Participation in the summer cohort requires the ability to travel to three workshops throughout the duration of the contract:
-
-- June 28th - June 30th: 3-day Kickoff
-- July 25th - July 26th: 2-day midpoint check-in
-- August 13th - August 14th: 2-day Wrap Up
-
-Destinations for all three workshops is yet to be determined. All travel and accommodation expenses will be covered by Code.org.
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
 
-
-## <a name="Controller"href="#controller">Controller (Seattle, WA)</a>
+## <a name="controller"href="#controller">Controller (Seattle, WA)</a>
 
 **Job Summary:**
 
@@ -107,40 +111,41 @@ Candidates must be extremely detail-oriented, possess exceptional written and in
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="grant"href="#grant">Grant Writer (Seattle, WA)</a>
+## <a name="donor"href="#donor">Donor Relations Manager (Seattle, WA)</a>
 **Job Summary:**
 
-The Grant Writer plays an important role in increasing revenue for Code.org, with a focus on grant writing, and stewardship of existing Foundation and Corporate partnerships. The candidate selected for this role will develop compelling proposals that will result in funding for the immediate and long-term goals of Code.org, and also help strengthen existing relationships with the corporate and foundation sector. 
+The Donor Relations Manager plays an important role in increasing revenue for Code.org, with a focus on stewardship of existing Foundation and Corporate partnerships and grant writing activities. The candidate selected for this role will help establish and manage long-term partnerships and strengthen existing relationships with the corporate and foundation sector, as well as developing compelling proposals that will result in funding for the immediate and long-term goals of Code.org. Full-time, salaried. 
 
 Responsibilities of the position include:
 
-- Developing and writing letters of inquiry, grant proposals and reports to foundations, corporations, and other grant-making organizations; persuasively communicating the organization’s mission and programs to potential funders
-- Cultivating and growing support from existing Foundation and corporate donors, including managing the Code.org Employee Engagement program to build corporate pipeline
-- Managing ongoing donor communications, working with marketing team, and overseeing donor stewardship and recognition efforts
-- Working with Director of Finance & Administration, ensuring timely reporting on grant deliverables by managing grants calendar
-- Working with the Fundraising & Marketing Associate on prospect research, maintaining grant files, database, fundraising materials, donor acknowledgement
-- Coordinating Code.org fundraising events
+- Cultivating and growing support from existing Foundation and Corporate donors
+- Managing ongoing donor communications process
+- Developing and writing letters of inquiry, grant proposals and reports to foundations, corporations, and other grant-making organizations, persuasively communicating the organization’s mission and programs to potential funders
+- Ensuring timely reporting on grant deliverables by managing the grants calendar
+- Collaborating with VP of Finance & Administration on budgeting and cash flow planning
+- Working with the Fundraising Associate on prospect research, maintaining grant files, CRM database, fundraising materials, and donor acknowledgements
 - Other duties, as assigned
 
 **Skills and Qualifications:**
 
-A Bachelor’s degree and a minimum of 5 years of relevant experience are required. 
+A minimum of 5 years of relevant experience is required. 
 
-- Demonstrated ability to develop funding proposals in a clear and compelling manner and have a proven track record of success in writing six and seven figure foundation and/or corporate grants. 
-- An incredible passion for our mission and an ability to inspire others to get involved.
-- Strategic thinker, analytical and proactive.
-- Candidates must be self-motivated, detail-oriented, and highly-organized to succeed in a demanding, impact-focused, start up environment. 
-- Ability to be flexible and adaptive in a growing organization; be able to work alongside a diverse group of people. 
-- Thrive in a collaborative, team environment and also work well independently. 
-- Outstanding communication and highly developed interpersonal skills with ability to be persuasive in both written and verbal communications. 
-- Strong and thoughtful customer service orientation.
+- Strong networking, presentation, and relationship building expertise 
+- An incredible passion for our mission and an ability to inspire others to get involved
+- Strategic thinker, analytical, self-motivated, detail-oriented, and highly-organized  
+- Posess a track record of securing six figure or larger gifts from corporate and foundation funders, including multi-year commitments
+- Demonstrated ability to develop funding proposals in a clear and compelling manner and have a proven track record of success in writing large foundation and/or corporate grants
+- Thrive in a collaborative, team environment and also work independently 
+- Outstanding communication and highly developed interpersonal skills with ability to be persuasive in both written and verbal communications
+- Strong and thoughtful customer service orientation
 - Experience using online databases (Foundation Center and others) and other sources to conduct research on potential funding prospects. 
 - A solid understanding of budgets as they relate to proposals and grants is required. 
-- A high level of computer literacy is required; experience in fundraising for educational programs strongly preferred. Proficiency in working with Microsoft Office and Google Docs a must.
+
+A high level of computer literacy is required; experience in fundraising for educational programs strongly preferred. Proficiency in working with Microsoft Office and Google Docs a must.
 
 Please DO NOT apply for this position if you do not have experience in writing successful non-profit grant proposals. 
 
-Interested candidates should email a resume, cover letter, and grant writing sample (funded) outlining how your skills and experience meet the qualifications of the position, to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="market"href="#market">Marketing Associate (Seattle, WA)</a>
@@ -148,7 +153,7 @@ Interested candidates should email a resume, cover letter, and grant writing sam
 
 The Hour of Code initiative is a yearly campaign that encourages students to try computer science during Computer Science Education Week (Dec. 5-11). Since 2013, it has reached over 200M students worldwide in 180+ countries. Supporters of the campaign include President Obama, Sheryl Sandberg, Bill Gates, Susan Wojcicki, Ashton Kutcher and many more. Code.org is recruiting a temporary staff member to assist the Marketing team in the planning and execution of December’s Hour of Code campaign. The Marketing Associate will make essential contributions to a global and highly visible marketing effort, supporting social media and email outreach, live events, partnership cultivation, and more. 
 
-This is a full time, short term (June-December) staff position based in our Seattle office. 
+This is a full time, short term (July-December) staff position based in our Seattle office. 
 
 Duties of this role include: 
 
@@ -175,7 +180,7 @@ The ideal candidate has the following qualifications:
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="dcdm"href="#dcdm"> Regional Manager - Northeast, MidAtlantic, Southeast locations (Boston, New York, Washington, D.C., Florida/Georgia)</a>
+## <a name="dcdm"href="#dcdm"> Regional Manager - Northeast, Southeast locations (Boston, New York, Florida/Georgia)</a>
 
 **Job Summary:**
 
@@ -228,20 +233,60 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 
 **Job Summary:**
 
-Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at studio.code.org. With tens of millions of students using our tutorials in over 45 languages and in 180+ countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
 
-Code.org is recruiting for an experienced Backend Engineer to own site stability and performance, and to contribute code, infrastructure, and knowledge to increase team-wide effectiveness. Someone successful in this role will be able to collaborate, but also work independently and drive infrastructure and scale work to completion.
+As Senior Backend Engineer / Infrastructure Lead, you’ll be responsible for building Code.org to scale for our tens millions of users in over 180 countries. You’ll ensure that our amazing annual Hour of Code event scales to nearly 100 million users worldwide. You’ll own infrastructure and related tools, write product code, and work to increase team-wide effectiveness. Someone successful in this role will be able to collaborate, but also work independently and drive infrastructure and scale work to completion.
 
 **Skills and Qualifications:**
 
 The ideal candidate has the following qualifications:
 
 - Bachelor’s degree with a major in Computer Science
-- 5-7 years as a software engineer 
+- 5-10 years as a software engineer 
 - Experience in a fast growth start-up environment desired
 - Experience scaling web services 
 - Experience building developer infrastructure
 - Expertise in some of these technologies preferred: Ruby / Rails, JavaScript, Sinatra, SQL/Databases/MySQL, React
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="senior" href="#senior">Senior Software Engineer (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
+
+As Senior Software Engineer at Code.org, you’ll be a key contributor in delivering features in Code Studio, used by tens of millions students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
+
+**Skills and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of #CSForAll
+- Bachelor’s degree with a major in Computer Science
+- 5+ years as a software engineer
+- Ability to make senior level engineering contributions including a high level of output, tackling the hardest problems, and being a guiding voice on the team 
+- Experience shipping significant features in commercial software products 
+- Expertise in some of these technologies preferred: JavaScript, React, Ruby / Rails, SQL/Databases/MySQL
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="software" href="#software">Software Engineer (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
+
+As Software Engineer at Code.org, you’ll be delivering features in Code Studio, used by tens of millions students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
+
+**Skills and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of #CSForAll
+- Bachelor’s degree with a major in Computer Science
+- 3+ years as a software engineer
+- Expertise in some of these technologies preferred: JavaScript, React, Ruby / Rails, SQL/Databases/MySQL
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 

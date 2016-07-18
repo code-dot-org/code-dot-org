@@ -1,7 +1,7 @@
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 var $ = require('jquery');
 var ReactTestUtils = require('react-addons-test-utils');
 
@@ -44,10 +44,10 @@ module.exports = {
         assert.equal(screen1.id, 'design_screen1');
         assert.equal(screen1.tagName, 'DIV');
 
-        // The design button is visible, and there's no dropdown
+        // The design button is visible, and there's a dropdown
         var designModeButton = document.getElementById('designModeButton');
         assert.equal(designModeButton.textContent, 'Design');
-        assert.equal(document.getElementById('screenSelector'), null);
+        assert.notEqual(document.getElementById('screenSelector'), null);
 
         // our design mode box is hidden
         assert.equal($('#designWorkspace').is(':visible'), false);

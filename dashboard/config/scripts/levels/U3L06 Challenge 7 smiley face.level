@@ -10,8 +10,18 @@
       "moveForward": null,
       "moveTo": null,
       "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
       "turnTo": null,
       "arcRight": null,
       "arcLeft": null,
@@ -19,7 +29,24 @@
       "penDown": null,
       "penWidth": null,
       "penColor": null,
-      "penRGB": null,
+      "penRGB": {
+        "paramButtons": {
+          "maxArgs": 4,
+          "minArgs": 4
+        },
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
       "functionParams_none": null,
       "callMyFunction": null,
       "comment": null
@@ -30,7 +57,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "0.9",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -46,7 +73,7 @@
     "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "markdown_instructions": "# Moving Relative to the Screen\r\n\r\nThe turtle commands we've seen so far move the turtle **relative to the turtle's location and direction**. If you want to get the turtle to a specific position on the screen using only `moveForward()` or `turnLeft()`, you need to know the turtle's location beforehand.\r\n\r\nTwo new commands in the toolbox help resolve this issue. `moveTo()` moves the turtle to a location on the screen based on its X and Y coordinates. `turnTo()` turns the turtle in a specific direction. Together these commands can make many drawings easier to complete.\r\n\r\n# Do This:\r\n\r\n**Read the documentation: ** Read the documentation for `moveTo()` and `turnTo()`. Pay specific attention to how the coordinate system is arranged in App Lab as it is different from what you might have seen in a math class.\r\n\r\n**Draw the smiley: ** Use these new commands to help you draw the smiley face pictured below.\r\n\r\n![](https://images.code.org/20cab2a0b3a4fdfd53d7a1876963fa10-image-1441990625064.png)",
+    "markdown_instructions": "# Moving Relative to the Screen\r\n\r\nThe turtle commands we've seen so far move the turtle **relative to the turtle's location and direction**. If you want to get the turtle to a specific position on the screen using only `moveForward()` or `turnLeft()`, you need to know the turtle's location beforehand.\r\n\r\nTwo new commands in the toolbox help resolve this issue. `moveTo()` moves the turtle to a location on the screen based on its X and Y coordinates. `turnTo()` turns the turtle in a specific direction. Together these commands can make many drawings easier to complete.\r\n\r\n# Do This:\r\n\r\n**Read the documentation: ** Read the documentation for `moveTo()` and `turnTo()`. Pay specific attention to how the coordinate system is arranged in App Lab as it is different from what you might have seen in a math class.\r\n\r\n**Draw the smiley: ** Use these new commands to help you draw the smiley face pictured below.\r\n\r\n**HINT: ** If you haven't used it yet, you're probably going to need `penUp()` and `penDown()` for this one.\r\n\r\n![](https://images.code.org/20cab2a0b3a4fdfd53d7a1876963fa10-image-1441990625064.png)",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "text_mode_at_start": "false",
@@ -58,10 +85,15 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "encrypted_examples": "Lw+9Kkhyxqfvk9gjoWqa6ov3+8pLzsilAKeVlNRs9T4uPBinCbmKchk2PPdy\n1i8H\n",
-    "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

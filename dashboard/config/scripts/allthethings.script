@@ -104,6 +104,12 @@ level 'allthethings_template_backed2'
 level 'allthethings_moviebot'
 level 'Applab allthethings onRecordEvent'
 level 'allthethings_embed_video'
+level 'Test Applab Predictive'
+
+stage 'Gamelab'
+level 'Gamelab AllTheThings With No Animation Tab'
+level 'Gamelab AllTheThings With Prepopulated Animation'
+level 'Gamelab AllTheThings Embed Level'
 
 stage 'Online PD'
 level 'PDK5 Intro C'
@@ -134,3 +140,41 @@ level 'Sample Free Response'
 
 stage 'Sample PLC Assessment'
 assessment 'Sample CSP Assessment'
+
+stage 'Swapped Levels'
+variants
+  level '2-3 Maze 1',  active: false
+  level '2-3 Maze 4'
+endvariants
+variants
+  level '2-3 Maze 2', active: false
+  level '2-3 Maze 5'
+endvariants
+variants
+  level '2-3 Maze 3', active: false
+  level '2-3 Maze 6'
+endvariants
+variants
+  level '2-3 Artist 1 new', active: false
+  level '2-3 Artist Loops 1'
+endvariants
+variants
+  level '2-3 Artist Loops 2', active: true
+  level '2-3 Artist 2', active: false
+endvariants
+variants
+  level '2-3 Artist Loops 4'
+  level '2-3 Artist 3', active: false
+endvariants
+variants
+level '4-5 Maze 4', active: false
+level '4-5 Maze 1'
+endvariants
+variants
+level '4-5 Maze 5', active: false
+level '4-5 Maze 2'
+endvariants
+variants
+level '4-5 Maze 6', active: false
+level '4-5 Maze 3'
+endvariants

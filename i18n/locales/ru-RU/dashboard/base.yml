@@ -29,6 +29,8 @@ ru:
   unsubmit: Не отправлять
   previous_page: Предыдущая страница
   next_page: Следующая страница
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Отмена
   okay: Хорошо
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
@@ -85,6 +87,7 @@ ru:
     teacher_title: Регистрация учителя
     student_pitch: Регистрация на code.org для учеников
     student_title: Регистрация ученика
+    signup_title: Sign up for Code.org
     school_name: Название школы (не обязательно)
     school_address: Адрес школы (не обязательно)
     address_placeholder: адрес, город, область, индекс
@@ -103,6 +106,9 @@ ru:
     student_terms: "Я согласен с условиями предоставления услуг <a href='http://code.org/tos'></a> Code.org. Если мне меньше 13 лет, отправляя эту форму, я подтверждаю, что у меня есть разрешение моих родителей или законного опекуна на пользование услугами Code.org. <br/>Для пользователей младше 13 лет адреса электронной почты не хранятся в форме, которая позволяет нам связаться с ними."
     teacher_terms: "Я согласен с условиями предоставления услуг <a href='http://code.org/tos'></a> Code.org."
     additional_information: Чтобы продолжить регистрацию, нам нужна дополнительная информация.
+    user_type_label: Account Type
+    user_type_teacher: Учитель
+    user_type_student: Ученик
   signin_form:
     title: Уже зарегистрированы? Вход
     login: Адрес электронной почты или имя пользователя
@@ -335,7 +341,7 @@ ru:
     announcement_title: Объявления
     announcement_view_all: Посмотреть все
     announcement_message: "Мы начали измерять уровень обучения студентов на курсах 1-4 и на нашем ускоренном курсе на Code Studio. Там очень много всего, что входит в него, поэтому мы выпускаем серию блога в 3-х частях. Посмотрите, как мы <a href='%{tagging_url}'> отмечаем концепцию и трудности в головоломках </a> и как мы <a href='%{ux_url}'> изменили пользовательский опыт</a> чтобы ответить на главный вопрос: <i> Что студенты могут сделать? </i>"
-    announcement_button: Узнать больше
+    announcement_button: Test the feature
     announcement_petition: Как учитель вы лидер движения, чтобы дать каждому студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло время, чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28 губернаторов и а также руководители крупнейших компаний Америки объединились в открытом письме к Конгрессу США финансировать K-12 образовательную программу компьютерной науки.
     announcement_petition_button: Добавьте ваше имя
   move_students:
@@ -397,15 +403,12 @@ ru:
     notes_coming_soon: Текст для этого видео находится в разработке.
     autoplay_option: Автоматическое воспроизведение видео
     download: Скачать видео
-  compatability:
-    working:
-      header: Мы работаем над поддержкой вашего браузера.
-      message: "Code.org использует современные веб-технологии. Это ускорит работу сайта. Ваш браузер не поддерживает все необходимые функции, и у вас могут возникнуть трудности при использовании этой части сайта. Помогите нам, <a href='%{report_issue_url}'>сообщая о всех проблемах, с которыми вы сталкиваетесь</a>. Вы также можете <a href='%{supported_browsers_url}'>обновить свой браузер до поддерживаемой версии</a>."
-      hide_this_warning: Скрыть это предупреждение
+  compatibility:
     upgrade:
-      header: Обновите свой браузер.
-      message: "Code.org использует современные веб-технологии. Это ускорит работу сайта. К сожалению, ваш браузер не поддерживает все функции, необходимые для работы этого раздела сайта.<br/><br/> Чтобы продолжить, установите браузер из нашего списка поддерживаемых браузеров. Вы можете <a href='#'>попытаться зайти на страницу </a>, но будьте готовы к неправильной работе."
-      button: Откройте мне список поддерживаемых браузеров
+      unsupported_message: "Ваш браузер не поддерживается. Пожалуйста, обновите свой браузер до <a href='%{supported_browsers_url}', target='_blank'> одного из поддерживаемых браузеров</a>. Вы можете попробовать просмотреть страницы, но ожидаемая функциональность может быть повреждена."
+      ie_message: Code.org скоро удалит поддержку для Internet Explorer 8, 9 и 10. Выполните обновление до любого современного браузера.
+      ie_message_csedweek: CSEdWeek.org скоро удалит поддержку для Internet Explorer 8, 9 и 10. Выполните обновление до любого современного браузера.
+      link: Узнать больше
   slow_loading: Это занимает больше времени, чем обычно...
   try_reloading: Попробуйте перезагрузить страницу
   next_stage: Готово! Перейти к следующему этапу
@@ -482,12 +485,14 @@ ru:
     picture_count: 'За прошедшие <b>%{days}</b> дней(я) ученики нарисовали <b>%{count}</b> рис. путем написания своих собственных компьютерных программ. Нажимайте на рисунки, чтобы увидеть каждую программу в действии.'
     activity_count: 'За прошедшие <b>%{days}</b> дней(я) ученики создали <b>%{count}</b> приложений и рисунков путем написания своих собственных компьютерных программ. Нажимайте на рисунки и скриншоты, чтобы увидеть каждую программу в действии.'
     want_to_make_your_own: Хотите сделать свое?
+    how_to_save: На последнем уровне этого учебника нажмите кнопку «Готово» и «Сохранить», чтобы сохранить работу в галерее.
     more: 'Больше &rarr;'
     caption_by_name_age: 'Создатель: %{name}, возраст: %{age}'
     caption_time_ago: '%{time_ago} назад'
     header: Галерея
     header_playlab: Истории и игры
     header_artist: Искусство программирования
+    report_abuse: Сообщить о нарушении
   landing:
     prerelease: "Это <span class='betatext'> бета-версия</span> курса.  Это означает, что это не окончательный вариант курса, и он будет дорабатываться с учетом полученных отзывов."
     prerelease_hoc2014: "Это <span class='betatext'>бета-версия </span> курса.  Он будет дорабатываться с учетом полученных отзывов."
@@ -667,16 +672,49 @@ ru:
     escalated:
       name: Эскалация
       description: Я хотел бы как инструктор, проверить это упражнение
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+    instructor_feedback: Обратная связь с инструктором
+    peer_feedback: Отзывы однокурсников
+    outdated: Этот отзыв был добавлен для версии, загруженной раньше
   components:
     icon_library:
       search_placeholder_text: Искать значок...
       no_icons_found: Значёк не найден
+    playzone:
+      artist_description: Рисуйте картины и узоры вместе с художником!
+      artist_title: Новый рисунок
+      continue_button: Перейти к следующему этапу
+      playlab_description: Создай историю или игру с лабораторией игр!
+      playlab_title: Новое приложение
+      primary_header: 'Поздравляем! Вы закончили %{stageName}!'
+      projects_description: Вернуться к одному из существующих проектов.
+      projects_title: Открыть проект
+      secondary_header: Спросите вашего учителя, что делать дальше
   flex_category:
     required: Краткий обзор
     content: Содержимое
     practice: Практика учителя
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_md: "<strong>Disclaimer: You are now leaving this domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+  hoc_download:
+    title: Загрузить программы Часа кода
+    capsule_title: У Вас есть интернет?
+    capsule_desc: 'Используйте онлайн веб-приложение <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: Нет интернета?
+    instructions: 'Инструкция для преподавателей: Если у вас плохое соединение с интернетом, то эти обучающие руководства для Часа кода доступны для загрузки и установки в режиме оффлайн. Выберите язык и платформу, загрузите и установите на всех компьютерах в классе. Вы можете использовать USB-накопитель для того, чтобы загрузить программу один раз и установить на все компьютеры. Примечание: ученики не смогут войти в Code Studio для того, чтобы сохранить прогресс или распечатать сертификаты. Преподаватели могут распечатать сертификаты заранее <a href="%{url}">здесь</a>.'
+    minecraft_name: Час кода с Minecraft
+    starwars_blocks_name: 'Звездные войны: Создайте галактику с помощью кода (блоки)'
+    starwars_javascript_name: 'Звездные войны: Создайте галактику с помощью кода (JavaScript)'
+    download_message: 'Загрузить %{app_name} для использования оффлайн (136MB)'
+    download_in_english: 'Скачать на английском языке:'
+    download_in_spanish: 'Скачать на испанском языке:'
+    windows: Windows
+    mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

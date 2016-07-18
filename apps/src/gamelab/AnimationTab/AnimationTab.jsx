@@ -1,17 +1,14 @@
 /** @file Root of the animation editor interface mode for GameLab */
-'use strict';
-
 import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import color from '../../color';
-import commonStyles from '../../commonStyles';
 import AnimationPicker from '../AnimationPicker/AnimationPicker';
 import GameLabVisualizationHeader from '../GameLabVisualizationHeader';
 import { setColumnSizes } from './animationTabModule';
 import AnimationList from './AnimationList';
-import FrameList from './FrameList';
 import ResizablePanes from './ResizablePanes';
+import PiskelEditor from './PiskelEditor';
 
 const styles = {
   root: {
@@ -56,7 +53,7 @@ const AnimationTab = React.createClass({
             <GameLabVisualizationHeader />
             <AnimationList />
           </div>
-          <iframe id="piskel-frame" style={styles.editorColumn} src="/blockly/js/piskel/index.html" />
+          <PiskelEditor style={styles.editorColumn}/>
         </ResizablePanes>
         <AnimationPicker channelId={this.props.channelId}/>
       </div>

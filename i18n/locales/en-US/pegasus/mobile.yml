@@ -1,7 +1,12 @@
 en-US:
   hour_of_code: crwdns54655:0crwdne54655:0
   hello: crwdns3593:0crwdne3593:0
+  "yes": crwdns56982:0crwdne56982:0
+  "no": crwdns56983:0crwdne56983:0
   select_language: crwdns21806:0crwdne21806:0
+  upgrade_ie_message: crwdns56984:0crwdne56984:0
+  upgrade_ie_message_csedweek: crwdns56985:0crwdne56985:0
+  upgrade_ie_link: crwdns56986:0crwdne56986:0
   en: crwdns43305:0crwdne43305:0
   computer_science_edweek: crwdns3595:0crwdne3595:0
   csedweek_dates: crwdns27832:0crwdne27832:0
@@ -483,6 +488,7 @@ en-US:
   dashboard_action_required: crwdns7794:0crwdne7794:0
   dashboard_assessments_view: crwdns56489:0crwdne56489:0
   dashboard_assessments_none: crwdns56490:0crwdne56490:0
+  dashboard_assessments_none_part2: crwdns56924:0crwdne56924:0
   dashboard_assessments_summaries: crwdns56839:0crwdne56839:0
   dashboard_assessments_answers: crwdns56840:0crwdne56840:0
   dashboard_filter_by_stage: crwdns56491:0crwdne56491:0
@@ -496,13 +502,13 @@ en-US:
   dashboard_navigation_section_pd: crwdns25909:0crwdne25909:0
   dashboard_navigation_section_speakers: crwdns25910:0crwdne25910:0
   dashboard_navigation_all_sections: crwdns22277:0crwdne22277:0
-  dashboard_navigation_view_progress: crwdns7797:0crwdne7797:0
-  dashboard_navigation_view_text_responses: crwdns50087:0crwdne50087:0
+  dashboard_navigation_view_progress: crwdns57068:0crwdne57068:0
+  dashboard_navigation_view_text_responses: crwdns57069:0crwdne57069:0
   dashboard_navigation_view_assessments: crwdns56256:0crwdne56256:0
   dashboard_navigation_add_students: crwdns7798:0crwdne7798:0
   dashboard_navigation_manage_students: crwdns7799:0crwdne7799:0
   dashboard_navigation_lesson_plans_resources: crwdns22278:0crwdne22278:0
-  dashboard_navigation_view_stats: crwdns20167:0crwdne20167:0
+  dashboard_navigation_view_stats: crwdns57070:0crwdne57070:0
   dashboard_navigation_section: 'crwdns7800:0%{section_name}crwdne7800:0'
   dashboard_navigation_student: 'crwdns7801:0%{student_name}crwdne7801:0'
   dashboard_progress_not_started: crwdns35467:0crwdne35467:0
@@ -514,6 +520,7 @@ en-US:
   dashboard_progress_submitted: crwdns56220:0crwdne56220:0
   dashboard_progress_view: crwdns56494:0crwdne56494:0
   dashboard_progress_student_in_script: 'crwdns56495:0%{student_name}crwdnd56495:0%{script_name}crwdne56495:0'
+  dashboard_progress_pair_programming: crwdns56925:0crwdne56925:0
   dashboard_responses_view: crwdns56496:0crwdne56496:0
   dashboard_responses_none: crwdns56497:0crwdne56497:0
   dashboard_sections_new_section: crwdns7802:0crwdne7802:0
@@ -522,6 +529,7 @@ en-US:
   dashboard_sections_table_secret: crwdns20750:0crwdne20750:0
   dashboard_sections_table_grade: crwdns7806:0crwdne7806:0
   dashboard_sections_table_course: crwdns7807:0crwdne7807:0
+  dashboard_sections_table_stage_extras: crwdns56987:0crwdne56987:0
   dashboard_sections_table_students: crwdns7808:0crwdne7808:0
   dashboard_sections_table_code: crwdns7809:0crwdne7809:0
   dashboard_sections_name: crwdns18173:0crwdne18173:0
@@ -645,8 +653,8 @@ en-US:
   dashboard_faq_k5: crwdns41887:0crwdne41887:0
   dashboard_announcements: crwdns50092:0crwdne50092:0
   dashboard_announce_view_all: crwdns50093:0crwdne50093:0
-  dashboard_announce_message: crwdns56188:0crwdne56188:0
-  dashboard_announce_button_text: crwdns55869:0crwdne55869:0
+  dashboard_announce_message: crwdns57071:0crwdne57071:0
+  dashboard_announce_button_text: crwdns57072:0crwdne57072:0
   dashboard_announce_petition: crwdns56705:0crwdne56705:0
   dashboard_announce_petition_button: crwdns56706:0crwdne56706:0
   code_hoc_coming: crwdns25713:0crwdne25713:0
@@ -766,6 +774,7 @@ en-US:
   cspunit6_name: crwdns56711:0crwdne56711:0
   csp1_name: crwdns56842:0crwdne56842:0
   csp2_name: crwdns56843:0crwdne56843:0
+  csp3_name: crwdns57073:0crwdne57073:0
   cspassessment_name: crwdns56844:0crwdne56844:0
   cspexam1-mWU7ilDYM9_name: crwdns56845:0crwdne56845:0
   cspexam2-AKwgAh1ac5_name: crwdns56846:0crwdne56846:0
