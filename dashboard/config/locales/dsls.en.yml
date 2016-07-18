@@ -155,9 +155,7 @@ en:
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Keypress Stop: {}
       CSD U3 SFLP Card Project: {}
-      CSD U3 SFLP Conditionals:
-        description here: description here
-        title: title
+      CSD U3 SFLP Conditionals: {}
       CSD U3 SFLP Sprites and Images:
         description here: description here
         title: title
@@ -1572,8 +1570,6 @@ en:
         The Great Tower Topple: The Great Tower Topple
       gradek1_activity_beNice:
         The computer is your friend: The computer is your friend
-      gradek_partner_fuzzConditionals:
-        Fuzz Family Fiesta: Fuzz Family Fiesta
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}

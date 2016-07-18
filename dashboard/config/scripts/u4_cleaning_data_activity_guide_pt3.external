@@ -22,16 +22,13 @@ In the example below you'll see one possible way to categorize responses to the 
 
 **Note: This process is being done by hand using only one of many possible methods for creating categories. There are always many different ways to categorize data and there will rarely be one clearly "right" way. You'll have to make judgment calls about what makes the most sense.**
 
-# Do This:
+## Do This:
 
 **Create at least one new column in your dataset that standardizes a column of data collected as "free form text".**  
 
 To do this you will need to invent a set of categories that applies to your data. **This may take a while to do. Consult with your partners and make sure you have a generally agreed-upon set of rules as you start**.
 
 Good luck!
-
-
-<hr>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

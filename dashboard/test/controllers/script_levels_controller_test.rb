@@ -523,7 +523,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert_select 'div.unplugged > h2', 'Happy Maps'
+    assert_select 'div.unplugged > h1', 'Happy Maps'
     assert_select 'div.unplugged > p', 'Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.'
     assert_select '.pdf-button', 2
 
@@ -797,23 +797,23 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'includes makerlab javascript dependencies when makerlab level' do
-    sign_in @admin
+    sign_in @teacher
 
     level = create :makerlab
     script_level = create :script_level, levels: [level]
 
-    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @teacher.id
 
     assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab')
   end
 
   test 'excludes makerlab javascript dependencies when applab level' do
-    sign_in @admin
+    sign_in @teacher
 
     level = create :applab
     script_level = create :script_level, levels: [level]
 
-    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @teacher.id
 
     assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab'), false
   end
@@ -834,7 +834,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal @student, assigns(:user)
 
     assert_equal true, assigns(:view_options)[:readonly_workspace]
-    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal true, assigns(:level_view_options_map)[level.id][:skip_instructions_popup]
     assert_equal [], assigns(:view_options)[:callouts]
   end
 
@@ -918,7 +918,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '.teacher-panel.hidden', 0 # not hidden
 
     assert_equal true, assigns(:view_options)[:readonly_workspace]
-    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal true, assigns(:level_view_options_map)[sl.levels[0].id][:skip_instructions_popup]
     assert_equal [], assigns(:view_options)[:callouts]
   end
 
@@ -981,8 +981,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level
     assert_response :success
 
-    assert_equal true, assigns(:level_view_options)[:submitted]
-    assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options)[:unsubmit_url]
+    assert_equal true, assigns(:level_view_options_map)[level.id][:submitted]
+    assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options_map)[level.id][:unsubmit_url]
   end
 
   def create_admin_script
@@ -1006,12 +1006,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "should get show of admin script if signed in as admin" do
+  # TODO(asher): Consolidate the tests when the user is an admin. In particular,
+  # these scripts should no longer exist, should be accessible to noone, and
+  # will go away.
+  test "should not get show of admin script if signed in as admin" do
     admin_script = create_admin_script
 
     sign_in create(:admin)
     get :show, script_id: admin_script.name, stage_id: 1, id: 1
-    assert_response :success
+    assert_response :forbidden
   end
 
   def create_student_of_admin_script
@@ -1043,12 +1046,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get show of student_of_admin script if signed in as admin" do
+  test "should not get show of student_of_admin script if signed in as admin" do
     script = create_student_of_admin_script
 
     sign_in create(:admin)
     get :show, script_id: script.name, stage_id: 1, id: 1
-    assert_response :success
+    assert_response :forbidden
   end
 
   test "should have milestone posting disabled if Milestone is set" do
