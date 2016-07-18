@@ -1983,6 +1983,10 @@ en:
           Events Unplugged: Events Unplugged
           Events: Events
           Fuzz Fiesta: Fuzz Fiesta
+          title: Kindergarten
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
         grade4:
           title: Grade 4
           description_short: Planning Script for CSF 2.0
@@ -2024,6 +2028,10 @@ en:
           Events Unplugged: Events Unplugged
           Events: Events
           More Computer Science: More Computer Science
+          title: Grade 1
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
         grade5:
           title: Grade 5
           description_short: Planning Script for CSF 2.0
@@ -2144,6 +2152,10 @@ en:
           Robot Running the Farm: Robot Running the Farm
           Farmer Impacts of Computing: Farmer Impacts of Computing
           Preview to What is Next: Preview to What is Next
+          title: Grade 3
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
         Test CPS PD:
           test Unit 1 required reading: test Unit 1 required reading
           test Unit 1 content module Alpha: test Unit 1 content module Alpha
@@ -2196,3 +2208,14 @@ en:
           Online Internet Safety: Online Internet Safety
           Free Play with your Pet: Free Play with your Pet
           Flappy: Flappy
+          title: Grade 2
+          description_short: Planning Script for CSF 2.0
+          description: Planning Script for CSF 2.0
+          description_audience: Ages 5-18
+          Caring for My New Pet: Caring for My New Pet
+          New Home for My Pet: New Home for My Pet
+          Exploring the Neighborhood: Exploring the Neighborhood
+          Make a Dog Tag: Make a Dog Tag
+          Getting Loopy with Puppy: Getting Loopy with Puppy
+          Puppy Loops: Puppy Loops
+          Puppy Event: Puppy Event
