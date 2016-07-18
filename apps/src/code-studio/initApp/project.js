@@ -14,6 +14,7 @@ var assets = require('./clientApi').create('/v3/assets');
 var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
 
+import experiments from '../../experiments';
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
 var queryParams = require('../utils').queryParams;
@@ -242,6 +243,11 @@ var projects = module.exports = {
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
     return hasEditPermissions && isEditOrViewPage;
+  },
+
+  useFirebaseForNewProject() {
+    return experiments.isEnabled('useFirebaseForNewProject') &&
+      current.level === '/projects/applab';
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -611,7 +617,9 @@ var projects = module.exports = {
       }
     }
     function redirectToRemix() {
-      location.href = projects.getPathName('remix');
+      const suffix = projects.useFirebaseForNewProject() ? '?useFirebase=1' : '';
+      const url = `${projects.getPathName('remix')}${suffix}`;
+      location.href = url;
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
@@ -621,8 +629,10 @@ var projects = module.exports = {
     }
   },
   createNew() {
+    const suffix = projects.useFirebaseForNewProject() ? '?useFirebase=1' : '';
+    const url = `${projects.appToProjectUrl()}/new${suffix}`;
     projects.save(function () {
-      location.href = projects.appToProjectUrl() + '/new';
+      location.href = url;
     });
   },
   delete(callback) {

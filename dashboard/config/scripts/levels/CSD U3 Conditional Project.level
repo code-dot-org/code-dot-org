@@ -68,7 +68,12 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "comment": null,
+      "comment_Sprites": null,
+      "comment_GameLab": null,
+      "comment_Variables": null,
+      "comment_Math": null,
+      "comment_Control": null,
+      "comment_Drawing": null,
       "console.log": null
     },
     "show_d_pad": "true",
@@ -98,6 +103,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "callout_json": "[]",
+    "hide_animation_mode": "false",
     "contained_level_names": null
   },
   "published": true,
