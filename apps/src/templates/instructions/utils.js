@@ -34,3 +34,20 @@ export function scrollTo(element, scrollTop, animate=400) {
     element.scrollTop = scrollTop;
   }
 }
+
+export function shouldDisplayChatTips(skinId) {
+  /*eslint-disable no-fallthrough*/
+  switch (skinId) {
+    case 'infinity':
+    case 'anna':
+    case 'elsa':
+    case 'craft':
+    // star wars
+    case 'hoc2015':
+    case 'hoc2015x':
+      return false;
+    default:
+      return true;
+  }
+  /*eslint-enable no-fallthrough*/
+}

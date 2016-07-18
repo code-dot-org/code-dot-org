@@ -1070,7 +1070,7 @@ StudioApp.prototype.localeDirection = function () {
 };
 
 StudioApp.prototype.showNextHint = function () {
-  return this.authoredHintsContainer.showNextHint();
+  return this.authoredHintsController_.showNextHint();
 };
 
 /**
@@ -2891,6 +2891,7 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
+    skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
