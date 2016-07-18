@@ -43,7 +43,7 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 
-const SCROLL_BY_PERCENT = 0.4;
+const SCROLL_BY_PERCENT = 0.8;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -80,7 +80,8 @@ const styles = {
   },
   body: {
     backgroundColor: '#ddd',
-    borderRadius: 5,
+    borderTopRightRadius: 12,
+    borderTopLeftRadius: 12,
     width: '100%',
   },
   leftCol: {
@@ -94,10 +95,6 @@ const styles = {
     bottom: 0,
     // Visualization is hard-coded on embed levels. Do the same for instructions position
     left: 340
-  },
-  secondaryInstructions: {
-    fontSize: 12,
-    color: '#5b6770'
   },
   collapserButton: {
     position: 'absolute',
@@ -128,7 +125,7 @@ const styles = {
     padding: '5px 0',
   },
   instructionsWithTips: {
-    width: 'calc(100% - 30px)',
+    width: 'calc(100% - 20px)',
     float: 'right'
   },
 };
@@ -174,18 +171,19 @@ var TopInstructions = React.createClass({
 
   getInitialState() {
     return {
-      rightColWidth: 90,
+      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 5,
       promptForHint: false
     };
   },
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     // Update right col width now that we know how much space it needs, and
     // rerender if it has changed. One thing to note is that if we end up
     // resizing our column significantly, it can result in our maxNeededHeight
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
-    const width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
+    const width = this.shouldDisplayCollapserButton() ?
+        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 5;
     if (width !== this.state.rightColWidth) {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
@@ -356,7 +354,7 @@ var TopInstructions = React.createClass({
    */
   handleScrollInstructionsUp() {
     const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.scrollHeight;
+    const contentHeight = contentContainer.clientHeight;
     scrollBy(contentContainer, contentHeight * -1 * SCROLL_BY_PERCENT);
   },
 
@@ -365,7 +363,7 @@ var TopInstructions = React.createClass({
    */
   handleScrollInstructionsDown() {
     const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.scrollHeight;
+    const contentHeight = contentContainer.clientHeight;
     scrollBy(contentContainer, contentHeight * SCROLL_BY_PERCENT);
   },
 
@@ -409,6 +407,13 @@ var TopInstructions = React.createClass({
     return this.state && this.state.promptForHint && !this.props.collapsed;
   },
 
+  shouldDisplayCollapserButton() {
+    if (this.props.isMinecraft) {
+      return false;
+    }
+    return this.props.longInstructions || this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback;
+  },
+
   render: function () {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
@@ -422,7 +427,12 @@ var TopInstructions = React.createClass({
       this.props.isMinecraft && craftStyles.main
     ];
 
-    const atMaxHeight = this.props.height === this.props.maxHeight;
+    let canScroll = false;
+    if (this.refs && this.refs.instructions) {
+      const contentContainer = this.refs.instructions.parentElement;
+      const contentHeight = contentContainer.scrollHeight;
+      canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
+    }
 
     const renderedMarkdown = processMarkdown((this.props.collapsed || !this.props.longInstructions) ?
       this.props.shortInstructions : this.props.longInstructions);
@@ -484,7 +494,7 @@ var TopInstructions = React.createClass({
               }
               {!this.props.hasContainedLevels && this.props.collapsed && instructions2 &&
                 <div
-                    style={styles.secondaryInstructions}
+                    className="secondary-instructions"
                     dangerouslySetInnerHTML={{ __html: instructions2 }}
                 />
               }
@@ -513,7 +523,7 @@ var TopInstructions = React.createClass({
           <div>
             <CollapserButton
                 ref='collapser'
-                style={[styles.collapserButton, !(this.props.longInstructions || this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback) && commonStyles.hidden]}
+                style={[styles.collapserButton, !this.shouldDisplayCollapserButton() && commonStyles.hidden]}
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
             />
@@ -522,7 +532,7 @@ var TopInstructions = React.createClass({
                 ref='scrollButtons'
                 onScrollUp={this.handleScrollInstructionsUp}
                 onScrollDown={this.handleScrollInstructionsDown}
-                visible={!atMaxHeight}
+                visible={canScroll}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
             />}
           </div>
