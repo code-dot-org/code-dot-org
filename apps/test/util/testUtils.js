@@ -1,6 +1,6 @@
-require('babel-polyfill');
-var $ = require('jquery');
-var React = require('react');
+import 'babel-polyfill';
+import React from 'react';
+import $ from 'jquery';
 import {assert} from './configuredChai';
 
 export function setExternalGlobals() {
@@ -256,5 +256,18 @@ export function findChildrenOfType(root, type) {
   return children.reduce((memo, nextChild) =>
           memo.concat(nextChild.type === type ? [nextChild] : [])
               .concat(findChildrenOfType(nextChild, type)),
+      []);
+}
+
+/**
+ * @param {Component|string} root
+ * @param {string} className
+ * @returns {Component[]} all components of type that are descendants of root
+ */
+export function findChildrenWithClass(root, className) {
+  const children = React.Children.toArray(root.props ? root.props.children : undefined);
+  return children.reduce((memo, nextChild) =>
+          memo.concat((nextChild.props.className || '').split(/\s/g).includes(className) ? [nextChild] : [])
+              .concat(findChildrenWithClass(nextChild, className)),
       []);
 }
