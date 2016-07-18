@@ -2,13 +2,13 @@
  * @file Redux module for new format for tracking project animations.
  */
 import {combineReducers} from 'redux';
-const utils = require('../utils');
+import {createUuid} from '../utils';
 import {animations as animationsApi} from '../clientApi';
 import assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './PropTypes';
-/* global dashboard */
+/* global console, dashboard */
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
@@ -29,9 +29,9 @@ const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
 // Args: {AnimationKey} key
 const DELETE_ANIMATION = 'AnimationList/DELETE_ANIMATION';
 // Args: {AnimationKey} key
-const START_LOADING_FROM_SOURCE = 'AnimationList/START_LOADING_FROM_SOURCE';
+export const START_LOADING_FROM_SOURCE = 'AnimationList/START_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {Blob} blob, {String} dataURI. Version?
-const DONE_LOADING_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SOURCE';
+export const DONE_LOADING_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {string} version
 const ON_ANIMATION_SAVED = 'AnimationList/ON_ANIMATION_SAVED';
 
@@ -127,7 +127,8 @@ function animationPropsReducer(state, action) {
         loadedFromSource: true,
         saved: true,
         blob: action.blob,
-        dataURI: action.dataURI
+        dataURI: action.dataURI,
+        sourceSize: action.sourceSize
       });
 
     case ON_ANIMATION_SAVED:
@@ -163,7 +164,12 @@ export function setInitialAnimationList(serializedAnimationList) {
     };
   }
 
-  throwIfSerializedAnimationListIsInvalid(serializedAnimationList);
+  try {
+    throwIfSerializedAnimationListIsInvalid(serializedAnimationList);
+  } catch (err) {
+    console.error('Unable to load animations:', err);
+    return;
+  }
 
   return dispatch => {
     dispatch({
@@ -177,7 +183,7 @@ export function setInitialAnimationList(serializedAnimationList) {
 }
 
 export function addBlankAnimation() {
-  const key = utils.createUuid();
+  const key = createUuid();
   return dispatch => {
     // Special behavior here:
     // By pushing an animation that is "loadedFromSource" but has a null
@@ -189,7 +195,6 @@ export function addBlankAnimation() {
       props: {
         name: 'New animation', // TODO: Better generated name?
         sourceUrl: null,
-        sourceSize: {x: 100, y: 100},
         frameSize: {x: 100, y: 100},
         frameCount: 1,
         frameRate: 15,
@@ -233,7 +238,7 @@ export function addAnimation(key, props) {
  */
 export function addLibraryAnimation(props) {
   return dispatch => {
-    const key = utils.createUuid();
+    const key = createUuid();
     dispatch({
       type: ADD_ANIMATION,
       key,
@@ -262,7 +267,7 @@ export function cloneAnimation(key) {
     }
 
     const sourceAnimation = animationList.propsByKey[key];
-    const newAnimationKey = utils.createUuid();
+    const newAnimationKey = createUuid();
     dispatch({
       type: ADD_ANIMATION_AT,
       index: sourceIndex + 1,
@@ -362,13 +367,16 @@ function loadAnimationFromSource(key, callback) {
       }
 
       blobToDataURI(blob, dataURI => {
-        dispatch({
-          type: DONE_LOADING_FROM_SOURCE,
-          key,
-          blob,
-          dataURI
+        dataURIToSourceSize(dataURI).then(sourceSize => {
+          dispatch({
+            type: DONE_LOADING_FROM_SOURCE,
+            key,
+            blob,
+            dataURI,
+            sourceSize
+          });
+          callback();
         });
-        callback();
       });
     });
   };
@@ -393,6 +401,15 @@ function blobToDataURI(blob, onComplete) {
   let fileReader = new FileReader();
   fileReader.onload = e => onComplete(e.target.result);
   fileReader.readAsDataURL(blob);
+}
+
+function dataURIToSourceSize(dataURI) {
+  return new Promise((resolve, reject) => {
+    let image = new Image();
+    image.onload = () => resolve({x: image.width, y: image.height});
+    image.onerror = err => reject(err);
+    image.src = dataURI;
+  });
 }
 
 /**
