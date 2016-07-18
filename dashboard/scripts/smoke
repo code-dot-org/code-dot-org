@@ -25,8 +25,8 @@ TESTS = [
 ]
 
 20.times do |i|
-  TESTS << { url: "/hoc/#{i+1}" }
-  TESTS << { url: "/milestone/0/#{i+1}", method: :post, form_data: MILESTONE_DATA }
+  TESTS << { url: "/hoc/#{i + 1}" }
+  TESTS << { url: "/milestone/0/#{i + 1}", method: :post, form_data: MILESTONE_DATA }
 end
 #
 # parse arguments

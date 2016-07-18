@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,1,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,1,1,1,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "instructions": "Figure out what is missing and then add blocks to get me to the pig!",
     "start_direction": "3",
@@ -38,11 +38,19 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="maze_moveWest">
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveNorth">
+            <block type="maze_moveWest">
               <next>
-                <block type="maze_moveNorth"/>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveNorth">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
               </next>
             </block>
           </next>
@@ -71,9 +79,13 @@
               <next>
                 <block type="maze_moveWest">
                   <next>
-                    <block type="maze_moveNorth">
+                    <block type="maze_moveWest">
                       <next>
-                        <block type="maze_moveNorth"/>
+                        <block type="maze_moveNorth">
+                          <next>
+                            <block type="maze_moveNorth"/>
+                          </next>
+                        </block>
                       </next>
                     </block>
                   </next>

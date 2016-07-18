@@ -32,7 +32,7 @@ class AssetsTest < FilesApiTestBase
     response, sound_filename = post_asset_file(@api, 'woof.mp3', sound_body, 'audio/mpeg')
 
     actual_sound_info = JSON.parse(response)
-    expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    expected_sound_info = {'filename' => sound_filename, 'category' => 'audio', 'size' => sound_body.length}
     assert_fileinfo_equal(expected_sound_info, actual_sound_info)
 
     file_infos = @api.list_objects
@@ -199,7 +199,7 @@ class AssetsTest < FilesApiTestBase
     _, sound_filename = post_asset_file(src_api, sound_filename, sound_body, 'audio/mpeg')
     src_api.patch_abuse(10)
 
-    expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    expected_sound_info = {'filename' => sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
     copy_file_infos = JSON.parse(dest_api.copy_assets(@channel_id, [sound_filename]))
     dest_file_infos = dest_api.list_objects
@@ -232,7 +232,7 @@ class AssetsTest < FilesApiTestBase
     _, sound_filename = post_asset_file(src_api, sound_filename, sound_body, 'audio/mpeg')
     src_api.patch_abuse(10)
 
-    expected_image_info = {'filename' =>  image_filename, 'category' =>  'image', 'size' =>  image_body.length}
+    expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
     copy_file_infos = JSON.parse(copy_all(@channel_id, dest_channel_id))

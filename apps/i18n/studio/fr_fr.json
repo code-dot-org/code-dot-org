@@ -798,5 +798,13 @@
   "failedMultiplyCharactersTimeoutBlockly": "Tu dois obtenir 20 Droïdes Souris. Utilise la commande «&#160;Ajouter un Droïde Souris&#160;» à l'évènement «&#160;Quand un Droïde Souris est obtenu&#160;» pour ajouter au moins deux Droïdes Souris chaque fois que tu en obtiens un.",
   "failedMultiplyCharactersTimeoutGotSome": "Félicitations, tu as ajouté le code pour créer des Droïdes Souris. Tu peux passer au prochain puzzle ou réessayer pour en obtenir 20 d'entre eux. Essaie de rendre la tâche plus facile en en ajoutant plus ! (Presse et maintiens les touches de direction sur ton clavier (ou à l'écran) pour aller plus vite.)",
   "failedChangeSettingTimeout": "Obtiens trois Pilotes Rebelles pour continuer.",
-  "failedChangeSettingSettings": "Approprie-toi le jeu. Pour réussir ce puzzle, tu devras modifier ton droïde et régler sa vitesse."
+  "failedChangeSettingSettings": "Approprie-toi le jeu. Pour réussir ce puzzle, tu devras modifier ton droïde et régler sa vitesse.",
+  "moveDownLeft": "move down and left",
+  "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
+  "moveDownRight": "move down and right",
+  "moveDownRightTooltip": "Move an actor diagonally down and to the right.",
+  "moveUpLeft": "move up and left",
+  "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
+  "moveUpRight": "move up and right",
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
 }

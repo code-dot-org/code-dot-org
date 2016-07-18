@@ -47,7 +47,8 @@ var WorkshopForm = React.createClass({
       sessions: React.PropTypes.array.isRequired
     }),
     onSaved: React.PropTypes.func,
-    readOnly: React.PropTypes.bool
+    readOnly: React.PropTypes.bool,
+    children: React.PropTypes.node,
   },
 
   getInitialState: function () {
@@ -274,8 +275,6 @@ var WorkshopForm = React.createClass({
           {options}
         </Input>
       );
-    } else {
-      this.state.subject = null;
     }
   },
 
@@ -347,8 +346,8 @@ var WorkshopForm = React.createClass({
     var course = event.target.value;
     this.handleFieldChange('course', course);
 
-    // clear facilitators
-    this.setState({facilitators: []});
+    // clear facilitators and subject
+    this.setState({facilitators: [], subject: null});
     this.loadAvailableFacilitators(course);
   },
 

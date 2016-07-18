@@ -6,7 +6,7 @@
   #lesson
     - if @script.professional_learning_course?
       #breadcrumb
-      - react_props = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.name.downcase.sub(' ', '-'))}
+      - react_props = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.name.downcase.gsub(' ', '-'))}
       :javascript
         ReactDOM.render(
           React.createElement(window.dashboard.plcHeader, #{react_props.to_json}),
@@ -20,7 +20,7 @@
           %br/
 
     #heading
-      %h2
+      %h1
         = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
         = data_t_suffix('script.name', @script.name, 'title')
         - if @script.beta?

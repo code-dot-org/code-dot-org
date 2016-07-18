@@ -127,7 +127,20 @@ stage 'Play Lab: Events and Conditionals'
 level 'comingSoon'
 
 stage 'Project: Chase/Collect Game'
-level 'comingSoon'
+video_key_for_next_level 'starwars_blocks_events'
+level 'blockly:Studio:hoc2015_blockly_7'
+level 'blockly:Studio:hoc2015_blockly_8'
+level 'blockly:Studio:hoc2015_blockly_9'
+level 'blockly:Studio:hoc2015_blockly_10'
+
+level 'blockly:Studio:hoc2015_blockly_11'
+level 'blockly:Studio:hoc2015_blockly_12'
+level 'blockly:Studio:hoc2015_blockly_13'
+level 'blockly:Studio:hoc2015_blockly_14'
+
+video_key_for_next_level 'starwars_blocks_congrats'
+level 'blockly:Studio:hoc2015_blockly_15'
+
 
 stage 'Scratch (Optional Third-Party Stage)'
 level 'comingSoon'
@@ -136,7 +149,7 @@ stage 'Unplugged: Binary Images'
 level 'BinaryImages'
 
 stage 'Pixelation: Binary Exploration'
-level 'Pixelation 1'
+level 'grade5_pixelation'
 
 stage 'Artist Binary'
 level 'Course 4 Artist Binary pre1'

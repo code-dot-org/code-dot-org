@@ -649,7 +649,7 @@ SQL
   # https://github.com/plataformatec/devise/blob/master/lib/devise/models/database_authenticatable.rb#L46
   def valid_password?(password)
     return false if encrypted_password.blank?
-    bcrypt   = ::BCrypt::Password.new(encrypted_password)
+    bcrypt = ::BCrypt::Password.new(encrypted_password)
     # check with the pepper
     spicy_password = ::BCrypt::Engine.hash_secret("#{password}#{self.class.pepper}", bcrypt.salt)
     if Devise.secure_compare(spicy_password, encrypted_password)
@@ -908,7 +908,7 @@ SQL
   end
 
   # The synchronous handler for the track_level_progress helper.
-  def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids:, is_navigator: false)
+  def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
     new_level_perfected = false
 

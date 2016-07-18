@@ -1,10 +1,9 @@
+require 'base64'
 require 'cdo/db'
 require 'digest/md5'
 require_relative 'email_validator'
 require 'mail'
 require 'openssl'
-require 'base64'
-require 'digest/md5'
 
 module Poste
   def self.logger
@@ -40,6 +39,15 @@ module Poste
     encrypt(id)
   end
 
+  # Returns whether there is a dashboard student account associated with the
+  # specified hashed_email.
+  def self.dashboard_student?(hashed_email)
+    dashboard_user = DASHBOARD_DB[:users].
+      where(hashed_email: hashed_email).
+      first
+    return !dashboard_user.nil? && dashboard_user[:user_type] == 'student'
+  end
+
   def self.resolve_template(name)
     template_extnames.each do |extname|
       path = emails_dir "#{name}#{extname}"
@@ -61,25 +69,27 @@ module Poste
     ['.md','.haml','.html']
   end
 
-  def self.unsubscribed?(email)
-    !!POSTE_DB[:contacts].where('email = ? AND unsubscribed_on IS NOT NULL', email.to_s.strip.downcase).first
-  end
-
-  def self.unsubscribe(email, params={})
-    email = email.to_s.strip.downcase
+  # Unsubscribes the specified hashed email.
+  # @param email [string | nil] the email to record being unsubscribed.
+  #   WARNING: The contact to unsubscribe is chosen using hashed_email.
+  # @param hashed_email [string] the MD5 hash of the email to unsubscribe.
+  # @param params [hash] A hash of parameters, including ip_address.
+  def self.unsubscribe(email, hashed_email, params={})
+    email = email.strip.downcase if email
     now = DateTime.now
 
     contacts = POSTE_DB[:contacts]
-    contact = contacts.where(email: email).first
+    contact = contacts.where(hashed_email: hashed_email).first
     if contact
       contacts.where(id: contact[:id]).update(
         unsubscribed_at: now,
         unsubscribed_ip: params[:ip_address],
       )
     else
+      sanitized_email = dashboard_student?(hashed_email) ? '' : email
       contacts.insert(
-        email: email,
-        hashed_email: Digest::MD5.hexdigest(email.downcase),
+        email: sanitized_email,
+        hashed_email: hashed_email,
         created_at: now,
         created_ip: params[:ip_address],
         unsubscribed_at: now,
@@ -115,29 +125,31 @@ module Poste2
     @@url_cache[href] = url_id
   end
 
-  def self.create_recipient(address, params={})
-    address = address.to_s.strip.downcase
-    raise ArgumentError, "Invalid email address (#{address})" unless email_address?(address)
+  # TODO(asher): Refactor create_recipient and ensure_recipient to share common
+  # code.
+  def self.create_recipient(email, params={})
+    email = email.to_s.strip.downcase
+    hashed_email = Digest::MD5.hexdigest(email)
+    raise ArgumentError, "Invalid email address (#{email})" unless email_address?(email)
 
     name = params[:name].strip if params[:name]
     ip_address = params[:ip_address]
     now = DateTime.now
 
-    contacts = POSTE_DB[:contacts]
-
-    contact = contacts.where(email: address).first
+    contact = POSTE_DB[:contacts].where(hashed_email: hashed_email).first
     if contact
       if contact[:name] != name && !name.nil_or_empty?
-        contacts.where(id: contact[:id]).update(
+        POSTE_DB[:contacts].where(id: contact[:id]).update(
           name: name,
           updated_at: now,
           updated_ip: ip_address,
         )
       end
     else
-      id = contacts.insert({}.tap do |contact|
-        contact[:email] = address
-        contact[:hashed_email] = Digest::MD5.hexdigest(address.downcase)
+      sanitized_email = Poste.dashboard_student?(hashed_email) ? '' : email
+      id = POSTE_DB[:contacts].insert({}.tap do |contact|
+        contact[:email] = sanitized_email
+        contact[:hashed_email] = hashed_email
         contact[:name] = name if name
         contact[:created_at] = now
         contact[:created_ip] = ip_address
@@ -147,24 +159,24 @@ module Poste2
       contact = {id: id}
     end
 
-    {id: contact[:id], email: address, name: name, ip_address: ip_address}
+    {id: contact[:id], email: email, name: name, ip_address: ip_address}
   end
 
-  def self.ensure_recipient(address, params={})
-    address = address.to_s.strip.downcase
-    raise ArgumentError, 'Invalid email address' unless email_address?(address)
+  def self.ensure_recipient(email, params={})
+    email = email.to_s.strip.downcase
+    hashed_email = Digest::MD5.hexdigest(email)
+    raise ArgumentError, 'Invalid email address' unless email_address?(email)
 
     name = params[:name].strip if params[:name]
     ip_address = params[:ip_address]
     now = DateTime.now
 
-    contacts = POSTE_DB[:contacts]
-
-    contact = contacts.where(email: address).first
+    contact = POSTE_DB[:contacts].where(hashed_email: hashed_email).first
     unless contact
-      id = contacts.insert({}.tap do |contact|
-        contact[:email] = address
-        contact[:hashed_email] = Digest::MD5.hexdigest(address.downcase)
+      sanitized_email = Poste.dashboard_student?(hashed_email) ? '' : email
+      id = POSTE_DB[:contacts].insert({}.tap do |contact|
+        contact[:email] = sanitized_email
+        contact[:hashed_email] = hashed_email
         contact[:name] = name if name
         contact[:created_at] = now
         contact[:created_ip] = ip_address
@@ -174,7 +186,7 @@ module Poste2
       contact = {id: id}
     end
 
-    {id: contact[:id], email: address, name: name, ip_address: ip_address}
+    {id: contact[:id], email: email, name: name, ip_address: ip_address}
   end
 
   def self.attachment_dir

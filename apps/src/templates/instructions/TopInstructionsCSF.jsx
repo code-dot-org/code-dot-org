@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-disable react/no-danger */
 
 import $ from 'jquery';
 import React from 'react';
@@ -35,6 +35,7 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
+const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
 
 const SCROLL_BY_PERCENT = 0.4;
 
@@ -91,9 +92,7 @@ const styles = {
   },
   embedView: {
     height: undefined,
-    bottom: 0,
-    // Visualization is hard-coded on embed levels. Do the same for instructions position
-    left: 340
+    bottom: 0
   },
   secondaryInstructions: {
     fontSize: 12,
@@ -146,6 +145,7 @@ const styles = {
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
+    embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
     hasContainedLevels: React.PropTypes.bool.isRequired,
     aniGifURL: React.PropTypes.string,
@@ -156,7 +156,9 @@ var TopInstructions = React.createClass({
     shortInstructions: React.PropTypes.string.isRequired,
     shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
-    feedback: React.PropTypes.string,
+    feedback: React.PropTypes.shape({
+      message: React.PropTypes.string.isRequired,
+    }),
     hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     smallStaticAvatar: React.PropTypes.string,
@@ -168,7 +170,8 @@ var TopInstructions = React.createClass({
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired
+    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
+    showInstructionsDialog: React.PropTypes.func.isRequired,
   },
 
   getInitialState() {
@@ -186,6 +189,7 @@ var TopInstructions = React.createClass({
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
     if (width !== this.state.rightColWidth) {
+      // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         rightColWidth: width
       });
@@ -193,6 +197,7 @@ var TopInstructions = React.createClass({
 
     const gotNewFeedback = this.props.feedback && !prevProps.feedback;
     if (gotNewFeedback) {
+      // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         promptForHint: false
       });
@@ -403,14 +408,16 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - resizerHeight
       },
-      this.props.isEmbedView && styles.embedView,
+      this.props.isEmbedView && Object.assign({}, styles.embedView, {
+        left: this.props.embedViewLeftOffset
+      }),
       this.props.noVisualization && styles.noViz,
       this.props.isMinecraft && craftStyles.main
     ];
 
     const atMaxHeight = this.props.height === this.props.maxHeight;
 
-    const renderedMarkdown = processMarkdown(this.props.collapsed ?
+    const renderedMarkdown = processMarkdown((this.props.collapsed || !this.props.longInstructions) ?
       this.props.shortInstructions : this.props.longInstructions);
 
     // Only used by star wars levels
@@ -493,7 +500,7 @@ var TopInstructions = React.createClass({
           <div>
             <CollapserButton
                 ref='collapser'
-                style={[styles.collapserButton, !this.props.longInstructions && commonStyles.hidden]}
+                style={[styles.collapserButton, !this.props.longInstructions && !this.props.feedback && commonStyles.hidden]}
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
             />
@@ -518,6 +525,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
+    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     isMinecraft: !!state.pageConstants.isMinecraft,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     aniGifURL: state.pageConstants.aniGifURL,

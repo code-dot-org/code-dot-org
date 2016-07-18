@@ -213,7 +213,7 @@ class ActivitiesController < ApplicationController
 
     progress.each_pair do |concept, counts|
       current = current_trophies[concept]
-      pct = counts[:current].to_f/counts[:max]
+      pct = counts[:current].to_f / counts[:max]
 
       new_trophy = Trophy.find_by_id(
         case
@@ -247,7 +247,7 @@ class ActivitiesController < ApplicationController
     else
       log_string += "\tanon"
     end
-    log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" +
+    log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" \
                   "\t#{params[:testResult]}\t#{params[:time]}\t#{params[:attempt]}\t#{params[:lines]}"
     log_string += level_source.try(:id) ? "\t#{level_source.id}" : "\t"
     log_string += "\t#{request.user_agent}"

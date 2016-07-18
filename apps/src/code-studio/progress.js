@@ -3,83 +3,47 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore } from '@cdo/apps/redux';
 import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
 import CourseProgress from './components/progress/course_progress.jsx';
+import { SUBMITTED_RESULT, mergeActivityResult, activityCssClass } from './activityUtils';
+
+import progressReducer, {
+  initProgress,
+  mergeProgress,
+  updateFocusArea,
+  showLessonPlans
+} from './progressRedux';
 
 var progress = module.exports;
 
-/**
- * See ActivityConstants.
- */
-const MINIMUM_PASS_RESULT = 20;
-const MINIMUM_OPTIMAL_RESULT = 30;
-const SUBMITTED_RESULT = 1000;
-const REVIEW_REJECTED_RESULT = 1500;
-const REVIEW_ACCEPTED_RESULT = 2000;
+progress.renderStageProgress = function (stageData, progressData, scriptName,
+    currentLevelId, saveAnswersBeforeNavigation) {
+  const store = createStoreWithProgress({
+    name: scriptName,
+    stages: [stageData]
+  }, currentLevelId, saveAnswersBeforeNavigation);
 
-/**
- * See ApplicationHelper#activity_css_class.
- * @param result
- * @return {string}
- */
-progress.activityCssClass = function (result) {
-  if (!result) {
-    return 'not_tried';
-  }
-  if (result === SUBMITTED_RESULT) {
-    return 'submitted';
-  }
-  if (result >= MINIMUM_OPTIMAL_RESULT) {
-    return 'perfect';
-  }
-  if (result >= MINIMUM_PASS_RESULT) {
-    return 'passed';
-  }
-  return 'attempted';
-};
-
-/**
- * Returns the "best" of the two results, as defined in apps/src/constants.js.
- * Note that there are negative results that count as an attempt, so we can't
- * just take the maximum.
- * @param {Number} a
- * @param {Number} b
- * @return {string} The result css class.
- */
-progress.mergedActivityCssClass = function (a, b) {
-  return progress.activityCssClass(clientState.mergeActivityResult(a, b));
-};
-
-progress.renderStageProgress = function (stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation) {
-  var store = loadProgress({name: scriptName, stages: [stageData]}, currentLevelId, saveAnswersBeforeNavigation);
-  var mountPoint = document.querySelector('.progress_container');
-
-  store.dispatch({
-    type: 'MERGE_PROGRESS',
-    progress: _.mapValues(progressData.levels, level => level.submitted ? SUBMITTED_RESULT : level.result)
-  });
+  store.dispatch(mergeProgress(_.mapValues(progressData.levels,
+    level => level.submitted ? SUBMITTED_RESULT : level.result)));
 
   // Provied a function that can be called later to merge in progress now saved on the client.
   progress.refreshStageProgress = function () {
-    store.dispatch({
-      type: 'MERGE_PROGRESS',
-      progress: clientState.allLevelsProgress()[scriptName] || {}
-    });
+    store.dispatch(mergeProgress(clientState.allLevelsProgress()[scriptName] || {}));
   };
 
   ReactDOM.render(
     <Provider store={store}>
       <StageProgress />
     </Provider>,
-    mountPoint
+    document.querySelector('.progress_container')
   );
 };
 
 progress.renderCourseProgress = function (scriptData, currentLevelId) {
-  var store = loadProgress(scriptData, currentLevelId);
+  const store = createStoreWithProgress(scriptData, currentLevelId);
   var mountPoint = document.createElement('div');
 
   $.ajax(
@@ -90,25 +54,21 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
     // Show lesson plan links if teacher
     if (data.isTeacher) {
-      store.dispatch({
-        type: 'SHOW_LESSON_PLAN_LINKS'
-      });
+      store.dispatch(showLessonPlans());
     }
 
     if (data.focusAreaPositions) {
-      store.dispatch({
-        type: 'UPDATE_FOCUS_AREAS',
-        changeFocusAreaPath: data.changeFocusAreaPath,
-        focusAreaPositions: data.focusAreaPositions
-      });
+      store.dispatch(updateFocusArea(data.changeFocusAreaPath,
+        data.focusAreaPositions));
     }
 
     // Merge progress from server (loaded via AJAX)
     if (data.levels) {
-      store.dispatch({
-        type: 'MERGE_PROGRESS',
-        progress: _.mapValues(data.levels, level => level.submitted ? SUBMITTED_RESULT : level.result)
-      });
+      store.dispatch(mergeProgress(
+        _.mapValues(data.levels,
+          level => level.submitted ? SUBMITTED_RESULT : level.result),
+        data.peerReviewsPerformed
+      ));
     }
   });
 
@@ -121,75 +81,29 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   );
 };
 
-// Return the level with the highest progress, or the first level if none have
-// been attempted
-progress.bestResultLevelId = function (levelIds, progressData) {
-  // The usual case
-  if (levelIds.length === 1) {
-    return levelIds[0];
-  }
+/**
+ * Creates a redux store with our initial progress
+ * @param scriptData
+ * @param currentLevelId
+ * @param saveAnswersBeforeNavigation
+ * @returns {object} The created redux store
+ */
+function createStoreWithProgress(scriptData, currentLevelId,
+    saveAnswersBeforeNavigation = false) {
+  const store = createStore(progressReducer);
 
-  // Return the level with the highest result
-  var attemptedIds = levelIds.filter(id => progressData[id]);
-  if (attemptedIds.length === 0) {
-    // None of them have been attempted, just return the first
-    return levelIds[0];
-  }
-  var bestId = attemptedIds[0];
-  var bestResult = progressData[bestId];
-  attemptedIds.forEach(function (id) {
-    var result = progressData[id];
-    if (result > bestResult) {
-      bestId = id;
-      bestResult = result;
-    }
-  });
-  return bestId;
-};
-
-function loadProgress(scriptData, currentLevelId, saveAnswersBeforeNavigation = false) {
-
-  let store = createStore((state = {}, action) => {
-    if (action.type === 'MERGE_PROGRESS') {
-      // TODO: _.mergeWith after upgrading to Lodash 4+
-      let newProgress = {};
-      Object.keys(Object.assign({}, state.progress, action.progress)).forEach(key => {
-        newProgress[key] = clientState.mergeActivityResult(state.progress[key], action.progress[key]);
-      });
-
-      return Object.assign({}, state, {
-        progress: newProgress,
-        stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
-          let id = level.uid || progress.bestResultLevelId(level.ids, newProgress);
-
-          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
-        })}))
-      });
-    } else if (action.type === 'UPDATE_FOCUS_AREAS') {
-      return Object.assign({}, state, {
-        changeFocusAreaPath: action.changeFocusAreaPath,
-        focusAreaPositions: action.focusAreaPositions
-      });
-    } else if (action.type === 'SHOW_LESSON_PLAN_LINKS') {
-      return Object.assign({}, state, {
-        showLessonPlanLinks: true
-      });
-    }
-    return state;
-  }, {
+  store.dispatch(initProgress({
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
-    progress: {},
-    focusAreaPositions: [],
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
-    stages: scriptData.stages
-  });
+    stages: scriptData.stages,
+    peerReviewsRequired: scriptData.peerReviewsRequired,
+  }));
 
   // Merge in progress saved on the client.
-  store.dispatch({
-    type: 'MERGE_PROGRESS',
-    progress: clientState.allLevelsProgress()[scriptData.name] || {}
-  });
+  store.dispatch(mergeProgress(
+    clientState.allLevelsProgress()[scriptData.name] || {}
+  ));
 
   // Progress from the server should be written down locally.
   store.subscribe(() => {

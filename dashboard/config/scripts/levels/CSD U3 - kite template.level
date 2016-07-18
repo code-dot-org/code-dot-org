@@ -9,7 +9,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var kite = createSprite(300, 50);\r\n\r\nfunction draw() {\r\n  background(color(10,140,230));  \r\n  fill(\"green\");\r\n  noStroke();\r\n  rect(0, 300, 400, 100);\r\n  stroke(\"black\");\r\n  strokeWeight(5);\r\n  line(150, 300, 300, 50);\r\n  drawSprites();\r\n}",
+    "start_blocks": "var kite = createSprite(300, 50);\r\n\r\nfunction draw() {\r\n  //Draw Background\r\n  background(color(10,140,230)); \r\n  //grass\r\n  fill(\"green\");\r\n  noStroke();\r\n  rect(0, 300, 400, 100);\r\n  //string\r\n  stroke(\"black\");\r\n  strokeWeight(5);\r\n  line(150, 300, 300, 50);\r\n  \r\n  //Update Values\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

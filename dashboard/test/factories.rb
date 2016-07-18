@@ -18,6 +18,13 @@ FactoryGirl.define do
       admin true
     end
 
+    factory :levelbuilder do
+      after(:create) do |levelbuilder|
+        levelbuilder.permission = UserPermission::LEVELBUILDER
+        levelbuilder.save
+      end
+    end
+
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 03, 14)
@@ -172,6 +179,10 @@ FactoryGirl.define do
 
   factory :applab, :parent => Level, :class => Applab do
     game {Game.applab}
+  end
+
+  factory :free_response, :parent => Level, :class => FreeResponse do
+    game {Game.free_response}
   end
 
   factory :makerlab, :parent => Level, :class => Applab do
