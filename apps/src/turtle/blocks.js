@@ -496,9 +496,17 @@ exports.install = function (blockly, blockInstallOptions) {
 
   var longMoveLengthDropdownValue = "LONG_MOVE_LENGTH";
   var shortMoveLengthDropdownValue = "SHORT_MOVE_LENGTH";
+  var longDiagonalMoveLengthDropdownValue = "LONG_DIAGONAL_MOVE_LENGTH";
+  var shortDiagonalMoveLengthDropdownValue = "SHORT_DIAGONAL_MOVE_LENGTH";
+  var defaultMoveLength = 50;
+  var defaultDiagonalMoveLength = defaultMoveLength * Math.sqrt(2);
   var simpleLengthChoices = [
     [skin.longLineDraw, longMoveLengthDropdownValue],
     [skin.shortLineDraw, shortMoveLengthDropdownValue]
+  ];
+  var simpleDiagonalLengthChoices = [
+    [skin.longLineDraw, longDiagonalMoveLengthDropdownValue],
+    [skin.shortLineDraw, shortDiagonalMoveLengthDropdownValue]
   ];
   var simpleLengthRightChoices = [
     [skin.longLineDrawRight, longMoveLengthDropdownValue],
@@ -506,9 +514,10 @@ exports.install = function (blockly, blockInstallOptions) {
   ];
 
   var SimpleMove = {
-    DEFAULT_MOVE_LENGTH: 50,
     SHORT_MOVE_LENGTH: 50,
     LONG_MOVE_LENGTH: 100,
+    SHORT_DIAGONAL_MOVE_LENGTH: 50 * Math.sqrt(2),
+    LONG_DIAGONAL_MOVE_LENGTH: 100 * Math.sqrt(2),
     DIRECTION_CONFIGS: {
       left: {
         title: commonMsg.directionWestLetter(),
@@ -516,7 +525,9 @@ exports.install = function (blockly, blockInstallOptions) {
         tooltip: msg.moveWestTooltip(),
         image: skin.westLineDraw,
         imageDimensions: {width: 72, height: 56},
-        lengths: simpleLengthChoices
+        lengths: simpleLengthChoices,
+        defaultLength: defaultMoveLength,
+        defaultDropdownValue: longMoveLengthDropdownValue
       },
       right: {
         title: commonMsg.directionEastLetter(),
@@ -524,7 +535,9 @@ exports.install = function (blockly, blockInstallOptions) {
         tooltip: msg.moveEastTooltip(),
         image: skin.eastLineDraw,
         imageDimensions: {width: 72, height: 56},
-        lengths: simpleLengthRightChoices
+        lengths: simpleLengthRightChoices,
+        defaultLength: defaultMoveLength,
+        defaultDropdownValue: longMoveLengthDropdownValue
       },
       up: {
         title: commonMsg.directionNorthLetter(),
@@ -532,7 +545,9 @@ exports.install = function (blockly, blockInstallOptions) {
         tooltip: msg.moveNorthTooltip(),
         image: skin.northLineDraw,
         imageDimensions: {width: 72, height: 56},
-        lengths: simpleLengthChoices
+        lengths: simpleLengthChoices,
+        defaultLength: defaultMoveLength,
+        defaultDropdownValue: longMoveLengthDropdownValue
       },
       down: {
         title: commonMsg.directionSouthLetter(),
@@ -540,47 +555,129 @@ exports.install = function (blockly, blockInstallOptions) {
         tooltip: msg.moveSouthTooltip(),
         image: skin.southLineDraw,
         imageDimensions: {width: 72, height: 56},
-        lengths: simpleLengthChoices
+        lengths: simpleLengthChoices,
+        defaultLength: defaultMoveLength,
+        defaultDropdownValue: longMoveLengthDropdownValue
+      },
+      up_left: {
+        title: commonMsg.directionNorthwestLetter(),
+        moveFunction: 'moveUpLeft',
+        tooltip: msg.moveNorthwestTooltip(),
+        image: skin.northwestLineDraw,
+        imageDimensions: {width: 72, height: 56},
+        lengths: simpleDiagonalLengthChoices,
+        defaultLength: defaultDiagonalMoveLength,
+        defaultDropdownValue: longDiagonalMoveLengthDropdownValue
+      },
+      up_right: {
+        title: commonMsg.directionNortheastLetter(),
+        moveFunction: 'moveUpRight',
+        tooltip: msg.moveNortheastTooltip(),
+        image: skin.northeastLineDraw,
+        imageDimensions: {width: 72, height: 56},
+        lengths: simpleDiagonalLengthChoices,
+        defaultLength: defaultDiagonalMoveLength,
+        defaultDropdownValue: longDiagonalMoveLengthDropdownValue
+      },
+      down_left: {
+        title: commonMsg.directionSouthwestLetter(),
+        moveFunction: 'moveDownLeft',
+        tooltip: msg.moveSouthwestTooltip(),
+        image: skin.southwestLineDraw,
+        imageDimensions: {width: 72, height: 56},
+        lengths: simpleDiagonalLengthChoices,
+        defaultLength: defaultDiagonalMoveLength,
+        defaultDropdownValue: longDiagonalMoveLengthDropdownValue
+      },
+      down_right: {
+        title: commonMsg.directionSoutheastLetter(),
+        moveFunction: 'moveDownRight',
+        tooltip: msg.moveSoutheastTooltip(),
+        image: skin.southeastLineDraw,
+        imageDimensions: {width: 72, height: 56},
+        lengths: simpleDiagonalLengthChoices,
+        defaultLength: defaultDiagonalMoveLength,
+        defaultDropdownValue: longDiagonalMoveLengthDropdownValue
       },
       jump_left: {
         isJump: true,
         title: commonMsg.directionWestLetter(),
         moveFunction: 'jumpLeft',
         image: skin.leftJumpArrow,
-        tooltip: msg.jumpWestTooltip()
+        tooltip: msg.jumpWestTooltip(),
+        defaultLength: defaultMoveLength
       },
       jump_right: {
         isJump: true,
         title: commonMsg.directionEastLetter(),
         moveFunction: 'jumpRight',
         image: skin.rightJumpArrow,
-        tooltip: msg.jumpEastTooltip()
+        tooltip: msg.jumpEastTooltip(),
+        defaultLength: defaultMoveLength
       },
       jump_up: {
         isJump: true,
         title: commonMsg.directionNorthLetter(),
         moveFunction: 'jumpUp',
         image: skin.upJumpArrow,
-        tooltip: msg.jumpNorthTooltip()
+        tooltip: msg.jumpNorthTooltip(),
+        defaultLength: defaultMoveLength
       },
       jump_down: {
         isJump: true,
         title: commonMsg.directionSouthLetter(),
         moveFunction: 'jumpDown',
         image: skin.downJumpArrow,
-        tooltip: msg.jumpSouthTooltip()
+        tooltip: msg.jumpSouthTooltip(),
+        defaultLength: defaultMoveLength
+      },
+      jump_up_left: {
+        isJump: true,
+        title: commonMsg.directionNorthwestLetter(),
+        moveFunction: 'jumpUpLeft',
+        image: skin.upLeftJumpArrow,
+        tooltip: msg.jumpNorthwestTooltip(),
+        defaultLength: defaultDiagonalMoveLength
+      },
+      jump_up_right: {
+        isJump: true,
+        title: commonMsg.directionNortheastLetter(),
+        moveFunction: 'jumpUpRight',
+        image: skin.upRightJumpArrow,
+        tooltip: msg.jumpNortheastTooltip(),
+        defaultLength: defaultDiagonalMoveLength
+      },
+      jump_down_left: {
+        isJump: true,
+        title: commonMsg.directionSouthwestLetter(),
+        moveFunction: 'jumpDownLeft',
+        image: skin.downLeftJumpArrow,
+        tooltip: msg.jumpSouthwestTooltip(),
+        defaultLength: defaultDiagonalMoveLength
+      },
+      jump_down_right: {
+        isJump: true,
+        title: commonMsg.directionSoutheastLetter(),
+        moveFunction: 'jumpDownRight',
+        image: skin.downRightJumpArrow,
+        tooltip: msg.jumpSoutheastTooltip(),
+        defaultLength: defaultDiagonalMoveLength
       }
     },
     generateBlocksForAllDirections: function () {
-      SimpleMove.generateBlocksForDirection("up");
-      SimpleMove.generateBlocksForDirection("down");
-      SimpleMove.generateBlocksForDirection("left");
-      SimpleMove.generateBlocksForDirection("right");
+      SimpleMove.generateBlocksForDirection('up');
+      SimpleMove.generateBlocksForDirection('down');
+      SimpleMove.generateBlocksForDirection('left');
+      SimpleMove.generateBlocksForDirection('right');
+      SimpleMove.generateBlocksForDirection('up_left');
+      SimpleMove.generateBlocksForDirection('up_right');
+      SimpleMove.generateBlocksForDirection('down_left');
+      SimpleMove.generateBlocksForDirection('down_right');
     },
     generateBlocksForDirection: function (direction) {
-      generator["simple_move_" + direction] = SimpleMove.generateCodeGenerator(direction);
-      generator["simple_jump_" + direction] = SimpleMove.generateCodeGenerator('jump_' + direction);
-      generator["simple_move_" + direction + "_length"] = SimpleMove.generateCodeGenerator(direction, true);
+      generator['simple_move_' + direction] = SimpleMove.generateCodeGenerator(direction);
+      generator['simple_jump_' + direction] = SimpleMove.generateCodeGenerator('jump_' + direction);
+      generator['simple_move_' + direction + '_length'] = SimpleMove.generateCodeGenerator(direction, true);
       blockly.Blocks['simple_move_' + direction + '_length'] = SimpleMove.generateMoveBlock(direction, true);
       blockly.Blocks['simple_move_' + direction] = SimpleMove.generateMoveBlock(direction);
       blockly.Blocks['simple_jump_' + direction] = SimpleMove.generateMoveBlock('jump_' + direction);
@@ -610,20 +707,21 @@ exports.install = function (blockly, blockInstallOptions) {
           this.setTooltip(directionConfig.tooltip);
           if (hasLengthInput) {
             var dropdown = new blockly.FieldImageDropdown(directionConfig.lengths);
-            dropdown.setValue(longMoveLengthDropdownValue);
+            dropdown.setValue(directionConfig.defaultDropdownValue);
             input.appendTitle(dropdown, 'length');
           }
         }
       };
     },
-    generateCodeGenerator: function (direction, hasLengthInput, length) {
+    generateCodeGenerator: function (direction, hasLengthInput) {
       return function () {
-        length = length || SimpleMove.DEFAULT_MOVE_LENGTH;
+        var directionConfig = SimpleMove.DIRECTION_CONFIGS[direction];
+        var length = directionConfig.defaultLength;
 
         if (hasLengthInput) {
           length = SimpleMove[this.getTitleValue("length")];
         }
-        return 'Turtle.' + SimpleMove.DIRECTION_CONFIGS[direction].moveFunction + '(' + length + ',' + '\'block_id_' + this.id + '\');\n';
+        return 'Turtle.' + directionConfig.moveFunction + '(' + length + ',' + '\'block_id_' + this.id + '\');\n';
       };
     }
   };
