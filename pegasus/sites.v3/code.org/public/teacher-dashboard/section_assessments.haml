@@ -6,7 +6,6 @@ content-type: text/ng-template
 
 %br/
 
-
 .loading{'ng-hide' => 'assessmentsLoaded'}
   = I18n.t('dashboard_landing_loading')
 
@@ -36,8 +35,8 @@ content-type: text/ng-template
             %option{value: ""}= I18n.t('dashboard_filter_all')
         %button.btn.btn-white{'ng-csv' => surveys_filtered,
                 filename: "survey_levels.csv",
-                'csv-header' => "['Name', 'Stage', 'Puzzle', 'Question', 'Response', 'Correctness']",
-                'csv-column-order' => "['student.name', 'stage', 'puzzle', 'question', 'studentResult', 'count']",
+                'csv-header' => "['Stage', 'Puzzle', 'Question', 'Response', 'Percent']",
+                'csv-column-order' => "['stage', 'puzzle', 'questionText', 'resultText', 'percent']",
                 style: 'float: right'}
           %i.fa.fa-download
           = I18n.t('dashboard_download_csv')
