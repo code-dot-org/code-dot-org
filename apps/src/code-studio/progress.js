@@ -27,7 +27,7 @@ progress.renderStageProgress = function (stageData, progressData, scriptName,
   }, currentLevelId, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
-    level => level.submitted ? SUBMITTED_RESULT : level.result)));
+    level => level.submitted && level.result < SUBMITTED_RESULT ? SUBMITTED_RESULT : level.result)));
 
   // Provied a function that can be called later to merge in progress now saved on the client.
   progress.refreshStageProgress = function () {
@@ -66,7 +66,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     if (data.levels) {
       store.dispatch(mergeProgress(
         _.mapValues(data.levels,
-          level => level.submitted ? SUBMITTED_RESULT : level.result),
+          level => level.submitted && level.result < SUBMITTED_RESULT ? SUBMITTED_RESULT : level.result),
         data.peerReviewsPerformed
       ));
     }
