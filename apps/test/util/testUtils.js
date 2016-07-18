@@ -252,22 +252,31 @@ function zeroPadLeft(string, desiredWidth) {
  * @returns {Component[]} all components of type that are descendants of root
  */
 export function findChildrenOfType(root, type) {
-  const children = React.Children.toArray(root.props ? root.props.children : undefined);
-  return children.reduce((memo, nextChild) =>
-          memo.concat(nextChild.type === type ? [nextChild] : [])
-              .concat(findChildrenOfType(nextChild, type)),
-      []);
+  return findChildrenWithPredicate(root, child => child.type === type);
 }
 
 /**
  * @param {Component|string} root
  * @param {string} className
- * @returns {Component[]} all components of type that are descendants of root
+ * @returns {Component[]} all components with that className that are descendants of root
  */
 export function findChildrenWithClass(root, className) {
+  return findChildrenWithPredicate(root, child => {
+    return child.props && child.props.className &&
+        child.props.className.split(/\s/g).includes(className);
+  });
+}
+
+/**
+ * @param {Component|string} root
+ * @param {function(Component|string):boolean} predicate
+ * @returns {Component[]} all components that are descendants of root that satisfy
+ *          the passed predicate
+ */
+export function findChildrenWithPredicate(root, predicate) {
   const children = React.Children.toArray(root.props ? root.props.children : undefined);
   return children.reduce((memo, nextChild) =>
-          memo.concat((nextChild.props.className || '').split(/\s/g).includes(className) ? [nextChild] : [])
-              .concat(findChildrenWithClass(nextChild, className)),
+          memo.concat(predicate(nextChild) ? [nextChild] : [])
+              .concat(findChildrenWithPredicate(nextChild, predicate)),
       []);
 }
