@@ -232,7 +232,7 @@ class Deliverer
     address = address.to_s.strip
     return parse_addresses(address).first unless address.empty?
 
-    email = defaults[:email].to_s.strip
+    email = defaults[:email].to_s.strip || defaults[:contact_email]
     return nil if email.empty?
 
     {email: email}.tap do |address|
