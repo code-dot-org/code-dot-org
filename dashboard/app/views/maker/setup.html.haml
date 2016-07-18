@@ -1,0 +1,24 @@
+:markdown
+  # CS Discoveries Maker APIs Pilot IT Setup
+
+  ## Background
+
+  The Adafruit [Circuit Playground](https://www.adafruit.com/products/3000) is a programmable circuit board with built-in components that make getting started with physical computing quick and fun.
+
+  <center><img src="https://cdn-shop.adafruit.com/970x728/3000-06.jpg" width=200></center><br>
+
+  In the Computer Science Discoveries curriculum being piloted this school year, we will be using the Circuit Playground tethered via USB to students' computers to allow for online curriculum integration and interactive debugging of programs.
+
+  To connect from USB to the Code Studio Applab website, we will need to install a Chrome App extension to support serial communication from the browser.
+
+  ## Computer Setup Steps
+
+  1. Install [Google Chrome](https://www.google.com/chrome/browser/) and [Chrome App extension](https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg). _Note: we plan to support other browsers including IE in Fall 2017._
+     * If you previously had the Chrome App installed, confirm the version # has been updated to 30, by navigating to `chrome://extensions` in your browser bar
+  1. Navigate to the Maker APIs w/ App Lab page:
+     * [Make an account](https://studio.code.org/users/sign_up) or [log in](https://studio.code.org/users/sign_in) to Code Studio.
+     * Navigate to the Maker APIs w/ App Lab project page: [https://studio.code.org/p/makerlab](https://studio.code.org/p/makerlab)
+  1. Plug in a Circuit Playground board, write some code (new blocks are in the “Maker Lab” and “Circuit” tabs) and press **Run**.
+  1. If something seems to be not working (e.g. “ERROR: Line: 1: Unknown identifier: touchSensor0”, open your Chrome console (command + option + I) & send brian@code.org the error. This often means the board did not successfully connect due to an incomplete setup step.
+
+  If you're on Windows, you will additionally need to install the [Adafruit Windows drivers](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only).
