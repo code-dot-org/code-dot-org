@@ -149,7 +149,7 @@ stage 'Unplugged: Binary Images'
 level 'BinaryImages'
 
 stage 'Pixelation: Binary Exploration'
-level 'Pixelation 1'
+level 'grade5_pixelation'
 
 stage 'Artist Binary'
 level 'Course 4 Artist Binary pre1'

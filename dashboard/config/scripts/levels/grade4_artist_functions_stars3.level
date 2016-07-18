@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Now try drawing the same images using the function \"draw a star\"",
+    "instructions": "That last one is tough if you only use loops. Let's try drawing the same picture using this new 'function' that will help to **draw a star**.",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Don't give up!\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -32,6 +32,8 @@
     "x": "50",
     "y": "100",
     "ideal": "11",
+    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\nThat last one is tough if you only use loops. Let's try one more time and see if this new 'function' makes it easier to **draw a star**.",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade4_artist_functions_stars3_1\",\r\n  \"callout_text\": \"Drag this block into your program. Every time you use this block, all of the commands in the function will be executed!\",\r\n  \"element_id\": \"#functionCall\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,
@@ -89,9 +91,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="draw a star"/>
-        </block>
         <block type="draw_colour" inline="true" id="draw-color">
           <value name="COLOUR">
             <block type="colour_picker">
@@ -114,6 +113,12 @@
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+        <block type="procedures_callnoreturn" id="functionCall">
+          <mutation name="draw a star"/>
         </block>
       </xml>
     </toolbox_blocks>
