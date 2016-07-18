@@ -18,6 +18,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'isViewDataButtonHidden',
   'instructionsInTopPane',
   'noInstructionsWhenCollapsed',
+  'hasInlineImages',
   'puzzleNumber',
   'stageTotal',
   'showDebugButtons',
@@ -38,7 +39,8 @@ var ALLOWED_KEYS = utils.makeEnum(
   'inputOutputTable',
   'showAnimationMode',
   'nonResponsiveVisualizationColumnWidth',
-  'is13Plus'
+  'is13Plus',
+  'isSignedIn'
 );
 
 const initialState = {
