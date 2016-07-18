@@ -56,11 +56,11 @@ function trafficFilterDropdown() {
   var markup = '<select id="traffic-filter" class="pull-right">';
   markup += '<option' + selectedIf(/^none/) + ' value="none">' +
       i18n.logBrowserHeader_showAllTraffic() + '</option>';
-  markup += '<option' + selectedIf(/^with/) + ' value="with ' + localAddress + '">' +
+  markup += '<option' + selectedIf(/^with/) + ' value="with ' + locals.localAddress + '">' +
       i18n.logBrowserHeader_showMyTraffic() + '</option>';
-  markup += '<option' + selectedIf(/^from/) + ' value="from ' + localAddress + '">' +
+  markup += '<option' + selectedIf(/^from/) + ' value="from ' + locals.localAddress + '">' +
       i18n.logBrowserHeader_showTrafficFromMe() + '</option>';
-  markup += '<option' + selectedIf(/^to/) + ' value="to ' + localAddress + '">' +
+  markup += '<option' + selectedIf(/^to/) + ' value="to ' + locals.localAddress + '">' +
       i18n.logBrowserHeader_showTrafficToMe() + '</option>';
   markup += '</select>';
   return markup;

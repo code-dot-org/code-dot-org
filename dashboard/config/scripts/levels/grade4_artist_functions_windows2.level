@@ -10,7 +10,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
-    "ideal": "8",
+    "ideal": "18",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -30,6 +30,8 @@
     "discard_background": "false",
     "disable_sharing": "false",
     "start_direction": "90",
+    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nLet's take the code for the window and add it to function `draw a window`. Now, we can call the function any time we need to draw a window without having to write the code again. \r\n\r\n<img src=\"https://images.code.org/57c016bcafe697e6ddb196e0f13c9ef9-image-1468602046641.gif\" width=\"450px\"/>\r\n\r\n\r\n<br/>\r\n\r\n\r\n\r\nTry solving this puzzle by defining a new `function`, then calling it five times. You can solve this without adding any new loops!",
+    "instructions": "Can you figure out how to add these windows? Watch out for the door!",
     "contained_level_names": null
   },
   "published": true,
@@ -94,7 +96,10 @@
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="procedures_defnoreturn">
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
           <mutation/>
           <title name="NAME">draw a window</title>
         </block>

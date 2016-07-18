@@ -52,7 +52,6 @@ export const AnimationKey = React.PropTypes.string;
  * @typedef {Object} SerializedAnimationProps
  * @property {string} name
  * @property {?string} sourceUrl
- * @property {Vector2} sourceSize
  * @property {Vector2} frameSize
  * @property {number} frameCount
  * @property {number} frameRate
@@ -61,7 +60,6 @@ export const AnimationKey = React.PropTypes.string;
 const serializedAnimationPropsShape = {
   name: React.PropTypes.string.isRequired,
   sourceUrl: React.PropTypes.string,
-  sourceSize: Vector2.isRequired,
   frameSize: Vector2.isRequired,
   frameCount: React.PropTypes.number.isRequired,
   frameRate: React.PropTypes.number.isRequired,
@@ -76,13 +74,13 @@ const SerializedAnimationProps = React.PropTypes.shape(serializedAnimationPropsS
  *           (From the animation library or some other outside source)
  *           Otherwise this is a custom spritesheet stored via the animations API
  *           and we look it up by key.
- * @property {Vector2} sourceSize
  * @property {Vector2} frameSize
  * @property {number} frameCount
  * @property {number} frameRate
  * @property {string} [version] - S3 version key
  *
  * @property {boolean} loadedFromSource - False at first, true after load successful.
+ * @property {Vector2} sourceSize
  * @property {boolean} saved - True if the current blob represents the last thing
  *           we uploaded to the animations API, false if we have a pending change
  *           to save.
@@ -93,6 +91,7 @@ const SerializedAnimationProps = React.PropTypes.shape(serializedAnimationPropsS
  */
 const animationPropsShape = _.assign({}, serializedAnimationPropsShape, {
   loadedFromSource: React.PropTypes.bool,
+  sourceSize: Vector2,
   saved: React.PropTypes.bool,
   blob: React.PropTypes.object,
   dataURI: React.PropTypes.string,
@@ -110,7 +109,6 @@ function getSerializedAnimationProps(animation) {
   return _.pick(animation, [
     'name',
     'sourceUrl',
-    'sourceSize',
     'frameSize',
     'frameCount',
     'frameRate',
