@@ -4,15 +4,30 @@
     float: right;
   }
 
+  .setup-status .complete {
+    color: green;
+  }
+
+  .setup-status .incomplete {
+    color: red;
+    font-weight: bold;
+  }
+
+  .setup-status .hidden {
+    display: none;
+  }
+
+= javascript_include_tag 'js/makerlab'
+
 .maker-setup
   :markdown
     # CS Discoveries Maker APIs Pilot IT Setup
 
-    ## Background
+    ## The Circuit Playground
+
+    <center><a href="https://www.adafruit.com/products/3000"><img src="#{image_url('maker/circuit-playground-200.jpg')}" width=200></a></center>
 
     The Adafruit [Circuit Playground](https://www.adafruit.com/products/3000) is a programmable circuit board with built-in components that make getting started with physical computing quick and fun.
-
-    <center><a href="https://www.adafruit.com/products/3000"><img src="https://cdn-shop.adafruit.com/970x728/3000-06.jpg" width=200></a></center><br>
 
     In the Computer Science Discoveries curriculum being piloted this school year, we will be using the Circuit Playground tethered via USB to students' computers to allow for online curriculum integration and interactive debugging of programs.
 
@@ -20,6 +35,7 @@
 
     ## Computer Setup Steps
 
+    1. If you're using Windows, you will need to start by installing the [Adafruit Windows drivers](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only).
     1. Install [Google Chrome](https://www.google.com/chrome/browser/) and [Chrome App extension](https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg). _Note: we plan to support other browsers including IE in Fall 2017._
        * If you previously had the Chrome App installed, confirm the version # has been updated to 30, by navigating to `chrome://extensions` in your browser bar
     1. Navigate to the Maker APIs w/ App Lab page:
@@ -28,7 +44,54 @@
     1. Plug in a Circuit Playground board, write some code (new blocks are in the “Maker Lab” and “Circuit” tabs) and press **Run**.
     1. If something seems to be not working (e.g. “`ERROR: Line: 1: Unknown identifier: touchSensor0`”, open your Chrome console (command + option + I) & send brian@code.org the error. This often means the board did not successfully connect due to an incomplete setup step.
 
-    If you're on Windows, you will additionally need to install the [Adafruit Windows drivers](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only).
+    ## Setup Status
 
-%script
-  $(function () { $('.maker-setup a').attr('target', '_blank'); });
+    <ul class="setup-status">
+      <li id="is-chrome" class="complete">Chrome version 33+</li>
+      <li id="app-installed" class="incomplete">Chrome App installed</li>
+      <li id="windows-drivers" class="hidden">Windows drivers installed</li>
+    </ul>
+
+:javascript
+
+  $(function () {
+    $('.maker-setup a').attr('target', '_blank');
+
+    var isChrome = !!window.chrome;
+    var gtChrome33 = isChrome && getChromeVersion() >= 33;
+
+    function getChromeVersion() {
+      var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+
+      return raw ? parseInt(raw[2], 10) : false;
+   }
+
+    function isMacintosh() {
+      return navigator.platform.indexOf('Mac') > -1
+    }
+
+    function isWindows() {
+      return navigator.platform.indexOf('Win') > -1
+    }
+
+    if (isChrome) {
+      if (gtChrome33) {
+        $('#is-chrome').removeClass('incomplete').addClass('complete');
+      } else {
+        $('#is-chrome').append("Your Chrome version is " + getChromeVersion() + ", please upgrade to at least version 33");
+      }
+      var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
+      window.ChromeSerialport.extensionId = CHROME_APP_ID
+      window.ChromeSerialport.isInstalled(function (error) {
+        if (error) {
+          return;
+        }
+        $('#app-installed').removeClass('incomplete').addClass('complete');
+      });
+    }
+
+    if (isWindows()) {
+      $('#windows-drivers').removeClass('hidden').addClass('incomplete');
+    }
+
+  });
