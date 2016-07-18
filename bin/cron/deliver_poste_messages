@@ -127,9 +127,7 @@ class Deliverer
 
     message = StringIO.new
 
-    to_address = parse_address(header['to'], recipient.merge({
-      poste_deliveries_contact_email: recipient[:contact_email]
-    }))
+    to_address = parse_address(header['to'], recipient)
     message.puts 'To: ' + format_address(to_address)
 
     from_address = parse_address(header['from'], {email: 'help@code.org', name: 'Code.org'})
@@ -234,7 +232,7 @@ class Deliverer
     address = address.to_s.strip
     return parse_addresses(address).first unless address.empty?
 
-    email = defaults[:email].to_s.strip || defaults[:poste_deliveries_contact_email]
+    email = defaults[:email].to_s.strip || defaults[:contact_email]
     return nil if email.empty?
 
     {email: email}.tap do |address|
