@@ -129,9 +129,8 @@ AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
   this.scriptId_ = scriptId;
   this.levelId_ = levelId;
 
-  this.studioApp_.reduxStore.dispatch(enqueueHints(hints));
-
   if (hints && hints.length > 0) {
+    this.studioApp_.reduxStore.dispatch(enqueueHints(hints));
     this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
   }
 };

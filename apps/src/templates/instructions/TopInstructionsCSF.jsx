@@ -29,7 +29,12 @@ import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
-import { getOuterHeight, scrollBy, scrollTo } from './utils';
+import {
+  getOuterHeight,
+  scrollBy,
+  scrollTo,
+  shouldDisplayChatTips
+} from './utils';
 
 const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
@@ -122,10 +127,15 @@ const styles = {
   instructions: {
     padding: '5px 0',
   },
+  instructionsWithTips: {
+    width: 'calc(100% - 30px)',
+    float: 'right'
+  },
 };
 
 var TopInstructions = React.createClass({
   propTypes: {
+    skinId: React.PropTypes.string,
     hints: React.PropTypes.arrayOf(React.PropTypes.shape({
       hintId: React.PropTypes.string.isRequired,
       content: React.PropTypes.string.isRequired,
@@ -454,7 +464,7 @@ var TopInstructions = React.createClass({
           <div ref="instructions"
               className="csf-top-instructions"
               onWheel={this.handleInstructionsWheel}
-              style={styles.instructions}
+              style={[styles.instructions, shouldDisplayChatTips(this.props.skinId) && styles.instructionsWithTips]}
           >
             <ChatBubble isMinecraft={this.props.isMinecraft}>
               {this.props.hasContainedLevels && <ProtectedStatefulDiv
@@ -528,6 +538,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     hints: state.authoredHints.seenHints,
+    skinId: state.pageConstants.skinId,
     showNextHint: state.pageConstants.showNextHint,
     isEmbedView: state.pageConstants.isEmbedView,
     isMinecraft: !!state.pageConstants.isMinecraft,

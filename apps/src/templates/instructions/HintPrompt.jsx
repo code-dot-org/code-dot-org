@@ -3,7 +3,7 @@ import Radium from 'radium';
 import color from '../../color';
 import ChatBubble from './ChatBubble';
 
-const HintPrompt = ({ styles, onConfirm, onDismiss, isMinecraft, borderColor }) => {
+const HintPrompt = ({ onConfirm, onDismiss, isMinecraft, borderColor }) => {
   const buttonStyles = {
     common: {
       color: 'white',
@@ -33,7 +33,6 @@ HintPrompt.propTypes = {
   isMinecraft: React.PropTypes.bool,
   onConfirm: React.PropTypes.func.isRequired,
   onDismiss: React.PropTypes.func.isRequired,
-  styles: React.PropTypes.object.isRequired,
 };
 
 export default Radium(HintPrompt);
