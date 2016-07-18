@@ -80,8 +80,8 @@ const styles = {
   },
   body: {
     backgroundColor: '#ddd',
-    borderTopRightRadius: 12,
-    borderTopLeftRadius: 12,
+    borderTopRightRadius: 5,
+    borderTopLeftRadius: 5,
     width: '100%',
   },
   leftCol: {
@@ -171,8 +171,9 @@ var TopInstructions = React.createClass({
 
   getInitialState() {
     return {
-      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 5,
-      promptForHint: false
+      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 10,
+      promptForHint: false,
+      displayScrollButtons: true
     };
   },
 
@@ -183,7 +184,7 @@ var TopInstructions = React.createClass({
     // being inaccurate. This isn't that big a deal except that it means when we
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = this.shouldDisplayCollapserButton() ?
-        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 5;
+        $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
     if (width !== this.state.rightColWidth) {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
@@ -192,6 +193,18 @@ var TopInstructions = React.createClass({
     }
 
     this.adjustMaxNeededHeight();
+
+    if (this.refs && this.refs.instructions) {
+      const contentContainer = this.refs.instructions.parentElement;
+      const contentHeight = contentContainer.scrollHeight;
+      const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
+      if (canScroll !== this.state.displayScrollButtons) {
+        // eslint-disable-next-line react/no-did-update-set-state
+        this.setState({
+          displayScrollButtons: canScroll
+        });
+      }
+    }
 
     const gotNewHint = prevProps.hints.length !== this.props.hints.length;
     if (gotNewHint) {
@@ -285,8 +298,11 @@ var TopInstructions = React.createClass({
     const middleColHeight = minInstructionsHeight;
     const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
 
+    // Only include resizer height if resizer is available
+    const resizerHeight = collapsed ? 0 : RESIZER_HEIGHT;
+
     return Math.max(leftColHeight, middleColHeight, rightColHeight) +
-        RESIZER_HEIGHT + margins;
+         resizerHeight + margins;
   },
 
   /**
@@ -369,7 +385,7 @@ var TopInstructions = React.createClass({
 
   /**
    * Manually scroll instructions to bottom. When we have multiple
-   * elements in instructions, "bottom" is defined as 20 pixels above
+   * elements in instructions, "bottom" is defined as 10 pixels above
    * the top of the bottommost element. This is so we don't scroll past
    * the beginning of a long element, and so we scroll to a position
    * such that you can see that there is an element above it which you
@@ -380,7 +396,7 @@ var TopInstructions = React.createClass({
     const contentContainer = instructions.parentElement;
     if (instructions.children.length > 1) {
       const lastChild = instructions.children[instructions.children.length - 1];
-      scrollTo(contentContainer, lastChild.offsetTop - 20);
+      scrollTo(contentContainer, lastChild.offsetTop - 10);
     } else {
       scrollBy(contentContainer, contentContainer.scrollHeight);
     }
@@ -436,13 +452,6 @@ var TopInstructions = React.createClass({
       this.props.noVisualization && styles.noViz,
       this.props.isMinecraft && craftStyles.main
     ];
-
-    let canScroll = false;
-    if (this.refs && this.refs.instructions) {
-      const contentContainer = this.refs.instructions.parentElement;
-      const contentHeight = contentContainer.scrollHeight;
-      canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
-    }
 
     const renderedMarkdown = processMarkdown((this.props.collapsed || !this.props.longInstructions) ?
       this.props.shortInstructions : this.props.longInstructions);
@@ -542,7 +551,7 @@ var TopInstructions = React.createClass({
                 ref='scrollButtons'
                 onScrollUp={this.handleScrollInstructionsUp}
                 onScrollDown={this.handleScrollInstructionsDown}
-                visible={canScroll}
+                visible={this.state.displayScrollButtons}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
             />}
           </div>

@@ -13,8 +13,8 @@ const craftStyle = {
 const style = {
   backgroundColor: 'white',
   borderRadius: 10,
-  marginBottom: 10,
-  padding: 10,
+  margin: '5px 0',
+  padding: '5px 10px',
   position: 'relative',
   borderStyle: 'dashed',
   borderWidth: 1,
