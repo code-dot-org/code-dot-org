@@ -232,7 +232,7 @@ class Deliverer
     address = address.to_s.strip
     return parse_addresses(address).first unless address.empty?
 
-    email = defaults[:email].to_s.strip
+    email = defaults[:email].to_s.strip || defaults[:contact_email]
     return nil if email.empty?
 
     {email: email}.tap do |address|
@@ -293,11 +293,11 @@ def main
         raise
       end
 
-      if Poste.dashboard_student?(hashed_email)
+      if Poste.dashboard_student?(delivery[:hashed_email])
         # We clear the email here for privacy. Note that (given architecture)
         # it has to be persisted for a short while to actually send the email.
         POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
-          update(sent_at: sent_at, email: '')
+          update(sent_at: sent_at, contact_email: '')
       else
         POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
           update(sent_at: sent_at)

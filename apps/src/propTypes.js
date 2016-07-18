@@ -29,7 +29,7 @@ export function childrenOfType(...validChildrenTypes) {
       );
     }
     const prop = props[propName];
-    const actualChildrenTypes = React.Children.map(prop, el => el.type);
+    const actualChildrenTypes = React.Children.map(prop, el => el.type) || [];
     if (!isSubsequence(validChildrenTypes, actualChildrenTypes)) {
       return new Error(
         componentName +

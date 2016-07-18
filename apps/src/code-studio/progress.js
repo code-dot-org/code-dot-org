@@ -107,7 +107,7 @@ function initializeStoreWithProgress(scriptData, currentLevelId,
 
   // Progress from the server should be written down locally.
   store.subscribe(() => {
-    clientState.batchTrackProgress(scriptData.name, store.getState().progress);
+    clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
   });
 
   return store;
