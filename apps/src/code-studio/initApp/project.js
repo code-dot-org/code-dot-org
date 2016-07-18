@@ -761,8 +761,6 @@ function fetchSource(channelData, callback, version) {
 function fetchAbuseScore(resolve) {
   channels.fetch(current.id + '/abuse', function (err, data) {
     currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
-    console.log("Abuse resolved.");
-    console.log(currentAbuseScore);
     resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
