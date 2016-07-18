@@ -17,6 +17,7 @@ exports.setExternalGlobals = function () {
     project: {
       clearHtml: function () {},
       exceedsAbuseThreshold: function () { return false; },
+      hasPrivacyProfanityViolation: function () { return false; },
       getCurrentId: function () { return 'fake_id'; },
       isEditing: function () { return true; },
       useFirebase: function () { return false; }
