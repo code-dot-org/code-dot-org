@@ -368,12 +368,22 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * Manually scroll instructions to bottom
+   * Manually scroll instructions to bottom. When we have multiple
+   * elements in instructions, "bottom" is defined as 20 pixels above
+   * the top of the bottommost element. This is so we don't scroll past
+   * the beginning of a long element, and so we scroll to a position
+   * such that you can see that there is an element above it which you
+   * can scroll up to.
    */
   scrollInstructionsToBottom() {
-    const contentContainer = this.refs.instructions.parentElement;
-    const contentHeight = contentContainer.scrollHeight;
-    scrollBy(contentContainer, contentHeight);
+    const instructions = this.refs.instructions;
+    const contentContainer = instructions.parentElement;
+    if (instructions.children.length > 1) {
+      const lastChild = instructions.children[instructions.children.length - 1];
+      scrollTo(contentContainer, lastChild.offsetTop - 20);
+    } else {
+      scrollBy(contentContainer, contentContainer.scrollHeight);
+    }
   },
 
   /**
