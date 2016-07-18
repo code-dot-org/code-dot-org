@@ -153,9 +153,7 @@ function shareProject() {
     const appType = dashboard.project.getStandaloneApp();
     const studioApp = require('../StudioApp').singleton;
     const pageConstants = studioApp.reduxStore.getState().pageConstants;
-    const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus || (
-      appType !== 'applab' &&
-      appType !== 'gamelab');
+    const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
 
     var dialog = React.createElement(ShareDialog, {
       i18n: i18n,

@@ -108,6 +108,10 @@ var ShareDialog = React.createClass({
                           "&amp;text=Check%20out%20what%20I%20made%20@codeorg" +
                           "&amp;hashtags=HourOfCode&amp;related=codeorg";
 
+    const showShareWarning = (
+      !this.props.canShareSocial &&
+      (this.props.appType === 'applab' || this.propsAppType === 'gamelab')
+    );
     return (
       <BaseDialog
           useDeprecatedGlobalStyles
@@ -127,7 +131,7 @@ var ShareDialog = React.createClass({
                  className='alert-error'
                  style={styles.abuseStyle}
                  textStyle={styles.abuseTextStyle}/>}
-            {!this.props.canShareSocial &&
+            {showShareWarning &&
              <p style={styles.shareWarning}>
                {this.props.i18n.t('project.share_u13_warning')}
              </p>}
