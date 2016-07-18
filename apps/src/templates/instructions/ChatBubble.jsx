@@ -6,7 +6,8 @@ import ChatBubbleTip from './ChatBubbleTip';
 // Minecraft-specific styles
 const craftStyle = {
   backgroundColor: '#3B3B3B',
-  borderRadius: 4
+  borderRadius: 4,
+  borderStyle: 'solid',
 };
 
 const style = {
@@ -26,7 +27,7 @@ const ChatBubble = ({ children, isMinecraft, borderColor }) => {
   return (
     <div style={[style, isMinecraft && craftStyle, { borderColor }]}>
       {children}
-      <ChatBubbleTip color={borderColor} />
+      {!isMinecraft && <ChatBubbleTip color={borderColor} />}
     </div>
   );
 };
