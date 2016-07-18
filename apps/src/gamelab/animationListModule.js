@@ -2,7 +2,7 @@
  * @file Redux module for new format for tracking project animations.
  */
 import {combineReducers} from 'redux';
-const utils = require('../utils');
+import {createUuid} from '../utils';
 import {animations as animationsApi} from '../clientApi';
 import assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
@@ -183,7 +183,7 @@ export function setInitialAnimationList(serializedAnimationList) {
 }
 
 export function addBlankAnimation() {
-  const key = utils.createUuid();
+  const key = createUuid();
   return dispatch => {
     // Special behavior here:
     // By pushing an animation that is "loadedFromSource" but has a null
@@ -238,7 +238,7 @@ export function addAnimation(key, props) {
  */
 export function addLibraryAnimation(props) {
   return dispatch => {
-    const key = utils.createUuid();
+    const key = createUuid();
     dispatch({
       type: ADD_ANIMATION,
       key,
@@ -267,7 +267,7 @@ export function cloneAnimation(key) {
     }
 
     const sourceAnimation = animationList.propsByKey[key];
-    const newAnimationKey = utils.createUuid();
+    const newAnimationKey = createUuid();
     dispatch({
       type: ADD_ANIMATION_AT,
       index: sourceIndex + 1,

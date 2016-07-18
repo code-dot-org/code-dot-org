@@ -1,8 +1,8 @@
 import reducer, * as animationPickerModule from '@cdo/apps/gamelab/AnimationPicker/animationPickerModule';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../../util/configuredChai';
 var Goal = animationPickerModule.Goal;
 
-describe('AnimationPicker', function () {
+describe('animationPickerModule', function () {
   describe('reducer', function () {
     var initialState = {
       visible: false,

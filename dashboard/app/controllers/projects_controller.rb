@@ -101,7 +101,6 @@ class ProjectsController < ApplicationController
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @is_legacy_share = sharing && !@game.owns_footer_for_share?
     view_options(
-      is_13_plus: current_user && !current_user.under_13?,
       readonly_workspace: sharing || readonly,
       full_width: true,
       callouts: [],
