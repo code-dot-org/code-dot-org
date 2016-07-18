@@ -129,6 +129,6 @@ const CourseProgressRow = React.createClass({
 });
 
 export default connect(state => ({
-  showLessonPlanLinks: state.progress.showLessonPlanLinks,
-  changeFocusAreaPath: state.progress.changeFocusAreaPath
+  showLessonPlanLinks: state.showLessonPlanLinks,
+  changeFocusAreaPath: state.changeFocusAreaPath
 }))(Radium(CourseProgressRow));
