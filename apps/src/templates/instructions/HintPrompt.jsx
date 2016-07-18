@@ -2,6 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
 import ChatBubble from './ChatBubble';
+import msg from '../../locale';
 
 const HintPrompt = ({ onConfirm, onDismiss, isMinecraft, borderColor }) => {
   const buttonStyles = {
@@ -21,9 +22,9 @@ const HintPrompt = ({ onConfirm, onDismiss, isMinecraft, borderColor }) => {
 
   return (
     <ChatBubble isMinecraft={isMinecraft} borderColor={borderColor}>
-      <p>Do you want a hint?</p>
-      <button onClick={onConfirm} style={[buttonStyles.common, buttonStyles.yes]}>Yes</button>
-      <button onClick={onDismiss} style={[buttonStyles.common, buttonStyles.no]}>No</button>
+      <p>{msg.hintPromptInline()}</p>
+      <button onClick={onConfirm} style={[buttonStyles.common, buttonStyles.yes]}>{msg.yes()}</button>
+      <button onClick={onDismiss} style={[buttonStyles.common, buttonStyles.no]}>{msg.no()}</button>
     </ChatBubble>
   );
 };
