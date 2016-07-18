@@ -173,7 +173,7 @@ const Dialog = React.createClass({
       children.push(<Footer key='footer'>{this.props.footer}</Footer>);
     }
     return (
-      <BaseDialog {...this.props} useNewStyle={true}>
+      <BaseDialog {...this.props}>
         {children}
       </BaseDialog>
     );
@@ -184,6 +184,23 @@ const Dialog = React.createClass({
 export default Dialog;
 
 if (BUILD_STYLEGUIDE) {
+  const ExampleDialogButton = React.createClass({
+    render() {
+      return (
+        <div>
+          <Dialog
+              isOpen={!!this.state && this.state.open}
+              handleClose={() => this.setState({open: false})}
+              {...this.props}
+          />
+          <button onClick={() => this.setState({open: true})}>
+            Open the example dialog
+          </button>
+        </div>
+      );
+    }
+  });
+
   Dialog.styleGuideExamples = storybook => {
     return storybook
       .storiesOf('Dialog', module)
@@ -259,6 +276,35 @@ if (BUILD_STYLEGUIDE) {
                     body="Just wanted to tell you something"
                     confirmText="Ok"
                     onConfirm={storybook.action("confirm")} />
+          )
+        }, {
+          name: 'fullWidth',
+          description: `In a few cases you'll want a dialog that can grow to
+                        fill the browser width.`,
+          story: () => (
+            <ExampleDialogButton fullWidth={true}>
+              <Icon src="https://studio.code.org/blockly/media/skins/flappy/static_avatar.png"/>
+              <Title>Puzzle 3 of 10</Title>
+              <Body>
+                <table style={{width: '100%'}}>
+                  <tr>
+                    <th>Heading A</th>
+                    <th>Heading B</th>
+                    <th>Heading C</th>
+                    <th>Heading D</th>
+                    <th>Heading E</th>
+                    <th>Heading F</th>
+                  </tr>
+                </table>
+              </Body>
+              <Buttons>
+                <Cancel>Go Back</Cancel>
+                <Confirm />
+              </Buttons>
+              <Footer>
+                Try not to become too addicted to flappy bird
+              </Footer>
+            </ExampleDialogButton>
           )
         }
       ]);
