@@ -5,6 +5,7 @@ import {expect} from '../../../util/configuredChai';
 // We have to setup the gamelab locale before importing AnimationPickerBody
 // TODO: Make testUtils exports Babel-ES6-friendly
 let testUtils = require('../../../util/testUtils');
+const findChildrenOfType = testUtils.findChildrenOfType;
 testUtils.setupLocale('gamelab');
 const gamelabMsg = require('@cdo/apps/gamelab/locale');
 
@@ -56,16 +57,3 @@ describe('AnimationPickerBody', function () {
     });
   });
 });
-
-/**
- * @param {Component|string} root
- * @param {function|string} type
- * @returns {Component[]} all components of type that are descendants of root
- */
-function findChildrenOfType(root, type) {
-  const children = React.Children.toArray(root.props ? root.props.children : undefined);
-  return children.reduce((memo, nextChild) =>
-      memo.concat(nextChild.type === type ? [nextChild] : [])
-          .concat(findChildrenOfType(nextChild, type)),
-      []);
-}
