@@ -13,9 +13,10 @@ Some functions have **parameters** which accept input as a way to better control
 
 ## Vocabulary
 
-* API
-* API documentation
-* Parameters
+* **API** - a collection of commands made available to a programmer
+* **Documentation** - a description of the behavior of a command, function, library, API, etc.
+* **Library** - a collection of commands / functions, typically with a shared purpose
+* **Parameter** - An extra piece of information that you pass to the function to customize it for a specific need.
 
 ## Lesson
 

@@ -1662,7 +1662,16 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
     if(isNaN(direction))
       direction = 0;
-    return degrees(direction);
+
+    // Unlike Math.atan2, the atan2 method above will return degrees if
+    // the current p5 angleMode is DEGREES, and radians if the p5 angleMode is
+    // RADIANS.  This method should always return degrees (for now).
+    // See https://github.com/molleindustria/p5.play/issues/94
+    if (pInst._angleMode === pInst.RADIANS) {
+      direction = degrees(direction);
+    }
+
+    return direction;
   };
 
   /**
@@ -3456,7 +3465,9 @@ function Animation(pInst) {
   else if (frameArguments.length === 1 && (frameArguments[0] instanceof SpriteSheet))
   {
     this.spriteSheet = frameArguments[0];
-    this.images = this.spriteSheet.frames;
+    this.images = this.spriteSheet.frames.map(function (f) {
+      return f.frame;
+    });
   }
   else if(frameArguments.length !== 0)//arbitrary list of images
   {
@@ -3483,11 +3494,8 @@ function Animation(pInst) {
 
     if (this.spriteSheet) {
       myClone.spriteSheet = this.spriteSheet.clone();
-      myClone.images = myClone.spriteSheet.frames;
-    } else {
-      for (var i = 0; i < this.images.length; i++)
-        myClone.images.push(this.images[i]);
     }
+    myClone.images = this.images.slice();
 
     myClone.offX = this.offX;
     myClone.offY = this.offY;
@@ -3534,7 +3542,7 @@ function Animation(pInst) {
       if(this.images[frame] !== undefined)
       {
         if (this.spriteSheet) {
-          var frame_info = this.images[frame].frame;
+          var frame_info = this.images[frame];
           pInst.image(this.spriteSheet.image, frame_info.x, frame_info.y, frame_info.width,
             frame_info.height, this.offX, this.offY, frame_info.width, frame_info.height);
         } else {

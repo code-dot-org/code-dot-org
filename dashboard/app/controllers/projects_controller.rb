@@ -76,7 +76,7 @@ class ProjectsController < ApplicationController
       StorageApps.new(storage_id('user')),
       {
         name: 'Untitled Project',
-        useFirebase: @level.game.use_firebase_for_new_project?,
+        useFirebase: use_firebase,
         level: polymorphic_url([params[:key], 'project_projects'])
       })
   end
@@ -95,6 +95,7 @@ class ProjectsController < ApplicationController
       return if redirect_under_13(@level)
     end
     level_view_options(
+      @level.id,
       hide_source: sharing,
       share: sharing,
       iframe_embed: iframe_embed,
@@ -104,7 +105,6 @@ class ProjectsController < ApplicationController
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @is_legacy_share = sharing && !@game.owns_footer_for_share?
     view_options(
-      is_13_plus: current_user && !current_user.under_13?,
       readonly_workspace: sharing || readonly,
       full_width: true,
       callouts: [],
@@ -130,7 +130,8 @@ class ProjectsController < ApplicationController
       request.ip,
       StorageApps.new(storage_id('user')),
       nil,
-      src_channel_id)
+      src_channel_id,
+      use_firebase)
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     AnimationBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id

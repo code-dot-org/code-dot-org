@@ -69,14 +69,6 @@ module Poste
     ['.md','.haml','.html']
   end
 
-  # Returns whether the email (given by its hash) has unsubscribed.
-  # TODO(asher): Remove this method, as it seems unused as of 11 July 2016.
-  def self.unsubscribed?(hashed_email)
-    !!POSTE_DB[:contacts].
-      where('hashed_email = ? AND unsubscribed_at IS NOT NULL', hashed_email).
-      first
-  end
-
   # Unsubscribes the specified hashed email.
   # @param email [string | nil] the email to record being unsubscribed.
   #   WARNING: The contact to unsubscribe is chosen using hashed_email.
@@ -133,6 +125,8 @@ module Poste2
     @@url_cache[href] = url_id
   end
 
+  # TODO(asher): Refactor create_recipient and ensure_recipient to share common
+  # code.
   def self.create_recipient(email, params={})
     email = email.to_s.strip.downcase
     hashed_email = Digest::MD5.hexdigest(email)
@@ -142,20 +136,19 @@ module Poste2
     ip_address = params[:ip_address]
     now = DateTime.now
 
-    contacts = POSTE_DB[:contacts]
-
-    contact = contacts.where(hashed_email: hashed_email).first
+    contact = POSTE_DB[:contacts].where(hashed_email: hashed_email).first
     if contact
       if contact[:name] != name && !name.nil_or_empty?
-        contacts.where(id: contact[:id]).update(
+        POSTE_DB[:contacts].where(id: contact[:id]).update(
           name: name,
           updated_at: now,
           updated_ip: ip_address,
         )
       end
     else
-      id = contacts.insert({}.tap do |contact|
-        contact[:email] = email
+      sanitized_email = Poste.dashboard_student?(hashed_email) ? '' : email
+      id = POSTE_DB[:contacts].insert({}.tap do |contact|
+        contact[:email] = sanitized_email
         contact[:hashed_email] = hashed_email
         contact[:name] = name if name
         contact[:created_at] = now
@@ -178,12 +171,11 @@ module Poste2
     ip_address = params[:ip_address]
     now = DateTime.now
 
-    contacts = POSTE_DB[:contacts]
-
-    contact = contacts.where(hashed_email: hashed_email).first
+    contact = POSTE_DB[:contacts].where(hashed_email: hashed_email).first
     unless contact
-      id = contacts.insert({}.tap do |contact|
-        contact[:email] = email
+      sanitized_email = Poste.dashboard_student?(hashed_email) ? '' : email
+      id = POSTE_DB[:contacts].insert({}.tap do |contact|
+        contact[:email] = sanitized_email
         contact[:hashed_email] = hashed_email
         contact[:name] = name if name
         contact[:created_at] = now

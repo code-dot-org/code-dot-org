@@ -2,7 +2,7 @@ name 'CSD-U3-SFLP Simple Drawing'
 href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
-# Background
+# Overview
 
 Welcome to Game Lab! Game lab allows you to draw interactive games and animations. The basis of games is animations as they create the look of motion on a 2D screen. Therefore we are going to start by learning about animations and progress to learning how to make them into games. In order to create animations we must first learn how to draw static images. So in this lesson we will be learning how to draw simple scenes with basic shapes. 
 

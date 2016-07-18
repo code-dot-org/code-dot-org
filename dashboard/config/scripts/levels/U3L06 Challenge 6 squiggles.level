@@ -9,8 +9,18 @@
     "code_functions": {
       "moveForward": null,
       "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
       "arcRight": null,
       "arcLeft": null,
       "penUp": null,
@@ -27,7 +37,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "0.5",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -55,10 +65,15 @@
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
     "encrypted_examples": "7bob5aRFtFH9MtS0NxdWcDh/QPLPxNkyg6d8NaXdZGmHd0gOt8W9UdX2Ogxl\nKR+G\n",
-    "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
