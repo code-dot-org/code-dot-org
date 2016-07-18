@@ -98,8 +98,7 @@ ruby
     if sublevel_response
       case sublevel
       when TextMatch, FreeResponse
-        student_result = sublevel_response["result"]
-        sublevel_result[:result] = student_result
+        sublevel_result[:result] = sublevel_response["result"]
         sublevel_result[:type] = "free_response"
       when Multi
         student_result = sublevel_response["result"].split(",").sort.join(",")
@@ -149,6 +148,30 @@ ruby
   end
 
   # Surveys: Returns all anonymized survey results, given a script and a section.
+  #
+  # The results look like this.  For each LevelGroup, levelgroup_results is a hash with
+  # entries corresponding to the sublevel indexes.  Inside each entry is an array of results
+  # which has been shuffled to increase student anonymity.  There is an entry for each
+  # sublevel, whether it's been submitted or not, which explains the empty hashes intermingled
+  # with real results.
+  # [
+  #   { stage: "Stage 30: Anonymous student survey",
+  #     puzzle: 1,
+  #     levelgroup_results: {
+  #       0: {
+  #         results: [
+  #           {result_text: "Strongly agree", result: "A", type: "multi"},
+  #           {},
+  #           {result_text: "Strongly agree", result: "A", type: "multi"}],
+  #         question: "Computer science is fun."},
+  #       2: {
+  #         results: [
+  #           {result: "", type: "free_response"},
+  #           {result: "I like making games, and I also like the lifestyle.", type: "free_response"},
+  #           {}],
+  #         question: "Why are you doing this class?  Give at least two reasons."}}}]
+  #
+
   def self.get_survey_results(script, section)
     level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
 
@@ -163,15 +186,15 @@ ruby
       section.students.each do |student|
         student_result = get_survey_results_for_student(student, script_level)
         if student_result
-          student_result.each do |key, value|
-            levelgroup_results[key] = {results: []} unless levelgroup_results[key]
-            levelgroup_results[key][:question] = value[:question]
-            levelgroup_results[key][:results] += value[:results]
+          student_result.each do |sublevel_index, question_and_results|
+            levelgroup_results[sublevel_index] = {results: []} unless levelgroup_results[sublevel_index]
+            levelgroup_results[sublevel_index][:question] = question_and_results[:question]
+            levelgroup_results[sublevel_index][:results] += question_and_results[:results]
           end
         end
       end
 
-      # Shuffle all the results.
+      # Shuffle all the results per sublevel (i.e. question) to increase anonymity.
       levelgroup_results.each do |_, levelgroup_result|
         levelgroup_result[:results].shuffle!
       end

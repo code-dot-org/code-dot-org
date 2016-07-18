@@ -270,30 +270,39 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       {"stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
         "puzzle" => 1,
-        "url" => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}",
         "levelgroup_results" => {
-          "0" => {"question" => "test", "results" => [
-            {"result" => "Free response from student 3", "type" => "free_response"},
-            {"result" => "This is a different free response", "type" => "free_response"},
-            {"result" => "Free response from student 5", "type" => "free_response"},
-            {"result" => "This is a free response", "type" => "free_response"},
-            {"result" => "Free response from student 4", "type" => "free_response"}]},
-          "1" => {"question" => "text2", "results" => [
-            {"result_text" => "text1", "result" => "A", "type" => "multi"},
-            {}, {}, {}, {}]},
-          "2" => {"question" => "text2", "results" => [
-            {},
-            {},
-            {"result_text" => nil, "result" => "C", "type" => "multi"},
-            {},
-            {"result_text" => nil, "result" => "B", "type" => "multi"}]},
-          "3" => {"question" => "text2", "results" => [
-            {}, {},
-            {"result_text" => nil, "result" => "D", "type" => "multi"},
-            {}, {}]},
-          "4" => {"question" => "text2", "results" => [
-            {},
-            {}, {}, {}, {}]},
+          "0" => {
+            "results" => [
+              {"result" => "Free response from student 3", "type" => "free_response"},
+              {"result" => "This is a different free response", "type" => "free_response"},
+              {"result" => "Free response from student 5", "type" => "free_response"},
+              {"result" => "This is a free response", "type" => "free_response"},
+              {"result" => "Free response from student 4", "type" => "free_response"}],
+            "question" => "test"},
+          "1" => {
+            "results" => [
+              {"result_text" => "text1", "result" => "A", "type" => "multi"},
+              {}, {}, {}, {}],
+            "question" => "text2", },
+          "2" => {
+            "results" => [
+              {},
+              {},
+              {"result_text" => nil, "result" => "C", "type" => "multi"},
+              {},
+              {"result_text" => nil, "result" => "B", "type" => "multi"}],
+            "question" => "text2"},
+          "3" => {
+            "results" => [
+              {}, {},
+              {"result_text" => nil, "result" => "D", "type" => "multi"},
+              {}, {}],
+            "question" => "text2"},
+          "4" => {
+            "results" => [
+              {},
+              {}, {}, {}, {}],
+            "question" => "text2"},
         }
       }
     ]
