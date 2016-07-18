@@ -11,6 +11,8 @@ class PeerReviewsControllerTest < ActionController::TestCase
 
     @script_level = create :script_level, levels: [level]
     @script = @script_level.script
+    plc_course_unit = create :plc_course_unit
+    @script.update(plc_course_unit: plc_course_unit)
     level_source = create :level_source, data: 'My submitted answer'
     User.track_level_progress_sync(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source.id)
     @peer_review = PeerReview.first
