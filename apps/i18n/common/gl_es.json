@@ -246,6 +246,10 @@
   "when": "cando",
   "whenRun": "cando se executa",
   "workspaceHeaderShort": "Espazo de traballo: ",
+  "directionNorthwestLetter": "NW",
+  "directionNortheastLetter": "NE",
+  "directionSouthwestLetter": "SW",
+  "directionSoutheastLetter": "SE",
   "less": "Less",
   "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

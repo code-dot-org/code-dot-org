@@ -42,6 +42,7 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
+const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
 
 const SCROLL_BY_PERCENT = 0.8;
 
@@ -92,9 +93,7 @@ const styles = {
   },
   embedView: {
     height: undefined,
-    bottom: 0,
-    // Visualization is hard-coded on embed levels. Do the same for instructions position
-    left: 340
+    bottom: 0
   },
   collapserButton: {
     position: 'absolute',
@@ -140,6 +139,7 @@ var TopInstructions = React.createClass({
     })).isRequired,
     showNextHint: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
+    embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
     hasContainedLevels: React.PropTypes.bool.isRequired,
     aniGifURL: React.PropTypes.string,
@@ -448,7 +448,9 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - resizerHeight
       },
-      this.props.isEmbedView && styles.embedView,
+      this.props.isEmbedView && Object.assign({}, styles.embedView, {
+        left: this.props.embedViewLeftOffset
+      }),
       this.props.noVisualization && styles.noViz,
       this.props.isMinecraft && craftStyles.main
     ];
@@ -570,6 +572,7 @@ module.exports = connect(function propsFromStore(state) {
     skinId: state.pageConstants.skinId,
     showNextHint: state.pageConstants.showNextHint,
     isEmbedView: state.pageConstants.isEmbedView,
+    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     isMinecraft: !!state.pageConstants.isMinecraft,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     aniGifURL: state.pageConstants.aniGifURL,

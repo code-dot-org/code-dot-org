@@ -38,7 +38,10 @@ var ALLOWED_KEYS = utils.makeEnum(
   'smallStaticAvatar',
   'aniGifURL',
   'inputOutputTable',
-  'showAnimationMode'
+  'showAnimationMode',
+  'nonResponsiveVisualizationColumnWidth',
+  'is13Plus',
+  'isSignedIn'
 );
 
 const initialState = {

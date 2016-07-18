@@ -71,9 +71,12 @@ var MAX_PHONE_WIDTH = 500;
  * Object representing everything in window.appOptions (often passed around as
  * config)
  * @typedef {Object} AppOptionsConfig
+ * @property {?boolean} is13Plus - Will be true if the user is 13 or older,
+ *           false if they are 12 or younger, and undefined if we don't know
+ *           (such as when they are not signed in).
  */
 
-var StudioApp = function () {
+function StudioApp() {
   this.feedback_ = new FeedbackUtils(this);
   this.authoredHintsController_ = new AuthoredHints(this);
 
@@ -226,9 +229,12 @@ var StudioApp = function () {
   this.noPadding = false;
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
+}
+// TODO: once code-studio and apps share common modules in the same bundle,
+// get rid of this window nonsense.
+module.exports = window.StudioApp = window.StudioApp || {
+  singleton: new StudioApp()
 };
-module.exports = StudioApp;
-StudioApp.singleton = new StudioApp();
 
 /**
  * Configure StudioApp options
@@ -2884,7 +2890,7 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 /**
  * Sets a bunch of common page constants used by all of our apps in our redux
  * store based on our app options config.
- * @param {AppOptionsConfig}
+ * @param {AppOptionsConfig} config
  * @param {object} appSpecificConstants - Optional additional constants that
  *   are app specific.
  */
@@ -2909,7 +2915,9 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     noVisualization: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
     aniGifURL: config.level.aniGifURL,
-    inputOutputTable: config.level.inputOutputTable
+    inputOutputTable: config.level.inputOutputTable,
+    is13Plus: config.is13Plus,
+    isSignedIn: config.isSignedIn,
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
