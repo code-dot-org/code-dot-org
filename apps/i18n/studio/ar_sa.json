@@ -798,5 +798,13 @@
   "failedMultiplyCharactersTimeoutBlockly": "كنت بحاجة للحصول على 20 الماوس Droids. استخدام الأمر \"إضافة الروبوت ماوس\" داخل الحدث \"عندما تحصل على الروبوت الماوس\" لإضافة Droids الماوس اثنين أو أكثر في كل مرة تحصل على واحدة.",
   "failedMultiplyCharactersTimeoutGotSome": "تهانينا، يمكنك إضافة التعليمات البرمجية لجعل الماوس Droids. يمكنك الذهاب للغز القادم أو حاول مرة أخرى للحصول على 20 الماوس Droids. محاولة جعله أسهل عن طريق إضافة المزيد منها! (اضغط باستمرار على مفاتيح على لوحة المفاتيح (أو الشاشة) التحرك بشكل أسرع)",
   "failedChangeSettingTimeout": "الحصول على ثلاثة \"الطيارين المتمردين\" للمضي قدما.",
-  "failedChangeSettingSettings": "جعل اللعبة الخاصة بك. لتمرير هذا اللغز، تحتاج إلى تغيير الروبوت الخاص بك وتعيين سرعة."
+  "failedChangeSettingSettings": "جعل اللعبة الخاصة بك. لتمرير هذا اللغز، تحتاج إلى تغيير الروبوت الخاص بك وتعيين سرعة.",
+  "moveDownLeft": "move down and left",
+  "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
+  "moveDownRight": "move down and right",
+  "moveDownRightTooltip": "Move an actor diagonally down and to the right.",
+  "moveUpLeft": "move up and left",
+  "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
+  "moveUpRight": "move up and right",
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
 }
