@@ -20,7 +20,13 @@ require 'sqs/queue_processor'
 class QueueProcessorManager
   attr_accessor :logger, :argv
 
-  def initialize(argv, logger = Logger.new(STDOUT))
+  def initialize(argv, logger = nil)
+    unless logger
+      # By default log to stdout synchronously.
+      # On daemon instances this will run as a service with STDOUT redirected to a file.
+      STDOUT.sync = true
+      logger = Logger.new(STDOUT)
+    end
     @argv = argv
     @logger = logger
     @processors = []
@@ -111,7 +117,6 @@ class QueueProcessorManager
       sleep update_interval
     end # loop
   end
-
 end
 
 QueueProcessorManager.new(ARGV).run

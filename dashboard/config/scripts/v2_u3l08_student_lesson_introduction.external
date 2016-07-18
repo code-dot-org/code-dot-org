@@ -25,6 +25,10 @@ drawing.
 * Incorporate functions with parameters into an “Under the Sea” digital scene.
 * Test functions with parameters using random input.
 
+## Vocabulary
+
+* **Parameter:** An extra piece of information that you pass to the function to customize it for a specific need.
+
 ## Resources
 
 * Tutorial video: Functions with Parameters

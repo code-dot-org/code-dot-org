@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Draw this.",
+    "instructions": "Now that you car draw a star, try drawing four stars!",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Don't give up!\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -108,11 +108,8 @@
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="controls_repeat" editable="false">
+        <block type="controls_repeat">
           <title name="TIMES">4</title>
-        </block>
-        <block type="controls_repeat" editable="false">
-          <title name="TIMES">8</title>
         </block>
       </xml>
     </toolbox_blocks>
