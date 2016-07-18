@@ -33,8 +33,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "contained_level_names": null,
-    "discard_background": "false"
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
