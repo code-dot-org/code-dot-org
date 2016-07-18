@@ -9,7 +9,7 @@
 .standalone-video
   - video = @level.specified_autoplay_video
   - src = video.embed_url
-  %h2= "Video: #{video.localized_name}"
+  %h1= "Video: #{video.localized_name}"
   %div= render(inline: @level.markdown_instructions, type: :md) if @level.markdown_instructions
 
   %iframe{width: 853, height: 480, frameborder: 0, allowfullscreen: true, src: src}

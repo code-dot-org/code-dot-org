@@ -81,12 +81,12 @@ class ApiControllerTest < ActionController::TestCase
 
     # create 2 text_match levels
     level1 = create :text_match
-    level1.properties['title'] =  'Text Match 1'
+    level1.properties['title'] = 'Text Match 1'
     level1.save!
     create :script_level, script: script, levels: [level1]
 
     level2 = create :text_match
-    level2.properties['title'] =  'Text Match 2'
+    level2.properties['title'] = 'Text Match 2'
     level2.save!
     create :script_level, script: script, levels: [level2]
     # create some other random levels
@@ -176,21 +176,21 @@ class ApiControllerTest < ActionController::TestCase
 
     expected_response =
       [
-       {"student"=>{"id"=>@student_1.id, "name"=>@student_1.name},
-        "stage"=>"translation missing: en-us.data.script.name.#{script.name}.title",
-        "puzzle"=>1,
-        "question"=>"Long assessment 1",
-        "url"=>"http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
-        "multi_correct"=>1,
-        "multi_count"=>4,
-        "submitted"=>true,
-        "timestamp"=>updated_at.utc.to_s,
-        "level_results"=>[
-          {"student_result"=>"This is a free response", "correct"=>"free_response"},
-          {"student_result"=>"A", "correct"=>"correct"},
-          {"student_result"=>"B", "correct"=>"incorrect"},
-          {"student_result"=>"", "correct"=>"unsubmitted"},
-          {"correct"=>"unsubmitted"}]
+       {"student" => {"id" => @student_1.id, "name" => @student_1.name},
+        "stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
+        "puzzle" => 1,
+        "question" => "Long assessment 1",
+        "url" => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+        "multi_correct" => 1,
+        "multi_count" => 4,
+        "submitted" => true,
+        "timestamp" => updated_at.utc.to_s,
+        "level_results" => [
+          {"student_result" => "This is a free response", "correct" => "free_response"},
+          {"student_result" => "A", "correct" => "correct"},
+          {"student_result" => "B", "correct" => "incorrect"},
+          {"student_result" => "", "correct" => "unsubmitted"},
+          {"correct" => "unsubmitted"}]
         }
       ]
     assert_equal expected_response, JSON.parse(@response.body)

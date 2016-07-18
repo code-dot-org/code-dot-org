@@ -1,3 +1,9 @@
+title 'Grade 1'
+description_short "Planning Script for CSF 2.0"
+description "Planning Script for CSF 2.0"
+description_audience "Ages 5-18"
+
+
 stage 'Debugging'
 level 'grade1_activity_whatDoesItDo'
 level 'grade1_story_spottedBugs'
@@ -94,13 +100,16 @@ level 'comingSoon'
 
 stage 'Events'
 level 'eventsIntro'
-level 'grade1_playlab_events1'
-level 'grade1_playlab_events2'
-level 'grade1_playlab_events3'
-level 'playEventsK4'
-level 'playEventsK5'
-level 'playEventsK6'
-level 'playEventsK7'
+#level 'grade1_playlab_events1'
+#level 'grade1_playlab_events2'
+#level 'grade1_playlab_events3'
+#level 'grade1_playlab_events4'
+level 'grade1_playlab_events5'
+level 'grade1_playlab_events6'
+level 'grade1_playlab_events7'
+level 'grade1_playlab_events8'
+level 'grade1_playlab_events9'
+level 'grade1_playlab_eventsFP'
 
 stage 'More Computer Science'
 level 'comingSoon'

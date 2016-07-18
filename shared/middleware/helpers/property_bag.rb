@@ -91,7 +91,7 @@ class DynamoPropertyBag
     begin
       db.delete_item(
         table_name: CDO.dynamo_properties_table,
-        key: {'hash'=>@hash,name: name},
+        key: {'hash' => @hash,name: name},
         expected: name_exists(name),
       )
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
@@ -104,7 +104,7 @@ class DynamoPropertyBag
     item = db.get_item(
       table_name: CDO.dynamo_properties_table,
       consistent_read: true,
-      key: {'hash'=>@hash, 'name'=>name},
+      key: {'hash' => @hash, 'name' => name},
     ).item
 
     raise NotFound, "key '#{name}' not found" unless item

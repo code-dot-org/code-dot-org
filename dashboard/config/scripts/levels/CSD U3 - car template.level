@@ -9,7 +9,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var finishLine = createSprite(40, 200);\r\nfinishLine.setAnimation(\"finish_line\")\r\n\r\nvar raceCar = createSprite(400, 200);\r\nraceCar.setAnimation(\"race_car\");\r\n\r\nfunction draw() {\r\n  raceCar.x = raceCar.x - 1;\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
+    "start_blocks": "var finishLine = createSprite(40, 200);\r\nfinishLine.setAnimation(\"finish_line\")\r\n\r\nvar raceCar = createSprite(400, 200);\r\nraceCar.setAnimation(\"race_car\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update\r\n  raceCar.x = raceCar.x - 1;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

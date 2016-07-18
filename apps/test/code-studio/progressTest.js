@@ -3,22 +3,12 @@
 
 var assert = require('assert');
 var progress = require('@cdo/apps/code-studio/progress');
-
-describe('progress', function () {
-  it ('returns the correct activity CSS class', function () {
-    assert.strictEqual(progress.activityCssClass(null), 'not_tried');
-    assert.strictEqual(progress.activityCssClass(0), 'not_tried');
-    assert.strictEqual(progress.activityCssClass(-5), 'attempted');
-    assert.strictEqual(progress.activityCssClass(19), 'attempted');
-    assert.strictEqual(progress.activityCssClass(20), 'passed');
-    assert.strictEqual(progress.activityCssClass(29), 'passed');
-    assert.strictEqual(progress.activityCssClass(30), 'perfect');
-    assert.strictEqual(progress.activityCssClass(101), 'perfect');
-  });
-});
+import { __testonly__ } from '@cdo/apps/code-studio/progressRedux';
 
 describe('bestResultLevelId', function () {
   var progressData;
+  const bestResultLevelId = __testonly__.bestResultLevelId;
+
   before(function () {
     progressData = {
       1: 0,
@@ -31,18 +21,18 @@ describe('bestResultLevelId', function () {
     };
   });
   it('returns the level when there\'s only one', function () {
-    assert.strictEqual(progress.bestResultLevelId([1], progressData), 1);
+    assert.strictEqual(bestResultLevelId([1], progressData), 1);
   });
   it('returns the first level when none have progress', function () {
-    assert.strictEqual(progress.bestResultLevelId([1, 2], progressData), 1);
+    assert.strictEqual(bestResultLevelId([1, 2], progressData), 1);
   });
   it('returns the passed level', function () {
-    assert.strictEqual(progress.bestResultLevelId([1, 4], progressData), 4);
+    assert.strictEqual(bestResultLevelId([1, 4], progressData), 4);
   });
   it('returns the unsubmitted level', function () {
-    assert.strictEqual(progress.bestResultLevelId([1, 3], progressData), 3);
+    assert.strictEqual(bestResultLevelId([1, 3], progressData), 3);
   });
   it('returns the perfect level over the passed level', function () {
-    assert.strictEqual(progress.bestResultLevelId([4, 5], progressData), 5);
+    assert.strictEqual(bestResultLevelId([4, 5], progressData), 5);
   });
 });

@@ -8,7 +8,8 @@ var ToggleButton = React.createClass({
     active: React.PropTypes.bool.isRequired,
     first: React.PropTypes.bool,
     last: React.PropTypes.bool,
-    onClick: React.PropTypes.func.isRequired
+    onClick: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
   },
 
   render: function () {

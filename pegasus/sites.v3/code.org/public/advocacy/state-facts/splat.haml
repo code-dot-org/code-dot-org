@@ -14,10 +14,12 @@ theme: pdf
 
 // Generates custom state fact sheets based on the data in cdo-state-promote Google Sheet.
 
+- require 'state_abbr'
 - splat = request.splat_path_info[1..-1].split("/")
 - state = splat.last
 - state_param = state.upcase
 - state_info = DB[:cdo_state_promote].where(state_code_s: state_param).first
+- pass unless STATE_ABBR_WITH_DC_HASH.key? state_param.to_sym
 
 :css
   .together {

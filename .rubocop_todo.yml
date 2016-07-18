@@ -180,11 +180,6 @@ Style/Lambda:
 Style/LeadingCommentSpace:
   Enabled: false
 
-# Offense count: 24
-# Cop supports --auto-correct.
-Style/LineEndConcatenation:
-  Enabled: false
-
 # Offense count: 5
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -276,12 +271,6 @@ Style/SpaceAroundEqualsInParameterDefault:
 # Offense count: 13
 # Cop supports --auto-correct.
 Style/SpaceAroundKeyword:
-  Enabled: false
-
-# Offense count: 394
-# Cop supports --auto-correct.
-# Configuration parameters: AllowForAlignment.
-Style/SpaceAroundOperators:
   Enabled: false
 
 # Offense count: 207

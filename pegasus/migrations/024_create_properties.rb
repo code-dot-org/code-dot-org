@@ -4,7 +4,7 @@ Sequel.migration do
 
     create_table(:properties, charset: 'utf8') do
       String :key, primary_key: true
-      Text :value, size: 1024*1024
+      Text :value, size: 1024 * 1024
     end
   end
 
