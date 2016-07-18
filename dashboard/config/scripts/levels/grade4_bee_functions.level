@@ -6,7 +6,7 @@
   "user_id": 285,
   "properties": {
     "skin": "bee",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":0},{\"tileType\":1,\"featureType\":1,\"value\":2,\"flowerColor\":0,\"range\":2},{\"tileType\":1,\"featureType\":1,\"value\":3,\"flowerColor\":0,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":4,\"flowerColor\":0,\"range\":4},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":2,\"flowerColor\":0,\"range\":2},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":0,\"value\":4,\"range\":4},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":3,\"flowerColor\":0,\"range\":3},{\"tileType\":1,\"featureType\":0,\"value\":3,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":2,\"flowerColor\":0,\"range\":2},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":2,\"flowerColor\":0,\"range\":2},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":0,\"value\":0,\"range\":0},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":4,\"flowerColor\":0,\"range\":4},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":3,\"flowerColor\":0,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":2,\"flowerColor\":0,\"range\":2},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":0},{\"tileType\":1,\"featureType\":0,\"value\":2,\"range\":2},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -22,11 +22,13 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "1",
+    "start_direction": "2",
     "step_mode": "0",
-    "flower_type": "redWithNectar",
-    "fast_get_nectar_animation": "false",
+    "flower_type": "purpleNectarHidden",
+    "fast_get_nectar_animation": "true",
     "instructions": "Have we met before? I'm the farmer! Please help me remove this pile of dirt and fill this hole.",
+    "nectar_goal": "15",
+    "honey_goal": "10",
     "contained_level_names": null
   },
   "published": true,
@@ -43,6 +45,9 @@
         </block>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="check flower"/>
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
@@ -78,6 +83,13 @@
             </block>
           </statement>
         </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">do something</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="do something"/>
+        </block>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
         <block type="procedures_callnoreturn">
@@ -87,6 +99,12 @@
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="bee_ifFlower">
+          <title name="LOC">atFlower</title>
         </block>
       </xml>
     </toolbox_blocks>
