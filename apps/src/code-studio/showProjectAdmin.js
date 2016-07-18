@@ -5,7 +5,7 @@ import $ from 'jquery';
 /**
  * Dynamic generation and event bindings for project admin section of the admin box
  */
-export default () => {
+module.exports = function showProjectAdmin() {
   if ($('.project_admin') === 0) {
     return;
   }
