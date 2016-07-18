@@ -2836,8 +2836,7 @@ StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function () {
   if (window.dashboard && dashboard.project &&
       dashboard.project.hasPrivacyProfanityViolation()) {
     var i18n = {
-      // TODO(bcjordan): i18n
-      tos: 'This project contains information that cannot be shared with others. Please fix the contents of this app if you\'d like to share it.',
+      tos: window.dashboard.i18n.t('project.abuse.policy_violation'),
       contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
     };
     this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);

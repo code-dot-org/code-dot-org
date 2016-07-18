@@ -133,7 +133,7 @@ module.exports = function (callback) {
         return $.Deferred().reject();
       }
       if (dashboard.project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive('This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.');
+        renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
         return $.Deferred().reject();
       }
     }).then(callback);
