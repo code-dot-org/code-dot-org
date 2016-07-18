@@ -188,6 +188,8 @@ export const ProgressDot = React.createClass({
       return 'fa-lock';
     } else if (level.status === 'perfect') {
       return 'fa-check';
+    } else if (level.status === 'review_rejected') {
+      return 'fa-exclamation';
     } else {
       return null;
     }
