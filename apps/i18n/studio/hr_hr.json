@@ -798,5 +798,13 @@
   "failedMultiplyCharactersTimeoutBlockly": "Trebaš uhvatiti 20 miš-droida. Upotrijebi naredbu \"dodaj miš-droida\" unutar događaja \"kad uhvatiš miš-droida\" kako bi dodao/la dva ili više miš-droida svaki put kad jednog uhvatiš.",
   "failedMultiplyCharactersTimeoutGotSome": "Čestitamo, programirao si stvaranje droida Miševa. Možeš prijeći na iduću igru ili pokušati ponovno doći do 20 droida Miševa. Olakšaj si tako što ćeš ih napraviti više droida odjednom! (Kada držiš pritisnutom tipku sa strelicom tada se krećeš brže.)",
   "failedChangeSettingTimeout": "Uhvati tri pobunjenička pilota kako bi mogao/la nastaviti.",
-  "failedChangeSettingSettings": "Ovu igru možeš igrati na svoj vlastiti način. Kako bi je prošao trebaš promijeniti svog droida i podesiti mu brzinu."
+  "failedChangeSettingSettings": "Ovu igru možeš igrati na svoj vlastiti način. Kako bi je prošao trebaš promijeniti svog droida i podesiti mu brzinu.",
+  "moveDownLeft": "move down and left",
+  "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
+  "moveDownRight": "move down and right",
+  "moveDownRightTooltip": "Move an actor diagonally down and to the right.",
+  "moveUpLeft": "move up and left",
+  "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
+  "moveUpRight": "move up and right",
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
 }

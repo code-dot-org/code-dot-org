@@ -798,5 +798,13 @@
   "failedMultiplyCharactersTimeoutBlockly": "Je hebt 20 Mouse Droids nodig. Gebruik de 'voeg een Mouse Droid toe' in de 'als je een Mouse Droid krijgt' gebeurtenis om twee of meer Mouse Droids toe te voegen als je er een te pakken krijgt.",
   "failedMultiplyCharactersTimeoutGotSome": "Gefeliciteerd, je hebt een code toegevoegd om Mouse Droids te maken. Je kan naar de volgende puzzel gaan of opnieuw proberen 20 ervan te krijgen. Probeer het makkelijk te maken door meer ervan toe te voegen! (Hou de pijltoetsen op je toetsenbord (of scherm) om sneller te bewegen.)",
   "failedChangeSettingTimeout": "Pak drie Rebel Pilots om verder te gaan.",
-  "failedChangeSettingSettings": "Maak nu je eigen spel. Om deze puzzel te doorlopen, moet je jouw droid veranderen en de snelheid zelf bepalen."
+  "failedChangeSettingSettings": "Maak nu je eigen spel. Om deze puzzel te doorlopen, moet je jouw droid veranderen en de snelheid zelf bepalen.",
+  "moveDownLeft": "move down and left",
+  "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
+  "moveDownRight": "move down and right",
+  "moveDownRightTooltip": "Move an actor diagonally down and to the right.",
+  "moveUpLeft": "move up and left",
+  "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
+  "moveUpRight": "move up and right",
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
 }
