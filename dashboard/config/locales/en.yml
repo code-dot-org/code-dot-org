@@ -643,7 +643,6 @@ en:
     edit_project: 'Edit Project'
     abuse:
       tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      policy_violation: "This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app."
       contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
       go_to_code_studio: 'Go to Code Studio'
       report_abuse_form:
