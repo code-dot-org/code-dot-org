@@ -82,6 +82,9 @@ describe('Level tests', function () {
   var originalRender;
   var clock, tickInterval;
 
+  // Don't expect console.error to be used during any level test
+  testUtils.throwOnConsoleErrors();
+
   before(function (done) {
     this.timeout(15000);
 
