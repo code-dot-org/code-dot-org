@@ -51,7 +51,6 @@ var executionLog = require('../executionLog');
 var annotationList = require('../acemode/annotationList');
 var Exporter = require('./Exporter');
 
-var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
 var reducers = require('./reducers');
 var actions = require('./actions');
