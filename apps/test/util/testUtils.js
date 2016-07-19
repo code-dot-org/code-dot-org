@@ -251,6 +251,14 @@ function zeroPadLeft(string, desiredWidth) {
  * Call in any mocha scope to make console.error() throw instead
  * of log.  Useful for making tests fail on a React propTypes validation
  * failures.
+ *
+ * @example
+ *   describe('my feature', function () {
+ *     throwOnConsoleErrors();
+ *     it('throws on console.error()', function () {
+ *       console.error('foo'); // Test will fail here
+ *     });
+ *   });
  */
 export function throwOnConsoleErrors() {
   before(function () {
