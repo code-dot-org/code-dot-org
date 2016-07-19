@@ -147,7 +147,7 @@ var TopInstructions = React.createClass({
     isEmbedView: React.PropTypes.bool.isRequired,
     embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
-    hasContainedLevels: React.PropTypes.bool.isRequired,
+    hasContainedLevels: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
