@@ -2,6 +2,7 @@
  * @overview Component for editing a data table.
  */
 
+import AddColumnButton from './AddColumnButton';
 import AddTableRow from './AddTableRow';
 import { DataView } from '../constants';
 import EditTableRow from './EditTableRow';
@@ -10,6 +11,15 @@ import React from 'react';
 import { changeView } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import { connect } from 'react-redux';
+
+const MAX_TABLE_WIDTH = 970;
+
+const styles = {
+  table: {
+    clear: 'both',
+    width: '100%'
+  }
+};
 
 const DataTable = React.createClass({
   propTypes: {
@@ -29,6 +39,18 @@ const DataTable = React.createClass({
     onViewChange: React.PropTypes.func.isRequired
   },
 
+  getInitialState() {
+    return {
+      newColumns: []
+    };
+  },
+
+  addColumn(newColumn) {
+    this.setState({
+      newColumns: this.state.newColumns.concat(newColumn)
+    });
+  },
+
   getColumnNames() {
     // Make sure 'id' is the first column.
     let columnNames = ['id'];
@@ -42,14 +64,24 @@ const DataTable = React.createClass({
       });
     });
 
+    this.state.newColumns.forEach(columnName => {
+      if (columnNames.indexOf(columnName) === -1) {
+        columnNames.push(columnName);
+      }
+    });
+
     return columnNames;
   },
 
   render() {
     const columnNames = this.getColumnNames();
     const visible = (DataView.TABLE === this.props.view);
+    const containerStyle = {
+      display: visible ? 'block' : 'none',
+      maxWidth: MAX_TABLE_WIDTH
+    };
     return (
-      <div id="dataTable" style={{display: visible ? 'block' : 'none'}}>
+      <div id="dataTable" style={containerStyle}>
         <h4>
           <a
             href="#"
@@ -61,7 +93,9 @@ const DataTable = React.createClass({
           &nbsp;&gt; {this.props.tableName}
         </h4>
 
-        <table>
+        <AddColumnButton columns={columnNames} addColumn={this.addColumn}/>
+
+        <table style={styles.table}>
           <tbody>
           <tr>
             {
