@@ -72,6 +72,13 @@ class LevelGroupDSL < BaseDSL
     @hash[:submittable] = text
   end
 
+  # An anonymous LevelGroup is used for student surveys.  The results can only be viewed
+  # in an anonymized form in the teacher dashboard, and teachers may not see individual
+  # students' submissions for such levels.
+  def anonymous(text)
+    @hash[:anonymous] = text
+  end
+
   def i18n_strings
     @i18n_strings['title'] = @title if @title
     @i18n_strings['description_short'] = @description_short if @description_short
