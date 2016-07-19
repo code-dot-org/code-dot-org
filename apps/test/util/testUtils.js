@@ -245,26 +245,3 @@ function getBooleanPermutation(n, numberOfBooleans) {
 function zeroPadLeft(string, desiredWidth) {
   return ('0'.repeat(desiredWidth) + string).slice(-desiredWidth);
 }
-
-/**
- * @param {Component|string} root
- * @param {function|string} type
- * @returns {Component[]} all components of type that are descendants of root
- */
-export function findChildrenOfType(root, type) {
-  return findChildrenWithPredicate(root, child => child.type === type);
-}
-
-/**
- * @param {Component|string} root
- * @param {function(Component|string):boolean} predicate
- * @returns {Component[]} all components that are descendants of root that satisfy
- *          the passed predicate
- */
-export function findChildrenWithPredicate(root, predicate) {
-  const children = React.Children.toArray(root.props ? root.props.children : undefined);
-  return children.reduce((memo, nextChild) =>
-          memo.concat(predicate(nextChild) ? [nextChild] : [])
-              .concat(findChildrenWithPredicate(nextChild, predicate)),
-      []);
-}
