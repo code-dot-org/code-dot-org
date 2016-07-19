@@ -39,4 +39,6 @@ berks vendor /home/ubuntu/chef/cookbooks
 cd /home/ubuntu
 sudo RAILS_ENV=adhoc RACK_ENV=adhoc chef-client -z -c /home/ubuntu/chef/local-adhoc.rb -j /home/ubuntu/chef/local-adhoc.json
 
+sudo service nginx restart
+
 top -b >/dev/null 2>&1
