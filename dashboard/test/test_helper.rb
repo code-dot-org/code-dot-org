@@ -390,7 +390,7 @@ module FakeSQSService
     Aws.config.update(region: 'us-east-1', access_key_id: 'fake id', secret_access_key: 'fake secret')
     service = FakeSQS::TestIntegration.new(database: ":memory#{ENV['TEST_ENV_NUMBER']}:",
                                                      sqs_endpoint: 'localhost', sqs_port: 4568)
-    sleep(2) # add a sleep to fix test failures with 'RuntimeError: FakeSQS didn't start in time'
+    sleep(7) # add a sleep to fix test failures with 'RuntimeError: FakeSQS didn't start in time'
     service
   end
 end
