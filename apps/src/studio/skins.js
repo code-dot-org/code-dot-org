@@ -1689,8 +1689,6 @@ exports.load = function (assetUrl, id) {
   skin.whenDown = skin.assetUrl('when-down.png');
   skin.whenLeft = skin.assetUrl('when-left.png');
   skin.whenRight = skin.assetUrl('when-right.png');
-  // TODO: Get an actual onclick icon
-  skin.click = skin.assetUrl('emotion-sad.png');
   skin.collide = skin.assetUrl('when-sprite-collide.png');
   skin.emotionAngry = skin.assetUrl('emotion-angry.png');
   skin.emotionNormal = skin.assetUrl('emotion-nothing.png');
