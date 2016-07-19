@@ -25,12 +25,18 @@ cd /home/ubuntu/adhoc
 sudo bundle exec rake build:dashboard
 sudo bundle exec rake build:pegasus
 
-[ -d "/tmp/chef/cookbooks" ] && rm -rf /tmp/chef/cookbooks
+[ -d "/home/ubuntu/chef" ] && sudo rm -rf /home/ubuntu/chef
+[ -d "/home/ubuntu/adhoc/.chef/local-mode-cache" ] && sudo rm -rf /home/ubuntu/adhoc/.chef/local-mode-cache
 [ -d "/tmp/chef/local-mode-cache" ] && sudo rm -rf /tmp/chef/local-mode-cache
-mkdir /tmp/chef/cookbooks
-cd /home/ubuntu/adhoc/cookbooks
-berks vendor /tmp/chef/cookbooks
 
-sudo chef-client -z -c /tmp/chef/local-adhoc.rb -j /tmp/chef/local-adhoc.json
+
+mkdir /home/ubuntu/chef
+mkdir /home/ubuntu/chef/cookbooks
+cp /home/ubuntu/adhoc/.chef/* /home/ubuntu/chef/
+cd /home/ubuntu/adhoc/cookbooks
+berks vendor /home/ubuntu/chef/cookbooks
+
+cd /home/ubuntu
+sudo chef-client -z -c /home/ubuntu/chef/local-adhoc.rb -j /home/ubuntu/chef/local-adhoc.json
 
 top -b >/dev/null 2>&1

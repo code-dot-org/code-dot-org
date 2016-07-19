@@ -1,15 +1,7 @@
-chefdata:
-  image: tianon/true
-  volumes:
-    - ./.chef:/tmp/chef
-    - ./cookbooks/cdo-apps/test/environments:/tmp/chef/environments
-
 CDO:
   image: "pickettd/code-dot-org:0.11"
   volumes:
     - .:/home/ubuntu/adhoc
-  volumes_from:
-    - chefdata
   ports:
     - "8080:8080"
     - "8081:8081"
