@@ -24,7 +24,7 @@ describe('MarkdownInstructions', function () {
           renderedMarkdown="md"
           markdownClassicMargins={false}
           inTopPane={false}
-          noInstrucstionsWhenCollapsed={true}
+          noInstructionsWhenCollapsed={true}
         />
       </div>
     );
@@ -40,7 +40,7 @@ describe('MarkdownInstructions', function () {
         <StatelessMarkdownInstructions
           renderedMarkdown="md"
           inTopPane={true}
-          noInstrucstionsWhenCollapsed={true}
+          noInstructionsWhenCollapsed={true}
         />
       </div>
     );
