@@ -322,12 +322,25 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(140, 1.00, 0.74);
       if (spriteCount > 1) {
-        this.appendDummyInput()
-          .appendTitle(spriteNumberTextDropdown(msg.whenSpriteClickedN),
-                       'SPRITE');
+        if (isK1) {
+          this.appendDummyInput()
+            .appendTitle(commonMsg.when())
+            .appendTitle(new blockly.FieldImage(skin.click))
+            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        } else {
+          this.appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.whenSpriteClickedN),
+                         'SPRITE');
+        }
       } else {
-        this.appendDummyInput()
-          .appendTitle(msg.whenSpriteClicked());
+        if (isK1) {
+          this.appendDummyInput()
+            .appendTitle(commonMsg.when())
+            .appendTitle(new blockly.FieldImage(skin.click));
+        } else {
+          this.appendDummyInput()
+            .appendTitle(msg.whenSpriteClicked());
+        }
       }
       this.setPreviousStatement(false);
       this.setInputsInline(true);
