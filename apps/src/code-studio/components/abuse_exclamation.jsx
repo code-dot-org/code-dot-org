@@ -5,7 +5,7 @@ var AbuseError = require('./abuse_error');
  * A big blue box with an exclamation mark on the left and our abuse text on
  * the right.
  */
-export default React.createClass({
+var AbuseExclamation = React.createClass({
   propTypes: {
     i18n: React.PropTypes.shape({
       tos: React.PropTypes.string.isRequired,
@@ -89,3 +89,4 @@ export default React.createClass({
     );
   }
 });
+module.exports = AbuseExclamation;
