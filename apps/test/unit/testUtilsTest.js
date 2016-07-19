@@ -1,5 +1,4 @@
 /** @file Who watches the watchers? */
-import sinon from 'sinon';
 import {expect} from '../util/configuredChai';
 import {
     forEveryBooleanPermutation,
