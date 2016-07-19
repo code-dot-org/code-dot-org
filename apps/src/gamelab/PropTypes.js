@@ -48,19 +48,39 @@ const Vector2 = React.PropTypes.shape({
 export const AnimationKey = React.PropTypes.string;
 
 /**
+ * A subset of AnimationProps that gets saved with the project JSON.
+ * @typedef {Object} SerializedAnimationProps
+ * @property {string} name
+ * @property {?string} sourceUrl
+ * @property {Vector2} frameSize
+ * @property {number} frameCount
+ * @property {number} frameRate
+ * @property {string} [version] - S3 version key
+ */
+const serializedAnimationPropsShape = {
+  name: React.PropTypes.string.isRequired,
+  sourceUrl: React.PropTypes.string,
+  frameSize: Vector2.isRequired,
+  frameCount: React.PropTypes.number.isRequired,
+  frameRate: React.PropTypes.number.isRequired,
+  version: React.PropTypes.string
+};
+const SerializedAnimationProps = React.PropTypes.shape(serializedAnimationPropsShape);
+
+/**
  * @typedef {Object} AnimationProps
  * @property {string} name
  * @property {string} sourceUrl - If provided, points to an external spritesheet.
  *           (From the animation library or some other outside source)
  *           Otherwise this is a custom spritesheet stored via the animations API
  *           and we look it up by key.
- * @property {Vector2} sourceSize
  * @property {Vector2} frameSize
  * @property {number} frameCount
  * @property {number} frameRate
  * @property {string} [version] - S3 version key
  *
  * @property {boolean} loadedFromSource - False at first, true after load successful.
+ * @property {Vector2} sourceSize
  * @property {boolean} saved - True if the current blob represents the last thing
  *           we uploaded to the animations API, false if we have a pending change
  *           to save.
@@ -69,30 +89,15 @@ export const AnimationKey = React.PropTypes.string;
  * @property {string} dataURI - The spritesheet as a dataURI (can be set as src
  *           on an image).
  */
-export const AnimationProps = React.PropTypes.shape({
-  name: React.PropTypes.string.isRequired,
-  sourceUrl: React.PropTypes.string,
-  sourceSize: Vector2.isRequired,
-  frameSize: Vector2.isRequired,
-  version: React.PropTypes.string,
+const animationPropsShape = _.assign({}, serializedAnimationPropsShape, {
   loadedFromSource: React.PropTypes.bool,
+  sourceSize: Vector2,
   saved: React.PropTypes.bool,
   blob: React.PropTypes.object,
   dataURI: React.PropTypes.string,
   hasNewVersionThisSession: React.PropTypes.bool
 });
-
-/**
- * A subset of AnimationProps that gets saved with the project JSON.
- * @typedef {Object} SerializedAnimationProps
- * @property {string} name
- * @property {string} sourceUrl
- * @property {Vector2} sourceSize
- * @property {Vector2} frameSize
- * @property {number} frameCount
- * @property {number} frameRate
- * @property {string} [version] - S3 version key
- */
+export const AnimationProps = React.PropTypes.shape(animationPropsShape);
 
 /**
  * @param {AnimationProps} animation
@@ -104,45 +109,11 @@ function getSerializedAnimationProps(animation) {
   return _.pick(animation, [
     'name',
     'sourceUrl',
-    'sourceSize',
     'frameSize',
     'frameCount',
     'frameRate',
     'version'
   ]);
-}
-
-/**
- * @param {!SerializedAnimationList} serializedAnimationList
- * @throws {Error} if the list is not in a valid format.
- */
-export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList) {
-  if (!serializedAnimationList) {
-    throw new Error('Animation List may not be null');
-  }
-
-  const rootKeys = Object.keys(serializedAnimationList);
-  if (!serializedAnimationList.hasOwnProperty('orderedKeys') ||
-      !serializedAnimationList.hasOwnProperty('propsByKey') ||
-      rootKeys.length !== 2) {
-    throw new Error('Animation List must have two root properties: orderedKeys and propsByKey');
-  }
-
-  if (!Array.isArray(serializedAnimationList.orderedKeys)) {
-    throw new Error('Animation List orderedKeys should be an array');
-  }
-
-  serializedAnimationList.orderedKeys.forEach(key => {
-    if (!serializedAnimationList.propsByKey.hasOwnProperty(key)) {
-      throw new Error(`Animation List has a key ${key} but not associated props`);
-    }
-
-    ['name', 'sourceSize', 'frameSize', 'frameCount', 'frameRate'].forEach(prop => {
-      if (!serializedAnimationList.propsByKey[key].hasOwnProperty(prop)) {
-        throw new Error(`Animation ${key} is missing required property ${prop}`);
-      }
-    });
-  });
 }
 
 /**
@@ -160,6 +131,10 @@ export const AnimationList = React.PropTypes.shape({
  * @property {AnimationKey[]} orderedKeys - Animations in project order
  * @property {Object.<AnimationKey, SerializedAnimationProps>} propsByKey
  */
+const SerializedAnimationList = React.PropTypes.shape({
+  orderedKeys: React.PropTypes.arrayOf(AnimationKey).isRequired,
+  propsByKey: React.PropTypes.objectOf(SerializedAnimationProps).isRequired
+});
 
 /**
  * Converts the full AnimationList to the serializable subset of itself.
@@ -178,4 +153,63 @@ export function getSerializedAnimationList(animationList) {
         _.mapValues(animationList.propsByKey, getSerializedAnimationProps),
         animationList.orderedKeys)
   };
+}
+
+/**
+ * @param {!SerializedAnimationList} serializedAnimationList
+ * @throws {Error} if the list is not in a valid format.
+ */
+export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList) {
+  let validationResult = SerializedAnimationList.isRequired(
+      {serializedAnimationList},
+      'serializedAnimationList',
+      'Animation List JSON',
+      'prop');
+  if (validationResult instanceof Error) {
+    throw validationResult;
+  }
+
+  // Check for duplicates in the orderedKeys array
+  let knownKeys = {};
+  serializedAnimationList.orderedKeys.forEach(key => {
+    if (knownKeys.hasOwnProperty(key)) {
+      throw new Error(`Key "${key}" appears more than once in orderedKeys`);
+    }
+    knownKeys[key] = true;
+  });
+
+  // The ordered keys set and the keys from propsByKey should match (but can
+  // be in a different order)
+  let orderedKeysNotInProps = serializedAnimationList.orderedKeys.slice();
+  let propsNotInOrderedKeys = Object.keys(serializedAnimationList.propsByKey);
+  for (let i = propsNotInOrderedKeys.length - 1; i >= 0; i--) {
+    let j = orderedKeysNotInProps.indexOf(propsNotInOrderedKeys[i]);
+    if (j !== -1) {
+      propsNotInOrderedKeys.splice(i, 1);
+      orderedKeysNotInProps.splice(j, 1);
+    }
+  }
+  if (orderedKeysNotInProps.length > 0) {
+    throw new Error('Animation List has ' +
+        (orderedKeysNotInProps.length === 1 ? 'key' : 'keys') + ' ' +
+        orderedKeysNotInProps.map(k => `"${k}"`).join(', ') +
+        ' but not associated props');
+  }
+  if (propsNotInOrderedKeys.length > 0) {
+    throw new Error('Animation List has a props for ' +
+        propsNotInOrderedKeys.map(k => `"${k}"`).join(', ') +
+        ' but ' +
+        (propsNotInOrderedKeys.length === 1 ? "that key isn't" : "those keys aren't") +
+        ' in the orderedKeys list');
+  }
+
+  // Catch duplicate names (not a fatal problem, but not great either)
+  let knownNames = {};
+  for (let key in serializedAnimationList.propsByKey) {
+    let name = serializedAnimationList.propsByKey[key].name;
+    if (knownNames.hasOwnProperty(name)) {
+      throw new Error(`Name "${name}" appears more than once in propsByKey`);
+    }
+    knownNames[name] = true;
+  }
 }

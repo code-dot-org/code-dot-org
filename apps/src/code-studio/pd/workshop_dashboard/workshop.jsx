@@ -30,7 +30,10 @@ var Workshop = React.createClass({
   propTypes: {
     params: React.PropTypes.shape({
       workshopId: React.PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+    route: React.PropTypes.shape({
+      view: React.PropTypes.string
+    }).isRequired,
   },
 
   getInitialState: function () {

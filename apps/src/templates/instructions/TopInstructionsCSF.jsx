@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-disable react/no-danger */
 
 import $ from 'jquery';
 import React from 'react';
@@ -35,6 +35,7 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
+const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
 
 const SCROLL_BY_PERCENT = 0.4;
 
@@ -91,9 +92,7 @@ const styles = {
   },
   embedView: {
     height: undefined,
-    bottom: 0,
-    // Visualization is hard-coded on embed levels. Do the same for instructions position
-    left: 340
+    bottom: 0
   },
   secondaryInstructions: {
     fontSize: 12,
@@ -146,6 +145,7 @@ const styles = {
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
+    embedViewLeftOffset: React.PropTypes.number.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
     hasContainedLevels: React.PropTypes.bool.isRequired,
     aniGifURL: React.PropTypes.string,
@@ -170,7 +170,8 @@ var TopInstructions = React.createClass({
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired
+    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
+    showInstructionsDialog: React.PropTypes.func.isRequired,
   },
 
   getInitialState() {
@@ -188,6 +189,7 @@ var TopInstructions = React.createClass({
     // adjust maxNeededHeight below, it might not be as large as we want.
     const width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
     if (width !== this.state.rightColWidth) {
+      // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         rightColWidth: width
       });
@@ -195,6 +197,7 @@ var TopInstructions = React.createClass({
 
     const gotNewFeedback = this.props.feedback && !prevProps.feedback;
     if (gotNewFeedback) {
+      // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         promptForHint: false
       });
@@ -405,7 +408,9 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - resizerHeight
       },
-      this.props.isEmbedView && styles.embedView,
+      this.props.isEmbedView && Object.assign({}, styles.embedView, {
+        left: this.props.embedViewLeftOffset
+      }),
       this.props.noVisualization && styles.noViz,
       this.props.isMinecraft && craftStyles.main
     ];
@@ -520,6 +525,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
+    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     isMinecraft: !!state.pageConstants.isMinecraft,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     aniGifURL: state.pageConstants.aniGifURL,

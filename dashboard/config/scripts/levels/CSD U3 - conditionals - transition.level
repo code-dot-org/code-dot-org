@@ -30,7 +30,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Booleans\r\n\r\nIn the past few levels we have been comparing values of sprites to find out if a question was true or false. Let's start putting that in the context of an animation. \r\n\r\n# Do This\r\nThe animation has a race car and a finish line. We are going to start figuring out when the race car crosses the finish line. The sprites have all been set up for you.\r\n\r\n* Add a `console.log` statement \r\n* Add an expression inside the `console.log` that ask is x position of the race car is less than the x position of the finish line\r\n* Hint: Think about the sprite properties of the finish line and the race car which you need to compare",
+    "markdown_instructions": "# Booleans\r\n\r\nIn the past few levels we have been comparing values of sprites to find out if a question was true or false. Let's start putting that in the context of an animation. \r\n\r\n# Do This\r\nThe animation has a race car and a finish line. We are going to start figuring out when the race car crosses the finish line. The sprites have all been set up for you.\r\n\r\n* Add a `console.log` statement \r\n* Add an expression inside the `console.log` that asks \"Is the x position of the race car less than the x position of the finish line?\"\r\n* Look at the output of the program as the car moves. When does the output change? Why?",
     "callout_json": "[]",
     "show_d_pad": "false",
     "project_template_level_name": "CSD U3 - car template",

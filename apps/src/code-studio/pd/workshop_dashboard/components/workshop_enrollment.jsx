@@ -20,11 +20,12 @@ const WorkshopEnrollment = React.createClass({
       React.PropTypes.shape({
         name: React.PropTypes.string.isRequired,
         email: React.PropTypes.string.isRequired,
-        district_name: React.PropTypes.string.isRequired,
+        district_name: React.PropTypes.string,
         school: React.PropTypes.string.isRequired,
         user_id: React.PropTypes.number
       })
-    ).isRequired
+    ).isRequired,
+    workshopId: React.PropTypes.string.isRequired,
   },
 
   render: function () {

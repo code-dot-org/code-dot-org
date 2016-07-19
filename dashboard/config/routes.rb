@@ -148,6 +148,8 @@ Dashboard::Application.routes.draw do
 
     get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
     post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
+
+    get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
 
   get '/course/:course', to: 'plc/user_course_enrollments#index', as: 'course'

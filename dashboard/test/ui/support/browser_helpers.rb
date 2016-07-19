@@ -19,9 +19,7 @@ module BrowserHelpers
   end
 
   def element_contains_text(selector, expected_text)
-    expected_text.gsub!('\"', '"')
-    text = @browser.execute_script("return $(\"#{selector}\").text();")
-    text.strip.should include expected_text
+    expect(element_contains_text?(selector, expected_text)).to be true
   end
 
   def element_contains_text?(selector, expected_text)
@@ -52,8 +50,8 @@ module BrowserHelpers
   end
 
   def generate_generic_drag_code(from_selector, to_selector, target_dx, target_dy)
-    "var drag_dx = $(\"#{to_selector}\").position().left - $(\"#{from_selector}\").position().left;" +
-        "var drag_dy = $(\"#{to_selector}\").position().top  - $(\"#{from_selector}\").position().top;" +
+    "var drag_dx = $(\"#{to_selector}\").position().left - $(\"#{from_selector}\").position().left;" \
+        "var drag_dy = $(\"#{to_selector}\").position().top  - $(\"#{from_selector}\").position().top;" \
         "$(\"#{from_selector}\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 

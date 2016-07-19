@@ -4,32 +4,29 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 4: Lesson 11 - Rapid Research - Data Innovations
+# Unit 4: Lesson 11 - Rapid Research - Data Innovations
 
+## Background
 
-# Background
 In this lesson you will conduct a small amount of research to explore a computing innovation that leverages the use of data.  You will research a topic of personal interest and respond to questions about how that innovation produces, uses or consumes data. 
 
+## Vocabulary
 
-# Vocabulary
 * **One-pager:** A business/corporate term for a one-page document that summarizes a large issue, topic or plan.  The purpose is to distill and highlight the most important pieces of information in a digestible manner so that the reader can be quickly acquainted with the relevant details of the "big picture."
 
-
-# Lesson
+## Lesson
 
 * Watch video - The Impact of Innovations.
 * Choose and research a Data Innovation.
 * Prepare your one-pager.
 
-# Resources
+## Resources
 
 * Video: <a href="https://www.youtube.com/watch?v=Hg4U8z2OvT8&feature=youtu.be">The Impact of Innovations</a>
 * Activity Guide: <a href="https://docs.google.com/document/d/1nh9_-EpTSogWpEF0F0L8eO_JLcZZnzT87MC3xPFNlx4" target="_blank">Rapid Research - Data Innovations</a>
 * Worksheet: <a href="https://docs.google.com/document/d/1Env_QFc75DK7mq0H_Hy3_jtfk9IplV6hqQNl49vNoEU" target="_blank">Data Innovations One-Pager Template</a>
 
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

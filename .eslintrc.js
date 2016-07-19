@@ -3,7 +3,13 @@
 // or overridden for a particular subset of the project.  See
 // other .eslintrc.js files for those rules.
 module.exports = {
-  "extends": "eslint:recommended",
+  "plugins": [
+    "react"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "env": {
     "browser": true,
     "node": true,
@@ -19,6 +25,8 @@ module.exports = {
     }
   },
   "rules": {
+    "react/display-name": "off",
+    "react/no-render-return-value": "off", // TODO: turn this on
     "array-bracket-spacing": ["error", "never"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-dangle": "off",
