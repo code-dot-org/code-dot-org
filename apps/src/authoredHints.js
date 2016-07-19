@@ -148,6 +148,9 @@ AuthoredHints.prototype.display = function (promptIcon) {
 };
 
 AuthoredHints.prototype.showNextHint = function () {
+  if (this.getUnseenHints().length === 0) {
+    return;
+  }
   const hint = this.getUnseenHints()[0];
   this.recordUserViewedHint_(hint);
   return hint;
