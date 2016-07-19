@@ -162,6 +162,11 @@ level 'CSD U3 Interactive Card User Input'
 level 'CSD U3 Interactive Card Other Conditionals'
 level 'CSD U3 Interactive Card Final'
 
+stage 'Complex Sprite Movement'
+level 'CSD U3 abstraction rotation'
+level 'CSD U3 abstraction velocityX'
+
+
 # Not In Use
 stage 'Proposed Sprites and Props'
 stage 'Conditionals Update'
