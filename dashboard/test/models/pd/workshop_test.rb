@@ -102,7 +102,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
     assert @workshop.section
-    assert_equal Section::TYPE_PD_WORKSHOP, @workshop.section.type
+    assert_equal Section::TYPE_PD_WORKSHOP, @workshop.section.section_type
 
     @workshop.end!
     @workshop.reload

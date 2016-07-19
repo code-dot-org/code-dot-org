@@ -6,7 +6,7 @@
         - if name == :school_district
           %li= "School district or school ZIP is required"
         - else
-          %li= @enrollment.errors.full_message(name, message)
+          %li= raw @enrollment.errors.full_message(name, message).html_safe
 
 =form_for @enrollment, url: {action: action} do |form|
   %div.control-group
