@@ -44,7 +44,7 @@ export default function reducer(state = authoredHintsInitialState, action) {
   if (action.type === DISPLAY_MISSING_BLOCK_HINTS) {
     // any contextual hints already displayed but not in this new set
     // should be removed
-    const newSeenHints = state.seenHints.filter(seenHint => {
+    const seenHints = state.seenHints.filter(seenHint => {
       if (seenHint.hintType === 'contextual') {
         return action.hints.some(newHint => seenHint.hintId === newHint.hintId);
       }
@@ -63,8 +63,11 @@ export default function reducer(state = authoredHintsInitialState, action) {
       hint.hintType !== 'contextual'
     ));
 
-    // new contextual hints go to front of queue
-    const newUnseenHints = newHintsToEnqueue.concat(unseenNonContextualHints);
+    // unseen contextual hints go to front of queue
+    const newUnseenHints = newHintsToEnqueue.filter(hint => !hint.alreadySeen).concat(unseenNonContextualHints);
+
+    // seen contextual hints go to back of queue
+    const newSeenHints = seenHints.concat(newHintsToEnqueue.filter(hint => hint.alreadySeen));
 
     return Object.assign({}, state, {
       unseenHints: newUnseenHints,
