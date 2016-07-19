@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-07-12T01:31:57.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "Cats are the best. Dogs are pretty cool as well. What do you like more, and why?\r\n\r\nSome guidelines\r\n\r\n* Cats are awesome\r\n* Cats don't give a what\r\n* Cats make for better GIFs\r\n* Pictures are great",
+    "submittable": "true",
+    "title": "Wednesday Report: Group Work and Peer Learning in Unit 1 ",
+    "height": "300",
+    "allow_user_uploads": "true",
+    "peer_reviewable": "true",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

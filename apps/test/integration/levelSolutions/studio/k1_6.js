@@ -62,7 +62,7 @@ module.exports = {
         '              <block type="studio_moveEastDistance">' +
         '                <title name="SPRITE">0</title>' +
         '                <next>' +
-        '                  <block type="studio_moveNorthWestDistance">' +
+        '                  <block type="studio_moveNorthwestDistance">' +
         '                    <title name="SPRITE">0</title>' +
         '                  </block>' +
         '                </next>' +
@@ -100,7 +100,7 @@ module.exports = {
         '        <title name="VALUE">"visible"</title>' +
         '        <title name="SPRITE">0</title>' +
         '        <next>' +
-        '          <block type="studio_moveSouthEastDistance">' +
+        '          <block type="studio_moveSoutheastDistance">' +
         '            <title name="SPRITE">0</title>' +
         '            <next>' +
         '              <block type="studio_moveWestDistance">' +

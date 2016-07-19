@@ -908,7 +908,7 @@ SQL
   end
 
   # The synchronous handler for the track_level_progress helper.
-  def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids:, is_navigator: false)
+  def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
     new_level_perfected = false
 

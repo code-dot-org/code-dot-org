@@ -5,12 +5,6 @@ import Node from '@kadira/react-storybook-addon-info/dist/components/Node';
 import {Pre} from '@kadira/react-storybook-addon-info/dist/components/markdown/code';
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
 
-function addStyleguideExamples(subcomponent) {
-  if (subcomponent && subcomponent.styleGuideExamples) {
-    subcomponent.styleGuideExamples(storybook);
-  }
-}
-
 const styles = {
   centeredStory: {
     position: 'absolute',
@@ -25,7 +19,55 @@ const styles = {
     row: {border: '1px solid #ccc'},
     cell: {width:'50%', padding: 20},
   },
+  deprecatedStory: {
+    width: '100%',
+    height: '100vh',
+    paddingLeft: 50,
+    paddingRight: 50,
+  },
+  deprecatedStoryHeader: {
+    color: 'red',
+    textAlign: 'center',
+  },
+  deprecatedImg: {
+    float: 'right',
+  },
 };
+
+
+const storybookWrapper = Object.create(storybook);
+storybookWrapper.deprecatedStoriesOf = (name, module, options) => {
+  const defaultDeprecationReason = `No reason specified. You can pass a third argument
+                                    to depcreatedStoriesOf() with a reason`;
+  return storybook
+    .storiesOf(name + ' (Deprecated)', module)
+    .add('DEPRECATED', () => (
+      <div style={styles.deprecatedStory}>
+        <h1 style={styles.deprecatedStoryHeader}>
+          !! THIS COMPONENT HAS BEEN DEPRECATED !!
+        </h1>
+        <img style={styles.deprecatedImg}
+             src="https://cdn.meme.am/instances/500x/62160477.jpg"/>
+        <dl>
+          <dt><strong>reason:</strong></dt>
+          <dd>{options && options.reason || defaultDeprecationReason}</dd>
+          <dt><strong>replacement:</strong></dt>
+          <dd>
+            {options && options.replacement &&
+             <a href="#" onClick={storybook.linkTo(options.replacement)}>
+               {`<${options.replacement}>`}
+             </a>}
+          </dd>
+        </dl>
+      </div>
+    ));
+};
+
+function addStyleguideExamples(subcomponent) {
+  if (subcomponent && subcomponent.styleGuideExamples) {
+    subcomponent.styleGuideExamples(storybookWrapper);
+  }
+}
 
 function loadStories() {
   require('./about');

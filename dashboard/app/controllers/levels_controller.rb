@@ -65,6 +65,7 @@ class LevelsController < ApplicationController
     end
 
     level_view_options(
+      @level.id,
       start_blocks: blocks_xml,
       toolbox_blocks: toolbox_blocks,
       edit_blocks: type,
@@ -75,7 +76,10 @@ class LevelsController < ApplicationController
     @callback = level_update_blocks_path @level, type
 
     # Ensure the simulation ends right away when the user clicks 'Run' while editing blocks
-    level_view_options(success_condition: 'function () { return true; }') if @level.is_a? Studio
+    level_view_options(
+      @level.id,
+      success_condition: 'function () { return true; }'
+    ) if @level.is_a? Studio
 
     show
     render :show
@@ -113,7 +117,7 @@ class LevelsController < ApplicationController
   # POST /levels
   # POST /levels.json
   def create
-    authorize! :create, :level
+    authorize! :create, Level
     type_class = level_params[:type].constantize
 
     # Set some defaults.
@@ -222,11 +226,12 @@ class LevelsController < ApplicationController
     @level = Level.find(params[:level_id])
     @game = @level.game
     level_view_options(
+      @level.id,
       embed: true,
       share: false,
       skip_instructions_popup: true
     )
-    view_options full_width: true
+    view_options(full_width: true)
     render 'levels/show'
   end
 

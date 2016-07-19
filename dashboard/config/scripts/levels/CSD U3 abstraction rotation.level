@@ -1,0 +1,61 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-07-19T17:57:45.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "draw": null,
+      "drawSprites": null,
+      "comment_GameLab": null,
+      "var sprite = createSprite": null,
+      "setAnimation": null,
+      "x": null,
+      "y": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "rotation": null,
+      "rotationSpeed": null,
+      "comment_Sprites": null,
+      "console.log": null,
+      "comment_Variables": null
+    },
+    "show_d_pad": "true",
+    "edit_code": true,
+    "contained_level_names": null,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\"sun\"],\r\n  \"propsByKey\": {\r\n    \"sun\": {\r\n      \"name\": \"sun\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/sun.png\",\r\n      \"frameSize\": {\"x\":100, \"y\": 100},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
+    "start_blocks": "var sun = createSprite(200, 200);\r\nsun.setAnimation(\"sun\");\r\n// inline instructions\r\n\r\nfunction draw() {\r\n  background(\"blue\");\r\n  drawSprites();\r\n}\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

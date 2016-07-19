@@ -28,6 +28,7 @@ const MarkdownInstructions = React.createClass({
   propTypes: {
     renderedMarkdown: React.PropTypes.string.isRequired,
     noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
+    hasInlineImages: React.PropTypes.bool.isRequired,
     onResize: React.PropTypes.func,
     inTopPane: React.PropTypes.bool
   },
@@ -99,10 +100,11 @@ const MarkdownInstructions = React.createClass({
       noInstructionsWhenCollapsed
     } = this.props;
 
-    // In cases where we have an image, we want to guarantee a certain amount of
-    // height, to deal with the fact that we want know how much height the image
-    // actually needs until it has loaded
-    const hasImage = /<img src/.test(renderedMarkdown);
+    // In cases where we have a full-size image (as opposed to the inline images we use in
+    // Star Wars), we want to guarantee a certain amount of height, to deal with the fact
+    // that we won't know how much height the image actually needs until it has loaded
+    const hasFullSizeImage = !this.props.hasInlineImages && /<img src/.test(renderedMarkdown);
+
     const canCollapse = !this.props.noInstructionsWhenCollapsed;
     return (
       <div
@@ -110,7 +112,7 @@ const MarkdownInstructions = React.createClass({
         style={[
           styles.standard,
           inTopPane && styles.inTopPane,
-          inTopPane && hasImage && styles.inTopPaneWithImage,
+          inTopPane && hasFullSizeImage && styles.inTopPaneWithImage,
           inTopPane && canCollapse && styles.inTopPaneCanCollapse
         ]}
         dangerouslySetInnerHTML={{ __html: renderedMarkdown }}/>
@@ -121,4 +123,5 @@ const MarkdownInstructions = React.createClass({
 export const StatelessMarkdownInstructions = Radium(MarkdownInstructions);
 export default connect(state => ({
   noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
+  hasInlineImages: state.instructions.hasInlineImages
 }))(Radium(MarkdownInstructions));

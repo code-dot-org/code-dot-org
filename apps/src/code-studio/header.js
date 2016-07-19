@@ -7,7 +7,7 @@ var _ = require('lodash');
 
 var clientState = require('./clientState');
 var popupWindow = require('./popup-window');
-var ShareDialog = require('./components/share_dialog');
+var ShareDialog = require('./components/ShareDialog');
 var progress = require('./progress');
 var Dialog = require('./dialog');
 
@@ -138,7 +138,6 @@ function shareProject() {
   dashboard.project.save(function () {
     var origin = location.protocol + '//' + location.host;
     var shareUrl = origin + dashboard.project.getPathName();
-    var encodedShareUrl = encodeURIComponent(shareUrl);
 
     var i18n = window.dashboard.i18n;
 
@@ -149,23 +148,25 @@ function shareProject() {
       document.body.appendChild(dialogDom);
     }
 
+    // TODO: ditch this in favor of react-redux connector
+    // once more of code-studio is integrated into mainline react tree.
+    const appType = dashboard.project.getStandaloneApp();
+    const studioApp = require('../StudioApp').singleton;
+    const pageConstants = studioApp.reduxStore.getState().pageConstants;
+    const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
+
     var dialog = React.createElement(ShareDialog, {
       i18n: i18n,
       icon: appOptions.skin.staticAvatar,
-      title: i18n.t('project.share_title'),
-      shareCopyLink: i18n.t('project.share_copy_link'),
       shareUrl: shareUrl,
-      encodedShareUrl: encodedShareUrl,
-      closeText: i18n.t('project.close'),
       isAbusive: dashboard.project.exceedsAbuseThreshold(),
-      abuseTos: i18n.t('project.abuse.tos'),
-      abuseContact: i18n.t('project.abuse.contact_us'),
       channelId: dashboard.project.getCurrentId(),
-      appType: dashboard.project.getStandaloneApp(),
+      appType,
       onClickPopup: popupWindow,
       // TODO: Can I not proliferate the use of global references to Applab somehow?
       onClickExport: window.Applab && window.Applab.canExportApp() ?
-        window.Applab.exportApp : null,
+      window.Applab.exportApp : null,
+      canShareSocial,
     });
     ReactDOM.render(dialog, dialogDom);
   });
