@@ -35,8 +35,6 @@ const ImportProjectDialog = React.createClass({
 
   getDefaultProps() {
     return {
-      isFetching: false,
-      error: false,
       onImport() {},
     };
   },
@@ -57,10 +55,11 @@ const ImportProjectDialog = React.createClass({
             {' '}<a href="#">Learn More</a>
           </p>
           <div style={styles.urlInputWrapper}>
-            <input type="text"
-                   value={this.state.url}
-                   style={styles.urlInput}
-                   onChange={event => this.setState({url: event.target.value})}/>
+            <input
+                type="text"
+                value={this.state.url}
+                style={styles.urlInput}
+                onChange={event => this.setState({url: event.target.value})}/>
           </div>
           {this.props.error &&
            <p style={styles.errorText}>
@@ -93,25 +92,24 @@ if (BUILD_STYLEGUIDE) {
           name: 'On open',
           story: () => (
             <ImportProjectDialog
-                hideBackdrop={true}
-                onImport={storybook.action("onImport")}
-                isFetching={false} />
+                hideBackdrop
+                onImport={storybook.action("onImport")} />
           )
         }, {
           name: 'While fetching',
           story: () => (
             <ImportProjectDialog
-                hideBackdrop={true}
-                onImport={storybook.action("onImport")}
-                isFetching={true} />
+                hideBackdrop
+                isFetching
+                onImport={storybook.action("onImport")} />
           )
         }, {
           name: 'Error Fetching',
           story: () => (
             <ImportProjectDialog
-                hideBackdrop={true}
-                onImport={storybook.action("onImport")}
-                error={true} />
+                hideBackdrop
+                error
+                onImport={storybook.action("onImport")} />
           )
         },
       ]);
