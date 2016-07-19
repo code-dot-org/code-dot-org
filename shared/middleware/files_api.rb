@@ -40,10 +40,6 @@ class FilesApi < Sinatra::Base
     teaches_student?(owner_user_id)
   end
 
-  def can_view_profane_or_pii_assets?(encrypted_channel_id)
-    owns_channel?(encrypted_channel_id) || admin?
-  end
-
   def file_too_large(quota_type)
     # Don't record a custom event since these events may be very common.
     record_metric('FileTooLarge', quota_type)
@@ -87,7 +83,7 @@ class FilesApi < Sinatra::Base
   end
 
   helpers do
-    %w(core.rb bucket_helper.rb animation_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb).each do |file|
+    %w(core.rb bucket_helper.rb animation_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
@@ -126,7 +122,7 @@ class FilesApi < Sinatra::Base
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
-    not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
+
     result[:body]
   end
 
