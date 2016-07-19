@@ -1,7 +1,25 @@
+- app = 'applab'
+- js_locale = 'en_us'
+
+%script{src: asset_path('js/marked/marked.js')}
+%script{src: asset_path('js/initApp/initApp.js')}
+%script{src: minifiable_asset_path('js/common.js')}
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: asset_path("js/#{js_locale}/#{app}_locale.js")}
+%script{src: minifiable_asset_path("js/#{app}.js")}
+
 :css
   .maker-setup img {
     border-radius: 50%;
     float: right;
+  }
+
+  .setup-status {
+    font-size: 26px;
+  }
+
+  .setup-status div {
+    margin: 15px 0;
   }
 
   .setup-status .complete {
@@ -46,13 +64,55 @@
 
     ## Setup Status
 
-    <ul class="setup-status">
-      <li id="is-chrome" class="complete">Chrome version 33+</li>
-      <li id="app-installed" class="incomplete">Chrome App installed</li>
-      <li id="windows-drivers" class="hidden">Windows drivers installed</li>
-    </ul>
+    <div class="setup-status">
+      <div id="is-chrome" class="complete"><i class="fa fa-times-circle"/> Chrome version 33+</div>
+      <div id="app-installed" class="incomplete"><i class="fa fa-times-circle"/> Chrome App installed</div>
+      <div id="windows-drivers" class="hidden"><i class="fa fa-times-circle"/> Windows drivers installed</div>
+      <div id="board-plug" class="incomplete"><i class="fa fa-times-circle"/> Board plugged in</div>
+      <div id="board-connect" class="incomplete"><i class="fa fa-times-circle"/> Board connect-able</div>
+    </div>
 
 :javascript
+
+  function deviceOnPortAppearsUsable(port) {
+    var comNameRegex = /usb|acm|^com/i;
+    return comNameRegex.test(port.comName);
+  }
+
+  function getDevicePort() {
+    return new Promise(function (resolve, reject) {
+      window.ChromeSerialport.list(function (error, list) {
+        if (error) {
+          reject(error);
+          return;
+        }
+
+        var prewiredBoards = list.filter(function (port) {
+          return deviceOnPortAppearsUsable(port);
+        });
+
+        if (prewiredBoards.length > 0) {
+          resolve(prewiredBoards[0].comName);
+        } else {
+          reject('Could not get device port.');
+        }
+      });
+    }.bind(this));
+  }
+
+  function connectToBoard(portId) {
+    return new Promise(function (resolve, reject) {
+      var serialPort = new window.ChromeSerialport.SerialPort(portId, {
+        bitrate: 57600
+      }, true);
+      var io = new PlaygroundIO({port: serialPort});
+      var board = new JohnnyFive.Board({io: io, repl: false});
+      board.once('ready', function () {
+        resolve(board);
+      });
+      board.once('error', reject);
+    }.bind(this));
+  }
 
   $(function () {
     $('.maker-setup a').attr('target', '_blank');
@@ -76,7 +136,7 @@
 
     if (isChrome) {
       if (gtChrome33) {
-        $('#is-chrome').removeClass('incomplete').addClass('complete');
+        check('#is-chrome');
       } else {
         $('#is-chrome').append("Your Chrome version is " + getChromeVersion() + ", please upgrade to at least version 33");
       }
@@ -86,7 +146,15 @@
         if (error) {
           return;
         }
-        $('#app-installed').removeClass('incomplete').addClass('complete');
+        check('#app-installed');
+
+        return getDevicePort().then(function(port) {
+          check('#board-plug');
+          connectToBoard(port).then(function(board) {
+            check('#board-connect');
+
+          });
+        });
       });
     }
 
@@ -95,3 +163,8 @@
     }
 
   });
+
+  function check(selector) {
+    $(selector).removeClass('incomplete').addClass('complete');
+    $(selector + ' i').removeClass('fa-times-circle').addClass('fa-check-circle');
+  }
