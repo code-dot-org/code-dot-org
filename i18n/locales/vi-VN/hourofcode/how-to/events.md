@@ -4,11 +4,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # How to organize an Hour of Code event
-
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Chuẩn bị cho sự kiện của bạn
 
@@ -36,13 +32,13 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## Ví dụ Kế hoạch tổ chức sự kiện
 
-**Sự kiện:** Tuần lễ Giáo dục Khoa học Máy tính toàn trường, mở đầu hội nghị
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Thời gian:** Trong giờ học. Sự kiện được ưu thích vào giữa buổi sáng. Khoảng 1 giờ.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Vị trí:** Hội trường (ví dụ như nhà hát, phòng tập thể dục, căn tin)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -56,5 +52,3 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                                 |
 | 10:40 - 11:00 am | Sinh viên giới thiệu một hoạt động chưa được cắm phít và giới thiệu cách mà khoa học máy tính có thể được giảng dạy mà không sử dụng máy tính.           |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                        |
-
-<%= view :signup_button %>

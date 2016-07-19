@@ -98,7 +98,7 @@ class HipChat
         succeeded = post_hipchat_form(room, message, options).is_a?(Net::HTTPSuccess)
       end
 
-      if !succeeded
+      unless succeeded
         CDO.log.info("#{room}: #{message}")
         CDO.log.info('^^^ Unable to post message to HipChat due to repeated errors')
       end
@@ -113,13 +113,14 @@ class HipChat
     end
     uri = URI.parse('http://api.hipchat.com/v1/rooms/message')
     Net::HTTP.post_form(
-        uri,
-        {color: 'gray'}.merge(options).merge({
-                                                 from: @@name,
-                                                 auth_token: @@auth_token,
-                                                 room_id: room.to_s,
-                                                 message: body
-                                             }))
+      uri,
+      {color: 'gray'}.merge(options).merge({
+        from: @@name,
+        auth_token: @@auth_token,
+        room_id: room.to_s,
+        message: body
+      })
+    )
   end
 
   # Wait the current HipChat request to succeeed (possibly including retries).

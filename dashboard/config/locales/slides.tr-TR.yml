@@ -595,23 +595,22 @@
           gerçek zamanlı bir video oyunu gibi.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: An event is an action  that causes something to happen. It's like when
-          you click the button on a mouse and a webpage loads. That's an event. When
-          you touch your screen on a tablet to scroll, that's an event also. Events
-          are a great way of letting the user direct your program whenever they need
-          or want to.
+        text: Bir olay bir şeyin olmasını sağlayan eylemdir. Bir butona tıkladığında
+          bir internet sitesinin yüklenmesi gibi. Bu bir olaydır. Kaydırmak için tabletine
+          dokunman da bir olaydır. Olaylar kullanıcı programa istediği zaman veya
+          ihtiyacı olduğunda müdahale etmesini sağlar.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: Things happen that we all respond to. We feel hungry and we go to the
-          fridge. We hear the mailman come and he puts our mail in the mailbox  and
-          then we go get our mail. Those are just like the events of pushing a button
-          or moving a joystick. They are something that happens that triggers us to
-          do something.
+        text: Karşılık vermemiz gereken olaylar vardır. Aç hissettiğimiz zaman buzdolabına
+          gideriz. Bir postacının geldiğini duyduğumuzda ve mektupları posta kutusuna
+          koyduğunda gider ve mektuplarımızı alırız. Bu olaylar aynı bir butona basmak
+          veya bir oyun kolunu hareket ettirmek gibidir. Bu gibi olaylar bizim bir
+          şeyler yapmamızı tetikler.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: In video games, there's an event called "Update" and it happens 30 or
-          60 times a second. For videogame programmers that's almost more important
-          as an event than the buttons or the joystick.
+        text: Video oyunlarında, "Güncelle" adlı bir olay bulunur ve bu olay saniye
+          30 ya da 60 kez gerçekleşir. Video oyun programcıları için bu butonlardan
+          veya oyun kollarından neredeyse daha önemlidir.
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: The main event we're watching for is that "Update" tick happening. And
@@ -652,9 +651,10 @@
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work,
-          there is something we use in both dances and in programming lightsuits.
-          And that is loops! Loops are repeating an action over and over.
+        text: Merhaba, benim ismim Miral Kotb ve ben iluzyonun kurucusuyum. Benim
+          çalıstığım işte, yaptığımız danslarda ve programlarda ışıklı kıyafetler
+          kullanıyoruz. Ve bunlar döngüler! Döngüler üzerinde tekrarlandıkca harekete
+          geçiyor.
       2:
         image: notes/C1_getting_loopy_2.png
         text: Birşeyi birçok kez yapınca "döngü" yapmış oluyoruz. Aynı benim bu çemberi

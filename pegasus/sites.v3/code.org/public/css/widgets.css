@@ -1,0 +1,98 @@
+.block-header {
+  background-color: #7665a0;
+  color: white;
+  height: 60px;
+  padding-top: 10px;
+  padding-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.tool-thumbnail {
+  float: left;
+  width: 40%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.thumbnail-title {
+  font-family: "Gotham 7r", sans-serif;
+}
+
+.tool-links {
+  margin-left: 45%;
+}
+
+.standalone-tool {
+  margin-left: 45%;
+  margin-top: 20px;
+}
+
+.back-to-top {
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+
+.animated-gif {
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 501px) and (max-width: 970px) {
+  .block-header {
+    height: 50px;
+    margin-left: 10px;
+  }
+
+  h2 {
+    margin-left: 10px;
+  }
+
+  .tool-thumbnail {
+    width: 50%;
+    margin-left: 10px;
+  }
+
+  .tool-desc {
+    margin-left: 10px;
+  }
+
+  .standalone-tool {
+    margin-left: 40px;
+  }
+
+  .tool-links {
+    margin-left: 40px;
+  }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .block-header {
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  h2 {
+    margin-left: 10px;
+  }
+
+  .tool-thumbnail {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  .tool-desc {
+    margin-left: 10px;
+  }
+
+  .standalone-tool {
+    margin-left: 20px;
+  }
+
+  .tool-links {
+    margin-left: 20px;
+  }
+
+}

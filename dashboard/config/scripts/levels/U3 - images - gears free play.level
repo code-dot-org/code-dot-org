@@ -9,9 +9,9 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
+      "Game.frameRate": null,
       "Game.mouseX": null,
       "Game.mouseY": null,
-      "Game.frameRate": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
       "sprite.height": null,
@@ -47,11 +47,11 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "comment_GameLab": null,
       "comment_Drawing": null,
-      "comment_Sprites": null,
       "comment_Variables": null,
+      "comment_GameLab": null,
       "comment_Math": null,
+      "comment_Sprites": null,
       "console.log": null
     },
     "edit_code": true,
@@ -79,9 +79,10 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "show_d_pad": "false",
-    "markdown_instructions": "# Gears Free Play\r\n\r\n# Do This\r\n\r\n* Add more gears of different sizes\r\n* Make the gears line up and spin with the existing ones\r\n* Create a background for the gears",
+    "markdown_instructions": "# Gears Free Play\r\n\r\nHere are the spinning gears you have been working on. Continute to improve the animation!\r\n\r\n# Do This\r\n\r\n* Add more gears of different sizes\r\n* Make the gears line up and spin with the existing ones\r\n* Create a background for the gears\r\n* Add more ideas of your own!",
     "start_blocks": "var blueGear = createSprite(100, 220);\r\nblueGear.setAnimation(\"blueGear.png\");\r\n\r\nvar greenGear = createSprite(183, 298);\r\ngreenGear.setAnimation(\"greenGear.png\");\r\n\r\nvar redGear = createSprite(185, 145);\r\nredGear.setAnimation(\"redGear.png\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
-    "project_template_level_name": "CSD U3 - images - gears template"
+    "project_template_level_name": "CSD U3 - images - gears template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

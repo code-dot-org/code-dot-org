@@ -214,7 +214,9 @@ class Pd::Workshop < ActiveRecord::Base
       # because some teachers accidentally create student accounts
       enrollment.user.update!(user_type: User::TYPE_TEACHER, email: enrollment.email) unless enrollment.user.teacher?
 
-      next unless Pd::Attendance.for_workshop(self).for_teacher(enrollment.user).any?
+      # Make sure user joined the section
+      next unless section.students.exists?(enrollment.user.id)
+
       Pd::WorkshopMailer.exit_survey(self, enrollment.user, enrollment).deliver_now
     end
   end

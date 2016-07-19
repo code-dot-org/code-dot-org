@@ -186,11 +186,11 @@ pt-PT:
   learn_classes: Encontrar aulas perto de ti
   hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Terminar uma Hora de Código no @codeorg! #HourOfCode'
-  just_did_course1: 'Acabei de terminar o Curso 1 - Confira! @codeorg'
-  just_did_course2: 'Acabei de terminar o Curso 2 - Confira! @codeorg'
-  just_did_course3: 'Acabei de terminar o Curso 3 - Confira! @codeorg'
-  just_did_course4: 'Acabei de terminar o Curso 4 - Confira! @codeorg'
-  just_did_accelerated: 'Acabei de terminar o Curso Acelerado - Confira! @codeorg'
+  just_did_course1: Vejam! Acabei de concluir o curso 1! @codeorg
+  just_did_course2: Vejam! Acabei de concluir o curso 2! @codeorg
+  just_did_course3: Vejam! Acabei de concluir o curso 3! @codeorg
+  just_did_course4: Vejam! Acabei de concluir o curso 4! @codeorg
+  just_did_accelerated: Vejam! Acabei de concluir o curso acelerado! @codeorg
   twitter_teach_cs: 9 de 10 pessoas concordam, as escolas devem ensinar ciência da computação. http://youtu.be/nKIu9yen5nc. Visite https://code.org/.
   learn_hoc: Aprende a programar numa hora com a Hora de Código
   beyond_hoc: Além da Hora de Código
@@ -337,7 +337,7 @@ pt-PT:
   homepage_slot_text_link_stats: Vê as estatísticas
   homepage_slot_text_link_buy: Colaborar
   homepage_slot_text_link_donate: Faz uma doação
-  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
+  homepage_slot_text_link_shop: T-shirts, chapéus e muito mais
   homepage_header_codestudio: Criações de alunos no Code Studio
   homepage_header_donors: Agradecemos a quem nos apoia
   homepage_donors_seall: Ver todos
@@ -545,13 +545,13 @@ pt-PT:
   dashboard_navigation_section_pd: Desenvolvimento profissional
   dashboard_navigation_section_speakers: 'Ciência da computação <br/> Palestrantes convidados'
   dashboard_navigation_all_sections: Contas e progresso do aluno
-  dashboard_navigation_view_progress: Ver progresso
-  dashboard_navigation_view_text_responses: Ver Respostas
+  dashboard_navigation_view_progress: Progresso
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Adicionar alunos
   dashboard_navigation_manage_students: Gerir alunos
   dashboard_navigation_lesson_plans_resources: Planos das aulas e recursos
-  dashboard_navigation_view_stats: Ver estatísticas
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Turma: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
   dashboard_progress_not_started: por iniciar
@@ -696,10 +696,11 @@ pt-PT:
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver Todos
-  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-  dashboard_announce_button_text: Saber mais
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Testar funcionalidade
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Adicionar o teu nome
   code_hoc_coming: 'A Hora de Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência da Computação
   learn_more: Experimentar agora
@@ -817,6 +818,7 @@ pt-PT:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

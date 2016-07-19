@@ -8,11 +8,14 @@ it:
   campaign_date_start_long: 7 Dicembre
   campaign_date_short: 7-13 Dic.
   campaign_date_full: Dal 7 al 13 Dicembre
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: "Partecipa all'evento didattico più popolare del mondo, dal 7 al 13 Dicembre 2015"
   front_intro_default: "L'Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni. Chiunque, in ogni parte del mondo, può organizzare un'Ora del Codice. Esercitazioni di un'ora sono disponibili in oltre 40 lingue diverse. Non è necessaria alcuna esperienza. <strong> Da 4 a 104 anni. </strong>"
   front_watch_video: Guarda il nuovo video
   front_watch_regular_video: Guarda il video
   front_volunteers: Technical volunteers wanted
+  front_start_learning: Start learning
   header_menu_resources: Risorse
   header_menu_faq: FAQ
   header_menu_prizes: Premi
@@ -174,7 +177,9 @@ it:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Premi per ogni insegnante
   prizes_10k: Una scuola pubblica in ogni stato degli Stati Uniti (e Washington D.C.) vincerà 10.000$ in tecnologia
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: "<i>Ogni</i> organizzatore riceverà <b>un buono acquisto da 10$ per Amazon.com, iTunes o Microsoft's Windows Store</b> come regalo di ringraziamento!"
+  prizes_more: More exciting prizes
   whats_next_header: "Cosa c'è dopo?"
   whats_next_description: "Ti manderemo del materiale e consigli utili per il tuo evento. Nel 2015 ci sono nuove esercitazioni che funzionano su qualsiasi browser, smartphone e addirittura senza computer! <a href='http://code.org/learn'>Prova le esercitazioni disponibili </a>"
   whats_next_how_to: "<a href='/how-to'>Come eseguire un'Ora del Codice</a>"
@@ -243,7 +248,7 @@ it:
   signup_name_placeholder: Il tuo nome
   signup_email_placeholder: Per esempio, nome@istruzione.it
   signup_organization_name_placeholder: Per esempio, Liceo Dante Alighieri
-  signup_event_location_placeholder: "Codice postale e nome della nazione OPPURE indirizzo completo. \r (Lo usiamo per mettere una bandierina sulla mappa)"
+  signup_event_location_placeholder: "Codice postale e nome della nazione OPPURE indirizzo completo. \\r (Lo usiamo per mettere una bandierina sulla mappa)"
   signup_special_event_details_placeholder: "Descrivi cos'è che rende speciale questo evento"
   signup_send_posters_address_placeholder: Questo indirizzo non verrà mostrato sulla nostra mappa
   signup_event_type_in_school: In una scuola
@@ -252,6 +257,7 @@ it:
   signup_submit_error_message: Si è verificato un errore. Per favore controlla per assicurarti che tutti i campi obbligatori siano stati riempiti correttamente.
   signup_thank_you_header: "Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice."
   signup_thank_you_message: Ti abbiamo inviato un messaggio di conferma per posta elettronica con le informazioni per aiutarti a iniziare.
+  map_title: Hour of Code map
   map_header: "# Eventi dell'Ora del Codice in tutto il mondo"
   see_all_events: Vedi tutti gli eventi
   map_header_company: '# gli organizzatori'
@@ -262,9 +268,9 @@ it:
   map_legend_title: Legenda
   map_legend_hoc_events: "Eventi de L'Ora del Codice"
   map_legend_cs_tech_jam: Eventi speciali
-  meta_tag_og_title: "L'Ora del Codice è in arrivo"
+  meta_tag_og_title: "L'Ora di Codice sta arrivando"
   meta_tag_og_description: "L'Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni e in più di 30 lingue. Da 4 a 104 anni."
-  meta_tag_twitter_title: "L'Ora del Codice è in arrivo"
+  meta_tag_twitter_title: "L'ora del codice è qui"
   meta_tag_twitter_description: "L'Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni e in più di 30 lingue. Da 4 a 104 anni."
   twitter_default_text: "Io partecipo all' #OradelCodice #HourOfCode quest'anno, e tu? @codeorg @programmafuturo"
   hardware_prizes_form_name_label: Il tuo nome
@@ -304,7 +310,7 @@ it:
   hoc_faq_host_q: Non so nulla di programmazione e di informatica. Posso organizzare ugualmente un evento?
   hoc_faq_host_a: "Naturalmente. Le attività dell'Ora del Codice sono autogestite. Tutto ciò che devi fare è <a href='%{codeorg_url}/learn'>provare i nostri corsi </a>, scegliere quello che preferisci e un orario &mdash; noi pensiamo a tutto il resto. Abbiamo materiali adatti ad ogni età e livello di esperienza, a partire dall'età prescolare. Inizia a pianificare il tuo evento leggendo la <a href='/how-to'>guida che spiega come farlo</a>."
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: Ho bisogno di un computer per ogni partecipante?
   hoc_faq_need_computers_a: "No. Abbiamo lezioni de l'Ora del Codice che funzionano su PC, su smartphone, su tablet oltre a lezioni che non necessitano di alcun computer! Puoi prendere parte a questo evento dovunque tu sia e con qualsiasi strumento tu abbia a disposizione. <p><i>Ecco alcune opzioni:</i><br><ul><li><b> Lavorare in coppia.</b> Le ricerche dimostrano come gli studenti imparino meglio attraverso la <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programmazione in coppia</a>, condividendo un computer e lavorando insieme. Incoraggiate i vostri studenti a lavorare insieme. <li><b>Utilizzare un proiettore.</b> Se avete un proiettore e un computer connesso ad internet, il vostro gruppo potrà partecipare all'Ora del Codice tutti insieme. Guardate insieme le parti dei video e a turno risolvete gli esercizi o rispondete alle domande.<li><b> Usa le lezioni tradizionali.</b> Offriamo anche lezioni che non richiedono alcun computer.</ul>"
   hoc_faq_international_q: Io sono in Italia. Come posso partecipare a livello internazionale?
@@ -313,8 +319,6 @@ it:
   hoc_faq_tutorial_a: "Se sei interessato a creare un corso, <a href='target-tutorial-guidelines'>leggi le nostre linee guida e le istruzioni</a>. Ci piacerebbe offrire una grande varietà di opzioni coinvolgenti, ma l'obiettivo primario è ottimizzare l'esperienza per gli studenti e gli insegnanti che si affacciano per la prima volta all'informatica."
   hoc_faq_account_q: Gli studenti devono accedere utilizzando un account?
   hoc_faq_account_a: "Assolutamente no. Non è richiesta alcuna registrazione o login agli studenti che vogliono provare l'Ora del Codice. La maggior parte dei <a href='%{codeorg_url}/learn/beyond'> corsi di approfondimento</a> invece richiede un account per registrare i percorsi e i progressi degli studenti."
-  hoc_faq_frozen_q: Dove si trova il corso con Anna ed Elsa?
-  hoc_faq_frozen_a: "E' pubblicato su <a href='%{codeorg_url}/learn'> la pagina delle lezioni</a>. Speriamo che ti piaccia!"
   hoc_faq_high_school_q: Quale attività dovrei fare con gli studenti delle scuole superiori?
   hoc_faq_high_school_a: "Indipendentemente dall'età, raccomandiamo di provare prima le lezioni per principianti su <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> come, ad esempio, la lezione Angry Birds o quella con Anna ed Elsa. Uno studente di scuola superiore è in grado di terminare ciascuna di essa in non più di 30 minuti; successivamente può provare una lezione avanzata per il linguaggio Javascript tra quelli proposti su Khan Academy o CodeHS."
   hoc_faq_scratch_q: "Sto usando Scratch per l'Ora del Codice, ma cosa succede se i miei studenti hanno un iPad invece di un computer portatile?"
@@ -330,7 +334,9 @@ it:
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: "Statistiche dell'Ora del Codice per il 2013"
   stats_growth: "E' stato il più veloce a raggiungere i 15 milioni di utenti."
   stats_i18n: Gli studenti stanno imparando in 40 lingue diverse
@@ -416,6 +422,9 @@ it:
   events_orgs_title: "Tutti gli eventi dell'Ora del Codice organizzati dai partner"
   event: evento
   events: eventi
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: Copyright Code.org 2015. Tutti i diritti riservati.
   footer_trademark_message: Hour of Code™ è un marchio registrato di Code.org.
   footer_menu_partners: Partner

@@ -8,6 +8,20 @@ class SessionsController < Devise::SessionsController
     super
   end
 
+  # POST /resource/sign_in
+  def create
+    super do |user|
+      if user.persisted? && user.current_sign_in_ip
+        if UserGeo.find_by_user_id(user.id).nil?
+          UserGeo.create!(
+            user_id: user.id,
+            ip_address: user.current_sign_in_ip
+          )
+        end
+      end
+    end
+  end
+
   # DELETE /resource/sign_out
   def destroy
     redirect_path = after_sign_out_path_for(:user)
@@ -33,6 +47,6 @@ class SessionsController < Devise::SessionsController
       return oauth_sign_out_path(user.provider)
     end
 
-    'http:' + code_org_root_path
+    code_org_root_path
   end
 end

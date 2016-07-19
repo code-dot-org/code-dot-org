@@ -3,68 +3,47 @@ lv:
     instructions:
       2-3 Artist 1 new_instruction: Sveiki, esmu mākslinieks. Tu vari rakstīt kodu, lai liktu man uzzīmēt gandrīz jebko. Izmanto pāris blokus, lai liktu man zīmēt attēlā redzamo pelēko līniju vietā. (Katra līnija ir 100 pikseļu gara)
       2-3 Artist 11_instruction: 'Uztaisi robežu stop zīmei no astoņstūra, kuram katra mala ir 100 pikseļu gara. Cik platus leņķus tev vajadzīgs izmantot? (Pavediens: Cik ir 360 dalīts ar 8?) '
-      2-3 Artist 12_instruction: "Create a circle to finish the eyeball!\\r\n\\r\nIf\nthe artist turns 1 degree with each loop, how many times do you need to repeat\nthe code to draw a circle? 180? 360? 500?"
-      2-3 Artist 2 new_instruction: |
-        This house has a half-finished wall. Each side
-        is 100, but the half-finished wall is only 50. Complete the wall. 
+      2-3 Artist 12_instruction: "Izveido apli, lai pabeigtu acs zīmējumu!\\r\n\\r\nCik reizes jāatkārto kods, lai uzzīmētu apli, ja aktieris katru reizi pagriežas par 1 grādu? 180? 360? 500?"
+      2-3 Artist 2 new_instruction: 'Šai mājai ir pa pusei pabeigta siena. Katrai pusei ir 100, bet pa pusei pabeigtai sienai - 100. Pabeidziet sienu. '
       2-3 Artist 2_instruction: |
         This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. 
       2-3 Artist 3.4_instruction: |
-        The jump block moves the artist without drawing.
-        Draw the dashed line using both the `jump forward` and `move forward` blocks.
-      2-3 Artist 3_instruction: |
-        This hat is 100 pixels high. Draw a hat that is
-        70 pixels less.
-      2-3 Artist 3new_instruction: "The red hat is 100 pixels tall. Finish drawing\na black hat that is 70 pixels shorter. \\r\n(Note: The width of each hat is\n50 pixels.)"
-      2-3 Artist 4_instruction: Help me complete the house for this cat.
-      2-3 Artist 5_instruction: |
-        Replace this code with a "repeat times" block
-        to draw the same house using only 3 blocks.
+        Lēkšanas bloks pārvieto aktieri bez zīmēšanas.
+        Zīmējiet pārtrauktu līniju, izmantojot `lēkšanas` un `pārvietošanas` blokus.
+      2-3 Artist 3_instruction: Šī cepure ir 100 pikseļus augsta. Zīmējiet cepuri, kura ir par 70 pikseļiem mazāka.
+      2-3 Artist 3new_instruction: "Sarkanā cepure ir 70 pikseļus augsta. Pabeidz zīmēt melno cepuri, kura ir 70 pikseļus mazāka. \\r \n(Katras cepures platums ir 50 pikseļi.)"
+      2-3 Artist 4_instruction: Palīdzi man pabeigt māju šim kaķim.
+      2-3 Artist 5_instruction: 'Nomaini šo kodu ar "atkārtot reizes" bloku, lai uzzīmētu šo pašu māju tikai ar 3 blokiem.'
       2-3 Artist 6_instruction: |
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
-      2-3 Artist 7_instruction: |
-        Finish drawing the last set of windows on the school
-        so that everyone in class can see outside. The sides of each square window
-        pane are 25 pixels long. 
-      2-3 Artist 8_instruction: |
-        Complete the rooms for each of the animals by splitting
-        the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
-        and 100 pixels tall.
-      2-3 Artist 9_instruction: Finish this kite
+        Šai mājai vajag jumtu! Uzzīmē trīsstūri. Padoms:
+        visas trīs malas ir vienāda garuma.
+      2-3 Artist 7_instruction: 'Pabeidz zīmēt skolai pēdējos logus, lai klasē ikviens var redzēt, kas notiek ārā. Katras loga rūts malas garums ir 25 pikseļi. '
+      2-3 Artist 8_instruction: Pabeidz veidot telpas katram dzīvniekam, sadalot četrstūri divos vienāda izmēra kvadrātos. Četrstūris ir 200 pikseļus plats un 100 pikseļus augsts.
+      2-3 Artist 9_instruction: Pabeidz gaisa pūķi
       2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth.
-        It is 25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |
-        This hat should only be 50 pixels wide.  Can
-        you fix it?
-      2-3 Artist Debugging 10_instruction: "The direction pad on my game controller\nis too narrow. \\r\n\\r\nCan you make it wider by 10 pixels?"
+        Uzdevums: Pabeidz zīmēt pēdējo zobu.
+        Tas ir 25 pikseļus plats un 25 pikseļus augsts.
+      2-3 Artist Debugging 1_instruction: 'Šai  cepurei jābūt 50 pikseļus platai. Vai vari to salabot?'
+      2-3 Artist Debugging 10_instruction: "Spēļu kontroliera kursorsvira ir pārāk šaura. \\r\n\\r\nVai vari to izveidot 10 pikseļus platāku?"
       2-3 Artist Debugging 11_instruction: "My snowflake is falling apart!\\r\n\\r\nCan\nyou figure out what's going wrong?"
-      2-3 Artist Debugging 12_instruction: |
-        I'm supposed to add an ocean wave to
-        this scene.  Can you help me?
-      2-3 Artist Debugging 2_instruction: "This code for the cat's whiskers is wrong.\n\\r\n\\r\nFix this code to draw whiskers that are all the same length."
-      2-3 Artist Debugging 3_instruction: "My boat has a hole! \\r\n\\r\nWhat do you\nneed to fix to make the ends meet?"
-      2-3 Artist Debugging 4_instruction: |
-        What is the image that we're trying to
-        draw? Finish connecting the dots using the proper lines and angles.
-      2-3 Artist Debugging 5_instruction: "The code that we have for the leg and\nfoot is wrong. \\r\n\\r\nCan you fix it?"
-      2-3 Artist Debugging 6_instruction: "Looks like I'm sitting on a chair that’s\nmissing a leg!\\r\n\\r\nEdit the code to draw the last leg."
-      2-3 Artist Debugging 7_instruction: "Looks like the C in code is drawn backwards!\\r\n\\r\nCan\nyou make it look like a C again?"
-      2-3 Artist Debugging 8_instruction: "My teacher says that I should finish what\nI start!\\r\n\\r\nHelp me finish my pinwheel. Can you figure out what's wrong?"
-      2-3 Artist Debugging 9_instruction: "Something is off!\\r\n\\r\nThe code for\nthis stem is wrong. Can you figure out how to get the artist to trace the\nstem the right way?"
-      2-3 Artist Debugging Assessment 1_instruction: "Assessment: Why does this square\nend up being 75 pixels too small on each side?  \\r\n\\r\nWhere does the code\ngo wrong?"
-      2-3 Artist Free Play_instruction: "Free-play! Draw anything you'd like."
-      2-3 Artist Functions 1_instruction: "\"Me zombie artist. Me love drawing!\"  \\r\n\\r\nHelp\nthe zombie draw square glasses.  \\r\n\\r\nThe bridge between the glasses is\n25 pixels shorter than the width of the squares."
-      2-3 Artist Functions 10_instruction: |
-        Freeplay: Here are two functions, one
-        to draw a big gear and one to draw a small gear. Use them to draw the inside
-        of a machine!
-      2-3 Artist Functions 11.5_instruction: "Here's that same `draw a hexagon`\nfunction. \\r\n\\r\nWhat happens if you turn 60 degrees in your main program\neach time you loop?"
-      2-3 Artist Functions 11_instruction: "We've renamed the `draw a square` function\nto `draw a hexagon`, but it's still giving us squares! Can you modify the\n`draw a hexagon` function to draw a hexagon with 50 pixel sides? \\r\n\\r\nDraw\nthe image using the new function!"
-      2-3 Artist Functions 12 Mike_instruction: "Functions are really great for drawing\ncomplex things multiple times. \\r\n\\r\nCan you use the `draw a flower` function\nto fill the rest of the planter box?\\r\nThe plants are all 100 pixels apart."
-      2-3 Artist Functions 12_instruction: "Functions are really great for drawing\ncomplex things multiple times. \\r\n\\r\nCan you use the `draw a flower` function\nto fill the rest of the planter box?\\r\nThe plants are all 100 pixels apart."
+      2-3 Artist Debugging 12_instruction: Man jāizveido okeāna vilnis šajā zīmējumā. Vai vari man palīdzēt?
+      2-3 Artist Debugging 2_instruction: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\\r\n\\r\nIzlabo kodu, lai visām ūsām būtu vienāds garums."
+      2-3 Artist Debugging 3_instruction: "Manā laivā ir caurums! \\r\n\\r\nVai vari izlabot zīmējumu, lai cauruma nebūtu?"
+      2-3 Artist Debugging 4_instruction: Kas ir zīmējumā, ko mēs mēģinām uzzīmēt? Pabeidz savienot punktus, izmantojot pareizās līnijas un leņķus.
+      2-3 Artist Debugging 5_instruction: "Kods kājai un pēdai ir kļūdains. \\r\n\\r\nVai vari to izlabot?"
+      2-3 Artist Debugging 6_instruction: "Izskatās, ka sēžu uz krēsla, kam trūkst vienas kājas!\\r\n\\r\nIzmaini kodu, lai uzzīmētu pēdējo kāju."
+      2-3 Artist Debugging 7_instruction: "Izskatās, ka kodā C burts ir uzzīmēts otrādi.\\r\n\\r\nVai vari to uzzīmēt pareizi?"
+      2-3 Artist Debugging 8_instruction: "Skolotājs saka, ka man ir jāpabeidz iesāktais!\\r\n\\r\nPalīdzi man pabeigt vējdzirnaviņas. Vai vari pateikt, kas ir nepareizi?"
+      2-3 Artist Debugging 9_instruction: Stiebra kods ir nepareizs. Vai vari noskaidrot, kā uzzīmēt stiebru pareizajā virzienā?
+      2-3 Artist Debugging Assessment 1_instruction: "Uzdevums: Kāpēc šī kvadrāta malas ir par 75 pikseļiem īsākas nekā vajadzētu būt? \\r\n\\r\nKurā vietā ir jālabo kods?"
+      2-3 Artist Free Play_instruction: Brīvā spēle! Zīmē visu, ko vēlies.
+      2-3 Artist Functions 1_instruction: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\r\n\\r\nPalīdzi zombijam uzzīmēt kvadrātiskas brilles. \\r\n\\r\nSavienojums starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
+      2-3 Artist Functions 10_instruction: 'Brīvā spēle: Šeit ir divas funkcijas, kas zīmē lielāku un mazāku zobratus. Izmantojot šīs funkcijas, uzzīmējiet zīmējumu mašīnas iekšienē!'
+      2-3 Artist Functions 11.5_instruction: "Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \\r\n\\r\nKas notiks, ja programmas ciklā katru reizi notiks pagrieziens par 60 grādiem?"
+      2-3 Artist Functions 11_instruction: "Mēs pārsaucām funkciju `zīmēt kvadrātu` par `zīmēt sešstūri`, bet tas joprojām zīmē kvadrātu! Vai vari izmainīt `zīmēt sešstūri` funkciju tā, lai tā zīmētu sešstūri ar 50 pikseļus garām malām? \\r\n\\r\nUzzīmē zīmējumu ar jauno funkciju!"
+      2-3 Artist Functions 12 Mike_instruction: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības vairākas reizes. \\r\n\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt visu puķu kasti?\\r\nZiedi atrodas 100 pikseļu attālumā."
+      2-3 Artist Functions 12_instruction: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības vairākas reizes. \\r\n\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt visu puķu kasti?\\r\nZiedi atrodas 100 pikseļu attālumā."
       2-3 Artist Functions 13_instruction: |
         We've provided you with four functions.
         Use them any way you like inside of one or more loops to make pictures that
@@ -302,6 +281,10 @@ lv:
       2-3 Maze 12 (old)_instruction: |
         Get me to the pig, now with the Repeat times
         block!
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: |
         Can you get to the pig by creating a loop that uses
         only one `move forward` block inside of a `repeat`?
@@ -779,16 +762,22 @@ lv:
       4-5 While Loops Assessment 1_instruction: |
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
-      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na square with 20 pixel sides. "
       aE2_instruction: |
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
-        all 15 squares line up next to each other?
-      aE3_instruction: |
-        Now let's go one level deeper! We've nested that whole
-        block of code into another loop, but you need to get the artist back in place
-        to draw the next line. Which of these code blocks can you place at the end
-        of the outermost loop to draw the whole grid?
+        all 14 napkins line up next to each other?
+      aE3_instruction: "We've got to have a tablecloth!  \\r\n\\r\nTake your row of\n14 napkins and sew 14 of those together with another **outer loop** to make\na cover for our table."
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: |
+        How many times do you need to loop this to draw half  of
+        a circle? 
+      aE7_instruction: "If you create another loop like this one, but turn left instead\nof right, what happens? \\r\n\\r\nCan you repeat all of that to draw this wave?"
+      aE8_instruction: "Now let's loop that whole thing four times to create this\npicture frame. Watch out for the corners - you can't just turn 90 degrees!\n\\r\n\\r\nIf looping a 3 degree turn 60 times makes a half circle, which of\nthese blocks of code will make an additional quarter circle for the corners?"
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -861,6 +850,42 @@ lv:
       Artist - Nested Loops Assessment 1_instruction: |
         Use a nested loop to complete
         the design.
+      artistLoopsK1_instruction: |
+        This is a new type of puzzle called "Artist".
+        Play with the level and draw something fun.
+      artistLoopsK2_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
+      artistLoopsK3_instruction: |
+        Draw a line eight steps long. This will become
+        the land for our kingdom!
+      artistLoopsK4_instruction: |
+        Now we need a castle with a draw bridge.  Fix the
+        code so that the bridge lays straight instead of falling down.
+      artistLoopsK5_instruction: |
+        Now we need to fix the top of the castle. Can you
+        loop the code three times?
+      artistLoopsK6_instruction: |
+        Someone is stuck in the tower!  Fix the stairs
+        to set them free. 
+      artistLoopsK7_instruction: |
+        This tower is lovely, what is downstairs? Build
+        another staircase to find out! 
+      artistLoopsK8_instruction: |
+        Wow! There's a garden over there!  Help fix these
+        stairs so I can get to it.
+      artistLoopsK9_instruction: |
+        **Challenge:**  Lovely! Let's take a walk around
+        the garden.
+      artistLoopsKA_instruction: |
+        These stones are in the wrong place.  Help me move
+        them so I don't fall in!
+      artistLoopsKB_instruction: |
+        Look!  It's a theater.  Help me set up the chairs
+        so we can all see the stage. 
+      artistLoopsKFP_instruction: |
+        Picture time!  Use what you have learned to draw
+        a picture of what you think the Artist saw on stage.
       Auto Open Function Editor_instruction: |
         You can call functions from inside
         other functions! Using your "shape" function as a base, create 3 house shapes
@@ -871,6 +896,10 @@ lv:
         or 0 nectar, but you don't know which one! Be careful not to collect nectar
         from a purple flower if it doesn't have any. Check if the nectar is equal
         to 1 by using the if block.
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
+        
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -2083,6 +2112,7 @@ lv:
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -2527,6 +2557,7 @@ lv:
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      eventsIntro_instruction: Need a better playlab/events combo
       Farmer for Authored Hint testing_instruction: |
         Wow, I found a really deep hole!
         I don't know how many shovelfuls of dirt it needs.  Can you write a program
@@ -2657,7 +2688,7 @@ lv:
       K-1 Artist Loops 8_instruction: This staircase has longer steps.
       K-1 Artist Loops 9_instruction: What is the easiest way to draw these stairs?
       K-1 Artist Loops Free Play_instruction: Free play, draw something fun!
-      K-1 Artist1 1_instruction: Draw the foot of the man with one line
+      K-1 Artist1 1_instruction: Uzzīmējiet cilvēka pēdu ar vienu līniju
       K-1 Artist1 10_instruction: |
         Draw and Jump to make the dashed path to the treasure
         X
@@ -2823,7 +2854,35 @@ lv:
       K-1 Maze Sequence Assessment 2_instruction: |
         Move one way, then another to
         get me to the pig.
+      K2.0 sequence 1_instruction: Change the code to get me to the pig!
+      K2.0 sequence 10_instruction: Move me around the TNT to get to the pig.
+      K2.0 sequence 2_instruction: Change the code to get me to the pig!
+      K2.0 sequence 3_instruction: |
+        Something is not quite right. REMOVE blocks to
+        get me to the pig!
+      K2.0 sequence 4_instruction: |
+        Try it yourself!  Move one way, then another
+        to get me to the pig.
+      K2.0 sequence 5_instruction: Move one way, then another to get me to the pig!
+      K2.0 sequence 6_instruction: |
+        Figure out what is missing and then add blocks
+        to get me to the pig!
+      K2.0 sequence 7_instruction: |
+        Debug this level by adding and changing blocks
+        to get me to the pig!
+      K2.0 sequence 8_instruction: |
+        Debug this level by adding blocks to get me to
+        the pig!
+      K2.0 sequence 9_instruction: 'Go around the TNT to get me to the pig! '
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -2865,7 +2924,11 @@ lv:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      Mike Pair Programming_instruction: Here are the instructions
       MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
@@ -3211,9 +3274,6 @@ lv:
         Challenge: How would you
         use the "for loop" to get every actor to go around and say their actor number,
         then vanish from the screen? 
-      New Play Lab Project_instruction: |
-        Create your own story or game! Your code
-        is saved as a project you can return to at any time.
       Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
@@ -3239,23 +3299,17 @@ lv:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
+        Ieskriet ložņā ir bīstami.
+        Uzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās.
       Overworld Chop Tree - allthethings_instruction: |
         Wood is a very important resource.
         Many things are made from it. Walk to the tree and use the “destroy block”
         command to chop it down.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
+      Overworld Chop Tree_instruction: 'Koks ir ļoti nozīmīgs resurss. No koka var uztaisīt daudzas lietas. Pieejiet pie koka un lietojiet "iznīcināt bloku", lai to nocirstu.'
+      Overworld Chop Trees_instruction: Mums jāuzbūvē māja līdz saulrietam. Mājai vajag daudz koku. Nocērt visus 3 kokus.
       Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
+        Apsveicam! Tu uzveici visus uzdevumus!
+        Tagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas.
       Overworld Free Play_instruction: |
         This landscape is yours to play with. You
         choose what to build.
@@ -3277,9 +3331,7 @@ lv:
         One wall is finished, let’s build the
         rest of the house by following your floor plan! You’ll have to repeat yourself
         quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
+      Overworld House Frame Chosen_instruction: 'Būvē pārējo māju no jebkuriem materiāliem. Tev noderēs cikla "atkārtot" komandas.'
       Overworld House Frame_instruction: |
         Let's make our own house! This spot looks
         good. Build a frame on the dirt blocks.
@@ -3288,23 +3340,11 @@ lv:
         of underground resources. Now, we're going to build a track along the dirt
         path from your house. The first step is clearing the path. Follow the path
         and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Move to Sheep_instruction: 'Pievieno otru "pārvieto uz priekšu" komandu, lai sasniegtu aitu.'
+      Overworld Place Wall_instruction: 'Visas mājas sākas ar sienām. Uzbūvē mājas pirmo sienu, ievietojot "nolikt" un "pārvietot uz priekšu" komandas "atkārtot" ciklā.'
+      Overworld Plant Crops_instruction: Jādomā par priekšdienām. Iestādi augus ūdens abās pusēs, lai vēlāk būtu ko ēst.
+      Overworld Powered Minecart_instruction: Teicami! Tu savāci daudzus resursus un uzbūvēji jauku māju. Tagad uzbūvē sliedes no kartes malas līdz pat mājas durvīm.
+      Overworld Shear Sheep_instruction: 'Aitu cirpšana! Lieto "apcirpt" komandu, lai iegūtu vilnu no abām aitām.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3489,6 +3529,10 @@ lv:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      playEventsK1_instruction: |
+        This game is called "Play Lab".  See if you can
+        figure out what each block does.
+      playEventsK2_instruction: "Jorge wants to say \"Hi there.\"\\r\n\\r\nCan you\nhelp?"
       Poorva copy U3L2 Using Simple Commands_instruction: |
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -3684,9 +3728,14 @@ lv:
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
+      StepIntro_instruction: |-
+        Here's how to use the "Step" button.
       template test_instruction: "what's up"
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi hi
+      testArtistForTestK_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
@@ -5419,23 +5468,13 @@ lv:
       U6 - updateRecord - Update Nonexistent Record_instruction: |
         Force updateRecord
         to fail by changing the ID of songToUpdate. (Click to see full instructions)
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
+      Underground Avoiding Lava_instruction: 'Zem dažiem blokiem var būt lava, un, pirms pārvietoties tālāk, tā ir jānosedz. Te palīdzēs "if" ("ja") komanda. Pievieno "pārvietot uz priekšu" komandu kodam pareizajā vietā, lai ievāktu resursu blokus.'
+      Underground If Statements_instruction: 'Tagad uzdevums kļūst grūtāks. Iznīcini trīs sarkanakmeņus, bet neiekrītiet lavā. Lieto "If" ("Ja") komandu, lai atrasto lavu nosegtu ar bruģakmeni.'
+      Underground Iron_instruction: Iekrist izkusušā lavā ir bīstami. Noliec bruģakmeni, lai izveidotu tiltu, un pēc tam iegūsti vismaz divus dzelzs blokus.
       Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7 redstone! Try using a repeat command inside a repeat command to walk in\na square.\\r\n"
       Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
+        Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.
+        Nolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus.
       Underground Test Level_instruction: Collect all of the minerals!
       Vigenere_instruction: Test
       WhileAdventure_instruction: |

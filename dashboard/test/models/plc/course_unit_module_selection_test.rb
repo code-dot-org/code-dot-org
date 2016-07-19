@@ -120,7 +120,7 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
   end
 
   def get_preferred_modules_for_answers(answers_map)
-    answers_data = Hash.new()
+    answers_data = Hash.new
 
     answers_map.each do |evaluation_multi, answer|
       answers_data[evaluation_multi.id] = {'result': evaluation_multi.answers.find_index {|x| x['text'] == answer}.to_s}

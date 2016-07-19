@@ -3,9 +3,9 @@
 
 import React from 'react';
 import Radium from 'radium';
+import color from '../../color';
 import gamelabMsg from '../locale';
 import animationLibrary from '../animationLibrary';
-import { getLabel } from '../animationMetadata';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
@@ -13,6 +13,8 @@ import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 
 const AnimationPickerBody = React.createClass({
   propTypes: {
+    is13Plus: React.PropTypes.bool,
+    onDrawYourOwnClick: React.PropTypes.func.isRequired,
     onPickLibraryAnimation: React.PropTypes.func.isRequired,
     onUploadClick: React.PropTypes.func.isRequired
   },
@@ -23,23 +25,29 @@ const AnimationPickerBody = React.createClass({
         <h1 style={styles.title}>
           {gamelabMsg.animationPicker_title()}
         </h1>
+        {this.props.is13Plus ||
+          <WarningLabel>
+            {gamelabMsg.animationPicker_warning()}
+          </WarningLabel>
+        }
         <AnimationPickerSearchBar />
         <ScrollableList style={{maxHeight: 400}}> {/* TODO: Is this maxHeight appropriate? */}
           <AnimationPickerListItem
               label={gamelabMsg.animationPicker_drawYourOwn()}
               icon="pencil"
+              onClick={this.props.onDrawYourOwnClick}
           />
           <AnimationPickerListItem
               label={gamelabMsg.animationPicker_uploadImage()}
               icon="upload"
               onClick={this.props.onUploadClick}
           />
-          {animationLibrary.map(animation =>
+          {animationLibrary.map(animationProps =>
             <AnimationPickerListItem
-                key={animation.sourceUrl}
-                label={getLabel(animation)}
-                animation={animation}
-                onClick={this.props.onPickLibraryAnimation.bind(this, animation)}
+                key={animationProps.sourceUrl}
+                label={`${animationProps.name} (${animationProps.frameCount})`}
+                animationProps={animationProps}
+                onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
             />
           )}
         </ScrollableList>
@@ -48,3 +56,12 @@ const AnimationPickerBody = React.createClass({
   }
 });
 export default Radium(AnimationPickerBody);
+
+export const WarningLabel = ({children}) => (
+    <span style={{color: color.red}}>
+      {children}
+    </span>
+);
+WarningLabel.propTypes = {
+  children: React.PropTypes.node
+};

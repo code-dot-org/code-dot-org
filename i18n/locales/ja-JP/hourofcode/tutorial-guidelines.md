@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
@@ -42,7 +40,7 @@ Now that tens of thousands of educators have tried the Hour of Code, many classr
 
 You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
 
-Examples:
+例:
 
   * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
   * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
@@ -263,5 +261,3 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 視覚障害者向けに設計されたチュートリアルを作成する場合、スクリーン リーダーで見る人のためにそれを強調したいと思います。 そのようなチュートリアルはまだ受け取ったことがないので、そういった学生に向けた選択肢として含めたいと思います。
 
 [**トップに戻る**](#top)
-
-<%= view :signup_button %>

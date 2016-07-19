@@ -28,8 +28,10 @@
   see_your_learning_plan: See your learning plan
   submit: "გაგზავნა"
   unsubmit: "ჩაბარების გაუქმება"
-  previous_page: Previous page
-  next_page: Next page
+  previous_page: "წინა გვერდი"
+  next_page: "შემდეგი გვერდი"
+  next_resource: "შემდეგი რესურსი"
+  done_with_module: Done with this Learning Module
   cancel: "გაუქმება"
   okay: "კარგი"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -94,6 +96,7 @@
     teacher_title: "მასწავლებლის რეგისტრაცია"
     student_pitch: "მოსწავლის რეგისტრაცია Code.org-ზე"
     student_title: "მოსწავლის რეგისტრაცია"
+    signup_title: Sign up for Code.org
     school_name: "სკოლის სახელი (არასავალდებულო)"
     school_address: "სკოლის მისამართი (არასავალდებულო)"
     address_placeholder: "მისამართი, ქალაქი, ინდექსი"
@@ -117,6 +120,9 @@
     teacher_terms: "მე ვეთანხმები code.org-ის <a href='http://code.org/tos'>მომსახურების
       პირობებს</a>."
     additional_information: "რეგისტრაციის გასაგრძელებლად გვჭირდება დამატებითი ინფორმაცია."
+    user_type_label: "ანგარიშის ტიპი"
+    user_type_teacher: "მასწავლებელი"
+    user_type_student: "მოსწავლე"
   signin_form:
     title: "უკვე გაქვთ ანგარიში? შემოდით"
     login: "ელ.ფოსტა ან მომხმარებლის სახელი"
@@ -396,7 +402,7 @@
       it's time to let your representatives hear from you. This week, education leaders,
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
+    announcement_petition_button: "დაამატე შენი სახელი"
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -857,3 +863,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

@@ -27,6 +27,9 @@
   "copy": "ចម្លង",
   "copyright": "Copyright",
   "currentVersion": "Current Version",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "អនន្ត",
   "jump": "លោត",
   "keepPlaying": "Keep Playing",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "អ្នក​កំពុង​ប្រើ​ប្រភេទ​ប្លុក​សំខាន់ៗ​ទាំង​អស់ ប៉ុន្តែ​មិន​ត្រឹមត្រូវ​នោះ​ទេ។",
   "listVariable": "បញ្ជី",
   "makeYourOwnFlappy": "បង្កើត​ហ្គេម Flappy របស់​អ្នក",
@@ -241,5 +245,11 @@
   "watchVideo": "មើល​វីដេអូ",
   "when": "នៅ​ពេល",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "directionNorthwestLetter": "NW",
+  "directionNortheastLetter": "NE",
+  "directionSouthwestLetter": "SW",
+  "directionSoutheastLetter": "SE",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

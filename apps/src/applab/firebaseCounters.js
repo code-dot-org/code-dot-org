@@ -1,22 +1,7 @@
 /* global Applab $ */
 
 import Firebase from 'firebase';
-import { getConfig, getDatabase } from './firebaseUtils';
-
-/**
- * Maximum number of records allowed per table. Populated from firebase.
- * @type {number}
- */
-let tableRowCountLimit;
-
-/**
- * Map representing the maximum number of writes allowed over each time interval.
- *
- * @type {Object.<string, number>} Map from rate limit interval in seconds
- *     to the maximum number of operations allowed during that interval.
- *     Populated from firebase.
- */
-let rateLimitMap;
+import { loadConfig, getDatabase } from './firebaseUtils';
 
 /**
  * Updates per-table counters associated with a table write.
@@ -28,7 +13,7 @@ let rateLimitMap;
  *   will contain the next record id to assign.
  */
 export function updateTableCounters(tableName, rowCountChange, updateNextId) {
-  return loadConfig().then(() => {
+  return loadConfig().then(config => {
     const tableRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
     return tableRef.transaction(tableData => {
       tableData = tableData || {};
@@ -38,7 +23,7 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
         }
         tableData.lastId = (tableData.lastId || 0) + 1;
       }
-      if (tableData.rowCount + rowCountChange > tableRowCountLimit)  {
+      if (tableData.rowCount + rowCountChange > config.maxTableRows)  {
         // Abort the transaction.
         return;
       }
@@ -47,9 +32,9 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
     }).then(transactionData => {
       if (!transactionData.committed) {
         const rowCount = transactionData.snapshot.child('rowCount').val();
-        if (rowCount + rowCountChange > tableRowCountLimit) {
+        if (rowCount + rowCountChange > config.maxTableRows) {
           return Promise.reject(`The record could not be created. ` +
-            `A table may only contain ${tableRowCountLimit} rows.`);
+            `A table may only contain ${config.maxTableRows} rows.`);
         }
         throw new Error('An unexpected error occurred while updating table counters.');
       }
@@ -76,16 +61,18 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
  *   limits is exceeded.
  */
 export function incrementRateLimitCounters() {
-  return loadConfig().then(() => getCurrentTime())
-  .then(currentTimeMs => {
-    let promises = [];
-    Object.keys(rateLimitMap).forEach(interval => {
+  return Promise.all([loadConfig(), getCurrentTime()]).then(results => {
+    const [config, currentTimeMs] = results;
+
+    // Issue one transaction per interval in parallel to increment or reset the
+    // rate-limiting counters associated with that interval.
+    return Promise.all(Object.keys(config.limits).map(interval => {
       const limitRef = getDatabase(Applab.channelId).child(`counters/limits/${interval}`);
-      promises.push(limitRef.transaction(limitData => {
+      return limitRef.transaction(limitData => {
         limitData = limitData || {};
         limitData.lastResetTime = limitData.lastResetTime || 0;
         limitData.writeCount = (limitData.writeCount || 0) + 1;
-        if (limitData.writeCount <= rateLimitMap[interval]) {
+        if (limitData.writeCount <= config.limits[interval]) {
           return limitData;
         } else if (limitData.lastResetTime + interval * 1000 < currentTimeMs) {
           // The maximum number of writes has been exceeded in more than `interval` seconds.
@@ -108,42 +95,9 @@ export function incrementRateLimitCounters() {
         } else {
           return Promise.resolve();
         }
-      }));
-    });
-    return Promise.all(promises);
+      });
+    }));
   });
-}
-
-/**
- * Returns a promise which resolves once Firebase config has been fetched from
- * the server and cached locally. Also starts listening for future changes to config.
- * @returns {Promise<>}
- */
-function loadConfig() {
-  if (tableRowCountLimit && rateLimitMap) {
-    // The firebase config has already been loaded.
-    return Promise.resolve();
-  }
-
-  const configRef = getConfig();
-  return configRef.once('value', snapshot => {
-    handleLoadConfig(snapshot.val());
-
-    // Make sure we don't listen multiple times.
-    configRef.off();
-
-    // Update globals to reflect firebase config any time it changes in the future.
-    configRef.on('value', snapshot => handleLoadConfig(snapshot.val()));
-  });
-}
-
-function handleLoadConfig(configData) {
-  if (!configData.channels.maxTableRows ||
-      !configData.channels.limits) {
-    throw new Error('invalid firebase config: ' + JSON.stringify(configData));
-  }
-  tableRowCountLimit = configData.channels.maxTableRows;
-  rateLimitMap = Object.assign({}, configData.channels.limits);
 }
 
 /**
@@ -152,10 +106,8 @@ function handleLoadConfig(configData) {
  * @returns {Promise<number>} The current server time in milliseconds.
  */
 function getCurrentTime() {
-  const serverTimeRef = getDatabase(Applab.channelId)
-    .child(`serverTime/${Applab.firebaseUserId}`);
+  const serverTimeRef = getDatabase(Applab.channelId).child('serverTime');
   return serverTimeRef.set(Firebase.ServerValue.TIMESTAMP).then(() => {
-    serverTimeRef.onDisconnect().remove();
     return serverTimeRef.once('value').then(snapshot => snapshot.val());
   });
 }

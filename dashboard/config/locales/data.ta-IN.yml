@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: K-8 Intro to Computer Science Course
+          desc: K-8 முதற் கணினி அறிவியல் படிப்பு
           Unplug1: "நிலை 1"
           Maze: "நிலை 2"
           Unplug2: "நிலை 3"

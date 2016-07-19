@@ -129,7 +129,7 @@ task :apps_task do
   HipChat.log 'apps built'
 
   HipChat.log 'testing apps..'
-  Dir.chdir(apps_dir) { RakeUtils.system 'grunt test' }
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'test:apps'
   HipChat.log 'apps test finished'
 
   # upload to s3
@@ -138,37 +138,19 @@ task :apps_task do
   packager.decompress_package(package)
 end
 
+# TODO: This is a temporary task meant to cleanup old code-studio packages.
+# It should go away in the nearish future
+task :code_studio_task do
+  HipChat.log 'Cleaning code-studio package'
+  # get rid of any symlink to a built package
+  RakeUtils.system 'rm', dashboard_dir('public/code-studio') if File.exist?(dashboard_dir('public/code-studio'))
+  # also delete the package itself
+  RakeUtils.system 'rm -rf', dashboard_dir('public/code-studio-package') if File.exist?(dashboard_dir('public/code-studio-package'))
+end
+
 task :firebase_task do
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:upload_rules'
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:set_config'
-end
-
-#
-# Define the CODE STUDIO BUILD task.
-#
-task :code_studio_task do
-  packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
-
-  updated_package = packager.update_from_s3
-  if updated_package
-    HipChat.log "Downloaded code-studio package from S3: #{packager.commit_hash}"
-    next # no need to do anything if we already got a package from s3
-  end
-
-  # Test and staging are the only environments that should be uploading new packages
-  raise 'No valid code-studio package found' unless rack_env?(:staging) || rack_env?(:test)
-
-  raise 'Wont build code-studio with staged changes' if RakeUtils.git_staged_changes?(code_studio_dir)
-
-  HipChat.log 'Building code-studio...'
-  RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
-  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
-  HipChat.log 'code-studio built'
-
-  # upload to s3
-  package = packager.upload_package_to_s3('/build')
-  HipChat.log "Uploaded code-studio package to S3: #{packager.commit_hash}"
-  packager.decompress_package(package)
 end
 
 file deploy_dir('rebuild') do
@@ -225,8 +207,9 @@ def upgrade_frontend(name, host)
     HipChat.log "Upgraded <b>#{name}</b> (#{host})."
   rescue
     # The frontend is in an indeterminate state, and is not registered with the load balancer.
-    HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, and is currently out of the load balancer rotation.\n" +
-      "Re-deploy or manually run `~/#{rack_env}/bin/deploy_frontend/register_with_elb.sh` on this instance to place it back into service.",
+    HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, and may currently be out of the load balancer rotation.\n" \
+      "Either re-deploy, or run the following command (from Gateway) to manually upgrade this instance:\n" \
+      "`ssh #{name} '~/#{rack_env}/bin/deploy_frontend/deregister_from_elb.sh && #{command} && ~/#{rack_env}/bin/deploy_frontend/register_with_elb.sh'`",
       color: 'red'
     HipChat.log "log command: `ssh gateway.code.org ssh production-daemon cat #{log_path}`"
     HipChat.log "/quote #{File.read(log_path)}"
@@ -293,7 +276,7 @@ task :deploy do
         thread_count = (app_servers.keys.length * 0.20).ceil
         threaded_each app_servers.keys, thread_count do |name|
           succeeded = upgrade_frontend name, app_servers[name]
-          if !succeeded
+          unless succeeded
             num_failures += 1
             raise 'too many frontend upgrade failures, aborting deploy' if num_failures > MAX_FRONTEND_UPGRADE_FAILURES
           end
@@ -352,21 +335,14 @@ task :ui_test_flakiness do
   end
 end
 
-UI_TEST_SYMLINK = dashboard_dir 'public/ui_test'
-file UI_TEST_SYMLINK do
-  Dir.chdir(dashboard_dir('public')) do
-    RakeUtils.system_ 'ln', '-s', '../test/ui', 'ui_test'
-  end
-end
-
 task :wait_for_test_server do
   RakeUtils.wait_for_url 'https://test-studio.code.org'
 end
 
-task :regular_ui_tests => [UI_TEST_SYMLINK] do
+task :regular_ui_tests do
   Dir.chdir(dashboard_dir('test/ui')) do
     HipChat.log 'Running <b>dashboard</b> UI tests...'
-    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '90', '--magic_retry', '--html', '--fail_fast'
+    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '120', '--magic_retry', '--with-status-page', '--fail_fast'
     if failed_browser_count == 0
       message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
       HipChat.log message
@@ -379,11 +355,11 @@ task :regular_ui_tests => [UI_TEST_SYMLINK] do
   end
 end
 
-task :eyes_ui_tests => [UI_TEST_SYMLINK] do
+task :eyes_ui_tests do
   Dir.chdir(dashboard_dir('test/ui')) do
     HipChat.log 'Running <b>dashboard</b> UI visual tests...'
     eyes_features = `grep -lr '@eyes' features`.split("\n")
-    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
+    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
     if failed_browser_count == 0
       message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
       HipChat.log message

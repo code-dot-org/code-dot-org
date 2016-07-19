@@ -4,7 +4,6 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-
 <% if @country == 'la' %>
 
 # Latin America Partners
@@ -77,6 +76,14 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
+<% if @country == 'nl' %>
+
+# Netherlands Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
+
+<% end %>
+
 <% if @country == 'nz' %>
 
 # New Zealand Partners
@@ -101,13 +108,13 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# 主要合作伙伴及赞助商
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 ---
 
-# 主要推广合作伙伴
+# 主要的推广合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
@@ -119,7 +126,7 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-# Tutorial Partners
+# 教程合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -131,7 +138,6 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-# Additional Partners
+# 其他合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
-

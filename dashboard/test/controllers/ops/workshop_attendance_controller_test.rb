@@ -45,7 +45,6 @@ module Ops
 
     test 'District Contact cannot view attendance for teachers not in their district' do
       sign_out @admin
-
     end
 
     test 'Facilitators can view attendance for all segments in their workshop' do

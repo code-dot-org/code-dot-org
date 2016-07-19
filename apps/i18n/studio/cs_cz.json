@@ -798,5 +798,13 @@
   "failedMultiplyCharactersTimeoutBlockly": "Potřebuješ dostat 20 Myších Droidů. Použij povel \"přidejte Myší Droid\" uvnitř události \"když dostane Myší Droid\" k přidání dvou nebo více Myších Droidů, když dostaneš jednoho.",
   "failedMultiplyCharactersTimeoutGotSome": "Blahopřejeme, přidal jsi kód, abys vytvořil Myší Droidy. Můžeš přejít na další hádanku nebo znova se pokusit dostat 20 Myších Droidů. Zkus to snadněji přidáním více z nich! (Stiskni a podrž klávesy na klávesnici (nebo obrazovce) se pohybovat rychleji.)",
   "failedChangeSettingTimeout": "Dostaň tři Rebel Piloty k posunu dál.",
-  "failedChangeSettingSettings": "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost."
+  "failedChangeSettingSettings": "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost.",
+  "moveDownLeft": "move down and left",
+  "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
+  "moveDownRight": "move down and right",
+  "moveDownRightTooltip": "Move an actor diagonally down and to the right.",
+  "moveUpLeft": "move up and left",
+  "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
+  "moveUpRight": "move up and right",
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
 }

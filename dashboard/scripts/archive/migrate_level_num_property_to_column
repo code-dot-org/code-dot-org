@@ -4,4 +4,4 @@
 
 require_relative '../../config/environment'
 
-Level.all.select{|l| l.properties.has_key?('level_num') && l.properties['level_num'] == 'custom' && l.level_num.nil?}.each{|l| l.update(level_num: 'custom'); l.properties.delete('level_num'); l.save }
+Level.all.select{|l| l.properties.key?('level_num') && l.properties['level_num'] == 'custom' && l.level_num.nil?}.each{|l| l.update(level_num: 'custom'); l.properties.delete('level_num'); l.save }

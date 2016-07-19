@@ -11,7 +11,7 @@ LEVEL_TYPES_WITH_ILS = %w(Craft Studio Karel Eval Maze Calc Blockly StudioEC Art
 # Prints the JSON to the command line; redirect output to a file to save
 # it
 
-def main()
+def main
   levels_to_test = Level.
       where('type in (?)', LEVEL_TYPES_WITH_ILS).
       where('ideal_level_source_id is not null').
@@ -19,7 +19,7 @@ def main()
 
   level_hashes = levels_to_test.map { |level|
     level_hash = {
-      levelDefinition: level.blockly_options()[:level],
+      levelDefinition: level.blockly_level_options,
       tests: [{
         description: "Validate Solution for: #{level.name} (#{level.id})",
         expected: {
@@ -47,4 +47,4 @@ def main()
   }))
 end
 
-main()
+main

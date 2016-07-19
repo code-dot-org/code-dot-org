@@ -3,11 +3,11 @@
 
 import React from 'react';
 import Radium from 'radium';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import color from '../../color';
-import * as actions from '../animationModule';
-import { METADATA_SHAPE } from '../animationMetadata';
-import { selectAnimation } from './animationTabModule';
+import * as PropTypes from '../PropTypes';
+import {setAnimationName, cloneAnimation, deleteAnimation} from '../animationListModule';
+import {selectAnimation} from './animationTabModule';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
 
@@ -68,12 +68,15 @@ const styles = {
 const AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
-    animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
+    animationKey: PropTypes.AnimationKey.isRequired,
+    animationProps: PropTypes.AnimationProps.isRequired,
     columnWidth: React.PropTypes.number.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
-    setAnimationName: React.PropTypes.func.isRequired
+    setAnimationName: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
+    style: React.PropTypes.object,
   },
 
   componentWillReceiveProps(nextProps) {
@@ -83,22 +86,25 @@ const AnimationListItem = React.createClass({
   },
 
   onSelect() {
-    this.props.selectAnimation(this.props.animation.key);
+    this.props.selectAnimation(this.props.animationKey);
   },
 
-  cloneAnimation() {
-    this.props.cloneAnimation(this.props.animation.key);
+  cloneAnimation(evt) {
+    this.props.cloneAnimation(this.props.animationKey);
+    evt.stopPropagation();
   },
 
-  deleteAnimation() {
-    this.props.deleteAnimation(this.props.animation.key);
+  deleteAnimation(evt) {
+    this.props.deleteAnimation(this.props.animationKey);
+    evt.stopPropagation();
   },
 
   onNameChange(event) {
-    this.props.setAnimationName(this.props.animation.key, event.target.value);
+    this.props.setAnimationName(this.props.animationKey, event.target.value);
   },
 
   render() {
+    const name = this.props.animationProps.name;
     var animationName;
     if (this.props.isSelected) {
       animationName = (
@@ -106,12 +112,12 @@ const AnimationListItem = React.createClass({
           <input
               type="text"
               style={styles.nameInput}
-              value={this.props.animation.name}
+              value={name}
               onChange={this.onNameChange} />
         </div>
       );
     } else {
-      animationName = <div style={styles.nameLabel}>{this.props.animation.name}</div>;
+      animationName = <div style={styles.nameLabel}>{name}</div>;
     }
 
     var tileStyle = [
@@ -124,7 +130,7 @@ const AnimationListItem = React.createClass({
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
             ref="thumbnail"
-            animation={this.props.animation}
+            animationProps={this.props.animationProps}
             isSelected={this.props.isSelected}
         />
         {animationName}
@@ -139,15 +145,15 @@ export default connect(state => ({
   columnWidth: state.animationTab.columnSizes[0]
 }), dispatch => ({
   cloneAnimation(animationKey) {
-    dispatch(actions.cloneAnimation(animationKey));
+    dispatch(cloneAnimation(animationKey));
   },
   deleteAnimation(animationKey) {
-    dispatch(actions.deleteAnimation(animationKey));
+    dispatch(deleteAnimation(animationKey));
   },
   selectAnimation(animationKey) {
     dispatch(selectAnimation(animationKey));
   },
   setAnimationName(animationKey, newName) {
-    dispatch(actions.setAnimationName(animationKey, newName));
+    dispatch(setAnimationName(animationKey, newName));
   }
 }))(Radium(AnimationListItem));

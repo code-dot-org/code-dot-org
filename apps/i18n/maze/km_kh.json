@@ -82,5 +82,12 @@
   "whileTooltip": "ធ្វើ​រាល់​សកម្មភាព​ដែល​មាន​នៅ​ក្នុង​អនុគមន៍​រហូត​ដល់​លក្ខខណ្ឌ​បញ្ចប់​មក​ដល់",
   "word": "ស្វែងរក​ពាក្យ",
   "yes": "យល់ព្រម",
-  "youSpelled": "អ្នក​បាន​ប្រកប"
+  "youSpelled": "អ្នក​បាន​ប្រកប",
+  "collectiblePresent": "there is some treasure",
+  "collect": "collect",
+  "collectorCollectTooltip": "Collect an item",
+  "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
+  "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
+  "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!"
 }

@@ -14,7 +14,8 @@ export let VisualizationOverlay = React.createClass({
   propTypes: {
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
-    areOverlaysVisible: React.PropTypes.bool.isRequired
+    areOverlaysVisible: React.PropTypes.bool.isRequired,
+    children: React.PropTypes.node,
   },
 
   getInitialState: () => ({

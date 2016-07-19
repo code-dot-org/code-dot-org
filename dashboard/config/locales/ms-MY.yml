@@ -30,6 +30,8 @@
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Batal
   okay: Okay
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -94,6 +96,7 @@
     teacher_title: Daftar guru
     student_pitch: Daftar pelajar untuk Code.org
     student_title: Daftar pelajar
+    signup_title: Sign up for Code.org
     school_name: Nama sekolah (pilihan)
     school_address: Alamat sekolah (pilihan)
     address_placeholder: alamat, bandar, Negeri, zip
@@ -118,6 +121,9 @@
       of service</a>.
     additional_information: We need some additional information to continue signing
       you up.
+    user_type_label: Account Type
+    user_type_teacher: Guru
+    user_type_student: pelajar
   signin_form:
     title: Sudah ada akaun? log masuk
     login: E-mel atau nama pengguna
@@ -853,3 +859,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas
