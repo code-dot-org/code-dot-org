@@ -164,7 +164,8 @@ level 'CSD U3 Interactive Card Final'
 
 stage 'Complex Sprite Movement'
 level 'CSD U3 abstraction rotation'
-level 'CSD U3 abstraction velocityX'
+#level 'CSD U3 abstraction velocityX'
+#level 'CSD U3 abstraction velocityY'
 
 
 # Not In Use
