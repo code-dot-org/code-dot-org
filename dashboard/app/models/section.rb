@@ -40,6 +40,11 @@ class Section < ActiveRecord::Base
   LOGIN_TYPE_PICTURE = 'picture'
   LOGIN_TYPE_WORD = 'word'
 
+  TYPES = [
+    TYPE_PD_WORKSHOP = 'pd_workshop'
+  ]
+  validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+
   def user_must_be_teacher
     errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
   end
