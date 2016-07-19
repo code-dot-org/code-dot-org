@@ -92,16 +92,16 @@ ruby
   # Surveys: How many students must complete a survey before any results are shown.
   SURVEY_REQUIRED_SUBMISSION_COUNT = 5
 
-  # Surveys: Given a sublevel, and the known response to it, return a result object.
+  # Surveys: Given a sublevel, and the known response string to it, return a result hash.
   def self.get_sublevel_result(sublevel, sublevel_response)
     sublevel_result = {}
     if sublevel_response
       case sublevel
       when TextMatch, FreeResponse
-        sublevel_result[:result] = sublevel_response["result"]
+        sublevel_result[:result] = sublevel_response
         sublevel_result[:type] = "free_response"
       when Multi
-        student_result = sublevel_response["result"].split(",").sort.join(",")
+        student_result = sublevel_response.split(",").sort.join(",")
         # unless unsubmitted
         unless student_result == "-1"
           answer_text = sublevel.properties.try(:[], "answers").try(:[], student_result.to_i).try(:[], "text")
@@ -115,57 +115,50 @@ ruby
     sublevel_result
   end
 
-  # Surveys: Returns all survey results given a student and a script level of type LevelGroup.
-  def self.get_survey_results_for_student(student, script_level)
-    student_results = {}
-
-    # Skip student if they haven't submitted for this LevelGroup.
-    user_level = student.user_level_for(script_level, script_level.level)
-    return unless user_level.try(:submitted)
-
-    last_attempt = student.last_attempt(script_level.level)
-    response = last_attempt.try(:level_source).try(:data)
-    return unless response
-
-    response_parsed = JSON.parse(response)
-
+  # Returns survey results for a single LevelGroup level by students in a single section.
+  def self.get_levelgroup_survey_results(script_level, section)
     # Go through each sublevel
-    script_level.level.levels.each_with_index do |sublevel, sublevel_index|
-      # If it's the first time we're saving a result for this sublevel, then
-      # create the full entry.
-      unless student_results[sublevel_index]
-        question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
-                        sublevel.properties.try(:[], "markdown_instructions")
-        student_results[sublevel_index] = {question: question_text, results: []}
-      end
+    script_level.level.levels.map do |sublevel|
+      question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
+                      sublevel.properties.try(:[], "markdown_instructions")
 
-      sublevel_response = response_parsed[sublevel.id.to_s]
+      # Go through each student, and make sure to shuffle their results for additional
+      # anonymity.
+      results = section.students.map do |student|
+        # Skip student if they haven't submitted for this LevelGroup.
+        user_level = student.user_level_for(script_level, script_level.level)
+        next unless user_level.try(:submitted)
 
-      student_results[sublevel_index][:results] << get_sublevel_result(sublevel, sublevel_response)
+        get_sublevel_result(sublevel, student.last_attempt(sublevel).try(:level_source).try(:data))
+      end.compact.shuffle
+
+      {
+        question: question_text,
+        results: results
+      }
     end
-
-    student_results
   end
 
   # Surveys: Returns all anonymized survey results, given a script and a section.
   #
-  # The results look like this.  For each LevelGroup, levelgroup_results is a hash with
-  # entries corresponding to the sublevel indexes.  Inside each entry is an array of results
+  # The results look like this.  For each LevelGroup, levelgroup_results is an array
+  # wih an entry per contained sublevel.  Inside each entry is an array of results
   # which has been shuffled to increase student anonymity.  There is an entry for each
-  # sublevel, whether it's been submitted or not, which explains the empty hashes intermingled
-  # with real results.
+  # student who has submitted the overall LevelGroup, whether they have given a valid
+  # answer to that sublevel question or not, which explains the empty hashes
+  # intermingled with real results.
   # [
   #   { stage: "Stage 30: Anonymous student survey",
   #     puzzle: 1,
-  #     levelgroup_results: {
-  #       0: {
+  #     levelgroup_results: [
+  #       {
   #         results: [
   #           {result_text: "Strongly agree", result: "A", type: "multi"},
   #           {},
-  #           {result_text: "Strongly agree", result: "A", type: "multi"}],
-  #         question: "Computer science is fun."},
-  #       2: {
-  #         results: [
+  #           {result_text: "Strongly agree", result: "A", type: "multi"}] },
+  #         question: "Computer science is fun." },
+  #       {
+  #         results:
   #           {result: "", type: "free_response"},
   #           {result: "I like making games, and I also like the lifestyle.", type: "free_response"},
   #           {}],
@@ -180,31 +173,11 @@ ruby
       next unless script_level.long_assessment?
       next unless script_level.anonymous?
 
-      levelgroup_results = {}
-
-      # Go through each student who has submitted a response to it.
-      section.students.each do |student|
-        student_result = get_survey_results_for_student(student, script_level)
-        if student_result
-          student_result.each do |sublevel_index, question_and_results|
-            levelgroup_results[sublevel_index] = {results: []} unless levelgroup_results[sublevel_index]
-            levelgroup_results[sublevel_index][:question] = question_and_results[:question]
-            levelgroup_results[sublevel_index][:results] += question_and_results[:results]
-          end
-        end
-      end
-
-      # Shuffle all the results per sublevel (i.e. question) to increase anonymity.
-      levelgroup_results.each do |_, levelgroup_result|
-        levelgroup_result[:results].shuffle!
-      end
+      levelgroup_results = get_levelgroup_survey_results(script_level, section)
 
       # We will have results, even empty ones, for each student that submitted
       # an answer.
-      student_count = 0
-      unless levelgroup_results.empty?
-        student_count = levelgroup_results.values.first[:results].length
-      end
+      student_count = levelgroup_results.empty? ? 0 : levelgroup_results.first[:results].length
 
       if student_count >= SURVEY_REQUIRED_SUBMISSION_COUNT
         # All the results for one LevelGroup for a group of students.
