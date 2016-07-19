@@ -30,6 +30,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert !ability.can?(:destroy, Level)
     assert !ability.can?(:destroy, Activity)
 
+    assert !ability.can?(:read, Section)
+
     assert !ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
@@ -54,6 +56,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert !ability.can?(:destroy, Game)
     assert !ability.can?(:destroy, Level)
     assert !ability.can?(:destroy, Activity)
+
+    assert !ability.can?(:read, Section)
 
     assert ability.can?(:create, GalleryActivity)
     assert ability.can?(:destroy, GalleryActivity)
@@ -83,6 +87,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert !ability.can?(:destroy, Level)
     assert !ability.can?(:destroy, Activity)
 
+    assert !ability.can?(:read, Section)
+
     assert ability.can?(:create, GalleryActivity)
     assert ability.can?(:destroy, GalleryActivity)
 
@@ -110,6 +116,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, ScriptLevel)
     assert ability.cannot?(:read, UserLevel)
     assert ability.cannot?(:read, UserScript)
+    assert ability.cannot?(:read, Section)
 
     assert ability.cannot?(:destroy, Game)
     assert ability.cannot?(:destroy, Level)
@@ -142,6 +149,13 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:manage, LevelSourceHint)
     assert ability.can?(:manage, FrequentUnsuccessfulLevelSource)
+  end
+
+  test 'teachers read Section' do
+    ability = Ability.new(create(:teacher))
+
+    assert ability.can?(:read, Section)
+    assert ability.can?(:manage, Section)
   end
 
   test 'teachers manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
