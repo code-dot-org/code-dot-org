@@ -4,8 +4,15 @@ description "Planning Script for CSF 2.0"
 description_audience "Ages 10-110"
 
 stage 'Mixed Review (Ramp Up)'
-level 'comingSoon'
-
+level 'grade4_bee_conditionals_ifvid'
+level 'grade4_bee_conditionals_quantum2'
+level 'grade4_bee_conditionals_new1a'
+level 'grade4_bee_conditionals_new2a'
+level 'grade4_artist_functionsvid'
+level 'grade4_artist_functions_stars0'
+level 'grade4_artist_functions_stars1'
+level 'grade4_artist_functions_stars2'
+level 'grade4_artist_functions_stars3'
 
 stage 'Unplugged: Envelope Variables'
 level 'EnvelopeVariables'
