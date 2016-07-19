@@ -2,11 +2,9 @@
 import React from 'react';
 import {expect} from '../util/configuredChai';
 import {
-    forEveryBooleanPermutation
+    forEveryBooleanPermutation,
+    throwOnConsoleErrors
 } from '../util/testUtils';
-
-const Foo = () => null;
-const Bar = () => null;
 
 describe('forEveryBooleanPermutation', function () {
   it('invokes a function with no arguments once', function () {
@@ -59,5 +57,22 @@ describe('forEveryBooleanPermutation', function () {
       expectedInvocations.shift();
     });
     expect(expectedInvocations).to.be.empty();
+  });
+});
+
+describe('throwOnConsoleErrors', function () {
+  describe('without it', function () {
+    it('console.error does not throw an exception', function () {
+        expect(() => console.error('This console.error call is intentional.'))
+            .not.to.throw();
+    });
+  });
+
+  describe('with it', function () {
+    throwOnConsoleErrors();
+    it('console.error does throw an exception', function () {
+      expect(() => console.error('should throw'))
+          .to.throw(Error, 'should throw');
+    });
   });
 });
