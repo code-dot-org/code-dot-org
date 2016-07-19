@@ -325,7 +325,7 @@ exports.install = function (blockly, blockInstallOptions) {
         if (isK1) {
           this.appendDummyInput()
             .appendTitle(commonMsg.when())
-            .appendTitle(new blockly.FieldImage(skin.click))
+            .appendTitle(new blockly.FieldImage(skin.clickIcon))
             .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
         } else {
           this.appendDummyInput()
@@ -336,7 +336,12 @@ exports.install = function (blockly, blockInstallOptions) {
         if (isK1) {
           this.appendDummyInput()
             .appendTitle(commonMsg.when())
-            .appendTitle(new blockly.FieldImage(skin.click));
+            .appendTitle(new blockly.FieldImage(skin.clickIcon))
+            .appendTitle(new blockly.FieldImage(
+                skin[startAvatars[0]].dropdownThumbnail,
+                skin.dropdownThumbnailWidth,
+                skin.dropdownThumbnailHeight
+            ));
         } else {
           this.appendDummyInput()
             .appendTitle(msg.whenSpriteClicked());
