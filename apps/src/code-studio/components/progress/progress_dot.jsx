@@ -188,6 +188,8 @@ export const ProgressDot = React.createClass({
       return 'fa-lock';
     } else if (level.status === 'perfect') {
       return 'fa-check';
+    } else if (level.status === 'review_rejected') {
+      return 'fa-exclamation';
     } else {
       return null;
     }
@@ -267,6 +269,6 @@ export const ProgressDot = React.createClass({
 });
 
 export default connect(state => ({
-  currentLevelId: state.progress.currentLevelId,
-  saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation
+  currentLevelId: state.currentLevelId,
+  saveAnswersBeforeNavigation: state.saveAnswersBeforeNavigation
 }))(Radium(ProgressDot));

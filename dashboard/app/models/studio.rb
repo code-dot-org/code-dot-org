@@ -414,6 +414,10 @@ class Studio < Grid
   <block type="studio_moveEastDistance"></block>
   <block type="studio_moveSouthDistance"></block>
   <block type="studio_moveWestDistance"></block>
+  <block type="studio_moveNorthwestDistance"></block>
+  <block type="studio_moveNortheastDistance"></block>
+  <block type="studio_moveSouthwestDistance"></block>
+  <block type="studio_moveSoutheastDistance"></block>
 </category>
     XML
   end
