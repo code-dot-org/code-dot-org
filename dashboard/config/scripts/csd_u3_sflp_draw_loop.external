@@ -2,9 +2,7 @@ name 'CSD-U3-SFLP Draw Loop'
 href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
-## Unit 3: Lesson 02 - Draw Loop and Random
-
-# Background
+# Overview
 
 Moving from simple static images you will learn to use randomly generated numbers as inputs to your programs. From there you will be introduced the concept of a flip-book style animation loop, using those randomized shapes to see how the draw() loop calls your code repeatedly to create animation.
 
@@ -16,9 +14,9 @@ Moving from simple static images you will learn to use randomly generated number
 
 # Vocab
 
-* Loop
+* **Loop** - The action of doing something over and over again.
 
-# Command Overview
+# Commands
 ### Drawing : 
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |

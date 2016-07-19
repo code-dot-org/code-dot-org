@@ -4,7 +4,6 @@ layout: wide
 nav: promote_nav
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -17,6 +16,10 @@ nav: promote_nav
 <br/>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=vq6Wpb-WyQ"><strong>La Hora del Código en Chile (2 min)</strong></a>
+
+<% elsif @country == 'al' %>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/embed/AtVzbUZqZcI"><strong>Ora E Kodimit (5 min)</strong></a>
 
 <% elsif @country == 'ca' %>
 
@@ -38,9 +41,28 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'nl' %>
+
+<br/><br/><br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/embed/0hfb0d5GxSw"><strong>Friends of Technology Hour of Code (2 min)</strong></a>
+
+<% elsif @country == 'nz' %>
+
+<br/><br/>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=VjFQeG97a9E"><strong>Time to code is now (1 min)</strong></a>
+
+<br/><br/>
+
+<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg"/>
+
 <% elsif @country == 'pk' %>
 
 اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد  نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
+<% elsif @country == 'ro' %>
+
+Va multumim pentru inregistrare, daca doriti materiale printate pentru promovarea evenimentului, echipa din Romania vi le poate trimite prin curier. Trebuie doar sa trimiteti un email la HOC@adfaber.org si sa le solicitati.
 
 <% elsif @country ==  'uk' %>
 
@@ -90,4 +112,3 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% end %>
 
-<%= view :signup_button %>

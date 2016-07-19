@@ -1,4 +1,3 @@
-/* global ColorPicker */
 var React = require('react');
 var ReactDOM = require('react-dom');
 var rowStyle = require('./rowStyle');
@@ -7,7 +6,8 @@ var ColorPicker = require('react-color').default;
 var ColorPickerPropertyRow = React.createClass({
   propTypes: {
     initialValue: React.PropTypes.string.isRequired,
-    handleChange: React.PropTypes.func
+    handleChange: React.PropTypes.func,
+    desc: React.PropTypes.node,
   },
 
   getInitialState: function () {

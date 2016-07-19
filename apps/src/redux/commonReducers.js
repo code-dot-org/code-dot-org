@@ -5,15 +5,11 @@
 import runState from './runState';
 import pageConstants from './pageConstants';
 import instructions from './instructions';
+import instructionsDialog from './instructionsDialog';
 
 module.exports = {
   runState,
   pageConstants,
-  instructions
-};
-
-module.exports = {
-  runState,
-  pageConstants,
-  instructions
+  instructions,
+  instructionsDialog
 };

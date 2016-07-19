@@ -1,5 +1,4 @@
 module WorkshopConstants
-
   CS_IN_S = 'CS in Science'
   CS_IN_A = 'CS in Algebra'
   ECS = 'ECS'

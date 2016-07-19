@@ -20,6 +20,7 @@ Feature: App Lab Scenarios
     And I switch to code mode
     And Applab HTML has a button
     And I reset the puzzle to the starting version
+    And I wait until element "#divApplab" is visible
     And Applab HTML has no button
 
   Scenario: Can read and set button text
@@ -82,7 +83,6 @@ Feature: App Lab Scenarios
 
   @no_safari
   @no_mobile
-  @no_ie9
   Scenario: Upload Image Asset
     When I press "designModeButton"
     And I press "manage-assets-button"

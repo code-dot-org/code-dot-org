@@ -181,10 +181,10 @@ class ApplicationHelperTest < ActionView::TestCase
     sl = create :script_level
     cookies[:progress] = '&*%$% mangled #$#$$'
     assert_equal 0, client_state.level_progress(sl),
-                 'Invalid cookie should show no progress'
+      'Invalid cookie should show no progress'
     client_state.set_level_progress(sl, 20)
     assert_equal 20, client_state.level_progress(sl),
-                 'Should be able to overwrite invalid cookie state'
+      'Should be able to overwrite invalid cookie state'
   end
 
   test 'meta_image_url for level' do
@@ -252,6 +252,7 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   private
+
   def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)
   end

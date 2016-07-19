@@ -9,9 +9,9 @@
     "code_functions": {
       "draw": null,
       "drawSprites": null,
+      "Game.frameRate": null,
       "Game.mouseX": null,
       "Game.mouseY": null,
-      "Game.frameRate": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
       "sprite.height": null,
@@ -47,7 +47,11 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "comment": null,
+      "comment_Drawing": null,
+      "comment_Variables": null,
+      "comment_GameLab": null,
+      "comment_Math": null,
+      "comment_Sprites": null,
       "console.log": null
     },
     "edit_code": true,
@@ -75,8 +79,9 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "show_d_pad": "false",
-    "markdown_instructions": "# Wheel Free Play\r\n\r\nHere is the spinning wheel you created so far. Continue to improve it.\r\n\r\n# Do This\r\n\r\n* Create a carnival scene for the wheel to go in\r\n* Resize the wheel to fit the scene\r\n* Add at least 1 other sprite to the scene and give it some movement",
-    "project_template_level_name": "CSD U3 - wheel template"
+    "markdown_instructions": "# Wheel Free Play\r\n\r\nHere is the spinning wheel you created so far. Continue to improve it.\r\n\r\n# Do This\r\n\r\n* Create a background scene for the wheel to go in\r\n* Resize the wheel to fit the scene\r\n* Add at least 1 other sprite to the scene and give it some movement\r\n* Add your own ideas!",
+    "project_template_level_name": "CSD U3 - wheel template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

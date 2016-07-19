@@ -3,7 +3,7 @@ skip_sound true
 skip_dialog true
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 ## Pause and Reflect
 
 Drawing upon the video and related content in this stage, **why do you think students should learn computer science?**

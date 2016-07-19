@@ -677,7 +677,7 @@
   dashboard_navigation_section_pd: "პროფესიული განვითარება"
   dashboard_navigation_section_speakers: "ინფორმატიკა <br/> მოწვეული სპიკერები"
   dashboard_navigation_all_sections: "მოსწავლეების ანგარიშები და პროგრესი"
-  dashboard_navigation_view_progress: "პროგრესის ნახვა"
+  dashboard_navigation_view_progress: "პროგრესი"
   dashboard_navigation_view_text_responses: "ტექსტური პასუხების ნახვა"
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "მოსწავლეებს დამატება"
@@ -873,13 +873,13 @@
     90% ჩვენს პროგრამას აფასებს, როგორც საუკეთესოს პროფესიონალური ზრდისთვის. მოთხოვნის
     გამო, კომპიუტერული მეცნიერების პროფესიული შესწავლის პროგრამას რამდენიმე ადგილი
     დავამატეთ. დარეგისტრირდით <u>31 მარტამდე</u> და დაიკავეთ თქვენი ადგილი."
-  dashboard_announce_button_text: "გაიგეთ მეტი"
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: "დაამატე შენი სახელი"
   code_hoc_coming: "გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!"
   code_sign_up: "დარეგისტრირდით და მიიღეთ მონაწილეობა CS განათლების კვირეულში"
   learn_more: "სცადეთ ახლა"
@@ -1012,6 +1012,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1724,3 +1725,22 @@
   infinity_shortcode: inf
   playlab_shortcode: "თამაში"
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Learn more
+  dashboard_announce_try_now_button: Try it now
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.

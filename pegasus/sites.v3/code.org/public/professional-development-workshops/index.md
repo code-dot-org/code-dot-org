@@ -24,8 +24,6 @@ We welcome elementary school teachers to sign up for a free, high-quality profes
 <img src="/images/swagbag.png" width="175"/>
 <img src="/images/coursebook.png" width="175"/>
 <img src="/images/k5certificate.png" width="175"/> 
-<img src="/images/course1.png" width="210"/>
-<img src="/images/course2_3.png" width="210"/>
 
 ## Can't find a workshop near you?
 
