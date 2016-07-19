@@ -109,12 +109,12 @@ class HttpDocument
     content = @body
     head = ''
     classes = nil
-    if(m = content.match(/\<head\>\s(?<head>.*)\s\<\/head\>/m))
+    if (m = content.match(/\<head\>\s(?<head>.*)\s\<\/head\>/m))
       head = m[:head]
     end
-    if(m = content.match(/\<body(?<params>[^>]*)\>(?<body>.*)<\/body\>/m))
+    if (m = content.match(/\<body(?<params>[^>]*)\>(?<body>.*)<\/body\>/m))
       content = m[:body]
-      if(n = m[:params].match(/^\s*class\s*=\s*["'](?<value>[^'"]*)["']/m))
+      if (n = m[:params].match(/^\s*class\s*=\s*["'](?<value>[^'"]*)["']/m))
         classes = n[:value]
       end
     end

@@ -56,6 +56,7 @@ class Ability
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
+      can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
 
       if user.teacher? || (user.persisted? && user.permission?(UserPermission::HINT_ACCESS))
         can :manage, [LevelSourceHint, FrequentUnsuccessfulLevelSource]
@@ -173,6 +174,7 @@ class Ability
     # permissions.
     if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
       can :manage, [
+        Game,
         Level,
         Script,
         ScriptLevel
@@ -187,10 +189,15 @@ class Ability
     if user.admin?
       can :manage, :all
 
-      # Only custom levels are editable
-      cannot [:update, :destroy], Level do |level|
-        !level.custom?
-      end
+      cannot :manage, [
+        Activity,
+        Game,
+        Level,
+        Script,
+        ScriptLevel,
+        UserLevel,
+        UserScript
+      ]
     end
   end
 end

@@ -1,15 +1,15 @@
 name 'CSD U3 SFLP Conditionals'
-title 'title'
-description 'description here'
+css 'unplugged'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Unit 3: Lesson 08 - Conditionals
-
-# Background
+# Overview
 
 After a brief online refresher with booleans students are introduced to some boolean producing keyboard input functions that they can use in conditionals to move sprites around the screen.
 
-# Vocabulary
+# Activities
+* Levels: Conditionals
+
+# Vocab
 * **Boolean** - A value of either TRUE or FALSE
 * **Conditionals** - Statements that only run under certain conditions.
 * **Expression** - Any valid unit of code that resolves to a value.
@@ -25,6 +25,10 @@ After a brief online refresher with booleans students are introduced to some boo
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |
 |keyDown("key")|Returns boolean value for if the key is presed down|`if(keyDown("up"){}`  | link |
+
+# Resources
+
+None
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

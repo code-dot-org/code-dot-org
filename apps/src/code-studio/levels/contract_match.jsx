@@ -183,6 +183,10 @@ $(window).load(function () {
   });
 
   var DomainsList = React.createClass({
+    propTypes: {
+      domainTypes: React.PropTypes.array.isRequired,
+      onDomainAdd: React.PropTypes.func.isRequired,
+    },
     render: function () {
       var self = this;
       var sortedDomains = this.props.domainTypes.sort(function (a,b) {
@@ -210,6 +214,10 @@ $(window).load(function () {
   });
 
   var TypeChooser = React.createClass({
+    propTypes: {
+      onTypeChange: React.PropTypes.func.isRequired,
+      type: React.PropTypes.string,
+    },
     selectmenuChange: function (selectChange) {
       this.props.onTypeChange(selectChange.target.value);
     },

@@ -339,7 +339,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
+    k5_course? || %w(msm algebra algebraa cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd3 text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
   end
 
   def has_banner?
@@ -383,7 +383,7 @@ class Script < ActiveRecord::Base
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
-          properties: build_property_hash(script_data)
+          properties: Script.build_property_hash(script_data)
         }, stages.map{|stage| stage[:scriptlevels]}.flatten]
       end
 
@@ -546,7 +546,7 @@ class Script < ActiveRecord::Base
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
-          properties: build_property_hash(script_data)
+          properties: Script.build_property_hash(script_data)
         }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
         Script.update_i18n(i18n)
       end

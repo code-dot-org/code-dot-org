@@ -14,7 +14,7 @@
 #  login_type   :string(255)      default("email"), not null
 #  deleted_at   :datetime
 #  stage_extras :boolean          default(FALSE), not null
-#  type         :string(255)
+#  section_type :string(255)
 #
 # Indexes
 #

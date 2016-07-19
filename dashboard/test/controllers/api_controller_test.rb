@@ -217,41 +217,41 @@ class ApiControllerTest < ActionController::TestCase
     create :script_level, script: script, levels: [level1], assessment: true
 
     # student_1 did the survey
-    create(
-      :activity,
-      user: @student_1,
-      level: level1,
-      level_source: create(
-        :level_source,
-        level: level1,
-        data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"}})
-      )
-    )
+    create(:activity, user: @student_1, level: level1, level_source: create(:level_source, level: level1))
+
+    create(:activity, user: @student_1, level: sub_level1,
+      level_source: create(:level_source, level: sub_level1, data: "This is a free response"))
+    create(:activity, user: @student_1, level: sub_level2,
+      level_source: create(:level_source, level: sub_level2, data: "0"))
+    create(:activity, user: @student_1, level: sub_level3,
+      level_source: create(:level_source, level: sub_level3, data: "1"))
+    create(:activity, user: @student_1, level: sub_level4,
+      level_source: create(:level_source, level: sub_level4, data: "-1"))
 
     # student_2 also did the survey
-    create(
-      :activity,
-      user: @student_2,
-      level: level1,
-      level_source: create(
-        :level_source,
-        level: level1,
-        data: %Q({"#{sub_level1.id}":{"result":"This is a different free response"},"#{sub_level2.id}":{"result":"-1"},"#{sub_level3.id}":{"result":"2"},"#{sub_level4.id}":{"result":"3"}})
-      )
-    )
+    create(:activity, user: @student_2, level: level1, level_source: create(:level_source, level: level1))
+
+    create(:activity, user: @student_2, level: sub_level1,
+      level_source: create(:level_source, level: sub_level1, data: "This is a different free response"))
+    create(:activity, user: @student_2, level: sub_level2,
+      level_source: create(:level_source, level: sub_level2, data: "-1"))
+    create(:activity, user: @student_2, level: sub_level3,
+      level_source: create(:level_source, level: sub_level3, data: "2"))
+    create(:activity, user: @student_2, level: sub_level4,
+      level_source: create(:level_source, level: sub_level4, data: "3"))
 
     # student_3 through student_5 also did the survey, just submitting a free response.
     [@student_3, @student_4, @student_5].each_with_index do |student, student_index|
-      create(
-        :activity,
-        user: student,
-        level: level1,
-        level_source: create(
-          :level_source,
-          level: level1,
-          data: %Q({"#{sub_level1.id}":{"result":"Free response from student #{student_index + 3}"},"#{sub_level2.id}":{"result":"-1"},"#{sub_level3.id}":{"result":"-1"},"#{sub_level4.id}":{"result":"-1"}})
-        )
-      )
+      create(:activity, user: student, level: level1, level_source: create(:level_source, level: level1))
+
+      create(:activity, user: student, level: sub_level1,
+        level_source: create(:level_source, level: sub_level1, data: "Free response from student #{student_index + 3}"))
+      create(:activity, user: student, level: sub_level2,
+        level_source: create(:level_source, level: sub_level2, data: "-1"))
+      create(:activity, user: student, level: sub_level3,
+        level_source: create(:level_source, level: sub_level3, data: "-1"))
+      create(:activity, user: student, level: sub_level4,
+        level_source: create(:level_source, level: sub_level4, data: "-1"))
     end
 
     updated_at = Time.now
@@ -272,31 +272,45 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       {"stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
         "puzzle" => 1,
-        "url" => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}",
-        "levelgroup_results" => {
-          "0" => {"question" => "test", "results" => [
-            {"result" => "Free response from student 3", "type" => "free_response"},
-            {"result" => "This is a different free response", "type" => "free_response"},
-            {"result" => "Free response from student 5", "type" => "free_response"},
-            {"result" => "This is a free response", "type" => "free_response"},
-            {"result" => "Free response from student 4", "type" => "free_response"}]},
-          "1" => {"question" => "text2", "results" => [
-            {"result_text" => "text1", "result" => "A", "type" => "multi"},
-            {}, {}, {}, {}]},
-          "2" => {"question" => "text2", "results" => [
-            {},
-            {},
-            {"result_text" => nil, "result" => "C", "type" => "multi"},
-            {},
-            {"result_text" => nil, "result" => "B", "type" => "multi"}]},
-          "3" => {"question" => "text2", "results" => [
-            {}, {},
-            {"result_text" => nil, "result" => "D", "type" => "multi"},
-            {}, {}]},
-          "4" => {"question" => "text2", "results" => [
-            {},
-            {}, {}, {}, {}]},
-        }
+        "levelgroup_results" => [
+          {
+            "question" => "test",
+            "results" => [
+              {"result" => "Free response from student 3", "type" => "free_response"},
+              {"result" => "This is a different free response", "type" => "free_response"},
+              {"result" => "Free response from student 5", "type" => "free_response"},
+              {"result" => "This is a free response", "type" => "free_response"},
+              {"result" => "Free response from student 4", "type" => "free_response"}]
+            },
+          {
+            "question" => "text2",
+            "results" => [
+              {"result_text" => "text1", "result" => "A", "type" => "multi"},
+              {}, {}, {}, {}]
+            },
+          {
+            "question" => "text2",
+            "results" => [
+              {},
+              {},
+              {"result_text" => nil, "result" => "C", "type" => "multi"},
+              {},
+              {"result_text" => nil, "result" => "B", "type" => "multi"}]
+            },
+          {
+            "question" => "text2",
+            "results" => [
+              {}, {},
+              {"result_text" => nil, "result" => "D", "type" => "multi"},
+              {}, {}]
+            },
+          {
+            "question" => "text2",
+            "results" => [
+              {},
+              {}, {}, {}, {}]
+            },
+        ]
       }
     ]
     assert_equal expected_response, JSON.parse(@response.body)
