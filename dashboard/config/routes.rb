@@ -148,6 +148,8 @@ Dashboard::Application.routes.draw do
 
     get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
     post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
+
+    get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
 
   get '/course/:course', to: 'plc/user_course_enrollments#index', as: 'course'
@@ -327,6 +329,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
+  get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
   get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'

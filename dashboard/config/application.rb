@@ -107,6 +107,7 @@ module Dashboard
       css/*.css
       assets/**/*
       angularProjects.js
+      browser-detector.js
       levels/*
       jquery.handsontable.full.css
       jquery.handsontable.full.js

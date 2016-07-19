@@ -9,9 +9,9 @@ markdown <<MARKDOWN
 
 The first type of chart you’re going to build is a **scatter chart**. Scatter charts are useful for finding relationships between two types of data. In this exercise, you will build a scatter chart that shows the relationship between movie reviewer age and average movie rating.
 
-<hr>
+---
 
-# Select Data
+## Select Data
 
 **Do This:** Select the “age” and “avg rating” columns, as show below.
 
@@ -20,9 +20,9 @@ The first type of chart you’re going to build is a **scatter chart**. Scatter 
 
 * **Hint:** To select an entire column, click the top cell (ex. A1), then hold down the "SHIFT" key and select the last cell from the last column you want (ex. B62).
 
-<hr>
+---
 
-# Insert Chart
+## Insert Chart
 
 Google gives suggestions of what kind of chart you can make from your data, but for this exercise you’re going to ignore those suggestions and make the chart yourself.
 
@@ -38,9 +38,9 @@ Google gives suggestions of what kind of chart you can make from your data, but 
 ![](https://images.code.org/097d30b261df0204fd6ec0f7a5af58bd-image-1454098624733.gif)
 *Change chart type and insert your scatter chart into the spreadsheet.*
 
-<hr>
+---
 
-# Do a Visual Check
+## Do a Visual Check
 At this point, your chart should look something like this:
 
 ![](https://images.code.org/3012fe576b9d2a3bf985adf4dd6c4dcd-image-1454098640073.PNG)
@@ -59,6 +59,4 @@ Can you understand what the chart is showing? Even though the title and axis lab
 After you’ve thought about these questions, move on to the next section to learn how to make a line chart.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

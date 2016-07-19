@@ -21,10 +21,6 @@ const DataProperties = React.createClass({
     onViewChange: React.PropTypes.func.isRequired
   },
 
-  getValue(key) {
-    return String(JSON.parse(this.props.keyValueData[key]));
-  },
-
   render() {
     const visible = (DataView.PROPERTIES === this.props.view);
     return (
@@ -41,11 +37,6 @@ const DataProperties = React.createClass({
         </h4>
 
         <table>
-          <colgroup>
-            <col width='200'/>
-            <col width='200'/>
-            <col width='162'/>
-          </colgroup>
           <tbody>
             <tr>
               <th style={dataStyles.headerCell}>Key</th>
@@ -57,7 +48,10 @@ const DataProperties = React.createClass({
 
             {
               Object.keys(this.props.keyValueData).map(key => (
-                <EditKeyRow key={key} keyName={key} value={this.getValue(key)}/>
+                <EditKeyRow
+                    key={key}
+                    keyName={key}
+                    value={JSON.parse(this.props.keyValueData[key])}/>
               ))
             }
           </tbody>

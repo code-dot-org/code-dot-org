@@ -15,12 +15,14 @@ class ApiControllerTest < ActionController::TestCase
     @section = create(:section, user: @teacher, login_type: 'word')
     @student_1 = create(:follower, section: @section).student_user
     @student_2 = create(:follower, section: @section).student_user
+    @student_3 = create(:follower, section: @section).student_user
+    @student_4 = create(:follower, section: @section).student_user
+    @student_5 = create(:follower, section: @section).student_user
 
     @flappy_section = create(:section, user: @teacher, script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
-    @student_3 = create(:follower, section: @flappy_section).student_user
-    @student_4 = create(:follower, section: @flappy_section).student_user
-    @student_3.backfill_user_scripts
-    @student_3.reload
+    @student_flappy_1 = create(:follower, section: @flappy_section).student_user
+    @student_flappy_1.backfill_user_scripts
+    @student_flappy_1.reload
   end
 
   def make_progress_in_section(script)
@@ -194,6 +196,211 @@ class ApiControllerTest < ActionController::TestCase
         }
       ]
     assert_equal expected_response, JSON.parse(@response.body)
+  end
+
+  test "should get surveys for section with script with anonymous level_group assessment" do
+    script = create :script
+
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['anonymous'] = 'true'
+    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
+    level1.save!
+    create :script_level, script: script, levels: [level1], assessment: true
+
+    # student_1 did the survey
+    create(:activity, user: @student_1, level: level1, level_source: create(:level_source, level: level1))
+
+    create(:activity, user: @student_1, level: sub_level1,
+      level_source: create(:level_source, level: sub_level1, data: "This is a free response"))
+    create(:activity, user: @student_1, level: sub_level2,
+      level_source: create(:level_source, level: sub_level2, data: "0"))
+    create(:activity, user: @student_1, level: sub_level3,
+      level_source: create(:level_source, level: sub_level3, data: "1"))
+    create(:activity, user: @student_1, level: sub_level4,
+      level_source: create(:level_source, level: sub_level4, data: "-1"))
+
+    # student_2 also did the survey
+    create(:activity, user: @student_2, level: level1, level_source: create(:level_source, level: level1))
+
+    create(:activity, user: @student_2, level: sub_level1,
+      level_source: create(:level_source, level: sub_level1, data: "This is a different free response"))
+    create(:activity, user: @student_2, level: sub_level2,
+      level_source: create(:level_source, level: sub_level2, data: "-1"))
+    create(:activity, user: @student_2, level: sub_level3,
+      level_source: create(:level_source, level: sub_level3, data: "2"))
+    create(:activity, user: @student_2, level: sub_level4,
+      level_source: create(:level_source, level: sub_level4, data: "3"))
+
+    # student_3 through student_5 also did the survey, just submitting a free response.
+    [@student_3, @student_4, @student_5].each_with_index do |student, student_index|
+      create(:activity, user: student, level: level1, level_source: create(:level_source, level: level1))
+
+      create(:activity, user: student, level: sub_level1,
+        level_source: create(:level_source, level: sub_level1, data: "Free response from student #{student_index + 3}"))
+      create(:activity, user: student, level: sub_level2,
+        level_source: create(:level_source, level: sub_level2, data: "-1"))
+      create(:activity, user: student, level: sub_level3,
+        level_source: create(:level_source, level: sub_level3, data: "-1"))
+      create(:activity, user: student, level: sub_level4,
+        level_source: create(:level_source, level: sub_level4, data: "-1"))
+    end
+
+    updated_at = Time.now
+
+    [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
+      create :user_level, user: student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
+    end
+
+    # Seed the RNG with the same thing so we get the same "random" shuffling of results.
+    srand 1
+
+    get :section_surveys, section_id: @section.id, script_id: script.id
+    assert_response :success
+
+    assert_equal script, assigns(:script)
+
+    # all these are translation missing because we don't actually generate i18n files in tests
+    expected_response = [
+      {"stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
+        "puzzle" => 1,
+        "levelgroup_results" => [
+          {
+            "question" => "test",
+            "results" => [
+              {"result" => "Free response from student 3", "type" => "free_response"},
+              {"result" => "This is a different free response", "type" => "free_response"},
+              {"result" => "Free response from student 5", "type" => "free_response"},
+              {"result" => "This is a free response", "type" => "free_response"},
+              {"result" => "Free response from student 4", "type" => "free_response"}]
+            },
+          {
+            "question" => "text2",
+            "results" => [
+              {"result_text" => "text1", "result" => "A", "type" => "multi"},
+              {}, {}, {}, {}]
+            },
+          {
+            "question" => "text2",
+            "results" => [
+              {},
+              {},
+              {"result_text" => nil, "result" => "C", "type" => "multi"},
+              {},
+              {"result_text" => nil, "result" => "B", "type" => "multi"}]
+            },
+          {
+            "question" => "text2",
+            "results" => [
+              {}, {},
+              {"result_text" => nil, "result" => "D", "type" => "multi"},
+              {}, {}]
+            },
+          {
+            "question" => "text2",
+            "results" => [
+              {},
+              {}, {}, {}, {}]
+            },
+        ]
+      }
+    ]
+    assert_equal expected_response, JSON.parse(@response.body)
+  end
+
+  test "no anonymous survey data via assessment call" do
+    script = create :script
+
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['anonymous'] = 'true'
+    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
+    level1.save!
+    create :script_level, script: script, levels: [level1], assessment: true
+
+    # student_1 through student_5 also did the survey, just submitting a free response.
+    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, student_index|
+      create(
+        :activity,
+        user: student,
+        level: level1,
+        level_source: create(
+          :level_source,
+          level: level1,
+          data: %Q({"#{sub_level1.id}":{"result":"Free response from student #{student_index + 3}"},"#{sub_level2.id}":{"result":"-1"},"#{sub_level3.id}":{"result":"-1"},"#{sub_level4.id}":{"result":"-1"}})
+        )
+      )
+    end
+
+    updated_at = Time.now
+
+    [@student_1, @student_2, @student_3, @student_4, @student_5].each do |student|
+      create :user_level, user: student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
+    end
+
+    # We can retrieve this with the survey API.
+    get :section_surveys, section_id: @section.id, script_id: script.id
+    assert_response :success
+    assert_equal 1, JSON.parse(@response.body).length
+
+    # But importantly, we get an empty result with the assessment API.
+    get :section_assessments, section_id: @section.id, script_id: script.id
+    assert_response :success
+    assert_equal [], JSON.parse(@response.body)
+  end
+
+  test "no anonymous survey data when less than five students" do
+    script = create :script
+
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['anonymous'] = 'true'
+    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
+    level1.save!
+    create :script_level, script: script, levels: [level1], assessment: true
+
+    # student_1 through student_5 also did the survey, just submitting a free response.
+    [@student_1, @student_2, @student_3, @student_4].each_with_index do |student, student_index|
+      create(
+        :activity,
+        user: student,
+        level: level1,
+        level_source: create(
+          :level_source,
+          level: level1,
+          data: %Q({"#{sub_level1.id}":{"result":"Free response from student #{student_index + 3}"},"#{sub_level2.id}":{"result":"-1"},"#{sub_level3.id}":{"result":"-1"},"#{sub_level4.id}":{"result":"-1"}})
+        )
+      )
+    end
+
+    updated_at = Time.now
+
+    [@student_1, @student_2, @student_3, @student_4].each do |student|
+      create :user_level, user: student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
+    end
+
+    # We can retrieve this with the survey API, but it will be empty.
+    get :section_surveys, section_id: @section.id, script_id: script.id
+    assert_response :success
+    assert_equal 0, JSON.parse(@response.body).length
   end
 
   test "should get text_responses for section with script without text response" do
@@ -390,7 +597,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get progress for student in section with section script" do
-    get :student_progress, student_id: @student_3.id, section_id: @flappy_section.id
+    get :student_progress, student_id: @student_flappy_1.id, section_id: @flappy_section.id
     assert_response :success
 
     assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
@@ -398,7 +605,7 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should get progress for student in section with specified script" do
     script = Script.find_by_name('algebra')
-    get :student_progress, student_id: @student_3.id, section_id: @flappy_section.id, script_id: script.id
+    get :student_progress, student_id: @student_flappy_1.id, section_id: @flappy_section.id, script_id: script.id
     assert_response :success
 
     assert_equal script, assigns(:script)

@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-07-12T01:28:29.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "title": "Tuesday Report: Group Work and Peer Learning in Unit 1 ",
+    "height": "300",
+    "allow_user_uploads": "true",
+    "submittable": "true",
+    "peer_reviewable": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "markdown_instructions": "Vacations are really fun. Please document a short and amusing story about a recent vacation.\r\n\r\nSome guidelines\r\n\r\n* Pics or it didn't happen\r\n* Keep it to 4 sentences or less please\r\n* Puns are strictly prohibited"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -179,6 +179,66 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal script_path(@plc_script), @script_level2.next_level_or_redirect_path_for_user(@user)
   end
 
+  test 'can view my last attempt for regular levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+
+    assert script_level.can_view_last_attempt(student, nil)
+  end
+
+  test 'can view other user last attempt for regular levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    teacher = create :teacher
+    student = create :student
+
+    assert script_level.can_view_last_attempt(teacher, student)
+  end
+
+  test 'can view my last attempt for anonymous levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+
+    assert script_level.can_view_last_attempt(student, nil)
+  end
+
+  test 'can not view other user last attempt for anonymous levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    student = create :student
+    teacher = create :teacher
+
+    assert_not script_level.can_view_last_attempt(teacher, student)
+  end
+
   private
 
   def create_fake_plc_data

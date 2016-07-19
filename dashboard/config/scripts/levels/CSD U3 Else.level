@@ -15,7 +15,11 @@
       "background": null,
       "ifBlock": null,
       "ifElseBlock": null,
-      "comment": null,
+      "comment_Sprites": null,
+      "comment_GameLab": null,
+      "comment_Variables": null,
+      "comment_Control": null,
+      "comment_Drawing": null,
       "console.log": null
     },
     "show_d_pad": "true",
