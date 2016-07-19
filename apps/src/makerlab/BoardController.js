@@ -15,6 +15,9 @@ try {
    */
 }
 
+window.five = five;
+window.PlaygroundIO = PlaygroundIO;
+
 import _ from 'lodash';
 import {initializeCircuitPlaygroundComponents, TouchSensor} from './PlaygroundComponents';
 
