@@ -1,5 +1,4 @@
 name 'PDAlg Design Recipe Updates'
-css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
