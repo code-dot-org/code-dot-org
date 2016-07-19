@@ -3,8 +3,7 @@ import React from 'react';
 import {expect} from '../util/configuredChai';
 import {
     forEveryBooleanPermutation,
-    findChildrenOfType,
-    findChildrenWithClass
+    findChildrenOfType
 } from '../util/testUtils';
 
 const Foo = () => null;
@@ -132,90 +131,6 @@ describe('findChildrenOfType', function () {
         </Foo>
     );
     const foundChildren = findChildrenOfType(root, Bar);
-    expect(foundChildren.length).to.equal(3);
-    expect(foundChildren.every(child => child.type === Bar)).to.be.true;
-  });
-});
-
-describe('findChildrenWithClass', function () {
-  it('throws when given no first argument', function () {
-    expect(() => {
-      findChildrenWithClass(undefined, 'div');
-    }).to.throw(TypeError);
-  });
-
-  it('Does not return passed root component', function () {
-    const root = (
-        <Foo className="searchTarget">
-          <Bar/>
-        </Foo>
-    );
-    const foundChildren = findChildrenWithClass(root, 'searchTarget');
-    expect(foundChildren.length).to.equal(0);
-  });
-
-  it('Locates child component', function () {
-    const root = (
-        <Foo>
-          <Bar className="searchTarget"/>
-        </Foo>
-    );
-    const foundChildren = findChildrenWithClass(root, 'searchTarget');
-    expect(foundChildren.length).to.equal(1);
-    expect(foundChildren[0].props.className).to.equal('searchTarget');
-  });
-
-  it('Ignores child components missing classname', function () {
-    const root = (
-        <Foo>
-          <Bar className="other"/>
-          <Bar/>
-        </Foo>
-    );
-    const foundChildren = findChildrenWithClass(root, 'searchTarget');
-    expect(foundChildren.length).to.equal(0);
-  });
-
-  it('Finds deeply-nested components', function () {
-    const root = (
-        <Foo>
-          <Bar>
-            <Foo className="searchTarget"/>
-          </Bar>
-        </Foo>
-    );
-    const foundChildren = findChildrenWithClass(root, 'searchTarget');
-    expect(foundChildren.length).to.equal(1);
-    expect(foundChildren[0].type).to.equal(Foo);
-  });
-
-  it('Finds multiple components', function () {
-    const root = (
-        <Foo>
-          <Bar className="searchTarget"/>
-          <Bar className="searchTarget"/>
-          <Bar className="searchTarget"/>
-        </Foo>
-    );
-    const foundChildren = findChildrenWithClass(root, 'searchTarget');
-    expect(foundChildren.length).to.equal(3);
-  });
-
-  it('Returns components nested at different levels in a flat list', function () {
-    const root = (
-        <Foo>
-          <Bar className="searchTarget"/>
-          <Foo>
-            <Bar className="searchTarget"/>
-          </Foo>
-          <Foo>
-            <Foo>
-              <Bar className="searchTarget"/>
-            </Foo>
-          </Foo>
-        </Foo>
-    );
-    const foundChildren = findChildrenWithClass(root, 'searchTarget');
     expect(foundChildren.length).to.equal(3);
     expect(foundChildren.every(child => child.type === Bar)).to.be.true;
   });

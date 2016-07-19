@@ -257,18 +257,6 @@ export function findChildrenOfType(root, type) {
 
 /**
  * @param {Component|string} root
- * @param {string} className
- * @returns {Component[]} all components with that className that are descendants of root
- */
-export function findChildrenWithClass(root, className) {
-  return findChildrenWithPredicate(root, child => {
-    return child.props && child.props.className &&
-        child.props.className.split(/\s/g).includes(className);
-  });
-}
-
-/**
- * @param {Component|string} root
  * @param {function(Component|string):boolean} predicate
  * @returns {Component[]} all components that are descendants of root that satisfy
  *          the passed predicate
