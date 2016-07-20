@@ -1,7 +1,7 @@
 var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
-testUtils.setupLocale('calc');
+testUtils.setupLocalesDEPRECATED();
 var calcMsg = require('@cdo/apps/calc/locale');
 
 var level = {

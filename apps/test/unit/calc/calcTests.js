@@ -2,7 +2,7 @@ import {assert} from '../../util/configuredChai';
 
 var testUtils = require('../../util/testUtils');
 testUtils.setExternalGlobals();
-testUtils.setupLocale('calc');
+testUtils.setupLocalesDEPRECATED();
 
 var Calc = require('@cdo/apps/calc/calc.js');
 var EquationSet = require('@cdo/apps/calc/equationSet.js');

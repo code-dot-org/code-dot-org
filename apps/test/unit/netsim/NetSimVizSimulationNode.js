@@ -11,7 +11,7 @@ var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode'
 
 var fakeShard = NetSimTestUtils.fakeShard;
 
-testUtils.setupLocale('netsim');
+testUtils.setupLocalesDEPRECATED();
 
 describe("NetSimVizSimulationNode", function () {
   var vizElement, simEntity, shard;

@@ -1,6 +1,6 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-testUtils.setupLocales('Applab');
+testUtils.setupLocalesDEPRECATED('Applab');
 testUtils.setExternalGlobals();
 var ReactTestUtils = require('react-addons-test-utils');
 var ReactDOM = require('react-dom');

@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
-testUtils.setupLocales('applab');
+testUtils.setupLocalesDEPRECATED('applab');
 testUtils.setExternalGlobals();
 
 var Applab = require('@cdo/apps/applab/applab');

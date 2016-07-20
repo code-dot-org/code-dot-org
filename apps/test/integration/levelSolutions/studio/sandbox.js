@@ -5,7 +5,7 @@ var _ = require('lodash');
 var Direction = require('@cdo/apps/studio/constants.js').Direction;
 var blockUtils = require('@cdo/apps/block_utils');
 
-testUtils.setupLocales('studio');
+testUtils.setupLocalesDEPRECATED('studio');
 var commonMsg = require('@cdo/apps/locale');
 
 module.exports = {
