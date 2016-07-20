@@ -2,34 +2,21 @@ name 'PDAlg Prep Sandbox'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
-### LESSON PREP > Choose a sandbox
+# Lesson Prep > Choose a sandbox
 
 With the paper Design Recipe complete, the next in your lesson will be to move online. You'll need to choose which of the two sandbox environments to use - we call them Calc (for calculate) and Eval (for evaluate).
 
-<br>
-
-<a class="level_free_play calc_free_play" href="/projects/calc" target="_blank">
-<i class="fa fa-calculator" style="font-size:2em">Calc:</i>
-</a>
+#### <a href="/projects/calc" target="_blank"><i class="fa fa-calculator" /> Calc:</a>
 
 The Calc environment is great for programs that are restricted to strictly mathematic operations (no Strings, Images, Booleans, or Conditionals) and has the benefit of animating the evaluation of your program when run.
 
-<br>
-
-<a class="level_free_play eval_free_play" href="/projects/calc" target="_blank">
-<i class="fa fa-pencil" style="font-size:2em">Eval:</i>
-</a>
+#### <a href="/projects/calc" target="_blank"><i class="fa fa-pencil" /> Eval:</a>
 
 While Eval lacks the animated evaluation of Calc, it comes with a more full set of programming tools, including Strings, Images, Booleans, and Conditionals. Even for programs that strictly deal with math and numbers, Eval tends to make your programs feel a little more like apps because it hides the evaluation of your program from the user, only showing the outcome.
 
-#### See which one is right for you
+## See which one is right for you
 
 Try programming your Design Recipe in each of the sandbox environments to compare how they feel. When you're finished writing your program, come back here to click Continue.
 
-<br><br>
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN
