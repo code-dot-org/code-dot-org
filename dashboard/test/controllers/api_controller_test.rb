@@ -12,6 +12,8 @@ class ApiControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
     sign_in @teacher
 
+    @teacher_other = create(:teacher)
+
     @section = create(:section, user: @teacher, login_type: 'word')
     @student_1 = create(:follower, section: @section).student_user
     @student_2 = create(:follower, section: @section).student_user
@@ -330,7 +332,7 @@ class ApiControllerTest < ActionController::TestCase
     level1.save!
     create :script_level, script: script, levels: [level1], assessment: true
 
-    # student_1 through student_5 also did the survey, just submitting a free response.
+    # student_1 through student_5 did the survey, just submitting a free response.
     [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, student_index|
       create(
         :activity,
@@ -377,7 +379,7 @@ class ApiControllerTest < ActionController::TestCase
     level1.save!
     create :script_level, script: script, levels: [level1], assessment: true
 
-    # student_1 through student_5 also did the survey, just submitting a free response.
+    # student_1 through student_5 did the survey, just submitting a free response.
     [@student_1, @student_2, @student_3, @student_4].each_with_index do |student, student_index|
       create(
         :activity,
@@ -755,6 +757,64 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_select 'a[href="http://test.host/pairing"]', false
+  end
+
+  test "don't show assessment to teacher who doesn't own that section" do
+    script = create :script
+
+    sign_out @teacher
+    sign_in @teacher_other
+
+    get :section_assessments, section_id: @section.id, script_id: script.id
+    assert_response :forbidden
+  end
+
+  test "don't show assessment to student who doesn't own that section" do
+    script = create :script
+
+    sign_out @teacher
+    sign_in @student_1
+
+    get :section_assessments, section_id: @section.id, script_id: script.id
+    assert_response :forbidden
+  end
+
+  test "don't show assessment to signed out user" do
+    script = create :script
+
+    sign_out @teacher
+
+    get :section_assessments, section_id: @section.id, script_id: script.id
+    assert_response :redirect
+  end
+
+  test "don't show survey to teacher who doesn't own that section" do
+    script = create :script
+
+    sign_out @teacher
+    sign_in @teacher_other
+
+    get :section_surveys, section_id: @section.id, script_id: script.id
+    assert_response :forbidden
+  end
+
+  test "don't show survey to student who doesn't own that section" do
+    script = create :script
+
+    sign_out @teacher
+    sign_in @student_1
+
+    get :section_surveys, section_id: @section.id, script_id: script.id
+    assert_response :forbidden
+  end
+
+  test "don't show survey to signed out user" do
+    script = create :script
+
+    sign_out @teacher
+
+    get :section_surveys, section_id: @section.id, script_id: script.id
+    assert_response :redirect
   end
 
   test 'api routing' do

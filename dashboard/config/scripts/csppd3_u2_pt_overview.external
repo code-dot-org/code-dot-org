@@ -2,27 +2,25 @@ name 'CSPPD3-u2 pt overview'
 css 'unplugged'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Unit 2 Overview > Practice Performance Tasks
 
-### Unit 2 Overview > Practice Performance Tasks
+## What’s the role of Practice PTs in Unit 2?
 
-#### What’s the role of Practice PTs in Unit 2?
-There are two Practice PTs in Unit 2, which both help students prepare for the Explore Task. Lessons <a href="https://docs.google.com/document/d/1XzngUjwgIgbvTYQCXE68gY-9PJ0ePAvyx0CmujoQUMw/edit" target=_blank>12</a> and <a href="https://docs.google.com/document/d/1kTH51m84nTGZK95lSbbKyKjOIKn2GGwznawTTx2VMXk/edit" target=_blank>20</a> both focus on giving students an opportunity to use the knowledge they’ve been building to form an opinion about important issues related to the Internet. Both lessons use questions and prompts directly from the Explore Performance Task.  
-##### Lesson 12: The Internet and Society
+There are two Practice PTs in Unit 2, which both help students prepare for the Explore Task. Lessons <a href="https://docs.google.com/document/d/1XzngUjwgIgbvTYQCXE68gY-9PJ0ePAvyx0CmujoQUMw/edit" target=_blank>12</a> and <a href="https://docs.google.com/document/d/1kTH51m84nTGZK95lSbbKyKjOIKn2GGwznawTTx2VMXk/edit" target=_blank>20</a> both focus on giving students an opportunity to use the knowledge they’ve been building to form an opinion about important issues related to the Internet. Both lessons use questions and prompts directly from the Explore Performance Task.
+
+### Lesson 12: The Internet and Society
+
 Students will research a social issue related to the Internet, and prepare a flashtalk based on their research. Topics include Net Neutrality, Internet Censorship, and Computer and Network Surveillance:
-<br><br>
+
 ![](https://images.code.org/3610b0499294a87c79faf24059424657-image-1443975760055.22.22 AM.png)
-<br><br>
-As they research, students will need to apply their knowledge of the Internet and develop opinions about the impact on society of these topics. 
-<br>
-##### Lesson 20: Cybersecurity Innovations
-This practice PT *very* closely mirrors the actual Explore Task from the College Board. Students first choose an innovation in cybersecurity and brainstorm an aspect of the innovation they want to research. Next, they conduct research to help them describe  the innovation, specifically: a description of how the innovation works and its purpose, and an explanation of the impact on society of the innovation. Students will also create a visual or audio artifact that builds on and supports their written explanations, providing further context for how it works or what it is.  
 
-<br>
+As they research, students will need to apply their knowledge of the Internet and develop opinions about the impact on society of these topics.
 
-**If you haven’t reviewed the Explore Task recently, <a href="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/tnGzM0Cw2qNwNK5/2.%200626_Explore_2015-2016.pdf" target=_blank>check it out here</a>** 
-<br><br>
+### Lesson 20: Cybersecurity Innovations
+
+This practice PT *very* closely mirrors the actual Explore Task from the College Board. Students first choose an innovation in cybersecurity and brainstorm an aspect of the innovation they want to research. Next, they conduct research to help them describe  the innovation, specifically: a description of how the innovation works and its purpose, and an explanation of the impact on society of the innovation. Students will also create a visual or audio artifact that builds on and supports their written explanations, providing further context for how it works or what it is.
+
+**If you haven’t reviewed the Explore Task recently, <a href="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/tnGzM0Cw2qNwNK5/2.%200626_Explore_2015-2016.pdf" target=_blank>check it out here</a>.**
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN
