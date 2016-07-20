@@ -1,34 +1,19 @@
-:css
-  table {
-      border-collapse: collapse;
-  }
+%link{:href=>"/css/donors.css", :rel=>"stylesheet"} 
 
-  table, th, td {
-      border: 2px solid #F2F2F2;
-  }
-
-  table td {
-    text-align: center;
-  }
-
-// Size large is a 2 column grid with larger height for larger logos
-// Size medium is a 3 column grid with medium height for logos
-// Size small is a 3 column grid for small logos or name only
+- size ||= "small"
 - columns = size == "large" ? 2 : 3
-- height = size == "large" ? 150 : size == "medium" ? 200 : 100
-- fontsize = size == "small" ? "18" : "14"
 
 %table
   - supporters.each_slice(columns) do |group|
     %tr
     - group.each do |supporter|
       - avatar_url = avatar_image(supporter[:name_s], 200)
-      %td{style: "width: #{780/columns}px; height: #{height}px"}
+      %td{class: "#{size}"}
         %a{:href=>supporter[:url_s], :target=>"_blank", :style=>"color: #7665a0"}
           - if supporter[:show_s] == "logo" || supporter[:show_s] == "both"
-            %img{:src=>avatar_url, :style=>"max-width: 100%; max-height: #{height * 0.8}px"}
+            %img{:src=>avatar_url, class: "#{size}-img"}
           - if supporter[:show_s] == "name" || supporter[:show_s] == "both"
-            %p{style: "font-size: #{fontsize}px"}
+            %p{class: "#{size}-font"}
               =supporter[:name_s]
 
 %br{:style=>'clear: both;'}
