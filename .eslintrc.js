@@ -52,7 +52,7 @@ module.exports = {
     "react/jsx-first-prop-new-line": ["error", "multiline"],
     "react/jsx-indent-props": ["error", 2], // autofixable
     "react/no-render-return-value": "off", // TODO: turn this on
-    "react/self-closing-comp": "off",
+    "react/self-closing-comp": "error",
     "react/wrap-multilines": "error", // autofixable
     "semi": "error",
     "space-before-function-paren": ["error", {
