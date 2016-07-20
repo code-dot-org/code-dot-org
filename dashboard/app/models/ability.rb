@@ -63,7 +63,6 @@ class Ability
       end
 
       if user.teacher?
-        can :manage, Section, user_id: user.id
         can :read, Section, user_id: user.id
         can :manage, :teacher
         can :manage, user.students
