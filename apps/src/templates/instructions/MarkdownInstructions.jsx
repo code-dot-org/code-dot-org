@@ -28,7 +28,7 @@ const MarkdownInstructions = React.createClass({
   propTypes: {
     renderedMarkdown: React.PropTypes.string.isRequired,
     noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
-    hasInlineImages: React.PropTypes.bool.isRequired,
+    hasInlineImages: React.PropTypes.bool,
     onResize: React.PropTypes.func,
     inTopPane: React.PropTypes.bool
   },

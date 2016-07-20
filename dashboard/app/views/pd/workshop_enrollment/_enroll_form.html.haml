@@ -1,0 +1,50 @@
+- if @enrollment.errors.any?
+  #error_explanation
+    %h2= "#{pluralize(@enrollment.errors.count, 'error')}:"
+    %ul
+      - @enrollment.errors.each do |name, message|
+        - if name == :school_district
+          %li= "School district or school ZIP is required"
+        - else
+          %li= raw @enrollment.errors.full_message(name, message).html_safe
+
+=form_for @enrollment, url: {action: action} do |form|
+  %div.control-group
+    %label
+      Your Name
+      %span.form-required-field
+        *
+    %div.controls
+      =form.text_field :name, class: 'span5'
+  %div.control-group
+    %label
+      Email Address
+      %span.form-required-field
+        *
+    %div.controls
+      - readonly_email = current_user && !current_user.email.blank? && !@enrollment.email.blank?
+      =form.text_field :email, class: 'span5', readonly: readonly_email,
+        title: readonly_email ? 'Email can be changed in account settings' : nil
+  - unless current_user
+    %div.control-group
+      %label
+        Confirm Email Address
+        %span.form-required-field
+          *
+      %div.controls
+        =form.text_field :email_confirmation, class: 'span5'
+  %div.control-group
+    %label
+      District
+    - error_class = (@enrollment.errors.include? :school_district) ? "field_with_errors_div" : ""
+    #school_district.span5{class: error_class, style: "border: solid 1px #bbb; border-radius: 4px; padding: 15px; margin-left: 0px; box-sizing: border-box;"}
+      %div.controls
+        = render partial: 'shared/district_dropdown', locals: {form_name: "pd_enrollment"}
+    %div{style: "clear: both"}
+  %div.control-group
+    %label
+      School
+    %div.controls
+      =form.text_field :school, class: 'span5'
+    %div.control-group
+      = form.submit submit_text, class: 'btn'
