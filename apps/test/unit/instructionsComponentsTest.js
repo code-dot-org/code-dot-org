@@ -55,7 +55,8 @@ describe('NonMarkdownInstructions', function () {
       <div>
         <NonMarkdownInstructions
           puzzleTitle="title"
-          instructions="instructions"/>
+          instructions="instructions"
+        />
       </div>
     );
     var element = dom.children[0];
@@ -71,7 +72,8 @@ describe('NonMarkdownInstructions', function () {
         <NonMarkdownInstructions
           puzzleTitle="title"
           instructions="instructions"
-          instructions2="instructions2"/>
+          instructions2="instructions2"
+        />
       </div>
     );
     var element = dom.children[0];

@@ -646,8 +646,8 @@ Maze.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={studioApp.init.bind(studioApp, config)}
+        visualizationColumn={visualizationColumn}
+        onMount={studioApp.init.bind(studioApp, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)

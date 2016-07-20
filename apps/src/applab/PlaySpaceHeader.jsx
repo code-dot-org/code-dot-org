@@ -58,9 +58,12 @@ var PlaySpaceHeader = React.createClass({
       rightSide = <ViewDataButton onClick={this.handleViewData} />;
     } else if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
         !this.props.playspacePhoneFrame) {
-      rightSide = <ScreenSelector
+      rightSide = (
+        <ScreenSelector
           screenIds={this.props.screenIds}
-          onCreate={this.props.onScreenCreate}/>;
+          onCreate={this.props.onScreenCreate}
+        />
+      );
     }
 
     return (

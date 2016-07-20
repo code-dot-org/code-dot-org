@@ -25,34 +25,41 @@ var ChartProperties = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true} />
+          isIdRow={true}
+        />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'style-width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')}
+        />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'style-height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')}
+        />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
-          handleChange={this.props.handleChange.bind(this, 'left')} />
+          handleChange={this.props.handleChange.bind(this, 'left')}
+        />
         <PropertyRow
           desc={'y position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
-          handleChange={this.props.handleChange.bind(this, 'top')} />
+          handleChange={this.props.handleChange.bind(this, 'top')}
+        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
-          handleChange={this.props.handleChange.bind(this, 'hidden')} />
+          handleChange={this.props.handleChange.bind(this, 'hidden')}
+        />
         <ZOrderRow
           element={this.props.element}
-          onDepthChange={this.props.onDepthChange}/>
+          onDepthChange={this.props.onDepthChange}
+        />
       </div>);
 
     // TODO (bbuchanan):
@@ -106,16 +113,19 @@ var ChartEvents = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}/>
+          isIdRow={true}
+        />
         <EventHeaderRow/>
         <EventRow
           name={drawChartName}
           desc={drawChartDesc}
-          handleInsert={this.insertDrawChart}/>
+          handleInsert={this.insertDrawChart}
+        />
         <EventRow
           name={drawChartFromRecordsName}
           desc={drawChartFromRecordsDesc}
-          handleInsert={this.insertDrawChartFromRecords}/>
+          handleInsert={this.insertDrawChartFromRecords}
+        />
       </div>
     );
   }

@@ -51,8 +51,11 @@ const DataTable = React.createClass({
     return (
       <div id="dataTable" style={{display: visible ? 'block' : 'none'}}>
         <h4>
-          <a href="#" style={dataStyles.link}
-             onClick={() => this.props.onViewChange(DataView.OVERVIEW)}>
+          <a
+            href="#"
+            style={dataStyles.link}
+            onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
+          >
             Data
           </a>
           &nbsp;&gt; {this.props.tableName}
@@ -76,10 +79,10 @@ const DataTable = React.createClass({
           {
             Object.keys(this.props.tableRecords).map(id => (
               <EditTableRow
-                  columnNames={columnNames}
-                  tableName={this.props.tableName}
-                  record={JSON.parse(this.props.tableRecords[id])}
-                  key={id}
+                columnNames={columnNames}
+                tableName={this.props.tableName}
+                record={JSON.parse(this.props.tableRecords[id])}
+                key={id}
               />
             ))
           }

@@ -27,9 +27,9 @@ const DataProperties = React.createClass({
       <div id="dataProperties" style={{display: visible ? 'block' : 'none'}}>
         <h4>
          <a
-             href="#"
-             style={dataStyles.link}
-             onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
+           href="#"
+           style={dataStyles.link}
+           onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
          >
            Data
          </a>
@@ -49,9 +49,10 @@ const DataProperties = React.createClass({
             {
               Object.keys(this.props.keyValueData).map(key => (
                 <EditKeyRow
-                    key={key}
-                    keyName={key}
-                    value={JSON.parse(this.props.keyValueData[key])}/>
+                  key={key}
+                  keyName={key}
+                  value={JSON.parse(this.props.keyValueData[key])}
+                />
               ))
             }
           </tbody>

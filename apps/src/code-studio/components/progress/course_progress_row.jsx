@@ -89,11 +89,13 @@ const CourseProgressRow = React.createClass({
     const stage = this.props.stage;
 
     return (
-      <div style={[
-        styles.row,
-        this.props.professionalLearningCourse && {background: color.white},
-        this.props.isFocusArea && styles.focusAreaRow
-      ]}>
+      <div
+        style={[
+          styles.row,
+          this.props.professionalLearningCourse && {background: color.white},
+          this.props.isFocusArea && styles.focusAreaRow
+        ]}
+      >
         {this.props.isFocusArea && [
           <div style={styles.ribbonWrapper} key="ribbon">
             <div style={styles.ribbon}>Focus Area</div>

@@ -56,10 +56,11 @@ const ImportProjectDialog = React.createClass({
           </p>
           <div style={styles.urlInputWrapper}>
             <input
-                type="text"
-                value={this.state.url}
-                style={styles.urlInput}
-                onChange={event => this.setState({url: event.target.value})}/>
+              type="text"
+              value={this.state.url}
+              style={styles.urlInput}
+              onChange={event => this.setState({url: event.target.value})}
+            />
           </div>
           {this.props.error &&
            <p style={styles.errorText}>
@@ -69,8 +70,10 @@ const ImportProjectDialog = React.createClass({
           }
         </Body>
         <Buttons>
-          <Confirm onClick={() => this.props.onImport(this.state.url)}
-                   disabled={this.props.isFetching}>
+          <Confirm
+            onClick={() => this.props.onImport(this.state.url)}
+            disabled={this.props.isFetching}
+          >
             {this.props.isFetching && <span className="fa fa-spin fa-spinner"></span>}
             {' '}Next
           </Confirm>
@@ -92,24 +95,27 @@ if (BUILD_STYLEGUIDE) {
           name: 'On open',
           story: () => (
             <ImportProjectDialog
-                hideBackdrop
-                onImport={storybook.action("onImport")} />
+              hideBackdrop
+              onImport={storybook.action("onImport")}
+            />
           )
         }, {
           name: 'While fetching',
           story: () => (
             <ImportProjectDialog
-                hideBackdrop
-                isFetching
-                onImport={storybook.action("onImport")} />
+              hideBackdrop
+              isFetching
+              onImport={storybook.action("onImport")}
+            />
           )
         }, {
           name: 'Error Fetching',
           story: () => (
             <ImportProjectDialog
-                hideBackdrop
-                error
-                onImport={storybook.action("onImport")} />
+              hideBackdrop
+              error
+              onImport={storybook.action("onImport")}
+            />
           )
         },
       ]);

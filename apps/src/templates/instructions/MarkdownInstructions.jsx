@@ -115,7 +115,8 @@ const MarkdownInstructions = React.createClass({
           inTopPane && hasFullSizeImage && styles.inTopPaneWithImage,
           inTopPane && canCollapse && styles.inTopPaneCanCollapse
         ]}
-        dangerouslySetInnerHTML={{ __html: renderedMarkdown }}/>
+        dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
+      />
     );
   }
 });

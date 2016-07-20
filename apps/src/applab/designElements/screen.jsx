@@ -32,7 +32,8 @@ var ScreenProperties = React.createClass({
         <ColorPickerPropertyRow
           desc={'icon color'}
           initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
-          handleChange={this.handleIconColorChange} />
+          handleChange={this.handleIconColorChange}
+        />
       );
     }
 
@@ -42,19 +43,23 @@ var ScreenProperties = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true} />
+          isIdRow={true}
+        />
         <ColorPickerPropertyRow
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
-          handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
+          handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
+        />
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
-          handleChange={this.props.handleChange.bind(this, 'screen-image')} />
+          handleChange={this.props.handleChange.bind(this, 'screen-image')}
+        />
         {iconColorPicker}
         <DefaultScreenButtonPropertyRow
           screenId={elementUtils.getId(element)}
-          handleChange={this.props.handleChange.bind(this, 'is-default')}/>
+          handleChange={this.props.handleChange.bind(this, 'is-default')}
+        />
       </div>);
   }
 });
@@ -109,16 +114,19 @@ var ScreenEvents = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}/>
+          isIdRow={true}
+        />
         <EventHeaderRow/>
         <EventRow
           name={clickName}
           desc={clickDesc}
-          handleInsert={this.insertClick}/>
+          handleInsert={this.insertClick}
+        />
         <EventRow
           name={keyName}
           desc={keyDesc}
-          handleInsert={this.insertKey}/>
+          handleInsert={this.insertKey}
+        />
       </div>
     );
   }

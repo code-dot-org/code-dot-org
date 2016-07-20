@@ -199,7 +199,8 @@ var GridEditor = React.createClass({
             selectedCol={this.state.selectedCol}
             skin={this.props.skin}
             setCopiedCells={this.setCopiedCells}
-            onSelectionChange={this.changeSelection} />
+            onSelectionChange={this.changeSelection}
+          />
           {selectedCellJson}
           {pasteButton}
         </div>

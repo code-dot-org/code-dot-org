@@ -47,11 +47,10 @@ module.exports = {
     "no-with": "error",
     "object-curly-spacing": "off",
     "react/display-name": "off",
-    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-closing-bracket-location": "error", // autofixable
     "react/jsx-curly-spacing": "error", // autofixable
-    "react/jsx-first-prop-new-line": ["off", "multiline"],
-    "react/jsx-indent-props": ["off", 2],
-    "react/jsx-max-props-per-line": ["off", { "maximum": 1 }],
+    "react/jsx-first-prop-new-line": ["error", "multiline"],
+    "react/jsx-indent-props": ["error", 2], // autofixable
     "react/no-render-return-value": "off", // TODO: turn this on
     "react/self-closing-comp": "off",
     "react/wrap-multilines": "off",

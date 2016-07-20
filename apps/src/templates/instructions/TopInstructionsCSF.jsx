@@ -430,94 +430,98 @@ var TopInstructions = React.createClass({
     return (
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
-            styles={{
-              container: [styles.body, this.props.isMinecraft && craftStyles.body],
-              left: styles.leftCol
-            }}
-            leftColWidth={leftColWidth}
-            rightColWidth={this.state.rightColWidth}
-            height={this.props.height - resizerHeight}
+          styles={{
+            container: [styles.body, this.props.isMinecraft && craftStyles.body],
+            left: styles.leftCol
+          }}
+          leftColWidth={leftColWidth}
+          rightColWidth={this.state.rightColWidth}
+          height={this.props.height - resizerHeight}
         >
           <div
-              style={[
-                commonStyles.bubble,
-                this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
-              ]}
+            style={[
+              commonStyles.bubble,
+              this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
+            ]}
           >
             <ProtectedStatefulDiv
-                id="bubble"
-                className="prompt-icon-cell"
-                onClick={this.handleClickBubble}
+              id="bubble"
+              className="prompt-icon-cell"
+              onClick={this.handleClickBubble}
             >
               {this.props.smallStaticAvatar &&
                 <PromptIcon src={this.props.smallStaticAvatar} ref="icon"/>
               }
             </ProtectedStatefulDiv>
           </div>
-          <div ref="instructions"
-              onWheel={this.handleInstructionsWheel}
-              style={styles.instructions}
+          <div
+            ref="instructions"
+            onWheel={this.handleInstructionsWheel}
+            style={styles.instructions}
           >
             <div style={[styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble]}>
-              {this.props.hasContainedLevels && <ProtectedStatefulDiv
+              {this.props.hasContainedLevels &&
+                <ProtectedStatefulDiv
                   id="containedLevelContainer"
                   ref="containedLevelContainer"
                   style={styles.containedLevelContainer}
-                />
-              }
-              {!this.props.hasContainedLevels && <Instructions
+                />}
+              {!this.props.hasContainedLevels &&
+                <Instructions
                   ref="instructions"
                   renderedMarkdown={renderedMarkdown}
                   onResize={this.adjustMaxNeededHeight}
                   inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
                   aniGifURL={this.props.aniGifURL}
                   inTopPane
-                />
-              }
+                />}
               {!this.props.hasContainedLevels && this.props.collapsed && instructions2 &&
                 <div
-                    style={styles.secondaryInstructions}
-                    dangerouslySetInnerHTML={{ __html: instructions2 }}
-                />
-              }
+                  style={styles.secondaryInstructions}
+                  dangerouslySetInnerHTML={{ __html: instructions2 }}
+                />}
             </div>
-            {this.props.feedback && !this.props.collapsed && <InlineFeedback
+            {this.props.feedback && !this.props.collapsed &&
+              <InlineFeedback
                 styles={{
                   container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
                   message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
                 }}
                 message={this.props.feedback.message}
-            />}
-            {this.shouldDisplayHintPrompt() && <HintPrompt
+              />}
+            {this.shouldDisplayHintPrompt() &&
+              <HintPrompt
                 styles={{
                   container: [styles.instructionsChatBubble, this.props.isMinecraft && craftStyles.instructionsChatBubble],
                   message: [styles.instructionsChatText, this.props.isMinecraft && craftStyles.instructionsChatText]
                 }}
                 onConfirm={this.showHint}
                 onDismiss={this.dismissHintPrompt}
-            />}
+              />}
           </div>
           <div>
             <CollapserButton
-                ref="collapser"
-                style={[styles.collapserButton, !this.props.longInstructions && !this.props.feedback && commonStyles.hidden]}
-                collapsed={this.props.collapsed}
-                onClick={this.handleClickCollapser}
+              ref="collapser"
+              style={[styles.collapserButton, !this.props.longInstructions && !this.props.feedback && commonStyles.hidden]}
+              collapsed={this.props.collapsed}
+              onClick={this.handleClickCollapser}
             />
-            {!this.props.collapsed && <ScrollButtons
+            {!this.props.collapsed &&
+              <ScrollButtons
                 style={styles.scrollButtons}
                 ref="scrollButtons"
                 onScrollUp={this.handleScrollInstructionsUp}
                 onScrollDown={this.handleScrollInstructionsDown}
                 visible={!atMaxHeight}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
-            />}
+              />}
           </div>
         </ThreeColumns>
-        {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer
-          position={this.props.height}
-          onResize={this.handleHeightResize}/>
-        }
+        {!this.props.collapsed && !this.props.isEmbedView &&
+          <HeightResizer
+            position={this.props.height}
+            onResize={this.handleHeightResize}
+          />}
       </div>
     );
   }

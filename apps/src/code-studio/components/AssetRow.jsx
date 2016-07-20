@@ -65,9 +65,11 @@ var AssetRow = React.createClass({
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
-            <a href={src}
-                target="_blank"
-                style={{backgroundColor: 'transparent'}}>
+            <a
+              href={src}
+              target="_blank"
+              style={{backgroundColor: 'transparent'}}
+            >
               <button><i className="fa fa-eye"></i></button>
             </a>
             <button className="btn-danger" onClick={this.confirmDelete}>
@@ -91,10 +93,13 @@ var AssetRow = React.createClass({
       case 'deleting':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            <i className="fa fa-spinner fa-spin" style={{
-              fontSize: '32px',
-              marginRight: '15px'
-            }}></i>
+            <i
+              className="fa fa-spinner fa-spin"
+              style={{
+                fontSize: '32px',
+                marginRight: '15px'
+              }}
+            ></i>
           </td>
         );
         break;

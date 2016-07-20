@@ -22,30 +22,36 @@ var CanvasProperties = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true} />
+          isIdRow={true}
+        />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.getAttribute('width'), 10)}
-          handleChange={this.props.handleChange.bind(this, 'width')} />
+          handleChange={this.props.handleChange.bind(this, 'width')}
+        />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           initialValue={parseInt(element.getAttribute('height'), 10)}
-          handleChange={this.props.handleChange.bind(this, 'height')} />
+          handleChange={this.props.handleChange.bind(this, 'height')}
+        />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
-          handleChange={this.props.handleChange.bind(this, 'left')} />
+          handleChange={this.props.handleChange.bind(this, 'left')}
+        />
         <PropertyRow
           desc={'y position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
-          handleChange={this.props.handleChange.bind(this, 'top')} />
+          handleChange={this.props.handleChange.bind(this, 'top')}
+        />
         <ZOrderRow
           element={this.props.element}
-          onDepthChange={this.props.onDepthChange}/>
+          onDepthChange={this.props.onDepthChange}
+        />
       </div>);
   }
 });
@@ -83,12 +89,14 @@ var CanvasEvents = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}/>
+          isIdRow={true}
+        />
         <EventHeaderRow/>
         <EventRow
           name={clickName}
           desc={clickDesc}
-          handleInsert={this.insertClick}/>
+          handleInsert={this.insertClick}
+        />
       </div>
     );
   }

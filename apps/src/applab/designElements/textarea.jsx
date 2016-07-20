@@ -33,62 +33,75 @@ var TextAreaProperties = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true} />
+          isIdRow={true}
+        />
         <PropertyRow
           desc={'text'}
           isMultiLine={true}
           initialValue={escapedText}
-          handleChange={this.props.handleChange.bind(this, 'text')} />
+          handleChange={this.props.handleChange.bind(this, 'text')}
+        />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
           foo={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'style-width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')}
+        />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'style-height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')}
+        />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
-          handleChange={this.props.handleChange.bind(this, 'left')} />
+          handleChange={this.props.handleChange.bind(this, 'left')}
+        />
         <PropertyRow
           desc={'y position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
-          handleChange={this.props.handleChange.bind(this, 'top')} />
+          handleChange={this.props.handleChange.bind(this, 'top')}
+        />
         <ColorPickerPropertyRow
           desc={'text color'}
           initialValue={elementUtils.rgb2hex(element.style.color)}
-          handleChange={this.props.handleChange.bind(this, 'textColor')} />
+          handleChange={this.props.handleChange.bind(this, 'textColor')}
+        />
         <ColorPickerPropertyRow
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
-          handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
+          handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
+        />
         <PropertyRow
           desc={'font size (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.fontSize, 10)}
-          handleChange={this.props.handleChange.bind(this, 'fontSize')} />
+          handleChange={this.props.handleChange.bind(this, 'fontSize')}
+        />
         <EnumPropertyRow
           desc={'text alignment'}
           initialValue={element.style.textAlign || 'left'}
           options={['left','right','center','justify']}
-          handleChange={this.props.handleChange.bind(this, 'textAlign')} />
+          handleChange={this.props.handleChange.bind(this, 'textAlign')}
+        />
         <BooleanPropertyRow
           desc={'read only'}
           initialValue={!element.isContentEditable}
-          handleChange={this.props.handleChange.bind(this, 'readonly')} />
+          handleChange={this.props.handleChange.bind(this, 'readonly')}
+        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
-          handleChange={this.props.handleChange.bind(this, 'hidden')} />
+          handleChange={this.props.handleChange.bind(this, 'hidden')}
+        />
         <ZOrderRow
           element={this.props.element}
-          onDepthChange={this.props.onDepthChange}/>
+          onDepthChange={this.props.onDepthChange}
+        />
 
       </div>);
 
@@ -130,12 +143,14 @@ var TextAreaEvents = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}/>
+          isIdRow={true}
+        />
         <EventHeaderRow/>
         <EventRow
           name={changeName}
           desc={changeDesc}
-          handleInsert={this.insertChange}/>
+          handleInsert={this.insertChange}
+        />
       </div>
     );
   }

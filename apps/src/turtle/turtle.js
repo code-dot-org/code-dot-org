@@ -223,8 +223,8 @@ Artist.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.studioApp_.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={this.studioApp_.init.bind(this.studioApp_, config)}
+        visualizationColumn={visualizationColumn}
+        onMount={this.studioApp_.init.bind(this.studioApp_, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)

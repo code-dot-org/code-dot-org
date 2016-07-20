@@ -40,12 +40,12 @@ describe('AppLabTooltipOverlay', () => {
     it('renders a TooltipOverlay', () => {
       expect(result).to.deep.equal(
           <TooltipOverlay
-              width={TEST_APP_WIDTH}
-              height={TEST_APP_HEIGHT}
-              mouseX={TEST_MOUSE_X}
-              mouseY={TEST_MOUSE_Y}
-              providers={result.props.providers}
-              tooltipAboveCursor={false}
+            width={TEST_APP_WIDTH}
+            height={TEST_APP_HEIGHT}
+            mouseX={TEST_MOUSE_X}
+            mouseY={TEST_MOUSE_Y}
+            providers={result.props.providers}
+            tooltipAboveCursor={false}
           />
       );
     });

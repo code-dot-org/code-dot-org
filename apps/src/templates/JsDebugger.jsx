@@ -141,41 +141,45 @@ var sliderImages = {
 var Slider = function (props) {
   return (
     <div id="slider-cell" style={props.style}>
-      <svg id="speed-slider"
-           version="1.1"
-           width="150"
-           height="28">
+      <svg
+        id="speed-slider"
+        version="1.1"
+        width="150"
+        height="28"
+      >
         {/*<!-- Slow icon. -->*/}
         <clipPath id="slowClipPath">
           <rect
-              width={26}
-              height={12}
-              x={5}
-              y={6} />
+            width={26}
+            height={12}
+            x={5}
+            y={6}
+          />
         </clipPath>
         {/* turtle image */}
         <image
-            xlinkHref={props.hasFocus ? sliderImages.lightTurtle : sliderImages.darkTurtle}
-            height={12}
-            width={22}
-            x={7}
-            y={6}
+          xlinkHref={props.hasFocus ? sliderImages.lightTurtle : sliderImages.darkTurtle}
+          height={12}
+          width={22}
+          x={7}
+          y={6}
         />
         {/*<!-- Fast icon. -->*/}
         <clipPath id="fastClipPath">
           <rect
-              width={26}
-              height={16}
-              x={120}
-              y={2} />
+            width={26}
+            height={16}
+            x={120}
+            y={2}
+          />
         </clipPath>
         {/* rabbit image */}
         <image
-            xlinkHref={props.hasFocus ? sliderImages.lightRabbit : sliderImages.darkRabbit}
-            height={15}
-            width={23}
-            x={121}
-            y={3}
+          xlinkHref={props.hasFocus ? sliderImages.lightRabbit : sliderImages.darkRabbit}
+          height={15}
+          width={23}
+          x={121}
+          y={3}
         />
       </svg>
     </div>
@@ -200,13 +204,14 @@ var JsDebugger = function (props) {
     <div id="debug-area">
       <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
       <PaneHeader
-          id="debug-area-header"
-          hasFocus={hasFocus}
-          style={styles.debugAreaHeader}
+        id="debug-area-header"
+        hasFocus={hasFocus}
+        style={styles.debugAreaHeader}
       >
         <span
-            style={styles.noUserSelect}
-            className="header-text">
+          style={styles.noUserSelect}
+          className="header-text"
+        >
           {i18n.debugConsoleHeader()}
         </span>
         <i id="show-hide-debug-icon" className="fa fa-chevron-circle-down" style={styles.showHideIcon}/>
@@ -215,8 +220,9 @@ var JsDebugger = function (props) {
           <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"></i>
           <i id="paused-icon" style={commonStyles.hidden} className="fa fa-pause"></i>
           <span
-              style={styles.noUserSelect}
-              className="header-text">
+            style={styles.noUserSelect}
+            className="header-text"
+          >
             {i18n.debugCommandsHeaderWhenOpen()}
           </span>
         </PaneSection>
@@ -224,18 +230,19 @@ var JsDebugger = function (props) {
         {props.debugWatch &&
         <PaneSection id="debug-watch-header">
           <span
-              style={styles.noUserSelect}
-              className="header-text">
+            style={styles.noUserSelect}
+            className="header-text"
+          >
             {i18n.debugWatchHeader()}
           </span>
         </PaneSection>
         }
         <PaneButton
-            id="clear-console-header"
-            iconClass="fa fa-eraser"
-            label="Clear"
-            headerHasFocus={hasFocus}
-            isRtl={false}
+          id="clear-console-header"
+          iconClass="fa fa-eraser"
+          label="Clear"
+          headerHasFocus={hasFocus}
+          isRtl={false}
         />
         <Slider style={sliderStyle} hasFocus={hasFocus}/>
       </PaneHeader>
