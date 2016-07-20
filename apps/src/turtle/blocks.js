@@ -728,13 +728,13 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.jump_to.VALUES = POSITION_VALUES;
 
   generator.jump_to = function () {
-    var value = this.getTitleValue('VALUE');
+    let value = this.getTitleValue('VALUE');
     if (value === RANDOM_VALUE) {
-      var possibleValues =this.VALUES.map(item => item[1])
+      let possibleValues = this.VALUES.map(item => item[1])
           .filter(item => item !== RANDOM_VALUE);
-      value = utils.randomValue(possibleValues);
+      value = `Turtle.random([${possibleValues}])`;
     }
-    return 'Turtle.jumpTo(' + value + ', \'block_id_' + this.id + '\');\n';
+    return `Turtle.jumpTo(${value}, 'block_id_${this.id}');\n`;
   };
 
   blockly.Blocks.jump_to_xy = {
@@ -760,9 +760,9 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   generator.jump_to_xy = function () {
-    var xParam = window.parseFloat(this.getTitleValue('XPOS')) || 0;
-    var yParam = window.parseFloat(this.getTitleValue('YPOS')) || 0;
-    return 'Turtle.jumpToXY(' + xParam + ', ' + yParam + ', \'block_id_' + this.id + '\');\n';
+    const xParam = window.parseFloat(this.getTitleValue('XPOS')) || 0;
+    const yParam = window.parseFloat(this.getTitleValue('YPOS')) || 0;
+    return `Turtle.jumpToXY(${xParam}, ${yParam}, 'block_id_${this.id}');\n`;
   };
 
   blockly.Blocks.draw_turn = {
