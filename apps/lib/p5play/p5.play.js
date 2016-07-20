@@ -1522,12 +1522,20 @@ function Sprite(pInst, _x, _y, _w, _h) {
       return dirY;
   };
 
-  this.modifyScaleX = function()
+  /*
+   * Returns the value the sprite should be scaled in the X direction.
+   * @private
+   */
+  this._getScaleX = function()
   {
     return this.scale;
   }
 
-  this.modifyScaleY = function()
+  /*
+   * Returns the value the sprite should be scaled in the Y direction.
+   * @private
+   */
+  this._getScaleY = function()
   {
     return this.scale;
   }
@@ -1555,9 +1563,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
       // This line differs from p5.play upstream because GameLab users
       // should be able to change the width and height of their animations.
-      var scaleX = this.modifyScaleX();
-      var scaleY = this.modifyScaleY();
-      scale(scaleX*dirX, scaleY*dirY);
+      scale(this._getScaleX()*dirX, this._getScaleY()*dirY);
 
       if (pInst._angleMode == pInst.RADIANS) {
         rotate(radians(this.rotation));

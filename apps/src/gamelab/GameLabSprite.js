@@ -14,7 +14,18 @@ module.exports.createSprite = function (x, y, width, height) {
   var s = new this.Sprite(x, y, width, height);
   var p5Inst = this;
 
+  /*
+   * @type {number}
+   * @private
+   * _horizontalStretch is the value to scale animation sprites in the X direction
+   */
   s._horizontalStretch = 1;
+
+  /*
+   * @type {number}
+   * @private
+   * _verticalStretch is the value to scale animation sprites in the Y direction
+   */
   s._verticalStretch = 1;
 
   s.setAnimation = function (animationName) {
@@ -74,11 +85,13 @@ module.exports.createSprite = function (x, y, width, height) {
     }
   };
 
-  s.modifyScaleX = function () {
+  // The scale value should include the horizontal stretch for animations.
+  s._getScaleX = function () {
     return s.scale * s._horizontalStretch;
   };
 
-  s.modifyScaleY = function () {
+  // The scale value should include the vertical stretch for animations.
+  s._getScaleY = function () {
     return s.scale * s._verticalStretch;
   };
 
@@ -116,55 +129,59 @@ module.exports.createSprite = function (x, y, width, height) {
     }
   });
 
-  // p5.play stores width unscaled, but users in
-  // Game Lab should access and set a scaled version
-  // and be able to change the width of an animation.
+  // Overriding these allows users to set a width for
+  // an animated sprite the same way they would an unanimated sprite.
   Object.defineProperty(s, 'width', {
     enumerable: true,
     configurable: true,
     get: function () {
       if (s._internalWidth === undefined) {
         return 100;
+      } else if (s.animation) {
+        return s._internalWidth * s._horizontalStretch;
       } else {
         return s._internalWidth;
       }
     },
     set: function (value) {
       if (s.animation) {
-        s._horizontalStretch = value / s._internalWidth * this.scale;
+        s._horizontalStretch = value / s._internalWidth;
+      } else {
+        s._internalWidth = value;
       }
-      s._internalWidth = value;
     }
   });
 
-  // p5.play stores heigth unscaled, but users in
-  // Game Lab should access and set a scaled version
-  // and be able to change the height of an animation.
+  // Overriding these allows users to set a height for
+  // an animated sprite the same way they would an unanimated sprite.
   Object.defineProperty(s, 'height', {
     enumerable: true,
     configurable: true,
     get: function () {
       if (s._internalHeight === undefined) {
         return 100;
+      } else if (s.animation) {
+        return s._internalHeight * s._verticalStretch;
       } else {
         return s._internalHeight;
       }
     },
     set: function (value) {
       if (s.animation) {
-        s._verticalStretch = value / s._internalHeight * this.scale;
+        s._verticalStretch = value / s._internalHeight;
       } else {
         s._internalHeight =  value;
       }
     }
   });
 
+  // p5.play stores width unscaled, but users in
   // Game Lab should have access to a scaled version.
   s.getScaledWidth = function () {
     return s.width * s.scale;
   };
 
-  // p5.play stores heigth unscaled, but users in
+  // p5.play stores height unscaled, but users in
   // Game Lab should have access to a scaled version.
   s.getScaledHeight = function () {
     return s.height * s.scale;
