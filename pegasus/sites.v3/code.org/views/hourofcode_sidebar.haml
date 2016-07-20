@@ -1,0 +1,27 @@
+:ruby
+  corporate_donors = [{name_s: 'Amazon', url_s: 'http://www.amazon.com'}, {name_s: 'Microsoft', url_s: 'http://www.microsoft.com'}, {name_s: 'Google', url_s: 'http://www.google.com'}, {name_s: 'Juniper Networks Foundation Fund', url_s: 'http://www.juniper.net'}, {name_s: 'Salesforce', url_s: 'http://www.salesforce.com'}, {name_s: 'LinkedIn', url_s: 'http://www.linkedin.com'}, {name_s: 'JP Morgan Chase & Co', url_s: 'http://www.jpmorganchase.com/'}, {name_s: 'Allen & Co', url_s: ''}, {name_s: 'Best Buy', url_s: 'http://www.bestbuy.com/'}]
+
+  major_donors = [{name_s: 'Alfred Lin', url_s: 'http://www.crunchbase.com/person/alfred-lin'}, {name_s: 'Ali Partovi', url_s: 'http://www.crunchbase.com/person/ali-partovi'}, {name_s: 'Ballmer Family Giving', url_s: 'http://en.wikipedia.org/wiki/Steve_Ballmer'}, {name_s: 'Barton Family Foundation', url_s: 'http://www.crunchbase.com/person/rich-barton-2'}, {name_s: 'Bill Gates', url_s: 'http://en.wikipedia.org/wiki/Bill_Gates'}, {name_s: 'Case Foundation', url_s: 'http://casefoundation.org/'}, {name_s: 'Dara Khosrowshahi', url_s: 'http://en.wikipedia.org/wiki/Dara_Khosrowshahi'}, {name_s: 'Diane Tang & Ben Smith', url_s: 'http://research.google.com/pubs/author3770.html'}, {name_s: 'Drew Houston', url_s: 'http://en.wikipedia.org/wiki/Drew_Houston'}, {name_s: 'Hadi Partovi', url_s: 'http://www.crunchbase.com/person/hadi-partovi'}, {name_s: 'Jack Dorsey', url_s: 'http://en.wikipedia.org/wiki/Jack_Dorsey'}, {name_s: 'Jeff Weiner', url_s: 'http://www.linkedin.com/in/jeffweiner08'}, {name_s: 'Jerry Yang', url_s: 'http://en.wikipedia.org/wiki/Jerry_Yang_(entrepreneur)'}, {name_s: 'John and Ann Doerr', url_s: 'http://en.wikipedia.org/wiki/John_Doerr'}, {name_s: 'Keith Rabois', url_s: 'http://www.crunchbase.com/person/keith-rabois'}, {name_s: 'Mark Zuckerberg & Priscilla Chan', url_s: 'http://www.startupeducation.org/'}, {name_s: 'Max Levchin', url_s: 'http://en.wikipedia.org/wiki/Max_Levchin'}, {name_s: 'Megan Smith', url_s: 'http://en.wikipedia.org/wiki/Megan_Smith'}, {name_s: 'Michael Birch', url_s: 'http://en.wikipedia.org/wiki/Michael_Birch_(businessman)'}, {name_s: 'Ned and Haleh Clapp', url_s: 'http://www.linkedin.com/in/'}, {name_s: 'Nick and Leslie Hanauer Foundation', url_s: 'http://en.wikipedia.org/wiki/Nick_Hanauer'}, {name_s: 'The NYC Foundation for Computer Science Education', url_s: 'http://cs-nyc.tumblr.com/'}, {name_s: 'Omidyar Network', url_s: 'http://www.omidyar.com'}, {name_s: 'Owen Van Natta', url_s: 'http://www.crunchbase.com/person/owen-van-natta'}, {name_s: 'Reid Hoffman', url_s: 'http://www.linkedin.com/in/reidhoffman'}, {name_s: 'Ron Conway', url_s: 'http://en.wikipedia.org/wiki/Ron_Conway'}, {name_s: 'Sameer Gandhi', url_s: 'http://www.accel.com/#people/sameer-gandhi'}, {name_s: 'Sean N. Parker Foundation', url_s: 'http://en.wikipedia.org/wiki/Sean_Parker'}, {name_s: 'Susan Wojcicki & Dennis Troper', url_s: 'http://en.wikipedia.org/wiki/Susan_Wojcicki'}, {name_s: 'Technically Learning', url_s: 'http://technicallylearning.org'}]
+
+%h2 Press Kit
+For all press and media inquiries, contact 
+%a{src: "mailto:press@code.org"}
+  press@code.org
+
+%h2 Corporate Donors
+= view :about_people, people: corporate_donors
+
+%h2 Major Donors
+= view :about_people, people: major_donors
+
+%h2 Major Partners
+= view :about_people, people:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'major')
+
+%h2 Promotional Partners
+= view :about_people, people:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'promotional')
+
+%h2 Tutorial Partners
+= view :about_people, people:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'tutorial')
+
+%h2 All Other Partners
+= view :about_people, people:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'additional')
