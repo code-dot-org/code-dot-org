@@ -102,7 +102,9 @@ var AssetRow = React.createClass({
 
     return (
       <tr className="assetRow" onDoubleClick={this.props.onChoose}>
-        <AssetThumbnail type={this.props.type} name={this.props.name}/>
+        <td width="80">
+          <AssetThumbnail type={this.props.type} name={this.props.name}/>
+        </td>
         <td>{this.props.name}</td>
         {actions}
       </tr>
