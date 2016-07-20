@@ -151,11 +151,21 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:manage, FrequentUnsuccessfulLevelSource)
   end
 
-  test 'teachers read Section' do
-    ability = Ability.new(create(:teacher))
+  test 'teachers read their Section' do
+    teacher = create :teacher
+    ability = Ability.new teacher
+    my_section = create :section, user_id: teacher.id
+    not_my_section = create :section, user_id: create(:teacher).id
 
-    assert ability.can?(:read, Section)
-    assert ability.can?(:manage, Section)
+    # When checking a class, conditions are ignored.
+    # See https://github.com/ryanb/cancan/wiki/checking-abilities#checking-with-class
+    assert ability.can? :read, Section
+
+    # A teacher can read their own section.
+    assert ability.can? :read, my_section
+
+    # A teacher cannot read another teacher's section.
+    assert ability.cannot? :read, not_my_section
   end
 
   test 'teachers manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
