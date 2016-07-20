@@ -53,7 +53,7 @@ var Attachments = React.createClass({
     if (this.state.loaded) {
       attachmentList = assetListStore.list().map(function (asset) {
         var url = '/v3/assets/' + dashboard.project.getCurrentId() + '/' + asset.filename;
-        return <a key={asset.filename} style={styles.attachment} href={url} target='_blank'>{asset.filename}</a>;
+        return <a key={asset.filename} style={styles.attachment} href={url} target="_blank">{asset.filename}</a>;
       });
     }
 
@@ -62,9 +62,9 @@ var Attachments = React.createClass({
       button = (
         <input
           style={styles.button}
-          className='btn btn-default'
-          type='button'
-          value='Add/Remove Attachments'
+          className="btn btn-default"
+          type="button"
+          value="Add/Remove Attachments"
           onClick={this.showAssetManager}/>
       );
     }

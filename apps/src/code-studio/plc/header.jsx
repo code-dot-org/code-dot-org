@@ -30,7 +30,7 @@ var PlcHeader = React.createClass({
         <a href={this.props.course_view_path}>
           My Learning Plan
         </a>
-        <span className='fa fa-caret-right' style={breadcrumbStyle.icon}/>
+        <span className="fa fa-caret-right" style={breadcrumbStyle.icon}/>
         <span style={breadcrumbStyle.currentPage}>
           {this.props.unit_name}
         </span>

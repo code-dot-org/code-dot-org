@@ -41,7 +41,7 @@ var ButtonProperties = React.createClass({
     }
 
     return (
-      <div id='propertyRowContainer'>
+      <div id="propertyRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
@@ -137,7 +137,7 @@ var ButtonEvents = React.createClass({
     var clickDesc = 'Triggered when the button is clicked with a mouse or tapped on a screen.';
 
     return (
-      <div id='eventRowContainer'>
+      <div id="eventRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}

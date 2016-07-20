@@ -159,7 +159,7 @@ var CodeWorkspace = React.createClass({
                 {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
               </span>
               <div id="blockCounter">
-                <ProtectedStatefulDiv id="blockUsed" className='block-counter-default'/>
+                <ProtectedStatefulDiv id="blockUsed" className="block-counter-default"/>
                 <span> / </span>
                 <span id="idealBlockNumber"></span>
                 <span>{" " + msg.blocks()}</span>

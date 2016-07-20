@@ -28,7 +28,7 @@ var TextAreaProperties = React.createClass({
     }
 
     return (
-      <div id='propertyRowContainer'>
+      <div id="propertyRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
@@ -125,7 +125,7 @@ var TextAreaEvents = React.createClass({
     var changeDesc = 'Triggered when the text area loses focus if the text has changed.';
 
     return (
-      <div id='eventRowContainer'>
+      <div id="eventRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}

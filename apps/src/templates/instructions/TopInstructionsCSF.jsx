@@ -450,7 +450,7 @@ var TopInstructions = React.createClass({
                 onClick={this.handleClickBubble}
             >
               {this.props.smallStaticAvatar &&
-                <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
+                <PromptIcon src={this.props.smallStaticAvatar} ref="icon"/>
               }
             </ProtectedStatefulDiv>
           </div>
@@ -499,14 +499,14 @@ var TopInstructions = React.createClass({
           </div>
           <div>
             <CollapserButton
-                ref='collapser'
+                ref="collapser"
                 style={[styles.collapserButton, !this.props.longInstructions && !this.props.feedback && commonStyles.hidden]}
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
             />
             {!this.props.collapsed && <ScrollButtons
                 style={styles.scrollButtons}
-                ref='scrollButtons'
+                ref="scrollButtons"
                 onScrollUp={this.handleScrollInstructionsUp}
                 onScrollDown={this.handleScrollInstructionsDown}
                 visible={!atMaxHeight}

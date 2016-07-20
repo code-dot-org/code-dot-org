@@ -49,9 +49,9 @@ const DataTable = React.createClass({
     const columnNames = this.getColumnNames();
     const visible = (DataView.TABLE === this.props.view);
     return (
-      <div id='dataTable' style={{display: visible ? 'block' : 'none'}}>
+      <div id="dataTable" style={{display: visible ? 'block' : 'none'}}>
         <h4>
-          <a href='#' style={dataStyles.link}
+          <a href="#" style={dataStyles.link}
              onClick={() => this.props.onViewChange(DataView.OVERVIEW)}>
             Data
           </a>

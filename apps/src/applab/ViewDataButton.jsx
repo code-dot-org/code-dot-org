@@ -29,9 +29,9 @@ var ViewDataButton = React.createClass({
 
     return (
       <button
-          id='viewDataButton'
+          id="viewDataButton"
           style={showDataButtonStyle}
-          className='no-outline'
+          className="no-outline"
           onClick={this.props.onClick}>
         <FontAwesome icon="database" style={styles.iconStyle} />
         {applabMsg.viewData()}

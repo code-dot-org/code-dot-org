@@ -19,7 +19,7 @@ var SliderProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <div id='propertyRowContainer'>
+      <div id="propertyRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
@@ -103,7 +103,7 @@ var SliderEvents = React.createClass({
     var inputDesc = 'Triggered whenever the value of the slider is modified.';
 
     return (
-      <div id='eventRowContainer'>
+      <div id="eventRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
