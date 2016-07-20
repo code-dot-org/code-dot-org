@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Modify the code so that all of the console.log commands print true",
-    "start_blocks": "// Run this code and observe what happens\r\n// When you press the up arrow\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  textAlign(\"center\", \"center\");\r\n  textSize(100);\r\n  text(keyDown(\"up\"), 0, 0, 400, 400);\r\n}",
+    "start_blocks": "// Run this code and observe what happens\r\n// When you press the up arrow\r\n\r\nfunction draw() {\r\n  //Draw Background\r\n  background(\"white\");\r\n  \r\n  // Draw Animations\r\n  textAlign(\"center\", \"center\");\r\n  textSize(100);\r\n  text(keyDown(\"up\"), 0, 0);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,7 +34,8 @@
     "debugger_disabled": "true",
     "markdown_instructions": "# keyDown()\r\nThe `keyDown()` block is the first of a new set of blocks that will let us start getting input from the user. This is the first step on our road to actually making games (yay!). See if you can figure out how the `keyDown()` block works.\r\n\r\n# Do This\r\n\r\nYou will **not write any code** in this program.\r\n\r\n* Read the program and see if you can guess what will happen\r\n* Run the program\r\n* While the program is running, press the up arrow on your key\r\n* Observe what happens in your console.",
     "callout_json": "[]",
-    "show_d_pad": "false"
+    "show_d_pad": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -105,6 +105,40 @@ module.exports.createSprite = function (x, y, width, height) {
     }
   });
 
+  // p5.play stores width unscaled, but users in
+  // Game Lab should access and set a scaled version.
+  Object.defineProperty(s, 'width', {
+    enumerable: true,
+    configurable: true,
+    get: function () {
+      if (s._internalWidth === undefined) {
+        return 100;
+      } else {
+        return s._internalWidth * this.scale;
+      }
+    },
+    set: function (value) {
+      s._internalWidth = value / this.scale;
+    }
+  });
+
+  // p5.play stores heigth unscaled, but users in
+  // Game Lab should access and set a scaled version.
+  Object.defineProperty(s, 'height', {
+    enumerable: true,
+    configurable: true,
+    get: function () {
+      if (s._internalHeight === undefined) {
+        return 100;
+      } else {
+        return s._internalHeight * this.scale;
+      }
+    },
+    set: function (value) {
+      s._internalHeight =  value / this.scale;
+    }
+  });
+
   Object.defineProperty(s, 'velocityX', {
     enumerable: true,
     get: function () {

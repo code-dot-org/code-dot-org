@@ -138,42 +138,45 @@
   third_party_tynker_btn_curriculum: 'Thử dùng khóa học của Tynker cho những độc giả
     nhỏ '
   third_party_tynker_btn_site: Vào tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
+  third_party_scratchjr_desc: Scratch Jr. là một ngôn ngữ lập trình mở đầu dành cho
+    trẻ em (tuổi 5-7) để tạo ra những câu chuyện và trò chơi của riêng chúng. Trẻ
+    em sẽ ghép các khối lệnh lập trình đồ họa với nhau để khiến cho các nhân vật di
+    chuyển, nhảy, múa và hát. Trẻ em có thể chỉnh sửa các nhân vật trong trình biên
+    tập vẽ, thêm những giọng nói và âm thanh của riêng chúng, thậm chí chèn các bức
+    ảnh của chính họ - sau đó dùng các khối lệnh lập trình để làm cho các nhân vật
+    của chúng đi vào đời sống.
   third_party_scratchjr_btn_curriculum: Tải về  Scratch Jr. Curriculum
   third_party_scratchjr_btn_site: Truy cập vào Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_desc: Với Scratch, bạn có thể lập trình cho riêng mình những
+    câu chuyện, trò chơi và hoạt hình mang tính tương tác và chia sẻ tác phẩm của
+    bạn với những người trong cộng đồng trực tuyến. Scratch giúp những người trẻ học
+    cách suy nghĩ sáng tạo, giải thích có hệ thống, và làm việc có sự phối hợp - những
+    kỹ năng cơ bản trong cuộc sống thế kỉ 21.
   third_party_scratch_btn_curriculum: Tải về Scratch Jr. Curriculum
   third_party_scratch_btn_forum: Diễn đàn Scratch Educator
-  third_party_scratch_btn_site: Visit Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
+  third_party_scratch_btn_site: Truy cập Scratch
+  third_party_lightbot_desc: Trong Lightbot, học sinh sẽ phải lập trình một con rô-bốt
+    với các dòng lệnh để giải các câu đố. Học sinh có thể chơi trò chơi trong Trình
+    duyệt (yêu cầu Flash Player), hoặc trên các thiết bị Android và iOS. Học sinh
+    sẽ chơi các thiết lập ban đầu của mức "Cơ bản" trong Lightbot. Họ sẽ học làm thế
+    nào để yêu cầu máy tính làm gì với một loạt các lệnh cơ bản và đạt được quá trình
+    tổng hợp bằng chương trình máy tính nào được viết.
+  third_party_lightbot_btn_curriculum: Tải Lightbot Curriculum
+  third_party_lightbot_btn_site: Truy cập Lightbot
+  third_party_khan_desc: Học cách lập trình các bản vẽ, hoạt hình và trò chơi sử dung
+    JavaScript & ProcessingJS, hoặc học cách tạo ra các trang web với HTML & CSS.
+    Bạn có thể chia sẻ bất cứ những gì bạn tạo ra, khám phá sẽ những gì người khác
+    đã làm và học hỏi lẫn nhau!
   third_party_khan_btn_learn: Học khoa học máy tính với học viện Khan
-  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_khan_btn_forum: Diễn đàn Khan Academy CS Forum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
     apps for Android devices. Newcomers to App Inventor can have their first app up
     and running in an hour or less, and can program more complex apps in significantly
     less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_appinv_btn_curriculum: Tải App Inventor 2 Curriculum
+  third_party_appinv_btn_forum: Diễn đàn App Inventor 2
+  third_party_appinv_btn_site: Truy cập App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
     fun and accessible for beginners. With CodeHS, you can get the help that every
@@ -184,8 +187,8 @@
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
     native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_codecademy_btn_curriculum: Tải về Codecademy Curriculum
+  third_party_codecademy_btn_site: Truy cập Codecademy
   third_party_organization: Tổ chức
   third_party_curriculum: Chương trình
   third_party_pricing: Học phí
@@ -200,7 +203,7 @@
   third_party_desc_11_kto5: Khoàng 11 bài giảng, dành cho học sinh lớp K-5
   third_party_desc_10to12_kto5: Khoàng 10 - 12 bài giảng, dành cho học sinh lớp K-5
   third_party_desc_40_4to8: Khoàng 40 bài giảng, dành cho học sinh lớp 4 đến lớp 8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_dozens_kto8: Hàng tá bài học cho tất cả học sinh hạng K-8
   third_party_desc_10to15_3to12: Từ 10 đến 15 bài giảng, dành cho học sinh lớp 3 đến
     lớp 12
   third_party_desc_25to40_3to12: Từ 25 đến 40 bài giảng, dành cho học sinh lớp 3 đến
@@ -383,7 +386,7 @@
   homepage_banner_20k_teachers_link: Tìm hiểu thêm
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress_link: Thêm yêu cầu hỗ trợ của bạn
   homepage_slot_text_title_hoc: Giờ của mã
   homepage_slot_text_blurb_hoc: Ai cũng có thể học. Ngay hôm nay
   homepage_slot_text_link_hoc: Học thử Hour of Code
@@ -409,7 +412,7 @@
   homepage_slot_text_link_stats: Xem thống kê
   homepage_slot_text_link_buy: Tham gia
   homepage_slot_text_link_donate: Quyên góp
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: "Áo phông, nón và nhiều hơn nữa"
   homepage_header_codestudio: Sản phẩm của học viên Code Studio
   homepage_header_donors: Code.org cảm ơn những người hỗ trợ
   homepage_donors_seall: Xem tất cả
@@ -457,7 +460,7 @@
     video truyền cảm hứng</a> bởi mô hình vai trò
   playlab_choose_theme: Chọn chủ đề cho Play Lab của bạn
   playlab_classic_title: Cổ điển
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: Thế giới kì diệu của Gumball
   playlab_iceage_title: Kỉ băng hà -sắp ra mắt
   playlab_iceage_title_live: Kỉ băng hà
   starwars_subtitle: Xây dựng vũ trụ bằng mã lập trình
@@ -609,7 +612,7 @@
     K-5.
   dashboard_landing_new_k5courses: Mới! Hãy thử các khóa học cho sinh viên K-5.
   dashboard_landing_useful_links: Liên kết hữu ích khác (bằng tiếng Anh)
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: Các nguồn tài nguyên cho lớp học của bạn
   dashboard_landing_office_hours: Hỏi một câu hỏi! Truy cập video hàng tháng của chúng
     tôi.
   dashboard_landing_print_certificates: In giấy chứng nhận cho học sinh hoàn thành
@@ -706,7 +709,7 @@
   dashboard_navigation_section_pd: Phát triển chuyên môn
   dashboard_navigation_section_speakers: Khoa học máy tính <br/> Diễn giả
   dashboard_navigation_all_sections: Tài khoản sinh viên và Tiến độ
-  dashboard_navigation_view_progress: Xem tiến trình
+  dashboard_navigation_view_progress: Sự tiến bộ
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Phương pháp đánh giá
   dashboard_navigation_add_students: Thêm sinh viên
@@ -891,11 +894,11 @@
   dashboard_faq_k5: Câu thường hỏi tiểu học
   dashboard_announcements: Announcements
   dashboard_announce_view_all: Tất cả
-  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
-    problem in computer science. Code Studio teachers are leading the way in educating
-    underrepresented minorities. Our annual survey shows record diversity in your
-    classrooms! Check out the numbers."
-  dashboard_announce_button_text: Tìm hiểu thêm
+  dashboard_announce_message: Want to help us test a new feature? We know it’s important
+    to encourage students to iterate and experiment, so we'll be adding an "unused
+    code" feature to allow students to run their code even when there are unattached
+    blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: Là một giáo viên, bạn đang dẫn đầu trong phong trào
     để trao cho mỗi học sinh ở mỗi trường học cơ hội học về khoa học máy tính. Bây
     giờ, đã đến lúc để cho đại diện của bạn nghe từ bạn. Tuần này, các nhà lãnh đạo
@@ -1035,6 +1038,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1750,3 +1754,22 @@
   infinity_shortcode: inf
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Learn more
+  dashboard_announce_try_now_button: Try it now
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.

@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+# Downloads all translations from Crowdin
+# Hour of Code project to i18n/locales.
+# https://crowdin.com/project/hour-of-code
+
+exec "crowdin-cli download"

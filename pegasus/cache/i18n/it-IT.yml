@@ -4,10 +4,10 @@
   'yes': Sì
   'no': 'No'
   select_language: Seleziona per favore la tua lingua
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org non supporterà più Internet Explorer 8, 9 e 10. Effettua
+    l'aggiornamento ad un browser più moderno.
+  upgrade_ie_message_csedweek: CSEdWeek.org non supporterà più Internet Explorer 8,
+    9 e 10. Effettua l'aggiornamento ad un browser più moderno.
   upgrade_ie_link: Ulteriori informazioni
   en: Informatica
   computer_science_edweek: Settimana di Educazione all'Informatica
@@ -86,16 +86,16 @@
   congratulations_volunteer: 'Complimenti: ora che hai provato l''Ora del Codice,
     <a href="https://code.org/volunteer">iscriviti come volontario in una scuola</a>
     e aiuta gli studenti a imparare un''Ora del Codice!'
-  congratulations_on_completing_course1: Congratulazioni per il completamento del
-    corso 1
-  congratulations_on_completing_course2: Congratulazioni per il completamento del
-    corso 2
-  congratulations_on_completing_course3: Congratulazioni per il completamento del
-    corso 3
-  congratulations_on_completing_course4: Congratulazioni per il completamento del
-    corso 4
-  congratulations_on_completing_accelerated: Congratulazioni per il completamento
-    del corso accelerato
+  congratulations_on_completing_course1: Complimenti per aver completato il Corso
+    1
+  congratulations_on_completing_course2: Complimenti per aver completato il Corso
+    2
+  congratulations_on_completing_course3: Complimenti per aver completato il Corso
+    3
+  congratulations_on_completing_course4: Complimenti per aver completato il Corso
+    4
+  congratulations_on_completing_accelerated: Complimenti per aver completato il Corso
+    Rapido
   congrats_next_tutorials_title: Prova ora questi tutorial
   congrats_next_tutorials_desc: Prova questi corsi più brevi, da 1 ora, oppure prova
     un <a href="%{current_path}/next">corso di un partner</a>.
@@ -268,11 +268,12 @@
   hoc_is_here: Impara l'informatica. Essa sta cambiando tutto. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala!
     @codeorg @programmafuturo'
-  just_did_course1: Ho appena finito il corso 1 - verificalo su @codeorg
-  just_did_course2: Ho appena finito il corso 2 - verificalo su @codeorg
-  just_did_course3: Ho appena finito il corso 3 - verificalo su @codeorg
-  just_did_course4: Ho appena finito il corso 4 - verificalo su @codeorg
-  just_did_accelerated: Ho appena finito il corso accelerato - Verificalo su @codeorg
+  just_did_course1: Ho appena completato il Corso 1 - Provalo! Su @codeorg @programmafuturo
+  just_did_course2: Ho appena completato il Corso 2 - Provalo! Su @codeorg @programmafuturo
+  just_did_course3: Ho appena completato il Corso 3 - Provalo! Su @codeorg @programmafuturo
+  just_did_course4: Ho appena completato il Corso 4 - Provalo! Su @codeorg @programmafuturo
+  just_did_accelerated: Ho appena completato il Corso Rapido - Provalo! Su @codeorg
+    @programmafuturo
   twitter_teach_cs: 9 su 10 persone sono d'accordo, le scuole dovrebbero insegnare
     informatica. http://youtu.be/nKIu9yen5nc. Visita https://code.org/.
   learn_hoc: Fai l'Ora del Codice
@@ -725,13 +726,13 @@
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
-  dashboard_navigation_view_progress: Controlla i progressi
-  dashboard_navigation_view_text_responses: Visualizza il testo delle risposte
+  dashboard_navigation_view_progress: Avanzamento
+  dashboard_navigation_view_text_responses: Risultati del test
   dashboard_navigation_view_assessments: Valutazioni
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: Guarda le statistiche
+  dashboard_navigation_view_stats: Statistiche
   dashboard_navigation_section: 'Classe: %{section_name}'
   dashboard_navigation_student: 'Studente: %{student_name}'
   dashboard_progress_not_started: non avviato
@@ -745,7 +746,7 @@
   dashboard_progress_view: 'Mostra i progressi in:'
   dashboard_progress_student_in_script: Informazioni sui progressi di %{student_name}
     in %{script_name}
-  dashboard_progress_pair_programming: programmazione in Coppia
+  dashboard_progress_pair_programming: Programmazione in Coppia
   dashboard_responses_view: 'Visualizza il testo delle risposte in:'
   dashboard_responses_none: Nessuna risposta
   dashboard_sections_new_section: Nuova classe
@@ -756,7 +757,7 @@
   dashboard_sections_table_secret: Tipo di accesso
   dashboard_sections_table_grade: Livello
   dashboard_sections_table_course: Corso
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Fase extra
   dashboard_sections_table_students: Studenti
   dashboard_sections_table_code: Codice-Classe
   dashboard_sections_name: Nome della classe
@@ -859,7 +860,7 @@
   dashboard_course1: 'Corso 1:'
   dashboard_course2: 'Corso 2:'
   dashboard_course3: 'Corso 3:'
-  dashboard_course4: 'Corso 4 (beta): '
+  dashboard_course4: 'Corso 4: '
   dashboard_unplugged: Se non hai dei computers, <a href='%{unplugged_url}'>prova
     queste lezioni</a> nella tua classe.
   dashboard_curriculum: Curriculum
@@ -928,7 +929,7 @@
     che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo.
     Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa
     pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
-  dashboard_announce_button_text: Ulteriori informazioni
+  dashboard_announce_button_text: Testare la funzionalità
   dashboard_announce_petition: Come insegnante, stai aprendo la strada per permettere
     ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso
     è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa
@@ -1070,6 +1071,7 @@
   cspunit6_name: I principi dell'informatica - Unità 6
   csp1_name: 'Unità 1: Internet'
   csp2_name: 'Unità 2: Informazioni digitali'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Test completo - 50 domande
   cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
   cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
@@ -1285,14 +1287,14 @@
     per le classi 2-5.
   course3_shortdescription_congrats: Pronti ad andare oltre? Gli studenti potranno
     approfondire gli argomenti di programmazione introdotti nei corsi precedenti per
-    trovare soluzioni flessibili per risolvere problemi più complessi. Alla fine di
-    questo corso, gli studenti saranno in grado di creare storie interattive e giochi
-    che potranno condividere con chiunque. Consigliato per classi 4-5.
+    trovare soluzioni a problemi più complessi. Alla fine di questo corso, gli studenti
+    saranno in grado di creare storie interattive e giochi che potranno condividere
+    con chiunque.
   course4_shortdescription_congrats: Pronti ad andare oltre? Gli studenti potranno
     approfondire gli argomenti di programmazione introdotti nei corsi precedenti per
     trovare soluzioni a problemi più complessi. Alla fine di questo corso, gli studenti
     saranno in grado di creare storie interattive e giochi che potranno condividere
-    con chiunque. Consigliato per classi 4-8.
+    con chiunque.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
@@ -1841,3 +1843,22 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Learn more
+  dashboard_announce_try_now_button: Try it now
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.

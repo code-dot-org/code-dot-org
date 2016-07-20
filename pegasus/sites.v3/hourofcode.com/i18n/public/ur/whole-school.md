@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # اپنے تمام اسکول کو شریک کرائیں
 
-اپنے تمام اسکولوں کو کوڈ کی گھڑی میں شرکت حاصل کرنے کے بارے میں معلومات یہاں سے جائیں گے ۔
-
+Information about getting whole schools to participate in the Hour of Code will go here.

@@ -38,7 +38,6 @@ class NetSimApi < Sinatra::Base
     }.each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
-
   end
 
   # For test, make it possible to override the usual configured API choices.
@@ -52,7 +51,7 @@ class NetSimApi < Sinatra::Base
   # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
     RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name,
-                   CDO.netsim_shard_expiry_seconds)
+      CDO.netsim_shard_expiry_seconds)
   end
 
   #
@@ -117,7 +116,7 @@ class NetSimApi < Sinatra::Base
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)/delete$} do |_shard_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
   #
@@ -139,7 +138,7 @@ class NetSimApi < Sinatra::Base
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/delete$} do |_shard_id, _table_name|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
   #
@@ -183,7 +182,7 @@ class NetSimApi < Sinatra::Base
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
   post %r{/v3/netsim/([^/]+)/delete$} do |_shard_id|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
   #
@@ -276,7 +275,7 @@ class NetSimApi < Sinatra::Base
   # @param [Hash] router - The new router we are validating
   # @return [String] a validation error, or nil if no problems were found
   def validate_router(shard_id, router)
-    return VALIDATION_ERRORS[:malformed] unless router.has_key?('routerNumber')
+    return VALIDATION_ERRORS[:malformed] unless router.key?('routerNumber')
     existing_routers = get_table(shard_id, TABLE_NAMES[:node]).
         to_a.select {|x| x['type'] == NODE_TYPES[:router]}
 
@@ -337,10 +336,10 @@ class NetSimApi < Sinatra::Base
     value.to_json
   end
   patch %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |_shard_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'POST'))
+    call(env.merge('REQUEST_METHOD' => 'POST'))
   end
   put %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |_shard_id, _table_name, _id|
-    call(env.merge('REQUEST_METHOD'=>'POST'))
+    call(env.merge('REQUEST_METHOD' => 'POST'))
   end
 
   # TEST-ONLY METHODS

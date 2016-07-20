@@ -364,15 +364,11 @@ Artist.prototype.drawBlocksOnCanvas = function (blocksOrCode, canvas) {
   var code;
   if (this.studioApp_.isUsingBlockly()) {
     var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
-    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
-    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    code = Blockly.Generator.xmlToCode('JavaScript', domBlocks);
   } else {
     code = blocksOrCode;
   }
   this.evalCode(code);
-  if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.clear();
-  }
   this.drawCurrentBlocksOnCanvas(canvas);
 };
 
@@ -752,7 +748,7 @@ Artist.prototype.execute = function () {
   // Reset the graphic.
   this.studioApp_.reset();
 
-  if (this.studioApp_.hasExtraTopBlocks() ||
+  if (this.studioApp_.hasUnwantedExtraTopBlocks() ||
       this.studioApp_.hasDuplicateVariablesInForLoops()) {
     // immediately check answer, which will fail and report top level blocks
     this.checkAnswer();

@@ -38,6 +38,36 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
  [<button>View Curriculum</button>](#lessons)
 
 
+<hr/>
+
+[col-33]
+
+<center><img src="/images/animated-examples/lessonplans.png" width="90%"></center>
+
+<div style="margin-top: 5px;">Daily lesson plans come with detailed instructions, activity guides, and assessments</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/binary.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">Students get hands on with concepts like binary and pixels through widgets</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/fieldofflowers.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">Students collaboratively program in groups using App Lab to create a digital scene</div>
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
+<hr/>
+
 ### <a name="features"></a>Features
 
 - Access to daily lesson plans, covering roughly 150 hours of material with linked activity guides and assessment support
@@ -50,23 +80,27 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 - Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos). If you are interested in licensing Code.org materials for commercial purposes, [contact us](https://code.org/contact).
 
 
+
+<p style="clear:both">&nbsp;</p>
+
+
 [<button>See App Lab in action</button>](/educate/applab) &nbsp;&nbsp; [<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
 ### Watch a video from the [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
 
-<div style="width: 30%; float: left; margin-right: 10px;">
+<div style="width: 30%; float: left; margin-right: 12px;">
 
 	<%=view :display_video_thumbnail, id: "images_pixels", video_code: "15aqFQQVBWU", play_button: 'center' %>
 
 </div>
 
-<div style="width: 30%; float: left; margin-right: 10px;">
+<div style="width: 30%; float: left; margin-right: 12px;">
 
 	<%=view :display_video_thumbnail, id: "digital_compression", video_code: "By30SCp-Tsw", play_button: 'center' %>
 
 </div>
 
-<div style="width: 30%; float: left; margin-right: 10px;">
+<div style="width: 30%; float: left; margin-right: 12px;">
 
 	<%=view :display_video_thumbnail, id: "the_internet", video_code: "ZhEf7e4kopM", play_button: 'center' %>
 
@@ -91,7 +125,7 @@ Several documents describe the overarching themes and direction of the course.
 ### Lessons
 *In response to feedback from our 2015-2016 pilot teachers, we are reordering, condensing, and clarifying lesson content. Units 1 - 3 have already been revised per pilot feedback and Units 4 - 6 will be revised in the fall.*
 
-All lessons are available at [curriculum.code.org/csp](curriculum.code.org/csp)
+All lessons are available at [curriculum.code.org/csp](https://curriculum.code.org/csp)
 
 | Link | Unit Description |
 | :------------------:|-----------|

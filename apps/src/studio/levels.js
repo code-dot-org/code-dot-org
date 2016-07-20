@@ -3040,9 +3040,10 @@ levels.js_hoc2015_change_setting = {
 };
 
 var js_hoc2015_event_free_markdown = [
-  '<span class="character-text">' + msg.hoc2015_event_free_instructions() + '</span>',
+  '<div class="js_hoc2015_event_free_markdown">',
+  '<p><span class="character-text">' + msg.hoc2015_event_free_instructions() + '</span></p>',
   '',
-  '<span class="instructions2">' + msg.hoc2015_event_free_instructions2() + '</span>',
+  '<p><span class="instructions2">' + msg.hoc2015_event_free_instructions2() + '</span></p>',
   '',
   '<details class="hoc2015">',
   '<summary>Example project ideas</summary>',
@@ -3077,7 +3078,6 @@ var js_hoc2015_event_free_markdown = [
   '<summary>More about the characters</summary>',
   '<p>Each character has a unique behavior:',
   '<br/><br/>',
-  '<span class="js_hoc2015_event_free_markdown">',
   '[pufferpig] <b>Puffer Pigs</b> roam around slowly<br/>',
   '[tauntaun] <b>Tauntauns</b> roam around at a normal speed<br/>',
   '[mynock] <b>Mynocks</b> fly around at a normal speed<br/>',
@@ -3085,12 +3085,12 @@ var js_hoc2015_event_free_markdown = [
   '[probot] <b>Probots</b> chase your droid quickly<br/>',
   '[rebelpilot] <b>Rebel Pilots</b> flee at a normal speed<br/>',
   '[mousedroid] <b>Mouse Droids</b> flee quickly<br/>',
-  '</span>',
   '<br/>',
   'You can change the speed of any character with the moveFast, moveNormal, and moveSlow commands.',
   '</p>',
   '',
-  '</details>'
+  '</details>',
+  '</div>',
 ].join('\r\n');
 
 levels.js_hoc2015_event_free = {

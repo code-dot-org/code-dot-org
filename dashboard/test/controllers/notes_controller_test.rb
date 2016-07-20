@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NotesControllerTest< ActionController::TestCase
+class NotesControllerTest < ActionController::TestCase
   test 'should get index' do
     get :index, key: 'maze_intro'
     assert_response :success

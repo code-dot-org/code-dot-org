@@ -1081,7 +1081,7 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
 
   // Update the log viewer's shard reference so it can get current data.
   if (this.routerLogModal_) {
-    this.routerLogModal_.setShard(shard);
+    this.routerLogModal_.onShardChange(shard, localNode);
   }
 
   // Shard changes almost ALWAYS require a re-render

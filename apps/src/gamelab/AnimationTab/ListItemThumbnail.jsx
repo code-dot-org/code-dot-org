@@ -4,7 +4,7 @@
 import React from 'react';
 import _ from 'lodash';
 import color from '../../color';
-import { getSourceUrl, METADATA_SHAPE } from '../animationMetadata';
+import * as PropTypes from '../PropTypes';
 import AnimationPreview from '../AnimationPicker/AnimationPreview';
 
 const staticStyles = {
@@ -45,7 +45,7 @@ const staticStyles = {
  */
 const ListItemThumbnail = React.createClass({
   propTypes: {
-    animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
+    animationProps: PropTypes.AnimationProps.isRequired,
     index: React.PropTypes.number,
     isSelected: React.PropTypes.bool
   },
@@ -94,9 +94,11 @@ const ListItemThumbnail = React.createClass({
       <div style={styles.root}>
         <div ref="wrapper" style={styles.wrapper}>
           <AnimationPreview
-              animation={this.props.animation}
+              animationProps={this.props.animationProps}
+              sourceUrl={this.props.animationProps.dataURI}
               width={this.state.previewSize}
               height={this.state.previewSize}
+              alwaysPlay={this.props.isSelected}
           />
           {this.getIndexBubble()}
         </div>

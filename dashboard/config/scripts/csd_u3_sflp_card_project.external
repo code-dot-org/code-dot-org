@@ -2,8 +2,6 @@ name 'CSD U3 SFLP Card Project'
 css 'unplugged'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Unit 3: Lesson 09 - Interactive Card Project
-
 # Overview
 
 In this cumulative project for Chapter 1, you will plan for and develop and an interactive greeting card using all of the programming techniques you have learned to this point.
@@ -18,11 +16,11 @@ In this cumulative project for Chapter 1, you will plan for and develop and an i
 
 # Vocab
 
-There is not new vocab words.
+None
 
 # Commands 
 
-There are no new commands.
+None
 
 # Resources
 

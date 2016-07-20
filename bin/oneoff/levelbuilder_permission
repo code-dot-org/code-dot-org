@@ -10,11 +10,6 @@
 
 require_relative '../../dashboard/config/environment'
 
-time_now = DateTime.now
 User.where(admin: true).find_each do |user|
-  UserPermission.create!(
-    user_id: user.id,
-    permission: UserPermission.LEVELBUILDER,
-    created_at: time_now,
-    updated_at: time_now)
+  user.permission = UserPermission::LEVELBUILDER
 end

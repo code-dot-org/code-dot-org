@@ -3,22 +3,22 @@ title 'title'
 description 'description here'
 css 'unplugged'
 markdown <<MARKDOWN
-## Unit 3: Lesson 15
+# Unit 3: Lesson 15
 
-# Background
+## Background
 In this lesson you'll learn the next step with using variables in programs by adding them to apps.  There are a few things you need to understand about where you create variables in your code and how you refer to them.  In this lesson we show you how to do it and you have to debug a few problems related to common issues that newcomers have with variables.
 
 You'll also use an *if* statement for the first time in this lesson in order to make a game change screens once the score reaches a certain value. 
 
 We examine the difference between the `=` operator and a new one `==`
 
-# Vocab
+## Vocab
 
 * Global Variables vs. Local Variables (Variable Scope)
 * The `==` (equal-equal) comparison operator
 * If statements
 
-# Lesson
+## Lesson
 * Simple Counter App uses a variable
 * Where you create your variables *matters*
 * Understanding variable scope - global vs. local
@@ -26,13 +26,10 @@ We examine the difference between the `=` operator and a new one `==`
 * Add *if* statements to a game
 * **Make your own clicker game** mini-project (see activity guide below)
 
-
-# Resources
+## Resources
  * Activity Guide - [The Clicker Game](https://docs.google.com/document/d/1NLv9y_XQMayjpd4U0brS61gLYRbpDiT-Cm5Z-3CEszQ)
 
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
