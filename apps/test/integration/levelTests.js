@@ -82,6 +82,9 @@ describe('Level tests', function () {
   var originalRender;
   var clock, tickInterval;
 
+  // Don't expect console.error to be used during any level test
+  testUtils.throwOnConsoleErrors();
+
   before(function (done) {
     this.timeout(15000);
 
@@ -176,7 +179,7 @@ describe('Level tests', function () {
 function runTestCollection(item) {
   var runLevelTest = require('./util/runLevelTest');
   // Append back the .js so that we can distinguish 2_1.js from 2_10.js when grepping
-  var path = item.path + '.js';
+  var path = item.path;
   var testCollection = item.data;
 
   var app = testCollection.app;

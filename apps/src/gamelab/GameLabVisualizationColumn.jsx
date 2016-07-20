@@ -52,7 +52,7 @@ var GameLabVisualizationColumn = function (props) {
 
 GameLabVisualizationColumn.propTypes = {
   finishButton: React.PropTypes.bool.isRequired,
-  instructionsInTopPane: BelowVisualization.propTypes.instructionsInTopPane,
+  instructionsInTopPane: React.PropTypes.bool.isRequired
 };
 
 module.exports = connect(function propsFromStore(state) {

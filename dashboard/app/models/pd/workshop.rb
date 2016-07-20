@@ -116,6 +116,10 @@ class Pd::Workshop < ActiveRecord::Base
     joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).distinct
   end
 
+  def self.find_by_section_code(section_code)
+    joins(:section).find_by(sections: {code: section_code})
+  end
+
   def self.in_state(state)
     case state
       when STATE_NOT_STARTED
@@ -142,7 +146,8 @@ class Pd::Workshop < ActiveRecord::Base
     self.started_at = Time.zone.now
     self.section = Section.create!(
       name: friendly_name,
-      user_id: self.organizer_id
+      user_id: self.organizer_id,
+      section_type: Section::TYPE_PD_WORKSHOP
     )
     self.save!
     self.section

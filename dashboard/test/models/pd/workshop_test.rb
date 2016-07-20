@@ -101,6 +101,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.start!
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
+    assert @workshop.section
+    assert_equal Section::TYPE_PD_WORKSHOP, @workshop.section.section_type
 
     @workshop.end!
     @workshop.reload
@@ -238,6 +240,15 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute_empty accidental_student_attendee.email
     assert accidental_student_attendee.teacher?
     assert_equal accidental_student_email, accidental_student_attendee.email
+  end
+
+  test 'find_by_section_code' do
+    section = create :section
+    assert_nil Pd::Workshop.find_by_section_code(section.code)
+
+    workshop = create :pd_workshop, section: section
+    assert_equal workshop, Pd::Workshop.find_by_section_code(section.code)
+    assert_nil Pd::Workshop.find_by_section_code('nonsense code')
   end
 
   private

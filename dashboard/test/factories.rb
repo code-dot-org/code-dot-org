@@ -185,6 +185,10 @@ FactoryGirl.define do
     game {Game.free_response}
   end
 
+  factory :playlab, :parent => Level, :class => Studio do
+    game {create(:game, app: Game::PLAYLAB)}
+  end
+
   factory :makerlab, :parent => Level, :class => Applab do
     game {Game.applab}
     properties{{makerlab_enabled: true}}
@@ -260,6 +264,10 @@ FactoryGirl.define do
 
     trait :never_autoplay_video_false do
       levels {[create(:level, :never_autoplay_video_false)]}
+    end
+
+    trait :playlab do
+      levels {[create(:playlab)]}
     end
 
     chapter do |script_level|

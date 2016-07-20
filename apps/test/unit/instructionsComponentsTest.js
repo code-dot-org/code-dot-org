@@ -15,6 +15,8 @@ function shallowRender(element) {
 }
 
 describe('MarkdownInstructions', function () {
+  testUtils.throwOnConsoleErrors();
+
   it('standard case had top padding and no left margin', function () {
     var dom = ReactTestUtils.renderIntoDocument(
       <div>
@@ -22,7 +24,7 @@ describe('MarkdownInstructions', function () {
           renderedMarkdown="md"
           markdownClassicMargins={false}
           inTopPane={false}
-          noInstrucstionsWhenCollapsed={true}
+          noInstructionsWhenCollapsed={true}
         />
       </div>
     );
@@ -38,7 +40,7 @@ describe('MarkdownInstructions', function () {
         <StatelessMarkdownInstructions
           renderedMarkdown="md"
           inTopPane={true}
-          noInstrucstionsWhenCollapsed={true}
+          noInstructionsWhenCollapsed={true}
         />
       </div>
     );
