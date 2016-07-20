@@ -1106,7 +1106,7 @@ Artist.prototype.setPattern = function (pattern) {
 };
 
 Artist.prototype.jumpTo_ = function (pos) {
-  var x, y;
+  let x, y;
   if (Array.isArray(pos)) {
     [x, y] = pos;
   } else {
