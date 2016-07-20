@@ -120,7 +120,7 @@ var Lightbulb = React.createClass({
       </g>
     ] : [];
 
-    var bulbDisplay = (<g className={ this.props.shouldAnimate ? "animate-hint" : "" }>
+    var bulbDisplay = (<g className={this.props.shouldAnimate ? "animate-hint" : ""}>
       <path fill={this.props.lit ? "#EFB834" : "#C9C9C9"} d="M453.775,353.156c0,24.012-57.189,128.942-61.414,132.265c-12.384,9.741-48.514,15.318-82.869,16.518
         c-8.362,0.292-16.619,0.325-24.403,0.096c-20.716-0.611-38.081-3.079-45.155-7.464c-6.896-4.274-74.477-119.24-74.477-141.415
         c0-89.195,64.542-161.502,144.159-161.502S453.775,263.961,453.775,353.156z"/>

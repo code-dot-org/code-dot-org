@@ -89,7 +89,7 @@ const GameButtons = props => (
     {!props.playspacePhoneFrame &&
     <ResetButton isMinecraft={props.isMinecraft}/>
     }
-    {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
+    {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
     {props.children}
   </ProtectedStatefulDiv>
 );
