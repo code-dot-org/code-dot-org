@@ -29,7 +29,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var color = require('../color');
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var turtleMsg = require('./locale');
 var levels = require('./levels');
 var Colours = require('./colours');
@@ -363,15 +363,11 @@ Artist.prototype.drawBlocksOnCanvas = function (blocksOrCode, canvas) {
   var code;
   if (this.studioApp_.isUsingBlockly()) {
     var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
-    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
-    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    code = Blockly.Generator.xmlToCode('JavaScript', domBlocks);
   } else {
     code = blocksOrCode;
   }
   this.evalCode(code);
-  if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.clear();
-  }
   this.drawCurrentBlocksOnCanvas(canvas);
 };
 

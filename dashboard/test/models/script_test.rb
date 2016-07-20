@@ -268,11 +268,11 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'scripts are hidden or not' do
-    visible_scripts = %w{20-hour flappy playlab infinity artist
-      course1 course2 course3 course4 frozen hourofcode algebra
-      cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6
-      starwarsblocks}.
-      map{|s| Script.find_by_name(s)}
+    visible_scripts = %w{
+      20-hour flappy playlab infinity artist course1 course2 course3 course4
+      frozen hourofcode algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5
+      cspunit6 starwarsblocks
+    }.map{|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
       assert !s.hidden?, "#{s.name} is hidden when it should not be"
@@ -358,7 +358,9 @@ class ScriptTest < ActiveSupport::TestCase
 
     script = scripts.first
     script.save! # Need to trigger an update because i18n strings weren't loaded
-    assert script.professional_learning_course
+    assert script.professional_learning_course?
+    assert_equal 'Test plc course', script.professional_learning_course
+    assert_equal 42, script.peer_reviews_to_complete
 
     unit = script.plc_course_unit
     assert_equal 'PLC Test', unit.unit_name

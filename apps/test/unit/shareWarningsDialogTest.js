@@ -1,6 +1,5 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
-testUtils.setupLocales('Applab');
 testUtils.setExternalGlobals();
 var React = require('react');
 var ReactTestUtils = require('react-addons-test-utils');
@@ -8,7 +7,7 @@ var ShareWarningsDialog = require('@cdo/apps/templates/ShareWarningsDialog');
 var ShareWarnings = require('@cdo/apps/templates/ShareWarnings');
 var AgeDropdown = require('@cdo/apps/templates/AgeDropdown');
 
-var msg = require('@cdo/apps/locale');
+var msg = require('@cdo/locale');
 
 describe('ShareWarningsDialog', function () {
   function isTagWithText(childComponent, tagName, text) {

@@ -1,5 +1,5 @@
 import React from 'react';
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 
 var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');

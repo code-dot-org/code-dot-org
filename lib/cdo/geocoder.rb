@@ -2,7 +2,6 @@ require 'geocoder'
 require 'redis'
 
 module Geocoder
-
   module Result
     class Base
       def to_solr(prefix='location_')
@@ -17,6 +16,8 @@ module Geocoder
     end
   end
 
+  MIN_ADDRESS_LENGTH = 10
+
   def self.find_potential_street_address(text)
     # Starting from the first number in the string, try parsing with Geocoder
     number_to_end_search = text.scan /([0-9]+.*)/
@@ -25,7 +26,7 @@ module Geocoder
     first_number_to_end = number_to_end_search.first.first
 
     return nil if Float(first_number_to_end) rescue false # is a number
-    return nil if first_number_to_end.length <= 6 # too short to be an address
+    return nil if first_number_to_end.length < MIN_ADDRESS_LENGTH # too short to be an address
 
     results = Geocoder.search(first_number_to_end)
     return nil if results.empty?
@@ -38,17 +39,13 @@ module Geocoder
 end
 
 module ReplaceFreegeoipHostModule
-
   def self.included base
     base.class_eval do
-
       def query_url(query)
         "#{protocol}://#{CDO.freegeoip_host}/json/#{query.sanitized_text}"
       end
-
     end
   end
-
 end
 Geocoder::Lookup::Freegeoip.send(:include,ReplaceFreegeoipHostModule) if CDO.freegeoip_host
 

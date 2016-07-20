@@ -14,11 +14,13 @@ post '/forms/:kind' do |kind|
   halt 403 if settings.read_only
   begin
     content_type :json
-    cache_control :private, :must_revalidate, :max_age=>0
+    cache_control :private, :must_revalidate, :max_age => 0
     form = insert_form(kind, params)
     JSON.load(form[:data]).merge(secret: form[:secret]).to_json
-  rescue FormError=>e
-    halt 400, {'Content-Type'=>'text/json'}, e.errors.to_json
+  rescue FormError => e
+    halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
+  rescue Sequel::UniqueConstraintViolation
+    halt 409
   end
 end
 
@@ -45,11 +47,11 @@ post "/forms/:kind/:secret" do |kind, secret|
   halt 403 if settings.read_only
   begin
     content_type :json
-    cache_control :private, :must_revalidate, :max_age=>0
+    cache_control :private, :must_revalidate, :max_age => 0
     forbidden! unless form = update_form(kind, secret, params)
     form[:data]
-  rescue FormError=>e
-    halt 400, {'Content-Type'=>'text/json'}, e.errors.to_json
+  rescue FormError => e
+    halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
   end
 end
 
@@ -62,7 +64,7 @@ post '/forms/:parent_kind/:parent_id/children/:kind' do |parent_kind, parent_id,
   begin
     content_type :json
     insert_form(kind, params, parent_id: parent_form[:id])[:data].to_json
-  rescue FormError=>e
+  rescue FormError => e
     form_error! e
   end
 end

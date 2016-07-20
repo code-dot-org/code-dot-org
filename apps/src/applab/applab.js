@@ -11,7 +11,7 @@ import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var applabMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
@@ -30,6 +30,7 @@ var dropletConfig = require('./dropletConfig');
 var makerDropletConfig = require('../makerlab/dropletConfig');
 var AppStorage = require('./appStorage');
 var FirebaseStorage = require('./firebaseStorage');
+import { getDatabase } from './firebaseUtils';
 var constants = require('../constants');
 var experiments = require('../experiments');
 var _ = require('lodash');
@@ -50,7 +51,6 @@ var executionLog = require('../executionLog');
 var annotationList = require('../acemode/annotationList');
 var Exporter = require('./Exporter');
 
-var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
 var reducers = require('./reducers');
 var actions = require('./actions');
@@ -59,15 +59,15 @@ var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 
-var applabConstants = require('./constants');
+import applabConstants, { ApplabInterfaceMode, DataView }  from './constants';
 var consoleApi = require('../consoleApi');
 
 var BoardController = require('../makerlab/BoardController');
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
+import { addTableName, deleteTableName, updateTableRecords, updateKeyValueData } from './redux/data';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
-var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
 /**
  * Create a namespace for the application.
@@ -366,12 +366,24 @@ function shouldRenderFooter() {
   return studioApp.share;
 }
 
+const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
+/**
+ * @returns the absolute url to the root of this project without a trailing slash.
+ *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
+ */
+function getProjectUrl() {
+  const match = location.href.match(PROJECT_URL_PATTERN);
+  if (match) {
+    return match[1];
+  }
+  return location.href; // i give up. Let's try this?
+}
+
 function renderFooterInSharedGame() {
   var divApplab = document.getElementById('divApplab');
   var footerDiv = document.createElement('div');
   footerDiv.setAttribute('id', 'footerDiv');
   divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
-
   var menuItems = [
     {
       text: commonMsg.reportAbuse(),
@@ -385,7 +397,7 @@ function renderFooterInSharedGame() {
     },
     {
       text: commonMsg.openWorkspace(),
-      link: location.href + '/view'
+      link: getProjectUrl() + '/view',
     },
     {
       text: commonMsg.copyright(),
@@ -564,7 +576,10 @@ Applab.init = function (config) {
   Applab.channelId = config.channel;
   Applab.firebaseName = config.firebaseName;
   Applab.firebaseAuthToken = config.firebaseAuthToken;
-  Applab.storage = window.dashboard.project.useFirebase() ? FirebaseStorage : AppStorage;
+  // Persist the useFirebaseForNewProject experiment from the url path to local storage
+  experiments.isEnabled('useFirebaseForNewProject');
+  var useFirebase = window.dashboard.project.useFirebase() || false;
+  Applab.storage = useFirebase ? FirebaseStorage : AppStorage;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
@@ -647,7 +662,7 @@ Applab.init = function (config) {
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
     // is stored in startHtml, not levelHtml.
-    if (studioApp.reduxStore.getState().pageConstants.isDesignModeHidden) {
+    if (!studioApp.reduxStore.getState().pageConstants.hasDesignMode) {
       config.level.levelHtml = '';
     }
 
@@ -752,7 +767,8 @@ Applab.init = function (config) {
 
       designMode.loadDefaultScreen();
 
-      designMode.toggleDesignMode(Applab.startInDesignMode());
+      studioApp.reduxStore.dispatch(changeInterfaceMode(
+        Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
       designMode.configureDragAndDrop();
 
@@ -763,9 +779,12 @@ Applab.init = function (config) {
 
   // Push initial level properties into the Redux store
   studioApp.setPageConstants(config, {
+    playspacePhoneFrame: !config.share,
     channelId: config.channel,
+    nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    isDesignModeHidden: !!config.level.hideDesignMode,
+    hasDataMode: useFirebase,
+    hasDesignMode: !config.level.hideDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
     isProjectLevel: !!config.level.isProjectLevel,
@@ -773,8 +792,7 @@ Applab.init = function (config) {
     isSubmitted: !!config.level.submitted,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
-    showDebugWatch: false,
-    playspacePhoneFrame: !config.share && experiments.isEnabled('phoneFrame')
+    showDebugWatch: false
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
@@ -787,7 +805,14 @@ Applab.init = function (config) {
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
   Applab.render();
+
+  studioApp.notifyInitialRenderComplete(config);
 };
+
+function changedToDataMode(state, lastState) {
+  return state.interfaceMode !== lastState.interfaceMode &&
+      state.interfaceMode === ApplabInterfaceMode.DATA;
+}
 
 /**
  * Subscribe to state changes on the store.
@@ -805,10 +830,31 @@ function setupReduxSubscribers(store) {
       onInterfaceModeChange(state.interfaceMode);
     }
 
+    // Simulate a data view change when switching into data mode.
+    const view = state.data && state.data.view;
+    const lastView = lastState.data && lastState.data.view;
+    const isDataMode = (state.interfaceMode === ApplabInterfaceMode.DATA);
+    if ((isDataMode && view !== lastView) || changedToDataMode(state, lastState)) {
+      onDataViewChange(state.data.view, state.data.tableName);
+    }
+
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       Applab.onIsRunningChange();
     }
   });
+
+  if (store.getState().pageConstants.hasDataMode) {
+    // Initialize redux's list of tables from firebase, and keep it up to date as
+    // new tables are added and removed. This strategy reads all existing table
+    // data only once.
+    const tablesRef = getDatabase(Applab.channelId).child('storage/tables');
+    tablesRef.on('child_added', snapshot => {
+      store.dispatch(addTableName(snapshot.key()));
+    });
+    tablesRef.on('child_removed', snapshot => {
+      store.dispatch(deleteTableName(snapshot.key()));
+    });
+  }
 }
 
 Applab.onIsRunningChange = function () {
@@ -1037,6 +1083,8 @@ Applab.runButtonClick = function () {
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
+    // adding finish button changes layout. force a resize
+    studioApp.onResize();
   }
 
   if (studioApp.editor) {
@@ -1213,10 +1261,13 @@ Applab.encodedFeedbackImage = '';
  * @param {ApplabInterfaceMode} mode
  */
 function onInterfaceModeChange(mode) {
+  var showDivApplab = (mode !== ApplabInterfaceMode.DESIGN);
+  Applab.toggleDivApplab(showDivApplab);
+
   if (mode === ApplabInterfaceMode.DESIGN) {
     studioApp.resetButtonClick();
   } else if (mode === ApplabInterfaceMode.CODE) {
-    utils.fireResizeEvent();
+    setTimeout(() => utils.fireResizeEvent(), 0);
     if (!Applab.isRunning()) {
       Applab.serializeAndSave();
       var divApplab = document.getElementById('divApplab');
@@ -1225,6 +1276,36 @@ function onInterfaceModeChange(mode) {
     } else {
       Applab.activeScreen().focus();
     }
+  }
+}
+
+/**
+ * Handle a view change within data mode.
+ * @param {DataView} view
+ */
+function onDataViewChange(view, tableName) {
+  if (!studioApp.reduxStore.getState().pageConstants.hasDataMode) {
+    throw new Error('onDataViewChange triggered without data mode enabled');
+  }
+  const storageRef = getDatabase(Applab.channelId).child('storage');
+  switch (view) {
+    case DataView.OVERVIEW:
+      storageRef.off();
+      return;
+    case DataView.PROPERTIES:
+      storageRef.off();
+      storageRef.child('keys').on('value', snapshot => {
+        studioApp.reduxStore.dispatch(updateKeyValueData(snapshot.val()));
+      });
+      return;
+    case DataView.TABLE:
+      storageRef.off();
+      storageRef.child(`tables/${tableName}/records`).on('value', snapshot => {
+        studioApp.reduxStore.dispatch(updateTableRecords(snapshot.val()));
+      });
+      return;
+    default:
+      return;
   }
 }
 
@@ -1350,8 +1431,14 @@ Applab.onPuzzleComplete = function (submit) {
   }
 
   var program;
+  var containedLevelResultsInfo = studioApp.getContainedLevelResultsInfo();
 
-  if (level.editCode) {
+  if (containedLevelResultsInfo) {
+    // Keep our this.testResults as always passing so the feedback dialog
+    // shows Continue (the proper results will be reported to the service)
+    Applab.testResults = studioApp.TestResults.ALL_PASS;
+    Applab.message = containedLevelResultsInfo.feedback;
+  } else if (level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -1375,6 +1462,7 @@ Applab.onPuzzleComplete = function (submit) {
       submitted: submit,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
+      containedLevelResultsInfo: containedLevelResultsInfo,
       onComplete: (submit ? Applab.onSubmitComplete : Applab.onReportComplete)
     });
   };
@@ -1482,7 +1570,8 @@ Applab.startInDesignMode = function () {
 };
 
 Applab.isInDesignMode = function () {
-  return $('#designWorkspace').is(':visible');
+  const mode = studioApp.reduxStore.getState().interfaceMode;
+  return ApplabInterfaceMode.DESIGN === mode;
 };
 
 function quote(str) {

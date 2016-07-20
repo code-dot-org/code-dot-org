@@ -40,19 +40,19 @@ def run(cmd, working_dir)
 end
 
 def run_rubocop(files)
-  run("bundle exec rubocop --force-exclusion #{files.join(" ")}", REPO_DIR)
+  run("bundle exec rubocop --force-exclusion #{files.join(' ')}", REPO_DIR)
 end
 
 def run_eslint(files)
-  run("./node_modules/.bin/eslint -c .eslintrc.js #{files.join(" ")}", APPS_DIR)
+  run("./node_modules/.bin/eslint -c .eslintrc.js #{files.join(' ')}", APPS_DIR)
 end
 
 def run_haml(files)
-  run("bundle exec haml-lint #{files.join(" ")}", REPO_DIR)
+  run("bundle exec haml-lint #{files.join(' ')}", REPO_DIR)
 end
 
 def run_scss(files)
-  run("bundle exec scss-lint #{files.join(" ")}", REPO_DIR)
+  run("bundle exec scss-lint #{files.join(' ')}", REPO_DIR)
 end
 
 def lint_failure(output)
@@ -61,7 +61,7 @@ def lint_failure(output)
   raise "Lint failed"
 end
 
-def do_linting()
+def do_linting
   modified_files = HooksUtils.get_staged_files
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
@@ -71,11 +71,11 @@ def do_linting()
   }
 
   todo.each do |func, files|
-    if !files.empty?
+    unless files.empty?
       stdout, stderr, status = func.call(files)
       lint_failure(stdout + stderr) unless status.success?
     end
   end
 end
 
-do_linting()
+do_linting

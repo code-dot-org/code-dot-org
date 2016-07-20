@@ -8,7 +8,7 @@ class FeatureModeController < ApplicationController
   # Max time in seconds for settings updates to take effect.
   MAX_UPDATE_TIME = 30
 
-  PLEASE_WAIT_MESSAGE = "Updating feature mode. Please wait #{MAX_UPDATE_TIME} seconds for " +
+  PLEASE_WAIT_MESSAGE = "Updating feature mode. Please wait #{MAX_UPDATE_TIME} seconds for " \
       'changes to take effect, then send a CloudFront cache invalidation.'
 
   # Shows the current or pending feature mode.
@@ -24,7 +24,7 @@ class FeatureModeController < ApplicationController
       @mode = @pending_mode
       flash[:notice] = PLEASE_WAIT_MESSAGE
     elsif @current_mode
-      @mode =  @current_mode
+      @mode = @current_mode
     else
       @mode = 'custom'
       flash[:alert] = 'The current feature flags do not match any of the pre-defined modes.'

@@ -3,7 +3,6 @@ import {assert} from '../util/configuredChai';
 var sinon = require('sinon');
 
 var testUtils = require('./../util/testUtils');
-testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 
 var dropletUtils = require('@cdo/apps/dropletUtils');
@@ -327,5 +326,39 @@ describe('filteredBlocksFromConfig', function () {
     assert.deepEqual(mergedBlocks, [
       {func: 'thirdBlock',  category: 'Math', type: 'value'}
     ]);
+  });
+});
+
+describe('getFirstParamFromCode', () => {
+  const getFirstParamFromCode = dropletUtils.__TestInterface.getFirstParamFromCode;
+
+  it("works with single quotes", () => {
+    const code = "myProperty('element1', ";
+    assert.equal(getFirstParamFromCode('myProperty', code), 'element1');
+  });
+
+  it('works with double quotes', () => {
+    const code = 'myProperty("element1", ';
+    assert.equal(getFirstParamFromCode('myProperty', code), 'element1');
+  });
+
+  it('should return null with mixed quotes', () => {
+    const code = 'myProperty("element1\', ';
+    assert.equal(getFirstParamFromCode('myProperty', code), null);
+  });
+
+  it('works with no trailing space', () => {
+    const code = "myProperty('element1',";
+    assert.equal(getFirstParamFromCode('myProperty', code), 'element1');
+  });
+
+  it('works with multiple `myProperty`s', () => {
+    const code = "myProperty('element1', 'width', 100); myProperty('element2', ";
+    assert.equal(getFirstParamFromCode('myProperty', code), 'element2');
+  });
+
+  it('works with non-quoted strings (variable names)', () => {
+    const code = "myProperty(object1, ";
+    assert.equal(getFirstParamFromCode('myProperty', code), 'object1');
   });
 });

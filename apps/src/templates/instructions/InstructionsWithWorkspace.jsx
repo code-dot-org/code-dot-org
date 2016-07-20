@@ -23,7 +23,8 @@ var InstructionsWithWorkspace = React.createClass({
     showInstructions: React.PropTypes.bool.isRequired,
     instructionsHeight: React.PropTypes.number.isRequired,
 
-    setInstructionsMaxHeightAvailable: React.PropTypes.func.isRequired
+    setInstructionsMaxHeightAvailable: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
   },
 
   getInitialState() {
@@ -101,8 +102,9 @@ var InstructionsWithWorkspace = React.createClass({
         {this.props.showInstructions && <TopInstructions/>}
         <CodeWorkspaceContainer
             ref="codeWorkspaceContainer"
-            topMargin={this.props.instructionsHeight}
-        />
+            topMargin={this.props.instructionsHeight}>
+          {this.props.children}
+        </CodeWorkspaceContainer>
       </span>
     );
   }

@@ -63,6 +63,17 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
 };
 
 /**
+ * Deletes the key-value pair.
+ * @param {string} key
+ * @param {function ()} onSuccess
+ * @param {function (string)} onError
+ */
+FirebaseStorage.deleteKeyValue = function (key, onSuccess, onError) {
+  const keyRef = getKeysRef(Applab.channelId).child(key);
+  keyRef.set(null).then(onSuccess, onError);
+};
+
+/**
  * Reads the record to determine whether it exists.
  * @param {string} tableName
  * @param {string} recordId
@@ -217,7 +228,8 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
     if (!recordExists) {
       onComplete(false);
     } else {
-      incrementRateLimitCounters()
+      loadConfig()
+        .then(() => incrementRateLimitCounters())
         .then(() => updateTableCounters(tableName, -1))
         .then(() => recordRef.set(null))
         .then(() => onComplete(true), onError);
@@ -265,6 +277,17 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
 
 FirebaseStorage.resetRecordListener = function () {
   getDatabase(Applab.channelId).off();
+};
+
+/**
+ * Delete an entire table from firebase storage.
+ * @param {string} tableName
+ * @param {function ()} onSuccess
+ * @param {function (string)} onError
+ */
+FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
+  const tableRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}`);
+  tableRef.set(null).then(onSuccess, onError);
 };
 
 /**

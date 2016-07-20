@@ -24,6 +24,13 @@ const styles = {
 };
 
 const AniGifPreview = React.createClass({
+  propTypes: {
+    url: React.PropTypes.string.isRequired,
+    instructionsInTopPane: React.PropTypes.bool.isRequired,
+    showInstructionsDialog: React.PropTypes.func.isRequired,
+    noVisualization: React.PropTypes.bool.isRequired,
+  },
+
   render() {
     return (
       <div
@@ -43,18 +50,17 @@ const AniGifPreview = React.createClass({
   }
 });
 
-AniGifPreview.propTypes = {
-  url: React.PropTypes.string.isRequired,
-  instructionsInTopPane: React.PropTypes.bool.isRequired,
-  showInstructionsDialog: React.PropTypes.func.isRequired
-};
-
 export default connect(state => ({
   url: state.pageConstants.aniGifURL,
   noVisualization: state.pageConstants.noVisualization,
   instructionsInTopPane: state.pageConstants.instructionsInTopPane
 }), dispatch => ({
   showInstructionsDialog() {
-    dispatch(openDialog(false, true));
+    dispatch(openDialog({
+      autoClose: false,
+      showHints: true,
+      aniGifOnly: true,
+      hintsOnly: false
+    }));
   }
 }))(Radium(AniGifPreview));

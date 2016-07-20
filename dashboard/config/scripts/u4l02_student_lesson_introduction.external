@@ -4,16 +4,16 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 4: Lesson 01 - JavaScript Objects
+# Unit 4: Lesson 01 - JavaScript Objects
 
-# Background
+## Background
 
 This lesson introduces JavaScript objects. It's not the first time you have come across objects in the course. You previously saw and used the `event` object for determining which keys were struck on the keyboard and the location of the mouse.
 
 In this lesson, you'll learn more about objects and practice creating and using objects yourself. Finally, you'll incorporate objects into an app for storing contact information for a number of people. 
 
+## Vocabulary
 
-# Vocabulary
 * **JavaScript object:** a type of variable that contains a group of related properties with assigned values.
 * **Property:** a named variable that's part of an object.
 * **Name/value pair:** term for a single property of an object and the value assigned to it.
@@ -28,19 +28,17 @@ person.age = 16;      // age is a <strong>named</strong> property with the <stro
 					  // the person object has 2 <strong>name/value pairs</strong>
 </pre>
 
-# Lesson
+## Lesson
 
 * Tutorial Video: JavaScript Objects
 * Introduction to creating and manipulating objects in App Lab.
 * Develop an app for storing contacts using an array of objects.
 
-
-# Resources
+## Resources
 
 * Tutorial Video: JavaScript Objects
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/ZunUF_WGMb4?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

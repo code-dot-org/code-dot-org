@@ -4,7 +4,8 @@ var rowStyle = require('./rowStyle');
 var OptionsSelectRow = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLSelectElement).isRequired,
-    handleChange: React.PropTypes.func
+    handleChange: React.PropTypes.func,
+    desc: React.PropTypes.node,
   },
 
   getInitialState: function () {

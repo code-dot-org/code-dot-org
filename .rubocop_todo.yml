@@ -14,13 +14,6 @@ Lint/AmbiguousOperator:
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: AlignWith, SupportedStyles, AutoCorrect.
-# SupportedStyles: keyword, variable, start_of_line
-Lint/EndAlignment:
-  Enabled: false
-
 # Offense count: 6
 Lint/IneffectiveAccessModifier:
   Enabled: false
@@ -65,11 +58,6 @@ Performance/StringReplacement:
 Performance/TimesMap:
   Enabled: false
 
-# Offense count: 35
-# Cop supports --auto-correct.
-Style/AlignArray:
-  Enabled: false
-
 # Offense count: 89
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedHashRocketStyle, EnforcedColonStyle, EnforcedLastArgumentHashStyle, SupportedLastArgumentHashStyles.
@@ -111,11 +99,6 @@ Style/CaseIndentation:
 Style/ClassAndModuleChildren:
   Enabled: false
 
-# Offense count: 57
-# Cop supports --auto-correct.
-Style/ClassMethods:
-  Enabled: false
-
 # Offense count: 80
 Style/ClassVars:
   Enabled: false
@@ -141,45 +124,11 @@ Style/ConditionalAssignment:
 Style/ConstantName:
   Enabled: false
 
-# Offense count: 214
-# Cop supports --auto-correct.
-Style/DefWithParentheses:
-  Enabled: false
-
-# Offense count: 41
-# Cop supports --auto-correct.
-Style/DeprecatedHashMethods:
-  Enabled: false
-
-# Offense count: 27
-# Cop supports --auto-correct.
-Style/EmptyLinesAroundAccessModifier:
-  Enabled: false
-
-# Offense count: 50
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: empty_lines, no_empty_lines
-Style/EmptyLinesAroundBlockBody:
-  Enabled: false
-
 # Offense count: 274
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: empty_lines, no_empty_lines
 Style/EmptyLinesAroundClassBody:
-  Enabled: false
-
-# Offense count: 23
-# Cop supports --auto-correct.
-Style/EmptyLinesAroundMethodBody:
-  Enabled: false
-
-# Offense count: 47
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: empty_lines, no_empty_lines
-Style/EmptyLinesAroundModuleBody:
   Enabled: false
 
 # Offense count: 64
@@ -231,16 +180,6 @@ Style/Lambda:
 Style/LeadingCommentSpace:
   Enabled: false
 
-# Offense count: 24
-# Cop supports --auto-correct.
-Style/LineEndConcatenation:
-  Enabled: false
-
-# Offense count: 59
-# Cop supports --auto-correct.
-Style/MethodCallParentheses:
-  Enabled: false
-
 # Offense count: 5
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -275,11 +214,6 @@ Style/MultilineTernaryOperator:
 Style/MutableConstant:
   Enabled: false
 
-# Offense count: 30
-# Cop supports --auto-correct.
-Style/NegatedIf:
-  Enabled: false
-
 # Offense count: 19
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, MinBodyLength, SupportedStyles.
@@ -298,11 +232,6 @@ Style/PredicateName:
 # Offense count: 7
 # Cop supports --auto-correct.
 Style/Proc:
-  Enabled: false
-
-# Offense count: 9
-# Cop supports --auto-correct.
-Style/RedundantException:
   Enabled: false
 
 # Offense count: 53
@@ -344,12 +273,6 @@ Style/SpaceAroundEqualsInParameterDefault:
 Style/SpaceAroundKeyword:
   Enabled: false
 
-# Offense count: 394
-# Cop supports --auto-correct.
-# Configuration parameters: AllowForAlignment.
-Style/SpaceAroundOperators:
-  Enabled: false
-
 # Offense count: 207
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -383,13 +306,6 @@ Style/SpaceInsideHashLiteralBraces:
 Style/StringLiterals:
   Enabled: false
 
-# Offense count: 12
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiteralsInInterpolation:
-  Enabled: false
-
 # Offense count: 30
 # Cop supports --auto-correct.
 # Configuration parameters: AllowNamedUnderscoreVariables.
@@ -401,11 +317,6 @@ Style/TrailingUnderscoreVariable:
 # Configuration parameters: ExactNameMatch, AllowPredicates, AllowDSLWriters, IgnoreClassMethods, Whitelist.
 # Whitelist: to_ary, to_a, to_c, to_enum, to_h, to_hash, to_i, to_int, to_io, to_open, to_path, to_proc, to_r, to_regexp, to_str, to_s, to_sym
 Style/TrivialAccessors:
-  Enabled: false
-
-# Offense count: 38
-# Cop supports --auto-correct.
-Style/UnneededInterpolation:
   Enabled: false
 
 # Offense count: 22

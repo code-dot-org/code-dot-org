@@ -16,7 +16,7 @@ class VolunteerTranslator
     result
   end
 
-  def self.languages()
+  def self.languages
     [
       'Afrikaans',
       'Albanian',
@@ -74,7 +74,7 @@ class VolunteerTranslator
     ]
   end
 
-  def self.receipt()
+  def self.receipt
     'volunteer_translator_notice'
   end
 

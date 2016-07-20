@@ -1,0 +1,5 @@
+name 'grade1_activity_groupTower'
+title 'Students build group tower'
+markdown <<MARKDOWN
+Students each build a floor of a tower, then put it all together to try to hold a heavy book.
+MARKDOWN

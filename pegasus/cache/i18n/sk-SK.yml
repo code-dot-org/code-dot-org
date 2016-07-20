@@ -686,7 +686,7 @@
   dashboard_navigation_section_pd: Profesionálny vývoj
   dashboard_navigation_section_speakers: Informatici ako <br/> hostia-rečníci
   dashboard_navigation_all_sections: "Študentské účty a pokrok"
-  dashboard_navigation_view_progress: Zobraziť pokrok
+  dashboard_navigation_view_progress: Pokrok
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Pridať Študentov
@@ -871,11 +871,11 @@
   dashboard_faq_k5: "Často kladené otázky – prvý stupeň"
   dashboard_announcements: Oznámenia
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
-    problem in computer science. Code Studio teachers are leading the way in educating
-    underrepresented minorities. Our annual survey shows record diversity in your
-    classrooms! Check out the numbers."
-  dashboard_announce_button_text: Dozvedieť sa viac
+  dashboard_announce_message: Want to help us test a new feature? We know it’s important
+    to encourage students to iterate and experiment, so we'll be adding an "unused
+    code" feature to allow students to run their code even when there are unattached
+    blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1014,6 +1014,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1737,3 +1738,22 @@
   infinity_shortcode: inf
   playlab_shortcode: hrať
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Learn more
+  dashboard_announce_try_now_button: Try it now
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.

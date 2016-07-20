@@ -2,22 +2,25 @@
 #
 # Table name: pd_enrollments
 #
-#  id                 :integer          not null, primary key
-#  pd_workshop_id     :integer          not null
-#  name               :string(255)      not null
-#  email              :string(255)      not null
-#  created_at         :datetime
-#  updated_at         :datetime
-#  code               :string(255)
-#  school             :string(255)
-#  school_district_id :integer
-#  school_zip         :integer
-#  school_type        :string(255)
-#  school_state       :string(255)
-#  user_id            :integer
+#  id                  :integer          not null, primary key
+#  pd_workshop_id      :integer          not null
+#  name                :string(255)      not null
+#  email               :string(255)      not null
+#  created_at          :datetime
+#  updated_at          :datetime
+#  school              :string(255)
+#  code                :string(255)
+#  school_district_id  :integer
+#  school_zip          :integer
+#  school_type         :string(255)
+#  school_state        :string(255)
+#  user_id             :integer
+#  survey_sent_at      :datetime
+#  completed_survey_id :integer
 #
 # Indexes
 #
+#  index_pd_enrollments_on_code                (code) UNIQUE
 #  index_pd_enrollments_on_pd_workshop_id      (pd_workshop_id)
 #  index_pd_enrollments_on_school_district_id  (school_district_id)
 #
@@ -30,16 +33,6 @@ class Pd::Enrollment < ActiveRecord::Base
   validates :name, :email, presence: true
   validates_confirmation_of :email
 
-  # The enrollment is from one of 2 sources:
-  #   1. Web form filled out by user - all school fields required.
-  #   2. Automatic association for a user who attends the workshop unenrolled.
-  validate :user_or_school_info_required
-  def user_or_school_info_required
-    return if self.user_id
-    errors.add(:school, 'is required') unless self.school
-    errors.add(:school_type, 'is required') unless self.school_type
-  end
-
   before_create :assign_code
   def assign_code
     self.code = unused_random_code
@@ -49,6 +42,7 @@ class Pd::Enrollment < ActiveRecord::Base
     user || User.find_by_email_or_hashed_email(self.email)
   end
 
+  # Create an enrollment entry for anyone in the workshop section, regardless of actual attendance
   def self.create_for_unenrolled_attendees(workshop)
     enrolled_user_ids = Set.new
     workshop.enrollments.each do |enrollment|
@@ -57,7 +51,8 @@ class Pd::Enrollment < ActiveRecord::Base
     end
 
     [].tap do |new_enrollments|
-      Pd::Attendance.for_workshop(workshop).distinct_teachers.each do |attendee|
+      next unless workshop.section
+      workshop.section.students.each do |attendee|
         next if enrolled_user_ids.include? attendee.id
 
         if attendee.email.blank?

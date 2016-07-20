@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 var color = require('../color');
 var AgeDropdown = require('./AgeDropdown');
 
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 
 /**
  * Dialog contents for when you visit a shred Applab page. If not signed in,

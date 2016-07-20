@@ -5,10 +5,16 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "markdown_instructions": "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://staging.code.org/curriculum/docs/web/k5online.css\"> \n \n### Unit 6 Challenge > What's your Challenge?  \n \n<br/> \n#### Enter the lesson you selected for your challenge in the text box below. \n \n##### From the curriculum\n\n- Day: 1 What is a robot / what makes a computer robotic?\n- Days: 2-3 Evaluate robot body designs and  algorithms that control robot behavior\n- Day: 4 Set up the Lego kit  \n- Day: 5 Build robot base\n- Day: 6-7 Introduce NXT brick features \n- Day: 8-9 Introduce NXT software\n- Day: 10-13 Program robot using tutorials (using sensors for input) \n- Day: 14 Describe RoboCup & RoboCupJunior  \n- Day: 15 Human robot tic-tac-toe \n- Days: 16-18 Program dancing robot\n- Days 19-23 Program rescue robot\n- Days 24-33 Final projects and presentations\n\n##### Alternative Topics\n\n- Online simulations\n- Physical computing options\n- Projects and portfolios\n\n>Now that you've selected a challenge topic, **share what you plan to do** for your challenge.  <a href=\"http://forum.code.org/c/ecs/ecs-unit6\" target=_blank>Head to the Forums >> </a> \n \n<br>\n\n",
+    "markdown_instructions": "# Unit 6 Challenge > What's your Challenge?\r\n\r\n## Enter the lesson you selected for your challenge in the text box below.\r\n \r\nFrom the curriculum\r\n\r\n- Day: 1 What is a robot / what makes a computer robotic?\r\n- Days: 2-3 Evaluate robot body designs and  algorithms that control robot behavior\r\n- Day: 4 Set up the Lego kit\r\n- Day: 5 Build robot base\r\n- Day: 6-7 Introduce NXT brick features\r\n- Day: 8-9 Introduce NXT software\r\n- Day: 10-13 Program robot using tutorials (using sensors for input)\r\n- Day: 14 Describe RoboCup & RoboCupJunior\r\n- Day: 15 Human robot tic-tac-toe\r\n- Days: 16-18 Program dancing robot\r\n- Days 19-23 Program rescue robot\r\n- Days 24-33 Final projects and presentations\r\n\r\nAlternative Topics\r\n\r\n- Online simulations\r\n- Physical computing options\r\n- Projects and portfolios\r\n\r\nNow that you've selected a challenge topic, **share what you plan to do** for your challenge.\r\n\r\n#### <a href=\"http://forum.code.org/c/ecs/ecs-unit6\" target=_blank>Head to the Forums <i class=\"fa fa-external-link-square\" /></a>",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

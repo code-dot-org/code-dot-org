@@ -1,6 +1,6 @@
 import $ from 'jquery';
 var React = require('react');
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.

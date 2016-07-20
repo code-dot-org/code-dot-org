@@ -14,6 +14,7 @@
 #  login_type   :string(255)      default("email"), not null
 #  deleted_at   :datetime
 #  stage_extras :boolean          default(FALSE), not null
+#  section_type :string(255)
 #
 # Indexes
 #
@@ -29,7 +30,7 @@ class Section < ActiveRecord::Base
   has_many :followers, dependent: :restrict_with_error
   accepts_nested_attributes_for :followers
 
-  has_many :students, through: :followers, source: :student_user
+  has_many :students, -> { order('name')}, through: :followers, source: :student_user
   accepts_nested_attributes_for :students
 
   validates :name, presence: true
@@ -38,6 +39,11 @@ class Section < ActiveRecord::Base
 
   LOGIN_TYPE_PICTURE = 'picture'
   LOGIN_TYPE_WORD = 'word'
+
+  TYPES = [
+    TYPE_PD_WORKSHOP = 'pd_workshop'
+  ]
+  validates_inclusion_of :section_type, in: TYPES, allow_nil: true
 
   def user_must_be_teacher
     errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER

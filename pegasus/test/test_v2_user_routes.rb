@@ -68,7 +68,6 @@ class V2UserRoutesTest < Minitest::Test
           JSON.parse(@pegasus.last_response.body)
         )
       end
-
     end
 
     # Keys included in each student object returned by the /v2/students endpoint
@@ -79,7 +78,7 @@ class V2UserRoutesTest < Minitest::Test
     def expected_v2_students_hash_for(user)
       {}.tap do |expect|
         V2_STUDENTS_KEY_LIST.each do |key|
-          expect[key.to_s] = user.has_key?(key) ? user[key] : nil
+          expect[key.to_s] = user.key?(key) ? user[key] : nil
         end
       end
     end
@@ -121,7 +120,7 @@ class V2UserRoutesTest < Minitest::Test
     def expected_v2_students_id_hash_for(user)
       {}.tap do |expect|
         V2_STUDENTS_ID_KEY_LIST.each do |key|
-          expect[key.to_s] = user.has_key?(key) ? user[key] : nil
+          expect[key.to_s] = user.key?(key) ? user[key] : nil
         end
       end
     end
@@ -227,6 +226,5 @@ class V2UserRoutesTest < Minitest::Test
     def with_role(role)
       Documents.any_instance.stubs(:dashboard_user_id).returns(role.nil? ? nil : role[:id])
     end
-
   end
 end

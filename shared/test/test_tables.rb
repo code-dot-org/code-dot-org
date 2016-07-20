@@ -113,13 +113,13 @@ class TablesTest < Minitest::Test
     create_channel
 
     data1 = {
-      'table1' => [{'name'=> 'trevor'}, {'name'=>'alex'}],
-      'table2' => [{'word'=> 'cow'}, {'word'=>'pig'}],
+      'table1' => [{'name' => 'trevor'}, {'name' => 'alex'}],
+      'table2' => [{'word' => 'cow'}, {'word' => 'pig'}],
     }
 
     data2 = {
-      'table1' => [{'city'=> 'SFO'}, {'city'=>'SEA'}],
-      'table2' => [{'state'=> 'CA', 'country'=> 'USA'}, {'state'=>'MT', 'country'=> 'USA'}],
+      'table1' => [{'city' => 'SFO'}, {'city' => 'SEA'}],
+      'table2' => [{'state' => 'CA', 'country' => 'USA'}, {'state' => 'MT', 'country' => 'USA'}],
     }
 
     # Test basic populating
@@ -268,7 +268,7 @@ class TablesTest < Minitest::Test
     csv_filename = File.expand_path('../roster.csv', __FILE__)
     import(csv_filename)
 
-    result_body = export().body.split("\n")
+    result_body = export.body.split("\n")
     original_body = File.read(csv_filename).split("\n")
 
     result_columns = result_body[0]
@@ -294,8 +294,8 @@ class TablesTest < Minitest::Test
     assert_equal [], TableType.table_names(decrypted_channel_id)
 
     data1 = {
-      'table1' => [{'name'=> 'trevor'}, {'name'=>'alex'}],
-      'table2' => [{'word'=> 'cow'}, {'word'=>'pig'}],
+      'table1' => [{'name' => 'trevor'}, {'name' => 'alex'}],
+      'table2' => [{'word' => 'cow'}, {'word' => 'pig'}],
     }
 
     populate_table(data1, true)
@@ -411,7 +411,7 @@ class TablesTest < Minitest::Test
     post "/v3/import-shared-tables/#{@channel_id}/#{@table_name}", "import_file" => import_file
   end
 
-  def export()
+  def export
     get "/v3/export-shared-tables/#{@channel_id}/#{@table_name}"
   end
 

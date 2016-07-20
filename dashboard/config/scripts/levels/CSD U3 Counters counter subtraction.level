@@ -41,7 +41,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Counting Down\r\n\r\nSometimes you won't want to count up, you'll want to count down. You can **subtract** from a variable's value just as easily as you add. ![](https://images.code.org/8b98effa437da54090926c3451af204d-image-1465325587949.52.49 PM.png)\r\n\r\n\t// Counter Pattern, Counting Down\r\n    counter = counter - 1;\r\n\r\nKeep getting practice using counters to animate, but this time try counting down.\r\n# Do This\r\n\r\nThis program uses the counter pattern with a variable called `xPos`.\r\n\r\n* The square currently **goes off the right side** of the screen\r\n* **Change the program** so that the square **goes off the left side of the screen** instead.\r\n\r\n",
+    "markdown_instructions": "# Counting Down\r\n\r\nSometimes you won't want to count up, you'll want to count down. You can **subtract** from a variable's value just as easily as you add. ![](https://images.code.org/8b98effa437da54090926c3451af204d-image-1465325587949.52.49 PM.png)\r\n\r\n\t// Counter Pattern, Counting Down\r\n    counter = counter - 1;\r\n\r\nKeep getting practice using counters to animate, but this time try counting down.\r\n# Do This\r\n\r\nThis program uses the counter pattern with a variable called `xPos`.\r\n\r\n* The square currently starts on the left side and **goes off the right side** of the screen\r\n* **Change the program** so that the square starts on the right side and **goes off the left side of the screen** instead.\r\n\r\n",
     "start_blocks": "var xPos = 200;\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  rect(xPos, 200, 10, 10);\r\n  xPos = xPos + 1;\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -64,7 +64,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

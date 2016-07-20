@@ -1,7 +1,6 @@
 import {assert} from '../../util/configuredChai';
 
 let testUtils = require('../../util/testUtils');
-testUtils.setupLocale('calc');
 
 let LevelModel = require('@cdo/apps/craft/game/LevelMVC/LevelModel.js');
 

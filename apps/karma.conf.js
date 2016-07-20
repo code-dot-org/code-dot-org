@@ -1,14 +1,15 @@
-var webpackConfig = require('./webpack.config');
+var webpackConfig = require('./webpack').karmaConfig;
 var webpack = require('webpack');
 var _ = require('lodash');
+var envConstants = require('./envConstants');
 
 var PORT = 9876;
 
 var reporters = ['mocha'];
-if (process.env.CIRCLECI) {
+if (envConstants.CIRCLECI) {
   reporters.push('junit');
 }
-if (process.env.COVERAGE === '1') {
+if (envConstants.COVERAGE) {
   reporters.push('coverage');
 }
 
@@ -44,26 +45,10 @@ module.exports = function (config) {
       "test/index.js": ["webpack", "sourcemap"],
       "test/integration-tests.js": ["webpack", "sourcemap"],
       "test/unit-tests.js": ["webpack", "sourcemap"],
+      "test/code-studio-tests.js": ["webpack", "sourcemap"],
     },
 
-    webpack: _.extend({}, webpackConfig, {
-      devtool: 'inline-source-map',
-      externals: {
-        "johnny-five": "var JohnnyFive",
-        "playground-io": "var PlaygroundIO",
-        "chrome-serialport": "var ChromeSerialport",
-        "blockly": "this Blockly",
-      },
-      plugins: [
-        new webpack.ProvidePlugin({React: 'react'}),
-        new webpack.DefinePlugin({
-          IN_UNIT_TEST: JSON.stringify(true),
-          'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-          PISKEL_DEVELOPMENT_MODE: false
-        }),
-      ]
-    }),
+    webpack: webpackConfig,
     webpackMiddleware: {
       noInfo: true
     },
@@ -81,7 +66,7 @@ module.exports = function (config) {
     reporters: reporters,
 
     junitReporter: {
-      outputDir: process.env.CIRCLECI ? process.env.CIRCLE_TEST_REPORTS : '',
+      outputDir: envConstants.CIRCLECI ? envConstants.CIRCLE_TEST_REPORTS : '',
     },
     coverageReporter: {
       dir: 'coverage',
@@ -112,7 +97,7 @@ module.exports = function (config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [
-      process.env.BROWSER || 'PhantomJS'
+      envConstants.BROWSER || 'PhantomJS'
     ],
 
 

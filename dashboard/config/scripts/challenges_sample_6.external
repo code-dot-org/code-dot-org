@@ -2,7 +2,7 @@ name 'challenges sample 6'
 title 'Life Science Challenges'
 description 'Give these a try'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/challenges.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/challenges.css">
 
 <div class="challengeSet">
 <h3>Physical Science Challenge 1</h3>

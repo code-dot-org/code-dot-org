@@ -1,5 +1,5 @@
 import React from 'react';
-import msg from '../locale';
+import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import commonStyles from '../commonStyles';
@@ -49,20 +49,6 @@ RunButton.propTypes = {
   // minecraft depends on styles sheets in some cases, instead of inlined
   isMinecraft: React.PropTypes.bool
 };
-if (process.env.NODE_ENV === 'development') {
-  RunButton.displayName = 'RunButton';
-  RunButton.styleGuideExamples = {
-    description: 'The run button',
-    examples: [
-      {
-        description: 'You have to explicitly set display: block to make this show up.',
-        props: null,
-      },
-    ],
-  };
-}
-
-
 
 export const ResetButton = Radium(props => (
   <button
@@ -85,19 +71,6 @@ ResetButton.propTypes = {
   // minecraft depends on styles sheets in some cases, instead of inlined
   isMinecraft: React.PropTypes.bool
 };
-
-if (process.env.NODE_ENV === 'development') {
-  ResetButton.displayName = 'ResetButton';
-  ResetButton.styleGuideExamples = {
-    description: 'The reset button',
-    examples: [
-      {
-        description: 'You have to explicitly set display: block to make this show up.',
-        props: {style: {display: 'block'}},
-      },
-    ],
-  };
-}
 
 /**
  * A set of game buttons that consist of a run/reset button, and potentially a
@@ -124,7 +97,8 @@ GameButtons.propTypes = {
   hideRunButton: React.PropTypes.bool,
   instructionsInTopPane: React.PropTypes.bool,
   isMinecraft: React.PropTypes.bool,
-  playspacePhoneFrame: React.PropTypes.bool
+  playspacePhoneFrame: React.PropTypes.bool,
+  children: React.PropTypes.node,
 };
 
 export default connect(state => ({
@@ -133,3 +107,25 @@ export default connect(state => ({
   isMinecraft: state.pageConstants.isMinecraft,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
 }))(GameButtons);
+
+
+if (BUILD_STYLEGUIDE) {
+  RunButton.displayName = 'RunButton';
+  ResetButton.displayName = 'ResetButton';
+  module.exports.styleGuideExamples = storybook => {
+    storybook
+      .storiesOf('RunButton', module)
+      .addWithInfo(
+        'The run button',
+        'This button is used for running programs',
+        () => <RunButton/>
+      );
+    storybook
+      .storiesOf('ResetButton', module)
+      .addWithInfo(
+        'The reset button',
+        'You have to explicitly set display: block to make this show up. It is hidden by default?!',
+        () => <ResetButton style={{display: 'block'}}/>
+      );
+  };
+}

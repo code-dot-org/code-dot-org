@@ -33,7 +33,7 @@ module.exports = FeedbackUtils;
 var utils = require('./utils');
 var _ = require('lodash');
 var codegen = require('./codegen');
-var msg = require('./locale');
+var msg = require('@cdo/locale');
 var dom = require('./dom');
 var xml = require('./xml');
 var FeedbackBlocks = require('./feedbackBlocks');
@@ -83,11 +83,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   options.level = options.level || {};
 
-  // Tracking event for level newly completed
-  if (options.response && options.response.new_level_completed) {
-    trackEvent('Puzzle', 'Completed', options.response.level_path, options.response.level_attempts);
-  }
-
   var hadShareFailure = (options.response && options.response.share_failure);
   // options.response.level_source is the url that we are sharing; can't
   // share without it
@@ -100,9 +95,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   var sharingDiv = (canContinue && showingSharing) ? this.createSharingDiv(options) : null;
   var showCode = displayShowCode ? this.getShowCodeElement_(options) : null;
   var shareFailureDiv = hadShareFailure ? this.getShareFailure_(options) : null;
-  if (hadShareFailure) {
-    trackEvent('Share', 'Failure', options.response.share_failure.type);
-  }
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
     feedbackBlocks = new FeedbackBlocks(
@@ -113,7 +105,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   }
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
-  var feedbackMessage = this.getFeedbackMessage_(options);
+  var feedbackMessage = this.getFeedbackMessageElement_(options);
 
   if (feedbackMessage) {
     feedback.appendChild(feedbackMessage);
@@ -176,12 +168,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   // get the topmost missing recommended block, if it exists, to be
   // added to the queue of contextual hints. If the user views the block
   // in the dialog, mark it as seen and add it to the list as such.
-  var missingRecommendedBlockHints = this.getMissingBlocks_(recommendedBlocks, 1)
-    .blocksToDisplay
-    .map(function (block) {
-      block.alreadySeen = false;
-      return block;
-    });
+  var missingRecommendedBlockHints = this.getMissingBlockHints(recommendedBlocks);
   var markContextualHintsAsSeen = function () {
     missingRecommendedBlockHints.filter(function (hint) {
       return feedbackBlocks && feedbackBlocks.xml && feedbackBlocks.xml.indexOf(hint.blockDisplayXML) > -1;
@@ -258,7 +245,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
       // Generate a generic feedback message to display when we show the
       // feedback block
-      var genericFeedback = this.getFeedbackMessage_({
+      var genericFeedback = this.getFeedbackMessageElement_({
         message: msg.tryBlocksBelowFeedback()
       });
 
@@ -300,7 +287,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         }
       });
     }
-
   }
 
   if (continueButton) {
@@ -454,19 +440,20 @@ FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
         options.response.hint;
 };
 
-// This returns a document element with the appropriate feedback message.
-// The message will be one of the following, from highest to lowest precedence:
-// 0. Failure override message specified on level (options.level.failureMessageOverride)
-// 1. Message passed in by caller (options.message).
-// 2. Message from dashboard database (options.response.hint).
-// 3. Header message due to dashboard text check fail (options.response.share_failure).
-// 4. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
-//    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
-// 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
-//    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
-FeedbackUtils.prototype.getFeedbackMessage_ = function (options) {
-  var feedback = document.createElement('p');
-  feedback.className = 'congrats';
+/**
+ * Generates an appropriate feedback message
+ * The message will be one of the following, from highest to lowest precedence:
+ * 0. Failure override message specified on level (options.level.failureMessageOverride)
+ * 1. Message passed in by caller (options.message).
+ * 2. Message from dashboard database (options.response.hint).
+ * 3. Header message due to dashboard text check fail (options.response.share_failure).
+ * 4. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
+ *    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
+ * 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
+ *    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
+ * @return {string} message
+ */
+FeedbackUtils.prototype.getFeedbackMessage = function (options) {
   var message;
 
   // If a message was explicitly passed in, use that.
@@ -622,7 +609,18 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function (options) {
         break;
     }
   }
+  return message;
+};
 
+/**
+ * @returns {element} a document element with the appropriate feedback message.
+ * @see FeedbackUtils.prototype.getFeedbackMessage
+ */
+FeedbackUtils.prototype.getFeedbackMessageElement_ = function (options) {
+  var feedback = document.createElement('p');
+  feedback.className = 'congrats';
+
+  let message = this.getFeedbackMessage(options);
   $(feedback).text(message);
 
   // Update the feedback box design, if the hint message came from server.
@@ -803,8 +801,9 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
 
 /**
  * Determines whether the user can proceed to the next level, based on the level feedback
- * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by StudioApp.getTestResults().
+ * @param {Object} options
+ * @param {number} options.feedbackType Test results (a constant property
+ *     of this.TestResults).false
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
@@ -963,7 +962,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function (Dialog, hideIcon
  */
 FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   var textBoxStyle = {
-    'margin-bottom': '10px'
+    marginBottom: 10
   };
   var contentDiv = ReactDOM.render(
     <div>
@@ -1175,6 +1174,21 @@ FeedbackUtils.prototype.getCountableBlocks_ = function () {
   var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
   var blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
   return blocks;
+};
+
+/**
+ * Returns a list of zero or one objects representing blocks from the
+ * set of passed blocks that are missing from the user's code and should
+ * be presented to the user as hints.
+ * @param {!TestableBlock[]} blocks
+ */
+FeedbackUtils.prototype.getMissingBlockHints = function (blocks) {
+  return this.getMissingBlocks_(blocks, 1)
+    .blocksToDisplay
+    .map(function (block) {
+      block.alreadySeen = false;
+      return block;
+    });
 };
 
 /**

@@ -1,24 +1,18 @@
 name 'CSPPD2 lesson 1'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
-### Welcome to the Course > Exploring the lesson
+# Welcome to the Course > Exploring the lesson
 
-<br>
-<br>
 Let's start by checking out the first lesson from Unit 1, where students think about computing innovations that impact their lives. Read on below for the first page of the lesson, which provides an overview. You can [access the full lesson here,](https://docs.google.com/document/d/1nWrpzSNPgx_D7Q7rm2j4UdCB26ggyXaeta-MWr9zYPs/edit) or see the [entire unit on Code Studio](https://studio.code.org/s/cspunit1/). 
-<br><br>
 
->#### Reflect
+>## Reflect
 While you read over the lesson, think about what you already know about CS Principles-- the goals of the course, the topics covered, the lessons you've already seen.  **How will this lesson help set your students up to think about the topics in this course?** 
-<br><br>
+
 >If you want to see more details about the lesson, head over the the [full lesson plan](https://docs.google.com/document/d/1nWrpzSNPgx_D7Q7rm2j4UdCB26ggyXaeta-MWr9zYPs/edit).
 
-<br>
 On the next page you'll have space to ask questions and talk about the lesson.  
-<br><br> 
-<object data="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/zRPFvZdgjnVScD3/lesson%201.pdf" type="application/pdf" width="100%" height="600">unit 1 lesson 1</object>
-<br><br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
+<object data="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/zRPFvZdgjnVScD3/lesson%201.pdf" type="application/pdf" width="100%" height="600">unit 1 lesson 1</object>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
