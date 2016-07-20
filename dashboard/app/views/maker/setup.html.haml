@@ -134,6 +134,7 @@
       return navigator.platform.indexOf('Win') > -1
     }
 
+
     if (isChrome) {
       if (gtChrome33) {
         check('#is-chrome');
@@ -142,20 +143,30 @@
       }
       var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
       window.ChromeSerialport.extensionId = CHROME_APP_ID
-      window.ChromeSerialport.isInstalled(function (error) {
-        if (error) {
-          return;
-        }
-        check('#app-installed');
 
-        return getDevicePort().then(function(port) {
-          check('#board-plug');
-          connectToBoard(port).then(function(board) {
-            check('#board-connect');
+      spin('#app-installed');
+      try {
+        window.ChromeSerialport.isInstalled(function (error) {
+          if (error) {
+          alert('fail')
+            fail('#app-installed');
+            return;
+          }
+          check('#app-installed');
 
-          });
+          return getDevicePort().then(function(port) {
+            check('#board-plug');
+            spin('#board-connect');
+            connectToBoard(port).then(function(board) {
+              check('#board-connect');
+            }).catch(function(){fail('#board-connect');});
+          }).catch(function(){fail('#board-plug')});
         });
-      });
+      } catch (e) {
+        fail('#app-installed')
+      }
+    } else {
+      fail('#is-chrome');
     }
 
     if (isWindows()) {
@@ -164,7 +175,17 @@
 
   });
 
+  function fail(selector) {
+    $(selector).addClass('incomplete').removeClass('complete');
+    $(selector + ' i').removeClass('fa-spinner fa-spin').addClass('fa fa-times-circle');
+  }
+
+  function spin(selector) {
+    $(selector).removeClass('incomplete').addClass('complete');
+    $(selector + ' i').removeClass('fa-times-circle').addClass('fa-spinner fa-spin');
+  }
+
   function check(selector) {
     $(selector).removeClass('incomplete').addClass('complete');
-    $(selector + ' i').removeClass('fa-times-circle').addClass('fa-check-circle');
+    $(selector + ' i').removeClass('fa-times-circle fa-spinner fa-spin').addClass('fa-check-circle');
   }
