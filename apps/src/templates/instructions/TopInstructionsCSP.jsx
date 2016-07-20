@@ -65,7 +65,7 @@ var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
     embedViewLeftOffset: React.PropTypes.number.isRequired,
-    hasContainedLevels: React.PropTypes.bool.isRequired,
+    hasContainedLevels: React.PropTypes.bool,
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
