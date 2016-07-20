@@ -24,7 +24,7 @@ describe('forEveryBooleanPermutation', function () {
       expect([a]).to.deep.equal(expectedInvocations[0]);
       expectedInvocations.shift();
     });
-    expect(expectedInvocations).to.be.empty();
+    expect(expectedInvocations).to.be.empty;
   });
 
   it('invokes a function with two arguments four times...', function () {
@@ -38,7 +38,7 @@ describe('forEveryBooleanPermutation', function () {
       expect([a, b]).to.deep.equal(expectedInvocations[0]);
       expectedInvocations.shift();
     });
-    expect(expectedInvocations).to.be.empty();
+    expect(expectedInvocations).to.be.empty;
   });
 
   it('invokes a function with three arguments eight times...', function () {
@@ -56,7 +56,7 @@ describe('forEveryBooleanPermutation', function () {
       expect([a, b, c]).to.deep.equal(expectedInvocations[0]);
       expectedInvocations.shift();
     });
-    expect(expectedInvocations).to.be.empty();
+    expect(expectedInvocations).to.be.empty;
   });
 });
 
