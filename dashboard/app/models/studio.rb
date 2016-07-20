@@ -351,6 +351,9 @@ class Studio < Grid
     </value>
   </block>
 </category>
+<category name="Input">
+  <block type="studio_ask" />
+</category>
 <category name="Variables" custom="VARIABLE" />
 <category name="Functions" custom="PROCEDURE" />
 <category name="Functional variables" custom="FUNCTIONAL_VARIABLE" />

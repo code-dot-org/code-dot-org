@@ -436,6 +436,9 @@
             </statement>
           </block>
         </category>
+        <category name="Input">
+          <block type="studio_ask"/>
+        </category>
       </xml>
     </toolbox_blocks>
   </blocks>
