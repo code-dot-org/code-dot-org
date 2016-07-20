@@ -1,4 +1,5 @@
 var _ = require('lodash');
+import { randomValue } from '../utils';
 
 /**
  * An instantiable Artist API logic. The methods on this object are called by
@@ -11,6 +12,10 @@ var ArtistAPI = function () {
 };
 
 module.exports = ArtistAPI;
+
+ArtistAPI.prototype.random = function (values) {
+  return randomValue(values);
+};
 
 ArtistAPI.prototype.drawCircle = function (size, id) {
   for (var i = 0; i < 36; i++) {

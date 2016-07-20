@@ -1,6 +1,6 @@
 /* global define, $ */
 import Immutable from 'immutable';
-import constants from 'constants';
+import constants from './constants';
 
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
@@ -147,19 +147,19 @@ export function wrapNumberValidatorsForLevelBuilder() {
 }
 
 /**
- * Return a random key name from an object.
- *
- * Slightly modified from: http://stackoverflow.com/a/15106541
+ * Return a random value from an array
  */
-
-export function randomKey(obj) {
-  var keys = Object.keys(obj);
-  return keys[keys.length * Math.random() << 0];
+export function randomValue(values) {
+  let key = Math.floor(Math.random() * values.length);
+  return values[key];
 }
 
-exports.randomValue = function (arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-};
+/**
+ * Return a random key name from an object.
+ */
+export function randomKey(obj) {
+  return randomValue(Object.keys(obj));
+}
 
 /**
  * Generate a random identifier in a format matching the RFC-4122 specification.
