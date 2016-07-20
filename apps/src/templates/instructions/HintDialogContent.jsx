@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 var React = require('react');
-var msg = require('../../locale');
+var msg = require('@cdo/locale');
 var Lightbulb = require('../Lightbulb');
 var ReadOnlyBlockSpace = require('../ReadOnlyBlockSpace');
 

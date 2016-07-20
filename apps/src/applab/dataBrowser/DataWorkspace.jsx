@@ -5,7 +5,7 @@ import DataTable from './DataTable';
 import React from 'react';
 import PaneHeader, { PaneSection } from '../../templates/PaneHeader';
 import { connect } from 'react-redux';
-import msg from '../../locale';
+import msg from '@cdo/locale';
 import color from '../../color';
 
 const styles = {

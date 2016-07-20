@@ -1,7 +1,6 @@
 var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
-testUtils.setupLocalesDEPRECATED();
 var evalMsg = require('@cdo/apps/eval/locale');
 
 module.exports = {

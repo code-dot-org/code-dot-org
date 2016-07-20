@@ -7,7 +7,7 @@
 'use strict';
 
 var msg = require('./locale');
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 
 var GameLab = require('./GameLab');
 

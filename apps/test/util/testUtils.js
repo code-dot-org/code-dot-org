@@ -45,22 +45,6 @@ export function setExternalGlobals() {
 }
 
 /**
- * @deprecated Whever your locale is imported, use
- *   ```
- *   import msg from "@cdo/locale";
- *   ```
- * instead. When unit tests are run, this will automatically be aliased
- * to a special test module which loads the en-us locale.
- */
-export function setupLocalesDEPRECATED() {
-  // make sure Blockly is loaded
-  require('./frame')();
-  var context = require.context('../../build/package/js/en_us/', false, /.*_locale.*\.js$/);
-  context.keys().forEach(context);
-  assert(window.blockly.applab_locale);
-}
-
-/**
  * Generates an artist answer (which is just an ordered list of artist commands)
  * when given a function simulating the generated code. That function will
  * look something like the following:

@@ -1,6 +1,5 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
-testUtils.setupLocalesDEPRECATED();
 var BeeCell = require('@cdo/apps/maze/beeCell');
 
 describe("BeeCell", function () {

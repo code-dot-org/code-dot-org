@@ -1,7 +1,6 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
 
-testUtils.setupLocalesDEPRECATED();
 
 function setGlobals() {
   document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';

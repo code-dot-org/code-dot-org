@@ -1,6 +1,6 @@
 import Button from './Button';
 var React = require('react');
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 var Lightbulb = require('./Lightbulb');
 
 var DialogButtons = React.createClass({

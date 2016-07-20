@@ -1,7 +1,5 @@
-import {setupLocalesDEPRECATED} from '../../../util/testUtils';
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 import blockUtils from '@cdo/apps/block_utils';
-setupLocalesDEPRECATED();
 
 let _ = require('lodash');
 

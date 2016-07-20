@@ -3,7 +3,7 @@ import React from 'react';
 var Radium = require('radium');
 var studioApp = require('../StudioApp').singleton;
 var applabConstants = require('./constants');
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 
 const PHONE_MARGIN = 68;
 

@@ -18,7 +18,7 @@ var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
-var msg = require('../../locale');
+var msg = require('@cdo/locale');
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
