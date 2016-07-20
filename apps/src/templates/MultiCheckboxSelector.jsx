@@ -4,7 +4,7 @@ import Immutable from 'immutable';
 import color from '../color';
 
 const MARGIN = 10;
-const styles = {
+export const styles = {
   header: {
     color: color.purple,
     fontWeight: 'normal',
@@ -19,10 +19,10 @@ const styles = {
     position: 'relative',
     bottom: 4,
   },
-  screenList: {
+  list: {
     marginLeft: 0,
   },
-  screenListItem: {
+  listItem: {
     listStyleType: 'none',
     display: 'flex',
     marginBottom: MARGIN,
@@ -82,9 +82,9 @@ const MultiCheckboxSelector = Radium(React.createClass({
               onChange={this.toggleSelectAll}/>
           {this.props.header}
         </h2>
-        <ul style={styles.screenList}>
+        <ul style={styles.list}>
           {this.props.items.map((item, index) => (
-             <li style={styles.screenListItem} key={index}>
+             <li style={styles.listItem} key={index}>
                <input style={styles.checkbox}
                       type="checkbox"
                       checked={this.props.selected.includes(item)}
