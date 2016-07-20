@@ -9,14 +9,11 @@ right 'My understanding of these lessons has not changed'
 right 'I understand what these lessons are about less than I did before I started' 
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+# Unit 2 Overview > Checking In on Chunk 1
 
-### Unit 2 Overview > Checking In on Chunk 1
-
-<br/>
-#### Feelings about Chunk 1 
+## Feelings about Chunk 1
 
 Now that you've had a chance to learn a little more about the lessons in the first chunk of Unit 2, and seen a couple of resources to help explain the concepts covered, how are you feeling about what you see? 
-<br><br>
-*Again, there's no right or wrong answer, and absolutely no judgement here-- we're just trying to get a sense of how you feel about what's covered in the unit!* 
+
+*Again, there's no right or wrong answer, and absolutely no judgement here &mdash; we're just trying to get a sense of how you feel about what's covered in the unit!*
 MARKDOWN

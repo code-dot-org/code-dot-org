@@ -1,12 +1,9 @@
 name 'CSPPD2 chunk 1 lessons'
 css 'unplugged'
 markdown <<MARKDOWN
+# Chunk 1: Sending Binary Messages > Exploring the Lessons
 
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
-
-### Chunk 1: Sending Binary Messages > Exploring the Lessons
-
-#### Reviewing Lessons 2-5
+## Reviewing Lessons 2-5
 
 Below you'll find an the first page from lessons 2 - 5, which shows the lesson overview, summary, and resources. **Pay close attention to the resources, tools used in the lessons, and be sure to watch the videos-- there are teaching tips and content videos!** In adition to the teacher-facing lesson plan, be on the look out for the following resources: 
 
@@ -15,26 +12,22 @@ Below you'll find an the first page from lessons 2 - 5, which shows the lesson o
 - Lesson 4: internet simulator tool, tutorial video for internet simulator tool, teaching tips video, student worksheets
 - Lesson 5: concept video (physical internet), student worksheets, rubric 
 
->#### Reflect
+>## Reflect
 **While you read over this series of lessons, think about how they fit together and build off of one another.** 
 
-<br><br>
 On the next page you'll have space to ask questions and talk about the lessons.  
-<br><br>
 
 <object data="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/L44OHzJjkJhaqGT/chunk%201.pdf" type="application/pdf" width="100%" height="600">unit 1 chunk 1 (lessons 2-5)</object>
-<br><br>
-*having trouble viewing this pdf? [click here](https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/qPtxloOK1njJTNC/chunk1.pdf) to open it directly.* 
-<br><br>
 
->#### Lesson Plan Links
+*Having trouble viewing this pdf? [Click here](https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/qPtxloOK1njJTNC/chunk1.pdf) to open it directly.* 
+
+>## Lesson Plan Links
 >If you want to see more details about the lesson, head over the the full lesson plan:
 
->- [lesson 2](https://docs.google.com/document/d/1RVVx0mbGGZ0xjcWKAcUIfGGNVQZdxcMUN2WCtj0218M/edit)
-- [lesson 3](https://docs.google.com/document/d/1bpczHd6BzGw0f9VfLi-qnEAlSLjNw8MTzNLhkPnhD_k/edit)
-- [lesson 4](https://docs.google.com/document/d/1ugzY_KQjs6UlmmbNN7Jnoim3Cf5c7Vog-4ucRjBYLpo/edit)
-- [lesson 5](https://docs.google.com/document/d/1-LDUmoORyOh2vhQudW2esquQPtaJKt_PMg2naldSqR4/edit)
+>- [Lesson 2](https://docs.google.com/document/d/1RVVx0mbGGZ0xjcWKAcUIfGGNVQZdxcMUN2WCtj0218M/edit)
+- [Lesson 3](https://docs.google.com/document/d/1bpczHd6BzGw0f9VfLi-qnEAlSLjNw8MTzNLhkPnhD_k/edit)
+- [Lesson 4](https://docs.google.com/document/d/1ugzY_KQjs6UlmmbNN7Jnoim3Cf5c7Vog-4ucRjBYLpo/edit)
+- [Lesson 5](https://docs.google.com/document/d/1-LDUmoORyOh2vhQudW2esquQPtaJKt_PMg2naldSqR4/edit)
 
-<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

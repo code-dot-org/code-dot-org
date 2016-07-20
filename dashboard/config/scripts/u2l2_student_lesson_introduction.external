@@ -5,26 +5,21 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 2 - The Need for Addressing
+# Unit 2: Lesson 2 - The Need for Addressing
 
-# Background
+## Background
 
 How are computers able to access so much information on the internet? Computers send messages to and from each other through a network. One computer broadcasts a request to the network. Another sees the request and responds with information. How can we ensure the request and response get to the intended recipient? Over this lesson, you will begin to investigate how a message is broadcast over a network and how we can ensure a message is delivered to the right person.
 
-
-# Lesson
+## Lesson
 
 * Play Battleship unplugged
 * Play Battleship using an Internet simulator
 * Invent an communication system for use in the Battleship game
 
-
-# Resources
+## Resources
 
 * Handout: <a href="https://docs.google.com/document/d/1ORSPjpWEPeJR0Ctwqug44vdPO5d7Mq0A5JF8rntgpWc/edit" target="_blank"> Battleship Board and Rules </a>
 
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

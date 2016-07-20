@@ -12,7 +12,7 @@
     "step_mode": "0",
     "is_k1": "true",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/06_V2.gif",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "ideal": "6",
     "never_autoplay_video": "true",
     "disable_param_editing": "true",
@@ -27,6 +27,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you're having trouble, try writing down the steps on a piece of paper first.\",\r\n  \"hint_id\": \"K2.0_sequence_9_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nGo around the TNT to get me to the pig!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/fa04813e9451e0bc070af50bc01d4a6b-image-1467932582838.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,

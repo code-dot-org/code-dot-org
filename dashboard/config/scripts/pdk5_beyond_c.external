@@ -1,6 +1,5 @@
 name 'PDK5 Beyond C'
 title 'Beyond'
-css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
 ## What do I do now?

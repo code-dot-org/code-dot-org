@@ -22,6 +22,7 @@ var msg = require('../../locale');
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
+const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
 
 var MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
@@ -53,9 +54,7 @@ var styles = {
   },
   embedView: {
     height: undefined,
-    bottom: 0,
-    // Visualization is hard-coded on embed levels. Do the same for instructions position
-    left: 340
+    bottom: 0
   },
   containedLevelContainer: {
     minHeight: 200,
@@ -65,7 +64,8 @@ var styles = {
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
-    hasContainedLevels: React.PropTypes.bool.isRequired,
+    embedViewLeftOffset: React.PropTypes.number.isRequired,
+    hasContainedLevels: React.PropTypes.bool,
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
@@ -156,9 +156,15 @@ var TopInstructions = React.createClass({
   },
 
   render() {
-    const mainStyle = [styles.main, {
-      height: this.props.height - RESIZER_HEIGHT
-    }, this.props.isEmbedView && styles.embedView];
+    const mainStyle = [
+      styles.main,
+      {
+        height: this.props.height - RESIZER_HEIGHT
+      },
+      this.props.isEmbedView && Object.assign({}, styles.embedView, {
+        left: this.props.embedViewLeftOffset
+      })
+    ];
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -199,6 +205,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
+    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     puzzleNumber: state.pageConstants.puzzleNumber,
     stageTotal: state.pageConstants.stageTotal,

@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 <% if @country == 'la' %>
 
 # Resurse
@@ -14,13 +13,18 @@ nav: promote_nav
 ## Vídeo-uri  <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen></iframe>
 <
 
-p>[**De ce toti ar trebui sa invete sa programeze? Participa la Ora de Programare in Romania (5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
+p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
 
   
  <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe>
 <
 
 p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
+
+<% elsif @country == 'al' %> <iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 
 <% elsif @country == 'ca' %>
 
@@ -44,9 +48,38 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'nl' %>
+
+  
+  
+  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
+
+<% elsif @country == 'nz' %>
+
+  
+  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
+
+  
+  
+
+
+<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
+
 <% elsif @country == 'pk' %>
 
 اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
+<% elsif @country == 'ro' %>
+
+Va multumim pentru inregistrare, daca doriti materiale printate pentru promovarea evenimentului, echipa din Romania vi le poate trimite prin curier. Trebuie doar sa trimiteti un email la HOC@adfaber.org si sa le solicitati.
 
 <% elsif @country == 'uk' %>
 
@@ -58,7 +91,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 ## 1) Incercati tutorialele:
 
-Vom avea la dispozitie o varietate noua de tutoriale distractive, create de catre o varietate de parteneri. Noile tutoriale vor veni sa darame vechea campanie Hour of Code <%= campaign_date('full') %>.
+We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
 **Toate tutorialele Hour of Code:**
 
@@ -69,7 +102,7 @@ Vom avea la dispozitie o varietate noua de tutoriale distractive, create de catr
 
 ## 2) Planuieste de ce dispozitive ai nevoie
 
-Cea mai buna experienta Hour of Code are loc atunci cand ai la dispozitie calculatoare onectate la internet. Dar nu este necesar sa ai cate un calculator pentru fiecare elev, ci poti organiza o Ora de Programare faca niciun calculator.
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
   * **Testeaza tutorialele pe calculatoarele elevilor tutorials.** Asigurati-va ca functioneaza bine (cu sunet si video)).
   * **Vedeti pagina multumiri**pentru a vizualiza ceea ce elevii vad cand termina tutorialul. 
@@ -95,4 +128,3 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 # Additional resources coming soon!
 
 <% end %>
-

@@ -6,6 +6,7 @@ var CodeWritten = React.createClass({
   propTypes: {
     numLinesWritten: React.PropTypes.number.isRequired,
     totalNumLinesWritten: React.PropTypes.number.isRequired,
+    children: React.PropTypes.node,
   },
 
   render: function () {

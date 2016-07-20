@@ -40,19 +40,19 @@ def run(cmd, working_dir)
 end
 
 def run_rubocop(files)
-  run("bundle exec rubocop --force-exclusion #{files.join(" ")}", REPO_DIR)
+  run("bundle exec rubocop --force-exclusion #{files.join(' ')}", REPO_DIR)
 end
 
 def run_eslint(files)
-  run("./node_modules/.bin/eslint -c .eslintrc.js #{files.join(" ")}", APPS_DIR)
+  run("./node_modules/.bin/eslint -c .eslintrc.js #{files.join(' ')}", APPS_DIR)
 end
 
 def run_haml(files)
-  run("bundle exec haml-lint #{files.join(" ")}", REPO_DIR)
+  run("bundle exec haml-lint #{files.join(' ')}", REPO_DIR)
 end
 
 def run_scss(files)
-  run("bundle exec scss-lint #{files.join(" ")}", REPO_DIR)
+  run("bundle exec scss-lint #{files.join(' ')}", REPO_DIR)
 end
 
 def lint_failure(output)

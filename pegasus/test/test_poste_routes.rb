@@ -5,6 +5,9 @@ require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
 
 class PosteRoutesTest < Minitest::Test
+  EMAIL = 'fake_email@example.net'.freeze
+  HASHED_EMAIL = Digest::MD5.hexdigest(EMAIL).freeze
+
   describe 'Poste Routes' do
     before do
       FakeDashboard.use_fake_database
@@ -35,6 +38,131 @@ class PosteRoutesTest < Minitest::Test
         with_role FakeDashboard::ADMIN
         @pegasus.post "/v2/poste/send-message"
         assert_equal 200, @pegasus.last_response.status
+      end
+    end
+
+    describe 'GET /u/:id' do
+      before do
+        FakeDashboard.use_fake_database
+        $log.level = Logger::ERROR
+        @pegasus = Rack::Test::Session.new(
+          Rack::MockSession.new(MockPegasus.new, "studio.code.org")
+        )
+
+        @id = DB[:poste_deliveries].insert({
+          created_at: DateTime.now,
+          created_ip: '1.2.3.4',
+          contact_id: '1',
+          contact_email: EMAIL,
+          hashed_email: HASHED_EMAIL,
+          message_id: 1,
+          params: {}.to_json
+        })
+      end
+
+      it 'unsubscribes new contact' do
+        DB.transaction(rollback: :always) do
+          @pegasus.get "/u/#{Poste.encrypt(@id)}"
+          assert DB[:contacts].
+            where(hashed_email: HASHED_EMAIL)[:unsubscribed_at]
+          assert_equal 200, @pegasus.last_response.status
+        end
+      end
+
+      it 'unsubscribes existing contact' do
+        DB.transaction(rollback: :always) do
+          DB[:contacts].insert({
+            email: EMAIL,
+            hashed_email: HASHED_EMAIL,
+            name: 'existing contact',
+            created_at: DateTime.now,
+            created_ip: '1.2.3.4',
+            updated_at: DateTime.now,
+            updated_ip: '1.2.3.4'
+          })
+          @pegasus.get "/u/#{Poste.encrypt(@id)}"
+          assert DB[:contacts].
+            where(hashed_email: HASHED_EMAIL)[:unsubscribed_at]
+          assert_equal 200, @pegasus.last_response.status
+        end
+      end
+
+      it 'noops with 200 if bad poste_deliveries id' do
+        DB.transaction(rollback: :always) do
+          @pegasus.get "/u/#{Poste.encrypt(@id + 1)}"
+          assert DB[:contacts].where(hashed_email: HASHED_EMAIL).empty?
+          assert_equal 200, @pegasus.last_response.status
+        end
+      end
+    end
+
+    describe 'GET /unsubscribe/:email' do
+      before do
+        FakeDashboard.use_fake_database
+        $log.level = Logger::ERROR
+        @pegasus = Rack::Test::Session.new(
+          Rack::MockSession.new(MockPegasus.new, "studio.code.org")
+        )
+      end
+
+      it 'unsubscribes existing contact' do
+        DB.transaction(rollback: :always) do
+          DB[:contacts].insert({
+            email: EMAIL,
+            hashed_email: HASHED_EMAIL,
+            name: 'existing contact',
+            created_at: DateTime.now,
+            created_ip: '1.2.3.4',
+            updated_at: DateTime.now,
+            updated_ip: '1.2.3.4'
+          })
+          @pegasus.get "/unsubscribe/#{EMAIL}"
+          assert DB[:contacts].
+            where(hashed_email: HASHED_EMAIL)[:unsubscribed_at]
+          assert_equal 200, @pegasus.last_response.status
+        end
+      end
+
+      it 'noops with 200 for non-existing contact' do
+        DB.transaction(rollback: :always) do
+          @pegasus.get '/unsubscribe/bademail@example.com'
+          assert DB[:contacts].where(hashed_email: HASHED_EMAIL).empty?
+          assert_equal 200, @pegasus.last_response.status
+        end
+      end
+    end
+
+    describe 'GET /o/:id' do
+      before do
+        FakeDashboard.use_fake_database
+        $log.level = Logger::ERROR
+        @pegasus = Rack::Test::Session.new(
+          Rack::MockSession.new(MockPegasus.new, "studio.code.org")
+        )
+
+        @id = DB[:poste_deliveries].insert({
+          created_at: DateTime.now,
+          created_ip: '1.2.3.4',
+          contact_id: '1',
+          contact_email: EMAIL,
+          hashed_email: HASHED_EMAIL,
+          message_id: 1,
+          params: {}.to_json
+        })
+      end
+
+      it 'creates poste_opens row' do
+        DB.transaction(rollback: :always) do
+          @pegasus.get "/o/#{Poste.encrypt(@id)}"
+          assert DB[:poste_opens].where(delivery_id: @id).any?
+        end
+      end
+
+      it 'creates no poste_opens row with bad poste_deliveries id' do
+        DB.transaction(rollback: :always) do
+          @pegasus.get "/o/#{Poste.encrypt(@id + 1)}"
+          assert DB[:poste_opens].where(delivery_id: @id).empty?
+        end
       end
     end
 

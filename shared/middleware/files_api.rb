@@ -40,6 +40,10 @@ class FilesApi < Sinatra::Base
     teaches_student?(owner_user_id)
   end
 
+  def can_view_profane_or_pii_assets?(encrypted_channel_id)
+    owns_channel?(encrypted_channel_id) || admin?
+  end
+
   def file_too_large(quota_type)
     # Don't record a custom event since these events may be very common.
     record_metric('FileTooLarge', quota_type)
@@ -83,7 +87,7 @@ class FilesApi < Sinatra::Base
   end
 
   helpers do
-    %w(core.rb bucket_helper.rb animation_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb).each do |file|
+    %w(core.rb bucket_helper.rb animation_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
@@ -122,7 +126,7 @@ class FilesApi < Sinatra::Base
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
-
+    not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
     result[:body]
   end
 
@@ -269,13 +273,20 @@ class FilesApi < Sinatra::Base
 
   # PUT /v3/animations/<channel-id>/<filename>?src=<source-filename>
   #
-  # Create or replace an animation. We use this method so that IE9 can still
-  # upload by posting to an iframe.
+  # Create or replace an animation.
   #
   put %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type 'text/plain'
-    copy_file(endpoint, encrypted_channel_id, filename, request.GET['src'])
+    if request.content_type == 'image/png'
+      body = request.body.read
+      put_file(endpoint, encrypted_channel_id, filename, body)
+    elsif !request.GET['src'].nil?
+      # We use this method so that IE9 can still upload by posting to an iframe.
+      copy_file(endpoint, encrypted_channel_id, filename, request.GET['src'])
+    else
+      bad_request
+    end
   end
 
   #

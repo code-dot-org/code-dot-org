@@ -5,10 +5,16 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "markdown_instructions": "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://staging.code.org/curriculum/docs/web/k5online.css\">\n\n### Share Out and Submit > Submit Link\n\n<br/>\n####  Submit the Link for your Forum Post for Review\n\nYou've just shared your Challenge work on the forum. If you would like to receive payment for this online PD, please submit a link to that forum post here so we can review! \n\n<br>\nIn order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):\n<br><br>\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)\n",
+    "markdown_instructions": "# Share Out and Submit > Submit Link\r\n\r\n##  Submit the Link for your Forum Post for Review\r\n\r\nYou've just shared your Challenge work on the forum. If you would like to receive payment for this online PD, please submit a link to that forum post here so we can review! \r\n\r\nIn order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

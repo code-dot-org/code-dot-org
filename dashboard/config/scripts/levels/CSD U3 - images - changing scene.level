@@ -53,7 +53,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Images\r\n\r\nUse the animations tab to finish making all three sprites have fish images.\r\n\r\n<img src=\"https://images.code.org/378ccd3619527d94ac4aa72dd8f8c62c-image-1465579522594.gif\" style=\"width:300px;float:right\">\r\n\r\n# Do This\r\nYour goal is to finish the under water scene so all three sprites are fish like the example on the right. \r\n\r\n* There is a rectangle sprite already created for you for each fish.\r\n* Run the code to see how it works\r\n* Add a `setAnimation` command to change the look for the remaining two fish \r\n* Run it to see that your rectangle is now an image!\r\n\r\n# Til Animation Tab Works\r\nDownload and upload this images\r\n\r\n* <a href=\"https://images.code.org/d184b2eec22d42d7f8146b537fb9a567-image-1465579396616.png\" alt=\"orange fish\"> Orange Fish</a>\r\n* <a href=\"https://images.code.org/5a95a5b94c4c2234b493658832566d2e-image-1465579410234.png\" alt=\"blue fish\"> Blue Fish</a>\r\n* <a href=\"https://images.code.org/b44f888d692153d3825daa302c3f79e6-image-1465579376801.png\" alt=\"striped fish\"> Striped Fish</a>",
+    "markdown_instructions": "# Images\r\n\r\nUse the animations tab to finish making all three sprites fish images.\r\n\r\n<img src=\"https://images.code.org/378ccd3619527d94ac4aa72dd8f8c62c-image-1465579522594.gif\" style=\"width:300px;float:right\">\r\n\r\n# Do This\r\nYour goal is to finish the under water scene so all three sprites are fish like the example on the right. \r\n\r\n* There is a rectangle sprite already created for you for each fish.\r\n* Run the code to see how it works\r\n* Add a `setAnimation` command to change the look for the remaining two fish. \r\n* Run it to see that your rectangle is now an image!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -77,6 +77,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "project_template_level_name": "CSD U3 - fish template",
+    "start_animations": "{\r\n  \"orderedKeys\": [\"blue_fish\", \"orange_fish\", \"striped_fish\"],\r\n  \"propsByKey\": {\r\n    \"blue_fish\": {\r\n      \"name\": \"blue_fish\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/blue_fish.png\",\r\n      \"sourceSize\": {\"x\":135, \"y\": 88},\r\n      \"frameSize\": {\"x\":135, \"y\": 88},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"orange_fish\": {\r\n      \"name\": \"orange_fish\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/orange_fish.png\",\r\n      \"sourceSize\": {\"x\":135, \"y\": 88},\r\n      \"frameSize\": {\"x\":135, \"y\": 88},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"striped_fish\": {\r\n      \"name\": \"striped_fish\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/striped_fish.png\",\r\n      \"sourceSize\": {\"x\":131, \"y\": 100},\r\n      \"frameSize\": {\"x\":131, \"y\": 100},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
     "contained_level_names": null
   },
   "published": true,

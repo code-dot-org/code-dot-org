@@ -7,40 +7,32 @@ nav: promote_nav
 ---
 
 <%
-  facebook = {:u=>"http://#{request.host}/us"}
+    facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %> - 编程一小时
 
-# How to get involved
+# 如何参与
 
-## 1. Sign up to host an Hour of Code
+## 1. 帮助宣传这个活动
 
-Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to receive updates and qualify for prizes.   
-
-
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
-
-## 2. Spread the word
-
-Tell your friends about the **#HourOfCode**!
+告诉你的朋友们关于**#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 3. Ask your whole school to offer an Hour of Code
+## 2. 邀请全校师生尝试编程一小时
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[发送这封电子邮件](<%= resolve_url('/promote/resources#sample-emails') %>) 给你的校长并让学校的每个班级来报名。 <% if @country == 'us' %> *每个* 美国的州(包括华盛顿特区) 会有一个幸运的学校赢得$10,000的科技产品。 <% end %>
 
-## 3.邀请你的上级参加
+## 请求你的雇主参与其中
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+[发送这封电子邮件](<%= resolve_url('/promote/resources#sample-emails') %>) 给您的经理或公司的首席执行官。
 
-## 5. Promote Hour of Code in your community
+## 4. 在你的社区中推广编程一小时
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[招聘本地小组](<%= resolve_url('/promote/resources#sample-emails') %>) — — 男孩/女孩童子军俱乐部、 教会、 大学、 退伍军人团体、 工会或甚至一些朋友。 你不必在学校学习新的技能。 为你的活动使用这些[海报、 横幅、 贴纸、 视频以及更多](<%= resolve_url('/promote/resources') %>)。
 
-## 6. 邀请当地官员支持编程一小时活动
+## 5.邀请当地官员支持编程一小时活动
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
-
+[发送这封电子邮件](<%= resolve_url('/promote/resources#sample-emails') %>) 给您当地的代表、 市议会或学校董事会，并邀请他们来你们学校参观编程一小时。 它能为你在你领域的计算机科学找到一小时之外的支持。

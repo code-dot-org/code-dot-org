@@ -9,7 +9,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"something.png\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  // Add Code for: If the up arrow is pressed, move the sprite up on the screen\r\n\r\n  drawSprites();\r\n}",
+    "start_blocks": "var sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"spider\");\r\n\r\nfunction draw() {\r\n  //Draw Background\r\n  background(\"white\");\r\n  // Update Values\r\n  // Add Code for: If the up arrow is pressed, move the sprite up on the screen\r\n\r\n  //Draw Animations\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -31,7 +31,9 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\"beetle\", \"dragonfly\", \"ladybug\", \"spider\"],\r\n  \"propsByKey\": {\r\n    \"beetle\": {\r\n      \"name\": \"beetle\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/beetle.png\",\r\n      \"sourceSize\": {\"x\":73, \"y\": 100},\r\n      \"frameSize\": {\"x\":73, \"y\": 100},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"dragonfly\": {\r\n      \"name\": \"dragonfly\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/dragonfly.png\",\r\n      \"sourceSize\": {\"x\":150, \"y\": 91},\r\n      \"frameSize\": {\"x\":150, \"y\": 91},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"ladybug\": {\r\n      \"name\": \"ladybug\",\r\n      \"sourceUrl\": \"https://images.code.org/201fd9723053e9c895766873c213b957-image-1468428938279.jpg\",\r\n      \"sourceSize\": {\"x\":100, \"y\": 95},\r\n      \"frameSize\": {\"x\":100, \"y\": 95},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"spider\": {\r\n      \"name\": \"spider\",\r\n      \"sourceUrl\": \"https://images.code.org/1e2eeeb12bf337e913fc25456e296025-image-1468429040871.png\",\r\n      \"sourceSize\": {\"x\":100, \"y\": 91},\r\n      \"frameSize\": {\"x\":100, \"y\": 91},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

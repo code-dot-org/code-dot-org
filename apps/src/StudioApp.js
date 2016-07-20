@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, droplet, dashboard, addToHome */
+/* global trackEvent, Blockly, ace:true, droplet, dashboard, addToHome */
 
 import $ from 'jquery';
 import React from 'react';
@@ -41,7 +41,8 @@ import { Provider } from 'react-redux';
 import {
   substituteInstructionImages,
   determineInstructionsConstants,
-  setInstructionsConstants
+  setInstructionsConstants,
+  setFeedback
 } from './redux/instructions';
 import {
   openDialog as openInstructionsDialog,
@@ -70,9 +71,12 @@ var MAX_PHONE_WIDTH = 500;
  * Object representing everything in window.appOptions (often passed around as
  * config)
  * @typedef {Object} AppOptionsConfig
+ * @property {?boolean} is13Plus - Will be true if the user is 13 or older,
+ *           false if they are 12 or younger, and undefined if we don't know
+ *           (such as when they are not signed in).
  */
 
-var StudioApp = function () {
+function StudioApp() {
   this.feedback_ = new FeedbackUtils(this);
   this.authoredHintsController_ = new AuthoredHints(this);
 
@@ -225,9 +229,12 @@ var StudioApp = function () {
   this.noPadding = false;
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
+}
+// TODO: once code-studio and apps share common modules in the same bundle,
+// get rid of this window nonsense.
+module.exports = window.StudioApp = window.StudioApp || {
+  singleton: new StudioApp()
 };
-module.exports = StudioApp;
-StudioApp.singleton = new StudioApp();
 
 /**
  * Configure StudioApp options
@@ -359,7 +366,6 @@ StudioApp.prototype.init = function (config) {
       containerId: config.containerId,
       embed: config.embed,
       level: config.level,
-      level_source_id: config.level_source_id,
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
       twitter: config.twitter,
@@ -503,7 +509,8 @@ StudioApp.prototype.init = function (config) {
     utils.fireResizeEvent();
   }
 
-  this.alertIfAbusiveProject('#codeWorkspace');
+  this.alertIfAbusiveProject();
+  this.alertIfProfaneOrPrivacyViolatingProject();
 
   // make sure startIFrameEmbeddedApp has access to the config object
   // so it can decide whether or not to show a warning.
@@ -520,6 +527,15 @@ StudioApp.prototype.init = function (config) {
 
   if (!!config.level.projectTemplateLevelName) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
+  }
+
+  if (!!config.level.pairingDriver) {
+    this.displayWorkspaceAlert(
+      'warning',
+      <div>
+        {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
+      </div>
+    );
   }
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
@@ -1143,6 +1159,27 @@ StudioApp.prototype.displayMissingBlockHints = function (blocks) {
 
 StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
+
+  if (!response) {
+    return;
+  }
+
+  // Track GA events
+  if (response.new_level_completed) {
+    trackEvent('Puzzle', 'Completed', response.level_path, response.level_attempts);
+  }
+
+  if (response.share_failure) {
+    trackEvent('Share', 'Failure', response.share_failure.type);
+  }
+
+  if (response.trophy_updates) {
+    response.trophy_updates.forEach(update => {
+      const concept_name = update[0];
+      const trophy_name = update[1];
+      trackEvent('Trophy', concept_name, trophy_name);
+    });
+  }
 };
 
 /**
@@ -1550,9 +1587,38 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  this.feedback_.displayFeedback(options, this.requiredBlocks_,
+  if (this.shouldDisplayFeedbackDialog(options)) {
+    // let feedback handle creating the dialog
+    this.feedback_.displayFeedback(options, this.requiredBlocks_,
       this.maxRequiredBlocksToFlag_, this.recommendedBlocks_,
       this.maxRecommendedBlocksToFlag_);
+  } else {
+    // update the block hints lightbulb
+    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_);
+    this.displayMissingBlockHints(missingBlockHints);
+
+    // communicate the feedback message to the top instructions via
+    // redux
+    const message = this.feedback_.getFeedbackMessage(options);
+    this.reduxStore.dispatch(setFeedback({ message }));
+  }
+};
+
+/**
+ * Whether feedback should be displayed as a modal dialog or integrated
+ * into the top instructions
+ * @param {Object} options
+ * @param {number} options.feedbackType Test results (a constant property
+ *     of this.TestResults).false
+ */
+StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
+  // If instructions in top pane are enabled and we show instructions
+  // when collapsed, we only use dialogs for success feedback.
+  const constants = this.reduxStore.getState().pageConstants;
+  if (constants.instructionsInTopPane && !constants.noInstructionsWhenCollapsed) {
+    return this.feedback_.canContinueToNextLevel(options.feedbackType);
+  }
+  return true;
 };
 
 /**
@@ -1681,6 +1747,7 @@ StudioApp.prototype.resetButtonClick = function () {
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
+  this.reduxStore.dispatch(setFeedback(null));
   if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
@@ -2752,14 +2819,27 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
 
 /**
  * If the current project is considered abusive, display a small alert box
- * @param {string} parentSelector The selector for the DOM element parent we
- *   should display the error in.
  */
-StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
+StudioApp.prototype.alertIfAbusiveProject = function () {
   if (window.dashboard && dashboard.project &&
       dashboard.project.exceedsAbuseThreshold()) {
     var i18n = {
       tos: window.dashboard.i18n.t('project.abuse.tos'),
+      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
+    };
+    this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
+  }
+};
+
+/**
+ * If the current project violates privacy policy or contains profanity,
+ * display a small alert box.
+ */
+StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function () {
+  if (window.dashboard && dashboard.project &&
+      dashboard.project.hasPrivacyProfanityViolation()) {
+    var i18n = {
+      tos: window.dashboard.i18n.t('project.abuse.policy_violation'),
       contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
     };
     this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
@@ -2820,7 +2900,7 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 /**
  * Sets a bunch of common page constants used by all of our apps in our redux
  * store based on our app options config.
- * @param {AppOptionsConfig}
+ * @param {AppOptionsConfig} config
  * @param {object} appSpecificConstants - Optional additional constants that
  *   are app specific.
  */
@@ -2836,13 +2916,16 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
     instructionsInTopPane: !!config.showInstructionsInTopPane,
+    noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
     hasContainedLevels: config.hasContainedLevels,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
     aniGifURL: config.level.aniGifURL,
-    inputOutputTable: config.level.inputOutputTable
+    inputOutputTable: config.level.inputOutputTable,
+    is13Plus: config.is13Plus,
+    isSignedIn: config.isSignedIn,
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));

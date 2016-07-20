@@ -17,6 +17,8 @@ var ALLOWED_KEYS = utils.makeEnum(
   'isSubmitted',
   'isViewDataButtonHidden',
   'instructionsInTopPane',
+  'noInstructionsWhenCollapsed',
+  'hasInlineImages',
   'puzzleNumber',
   'stageTotal',
   'showDebugButtons',
@@ -34,7 +36,11 @@ var ALLOWED_KEYS = utils.makeEnum(
   'pinWorkspaceToBottom',
   'smallStaticAvatar',
   'aniGifURL',
-  'inputOutputTable'
+  'inputOutputTable',
+  'showAnimationMode',
+  'nonResponsiveVisualizationColumnWidth',
+  'is13Plus',
+  'isSignedIn'
 );
 
 const initialState = {

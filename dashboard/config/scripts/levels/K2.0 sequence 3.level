@@ -12,7 +12,7 @@
     "step_mode": "1",
     "is_k1": "true",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/07_V2.gif",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "ideal": "3",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -27,6 +27,8 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.\",\r\n  \"hint_id\": \"K2.0_sequence_3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nSomething is not quite right. REMOVE a block to get me to the pig!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif\" width=\"300\"/>\r\n",
     "contained_level_names": null
   },
   "published": true,
