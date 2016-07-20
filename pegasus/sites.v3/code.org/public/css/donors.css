@@ -1,0 +1,53 @@
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 2px solid #F2F2F2;
+}
+
+table td {
+  text-align: center;
+}
+
+.small {
+  height: 100px;
+  width: 260px;
+}
+
+.medium {
+  height: 200px;
+  width: 260px;
+}
+
+.large {
+  height: 150px;
+  width: 390px;
+}
+
+.small-img {
+  max-width: 100%;
+  max-height: 80px;
+}
+
+.medium-img {
+  max-width: 100%;
+  max-height: 160px;
+}
+
+.large-img {
+  max-width: 100%;
+  max-height: 120px;
+}
+
+.small-font {
+  font-size: 18px;
+}
+
+.medium-font {
+  font-size: 14px;
+}
+
+.large-font {
+  font-size: 14px;
+}
