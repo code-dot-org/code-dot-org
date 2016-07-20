@@ -14,6 +14,7 @@ export const styles = {
   },
   checkbox: {
     marginRight: MARGIN,
+    marginTop: 0,
   },
   selectAllCheckbox: {
     position: 'relative',
@@ -25,6 +26,7 @@ export const styles = {
   listItem: {
     listStyleType: 'none',
     display: 'flex',
+    alignItems: 'center',
     marginBottom: MARGIN,
   },
 };
@@ -106,7 +108,12 @@ if (BUILD_STYLEGUIDE) {
   };
   ItemComponent.propTypes = {item: React.PropTypes.string.isRequired};
   const ComplexItemComponent = function ({style, screen}) {
-    return <div style={style}><strong>{screen.id}</strong> - {screen.name}</div>;
+    return (
+      <div style={style}>
+        <h2>{screen.name}</h2>
+        <p>{screen.id}</p>
+      </div>
+    );
   };
   ComplexItemComponent.propTypes = {
     style: React.PropTypes.object,
@@ -153,7 +160,7 @@ if (BUILD_STYLEGUIDE) {
                 itemPropName="screen"
                 selected={[]}
                 onChange={storybook.action("onChange")}>
-              <ComplexItemComponent style={{color:'red'}} />
+              <ComplexItemComponent style={{border: '1px solid black', padding: 10}} />
             </MultiCheckboxSelector>
           )
         },
