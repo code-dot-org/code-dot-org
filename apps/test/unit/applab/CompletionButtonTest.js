@@ -8,6 +8,8 @@ import React from 'react';
 var ReactTestUtils = require('react-addons-test-utils');
 
 describe('CompletionButton', function () {
+  testUtils.throwOnConsoleErrors();
+
   it('non-project level, can submit, havent', function () {
     var component = ReactTestUtils.renderIntoDocument(
       <CompletionButton
