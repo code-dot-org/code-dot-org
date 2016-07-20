@@ -39,6 +39,7 @@ const MultiCheckboxSelector = Radium(React.createClass({
     onChange: React.PropTypes.func.isRequired,
     children: React.PropTypes.element,
     itemPropName: React.PropTypes.string,
+    style: React.PropTypes.any,
   },
 
   getDefaultProps() {
@@ -75,7 +76,7 @@ const MultiCheckboxSelector = Radium(React.createClass({
 
   render() {
     return (
-      <div>
+      <div style={this.props.style}>
         <h2 style={styles.header}>
           <input
               type="checkbox"
