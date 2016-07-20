@@ -309,7 +309,7 @@ var styles = {
 };
 ```
 * <a name="js-react-long-components"></a>
-Components with many attributes should have one per line, with 2 spaces of indentation. Child components should have 2 spaces of indentation.
+Components with many attributes should have one per line, with 2 spaces of indentation. Child components should have 2 spaces of indentation. Paritally linted by [jsx-first-prop-new-line](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md) and [jsx-indent-props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md).
 ```jsx
 // Bad
 var component = (
@@ -321,11 +321,12 @@ var component = (
 // Good
 var component = (
   <MyComponent
-      param1={1}
-      param2={2}
-      param3={3}
-      param4={4}
-      param5={5}>
+    param1={1}
+    param2={2}
+    param3={3}
+    param4={4}
+    param5={5}
+  >
     <ChildComponent/>
   </MyComponent>
 );
@@ -338,38 +339,47 @@ them on the same line to avoid extra spaces.
 ```
 // good
 <Component
-    prop1="prop1"
-    prop2="prop2">
+  prop1="prop1"
+  prop2="prop2"
+>
   textContent
 </Component>
 
 
 // bad
 <Component
-    prop1="prop1"
-    prop2="prop2">textContent</Component>
+  prop1="prop1"
+  prop2="prop2">textContent</Component>
     
 // good - fine to put content on same line if the tag opens & closes on that line
 <Component>textContent</Component>
 ```
 
 * <a name="js-react-aligned-tags"></a>
-align open and close tags
+Align open and close tags. Wrap multiline JSX expressions in parentheses to allow this. Linted by [jsx-closing-bracket-location](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md) and [wrap-multilines](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md).
 ```jsx
 // Bad
 var component = (<MyComponent
-      foo="bar"
-      onClose={this.handleClose}>
+    foo="bar"
+    onClose={this.handleClose}
+  >
     <ChildComponent/>
   </MyComponent>);
 
 // Good
 var component = (
   <MyComponent
-      foo="bar"
-      onClose={this.handleClose}>
+    foo="bar"
+    onClose={this.handleClose}
+  >
     <ChildComponent/>
   </MyComponent>
+);
+var selfClosing = (
+  <MyComponent
+    foo="bar"
+    onClose={this.handleClose}
+  />
 );
 ```
 
