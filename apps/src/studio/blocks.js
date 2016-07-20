@@ -2450,7 +2450,10 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   generator.studio_ask = function () {
-    return 'Studio.ask();';
+    // Variable setter.
+    var argument0 = `prompt("${this.getTitleValue('TEXT')}")`;
+    var varName = Blockly.JavaScript.translateVarName(this.getTitleValue('VAR'));
+    return varName + ' = ' + argument0 + ';\n';
   };
 };
 
