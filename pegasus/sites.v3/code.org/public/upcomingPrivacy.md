@@ -8,7 +8,7 @@ We are planning updates to our Privacy Policy and Terms of Service as described 
 
 # Upcoming Privacy Policy - For Open Review
 
-Planning to update privacy policy: Aug 15, 2016
+Planning to update privacy policy: Aug 22, 2016
 
 
 ## About Code.org
