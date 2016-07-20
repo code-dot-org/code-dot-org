@@ -31,7 +31,7 @@ var CompletionButton = React.createClass({
     isProjectLevel: React.PropTypes.bool.isRequired,
     isSubmittable: React.PropTypes.bool.isRequired,
     isSubmitted: React.PropTypes.bool.isRequired,
-    playspacePhoneFrame: React.PropTypes.bool.isRequired,
+    playspacePhoneFrame: React.PropTypes.bool
   },
 
   render: function () {

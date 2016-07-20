@@ -11,6 +11,7 @@ class ChannelsApi < Sinatra::Base
       storage_apps.rb
       storage_id.rb
       auth_helpers.rb
+      profanity_privacy_helper.rb
     ).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
@@ -129,6 +130,20 @@ class ChannelsApi < Sinatra::Base
     call(env.merge('REQUEST_METHOD' => 'PATCH'))
   end
 
+  #
+  # GET /v3/channels/<channel-id>/privacy-profanity
+  #
+  # Get an indication of privacy/profanity violation.
+  #
+  get %r{/v3/channels/([^/]+)/privacy-profanity} do |id|
+    dont_cache
+    content_type :json
+
+    value = channel_policy_violation?(id)
+    {:has_violation => value }.to_json
+  end
+
+  #
   #
   # GET /v3/channels/<channel-id>/abuse
   #
