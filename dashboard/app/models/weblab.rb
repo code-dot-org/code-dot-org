@@ -24,10 +24,16 @@
 
 class Weblab < Level
   serialized_attrs %w(
-    skip_dialog
+    start_sources
   )
 
-  before_validation do
-    self.skip_dialog = true
+  def self.create_from_level_builder(params, level_params)
+    create!(level_params.merge(
+        user: params[:user],
+        game: Game.weblab,
+        level_num: 'custom',
+        properties: {
+        }
+    ))
   end
 end

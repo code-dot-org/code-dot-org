@@ -73,18 +73,17 @@ WebLab.prototype.injectStudioApp = function (studioApp) {
  */
 WebLab.prototype.init = function (config) {
   if (!this.studioApp_) {
-    throw new Error("GameLab requires a StudioApp");
+    throw new Error("WebLab requires a StudioApp");
   }
 
   this.skin = config.skin;
   this.level = config.level;
 
-  this.level.softButtons = this.level.softButtons || {};
-  if (this.level.startAnimations && this.level.startAnimations.length > 0) {
+  if (this.level.startSources && this.level.startSources.length > 0) {
     try {
-      this.startAnimations = JSON.parse(this.level.startAnimations);
+      this.startSources = JSON.parse(this.level.startSources);
     } catch (err) {
-      console.error("Unable to parse default animation list", err);
+      console.error("Unable to parse startSources list", err);
     }
   }
 
@@ -128,7 +127,11 @@ WebLab.prototype.init = function (config) {
    // if (finishButton) {
    //   dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
    // }
-
+    var webEditorIFrame = document.getElementById('web-editor-iframe');
+    var webEditorWindow = webEditorIFrame.contentWindow;
+//    frameSetStartSource(this.initialSource);
+//    webEditorWindow.setStartSource(this.initialSource);
+//    webEditorWindow.postMessage(this.initialSource, "*");
   }.bind(this);
 
   var showFinishButton = !this.level.isProjectLevel;
