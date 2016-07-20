@@ -14,6 +14,9 @@ module.exports.createSprite = function (x, y, width, height) {
   var s = new this.Sprite(x, y, width, height);
   var p5Inst = this;
 
+  s._horizontalStretch = 1;
+  s._verticalStretch = 1;
+
   s.setAnimation = function (animationName) {
     var animation = p5Inst.projectAnimations[animationName];
     if (typeof animation === 'undefined') {
@@ -71,6 +74,14 @@ module.exports.createSprite = function (x, y, width, height) {
     }
   };
 
+  s.modifyScaleX = function () {
+    return s.scale * s._horizontalStretch;
+  };
+
+  s.modifyScaleY = function () {
+    return s.scale * s._verticalStretch;
+  };
+
   Object.defineProperty(s, 'frameDelay', {
     enumerable: true,
     get: function () {
@@ -114,18 +125,15 @@ module.exports.createSprite = function (x, y, width, height) {
     get: function () {
       if (s._internalWidth === undefined) {
         return 100;
-      } else if (s.animation) {
-        return s._internalWidth * this.scale * s._horizontalStretch;
       } else {
-        return s._internalWidth * this.scale;
+        return s._internalWidth;
       }
     },
     set: function (value) {
       if (s.animation) {
         s._horizontalStretch = value / s._internalWidth * this.scale;
-      } else {
-        s._internalWidth = value / this.scale;
       }
+      s._internalWidth = value;
     }
   });
 
@@ -138,17 +146,15 @@ module.exports.createSprite = function (x, y, width, height) {
     get: function () {
       if (s._internalHeight === undefined) {
         return 100;
-      } else if (s.animation) {
-        return s._internalHeight * this.scale * s._verticalStretch;
       } else {
-        return s._internalHeight * this.scale;
+        return s._internalHeight;
       }
     },
     set: function (value) {
       if (s.animation) {
         s._verticalStretch = value / s._internalHeight * this.scale;
       } else {
-        s._internalHeight =  value / this.scale;
+        s._internalHeight =  value;
       }
     }
   });
