@@ -53,7 +53,7 @@ module.exports = {
     "react/jsx-indent-props": ["error", 2], // autofixable
     "react/no-render-return-value": "off", // TODO: turn this on
     "react/self-closing-comp": "off",
-    "react/wrap-multilines": "off",
+    "react/wrap-multilines": "error", // autofixable
     "semi": "error",
     "space-before-function-paren": ["error", {
       "anonymous": "always",

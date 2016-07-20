@@ -31,7 +31,7 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    return <div id="designWorkspaceWrapper">
+    return (<div id="designWorkspaceWrapper">
       <DesignModeHeaders
         handleManageAssets={this.props.handleManageAssets}
         onToggleToolbox={this.onToggleToolbox}
@@ -50,6 +50,6 @@ module.exports = React.createClass({
         isToolboxVisible={this.state.isToolboxVisible}
         isDimmed={this.props.isDimmed}
       />
-    </div>;
+    </div>);
   }
 });
