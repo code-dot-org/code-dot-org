@@ -17,5 +17,6 @@ export default function FontAwesome(props) {
 }
 
 FontAwesome.propTypes = {
-  icon: React.PropTypes.string.isRequired
+  icon: React.PropTypes.string.isRequired,
+  className: React.PropTypes.string,
 };

@@ -8,18 +8,21 @@ nav: plp_playbook_nav
 # Facilitator Support
 
 
-### Facilitators are key to building a sustainable computer science community in your region. They are the bridge between your organization and the teachers you serve and impact the quality of the professional learning programs. The following resources will help you sustain and grow a strong corps of local facilitators.
+#### Facilitators are key to building a sustainable computer science community in your region. They are the bridge between your organization and the teachers you serve and impact the quality of the professional learning programs. The following resources will help you sustain and grow a strong corps of local facilitators.
 
 ## Table of Contents
 - [Example Facilitator One Pager](#page)
 - [Example Contract](#contract)
 - [Facilitator Support Documents](#support)
+- [CS Principles Resources](#csp)
 - [Facilitator Payments](#pay)
 
 ________________
 <a id="page"></a>
 ## Example Facilitator One Pager
-<a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>This one pager</a> is an example of how to format the information that facilitators will need to run a successful workshop. 
+The facilitator one pager should be sent to facilitators at least 10 days prior to the workshop. It provides facilitators all of the logistical information needed to run their workshop.
+
+Use <a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop. 
 
 ________________
 <a id="contract"></a>
@@ -36,6 +39,23 @@ ________________
 - [Facilitator Playbook](https://docs.google.com/document/d/1d3wFP0K-Hd6CGTYgg17pI5TxzpmMUb_UlGiiC3JsvKg/edit) - Toolkit for facilitators of all programs
 - [Guidelines to ECS Phase 2 Workshops](https://docs.google.com/document/d/1mFq3eC1tKpaC7fjd90Gy4NrGlrvGPRhqKfat-BSdLyc/edit) - Instructions for ECS facilitators on how to run Phase 2 Workshop
 - [CSP Facilitation Summit Notes](https://docs.google.com/document/d/1QawlAmavjg1FU3xtjqQGBLaC3i5_iIxLYGS5bl5ubZA/view)
+
+[**Back to the top**](#top)
+________________
+<a id="csp"></a>
+
+## CS Principles Resources
+
+Refer to the slide decks listed below as a resource for details about the CS Principles curriculum and tools.
+
+[Welcome to CSP Facilitator Program - Slides](https://drive.google.com/open?id=1h5HcI4BKHLwWGYV1mcsV3HUWsb8YMwCcTIbqwI5yps8)
+
+[Navigating Code Studio and the Teacher Experience - Slides](https://drive.google.com/open?id=1QTo_BqHR1yXTqlwHHDXipnfDKEifdCGMFPHBcwa437k)<br/>
+
+[Deep Dive into CSP Curriculum Tools - Slides](https://drive.google.com/open?id=1941E16ptXwvgyHzJOW4_r6f4wnPAlUN9rk25dkHkJ38)<br/>
+
+[CSP and the College Board - Slides](https://drive.google.com/open?id=1z8G-J0aDZnAJSR2jA3JJrHJASUjPRdX8ItouG5OpwZE)<br/>
+
 
 [**Back to the top**](#top)
 ________________

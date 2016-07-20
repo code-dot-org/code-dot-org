@@ -62,6 +62,7 @@ class Blockly < Level
     is_project_level
     edit_code
     code_functions
+    palette_category_at_start
     failure_message_override
     droplet_tooltips_disabled
     lock_zero_param_functions
@@ -92,7 +93,7 @@ class Blockly < Level
   end
 
   def load_level_xml(xml_node)
-    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map{|x| '//'+x}.join(' | ')).map(&:remove) : []
+    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map{|x| '//' + x}.join(' | ')).map(&:remove) : []
     level_properties = super(xml_node)
     block_nodes.each do |attr_node|
       level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
@@ -201,10 +202,27 @@ class Blockly < Level
     return block_xml
   end
 
+  def blockly_app_options(game, skin_id)
+    options = Rails.cache.fetch("#{cache_key}/blockly_app_options/v2") do
+      app_options = {}
+
+      app_options[:levelGameName] = game.name if game
+      app_options[:skinId] = skin_id if skin_id
+
+      # Set some values that Blockly expects on the root of its options string
+      app_options.merge!({
+        baseUrl: Blockly.base_url,
+        app: game.try(:app),
+        droplet: game.try(:uses_droplet?),
+        pretty: Rails.configuration.pretty_apps ? '' : '.min',
+      })
+    end
+    options.freeze
+  end
+
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents
-  def blockly_options
+  def blockly_level_options
     options = Rails.cache.fetch("#{cache_key}/blockly_level_options/v2") do
-      level = self
       level_prop = {}
 
       # Map Dashboard-style names to Blockly-style names in level object.
@@ -221,32 +239,37 @@ class Blockly < Level
         success_condition: 'fn_successCondition',
         failure_condition: 'fn_failureCondition',
       }
-      level.properties.keys.each do |dashboard|
+      properties.keys.each do |dashboard|
         blockly = overrides[dashboard.to_sym] || dashboard.camelize(:lower)
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values
-        value = JSONValue.value(level.properties[dashboard].presence)
+        value = JSONValue.value(properties[dashboard].presence)
         level_prop[blockly] = value unless value.nil? # make sure we convert false
       end
 
       # Set some specific values
 
-      if level.is_a? Blockly
-        level_prop['startBlocks'] = level.try(:project_template_level).try(:start_blocks) || level.start_blocks
-        level_prop['toolbox'] = level.try(:project_template_level).try(:toolbox_blocks) || level.toolbox_blocks
-        level_prop['codeFunctions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
+      if is_a? Blockly
+        level_prop['startBlocks'] = try(:project_template_level).try(:start_blocks) || start_blocks
+        level_prop['toolbox'] = try(:project_template_level).try(:toolbox_blocks) || toolbox_blocks
+        level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
       end
 
-      if level.is_a? Applab
-        level_prop['startHtml'] = level.try(:project_template_level).try(:start_html) || level.start_html
+      if is_a? Applab
+        level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
       end
 
-      if level.is_a?(Maze) && level.step_mode
-        step_mode = JSONValue.value(level.step_mode)
-        level_prop['step'] = step_mode == 1 || step_mode == 2
-        level_prop['stepOnly'] = step_mode == 2
+      if is_a? Gamelab
+        level_prop['startAnimations'] = try(:project_template_level).try(:start_animations) || start_animations
       end
 
+      if is_a?(Maze) && step_mode
+        step_mode_value = JSONValue.value(step_mode)
+        level_prop['step'] = step_mode_value == 1 || step_mode_value == 2
+        level_prop['stepOnly'] = step_mode_value == 2
+      end
+
+      level_prop['levelId'] = level_num
       level_prop['images'] = JSON.parse(level_prop['images']) if level_prop['images'].present?
 
       # Blockly requires startDirection as an integer not a string
@@ -269,23 +292,9 @@ class Blockly < Level
         level_prop.delete('fn_failureCondition')
       end
 
-      app_options = {}
-
-      app_options[:levelGameName] = level.game.name if level.game
-      app_options[:skinId] = level.skin if level.is_a?(Blockly)
-
       # Set some values that Blockly expects on the root of its options string
-      non_nil_level_prop = level_prop.reject!{|_, value| value.nil?}
-      app_options.merge!({
-                             baseUrl: Blockly.base_url,
-                             app: level.game.try(:app),
-                             levelId: level.level_num,
-                             level: non_nil_level_prop,
-                             droplet: level.game.try(:uses_droplet?),
-                             pretty: Rails.configuration.pretty_apps ? '' : '.min',
-                         })
+      level_prop.reject!{|_, value| value.nil?}
     end
-    options[:level].freeze
     options.freeze
   end
 
@@ -303,13 +312,5 @@ class Blockly < Level
   def autoplay_blocked_by_level?
     # Wrapped since we store our serialized booleans as strings.
     self.never_autoplay_video == 'true'
-  end
-
-  # Returns an array of all the contained levels
-  # (based on the contained_level_names property)
-  def contained_levels
-    names = properties["contained_level_names"]
-    return [] unless names.present?
-    Level.where(name: properties["contained_level_names"])
   end
 end

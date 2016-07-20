@@ -1,12 +1,11 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
-testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 import React from 'react';
 var ReactTestUtils = require('react-addons-test-utils');
 
-var MarkdownInstructions = require('@cdo/apps/templates/instructions/MarkdownInstructions');
-var NonMarkdownInstructions = require('@cdo/apps/templates/instructions/NonMarkdownInstructions');
+import { StatelessMarkdownInstructions } from '@cdo/apps/templates/instructions/MarkdownInstructions';
+import NonMarkdownInstructions from '@cdo/apps/templates/instructions/NonMarkdownInstructions';
 
 function shallowRender(element) {
   var renderer = ReactTestUtils.createRenderer();
@@ -15,13 +14,17 @@ function shallowRender(element) {
 }
 
 describe('MarkdownInstructions', function () {
+  testUtils.throwOnConsoleErrors();
+
   it('standard case had top padding and no left margin', function () {
     var dom = ReactTestUtils.renderIntoDocument(
       <div>
-        <MarkdownInstructions
+        <StatelessMarkdownInstructions
           renderedMarkdown="md"
           markdownClassicMargins={false}
-          inTopPane={false}/>
+          inTopPane={false}
+          noInstructionsWhenCollapsed={true}
+        />
       </div>
     );
     var element = dom.children[0];
@@ -33,9 +36,11 @@ describe('MarkdownInstructions', function () {
   it('inTopPane has no top padding', function () {
     var dom = ReactTestUtils.renderIntoDocument(
       <div>
-        <MarkdownInstructions
+        <StatelessMarkdownInstructions
           renderedMarkdown="md"
-          inTopPane={true}/>
+          inTopPane={true}
+          noInstructionsWhenCollapsed={true}
+        />
       </div>
     );
     var element = dom.children[0];

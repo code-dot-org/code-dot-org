@@ -1,5 +1,5 @@
 hy-AM:
-  hour_of_code: Ժամ օրենսգրքի
+  hour_of_code: Կոդի ժամ
   hello: Բարև աշխարհ
   "yes": այո
   "no": ոչ
@@ -28,12 +28,12 @@ hy-AM:
   og_title: Every child deserves opportunity
   og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
-  hoc2014_students: Students
+  hoc2014_students: Ուսանողներ
   hoc2014_try: Try it
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
   hoc2014_everyone: Everyone
-  hoc2014_support: 'Support it &#x25BE;'
+  hoc2014_support: 'Աջակցել &#x25BE;'
   hoc2014_whatishoc: What is the Hour of Code?
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
@@ -210,18 +210,18 @@ hy-AM:
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
-  studiobar_title_nolink: Explore Code Studio
+  studiobar_title_nolink: Ծանոթանալ Code Studio-ին
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: Learn to code with Angry Birds
-  studiobar_flappy_title: Flappy Code
-  studiobar_flappy_body: Make and share your own Flappy game
+  studiobar_flappy_title: Flappy-ի կոդը
+  studiobar_flappy_body: Սարքիր և կիսվիր քո Flappy խաղով
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
-  studiobar_frozen_title: Ժամ օրենսգրքի
+  studiobar_frozen_title: Կոդի ժամ
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
+  studiobar_donate_title: Նվիրաբերել
   studiobar_donate_body: One child learns for each dollar you donate
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
@@ -238,21 +238,21 @@ hy-AM:
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Մեր երեխաները &mdash; ներառյալ մեր աղջիկները &mdash;
+    պետք է հնարավորություն ունենան սովորելու համակգչային գիտություններ.&rdquo;
+    Sheryl, Facebook-ի COO
   homepage_hero_text_satya: |
     &ldquo;Computer science can unlock
     the best opportunities in the world.&rdquo;
     Satya, CEO of Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Եթե դու գիտես կոդ գրել,
+    դու կարող ես ընտրեոլ քո կյանքի ուղին.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Այս հմտությունները փոխեցին իմ ապագան.
+    Էլ չասած, թե ինչ զվարճալի է.&rdquo;
+    Luna, 7-րդ դասարան
   homepage_hero_text_student2: |
     &ldquo;I have never, ever seen my kids
     so excited about learning.&rdquo;
@@ -274,19 +274,18 @@ hy-AM:
     all of which are essential in any career.&rdquo;
     Floresa, teacher
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+    &ldquo; Այս ծրագիրը օգնեց իմ բոլոր աշակերտներին.&rdquo;
+    Adam, ուսուցիչ
+  homepage_hero_text_stat_loc: 2.5 միլին աղջիկներ են սովորում Code Studio-ի միջոցով
+  homepage_hero_text_stat_students: '#student_count ուսանողներ Code Studio-ում'
+  homepage_hero_text_stat_served: 'Կոդի Ժամի #served մասնակից'
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: All of our tutorials
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Shop
-  homepage_slot_text_flappy: Flappy Code
+  homepage_slot_text_flappy: Flappy-ի կոդը
   homepage_action_text_hoc: An Hour of Code for every student.
   homepage_action_text_num_served: '# served'
   homepage_action_text_join_us: Join us
@@ -296,7 +295,7 @@ hy-AM:
   homepage_action_text_codevideo: Watch the video
   homepage_action_text_teachervideo: Watch the video
   homepage_action_text_girlvideo: Inspire a girl
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: Սկսել սովորել
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'I agree &#x25BE;'
   homepage_diversity_pledge: Take the diversity pledge
@@ -310,20 +309,20 @@ hy-AM:
   homepage_banner_20k_teachers_link: Սովորել ավելին
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
   homepage_banner_congress_link: Add your support
-  homepage_slot_text_title_hoc: Ժամ օրենսգրքի
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
-  homepage_slot_text_link_hoc: Փորձեք ժամը օրենսգրքի
+  homepage_slot_text_title_hoc: Կոդի ժամ
+  homepage_slot_text_blurb_hoc: Յուրաքանչյուրը կարող է սովորել. Սկսիր այսօր.
+  homepage_slot_text_link_hoc: Փորձիր Կոդի Ժամը
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: Students
-  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_title_students: Ուսանողներ
+  homepage_slot_text_blurb_students: Փորձել բոլոր տուտորիալները
   homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Try Code Studio
   homepage_slot_text_link_local: Find a local class
   homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_title_educators: Ուսուցիչներ
+  homepage_slot_text_blurb_educators: Դասավանդիր քո աշակերտներին
   homepage_slot_text_link_elementary: Elementary school
   homepage_slot_text_link_middle: Middle school
   homepage_slot_text_link_high: High school
@@ -337,9 +336,9 @@ hy-AM:
   homepage_slot_text_link_donate: Make a donation
   homepage_slot_text_link_shop: 'T-shirts, hats, & more'
   homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
-  homepage_donors_donate: Donate
+  homepage_header_donors: Code.org շնորհակալ է բոլոր աջակիցներին
+  homepage_donors_seall: Տեսնել բոլորը
+  homepage_donors_donate: Նվիրաբերել
   contact_form_topic_student: Ես աշակերտ եմ
   contact_form_topic_parent: Ես ծնող եմ
   contact_form_topic_teacher: Ես ուսուցիչ/մանկավարժ եմ
@@ -467,7 +466,7 @@ hy-AM:
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
   volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
   petition_age: Տարիք
-  dashboard_landing_title: Teacher Home Page
+  dashboard_landing_title: Ուսուցչի գլխավոր էջը
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
   dashboard_landing_watch_video: for a tour of the new features!
@@ -534,7 +533,7 @@ hy-AM:
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
-  dashboard_navigation_home_page: Teacher home page
+  dashboard_navigation_home_page: Ուսուցչի գլխավոր էջը
   dashboard_navigation_section_student_progress: Student Accounts and Progress
   dashboard_navigation_section_teacher_progress: Your Course Progress
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
@@ -542,13 +541,13 @@ hy-AM:
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: 'Computer Science <br/> Guest Speakers'
   dashboard_navigation_all_sections: Student Accounts and Progress
-  dashboard_navigation_view_progress: View Progress
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_progress: Progress
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: View Stats
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_progress_not_started: չի սկսվել
@@ -570,7 +569,7 @@ hy-AM:
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
   dashboard_sections_table_stage_extras: Stage Extras
-  dashboard_sections_table_students: Students
+  dashboard_sections_table_students: Ուսանողներ
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
@@ -694,7 +693,7 @@ hy-AM:
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
   dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
-  dashboard_announce_button_text: Սովորել ավելին
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: 'Որպես ուսուցիչ, դու առաջատար ճանապարհ է շարժման տալ յուրաքանչյուր ուսանող յուրաքանչյուր դպրոց հնարավորություն է տալիս սովորել համակարգչային գիտությունը: Հիմա, որ ժամանակն է, թող ձեր ներկայացուցիչները լսել ձեզ. Այս շաբաթ, կրթության առաջնորդները, 28 նահանգապետեր, եւ ղեկավարները Ամերիկաների խոշորագույն ընկերությունները միացել միասին բաց նամակ, խնդրելով ԱՄՆ Կոնգրեսին է ֆինանսավորել K-12 համակարգչային գիտության կրթություն:'
   dashboard_announce_petition_button: Հավելեք ձեր անունը
   code_hoc_coming: 'The Hour of Code is here - December 8-14!'
@@ -793,7 +792,7 @@ hy-AM:
   hourofcode_name: Classic Maze
   playlab_name: Play Lab
   infinity_name: Infinity Խաղալ Lab
-  artist_name: Artist
+  artist_name: Արտիստ
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
   csfirst_name: CS First
@@ -814,6 +813,7 @@ hy-AM:
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
@@ -829,7 +829,7 @@ hy-AM:
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
   math_category_name: Մաթեմատիկա
-  hoc_category_name: Ժամ օրենսգրքի
+  hoc_category_name: Կոդի ժամ
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"

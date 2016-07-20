@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
 
-あなたは、Hour of Codeのイベントを開催し、生徒にコンピュータサイエンスに触れる機会を提供して下さりました。ありがとうございます。<%= campaign_date('full') %> 粗品に関する情報や、新しいチュートリアルについては、追って連絡させていただきます。 もしお時間があれば、下記の活動を行っていただけると、大変助かります。よろしくお願い致します。
+あなたは、Hour of Codeのイベントを開催し、生徒にコンピュータサイエンスに触れる機会を提供して下さりました。ありがとうございます。<%= campaign_date('full') %> We'll be in touch about new tutorials and other exciting updates. もしお時間があれば、下記の活動を行っていただけると、大変助かります。よろしくお願い致します。
 
 ## 1. みんなに広めましょう
 

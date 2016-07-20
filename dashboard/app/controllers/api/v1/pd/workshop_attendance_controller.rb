@@ -18,6 +18,10 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
           attending_user_ids << attendance[:id]
         elsif attendance[:email]
           teacher = create_teacher attendance[:email]
+
+          # join the workshop section
+          @workshop.section.add_student(teacher) if @workshop.section
+
           attending_user_ids << teacher.id
         end
       end
@@ -49,9 +53,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
       email: email,
       school: enrollment.school
     }
-    teacher = User.find_or_create_teacher(params, current_user)
-
-    teacher
+    User.find_or_create_teacher(params, current_user)
   end
 
   def workshop_attendance_params

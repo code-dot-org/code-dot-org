@@ -144,6 +144,10 @@ class ScriptLevel < ActiveRecord::Base
     false
   end
 
+  def anonymous?
+    return assessment && level.properties["anonymous"] == "true"
+  end
+
   def name
     I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end
@@ -178,8 +182,14 @@ class ScriptLevel < ActiveRecord::Base
       kind = 'puzzle'
     end
 
+    ids = level_ids
+
+    levels.each do |l|
+      ids << l.contained_levels.map(&:id)
+    end
+
     summary = {
-        ids: level_ids,
+        ids: ids,
         position: position,
         kind: kind,
         icon: level.icon,
@@ -187,7 +197,7 @@ class ScriptLevel < ActiveRecord::Base
         url: build_script_level_url(self)
     }
 
-    summary[:name] = level.name if script.professional_learning_course?
+    summary[:name] = level.name if kind == 'named_level'
 
     # Add a previous pointer if it's not the obvious (level-1)
     if previous_level
@@ -241,4 +251,16 @@ class ScriptLevel < ActiveRecord::Base
   def to_param
     position.to_s
   end
+
+  # Given the signed-in user and an optional user that is being viewed
+  # (e.g. a student viewed by a teacher), tell us whether we are allowed
+  # to view their prior answer.
+  def can_view_last_attempt(user, viewed_user)
+    # If it's an anonymous survey, then teachers can't view student answers
+    return false if user && viewed_user && user != viewed_user && anonymous?
+
+    # Everything else is okay.
+    return true
+  end
+
 end

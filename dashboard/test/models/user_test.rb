@@ -400,7 +400,6 @@ class UserTest < ActiveSupport::TestCase
       user = User.create @good_data.merge(birthday: birthday_4, email: '', hashed_email: Digest::MD5.hexdigest(email2))
       assert_equal ['Email has already been taken'], user.errors.full_messages
     end
-
   end
 
   test 'changing user from teacher to student removes email' do
@@ -768,14 +767,16 @@ class UserTest < ActiveSupport::TestCase
 
     assert student.encrypted_password.blank?
 
-    assert student.update_with_password(name: "JADENDUMPLING",
-                                         email: "jaden.ke1@education.nsw.gov.au",
-                                         password: "[FILTERED]",
-                                         password_confirmation: "[FILTERED]",
-                                         current_password: "",
-                                         locale: "en-us",
-                                         gender: "",
-                                         age: "10")
+    assert student.update_with_password(
+      name: "JADENDUMPLING",
+      email: "jaden.ke1@education.nsw.gov.au",
+      password: "[FILTERED]",
+      password_confirmation: "[FILTERED]",
+      current_password: "",
+      locale: "en-us",
+      gender: "",
+      age: "10"
+    )
 
     assert_equal "JADENDUMPLING", student.name
   end
@@ -861,14 +862,15 @@ class UserTest < ActiveSupport::TestCase
     assert user_proficiency.basic_proficiency_at.nil?
   end
 
-  def track_progress(student, script_level, result)
+  def track_progress(student, script_level, result, pairings = nil)
     User.track_level_progress_sync(
       user_id: student.id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,
       new_result: result,
       submitted: false,
-      level_source_id: nil
+      level_source_id: nil,
+      pairing_user_ids: pairings
     )
   end
 
@@ -900,8 +902,10 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress_sync does not call track_proficiency if hint used' do
     script_level = create :script_level
     student = create :student
-    create :hint_view_request, user_id: student.id,
-      level_id: script_level.level_id, script_id: script_level.script_id
+    create :hint_view_request,
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id
 
     User.expects(:track_proficiency).never
     track_progress(student, script_level, 100)
@@ -910,11 +914,56 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
     script_level = create :script_level
     student = create :student
-    AuthoredHintViewRequest.create(user_id: student.id,
-      level_id: script_level.level_id, script_id: script_level.script_id)
+    AuthoredHintViewRequest.create(
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id
+    )
 
     User.expects(:track_proficiency).never
     track_progress(student, script_level, 100)
+  end
+
+  test 'track_level_progress_sync does not call track_proficiency when pairing' do
+    script_level = create :script_level
+    student = create :student
+
+    User.expects(:track_proficiency).never
+    track_progress(student, script_level, 100, [create(:user).id])
+  end
+
+  test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
+    script_level = create :script_level
+    student = create :student
+    level_source = create :level_source, data: 'sample answer'
+
+    User.track_level_progress_sync(
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: 30,
+      submitted: false,
+      level_source_id: level_source.id,
+      pairing_user_ids: nil
+    )
+
+    ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
+    assert_equal 30, ul.best_result
+    assert_equal 'sample answer', ul.level_source.data
+
+    User.track_level_progress_sync(
+      user_id: create(:user).id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: 100,
+      submitted: false,
+      level_source_id: level_source.id,
+      pairing_user_ids: [student.id]
+    )
+
+    ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
+    assert_equal 100, ul.best_result
+    assert_equal 'sample answer', ul.level_source.data
   end
 
   test 'normalize_gender' do
@@ -995,7 +1044,7 @@ class UserTest < ActiveSupport::TestCase
 
     i = 0
     users = names.map do |name|
-      User.create!(@good_data.merge(name: name, email: "test_email#{i+=1}@test.xx")) # use real create method not the factory
+      User.create!(@good_data.merge(name: name, email: "test_email#{i += 1}@test.xx")) # use real create method not the factory
     end
 
     assert_equal expected_usernames, users.collect(&:username)
@@ -1028,6 +1077,7 @@ class UserTest < ActiveSupport::TestCase
 
     other_user = create :student
 
+    # student_of? method
     assert !student.student_of?(student)
     assert !student.student_of?(other_user)
     assert student.student_of?(teacher)
@@ -1040,6 +1090,7 @@ class UserTest < ActiveSupport::TestCase
     assert !other_user.student_of?(other_user)
     assert !other_user.student_of?(teacher)
 
+    # user associations
     assert_equal [], other_user.teachers
     assert_equal [], other_user.students
 
@@ -1048,6 +1099,30 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal [teacher], student.teachers
     assert_equal [], student.students
+
+    # section associations
+    assert_equal [section], student.sections_as_student
+    assert_equal [], teacher.sections_as_student
+    assert_equal [], other_user.sections_as_student
+
+    assert_equal [], student.sections
+    assert_equal [section], teacher.sections
+    assert_equal [], other_user.sections
+
+    # can_pair? method
+    assert_equal true, student.can_pair?
+    assert_equal false, teacher.can_pair?
+    assert_equal false, other_user.can_pair?
+
+    # can_pair_with? method
+    classmate = create :student
+    section.add_student classmate
+    assert classmate.can_pair_with?(student)
+    assert student.can_pair_with?(classmate)
+    refute student.can_pair_with?(other_user)
+    refute student.can_pair_with?(teacher)
+    refute teacher.can_pair_with?(student)
+    refute student.can_pair_with?(student)
   end
 
   test 'student_of_admin?' do
@@ -1147,4 +1222,31 @@ class UserTest < ActiveSupport::TestCase
     assert student_with_oauth.can_edit_account? # only in a picture section
   end
 
+  test 'terms_of_service_version for teacher without version' do
+    teacher = create :teacher
+    assert_nil teacher.terms_version
+  end
+
+  test 'terms_of_service_version for teacher with version' do
+    teacher = create :teacher, terms_of_service_version: 1
+    assert_equal 1, teacher.terms_version
+  end
+
+  test 'terms_of_service_version for student without teachers' do
+    student = create :student
+    assert_nil student.terms_version
+  end
+
+  test 'terms_of_service_version for student with teachers without version' do
+    follower = create :follower
+    assert_nil follower.student_user.terms_version
+  end
+
+  test 'terms_of_service_version for student with teachers with version' do
+    follower = create :follower
+    follower.user.update(terms_of_service_version: 1)
+    another_teacher = create :teacher
+    create :follower, user: another_teacher, student_user: follower.student_user
+    assert_equal 1, follower.student_user.terms_version
+  end
 end

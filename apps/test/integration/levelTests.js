@@ -19,7 +19,6 @@ var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
 
 var testUtils = require('../util/testUtils');
-testUtils.setupLocales();
 testUtils.setExternalGlobals();
 import {setupBlocklyFrame, getStudioAppSingleton} from './util/testBlockly';
 
@@ -81,6 +80,9 @@ describe('Level tests', function () {
   var studioApp;
   var originalRender;
   var clock, tickInterval;
+
+  // Don't expect console.error to be used during any level test
+  testUtils.throwOnConsoleErrors();
 
   before(function (done) {
     this.timeout(15000);
@@ -176,15 +178,14 @@ describe('Level tests', function () {
 function runTestCollection(item) {
   var runLevelTest = require('./util/runLevelTest');
   // Append back the .js so that we can distinguish 2_1.js from 2_10.js when grepping
-  var path = item.path + '.js';
+  var path = item.path;
   var testCollection = item.data;
 
   var app = testCollection.app;
 
   describe(path, function () {
     testCollection.tests.forEach(function (testData, index) {
-      testUtils.setupLocale(app);
-      var dataItem = require('./util/data')(app);
+            var dataItem = require('./util/data')(app);
 
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these

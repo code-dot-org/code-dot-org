@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 # Contoh siaran pers untuk pejabat terpilih
 
 Untuk penerbitan segera  
@@ -43,8 +42,3 @@ Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. Berkat Ho
 [**MASUKKAN KUTIPAN DARI ORGANISASI LAIN ATAU ORANG YANG HADIR DI ACARA**]
 
 Untuk informasi lebih lanjut tentang [**EVENT/PROGRAM/ETC**], kunjungi [**Masukkan WEBSITE**] atau hubungi [**Masukkan CONTACT INFORMATION**]
-
-  
-  
-
-

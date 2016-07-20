@@ -7,7 +7,7 @@ skip_dialog ' true'
 markdown <<MARKDOWN
 
 
-<img src = "http://staging.code.org/images/cspunit1/ColorTask2.png" align=left width=200 hspace=20>
+<img src = "//code.org/images/cspunit1/ColorTask2.png" align=left width=200 hspace=20>
 # Instructions: Task 2
 On the next screen we start you out with the row of shades of red that Maddie created.  Experiment with 6-bit color by filling in the bottom row of the image. 
 

@@ -4,112 +4,110 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
+# 编程一小时和计算机科教周教程指南
 
-# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
+Code.org会在code.org， hourofcode.com，CSEDWeek等网站上主办各种编程一小时™活动。当前的列表在 [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
-
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+我们想要主办各种引人入胜的选择，但是主要的目标是为新学习计算机科学的老师和学生优化体验。 请用本文档来指导你创建活动，有针对性的面向没有计算机编程和计算机科学经验的用户。
 
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
+**读完这个指南后，你可以将你的教程提交到我们的[编程一小时™活动提交页面](https://goo.gl/kNrV3l).**
 
-**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
+**更新：**和以前不一样，我们计划介绍一种新的“以教师为主导”的编程一小时活动。 这些会列在面向学生的自学指南活动和电子邮件的下面。 详情如下。
 
 <a id="top"></a>
 
-## Index:
+## 索引：
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
-  * [How tutorials will be evaluated for inclusion](#inclusion)
+  * [创建编程一小时活动的通用指导](#guidelines)
+  * [教程会被怎样评估并接受](#inclusion)
   * [How to submit (Due 10/15/2015)](#submit)
   * [Suggestions for designing your activity](#design)
   * [Trademark Guidelines](#tm)
   * [Tracking Pixel](#pixel)
   * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)
-  * [A note for students with disabilities](#disabilities)
+  * [为残疾学生的注释](#disabilities)
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activities: self-guided or *lesson-plan*
+## 2015新内容：两种形式的活动：自学或者*课程计划*
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+现在，成千上万的教育工作者已经尝试过编程一小时，许多课堂里准备了更多有创意，而不是通用活动来讲授计算机科学的基础知识。 为了帮助老师找到灵感，我们希望从有编程一小时讲授经验的老师收集1小时的“以教师为主导”的课程和活动计划。 我们也会继续推动“自学”形式的课程。
 
-**Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+***（新内容）*提交教师主导的课程计划，最好是跨学科的**：你有吸引人的或是独特的编程一小时课程的想法吗？ 一些教育工作者更愿意按照传统课程的形式来组织编程一小时活动，而不是通过引导性的游戏的体验。 如果正确的推进活动，更开放的活动会更好的展示计算机科学的创造性本质。 我们很愿意收集**为不同科目设计的一小时教案**。 例如，在几何课堂中讲授编程的一小时教案。 或者英语课堂上的疯狂填词练习。 或者历史课上的创造测验题目的活动。 这可以帮助我们招募其它学科的老师来通过他们独特的领域来指导编程一小时活动，同时也展示了计算机科学是如何影响和提升不同的学科。
 
-You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
+你可以从[空白模板](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub)开始你的授课计划。
 
-Examples:
+例如：
 
-  * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
-  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
-  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+  * [对称图（为美术老师准备的活动）](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [为物理老师准备的Arduino开发活动](https://csedweek.org/csteacher/arduino.pdf)
+  * [为历史老师准备的技术历史活动](https://csedweek.org/csteacher/besttechnology.pdf)
 
-[<button>How can I submit my own lesson plan?</button>](#submit)
+[<button>如何提交我自己的教案？</button>](#submit)
 
   
   
-**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+**学生主导（自学）的形式**：最早的编程一小时课程大部分是基于自学的，老师的帮助不是必需的。 现在已经有很多选择了，但如果你想创建一个新的活动，它应该被设计为能让学生们有兴趣的独立完成，或者在课堂上由没有备课或没有计算机背景的老师来指导。 它们应该为学生提供指导，而不是不确定的一小时长的挑战。 理想情况下，说明和教程都会直接集成到编程平台里，以免在教程和编程平台页面间切换。
 
-Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
+注意：我们会在面向学生的页面里的自学教程*下面*列出面向教师的活动。但也会将它们放到给教师的页面或者电子邮件里。
 
-## General guidelines for creating an Hour of Code activity
+## 创建一个编程一小时活动的一般准则
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming (not HTML). The tone should be that:
+编程一小时的目标是给初学者第一次尝试计算机科学或编程。基调应该是：
 
-  * Computer science is not just for geniuses, regardless of age, gender, race. Anybody *can* learn!
-  * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
-  * Encourage students to create something that can be shared with friends/online.
+  * 计算机科学不是只给天才的，无论年龄、性别、种族。任何人*都能*学习！
+  * 计算机科学和大量的领域和爱好都相关。每个人*都应该*学习！
+  * 鼓励学生创造一些能和朋友在线分享的东西。
 
-**Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
+**技术要求**：因为学校和班级的设备的多样性，最好的活动应该是基于网页的，或是能在智能手机上使用的，或者是不需要设备的讲授计算机概念的课程。(参考<http://csunplugged.com/>). 如果这个活动需要安装应用，桌面软件，或游戏机也可以，但不推荐这样。
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="inclusion"></a>
 
-## How tutorials will be evaluated for inclusion
+## 教程会被怎样评估并接受
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
+计算机科学教育者委员会将基于定性和定量的指标来给提交的作品排名，其中包括一个从更多教育工作者来的调研结果。
 
-**Tutorials will be listed higher if they are:**
+**如下的教程会排名较高：**
 
-  * high quality
-  * designed for beginners - among students AND teachers
-  * designed as a ~ 1 hour activity
-  * require no sign up
-  * require no payment
-  * require no installation
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp. under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * 高质量
+  * 为初学者准备的——包括初学的老师和学生
+  * 设计为一小时的活动
+  * 不需要注册
+  * 不需要付费
+  * 不需要安装
+  * 跨操作系统/设备平台，包括手机和平板
+  * 跨多种语言工作
+  * 促进所有人群的学习（特别是代表性不足的人群）
+  * 不是纯HTML+CSS的网页设计 —— （我们的目标是计算机科学，不是HTML编程）
 
-**Tutorials will be listed lower if they are:**
+**如下的教程会排名较低：**
 
-  * lower quality
-  * more advanced level of teaching (not for beginners)
-  * have a limited number of supported OS/device platforms - for Web-based platforms you should aim to support all of the following: IE9+, and the latest Chrome, Firefox, and Safari
-  * work only in English
-  * reinforce stereotypes that hinder participation by under-represented student groups
-  * serve as an upsell to a learning platform that charges tuition
+  * 低质量
+  * 更高级的教育（不适合初学者）
+  * 只支持有限数量的操作系统/设备平台——基于浏览器平台的应该支持：IE9以上，最新版的Chrome, Firefox和Safari.
+  * 只支持英文
+  * 包含固有成见，从而会阻碍未被代表的学生群体。
+  * 需要付费购买完全版的学习平台
 
-**Tutorials will NOT be listed if they:**
+**如下教程不会被考虑：**
 
-  * are not designed to be a (roughly) one-hour activity
-  * require sign up 
-  * require payment
-  * require installation (other than mobile apps)
-  * focus only on HTML + CSS web design
-  * are submitted after the submission deadline, or with incomplete information (see below)
+  * 没有设计成（大致）一个小时的活动
+  * 要求注册 
+  * 要求付费
+  * 要求安装（移动应用除外）
+  * 只集中在HTML+CSS的网页设计
+  * 没在提交截止日期前提交，或者信息不完整（见下文）
 
 **If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
 
 Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="submit"></a>
 
@@ -165,7 +163,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
       * For offline activities 
           * Number of downloads of paper version of activity (if applicable)
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="design"></a>
 
@@ -204,7 +202,7 @@ Benefits of Pair Programming:
   * Show that coding is not a solo activity, but one involving social interaction
   * Not all classrooms or labs have enough computers for a 1:1 experience
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="tm"></a>
 
@@ -214,15 +212,15 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". 坏例子：“试验ACME公司的编程一小时”。
+  2. 用一个“TM”上标放在最显著的提到“编程一小时”的地方。包括网站和应用程序。
   3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. No use of "Hour of Code" in app names.
+  4. 不要将“编程一小时”用在应用程序名字中。
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="pixel"></a>
 
@@ -241,7 +239,7 @@ Example tracking pixels for AppInventor:
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="promote"></a>
 
@@ -254,14 +252,12 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * Host a local event or ask your employees to host an event at local schools or community groups.
   * See our resource kit for further information (coming soon).
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## 特别为残疾学生的注释
 
-If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
+如果您创建了一个教程，为有视觉障碍的学生设计的，我们非常愿意为使用屏幕阅读器的观看者推荐。 我们还没有收到这类教程，并且热切希望为这样的学生提供一个选项。
 
-[**Back to the top**](#top)
-
-<%= view :signup_button %>
+[**返回页首**](#top)

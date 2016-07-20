@@ -16,14 +16,16 @@ class ImageLibTest < ActiveSupport::TestCase
     expected_image = test_image(expected_image_name)
 
     matching = images_equal?(framed_image, expected_image)
-    if !matching
+    unless matching
       # Save the generated image to a file to help with debugger
       tmp_path = '/tmp/framed_image.png'
       framed_image.write(tmp_path)
 
-      message = ["Overlaid image did not match expected value",
-                  "Actual image: #{tmp_path}",
-                  "Expected image: #{test_image_path(expected_image_name)}."].join("\n")
+      message = [
+        "Overlaid image did not match expected value",
+        "Actual image: #{tmp_path}",
+        "Expected image: #{test_image_path(expected_image_name)}."
+      ].join("\n")
       assert false, message
     end
   end

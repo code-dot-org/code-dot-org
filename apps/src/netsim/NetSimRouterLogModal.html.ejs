@@ -16,19 +16,78 @@ var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &
     headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
 /**
- * @name isAllRouterLogMode
- * @type {boolean}
+ * Parameters that should be supplied to the EJS template by the render invocation.
+ * @name locals
+ * @type {Object}
+ * @property {boolean} isAllRouterLogMode
+ * @property {boolean} canSetRouterLogMode
+ * @property {string} currentTrafficFilter
+ * @property {string} localAddress
+ * @property {string} sortBy
+ * @property {boolean} sortDescending
  */
 
-/**
- * @name sortBy
- * @type {string}
- */
+function routerLogModeDropdown() {
+  if (!locals.canSetRouterLogMode) {
+    return '';
+  }
 
-/**
- * @name sortDescending
- * @type {boolean}
- */
+  var markup = '<select id="routerlog-mode" class="pull-right">';
+  markup += '<option' + (locals.isAllRouterLogMode ? '' : ' selected') + ' value="mine">' +
+      i18n.logBrowserHeader_toggleMine() + '</option>';
+  markup += '<option' + (locals.isAllRouterLogMode ? ' selected' : '')+ ' value="all">' +
+      i18n.logBrowserHeader_toggleAll() + '</option>';
+  markup += '</select>';
+  return markup;
+}
+
+function trafficFilterDropdown() {
+  if (!locals.localAddress) {
+    return '';
+  }
+
+  var selectedIf = function (regex) {
+    if (regex.test(locals.currentTrafficFilter)) {
+      return ' selected';
+    }
+    return '';
+  };
+
+  var markup = '<select id="traffic-filter" class="pull-right">';
+  markup += '<option' + selectedIf(/^none/) + ' value="none">' +
+      i18n.logBrowserHeader_showAllTraffic() + '</option>';
+  markup += '<option' + selectedIf(/^with/) + ' value="with ' + locals.localAddress + '">' +
+      i18n.logBrowserHeader_showMyTraffic() + '</option>';
+  markup += '<option' + selectedIf(/^from/) + ' value="from ' + locals.localAddress + '">' +
+      i18n.logBrowserHeader_showTrafficFromMe() + '</option>';
+  markup += '<option' + selectedIf(/^to/) + ' value="to ' + locals.localAddress + '">' +
+      i18n.logBrowserHeader_showTrafficToMe() + '</option>';
+  markup += '</select>';
+  return markup;
+}
+
+function dialogTitle() {
+  var header = locals.isAllRouterLogMode ?
+      i18n.logBrowserHeader_all() : i18n.logBrowserHeader_mine();
+
+  var match = /^(from|to|with) ([\d\.]+)/.exec(locals.currentTrafficFilter);
+  if (match) {
+    if ('from' === match[1]) {
+      header += i18n.logBrowserHeader_trafficFromAddress({
+        address: match[2]
+      });
+    } else if ('to' === match[1]) {
+      header += i18n.logBrowserHeader_trafficToAddress({
+        address: match[2]
+      });
+    } else if ('with' === match[1]) {
+      header += i18n.logBrowserHeader_trafficToAndFromAddress({
+        address: match[2]
+      });
+    }
+  }
+  return header;
+}
 
 function sortMarkupFor(sortKey) {
   if (sortKey === locals.sortBy) {
@@ -44,16 +103,9 @@ function sortMarkupFor(sortKey) {
 <div class="modal-dialog modal-lg">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
-      <% if (locals.canToggleRouterLogMode) { %>
-        <button type="button" id="routerlog-toggle" class="pull-right btn btn-primary btn-mini"><%= (locals.isAllRouterLogMode) ? i18n.logBrowserHeader_toggleMine() : i18n.logBrowserHeader_toggleAll() %></button>
-      <% } %>
-
-      <% if (locals.isAllRouterLogMode) { %>
-        <h4 class="modal-title"><%= i18n.logBrowserHeader_all() %></h4>
-      <% } else { %>
-        <h4 class="modal-title"><%= i18n.logBrowserHeader_mine() %></h4>
-      <% } %>
+      <%- routerLogModeDropdown() %>
+      <%- trafficFilterDropdown() %>
+      <h4 class="modal-title"><%= dialogTitle() %></h4>
     </div>
     <div class="modal-body">
       <table>

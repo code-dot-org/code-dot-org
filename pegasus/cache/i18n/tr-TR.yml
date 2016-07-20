@@ -4,10 +4,10 @@
   'yes': Evet
   'no': Hayır
   select_language: Lütfen dilinizi seçiniz
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org yakında Internet Explorer 8, 9, 10 tarayıcılarından
+    desteğini çekecek. Lütfen modern bir tarayıcıya geçin.
+  upgrade_ie_message_csedweek: CSEdWeek.org yakında Internet Explorer 8, 9, 10 tarayıcılarından
+    desteğini çekecek. Lütfen modern bir tarayıcıya geçin.
   upgrade_ie_link: Daha fazlasını öğren
   en: Bilgisayar Bilimi
   computer_science_edweek: Bilgisayar Bilimleri Eğitim Haftası
@@ -378,7 +378,7 @@
   homepage_banner_20k_teachers_link: Daha fazlasını öğren
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress_link: Yardımlarınızı ekleyiniz
   homepage_slot_text_title_hoc: Saat Kodu
   homepage_slot_text_blurb_hoc: Herkes öğrenebilir. Bugün başlayın.
   homepage_slot_text_link_hoc: Kodlama Saati'ni Deneyin
@@ -404,7 +404,7 @@
   homepage_slot_text_link_stats: Istatistiklere göz atın
   homepage_slot_text_link_buy: Dahil olun
   homepage_slot_text_link_donate: Bağış yap
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: Tişörtler, şapkalar ve daha fazlası
   homepage_header_codestudio: Code Studio öğrencilerinin yaptıkları
   homepage_header_donors: Code.org destekleyenlere teşekkürler
   homepage_donors_seall: Tümünü göster
@@ -687,7 +687,7 @@
   dashboard_navigation_section_pd: Mesleki Gelişim
   dashboard_navigation_section_speakers: Bilgisayar Bilimi<br/>Davetli Konuşmacılar
   dashboard_navigation_all_sections: "Öğrenci hesapları ve ilerleme"
-  dashboard_navigation_view_progress: "İlerlemeyi Görüntüle"
+  dashboard_navigation_view_progress: "İlerleme Durumu"
   dashboard_navigation_view_text_responses: Yanıtları Görüntüle
   dashboard_navigation_view_assessments: Değerlendirmeler
   dashboard_navigation_add_students: "Öğrenci EKle"
@@ -878,12 +878,12 @@
   dashboard_announce_message: "<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde
     bir çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için
     öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir."
-  dashboard_announce_button_text: Daha fazlasını öğren
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_button_text: "Özelliği test et"
+  dashboard_announce_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar
+    bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize
+    izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde
+    gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi
+    için bir açık mektup verdi."
   dashboard_announce_petition_button: Adınızı Ekleyin
   code_hoc_coming: Kod Saati burada - Aralık 8-14!
   code_sign_up: CS Education Week' e katılmak için kaydolun.
@@ -1016,6 +1016,7 @@
   cspunit6_name: CS Principles Unit 6
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1715,3 +1716,22 @@
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
+  try_now: Try now
+  watch_inspirational_videos: Before you get started, watch one of these inspirational
+    videos
+  speak_another_language: Speak another language?
+  help_translate: Help us translate.
+  no_internet: Don't have Internet?
+  download_offline: Download the offline version.
+  dashboard_navigation_view_surveys: Surveys
+  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
+    teaches several concepts including text compression, encoding images with bits
+    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
+    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_learn_more_button: Learn more
+  dashboard_announce_try_now_button: Try it now
+  compatibility_hide_this_warning: Hide this warning
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.

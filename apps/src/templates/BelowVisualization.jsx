@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 var React = require('react');
 import { connect } from 'react-redux';
 var commonStyles = require('../commonStyles');
@@ -93,6 +94,11 @@ export default connect(state => ({
   inputOutputTable: state.pageConstants.inputOutputTable
 }), dispatch => ({
   showInstructionsDialog() {
-    dispatch(openDialog(false, true));
+    dispatch(openDialog({
+      autoClose: false,
+      showHints: true,
+      aniGifOnly: false,
+      hintsOnly: false
+    }));
   }
 }))(BelowVisualization);

@@ -1,27 +1,23 @@
 name 'CSPPD3-u2 tips for prep'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
-### Getting Started > Tips for Preparation
+# Getting Started > Tips for Preparation
 
-#### Pay close attention to the resources and support materials
-Every lesson in CSP has a lot support already built in, and you should use the first page as a map of those resources. The first page of any lesson plan explains what happens in the lesson and includes links to all important materials that support the lesson. These materials range from student worksheets to video. You should thoroughly explore the materials associated with a lesson, so click through those links in the lesson overview pages! 
+## Pay close attention to the resources and support materials
 
-#### Try out the activities and tools!
+Every lesson in CSP has a lot support already built in, and you should use the first page as a map of those resources. The first page of any lesson plan explains what happens in the lesson and includes links to all important materials that support the lesson. These materials range from student worksheets to video. You should thoroughly explore the materials associated with a lesson, so click through those links in the lesson overview pages!
 
-During the in-person workshop this summer we had a chance to go through 4 of the 20 lessons in Unit 2. In the on-going academic support workshops we will look at 5 more lessons from Unit 2. This online PD is time for you to try out activities from more lessons, or to revisit activities that you might still have questions about. We’ve selected a handful of lessons that are important, but might be tricky to teach without first doing the activities yourself. 
+## Try out the activities and tools!
 
-#### Test the Internet Simulator
-The internet simulator is used in a bunch of lessons in Unit 2, so you’ll want to spend some time trying it out. You can use the internet simulator by yourself if you open two browser windows side by side and connect to yourself (see below): 
-<br>
+During the in-person workshop this summer we had a chance to go through 4 of the 20 lessons in Unit 2. In the on-going academic support workshops we will look at 5 more lessons from Unit 2. This online PD is time for you to try out activities from more lessons, or to revisit activities that you might still have questions about. We’ve selected a handful of lessons that are important, but might be tricky to teach without first doing the activities yourself.
+
+## Test the Internet Simulator
+
+The internet simulator is used in a bunch of lessons in Unit 2, so you’ll want to spend some time trying it out. You can use the internet simulator by yourself if you open two browser windows side by side and connect to yourself (see below):
+
 ![](https://images.code.org/720b05c7037d4c2a4c6fd3ef4646889f-image-1443796074658.gif)
 
-<br><br>
+>Remember that in order to connect to someone on the Internet Simulator you need to be in the same section.  Make sure you have a section setup before you try to use NetSim! For more details on how to setup a section, [check out this video](http://forum.code.org/t/setting-up-your-csp-section-in-code-studio/1670).
 
->Remember that in order to connect to someone on the Internet Simulator you need to be in the same section.  Make sure you have a section setup before you try to use NetSim! For more details on how to setup a section, [check out this video](http://forum.code.org/t/setting-up-your-csp-section-in-code-studio/1670)
-
-<br><br>
- <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

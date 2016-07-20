@@ -77,7 +77,13 @@ def index_batch_of_forms(batch_size)
 
       begin
         index_data = JSON.load(form[:data]).merge(JSON.load(form[:processed_data]))
-        index_data = index_data.merge('id'=>form[:id], 'kind_s'=>form[:kind], 'review_s'=>form[:review], 'user_i'=>form[:user_id], 'parent_form_i'=>form[:parent_id])
+        index_data = index_data.merge(
+          'id' => form[:id],
+          'kind_s' => form[:kind],
+          'review_s' => form[:review],
+          'user_i' => form[:user_id],
+          'parent_form_i' => form[:parent_id]
+        )
         index_data = kind.index(index_data) if kind.respond_to?(:index)
 
         address_to_search = index_data['school_address_s'].to_s.strip
@@ -119,7 +125,7 @@ def index_batch_of_forms(batch_size)
   documents.count
 end
 
-def main()
+def main
   limit = 1000
 
   process_batch_of_forms(limit)

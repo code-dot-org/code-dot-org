@@ -532,13 +532,13 @@ cs-CZ:
   dashboard_navigation_section_pd: Profesionální vývoj
   dashboard_navigation_section_speakers: 'Informatika <br/> pozvaní řečníci'
   dashboard_navigation_all_sections: Studentské účty a pokrok
-  dashboard_navigation_view_progress: Zobrazit průběh
-  dashboard_navigation_view_text_responses: Zobrazit textové odpovědi
+  dashboard_navigation_view_progress: pokrok
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Přidat studenty
   dashboard_navigation_manage_students: Správa studentů
   dashboard_navigation_lesson_plans_resources: Plány hodin a zdroje
-  dashboard_navigation_view_stats: Zobrazit statistiky
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Sekce: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_progress_not_started: není zahájeno
@@ -683,8 +683,9 @@ cs-CZ:
   dashboard_faq_k5: K-5, nejčastější dotazy
   dashboard_announcements: Oznámení
   dashboard_announce_view_all: Zobrazit vše
-  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-  dashboard_announce_button_text: Zjisti více
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Přidej své jméno
   code_hoc_coming: 'Hodina kód je zde - prosinec 8-14!'
@@ -804,6 +805,7 @@ cs-CZ:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

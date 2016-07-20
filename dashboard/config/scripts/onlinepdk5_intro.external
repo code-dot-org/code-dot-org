@@ -1,11 +1,10 @@
 name 'OnlinePDK5 Intro'
-css 'k5pd'
 skip_dialog true
 
 markdown <<MARKDOWN
 ## Welcome!
 
-<img align="left" src="http://staging.code.org/images/edquote1.png" height="910" width="400" hspace="20">
+<img align="left" src="//code.org/images/edquote1.png" height="910" width="400" hspace="20">
 
 As an educator, you know how important it is for your students to learn the basics of computer science. But how do you start teaching kids to code if you have no coding background yourself?
 

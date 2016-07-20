@@ -29,13 +29,14 @@ class ScriptDSL < BaseDSL
   string :description_short
   string :description
   string :description_audience
+  string :professional_learning_course
+  integer :peer_reviews_to_complete
 
   boolean :hidden
   boolean :login_required
   boolean :admin_required
   boolean :student_of_admin_required
   boolean :pd
-  boolean :professional_learning_course
 
   string :wrapup_video
 
@@ -59,7 +60,8 @@ class ScriptDSL < BaseDSL
       admin_required: @admin_required,
       pd: @pd,
       student_of_admin_required: @student_of_admin_required,
-      professional_learning_course: @professional_learning_course
+      professional_learning_course: @professional_learning_course,
+      peer_reviews_to_complete: @peer_reviews_to_complete
     }
   end
 
@@ -139,7 +141,7 @@ class ScriptDSL < BaseDSL
       @i18n_strings[stage[:stage]] = stage[:stage]
     end
 
-    {'name'=> {@name => @i18n_strings}}
+    {'name' => {@name => @i18n_strings}}
   end
 
   def self.parse_file(filename)

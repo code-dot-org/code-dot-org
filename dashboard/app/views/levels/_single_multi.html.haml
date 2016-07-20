@@ -36,7 +36,7 @@
       %br/
 
     - if standalone && !data['options'].try(:[], 'hide_submit')
-      .buttons
+      .buttons{class: data['submittable'] == 'true' ? 'submittable' : nil}
         %a.btn.btn-large.btn-primary.next-stage.submitButton{id: "submit_level_#{level.id}"}
           =t('submit')
         %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none", id: "unsubmit_level_#{level.id}"}
@@ -105,5 +105,6 @@
       "#{data['type']}" == "multi2" ? 2 : 1,
       #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map {|answer| answer['correct'] || false}},
       #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map{|answer| answer['feedback']}.to_json},
-      #{last_attempt.to_json}
+      #{last_attempt.to_json},
+      #{contained_mode}
     );

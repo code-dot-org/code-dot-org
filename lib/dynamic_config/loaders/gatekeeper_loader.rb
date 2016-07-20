@@ -77,7 +77,7 @@ module GatekeeperLoader
   # Load yaml file into gatekeeper
   # @param filepath [String]
   def self.load(filepath)
-    yaml = File.open(filepath, 'r').read()
+    yaml = File.open(filepath, 'r').read
     commands = self.yaml_to_commands(yaml)
     self.apply_commands(commands)
   end

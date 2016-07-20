@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### Më poshtë gjeni model rezolutë mbështetëse për Javën Edukative në Shkencat Kompjuterike dhe qëllimet e saj që të mund të përdoret nga ligjvënësit e qeverisjes qendrore dhe lokale.
 
   
@@ -15,7 +13,7 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 [DATË]
 
-Ndërsa teknologjia kompjuterike është një pjesë integrale e kulturës dhe është duke transformuar mënyrën se si njerëzit ndërveprojnë me njëri-tjetrin dhe botën rreth tyre;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
 Ndërsa shkencat kompjuterike po transformojnë industrinë, duke krijuar fusha të reja të tregtisë, inovacioni po drejtohet drejt të gjitha fushave të shkencës, dhe forcimin e produktivitetit në sektorët e përcaktuara ekonomik;
 
@@ -25,7 +23,7 @@ Ndërsa shkencat kompjuterike janë shkencë themelore për moshën dixhitale;
 
 Ndërsa sektori i teknologjisë së informacionit është pozicionuar në mënyrë unike për të ndihmuar me rimëkëmbjen ekonomike nëpërmjet kërkimit dhe zhvillimit të risive/inovacioneve të reja;
 
-Ndërsa perspektiva në shkenca kompjuterike është e ndritshme, një në çdo dy punë në vendin tuaj ka lidhje kompjuterike;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 Ndërsa nxënësve/studentëve iu jepet mundesia të marrin pjesë në aktivitetet me nivel të lartë të shkencave kompjuterike për të i ekspozuar me mundësitë e pasura të ofertave në terren dhe i ofrohen aftësitë e të menduarit kritik që t'i shërbejnë gjatë gjithë jetës së tyre;
 
@@ -52,5 +50,3 @@ Vendosur, nga [KUVENDI APO SENATI, SHTETI, KOMUNA, QYTETI OSE BORDI SHKOLLËS] -
 (4) inkurajo politikëbërësit për të hequr pengesat që parandalojnë mësimet e shkencave kompjuterike nga të qenit të numërueshëm si kredite matematike ose shkence drejt kërkesave të diplomimit;
 
 (5) inkurajo mundësitë, duke përfshirë programet ekzistuese, për femra dhe të pakicave të pa përfaqësuara në shkenca kompjuterike.
-
-<%= view :signup_button %>

@@ -1,9 +1,8 @@
 var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
-testUtils.setupLocale('calc');
 var calcMsg = require('@cdo/apps/calc/locale');
-var commonMsg = require('@cdo/apps/locale');
+var commonMsg = require('@cdo/locale');
 
 module.exports = {
   app: "calc",
@@ -168,6 +167,20 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.calcBlockXml('functional_dividedby', [4, 0]) +
+      '</xml>'
+    },
+    {
+      description: "imaginary number",
+      expected: {
+        result: false,
+        testResult: TestResults.APP_SPECIFIC_FAIL
+      },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, calcMsg.imaginaryNumberError());
+        return true;
+      },
+      xml: '<xml>' +
+        blockUtils.calcBlockXml('functional_sqrt', [-1]) +
       '</xml>'
     },
     {

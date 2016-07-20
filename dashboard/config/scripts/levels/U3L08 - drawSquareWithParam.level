@@ -9,24 +9,35 @@
     "code_functions": {
       "moveForward": null,
       "moveTo": null,
-      "turnRight": null,
-      "turnLeft": null,
+      "turnRight": {
+        "paramButtons": {
+          "minArgs": 1,
+          "maxArgs": 1
+        }
+      },
+      "turnLeft": {
+        "paramButtons": {
+          "minArgs": 1,
+          "maxArgs": 1
+        }
+      },
       "penUp": null,
       "penDown": null,
       "functionParams_none": null,
       "functionParams_n": null,
+      "callMyFunction_n": null,
       "callMyFunction": null,
-      "callMyFunction_n": null
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Defining and Using a Function with a Parameter\r\nFrom the video, you learned that defining multiple functions to draw different sized squares results in lots of repetitive functions - they are essentially the same, with a few numbers changed - and this is not desirable.\r\nAny time you find yourself effectively copy and pasting large sections of code, it's usually a sign that there is a better way.\r\n\r\n# Do This:\r\nUh oh! Something's wrong! We've set up a program that runs, but doesn't do what it's supposed to do. The program is supposed to make a drawing with two squares that looks like this:\r\n\r\n<img src=\"https://images.code.org/3eae30651dabc2f83a8bbbbbf8bea7ad-image-1442420537113.26.34 AM.png\" style=\"width: 150px;\"> \r\n\r\nWe've given you the `drawSquare(size)`function that was created in the video, but it's not quite right. Fix the code inside the function so that the program creates the drawing correctly.\r\n\r\n**HINT:** You should only need to change one thing about an existing line of code. You don't need to add or remove any lines of code. Remember: The parameter `size` acts like a placeholder for a value that gets plugged into each call to `moveForward()`.\r\n\r\n",
-    "start_blocks": "penUp();\r\nmoveTo(150,200);\r\ndrawSquare(100);\r\nmoveTo(100,350);\r\ndrawSquare(25);\r\n\r\nfunction drawSquare(size){\r\n  penDown();\r\n  moveForward(size);\r\n  turnRight();\r\n  moveForward(size);\r\n  turnRight();\r\n  moveForward(33);\r\n  turnRight();\r\n  moveForward(size);\r\n  turnRight();\r\n  penUp();\r\n}",
+    "start_blocks": "penUp();\r\nmoveTo(150,200);\r\ndrawSquare(100);\r\nmoveTo(100,350);\r\ndrawSquare(25);\r\n\r\nfunction drawSquare(size){\r\n  penDown();\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(33);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n  penUp();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
     "slider_speed": "1",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -55,7 +66,13 @@
     "video_key": "csp_applab_functions_parameters",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "encrypted_examples": "5Ot7bDDuTK/42jNXiOS6k1KbwZ/hGrzwv0mbeXY0VsI7ks2fAd/vL4U+oWDZ\nycgZ\n"
+    "encrypted_examples": "5Ot7bDDuTK/42jNXiOS6k1KbwZ/hGrzwv0mbeXY0VsI7ks2fAd/vL4U+oWDZ\nycgZ\n",
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

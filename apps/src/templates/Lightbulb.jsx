@@ -167,24 +167,21 @@ var Lightbulb = React.createClass({
 });
 module.exports = Lightbulb;
 
-if (process.env.NODE_ENV === 'development') {
-  Lightbulb.styleGuideExamples = {
-    description: 'This component renders a lightbulb.',
-    examples: [
-      {
-        description: 'With default props',
-        props: null,
-      }, {
-        description: 'Unlit',
-        props: {
-          lit: false,
-        },
-      }, {
-        description: 'With a count',
-        props: {
-          count: 10,
-        },
-      },
-    ],
+if (BUILD_STYLEGUIDE) {
+  Lightbulb.styleGuideExamples = storybook => {
+    return storybook
+      .storiesOf('Lightbulb', module)
+      .addStoryTable([
+        {
+          name: 'With default props',
+          story: () => <Lightbulb />,
+        }, {
+          name: 'Unlit',
+          story: () => <Lightbulb lit={false}/>,
+        }, {
+          name: 'With a count',
+          story: () => <Lightbulb count={10}/>,
+        }
+      ]);
   };
 }

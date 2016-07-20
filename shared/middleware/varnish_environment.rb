@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class VarnishEnvironment < Sinatra::Base
 
-  def self.load_supported_locales()
+  def self.load_supported_locales
     Dir.glob(pegasus_dir('cache', 'i18n', '*.yml')).map do |i|
       File.basename(i, '.yml').downcase
     end.sort
@@ -42,7 +42,7 @@ class VarnishEnvironment < Sinatra::Base
         return 'fa-IR'
       else
         language = language.to_s.downcase
-        return nil unless locale = settings.locales_supported.find{|i| i==language || i.split('-').first==language}
+        return nil unless locale = settings.locales_supported.find{|i| i == language || i.split('-').first == language}
         parts = locale.split('-')
         return "#{parts[0].downcase}-#{parts[1].upcase}"
       end

@@ -30,6 +30,8 @@
   unsubmit: Fortryd indsendelse
   previous_page: Forrige side
   next_page: Næste side
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: Annuller
   okay: Okay
   heading_x_of_y: "%{heading} (side %{x} af %{y})"
@@ -93,6 +95,7 @@
     teacher_title: Lærer-tilmelding
     student_pitch: Elev tilmelding til Code.org
     student_title: Tilmelding for elever
+    signup_title: Sign up for Code.org
     school_name: Skolens navn (valgfrit)
     school_address: Skolens adresse (valgfri)
     address_placeholder: adresse, by, postnummer
@@ -117,6 +120,9 @@
       for code.org.
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte
       med at logge dig.
+    user_type_label: Account Type
+    user_type_teacher: Lærer
+    user_type_student: Elev
   signin_form:
     title: Har du allerede en konto? Log på
     login: Email eller Brugernavn
@@ -540,7 +546,7 @@
         in seconds.
       body_short: Design an app, code with blocks or JavaScript to make it work, then
         share your app in seconds.
-      audience: Ages 13+
+      audience: Alder 13+
       cta: Learn how
     hoc:
       title: Klassisk labyrint
@@ -574,7 +580,7 @@
       body: Udforsk en Minecraft-verden gennem kode.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: Alder 4+
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
@@ -801,7 +807,7 @@
           og %{link_start_tos}Terms af Service%{link_end}
   peer_review:
     accepted:
-      name: Accepted
+      name: Accepteret
       description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
         requirements"
     rejected:
@@ -809,7 +815,7 @@
       description: "<strong>No</strong>, this submission <strong>does not meet</strong>
         the requirements"
     escalated:
-      name: Escalated
+      name: Eskalerede
       description: I would like an instructor to review this submission
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
@@ -860,3 +866,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

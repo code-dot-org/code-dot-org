@@ -8,11 +8,14 @@ el:
   campaign_date_start_long: 7 Δεκεμβρίου
   campaign_date_short: '7 - 13 Δεκεμβρίου'
   campaign_date_full: '7 - 13 Δεκεμβρίου'
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: Λάβετε μέρος στην μεγαλύτερη στην ιστορία εκδήλωση για την μάθηση, 7-13 Δεκεμβρίου, 2015
   front_intro_default: 'H ώρα του κώδικα είναι ένα παγκόσμιο κίνημα που φθάνει σε δεκάδες εκατομμύρια μαθητές σε 180+ χώρες. Οποιοσδήποτε, οπουδήποτε μπορεί να οργανώσει μια εκδήλωση για την Ώρα του Κώδικα. Ωριαία μαθήματα είναι διαθέσιμα σε πάνω από 30 γλώσσες. Δεν χρειάζεται καμία εμπειρία. <strong>Για ηλικίες από 4 έως 104.</strong>'
   front_watch_video: Δες το νέο βίντεο
   front_watch_regular_video: Δείτε το βίντεο
   front_volunteers: Ζητούνται εθελοντές Τεχνικοί
+  front_start_learning: Start learning
   header_menu_resources: Πόροι
   header_menu_faq: Συχνές Ερωτήσεις
   header_menu_prizes: Βραβεία
@@ -174,7 +177,9 @@ el:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Βραβεία για κάθε εκπαιδευτικό
   prizes_10k: 'Ένα δημόσιο σχολείο, σε κάθε πολιτεία των ΗΠΑ (& Washington DC) θα κερδίσει προϊόντα τεχνολογίας αξίας $10.000'
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: '<i>Κάθε</i> διοργανωτής θα λάβει <b>$10 για την Amazon.com, το iTunes ή το Windows store</b> ως ευχαριστήριο δώρο!'
+  prizes_more: More exciting prizes
   whats_next_header: Τι υπάρχει στη συνέχεια;
   whats_next_description: "Θα σας στείλουμε υλικό και χρήσιμες συμβουλές για την εκδήλωσή σας. Νέοι οδηγοί για το 2015 έρχονται σύντομα για οποιονδήποτε φυλλομετρητή, για smartphone - ακόμη οδηγοί χωρίς υπολογιστή! <a href='http://code.org/learn'>Δοκιμάστε τους υπάρχοντες οδηγούς </a>"
   whats_next_how_to: "<a href='/how-to'> Πώς να οργανώσετε μια ώρα του κώδικα</a>"
@@ -243,7 +248,7 @@ el:
   signup_name_placeholder: Το όνομα σας
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Για παράδειγμα, Γυμνάσιο του Λίνκολν
-  signup_event_location_placeholder: "Ταχυδρομικό κωδικό και  χώρα ή πλήρη διεύθυνση. \r (θα τα χρησιμοποιήσουμε για να τοποθετήσουμε μια καρφίτσα στο χάρτη μας)"
+  signup_event_location_placeholder: "Ταχυδρομικό κωδικό και  χώρα ή πλήρη διεύθυνση. \\r (θα τα χρησιμοποιήσουμε για να τοποθετήσουμε μια καρφίτσα στο χάρτη μας)"
   signup_special_event_details_placeholder: Περιγράψτε τι είναι αυτό που την κάνει μια ειδική εκδήλωση
   signup_send_posters_address_placeholder: Αυτή η διεύθυνση δεν θα κοινοποιηθεί στον χάρτη μας
   signup_event_type_in_school: Σε ένα σχολείο
@@ -252,6 +257,7 @@ el:
   signup_submit_error_message: Παρουσιάστηκε ένα σφάλμα. Ελέγξτε για να βεβαιωθείτε ότι όλα τα απαιτούμενα πεδία έχουν έχουν συμπληρωθεί σωστά.
   signup_thank_you_header: Σας ευχαριστούμε που εγγραφήκατε για να φιλοξενήσετε μια εκδήλωση για την Ώρα του Κώδικα.
   signup_thank_you_message: Σας στέλνουμε ένα email επιβεβαίωσης με πληροφορίες που θα σας βοηθήσουν να ξεκινήσετε.
+  map_title: Hour of Code map
   map_header: '#Εκδηλώσεις για την Ώρα του Κώδικα  σε όλο τον κόσμο'
   see_all_events: Δείτε όλες τις εκδηλώσεις
   map_header_company: '# από τισ διοργανώτριες εταιρίες'
@@ -264,7 +270,7 @@ el:
   map_legend_cs_tech_jam: CS Tech κόμβος
   meta_tag_og_title: Η Ώρα του Κώδικα πλησιάζει
   meta_tag_og_description: Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φτάνει σε δεκάδες εκατομμύρια μαθητές σε 200 χώρες και σε πάνω από 30 γλώσσες. Για ηλικίες 4 έως 104.
-  meta_tag_twitter_title: Η Ώρα του Κώδικα πλησιάζει
+  meta_tag_twitter_title: Η Ώρα του Κώδικα είναι εδώ
   meta_tag_twitter_description: Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φτάνει σε δεκάδες εκατομμύρια μαθητές σε 200 χώρες και σε πάνω από 30 γλώσσες. Για ηλικίες 4 έως 104.
   twitter_default_text: 'Συμμετέχω στη φετινή #HourOfCode, εσύ; @codeorg'
   hardware_prizes_form_name_label: Το όνομά σου
@@ -304,7 +310,7 @@ el:
   hoc_faq_host_q: Δεν ξέρω τίποτα από προγραμματισμό. Μπορώ να διοργανώσω κι εγώ μια εκδήλωση;?
   hoc_faq_host_a: "Βεβαίως, οι δραστηριότητες της Ώρας του Κώδικα είναι αυτο-κατευθυνόμενες. Το μόνο που έχεις να κάνεις είναι <a href=%{codeorg_url}/learn'> να δοκιμάσεις τα τρέχοντα σεμινάριά μας </a>, να διαλέξεις το σεμινάριο που θέλεις και να βρεις μια ώρα &mdash; εμείς φροντίζουμε για τα υπόλοιπα. Επίσης υπάρχουν επιλογές για κάθε ηλικία και επίπεδο εμπειρίας, ξεκινώντας από το νηπιαγωγείο. Άρχισε να σχεδιάζεις την εκδήλωσή σου διαβάζοντας τον <a href='target-resources-how-to'> Πώς το κάνω οδηγό μας </a>."
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: Χρειάζομαι υπολογιστές για κάθε συμμετέχοντα;
   hoc_faq_need_computers_a: "Όχι. Έχουμε μαθήματα για την Ώρα του Κώδικα που λειτουργούν σε υπολογιστές, smartphones, tablets, και μερικά που δεν απαιτούν καθόλου υπολογιστή ! Μπορείτε να συμμετάσχετε όπου κι αν βρίσκεστε, με ό, τι έχετε. <p><i>Εδώ είναι μερικές επιλογές:</i> <br><ul><li><b>Δουλέψτε σε ομάδες των δύο.</b> Η έρευνα δείχνει ότι οι μαθητές μαθαίνουν καλύτερα όταν <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>προγραμματίζουν σε ομάδες των δύο</a>, ενώ μοιράζονται κάποιον υπολογιστή και συνεργάζονται. Προτρέψτε τους μαθητές σας να δουλέψουν ανά δύο. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
   hoc_faq_international_q: 'Μένω στην  <country>.  Πως μπορώ να συμμετέχω διεθνώς;'
@@ -313,8 +319,6 @@ el:
   hoc_faq_tutorial_a: "Αν ενδιαφέρεσαι να γίνεις συνεργάτης εκπαιδευτικός, <a href='/tutorial-guidelines'>δες τις κατευθυντήριες γραμμές και τις οδηγίες μας</a>. Θα θέλαμε να συμπεριλάβουμε με διάφορες ελκυστικές επιλογές, αλλά ο πρωταρχικός στόχος είναι η βελτιστοποίηση της εμπειρίας μαθητών και δασκάλων που είναι καινούργιοι στην επιστήμη των υπολογιστών."
   hoc_faq_account_q: Είναι υποχρεωτικό οι μαθητές να συνδεθούν χρησιμοποιώντας έναν λογαριασμό;
   hoc_faq_account_a: "Οχι. Απολύτως καμία εγγραφή ή σύνδεση με λογαριασμό κανενός είδους δεν απαιτείται για τους μαθητές προκειμένου να δοκιμάσουν την Ώρα του Κώδικα.  Οι περισσότερες <a href='http://code.org/learn/beyond'> παρακολουθήσεις της επίδοσης των μαθημάτων</a> απαιτούν τη δημιουργία ενός λογαριασμού προκειμένου να κρατείται εκεί η πρόοδος του μαθητή."
-  hoc_faq_frozen_q: Πού είναι το μάθημα με την Άννα και την Έλσα;
-  hoc_faq_frozen_a: "Είναι πλέον δημοσιευμένο στο  <a href='http://code.org/learn'> Code.org/learn</a>. Ελπίζουμε να το απολαύσετε!"
   hoc_faq_high_school_q: Ποια δραστηριότητα πρέπει να κάνω με μαθητές λυκείου;
   hoc_faq_high_school_a: "Για όλες τις ηλικίες, εμείς προτείνουμε να δοκιμάσετε ένα από τα μαθήματα αρχαρίων  <a href='http://code.org/learn'> Code.org/learn</a> για να ξεκινήσετε, όπως το μάθημα με τα Angry Birds ή το μάθημα με την Άννα και την Έλσα. Ένας  μαθητής λυκείου πρέπει να είναι σε θέση να τελειώσει ένα από αυτά τα μαθήματα σε 30 λεπτά και στη συνέχεια μπορεί να δοκιμάσει ένα πιο προχωρημένο εισαγωγικό μάθημα σε JavaScript, όπως αυτά που προσφέρονται από την Khan Academy ή  την CodeHS."
   hoc_faq_scratch_q: Θέλω να διδάξω Scratch για την Ώρα του Κώδικα, αλλά τι μπορώ να κάνω εάν οι μαθητές μου έχουν iPads αντί για φορητούς υπολογιστές;
@@ -330,7 +334,9 @@ el:
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: Στατιστικά στοιχεία από την ώρα του κώδικα του 2013
   stats_growth: Φτάσαμε στους 15 εκατομμύρια χρήστες πιο γρήγορα από όλους.
   stats_i18n: Οι μαθητές μαθαίνουν σε 40 γλώσσες
@@ -415,6 +421,9 @@ el:
   events_orgs_title: Όλες οι εκδηλώσεις Ώρας του Κώδικα που έχουν διοργανώσει οι Συνεργαζόμενοι Οργανισμοί
   event: εκδήλωση
   events: εκδηλώσεις
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: Πνευματικά δικαιώματα Code.org 2015. Όλα τα δικαιώματα είναι κατοχυρωμένα.
   footer_trademark_message: Η Ώρα του κώδικα ™ είναι εμπορικό σήμα της Code.org.
   footer_menu_partners: Συνεργάτες

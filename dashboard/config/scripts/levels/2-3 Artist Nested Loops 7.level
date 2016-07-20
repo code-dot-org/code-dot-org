@@ -32,7 +32,9 @@
     "markdown_instructions": "Loop this triangle 10 times to draw the sun. \r\n\r\nYou'll need to move and turn after each triangle. \r\n\r\nYou can figure out how much to turn by dividing the number of degrees in a circle by the number of triangles that make it up.\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"How far should you turn in each loop?  \\n\\nWhat is 360/10?\",\r\n  \"hint_id\": \"2-3_Artist_Nested_Loops_7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -60,6 +62,12 @@
                   </next>
                 </block>
               </statement>
+              <next>
+                <block type="jump_by_constant" deletable="false" editable="false">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">30</title>
+                </block>
+              </next>
             </block>
           </next>
         </block>

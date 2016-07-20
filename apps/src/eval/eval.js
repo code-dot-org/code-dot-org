@@ -24,7 +24,7 @@ var Eval = module.exports;
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var evalMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
@@ -508,6 +508,12 @@ Eval.execute = function () {
   }
 
   studioApp.playAudio(Eval.result ? 'win' : 'failure');
+
+  if (!Eval.result && level.isProjectLevel) {
+    // In projects mode, report callback is never called. In the case of a
+    // failure, immediately display any feedback.
+    displayFeedback();
+  }
 };
 
 Eval.checkExamples_ = function (resetPlayspace) {

@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
 ### 以下はコンピューターサイエンス週間の支援のためのコンピュータサイエンスの目的に関係する例です。州議員、国会議員の方々に利用してもらうことを意図しています。
 
   
@@ -15,7 +13,7 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 [DATE]
 
-コンピュータ技術は文化において重要になり、そして人々がコミュニケーションする方法を変えつつあります。
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
 コンピュータサイエンスは産業を変え、新しい市場を作り出し、全ての科学分野における革新を後押しし、そしてすでに確立された経済分野の生産性を高めます。
 
@@ -25,7 +23,7 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 情報技術は、イノベーションの開発や研究を通して景気回復を助ける重要な役割をしています。
 
-コンピュータサイエンスに関係する仕事の将来性はとても明るいです。 アメリカの科学・技術・エンジニアリング・数学に関する仕事の 2つに1つはコンピュータに関する仕事です。
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
 学生に高いレベルのコンピュータサイエンスの活動に参加するチャンスを提供する事で、学生は生活を通して使う事ができるクリティカルシンキングのスキルを学ぶ機会を得られます。
 
@@ -52,5 +50,3 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 (4) コンピュータサイエンスの授業が、数学や科学の卒業単位の一部として換算されるための障壁を取り除くことを政策立案者に奨励します。
 
 (5) 女性とマイノリティがコンピュータサイエンスを学ぶ機会を増やすことを、推奨します。
-
-<%= view :signup_button %>

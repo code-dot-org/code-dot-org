@@ -1,10 +1,8 @@
 * * *
 
-title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
+titel: < % = hoc_s(:title_press_release) %> lay-out: breed nav: promote_nav
 
 * * *
-
-<%= view :signup_button %>
 
 # Voorbeeld perscommuniqué voor verkozenen
 
@@ -42,9 +40,3 @@ Wereldwijd hebben er meer dan 100 miljoen studenten meegedaan met CodeUur. Dankz
 [**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
 
 Voor meer informatie over [**EVENT/PROGRAM/ETC**], bezoek [**INSERT WEBSITE**] of neem contact op met [**INSERT CONTACT INFORMATION**]
-
-  
-  
-
-
-<%= view :signup_button %>

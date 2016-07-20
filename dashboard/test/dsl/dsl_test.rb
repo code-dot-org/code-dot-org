@@ -18,36 +18,37 @@ class DslTest < ActiveSupport::TestCase
     DSL
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     expected = {
-        id: nil,
-        stages: [
-          {
-              stage: 'Stage1',
-              scriptlevels: [
-                  {stage: 'Stage1', levels: [{name: 'Level 1'}]},
-                  {stage: 'Stage1', levels: [{name: 'Level 2'}]},
-                  {stage: 'Stage1', levels: [{name: 'Level 3'}]}
-              ]
-          },
-          {
-              stage: 'Stage2',
-              scriptlevels: [
-                  {stage: 'Stage2', levels: [{name: 'Level 4'}]},
-                  {stage: 'Stage2', levels: [{name: 'Level 5'}]}
-              ]
-          }
-        ],
-        hidden: true,
-        wrapup_video: nil,
-        login_required: false,
-        admin_required: false,
-        student_of_admin_required: false,
-        professional_learning_course: nil,
-        pd: false
+      id: nil,
+      stages: [
+        {
+          stage: 'Stage1',
+          scriptlevels: [
+            {stage: 'Stage1', levels: [{name: 'Level 1'}]},
+            {stage: 'Stage1', levels: [{name: 'Level 2'}]},
+            {stage: 'Stage1', levels: [{name: 'Level 3'}]}
+          ]
+        },
+        {
+          stage: 'Stage2',
+          scriptlevels: [
+            {stage: 'Stage2', levels: [{name: 'Level 4'}]},
+            {stage: 'Stage2', levels: [{name: 'Level 5'}]}
+          ]
+        }
+      ],
+      hidden: true,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: false,
+      student_of_admin_required: false,
+      professional_learning_course: nil,
+      pd: false,
+      peer_reviews_to_complete: nil
     }
 
-    i18n_expected = {'en'=>{'data'=>{'script'=>{'name'=>{'test'=>{
-        'Stage1'=>'Stage1',
-        'Stage2'=>'Stage2'
+    i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {
+        'Stage1' => 'Stage1',
+        'Stage2' => 'Stage2'
     }}}}}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
@@ -60,15 +61,16 @@ class DslTest < ActiveSupport::TestCase
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
 
     expected = {
-        id: nil,
-        stages: [],
-        hidden: true,
-        wrapup_video: nil,
-        login_required: false,
-        admin_required: true,
-        student_of_admin_required: false,
-        professional_learning_course: nil,
-        pd: false
+      id: nil,
+      stages: [],
+      hidden: true,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: true,
+      student_of_admin_required: false,
+      professional_learning_course: nil,
+      pd: false,
+      peer_reviews_to_complete: nil
     }
 
     assert_equal expected, output
@@ -81,15 +83,16 @@ class DslTest < ActiveSupport::TestCase
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
 
     expected = {
-        id: nil,
-        stages: [],
-        hidden: true,
-        wrapup_video: nil,
-        login_required: false,
-        admin_required: true,
-        student_of_admin_required: false,
-        professional_learning_course: nil,
-        pd: false
+      id: nil,
+      stages: [],
+      hidden: true,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: true,
+      student_of_admin_required: false,
+      professional_learning_course: nil,
+      pd: false,
+      peer_reviews_to_complete: nil
     }
 
     assert_equal expected, output
@@ -102,15 +105,16 @@ class DslTest < ActiveSupport::TestCase
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
 
     expected = {
-        id: nil,
-        stages: [],
-        hidden: true,
-        wrapup_video: nil,
-        login_required: false,
-        admin_required: false,
-        student_of_admin_required: true,
-        professional_learning_course: nil,
-        pd: false
+      id: nil,
+      stages: [],
+      hidden: true,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: false,
+      student_of_admin_required: true,
+      professional_learning_course: nil,
+      pd: false,
+      peer_reviews_to_complete: nil
     }
 
     assert_equal expected, output
@@ -123,15 +127,16 @@ class DslTest < ActiveSupport::TestCase
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
 
     expected = {
-        id: nil,
-        stages: [],
-        hidden: true,
-        wrapup_video: nil,
-        login_required: false,
-        admin_required: false,
-        student_of_admin_required: true,
-        professional_learning_course: nil,
-        pd: false
+      id: nil,
+      stages: [],
+      hidden: true,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: false,
+      student_of_admin_required: true,
+      professional_learning_course: nil,
+      pd: false,
+      peer_reviews_to_complete: nil
     }
 
     assert_equal expected, output
@@ -155,7 +160,7 @@ level 'Level 3'
           scriptlevels: [
             {stage: "Stage1", levels: [{name: "Level 1"}]},
             {stage: "Stage1", levels: [{name: "Level 2a"}, {name: "Level 2b"}],
-              properties: {"Level 2b"=>{active: false}}
+             properties: {"Level 2b" => {active: false}}
             },
             {stage: "Stage1", levels: [{name: "Level 3"}]}
           ]
@@ -167,7 +172,8 @@ level 'Level 3'
       admin_required: false,
       pd: false,
       student_of_admin_required: false,
-      professional_learning_course: nil
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -227,7 +233,8 @@ level 'Level 3'
       admin_required: false,
       pd: false,
       student_of_admin_required: false,
-      professional_learning_course: nil
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -283,7 +290,8 @@ level 'Level 3'
       admin_required: false,
       pd: false,
       student_of_admin_required: false,
-      professional_learning_course: nil
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -346,17 +354,17 @@ DSL
 
     output, _ = EvaluationMulti.parse(input_dsl, 'test')
     expected = {
-        name: 'Test question',
-        properties: {
-            options: {},
-            questions: [{text: 'Question text'}],
-            answers: [
-                {text: 'answer 1', weight: 1, stage: nil},
-                {text: 'answer 2', weight: 2, stage: stage1.name},
-                {text: 'answer 3', weight: 1, stage: stage2.name},
-            ]
-        }
+      name: 'Test question',
+      properties: {
+        options: {},
+        questions: [{text: 'Question text'}],
+        answers: [
+          {text: 'answer 1', weight: 1, stage: nil},
+          {text: 'answer 2', weight: 2, stage: stage1.name},
+          {text: 'answer 3', weight: 1, stage: stage2.name},
+        ]
       }
+    }
     assert_equal expected, output
   end
 end

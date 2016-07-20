@@ -3,9 +3,9 @@ title 'title'
 css 'unplugged'
 description 'description here'
 markdown <<MARKDOWN
-## Making Pivot Tables Part 2 - Manipulation and Visualization
+# Making Pivot Tables Part 2 - Manipulation and Visualization
 
-# Adding Columns
+## Adding Columns
 
 Let's look at two more features of pivot tables that will allow you to do more complex investigations of your data.
 
@@ -19,7 +19,7 @@ We learned that a **Row** in a pivot table specifies an **aggregation** or group
 
 <hr>
 
-# Filtering Pivot Tables
+## Filtering Pivot Tables
 
 Applying a filter to a pivot table does the same thing as it does in the normal spreadsheet - it allows you to filter out values from the raw data.
 
@@ -29,7 +29,7 @@ The animation below shows first filtering out 14-year-olds from the calculations
 
 <hr>
 
-# The Next Step - Manipulating the Pivot Table
+## The Next Step - Manipulating the Pivot Table
 
 If you want to maninpulate the data further, to sort or filter, **you shouldn't do it in the live, active pivot table**.  Instead you should **copy the table**, and **paste the values** into a new spreadsheet.
 
@@ -59,7 +59,7 @@ From cleaning that up, plus some filtering we can make a chart of movies where t
 
 <hr>
 
-# Moving on: Visualizing Summary Tables
+## Moving on: Visualizing Summary Tables
 **A summary table can be a good first step toward a great visualization**. You often want to **summarize data first, then chart it**, so you can see larger connections or patterns.
 
 Summary tables also don't have to be small!  You might make a summary table that is still too big or full of numbers to see any trends in the data.
@@ -76,7 +76,7 @@ You can't see any trend or pattern in the data just by looking at the table.  Bu
 
 <hr>
 
-# Your Turn
+## Your Turn
 Now you'll get a chance to play on your own.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

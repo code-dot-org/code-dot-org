@@ -1776,10 +1776,14 @@ en:
           Conditionals and Keyboard Input: crwdns56777:0crwdne56777:0
           Sprites and Images: crwdns56890:0crwdne56890:0
           CSD U3 Variables and Animation: crwdns56962:0crwdne56962:0
-           Booleans and Conditionals: crwdns56963:0crwdne56963:0
           SFLP: crwdns56964:0crwdne56964:0
           Animations: crwdns56965:0crwdne56965:0
           "Project: Interactive Card": crwdns56966:0crwdne56966:0
+          Booleans and Conditionals: crwdns57022:0crwdne57022:0
+          Variables and Animation: crwdns57023:0crwdne57023:0
+          Complex Conditionals: crwdns57024:0crwdne57024:0
+          Proposed Sprites and Props: crwdns57025:0crwdne57025:0
+          Conditionals Update: crwdns57026:0crwdne57026:0
         2016_sciencePD_phase1:
           title: crwdns56470:0crwdne56470:0
           description_short: crwdns56471:0crwdne56471:0
@@ -1879,6 +1883,7 @@ en:
           description_short: crwdns56670:0crwdne56670:0
           description: crwdns56671:0crwdne56671:0
           Game Lab: crwdns56672:0crwdne56672:0
+          Contained Levels: crwdns57027:0crwdne57027:0
         cspunit1-support-test:
           title: crwdns56673:0crwdne56673:0
           description: crwdns56674:0crwdne56674:0
@@ -1979,39 +1984,6 @@ en:
           description: crwdns56831:0crwdne56831:0
           description_audience: crwdns56832:0crwdne56832:0
           Sample Stage: crwdns56833:0crwdne56833:0
-        TeacherCon:
-          title: crwdns56891:0crwdne56891:0
-          description: crwdns56892:0crwdne56892:0
-          Introduction to Teachercon: crwdns56893:0crwdne56893:0
-          "Lesson 1.4: number systems - circle triangle square": crwdns56894:0crwdne56894:0
-          "Lesson 1.6: sending numbers": crwdns56895:0crwdne56895:0
-          "Lesson 1.9: internet addressing (battleship)": crwdns56896:0crwdne56896:0
-          "Lesson 1.10: routers and redundancy": crwdns56897:0crwdne56897:0
-          "Lesson 1.11: Packets and Making a Reliable Internet": crwdns56898:0crwdne56898:0
-          "Lesson 2.2: text compression": crwdns56899:0crwdne56899:0
-          "Lesson 2.3: black and white pixelation": crwdns56900:0crwdne56900:0
-          "Lesson 2.10: good and bad data visualizations": crwdns56901:0crwdne56901:0
-          Group Work and Peer Learning: crwdns56902:0crwdne56902:0
-          Balancing Teachers and Tools: crwdns56903:0crwdne56903:0
-          Discovery Learning: crwdns56904:0crwdne56904:0
-          Capturing Student Learning: crwdns56905:0crwdne56905:0
-          Lesson 14 number systems - circle triangle square: crwdns56906:0crwdne56906:0
-          "Lesson 1,4: number systems - circle triangle square": crwdns56910:0crwdne56910:0
-          "Lesson 1,6: sending numbers": crwdns56911:0crwdne56911:0
-          "Lesson 1,9: internet addressing (battleship)": crwdns56912:0crwdne56912:0
-          "Lesson 1,10: routers and redundancy": crwdns56913:0crwdne56913:0
-          "Lesson 1,11: Packets and Making a Reliable Internet": crwdns56914:0crwdne56914:0
-          "Lesson 2,2: text compression": crwdns56915:0crwdne56915:0
-          "Lesson 2,3: black and white pixelation": crwdns56916:0crwdne56916:0
-          "Lesson 2,10: good and bad data visualizations": crwdns56917:0crwdne56917:0
-          "Lesson 1,4: Number Systems - circle triangle square": crwdns56969:0crwdne56969:0
-          "Lesson 1,6: Sending Numbers": crwdns56970:0crwdne56970:0
-          "Lesson 1,10: Routers and Redundancy": crwdns56971:0crwdne56971:0
-          "Lesson 2,2: Text Compression": crwdns56972:0crwdne56972:0
-          "Lesson 2,3: Black and White Pixelation": crwdns56973:0crwdne56973:0
-          "Lesson 2,10: Good and Bad Data Visualizations": crwdns56974:0crwdne56974:0
-          Measuring Student Learning: crwdns56975:0crwdne56975:0
-          description_short: crwdns56976:0crwdne56976:0
         MikeTest:
           title: crwdns56918:0crwdne56918:0
           description_short: crwdns56919:0crwdne56919:0
@@ -2019,9 +1991,131 @@ en:
           description_audience: crwdns56921:0crwdne56921:0
           Sample Stage: crwdns56922:0crwdne56922:0
           Artist Functions: crwdns56923:0crwdne56923:0
+          The same thing with named levels: crwdns57028:0crwdne57028:0
+          You are a coding STAR: crwdns57029:0crwdne57029:0
         artistExemplar:
           title: crwdns56977:0crwdne56977:0
           description_short: crwdns56978:0crwdne56978:0
           description: crwdns56979:0crwdne56979:0
           description_audience: crwdns56980:0crwdne56980:0
           Artist Exemplar: crwdns56981:0crwdne56981:0
+        2016_sciencePD_phase2b:
+          title: crwdns57030:0crwdne57030:0
+          description_short: crwdns57031:0crwdne57031:0
+          description: crwdns57032:0crwdne57032:0
+          Welcome!: crwdns57033:0crwdne57033:0
+          Review StarLogo Nova: crwdns57034:0crwdne57034:0
+          Reviewing the Modules: crwdns57035:0crwdne57035:0
+          Advanced StarLogo Nova: crwdns57036:0crwdne57036:0
+          Remixing Phases 1 and 2: crwdns57037:0crwdne57037:0
+          Thinking Ahead to Implementation: crwdns57038:0crwdne57038:0
+          Wrap-Up: crwdns57039:0crwdne57039:0
+        teachercon:
+          title: crwdns57040:0crwdne57040:0
+          description_short: crwdns57041:0crwdne57041:0
+          description: crwdns57042:0crwdne57042:0
+          Introduction to Teachercon: crwdns57043:0crwdne57043:0
+          Lesson 1,4: crwdns57044:0crwdne57044:0
+          Lesson 1,6: crwdns57045:0crwdne57045:0
+          Lesson 1,9: crwdns57046:0crwdne57046:0
+          Lesson 1,10: crwdns57047:0crwdne57047:0
+          Lesson 1,11: crwdns57048:0crwdne57048:0
+          Lesson 2,2: crwdns57049:0crwdne57049:0
+          Lesson 2,3: crwdns57050:0crwdne57050:0
+          Lesson 2,10: crwdns57051:0crwdne57051:0
+          Group Work and Peer Learning: crwdns57052:0crwdne57052:0
+          Balancing Teachers and Tools: crwdns57053:0crwdne57053:0
+          Discovery Learning: crwdns57054:0crwdne57054:0
+          Measuring Student Learning: crwdns57055:0crwdne57055:0
+        2016_sciencePD-phase2b:
+          title: crwdns57056:0crwdne57056:0
+          description_short: crwdns57057:0crwdne57057:0
+          description: crwdns57058:0crwdne57058:0
+          Welcome!: crwdns57059:0crwdne57059:0
+          Review StarLogo Nova: crwdns57060:0crwdne57060:0
+          Reviewing the Modules: crwdns57061:0crwdne57061:0
+          Advanced StarLogo Nova: crwdns57062:0crwdne57062:0
+          Remixing Phases 1 and 2: crwdns57063:0crwdne57063:0
+          Thinking Ahead to Implementation: crwdns57064:0crwdne57064:0
+          Wrap-Up: crwdns57065:0crwdne57065:0
+        kinderTest:
+          Kindergarten Stage 1: crwdns57066:0crwdne57066:0
+        gradeKinder:
+          Debugging: crwdns57101:0crwdne57101:0
+          Persistence & Frustration: crwdns57102:0crwdne57102:0
+          Sequences & Algorithms: crwdns57103:0crwdne57103:0
+          "Jigsaw: Learn to drag and drop": crwdns57104:0crwdne57104:0
+          Programming: crwdns57105:0crwdne57105:0
+          Being Safe Online: crwdns57106:0crwdne57106:0
+          Loops: crwdns57107:0crwdne57107:0
+          Programming Unplugged: crwdns57108:0crwdne57108:0
+          Loops Unplugged: crwdns57109:0crwdne57109:0
+          Events Unplugged: crwdns57110:0crwdne57110:0
+          Events: crwdns57111:0crwdne57111:0
+        grade4:
+          title: crwdns57112:0crwdne57112:0
+          description_short: crwdns57113:0crwdne57113:0
+          description: crwdns57114:0crwdne57114:0
+          description_audience: crwdns57115:0crwdne57115:0
+          "Mixed Review #1 (Ramp Up)": crwdns57116:0crwdne57116:0
+          Conditionals: crwdns57117:0crwdne57117:0
+          "Bee: Conditionals": crwdns57118:0crwdne57118:0
+          "PlayLab: Conditionals": crwdns57119:0crwdne57119:0
+          Songwriting: crwdns57120:0crwdne57120:0
+          "Bee: Functions": crwdns57121:0crwdne57121:0
+          Decision Trees: crwdns57122:0crwdne57122:0
+          Choose Your Own Adventure: crwdns57123:0crwdne57123:0
+          "Project #1": crwdns57124:0crwdne57124:0
+          Nested Loops: crwdns57125:0crwdne57125:0
+          "Artist: Nested Loops": crwdns57126:0crwdne57126:0
+          "Mixed Review #2 (Conditionals, Events, Functions)": crwdns57127:0crwdne57127:0
+          "New Artist: Functions": crwdns57128:0crwdne57128:0
+          "Project #2": crwdns57129:0crwdne57129:0
+          "Mixed Review #3 (Deduce the Concept)": crwdns57130:0crwdne57130:0
+          Internet: crwdns57131:0crwdne57131:0
+          Crowdsourcing: crwdns57132:0crwdne57132:0
+          Digital Citizenship: crwdns57133:0crwdne57133:0
+        grade1:
+          Predicting & Debugging: crwdns57134:0crwdne57134:0
+          Persistence & Frustration: crwdns57135:0crwdne57135:0
+          Sequences & Algorithms: crwdns57136:0crwdne57136:0
+          "Jigsaw: Learn to drag and drop": crwdns57137:0crwdne57137:0
+        grade5:
+          title: crwdns57138:0crwdne57138:0
+          description_short: crwdns57139:0crwdne57139:0
+          description: crwdns57140:0crwdne57140:0
+          description_audience: crwdns57141:0crwdne57141:0
+        ecs-unit1:
+          title: crwdns57142:0crwdne57142:0
+          description_short: crwdns57143:0crwdne57143:0
+          description: crwdns57144:0crwdne57144:0
+          Welcome!: crwdns57145:0crwdne57145:0
+          0: crwdns57146:0crwdne57146:0
+          1: crwdns57147:0crwdne57147:0
+          Unit 1, Days 3-4 Buying a Computer: crwdns57148:0crwdne57148:0
+          Unit 1, Days 5-7 Searching and Web 2: crwdns57149:0crwdne57149:0
+          Unit 1, Days 8-9 Impact of Computers and Communication: crwdns57150:0crwdne57150:0
+          Unit 1, Day 10 Telling a Story with Data: crwdns57151:0crwdne57151:0
+          Unit 1, Day 11-14 Data Modeling and Design: crwdns57152:0crwdne57152:0
+          Unit 1, Day 15-16 Computer Programs and Following Directions: crwdns57153:0crwdne57153:0
+          Unit 1, Day 17-19 What Is Intelligence?: crwdns57154:0crwdne57154:0
+          Wrap-up: crwdns57155:0crwdne57155:0
+        ecs-unit2:
+          title: crwdns57156:0crwdne57156:0
+          description_short: crwdns57157:0crwdne57157:0
+          description: crwdns57158:0crwdne57158:0
+          Getting Started: crwdns57159:0crwdne57159:0
+          Intro to Unit 2: crwdns57160:0crwdne57160:0
+          Teaching Strategies: crwdns57161:0crwdne57161:0
+          Lesson Overviews: crwdns57162:0crwdne57162:0
+          Unit 2 Challenge: crwdns57163:0crwdne57163:0
+          Close & Next Steps: crwdns57164:0crwdne57164:0
+          Day 1-2 Solving Community Problems with Data: crwdns57165:0crwdne57165:0
+          "Day 3 Intro To Problem Solving: Candy Bar Activity": crwdns57166:0crwdne57166:0
+          "Day 4-6 Strategies in Problem Solving: Handshake Activity": crwdns57167:0crwdne57167:0
+          "Day 7-9 Problem Solving: Cornrow Curves": crwdns57168:0crwdne57168:0
+          Day 10-12 Binary Number Systems: crwdns57169:0crwdne57169:0
+          "Day 13-14 Linear and Binary Search: Tower Building Activity": crwdns57170:0crwdne57170:0
+          Day 15-16 Sorting Algorithms: crwdns57171:0crwdne57171:0
+          "Day 17 Minimal Spanning Trees: Muddy City": crwdns57172:0crwdne57172:0
+          Day 18-21 Final Project: crwdns57173:0crwdne57173:0

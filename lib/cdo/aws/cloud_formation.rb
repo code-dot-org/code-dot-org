@@ -49,6 +49,7 @@ module AWS
     CDN_ENABLED = !!ENV['CDN_ENABLED']
 
     STACK_ERROR_LINES = 250
+    LOG_NAME = '/var/log/bootstrap.log'
 
     class << self
       # Validates that the template is valid CloudFormation syntax.
@@ -94,8 +95,13 @@ module AWS
       end
 
       private
+
       def cfn
         @@cfn ||= Aws::CloudFormation::Client.new
+      end
+
+      def logs
+        @@logs ||= Aws::CloudWatchLogs::Client.new
       end
 
       # Only way to determine whether a given stack exists using the Ruby API.
@@ -137,32 +143,53 @@ module AWS
         )
       end
 
+      # Prints the latest output from a CloudWatch Logs log stream, if present.
+      def tail_log(quiet: false)
+        log_config = {
+          log_group_name: STACK_NAME,
+          log_stream_name: LOG_NAME
+        }
+        log_config[:next_token] = @@log_token unless @@log_token.nil?
+        # Return silently if we can't get the log events for any reason.
+        resp = logs.get_log_events(log_config) rescue return
+        resp.events.each do |event|
+          CDO.log.info(event.message) unless quiet
+        end
+        @@log_token = resp.next_forward_token
+      end
+
+      # Prints the latest CloudFormation stack events.
+      def tail_events(stack_id)
+        stack_events = cfn.describe_stack_events(stack_name: stack_id).stack_events
+        stack_events.reject{|event| event.timestamp <= @@event_timestamp}.sort_by(&:timestamp).each do |event|
+          CDO.log.info "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
+        end
+        @@event_timestamp = stack_events.map(&:timestamp).max
+      end
+
       def wait_for_stack(action, start_time)
         CDO.log.info "Stack #{action} requested, waiting for provisioning to complete..."
+        stack_id = STACK_NAME
         begin
-          cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: STACK_NAME) do |w|
-            w.max_attempts = 360 # 1 hour
-            w.delay = 10
-            w.before_wait { print '.' }
-          end
-        rescue Aws::Waiters::Errors::FailureStateError
-          CDO.log.info "\nError on #{action}. Event log:"
-          events = []
-          cfn.describe_stack_events(stack_name: STACK_NAME).stack_events.each do |event|
-            events << event
-            break if event.timestamp < start_time
-          end
-          events.reject { |event| event.resource_status_reason.nil? }.sort_by(&:timestamp).each do |event|
-            CDO.log.info "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
-            if (match = event.resource_status_reason.match /with UniqueId (?<instance>i-\w+)/)
-              instance = match[:instance]
-              CDO.log.info "Printing the last #{STACK_ERROR_LINES} lines to help debug the instance failure.."
-              ec2 = Aws::EC2::Client.new
-              lines = Base64.decode64(ec2.get_console_output(instance_id: instance).output).lines
-              CDO.log.info lines[-[lines.length,STACK_ERROR_LINES].min..-1].join
-              CDO.log.info "To get full console output, run `aws ec2 get-console-output --instance-id #{instance} | jq -r .Output`."
+          @@event_timestamp = start_time
+          @@log_token = nil
+          tail_log(quiet: true)
+          stack_id = cfn.describe_stacks(stack_name: stack_id).stacks.first.stack_id
+          cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: stack_id) do |w|
+            w.delay = 10 # seconds
+            w.max_attempts = 360 # = 1 hour
+            w.before_wait do
+              tail_events(stack_id)
+              tail_log
+              print '.'
             end
           end
+          tail_events(stack_id)
+          tail_log
+        rescue Aws::Waiters::Errors::FailureStateError
+          tail_events(stack_id)
+          tail_log
+          CDO.log.info "\nError on #{action}."
           if action == :create
             CDO.log.info 'Stack will remain in its half-created state for debugging. To delete, run `rake adhoc:stop`.'
           end
@@ -203,7 +230,8 @@ module AWS
           lambda: method(:lambda),
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
-          update_bootstrap_script: method(:update_bootstrap_script)
+          update_bootstrap_script: method(:update_bootstrap_script),
+          log_name: LOG_NAME
         )
         erb_output = erb_eval(template_string)
         YAML.load(erb_output).to_json

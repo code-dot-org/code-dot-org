@@ -1,8 +1,7 @@
 name 'OPD-K5 Vocabulary'
-css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css" />
 ### CS FUNDAMENTALS > Key Vocabulary
 
 As you begin to learn computer science, one of the most important tasks is to become familiar with the language of coding. In this course and throughout the Code Studio resources, we use the same vocabulary used in the computer science industry. Encouraging young students to learn and use professional terms enables them to communicate with others and build their knowledge in computer science without having to relearn terms and concepts later. The terms and concepts used in these courses are defined using words that most young students should be able to understand.

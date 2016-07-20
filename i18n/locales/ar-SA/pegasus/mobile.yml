@@ -93,11 +93,11 @@ ar-SA:
   third_party_price_299: 'السعر: 2.99$/تحميل'
   third_party_price_individual: 'السعر الفردي : تجربة مجانية  و25$ بالشهر'
   third_party_price_school: 'سعر المدرسة: خطط حرة & واحترافية في 2500 دولار +'
-  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
-  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
+  third_party_tynker_desc: منصة الحوسبة الإبداعي تينكير ليساعد الأطفال على تطوير التفكير الحسابي ومهارات البرمجة في متعة، طريقة مبتكرة وبديهية. لغتنا البرمجة المرئية المبتكرة التفاعلية ذاتيان دورات وأنشطة البرمجة المستندة إلى لعبة سهلة بمثابة مقدمة للبرمجة، وتمكين الأطفال من الابتكار وخلق.
+  third_party_tynker_btn_curriculum: حاول المنهج الدراسي في تينكير للقراء في وقت مبكر
   third_party_tynker_btn_site: زر تينكر
-  third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_desc: الابن الصفر هي لغة برمجة استهلالية التي تمكن صغار الأطفال (الفئة العمرية 5-7) لإنشاء قصص تفاعلية والألعاب الخاصة بهم. الأطفال الأداة معا لبنات البرمجة الرسومية لجعل الأحرف التحرك، القفز والرقص والغناء. الأطفال يمكن تعديل الأحرف في محرر الطلاء، إضافة أصوات والأصوات الخاصة بهم، حتى إدراج صور لأنفسهم--ثم استخدام كتل البرمجة جعل شخصياتهم تأتي في الحياة.
+  third_party_scratchjr_btn_curriculum: تحميل المناهج الدراسية الابن الصفر
   third_party_scratchjr_btn_site: زر Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Download Scratch Curriculum
@@ -506,13 +506,13 @@ ar-SA:
   dashboard_navigation_section_pd: التنمية المهنية
   dashboard_navigation_section_speakers: 'علوم الحاسب الآلي <br/> المتحدثين الضيوف'
   dashboard_navigation_all_sections: حسابات و سير الطلاب
-  dashboard_navigation_view_progress: عرض عملية التقدم
-  dashboard_navigation_view_text_responses: اظهار الردود النصيّة
+  dashboard_navigation_view_progress: في تقدم
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: إضافة طلاب
   dashboard_navigation_manage_students: إدارة الطلاب
   dashboard_navigation_lesson_plans_resources: خطط الدرس والموارد
-  dashboard_navigation_view_stats: عرض الإحصائيات
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'القسم: %{section_name}'
   dashboard_navigation_student: 'الطالب: %{student_name}'
   dashboard_progress_not_started: لم تبدأ
@@ -659,8 +659,9 @@ ar-SA:
   dashboard_faq_k5: الأسئلة المتاوترة الطرح في المستوى الخامس K-5
   dashboard_announcements: إعلانات
   dashboard_announce_view_all: عرض الكل
-  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
-  dashboard_announce_button_text: اعرف المزيد
+  dashboard_announce_message: |-
+    Want to help us test a new feature? We know it’s important to encourage students to iterate and experiment, so we'll be adding an "unused code" feature to allow students to run their code even when there are unattached blocks. We welcome your feedback before we publicly release the feature.
+  dashboard_announce_button_text: Test the feature
   dashboard_announce_petition: |
     كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح ممثليكم يسمع منك. هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 التعليم علوم الكمبيوتر.
     
@@ -787,6 +788,7 @@ ar-SA:
   cspunit6_name: 'Post-AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
+  csp3_name: 'Unit 3: Algorithms and Programming'
   cspassessment_name: 'Full Test - 50 questions'
   cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
   cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'

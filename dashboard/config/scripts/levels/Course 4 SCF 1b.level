@@ -17,7 +17,7 @@
     "step_mode": "1",
     "nectar_goal": "0",
     "flower_type": "redWithNectar",
-    "ideal": "23",
+    "ideal": "24",
     "instructions": "Can you figure out how to collect all of this honey with the fewest blocks possible?",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
@@ -34,7 +34,8 @@
     "step_speed": "1",
     "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n**Functions Super Challenge:** Can you figure out how to collect all of this nectar with the fewest blocks possible?\r\n\r\n",
     "honey_goal": "6",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice that the shape of all nectar collection points is similar.  \\n\\nGood place for a function!\",\r\n  \"hint_id\": \"Course_4_SCF_1b_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Look at this idea for how the bee might travel:  \\n![](https://images.code.org/b958e9fb9dc914ef53ba12bc7ae2e177-image-1446230933961.48.40.png)\",\r\n  \"hint_id\": \"Course_4_SCF_1b_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You should consider using a `for loop` for the distance the bee travels.\",\r\n  \"hint_id\": \"Course_4_SCF_1b_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**![Solution](https://images.code.org/95e01203ca4f39779b250fdd7feee8b7-image-1446230933962.43.37.png)\",\r\n  \"hint_id\": \"Course_4_SCF_1b_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Notice that the shape of all nectar collection points is similar.  \\n\\nGood place for a function!\",\r\n  \"hint_id\": \"Course_4_SCF_1b_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Look at this idea for how the bee might travel:  \\n![](https://images.code.org/b958e9fb9dc914ef53ba12bc7ae2e177-image-1446230933961.48.40.png)\",\r\n  \"hint_id\": \"Course_4_SCF_1b_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You should consider using a `for loop` for the distance the bee travels.\",\r\n  \"hint_id\": \"Course_4_SCF_1b_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**![Solution](https://images.code.org/95e01203ca4f39779b250fdd7feee8b7-image-1446230933962.43.37.png)\",\r\n  \"hint_id\": \"Course_4_SCF_1b_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -30,6 +30,8 @@
   unsubmit: Unsubmit
   previous_page: "Նախորդ էջ"
   next_page: "Հաջորդ էջ"
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
   cancel: "վերացնել"
   okay: "Լավ"
   heading_x_of_y: "% {Վերնագիր} (էջ% {x} անձնագիրը% {y})"
@@ -95,6 +97,7 @@
     teacher_title: "Ուսուցիչը ստորագրել է"
     student_pitch: "Ուսանողական գրանցվել է Code.org"
     student_title: "Ուսանողական ստորագրել է"
+    signup_title: Sign up for Code.org
     school_name: School Անուն (ըստ ցանկության)
     school_address: "Դպրոցը հասցեն (ըստ ցանկության)"
     address_placeholder: "հասցեն, քաղաք, պետություն, փոստային"
@@ -120,6 +123,9 @@
       Ծառայությունների մատուցման պայմանները </a>:"
     additional_information: "Մենք պետք է որոշ լրացուցիչ տեղեկություններ է շարունակել
       ստորագրման ձեզ."
+    user_type_label: Account Type
+    user_type_teacher: Teacher
+    user_type_student: "Աշակերտ"
   signin_form:
     title: "Ունենա հաշիվ արդեն. Մուտք գործել"
     login: "Էլեկտրոնային փոստով կամ մասնակցի անուն"
@@ -128,7 +134,7 @@
     submit: "Մուտք գործել"
   signin:
     try_heading: "Ցանկանում եք փորձել կոդավորման առանց հերթագրման."
-    try_hoc: "Փորձեք մեկ ժամ օրենսգրքի առաջին"
+    try_hoc: "Նախ փորձիր մեկ Կոդի Ժամ"
     try_20hours: "Փորձեք մեր 20 ժամյա Intro համակարգչին գիտության"
   signinsection:
     welcome: "Բարի գալուստ% {SECTION_NAME}"
@@ -271,7 +277,7 @@
     access_denied: "Դուք չունեք մուտք դեպի այս% {մոդելային}."
   nav:
     header:
-      finished_hoc: Ive ավարտեց իմ ժամին օրենսգրքի
+      finished_hoc: "Ես ավարտեցի իմ Կոդի Ժամը"
       sign_in_to_save: "Մուտք գործեք փրկելու առաջընթացը"
       free_play:
         playlab: "Կատարել է Play Lab հավելվածը"
@@ -279,20 +285,20 @@
         calculate: Calculate Something
         applab: "Կատարել App Lab հավելվածը"
     user:
-      classroom: Teacher Home Page
+      classroom: "Ուսուցչի գլխավոր էջը"
       district_dashboard: District Dashboard
-      label: Hi% {Մականուն}
+      label: "Բարև %{username}"
       stats: My progress
-      settings: "Իմ հաշիվը"
+      settings: "Իմ էջը"
       prizes: "մրցանակներ"
       logout: "Դուրս գալ"
       signin: "Մուտք գործել"
       signup: "Գրանցվել"
       already_registered: "Արդեն գրանցված եք"
     popup:
-      progress_for_user: "% {Name} - ի առաջընթացը"
+      progress_for_user: "%{name}-ի առաջընթացը"
       progress: "Ձեր առաջընթացը"
-      lines: "Ընդամենը տողերը օրենսգրքի '% {գծեր}"
+      lines: "Ընդհանուր կոդի տողերի քանակի: %{lines}"
       close: "ՓԱԿԵԼ"
       mastery: Concepts
       puzzle_map: "փուլերը"
@@ -361,7 +367,7 @@
     teacher_read_blog: "Կարդալ մասին նորություններից եւ թարմացումներից մեր նյութերի
       մեր մանկավարժ Օրագիր"
     classroom: "Ձեր դասարան"
-    student_progress: "Ձեր ուսուցում առաջընթացը"
+    student_progress: "Ձեր ուսուցման առաջընթացը"
     student_stats: Youve earned %{trophy_count} out of %{trophy_max} Concept Mastery
       trophies.
     student_left_off: "Որտեղ դուք թողել դուրս:"
@@ -370,7 +376,7 @@
     local_school: "տեղական դպրոց"
     online: "առցանց"
     see_details: "Տես մանրամասները"
-    view_course: "Դիտել Դասընթացի"
+    view_course: "Դիտել դասընթացը"
     prize_info: "Մրցանակներ մասնակցության (ԱՄՆ հանրակրթական դպրոցների ուսուցիչների
       միայն) 'մինչեւ $ 1,000 դասարանում պարգեւներով."
     tryfirst: "Կամ, Դուք կարող եք փորձել այն առաջին, եւ ստորագրել մինչեւ ուշ:"
@@ -429,7 +435,7 @@
     title: "Սովորել օրենսգրքի Studio"
     description: "Յուրաքանչյուրը կարող է սովորել համակարգչային գիտությունը: Կատարել
       խաղեր, ծրագրեր եւ արվեստը օրենսգրքի:"
-    try_hour_of_code: "Փորձեք ժամը օրենսգրքի!"
+    try_hour_of_code: "Փորձիր Կոդի Ժամը"
   gender:
     male: "արական"
     female: "իգական"
@@ -485,7 +491,7 @@
     built_on_code_studio: "Կառուցվել է օրենսգրքի Studio"
     make_my_own_app: "Կատարել իմ սեփական հավելվածը"
     how_it_works: "Ինչպես է այն աշխատում"
-    try_hour_of_code: "Փորձեք ժամը օրենսգրքի!"
+    try_hour_of_code: "Փորձիր Կոդի Ժամը"
   reference_area:
     title: "Օգնության կարիք ունեմ?"
     subtitle: "Տես այդ տեսանյութերը եւ ակնարկներ"
@@ -515,7 +521,7 @@
   next_stage: "Ավարտել է! Շարունակել է հաջորդ փուլ"
   download_pdf: "Բաց դաս Plan"
   lesson_plan: "Դաս Plan"
-  view_lesson_plan: "Դիտել Դաս Plan"
+  view_lesson_plan: "Դիտել դասի պլանը"
   pdf_download: "Բեռնել PDF"
   download_coming_soon: "Բեռնվող գործունեության շուտով:"
   video_coming_soon: "Վիդեո Շուտով!"
@@ -556,7 +562,7 @@
       title: Hour of Code
       body: "Փորձեք հիմունքների համակարգչային գիտության. Միլիոնավոր են տվել այն կրակոցի."
     flappy:
-      title: Flappy Code
+      title: Flappy-ի կոդը
       body: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք մեր Flappy
         Code խնամակալական!'
     20-hour:
@@ -626,7 +632,7 @@
     wrong_title: "Սխալ պատասխանը"
     wrong_body: "Այս հարցի պատասխանը դու մտել ճիշտ չէ: Խնդրում եմ կրկին փորձեք!"
     correct_title: "ճիշտ"
-    correct_body: "Դա է ճիշտ պատասխանը."
+    correct_body: "Ճիշտ է!"
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
@@ -659,7 +665,7 @@
     wrong_title: "Սխալ լուծումը"
     wrong_body: "Լուծումը, դու մտել ճիշտ չէ: Խնդրում եմ կրկին փորձեք!"
     correct_title: "ճիշտ"
-    correct_body: "Դա է ճիշտ պատասխանը."
+    correct_body: "Ճիշտ է!"
   contract_match:
     wrong_title: "Սխալ պատասխանը"
     badname: "Ձեր պայմանագիրը սխալ անունը:"
@@ -675,7 +681,7 @@
     open_response_title: "շնորհակալություն"
     open_response_body: "Շնորհակալություն Ձեր արձագանքի!"
     correct_title: "ճիշտ"
-    correct_body: "Դա է ճիշտ պատասխանը."
+    correct_body: "Ճիշտ է!"
   dialog:
     ok: "լավ"
     startover_title: "Համոզված եք, որ ուզում եք սկսել."
@@ -709,7 +715,7 @@
           title: "շինարար"
           description: ''
         flappy:
-          title: Flappy Code
+          title: Flappy-ի կոդը
           description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք
             մեր Flappy Code խնամակալական!'
         jigsaw:
@@ -878,3 +884,16 @@
     download_in_spanish: 'Download in Spanish:'
     windows: Windows
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas

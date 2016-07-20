@@ -6,10 +6,7 @@ nav: how_to_nav
 
 ---
 
-
 # Jak organizovat událost Hodinu kódu
-
-Hostěte událost Hodinu kódu během týdne vzdělávání v informatice (<%= campaign_date('short') %>) na oslavu informatiky a inspirujte další studenty, aby si to zkusili. Kdokoli, kdekoli může uspořádat událost Hodinu kódu.
 
 ## 1) Připravte se pro Vaši událost
 
@@ -37,13 +34,13 @@ Hostěte událost Hodinu kódu během týdne vzdělávání v informatice (<%= c
 
 ## Vzorový plán události
 
-**Událost:** Celoškolní Týden vzdělávání informatiky odstartovací souhrn
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Datum:** 7. prosince (začátek týdne vzdělávání informatiky)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
-**Doba:** Během školního dne. Dopolední události upřednostněné. Přibližně 1 hodina.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Místo:** Školní aula (např. divadlo, tělocvična, jídelna)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -57,4 +54,3 @@ Hostěte událost Hodinu kódu během týdne vzdělávání v informatice (<%= c
 | 10:30-10:40 am | Studenti demonstrují Hodinu kódu pro školu. Zábavný obrat: vyučují ředitele školy, politika nebo ostatní studenty.             |
 | 10:40-11:00 am | Studenti demonstrují nezapojenou aktivitu a jak lze učit informatiku bez použití počítačů.                                     |
 | 11:00-11:05 am | Učitel, který pomohl přinést celoškolní akci dává závěrečné poznámky.                                                          |
-

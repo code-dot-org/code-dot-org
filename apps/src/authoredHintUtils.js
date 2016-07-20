@@ -1,7 +1,7 @@
 import $ from 'jquery';
 var processMarkdown = require('marked');
 var parseXmlElement = require('./xml').parseElement;
-var msg = require('./locale');
+var msg = require('@cdo/locale');
 
 /**
  * @overview A helper class for all actions associated with the Authored

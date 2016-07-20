@@ -47,12 +47,23 @@ class ActivitiesControllerTest < ActionController::TestCase
     @script_level = @script_level_prev.next_progression_level
     @script_level_next = @script_level.next_progression_level
     @script = @script_level.script
+    @level = @script_level.level
 
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
     @good_image = File.read('test/fixtures/artist_image_1.png', binmode: true)
     @another_good_image = File.read('test/fixtures/artist_image_2.png', binmode: true)
     @jpg_image = File.read('test/fixtures/playlab_image.jpg', binmode: true)
-    @milestone_params = {user_id: @user, script_level_id: @script_level.id, lines: 20, attempt: '1', result: 'true', testResult: '100', time: '1000', app: 'test', program: '<hey>'}
+    @milestone_params = {
+      user_id: @user,
+      script_level_id: @script_level.id,
+      lines: 20,
+      attempt: '1',
+      result: 'true',
+      testResult: '100',
+      time: '1000',
+      app: 'test',
+      program: '<hey>'
+    }
 
     # Stub out the SQS client to invoke the handler on queued messages only when requested.
     @fake_queue = FakeQueue.new(AsyncProgressHandler.new)
@@ -274,7 +285,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone does not allow negative lines of code" do
-
     expect_controller_logs_milestone_regexp(/-20/)
     @controller.expects :slog
 
@@ -342,8 +352,14 @@ class ActivitiesControllerTest < ActionController::TestCase
     script_start_date = Time.now - 5.days
     existing_sl = @script_level.script.script_levels.last
     UserLevel.record_timestamps = false
-    UserLevel.create!(user_id: @user.id, level_id: existing_sl.level.id, script_id: existing_sl.script_id, best_result: 100,
-                     created_at: script_start_date, updated_at: script_start_date)
+    UserLevel.create!(
+      user_id: @user.id,
+      level_id: existing_sl.level.id,
+      script_id: existing_sl.script_id,
+      best_result: 100,
+      created_at: script_start_date,
+      updated_at: script_start_date
+    )
     UserLevel.record_timestamps = true
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
@@ -465,7 +481,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, @milestone_params.merge(save_to_gallery: 'false', image: Base64.encode64(@good_image))
-
         end
       end
     end
@@ -896,7 +911,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # end
 
     assert_does_not_create(LevelSource, GalleryActivity) do
-      post :milestone, user_id: @user.id, script_level_id: @script_level.id, :program => studio_program_with_text('shit')
+      post :milestone, user_id: @user.id, script_level_id: create(:script_level, :playlab).id, program: studio_program_with_text('shit')
     end
     assert_response :success
     expected_response = {
@@ -917,7 +932,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     with_default_locale(:de) do
       assert_does_not_create(LevelSource, GalleryActivity) do
-        post :milestone, @milestone_params.merge(program: studio_program_with_text('scheiße'))
+        post :milestone, @milestone_params.merge(
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('scheiße'))
       end
     end
     assert_response :success
@@ -928,14 +945,16 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with http error slogs' do
     # allow sharing when there's an error, slog so it's possible to look up and review later
 
-    @controller.stubs(:find_share_failure).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
+    WebPurify.stubs(:find_potential_profanity).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
       params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && !params[:level_source_id].nil?
     end
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
     assert_creates(LevelSource) do
-      post :milestone, @milestone_params.merge(program: studio_program_with_text('shit'))
+      post :milestone, @milestone_params.merge(
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('shit'))
     end
 
     assert_response :success
@@ -951,7 +970,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
     assert_creates(LevelSource) do
-      post :milestone, @milestone_params.merge(program: studio_program_with_text('shit'))
+      post :milestone, @milestone_params.merge(
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('shit'))
     end
 
     assert_response :success
@@ -965,7 +986,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     with_default_locale(:es) do
       assert_does_not_create(LevelSource, GalleryActivity) do
-        post :milestone, @milestone_params.merge(program: studio_program_with_text('putamadre'))
+        post :milestone, @milestone_params.merge(
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('putamadre'))
       end
     end
     assert_response :success
@@ -975,7 +998,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with phone number' do
     assert_does_not_create(LevelSource, GalleryActivity) do
-      post :milestone, @milestone_params.merge(program: studio_program_with_text('800-555-5555'))
+      post :milestone, @milestone_params.merge(
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('800-555-5555'))
     end
     assert_response :success
 
@@ -991,9 +1016,12 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing when gatekeeper has disabled sharing does not work' do
-    Gatekeeper.set('shareEnabled', where: {script_name: @script.name}, value: false)
+    script_level = create(:script_level, :playlab)
+    Gatekeeper.set('shareEnabled', where: {script_name: script_level.script.name}, value: false)
 
-    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+    post :milestone, @milestone_params.merge(
+      script_level_id: script_level.id,
+      program: studio_program_with_text('hey some text'))
 
     assert_response :success
     response = JSON.parse(@response.body)
@@ -1006,7 +1034,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     WebPurify.stubs(:find_potential_profanity).returns false
     Gatekeeper.set('shareEnabled', where: {script_name: 'Best script ever'}, value: false)
 
-    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+    post :milestone, @milestone_params.merge(
+      script_level_id: create(:script_level, :playlab).id,
+      program: studio_program_with_text('hey some text'))
 
     assert_response :success
     response = JSON.parse(@response.body)
@@ -1020,7 +1050,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, @milestone_params.merge(script_level_id: last_level_in_stage.id)
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal({'previous'=>{'name'=>'The Artist', 'position'=>5}}, response['stage_changing'])
+    assert_equal({'previous' => {'name' => 'The Artist', 'position' => 5}}, response['stage_changing'])
   end
 
   test 'milestone changes to next stage in custom script' do
@@ -1039,7 +1069,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     # find localized test strings for custom stage names in script
-    assert response.has_key?('stage_changing'), "No key 'stage_changing' in response #{response.inspect}"
+    assert response.key?('stage_changing'), "No key 'stage_changing' in response #{response.inspect}"
     assert_equal('milestone-stage-1', response['stage_changing']['previous']['name'])
   end
 
@@ -1086,5 +1116,82 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
     assert !@user.needs_to_backfill_user_scripts?
+  end
+
+  test "milestone with one pairing creates new user levels" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+
+    assert_difference('UserLevel.count', 2) do # both get a UserLevel
+      assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    paired_user_level = PairedUserLevel.last
+    assert_equal @user, paired_user_level.driver_user_level.user
+    assert_equal pairing, paired_user_level.navigator_user_level.user
+  end
+
+  test "milestone with multiple pairings creates multiple new user levels" do
+    section = create(:follower, student_user: @user).section
+    pairings = 3.times.map {create(:follower, section: section).student_user}
+    session[:pairings] = pairings.map(&:id)
+
+    assert_difference('UserLevel.count', 4) do # all 4 people
+      assert_difference('PairedUserLevel.count', 3) do # there are 3 PairedUserLevel links
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    user_level = UserLevel.find_by(user_id: @user.id, script_id: @script.id, level_id: @level.id)
+    pairings.each do |pairing|
+      pairing_user_level = UserLevel.find_by(user_id: pairing.id, script_id: @script.id, level_id: @level.id)
+      assert PairedUserLevel.find_by(driver_user_level_id: user_level, navigator_user_level_id: pairing_user_level),
+        "could not find PairedUserLevel"
+    end
+  end
+
+  test "milestone with pairings updates driver's existing user level" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+
+    existing_navigator_user_level = create :user_level, user: pairing, script: @script, level: @level, best_result: 10
+
+    assert_difference('UserLevel.count', 1) do # one gets a new user level
+      assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    existing_navigator_user_level.reload
+    assert_equal 100, existing_navigator_user_level.best_result
+
+    assert_equal [@user], existing_navigator_user_level.driver_user_levels.map(&:user)
+  end
+
+  test "milestone with pairings updates navigator's existing user level" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+
+    existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
+
+    assert_difference('UserLevel.count', 1) do # one gets a new user level
+      assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
+        post :milestone, @milestone_params
+        assert_response :success
+      end
+    end
+
+    existing_driver_user_level.reload
+    assert_equal 100, existing_driver_user_level.best_result
+
+    assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
   end
 end

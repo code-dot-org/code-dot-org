@@ -4,41 +4,37 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # Como organizar unha Hora do Código
-
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## Prepara o teu evento
 
   * Fixa un lugar, unha data e unha hora
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
+  * Envía [unha carta](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) para convidar o alcalde da túa vila, un deputado, gobernador ou un empresario influínte para falar do evento.
+  * Convide á prensa, isto é, a radio ou TV local, xornal, blogueiro, etc. Consulte o noso [kit para a prensa](<%= resolve_url('/promote/press-kit') %>) para ter máis informacións.
 
-## 2) During your event
+## 2) Durante o evento
 
-  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
+  * Comece o seu evento con un dos nosos [vídeos motivadores](%= resolve_url('/promote/resources#videos') %).
+  * Faga uma introdución falando sobre a importancia da informática, usando estes [infográficos e estatísticas](<%= resolve_url('/promote/stats') %>).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Outras ideas para o evento: 
+      * Convide a un líder do sector da suazona para discutir o seu traballo en relación á informática
+      * Convide a un político local e pida que os estudantes lle ensinen a programar
+      * Pida que un grupo de estudantes mostren unha actividade offline
+      * Pida a un grupo de estudantes ensinar a programar ao diretor ou a un grupo de profesores da escola
+      * Se a súa escola xá oferece clases de informática organice unha demonstración de proxectos
 
-## 3) Share how it went
+## 3) Comparta como foi o evento
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Comparta fotos do seu evento no Facebook e Twitter. 
+  * Use o hashtag **#HoradoCodigo**
 
-## Example Event Plan
+## Exemplo de Plan de Evento
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Date:** Dec 5th (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -46,15 +42,13 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
   
 
 
-## Run of Show
+## Programación do evento
 
-| Time             | Action                                                                                                                                          |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                      |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %) |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.           |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                             |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
-
-<%= view :signup_button %>
+| Hora          | Acción                                                                                                                                                                      |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10h00 - 10h05 | Comece cun dos nosos [vídeos motivadores](%= resolve_url('/promote/resources#videos') %)                                                                                    |
+| 10h05 - 10h15 | Faga unha introdución falando sobre a importancia da informática. Use estes [infográficos e estatísticas](<%= resolve_url('/promote/stats') %>)                             |
+| 10h15 - 10h30 | Un convidado especial falará sobre a súa experiencia e sobre como a tecnoloxía e a informática desempeñam un importante papel na súa vida cotián.                           |
+| 10h30 - 10h40 | Os alumnos farán uma demonstración da Hora do Código para a escola. Inversión de papeis: eles deverán ensinarlle ao diretor, ao representante político ou a outros alumnos. |
+| 10h40 - 11h00 | Os alumnos farán a demostración de unha actividade offline para mostrar como a informática pode ser ensinada sen o uso de computadores.                                     |
+| 11h00 - 11h05 | O profesor que axudou a traer o evento para a escola fará os comentarios finais.                                                                                            |

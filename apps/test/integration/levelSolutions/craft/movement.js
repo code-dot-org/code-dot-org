@@ -1,8 +1,5 @@
-import testUtils from '../../../util/testUtils';
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 import blockUtils from '@cdo/apps/block_utils';
-testUtils.setupLocale('craft');
-import craftMsg from '@cdo/apps/craft/locale';
 
 let _ = require('lodash');
 

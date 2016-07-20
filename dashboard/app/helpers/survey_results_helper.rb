@@ -6,10 +6,10 @@ module SurveyResultsHelper
     return false
 
     # Reasons we would not show the survey.
-    if !current_user
+    unless current_user
       return false
     end
-    if !current_user.teacher?
+    unless current_user.teacher?
       return false
     end
     if current_user.under_13?
