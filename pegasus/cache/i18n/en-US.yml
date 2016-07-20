@@ -518,6 +518,8 @@
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: "Summaries"
   dashboard_assessments_answers: "All answers"
+  dashboard_surveys_answers: "Surveys"
+  dashboard_percent: "Percent"
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: "All"
   dashboard_download_csv: "Download CSV"
