@@ -2,7 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
 import FontAwesome from '../FontAwesome';
-import msg from '../../locale';
+import msg from '@cdo/locale';
 
 const styles = {
   collapseButton: {

@@ -13,7 +13,6 @@ var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var fakeShard = NetSimTestUtils.fakeShard;
 
-testUtils.setupLocalesDEPRECATED();
 
 describe("NetSimLocalClientNode", function () {
   var testShard, testLocalNode, testRemoteNode;

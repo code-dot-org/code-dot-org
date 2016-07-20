@@ -2,10 +2,6 @@ import {assert} from '../util/configuredChai';
 
 var gridUtils = require('@cdo/apps/applab/gridUtils');
 
-
-// var testUtils = require('./util/testUtils');
-// testUtils.setupLocalesDEPRECATED('applab');
-
 describe('snapToGridSize', function () {
   it('rounds to the nearest GRID_SIZE', function () {
     // our GRID_SIZE is 5

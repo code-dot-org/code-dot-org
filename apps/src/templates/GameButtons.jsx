@@ -1,5 +1,5 @@
 import React from 'react';
-import msg from '../locale';
+import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import commonStyles from '../commonStyles';

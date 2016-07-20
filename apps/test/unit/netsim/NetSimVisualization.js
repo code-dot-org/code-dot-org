@@ -18,7 +18,6 @@ var DnsMode = NetSimConstants.DnsMode;
 var EncodingType = NetSimConstants.EncodingType;
 var fakeShard = NetSimTestUtils.fakeShard;
 
-testUtils.setupLocalesDEPRECATED();
 
 describe("NetSimVisualization", function () {
 

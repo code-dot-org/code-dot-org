@@ -9,7 +9,7 @@ var baseConfig = {
   resolve: {
     extensions: ["", ".js", ".jsx"],
     alias: {
-      '@cdo/locale': path.resolve(__dirname, 'src', 'locale.js'),
+      '@cdo/locale': path.resolve(__dirname, 'src', 'locale-do-not-import.js'),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       repl: path.resolve(__dirname, 'src/noop'),
     }
@@ -84,7 +84,7 @@ var karmaConfig = _.extend({}, baseConfig, {
   devtool: 'inline-source-map',
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
-      '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale.js'),
+      '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale-do-not-import.js'),
     }),
   }),
   externals: {

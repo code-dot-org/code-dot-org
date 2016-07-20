@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Instructions from './Instructions';
-import msg from '../../locale';
+import msg from '@cdo/locale';
 var processMarkdown = require('marked');
 
 /**

@@ -7,7 +7,6 @@ var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
 var NetSimVizAutoDnsNode = require('@cdo/apps/netsim/NetSimVizAutoDnsNode');
 
-testUtils.setupLocalesDEPRECATED();
 
 describe("NetSimVizAutoDnsNode", function () {
   var vizElement;

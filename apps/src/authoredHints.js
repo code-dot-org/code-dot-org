@@ -7,7 +7,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var dom = require('./dom');
-var msg = require('./locale');
+var msg = require('@cdo/locale');
 var HintsDisplay = require('./templates/instructions/HintsDisplay');
 var HintDialogContent = require('./templates/instructions/HintDialogContent');
 var authoredHintUtils = require('./authoredHintUtils');
