@@ -1,7 +1,6 @@
 import {assert} from '../util/configuredChai';
 
 var testUtils = require('./../util/testUtils');
-testUtils.setupLocales();
 
 var Cell = require('@cdo/apps/maze/cell');
 

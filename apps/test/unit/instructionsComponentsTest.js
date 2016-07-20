@@ -1,6 +1,5 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
-testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 import React from 'react';
 var ReactTestUtils = require('react-addons-test-utils');

@@ -44,18 +44,6 @@ export function setExternalGlobals() {
   };
 }
 
-export function setupLocale(app) {
-  setupLocales();
-}
-
-export function setupLocales() {
-  // make sure Blockly is loaded
-  require('./frame')();
-  var context = require.context('../../build/package/js/en_us/', false, /.*_locale.*\.js$/);
-  context.keys().forEach(context);
-  assert(window.blockly.applab_locale);
-}
-
 /**
  * Generates an artist answer (which is just an ordered list of artist commands)
  * when given a function simulating the generated code. That function will

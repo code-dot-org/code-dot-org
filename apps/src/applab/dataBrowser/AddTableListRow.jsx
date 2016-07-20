@@ -1,7 +1,7 @@
 import { DataView } from '../constants';
 import Radium from 'radium';
 import React from 'react';
-import msg from '../../locale';
+import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
 
 const AddTableListRow = React.createClass({

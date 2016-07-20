@@ -4,7 +4,8 @@ import {expect} from '../../../util/configuredChai';
 import {setupLocale} from '../../../util/testUtils';
 
 // We have to setup the gamelab locale before importing AnimationPickerBody
-setupLocale('gamelab');
+// TODO: Make testUtils exports Babel-ES6-friendly
+let testUtils = require('../../../util/testUtils');
 const gamelabMsg = require('@cdo/apps/gamelab/locale');
 
 // We use `require` here because imports get hoisted, and we have to run

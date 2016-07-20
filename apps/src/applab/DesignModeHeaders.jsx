@@ -1,6 +1,6 @@
 var React = require('react');
 var applabMsg = require('./locale');
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 var FontAwesome = require('../templates/FontAwesome');
 
 module.exports = React.createClass({
