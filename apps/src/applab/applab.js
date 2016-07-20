@@ -1236,6 +1236,9 @@ Applab.execute = function () {
   if (Applab.makerlabController) {
     Applab.makerlabController
         .connectAndInitialize(codegen, Applab.JSInterpreter)
+        .catch((error) => {
+          studioApp.displayPlayspaceAlert("error", `Board connection error: ${error}`);
+        })
         .then(Applab.beginVisualizationRun);
   } else {
     Applab.beginVisualizationRun();
