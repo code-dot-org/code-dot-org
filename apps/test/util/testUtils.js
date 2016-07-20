@@ -1,6 +1,6 @@
-require('babel-polyfill');
-var $ = require('jquery');
-var React = require('react');
+import 'babel-polyfill';
+import React from 'react';
+import $ from 'jquery';
 import sinon from 'sinon';
 import {assert} from './configuredChai';
 
