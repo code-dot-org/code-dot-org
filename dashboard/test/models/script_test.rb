@@ -398,4 +398,9 @@ class ScriptTest < ActiveSupport::TestCase
       create :script, name: 'a_b_c'
     end
   end
+
+  test 'can edit existing script with invalid name' do
+    script = create :script, name: 'Invalid Name', skip_name_format_validation: true
+    script.update!(login_required: true)
+  end
 end
