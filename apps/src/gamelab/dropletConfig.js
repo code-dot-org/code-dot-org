@@ -133,6 +133,8 @@ module.exports.blocks = [
   {func: 'setVelocity', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['x','y'], params: ["1", "1"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setVelocity', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-setVelocity" },
   {func: 'sprite.height', category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.height', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-height" },
   {func: 'sprite.width', category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.width', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-width" },
+  {func: 'getScaledWidth', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getScaledWidth', type: 'value' },
+  {func: 'getScaledHeight', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getScaledHeight', type: 'value' },
   {func: 'sprite.animation', category: 'Sprites', modeOptionName: '*.animation', type: 'property', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-animation" },
   {func: 'debug', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.debug', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-debug" },
   {func: 'depth', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.depth', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-depth" },
