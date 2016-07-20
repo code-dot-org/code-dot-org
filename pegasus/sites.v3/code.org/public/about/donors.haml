@@ -13,14 +13,14 @@ nav: about_nav
       Please consider a donation
 
 - categories = []
-- categories << { level: 'platinum', title: 'Platinum Supporters ($3,000,000+ contribution)', columns: 2, height: 150 }
-- categories << { level: 'gold', title: 'Gold Supporters ($1,000,000+ contribution)', columns: 3, height: 200 }
-- categories << { level: 'silver', title: 'Silver Supporters ($500,000+ contribution)', columns: 3, height: 100, fontsize: 18 }
+- categories << { level: 'platinum', title: 'Platinum Supporters ($3,000,000+ contribution)', size: "large" }
+- categories << { level: 'gold', title: 'Gold Supporters ($1,000,000+ contribution)', size: "medium" }
+- categories << { level: 'silver', title: 'Silver Supporters ($500,000+ contribution)', size: "small" }
 - categories.each do |category|
   %h2
     =category[:title]
   %p
-    = view :about_donors_image, supporters: DB[:cdo_donors].where(level_s: category[:level]), columns: category[:columns], height: category[:height], fontsize: category[:fontsize]
+    = view :about_donors_image, supporters: DB[:cdo_donors].where(level_s: category[:level]), size: category[:size]
 
 - categories = []
 - categories << { level: 'bronze', title: 'Bronze Supporters ($100,000+ contribution)' }
@@ -29,7 +29,7 @@ nav: about_nav
   %h2
     =category[:title]
   %p
-    = view :about_donors_text, supporters: DB[:cdo_donors].where(level_s: category[:level]), height: category[:height]
+    = view :about_donors_text, supporters: DB[:cdo_donors].where(level_s: category[:level])
 
 %hr
 %a{href:"/about/donors-other"}
