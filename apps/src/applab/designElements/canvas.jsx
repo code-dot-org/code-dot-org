@@ -17,7 +17,7 @@ var CanvasProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <div id='propertyRowContainer'>
+      <div id="propertyRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
@@ -78,7 +78,7 @@ var CanvasEvents = React.createClass({
     var clickDesc = 'Triggered when the canvas is clicked with a mouse or tapped on a screen.';
 
     return (
-      <div id='eventRowContainer'>
+      <div id="eventRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}

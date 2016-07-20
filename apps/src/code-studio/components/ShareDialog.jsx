@@ -128,7 +128,7 @@ var ShareDialog = React.createClass({
                      tos: this.props.i18n.t('project.abuse.tos'),
                      contact_us: this.props.i18n.t('project.abuse.contact_us')
                    }}
-                 className='alert-error'
+                 className="alert-error"
                  style={styles.abuseStyle}
                  textStyle={styles.abuseTextStyle}/>}
             {showShareWarning &&

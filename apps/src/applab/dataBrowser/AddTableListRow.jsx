@@ -40,7 +40,7 @@ const AddTableListRow = React.createClass({
         </td>
         <td style={dataStyles.cell}>
           <button
-              className='btn btn-primary'
+              className="btn btn-primary"
               style={dataStyles.button}
               onClick={this.handleAdd}
           >

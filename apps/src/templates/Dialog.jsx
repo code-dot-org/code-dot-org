@@ -143,10 +143,10 @@ const Dialog = React.createClass({
   render() {
     var children = [];
     if (this.props.icon) {
-      children.push(<Icon key='icon' src={this.props.icon}/>);
+      children.push(<Icon key="icon" src={this.props.icon}/>);
     }
     if (this.props.title) {
-      children.push(<Title key='title'>{this.props.title}</Title>);
+      children.push(<Title key="title">{this.props.title}</Title>);
     }
     if (this.props.body) {
       children.push(<Body>{this.props.body}</Body>);
@@ -155,7 +155,7 @@ const Dialog = React.createClass({
     if (this.props.cancelText || this.props.onCancel ||
         this.props.confirmText || this.props.onConfirm) {
       var buttons = (
-        <Buttons key='buttons'>
+        <Buttons key="buttons">
           {this.props.onCancel &&
            <Cancel onClick={this.props.onCancel}>{this.props.cancelText}</Cancel>}
           {this.props.onConfirm &&
@@ -170,7 +170,7 @@ const Dialog = React.createClass({
       }
     }
     if (this.props.footer) {
-      children.push(<Footer key='footer'>{this.props.footer}</Footer>);
+      children.push(<Footer key="footer">{this.props.footer}</Footer>);
     }
     return (
       <BaseDialog {...this.props} useNewStyle={true}>

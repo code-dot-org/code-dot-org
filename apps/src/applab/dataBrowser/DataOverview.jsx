@@ -41,7 +41,7 @@ const DataOverview = React.createClass({
   render() {
     const visible = (DataView.OVERVIEW === this.props.view);
     return (
-      <div id='dataOverview' style={{display: visible ? 'block' : 'none'}}>
+      <div id="dataOverview" style={{display: visible ? 'block' : 'none'}}>
         <h4>Data</h4>
 
         <table style={styles.table}>

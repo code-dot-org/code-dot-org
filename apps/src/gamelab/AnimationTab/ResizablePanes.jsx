@@ -130,7 +130,7 @@ var ResizablePanes = React.createClass({
     };
 
     return (
-      <div className='resizable-panes' style={styles.root}>
+      <div className="resizable-panes" style={styles.root}>
         {this.getChildren()}
       </div>
     );

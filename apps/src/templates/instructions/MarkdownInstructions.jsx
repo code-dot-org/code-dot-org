@@ -108,7 +108,7 @@ const MarkdownInstructions = React.createClass({
     const canCollapse = !this.props.noInstructionsWhenCollapsed;
     return (
       <div
-        className='instructions-markdown'
+        className="instructions-markdown"
         style={[
           styles.standard,
           inTopPane && styles.inTopPane,

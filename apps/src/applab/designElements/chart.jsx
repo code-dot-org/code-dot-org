@@ -20,7 +20,7 @@ var ChartProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <div id='propertyRowContainer'>
+      <div id="propertyRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
@@ -101,7 +101,7 @@ var ChartEvents = React.createClass({
         "Draws the chart using App Lab's table data storage.";
 
     return (
-      <div id='eventRowContainer'>
+      <div id="eventRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}

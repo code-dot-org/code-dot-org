@@ -37,7 +37,7 @@ var ScreenProperties = React.createClass({
     }
 
     return (
-      <div id='propertyRowContainer'>
+      <div id="propertyRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
@@ -104,7 +104,7 @@ var ScreenEvents = React.createClass({
     var keyDesc = 'Triggered when a key is pressed.';
 
     return (
-      <div id='eventRowContainer'>
+      <div id="eventRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}

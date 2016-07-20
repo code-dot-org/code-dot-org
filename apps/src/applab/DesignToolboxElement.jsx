@@ -32,9 +32,9 @@ module.exports = React.createClass({
       <div style={styles.outerContainer}>
         <div style={styles.innerContainer}
           data-element-type={this.props.elementType}
-          className='new-design-element'>
+          className="new-design-element">
           <img src={this.props.imageUrl}
-              className='design-element-image'
+              className="design-element-image"
               style={styles.image}>
           </img>
           <div >{this.props.desc}</div>

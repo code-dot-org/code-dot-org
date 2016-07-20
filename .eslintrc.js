@@ -32,7 +32,7 @@ module.exports = {
     "dot-location": ["error", "property"],
     "eol-last": "error",
     "eqeqeq": "error",
-    "jsx-quotes": "off",
+    "jsx-quotes": "error", // autofixable
     "keyword-spacing": "error",
     "no-array-constructor": "error",
     "no-console": "off",

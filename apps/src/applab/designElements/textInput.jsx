@@ -21,7 +21,7 @@ var TextInputProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <div id='propertyRowContainer'>
+      <div id="propertyRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
@@ -123,7 +123,7 @@ var TextInputEvents = React.createClass({
     var inputDesc = 'Triggered immediately every time the text input contents change.';
 
     return (
-      <div id='eventRowContainer'>
+      <div id="eventRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
