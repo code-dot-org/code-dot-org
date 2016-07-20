@@ -1,5 +1,6 @@
-var React = require('react');
-var assetsApi = require('@cdo/apps/clientApi').assets;
+import React from 'react';
+import Radium from 'radium';
+import {assets as assetsApi} from '@cdo/apps/clientApi';
 
 var defaultIcons = {
   image: 'fa fa-picture-o',
@@ -26,10 +27,23 @@ var assetIconStyle = {
   fontSize: '32px'
 };
 
-var AssetThumbnail = React.createClass({
+export const styles = {
+  wrapper: {
+    width: 60,
+    height: 60,
+    margin: '10px auto',
+    background: '#eee',
+    border: '1px solid #ccc',
+    textAlign: 'center'
+  },
+};
+
+var AssetThumbnail = Radium(React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
-    type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired
+    type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
+    style: React.PropTypes.object,
+    iconStyle: React.PropTypes.object,
   },
 
   render: function () {
@@ -37,22 +51,14 @@ var AssetThumbnail = React.createClass({
     var name = this.props.name;
 
     return (
-      <td width="80">
-        <div className="assetThumbnail" style={{
-          width: '60px',
-          height: '60px',
-          margin: '10px auto',
-          background: '#eee',
-          border: '1px solid #ccc',
-          textAlign: 'center'
-        }}>
-          {type === 'image' ?
-             <img src={assetsApi.basePath(name)} style={assetThumbnailStyle} /> :
-             <i className={defaultIcons[type] || defaultIcons.unknown} style={assetIconStyle} />
-           }
-        </div>
-      </td>
+      <div className="assetThumbnail" style={[styles.wrapper, this.props.style]}>
+        {type === 'image' ?
+         <img src={assetsApi.basePath(name)} style={assetThumbnailStyle} /> :
+         <i className={defaultIcons[type] || defaultIcons.unknown}
+            style={[assetIconStyle, this.props.iconStyle]} />
+        }
+      </div>
     );
   }
-});
-module.exports = AssetThumbnail;
+}));
+export default AssetThumbnail;
