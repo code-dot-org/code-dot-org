@@ -1,6 +1,7 @@
 require('babel-polyfill');
 var $ = require('jquery');
 var React = require('react');
+import sinon from 'sinon';
 import {assert} from './configuredChai';
 
 export function setExternalGlobals() {
@@ -17,6 +18,7 @@ export function setExternalGlobals() {
     project: {
       clearHtml: function () {},
       exceedsAbuseThreshold: function () { return false; },
+      hasPrivacyProfanityViolation: function () { return false; },
       getCurrentId: function () { return 'fake_id'; },
       isEditing: function () { return true; },
       useFirebase: function () { return false; }
@@ -244,4 +246,29 @@ function getBooleanPermutation(n, numberOfBooleans) {
 
 function zeroPadLeft(string, desiredWidth) {
   return ('0'.repeat(desiredWidth) + string).slice(-desiredWidth);
+}
+
+/**
+ * Call in any mocha scope to make console.error() throw instead
+ * of log.  Useful for making tests fail on a React propTypes validation
+ * failures.
+ *
+ * @example
+ *   describe('my feature', function () {
+ *     throwOnConsoleErrors();
+ *     it('throws on console.error()', function () {
+ *       console.error('foo'); // Test will fail here
+ *     });
+ *   });
+ */
+export function throwOnConsoleErrors() {
+  before(function () {
+    sinon.stub(console, 'error', msg => {
+      throw new Error(msg);
+    });
+  });
+
+  after(function () {
+    console.error.restore();
+  });
 }
