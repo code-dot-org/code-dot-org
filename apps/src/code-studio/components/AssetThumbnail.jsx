@@ -38,14 +38,17 @@ var AssetThumbnail = React.createClass({
 
     return (
       <td width="80">
-        <div className="assetThumbnail" style={{
-          width: '60px',
-          height: '60px',
-          margin: '10px auto',
-          background: '#eee',
-          border: '1px solid #ccc',
-          textAlign: 'center'
-        }}>
+        <div
+          className="assetThumbnail"
+          style={{
+            width: '60px',
+            height: '60px',
+            margin: '10px auto',
+            background: '#eee',
+            border: '1px solid #ccc',
+            textAlign: 'center'
+          }}
+        >
           {type === 'image' ?
              <img src={assetsApi.basePath(name)} style={assetThumbnailStyle} /> :
              <i className={defaultIcons[type] || defaultIcons.unknown} style={assetIconStyle} />

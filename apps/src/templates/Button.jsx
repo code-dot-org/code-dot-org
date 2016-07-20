@@ -129,15 +129,26 @@ const ArrowButton = Radium(function ArrowButton(props) {
     }
   }
   return (
-    <div style={[style.arrow.base,
-                 style.arrow[props.arrow],
-                 props.style]}>
-      <div style={[style.arrowHead.base,
-                   style.arrowHead[props.arrow](config.style.backgroundColor)]}/>
-      <BaseButton {...props} style={[
-        style.withArrow.base,
-        style.withArrow[props.arrow],
-      ]}/>
+    <div
+      style={[
+        style.arrow.base,
+        style.arrow[props.arrow],
+        props.style
+      ]}
+    >
+      <div
+        style={[
+          style.arrowHead.base,
+          style.arrowHead[props.arrow](config.style.backgroundColor)
+        ]}
+      />
+      <BaseButton
+        {...props}
+        style={[
+          style.withArrow.base,
+          style.withArrow[props.arrow]
+        ]}
+      />
     </div>
   );
 });

@@ -38,18 +38,19 @@ const AddTableRow = React.createClass({
               {
                 (columnName !== 'id') &&
                   <input
-                      style={dataStyles.input}
-                      value={displayValue(this.state.newRecord[columnName])}
-                      onChange={event => this.handleChange(columnName, event)}/>
+                    style={dataStyles.input}
+                    value={displayValue(this.state.newRecord[columnName])}
+                    onChange={event => this.handleChange(columnName, event)}
+                  />
               }
             </td>
           ))
         }
         <td style={dataStyles.cell}>
           <button
-              className="btn btn-primary"
-              style={dataStyles.button}
-              onClick={this.handleAdd}
+            className="btn btn-primary"
+            style={dataStyles.button}
+            onClick={this.handleAdd}
           >
             Add Row
           </button>

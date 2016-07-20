@@ -114,23 +114,25 @@ var ShareDialog = React.createClass({
     );
     return (
       <BaseDialog
-          useDeprecatedGlobalStyles
-          isOpen={this.state.isOpen}
-          handleClose={this.close}
-          hideBackdrop={this.props.hideBackdrop}>
+        useDeprecatedGlobalStyles
+        isOpen={this.state.isOpen}
+        handleClose={this.close}
+        hideBackdrop={this.props.hideBackdrop}
+      >
         <div>
           {image}
           <div id="project-share" className={modalClass} style={{position: 'relative'}}>
             <p className="dialog-title">{this.props.i18n.t('project.share_title')}</p>
             {this.props.isAbusive &&
              <AbuseError
-                 i18n={{
-                     tos: this.props.i18n.t('project.abuse.tos'),
-                     contact_us: this.props.i18n.t('project.abuse.contact_us')
-                   }}
-                 className="alert-error"
-                 style={styles.abuseStyle}
-                 textStyle={styles.abuseTextStyle}/>}
+               i18n={{
+                 tos: this.props.i18n.t('project.abuse.tos'),
+                 contact_us: this.props.i18n.t('project.abuse.contact_us')
+               }}
+               className="alert-error"
+               style={styles.abuseStyle}
+               textStyle={styles.abuseTextStyle}
+             />}
             {showShareWarning &&
              <p style={styles.shareWarning}>
                {this.props.i18n.t('project.share_u13_warning')}
@@ -140,12 +142,13 @@ var ShareDialog = React.createClass({
             </p>
             <div style={{marginBottom: 10}}>
               <input
-                  type="text"
-                  id="sharing-input"
-                  onClick={select}
-                  readOnly="true"
-                  value={this.props.shareUrl}
-                  style={{cursor: 'copy', width: 465}}/>
+                type="text"
+                id="sharing-input"
+                onClick={select}
+                readOnly="true"
+                value={this.props.shareUrl}
+                style={{cursor: 'copy', width: 465}}
+              />
             </div>
             <div className="social-buttons">
               <a id="sharing-phone" href="" onClick={this.showSendToPhone}>
@@ -154,9 +157,11 @@ var ShareDialog = React.createClass({
               </a>
               {this.props.canShareSocial &&
                <span>
-                 <a href={facebookShareUrl}
-                    target="_blank"
-                    onClick={this.props.onClickPopup.bind(this)}>
+                 <a
+                   href={facebookShareUrl}
+                   target="_blank"
+                   onClick={this.props.onClickPopup.bind(this)}
+                 >
                    <i className="fa fa-facebook"></i>
                  </a>
                  <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
@@ -166,23 +171,24 @@ var ShareDialog = React.createClass({
             </div>
             {this.state.showSendToPhone &&
              <SendToPhone
-                 channelId={this.props.channelId}
-                 appType={this.props.appType}
-                 styles={{label:{marginTop: 15, marginBottom: 0}}}
+               channelId={this.props.channelId}
+               appType={this.props.appType}
+               styles={{label:{marginTop: 15, marginBottom: 0}}}
              />}
             {this.props.appType === 'applab' &&
              <AdvancedShareOptions
-                 i18n={this.props.i18n}
-                 onClickExport={this.props.onClickExport}
-                 expanded={this.state.showAdvancedOptions}
-                 onExpand={this.showAdvancedOptions}
+               i18n={this.props.i18n}
+               onClickExport={this.props.onClickExport}
+               expanded={this.state.showAdvancedOptions}
+               onExpand={this.showAdvancedOptions}
              />}
             {/* Awkward that this is called continue-button, when text is
             close, but id is (unfortunately) used for styling */}
             <button
-                id="continue-button"
-                style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
-                onClick={this.close}>
+              id="continue-button"
+              style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
+              onClick={this.close}
+            >
               {this.props.i18n.t('project.close')}
             </button>
           </div>
@@ -218,14 +224,14 @@ if (BUILD_STYLEGUIDE) {
           name: 'basic example',
           story: () => (
             <ShareDialog
-                hideBackdrop={true}
-                i18n={fakei18n}
-                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                isAbusive={false}
-                channelId="some-id"
-                appType="gamelab"
-                canShareSocial={true}
-                onClickPopup={storybook.action('onClickPopup')}
+              hideBackdrop={true}
+              i18n={fakei18n}
+              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+              isAbusive={false}
+              channelId="some-id"
+              appType="gamelab"
+              canShareSocial={true}
+              onClickPopup={storybook.action('onClickPopup')}
             />
           )
         }, {
@@ -233,14 +239,14 @@ if (BUILD_STYLEGUIDE) {
           description: `The applab version has an advanced sharing dialog with more options`,
           story: () => (
             <ShareDialog
-                hideBackdrop={true}
-                i18n={fakei18n}
-                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                isAbusive={false}
-                channelId="some-id"
-                appType="applab"
-                canShareSocial={true}
-                onClickPopup={storybook.action('onClickPopup')}
+              hideBackdrop={true}
+              i18n={fakei18n}
+              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+              isAbusive={false}
+              channelId="some-id"
+              appType="applab"
+              canShareSocial={true}
+              onClickPopup={storybook.action('onClickPopup')}
             />
           )
         }, {
@@ -248,15 +254,15 @@ if (BUILD_STYLEGUIDE) {
           description: `This feature has not yet shipped.`,
           story: () => (
             <ShareDialog
-                hideBackdrop={true}
-                i18n={fakei18n}
-                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                isAbusive={false}
-                channelId="some-id"
-                appType="applab"
-                canShareSocial={true}
-                onClickPopup={storybook.action('onClickPopup')}
-                onClickExport={storybook.action('onClickExport')}
+              hideBackdrop={true}
+              i18n={fakei18n}
+              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+              isAbusive={false}
+              channelId="some-id"
+              appType="applab"
+              canShareSocial={true}
+              onClickPopup={storybook.action('onClickPopup')}
+              onClickExport={storybook.action('onClickExport')}
             />
           )
         }, {
@@ -264,13 +270,13 @@ if (BUILD_STYLEGUIDE) {
           description: `We hide social sharing buttons and display a warning for users under 13`,
           story: () => (
             <ShareDialog
-                hideBackdrop={true}
-                i18n={fakei18n}
-                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                channelId="some-id"
-                canShareSocial={false}
-                appType="gamelab"
-                onClickPopup={storybook.action('onClickPopup')}
+              hideBackdrop={true}
+              i18n={fakei18n}
+              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+              channelId="some-id"
+              canShareSocial={false}
+              appType="gamelab"
+              onClickPopup={storybook.action('onClickPopup')}
             />
           )
         }, {
@@ -278,14 +284,14 @@ if (BUILD_STYLEGUIDE) {
           description: `The abusive version shows a warning message`,
           story: () => (
             <ShareDialog
-                hideBackdrop={true}
-                i18n={fakei18n}
-                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                isAbusive={true}
-                channelId="some-id"
-                canShareSocial={true}
-                appType="gamelab"
-                onClickPopup={storybook.action('onClickPopup')}
+              hideBackdrop={true}
+              i18n={fakei18n}
+              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+              isAbusive={true}
+              channelId="some-id"
+              canShareSocial={true}
+              appType="gamelab"
+              onClickPopup={storybook.action('onClickPopup')}
             />
           )
         }, {
@@ -293,15 +299,15 @@ if (BUILD_STYLEGUIDE) {
           description: `An icon can be specifid for the dialog`,
           story: () => (
             <ShareDialog
-                hideBackdrop={true}
-                icon="https://studio.code.org/blockly/media/skins/pvz/static_avatar.png"
-                i18n={fakei18n}
-                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-                isAbusive={false}
-                channelId="some-id"
-                canShareSocial={true}
-                appType="gamelab"
-                onClickPopup={storybook.action('onClickPopup')}
+              hideBackdrop={true}
+              icon="https://studio.code.org/blockly/media/skins/pvz/static_avatar.png"
+              i18n={fakei18n}
+              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+              isAbusive={false}
+              channelId="some-id"
+              canShareSocial={true}
+              appType="gamelab"
+              onClickPopup={storybook.action('onClickPopup')}
             />
           )
         }

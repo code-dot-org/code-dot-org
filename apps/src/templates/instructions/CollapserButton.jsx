@@ -20,11 +20,12 @@ const styles = {
  */
 const CollapserButton = props => (
   <button
-      style={[styles.collapseButton, props.style]}
-      onClick={props.onClick}>
+    style={[styles.collapseButton, props.style]}
+    onClick={props.onClick}
+  >
     <FontAwesome
-        icon={props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'}
-        style={styles.collapseIcon}
+      icon={props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'}
+      style={styles.collapseIcon}
     />
     {props.collapsed ? msg.more() : msg.less()}
   </button>

@@ -100,10 +100,10 @@ var ResizablePanes = React.createClass({
   getResizer: function (index) {
     return (
       <div
-          key={"resizer-" + index}
-          data-resizer-index={index}
-          className="resizer"
-          onMouseDown={this.onResizerMouseDown}
+        key={"resizer-" + index}
+        data-resizer-index={index}
+        className="resizer"
+        onMouseDown={this.onResizerMouseDown}
       />
     );
   },

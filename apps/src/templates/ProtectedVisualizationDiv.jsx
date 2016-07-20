@@ -29,8 +29,8 @@ const ProtectedVisualizationDiv = React.createClass({
   render() {
     return (
       <ProtectedStatefulDiv
-          id={VISUALIZATION_DIV_ID}
-          className={classNames({responsive: this.props.isResponsive})}
+        id={VISUALIZATION_DIV_ID}
+        className={classNames({responsive: this.props.isResponsive})}
       >
         {this.props.children}
       </ProtectedStatefulDiv>

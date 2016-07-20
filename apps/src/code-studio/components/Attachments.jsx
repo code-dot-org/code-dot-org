@@ -65,7 +65,8 @@ var Attachments = React.createClass({
           className="btn btn-default"
           type="button"
           value="Add/Remove Attachments"
-          onClick={this.showAssetManager}/>
+          onClick={this.showAssetManager}
+        />
       );
     }
 

@@ -34,7 +34,8 @@ var ImageProperties = React.createClass({
         <ColorPickerPropertyRow
           desc={'icon color'}
           initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
-          handleChange={this.handleIconColorChange} />
+          handleChange={this.handleIconColorChange}
+        />
       );
     }
 
@@ -44,39 +45,47 @@ var ImageProperties = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true} />
+          isIdRow={true}
+        />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'style-width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')}
+        />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'style-height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')}
+        />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
-          handleChange={this.props.handleChange.bind(this, 'left')} />
+          handleChange={this.props.handleChange.bind(this, 'left')}
+        />
         <PropertyRow
           desc={'y position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
-          handleChange={this.props.handleChange.bind(this, 'top')} />
+          handleChange={this.props.handleChange.bind(this, 'top')}
+        />
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
-          handleChange={this.props.handleChange.bind(this, 'picture')} />
+          handleChange={this.props.handleChange.bind(this, 'picture')}
+        />
         {iconColorPicker}
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
-          handleChange={this.props.handleChange.bind(this, 'hidden')} />
+          handleChange={this.props.handleChange.bind(this, 'hidden')}
+        />
         <ZOrderRow
           element={this.props.element}
-          onDepthChange={this.props.onDepthChange}/>
+          onDepthChange={this.props.onDepthChange}
+        />
       </div>);
 
     // TODO (brent):
@@ -118,12 +127,14 @@ var ImageEvents = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}/>
+          isIdRow={true}
+        />
         <EventHeaderRow/>
         <EventRow
           name={clickName}
           desc={clickDesc}
-          handleInsert={this.insertClick}/>
+          handleInsert={this.insertClick}
+        />
       </div>
     );
   }

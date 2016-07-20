@@ -49,8 +49,9 @@ const DataOverview = React.createClass({
           <tr style={dataStyles.editRow}>
             <td style={dataStyles.cell}>
               <EditLink
-                  name={msg.keyValuePairLink()}
-                  onClick={() => this.props.onViewChange(DataView.PROPERTIES)}/>
+                name={msg.keyValuePairLink()}
+                onClick={() => this.props.onViewChange(DataView.PROPERTIES)}
+              />
             </td>
           </tr>
           </tbody>
@@ -65,15 +66,17 @@ const DataOverview = React.createClass({
           {
             Object.keys(this.props.tableListMap).map(tableName => (
               <EditTableListRow
-                  key={tableName}
-                  tableName={tableName}
-                  onViewChange={this.props.onViewChange}
-                  onTableDelete={this.props.onTableDelete}/>
+                key={tableName}
+                tableName={tableName}
+                onViewChange={this.props.onViewChange}
+                onTableDelete={this.props.onTableDelete}
+              />
             ))
           }
           <AddTableListRow
-              onTableAdd={this.props.onTableAdd}
-              onViewChange={this.props.onViewChange}/>
+            onTableAdd={this.props.onTableAdd}
+            onViewChange={this.props.onViewChange}
+          />
           </tbody>
         </table>
       </div>

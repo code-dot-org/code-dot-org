@@ -37,10 +37,11 @@ const DataWorkspace = React.createClass({
     return (
       <div id="dataWorkspaceWrapper" style={style}>
         <PaneHeader
-            id="headers"
-            dir={this.props.localeDirection}
-            hasFocus={!this.props.isRunning}
-            className={this.props.isRunning ? 'is-running' : ''}>
+          id="headers"
+          dir={this.props.localeDirection}
+          hasFocus={!this.props.isRunning}
+          className={this.props.isRunning ? 'is-running' : ''}
+        >
           <div id="dataModeHeaders">
             <PaneSection id="workspace-header">
               <span id="workspace-header-span">

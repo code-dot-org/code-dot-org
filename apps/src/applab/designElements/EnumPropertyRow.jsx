@@ -27,9 +27,11 @@ var EnumPropertyRow = React.createClass({
     return (
       <div style={rowStyle.container}>
         <div style={rowStyle.description}>{this.props.desc}</div>
-        <select className="form-control"
-                value={this.state.selectedValue}
-                onChange={this.handleChange}>
+        <select
+          className="form-control"
+          value={this.state.selectedValue}
+          onChange={this.handleChange}
+        >
           {options}
         </select>
       </div>

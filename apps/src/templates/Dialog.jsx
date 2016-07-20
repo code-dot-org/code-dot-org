@@ -194,15 +194,17 @@ if (BUILD_STYLEGUIDE) {
                         with an icon, a title, some body content, and a cancel/confirm
                         button. You can do this easily by simply passing the relevant props`,
           story: () => (
-            <Dialog hideBackdrop={true}
-                    icon="https://studio.code.org/blockly/media/skins/flappy/static_avatar.png"
-                    title="Puzzle 3 of 10"
-                    cancelText="Go Back"
-                    body='The "when run" block allows you to run code when your game starts.
-                          Try setting the level speed and flapping to the target.'
-                    footer="Try not to become too addicted to flappy bird"
-                    onCancel={storybook.action("go back")}
-                    onConfirm={storybook.action("confirm")} />
+            <Dialog
+              hideBackdrop={true}
+              icon="https://studio.code.org/blockly/media/skins/flappy/static_avatar.png"
+              title="Puzzle 3 of 10"
+              cancelText="Go Back"
+              body='The "when run" block allows you to run code when your game starts.
+                    Try setting the level speed and flapping to the target.'
+              footer="Try not to become too addicted to flappy bird"
+              onCancel={storybook.action("go back")}
+              onConfirm={storybook.action("confirm")}
+            />
           )
         }, {
           name: 'basic example with dom',
@@ -230,35 +232,41 @@ if (BUILD_STYLEGUIDE) {
           name: 'no icon',
           description: 'This is how the dialog looks when no icon is provided',
           story: () => (
-            <Dialog hideBackdrop={true}
-                    title="Puzzle 3 of 10"
-                    cancelText="Go Back"
-                    body='The "when run" block allows you to run code when your game starts.
-                          Try setting the level speed and flapping to the target.'
-                    footer="Try not to become too addicted to flappy bird"
-                    onCancel={storybook.action("go back")}
-                    onConfirm={storybook.action("confirm")} />
+            <Dialog
+              hideBackdrop={true}
+              title="Puzzle 3 of 10"
+              cancelText="Go Back"
+              body='The "when run" block allows you to run code when your game starts.
+                    Try setting the level speed and flapping to the target.'
+              footer="Try not to become too addicted to flappy bird"
+              onCancel={storybook.action("go back")}
+              onConfirm={storybook.action("confirm")}
+            />
           )
         }, {
           name: 'no footer',
           description: 'This is how the dialog looks if you omit a footer',
           story: () => (
-            <Dialog hideBackdrop={true}
-                    title="A big decision"
-                    body="Do you want to go skydiving?"
-                    confirmText="Yes"
-                    onCancel={storybook.action("cancel")}
-                    onConfirm={storybook.action("confirm")} />
+            <Dialog
+              hideBackdrop={true}
+              title="A big decision"
+              body="Do you want to go skydiving?"
+              confirmText="Yes"
+              onCancel={storybook.action("cancel")}
+              onConfirm={storybook.action("confirm")}
+            />
           )
         }, {
           name: 'no title and only confirm',
           description: `This is how the dialog looks when you omit a title.
                         You can also omit buttons`,
           story: () => (
-            <Dialog hideBackdrop={true}
-                    body="Just wanted to tell you something"
-                    confirmText="Ok"
-                    onConfirm={storybook.action("confirm")} />
+            <Dialog
+              hideBackdrop={true}
+              body="Just wanted to tell you something"
+              confirmText="Ok"
+              onConfirm={storybook.action("confirm")}
+            />
           )
         }
       ]);

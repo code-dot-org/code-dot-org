@@ -28,42 +28,51 @@ var RadioButtonProperties = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}/>
+          isIdRow={true}
+        />
         <PropertyRow
           desc={'group id'}
           initialValue={element.getAttribute('name') || ''}
-          handleChange={this.props.handleChange.bind(this, 'groupId')} />
+          handleChange={this.props.handleChange.bind(this, 'groupId')}
+        />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'style-width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')}
+        />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'style-height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')}
+        />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
-          handleChange={this.props.handleChange.bind(this, 'left')} />
+          handleChange={this.props.handleChange.bind(this, 'left')}
+        />
         <PropertyRow
           desc={'y position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
-          handleChange={this.props.handleChange.bind(this, 'top')} />
+          handleChange={this.props.handleChange.bind(this, 'top')}
+        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
-          handleChange={this.props.handleChange.bind(this, 'hidden')} />
+          handleChange={this.props.handleChange.bind(this, 'hidden')}
+        />
         <BooleanPropertyRow
           desc={'checked'}
           initialValue={element.checked}
-          handleChange={this.props.handleChange.bind(this, 'checked')} />
+          handleChange={this.props.handleChange.bind(this, 'checked')}
+        />
         <ZOrderRow
           element={this.props.element}
-          onDepthChange={this.props.onDepthChange}/>
+          onDepthChange={this.props.onDepthChange}
+        />
       </div>);
 
     // TODO:
@@ -103,12 +112,14 @@ var RadioButtonEvents = React.createClass({
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}/>
+          isIdRow={true}
+        />
         <EventHeaderRow/>
         <EventRow
           name={changeName}
           desc={changeDesc}
-          handleInsert={this.insertChange}/>
+          handleInsert={this.insertChange}
+        />
       </div>
     );
   }

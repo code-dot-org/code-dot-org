@@ -35,7 +35,8 @@ module.exports = React.createClass({
       <DesignModeHeaders
         handleManageAssets={this.props.handleManageAssets}
         onToggleToolbox={this.onToggleToolbox}
-        isToolboxVisible={this.state.isToolboxVisible} />
+        isToolboxVisible={this.state.isToolboxVisible}
+      />
       <DesignModeBox
         handleDragStart={this.props.handleDragStart}
         element={this.props.element}
@@ -47,7 +48,8 @@ module.exports = React.createClass({
         onDelete={this.props.onDelete}
         onInsertEvent={this.props.onInsertEvent}
         isToolboxVisible={this.state.isToolboxVisible}
-        isDimmed={this.props.isDimmed} />
+        isDimmed={this.props.isDimmed}
+      />
     </div>;
   }
 });

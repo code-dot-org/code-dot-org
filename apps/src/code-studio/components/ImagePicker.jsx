@@ -82,7 +82,8 @@ var ImagePicker = React.createClass({
         assetChosen={this.props.assetChosen}
         allowedExtensions={extensionFilter[this.props.typeFilter]}
         channelId={this.props.channelId}
-        uploadsEnabled={this.props.uploadsEnabled}/> :
+        uploadsEnabled={this.props.uploadsEnabled}
+      /> :
       <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;
 
     return (

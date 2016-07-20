@@ -66,7 +66,8 @@ var ColorPickerPropertyRow = React.createClass({
       <ColorPicker
         ref="colorPicker"
         color={this.state.value}
-        onChangeComplete={this.handleColorChange}/>
+        onChangeComplete={this.handleColorChange}
+      />
     ) : null;
     return (
       <div style={rowStyle.container}>
@@ -75,12 +76,14 @@ var ColorPickerPropertyRow = React.createClass({
           <input
             value={this.state.value}
             onChange={this.handleChangeInternal}
-            style={rowStyle.input} />
+            style={rowStyle.input}
+          />
           <button
             ref="button"
             className={this.state.value === '' ? 'rainbow-gradient' : undefined}
             style={buttonStyle}
-            onClick={this.toggleColorPicker}>
+            onClick={this.toggleColorPicker}
+          >
           </button>
           {colorPicker}
         </div>
