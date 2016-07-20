@@ -48,7 +48,7 @@ module.exports = {
     "object-curly-spacing": "off",
     "react/display-name": "off",
     "react/jsx-closing-bracket-location": "off",
-    "react/jsx-curly-spacing": "off",
+    "react/jsx-curly-spacing": "error", // autofixable
     "react/jsx-first-prop-new-line": ["off", "multiline"],
     "react/jsx-indent-props": ["off", 2],
     "react/jsx-max-props-per-line": ["off", { "maximum": 1 }],

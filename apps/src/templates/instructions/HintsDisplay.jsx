@@ -27,7 +27,7 @@ var HintsDisplay = React.createClass({
       seenHints = (<div>
         <h1>
           <Lightbulb size={32} style={{ margin: "-9px 9px -9px -5px" }}/>
-          { this.props.hintReviewTitle }
+          {this.props.hintReviewTitle}
         </h1>
         <ol>
           {hintsToShow.map(function (hint) {

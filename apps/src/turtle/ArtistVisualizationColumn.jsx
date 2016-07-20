@@ -44,7 +44,7 @@ var ArtistVisualizationColumn = function (props) {
                   y="-11"
                   clipPath="url(#fastClipPath)" />
           </svg>
-          {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
+          {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
           <img
               id="spinner"
               style={styles.invisible}

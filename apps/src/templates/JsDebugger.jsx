@@ -81,17 +81,17 @@ var DebugButtons = function () {
   return (
     <div id="debug-commands" className="debug-commands">
       <div id="debug-buttons">
-        {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
+        {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
         <button id="pauseButton" className="debugger_button">
           <img src="/blockly/media/1x1.gif" className="pause-btn icon21"/>
           {i18n.pause()}
         </button>
-        {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
+        {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
         <button id="continueButton" className="debugger_button">
           <img src="/blockly/media/1x1.gif" className="continue-btn icon21"/>
           {i18n.continue()}
         </button>
-        {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
+        {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
         <button id="stepOverButton" className="debugger_button">
           <img src="/blockly/media/1x1.gif" className="step-over-btn icon21"/>
           {i18n.stepOver()}
@@ -101,7 +101,7 @@ var DebugButtons = function () {
           <img src="/blockly/media/1x1.gif" className="step-out-btn icon21"/>
           {i18n.stepOut()}
         </button>
-        {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
+        {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
         <button id="stepInButton" className="debugger_button">
           <img src="/blockly/media/1x1.gif" className="step-in-btn icon21"/>
           {i18n.stepIn()}

@@ -124,7 +124,7 @@ var ReportAbuseForm = React.createClass({
           <div>{i18n.t('project.abuse.report_abuse_form.abusive_url')}</div>
           <input type="text" readOnly={!!this.props.abuseUrl} style={{width: INPUT_WIDTH}} defaultValue={this.props.abuseUrl} name="abuse_url"/>
 
-          {/* we dangerouslySetInnerHTML because our string has html in it*/ }
+          {/* we dangerouslySetInnerHTML because our string has html in it*/}
           <div dangerouslySetInnerHTML={{
             __html: i18n.t('project.abuse.report_abuse_form.abuse_type.question', {
               link_start: '<a href="https://code.org/tos" target="_blank">',
@@ -141,7 +141,7 @@ var ReportAbuseForm = React.createClass({
           <div>{i18n.t('project.abuse.report_abuse_form.detail')}</div>
           <textarea style={{width: INPUT_WIDTH, height: 100}} name="abuse_detail" ref="abuse_detail"/>
 
-          {/* we dangerouslySetInnerHTML because our string has html in it*/ }
+          {/* we dangerouslySetInnerHTML because our string has html in it*/}
           <div dangerouslySetInnerHTML={{
             __html: i18n.t('project.abuse.report_abuse_form.acknowledge', {
               link_start_privacy: '<a href="https://code.org/privacy" target="_blank">',
