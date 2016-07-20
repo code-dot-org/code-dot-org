@@ -3,7 +3,7 @@ require 'test_helper'
 class ScriptTest < ActiveSupport::TestCase
   def setup
     @game = create(:game)
-    @script_file = File.join(self.class.fixture_path, "test_fixture.script")
+    @script_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
     @levels = (1..5).map { |n| create(:level, :name => "Level #{n}", :game => @game) }
 
@@ -65,15 +65,15 @@ class ScriptTest < ActiveSupport::TestCase
 
     # Reupload a script of the same filename / name, but lacking the second stage.
     stage = scripts[0].stages.last
-    script_file_empty_stage = File.join(self.class.fixture_path, "duplicate_scripts", "test_fixture.script")
+    script_file_empty_stage = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
     scripts,_ = Script.setup([script_file_empty_stage])
     assert_equal 1, scripts[0].stages.count
     assert_not Stage.exists?(stage.id)
   end
 
   test 'should remove empty stages, reordering stages' do
-    script_file_3_stages = File.join(self.class.fixture_path, "test_fixture_3_stages.script")
-    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test_fixture_3_stages.script")
+    script_file_3_stages = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
+    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-stages.script")
     scripts,_ = Script.setup([script_file_3_stages])
     assert_equal 3, scripts[0].stages.count
     first = scripts[0].stages[0]
@@ -100,9 +100,9 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should not create two scripts with same name' do
-    create(:script, :name => 'script')
+    create(:script, name: 'script')
     raise = assert_raises ActiveRecord::RecordInvalid do
-      create(:script, :name => 'Script')
+      create(:script, name: 'Script', skip_name_format_validation: true)
     end
     assert_equal 'Validation failed: Name has already been taken', raise.message
   end
@@ -164,7 +164,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, first.position
     assert_equal 2, second.position
     promoted_level = second.level
-    script_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test_fixture.script")
+    script_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
 
     scripts,_ = Script.setup([script_file_remove_level])
     new_first_script_level = ScriptLevel.joins(:levels).where(script: scripts[0], levels: {id: promoted_level}).first
@@ -191,7 +191,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'unplugged in script' do
-    @script_file = File.join(self.class.fixture_path, 'test_unplugged.script')
+    @script_file = File.join(self.class.fixture_path, 'test-unplugged.script')
     scripts, _ = Script.setup([@script_file])
     assert_equal 'Unplugged', scripts[0].script_levels[1].level['type']
   end
@@ -344,7 +344,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should summarize script' do
-    script = create(:script, name: 'Single Stage Script')
+    script = create(:script, name: 'single-stage-script')
     stage = create(:stage, script: script, name: 'Stage 1')
     create(:script_level, script: script, stage: stage)
 
@@ -352,7 +352,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should generate PLC objects' do
-    script_file = File.join(self.class.fixture_path, 'test_plc.script')
+    script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
     I18n.backend.store_translations I18n.locale, custom_i18n['en']
 
@@ -379,9 +379,23 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'expect error on bad module types' do
-    script_file = File.join(self.class.fixture_path, 'test_bad_plc_module.script')
+    script_file = File.join(self.class.fixture_path, 'test-bad-plc-module.script')
     assert_raises ActiveRecord::RecordInvalid do
       Script.setup([script_file])
+    end
+  end
+
+  test 'script name format validation' do
+    assert_raises ActiveRecord::RecordInvalid do
+      create :script, name: 'abc 123'
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      create :script, name: 'TestScript1'
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      create :script, name: 'a_b_c'
     end
   end
 end
