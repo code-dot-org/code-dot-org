@@ -42,7 +42,6 @@ class Script < ActiveRecord::Base
     presence: true,
     uniqueness: {case_sensitive: false},
     format: {
-      on: :create,
       unless: :skip_name_format_validation,
       with: /\A[a-z0-9\-]+\z/,
       message: 'can only contain lowercase letters, numbers and dashes'
