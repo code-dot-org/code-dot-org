@@ -10,7 +10,7 @@ import EditLink from './EditLink';
 import EditTableListRow from './EditTableListRow';
 import Radium from 'radium';
 import React from 'react';
-import msg from '../../locale';
+import msg from '@cdo/locale';
 import { addTableName, changeView, deleteTableName } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';

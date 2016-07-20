@@ -1,7 +1,6 @@
 import {assert} from '../util/configuredChai';
 
 var testUtils = require('./../util/testUtils');
-testUtils.setupLocales('eval');
 var Eval = require('@cdo/apps/eval/eval');
 var EvalText = require('@cdo/apps/eval/evalText');
 var EvalMulti = require('@cdo/apps/eval/evalMulti');

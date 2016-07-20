@@ -1,5 +1,5 @@
 var React = require('react');
-var msg = require('../../locale');
+var msg = require('@cdo/locale');
 
 var CodeWritten = React.createClass({
 

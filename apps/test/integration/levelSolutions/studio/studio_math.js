@@ -1,6 +1,6 @@
 var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
-var commonMsg = require('@cdo/apps/locale');
+var commonMsg = require('@cdo/locale');
 
 var levelDef = {
   map: [

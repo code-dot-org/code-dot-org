@@ -1,12 +1,11 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-testUtils.setupLocales('Applab');
 testUtils.setExternalGlobals();
 var ReactTestUtils = require('react-addons-test-utils');
 var ReactDOM = require('react-dom');
 var sinon = require('sinon');
 
-var msg = require('@cdo/apps/locale');
+var msg = require('@cdo/locale');
 var shareWarnings = require('@cdo/apps/shareWarnings');
 
 describe('shareWarnings', function () {

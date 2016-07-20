@@ -6,7 +6,7 @@
 var React = require('react');
 var connect = require('react-redux').connect;
 
-var i18n = require('../locale');
+var i18n = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
