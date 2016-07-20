@@ -12,6 +12,7 @@ var BaseDialog = React.createClass({
     handleClose: React.PropTypes.func,
     uncloseable: React.PropTypes.bool,
     hideBackdrop: React.PropTypes.bool,
+    fullWidth: React.PropTypes.bool,
     useDeprecatedGlobalStyles: React.PropTypes.bool,
     children: React.PropTypes.node,
   },
@@ -54,6 +55,12 @@ var BaseDialog = React.createClass({
         marginLeft: 0,
       };
     }
+    if (this.props.fullWidth) {
+      bodyStyle = Object.assign({}, bodyStyle, {
+        width: '90%',
+        marginLeft: '-45%'
+      });
+    }
 
     let modalClassNames = "modal";
     let modalBodyClassNames = "modal-body";
@@ -94,10 +101,7 @@ var BaseDialog = React.createClass({
 });
 module.exports = BaseDialog;
 
-// TODO: remove the undefined check once code-studio is merged with apps
-// Code studio's build system is not configured to replace BUILD_STYLEGUIDE
-// in the same way that webpack's build system is configured.
-if (typeof BUILD_STYLEGUIDE !== 'undefined' && BUILD_STYLEGUIDE) {
+if (BUILD_STYLEGUIDE) {
   var ExampleDialogButton = React.createClass({
     render() {
       return (
@@ -105,12 +109,15 @@ if (typeof BUILD_STYLEGUIDE !== 'undefined' && BUILD_STYLEGUIDE) {
           <BaseDialog
             isOpen={!!this.state && this.state.open}
             handleClose={() => this.setState({open: false})}
+            {...this.props}
           >
             <div style={{border: '1px solid black'}}>
               The contents of the dialog go inside this box! woo
             </div>
           </BaseDialog>
-          <button onClick={() => this.setState({open: true})}>Open the example dialog</button>
+          <button onClick={() => this.setState({open: true})}>
+            Open the example dialog
+          </button>
         </div>
       );
     }
@@ -131,7 +138,10 @@ if (typeof BUILD_STYLEGUIDE !== 'undefined' && BUILD_STYLEGUIDE) {
           )
         }, {
           name: 'click to open',
-          story: () => <ExampleDialogButton />,
+          story: () => <ExampleDialogButton />
+        }, {
+          name: 'fullWidth',
+          story: () => <ExampleDialogButton fullWidth/>
         }, {
           name: 'old style',
           description: `Dialogs with the useDeprecatedGlobalStyles flag
