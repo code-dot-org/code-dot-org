@@ -3,24 +3,23 @@ title 'Arrays and Loops: Altering Images'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 28 - Canvas and Arrays in Apps
+# Unit 3: Lesson 28 - Canvas and Arrays in Apps
 
-# Background
+## Background
 
 Processing arrays of information is much more interesting and powerful when we can visualize the results. In this lesson, you will be developing a drawing app which takes advantage of a new user interface element called the canvas. By capturing user interactions with this element, your app will not only let the user draw on the canvas, but it will store every mark they place on the screen. Using array processing, it is possible to remix these drawings in a number of interesting and visually-pleasing ways.
 
-# Vocabulary
+## Vocabulary
 
 **Canvas:** a user interface element which acts as a digital canvas, allowing the programmatic drawing and manipulation of geometric figures and images.
 
-# Lesson
+## Lesson
 
 * Introduction to the canvas.
 * Create a drawing app with the canvas.
 * Store information about the drawing in an array.
 * Process stored information to redraw an image with a variety of visual effects.
 
-  
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
 

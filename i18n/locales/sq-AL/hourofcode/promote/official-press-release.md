@@ -4,20 +4,18 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-<%= view :signup_button %>
-
-# Shembulli i njoftimit për shtyp për zyrtarët e zgjedhur
+# Shembull i një njoftimi për shtyp për zyrtarët e zgjedhur
 
 Për shtyp  
-**DATA**]  
-Kontakt: [**INFORMACIONET E KONTAKTIT**]  
+[**DATA**]  
+Kontakti: [**INFORMACIONET E KONTAKTIT**]  
   
 
 
-** 
+**
 
 <center>
-  DREJTOR/MINISTËR/ANËTAR I PARLAMENTIT/PËRFAQËSUES/KRYETAR I BASHKISË/ANËTAR I KËSHILLIT [VENDOS EMRIN][PJESMARRJA NË ORËN E KODIMIT ME STUDENTËT LOKAL]</strong><br /> Komuniteti vjen së bashku për të rritur ndërgjegjësimin në lidhje me rëndësinë e edukimit të shkencave kompjuterike duke marr pjesë në Javën Edukative të Shkencave Kompjuterike
+  DREJTOR/MINISTËR/ANËTAR I PARLAMENTIT/PËRFAQËSUES/KRYETAR I BASHKISË/ANËTAR I KËSHILLIT [VENDOS EMRIN][MORI PJESË NË ORËN E KODIMIT ME STUDENTËT E ZONËS]</strong><br /> Komuniteti vjen së bashku për të rritur ndërgjegjësimin në lidhje me rëndësinë e edukimit të shkencës kompjuterike duke marr pjesë në Javën Edukative të Shkencës Kompjuterike
 </center>
 
   
@@ -42,9 +40,3 @@ Më shume se 100 milion student në të gjithë botën kanë provuar Orën e Kod
 [**VENDOS SHPREHJE NGA NJË ORGANIZATË APO PERSON TJETËR QË KA MARRË PJESË NË EVENT**]
 
 Për më shumë informacion mbi [**EVENTI/PROGRAMI/ETJ**], VIZITO [**VENDOS WEBSITE-IN**] ose kontakto [**VENDOS INFORMACIONET E KONTAKTIT**]
-
-  
-  
-
-
-<%= view :signup_button %>

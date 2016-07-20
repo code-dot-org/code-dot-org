@@ -8,11 +8,14 @@ id:
   campaign_date_start_long: Tanggal 7 Desember
   campaign_date_short: Tanggal 7-13 Desember
   campaign_date_full: Tanggal 7 hingga 13 Desember
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: Bergabunglah dalam acara belajar terbesar sepanjang sejarah pada tanggal 7-13 Desember 2015
   front_intro_default: 'Hour of Code adalah gerakan mendunia yang merengkuh puluhan juta pelajar dari 180+ negara. Setiap orang, di mana saja, dapat mengadakan acara Hour of Code. Tersedia tutorial-tutorial berdurasi satu jam dalam lebih dari 40 bahasa. Tak perlu pengalaman. <strong>Usia 4 sampai 104.</strong>'
   front_watch_video: Tonton video terbaru
   front_watch_regular_video: Tontonlah video
   front_volunteers: Technical volunteers wanted
+  front_start_learning: Start learning
   header_menu_resources: Alat-alat Promosi
   header_menu_faq: FAQ
   header_menu_prizes: Hadiah
@@ -174,7 +177,9 @@ id:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Hadiah untuk para pendidik
   prizes_10k: Satu sekolah umum di setiap negara bagian AS (dan Washington DC) akan memenangkan teknologi senilai $10.000
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: "Setiap penyelenggara akan menerima gift card dari untuk Amazon.com atau Microsoft's Windows Store."
+  prizes_more: More exciting prizes
   whats_next_header: Apa berikutnya?
   whats_next_description: "Kami akan mengirimkan materi-materi dan tip yang berguna untuk acaramu. Tutorial 2015 yang baru akan hadir untuk semua browser, smarthphone - bahkan untuk tanpa komputer! <a href = 'http://code.org/learn'>Coba tutorial saat ini</a>"
   whats_next_how_to: "<a href='/how-to'>Bagaimana cara menjalankan Hour of Code</a>"
@@ -243,7 +248,7 @@ id:
   signup_name_placeholder: Nama anda
   signup_email_placeholder: anda@contoh.com
   signup_organization_name_placeholder: Contohnya, SMA Lincoln
-  signup_event_location_placeholder: "Kode pos dan negara ATAU alamat lengkap.\r\n(Ini akan digunakan sebagai penanda pada peta kami)"
+  signup_event_location_placeholder: "Kode pos dan negara ATAU alamat lengkap.\\r\n(Ini akan digunakan sebagai penanda pada peta kami)"
   signup_special_event_details_placeholder: Deskripsikan apa yang membuat acara ini spesial
   signup_send_posters_address_placeholder: Alamat ini tidak akan dibagikan pada peta kami
   signup_event_type_in_school: Di sekolah
@@ -252,6 +257,7 @@ id:
   signup_submit_error_message: Terjadi sebuah kesalahan. Silahkan periksa kembali apakah semua kolom isian yang diperlukan telah diisi secara benar.
   signup_thank_you_header: Terimakasih telah mendaftar sebagai penyelenggara acara Hour of Code.
   signup_thank_you_message: Kami telah mengirimkan email konfirmasi dengan informasi untuk membantu anda memulai.
+  map_title: Hour of Code map
   map_header: '# Kegiatan Hour of Code diseluruh dunia'
   see_all_events: Lihat semua acara
   map_header_company: '# oleh perusahaan penyelenggara'
@@ -304,7 +310,7 @@ id:
   hoc_faq_host_q: Saya tidak mengerti mengenai koding. Dapatkah saya menyelenggarakan acara ini?
   hoc_faq_host_a: "Tentu saja. Hour of Code dipandu sendiri. Yang harus Anda lakukan adalah <a href='%{codeorg_url}/learn'> mencoba tutorial yang telah ada</a>, pilih tutorial yang Anda inginkan, pilih waktu satu jam &mdash; dan kami akan mengurus sisanya. Kami juga memiliki opsi untuk segala umur dan tingkat pengalaman, dari TK ke atas. Mulai perencanaan event Anda dengan membaca <a href='/how-to'>panduan hot-to</a> kami."
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: Apakah saya perlu menyediakan komputer untuk setiap partisipan?
   hoc_faq_need_computers_a: |
     Tidak. Kami memiliki tutorial Hour of Code yang dapat berjalan di PC, Ponsel Pintar, Tablet, dan beberapa tidak membutuhkan komputer sama sekali! Anda dapat bergabung dimanapun anda berada, siapapun berada dengan anda. <p><i>Berikut beberapa pilihan:</i> <br><ul><li><b>Bekerja dalam berpasangan.</b> Penelitian menunjukkan bahwa pelajar belajar dengan sangat baik dengan <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pemrograman berpasangan</a>, saling berbagi komputer dan bekerja sama. Doronglah pelajar anda untuk bekerja sama.
@@ -316,8 +322,6 @@ id:
   hoc_faq_tutorial_a: "Jika anda tertarik menjadi mitra tutorial kami, <a href='/tutorial-guidelines'>seilahkan lihat panduan dan instruksi kami</a>. Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adalah mengoptimalkan pengalaman para murid dan guru yang awam akan ilmu komputer."
   hoc_faq_account_q: Apakah pelajar harus masuk menggunakan account?
   hoc_faq_account_a: "Tidak. Tidak diperlukan signup atau login sama sekali untuk pelajar mencoba Hour of Code. Kebanyakan <a href='%{codeorg_url}/learn/beyond'>follow-on courses</a> membutuhkan account untuk menyimpan kemajuan pelajar."
-  hoc_faq_frozen_q: Dimana tutorial dengan Anna dan Elsa?
-  hoc_faq_frozen_a: "Itu sekarang telah dipublish pada <a href='http://code.org/learn'>Code.org/learn</a>. Kami harap anda menikmatinya!"
   hoc_faq_high_school_q: Aktivitas apa yang harus saya lakukan dengan pelajar SMA?
   hoc_faq_high_school_a: "Untuk segala umur, kami merekomendasikan untuk mencoba tutorial untuk pemla pada <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> untuk permulaan, seperti tutorial dengan Angry Birds atau dengan Anna dan Elsa. Pelajar SMA seharusnya bisa menyelesaikannya dalam 30 menit dan dapat mencoba tutorial yang tingkat lanjut dalam Javascript, seperti Khan Academy atau CodeHS."
   hoc_faq_scratch_q: Saya mempersiapkan Scratch untuk Hour of Code, tetapi bagaimana untuk jika murid-murid saya memiliki iPads daripada laptop?
@@ -333,7 +337,9 @@ id:
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: Statistik Hour of Code dari tahun 2013
   stats_growth: Ini yang tercepat dalam mencapai 15 juta pengguna.
   stats_i18n: Siswa belajar dalam 40 bahasa
@@ -418,6 +424,9 @@ id:
   events_orgs_title: Semua kegiatan Hour of Code diselenggarakan oleh organisasi mitra kerja
   event: kegiatan
   events: kegiatan-kegiatan
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: Hak cipta 2015 Code.org. Semua hak dilindungi.
   footer_trademark_message: Hour of Code™ adalah merek dagang dari Code.org.
   footer_menu_partners: Mitra-mitra

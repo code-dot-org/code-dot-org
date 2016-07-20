@@ -4,27 +4,25 @@ css 'unplugged'
 
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 23 - Loops and Simulations
+# Unit 3: Lesson 23 - Loops and Simulations
 
-# Background
+## Background
 
 We can often develop intuitions for patterns by performing real-life experiments at a small scale, but verifying our intuitions with larger experiments can prove prohibitively time-consuming, costly, or even dangerous. If we can develop a model or simulation of the phenomenon we wish to investigate, we can confirm our hypotheses much more quickly without the risks or costs associated with a real-life experiment.
 
-# Vocabulary
+## Vocabulary
 
 **Simulation:** a program which replicates key features of a phenomenon in order to assist investigations of its behavior without the associated cost, time, or danger of running an experiment in real life.
 
-# Lesson
+## Lesson
 
 * Calculate statistics from a coin flipping experiment.
 * Create a simulation to repeat this experiment for much larger inputs.
 * Create updated hypotheses based on the results of simulations.
 
-# Resources
-* Activity Guide: <a href="https://docs.google.com/document/d/1xLzpruWj1foU23cVDGAcq7WoH_QCvAbSGpT-QT5tp0s/edit?usp=sharing" target="_blank">
-Flipping Coins
-</a>
+## Resources
 
+* Activity Guide: <a href="https://docs.google.com/document/d/1xLzpruWj1foU23cVDGAcq7WoH_QCvAbSGpT-QT5tp0s/edit?usp=sharing" target="_blank">Flipping Coins</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

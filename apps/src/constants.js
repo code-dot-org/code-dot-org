@@ -26,6 +26,7 @@ exports.TestResults = {
   NO_TESTS_RUN: -1,
 
   // The level was not solved.
+  GENERIC_FAIL: 0,                    // Used by DSL defined levels.
   EMPTY_BLOCK_FAIL: 1,                // An "if" or "repeat" block was empty.
   TOO_FEW_BLOCKS_FAIL: 2,             // Fewer than the ideal number of blocks used.
   LEVEL_INCOMPLETE_FAIL: 3,           // Default failure to complete a level.

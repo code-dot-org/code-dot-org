@@ -8,15 +8,12 @@ nav: how_to_nav
 
 # Sådan underviser du i en Hour of Code
 
-## 1) Tilmeld
+Join the movement and introduce a group of students to their first hour of computer science with these steps:
 
-  * Tilmeld dig som vært for en [Hour of Code](<%= resolve_url('/') %>) i <%= campaign_date('short') %>.
-  * Promovér din [Hour of Code](<%= resolve_url('/promote') %>) og opmunter andre til at blive værter.
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial for your hour:
 
-## 2) Se denne øvelses video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) vælge en øvelse:
-
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.*
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
 
 **[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
 
@@ -30,9 +27,15 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
+## 3) Promote your Hour of Code
+
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+
 ## 4) Planlæg hvad du har brug for af udstyr - computere er valgfri
 
-Den bedste Hour of Code oplevelse får man, med computere der har adgang til internettet. Men du **behøver** ikke en computer til hvert barn og kan endda afholde Hour of Code uden en eneste computer.
+The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+
+**Plan Ahead!** Do the following before your event starts:
 
   * Afprøv øvelserne på de computere eller enheder der skal anvendes, og sørg for at øvelserne fungerer korrekt med lyd og video, på de installerede browsere.
   * Stil høretelefoner til rådighed i din klasse, eller bed eleverne medbringe deres egne, hvis øvelsen, du vælger, fungerer bedst med lyd.
@@ -41,9 +44,9 @@ Den bedste Hour of Code oplevelse får man, med computere der har adgang til int
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Inspirér elever til at starte din Hour of Code
+## 5) Start your Hour of Code off with an inspiring speaker or video
 
-**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities with computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
 
 [![](/images/fit-300/volunteer-map.png)](<%= resolve_url('https://code.org/volunteer/local') %>)
 
@@ -52,25 +55,31 @@ Den bedste Hour of Code oplevelse får man, med computere der har adgang til int
   * Den oprindelige Code.org indlednings video med Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh (der er [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutters](https://www.youtube.com/watch?v=nKIu9yen5nc), og [9 minutters](https://www.youtube.com/watch?v=dU1xS07N-FA) versioner)
   * [Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) indlednings videoen, eller <% if @country == 'uk' %> [Hour of Code 2015 videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Præsident Obama opfordrer alle elever til at lære at programmere](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find flere inspirerende videoer [her](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Det er okay, hvis både du og dine elever er helt nye med hensyn til programmering. Her finder du nogle idéer til at introducere din Hour of Code-aktivitet:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-  * Forklar på hvilke måder teknologi påvirker vores liv med eksempler, som både drenge og piger finder interessante (snak om at redde liv, at hjælpe folk, at forbinde mennesker, osv.).
+  * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
   * Lav som klasse en liste over ting i hverdagen, som bruger kode.
   * Tips til, hvordan pigers interesse for programmering vækkes, kan findes [her](<%= resolve_url('https://code.org/girls') %>).
 
-**Brug for mere vejledning?** Download denne [skabelon til lektionsplan](/files/EducatorHourofCodeLessonPlanOutline.docx).
+**Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
 **Vil du have flere undervisningsidéer?** Tjek [bedste øvelser](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra erfarne lærere ud.
 
 ## 6) Kod!
 
-**Hjælp eleverne i gang med aktiviteten**
+**Direct students to the activity**
 
   * Skriv øvelseslinket på et whiteboard. Find linket listet på [information omkring din valgte øvelse](<%= resolve_url('https://code.org/learn') %>) under antallet af deltagere.
 
-**Når dine elever støder på vanskeligheder er det okay for eksempel at svare:**
+[col-33]
+
+![](/images/fit-300/group_ar.jpg)
+
+[/col-33]
+
+**When your students come across difficulties it's okay to respond:**
 
   * "Det ved jeg ikke. Lad os se om vi kan finde ud af det sammen."
   * "Det er ikke altid teknologien opføre sig helt som vi ønsker."
@@ -78,7 +87,7 @@ Den bedste Hour of Code oplevelse får man, med computere der har adgang til int
 
 **[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
-**Hvad kan du gøre, hvis en elev bliver hurtigt færdig?**
+**What to do if a student finishes early?**
 
   * Elever kan se alle øvelser og prøve en anden Hour of Code aktivitet på [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
   * Eller du kan bede de elever, der er tidligt færdige om, at hjælpe de klassekammerater der har problemer med deres aktivitet.
@@ -89,17 +98,17 @@ Den bedste Hour of Code oplevelse får man, med computere der har adgang til int
 
 [/col-33]
 
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
 <p style="clear:both">
   &nbsp;
 </p>
 
 ## 7) Fejr jeres succes
+
+[col-33]
+
+![](/images/fit-300/boy-certificate.jpg)
+
+[/col-33]
 
   * [Udskriv beviser](<%= resolve_url('https://code.org/certificates') %>) til dine elever.
   * [Udskriv "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickere til dine elever.
@@ -108,19 +117,7 @@ Den bedste Hour of Code oplevelse får man, med computere der har adgang til int
 
 [col-33]
 
-![](/images/fit-250/celebrate2.jpeg)
-
-[/col-33]
-
-[col-33]
-
 ![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
 
 [/col-33]
 
@@ -143,4 +140,3 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
-

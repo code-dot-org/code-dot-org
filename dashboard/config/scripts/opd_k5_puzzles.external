@@ -2,7 +2,7 @@ name 'OPD-K5 Puzzles'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
 
 <style>
     table{
@@ -36,7 +36,7 @@ In the stages that follow, you're going to be using Code Studio to learn the bas
 <img class="stackedimg" src="https://code.org/images/mockup_birds.png"/>
 </td>
 <td>
-<img class="stackedimg" src="https://staging.code.org/images/pvz.png"/>
+<img class="stackedimg" src="//code.org/images/pvz.png"/>
 </td>
 </tr>
 <tr>
@@ -51,7 +51,7 @@ You'll need to get the angry bird to the pig, and you'll need to get the zombie 
 <table>
 <tr>
 <td>
-<img class="stackedimg" src="https://staging.code.org/images/artist.png"/>
+<img class="stackedimg" src="//code.org/images/artist.png"/>
 </td>
 <td>
 You have to make the artist draw over the grey lines by moving him around the canvas. He'll draw a line behind him wherever he goes.
@@ -65,7 +65,7 @@ You have to make the artist draw over the grey lines by moving him around the ca
 <table>
 <tr>
 <td>
-<img class="stackedimg" src="https://staging.code.org/images/bee.png" />
+<img class="stackedimg" src="//code.org/images/bee.png" />
 </td>
 <td>
 You'll need to move the bee around to collect all the nectar and make all the honey. The units of nectar and honey needed for each puzzle are written in the lower right-hand corner of each flower or honeycomb. 
@@ -77,7 +77,7 @@ You'll need to move the bee around to collect all the nectar and make all the ho
 <table>
 <tr>
 <td>
-<img class="stackedimg" src="https://staging.code.org/images/playlab.png"/>
+<img class="stackedimg" src="//code.org/images/playlab.png"/>
 </td>
 <td>
 In Play Lab, you'll create games and stories based on different goals.
@@ -92,7 +92,7 @@ In Play Lab, you'll create games and stories based on different goals.
 <table>
 <tr>
 <td>
-<img class="stackedimg" src="https://staging.code.org/images/flappy.png"/>
+<img class="stackedimg" src="//code.org/images/flappy.png"/>
 </td>
 <td>
 In Flappy, you'll create your very own Flappy bird game. 
@@ -110,7 +110,7 @@ The puzzles leading up to the game creation help you learn pieces of code you'll
 <table>
 <tr>
 <td>
-<img class="stackedimg" src="https://staging.code.org/images/bounce.png"/>
+<img class="stackedimg" src="//code.org/images/bounce.png"/>
 </td>
 <td>
 In Bounce, you get to create your own game. 

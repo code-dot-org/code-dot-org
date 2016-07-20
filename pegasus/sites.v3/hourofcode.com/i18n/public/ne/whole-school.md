@@ -5,8 +5,6 @@ layout: wide
 
 ---
 
-
 # यदि पुरै विद्यालय सहभागि हुने भए 
 
-Hour of Code को बेलामा स्कूललाई सहभागीगराउने बारे जानकारी यहाँ जानेछन्.
-
+Information about getting whole schools to participate in the Hour of Code will go here.

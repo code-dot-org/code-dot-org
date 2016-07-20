@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 /**
  * A duck module for instructions, particularly instructions that we show in
  * the top pane above the code workspace. This module contains both the actions
@@ -13,6 +11,7 @@ const SET_INSTRUCTIONS_HEIGHT = 'instructions/SET_INSTRUCTIONS_HEIGHT';
 const SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED';
 const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE';
 const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
+const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
 
 const ENGLISH_LOCALE = 'en_us';
 
@@ -28,9 +27,11 @@ const ENGLISH_LOCALE = 'en_us';
  */
 const instructionsInitialState = {
   noInstructionsWhenCollapsed: false,
+  hasInlineImages: false,
   shortInstructions: undefined,
   shortInstructions2: undefined,
   longInstructions: undefined,
+  hasContainedLevels: false,
   collapsed: false,
   // The amount of vertical space consumed by the TopInstructions component
   renderedHeight: 0,
@@ -43,7 +44,7 @@ const instructionsInitialState = {
   // part off of the size of the code workspace.
   maxAvailableHeight: Infinity,
 
-  hasAuthoredHints: false,
+  hasAuthoredHints: false
 };
 
 export default function reducer(state = instructionsInitialState, action) {
@@ -53,38 +54,36 @@ export default function reducer(state = instructionsInitialState, action) {
     }
     const {
       noInstructionsWhenCollapsed,
-      shortInstructions,
-      shortInstructions2,
-      longInstructions
-    } = action;
-    let collapsed = state.collapsed;
-    if (!longInstructions) {
-      // If we only have short instructions, we want to be in collapsed mode
-      collapsed = true;
-    }
-    return _.assign({}, state, {
-      noInstructionsWhenCollapsed,
+      hasInlineImages,
       shortInstructions,
       shortInstructions2,
       longInstructions,
+      hasContainedLevels
+    } = action;
+    let collapsed = state.collapsed;
+    if (!longInstructions && !hasContainedLevels) {
+      // If we only have short instructions, we want to be in collapsed mode
+      collapsed = true;
+    }
+    return Object.assign({}, state, {
+      noInstructionsWhenCollapsed,
+      hasInlineImages,
+      shortInstructions,
+      shortInstructions2,
+      longInstructions,
+      hasContainedLevels,
       collapsed
     });
   }
 
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
-    const longInstructions = state.longInstructions;
-    if (!longInstructions) {
-      // No longInstructions implies either (a) no instructions or (b) we only
-      // have short instructions. In both cases, we should be collapsed.
-      throw new Error('Can not toggle instructions collapsed without longInstructions');
-    }
-    return _.assign({}, state, {
+    return Object.assign({}, state, {
       collapsed: !state.collapsed
     });
   }
 
   if (action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT) {
-    return _.assign({}, state, {
+    return Object.assign({}, state, {
       renderedHeight: action.height,
       expandedHeight: !state.collapsed ? action.height : state.expandedHeight
     });
@@ -92,14 +91,14 @@ export default function reducer(state = instructionsInitialState, action) {
 
   if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED &&
       action.maxNeededHeight !== state.maxNeededHeight) {
-    return _.assign({}, state, {
+    return Object.assign({}, state, {
       maxNeededHeight: action.maxNeededHeight
     });
   }
 
   if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE &&
       action.maxAvailableHeight !== state.maxAvailableHeight) {
-    return _.assign({}, state, {
+    return Object.assign({}, state, {
       maxAvailableHeight: action.maxAvailableHeight,
       renderedHeight: Math.min(action.maxAvailableHeight, state.renderedHeight),
       expandedHeight: Math.min(action.maxAvailableHeight, state.expandedHeight)
@@ -107,8 +106,14 @@ export default function reducer(state = instructionsInitialState, action) {
   }
 
   if (action.type === SET_HAS_AUTHORED_HINTS) {
-    return _.assign({}, state, {
+    return Object.assign({}, state, {
       hasAuthoredHints: action.hasAuthoredHints
+    });
+  }
+
+  if (action.type === SET_FEEDBACK) {
+    return Object.assign({}, state, {
+      feedback: action.feedback
     });
   }
 
@@ -116,12 +121,15 @@ export default function reducer(state = instructionsInitialState, action) {
 }
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
-    shortInstructions, shortInstructions2, longInstructions}) => ({
+    shortInstructions, shortInstructions2, longInstructions,
+    hasContainedLevels, hasInlineImages }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
+  hasInlineImages,
   shortInstructions,
   shortInstructions2,
-  longInstructions
+  longInstructions,
+  hasContainedLevels
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -159,6 +167,11 @@ export const setInstructionsMaxHeightAvailable = height => ({
 export const setHasAuthoredHints = hasAuthoredHints => ({
   type: SET_HAS_AUTHORED_HINTS,
   hasAuthoredHints
+});
+
+export const setFeedback = feedback => ({
+  type: SET_FEEDBACK,
+  feedback
 });
 
 // HELPERS
@@ -204,11 +217,13 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {string} config.locale
  * @param {boolean} config.noInstructionsWhenCollapsed
  * @param {boolean} config.showInstructionsInTopPane
+ * @param {boolean} config.hasContainedLevels
  * @param {Object} config.skin.instructions2ImageSubstitutions
  * @returns {Object}
  */
 export const determineInstructionsConstants = config => {
-  const { level, locale, noInstructionsWhenCollapsed, showInstructionsInTopPane } = config;
+  const { level, locale, noInstructionsWhenCollapsed, showInstructionsInTopPane,
+      hasContainedLevels } = config;
   const { instructions, instructions2, markdownInstructions, inputOutputTable } = level;
 
   let longInstructions, shortInstructions, shortInstructions2;
@@ -255,8 +270,10 @@ export const determineInstructionsConstants = config => {
 
   return {
     noInstructionsWhenCollapsed: !!noInstructionsWhenCollapsed,
+    hasInlineImages: !!config.skin.instructions2ImageSubstitutions,
     shortInstructions,
     shortInstructions2,
-    longInstructions
+    longInstructions,
+    hasContainedLevels
   };
 };

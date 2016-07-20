@@ -1,56 +1,56 @@
 /** @file Row of controls above the visualization. */
 import React from 'react';
 import {changeInterfaceMode} from './actions';
-var connect = require('react-redux').connect;
-var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
-var msg = require('../locale');
-var ToggleGroup = require('../templates/ToggleGroup');
-var styleConstants = require('../styleConstants');
+import {connect} from 'react-redux';
+import {GameLabInterfaceMode} from './constants';
+import msg from '../locale';
+import ToggleGroup from '../templates/ToggleGroup';
+import styleConstants from '../styleConstants';
+import {allowAnimationMode} from './stateQueries';
 
-var styles = {
+const styles = {
   main: {
-    height: styleConstants["workspace-headers-height"],
+    height: styleConstants["workspace-headers-height"]
   }
 };
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
  */
-var GameLabVisualizationHeader = React.createClass({
+const GameLabVisualizationHeader = React.createClass({
   propTypes: {
-    isShareView: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes
         .oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION])
         .isRequired,
+    allowAnimationMode: React.PropTypes.bool.isRequired,
     onInterfaceModeChange: React.PropTypes.func.isRequired
   },
 
-  render: function () {
+  render() {
+    const {interfaceMode, allowAnimationMode,
+        onInterfaceModeChange} = this.props;
     return (
       <div style={styles.main}>
         <ToggleGroup
-            selected={this.props.interfaceMode}
-            onChange={this.props.onInterfaceModeChange}>
-          <button value={GameLabInterfaceMode.CODE}>
+            selected={interfaceMode}
+            onChange={onInterfaceModeChange}
+        >
+          <button value={GameLabInterfaceMode.CODE} id="codeMode">
             {msg.codeMode()}
           </button>
-          <button value={GameLabInterfaceMode.ANIMATION} id="animationMode">
-            {msg.animationMode()}
-          </button>
+          {allowAnimationMode &&
+            <button value={GameLabInterfaceMode.ANIMATION} id="animationMode">
+              {msg.animationMode()}
+            </button>
+          }
         </ToggleGroup>
       </div>
     );
   }
 });
-module.exports = connect(function propsFromStore(state) {
-  return {
-    isShareView: state.pageConstants.isShareView,
-    interfaceMode: state.interfaceMode
-  };
-}, function propsFromDispatch(dispatch) {
-  return {
-    onInterfaceModeChange: function (mode) {
-      dispatch(changeInterfaceMode(mode));
-    }
-  };
-})(GameLabVisualizationHeader);
+module.exports = connect(state => ({
+  interfaceMode: state.interfaceMode,
+  allowAnimationMode: allowAnimationMode(state)
+}), dispatch => ({
+  onInterfaceModeChange: mode => dispatch(changeInterfaceMode(mode))
+}))(GameLabVisualizationHeader);

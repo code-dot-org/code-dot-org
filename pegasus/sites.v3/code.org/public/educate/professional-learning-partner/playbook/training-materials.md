@@ -5,24 +5,8 @@ nav: plp_playbook_nav
 
 # Training Materials
 
-## CS Principles Reources
-
-Refer to the slide decks listed below as a resource for details about the CS Principles curriculum and tools.
-
-[Welcome to CSP Facilitator Program - Slides](https://drive.google.com/open?id=1h5HcI4BKHLwWGYV1mcsV3HUWsb8YMwCcTIbqwI5yps8)
-
-[Navigating Code Studio and the Teacher Experience - Slides](https://drive.google.com/open?id=1QTo_BqHR1yXTqlwHHDXipnfDKEifdCGMFPHBcwa437k)<br/>
-
-[Deep Dive into CSP Curriculum Tools - Slides](https://drive.google.com/open?id=1941E16ptXwvgyHzJOW4_r6f4wnPAlUN9rk25dkHkJ38)<br/>
-
-[CSP and the College Board - Slides](https://drive.google.com/open?id=1z8G-J0aDZnAJSR2jA3JJrHJASUjPRdX8ItouG5OpwZE)<br/>
-
-
-
-
-## Professional Learning Partner Reources
-
-Use the slide decks below from Facilitation Summit to answer questions you may have about the Professional Learning Partner Program, your role, and tips on how to successfuly host events and provide support to your teachers and facilitators.
+## Facilitation Summit
+The following resources were discussed and distributed at Facilitation Summit in May 2016. Cink on the links to view them.
 
 [Worksheets and Agendas - PDF](https://www.dropbox.com/s/vc587goy08xkdun/PLP%20Facilitation%20Summit%20Packet.pdf?dl=0)
 
@@ -37,5 +21,15 @@ Use the slide decks below from Facilitation Summit to answer questions you may h
 [Running an Effective Professional Learning Event - Slides](https://docs.google.com/a/code.org/presentation/d/148wkzac1rwnK-O6q3PqIYer87MjwlVHLDBENOdbfBmA/edit?usp=sharing)</br>
 
 [Being a Successful Program Manager - Slides](https://docs.google.com/a/code.org/presentation/d/1Q8m-DquU2ZtCpIFC4-Oxc1MrSViOvFq4quc9qeTYZGc/edit?usp=sharing)<br/>
+
+## TeacherCon
+Click on the following links to view the resources from TeacherCon 2016.
+
+
+## Virtual Trainings
+July 7, 2016: [White House Findraising Event Webinar](https://bluejeans.com/s/9Y8e/)<br/>
+[Slide Deck](https://docs.google.com/presentation/d/10gksywQToajBiQNLDE7Kx7TNBiP6Co4UhQhQDc39jJs/edit?usp=sharing)
+
+
 
 

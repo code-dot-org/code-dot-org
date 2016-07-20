@@ -31,28 +31,34 @@ class DashboardTest < Minitest::Test
 
     describe 'select' do
       it 'returns only requested keys when arguments are given' do
-        assert_equal({
-                          name: FakeDashboard::STUDENT[:name],
-                          admin: FakeDashboard::STUDENT[:admin]
-                     },
-                     @student.select(:name, :admin))
+        assert_equal(
+          {
+            name: FakeDashboard::STUDENT[:name],
+            admin: FakeDashboard::STUDENT[:admin]
+          },
+          @student.select(:name, :admin)
+        )
       end
 
       it 'can add getter methods to requested hash' do
-        assert_equal({
-                          name: FakeDashboard::STUDENT[:name],
-                          owned_sections: []
-                     },
-                     @student.select(:name, :owned_sections))
+        assert_equal(
+          {
+            name: FakeDashboard::STUDENT[:name],
+            owned_sections: []
+          },
+          @student.select(:name, :owned_sections)
+        )
 
-        assert_equal({
-                         name: FakeDashboard::TEACHER[:name],
-                         owned_sections: [
-                             {id: FakeDashboard::TEACHER_SECTIONS[0][:id]},
-                             {id: FakeDashboard::TEACHER_SECTIONS[1][:id]}
-                         ]
-                     },
-                     @teacher.select(:name, :owned_sections))
+        assert_equal(
+          {
+            name: FakeDashboard::TEACHER[:name],
+            owned_sections: [
+              {id: FakeDashboard::TEACHER_SECTIONS[0][:id]},
+              {id: FakeDashboard::TEACHER_SECTIONS[1][:id]}
+            ]
+          },
+          @teacher.select(:name, :owned_sections)
+        )
       end
     end
 

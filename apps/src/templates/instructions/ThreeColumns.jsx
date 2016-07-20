@@ -8,9 +8,9 @@ import Radium from 'radium';
  */
 
 const ThreeColumns = (props) => {
-  const { style, leftColWidth, rightColWidth, height, children } = props;
+  const { styles, leftColWidth, rightColWidth, height, children } = props;
 
-  const styles = {
+  const defaultStyles = {
     container: {
       paddingLeft: leftColWidth,
       paddingRight: rightColWidth,
@@ -22,7 +22,7 @@ const ThreeColumns = (props) => {
       width: '100%',
       position: 'relative',
       float: 'left',
-      overflowY: 'scroll',
+      overflowY: 'hidden',
       height
     },
     left: {
@@ -41,15 +41,20 @@ const ThreeColumns = (props) => {
   };
 
   return (
-    <div style={[styles.container].concat(style)}>
-      <div style={styles.middle}>{children[1]}</div>
-      <div style={styles.left}>{children[0]}</div>
-      <div style={styles.right}>{children[2]}</div>
+    <div style={[defaultStyles.container, styles.container]}>
+      <div style={[defaultStyles.middle, styles.middle]}>{children[1]}</div>
+      <div style={[defaultStyles.left, styles.left]}>{children[0]}</div>
+      <div style={[defaultStyles.right, styles.right]}>{children[2]}</div>
     </div>
   );
 };
 
 ThreeColumns.propTypes = {
+  styles: React.PropTypes.object,
+  leftColWidth: React.PropTypes.number,
+  rightColWidth: React.PropTypes.number,
+  height: React.PropTypes.number,
+  children: React.PropTypes.node,
   customProp: (props) => {
     if (props.children.length !== 3) {
       throw new Error('ThreeColumns expects exactly 3 children, got ' +

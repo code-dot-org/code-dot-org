@@ -1,0 +1,55 @@
+professional_learning_course 'ECS Support'
+title 'ECS Unit 3'
+description 'Unit 3: Web Design'
+description_short 'Unit 3: Web Design'
+login_required 'true'
+pd 'true'
+
+stage 'Getting Started'
+level 'ECS Phase 3 Unit3 Welcome'
+level 'ECS Phase 3 Unit 3 Overview'
+level 'PDECS Tour'
+level 'PD check your progress'
+level 'ECSPD Unit 3 Outline'
+level 'ECSPD P3 Plan'
+
+stage 'Intro to Unit 3'
+level 'ECSPD Unit3 Connections'
+level 'ECSPD Unit 3 Lesson Overview'
+
+stage 'Teaching Strategies'
+level 'Forum-ECSPD-Unit 3-Teaching Practice'
+level 'ECSPD Unit 3 Expertise'
+level 'ECSPD Phase 3 - Unit 3 - Teaching Practice'
+level 'ECSPD jsfiddle'
+level 'ECSPD Unit 3 Strategy Review'
+level 'ECSPD strategies'
+
+
+
+stage 'Unit 3 Day-by-Day'
+level 'ECSPD Unit 3 Stage 6 Overview'
+level 'ECSPD U3 D 1-2 Intro'
+level 'ECSPD U3 D 3-4 Intro'
+level 'ECSPD U3 D 5 Intro'
+level 'ECSPD U3 D 6-7 Intro'
+level 'ECSPD U3 D 8-10 Intro'
+level 'ECSPD U3 D 11-13 Intro'
+level 'ECSPD U3 D 14 Intro'
+level 'ECSPD U3 D 15-16 Intro'
+level 'ECSPD U3 D 17-19 Intro'
+level 'ECSPD U3 D 20-21 Intro'
+level 'ECSPD U3 D 22-25 Intro'
+
+stage 'Unit 3 Challenge'
+level 'ECSPD U3 Challenges'
+level 'ECSPD U3 Challenge Decision'
+level 'ECSPD unit 3 Pick Challenge'
+level 'ECSU3 Challenge Submission'
+
+stage 'Close & Next Steps'
+level 'ECSPD Challenge Reflection'
+level 'Unit 3 Survey 2'
+
+
+stage 'Unit 3 Challenge Preview'

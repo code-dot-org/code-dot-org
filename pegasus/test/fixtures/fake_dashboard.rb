@@ -108,8 +108,8 @@ module FakeDashboard
 
     ActiveRecord::Migration.suppress_messages do
       ActiveRecord::Base.establish_connection(
-          adapter: 'sqlite3',
-          database: DATABASE_FILENAME
+        adapter: 'sqlite3',
+        database: DATABASE_FILENAME
       )
 
       require_relative('../../../dashboard/db/schema')

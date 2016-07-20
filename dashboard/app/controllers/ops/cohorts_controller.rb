@@ -68,6 +68,7 @@ module Ops
     end
 
     private
+
     # Required for CanCanCan to work with strong parameters
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
     def cohort_params
@@ -135,9 +136,6 @@ module Ops
           @cohort.teachers = @cohort.teachers - teachers_in_district + teachers
 
           # cannoy modify districts
-        else
-          # weird.
-          # don't do anything
         end
       end
     end

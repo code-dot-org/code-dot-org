@@ -82,5 +82,12 @@
   "whileTooltip": "Ponavlja umetnute akcije dok se ne dosegne zadani cilj.",
   "word": "Pronađi riječ",
   "yes": "Da",
-  "youSpelled": "Napisano je"
+  "youSpelled": "Napisano je",
+  "collectiblePresent": "there is some treasure",
+  "collect": "collect",
+  "collectorCollectTooltip": "Collect an item",
+  "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
+  "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
+  "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!"
 }

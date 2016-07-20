@@ -33,8 +33,6 @@
  *= require selectize.default
  */
 
-// TODO: Move into code-studio.scss when it exists.
-@import "/code-studio/assets/video-js/video-js.css";
 @import "color";
 @import "font";
 @import "mixins";
@@ -54,7 +52,7 @@ p,pre,span {
 
 body {
   @include unselectable;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   padding: 0px;
   font-style: normal;
 }
@@ -70,12 +68,16 @@ body.pin_bottom {
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
+  font-size: 32px;
   color: $purple;
 }
 
 h2 {
   font-family: $gotham-bold;
   font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+  color: $teal;
 }
 
 hr {
@@ -187,7 +189,8 @@ img.video_thumbnail {
     left: 97px;
 
     .learnmore {
-      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+      font-family: 'Gotham 7r', sans-serif;
+      font-weight: normal;
     }
   }
 }
@@ -198,8 +201,12 @@ img.video_thumbnail {
   height: 44px;
   background-color: $bkgnd_color;
   color: $header_text;
-  a:link {color:$header_text;}
-  a:visited {color:$header_text;}
+  a:link {
+    color: $header_text;
+  }
+  a:visited {
+    color: $header_text;
+  }
 
   .small_font_on_tablet {
     @media screen and (max-width: 1024px) {
@@ -210,7 +217,16 @@ img.video_thumbnail {
 
 .header.hide_on_mobile,
 .header-wrapper.hide_on_mobile {
-  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
+  @media screen and (max-device-width: 500px) {
+    display: none;
+  }
+}
+
+.sign_in.show_only_on_mobile {
+  float: right;
+  margin-bottom: 10px;
+
+  @media screen and (min-device-width: 501px) {
     display: none;
   }
 }
@@ -242,11 +258,32 @@ a.header_status_bar:hover {
 
 .main {
   padding: 10px;
-  a:link {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color;}
-  a:visited {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color;}
-  a:hover {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color; background-color: transparent;}  /* selected link */
-  a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {font-family: FontAwesome;}
+  a:link {
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    color: $dark_color;
+  }
+  a:visited {
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    color: $dark_color;
+  }
+  a:hover {
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    color: $dark_color;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
+    color: $dark_color;
+    background-color: transparent;
+  }
+  a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
+    font-family: FontAwesome;
+  }
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
@@ -278,21 +315,52 @@ html, body {
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
-  a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
-  a:visited {font-family: $gotham-regular; font-weight: normal; color: white;}
-  a:hover {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
+  a:link {
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: white;
+  }
+  a:visited {
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: white;
+  }
+  a:hover {
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: white;
+    background-color: transparent;
+  }
   select {
     width: auto;
-    font-size:11px;
+    font-size: 11px;
     height: 18px;
-    margin-bottom: 4px
+    margin-bottom: 4px;
     }
   .fineprint {
-    a:link {font-family: $gotham-bold; font-weight: normal;}
-    a:visited {font-family: $gotham-bold; font-weight: normal;}
-    a:hover {font-family: $gotham-bold; font-weight: normal;}
-    a:active {font-family: $gotham-bold; font-weight: normal;}
+    a:link {
+      font-family: $gotham-bold;
+      font-weight: normal;
+    }
+    a:visited {
+      font-family: $gotham-bold;
+      font-weight: normal;
+    }
+    a:hover {
+      font-family: $gotham-bold;
+      font-weight: normal;
+    }
+    a:active {
+      font-family: $gotham-bold;
+      font-weight: normal;
+    }
   }
   .dim {
     display: inline-block;
@@ -322,12 +390,12 @@ $small-footer-standard-width: 400px;
       text-decoration: none;
     }
     &:hover {
-      color:$dark_charcoal;
+      color: $dark_charcoal;
       background-color: transparent;
       text-decoration: underline;
     }
     &:active {
-      color:$light_gray;
+      color: $light_gray;
       background-color: transparent;
       text-decoration: none;
     }
@@ -337,7 +405,7 @@ $small-footer-standard-width: 400px;
     background-color: $dark-charcoal;
     a {
       &:hover {
-        color: $lightest_gray
+        color: $lightest_gray;
       }
     }
   }
@@ -363,7 +431,7 @@ $small-footer-standard-width: 400px;
 
   select {
     width: 80px;
-    font-size:11px;
+    font-size: 11px;
     height: 18px;
     margin-bottom: 0;
   }
@@ -442,10 +510,21 @@ $small-footer-standard-width: 400px;
 .user_options, .project_more_popup {
   display: none;
   background-color: white;
-  a:link {color:black;}
-  a:visited {color:black;}
-  a:hover { color:white; background-color: $dark_color; text-decoration: none; }
-  a:active { color:white; background-color: $dark_color; }
+  a:link {
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+  a:hover {
+    color: white;
+    background-color: $dark_color;
+    text-decoration: none;
+  }
+  a:active {
+    color: white;
+    background-color: $dark_color;
+  }
   border: 1px solid black;
   z-index: 100001;
   text-align: left;
@@ -462,6 +541,11 @@ $small-footer-standard-width: 400px;
   color: black;
 }
 
+.user_options .pairing_summary {
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+
 .full_container {
   padding: 0px 25px 25px 25px;
 }
@@ -476,7 +560,10 @@ body.embedded_iframe {
 $default-modal-width: 640px;
 
 .modal {
-  a:hover {color:$red; background-color: white; }
+  a:hover {
+    color: $red;
+    background-color: white;
+  }
 
   &#block-documentation-lightbox {
     width: 80% !important;
@@ -646,6 +733,11 @@ $default-modal-width: 640px;
     &:hover, & {
       text-decoration: none;
     }
+
+    &:hover {
+      box-shadow: 2px 2px 5px $light_gray;
+    }
+
     i {
       border-radius: 5px;
       width: 45px;
@@ -654,9 +746,6 @@ $default-modal-width: 640px;
       text-align: center;
       vertical-align: middle;
       font-size: 24pt;
-      &:hover {
-        box-shadow: 2px 2px 5px $light_gray;
-      }
 
       &.fa-facebook {
         background-color: #3b5998;
@@ -807,10 +896,6 @@ input.header_input {
   text-align: center;
   vertical-align: middle;
   height: 26px;
-  cursor: pointer;
-}
-
-.header_trophy_link {
   cursor: pointer;
 }
 
@@ -1085,13 +1170,16 @@ a.download-video {
 }
 
 .quiet_links {
-  a:link { font-family: $gotham-regular; font-weight: normal; }
+  a:link {
+    font-family: $gotham-regular;
+    font-weight: normal;
+  }
 }
 
 .fixed_width_cell {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
   padding-left: 5px;
 }
 
@@ -1148,7 +1236,8 @@ a.download-video {
     font-size: 24.5px;
     padding: 5px 0;
     #puzzle {
-      font-family: $gotham-extra-bold; font-weight: normal;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
     }
     .btn {
       height: 32px;
@@ -1207,8 +1296,9 @@ a.download-video {
     font-family: 'Gotham 5r', sans-serif;
   }
   .teacher-announce .announce-learn-more {
-    float: right;
-    margin-top: 25px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
   }
   .teacher-announce a {
     text-decoration: none;
@@ -1275,28 +1365,31 @@ a.download-video {
   }
 
   .padtopbottom {
-    padding-top:10px; padding-bottom:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   #signup {
-    padding-top:10px;
+    padding-top: 10px;
     .medium-size-text {
-      font-size:18px; line-height:30px;
+      font-size: 18px;
+      line-height: 30px;
     }
     #maintext {
-      text-align:left; padding-left:20px; color:$charcoal;
+      text-align: left;
+      padding-left: 20px;
+      color: $charcoal;
     }
     #helptext {
-      text-align:right; padding-right:20px; color:$light_gray;
+      text-align: right;
+      padding-right: 20px;
+      color: $light_gray;
     }
   }
 
   #lesson {
     #heading {
       width: 700px;
-      h2 {
-        margin-top: 0;
-      }
     }
     #trynow {
       float: right;
@@ -1332,24 +1425,28 @@ a.download-video {
 
 #signin {
   .tryfirst {
-    margin-bottom:10px;
+    margin-bottom: 10px;
     a {
-      font-size:18px;
+      font-size: 18px;
       font-family: $gotham-regular;
       font-weight: normal;
     }
   }
   .itemblock {
-    display:inline-block;
-    width:600px
+    display: inline-block;
+    width: 600px;
   }
   .labelblock {
-    display:inline-block;
-    width:140px
+    display: inline-block;
+    width: 140px;
   }
 }
 
 #signinsection {
+  ul.students, ul.pictures {
+    margin-left: 0;
+  }
+
   ul.students li,
   ul.pictures li {
     list-style-type: none;
@@ -1371,6 +1468,18 @@ a.download-video {
   ul.pictures li.selected {
     background-color: $yellow;
   }
+
+  #pairing_checkbox {
+    margin: 5px 0;
+    label {
+      font-size: 17.5px;
+    }
+    label, input {
+      margin: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
 }
 
 #signup {
@@ -1378,19 +1487,19 @@ a.download-video {
     background-color: $lightest_gray;
   }
   .signupform {
-    padding:20px;
-    margin-bottom:0px
+    padding: 20px;
+    margin-bottom: 0px;
   }
   .itemblock {
-    display:table;
+    display: table;
   }
   .labelblock {
-    display:table-cell;
-    width:140px
+    display: table-cell;
+    width: 140px;
   }
   .fieldblock {
-    width:220px;
-    vertical-align:top;
+    width: 220px;
+    vertical-align: top;
     margin-bottom: 5px;
     margin-top: 5px;
   }
@@ -1399,16 +1508,16 @@ a.download-video {
     vertical-align: middle;
   }
   #labelusername {
-    vertical-align:top;
-    padding-top:7px
+    vertical-align: top;
+    padding-top: 7px;
   }
   #usernamefield {
-    vertical-align:top
+    vertical-align: top;
   }
   #usernamemessage, #password_message, #password_message_confirmation {
-    display:inline-block;
-    max-width:180px;
-    vertical-align:top
+    display: inline-block;
+    max-width: 180px;
+    vertical-align: top;
   }
   .error_in_field {
     color: red;
@@ -1418,20 +1527,20 @@ a.download-video {
     vertical-align: middle;
   }
   select {
-    width:234px
+    width: 234px;
   }
   .field_with_errors {
-    display:inline-block
+    display: inline-block;
   }
   button {
-    font-size:16px;
-    height:40px;
+    font-size: 16px;
+    height: 40px;
   }
   .registertext {
-    display:inline-block;
-    font-size:16px;
-    color:$charcoal;
-    margin-top:15px;
+    display: inline-block;
+    font-size: 16px;
+    color: $charcoal;
+    margin-top: 15px;
   }
 }
 
@@ -1485,15 +1594,15 @@ a.download-video {
     padding-left: 4px;
     padding-right: 4px;
     width: 220px;
-    margin-top:2px;
-    margin-bottom:2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     border-style: solid;
     border-color: transparent;
     border-width: 6px;
   }
   #questions {
     list-style-type: none;
-    margin-left:0px;
+    margin-left: 0px;
     li {
       background-color: white;
       border-color: $lighter_gray;
@@ -1511,7 +1620,8 @@ a.download-video {
       .giantmark {
         .text {
           opacity: 0.8;
-          font-family: $gotham-bold; font-weight: normal;
+          font-family: $gotham-bold;
+          font-weight: normal;
         }
       }
     }
@@ -1552,10 +1662,9 @@ a.download-video {
       @include yTranslation(-50%);
     }
   }
-  #correctmarkscolumn
-  {
+  #correctmarkscolumn {
     width: 20px;
-    padding-right:20px;
+    padding-right: 20px;
   }
   #correctmarks {
     margin-left: 0px;
@@ -1623,6 +1732,28 @@ a.download-video {
   }
 }
 
+.external-link-icon {
+  margin: 0 0.33em 0 20px;
+}
+
+.external-link-disclaimer {
+  padding: 20px;
+  margin: 40px 0 20px 0;
+  color: $dark_charcoal;
+  background-color: $lighter_gray;
+  font-size: 13px;
+  h2 {
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  strong {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
 .external,
 .text-match,
 .free-response,
@@ -1641,7 +1772,8 @@ a.download-video {
     h3 {
       padding: 5px;
       font-size: 18px;
-      font-family: $gotham-extra-bold; font-weight: normal;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
       color: white;
       background: $cyan;
       margin: 0;
@@ -1795,7 +1927,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
 
 .multi {
   margin: auto;
-  h2 {
+  h1 {
     text-align: center;
   }
   p {
@@ -1803,6 +1935,13 @@ $information-desktop: "only screen and (min-width: 1024px)";
     line-height: 24px;
   }
   $multi-left-margin: 50px;
+
+  .answerbutton {
+    &.lock-answers {
+      pointer-events: none;
+      color: grey;
+    }
+  }
 
   // The tight layout is designed for a full-width layout that tends to
   // vertically stack every element, rather than going for side-by-side elements.
@@ -2004,7 +2143,7 @@ $modal-no-icon-gap: 22px;
     margin: 0 15px 0 0;
     float: left;
     border: lightgrey;
-    border-style: solid
+    border-style: solid;
   }
 
   .feedback-links {
@@ -2172,7 +2311,7 @@ $modal-no-icon-gap: 22px;
   border: none;
 }
 
-#feedbackButtons:after {
+#feedbackButtons::after {
   content: '';
   display: inline-block;
   width: 100%;
@@ -2338,7 +2477,7 @@ $width: 400px;
   }
 }
 
-div#main-logo {
+#main-logo {
   padding: 10px 15px;
   display: inline-block;
   top: 10px;
@@ -2355,8 +2494,8 @@ div#main-logo {
     }
   }
 
-  div#logo-container {
-    padding: 4px 4px;
+  #logo-container {
+    padding: 4px;
     background-color: #949ca2;
     width: 60px;
     border-radius: 5px;
@@ -2374,5 +2513,5 @@ div#main-logo {
   padding: 3px;
   z-index: 100;
   cursor: pointer;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }

@@ -4,19 +4,12 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
-<%= view :signup_button %>
-
 # How to teach one Hour of Code in after-school
 
-## 1) Sign up
+## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Choose a tutorial:
 
-  * Sign up to host an [Hour of Code](%= resolve_url('/') %) during <%= campaign_date('short') %>.
-  * Promote your [Hour of Code](%= resolve_url('/promote') %) and encourage others to host.
-
-## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Choose a tutorial:
-
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
 
 **Semua tutorial Hour of Code:**
 
@@ -25,18 +18,24 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
+## 3) Promote your Hour of Code
+
+Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+
 ## 4) Plan your technology needs - computers are optional
 
-The best Hour of Code experience will be with Internet-connected computers. You **don’t** need a computer for every child, and can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When kids partner up, they help each other and rely less on the organizer. Mereka akan melihat bahawa sains komputer adalah berkaitan sosial dan usaha sama juga.
-  * **Have low bandwidth?** Plan to project videos onto a big screen, so everyone isn't downloading their own videos. Or try the unplugged / offline tutorials.
+**Plan Ahead!** Do the following before your event starts:
+
+  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
+  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Apabila pelajar-pelajar berpasangan, mereka saling membantu antara mereka dan mengurangkan penggantungan kepada guru. Mereka akan melihat bahawa sains komputer adalah berkaitan sosial dan usaha sama juga.
+  * **Mempunyai jalur lebar yang rendah?** Rancang supaya video ditayangkan di hadapan kelas, agar setiap pelajar tidak perlu untuk memuat turun video sendiri. Atau cuba tutorial tanpa/luar talian.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Inspire participants to start your Hour of Code
+## 5) Start your Hour of Code off with an inspiring video
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
@@ -47,7 +46,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are both brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
   * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
   * List things that use code in everyday life.
@@ -92,26 +91,20 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## 7) Celebrate
 
+[col-33]
+
+![](/images/fit-300/boy-certificate.jpg)
+
+[/col-33]
+
   * [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your students.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
+  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
   * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
 
-![](/images/fit-250/celebrate2.jpeg)
-
-[/col-33]
-
-[col-33]
-
 ![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
 
 [/col-33]
 
@@ -130,9 +123,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Apakah selepas Hour of Code?
 
-Hour of Code hanya langkah pertama di dalam perjalanan untuk mengetahui lebih mendalam tentang bagaimana teknologi berfungsi dan bagaimana membuat aplikasi perisian. To continue this journey: - The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
   * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
   * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
-
-<%= view :signup_button %>

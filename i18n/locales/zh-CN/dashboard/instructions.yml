@@ -150,6 +150,10 @@ zh:
       2-3 Maze 12 (copy 1)_instruction: 可以用两个模块就完成上一个问题吗？（提示：用重复数次模块来创建一个循环）
       2-3 Maze 12 (copy 2)_instruction: 可以用两个模块就完成上一个问题吗？（提示：用重复数次模块来创建一个循环）
       2-3 Maze 12 (old)_instruction: 这次用重复模块来帮我到达那只猪！
+      2-3 Maze 12 - One Move Block_instruction: |
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: '可以只用两个模块来替换掉原来的五个模块吗?（提示: 创建一个用“重复”模块的循环）'
       2-3 Maze 13 (old)_instruction: 现在，用“重复直到”模块帮我到达那只猪旁边！
       2-3 Maze 13_instruction: "只用两个模块来帮我到达那只猪。\\r（提示：你必须用“重复”模块来通过这一关）"
@@ -360,16 +364,22 @@ zh:
       4-5 While Loops 7_instruction: 哇，这里有三堆土！你能写一个程序，将它们一铲铲移除，直到地面平整吗？
       4-5 While Loops 8_instruction: ' 这里有一个很深的坑，和一个很大的土堆？需要移动多少土才能将地面弄平整呢？提示：两个都要用“当”循环。'
       4-5 While Loops Assessment 1_instruction: 这里有好多坑和土堆。帮我填满或移除它们来让地面平整。
-      aE1_instruction: "Draw this square using a loop.\\r\n\\r\nEach side is 20 pixels\nlong."
+      aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na square with 20 pixel sides. "
       aE2_instruction: |
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
-        all 15 squares line up next to each other?
-      aE3_instruction: |
-        Now let's go one level deeper! We've nested that whole
-        block of code into another loop, but you need to get the artist back in place
-        to draw the next line. Which of these code blocks can you place at the end
-        of the outermost loop to draw the whole grid?
+        all 14 napkins line up next to each other?
+      aE3_instruction: "We've got to have a tablecloth!  \\r\n\\r\nTake your row of\n14 napkins and sew 14 of those together with another **outer loop** to make\na cover for our table."
+      aE3alternate_instruction: Alternate
+      aE3alternateB_instruction: Alternate
+      aE4_instruction: Alternate
+      aE5_instruction: Example of puzzle using highest difficulty level shape.
+      aE6_instruction: |
+        How many times do you need to loop this to draw half  of
+        a circle? 
+      aE7_instruction: "If you create another loop like this one, but turn left instead\nof right, what happens? \\r\n\\r\nCan you repeat all of that to draw this wave?"
+      aE8_instruction: "Now let's loop that whole thing four times to create this\npicture frame. Watch out for the corners - you can't just turn 90 degrees!\n\\r\n\\r\nIf looping a 3 degree turn 60 times makes a half circle, which of\nthese blocks of code will make an additional quarter circle for the corners?"
+      aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -440,8 +450,48 @@ zh:
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
       Artist - Nested Loops Assessment 1_instruction: 用嵌套循环来完成这幅画。
+      artistLoopsK1_instruction: |
+        This is a new type of puzzle called "Artist".
+        Play with the level and draw something fun.
+      artistLoopsK2_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
+      artistLoopsK3_instruction: |
+        Draw a line eight steps long. This will become
+        the land for our kingdom!
+      artistLoopsK4_instruction: |
+        Now we need a castle with a draw bridge.  Fix the
+        code so that the bridge lays straight instead of falling down.
+      artistLoopsK5_instruction: |
+        Now we need to fix the top of the castle. Can you
+        loop the code three times?
+      artistLoopsK6_instruction: |
+        Someone is stuck in the tower!  Fix the stairs
+        to set them free. 
+      artistLoopsK7_instruction: |
+        This tower is lovely, what is downstairs? Build
+        another staircase to find out! 
+      artistLoopsK8_instruction: |
+        Wow! There's a garden over there!  Help fix these
+        stairs so I can get to it.
+      artistLoopsK9_instruction: |
+        **Challenge:**  Lovely! Let's take a walk around
+        the garden.
+      artistLoopsKA_instruction: |
+        These stones are in the wrong place.  Help me move
+        them so I don't fall in!
+      artistLoopsKB_instruction: |
+        Look!  It's a theater.  Help me set up the chairs
+        so we can all see the stage. 
+      artistLoopsKFP_instruction: |
+        Picture time!  Use what you have learned to draw
+        a picture of what you think the Artist saw on stage.
       Auto Open Function Editor_instruction: '你能用一个函数里调用其它函数！用你的“形状”函数作为基础，创建三个房子图形，第一个是50像素宽，而每个都比前一个大20像素。用一个计数循环可能会方便一些。 '
       Bee Recommended Blocks test_instruction: 紫色的话可能有一个花蜜，也可能一个都没有，但是你不知道有没有！小心不要从没有花蜜的紫花里收集花蜜。用“如果”模块来检查是否花蜜等于1。
+      Bergeron Robot Maze1_instruction: |
+        Can you help me catch the naughty pig? Stack
+        a couple of `move forward` blocks below the `when run` block and press "Run".
+        
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1080,9 +1130,11 @@ zh:
       Course 4 Play Labs For Loops 8_instruction: "现在帮助演员们按照计数来移动。\\r\n\\r\n小狗每次按照增加2（counter + 2）来移动和计数。小猫每次按照乘以2（counter * 2）来移动和计数。企鹅按照指数2（counter ^ 2）来移动和计数。谁会第一个到达旗帜？"
       Course 4 Play Labs For Loops 8a_instruction: "要完成这个游戏，需要拿回“increment”（增量）变量！让我们将它设置到游戏级别上。\\r\n\\r\n1) 记录巫师被点击的次数。\\r\n2) 如果巫师在小狗数到30前，巫师被点击了至少10次，就将“increment”（增量）增加1，并重新开始。\\r\n3) 如果巫师没有被点击10次，游戏就结束。"
       Course 4 Playlab For Loop Freeplay_instruction: 自由的游戏：使用到目前为止你已经学会的一切制作一个游戏，包括for循环。
-      Course 4 Playlab For Loops 4b_instruction: "Now, these two characters are going\nto race!  \\r\n\\r\nEach of them will move `counter` steps at a time, but their\ncounters will have different values because of the `for` loops.  \\r\n\\r\nCan\nyou change the increment in one of the loops so that the race is a tie?"
+      Course 4 Playlab For Loops 4b_instruction: 小恐龙要和小鼹鼠比赛！但是他们每个人将会按照“计数器”的设定前进，而且是依照“for”循环完成的，你能尝试修改他们任何一个人的前进条件，是他们最终同时到达终点吗？：）
       Course 4 Playlab For Loops 5b_instruction: 调整上这些 for 循环的间隔，以便这两个字符在完全相同的位置结束。
-      Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na game that's fun for you to play!\\r\n\\r\nPress \"Run\" and click Madame\nUnicorn four times to win. "
+      Course 4 Playlab For Loops 6b_instruction: |
+        请你尝试修改“for”循环来编一个好玩的游戏吧！
+        按“运行”后，快速点击小独角兽来得分吧，看谁得分多：）
       Course 4 SCF 1_instruction: 用提供的函数来画四行六边形。要注意是怎样让偶数行转移到右边的？
       Course 4 SCF 1a_instruction: 你能想出怎么用最少的模块收集到所有花蜜吗？
       Course 4 SCF 1b_instruction: 你能想出怎么用最少的模块收集到所有花蜜吗？
@@ -1181,6 +1233,7 @@ zh:
         a draw() loop and then add set the background to blue with the background()
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Sprites intro sprites_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -1621,6 +1674,7 @@ zh:
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      eventsIntro_instruction: Need a better playlab/events combo
       Farmer for Authored Hint testing_instruction: |
         Wow, I found a really deep hole!
         I don't know how many shovelfuls of dirt it needs.  Can you write a program
@@ -1776,7 +1830,33 @@ zh:
       K-1 Maze Multi 15_instruction: 评估级别
       K-1 Maze Sequence Assessment 1_instruction: "让我们看看你学会了什么！\\r\n往一个方向移动，然后往另一个方向移动帮我到达那只猪！"
       K-1 Maze Sequence Assessment 2_instruction: 往一个方向移动，然后往另一个方向移动帮我到达那只猪。
+      K2.0 sequence 1_instruction: 修改代码来让我到达那只猪！
+      K2.0 sequence 10_instruction: Move me around the TNT to get to the pig.
+      K2.0 sequence 2_instruction: 修改代码来让我到达那只猪！
+      K2.0 sequence 3_instruction: |
+        Something is not quite right. REMOVE blocks to
+        get me to the pig!
+      K2.0 sequence 4_instruction: |
+        Try it yourself!  Move one way, then another
+        to get me to the pig.
+      K2.0 sequence 5_instruction: 向一个方向移动，然后往另一个方向移动来帮我到达猪那里！
+      K2.0 sequence 6_instruction: 想想这里缺了什么，然后添加模块让我到达那只猪！
+      K2.0 sequence 7_instruction: |
+        Debug this level by adding and changing blocks
+        to get me to the pig!
+      K2.0 sequence 8_instruction: |
+        Debug this level by adding blocks to get me to
+        the pig!
+      K2.0 sequence 9_instruction: '绕过炸药，让我到达那只猪！ '
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly use 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she\ncan using just 4 blocks?"
       kikiTesting_instruction: ".\\r\n .\\r\n.\\r\n.\\r\n.\\r\n.\\r\n\\r\n.\\r\n\\r\n"
+      KTest1_instruction: Can you make me move South once more to get to the pig?
+      KTest2_instruction: |
+        Trace the path and lead me to the silly pig. Avoid TNT
+        or the feathers will fly!
+      Limited Quantity of Blocks Test_instruction: |
+        Get me to the pig by adding only
+        one block
       love_spring_1_instruction: |
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -1818,7 +1898,11 @@ zh:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      Mike Pair Programming_instruction: Here are the instructions
       MikeAssessment1_instruction: Now do it right!
+      MikeStar_instruction: Draw this.
+      MikeStarHard_instruction: Draw this.
+      MikeStarNested_instruction: Draw this.
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
@@ -2026,7 +2110,6 @@ zh:
       NEW Course 4 Play Labs For Loops 7a_instruction: 用已经学会的，能在每次企鹅计数时，让恐龙往前走一步吗？
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: '自由游戏时间！可以使用工具箱里的所有模块，玩的开心！ '
       NEW Course 4 Play Labs For Loops 8a_instruction: '挑战：怎样才能使用“计数循环”来让每个演员都旋转，说他们的演员编号，然后从屏幕上消失？ '
-      New Play Lab Project_instruction: 创建你自己的故事或者游戏！你的代码已经保存为项目了，你可以在任何时候返回。
       Ninjacat Demo B (copy 1)_instruction: "\\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
@@ -2253,6 +2336,10 @@ zh:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      playEventsK1_instruction: |
+        This game is called "Play Lab".  See if you can
+        figure out what each block does.
+      playEventsK2_instruction: "Jorge wants to say \"Hi there.\"\\r\n\\r\nCan you\nhelp?"
       Poorva copy U3L2 Using Simple Commands_instruction: |
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -2389,9 +2476,14 @@ zh:
       Standalone_Artist_8_instruction: 这里有一个叫做“画一个形状”的函数，我们用它来画一个六边形。运行这个代码来看看它做了什么，然后试试用这个函数看看发生什么。你能用它找到一个能画出正方形，三角形，或者八边形的模式吗？
       Standalone_Artist_9_instruction: 现在制作任何你想要的图片吧！你设置可以从一个空函数开始，来做到你想的事！
       Standalone_Artist_v2_instruction: 欢迎小艺术家！首先，一起用“右转“块和”向前移“块来画一个简单的正方形。正方形每边的长度是100像素。
+      StepIntro_instruction: |-
+        Here's how to use the "Step" button.
       template test_instruction: "what's up"
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi hi
+      testArtistForTestK_instruction: |
+        The Artist is trying to draw a line five times,
+        but can't get it right.  Can you help?
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)

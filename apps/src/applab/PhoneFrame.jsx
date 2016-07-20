@@ -67,6 +67,7 @@ const PhoneFrame = React.createClass({
     showSelector: React.PropTypes.bool.isRequired,
     isPaused: React.PropTypes.bool.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
   },
 
   render: function () {

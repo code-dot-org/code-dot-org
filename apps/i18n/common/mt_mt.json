@@ -27,6 +27,9 @@
   "copy": "Copy",
   "copyright": "Drittijiet tal-Awtur",
   "currentVersion": "Current Version",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Infinity",
   "jump": "jump",
   "keepPlaying": "Keep Playing",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "You are using all of the necessary types of blocks but not in the right way.",
   "listVariable": "list",
   "makeYourOwnFlappy": "Make Your Own Flappy Game",
@@ -241,5 +245,11 @@
   "watchVideo": "Watch the Video",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "directionNorthwestLetter": "NW",
+  "directionNortheastLetter": "NE",
+  "directionSouthwestLetter": "SW",
+  "directionSoutheastLetter": "SE",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

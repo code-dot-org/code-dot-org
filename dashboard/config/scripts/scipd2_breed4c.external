@@ -1,0 +1,29 @@
+name 'sciPD2 breed4c'
+title 'Reviewing StarLogo Nova'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
+
+### Making It Yours
+
+Now that you’ve added a new breed to heal your sick, make another modification to your Epidemic Model that better fits with the original extension you wanted to do.  Here are some ideas:
+<br>
+<br>
+* **Give your doctors a chance to become sick, too** <br>
+* **Allow doctors to “vaccinate” turtles so they cannot become sick**<br>
+* **Add a vector breed, like a mosquito, that carries the and transmits the disease from sick turtles to healthy turtles**<br>
+* **Any other relevant and simple change you can think of and want to work on!**<br>
+
+
+
+
+
+<br>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

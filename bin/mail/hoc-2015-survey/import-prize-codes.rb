@@ -56,7 +56,7 @@ def import_apple_codes
       code = line.strip
       next unless code
       import_code type, code
-      count+= 1
+      count += 1
     end
     puts "  Imported #{count} Apple codes."
   end
@@ -75,7 +75,7 @@ def import_amazon_codes
         code = code.split(import_info[:delimiter])[import_info[:item]]
       end
       import_code type, code
-      count+= 1
+      count += 1
     end
     puts "  Imported #{count} Amazon codes."
   end

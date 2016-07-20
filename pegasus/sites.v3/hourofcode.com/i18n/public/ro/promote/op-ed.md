@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-
 ### Mai jos se gaseste un model de acordare de sprinjin pentru Saptamana Informaticii in Educatie si scopurile sale, care poate fi folosit de stat, legislatorii locali, liderii de afaceri etc.
 
   
@@ -45,4 +44,3 @@ Trebuie sa recrutam mai multi profesori de stiinta compuerului si sa incurajam d
 Potrivit Biroului de statistică a muncii, până în 2020, vor fi disponibile 9,2 milioane de locuri de muncă în domenii STEM. Jumătate din aceste locuri de muncă-4,6 milioane — vor fi in IT si tehnologie. Si stiinta calculatorului este intr-o continua crestere a cunostintelor fundamentale ale secolului 21. Cine va ocupa aceste locuri de munca disponibile daca elevilor nu le este data oportunitatea de a aduna aceste abilitati necesare?
 
 Aceasta saptamana <%= campaign_date('full') %>, este numita Saptamana Educatiei in Tehnologia computerelor si programare. In scolile din **[STATUL]**, elevii vor participa la un eveniment national marca Hour of Code, demistificand ideea stiintei computerului si speram ca va fi stimulat apetitul lor de cunoastere si vor invata mai multe. Eu ma voi alatura lor si va invit si pe voi sa va alaturati. Toata lumea ar trebui sa invete cum sa programeze. Vizitaţi https://hourofcode.com/<%= @country %> pentru a afla mai multe şi pentru a începe. Sprijiniti eforturile noastre pentru a aduce stiinta computerelor si programarea in cat mai multe scoli din **[ORASUL]**.
-

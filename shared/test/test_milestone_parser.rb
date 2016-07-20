@@ -38,19 +38,19 @@ class TestMilestoneParser < Minitest::Test
 
     @s3_client = Aws::S3::Client.new(stub_responses: true)
     @s3_client.stub_responses(:list_objects,
-                             {common_prefixes: [{prefix: 'hosts/staging/'}, {prefix: 'hosts/folder_1/'}, {prefix: 'hosts/folder_2/'}, {prefix: 'hosts/folder_3/'}]},
-                             {contents: [
-                                 {key: 'hosts/folder_1/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
-                                 {key: 'hosts/folder_1/dashboard/milestone.log.gz', size: 20, etag: 'y'},
-                             ]},
-                             {contents: [
-                                 {key: 'hosts/folder_2/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
-                                 {key: 'hosts/folder_2/dashboard/milestone.log.gz', size: 20, etag: 'y'},
-                             ]},
-                             {contents: [
-                                 {key: 'hosts/folder_3/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
-                                 {key: 'hosts/folder_3/dashboard/milestone.log.gz', size: 20, etag: 'y'},
-                             ]},
+      {common_prefixes: [{prefix: 'hosts/staging/'}, {prefix: 'hosts/folder_1/'}, {prefix: 'hosts/folder_2/'}, {prefix: 'hosts/folder_3/'}]},
+      {contents: [
+        {key: 'hosts/folder_1/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
+        {key: 'hosts/folder_1/dashboard/milestone.log.gz', size: 20, etag: 'y'},
+      ]},
+      {contents: [
+        {key: 'hosts/folder_2/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
+        {key: 'hosts/folder_2/dashboard/milestone.log.gz', size: 20, etag: 'y'},
+      ]},
+      {contents: [
+        {key: 'hosts/folder_3/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
+        {key: 'hosts/folder_3/dashboard/milestone.log.gz', size: 20, etag: 'y'},
+      ]},
     )
     @cache = JSON.parse(IO.read(CACHE_FILE))
   end
@@ -61,7 +61,7 @@ class TestMilestoneParser < Minitest::Test
     assert_equal 90, count
     assert_equal 6, @fetch_count
     assert_equal parser.cache, @cache
-    assert_equal LOG_SIZE*3 + 20*3, @bytes_count
+    assert_equal LOG_SIZE * 3 + 20 * 3, @bytes_count
   end
 
   def test_parse_fully_cached
@@ -72,7 +72,7 @@ class TestMilestoneParser < Minitest::Test
 
   def test_etag_modified_md5_match
     @s3_client.stub_responses(:get_object,
-                             {body: `cat #{MILESTONE_LOG} | head -c #{MilestoneParser::COMPARE_BYTE_LENGTH}`},
+      {body: `cat #{MILESTONE_LOG} | head -c #{MilestoneParser::COMPARE_BYTE_LENGTH}`},
     )
     cache = @cache.dup.tap do |x|
       x[x.keys[0]]['length'] = 1050

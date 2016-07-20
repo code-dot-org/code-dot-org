@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 var React = require('react');
 var msg = require('../../locale');
 var Lightbulb = require('../Lightbulb');

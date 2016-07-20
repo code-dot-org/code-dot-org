@@ -1,0 +1,44 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-16T19:13:07.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "show_d_pad": "true",
+    "edit_code": true,
+    "embed": "false",
+    "start_blocks": "var balloon = createSprite(200, 200);\r\nballoon.setAnimation(\"balloon\");\r\nballoon.scale = 0.1;\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update Values\r\n  balloon.scale = balloon.scale + 0.001;\r\n\r\n  // Draw Animations\r\n  drawSprites();\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\"balloon\", \"pop\"],\r\n  \"propsByKey\": {\r\n    \"balloon\": {\r\n      \"name\": \"balloon\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/balloon.png\",\r\n      \"sourceSize\": {\"x\":444, \"y\": 598},\r\n      \"frameSize\": {\"x\":444, \"y\": 598},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"pop\": {\r\n      \"name\": \"pop\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/pop.png\",\r\n      \"sourceSize\": {\"x\":600, \"y\": 465},\r\n      \"frameSize\": {\"x\":600, \"y\": 465},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

@@ -67,11 +67,14 @@ class ProjectsController < ApplicationController
 
   def create_new
     return if redirect_under_13(@level)
-    redirect_to action: 'edit', channel_id: create_channel({
-      name: 'Untitled Project',
-      useFirebase: use_firebase_for_new_project?,
-      level: polymorphic_url([params[:key], 'project_projects'])
-    })
+    redirect_to action: 'edit', channel_id: ChannelToken.create_channel(
+      request.ip,
+      StorageApps.new(storage_id('user')),
+      {
+        name: 'Untitled Project',
+        useFirebase: use_firebase,
+        level: polymorphic_url([params[:key], 'project_projects'])
+      })
   end
 
   def show
@@ -88,16 +91,16 @@ class ProjectsController < ApplicationController
       return if redirect_under_13(@level)
     end
     level_view_options(
-        hide_source: sharing,
-        share: sharing,
-        iframe_embed: iframe_embed,
+      @level.id,
+      hide_source: sharing,
+      share: sharing,
+      iframe_embed: iframe_embed,
     )
     # for sharing pages, the app will display the footer inside the playspace instead
     no_footer = sharing
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @is_legacy_share = sharing && !@game.owns_footer_for_share?
     view_options(
-      is_13_plus: current_user && !current_user.under_13?,
       readonly_workspace: sharing || readonly,
       full_width: true,
       callouts: [],
@@ -106,7 +109,7 @@ class ProjectsController < ApplicationController
       code_studio_logo: @is_legacy_share,
       no_header: sharing,
       is_legacy_share: @is_legacy_share,
-      small_footer: !no_footer && (@game.uses_small_footer? || enable_scrolling?),
+      small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name)
     )
@@ -119,8 +122,14 @@ class ProjectsController < ApplicationController
 
   def remix
     src_channel_id = params[:channel_id]
-    new_channel_id = create_channel nil, src_channel_id
+    new_channel_id = ChannelToken.create_channel(
+      request.ip,
+      StorageApps.new(storage_id('user')),
+      nil,
+      src_channel_id,
+      use_firebase)
     AssetBucket.new.copy_files src_channel_id, new_channel_id
+    AnimationBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
   end

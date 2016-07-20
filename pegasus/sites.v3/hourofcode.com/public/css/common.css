@@ -578,25 +578,3 @@
 .wideletternames {
   margin-left:5%;
 }
-
-/* Prizes giftcards */
-.prizes-logo {
-  width: 160px;
-  height: 100px;
-  position: relative;
-  float: left;
-  margin-right: 20px;
-}
-
-.prizes-logo img {
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}

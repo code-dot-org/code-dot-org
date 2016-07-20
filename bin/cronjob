@@ -67,7 +67,7 @@ end
 # main - run the command (provided as the first command-line argument) and deliver an email
 #   notification to the second argument (if provided).
 #
-def main()
+def main
   command = ARGV[0]
   stdout, stderr, status = Open3.capture3(command)
   result = stdout + stderr
@@ -77,4 +77,4 @@ def main()
   email_notify command, exitstatus, result, ARGV[1]
 end
 
-main()
+main

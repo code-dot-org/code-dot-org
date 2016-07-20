@@ -24,7 +24,7 @@ end
 there_can_be_only_one_pid("sync_dash")
 
 DIR = '/mnt/backups/'
-SSH="ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/ubuntu/.ssh/production-code-org.pem"
+SSH = "ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/ubuntu/.ssh/production-code-org.pem"
 
 servers = ["1b", "1c", "1d"].map {|i| "production-#{i}" }
 servers.each do |m|

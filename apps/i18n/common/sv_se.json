@@ -27,6 +27,9 @@
   "copy": "Kopiera",
   "copyright": "Copyright",
   "currentVersion": "Aktuell version",
+  "dataMode": "Data",
+  "dataTableNamePlaceholder": "Table name",
+  "dataWorkspaceHeader": "Data Browser",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -163,6 +166,7 @@
   "infinity": "Oändligt",
   "jump": "hoppa",
   "keepPlaying": "Fortsätt spela",
+  "keyValuePairLink": "Key/value pairs",
   "levelIncompleteError": "Du använder alla nödvändiga typer av block, men inte på rätt sätt.",
   "listVariable": "lista",
   "makeYourOwnFlappy": "Gör ditt eget Flappy-spel",
@@ -241,5 +245,11 @@
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "vid start",
-  "workspaceHeaderShort": "Arbetsyta: "
+  "workspaceHeaderShort": "Arbetsyta: ",
+  "directionNorthwestLetter": "NW",
+  "directionNortheastLetter": "NE",
+  "directionSouthwestLetter": "SW",
+  "directionSoutheastLetter": "SE",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

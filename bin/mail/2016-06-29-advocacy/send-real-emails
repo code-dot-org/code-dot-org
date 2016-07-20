@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#3543
+../send-to-mailing-list --limit 4000 2016-6-29-CA-Congress ./ca-contacts.csv
+
+# 2636
+../send-to-mailing-list --limit 3000 2016-6-29-PA-Congress ./pa-contacts.csv
+
+# 3908
+../send-to-mailing-list --limit 4000 2016-6-29-IA-Congress ./ia-contacts.csv
