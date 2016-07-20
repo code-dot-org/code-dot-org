@@ -74,10 +74,10 @@ var SharingWarnings = module.exports = React.createClass({
       dataPrompt = <div style={styles.dataMessage}>{i18n.storeDataMsg}</div>;
     }
     if (!this.props.is13Plus) {
-      agePrompt = <div>
+      agePrompt = (<div>
         <div style={styles.ageMessage}>{i18n.ageMsg}</div>
         <AgeDropdown style={styles.ageDropdonw} ref="age"/>
-      </div>;
+      </div>);
     }
 
     return (

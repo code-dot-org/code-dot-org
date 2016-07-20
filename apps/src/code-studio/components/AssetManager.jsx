@@ -93,7 +93,7 @@ var AssetManager = React.createClass({
   },
 
   render: function () {
-    var uploadButton = <div>
+    var uploadButton = (<div>
       <AssetUploader
         uploadsEnabled={this.props.uploadsEnabled}
         allowedExtensions={this.props.allowedExtensions}
@@ -105,7 +105,7 @@ var AssetManager = React.createClass({
       <span style={{margin: '0 10px'}} id="manage-asset-status">
         {this.state.statusMessage}
       </span>
-    </div>;
+    </div>);
 
     var assetList;
     // If `this.state.assets` is null, the asset list is still loading. If it's

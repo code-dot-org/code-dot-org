@@ -62,10 +62,10 @@ var IconListEntry = React.createClass({
         highlightedName = this.highlightSearch(this.props.iconId);
       }
 
-      iconLabel = <div>
+      iconLabel = (<div>
         <p style={styles.iconLabel}>{highlightedName}</p>
         {altMatchText}
-      </div>;
+      </div>);
     }
 
     var rootStyles = {
