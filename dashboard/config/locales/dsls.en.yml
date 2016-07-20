@@ -1962,6 +1962,8 @@ en:
         Sample CSP Assessment: {}
         TeacherCon Self-Assessment: {}
         TeacherCon Unit 1 Assessment: {}
+        Test anonymous student survey: {}
+        Test anonymous student survey 2: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
     match:
@@ -5247,6 +5249,18 @@ en:
         it replaces traditional science labs: it replaces traditional science labs
         it slows the process of discovery: it slows the process of discovery
         nothing at all: nothing at all
+      test anonymous student survey educational:
+        Do you think computer science is educational?: Do you think computer science is educational?
+        Maybe: Maybe
+        'No': 'No'
+        'Yes': 'Yes'
+      test anonymous student survey fun:
+        Agree: Agree
+        Computer science is fun.: Computer science is fun.
+        Disagree: Disagree
+        Neutral: Neutral
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
