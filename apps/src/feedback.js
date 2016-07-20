@@ -1001,7 +1001,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function (Dialog, hideIcon
  */
 FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   var textBoxStyle = {
-    'margin-bottom': '10px'
+    marginBottom: 10
   };
   var contentDiv = ReactDOM.render(
     <div>

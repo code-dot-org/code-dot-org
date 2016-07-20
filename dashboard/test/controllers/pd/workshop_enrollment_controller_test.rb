@@ -186,11 +186,126 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_response 404
   end
 
+  test 'join_section renders join_section form' do
+    # start to create section
+    @workshop.start!
+    sign_in create(:teacher)
+    get :join_section, section_code: @workshop.section.code
+    assert_template :join_section
+  end
+
+  test 'join_section without login redirects to sign_in' do
+    section = create :section
+    get :join_section, section_code: section.code
+    assert_redirected_to "/users/sign_in?return_to=#{request.url}"
+  end
+
+  test 'join_section with a nonexistent workshop code responds with 404' do
+    sign_in create(:teacher)
+    get :join_section, section_code: 'nonsense'
+    assert_response 404
+
+    # Same with a valid section code that is not associated with a workshop
+    section = create :section
+    get :join_section, section_code: section.code
+    assert_response 404
+  end
+
+  test 'join_section with closed workshop renders closed view' do
+    sign_in create(:teacher)
+    workshop = create :pd_ended_workshop
+    get :join_section, section_code: workshop.section.code
+    assert_template :closed
+  end
+
+  test 'join_section for workshop I organize renders own view' do
+    # start to create section
+    @workshop.start!
+    sign_in @organizer
+    get :join_section, section_code: @workshop.section.code
+    assert_template :own
+  end
+
+  test 'join_section for workshop I facilitate renders own view' do
+    # start to create section
+    @workshop.start!
+    sign_in @facilitator
+    get :join_section, section_code: @workshop.section.code
+    assert_template :own
+  end
+
+  test 'confirm_join without login renders 404' do
+    # start to create section
+    @workshop.start!
+    post :confirm_join, section_code: @workshop.section.code
+    assert_response 404
+  end
+
+  test 'confirm_join with no enrollment creates enrollment' do
+    # start to create section
+    @workshop.start!
+    teacher = create :teacher
+    sign_in teacher
+
+    assert_creates(Pd::Enrollment) do
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher)
+    end
+    enrollment = Pd::Enrollment.last
+    assert_equal teacher.id, enrollment.user_id
+    assert_equal teacher.email, enrollment.email
+    assert_equal teacher.name, enrollment.name
+    assert_redirected_to '/'
+    assert_equal "You've registered for #{@workshop.section.name}.", flash[:notice]
+  end
+
+  test 'confirm_join for a student account converts it to teacher and sets email' do
+    # start to create section
+    @workshop.start!
+    params = enrollment_test_params
+
+    # student hashed_email must match the supplied email below,
+    student = create :student, email: params[:email]
+    sign_in student
+
+    assert_creates(Pd::Enrollment) do
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: params
+    end
+
+    student.reload
+    assert student.teacher?
+    assert_equal params[:email], student.email
+    assert_redirected_to '/'
+    assert_equal "You've registered for #{@workshop.section.name}.", flash[:notice]
+  end
+
+  test 'confirm_join with an email mismatch with the user email renders join_section' do
+    # start to create section
+    @workshop.start!
+    sign_in create(:teacher)
+
+    params = enrollment_test_params.merge({email: 'mismatched_email@example.net'})
+    post :confirm_join, section_code: @workshop.section.code, pd_enrollment: params
+    assert_template :join_section
+  end
+
+  test 'confirm_join with validation errors renders join_section' do
+    # start to create section
+    @workshop.start!
+    sign_in create(:teacher)
+    post :confirm_join, section_code: @workshop.section.code, pd_enrollment: {email: nil}
+    assert_template :join_section
+  end
+
   private
 
-  def enrollment_test_params
-    name = "teacher#{SecureRandom.hex(4)}"
-    email = "#{name}@example.net"
+  def enrollment_test_params(teacher = nil)
+    if teacher
+      name = teacher.name
+      email = teacher.email
+    else
+      name = "teacher#{SecureRandom.hex(4)}"
+      email = "#{name}@example.net"
+    end
     {
       name: name,
       email: email,
@@ -201,5 +316,4 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       school_district_id: create(:school_district).id
     }
   end
-
 end

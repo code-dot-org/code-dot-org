@@ -159,6 +159,17 @@ module.exports.createSprite = function (x, y, width, height) {
     }
   });
 
+  // Game Lab should have access to a scaled version.
+  s.getScaledWidth = function () {
+    return s.width * s.scale;
+  };
+
+  // p5.play stores heigth unscaled, but users in
+  // Game Lab should have access to a scaled version.
+  s.getScaledHeight = function () {
+    return s.height * s.scale;
+  };
+
   Object.defineProperty(s, 'velocityX', {
     enumerable: true,
     get: function () {

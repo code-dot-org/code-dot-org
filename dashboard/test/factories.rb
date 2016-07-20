@@ -18,6 +18,13 @@ FactoryGirl.define do
       admin true
     end
 
+    factory :levelbuilder do
+      after(:create) do |levelbuilder|
+        levelbuilder.permission = UserPermission::LEVELBUILDER
+        levelbuilder.save
+      end
+    end
+
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 03, 14)
@@ -178,6 +185,10 @@ FactoryGirl.define do
     game {Game.free_response}
   end
 
+  factory :playlab, :parent => Level, :class => Studio do
+    game {create(:game, app: Game::PLAYLAB)}
+  end
+
   factory :makerlab, :parent => Level, :class => Applab do
     game {Game.applab}
     properties{{makerlab_enabled: true}}
@@ -253,6 +264,10 @@ FactoryGirl.define do
 
     trait :never_autoplay_video_false do
       levels {[create(:level, :never_autoplay_video_false)]}
+    end
+
+    trait :playlab do
+      levels {[create(:playlab)]}
     end
 
     chapter do |script_level|
@@ -431,7 +446,7 @@ FactoryGirl.define do
 
   factory :level_group do
     game {create(:game, app: "level_group")}
-    properties{{title: 'title', pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]}}
+    properties{{title: 'title', anonymous: 'false', pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]}}
   end
 
   factory :survey_result do
