@@ -131,6 +131,10 @@ const AssetListItem = Radium(React.createClass({
   }
 }));
 
+function quotedCommaJoin(strings) {
+  return strings.map(s => `"${s}"`).join(', ');
+}
+
 export const ScreenListItem = Radium(React.createClass({
   propTypes: {
     screen: importableScreenShape.isRequired,
@@ -155,12 +159,12 @@ export const ScreenListItem = Radium(React.createClass({
            {screen.assetsToReplace.length > 0 &&
             <p style={styles.warning}>
               Importing this will replace your existing
-              assets: {screen.assetsToReplace.map(a => `"${a}"`).join(', ')}.
+              assets: {quotedCommaJoin(screen.assetsToReplace)}.
             </p>
            }
             {screen.conflictingIds.length > 0 &&
              <p style={styles.warning}>
-               Uses existing element IDs: {screen.conflictingIds.map(id => `"${id}"`).join(', ')}.
+               Uses existing element IDs: {quotedCommaJoin(screen.conflictingIds)}.
              </p>}
         </div>
       </div>
