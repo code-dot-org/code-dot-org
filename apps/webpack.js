@@ -9,7 +9,9 @@ var baseConfig = {
   resolve: {
     extensions: ["", ".js", ".jsx"],
     alias: {
+      '@cdo/locale': path.resolve(__dirname, 'src', 'locale.js'),
       '@cdo/apps': path.resolve(__dirname, 'src'),
+      repl: path.resolve(__dirname, 'src/noop'),
     }
   },
   externals: {
@@ -20,7 +22,9 @@ var baseConfig = {
     "blockly": "this Blockly",
     "react": "var React",
     "react-dom": "var ReactDOM",
-    "jquery": "var $"
+    "jquery": "var $",
+    "radium": "var Radium",
+    "bindings": true
   },
   module: {
     loaders: [
@@ -33,7 +37,7 @@ var baseConfig = {
         include: [
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test'),
-          path.resolve(__dirname, 'node_modules', '@cdo'),
+          path.resolve(__dirname, 'node_modules', '@cdo')
         ],
         exclude: [
           path.resolve(__dirname, 'src', 'lodash.js'),
@@ -78,6 +82,11 @@ if (envConstants.COVERAGE) {
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
   devtool: 'inline-source-map',
+  resolve: _.extend({}, baseConfig.resolve, {
+    alias: _.extend({}, baseConfig.resolve.alias, {
+      '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale.js'),
+    }),
+  }),
   externals: {
     "johnny-five": "var JohnnyFive",
     "playground-io": "var PlaygroundIO",
@@ -106,26 +115,43 @@ var karmaConfig = _.extend({}, baseConfig, {
 /**
  * Generate the appropriate webpack config based off of our base config and
  * some input options
+ * @param {string} uniqueName - Unique name for the bundle. Used by a webpack
+ *   option to make sure our different bundles don't end up sharing webpack runtimes
  * @param {object} options
  * @param {string} options.output
  * @param {string[]} options.entries - list of input source files
+ * @param {string} commonFile
  * @param {bool} options.minify
  * @param {bool} options.watch
  * @param {string} options.piskelDevMode
+ * @param {string[]} options.provides - list of "external" modules that this
+ *   bundle actually provides (and thus should not be external here)
  */
 function create(options) {
+  var uniqueName = options.uniqueName;
   var outputDir = options.output;
   var entries = options.entries;
+  var commonFile = options.commonFile;
   var minify = options.minify;
   var watch = options.watch;
   var piskelDevMode = options.piskelDevMode;
+  var provides = options.provides;
+
+  // Note: In a world where we have a single webpack config instead of an array
+  // of them, this becomes unnecessary.
+  if (!uniqueName) {
+    throw new Error('Must specify uniqueName for bundle');
+  }
 
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
       filename: "[name]." + (minify ? "min." : "") + "js",
+      // This option is needed so that if we have two different bundles included
+      // on one page, they're smart enough to differentiate themselves
+      jsonpFunction: 'jsonp_' + uniqueName
     },
-    devtool: options.minify ? 'source-map' : 'cheap-module-eval-source-map',
+    devtool: options.minify ? 'source-map' : 'inline-source-map',
     entry: entries,
     plugins: [
       new webpack.DefinePlugin({
@@ -134,15 +160,28 @@ function create(options) {
         BUILD_STYLEGUIDE: JSON.stringify(false),
         PISKEL_DEVELOPMENT_MODE: piskelDevMode
       }),
-      new webpack.optimize.CommonsChunkPlugin({
-        name:'common',
-        minChunks: 2,
-      })
+      new webpack.IgnorePlugin(/^serialport$/),
     ],
     watch: watch,
     keepalive: watch,
     failOnError: !watch
   });
+
+  if (provides) {
+    config.externals = _.clone(baseConfig.externals);
+    provides.forEach(function (providedModule) {
+      delete config.externals[providedModule];
+    });
+  }
+
+  if (commonFile) {
+    config.plugins = config.plugins.concat(
+      new webpack.optimize.CommonsChunkPlugin({
+        name: commonFile,
+        minChunks: 2
+      })
+    );
+  }
 
   if (minify) {
     config.plugins = config.plugins.concat(

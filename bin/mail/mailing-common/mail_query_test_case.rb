@@ -8,7 +8,7 @@ require 'minitest/autorun'
 # Use this class as the base class for your tests
 class MailQueryTestCase < Minitest::Test
   def run(*args, &block)
-    Sequel.transaction([DB, DASHBOARD_DB], :rollback=>:always){super}
+    Sequel.transaction([DB, DASHBOARD_DB], :rollback => :always){super}
     self
   end
 end

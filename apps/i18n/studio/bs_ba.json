@@ -798,5 +798,13 @@
   "failedMultiplyCharactersTimeoutBlockly": "Trebaš dodati 20 Miš Droida. Upotrijebi \"dodaj Miš Droida\" komandu unutar \"kada je Miš Droid uzet\" događaj da bi se dodala dva ili više Miš Droida svaki put kada se uzme jedan.",
   "failedMultiplyCharactersTimeoutGotSome": "Čestitamo, dodao/la si kod koji pravi Miš Droide. Možeš ići na slijedeći zadatak ili pokušati ponovo da uzmeš 20 Miš Droida. Pokušaj si olakšati dodavanjem više njih! (Pritisni i drži tipke na tvojoj tastaturi (ili ekranu) za brže kretanje.)",
   "failedChangeSettingTimeout": "Uzmi tri Pobunjenička Pilota za nastavak.",
-  "failedChangeSettingSettings": "Napravi vlastitu igru. Da bi riješio/la ovaj zadatak, trebaš promijeniti svog droida i postaviti njegovu brzinu."
+  "failedChangeSettingSettings": "Napravi vlastitu igru. Da bi riješio/la ovaj zadatak, trebaš promijeniti svog droida i postaviti njegovu brzinu.",
+  "moveDownLeft": "move down and left",
+  "moveDownLeftTooltip": "Move an actor diagonally down and to the left.",
+  "moveDownRight": "move down and right",
+  "moveDownRightTooltip": "Move an actor diagonally down and to the right.",
+  "moveUpLeft": "move up and left",
+  "moveUpLeftTooltip": "Move an actor diagonally up and to the left.",
+  "moveUpRight": "move up and right",
+  "moveUpRightTooltip": "Move an actor diagonally up and to the right."
 }

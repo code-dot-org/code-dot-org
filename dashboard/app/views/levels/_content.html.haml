@@ -4,7 +4,7 @@
 - app, data, content_class, source_level, hide_header = %i(app data content_class source_level hide_header).map{ |x| local_assigns[x] }
 
 - unless data['title'].blank? || hide_header
-  %h2!= string_or_image(app, data['title'], source_level) unless app == 'external'
+  %h1!= string_or_image(app, data['title'], source_level) unless app == 'external'
 %div.content-level{class: (content_class unless content_class.blank?)}
   - unless app == 'external'
     - unless data['content1'].blank?

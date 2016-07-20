@@ -245,5 +245,11 @@
   "watchVideo": "Voir la vidéo",
   "when": "quand",
   "whenRun": "quand l'exécution commence",
-  "workspaceHeaderShort": "Espace de travail :"
+  "workspaceHeaderShort": "Espace de travail :",
+  "directionNorthwestLetter": "NW",
+  "directionNortheastLetter": "NE",
+  "directionSouthwestLetter": "SW",
+  "directionSoutheastLetter": "SE",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

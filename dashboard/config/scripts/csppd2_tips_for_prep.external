@@ -2,28 +2,25 @@ name 'CSPPD2 tips for prep'
 css 'unplugged'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
-### Getting Started > Tips for Preparation
+# Getting Started > Tips for Preparation
 
-#### Pay close attention to the resources and support materials
+## Pay close attention to the resources and support materials
+
 In the following stages of PD you will be presented with the first page from each lesson plan in Unit 1. For each lesson, the first page is a map to what you and students will do, and includes links to all important materials that support the lesson. You should thoroughly explore the materials associated with a lesson, so click through those links in the lesson overview pages! Also, don’t hesitate to read the entire lesson if and when you have questions. Links will be available throughout, or you can always access the complete lesson plans on [Code Studio](https://studio.code.org/s/cspunit1). 
 
-#### Try out the activities and tools!
+## Try out the activities and tools!
 
 During the in-person workshop we had a chance to go through 6 of the 17 lessons in Unit 1. Use this time to explore all of the student activities, and focus on those you had questions about or didn’t get to see during PD. Make sure you’ve thought through the activities you’re going to ask your students to do during the school year, and understand that you’ll be much better equipped to support their learning if you know where the course is going and the connection between lessons. 
 
-#### Test the Internet Simulator
+## Test the Internet Simulator
 You can even use the internet simulator by yourself if you open two browser windows side by side and connect to yourself (see below): 
 
 <img src=“https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/tSqDr3tXyVXB6xy/Screen%20Shot%202015-07-18%20at%202.35.33%20PM.png” width="100%"/>
 
-<br>
-
->Remember that in order to connect to someone on the Internet Simulator you need to be in the same section. To use it outside of a classroom section, append <br>**?s=testSection** <br>to the end of the URL to assign a temporary section. Let's look at an example:
+>Remember that in order to connect to someone on the Internet Simulator you need to be in the same section. To use it outside of a classroom section, append **?s=testSection** to the end of the URL to assign a temporary section. Let's look at an example:
 
 >- If we wanted to test out the first version of the internet simulator, that's found in unit 1, lesson 4. In Code Studio that level is at the URL: https://studio.code.org/s/cspunit1/stage/4/puzzle/2 
 - In order to join a specific section to try out the tool, we should add ?s=testSection to the end of that URL, giving us: https://studio.code.org/s/cspunit1/stage/4/puzzle/2?s=testSection
 
-<br><br>
- <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

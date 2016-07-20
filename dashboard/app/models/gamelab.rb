@@ -28,12 +28,14 @@ class Gamelab < Blockly
   serialized_attrs %w(
     free_play
     text_mode_at_start
+    hide_animation_mode
     show_d_pad
     soft_buttons
     submittable
     data_properties
     hide_view_data_button
     debugger_disabled
+    start_animations
   )
 
   # List of possible skins, the first is used as a default.
@@ -123,6 +125,8 @@ class Gamelab < Blockly
         "setVelocity": null,
         "sprite.height": null,
         "sprite.width": null,
+        "getScaledWidth": null,
+        "getScaledHeight": null,
         "debug": null,
         "depth": null,
         "lifetime": null,

@@ -17,7 +17,8 @@ var ResizablePanes = React.createClass({
   propTypes: {
     style: React.PropTypes.object,
     columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    onChange: React.PropTypes.func.isRequired
+    onChange: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
   },
 
   getInitialState: function () {

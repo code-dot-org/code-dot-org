@@ -8,11 +8,14 @@ kk:
   campaign_date_start_long: Желтоқсанның 7 жұлдызы
   campaign_date_short: 7-13 желтоқсан
   campaign_date_full: 7-13 желтоқсан
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: Тарихтағы ең ірі үйрену оқиғасына қосылыңыз, 7-13 желтоқсан, 2015
   front_intro_default: 'Кодтау сағаты - бұл 180+ мемлекетте ондаған миллион оқушыларға жететін ғаламдық бастама. Әркім кез-келген жерде Кодтау сағатын өткізе алады. Бір сағаттық жаттығулар 40-тан астам тілде дайын. Тәжірибе міндетті емес.<strong> 4 жастан 104 жасқа дейін </strong>'
   front_watch_video: Жаңа бейне-роликті тамашалау
   front_watch_regular_video: Бейне-роликті тамашалау
   front_volunteers: Техникалық волонтер керек
+  front_start_learning: Start learning
   header_menu_resources: Ресурстар
   header_menu_faq: Жиі қойылатын сұрақтар
   header_menu_prizes: Сыйлықтар
@@ -126,7 +129,7 @@ kk:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
-  company_sjusd: San Juan Unified School District
+  company_sjusd: Сан Хуан Біріктірілген Мектеп аумағы
   company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
@@ -143,11 +146,11 @@ kk:
   company_yelp: Yelp
   prizes_all: Әр ұйымдастырушыға сыйлық
   prizes_every_organizer: Әр Кодтау Сағатының ұйымдастырушысы Dropbox не Skype-та несиені рахмет ретінде алады
-  prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
-  prizes_tech_chats: '# classrooms will win video chats with very special guests'
-  prizes_robots: 100 classrooms will win a set of programmable robots
-  prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
-  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
+  prizes_technology: АҚШ-тың әрбір штатында (және Вашингтонда) орналасқан мемлекеттік мектептердің біреуі $10,000 доллар көлемінде техника ұтып алады
+  prizes_tech_chats: '# сынып видео арқылы арнайы қонақтармен сұхбаттасу құқығын жеңіп алады'
+  prizes_robots: 100 сынып бағдарламаланатын роботтар жинағын ұтып алады
+  prizes_brilliant: Әр аймақ пен ауданнан бір мектеп ең Жарқын Жоба үшін $2000 жеңіп алады
+  prizes_actua: Канаданың 15 мектебі Actua мүшесімен 2 практикалық семинар ұтып алады
   prizes_details: Толығырақ
   nav_back_to_resources: Қайта ресурстарға көшу
   how_to_nav_educators: Мұғалімдерге
@@ -173,17 +176,19 @@ kk:
   prizes_nav_actua: Actua workshop
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Әр оқытушыға сый
-  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
+  prizes_10k: АҚШ-тың әрбір штатында (және Вашингтонда) орналасқан мемлекеттік мектептердің біреуі $10,000 доллар көлемінде техника ұтып алады
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
+  prizes_gift_cards: '<i>Әрбір</i> ұйымдастырушы алғыс ретінде <b>Amazon.com, iTunes немесе Windows Store-да 10$</b> алады! Қор таусылғанша.'
+  prizes_more: More exciting prizes
   whats_next_header: Келесі не?
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
-  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
-  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_description: "Біз сізге іс-шараға байланысты материалдар мен пайдалы кеңестерді жібереміз. Жақында жаңа 2015 жылдың нұсқаулықтары кез-келген браузер мен смартфонға жарыққа шығады – немесе компьютерсіз де қарауға болады! <a href='http://code.org/learn'>Бар нұсқаулықтарды қарау</a>"
+  whats_next_how_to: "<a href='/how-to'>Кодтау Сағатын қалай өткіземін</a>"
+  whats_next_promote: "<a href='/promote'>Кодтау Сағатын жарнамалау</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>Кодтау Сағатын қалай жарнамалаймын</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>Кодтау Сағатын қалай жарнамалаймын</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Нұсқаулықтарды қарау</a>"
   whats_next_try_button: Жаттығуларды көр
-  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  n_have_learned_an_hoc: '<h1>Қараңыз</h1><h2>Кодтау Сағаты</h2><h3># өткізілді</h3>'
   anybody_can_learn: Әркім үйрене алады.
   get_started: Баста
   beyond_an_hour: Кодтау сағатынан тыс
@@ -191,17 +196,17 @@ kk:
   share_on_facebook: Фейсбукта бөлісу
   share_on_twitter: Твиттерде бөлісу
   front_join_us_heading: Кодтау сағаты әр оқушыға.
-  front_join_us_description: Computer science is a foundation for every student. Help us introduce it to 100 million.
-  front_join_us_description_short: Computer science is a foundation for every student.
+  front_join_us_description: Информатика пәні әрбір оқушы үшін жақсы қор болып табылады. Сол қорды 100 миллион адамға таныстыруға жәрдемші болыңыз.
+  front_join_us_description_short: Информатика пәні әрбір оқушы үшін жақсы қор болып табылады.
   front_join_us_button: Бізге қосылыңыз
   front_what_is_hoc: 'Кодтау сағаты - ол не?'
-  front_join_us_header: Anyone can learn the basics, and have fun doing it!
+  front_join_us_header: Әркім бағдарламалау негіздерін үйрене алады, әрі одан көңілді де көтере алады!
   front_join_us_volunteer_header: Кодтау сағатының волотерлері
   front_join_us_teacher: Сіз мұғалімсіз бе?
   front_join_us_inspire: Оқушыларды жігерлендіру
   front_join_us_inspire_link: Кодтау Сағаты сыныпта.
-  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
-  front_join_us_teacher_volunteer: Search for local volunteers who can visit your classroom or inspire your students remotely
+  front_join_us_teacher_link: Оқушыларды сыныпта Кодтау сағатымен шабыттандыр
+  front_join_us_teacher_volunteer: Оқушыларды сыныпқа келіп немесе қашықтықтан шабыттандыратын жергілікті еріктілерді іздеу
   front_join_us_parent: Сіз ата-анасыз ба?
   front_join_us_ask_link: жергілікті мектептен сұраңыз
   front_join_us_ask: Кодтау сағатын өткіз.
@@ -211,8 +216,8 @@ kk:
   front_join_us_spread: Сөзді тарату.
   front_join_us_spread_word: Сіздің қоғамдастықтығыңда сөз жайыңыз
   front_join_us_spread_word_work: Қоғамдастықтығыңда немесе жұмыс орныңызда сөз жайыңыз
-  front_join_us_sign_up_volunteer: Sign up to volunteer at a local classroom or through a video chat
-  front_join_us_organize: Or organize an Hour of Code event yourself.
+  front_join_us_sign_up_volunteer: Жергілікті сыныпта немесе видео чат арқылы ерікті болуға тіркел
+  front_join_us_organize: Немесе Кодтау сағаты шарасын өзің ұйымдастыр.
   front_join_us_how_to_run: Мінеки Кодтау Сағатын қалай өткізу керек
   front_join_us_help_promote: Кодтау сағатын жарнамалауға көмектесу
   front_join_us_students: Оқушылар
@@ -222,10 +227,10 @@ kk:
   front_join_us_sign_up: Тіркелу
   front_join_us_host: Өткіз
   front_join_us_support: Қолда
-  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  front_join_us_code_info: For more information, please visit code.org
+  front_join_us_more_info: "Толық мәлімет үшін <a href='https://code.org'>code.org</a> бетіне өтіңіз."
+  front_join_us_code_info: Толық мәлімет үшін code.org бетіне өтіңіз
   front_join_us_n_students_served: Қызмет етілген саны
-  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
+  signup_header: '%{campaign_date} аралығында өтетін Кодтау сағатын ұйымдастыр және оны осында тіркеп қой.'
   signup_name_label: Аты-жөніңіз
   signup_email_label: Сіздің Электрондық поштаңыз
   signup_organization_name_label: Мектеп не ұйым аты
@@ -234,16 +239,16 @@ kk:
   signup_event_location_label: Бастама жері (міндетті емес)
   signup_special_event_flag_label: Менің арнайы бастамамды бөліп шығару
   signup_special_event_details_label: Арнайы бастамар туралы толығырақ
-  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only)'
+  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only, while supplies last)'
   signup_send_posters_address_label: Мектеп не ұйым мекен-жайы
   signup_whole_school_flag_label: Мына бастама бүкіл мектеп үшін
   signup_your_event: Бастамаңызды тіркеу
-  signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_match_volunteer: 'Бізге жергілікті программистті табуға көмек беріңіз, оқушыларды программа жазуға  шабыттандыру үшін.'
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: Аты-жөніңіз
   signup_email_placeholder: сіз@email.com
   signup_organization_name_placeholder: Мысалы, Линкольн мектебі
-  signup_event_location_placeholder: "Postal code and country OR full address.\r\n(We’ll use this to place a pin on our map)"
+  signup_event_location_placeholder: Postal code and country OR full address.
   signup_special_event_details_placeholder: Describe what makes this a special event
   signup_send_posters_address_placeholder: This address will not be shared on our map
   signup_event_type_in_school: Мектеп ішінде
@@ -252,6 +257,7 @@ kk:
   signup_submit_error_message: An error occurred. Please check to make sure all required fields have been filled out properly.
   signup_thank_you_header: Thank you for signing-up to host an Hour of Code event.
   signup_thank_you_message: We sent you a confirmation email with information to help you get started.
+  map_title: Hour of Code map
   map_header: '# Hour of Code events around the world'
   see_all_events: Барлық бастамаларды көру
   map_header_company: '# by company organizers'
@@ -261,11 +267,11 @@ kk:
   map_search_reset: қалпына келтіру
   map_legend_title: Жазба
   map_legend_hoc_events: Кодтау Сағаты
-  map_legend_cs_tech_jam: Special Event
-  meta_tag_og_title: The Hour of Code is coming
-  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.
-  meta_tag_twitter_title: The Hour of Code is coming
-  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.
+  map_legend_cs_tech_jam: Арнайы іс-шара
+  meta_tag_og_title: Кодтау сағаты мұнда
+  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 45 languages. Ages 4 to 104.
+  meta_tag_twitter_title: Кодтау сағаты мұнда
+  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 45 languages. Ages 4 to 104.
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
   hardware_prizes_form_name_label: Аты-жөніңіз
   hardware_prizes_form_name_placeholder: Аты-жөніңіз
@@ -291,36 +297,38 @@ kk:
   hardware_prizes_form_submit_label: Ұсыну
   hoc_faq_title: Жиі қойылатын сұрақтар
   hoc_faq_what_is_hoc_q: 'Кодтау сағаты - ол не?'
-  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='%{codeorg_url}'>Check out the tutorials</a>."
+  hoc_faq_what_is_hoc_a: |-
+    The Hour of Code started as a one-hour introduction to computer science, designed to demystify "code", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400 partners</a> and 200,000 educators worldwide.
   hoc_faq_last_year: жаттығуларды көру
   hoc_faq_when_is_hoc_q: Кодтау сағаты қашан?
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. You're welcome to split up the Hour of Code into multiple sessions so long as your students finish the Hour of Code tutorial. Just do whatever works best for you and your students. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
   hoc_faq_why_cs_q: Неге бағдарламалау керек?
-  hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats on <a href='%{codeorg_url}'>%{partner_url}</a>."
+  hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats <a href='%{stats_url}'>here</a>."
   hoc_faq_how_participate_q: Кодтау сағатына қалай қатысамын?
   hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Кодтау сағатының артында кім тұр?
   hoc_faq_behind_hoc_a: "The Hour of Code is organized by <a href='https://code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='%{codeorg_url}/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
-  hoc_faq_host_q: "I don't know anything about coding. Can I still host an event?"
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
+  hoc_faq_host_q: Бағдарламалау жайлы ештеңе білмеймін. Бұл жағдайда қатыса аламын ба?
+  hoc_faq_host_a: "Əрине! Біздің материалдар өз бетімен үйренуге арналған. Сізден керегі тек <a href='%{codeorg_url}/learn'> сабақты өтіп көру</a>, қалаған сабақты таңдап, қалаған сағатты таңдап &mdash; қалғаны бізден. Кез-келген жасқа және тәжірибеге арналған сабақтар да бар; бала-бақшадан басталып жоғарыға қарай. Сабақты алдын-ала жоспарлап, <a href='/how-to'>қалай өткізу нұсқаулығын </a> оқыңыз."
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
-  hoc_faq_need_computers_q: Do I need computers for every participant?
-  hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> Research shows students learn best with <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
+  hoc_faq_need_computers_q: Əр қатысушыға компьютер керек пе?
+  hoc_faq_need_computers_a: |
+    Жоқ. Кодтау сағатының компьютерде, смартфонда, планшетте және мүлдем компьютерсіз өткізуге болатын сабақтары бар! Кез-келген жерден, кез-келген техникамен қосыла аласыз! <p><i> Міне, бірнеше жолдар:</i> <br> <ul> <li><b>
+    Жұпта жұмыс істеңіз. </b> Көптеген зерттеулер оқушылардың бір компьютерді бөліп, <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> бірге жұмыс жасағанда </a> нəтіжелері жақсы болатындығын дəлелдеуде. Бірге жұмыс істегенді мадақтаңыз. <li><b>
+    Проектірді қолданыңыз.</b>Проектор мен экран болса, интернет жүйесіне жақсы қосылатын болса, бүкіл сынып кодтаумен айналыса алады. Бейне-роликті бірге көріп, тапсырмаларды кезек-кезек орындаңыз. <li><b>Жүйеге қосылмай жұмыс істеңіз. </b> Сабақты өткізу нұсқауларында тіпті компьютерсіз жүргізілетін сабақ бар. </ul>
   hoc_faq_international_q: 'Мен <country>-дамын. Басқа мемлекеттен қалай қатысуға болады?'
   hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: How can I make an Hour of Code tutorial?
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='/tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
   hoc_faq_account_q: Do students need to log on using an account?
   hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='%{codeorg_url}/learn/beyond'>follow-on courses</a> require account creation to save student progress. Also, signing up for the Hour of Code does NOT automatically create a Code Studio account. If you do want to create accounts for your students, please follow these <a href='https://youtu.be/_smelV_KISE'>instructions</a>."
-  hoc_faq_frozen_q: Where can I find new tutorials featuring Star Wars, Minecraft and Anna and Elsa from Frozen?
-  hoc_faq_frozen_a: "They are now published on <a href='%{codeorg_url}/learn'>the tutorials page</a>. We hope you enjoy them!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Our new Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
+  hoc_faq_high_school_a: "Our Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
   hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
-  hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_map_q: "Why don't I see my dot on the map?"
+  hoc_faq_count_hoc_q: Кодтау сағаттарын қалай санайсыз?
+  hoc_faq_map_q: Менің нүктемді неліктен көрмеймін?
   hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   hoc_faq_one_hour_q: How much can one learn in an hour?
@@ -330,7 +338,9 @@ kk:
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: Кодтау сағаты 2013-тен статистика
   stats_growth: It was the fastest to reach 15 million users.
   stats_i18n: Оқушылар 40-тан астам тілде үйренуде
@@ -375,14 +385,14 @@ kk:
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
   handouts_participationguide: Plan your Hour of Code with this participation guide
-  videos_title: Show these videos to inspire students
+  videos_title: Мына бейне-роликтерді шабыттандыру мақсатымен көрсетіңіз
   videos_what_most_schools_dont_teach: Мектептің көбісі үйретпейтіні (5 мин)
-  videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
+  videos_hoc_2014: 'Кодтау сағаты келді - әркім оны үйрене алады'
   videos_obama_cs: Президент Обама Компьютер Ғылымы туралы
   videos_anybody_can_learn: Әркім үйрене алады(1 мин)
   title_country_resources: Мемлекетке айрықша ресурстар
   title_how_to_districts: Hour of Code How-To for Districts
-  title_how_to_events: Hour of Code Event How-To
+  title_how_to_events: Кодтау сағаты қалай өткізу
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
   title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: Мемлекеттік қызметкерлер үшін қалай жүргізу жолнұсқасы
@@ -406,16 +416,19 @@ kk:
   events_nav_title: Кодтау Сағатының бастамалары
   events_nav_all: Барлық бастамалар
   events_nav_whole_schools: Бүкіл мектептер
-  events_nav_special: Special Events
-  events_nav_orgs: Organizations
-  events_all_old_title: All @year Hour of Code events
-  events_all_title: All Hour of Code events
-  events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Hour of Code Special Events
-  events_orgs_title: All Hour of Code events organized by Partner Organizations
+  events_nav_special: Арнайы іс-шаралар
+  events_nav_orgs: Ұйымдастықтар
+  events_all_old_title: Барлық @year Кодтау Сағаты іс-шаралары
+  events_all_title: Кодтау сағатының барлық іс-шаралары
+  events_whole_school_title: Бүкіл мектептік Кодтау сағаты іс-шаралары
+  events_special_title: Кодтау сағатының арнайы іс-шаралары
+  events_orgs_title: Серіктес ұйымдар жасайтын барлық кодтау сағаттары
   event: Бастама
   events: Бастамалар
-  footer_copyright_message: Copyright 2015 Code.org. All rights reserved.
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
+  footer_copyright_message: 2015 Code.org авторлық құқығы. Барлық құқықтар сақталған.
   footer_trademark_message: Кодтау Сағаты™ Code.org-тың тауар кепілі.
   footer_menu_partners: Серіктестер
   footer_menu_contact: Бізбен байланыс

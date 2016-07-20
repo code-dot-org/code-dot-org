@@ -1,6 +1,7 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
 import React from 'react';
-import { METADATA_SHAPE } from '../animationMetadata';
+import {EMPTY_IMAGE} from '../constants';
+import * as PropTypes from '../PropTypes';
 const MARGIN_PX = 2;
 
 /**
@@ -9,9 +10,11 @@ const MARGIN_PX = 2;
  */
 const AnimationPreview = React.createClass({
   propTypes: {
-    animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
+    animationProps: PropTypes.AnimationProps.isRequired,
+    sourceUrl: React.PropTypes.string, // of spritesheet
     width: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired
+    height: React.PropTypes.number.isRequired,
+    alwaysPlay: React.PropTypes.bool
   },
 
   getInitialState: function () {
@@ -31,6 +34,11 @@ const AnimationPreview = React.createClass({
 
   componentWillReceiveProps: function (nextProps) {
     this.precalculateRenderProps(nextProps);
+    if (nextProps.alwaysPlay && !this.timeout_) {
+      this.advanceFrame();
+    } else if (!nextProps.alwaysPlay && this.timeout_) {
+      this.stopAndResetAnimation();
+    }
   },
 
   componentWillUnmount: function () {
@@ -49,10 +57,10 @@ const AnimationPreview = React.createClass({
 
   advanceFrame: function () {
     this.setState({
-      currentFrame: (this.state.currentFrame + 1) % this.props.animation.frameCount
+      currentFrame: (this.state.currentFrame + 1) % this.props.animationProps.frameCount
     });
     clearTimeout(this.timeout_);
-    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animation.frameRate);
+    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animationProps.frameRate);
   },
 
   stopAndResetAnimation: function () {
@@ -64,19 +72,21 @@ const AnimationPreview = React.createClass({
   },
 
   precalculateRenderProps: function (nextProps) {
-    const nextAnimation = nextProps.animation;
+    const nextAnimation = nextProps.animationProps;
     const innerWidth = nextProps.width - 2 * MARGIN_PX;
     const innerHeight = nextProps.height - 2 * MARGIN_PX;
     const xScale = innerWidth / nextAnimation.frameSize.x;
     const yScale = innerHeight / nextAnimation.frameSize.y;
     const scale = Math.min(1, Math.min(xScale, yScale));
     const scaledFrameSize = scaleVector2(nextAnimation.frameSize, scale);
+    const sourceUrl = nextProps.sourceUrl ? nextProps.sourceUrl : EMPTY_IMAGE;
+    const sourceSize = nextAnimation.sourceSize ? nextAnimation.sourceSize : {x: 1, y: 1};
     this.setState({
-      framesPerRow: Math.floor(nextAnimation.sourceSize.x / nextAnimation.frameSize.x),
-      scaledSourceSize: scaleVector2(nextAnimation.sourceSize, scale),
+      framesPerRow: Math.floor(sourceSize.x / nextAnimation.frameSize.x),
+      scaledSourceSize: scaleVector2(sourceSize, scale),
       scaledFrameSize: scaledFrameSize,
       extraTopMargin: Math.ceil((innerHeight - scaledFrameSize.y) / 2),
-      wrappedSourceUrl: `url('${nextAnimation.sourceUrl}')`
+      wrappedSourceUrl: `url('${sourceUrl}')`
     });
   },
 
@@ -113,7 +123,7 @@ const AnimationPreview = React.createClass({
           style={containerStyle}
           onMouseOver={this.onMouseOver}
           onMouseOut={this.onMouseOut}>
-        <img src="/blockly/media/1x1.gif" style={imageStyle} />
+        <img src={EMPTY_IMAGE} style={imageStyle} />
       </div>
     );
   }

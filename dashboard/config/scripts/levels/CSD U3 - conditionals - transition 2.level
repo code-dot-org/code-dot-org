@@ -30,7 +30,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# More Practice With Booleans\r\n\r\nLets do one more practice of using a boolean expression to check the condition of a sprite.\r\n\r\n# Do This\r\nThere is a growing balloon sprite created for you. Can you create an expression to check when the balloon hits the edge of the game area.\r\n\r\n* Add a `console.log` statement \r\n* Add an expression inside the `console.log` that check when the balloon hits the edge of the game area.  \r\n* Hint: Use the scale of the balloon. You might have to do some guess and check testing to find the right scale.\r\n\r\n# Till Animation Tab Works\r\n\r\n* <a href=\"https://images.code.org/a21c776dc47df8ca6a1242dfd54edddd-image-1466107651764.png\"> Balloon</a>",
+    "markdown_instructions": "# More Practice With Booleans\r\n\r\nLets do one more practice of using a boolean expression to check the condition of a sprite.\r\n\r\n# Do This\r\nThere is a growing balloon sprite created for you. Can you create an expression to check when the balloon hits the edge of the game area.\r\n\r\n* Add a `console.log` statement \r\n* Add a boolean expression inside the `console.log` that changes value when the balloon hits the edge of the game area.  \r\n* Hint: Use the scale of the balloon. You might have to do some guess and check testing to find the right scale.",
     "callout_json": "[]",
     "show_d_pad": "false",
     "project_template_level_name": "CSD U3 - balloon template",

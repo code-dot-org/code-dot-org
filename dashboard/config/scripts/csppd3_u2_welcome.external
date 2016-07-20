@@ -3,23 +3,19 @@ title 'Welcome!'
 css 'unplugged'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+# Getting Started > Welcome
 
-### Getting Started > Welcome
-
-#### Welcome to your On-Going Academic Year Support! 
+## Welcome to your On-Going Academic Year Support!
 
 Congratulations on completing your Computer Science Principles professional development experience this summer. We hope your back-to-school transition has been an easy one, and that your CSP course is up and running.
-<br><br>
-Throughout the 2015-16 school year you will have access to in person and online PD, designed to work together and to help you get more comfortable with the CSP curriculum. 
-<br>
-> #### Blended PD model: 
+
+Throughout the 2015-16 school year you will have access to in person and online PD, designed to work together and to help you get more comfortable with the CSP curriculum.
+
+> ## Blended PD model:
 >- Four in-person sessions throughout the school year, which are designed to provide support with teaching practice, content, and community building. For details on when your in-person sessions are scheduled, check out the [PD website](www.code.org/pd).
->- Four self-paced online PD modules, broken down by unit, which are designed to get you into the curriculum and help you plan. 
+>- Four self-paced online PD modules, broken down by unit, which are designed to get you into the curriculum and help you plan.
 
-This is the first of the four online PD modules focused on each of the remaining units of the curriculum (starting here with Unit 2). Click 
-“Continue” below to get started! 
-<br><br>
+This is the first of the four online PD modules focused on each of the remaining units of the curriculum (starting here with Unit 2). Click “Continue” below to get started!
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

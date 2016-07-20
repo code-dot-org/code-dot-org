@@ -245,5 +245,11 @@
   "watchVideo": "觀看影片",
   "when": "當",
   "whenRun": "當按下\"執行\"時",
-  "workspaceHeaderShort": "工作區:"
+  "workspaceHeaderShort": "工作區:",
+  "directionNorthwestLetter": "NW",
+  "directionNortheastLetter": "NE",
+  "directionSouthwestLetter": "SW",
+  "directionSoutheastLetter": "SE",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

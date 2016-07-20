@@ -1,18 +1,13 @@
 name 'CSPPD2 PT forum'
 css 'unplugged'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+# Practice PT > Sharing your work
 
-### Practice PT > Sharing your work
-<br><br>
-
-#### Posting to the forum
+## Posting to the forum
 
 >Now that you've spent an hour working on the practice PT, share your artifact, protocol, and any reflections you have on the project in the forum. 
-<br>
-<a href="http://forum.code.org/t/lesson-17-final-assessment/702" target="blank"><button class="plc">Forum Thread for Lesson 16 >></button></a>  
 
-<br><br>
+><h4><a href="http://forum.code.org/t/lesson-17-final-assessment/702" target="blank">Forum Thread for Lesson 16 <i class="fa fa-external-link-square" /></a>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

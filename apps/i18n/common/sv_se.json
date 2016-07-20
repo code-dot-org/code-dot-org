@@ -245,5 +245,11 @@
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "vid start",
-  "workspaceHeaderShort": "Arbetsyta: "
+  "workspaceHeaderShort": "Arbetsyta: ",
+  "directionNorthwestLetter": "NW",
+  "directionNortheastLetter": "NE",
+  "directionSouthwestLetter": "SW",
+  "directionSoutheastLetter": "SE",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

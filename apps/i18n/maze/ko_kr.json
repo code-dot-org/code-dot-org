@@ -82,5 +82,12 @@
   "whileTooltip": "어떤 조건이 될 때까지(~할 때까지), 반복적으로 실행합니다.",
   "word": "단어 찾기",
   "yes": "예",
-  "youSpelled": "말"
+  "youSpelled": "말",
+  "collectiblePresent": "there is some treasure",
+  "collect": "collect",
+  "collectorCollectTooltip": "Collect an item",
+  "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
+  "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
+  "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!"
 }

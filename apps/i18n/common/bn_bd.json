@@ -245,5 +245,11 @@
   "watchVideo": "ভিডিও দেখুন",
   "when": "যখন",
   "whenRun": "চালানোর সময়",
-  "workspaceHeaderShort": "কর্মপরিসর:"
+  "workspaceHeaderShort": "কর্মপরিসর:",
+  "directionNorthwestLetter": "NW",
+  "directionNortheastLetter": "NE",
+  "directionSouthwestLetter": "SW",
+  "directionSoutheastLetter": "SE",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

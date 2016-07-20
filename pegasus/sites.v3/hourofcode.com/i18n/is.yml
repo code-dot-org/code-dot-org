@@ -8,11 +8,14 @@ is:
   campaign_date_start_long: 7. desember
   campaign_date_short: 7.-13. des.
   campaign_date_full: 7.-13. desember
+  campaign_date_year: "2016"
+  campaign_date_full_year: December 5-11, 2016
   front_header_banner: 'Taktu þátt í stærsta námsviðburði sögunnar 7. - 13. des. 2015'
   front_intro_default: 'Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga miljóna nemenda í 180+ löndum. Hver sem er, hvar sem er getur skipulagt Klukkustund kóðunar viðburð. Klukkustundar kennsluefni er tiltækt á yfir 40 tungumálum. Engin forkunnátta er nauðsynleg. <strong>Fyrir 4 til 104 ára.</strong>'
   front_watch_video: Horfa á nýja myndbandið
   front_watch_regular_video: Horfa á myndbandið
   front_volunteers: Technical volunteers wanted
+  front_start_learning: Start learning
   header_menu_resources: Tilföng
   header_menu_faq: Algengar spurningar
   header_menu_prizes: Verðlaun
@@ -174,7 +177,9 @@ is:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Prizes for every educator
   prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_10k_past: One public school in every US state (and Washington D.C.) won $10,000 worth of technology
   prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
+  prizes_more: More exciting prizes
   whats_next_header: Hvað næst?
   whats_next_description: "Við munum senda þér efni og hjálplegar ábendingar fyrir viðburð þinn. Nýtt 2015 kennsluefni er á næsta leiti til að nota í vafra, í snjallsíma - eða jafnvel án tölvu! <a href='http://code.org/learn'>Prófaðu kennsluefnið sem er til</a>"
   whats_next_how_to: "<a href='/how-to'>Hvernig á að halda Klukkustund kóðunar</a>"
@@ -243,7 +248,7 @@ is:
   signup_name_placeholder: Nafn þitt
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Til dæmis, Salaskóli
-  signup_event_location_placeholder: "Póstnúmer og land EÐA fullt heimilisfang.\r\n(Notað til að setja flagg á kortið okkar.)"
+  signup_event_location_placeholder: "Póstnúmer og land EÐA fullt heimilisfang.\\r\n(Notað til að setja flagg á kortið okkar.)"
   signup_special_event_details_placeholder: Lýstu því hvað gerir þetta að sérstökum viðburði
   signup_send_posters_address_placeholder: Þessu heimilisfangi verður ekki deilt á kortinu okkar
   signup_event_type_in_school: Í skóla
@@ -252,6 +257,7 @@ is:
   signup_submit_error_message: Villa kom upp. Vinsamlegast gættu þess að allir nauðsynlegir reitir hafi verið rétt útfylltir.
   signup_thank_you_header: Takk fyrir að skrá viðburð tengdan Klukkustund kóðunar.
   signup_thank_you_message: Við höfum sent þér tölvupóst til staðfestingar ásamt upplýsingum til að hjálpa þér að byrja.
+  map_title: Hour of Code map
   map_header: '# Klukkustundir kóðunar um allan heim'
   see_all_events: Sjá alla atburði
   map_header_company: '# af skipuleggjendum fyrirtækja'
@@ -304,7 +310,7 @@ is:
   hoc_faq_host_q: Ég veit ekkert um forritun. Get ég samt skipulagt viðburð?
   hoc_faq_host_a: "Að sjálfsögðu. Verkefni í Klukkustund kóðunar eru sjálfstýrð. Allt sem þú þarft að gera er að <a href='%{codeorg_url}/learn'>prófa núverandi kennsluefni okkar</a>, velja efnið sem þú vilt nota og velja stundina &mdash; við munum sjá um afganginn. Við erum líka með valkosti fyrir alla aldurs- og reynsluhópa, frá leikskólastigi og upp úr. Byrjaðu skipulagninguna á að lesa <a href='/how-to'>leiðarvísinn okkar</a>."
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: Þarf ég tölvu fyrir hvern þátttakanda?
   hoc_faq_need_computers_a: "Nei. Við erum með kennsluefni fyrir Klukkustund kóðunar sem virkar á tölvum, snjallsímum og spjaldtölvum og jafnvel án tölvu! Þú getur tekið þátt sama hvar þú ert með því tæki sem þú hefur.<p><i>Hér eru nokkrir valkostir:</i><br><ul><li><b>Vinna með félaga</b>Rannsóknir sýna að nemendur læra best að <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>forrita með félaga</a> þar sem tveir nemendur deila tölvu og vinna saman. Hvettu nemendur þína til að gera það.<li><b>Nota skjávarpa.</b>Með skjávarpa og internet-tengdri tölvu getur heill hópur hjálpast að með Klukkustund kóðunar. Horft á myndskeiðin saman og skipst á að leysa þrautir eða svara spurningum.<li><b>Vinna án tölvu.</b>Við erum með verkefni sem gera ekki ráð fyrir tölvu.</ul>"
   hoc_faq_international_q: 'Ég er í landinu <country>. Hvernig er alþjóðlegri þátttöku háttað?'
@@ -313,8 +319,6 @@ is:
   hoc_faq_tutorial_a: "Ef þú hefur áhuga á að gerast samstarfsaðili í gerð kennsluefnis, þá mælum við með að þú kynnir þér <a href='target-tutorial-guidelines'>leiðarvísa okkar og leiðbeiningar</a>. Við mundum vilja hýsa fjölmörg áhugaverð viðfangsefni, en meginmarkmiðið er að hámarka upplifunina fyrir nemendur og kennara sem hafa ekki fyrri reynslu af tölvunarfræði."
   hoc_faq_account_q: Þurfa nemendur að skrá sig inn með notendaupplýsingum?
   hoc_faq_account_a: "Nei. Það er alls engin krafa að nemendur skrái sig eða skrái sig inn til að prófa Klukkustund kóðunar. En flest <a href='http://code.org/learn/beyond'>námskeiðin sem fara á eftir</a> gera kröfu um innskráningu til að geta varðveitt framvindu nemenda."
-  hoc_faq_frozen_q: Hvar er kennsluefnið með Önnu og Elsu?
-  hoc_faq_frozen_a: "Það hefur nú verið birt á <a href='http://code.org/learn'>Code.org/learn</a>. Við vonum að þú njótir þess!"
   hoc_faq_high_school_q: Hvaða verkefni ætti ég að nota með framhaldsskólanemendum?
   hoc_faq_high_school_a: "Fyrir alla aldurshópa mælum við með að prófa byrjendaefnið á <a href='http://code.org/learn'>Code.org/learn</a> til að byrja með, svo sem kennsluefnið með Angry Birds eða með Önnu og Elsu. Nemandi í framhaldsskóla ætti að geta klárað svona efni á 30 mínútum og getur þá spreytt sig á ítarlegra efni með JavaScript, svo sem hjá Khan Academy eða CodeHS."
   hoc_faq_scratch_q: Ég er að gera Klukkustund kóðunar í Scratch en hvað ef nemendur mínir hafa iPad spjöld fremur en fartölvur?
@@ -330,7 +334,9 @@ is:
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
   stats_hoc_2013_image_alt: Tölur frá Klukkustund kóðunar 2013
   stats_growth: Fljótust að ná til 15 miljón notenda.
   stats_i18n: Nemendur eru að læra á 40 tungumálum
@@ -415,6 +421,9 @@ is:
   events_orgs_title: Allar Klukkustundir kóðunar skipulagðar af samstarfsaðilum
   event: viðburður
   events: viðburðir
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the Hour of Code campaign.
   footer_copyright_message: Höfundarréttur 2015 Code.org. Öll réttindi áskilin.
   footer_trademark_message: Hour of Code™ er vörumerki Code.org.
   footer_menu_partners: Samstarfsaðilar

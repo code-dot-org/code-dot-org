@@ -9,7 +9,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var balloon = createSprite(200, 200);\r\nballoon.setAnimation(\"balloon.png\");\r\nballoon.scale = 0.1;\r\n\r\nfunction draw() {\r\n  balloon.scale = balloon.scale + 0.001;\r\n\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
+    "start_blocks": "var balloon = createSprite(200, 200);\r\nballoon.setAnimation(\"balloon\");\r\nballoon.scale = 0.1;\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update Values\r\n  balloon.scale = balloon.scale + 0.001;\r\n\r\n  // Draw Animations\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -31,7 +31,9 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\"balloon\", \"pop\"],\r\n  \"propsByKey\": {\r\n    \"balloon\": {\r\n      \"name\": \"balloon\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/balloon.png\",\r\n      \"sourceSize\": {\"x\":444, \"y\": 598},\r\n      \"frameSize\": {\"x\":444, \"y\": 598},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    },\r\n    \"pop\": {\r\n      \"name\": \"pop\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/pop.png\",\r\n      \"sourceSize\": {\"x\":600, \"y\": 465},\r\n      \"frameSize\": {\"x\":600, \"y\": 465},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -8,6 +8,8 @@ end
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: { format: 'json' }
 
+  resource :pairing, only: [:show, :update]
+
   resources :user_levels, only: [:update]
 
   get '/download/:product', to: 'hoc_download#index'
@@ -147,6 +149,8 @@ Dashboard::Application.routes.draw do
 
     get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
     post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
+
+    get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
 
   get '/course/:course', to: 'plc/user_course_enrollments#index', as: 'course'
@@ -315,6 +319,9 @@ Dashboard::Application.routes.draw do
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
+    get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
+    post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
+    patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
 
     # This is a developer aid that allows previewing rendered mail views with fixed test data.
     # The route is restricted so it only exists in development mode.
@@ -326,6 +333,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
+  get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
   get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'

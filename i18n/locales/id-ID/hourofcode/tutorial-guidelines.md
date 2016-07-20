@@ -4,8 +4,6 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-<%= view :signup_button %>
-
 # Panduan tata cara untuk Hour of Code dan Pekan Edukasi Ilmu Komputer
 
 Code.org akan menjadi tuan rumah berbagai kegiatan Hour of Code pada situs Code.org, Hour of Code dan CSEdWeek. Daftar saat ini ada pada [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
@@ -263,5 +261,3 @@ Kami minta agar setiap orang mempromosikan tutorial satu jam mereka kepada para 
 Jika Anda membuat sebuah tutorial yang dirancang untuk ganguan-penglihatan, kami akan senang untuk menyorotnya untuk pemirsa dengan pembaca layar. Kami belum menerima sebuah tutorial seperti itu, dan akan bersemangat untuk memasukkan sebagai salah satu pilihan untuk para pelajar.
 
 [**Kembali ke atas**](#top)
-
-<%= view :signup_button %>

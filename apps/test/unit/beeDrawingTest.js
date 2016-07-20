@@ -24,6 +24,7 @@ function createFakeSkin() {
     redFlower: 'redFlower.png',
     purpleFlower: 'purpleFlower.png',
     honey: 'honey.png',
+    cloud: 'cloud.png',
     flowerComb: 'flowercomb.png',
     numbers: 'numbers.png'
   };

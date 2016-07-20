@@ -245,5 +245,11 @@
   "watchVideo": "Videoyu İzle",
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
-  "workspaceHeaderShort": "Çalışma alanı: "
+  "workspaceHeaderShort": "Çalışma alanı: ",
+  "directionNorthwestLetter": "NW",
+  "directionNortheastLetter": "NE",
+  "directionSouthwestLetter": "SW",
+  "directionSoutheastLetter": "SE",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

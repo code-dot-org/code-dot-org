@@ -4,7 +4,6 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-
 <% if @country == 'la' %>
 
 # Latin America Partners
@@ -26,6 +25,22 @@ title: <%= hoc_s(:title_partners) %>
 # Australia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
+
+<% end %>
+
+<% if @country == 'cn' %>
+
+# China Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
+
+<% end %>
+
+<% if @country == 'fr' %>
+
+# France Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
 <% end %>
 
@@ -61,6 +76,14 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
+<% if @country == 'nl' %>
+
+# Netherlands Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
+
+<% end %>
+
 <% if @country == 'nz' %>
 
 # New Zealand Partners
@@ -85,37 +108,36 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# Đối tác chính và những nhà tài trợ
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 ---
 
-# Đối tác quảng cáo chính
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 ---
 
-# Đối tác quốc tế
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Đối tác giám hộ
+# Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Đối tác và thiết bị cơ sở hạ tầng
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Các đối tác khác
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
-

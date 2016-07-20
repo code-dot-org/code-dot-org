@@ -53,6 +53,10 @@ When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   wait_with_timeout.until { @browser.find_element(selection_criteria) }
 end
 
+When /^I go to the newly opened tab$/ do
+  @browser.switch_to.window(@browser.window_handles.last)
+end
+
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps <<-STEPS
@@ -231,7 +235,7 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   name_selector = ".blocklyTreeLabel:contains(#{name})"
   # seems we usually have two of these item, and want the second if the function
   # editor is open, the first if it isn't
-  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " +
+  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
     "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
   @browser.execute_script(script)
 end
@@ -291,16 +295,16 @@ end
 
 When /^I press delete$/ do
   script = "Blockly.mainBlockSpaceEditor.onKeyDown_("
-  script +="{"
-  script +="  target: {},"
-  script +="  preventDefault: function() {},"
-  script +="  keyCode: $.simulate.keyCode['DELETE']"
-  script +="})"
+  script += "{"
+  script += "  target: {},"
+  script += "  preventDefault: function() {},"
+  script += "  keyCode: $.simulate.keyCode['DELETE']"
+  script += "})"
   @browser.execute_script(script)
 end
 
 When /^I hold key "([^"]*)"$/ do |key_code|
-  script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{key_code}']})"
+  script = "$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{key_code}']})"
   @browser.execute_script(script)
 end
 
@@ -450,7 +454,7 @@ Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  @browser.execute_script("return $(#{selector.dump}).length").should eq 0
+  expect(@browser.execute_script("return $(#{selector.dump}).length")).to eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
@@ -711,7 +715,7 @@ When(/^I debug cookies$/) do
 end
 
 When(/^I debug focus$/) do
-  puts "Focused element id: #{@browser.execute_script("return document.activeElement.id")}"
+  puts "Focused element id: #{@browser.execute_script('return document.activeElement.id')}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|

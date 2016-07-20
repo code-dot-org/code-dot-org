@@ -1,31 +1,25 @@
 name 'CSPPD3-u2 chunk 1 concepts'
 css 'unplugged'
 markdown <<MARKDOWN
+# Unit 2 Overview > Layers of the Internet: Concepts
 
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+<img src="https://images.code.org/e90e199a8dc46dbb43b6b71b8ae8216e-image-1443800554866.41.52 AM.png" width="550" style="float: right; margin-left: 30px; margin-bottom: 10px;">
 
-### Unit 2 Overview > Layers of the Internet: Concepts
-
-<br/>
-<img src="https://images.code.org/e90e199a8dc46dbb43b6b71b8ae8216e-image-1443800554866.41.52 AM.png" width="550" style="float:left; margin-right:30px">
-<br>
-
-<br>
 We spend the first 12 lessons of the unit layering the complexity of our model of the Internet, ending with one that connects users with routers, using numeric addresses that map the easy-to-remember names. This mirrors the actual Internet, and students wrap up the first half of the unit with a practice performance task where they apply their knowledge of how the Internet works in grappling with some of big issues of our day, like Net Neutrality and Internet censorship. 
-<br><br>
 
-#### Addressing on the Internet
+## Addressing on the Internet
+
 Unit 2 starts with a very basic model of communication over the Internet— users are all connected, and all messages go to all users. This is modeled with “broadcast” mode on the in Internet Simulator. Students need to develop a protocol for addressing their messages in order to communicate through broadcast messages. 
-<br><br>
+
 >**CS Concepts:** Messages need to be addressed in order for people to receive them. How is this done?
 
 >- Students will invent their own addressing system 
 - IPv4 and IPv6 (addressing protocols used in real life)
 - What are the security implications when we broadcast everything? 
 
-#### Redundancy and Packets
+## Redundancy and Packets
 After students have developed an addressing protocol, the Internet Simulator is updated so messages are sent to individual addresses, rather than being broadcast to everyone. Students will consider how we can build a reliable Internet, where messages always make it to their final destination
-<br><br>
+
 >**CS Concepts:** Now that we can send messages directly to people, how do we build a system to make sure they get the messages we’re trying to send? 
 
 >- Packets (breaking a message down into smaller chunks that can be sent separately) 
@@ -33,9 +27,9 @@ After students have developed an addressing protocol, the Internet Simulator is 
 - Dealing with the unreliable nature of the Internet
 - Building a reliable communication protocol (modeled after the Transmission Control Protocol)
 
-#### Algorithms on the Internet
+## Algorithms on the Internet
 Here students apply their thinking about how structures that enable communication, and start thinking about the physical paths that the bits travel over the Internet. These three unplugged lessons break down three different ways of thinking about efficiency on the Internet.
-<br><br>
+
 >**CS Concepts:** We know that bits are getting from one place to another, and that there are redundant paths between computers, so how do we decide which path to choose? 
 
 >- Graphs (visual model of a network of nodes and the potential paths between them)
@@ -45,17 +39,16 @@ Here students apply their thinking about how structures that enable communicatio
 - Shortest Path Problem (what is the cheapest way for me-- a node-- to get to every other node in my graph?) 
 - How Routers Learn (how does a router know where to send traffic?) 
 
-#### Abstraction on the Internet
+## Abstraction on the Internet
 At this point we’ve built up an understanding of how messages are encoded in bits, how they’re broken down into packets, and then how those packets are routed across the Internet. Here students consider the challenges of managing the long list of numeric addresses assigned to all connected devices. This motivates the need for a system that enables mapping to more memorable names. Students also consider the protocol computers actually use to “talk” to one another over the Internet. 
-<br><br>
+
 >**CS Concepts:** We know how to route traffic all over the internet, what’s next? 
 
 >- Domain Name System (DNS)
 - HyperText Transfer Protocol (HTTP) 
 
-#### Practice PT
+## Practice PT
 Students apply what they’ve learned about how the Internet functions to form an opinion on some of big questions related to the internet. (more on this later)
 
-<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

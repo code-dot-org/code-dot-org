@@ -1,10 +1,9 @@
 name 'equity Intro'
 title 'Introduction to Equity PD'
-css 'k5pd'
 skip_dialog true
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
 
 ### Necessary Background >> Introduction
 <br/><br/>

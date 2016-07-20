@@ -245,5 +245,11 @@
   "watchVideo": "ดูวีดีโอ",
   "when": "เมื่อ",
   "whenRun": "เมื่อเรียกให้ทำงาน",
-  "workspaceHeaderShort": "พื้นที่ทำงาน: "
+  "workspaceHeaderShort": "พื้นที่ทำงาน: ",
+  "directionNorthwestLetter": "NW",
+  "directionNortheastLetter": "NE",
+  "directionSouthwestLetter": "SW",
+  "directionSoutheastLetter": "SE",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

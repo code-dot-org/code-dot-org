@@ -245,5 +245,11 @@
   "watchVideo": "უყურეთ ვიდეოს",
   "when": "როდის",
   "whenRun": "გაშვებისას",
-  "workspaceHeaderShort": "სამუშაო სივრცე: "
+  "workspaceHeaderShort": "სამუშაო სივრცე: ",
+  "directionNorthwestLetter": "NW",
+  "directionNortheastLetter": "NE",
+  "directionSouthwestLetter": "SW",
+  "directionSoutheastLetter": "SE",
+  "less": "Less",
+  "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team."
 }

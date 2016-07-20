@@ -102,7 +102,8 @@ var TextAreaProperties = React.createClass({
 var TextAreaEvents = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired,
   },
 
   getChangeEventCode: function () {

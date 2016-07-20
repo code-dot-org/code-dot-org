@@ -1,34 +1,23 @@
 name 'Lesson Prep Final'
-css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
-### LESSON PREP > Wrapping it up
+# Lesson Prep > Wrapping it up
 
 With the programming complete, how will you wrap up this mini lesson, tying it back to your course curriculum, CS, or both? Are there extension challenges to encourage students to delve deeper? Are there further word problems from your curriculum that you could use as a Jigsaw activity?
 
-#### Sharing finished projects
+## Sharing finished projects
 
 When students have completed their projects, you'll want them to share out what they've created. Using the _Share_ button, students can share out a URL to their projects, send a text message, or post to Facebook and Twitter.
 
-<br>
-
-![share](https://staging-studio.code.org/script_assets/pd/share.gif)
-
-<br>
+![share](//studio.code.org/script_assets/pd/share.gif)
 
 Consider having your students post links in a place where they can all see and host a virtual gallery walk of your programs.
 
-#### Bringing it back to PD
+## Bringing it back to PD
 
 At your next in person PD you'll have the opportunity to teach this mini lesson to your peers, so make sure you come prepared! Think again about how you want to lead the group through the Design Recipe, where the potential struggles will be, and how you can put your fingerprint on the lesson. We can't wait to see what you've come up with!
 
 <a href="http://forum.code.org/t/share-your-sandbox-project/1730" target="blank"><button class="plc">Share Your Project >></button></a><br>
 
-<br/>
-<br><br>
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

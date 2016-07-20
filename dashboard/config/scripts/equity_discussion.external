@@ -2,7 +2,7 @@ name 'equity discussion'
 title 'Leading an Equity Discussion'
 description 'description here'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/equityOnline.css">
 
 ### Leading a Discussion on Equity in PD >> Discussion
 

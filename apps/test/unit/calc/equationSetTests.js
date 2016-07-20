@@ -390,6 +390,16 @@ describe('EquationSet', function () {
       assert(evaluation.err instanceof ExpressionNode.DivideByZeroError);
     });
 
+    it("can't evaluate if function has imaginary sqrt result", function () {
+      var set = new EquationSet();
+      set.addEquation_(new Equation('f', ['x'], new ExpressionNode('sqrt', ['x'])));
+      set.addEquation_(new Equation(null, [], new ExpressionNode('f', [-1])));
+
+      var evaluation = set.evaluate();
+      assert.equal(evaluation.result, undefined);
+      assert(evaluation.err instanceof ExpressionNode.ImaginaryNumberError);
+    });
+
     it('fails to evaluate infinite recursion', function () {
       var set = new EquationSet();
       set.addEquation_(new Equation('f', ['x'], new ExpressionNode('f', [0])));
