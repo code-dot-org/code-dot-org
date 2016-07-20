@@ -103,7 +103,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: content_type,
       from: from_hadi,
       subject: 'How was your Code.org workshop?',
-      to: email_address(@teacher.name, @teacher.email)
+      to: email_address(@enrollment.name || @teacher.name, @teacher.email)
   end
 
   private
