@@ -25,14 +25,14 @@ module.exports = {
     }
   },
   "rules": {
-    "react/display-name": "off",
-    "react/no-render-return-value": "off", // TODO: turn this on
     "array-bracket-spacing": ["error", "never"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-dangle": "off",
     "curly": "error",
     "dot-location": ["error", "property"],
     "eol-last": "error",
+    "eqeqeq": "error",
+    "jsx-quotes": "off",
     "keyword-spacing": "error",
     "no-array-constructor": "error",
     "no-console": "off",
@@ -46,11 +46,19 @@ module.exports = {
     "no-unused-vars": "off",
     "no-with": "error",
     "object-curly-spacing": "off",
+    "react/display-name": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-curly-spacing": "off",
+    "react/jsx-first-prop-new-line": ["off", "multiline"],
+    "react/jsx-indent-props": ["off", 2],
+    "react/jsx-max-props-per-line": ["off", { "maximum": 1 }],
+    "react/no-render-return-value": "off", // TODO: turn this on
+    "react/self-closing-comp": "off",
+    "react/wrap-multilines": "off",
     "semi": "error",
     "space-before-function-paren": ["error", {
       "anonymous": "always",
       "named": "never"
-    }],
-    "eqeqeq": "error"
+    }]
   }
 };
