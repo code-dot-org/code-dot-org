@@ -20,6 +20,12 @@ export const activityCssClass = result => {
   if (!result) {
     return 'not_tried';
   }
+  if (result === REVIEW_ACCEPTED_RESULT) {
+    return 'perfect';
+  }
+  if (result === REVIEW_REJECTED_RESULT) {
+    return 'review_rejected';
+  }
   if (result === SUBMITTED_RESULT) {
     return 'submitted';
   }

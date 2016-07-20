@@ -33,16 +33,6 @@ class Pd::Enrollment < ActiveRecord::Base
   validates :name, :email, presence: true
   validates_confirmation_of :email
 
-  # The enrollment is from one of 2 sources:
-  #   1. Web form filled out by user - all school fields required.
-  #   2. Automatic association for a user who attends the workshop unenrolled.
-  validate :user_or_school_info_required
-  def user_or_school_info_required
-    return if self.user_id
-    errors.add(:school, 'is required') unless self.school
-    errors.add(:school_type, 'is required') unless self.school_type
-  end
-
   before_create :assign_code
   def assign_code
     self.code = unused_random_code

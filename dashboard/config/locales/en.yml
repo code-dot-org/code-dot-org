@@ -436,8 +436,6 @@ en:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      ie_message: "Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
-      ie_message_csedweek: "CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
       link: "Learn more"
   slow_loading: 'This is taking longer than usual...'
   try_reloading: 'Try reloading the page'
@@ -621,6 +619,7 @@ en:
     share_title: Share your project
     share_copy_link: "Copy the link:"
     share_embed_description: "You can paste the embed code into an HTML page to display the project on a webpage."
+    share_u13_warning: "Ask your teacher before sharing. Only share with others in your school."
     embed: "Embed"
     advanced_share: "Show advanced options"
     close: "Close"
@@ -644,6 +643,7 @@ en:
     edit_project: 'Edit Project'
     abuse:
       tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      policy_violation: "This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app."
       contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
       go_to_code_studio: 'Go to Code Studio'
       report_abuse_form:

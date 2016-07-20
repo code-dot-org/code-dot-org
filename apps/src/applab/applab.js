@@ -51,7 +51,6 @@ var executionLog = require('../executionLog');
 var annotationList = require('../acemode/annotationList');
 var Exporter = require('./Exporter');
 
-var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
 var reducers = require('./reducers');
 var actions = require('./actions');
@@ -577,6 +576,8 @@ Applab.init = function (config) {
   Applab.channelId = config.channel;
   Applab.firebaseName = config.firebaseName;
   Applab.firebaseAuthToken = config.firebaseAuthToken;
+  // Persist the useFirebaseForNewProject experiment from the url path to local storage
+  experiments.isEnabled('useFirebaseForNewProject');
   var useFirebase = window.dashboard.project.useFirebase() || false;
   Applab.storage = useFirebase ? FirebaseStorage : AppStorage;
   // inlcude channel id in any new relic actions we generate
@@ -776,14 +777,11 @@ Applab.init = function (config) {
     }
   }.bind(this);
 
-  // Force phoneFrame on when viewing or editing firebase projects.
-  var playspacePhoneFrame = !config.share && (experiments.isEnabled('phoneFrame') ||
-    useFirebase);
-
   // Push initial level properties into the Redux store
   studioApp.setPageConstants(config, {
-    playspacePhoneFrame,
+    playspacePhoneFrame: !config.share,
     channelId: config.channel,
+    nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
     hasDataMode: useFirebase,
     hasDesignMode: !config.level.hideDesignMode,

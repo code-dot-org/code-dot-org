@@ -12,7 +12,7 @@ module Pd
         return
       end
 
-      view_options full_width: true
+      view_options(full_width: true)
     end
   end
 end

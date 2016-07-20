@@ -4,7 +4,7 @@ import Button from './Button';
 import BaseDialog from './BaseDialog';
 import color from '../color';
 import {childrenOfType, whenNoChildOfTypes} from '../propTypes';
-import locale from '../locale';
+import locale from '@cdo/locale';
 
 const styles = {
   icon: {

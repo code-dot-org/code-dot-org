@@ -13,7 +13,7 @@ import TopInstructionsCSP from './TopInstructionsCSP';
 const TopInstructions = React.createClass({
   propTypes: {
     noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
-    hasContainedLevels: React.PropTypes.bool.isRequired,
+    hasContainedLevels: React.PropTypes.bool,
     shortInstructions: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
   },

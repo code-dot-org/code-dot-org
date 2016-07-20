@@ -109,6 +109,7 @@ level 'Test Applab Predictive'
 stage 'Gamelab'
 level 'Gamelab AllTheThings With No Animation Tab'
 level 'Gamelab AllTheThings With Prepopulated Animation'
+level 'Gamelab AllTheThings Embed Level'
 
 stage 'Online PD'
 level 'PDK5 Intro C'
@@ -177,3 +178,9 @@ variants
 level '4-5 Maze 6', active: false
 level '4-5 Maze 3'
 endvariants
+
+stage 'Anonymous student survey'
+assessment 'Test anonymous student survey'
+
+stage 'Anonymous student survey 2'
+assessment 'Test anonymous student survey 2'
