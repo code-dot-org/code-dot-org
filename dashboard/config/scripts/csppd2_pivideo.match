@@ -12,12 +12,11 @@ question 'Wireless'
 answer 'uses radio waves, cannot travel very far'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Lesson Chunk 1: Sending Binary Messages >  Wires, Cables, and Wifi Video
 
-### Lesson Chunk 1: Sending Binary Messages >  Wires, Cables, and Wifi Video
+## Understanding the Content
 
-#### Understanding the Content
 This video is shown in Lesson 5 as a way to make sense of the work students have done with sending bits. If you haven't already, watch the video now and answer the question below.
-<br><br>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CfczKEzp4kY?rel=0" frameborder="0" allowfullscreen></iframe>
 MARKDOWN

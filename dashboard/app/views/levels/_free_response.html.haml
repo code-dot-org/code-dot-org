@@ -70,7 +70,7 @@
       ReactDOM.render(React.createElement(dashboard.Attachments, {readonly: #{!!@view_options.readonly_workspace}}), document.querySelector('#free-response-upload'));
 
   - height = level.height || '80'
-  %textarea.response{id: "level_#{level.id}", placeholder: level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
+  %textarea.response{id: "level_#{level.id}", placeholder: level.placeholder || 'Enter your answer here', style: "height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
   = render partial: 'levels/dialog', locals: {app: 'free_response', data: level.properties} unless in_level_group

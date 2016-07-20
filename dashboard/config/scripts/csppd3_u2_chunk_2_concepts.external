@@ -2,27 +2,25 @@ name 'CSPPD3-u2 chunk 2 concepts'
 css 'unplugged'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Unit 2 Overview > Security and Encryption: Concepts
 
-### Unit 2 Overview > Security and Encryption: Concepts
-<br>
-<img src="https://images.code.org/758fc928603d79ad0d68e8f7c671414b-image-1443813366551.26.37 PM.png" width="550" style="float:left; margin-right:30px">
+<img src="https://images.code.org/758fc928603d79ad0d68e8f7c671414b-image-1443813366551.26.37 PM.png" width="550" style="float: right; margin-left: 30px; margin-bottom: 10px;">
 
 The second half of Unit 2 is focused on building a method to securely send information over the Internet. Students enter this section of the unit with an understanding of the protocols used to send data, and they’ve seen many of the ways data is vulnerable to being accessed in unintended ways. In this chunk students start making their data secure, and the unit ends with a second practice performance task, this time focused on cybersecurity. 
-<br><br>
 
-#### Simple Encryption and Decryption 
+## Simple Encryption and Decryption
+
 Here students use basic ciphers to encrypt data and learn the difference between cracking and decoding something that’s been encrypted. Students will use widgets in Code Studio to encrypt and decrypt data themselves, and even crack Caesar and Random Substitution ciphers.
-<br><br>
+
 >**CS Concepts:** how can we use simple ciphers to secure data? 
 
 >- Caesar Cipher 
 - Random Substitution Cipher
 - Vigenere Cipher
 
-#### Using Hard Problems to Secure Your Information
- This section of lessons starts with a series of unplugged activities that explore a class of computer science problems that are hard for computers (and humans) to solve. The are called ‘computationally hard’ problems, and they are the basis of the encryption method we use and study here. 
-<br><br>
+## Using Hard Problems to Secure Your Information
+This section of lessons starts with a series of unplugged activities that explore a class of computer science problems that are hard for computers (and humans) to solve. The are called ‘computationally hard’ problems, and they are the basis of the encryption method we use and study here.
+
 >**CS Concepts:**  How can we use math and hard problems to secure data?
 
 >- The Traveling Salesperson Problem 
@@ -30,12 +28,8 @@ Here students use basic ciphers to encrypt data and learn the difference between
 - Asymmetric Keys 
 - Public Key Cryptography
 
-#### Practice PT
+## Practice PT
 Students extend what they’ve learned and explore an aspect of cyber security in the completion of a practice Explore Performance Task. 
 
-<br><br>
-
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN
