@@ -1,9 +1,14 @@
 - url ||= nil
 - cta ||= nil
+- photo_cred ||= nil
 
 .jumbo-container
   .img-container
     %img.jumbo-img{src: img}
+
+  - unless photo_cred.nil?
+    .photo-cred
+      %i.responsive-body= photo_cred
 
   .jumbo-tutorial
     %h1.jumbo-h1= title
