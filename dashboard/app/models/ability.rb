@@ -22,6 +22,7 @@ class Ability
       UserPermission,
       Follower,
       PeerReview,
+      Section,
       # Ops models
       District,
       Workshop,
@@ -62,7 +63,7 @@ class Ability
       end
 
       if user.teacher?
-        can :manage, Section, user_id: user.id
+        can :read, Section, user_id: user.id
         can :manage, :teacher
         can :manage, user.students
         can :manage, Follower
@@ -194,7 +195,8 @@ class Ability
         Script,
         ScriptLevel,
         UserLevel,
-        UserScript
+        UserScript,
+        Section
       ]
     end
   end

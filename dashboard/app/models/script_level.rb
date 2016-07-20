@@ -144,6 +144,10 @@ class ScriptLevel < ActiveRecord::Base
     false
   end
 
+  def anonymous?
+    return assessment && level.properties["anonymous"] == "true"
+  end
+
   def name
     I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end
@@ -247,4 +251,16 @@ class ScriptLevel < ActiveRecord::Base
   def to_param
     position.to_s
   end
+
+  # Given the signed-in user and an optional user that is being viewed
+  # (e.g. a student viewed by a teacher), tell us whether we are allowed
+  # to view their prior answer.
+  def can_view_last_attempt(user, viewed_user)
+    # If it's an anonymous survey, then teachers can't view student answers
+    return false if user && viewed_user && user != viewed_user && anonymous?
+
+    # Everything else is okay.
+    return true
+  end
+
 end

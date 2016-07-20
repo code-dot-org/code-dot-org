@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 
-import msg from '../locale';
+import msg from '@cdo/locale';
 import color from '../color';
 
 const ARROW_WIDTH = 58;
