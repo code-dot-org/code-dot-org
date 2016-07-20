@@ -1,5 +1,5 @@
 var testUtils = require('../../../util/testUtils');
-testUtils.setupLocale('calc');
+testUtils.setupLocalesDEPRECATED();
 
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');

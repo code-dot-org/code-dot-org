@@ -4,7 +4,7 @@ var gridUtils = require('@cdo/apps/applab/gridUtils');
 
 
 // var testUtils = require('./util/testUtils');
-// testUtils.setupLocales('applab');
+// testUtils.setupLocalesDEPRECATED('applab');
 
 describe('snapToGridSize', function () {
   it('rounds to the nearest GRID_SIZE', function () {

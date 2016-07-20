@@ -1,6 +1,6 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('../util/testUtils');
-testUtils.setupLocales();
+testUtils.setupLocalesDEPRECATED();
 testUtils.setExternalGlobals();
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
@@ -597,7 +597,7 @@ describe("getMissingBlocks_ tests", function () {
       var app = testCollection.app;
 
       testCollection.tests.forEach(function (testData, index) {
-        testUtils.setupLocale(app);
+        testUtils.setupLocalesDEPRECATED();
         var dataItem = require('./util/data')(app);
 
         if (testData.missingBlocks) {

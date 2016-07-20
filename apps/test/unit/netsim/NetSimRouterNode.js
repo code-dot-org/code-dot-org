@@ -23,7 +23,7 @@ var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 var DnsMode = NetSimConstants.DnsMode;
 var fakeShard = NetSimTestUtils.fakeShard;
 
-testUtils.setupLocale('netsim');
+testUtils.setupLocalesDEPRECATED();
 
 describe("NetSimRouterNode", function () {
   var testShard, addressFormat, packetCountBitWidth, packetHeaderSpec, encoder;

@@ -19,7 +19,7 @@ var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
 
 var testUtils = require('../util/testUtils');
-testUtils.setupLocales();
+testUtils.setupLocalesDEPRECATED();
 testUtils.setExternalGlobals();
 import {setupBlocklyFrame, getStudioAppSingleton} from './util/testBlockly';
 
@@ -186,7 +186,7 @@ function runTestCollection(item) {
 
   describe(path, function () {
     testCollection.tests.forEach(function (testData, index) {
-      testUtils.setupLocale(app);
+      testUtils.setupLocalesDEPRECATED();
       var dataItem = require('./util/data')(app);
 
       // todo - maybe change the name of expected to make it clear what type of

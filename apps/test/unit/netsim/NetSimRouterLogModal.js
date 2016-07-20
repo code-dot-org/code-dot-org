@@ -3,7 +3,7 @@
 import $ from 'jquery';
 import {assert, expect} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
-testUtils.setupLocale('netsim');
+testUtils.setupLocalesDEPRECATED();
 var NetSimLocalClientNode = require("@cdo/apps/netsim/NetSimLocalClientNode");
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimRouterLogModal = require('@cdo/apps/netsim/NetSimRouterLogModal');

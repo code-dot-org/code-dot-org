@@ -44,11 +44,15 @@ export function setExternalGlobals() {
   };
 }
 
-export function setupLocale(app) {
-  setupLocales();
-}
-
-export function setupLocales() {
+/**
+ * @deprecated Whever your locale is imported, use
+ *   ```
+ *   import msg from "@cdo/locale";
+ *   ```
+ * instead. When unit tests are run, this will automatically be aliased
+ * to a special test module which loads the en-us locale.
+ */
+export function setupLocalesDEPRECATED() {
   // make sure Blockly is loaded
   require('./frame')();
   var context = require.context('../../build/package/js/en_us/', false, /.*_locale.*\.js$/);

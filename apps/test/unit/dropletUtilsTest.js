@@ -3,7 +3,7 @@ import {assert} from '../util/configuredChai';
 var sinon = require('sinon');
 
 var testUtils = require('./../util/testUtils');
-testUtils.setupLocales('applab');
+testUtils.setupLocalesDEPRECATED('applab');
 testUtils.setExternalGlobals();
 
 var dropletUtils = require('@cdo/apps/dropletUtils');

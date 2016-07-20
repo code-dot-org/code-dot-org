@@ -1,6 +1,6 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
-testUtils.setupLocales();
+testUtils.setupLocalesDEPRECATED();
 
 var errorMapper = require('@cdo/apps/acemode/errorMapper');
 

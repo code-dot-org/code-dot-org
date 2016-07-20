@@ -12,7 +12,7 @@ var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire'
 
 var fakeShard = NetSimTestUtils.fakeShard;
 
-testUtils.setupLocale('netsim');
+testUtils.setupLocalesDEPRECATED();
 
 describe("NetSimVizSimulationWire", function () {
   var vizWire, vizLocalNode, vizRemoteNode,
