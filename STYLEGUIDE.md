@@ -309,7 +309,7 @@ var styles = {
 };
 ```
 * <a name="js-react-long-components"></a>
-Components with many attributes should have one per line, with 4 spaces of indentation. Child components should have 2 spaces of indentation.
+Components with many attributes should have one per line, with 2 spaces of indentation. Child components should have 2 spaces of indentation.
 ```jsx
 // Bad
 var component = (
