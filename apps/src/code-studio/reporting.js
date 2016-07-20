@@ -48,7 +48,8 @@ reporting.sendReport = function (report) {
       queryItems.push(key + '=' + report[key]);
     }
   }
-  var queryString = queryItems.join('&');
+
+  var queryString = encodeURI(queryItems.join('&'));
 
   clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
 
