@@ -19,6 +19,8 @@ post '/forms/:kind' do |kind|
     JSON.load(form[:data]).merge(secret: form[:secret]).to_json
   rescue FormError => e
     halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
+  rescue Sequel::UniqueConstraintViolation
+    halt 409
   end
 end
 
