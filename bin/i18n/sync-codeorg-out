@@ -3,7 +3,7 @@
 # Distribute downloaded translations from i18n/locales
 # back to blockly-core, apps, pegasus, and dashboard.
 
-require File.expand_path('../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/languages'
 require 'fileutils'
 
@@ -60,7 +60,6 @@ end
 
 def rebuild_blockly_js_files
   exec "blockly-core/i18n/codeorg-messages.sh"
-  FileUtils.cp_r 'blockly-core/msg/js/.', 'apps/lib/blockly/'
 end
 
 push_out_translated_files

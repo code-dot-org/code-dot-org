@@ -1,9 +1,10 @@
 require('babel-polyfill');
 var $ = require('jquery');
 var React = require('react');
+import sinon from 'sinon';
 import {assert} from './configuredChai';
 
-exports.setExternalGlobals = function () {
+export function setExternalGlobals() {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
   window.React = React;
@@ -41,23 +42,19 @@ exports.setExternalGlobals = function () {
   window.marked = function (str) {
     return str;
   };
-};
+}
 
-function setupLocale(app) {
+export function setupLocale(app) {
   setupLocales();
 }
 
-exports.setupLocale = setupLocale;
-
-function setupLocales() {
+export function setupLocales() {
   // make sure Blockly is loaded
   require('./frame')();
   var context = require.context('../../build/package/js/en_us/', false, /.*_locale.*\.js$/);
   context.keys().forEach(context);
   assert(window.blockly.applab_locale);
 }
-
-exports.setupLocales = setupLocales;
 
 /**
  * Generates an artist answer (which is just an ordered list of artist commands)
@@ -68,14 +65,14 @@ exports.setupLocales = setupLocales;
  *   api.turnRight(90);
  * }
  */
-exports.generateArtistAnswer = function (generatedCode) {
+export function generateArtistAnswer(generatedCode) {
   var ArtistAPI = require('@cdo/apps/turtle/api');
   var api = new ArtistAPI();
 
   api.log = [];
   generatedCode(api);
   return api.log;
-};
+}
 
 /**
  * Checks that an object has a property with the given name, independent
@@ -85,19 +82,18 @@ exports.generateArtistAnswer = function (generatedCode) {
  * @param {string} propertyName - Name of the property the object should
  *        contain at own depth.
  */
-exports.assertOwnProperty = function (obj, propertyName) {
+export function assertOwnProperty(obj, propertyName) {
   assert(obj.hasOwnProperty(propertyName), "Expected " +
       obj.constructor.name + " to have a property '" +
       propertyName + "' but no such property was found.");
-};
-
+}
 
 /**
  * @returns {boolean} True if mochify was launched with debug flag
  */
-exports.debugMode = function () {
+export function debugMode() {
   return location.search.substring(1).split('&').indexOf('debug') !== -1;
-};
+}
 
 /**
  * jQuery.simulate was having issues in phantom, so I decided to roll my own
@@ -106,7 +102,7 @@ exports.debugMode = function () {
  * @param {number} left Horizontal offset from top left of visualization to drop at
  * @param {number} top Vertical offset from top left of visualization to drop at
  */
-exports.dragToVisualization = function (type, left, top) {
+export function dragToVisualization(type, left, top) {
   // drag a new element in
   var element = $("[data-element-type='" + type + "']");
 
@@ -138,7 +134,7 @@ exports.dragToVisualization = function (type, left, top) {
     pageY: $("#visualization").offset().top + top
   });
   $(document).trigger(mouseup);
-};
+}
 
 /**
  * From: http://marcgrabanski.com/simulating-mouse-click-events-in-javascript
@@ -147,7 +143,7 @@ exports.dragToVisualization = function (type, left, top) {
  * @param {number} clientX
  * @param {number} clientY
  */
-exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
+export function createMouseEvent(type, clientX, clientY) {
   var evt;
   var e = {
     bubbles: true,
@@ -180,14 +176,14 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
     evt.button = { 0:1, 1:4, 2:2 }[evt.button] || evt.button;
   }
   return evt;
-};
+}
 
 /**
  * Creates a key event of the given type with the additional parameters
  * @param {string} type (keydown, keyup, keypress)
  * @param {obj} keyConfig
  */
-exports.createKeyEvent = function keyEvent(type, keyConfig) {
+export function createKeyEvent(type, keyConfig) {
   // Need to use generic "Event" instead of "KeyboardEvent" because of
   // http://stackoverflow.com/questions/961532/firing-a-keyboard-event-in-javascript#comment-44022523
   var keyboardEvent = new Event(type);
@@ -199,22 +195,80 @@ exports.createKeyEvent = function keyEvent(type, keyConfig) {
   keyboardEvent.shiftKey = keyConfig.shiftKey;
 
   return keyboardEvent;
-};
+}
 
 /**
  * Append text to the ace editor
  */
-exports.typeAceText = function (text) {
+export function typeAceText(text) {
   var aceEditor = window.__TestInterface.getDroplet().aceEditor;
   aceEditor.textInput.focus();
   aceEditor.onTextInput(text);
-};
+}
 
 /**
  * Set the Ace editor text to the given text
  */
-exports.setAceText = function (text) {
+export function setAceText(text) {
   var aceEditor = window.__TestInterface.getDroplet().aceEditor;
   aceEditor.textInput.focus();
   aceEditor.setValue(text);
-};
+}
+
+/**
+ * Given a function with n required boolean arguments, invokes the
+ * function 2^n times, once with every possible permutation of arguments.
+ * If the given function has no arguments it will be invoked once.
+ * @param {function} fn
+ * @example
+ *   forEveryBooleanPermutation((a, b) => {
+ *     console.log(a, b);
+ *   });
+ *   // Runs four times, logging:
+ *   // false, false
+ *   // false, true
+ *   // true, false
+ *   // true, true
+ */
+export function forEveryBooleanPermutation(fn) {
+  const argCount = fn.length;
+  const numPermutations = Math.pow(2, argCount);
+  for (let i = 0; i < numPermutations; i++) {
+    fn.apply(null, getBooleanPermutation(i, argCount));
+  }
+}
+
+function getBooleanPermutation(n, numberOfBooleans) {
+  return zeroPadLeft(n.toString(2), numberOfBooleans) // Padded binary string
+      .split('') // to array of '0' and '1'
+      .map(x => x === '1'); // to array of booleans
+}
+
+function zeroPadLeft(string, desiredWidth) {
+  return ('0'.repeat(desiredWidth) + string).slice(-desiredWidth);
+}
+
+/**
+ * Call in any mocha scope to make console.error() throw instead
+ * of log.  Useful for making tests fail on a React propTypes validation
+ * failures.
+ *
+ * @example
+ *   describe('my feature', function () {
+ *     throwOnConsoleErrors();
+ *     it('throws on console.error()', function () {
+ *       console.error('foo'); // Test will fail here
+ *     });
+ *   });
+ */
+export function throwOnConsoleErrors() {
+  before(function () {
+    sinon.stub(console, 'error', msg => {
+      throw new Error(msg);
+    });
+  });
+
+  after(function () {
+    console.error.restore();
+  });
+}

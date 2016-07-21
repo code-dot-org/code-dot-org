@@ -1,0 +1,19 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%div
+  %h1
+    Join the workshop section.
+
+= render partial: 'workshop_details'
+
+%h2
+  Please complete and confirm the information below.
+%p
+  Fields marked with a
+  %span.form-required-field
+    *
+  are required. Your email address will be shared
+  with the workshop organizer and facilitators.
+
+= render partial: 'enroll_form', locals: {action: 'confirm_join', submit_text: 'Confirm'}

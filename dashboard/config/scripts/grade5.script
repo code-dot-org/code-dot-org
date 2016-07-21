@@ -4,8 +4,7 @@ description "Planning Script for CSF 2.0"
 description_audience "Ages 10-110"
 
 stage 'Mixed Review (Ramp Up)'
-level 'comingSoon'
-
+#Ramp up module will be addressed after the conclusion of the summer writing cohort.
 
 stage 'Unplugged: Envelope Variables'
 level 'EnvelopeVariables'

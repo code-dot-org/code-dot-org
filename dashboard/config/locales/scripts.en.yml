@@ -879,6 +879,8 @@ en:
           Sample PLC Assessment: Sample PLC Assessment
           Swapped Levels: Swapped Levels
           Gamelab: Gamelab
+          Anonymous student survey: Anonymous student survey
+          Anonymous student survey 2: Anonymous student survey 2
           Web Lab: Web Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -1723,6 +1725,7 @@ en:
           Conditionals Update: Conditionals Update
           Draw Loop and Randomization: Draw Loop and Randomization
           Variables Unplugged: Variables Unplugged
+          Complex Sprite Movement: Complex Sprite Movement
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS

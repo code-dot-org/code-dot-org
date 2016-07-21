@@ -136,7 +136,13 @@ module.exports = DialogButtons;
 if (BUILD_STYLEGUIDE) {
   DialogButtons.styleGuideExamples = storybook => {
     storybook
-      .storiesOf('DialogButtons', module)
+      .deprecatedStoriesOf(
+        'DialogButtons',
+        module,
+        {
+          reason: "The component had way too many properties",
+          replacement: "Button",
+        })
       .addStoryTable([
         {
           name: 'ok',

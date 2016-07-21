@@ -5,6 +5,10 @@ require 'cdo/share_filtering'
 class SourcesTest < FilesApiTestBase
 
   def setup
+    # Stub out helpers that make remote API calls
+    WebPurify.stubs(:find_potential_profanity).returns false
+    Geocoder.stubs(:find_potential_street_address).returns false
+
     @channel = create_channel
     @api = FilesApiTestHelper.new(current_session, 'sources', @channel)
   end

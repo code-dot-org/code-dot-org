@@ -188,6 +188,8 @@ export const ProgressDot = React.createClass({
       return 'fa-lock';
     } else if (level.status === 'perfect') {
       return 'fa-check';
+    } else if (level.status === 'review_rejected') {
+      return 'fa-exclamation';
     } else {
       return null;
     }
@@ -205,7 +207,7 @@ export const ProgressDot = React.createClass({
     const smallDot = !this.props.courseOverviewPage && !onCurrent;
     const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
     const isPeerReview = level.kind === 'peer_review';
-    const iconForLevelStatus = this.props.courseOverviewPage && this.getIconForLevelStatus(level);
+    const iconForLevelStatus = !isUnplugged && this.props.courseOverviewPage && this.getIconForLevelStatus(level);
 
     return (
       <a
@@ -267,6 +269,6 @@ export const ProgressDot = React.createClass({
 });
 
 export default connect(state => ({
-  currentLevelId: state.progress.currentLevelId,
-  saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation
+  currentLevelId: state.currentLevelId,
+  saveAnswersBeforeNavigation: state.saveAnswersBeforeNavigation
 }))(Radium(ProgressDot));
