@@ -37,7 +37,6 @@ $(function () {
     try {
       window.ChromeSerialport.isInstalled(function (error) {
         if (error) {
-          alert('fail')
           fail('#app-installed');
           return;
         }
@@ -96,7 +95,7 @@ function connectToBoard(portId) {
       bitrate: 57600
     }, true);
     var io = new PlaygroundIO({port: serialPort});
-    var board = new five.Board({io: io, repl: false});
+    var board = new JohnnyFive.Board({io: io, repl: false});
     board.once('ready', function () {
       resolve(board);
     });
@@ -108,7 +107,7 @@ function fail(selector, e) {
   $(selector).addClass('incomplete').removeClass('complete');
   $(selector + ' i').removeClass('fa-spinner fa-spin').addClass('fa fa-times-circle');
   if (e) {
-    alert(e);
+    console.error(e);
   }
 }
 
