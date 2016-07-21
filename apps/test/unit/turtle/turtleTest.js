@@ -1,6 +1,4 @@
 import {expect} from '../../util/configuredChai';
-var testUtils = require('../../util/testUtils');
-testUtils.setupLocales();
 var Artist = require('@cdo/apps/turtle/turtle');
 
 var SHORT_DIAGONAL = 50 * Math.sqrt(2);
