@@ -41,6 +41,7 @@ export function setExternalGlobals() {
   window.marked = function (str) {
     return str;
   };
+  window.trackEvent = () => {};
 }
 
 export function setupLocale(app) {
