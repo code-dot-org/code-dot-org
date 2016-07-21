@@ -1,4 +1,3 @@
-//import './makerlabDependencies';
 import five from 'johnny-five';
 import PlaygroundIO from 'playground-io';
 import ChromeSerialport from 'chrome-serialport';

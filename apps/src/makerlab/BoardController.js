@@ -108,7 +108,7 @@ export default class BoardController {
     Object.keys(this.prewiredComponents).forEach(function (key) {
       jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
     }.bind(this));
-  };
+  }
 
   reset() {
     if (!this.board_) {
@@ -148,34 +148,34 @@ export default class BoardController {
       this.prewiredComponents.touch
     ];
     this.board_.register.concat(standaloneComponents).forEach(resetComponent);
-  };
+  }
 
   pinMode(pin, modeConstant) {
     this.board_.pinMode(pin, modeConstant);
-  };
+  }
 
   digitalWrite(pin, value) {
     this.board_.digitalWrite(pin, value);
-  };
+  }
 
   digitalRead(pin, callback) {
     return this.board_.digitalRead(pin, callback);
-  };
+  }
 
   analogWrite(pin, value) {
     this.board_.analogWrite(pin, value);
-  };
+  }
 
   analogRead(pin, callback) {
     return this.board_.analogRead(pin, callback);
-  };
+  }
 
   onBoardEvent(component, event, callback) {
     component.on(event, callback);
-  };
+  }
 
   connect() {
-    return getDevicePort().then(this.connectToBoard());
+    return BoardController.getDevicePort().then(port => this.connectToBoard(port));
   }
 
   connectToBoard(portId) {
@@ -199,7 +199,7 @@ export default class BoardController {
         }
 
         const prewiredBoards = list.filter((port) => {
-          return deviceOnPortAppearsUsable(port);
+          return BoardController.deviceOnPortAppearsUsable(port);
         });
 
         if (prewiredBoards.length > 0) {
