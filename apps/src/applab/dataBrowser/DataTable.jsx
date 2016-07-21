@@ -6,6 +6,7 @@ import AddColumnButton from './AddColumnButton';
 import AddTableRow from './AddTableRow';
 import { DataView } from '../constants';
 import EditTableRow from './EditTableRow';
+import ColumnHeader from './ColumnHeader';
 import Radium from 'radium';
 import React from 'react';
 import { changeView } from '../redux/data';
@@ -100,9 +101,7 @@ const DataTable = React.createClass({
           <tr>
             {
               columnNames.map(columnName => (
-                <th key={columnName} style={dataStyles.headerCell}>
-                  {columnName}
-                </th>
+                <ColumnHeader key={columnName} columnName={columnName}/>
               ))
             }
             <th style={dataStyles.headerCell}/>
