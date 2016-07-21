@@ -1,27 +1,27 @@
 //import './makerlabDependencies';
-window.JohnnyFive = require('johnny-five');
-window.PlaygroundIO = require('playground-io');
-window.ChromeSerialport = require('chrome-serialport');
+import five from 'johnny-five';
+import PlaygroundIO from 'playground-io';
+import ChromeSerialport from 'chrome-serialport';
 //import BoardController from '@cdo/apps/makerlab/BoardController';
 
 $(function () {
   $('.maker-setup a').attr('target', '_blank');
 
-  var isChrome = !!window.chrome;
-  var gtChrome33 = isChrome && getChromeVersion() >= 33;
+  const isChrome = !!window.chrome;
+  const gtChrome33 = isChrome && getChromeVersion() >= 33;
 
   function getChromeVersion() {
-    var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+    const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
 
     return raw ? parseInt(raw[2], 10) : false;
   }
 
   function isMacintosh() {
-    return navigator.platform.indexOf('Mac') > -1
+    return navigator.platform.indexOf('Mac') > -1;
   }
 
   function isWindows() {
-    return navigator.platform.indexOf('Win') > -1
+    return navigator.platform.indexOf('Win') > -1;
   }
 
   if (isChrome) {
@@ -30,28 +30,28 @@ $(function () {
     } else {
       $('#is-chrome').append("Your Chrome version is " + getChromeVersion() + ", please upgrade to at least version 33");
     }
-    var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
-    window.ChromeSerialport.extensionId = CHROME_APP_ID
+    const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
+    ChromeSerialport.extensionId = CHROME_APP_ID;
 
     spin('#app-installed');
     try {
-      window.ChromeSerialport.isInstalled(function (error) {
+     ChromeSerialport.isInstalled((error) => {
         if (error) {
           fail('#app-installed');
           return;
         }
         check('#app-installed');
 
-        return getDevicePort().then(function(port) {
+        return getDevicePort().then(port => {
           check('#board-plug');
           spin('#board-connect');
-          connectToBoard(port).then(function(board) {
+          connectToBoard(port).then(board => {
             check('#board-connect');
-          }).catch(function(e){fail('#board-connect', e);});
-        }).catch(function(e){fail('#board-plug', e)});
+          }).catch(e => {fail('#board-connect', e);});
+        }).catch(e => {fail('#board-plug', e)});
       });
     } catch (e) {
-      fail('#app-installed', e)
+      fail('#app-installed', e);
     }
   } else {
     fail('#is-chrome');
@@ -64,19 +64,19 @@ $(function () {
 });
 
 function deviceOnPortAppearsUsable(port) {
-  var comNameRegex = /usb|acm|^com/i;
+  const comNameRegex = /usb|acm|^com/i;
   return comNameRegex.test(port.comName);
 }
 
 function getDevicePort() {
   return new Promise(function (resolve, reject) {
-    window.ChromeSerialport.list(function (error, list) {
+   ChromeSerialport.list(function (error, list) {
       if (error) {
         reject(error);
         return;
       }
 
-      var prewiredBoards = list.filter(function (port) {
+      const prewiredBoards = list.filter(function (port) {
         return deviceOnPortAppearsUsable(port);
       });
 
@@ -91,11 +91,11 @@ function getDevicePort() {
 
 function connectToBoard(portId) {
   return new Promise(function (resolve, reject) {
-    var serialPort = new window.ChromeSerialport.SerialPort(portId, {
+    const serialPort = new ChromeSerialport.SerialPort(portId, {
       bitrate: 57600
     }, true);
-    var io = new PlaygroundIO({port: serialPort});
-    var board = new JohnnyFive.Board({io: io, repl: false});
+    const io = new PlaygroundIO({port: serialPort});
+    const board = new five.Board({io: io, repl: false});
     board.once('ready', function () {
       resolve(board);
     });
