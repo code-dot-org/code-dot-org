@@ -19,12 +19,12 @@ Want to submit your own self-guided game, teacher-led lesson, or activity that e
 
 After reading the guidelines below, feel free to submit your activity, lesson plan, tutorial, or video here: 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki).**
+**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki).**
 
 
 **NEW for 2016:**
 
-1. **Submit more than one activity**: If you’ve built tutorials for different levels, different ages, or other categories, we will now list your activities separately so each teacher can find the right thing for their classroom. So if you previously built a landing page and gave us a single URL to promote, don’t do that anymore. Submit each tutorial or activity individually.
+1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we will now list your activities separately so each teacher can find the right thing for their classroom. So if you previously built a landing page and gave us a single URL to promote, don’t do that anymore. Submit each tutorial or activity individually.
 
 2. **Intermediate and Advanced Lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we will list learning experiences this year for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for more advanced classes. Advanced learners could be any age from 9 to 99.
 
@@ -34,10 +34,9 @@ After reading the guidelines below, feel free to submit your activity, lesson pl
 
 5. **Go beyond one hour**: It’s called an “Hour of Code”, but we know that 85% of  students and the majority of classrooms do more, and many schools celebrate all week for Computer Science Education Week. So when you submit your one-hour activity, if you have follow-on learning materials, please encourage students (or teachers) to continue beyond an hour, and we’ll help motivated classrooms find those activities that come with follow-on courses. We’ll even make a filter to allow longer activities (2~6 hours)
 
-6. **Robotics**: Previously, we only listed activities teachers could do without buying hardware. If you have a robotics tutorial that requires specific robotics hardware that teachers need to purchase, we will list these under a dropdown for teachers looking for these activities. 
-Unlike previous years, we will not filter the activity list—all activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best tutorial(s) for their classroom.
+6. **Robotics**: Previously, we only listed activities teachers could do without buying hardware. If you have a robotics activity that requires specific robotics hardware that teachers need to purchase, we will list these under a dropdown for teachers looking for these activities. 
 
-<u>Unlike previous years, we will not filter the activity list—all activities that fit the basic criteria will be listed.</u> Teachers will be able to filter and sort to find the best tutorial(s) for their classroom.
+<u>Unlike previous years, we will not filter the activity list—all activities that fit the basic criteria will be listed.</u> Teachers will be able to filter and sort to find the best activities for their classroom.
 
 <a id="top"></a>
 ## Index:
@@ -45,11 +44,11 @@ Unlike previous years, we will not filter the activity list—all activities tha
 - [What to Submit](#whatsubmit)
 - [General guidelines for creating an Hour of Code™ activity](#guidelines)
 - [How to Submit (Due 10/1/2016)](#submit)
-- [How tutorials will be evaluated](#inclusion)
+- [How activities will be evaluated](#inclusion)
 - [Suggestions for designing your activity](#design)
 - [Trademark Guidelines](#tm)
 - [Tracking Pixel](#pixel)
-- [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)
+- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -83,7 +82,7 @@ Examples:
 
 **For students with disabilities**
 
-If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. 
+If you create an activity or tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. 
 
 [**Back to the top**](#top)
 
@@ -110,7 +109,7 @@ The activities should teach a computer science concept such as how the Internet 
 
 ## How to submit (Due 10/1/2016)
 
-Visit the [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki) and complete the questions to submit your tutorial.
+Visit the [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki) and complete the questions to submit your activity.
 
 What you’ll need:
 
@@ -126,11 +125,11 @@ What you’ll need:
 	* Grades 2-5 (ages 7-10)
 	* Grades 6-8 (ages 11-13)
 	* Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your tutorial to teach about angles or parabolas, list as math. If you have a mad libs tutorial that teaches verbs/nouns/etc. choose language arts.
+* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
 * A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the job of the tutorial provider, we will redirect all users to the single URL provided.
+* A list of supported natural languages. Note: Language-detection is the job of the activity provider, we will redirect all users to the single URL provided.
 * What level of experience should an educator have to use your activity? (e.g. Beginner, Comfortable, or Experienced.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your tutorial
+* The length of your activity
 	* 1 hour only
 	* 1 hour with follow-on course
 	* 2-6 hours (can be multiple lessons)
@@ -188,7 +187,7 @@ What you’ll need:
 <a id="inclusion"></a>
 ## How activities will be evaluated
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators. <u>Unlike previous years, we will not filter the activity list—all activities that fit the basic criteria will be listed.</u> Teachers will be able to filter and sort to find the best tutorial(s) for their classroom.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators. <u>Unlike previous years, we will not filter the activity list—all activities that fit the basic criteria will be listed.</u> Teachers will be able to filter and sort to find the best activities for their classroom.
 
 The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
 
@@ -204,13 +203,13 @@ In addition, in order to be listed, all activities must:
 
 - Be appropriate for the classroom (no guns, explicit content, etc.)
 - Require no sign up 
-- Require no payment (exception for robotics tutorials these can require robot/kit purchase)
+- Require no payment (exception for robotics activities these can require robot/kit purchase)
 For self-directed activities for new teachers and students the review committee will be looking for whether:
 - Teachers can use the tutorial or activity with no background in computer science
 - Students can be successful with no background in computer science
 - Students can direct themselves through the tutorial without parental or teacher guidance
 
-Teachers and students will be able to search through and filter our list of tutorials based on filters such (grade, experience level, subject, hardware, etc.). By default, we will show lesson plans and activities first that:
+Teachers and students will be able to search through and filter our list of activities based on filters such (grade, experience level, subject, hardware, etc.). By default, we will show lesson plans and activities first that:
 
 - Receive the highest ratings from the review committee
 - Are one hour self-directed activities designed for beginners (students and teachers)
@@ -223,7 +222,7 @@ Teachers and students will be able to search through and filter our list of tuto
 <a id="design"></a>
 ## Suggestions for designing one hour self guided tutorials
 
-You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/sh/y8nufj1fgbli167/AACn8p9NT_fMjXZBgfNkhTdQa?dl=0) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
 **Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson.  Remember that most kids will be absolute beginners to computer science and coding.
 
@@ -278,9 +277,9 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 [**Back to the top**](#top)
 
 <a id="promote"></a>
-## Promoting your tutorials, CSEdWeek, and Hour of Code
+## Promoting your activities, CSEdWeek, and Hour of Code
 
-Please promote your 1-hour tutorial to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach 100 million total participants.
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach 100 million total participants.
 
 - Feature Hour of Code and CSEdWeek on your website. Ex: [http://www.tynker.com/hour-of-code](http://www.tynker.com/hour-of-code
 )
