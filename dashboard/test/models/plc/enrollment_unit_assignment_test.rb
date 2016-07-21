@@ -56,31 +56,4 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
                     }
                  ], @unit_enrollment.summarize_progress
   end
-
-  test 'Summarizing progress of a course with peer reviews returns expected' do
-    @script.update(peer_reviews_to_complete: 5)
-
-    @unit_enrollment.unlock_unit
-    @unit_enrollment.enroll_user_in_unit_with_learning_modules([@content_learning_module, @practice_learning_module])
-    @unit_enrollment.reload
-
-    assert_equal [
-                     {
-                         category: Plc::LearningModule::REQUIRED_MODULE,
-                         status: Plc::EnrollmentModuleAssignment::NOT_STARTED
-                     },
-                     {
-                         category: Plc::LearningModule::CONTENT_MODULE,
-                         status: Plc::EnrollmentModuleAssignment::NOT_STARTED
-                     },
-                     {
-                         category: Plc::LearningModule::PRACTICE_MODULE,
-                         status: Plc::EnrollmentModuleAssignment::NOT_STARTED
-                     },
-                     {
-                         category: 'peer_review',
-                         status: Plc::EnrollmentModuleAssignment::NOT_STARTED
-                     }
-                 ], @unit_enrollment.summarize_progress
-  end
 end

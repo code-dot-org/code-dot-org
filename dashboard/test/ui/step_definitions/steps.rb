@@ -616,14 +616,11 @@ Given(/^I am a (student|teacher)$/) do |user_type|
 end
 
 Given(/^I am enrolled in a plc course$/) do
-  puts 'enrolling'
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users.first[1][:email])
   course = Plc::Course.find_by(name: 'All The PLC Things')
-  puts course
   enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
   enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
-  puts 'enrolled'
 end
 
 Then(/^I fake completion of the assessment$/) do
