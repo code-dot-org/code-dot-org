@@ -81,5 +81,13 @@
   "turnTooltip": "Kthen artistin majtas ose djathtas nga numri i përcaktuar i gradëve.",
   "turtleVisibilityTooltip": "Bën artistin të dukshëm ose të padukshëm.",
   "widthTooltip": "Ndryshon gjerësinë e lapsit.",
-  "wrongColour": "Figura jote është në ngjyrën e gabuar. Për këtë formuese duhet të jetë %1."
+  "wrongColour": "Figura jote është në ngjyrën e gabuar. Për këtë formuese duhet të jetë %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

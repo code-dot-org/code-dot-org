@@ -81,5 +81,13 @@
   "turnTooltip": "סובב את האמן שמאלה או ימינה על פי מספר המעלות שמצויין.",
   "turtleVisibilityTooltip": "הפוך את האמן לנראה או בלתי-נראה.",
   "widthTooltip": "שנה את עובי העיפרון.",
-  "wrongColour": "התמונה בצבע לא נכון. לחידה הזאת, היא צריכה להיות %1."
+  "wrongColour": "התמונה בצבע לא נכון. לחידה הזאת, היא צריכה להיות %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

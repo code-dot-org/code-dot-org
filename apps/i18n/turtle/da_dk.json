@@ -81,5 +81,13 @@
   "turnTooltip": "Drejer figuren  til venstre eller højre med det angivne antal grader.",
   "turtleVisibilityTooltip": "Gør kunstneren synlig eller usynlig.",
   "widthTooltip": "Ændrer bredden på blyanten.",
-  "wrongColour": "Dit billede har den forkerte farve.  Til denne opgave skal det være %1."
+  "wrongColour": "Dit billede har den forkerte farve.  Til denne opgave skal det være %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

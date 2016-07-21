@@ -81,5 +81,13 @@
   "turnTooltip": "Snýr listamanninum til vinstri eða hægri um tiltekinn fjölda gráða.",
   "turtleVisibilityTooltip": "Gerir listamanninn sýnilegan eða ósýnilegan.",
   "widthTooltip": "Breytir breidd pensilsins.",
-  "wrongColour": "Myndin þín er í röngum lit. Í þessari þraut þarf að nota %1."
+  "wrongColour": "Myndin þín er í röngum lit. Í þessari þraut þarf að nota %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

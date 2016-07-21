@@ -81,5 +81,13 @@
   "turnTooltip": "Sanatçı sağa ya da sola belirtilen açıda döndürür.",
   "turtleVisibilityTooltip": "Sanatçıyı, görünür ya da görünmez yapar.",
   "widthTooltip": "Kalemin kalınlığını değiştirir.",
-  "wrongColour": "Resiminin rengi yanlış.  Bu bulmaca için %1 olması gerekir."
+  "wrongColour": "Resiminin rengi yanlış.  Bu bulmaca için %1 olması gerekir.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }
