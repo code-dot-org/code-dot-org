@@ -369,7 +369,8 @@ NetSim.prototype.initWithUser_ = function (user) {
       this, {
         user: user,
         levelKey: this.getUniqueLevelKey(),
-        sharedShardSeed: this.getOverrideShardID()
+        sharedShardSeed: this.getOverrideShardID(),
+        showRouterLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_)
       });
 
   // Tab panel - contains instructions, my device, router, dns
@@ -386,7 +387,8 @@ NetSim.prototype.initWithUser_ = function (user) {
           routerMemorySliderChangeCallback: this.setRouterMemory.bind(this),
           routerMemorySliderStopCallback: this.changeRemoteRouterMemory.bind(this),
           dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
-          becomeDnsCallback: this.becomeDnsNode.bind(this)
+          becomeDnsCallback: this.becomeDnsNode.bind(this),
+          showRouterLogCallback: this.routerLogModal_.show.bind(this.routerLogModal_)
         });
     this.tabs_.attachToRunLoop(this.runLoop_);
   }
