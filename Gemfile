@@ -46,7 +46,6 @@ group :development, :test do
 
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'better_errors'
-  gem 'pry'
   gem 'binding_of_caller'
   gem 'ruby-prof'
   gem 'quiet_assets'

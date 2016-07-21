@@ -1,6 +1,4 @@
-
 module LtiHelper
-
   #
   # LTI role can be blank, one, or multiple (comma separated).
   # https://www.imsglobal.org/specs/ltiv1p0/implementation-guide#toc-19
@@ -21,7 +19,6 @@ module LtiHelper
   def lti_param_missing_msg(pp)
     "Sorry, could not sign up--[#{pp}] missing from LTI request. Please contact your LMS admin."
   end
-
 
   #
   # ===========================================================
@@ -77,7 +74,7 @@ module LtiHelper
         email      = SecureRandom.uuid + "@code.org"
 
         user_type  = lti_role_to_user_type(params[:roles])
-        age ||= 21 if user_type == User::TYPE_TEACHER
+        age = 21 if user_type == User::TYPE_TEACHER
 
         if uid.blank?
           redirect_to new_user_registration_path,
