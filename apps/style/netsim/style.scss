@@ -107,10 +107,6 @@ $wide-column-width: 121px;
   }
 
   #router-log-modal {
-    display: none; // Initial state
-    width: 90%;
-    margin-left: -45%;
-
     select {
       margin: 5px 5px 0 5px;
       padding: 0;
@@ -120,9 +116,8 @@ $wide-column-width: 121px;
       vertical-align: middle;
     }
 
-    .modal-body {
-      max-height: 450px;
-      overflow-y: auto;
+    table {
+      margin-bottom: 0;
     }
 
     th {
