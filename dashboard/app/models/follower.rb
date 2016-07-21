@@ -14,7 +14,7 @@
 #
 #  index_followers_on_section_id                   (section_id)
 #  index_followers_on_student_user_id              (student_user_id)
-#  index_followers_on_user_id_and_student_user_id  (user_id,student_user_id) UNIQUE
+#  index_followers_on_user_id_and_student_user_id  (user_id,student_user_id)
 #
 
 # Join table defining student-teacher relationships for Users

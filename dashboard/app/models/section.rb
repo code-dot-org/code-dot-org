@@ -66,8 +66,8 @@ class Section < ActiveRecord::Base
     self.followers_attributes = follower_params
   end
 
-  def add_student(student)
-    if follower = student.followeds.where(user_id: self.user_id).first
+  def add_student(student, move_for_same_teacher: true)
+    if move_for_same_teacher && (follower = student.followeds.find_by(user_id: self.user_id))
       # if this student is already in another section owned by the
       # same teacher, move them to this section instead of creating a
       # new one
