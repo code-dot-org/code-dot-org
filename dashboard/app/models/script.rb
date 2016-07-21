@@ -344,10 +344,6 @@ class Script < ActiveRecord::Base
     name.match(Regexp.union('algebra', 'Algebra'))
   end
 
-  def show_report_bug_link?
-    beta? || k5_course?
-  end
-
   def has_lesson_plan?
     k5_course? || %w(msm algebra algebraa cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd3 text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
   end
