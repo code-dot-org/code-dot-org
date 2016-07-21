@@ -32,8 +32,8 @@ const GameLabVisualizationHeader = React.createClass({
     return (
       <div style={styles.main}>
         <ToggleGroup
-            selected={interfaceMode}
-            onChange={onInterfaceModeChange}
+          selected={interfaceMode}
+          onChange={onInterfaceModeChange}
         >
           <button value={GameLabInterfaceMode.CODE} id="codeMode">
             {msg.codeMode()}

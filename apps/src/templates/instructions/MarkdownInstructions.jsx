@@ -108,14 +108,15 @@ const MarkdownInstructions = React.createClass({
     const canCollapse = !this.props.noInstructionsWhenCollapsed;
     return (
       <div
-        className='instructions-markdown'
+        className="instructions-markdown"
         style={[
           styles.standard,
           inTopPane && styles.inTopPane,
           inTopPane && hasFullSizeImage && styles.inTopPaneWithImage,
           inTopPane && canCollapse && styles.inTopPaneCanCollapse
         ]}
-        dangerouslySetInnerHTML={{ __html: renderedMarkdown }}/>
+        dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
+      />
     );
   }
 });

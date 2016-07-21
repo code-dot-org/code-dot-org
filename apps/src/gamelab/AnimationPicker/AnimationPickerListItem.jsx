@@ -75,10 +75,10 @@ const AnimationPickerListItem = React.createClass({
         <div style={thumbnailStyle}>
           {this.props.animationProps &&
               <AnimationPreview
-                  animationProps={this.props.animationProps}
-                  sourceUrl={this.props.animationProps.sourceUrl}
-                  width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-                  height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                animationProps={this.props.animationProps}
+                sourceUrl={this.props.animationProps.sourceUrl}
+                width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
               />
           }
           {this.props.icon && <i className={"fa fa-" + this.props.icon} />}

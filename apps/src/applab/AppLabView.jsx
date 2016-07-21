@@ -41,12 +41,14 @@ var AppLabView = React.createClass({
     return (
       <StudioAppWrapper>
         <ApplabVisualizationColumn
-            isEditingProject={this.props.isEditingProject}
-            screenIds={this.props.screenIds}
-            onScreenCreate={this.props.onScreenCreate} />
+          isEditingProject={this.props.isEditingProject}
+          screenIds={this.props.screenIds}
+          onScreenCreate={this.props.onScreenCreate}
+        />
         <ProtectedStatefulDiv
-            id="visualizationResizeBar"
-            className="fa fa-ellipsis-v" />
+          id="visualizationResizeBar"
+          className="fa fa-ellipsis-v"
+        />
         <InstructionsWithWorkspace>
           <CodeWorkspace style={{display: codeWorkspaceVisible ? 'block' : 'none' }}/>
           {this.props.hasDesignMode && <ProtectedDesignWorkspace/>}

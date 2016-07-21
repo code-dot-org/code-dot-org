@@ -19,59 +19,70 @@ var SliderProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <div id='propertyRowContainer'>
+      <div id="propertyRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true} />
+          isIdRow={true}
+        />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'style-width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')}
+        />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'style-height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')}
+        />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
-          handleChange={this.props.handleChange.bind(this, 'left')} />
+          handleChange={this.props.handleChange.bind(this, 'left')}
+        />
         <PropertyRow
           desc={'y position (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
-          handleChange={this.props.handleChange.bind(this, 'top')} />
+          handleChange={this.props.handleChange.bind(this, 'top')}
+        />
         <PropertyRow
           desc={'value'}
           isNumber={true}
           initialValue={element.defaultValue}
-          handleChange={this.props.handleChange.bind(this, 'defaultValue')} />
+          handleChange={this.props.handleChange.bind(this, 'defaultValue')}
+        />
         <PropertyRow
           desc={'minimum value'}
           isNumber={true}
           initialValue={parseInt(element.min, 10)}
-          handleChange={this.props.handleChange.bind(this, 'min')} />
+          handleChange={this.props.handleChange.bind(this, 'min')}
+        />
         <PropertyRow
           desc={'maximum value'}
           isNumber={true}
           initialValue={parseInt(element.max, 10)}
-          handleChange={this.props.handleChange.bind(this, 'max')} />
+          handleChange={this.props.handleChange.bind(this, 'max')}
+        />
         <PropertyRow
           desc={'step size'}
           isNumber={true}
           initialValue={parseInt(element.step, 10)}
-          handleChange={this.props.handleChange.bind(this, 'step')} />
+          handleChange={this.props.handleChange.bind(this, 'step')}
+        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
-          handleChange={this.props.handleChange.bind(this, 'hidden')} />
+          handleChange={this.props.handleChange.bind(this, 'hidden')}
+        />
         <ZOrderRow
           element={this.props.element}
-          onDepthChange={this.props.onDepthChange}/>
+          onDepthChange={this.props.onDepthChange}
+        />
       </div>);
   }
 });
@@ -103,17 +114,19 @@ var SliderEvents = React.createClass({
     var inputDesc = 'Triggered whenever the value of the slider is modified.';
 
     return (
-      <div id='eventRowContainer'>
+      <div id="eventRowContainer">
         <PropertyRow
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}/>
+          isIdRow={true}
+        />
         <EventHeaderRow/>
         <EventRow
           name={inputName}
           desc={inputDesc}
-          handleInsert={this.insertInput}/>
+          handleInsert={this.insertInput}
+        />
       </div>
     );
   }

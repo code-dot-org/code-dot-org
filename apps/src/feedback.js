@@ -1007,13 +1007,16 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
     <div>
       {options.headerText && <p className="dialog-title">{options.headerText}</p>}
       {options.bodyText && <p>{options.bodyText}</p>}
-      {options.prompt && <input
+      {options.prompt &&
+        <input
           style={textBoxStyle}
-          defaultValue={options.promptPrefill} />}
+          defaultValue={options.promptPrefill}
+        />}
       <DialogButtons
-          confirmText={options.confirmText}
-          cancelText={options.cancelText}
-          cancelButtonClass={options.cancelButtonClass} />
+        confirmText={options.confirmText}
+        cancelText={options.cancelText}
+        cancelButtonClass={options.cancelButtonClass}
+      />
     </div>,
     document.createElement('div'));
 

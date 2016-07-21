@@ -45,13 +45,16 @@ var IconList = React.createClass({
     var results = this.getMatches(query);
 
     var iconEntries = Object.keys(results).map(function (iconId) {
-      return <IconListEntry
-        key={iconId}
-        assetChosen={this.props.assetChosen}
-        iconId={iconId}
-        altMatch={results[iconId]}
-        query={query}
-        search={this.props.search}/>;
+      return (
+        <IconListEntry
+          key={iconId}
+          assetChosen={this.props.assetChosen}
+          iconId={iconId}
+          altMatch={results[iconId]}
+          query={query}
+          search={this.props.search}
+        />
+      );
     }.bind(this));
 
     return (

@@ -89,21 +89,23 @@ const CourseProgressRow = React.createClass({
     const stage = this.props.stage;
 
     return (
-      <div style={[
-        styles.row,
-        this.props.professionalLearningCourse && {background: color.white},
-        this.props.isFocusArea && styles.focusAreaRow
-      ]}>
+      <div
+        style={[
+          styles.row,
+          this.props.professionalLearningCourse && {background: color.white},
+          this.props.isFocusArea && styles.focusAreaRow
+        ]}
+      >
         {this.props.isFocusArea && [
-          <div style={styles.ribbonWrapper} key='ribbon'>
+          <div style={styles.ribbonWrapper} key="ribbon">
             <div style={styles.ribbon}>Focus Area</div>
           </div>,
           <a
             href={this.props.changeFocusAreaPath}
             style={styles.changeFocusArea}
-            key='changeFocusArea'
+            key="changeFocusArea"
           >
-            <i className='fa fa-pencil' style={styles.changeFocusAreaIcon} />
+            <i className="fa fa-pencil" style={styles.changeFocusAreaIcon} />
             <span>Change your focus area</span>
           </a>
         ]}
@@ -111,7 +113,7 @@ const CourseProgressRow = React.createClass({
           {this.props.professionalLearningCourse ? stage.name : stage.title}
           {this.props.showLessonPlanLinks && stage.lesson_plan_html_url &&
             <a
-              target='_blank'
+              target="_blank"
               href={stage.lesson_plan_html_url}
               style={styles.lessonPlanLink}
             >

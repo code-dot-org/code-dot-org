@@ -342,7 +342,7 @@ StudioApp.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.reduxStore}>
       <InstructionsDialogWrapper
-          showInstructionsDialog={(autoClose, showHints) => {
+        showInstructionsDialog={(autoClose, showHints) => {
             this.showInstructionsDialog_(config.level, autoClose, showHints);
           }}
       />

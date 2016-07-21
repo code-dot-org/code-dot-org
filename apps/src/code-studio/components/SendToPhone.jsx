@@ -105,15 +105,17 @@ var SendToPhone = React.createClass({
       <div>
         <label style={styles.label} htmlFor="phone">Enter a US phone number:</label>
         <input
-            type="text"
-            ref="phone"
-            name="phone"
-            style={{height: 32, margin: 0}}
-            disabled={this.state.sendState !== SendState.invalidVal &&
-                      this.state.sendState !== SendState.canSubmit}/>
+          type="text"
+          ref="phone"
+          name="phone"
+          style={{height: 32, margin: 0}}
+          disabled={this.state.sendState !== SendState.invalidVal &&
+                      this.state.sendState !== SendState.canSubmit}
+        />
         <button
           disabled={this.state.sendState === SendState.invalidVal}
-          onClick={this.handleSubmit}>
+          onClick={this.handleSubmit}
+        >
             {sendButtonString(this.state.sendState)}
         </button>
         <div style={styles.div}>

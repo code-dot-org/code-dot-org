@@ -115,10 +115,11 @@ const AssetListItem = Radium(React.createClass({
     return (
       <div style={styles.assetListItem}>
         <AssetThumbnail
-            type={asset.category}
-            name={asset.filename}
-            iconStyle={styles.assetThumbnailIcon}
-            style={styles.assetThumbnail}/>
+          type={asset.category}
+          name={asset.filename}
+          iconStyle={styles.assetThumbnailIcon}
+          style={styles.assetThumbnail}
+        />
         <div style={[styles.assetListItemText, styles.subtext]}>
           {asset.filename}
           {asset.willReplace &&
@@ -143,11 +144,16 @@ export const ScreenListItem = Radium(React.createClass({
   render() {
     var {screen} = this.props;
     return (
-      <div style={[styles.screenListItem,
-                   !screen.canBeImported && styles.disabledScreenListItem]}>
+      <div
+        style={[
+          styles.screenListItem,
+          !screen.canBeImported && styles.disabledScreenListItem
+        ]}
+      >
         <div style={styles.miniScreenWrapper}>
-          <div dangerouslySetInnerHTML={{__html: screen.html}}
-               style={styles.miniScreen}
+          <div
+            dangerouslySetInnerHTML={{__html: screen.html}}
+            style={styles.miniScreen}
           />
         </div>
         <div>
@@ -190,29 +196,32 @@ var ImportScreensDialog = React.createClass({
     const nonImportableScreens = this.props.project.screens.filter(s => !s.canBeImported);
     return (
       <Dialog
-          title={`Import from Project: ${this.props.project.name}`}
-          confirmText="Import"
-          onConfirm={() => this.props.onImport(this.state.selectedScreens,
+        title={`Import from Project: ${this.props.project.name}`}
+        confirmText="Import"
+        onConfirm={() => this.props.onImport(this.state.selectedScreens,
                                                this.state.selectedAssets)}
-          {...this.props}>
+        {...this.props}
+      >
         <Body>
           <MultiCheckboxSelector
-              style={styles.section}
-              header="Screens"
-              items={this.props.project.screens.filter(s => s.canBeImported)}
-              selected={this.state.selectedScreens}
-              onChange={selectedScreens => this.setState({selectedScreens})}
-              itemPropName="screen">
+            style={styles.section}
+            header="Screens"
+            items={this.props.project.screens.filter(s => s.canBeImported)}
+            selected={this.state.selectedScreens}
+            onChange={selectedScreens => this.setState({selectedScreens})}
+            itemPropName="screen"
+          >
             <ScreenListItem />
           </MultiCheckboxSelector>
           {this.props.project.otherAssets.length > 0 &&
            <MultiCheckboxSelector
-               style={styles.section}
-               header="Other Assets"
-               items={this.props.project.otherAssets}
-               selected={this.state.selectedAssets}
-               onChange={selectedAssets => this.setState({selectedAssets})}
-               itemPropName="asset">
+             style={styles.section}
+             header="Other Assets"
+             items={this.props.project.otherAssets}
+             selected={this.state.selectedAssets}
+             onChange={selectedAssets => this.setState({selectedAssets})}
+             itemPropName="asset"
+           >
              <AssetListItem/>
            </MultiCheckboxSelector>}
           {nonImportableScreens.length > 0 &&
@@ -260,7 +269,7 @@ if (BUILD_STYLEGUIDE) {
           name: 'normal screen',
           story: () => (
             <ScreenListItem
-                screen={{
+              screen={{
                     id: 'screen1',
                     canBeImported: true,
                     willReplace: false,
@@ -274,7 +283,7 @@ if (BUILD_STYLEGUIDE) {
           name: 'screen which will replace some assets',
           story: () => (
             <ScreenListItem
-                screen={{
+              screen={{
                     id: 'screen1',
                     canBeImported: true,
                     willReplace: false,
@@ -288,7 +297,7 @@ if (BUILD_STYLEGUIDE) {
           name: 'screen which will replace an existing screen and some assets',
           story: () => (
             <ScreenListItem
-                screen={{
+              screen={{
                     id: 'screen1',
                     canBeImported: true,
                     willReplace: true,
@@ -302,7 +311,7 @@ if (BUILD_STYLEGUIDE) {
           name: 'screen with conflicting ids which cannot be imported',
           story: () => (
             <ScreenListItem
-                screen={{
+              screen={{
                     id: 'screen1',
                     willReplace: false,
                     assetsToReplace: [],
@@ -359,14 +368,15 @@ if (BUILD_STYLEGUIDE) {
           description: 'Importing a single screen that will replace an existing one',
           story: () => (
             <ImportScreensDialog
-                hideBackdrop
-                onImport={storybook.action('onImport')}
-                project={{
+              hideBackdrop
+              onImport={storybook.action('onImport')}
+              project={{
                     id: 'poke-the-pig',
                     name: 'Poke the Pig',
                     screens: [replacingScreen],
                     otherAssets: [],
-                  }}/>
+                  }}
+            />
           )
         }, {
           name: 'Multi-screen import with conflicting element ids',
@@ -374,14 +384,15 @@ if (BUILD_STYLEGUIDE) {
                         We show a new section indicating the screens cannot be imported.`,
           story: () => (
             <ImportScreensDialog
-                hideBackdrop
-                onImport={storybook.action('onImport')}
-                project={{
+              hideBackdrop
+              onImport={storybook.action('onImport')}
+              project={{
                     id: 'poke-the-pig',
                     name: 'Poke the Pig',
                     screens: [replacingScreen, newScreen, conflictingScreen],
                     otherAssets: [],
-                  }}/>
+                  }}
+            />
           )
         }, {
           name: 'additional assets',
@@ -390,9 +401,9 @@ if (BUILD_STYLEGUIDE) {
                         assets allowing you to import them.`,
           story: () => (
             <ImportScreensDialog
-                hideBackdrop
-                onImport={storybook.action('onImport')}
-                project={{
+              hideBackdrop
+              onImport={storybook.action('onImport')}
+              project={{
                     id: 'poke-the-pig',
                     name: 'Poke the Pig',
                     screens: [newScreen],
@@ -403,7 +414,8 @@ if (BUILD_STYLEGUIDE) {
                       {filename: 'bar.doc', category: "doc", willReplace: true},
                       {filename: 'bar.mp3', category: "audio", willReplace: true},
                     ],
-                  }}/>
+                  }}
+            />
           )
         },
       ]);
