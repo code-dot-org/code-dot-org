@@ -448,6 +448,15 @@ p5.prototype._isMouseButtonInState = function(buttonCode, state) {
   if(buttonCode === undefined)
     buttonCode = this.LEFT;
 
+  // Add other acceptable strings
+  if(buttonCode === "leftButton" || buttonCode === "left" )
+    buttonCode = this.LEFT;
+  if(buttonCode === "rightButton" || buttonCode === "right")
+    buttonCode = this.RIGHT;
+  if(buttonCode === "centerButton" || buttonCode === "center")
+    buttonCode = this.CENTER;
+
+
   //undefined = not tracked yet, start tracking
   if(mouseStates[buttonCode]===undefined)
   {
