@@ -428,7 +428,7 @@ module.exports = function (grunt) {
     {
       uniqueName: 'makerlabDependencies',
       entries: {
-        makerlab: './src/code-studio/makerlab/makerlabDependencies.js'
+        'makerlab/dependencies': './src/code-studio/makerlab/makerlabDependencies.js'
       },
       provides: ['johnny-five', 'playground-io', 'chrome-serialport']
     },
