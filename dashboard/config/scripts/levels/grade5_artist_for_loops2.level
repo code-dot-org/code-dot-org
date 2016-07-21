@@ -1,0 +1,160 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2016-07-21T19:34:41.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "artist",
+    "instructions": "I've put the code for drawing a triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure you look at the code before you hit \"Run\".",
+    "x": "150",
+    "y": "250",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "true",
+    "free_play": "false",
+    "ideal": "11",
+    "slider_speed": ".4",
+    "embed": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "markdown_instructions": "I've put the code for drawing a triangle inside a `for loop` that counts from 50 to 100 by 10. \r\n\r\n<br/>\r\n<strong>NOTE:</strong> Make sure you look at the code *before* you hit \"Run\".\r\n<br/><br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h45>",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "examples_required": "false",
+    "video_key": "C4_for_loops_no_bee",
+    "never_autoplay_video": "false",
+    "contained_level_names": null,
+    "discard_background": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for_counter" inline="true" movable="false">
+              <mutation counter="counter"/>
+              <value name="FROM" movable="false">
+                <block type="math_number" movable="false">
+                  <title name="NUM">50</title>
+                </block>
+              </value>
+              <value name="TO" movable="false">
+                <block type="math_number" movable="false">
+                  <title name="NUM">100</title>
+                </block>
+              </value>
+              <value name="BY" movable="false">
+                <block type="math_number" movable="false">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+              <statement name="DO" movable="false">
+                <block type="controls_repeat_ext" inline="true" movable="false">
+                  <value name="TIMES" movable="false">
+                    <block type="math_number" movable="false">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <statement name="DO" movable="false">
+                    <block type="draw_move" inline="true" movable="false">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE" movable="false">
+                        <block type="variables_get" movable="false">
+                          <title name="VAR">counter</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true" movable="false">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE" movable="false">
+                            <block type="math_number" movable="false">
+                              <title name="NUM">120</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+</xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for_counter" inline="true">
+              <mutation counter="counter"/>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">50</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">100</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">120</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>
