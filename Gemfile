@@ -115,6 +115,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-windowslive', '~> 0.0.9'
 gem 'omniauth-clever', '~> 1.2.1'
+gem 'ims-lti', '~> 1.1'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
