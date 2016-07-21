@@ -108,8 +108,10 @@ Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
 
 /**
  * Initialise the database of variable names.
+ * @param {Array.<Blockly.Block>} opt_blocks Optional blocks to query for
+ *    variable definitions.
  */
-Blockly.JavaScript.init = function() {
+Blockly.JavaScript.init = function(opt_blocks) {
   // Create a dictionary of definitions to be printed before the code.
   Blockly.JavaScript.definitions_ = {};
 
@@ -123,7 +125,15 @@ Blockly.JavaScript.init = function() {
 
     if (!Blockly.varsInGlobals) {
       var defvars = [];
-      var variables = Blockly.Variables.allVariables();
+      var variables;
+      if (opt_blocks) {
+        variables = [];
+        for (var x = 0, block; block = opt_blocks[x]; x++) {
+          variables = variables.concat(Blockly.Variables.allVariables(block));
+        }
+      } else {
+        variables = Blockly.Variables.allVariables();
+      }
       for (var x = 0; x < variables.length; x++) {
         defvars[x] = 'var ' +
             Blockly.JavaScript.variableDB_.getName(variables[x],
