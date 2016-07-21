@@ -54,10 +54,10 @@ const AnimationPicker = React.createClass({
     }
     return (
         <AnimationPickerBody
-            is13Plus={this.props.is13Plus}
-            onDrawYourOwnClick={this.props.onPickNewAnimation}
-            onPickLibraryAnimation={this.props.onPickLibraryAnimation}
-            onUploadClick={this.onUploadClick}
+          is13Plus={this.props.is13Plus}
+          onDrawYourOwnClick={this.props.onPickNewAnimation}
+          onPickLibraryAnimation={this.props.onPickLibraryAnimation}
+          onUploadClick={this.onUploadClick}
         />
     );
   },
@@ -69,17 +69,19 @@ const AnimationPicker = React.createClass({
 
     return (
       <BaseDialog
-          isOpen
-          useDeprecatedGlobalStyles
-          handleClose={this.props.onClose}
-          uncloseable={this.props.uploadInProgress}>
+        isOpen
+        useDeprecatedGlobalStyles
+        handleClose={this.props.onClose}
+        uncloseable={this.props.uploadInProgress}
+      >
         <HiddenUploader
-            ref="uploader"
-            toUrl={'/v3/animations/' + this.props.channelId + '/' + createUuid() + '.png'}
-            typeFilter={this.props.typeFilter}
-            onUploadStart={this.props.onUploadStart}
-            onUploadDone={this.props.onUploadDone}
-            onUploadError={this.props.onUploadError} />
+          ref="uploader"
+          toUrl={'/v3/animations/' + this.props.channelId + '/' + createUuid() + '.png'}
+          typeFilter={this.props.typeFilter}
+          onUploadStart={this.props.onUploadStart}
+          onUploadDone={this.props.onUploadDone}
+          onUploadError={this.props.onUploadError}
+        />
         {this.renderVisibleBody()}
       </BaseDialog>
     );

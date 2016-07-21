@@ -25,14 +25,14 @@ module.exports = {
     }
   },
   "rules": {
-    "react/display-name": "off",
-    "react/no-render-return-value": "off", // TODO: turn this on
     "array-bracket-spacing": ["error", "never"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-dangle": "off",
     "curly": "error",
     "dot-location": ["error", "property"],
     "eol-last": "error",
+    "eqeqeq": "error",
+    "jsx-quotes": "error", // autofixable
     "keyword-spacing": "error",
     "no-array-constructor": "error",
     "no-console": "off",
@@ -46,11 +46,18 @@ module.exports = {
     "no-unused-vars": "off",
     "no-with": "error",
     "object-curly-spacing": "off",
+    "react/display-name": "off",
+    "react/jsx-closing-bracket-location": "error", // autofixable
+    "react/jsx-curly-spacing": "error", // autofixable
+    "react/jsx-first-prop-new-line": ["error", "multiline"],
+    "react/jsx-indent-props": ["error", 2], // autofixable
+    "react/no-render-return-value": "off", // TODO: turn this on
+    "react/self-closing-comp": "error",
+    "react/wrap-multilines": "error", // autofixable
     "semi": "error",
     "space-before-function-paren": ["error", {
       "anonymous": "always",
       "named": "never"
-    }],
-    "eqeqeq": "error"
+    }]
   }
 };

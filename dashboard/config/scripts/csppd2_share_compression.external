@@ -2,36 +2,25 @@ name 'CSPPD2 share compression'
 css 'unplugged'
 
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="//code.org/curriculum/docs/web/k5online.css">
+# Chunk 4: Compressing and Storing Information > Text Compression
 
+<img src="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/tOMfydkvDaILuap/Screen%20Shot%202015-07-18%20at%204.21.06%20PM.png" class="level-image">
 
-
-### Chunk 4: Compressing and Storing Information > Text Compression
-
-<img src="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/tOMfydkvDaILuap/Screen%20Shot%202015-07-18%20at%204.21.06%20PM.png" width=“50%” style="float:right; margin-left:30px">
-
-#### Developing a heuristic for text compression
+## Developing a heuristic for text compression
 
 In lesson 13 students will use a widget to compress short chunks of text. This lesson, which we saw during the in-person professional development, is an opportunity to learn about heuristics, which are rules of thumb that for a general algorithm for solving a problem. Text compression leads to developing a heuristic because the specifics of compressing the text will change as the text being compressed changes, so we need a general principle to follow for compressing the text (for example, looking for patterns of 3 letter combinations that repeat across different words). 
-<br><br>
+
 >Let’s start by opening the <a href=https://studio.code.org/s/cspunit1/stage/13/puzzle/2 target=“_blank”>text compression level</a> in another page. **Go through a couple of different poems, and work to develop a heuristic for compressing the text.**  
 
-<br>
-<a href="http://forum.code.org/t/lesson-13-text-compression/574" target="blank"><button class="plc">Forum Thread for Lesson 13 >></button></a>  
-<br>
+#### <a href="http://forum.code.org/t/lesson-13-text-compression/574" target="blank">Forum Thread for Lesson 13 <i class="fa fa-external-link-square" /></a>
 
 >In the forum, share the following:
 
->- your **rules, or heuristic,** for compressing the text
-- how you went about **developing your heuristic** 
-- the **highest compression** you achieved (compression rate and poem)
+>- Your **rules, or heuristic,** for compressing the text
+>- How you went about **developing your heuristic**
+>- The **highest compression** you achieved (compression rate and poem)
 
+**Once you've posted in the forum, click continue below.**
 
-
-<br>
-#####  **Once you've posted in the forum, click continue below**
-<br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

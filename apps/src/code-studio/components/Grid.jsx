@@ -87,12 +87,13 @@ var Cell = React.createClass({
 
     return (
       <td
-          className={classNames.join(' ')}
-          onClick={this.props.onClick.bind(null, this.props.row, this.props.col)}
-          onMouseDown={this.props.onMouseDown.bind(null, this.props.row, this.props.col)}
-          onMouseOver={this.props.onMouseOver.bind(null, this.props.row, this.props.col)}
-          onMouseUp={this.props.onMouseUp.bind(null, this.props.row, this.props.col)}
-          style={tdStyle}>
+        className={classNames.join(' ')}
+        onClick={this.props.onClick.bind(null, this.props.row, this.props.col)}
+        onMouseDown={this.props.onMouseDown.bind(null, this.props.row, this.props.col)}
+        onMouseOver={this.props.onMouseOver.bind(null, this.props.row, this.props.col)}
+        onMouseUp={this.props.onMouseUp.bind(null, this.props.row, this.props.col)}
+        style={tdStyle}
+      >
         {text}
       </td>
     );

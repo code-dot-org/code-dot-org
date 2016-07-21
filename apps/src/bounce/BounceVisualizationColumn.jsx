@@ -1,5 +1,5 @@
 import React from 'react';
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 
 var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
@@ -16,7 +16,7 @@ var BounceVisualizationColumn = function () {
       <GameButtons>
         <ArrowButtons/>
 
-        {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
+        {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
 
         <ProtectedStatefulDiv id="share-cell-wrapper">
           <div id="share-cell" className="share-cell-none">

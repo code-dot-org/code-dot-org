@@ -1,6 +1,6 @@
 var React = require('react');
 var applabMsg = require('./locale');
-var msg = require('../locale');
+var msg = require('@cdo/locale');
 var FontAwesome = require('../templates/FontAwesome');
 
 module.exports = React.createClass({
@@ -46,12 +46,12 @@ module.exports = React.createClass({
     var manageAssetsIcon = (
       <span style={styles.iconContainer}>
         <FontAwesome
-            icon="cog"
-            className="workspace-header-clickable"
-            id="manage-assets-button"
-            style={styles.assetsIcon}
-            onClick={this.handleManageAssets}
-            title={applabMsg.manageAssets()}
+          icon="cog"
+          className="workspace-header-clickable"
+          id="manage-assets-button"
+          style={styles.assetsIcon}
+          onClick={this.handleManageAssets}
+          title={applabMsg.manageAssets()}
         />
       </span>
     );
@@ -63,8 +63,11 @@ module.exports = React.createClass({
           <span>{applabMsg.designToolboxHeader()}</span>
           <span className="workspace-header-clickable" onClick={this.onToggleToolbox}>&nbsp;{msg.hideToolbox()}</span>
         </div>
-        <div className="workspace-header" onClick={this.onToggleToolbox}
-            style={styles.showToolboxHeader}>
+        <div
+          className="workspace-header"
+          onClick={this.onToggleToolbox}
+          style={styles.showToolboxHeader}
+        >
           <span className="workspace-header-clickable">{msg.showToolbox()}</span>
           {manageAssetsIcon}
         </div>

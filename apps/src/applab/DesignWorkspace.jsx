@@ -31,11 +31,12 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    return <div id="designWorkspaceWrapper">
+    return (<div id="designWorkspaceWrapper">
       <DesignModeHeaders
         handleManageAssets={this.props.handleManageAssets}
         onToggleToolbox={this.onToggleToolbox}
-        isToolboxVisible={this.state.isToolboxVisible} />
+        isToolboxVisible={this.state.isToolboxVisible}
+      />
       <DesignModeBox
         handleDragStart={this.props.handleDragStart}
         element={this.props.element}
@@ -47,7 +48,8 @@ module.exports = React.createClass({
         onDelete={this.props.onDelete}
         onInsertEvent={this.props.onInsertEvent}
         isToolboxVisible={this.state.isToolboxVisible}
-        isDimmed={this.props.isDimmed} />
-    </div>;
+        isDimmed={this.props.isDimmed}
+      />
+    </div>);
   }
 });

@@ -3,7 +3,7 @@ import React from 'react';
 import {changeInterfaceMode} from './actions';
 import {connect} from 'react-redux';
 import {GameLabInterfaceMode} from './constants';
-import msg from '../locale';
+import msg from '@cdo/locale';
 import ToggleGroup from '../templates/ToggleGroup';
 import styleConstants from '../styleConstants';
 import {allowAnimationMode} from './stateQueries';
@@ -32,8 +32,8 @@ const GameLabVisualizationHeader = React.createClass({
     return (
       <div style={styles.main}>
         <ToggleGroup
-            selected={interfaceMode}
-            onChange={onInterfaceModeChange}
+          selected={interfaceMode}
+          onChange={onInterfaceModeChange}
         >
           <button value={GameLabInterfaceMode.CODE} id="codeMode">
             {msg.codeMode()}

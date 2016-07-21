@@ -1,27 +1,21 @@
 name 'PDAlg Design Recipe Updates'
-css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
-
-### THE DESIGN RECIPE > Working Examples
+# The Design Recipe > Working Examples
 
 In the earlier version of our software, the Design Recipe didn't really enforce the practices that we want students to follow. While you could make examples, you didn't have to, and even if you chose to make them, there was no way to check if they were really right. Over the summer we've put a lot of work fleshing out the Design Recipe to make it more effictive both as a teaching tool, and as a support for students.
 
-#### Test cases
+## Test cases
 
 Examples are a great tool to help students build pattern recognition skills, but in the Computer Science world they serve another purpose, as test cases. Test cases, or unit tests, let programmers write self-testing code. With unit tests in place, any updates or feature additions that might break your program would trigger a failed test, saving programmers a ton of time and preventing bugs from going unseen until the public gets their hands on your software.
 
-#### Running your examples
+## Running your examples
 
 You'll see that examples each have a _Test_ button underneath them. Clicking the _Test_ button will do two things. First, it will run  your example code in the play space so you can see what it produces. Second, it will compare the example against your definition, letting you know whether it does or does not match the definition.
 
-<br><br>
 ![examples](//studio.code.org/script_assets/pd/examples.gif)
-<br><br>
+
 The examples will be tested again when you run your entire program, and you'll get a warning if your examples don't match your definition.
-<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

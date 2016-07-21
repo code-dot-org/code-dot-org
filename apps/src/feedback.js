@@ -34,7 +34,7 @@ var trophy = require('./templates/trophy.html.ejs');
 var utils = require('./utils');
 var _ = require('lodash');
 var codegen = require('./codegen');
-var msg = require('./locale');
+var msg = require('@cdo/locale');
 var dom = require('./dom');
 var xml = require('./xml');
 var FeedbackBlocks = require('./feedbackBlocks');
@@ -1007,13 +1007,16 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
     <div>
       {options.headerText && <p className="dialog-title">{options.headerText}</p>}
       {options.bodyText && <p>{options.bodyText}</p>}
-      {options.prompt && <input
+      {options.prompt &&
+        <input
           style={textBoxStyle}
-          defaultValue={options.promptPrefill} />}
+          defaultValue={options.promptPrefill}
+        />}
       <DialogButtons
-          confirmText={options.confirmText}
-          cancelText={options.cancelText}
-          cancelButtonClass={options.cancelButtonClass} />
+        confirmText={options.confirmText}
+        cancelText={options.cancelText}
+        cancelButtonClass={options.cancelButtonClass}
+      />
     </div>,
     document.createElement('div'));
 

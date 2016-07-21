@@ -70,11 +70,11 @@ var ImagePicker = React.createClass({
 
     var imageTypeFilter = !this.props.typeFilter || this.props.typeFilter === 'image';
     if (this.props.assetChosen && imageTypeFilter) {
-      modeSwitch = <div>
+      modeSwitch = (<div>
         <p onClick={this.setFileMode} style={styles.fileModeToggle}>My Files</p>
         <p onClick={this.setIconMode} style={styles.iconModeToggle}>Icons</p>
         <hr style={styles.divider}/>
-      </div>;
+      </div>);
     }
 
     var body = !this.props.assetChosen || this.state.mode === 'files' ?
@@ -82,7 +82,8 @@ var ImagePicker = React.createClass({
         assetChosen={this.props.assetChosen}
         allowedExtensions={extensionFilter[this.props.typeFilter]}
         channelId={this.props.channelId}
-        uploadsEnabled={this.props.uploadsEnabled}/> :
+        uploadsEnabled={this.props.uploadsEnabled}
+      /> :
       <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;
 
     return (

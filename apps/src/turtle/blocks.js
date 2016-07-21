@@ -25,7 +25,7 @@
 
 var Colours = require('./colours');
 var msg = require('./locale');
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 
 var customLevelBlocks = require('./customLevelBlocks');
 var Turtle = require('./turtle');

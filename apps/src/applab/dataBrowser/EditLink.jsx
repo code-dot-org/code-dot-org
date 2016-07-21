@@ -11,7 +11,7 @@ const EditLink = React.createClass({
 
   render() {
     return (
-      <a style={dataStyles.link} href='#' onClick={this.props.onClick}>
+      <a style={dataStyles.link} href="#" onClick={this.props.onClick}>
         {this.props.name}
       </a>
     );

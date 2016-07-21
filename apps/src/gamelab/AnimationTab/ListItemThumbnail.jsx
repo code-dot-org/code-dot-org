@@ -94,11 +94,11 @@ const ListItemThumbnail = React.createClass({
       <div style={styles.root}>
         <div ref="wrapper" style={styles.wrapper}>
           <AnimationPreview
-              animationProps={this.props.animationProps}
-              sourceUrl={this.props.animationProps.dataURI}
-              width={this.state.previewSize}
-              height={this.state.previewSize}
-              alwaysPlay={this.props.isSelected}
+            animationProps={this.props.animationProps}
+            sourceUrl={this.props.animationProps.dataURI}
+            width={this.state.previewSize}
+            height={this.state.previewSize}
+            alwaysPlay={this.props.isSelected}
           />
           {this.getIndexBubble()}
         </div>

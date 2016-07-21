@@ -68,7 +68,8 @@ var PropertyRow = React.createClass({
           <input
             value={this.state.value}
             onChange={this.handleChangeInternal}
-            style={rowStyle.input} />
+            style={rowStyle.input}
+          />
           &nbsp;
           <a onClick={this.handleButtonClick}>
             Choose...

@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 var color = require('../color');
 var AgeDropdown = require('./AgeDropdown');
 
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 
 /**
  * Dialog contents for when you visit a shred Applab page. If not signed in,
@@ -74,10 +74,10 @@ var SharingWarnings = module.exports = React.createClass({
       dataPrompt = <div style={styles.dataMessage}>{i18n.storeDataMsg}</div>;
     }
     if (!this.props.is13Plus) {
-      agePrompt = <div>
+      agePrompt = (<div>
         <div style={styles.ageMessage}>{i18n.ageMsg}</div>
-        <AgeDropdown style={styles.ageDropdonw} ref='age'/>
-      </div>;
+        <AgeDropdown style={styles.ageDropdonw} ref="age"/>
+      </div>);
     }
 
     return (

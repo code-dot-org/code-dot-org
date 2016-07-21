@@ -1,6 +1,6 @@
-require('babel-polyfill');
-var $ = require('jquery');
-var React = require('react');
+import 'babel-polyfill';
+import React from 'react';
+import $ from 'jquery';
 import sinon from 'sinon';
 import {assert} from './configuredChai';
 
@@ -42,18 +42,6 @@ export function setExternalGlobals() {
   window.marked = function (str) {
     return str;
   };
-}
-
-export function setupLocale(app) {
-  setupLocales();
-}
-
-export function setupLocales() {
-  // make sure Blockly is loaded
-  require('./frame')();
-  var context = require.context('../../build/package/js/en_us/', false, /.*_locale.*\.js$/);
-  context.keys().forEach(context);
-  assert(window.blockly.applab_locale);
 }
 
 /**
