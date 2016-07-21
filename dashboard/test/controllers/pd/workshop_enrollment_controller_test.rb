@@ -241,13 +241,30 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_response 404
   end
 
+  test 'confirm_join succeeds and joins the section' do
+    # start to create section
+    @workshop.start!
+    teacher = create :teacher
+    sign_in teacher
+    create :pd_enrollment, name: teacher.name, email: teacher.email
+
+    assert_creates(Follower) do
+      post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher)
+    end
+
+    # Make sure the new follower is for our expected teacher and workshop section
+    follower = Follower.last
+    assert_equal teacher.id, follower.student_user_id
+    assert_equal @workshop.section.id, follower.section_id
+  end
+
   test 'confirm_join with no enrollment creates enrollment' do
     # start to create section
     @workshop.start!
     teacher = create :teacher
     sign_in teacher
 
-    assert_creates(Pd::Enrollment) do
+    assert_creates(Pd::Enrollment, Follower) do
       post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher)
     end
     enrollment = Pd::Enrollment.last
@@ -267,7 +284,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     student = create :student, email: params[:email]
     sign_in student
 
-    assert_creates(Pd::Enrollment) do
+    assert_creates(Pd::Enrollment, Follower) do
       post :confirm_join, section_code: @workshop.section.code, pd_enrollment: params
     end
 
