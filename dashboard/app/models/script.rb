@@ -35,7 +35,17 @@ class Script < ActiveRecord::Base
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
-  validates :name, presence: true, uniqueness: { case_sensitive: false}
+
+  attr_accessor :skip_name_format_validation
+
+  validates :name,
+    presence: true,
+    uniqueness: {case_sensitive: false},
+    format: {
+      unless: :skip_name_format_validation,
+      with: /\A[a-z0-9\-]+\z/,
+      message: 'can only contain lowercase letters, numbers and dashes'
+    }
 
   include SerializedProperties
 
@@ -532,7 +542,7 @@ class Script < ActiveRecord::Base
     name = {name: options.delete(:name)}
     script_key = ((id = options.delete(:id)) && {id: id}) || name
     script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)
-    script.update!(options)
+    script.update!(options.merge(skip_name_format_validation: true))
     script
   end
 
