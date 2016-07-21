@@ -47,7 +47,7 @@ $(function () {
           connectToBoard(port).then(board => {
             check('#board-connect');
           }).catch(e => {fail('#board-connect', e);});
-        }).catch(e => {fail('#board-plug', e)});
+        }).catch(e => {fail('#board-plug', e);});
       });
     } catch (e) {
       fail('#app-installed', e);
