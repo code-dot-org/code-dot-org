@@ -7,7 +7,7 @@ class LtiProviderControllerTest < ActionController::TestCase
   TEST_CONSUMER_KEY = "f10ee9fc082219227976f2c1603a3d77"
 
   setup do
-    CDO.lti_credentials[TEST_CONSUMER_KEY] = TEST_PROVIDER_KEY
+    CDO.stubs(:lti_credentials).returns({TEST_CONSUMER_KEY => TEST_PROVIDER_KEY})
   end
 
   def lti_consumer_params(consumer_key, consumer_secret, test_name, *args)
