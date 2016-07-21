@@ -96,6 +96,28 @@ function connectToBoard(portId) {
     const io = new PlaygroundIO({port: serialPort});
     const board = new five.Board({io: io, repl: false});
     board.once('ready', function () {
+      // Play "Charge!"
+      new five.Piezo({
+        pin: '5',
+        controller: PlaygroundIO.Piezo
+      }).play({
+        song: [
+          ["G3", 100],
+          ["C4", 100],
+          ["E4", 100],
+          ["G4", 50],
+          [null, 150],
+          ["E4", 75],
+          ["G4", 400],
+          [null, 50]
+        ],
+        tempo: 45000
+      });
+      const colorLeds = _.range(10).map(index => new five.Led.RGB({
+        controller: PlaygroundIO.Pixel,
+        pin: index
+      }));
+      colorLeds.forEach(l => l.color('green'));
       resolve(board);
     });
     board.once('error', reject);
