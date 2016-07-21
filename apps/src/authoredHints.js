@@ -207,9 +207,10 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (shouldAnimate) {
 
   ReactDOM.render(
     <Lightbulb
-        count={hintCount}
-        lit={hintCount > 0}
-        shouldAnimate={shouldAnimate}/>,
+      count={hintCount}
+      lit={hintCount > 0}
+      shouldAnimate={shouldAnimate}
+    />,
     this.lightbulb);
 };
 
@@ -222,7 +223,8 @@ AuthoredHints.prototype.getHintsDisplay = function () {
       hintReviewTitle={msg.hintReviewTitle()}
       seenHints={this.getSeenHints()}
       unseenHints={this.getUnseenHints()}
-      viewHint={this.showNextHint_.bind(this)}/>
+      viewHint={this.showNextHint_.bind(this)}
+    />
   );
 };
 
@@ -257,12 +259,16 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
       visible: function (event, api) {
         var container = api.get("content.text");
 
-        ReactDOM.render(<HintDialogContent
-          content={hint.content}
-          block={hint.block}
-        />, container, function () {
-          api.reposition();
-        });
+        ReactDOM.render(
+          <HintDialogContent
+            content={hint.content}
+            block={hint.block}
+          />,
+          container,
+          function () {
+            api.reposition();
+          }
+        );
 
         $(container).find('img').on('load', function (e) {
           api.reposition(e);

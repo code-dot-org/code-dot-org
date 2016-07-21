@@ -156,8 +156,8 @@ Eval.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={<EvalVisualizationColumn/>}
-          onMount={studioApp.init.bind(studioApp, config)}
+        visualizationColumn={<EvalVisualizationColumn/>}
+        onMount={studioApp.init.bind(studioApp, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)

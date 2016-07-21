@@ -60,8 +60,9 @@ module.exports = React.createClass({
     return (
       <div id="design-mode-container" style={styles.container}>
         <DesignToolbox
-            handleDragStart={this.props.handleDragStart}
-            isToolboxVisible={this.props.isToolboxVisible}/>
+          handleDragStart={this.props.handleDragStart}
+          isToolboxVisible={this.props.isToolboxVisible}
+        />
         <div id="design-properties" style={styles.designProperties}>
           <DesignProperties
             element={this.props.element}
@@ -71,7 +72,8 @@ module.exports = React.createClass({
             onDepthChange={this.props.onDepthChange}
             onDuplicate={this.props.onDuplicate}
             onDelete={this.props.onDelete}
-            onInsertEvent={this.props.onInsertEvent}/>
+            onInsertEvent={this.props.onInsertEvent}
+          />
         </div>
         {transparencyLayer}
       </div>

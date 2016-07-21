@@ -177,8 +177,8 @@ Jigsaw.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={<JigsawVisualizationColumn/>}
-          onMount={onMount}
+        visualizationColumn={<JigsawVisualizationColumn/>}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)

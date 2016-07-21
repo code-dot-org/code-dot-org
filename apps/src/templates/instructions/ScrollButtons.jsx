@@ -74,14 +74,14 @@ const ScrollButtons = React.createClass({
     return (
       <div style={this.props.style}>
         <div
-            ref='scrollUp'
-            onClick={this.props.onScrollUp}
-            style={scrollUpStyle}
+          ref="scrollUp"
+          onClick={this.props.onScrollUp}
+          style={scrollUpStyle}
         />
         <div
-            ref='scrollDown'
-            onClick={this.props.onScrollDown}
-            style={scrollDownStyle}
+          ref="scrollDown"
+          onClick={this.props.onScrollDown}
+          style={scrollDownStyle}
         />
       </div>
     );

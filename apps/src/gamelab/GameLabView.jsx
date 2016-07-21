@@ -65,16 +65,16 @@ const GameLabView = React.createClass({
     return (
       <div style={codeModeStyle}>
         <div
-            id="visualizationColumn"
-            className={visualizationColumnClassNames}
-            style={visualizationColumnStyle}
+          id="visualizationColumn"
+          className={visualizationColumnClassNames}
+          style={visualizationColumnStyle}
         >
           {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
           <GameLabVisualizationColumn finishButton={showFinishButton}/>
         </div>
         <ProtectedStatefulDiv
-            id="visualizationResizeBar"
-            className="fa fa-ellipsis-v"
+          id="visualizationResizeBar"
+          className="fa fa-ellipsis-v"
         />
         <InstructionsWithWorkspace>
           <CodeWorkspace/>

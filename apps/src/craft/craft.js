@@ -318,8 +318,8 @@ Craft.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={<CraftVisualizationColumn/>}
-          onMount={onMount}
+        visualizationColumn={<CraftVisualizationColumn/>}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)

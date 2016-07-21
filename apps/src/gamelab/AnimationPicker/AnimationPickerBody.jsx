@@ -33,21 +33,21 @@ const AnimationPickerBody = React.createClass({
         <AnimationPickerSearchBar />
         <ScrollableList style={{maxHeight: 400}}> {/* TODO: Is this maxHeight appropriate? */}
           <AnimationPickerListItem
-              label={gamelabMsg.animationPicker_drawYourOwn()}
-              icon="pencil"
-              onClick={this.props.onDrawYourOwnClick}
+            label={gamelabMsg.animationPicker_drawYourOwn()}
+            icon="pencil"
+            onClick={this.props.onDrawYourOwnClick}
           />
           <AnimationPickerListItem
-              label={gamelabMsg.animationPicker_uploadImage()}
-              icon="upload"
-              onClick={this.props.onUploadClick}
+            label={gamelabMsg.animationPicker_uploadImage()}
+            icon="upload"
+            onClick={this.props.onUploadClick}
           />
           {animationLibrary.map(animationProps =>
             <AnimationPickerListItem
-                key={animationProps.sourceUrl}
-                label={`${animationProps.name} (${animationProps.frameCount})`}
-                animationProps={animationProps}
-                onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
+              key={animationProps.sourceUrl}
+              label={`${animationProps.name} (${animationProps.frameCount})`}
+              animationProps={animationProps}
+              onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
             />
           )}
         </ScrollableList>

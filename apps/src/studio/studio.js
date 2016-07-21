@@ -2007,8 +2007,8 @@ Studio.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={onMount}
+        visualizationColumn={visualizationColumn}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)

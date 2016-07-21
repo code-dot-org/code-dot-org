@@ -35,7 +35,8 @@ var BooleanPropertyRow = React.createClass({
           <div
             className={classes}
             style={rowStyle.checkbox}
-            onClick={this.handleClick}/>
+            onClick={this.handleClick}
+          />
         </div>
       </div>
     );

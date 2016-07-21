@@ -43,7 +43,7 @@ describe('ProgressDot component tests', () => {
 
   it('highlights the current level on the course overview page', () => {
     renderer.render(
-      <ProgressDot level={level} saveAnswersBeforeNavigation={false} currentLevelId='123' courseOverviewPage={true} />
+      <ProgressDot level={level} saveAnswersBeforeNavigation={false} currentLevelId="123" courseOverviewPage={true} />
     );
 
     const result = renderer.getRenderOutput();
@@ -53,7 +53,7 @@ describe('ProgressDot component tests', () => {
 
   it('does not highlight the current level in single-stage view', () => {
     renderer.render(
-      <ProgressDot level={level} saveAnswersBeforeNavigation={false} currentLevelId='123' />
+      <ProgressDot level={level} saveAnswersBeforeNavigation={false} currentLevelId="123" />
     );
 
     const result = renderer.getRenderOutput();

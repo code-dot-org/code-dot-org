@@ -33,7 +33,7 @@ const CourseProgress = React.createClass({
     let count = 1;
 
     return (
-      <div className='user-stats-block'>
+      <div className="user-stats-block">
         {_.map(groups, (stages, group) =>
           <div key={group}>
             <h4

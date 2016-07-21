@@ -48,19 +48,19 @@ var Instructions = React.createClass({
       <div style={styles.main}>
         {this.props.renderedMarkdown &&
           <MarkdownInstructions
-              ref="instructionsMarkdown"
-              renderedMarkdown={this.props.renderedMarkdown}
-              onResize={this.props.onResize}
-              inTopPane={this.props.inTopPane}
+            ref="instructionsMarkdown"
+            renderedMarkdown={this.props.renderedMarkdown}
+            onResize={this.props.onResize}
+            inTopPane={this.props.inTopPane}
           />
         }
         { /* Note: In this case props.instructions might be undefined, but we
           still want to render NonMarkdownInstructions to get the puzzle title */
         !this.props.renderedMarkdown &&
           <NonMarkdownInstructions
-              puzzleTitle={this.props.puzzleTitle}
-              instructions={this.props.instructions}
-              instructions2={this.props.instructions2}
+            puzzleTitle={this.props.puzzleTitle}
+            instructions={this.props.instructions}
+            instructions2={this.props.instructions2}
           />
         }
         {this.props.inputOutputTable &&

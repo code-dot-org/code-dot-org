@@ -17,9 +17,13 @@ var EncodedParagraph = React.createClass({
     text: React.PropTypes.string,
   },
   render: function () {
-    return <p dangerouslySetInnerHTML={{
-        __html: decodeURIComponent(this.props.text)
-    }}/>;
+    return (
+      <p
+        dangerouslySetInnerHTML={{
+          __html: decodeURIComponent(this.props.text)
+        }}
+      />
+    );
   }
 });
 
@@ -187,13 +191,18 @@ var SmallFooter = React.createClass({
     return (
       <div className={this.props.className} style={styles.smallFooter}>
         <div className="small-footer-base" ref="base" style={styles.base} onClick={this.clickBase}>
-          <div dangerouslySetInnerHTML={{
+          <div
+            dangerouslySetInnerHTML={{
               __html: decodeURIComponent(this.props.i18nDropdown)
-          }}/>
+            }}
+          />
           <small>
             {this.renderCopyright()}
-            <a className="more-link" href="javascript:void(0)"
-              onClick={this.clickBaseMenu}>
+            <a
+              className="more-link"
+              href="javascript:void(0)"
+              onClick={this.clickBaseMenu}
+            >
               {this.props.baseMoreMenuString + ' '}
               <i className={caretIcon}/>
             </a>
@@ -218,8 +227,11 @@ var SmallFooter = React.createClass({
     if (this.props.copyrightInBase) {
       return (
         <span>
-          <a className="copyright-link" href="#"
-            onClick={this.clickBaseCopyright}>
+          <a
+            className="copyright-link"
+            href="#"
+            onClick={this.clickBaseCopyright}
+          >
             {this.props.baseCopyrightString}
           </a>
           &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -232,10 +244,12 @@ var SmallFooter = React.createClass({
     var menuItemElements = this.props.menuItems.map(function (item, index) {
       return (
         <li key={index} style={styles.listItem}>
-        <a href={item.link}
-            ref={item.copyright ? "menuCopyright" : undefined}
-            target={item.newWindow ? "_blank" : "_parent"}
-            onClick={item.copyright ? this.clickMenuCopyright : undefined}>
+        <a
+          href={item.link}
+          ref={item.copyright ? "menuCopyright" : undefined}
+          target={item.newWindow ? "_blank" : "_parent"}
+          onClick={item.copyright ? this.clickMenuCopyright : undefined}
+        >
           {item.text}
         </a>
         </li>

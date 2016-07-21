@@ -32,8 +32,9 @@ var DefaultScreenButtonPropertyRow = React.createClass({
     return (
       <div style={{marginLeft: 15}}>
         <button
-        style={defaultButtonStyle}
-        onClick={this.handleMakeDefault}>
+          style={defaultButtonStyle}
+          onClick={this.handleMakeDefault}
+        >
         Make Default
       </button>
     </div>

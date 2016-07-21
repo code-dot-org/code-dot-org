@@ -93,18 +93,19 @@ var AssetManager = React.createClass({
   },
 
   render: function () {
-    var uploadButton = <div>
+    var uploadButton = (<div>
       <AssetUploader
         uploadsEnabled={this.props.uploadsEnabled}
         allowedExtensions={this.props.allowedExtensions}
         channelId={this.props.channelId}
         onUploadStart={this.onUploadStart}
         onUploadDone={this.onUploadDone}
-        onUploadError={this.onUploadError}/>
+        onUploadError={this.onUploadError}
+      />
       <span style={{margin: '0 10px'}} id="manage-asset-status">
         {this.state.statusMessage}
       </span>
-    </div>;
+    </div>);
 
     var assetList;
     // If `this.state.assets` is null, the asset list is still loading. If it's
@@ -131,13 +132,16 @@ var AssetManager = React.createClass({
         var choose = this.props.assetChosen && this.props.assetChosen.bind(this,
             asset.filename);
 
-        return <AssetRow
+        return (
+          <AssetRow
             key={asset.filename}
             name={asset.filename}
             type={asset.category}
             size={asset.size}
             onChoose={choose}
-            onDelete={this.deleteAssetRow.bind(this, asset.filename)} />;
+            onDelete={this.deleteAssetRow.bind(this, asset.filename)}
+          />
+        );
       }.bind(this));
 
       assetList = (

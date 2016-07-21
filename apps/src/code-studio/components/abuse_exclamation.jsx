@@ -77,9 +77,10 @@ export default React.createClass({
           </td>
           <td style={bodyStyle}>
             <AbuseError
-                i18n={this.props.i18n}
-                className="exclamation-abuse"
-                textStyle={textStyle}/>
+              i18n={this.props.i18n}
+              className="exclamation-abuse"
+              textStyle={textStyle}
+            />
             <p className="exclamation-abuse" style={textStyle}>
               <a href={finalLink}>{finalLinkText}</a>
             </p>
