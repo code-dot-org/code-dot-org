@@ -982,6 +982,14 @@ Artist.prototype.step = function (command, values, options) {
       this.setHeading_(heading);
       this.moveForward_(result.distance);
       break;
+    case 'MD':  // Move diagonally (use longer steps if showing joints)
+      distance = values[0];
+      heading = values[1];
+      result = this.calculateSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      this.setHeading_(heading);
+      this.moveForward_(result.distance, true);
+      break;
     case 'JD':  // Jump (direction)
       distance = values[0];
       heading = values[1];
@@ -1147,7 +1155,7 @@ Artist.prototype.constrainDegrees_ = function (degrees) {
   return degrees;
 };
 
-Artist.prototype.moveForward_ = function (distance) {
+Artist.prototype.moveForward_ = function (distance, isDiagonal) {
   if (!this.penDownValue) {
     this.jumpForward_(distance);
     return;
@@ -1161,33 +1169,37 @@ Artist.prototype.moveForward_ = function (distance) {
     }
   }
 
-  this.drawForward_(distance);
+  this.drawForward_(distance, isDiagonal);
 };
 
-Artist.prototype.drawForward_ = function (distance) {
+Artist.prototype.drawForward_ = function (distance, isDiagonal) {
   if (this.shouldDrawJoints_()) {
-    this.drawForwardWithJoints_(distance);
+    this.drawForwardWithJoints_(distance, isDiagonal);
   } else {
     this.drawForwardLine_(distance);
   }
 };
 
 /**
- * Draws a line of length `distance`, adding joint knobs along the way
+ * Draws a line of length `distance`, adding joint knobs along the way at
+ * intervals of `JOINT_SEGMENT_LENGTH` if `isDiagonal` is false, or
+ * `JOINT_SEGMENT_LENGTH * sqrt(2)` if `isDiagonal` is true.
  * @param distance
+ * @param isDiagonal
  */
-Artist.prototype.drawForwardWithJoints_ = function (distance) {
+Artist.prototype.drawForwardWithJoints_ = function (distance, isDiagonal) {
   var remainingDistance = distance;
+  var segmentLength = JOINT_SEGMENT_LENGTH * (isDiagonal ? Math.sqrt(2) : 1);
+
+  if (remainingDistance >= segmentLength) {
+    this.drawJointAtTurtle_();
+  }
 
   while (remainingDistance > 0) {
-    var enoughForFullSegment = remainingDistance >= JOINT_SEGMENT_LENGTH;
-    var currentSegmentLength = enoughForFullSegment ? JOINT_SEGMENT_LENGTH : remainingDistance;
+    var enoughForFullSegment = remainingDistance >= segmentLength;
+    var currentSegmentLength = enoughForFullSegment ? segmentLength : remainingDistance;
 
     remainingDistance -= currentSegmentLength;
-
-    if (enoughForFullSegment) {
-      this.drawJointAtTurtle_();
-    }
 
     this.drawForwardLine_(currentSegmentLength);
 

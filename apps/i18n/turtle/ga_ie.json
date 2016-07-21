@@ -81,5 +81,13 @@
   "turnTooltip": "Casann seo an t-ealaíontóir ar chlé tríd an uillinn shonraithe.",
   "turtleVisibilityTooltip": "Taispeáin nó folaigh an t-ealaíontóir.",
   "widthTooltip": "Athraíonn seo leithead an phinn.",
-  "wrongColour": "Tá dath an phictiúir mícheart. Ní mór %1 a úsáid don dúshlán seo."
+  "wrongColour": "Tá dath an phictiúir mícheart. Ní mór %1 a úsáid don dúshlán seo.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

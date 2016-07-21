@@ -81,5 +81,13 @@
   "turnTooltip": "චිත්‍ර ශිල්පියා නිශ්චිත කෝණයකින් දකුනට හෝ වමට හරවන්න.",
   "turtleVisibilityTooltip": "චිත්‍ර ශිල්පියා දෘශ්යමාන හෝ අදෘශ්යමාන කරන්න.",
   "widthTooltip": "පැන්සලේ පළල වෙනස් කිරීම.",
-  "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1."
+  "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

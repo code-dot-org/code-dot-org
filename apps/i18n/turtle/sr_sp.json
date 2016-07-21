@@ -81,5 +81,13 @@
   "turnTooltip": "Окреће уметника улево или удесно за одређени број степени.",
   "turtleVisibilityTooltip": "Чини уметника видљивим или невидљивим.",
   "widthTooltip": "Мења ширину оловке.",
-  "wrongColour": "Ваша је слика погрешне боје. За слагалицу, мора бити %1."
+  "wrongColour": "Ваша је слика погрешне боје. За слагалицу, мора бити %1.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }
