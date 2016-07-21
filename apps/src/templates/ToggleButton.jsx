@@ -15,10 +15,11 @@ var ToggleButton = React.createClass({
   render: function () {
     return (
       <button
-          id={this.props.id}
-          style={this.getStyle()}
-          className='no-outline'
-          onClick={this.props.onClick}>
+        id={this.props.id}
+        style={this.getStyle()}
+        className="no-outline"
+        onClick={this.props.onClick}
+      >
         {this.props.children}
       </button>
     );

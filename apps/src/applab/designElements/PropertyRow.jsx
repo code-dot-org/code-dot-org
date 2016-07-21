@@ -100,16 +100,22 @@ var PropertyRow = React.createClass({
 
     var inputElement;
     if (this.props.isMultiLine) {
-      inputElement = <textarea
-        value={this.state.value}
-        onChange={this.handleChangeInternal} />;
+      inputElement = (
+        <textarea
+          value={this.state.value}
+          onChange={this.handleChangeInternal}
+        />
+      );
     } else {
-      inputElement = <input
-        type={this.props.isNumber ? 'number' : undefined}
-        value={this.state.value}
-        onChange={this.handleChangeInternal}
-        onBlur={this.props.isIdRow ? this.onIdRowBlur : null}
-        style={inputStyle} />;
+      inputElement = (
+        <input
+          type={this.props.isNumber ? 'number' : undefined}
+          value={this.state.value}
+          onChange={this.handleChangeInternal}
+          onBlur={this.props.isIdRow ? this.onIdRowBlur : null}
+          style={inputStyle}
+        />
+      );
     }
 
     var lockStyle = {
@@ -121,10 +127,12 @@ var PropertyRow = React.createClass({
     if (this.props.lockState) {
       var lockClass = "fa fa-" + (this.props.lockState === LockState.LOCKED ?
         'lock' : 'unlock');
-      lockIcon = (<i
-        className={lockClass}
-        style={lockStyle}
-        onClick={this.handleClickLock}/>
+      lockIcon = (
+        <i
+          className={lockClass}
+          style={lockStyle}
+          onClick={this.handleClickLock}
+        />
       );
     }
 

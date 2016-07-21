@@ -25,7 +25,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var jsnums = require('./js-numbers/js-numbers.js');
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var calcMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
@@ -209,8 +209,8 @@ Calc.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={<CalcVisualizationColumn/>}
-          onMount={studioApp.init.bind(studioApp, config)}
+        visualizationColumn={<CalcVisualizationColumn/>}
+        onMount={studioApp.init.bind(studioApp, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)

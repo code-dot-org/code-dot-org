@@ -26,7 +26,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
@@ -646,8 +646,8 @@ Maze.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={studioApp.init.bind(studioApp, config)}
+        visualizationColumn={visualizationColumn}
+        onMount={studioApp.init.bind(studioApp, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)

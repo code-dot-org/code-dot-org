@@ -43,25 +43,25 @@ describe('TooltipOverlay', () => {
             <g className="tooltip-overlay">
               <g key={0}>
                 <rect
-                    x={6}
-                    y={6}
-                    width={TEXT_RECT_WIDTH}
-                    height={TEXT_RECT_HEIGHT}
-                    rx={TEXT_RECT_RADIUS}
-                    ry={TEXT_RECT_RADIUS}
-                    style={styles.rect}
+                  x={6}
+                  y={6}
+                  width={TEXT_RECT_WIDTH}
+                  height={TEXT_RECT_HEIGHT}
+                  rx={TEXT_RECT_RADIUS}
+                  ry={TEXT_RECT_RADIUS}
+                  style={styles.rect}
                 />
                 <text x={61} y={20} style={styles.text}>one</text>
               </g>
               <g key={1}>
                 <rect
-                    x={6}
-                    y={31}
-                    width={TEXT_RECT_WIDTH}
-                    height={TEXT_RECT_HEIGHT}
-                    rx={TEXT_RECT_RADIUS}
-                    ry={TEXT_RECT_RADIUS}
-                    style={styles.rect}
+                  x={6}
+                  y={31}
+                  width={TEXT_RECT_WIDTH}
+                  height={TEXT_RECT_HEIGHT}
+                  rx={TEXT_RECT_RADIUS}
+                  ry={TEXT_RECT_RADIUS}
+                  style={styles.rect}
                 />
                 <text x={61} y={45} style={styles.text}>two</text>
               </g>
@@ -77,25 +77,25 @@ describe('TooltipOverlay', () => {
             <g className="tooltip-overlay">
               <g key={0}>
                 <rect
-                    x={EXPECTED_RECT_X}
-                    y={148}
-                    width={TEXT_RECT_WIDTH}
-                    height={TEXT_RECT_HEIGHT}
-                    rx={TEXT_RECT_RADIUS}
-                    ry={TEXT_RECT_RADIUS}
-                    style={styles.rect}
+                  x={EXPECTED_RECT_X}
+                  y={148}
+                  width={TEXT_RECT_WIDTH}
+                  height={TEXT_RECT_HEIGHT}
+                  rx={TEXT_RECT_RADIUS}
+                  ry={TEXT_RECT_RADIUS}
+                  style={styles.rect}
                 />
                 <text x={EXPECTED_TEXT_X} y={162} style={styles.text}>one</text>
               </g>
               <g key={1}>
                 <rect
-                    x={EXPECTED_RECT_X}
-                    y={173}
-                    width={TEXT_RECT_WIDTH}
-                    height={TEXT_RECT_HEIGHT}
-                    rx={TEXT_RECT_RADIUS}
-                    ry={TEXT_RECT_RADIUS}
-                    style={styles.rect}
+                  x={EXPECTED_RECT_X}
+                  y={173}
+                  width={TEXT_RECT_WIDTH}
+                  height={TEXT_RECT_HEIGHT}
+                  rx={TEXT_RECT_RADIUS}
+                  ry={TEXT_RECT_RADIUS}
+                  style={styles.rect}
                 />
                 <text x={EXPECTED_TEXT_X} y={187} style={styles.text}>two</text>
               </g>
@@ -148,25 +148,27 @@ describe('TooltipOverlay', () => {
     let renderer = ReactTestUtils.createRenderer();
     renderer.render(
         <TooltipOverlay
-            width={TEST_APP_WIDTH}
-            height={TEST_APP_HEIGHT}
-            mouseX={x}
-            mouseY={y}
-            providers={providers}
-            tooltipAboveCursor={above}
+          width={TEST_APP_WIDTH}
+          height={TEST_APP_HEIGHT}
+          mouseX={x}
+          mouseY={y}
+          providers={providers}
+          tooltipAboveCursor={above}
         />
     );
     return renderer.getRenderOutput();
   }
 
   function withProviders(providers) {
-    return ReactTestUtils.renderIntoDocument(<TooltipOverlay
+    return ReactTestUtils.renderIntoDocument(
+      <TooltipOverlay
         width={TEST_APP_WIDTH}
         height={TEST_APP_HEIGHT}
         mouseX={0}
         mouseY={0}
         providers={providers}
-    />);
+      />
+    );
   }
 
   function withStrings(strings) {

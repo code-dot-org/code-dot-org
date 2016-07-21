@@ -5,7 +5,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var craftMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
@@ -318,8 +318,8 @@ Craft.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={<CraftVisualizationColumn/>}
-          onMount={onMount}
+        visualizationColumn={<CraftVisualizationColumn/>}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)

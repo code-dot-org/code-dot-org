@@ -5,7 +5,7 @@ import DataTable from './DataTable';
 import React from 'react';
 import PaneHeader, { PaneSection } from '../../templates/PaneHeader';
 import { connect } from 'react-redux';
-import msg from '../../locale';
+import msg from '@cdo/locale';
 import color from '../../color';
 
 const styles = {
@@ -35,22 +35,23 @@ const DataWorkspace = React.createClass({
       display: this.props.isVisible ? 'block' : 'none'
     };
     return (
-      <div id='dataWorkspaceWrapper' style={style}>
+      <div id="dataWorkspaceWrapper" style={style}>
         <PaneHeader
-            id='headers'
-            dir={this.props.localeDirection}
-            hasFocus={!this.props.isRunning}
-            className={this.props.isRunning ? 'is-running' : ''}>
-          <div id='dataModeHeaders'>
-            <PaneSection id='workspace-header'>
-              <span id='workspace-header-span'>
+          id="headers"
+          dir={this.props.localeDirection}
+          hasFocus={!this.props.isRunning}
+          className={this.props.isRunning ? 'is-running' : ''}
+        >
+          <div id="dataModeHeaders">
+            <PaneSection id="workspace-header">
+              <span id="workspace-header-span">
                 {msg.dataWorkspaceHeader()}
               </span>
             </PaneSection>
           </div>
         </PaneHeader>
 
-        <div id='data-mode-container' style={styles.container}>
+        <div id="data-mode-container" style={styles.container}>
           <DataOverview/>
           <DataProperties/>
           <DataTable/>

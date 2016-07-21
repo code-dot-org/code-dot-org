@@ -43,28 +43,32 @@ var ZOrderRow = React.createClass({
             style={isBackMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toBack')}
             disabled={isBackMost}
-            title='Send to Back'>
+            title="Send to Back"
+          >
             <FontAwesome icon="angle-double-left" />
           </button>
           <button
             style={isBackMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'backward')}
             disabled={isBackMost}
-            title='Send Backward'>
+            title="Send Backward"
+          >
             <FontAwesome icon="angle-left" />
           </button>
           <button
             style={isFrontMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'forward')}
             disabled={isFrontMost}
-            title='Send Forward'>
+            title="Send Forward"
+          >
             <FontAwesome icon="angle-right" />
           </button>
           <button
             style={isFrontMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toFront')}
             disabled={isFrontMost}
-            title='Send to Front'>
+            title="Send to Front"
+          >
             <FontAwesome icon="angle-double-right" />
           </button>
         </div>

@@ -36,16 +36,16 @@ const AnimationList = React.createClass({
         <ScrollableList style={styles.root} className="animationList">
           {this.props.animationList.orderedKeys.map(key =>
             <AnimationListItem
-                key={key}
-                animationKey={key}
-                animationProps={this.props.animationList.propsByKey[key]}
-                isSelected={key === this.props.selectedAnimation}
+              key={key}
+              animationKey={key}
+              animationProps={this.props.animationList.propsByKey[key]}
+              isSelected={key === this.props.selectedAnimation}
             />
           )}
           <NewListItem
-              key="new_animation"
-              label="new sequence"
-              onClick={this.props.onNewItemClick}
+            key="new_animation"
+            label="new sequence"
+            onClick={this.props.onNewItemClick}
           />
         </ScrollableList>
     );

@@ -87,11 +87,11 @@ var ApplabVisualizationColumn = React.createClass({
       // wrap our visualization in a phone frame
       visualization = (
         <PhoneFrame
-            isDark={this.props.isRunning}
-            showSelector={!this.props.isRunning}
-            isPaused={this.props.isPaused}
-            screenIds={this.props.screenIds}
-            onScreenCreate={this.props.onScreenCreate}
+          isDark={this.props.isRunning}
+          showSelector={!this.props.isRunning}
+          isPaused={this.props.isPaused}
+          screenIds={this.props.screenIds}
+          onScreenCreate={this.props.onScreenCreate}
         >
           {visualization}
         </PhoneFrame>
@@ -105,26 +105,31 @@ var ApplabVisualizationColumn = React.createClass({
 
     return (
       <div
-          id="visualizationColumn"
-          className={visualizationColumnClassNames}
-          style={[!this.props.isResponsive && {maxWidth: this.props.nonResponsiveWidth}]}
+        id="visualizationColumn"
+        className={visualizationColumnClassNames}
+        style={[!this.props.isResponsive && {maxWidth: this.props.nonResponsiveWidth}]}
       >
-        {!this.props.isReadOnlyWorkspace && <PlaySpaceHeader
+        {!this.props.isReadOnlyWorkspace &&
+          <PlaySpaceHeader
             isEditingProject={this.props.isEditingProject}
             screenIds={this.props.screenIds}
-            onScreenCreate={this.props.onScreenCreate} />
+            onScreenCreate={this.props.onScreenCreate}
+          />
         }
         {visualization}
         {this.props.isIframeEmbed &&
-         <div style={styles.resetButtonWrapper}>
-           <ResetButton hideText={true}
-                        style={styles.resetButton}
-                        imageStyle={styles.resetButtonImage} />
-         </div>
+          <div style={styles.resetButtonWrapper}>
+            <ResetButton
+              hideText={true}
+              style={styles.resetButton}
+              imageStyle={styles.resetButtonImage}
+            />
+          </div>
         }
         <GameButtons>
           {/* This div is used to control whether or not our finish button is centered*/}
-          <div style={[
+          <div
+            style={[
               styles.completion,
               this.props.playspacePhoneFrame && styles.phoneFrameCompletion
             ]}

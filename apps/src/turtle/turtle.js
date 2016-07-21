@@ -29,7 +29,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var color = require('../color');
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var turtleMsg = require('./locale');
 var levels = require('./levels');
 var Colours = require('./colours');
@@ -223,8 +223,8 @@ Artist.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.studioApp_.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={this.studioApp_.init.bind(this.studioApp_, config)}
+        visualizationColumn={visualizationColumn}
+        onMount={this.studioApp_.init.bind(this.studioApp_, config)}
       />
     </Provider>,
     document.getElementById(config.containerId)
