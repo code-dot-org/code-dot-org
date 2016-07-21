@@ -13,21 +13,22 @@
   = @workshop.subject
   workshop and for your commitment to bringing foundational 21st century learning to your students!
 
-- if @is_first_workshop
-  %p
-    Computer science has become the fastest-growing subject in K-12 education,
-    thanks to inspirational educators like you who have decided to spend your summer or weekends
-    in professional learning for the benefit of your classroom and the future of our children.
-    Thank you for joining the teacher-powered movement to give every student in every school
-    the opportunity to learn computer science.
-
 %p
   = link_to('Please take a minute to complete this short survey', @survey_url) + '.'
-  Let us know how we can improve your experience and your learning.
+
+%p
   If you had a good experience, please spread the word about the
   = link_to('Code.org Professional Learning Program', 'https://code.org/educate') + '.'
 
 = render partial: 'share_links'
+
+- if @is_first_workshop
+  %p
+    Computer science has become the fastest-growing subject in K-12 education,
+    thanks to inspirational educators like you who have decided to spend your valuable time
+    in professional learning for the benefit of your classroom and the future of our children.
+    Thank you for joining the teacher-powered movement to give every student in every school
+    the opportunity to learn computer science.
 
 - if @workshop.course == Pd::Workshop::COURSE_CSF
   %h3
