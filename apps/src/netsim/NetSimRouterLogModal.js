@@ -2,10 +2,11 @@
  * @overview a modal dialog showing the union of all router logs for the
  *           current shard.
  */
-'use strict';
-
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var i18n = require('@cdo/netsim/locale');
+import NetSimLogBrowser from './NetSimLogBrowser';
 var NetSimLogEntry = require('./NetSimLogEntry');
 var Packet = require('./Packet');
 var markup = require('./NetSimRouterLogModal.html.ejs');
@@ -37,10 +38,6 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
    * @private {boolean}
    */
   this.isVisible_ = false;
-
-  // Attach handlers for showing and hiding the modal
-  this.rootDiv_.on('shown.bs.modal', this.onShow_.bind(this));
-  this.rootDiv_.on('hidden.bs.modal', this.onHide_.bind(this));
 
   /**
    * @private {NetSimShard}
@@ -163,6 +160,15 @@ NetSimRouterLogModal.sortKeyToSortValueGetterMap = {
 
 };
 
+NetSimRouterLogModal.prototype.show = function () {
+  this.onShow_();
+};
+
+NetSimRouterLogModal.prototype.hide = function () {
+  this.onHide_();
+  this.render();
+};
+
 /**
  * State changes that occur when shoing the log.
  * @private
@@ -197,51 +203,67 @@ NetSimRouterLogModal.prototype.isVisible = function () {
  * Fill the root div with new elements reflecting the current state
  */
 NetSimRouterLogModal.prototype.render = function () {
-  // Be lazy, don't render if not visible.
-  if (!this.isVisible()) {
-    return;
-  }
+  ReactDOM.render(
+    <NetSimLogBrowser
+      isOpen={this.isVisible()}
+      handleClose={this.hide.bind(this)}
+      i18n={i18n}
+      canSetRouterLogMode={this.canSetRouterLogMode_()}
+      isAllRouterLogMode={this.isAllRouterLogMode_}
+      localAddress={this.localNode_ ? this.localNode_.getAddress() : undefined}
+      currentTrafficFilter={this.currentTrafficFilter_}
+      headerFields={NetSimGlobals.getLevelConfig().routerExpectsPacketHeader}
+      logRows={this.getSortedFilteredLogEntries(this.logEntries_)}
+    />,
+    this.rootDiv_[0]
+  );
 
-  // Re-render entire log browser UI
-  var renderedMarkup = $(markup({
-    isAllRouterLogMode: this.isAllRouterLogMode_,
-    canSetRouterLogMode: this.canSetRouterLogMode_(),
-    currentTrafficFilter: this.currentTrafficFilter_,
-    localAddress: this.localNode_ ? this.localNode_.getAddress() : undefined,
-    sortBy: this.sortBy_,
-    sortDescending: this.sortDescending_
-  }));
-  this.rootDiv_.html(renderedMarkup);
-
-  // Add input handlers
-  this.getRouterLogModeDropdown().one('change', (evt) => {
-    this.setRouterLogMode_(evt.target.value);
-    this.render();
-  });
-
-  this.getTrafficFilterCycleDropdown().one('change', (evt) => {
-    this.setTrafficFilterMode_(evt.target.value);
-    this.render();
-  });
-
-  this.rootDiv_.find('th').click(function (event) {
-    this.onSortHeaderClick_($(event.target).attr('data-sort-key'));
-  }.bind(this));
-
-  // Add rows to the table
-  var rows = this.getSortedFilteredLogEntries(this.logEntries_)
-      .slice(0, MAXIMUM_ROWS_IN_FULL_RENDER)
-      .map(this.makeTableRow_.bind(this));
-  this.rootDiv_.find('tbody').append(rows);
-
-  if (rows.length === MAXIMUM_ROWS_IN_FULL_RENDER) {
-    var maxRenderedWarning = document.createElement('div');
-    maxRenderedWarning.className = 'log-browser-limit-message';
-    maxRenderedWarning.textContent = i18n.showingFirstXLogEntries({
-      x: MAXIMUM_ROWS_IN_FULL_RENDER
-    });
-    this.rootDiv_.find('table').after(maxRenderedWarning);
-  }
+  //
+  // // Be lazy, don't render if not visible.
+  // if (!this.isVisible()) {
+  //   return;
+  // }
+  //
+  // // Re-render entire log browser UI
+  // var renderedMarkup = $(markup({
+  //   isAllRouterLogMode: this.isAllRouterLogMode_,
+  //   canSetRouterLogMode: this.canSetRouterLogMode_(),
+  //   currentTrafficFilter: this.currentTrafficFilter_,
+  //   localAddress: this.localNode_ ? this.localNode_.getAddress() : undefined,
+  //   sortBy: this.sortBy_,
+  //   sortDescending: this.sortDescending_
+  // }));
+  // this.rootDiv_.html(renderedMarkup);
+  //
+  // // Add input handlers
+  // this.getRouterLogModeDropdown().one('change', (evt) => {
+  //   this.setRouterLogMode_(evt.target.value);
+  //   this.render();
+  // });
+  //
+  // this.getTrafficFilterCycleDropdown().one('change', (evt) => {
+  //   this.setTrafficFilterMode_(evt.target.value);
+  //   this.render();
+  // });
+  //
+  // this.rootDiv_.find('th').click(function (event) {
+  //   this.onSortHeaderClick_($(event.target).attr('data-sort-key'));
+  // }.bind(this));
+  //
+  // // Add rows to the table
+  // var rows = this.getSortedFilteredLogEntries(this.logEntries_)
+  //     .slice(0, MAXIMUM_ROWS_IN_FULL_RENDER)
+  //     .map(this.makeTableRow_.bind(this));
+  // this.rootDiv_.find('tbody').append(rows);
+  //
+  // if (rows.length === MAXIMUM_ROWS_IN_FULL_RENDER) {
+  //   var maxRenderedWarning = document.createElement('div');
+  //   maxRenderedWarning.className = 'log-browser-limit-message';
+  //   maxRenderedWarning.textContent = i18n.showingFirstXLogEntries({
+  //     x: MAXIMUM_ROWS_IN_FULL_RENDER
+  //   });
+  //   this.rootDiv_.find('table').after(maxRenderedWarning);
+  // }
 };
 
 /**

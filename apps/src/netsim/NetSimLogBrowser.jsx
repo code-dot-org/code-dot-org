@@ -1,5 +1,7 @@
 /** @file Modal dialog for browsing any logs in the simulation. */
 import React from 'react';
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import moment from 'moment';
 import Dialog, {Title, Body} from '../templates/Dialog';
 import Packet from './Packet';
 
@@ -17,15 +19,15 @@ const styles = {
 };
 
 const NetSimLogBrowser = React.createClass({
-  propTypes: {
+  propTypes: Object.assign({}, Dialog.propTypes, {
     i18n: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-    hideBackdrop: React.PropTypes.bool,
     canSetRouterLogMode: React.PropTypes.bool,
     isAllRouterLogMode: React.PropTypes.bool,
     localAddress: React.PropTypes.string,
     currentTrafficFilter: React.PropTypes.string.isRequired,
-    headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
-  },
+    headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+  }),
 
   getDefaultProps() {
     return {
@@ -36,21 +38,19 @@ const NetSimLogBrowser = React.createClass({
 
   render() {
     return (
-      <Dialog
-          isOpen
-          fullWidth
-      >
+      <Dialog fullWidth {...this.props}>
         <Title>Log Browser</Title>
         <Body>
           <LogBrowserFilters
-              i18n={this.props.i18n}
-              canSetRouterLogMode={this.props.canSetRouterLogMode}
-              isAllRouterLogMode={this.props.isAllRouterLogMode}
-              localAddress={this.props.localAddress}
-              currentTrafficFilter={this.props.currentTrafficFilter}
+            i18n={this.props.i18n}
+            canSetRouterLogMode={this.props.canSetRouterLogMode}
+            isAllRouterLogMode={this.props.isAllRouterLogMode}
+            localAddress={this.props.localAddress}
+            currentTrafficFilter={this.props.currentTrafficFilter}
           />
           <LogTable
-              headerFields={this.props.headerFields}
+            headerFields={this.props.headerFields}
+            logRows={this.props.logRows}
           />
         </Body>
       </Dialog>
@@ -73,15 +73,15 @@ const LogBrowserFilters = React.createClass({
       <div>
         {this.props.canSetRouterLogMode &&
           <RouterLogModeDropdown
-              i18n={this.props.i18n}
-              isAllRouterLogMode={this.props.isAllRouterLogMode}
+            i18n={this.props.i18n}
+            isAllRouterLogMode={this.props.isAllRouterLogMode}
           />
         }
         {this.props.localAddress &&
           <TrafficFilterDropdown
-              i18n={this.props.i18n}
-              localAddress={this.props.localAddress}
-              currentTrafficFilter={this.props.currentTrafficFilter}
+            i18n={this.props.i18n}
+            localAddress={this.props.localAddress}
+            currentTrafficFilter={this.props.currentTrafficFilter}
           />
         }
       </div>
@@ -98,9 +98,9 @@ const RouterLogModeDropdown = React.createClass({
   render() {
     return (
       <select
-          id="routerlog-mode"
-          className="pull-right"
-          value={this.props.isAllRouterLogMode ? 'all' : 'mine'}
+        id="routerlog-mode"
+        className="pull-right"
+        value={this.props.isAllRouterLogMode ? 'all' : 'mine'}
       >
         <option value="mine">
           {this.props.i18n.logBrowserHeader_toggleMine()}
@@ -123,9 +123,9 @@ const TrafficFilterDropdown = React.createClass({
   render() {
     return (
         <select
-            id="traffic-filter"
-            className="pull-right"
-            value={this.props.currentTrafficFilter}
+          id="traffic-filter"
+          className="pull-right"
+          value={this.props.currentTrafficFilter}
         >
           <option value="none">
             {this.props.i18n.logBrowserHeader_showAllTraffic()}
@@ -144,55 +144,99 @@ const TrafficFilterDropdown = React.createClass({
   }
 });
 
+// TODO: Define NetSimLogRow type
 const LogTable = React.createClass({
   propTypes: {
+    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
   render() {
     const headerFields = this.props.headerFields;
 
-    /** @type {boolean} */
-    var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+    const showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
 
-    /** @type {boolean} */
-    var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+    const showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
 
-    /** @type {boolean} */
-    var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
+    const showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
         headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
-    const columnCount = 4 +
-        (showToAddress ? 1 : 0) +
-        (showFromAddress ? 1 : 0) +
-        (showPacketInfo ? 1 : 0);
-
-    // Maybe just use this thing?
-    // https://facebook.github.io/fixed-data-table/
-    return (
-      <table style={styles.table}>
-        <thead>
-          <tr>
-            <th style={styles.th}>Time</th>
-            <th style={styles.th}>Logged By</th>
-            <th style={styles.th}>Status</th>
-            {showFromAddress && <th style={styles.th}>From</th>}
-            {showToAddress && <th style={styles.th}>To</th>}
-            {showPacketInfo && <th style={styles.th}>Packet</th>}
-            <th style={styles.th}>Message</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style={styles.tdNoLogsToShow} colSpan={columnCount}>
-              No logs to display (TODO: LOCALIZE)
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    let columns = [
+      <TableHeaderColumn
+        isKey
+        key="timestamp"
+        dataField="timestamp"
+        dataSort
+        dataFormat={timeFormatter}
+      >
+        Time
+      </TableHeaderColumn>,
+      <TableHeaderColumn
+        key="logged-by"
+        dataField="logged-by"
+        dataSort
+      >
+        Logged By
+      </TableHeaderColumn>,
+      <TableHeaderColumn
+        key="status"
+        dataField="status"
+      >
+        Status
+      </TableHeaderColumn>
+    ];
+    if (showFromAddress) {
+      columns.push(
+        <TableHeaderColumn
+          key="from-address"
+          dataField="from-address"
+        >
+          From
+        </TableHeaderColumn>
+      );
+    }
+    if (showToAddress) {
+      columns.push(
+        <TableHeaderColumn
+          key="to-address"
+          dataField="to-address"
+        >
+          To
+        </TableHeaderColumn>
+      );
+    }
+    if (showPacketInfo) {
+      columns.push(
+        <TableHeaderColumn
+          key="packet-info"
+          dataField="packet-info"
+        >
+          Packet
+        </TableHeaderColumn>
+      );
+    }
+    columns.push(
+      <TableHeaderColumn
+        key="message"
+        dataField="message"
+      >
+        Message
+      </TableHeaderColumn>
     );
+
+    return (
+      <BootstrapTable
+        data={this.props.logRows}
+        striped={true}
+        hover={true}
+        children={columns}
+      />);
   }
 });
+
+function timeFormatter(timestamp) {
+  return moment(timestamp).format('h:mm:ss.SSS A');
+}
 
 if (BUILD_STYLEGUIDE) {
   NetSimLogBrowser.styleGuideExamples = storybook => {
@@ -213,6 +257,34 @@ if (BUILD_STYLEGUIDE) {
       Packet.HeaderType.PACKET_COUNT
     ];
 
+    const sampleData = [
+      {
+        'timestamp': Date.now(),
+        'logged-by': 'Router 1', // TODO: Make this a Node
+        'status': 'Dropped',
+        'from-address': '10.1',
+        'to-address': '10.15',
+        'packet-info': '100',
+        'message': 'GET myhostname'
+      }, {
+        'timestamp': Date.now() - 400,
+        'logged-by': 'Router 1', // TODO: Make this a Node
+        'status': 'Success',
+        'from-address': '10.1',
+        'to-address': '10.15',
+        'packet-info': '100',
+        'message': 'What?'
+      }, {
+        'timestamp': Date.now() - 1000,
+        'logged-by': 'Router 1', // TODO: Make this a Node
+        'status': 'Success',
+        'from-address': '10.15',
+        'to-address': '10.1',
+        'packet-info': '100',
+        'message': 'Send that again!'
+      }
+    ];
+
     return storybook
         .storiesOf('NetSimLogBrowser', module)
         .addWithInfo(
@@ -220,8 +292,9 @@ if (BUILD_STYLEGUIDE) {
             `Here's what the dialog looks like with minimum settings.`,
             () => (
                 <NetSimLogBrowser
-                    i18n={i18n}
-                    headerFields={simplePacket}
+                  i18n={i18n}
+                  headerFields={simplePacket}
+                  logRows={sampleData}
                 />
             ))
         .addWithInfo(
@@ -229,12 +302,13 @@ if (BUILD_STYLEGUIDE) {
             `Here's what the dialog looks like with minimum settings.`,
             () => (
                 <NetSimLogBrowser
-                    i18n={i18n}
-                    canSetRouterLogMode
-                    isAllRouterLogMode
-                    localAddress="1.15"
-                    currentTrafficFilter="all"
-                    headerFields={fancyPacket}
+                  i18n={i18n}
+                  canSetRouterLogMode
+                  isAllRouterLogMode
+                  localAddress="1.15"
+                  currentTrafficFilter="all"
+                  headerFields={fancyPacket}
+                  logRows={sampleData}
                 />
             ));
   };
