@@ -69,7 +69,7 @@ Blockly.Generator.get = function(name) {
 Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
   var code = [];
   var generator = Blockly.Generator.get(name);
-  generator.init();
+  generator.init(blocks);
   for (var x = 0, block; block = blocks[x]; x++) {
     var line = generator.blockToCode(block, opt_showHidden);
     if (line instanceof Array) {
