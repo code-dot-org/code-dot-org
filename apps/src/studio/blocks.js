@@ -2430,7 +2430,7 @@ exports.install = function (blockly, blockInstallOptions) {
       // Must be marked EDITABLE so that cloned blocks share the same var name
       fieldLabel.EDITABLE = true;
       this.setHSV(312, 0.32, 0.62);
-      this.appendDummyInput().appendTitle('ask');
+      this.appendDummyInput().appendTitle(msg.ask());
       this.setInputsInline(true);
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldImage(
@@ -2438,7 +2438,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendTitle(new Blockly.FieldTextInput(''), 'TEXT')
         .appendTitle(new Blockly.FieldImage(
           Blockly.assetUrl('media/quote1.png'), 12, 12));
-      this.appendDummyInput().appendTitle('to set');
+      this.appendDummyInput().appendTitle(msg.toSet());
       this.appendDummyInput()
         .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
         .appendTitle(Blockly.disableVariableEditing ? fieldLabel
