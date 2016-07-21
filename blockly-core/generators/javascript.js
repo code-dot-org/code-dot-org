@@ -125,15 +125,8 @@ Blockly.JavaScript.init = function(opt_blocks) {
 
     if (!Blockly.varsInGlobals) {
       var defvars = [];
-      var variables;
-      if (opt_blocks) {
-        variables = [];
-        for (var x = 0, block; block = opt_blocks[x]; x++) {
-          variables = variables.concat(Blockly.Variables.allVariables(block));
-        }
-      } else {
-        variables = Blockly.Variables.allVariables();
-      }
+      var variables = Blockly.Variables.allVariables(opt_blocks);
+
       for (var x = 0; x < variables.length; x++) {
         defvars[x] = 'var ' +
             Blockly.JavaScript.variableDB_.getName(variables[x],
