@@ -298,6 +298,8 @@
   homepage_banner_20k_teachers_link: "Learn more"
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
   homepage_banner_congress_link: "Add your support"
+  homepage_banner_emailprivacy: "We’re making an important change to how we support student privacy."
+  homepage_banner_emailprivacy_link: "Read more"
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "Anybody can learn. Start today"
   homepage_slot_text_link_hoc: "Try the Hour of Code"
@@ -518,6 +520,8 @@
   dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: "Summaries"
   dashboard_assessments_answers: "All answers"
+  dashboard_surveys_answers: "Surveys"
+  dashboard_percent: "Percent"
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: "All"
   dashboard_download_csv: "Download CSV"
