@@ -1957,6 +1957,7 @@ en:
       name:
         CSP Culminating Assessment: {}
         PS U3 Assessment1 new: {}
+        PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
         Sample CSP Assessment: {}
@@ -1966,6 +1967,7 @@ en:
         Test anonymous student survey 2: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
+        brendan test survey: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -4031,6 +4033,38 @@ en:
         description here: description here
         foo: foo
         title: title
+      PS pre-assessment q1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to do my schoolwork: I have the ability to do my schoolwork
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q2:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at schoolwork than most of the other kids at my school.: I am better at schoolwork than most of the other kids at my school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q3:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      PS pre-assessment q4:
+        Agree: Agree
+        Disagree: Disagree
+        I can figure out how to solve the most difficult problems in school if I try.: I can figure out how to solve the most difficult problems in school if I try.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
         rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds * 48
