@@ -1,0 +1,12 @@
+name 'brendan test survey'
+title 'brendan test survey'
+submittable 'true'
+anonymous 'true'
+
+page
+level 'K-1 Happy Maps Multi 1'
+level 'Multi Horizontal Scroll Test'
+
+
+page
+level 'Choose 2 Test'

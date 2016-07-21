@@ -107,35 +107,49 @@
           <mutation>
             <arg name="actor"/>
             <arg name="speed"/>
-            <description>a patrol function that has a actor and speed parameter</description>
+            <description>Move a sprite up an down at the given speed</description>
           </mutation>
           <title name="NAME">patrol</title>
           <statement name="STACK">
-            <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
-              <title name="DIR">1</title>
+            <block type="studio_setSpriteSpeedParams" inline="true" uservisible="false">
               <value name="SPRITE">
                 <block type="parameters_get" uservisible="false">
                   <title name="VAR">actor</title>
                 </block>
               </value>
-              <value name="DISTANCE">
+              <value name="VALUE">
                 <block type="parameters_get" uservisible="false">
                   <title name="VAR">speed</title>
                 </block>
               </value>
               <next>
                 <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
-                  <title name="DIR">4</title>
+                  <title name="DIR">1</title>
                   <value name="SPRITE">
                     <block type="parameters_get" uservisible="false">
                       <title name="VAR">actor</title>
                     </block>
                   </value>
                   <value name="DISTANCE">
-                    <block type="parameters_get" uservisible="false">
-                      <title name="VAR">speed</title>
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">400</title>
                     </block>
                   </value>
+                  <next>
+                    <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
+                      <title name="DIR">4</title>
+                      <value name="SPRITE">
+                        <block type="parameters_get" uservisible="false">
+                          <title name="VAR">actor</title>
+                        </block>
+                      </value>
+                      <value name="DISTANCE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">400</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
