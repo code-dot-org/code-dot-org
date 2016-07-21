@@ -370,7 +370,7 @@ en:
     print_certificate: "Print Certificate"
     announcement_title: "Announcements"
     announcement_view_all: "View all"
-    announcement_message: "Many of you gave feedback that when students work in pairs or small teams, only one student gets credit for their progress. We've created a new pair programming feature that allows students to connect their accounts while they work together, so that you, the teacher, can track completed progress for both individuals and teams."
+    announcement_message: "<b>Upcoming changes to our privacy policy&mdash;give your feedback:</b> We’re announcing a one month period to review changes to our privacy policy and to provide feedback. The biggest change is a redesigned login that enables us to delete all email addresses for Code Studio student accounts. The other big change involves access to our app-creation tools."
     announcement_learn_more_button: "Learn more"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: "Add your name"
