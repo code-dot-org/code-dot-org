@@ -1,6 +1,6 @@
 var React = require('react');
 var assetsApi = require('@cdo/apps/clientApi').assets;
-var AssetThumbnail = require('./AssetThumbnail');
+import AssetThumbnail from './AssetThumbnail';
 
 /**
  * A single row in the AssetManager, describing one asset.
