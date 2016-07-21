@@ -42,13 +42,16 @@ Blockly.Variables.NAME_TYPE_LOCAL = 'LOCALVARIABLE';
 /**
  * Find all user-created variables.
  * Currently searches the main blockspace only
- * @param {Blockly.Block=} opt_block Optional root block.
+ * @param {Array.<Blockly.Block>} opt_blocks Optional root blocks.
  * @return {!Array.<string>} Array of variable names.
  */
-Blockly.Variables.allVariables = function(opt_block) {
+Blockly.Variables.allVariables = function(opt_blocks) {
   var blocks;
-  if (opt_block) {
-    blocks = opt_block.getDescendants();
+  if (opt_blocks) {
+    opt_blocks = Array.isArray(opt_blocks) ? opt_blocks : [opt_blocks];
+    blocks = opt_blocks.reduce(function(blocks, block) {
+      return blocks.concat(block.getDescendants());
+    }, []);
   } else if (Blockly.mainBlockSpace) {
     blocks = Blockly.mainBlockSpace.getAllBlocks();
   } else {
