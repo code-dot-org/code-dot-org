@@ -45,11 +45,10 @@ reporting.sendReport = function (report) {
   var queryItems = [];
   for (var key in report) {
     if (report.hasOwnProperty(key) && key !== 'onComplete') {
-      queryItems.push(key + '=' + report[key]);
+      queryItems.push(key + '=' + encodeURIComponent(report[key]));
     }
   }
-
-  var queryString = encodeURI(queryItems.join('&'));
+  var queryString = queryItems.join('&');
 
   clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
 
