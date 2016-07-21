@@ -19,7 +19,7 @@
             .flex_item{style: 'width: 50%'}
               #{course_enrollment.plc_course.name}
             .flex_item{style: 'width: 50%'}
-              = link_to root_url + course_path(course_enrollment.plc_course.name.downcase.gsub(' ', '-')) do
+              = link_to CDO.studio_url(course_path(course_enrollment.plc_course.name.downcase.gsub(' ', '-'))) do
                 %button.primary{class: 'teacherdashboard', style: "margin-left: 20px;"}= t('see_your_learning_plan')
     - if Gatekeeper.allows('logged_in_studio_hero', default: true)
       #body{class: role_class}
