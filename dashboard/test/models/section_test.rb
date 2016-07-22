@@ -102,22 +102,25 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_student with move_for_same_teacher: false does not move student' do
-    teacher = create :teacher
-    student = create :student
-    original_section = create :section, user: teacher
-    original_section.add_student student
-    new_section = create :section, user: teacher
+    # This option is used for pd-workshop sections.
+    # A workshop attendee, unlike students in a classroom section, can remain enrolled
+    # in multiple sections owned by the same user (i.e. workshop organizer).
+    organizer = create :teacher
+    attendee = create :teacher
+    original_section = create :section, user: organizer
+    original_section.add_student attendee
+    new_section = create :section, user: organizer
 
     # Initially, student is in original_section
-    assert original_section.students.exists?(student.id)
-    refute new_section.students.exists?(student.id)
+    assert original_section.students.exists?(attendee.id)
+    refute new_section.students.exists?(attendee.id)
 
     assert_creates(Follower) do
-      new_section.add_student student, move_for_same_teacher: false
+      new_section.add_student attendee, move_for_same_teacher: false
     end
 
     # Verify student is in both sections
-    assert original_section.students.exists?(student.id)
-    assert new_section.students.exists?(student.id)
+    assert original_section.students.exists?(attendee.id)
+    assert new_section.students.exists?(attendee.id)
   end
 end
