@@ -95,6 +95,22 @@ module.exports.createSprite = function (x, y, width, height) {
     return s.scale * s._verticalStretch;
   };
 
+  /*
+   * @private
+   * For game lab, don't update the animation sizes because all frames are the same size.
+   */
+  s._syncAnimationSizes = function (animations, currentAnimation) {
+    //has an animation but the collider is still default
+    //the animation wasn't loaded. if the animation is not a 1x1 image
+    //it means it just finished loading
+    if (this.colliderType === 'default' && animations[currentAnimation].getWidth() !== 1 &&
+      animations[currentAnimation].getHeight() !== 1) {
+      this.collider = this.getBoundingBox();
+      this.colliderType = 'image';
+      //quadTree.insert(this);
+    }
+  };
+
   Object.defineProperty(s, 'frameDelay', {
     enumerable: true,
     get: function () {
