@@ -1571,7 +1571,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
       translate(this.position.x, this.position.y);
       scale(this._getScaleX()*dirX, this._getScaleY()*dirY);
-      if (pInst._angleMode == pInst.RADIANS) {
+      if (pInst._angleMode === pInst.RADIANS) {
         rotate(radians(this.rotation));
       } else {
         rotate(this.rotation);
