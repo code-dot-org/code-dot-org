@@ -24,7 +24,6 @@
     },
     "show_d_pad": "true",
     "edit_code": true,
-    "contained_level_names": null,
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -50,7 +49,9 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\"sun\"],\r\n  \"propsByKey\": {\r\n    \"sun\": {\r\n      \"name\": \"sun\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/sun.png\",\r\n      \"frameSize\": {\"x\":100, \"y\": 100},\r\n      \"frameCount\": 1,\r\n      \"frameRate\": 15\r\n    }\r\n  }\r\n}",
-    "start_blocks": "var sun = createSprite(200, 200);\r\nsun.setAnimation(\"sun\");\r\n// inline instructions\r\n\r\nfunction draw() {\r\n  background(\"blue\");\r\n  drawSprites();\r\n}\r\n"
+    "start_blocks": "var sun = createSprite(200, 200);\r\nsun.setAnimation(\"sun\");\r\n// make the sun rotate here\r\n\r\nfunction draw() {\r\n  background(\"blue\");\r\n  drawSprites();\r\n}\r\n",
+    "markdown_instructions": "# rotationSpeed\r\n\r\nYou've already learned how to make your sprite spin by adding to its rotation every time it's drawn.  Because this is something that you will do a lot, there's a special property called `rotationSpeed` that does this for you. This tells the sprite to move every time it is redrawn from the draw loop.\r\n\r\n#Do This\r\n\r\nMake the sun rotate by 3 degrees each time by adding `sprite.rotationSpeed = 3` to the program. ",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

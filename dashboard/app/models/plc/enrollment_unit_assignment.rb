@@ -68,6 +68,35 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     plc_module_assignments.map{ |a| a.plc_learning_module.stage.position unless a.plc_learning_module.is_required? }.compact
   end
 
+  def summarize_progress
+    summary = []
+
+    categories_for_stage = plc_course_unit.script.stages.map(&:flex_category).uniq
+
+    if plc_course_unit.script.professional_learning_course?
+      Plc::LearningModule::MODULE_TYPES.keep_if { |type| categories_for_stage.include?(type)}.each do |flex_category|
+        summary << {
+            category: flex_category || Plc::LearningModule::CONTENT_MODULE,
+            status: module_assignment_for_type(flex_category).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED
+        }
+      end
+    else
+      # Legacy PD courses don't have learning modules. So determine completeness by looking at stage completion
+      categories_for_stage.each do |category|
+        summary << {
+            category: category || 'content',
+            status: Plc::EnrollmentModuleAssignment.stages_based_status(
+              plc_course_unit.script.stages.select { |stage| stage.flex_category == category },
+              user,
+              plc_course_unit.script
+            )
+        }
+      end
+    end
+
+    summary
+  end
+
   private
 
   def enroll_in_module(learning_module)

@@ -1,7 +1,7 @@
 import { DataView } from '../constants';
 import Radium from 'radium';
 import React from 'react';
-import msg from '../../locale';
+import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
 
 const AddTableListRow = React.createClass({
@@ -33,16 +33,17 @@ const AddTableListRow = React.createClass({
       <tr style={dataStyles.addRow}>
         <td style={dataStyles.cell}>
           <input
-              style={dataStyles.input}
-              placeholder={msg.dataTableNamePlaceholder()}
-              value={this.state.newTableName}
-              onChange={this.handleInputChange}/>
+            style={dataStyles.input}
+            placeholder={msg.dataTableNamePlaceholder()}
+            value={this.state.newTableName}
+            onChange={this.handleInputChange}
+          />
         </td>
         <td style={dataStyles.cell}>
           <button
-              className='btn btn-primary'
-              style={dataStyles.button}
-              onClick={this.handleAdd}
+            className="btn btn-primary"
+            style={dataStyles.button}
+            onClick={this.handleAdd}
           >
             Add
           </button>

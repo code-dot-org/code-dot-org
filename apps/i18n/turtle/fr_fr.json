@@ -81,5 +81,13 @@
   "turnTooltip": "Tourne l'artiste à gauche ou à droite selon le degré indiqué.",
   "turtleVisibilityTooltip": "Rend l'artiste visible ou invisible.",
   "widthTooltip": "Modifie la largeur du crayon.",
-  "wrongColour": "Ton image est de la mauvaise couleur. Pour ce puzzle, elle doit être de 1%."
+  "wrongColour": "Ton image est de la mauvaise couleur. Pour ce puzzle, elle doit être de 1%.",
+  "jumpNortheastTooltip": "Moves the artist northeast without leaving any marks.",
+  "jumpNorthwestTooltip": "Moves the artist northwest without leaving any marks.",
+  "jumpSoutheastTooltip": "Moves the artist southeast without leaving any marks.",
+  "jumpSouthwestTooltip": "Moves the artist southwest without leaving any marks.",
+  "moveNortheastTooltip": "Moves the artist northeast.",
+  "moveNorthwestTooltip": "Moves the artist northwest.",
+  "moveSoutheastTooltip": "Moves the artist southeast.",
+  "moveSouthwestTooltip": "Moves the artist southwest."
 }

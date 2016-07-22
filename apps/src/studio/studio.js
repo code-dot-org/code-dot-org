@@ -11,7 +11,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('@cdo/locale');
 var studioMsg = require('./locale');
 var skins = require('../skins');
 var constants = require('./constants');
@@ -2007,8 +2007,8 @@ Studio.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={onMount}
+        visualizationColumn={visualizationColumn}
+        onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)
