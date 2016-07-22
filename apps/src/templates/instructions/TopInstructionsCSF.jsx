@@ -225,7 +225,7 @@ var TopInstructions = React.createClass({
       this.setState({
         promptForHint: false
       });
-      if (nextProps.collapsed) {
+      if (!this.props.isMinecraft && nextProps.collapsed) {
         this.handleClickCollapser();
       }
     }
@@ -529,9 +529,9 @@ var TopInstructions = React.createClass({
                   block={hint.block}
               />
             )}
-            {this.props.feedback && !this.props.collapsed && <InlineFeedback
+            {this.props.feedback && (this.props.isMinecraft || !this.props.collapsed) && <InlineFeedback
                 isMinecraft={this.props.isMinecraft}
-                borderColor={color.charcoal}
+                borderColor={this.props.isMinecraft ? color.white : color.charcoal}
                 message={this.props.feedback.message}
             />}
             {this.shouldDisplayHintPrompt() && <HintPrompt
