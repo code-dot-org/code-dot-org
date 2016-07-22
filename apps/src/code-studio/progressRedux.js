@@ -14,7 +14,7 @@ const initialState = {
   currentLevelId: null,
   professionalLearningCourse: null,
   // a mapping of level id to result
-  levelProgress: {},
+  progress: {},
   focusAreaPositions: [],
   saveAnswersBeforeNavigation: null,
   stages: null,
@@ -38,21 +38,21 @@ export default function reducer(state = initialState, action) {
 
   if (action.type === MERGE_PROGRESS) {
     // TODO: _.mergeWith after upgrading to Lodash 4+
-    let newLevelProgress = {};
-    Object.keys(Object.assign({}, state.levelProgress, action.levelProgress)).forEach(key => {
-      newLevelProgress[key] = mergeActivityResult(state.levelProgress[key], action.levelProgress[key]);
+    let newProgress = {};
+    Object.keys(Object.assign({}, state.progress, action.progress)).forEach(key => {
+      newProgress[key] = mergeActivityResult(state.progress[key], action.progress[key]);
     });
 
     return Object.assign({}, state, {
-      levelProgress: newLevelProgress,
+      progress: newProgress,
       stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
-        let id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
+        let id = level.uid || bestResultLevelId(level.ids, newProgress);
 
         if (action.peerReviewsPerformed && stage.flex_category === 'Peer Review') {
           Object.assign(level, action.peerReviewsPerformed[index]);
         }
 
-        return Object.assign({}, level, level.kind !== 'peer_review' && {status: activityCssClass(newLevelProgress[id])});
+        return Object.assign({}, level, level.kind !== 'peer_review' && {status: activityCssClass(newProgress[id])});
       })}))
     });
   }
@@ -117,9 +117,9 @@ export const initProgress = ({currentLevelId, professionalLearningCourse,
   peerReviewsRequired
 });
 
-export const mergeProgress = (levelProgress, peerReviewsPerformed) => ({
+export const mergeProgress = (progress, peerReviewsPerformed) => ({
   type: MERGE_PROGRESS,
-  levelProgress,
+  progress,
   peerReviewsPerformed
 });
 

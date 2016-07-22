@@ -397,7 +397,7 @@ export function escapeText(text) {
 }
 
 export function showUnusedBlockQtip(targetElement) {
-  var msg = require('./locale');
+  var msg = require('@cdo/locale');
   $(targetElement).qtip({
     content: {
       text: '<h4>' + msg.unattachedBlockTipTitle() +'</h4><p>' + msg.unattachedBlockTipBody() + '</p>',

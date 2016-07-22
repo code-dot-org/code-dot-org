@@ -33,7 +33,7 @@ const CourseProgress = React.createClass({
     let count = 1;
 
     return (
-      <div className='user-stats-block'>
+      <div className="user-stats-block">
         {_.map(groups, (stages, group) =>
           <div key={group}>
             <h4
@@ -61,7 +61,7 @@ const CourseProgress = React.createClass({
 });
 
 export default connect(state => ({
-  professionalLearningCourse: state.progress.professionalLearningCourse,
-  focusAreaPositions: state.progress.focusAreaPositions,
-  stages: state.progress.stages,
+  professionalLearningCourse: state.professionalLearningCourse,
+  focusAreaPositions: state.focusAreaPositions,
+  stages: state.stages,
 }))(Radium(CourseProgress));

@@ -127,7 +127,8 @@ class Deliverer
 
     message = StringIO.new
 
-    to_address = parse_address(header['to'], recipient)
+    # Merge contact_email from the delivery for code studio students whose emails we don't store in contacts.
+    to_address = parse_address(header['to'], recipient.merge({temporary_email: delivery[:contact_email]}))
     message.puts 'To: ' + format_address(to_address)
 
     from_address = parse_address(header['from'], {email: 'help@code.org', name: 'Code.org'})
@@ -232,8 +233,11 @@ class Deliverer
     address = address.to_s.strip
     return parse_addresses(address).first unless address.empty?
 
-    email = defaults[:email].to_s.strip || defaults[:contact_email]
-    return nil if email.empty?
+    # Student accounts don't have a stored email in contacts,
+    # so we use the temporary email here when email doesn't exist.
+    email = defaults[:email].to_s.strip
+    email = defaults[:temporary_email] if email.blank?
+    return nil if email.blank?
 
     {email: email}.tap do |address|
       name = defaults[:name].to_s.strip

@@ -1,16 +1,16 @@
 /* global dashboard */
 import React from 'react';
 import ReactDOM from 'react-dom';
-var AbuseExclamation = require('../components/abuse_exclamation');
-var showProjectAdmin = require('../showProjectAdmin');
+import AbuseExclamation from '../components/abuse_exclamation';
+import showProjectAdmin from '../showProjectAdmin';
 
 /**
  * Renders our AbuseExclamation component, and potentially updates admin box
  */
-module.exports = function () {
+export default (tosText) => {
   ReactDOM.render(React.createElement(AbuseExclamation, {
     i18n: {
-      tos: window.dashboard.i18n.t('project.abuse.tos'),
+      tos: tosText,
       contact_us: window.dashboard.i18n.t('project.abuse.contact_us'),
       edit_project: window.dashboard.i18n.t('project.edit_project'),
       go_to_code_studio: window.dashboard.i18n.t('project.abuse.go_to_code_studio')

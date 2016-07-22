@@ -17,10 +17,10 @@ const AppLabCrosshairOverlay = React.createClass({
     const dragPoint = draggedElementDropPoint();
     return (
         <CrosshairOverlay
-            width={this.props.width}
-            height={this.props.height}
-            mouseX={dragPoint ? dragPoint.left : this.props.mouseX}
-            mouseY={dragPoint ? dragPoint.top : this.props.mouseY}
+          width={this.props.width}
+          height={this.props.height}
+          mouseX={dragPoint ? dragPoint.left : this.props.mouseX}
+          mouseY={dragPoint ? dragPoint.top : this.props.mouseY}
         />
     );
   }

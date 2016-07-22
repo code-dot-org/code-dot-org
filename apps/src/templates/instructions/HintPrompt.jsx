@@ -2,7 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import color from '../../color';
 import ChatBubble from './ChatBubble';
-import msg from '../../locale';
+import msg from '@cdo/locale';
 
 const HintPrompt = ({ onConfirm, onDismiss, isMinecraft, borderColor }) => {
   const buttonStyles = {
