@@ -1538,7 +1538,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
   this._getScaleX = function()
   {
     return this.scale;
-  }
+  };
 
   /*
    * Returns the value the sprite should be scaled in the Y direction.
@@ -1548,7 +1548,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
   this._getScaleY = function()
   {
     return this.scale;
-  }
+  };
 
   /**
    * Manages the positioning, scale and rotation of the sprite
