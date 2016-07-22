@@ -46,7 +46,8 @@ var WebLabView = React.createClass({
   },
 
   shouldShowHeader: function () {
-    return !(this.props.isEmbedView || this.props.isShareView);
+    return true;
+    // return !(this.props.isEmbedView || this.props.isShareView);
   },
 
   render: function () {
@@ -60,9 +61,11 @@ var WebLabView = React.createClass({
           <a id="preview-link" href="#"> Preview </a>
           |
           <a id="tutorial-link" href="#"> Tutorial </a>
+          |
+          <a id="inspector-link" href="#"> Inspector </a>
           <br/>
           <br/>
-          <iframe src="/bramble/hosted2.html" frameborder="0"
+          <iframe src="/bramble/hosted2.html" frameBorder="0"
             width="100%" height="560px" scrolling="no" />
         </div>
       </StudioAppWrapper>
